@@ -2,13 +2,13 @@ package org.lockss.laaws;
 
 import static org.lockss.laaws.V2AuMover.CounterType;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import org.apache.commons.io.IOUtils;
 import org.lockss.laaws.client.ApiException;
 import org.lockss.laaws.model.rs.Artifact;
+import org.lockss.laaws.model.rs.ArtifactData;
 import org.lockss.laaws.model.rs.ArtifactPageInfo;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuUtil;
@@ -69,6 +69,7 @@ public class CuChecker extends Worker {
   void compareCuToArtifact(CachedUrl cu, Artifact artifact) {
     String fetchTime = cu.getProperties().getProperty(CachedUrl.PROPERTY_FETCH_TIME);
     Long collectionDate = null;
+    ArtifactData v2Artifact=null;
     if (!StringUtil.isNullString(fetchTime)) {
       collectionDate = Long.parseLong(fetchTime);
     }
@@ -77,24 +78,38 @@ public class CuChecker extends Worker {
         artifact.getCollection().equals(collection)  &&
         artifact.getCollectionDate().equals(collectionDate) &&
         artifact.getCommitted().equals(Boolean.TRUE);
-    log.debug2(cu.getUrl() +": metadata matches.");
+    if(! isMatch) {
+      log.debug(cu.getUrl() +"V1 and V2 metadata did not match");
+    }
+    else {
+      log.debug3(cu.getUrl() +": metadata matches.");
+    }
     if ( isMatch && auMover.isCompareBytes()) {
       log.debug3("Fetching  content for byte compare");
       try {
-        File v2Artifact = collectionsApi.getArtifact(collection, artifact.getId(),
+        MultipartFileResponse mfr = collectionsApi.getMultipartArtifact(collection, artifact.getId(),
             "ALWAYS");
-        FileInputStream fis = new FileInputStream(v2Artifact);
-        //BufferedInputStream bis = new BufferedInputStream(new FileInputStream(tempFile));
-        //CountingInputStream cis = new CountingInputStream(fis);
+        v2Artifact=new ArtifactData(mfr.getMultipartReader());
+        log.debug3("Successfully fetched Artifact Data");
+//        isMatch = IOUtils.contentEquals(v2Artifact.getInputStream(),
+//              cu.getUncompressedInputStream());
+//        if (!isMatch ) {
+//          log.debug("V1 and V2 artifact content did not match");
+//        }
         ctrs.incr(CounterType.ARTIFACTS_VERIFIED);
         // stats to update when available
-        ctrs.add(CounterType.CONTENT_BYTES_VERIFIED, 0);
-        ctrs.add(CounterType.BYTES_VERIFIED, 0); // http response total bytes
+        ctrs.add(CounterType.CONTENT_BYTES_VERIFIED, v2Artifact.getContentLength());
+        ctrs.add(CounterType.BYTES_VERIFIED, mfr.getSize()); // http response total bytes
       }
       catch (ApiException | IOException e) {
         e.printStackTrace();
       }
-
+      finally {
+        AuUtil.safeRelease(cu);
+        if(v2Artifact !=null) {
+          v2Artifact.release();
+        }
+      }
     }
   }
 
@@ -125,4 +140,5 @@ public class CuChecker extends Worker {
     } while (!terminated && !StringUtil.isNullString(token));
     return auArtifacts;
   }
+
 }

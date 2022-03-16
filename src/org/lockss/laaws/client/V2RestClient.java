@@ -19,6 +19,7 @@ import okhttp3.logging.HttpLoggingInterceptor;
 import okhttp3.logging.HttpLoggingInterceptor.Level;
 import okio.BufferedSink;
 import okio.Okio;
+import org.lockss.laaws.MultipartFileResponse;
 import org.lockss.laaws.V2AuMover.DigestCachedUrl;
 import org.lockss.laaws.client.auth.ApiKeyAuth;
 import org.lockss.laaws.client.auth.Authentication;
@@ -49,6 +50,8 @@ import java.util.Map.Entry;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.ResponseEntity;
 
 public class V2RestClient {
 
@@ -787,6 +790,9 @@ public class V2RestClient {
     } else if (returnType.equals(File.class)) {
       // Handle file downloading.
       return (T) downloadFileFromResponse(response);
+    } else if (returnType.equals(MultipartFileResponse.class)) {
+      File contentFile = downloadFileFromResponse(response);
+      return (T) new MultipartFileResponse(contentFile,response.headers());
     }
 
     String respBody;
@@ -1396,4 +1402,6 @@ public class V2RestClient {
       throw new AssertionError(e);
     }
   }
+
+
 }

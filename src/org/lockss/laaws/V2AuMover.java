@@ -317,11 +317,13 @@ public class V2AuMover {
     repoClient.setWriteTimeout((int) readTimeout);
     repoStatusApiClient = new org.lockss.laaws.api.rs.StatusApi(repoClient);
     repoCollectionsApiClient = new StreamingCollectionsApi(repoClient);
+    repoClient.setTempFolderPath(PlatformUtil.getSystemTempDir());
 
     configClient = new V2RestClient();
     configClient.setConnectTimeout((int) connectTimeout);
     configClient.setReadTimeout((int) readTimeout);
     configClient.setWriteTimeout((int) readTimeout);
+    configClient.setTempFolderPath(PlatformUtil.getSystemTempDir());
     // Assign the client to the status api and aus api
     cfgStatusApiClient = new org.lockss.laaws.api.cfg.StatusApi(configClient);
     cfgAusApiClient = new AusApi(configClient);

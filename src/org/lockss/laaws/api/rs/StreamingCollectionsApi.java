@@ -1,12 +1,12 @@
 package org.lockss.laaws.api.rs;
 
 import com.google.gson.reflect.TypeToken;
-import java.io.File;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import org.lockss.laaws.MultipartFileResponse;
 import org.lockss.laaws.V2AuMover.DigestCachedUrl;
 import org.lockss.laaws.client.ApiCallback;
 import org.lockss.laaws.client.ApiException;
@@ -230,7 +230,7 @@ public class StreamingCollectionsApi extends CollectionsApi {
   }
 
   /**
-   * Build call for getArtifact
+   * Build call for getMultipartArtifact
    *
    * @param collectionid   Collection containing the artifact (required)
    * @param artifactid     Identifier of the artifact (required)
@@ -247,7 +247,7 @@ public class StreamingCollectionsApi extends CollectionsApi {
    * <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
    * </table>
    */
-  public okhttp3.Call getArtifactCall(String collectionid, String artifactid, String includeContent,
+  public okhttp3.Call getMultipartArtifactCall(String collectionid, String artifactid, String includeContent,
       final ApiCallback _callback) throws ApiException {
     Object localVarPostBody = null;
 
@@ -291,22 +291,22 @@ public class StreamingCollectionsApi extends CollectionsApi {
   }
 
   @SuppressWarnings("rawtypes")
-  private okhttp3.Call getArtifactValidateBeforeCall(String collectionid, String artifactid,
+  private okhttp3.Call getMultipartArtifactValidateBeforeCall(String collectionid, String artifactid,
       String includeContent, final ApiCallback _callback) throws ApiException {
 
     // verify the required parameter 'collectionid' is set
     if (collectionid == null) {
       throw new ApiException(
-          "Missing the required parameter 'collectionid' when calling getArtifact(Async)");
+          "Missing the required parameter 'collectionid' when calling getMultipartArtifact(Async)");
     }
 
     // verify the required parameter 'artifactid' is set
     if (artifactid == null) {
       throw new ApiException(
-          "Missing the required parameter 'artifactid' when calling getArtifact(Async)");
+          "Missing the required parameter 'artifactid' when calling getMultipartArtifact(Async)");
     }
 
-    okhttp3.Call localVarCall = getArtifactCall(collectionid, artifactid, includeContent,
+    okhttp3.Call localVarCall = getMultipartArtifactCall(collectionid, artifactid, includeContent,
         _callback);
     return localVarCall;
 
@@ -318,7 +318,7 @@ public class StreamingCollectionsApi extends CollectionsApi {
    * @param collectionid   Collection containing the artifact (required)
    * @param artifactid     Identifier of the artifact (required)
    * @param includeContent Controls whether to include the artifact content part in multipart response (optional, default to ALWAYS)
-   * @return File
+   * @return MultipartFileResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
    * @http.response.details <table summary="Response Details" border="1">
    * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
@@ -329,9 +329,9 @@ public class StreamingCollectionsApi extends CollectionsApi {
    * <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
    * </table>
    */
-  public File getArtifact(String collectionid, String artifactid, String includeContent)
+  public MultipartFileResponse getMultipartArtifact(String collectionid, String artifactid, String includeContent)
       throws ApiException {
-    ApiResponse<File> localVarResp = getArtifactWithHttpInfo(collectionid, artifactid,
+    ApiResponse<MultipartFileResponse> localVarResp = getMultipartArtifactWithHttpInfo(collectionid, artifactid,
         includeContent);
     return localVarResp.getData();
   }
@@ -342,7 +342,7 @@ public class StreamingCollectionsApi extends CollectionsApi {
    * @param collectionid   Collection containing the artifact (required)
    * @param artifactid     Identifier of the artifact (required)
    * @param includeContent Controls whether to include the artifact content part in multipart response (optional, default to ALWAYS)
-   * @return ApiResponse&lt;File&gt;
+   * @return ApiResponse&lt;MultiPartMultipartFileResponseResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
    * @http.response.details <table summary="Response Details" border="1">
    * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
@@ -353,11 +353,11 @@ public class StreamingCollectionsApi extends CollectionsApi {
    * <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
    * </table>
    */
-  public ApiResponse<File> getArtifactWithHttpInfo(String collectionid, String artifactid,
+  public ApiResponse<MultipartFileResponse> getMultipartArtifactWithHttpInfo(String collectionid, String artifactid,
       String includeContent) throws ApiException {
-    okhttp3.Call localVarCall = getArtifactValidateBeforeCall(collectionid, artifactid,
+    okhttp3.Call localVarCall = getMultipartArtifactValidateBeforeCall(collectionid, artifactid,
         includeContent, null);
-    Type localVarReturnType = new TypeToken<File>() {
+    Type localVarReturnType = new TypeToken<MultipartFileResponse>() {
     }.getType();
     return apiClient.execute(localVarCall, localVarReturnType);
   }
@@ -380,12 +380,12 @@ public class StreamingCollectionsApi extends CollectionsApi {
    * <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
    * </table>
    */
-  public okhttp3.Call getArtifactAsync(String collectionid, String artifactid,
-      String includeContent, final ApiCallback<File> _callback) throws ApiException {
+  public okhttp3.Call getMultipartArtifactAsync(String collectionid, String artifactid,
+      String includeContent, final ApiCallback<MultipartFileResponse> _callback) throws ApiException {
 
-    okhttp3.Call localVarCall = getArtifactValidateBeforeCall(collectionid, artifactid,
+    okhttp3.Call localVarCall = getMultipartArtifactValidateBeforeCall(collectionid, artifactid,
         includeContent, _callback);
-    Type localVarReturnType = new TypeToken<File>() {
+    Type localVarReturnType = new TypeToken<MultipartFileResponse>() {
     }.getType();
     apiClient.executeAsync(localVarCall, localVarReturnType, _callback);
     return localVarCall;
