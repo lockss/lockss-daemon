@@ -204,7 +204,7 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
   };
 
   //And while we're visiting the tag, also remove data-request-id from html tag
-  HtmlTransform xform_spanID = new HtmlTransform() {
+  protected final HtmlTransform xform_spanID = new HtmlTransform() {
     //; The "id" attribute of <span> tags can have a gensym
     @Override
     public NodeList transform(NodeList nodeList) throws IOException {
@@ -244,7 +244,7 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
    * can have a gensym. Also removes pdf(plus) file sizes.
    */
   //And while we're visiting the tag, also remove data-request-id from html tag
-  HtmlTransform xform_allIDs = new HtmlTransform() {
+  protected final HtmlTransform xform_allIDs = new HtmlTransform() {
     @Override
     public NodeList transform(NodeList nodeList) throws IOException {
       try {
@@ -337,7 +337,7 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     return commonFiltering(combinedFiltered, encoding, doWS);
   }
 
-  private InputStream commonFiltering(InputStream combinedFiltered, String encoding, boolean doWS) {
+  protected InputStream commonFiltering(InputStream combinedFiltered, String encoding, boolean doWS) {
 
     // a little inefficient but pull out comments after the child nodes are applied
     combinedFiltered = filterComments(combinedFiltered,encoding);
