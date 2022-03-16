@@ -1080,7 +1080,10 @@ while (my $line = <>) {
     sleep(4);
 
   #Janeway
-  } elsif ($plugin eq "OLHPlugin" || $plugin eq "ClockssOLHPlugin") {
+  } elsif (($plugin eq "OLHPlugin") || 
+           ($plugin eq "ClockssOLHPlugin") ||
+           ($plugin eq "UniversityofMichiganPlugin") ||
+           ($plugin eq "ClockssUniversityofMichiganPlugin")) {
     #permission is different from start
     $perm_url = uri_unescape($param{base_url}) . "clockss";
       #printf("URL: %s\n", $perm_url); #debug
@@ -1121,6 +1124,8 @@ while (my $line = <>) {
   #Janeway
   } elsif (($plugin eq "ClockssIowaStateDPPlugin") ||
            ($plugin eq "IowaStateDPPlugin") ||
+           ($plugin eq "ClockssUniversityofMichiganPlugin") ||
+           ($plugin eq "UniversityofMichiganPlugin") ||
            ($plugin eq "ClockssGhentUniversityLibraryPlugin") ||
            ($plugin eq "GhentUniversityLibraryPlugin")) {
     #permission is different from start
