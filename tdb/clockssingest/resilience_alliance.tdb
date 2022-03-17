@@ -33,7 +33,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; Avian Conservation and Ecology Volume 14 ; 14 ; https://www.ace-eco.org/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2020 ; 2020 ; Avian Conservation and Ecology Volume 15 ; 15 ; https://www.ace-eco.org/ ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; 2021 ; Avian Conservation and Ecology Volume 16 ; 16 ; https://www.ace-eco.org/ ; >
-    au < expected ; exists ; 2022 ; 2022 ; Avian Conservation and Ecology Volume 17 ; 17 ; https://www.ace-eco.org/ ; >
+    au < manifest ; exists ; 2022 ; 2022 ; Avian Conservation and Ecology Volume 17 ; 17 ; https://www.ace-eco.org/ ; >
 
   }
 
@@ -70,7 +70,7 @@
       au < finished ; crawling ; 2019 ; 2019 ; Ecology and Society Volume 24 ; 24 ; https://www.ecologyandsociety.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2020 ; 2020 ; Ecology and Society Volume 25 ; 25 ; https://www.ecologyandsociety.org/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; 2021 ; Ecology and Society Volume 26 ; 26 ; https://www.ecologyandsociety.org/ ; >
-      au < expected ; exists ; 2022 ; 2022 ; Ecology and Society Volume 27 ; 27 ; https://www.ecologyandsociety.org/ ; >
+      au < manifest ; exists ; 2022 ; 2022 ; Ecology and Society Volume 27 ; 27 ; https://www.ecologyandsociety.org/ ; >
 
     }
 }
