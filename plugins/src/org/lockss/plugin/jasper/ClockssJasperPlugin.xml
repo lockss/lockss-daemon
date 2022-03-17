@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>1</string>
+        <string>2</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -170,5 +170,26 @@ POSSIBILITY OF SUCH DAMAGE.
         <list>
             <string>.*\.json$,application/json</string>
         </list>
+    </entry>
+    <entry>
+        <string>clockss_override</string>
+        <map>
+            <entry>
+                <string>au_def_pause_time</string>
+                <long>100</long>
+            </entry>
+            <entry>
+                <string>plugin_crawl_seed_factory</string>
+                <org.lockss.util.Default/>
+            </entry>
+            <entry>
+                <string>plugin_url_fetcher_factory</string>
+                <org.lockss.util.Default/>
+            </entry>
+            <entry>
+                <string>plugin_url_consumer_factory</string>
+                <org.lockss.util.Default/>
+            </entry>
+        </map>
     </entry>
 </map>
