@@ -514,9 +514,9 @@
     param[journal_issn] = 2349-2422
 
     au < manifest ; 2017 ; AYUHOM Volume 4 ; 2017 ; 4 ; https://www.ayuhom.com/ >
-    au < manifest ; 2018 ; AYUHOM Volume 5 ; 2018 ; 5 ; https://www.ayuhom.com/ >
-    au < manifest ; 2019 ; AYUHOM Volume 6 ; 2019 ; 6 ; https://www.ayuhom.com/ >
-    au < manifest ; 2020 ; AYUHOM Volume 7 ; 2020 ; 7 ; https://www.ayuhom.com/ >
+    au < ready ; 2018 ; AYUHOM Volume 5 ; 2018 ; 5 ; https://www.ayuhom.com/ >
+    au < ready ; 2019 ; AYUHOM Volume 6 ; 2019 ; 6 ; https://www.ayuhom.com/ >
+    au < ready ; 2020 ; AYUHOM Volume 7 ; 2020 ; 7 ; https://www.ayuhom.com/ >
     au < manifest ; 2021 ; AYUHOM Volume 8 ; 2021 ; 8 ; https://www.ayuhom.com/ >
     au < expected ; 2022 ; AYUHOM Volume 9 ; 2022 ; 9 ; https://www.ayuhom.com/ >
 
@@ -549,9 +549,9 @@
       param[journal_issn] = 2589-9627
 #      param[base_url] = https://www.cmaconweb.org/
 
-    au < manifest ; 2018 ; Chinese Medicine and Culture Volume 1 ; 2018 ; 1 ; https://www.cmaconweb.org/ >
-    au < manifest ; 2019 ; Chinese Medicine and Culture Volume 2 ; 2019 ; 2 ; https://www.cmaconweb.org/ >
-    au < manifest ; 2020 ; Chinese Medicine and Culture Volume 3 ; 2020 ; 3 ; https://www.cmaconweb.org/ >
+    au < ready ; 2018 ; Chinese Medicine and Culture Volume 1 ; 2018 ; 1 ; https://www.cmaconweb.org/ >
+    au < ready ; 2019 ; Chinese Medicine and Culture Volume 2 ; 2019 ; 2 ; https://www.cmaconweb.org/ >
+    au < ready ; 2020 ; Chinese Medicine and Culture Volume 3 ; 2020 ; 3 ; https://www.cmaconweb.org/ >
     au < manifest ; 2021 ; Chinese Medicine and Culture Volume 4 ; 2021 ; 4 ; https://www.cmaconweb.org/ >
     au < expected ; 2022 ; Chinese Medicine and Culture Volume 5 ; 2022 ; 5 ; https://www.cmaconweb.org/ >
 
@@ -2264,11 +2264,11 @@
 
     param[journal_issn] = 2455-9393
 
-    au < manifest ; 2016 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 1 ; 2016 ; 1 ; https://www.ijghtn.com/ >
-    au < manifest ; 2017 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 2 ; 2017 ; 2 ; https://www.ijghtn.com/ >
-    au < manifest ; 2018 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 3 ; 2018 ; 3 ; https://www.ijghtn.com/ >
-    au < manifest ; 2019 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 4 ; 2019 ; 4 ; https://www.ijghtn.com/ >
-    au < manifest ; 2020 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 5 ; 2020 ; 5 ; https://www.ijghtn.com/ >
+    au < ready ; 2016 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 1 ; 2016 ; 1 ; https://www.ijghtn.com/ >
+    au < ready ; 2017 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 2 ; 2017 ; 2 ; https://www.ijghtn.com/ >
+    au < ready ; 2018 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 3 ; 2018 ; 3 ; https://www.ijghtn.com/ >
+    au < ready ; 2019 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 4 ; 2019 ; 4 ; https://www.ijghtn.com/ >
+    au < ready ; 2020 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 5 ; 2020 ; 5 ; https://www.ijghtn.com/ >
     au < expected ; 2021 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 6 ; 2021 ; 6 ; https://www.ijghtn.com/ >
     au < expected ; 2022 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 7 ; 2022 ; 7 ; https://www.ijghtn.com/ >
 
@@ -9867,7 +9867,7 @@
       au < released ; 2015 ; Indian Journal of Respiratory Care Volume 4 ; 2015 ; 4 ; https://www.ijrc.in/ >
       au < released ; 2016 ; Indian Journal of Respiratory Care Volume 5 ; 2016 ; 5 ; https://www.ijrc.in/ >
       au < superseded ; 2017 ; Indian Journal of Respiratory Care Volume 6 [superseded] ; 2017 ; 6 ; http://www.ijrconline.org/ >
-      au < manifest ; 2017 ; Indian Journal of Respiratory Care Volume 6 ; 2017 ; 6 ; https://www.ijrc.in/ >
+      au < ready ; 2017 ; Indian Journal of Respiratory Care Volume 6 ; 2017 ; 6 ; https://www.ijrc.in/ >
       au < released ; 2018 ; Indian Journal of Respiratory Care Volume 7 ; 2018 ; 7 ; https://www.ijrc.in/ >
       au < released ; 2019 ; Indian Journal of Respiratory Care Volume 8 ; 2019 ; 8 ; https://www.ijrc.in/ >
       au < released ; 2020 ; Indian Journal of Respiratory Care Volume 9 ; 2020 ; 9 ; https://www.ijrc.in/ >
