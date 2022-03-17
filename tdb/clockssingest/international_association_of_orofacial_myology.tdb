@@ -1,0 +1,64 @@
+{
+
+  publisher <
+    name = International Association of Orofacial Myology ;
+    info[contract] = 2022 ;
+    info[back] = 2012 ;
+    info[tester] = 5 ;
+    info[poller] = 8
+  >
+  provider = International Association of Orofacial Myology
+  
+  # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
+  
+  plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+  param[base_url] = https://ijom.iaom.com/
+  implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+  
+  {
+
+    title <
+      name = International Journal of Orofacial Myology and Myofunctional Therapy (IJOM) ;
+      issn = 0735-0120 ;
+      eissn = 2694-2526
+    >
+
+    param[journal_abbr] = journal
+
+    au < exists ; exists ; 1990 ; International Journal of Orofacial Myology and Myofunctional Therapy (IJOM) Volume 16 ; 16 ; >
+    au < exists ; exists ; 1991 ; International Journal of Orofacial Myology and Myofunctional Therapy (IJOM) Volume 17 ; 17 ; >
+    au < exists ; exists ; 1992 ; International Journal of Orofacial Myology and Myofunctional Therapy (IJOM) Volume 18 ; 18 ; >
+    au < exists ; exists ; 1993 ; International Journal of Orofacial Myology and Myofunctional Therapy (IJOM) Volume 19 ; 19 ; >
+    au < exists ; exists ; 1994 ; International Journal of Orofacial Myology and Myofunctional Therapy (IJOM) Volume 20 ; 20 ; >
+    au < exists ; exists ; 1995 ; International Journal of Orofacial Myology and Myofunctional Therapy (IJOM) Volume 21 ; 21 ; >
+    au < exists ; exists ; 1996 ; International Journal of Orofacial Myology and Myofunctional Therapy (IJOM) Volume 22 ; 22 ; >
+    au < exists ; exists ; 1997 ; International Journal of Orofacial Myology and Myofunctional Therapy (IJOM) Volume 23 ; 23 ; >
+    au < exists ; exists ; 1998 ; International Journal of Orofacial Myology and Myofunctional Therapy (IJOM) Volume 24 ; 24 ; >
+    au < exists ; exists ; 1999 ; International Journal of Orofacial Myology and Myofunctional Therapy (IJOM) Volume 25 ; 25 ; >
+    au < exists ; exists ; 2000 ; International Journal of Orofacial Myology and Myofunctional Therapy (IJOM) Volume 26 ; 26 ; >
+    au < exists ; exists ; 2001 ; International Journal of Orofacial Myology and Myofunctional Therapy (IJOM) Volume 27 ; 27 ; >
+    au < exists ; exists ; 2002 ; International Journal of Orofacial Myology and Myofunctional Therapy (IJOM) Volume 28 ; 28 ; >
+    au < exists ; exists ; 2003 ; International Journal of Orofacial Myology and Myofunctional Therapy (IJOM) Volume 29 ; 29 ; >
+    au < exists ; exists ; 2004 ; International Journal of Orofacial Myology and Myofunctional Therapy (IJOM) Volume 30 ; 30 ; >
+    au < exists ; exists ; 2005 ; International Journal of Orofacial Myology and Myofunctional Therapy (IJOM) Volume 31 ; 31 ; >
+    au < exists ; exists ; 2006 ; International Journal of Orofacial Myology and Myofunctional Therapy (IJOM) Volume 32 ; 32 ; >
+    au < exists ; exists ; 2007 ; International Journal of Orofacial Myology and Myofunctional Therapy (IJOM) Volume 33 ; 33 ; >
+    au < exists ; exists ; 2008 ; International Journal of Orofacial Myology and Myofunctional Therapy (IJOM) Volume 34 ; 34 ; >
+    au < exists ; exists ; 2009 ; International Journal of Orofacial Myology and Myofunctional Therapy (IJOM) Volume 35 ; 35 ; >
+    au < exists ; exists ; 2010 ; International Journal of Orofacial Myology and Myofunctional Therapy (IJOM) Volume 36 ; 36 ; >
+    au < exists ; exists ; 2011 ; International Journal of Orofacial Myology and Myofunctional Therapy (IJOM) Volume 37 ; 37 ; >
+    au < exists ; exists ; 2012 ; International Journal of Orofacial Myology and Myofunctional Therapy (IJOM) Volume 38 ; 38 ; >
+    au < exists ; exists ; 2013 ; International Journal of Orofacial Myology and Myofunctional Therapy (IJOM) Volume 39 ; 39 ; >
+    au < exists ; exists ; 2014 ; International Journal of Orofacial Myology and Myofunctional Therapy (IJOM) Volume 40 ; 40 ; >
+    au < exists ; exists ; 2015 ; International Journal of Orofacial Myology and Myofunctional Therapy (IJOM) Volume 41 ; 41 ; >
+    au < exists ; exists ; 2016 ; International Journal of Orofacial Myology and Myofunctional Therapy (IJOM) Volume 42 ; 42 ; >
+    au < exists ; exists ; 2017 ; International Journal of Orofacial Myology and Myofunctional Therapy (IJOM) Volume 43 ; 43 ; >
+    au < exists ; exists ; 2018 ; International Journal of Orofacial Myology and Myofunctional Therapy (IJOM) Volume 44 ; 44 ; >
+    au < exists ; exists ; 2019 ; International Journal of Orofacial Myology and Myofunctional Therapy (IJOM) Volume 45 ; 45 ; >
+    au < exists ; exists ; 2020 ; International Journal of Orofacial Myology and Myofunctional Therapy (IJOM) Volume 46 ; 46 ; >
+    au < exists ; exists ; 2021 ; International Journal of Orofacial Myology and Myofunctional Therapy (IJOM) Volume 47 ; 47 ; >
+    au < exists ; exists ; 2022 ; International Journal of Orofacial Myology and Myofunctional Therapy (IJOM) Volume 48 ; 48 ; >
+
+  }
+
+}
