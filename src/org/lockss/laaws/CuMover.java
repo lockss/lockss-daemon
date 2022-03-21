@@ -180,6 +180,7 @@ public class CuMover extends Worker {
       log.debug3("Successfully committed artifact " + committed.getId());
       ctrs.incr(CounterType.ARTIFACTS_MOVED);
       ctrs.add(CounterType.CONTENT_BYTES_MOVED, cu.getContentSize());
+      ctrs.add(CounterType.BYTES_MOVED, dcu.getBytesMoved());
     }
   }
 
