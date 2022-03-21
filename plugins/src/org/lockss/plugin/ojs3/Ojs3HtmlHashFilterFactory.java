@@ -96,6 +96,8 @@ public class Ojs3HtmlHashFilterFactory implements FilterFactory {
 
             // article page: 	https://haematologica.org/article/view/10276
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-container"),
+            // issue page: https://haematologica.org/issue/view/377
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "one-article-intoc"),
 	    };
 
     private static final NodeFilter[] includeNodes2 = new NodeFilter[] {};
