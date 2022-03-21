@@ -67,19 +67,19 @@ public class CuChecker extends Worker {
   }
 
   void compareCuToArtifact(CachedUrl cu, Artifact artifact) {
+    Long collectionDate = null;
+    ArtifactData v2Artifact=null;
     try {
       String fetchTime =
-        cu.getProperties().getProperty(CachedUrl.PROPERTY_FETCH_TIME);
-      Long collectionDate = null;
-      ArtifactData v2Artifact=null;
+          cu.getProperties().getProperty(CachedUrl.PROPERTY_FETCH_TIME);
       if (!StringUtil.isNullString(fetchTime)) {
         collectionDate = Long.parseLong(fetchTime);
       }
       boolean isMatch =
-        artifact.getAuid().equals(au.getAuId()) &&
-        artifact.getCollection().equals(collection)  &&
-        artifact.getCollectionDate().equals(collectionDate) &&
-        artifact.getCommitted().equals(Boolean.TRUE);
+          artifact.getAuid().equals(au.getAuId()) &&
+              artifact.getCollection().equals(collection)  &&
+              artifact.getCollectionDate().equals(collectionDate) &&
+              artifact.getCommitted().equals(Boolean.TRUE);
       if(! isMatch) {
         log.debug(cu.getUrl() +"V1 and V2 metadata did not match");
       }
@@ -88,33 +88,36 @@ public class CuChecker extends Worker {
       }
       if ( isMatch && auMover.isCompareBytes()) {
         log.debug3("Fetching  content for byte compare");
-        try {
-          MultipartFileResponse mfr = collectionsApi.getMultipartArtifact(collection, artifact.getId(),
-                "ALWAYS");
-          v2Artifact=new ArtifactData(mfr.getMultipartReader());
-          log.debug3("Successfully fetched Artifact Data");
-//        isMatch = IOUtils.contentEquals(v2Artifact.getInputStream(),
-//              cu.getUncompressedInputStream());
-//        if (!isMatch ) {
-//          log.debug("V1 and V2 artifact content did not match");
-//        }
-          ctrs.incr(CounterType.ARTIFACTS_VERIFIED);
-          // stats to update when available
-          ctrs.add(CounterType.CONTENT_BYTES_VERIFIED, v2Artifact.getContentLength());
-          ctrs.add(CounterType.BYTES_VERIFIED, mfr.getSize()); // http response total bytes
+        MultipartFileResponse mfr = collectionsApi.getMultipartArtifact(collection,
+            artifact.getId(),
+            "ALWAYS");
+        v2Artifact = new ArtifactData(mfr.getMimeMultipart());
+        log.debug3("Successfully fetched Artifact Data");
+        isMatch = IOUtils.contentEquals(v2Artifact.getInputStream(),
+            cu.getUncompressedInputStream());
+        if (!isMatch) {
+          log.warning("V1 and V2 artifact content did not match.");
         }
-        catch (ApiException | IOException e) {
-          log.error("Error reading artifact", e);
+        else {
+          log.debug3("V1 and V2 artifact content were a match.");
         }
-        finally {
-          AuUtil.safeRelease(cu);
-          if(v2Artifact !=null) {
-            v2Artifact.release();
-          }
-        }
+        ctrs.incr(CounterType.ARTIFACTS_VERIFIED);
+        // stats to update when available
+        ctrs.add(CounterType.CONTENT_BYTES_VERIFIED, v2Artifact.getContentLength());
+        ctrs.add(CounterType.BYTES_VERIFIED, mfr.getSize()); // http response total bytes
       }
-    } finally {
+    }
+    catch (ApiException | IOException ex) {
+      String err = cu.getUrl() + "Error checking cu: " + ex.getMessage();
+      log.error(err, ex);
+      task.addError(err);
+      terminated = true;
+    }
+    finally {
       AuUtil.safeRelease(cu);
+      if(v2Artifact !=null) {
+        v2Artifact.release();
+      }
     }
   }
 

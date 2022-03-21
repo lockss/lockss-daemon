@@ -33,11 +33,11 @@ package org.lockss.laaws.model.rs;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.gson.Gson;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URI;
-import okhttp3.MultipartReader;
+import javax.mail.BodyPart;
+import javax.mail.internet.MimeMultipart;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.io.input.CountingInputStream;
 import org.apache.commons.lang3.StringUtils;
@@ -64,6 +64,7 @@ import org.springframework.http.HttpHeaders;
 public class ArtifactData implements AutoCloseable {
 
   private static final Logger log = Logger.getLogger(CuChecker.class);
+  public static final String CONTENT_DISPOSITION = "Content-Disposition";
   public static final String MULTIPART_ARTIFACT_REPO_PROPS = "artifact-repo-props";
   public static final String MULTIPART_ARTIFACT_HEADER = "artifact-header";
   public static final String MULTIPART_ARTIFACT_HTTP_STATUS = "artifact-http-status";
@@ -113,57 +114,57 @@ public class ArtifactData implements AutoCloseable {
 
   private boolean isReleased;
 
-   public ArtifactData(MultipartReader mpReader) throws IOException {
+   public ArtifactData(MimeMultipart multipart) throws IOException {
      ObjectMapper mapper = new ObjectMapper();
      mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
     try {
       // Assemble ArtifactData object from multipart response parts
-      MultipartReader.Part mpPart;
-
-      while ((mpPart = mpReader.nextPart()) != null) {
-        String disposition = mpPart.headers().get("Content-Disposition");
-        if (disposition != null) {
-          if (disposition.contains(MULTIPART_ARTIFACT_REPO_PROPS)) {
-            HttpHeaders headers = mapper.readValue(mpPart.body().inputStream(), HttpHeaders.class);
-
-            // Set ArtifactIdentifier
-            ArtifactIdentifier id = new ArtifactIdentifier(
-                headers.getFirst(ARTIFACT_ID_KEY),
-                headers.getFirst(ARTIFACT_COLLECTION_KEY),
-                headers.getFirst(ARTIFACT_AUID_KEY),
-                headers.getFirst(ARTIFACT_URI_KEY),
-                Integer.valueOf(headers.getFirst(ARTIFACT_VERSION_KEY))
+      BodyPart part;
+      int numParts = multipart.getCount();
+      log.debug3("Found " + numParts + " in Multipart Message");
+      for (int i = 0; i < numParts; i++) {
+        part = multipart.getBodyPart(i);
+        String[] dispositions = part.getHeader(CONTENT_DISPOSITION);
+        String disposition = dispositions[0];
+        if (disposition.contains(MULTIPART_ARTIFACT_REPO_PROPS)) {
+          HttpHeaders headers = mapper.readValue(part.getInputStream(), HttpHeaders.class);
+          // Set ArtifactIdentifier
+          ArtifactIdentifier id = new ArtifactIdentifier(
+              headers.getFirst(ARTIFACT_ID_KEY),
+              headers.getFirst(ARTIFACT_COLLECTION_KEY),
+              headers.getFirst(ARTIFACT_AUID_KEY),
+              headers.getFirst(ARTIFACT_URI_KEY),
+              Integer.valueOf(headers.getFirst(ARTIFACT_VERSION_KEY))
+          );
+          this.identifier = id;
+          String committedHeaderValue = headers.getFirst(ARTIFACT_STATE_COMMITTED);
+          String deletedHeaderValue = headers.getFirst(ARTIFACT_STATE_DELETED);
+          if (!(StringUtils.isEmpty(committedHeaderValue) || StringUtils.isEmpty(
+              deletedHeaderValue))) {
+            this.artifactRepositoryState = new ArtifactRepositoryState(
+                id,
+                Boolean.parseBoolean(headers.getFirst(ARTIFACT_STATE_COMMITTED)),
+                Boolean.parseBoolean(headers.getFirst(ARTIFACT_STATE_DELETED))
             );
-            this.identifier = id;
-            String committedHeaderValue = headers.getFirst(ARTIFACT_STATE_COMMITTED);
-            String deletedHeaderValue = headers.getFirst(ARTIFACT_STATE_DELETED);
-            if (!(StringUtils.isEmpty(committedHeaderValue) || StringUtils.isEmpty(
-                deletedHeaderValue))) {
-              this.artifactRepositoryState = new ArtifactRepositoryState(
-                  id,
-                  Boolean.parseBoolean(headers.getFirst(ARTIFACT_STATE_COMMITTED)),
-                  Boolean.parseBoolean(headers.getFirst(ARTIFACT_STATE_DELETED))
-              );
-            }
-            // Set misc. artifact properties
-            this.contentLength = Long.parseLong(headers.getFirst(ARTIFACT_LENGTH_KEY));
-            this.contentDigest = headers.getFirst(ARTIFACT_DIGEST_KEY);
           }
-          else if (disposition.contains(MULTIPART_ARTIFACT_HEADER)) {
-            this.artifactMetadata = mapper.readValue(mpPart.body().inputStream(), HttpHeaders.class);
-          }
-          else if (disposition.contains(MULTIPART_ARTIFACT_HTTP_STATUS)) {
-            // Create a SessionInputBuffer and bind the InputStream from the multipart
-            SessionInputBufferImpl buffer = new SessionInputBufferImpl(new HttpTransportMetricsImpl(),
+          // Set misc. artifact properties
+          this.contentLength = Long.parseLong(headers.getFirst(ARTIFACT_LENGTH_KEY));
+          this.contentDigest = headers.getFirst(ARTIFACT_DIGEST_KEY);
+        }
+        else if (disposition.contains(MULTIPART_ARTIFACT_HEADER)) {
+          this.artifactMetadata = mapper.readValue(part.getInputStream(), HttpHeaders.class);
+        }
+        else if (disposition.contains(MULTIPART_ARTIFACT_HTTP_STATUS)) {
+          // Create a SessionInputBuffer and bind the InputStream from the multipart
+          SessionInputBufferImpl buffer = new SessionInputBufferImpl(new HttpTransportMetricsImpl(),
               4096);
-            buffer.bind(mpPart.body().inputStream());
-            // Read and parse HTTP status line
-            StatusLine httpStatus = BasicLineParser.parseStatusLine(buffer.readLine(), null);
-            this.setHttpStatus(httpStatus);
-          }
-          else if (disposition.contains(MULTIPART_ARTIFACT_CONTENT)) {
-            setInputStream(mpPart.body().inputStream());
-          }
+          buffer.bind(part.getInputStream());
+          // Read and parse HTTP status line
+          StatusLine httpStatus = BasicLineParser.parseStatusLine(buffer.readLine(), null);
+          this.setHttpStatus(httpStatus);
+        }
+        else if (disposition.contains(MULTIPART_ARTIFACT_CONTENT)) {
+          setInputStream(part.getInputStream());
         }
       }
     }
@@ -172,7 +173,7 @@ public class ArtifactData implements AutoCloseable {
     }
   }
 
-  /**
+     /**
    * Returns additional key-value properties associated with this artifact.
    *
    * @return A {@code HttpHeaders} containing this artifact's additional properties.
@@ -283,7 +284,7 @@ public class ArtifactData implements AutoCloseable {
    * Sets the repository state information for this artifact data.
    *
    * @param metadata A {@code RepositoryArtifactMetadata} containing the repository state information for this artifact.
-   * @return
+   * @return this ArtifactData object
    */
   public ArtifactData setArtifactRepositoryState(ArtifactRepositoryState metadata) {
     this.artifactRepositoryState = metadata;

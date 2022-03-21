@@ -1,23 +1,22 @@
 package org.lockss.laaws;
 
+import java.io.BufferedInputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
+import javax.activation.DataSource;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import javax.mail.internet.MimeMultipart;
 import okhttp3.Headers;
-import okhttp3.MultipartReader;
-import okio.BufferedSource;
-import okio.Okio;
-import org.apache.commons.io.input.CountingInputStream;
 import org.lockss.util.StringUtil;
 
 public class MultipartFileResponse {
-  public static final String CONTENT_DISPOSITION = "Content-Disposition";
   public static final String CONTENT_TYPE = "Content-Type";
   public static final String BOUNDARY_MARKER = "boundary=";
 
   File mpFile;
   Headers responseHeaders;
-  CountingInputStream cis;
 
   public MultipartFileResponse(File mpFile, Headers responseHeaders) {
     this.mpFile = mpFile;
@@ -40,17 +39,26 @@ public class MultipartFileResponse {
     this.responseHeaders = responseHeaders;
   }
 
-  public MultipartReader getMultipartReader() throws IOException {
-    MultipartReader reader=null;
+  public MimeMultipart getMimeMultipart() throws IOException {
+    MimeMultipart multipart =null;
+    String contentType = null;
     if(mpFile != null) {
       String boundary = getBoundary();
       if(boundary != null) {
-        cis = new CountingInputStream(new FileInputStream(mpFile));
-        BufferedSource bs = Okio.buffer(Okio.source(cis));
-        reader = new MultipartReader(bs, boundary);
+        try {
+          if(responseHeaders != null) {
+            contentType = responseHeaders.get(CONTENT_TYPE);
+          }
+          multipart = new MimeMultipart(new InputStreamDataSource(new FileInputStream(mpFile),
+              contentType));
+        }
+        catch (Exception ex) {
+          String msg = "Unable to construct multipart from file: " + mpFile.getName();
+          throw new IOException(msg, ex);
+        }
       }
     }
-    return reader;
+    return multipart;
   }
 
   public String getBoundary() {
@@ -81,5 +89,38 @@ public class MultipartFileResponse {
         "File: " + mpFile.getAbsolutePath() +
         ", responseHeaders: " + responseHeaders +
         '}';
+  }
+
+  private static class InputStreamDataSource implements DataSource {
+    private InputStream inputStream;
+    String contentType;
+
+    public InputStreamDataSource(InputStream inputStream, String contentType) {
+      this.inputStream = inputStream;
+      this.contentType = contentType;
+    }
+
+    @Override
+    public InputStream getInputStream() throws IOException {
+      return new BufferedInputStream(inputStream);
+    }
+
+    @Override
+    public OutputStream getOutputStream() throws IOException {
+      throw new UnsupportedOperationException("Not implemented");
+    }
+
+    @Override
+    public String getContentType() {
+      if (contentType != null) {
+        return contentType;
+      }
+      return "multipart/form-data";
+    }
+
+    @Override
+    public String getName() {
+      return "";
+    }
   }
 }
