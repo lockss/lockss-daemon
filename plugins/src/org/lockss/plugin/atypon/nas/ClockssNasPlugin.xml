@@ -33,9 +33,8 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
     <entry>
         <string>plugin_status</string>
-        <string>testing</string>
+        <string>ready</string>
     </entry>
-    <!-- https transition enabled -->
     <entry>
         <string>plugin_identifier</string>
         <string>org.lockss.plugin.atypon.nas.ClockssNasPlugin</string>
