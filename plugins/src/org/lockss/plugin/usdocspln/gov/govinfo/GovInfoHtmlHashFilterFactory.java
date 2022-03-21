@@ -49,6 +49,8 @@ public class GovInfoHtmlHashFilterFactory implements FilterFactory {
     NodeFilter[] filters = new NodeFilter[] {
         // Share by e-mail tag with a unique tracking identifier, e.g. <a href="/cdn-cgi/l/email-protection#b788...858f" id="email-share-search" target="_blank">
         HtmlNodeFilters.tagWithAttribute("a", "id", "email-share-search"),
+        // A few things in this <div> started having random numeric suffixes in 'id' attributes, ostensibly to support toggling and similar dynamic behaviors
+        HtmlNodeFilters.tagWithAttribute("div", "id", "contentdetaildocinContextview"),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
