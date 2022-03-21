@@ -16,6 +16,7 @@
 use URI::Escape;
 use Getopt::Long;
 use LWP::UserAgent;
+use LWP::Protocol::https;
 use HTTP::Request;
 use HTTP::Cookies;
 use HTML::Entities;
@@ -189,6 +190,7 @@ while (my $line = <>) {
     $base_url_short = substr(uri_unescape($param{base_url}), 0, -1);
     my $req = HTTP::Request->new(GET, $man_url);
     my $resp = $ua->request($req);
+    #print($resp->headers_as_string); #debug
     my $man_contents = $resp->is_success ? $resp->content : "";
     if (! $resp->is_success) {
         $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
@@ -264,6 +266,7 @@ while (my $line = <>) {
     $base_url_short = substr(uri_unescape($param{base_url}), 0, -1);
     my $req = HTTP::Request->new(GET, $man_url);
     my $resp = $ua->request($req);
+    #print($resp->headers_as_string); #debug
     my $man_contents = $resp->is_success ? $resp->content : "";
     if (! $resp->is_success) {
         $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
@@ -4143,9 +4146,14 @@ while (my $line = <>) {
   } elsif ($plugin eq "LupPlugin" || $plugin eq "ClockssLupPlugin") {
          $url = sprintf("%slockss-manifest/%s/%s",
          $param{base_url}, $param{journal_id}, $param{volume_name});
+         #$url = "https://www.liverpooluniversitypress.co.uk/lockss-manifest/archives/26/"; #debug
+         #$url = "https://www.liverpooluniversitypress.co.uk"; #debug
          $man_url = uri_unescape($url);
          my $req = HTTP::Request->new(GET, $man_url);
          my $resp = $ua->request($req);
+         #print($resp->headers_as_string); #debug
+         #print("--------"); #debug
+         #print($resp->content); #debug 
          if (($resp->is_success)) {
              my $man_contents = $resp->content;
              if ($req->url ne $resp->request->uri) {
