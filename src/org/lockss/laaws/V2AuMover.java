@@ -869,12 +869,13 @@ public class V2AuMover {
     try {
       v2Url = UrlUtil.normalizeUrl(cu.getProperties().getProperty(CachedUrl.PROPERTY_NODE_URL),
           au);
+//       v2Url = cu.getProperties().getProperty(CachedUrl.PROPERTY_NODE_URL);
+      if (v2Url == null) {
+        v2Url = v1Url;
+      }
     }
     catch (Exception ex) {
-      log.warning("Unable to normalize uri for " + v1Url, ex);
-    }
-    finally {
-      AuUtil.safeRelease(cu);
+      log.warning("Unable to normalize V1 uri: " + v1Url, ex);
     }
     if (v2Url == null) {
       v2Url = v1Url;
@@ -1015,14 +1016,24 @@ public class V2AuMover {
         }
         catch (final IOException ioe) {
           if (tryCount < maxRetryCount) {
-            log.debug("Retrying: " + ioe.getMessage());
+            if (log.isDebug2()) {
+              log.debug2("Retrying", ioe);
+            } else {
+              log.debug("Retrying: " + ioe);
+            }
             if (response != null) {
               // close response before retry
               response.close();
             }
           }
           else {
-            log.debug("Exceeded retries - exiting");
+            if (log.isDebug2()) {
+              // already logged the stack trace
+              log.debug2("Exceeded retries - exiting: " + ioe);
+            } else {
+              // log stack trace when give up.
+              log.debug("Exceeded retries - exiting", ioe);
+            }
             terminated = true;
             if (response != null) {
               response.close();
@@ -1168,6 +1179,13 @@ public class V2AuMover {
 
     public void addError(String msg) {
       errors.add(msg);
+      if (parent != null) {
+        parent.addError(msg);
+      }
+    }
+
+    public List<String> getErrors() {
+      return errors;
     }
 
     public synchronized void add(Counters ctrs) {
@@ -1181,6 +1199,13 @@ public class V2AuMover {
   public static class OpTimers {
     protected Map<Phase,StopWatch> timerMap = new HashMap<>();
     protected Map<Phase,CountUpDownLatch> latchMap = new HashMap<>();
+    protected Counters ctrs;
+    String status;
+
+    public OpTimers() {
+      ctrs = new Counters();
+      status = "Initializing";
+    }
 
     public void start(Phase phase) {
       timerMap.put(phase, StopWatch.createStarted());
@@ -1240,6 +1265,14 @@ public class V2AuMover {
       return latchMap.get(phase);
     }
 
+    public String getStatus() {
+      return status;
+    }
+
+    public void setStatus(String val) {
+      status = val;
+    }
+
   }
 
   /** Status and counters for a single AU in progress */
@@ -1248,16 +1281,12 @@ public class V2AuMover {
     ArchivalUnit au;
     String auid;
     String auname;
-    String status;
-    Counters ctrs;
-    List<String> errors = new ArrayList<>();
 
     public AuStatus(ArchivalUnit au) {
+      super();
       this.au = au;
       auid = au.getAuId();
       auname = au.getName();
-      ctrs = new Counters();
-      status = "Initializing";
     }
 
     public ArchivalUnit getAu() {
@@ -1276,24 +1305,16 @@ public class V2AuMover {
       return ctrs;
     }
 
-    public String getStatus() {
-      return status;
-    }
-
     public List<String> getErrors() {
-      return errors;
+      return ctrs.getErrors();
     }
 
     public int getErrorCount() {
-      return errors.size();
-    }
-
-    public void setStatus(String val) {
-      status = val;
+      return ctrs.getErrors().size();
     }
 
     public void addError(String msg) {
-      errors.add(msg);
+      ctrs.addError(msg);
     }
 
     public int hashCode() {
@@ -1374,11 +1395,19 @@ public class V2AuMover {
 
   private void addCounterStatus(StringBuilder sb, Counters ctrs,
                                 OpTimers auStat, Phase phase) {
+    addCounterStatus(sb, ctrs, auStat, phase, null);
+  }
+
+  private void addCounterStatus(StringBuilder sb, Counters ctrs,
+                                OpTimers auStat, Phase phase,
+                                String separator) {
     // No stats if not started yet
     if (!auStat.hasStarted(phase)) {
       return;
     }
-    sb.append(", ");
+    if (separator != null) {
+      sb.append(separator);
+    }
     sb.append(StringUtil.bigNumberOfUnits(ctrs.getVal(CounterType.URLS_MOVED),
                                           "URL"));
     if (ctrs.isNonZero(CounterType.URLS_SKIPPED)) {
@@ -1459,13 +1488,17 @@ public class V2AuMover {
     return running;
   }
 
+  public boolean isTerminated() {
+    return terminated;
+  }
+
   /**
    * Returns the list of errors which occurred while attempting to move the AU(s).
    *
    * @return the list of error strings
    */
   public List<String> getErrors() {
-    return errorList;
+    return totalCounters.getErrors();
   }
 
   private void addActiveAu(ArchivalUnit au, AuStatus austat) {
@@ -1551,8 +1584,8 @@ public class V2AuMover {
     reportWriter.println("AU ID: " + auStat.getAuId());
     if (terminated) {
       reportWriter.println("Move terminated with error.");
-      reportWriter.println(auData);
     }
+    reportWriter.println(auData);
 //       else {
 //         if (isPartialContent) {
 //           if (auArtifactsMoved > 0) {// if we moved something
@@ -1600,7 +1633,7 @@ public class V2AuMover {
       }
       sb.append(")");
     }
-    addCounterStatus(sb, totalCounters, totalTimers, Phase.TOTAL);
+    addCounterStatus(sb, totalCounters, totalTimers, Phase.TOTAL, ": ");
     String summary = sb.toString();
     running = false;
     currentStatus = summary;
@@ -1614,19 +1647,6 @@ public class V2AuMover {
     }
     log.info(summary);
   }
-
-
-
-  /**
-   * Add an Error to the list and update error count;
-   * @param err the error string to add.
-   */
-//   void addError(String err) {
-//     errorList.add(err);
-//     auErrors.add(err);
-//     auErrorCount++;
-//   }
-
 
   /* ------------------
   testing getters & setters
@@ -1680,7 +1700,6 @@ public class V2AuMover {
 
 
 
-
   void logErrorBody(Response response) {
     try {
       if(response.body() != null)
@@ -1710,12 +1729,3 @@ public class V2AuMover {
     return System.currentTimeMillis();
   }
 }
-
-//       errorList.add(msg);
-//       auErrors.add(msg);
-
-// in one au
-//       totalCounters.runTime = now() - startTime;
-// in finish all
-//       totalCounters.runTime = now() - startTime;
-

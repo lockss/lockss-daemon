@@ -29,30 +29,30 @@ public class CuChecker extends Worker {
 
   public void run() {
     log.debug2("Starting CuChecker: " + au + ", " + cu);
-    CachedUrl[] v1Versions = cu.getCuVersions();
-    String v2Url = auMover.getV2Url(au, cu);
-    List<Artifact> v2Versions;
+    String v2Url = null;
     try {
+      CachedUrl[] v1Versions = cu.getCuVersions();
+      v2Url = auMover.getV2Url(au, cu);
+      List<Artifact> v2Versions;
       v2Versions = getAllCuArtifacts(au, v2Url);
+      if (v2Versions.size() != v1Versions.length) {
+        String msg = "Mismatched version count: V1: " + v1Versions.length +
+          ", V2: " + v2Versions.size() + ", " + cu.getUrl();
+        if (!v2Url.equals(cu.getUrl())) {
+          msg += " v2Url: " + v2Url;
+        }
+        addError(msg);
+        log.error(msg);
+        terminated = true;
+      }
       if (!terminated) {
-        int versionCompare = v2Versions.size() - v1Versions.length;
-        String cmpString = versionCompare > 0 ? "more" : "fewer";
-        if (versionCompare != 0) {
-          String err = "Mismatched version count for " + v2Url
-              + ": V2 Repo has " + cmpString + " versions than V1 Repo";
-          addError(err);
-          log.error(err);
-          terminated = true;
+        log.info("Checking Artifact metadata...");
+        for (int ver = 0; ver < v1Versions.length; ver++) {
+          CachedUrl v1Version = v1Versions[ver];
+          Artifact v2Artifact = v2Versions.get(ver);
+          compareCuToArtifact(v1Version, v2Artifact);
         }
-        else {
-          log.info("Checking Artifact metadata...");
-          for (int ver = 0; ver < v1Versions.length; ver++) {
-            CachedUrl v1Version = v1Versions[ver];
-            Artifact v2Artifact = v2Versions.get(ver);
-            compareCuToArtifact(v1Version, v2Artifact);
-          }
-          ctrs.incr(CounterType.URLS_VERIFIED);
-        }
+        ctrs.incr(CounterType.URLS_VERIFIED);
       }
     }
     catch (Exception ex) {
@@ -67,49 +67,54 @@ public class CuChecker extends Worker {
   }
 
   void compareCuToArtifact(CachedUrl cu, Artifact artifact) {
-    String fetchTime = cu.getProperties().getProperty(CachedUrl.PROPERTY_FETCH_TIME);
-    Long collectionDate = null;
-    ArtifactData v2Artifact=null;
-    if (!StringUtil.isNullString(fetchTime)) {
-      collectionDate = Long.parseLong(fetchTime);
-    }
-    boolean isMatch =
+    try {
+      String fetchTime =
+        cu.getProperties().getProperty(CachedUrl.PROPERTY_FETCH_TIME);
+      Long collectionDate = null;
+      ArtifactData v2Artifact=null;
+      if (!StringUtil.isNullString(fetchTime)) {
+        collectionDate = Long.parseLong(fetchTime);
+      }
+      boolean isMatch =
         artifact.getAuid().equals(au.getAuId()) &&
         artifact.getCollection().equals(collection)  &&
         artifact.getCollectionDate().equals(collectionDate) &&
         artifact.getCommitted().equals(Boolean.TRUE);
-    if(! isMatch) {
-      log.debug(cu.getUrl() +"V1 and V2 metadata did not match");
-    }
-    else {
-      log.debug3(cu.getUrl() +": metadata matches.");
-    }
-    if ( isMatch && auMover.isCompareBytes()) {
-      log.debug3("Fetching  content for byte compare");
-      try {
-        MultipartFileResponse mfr = collectionsApi.getMultipartArtifact(collection, artifact.getId(),
-            "ALWAYS");
-        v2Artifact=new ArtifactData(mfr.getMultipartReader());
-        log.debug3("Successfully fetched Artifact Data");
+      if(! isMatch) {
+        log.debug(cu.getUrl() +"V1 and V2 metadata did not match");
+      }
+      else {
+        log.debug3(cu.getUrl() +": metadata matches.");
+      }
+      if ( isMatch && auMover.isCompareBytes()) {
+        log.debug3("Fetching  content for byte compare");
+        try {
+          MultipartFileResponse mfr = collectionsApi.getMultipartArtifact(collection, artifact.getId(),
+                "ALWAYS");
+          v2Artifact=new ArtifactData(mfr.getMultipartReader());
+          log.debug3("Successfully fetched Artifact Data");
 //        isMatch = IOUtils.contentEquals(v2Artifact.getInputStream(),
 //              cu.getUncompressedInputStream());
 //        if (!isMatch ) {
 //          log.debug("V1 and V2 artifact content did not match");
 //        }
-        ctrs.incr(CounterType.ARTIFACTS_VERIFIED);
-        // stats to update when available
-        ctrs.add(CounterType.CONTENT_BYTES_VERIFIED, v2Artifact.getContentLength());
-        ctrs.add(CounterType.BYTES_VERIFIED, mfr.getSize()); // http response total bytes
-      }
-      catch (ApiException | IOException e) {
-        e.printStackTrace();
-      }
-      finally {
-        AuUtil.safeRelease(cu);
-        if(v2Artifact !=null) {
-          v2Artifact.release();
+          ctrs.incr(CounterType.ARTIFACTS_VERIFIED);
+          // stats to update when available
+          ctrs.add(CounterType.CONTENT_BYTES_VERIFIED, v2Artifact.getContentLength());
+          ctrs.add(CounterType.BYTES_VERIFIED, mfr.getSize()); // http response total bytes
+        }
+        catch (ApiException | IOException e) {
+          log.error("Error reading artifact", e);
+        }
+        finally {
+          AuUtil.safeRelease(cu);
+          if(v2Artifact !=null) {
+            v2Artifact.release();
+          }
         }
       }
+    } finally {
+      AuUtil.safeRelease(cu);
     }
   }
 

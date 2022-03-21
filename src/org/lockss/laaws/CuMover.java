@@ -34,17 +34,21 @@ public class CuMover extends Worker {
   }
 
   public void run() {
-    log.debug2("Starting CuMover: " + au + ", " + cu);
-    v1Url=cu.getUrl();
-    v2Url=auMover.getV2Url(au, cu);
-    List<Artifact> cuArtifacts = null;
     try {
-      cuArtifacts = getV2ArtifactsForUrl(au.getAuId(), v2Url);
+      log.debug2("Starting CuMover: " + au + ", " + cu);
+      v1Url=cu.getUrl();
+      v2Url=auMover.getV2Url(au, cu);
+      List<Artifact> cuArtifacts = Collections.emptyList();
+      try {
+        cuArtifacts = getV2ArtifactsForUrl(au.getAuId(), v2Url);
+      }
+      catch (ApiException e) {
+        log.warning("Unable to determine which V2 Urls have already been moved, continuing.");
+      }
+      moveCuVersions(v2Url, cu, cuArtifacts);
+    } finally {
+      AuUtil.safeRelease(cu);
     }
-    catch (ApiException e) {
-      log.warning("Unable to determine which V2 Urls have already been moved, continuing.");
-    }
-    moveCuVersions(v2Url, cu, cuArtifacts);
   }
   
   /**
@@ -83,7 +87,9 @@ public class CuMover extends Worker {
         while(!terminated && cuQueue.peek() != null) {
           moveNextCuVersion(auid, v2Url, cuQueue);
         }
-        ctrs.incr(CounterType.URLS_MOVED);
+        if (!terminated) {
+          ctrs.incr(CounterType.URLS_MOVED);
+        }
       }
     }
   }
@@ -144,8 +150,6 @@ public class CuMover extends Worker {
     DigestCachedUrl dcu = new DigestCachedUrl(cu);
     Artifact uncommitted = collectionsApi.createArtifact(collectionId, auid, v2Url, dcu, collectionDate);
     log.debug3("createArtifact returned,  content bytes: " + cu.getContentSize() + ", total: " + dcu.getBytesMoved());
-    ctrs.add(CounterType.CONTENT_BYTES_MOVED, cu.getContentSize());
-    ctrs.add(CounterType.BYTES_MOVED, dcu.getBytesMoved());
     log.debug3("commitArtifact("+v2Url+")");
     commitArtifact(uncommitted, dcu);
   }
@@ -175,8 +179,8 @@ public class CuMover extends Worker {
       }
       log.debug3("Successfully committed artifact " + committed.getId());
       ctrs.incr(CounterType.ARTIFACTS_MOVED);
+      ctrs.add(CounterType.CONTENT_BYTES_MOVED, cu.getContentSize());
     }
-
   }
 
   private List<Artifact> getV2ArtifactsForUrl(String auId,  String v2Url)
