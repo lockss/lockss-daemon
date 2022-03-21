@@ -46,7 +46,7 @@ public class CuChecker extends Worker {
         terminated = true;
       }
       if (!terminated) {
-        log.info("Checking Artifact metadata...");
+        log.debug2(v2Url + ":Checking Artifact...");
         for (int ver = 0; ver < v1Versions.length; ver++) {
           CachedUrl v1Version = v1Versions[ver];
           Artifact v2Artifact = v2Versions.get(ver);
@@ -81,7 +81,7 @@ public class CuChecker extends Worker {
               artifact.getCollectionDate().equals(collectionDate) &&
               artifact.getCommitted().equals(Boolean.TRUE);
       if(! isMatch) {
-        log.debug(cu.getUrl() +"V1 and V2 metadata did not match");
+        log.warning(cu.getUrl() +"V1 and V2 metadata did not match");
       }
       else {
         log.debug3(cu.getUrl() +": metadata matches.");
