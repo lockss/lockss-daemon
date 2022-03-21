@@ -49,7 +49,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Archives Volume 53 ; 53 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Archives Volume 54 ; 54 ; >
     au < crawling ; exists ; 2020 ; Archives Volume 55 ; 55 ; >
-    au < manifest ; exists ; 2021 ; Archives Volume 56 ; 56 ; >
+    au < ready ; exists ; 2021 ; Archives Volume 56 ; 56 ; >
     au < expected ; exists ; 2022 ; Archives Volume 57 ; 57 ; >
 
   }
@@ -66,12 +66,12 @@
     param[journal_id] = arsjudaica
     #Published 2015-2020
 
-    au < manifest ; exists ; 2015 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 11 ; 11 ; >
+    au < ready ; exists ; 2015 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 11 ; 11 ; >
     au < crawling ; exists ; 2016 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2017 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2018 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 14 ; 14 ; >
-    au < manifest ; exists ; 2019 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 15 ; 15 ; >
-    au < manifest ; exists ; 2020 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 16 ; 16 ; >
+    au < ready ; exists ; 2017 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 13 ; 13 ; >
+    au < ready ; exists ; 2018 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 14 ; 14 ; >
+    au < ready ; exists ; 2019 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 15 ; 15 ; >
+    au < ready ; exists ; 2020 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 16 ; 16 ; >
 
   }
 
@@ -108,7 +108,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Australian Journal of French Studies Volume 55 ; 55 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Australian Journal of French Studies Volume 56 ; 56 ; >
     au < crawling ; exists ; 2020 ; Australian Journal of French Studies Volume 57 ; 57 ; >
-    au < manifest ; exists ; 2021 ; Australian Journal of French Studies Volume 58 ; 58 ; >
+    au < ready ; exists ; 2021 ; Australian Journal of French Studies Volume 58 ; 58 ; >
     au < expected ; exists ; 2022 ; Australian Journal of French Studies Volume 59 ; 59 ; >
 
   }
@@ -124,9 +124,9 @@
     param[journal_id] = bchs
     #Published 2019-present
 
-    au < manifest ; exists ; 2019 ; Bulletin of Contemporary Hispanic Studies Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2020 ; Bulletin of Contemporary Hispanic Studies Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2021 ; Bulletin of Contemporary Hispanic Studies Volume 3 ; 3 ; >
+    au < ready ; exists ; 2019 ; Bulletin of Contemporary Hispanic Studies Volume 1 ; 1 ; >
+    au < ready ; exists ; 2020 ; Bulletin of Contemporary Hispanic Studies Volume 2 ; 2 ; >
+    au < ready ; exists ; 2021 ; Bulletin of Contemporary Hispanic Studies Volume 3 ; 3 ; >
     au < expected ; exists ; 2022 ; Bulletin of Contemporary Hispanic Studies Volume 4 ; 4 ; >
 
   }
@@ -159,7 +159,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; British Journal of Canadian Studies Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; British Journal of Canadian Studies Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; British Journal of Canadian Studies Volume 31 ; 31 ; >
-    au < manifest ; exists ; 2020 ; British Journal of Canadian Studies Volume 32 ; 32 ; >
+    au < ready ; exists ; 2020 ; British Journal of Canadian Studies Volume 32 ; 32 ; >
     au < crawling ; exists ; 2021 ; British Journal of Canadian Studies Volume 33 ; 33 ; >
     au < expected ; expected ; 2022 ; British Journal of Canadian Studies Volume 34 ; 34 ; >
 
@@ -223,7 +223,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Bulletin of Hispanic Studies Volume 95 ; 95 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Bulletin of Hispanic Studies Volume 96 ; 96 ; >
     au < crawling ; exists ; 2020 ; Bulletin of Hispanic Studies Volume 97 ; 97 ; >
-    au < manifest ; exists ; 2021 ; Bulletin of Hispanic Studies Volume 98 ; 98 ; >
+    au < ready ; exists ; 2021 ; Bulletin of Hispanic Studies Volume 98 ; 98 ; >
     au < manifest ; exists ; 2022 ; Bulletin of Hispanic Studies Volume 99 ; 99 ; >
 
   }
@@ -261,7 +261,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; The Byron Journal Volume 46 ; 46 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; The Byron Journal Volume 47 ; 47 ; >
     au < crawling ; exists ; 2020 ; The Byron Journal Volume 48 ; 48 ; >
-    au < manifest ; exists ; 2021 ; The Byron Journal Volume 49 ; 49 ; >
+    au < ready ; exists ; 2021 ; The Byron Journal Volume 49 ; 49 ; >
     au < expected ; exists ; 2022 ; The Byron Journal Volume 50 ; 50 ; >
 
   }
@@ -292,9 +292,9 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Comma Volume 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Comma Volume 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Comma Volume 2017 ; 2017 ; >
-    au < manifest ; exists ; 2018 ; Comma Volume 2018 ; 2018 ; >
-    au < manifest ; exists ; 2019 ; Comma Volume 2019 ; 2019 ; >
-    au < manifest ; exists ; 2020 ; Comma Volume 2020 ; 2020 ; >
+    au < ready ; exists ; 2018 ; Comma Volume 2018 ; 2018 ; >
+    au < ready ; exists ; 2019 ; Comma Volume 2019 ; 2019 ; >
+    au < ready ; exists ; 2020 ; Comma Volume 2020 ; 2020 ; >
     au < exists ; exists ; 2021 ; Comma Volume 2021 ; 2021 ; >
     au < expected ; exists ; 2022 ; Comma Volume 2022 ; 2022 ; >
 
@@ -333,7 +333,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Catalan Review Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Catalan Review Volume 33 ; 33 ; >
     au < crawling ; exists ; 2020 ; Catalan Review Volume 34 ; 34 ; >
-    au < manifest ; exists ; 2021 ; Catalan Review Volume 35 ; 35 ; >
+    au < ready ; exists ; 2021 ; Catalan Review Volume 35 ; 35 ; >
     au < expected ; exists ; 2022 ; Catalan Review Volume 36 ; 36 ; >
 
   }
@@ -372,7 +372,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Contemporary French Civilization Volume 43 ; 43 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Contemporary French Civilization Volume 44 ; 44 ; >
     au < crawling ; exists ; 2020 ; Contemporary French Civilization Volume 45 ; 45 ; >
-    au < manifest ; exists ; 2021 ; Contemporary French Civilization Volume 46 ; 46 ; >
+    au < ready ; exists ; 2021 ; Contemporary French Civilization Volume 46 ; 46 ; >
     au < expected ; exists ; 2022 ; Contemporary French Civilization Volume 47 ; 47 ; >
 
   }
@@ -388,7 +388,7 @@
     param[journal_id] = dap
     #Published 2021-present
 
-    au < manifest ; exists ; 2021 ; Developing Academic Practice Volume 2021 ; 2021 ; >
+    au < ready ; exists ; 2021 ; Developing Academic Practice Volume 2021 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Developing Academic Practice Volume 2022 ; 2022 ; >
 
   }
@@ -426,21 +426,21 @@
     au < manifest ; exists ; 2005 ; Eighteenth-Century Ireland Volume 20 ; 20 ; >
     au < manifest ; exists ; 2006 ; Eighteenth-Century Ireland Volume 21 ; 21 ; >
     au < manifest ; exists ; 2007 ; Eighteenth-Century Ireland Volume 22 ; 22 ; >
-    au < manifest ; exists ; 2008 ; Eighteenth-Century Ireland Volume 23 ; 23 ; >
-    au < manifest ; exists ; 2009 ; Eighteenth-Century Ireland Volume 24 ; 24 ; >
-    au < manifest ; exists ; 2010 ; Eighteenth-Century Ireland Volume 25 ; 25 ; >
-    au < manifest ; exists ; 2011 ; Eighteenth-Century Ireland Volume 26 ; 26 ; >
+    au < ready ; exists ; 2008 ; Eighteenth-Century Ireland Volume 23 ; 23 ; >
+    au < ready ; exists ; 2009 ; Eighteenth-Century Ireland Volume 24 ; 24 ; >
+    au < ready ; exists ; 2010 ; Eighteenth-Century Ireland Volume 25 ; 25 ; >
+    au < ready ; exists ; 2011 ; Eighteenth-Century Ireland Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Eighteenth-Century Ireland Volume Special_Issue ; Special_Issue ; >
-    au < manifest ; exists ; 2012 ; Eighteenth-Century Ireland Volume 27 ; 27 ; >
-    au < manifest ; exists ; 2013 ; Eighteenth-Century Ireland Volume 28 ; 28 ; >
-    au < manifest ; exists ; 2014 ; Eighteenth-Century Ireland Volume 29 ; 29 ; >
-    au < manifest ; exists ; 2015 ; Eighteenth-Century Ireland Volume 30 ; 30 ; >
-    au < manifest ; exists ; 2016 ; Eighteenth-Century Ireland Volume 31 ; 31 ; >
-    au < manifest ; exists ; 2017 ; Eighteenth-Century Ireland Volume 32 ; 32 ; >
-    au < manifest ; exists ; 2018 ; Eighteenth-Century Ireland Volume 33 ; 33 ; >
-    au < manifest ; exists ; 2019 ; Eighteenth-Century Ireland Volume 34 ; 34 ; >
-    au < manifest ; exists ; 2020 ; Eighteenth-Century Ireland Volume 35 ; 35 ; >
-    au < manifest ; exists ; 2021 ; Eighteenth-Century Ireland Volume 36 ; 36 ; >
+    au < ready ; exists ; 2012 ; Eighteenth-Century Ireland Volume 27 ; 27 ; >
+    au < ready ; exists ; 2013 ; Eighteenth-Century Ireland Volume 28 ; 28 ; >
+    au < ready ; exists ; 2014 ; Eighteenth-Century Ireland Volume 29 ; 29 ; >
+    au < ready ; exists ; 2015 ; Eighteenth-Century Ireland Volume 30 ; 30 ; >
+    au < ready ; exists ; 2016 ; Eighteenth-Century Ireland Volume 31 ; 31 ; >
+    au < ready ; exists ; 2017 ; Eighteenth-Century Ireland Volume 32 ; 32 ; >
+    au < ready ; exists ; 2018 ; Eighteenth-Century Ireland Volume 33 ; 33 ; >
+    au < ready ; exists ; 2019 ; Eighteenth-Century Ireland Volume 34 ; 34 ; >
+    au < ready ; exists ; 2020 ; Eighteenth-Century Ireland Volume 35 ; 35 ; >
+    au < ready ; exists ; 2021 ; Eighteenth-Century Ireland Volume 36 ; 36 ; >
     au < expected ; exists ; 2022 ; Eighteenth-Century Ireland Volume 37 ; 37 ; >
 
   }
@@ -484,7 +484,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Essays in Romanticism Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Essays in Romanticism Volume 26 ; 26 ; >
     au < crawling ; exists ; 2020 ; Essays in Romanticism Volume 27 ; 27 ; >
-    au < manifest ; exists ; 2021 ; Essays in Romanticism Volume 28 ; 28 ; >
+    au < ready ; exists ; 2021 ; Essays in Romanticism Volume 28 ; 28 ; >
     au < expected ; exists ; 2022 ; Essays in Romanticism Volume 29 ; 29 ; >
 
   }
@@ -513,7 +513,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 11 ; 11 ; >
     au < crawling ; exists ; 2020 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2021 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 13 ; 13 ; >
+    au < ready ; exists ; 2021 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 13 ; 13 ; >
     au < expected ; exists ; 2022 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 14 ; 14 ; >
 
   }
@@ -551,7 +551,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Extrapolation Volume 59 ; 59 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Extrapolation Volume 60 ; 60 ; >
     au < crawling ; exists ; 2020 ; Extrapolation Volume 61 ; 61 ; >
-    au < manifest ; exists ; 2021 ; Extrapolation Volume 62 ; 62 ; >
+    au < ready ; exists ; 2021 ; Extrapolation Volume 62 ; 62 ; >
     au < expected ; exists ; 2022 ; Extrapolation Volume 63 ; 63 ; >
 
   }
@@ -577,7 +577,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Francosphères Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Francosphères Volume 8 ; 8 ; >
     au < crawling ; exists ; 2020 ; Francosphères Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2021 ; Francosphères Volume 10 ; 10 ; >
+    au < ready ; exists ; 2021 ; Francosphères Volume 10 ; 10 ; >
     au < expected ; exists ; 2022 ; Francosphères Volume 11 ; 11 ; >
 
   }
