@@ -58,6 +58,7 @@ public class MigrationManager extends BaseLockssManager
 
   private V2AuMover mover;
   private Runner runner;
+  private String idleError;
 
   public void startService() {
     super.startService();
@@ -74,21 +75,25 @@ public class MigrationManager extends BaseLockssManager
   }
 
   public Map getStatus() {
-    if (runner == null) {
-      return MapUtil.map(STATUS_RUNNING, false);
-    }
     Map stat = new HashMap();
-    stat.put(STATUS_RUNNING, mover.isRunning());
-    stat.put(STATUS_STATUS, mover.getCurrentStatus());
-    if (!mover.getActiveStatusList().isEmpty()) {
-      stat.put(STATUS_ACTIVE_LIST, mover.getActiveStatusList());
-    }
-    if (!mover.getFinishedStatusList().isEmpty()) {
-      stat.put(STATUS_FINISHED_LIST, mover.getFinishedStatusList());
-    }
-    List<String> errs = mover.getErrors();
-    if (errs != null && !errs.isEmpty()) {
-      stat.put(STATUS_ERRORS, errs);
+    if (runner == null) {
+      stat.put(STATUS_RUNNING, false);
+      if (idleError != null) {
+        stat.put(STATUS_ERRORS, ListUtil.list(idleError));
+      }
+    } else {
+      stat.put(STATUS_RUNNING, mover.isRunning());
+      stat.put(STATUS_STATUS, mover.getCurrentStatus());
+      if (!mover.getActiveStatusList().isEmpty()) {
+        stat.put(STATUS_ACTIVE_LIST, mover.getActiveStatusList());
+      }
+      if (!mover.getFinishedStatusList().isEmpty()) {
+        stat.put(STATUS_FINISHED_LIST, mover.getFinishedStatusList());
+      }
+      List<String> errs = mover.getErrors();
+      if (errs != null && !errs.isEmpty()) {
+        stat.put(STATUS_ERRORS, errs);
+      }
     }
     return stat;
   }
@@ -112,7 +117,15 @@ public class MigrationManager extends BaseLockssManager
     }
 
     public void lockssRun() {
-      mover.executeRequest(args);
+      idleError = null;
+      try {
+        mover.executeRequest(args);
+      } catch (Exception e) {
+        log.error("V2AuMover failed to start", e);
+        idleError = "V2AuMover failed to start: " + e;
+        runner = null;
+        mover = null;
+      }
     }
   }
 
