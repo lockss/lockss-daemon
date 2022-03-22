@@ -3,7 +3,8 @@
   publisher <
     name = Company of Biologists ;
     info[contract] = 2011 ;
-    info[back] = 2005 ;
+    info[back] = 2000 ;
+    #info[back] = 1923 ;
     info[tester] = 5 ;
     info[poller] = 2 ;
     info[platform] = Silverchair
@@ -24,6 +25,7 @@
     #param[base_url] = http://bio.biologists.org/
 
     param[journal_id] = bio
+    #2012-2020 processed on HW.
 
     au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Biology Open Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Biology Open Volume 2 ; 2 ; >
@@ -50,6 +52,7 @@
     #param[base_url] = http://dev.biologists.org/
 
     param[journal_id] = dev
+    #Vol 119, 121, 123-147 processed on HW
 
     au < manifest ; exists ; 1953 ; 1953 ; Journal of Embryology and Experimental Morphology Volume 1 ; 1 ; >
     au < manifest ; exists ; 1954 ; 1954 ; Journal of Embryology and Experimental Morphology Volume 2 ; 2 ; >
@@ -214,6 +217,7 @@
     #param[base_url] = http://dmm.biologists.org/
 
     param[journal_id] = dmm
+    #Processed V1-13 on HW
 
     au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; Disease Models & Mechanisms Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Disease Models & Mechanisms Volume 2 ; 2 ; >
@@ -246,6 +250,7 @@
     #param[base_url] = http://jcs.biologists.org/
 
     param[journal_id] = jcs
+    #Processed 111-133 on HW
 
     au < manifest ; exists ; 1940 ; 1940 ; The Quarterly Journal of Microscopical Science Volume s2-81 ; s2-81 ; >
     au < manifest ; exists ; 1941 ; 1941 ; The Quarterly Journal of Microscopical Science Volume s2-82 ; s2-82 ; >
