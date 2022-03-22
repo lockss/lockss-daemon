@@ -1,6 +1,6 @@
 /*
- * LOCKSS Configuration Service REST API
- * REST API of the LOCKSS Configuration Service
+ * LOCKSS Repository Service REST API
+ * REST API of the LOCKSS Repository Service
  *
  * The version of the OpenAPI document: 2.0.0
  * Contact: lockss-support@lockss.org
@@ -10,15 +10,16 @@
  * Do not edit the class manually.
  */
 
-
 package org.lockss.laaws.client.auth;
 
+import java.net.URI;
 import java.util.List;
 import java.util.Map;
+import org.lockss.laaws.client.ApiException;
 import org.lockss.laaws.client.Pair;
 
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ApiKeyAuth implements Authentication {
-
   private final String location;
   private final String paramName;
 
@@ -55,8 +56,14 @@ public class ApiKeyAuth implements Authentication {
   }
 
   @Override
-  public void applyToParams(List<Pair> queryParams, Map<String, String> headerParams,
-    Map<String, String> cookieParams) {
+  public void applyToParams(
+      List<Pair> queryParams,
+      Map<String, String> headerParams,
+      Map<String, String> cookieParams,
+      String payload,
+      String method,
+      URI uri)
+      throws ApiException {
     if (apiKey == null) {
       return;
     }

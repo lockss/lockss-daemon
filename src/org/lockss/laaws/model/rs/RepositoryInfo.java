@@ -10,30 +10,31 @@
  * Do not edit the class manually.
  */
 
-
 package org.lockss.laaws.model.rs;
 
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.io.Serializable;
 import java.util.Objects;
 
-/**
- * Information about the repository
- */
+/** Information about the repository */
 @ApiModel(description = "Information about the repository")
-public class RepositoryInfo {
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+public class RepositoryInfo implements Serializable {
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_STORE_INFO = "storeInfo";
+
   @SerializedName(SERIALIZED_NAME_STORE_INFO)
   private StorageInfo storeInfo;
 
   public static final String SERIALIZED_NAME_INDEX_INFO = "indexInfo";
+
   @SerializedName(SERIALIZED_NAME_INDEX_INFO)
   private StorageInfo indexInfo;
 
+  public RepositoryInfo() {}
 
   public RepositoryInfo storeInfo(StorageInfo storeInfo) {
 
@@ -45,18 +46,15 @@ public class RepositoryInfo {
    * Get storeInfo
    *
    * @return storeInfo
-   **/
+   */
   @ApiModelProperty(required = true, value = "")
-
   public StorageInfo getStoreInfo() {
     return storeInfo;
   }
 
-
   public void setStoreInfo(StorageInfo storeInfo) {
     this.storeInfo = storeInfo;
   }
-
 
   public RepositoryInfo indexInfo(StorageInfo indexInfo) {
 
@@ -68,18 +66,15 @@ public class RepositoryInfo {
    * Get indexInfo
    *
    * @return indexInfo
-   **/
+   */
   @ApiModelProperty(required = true, value = "")
-
   public StorageInfo getIndexInfo() {
     return indexInfo;
   }
 
-
   public void setIndexInfo(StorageInfo indexInfo) {
     this.indexInfo = indexInfo;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -90,15 +85,14 @@ public class RepositoryInfo {
       return false;
     }
     RepositoryInfo repositoryInfo = (RepositoryInfo) o;
-    return Objects.equals(this.storeInfo, repositoryInfo.storeInfo) &&
-      Objects.equals(this.indexInfo, repositoryInfo.indexInfo);
+    return Objects.equals(this.storeInfo, repositoryInfo.storeInfo)
+        && Objects.equals(this.indexInfo, repositoryInfo.indexInfo);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(storeInfo, indexInfo);
   }
-
 
   @Override
   public String toString() {
@@ -111,8 +105,7 @@ public class RepositoryInfo {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(Object o) {
     if (o == null) {
@@ -120,6 +113,4 @@ public class RepositoryInfo {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

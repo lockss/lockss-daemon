@@ -1,6 +1,6 @@
 /*
- * LOCKSS Configuration Service REST API
- * REST API of the LOCKSS Configuration Service
+ * LOCKSS Repository Service REST API
+ * REST API of the LOCKSS Repository Service
  *
  * The version of the OpenAPI document: 2.0.0
  * Contact: lockss-support@lockss.org
@@ -10,16 +10,14 @@
  * Do not edit the class manually.
  */
 
-
 package org.lockss.laaws.client;
 
 public class Configuration {
-
   private static V2RestClient defaultApiClient = new V2RestClient();
 
   /**
-   * Get the default API client, which would be used when creating API
-   * instances without providing an API client.
+   * Get the default API client, which would be used when creating API instances without providing
+   * an API client.
    *
    * @return Default API client
    */
@@ -28,8 +26,8 @@ public class Configuration {
   }
 
   /**
-   * Set the default API client, which would be used when creating API
-   * instances without providing an API client.
+   * Set the default API client, which would be used when creating API instances without providing
+   * an API client.
    *
    * @param apiClient API client
    */

@@ -1,6 +1,6 @@
 /*
- * LOCKSS Configuration Service REST API
- * REST API of the LOCKSS Configuration Service
+ * LOCKSS Repository Service REST API
+ * REST API of the LOCKSS Repository Service
  *
  * The version of the OpenAPI document: 2.0.0
  * Contact: lockss-support@lockss.org
@@ -10,16 +10,16 @@
  * Do not edit the class manually.
  */
 
-
 package org.lockss.laaws.client.auth;
 
+import java.net.URI;
 import java.util.List;
 import java.util.Map;
 import okhttp3.Credentials;
+import org.lockss.laaws.client.ApiException;
 import org.lockss.laaws.client.Pair;
 
 public class HttpBasicAuth implements Authentication {
-
   private String username;
   private String password;
 
@@ -40,13 +40,19 @@ public class HttpBasicAuth implements Authentication {
   }
 
   @Override
-  public void applyToParams(List<Pair> queryParams, Map<String, String> headerParams,
-    Map<String, String> cookieParams) {
+  public void applyToParams(
+      List<Pair> queryParams,
+      Map<String, String> headerParams,
+      Map<String, String> cookieParams,
+      String payload,
+      String method,
+      URI uri)
+      throws ApiException {
     if (username == null && password == null) {
       return;
     }
-    headerParams.put("Authorization", Credentials.basic(
-      username == null ? "" : username,
-      password == null ? "" : password));
+    headerParams.put(
+        "Authorization",
+        Credentials.basic(username == null ? "" : username, password == null ? "" : password));
   }
 }

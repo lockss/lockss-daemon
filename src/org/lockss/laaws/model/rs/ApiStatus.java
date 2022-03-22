@@ -10,46 +10,51 @@
  * Do not edit the class manually.
  */
 
-
 package org.lockss.laaws.model.rs;
 
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.io.Serializable;
 import java.util.Objects;
 
-/**
- * The status information of the service
- */
+/** The status information of the service */
 @ApiModel(description = "The status information of the service")
-public class ApiStatus {
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+public class ApiStatus implements Serializable {
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_API_VERSION = "apiVersion";
+
   @SerializedName(SERIALIZED_NAME_API_VERSION)
   private String apiVersion;
 
   public static final String SERIALIZED_NAME_COMPONENT_NAME = "componentName";
+
   @SerializedName(SERIALIZED_NAME_COMPONENT_NAME)
   private String componentName;
 
   public static final String SERIALIZED_NAME_COMPONENT_VERSION = "componentVersion";
+
   @SerializedName(SERIALIZED_NAME_COMPONENT_VERSION)
   private String componentVersion;
 
   public static final String SERIALIZED_NAME_LOCKSS_VERSION = "lockssVersion";
+
   @SerializedName(SERIALIZED_NAME_LOCKSS_VERSION)
   private String lockssVersion;
 
   public static final String SERIALIZED_NAME_READY = "ready";
+
   @SerializedName(SERIALIZED_NAME_READY)
   private Boolean ready;
 
   public static final String SERIALIZED_NAME_SERVICE_NAME = "serviceName";
+
   @SerializedName(SERIALIZED_NAME_SERVICE_NAME)
   private String serviceName;
 
+  public ApiStatus() {}
 
   public ApiStatus apiVersion(String apiVersion) {
 
@@ -61,18 +66,15 @@ public class ApiStatus {
    * The version of the API
    *
    * @return apiVersion
-   **/
+   */
   @ApiModelProperty(required = true, value = "The version of the API")
-
   public String getApiVersion() {
     return apiVersion;
   }
 
-
   public void setApiVersion(String apiVersion) {
     this.apiVersion = apiVersion;
   }
-
 
   public ApiStatus componentName(String componentName) {
 
@@ -84,18 +86,15 @@ public class ApiStatus {
    * The name of the component
    *
    * @return componentName
-   **/
+   */
   @ApiModelProperty(required = true, value = "The name of the component")
-
   public String getComponentName() {
     return componentName;
   }
 
-
   public void setComponentName(String componentName) {
     this.componentName = componentName;
   }
-
 
   public ApiStatus componentVersion(String componentVersion) {
 
@@ -107,18 +106,15 @@ public class ApiStatus {
    * The version of the component software
    *
    * @return componentVersion
-   **/
+   */
   @ApiModelProperty(required = true, value = "The version of the component software")
-
   public String getComponentVersion() {
     return componentVersion;
   }
 
-
   public void setComponentVersion(String componentVersion) {
     this.componentVersion = componentVersion;
   }
-
 
   public ApiStatus lockssVersion(String lockssVersion) {
 
@@ -130,18 +126,15 @@ public class ApiStatus {
    * The version of the LOCKSS system
    *
    * @return lockssVersion
-   **/
+   */
   @ApiModelProperty(required = true, value = "The version of the LOCKSS system")
-
   public String getLockssVersion() {
     return lockssVersion;
   }
 
-
   public void setLockssVersion(String lockssVersion) {
     this.lockssVersion = lockssVersion;
   }
-
 
   public ApiStatus ready(Boolean ready) {
 
@@ -153,18 +146,15 @@ public class ApiStatus {
    * The indication of whether the service is available
    *
    * @return ready
-   **/
+   */
   @ApiModelProperty(required = true, value = "The indication of whether the service is available")
-
   public Boolean getReady() {
     return ready;
   }
 
-
   public void setReady(Boolean ready) {
     this.ready = ready;
   }
-
 
   public ApiStatus serviceName(String serviceName) {
 
@@ -176,18 +166,15 @@ public class ApiStatus {
    * The name of the service
    *
    * @return serviceName
-   **/
+   */
   @ApiModelProperty(required = true, value = "The name of the service")
-
   public String getServiceName() {
     return serviceName;
   }
 
-
   public void setServiceName(String serviceName) {
     this.serviceName = serviceName;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -198,20 +185,19 @@ public class ApiStatus {
       return false;
     }
     ApiStatus apiStatus = (ApiStatus) o;
-    return Objects.equals(this.apiVersion, apiStatus.apiVersion) &&
-      Objects.equals(this.componentName, apiStatus.componentName) &&
-      Objects.equals(this.componentVersion, apiStatus.componentVersion) &&
-      Objects.equals(this.lockssVersion, apiStatus.lockssVersion) &&
-      Objects.equals(this.ready, apiStatus.ready) &&
-      Objects.equals(this.serviceName, apiStatus.serviceName);
+    return Objects.equals(this.apiVersion, apiStatus.apiVersion)
+        && Objects.equals(this.componentName, apiStatus.componentName)
+        && Objects.equals(this.componentVersion, apiStatus.componentVersion)
+        && Objects.equals(this.lockssVersion, apiStatus.lockssVersion)
+        && Objects.equals(this.ready, apiStatus.ready)
+        && Objects.equals(this.serviceName, apiStatus.serviceName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(apiVersion, componentName, componentVersion, lockssVersion, ready,
-      serviceName);
+    return Objects.hash(
+        apiVersion, componentName, componentVersion, lockssVersion, ready, serviceName);
   }
-
 
   @Override
   public String toString() {
@@ -228,8 +214,7 @@ public class ApiStatus {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(Object o) {
     if (o == null) {
@@ -237,6 +222,4 @@ public class ApiStatus {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

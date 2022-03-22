@@ -1,6 +1,6 @@
 /*
- * LOCKSS Configuration Service REST API
- * REST API of the LOCKSS Configuration Service
+ * LOCKSS Repository Service REST API
+ * REST API of the LOCKSS Repository Service
  *
  * The version of the OpenAPI document: 2.0.0
  * Contact: lockss-support@lockss.org
@@ -9,7 +9,6 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-
 
 package org.lockss.laaws.client;
 
@@ -59,7 +58,7 @@ public class ProgressRequestBody extends RequestBody {
       @Override
       public void write(Buffer source, long byteCount) throws IOException {
         super.write(source, byteCount);
-        contentLength = contentLength();
+          contentLength = contentLength();
         bytesWritten += byteCount;
         callback.onUploadProgress(byteCount, contentLength, bytesWritten == contentLength);
       }

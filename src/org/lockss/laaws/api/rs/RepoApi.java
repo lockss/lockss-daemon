@@ -20,147 +20,172 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import org.lockss.laaws.client.ApiCallback;
+import org.lockss.laaws.client.V2RestClient;
 import org.lockss.laaws.client.ApiException;
 import org.lockss.laaws.client.ApiResponse;
 import org.lockss.laaws.client.Configuration;
 import org.lockss.laaws.client.Pair;
-import org.lockss.laaws.client.V2RestClient;
 import org.lockss.laaws.model.rs.RepositoryInfo;
 
 public class RepoApi {
+    private V2RestClient localVarApiClient;
+    private int localHostIndex;
+    private String localCustomBaseUrl;
 
-  private V2RestClient apiClient;
-
-  public RepoApi() {
-    this(Configuration.getDefaultApiClient());
-  }
-
-  public RepoApi(V2RestClient apiClient) {
-    this.apiClient = apiClient;
-  }
-
-  public V2RestClient getApiClient() {
-    return apiClient;
-  }
-
-  public void setApiClient(V2RestClient apiClient) {
-    this.apiClient = apiClient;
-  }
-
-  /**
-   * Build call for getRepositoryInformation
-   *
-   * @param _callback Callback for upload/download progress
-   * @return Call to execute
-   * @throws ApiException If fail to serialize the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> The repository information </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
-   */
-  public okhttp3.Call getRepositoryInformationCall(final ApiCallback _callback)
-    throws ApiException {
-    Object localVarPostBody = null;
-
-    // create path and map variables
-    String localVarPath = "/repoinfo";
-
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-    if (localVarAccept != null) {
-      localVarHeaderParams.put("Accept", localVarAccept);
+    public RepoApi() {
+        this(Configuration.getDefaultApiClient());
     }
 
-    final String[] localVarContentTypes = {
+    public RepoApi(V2RestClient apiClient) {
+        this.localVarApiClient = apiClient;
+    }
 
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-    localVarHeaderParams.put("Content-Type", localVarContentType);
+    public V2RestClient getApiClient() {
+        return localVarApiClient;
+    }
 
-    String[] localVarAuthNames = new String[]{};
-    return apiClient.buildCall(localVarPath, "GET", localVarQueryParams,
-      localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
-      localVarFormParams, localVarAuthNames, _callback);
-  }
+    public void setApiClient(V2RestClient apiClient) {
+        this.localVarApiClient = apiClient;
+    }
 
-  @SuppressWarnings("rawtypes")
-  private okhttp3.Call getRepositoryInformationValidateBeforeCall(final ApiCallback _callback)
-    throws ApiException {
+    public int getHostIndex() {
+        return localHostIndex;
+    }
 
-    okhttp3.Call localVarCall = getRepositoryInformationCall(_callback);
-    return localVarCall;
+    public void setHostIndex(int hostIndex) {
+        this.localHostIndex = hostIndex;
+    }
 
-  }
+    public String getCustomBaseUrl() {
+        return localCustomBaseUrl;
+    }
 
-  /**
-   * Get repository information
-   * Get properties of the repository
-   *
-   * @return RepositoryInfo
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> The repository information </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
-   */
-  public RepositoryInfo getRepositoryInformation() throws ApiException {
-    ApiResponse<RepositoryInfo> localVarResp = getRepositoryInformationWithHttpInfo();
-    return localVarResp.getData();
-  }
+    public void setCustomBaseUrl(String customBaseUrl) {
+        this.localCustomBaseUrl = customBaseUrl;
+    }
 
-  /**
-   * Get repository information
-   * Get properties of the repository
-   *
-   * @return ApiResponse&lt;RepositoryInfo&gt;
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> The repository information </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
-   */
-  public ApiResponse<RepositoryInfo> getRepositoryInformationWithHttpInfo() throws ApiException {
-    okhttp3.Call localVarCall = getRepositoryInformationValidateBeforeCall(null);
-    Type localVarReturnType = new TypeToken<RepositoryInfo>() {
-    }.getType();
-    return apiClient.execute(localVarCall, localVarReturnType);
-  }
+    /**
+     * Build call for getRepositoryInformation
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The repository information </td><td>  -  </td></tr>
+        <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getRepositoryInformationCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
 
-  /**
-   * Get repository information (asynchronously)
-   * Get properties of the repository
-   *
-   * @param _callback The callback to be executed when the API call finishes
-   * @return The request call
-   * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> The repository information </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
-   */
-  public okhttp3.Call getRepositoryInformationAsync(final ApiCallback<RepositoryInfo> _callback)
-    throws ApiException {
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
 
-    okhttp3.Call localVarCall = getRepositoryInformationValidateBeforeCall(_callback);
-    Type localVarReturnType = new TypeToken<RepositoryInfo>() {
-    }.getType();
-    apiClient.executeAsync(localVarCall, localVarReturnType, _callback);
-    return localVarCall;
-  }
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/repoinfo";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            
+        };
+    final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        String[] localVarAuthNames = new String[]{ "basicAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getRepositoryInformationValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        
+
+        okhttp3.Call localVarCall = getRepositoryInformationCall(_callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * Get repository information
+     * Get properties of the repository
+     * @return RepositoryInfo
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The repository information </td><td>  -  </td></tr>
+        <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+     </table>
+     */
+    public RepositoryInfo getRepositoryInformation() throws ApiException {
+        ApiResponse<RepositoryInfo> localVarResp = getRepositoryInformationWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * Get repository information
+     * Get properties of the repository
+     * @return ApiResponse&lt;RepositoryInfo&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The repository information </td><td>  -  </td></tr>
+        <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<RepositoryInfo> getRepositoryInformationWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = getRepositoryInformationValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<RepositoryInfo>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Get repository information (asynchronously)
+     * Get properties of the repository
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The repository information </td><td>  -  </td></tr>
+        <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getRepositoryInformationAsync(final ApiCallback<RepositoryInfo> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = getRepositoryInformationValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<RepositoryInfo>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
 }

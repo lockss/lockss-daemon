@@ -1,6 +1,6 @@
 /*
- * LOCKSS Configuration Service REST API
- * REST API of the LOCKSS Configuration Service
+ * LOCKSS Repository Service REST API
+ * REST API of the LOCKSS Repository Service
  *
  * The version of the OpenAPI document: 2.0.0
  * Contact: lockss-support@lockss.org
@@ -10,35 +10,33 @@
  * Do not edit the class manually.
  */
 
-
 package org.lockss.laaws.client;
 
 import java.util.List;
 import java.util.Map;
 
-/**
- * API response returned by API call.
- *
- * @param <T> The type of data that is deserialized from response body
- */
+/** API response returned by API call. */
 public class ApiResponse<T> {
-
-  final private int statusCode;
-  final private Map<String, List<String>> headers;
-  final private T data;
+  private final int statusCode;
+  private final Map<String, List<String>> headers;
+  private final T data;
 
   /**
+   * Constructor for ApiResponse.
+   *
    * @param statusCode The status code of HTTP response
-   * @param headers    The headers of HTTP response
+   * @param headers The headers of HTTP response
    */
   public ApiResponse(int statusCode, Map<String, List<String>> headers) {
     this(statusCode, headers, null);
   }
 
   /**
+   * Constructor for ApiResponse.
+   *
    * @param statusCode The status code of HTTP response
-   * @param headers    The headers of HTTP response
-   * @param data       The object deserialized from response bod
+   * @param headers The headers of HTTP response
+   * @param data The object deserialized from response bod
    */
   public ApiResponse(int statusCode, Map<String, List<String>> headers, T data) {
     this.statusCode = statusCode;
@@ -46,14 +44,29 @@ public class ApiResponse<T> {
     this.data = data;
   }
 
+  /**
+   * Get the <code>status code</code>.
+   *
+   * @return the status code
+   */
   public int getStatusCode() {
     return statusCode;
   }
 
+  /**
+   * Get the <code>headers</code>.
+   *
+   * @return a {@link java.util.Map} of headers
+   */
   public Map<String, List<String>> getHeaders() {
     return headers;
   }
 
+  /**
+   * Get the <code>data</code>.
+   *
+   * @return the data
+   */
   public T getData() {
     return data;
   }

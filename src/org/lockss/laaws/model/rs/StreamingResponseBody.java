@@ -13,12 +13,11 @@
 package org.lockss.laaws.model.rs;
 
 import java.util.Objects;
-
 /**
  * StreamingResponseBody
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-08-17T14:50:09.666-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2022-03-22T11:18:26.304-07:00[America/Los_Angeles]")
 public class StreamingResponseBody {
 
   @Override
@@ -42,7 +41,7 @@ public class StreamingResponseBody {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class StreamingResponseBody {\n");
-
+    
     sb.append("}");
     return sb.toString();
   }

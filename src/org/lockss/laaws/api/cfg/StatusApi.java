@@ -30,6 +30,8 @@ import org.lockss.laaws.model.cfg.ApiStatus;
 public class StatusApi {
 
   private V2RestClient apiClient;
+  private String localCustomBaseUrl;
+  private int localHostIndex;
 
   public StatusApi() {
     this(Configuration.getDefaultApiClient());
@@ -47,6 +49,22 @@ public class StatusApi {
     this.apiClient = apiClient;
   }
 
+  public String getCustomBaseUrl() {
+    return localCustomBaseUrl;
+  }
+
+  public void setCustomBaseUrl(String customBaseUrl) {
+    this.localCustomBaseUrl = customBaseUrl;
+  }
+
+  public int getHostIndex() {
+    return localHostIndex;
+  }
+
+  public void setHostIndex(int hostIndex) {
+    this.localHostIndex = hostIndex;
+  }
+
   /**
    * Build call for getStatus
    *
@@ -61,6 +79,20 @@ public class StatusApi {
    * </table>
    */
   public okhttp3.Call getStatusCall(final ApiCallback _callback) throws ApiException {
+    String basePath = null;
+
+    // Operation Servers
+    String[] localBasePaths = new String[] {  };
+
+    // Determine Base Path to Use
+    if (localCustomBaseUrl != null){
+      basePath = localCustomBaseUrl;
+    } else if ( localBasePaths.length > 0 ) {
+      basePath = localBasePaths[localHostIndex];
+    } else {
+      basePath = null;
+    }
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -87,7 +119,7 @@ public class StatusApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     String[] localVarAuthNames = new String[]{"basicAuth"};
-    return apiClient.buildCall(localVarPath, "GET", localVarQueryParams,
+    return apiClient.buildCall(basePath,localVarPath, "GET", localVarQueryParams,
       localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
       localVarFormParams, localVarAuthNames, _callback);
   }

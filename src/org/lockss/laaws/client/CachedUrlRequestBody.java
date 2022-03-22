@@ -41,7 +41,7 @@ public class CachedUrlRequestBody extends RequestBody {
   private final CachedUrl artifactCu;
   private final DigestCachedUrl dcu;
 
-  public CachedUrlRequestBody(MediaType contentType, DigestCachedUrl dcu) {
+  public CachedUrlRequestBody(DigestCachedUrl dcu, MediaType contentType) {
     if (dcu == null) {
       throw new NullPointerException("cachedUrl == null");
     }

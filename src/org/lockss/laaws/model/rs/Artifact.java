@@ -10,59 +10,69 @@
  * Do not edit the class manually.
  */
 
-
 package org.lockss.laaws.model.rs;
 
 import com.google.gson.annotations.SerializedName;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.Serializable;
 import java.util.Objects;
 
-/**
- * Artifact
- */
-public class Artifact {
-
+/** Artifact */
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+public class Artifact implements Serializable {
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_ID = "id";
+
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
 
   public static final String SERIALIZED_NAME_COLLECTION = "collection";
+
   @SerializedName(SERIALIZED_NAME_COLLECTION)
   private String collection;
 
   public static final String SERIALIZED_NAME_AUID = "auid";
+
   @SerializedName(SERIALIZED_NAME_AUID)
   private String auid;
 
   public static final String SERIALIZED_NAME_URI = "uri";
+
   @SerializedName(SERIALIZED_NAME_URI)
   private String uri;
 
   public static final String SERIALIZED_NAME_VERSION = "version";
+
   @SerializedName(SERIALIZED_NAME_VERSION)
   private Integer version;
 
   public static final String SERIALIZED_NAME_COMMITTED = "committed";
+
   @SerializedName(SERIALIZED_NAME_COMMITTED)
   private Boolean committed;
 
   public static final String SERIALIZED_NAME_STORAGE_URL = "storageUrl";
+
   @SerializedName(SERIALIZED_NAME_STORAGE_URL)
   private String storageUrl;
 
-  public static final String SERIALIZED_NAME_ORIGIN_DATE = "originDate";
-  @SerializedName(SERIALIZED_NAME_ORIGIN_DATE)
-  private Long originDate;
+  public static final String SERIALIZED_NAME_CONTENT_LENGTH = "contentLength";
 
-  public static final String SERIALIZED_NAME_COLLECTION_DATE = "collectionDate";
-  @SerializedName(SERIALIZED_NAME_COLLECTION_DATE)
-  private Long collectionDate;
+  @SerializedName(SERIALIZED_NAME_CONTENT_LENGTH)
+  private Integer contentLength;
 
   public static final String SERIALIZED_NAME_CONTENT_DIGEST = "contentDigest";
+
   @SerializedName(SERIALIZED_NAME_CONTENT_DIGEST)
   private String contentDigest;
 
+  public static final String SERIALIZED_NAME_COLLECTION_DATE = "collectionDate";
+
+  @SerializedName(SERIALIZED_NAME_COLLECTION_DATE)
+  private Long collectionDate;
+
+  public Artifact() {}
 
   public Artifact id(String id) {
 
@@ -74,17 +84,15 @@ public class Artifact {
    * Get id
    *
    * @return id
-   **/
-
+   */
+  @ApiModelProperty(value = "")
   public String getId() {
     return id;
   }
 
-
   public void setId(String id) {
     this.id = id;
   }
-
 
   public Artifact collection(String collection) {
 
@@ -96,17 +104,15 @@ public class Artifact {
    * Get collection
    *
    * @return collection
-   **/
-
+   */
+  @ApiModelProperty(value = "")
   public String getCollection() {
     return collection;
   }
 
-
   public void setCollection(String collection) {
     this.collection = collection;
   }
-
 
   public Artifact auid(String auid) {
 
@@ -118,17 +124,15 @@ public class Artifact {
    * Get auid
    *
    * @return auid
-   **/
-
+   */
+  @ApiModelProperty(value = "")
   public String getAuid() {
     return auid;
   }
 
-
   public void setAuid(String auid) {
     this.auid = auid;
   }
-
 
   public Artifact uri(String uri) {
 
@@ -140,17 +144,15 @@ public class Artifact {
    * Get uri
    *
    * @return uri
-   **/
-
+   */
+  @ApiModelProperty(value = "")
   public String getUri() {
     return uri;
   }
 
-
   public void setUri(String uri) {
     this.uri = uri;
   }
-
 
   public Artifact version(Integer version) {
 
@@ -162,17 +164,15 @@ public class Artifact {
    * Get version
    *
    * @return version
-   **/
-
+   */
+  @ApiModelProperty(value = "")
   public Integer getVersion() {
     return version;
   }
 
-
   public void setVersion(Integer version) {
     this.version = version;
   }
-
 
   public Artifact committed(Boolean committed) {
 
@@ -184,17 +184,15 @@ public class Artifact {
    * Get committed
    *
    * @return committed
-   **/
-
+   */
+  @ApiModelProperty(value = "")
   public Boolean getCommitted() {
     return committed;
   }
 
-
   public void setCommitted(Boolean committed) {
     this.committed = committed;
   }
-
 
   public Artifact storageUrl(String storageUrl) {
 
@@ -206,60 +204,34 @@ public class Artifact {
    * Get storageUrl
    *
    * @return storageUrl
-   **/
-
+   */
+  @ApiModelProperty(value = "")
   public String getStorageUrl() {
     return storageUrl;
   }
-
 
   public void setStorageUrl(String storageUrl) {
     this.storageUrl = storageUrl;
   }
 
+  public Artifact contentLength(Integer contentLength) {
 
-  public Artifact originDate(Long originDate) {
-
-    this.originDate = originDate;
+    this.contentLength = contentLength;
     return this;
   }
 
   /**
-   * Get originDate
+   * Get contentLength
    *
-   * @return originDate
-   **/
-
-  public Long getOriginDate() {
-    return originDate;
+   * @return contentLength
+   */
+  @ApiModelProperty(value = "")
+  public Integer getContentLength() {
+    return contentLength;
   }
 
-
-  public void setOriginDate(Long originDate) {
-    this.originDate = originDate;
-  }
-
-
-  public Artifact collectionDate(Long collectionDate) {
-
-    this.collectionDate = collectionDate;
-    return this;
-  }
-
-
-  /**
-   * Get collectionDate
-   *
-   * @return collectionDate
-   **/
-
-  public Long getCollectionDate() {
-    return collectionDate;
-  }
-
-
-  public void setCollectionDate(Long collectionDate) {
-    this.collectionDate = collectionDate;
+  public void setContentLength(Integer contentLength) {
+    this.contentLength = contentLength;
   }
 
   public Artifact contentDigest(String contentDigest) {
@@ -268,22 +240,39 @@ public class Artifact {
     return this;
   }
 
-
   /**
-   * Get collectionDate
+   * Get contentDigest
    *
-   * @return collectionDate
-   **/
-
+   * @return contentDigest
+   */
+  @ApiModelProperty(value = "")
   public String getContentDigest() {
     return contentDigest;
   }
-
 
   public void setContentDigest(String contentDigest) {
     this.contentDigest = contentDigest;
   }
 
+  public Artifact collectionDate(Long collectionDate) {
+
+    this.collectionDate = collectionDate;
+    return this;
+  }
+
+  /**
+   * Get collectionDate
+   *
+   * @return collectionDate
+   */
+  @ApiModelProperty(value = "")
+  public Long getCollectionDate() {
+    return collectionDate;
+  }
+
+  public void setCollectionDate(Long collectionDate) {
+    this.collectionDate = collectionDate;
+  }
 
   @Override
   public boolean equals(Object o) {
@@ -294,24 +283,32 @@ public class Artifact {
       return false;
     }
     Artifact artifact = (Artifact) o;
-    return Objects.equals(this.id, artifact.id) &&
-      Objects.equals(this.collection, artifact.collection) &&
-      Objects.equals(this.auid, artifact.auid) &&
-      Objects.equals(this.uri, artifact.uri) &&
-      Objects.equals(this.version, artifact.version) &&
-      Objects.equals(this.committed, artifact.committed) &&
-      Objects.equals(this.storageUrl, artifact.storageUrl) &&
-      Objects.equals(this.originDate, artifact.originDate) &&
-      Objects.equals(this.collectionDate, artifact.collectionDate) &&
-      Objects.equals(this.contentDigest, artifact.contentDigest);
+    return Objects.equals(this.id, artifact.id)
+        && Objects.equals(this.collection, artifact.collection)
+        && Objects.equals(this.auid, artifact.auid)
+        && Objects.equals(this.uri, artifact.uri)
+        && Objects.equals(this.version, artifact.version)
+        && Objects.equals(this.committed, artifact.committed)
+        && Objects.equals(this.storageUrl, artifact.storageUrl)
+        && Objects.equals(this.contentLength, artifact.contentLength)
+        && Objects.equals(this.contentDigest, artifact.contentDigest)
+        && Objects.equals(this.collectionDate, artifact.collectionDate);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, collection, auid, uri, version, committed, storageUrl, originDate,
-      contentDigest, collectionDate);
+    return Objects.hash(
+        id,
+        collection,
+        auid,
+        uri,
+        version,
+        committed,
+        storageUrl,
+        contentLength,
+        contentDigest,
+        collectionDate);
   }
-
 
   @Override
   public String toString() {
@@ -324,7 +321,7 @@ public class Artifact {
     sb.append("    version: ").append(toIndentedString(version)).append("\n");
     sb.append("    committed: ").append(toIndentedString(committed)).append("\n");
     sb.append("    storageUrl: ").append(toIndentedString(storageUrl)).append("\n");
-    sb.append("    originDate: ").append(toIndentedString(originDate)).append("\n");
+    sb.append("    contentLength: ").append(toIndentedString(contentLength)).append("\n");
     sb.append("    contentDigest: ").append(toIndentedString(contentDigest)).append("\n");
     sb.append("    collectionDate: ").append(toIndentedString(collectionDate)).append("\n");
     sb.append("}");
@@ -332,8 +329,7 @@ public class Artifact {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(Object o) {
     if (o == null) {
@@ -341,6 +337,4 @@ public class Artifact {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

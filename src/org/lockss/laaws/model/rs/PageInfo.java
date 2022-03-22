@@ -10,42 +10,46 @@
  * Do not edit the class manually.
  */
 
-
 package org.lockss.laaws.model.rs;
 
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.io.Serializable;
 import java.util.Objects;
 
-/**
- * The information related to pagination of content
- */
+/** The information related to pagination of content */
 @ApiModel(description = "The information related to pagination of content")
-public class PageInfo {
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+public class PageInfo implements Serializable {
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_TOTAL_COUNT = "totalCount";
+
   @SerializedName(SERIALIZED_NAME_TOTAL_COUNT)
   private Integer totalCount;
 
   public static final String SERIALIZED_NAME_RESULTS_PER_PAGE = "resultsPerPage";
+
   @SerializedName(SERIALIZED_NAME_RESULTS_PER_PAGE)
   private Integer resultsPerPage;
 
   public static final String SERIALIZED_NAME_CONTINUATION_TOKEN = "continuationToken";
+
   @SerializedName(SERIALIZED_NAME_CONTINUATION_TOKEN)
   private String continuationToken;
 
   public static final String SERIALIZED_NAME_CUR_LINK = "curLink";
+
   @SerializedName(SERIALIZED_NAME_CUR_LINK)
   private String curLink;
 
   public static final String SERIALIZED_NAME_NEXT_LINK = "nextLink";
+
   @SerializedName(SERIALIZED_NAME_NEXT_LINK)
   private String nextLink;
 
+  public PageInfo() {}
 
   public PageInfo totalCount(Integer totalCount) {
 
@@ -57,18 +61,15 @@ public class PageInfo {
    * The total number of results
    *
    * @return totalCount
-   **/
+   */
   @ApiModelProperty(required = true, value = "The total number of results")
-
   public Integer getTotalCount() {
     return totalCount;
   }
 
-
   public void setTotalCount(Integer totalCount) {
     this.totalCount = totalCount;
   }
-
 
   public PageInfo resultsPerPage(Integer resultsPerPage) {
 
@@ -80,18 +81,15 @@ public class PageInfo {
    * The number of results per page
    *
    * @return resultsPerPage
-   **/
+   */
   @ApiModelProperty(required = true, value = "The number of results per page")
-
   public Integer getResultsPerPage() {
     return resultsPerPage;
   }
 
-
   public void setResultsPerPage(Integer resultsPerPage) {
     this.resultsPerPage = resultsPerPage;
   }
-
 
   public PageInfo continuationToken(String continuationToken) {
 
@@ -103,18 +101,15 @@ public class PageInfo {
    * The continuation token
    *
    * @return continuationToken
-   **/
+   */
   @ApiModelProperty(required = true, value = "The continuation token")
-
   public String getContinuationToken() {
     return continuationToken;
   }
 
-
   public void setContinuationToken(String continuationToken) {
     this.continuationToken = continuationToken;
   }
-
 
   public PageInfo curLink(String curLink) {
 
@@ -126,18 +121,15 @@ public class PageInfo {
    * The link of the current request
    *
    * @return curLink
-   **/
+   */
   @ApiModelProperty(required = true, value = "The link of the current request")
-
   public String getCurLink() {
     return curLink;
   }
 
-
   public void setCurLink(String curLink) {
     this.curLink = curLink;
   }
-
 
   public PageInfo nextLink(String nextLink) {
 
@@ -149,18 +141,15 @@ public class PageInfo {
    * The link of the next request
    *
    * @return nextLink
-   **/
+   */
   @ApiModelProperty(required = true, value = "The link of the next request")
-
   public String getNextLink() {
     return nextLink;
   }
 
-
   public void setNextLink(String nextLink) {
     this.nextLink = nextLink;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -171,18 +160,17 @@ public class PageInfo {
       return false;
     }
     PageInfo pageInfo = (PageInfo) o;
-    return Objects.equals(this.totalCount, pageInfo.totalCount) &&
-      Objects.equals(this.resultsPerPage, pageInfo.resultsPerPage) &&
-      Objects.equals(this.continuationToken, pageInfo.continuationToken) &&
-      Objects.equals(this.curLink, pageInfo.curLink) &&
-      Objects.equals(this.nextLink, pageInfo.nextLink);
+    return Objects.equals(this.totalCount, pageInfo.totalCount)
+        && Objects.equals(this.resultsPerPage, pageInfo.resultsPerPage)
+        && Objects.equals(this.continuationToken, pageInfo.continuationToken)
+        && Objects.equals(this.curLink, pageInfo.curLink)
+        && Objects.equals(this.nextLink, pageInfo.nextLink);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(totalCount, resultsPerPage, continuationToken, curLink, nextLink);
   }
-
 
   @Override
   public String toString() {
@@ -198,8 +186,7 @@ public class PageInfo {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(Object o) {
     if (o == null) {
@@ -207,6 +194,4 @@ public class PageInfo {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

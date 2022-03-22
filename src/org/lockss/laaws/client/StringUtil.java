@@ -1,6 +1,6 @@
 /*
- * LOCKSS Configuration Service REST API
- * REST API of the LOCKSS Configuration Service
+ * LOCKSS Repository Service REST API
+ * REST API of the LOCKSS Repository Service
  *
  * The version of the OpenAPI document: 2.0.0
  * Contact: lockss-support@lockss.org
@@ -10,14 +10,13 @@
  * Do not edit the class manually.
  */
 
-
 package org.lockss.laaws.client;
 
 import java.util.Collection;
 import java.util.Iterator;
 
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class StringUtil {
-
   /**
    * Check if the given array contains the given value (with case-insensitive comparison).
    *
@@ -39,12 +38,11 @@ public class StringUtil {
 
   /**
    * Join an array of strings with the given separator.
-   * <p>
-   * Note: This might be replaced by utility method from commons-lang or guava someday
-   * if one of those libraries is added as dependency.
-   * </p>
    *
-   * @param array     The array of strings
+   * <p>Note: This might be replaced by utility method from commons-lang or guava someday if one of
+   * those libraries is added as dependency.
+   *
+   * @param array The array of strings
    * @param separator The separator
    * @return the resulting string
    */
@@ -65,7 +63,7 @@ public class StringUtil {
   /**
    * Join a list of strings with the given separator.
    *
-   * @param list      The list of strings
+   * @param list The list of strings
    * @param separator The separator
    * @return the resulting string
    */

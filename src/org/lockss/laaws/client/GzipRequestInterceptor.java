@@ -1,6 +1,6 @@
 /*
- * LOCKSS Configuration Service REST API
- * REST API of the LOCKSS Configuration Service
+ * LOCKSS Repository Service REST API
+ * REST API of the LOCKSS Repository Service
  *
  * The version of the OpenAPI document: 2.0.0
  * Contact: lockss-support@lockss.org
@@ -10,15 +10,10 @@
  * Do not edit the class manually.
  */
 
-
 package org.lockss.laaws.client;
 
 import java.io.IOException;
-import okhttp3.Interceptor;
-import okhttp3.MediaType;
-import okhttp3.Request;
-import okhttp3.RequestBody;
-import okhttp3.Response;
+import okhttp3.*;
 import okio.Buffer;
 import okio.BufferedSink;
 import okio.GzipSink;
@@ -26,11 +21,10 @@ import okio.Okio;
 
 /**
  * Encodes request bodies using gzip.
- * <p>
- * Taken from https://github.com/square/okhttp/issues/350
+ *
+ * <p>Taken from https://github.com/square/okhttp/issues/350
  */
 class GzipRequestInterceptor implements Interceptor {
-
   @Override
   public Response intercept(Chain chain) throws IOException {
     Request originalRequest = chain.request();
@@ -38,10 +32,12 @@ class GzipRequestInterceptor implements Interceptor {
       return chain.proceed(originalRequest);
     }
 
-    Request compressedRequest = originalRequest.newBuilder()
-      .header("Content-Encoding", "gzip")
-      .method(originalRequest.method(), forceContentLength(gzip(originalRequest.body())))
-      .build();
+    Request compressedRequest =
+        originalRequest
+            .newBuilder()
+            .header("Content-Encoding", "gzip")
+            .method(originalRequest.method(), forceContentLength(gzip(originalRequest.body())))
+            .build();
     return chain.proceed(compressedRequest);
   }
 

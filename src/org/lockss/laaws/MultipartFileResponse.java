@@ -43,22 +43,19 @@ public class MultipartFileResponse {
     MimeMultipart multipart =null;
     String contentType = null;
     if(mpFile != null) {
-      String boundary = getBoundary();
-      if(boundary != null) {
-        try {
-          if(responseHeaders != null) {
-            contentType = responseHeaders.get(CONTENT_TYPE);
-          }
-          multipart = new MimeMultipart(new InputStreamDataSource(new FileInputStream(mpFile),
-              contentType));
+      try {
+        if (responseHeaders != null) {
+          contentType = responseHeaders.get(CONTENT_TYPE);
         }
-        catch (Exception ex) {
-          String msg = "Unable to construct multipart from file: " + mpFile.getName();
-          throw new IOException(msg, ex);
-        }
+        multipart = new MimeMultipart(new InputStreamDataSource(new FileInputStream(mpFile),
+            contentType));
+      }
+      catch (Exception ex) {
+        String msg = "Unable to construct multipart from file: " + mpFile.getName();
+        throw new IOException(msg, ex);
       }
     }
-    return multipart;
+      return multipart;
   }
 
   public String getBoundary() {

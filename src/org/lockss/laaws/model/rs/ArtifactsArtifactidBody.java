@@ -13,14 +13,13 @@
 package org.lockss.laaws.model.rs;
 
 import com.google.gson.annotations.SerializedName;
+import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
-
 /**
  * ArtifactsArtifactidBody
  */
 
 public class ArtifactsArtifactidBody {
-
   @SerializedName("committed")
   private Boolean committed = null;
 
@@ -29,11 +28,11 @@ public class ArtifactsArtifactidBody {
     return this;
   }
 
-  /**
+   /**
    * New commit status of artifact
-   *
    * @return committed
-   **/
+  **/
+  @ApiModelProperty(required = true, value = "New commit status of artifact")
   public Boolean isCommitted() {
     return committed;
   }
@@ -65,7 +64,7 @@ public class ArtifactsArtifactidBody {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ArtifactsArtifactidBody {\n");
-
+    
     sb.append("    committed: ").append(toIndentedString(committed)).append("\n");
     sb.append("}");
     return sb.toString();

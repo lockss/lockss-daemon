@@ -32,8 +32,6 @@ package org.lockss.laaws.model.rs;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.google.common.collect.ComparisonChain;
-
 import java.io.Serializable;
 import java.util.Objects;
 

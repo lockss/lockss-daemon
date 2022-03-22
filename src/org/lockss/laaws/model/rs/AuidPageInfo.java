@@ -10,32 +10,33 @@
  * Do not edit the class manually.
  */
 
-
 package org.lockss.laaws.model.rs;
 
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/**
- * A display page of Archival Unit identifiers
- */
+/** A display page of Archival Unit identifiers */
 @ApiModel(description = "A display page of Archival Unit identifiers")
-public class AuidPageInfo {
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+public class AuidPageInfo implements Serializable {
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_AUIDS = "auids";
+
   @SerializedName(SERIALIZED_NAME_AUIDS)
   private List<String> auids = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_PAGE_INFO = "pageInfo";
+
   @SerializedName(SERIALIZED_NAME_PAGE_INFO)
   private PageInfo pageInfo;
 
+  public AuidPageInfo() {}
 
   public AuidPageInfo auids(List<String> auids) {
 
@@ -52,16 +53,15 @@ public class AuidPageInfo {
    * The Archival Unit identifiers included in the page
    *
    * @return auids
-   **/
+   */
+  @ApiModelProperty(required = true, value = "The Archival Unit identifiers included in the page")
   public List<String> getAuids() {
     return auids;
   }
 
-
   public void setAuids(List<String> auids) {
     this.auids = auids;
   }
-
 
   public AuidPageInfo pageInfo(PageInfo pageInfo) {
 
@@ -73,18 +73,15 @@ public class AuidPageInfo {
    * Get pageInfo
    *
    * @return pageInfo
-   **/
+   */
   @ApiModelProperty(required = true, value = "")
-
   public PageInfo getPageInfo() {
     return pageInfo;
   }
 
-
   public void setPageInfo(PageInfo pageInfo) {
     this.pageInfo = pageInfo;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -95,15 +92,14 @@ public class AuidPageInfo {
       return false;
     }
     AuidPageInfo auidPageInfo = (AuidPageInfo) o;
-    return Objects.equals(this.auids, auidPageInfo.auids) &&
-      Objects.equals(this.pageInfo, auidPageInfo.pageInfo);
+    return Objects.equals(this.auids, auidPageInfo.auids)
+        && Objects.equals(this.pageInfo, auidPageInfo.pageInfo);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(auids, pageInfo);
   }
-
 
   @Override
   public String toString() {
@@ -116,8 +112,7 @@ public class AuidPageInfo {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(Object o) {
     if (o == null) {
@@ -125,6 +120,4 @@ public class AuidPageInfo {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

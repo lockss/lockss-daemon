@@ -1,6 +1,6 @@
 /*
- * LOCKSS Configuration Service REST API
- * REST API of the LOCKSS Configuration Service
+ * LOCKSS Repository Service REST API
+ * REST API of the LOCKSS Repository Service
  *
  * The version of the OpenAPI document: 2.0.0
  * Contact: lockss-support@lockss.org
@@ -10,15 +10,16 @@
  * Do not edit the class manually.
  */
 
-
 package org.lockss.laaws.client.auth;
 
+import java.net.URI;
 import java.util.List;
 import java.util.Map;
+import org.lockss.laaws.client.ApiException;
 import org.lockss.laaws.client.Pair;
 
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class HttpBearerAuth implements Authentication {
-
   private final String scheme;
   private String bearerToken;
 
@@ -27,7 +28,8 @@ public class HttpBearerAuth implements Authentication {
   }
 
   /**
-   * Gets the token, which together with the scheme, will be sent as the value of the Authorization header.
+   * Gets the token, which together with the scheme, will be sent as the value of the Authorization
+   * header.
    *
    * @return The bearer token
    */
@@ -36,7 +38,8 @@ public class HttpBearerAuth implements Authentication {
   }
 
   /**
-   * Sets the token, which together with the scheme, will be sent as the value of the Authorization header.
+   * Sets the token, which together with the scheme, will be sent as the value of the Authorization
+   * header.
    *
    * @param bearerToken The bearer token to send in the Authorization header
    */
@@ -45,14 +48,20 @@ public class HttpBearerAuth implements Authentication {
   }
 
   @Override
-  public void applyToParams(List<Pair> queryParams, Map<String, String> headerParams,
-    Map<String, String> cookieParams) {
+  public void applyToParams(
+      List<Pair> queryParams,
+      Map<String, String> headerParams,
+      Map<String, String> cookieParams,
+      String payload,
+      String method,
+      URI uri)
+      throws ApiException {
     if (bearerToken == null) {
       return;
     }
 
-    headerParams.put("Authorization",
-      (scheme != null ? upperCaseBearer(scheme) + " " : "") + bearerToken);
+    headerParams.put(
+        "Authorization", (scheme != null ? upperCaseBearer(scheme) + " " : "") + bearerToken);
   }
 
   private static String upperCaseBearer(String scheme) {

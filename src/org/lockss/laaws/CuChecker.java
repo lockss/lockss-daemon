@@ -43,6 +43,7 @@ public class CuChecker extends Worker {
         }
         addError(msg);
         log.error(msg);
+        // stop processing cu
         terminated = true;
       }
       if (!terminated) {
@@ -68,7 +69,7 @@ public class CuChecker extends Worker {
 
   void compareCuToArtifact(CachedUrl cu, Artifact artifact) {
     Long collectionDate = null;
-    ArtifactData v2Artifact=null;
+    ArtifactData artifactData=null;
     try {
       String fetchTime =
           cu.getProperties().getProperty(CachedUrl.PROPERTY_FETCH_TIME);
@@ -91,19 +92,21 @@ public class CuChecker extends Worker {
         MultipartFileResponse mfr = collectionsApi.getMultipartArtifact(collection,
             artifact.getId(),
             "ALWAYS");
-        v2Artifact = new ArtifactData(mfr.getMimeMultipart());
+        artifactData = new ArtifactData(mfr.getMimeMultipart());
         log.debug3("Successfully fetched Artifact Data");
-        isMatch = IOUtils.contentEquals(v2Artifact.getInputStream(),
+        isMatch = IOUtils.contentEquals(artifactData.getInputStream(),
             cu.getUncompressedInputStream());
         if (!isMatch) {
-          log.warning("V1 and V2 artifact content did not match.");
+          String err = cu.getUrl() + "V1 and V2 artifact content did not match.";
+          log.warning(err);
+          task.addError(err);
         }
         else {
           log.debug3("V1 and V2 artifact content were a match.");
         }
         ctrs.incr(CounterType.ARTIFACTS_VERIFIED);
         // stats to update when available
-        ctrs.add(CounterType.CONTENT_BYTES_VERIFIED, v2Artifact.getContentLength());
+        ctrs.add(CounterType.CONTENT_BYTES_VERIFIED, artifactData.getContentLength());
         ctrs.add(CounterType.BYTES_VERIFIED, mfr.getSize()); // http response total bytes
       }
     }
@@ -111,12 +114,13 @@ public class CuChecker extends Worker {
       String err = cu.getUrl() + "Error checking cu: " + ex.getMessage();
       log.error(err, ex);
       task.addError(err);
+      // change to failed check counter
       terminated = true;
     }
     finally {
       AuUtil.safeRelease(cu);
-      if(v2Artifact !=null) {
-        v2Artifact.release();
+      if(artifactData !=null) {
+        artifactData.release();
       }
     }
   }

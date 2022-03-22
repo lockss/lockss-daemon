@@ -1,6 +1,6 @@
 /*
- * LOCKSS Configuration Service REST API
- * REST API of the LOCKSS Configuration Service
+ * LOCKSS Repository Service REST API
+ * REST API of the LOCKSS Repository Service
  *
  * The version of the OpenAPI document: 2.0.0
  * Contact: lockss-support@lockss.org
@@ -9,7 +9,6 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-
 
 package org.lockss.laaws.client;
 
@@ -36,7 +35,6 @@ import java.util.Map;
 import okio.ByteString;
 
 public class JSON {
-
   private Gson gson;
   private boolean isLenientOnJson = false;
   private final DateTypeAdapter dateTypeAdapter = new DateTypeAdapter();
@@ -45,6 +43,7 @@ public class JSON {
   private final LocalDateTypeAdapter localDateTypeAdapter = new LocalDateTypeAdapter();
   private final ByteArrayAdapter byteArrayAdapter = new ByteArrayAdapter();
 
+  @SuppressWarnings("unchecked")
   public static GsonBuilder createGson() {
     GsonFireBuilder fireBuilder = new GsonFireBuilder();
     GsonBuilder builder = fireBuilder.createGsonBuilder();
@@ -55,36 +54,38 @@ public class JSON {
     JsonElement element = readElement.getAsJsonObject().get(discriminatorField);
     if (null == element) {
       throw new IllegalArgumentException(
-        "missing discriminator field: <" + discriminatorField + ">");
+          "missing discriminator field: <" + discriminatorField + ">");
     }
     return element.getAsString();
   }
 
   /**
-   * Returns the Java class that implements the OpenAPI schema for the specified discriminator value.
+   * Returns the Java class that implements the OpenAPI schema for the specified discriminator
+   * value.
    *
    * @param classByDiscriminatorValue The map of discriminator values to Java classes.
-   * @param discriminatorValue        The value of the OpenAPI discriminator in the input data.
+   * @param discriminatorValue The value of the OpenAPI discriminator in the input data.
    * @return The Java class that implements the OpenAPI schema
    */
-  private static Class getClassByDiscriminator(Map classByDiscriminatorValue,
-    String discriminatorValue) {
+  private static Class getClassByDiscriminator(
+      Map classByDiscriminatorValue, String discriminatorValue) {
     Class clazz = (Class) classByDiscriminatorValue.get(discriminatorValue);
     if (null == clazz) {
       throw new IllegalArgumentException(
-        "cannot determine model class of name: <" + discriminatorValue + ">");
+          "cannot determine model class of name: <" + discriminatorValue + ">");
     }
     return clazz;
   }
 
   public JSON() {
-    gson = createGson()
-      .registerTypeAdapter(Date.class, dateTypeAdapter)
-      .registerTypeAdapter(java.sql.Date.class, sqlDateTypeAdapter)
-      .registerTypeAdapter(OffsetDateTime.class, offsetDateTimeTypeAdapter)
-      .registerTypeAdapter(LocalDate.class, localDateTypeAdapter)
-      .registerTypeAdapter(byte[].class, byteArrayAdapter)
-      .create();
+    gson =
+        createGson()
+            .registerTypeAdapter(Date.class, dateTypeAdapter)
+            .registerTypeAdapter(java.sql.Date.class, sqlDateTypeAdapter)
+            .registerTypeAdapter(OffsetDateTime.class, offsetDateTimeTypeAdapter)
+            .registerTypeAdapter(LocalDate.class, localDateTypeAdapter)
+            .registerTypeAdapter(byte[].class, byteArrayAdapter)
+            .create();
   }
 
   /**
@@ -107,6 +108,14 @@ public class JSON {
     return this;
   }
 
+  /**
+   * Configure the parser to be liberal in what it accepts.
+   *
+   * @param lenientOnJson Set it to true to ignore some syntax errors
+   * @return JSON
+   * @see <a
+   *     href="https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.5/com/google/gson/stream/JsonReader.html">https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.5/com/google/gson/stream/JsonReader.html</a>
+   */
   public JSON setLenientOnJson(boolean lenientOnJson) {
     isLenientOnJson = lenientOnJson;
     return this;
@@ -125,8 +134,8 @@ public class JSON {
   /**
    * Deserialize the given JSON string to Java object.
    *
-   * @param <T>        Type
-   * @param body       The JSON string
+   * @param <T> Type
+   * @param body The JSON string
    * @param returnType The type to deserialize into
    * @return The deserialized Java object
    */
@@ -135,7 +144,8 @@ public class JSON {
     try {
       if (isLenientOnJson) {
         JsonReader jsonReader = new JsonReader(new StringReader(body));
-        // see https://google-gson.googlecode.com/svn/trunk/gson/docs/javadocs/com/google/gson/stream/JsonReader.html#setLenient(boolean)
+        // see
+        // https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.5/com/google/gson/stream/JsonReader.html
         jsonReader.setLenient(true);
         return gson.fromJson(jsonReader, returnType);
       } else {
@@ -152,10 +162,8 @@ public class JSON {
     }
   }
 
-  /**
-   * Gson TypeAdapter for Byte Array type
-   */
-  public static class ByteArrayAdapter extends TypeAdapter<byte[]> {
+  /** Gson TypeAdapter for Byte Array type */
+  public class ByteArrayAdapter extends TypeAdapter<byte[]> {
 
     @Override
     public void write(JsonWriter out, byte[] value) throws IOException {
@@ -180,9 +188,7 @@ public class JSON {
     }
   }
 
-  /**
-   * Gson TypeAdapter for JSR310 OffsetDateTime type
-   */
+  /** Gson TypeAdapter for JSR310 OffsetDateTime type */
   public static class OffsetDateTimeTypeAdapter extends TypeAdapter<OffsetDateTime> {
 
     private DateTimeFormatter formatter;
@@ -224,10 +230,8 @@ public class JSON {
     }
   }
 
-  /**
-   * Gson TypeAdapter for JSR310 LocalDate type
-   */
-  public static class LocalDateTypeAdapter extends TypeAdapter<LocalDate> {
+  /** Gson TypeAdapter for JSR310 LocalDate type */
+  public class LocalDateTypeAdapter extends TypeAdapter<LocalDate> {
 
     private DateTimeFormatter formatter;
 
@@ -276,16 +280,14 @@ public class JSON {
   }
 
   /**
-   * Gson TypeAdapter for java.sql.Date type
-   * If the dateFormat is null, a simple "yyyy-MM-dd" format will be used
-   * (more efficient than SimpleDateFormat).
+   * Gson TypeAdapter for java.sql.Date type If the dateFormat is null, a simple "yyyy-MM-dd" format
+   * will be used (more efficient than SimpleDateFormat).
    */
   public static class SqlDateTypeAdapter extends TypeAdapter<java.sql.Date> {
 
     private DateFormat dateFormat;
 
-    public SqlDateTypeAdapter() {
-    }
+    public SqlDateTypeAdapter() {}
 
     public SqlDateTypeAdapter(DateFormat dateFormat) {
       this.dateFormat = dateFormat;
@@ -331,15 +333,13 @@ public class JSON {
   }
 
   /**
-   * Gson TypeAdapter for java.util.Date type
-   * If the dateFormat is null, ISO8601Utils will be used.
+   * Gson TypeAdapter for java.util.Date type If the dateFormat is null, ISO8601Utils will be used.
    */
   public static class DateTypeAdapter extends TypeAdapter<Date> {
 
     private DateFormat dateFormat;
 
-    public DateTypeAdapter() {
-    }
+    public DateTypeAdapter() {}
 
     public DateTypeAdapter(DateFormat dateFormat) {
       this.dateFormat = dateFormat;
@@ -397,5 +397,4 @@ public class JSON {
     sqlDateTypeAdapter.setFormat(dateFormat);
     return this;
   }
-
 }

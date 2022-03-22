@@ -32,6 +32,8 @@ import org.lockss.laaws.model.cfg.TdbTitleWsResult;
 public class TdbApi {
 
   private V2RestClient apiClient;
+  private String localCustomBaseUrl;
+  private int localHostIndex;
 
   public TdbApi() {
     this(Configuration.getDefaultApiClient());
@@ -47,6 +49,22 @@ public class TdbApi {
 
   public void setApiClient(V2RestClient apiClient) {
     this.apiClient = apiClient;
+  }
+
+  public String getCustomBaseUrl() {
+    return localCustomBaseUrl;
+  }
+
+  public void setCustomBaseUrl(String customBaseUrl) {
+    this.localCustomBaseUrl = customBaseUrl;
+  }
+
+  public int getHostIndex() {
+    return localHostIndex;
+  }
+
+  public void setHostIndex(int hostIndex) {
+    this.localHostIndex = hostIndex;
   }
 
   /**
@@ -66,6 +84,20 @@ public class TdbApi {
    */
   public okhttp3.Call getTdbAusCall(String tdbAuQuery, final ApiCallback _callback)
     throws ApiException {
+    String basePath = null;
+
+    // Operation Servers
+    String[] localBasePaths = new String[] {  };
+
+    // Determine Base Path to Use
+    if (localCustomBaseUrl != null){
+      basePath = localCustomBaseUrl;
+    } else if ( localBasePaths.length > 0 ) {
+      basePath = localBasePaths[localHostIndex];
+    } else {
+      basePath = null;
+    }
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -96,7 +128,7 @@ public class TdbApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     String[] localVarAuthNames = new String[]{"basicAuth"};
-    return apiClient.buildCall(localVarPath, "GET", localVarQueryParams,
+    return apiClient.buildCall(basePath,localVarPath, "GET", localVarQueryParams,
       localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
       localVarFormParams, localVarAuthNames, _callback);
   }
@@ -202,6 +234,20 @@ public class TdbApi {
    */
   public okhttp3.Call getTdbPublishersCall(String tdbPublisherQuery, final ApiCallback _callback)
     throws ApiException {
+    String basePath = null;
+
+    // Operation Servers
+    String[] localBasePaths = new String[] {  };
+
+    // Determine Base Path to Use
+    if (localCustomBaseUrl != null){
+      basePath = localCustomBaseUrl;
+    } else if ( localBasePaths.length > 0 ) {
+      basePath = localBasePaths[localHostIndex];
+    } else {
+      basePath = null;
+    }
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -232,7 +278,7 @@ public class TdbApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     String[] localVarAuthNames = new String[]{"basicAuth"};
-    return apiClient.buildCall(localVarPath, "GET", localVarQueryParams,
+    return apiClient.buildCall(basePath,localVarPath, "GET", localVarQueryParams,
       localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
       localVarFormParams, localVarAuthNames, _callback);
   }
@@ -339,6 +385,20 @@ public class TdbApi {
    */
   public okhttp3.Call getTdbTitlesCall(String tdbTitleQuery, final ApiCallback _callback)
     throws ApiException {
+    String basePath = null;
+
+    // Operation Servers
+    String[] localBasePaths = new String[] {  };
+
+    // Determine Base Path to Use
+    if (localCustomBaseUrl != null){
+      basePath = localCustomBaseUrl;
+    } else if ( localBasePaths.length > 0 ) {
+      basePath = localBasePaths[localHostIndex];
+    } else {
+      basePath = null;
+    }
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -369,7 +429,7 @@ public class TdbApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     String[] localVarAuthNames = new String[]{"basicAuth"};
-    return apiClient.buildCall(localVarPath, "GET", localVarQueryParams,
+    return apiClient.buildCall(basePath,localVarPath, "GET", localVarQueryParams,
       localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
       localVarFormParams, localVarAuthNames, _callback);
   }

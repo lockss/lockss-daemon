@@ -2,7 +2,6 @@ package org.lockss.laaws;
 
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.Configuration;
-import org.lockss.laaws.api.cfg.AusApi;
 import org.lockss.laaws.model.cfg.AuConfiguration;
 import org.lockss.laaws.model.cfg.V2AuStateBean;
 import org.lockss.plugin.ArchivalUnit;
@@ -45,7 +44,6 @@ public class AuStateMover extends Worker {
     moveNoAuPeerSet(au);
     log.info(auName + ": Moving AU State...");
     moveAuState(au);
-    log.info(auName + ": Checking AU State...");
     //This needs to be last
     log.info(auName + ": Moving AU Configuration...");
     moveAuConfig(au);

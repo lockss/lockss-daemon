@@ -35,6 +35,8 @@ import org.lockss.laaws.model.cfg.RequestAuControlResult;
 public class AusApi {
 
   private V2RestClient apiClient;
+  private String localCustomBaseUrl;
+  private int localHostIndex;
 
   public AusApi() {
     this(Configuration.getDefaultApiClient());
@@ -51,6 +53,23 @@ public class AusApi {
   public void setApiClient(V2RestClient apiClient) {
     this.apiClient = apiClient;
   }
+
+  public String getCustomBaseUrl() {
+    return localCustomBaseUrl;
+  }
+
+  public void setCustomBaseUrl(String customBaseUrl) {
+    this.localCustomBaseUrl = customBaseUrl;
+  }
+
+  public int getHostIndex() {
+    return localHostIndex;
+  }
+
+  public void setHostIndex(int hostIndex) {
+    this.localHostIndex = hostIndex;
+  }
+
 
   /**
    * Build call for deleteAuConfig
@@ -71,6 +90,19 @@ public class AusApi {
    */
   public okhttp3.Call deleteAuConfigCall(String auid, final ApiCallback _callback)
     throws ApiException {
+    String basePath = null;
+
+    // Operation Servers
+    String[] localBasePaths = new String[] {  };
+
+    // Determine Base Path to Use
+    if (localCustomBaseUrl != null){
+      basePath = localCustomBaseUrl;
+    } else if ( localBasePaths.length > 0 ) {
+      basePath = localBasePaths[localHostIndex];
+    } else {
+      basePath = null;
+    }
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -98,7 +130,7 @@ public class AusApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     String[] localVarAuthNames = new String[]{"basicAuth"};
-    return apiClient.buildCall(localVarPath, "DELETE", localVarQueryParams,
+    return apiClient.buildCall(basePath,localVarPath, "DELETE", localVarQueryParams,
       localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
       localVarFormParams, localVarAuthNames, _callback);
   }
@@ -211,6 +243,20 @@ public class AusApi {
    */
   public okhttp3.Call deleteAusDeleteCall(List<String> auIds, final ApiCallback _callback)
     throws ApiException {
+    String basePath = null;
+
+    // Operation Servers
+    String[] localBasePaths = new String[] {  };
+
+    // Determine Base Path to Use
+    if (localCustomBaseUrl != null){
+      basePath = localCustomBaseUrl;
+    } else if ( localBasePaths.length > 0 ) {
+      basePath = localBasePaths[localHostIndex];
+    } else {
+      basePath = null;
+    }
+
     Object localVarPostBody = auIds;
 
     // create path and map variables
@@ -237,7 +283,7 @@ public class AusApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     String[] localVarAuthNames = new String[]{"basicAuth"};
-    return apiClient.buildCall(localVarPath, "DELETE", localVarQueryParams,
+    return apiClient.buildCall(basePath,localVarPath, "DELETE", localVarQueryParams,
       localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
       localVarFormParams, localVarAuthNames, _callback);
   }
@@ -346,6 +392,20 @@ public class AusApi {
    * </table>
    */
   public okhttp3.Call getAllAuConfigCall(final ApiCallback _callback) throws ApiException {
+    String basePath = null;
+
+    // Operation Servers
+    String[] localBasePaths = new String[] {  };
+
+    // Determine Base Path to Use
+    if (localCustomBaseUrl != null){
+      basePath = localCustomBaseUrl;
+    } else if ( localBasePaths.length > 0 ) {
+      basePath = localBasePaths[localHostIndex];
+    } else {
+      basePath = null;
+    }
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -372,7 +432,7 @@ public class AusApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     String[] localVarAuthNames = new String[]{"basicAuth"};
-    return apiClient.buildCall(localVarPath, "GET", localVarQueryParams,
+    return apiClient.buildCall(basePath,localVarPath, "GET", localVarQueryParams,
       localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
       localVarFormParams, localVarAuthNames, _callback);
   }
@@ -466,6 +526,20 @@ public class AusApi {
    */
   public okhttp3.Call getAuAgreementsCall(String auid, final ApiCallback _callback)
     throws ApiException {
+    String basePath = null;
+
+    // Operation Servers
+    String[] localBasePaths = new String[] {  };
+
+    // Determine Base Path to Use
+    if (localCustomBaseUrl != null){
+      basePath = localCustomBaseUrl;
+    } else if ( localBasePaths.length > 0 ) {
+      basePath = localBasePaths[localHostIndex];
+    } else {
+      basePath = null;
+    }
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -493,7 +567,7 @@ public class AusApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     String[] localVarAuthNames = new String[]{"basicAuth"};
-    return apiClient.buildCall(localVarPath, "GET", localVarQueryParams,
+    return apiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams,
       localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
       localVarFormParams, localVarAuthNames, _callback);
   }
@@ -602,6 +676,20 @@ public class AusApi {
    */
   public okhttp3.Call getAuConfigCall(String auid, final ApiCallback _callback)
     throws ApiException {
+    String basePath = null;
+
+    // Operation Servers
+    String[] localBasePaths = new String[] {  };
+
+    // Determine Base Path to Use
+    if (localCustomBaseUrl != null){
+      basePath = localCustomBaseUrl;
+    } else if ( localBasePaths.length > 0 ) {
+      basePath = localBasePaths[localHostIndex];
+    } else {
+      basePath = null;
+    }
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -629,7 +717,7 @@ public class AusApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     String[] localVarAuthNames = new String[]{"basicAuth"};
-    return apiClient.buildCall(localVarPath, "GET", localVarQueryParams,
+    return apiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams,
       localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
       localVarFormParams, localVarAuthNames, _callback);
   }
@@ -737,6 +825,20 @@ public class AusApi {
    * </table>
    */
   public okhttp3.Call getAuStateCall(String auid, final ApiCallback _callback) throws ApiException {
+    String basePath = null;
+
+    // Operation Servers
+    String[] localBasePaths = new String[] {  };
+
+    // Determine Base Path to Use
+    if (localCustomBaseUrl != null){
+      basePath = localCustomBaseUrl;
+    } else if ( localBasePaths.length > 0 ) {
+      basePath = localBasePaths[localHostIndex];
+    } else {
+      basePath = null;
+    }
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -764,7 +866,7 @@ public class AusApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     String[] localVarAuthNames = new String[]{"basicAuth"};
-    return apiClient.buildCall(localVarPath, "GET", localVarQueryParams,
+    return apiClient.buildCall(basePath,localVarPath, "GET", localVarQueryParams,
       localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
       localVarFormParams, localVarAuthNames, _callback);
   }
@@ -873,6 +975,20 @@ public class AusApi {
    */
   public okhttp3.Call getAuStatusCall(String auid, final ApiCallback _callback)
     throws ApiException {
+    String basePath = null;
+
+    // Operation Servers
+    String[] localBasePaths = new String[] {  };
+
+    // Determine Base Path to Use
+    if (localCustomBaseUrl != null){
+      basePath = localCustomBaseUrl;
+    } else if ( localBasePaths.length > 0 ) {
+      basePath = localBasePaths[localHostIndex];
+    } else {
+      basePath = null;
+    }
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -900,7 +1016,7 @@ public class AusApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     String[] localVarAuthNames = new String[]{"basicAuth"};
-    return apiClient.buildCall(localVarPath, "GET", localVarQueryParams,
+    return apiClient.buildCall(basePath,localVarPath, "GET", localVarQueryParams,
       localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
       localVarFormParams, localVarAuthNames, _callback);
   }
@@ -1009,6 +1125,20 @@ public class AusApi {
    */
   public okhttp3.Call getAuSuspectUrlVersionsCall(String auid, final ApiCallback _callback)
     throws ApiException {
+    String basePath = null;
+
+    // Operation Servers
+    String[] localBasePaths = new String[] {  };
+
+    // Determine Base Path to Use
+    if (localCustomBaseUrl != null){
+      basePath = localCustomBaseUrl;
+    } else if ( localBasePaths.length > 0 ) {
+      basePath = localBasePaths[localHostIndex];
+    } else {
+      basePath = null;
+    }
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -1036,7 +1166,7 @@ public class AusApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     String[] localVarAuthNames = new String[]{"basicAuth"};
-    return apiClient.buildCall(localVarPath, "GET", localVarQueryParams,
+    return apiClient.buildCall(basePath,localVarPath, "GET", localVarQueryParams,
       localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
       localVarFormParams, localVarAuthNames, _callback);
   }
@@ -1144,6 +1274,20 @@ public class AusApi {
    */
   public okhttp3.Call getAuqueriesCall(String auQuery, final ApiCallback _callback)
     throws ApiException {
+    String basePath = null;
+
+    // Operation Servers
+    String[] localBasePaths = new String[] {  };
+
+    // Determine Base Path to Use
+    if (localCustomBaseUrl != null){
+      basePath = localCustomBaseUrl;
+    } else if ( localBasePaths.length > 0 ) {
+      basePath = localBasePaths[localHostIndex];
+    } else {
+      basePath = null;
+    }
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -1174,7 +1318,7 @@ public class AusApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     String[] localVarAuthNames = new String[]{"basicAuth"};
-    return apiClient.buildCall(localVarPath, "GET", localVarQueryParams,
+    return apiClient.buildCall(basePath,localVarPath, "GET", localVarQueryParams,
       localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
       localVarFormParams, localVarAuthNames, _callback);
   }
@@ -1281,6 +1425,20 @@ public class AusApi {
    */
   public okhttp3.Call getNoAuPeersCall(String auid, final ApiCallback _callback)
     throws ApiException {
+    String basePath = null;
+
+    // Operation Servers
+    String[] localBasePaths = new String[] {  };
+
+    // Determine Base Path to Use
+    if (localCustomBaseUrl != null){
+      basePath = localCustomBaseUrl;
+    } else if ( localBasePaths.length > 0 ) {
+      basePath = localBasePaths[localHostIndex];
+    } else {
+      basePath = null;
+    }
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -1308,7 +1466,7 @@ public class AusApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     String[] localVarAuthNames = new String[]{"basicAuth"};
-    return apiClient.buildCall(localVarPath, "GET", localVarQueryParams,
+    return apiClient.buildCall(basePath,localVarPath, "GET", localVarQueryParams,
       localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
       localVarFormParams, localVarAuthNames, _callback);
   }
@@ -1421,6 +1579,20 @@ public class AusApi {
    */
   public okhttp3.Call patchAuAgreementsCall(String auid, Object auAgreements,
     String xLockssRequestCookie, final ApiCallback _callback) throws ApiException {
+    String basePath = null;
+
+    // Operation Servers
+    String[] localBasePaths = new String[] {  };
+
+    // Determine Base Path to Use
+    if (localCustomBaseUrl != null){
+      basePath = localCustomBaseUrl;
+    } else if ( localBasePaths.length > 0 ) {
+      basePath = localBasePaths[localHostIndex];
+    } else {
+      basePath = null;
+    }
+
     Object localVarPostBody = auAgreements;
 
     // create path and map variables
@@ -1453,7 +1625,7 @@ public class AusApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     String[] localVarAuthNames = new String[]{"basicAuth"};
-    return apiClient.buildCall(localVarPath, "PATCH", localVarQueryParams,
+    return apiClient.buildCall(basePath,localVarPath, "PATCH", localVarQueryParams,
       localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
       localVarFormParams, localVarAuthNames, _callback);
   }
@@ -1583,6 +1755,20 @@ public class AusApi {
    */
   public okhttp3.Call patchAuStateCall(String auid, Object auState, String xLockssRequestCookie,
     final ApiCallback _callback) throws ApiException {
+    String basePath = null;
+
+    // Operation Servers
+    String[] localBasePaths = new String[] {  };
+
+    // Determine Base Path to Use
+    if (localCustomBaseUrl != null){
+      basePath = localCustomBaseUrl;
+    } else if ( localBasePaths.length > 0 ) {
+      basePath = localBasePaths[localHostIndex];
+    } else {
+      basePath = null;
+    }
+
     Object localVarPostBody = auState;
 
     // create path and map variables
@@ -1615,7 +1801,7 @@ public class AusApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     String[] localVarAuthNames = new String[]{"basicAuth"};
-    return apiClient.buildCall(localVarPath, "PATCH", localVarQueryParams,
+    return apiClient.buildCall(basePath,localVarPath, "PATCH", localVarQueryParams,
       localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
       localVarFormParams, localVarAuthNames, _callback);
   }
@@ -1741,6 +1927,20 @@ public class AusApi {
    */
   public okhttp3.Call postAusCall(List<String> auIds, final ApiCallback _callback)
     throws ApiException {
+    String basePath = null;
+
+    // Operation Servers
+    String[] localBasePaths = new String[] {  };
+
+    // Determine Base Path to Use
+    if (localCustomBaseUrl != null){
+      basePath = localCustomBaseUrl;
+    } else if ( localBasePaths.length > 0 ) {
+      basePath = localBasePaths[localHostIndex];
+    } else {
+      basePath = null;
+    }
+
     Object localVarPostBody = auIds;
 
     // create path and map variables
@@ -1767,7 +1967,7 @@ public class AusApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     String[] localVarAuthNames = new String[]{"basicAuth"};
-    return apiClient.buildCall(localVarPath, "POST", localVarQueryParams,
+    return apiClient.buildCall(basePath,localVarPath, "POST", localVarQueryParams,
       localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
       localVarFormParams, localVarAuthNames, _callback);
   }
@@ -1882,6 +2082,20 @@ public class AusApi {
    */
   public okhttp3.Call putAuConfigCall(String auid, AuConfiguration auConfiguration,
     final ApiCallback _callback) throws ApiException {
+    String basePath = null;
+
+    // Operation Servers
+    String[] localBasePaths = new String[] {  };
+
+    // Determine Base Path to Use
+    if (localCustomBaseUrl != null){
+      basePath = localCustomBaseUrl;
+    } else if ( localBasePaths.length > 0 ) {
+      basePath = localBasePaths[localHostIndex];
+    } else {
+      basePath = null;
+    }
+
     Object localVarPostBody = auConfiguration;
 
     // create path and map variables
@@ -1909,7 +2123,7 @@ public class AusApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     String[] localVarAuthNames = new String[]{"basicAuth"};
-    return apiClient.buildCall(localVarPath, "PUT", localVarQueryParams,
+    return apiClient.buildCall(basePath,localVarPath, "PUT", localVarQueryParams,
       localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
       localVarFormParams, localVarAuthNames, _callback);
   }
@@ -2028,6 +2242,20 @@ public class AusApi {
    */
   public okhttp3.Call putAuSubstanceCheckCall(String auid, final ApiCallback _callback)
     throws ApiException {
+    String basePath = null;
+
+    // Operation Servers
+    String[] localBasePaths = new String[] {  };
+
+    // Determine Base Path to Use
+    if (localCustomBaseUrl != null){
+      basePath = localCustomBaseUrl;
+    } else if ( localBasePaths.length > 0 ) {
+      basePath = localBasePaths[localHostIndex];
+    } else {
+      basePath = null;
+    }
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -2055,7 +2283,7 @@ public class AusApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     String[] localVarAuthNames = new String[]{"basicAuth"};
-    return apiClient.buildCall(localVarPath, "PUT", localVarQueryParams,
+    return apiClient.buildCall(basePath, localVarPath, "PUT", localVarQueryParams,
       localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
       localVarFormParams, localVarAuthNames, _callback);
   }
@@ -2169,6 +2397,20 @@ public class AusApi {
    */
   public okhttp3.Call putAuSuspectUrlVersionsCall(String auid, Object auSuspectUrlVersions,
     String xLockssRequestCookie, final ApiCallback _callback) throws ApiException {
+    String basePath = null;
+
+    // Operation Servers
+    String[] localBasePaths = new String[] {  };
+
+    // Determine Base Path to Use
+    if (localCustomBaseUrl != null){
+      basePath = localCustomBaseUrl;
+    } else if ( localBasePaths.length > 0 ) {
+      basePath = localBasePaths[localHostIndex];
+    } else {
+      basePath = null;
+    }
+
     Object localVarPostBody = auSuspectUrlVersions;
 
     // create path and map variables
@@ -2201,7 +2443,7 @@ public class AusApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     String[] localVarAuthNames = new String[]{"basicAuth"};
-    return apiClient.buildCall(localVarPath, "PUT", localVarQueryParams,
+    return apiClient.buildCall(basePath,localVarPath, "PUT", localVarQueryParams,
       localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
       localVarFormParams, localVarAuthNames, _callback);
   }
@@ -2329,6 +2571,20 @@ public class AusApi {
    */
   public okhttp3.Call putAusDeactivateCall(List<String> auIds, final ApiCallback _callback)
     throws ApiException {
+    String basePath = null;
+
+    // Operation Servers
+    String[] localBasePaths = new String[] {  };
+
+    // Determine Base Path to Use
+    if (localCustomBaseUrl != null){
+      basePath = localCustomBaseUrl;
+    } else if ( localBasePaths.length > 0 ) {
+      basePath = localBasePaths[localHostIndex];
+    } else {
+      basePath = null;
+    }
+
     Object localVarPostBody = auIds;
 
     // create path and map variables
@@ -2355,7 +2611,7 @@ public class AusApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     String[] localVarAuthNames = new String[]{"basicAuth"};
-    return apiClient.buildCall(localVarPath, "PUT", localVarQueryParams,
+    return apiClient.buildCall(basePath,localVarPath, "PUT", localVarQueryParams,
       localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
       localVarFormParams, localVarAuthNames, _callback);
   }
@@ -2472,6 +2728,20 @@ public class AusApi {
    */
   public okhttp3.Call putAusMdDisableCall(String auid, final ApiCallback _callback)
     throws ApiException {
+    String basePath = null;
+
+    // Operation Servers
+    String[] localBasePaths = new String[] {  };
+
+    // Determine Base Path to Use
+    if (localCustomBaseUrl != null){
+      basePath = localCustomBaseUrl;
+    } else if ( localBasePaths.length > 0 ) {
+      basePath = localBasePaths[localHostIndex];
+    } else {
+      basePath = null;
+    }
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -2499,7 +2769,7 @@ public class AusApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     String[] localVarAuthNames = new String[]{"basicAuth"};
-    return apiClient.buildCall(localVarPath, "PUT", localVarQueryParams,
+    return apiClient.buildCall(basePath,localVarPath, "PUT", localVarQueryParams,
       localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
       localVarFormParams, localVarAuthNames, _callback);
   }
@@ -2621,6 +2891,20 @@ public class AusApi {
    */
   public okhttp3.Call putAusMdEnableCall(String auid, final ApiCallback _callback)
     throws ApiException {
+    String basePath = null;
+
+    // Operation Servers
+    String[] localBasePaths = new String[] {  };
+
+    // Determine Base Path to Use
+    if (localCustomBaseUrl != null){
+      basePath = localCustomBaseUrl;
+    } else if ( localBasePaths.length > 0 ) {
+      basePath = localBasePaths[localHostIndex];
+    } else {
+      basePath = null;
+    }
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -2648,7 +2932,7 @@ public class AusApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     String[] localVarAuthNames = new String[]{"basicAuth"};
-    return apiClient.buildCall(localVarPath, "PUT", localVarQueryParams,
+    return apiClient.buildCall(basePath,localVarPath, "PUT", localVarQueryParams,
       localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
       localVarFormParams, localVarAuthNames, _callback);
   }
@@ -2768,6 +3052,20 @@ public class AusApi {
    */
   public okhttp3.Call putAusReactivateCall(List<String> auIds, final ApiCallback _callback)
     throws ApiException {
+    String basePath = null;
+
+    // Operation Servers
+    String[] localBasePaths = new String[] {  };
+
+    // Determine Base Path to Use
+    if (localCustomBaseUrl != null){
+      basePath = localCustomBaseUrl;
+    } else if ( localBasePaths.length > 0 ) {
+      basePath = localBasePaths[localHostIndex];
+    } else {
+      basePath = null;
+    }
+
     Object localVarPostBody = auIds;
 
     // create path and map variables
@@ -2794,7 +3092,7 @@ public class AusApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     String[] localVarAuthNames = new String[]{"basicAuth"};
-    return apiClient.buildCall(localVarPath, "PUT", localVarQueryParams,
+    return apiClient.buildCall(basePath,localVarPath, "PUT", localVarQueryParams,
       localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
       localVarFormParams, localVarAuthNames, _callback);
   }
@@ -2912,6 +3210,20 @@ public class AusApi {
    */
   public okhttp3.Call putNoAuPeersCall(String auid, Object noAuPeerSet, String xLockssRequestCookie,
     final ApiCallback _callback) throws ApiException {
+    String basePath = null;
+
+    // Operation Servers
+    String[] localBasePaths = new String[] {  };
+
+    // Determine Base Path to Use
+    if (localCustomBaseUrl != null){
+      basePath = localCustomBaseUrl;
+    } else if ( localBasePaths.length > 0 ) {
+      basePath = localBasePaths[localHostIndex];
+    } else {
+      basePath = null;
+    }
+
     Object localVarPostBody = noAuPeerSet;
 
     // create path and map variables
@@ -2944,7 +3256,7 @@ public class AusApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     String[] localVarAuthNames = new String[]{"basicAuth"};
-    return apiClient.buildCall(localVarPath, "PUT", localVarQueryParams,
+    return apiClient.buildCall(basePath, localVarPath, "PUT", localVarQueryParams,
       localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
       localVarFormParams, localVarAuthNames, _callback);
   }

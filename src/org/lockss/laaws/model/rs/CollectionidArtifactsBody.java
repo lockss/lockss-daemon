@@ -15,14 +15,12 @@ package org.lockss.laaws.model.rs;
 import com.google.gson.annotations.SerializedName;
 import java.io.File;
 import java.util.Objects;
-
 /**
  * CollectionidArtifactsBody
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-08-17T14:50:09.666-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2022-03-22T11:18:26.304-07:00[America/Los_Angeles]")
 public class CollectionidArtifactsBody {
-
   @SerializedName("auid")
   private String auid = null;
 
@@ -40,9 +38,8 @@ public class CollectionidArtifactsBody {
     return this;
   }
 
-  /**
+   /**
    * Archival Unit ID (AUID) of new artifact
-   *
    * @return auid
    **/
   public String getAuid() {
@@ -58,9 +55,8 @@ public class CollectionidArtifactsBody {
     return this;
   }
 
-  /**
+   /**
    * URI represented by this artifact
-   *
    * @return uri
    **/
   public String getUri() {
@@ -76,9 +72,8 @@ public class CollectionidArtifactsBody {
     return this;
   }
 
-  /**
+   /**
    * Artifact collection/crawl date (milliseconds since epoch; UTC)
-   *
    * @return collectionDate
    **/
   public Long getCollectionDate() {
@@ -94,9 +89,8 @@ public class CollectionidArtifactsBody {
     return this;
   }
 
-  /**
+   /**
    * Artifact data
-   *
    * @return artifact
    **/
   public File getArtifact() {
@@ -118,9 +112,9 @@ public class CollectionidArtifactsBody {
     }
     CollectionidArtifactsBody collectionidArtifactsBody = (CollectionidArtifactsBody) o;
     return Objects.equals(this.auid, collectionidArtifactsBody.auid) &&
-      Objects.equals(this.uri, collectionidArtifactsBody.uri) &&
-      Objects.equals(this.collectionDate, collectionidArtifactsBody.collectionDate) &&
-      Objects.equals(this.artifact, collectionidArtifactsBody.artifact);
+        Objects.equals(this.uri, collectionidArtifactsBody.uri) &&
+        Objects.equals(this.collectionDate, collectionidArtifactsBody.collectionDate) &&
+        Objects.equals(this.artifact, collectionidArtifactsBody.artifact);
   }
 
   @Override
@@ -133,7 +127,7 @@ public class CollectionidArtifactsBody {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CollectionidArtifactsBody {\n");
-
+    
     sb.append("    auid: ").append(toIndentedString(auid)).append("\n");
     sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
     sb.append("    collectionDate: ").append(toIndentedString(collectionDate)).append("\n");

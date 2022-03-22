@@ -776,6 +776,7 @@ public class V2AuMover {
       enqueueCopyAuContent(au, auStat);
       enqueueCopyAuState(au, auStat);
       if (isVerifyContent && isEnqueueVerify) {
+        log.info(auName + ": Verifying Au Content...");
         enqueueVerifyAuContent(au, auStat);
       }
       enqueueFinishAu(au, auStat);

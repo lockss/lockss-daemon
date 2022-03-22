@@ -10,32 +10,33 @@
  * Do not edit the class manually.
  */
 
-
 package org.lockss.laaws.model.rs;
 
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/**
- * A display page of artifacts
- */
+/** A display page of artifacts */
 @ApiModel(description = "A display page of artifacts")
-public class ArtifactPageInfo {
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+public class ArtifactPageInfo implements Serializable {
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_ARTIFACTS = "artifacts";
+
   @SerializedName(SERIALIZED_NAME_ARTIFACTS)
   private List<Artifact> artifacts = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_PAGE_INFO = "pageInfo";
+
   @SerializedName(SERIALIZED_NAME_PAGE_INFO)
   private PageInfo pageInfo;
 
+  public ArtifactPageInfo() {}
 
   public ArtifactPageInfo artifacts(List<Artifact> artifacts) {
 
@@ -52,18 +53,15 @@ public class ArtifactPageInfo {
    * The artifacts included in the page
    *
    * @return artifacts
-   **/
+   */
   @ApiModelProperty(required = true, value = "The artifacts included in the page")
-
   public List<Artifact> getArtifacts() {
     return artifacts;
   }
 
-
   public void setArtifacts(List<Artifact> artifacts) {
     this.artifacts = artifacts;
   }
-
 
   public ArtifactPageInfo pageInfo(PageInfo pageInfo) {
 
@@ -75,18 +73,15 @@ public class ArtifactPageInfo {
    * Get pageInfo
    *
    * @return pageInfo
-   **/
+   */
   @ApiModelProperty(required = true, value = "")
-
   public PageInfo getPageInfo() {
     return pageInfo;
   }
 
-
   public void setPageInfo(PageInfo pageInfo) {
     this.pageInfo = pageInfo;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -97,15 +92,14 @@ public class ArtifactPageInfo {
       return false;
     }
     ArtifactPageInfo artifactPageInfo = (ArtifactPageInfo) o;
-    return Objects.equals(this.artifacts, artifactPageInfo.artifacts) &&
-      Objects.equals(this.pageInfo, artifactPageInfo.pageInfo);
+    return Objects.equals(this.artifacts, artifactPageInfo.artifacts)
+        && Objects.equals(this.pageInfo, artifactPageInfo.pageInfo);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(artifacts, pageInfo);
   }
-
 
   @Override
   public String toString() {
@@ -118,8 +112,7 @@ public class ArtifactPageInfo {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(Object o) {
     if (o == null) {
@@ -127,6 +120,4 @@ public class ArtifactPageInfo {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-
