@@ -355,6 +355,10 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
       }
 
       thisAM.put(MetadataField.FIELD_PROVIDER, publisherName);
+
+      // Since raw ATITLE is not guaranteed to be uniqu, it may be called "Page 1, Page 2, etc"
+      // Use ATITLE - TITLE as the unique string for reporting purpose
+      thisAM.put(MetadataField.FIELD_ARTICLE_TITLE, thisAM.get(MetadataField.FIELD_ARTICLE_TITLE) + " - " + raw_title);
     }
 
     /**
