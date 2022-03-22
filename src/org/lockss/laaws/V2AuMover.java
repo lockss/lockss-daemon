@@ -278,6 +278,7 @@ public class V2AuMover {
 
   private long startTime;
   private CountUpDownLatch ausLatch;
+  private OneShotSemaphore doneSem = new OneShotSemaphore();
   private boolean terminated = false;
   private boolean isPartialContent = false;
   private boolean checkMissingContent;
@@ -377,12 +378,24 @@ public class V2AuMover {
       } else {
         // else copy all AUs (that match sel pattern)
         moveAllAus(args);
+        waitUntilDone();
       }
     } catch (IOException e) {
       log.error("Unexpected exception", e);
       currentStatus = e.getMessage();
       running = false;
     } finally {
+    }
+  }
+
+  private void waitUntilDone() {
+    try {
+      // Wait until last AU finishes
+      ausLatch.await();
+      // Then a while more for complete completion
+      doneSem.waitFull(Deadline.in(10000));
+    } catch (InterruptedException e) {
+      log.warning("waitUntilDone interrupted" + e);
     }
   }
 
@@ -633,6 +646,15 @@ public class V2AuMover {
             log.debug("Delaying COPY_AU_STATE until content copy finished: "
                       + auStat.getAuName());
             waitLatch(auStat, Phase.COPY);
+
+            // finish the bulk store, copy all Artifact entries to
+            // permanent ArtifactIndex
+            long finishStart = now();
+//             repoCollectionsApiClient.finishAuBulk(collection, auStat.getAuId());
+            log.debug2("finishBulk took " +
+                       StringUtil.timeIntervalToString(now() - finishStart) +
+                       ", " + auStat.getAuName());
+
             log.debug2("Moving AU state: " + auStat.getAuName());
             long startS = now();
             AuStateMover mover = new AuStateMover(v2Mover, task);
@@ -644,6 +666,7 @@ public class V2AuMover {
             task.getCounters().add(CounterType.STATE_TIME, now() - startS);
             log.debug2("Checked AU state: " + auStat.getAuName());
           } finally {
+            task.getLatch().countDown();
           }
           break;
         case CHECK_CU_VERSIONS:
@@ -683,6 +706,7 @@ public class V2AuMover {
               waitLatch(auStat, Phase.VERIFY);
               auStat.stop(Phase.VERIFY);
             }
+            waitLatch(auStat, Phase.STATE);
             log.debug2("Finishing AU: " + auStat.getAuName());
             removeActiveAu(au);
             addFinishedAu(au, auStat);
@@ -700,6 +724,7 @@ public class V2AuMover {
           ausLatch.await();
           totalTimers.stop(Phase.TOTAL);
           closeReport();
+          doneSem.fill();
           break;
         default:
           log.error("Unknown migration task type: " + task.getType());
@@ -747,6 +772,7 @@ public class V2AuMover {
     try {
       addActiveAu(au, auStat);
       log.info(auName + ": Moving AU Artifacts...");
+//       repoCollectionsApiClient.startAuBulk(collection, au.getAuId());
       enqueueCopyAuContent(au, auStat);
       enqueueCopyAuState(au, auStat);
       if (isVerifyContent && isEnqueueVerify) {
@@ -829,10 +855,12 @@ public class V2AuMover {
    * @param au the au we are moving.
    */
   void enqueueCopyAuState(ArchivalUnit au, AuStatus auStat) {
+    CountUpDownLatch latch = new CountUpDownLatch(1);
+    auStat.setLatch(Phase.STATE, latch);
     if (!terminated) {
       MigrationTask task = MigrationTask.copyAuState(this, au)
         .setCounters(auStat.getCounters())
-        .setLatch(auStat.getLatch(Phase.COPY))
+        .setLatch(latch)
         .setAuStatus(auStat);
       taskExecutor.execute(new TaskRunner(this, task));
     }
@@ -1116,7 +1144,7 @@ public class V2AuMover {
 
   private final List<String> errorList = new ArrayList<>();
 
-  enum Phase {COPY, VERIFY, TOTAL}
+  enum Phase {COPY, VERIFY, STATE, TOTAL}
 
   enum CounterType {
     URLS_MOVED,
