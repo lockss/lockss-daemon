@@ -2138,7 +2138,7 @@
     param[journal_issn] = 2772-5170
 
     au < manifest ; exists ; 2021 ; Indian Pediatrics Case Reports Volume 1 ; 2021 ; 1 ; https://www.ipcares.org/ ; ; >
-    au < manifest ; expected ; 2022 ; Indian Pediatrics Case Reports Volume 2 ; 2022 ; 2 ; https://www.ipcares.org/ ; ; >
+    au < manifest ; exists ; 2022 ; Indian Pediatrics Case Reports Volume 2 ; 2022 ; 2 ; https://www.ipcares.org/ ; ; >
 
   }
 
@@ -2320,7 +2320,7 @@
     param[journal_issn] = 2772-915X
 
     au < exists ; exists ; 2021 ; International Journal of Orthopaedic Surgery Volume 29 ; 2021 ; 29 ; https://ijos.in/ ; ; >
-    au < expected ; expected ; 2022 ; International Journal of Orthopaedic Surgery Volume 30 ; 2022 ; 30 ; https://ijos.in/ ; ; >
+    au < expected ; exists ; 2022 ; International Journal of Orthopaedic Surgery Volume 30 ; 2022 ; 30 ; https://ijos.in/ ; ; >
 
   }
 
@@ -4039,7 +4039,7 @@
     au < exists ; exists ; 2019 ; Middle East African Journal of Ophthalmology Volume 26 ; 2019 ; 26 ; https://www.meajo.org/ ; ; >
     au < exists ; exists ; 2020 ; Middle East African Journal of Ophthalmology Volume 27 ; 2020 ; 27 ; https://www.meajo.org/ ; ; >
     au < exists ; exists ; 2021 ; Middle East African Journal of Ophthalmology Volume 28 ; 2021 ; 28 ; https://www.meajo.org/ ; ; >
-    au < expected ; expected ; 2022 ; Middle East African Journal of Ophthalmology Volume 29 ; 2022 ; 29 ; https://www.meajo.org/ ; ; >
+    au < expected ; exists ; 2022 ; Middle East African Journal of Ophthalmology Volume 29 ; 2022 ; 29 ; https://www.meajo.org/ ; ; >
 
   }
 
@@ -6179,7 +6179,7 @@
       au < exists ; exists ; 2019 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 12 ; 2019 ; 12 ; https://www.ijournalhs.org/ ; ; >
       au < exists ; exists ; 2020 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 13 ; 2020 ; 13 ; https://www.ijournalhs.org/ ; ; >
       au < exists ; exists ; 2021 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 14 ; 2021 ; 14 ; https://www.ijournalhs.org/ ; ; >
-      au < expected ; expected ; 2022 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 15 ; 2022 ; 15 ; https://www.ijournalhs.org/ ; ; >
+      au < expected ; exists ; 2022 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 15 ; 2022 ; 15 ; https://www.ijournalhs.org/ ; ; >
 
   }
 
@@ -7462,7 +7462,7 @@
     param[journal_issn] = 0000-0000
 
     au < exists ; exists ; 2021 ; Journal of Ophthalmology Clinics and Research Volume 1 ; 2021 ; 1 ; https://www.jocr.in/ ; ; >
-    au < expected ; expected ; 2022 ; Journal of Ophthalmology Clinics and Research Volume 2 ; 2022 ; 2 ; https://www.jocr.in/ ; ; >
+    au < expected ; exists ; 2022 ; Journal of Ophthalmology Clinics and Research Volume 2 ; 2022 ; 2 ; https://www.jocr.in/ ; ; >
 
   }
 
@@ -7638,7 +7638,7 @@
       au < exists ; exists ; 2019 ; Journal of Radiation and Cancer Research Volume 10 ; 2019 ; 10 ; https://www.journalrcr.org/ ; ; >
       au < exists ; exists ; 2020 ; Journal of Radiation and Cancer Research Volume 11 ; 2020 ; 11 ; https://www.journalrcr.org/ ; ; >
       au < exists ; exists ; 2021 ; Journal of Radiation and Cancer Research Volume 12 ; 2021 ; 12 ; https://www.journalrcr.org/ ; ; >
-      au < expected ; expected ; 2022 ; Journal of Radiation and Cancer Research Volume 13 ; 2022 ; 13 ; https://www.journalrcr.org/ ; ; >
+      au < expected ; exists ; 2022 ; Journal of Radiation and Cancer Research Volume 13 ; 2022 ; 13 ; https://www.journalrcr.org/ ; ; >
 
   }
 
@@ -7663,7 +7663,7 @@
       au < exists ; exists ; 2019 ; Journal of Research in Pharmacy Practice Volume 8 ; 2019 ; 8 ; https://www.jrpp.net/ ; ; >
       au < exists ; exists ; 2020 ; Journal of Research in Pharmacy Practice Volume 9 ; 2020 ; 9 ; https://www.jrpp.net/ ; ; >
       au < exists ; exists ; 2021 ; Journal of Research in Pharmacy Practice Volume 10 ; 2021 ; 10 ; https://www.jrpp.net/ ; ; >
-      au < expected ; expected ; 2022 ; Journal of Research in Pharmacy Practice Volume 11 ; 2022 ; 11 ; https://www.jrpp.net/ ; ; >
+      au < expected ; exists ; 2022 ; Journal of Research in Pharmacy Practice Volume 11 ; 2022 ; 11 ; https://www.jrpp.net/ ; ; >
 
   }
 
@@ -9832,7 +9832,7 @@
       au < exists ; exists ; 2019 ; Imam Journal of Applied Sciences Volume 4 ; 2019 ; 4 ; https://www.e-ijas.org/ ; ; >
       au < exists ; exists ; 2020 ; Imam Journal of Applied Sciences Volume 5 ; 2020 ; 5 ; https://www.e-ijas.org/ ; ; >
       au < exists ; exists ; 2021 ; Imam Journal of Applied Sciences Volume 6 ; 2021 ; 6 ; https://www.e-ijas.org/ ; ; >
-      au < expected ; expected ; 2022 ; Imam Journal of Applied Sciences Volume 7 ; 2022 ; 7 ; https://www.e-ijas.org/ ; ; >
+      au < expected ; exists ; 2022 ; Imam Journal of Applied Sciences Volume 7 ; 2022 ; 7 ; https://www.e-ijas.org/ ; ; >
 
   }
 
@@ -9877,7 +9877,7 @@
       au < exists ; exists ; 2019 ; Indian Journal of Dental Sciences Volume 11 ; 2019 ; 11 ; https://www.ijds.in/ ; ; >
       au < exists ; exists ; 2020 ; Indian Journal of Dental Sciences Volume 12 ; 2020 ; 12 ; https://www.ijds.in/ ; ; >
       au < exists ; exists ; 2021 ; Indian Journal of Dental Sciences Volume 13 ; 2021 ; 13 ; https://www.ijds.in/ ; ; >
-      au < expected ; expected ; 2022 ; Indian Journal of Dental Sciences Volume 14 ; 2022 ; 14 ; https://www.ijds.in/ ; ; >
+      au < expected ; exists ; 2022 ; Indian Journal of Dental Sciences Volume 14 ; 2022 ; 14 ; https://www.ijds.in/ ; ; >
 
   }
 
@@ -9995,7 +9995,7 @@
       au < exists ; exists ; 2019 ; International Journal of Clinicopathological Correlation Volume 3 ; 2019 ; 3 ; https://www.ijcpc.org/ ; ; >
       au < exists ; exists ; 2020 ; International Journal of Clinicopathological Correlation Volume 4 ; 2020 ; 4 ; https://www.ijcpc.org/ ; ; >
       au < exists ; exists ; 2021 ; International Journal of Clinicopathological Correlation Volume 5 ; 2021 ; 5 ; https://www.ijcpc.org/ ; ; >
-      au < expected ; expected ; 2022 ; International Journal of Clinicopathological Correlation Volume 6 ; 2022 ; 6 ; https://www.ijcpc.org/ ; ; >
+      au < expected ; exists ; 2022 ; International Journal of Clinicopathological Correlation Volume 6 ; 2022 ; 6 ; https://www.ijcpc.org/ ; ; >
 
   }
 
@@ -10311,7 +10311,7 @@
       au < exists ; exists ; 2019 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 14 ; 2019 ; 14 ; https://www.journaldmims.com/ ; ; >
       au < exists ; exists ; 2020 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 15 ; 2020 ; 15 ; https://www.journaldmims.com/ ; ; >
       au < exists ; exists ; 2021 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 16 ; 2021 ; 16 ; https://www.journaldmims.com/ ; ; >
-      au < expected ; expected ; 2022 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 17 ; 2022 ; 17 ; https://www.journaldmims.com/ ; ; >
+      au < expected ; exists ; 2022 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 17 ; 2022 ; 17 ; https://www.journaldmims.com/ ; ; >
 
   }
 
@@ -10655,7 +10655,7 @@
       au < exists ; exists ; 2019 ; Journal of Renal Nutrition and Metabolism Volume 4 ; 2019 ; 4 ; https://www.jrnm.in/ ; ; >
       au < exists ; exists ; 2020 ; Journal of Renal Nutrition and Metabolism Volume 5 ; 2020 ; 5 ; https://www.jrnm.in/ ; ; >
       au < exists ; exists ; 2021 ; Journal of Renal Nutrition and Metabolism Volume 6 ; 2021 ; 6 ; https://www.jrnm.in/ ; ; >
-      au < expected ; expected ; 2022 ; Journal of Renal Nutrition and Metabolism Volume 7 ; 2022 ; 7 ; https://www.jrnm.in/ ; ; >
+      au < expected ; exists ; 2022 ; Journal of Renal Nutrition and Metabolism Volume 7 ; 2022 ; 7 ; https://www.jrnm.in/ ; ; >
 
   }
 
@@ -11204,7 +11204,7 @@
       au < exists ; exists ; 2019 ; Turkish Journal of Plastic Surgery Volume 27 ; 2019 ; 27 ; https://www.turkjplastsurg.org/ ; ; >
       au < exists ; exists ; 2020 ; Turkish Journal of Plastic Surgery Volume 28 ; 2020 ; 28 ; https://www.turkjplastsurg.org/ ; ; >
       au < exists ; exists ; 2021 ; Turkish Journal of Plastic Surgery Volume 29 ; 2021 ; 29 ; https://www.turkjplastsurg.org/ ; ; >
-      au < expected ; expected ; 2022 ; Turkish Journal of Plastic Surgery Volume 30 ; 2022 ; 30 ; https://www.turkjplastsurg.org/ ; ; >
+      au < expected ; exists ; 2022 ; Turkish Journal of Plastic Surgery Volume 30 ; 2022 ; 30 ; https://www.turkjplastsurg.org/ ; ; >
 
   }
 
