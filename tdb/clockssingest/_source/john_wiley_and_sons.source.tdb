@@ -10,36 +10,28 @@
   provider = Wiley-Blackwell
 
   {
+    title <
+      name = John Wiley and Sons Books Source Content
+    >
 
+      plugin = needs.plugin
+      param[base_url] = https://clockss-test.lockss.org/sourcefiles/wileybooks-released/
+      hidden[proxy] = DIRECT
+      implicit < status ; status2 ; year ; name ; param[directory] >
+
+      au < exists ; exists ; 2022 ; Wiley Source Content 2022_1 ; 2022_1 >
+  }
+
+  {
     title <
       name = John Wiley and Sons Source Content
     >
 
     {
-
-      plugin = org.lockss.plugin.wiley.ClockssWileySourcePlugin
-      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/wiley-released/
-      hidden[proxy] = DIRECT
-      implicit < status ; status2 ; year ; name ; param[year] >
-
-      au < zapped ; finished ; 2011 ; Wiley Source Content 2011 ; 2011 >
-      au < zapped ; finished ; 2012 ; Wiley Source Content 2012 ; 2012 >
-      au < zapped ; finished ; 2013 ; Wiley Source Content 2013 ; 2013 >
-      au < zapped ; finished ; 2014 ; Wiley Source Content 2014 ; 2014 >
-      au < zapped ; finished ; 2015 ; Wiley Source Content 2015 ; 2015 >
-      au < zapped ; finished ; 2016 ; Wiley Source Content 2016 ; 2016 >
-      au < zapped ; finished ; 2017 ; Wiley Source Content 2017 ; 2017 >
-      #no more AUs using this plugin
-
-    }
-
-    {
-
       plugin = org.lockss.plugin.wiley.ClockssWileyDirSourcePlugin
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/wiley-released/
       hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[directory] >
-
 
       au < zapped ; finished ; 2018 ; Wiley Source Content 2018_1 ; 2018_1 >
       au < zapped ; finished ; 2018 ; Wiley Source Content 2018_2 ; 2018_2 >
@@ -74,8 +66,26 @@
       au < expected ; exists ; 2022 ; Wiley Source Content 2022_03 ; 2022_03 >
       au < expected ; exists ; 2022 ; Wiley Source Content 2022_04 ; 2022_04 >
       au < expected ; exists ; 2022 ; Wiley Source Content 2022_05 ; 2022_05 >
+      au < expected ; exists ; 2022 ; Wiley Source Content 2022_06 ; 2022_06 >
+      au < expected ; exists ; 2022 ; Wiley Source Content 2022_07 ; 2022_07 >
 
     }
+    {
+      plugin = org.lockss.plugin.wiley.ClockssWileySourcePlugin
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/wiley-released/
+      hidden[proxy] = DIRECT
+      implicit < status ; status2 ; year ; name ; param[year] >
+
+      au < zapped ; finished ; 2011 ; Wiley Source Content 2011 ; 2011 >
+      au < zapped ; finished ; 2012 ; Wiley Source Content 2012 ; 2012 >
+      au < zapped ; finished ; 2013 ; Wiley Source Content 2013 ; 2013 >
+      au < zapped ; finished ; 2014 ; Wiley Source Content 2014 ; 2014 >
+      au < zapped ; finished ; 2015 ; Wiley Source Content 2015 ; 2015 >
+      au < zapped ; finished ; 2016 ; Wiley Source Content 2016 ; 2016 >
+      au < zapped ; finished ; 2017 ; Wiley Source Content 2017 ; 2017 >
+      #no more AUs using this plugin
+    }
+
   }
 
 }
