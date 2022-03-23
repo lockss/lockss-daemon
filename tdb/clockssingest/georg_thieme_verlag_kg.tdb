@@ -2034,12 +2034,12 @@
    au < testing ; exists ; 1981 ; 1981 ; Geburtshilfe und Frauenheilkunde Volume 41 ; 41 ; >
    au < testing ; exists ; 1982 ; 1982 ; Geburtshilfe und Frauenheilkunde Volume 42 ; 42 ; >
    au < testing ; exists ; 1983 ; 1983 ; Geburtshilfe und Frauenheilkunde Volume 43 ; 43 ; >
-   au < testing ; exists ; 1984 ; 1984 ; Geburtshilfe und Frauenheilkunde Volume 44 ; 44 ; >
-   au < testing ; exists ; 1985 ; 1985 ; Geburtshilfe und Frauenheilkunde Volume 45 ; 45 ; >
-   au < testing ; exists ; 1986 ; 1986 ; Geburtshilfe und Frauenheilkunde Volume 46 ; 46 ; >
-   au < testing ; exists ; 1987 ; 1987 ; Geburtshilfe und Frauenheilkunde Volume 47 ; 47 ; >
-   au < testing ; exists ; 1988 ; 1988 ; Geburtshilfe und Frauenheilkunde Volume 48 ; 48 ; >
-   au < testing ; exists ; 1989 ; 1989 ; Geburtshilfe und Frauenheilkunde Volume 49 ; 49 ; >
+   au < ready ; exists ; 1984 ; 1984 ; Geburtshilfe und Frauenheilkunde Volume 44 ; 44 ; >
+   au < ready ; exists ; 1985 ; 1985 ; Geburtshilfe und Frauenheilkunde Volume 45 ; 45 ; >
+   au < ready ; exists ; 1986 ; 1986 ; Geburtshilfe und Frauenheilkunde Volume 46 ; 46 ; >
+   au < ready ; exists ; 1987 ; 1987 ; Geburtshilfe und Frauenheilkunde Volume 47 ; 47 ; >
+   au < ready ; exists ; 1988 ; 1988 ; Geburtshilfe und Frauenheilkunde Volume 48 ; 48 ; >
+   au < ready ; exists ; 1989 ; 1989 ; Geburtshilfe und Frauenheilkunde Volume 49 ; 49 ; >
    au < frozen ; exists ; 1990 ; 1990 ; Geburtshilfe und Frauenheilkunde Volume 50 ; 50 ; >
    au < frozen ; exists ; 1991 ; 1991 ; Geburtshilfe und Frauenheilkunde Volume 51 ; 51 ; >
    au < frozen ; exists ; 1992 ; 1992 ; Geburtshilfe und Frauenheilkunde Volume 52 ; 52 ; >
@@ -2360,12 +2360,12 @@
    au < manifest ; exists ; 1977 ; 1977 ; Hormone and Metabolic Research Volume 9 ; 9 ; >
    au < manifest ; exists ; 1978 ; 1978 ; Hormone and Metabolic Research Volume 10 ; 10 ; >
    au < manifest ; exists ; 1979 ; 1979 ; Hormone and Metabolic Research Volume 11 ; 11 ; >
-   au < testing ; exists ; 1980 ; 1980 ; Hormone and Metabolic Research Volume 12 ; 12 ; >
-   au < testing ; exists ; 1981 ; 1981 ; Hormone and Metabolic Research Volume 13 ; 13 ; >
-   au < testing ; exists ; 1982 ; 1982 ; Hormone and Metabolic Research Volume 14 ; 14 ; >
-   au < testing ; exists ; 1983 ; 1983 ; Hormone and Metabolic Research Volume 15 ; 15 ; >
-   au < testing ; exists ; 1984 ; 1984 ; Hormone and Metabolic Research Volume 16 ; 16 ; >
-   au < testing ; exists ; 1985 ; 1985 ; Hormone and Metabolic Research Volume 17 ; 17 ; >
+   au < ready ; exists ; 1980 ; 1980 ; Hormone and Metabolic Research Volume 12 ; 12 ; >
+   au < ready ; exists ; 1981 ; 1981 ; Hormone and Metabolic Research Volume 13 ; 13 ; >
+   au < ready ; exists ; 1982 ; 1982 ; Hormone and Metabolic Research Volume 14 ; 14 ; >
+   au < ready ; exists ; 1983 ; 1983 ; Hormone and Metabolic Research Volume 15 ; 15 ; >
+   au < ready ; exists ; 1984 ; 1984 ; Hormone and Metabolic Research Volume 16 ; 16 ; >
+   au < ready ; exists ; 1985 ; 1985 ; Hormone and Metabolic Research Volume 17 ; 17 ; >
    au < testing ; exists ; 1986 ; 1986 ; Hormone and Metabolic Research Volume 18 ; 18 ; >
    au < testing ; exists ; 1987 ; 1987 ; Hormone and Metabolic Research Volume 19 ; 19 ; >
    au < testing ; exists ; 1988 ; 1988 ; Hormone and Metabolic Research Volume 20 ; 20 ; >
@@ -2730,16 +2730,16 @@
     param[journal_id] = 10.1055/s-00000028
     comment[years] = 1980-current
 
-    au < testing ; exists ; 1980 ; 1980 ; International Journal of Sports Medicine Volume 1 ; 1 ; >
-    au < testing ; exists ; 1981 ; 1981 ; International Journal of Sports Medicine Volume 2 ; 2 ; >
-    au < testing ; exists ; 1982 ; 1982 ; International Journal of Sports Medicine Volume 3 ; 3 ; >
-    au < testing ; exists ; 1983 ; 1983 ; International Journal of Sports Medicine Volume 4 ; 4 ; >
-    au < testing ; exists ; 1984 ; 1984 ; International Journal of Sports Medicine Volume 5 ; 5 ; >
-    au < testing ; exists ; 1985 ; 1985 ; International Journal of Sports Medicine Volume 6 ; 6 ; >
-    au < testing ; exists ; 1986 ; 1986 ; International Journal of Sports Medicine Volume 7 ; 7 ; >
-    au < testing ; exists ; 1987 ; 1987 ; International Journal of Sports Medicine Volume 8 ; 8 ; >
-    au < testing ; exists ; 1988 ; 1988 ; International Journal of Sports Medicine Volume 9 ; 9 ; >
-    au < testing ; exists ; 1989 ; 1989 ; International Journal of Sports Medicine Volume 10 ; 10 ; >
+    au < ready ; exists ; 1980 ; 1980 ; International Journal of Sports Medicine Volume 1 ; 1 ; >
+    au < ready ; exists ; 1981 ; 1981 ; International Journal of Sports Medicine Volume 2 ; 2 ; >
+    au < ready ; exists ; 1982 ; 1982 ; International Journal of Sports Medicine Volume 3 ; 3 ; >
+    au < ready ; exists ; 1983 ; 1983 ; International Journal of Sports Medicine Volume 4 ; 4 ; >
+    au < ready ; exists ; 1984 ; 1984 ; International Journal of Sports Medicine Volume 5 ; 5 ; >
+    au < ready ; exists ; 1985 ; 1985 ; International Journal of Sports Medicine Volume 6 ; 6 ; >
+    au < ready ; exists ; 1986 ; 1986 ; International Journal of Sports Medicine Volume 7 ; 7 ; >
+    au < ready ; exists ; 1987 ; 1987 ; International Journal of Sports Medicine Volume 8 ; 8 ; >
+    au < ready ; exists ; 1988 ; 1988 ; International Journal of Sports Medicine Volume 9 ; 9 ; >
+    au < ready ; exists ; 1989 ; 1989 ; International Journal of Sports Medicine Volume 10 ; 10 ; >
     au < frozen ; exists ; 1990 ; 1990 ; International Journal of Sports Medicine Volume 11 ; 11 ; >
     au < frozen ; exists ; 1991 ; 1991 ; International Journal of Sports Medicine Volume 12 ; 12 ; >
     au < frozen ; exists ; 1992 ; 1992 ; International Journal of Sports Medicine Volume 13 ; 13 ; >
@@ -3327,12 +3327,12 @@
     param[journal_id] = 10.1055/s-00000029
     comment[years] = 1984-current
 
-    au < testing ; exists ; 1984 ; 1984 ; Journal of Reconstructive Microsurgery Volume 1 (1984) ; 1 ; >
-    au < testing ; exists ; 1985 ; 1985 ; Journal of Reconstructive Microsurgery Volume 1 (1985) ; 1 ; >
-    au < testing ; exists ; 1986 ; 1986 ; Journal of Reconstructive Microsurgery Volume 2 ; 2 ; >
-    au < testing ; exists ; 1987 ; 1987 ; Journal of Reconstructive Microsurgery Volume 3 ; 3 ; >
-    au < testing ; exists ; 1988 ; 1988 ; Journal of Reconstructive Microsurgery Volume 4 ; 4 ; >
-    au < testing ; exists ; 1989 ; 1989 ; Journal of Reconstructive Microsurgery Volume 5 ; 5 ; >
+    au < ready ; exists ; 1984 ; 1984 ; Journal of Reconstructive Microsurgery Volume 1 (1984) ; 1 ; >
+    au < ready ; exists ; 1985 ; 1985 ; Journal of Reconstructive Microsurgery Volume 1 (1985) ; 1 ; >
+    au < ready ; exists ; 1986 ; 1986 ; Journal of Reconstructive Microsurgery Volume 2 ; 2 ; >
+    au < ready ; exists ; 1987 ; 1987 ; Journal of Reconstructive Microsurgery Volume 3 ; 3 ; >
+    au < ready ; exists ; 1988 ; 1988 ; Journal of Reconstructive Microsurgery Volume 4 ; 4 ; >
+    au < ready ; exists ; 1989 ; 1989 ; Journal of Reconstructive Microsurgery Volume 5 ; 5 ; >
     au < frozen ; exists ; 1990 ; 1990 ; Journal of Reconstructive Microsurgery Volume 6 ; 6 ; >
     au < frozen ; exists ; 1991 ; 1991 ; Journal of Reconstructive Microsurgery Volume 7 ; 7 ; >
     au < frozen ; exists ; 1992 ; 1992 ; Journal of Reconstructive Microsurgery Volume 8 ; 8 ; >
@@ -3412,7 +3412,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Journal of Social Health and Diabetes Volume 6 ; 6 ; >
       au < finished ; crawling ; 2019 ; 2019 ; Journal of Social Health and Diabetes Volume 7 ; 7 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2020 ; 2020 ; Journal of Social Health and Diabetes Volume 8 ; 8 ; reingest1.clockss.org:8082 >
-      au < testing ; exists ; 2021 ; 2021 ; Journal of Social Health and Diabetes Volume 9 ; 9 ; >
+      au < ready ; exists ; 2021 ; 2021 ; Journal of Social Health and Diabetes Volume 9 ; 9 ; >
       au < expected ; exists ; 2022 ; 2022 ; Journal of Social Health and Diabetes Volume 10 ; 10 ; >
 
   }
@@ -3576,16 +3576,16 @@
     param[journal_id] = 10.1055/s-00000031
     comment[years] = 1980-curren196t
 
-    au < testing ; exists ; 1980 ; 1980 ; Klinische Monatsblätter für Augenheilkunde Volume 197 ; 197 ; >
-    au < testing ; exists ; 1981 ; 1981 ; Klinische Monatsblätter für Augenheilkunde Volume 198 ; 198 ; >
-    au < testing ; exists ; 1982 ; 1982 ; Klinische Monatsblätter für Augenheilkunde Volume 199 ; 199 ; >
-    au < testing ; exists ; 1983 ; 1983 ; Klinische Monatsblätter für Augenheilkunde Volume 200 ; 200 ; >
-    au < testing ; exists ; 1984 ; 1984 ; Klinische Monatsblätter für Augenheilkunde Volume 201 ; 201 ; >
-    au < testing ; exists ; 1985 ; 1985 ; Klinische Monatsblätter für Augenheilkunde Volume 202 ; 202 ; >
-    au < testing ; exists ; 1986 ; 1986 ; Klinische Monatsblätter für Augenheilkunde Volume 203 ; 203 ; >
-    au < testing ; exists ; 1987 ; 1987 ; Klinische Monatsblätter für Augenheilkunde Volume 204 ; 204 ; >
-    au < testing ; exists ; 1988 ; 1988 ; Klinische Monatsblätter für Augenheilkunde Volume 205 ; 205 ; >
-    au < testing ; exists ; 1989 ; 1989 ; Klinische Monatsblätter für Augenheilkunde Volume 206 ; 206 ; >
+    au < ready ; exists ; 1980 ; 1980 ; Klinische Monatsblätter für Augenheilkunde Volume 197 ; 197 ; >
+    au < ready ; exists ; 1981 ; 1981 ; Klinische Monatsblätter für Augenheilkunde Volume 198 ; 198 ; >
+    au < ready ; exists ; 1982 ; 1982 ; Klinische Monatsblätter für Augenheilkunde Volume 199 ; 199 ; >
+    au < ready ; exists ; 1983 ; 1983 ; Klinische Monatsblätter für Augenheilkunde Volume 200 ; 200 ; >
+    au < ready ; exists ; 1984 ; 1984 ; Klinische Monatsblätter für Augenheilkunde Volume 201 ; 201 ; >
+    au < ready ; exists ; 1985 ; 1985 ; Klinische Monatsblätter für Augenheilkunde Volume 202 ; 202 ; >
+    au < ready ; exists ; 1986 ; 1986 ; Klinische Monatsblätter für Augenheilkunde Volume 203 ; 203 ; >
+    au < ready ; exists ; 1987 ; 1987 ; Klinische Monatsblätter für Augenheilkunde Volume 204 ; 204 ; >
+    au < ready ; exists ; 1988 ; 1988 ; Klinische Monatsblätter für Augenheilkunde Volume 205 ; 205 ; >
+    au < ready ; exists ; 1989 ; 1989 ; Klinische Monatsblätter für Augenheilkunde Volume 206 ; 206 ; >
     au < frozen ; exists ; 1990 ; 1990 ; Klinische Monatsblätter für Augenheilkunde Volume 207 ; 207 ; >
     au < frozen ; exists ; 1991 ; 1991 ; Klinische Monatsblätter für Augenheilkunde Volume 208 ; 208 ; >
     au < frozen ; exists ; 1992 ; 1992 ; Klinische Monatsblätter für Augenheilkunde Volume 209 ; 209 ; >
@@ -3692,16 +3692,16 @@
     param[journal_id] = 10.1055/s-00000034
     comment[years] = 1980-current
 
-    au < testing ; exists ; 1980 ; 1980 ; Klinische Pädiatrie Volume 192 ; 192 ; >
-    au < testing ; exists ; 1981 ; 1981 ; Klinische Pädiatrie Volume 193 ; 193 ; >
-    au < testing ; exists ; 1982 ; 1982 ; Klinische Pädiatrie Volume 194 ; 194 ; >
-    au < testing ; exists ; 1983 ; 1983 ; Klinische Pädiatrie Volume 195 ; 195 ; >
-    au < testing ; exists ; 1984 ; 1984 ; Klinische Pädiatrie Volume 196 ; 196 ; >
-    au < testing ; exists ; 1985 ; 1985 ; Klinische Pädiatrie Volume 197 ; 197 ; >
-    au < testing ; exists ; 1986 ; 1986 ; Klinische Pädiatrie Volume 198 ; 198 ; >
-    au < testing ; exists ; 1987 ; 1987 ; Klinische Pädiatrie Volume 199 ; 199 ; >
-    au < testing ; exists ; 1988 ; 1988 ; Klinische Pädiatrie Volume 200 ; 200 ; >
-    au < testing ; exists ; 1989 ; 1989 ; Klinische Pädiatrie Volume 201 ; 201 ; >
+    au < ready ; exists ; 1980 ; 1980 ; Klinische Pädiatrie Volume 192 ; 192 ; >
+    au < ready ; exists ; 1981 ; 1981 ; Klinische Pädiatrie Volume 193 ; 193 ; >
+    au < ready ; exists ; 1982 ; 1982 ; Klinische Pädiatrie Volume 194 ; 194 ; >
+    au < ready ; exists ; 1983 ; 1983 ; Klinische Pädiatrie Volume 195 ; 195 ; >
+    au < ready ; exists ; 1984 ; 1984 ; Klinische Pädiatrie Volume 196 ; 196 ; >
+    au < ready ; exists ; 1985 ; 1985 ; Klinische Pädiatrie Volume 197 ; 197 ; >
+    au < ready ; exists ; 1986 ; 1986 ; Klinische Pädiatrie Volume 198 ; 198 ; >
+    au < ready ; exists ; 1987 ; 1987 ; Klinische Pädiatrie Volume 199 ; 199 ; >
+    au < ready ; exists ; 1988 ; 1988 ; Klinische Pädiatrie Volume 200 ; 200 ; >
+    au < ready ; exists ; 1989 ; 1989 ; Klinische Pädiatrie Volume 201 ; 201 ; >
     au < frozen ; exists ; 1990 ; 1990 ; Klinische Pädiatrie Volume 202 ; 202 ; >
     au < frozen ; exists ; 1991 ; 1991 ; Klinische Pädiatrie Volume 203 ; 203 ; >
     au < frozen ; exists ; 1992 ; 1992 ; Klinische Pädiatrie Volume 204 ; 204 ; >
@@ -3835,7 +3835,7 @@
     comment[years] = 1980-current
     # this journal subsumed Laryngologie, Rhinologie, Otologie und ihre Grenzgebiete
 
-    au < testing ; exists ; 1980 ; 1980 ; Laryngo-Rhino-Otologie Volume 58 ; 58 ; >
+    au < ready ; exists ; 1980 ; 1980 ; Laryngo-Rhino-Otologie Volume 58 ; 58 ; >
     au < manifest ; exists ; 1981 ; 1981 ; Laryngo-Rhino-Otologie Volume 59 ; 59 ; >
     au < manifest ; exists ; 1982 ; 1982 ; Laryngo-Rhino-Otologie Volume 60 ; 60 ; >
     au < manifest ; exists ; 1983 ; 1983 ; Laryngo-Rhino-Otologie Volume 61 ; 61 ; >
