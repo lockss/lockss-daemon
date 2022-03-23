@@ -342,7 +342,7 @@
 
       au < released ; 2019 ; 1 ; Scholarly Assessment Reports Volume 2019 ; 2019 ; https://www.scholarlyassessmentreports.org/ >
       au < released ; 2020 ; 2 ; Scholarly Assessment Reports Volume 2020 ; 2020 ; https://www.scholarlyassessmentreports.org/ >
-      au < ready ; 2021 ; 3 ; Scholarly Assessment Reports Volume 2021 ; 2021 ; https://www.scholarlyassessmentreports.org/ >
+      au < releasing ; 2021 ; 3 ; Scholarly Assessment Reports Volume 2021 ; 2021 ; https://www.scholarlyassessmentreports.org/ >
       au < expected ; 2022 ; 4 ; Scholarly Assessment Reports Volume 2022 ; 2022 ; https://www.scholarlyassessmentreports.org/ >
 
   }
@@ -401,8 +401,8 @@
       comment[publisher] = London School of Economics and Politics
 #      param[base_url] = https://jied.lse.ac.uk/
 
-      au < ready ; 2019 ; 1 ; London School of Economics and Politics Volume 2019 ; 2019 ; https://jied.lse.ac.uk/ >
-      au < ready ; 2020 ; 2 ; London School of Economics and Politics Volume 2020 ; 2020 ; https://jied.lse.ac.uk/ >
+      au < releasing ; 2019 ; 1 ; London School of Economics and Politics Volume 2019 ; 2019 ; https://jied.lse.ac.uk/ >
+      au < releasing ; 2020 ; 2 ; London School of Economics and Politics Volume 2020 ; 2020 ; https://jied.lse.ac.uk/ >
       au < manifest ; 2021 ; 3 ; London School of Economics and Politics Volume 2021 ; 2021 ; https://jied.lse.ac.uk/ >
       au < expected ; 2022 ; 4 ; London School of Economics and Politics Volume 2022 ; 2022 ; https://jied.lse.ac.uk/ >
 
@@ -418,9 +418,9 @@
       comment[publisher] = London School of Economics and Politics
 #      param[base_url] = https://journal.ilpnetwork.org/
 
-      au < ready ; 2018 ; 2 ; Journal of Long-Term Care Volume 2018 ; 2018 ; https://journal.ilpnetwork.org/ > #problem with volume url?
-      au < ready ; 2019 ; 5 ; Journal of Long-Term Care Volume 2019 ; 2019 ; https://journal.ilpnetwork.org/ >
-      au < ready ; 2020 ; 6 ; Journal of Long-Term Care Volume 2020 ; 2020 ; https://journal.ilpnetwork.org/ >
+      au < releasing ; 2018 ; 2 ; Journal of Long-Term Care Volume 2018 ; 2018 ; https://journal.ilpnetwork.org/ > #problem with volume url?
+      au < releasing ; 2019 ; 5 ; Journal of Long-Term Care Volume 2019 ; 2019 ; https://journal.ilpnetwork.org/ >
+      au < releasing ; 2020 ; 6 ; Journal of Long-Term Care Volume 2020 ; 2020 ; https://journal.ilpnetwork.org/ >
       au < manifest ; 2021 ; 8 ; Journal of Long-Term Care Volume 2021 ; 2021 ; https://journal.ilpnetwork.org/ >
       au < manifest ; 2022 ; 9 ; Journal of Long-Term Care Volume 2022 ; 2022 ; https://journal.ilpnetwork.org/ >
 
@@ -436,7 +436,7 @@
       comment[publisher] = London School of Economics and Politics
 #      param[base_url] = https://ppr.lse.ac.uk/ 
 
-      au < ready ; 2020 ; 1 ; LSE Public Policy Review Volume 2020 ; 2020 ; https://ppr.lse.ac.uk/ >
+      au < releasing ; 2020 ; 1 ; LSE Public Policy Review Volume 2020 ; 2020 ; https://ppr.lse.ac.uk/ >
       au < manifest ; 2021 ; 2 ; LSE Public Policy Review Volume 2021 ; 2021 ; https://ppr.lse.ac.uk/ >
       au < expected ; 2022 ; 3 ; LSE Public Policy Review Volume 2022 ; 2022 ; https://ppr.lse.ac.uk/ >
 
@@ -522,7 +522,7 @@
       comment[publisher] = Stockholm University Press
 #      param[base_url] = https://njtcg.org/
 
-      au < ready ; 2020 ; 1 ; Nordic Journal of Transitions, Careers and Guidance Volume 2020 ; 2020 ; https://njtcg.org/ >
+      au < releasing ; 2020 ; 1 ; Nordic Journal of Transitions, Careers and Guidance Volume 2020 ; 2020 ; https://njtcg.org/ >
       au < manifest ; 2021 ; 2 ; Nordic Journal of Transitions, Careers and Guidance Volume 2021 ; 2021 ; https://njtcg.org/ >
       au < manifest ; 2022 ; 3 ; Nordic Journal of Transitions, Careers and Guidance Volume 2022 ; 2022 ; https://njtcg.org/ >
 
@@ -836,7 +836,7 @@
 
       au < doNotProcess ; 2019 ; 17 ; Anglo Saxonica Volume 2019 ; 2019 ; https://www.revista-anglo-saxonica.org/ >
       au < released ; 2020 ; 18 ; Anglo Saxonica Volume 2020 ; 2020 ; https://www.revista-anglo-saxonica.org/ >
-      au < ready ; 2021 ; 19 ; Anglo Saxonica Volume 2021 ; 2021 ; https://www.revista-anglo-saxonica.org/ >
+      au < releasing ; 2021 ; 19 ; Anglo Saxonica Volume 2021 ; 2021 ; https://www.revista-anglo-saxonica.org/ >
       au < manifest ; 2022 ; 20 ; Anglo Saxonica Volume 2022 ; 2022 ; https://www.revista-anglo-saxonica.org/ >
 
   }
@@ -1638,7 +1638,7 @@
       au < released ; 2018 ; 4 ; Open Quaternary Volume 2018 ; 2018 ; https://www.openquaternary.com/ >
       au < released ; 2019 ; 5 ; Open Quaternary Volume 2019 ; 2019 ; https://www.openquaternary.com/ >
       au < released ; 2020 ; 6 ; Open Quaternary Volume 2020 ; 2020 ; https://www.openquaternary.com/ >
-      au < ready ; 2021 ; 7 ; Open Quaternary Volume 2021 ; 2021 ; https://www.openquaternary.com/ >
+      au < releasing ; 2021 ; 7 ; Open Quaternary Volume 2021 ; 2021 ; https://www.openquaternary.com/ >
       au < manifest ; 2022 ; 8 ; Open Quaternary Volume 2022 ; 2022 ; https://www.openquaternary.com/ >
 
   }
@@ -2270,7 +2270,7 @@
       au < exists ; 2017 ; 4 ; Journal of Philosophy in Schools Volume 2017 ; 2017 ; https://jps.bham.ac.uk/ >
       au < exists ; 2018 ; 5 ; Journal of Philosophy in Schools Volume 2018 ; 2018 ; https://jps.bham.ac.uk/ >
       au < exists ; 2019 ; 6 ; Journal of Philosophy in Schools Volume 2019 ; 2019 ; https://jps.bham.ac.uk/ >
-      au < ready ; 2020 ; 7 ; Journal of Philosophy in Schools Volume 2020 ; 2020 ; https://jps.bham.ac.uk/ >
+      au < releasing ; 2020 ; 7 ; Journal of Philosophy in Schools Volume 2020 ; 2020 ; https://jps.bham.ac.uk/ >
       au < manifest ; 2021 ; 8 ; Journal of Philosophy in Schools Volume 2021 ; 2021 ; https://jps.bham.ac.uk/ > #no substance
       au < expected ; 2022 ; 9 ; Journal of Philosophy in Schools Volume 2022 ; 2022 ; https://jps.bham.ac.uk/ > #no substance
 

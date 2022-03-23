@@ -26,7 +26,7 @@
     au < doNotProcess ; 2017 ; 5 ; Comics Grid Volume 2017 ; 2017 >
     au < doNotProcess ; 2018 ; 6 ; Comics Grid Volume 2018 ; 2018 >
     au < doNotProcess ; 2019 ; 7 ; Comics Grid Volume 2019 ; 2019 >
-    au < ready ; 2020 ; 8 ; Comics Grid Volume 2020 ; 2020 >
+    au < releasing ; 2020 ; 8 ; Comics Grid Volume 2020 ; 2020 >
     au < manifest ; 2021 ; 9 ; Comics Grid Volume 2021 ; 2021 >
     au < manifest ; 2022 ; 10 ; Comics Grid Volume 2022 ; 2022 >
 
@@ -50,7 +50,7 @@
       au < released ; 2017 ; 6 ; Orbit: A Journal of American Literature Volume 2017 ; 2017 >
       au < released ; 2018 ; 7 ; Orbit: A Journal of American Literature Volume 2018 ; 2018 >
       au < released ; 2019 ; 8 ; Orbit: A Journal of American Literature Volume 2019 ; 2019 >
-      au < ready ; 2020 ; 9 ; Orbit: A Journal of American Literature Volume 2020 ; 2020 >
+      au < releasing ; 2020 ; 9 ; Orbit: A Journal of American Literature Volume 2020 ; 2020 >
       au < manifest ; 2021 ; 10 ; Orbit: A Journal of American Literature Volume 2021 ; 2021 >
       au < manifest ; 2022 ; 11 ; Orbit: A Journal of American Literature Volume 2022 ; 2022 >
 
@@ -105,7 +105,7 @@
 
        au < released ; 2018 ; 6 ; C21 Literature: journal of 21st-century writings Volume 2018 ; 2018 >
        au < released ; 2019 ; 7 ; C21 Literature: journal of 21st-century writings Volume 2019 ; 2019 >
-       au < ready ; 2020 ; 8 ; C21 Literature: journal of 21st-century writings Volume 2020 ; 2020 >
+       au < releasing ; 2020 ; 8 ; C21 Literature: journal of 21st-century writings Volume 2020 ; 2020 >
        au < manifest ; 2021 ; 9 ; C21 Literature: journal of 21st-century writings Volume 2021 ; 2021 >
        au < manifest ; 2022 ; 10 ; C21 Literature: journal of 21st-century writings Volume 2022 ; 2022 >
 
@@ -124,7 +124,7 @@
       au < doNotProcess ; 2017 ; 13 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2017 ; 2017 >
       au < doNotProcess ; 2018 ; 14 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2018 ; 2018 >
       au < released ; 2019 ; 15 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2019 ; 2019 >
-      au < ready ; 2020 ; 16 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2020 ; 2020 >
+      au < releasing ; 2020 ; 16 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2020 ; 2020 >
       au < manifest ; 2021 ; 17 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2021 ; 2021 >
       au < manifest ; 2022 ; 18 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2022 ; 2022 >
 
@@ -175,7 +175,7 @@
       au < released ; 2017 ; 3 ; Journal of British and Irish Innovative Poetry Volume 2017 ; 2017 >
       au < released ; 2018 ; 4 ; Journal of British and Irish Innovative Poetry Volume 2018 ; 2018 >
       au < released ; 2019 ; 5 ; Journal of British and Irish Innovative Poetry Volume 2019 ; 2019 >
-      au < ready ; 2020 ; 6 ; Journal of British and Irish Innovative Poetry Volume 2020 ; 2020 >
+      au < releasing ; 2020 ; 6 ; Journal of British and Irish Innovative Poetry Volume 2020 ; 2020 >
       au < manifest ; 2021 ; 7 ; Journal of British and Irish Innovative Poetry Volume 2021 ; 2021 >
       au < manifest ; 2022 ; 8 ; Journal of British and Irish Innovative Poetry Volume 2022 ; 2022 >
   }
@@ -215,7 +215,7 @@
         au < notReady ; 2017 ; 4 ; International Journal of Welsh Writing in English Volume 2017 ; 2017 > #500 error https://ijwwe.uwp.co.uk/article/id/4/print/
         au < released ; 2018 ; 5 ; International Journal of Welsh Writing in English Volume 2018 ; 2018 >
         au < released ; 2019 ; 6 ; International Journal of Welsh Writing in English Volume 2019 ; 2019 >
-        au < ready ; 2020 ; 7 ; International Journal of Welsh Writing in English Volume 2020 ; 2020 >
+        au < releasing ; 2020 ; 7 ; International Journal of Welsh Writing in English Volume 2020 ; 2020 >
         au < manifest ; 2021 ; 8 ; International Journal of Welsh Writing in English Volume 2021 ; 2021 >
         au < manifest ; 2022 ; 9 ; International Journal of Welsh Writing in English Volume 2022 ; 2022 >
 
@@ -234,7 +234,7 @@
       au < doNotProcess ; 2017 ; 2 ; Marvell Studies Volume 2017 ; 2017 >
       au < doNotProcess ; 2018 ; 3 ; Marvell Studies Volume 2018 ; 2018 >
       au < doNotProcess ; 2019 ; 4 ; Marvell Studies Volume 2019 ; 2019 >
-      au < ready ; 2020 ; 5 ; Marvell Studies Volume 2020 ; 2020 >
+      au < releasing ; 2020 ; 5 ; Marvell Studies Volume 2020 ; 2020 >
       au < manifest ; 2021 ; 6 ; Marvell Studies Volume 2021 ; 2021 >
       au < manifest ; 2022 ; 7 ; Marvell Studies Volume 2022 ; 2022 >
 
@@ -255,7 +255,7 @@
       au < doNotProcess ; 2017 ; 3 ; Open Library of Humanities Volume 2017 ; 2017 >
       au < doNotProcess ; 2018 ; 4 ; Open Library of Humanities Volume 2018 ; 2018 >
       au < doNotProcess ; 2019 ; 5 ; Open Library of Humanities Volume 2019 ; 2019 >
-      au < ready ; 2020 ; 6 ; Open Library of Humanities Volume 2020 ; 2020 >
+      au < releasing ; 2020 ; 6 ; Open Library of Humanities Volume 2020 ; 2020 >
       au < manifest ; 2021 ; 7 ; Open Library of Humanities Volume 2021 ; 2021 >
       au < manifest ; 2022 ; 8 ; Open Library of Humanities Volume 2022 ; 2022 >
 
@@ -328,7 +328,7 @@
       au < released ; 2017 ; 27 ; Theoretical Roman Archaeology Journal Volume 2017 ; 2017 >
       au < doNotProcess ; 2018 ; 28 ; Theoretical Roman Archaeology Journal Volume 2018 ; 2018 >
       au < doNotProcess ; 2019 ; 29 ; Theoretical Roman Archaeology Journal Volume 2019 ; 2019 >
-      au < ready ; 2020 ; 30 ; Theoretical Roman Archaeology Journal Volume 2020 ; 2020 >
+      au < releasing ; 2020 ; 30 ; Theoretical Roman Archaeology Journal Volume 2020 ; 2020 >
       au < manifest ; 2021 ; 31 ; Theoretical Roman Archaeology Journal Volume 2021 ; 2021 >
       au < manifest ; 2022 ; 32 ; Theoretical Roman Archaeology Journal Volume 2022 ; 2022 >
 
@@ -345,7 +345,7 @@
       param[base_url] = https://zff.openlibhums.org/
 
       au < released ; 2019 ; 7 ; ZFF: Zeitschrift für Fantastikforschung Volume 2019 ; 2019 >
-      au < ready ; 2020 ; 8 ; ZFF: Zeitschrift für Fantastikforschung Volume 2020 ; 2020 >
+      au < releasing ; 2020 ; 8 ; ZFF: Zeitschrift für Fantastikforschung Volume 2020 ; 2020 >
       au < manifest ; 2021 ; 9 ; ZFF: Zeitschrift für Fantastikforschung Volume 2021 ; 2021 >
       au < manifest ; 2022 ; 10 ; ZFF: Zeitschrift für Fantastikforschung Volume 2022 ; 2022 >
 
@@ -367,7 +367,7 @@
       au < released ; 2015 ; 3 ; The Parish Review Volume 2015 ; 2015 >
       au < released ; 2016 ; 3 ; The Parish Review Volume 2016 ; 2016 >
       au < released ; 2018 ; 4 ; The Parish Review Volume 2018 ; 2018 >
-      au < ready ; 2020 ; 4 ; The Parish Review Volume 2020 ; 2020 >
+      au < releasing ; 2020 ; 4 ; The Parish Review Volume 2020 ; 2020 >
       au < manifest ; 2021 ; 5 ; The Parish Review Volume 2021 ; 2021 >
       au < manifest ; 2022 ; 6 ; The Parish Review Volume 2022 ; 2022 >
 

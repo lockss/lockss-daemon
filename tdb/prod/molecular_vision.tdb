@@ -23,8 +23,8 @@
 
     implicit < status ; year ; name ; param[volume] >
 
-    au < ready ; 2013 ; Molecular Vision Volume 19 ; 19 >
-    au < ready ; 2014 ; Molecular Vision Volume 20 ; 20 >
+    au < releasing ; 2013 ; Molecular Vision Volume 19 ; 19 >
+    au < releasing ; 2014 ; Molecular Vision Volume 20 ; 20 >
     au < exists ; 2015 ; Molecular Vision Volume 21 ; 21 >
     au < exists ; 2016 ; Molecular Vision Volume 22 ; 22 >
     au < exists ; 2017 ; Molecular Vision Volume 23 ; 23 >

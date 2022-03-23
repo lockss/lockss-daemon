@@ -59,7 +59,7 @@
     au < released ; 2018 ; Afghanistan Volume 1 ; 1 ; https://www.euppublishing.com/ >
     au < released ; 2019 ; Afghanistan Volume 2 ; 2 ; https://www.euppublishing.com/ >
     au < released ; 2020 ; Afghanistan Volume 3 ; 3 ; https://www.euppublishing.com/ >
-    au < ready ; 2021 ; Afghanistan Volume 4 ; 4 ; https://www.euppublishing.com/ >
+    au < releasing ; 2021 ; Afghanistan Volume 4 ; 4 ; https://www.euppublishing.com/ >
     au < expected ; 2022 ; Afghanistan Volume 5 ; 5 ; https://www.euppublishing.com/ >
 
   }
@@ -114,7 +114,7 @@
     implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
     param[journal_id] = burns
 
-    au < ready ; 2021 ; Burns Chronicle Volume 130 ; 130 ; https://www.euppublishing.com/ >
+    au < releasing ; 2021 ; Burns Chronicle Volume 130 ; 130 ; https://www.euppublishing.com/ >
     au < manifest ; 2022 ; Burns Chronicle Volume 131 ; 131 ; https://www.euppublishing.com/ >
   }
 
@@ -335,7 +335,7 @@
       au < released ; 2018 ; Archives of Natural History Volume 45 ; 45 ; https://www.euppublishing.com/ >
       au < released ; 2019 ; Archives of Natural History Volume 46 ; 46 ; https://www.euppublishing.com/ >
       au < released ; 2020 ; Archives of Natural History Volume 47 ; 47 ; https://www.euppublishing.com/ >
-      au < ready ; 2021 ; Archives of Natural History Volume 48 ; 48 ; https://www.euppublishing.com/ >
+      au < releasing ; 2021 ; Archives of Natural History Volume 48 ; 48 ; https://www.euppublishing.com/ >
       au < expected ; 2022 ; Archives of Natural History Volume 49 ; 49 ; https://www.euppublishing.com/ >
 
     }
@@ -415,7 +415,7 @@
       au < released ; 2018 ; Britain and the World Volume 11 ; 11 ; https://www.euppublishing.com/ >
       au < released ; 2019 ; Britain and the World Volume 12 ; 12 ; https://www.euppublishing.com/ >
       au < released ; 2020 ; Britain and the World Volume 13 ; 13 ; https://www.euppublishing.com/ >
-      au < ready ; 2021 ; Britain and the World Volume 14 ; 14 ; https://www.euppublishing.com/ >
+      au < releasing ; 2021 ; Britain and the World Volume 14 ; 14 ; https://www.euppublishing.com/ >
       au < manifest ; 2022 ; Britain and the World Volume 15 ; 15 ; https://www.euppublishing.com/ >
 
     }
@@ -465,7 +465,7 @@
       au < released ; 2018 ; Comparative Critical Studies Volume 15 ; 15 ; https://www.euppublishing.com/ >
       au < released ; 2019 ; Comparative Critical Studies Volume 16 ; 16 ; https://www.euppublishing.com/ >
       au < released ; 2020 ; Comparative Critical Studies Volume 17 ; 17 ; https://www.euppublishing.com/ >
-      au < ready ; 2021 ; Comparative Critical Studies Volume 18 ; 18 ; https://www.euppublishing.com/ >
+      au < releasing ; 2021 ; Comparative Critical Studies Volume 18 ; 18 ; https://www.euppublishing.com/ >
       au < expected ; 2022 ; Comparative Critical Studies Volume 19 ; 19 ; https://www.euppublishing.com/ >
 
     }
@@ -524,7 +524,7 @@
       au < released ; 2018 ; Corpora Volume 13 ; 13 ; https://www.euppublishing.com/ >
       au < released ; 2019 ; Corpora Volume 14 ; 14 ; https://www.euppublishing.com/ >
       au < released ; 2020 ; Corpora Volume 15 ; 15 ; https://www.euppublishing.com/ >
-      au < ready ; 2021 ; Corpora Volume 16 ; 16 ; https://www.euppublishing.com/ >
+      au < releasing ; 2021 ; Corpora Volume 16 ; 16 ; https://www.euppublishing.com/ >
       au < expected ; 2022 ; Corpora Volume 17 ; 17 ; https://www.euppublishing.com/ >
 
     }
@@ -545,7 +545,7 @@
     param[journal_id] = cfs
 
     au < released ; 2020 ; Crime Fiction Studies Volume 1 ; 1 ; https://www.euppublishing.com/ >
-    au < ready ; 2021 ; Crime Fiction Studies Volume 2 ; 2 ; https://www.euppublishing.com/ >
+    au < releasing ; 2021 ; Crime Fiction Studies Volume 2 ; 2 ; https://www.euppublishing.com/ >
     au < manifest ; 2022 ; Crime Fiction Studies Volume 3 ; 3 ; https://www.euppublishing.com/ >
 
   }
@@ -645,7 +645,7 @@
     
     au < released ; 2019 ; Cultural History Volume 8 ; 8 ; https://www.euppublishing.com/ >
     au < released ; 2020 ; Cultural History Volume 9 ; 9 ; https://www.euppublishing.com/ >
-    au < ready ; 2021 ; Cultural History Volume 10 ; 10 ; https://www.euppublishing.com/ >
+    au < releasing ; 2021 ; Cultural History Volume 10 ; 10 ; https://www.euppublishing.com/ >
     au < expected ; 2022 ; Cultural History Volume 11 ; 11 ; https://www.euppublishing.com/ >
 
   }  
@@ -773,7 +773,7 @@
       au < released ; 2018 ; Derrida Today Volume 11 ; 11 ; https://www.euppublishing.com/ >
       au < released ; 2019 ; Derrida Today Volume 12 ; 12 ; https://www.euppublishing.com/ >
       au < released ; 2020 ; Derrida Today Volume 13 ; 13 ; https://www.euppublishing.com/ >
-      au < ready ; 2021 ; Derrida Today Volume 14 ; 14 ; https://www.euppublishing.com/ >
+      au < releasing ; 2021 ; Derrida Today Volume 14 ; 14 ; https://www.euppublishing.com/ >
       au < expected ; 2022 ; Derrida Today Volume 15 ; 15 ; https://www.euppublishing.com/ >
 
     }
@@ -817,7 +817,7 @@
       au < released ; 2018 ; Edinburgh Law Review Volume 22 ; 22 ; https://www.euppublishing.com/ >
       au < released ; 2019 ; Edinburgh Law Review Volume 23 ; 23 ; https://www.euppublishing.com/ >
       au < released ; 2020 ; Edinburgh Law Review Volume 24 ; 24 ; https://www.euppublishing.com/ >
-      au < ready ; 2021 ; Edinburgh Law Review Volume 25 ; 25 ; https://www.euppublishing.com/ >
+      au < releasing ; 2021 ; Edinburgh Law Review Volume 25 ; 25 ; https://www.euppublishing.com/ >
       au < manifest ; 2022 ; Edinburgh Law Review Volume 26 ; 26 ; https://www.euppublishing.com/ >
 
     }
@@ -914,7 +914,7 @@
      au < released ; 2018 ; Film-Philosophy Volume 22 ; 22 ; https://www.euppublishing.com/ >
      au < released ; 2019 ; Film-Philosophy Volume 23 ; 23 ; https://www.euppublishing.com/ >
      au < released ; 2020 ; Film-Philosophy Volume 24 ; 24 ; https://www.euppublishing.com/ >
-     au < ready ; 2021 ; Film-Philosophy Volume 25 ; 25 ; https://www.euppublishing.com/ >
+     au < releasing ; 2021 ; Film-Philosophy Volume 25 ; 25 ; https://www.euppublishing.com/ >
      au < manifest ; 2022 ; Film-Philosophy Volume 26 ; 26 ; https://www.euppublishing.com/ >
 
   }
@@ -1034,7 +1034,7 @@
       au < released ; 2018 ; Journal of Holy Land and Palestine Studies Volume 17 ; 17 ; https://www.euppublishing.com/ >
       au < released ; 2019 ; Journal of Holy Land and Palestine Studies Volume 18 ; 18 ; https://www.euppublishing.com/ >
       au < released ; 2020 ; Journal of Holy Land and Palestine Studies Volume 19 ; 19 ; https://www.euppublishing.com/ >
-      au < ready ; 2021 ; Journal of Holy Land and Palestine Studies Volume 20 ; 20 ; https://www.euppublishing.com/ >
+      au < releasing ; 2021 ; Journal of Holy Land and Palestine Studies Volume 20 ; 20 ; https://www.euppublishing.com/ >
       au < expected ; 2022 ; Journal of Holy Land and Palestine Studies Volume 21 ; 21 ; https://www.euppublishing.com/ >
 
   }
@@ -1429,7 +1429,7 @@
       au < released ; 2018 ; Journal of Qur'anic Studies Volume 20 ; 20 ; https://www.euppublishing.com/ >
       au < released ; 2019 ; Journal of Qur'anic Studies Volume 21 ; 21 ; https://www.euppublishing.com/ >
       au < released ; 2020 ; Journal of Qur'anic Studies Volume 22 ; 22 ; https://www.euppublishing.com/ >
-      au < ready ; 2021 ; Journal of Qur'anic Studies Volume 23 ; 23 ; https://www.euppublishing.com/ >
+      au < releasing ; 2021 ; Journal of Qur'anic Studies Volume 23 ; 23 ; https://www.euppublishing.com/ >
       au < manifest ; 2022 ; Journal of Qur'anic Studies Volume 24 ; 24 ; https://www.euppublishing.com/ >
 
     }
@@ -1553,7 +1553,7 @@
       au < released ; 2018 ; Journal of Scottish Philosophy Volume 16 ; 16 ; https://www.euppublishing.com/ >
       au < released ; 2019 ; Journal of Scottish Philosophy Volume 17 ; 17 ; https://www.euppublishing.com/ >
       au < released ; 2020 ; Journal of Scottish Philosophy Volume 18 ; 18 ; https://www.euppublishing.com/ >
-      au < ready ; 2021 ; Journal of Scottish Philosophy Volume 19 ; 19 ; https://www.euppublishing.com/ >
+      au < releasing ; 2021 ; Journal of Scottish Philosophy Volume 19 ; 19 ; https://www.euppublishing.com/ >
       au < manifest ; 2022 ; Journal of Scottish Philosophy Volume 20 ; 20 ; https://www.euppublishing.com/ >
 
     }
@@ -1950,7 +1950,7 @@
       au < released ; 2018 ; Paragraph Volume 41 ; 41 ; https://www.euppublishing.com/ >
       au < released ; 2019 ; Paragraph Volume 42 ; 42 ; https://www.euppublishing.com/ >
       au < released ; 2020 ; Paragraph Volume 43 ; 43 ; https://www.euppublishing.com/ >
-      au < ready ; 2021 ; Paragraph Volume 44 ; 44 ; https://www.euppublishing.com/ >
+      au < releasing ; 2021 ; Paragraph Volume 44 ; 44 ; https://www.euppublishing.com/ >
       au < manifest ; 2022 ; Paragraph Volume 45 ; 45 ; https://www.euppublishing.com/ >
 
     }
@@ -2045,7 +2045,7 @@
       au < released ; 2018 ; Psychoanalysis and History Volume 20 ; 20 ; https://www.euppublishing.com/ >
       au < released ; 2019 ; Psychoanalysis and History Volume 21 ; 21 ; https://www.euppublishing.com/ >
       au < released ; 2020 ; Psychoanalysis and History Volume 22 ; 22 ; https://www.euppublishing.com/ >
-      au < ready ; 2021 ; Psychoanalysis and History Volume 23 ; 23 ; https://www.euppublishing.com/ >
+      au < releasing ; 2021 ; Psychoanalysis and History Volume 23 ; 23 ; https://www.euppublishing.com/ >
       au < expected ; 2022 ; Psychoanalysis and History Volume 24 ; 24 ; https://www.euppublishing.com/ >
 
     }
@@ -2089,7 +2089,7 @@
       au < released ; 2018 ; Romanticism Volume 24 ; 24 ; https://www.euppublishing.com/ >
       au < released ; 2019 ; Romanticism Volume 25 ; 25 ; https://www.euppublishing.com/ >
       au < released ; 2020 ; Romanticism Volume 26 ; 26 ; https://www.euppublishing.com/ >
-      au < ready ; 2021 ; Romanticism Volume 27 ; 27 ; https://www.euppublishing.com/ >
+      au < releasing ; 2021 ; Romanticism Volume 27 ; 27 ; https://www.euppublishing.com/ >
       au < expected ; 2022 ; Romanticism Volume 28 ; 28 ; https://www.euppublishing.com/ >
 
     }
@@ -2355,7 +2355,7 @@
       au < released ; 2018 ; Scottish Historical Review Volume 97 ; 97 ; https://www.euppublishing.com/ >
       au < released ; 2019 ; Scottish Historical Review Volume 98 ; 98 ; https://www.euppublishing.com/ >
       au < released ; 2020 ; Scottish Historical Review Volume 99 ; 99 ; https://www.euppublishing.com/ >
-      au < ready ; 2021 ; Scottish Historical Review Volume 100 ; 100 ; https://www.euppublishing.com/ >
+      au < releasing ; 2021 ; Scottish Historical Review Volume 100 ; 100 ; https://www.euppublishing.com/ >
       au < expected ; 2022 ; Scottish Historical Review Volume 101 ; 101 ; https://www.euppublishing.com/ >
 
     }

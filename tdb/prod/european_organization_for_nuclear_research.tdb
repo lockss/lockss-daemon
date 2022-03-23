@@ -44,19 +44,19 @@
       param[base_url] = https://webzine.web.cern.ch/
       implicit < status ; year ; name ; param[issue_no] >
     
-      au < ready ; 2000 ; High Energy Physics Libraries Webzine Issue 1 ; 1 >
-      au < ready ; 2000 ; High Energy Physics Libraries Webzine Issue 2 ; 2 >
-      au < ready ; 2001 ; High Energy Physics Libraries Webzine Issue 3 ; 3 >
-      au < ready ; 2001 ; High Energy Physics Libraries Webzine Issue 4 ; 4 >
-      au < ready ; 2001 ; High Energy Physics Libraries Webzine Issue 5 ; 5 >
-      au < ready ; 2002 ; High Energy Physics Libraries Webzine Issue 6 ; 6 >
-      au < ready ; 2003 ; High Energy Physics Libraries Webzine Issue 7 ; 7 >
-      au < ready ; 2003 ; High Energy Physics Libraries Webzine Issue 8 ; 8 >
-      au < ready ; 2004 ; High Energy Physics Libraries Webzine Issue 9 ; 9 >
-      au < ready ; 2004 ; High Energy Physics Libraries Webzine Issue 10 ; 10 >
-      au < ready ; 2005 ; High Energy Physics Libraries Webzine Issue 11 ; 11 >
-      au < ready ; 2006 ; High Energy Physics Libraries Webzine Issue 12 ; 12 >
-      au < ready ; 2006 ; High Energy Physics Libraries Webzine Issue 13 ; 13 >
+      au < releasing ; 2000 ; High Energy Physics Libraries Webzine Issue 1 ; 1 >
+      au < releasing ; 2000 ; High Energy Physics Libraries Webzine Issue 2 ; 2 >
+      au < releasing ; 2001 ; High Energy Physics Libraries Webzine Issue 3 ; 3 >
+      au < releasing ; 2001 ; High Energy Physics Libraries Webzine Issue 4 ; 4 >
+      au < releasing ; 2001 ; High Energy Physics Libraries Webzine Issue 5 ; 5 >
+      au < releasing ; 2002 ; High Energy Physics Libraries Webzine Issue 6 ; 6 >
+      au < releasing ; 2003 ; High Energy Physics Libraries Webzine Issue 7 ; 7 >
+      au < releasing ; 2003 ; High Energy Physics Libraries Webzine Issue 8 ; 8 >
+      au < releasing ; 2004 ; High Energy Physics Libraries Webzine Issue 9 ; 9 >
+      au < releasing ; 2004 ; High Energy Physics Libraries Webzine Issue 10 ; 10 >
+      au < releasing ; 2005 ; High Energy Physics Libraries Webzine Issue 11 ; 11 >
+      au < releasing ; 2006 ; High Energy Physics Libraries Webzine Issue 12 ; 12 >
+      au < releasing ; 2006 ; High Energy Physics Libraries Webzine Issue 13 ; 13 >
 
     }
   
