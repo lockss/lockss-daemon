@@ -2251,7 +2251,7 @@
     au < crawling ; exists ; 2000 ; Education + Training Volume 42 ; 42 ; >
     au < manifest ; exists ; 2001 ; Education + Training Volume 43 ; 43 ; >
     au < manifest ; exists ; 2002 ; Education + Training Volume 44 ; 44 ; >
-    au < ready ; exists ; 2003 ; Education + Training Volume 45 ; 45 ; >
+    au < crawling ; exists ; 2003 ; Education + Training Volume 45 ; 45 ; >
     au < manifest ; exists ; 2004 ; Education + Training Volume 46 ; 46 ; >
     au < doNotProcess ; doNotProcess ; 2005 ; Education + Training Volume 47 ; 47 ; >
     au < crawling ; exists ; 2006 ; Education + Training Volume 48 ; 48 ; >
@@ -2603,7 +2603,7 @@
     au < crawling ; exists ; 2000 ; Equal Opportunities International Volume 19 ; 19 ; >
     au < manifest ; exists ; 2001 ; Equal Opportunities International Volume 20 ; 20 ; >
     au < manifest ; exists ; 2002 ; Equal Opportunities International Volume 21 ; 21 ; >
-    au < ready ; exists ; 2003 ; Equal Opportunities International Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2003 ; Equal Opportunities International Volume 22 ; 22 ; >
     au < manifest ; exists ; 2004 ; Equal Opportunities International Volume 23 ; 23 ; >
     au < crawling ; exists ; 2005 ; Equal Opportunities International Volume 24 ; 24 ; >
     au < crawling ; exists ; 2006 ; Equal Opportunities International Volume 25 ; 25 ; >
@@ -2905,7 +2905,7 @@
     au < crawling ; exists ; 2000 ; Facilities Volume 18 ; 18 ; >
     au < crawling ; exists ; 2001 ; Facilities Volume 19 ; 19 ; >
     au < manifest ; exists ; 2002 ; Facilities Volume 20 ; 20 ; >
-    au < ready ; exists ; 2003 ; Facilities Volume 21 ; 21 ; >
+    au < crawling ; exists ; 2003 ; Facilities Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2004 ; Facilities Volume 22 ; 22 ; >
     au < crawling ; exists ; 2005 ; Facilities Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2006 ; Facilities Volume 24 ; 24 ; >
@@ -3035,7 +3035,7 @@
     au < crawling ; exists ; 2000 ; Handbook of Business Strategy Volume 1 ; 1 ; >
     au < doesNotExist ; doesNotExist ; 2001 ; Handbook of Business Strategy Volume 2 ; 2 ; >
     au < doesNotExist ; doesNotExist ; 2002 ; Handbook of Business Strategy Volume 3 ; 3 ; >
-    au < ready ; exists ; 2003 ; Handbook of Business Strategy Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2003 ; Handbook of Business Strategy Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2004 ; Handbook of Business Strategy Volume 5 ; 5 ; >
     au < crawling ; exists ; 2005 ; Handbook of Business Strategy Volume 6 ; 6 ; >
     au < crawling ; exists ; 2006 ; Handbook of Business Strategy Volume 7 ; 7 ; >
@@ -3802,7 +3802,7 @@
     au < finished ; crawling ; 2000 ; Integrated Manufacturing Systems Volume 11 ; 11 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2001 ; Integrated Manufacturing Systems Volume 12 ; 12 ; >
     au < crawling ; exists ; 2002 ; Integrated Manufacturing Systems Volume 13 ; 13 ; >
-    au < ready ; exists ; 2003 ; Integrated Manufacturing Systems Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2003 ; Integrated Manufacturing Systems Volume 14 ; 14 ; >
 
   }
 
@@ -4399,7 +4399,7 @@
     au < frozen ; exists ; 2000 ; International Journal of Educational Management Volume 14 ; 14 ; >
     au < crawling ; exists ; 2001 ; International Journal of Educational Management Volume 15 ; 15 ; >
     au < crawling ; exists ; 2002 ; International Journal of Educational Management Volume 16 ; 16 ; >
-    au < ready ; exists ; 2003 ; International Journal of Educational Management Volume 17 ; 17 ; >
+    au < crawling ; exists ; 2003 ; International Journal of Educational Management Volume 17 ; 17 ; >
     au < manifest ; exists ; 2004 ; International Journal of Educational Management Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2005 ; International Journal of Educational Management Volume 19 ; 19 ; >
     au < crawling ; exists ; 2006 ; International Journal of Educational Management Volume 20 ; 20 ; >
@@ -4906,7 +4906,7 @@
     au < frozen ; exists ; 2000 ; The International Journal of Logistics Management Volume 11 ; 11 ; >
     au < crawling ; exists ; 2001 ; The International Journal of Logistics Management Volume 12 ; 12 ; >
     au < crawling ; exists ; 2002 ; The International Journal of Logistics Management Volume 13 ; 13 ; >
-    au < ready ; exists ; 2003 ; The International Journal of Logistics Management Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2003 ; The International Journal of Logistics Management Volume 14 ; 14 ; >
     au < manifest ; exists ; 2004 ; The International Journal of Logistics Management Volume 15 ; 15 ; >
     au < crawling ; exists ; 2005 ; The International Journal of Logistics Management Volume 16 ; 16 ; >
     au < crawling ; exists ; 2006 ; The International Journal of Logistics Management Volume 17 ; 17 ; >
@@ -5024,7 +5024,7 @@
     au < crawling ; exists ; 2000 ; International Journal of Manpower Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2001 ; International Journal of Manpower Volume 22 ; 22 ; >
     au < manifest ; exists ; 2002 ; International Journal of Manpower Volume 23 ; 23 ; >
-    au < ready ; exists ; 2003 ; International Journal of Manpower Volume 24 ; 24 ; >
+    au < crawling ; exists ; 2003 ; International Journal of Manpower Volume 24 ; 24 ; >
     au < manifest ; exists ; 2004 ; International Journal of Manpower Volume 25 ; 25 ; >
     au < crawling ; exists ; 2005 ; International Journal of Manpower Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2006 ; International Journal of Manpower Volume 27 ; 27 ; >
@@ -5181,7 +5181,7 @@
     au < crawling ; exists ; 2000 ; International Journal of Operations & Production Management Volume 20 ; 20 ; >
     au < manifest ; exists ; 2001 ; International Journal of Operations & Production Management Volume 21 ; 21 ; >
     au < manifest ; exists ; 2002 ; International Journal of Operations & Production Management Volume 22 ; 22 ; >
-    au < ready ; exists ; 2003 ; International Journal of Operations & Production Management Volume 23 ; 23 ; >
+    au < crawling ; exists ; 2003 ; International Journal of Operations & Production Management Volume 23 ; 23 ; >
     au < manifest ; exists ; 2004 ; International Journal of Operations & Production Management Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2005 ; International Journal of Operations & Production Management Volume 25 ; 25 ; >
     au < crawling ; exists ; 2006 ; International Journal of Operations & Production Management Volume 26 ; 26 ; >
@@ -5754,7 +5754,7 @@
     au < frozen ; exists ; 2000 ; International Journal of Social Economics Volume 27 ; 27 ; >
     au < crawling ; exists ; 2001 ; International Journal of Social Economics Volume 28 ; 28 ; >
     au < crawling ; exists ; 2002 ; International Journal of Social Economics Volume 29 ; 29 ; >
-    au < ready ; exists ; 2003 ; International Journal of Social Economics Volume 30 ; 30 ; >
+    au < crawling ; exists ; 2003 ; International Journal of Social Economics Volume 30 ; 30 ; >
     au < manifest ; exists ; 2004 ; International Journal of Social Economics Volume 31 ; 31 ; >
     au < crawling ; exists ; 2005 ; International Journal of Social Economics Volume 32 ; 32 ; >
     au < crawling ; exists ; 2006 ; International Journal of Social Economics Volume 33 ; 33 ; >
@@ -6112,7 +6112,7 @@
     au < crawling ; exists ; 2000 ; Internet Research Volume 10 ; 10 ; >
     au < crawling ; exists ; 2001 ; Internet Research Volume 11 ; 11 ; >
     au < crawling ; exists ; 2002 ; Internet Research Volume 12 ; 12 ; >
-    au < ready ; exists ; 2003 ; Internet Research Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2003 ; Internet Research Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2004 ; Internet Research Volume 14 ; 14 ; >
     au < crawling ; exists ; 2005 ; Internet Research Volume 15 ; 15 ; >
     au < crawling ; exists ; 2006 ; Internet Research Volume 16 ; 16 ; >
@@ -7420,7 +7420,7 @@
     au < crawling ; exists ; 2000 ; Journal of Financial Crime Volume 7 ; 7 ; >
     au < crawling ; exists ; 2001 ; Journal of Financial Crime Volume 8 ; 8 ; >
     au < crawling ; exists ; 2002 ; Journal of Financial Crime Volume 9 ; 9 ; >
-    au < ready ; exists ; 2003 ; Journal of Financial Crime Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2003 ; Journal of Financial Crime Volume 10 ; 10 ; >
     au < manifest ; exists ; 2004 ; Journal of Financial Crime Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2005 ; Journal of Financial Crime Volume 12 ; 12 ; >
     au < crawling ; exists ; 2006 ; Journal of Financial Crime Volume 13 ; 13 ; >
@@ -7525,7 +7525,7 @@
     au < crawling ; exists ; 2000 ; Journal of Financial Regulation and Compliance Volume 8 ; 8 ; >
     au < crawling ; exists ; 2001 ; Journal of Financial Regulation and Compliance Volume 9 ; 9 ; >
     au < crawling ; exists ; 2002 ; Journal of Financial Regulation and Compliance Volume 10 ; 10 ; >
-    au < ready ; exists ; 2003 ; Journal of Financial Regulation and Compliance Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2003 ; Journal of Financial Regulation and Compliance Volume 11 ; 11 ; >
     au < manifest ; exists ; 2004 ; Journal of Financial Regulation and Compliance Volume 12 ; 12 ; >
     au < crawling ; exists ; 2005 ; Journal of Financial Regulation and Compliance Volume 13 ; 13 ; >
     au < crawling ; exists ; 2006 ; Journal of Financial Regulation and Compliance Volume 14 ; 14 ; >
@@ -8290,7 +8290,7 @@
     au < crawling ; exists ; 2000 ; Journal of Managerial Psychology Volume 15 ; 15 ; >
     au < crawling ; exists ; 2001 ; Journal of Managerial Psychology Volume 16 ; 16 ; >
     au < crawling ; exists ; 2002 ; Journal of Managerial Psychology Volume 17 ; 17 ; >
-    au < ready ; exists ; 2003 ; Journal of Managerial Psychology Volume 18 ; 18 ; >
+    au < crawling ; exists ; 2003 ; Journal of Managerial Psychology Volume 18 ; 18 ; >
     au < manifest ; exists ; 2004 ; Journal of Managerial Psychology Volume 19 ; 19 ; >
     au < crawling ; exists ; 2005 ; Journal of Managerial Psychology Volume 20 ; 20 ; >
     au < crawling ; exists ; 2006 ; Journal of Managerial Psychology Volume 21 ; 21 ; >
@@ -8972,7 +8972,7 @@
     au < frozen ; exists ; 2000 ; Journal of Services Marketing Volume 14 ; 14 ; >
     au < crawling ; exists ; 2001 ; Journal of Services Marketing Volume 15 ; 15 ; >
     au < crawling ; exists ; 2002 ; Journal of Services Marketing Volume 16 ; 16 ; >
-    au < ready ; exists ; 2003 ; Journal of Services Marketing Volume 17 ; 17 ; >
+    au < crawling ; exists ; 2003 ; Journal of Services Marketing Volume 17 ; 17 ; >
     au < manifest ; exists ; 2004 ; Journal of Services Marketing Volume 18 ; 18 ; >
     au < crawling ; exists ; 2005 ; Journal of Services Marketing Volume 19 ; 19 ; >
     au < crawling ; exists ; 2006 ; Journal of Services Marketing Volume 20 ; 20 ; >
@@ -9414,7 +9414,7 @@
     au < crawling ; exists ; 2000 ; The Learning Organization Volume 7 ; 7 ; >
     au < crawling ; exists ; 2001 ; The Learning Organization Volume 8 ; 8 ; >
     au < crawling ; exists ; 2002 ; The Learning Organization Volume 9 ; 9 ; >
-    au < ready ; exists ; 2003 ; The Learning Organization Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2003 ; The Learning Organization Volume 10 ; 10 ; >
     au < manifest ; exists ; 2004 ; The Learning Organization Volume 11 ; 11 ; >
     au < crawling ; exists ; 2005 ; The Learning Organization Volume 12 ; 12 ; >
     au < crawling ; exists ; 2006 ; The Learning Organization Volume 13 ; 13 ; >
@@ -9505,7 +9505,7 @@
     au < frozen ; exists ; 2000 ; Library Hi Tech Volume 18 ; 18 ; >
     au < crawling ; exists ; 2001 ; Library Hi Tech Volume 19 ; 19 ; >
     au < crawling ; exists ; 2002 ; Library Hi Tech Volume 20 ; 20 ; >
-    au < ready ; exists ; 2003 ; Library Hi Tech Volume 21 ; 21 ; >
+    au < crawling ; exists ; 2003 ; Library Hi Tech Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2004 ; Library Hi Tech Volume 22 ; 22 ; >
     au < crawling ; exists ; 2005 ; Library Hi Tech Volume 23 ; 23 ; >
     au < crawling ; exists ; 2006 ; Library Hi Tech Volume 24 ; 24 ; >
@@ -9599,7 +9599,7 @@
     au < crawling ; exists ; 2000 ; Library Management Volume 21 ; 21 ; >
     au < manifest ; exists ; 2001 ; Library Management Volume 22 ; 22 ; >
     au < manifest ; exists ; 2002 ; Library Management Volume 23 ; 23 ; >
-    au < ready ; exists ; 2003 ; Library Management Volume 24 ; 24 ; >
+    au < crawling ; exists ; 2003 ; Library Management Volume 24 ; 24 ; >
     au < manifest ; exists ; 2004 ; Library Management Volume 25 ; 25 ; >
     au < crawling ; exists ; 2005 ; Library Management Volume 26 ; 26 ; >
     au < crawling ; exists ; 2006 ; Library Management Volume 27 ; 27 ; >
@@ -9764,7 +9764,7 @@
     au < frozen ; exists ; 2000 ; Logistics Information Management Volume 13 ; 13 ; >
     au < crawling ; exists ; 2001 ; Logistics Information Management Volume 14 ; 14 ; >
     au < crawling ; exists ; 2002 ; Logistics Information Management Volume 15 ; 15 ; >
-    au < ready ; exists ; 2003 ; Logistics Information Management Volume 16 ; 16 ; >
+    au < crawling ; exists ; 2003 ; Logistics Information Management Volume 16 ; 16 ; >
 
   }
 
@@ -10171,7 +10171,7 @@
     au < frozen ; exists ; 2000 ; Managerial Law Volume 42 ; 42 ; >
     au < crawling ; exists ; 2001 ; Managerial Law Volume 43 ; 43 ; >
     au < crawling ; exists ; 2002 ; Managerial Law Volume 44 ; 44 ; >
-    au < ready ; exists ; 2003 ; Managerial Law Volume 45 ; 45 ; >
+    au < crawling ; exists ; 2003 ; Managerial Law Volume 45 ; 45 ; >
     au < manifest ; exists ; 2004 ; Managerial Law Volume 46 ; 46 ; >
     au < crawling ; exists ; 2005 ; Managerial Law Volume 47 ; 47 ; >
     au < crawling ; exists ; 2006 ; Managerial Law Volume 48 ; 48 ; >
@@ -11301,7 +11301,7 @@
     au < crawling ; exists ; 2000 ; Policing: An International Journal of Police Strategies & Management Volume 23 ; 23 ; >
     au < crawling ; exists ; 2001 ; Policing: An International Journal of Police Strategies & Management Volume 24 ; 24 ; >
     au < crawling ; exists ; 2002 ; Policing: An International Journal of Police Strategies & Management Volume 25 ; 25 ; >
-    au < ready ; exists ; 2003 ; Policing: An International Journal of Police Strategies & Management Volume 26 ; 26 ; >
+    au < crawling ; exists ; 2003 ; Policing: An International Journal of Police Strategies & Management Volume 26 ; 26 ; >
     au < manifest ; exists ; 2004 ; Policing: An International Journal of Police Strategies & Management Volume 27 ; 27 ; >
     au < crawling ; exists ; 2005 ; Policing: An International Journal of Police Strategies & Management Volume 28 ; 28 ; >
     au < crawling ; exists ; 2006 ; Policing: An International Journal of Police Strategies & Management Volume 29 ; 29 ; >
@@ -12223,7 +12223,7 @@
     au < frozen ; exists ; 2000 ; Soldering & Surface Mount Technology Volume 12 ; 12 ; >
     au < crawling ; exists ; 2001 ; Soldering & Surface Mount Technology Volume 13 ; 13 ; >
     au < crawling ; exists ; 2002 ; Soldering & Surface Mount Technology Volume 14 ; 14 ; >
-    au < ready ; exists ; 2003 ; Soldering & Surface Mount Technology Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2003 ; Soldering & Surface Mount Technology Volume 15 ; 15 ; >
     au < manifest ; exists ; 2004 ; Soldering & Surface Mount Technology Volume 16 ; 16 ; >
     au < crawling ; exists ; 2005 ; Soldering & Surface Mount Technology Volume 17 ; 17 ; >
     au < crawling ; exists ; 2006 ; Soldering & Surface Mount Technology Volume 18 ; 18 ; >
@@ -13065,7 +13065,7 @@
     au < frozen ; exists ; 2000 ; VINE Volume 30 ; 30 ; >
     au < crawling ; exists ; 2001 ; VINE Volume 31 ; 31 ; >
     au < crawling ; exists ; 2002 ; VINE Volume 32 ; 32 ; >
-    au < ready ; exists ; 2003 ; VINE Volume 33 ; 33 ; >
+    au < crawling ; exists ; 2003 ; VINE Volume 33 ; 33 ; >
     au < manifest ; exists ; 2004 ; VINE Volume 34 ; 34 ; >
     au < crawling ; exists ; 2005 ; VINE Volume 35 ; 35 ; >
     au < crawling ; exists ; 2006 ; VINE Volume 36 ; 36 ; >
@@ -13181,7 +13181,7 @@
     au < crawling ; exists ; 2000 ; Work Study Volume 49 ; 49 ; >
     au < manifest ; exists ; 2001 ; Work Study Volume 50 ; 50 ; >
     au < doNotProcess ; doNotProcess ; 2002 ; Work Study Volume 51 ; 51 ; >
-    au < ready ; exists ; 2003 ; Work Study Volume 52 ; 52 ; >
+    au < crawling ; exists ; 2003 ; Work Study Volume 52 ; 52 ; >
 
   }
 

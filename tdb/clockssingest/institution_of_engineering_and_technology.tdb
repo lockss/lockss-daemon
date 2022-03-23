@@ -2260,9 +2260,9 @@
       au < manifest ; exists ; 1956 ; The Proceedings of the IEE – Part C: Monographs Volume 103 ; 103 ; >
       au < crawling ; exists ; 1957 ; The Proceedings of the IEE – Part C: Monographs Volume 104 ; 104 ; >
       au < crawling ; exists ; 1958 ; The Proceedings of the IEE – Part C: Monographs Volume 105 ; 105 ; >
-      au < ready ; exists ; 1959 ; The Proceedings of the IEE – Part C: Monographs Volume 106 ; 106 ; >
+      au < crawling ; exists ; 1959 ; The Proceedings of the IEE – Part C: Monographs Volume 106 ; 106 ; >
       au < crawling ; exists ; 1960 ; The Proceedings of the IEE – Part C: Monographs Volume 107 ; 107 ; >
-      au < ready ; exists ; 1961 ; The Proceedings of the IEE – Part C: Monographs Volume 108 ; 108 ; >
+      au < crawling ; exists ; 1961 ; The Proceedings of the IEE – Part C: Monographs Volume 108 ; 108 ; >
       au < ready ; exists ; 1962 ; The Proceedings of the IEE – Part C: Monographs Volume 109 ; 109 ; >
 
   }
@@ -2295,7 +2295,7 @@
 
       au < crawling ; exists ; 1964 ; Proceedings of the Indian Division of the Institution of Electronic and Radio Engineers Volume 2 ; 2 ; >
       au < crawling ; exists ; 1965 ; Proceedings of the Indian Division of the Institution of Electronic and Radio Engineers Volume 3 ; 3 ; >
-      au < ready ; exists ; 1966 ; Proceedings of the Indian Division of the Institution of Electronic and Radio Engineers Volume 4 ; 4 ; >
+      au < crawling ; exists ; 1966 ; Proceedings of the Indian Division of the Institution of Electronic and Radio Engineers Volume 4 ; 4 ; >
       au < ready ; exists ; 1967 ; Proceedings of the Indian Division of the Institution of Electronic and Radio Engineers Volume 5 ; 5 ; >
       au < ready ; exists ; 1968 ; Proceedings of the Indian Division of the Institution of Electronic and Radio Engineers Volume 6 ; 6 ; >
 
@@ -2312,8 +2312,8 @@
 
       param[journal_id] = piee
 
-      au < ready ; exists ; 1963 ; Proceedings of the Institution of Electrical Engineers Volume 110 ; 110 ; >
-      au < ready ; exists ; 1964 ; Proceedings of the Institution of Electrical Engineers Volume 111 ; 111 ; >
+      au < crawling ; exists ; 1963 ; Proceedings of the Institution of Electrical Engineers Volume 110 ; 110 ; >
+      au < crawling ; exists ; 1964 ; Proceedings of the Institution of Electrical Engineers Volume 111 ; 111 ; >
       au < crawling ; exists ; 1965 ; Proceedings of the Institution of Electrical Engineers Volume 112 ; 112 ; >
       au < crawling ; exists ; 1966 ; Proceedings of the Institution of Electrical Engineers Volume 113 ; 113 ; >
       au < ready ; exists ; 1967 ; Proceedings of the Institution of Electrical Engineers Volume 114 ; 114 ; >
@@ -2343,9 +2343,9 @@
 
       param[journal_id] = piere
 
-      au < ready ; exists ; 1964 ; Proceedings of the Institution of Electronic and Radio Engineers Volume 2 ; 2 ; >
+      au < crawling ; exists ; 1964 ; Proceedings of the Institution of Electronic and Radio Engineers Volume 2 ; 2 ; >
       au < crawling ; exists ; 1965 ; Proceedings of the Institution of Electronic and Radio Engineers Volume 3 ; 3 ; >
-      au < ready ; exists ; 1966 ; Proceedings of the Institution of Electronic and Radio Engineers Volume 4 ; 4 ; >
+      au < crawling ; exists ; 1966 ; Proceedings of the Institution of Electronic and Radio Engineers Volume 4 ; 4 ; >
       au < crawling ; exists ; 1967 ; Proceedings of the Institution of Electronic and Radio Engineers Volume 5 ; 5 ; >
       au < crawling ; exists ; 1968 ; Proceedings of the Institution of Electronic and Radio Engineers Volume 6 ; 6 ; >
       au < crawling ; exists ; 1969 ; Proceedings of the Institution of Electronic and Radio Engineers Volume 7 ; 7 ; >
@@ -2393,8 +2393,8 @@
 
       param[journal_id] = ree
 
-      au < ready ; exists ; 1963 ; The Radio and Electronic Engineer Volume 25 ; 25 ; >
-      au < ready ; exists ; 1964 ; The Radio and Electronic Engineer Volume 26 ; 26 ; >
+      au < crawling ; exists ; 1963 ; The Radio and Electronic Engineer Volume 25 ; 25 ; >
+      au < crawling ; exists ; 1964 ; The Radio and Electronic Engineer Volume 26 ; 26 ; >
       au < crawling ; exists ; 1965 ; The Radio and Electronic Engineer Volume 27 ; 27 ; >
       au < ready ; exists ; 1966 ; The Radio and Electronic Engineer Volume 28 ; 28 ; >
       au < crawling ; exists ; 1967 ; The Radio and Electronic Engineer Volume 29 ; 29 ; >
@@ -2506,8 +2506,8 @@
       au < crawling ; exists ; 1962 ; Students' Quarterly Journal Volume 32 ; 32 ; >
       au < ready ; exists ; 1963 ; Students' Quarterly Journal Volume 33 ; 33 ; >
       au < ready ; exists ; 1964 ; Students' Quarterly Journal Volume 34 ; 34 ; >
-      au < ready ; exists ; 1965 ; Students' Quarterly Journal Volume 35 ; 35 ; >
-      au < ready ; exists ; 1966 ; Students' Quarterly Journal Volume 36 ; 36 ; >
+      au < crawling ; exists ; 1965 ; Students' Quarterly Journal Volume 35 ; 35 ; >
+      au < crawling ; exists ; 1966 ; Students' Quarterly Journal Volume 36 ; 36 ; >
       au < crawling ; exists ; 1967 ; Students' Quarterly Journal Volume 37 ; 37 ; >
       au < crawling ; exists ; 1968 ; Students' Quarterly Journal Volume 38 ; 38 ; >
       au < crawling ; exists ; 1969 ; Students' Quarterly Journal Volume 39 ; 39 ; >
@@ -2528,16 +2528,16 @@
 
       param[journal_id] = tpe
 
-      au < ready ; exists ; 1960 ; Production Engineer Volume 39 ; 39 ; >
+      au < crawling ; exists ; 1960 ; Production Engineer Volume 39 ; 39 ; >
       au < crawling ; exists ; 1961 ; Production Engineer Volume 40 ; 40 ; >
       au < crawling ; exists ; 1962 ; Production Engineer Volume 41 ; 41 ; >
       au < ready ; exists ; 1963 ; Production Engineer Volume 42 ; 42 ; >
       au < ready ; exists ; 1964 ; Production Engineer Volume 43 ; 43 ; >
-      au < ready ; exists ; 1965 ; Production Engineer Volume 44 ; 44 ; >
-      au < ready ; exists ; 1966 ; Production Engineer Volume 45 ; 45 ; >
+      au < crawling ; exists ; 1965 ; Production Engineer Volume 44 ; 44 ; >
+      au < crawling ; exists ; 1966 ; Production Engineer Volume 45 ; 45 ; >
       au < crawling ; exists ; 1967 ; Production Engineer Volume 46 ; 46 ; >
       au < crawling ; exists ; 1968 ; Production Engineer Volume 47 ; 47 ; >
-      au < ready ; exists ; 1969 ; Production Engineer Volume 48 ; 48 ; >
+      au < crawling ; exists ; 1969 ; Production Engineer Volume 48 ; 48 ; >
       au < crawling ; exists ; 1970 ; Production Engineer Volume 49 ; 49 ; >
       au < crawling ; exists ; 1971 ; Production Engineer Volume 50 ; 50 ; >
       au < crawling ; exists ; 1972 ; Production Engineer Volume 51 ; 51 ; >
