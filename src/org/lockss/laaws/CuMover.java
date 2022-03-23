@@ -205,5 +205,4 @@ public class CuMover extends Worker {
     }
     return cuArtifacts;
   }
-
 }

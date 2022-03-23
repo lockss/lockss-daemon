@@ -3,12 +3,15 @@ package org.lockss.laaws;
 import java.io.BufferedInputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.nio.file.Files;
 import javax.activation.DataSource;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import javax.mail.internet.MimeMultipart;
 import okhttp3.Headers;
+import org.apache.commons.io.FileUtils;
+import org.lockss.util.FileUtil;
 import org.lockss.util.StringUtil;
 
 public class MultipartFileResponse {
@@ -86,6 +89,13 @@ public class MultipartFileResponse {
         "File: " + mpFile.getAbsolutePath() +
         ", responseHeaders: " + responseHeaders +
         '}';
+  }
+  
+  public void delete() {
+    if(mpFile != null)   {
+      FileUtils.deleteQuietly(mpFile);
+      mpFile = null;
+    }
   }
 
   private static class InputStreamDataSource implements DataSource {

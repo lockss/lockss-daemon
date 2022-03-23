@@ -70,6 +70,7 @@ public class CuChecker extends Worker {
   void compareCuToArtifact(CachedUrl cu, Artifact artifact) {
     Long collectionDate = null;
     ArtifactData artifactData=null;
+    MultipartFileResponse mfr=null;
     try {
       String fetchTime =
           cu.getProperties().getProperty(CachedUrl.PROPERTY_FETCH_TIME);
@@ -89,7 +90,7 @@ public class CuChecker extends Worker {
       }
       if ( isMatch && auMover.isCompareBytes()) {
         log.debug3("Fetching  content for byte compare");
-        MultipartFileResponse mfr = collectionsApi.getMultipartArtifact(collection,
+        mfr = collectionsApi.getMultipartArtifact(collection,
             artifact.getId(),
             "ALWAYS");
         artifactData = new ArtifactData(mfr.getMimeMultipart());
@@ -121,6 +122,9 @@ public class CuChecker extends Worker {
       AuUtil.safeRelease(cu);
       if(artifactData !=null) {
         artifactData.release();
+      }
+      if(mfr != null) {
+        mfr.delete();
       }
     }
   }
