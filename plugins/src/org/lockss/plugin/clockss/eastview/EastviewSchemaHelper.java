@@ -98,7 +98,7 @@ implements SourceXmlSchemaHelper {
   private static String pub_year = "DATE";
   private static String pub_volume = "VOLUME";
   private static String pub_issue = "NUMBER";
-  private static String art_title = "ATITLE";
+  protected static String ART_RAW_ATITLE = "ATITLE";
   protected static String ART_RAW_TITLE = "TITLE";
   private static String art_contrib = "AUTHOR";
   private static String art_sp = "PAGE";
@@ -115,11 +115,11 @@ implements SourceXmlSchemaHelper {
     articleMap.put(pub_title, CLEAN_TEXT);
     //This is raw title, it contains publisher acroname, like this:
     //title: 31-05-1961(DASZD-No.005) НОВЫЕ КНИГИ
-    articleMap.put(ART_RAW_TITLE, XmlDomMetadataExtractor.TEXT_VALUE);
+    articleMap.put(ART_RAW_ATITLE, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(pub_volume, XmlDomMetadataExtractor.TEXT_VALUE); 
     articleMap.put(pub_issue, XmlDomMetadataExtractor.TEXT_VALUE); 
     articleMap.put(pub_year, XmlDomMetadataExtractor.TEXT_VALUE); 
-    articleMap.put(art_title, XmlDomMetadataExtractor.TEXT_VALUE); 
+    articleMap.put(ART_RAW_TITLE, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(art_contrib, XmlDomMetadataExtractor.TEXT_VALUE); 
     articleMap.put(art_sp, STARTPAGE_VALUE);
   }
@@ -140,7 +140,6 @@ implements SourceXmlSchemaHelper {
     cookMap.put(pub_volume, MetadataField.FIELD_VOLUME);
     cookMap.put(pub_issue, MetadataField.FIELD_ISSUE);
     cookMap.put(pub_year, MetadataField.FIELD_DATE);
-    cookMap.put(art_title, MetadataField.FIELD_ARTICLE_TITLE);
     cookMap.put(art_contrib, 
         new MetadataField(MetadataField.FIELD_AUTHOR, MetadataField.splitAt(AUTHOR_SPLIT_CH)));
     cookMap.put(art_sp, MetadataField.FIELD_START_PAGE);

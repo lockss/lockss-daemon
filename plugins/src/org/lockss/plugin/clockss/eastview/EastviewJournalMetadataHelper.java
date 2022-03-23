@@ -145,7 +145,6 @@ implements SourceXmlSchemaHelper {
     cookMap.put(pub_volume, MetadataField.FIELD_VOLUME);
     cookMap.put(pub_issue, MetadataField.FIELD_ISSUE);
     cookMap.put(pub_year, MetadataField.FIELD_DATE);
-    cookMap.put(art_title, MetadataField.FIELD_ARTICLE_TITLE);
     cookMap.put(art_contrib, 
         new MetadataField(MetadataField.FIELD_AUTHOR, MetadataField.splitAt(AUTHOR_SPLIT_CH)));
     cookMap.put(art_sp, MetadataField.FIELD_START_PAGE);

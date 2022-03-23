@@ -340,10 +340,6 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
         log.debug3("Eastview Journal: publicationTitle is null");
       }
 
-      if (title != null) {
-        thisAM.put(MetadataField.FIELD_ARTICLE_TITLE, title);
-      }
-
       thisAM.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
       thisAM.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_JOURNAL);
 
@@ -358,7 +354,8 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
 
       // Since raw ATITLE is not guaranteed to be uniqu, it may be called "Page 1, Page 2, etc"
       // Use ATITLE - TITLE as the unique string for reporting purpose
-      thisAM.put(MetadataField.FIELD_ARTICLE_TITLE, thisAM.get(MetadataField.FIELD_ARTICLE_TITLE) + " - " + raw_title);
+      String new_title =   thisAM.getRaw(EastviewSchemaHelper.ART_RAW_ATITLE) + " - " + raw_title;
+      thisAM.put(MetadataField.FIELD_ARTICLE_TITLE, new_title);
     }
 
     /**
