@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -85,7 +85,7 @@
   </entry>
   <entry>
     <string>au_permission_url</string>
-    <string>"%slockss", base_url</string>
+    <string>"%s/plugins/clockss/", base_url</string>
   </entry>
   <entry>
     <string>au_start_url</string>
