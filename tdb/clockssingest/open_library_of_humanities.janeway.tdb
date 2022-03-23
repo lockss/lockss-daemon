@@ -442,8 +442,8 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 1 ; Open Screens Volume 2018 ; 2018 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2 ; Open Screens Volume 2019 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; 3 ; Open Screens Volume 2020 ; 2020 ; >
-      au < manifest ; exists ; 2021 ; 4 ; Open Screens Volume 2021 ; 2021 ; >
-      au < manifest ; exists ; 2022 ; 5 ; Open Screens Volume 2022 ; 2022 ; >
+      au < exists ; exists ; 2021 ; 4 ; Open Screens Volume 2021 ; 2021 ; >
+      au < expected ; exists ; 2022 ; 5 ; Open Screens Volume 2022 ; 2022 ; >
 
   }
 

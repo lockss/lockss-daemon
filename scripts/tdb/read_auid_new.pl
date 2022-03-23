@@ -933,11 +933,11 @@ while (my $line = <>) {
            ($plugin eq "UniversityofMichiganPlugin") ||
            ($plugin eq "ClockssUniversityofMichiganPlugin")) {
     #permission is different from start
-    $perm_url = uri_unescape($param{base_url}) . "clockss";
+    $perm_url = uri_unescape($param{base_url}) . "clockss/";
       #printf("URL: %s\n", $perm_url); #debug
       $vol_title = $perm_url ;
     #start_url for all OAI queries https://www.comicsgrid.com/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2019-01-01&until=2019-12-31
-    $url = sprintf("%sapi/oai?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=%d-01-01&amp;until=%d-12-31",
+    $url = sprintf("%sapi/oai/?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=%d-01-01&amp;until=%d-12-31",
       $param{base_url}, $param{year}, $param{year});
     $man_url = uri_unescape($url);
     my $req_p = HTTP::Request->new(GET, $perm_url);
@@ -946,20 +946,24 @@ while (my $line = <>) {
     my $resp_s = $ua->request($req_s);
     
     if ($resp_p->is_success) {
-      my $perm_contents = $resp_p->content;
-      #my $lcl_tag = $clockss_tag;
-      if (defined($perm_contents) && ($perm_contents =~ m/$clockss_tag/s) && ($perm_contents =~ m/$lockss_tag/s)) {
-        if ($resp_s->is_success) {
-          if ($resp_s->content =~ m/results in an empty (set|list)/is) {
-            $result = "--EMPTY_LIST--"
-          } else {
-            $result = "Manifest";
-          }
+        my $perm_contents = $resp_p->content;
+        #my $lcl_tag = $clockss_tag;
+        if (($req_p->url ne $resp_p->request->uri) || ($req_s->url ne $resp_s->request->uri)) {
+            $vol_title = $resp_p->request->uri . "+" . $resp_s->request->uri;
+            $result = "Redirected";
+        } elsif (defined($perm_contents) && ($perm_contents =~ m/$clockss_tag/s) && ($perm_contents =~ m/$lockss_tag/s)) {
+#        if (defined($perm_contents) && ($perm_contents =~ m/$clockss_tag/s) && ($perm_contents =~ m/$lockss_tag/s)) {
+            if ($resp_s->is_success) {
+                if ($resp_s->content =~ m/results in an empty (set|list)/is) {
+                    $result = "--EMPTY_LIST--"
+                } else {
+                    $result = "Manifest";
+                }
+            } else {
+                #printf("URL: %s\n", $man_url);
+                $result = "--REQ_FAIL--"
+            }
         } else {
-          #printf("URL: %s\n", $man_url);
-          $result = "--REQ_FAIL--"
-        }
-      } else {
         #printf("URL: %s\n", $perm_url);
         $result = "--NO_LOCKSS--"
       }
@@ -971,15 +975,15 @@ while (my $line = <>) {
 
   #Janeway
   } elsif (($plugin eq "ClockssIowaStateDPPlugin") ||
-           ($plugin eq "IowaStateDPPlugin") ||
+#           ($plugin eq "IowaStateDPPlugin") ||
            ($plugin eq "ClockssGhentUniversityLibraryPlugin") ||
            ($plugin eq "GhentUniversityLibraryPlugin")) {
     #permission is different from start
-    $perm_url = uri_unescape($param{base_url}) . $param{journal_id} . "/plugins/clockss";
+    $perm_url = uri_unescape($param{base_url}) . $param{journal_id} . "/plugins/clockss/";
       #printf("URL: %s\n", $perm_url); #debug
       $vol_title = $perm_url ;
     #start_url for all OAI queries https://www.comicsgrid.com/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2019-01-01&until=2019-12-31
-    $url = sprintf("%s%s/api/oai?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=%d-01-01&amp;until=%d-12-31",
+    $url = sprintf("%s%s/api/oai/?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=%d-01-01&amp;until=%d-12-31",
       $param{base_url}, $param{journal_id}, $param{year}, $param{year});
     $man_url = uri_unescape($url);
     my $req_p = HTTP::Request->new(GET, $perm_url);
@@ -990,7 +994,10 @@ while (my $line = <>) {
     if ($resp_p->is_success) {
       my $perm_contents = $resp_p->content;
       #my $lcl_tag = $clockss_tag;
-      if (defined($perm_contents) && ($perm_contents =~ m/$clockss_tag/s) && ($perm_contents =~ m/$lockss_tag/s)) {
+        if (($req_p->url ne $resp_p->request->uri) || ($req_s->url ne $resp_s->request->uri)) {
+            $vol_title = $resp_p->request->uri . "+" . $resp_s->request->uri;
+            $result = "Redirected";
+        } elsif (defined($perm_contents) && ($perm_contents =~ m/$clockss_tag/s) && ($perm_contents =~ m/$lockss_tag/s)) {
         if ($resp_s->is_success) {
           if ($resp_s->content =~ m/results in an empty (set|list)/is) {
             $result = "--EMPTY_LIST--"
