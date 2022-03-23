@@ -118,10 +118,10 @@
     #Manifest page exists. https://silkroadjournal.online/api/oai?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=2019-01-01&amp;until=2019-12-31
     #Permission page missing. https://silkroadjournal.online/clockss
 
-    au < exists ; exists ; 2019 ; 1 ; Silk Road Volume 2019 ; 2019 ; >
-    au < exists ; exists ; 2020 ; 2 ; Silk Road Volume 2020 ; 2020 ; >
-    au < expected ; exists ; 2021 ; 3 ; Silk Road Volume 2021 ; 2021 ; >
-    au < expected ; exists ; 2022 ; 4 ; Silk Road Volume 2022 ; 2022 ; >
+    au < manifest ; exists ; 2019 ; 1 ; Silk Road Volume 2019 ; 2019 ; >
+    au < manifest ; exists ; 2020 ; 2 ; Silk Road Volume 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; 3 ; Silk Road Volume 2021 ; 2021 ; >
+    au < manifest ; exists ; 2022 ; 4 ; Silk Road Volume 2022 ; 2022 ; >
 
   }
 
