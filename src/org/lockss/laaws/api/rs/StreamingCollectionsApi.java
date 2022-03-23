@@ -87,7 +87,7 @@ public class StreamingCollectionsApi extends CollectionsApi {
    * </table>
    */
   public okhttp3.Call createArtifactCall(String collectionid, String auid, String uri,
-    DigestCachedUrl artifact, Long collectionDate, final ApiCallback _callback) throws ApiException {
+      DigestCachedUrl artifact, Long collectionDate, final ApiCallback _callback) throws ApiException {
     String basePath = null;
 
     // Operation Servers
@@ -106,7 +106,7 @@ public class StreamingCollectionsApi extends CollectionsApi {
 
     // create path and map variables
     String localVarPath = "/collections/{collectionid}/artifacts"
-      .replaceAll("\\{" + "collectionid" + "\\}", apiClient.escapeString(collectionid));
+        .replaceAll("\\{" + "collectionid" + "\\}", apiClient.escapeString(collectionid));
 
     List<Pair> localVarQueryParams = new ArrayList<>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<>();
@@ -131,7 +131,7 @@ public class StreamingCollectionsApi extends CollectionsApi {
     }
 
     final String[] localVarAccepts = {
-      "application/json"
+        "application/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) {
@@ -139,48 +139,55 @@ public class StreamingCollectionsApi extends CollectionsApi {
     }
 
     final String[] localVarContentTypes = {
-      "multipart/form-data"
+        "multipart/form-data"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    if (localVarContentType != null) {
+      localVarHeaderParams.put("Content-Type", localVarContentType);
+    }
     localVarHeaderParams.put("Content-Type", localVarContentType);
+    if (localVarContentType != null) {
+      localVarHeaderParams.put("Content-Type", localVarContentType);
+    }
+
 
     String[] localVarAuthNames = new String[]{ "basicAuth" };
     return apiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams,
-      localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
-      localVarFormParams, localVarAuthNames, _callback);
+        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
+        localVarFormParams, localVarAuthNames, _callback);
   }
 
   @SuppressWarnings("rawtypes")
   private okhttp3.Call createArtifactValidateBeforeCall(String collectionid, String auid,
-    String uri, DigestCachedUrl artifact, Long collectionDate, final ApiCallback _callback)
-    throws ApiException {
+      String uri, DigestCachedUrl artifact, Long collectionDate, final ApiCallback _callback)
+      throws ApiException {
 
     // verify the required parameter 'collectionid' is set
     if (collectionid == null) {
       throw new ApiException(
-        "Missing the required parameter 'collectionid' when calling createArtifact(Async)");
+          "Missing the required parameter 'collectionid' when calling createArtifact(Async)");
     }
 
     // verify the required parameter 'auid' is set
     if (auid == null) {
       throw new ApiException(
-        "Missing the required parameter 'auid' when calling createArtifact(Async)");
+          "Missing the required parameter 'auid' when calling createArtifact(Async)");
     }
 
     // verify the required parameter 'uri' is set
     if (uri == null) {
       throw new ApiException(
-        "Missing the required parameter 'uri' when calling createArtifact(Async)");
+          "Missing the required parameter 'uri' when calling createArtifact(Async)");
     }
 
     // verify the required parameter 'artifact' is set
     if (artifact == null) {
       throw new ApiException(
-        "Missing the required parameter 'artifact' when calling createArtifact(Async)");
+          "Missing the required parameter 'artifact' when calling createArtifact(Async)");
     }
 
     okhttp3.Call localVarCall = createArtifactCall(collectionid, auid, uri, artifact,
-      collectionDate, _callback);
+        collectionDate, _callback);
     return localVarCall;
 
   }
@@ -206,9 +213,9 @@ public class StreamingCollectionsApi extends CollectionsApi {
    * </table>
    */
   public Artifact createArtifact(String collectionid, String auid, String uri, DigestCachedUrl artifact,
-    Long collectionDate) throws ApiException {
+      Long collectionDate) throws ApiException {
     ApiResponse<Artifact> localVarResp = createArtifactWithHttpInfo(collectionid, auid, uri,
-      artifact, collectionDate);
+        artifact, collectionDate);
     return localVarResp.getData();
   }
 
@@ -233,9 +240,9 @@ public class StreamingCollectionsApi extends CollectionsApi {
    * </table>
    */
   public ApiResponse<Artifact> createArtifactWithHttpInfo(String collectionid, String auid,
-    String uri, DigestCachedUrl artifact, Long collectionDate) throws ApiException {
+      String uri, DigestCachedUrl artifact, Long collectionDate) throws ApiException {
     okhttp3.Call localVarCall = createArtifactValidateBeforeCall(collectionid, auid, uri, artifact,
-      collectionDate, null);
+        collectionDate, null);
     Type localVarReturnType = new TypeToken<Artifact>() {
     }.getType();
     return apiClient.execute(localVarCall, localVarReturnType);
@@ -263,13 +270,12 @@ public class StreamingCollectionsApi extends CollectionsApi {
    * </table>
    */
   public okhttp3.Call createArtifactAsync(String collectionid, String auid, String uri,
-    DigestCachedUrl artifact, Long collectionDate, final ApiCallback<Artifact> _callback)
-    throws ApiException {
+      DigestCachedUrl artifact, Long collectionDate, final ApiCallback<Artifact> _callback)
+      throws ApiException {
 
     okhttp3.Call localVarCall = createArtifactValidateBeforeCall(collectionid, auid, uri, artifact,
-      collectionDate, _callback);
-    Type localVarReturnType = new TypeToken<Artifact>() {
-    }.getType();
+        collectionDate, _callback);
+    Type localVarReturnType = new TypeToken<Artifact>(){}.getType();
     apiClient.executeAsync(localVarCall, localVarReturnType, _callback);
     return localVarCall;
   }
@@ -283,14 +289,15 @@ public class StreamingCollectionsApi extends CollectionsApi {
    * @param _callback      Callback for upload/download progress
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Artifact created </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Client not authorized to retrieve artifact </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Artifact not found </td><td>  -  </td></tr>
-   * <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+  <table summary="Response Details" border="1">
+  <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+  <tr><td> 200 </td><td> Artifact created </td><td>  -  </td></tr>
+  <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
+  <tr><td> 403 </td><td> Client not authorized to retrieve artifact </td><td>  -  </td></tr>
+  <tr><td> 404 </td><td> Artifact not found </td><td>  -  </td></tr>
+  <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
+  </table>
    */
   public okhttp3.Call getMultipartArtifactCall(String collectionid, String artifactid, String includeContent,
       final ApiCallback _callback) throws ApiException {
@@ -312,10 +319,8 @@ public class StreamingCollectionsApi extends CollectionsApi {
 
     // create path and map variables
     String localVarPath = "/collections/{collectionid}/artifacts/{artifactid}"
-        .replaceAll("\\{" + "collectionid" + "\\}",
-            apiClient.escapeString(collectionid.toString()))
-        .replaceAll("\\{" + "artifactid" + "\\}",
-            apiClient.escapeString(artifactid.toString()));
+        .replaceAll("\\{" + "collectionid" + "\\}", apiClient.escapeString(collectionid.toString()))
+        .replaceAll("\\{" + "artifactid" + "\\}", apiClient.escapeString(artifactid.toString()));
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -341,10 +346,12 @@ public class StreamingCollectionsApi extends CollectionsApi {
     };
     final String localVarContentType = apiClient.selectHeaderContentType(
         localVarContentTypes);
-    localVarHeaderParams.put("Content-Type", localVarContentType);
+    if (localVarContentType != null) {
+      localVarHeaderParams.put("Content-Type", localVarContentType);
+    }
 
     String[] localVarAuthNames = new String[]{"basicAuth"};
-    return apiClient.buildCall(basePath,localVarPath, "GET", localVarQueryParams,
+    return apiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams,
         localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
         localVarFormParams, localVarAuthNames, _callback);
   }
@@ -379,14 +386,15 @@ public class StreamingCollectionsApi extends CollectionsApi {
    * @param includeContent Controls whether to include the artifact content part in multipart response (optional, default to ALWAYS)
    * @return MultipartFileResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Artifact created </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Client not authorized to retrieve artifact </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Artifact not found </td><td>  -  </td></tr>
-   * <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+  <table summary="Response Details" border="1">
+  <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+  <tr><td> 200 </td><td> Artifact created </td><td>  -  </td></tr>
+  <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
+  <tr><td> 403 </td><td> Client not authorized to retrieve artifact </td><td>  -  </td></tr>
+  <tr><td> 404 </td><td> Artifact not found </td><td>  -  </td></tr>
+  <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
+  </table>
    */
   public MultipartFileResponse getMultipartArtifact(String collectionid, String artifactid, String includeContent)
       throws ApiException {
@@ -403,14 +411,15 @@ public class StreamingCollectionsApi extends CollectionsApi {
    * @param includeContent Controls whether to include the artifact content part in multipart response (optional, default to ALWAYS)
    * @return ApiResponse&lt;MultiPartMultipartFileResponseResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Artifact created </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Client not authorized to retrieve artifact </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Artifact not found </td><td>  -  </td></tr>
-   * <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+  <table summary="Response Details" border="1">
+  <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+  <tr><td> 200 </td><td> Artifact created </td><td>  -  </td></tr>
+  <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
+  <tr><td> 403 </td><td> Client not authorized to retrieve artifact </td><td>  -  </td></tr>
+  <tr><td> 404 </td><td> Artifact not found </td><td>  -  </td></tr>
+  <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
+  </table>
    */
   public ApiResponse<MultipartFileResponse> getMultipartArtifactWithHttpInfo(String collectionid, String artifactid,
       String includeContent) throws ApiException {
@@ -430,14 +439,15 @@ public class StreamingCollectionsApi extends CollectionsApi {
    * @param _callback      The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Artifact created </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Client not authorized to retrieve artifact </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Artifact not found </td><td>  -  </td></tr>
-   * <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+  <table summary="Response Details" border="1">
+  <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+  <tr><td> 200 </td><td> Artifact created </td><td>  -  </td></tr>
+  <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
+  <tr><td> 403 </td><td> Client not authorized to retrieve artifact </td><td>  -  </td></tr>
+  <tr><td> 404 </td><td> Artifact not found </td><td>  -  </td></tr>
+  <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
+  </table>
    */
   public okhttp3.Call getMultipartArtifactAsync(String collectionid, String artifactid,
       String includeContent, final ApiCallback<MultipartFileResponse> _callback) throws ApiException {

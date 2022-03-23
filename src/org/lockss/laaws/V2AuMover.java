@@ -29,6 +29,8 @@ package org.lockss.laaws;
 
 import static java.nio.file.StandardOpenOption.APPEND;
 import static java.nio.file.StandardOpenOption.CREATE;
+
+import kotlin.Pair;
 import org.apache.commons.lang3.time.StopWatch;
 import java.io.File;
 import java.io.IOException;
@@ -58,7 +60,6 @@ import org.lockss.laaws.client.ApiException;
 import org.lockss.laaws.client.V2RestClient;
 import org.lockss.laaws.model.rs.AuidPageInfo;
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.PluginManager;
 import org.lockss.uiapi.util.DateFormatter;
@@ -1731,10 +1732,17 @@ public class V2AuMover {
 
   void logErrorBody(Response response) {
     try {
-      if(response.body() != null)
-        log.warning("Error response body: " + response.body().string());
+      StringBuilder sb = new StringBuilder();
+        sb.append("Error response returned: ").append(response.code())
+            .append(": ").append(response.message());
+        sb.append(" Headers: ");
+        response.headers().forEach(header -> sb.append(header.getFirst()).append(":").append(header.getSecond()));
+        if(response.body() != null && response.body().contentLength() >0) {
+          sb.append(" body: ").append(response.body().string());
+        }
+      log.warning(sb.toString());
     }
-    catch (IOException e) {
+    catch (Exception e) {
       log.error("Exception trying to retrieve error response body", e);
     }
   }
