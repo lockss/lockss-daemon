@@ -45,7 +45,7 @@
     au < doNotProcess ; 2017 ; Archives Volume 52 ; 52 >
     au < doNotProcess ; 2018 ; Archives Volume 53 ; 53 >
     au < doNotProcess ; 2019 ; Archives Volume 54 ; 54 >
-    au < releasing ; 2020 ; Archives Volume 55 ; 55 >
+    au < released ; 2020 ; Archives Volume 55 ; 55 >
     au < manifest ; 2021 ; Archives Volume 56 ; 56 >
     au < expected ; 2022 ; Archives Volume 57 ; 57 >
 
@@ -63,12 +63,12 @@
     param[journal_id] = arsjudaica
     #Published 2015-2020
 
-    au < releasing ; 2015 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 11 ; 11 >
-    au < releasing ; 2016 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 12 ; 12 >
-    au < releasing ; 2017 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 13 ; 13 >
-    au < releasing ; 2018 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 14 ; 14 >
-    au < releasing ; 2019 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 15 ; 15 >
-    au < releasing ; 2020 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 16 ; 16 >
+    au < released ; 2015 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 11 ; 11 >
+    au < released ; 2016 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 12 ; 12 >
+    au < released ; 2017 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 13 ; 13 >
+    au < released ; 2018 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 14 ; 14 >
+    au < released ; 2019 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 15 ; 15 >
+    au < released ; 2020 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 16 ; 16 >
 
   }
 
@@ -97,14 +97,14 @@
     au < doNotProcess ; 2010 ; Australian Journal of French Studies Volume 47 ; 47 >
     au < doNotProcess ; 2011 ; Australian Journal of French Studies Volume 48 ; 48 >
     au < doNotProcess ; 2012 ; Australian Journal of French Studies Volume 49 ; 49 >
-    au < releasing ; 2013 ; Australian Journal of French Studies Volume 50 ; 50 >
+    au < released ; 2013 ; Australian Journal of French Studies Volume 50 ; 50 >
     au < doNotProcess ; 2014 ; Australian Journal of French Studies Volume 51 ; 51 >
     au < doNotProcess ; 2015 ; Australian Journal of French Studies Volume 52 ; 52 >
     au < doNotProcess ; 2016 ; Australian Journal of French Studies Volume 53 ; 53 >
     au < doNotProcess ; 2017 ; Australian Journal of French Studies Volume 54 ; 54 >
     au < doNotProcess ; 2018 ; Australian Journal of French Studies Volume 55 ; 55 >
     au < doNotProcess ; 2019 ; Australian Journal of French Studies Volume 56 ; 56 >
-    au < releasing ; 2020 ; Australian Journal of French Studies Volume 57 ; 57 >
+    au < released ; 2020 ; Australian Journal of French Studies Volume 57 ; 57 >
     au < manifest ; 2021 ; Australian Journal of French Studies Volume 58 ; 58 >
     au < expected ; 2022 ; Australian Journal of French Studies Volume 59 ; 59 >
 
@@ -121,8 +121,8 @@
     param[journal_id] = bchs
     #Published 2019-present
 
-    au < releasing ; 2019 ; Bulletin of Contemporary Hispanic Studies Volume 1 ; 1 >
-    au < releasing ; 2020 ; Bulletin of Contemporary Hispanic Studies Volume 2 ; 2 >
+    au < released ; 2019 ; Bulletin of Contemporary Hispanic Studies Volume 1 ; 1 >
+    au < released ; 2020 ; Bulletin of Contemporary Hispanic Studies Volume 2 ; 2 >
     au < manifest ; 2021 ; Bulletin of Contemporary Hispanic Studies Volume 3 ; 3 >
     au < expected ; 2022 ; Bulletin of Contemporary Hispanic Studies Volume 4 ; 4 >
 
@@ -150,13 +150,13 @@
     au < doNotProcess ; 2010 ; British Journal of Canadian Studies Volume 23 ; 23 >
     au < doNotProcess ; 2011 ; British Journal of Canadian Studies Volume 24 ; 24 >
     au < doNotProcess ; 2012 ; British Journal of Canadian Studies Volume 25 ; 25 >
-    au < releasing ; 2013 ; British Journal of Canadian Studies Volume 26 ; 26 >
+    au < released ; 2013 ; British Journal of Canadian Studies Volume 26 ; 26 >
     au < doNotProcess ; 2014 ; British Journal of Canadian Studies Volume 27 ; 27 >
     au < doNotProcess ; 2015 ; British Journal of Canadian Studies Volume 28 ; 28 >
     au < doNotProcess ; 2016 ; British Journal of Canadian Studies Volume 29 ; 29 >
     au < doNotProcess ; 2017 ; British Journal of Canadian Studies Volume 30 ; 30 >
     au < doNotProcess ; 2018 ; British Journal of Canadian Studies Volume 31 ; 31 >
-    au < releasing ; 2020 ; British Journal of Canadian Studies Volume 32 ; 32 >
+    au < released ; 2020 ; British Journal of Canadian Studies Volume 32 ; 32 >
     au < manifest ; 2021 ; British Journal of Canadian Studies Volume 33 ; 33 >
     au < expected ; 2022 ; British Journal of Canadian Studies Volume 34 ; 34 >
 
@@ -212,14 +212,14 @@
     au < doNotProcess ; 2010 ; Bulletin of Hispanic Studies Volume 87 ; 87 >
     au < doNotProcess ; 2011 ; Bulletin of Hispanic Studies Volume 88 ; 88 >
     au < doNotProcess ; 2012 ; Bulletin of Hispanic Studies Volume 89 ; 89 >
-    au < releasing ; 2013 ; Bulletin of Hispanic Studies Volume 90 ; 90 >
+    au < released ; 2013 ; Bulletin of Hispanic Studies Volume 90 ; 90 >
     au < doNotProcess ; 2014 ; Bulletin of Hispanic Studies Volume 91 ; 91 >
     au < doNotProcess ; 2015 ; Bulletin of Hispanic Studies Volume 92 ; 92 >
     au < doNotProcess ; 2016 ; Bulletin of Hispanic Studies Volume 93 ; 93 >
     au < doNotProcess ; 2017 ; Bulletin of Hispanic Studies Volume 94 ; 94 >
     au < doNotProcess ; 2018 ; Bulletin of Hispanic Studies Volume 95 ; 95 >
     au < doNotProcess ; 2019 ; Bulletin of Hispanic Studies Volume 96 ; 96 >
-    au < releasing ; 2020 ; Bulletin of Hispanic Studies Volume 97 ; 97 >
+    au < released ; 2020 ; Bulletin of Hispanic Studies Volume 97 ; 97 >
     au < manifest ; 2021 ; Bulletin of Hispanic Studies Volume 98 ; 98 >
     au < manifest ; 2022 ; Bulletin of Hispanic Studies Volume 99 ; 99 >
 
@@ -250,14 +250,14 @@
     au < doNotProcess ; 2010 ; The Byron Journal Volume 38 ; 38 >
     au < doNotProcess ; 2011 ; The Byron Journal Volume 39 ; 39 >
     au < doNotProcess ; 2012 ; The Byron Journal Volume 40 ; 40 >
-    au < releasing ; 2013 ; The Byron Journal Volume 41 ; 41 >
+    au < released ; 2013 ; The Byron Journal Volume 41 ; 41 >
     au < doNotProcess ; 2014 ; The Byron Journal Volume 42 ; 42 >
     au < doNotProcess ; 2015 ; The Byron Journal Volume 43 ; 43 >
     au < doNotProcess ; 2016 ; The Byron Journal Volume 44 ; 44 >
     au < doNotProcess ; 2017 ; The Byron Journal Volume 45 ; 45 >
     au < doNotProcess ; 2018 ; The Byron Journal Volume 46 ; 46 >
     au < doNotProcess ; 2019 ; The Byron Journal Volume 47 ; 47 >
-    au < releasing ; 2020 ; The Byron Journal Volume 48 ; 48 >
+    au < released ; 2020 ; The Byron Journal Volume 48 ; 48 >
     au < manifest ; 2021 ; The Byron Journal Volume 49 ; 49 >
     au < expected ; 2022 ; The Byron Journal Volume 50 ; 50 >
 
@@ -289,9 +289,9 @@
     au < doNotProcess ; 2015 ; Comma Volume 2015 ; 2015 >
     au < doNotProcess ; 2016 ; Comma Volume 2016 ; 2016 >
     au < doNotProcess ; 2017 ; Comma Volume 2017 ; 2017 >
-    au < releasing ; 2018 ; Comma Volume 2018 ; 2018 >
-    au < releasing ; 2019 ; Comma Volume 2019 ; 2019 >
-    au < releasing ; 2020 ; Comma Volume 2020 ; 2020 >
+    au < released ; 2018 ; Comma Volume 2018 ; 2018 >
+    au < released ; 2019 ; Comma Volume 2019 ; 2019 >
+    au < released ; 2020 ; Comma Volume 2020 ; 2020 >
     au < exists ; 2021 ; Comma Volume 2021 ; 2021 >
     au < expected ; 2022 ; Comma Volume 2022 ; 2022 >
 
@@ -329,7 +329,7 @@
     au < doNotProcess ; 2017 ; Catalan Review Volume 31 ; 31 >
     au < doNotProcess ; 2018 ; Catalan Review Volume 32 ; 32 >
     au < doNotProcess ; 2019 ; Catalan Review Volume 33 ; 33 >
-    au < releasing ; 2020 ; Catalan Review Volume 34 ; 34 >
+    au < released ; 2020 ; Catalan Review Volume 34 ; 34 >
     au < manifest ; 2021 ; Catalan Review Volume 35 ; 35 >
     au < expected ; 2022 ; Catalan Review Volume 36 ; 36 >
 
@@ -361,14 +361,14 @@
     au < doNotProcess ; 2011 ; Contemporary French Civilization Volume 35 ; 35 >
     au < doNotProcess ; 2011 ; Contemporary French Civilization Volume 36 ; 36 >
     au < doNotProcess ; 2012 ; Contemporary French Civilization Volume 37 ; 37 >
-    au < releasing ; 2013 ; Contemporary French Civilization Volume 38 ; 38 >
-    au < releasing ; 2014 ; Contemporary French Civilization Volume 39 ; 39 >
+    au < released ; 2013 ; Contemporary French Civilization Volume 38 ; 38 >
+    au < released ; 2014 ; Contemporary French Civilization Volume 39 ; 39 >
     au < doNotProcess ; 2015 ; Contemporary French Civilization Volume 40 ; 40 >
     au < doNotProcess ; 2016 ; Contemporary French Civilization Volume 41 ; 41 >
     au < doNotProcess ; 2017 ; Contemporary French Civilization Volume 42 ; 42 >
     au < doNotProcess ; 2018 ; Contemporary French Civilization Volume 43 ; 43 >
     au < doNotProcess ; 2019 ; Contemporary French Civilization Volume 44 ; 44 >
-    au < releasing ; 2020 ; Contemporary French Civilization Volume 45 ; 45 >
+    au < released ; 2020 ; Contemporary French Civilization Volume 45 ; 45 >
     au < manifest ; 2021 ; Contemporary French Civilization Volume 46 ; 46 >
     au < expected ; 2022 ; Contemporary French Civilization Volume 47 ; 47 >
 
@@ -426,18 +426,18 @@
     au < manifest ; 2007 ; Eighteenth-Century Ireland Volume 22 ; 22 >
     au < manifest ; 2008 ; Eighteenth-Century Ireland Volume 23 ; 23 >
     au < manifest ; 2009 ; Eighteenth-Century Ireland Volume 24 ; 24 >
-    au < releasing ; 2010 ; Eighteenth-Century Ireland Volume 25 ; 25 >
-    au < releasing ; 2011 ; Eighteenth-Century Ireland Volume 26 ; 26 >
+    au < released ; 2010 ; Eighteenth-Century Ireland Volume 25 ; 25 >
+    au < released ; 2011 ; Eighteenth-Century Ireland Volume 26 ; 26 >
     au < doNotProcess ; 2011 ; Eighteenth-Century Ireland Volume Special_Issue ; Special_Issue >
-    au < releasing ; 2012 ; Eighteenth-Century Ireland Volume 27 ; 27 >
-    au < releasing ; 2013 ; Eighteenth-Century Ireland Volume 28 ; 28 >
-    au < releasing ; 2014 ; Eighteenth-Century Ireland Volume 29 ; 29 >
-    au < releasing ; 2015 ; Eighteenth-Century Ireland Volume 30 ; 30 >
-    au < releasing ; 2016 ; Eighteenth-Century Ireland Volume 31 ; 31 >
-    au < releasing ; 2017 ; Eighteenth-Century Ireland Volume 32 ; 32 >
-    au < releasing ; 2018 ; Eighteenth-Century Ireland Volume 33 ; 33 >
-    au < releasing ; 2019 ; Eighteenth-Century Ireland Volume 34 ; 34 >
-    au < releasing ; 2020 ; Eighteenth-Century Ireland Volume 35 ; 35 >
+    au < released ; 2012 ; Eighteenth-Century Ireland Volume 27 ; 27 >
+    au < released ; 2013 ; Eighteenth-Century Ireland Volume 28 ; 28 >
+    au < released ; 2014 ; Eighteenth-Century Ireland Volume 29 ; 29 >
+    au < released ; 2015 ; Eighteenth-Century Ireland Volume 30 ; 30 >
+    au < released ; 2016 ; Eighteenth-Century Ireland Volume 31 ; 31 >
+    au < released ; 2017 ; Eighteenth-Century Ireland Volume 32 ; 32 >
+    au < released ; 2018 ; Eighteenth-Century Ireland Volume 33 ; 33 >
+    au < released ; 2019 ; Eighteenth-Century Ireland Volume 34 ; 34 >
+    au < released ; 2020 ; Eighteenth-Century Ireland Volume 35 ; 35 >
     au < manifest ; 2021 ; Eighteenth-Century Ireland Volume 36 ; 36 >
     au < expected ; 2022 ; Eighteenth-Century Ireland Volume 37 ; 37 >
 
@@ -481,7 +481,7 @@
     au < doNotProcess ; 2017 ; Essays in Romanticism Volume 24 ; 24 >
     au < doNotProcess ; 2018 ; Essays in Romanticism Volume 25 ; 25 >
     au < doNotProcess ; 2019 ; Essays in Romanticism Volume 26 ; 26 >
-    au < releasing ; 2020 ; Essays in Romanticism Volume 27 ; 27 >
+    au < released ; 2020 ; Essays in Romanticism Volume 27 ; 27 >
     au < manifest ; 2021 ; Essays in Romanticism Volume 28 ; 28 >
     au < expected ; 2022 ; Essays in Romanticism Volume 29 ; 29 >
 
@@ -503,14 +503,14 @@
     au < doNotProcess ; 2010 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 2 ; 2 >
     au < doNotProcess ; 2011 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 3 ; 3 >
     au < doNotProcess ; 2012 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 4 ; 4 >
-    au < releasing ; 2013 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 5 ; 5 >
+    au < released ; 2013 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 5 ; 5 >
     au < doNotProcess ; 2014 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 6 ; 6 >
     au < doNotProcess ; 2015 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 7 ; 7 >
     au < doNotProcess ; 2016 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 8 ; 8 >
     au < doNotProcess ; 2017 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 9 ; 9 >
     au < doNotProcess ; 2018 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 10 ; 10 >
     au < doNotProcess ; 2019 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 11 ; 11 >
-    au < releasing ; 2020 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 12 ; 12 >
+    au < released ; 2020 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 12 ; 12 >
     au < manifest ; 2021 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 13 ; 13 >
     au < expected ; 2022 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 14 ; 14 >
 
@@ -541,14 +541,14 @@
     au < doNotProcess ; 2010 ; Extrapolation Volume 51 ; 51 >
     au < doNotProcess ; 2011 ; Extrapolation Volume 52 ; 52 >
     au < doNotProcess ; 2012 ; Extrapolation Volume 53 ; 53 >
-    au < releasing ; 2013 ; Extrapolation Volume 54 ; 54 >
+    au < released ; 2013 ; Extrapolation Volume 54 ; 54 >
     au < doNotProcess ; 2014 ; Extrapolation Volume 55 ; 55 >
     au < doNotProcess ; 2015 ; Extrapolation Volume 56 ; 56 >
     au < doNotProcess ; 2016 ; Extrapolation Volume 57 ; 57 >
     au < doNotProcess ; 2017 ; Extrapolation Volume 58 ; 58 >
     au < doNotProcess ; 2018 ; Extrapolation Volume 59 ; 59 >
     au < doNotProcess ; 2019 ; Extrapolation Volume 60 ; 60 >
-    au < releasing ; 2020 ; Extrapolation Volume 61 ; 61 >
+    au < released ; 2020 ; Extrapolation Volume 61 ; 61 >
     au < manifest ; 2021 ; Extrapolation Volume 62 ; 62 >
     au < expected ; 2022 ; Extrapolation Volume 63 ; 63 >
 
@@ -574,7 +574,7 @@
     au < doNotProcess ; 2017 ; Francosphères Volume 6 ; 6 >
     au < doNotProcess ; 2018 ; Francosphères Volume 7 ; 7 >
     au < doNotProcess ; 2019 ; Francosphères Volume 8 ; 8 >
-    au < releasing ; 2020 ; Francosphères Volume 9 ; 9 >
+    au < released ; 2020 ; Francosphères Volume 9 ; 9 >
     au < manifest ; 2021 ; Francosphères Volume 10 ; 10 >
     au < expected ; 2022 ; Francosphères Volume 11 ; 11 >
 
@@ -627,7 +627,7 @@
     au < doNotProcess ; 2017 ; Historical Studies in Industrial Relations Volume 38 ; 38 >
     au < doNotProcess ; 2018 ; Historical Studies in Industrial Relations Volume 39 ; 39 >
     au < doNotProcess ; 2019 ; Historical Studies in Industrial Relations Volume 40 ; 40 >
-    au < releasing ; 2020 ; Historical Studies in Industrial Relations Volume 41 ; 41 >
+    au < released ; 2020 ; Historical Studies in Industrial Relations Volume 41 ; 41 >
     au < manifest ; 2021 ; Historical Studies in Industrial Relations Volume 42 ; 42 >
     au < expected ; 2022 ; Historical Studies in Industrial Relations Volume 43 ; 43 >
 
@@ -653,7 +653,7 @@
     au < manifest ; 2000 ; The Indexer: The International Journal of Indexing Volume 22 ; 22 >
     au < manifest ; 2002 ; The Indexer: The International Journal of Indexing Volume 23 ; 23 >
     au < manifest ; 2004 ; The Indexer: The International Journal of Indexing Volume 24 ; 24 >
-    au < releasing ; 2006 ; The Indexer: The International Journal of Indexing Volume 25 ; 25 >
+    au < released ; 2006 ; The Indexer: The International Journal of Indexing Volume 25 ; 25 >
     au < doNotProcess ; 2008 ; The Indexer: The International Journal of Indexing Volume 26 ; 26 >
     au < doNotProcess ; 2009 ; The Indexer: The International Journal of Indexing Volume 27 ; 27 >
     au < doNotProcess ; 2010 ; The Indexer: The International Journal of Indexing Volume 28 ; 28 >
@@ -666,7 +666,7 @@
     au < doNotProcess ; 2017 ; The Indexer: The International Journal of Indexing Volume 35 ; 35 >
     au < doNotProcess ; 2018 ; The Indexer: The International Journal of Indexing Volume 36 ; 36 >
     au < doNotProcess ; 2019 ; The Indexer: The International Journal of Indexing Volume 37 ; 37 >
-    au < releasing ; 2020 ; The Indexer: The International Journal of Indexing Volume 38 ; 38 >
+    au < released ; 2020 ; The Indexer: The International Journal of Indexing Volume 38 ; 38 >
     au < manifest ; 2021 ; The Indexer: The International Journal of Indexing Volume 39 ; 39 >
     au < expected ; 2022 ; The Indexer: The International Journal of Indexing Volume 40 ; 40 >
 
@@ -696,14 +696,14 @@
     au < doNotProcess ; 2010 ; International Development Planning Review Volume 32 ; 32 >
     au < doNotProcess ; 2011 ; International Development Planning Review Volume 33 ; 33 >
     au < doNotProcess ; 2012 ; International Development Planning Review Volume 34 ; 34 >
-    au < releasing ; 2013 ; International Development Planning Review Volume 35 ; 35 >
+    au < released ; 2013 ; International Development Planning Review Volume 35 ; 35 >
     au < doNotProcess ; 2014 ; International Development Planning Review Volume 36 ; 36 >
     au < doNotProcess ; 2015 ; International Development Planning Review Volume 37 ; 37 >
     au < doNotProcess ; 2016 ; International Development Planning Review Volume 38 ; 38 >
     au < doNotProcess ; 2017 ; International Development Planning Review Volume 39 ; 39 >
     au < doNotProcess ; 2018 ; International Development Planning Review Volume 40 ; 40 >
     au < doNotProcess ; 2019 ; International Development Planning Review Volume 41 ; 41 >
-    au < releasing ; 2020 ; International Development Planning Review Volume 42 ; 42 >
+    au < released ; 2020 ; International Development Planning Review Volume 42 ; 42 >
     au < manifest ; 2021 ; International Development Planning Review Volume 43 ; 43 >
     au < manifest ; 2022 ; International Development Planning Review Volume 44 ; 44 >
 
@@ -739,7 +739,7 @@
     au < doNotProcess ; 2015 ; Hunter Gatherer Research Volume 1 ; 1 >
     au < doNotProcess ; 2016 ; Hunter Gatherer Research Volume 2 ; 2 >
     au < doNotProcess ; 2017 ; Hunter Gatherer Research Volume 3 ; 3 >
-    au < releasing ; 2018 ; Hunter Gatherer Research Volume 4 ; 4 >
+    au < released ; 2018 ; Hunter Gatherer Research Volume 4 ; 4 >
     }
 
     {
@@ -780,14 +780,14 @@
     au < doNotProcess ; 2010 ; Journal of Literary & Cultural Disability Studies Volume 4 ; 4 >
     au < doNotProcess ; 2011 ; Journal of Literary & Cultural Disability Studies Volume 5 ; 5 >
     au < doNotProcess ; 2012 ; Journal of Literary & Cultural Disability Studies Volume 6 ; 6 >
-    au < releasing ; 2013 ; Journal of Literary & Cultural Disability Studies Volume 7 ; 7 >
+    au < released ; 2013 ; Journal of Literary & Cultural Disability Studies Volume 7 ; 7 >
     au < doNotProcess ; 2014 ; Journal of Literary & Cultural Disability Studies Volume 8 ; 8 >
     au < doNotProcess ; 2015 ; Journal of Literary & Cultural Disability Studies Volume 9 ; 9 >
     au < doNotProcess ; 2016 ; Journal of Literary & Cultural Disability Studies Volume 10 ; 10 >
     au < doNotProcess ; 2017 ; Journal of Literary & Cultural Disability Studies Volume 11 ; 11 >
     au < doNotProcess ; 2018 ; Journal of Literary & Cultural Disability Studies Volume 12 ; 12 >
     au < doNotProcess ; 2019 ; Journal of Literary & Cultural Disability Studies Volume 13 ; 13 >
-    au < releasing ; 2020 ; Journal of Literary & Cultural Disability Studies Volume 14 ; 14 >
+    au < released ; 2020 ; Journal of Literary & Cultural Disability Studies Volume 14 ; 14 >
     au < manifest ; 2021 ; Journal of Literary & Cultural Disability Studies Volume 15 ; 15 >
     au < manifest ; 2022 ; Journal of Literary & Cultural Disability Studies Volume 16 ; 16 >
 
@@ -825,7 +825,7 @@
     au < doNotProcess ; 2017 ; Journal of Romance Studies Volume 17 ; 17 >
     au < doNotProcess ; 2018 ; Journal of Romance Studies Volume 18 ; 18 >
     au < doNotProcess ; 2019 ; Journal of Romance Studies Volume 19 ; 19 >
-    au < releasing ; 2020 ; Journal of Romance Studies Volume 20 ; 20 >
+    au < released ; 2020 ; Journal of Romance Studies Volume 20 ; 20 >
     au < manifest ; 2021 ; Journal of Romance Studies Volume 21 ; 21 >
     au < expected ; 2022 ; Journal of Romance Studies Volume 22 ; 22 >
   }
@@ -955,9 +955,9 @@
     au < doNotProcess ; 2018 ; Labour History: A Journal of Labour and Social History Volume 114 ; 114 >
     au < doNotProcess ; 2018 ; Labour History: A Journal of Labour and Social History Volume 115 ; 115 >
     au < doNotProcess ; 2019 ; Labour History: A Journal of Labour and Social History Volume 116 ; 116 >
-    au < releasing ; 2019 ; Labour History: A Journal of Labour and Social History Volume 117 ; 117 >
-    au < releasing ; 2020 ; Labour History: A Journal of Labour and Social History Volume 118 ; 118 >
-    au < releasing ; 2020 ; Labour History: A Journal of Labour and Social History Volume 119 ; 119 >
+    au < released ; 2019 ; Labour History: A Journal of Labour and Social History Volume 117 ; 117 >
+    au < released ; 2020 ; Labour History: A Journal of Labour and Social History Volume 118 ; 118 >
+    au < released ; 2020 ; Labour History: A Journal of Labour and Social History Volume 119 ; 119 >
     au < manifest ; 2021 ; Labour History: A Journal of Labour and Social History Volume 120 ; 120 >
     au < manifest ; 2021 ; Labour History: A Journal of Labour and Social History Volume 121 ; 121 >
     au < expected ; 2022 ; Labour History: A Journal of Labour and Social History Volume 122 ; 122 >
@@ -989,14 +989,14 @@
     au < doNotProcess ; 2010 ; Labour History Review Volume 75 ; 75 >
     au < doNotProcess ; 2011 ; Labour History Review Volume 76 ; 76 >
     au < doNotProcess ; 2012 ; Labour History Review Volume 77 ; 77 >
-    au < releasing ; 2013 ; Labour History Review Volume 78 ; 78 >
+    au < released ; 2013 ; Labour History Review Volume 78 ; 78 >
     au < doNotProcess ; 2014 ; Labour History Review Volume 79 ; 79 >
     au < doNotProcess ; 2015 ; Labour History Review Volume 80 ; 80 >
     au < doNotProcess ; 2016 ; Labour History Review Volume 81 ; 81 >
     au < doNotProcess ; 2017 ; Labour History Review Volume 82 ; 82 >
     au < doNotProcess ; 2018 ; Labour History Review Volume 83 ; 83 >
     au < doNotProcess ; 2019 ; Labour History Review Volume 84 ; 84 >
-    au < releasing ; 2020 ; Labour History Review Volume 85 ; 85 >
+    au < released ; 2020 ; Labour History Review Volume 85 ; 85 >
     au < manifest ; 2021 ; Labour History Review Volume 86 ; 86 >
     au < expected ; 2022 ; Labour History Review Volume 87 ; 87 >
 
@@ -1260,7 +1260,7 @@
     au < doNotProcess ; 2017 ; Modern Believing Volume 58 ; 58 >
     au < doNotProcess ; 2018 ; Modern Believing Volume 59 ; 59 >
     au < doNotProcess ; 2019 ; Modern Believing Volume 60 ; 60 >
-    au < releasing ; 2020 ; Modern Believing Volume 61 ; 61 >
+    au < released ; 2020 ; Modern Believing Volume 61 ; 61 >
     au < manifest ; 2021 ; Modern Believing Volume 62 ; 62 >
     au < manifest ; 2022 ; Modern Believing Volume 63 ; 63 >
 
@@ -1333,14 +1333,14 @@
     au < doNotProcess ; 2010 ; Music, Sound, and the Moving Image Volume 4 ; 4 >
     au < doNotProcess ; 2011 ; Music, Sound, and the Moving Image Volume 5 ; 5 >
     au < doNotProcess ; 2012 ; Music, Sound, and the Moving Image Volume 6 ; 6 >
-    au < releasing ; 2013 ; Music, Sound, and the Moving Image Volume 7 ; 7 >
+    au < released ; 2013 ; Music, Sound, and the Moving Image Volume 7 ; 7 >
     au < doNotProcess ; 2014 ; Music, Sound, and the Moving Image Volume 8 ; 8 >
     au < doNotProcess ; 2015 ; Music, Sound, and the Moving Image Volume 9 ; 9 >
     au < doNotProcess ; 2016 ; Music, Sound, and the Moving Image Volume 10 ; 10 >
     au < doNotProcess ; 2017 ; Music, Sound, and the Moving Image Volume 11 ; 11 >
     au < doNotProcess ; 2018 ; Music, Sound, and the Moving Image Volume 12 ; 12 >
     au < doNotProcess ; 2019 ; Music, Sound, and the Moving Image Volume 13 ; 13 >
-    au < releasing ; 2020 ; Music, Sound, and the Moving Image Volume 14 ; 14 >
+    au < released ; 2020 ; Music, Sound, and the Moving Image Volume 14 ; 14 >
     au < manifest ; 2021 ; Music, Sound, and the Moving Image Volume 15 ; 15 >
     au < expected ; 2022 ; Music, Sound, and the Moving Image Volume 16 ; 16 >
 
@@ -1389,8 +1389,8 @@
     au < doNotProcess ; 2016-2017 ; Quaker Studies Volume 21 ; 21 >
     au < doNotProcess ; 2017-2018 ; Quaker Studies Volume 22 ; 22 >
     au < doNotProcess ; 2018-2019 ; Quaker Studies Volume 23 ; 23 >
-    au < releasing ; 2019-2020 ; Quaker Studies Volume 24 ; 24 >
-    au < releasing ; 2020-2021 ; Quaker Studies Volume 25 ; 25 >
+    au < released ; 2019-2020 ; Quaker Studies Volume 24 ; 24 >
+    au < released ; 2020-2021 ; Quaker Studies Volume 25 ; 25 >
     au < manifest ; 2021-2022 ; Quaker Studies Volume 26 ; 26 >
     au < expected ; 2022-2023 ; Quaker Studies Volume 27 ; 27 >
 
@@ -1421,14 +1421,14 @@
     au < doNotProcess ; 2010 ; Romani Studies Volume 20 ; 20 >
     au < doNotProcess ; 2011 ; Romani Studies Volume 21 ; 21 >
     au < doNotProcess ; 2012 ; Romani Studies Volume 22 ; 22 >
-    au < releasing ; 2013 ; Romani Studies Volume 23 ; 23 >
+    au < released ; 2013 ; Romani Studies Volume 23 ; 23 >
     au < doNotProcess ; 2014 ; Romani Studies Volume 24 ; 24 >
     au < doNotProcess ; 2015 ; Romani Studies Volume 25 ; 25 >
     au < doNotProcess ; 2016 ; Romani Studies Volume 26 ; 26 >
     au < doNotProcess ; 2017 ; Romani Studies Volume 27 ; 27 >
     au < doNotProcess ; 2018 ; Romani Studies Volume 28 ; 28 >
     au < doNotProcess ; 2019 ; Romani Studies Volume 29 ; 29 >
-    au < releasing ; 2020 ; Romani Studies Volume 30 ; 30 >
+    au < released ; 2020 ; Romani Studies Volume 30 ; 30 >
     au < manifest ; 2021 ; Romani Studies Volume 31 ; 31 >
     au < expected ; 2022 ; Romani Studies Volume 32 ; 32 >
 
@@ -1486,9 +1486,9 @@
     au < doNotProcess ; 2018 ; Quebec Studies Volume 65 ; 65 >
     au < doNotProcess ; 2018 ; Quebec Studies Volume 66 ; 66 >
     au < doNotProcess ; 2019 ; Quebec Studies Volume 67 ; 67 >
-    au < releasing ; 2019 ; Quebec Studies Volume 68 ; 68 >
-    au < releasing ; 2020 ; Quebec Studies Volume 69 ; 69 >
-    au < releasing ; 2020 ; Quebec Studies Volume 70 ; 70 >
+    au < released ; 2019 ; Quebec Studies Volume 68 ; 68 >
+    au < released ; 2020 ; Quebec Studies Volume 69 ; 69 >
+    au < released ; 2020 ; Quebec Studies Volume 70 ; 70 >
     au < manifest ; 2021 ; Quebec Studies Volume 71 ; 71 >
     au < manifest ; 2021 ; Quebec Studies Volume 72 ; 72 >
     au < expected ; 2022 ; Quebec Studies Volume 73 ; 73 >
@@ -1512,14 +1512,14 @@
     au < doNotProcess ; 2010 ; Science Fiction Film and Television Volume 3 ; 3 >
     au < doNotProcess ; 2011 ; Science Fiction Film and Television Volume 4 ; 4 >
     au < doNotProcess ; 2012 ; Science Fiction Film and Television Volume 5 ; 5 >
-    au < releasing ; 2013 ; Science Fiction Film and Television Volume 6 ; 6 >
+    au < released ; 2013 ; Science Fiction Film and Television Volume 6 ; 6 >
     au < doNotProcess ; 2014 ; Science Fiction Film and Television Volume 7 ; 7 >
     au < doNotProcess ; 2015 ; Science Fiction Film and Television Volume 8 ; 8 >
     au < doNotProcess ; 2016 ; Science Fiction Film and Television Volume 9 ; 9 >
     au < doNotProcess ; 2017 ; Science Fiction Film and Television Volume 10 ; 10 >
     au < doNotProcess ; 2018 ; Science Fiction Film and Television Volume 11 ; 11 >
     au < doNotProcess ; 2019 ; Science Fiction Film and Television Volume 12 ; 12 >
-    au < releasing ; 2020 ; Science Fiction Film and Television Volume 13 ; 13 >
+    au < released ; 2020 ; Science Fiction Film and Television Volume 13 ; 13 >
     au < manifest ; 2021 ; Science Fiction Film and Television Volume 14 ; 14 >
     au < manifest ; 2022 ; Science Fiction Film and Television Volume 15 ; 15 >
 
@@ -1548,14 +1548,14 @@
     au < doNotProcess ; 2010 ; Sculpture Journal Volume 19 ; 19 >
     au < doNotProcess ; 2011 ; Sculpture Journal Volume 20 ; 20 >
     au < doNotProcess ; 2012 ; Sculpture Journal Volume 21 ; 21 >
-    au < releasing ; 2013 ; Sculpture Journal Volume 22 ; 22 >
+    au < released ; 2013 ; Sculpture Journal Volume 22 ; 22 >
     au < doNotProcess ; 2014 ; Sculpture Journal Volume 23 ; 23 >
     au < doNotProcess ; 2015 ; Sculpture Journal Volume 24 ; 24 >
     au < doNotProcess ; 2016 ; Sculpture Journal Volume 25 ; 25 >
     au < doNotProcess ; 2017 ; Sculpture Journal Volume 26 ; 26 >
     au < doNotProcess ; 2018 ; Sculpture Journal Volume 27 ; 27 >
     au < doNotProcess ; 2019 ; Sculpture Journal Volume 28 ; 28 >
-    au < releasing ; 2020 ; Sculpture Journal Volume 29 ; 29 >
+    au < released ; 2020 ; Sculpture Journal Volume 29 ; 29 >
     au < manifest ; 2021 ; Sculpture Journal Volume 30 ; 30 >
     au < expected ; 2022 ; Sculpture Journal Volume 31 ; 31 >
 
@@ -1582,7 +1582,7 @@
     au < doNotProcess ; 2017 ; Studia Hibernica Volume 43 ; 43 >
     au < doNotProcess ; 2018 ; Studia Hibernica Volume 44 ; 44 >
     au < doNotProcess ; 2019 ; Studia Hibernica Volume 45 ; 45 >
-    au < releasing ; 2020 ; Studia Hibernica Volume 46 ; 46 >
+    au < released ; 2020 ; Studia Hibernica Volume 46 ; 46 >
     au < manifest ; 2021 ; Studia Hibernica Volume 47 ; 47 >
     au < expected ; 2022 ; Studia Hibernica Volume 48 ; 48 >
 
@@ -1599,8 +1599,8 @@
     #Published 2011-2012
     #title is continued as Theory & Struggle
     
-    au < releasing ; 2011 ; Praxis Volume 154 ; 154 >
-    au < releasing ; 2012 ; Praxis Volume 155 ; 155 >
+    au < released ; 2011 ; Praxis Volume 154 ; 154 >
+    au < released ; 2012 ; Praxis Volume 155 ; 155 >
 
   }
   
@@ -1621,8 +1621,8 @@
     au < doNotProcess ; 2016 ; Theory & Struggle Volume 117 ; 117 >
     au < doNotProcess ; 2017 ; Theory & Struggle Volume 118 ; 118 >
     au < doNotProcess ; 2018 ; Theory & Struggle Volume 119 ; 119 >
-    au < releasing ; 2019 ; Theory & Struggle Volume 120 ; 120 >
-    au < releasing ; 2020 ; Theory & Struggle Volume 121 ; 121 >
+    au < released ; 2019 ; Theory & Struggle Volume 120 ; 120 >
+    au < released ; 2020 ; Theory & Struggle Volume 121 ; 121 >
     au < manifest ; 2021 ; Theory & Struggle Volume 122 ; 122 >
     au < expected ; 2022 ; Theory & Struggle Volume 123 ; 123 >
 
@@ -1745,14 +1745,14 @@
     au < doNotProcess ; 2010 ; Town Planning Review Volume 81 ; 81 >
     au < doNotProcess ; 2011 ; Town Planning Review Volume 82 ; 82 >
     au < doNotProcess ; 2012 ; Town Planning Review Volume 83 ; 83 >
-    au < releasing ; 2013 ; Town Planning Review Volume 84 ; 84 >
+    au < released ; 2013 ; Town Planning Review Volume 84 ; 84 >
     au < doNotProcess ; 2014 ; Town Planning Review Volume 85 ; 85 >
     au < doNotProcess ; 2015 ; Town Planning Review Volume 86 ; 86 >
     au < doNotProcess ; 2016 ; Town Planning Review Volume 87 ; 87 >
     au < doNotProcess ; 2017 ; Town Planning Review Volume 88 ; 88 >
     au < doNotProcess ; 2018 ; Town Planning Review Volume 89 ; 89 >
     au < doNotProcess ; 2019 ; Town Planning Review Volume 90 ; 90 >
-    au < releasing ; 2020 ; Town Planning Review Volume 91 ; 91 >
+    au < released ; 2020 ; Town Planning Review Volume 91 ; 91 >
     au < manifest ; 2021 ; Town Planning Review Volume 92 ; 92 >
     au < manifest ; 2022 ; Town Planning Review Volume 93 ; 93 >
 
@@ -1782,7 +1782,7 @@
     au < doNotProcess ; 2017 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 166 ; 166 >
     au < doNotProcess ; 2018 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 167 ; 167 >
     au < doNotProcess ; 2019 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 168 ; 168 >
-    au < releasing ; 2020 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 169 ; 169 >
+    au < released ; 2020 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 169 ; 169 >
     au < manifest ; 2021 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 170 ; 170 >
     au < expected ; 2022 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 171 ; 171 >
 
