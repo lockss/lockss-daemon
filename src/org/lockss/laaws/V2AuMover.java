@@ -45,10 +45,7 @@ import java.util.*;
 import java.util.concurrent.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import okhttp3.Dispatcher;
-import okhttp3.Interceptor;
-import okhttp3.Request;
-import okhttp3.Response;
+import okhttp3.*;
 import org.apache.commons.codec.binary.Hex;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.ConfigManager;
@@ -650,12 +647,18 @@ public class V2AuMover {
 
             // finish the bulk store, copy all Artifact entries to
             // permanent ArtifactIndex
-            long finishStart = now();
-//             repoCollectionsApiClient.finishAuBulk(collection, auStat.getAuId());
-            log.debug2("finishBulk took " +
-                       StringUtil.timeIntervalToString(now() - finishStart) +
-                       ", " + auStat.getAuName());
+            try {
+              long finishStart = now();
+              repoCollectionsApiClient.handleBulkAuOp(collection,
+                                                      auStat.getAuId(),
+                                                      "finish");
+              log.debug2("finishBulk took " +
+                         StringUtil.timeIntervalToString(now() - finishStart) +
+                         ", " + auStat.getAuName());
 
+            } catch (UnsupportedOperationException e) {
+              log.debug2("finishBulk() not supported");
+            }
             log.debug2("Moving AU state: " + auStat.getAuName());
             long startS = now();
             AuStateMover mover = new AuStateMover(v2Mover, task);
@@ -773,7 +776,11 @@ public class V2AuMover {
     try {
       addActiveAu(au, auStat);
       log.info(auName + ": Moving AU Artifacts...");
-//       repoCollectionsApiClient.startAuBulk(collection, au.getAuId());
+      try {
+        repoCollectionsApiClient.handleBulkAuOp(collection, au.getAuId(), "start");
+      } catch (UnsupportedOperationException e) {
+        log.debug2("startBulk() not supported");
+      }
       enqueueCopyAuContent(au, auStat);
       enqueueCopyAuState(au, auStat);
       if (isVerifyContent && isEnqueueVerify) {
@@ -1025,6 +1032,7 @@ public class V2AuMover {
       // first call is actual call, following are first retries
       int errCode = 0;
       String errMsg = "";
+      String msgPrefix = "Exceeded retries: ";
       while ((response == null || (!response.isSuccessful()) && tryCount < maxRetryCount)) {
         tryCount++;
         try {
@@ -1036,8 +1044,9 @@ public class V2AuMover {
             errCode = response.code();
             errMsg=response.message();
             logErrorBody(response);
-            if (errCode == 401 || errCode == 403) {
+            if (isNonRetryableResponse(errCode)) {
               // no retries
+              msgPrefix = "Unretryable error: ";
               break;
             }
             // close response before retry
@@ -1080,15 +1089,17 @@ public class V2AuMover {
         }
       }
       //We've run out of retries and it is not IOException.
-      String msg = "Exceeded retries: " + errCode + ": " + errMsg;
-      if (errCode == 401 || errCode == 403 || errCode >= 500) {
-        log.debug(msg);
-        terminated = true;
-        response.close();
-        throw new IOException(msg);
+      String msg = msgPrefix + errCode + ": " + errMsg;
+      log.debug(msg);
+      response.close();
+      if (errCode == 501) {
+        throw new UnsupportedOperationException(msg);
       }
-      // last try should proceed as is
-      return chain.proceed(request);
+      throw new IOException(msg);
+    }
+
+    private boolean isNonRetryableResponse(int errCode) {
+      return (errCode == 401 || errCode == 403 || errCode == 501);
     }
   }
 
@@ -1733,14 +1744,16 @@ public class V2AuMover {
   void logErrorBody(Response response) {
     try {
       StringBuilder sb = new StringBuilder();
-        sb.append("Error response returned: ").append(response.code())
-            .append(": ").append(response.message());
-        sb.append(" Headers: ");
-        response.headers().forEach(header -> sb.append(header.getFirst()).append(":").append(header.getSecond()));
-        if(response.body() != null && response.body().contentLength() >0) {
-          sb.append(" body: ").append(response.body().string());
-        }
-      log.warning(sb.toString());
+      sb.append("Error response returned: ").append(response.code())
+        .append(": ").append(response.message());
+      sb.append(", Headers: ");
+      response.headers().forEach(header -> sb.append(header.getFirst()).append(":").append(header.getSecond()));
+      ResponseBody body = response.body();
+      if (body != null) {
+        // XXX Need to parse a json, extract various fields
+        sb.append(", body: ").append(body.string());
+      }
+      log.warning(sb.toString(), new Throwable());
     }
     catch (Exception e) {
       log.error("Exception trying to retrieve error response body", e);
