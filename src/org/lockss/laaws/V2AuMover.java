@@ -904,9 +904,9 @@ public class V2AuMover {
     String v1Url = cu.getUrl();
     String v2Url = null;
     try {
-      v2Url = UrlUtil.normalizeUrl(cu.getProperties().getProperty(CachedUrl.PROPERTY_NODE_URL),
-          au);
-//       v2Url = cu.getProperties().getProperty(CachedUrl.PROPERTY_NODE_URL);
+//       v2Url = UrlUtil.normalizeUrl(cu.getProperties().getProperty(CachedUrl.PROPERTY_NODE_URL),
+//           au);
+      v2Url = cu.getProperties().getProperty(CachedUrl.PROPERTY_NODE_URL);
       if (v2Url == null) {
         v2Url = v1Url;
       }
