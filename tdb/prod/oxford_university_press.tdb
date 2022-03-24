@@ -6835,6 +6835,7 @@
 
     param[journal_id] = g3journal
     #2011 volume 1 to 2020 volume 10 had been processed in Genetics Society of America
+    #https://www.g3journal.org/
 
     au < manifest ; 2021 ; 2021 ; G3: Genes, Genomes, Genetics Volume 11 ; 11 >
     au < manifest ; 2022 ; 2022 ; G3: Genes, Genomes, Genetics Volume 12 ; 12 >
@@ -6852,8 +6853,10 @@
 
     param[journal_id] = genetics
     #1916 volume 1 to 2020 volume 216 had been processed in Genetics Society of America
+    #https://www.genetics.org/
 
     au < manifest ; 2021 ; 2021 ; Genetics Volume 217-219 ; 217-219 >
+    au < exists ; 2022 ; 2022 ; Genetics Volume 220-222 ; 220-222 >
 
   }
 

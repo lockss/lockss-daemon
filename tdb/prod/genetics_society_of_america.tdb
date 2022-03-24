@@ -15,6 +15,7 @@
       eissn = 2160-1836 
     >
     #param[base_url] = http://www.g3journal.org/
+    #move to OUP
 
     au < HighWirePressH20Plugin ; down ; 2011 ; G3: Genes, Genomes, Genetics Volume 1 ; 1 ; http://www.g3journal.org/ >
     au < HighWirePressH20Plugin ; down ; 2012 ; G3: Genes, Genomes, Genetics Volume 2 ; 2 ; http://www.g3journal.org/ >
@@ -41,7 +42,6 @@
     >
     #param[base_url] = http://www.genetics.org/
     #move to OUP
-
 
     au < HighWirePressH20Plugin ; down ; 1916 ; Genetics Volume 1 ; 1 ; http://www.genetics.org/ >
     au < HighWirePressH20Plugin ; down ; 1917 ; Genetics Volume 2 ; 2 ; http://www.genetics.org/ >
