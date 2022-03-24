@@ -6,6 +6,7 @@
 
     pluginPrefix = org.lockss.plugin.highwire.
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] ; param[base_url] >
+    #Moved to OUP
 
   {
 
@@ -15,19 +16,18 @@
     >
     #param[base_url] = http://www.g3journal.org/
 
-
     au < HighWirePressH20Plugin ; down ; 2011 ; G3: Genes, Genomes, Genetics Volume 1 ; 1 ; http://www.g3journal.org/ >
     au < HighWirePressH20Plugin ; down ; 2012 ; G3: Genes, Genomes, Genetics Volume 2 ; 2 ; http://www.g3journal.org/ >
     au < HighWirePressH20Plugin ; down ; 2013 ; G3: Genes, Genomes, Genetics Volume 3 ; 3 ; http://www.g3journal.org/ >
     au < HighWirePressH20Plugin ; down ; 2014 ; G3: Genes, Genomes, Genetics Volume 4 ; 4 ; http://www.g3journal.org/ >
     au < HighWirePressH20Plugin ; down ; 2015 ; G3: Genes, Genomes, Genetics Volume 5 ; 5 ; http://www.g3journal.org/ >
-    au < gensoc.GeneticsSocietyDrupalPlugin ; released ; 2016 ; G3: Genes, Genomes, Genetics Volume 6 ; 6 ; http://www.g3journal.org/ >
-    au < gensoc.GeneticsSocietyDrupalPlugin ; released ; 2017 ; G3: Genes, Genomes, Genetics Volume 7 ; 7 ; http://www.g3journal.org/ >
-    au < gensoc.GeneticsSocietyDrupalPlugin ; released ; 2018 ; G3: Genes, Genomes, Genetics Volume 8 ; 8 ; https://www.g3journal.org/ >
-    au < gensoc.GeneticsSocietyDrupalPlugin ; released ; 2019 ; G3: Genes, Genomes, Genetics Volume 9 ; 9 ; https://www.g3journal.org/ >
-    au < gensoc.GeneticsSocietyDrupalPlugin ; released ; 2020 ; G3: Genes, Genomes, Genetics Volume 10 ; 10 ; https://www.g3journal.org/ >
-    au < gensoc.GeneticsSocietyDrupalPlugin ; expected ; 2021 ; G3: Genes, Genomes, Genetics Volume 11 ; 11 ; https://www.g3journal.org/ >
-    au < gensoc.GeneticsSocietyDrupalPlugin ; expected ; 2022 ; G3: Genes, Genomes, Genetics Volume 12 ; 12 ; https://www.g3journal.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2016 ; G3: Genes, Genomes, Genetics Volume 6 ; 6 ; http://www.g3journal.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2017 ; G3: Genes, Genomes, Genetics Volume 7 ; 7 ; http://www.g3journal.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2018 ; G3: Genes, Genomes, Genetics Volume 8 ; 8 ; https://www.g3journal.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2019 ; G3: Genes, Genomes, Genetics Volume 9 ; 9 ; https://www.g3journal.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2020 ; G3: Genes, Genomes, Genetics Volume 10 ; 10 ; https://www.g3journal.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; doNotProcess ; 2021 ; G3: Genes, Genomes, Genetics Volume 11 ; 11 ; https://www.g3journal.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; doNotProcess ; 2022 ; G3: Genes, Genomes, Genetics Volume 12 ; 12 ; https://www.g3journal.org/ >
 
   }
     
@@ -241,30 +241,30 @@
     au < HighWirePressH20Plugin ; down ; 2014 ; Genetics Volume 196 ; 196 ; http://www.genetics.org/ >
     au < HighWirePressH20Plugin ; down ; 2014 ; Genetics Volume 197 ; 197 ; http://www.genetics.org/ >
     au < HighWirePressH20Plugin ; down ; 2014 ; Genetics Volume 198 ; 198 ; http://www.genetics.org/ >
-    au < gensoc.GeneticsSocietyDrupalPlugin ; released ; 2015 ; Genetics Volume 199 ; 199 ; http://www.genetics.org/ >
-    au < gensoc.GeneticsSocietyDrupalPlugin ; released ; 2015 ; Genetics Volume 200 ; 200 ; http://www.genetics.org/ >
-    au < gensoc.GeneticsSocietyDrupalPlugin ; released ; 2015 ; Genetics Volume 201 ; 201 ; http://www.genetics.org/ >
-    au < gensoc.GeneticsSocietyDrupalPlugin ; released ; 2016 ; Genetics Volume 202 ; 202 ; http://www.genetics.org/ >
-    au < gensoc.GeneticsSocietyDrupalPlugin ; released ; 2016 ; Genetics Volume 203 ; 203 ; http://www.genetics.org/ >
-    au < gensoc.GeneticsSocietyDrupalPlugin ; released ; 2016 ; Genetics Volume 204 ; 204 ; http://www.genetics.org/ >
-    au < gensoc.GeneticsSocietyDrupalPlugin ; released ; 2017 ; Genetics Volume 205 ; 205 ; http://www.genetics.org/ >
-    au < gensoc.GeneticsSocietyDrupalPlugin ; released ; 2017 ; Genetics Volume 206 ; 206 ; http://www.genetics.org/ >
-    au < gensoc.GeneticsSocietyDrupalPlugin ; released ; 2017 ; Genetics Volume 207 ; 207 ; http://www.genetics.org/ >
-    au < gensoc.GeneticsSocietyDrupalPlugin ; released ; 2018 ; Genetics Volume 208 ; 208 ; https://www.genetics.org/ >
-    au < gensoc.GeneticsSocietyDrupalPlugin ; released ; 2018 ; Genetics Volume 209 ; 209 ; https://www.genetics.org/ >
-    au < gensoc.GeneticsSocietyDrupalPlugin ; released ; 2018 ; Genetics Volume 210 ; 210 ; https://www.genetics.org/ >
-    au < gensoc.GeneticsSocietyDrupalPlugin ; released ; 2019 ; Genetics Volume 211 ; 211 ; https://www.genetics.org/ >
-    au < gensoc.GeneticsSocietyDrupalPlugin ; released ; 2019 ; Genetics Volume 212 ; 212 ; https://www.genetics.org/ >
-    au < gensoc.GeneticsSocietyDrupalPlugin ; released ; 2019 ; Genetics Volume 213 ; 213 ; https://www.genetics.org/ >
-    au < gensoc.GeneticsSocietyDrupalPlugin ; released ; 2020 ; Genetics Volume 214 ; 214 ; https://www.genetics.org/ >
-    au < gensoc.GeneticsSocietyDrupalPlugin ; released ; 2020 ; Genetics Volume 215 ; 215 ; https://www.genetics.org/ >
-    au < gensoc.GeneticsSocietyDrupalPlugin ; released ; 2020 ; Genetics Volume 216 ; 216 ; https://www.genetics.org/ >
-    au < gensoc.GeneticsSocietyDrupalPlugin ; expected ; 2021 ; Genetics Volume 217 ; 217 ; https://www.genetics.org/ >
-    au < gensoc.GeneticsSocietyDrupalPlugin ; expected ; 2021 ; Genetics Volume 218 ; 218 ; https://www.genetics.org/ >
-    au < gensoc.GeneticsSocietyDrupalPlugin ; expected ; 2021 ; Genetics Volume 219 ; 219 ; https://www.genetics.org/ >
-    au < gensoc.GeneticsSocietyDrupalPlugin ; expected ; 2022 ; Genetics Volume 220 ; 220 ; https://www.genetics.org/ >
-    au < gensoc.GeneticsSocietyDrupalPlugin ; expected ; 2022 ; Genetics Volume 221 ; 221 ; https://www.genetics.org/ >
-    au < gensoc.GeneticsSocietyDrupalPlugin ; expected ; 2022 ; Genetics Volume 222 ; 222 ; https://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2015 ; Genetics Volume 199 ; 199 ; http://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2015 ; Genetics Volume 200 ; 200 ; http://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2015 ; Genetics Volume 201 ; 201 ; http://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2016 ; Genetics Volume 202 ; 202 ; http://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2016 ; Genetics Volume 203 ; 203 ; http://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2016 ; Genetics Volume 204 ; 204 ; http://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2017 ; Genetics Volume 205 ; 205 ; http://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2017 ; Genetics Volume 206 ; 206 ; http://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2017 ; Genetics Volume 207 ; 207 ; http://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2018 ; Genetics Volume 208 ; 208 ; https://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2018 ; Genetics Volume 209 ; 209 ; https://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2018 ; Genetics Volume 210 ; 210 ; https://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2019 ; Genetics Volume 211 ; 211 ; https://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2019 ; Genetics Volume 212 ; 212 ; https://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2019 ; Genetics Volume 213 ; 213 ; https://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2020 ; Genetics Volume 214 ; 214 ; https://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2020 ; Genetics Volume 215 ; 215 ; https://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2020 ; Genetics Volume 216 ; 216 ; https://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; doNotProcess ; 2021 ; Genetics Volume 217 ; 217 ; https://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; doNotProcess ; 2021 ; Genetics Volume 218 ; 218 ; https://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; doNotProcess ; 2021 ; Genetics Volume 219 ; 219 ; https://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; doNotProcess ; 2022 ; Genetics Volume 220 ; 220 ; https://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; doNotProcess ; 2022 ; Genetics Volume 221 ; 221 ; https://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; doNotProcess ; 2022 ; Genetics Volume 222 ; 222 ; https://www.genetics.org/ >
 
   }
 

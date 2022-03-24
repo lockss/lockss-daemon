@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = American Osteopathic Association
+    name = American Osteopathic Association ;
+    info[platform] = Moved to Degruyter. May need to retire this title.
   >
 
   {
@@ -16,12 +17,11 @@
 
     {
     
-    plugin = org.lockss.plugin.silverchair.SilverchairJournalsPlugin
+    plugin = needs.plugin
     implicit < status ; year ; name ; param[year] >
-    param[base_url] = http://jaoa.org/
-    param[resource_id] = 180
-    
-    comment[moved] = changed url, moved to Silverchair.
+    param[base_url] = https://www.degruyter.com/
+    param[journal_id] = jom
+    #Moved to Degruyter https://www.degruyter.com/journal/key/jom/html. Also wordpress https://jom.osteopathic.org/
 
     au < exists ; 2013 ; JAOA: Journal of the American Osteopathic Association Volume 113 ; 2013 >
     au < exists ; 2014 ; JAOA: Journal of the American Osteopathic Association Volume 114 ; 2014 >

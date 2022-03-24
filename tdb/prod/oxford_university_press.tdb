@@ -5124,6 +5124,7 @@
     >
 
     param[journal_id] = envhis
+    #Moved to U of Chicago
 
     au < doNotProcess ; 1996 ; 1996 ; Environmental History Volume 1 ; 1 >
     au < doNotProcess ; 1997 ; 1997 ; Environmental History Volume 2 ; 2 >
@@ -5132,11 +5133,11 @@
     au < doNotProcess ; 2000 ; 2000 ; Environmental History Volume 5 ; 5 >
     au < doNotProcess ; 2001 ; 2001 ; Environmental History Volume 6 ; 6 >
     au < doNotProcess ; 2002 ; 2002 ; Environmental History Volume 7 ; 7 >
-    au < exists ; 2003 ; 2003 ; Environmental History Volume 8 ; 8 >
-    au < exists ; 2004 ; 2004 ; Environmental History Volume 9 ; 9 >
-    au < exists ; 2005 ; 2005 ; Environmental History Volume 10 ; 10 >
-    au < exists ; 2006 ; 2006 ; Environmental History Volume 11 ; 11 >
-    au < exists ; 2007 ; 2007 ; Environmental History Volume 12 ; 12 >
+    au < doNotProcess ; 2003 ; 2003 ; Environmental History Volume 8 ; 8 >
+    au < doNotProcess ; 2004 ; 2004 ; Environmental History Volume 9 ; 9 >
+    au < doNotProcess ; 2005 ; 2005 ; Environmental History Volume 10 ; 10 >
+    au < doNotProcess ; 2006 ; 2006 ; Environmental History Volume 11 ; 11 >
+    au < doNotProcess ; 2007 ; 2007 ; Environmental History Volume 12 ; 12 >
     au < doNotProcess ; 2008 ; 2008 ; Environmental History Volume 13 ; 13 >
     au < doNotProcess ; 2009 ; 2009 ; Environmental History Volume 14 ; 14 >
     au < doNotProcess ; 2010 ; 2010 ; Environmental History Volume 15 ; 15 >
@@ -5145,13 +5146,13 @@
     au < doNotProcess ; 2013 ; 2013 ; Environmental History Volume 18 ; 18 >
     au < doNotProcess ; 2014 ; 2014 ; Environmental History Volume 19 ; 19 >
     au < doNotProcess ; 2015 ; 2015 ; Environmental History Volume 20 ; 20 >
-    au < released ; 2016 ; 2016 ; Environmental History Volume 21 ; 21 >
-    au < released ; 2017 ; 2017 ; Environmental History Volume 22 ; 22 >
-    au < released ; 2018 ; 2018 ; Environmental History Volume 23 ; 23 >
-    au < released ; 2019 ; 2019 ; Environmental History Volume 24 ; 24 >
-    au < released ; 2020 ; 2020 ; Environmental History Volume 25 ; 25 >
-    au < manifest ; 2021 ; 2021 ; Environmental History Volume 26 ; 26 >
-    au < expected ; 2022 ; 2022 ; Environmental History Volume 27 ; 27 >
+    au < down ; 2016 ; 2016 ; Environmental History Volume 21 ; 21 >
+    au < down ; 2017 ; 2017 ; Environmental History Volume 22 ; 22 >
+    au < down ; 2018 ; 2018 ; Environmental History Volume 23 ; 23 >
+    au < down ; 2019 ; 2019 ; Environmental History Volume 24 ; 24 >
+    au < down ; 2020 ; 2020 ; Environmental History Volume 25 ; 25 >
+    au < doNotProcess ; 2021 ; 2021 ; Environmental History Volume 26 ; 26 >
+    au < doNotProcess ; 2022 ; 2022 ; Environmental History Volume 27 ; 27 >
 
   }
 
@@ -13146,7 +13147,8 @@
     >
 
     param[journal_id] = jicru
-    #this title was ONLY in the publisher listing. Moved to Sage after 2014.
+    #this title was ONLY in the publisher listing. 
+    #Moved to Sage after 2014.
 
     au < doNotProcess ; 1961 ; 1961 ; Journal of the ICRU Volume os5 ; os5 >
     au < doNotProcess ; 1964 ; 1964 ; Journal of the ICRU Volume os6 ; os6 >
@@ -13178,18 +13180,18 @@
     au < doNotProcess ; 2000 ; 2000 ; Journal of the ICRU Volume os32 [2000] ; os32 >
     au < doNotProcess ; 2001 ; 2001 ; Journal of the ICRU Volume 1 ; 1 >
     au < doNotProcess ; 2002 ; 2002 ; Journal of the ICRU Volume 2 ; 2 >
-    au < exists ; 2003 ; 2003 ; Journal of the ICRU Volume 3 ; 3 >
-    au < exists ; 2004 ; 2004 ; Journal of the ICRU Volume 4 ; 4 >
-    au < exists ; 2005 ; 2005 ; Journal of the ICRU Volume 5 ; 5 >
-    au < exists ; 2006 ; 2006 ; Journal of the ICRU Volume 6 ; 6 >
-    au < exists ; 2007 ; 2007 ; Journal of the ICRU Volume 7 ; 7 >
-    au < released ; 2008 ; 2008 ; Journal of the ICRU Volume 8 ; 8 >
-    au < released ; 2009 ; 2009 ; Journal of the ICRU Volume 9 ; 9 >
-    au < released ; 2010 ; 2010 ; Journal of the ICRU Volume 10 ; 10 >
-    au < released ; 2011 ; 2011 ; Journal of the ICRU Volume 11 ; 11 >
-    au < released ; 2012 ; 2012 ; Journal of the ICRU Volume 12 ; 12 >
-    au < released ; 2013 ; 2013 ; Journal of the ICRU Volume 13 ; 13 >
-    au < released ; 2014 ; 2014 ; Journal of the ICRU Volume 14 ; 14 >
+    au < doNotProcess ; 2003 ; 2003 ; Journal of the ICRU Volume 3 ; 3 >
+    au < doNotProcess ; 2004 ; 2004 ; Journal of the ICRU Volume 4 ; 4 >
+    au < doNotProcess ; 2005 ; 2005 ; Journal of the ICRU Volume 5 ; 5 >
+    au < doNotProcess ; 2006 ; 2006 ; Journal of the ICRU Volume 6 ; 6 >
+    au < doNotProcess ; 2007 ; 2007 ; Journal of the ICRU Volume 7 ; 7 >
+    au < down ; 2008 ; 2008 ; Journal of the ICRU Volume 8 ; 8 >
+    au < down ; 2009 ; 2009 ; Journal of the ICRU Volume 9 ; 9 >
+    au < down ; 2010 ; 2010 ; Journal of the ICRU Volume 10 ; 10 >
+    au < down ; 2011 ; 2011 ; Journal of the ICRU Volume 11 ; 11 >
+    au < down ; 2012 ; 2012 ; Journal of the ICRU Volume 12 ; 12 >
+    au < down ; 2013 ; 2013 ; Journal of the ICRU Volume 13 ; 13 >
+    au < down ; 2014 ; 2014 ; Journal of the ICRU Volume 14 ; 14 >
 
   }
 
@@ -14857,25 +14859,25 @@
     au < doNotProcess ; 2000 ; 2000 ; Neurosurgery Volume 46-47 ; 46-47 >
     au < doNotProcess ; 2001 ; 2001 ; Neurosurgery Volume 48-49 ; 48-49 >
     au < doNotProcess ; 2002 ; 2002 ; Neurosurgery Volume 50-51 ; 50-51 >
-    au < exists ; 2003 ; 2003 ; Neurosurgery Volume 52-53 ; 52-53 >
-    au < exists ; 2004 ; 2004 ; Neurosurgery Volume 54-55 ; 54-55 >
-    au < exists ; 2005 ; 2005 ; Neurosurgery Volume 56-57 ; 56-57 >
-    au < exists ; 2006 ; 2006 ; Neurosurgery Volume 58-59 ; 58-59 >
-    au < exists ; 2007 ; 2007 ; Neurosurgery Volume 60-61 ; 60-61 >
-    au < released ; 2008 ; 2008 ; Neurosurgery Volume 62-63 ; 62-63 >
-    au < released ; 2009 ; 2009 ; Neurosurgery Volume 64-65 ; 64-65 >
-    au < released ; 2010 ; 2010 ; Neurosurgery Volume 66-67 ; 66-67 >
-    au < released ; 2011 ; 2011 ; Neurosurgery Volume 58,68-69 ; 58,68-69 >
-    au < released ; 2012 ; 2012 ; Neurosurgery Volume 59,70-71 ; 59,70-71 > #403 forbidden on an article. https://academic.oup.com/neurosurgery/article-pdf/70/2/306/30234209/neurosurgery-70-2-306.pdf
-    au < released ; 2013 ; 2013 ; Neurosurgery Volume 60,72-73 ; 60,72-73 >
-    au < released ; 2014 ; 2014 ; Neurosurgery Volume 61,74-75 ; 61,74-75 >
-    au < released ; 2015 ; 2015 ; Neurosurgery Volume 62,76-77 ; 62,76-77 >
-    au < released ; 2016 ; 2016 ; Neurosurgery Volume 63,78-79 ; 63,78-79 >
-    au < released ; 2017 ; 2017 ; Neurosurgery Volume 64,80-81 ; 64,80-81 >
-    au < released ; 2018 ; 2018 ; Neurosurgery Volume 82-83 ; 82-83 >
-    au < released ; 2019 ; 2019 ; Neurosurgery Volume 84-85 ; 84-85 >
-    au < released ; 2020 ; 2020 ; Neurosurgery Volume 86-87 ; 86-87 >
-    au < manifest ; 2021 ; 2021 ; Neurosurgery Volume 88-89 ; 88-89 >
+    au < doNotProcess ; 2003 ; 2003 ; Neurosurgery Volume 52-53 ; 52-53 >
+    au < doNotProcess ; 2004 ; 2004 ; Neurosurgery Volume 54-55 ; 54-55 >
+    au < doNotProcess ; 2005 ; 2005 ; Neurosurgery Volume 56-57 ; 56-57 >
+    au < doNotProcess ; 2006 ; 2006 ; Neurosurgery Volume 58-59 ; 58-59 >
+    au < doNotProcess ; 2007 ; 2007 ; Neurosurgery Volume 60-61 ; 60-61 >
+    au < down ; 2008 ; 2008 ; Neurosurgery Volume 62-63 ; 62-63 >
+    au < down ; 2009 ; 2009 ; Neurosurgery Volume 64-65 ; 64-65 >
+    au < down ; 2010 ; 2010 ; Neurosurgery Volume 66-67 ; 66-67 >
+    au < down ; 2011 ; 2011 ; Neurosurgery Volume 58,68-69 ; 58,68-69 >
+    au < down ; 2012 ; 2012 ; Neurosurgery Volume 59,70-71 ; 59,70-71 > #403 forbidden on an article. https://academic.oup.com/neurosurgery/article-pdf/70/2/306/30234209/neurosurgery-70-2-306.pdf
+    au < down ; 2013 ; 2013 ; Neurosurgery Volume 60,72-73 ; 60,72-73 >
+    au < down ; 2014 ; 2014 ; Neurosurgery Volume 61,74-75 ; 61,74-75 >
+    au < down ; 2015 ; 2015 ; Neurosurgery Volume 62,76-77 ; 62,76-77 >
+    au < down ; 2016 ; 2016 ; Neurosurgery Volume 63,78-79 ; 63,78-79 >
+    au < down ; 2017 ; 2017 ; Neurosurgery Volume 64,80-81 ; 64,80-81 >
+    au < down ; 2018 ; 2018 ; Neurosurgery Volume 82-83 ; 82-83 >
+    au < down ; 2019 ; 2019 ; Neurosurgery Volume 84-85 ; 84-85 >
+    au < down ; 2020 ; 2020 ; Neurosurgery Volume 86-87 ; 86-87 >
+    au < doNotProcess ; 2021 ; 2021 ; Neurosurgery Volume 88-89 ; 88-89 >
 
   }
 
@@ -15485,24 +15487,24 @@
     #this title was ONLY in the publisher listing
     #move to Medknow 2022
 
-    au < exists ; 2005 ; 2005 ; Operative Neurosurgery Volume 56 ; 56 >
-    au < exists ; 2006 ; 2006 ; Operative Neurosurgery Volume 58 ; 58 >
-    au < exists ; 2007 ; 2007 ; Operative Neurosurgery Volume 60 ; 60 >
-    au < released ; 2008 ; 2008 ; Operative Neurosurgery Volume 62 ; 62 >
-    au < released ; 2009 ; 2009 ; Operative Neurosurgery Volume 64 ; 64 >
-    au < released ; 2010 ; 2010 ; Operative Neurosurgery Volume 66 ; 66 >
-    au < released ; 2011 ; 2011 ; Operative Neurosurgery Volume 68 ; 68 >
-    au < released ; 2012 ; 2012 ; Operative Neurosurgery Volume 70 ; 70 >
-    au < released ; 2013 ; 2013 ; Operative Neurosurgery Volume 72 ; 72 >
-    au < released ; 2014 ; 2014 ; Operative Neurosurgery Volume 10 ; 10 >
-    au < released ; 2015 ; 2015 ; Operative Neurosurgery Volume 11 ; 11 >
-    au < released ; 2016 ; 2016 ; Operative Neurosurgery Volume 12 ; 12 >
-    au < released ; 2017 ; 2017 ; Operative Neurosurgery Volume 13 ; 13 >
-    au < released ; 2018 ; 2018 ; Operative Neurosurgery Volume 14 ; 14 >
-    au < released ; 2019 ; 2019 ; Operative Neurosurgery Volume 15 ; 15 >
-    au < manifest ; 2020 ; 2020 ; Operative Neurosurgery Volume 16 ; 16 >
-    au < manifest ; 2021 ; 2021 ; Operative Neurosurgery Volume 17 ; 17 >
-    au < expected ; 2022 ; 2022 ; Operative Neurosurgery Volume 18 ; 18 >
+    au < doNotProcess ; 2005 ; 2005 ; Operative Neurosurgery Volume 56 ; 56 >
+    au < doNotProcess ; 2006 ; 2006 ; Operative Neurosurgery Volume 58 ; 58 >
+    au < doNotProcess ; 2007 ; 2007 ; Operative Neurosurgery Volume 60 ; 60 >
+    au < down ; 2008 ; 2008 ; Operative Neurosurgery Volume 62 ; 62 >
+    au < down ; 2009 ; 2009 ; Operative Neurosurgery Volume 64 ; 64 >
+    au < down ; 2010 ; 2010 ; Operative Neurosurgery Volume 66 ; 66 >
+    au < down ; 2011 ; 2011 ; Operative Neurosurgery Volume 68 ; 68 >
+    au < down ; 2012 ; 2012 ; Operative Neurosurgery Volume 70 ; 70 >
+    au < down ; 2013 ; 2013 ; Operative Neurosurgery Volume 72 ; 72 >
+    au < down ; 2014 ; 2014 ; Operative Neurosurgery Volume 10 ; 10 >
+    au < down ; 2015 ; 2015 ; Operative Neurosurgery Volume 11 ; 11 >
+    au < down ; 2016 ; 2016 ; Operative Neurosurgery Volume 12 ; 12 >
+    au < down ; 2017 ; 2017 ; Operative Neurosurgery Volume 13 ; 13 >
+    au < down ; 2018 ; 2018 ; Operative Neurosurgery Volume 14 ; 14 >
+    au < down ; 2019 ; 2019 ; Operative Neurosurgery Volume 15 ; 15 >
+    au < doNotProcess ; 2020 ; 2020 ; Operative Neurosurgery Volume 16 ; 16 >
+    au < doNotProcess ; 2021 ; 2021 ; Operative Neurosurgery Volume 17 ; 17 >
+    au < doNotProcess ; 2022 ; 2022 ; Operative Neurosurgery Volume 18 ; 18 >
 
   }
 
