@@ -14,8 +14,6 @@
       issnl = 1090-0535
     >
     
-    #plugin needs update. see lxq-1699
-    #platform changed. Plugin down.
     {
     plugin = org.molvis.plugin.MolecularVisionPlugin
     param[base_url] = http://www.molvis.org/
@@ -25,12 +23,12 @@
 
     au < released ; 2013 ; Molecular Vision Volume 19 ; 19 >
     au < released ; 2014 ; Molecular Vision Volume 20 ; 20 >
-    au < exists ; 2015 ; Molecular Vision Volume 21 ; 21 >
-    au < exists ; 2016 ; Molecular Vision Volume 22 ; 22 >
-    au < exists ; 2017 ; Molecular Vision Volume 23 ; 23 >
-    au < exists ; 2018 ; Molecular Vision Volume 24 ; 24 >
-    au < exists ; 2019 ; Molecular Vision Volume 25 ; 25 >
-    au < exists ; 2020 ; Molecular Vision Volume 26 ; 26 >
+    au < manifest ; 2015 ; Molecular Vision Volume 21 ; 21 >
+    au < manifest ; 2016 ; Molecular Vision Volume 22 ; 22 >
+    au < manifest ; 2017 ; Molecular Vision Volume 23 ; 23 >
+    au < manifest ; 2018 ; Molecular Vision Volume 24 ; 24 >
+    au < manifest ; 2019 ; Molecular Vision Volume 25 ; 25 >
+    au < manifest ; 2020 ; Molecular Vision Volume 26 ; 26 >
     au < expected ; 2021 ; Molecular Vision Volume 27 ; 27 >
     au < expected ; 2022 ; Molecular Vision Volume 28 ; 28 >
     }
