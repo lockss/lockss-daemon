@@ -19,18 +19,18 @@
     
     param[journal_abbr] = abo
 
-    au < released ; 2011 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 1 ; 1 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2012 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 2 ; 2 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2013 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 3 ; 3 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2014 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 4 ; 4 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2015 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 5 ; 5 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2016 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 6 ; 6 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2017 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 7 ; 7 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2018 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 8 ; 8 ; https://scholarcommons.usf.edu/ >
-    au < released ; 2019 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 9 ; 9 ; https://scholarcommons.usf.edu/ >
-    au < released ; 2020 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 10 ; 10 ; https://scholarcommons.usf.edu/ >
-    au < testing ; 2021 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 11 ; 11 ; https://scholarcommons.usf.edu/ >
-    au < expected ; 2022 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 12 ; 12 ; https://scholarcommons.usf.edu/ >
+    au < down ; 2011 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 1 ; 1 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2012 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 2 ; 2 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2013 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 3 ; 3 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2014 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 4 ; 4 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2015 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 5 ; 5 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2016 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 6 ; 6 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2017 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 7 ; 7 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2018 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 8 ; 8 ; https://scholarcommons.usf.edu/ >
+    au < down ; 2019 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 9 ; 9 ; https://scholarcommons.usf.edu/ >
+    au < down ; 2020 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 10 ; 10 ; https://scholarcommons.usf.edu/ >
+    au < manifest ; 2021 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 11 ; 11 ; https://digitalcommons.usf.edu/ >
+    au < expected ; 2022 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 12 ; 12 ; https://digitalcommons.usf.edu/ >
 
   }
 
@@ -44,16 +44,16 @@
     
     param[journal_abbr] = alambique
 
-    au < released ; 2013 ; Alambique Volume 1 ; 1 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2014 ; Alambique Volume 2 ; 2 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2015 ; Alambique Volume 3 ; 3 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2016 ; Alambique Volume 4 ; 4 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2017 ; Alambique Volume 5 ; 5 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2018 ; Alambique Volume 6 ; 6 ; https://scholarcommons.usf.edu/ >
-    au < released ; 2019 ; Alambique Volume 7 ; 7 ; https://scholarcommons.usf.edu/ >
-    au < expected ; 2020 ; Alambique Volume 8 ; 8 ; https://scholarcommons.usf.edu/ >
-    au < expected ; 2021 ; Alambique Volume 9 ; 9 ; https://scholarcommons.usf.edu/ >
-    au < expected ; 2022 ; Alambique Volume 10 ; 10 ; https://scholarcommons.usf.edu/ >
+    au < down ; 2013 ; Alambique Volume 1 ; 1 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2014 ; Alambique Volume 2 ; 2 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2015 ; Alambique Volume 3 ; 3 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2016 ; Alambique Volume 4 ; 4 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2017 ; Alambique Volume 5 ; 5 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2018 ; Alambique Volume 6 ; 6 ; https://scholarcommons.usf.edu/ >
+    au < down ; 2019 ; Alambique Volume 7 ; 7 ; https://scholarcommons.usf.edu/ >
+    au < manifest ; 2020 ; Alambique Volume 8 ; 8 ; https://digitalcommons.usf.edu/ >
+    au < expected ; 2021 ; Alambique Volume 9 ; 9 ; https://digitalcommons.usf.edu/ >
+    au < expected ; 2022 ; Alambique Volume 10 ; 10 ; https://digitalcommons.usf.edu/ >
 
   }
 
@@ -68,22 +68,22 @@
 
     param[journal_abbr] = gsp
 
-    au < released ; 2006 ; Genocide Studies and Prevention Volume 1 ; 1 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2007 ; Genocide Studies and Prevention Volume 2 ; 2 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2008 ; Genocide Studies and Prevention Volume 3 ; 3 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2009 ; Genocide Studies and Prevention Volume 4 ; 4 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2010 ; Genocide Studies and Prevention Volume 5 ; 5 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2011 ; Genocide Studies and Prevention Volume 6 ; 6 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2012 ; Genocide Studies and Prevention Volume 7 ; 7 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2014 ; Genocide Studies and Prevention Volume 8 ; 8 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2015 ; Genocide Studies and Prevention Volume 9 ; 9 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2016 ; Genocide Studies and Prevention Volume 10 ; 10 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2017 ; Genocide Studies and Prevention Volume 11 ; 11 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2018 ; Genocide Studies and Prevention Volume 12 ; 12 ; https://scholarcommons.usf.edu/ >
-    au < released ; 2019 ; Genocide Studies and Prevention Volume 13 ; 13 ; https://scholarcommons.usf.edu/ >
-    au < released ; 2020 ; Genocide Studies and Prevention Volume 14 ; 14 ; https://scholarcommons.usf.edu/ >
-    au < testing ; 2021 ; Genocide Studies and Prevention Volume 15 ; 15 ; https://scholarcommons.usf.edu/ >
-    au < expected ; 2022 ; Genocide Studies and Prevention Volume 16 ; 16 ; https://scholarcommons.usf.edu/ >
+    au < down ; 2006 ; Genocide Studies and Prevention Volume 1 ; 1 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2007 ; Genocide Studies and Prevention Volume 2 ; 2 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2008 ; Genocide Studies and Prevention Volume 3 ; 3 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2009 ; Genocide Studies and Prevention Volume 4 ; 4 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2010 ; Genocide Studies and Prevention Volume 5 ; 5 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2011 ; Genocide Studies and Prevention Volume 6 ; 6 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2012 ; Genocide Studies and Prevention Volume 7 ; 7 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2014 ; Genocide Studies and Prevention Volume 8 ; 8 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2015 ; Genocide Studies and Prevention Volume 9 ; 9 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2016 ; Genocide Studies and Prevention Volume 10 ; 10 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2017 ; Genocide Studies and Prevention Volume 11 ; 11 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2018 ; Genocide Studies and Prevention Volume 12 ; 12 ; https://scholarcommons.usf.edu/ >
+    au < down ; 2019 ; Genocide Studies and Prevention Volume 13 ; 13 ; https://scholarcommons.usf.edu/ >
+    au < down ; 2020 ; Genocide Studies and Prevention Volume 14 ; 14 ; https://scholarcommons.usf.edu/ >
+    au < manifest ; 2021 ; Genocide Studies and Prevention Volume 15 ; 15 ; https://digitalcommons.usf.edu/ >
+    au < expected ; 2022 ; Genocide Studies and Prevention Volume 16 ; 16 ; https://digitalcommons.usf.edu/ >
 
   }
 
@@ -99,30 +99,30 @@
     param[journal_abbr] = jea
     # titles changed in 2000
 
-    au < released ; 1997 ; Georgia Journal of Ecological Anthropology Volume 1 ; 1 ; http://scholarcommons.usf.edu/ >
-    au < released ; 1998 ; Georgia Journal of Ecological Anthropology Volume 2 ; 2 ; http://scholarcommons.usf.edu/ >
-    au < released ; 1999 ; Georgia Journal of Ecological Anthropology Volume 3 ; 3 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2000 ; Journal of Ecological Anthropology Volume 4 ; 4 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2001 ; Journal of Ecological Anthropology Volume 5 ; 5 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2002 ; Journal of Ecological Anthropology Volume 6 ; 6 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2003 ; Journal of Ecological Anthropology Volume 7 ; 7 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2004 ; Journal of Ecological Anthropology Volume 8 ; 8 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2005 ; Journal of Ecological Anthropology Volume 9 ; 9 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2006 ; Journal of Ecological Anthropology Volume 10 ; 10 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2007 ; Journal of Ecological Anthropology Volume 11 ; 11 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2008 ; Journal of Ecological Anthropology Volume 12 ; 12 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2009 ; Journal of Ecological Anthropology Volume 13 ; 13 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2010 ; Journal of Ecological Anthropology Volume 14 ; 14 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2012 ; Journal of Ecological Anthropology Volume 15 ; 15 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2013 ; Journal of Ecological Anthropology Volume 16 ; 16 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2014-2015 ; Journal of Ecological Anthropology Volume 17 ; 17 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2016 ; Journal of Ecological Anthropology Volume 18 ; 18 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2017 ; Journal of Ecological Anthropology Volume 19 ; 19 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2018 ; Journal of Ecological Anthropology Volume 20 ; 20 ; https://scholarcommons.usf.edu/ >
-    au < released ; 2019 ; Journal of Ecological Anthropology Volume 21 ; 21 ; https://scholarcommons.usf.edu/ >
-    au < released ; 2020 ; Journal of Ecological Anthropology Volume 22 ; 22 ; https://scholarcommons.usf.edu/ >
-    au < expected ; 2021 ; Journal of Ecological Anthropology Volume 23 ; 23 ; https://scholarcommons.usf.edu/ >
-    au < expected ; 2022 ; Journal of Ecological Anthropology Volume 24 ; 24 ; https://scholarcommons.usf.edu/ >
+    au < down ; 1997 ; Georgia Journal of Ecological Anthropology Volume 1 ; 1 ; http://scholarcommons.usf.edu/ >
+    au < down ; 1998 ; Georgia Journal of Ecological Anthropology Volume 2 ; 2 ; http://scholarcommons.usf.edu/ >
+    au < down ; 1999 ; Georgia Journal of Ecological Anthropology Volume 3 ; 3 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2000 ; Journal of Ecological Anthropology Volume 4 ; 4 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2001 ; Journal of Ecological Anthropology Volume 5 ; 5 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2002 ; Journal of Ecological Anthropology Volume 6 ; 6 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2003 ; Journal of Ecological Anthropology Volume 7 ; 7 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2004 ; Journal of Ecological Anthropology Volume 8 ; 8 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2005 ; Journal of Ecological Anthropology Volume 9 ; 9 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2006 ; Journal of Ecological Anthropology Volume 10 ; 10 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2007 ; Journal of Ecological Anthropology Volume 11 ; 11 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2008 ; Journal of Ecological Anthropology Volume 12 ; 12 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2009 ; Journal of Ecological Anthropology Volume 13 ; 13 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2010 ; Journal of Ecological Anthropology Volume 14 ; 14 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2012 ; Journal of Ecological Anthropology Volume 15 ; 15 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2013 ; Journal of Ecological Anthropology Volume 16 ; 16 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2014-2015 ; Journal of Ecological Anthropology Volume 17 ; 17 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2016 ; Journal of Ecological Anthropology Volume 18 ; 18 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2017 ; Journal of Ecological Anthropology Volume 19 ; 19 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2018 ; Journal of Ecological Anthropology Volume 20 ; 20 ; https://scholarcommons.usf.edu/ >
+    au < down ; 2019 ; Journal of Ecological Anthropology Volume 21 ; 21 ; https://scholarcommons.usf.edu/ >
+    au < down ; 2020 ; Journal of Ecological Anthropology Volume 22 ; 22 ; https://scholarcommons.usf.edu/ >
+    au < expected ; 2021 ; Journal of Ecological Anthropology Volume 23 ; 23 ; https://digitalcommons.usf.edu/ >
+    au < expected ; 2022 ; Journal of Ecological Anthropology Volume 24 ; 24 ; https://digitalcommons.usf.edu/ >
 
   }
 
@@ -137,27 +137,27 @@
 
     param[journal_abbr] = jpt
 
-    au < released ; 2002 ; Journal of Public Transportation Volume 5 ; 5 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2003 ; Journal of Public Transportation Volume 6 ; 6 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2004 ; Journal of Public Transportation Volume 7 ; 7 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2005 ; Journal of Public Transportation Volume 8 ; 8 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2006 ; Journal of Public Transportation Volume 9 ; 9 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2007 ; Journal of Public Transportation Volume 10 ; 10 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2008 ; Journal of Public Transportation Volume 11 ; 11 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2009 ; Journal of Public Transportation Volume 12 ; 12 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2010 ; Journal of Public Transportation Volume 13 ; 13 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2011 ; Journal of Public Transportation Volume 14 ; 14 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2012 ; Journal of Public Transportation Volume 15 ; 15 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2013 ; Journal of Public Transportation Volume 16 ; 16 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2014 ; Journal of Public Transportation Volume 17 ; 17 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2015 ; Journal of Public Transportation Volume 18 ; 18 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2016 ; Journal of Public Transportation Volume 19 ; 19 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2017 ; Journal of Public Transportation Volume 20 ; 20 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2018 ; Journal of Public Transportation Volume 21 ; 21 ; https://scholarcommons.usf.edu/ >
-    au < released ; 2019 ; Journal of Public Transportation Volume 22 ; 22 ; https://scholarcommons.usf.edu/ >
-    au < released ; 2020 ; Journal of Public Transportation Volume 23 ; 23 ; https://scholarcommons.usf.edu/ >
-    au < expected ; 2021 ; Journal of Public Transportation Volume 24 ; 24 ; https://scholarcommons.usf.edu/ >
-    au < expected ; 2022 ; Journal of Public Transportation Volume 25 ; 25 ; https://scholarcommons.usf.edu/ >
+    au < down ; 2002 ; Journal of Public Transportation Volume 5 ; 5 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2003 ; Journal of Public Transportation Volume 6 ; 6 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2004 ; Journal of Public Transportation Volume 7 ; 7 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2005 ; Journal of Public Transportation Volume 8 ; 8 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2006 ; Journal of Public Transportation Volume 9 ; 9 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2007 ; Journal of Public Transportation Volume 10 ; 10 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2008 ; Journal of Public Transportation Volume 11 ; 11 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2009 ; Journal of Public Transportation Volume 12 ; 12 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2010 ; Journal of Public Transportation Volume 13 ; 13 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2011 ; Journal of Public Transportation Volume 14 ; 14 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2012 ; Journal of Public Transportation Volume 15 ; 15 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2013 ; Journal of Public Transportation Volume 16 ; 16 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2014 ; Journal of Public Transportation Volume 17 ; 17 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2015 ; Journal of Public Transportation Volume 18 ; 18 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2016 ; Journal of Public Transportation Volume 19 ; 19 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2017 ; Journal of Public Transportation Volume 20 ; 20 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2018 ; Journal of Public Transportation Volume 21 ; 21 ; https://scholarcommons.usf.edu/ >
+    au < down ; 2019 ; Journal of Public Transportation Volume 22 ; 22 ; https://scholarcommons.usf.edu/ >
+    au < down ; 2020 ; Journal of Public Transportation Volume 23 ; 23 ; https://scholarcommons.usf.edu/ >
+    au < expected ; 2021 ; Journal of Public Transportation Volume 24 ; 24 ; https://digitalcommons.usf.edu/ >
+    au < expected ; 2022 ; Journal of Public Transportation Volume 25 ; 25 ; https://digitalcommons.usf.edu/ >
 
   }
 
@@ -171,21 +171,21 @@
 
     param[journal_abbr] = numeracy
 
-    au < released ; 2008 ; Numeracy Volume 1 ; 1 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2009 ; Numeracy Volume 2 ; 2 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2010 ; Numeracy Volume 3 ; 3 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2011 ; Numeracy Volume 4 ; 4 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2012 ; Numeracy Volume 5 ; 5 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2013 ; Numeracy Volume 6 ; 6 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2014 ; Numeracy Volume 7 ; 7 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2015 ; Numeracy Volume 8 ; 8 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2016 ; Numeracy Volume 9 ; 9 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2017 ; Numeracy Volume 10 ; 10 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2018 ; Numeracy Volume 11 ; 11 ; https://scholarcommons.usf.edu/ >
-    au < released ; 2019 ; Numeracy Volume 12 ; 12 ; https://scholarcommons.usf.edu/ >
-    au < released ; 2020 ; Numeracy Volume 13 ; 13 ; https://scholarcommons.usf.edu/ >
-    au < testing ; 2021 ; Numeracy Volume 14 ; 14 ; https://scholarcommons.usf.edu/ >
-    au < expected ; 2022 ; Numeracy Volume 15 ; 15 ; https://scholarcommons.usf.edu/ >
+    au < down ; 2008 ; Numeracy Volume 1 ; 1 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2009 ; Numeracy Volume 2 ; 2 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2010 ; Numeracy Volume 3 ; 3 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2011 ; Numeracy Volume 4 ; 4 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2012 ; Numeracy Volume 5 ; 5 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2013 ; Numeracy Volume 6 ; 6 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2014 ; Numeracy Volume 7 ; 7 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2015 ; Numeracy Volume 8 ; 8 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2016 ; Numeracy Volume 9 ; 9 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2017 ; Numeracy Volume 10 ; 10 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2018 ; Numeracy Volume 11 ; 11 ; https://scholarcommons.usf.edu/ >
+    au < down ; 2019 ; Numeracy Volume 12 ; 12 ; https://scholarcommons.usf.edu/ >
+    au < down ; 2020 ; Numeracy Volume 13 ; 13 ; https://scholarcommons.usf.edu/ >
+    au < manifest ; 2021 ; Numeracy Volume 14 ; 14 ; https://digitalcommons.usf.edu/ >
+    au < manifest ; 2022 ; Numeracy Volume 15 ; 15 ; https://digitalcommons.usf.edu/ >
 
   }
 
@@ -200,18 +200,18 @@
 
     param[journal_abbr] = surcosur
 
-    au < released ; 2011 ; Revista Surco Sur Volume 1 ; 1 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2012 ; Revista Surco Sur Volume 2 ; 2 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2013 ; Revista Surco Sur Volume 3 ; 3 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2014 ; Revista Surco Sur Volume 4 ; 4 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2015 ; Revista Surco Sur Volume 5 ; 5 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2016 ; Revista Surco Sur Volume 6 ; 6 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2017 ; Revista Surco Sur Volume 7 ; 7 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2018 ; Revista Surco Sur Volume 8 ; 8 ; https://scholarcommons.usf.edu/ >
-    au < released ; 2019 ; Revista Surco Sur Volume 9 ; 9 ; https://scholarcommons.usf.edu/ >
-    au < released ; 2020 ; Revista Surco Sur Volume 10 ; 10 ; https://scholarcommons.usf.edu/ >
-    au < expected ; 2021 ; Revista Surco Sur Volume 11 ; 11 ; https://scholarcommons.usf.edu/ >
-    au < expected ; 2022 ; Revista Surco Sur Volume 12 ; 12 ; https://scholarcommons.usf.edu/ >
+    au < down ; 2011 ; Revista Surco Sur Volume 1 ; 1 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2012 ; Revista Surco Sur Volume 2 ; 2 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2013 ; Revista Surco Sur Volume 3 ; 3 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2014 ; Revista Surco Sur Volume 4 ; 4 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2015 ; Revista Surco Sur Volume 5 ; 5 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2016 ; Revista Surco Sur Volume 6 ; 6 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2017 ; Revista Surco Sur Volume 7 ; 7 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2018 ; Revista Surco Sur Volume 8 ; 8 ; https://scholarcommons.usf.edu/ >
+    au < down ; 2019 ; Revista Surco Sur Volume 9 ; 9 ; https://scholarcommons.usf.edu/ >
+    au < down ; 2020 ; Revista Surco Sur Volume 10 ; 10 ; https://scholarcommons.usf.edu/ >
+    au < expected ; 2021 ; Revista Surco Sur Volume 11 ; 11 ; https://digitalcommons.usf.edu/ >
+    au < expected ; 2022 ; Revista Surco Sur Volume 12 ; 12 ; https://digitalcommons.usf.edu/ >
 
   }
 }
