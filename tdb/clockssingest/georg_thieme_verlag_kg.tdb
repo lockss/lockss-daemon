@@ -3624,6 +3624,40 @@
 
   {
     title <
+      name = EEG-EMG Zeitschrift für Elektroenzephalographie, Elektromyographie und verwandte Gebiete ;
+      issn = 0012-7590 ;
+      doi = 10.1055/s-00000032
+
+    >
+    param[journal_id] = 10.1055/s-00000033
+    comment[years] = 1980-1997
+    # this journal shares its eissn with EEG, EMG Zeitschrift für Elektroenzephalographie, Elektromyographie und verwandte Gebiete
+    comment[1] = EEG, EMG published from 1980-1997 under the same eissn
+    #continued_by = 1434-0275
+
+    au < notReady ; exists ; 1980 ; 1980 ; EEG-EMG Zeitschrift für Elektroenzephalographie, Elektromyographie und verwandte Gebiete Volume 11 ; 11 ; > #no metadata
+    au < notReady ; exists ; 1981 ; 1981 ; EEG-EMG Zeitschrift für Elektroenzephalographie, Elektromyographie und verwandte Gebiete Volume 12 ; 12 ; > #no metadata
+    au < notReady ; exists ; 1982 ; 1982 ; EEG-EMG Zeitschrift für Elektroenzephalographie, Elektromyographie und verwandte Gebiete Volume 13 ; 13 ; > #no metadata
+    au < notReady ; exists ; 1983 ; 1983 ; EEG-EMG Zeitschrift für Elektroenzephalographie, Elektromyographie und verwandte Gebiete Volume 14 ; 14 ; > #no metadata
+    au < notReady ; exists ; 1984 ; 1984 ; EEG-EMG Zeitschrift für Elektroenzephalographie, Elektromyographie und verwandte Gebiete Volume 15 ; 15 ; > #no metadata
+    au < notReady ; exists ; 1985 ; 1985 ; EEG-EMG Zeitschrift für Elektroenzephalographie, Elektromyographie und verwandte Gebiete Volume 16 ; 16 ; > #no metadata
+    au < notReady ; exists ; 1986 ; 1986 ; EEG-EMG Zeitschrift für Elektroenzephalographie, Elektromyographie und verwandte Gebiete Volume 17 ; 17 ; > #no metadata
+    au < notReady ; exists ; 1987 ; 1987 ; EEG-EMG Zeitschrift für Elektroenzephalographie, Elektromyographie und verwandte Gebiete Volume 18 ; 18 ; > #no metadata
+    au < notReady ; exists ; 1988 ; 1988 ; EEG-EMG Zeitschrift für Elektroenzephalographie, Elektromyographie und verwandte Gebiete Volume 19 ; 19 ; > #no metadata
+    au < notReady ; exists ; 1989 ; 1989 ; EEG-EMG Zeitschrift für Elektroenzephalographie, Elektromyographie und verwandte Gebiete Volume 20 ; 20 ; > #no metadata
+    au < notReady ; exists ; 1990 ; 1990 ; EEG-EMG Zeitschrift für Elektroenzephalographie, Elektromyographie und verwandte Gebiete Volume 21 ; 21 ; > #no metadata
+    au < notReady ; exists ; 1991 ; 1991 ; EEG-EMG Zeitschrift für Elektroenzephalographie, Elektromyographie und verwandte Gebiete Volume 22 ; 22 ; > #no metadata
+    au < notReady ; exists ; 1992 ; 1992 ; EEG-EMG Zeitschrift für Elektroenzephalographie, Elektromyographie und verwandte Gebiete Volume 23 ; 23 ; > #no metadata
+    au < notReady ; exists ; 1993 ; 1993 ; EEG-EMG Zeitschrift für Elektroenzephalographie, Elektromyographie und verwandte Gebiete Volume 24 ; 24 ; > #no metadata
+    au < notReady ; exists ; 1994 ; 1994 ; EEG-EMG Zeitschrift für Elektroenzephalographie, Elektromyographie und verwandte Gebiete Volume 25 ; 25 ; > #no metadata
+    au < notReady ; exists ; 1995 ; 1995 ; EEG-EMG Zeitschrift für Elektroenzephalographie, Elektromyographie und verwandte Gebiete Volume 26 ; 26 ; > #no metadata
+    au < notReady ; exists ; 1996 ; 1996 ; EEG-EMG Zeitschrift für Elektroenzephalographie, Elektromyographie und verwandte Gebiete Volume 27 ; 27 ; > #no metadata
+    au < notReady ; exists ; 1997 ; 1997 ; EEG-EMG Zeitschrift für Elektroenzephalographie, Elektromyographie und verwandte Gebiete Volume 28 ; 28 ; > #no metadata
+
+  }
+
+  {
+    title <
       name = Klinische Neurophysiologie ;
       issn = 1434-0275 ;
       eissn = 1439-4081 ;
@@ -3631,28 +3665,11 @@
 
     >
     param[journal_id] = 10.1055/s-00000032
-    comment[years] = 1980-2012
+    comment[years] = 1998-current
     # this journal shares its eissn with EEG, EMG Zeitschrift für Elektroenzephalographie, Elektromyographie und verwandte Gebiete
     comment[1] = EEG, EMG published from 1980-1997 under the same eissn
+    #continues = 0012-7590
 
-    au < notReady ; exists ; 1980 ; 1980 ; Klinische Neurophysiologie Volume 11 ; 11 ; > #no metadata
-    au < notReady ; exists ; 1981 ; 1981 ; Klinische Neurophysiologie Volume 12 ; 12 ; > #no metadata
-    au < notReady ; exists ; 1982 ; 1982 ; Klinische Neurophysiologie Volume 13 ; 13 ; > #no metadata
-    au < notReady ; exists ; 1983 ; 1983 ; Klinische Neurophysiologie Volume 14 ; 14 ; > #no metadata
-    au < notReady ; exists ; 1984 ; 1984 ; Klinische Neurophysiologie Volume 15 ; 15 ; > #no metadata
-    au < notReady ; exists ; 1985 ; 1985 ; Klinische Neurophysiologie Volume 16 ; 16 ; > #no metadata
-    au < notReady ; exists ; 1986 ; 1986 ; Klinische Neurophysiologie Volume 17 ; 17 ; > #no metadata
-    au < notReady ; exists ; 1987 ; 1987 ; Klinische Neurophysiologie Volume 18 ; 18 ; > #no metadata
-    au < notReady ; exists ; 1988 ; 1988 ; Klinische Neurophysiologie Volume 19 ; 19 ; > #no metadata
-    au < notReady ; exists ; 1989 ; 1989 ; Klinische Neurophysiologie Volume 20 ; 20 ; > #no metadata
-    au < notReady ; exists ; 1990 ; 1990 ; Klinische Neurophysiologie Volume 21 ; 21 ; > #no metadata
-    au < notReady ; exists ; 1991 ; 1991 ; Klinische Neurophysiologie Volume 22 ; 22 ; > #no metadata
-    au < notReady ; exists ; 1992 ; 1992 ; Klinische Neurophysiologie Volume 23 ; 23 ; > #no metadata
-    au < notReady ; exists ; 1993 ; 1993 ; Klinische Neurophysiologie Volume 24 ; 24 ; > #no metadata
-    au < notReady ; exists ; 1994 ; 1994 ; Klinische Neurophysiologie Volume 25 ; 25 ; > #no metadata
-    au < notReady ; exists ; 1995 ; 1995 ; Klinische Neurophysiologie Volume 26 ; 26 ; > #no metadata
-    au < notReady ; exists ; 1996 ; 1996 ; Klinische Neurophysiologie Volume 27 ; 27 ; > #no metadata
-    au < notReady ; exists ; 1997 ; 1997 ; Klinische Neurophysiologie Volume 28 ; 28 ; > #no metadata
     au < frozen ; exists ; 1998 ; 1998 ; Klinische Neurophysiologie Volume 29 ; 29 ; >
     au < frozen ; exists ; 1999 ; 1999 ; Klinische Neurophysiologie Volume 30 ; 30 ; >
     au < frozen ; exists ; 2000 ; 2000 ; Klinische Neurophysiologie Volume 31 ; 31 ; >
