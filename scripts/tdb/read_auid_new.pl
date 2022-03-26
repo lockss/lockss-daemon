@@ -44,7 +44,7 @@ my $my_year = 1900 + (localtime)[5];
 my $cjar = HTTP::Cookies->new();
 
 # Create user agent.
-my $ua = LWP::UserAgent->new( cookie_jar => $cjar, agent => "LOCKSS cache" );
+my $ua = LWP::UserAgent->new( cookie_jar => $cjar, agent => "LOCKSS cache", ssl_opts => { verify_hostname => 0 } );
 $ua->proxy('http', 'http://proxy.lockss.org:3128/');
 $ua->no_proxy('localhost', '127.0.0.1');
 
