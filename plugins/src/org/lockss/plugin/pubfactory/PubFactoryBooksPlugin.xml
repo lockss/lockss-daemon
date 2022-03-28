@@ -45,7 +45,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>2</string>
+        <string>3</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
@@ -89,6 +89,10 @@ POSSIBILITY OF SUCH DAMAGE.
             <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?v=[^/]*)?$", base_url_host</string>
             <!-- trailing 'print is the same as the landing page. -->
             <string>2,"^%s.*print$", base_url</string>
+            <!--  any pseudo-absolute url masquerading as relative url should be ignored. PubFactory has a bug where they
+                  will improperly format href attributes.
+                    note: if you will update the rule here, do so in PubFactoryJournalsPlugin as well. -->
+            <string>2,"^%s.+(www\.|\.(gov|com|edu|org|net|uk))", base_url </string>
             <!--  citation overlay and ris download have odd normalization; allow for both -->
             <!-- https://www.manchesteropenhive.com/cite/$002f9789198557718$002f9789198557718.xml/9789198557718?t:state:client=udcqgjFrvfPXFRp1SuqeVm8f+RA=:H4sIAAAAAAAAAH2Tv28TMRTHnZTQVomARq06ITHAhHSZkJCYStOKqEeIlIiB7d3dy8Xgs49nX34sCBY6MLDAxsDA2H+FkYENwQwTElIn7EtpSCv3pLPurI++/r73vj76yWqTS4yxbU3sQFEaQA7xCAMDOWpDszsBlwZJggg00pjHqINdwVGaHpLm2tivfY4i6RtFkGIny8XNA5x9/b39dvXH8WGVrYSsHqssV9KincSwZvgUxtASINNW3xCX6b2QrQ+dSBcyfM5esErI1nKrdvo/zQ27HSs55GlBEAm03+5oB0UqmVm/dlMNT7a1YRt6pCZtHEIhzL6iDIxhm/8rtHZPWGIbzlDgDAX3lRII8vMNevnlw/GvKqs8YbUxiAKnOdPOC3PLimFX3AEDbgSGEKFwuzW3rC5RW7ESAnKNXSUfArevse0s4ZK7XFnCG0605/ooh+pUsnGe6ReRcWd7mKuO2ZNFhgSGK+lxV2I7sR2q7tjeaI/aZomNgQvXuHk3tUdyvayAbFA8wJoDOjryeSoHt5dwmycOYjDLfUL10lVhRop8xpsLLZvJiaLEZ7sRF0Q2DW3MzWg+nqVcdGxWUqTm94+f/rw6vGtz0fmXC2LXFly3yCKk10fvr9fffXtTZczGxj7nK9whw2OBc95nquxlMgy5fOYzXrdXgEswOFCxb8oZTB8gJPamLcpzy60zUQXZI5WSTQMfY5vrXMDsoubPO+tzVpb5SAousVdEbWvx4kRoXyK2ysAjcdSPlbCZPnPh/gKl4SCkxQQAAA==# -->
             <string>1,"^%scite/\$002f%s", base_url, book_isbn</string>
