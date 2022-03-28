@@ -4,7 +4,7 @@
     name = Oxford University Press ;
     info[platform] = Silverchair
   >
-   #No permission statement before 2008 as of 20220324
+   #No permission statements before 2008 as of 20220324
 
     plugin = org.lockss.plugin.silverchair.oup.OupSilverchairPlugin
     implicit < status ; year ; param[year] ; name ; volume >
@@ -5013,8 +5013,6 @@
     au < down ; 2018 ; 2018 ; Environmental History Volume 23 ; 23 >
     au < down ; 2019 ; 2019 ; Environmental History Volume 24 ; 24 >
     au < down ; 2020 ; 2020 ; Environmental History Volume 25 ; 25 >
-    au < doNotProcess ; 2021 ; 2021 ; Environmental History Volume 26 ; 26 >
-    au < doNotProcess ; 2022 ; 2022 ; Environmental History Volume 27 ; 27 >
 
   }
 
@@ -14623,11 +14621,11 @@
     >
 
     param[journal_id] = neurosurgeryopen
-    #move to Medknow 2022
+    #moved to LWW 2022
 
-    au < manifest ; 2020 ; 2020 ; Neurosurgery Open Volume 1 ; 1 >
-    au < manifest ; 2021 ; 2021 ; Neurosurgery Open Volume 2 ; 2 >
-    au < expected ; 2022 ; 2022 ; Neurosurgery Open Volume 3 ; 3 >
+    au < doNotProcess ; 2020 ; 2020 ; Neurosurgery Open Volume 1 ; 1 >
+    au < doNotProcess ; 2021 ; 2021 ; Neurosurgery Open Volume 2 ; 2 >
+    au < doNotProcess ; 2022 ; 2022 ; Neurosurgery Open Volume 3 ; 3 >
 
   }
 
@@ -15219,7 +15217,7 @@
 
     param[journal_id] = ons
     #this title was ONLY in the publisher listing
-    #move to Medknow 2022
+    #move to LWW 2022
 
     au < doNotProcess ; 2005 ; 2005 ; Operative Neurosurgery Volume 56 ; 56 >
     au < doNotProcess ; 2006 ; 2006 ; Operative Neurosurgery Volume 58 ; 58 >
