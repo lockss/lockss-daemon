@@ -2286,7 +2286,7 @@
       au < finished ; crawling ; 2020 ; International Journal of Computational Science and Engineering Volume 22 ; 22 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2021 ; International Journal of Computational Science and Engineering Volume 23 ; 23 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2021 ; International Journal of Computational Science and Engineering Volume 24 ; 24 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < ready ; exists ; 2021 ; International Journal of Computational Science and Engineering Volume 25 ; 25 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2021 ; International Journal of Computational Science and Engineering Volume 25 ; 25 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2022 ; International Journal of Computational Science and Engineering Volume 26 ; 26 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2022 ; International Journal of Computational Science and Engineering Volume 27 ; 27 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2022 ; International Journal of Computational Science and Engineering Volume 28 ; 28 ; https://www.inderscienceonline.com/ ; >
@@ -2434,7 +2434,7 @@
       au < finished ; crawling ; 2020 ; International Journal of Computer Applications in Technology Volume 64 ; 64 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2021 ; International Journal of Computer Applications in Technology Volume 65 ; 65 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; International Journal of Computer Applications in Technology Volume 66 ; 66 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2021 ; International Journal of Computer Applications in Technology Volume 67 ; 67 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2021 ; International Journal of Computer Applications in Technology Volume 67 ; 67 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2022 ; International Journal of Computer Applications in Technology Volume 68 ; 68 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2022 ; International Journal of Computer Applications in Technology Volume 69 ; 69 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2022 ; International Journal of Computer Applications in Technology Volume 70 ; 70 ; https://www.inderscienceonline.com/ ; >
@@ -3281,7 +3281,7 @@
       au < finished ; finished ; 2015 ; International Journal of Electronic Healthcare Volume 8 ; 8 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2016-2017 ; International Journal of Electronic Healthcare Volume 9 ; 9 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 > 
       au < finished ; finished ; 2018 ; International Journal of Electronic Healthcare Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < ready ; exists ; 2019-2021 ; International Journal of Electronic Healthcare Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2019-2021 ; International Journal of Electronic Healthcare Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2022-2023 ; International Journal of Electronic Healthcare Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -10357,7 +10357,7 @@
 
       param[journal_id] = ijvtm
 
-      au < ready ; exists ; 2008-2021 ; International Journal of Virtual Technology and Multimedia Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ ; > #issue 4 not online
+      au < crawling ; exists ; 2008-2021 ; International Journal of Virtual Technology and Multimedia Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ ; > #issue 4 not online
 
     }
 
@@ -10705,7 +10705,7 @@
       au < finished ; finished ; 2018 ; Journal of Design Research Volume 16 ; 16 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; Journal of Design Research Volume 17 ; 17 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Journal of Design Research Volume 18 ; 18 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < ready ; exists ; 2021 ; Journal of Design Research Volume 19 ; 19 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2021 ; Journal of Design Research Volume 19 ; 19 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2022 ; Journal of Design Research Volume 20 ; 20 ; https://www.inderscienceonline.com/ ; >
 
     }

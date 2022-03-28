@@ -69,7 +69,7 @@
     au < crawling ; exists ; 2015 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 11 ; 11 ; >
     au < crawling ; exists ; 2016 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 12 ; 12 ; >
     au < crawling ; exists ; 2017 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 13 ; 13 ; >
-    au < ready ; exists ; 2018 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2018 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 14 ; 14 ; >
     au < crawling ; exists ; 2019 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 15 ; 15 ; >
     au < crawling ; exists ; 2020 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 16 ; 16 ; >
 
@@ -108,7 +108,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Australian Journal of French Studies Volume 55 ; 55 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Australian Journal of French Studies Volume 56 ; 56 ; >
     au < crawling ; exists ; 2020 ; Australian Journal of French Studies Volume 57 ; 57 ; >
-    au < ready ; exists ; 2021 ; Australian Journal of French Studies Volume 58 ; 58 ; >
+    au < crawling ; exists ; 2021 ; Australian Journal of French Studies Volume 58 ; 58 ; >
     au < expected ; exists ; 2022 ; Australian Journal of French Studies Volume 59 ; 59 ; >
 
   }
@@ -124,8 +124,8 @@
     param[journal_id] = bchs
     #Published 2019-present
 
-    au < ready ; exists ; 2019 ; Bulletin of Contemporary Hispanic Studies Volume 1 ; 1 ; >
-    au < ready ; exists ; 2020 ; Bulletin of Contemporary Hispanic Studies Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2019 ; Bulletin of Contemporary Hispanic Studies Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2020 ; Bulletin of Contemporary Hispanic Studies Volume 2 ; 2 ; >
     au < crawling ; exists ; 2021 ; Bulletin of Contemporary Hispanic Studies Volume 3 ; 3 ; >
     au < expected ; exists ; 2022 ; Bulletin of Contemporary Hispanic Studies Volume 4 ; 4 ; >
 
@@ -428,7 +428,7 @@
     au < manifest ; exists ; 2007 ; Eighteenth-Century Ireland Volume 22 ; 22 ; >
     au < crawling ; exists ; 2008 ; Eighteenth-Century Ireland Volume 23 ; 23 ; >
     au < crawling ; exists ; 2009 ; Eighteenth-Century Ireland Volume 24 ; 24 ; >
-    au < ready ; exists ; 2010 ; Eighteenth-Century Ireland Volume 25 ; 25 ; >
+    au < crawling ; exists ; 2010 ; Eighteenth-Century Ireland Volume 25 ; 25 ; >
     au < crawling ; exists ; 2011 ; Eighteenth-Century Ireland Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Eighteenth-Century Ireland Volume Special_Issue ; Special_Issue ; >
     au < crawling ; exists ; 2012 ; Eighteenth-Century Ireland Volume 27 ; 27 ; >
@@ -439,7 +439,7 @@
     au < crawling ; exists ; 2017 ; Eighteenth-Century Ireland Volume 32 ; 32 ; >
     au < crawling ; exists ; 2018 ; Eighteenth-Century Ireland Volume 33 ; 33 ; >
     au < crawling ; exists ; 2019 ; Eighteenth-Century Ireland Volume 34 ; 34 ; >
-    au < ready ; exists ; 2020 ; Eighteenth-Century Ireland Volume 35 ; 35 ; >
+    au < crawling ; exists ; 2020 ; Eighteenth-Century Ireland Volume 35 ; 35 ; >
     au < crawling ; exists ; 2021 ; Eighteenth-Century Ireland Volume 36 ; 36 ; >
     au < expected ; exists ; 2022 ; Eighteenth-Century Ireland Volume 37 ; 37 ; >
 
@@ -484,7 +484,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Essays in Romanticism Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Essays in Romanticism Volume 26 ; 26 ; >
     au < crawling ; exists ; 2020 ; Essays in Romanticism Volume 27 ; 27 ; >
-    au < ready ; exists ; 2021 ; Essays in Romanticism Volume 28 ; 28 ; >
+    au < crawling ; exists ; 2021 ; Essays in Romanticism Volume 28 ; 28 ; >
     au < expected ; exists ; 2022 ; Essays in Romanticism Volume 29 ; 29 ; >
 
   }
