@@ -97,7 +97,9 @@ public class MultipartFileResponse {
       mpFile = null;
     }
   }
+  private writeHeaderFile(Headers hdrs) {
 
+  }
   private static class InputStreamDataSource implements DataSource {
     private InputStream inputStream;
     String contentType;
