@@ -6,13 +6,13 @@
     info[contract] = 2015 ;
     info[tester] = 8 ;
     info[poller] = 2 ;
-    info[platform] = Atypon. 7/19/2021. Not moved yet.
+    info[platform] = Atypon.
   >
 
   plugin = org.lockss.plugin.atypon.aaas.ClockssAaasPlugin
   implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
   # Moved to Drupal July 15 2015
-  # Moving to Atypon Summer 2021
+  # Moved to Atypon Summer 2021
     
   {
 
