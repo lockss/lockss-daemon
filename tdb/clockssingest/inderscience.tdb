@@ -2309,7 +2309,7 @@
       au < finished ; finished ; 2017 ; International Journal of Computational Systems Engineering Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2018 ; International Journal of Computational Systems Engineering Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; International Journal of Computational Systems Engineering Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; crawling ; 2020-2021 ; International Journal of Computational Systems Engineering Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2020-2021 ; International Journal of Computational Systems Engineering Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < expected ; exists ; 2022 ; International Journal of Computational Systems Engineering Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -4073,7 +4073,7 @@
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Experimental Design and Process Optimisation Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014-2015 ; International Journal of Experimental Design and Process Optimisation Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2016-2017 ; International Journal of Experimental Design and Process Optimisation Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; down ; 2019-2021 ; International Journal of Experimental Design and Process Optimisation Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2019-2021 ; International Journal of Experimental Design and Process Optimisation Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < expected ; exists ; 2022 ; International Journal of Experimental Design and Process Optimisation Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
 
     }
@@ -4549,7 +4549,7 @@
       au < finished ; finished ; 2016-2017 ; International Journal of Happiness and Development Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2018 ; International Journal of Happiness and Development Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; International Journal of Happiness and Development Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; crawling ; 2020-2021 ; International Journal of Happiness and Development Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2020-2021 ; International Journal of Happiness and Development Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < expected ; exists ; 2022 ; International Journal of Happiness and Development Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -6100,9 +6100,8 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Logistics Economics and Globalisation Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014-2017 ; International Journal of Logistics Economics and Globalisation Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2018 ; International Journal of Logistics Economics and Globalisation Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; down ; 2019-2020 ; International Journal of Logistics Economics and Globalisation Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2019-2020 ; International Journal of Logistics Economics and Globalisation Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < manifest ; exists ; 2021-2022 ; International Journal of Logistics Economics and Globalisation Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2022 ; International Journal of Logistics Economics and Globalisation Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -9835,7 +9834,7 @@
 
       au < finished ; finished ; 2012-2014 ; International Journal of Technology Policy and Law Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015-2016 ; International Journal of Technology Policy and Law Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; down ; 2017-2019 ; International Journal of Technology Policy and Law Volume 3 [partial] ; 3 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 > #issue 3, 4 not online
+      au < finished ; crawling ; 2017-2019 ; International Journal of Technology Policy and Law Volume 3 [partial] ; 3 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 > #issue 3, 4 not online
 
     }
 
@@ -10035,7 +10034,7 @@
       au < finished ; finished ; 2013-2014 ; International Journal of Transitions and Innovation Systems Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2015 ; International Journal of Transitions and Innovation Systems Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2016 ; International Journal of Transitions and Innovation Systems Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; down ; 2018-2021 ; International Journal of Transitions and Innovation Systems Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2018-2021 ; International Journal of Transitions and Innovation Systems Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < expected ; exists ; 2022 ; International Journal of Transitions and Innovation Systems Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
 
     }
