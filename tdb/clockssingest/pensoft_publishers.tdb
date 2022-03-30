@@ -88,6 +88,21 @@
    }
    
    {
+
+    title <
+      name = Caucasiana ;
+      issn = 1512-1720 ;
+      eissn = 2667-9809 ;
+      issnl = 1512-1720
+    >
+    
+    param[au_oai_set] = caucasiana
+    
+    au < manifest ; exists ; 2022 ; 1 ; Caucasiana Volume 2022 ; 2022 ; https://caucasiana.pensoft.net/ ; >
+
+   }
+  
+   {
      title <
       name = Deutsche Entomologische Zeitschrift ;
       issn = 1435-1951 ;
@@ -110,6 +125,21 @@
 
    }
    
+   {
+
+    title <
+      name = Heritage, Memory and Conflict Journal ;
+      eissn = 2666-5050 ;
+      issnl = 2666-5050
+    >
+    
+    param[au_oai_set] = ijhmc
+    
+    au < manifest ; exists ; 2021 ; 1 ; Heritage, Memory and Conflict Journal Volume 2021 ; 2021 ; https://ijhmc.arphahub.com/ ; >
+    au < manifest ; exists ; 2022 ; 2 ; Heritage, Memory and Conflict Journal Volume 2022 ; 2022 ; https://ijhmc.arphahub.com/ ; >
+
+   }
+  
    {
 
     title <
