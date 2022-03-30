@@ -10,7 +10,6 @@
 ##############
 #
 #NEW at site but not enabled (2/22/2021)
-#Integrated HPS Conference Proceedings -- NO ISSUES
 #Journal of the History of Music Theory and Literature -- NO ISSUES
 #
 ###########################################
@@ -379,6 +378,19 @@
       au < deepCrawl ; exists ; 2020 ; 2020 ; The Hoosier Science Teacher Volume 43 ; 43 ; >
       au < crawling ; exists ; 2021 ; 2021 ; The Hoosier Science Teacher Volume 44 ; 44 ; >
       au < expected ; exists ; 2022 ; 2022 ; The Hoosier Science Teacher Volume 45 ; 45 ; >
+
+  }
+
+  {
+    title <
+      name = Integrated HPS Conference Proceedings
+      #eissn = 
+    >
+
+      param[journal_id] = ihps
+
+      au < manifest ; exists ; 2021 ; 2021 ; Integrated HPS Conference Proceedings Volume 1 ; 1 ; >
+      au < expected ; exists ; 2022 ; 2022 ; Integrated HPS Conference Proceedings Volume 2 ; 2 ; >
 
   }
 
