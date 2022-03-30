@@ -3186,7 +3186,7 @@
       au < finished ; finished ; 2015 ; International Journal of Electronic Customer Relationship Management Volume 9 ; 9 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2016 ; International Journal of Electronic Customer Relationship Management Volume 10 ; 10 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2017-2018 ; International Journal of Electronic Customer Relationship Management Volume 11 ; 11 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2019-2020 ; International Journal of Electronic Customer Relationship Management Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2019-2020 ; International Journal of Electronic Customer Relationship Management Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2021 ; International Journal of Electronic Customer Relationship Management Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < expected ; exists ; 2022 ; International Journal of Electronic Customer Relationship Management Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
 
@@ -3717,7 +3717,7 @@
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Environment and Health Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014-2015 ; International Journal of Environment and Health Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2016-2017 ; International Journal of Environment and Health Volume 8 ; 8 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2018-2019 ; International Journal of Environment and Health Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2018-2019 ; International Journal of Environment and Health Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < ingNotReady ; exists ; 2020-2021 ; International Journal of Environment and Health Volume 10 [partial] ; 10 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
 
     }
@@ -3925,7 +3925,7 @@
       au < finished ; finished ; 2015 ; International Journal of Environmental Engineering Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2016 ; International Journal of Environmental Engineering Volume 8 ; 8 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2017-2018 ; International Journal of Environmental Engineering Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2019-2020 ; International Journal of Environmental Engineering Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2019-2020 ; International Journal of Environmental Engineering Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2021 ; International Journal of Environmental Engineering Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < expected ; exists ; 2022 ; International Journal of Environmental Engineering Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
 
@@ -4112,7 +4112,7 @@
       au < finished ; finished ; 2015 ; International Journal of Financial Markets and Derivatives Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2016 ; International Journal of Financial Markets and Derivatives Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2017-2018 ; International Journal of Financial Markets and Derivatives Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2019-2020 ; International Journal of Financial Markets and Derivatives Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2019-2020 ; International Journal of Financial Markets and Derivatives Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < ingNotReady ; exists ; 2021-2022 ; International Journal of Financial Markets and Derivatives Volume 8 [partial] ; 8 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
 
     }
@@ -4177,7 +4177,7 @@
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Forensic Engineering Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014-2015 ; International Journal of Forensic Engineering Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2016-2017 ; International Journal of Forensic Engineering Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2018-2020 ; International Journal of Forensic Engineering Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2018-2020 ; International Journal of Forensic Engineering Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < manifest ; exists ; 2021-2023 ; International Journal of Forensic Engineering Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2022 ; International Journal of Forensic Engineering Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
 
@@ -4293,7 +4293,7 @@
 
       au < finished ; finished ; 2015-2016 ; International Journal of Gender Studies in Developing Societies Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2017-2018 ; International Journal of Gender Studies in Developing Societies Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2019-2020 ; International Journal of Gender Studies in Developing Societies Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2019-2020 ; International Journal of Gender Studies in Developing Societies Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < manifest ; exists ; 2021-2022 ; International Journal of Gender Studies in Developing Societies Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2022 ; International Journal of Gender Studies in Developing Societies Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
 
@@ -5761,7 +5761,7 @@
       au < finished ; finished ; 2015 ; International Journal of Knowledge and Learning Volume 10 ; 10 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2016 ; International Journal of Knowledge and Learning Volume 11 ; 11 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2017-2018 ; International Journal of Knowledge and Learning Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2019-2020 ; International Journal of Knowledge and Learning Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2019-2020 ; International Journal of Knowledge and Learning Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < manifest ; exists ; 2021-2022 ; International Journal of Knowledge and Learning Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2022 ; International Journal of Knowledge and Learning Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
 
@@ -6327,7 +6327,7 @@
       au < doNotProcess ; exists ; 2008-2009 ; International Journal of Management and Network Economics Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Management and Network Economics Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2013-2016 ; International Journal of Management and Network Economics Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2017-2019 ; International Journal of Management and Network Economics Volume 4 [partial] ; 4 ; https://www.inderscienceonline.com/ ; > #issue 4 not online
+      au < finished ; manifest ; 2017-2019 ; International Journal of Management and Network Economics Volume 4 [partial] ; 4 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 > #issue 4 not online
 
     }
 
@@ -7224,9 +7224,8 @@
 
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Multimedia Intelligence and Security Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Multimedia Intelligence and Security Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
-      au < frozen ; exists ; 2013-2020 ; International Journal of Multimedia Intelligence and Security Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2021-2022 ; International Journal of Multimedia Intelligence and Security Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2022 ; International Journal of Multimedia Intelligence and Security Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2013-2020 ; International Journal of Multimedia Intelligence and Security Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
+      au < manifest ; exists ; 2022-2023 ; International Journal of Multimedia Intelligence and Security Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
 
     }
 
