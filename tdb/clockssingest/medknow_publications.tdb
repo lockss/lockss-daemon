@@ -387,8 +387,8 @@
       issnl = 1793-5482
     >
 #    param[base_url] = http://www.asianjns.org/
-
     param[journal_issn] = 1793-5482
+    #Moving to Thieme Publishing. Archive will stay with Medknow until further notice
 
     au < manifest ; exists ; 2010 ; Asian Journal of Neurosurgery Volume 5 ; 2010 ; 5 ; https://www.asianjns.org/ ; ; >
     au < finished ; frozen ; 2011 ; Asian Journal of Neurosurgery Volume 6 ; 2011 ; 6 ; http://www.asianjns.org/ ; ; reingest3.clockss.org:8083 >
@@ -402,7 +402,6 @@
     au < finished ; crawling ; 2019 ; Asian Journal of Neurosurgery Volume 14 ; 2019 ; 14 ; https://www.asianjns.org/ ; ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2020 ; Asian Journal of Neurosurgery Volume 15 ; 2020 ; 15 ; https://www.asianjns.org/ ; ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2021 ; Asian Journal of Neurosurgery Volume 16 ; 2021 ; 16 ; https://www.asianjns.org/ ; ; >
-    au < expected ; exists ; 2022 ; Asian Journal of Neurosurgery Volume 17 ; 2022 ; 17 ; https://www.asianjns.org/ ; ; >
 
   }
 #  {
@@ -3596,7 +3595,7 @@
     param[journal_issn] = 2153-3539
     # different format from other journals. Issues are accessed individually by clicking http://www.jpathinformatics.org/browse.asp
     # instead of by a listing like this: http://www.jpathinformatics.org/backissues.asp
-    #move to Elsevier, 2022
+    #move to Elsevier, 2022. Archive will stay with Medknow until further notice
 
     au < doNotProcess ; exists ; 2010 ; Journal of Pathology Informatics Volume 1 ; 2010 ; 1 ; http://www.jpathinformatics.org/ ; ; >
     au < doNotProcess ; exists ; 2011 ; Journal of Pathology Informatics Volume 2 ; 2011 ; 2 ; http://www.jpathinformatics.org/ ; ; >
@@ -3610,7 +3609,6 @@
     au < finished ; crawling ; 2019 ; Journal of Pathology Informatics Volume 10 ; 2019 ; 10 ; https://www.jpathinformatics.org/ ; ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Journal of Pathology Informatics Volume 11 ; 2020 ; 11 ; https://www.jpathinformatics.org/ ; ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Journal of Pathology Informatics Volume 12 ; 2021 ; 12 ; https://www.jpathinformatics.org/ ; ; >
-    au < doNotProcess ; exists ; 2022 ; Journal of Pathology Informatics Volume 13 ; 2022 ; 13 ; https://www.jpathinformatics.org/ ; ; >
 
   }
 
@@ -3682,7 +3680,7 @@
 #    param[base_url] = http://www.jpharmacol.com/
 
     param[journal_issn] = 0976-500X
-    #move to Sage
+    #move to Sage. Archive will stay with Medknow until further notice
 
     au < manifest ; exists ; 2010 ; Journal of Pharmacology and Pharmacotherapeutics Volume 1 ; 2010 ; 1 ; https://www.jpharmacol.com/ ; ; >
     au < finished ; frozen ; 2011 ; Journal of Pharmacology and Pharmacotherapeutics Volume 2 ; 2011 ; 2 ; http://www.jpharmacol.com/ ; ; reingest4.clockss.org:8082 >
@@ -4787,8 +4785,8 @@
    >
 #    param[base_url] = http://www.wjnm.org/
     param[journal_issn] = 1450-1147
-    #move to Thieme, 2022. Archive will stay with Medknow until further notice
     # notReady V10 2011. 500 error, replicated. http://www.wjnm.org/article.asp?issn=1450-1147;year=2011;volume=10;issue=1;spage=5;epage=6;aulast=Baum;type=2
+    #move to Thieme, 2022. Archive will stay with Medknow until further notice
 
     au < manifest ; exists ; 2005 ; World Journal of Nuclear Medicine Volume 4 ; 2005 ; 4 ; https://www.wjnm.org/ ; ; >
     au < manifest ; exists ; 2006 ; World Journal of Nuclear Medicine Volume 5 ; 2006 ; 5 ; https://www.wjnm.org/ ; ; >
@@ -6253,7 +6251,7 @@
 
       param[journal_issn] = 2393-8692
 #      param[base_url] = http://www.ijohr.org/
-      #ceased publishing 2022
+      #ceased publishing 2022. Archive will stay with Medknow until further notice
 
       au < finished ; finished ; 2015 ; Indian Journal of Oral Health and Research Volume 1 ; 2015 ; 1 ; http://www.ijohr.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; Indian Journal of Oral Health and Research Volume 2 ; 2016 ; 2 ; http://www.ijohr.org/ ; ; reingest4.clockss.org:8082 >
@@ -9774,7 +9772,7 @@
 
       param[journal_issn] = 1947-489X
 #      param[base_url] = http://www.ijmbs.org/
-      #move to Thieme
+      #Moving to Thieme Publishing. Archive will stay with Medknow until further notice
 
       au < manifest ; exists ; 2009 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 1 ; 2009 ; 1 ; https://www.ijmbs.org/ ; ; >
       au < manifest ; exists ; 2010 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 2 ; 2010 ; 2 ; https://www.ijmbs.org/ ; ; >
