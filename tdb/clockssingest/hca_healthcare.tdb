@@ -1,0 +1,32 @@
+{
+  publisher <
+    name = HCA Healthcare ;
+    info[contract] = 2015 ;
+    info[back] = 2014 ;
+    info[tester] = 5 ;
+    info[poller] = 8
+  >
+  provider = bepress
+  # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
+
+
+  plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+  implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+  param[base_url] = https://scholarlycommons.hcahealthcare.com/
+
+  {
+
+    title <
+      name = HCA Healthcare Journal ;
+      eissn = 2689-0216
+    >
+
+    param[journal_abbr] = hcahealthcarejournal
+
+    au < manifest ; exists ; 2020 ; Bulletin of the Faculty of Pharmacy Cairo University Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2021 ; Bulletin of the Faculty of Pharmacy Cairo University Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2022 ; Bulletin of the Faculty of Pharmacy Cairo University Volume 3 ; 3 ; >
+
+  }
+
+}

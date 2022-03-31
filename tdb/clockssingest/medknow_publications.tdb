@@ -6315,6 +6315,7 @@
 
       param[journal_issn] = 0974-7168
 #      param[base_url] = http://www.ijrh.org/
+      #On bepress https://www.bfopcu.eg.net/journal
 
       au < manifest ; exists ; 2007 ; Indian Journal of Research in Homoeopathy Volume 1 ; 2007 ; 1 ; https://www.ijrh.org/ ; ; >
       au < manifest ; exists ; 2008 ; Indian Journal of Research in Homoeopathy Volume 2 ; 2008 ; 2 ; https://www.ijrh.org/ ; ; >
