@@ -97,7 +97,7 @@ public class MultipartFileResponse {
       mpFile = null;
     }
   }
-  private writeHeaderFile(Headers hdrs) {
+  private void writeHeaderFile(Headers hdrs) {
 
   }
   private static class InputStreamDataSource implements DataSource {

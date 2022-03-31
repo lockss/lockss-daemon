@@ -1209,8 +1209,7 @@ public class V2RestClient {
     }
 
     // update parameters with authentication settings
-    updateParamsForAuth(authNames, allQueryParams, headerParams, cookieParams,
-        requestBodyToString(reqBody), method, URI.create(url));
+    updateParamsForAuth(authNames, allQueryParams, headerParams, cookieParams, method, URI.create(url));
 
     final Request.Builder reqBuilder = new Request.Builder().url(url);
     processHeaderParams(headerParams, reqBuilder);
@@ -1331,20 +1330,19 @@ public class V2RestClient {
    * @param queryParams  List of query parameters
    * @param headerParams Map of header parameters
    * @param cookieParams Map of cookie parameters
-   * @param payload      HTTP request body
    * @param method       HTTP method
    * @param uri          URI
    */
   public void updateParamsForAuth(String[] authNames, List<Pair> queryParams,
       Map<String, String> headerParams,
-      Map<String, String> cookieParams, String payload, String method, URI uri)
+      Map<String, String> cookieParams, String method, URI uri)
       throws ApiException {
     for (String authName : authNames) {
       Authentication auth = authentications.get(authName);
       if (auth == null) {
         throw new RuntimeException("Authentication undefined: " + authName);
       }
-      auth.applyToParams(queryParams, headerParams, cookieParams, payload, method, uri);
+      auth.applyToParams(queryParams, headerParams, cookieParams,method, uri);
     }
   }
 
@@ -1515,29 +1513,5 @@ public class V2RestClient {
     catch (IOException e) {
       throw new AssertionError(e);
     }
-  }
-
-  /**
-   * Convert the HTTP request body to a string.
-   *
-   * @param requestBody The HTTP request object
-   * @return The string representation of the HTTP request body
-   * @throws org.lockss.laaws.client.ApiException If fail to serialize the request body object into
-   *                                              a string
-   */
-  private String requestBodyToString(RequestBody requestBody) throws ApiException {
-    if (requestBody != null) {
-      try {
-        final Buffer buffer = new Buffer();
-        requestBody.writeTo(buffer);
-        return buffer.readUtf8();
-      }
-      catch (final IOException e) {
-        throw new ApiException(e);
-      }
-    }
-
-    // empty http request body
-    return "";
   }
 }
