@@ -1,7 +1,6 @@
 /*
 
-Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
-All rights reserved.
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -33,13 +32,8 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.clockss.casalini;
 
-import org.lockss.plugin.clockss.MetadataStringHelperUtilities;
 import org.lockss.util.Logger;
-import org.marc4j.*;
-import org.xml.sax.InputSource;
 
-import java.io.*;
-import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 public class CasaliniLibriPublisherNameStringHelperUtilities {
