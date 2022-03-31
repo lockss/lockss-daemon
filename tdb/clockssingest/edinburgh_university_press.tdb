@@ -411,6 +411,7 @@
      >
     {
     param[journal_id] = brw
+    #Was British Scholar before 2010.
 
     au < superseded ; down ; 2008-2009 ; Britain and the World Volume 1 [superseded] ; 1 ; http://www.euppublishing.com/ ; >
     au < superseded ; down ; 2009-2010 ; Britain and the World Volume 2 [superseded] ; 2 ; http://www.euppublishing.com/ ; >
@@ -429,10 +430,18 @@
     au < manifest ; exists ; 2022 ; Britain and the World Volume 15 ; 15 ; https://www.euppublishing.com/ ; >
 
     }
+  }
+  {
     
+    title <
+      name = British Scholar ;
+      issn = 1941-6105 ;
+      eissn = 1941-6113 ;
+      issnl = 1941-6105 
+     >
     {
     param[journal_id] = brs
-    # old title used
+    #Changed to Britain and the World after 2010.
 
     au < finished ; finished ; 2008-2009 ; British Scholar Volume 1 ; 1 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2009-2010 ; British Scholar Volume 2 ; 2 ; http://www.euppublishing.com/ ; >
@@ -2153,4 +2162,49 @@
 
      }  
      
+  {
+
+    title <
+      name = Journal of Late Antique, Islamic and Byzantine Studies ;
+      issn = 2634-2367 ;
+      eissn = 2634-2375 ;
+      issnl = 2634-2367 
+     >
+
+    param[journal_id] = jlaibs
+
+    au < exists ; exists ; 2022 ; Journal of Late Antique, Islamic and Byzantine Studies Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Social and Political Philosophy ;
+      issn = 2752-7514 ;
+      eissn = 2752-7522 ;
+      issnl = 2752-7514 
+     >
+
+    param[journal_id] = jlaibs
+
+    au < exists ; exists ; 2022 ; Journal of Social and Political Philosophy Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
+
+  }
+
+  {
+
+    title <
+      name = Modern Chinese Literature and Culture ;
+      issn = 1520-9857 ;
+      eissn = 2328-966X ;
+      issnl = 1520-9857 
+     >
+
+    param[journal_id] = mclc
+
+    au < exists ; exists ; 2022 ; Modern Chinese Literature and Culture Volume 34 ; 34 ; https://www.euppublishing.com/ ; >
+
+  }
+
 }
