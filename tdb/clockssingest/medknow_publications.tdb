@@ -24,13 +24,13 @@
 #    #  base url doesn't exist
 #    param[journal_issn] = 1817-7417
 #
-#    au < doNotProcess ; exists ; 2005 ; African Journal of Business Ethics Volume 1 ; 2005 ; 1 ; http://www.ajobe.org/ ; ; >
-#    au < doNotProcess ; exists ; 2007 ; African Journal of Business Ethics Volume 2 ; 2007 ; 2 ; http://www.ajobe.org/ ; ; >
-#    au < doNotProcess ; exists ; 2008 ; African Journal of Business Ethics Volume 3 ; 2008 ; 3 ; http://www.ajobe.org/ ; ; >
-#    au < doNotProcess ; exists ; 2009 ; African Journal of Business Ethics Volume 4 ; 2009 ; 4 ; http://www.ajobe.org/ ; ; >
-#    au < doNotProcess ; exists ; 2011 ; African Journal of Business Ethics Volume 5 ; 2011 ; 5 ; http://www.ajobe.org/ ; ; >
-#    au < doNotProcess ; exists ; 2012 ; African Journal of Business Ethics Volume 6 ; 2012 ; 6 ; http://www.ajobe.org/ ; ; >
-#    au < doNotProcess ; exists ; 2013 ; African Journal of Business Ethics Volume 7 ; 2013 ; 7 ; http://www.ajobe.org/ ; ; >
+#    au < doNotProcess ; exists ; 2005 ; African Journal of Business Ethics Volume 1 ; 2005 ; 1 ; https://www.ajobe.org/ ; ; >
+#    au < doNotProcess ; exists ; 2007 ; African Journal of Business Ethics Volume 2 ; 2007 ; 2 ; https://www.ajobe.org/ ; ; >
+#    au < doNotProcess ; exists ; 2008 ; African Journal of Business Ethics Volume 3 ; 2008 ; 3 ; https://www.ajobe.org/ ; ; >
+#    au < doNotProcess ; exists ; 2009 ; African Journal of Business Ethics Volume 4 ; 2009 ; 4 ; https://www.ajobe.org/ ; ; >
+#    au < doNotProcess ; exists ; 2011 ; African Journal of Business Ethics Volume 5 ; 2011 ; 5 ; https://www.ajobe.org/ ; ; >
+#    au < doNotProcess ; exists ; 2012 ; African Journal of Business Ethics Volume 6 ; 2012 ; 6 ; https://www.ajobe.org/ ; ; >
+#    au < doNotProcess ; exists ; 2013 ; African Journal of Business Ethics Volume 7 ; 2013 ; 7 ; https://www.ajobe.org/ ; ; >
 #    au < expected ; exists ; 2014 ; African Journal of Business Ethics Volume 8 ; 2014 ; 8 ; https://www.ajobe.org/ ; ; >
 #
 #  }
@@ -82,11 +82,11 @@
 
     param[journal_issn] = 0259-1162
 
-    au < doNotProcess ; exists ; 2010 ; Anesthesia: Essays and Researches Volume 4 ; 2010 ; 4 ; http://www.aeronline.org/ ; ; >
-    au < doNotProcess ; exists ; 2011 ; Anesthesia: Essays and Researches Volume 5 ; 2011 ; 5 ; http://www.aeronline.org/ ; ; >
-    au < doNotProcess ; exists ; 2012 ; Anesthesia: Essays and Researches Volume 6 ; 2012 ; 6 ; http://www.aeronline.org/ ; ; >
-    au < doNotProcess ; exists ; 2013 ; Anesthesia: Essays and Researches Volume 7 ; 2013 ; 7 ; http://www.aeronline.org/ ; ; >
-    au < doNotProcess ; exists ; 2014 ; Anesthesia: Essays and Researches Volume 8 ; 2014 ; 8 ; http://www.aeronline.org/ ; ; >
+    au < doNotProcess ; exists ; 2010 ; Anesthesia: Essays and Researches Volume 4 ; 2010 ; 4 ; https://www.aeronline.org/ ; ; >
+    au < doNotProcess ; exists ; 2011 ; Anesthesia: Essays and Researches Volume 5 ; 2011 ; 5 ; https://www.aeronline.org/ ; ; >
+    au < doNotProcess ; exists ; 2012 ; Anesthesia: Essays and Researches Volume 6 ; 2012 ; 6 ; https://www.aeronline.org/ ; ; >
+    au < doNotProcess ; exists ; 2013 ; Anesthesia: Essays and Researches Volume 7 ; 2013 ; 7 ; https://www.aeronline.org/ ; ; >
+    au < doNotProcess ; exists ; 2014 ; Anesthesia: Essays and Researches Volume 8 ; 2014 ; 8 ; https://www.aeronline.org/ ; ; >
     au < finished ; frozen ; 2015 ; Anesthesia: Essays and Researches Volume 9 ; 2015 ; 9 ; http://www.aeronline.org/ ; ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Anesthesia: Essays and Researches Volume 10 ; 2016 ; 10 ; http://www.aeronline.org/ ; ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2017 ; Anesthesia: Essays and Researches Volume 11 ; 2017 ; 11 ; http://www.aeronline.org/ ; ; reingest4.clockss.org:8082 >
@@ -118,7 +118,7 @@
     au < finished ; frozen ; 2012 ; Annals of African Medicine Volume 11 ; 2012 ; 11 ; http://www.annalsafrmed.org/ ; ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2013 ; Annals of African Medicine Volume 12 ; 2013 ; 12 ; http://www.annalsafrmed.org/ ; ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Annals of African Medicine Volume 13 ; 2014 ; 13 ; http://www.annalsafrmed.org/ ; ; reingest4.clockss.org:8082 >
-    au < notReady ; exists ; 2015 ; Annals of African Medicine Volume 14 ; 2015 ; 14 ; http://www.annalsafrmed.org/ ; login page ; >
+    au < notReady ; exists ; 2015 ; Annals of African Medicine Volume 14 ; 2015 ; 14 ; https://www.annalsafrmed.org/ ; login page ; >
     au < finished ; crawling ; 2016 ; Annals of African Medicine Volume 15 ; 2016 ; 15 ; http://www.annalsafrmed.org/ ; ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2017 ; Annals of African Medicine Volume 16 ; 2017 ; 16 ; http://www.annalsafrmed.org/ ; ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2018 ; Annals of African Medicine Volume 17 ; 2018 ; 17 ; http://www.annalsafrmed.org/ ; ; reingest1.clockss.org:8082 >
@@ -416,15 +416,15 @@
 #    param[journal_issn] = 0973-8398
 #    #website looks like ojs
 #
-#    au < doNotProcess ; exists ; 2008 ; Asian Journal of Pharmaceutics Volume 2 ; 2008 ; 2 ; http://www.asiapharmaceutics.info/ ; ; >
-#    au < doNotProcess ; exists ; 2009 ; Asian Journal of Pharmaceutics Volume 3 ; 2009 ; 3 ; http://www.asiapharmaceutics.info/ ; ; >
-#    au < doNotProcess ; exists ; 2010 ; Asian Journal of Pharmaceutics Volume 4 ; 2010 ; 4 ; http://www.asiapharmaceutics.info/ ; ; >
-#    au < doNotProcess ; exists ; 2011 ; Asian Journal of Pharmaceutics Volume 5 ; 2011 ; 5 ; http://www.asiapharmaceutics.info/ ; ; >
-#    au < doNotProcess ; exists ; 2012 ; Asian Journal of Pharmaceutics Volume 6 ; 2012 ; 6 ; http://www.asiapharmaceutics.info/ ; ; >
-#    au < doNotProcess ; exists ; 2013 ; Asian Journal of Pharmaceutics Volume 7 ; 2013 ; 7 ; http://www.asiapharmaceutics.info/ ; ; >
-#    au < doNotProcess ; exists ; 2014 ; Asian Journal of Pharmaceutics Volume 8 ; 2014 ; 8 ; http://www.asiapharmaceutics.info/ ; ; >
-#    au < doNotProcess ; exists ; 2015 ; Asian Journal of Pharmaceutics Volume 9 ; 2015 ; 9 ; http://www.asiapharmaceutics.info/ ; ; >
-#    au < doNotProcess ; exists ; 2016 ; Asian Journal of Pharmaceutics Volume 10 ; 2016 ; 10 ; http://www.asiapharmaceutics.info/ ; ; >
+#    au < doNotProcess ; exists ; 2008 ; Asian Journal of Pharmaceutics Volume 2 ; 2008 ; 2 ; https://www.asiapharmaceutics.info/ ; ; >
+#    au < doNotProcess ; exists ; 2009 ; Asian Journal of Pharmaceutics Volume 3 ; 2009 ; 3 ; https://www.asiapharmaceutics.info/ ; ; >
+#    au < doNotProcess ; exists ; 2010 ; Asian Journal of Pharmaceutics Volume 4 ; 2010 ; 4 ; https://www.asiapharmaceutics.info/ ; ; >
+#    au < doNotProcess ; exists ; 2011 ; Asian Journal of Pharmaceutics Volume 5 ; 2011 ; 5 ; https://www.asiapharmaceutics.info/ ; ; >
+#    au < doNotProcess ; exists ; 2012 ; Asian Journal of Pharmaceutics Volume 6 ; 2012 ; 6 ; https://www.asiapharmaceutics.info/ ; ; >
+#    au < doNotProcess ; exists ; 2013 ; Asian Journal of Pharmaceutics Volume 7 ; 2013 ; 7 ; https://www.asiapharmaceutics.info/ ; ; >
+#    au < doNotProcess ; exists ; 2014 ; Asian Journal of Pharmaceutics Volume 8 ; 2014 ; 8 ; https://www.asiapharmaceutics.info/ ; ; >
+#    au < doNotProcess ; exists ; 2015 ; Asian Journal of Pharmaceutics Volume 9 ; 2015 ; 9 ; https://www.asiapharmaceutics.info/ ; ; >
+#    au < doNotProcess ; exists ; 2016 ; Asian Journal of Pharmaceutics Volume 10 ; 2016 ; 10 ; https://www.asiapharmaceutics.info/ ; ; >
 #
 #  }
 
@@ -645,21 +645,21 @@
     # has a lockss permission statement http://www.cytojournal.com/lockss.txt
     #Moved to Scientific scholar https://cytojournal.com/
 
-    au < doNotProcess ; exists ; 2004 ; CytoJournal Volume 2004 ; 2004 ; 1 ; http://www.cytojournal.com/ ; ; >
-    au < doNotProcess ; exists ; 2005 ; CytoJournal Volume 2005 ; 2005 ; 2 ; http://www.cytojournal.com/ ; ; >
-    au < doNotProcess ; exists ; 2006 ; CytoJournal Volume 2006 ; 2006 ; 3 ; http://www.cytojournal.com/ ; ; >
-    au < doNotProcess ; exists ; 2007 ; CytoJournal Volume 2007 ; 2007 ; 4 ; http://www.cytojournal.com/ ; ; >
-    au < doNotProcess ; exists ; 2008 ; CytoJournal Volume 2008 ; 2008 ; 5 ; http://www.cytojournal.com/ ; ; >
-    au < doNotProcess ; exists ; 2009 ; CytoJournal Volume 2009 ; 2009 ; 6 ; http://www.cytojournal.com/ ; ; >
-    au < doNotProcess ; exists ; 2010 ; CytoJournal Volume 2010 ; 2010 ; 7 ; http://www.cytojournal.com/ ; ; >
-    au < doNotProcess ; exists ; 2011 ; CytoJournal Volume 2011 ; 2011 ; 8 ; http://www.cytojournal.com/ ; ; >
-    au < doNotProcess ; exists ; 2012 ; CytoJournal Volume 2012 ; 2012 ; 9 ; http://www.cytojournal.com/ ; ; >
-    au < doNotProcess ; exists ; 2013 ; CytoJournal Volume 2013 ; 2013 ; 10 ; http://www.cytojournal.com/ ; ; >
-    au < doNotProcess ; exists ; 2014 ; CytoJournal Volume 2014 ; 2014 ; 11 ; http://www.cytojournal.com/ ; ; >
-    au < doNotProcess ; exists ; 2015 ; CytoJournal Volume 2015 ; 2015 ; 12 ; http://www.cytojournal.com/ ; ; >
-    au < doNotProcess ; exists ; 2016 ; CytoJournal Volume 2016 ; 2016 ; 13 ; http://www.cytojournal.com/ ; login page for pdf ; >
-    au < doNotProcess ; exists ; 2017 ; CytoJournal Volume 2017 ; 2017 ; 14 ; http://www.cytojournal.com/ ; login page for pdf ; >
-    au < doNotProcess ; exists ; 2018 ; CytoJournal Volume 2018 ; 2018 ; 15 ; http://www.cytojournal.com/ ; ; >
+    au < doNotProcess ; exists ; 2004 ; CytoJournal Volume 2004 ; 2004 ; 1 ; https://www.cytojournal.com/ ; ; >
+    au < doNotProcess ; exists ; 2005 ; CytoJournal Volume 2005 ; 2005 ; 2 ; https://www.cytojournal.com/ ; ; >
+    au < doNotProcess ; exists ; 2006 ; CytoJournal Volume 2006 ; 2006 ; 3 ; https://www.cytojournal.com/ ; ; >
+    au < doNotProcess ; exists ; 2007 ; CytoJournal Volume 2007 ; 2007 ; 4 ; https://www.cytojournal.com/ ; ; >
+    au < doNotProcess ; exists ; 2008 ; CytoJournal Volume 2008 ; 2008 ; 5 ; https://www.cytojournal.com/ ; ; >
+    au < doNotProcess ; exists ; 2009 ; CytoJournal Volume 2009 ; 2009 ; 6 ; https://www.cytojournal.com/ ; ; >
+    au < doNotProcess ; exists ; 2010 ; CytoJournal Volume 2010 ; 2010 ; 7 ; https://www.cytojournal.com/ ; ; >
+    au < doNotProcess ; exists ; 2011 ; CytoJournal Volume 2011 ; 2011 ; 8 ; https://www.cytojournal.com/ ; ; >
+    au < doNotProcess ; exists ; 2012 ; CytoJournal Volume 2012 ; 2012 ; 9 ; https://www.cytojournal.com/ ; ; >
+    au < doNotProcess ; exists ; 2013 ; CytoJournal Volume 2013 ; 2013 ; 10 ; https://www.cytojournal.com/ ; ; >
+    au < doNotProcess ; exists ; 2014 ; CytoJournal Volume 2014 ; 2014 ; 11 ; https://www.cytojournal.com/ ; ; >
+    au < doNotProcess ; exists ; 2015 ; CytoJournal Volume 2015 ; 2015 ; 12 ; https://www.cytojournal.com/ ; ; >
+    au < doNotProcess ; exists ; 2016 ; CytoJournal Volume 2016 ; 2016 ; 13 ; https://www.cytojournal.com/ ; login page for pdf ; >
+    au < doNotProcess ; exists ; 2017 ; CytoJournal Volume 2017 ; 2017 ; 14 ; https://www.cytojournal.com/ ; login page for pdf ; >
+    au < doNotProcess ; exists ; 2018 ; CytoJournal Volume 2018 ; 2018 ; 15 ; https://www.cytojournal.com/ ; ; >
     au < doNotProcess ; exists ; 2019 ; CytoJournal Volume 2019 ; 2019 ; 16 ; https://www.cytojournal.com/ ; ; >
     au < doNotProcess ; exists ; 2020 ; CytoJournal Volume 2020 ; 2020 ; 17 ; https://www.cytojournal.com/ ; ; >
 
@@ -2207,8 +2207,8 @@
 #    param[journal_issn] = 0974-7788
 #    # no permission page at this url
 #
-#    au < doNotProcess ; exists ; 2010 ; International Journal of Ayurveda Research Volume 1 ; 2010 ; 1 ; http://www.ijaronline.com/ ; ; >
-#    au < doNotProcess ; exists ; 2011 ; International Journal of Ayurveda Research Volume 2 ; 2011 ; 2 ; http://www.ijaronline.com/ ; ; >
+#    au < doNotProcess ; exists ; 2010 ; International Journal of Ayurveda Research Volume 1 ; 2010 ; 1 ; https://www.ijaronline.com/ ; ; >
+#    au < doNotProcess ; exists ; 2011 ; International Journal of Ayurveda Research Volume 2 ; 2011 ; 2 ; https://www.ijaronline.com/ ; ; >
 #
 #  }
 
@@ -2250,13 +2250,13 @@
 #    param[journal_issn] = 0973-8258
 #    # Looks like OJS
 #
-#    au < doNotProcess ; exists ; 2007 ; International Journal of Green Pharmacy Volume 1 ; 2007 ; 1 ; http://www.greenpharmacy.info/ ; ; >
-#    au < doNotProcess ; exists ; 2008 ; International Journal of Green Pharmacy Volume 2 ; 2008 ; 2 ; http://www.greenpharmacy.info/ ; ; >
-#    au < doNotProcess ; exists ; 2009 ; International Journal of Green Pharmacy Volume 3 ; 2009 ; 3 ; http://www.greenpharmacy.info/ ; ; >
-#    au < doNotProcess ; exists ; 2010 ; International Journal of Green Pharmacy Volume 4 ; 2010 ; 4 ; http://www.greenpharmacy.info/ ; ; >
-#    au < doNotProcess ; exists ; 2011 ; International Journal of Green Pharmacy Volume 5 ; 2011 ; 5 ; http://www.greenpharmacy.info/ ; ; >
-#    au < doNotProcess ; exists ; 2012 ; International Journal of Green Pharmacy Volume 6 ; 2012 ; 6 ; http://www.greenpharmacy.info/ ; ; >
-#    au < doNotProcess ; exists ; 2013 ; International Journal of Green Pharmacy Volume 7 ; 2013 ; 7 ; http://www.greenpharmacy.info/ ; ; >
+#    au < doNotProcess ; exists ; 2007 ; International Journal of Green Pharmacy Volume 1 ; 2007 ; 1 ; https://www.greenpharmacy.info/ ; ; >
+#    au < doNotProcess ; exists ; 2008 ; International Journal of Green Pharmacy Volume 2 ; 2008 ; 2 ; https://www.greenpharmacy.info/ ; ; >
+#    au < doNotProcess ; exists ; 2009 ; International Journal of Green Pharmacy Volume 3 ; 2009 ; 3 ; https://www.greenpharmacy.info/ ; ; >
+#    au < doNotProcess ; exists ; 2010 ; International Journal of Green Pharmacy Volume 4 ; 2010 ; 4 ; https://www.greenpharmacy.info/ ; ; >
+#    au < doNotProcess ; exists ; 2011 ; International Journal of Green Pharmacy Volume 5 ; 2011 ; 5 ; https://www.greenpharmacy.info/ ; ; >
+#    au < doNotProcess ; exists ; 2012 ; International Journal of Green Pharmacy Volume 6 ; 2012 ; 6 ; https://www.greenpharmacy.info/ ; ; >
+#    au < doNotProcess ; exists ; 2013 ; International Journal of Green Pharmacy Volume 7 ; 2013 ; 7 ; https://www.greenpharmacy.info/ ; ; >
 #    au < expected ; exists ; 2014 ; International Journal of Green Pharmacy Volume 8 ; 2014 ; 8 ; https://www.greenpharmacy.info/ ; ; >
 #
 #  }
@@ -2514,7 +2514,7 @@
     au < finished ; frozen ; 2015 ; Journal of Anaesthesiology Clinical Pharmacology Volume 31 ; 2015 ; 31 ; http://www.joacp.org/ ; ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2016 ; Journal of Anaesthesiology Clinical Pharmacology Volume 32 ; 2016 ; 32 ; http://www.joacp.org/ ; ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2017 ; Journal of Anaesthesiology Clinical Pharmacology Volume 33 ; 2017 ; 33 ; http://www.joacp.org/ ; ; reingest3.clockss.org:8083 >
-    au < doNotProcess ; exists ; 2018 ; Journal of Anaesthesiology Clinical Pharmacology Volume 34 ; 2018 ; 34 ; http://www.joacp.org/ ; 500 Error ; >
+    au < doNotProcess ; exists ; 2018 ; Journal of Anaesthesiology Clinical Pharmacology Volume 34 ; 2018 ; 34 ; https://www.joacp.org/ ; 500 Error ; >
     au < finished ; crawling ; 2019 ; Journal of Anaesthesiology Clinical Pharmacology Volume 35 ; 2019 ; 35 ; https://www.joacp.org/ ; ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Journal of Anaesthesiology Clinical Pharmacology Volume 36 ; 2020 ; 36 ; https://www.joacp.org/ ; ; reingest5.clockss.org:8082 >
     au < superseded ; exists ; 2021 ; Journal of Anaesthesiology Clinical Pharmacology Volume 37 [superseded] ; 2021 ; 37 ; https://www.joacp.org/ ; ; >
@@ -2603,28 +2603,28 @@
     # instead of by a listing like this: http://www.carcinogenesis.com/backissues.asp
     # does have a lockss/clockss permission statement. http://www.carcinogenesis.com/lockss.txt
 
-    au < notReady ; exists ; 2002 ; Journal of Carcinogenesis Volume 1 ; 2002 ; 1 ; http://www.carcinogenesis.com/ ; ; >
-    au < notReady ; exists ; 2003 ; Journal of Carcinogenesis Volume 2 ; 2003 ; 2 ; http://www.carcinogenesis.com/ ; ; >
-    au < notReady ; exists ; 2004 ; Journal of Carcinogenesis Volume 3 ; 2004 ; 3 ; http://www.carcinogenesis.com/ ; ; >
-    au < notReady ; exists ; 2005 ; Journal of Carcinogenesis Volume 4 ; 2005 ; 4 ; http://www.carcinogenesis.com/ ; ; >
-    au < notReady ; exists ; 2006 ; Journal of Carcinogenesis Volume 5 ; 2006 ; 5 ; http://www.carcinogenesis.com/ ; ; >
-    au < notReady ; exists ; 2007 ; Journal of Carcinogenesis Volume 6 ; 2007 ; 6 ; http://www.carcinogenesis.com/ ; ; >
-    au < notReady ; exists ; 2008 ; Journal of Carcinogenesis Volume 7 ; 2008 ; 7 ; http://www.carcinogenesis.com/ ; ; >
-    au < notReady ; exists ; 2009 ; Journal of Carcinogenesis Volume 8 ; 2009 ; 8 ; http://www.carcinogenesis.com/ ; ; >
-    au < notReady ; exists ; 2010 ; Journal of Carcinogenesis Volume 9 ; 2010 ; 9 ; http://www.carcinogenesis.com/ ; ; >
-    au < notReady ; exists ; 2011 ; Journal of Carcinogenesis Volume 10 ; 2011 ; 10 ; http://www.carcinogenesis.com/ ; ; >
-    au < notReady ; exists ; 2012 ; Journal of Carcinogenesis Volume 11 ; 2012 ; 11 ; http://www.carcinogenesis.com/ ; ; >
-    au < notReady ; exists ; 2013 ; Journal of Carcinogenesis Volume 12 ; 2013 ; 12 ; http://www.carcinogenesis.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; Journal of Carcinogenesis Volume 1 ; 2002 ; 1 ; https://www.carcinogenesis.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; Journal of Carcinogenesis Volume 2 ; 2003 ; 2 ; https://www.carcinogenesis.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; Journal of Carcinogenesis Volume 3 ; 2004 ; 3 ; https://www.carcinogenesis.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; Journal of Carcinogenesis Volume 4 ; 2005 ; 4 ; https://www.carcinogenesis.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; Journal of Carcinogenesis Volume 5 ; 2006 ; 5 ; https://www.carcinogenesis.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Journal of Carcinogenesis Volume 6 ; 2007 ; 6 ; https://www.carcinogenesis.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Journal of Carcinogenesis Volume 7 ; 2008 ; 7 ; https://www.carcinogenesis.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Journal of Carcinogenesis Volume 8 ; 2009 ; 8 ; https://www.carcinogenesis.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Journal of Carcinogenesis Volume 9 ; 2010 ; 9 ; https://www.carcinogenesis.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Journal of Carcinogenesis Volume 10 ; 2011 ; 10 ; https://www.carcinogenesis.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Journal of Carcinogenesis Volume 11 ; 2012 ; 11 ; https://www.carcinogenesis.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Journal of Carcinogenesis Volume 12 ; 2013 ; 12 ; https://www.carcinogenesis.com/ ; ; >
     au < finished ; frozen ; 2014 ; Journal of Carcinogenesis Volume 13 ; 2014 ; 13 ; http://www.carcinogenesis.com/ ; ; reingest1.clockss.org:8082 >
-    au < notReady ; exists ; 2015 ; Journal of Carcinogenesis Volume 14 ; 2015 ; 14 ; http://www.carcinogenesis.com/ ; ; >
-    au < notReady ; exists ; 2016 ; Journal of Carcinogenesis Volume 15 ; 2016 ; 15 ; http://www.carcinogenesis.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; Journal of Carcinogenesis Volume 14 ; 2015 ; 14 ; https://www.carcinogenesis.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; Journal of Carcinogenesis Volume 15 ; 2016 ; 15 ; https://www.carcinogenesis.com/ ; ; >
     au < finished ; frozen ; 2017 ; Journal of Carcinogenesis Volume 16 ; 2017 ; 16 ; http://www.carcinogenesis.com/ ; ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2018 ; Journal of Carcinogenesis Volume 17 ; 2018 ; 17 ; http://www.carcinogenesis.com/ ; ; reingest3.clockss.org:8083 >
-    au < notReady ; exists ; 2019 ; Journal of Carcinogenesis Volume 18 ; 2019 ; 18 ; http://www.carcinogenesis.com/ ; ; >
-    au < notReady ; exists ; 2020 ; Journal of Carcinogenesis Volume 19 ; 2020 ; 19 ; http://www.carcinogenesis.com/ ; ; >
-    au < notReady ; exists ; 2021 ; Journal of Carcinogenesis Volume 20 ; 2021 ; 20 ; http://www.carcinogenesis.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2019 ; Journal of Carcinogenesis Volume 18 ; 2019 ; 18 ; https://www.carcinogenesis.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2020 ; Journal of Carcinogenesis Volume 19 ; 2020 ; 19 ; https://www.carcinogenesis.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2021 ; Journal of Carcinogenesis Volume 20 ; 2021 ; 20 ; https://www.carcinogenesis.com/ ; ; >
     #deactivated. No further content.
-    au < expected ; exists ; 2022 ; Journal of Carcinogenesis Volume 21 ; 2022 ; 21 ; http://www.carcinogenesis.com/ ; ; >
+
   }
 #  {
 #    title <
@@ -2638,10 +2638,10 @@
 #    # no lockss.txt available at this url. Moved.
 #    param[journal_issn] = 0975-3583
 #
-#    au < doNotProcess ; exists ; 2010 ; Journal of Cardiovascular Disease Research Volume 1 ; 2010 ; 1 ; http://www.jcdronline.com/ ; ; >
-#    au < doNotProcess ; exists ; 2011 ; Journal of Cardiovascular Disease Research Volume 2 ; 2011 ; 2 ; http://www.jcdronline.com/ ; ; >
-#    au < doNotProcess ; exists ; 2012 ; Journal of Cardiovascular Disease Research Volume 3 ; 2012 ; 3 ; http://www.jcdronline.com/ ; ; >
-#    au < doNotProcess ; exists ; 2013 ; Journal of Cardiovascular Disease Research Volume 4 ; 2013 ; 4 ; http://www.jcdronline.com/ ; ; >
+#    au < doNotProcess ; exists ; 2010 ; Journal of Cardiovascular Disease Research Volume 1 ; 2010 ; 1 ; https://www.jcdronline.com/ ; ; >
+#    au < doNotProcess ; exists ; 2011 ; Journal of Cardiovascular Disease Research Volume 2 ; 2011 ; 2 ; https://www.jcdronline.com/ ; ; >
+#    au < doNotProcess ; exists ; 2012 ; Journal of Cardiovascular Disease Research Volume 3 ; 2012 ; 3 ; https://www.jcdronline.com/ ; ; >
+#    au < doNotProcess ; exists ; 2013 ; Journal of Cardiovascular Disease Research Volume 4 ; 2013 ; 4 ; https://www.jcdronline.com/ ; ; >
 #    au < expected ; exists ; 2014 ; Journal of Cardiovascular Disease Research Volume 5 ; 2014 ; 5 ; https://www.jcdronline.com/ ; ; >
 #
 #  }
@@ -2662,19 +2662,17 @@
     # has a lockss permission statement http://www.clinicalimagingscience.org/lockss.txt
     #move to Scientific Scholar
 
-
-    au < notReady ; exists ; 2011 ; Journal of Clinical Imaging Science Volume 1 ; 2011 ; 1 ; http://www.clinicalimagingscience.org/ ; ; >
-    au < notReady ; exists ; 2012 ; Journal of Clinical Imaging Science Volume 2 ; 2012 ; 2 ; http://www.clinicalimagingscience.org/ ; ; >
-    au < notReady ; exists ; 2013 ; Journal of Clinical Imaging Science Volume 3 ; 2013 ; 3 ; http://www.clinicalimagingscience.org/ ; ; >
-    au < notReady ; exists ; 2014 ; Journal of Clinical Imaging Science Volume 4 ; 2014 ; 4 ; http://www.clinicalimagingscience.org/ ; ; >
-    au < notReady ; exists ; 2015 ; Journal of Clinical Imaging Science Volume 5 ; 2015 ; 5 ; http://www.clinicalimagingscience.org/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Journal of Clinical Imaging Science Volume 1 ; 2011 ; 1 ; https://www.clinicalimagingscience.org/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Journal of Clinical Imaging Science Volume 2 ; 2012 ; 2 ; https://www.clinicalimagingscience.org/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Journal of Clinical Imaging Science Volume 3 ; 2013 ; 3 ; https://www.clinicalimagingscience.org/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; Journal of Clinical Imaging Science Volume 4 ; 2014 ; 4 ; https://www.clinicalimagingscience.org/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; Journal of Clinical Imaging Science Volume 5 ; 2015 ; 5 ; https://www.clinicalimagingscience.org/ ; ; >
     au < finished ; crawling ; 2016 ; Journal of Clinical Imaging Science Volume 6 ; 2016 ; 6 ; http://www.clinicalimagingscience.org/ ; ; reingest5.clockss.org:8082 >
-    au < notReady ; exists ; 2017 ; Journal of Clinical Imaging Science Volume 7 ; 2017 ; 7 ; http://www.clinicalimagingscience.org/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; Journal of Clinical Imaging Science Volume 7 ; 2017 ; 7 ; https://www.clinicalimagingscience.org/ ; ; >
     au < finished ; crawling ; 2018 ; Journal of Clinical Imaging Science Volume 8 ; 2018 ; 8 ; http://www.clinicalimagingscience.org/ ; ; reingest3.clockss.org:8083 >
-    au < notReady ; exists ; 2019 ; Journal of Clinical Imaging Science Volume 9 ; 2019 ; 9 ; https://www.clinicalimagingscience.org/ ; ; >
-    au < notReady ; exists ; 2020 ; Journal of Clinical Imaging Science Volume 10 ; 2020 ; 10 ; https://www.clinicalimagingscience.org/ ; ; >
-    au < notReady ; exists ; 2021 ; Journal of Clinical Imaging Science Volume 11 ; 2021 ; 11 ; https://www.clinicalimagingscience.org/ ; ; >
-    au < expected ; exists ; 2022 ; Journal of Clinical Imaging Science Volume 12 ; 2022 ; 12 ; https://www.clinicalimagingscience.org/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2019 ; Journal of Clinical Imaging Science Volume 9 ; 2019 ; 9 ; https://www.clinicalimagingscience.org/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2020 ; Journal of Clinical Imaging Science Volume 10 ; 2020 ; 10 ; https://www.clinicalimagingscience.org/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2021 ; Journal of Clinical Imaging Science Volume 11 ; 2021 ; 11 ; https://www.clinicalimagingscience.org/ ; ; >
 
   }
 
@@ -2715,7 +2713,7 @@
 #    comment[base_url] = old url http://www.ayurvedarheumatology.org/
 #    comment[title] = old title Journal of Clinical Rheumatology in Ayurveda
 #
-#    au < doNotProcess ; exists ; 2013 ; ASL- Musculoskeletal Diseases Volume 1 ; 2013 ; 1 ; http://msd.ancientscienceoflife.org/ ; ; >
+#    au < doNotProcess ; exists ; 2013 ; ASL- Musculoskeletal Diseases Volume 1 ; 2013 ; 1 ; https://msd.ancientscienceoflife.org/ ; ; >
 #    au < expected ; exists ; 2014 ; ASL- Musculoskeletal Diseases Volume 2 ; 2014 ; 2 ; https://msd.ancientscienceoflife.org/ ; ; >
 #
 #  }
@@ -3465,10 +3463,10 @@
 #    # no lockss.txt available at this url
 #    param[journal_issn] = 2229-5119
 #
-#    au < doNotProcess ; exists ; 2010 ; Journal of Natural Pharmaceuticals Volume 1 ; 2010 ; 1 ; http://www.jnatpharm.org/ ; ; >
-#    au < doNotProcess ; exists ; 2011 ; Journal of Natural Pharmaceuticals Volume 2 ; 2011 ; 2 ; http://www.jnatpharm.org/ ; ; >
-#    au < doNotProcess ; exists ; 2012 ; Journal of Natural Pharmaceuticals Volume 3 ; 2012 ; 3 ; http://www.jnatpharm.org/ ; ; >
-#    au < doNotProcess ; exists ; 2013 ; Journal of Natural Pharmaceuticals Volume 4 ; 2013 ; 4 ; http://www.jnatpharm.org/ ; ; >
+#    au < doNotProcess ; exists ; 2010 ; Journal of Natural Pharmaceuticals Volume 1 ; 2010 ; 1 ; https://www.jnatpharm.org/ ; ; >
+#    au < doNotProcess ; exists ; 2011 ; Journal of Natural Pharmaceuticals Volume 2 ; 2011 ; 2 ; https://www.jnatpharm.org/ ; ; >
+#    au < doNotProcess ; exists ; 2012 ; Journal of Natural Pharmaceuticals Volume 3 ; 2012 ; 3 ; https://www.jnatpharm.org/ ; ; >
+#    au < doNotProcess ; exists ; 2013 ; Journal of Natural Pharmaceuticals Volume 4 ; 2013 ; 4 ; https://www.jnatpharm.org/ ; ; >
 #    au < expected ; exists ; 2014 ; Journal of Natural Pharmaceuticals Volume 5 ; 2014 ; 5 ; https://www.jnatpharm.org/ ; ; >
 #
 #  }
@@ -3597,13 +3595,13 @@
     # instead of by a listing like this: http://www.jpathinformatics.org/backissues.asp
     #move to Elsevier, 2022. Archive will stay with Medknow until further notice
 
-    au < doNotProcess ; exists ; 2010 ; Journal of Pathology Informatics Volume 1 ; 2010 ; 1 ; http://www.jpathinformatics.org/ ; ; >
-    au < doNotProcess ; exists ; 2011 ; Journal of Pathology Informatics Volume 2 ; 2011 ; 2 ; http://www.jpathinformatics.org/ ; ; >
-    au < doNotProcess ; exists ; 2012 ; Journal of Pathology Informatics Volume 3 ; 2012 ; 3 ; http://www.jpathinformatics.org/ ; ; >
-    au < doNotProcess ; exists ; 2013 ; Journal of Pathology Informatics Volume 4 ; 2013 ; 4 ; http://www.jpathinformatics.org/ ; ; >
-    au < doNotProcess ; exists ; 2014 ; Journal of Pathology Informatics Volume 5 ; 2014 ; 5 ; http://www.jpathinformatics.org/ ; ; >
-    au < doNotProcess ; exists ; 2015 ; Journal of Pathology Informatics Volume 6 ; 2015 ; 6 ; http://www.jpathinformatics.org/ ; ; >
-    au < doNotProcess ; exists ; 2016 ; Journal of Pathology Informatics Volume 7 ; 2016 ; 7 ; http://www.jpathinformatics.org/ ; ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Pathology Informatics Volume 1 ; 2010 ; 1 ; https://www.jpathinformatics.org/ ; ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Pathology Informatics Volume 2 ; 2011 ; 2 ; https://www.jpathinformatics.org/ ; ; >
+    au < doNotProcess ; exists ; 2012 ; Journal of Pathology Informatics Volume 3 ; 2012 ; 3 ; https://www.jpathinformatics.org/ ; ; >
+    au < doNotProcess ; exists ; 2013 ; Journal of Pathology Informatics Volume 4 ; 2013 ; 4 ; https://www.jpathinformatics.org/ ; ; >
+    au < doNotProcess ; exists ; 2014 ; Journal of Pathology Informatics Volume 5 ; 2014 ; 5 ; https://www.jpathinformatics.org/ ; ; >
+    au < doNotProcess ; exists ; 2015 ; Journal of Pathology Informatics Volume 6 ; 2015 ; 6 ; https://www.jpathinformatics.org/ ; ; >
+    au < doNotProcess ; exists ; 2016 ; Journal of Pathology Informatics Volume 7 ; 2016 ; 7 ; https://www.jpathinformatics.org/ ; ; >
     au < finished ; frozen ; 2017 ; Journal of Pathology Informatics Volume 8 ; 2017 ; 8 ; http://www.jpathinformatics.org/ ; ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2018 ; Journal of Pathology Informatics Volume 9 ; 2018 ; 9 ; http://www.jpathinformatics.org/ ; ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; Journal of Pathology Informatics Volume 10 ; 2019 ; 10 ; https://www.jpathinformatics.org/ ; ; reingest1.clockss.org:8082 >
@@ -3797,7 +3795,7 @@
 #    # no lockss.txt available at this url
 #    param[journal_issn] = 0976-1756
 #
-#    au < doNotProcess ; exists ; 2010 ; Journal of Prenatal Diagnosis and Therapy Volume 1 ; 2010 ; 1 ; http://www.jpdt.org/ ; ; >
+#    au < doNotProcess ; exists ; 2010 ; Journal of Prenatal Diagnosis and Therapy Volume 1 ; 2010 ; 1 ; https://www.jpdt.org/ ; ; >
 #
 #  }
 #  {
@@ -3876,11 +3874,11 @@
 #    param[journal_issn] = 0975-1483
 #    #moved
 #
-#    au < doNotProcess ; exists ; 2009 ; Journal of Young Pharmacists Volume 1 ; 2009 ; 1 ; http://www.jyoungpharm.in/ ; ; >
-#    au < doNotProcess ; exists ; 2010 ; Journal of Young Pharmacists Volume 2 ; 2010 ; 2 ; http://www.jyoungpharm.in/ ; ; >
-#    au < doNotProcess ; exists ; 2011 ; Journal of Young Pharmacists Volume 3 ; 2011 ; 3 ; http://www.jyoungpharm.in/ ; ; >
-#    au < doNotProcess ; exists ; 2012 ; Journal of Young Pharmacists Volume 4 ; 2012 ; 4 ; http://www.jyoungpharm.in/ ; ; >
-#    au < doNotProcess ; exists ; 2013 ; Journal of Young Pharmacists Volume 5 ; 2013 ; 5 ; http://www.jyoungpharm.in/ ; ; >
+#    au < doNotProcess ; exists ; 2009 ; Journal of Young Pharmacists Volume 1 ; 2009 ; 1 ; https://www.jyoungpharm.in/ ; ; >
+#    au < doNotProcess ; exists ; 2010 ; Journal of Young Pharmacists Volume 2 ; 2010 ; 2 ; https://www.jyoungpharm.in/ ; ; >
+#    au < doNotProcess ; exists ; 2011 ; Journal of Young Pharmacists Volume 3 ; 2011 ; 3 ; https://www.jyoungpharm.in/ ; ; >
+#    au < doNotProcess ; exists ; 2012 ; Journal of Young Pharmacists Volume 4 ; 2012 ; 4 ; https://www.jyoungpharm.in/ ; ; >
+#    au < doNotProcess ; exists ; 2013 ; Journal of Young Pharmacists Volume 5 ; 2013 ; 5 ; https://www.jyoungpharm.in/ ; ; >
 #    au < expected ; exists ; 2014 ; Journal of Young Pharmacists Volume 6 ; 2014 ; 6 ; https://www.jyoungpharm.in/ ; ; >
 #
 #  }
@@ -3964,15 +3962,15 @@
     param[journal_issn] = 0974-1234
     #Moved
 
-    au < doNotProcess ; exists ; 2008 ; Medical Law Cases - For Doctors Volume 1 ; 2008 ; 1 ; http://www.mlcd.in/ ; ; >
-    au < doNotProcess ; exists ; 2009 ; Medical Law Cases - For Doctors Volume 2 ; 2009 ; 2 ; http://www.mlcd.in/ ; ; >
-    au < doNotProcess ; exists ; 2010 ; Medical Law Cases - For Doctors Volume 3 ; 2010 ; 3 ; http://www.mlcd.in/ ; ; >
-    au < doNotProcess ; exists ; 2011 ; Medical Law Cases - For Doctors Volume 4 ; 2011 ; 4 ; http://www.mlcd.in/ ; ; >
-    au < doNotProcess ; exists ; 2012 ; Medical Law Cases - For Doctors Volume 5 ; 2012 ; 5 ; http://www.mlcd.in/ ; ; >
-    au < doNotProcess ; exists ; 2013 ; Medical Law Cases - For Doctors Volume 6 ; 2013 ; 6 ; http://www.mlcd.in/ ; ; >
-    au < doNotProcess ; doNotProcess ; 2014 ; Medical Law Cases - For Doctors Volume 7 ; 2014 ; 7 ; http://www.mlcd.in/ ; ; > #no substance. unknown why.
-    au < doNotProcess ; doNotProcess ; 2015 ; Medical Law Cases - For Doctors Volume 8 ; 2015 ; 8 ; http://www.mlcd.in/ ; ; > #no substance. unknown why.
-    au < doNotProcess ; doNotProcess ; 2016 ; Medical Law Cases - For Doctors Volume 9 ; 2016 ; 9 ; http://www.mlcd.in/ ; ; > #no substance. unknown why.
+    au < doNotProcess ; exists ; 2008 ; Medical Law Cases - For Doctors Volume 1 ; 2008 ; 1 ; https://www.mlcd.in/ ; ; >
+    au < doNotProcess ; exists ; 2009 ; Medical Law Cases - For Doctors Volume 2 ; 2009 ; 2 ; https://www.mlcd.in/ ; ; >
+    au < doNotProcess ; exists ; 2010 ; Medical Law Cases - For Doctors Volume 3 ; 2010 ; 3 ; https://www.mlcd.in/ ; ; >
+    au < doNotProcess ; exists ; 2011 ; Medical Law Cases - For Doctors Volume 4 ; 2011 ; 4 ; https://www.mlcd.in/ ; ; >
+    au < doNotProcess ; exists ; 2012 ; Medical Law Cases - For Doctors Volume 5 ; 2012 ; 5 ; https://www.mlcd.in/ ; ; >
+    au < doNotProcess ; exists ; 2013 ; Medical Law Cases - For Doctors Volume 6 ; 2013 ; 6 ; https://www.mlcd.in/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; Medical Law Cases - For Doctors Volume 7 ; 2014 ; 7 ; https://www.mlcd.in/ ; ; > #no substance. unknown why.
+    au < doNotProcess ; doNotProcess ; 2015 ; Medical Law Cases - For Doctors Volume 8 ; 2015 ; 8 ; https://www.mlcd.in/ ; ; > #no substance. unknown why.
+    au < doNotProcess ; doNotProcess ; 2016 ; Medical Law Cases - For Doctors Volume 9 ; 2016 ; 9 ; https://www.mlcd.in/ ; ; > #no substance. unknown why.
     au < doNotProcess ; doNotProcess ; 2017 ; Medical Law Cases - For Doctors Volume 10 ; 2017 ; 10 ; https://www.mlcd.in/ ; ; > #does not find manifest page.
     au < doNotProcess ; doNotProcess ; 2018 ; Medical Law Cases - For Doctors Volume 11 ; 2018 ; 11 ; https://www.mlcd.in/ ; ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Medical Law Cases - For Doctors Volume 12 ; 2019 ; 12 ; https://www.mlcd.in/ ; ; >
@@ -3991,17 +3989,17 @@
     param[journal_issn] = 0973-1229
     #Moved
 
-    au < doNotProcess ; exists ; 2003 ; Mens Sana Monographs Volume 1 ; 2003 ; 1 ; http://www.msmonographs.org/ ; ; >
-    au < doNotProcess ; exists ; 2004 ; Mens Sana Monographs Volume 2 ; 2004 ; 2 ; http://www.msmonographs.org/ ; ; >
-    au < doNotProcess ; exists ; 2005 ; Mens Sana Monographs Volume 3 ; 2005 ; 3 ; http://www.msmonographs.org/ ; ; >
-    au < doNotProcess ; exists ; 2006 ; Mens Sana Monographs Volume 4 ; 2006 ; 4 ; http://www.msmonographs.org/ ; ; >
-    au < doNotProcess ; exists ; 2007 ; Mens Sana Monographs Volume 5 ; 2007 ; 5 ; http://www.msmonographs.org/ ; ; >
-    au < doNotProcess ; exists ; 2008 ; Mens Sana Monographs Volume 6 ; 2008 ; 6 ; http://www.msmonographs.org/ ; ; >
-    au < doNotProcess ; exists ; 2009 ; Mens Sana Monographs Volume 7 ; 2009 ; 7 ; http://www.msmonographs.org/ ; ; >
-    au < doNotProcess ; exists ; 2010 ; Mens Sana Monographs Volume 8 ; 2010 ; 8 ; http://www.msmonographs.org/ ; ; >
-    au < doNotProcess ; exists ; 2011 ; Mens Sana Monographs Volume 9 ; 2011 ; 9 ; http://www.msmonographs.org/ ; ; >
-    au < doNotProcess ; exists ; 2012 ; Mens Sana Monographs Volume 10 ; 2012 ; 10 ; http://www.msmonographs.org/ ; ; >
-    au < doNotProcess ; exists ; 2013 ; Mens Sana Monographs Volume 11 ; 2013 ; 11 ; http://www.msmonographs.org/ ; ; >
+    au < doNotProcess ; exists ; 2003 ; Mens Sana Monographs Volume 1 ; 2003 ; 1 ; https://www.msmonographs.org/ ; ; >
+    au < doNotProcess ; exists ; 2004 ; Mens Sana Monographs Volume 2 ; 2004 ; 2 ; https://www.msmonographs.org/ ; ; >
+    au < doNotProcess ; exists ; 2005 ; Mens Sana Monographs Volume 3 ; 2005 ; 3 ; https://www.msmonographs.org/ ; ; >
+    au < doNotProcess ; exists ; 2006 ; Mens Sana Monographs Volume 4 ; 2006 ; 4 ; https://www.msmonographs.org/ ; ; >
+    au < doNotProcess ; exists ; 2007 ; Mens Sana Monographs Volume 5 ; 2007 ; 5 ; https://www.msmonographs.org/ ; ; >
+    au < doNotProcess ; exists ; 2008 ; Mens Sana Monographs Volume 6 ; 2008 ; 6 ; https://www.msmonographs.org/ ; ; >
+    au < doNotProcess ; exists ; 2009 ; Mens Sana Monographs Volume 7 ; 2009 ; 7 ; https://www.msmonographs.org/ ; ; >
+    au < doNotProcess ; exists ; 2010 ; Mens Sana Monographs Volume 8 ; 2010 ; 8 ; https://www.msmonographs.org/ ; ; >
+    au < doNotProcess ; exists ; 2011 ; Mens Sana Monographs Volume 9 ; 2011 ; 9 ; https://www.msmonographs.org/ ; ; >
+    au < doNotProcess ; exists ; 2012 ; Mens Sana Monographs Volume 10 ; 2012 ; 10 ; https://www.msmonographs.org/ ; ; >
+    au < doNotProcess ; exists ; 2013 ; Mens Sana Monographs Volume 11 ; 2013 ; 11 ; https://www.msmonographs.org/ ; ; >
     au < finished ; finished ; 2014 ; Mens Sana Monographs Volume 12 ; 2014 ; 12 ; http://www.msmonographs.org/ ; ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Mens Sana Monographs Volume 13 ; 2015 ; 13 ; http://www.msmonographs.org/ ; ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2016 ; Mens Sana Monographs Volume 14 ; 2016 ; 14 ; http://www.msmonographs.org/ ; ; reingest4.clockss.org:8082 >
@@ -4323,10 +4321,10 @@
 #    param[journal_issn] = 2229-4708
 #    # moved
 #
-#    au < doNotProcess ; exists ; 2010 ; Pharmaceutical Methods Volume 1 ; 2010 ; 1 ; http://www.phmethods.org/ ; ; >
-#    au < doNotProcess ; exists ; 2011 ; Pharmaceutical Methods Volume 2 ; 2011 ; 2 ; http://www.phmethods.org/ ; ; >
-#    au < doNotProcess ; exists ; 2012 ; Pharmaceutical Methods Volume 3 ; 2012 ; 3 ; http://www.phmethods.org/ ; ; >
-#    au < doNotProcess ; exists ; 2013 ; Pharmaceutical Methods Volume 4 ; 2013 ; 4 ; http://www.phmethods.org/ ; ; >
+#    au < doNotProcess ; exists ; 2010 ; Pharmaceutical Methods Volume 1 ; 2010 ; 1 ; https://www.phmethods.org/ ; ; >
+#    au < doNotProcess ; exists ; 2011 ; Pharmaceutical Methods Volume 2 ; 2011 ; 2 ; https://www.phmethods.org/ ; ; >
+#    au < doNotProcess ; exists ; 2012 ; Pharmaceutical Methods Volume 3 ; 2012 ; 3 ; https://www.phmethods.org/ ; ; >
+#    au < doNotProcess ; exists ; 2013 ; Pharmaceutical Methods Volume 4 ; 2013 ; 4 ; https://www.phmethods.org/ ; ; >
 #    au < expected ; exists ; 2014 ; Pharmaceutical Methods Volume 5 ; 2014 ; 5 ; https://www.phmethods.org/ ; ; >
 #
 #  }
@@ -4431,9 +4429,9 @@
 #    param[journal_issn] = 2045-8932
 #    # moved
 #
-#    au < doNotProcess ; exists ; 2011 ; Pulmonary Circulation Volume 1 ; 2011 ; 1 ; http://www.pulmonarycirculation.org/ ; ; >
-#    au < doNotProcess ; exists ; 2012 ; Pulmonary Circulation Volume 2 ; 2012 ; 2 ; http://www.pulmonarycirculation.org/ ; ; >
-#    au < doNotProcess ; exists ; 2013 ; Pulmonary Circulation Volume 3 ; 2013 ; 3 ; http://www.pulmonarycirculation.org/ ; ; >
+#    au < doNotProcess ; exists ; 2011 ; Pulmonary Circulation Volume 1 ; 2011 ; 1 ; https://www.pulmonarycirculation.org/ ; ; >
+#    au < doNotProcess ; exists ; 2012 ; Pulmonary Circulation Volume 2 ; 2012 ; 2 ; https://www.pulmonarycirculation.org/ ; ; >
+#    au < doNotProcess ; exists ; 2013 ; Pulmonary Circulation Volume 3 ; 2013 ; 3 ; https://www.pulmonarycirculation.org/ ; ; >
 #    au < expected ; exists ; 2014 ; Pulmonary Circulation Volume 4 ; 2014 ; 4 ; https://www.pulmonarycirculation.org/ ; ; >
 #
 #  }
@@ -4449,11 +4447,11 @@
 #    # no lockss.txt available at this url
 #    param[journal_issn] = 0974-6013
 #
-#    au < doNotProcess ; exists ; 2009 ; PVRI Review Volume 1 ; 2009 ; 1 ; http://www.pvrireview.org/ ; ; >
-#    au < doNotProcess ; exists ; 2010 ; PVRI Review Volume 2 ; 2010 ; 2 ; http://www.pvrireview.org/ ; ; >
-#    au < doNotProcess ; exists ; 2011 ; PVRI Review Volume 3 ; 2011 ; 3 ; http://www.pvrireview.org/ ; ; >
-#    au < doNotProcess ; exists ; 2012 ; PVRI Review Volume 4 ; 2012 ; 4 ; http://www.pvrireview.org/ ; ; >
-#    au < doNotProcess ; exists ; 2013 ; PVRI Review Volume 5 ; 2013 ; 5 ; http://www.pvrireview.org/ ; ; >
+#    au < doNotProcess ; exists ; 2009 ; PVRI Review Volume 1 ; 2009 ; 1 ; https://www.pvrireview.org/ ; ; >
+#    au < doNotProcess ; exists ; 2010 ; PVRI Review Volume 2 ; 2010 ; 2 ; https://www.pvrireview.org/ ; ; >
+#    au < doNotProcess ; exists ; 2011 ; PVRI Review Volume 3 ; 2011 ; 3 ; https://www.pvrireview.org/ ; ; >
+#    au < doNotProcess ; exists ; 2012 ; PVRI Review Volume 4 ; 2012 ; 4 ; https://www.pvrireview.org/ ; ; >
+#    au < doNotProcess ; exists ; 2013 ; PVRI Review Volume 5 ; 2013 ; 5 ; https://www.pvrireview.org/ ; ; >
 #    au < expected ; exists ; 2014 ; PVRI Review Volume 6 ; 2014 ; 6 ; https://www.pvrireview.org/ ; ; >
 #
 #  }
@@ -4666,10 +4664,10 @@
 #    param[journal_issn] = 2229-5097
 #    # moved
 #
-#    au < doNotProcess ; exists ; 2010 ; Surgical Neurology International Volume 1 ; 2010 ; 1 ; http://www.surgicalneurologyint.com/ ; ; >
-#    au < doNotProcess ; exists ; 2011 ; Surgical Neurology International Volume 2 ; 2011 ; 2 ; http://www.surgicalneurologyint.com/ ; ; >
-#    au < doNotProcess ; exists ; 2012 ; Surgical Neurology International Volume 3 ; 2012 ; 3 ; http://www.surgicalneurologyint.com/ ; ; >
-#    au < doNotProcess ; exists ; 2013 ; Surgical Neurology International Volume 4 ; 2013 ; 4 ; http://www.surgicalneurologyint.com/ ; ; >
+#    au < doNotProcess ; exists ; 2010 ; Surgical Neurology International Volume 1 ; 2010 ; 1 ; https://www.surgicalneurologyint.com/ ; ; >
+#    au < doNotProcess ; exists ; 2011 ; Surgical Neurology International Volume 2 ; 2011 ; 2 ; https://www.surgicalneurologyint.com/ ; ; >
+#    au < doNotProcess ; exists ; 2012 ; Surgical Neurology International Volume 3 ; 2012 ; 3 ; https://www.surgicalneurologyint.com/ ; ; >
+#    au < doNotProcess ; exists ; 2013 ; Surgical Neurology International Volume 4 ; 2013 ; 4 ; https://www.surgicalneurologyint.com/ ; ; >
 #    au < expected ; exists ; 2014 ; Surgical Neurology International Volume 5 ; 2014 ; 5 ; https://www.surgicalneurologyint.com/ ; ; >
 #
 #  }
@@ -4706,19 +4704,19 @@
     param[journal_issn] = 0971-6580
     #webpage down
 
-    au < doNotProcess ; exists ; 2004 ; Toxicology International Volume 11 ; 2004 ; 11 ; http://www.toxicologyinternational.com/ ; ; >
-    au < doNotProcess ; exists ; 2005 ; Toxicology International Volume 12 ; 2005 ; 12 ; http://www.toxicologyinternational.com/ ; ; >
-    au < doNotProcess ; exists ; 2006 ; Toxicology International Volume 13 ; 2006 ; 13 ; http://www.toxicologyinternational.com/ ; ; >
-    au < doNotProcess ; exists ; 2007 ; Toxicology International Volume 14 ; 2007 ; 14 ; http://www.toxicologyinternational.com/ ; ; >
-    au < doNotProcess ; exists ; 2008 ; Toxicology International Volume 15 ; 2008 ; 15 ; http://www.toxicologyinternational.com/ ; ; >
-    au < doNotProcess ; exists ; 2009 ; Toxicology International Volume 16 ; 2009 ; 16 ; http://www.toxicologyinternational.com/ ; ; >
-    au < doNotProcess ; exists ; 2010 ; Toxicology International Volume 17 ; 2010 ; 17 ; http://www.toxicologyinternational.com/ ; ; >
+    au < doNotProcess ; exists ; 2004 ; Toxicology International Volume 11 ; 2004 ; 11 ; https://www.toxicologyinternational.com/ ; ; >
+    au < doNotProcess ; exists ; 2005 ; Toxicology International Volume 12 ; 2005 ; 12 ; https://www.toxicologyinternational.com/ ; ; >
+    au < doNotProcess ; exists ; 2006 ; Toxicology International Volume 13 ; 2006 ; 13 ; https://www.toxicologyinternational.com/ ; ; >
+    au < doNotProcess ; exists ; 2007 ; Toxicology International Volume 14 ; 2007 ; 14 ; https://www.toxicologyinternational.com/ ; ; >
+    au < doNotProcess ; exists ; 2008 ; Toxicology International Volume 15 ; 2008 ; 15 ; https://www.toxicologyinternational.com/ ; ; >
+    au < doNotProcess ; exists ; 2009 ; Toxicology International Volume 16 ; 2009 ; 16 ; https://www.toxicologyinternational.com/ ; ; >
+    au < doNotProcess ; exists ; 2010 ; Toxicology International Volume 17 ; 2010 ; 17 ; https://www.toxicologyinternational.com/ ; ; >
     au < finished ; frozen ; 2011 ; Toxicology International Volume 18 ; 2011 ; 18 ; http://www.toxicologyinternational.com/ ; ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2012 ; Toxicology International Volume 19 ; 2012 ; 19 ; http://www.toxicologyinternational.com/ ; ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2013 ; Toxicology International Volume 20 ; 2013 ; 20 ; http://www.toxicologyinternational.com/ ; ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Toxicology International Volume 21 ; 2014 ; 21 ; http://www.toxicologyinternational.com/ ; ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Toxicology International Volume 22 ; 2015 ; 22 ; http://www.toxicologyinternational.com/ ; ; reingest1.clockss.org:8082 >
-    au < doNotProcess ; exists ; 2016 ; Toxicology International Volume 23 ; 2016 ; 23 ; http://www.toxicologyinternational.com/ ; ; >
+    au < doNotProcess ; exists ; 2016 ; Toxicology International Volume 23 ; 2016 ; 23 ; https://www.toxicologyinternational.com/ ; ; >
 
   }
 
@@ -4794,7 +4792,7 @@
     au < manifest ; exists ; 2008 ; World Journal of Nuclear Medicine Volume 7 ; 2008 ; 7 ; https://www.wjnm.org/ ; ; >
     au < manifest ; exists ; 2009 ; World Journal of Nuclear Medicine Volume 8 ; 2009 ; 8 ; https://www.wjnm.org/ ; ; >
     au < doesNotExist ; doesNotExist ; 2010 ; World Journal of Nuclear Medicine Volume 9 ; 2010 ; 9 ; https://www.wjnm.org/ ; ; >
-    au < notReady ; exists ; 2011 ; World Journal of Nuclear Medicine Volume 10 ; 2011 ; 10 ; http://www.wjnm.org/ ; ; >
+    au < exists ; exists ; 2011 ; World Journal of Nuclear Medicine Volume 10 ; 2011 ; 10 ; https://www.wjnm.org/ ; ; >
     au < finished ; finished ; 2012 ; World Journal of Nuclear Medicine Volume 11 ; 2012 ; 11 ; http://www.wjnm.org/ ; ; >
     au < finished ; frozen ; 2013 ; World Journal of Nuclear Medicine Volume 12 ; 2013 ; 12 ; http://www.wjnm.org/ ; ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2014 ; World Journal of Nuclear Medicine Volume 13 ; 2014 ; 13 ; http://www.wjnm.org/ ; ; reingest5.clockss.org:8082 >
@@ -4819,20 +4817,20 @@
 #    param[journal_issn] = 0974-6102
 #    # moved
 #
-#    au < doNotProcess ; exists ; 2006 ; Young Scientists Journal Volume 1 ; 2006 ; 1 ; http://ysjournal.com/ ; ; >
-#    au < doNotProcess ; exists ; 2007 ; Young Scientists Journal Volume 2 ; 2007 ; 2 ; http://ysjournal.com/ ; ; >
-#    au < doNotProcess ; exists ; 2007 ; Young Scientists Journal Volume 3 ; 2007 ; 3 ; http://ysjournal.com/ ; ; >
-#    au < doNotProcess ; exists ; 2008 ; Young Scientists Journal Volume 4 ; 2008 ; 4 ; http://ysjournal.com/ ; ; >
-#    au < doNotProcess ; exists ; 2008 ; Young Scientists Journal Volume 5 ; 2008 ; 5 ; http://ysjournal.com/ ; ; >
-#    au < doNotProcess ; exists ; 2009 ; Young Scientists Journal Volume 6 ; 2009 ; 6 ; http://ysjournal.com/ ; ; >
-#    au < doNotProcess ; exists ; 2009 ; Young Scientists Journal Volume 7 ; 2009 ; 7 ; http://ysjournal.com/ ; ; >
-#    au < doNotProcess ; exists ; 2010 ; Young Scientists Journal Volume 8 ; 2010 ; 8 ; http://ysjournal.com/ ; ; >
-#    au < doNotProcess ; exists ; 2011 ; Young Scientists Journal Volume 9 ; 2011 ; 9 ; http://ysjournal.com/ ; ; >
-#    au < doNotProcess ; exists ; 2011 ; Young Scientists Journal Volume 10 ; 2011 ; 10 ; http://ysjournal.com/ ; ; >
-#    au < doNotProcess ; exists ; 2012 ; Young Scientists Journal Volume 11 ; 2012 ; 11 ; http://ysjournal.com/ ; ; >
-#    au < doNotProcess ; exists ; 2012 ; Young Scientists Journal Volume 12 ; 2012 ; 12 ; http://ysjournal.com/ ; ; >
-#    au < doNotProcess ; exists ; 2013 ; Young Scientists Journal Volume 13 ; 2013 ; 13 ; http://ysjournal.com/ ; ; >
-#    au < doNotProcess ; exists ; 2013 ; Young Scientists Journal Volume 14 ; 2013 ; 14 ; http://ysjournal.com/ ; ; >
+#    au < doNotProcess ; exists ; 2006 ; Young Scientists Journal Volume 1 ; 2006 ; 1 ; https://ysjournal.com/ ; ; >
+#    au < doNotProcess ; exists ; 2007 ; Young Scientists Journal Volume 2 ; 2007 ; 2 ; https://ysjournal.com/ ; ; >
+#    au < doNotProcess ; exists ; 2007 ; Young Scientists Journal Volume 3 ; 2007 ; 3 ; https://ysjournal.com/ ; ; >
+#    au < doNotProcess ; exists ; 2008 ; Young Scientists Journal Volume 4 ; 2008 ; 4 ; https://ysjournal.com/ ; ; >
+#    au < doNotProcess ; exists ; 2008 ; Young Scientists Journal Volume 5 ; 2008 ; 5 ; https://ysjournal.com/ ; ; >
+#    au < doNotProcess ; exists ; 2009 ; Young Scientists Journal Volume 6 ; 2009 ; 6 ; https://ysjournal.com/ ; ; >
+#    au < doNotProcess ; exists ; 2009 ; Young Scientists Journal Volume 7 ; 2009 ; 7 ; https://ysjournal.com/ ; ; >
+#    au < doNotProcess ; exists ; 2010 ; Young Scientists Journal Volume 8 ; 2010 ; 8 ; https://ysjournal.com/ ; ; >
+#    au < doNotProcess ; exists ; 2011 ; Young Scientists Journal Volume 9 ; 2011 ; 9 ; https://ysjournal.com/ ; ; >
+#    au < doNotProcess ; exists ; 2011 ; Young Scientists Journal Volume 10 ; 2011 ; 10 ; https://ysjournal.com/ ; ; >
+#    au < doNotProcess ; exists ; 2012 ; Young Scientists Journal Volume 11 ; 2012 ; 11 ; https://ysjournal.com/ ; ; >
+#    au < doNotProcess ; exists ; 2012 ; Young Scientists Journal Volume 12 ; 2012 ; 12 ; https://ysjournal.com/ ; ; >
+#    au < doNotProcess ; exists ; 2013 ; Young Scientists Journal Volume 13 ; 2013 ; 13 ; https://ysjournal.com/ ; ; >
+#    au < doNotProcess ; exists ; 2013 ; Young Scientists Journal Volume 14 ; 2013 ; 14 ; https://ysjournal.com/ ; ; >
 #    au < exists ; exists ; 2014 ; Young Scientists Journal Volume 15 ; 2014 ; 15 ; https://ysjournal.com/ ; ; >
 #    au < exists ; exists ; 2014 ; Young Scientists Journal Volume 16 ; 2014 ; 16 ; https://ysjournal.com/ ; ; >
 #    au < exists ; exists ; 2015 ; Young Scientists Journal Volume 17 ; 2015 ; 17 ; https://ysjournal.com/ ; ; >
@@ -5350,10 +5348,11 @@
       param[journal_issn] = 2393-8633
 #      param[base_url] = http://www.carcinomics.org/
       #possibly browse and no back issues? see http://www.carcinomics.org/backissues.asp
+      #Deprecated?
 
-      au < notReady ; exists ; 2014 ; Carcinomics and Clinical Communications Volume 1 ; 2014 ; 1 ; http://www.carcinomics.org/ ; ; >
-      au < notReady ; exists ; 2015 ; Carcinomics and Clinical Communications Volume 2 ; 2015 ; 2 ; http://www.carcinomics.org/ ; ; >
-      au < notReady ; exists ; 2016 ; Carcinomics and Clinical Communications Volume 3 ; 2016 ; 3 ; http://www.carcinomics.org/ ; ; >
+      au < notReady ; exists ; 2014 ; Carcinomics and Clinical Communications Volume 1 ; 2014 ; 1 ; https://www.carcinomics.org/ ; ; >
+      au < notReady ; exists ; 2015 ; Carcinomics and Clinical Communications Volume 2 ; 2015 ; 2 ; https://www.carcinomics.org/ ; ; >
+      au < notReady ; exists ; 2016 ; Carcinomics and Clinical Communications Volume 3 ; 2016 ; 3 ; https://www.carcinomics.org/ ; ; >
 
   }
 
@@ -5705,7 +5704,7 @@
 
       au < finished ; finished ; 2012 ; Egyptian Journal of Psychiatry Volume 33 ; 2012 ; 33 ; http://www.new.ejpsy.eg.net/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2013 ; Egyptian Journal of Psychiatry Volume 34 ; 2013 ; 34 ; http://www.new.ejpsy.eg.net/ ; ; reingest1.clockss.org:8082 >
-      au < doNotProcess ; exists ; 2014 ; Egyptian Journal of Psychiatry Volume 35 ; 2014 ; 35 ; http://www.new.ejpsy.eg.net/ ; ; > #500 error. see http://www.new.ejpsy.eg.net/article.asp?issn=1110-1105;year=2014;volume=35;issue=3;spage=115;epage=126;aulast=Salem;type=2
+      au < doNotProcess ; exists ; 2014 ; Egyptian Journal of Psychiatry Volume 35 ; 2014 ; 35 ; https://www.new.ejpsy.eg.net/ ; ; > #500 error. see http://www.new.ejpsy.eg.net/article.asp?issn=1110-1105;year=2014;volume=35;issue=3;spage=115;epage=126;aulast=Salem;type=2
       au < finished ; finished ; 2015 ; Egyptian Journal of Psychiatry Volume 36 ; 2015 ; 36 ; http://www.new.ejpsy.eg.net/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; Egyptian Journal of Psychiatry Volume 37 ; 2016 ; 37 ; http://www.new.ejpsy.eg.net/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2017 ; Egyptian Journal of Psychiatry Volume 38 ; 2017 ; 38 ; http://www.new.ejpsy.eg.net/ ; ; reingest2.clockss.org:8085 >
@@ -5956,13 +5955,13 @@
       param[journal_issn] = 2041-9414
 #      param[base_url] = http://www.genome-integrity.org/
 
-      au < notReady ; exists ; 2015 ; Genome Integrity Volume 6 ; 2015 ; 6 ; http://www.genome-integrity.org/ ; ; > #500 Internal Server error.
-      au < notReady ; exists ; 2016 ; Genome Integrity Volume 7 ; 2016 ; 7 ; http://www.genome-integrity.org/ ; ; > #500 Internal Server error. http://www.genome-integrity.org/showbackIssue.asp?issn=2041-9414;year=2016;volume=7;issue=1
-      au < notReady ; exists ; 2017 ; Genome Integrity Volume 8 ; 2017 ; 8 ; http://www.genome-integrity.org/ ; ; > #500 Internal Server error.
-      au < notReady ; exists ; 2018 ; Genome Integrity Volume 9 ; 2018 ; 9 ; http://www.genome-integrity.org/ ; ; > #500 Internal Server error.
-      au < notReady ; exists ; 2019 ; Genome Integrity Volume 10 ; 2019 ; 10 ; https://www.genome-integrity.org/ ; ; >
-      au < notReady ; exists ; 2020 ; Genome Integrity Volume 11 ; 2020 ; 11 ; https://www.genome-integrity.org/ ; ; >
-      au < notReady ; exists ; 2021 ; Genome Integrity Volume 12 ; 2021 ; 12 ; https://www.genome-integrity.org/ ; ; >
+      au < notReady ; exists ; 2015 ; Genome Integrity Volume 6 ; 2015 ; 6 ; https://www.genome-integrity.org/ ; ; > #500 Internal Server error.
+      au < notReady ; exists ; 2016 ; Genome Integrity Volume 7 ; 2016 ; 7 ; https://www.genome-integrity.org/ ; ; > #500 Internal Server error. http://www.genome-integrity.org/showbackIssue.asp?issn=2041-9414;year=2016;volume=7;issue=1
+      au < notReady ; exists ; 2017 ; Genome Integrity Volume 8 ; 2017 ; 8 ; https://www.genome-integrity.org/ ; ; > #500 Internal Server error.
+      au < notReady ; exists ; 2018 ; Genome Integrity Volume 9 ; 2018 ; 9 ; https://www.genome-integrity.org/ ; ; > #500 Internal Server error.
+      au < exists ; exists ; 2019 ; Genome Integrity Volume 10 ; 2019 ; 10 ; https://www.genome-integrity.org/ ; ; >
+      au < exists ; exists ; 2020 ; Genome Integrity Volume 11 ; 2020 ; 11 ; https://www.genome-integrity.org/ ; ; >
+      au < exists ; exists ; 2021 ; Genome Integrity Volume 12 ; 2021 ; 12 ; https://www.genome-integrity.org/ ; ; >
       au < manifest ; exists ; 2022 ; Genome Integrity Volume 13 ; 2022 ; 13 ; https://www.genome-integrity.org/ ; ; >
 
   }
@@ -6474,10 +6473,15 @@
 #      param[base_url] = http://www.ijehe.org/
       #browse not backissues
 
-      au < notReady ; exists ; 2013 ; International Journal of Environmental Health Engineering Volume 2 ; 2013 ; 2 ; http://www.ijehe.org/ ; ; >
-      au < notReady ; exists ; 2014 ; International Journal of Environmental Health Engineering Volume 3 ; 2014 ; 3 ; http://www.ijehe.org/ ; ; >
-      au < notReady ; exists ; 2015 ; International Journal of Environmental Health Engineering Volume 4 ; 2015 ; 4 ; http://www.ijehe.org/ ; ; >
-      au < notReady ; exists ; 2016 ; International Journal of Environmental Health Engineering Volume 5 ; 2016 ; 5 ; http://www.ijehe.org/ ; ; >
+      au < notReady ; exists ; 2013 ; International Journal of Environmental Health Engineering Volume 2 ; 2013 ; 2 ; https://www.ijehe.org/ ; ; >
+      au < notReady ; exists ; 2014 ; International Journal of Environmental Health Engineering Volume 3 ; 2014 ; 3 ; https://www.ijehe.org/ ; ; >
+      au < notReady ; exists ; 2015 ; International Journal of Environmental Health Engineering Volume 4 ; 2015 ; 4 ; https://www.ijehe.org/ ; ; >
+      au < notReady ; exists ; 2016 ; International Journal of Environmental Health Engineering Volume 5 ; 2016 ; 5 ; https://www.ijehe.org/ ; ; >
+      au < exists ; exists ; 2017 ; International Journal of Environmental Health Engineering Volume 6 ; 2017 ; 6 ; https://www.ijehe.org/ ; ; >
+      au < exists ; exists ; 2018 ; International Journal of Environmental Health Engineering Volume 7 ; 2018 ; 7 ; https://www.ijehe.org/ ; ; >
+      au < exists ; exists ; 2019 ; International Journal of Environmental Health Engineering Volume 8 ; 2019 ; 8 ; https://www.ijehe.org/ ; ; >
+      au < exists ; exists ; 2020 ; International Journal of Environmental Health Engineering Volume 9 ; 2020 ; 9 ; https://www.ijehe.org/ ; ; >
+      au < exists ; exists ; 2021 ; International Journal of Environmental Health Engineering Volume 10 ; 2021 ; 10 ; https://www.ijehe.org/ ; ; >
 
   }
 
@@ -7450,16 +7454,13 @@
 
   {
     title <
-      name = Journal of Ophthalmology Clinics and Research ;
-      issn = 0000-0000 ;
-      eissn = 0000-0000 ;
-      issnl = 0000-0000
+      name = Journal of Ophthalmology Clinics and Research
     >
 #    param[base_url] = https://www.jocr.in/
 
-    param[journal_issn] = 0000-0000
+    param[journal_issn] = WKMP-0230
 
-    au < exists ; exists ; 2021 ; Journal of Ophthalmology Clinics and Research Volume 1 ; 2021 ; 1 ; https://www.jocr.in/ ; ; >
+    au < manifest ; exists ; 2021 ; Journal of Ophthalmology Clinics and Research Volume 1 ; 2021 ; 1 ; https://www.jocr.in/ ; ; >
     au < expected ; exists ; 2022 ; Journal of Ophthalmology Clinics and Research Volume 2 ; 2022 ; 2 ; https://www.jocr.in/ ; ; >
 
   }
@@ -8026,9 +8027,9 @@
       #https://www.mdcan-uath.org/showBackIssue.asp?issn=2250-9658;year=2019;volume=8;issue=14
       #https://www.mdcan-uath.org/showBackIssue.asp?issn=2250-9658;year=2020;volume=9;issue=16
 
-      au < notReady ; exists ; 2016 ; New Nigerian Journal of Clinical Research Volume 5 ; 2016 ; 5 ; http://www.mdcan-uath.org/ ; 500 Error ; >
-      au < notReady ; exists ; 2017 ; New Nigerian Journal of Clinical Research Volume 6 ; 2017 ; 6 ; http://www.mdcan-uath.org/ ; 500 Error ; >
-      au < notReady ; exists ; 2018 ; New Nigerian Journal of Clinical Research Volume 7 ; 2018 ; 7 ; http://www.mdcan-uath.org/ ; 500 Error ; >
+      au < notReady ; exists ; 2016 ; New Nigerian Journal of Clinical Research Volume 5 ; 2016 ; 5 ; https://www.mdcan-uath.org/ ; 500 Error ; >
+      au < notReady ; exists ; 2017 ; New Nigerian Journal of Clinical Research Volume 6 ; 2017 ; 6 ; https://www.mdcan-uath.org/ ; 500 Error ; >
+      au < notReady ; exists ; 2018 ; New Nigerian Journal of Clinical Research Volume 7 ; 2018 ; 7 ; https://www.mdcan-uath.org/ ; 500 Error ; >
       au < notReady ; exists ; 2019 ; New Nigerian Journal of Clinical Research Volume 8 ; 2019 ; 8 ; https://www.mdcan-uath.org/ ; 500 Error ; >
       au < notReady ; exists ; 2020 ; New Nigerian Journal of Clinical Research Volume 9 ; 2020 ; 9 ; https://www.mdcan-uath.org/ ; 500 Error ; >
       au < notReady ; exists ; 2021 ; New Nigerian Journal of Clinical Research Volume 10 ; 2021 ; 10 ; https://www.mdcan-uath.org/ ; 500 Error ; >
@@ -8237,7 +8238,7 @@
       au < finished ; frozen ; 2012 ; North American Journal of Medical Sciences Volume 4 ; 2012 ; 4 ; http://www.najms.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2013 ; North American Journal of Medical Sciences Volume 5 ; 2013 ; 5 ; http://www.najms.org/ ; ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2014 ; North American Journal of Medical Sciences Volume 6 ; 2014 ; 6 ; http://www.najms.org/ ; ; reingest4.clockss.org:8082 >
-      au < notReady ; exists ; 2015 ; North American Journal of Medical Sciences Volume 7 ; 2015 ; 7 ; http://www.najms.org/ ; Login page for pdf ; >
+      au < notReady ; exists ; 2015 ; North American Journal of Medical Sciences Volume 7 ; 2015 ; 7 ; https://www.najms.org/ ; Login page for pdf ; >
       au < finished ; frozen ; 2016 ; North American Journal of Medical Sciences Volume 8 ; 2016 ; 8 ; http://www.najms.org/ ; ; reingest2.clockss.org:8085 >
 
   }
@@ -8913,7 +8914,7 @@
       au < finished ; finished ; 2014 ; The Nigerian Journal of General Practice Volume 12 ; 2014 ; 12 ; http://www.njgp.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; The Nigerian Journal of General Practice Volume 13 ; 2015 ; 13 ; http://www.njgp.org/ ; ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2016 ; The Nigerian Journal of General Practice Volume 14 ; 2016 ; 14 ; http://www.njgp.org/ ; ; reingest1.clockss.org:8082 >
-      au < notReady ; exists ; 2017 ; The Nigerian Journal of General Practice Volume 15 ; 2017 ; 15 ; http://www.njgp.org/ ; 500 Error ; > #For example http://www.njgp.org/article.asp?issn=1118-4647;year=2017;volume=15;issue=1;spage=1;epage=6;aulast=Agu;type=2
+      au < notReady ; exists ; 2017 ; The Nigerian Journal of General Practice Volume 15 ; 2017 ; 15 ; https://www.njgp.org/ ; 500 Error ; > #For example http://www.njgp.org/article.asp?issn=1118-4647;year=2017;volume=15;issue=1;spage=1;epage=6;aulast=Agu;type=2
       au < finished ; crawling ; 2018 ; The Nigerian Journal of General Practice Volume 16 ; 2018 ; 16 ; http://www.njgp.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; The Nigerian Journal of General Practice Volume 17 ; 2019 ; 17 ; https://www.njgp.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; The Nigerian Journal of General Practice Volume 18 ; 2020 ; 18 ; https://www.njgp.org/ ; ; reingest5.clockss.org:8082 >
@@ -9169,7 +9170,7 @@
       param[journal_issn] = 2536-1384
 #      param[base_url] = http://www.asmfa.org/
 
-      au < notReady ; exists ; 2017 ; Advances in Skeletal Muscle Function Assessment Volume 1 ; 2017 ; 1 ; http://www.asmfa.org/ ; login for pdf; >
+      au < notReady ; exists ; 2017 ; Advances in Skeletal Muscle Function Assessment Volume 1 ; 2017 ; 1 ; https://www.asmfa.org/ ; login for pdf; >
 
   }
 
@@ -9266,8 +9267,8 @@
 #      param[base_url] = http://www.anip.co.in/
       #no backissues.asp page
 
-      au < notReady ; exists ; 2017 ; Annals of Indian Psychiatry Volume 1 ; 2017 ; 1 ; http://www.anip.co.in/ ; login for pdf ; >
-      au < notReady ; exists ; 2018 ; Annals of Indian Psychiatry Volume 2 ; 2018 ; 2 ; http://www.anip.co.in/ ; login for pdf ; >
+      au < notReady ; exists ; 2017 ; Annals of Indian Psychiatry Volume 1 ; 2017 ; 1 ; https://www.anip.co.in/ ; login for pdf ; >
+      au < notReady ; exists ; 2018 ; Annals of Indian Psychiatry Volume 2 ; 2018 ; 2 ; https://www.anip.co.in/ ; login for pdf ; >
       au < finished ; crawling ; 2019 ; Annals of Indian Psychiatry Volume 3 ; 2019 ; 3 ; https://www.anip.co.in/ ; ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2020 ; Annals of Indian Psychiatry Volume 4 ; 2020 ; 4 ; https://www.anip.co.in/ ; ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Annals of Indian Psychiatry Volume 5 ; 2021 ; 5 ; https://www.anip.co.in/ ; ; >
@@ -9314,8 +9315,8 @@
       param[journal_issn] = 0976-0016
 #      param[base_url] = http://www.apollomedicine.org/
 
-      au < notReady ; exists ; 2017 ; Apollo Medicine Volume 14 ; 2017 ; 14 ; http://www.apollomedicine.org/ ; login for pdf ; >
-      au < notReady ; exists ; 2018 ; Apollo Medicine Volume 15 ; 2018 ; 15 ; http://www.apollomedicine.org/ ; login for pdf ; >
+      au < notReady ; exists ; 2017 ; Apollo Medicine Volume 14 ; 2017 ; 14 ; https://www.apollomedicine.org/ ; login for pdf ; >
+      au < notReady ; exists ; 2018 ; Apollo Medicine Volume 15 ; 2018 ; 15 ; https://www.apollomedicine.org/ ; login for pdf ; >
       au < finished ; crawling ; 2019 ; Apollo Medicine Volume 16 ; 2019 ; 16 ; https://www.apollomedicine.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Apollo Medicine Volume 17 ; 2020 ; 17 ; https://www.apollomedicine.org/ ; ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Apollo Medicine Volume 18 ; 2021 ; 18 ; https://www.apollomedicine.org/ ; ; >
@@ -9356,10 +9357,10 @@
 #      param[base_url] = http://www.cardiovascimaging.com/
       #website gone
 
-      au < doNotProcess ; exists ; 2013 ; Archives of Cardiovascular Imaging Volume 1 ; 2013 ; 1 ; http://www.cardiovascimaging.com/ ; login for pdf ; >
-      au < doNotProcess ; exists ; 2014 ; Archives of Cardiovascular Imaging Volume 2 ; 2014 ; 2 ; http://www.cardiovascimaging.com/ ; login for pdf ; >
-      au < doNotProcess ; exists ; 2015 ; Archives of Cardiovascular Imaging Volume 3 ; 2015 ; 3 ; http://www.cardiovascimaging.com/ ; login for pdf ; >
-      au < doNotProcess ; exists ; 2016 ; Archives of Cardiovascular Imaging Volume 4 ; 2016 ; 4 ; http://www.cardiovascimaging.com/ ; login for pdf ; >
+      au < doNotProcess ; exists ; 2013 ; Archives of Cardiovascular Imaging Volume 1 ; 2013 ; 1 ; https://www.cardiovascimaging.com/ ; login for pdf ; >
+      au < doNotProcess ; exists ; 2014 ; Archives of Cardiovascular Imaging Volume 2 ; 2014 ; 2 ; https://www.cardiovascimaging.com/ ; login for pdf ; >
+      au < doNotProcess ; exists ; 2015 ; Archives of Cardiovascular Imaging Volume 3 ; 2015 ; 3 ; https://www.cardiovascimaging.com/ ; login for pdf ; >
+      au < doNotProcess ; exists ; 2016 ; Archives of Cardiovascular Imaging Volume 4 ; 2016 ; 4 ; https://www.cardiovascimaging.com/ ; login for pdf ; >
 
   }
 
@@ -9394,8 +9395,8 @@
       param[journal_issn] = 2251-953X
 #      param[base_url] = http://www.archtrauma.com/
 
-      au < notReady ; exists ; 2017 ; Archives of Trauma Research Volume 6 ; 2017 ; 6 ; http://www.archtrauma.com/ ; login for pdf ; >
-      au < notReady ; exists ; 2018 ; Archives of Trauma Research Volume 7 ; 2018 ; 7 ; http://www.archtrauma.com/ ; login for pdf ; >
+      au < notReady ; exists ; 2017 ; Archives of Trauma Research Volume 6 ; 2017 ; 6 ; https://www.archtrauma.com/ ; login for pdf ; >
+      au < notReady ; exists ; 2018 ; Archives of Trauma Research Volume 7 ; 2018 ; 7 ; https://www.archtrauma.com/ ; login for pdf ; >
       au < finished ; crawling ; 2019 ; Archives of Trauma Research Volume 8 ; 2019 ; 8 ; https://www.archtrauma.com/ ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Archives of Trauma Research Volume 9 ; 2020 ; 9 ; https://www.archtrauma.com/ ; ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; Archives of Trauma Research Volume 10 ; 2021 ; 10 ; https://www.archtrauma.com/ ; ; >
@@ -9414,7 +9415,7 @@
       param[journal_issn] = 2589-9309
 #      param[base_url] = http://www.ajpn-online.org/
 
-      au < notReady ; exists ; 2018 ; Asian Journal of Pediatric Nephrology Volume 1 ; 2018 ; 1 ; http://www.ajpn-online.org/ ; login for pdf ; >
+      au < notReady ; exists ; 2018 ; Asian Journal of Pediatric Nephrology Volume 1 ; 2018 ; 1 ; https://www.ajpn-online.org/ ; login for pdf ; >
       au < finished ; crawling ; 2019 ; Asian Journal of Pediatric Nephrology Volume 2 ; 2019 ; 2 ; https://www.ajpn-online.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Asian Journal of Pediatric Nephrology Volume 3 ; 2020 ; 3 ; https://www.ajpn-online.org/ ; ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Asian Journal of Pediatric Nephrology Volume 4 ; 2021 ; 4 ; https://www.ajpn-online.org/ ; ; >
@@ -9434,8 +9435,8 @@
       param[journal_issn] = 2305-0500
 #      param[base_url] = http://www.apjr.net/
 
-      au < notReady ; exists ; 2017 ; Asian Pacific Journal of Reproduction Volume 6 ; 2017 ; 6 ; http://www.apjr.net/ ; login for pdf ; >
-      au < notReady ; exists ; 2018 ; Asian Pacific Journal of Reproduction Volume 7 ; 2018 ; 7 ; http://www.apjr.net/ ; login for pdf ; >
+      au < notReady ; exists ; 2017 ; Asian Pacific Journal of Reproduction Volume 6 ; 2017 ; 6 ; https://www.apjr.net/ ; login for pdf ; >
+      au < notReady ; exists ; 2018 ; Asian Pacific Journal of Reproduction Volume 7 ; 2018 ; 7 ; https://www.apjr.net/ ; login for pdf ; >
       au < finished ; crawling ; 2019 ; Asian Pacific Journal of Reproduction Volume 8 ; 2019 ; 8 ; https://www.apjr.net/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Asian Pacific Journal of Reproduction Volume 9 ; 2020 ; 9 ; https://www.apjr.net/ ; ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; Asian Pacific Journal of Reproduction Volume 10 ; 2021 ; 10 ; https://www.apjr.net/ ; ; >
@@ -9455,7 +9456,7 @@
       param[journal_issn] = 2221-1691
 #      param[base_url] = http://www.apjtb.org/
 
-      au < notReady ; exists ; 2018 ; Asian Pacific Journal of Tropical Biomedicine Volume 8 ; 2018 ; 8 ; http://www.apjtb.org/ ; login for pdf ; >
+      au < notReady ; exists ; 2018 ; Asian Pacific Journal of Tropical Biomedicine Volume 8 ; 2018 ; 8 ; https://www.apjtb.org/ ; login for pdf ; >
       au < finished ; crawling ; 2019 ; Asian Pacific Journal of Tropical Biomedicine Volume 9 ; 2019 ; 9 ; https://www.apjtb.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2020 ; Asian Pacific Journal of Tropical Biomedicine Volume 10 ; 2020 ; 10 ; https://www.apjtb.org/ ; ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; Asian Pacific Journal of Tropical Biomedicine Volume 11 ; 2021 ; 11 ; https://www.apjtb.org/ ; ; >
@@ -9475,7 +9476,7 @@
       param[journal_issn] = 1995-7645
 #      param[base_url] = http://www.apjtm.org/
 
-      au < notReady ; exists ; 2018 ; Asian Pacific Journal of Tropical Medicine Volume 11 ; 2018 ; 11 ; http://www.apjtm.org/ ; login for pdf ; >
+      au < notReady ; exists ; 2018 ; Asian Pacific Journal of Tropical Medicine Volume 11 ; 2018 ; 11 ; https://www.apjtm.org/ ; login for pdf ; >
       au < finished ; crawling ; 2019 ; Asian Pacific Journal of Tropical Medicine Volume 12 ; 2019 ; 12 ; https://www.apjtm.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Asian Pacific Journal of Tropical Medicine Volume 13 ; 2020 ; 13 ; https://www.apjtm.org/ ; ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Asian Pacific Journal of Tropical Medicine Volume 14 ; 2021 ; 14 ; https://www.apjtm.org/ ; ; >
@@ -9517,8 +9518,8 @@
 #      param[base_url] = http://www.cardiologyplus.org/
       #Moved to Wolters Kluwer LWW
 
-      au < doNotProcess ; exists ; 2017 ; Cardiology Plus Volume 2 ; 2017 ; 2 ; http://www.cardiologyplus.org/ ; login for pdf ; >
-      au < doNotProcess ; exists ; 2018 ; Cardiology Plus Volume 3 ; 2018 ; 3 ; http://www.cardiologyplus.org/ ; login for pdf ; >
+      au < doNotProcess ; exists ; 2017 ; Cardiology Plus Volume 2 ; 2017 ; 2 ; https://www.cardiologyplus.org/ ; login for pdf ; >
+      au < doNotProcess ; exists ; 2018 ; Cardiology Plus Volume 3 ; 2018 ; 3 ; https://www.cardiologyplus.org/ ; login for pdf ; >
       au < finished ; crawling ; 2019 ; Cardiology Plus Volume 4 ; 2019 ; 4 ; https://www.cardiologyplus.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Cardiology Plus Volume 5 ; 2020 ; 5 ; https://www.cardiologyplus.org/ ; ; reingest4.clockss.org:8082 >
       au < superseded ; exists ; 2021 ; Cardiology Plus Volume 6 [superseded] ; 2021 ; 6 ; https://www.cardiologyplus.org/ ; ; >
@@ -9596,7 +9597,7 @@
       param[journal_issn] = 0422-7638
 #      param[base_url] = http://www.ejcdt.eg.net/
 
-      au < notReady ; exists ; 2018 ; Egyptian Journal of Chest Diseases and Tuberculosis Volume 67 ; 2018 ; 67 ; http://www.ejcdt.eg.net/ ; login for pdf ; >
+      au < notReady ; exists ; 2018 ; Egyptian Journal of Chest Diseases and Tuberculosis Volume 67 ; 2018 ; 67 ; https://www.ejcdt.eg.net/ ; login for pdf ; >
       au < finished ; crawling ; 2019 ; Egyptian Journal of Chest Diseases and Tuberculosis Volume 68 ; 2019 ; 68 ; https://www.ejcdt.eg.net/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Egyptian Journal of Chest Diseases and Tuberculosis Volume 69 ; 2020 ; 69 ; https://www.ejcdt.eg.net/ ; ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; Egyptian Journal of Chest Diseases and Tuberculosis Volume 70 ; 2021 ; 70 ; https://www.ejcdt.eg.net/ ; ; >
@@ -9804,7 +9805,7 @@
 #     Moved to Wolters Klewer
 
       au < doNotProcess ; exists ; 2016 ; IJS Short Reports Volume 1 ; 2016 ; 1 ; https://www.ijsshortreports.com/ ; ; >
-      au < doNotProcess ; exists ; 2017 ; IJS Short Reports Volume 2 ; 2017 ; 2 ; http://www.ijsshortreports.com/ ; ; > #Unable to fetch permission page
+      au < doNotProcess ; exists ; 2017 ; IJS Short Reports Volume 2 ; 2017 ; 2 ; https://www.ijsshortreports.com/ ; ; > #Unable to fetch permission page
       au < doNotProcess ; exists ; 2018 ; IJS Short Reports Volume 3 ; 2018 ; 3 ; https://www.ijsshortreports.com/ ; ; >
       au < doNotProcess ; exists ; 2019 ; IJS Short Reports Volume 4 ; 2019 ; 4 ; https://www.ijsshortreports.com/ ; ; >
       au < doNotProcess ; exists ; 2020 ; IJS Short Reports Volume 5 ; 2020 ; 5 ; https://www.ijsshortreports.com/ ; ; >
@@ -9821,15 +9822,15 @@
         eissn = 2589-0611
       >
 
-      param[journal_issn] = WKMP-0143
+      param[journal_issn] = 2589-0603
 #      param[base_url] = http://www.e-ijas.org/
 
-      au < exists ; exists ; 2016 ; Imam Journal of Applied Sciences Volume 1 ; 2016 ; 1 ; https://www.e-ijas.org/ ; ; >
-      au < notReady ; exists ; 2017 ; Imam Journal of Applied Sciences Volume 2 ; 2017 ; 2 ; http://www.e-ijas.org/ ; ; > #no substance
-      au < exists ; exists ; 2018 ; Imam Journal of Applied Sciences Volume 3 ; 2018 ; 3 ; https://www.e-ijas.org/ ; ; >
-      au < exists ; exists ; 2019 ; Imam Journal of Applied Sciences Volume 4 ; 2019 ; 4 ; https://www.e-ijas.org/ ; ; >
-      au < exists ; exists ; 2020 ; Imam Journal of Applied Sciences Volume 5 ; 2020 ; 5 ; https://www.e-ijas.org/ ; ; >
-      au < exists ; exists ; 2021 ; Imam Journal of Applied Sciences Volume 6 ; 2021 ; 6 ; https://www.e-ijas.org/ ; ; >
+      au < manifest ; exists ; 2016 ; Imam Journal of Applied Sciences Volume 1 ; 2016 ; 1 ; https://www.e-ijas.org/ ; ; >
+      au < manifest ; exists ; 2017 ; Imam Journal of Applied Sciences Volume 2 ; 2017 ; 2 ; https://www.e-ijas.org/ ; ; >
+      au < manifest ; exists ; 2018 ; Imam Journal of Applied Sciences Volume 3 ; 2018 ; 3 ; https://www.e-ijas.org/ ; ; >
+      au < manifest ; exists ; 2019 ; Imam Journal of Applied Sciences Volume 4 ; 2019 ; 4 ; https://www.e-ijas.org/ ; ; >
+      au < manifest ; exists ; 2020 ; Imam Journal of Applied Sciences Volume 5 ; 2020 ; 5 ; https://www.e-ijas.org/ ; ; >
+      au < manifest ; exists ; 2021 ; Imam Journal of Applied Sciences Volume 6 ; 2021 ; 6 ; https://www.e-ijas.org/ ; ; >
       au < expected ; exists ; 2022 ; Imam Journal of Applied Sciences Volume 7 ; 2022 ; 7 ; https://www.e-ijas.org/ ; ; >
 
   }
@@ -9985,14 +9986,14 @@
         eissn = 2589-1731
       >
 
-      param[journal_issn] = WKMP-0139
+      param[journal_issn] = 2589-1731
 #      param[base_url] = http://www.ijcpc.org/
 
-      au < notReady ; exists ; 2017 ; International Journal of Clinicopathological Correlation Volume 1 ; 2017 ; 1 ; http://www.ijcpc.org/ ; ; > #no substance
-      au < exists ; exists ; 2018 ; International Journal of Clinicopathological Correlation Volume 2 ; 2018 ; 2 ; https://www.ijcpc.org/ ; ; >
-      au < exists ; exists ; 2019 ; International Journal of Clinicopathological Correlation Volume 3 ; 2019 ; 3 ; https://www.ijcpc.org/ ; ; >
-      au < exists ; exists ; 2020 ; International Journal of Clinicopathological Correlation Volume 4 ; 2020 ; 4 ; https://www.ijcpc.org/ ; ; >
-      au < exists ; exists ; 2021 ; International Journal of Clinicopathological Correlation Volume 5 ; 2021 ; 5 ; https://www.ijcpc.org/ ; ; >
+      au < manifest ; exists ; 2017 ; International Journal of Clinicopathological Correlation Volume 1 ; 2017 ; 1 ; https://www.ijcpc.org/ ; ; >
+      au < manifest ; exists ; 2018 ; International Journal of Clinicopathological Correlation Volume 2 ; 2018 ; 2 ; https://www.ijcpc.org/ ; ; >
+      au < manifest ; exists ; 2019 ; International Journal of Clinicopathological Correlation Volume 3 ; 2019 ; 3 ; https://www.ijcpc.org/ ; ; >
+      au < manifest ; exists ; 2020 ; International Journal of Clinicopathological Correlation Volume 4 ; 2020 ; 4 ; https://www.ijcpc.org/ ; ; >
+      au < manifest ; exists ; 2021 ; International Journal of Clinicopathological Correlation Volume 5 ; 2021 ; 5 ; https://www.ijcpc.org/ ; ; >
       au < expected ; exists ; 2022 ; International Journal of Clinicopathological Correlation Volume 6 ; 2022 ; 6 ; https://www.ijcpc.org/ ; ; >
 
   }
@@ -10041,7 +10042,7 @@
       au < crawling ; exists ; 2020 ; International Journal of Food and Nutritional Sciences Volume 9 ; 2020 ; 9 ; https://www.ijfans.org/ ; ; >
       au < crawling ; exists ; 2021 ; International Journal of Food and Nutritional Sciences Volume 10 ; 2021 ; 10 ; https://www.ijfans.org/ ; ; >
       #deactivated
-      au < expected ; exists ; 2022 ; International Journal of Food and Nutritional Sciences Volume 11 ; 2022 ; 11 ; https://www.ijfans.org/ ; ; >
+
   }
 
   {
@@ -10058,8 +10059,7 @@
       au < finished ; crawling ; 2018 ; International Journal of Growth Factors and Stem Cells in Dentistry Volume 1 ; 2018 ; 1 ; https://www.cellsindentistry.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; International Journal of Growth Factors and Stem Cells in Dentistry Volume 2 ; 2019 ; 2 ; https://www.cellsindentistry.org/ ; ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2020 ; International Journal of Growth Factors and Stem Cells in Dentistry Volume 3 ; 2020 ; 3 ; https://www.cellsindentistry.org/ ; ; reingest4.clockss.org:8082 >
-      au < expected ; exists ; 2021 ; International Journal of Growth Factors and Stem Cells in Dentistry Volume 4 ; 2021 ; 4 ; https://www.cellsindentistry.org/ ; ; >
-      au < expected ; exists ; 2022 ; International Journal of Growth Factors and Stem Cells in Dentistry Volume 5 ; 2022 ; 5 ; https://www.cellsindentistry.org/ ; ; >
+      au < expected ; exists ; 2022 ; International Journal of Growth Factors and Stem Cells in Dentistry Volume 4 ; 2022 ; 4 ; https://www.cellsindentistry.org/ ; ; >
 
   }
 
