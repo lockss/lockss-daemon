@@ -14,7 +14,7 @@
       name = John Wiley and Sons Books Source Content
     >
 
-      plugin = needs.plugin
+      plugin = org.lockss.plugin.clockss.wiley.ClockssWileyBooksSourcePlugin
       param[base_url] = https://clockss-test.lockss.org/sourcefiles/wileybooks-released/
       hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[directory] >
