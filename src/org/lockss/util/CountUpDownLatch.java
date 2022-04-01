@@ -70,6 +70,8 @@ import java.util.concurrent.locks.AbstractQueuedSynchronizer;
 public class CountUpDownLatch {
 
     private final Sync sync;
+    private final String name;
+    private Runnable runAtZero;
 
     /**
      * Default constructor.
@@ -78,7 +80,11 @@ public class CountUpDownLatch {
      * {@link CountUpDownLatch(int) CountUpDownLatch}{@code (0)}
      */
     public CountUpDownLatch() {
-        this(0);
+      this(null);
+    }
+
+    public CountUpDownLatch(String name) {
+      this(0, name);
     }
 
     /**
@@ -89,12 +95,17 @@ public class CountUpDownLatch {
      * @throws IllegalArgumentException if {@code initialCount} is negative
      */
     public CountUpDownLatch(int initialCount) {
+      this(initialCount, null);
+    }
+
+    public CountUpDownLatch(int initialCount, String name) {
 
         if (initialCount < 0) {
             throw new IllegalArgumentException("count < 0");
         }
 
         this.sync = new Sync(initialCount);
+        this.name = name;
     }
 
     /**
@@ -216,7 +227,11 @@ public class CountUpDownLatch {
      * @return {@code true} if {@code count} transitions to zero
      */
     public boolean countDown() {
-        return sync.countDown();
+      boolean res = sync.countDown();
+      if (res && runAtZero != null) {
+        runAtZero.run();
+      }
+      return res;
     }
 
     /**
@@ -235,7 +250,11 @@ public class CountUpDownLatch {
      * @throws IllegalArgumentException when {@code amount} is non-positive
      */
     public boolean countDown(int amount) {
-        return sync.countDown(amount);
+      boolean res = sync.countDown(amount);
+      if (res && runAtZero != null) {
+        runAtZero.run();
+      }
+      return res;
     }
 
     /**
@@ -269,6 +288,11 @@ public class CountUpDownLatch {
         return sync.setCount(newCount);
     }
 
+    public CountUpDownLatch setRunAtZero(Runnable r) {
+      runAtZero = r;
+      return this;
+    }
+
     /**
      * Returns a string representation of this object.
      * <p>
@@ -277,8 +301,9 @@ public class CountUpDownLatch {
      *         {@code count}.
      */
     public String toString() {
-        return String.format("%s[count=%d]", super.toString(),
-                             sync.getCount());
+      return String.format("%s[count=%d]",
+                           name != null ? name : super.toString(),
+                           sync.getCount());
     }
 
     /**

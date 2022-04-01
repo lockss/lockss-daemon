@@ -40,9 +40,10 @@ public class MigrationTask {
 
   public enum TaskType {
     COPY_CU_VERSIONS,
-    CHECK_AU_STATE,
     CHECK_CU_VERSIONS,
     COPY_AU_STATE,
+    CHECK_AU_STATE,
+    FINISH_AU_BULK,
     FINISH_AU,
     FINISH_ALL;
 
@@ -51,11 +52,13 @@ public class MigrationTask {
     static {
       COPY_CU_VERSIONS.phase = V2AuMover.Phase.COPY;
       CHECK_CU_VERSIONS.phase = V2AuMover.Phase.VERIFY;
-      COPY_AU_STATE.phase = V2AuMover.Phase.COPY;
-      CHECK_AU_STATE.phase = V2AuMover.Phase.VERIFY;
+      COPY_AU_STATE.phase = V2AuMover.Phase.STATE;
+//       CHECK_AU_STATE.phase = V2AuMover.Phase.STATE;
+      FINISH_AU_BULK.phase = V2AuMover.Phase.INDEX;
+//       FINISH_AU_BULK.phase = V2AuMover.Phase.INDEX;
     }
 
-    public V2AuMover.Phase getPhase() {
+    public V2AuMover.Phase getTaskPhase() {
       return phase;
     }
   }
@@ -66,13 +69,18 @@ public class MigrationTask {
   TaskType type;
   V2AuMover.Counters counters;
   V2AuMover.AuStatus auStat;
-  CountUpDownLatch latch;
+  CountUpDownLatch countDownLatch;
+  CountUpDownLatch waitLatch;
   BiConsumer completionAction;
 
 
   public MigrationTask(V2AuMover mover, TaskType type) {
     this.auMover = mover;
     this.type = type;
+  }
+
+  public V2AuMover.Phase getTaskPhase() {
+    return type.getTaskPhase();
   }
 
   public static MigrationTask copyCuVersions(V2AuMover mover,
@@ -98,6 +106,11 @@ public class MigrationTask {
   public static MigrationTask checkAuState(V2AuMover mover, ArchivalUnit au) {
     return new MigrationTask(mover, TaskType.CHECK_AU_STATE)
         .setAu(au);
+  }
+
+  public static MigrationTask finishAuBulk(V2AuMover mover, ArchivalUnit au) {
+    return new MigrationTask(mover, TaskType.FINISH_AU_BULK)
+      .setAu(au);
   }
 
   public static MigrationTask finishAu(V2AuMover mover, ArchivalUnit au) {
@@ -129,8 +142,13 @@ public class MigrationTask {
     return this;
   }
 
-  public MigrationTask setLatch(CountUpDownLatch latch) {
-    this.latch = latch;
+  public MigrationTask setWaitLatch(CountUpDownLatch latch) {
+    this.waitLatch = latch;
+    return this;
+  }
+
+  public MigrationTask setCountDownLatch(CountUpDownLatch latch) {
+    this.countDownLatch = latch;
     return this;
   }
 
@@ -167,9 +185,33 @@ public class MigrationTask {
     return type;
   }
 
-  public CountUpDownLatch getLatch() {
-    return latch;
+  public CountUpDownLatch getWaitLatch() {
+    return waitLatch;
   }
+
+  public CountUpDownLatch getCountDownLatch() {
+    return countDownLatch;
+  }
+
+  public boolean countDown() {
+    if (countDownLatch != null) {
+      boolean res = countDownLatch.countDown();
+      if (res && auStat != null) {
+        auStat.endPhase();
+      }
+      return res;
+    }
+    return false;
+  }
+
+  public void await() throws InterruptedException {
+    if (waitLatch != null) {
+      log.info(getType() + " waiting for " + waitLatch);
+      waitLatch.await();
+      log.info(getType() + " done waiting for " + waitLatch);
+    }
+  }
+
 
   public void complete(Exception e) {
     if (completionAction != null) {

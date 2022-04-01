@@ -128,6 +128,9 @@ public class CuMover extends Worker {
         apie.getCode() + " - " + apie.getMessage();
       log.warning(err);
       task.addError(err);
+    } catch (Exception | Error e) {
+      log.critical("Error copying " + v1Url + "(" + cu.getVersion(), e);
+      throw e;
     }
     finally {
       AuUtil.safeRelease(cu);
