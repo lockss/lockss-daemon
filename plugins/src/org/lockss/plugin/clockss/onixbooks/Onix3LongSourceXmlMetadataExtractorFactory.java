@@ -111,6 +111,7 @@ public class Onix3LongSourceXmlMetadataExtractorFactory extends SourceXmlMetadat
       if (deDuping) {
         Map<String,ArticleMetadata> uniqueRecordMap = new HashMap<>();
         HashSet<String> auidsSet = allRecordsSet.get(cu.getArchivalUnit().getAuId());
+        if (auidsSet == null) { auidsSet = new HashSet<>(); } // for testing
 
         // Look at each item in AM list and compare them to a running set of records
         // to only return unique records from this AM
