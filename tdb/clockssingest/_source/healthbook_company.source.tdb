@@ -3,27 +3,23 @@
   publisher <
     name = Healthbook Company Ltd. ;
     info[contract] = 2022 ;
-    info[back] = 2020 ;
-    info[tester] = 8 ;
-    info[poller] = 8 ;
-    info[platform] = BLOCKED - too dynamic. Scholastica. See LXPUB-546
+    info[tester] = S ;
+    info[platform] = Source. See LXPUB-546
   >
-
-    plugin = needs.plugin
-    implicit < status ; status2 ; year ; name ; param[year] ; hidden[proxy] >
 
   {
   
     title < 
-      name = healthbook TIMES Oncology Hematology ;
-      issn = 2673-2092 ;
-      eissn = 2673-2106 
+      name = healthbook TIMES Oncology Hematology Source Content
     >
 
-      param[base_url] =  https://onco-hema.healthbooktimes.org/
-      #published 2019 to present
+    plugin = needs.SourcePlugin
+    #plugin = org.lockss.plugin.clockss.airiti.ClockssAiritiSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/NEEDS-PLUGIN-released/
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[directory] >
 
-      au < expected ; exists ; 2022 ; healthbook TIMES Oncology Hematology Volume 2022 ; 2022 ; >
+    au < exists ; exists ; 2022 ; healthbook TIMES Oncology Hematology Source Content 2022 ; 2022 >
 
   }
 
