@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2018 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2022 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -77,6 +77,8 @@ public class PubFactoryHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "headerWrap"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "footerWrap"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "fixed-controls"),
+        // ads in various places
+        HtmlNodeFilters.tagWithAttribute("div", "class", "pattern-library-style-root"),
         /*
         // Metrics on AMetSoc https://journals.ametsoc.org/view/journals/wcas/12/2/wcas-d-19-0115.1.xml
         // class name is big e.g. "component component-content-item component-container container-metrics container-wrapper-43132"
@@ -99,6 +101,8 @@ public class PubFactoryHtmlHashFilterFactory implements FilterFactory {
         // there are a number of input forms, comment boxes, etc to filter out
         HtmlNodeFilters.tagWithAttributeRegex("form", "class", "annotationsForm"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "searchModule"),
+        // share dialog box
+        HtmlNodeFilters.tagWithAttribute("div", "id", "shareLinkModalBody"),
         // the access seems to change? maybe we caught them in a migration, but just to be safe, exclude the access icon
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "accessIcon"),
         // cover image alt text changes? weird
@@ -107,6 +111,8 @@ public class PubFactoryHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("dl", "class", "tax-collections "),
         // offsite-access-message (for bioscientifica only?)
         HtmlNodeFilters.tagWithAttributeRegex("span", "class", "off-site-access-message"),
+        // external citation buttons
+        HtmlNodeFilters.tagWithAttribute("ul", "class", "citationActions"),
         // there is a p tag that contains some copyright text.
         // this tag occurs sometimes below the abstract.
         // only way to filter it out is a regex on the content, as there are no attributes associated with the p tag.
@@ -119,10 +125,7 @@ public class PubFactoryHtmlHashFilterFactory implements FilterFactory {
             // ifp:body is not a tag class, meaning it will never have children
             // we can use this to our advantage and delete the whole node (as well as the End version) by matching a
             // regex on the node and removing the whole thing without fear of deleting "child" nodes.
-            if (node instanceof Tag &&  node.getText().matches("^/?ifp:body.{0,150}$")) {
-              return true;
-            }
-            return false;
+            return node instanceof Tag && node.getText().matches("^/?ifp:body.{0,150}$");
           }
         }
     };
