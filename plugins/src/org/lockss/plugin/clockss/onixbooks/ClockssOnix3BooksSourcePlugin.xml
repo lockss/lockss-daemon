@@ -52,11 +52,11 @@
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.clockss.SourceXmlArticleIteratorFactory</string>
+    <string>org.lockss.plugin.clockss.onixbooks.Onix3BooksXmlArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.clockss.SourceXmlArticleIteratorFactory</string>
+    <string>org.lockss.plugin.clockss.onixbooks.Onix3BooksXmlArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>text/xml_metadata_extractor_factory_map</string>
