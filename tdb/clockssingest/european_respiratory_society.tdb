@@ -58,7 +58,7 @@
     au < ers.ClockssERSDrupalPlugin ; finished ; crawling ; 2019 ; ERJ Open Research Volume 5 ; 5 ; https://openres.ersjournals.com/ ; reingest3.clockss.org:8083 >
     au < ers.ClockssERSDrupalPlugin ; crawling ; exists ; 2020 ; ERJ Open Research Volume 6 ; 6 ; https://openres.ersjournals.com/ ; >
     au < ers.ClockssERSDrupalPlugin ; crawling ; exists ; 2021 ; ERJ Open Research Volume 7 ; 7 ; https://openres.ersjournals.com/ ; >
-    au < ers.ClockssERSDrupalPlugin ; expected ; exists ; 2022 ; ERJ Open Research Volume 8 ; 8 ; https://openres.ersjournals.com/ ; >
+    au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2022 ; ERJ Open Research Volume 8 ; 8 ; https://openres.ersjournals.com/ ; >
 
   }
 
