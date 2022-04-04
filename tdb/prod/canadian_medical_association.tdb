@@ -156,7 +156,7 @@
       au < cma.CmaDrupalPlugin ; released ; 2019 ; CMAJ Open Volume 7 ; 7 >
       au < cma.CmaDrupalPlugin ; released ; 2020 ; CMAJ Open Volume 8 ; 8 >
       au < cma.CmaDrupalPlugin ; testing ; 2021 ; CMAJ Open Volume 9 ; 9 >
-      au < cma.CmaDrupalPlugin ; expected ; 2022 ; CMAJ Open Volume 10 ; 10 >
+      au < cma.CmaDrupalPlugin ; manifest ; 2022 ; CMAJ Open Volume 10 ; 10 >
     }
     {
       param[base_url] = http://cmajopen.ca/
