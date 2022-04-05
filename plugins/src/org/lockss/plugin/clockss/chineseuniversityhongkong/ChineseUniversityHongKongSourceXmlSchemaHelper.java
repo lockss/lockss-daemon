@@ -48,187 +48,114 @@ import java.util.Map;
 
 /**
  *  A helper class that defines a schema for XML metadata extraction for
- *  wiley source files
+ *  Chinese University of Hong Kong source files
  *  
  */
 public class ChineseUniversityHongKongSourceXmlSchemaHelper
 implements SourceXmlSchemaHelper {
   static Logger log = Logger.getLogger(ChineseUniversityHongKongSourceXmlSchemaHelper.class);
 
-  private static final String AUTHOR_SPLIT_CH = ",";
-  private static final String TITLE_SEPARATOR = ":";
-
   /*
-     <creators>
-            <creator xml:id="au1" creatorRole="author">
-               <personName>
-                  <givenNames>Daniel R.</givenNames>
-                  <familyName>Schwarz</familyName>
-               </personName>
-            </creator>
-   </creators>
-   */
-
-  static private final NodeValue AUTHOR_VALUE = new NodeValue() {
-    @Override
-    public String getValue(Node node) {
-
-      log.debug3("getValue of PubMed author name");
-      NodeList elementChildren = node.getChildNodes();
-      if (elementChildren == null) return null;
-
-      String tgiven = null;
-      String tsurname = null;
-      // look at each child of the TitleElement for information
-      for (int j = 0; j < elementChildren.getLength(); j++) {
-        Node checkNode = elementChildren.item(j);
-        String nodeName = checkNode.getNodeName();
-        if ("givenNames".equals(nodeName)) {
-          tgiven = checkNode.getTextContent();
-        } else if ("familyName".equals(nodeName) ) {
-          tsurname = checkNode.getTextContent();
-        }
-      }
-
-      StringBuilder valbuilder = new StringBuilder();
-      if (tsurname != null) {
-        valbuilder.append(tsurname);
-        if (tgiven != null) {
-          valbuilder.append(", " + tgiven);
-        }
-      } else {
-        log.debug3("no name found");
-        return null;
-      }
-      log.debug3("name found: " + valbuilder.toString());
-      return valbuilder.toString();
-    }
-  };
-
-
-  /*
-    <titleGroup>
-      <title type="main" xml:lang="en" sort="IN DEFENSE OF READING">In Defense of Reading</title>
-      <title type="tocForm">In Defense of Reading: Teaching Literature in the Twenty‐First Century</title>
-      <title type="subtitle">Teaching Literature in the Twenty‐First Century</title>
-      <title type="short">Schwarz/In Defense of Reading</title>
-    </titleGroup>
-   */
-  static private final NodeValue BOOK_TITLE_VALUE = new NodeValue() {
-    @Override
-    public String getValue(Node node) {
-
-      log.debug3("getValue of wiley BOOK TITLE");
-      String title = null;
-      String subtitle = null;
-      String nodeName = null;
-      Node parent = node.getParentNode();
-      NodeList childNodes = parent.getChildNodes(); 
-      for (int m = 0; m < childNodes.getLength(); m++) {
-        Node child = childNodes.item(m);
-        if (book_title.equals(child.getNodeName()) ){
-          title = child.getTextContent();
-        } else if (book_subtitle.equals(child.getNodeName())) {
-          subtitle = child.getTextContent();
-        }
-        if ((title != null) && (subtitle != null)) {
-          break;
-        }
-      }     
-      
-      StringBuilder titleVal = new StringBuilder();
-      if (title != null) {
-        titleVal.append(title);
-      }
-      // if empty title, but subtitle exists => " :Subtitle" 
-      // not a great title, but valuable to know...
-      if (subtitle != null) {
-        titleVal.append(TITLE_SEPARATOR + subtitle);
-      }
-      if (titleVal.length() != 0)  {
-        log.debug3("book title: " + titleVal.toString());
-        return titleVal.toString();
-      } else {
-        log.debug3("no value in this book title");
-        return null;
-      }
-      
-    }
-  };
-
-  /*
-   "fmatter.xml" example
    <?xml version="1.0" encoding="UTF-8"?>
-<component xmlns="http://www.wiley.com/namespaces/wiley" xmlns:wiley="http://www.wiley.com/namespaces/wiley/wiley" version="1.0.2" type="bookChapter" xml:lang="en">
-   <?documentInfo RNGSchema="wileyML3G/V102/rnc/wileyML3G.rnc" type="compact" sourceDTD="JWSCHA15"?>
-   <header>
-      <publicationMeta level="series">
-         <titleGroup>
-            <title type="main" xml:lang="en">Blackwell Manifestos</title>
-         </titleGroup>
-      </publicationMeta>
-      <publicationMeta level="product" position="220">
-         <publisherInfo>
-            <publisherName>wiley‐Blackwell</publisherName>
-            <publisherLoc>Oxford, UK</publisherLoc>
-         </publisherInfo>
-         <doi origin="wiley" registered="yes">10.1002/9781444304831</doi>
-         <isbn type="online-13">9781444304831</isbn>
-         <isbn type="printCloth-13">9781405130981</isbn>
-         <idGroup>
-            <id type="product" value="O9781444304831" />
-         </idGroup>
-         <titleGroup>
-            <title type="main" xml:lang="en" sort="IN DEFENSE OF READING">In Defense of Reading</title>
-            <title type="tocForm">In Defense of Reading: Teaching Literature in the Twenty‐First Century</title>
-            <title type="subtitle">Teaching Literature in the Twenty‐First Century</title>
-            <title type="short">Schwarz/In Defense of Reading</title>
-         </titleGroup>
-         <copyright ownership="thirdParty">Copyright © 2008 Daniel R. Schwarz</copyright>
-         <eventGroup>
-            <event type="publishedPrint" date="2008-09-05" />
-            <event type="publishedOnlineProduct" date="2009-02-20" />
-         </eventGroup>
-         <creators>
-            <creator xml:id="au1" creatorRole="author">
-               <personName>
-                  <givenNames>Daniel R.</givenNames>
-                  <familyName>Schwarz</familyName>
-               </personName>
-            </creator>
-         </creators>
-      </publicationMeta>
-      <publicationMeta level="unit" type="frontmatter" position="10">
-         <doi origin="wiley" registered="yes">10.1002/9781444304831.fmatter</doi>
-         <idGroup>
-            <id type="unit" value="fmatter" />
-            <id type="file" value="fmatter" />
-         </idGroup>
-         <countGroup>
-            <count type="pageTotal" number="16" />
-         </countGroup>
-         <copyright ownership="thirdParty">Copyright © 2008 Daniel R. Schwarz</copyright>
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-4.xsd">
+    <titleInfo>
+        <title>版權、稿約及稿例、目錄</title>
+    </titleInfo>
+    <typeOfResource>text</typeOfResource>
+    <genre>article</genre>
+    <originInfo>
+        <place>
+            <placeTerm type="text">香港</placeTerm>
+        </place>
+        <publisher>道風山基督教叢林</publisher>
+        <dateCreated>1994-06</dateCreated>
+        <issuance>serial</issuance>
+    </originInfo>
+    <language>
+        <languageTerm type="text">Chi</languageTerm>
+    </language>
+    <physicalDescription>
+        <form>digital</form>
+    </physicalDescription>
+    <relatedItem type="host">
+        <titleInfo>
+            <title>道風</title>
+            <subTitle>漢語神學學刊</subTitle>
+        </titleInfo>
+        <part>
+            <detail type="issue">
+                <number>第一期</number>
+            </detail>
+            <extent unit="pages"><start>1-7</start></extent>
+            <date>1994-06</date>
+        </part>
+    </relatedItem>
+    <location>
+        <url>http://library.cuhk.edu.hk/record=b2057943</url>
+    </location>
+    <accessCondition type="useAndReproduction">Use of this resource is governed by the terms and conditions of the Creative Commons “Attribution-NonCommercial-NoDerivatives 4.0 International” License (http://creativecommons.org/licenses/by-nc-nd/4.0/)</accessCondition>
+    <identifier type="local" displayLabel="FileName">i01_p001007</identifier>
+    <identifier type="local"></identifier>
+    <recordInfo>
+        <recordOrigin>Created by CUHK Library using Google Refine</recordOrigin>
+    </recordInfo></mods>
+
   */
 
+  static private final NodeValue ARTICLE_ID = new NodeValue() {
+    @Override
+    public String getValue(Node node) {
 
-  static private final String topNode = "/component/header/publicationMeta[2]";
-  private static final String book_title = topNode + "/titleGroup/title[1]";
-  private static final String book_subtitle = topNode + "/titleGroup/title[2]";
-  private static final String isbn = topNode + "/isbn[1]";
-  private static final String doi = topNode + "/doi";
-  private static final String art_pubdate = topNode + "/eventGroup/event[1]";
-  private static final String author =  topNode + "/creators/creator/personName";
+      log.debug3("getValue of Chinese University of Hong Kong Article ID");
+      String issue = null;
+      Node parent = node.getParentNode();
+      NodeList childNodes = parent.getChildNodes();
+      for (int m = 0; m < childNodes.getLength(); m++) {
+        Node child = childNodes.item(m);
+        if (article_title.equals(child.getNodeName()) ){
+          issue = child.getTextContent();
+        }
+        if (issue != null) {
+          break;
+        }
+      }
 
+      StringBuilder issueVal = new StringBuilder();
+      if (issue != null) {
+        issueVal.append(issue);
+      }
+
+      if (issueVal.length() != 0)  {
+        log.debug3("Article ID: " + issueVal.toString());
+        return issueVal.toString();
+      } else {
+        log.debug3("no value in this Article ID");
+        return null;
+      }
+
+    }
+  };
+
+
+
+  protected static final String article_title = "/mods/relatedItem[@type=\"host\"]/titleInfo/title";
+  protected static final String article_subtitle = "/mods/relatedItem[@type=\"host\"]/titleInfo/subTitle";
+  private static final String publisher = "/mods/originInfo/publisher";
+  private static final String art_pubdate = "/mods/originInfo/dateCreated";
+  private static final String article_id = "/mods/identifier";
+  private static final String issue = "/mods/relatedItem[@type=\"host\"]/part/detail[@type=\"issue\"]/number";
 
   static private final Map<String,XPathValue>     
   articleMap = new HashMap<String,XPathValue>();
   static {
     // article specific stuff
-    articleMap.put(art_pubdate, XmlDomMetadataExtractor.TEXT_VALUE); 
-    articleMap.put(author, AUTHOR_VALUE);
-    articleMap.put(book_title, BOOK_TITLE_VALUE);
-    articleMap.put(isbn, XmlDomMetadataExtractor.TEXT_VALUE);
-    articleMap.put(doi, XmlDomMetadataExtractor.TEXT_VALUE);
+    articleMap.put(art_pubdate, XmlDomMetadataExtractor.TEXT_VALUE);
+    articleMap.put(publisher, XmlDomMetadataExtractor.TEXT_VALUE);
+    articleMap.put(article_title, XmlDomMetadataExtractor.TEXT_VALUE);
+    articleMap.put(article_subtitle, XmlDomMetadataExtractor.TEXT_VALUE);
+    articleMap.put(issue, XmlDomMetadataExtractor.TEXT_VALUE);
+    //articleMap.put(article_id, ARTICLE_ID);
+    //articleMap.put(article_id, XmlDomMetadataExtractor.TEXT_VALUE);
   }
 
   static private final Map<String,XPathValue>     
@@ -236,12 +163,9 @@ implements SourceXmlSchemaHelper {
 
   protected static final MultiValueMap cookMap = new MultiValueMap();
   static {
-    cookMap.put(isbn, MetadataField.FIELD_ISBN);
-    cookMap.put(doi, MetadataField.FIELD_DOI);
-    cookMap.put(book_title, MetadataField.FIELD_PUBLICATION_TITLE);
-    cookMap.put(author, 
-        new MetadataField(MetadataField.FIELD_AUTHOR, MetadataField.splitAt(AUTHOR_SPLIT_CH)));
     cookMap.put(art_pubdate, MetadataField.FIELD_DATE);
+    cookMap.put(publisher, MetadataField.FIELD_PUBLISHER);
+    cookMap.put(issue, MetadataField.FIELD_ISSUE);
   }
 
 
@@ -251,7 +175,7 @@ implements SourceXmlSchemaHelper {
   }
 
   /**
-   * return wiley article paths representing metadata of interest  
+   * return Chinese University of Hong Kong article paths representing metadata of interest  
    */
   @Override
   public Map<String, XPathValue> getArticleMetaMap() {
@@ -263,7 +187,7 @@ implements SourceXmlSchemaHelper {
    */
   @Override
   public String getArticleNode() {
-    return topNode;
+    return null;
   }
 
   /**

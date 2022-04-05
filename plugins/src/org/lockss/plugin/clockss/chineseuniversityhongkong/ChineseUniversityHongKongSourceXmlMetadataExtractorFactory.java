@@ -40,7 +40,6 @@ import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
-import org.lockss.plugin.clockss.wiley.WileyBooksSourceXmlSchemaHelper;
 import org.lockss.util.Logger;
 
 
@@ -48,6 +47,7 @@ public class ChineseUniversityHongKongSourceXmlMetadataExtractorFactory extends 
   private static final Logger log = Logger.getLogger(ChineseUniversityHongKongSourceXmlMetadataExtractorFactory.class);
 
   private static SourceXmlSchemaHelper  schemaHelper = null;
+  private static final String TITLE_SEPARATOR = ":";
 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
@@ -64,7 +64,7 @@ public class ChineseUniversityHongKongSourceXmlMetadataExtractorFactory extends 
       if ( schemaHelper != null) {
         return  schemaHelper;
       }
-       schemaHelper = new WileyBooksSourceXmlSchemaHelper();
+       schemaHelper = new ChineseUniversityHongKongSourceXmlSchemaHelper();
       return  schemaHelper;
     }
     
@@ -73,9 +73,21 @@ public class ChineseUniversityHongKongSourceXmlMetadataExtractorFactory extends 
     		CachedUrl cu, ArticleMetadata thisAM) {
 
     	log.debug3("setting publication type in postcook process");
-    	// this is a book volume
-    	thisAM.put(MetadataField.FIELD_PUBLICATION_TYPE,MetadataField.PUBLICATION_TYPE_BOOK);
-    	thisAM.put(MetadataField.FIELD_ARTICLE_TYPE,MetadataField.ARTICLE_TYPE_BOOKVOLUME);
+        StringBuilder titleVal = new StringBuilder();
+
+        if (thisAM.getRaw(ChineseUniversityHongKongSourceXmlSchemaHelper.article_title) != null) {
+            log.debug3("get article title");
+          titleVal.append(thisAM.getRaw(ChineseUniversityHongKongSourceXmlSchemaHelper.article_title));
+        } else if (thisAM.getRaw(ChineseUniversityHongKongSourceXmlSchemaHelper.article_subtitle) != null){
+            log.debug3("get article subtitle");
+          titleVal.append(TITLE_SEPARATOR);
+          titleVal.append(thisAM.getRaw(ChineseUniversityHongKongSourceXmlSchemaHelper.article_subtitle));
+        }
+
+
+        thisAM.put(MetadataField.FIELD_PUBLICATION_TITLE,titleVal.toString());
+    	thisAM.put(MetadataField.FIELD_PUBLICATION_TYPE,MetadataField.PUBLICATION_TYPE_JOURNAL);
+    	thisAM.put(MetadataField.FIELD_ARTICLE_TYPE,MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
     }
     
   }

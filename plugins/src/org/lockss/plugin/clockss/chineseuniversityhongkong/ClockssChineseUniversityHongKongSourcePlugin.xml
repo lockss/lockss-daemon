@@ -74,8 +74,8 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <!--https://clockss-test.lockss.org/sourcefiles/cuhk-released/2022_01-->
-      <string>"^%s%s/[^/]+\.zip$", base_url, directory</string>
+      <!--https://clockss-test.lockss.org/sourcefiles/cuhk-released/2022_01/LPJ/i01/i01.zip!/i01_p001007.pdf-->
+      <string>"^%s%s/.*\.pdf$", base_url, directory</string>
     </list>
   </entry>
   <entry>
