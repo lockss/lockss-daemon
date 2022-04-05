@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component xmlns="http://www.wiley.com/namespaces/wiley" xmlns:wiley="http://www.wiley.com/namespaces/wiley/wiley" version="1.0.2" type="bookChapter" xml:lang="en">
+    <?documentInfo RNGSchema="WileyML3G/V102/rnc/WileyML3G.rnc" type="compact" sourceDTD="JWSCHA15"?>
+    <header>
+        <publicationMeta level="series">
+            <titleGroup>
+                <title type="main" xml:lang="en">Blackwell Manifestos</title>
+            </titleGroup>
+        </publicationMeta>
+        <publicationMeta level="product" position="220">
+            <publisherInfo>
+                <publisherName>Wiley‐Blackwell</publisherName>
+                <publisherLoc>Oxford, UK</publisherLoc>
+            </publisherInfo>
+            <doi origin="wiley" registered="yes">10.1002/9781444304831</doi>
+            <isbn type="online-13">9781444304831</isbn>
+            <isbn type="printCloth-13">9781405130981</isbn>
+            <idGroup>
+                <id type="product" value="O9781444304831" />
+            </idGroup>
+            <titleGroup>
+                <title type="main" xml:lang="en" sort="IN DEFENSE OF READING">In Defense of Reading</title>
+                <title type="tocForm">In Defense of Reading: Teaching Literature in the Twenty‐First Century</title>
+                <title type="subtitle">Teaching Literature in the Twenty‐First Century</title>
+                <title type="short">Schwarz/In Defense of Reading</title>
+            </titleGroup>
+            <copyright ownership="thirdParty">Copyright © 2008 Daniel R. Schwarz</copyright>
+            <eventGroup>
+                <event type="publishedPrint" date="2008-09-05" />
+                <event type="publishedOnlineProduct" date="2009-02-20" />
+            </eventGroup>
+            <creators>
+                <creator xml:id="au1" creatorRole="author">
+                    <personName>
+                        <givenNames>Daniel R.</givenNames>
+                        <familyName>Schwarz</familyName>
+                    </personName>
+                </creator>
+            </creators>
+        </publicationMeta>
+        <publicationMeta level="unit" type="frontmatter" position="10">
+            <doi origin="wiley" registered="yes">10.1002/9781444304831.fmatter</doi>
+            <idGroup>
+                <id type="unit" value="fmatter" />
+                <id type="file" value="fmatter" />
+            </idGroup>
+            <countGroup>
+                <count type="pageTotal" number="16" />
+            </countGroup>
+            <copyright ownership="thirdParty">Copyright © 2008 Daniel R. Schwarz</copyright>
+            <eventGroup>
+                <event type="firstOnline" date="2009-02-20" />
+                <event type="publishedOnlineFinalForm" date="2009-02-20" />
+                <event type="xmlConverted" agent="Converter:JWSCHA_TO_WML3G version:2.3.23 mode:FullText" date="2010-10-12" />
+                <event type="xmlConverted" agent="Converter:WML3G_To_WML3G version:5.9.9 mode:FullText" date="2021-03-18" />
+                <event type="xmlConverted" agent="Converter:WML3G_To_WML3G version:1.7.4 mode:FullText,remove_FC" date="2022-03-18" />
+            </eventGroup>
+            <numberingGroup>
+                <numbering type="pageFirst">i</numbering>
+                <numbering type="pageLast">xvii</numbering>
+            </numberingGroup>
+            <linkGroup>
+                <link type="toTypesetVersion" href="file://fmatter.pdf" />
+            </linkGroup>
+        </publicationMeta>
+        <contentMeta>
+            <countGroup>
+                <count type="figureTotal" number="0" />
+                <count type="tableTotal" number="0" />
+                <count type="referenceTotal" number="0" />
+            </countGroup>
+            <titleGroup>
+                <title type="main" xml:lang="en">Front Matter</title>
+            </titleGroup>
+            <abstractGroup>
+                <abstract type="main" xml:lang="en">
+                    <title type="main">Summary</title>
+                    <p>
+                        The prelims comprise:
+                        <list xml:id="l1" style="bulleted">
+                            <listItem>
+                                <p>Half‐Title Page</p>
+                            </listItem>
+                            <listItem>
+                                <p>Wiley Series Page</p>
+                            </listItem>
+                            <listItem>
+                                <p>Title Page</p>
+                            </listItem>
+                            <listItem>
+                                <p>Copyright Page</p>
+                            </listItem>
+                            <listItem>
+                                <p>Dedication Page</p>
+                            </listItem>
+                            <listItem>
+                                <p>Table of Contents</p>
+                            </listItem>
+                            <listItem>
+                                <p>Preface</p>
+                            </listItem>
+                            <listItem>
+                                <p>Acknowledgements</p>
+                            </listItem>
+                        </list>
+                    </p>
+                </abstract>
+            </abstractGroup>
+        </contentMeta>
+    </header>
+</component>
