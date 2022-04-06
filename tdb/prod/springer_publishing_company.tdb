@@ -13,9 +13,11 @@
       issn = 1559-4343 ;
       eissn = 1938-9000 
     >
-    param[base_url] = https://connect.springerpub.com/
+    #param[base_url] = https://connect.springerpub.com/
+    param[base_url] = https://connect.springerpub.com/content/sgrehpp/
     param[journal_id] = sgrehpp
-    plugin = needs.plugin
+    #plugin = needs.plugin
+    plugin = org.lockss.xxxDrupalPlugin
     #example manifest https://connect.springerpub.com/content/sgrehpp/lockss-manifest/vol_10_manifest.html
 
     au < exists ; 2016 ; Ethical Human Psychology and Psychiatry Volume 5 ; 5 >
