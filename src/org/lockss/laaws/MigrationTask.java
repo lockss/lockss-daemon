@@ -44,7 +44,6 @@ public class MigrationTask {
     COPY_AU_STATE,
     CHECK_AU_STATE,
     FINISH_AU_BULK,
-    FINISH_AU,
     FINISH_ALL;
 
     private V2AuMover.Phase phase;;
@@ -55,7 +54,6 @@ public class MigrationTask {
       COPY_AU_STATE.phase = V2AuMover.Phase.STATE;
 //       CHECK_AU_STATE.phase = V2AuMover.Phase.STATE;
       FINISH_AU_BULK.phase = V2AuMover.Phase.INDEX;
-//       FINISH_AU_BULK.phase = V2AuMover.Phase.INDEX;
     }
 
     public V2AuMover.Phase getTaskPhase() {
@@ -67,7 +65,7 @@ public class MigrationTask {
   CachedUrl cu;
   ArchivalUnit au;
   TaskType type;
-  V2AuMover.Counters counters;
+  Counters counters;
   V2AuMover.AuStatus auStat;
   CountUpDownLatch countDownLatch;
   CountUpDownLatch waitLatch;
@@ -113,11 +111,6 @@ public class MigrationTask {
       .setAu(au);
   }
 
-  public static MigrationTask finishAu(V2AuMover mover, ArchivalUnit au) {
-    return new MigrationTask(mover, TaskType.FINISH_AU)
-      .setAu(au);
-  }
-
   public static MigrationTask finishAll(V2AuMover mover) {
     return new MigrationTask(mover, TaskType.FINISH_ALL);
   }
@@ -132,7 +125,7 @@ public class MigrationTask {
     return this;
   }
 
-  public MigrationTask setCounters(V2AuMover.Counters ctrs) {
+  public MigrationTask setCounters(Counters ctrs) {
     this.counters = ctrs;
     return this;
   }
@@ -161,7 +154,7 @@ public class MigrationTask {
     this.auStat.addError(msg);
   }
 
-  public V2AuMover.Counters getCounters() {
+  public Counters getCounters() {
     return counters;
   }
 
@@ -195,11 +188,7 @@ public class MigrationTask {
 
   public boolean countDown() {
     if (countDownLatch != null) {
-      boolean res = countDownLatch.countDown();
-      if (res && auStat != null) {
-        auStat.endPhase();
-      }
-      return res;
+      return countDownLatch.countDown();
     }
     return false;
   }

@@ -240,9 +240,9 @@ public class MigrateContent extends LockssServlet {
     addJSXLocation(page, "js/auMigrationStatus.js");
     layoutErrorBlock(page);
     ServletUtil.layoutExplanationBlock(page, "");
-    page.add(new Block(Block.Div, "id='AuMigrationStatusApp'"));
     page.add(makeForm());
-    page.add("<br>");
+//     page.add("<br>");
+    page.add(new Block(Block.Div, "id='AuMigrationStatusApp'"));
     endPage(page);
   }
 

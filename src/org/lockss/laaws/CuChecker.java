@@ -1,6 +1,6 @@
 package org.lockss.laaws;
 
-import static org.lockss.laaws.V2AuMover.CounterType;
+import static org.lockss.laaws.Counters.CounterType;
 
 import java.io.IOException;
 import java.util.ArrayList;

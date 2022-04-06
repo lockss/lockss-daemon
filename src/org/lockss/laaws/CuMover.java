@@ -16,7 +16,7 @@ import org.lockss.plugin.CachedUrl;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import org.lockss.util.UrlUtil;
-import static org.lockss.laaws.V2AuMover.CounterType;
+import static org.lockss.laaws.Counters.CounterType;
 
 public class CuMover extends Worker {
   private static final Logger log = Logger.getLogger(CuMover.class);

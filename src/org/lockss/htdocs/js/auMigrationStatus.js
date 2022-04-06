@@ -16,7 +16,7 @@ class AuMigrationStatus extends React.Component {
             return null;
         }
         return (
-                <div><font size="2">{this.state.instrumentList.map((msg, index) =>  <div>{msg}<br /></div>)}</font></div>
+                <div><font size="2">{this.state.instrumentList.map((msg, index) => <div>{msg}<br /></div>)}</font></div>
         )
     }
 

@@ -24,7 +24,7 @@ public abstract class Worker {
   protected MigrationTask task;
   protected ArchivalUnit au;
   protected boolean terminated = false;
-  protected V2AuMover.Counters ctrs;
+  protected Counters ctrs;
 
   protected final StreamingCollectionsApi collectionsApi;
   protected final AusApi cfgApiClient;
