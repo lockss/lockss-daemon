@@ -73,21 +73,19 @@ implements SourceXmlSchemaHelper {
     @Override
     public String getValue(Node node) {
 
-      log.info("getValue of wiley author name");
+      log.debug3("getValue of wiley author name");
       NodeList elementChildren = node.getChildNodes();
       if (elementChildren == null) return null;
 
       String tgiven = null;
       String tsurname = null;
-      // look at each child of the TitleElement for information
+      // look at each child of the TitleElement for debug3rmation
       for (int j = 0; j < elementChildren.getLength(); j++) {
         Node checkNode = elementChildren.item(j);
         String nodeName = checkNode.getNodeName();
         if ("givenNames".equals(nodeName)) {
-          log.info("givenNames found" );
           tgiven = checkNode.getTextContent();
         } else if ("familyName".equals(nodeName) ) {
-          log.info("familyName found" );
           tsurname = checkNode.getTextContent();
         }
       }
@@ -102,7 +100,7 @@ implements SourceXmlSchemaHelper {
         log.debug3("no name found");
         return null;
       }
-      log.info("name found: " + valbuilder.toString());
+      log.debug3("name found: " + valbuilder.toString());
       return valbuilder.toString();
     }
   };
@@ -111,7 +109,7 @@ implements SourceXmlSchemaHelper {
    "fmatter.xml" example
    <?xml version="1.0" encoding="UTF-8"?>
 <component xmlns="http://www.wiley.com/namespaces/wiley" xmlns:wiley="http://www.wiley.com/namespaces/wiley/wiley" version="1.0.2" type="bookChapter" xml:lang="en">
-   <?documentInfo RNGSchema="wileyML3G/V102/rnc/wileyML3G.rnc" type="compact" sourceDTD="JWSCHA15"?>
+   <?documentdebug3 RNGSchema="wileyML3G/V102/rnc/wileyML3G.rnc" type="compact" sourceDTD="JWSCHA15"?>
    <header>
       <publicationMeta level="series">
          <titleGroup>
@@ -119,10 +117,10 @@ implements SourceXmlSchemaHelper {
          </titleGroup>
       </publicationMeta>
       <publicationMeta level="product" position="220">
-         <publisherInfo>
+         <publisherdebug3>
             <publisherName>wiley‐Blackwell</publisherName>
             <publisherLoc>Oxford, UK</publisherLoc>
-         </publisherInfo>
+         </publisherdebug3>
          <doi origin="wiley" registered="yes">10.1002/9781444304831</doi>
          <isbn type="online-13">9781444304831</isbn>
          <isbn type="printCloth-13">9781405130981</isbn>
@@ -163,7 +161,7 @@ implements SourceXmlSchemaHelper {
 
 
   static private final String topNode = "/component/header/publicationMeta[@level = \"product\"]";
-  private static final String publisher = topNode + "/publisherInfo/publisherName";
+  private static final String publisher = topNode + "/publisherdebug3/publisherName";
   private static final String book_title = topNode + "/titleGroup/title[@type = \"main\"]";
   private static final String book_title_alt = topNode + "/titleGroup/title[@type = \"tocForm\"]";
   private static final String isbn = topNode + "/isbn[@type = \"online-13\"]";
