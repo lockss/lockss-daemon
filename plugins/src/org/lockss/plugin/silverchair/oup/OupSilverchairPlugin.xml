@@ -10,7 +10,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>35</string>
+    <string>36</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -81,6 +81,10 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <!--Exclude this particular ".svg" file based on publisher's request, it will return 403
+           https://ash.silverchair-cdn.com/cassette.axd/file/Themes/Client/app/img/split-view_figures-tables-53a6d02348118354786b056ee1d24882350dc90b.svg
+           -->
+      <string>2,"^https?://([^/]+\.silverchair-cdn\.com)/cassette\.axd/.*"</string>
       <string>1,"^https?://((fonts|ajax)\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|cdn\.mathjax\.org|cdnjs\.cloudflare\.com)/"</string>
       <!-- 	https://academic.oup.com/my-account/register?siteId=191&returnUrl= redirect to this means access failed -->
       <string>2,"^https?://%s/my-account/register", url_host(base_url)</string>
