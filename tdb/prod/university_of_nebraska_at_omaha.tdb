@@ -14,6 +14,8 @@
     
     rights = openaccess
     #Moved to bepress
+    
+    # FIXME This will induce a slight complication someday because the original plugin is in the humanities_project registry but BePressPlugin is in the non-Alliance prod registry
 
     {
     
@@ -22,19 +24,19 @@
       param[journal_abbr] = jrf
       implicit < status ; year ; name ; param[volume] >
     
-      au < doNotProcess ; 1997 ; The Journal of Religion and Film Volume 1 ; 1 >
-      au < doNotProcess ; 1998 ; The Journal of Religion and Film Volume 2 ; 2 >
-      au < doNotProcess ; 1999 ; The Journal of Religion and Film Volume 3 ; 3 >
-      au < doNotProcess ; 2000 ; The Journal of Religion and Film Volume 4 ; 4 >
-      au < doNotProcess ; 2001 ; The Journal of Religion and Film Volume 5 ; 5 >
-      au < doNotProcess ; 2002 ; The Journal of Religion and Film Volume 6 ; 6 >
-      au < doNotProcess ; 2003 ; The Journal of Religion and Film Volume 7 ; 7 >
-      au < doNotProcess ; 2004 ; The Journal of Religion and Film Volume 8 ; 8 >
-      au < doNotProcess ; 2005 ; The Journal of Religion and Film Volume 9 ; 9 >
-      au < doNotProcess ; 2006 ; The Journal of Religion and Film Volume 10 ; 10 >
-      au < doNotProcess ; 2007 ; The Journal of Religion and Film Volume 11 ; 11 >
-      au < doNotProcess ; 2008 ; The Journal of Religion and Film Volume 12 ; 12 >
-      au < doNotProcess ; 2009 ; The Journal of Religion and Film Volume 13 ; 13 >
+      au < manifest ; 1997 ; The Journal of Religion and Film Volume 1 ; 1 >
+      au < manifest ; 1998 ; The Journal of Religion and Film Volume 2 ; 2 >
+      au < manifest ; 1999 ; The Journal of Religion and Film Volume 3 ; 3 >
+      au < manifest ; 2000 ; The Journal of Religion and Film Volume 4 ; 4 >
+      au < manifest ; 2001 ; The Journal of Religion and Film Volume 5 ; 5 >
+      au < manifest ; 2002 ; The Journal of Religion and Film Volume 6 ; 6 >
+      au < manifest ; 2003 ; The Journal of Religion and Film Volume 7 ; 7 >
+      au < manifest ; 2004 ; The Journal of Religion and Film Volume 8 ; 8 >
+      au < manifest ; 2005 ; The Journal of Religion and Film Volume 9 ; 9 >
+      au < manifest ; 2006 ; The Journal of Religion and Film Volume 10 ; 10 >
+      au < manifest ; 2007 ; The Journal of Religion and Film Volume 11 ; 11 >
+      au < manifest ; 2008 ; The Journal of Religion and Film Volume 12 ; 12 >
+      au < manifest ; 2009 ; The Journal of Religion and Film Volume 13 ; 13 >
       au < manifest ; 2010 ; The Journal of Religion and Film Volume 14 ; 14 >
       au < manifest ; 2011 ; The Journal of Religion and Film Volume 15 ; 15 >
       au < manifest ; 2012 ; The Journal of Religion and Film Volume 16 ; 16 >
@@ -57,19 +59,19 @@
       param[base_url] = http://www.unomaha.edu/jrf/
       implicit < status ; year ; name ; param[volume] >
     
-      au < down ; 1997 ; The Journal of Religion and Film Volume 1 ; 1 >
-      au < down ; 1998 ; The Journal of Religion and Film Volume 2 ; 2 >
-      au < down ; 1999 ; The Journal of Religion and Film Volume 3 ; 3 >
-      au < down ; 2000 ; The Journal of Religion and Film Volume 4 ; 4 >
-      au < down ; 2001 ; The Journal of Religion and Film Volume 5 ; 5 >
-      au < down ; 2002 ; The Journal of Religion and Film Volume 6 ; 6 >
-      au < down ; 2003 ; The Journal of Religion and Film Volume 7 ; 7 >
-      au < down ; 2004 ; The Journal of Religion and Film Volume 8 ; 8 >
-      au < down ; 2005 ; The Journal of Religion and Film Volume 9 ; 9 >
-      au < down ; 2006 ; The Journal of Religion and Film Volume 10 ; 10 >
-      au < down ; 2007 ; The Journal of Religion and Film Volume 11 ; 11 >
-      au < down ; 2008 ; The Journal of Religion and Film Volume 12 ; 12 >
-      au < down ; 2009 ; The Journal of Religion and Film Volume 13 ; 13 >
+      au < superseded ; 1997 ; The Journal of Religion and Film Volume 1 [superseded] ; 1 >
+      au < superseded ; 1998 ; The Journal of Religion and Film Volume 2 [superseded] ; 2 >
+      au < superseded ; 1999 ; The Journal of Religion and Film Volume 3 [superseded] ; 3 >
+      au < superseded ; 2000 ; The Journal of Religion and Film Volume 4 [superseded] ; 4 >
+      au < superseded ; 2001 ; The Journal of Religion and Film Volume 5 [superseded] ; 5 >
+      au < superseded ; 2002 ; The Journal of Religion and Film Volume 6 [superseded] ; 6 >
+      au < superseded ; 2003 ; The Journal of Religion and Film Volume 7 [superseded] ; 7 >
+      au < superseded ; 2004 ; The Journal of Religion and Film Volume 8 [superseded] ; 8 >
+      au < superseded ; 2005 ; The Journal of Religion and Film Volume 9 [superseded] ; 9 >
+      au < superseded ; 2006 ; The Journal of Religion and Film Volume 10 [superseded] ; 10 >
+      au < superseded ; 2007 ; The Journal of Religion and Film Volume 11 [superseded] ; 11 >
+      au < superseded ; 2008 ; The Journal of Religion and Film Volume 12 [superseded] ; 12 >
+      au < superseded ; 2009 ; The Journal of Religion and Film Volume 13 [superseded] ; 13 >
       
     }
     
