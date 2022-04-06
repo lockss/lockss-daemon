@@ -73,7 +73,7 @@ implements SourceXmlSchemaHelper {
     @Override
     public String getValue(Node node) {
 
-      log.debug3("getValue of PubMed author name");
+      log.info("getValue of wiley author name");
       NodeList elementChildren = node.getChildNodes();
       if (elementChildren == null) return null;
 
@@ -84,8 +84,10 @@ implements SourceXmlSchemaHelper {
         Node checkNode = elementChildren.item(j);
         String nodeName = checkNode.getNodeName();
         if ("givenNames".equals(nodeName)) {
+          log.info("givenNames found" );
           tgiven = checkNode.getTextContent();
         } else if ("familyName".equals(nodeName) ) {
+          log.info("familyName found" );
           tsurname = checkNode.getTextContent();
         }
       }
@@ -100,59 +102,8 @@ implements SourceXmlSchemaHelper {
         log.debug3("no name found");
         return null;
       }
-      log.debug3("name found: " + valbuilder.toString());
+      log.info("name found: " + valbuilder.toString());
       return valbuilder.toString();
-    }
-  };
-
-
-  /*
-    <titleGroup>
-      <title type="main" xml:lang="en" sort="IN DEFENSE OF READING">In Defense of Reading</title>
-      <title type="tocForm">In Defense of Reading: Teaching Literature in the Twenty‐First Century</title>
-      <title type="subtitle">Teaching Literature in the Twenty‐First Century</title>
-      <title type="short">Schwarz/In Defense of Reading</title>
-    </titleGroup>
-   */
-  static private final NodeValue BOOK_TITLE_VALUE = new NodeValue() {
-    @Override
-    public String getValue(Node node) {
-
-      log.debug3("getValue of wiley BOOK TITLE");
-      String title = null;
-      String subtitle = null;
-      String nodeName = null;
-      Node parent = node.getParentNode();
-      NodeList childNodes = parent.getChildNodes(); 
-      for (int m = 0; m < childNodes.getLength(); m++) {
-        Node child = childNodes.item(m);
-        if (book_title.equals(child.getNodeName()) ){
-          title = child.getTextContent();
-        } else if (book_subtitle.equals(child.getNodeName())) {
-          subtitle = child.getTextContent();
-        }
-        if ((title != null) && (subtitle != null)) {
-          break;
-        }
-      }     
-      
-      StringBuilder titleVal = new StringBuilder();
-      if (title != null) {
-        titleVal.append(title);
-      }
-      // if empty title, but subtitle exists => " :Subtitle" 
-      // not a great title, but valuable to know...
-      if (subtitle != null) {
-        titleVal.append(TITLE_SEPARATOR + subtitle);
-      }
-      if (titleVal.length() != 0)  {
-        log.debug3("book title: " + titleVal.toString());
-        return titleVal.toString();
-      } else {
-        log.debug3("no value in this book title");
-        return null;
-      }
-      
     }
   };
 
@@ -211,22 +162,25 @@ implements SourceXmlSchemaHelper {
   */
 
 
-  static private final String topNode = "/component/header/publicationMeta[2]";
-  private static final String book_title = topNode + "/titleGroup/title[1]";
-  private static final String book_subtitle = topNode + "/titleGroup/title[2]";
-  private static final String isbn = topNode + "/isbn[1]";
+  static private final String topNode = "/component/header/publicationMeta[@level = \"product\"]";
+  private static final String publisher = topNode + "/publisherInfo/publisherName";
+  private static final String book_title = topNode + "/titleGroup/title[@type = \"main\"]";
+  private static final String book_title_alt = topNode + "/titleGroup/title[@type = \"tocForm\"]";
+  private static final String isbn = topNode + "/isbn[@type = \"online-13\"]";
   private static final String doi = topNode + "/doi";
-  private static final String art_pubdate = topNode + "/eventGroup/event[1]";
-  private static final String author =  topNode + "/creators/creator/personName";
+  private static final String art_pubdate = topNode + "/eventGroup/event[@type = \"publishedPrint\"]/@date";
+  private static final String author =  topNode + "/creators/creator[@creatorRole = \"author\"]/personName\n";
 
 
   static private final Map<String,XPathValue>     
   articleMap = new HashMap<String,XPathValue>();
   static {
     // article specific stuff
+    articleMap.put(publisher, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(art_pubdate, XmlDomMetadataExtractor.TEXT_VALUE); 
     articleMap.put(author, AUTHOR_VALUE);
-    articleMap.put(book_title, BOOK_TITLE_VALUE);
+    articleMap.put(book_title, XmlDomMetadataExtractor.TEXT_VALUE);
+    articleMap.put(book_title_alt, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(isbn, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(doi, XmlDomMetadataExtractor.TEXT_VALUE);
   }
@@ -236,11 +190,12 @@ implements SourceXmlSchemaHelper {
 
   protected static final MultiValueMap cookMap = new MultiValueMap();
   static {
+    cookMap.put(publisher, MetadataField.FIELD_PUBLISHER);
     cookMap.put(isbn, MetadataField.FIELD_ISBN);
     cookMap.put(doi, MetadataField.FIELD_DOI);
     cookMap.put(book_title, MetadataField.FIELD_PUBLICATION_TITLE);
-    cookMap.put(author, 
-        new MetadataField(MetadataField.FIELD_AUTHOR, MetadataField.splitAt(AUTHOR_SPLIT_CH)));
+    cookMap.put(book_title_alt, MetadataField.FIELD_PUBLICATION_TITLE);
+    cookMap.put(author, MetadataField.FIELD_AUTHOR);
     cookMap.put(art_pubdate, MetadataField.FIELD_DATE);
   }
 

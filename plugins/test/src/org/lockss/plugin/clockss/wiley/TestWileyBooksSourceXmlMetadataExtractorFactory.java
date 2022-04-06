@@ -37,7 +37,7 @@ public class TestWileyBooksSourceXmlMetadataExtractorFactory extends SourceXmlMe
 
     public void testExtractArticleXmlSchema() throws Exception {
 
-        String fname = "wiley_fmatter.xml";
+        String fname = "wiley_fmatter1.xml";
         String journalXml = getXmlFileContent(fname);
 
         assertNotNull(journalXml);
@@ -65,18 +65,55 @@ public class TestWileyBooksSourceXmlMetadataExtractorFactory extends SourceXmlMe
 
         assertEquals("9781444304831", md.get(MetadataField.FIELD_ISBN));
         assertEquals("10.1002/9781444304831", md.get(MetadataField.FIELD_DOI));
-        log.info("author=====" + md.get(MetadataField.FIELD_AUTHOR));
-        //assertEquals("Daniel R. Schwarz", md.get(MetadataField.FIELD_AUTHOR));
-        assertEquals("Schwarz", md.get(MetadataField.FIELD_AUTHOR));
+        //log.info("author=====" + md.get(MetadataField.FIELD_AUTHOR));
+        assertEquals("Schwarz, Daniel R.", md.get(MetadataField.FIELD_AUTHOR));
 
-        log.info("title=" + md.get(MetadataField.FIELD_PUBLICATION_TITLE));
-        //assertEquals("In Defense of Reading: In Defense of Reading: Teaching Literature in the Twenty‐First Century", md.get(MetadataField.FIELD_PUBLICATION_TITLE));
+        //log.info("title=" + md.get(MetadataField.FIELD_PUBLICATION_TITLE));
+        //log.info("publisher======" + md.get(MetadataField.FIELD_PUBLISHER));
 
-        log.info("publisher======" + md.get(MetadataField.FIELD_PUBLISHER));
-        //assertEquals("Wiley‐Blackwell", md.get(MetadataField.FIELD_PUBLISHER));
+        //log.info("date======" + md.get(MetadataField.FIELD_DATE));
+        assertEquals("2008-09-05", md.get(MetadataField.FIELD_DATE));
+    }
 
-        log.info("date======" + md.get(MetadataField.FIELD_DATE));
-        //assertEquals("2008-09-05", md.get(MetadataField.FIELD_DATE));
+    public void testExtractArticleXmlSchema2() throws Exception {
+
+        String fname = "wiley_fmatter2.xml";
+        String journalXml = getXmlFileContent(fname);
+
+        assertNotNull(journalXml);
+
+        String xml_url = BaseUrl + Directory + "/" + fname;
+        CIProperties xmlHeader = new CIProperties();
+        xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
+
+        MockArchivalUnit mau = new MockArchivalUnit();
+        MockCachedUrl mcu = mau.addUrl(xml_url, true, true, xmlHeader);
+        mcu.setContent(journalXml);
+        mcu.setContentSize(journalXml.length());
+        mcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
+
+        FileMetadataExtractor me =  new WileyBooksSourceXmlMetadataExtractorFactory().
+                createFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
+        FileMetadataListExtractor mle =
+                new FileMetadataListExtractor(me);
+        List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
+        assertNotEmpty(mdlist);
+        assertEquals(1, mdlist.size());
+
+        ArticleMetadata md = mdlist.get(0);
+        assertNotNull(md);
+        
+        assertEquals("9783433600894", md.get(MetadataField.FIELD_ISBN));
+        assertEquals("10.1002/9783433600894", md.get(MetadataField.FIELD_DOI));
+        //log.info("author=====" + md.get(MetadataField.FIELD_AUTHOR));
+        //assertEquals("Schwarz, Daniel R.", md.get(MetadataField.FIELD_AUTHOR));
+
+        //log.info("title=" + md.get(MetadataField.FIELD_PUBLICATION_TITLE));
+        assertEquals("Baugruben: Berechnungsverfahren", md.get(MetadataField.FIELD_PUBLICATION_TITLE));
+        //log.info("publisher======" + md.get(MetadataField.FIELD_PUBLISHER));
+
+        //log.info("date======" + md.get(MetadataField.FIELD_DATE));
+        //assertEquals("2010-10-20", md.get(MetadataField.FIELD_DATE));
     }
 }
 
