@@ -1,7 +1,6 @@
 <!--
 
-Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
-All rights reserved.
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -43,11 +42,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Oxford University Press Plugin (Legacy)</string>
+    <string>Oxford University Press Journals Plugin (Legacy)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>29</string>
+    <string>30</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -55,7 +54,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>82</string>
+    <string>83</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -76,7 +75,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Oxford University Press Plugin (Legacy), Base URL %s, Volume %s", base_url, volume_name</string>
+    <string>"Oxford University Press Journals Plugin (Legacy), Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>
