@@ -177,7 +177,7 @@ while (my $line = <>) {
         }
         sleep(4);
 
-#GLN
+#GLN HighWire HW Drupal
   } elsif ($plugin =~ m/^(?!Clockss).+DrupalPlugin/) {
     $url = sprintf("%slockss-manifest/vol_%s_manifest.html",
         $param{base_url}, $param{volume_name});
@@ -253,7 +253,7 @@ while (my $line = <>) {
     }
     sleep(4);
 
-#CLOCKSS
+#CLOCKSS Highwire HW Drupal
   } elsif ($plugin =~ m/^Clockss.+DrupalPlugin/) {
     $url = sprintf("%sclockss-manifest/vol_%s_manifest.html",
         $param{base_url}, $param{volume_name});
@@ -316,6 +316,163 @@ while (my $line = <>) {
             } elsif ($req_pl->url ne $resp_pl->request->uri) {
                 $result = "ProbeLinkRedirect";
                 $vol_title = $pl_url;
+            } else {
+                $result = "Manifest";
+            }
+        }
+    } else {
+        if ($man_contents =~ m/<a HREF="">/) {
+            $result = "--EMPTY_ISSUE_URL--";
+        } else {
+            $result = "--UNKNOWN--";
+        }
+    }
+    sleep(4);
+
+#GLN Highwire HW Origins
+  } elsif ($plugin =~ m/^(?!Clockss).+OriginsPlugin/) {
+    $url = sprintf("%scontent/%s/lockss-manifest/vol_%s_manifest.html",
+        $param{base_url}, $param{journal_id}, $param{volume_name});
+        #printf("********************\n");  #debug
+        #printf("url=%s\n",$url);  #debug
+    $man_url = uri_unescape($url);
+    #printf("man_url=%s\n",$man_url);  #debug
+    $base_url_short = substr(uri_unescape($param{base_url}), 0, -1);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    #print($resp->headers_as_string); #debug
+    my $man_contents = $resp->is_success ? $resp->content : "";
+    if (! $resp->is_success) {
+        $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+    } elsif ($req->url ne $resp->request->uri) {
+        $vol_title = $resp->request->uri;
+        $result = "Redirected";
+    } elsif (! defined($man_contents)) {
+        $result = "--NOT_DEF--";
+    } elsif ($man_contents !~ m/$lockss_tag/) {
+        $result = "--NO_TAG--";
+    } elsif (($man_contents !~ m/body.*="$base_url_short[^"]*"/s) || ($man_contents !~ m/body.*="https?:\/\/.*"/s)) { #"
+        #manifest page issue urls (after "body") must contain urls which start with the same characters as the manifest url
+        #or must be a relative url, in which case, the link would not start with https://.
+        $result = "--BAD_ISS_URL--";
+    } elsif (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/$base_url_short" lockss-probe/)) { #"
+        $result = "CGI_probe_link";
+    } elsif ($man_contents =~ m/\/content\/$param{journal_id}\/$param{volume_name}\//) {
+        #Collect title
+        if ($man_contents =~ m/<title>\s*(.*)\s+C?LOCKSS\s+Manifest\s+Page.*<\/title>/si) {
+            $vol_title = $1;
+            $vol_title =~ s/\s*\n\s*/ /g;
+            if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+                $vol_title = "\"" . $vol_title . "\"";
+            }
+        }
+        #Test probe link
+        if ($man_contents !~ m/="([^"]*)" lockss-probe="true"/si) { #"
+            $result = "MissingProbeLink";
+        } else {
+            my $pl_url = $1;
+            my $req_pl = HTTP::Request->new(GET, $pl_url);
+            my $resp_pl = $ua->request($req_pl);
+            #print("Result:$result");
+            if ($pl_url eq "") {
+                $result = "EmptyProbeLink";
+            } elsif (substr($pl_url,0,12) ne substr($man_url,0,12)) {
+                #print substr($pl_url,0,11);
+                #print substr($man_url,0,11);
+                $result = "Base-Probe-Mismatch";
+                $vol_title = $pl_url;
+            } elsif ($pl_url !~ m/\/$param{volume_name}\//) {
+                #print ("Probe_url:$pl_url");
+                #print ("Volume:$param{volume_name}");
+                $result = "ProbeLink-BadVol";
+                $vol_title = $pl_url;
+            } elsif (! $resp_pl->is_success) {
+                $result = "BadProbeLink-" . $resp_pl->code() . " " . $resp_pl->message();
+                $vol_title = $pl_url;
+            } elsif ($req_pl->url ne $resp_pl->request->uri) {
+                #print ("req:$req_pl->url\n");
+                #print ("resp:$resp_pl->request->uri\n");
+                $result = "ProbeLinkRedirect";
+                $vol_title = $resp_pl->request->uri;
+            } else {
+                $result = "Manifest";
+            }
+        }
+    } else {
+        if ($man_contents =~ m/<a HREF="">/) {
+            $result = "--EMPTY_ISSUE_URL--";
+        } else {
+            $result = "--UNKNOWN--";
+        }
+    }
+    sleep(4);
+
+#CLOCKSS HighWire HW Origins
+  } elsif ($plugin =~ m/^Clockss.+OriginsPlugin/) {
+    $url = sprintf("%scontent/%s/clockss-manifest/vol_%s_manifest.html",
+        $param{base_url}, $param{journal_id}, $param{volume_name});
+        #printf("********************\n");  #debug
+        #printf("url=%s\n",$url);  #debug
+    $man_url = uri_unescape($url);
+    #printf("man_url=%s\n",$man_url);  #debug
+    $base_url_short = substr(uri_unescape($param{base_url}), 0, -1);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    #print($resp->headers_as_string); #debug
+    my $man_contents = $resp->is_success ? $resp->content : "";
+    if (! $resp->is_success) {
+        $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+    } elsif ($req->url ne $resp->request->uri) {
+        $vol_title = $resp->request->uri;
+        $result = "Redirected";
+    } elsif (! defined($man_contents)) {
+        $result = "--NOT_DEF--";
+    } elsif ($man_contents !~ m/$clockss_tag/) {
+        $result = "--NO_TAG--";
+    } elsif (($man_contents !~ m/body.*="$base_url_short[^"]*"/s) || ($man_contents !~ m/body.*="https?:\/\/.*"/s)) { #"
+        #manifest page issue urls (after "body") must contain urls which start with the same characters as the manifest url
+        #or must be a relative url, in which case, the link would not start with https://.
+        $result = "--BAD_ISS_URL--";
+    } elsif (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/$base_url_short" lockss-probe/)) { #"
+        $result = "CGI_probe_link";
+    } elsif ($man_contents =~ m/\/content\/$param{journal_id}\/$param{volume_name}\//) {
+        #Collect title
+        if ($man_contents =~ m/<title>\s*(.*)\s+C?LOCKSS\s+Manifest\s+Page.*<\/title>/si) {
+            $vol_title = $1;
+            $vol_title =~ s/\s*\n\s*/ /g;
+            if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+                $vol_title = "\"" . $vol_title . "\"";
+            }
+        }
+        #Test probe link
+        if ($man_contents !~ m/="([^"]*)" lockss-probe="true"/si) { #"
+            $result = "MissingProbeLink";
+        } else {
+            my $pl_url = $1;
+            my $req_pl = HTTP::Request->new(GET, $pl_url);
+            my $resp_pl = $ua->request($req_pl);
+            #print("Result:$result");
+            if ($pl_url eq "") {
+                $result = "EmptyProbeLink";
+            } elsif (substr($pl_url,0,12) ne substr($man_url,0,12)) {
+                #print substr($pl_url,0,11);
+                #print substr($man_url,0,11);
+                $result = "Base-Probe-Mismatch";
+                $vol_title = $pl_url;
+            } elsif ($pl_url !~ m/\/$param{volume_name}\//) {
+                #print ("Probe_url:$pl_url");
+                #print ("Volume:$param{volume_name}");
+                $result = "ProbeLink-BadVol";
+                $vol_title = $pl_url;
+            } elsif (! $resp_pl->is_success) {
+                $result = "BadProbeLink-" . $resp_pl->code() . " " . $resp_pl->message();
+                $vol_title = $pl_url;
+            } elsif ($req_pl->url ne $resp_pl->request->uri) {
+                print ("req_pl->url:$req_pl->url");
+                print ("resp_pl->request->uri:$resp_pl->request->uri");
+                $result = "ProbeLinkRedirect";
+                #$vol_title = $pl_url;
+                $vol_title = $resp_pl->request->uri;
             } else {
                 $result = "Manifest";
             }

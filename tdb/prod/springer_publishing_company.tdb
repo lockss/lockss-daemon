@@ -13,20 +13,30 @@
       issn = 1559-4343 ;
       eissn = 1938-9000 
     >
-    #param[base_url] = https://connect.springerpub.com/
-    param[base_url] = https://connect.springerpub.com/content/sgrehpp/
+    param[base_url] = https://connect.springerpub.com/
     param[journal_id] = sgrehpp
     #plugin = needs.plugin
-    plugin = org.lockss.xxxDrupalPlugin
+    plugin = org.lockss.HWOriginsPlugin
     #example manifest https://connect.springerpub.com/content/sgrehpp/lockss-manifest/vol_10_manifest.html
 
-    au < exists ; 2016 ; Ethical Human Psychology and Psychiatry Volume 5 ; 5 >
-    au < exists ; 2017 ; Ethical Human Psychology and Psychiatry Volume 6 ; 6 >
-    au < exists ; 2018 ; Ethical Human Psychology and Psychiatry Volume 7 ; 7 >
-    au < exists ; 2019 ; Ethical Human Psychology and Psychiatry Volume 8 ; 8 >
-    au < exists ; 2020 ; Ethical Human Psychology and Psychiatry Volume 9 ; 9 >
-    au < exists ; 2021 ; Ethical Human Psychology and Psychiatry Volume 10 ; 10 >
-    au < expected ; 2022 ; Ethical Human Psychology and Psychiatry Volume 11 ; 11 >
+    au < exists ; 2005 ; Ethical Human Psychology and Psychiatry Volume 7 ; 7 >
+    au < manifest ; 2006 ; Ethical Human Psychology and Psychiatry Volume 8 ; 8 >
+    au < manifest ; 2007 ; Ethical Human Psychology and Psychiatry Volume 9 ; 9 >
+    au < manifest ; 2008 ; Ethical Human Psychology and Psychiatry Volume 10 ; 10 >
+    au < manifest ; 2009 ; Ethical Human Psychology and Psychiatry Volume 11 ; 11 >
+    au < manifest ; 2010 ; Ethical Human Psychology and Psychiatry Volume 12 ; 12 >
+    au < manifest ; 2011-2012 ; Ethical Human Psychology and Psychiatry Volume 13 ; 13 >
+    au < manifest ; 2012 ; Ethical Human Psychology and Psychiatry Volume 14 ; 14 >
+    au < exists ; 2013 ; Ethical Human Psychology and Psychiatry Volume 15 ; 15 >
+    au < manifest ; 2014 ; Ethical Human Psychology and Psychiatry Volume 16 ; 16 >
+    au < manifest ; 2015 ; Ethical Human Psychology and Psychiatry Volume 17 ; 17 >
+    au < manifest ; 2016 ; Ethical Human Psychology and Psychiatry Volume 18 ; 18 >
+    au < manifest ; 2017 ; Ethical Human Psychology and Psychiatry Volume 19 ; 19 >
+    au < manifest ; 2018 ; Ethical Human Psychology and Psychiatry Volume 20 ; 20 >
+    au < manifest ; 2019 ; Ethical Human Psychology and Psychiatry Volume 21 ; 21 >
+    au < manifest ; 2020 ; Ethical Human Psychology and Psychiatry Volume 22 ; 22 >
+    au < manifest ; 2021 ; Ethical Human Psychology and Psychiatry Volume 23 ; 23 >
+    au < manifest ; 2022 ; Ethical Human Psychology and Psychiatry Volume 24 ; 24 >
 
   }
 
