@@ -1,7 +1,6 @@
 <!--
 
-Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
-All rights reserved.
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -53,11 +52,11 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>Allen Press Plugin</string>
+        <string>Allen Press Journals Plugin</string>
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"Allen Press Plugin, Base URL %s, Journal ID %s,  Year %d, Volume %s", base_url, journal_id, year, volume_name</string>
+        <string>"Allen Press Journals Plugin, Base URL %s, Journal ID %s,  Year %d, Volume %s", base_url, journal_id, year, volume_name</string>
     </entry>
     <!--https://meridian.allenpress.com/jgme/issue/browse-by-year/2020-->
     <entry>
