@@ -325,6 +325,7 @@ public class V2AuMover {
   private OneShotSemaphore doneSem = new OneShotSemaphore();
 
   private boolean terminated = false;
+  private boolean globalAbort = false;
 
   PluginManager pluginManager;
 
@@ -504,6 +505,11 @@ public class V2AuMover {
     }
   }
 
+  public void abortCopy() {
+    log.info("Abort requested");
+    globalAbort = true;
+  }
+
   private void waitUntilDone() {
     try {
       // Wait until last AU finishes
@@ -575,7 +581,7 @@ public class V2AuMover {
     log.debug("Moving " + totalAusToMove + " aus.");
 
     for (ArchivalUnit au : auMoveQueue) {
-      if (terminated) {
+      if (isAbort()) {
         break;
       }
       ausLatch.countUp();
@@ -665,6 +671,7 @@ public class V2AuMover {
    */
   // Phases are defined in reverse order to avoid illegal forward references
   enum Phase {
+    ABORT("Aborted"),
     DONE(""),                           // Last phase
     FINISH("Finishing", Action.FinishAu, Phase.DONE),
     STATE("Copying State", Action.EnqState, Phase.FINISH),
@@ -778,18 +785,22 @@ public class V2AuMover {
       removeActiveAu(au);
       addFinishedAu(au, auStat);
       updateReport(au, auStat);
-      totalAusMoved++;
-      if (checkMissingContent && existsInV2(auStat.getAuId())) {
-        Counters ctrs = auStat.getCounters();
-        if (ctrs != null) {
-          if (ctrs.isNonZero(CounterType.ARTIFACTS_MOVED)) {
-            totalAusPartiallyMoved++;
-          } else {
-            totalAusSkipped++;
+      if (auStat.isAbort()) {
+        enterPhase(auStat, Phase.ABORT);
+      } else {
+        totalAusMoved++;
+        if (checkMissingContent && existsInV2(auStat.getAuId())) {
+          Counters ctrs = auStat.getCounters();
+          if (ctrs != null) {
+            if (ctrs.isNonZero(CounterType.ARTIFACTS_MOVED)) {
+              totalAusPartiallyMoved++;
+            } else {
+              totalAusSkipped++;
+            }
           }
         }
+        auStat.endPhase();
       }
-      auStat.endPhase();
       ausLatch.countDown();
       break;
     }
@@ -919,7 +930,8 @@ public class V2AuMover {
    * exitPhase() to be called when the task completes */
   void enqueueTask(MigrationTask task, AuStatus auStat,
                    ThreadPoolExecutor executor) {
-    if (terminated) {
+    if (auStat.isAbort()) {
+      auStat.endPhase();
       return;
     }
     Phase phase = task.getTaskPhase();
@@ -1033,7 +1045,7 @@ public class V2AuMover {
         pageInfo = repoCollectionsApiClient.getAus(collection, null, token);
         v2Aus.addAll(pageInfo.getAuids());
         token = pageInfo.getPageInfo().getContinuationToken();
-      } while (!terminated && !StringUtil.isNullString(token));
+      } while (!isAbort() && !StringUtil.isNullString(token));
     } catch (ApiException apie) {
       if (apie.getMessage().indexOf("404: Not Found") > 0) {
         return;
@@ -1503,6 +1515,7 @@ public class V2AuMover {
     boolean isBulk;
     Phase auPhase = Phase.START;
     protected Map<Phase,CountUpDownLatch> latchMap = new HashMap<>();
+    boolean abortAu;
 
     public AuStatus(ArchivalUnit au) {
       super();
@@ -1567,6 +1580,14 @@ public class V2AuMover {
 
     public void addError(String msg) {
       ctrs.addError(msg);
+    }
+
+    public void abortAu() {
+      abortAu = true;
+    }
+
+    public boolean isAbort() {
+      return abortAu || globalAbort;
     }
 
     public int hashCode() {
@@ -1764,6 +1785,10 @@ public class V2AuMover {
     return terminated;
   }
 
+  public boolean isAbort() {
+    return globalAbort;
+  }
+
   /**
    * Returns the list of errors which occurred while attempting to move the AU(s).
    *
@@ -1858,7 +1883,7 @@ public class V2AuMover {
     String auData = sb.toString();
     reportWriter.println("AU Name: " + auStat.getAuName());
     reportWriter.println("AU ID: " + auStat.getAuId());
-    if (terminated) {
+    if (auStat.isAbort()) {
       reportWriter.println("Move terminated with error.");
     }
     reportWriter.println(auData);
@@ -1915,6 +1940,8 @@ public class V2AuMover {
     currentStatus = summary;
     if (reportWriter != null) {
       reportWriter.println(summary);
+      reportWriter.println("--------------------------------------------------");
+      reportWriter.println("");
       if (reportWriter.checkError()) {
         log.warning("Error writing report file.");
       }

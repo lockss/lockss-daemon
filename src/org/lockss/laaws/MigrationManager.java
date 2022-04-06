@@ -100,14 +100,25 @@ public class MigrationManager extends BaseLockssManager
     return stat;
   }
 
+  private boolean isRunning() {
+    return mover != null && mover.isRunning();
+  }
+
   public synchronized void startRunner(V2AuMover.Args args) throws IOException {
-    if (mover != null && mover.isRunning()) {
+    if (isRunning()) {
       throw new IOException("Migration is already running, can't start a new one");
     }
     mover = new V2AuMover();
     runner = new Runner(args);
     log.debug("Starting runner: " + args);
     new Thread(runner).start();
+  }
+
+  public synchronized void abortCopy() throws IOException {
+    if (!isRunning()) {
+      throw new IllegalStateException("Not running");
+    }
+    mover.abortCopy();
   }
 
   public class Runner extends LockssRunnable {

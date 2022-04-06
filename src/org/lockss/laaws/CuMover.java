@@ -1,3 +1,31 @@
+/*
+
+Copyright (c) 2021-2022 Board of Trustees of Leland Stanford Jr. University,
+all rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of Stanford University shall not
+be used in advertising or otherwise to promote the sale, use or other dealings
+in this Software without prior written authorization from Stanford University.
+
+*/
+
 package org.lockss.laaws;
 
 import java.util.ArrayDeque;
@@ -34,6 +62,9 @@ public class CuMover extends Worker {
   }
 
   public void run() {
+    if (isAbort()) {
+      return;
+    }
     try {
       log.debug2("Starting CuMover: " + au + ", " + cu);
       v1Url=cu.getUrl();
@@ -60,36 +91,32 @@ public class CuMover extends Worker {
    */
   void moveCuVersions(String v2Url, CachedUrl cachedUrl, List<Artifact> v2Artifacts) {
     log.debug3("moveCuVersions("+v2Url+")");
-    if (!terminated) {
-      String auid = cachedUrl.getArchivalUnit().getAuId();
-      CachedUrl[] localVersions = cachedUrl.getCuVersions();
-      Queue<CachedUrl> cuQueue = Collections.asLifoQueue(new ArrayDeque<>());
-      int v2Count = v2Artifacts.size();
-      //If we have more v1 versions than the v2 repo - copy the missing items
-      if (v2Count > 0) {
-        log.debug3("v2 versions available=" + v2Count + " v1 versions available="
-            + localVersions.length);
+    String auid = cachedUrl.getArchivalUnit().getAuId();
+    CachedUrl[] localVersions = cachedUrl.getCuVersions();
+    Queue<CachedUrl> cuQueue = Collections.asLifoQueue(new ArrayDeque<>());
+    int v2Count = v2Artifacts.size();
+    //If we have more v1 versions than the v2 repo - copy the missing items
+    if (v2Count > 0) {
+      log.debug3("v2 versions available=" + v2Count + " v1 versions available="
+                 + localVersions.length);
+    }
+    // if the v2 repository has fewer versions than the v1 repository
+    // then move the missing versions or release the cu version.
+    int vers_to_move = localVersions.length - v2Count;
+    log.debug3("Queueing " + vers_to_move + "/" + localVersions.length + " versions...");
+    if (vers_to_move > 0) {
+      for (int vx = 0; vx < localVersions.length; vx++) {
+        CachedUrl ver = localVersions[vx];
+        if (vx < vers_to_move) {
+          cuQueue.add(ver);
+        }
+        else {
+          AuUtil.safeRelease(ver);
+        }
       }
-      // if the v2 repository has fewer versions than the v1 repository
-      // then move the missing versions or release the cu version.
-      int vers_to_move = localVersions.length - v2Count;
-      log.debug3("Queueing " + vers_to_move + "/" + localVersions.length + " versions...");
-      if (vers_to_move > 0) {
-        for (int vx = 0; vx < localVersions.length; vx++) {
-          CachedUrl ver = localVersions[vx];
-          if (vx < vers_to_move) {
-            cuQueue.add(ver);
-          }
-          else {
-            AuUtil.safeRelease(ver);
-          }
-        }
-        while(!terminated && cuQueue.peek() != null) {
-          moveNextCuVersion(auid, v2Url, cuQueue);
-        }
-        if (!terminated) {
-          ctrs.incr(CounterType.URLS_MOVED);
-        }
+      while(!isAbort() && cuQueue.peek() != null) {
+        moveNextCuVersion(auid, v2Url, cuQueue);
+        ctrs.incr(CounterType.URLS_MOVED);
       }
     }
   }
@@ -195,7 +222,7 @@ public class CuMover extends Worker {
     String token = null;
     List<Artifact> cuArtifacts = new ArrayList<>();
     // if the v2 repo knows about this au we need to call getArtifacts.
-    if (auMover.getKnownV2Aus().contains(auId)) {
+    if (auMover.existsInV2(auId)) {
       isPartialContent = true;
       log.debug2("Checking for unmoved content: " + v2Url);
       do {
@@ -203,7 +230,7 @@ public class CuMover extends Worker {
             v2Url, null, "all", false, null, token);
         cuArtifacts.addAll(pageInfo.getArtifacts());
         token = pageInfo.getPageInfo().getContinuationToken();
-      } while (!terminated && !StringUtil.isNullString(token));
+      } while (!isAbort() && !StringUtil.isNullString(token));
       log.debug2("Found " + cuArtifacts.size() + " matches for " + v2Url);
     }
     return cuArtifacts;

@@ -87,6 +87,7 @@ public class MigrateContent extends LockssServlet {
 
   public static final String ACTION_MIGRATE_AU= "Migrate One AU to V2 Repository";
   public static final String ACTION_MIGRATE_ALL= "Migrate All AUs to V2 Repository";
+  public static final String ACTION_ABORT= "Abort";
 
   private static final String HOST_URL_FOOT =
     "The V2 REST Service host name (localhost by default).";
@@ -154,6 +155,8 @@ public class MigrateContent extends LockssServlet {
         doMigrateAu();
       } else if (ACTION_MIGRATE_ALL.equals(action)) {
         doMigrateAll();
+      } else if (ACTION_ABORT.equals(action)) {
+        doAbort();
       }
     }
     displayPage();
@@ -219,6 +222,16 @@ public class MigrateContent extends LockssServlet {
     startRunner(args);
   }
 
+  private void doAbort() {
+    try {
+      migrationMgr.abortCopy();
+      statusMsg = "Abort requested";
+    } catch (Exception e) {
+      log.error("Couldn't abort", e);
+      errMsg = "Couldn't about: " + e.getMessage();
+    }
+  }
+
   ArchivalUnit getAu() {
     if (StringUtil.isNullString(auid)) {
       errMsg = "No AU selected";
@@ -273,6 +286,10 @@ public class MigrateContent extends LockssServlet {
     tbl.add(migrateAu);
     Input migrateAll = new Input(Input.Submit, KEY_ACTION, ACTION_MIGRATE_ALL);
     tbl.add(migrateAll);
+    tbl.newRow();
+    tbl.newCell(CENTERED_CELL);
+    Input abort = new Input(Input.Submit, KEY_ACTION, ACTION_ABORT);
+    tbl.add(abort);
 
     frm.add(tbl);
     comp.add(frm);
