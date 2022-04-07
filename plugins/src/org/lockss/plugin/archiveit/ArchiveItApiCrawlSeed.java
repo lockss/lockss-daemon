@@ -306,10 +306,9 @@ public class ArchiveItApiCrawlSeed extends BaseCrawlSeed {
     }
     sb.append("<h3>Collected and preserved urls:</h3>");
     for (String u : urlList) {
-      sb.append("<a href=\"/ViewContent?" + "url=")
+      sb.append("<a href=\"/ViewContent?url=")
         .append(URLEncoder.encode(u, Constants.ENCODING_UTF_8))
-        .append("&frame=content")
-        .append("&auid=")
+        .append("&frame=content&auid=")
         .append(URLEncoder.encode(au.getAuId(), Constants.ENCODING_UTF_8))
         .append("\">")
         .append(u)
