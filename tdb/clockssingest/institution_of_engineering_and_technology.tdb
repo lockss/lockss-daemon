@@ -2113,8 +2113,8 @@
       au < crawling ; exists ; 1950 ; The Proceedings of the IEE – Part II: Power Engineering Volume 97 ; 97 ; >
       au < crawling ; exists ; 1951 ; The Proceedings of the IEE – Part II: Power Engineering Volume 98 ; 98 ; >
       au < crawling ; exists ; 1952 ; The Proceedings of the IEE – Part II: Power Engineering Volume 99 ; 99 ; >
-      au < manifest ; exists ; 1953 ; The Proceedings of the IEE – Part II: Power Engineering Volume 100 ; 100 ; >
-      au < manifest ; exists ; 1954 ; The Proceedings of the IEE – Part II: Power Engineering Volume 101 ; 101 ; >
+      au < ready ; exists ; 1953 ; The Proceedings of the IEE – Part II: Power Engineering Volume 100 ; 100 ; >
+      au < ready ; exists ; 1954 ; The Proceedings of the IEE – Part II: Power Engineering Volume 101 ; 101 ; >
 
   }
 
@@ -2129,7 +2129,7 @@
 
       param[journal_id] = pi-2a
 
-      au < manifest ; exists ; 1953 ; The Proceedings of the IEE – Part IIA: Insulating Materials Volume 100 ; 100 ; >
+      au < ready ; exists ; 1953 ; The Proceedings of the IEE – Part IIA: Insulating Materials Volume 100 ; 100 ; >
 
   }
 
@@ -2144,12 +2144,12 @@
 
       param[journal_id] = pi-3
 
-      au < manifest ; exists ; 1949 ; The Proceedings of the IEE – Part III: Radio and Communication Engineering Volume 96 ; 96 ; >
-      au < manifest ; exists ; 1950 ; The Proceedings of the IEE – Part III: Radio and Communication Engineering Volume 97 ; 97 ; >
-      au < manifest ; exists ; 1951 ; The Proceedings of the IEE – Part III: Radio and Communication Engineering Volume 98 ; 98 ; >
-      au < manifest ; exists ; 1952 ; The Proceedings of the IEE – Part III: Radio and Communication Engineering Volume 99 ; 99 ; >
-      au < manifest ; exists ; 1953 ; The Proceedings of the IEE – Part III: Radio and Communication Engineering Volume 100 ; 100 ; >
-      au < manifest ; exists ; 1954 ; The Proceedings of the IEE – Part III: Radio and Communication Engineering Volume 101 ; 101 ; >
+      au < ready ; exists ; 1949 ; The Proceedings of the IEE – Part III: Radio and Communication Engineering Volume 96 ; 96 ; >
+      au < ready ; exists ; 1950 ; The Proceedings of the IEE – Part III: Radio and Communication Engineering Volume 97 ; 97 ; >
+      au < ready ; exists ; 1951 ; The Proceedings of the IEE – Part III: Radio and Communication Engineering Volume 98 ; 98 ; >
+      au < ready ; exists ; 1952 ; The Proceedings of the IEE – Part III: Radio and Communication Engineering Volume 99 ; 99 ; >
+      au < ready ; exists ; 1953 ; The Proceedings of the IEE – Part III: Radio and Communication Engineering Volume 100 ; 100 ; >
+      au < ready ; exists ; 1954 ; The Proceedings of the IEE – Part III: Radio and Communication Engineering Volume 101 ; 101 ; >
 
   }
 
@@ -2164,7 +2164,7 @@
 
       param[journal_id] = pi-3a
 
-      au < manifest ; exists ; 1952 ; The Proceedings of the IEE – Part IIIA: Television Volume 99 ; 99 ; >
+      au < ready ; exists ; 1952 ; The Proceedings of the IEE – Part IIIA: Television Volume 99 ; 99 ; >
 
   }
 
@@ -2179,10 +2179,10 @@
 
       param[journal_id] = pi-4
 
-      au < manifest ; exists ; 1951 ; The Proceedings of the IEE – Part IV: Institution Monographs Volume 98 ; 98 ; >
-      au < manifest ; exists ; 1952 ; The Proceedings of the IEE – Part IV: Institution Monographs Volume 99 ; 99 ; >
-      au < manifest ; exists ; 1953 ; The Proceedings of the IEE – Part IV: Institution Monographs Volume 100 ; 100 ; >
-      au < manifest ; exists ; 1954 ; The Proceedings of the IEE – Part IV: Institution Monographs Volume 101 ; 101 ; >
+      au < ready ; exists ; 1951 ; The Proceedings of the IEE – Part IV: Institution Monographs Volume 98 ; 98 ; >
+      au < ready ; exists ; 1952 ; The Proceedings of the IEE – Part IV: Institution Monographs Volume 99 ; 99 ; >
+      au < ready ; exists ; 1953 ; The Proceedings of the IEE – Part IV: Institution Monographs Volume 100 ; 100 ; >
+      au < ready ; exists ; 1954 ; The Proceedings of the IEE – Part IV: Institution Monographs Volume 101 ; 101 ; >
 
   }
 
@@ -2197,7 +2197,7 @@
 
       param[journal_id] = pi-a
 
-      au < manifest ; exists ; 1955 ; The Proceedings of the IEE – Part A: Power Engineering Volume 102 ; 102 ; >
+      au < ready ; exists ; 1955 ; The Proceedings of the IEE – Part A: Power Engineering Volume 102 ; 102 ; >
       au < crawling ; exists ; 1956 ; The Proceedings of the IEE – Part A: Power Engineering Volume 103 ; 103 ; >
       au < crawling ; exists ; 1957 ; The Proceedings of the IEE – Part A: Power Engineering Volume 104 ; 104 ; >
       au < crawling ; exists ; 1958 ; The Proceedings of the IEE – Part A: Power Engineering Volume 105 ; 105 ; >
@@ -2219,8 +2219,8 @@
 
       param[journal_id] = pi-b-1
 
-      au < manifest ; exists ; 1955 ; The Proceedings of the IEE – Part B: Radio and Electronic Engineering Volume 102 ; 102 ; >
-      au < manifest ; exists ; 1956 ; The Proceedings of the IEE – Part B: Radio and Electronic Engineering Volume 103 ; 103 ; >
+      au < ready ; exists ; 1955 ; The Proceedings of the IEE – Part B: Radio and Electronic Engineering Volume 102 ; 102 ; >
+      au < ready ; exists ; 1956 ; The Proceedings of the IEE – Part B: Radio and Electronic Engineering Volume 103 ; 103 ; >
       au < crawling ; exists ; 1957 ; The Proceedings of the IEE – Part B: Radio and Electronic Engineering Volume 104 ; 104 ; >
       au < crawling ; exists ; 1958 ; The Proceedings of the IEE – Part B: Radio and Electronic Engineering Volume 105 ; 105 ; >
       au < crawling ; exists ; 1959 ; The Proceedings of the IEE – Part B: Radio and Electronic Engineering Volume 106 ; 106 ; >
@@ -2257,7 +2257,7 @@
       param[journal_id] = pi-c
 
       au < manifest ; exists ; 1955 ; The Proceedings of the IEE – Part C: Monographs Volume 102 ; 102 ; >
-      au < manifest ; exists ; 1956 ; The Proceedings of the IEE – Part C: Monographs Volume 103 ; 103 ; >
+      au < ready ; exists ; 1956 ; The Proceedings of the IEE – Part C: Monographs Volume 103 ; 103 ; >
       au < crawling ; exists ; 1957 ; The Proceedings of the IEE – Part C: Monographs Volume 104 ; 104 ; >
       au < crawling ; exists ; 1958 ; The Proceedings of the IEE – Part C: Monographs Volume 105 ; 105 ; >
       au < crawling ; exists ; 1959 ; The Proceedings of the IEE – Part C: Monographs Volume 106 ; 106 ; >
@@ -2364,21 +2364,21 @@
 
       param[journal_id] = pws
 
-      au < manifest ; exists ; 1926 ; The Institution of Electrical Engineers – Proceedings of the Wireless Section of the Institution Volume 1 ; 1 ; >
-      au < manifest ; exists ; 1927 ; The Institution of Electrical Engineers – Proceedings of the Wireless Section of the Institution Volume 2 ; 2 ; >
-      au < manifest ; exists ; 1928 ; The Institution of Electrical Engineers – Proceedings of the Wireless Section of the Institution Volume 3 ; 3 ; >
-      au < manifest ; exists ; 1929 ; The Institution of Electrical Engineers – Proceedings of the Wireless Section of the Institution Volume 4 ; 4 ; >
-      au < manifest ; exists ; 1930 ; The Institution of Electrical Engineers – Proceedings of the Wireless Section of the Institution Volume 5 ; 5 ; >
-      au < manifest ; exists ; 1931 ; The Institution of Electrical Engineers – Proceedings of the Wireless Section of the Institution Volume 6 ; 6 ; >
-      au < manifest ; exists ; 1932 ; The Institution of Electrical Engineers – Proceedings of the Wireless Section of the Institution Volume 7 ; 7 ; >
-      au < manifest ; exists ; 1933 ; The Institution of Electrical Engineers – Proceedings of the Wireless Section of the Institution Volume 8 ; 8 ; >
-      au < manifest ; exists ; 1934 ; The Institution of Electrical Engineers – Proceedings of the Wireless Section of the Institution Volume 9 ; 9 ; >
-      au < manifest ; exists ; 1935 ; The Institution of Electrical Engineers – Proceedings of the Wireless Section of the Institution Volume 10 ; 10 ; >
-      au < manifest ; exists ; 1936 ; The Institution of Electrical Engineers – Proceedings of the Wireless Section of the Institution Volume 11 ; 11 ; >
-      au < manifest ; exists ; 1937 ; The Institution of Electrical Engineers – Proceedings of the Wireless Section of the Institution Volume 12 ; 12 ; >
-      au < manifest ; exists ; 1938 ; The Institution of Electrical Engineers – Proceedings of the Wireless Section of the Institution Volume 13 ; 13 ; >
-      au < manifest ; exists ; 1939 ; The Institution of Electrical Engineers – Proceedings of the Wireless Section of the Institution Volume 14 ; 14 ; >
-      au < manifest ; exists ; 1940 ; The Institution of Electrical Engineers – Proceedings of the Wireless Section of the Institution Volume 15 ; 15 ; >
+      au < ready ; exists ; 1926 ; The Institution of Electrical Engineers – Proceedings of the Wireless Section of the Institution Volume 1 ; 1 ; >
+      au < ready ; exists ; 1927 ; The Institution of Electrical Engineers – Proceedings of the Wireless Section of the Institution Volume 2 ; 2 ; >
+      au < ready ; exists ; 1928 ; The Institution of Electrical Engineers – Proceedings of the Wireless Section of the Institution Volume 3 ; 3 ; >
+      au < ready ; exists ; 1929 ; The Institution of Electrical Engineers – Proceedings of the Wireless Section of the Institution Volume 4 ; 4 ; >
+      au < ready ; exists ; 1930 ; The Institution of Electrical Engineers – Proceedings of the Wireless Section of the Institution Volume 5 ; 5 ; >
+      au < ready ; exists ; 1931 ; The Institution of Electrical Engineers – Proceedings of the Wireless Section of the Institution Volume 6 ; 6 ; >
+      au < ready ; exists ; 1932 ; The Institution of Electrical Engineers – Proceedings of the Wireless Section of the Institution Volume 7 ; 7 ; >
+      au < ready ; exists ; 1933 ; The Institution of Electrical Engineers – Proceedings of the Wireless Section of the Institution Volume 8 ; 8 ; >
+      au < ready ; exists ; 1934 ; The Institution of Electrical Engineers – Proceedings of the Wireless Section of the Institution Volume 9 ; 9 ; >
+      au < ready ; exists ; 1935 ; The Institution of Electrical Engineers – Proceedings of the Wireless Section of the Institution Volume 10 ; 10 ; >
+      au < ready ; exists ; 1936 ; The Institution of Electrical Engineers – Proceedings of the Wireless Section of the Institution Volume 11 ; 11 ; >
+      au < ready ; exists ; 1937 ; The Institution of Electrical Engineers – Proceedings of the Wireless Section of the Institution Volume 12 ; 12 ; >
+      au < ready ; exists ; 1938 ; The Institution of Electrical Engineers – Proceedings of the Wireless Section of the Institution Volume 13 ; 13 ; >
+      au < ready ; exists ; 1939 ; The Institution of Electrical Engineers – Proceedings of the Wireless Section of the Institution Volume 14 ; 14 ; >
+      au < ready ; exists ; 1940 ; The Institution of Electrical Engineers – Proceedings of the Wireless Section of the Institution Volume 15 ; 15 ; >
 
   }
 
@@ -2472,32 +2472,32 @@
 
       param[journal_id] = sqj
 
-      au < manifest ; exists ; 1931 ; Students' Quarterly Journal Volume 1 ; 1 ; >
-      au < manifest ; exists ; 1932 ; Students' Quarterly Journal Volume 2 ; 2 ; >
-      au < manifest ; exists ; 1933 ; Students' Quarterly Journal Volume 3 ; 3 ; >
+      au < ready ; exists ; 1931 ; Students' Quarterly Journal Volume 1 ; 1 ; >
+      au < ready ; exists ; 1932 ; Students' Quarterly Journal Volume 2 ; 2 ; >
+      au < ready ; exists ; 1933 ; Students' Quarterly Journal Volume 3 ; 3 ; >
       au < manifest ; exists ; 1934 ; Students' Quarterly Journal Volume 4 ; 4 ; >
-      au < manifest ; exists ; 1935 ; Students' Quarterly Journal Volume 5 ; 5 ; >
-      au < manifest ; exists ; 1936 ; Students' Quarterly Journal Volume 6 ; 6 ; >
-      au < manifest ; exists ; 1937 ; Students' Quarterly Journal Volume 7 ; 7 ; >
-      au < manifest ; exists ; 1938 ; Students' Quarterly Journal Volume 8 ; 8 ; >
-      au < manifest ; exists ; 1939 ; Students' Quarterly Journal Volume 9 ; 9 ; >
-      au < manifest ; exists ; 1940 ; Students' Quarterly Journal Volume 10 ; 10 ; >
-      au < manifest ; exists ; 1941 ; Students' Quarterly Journal Volume 11 ; 11 ; >
-      au < manifest ; exists ; 1942 ; Students' Quarterly Journal Volume 12 ; 12 ; >
-      au < manifest ; exists ; 1943 ; Students' Quarterly Journal Volume 13 ; 13 ; >
-      au < manifest ; exists ; 1944 ; Students' Quarterly Journal Volume 14 ; 14 ; >
-      au < manifest ; exists ; 1945 ; Students' Quarterly Journal Volume 15 ; 15 ; >
-      au < manifest ; exists ; 1946 ; Students' Quarterly Journal Volume 16 ; 16 ; >
-      au < manifest ; exists ; 1947 ; Students' Quarterly Journal Volume 17 ; 17 ; >
-      au < manifest ; exists ; 1948 ; Students' Quarterly Journal Volume 18 ; 18 ; >
-      au < manifest ; exists ; 1949 ; Students' Quarterly Journal Volume 19 ; 19 ; >
-      au < manifest ; exists ; 1950 ; Students' Quarterly Journal Volume 20 ; 20 ; >
-      au < manifest ; exists ; 1951 ; Students' Quarterly Journal Volume 21 ; 21 ; >
-      au < manifest ; exists ; 1952 ; Students' Quarterly Journal Volume 22 ; 22 ; >
-      au < manifest ; exists ; 1953 ; Students' Quarterly Journal Volume 23 ; 23 ; >
-      au < manifest ; exists ; 1954 ; Students' Quarterly Journal Volume 24 ; 24 ; >
-      au < manifest ; exists ; 1955 ; Students' Quarterly Journal Volume 25 ; 25 ; >
-      au < manifest ; exists ; 1956 ; Students' Quarterly Journal Volume 26 ; 26 ; >
+      au < ready ; exists ; 1935 ; Students' Quarterly Journal Volume 5 ; 5 ; >
+      au < ready ; exists ; 1936 ; Students' Quarterly Journal Volume 6 ; 6 ; >
+      au < ready ; exists ; 1937 ; Students' Quarterly Journal Volume 7 ; 7 ; >
+      au < ready ; exists ; 1938 ; Students' Quarterly Journal Volume 8 ; 8 ; >
+      au < ready ; exists ; 1939 ; Students' Quarterly Journal Volume 9 ; 9 ; >
+      au < ready ; exists ; 1940 ; Students' Quarterly Journal Volume 10 ; 10 ; >
+      au < ready ; exists ; 1941 ; Students' Quarterly Journal Volume 11 ; 11 ; >
+      au < ready ; exists ; 1942 ; Students' Quarterly Journal Volume 12 ; 12 ; >
+      au < ready ; exists ; 1943 ; Students' Quarterly Journal Volume 13 ; 13 ; >
+      au < ready ; exists ; 1944 ; Students' Quarterly Journal Volume 14 ; 14 ; >
+      au < ready ; exists ; 1945 ; Students' Quarterly Journal Volume 15 ; 15 ; >
+      au < ready ; exists ; 1946 ; Students' Quarterly Journal Volume 16 ; 16 ; >
+      au < ready ; exists ; 1947 ; Students' Quarterly Journal Volume 17 ; 17 ; >
+      au < ready ; exists ; 1948 ; Students' Quarterly Journal Volume 18 ; 18 ; >
+      au < ready ; exists ; 1949 ; Students' Quarterly Journal Volume 19 ; 19 ; >
+      au < ready ; exists ; 1950 ; Students' Quarterly Journal Volume 20 ; 20 ; >
+      au < ready ; exists ; 1951 ; Students' Quarterly Journal Volume 21 ; 21 ; >
+      au < ready ; exists ; 1952 ; Students' Quarterly Journal Volume 22 ; 22 ; >
+      au < ready ; exists ; 1953 ; Students' Quarterly Journal Volume 23 ; 23 ; >
+      au < ready ; exists ; 1954 ; Students' Quarterly Journal Volume 24 ; 24 ; >
+      au < ready ; exists ; 1955 ; Students' Quarterly Journal Volume 25 ; 25 ; >
+      au < ready ; exists ; 1956 ; Students' Quarterly Journal Volume 26 ; 26 ; >
       au < crawling ; exists ; 1957 ; Students' Quarterly Journal Volume 27 ; 27 ; >
       au < crawling ; exists ; 1958 ; Students' Quarterly Journal Volume 28 ; 28 ; >
       au < crawling ; exists ; 1959 ; Students' Quarterly Journal Volume 29 ; 29 ; >

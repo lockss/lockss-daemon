@@ -1826,12 +1826,12 @@
 
     au < notReady ; exists ; 1991 ; Competitiveness Review: An International Business Journal Volume 1 ; 1 ; > #500 error 
     au < notReady ; exists ; 1992 ; Competitiveness Review: An International Business Journal Volume 2 ; 2 ; > #500 error 
-    au < notReady ; exists ; 1993 ; Competitiveness Review: An International Business Journal Volume 3 ; 3 ; > #500 error 
-    au < notReady ; exists ; 1994 ; Competitiveness Review: An International Business Journal Volume 4 ; 4 ; > #500 error 
-    au < notReady ; exists ; 1995 ; Competitiveness Review: An International Business Journal Volume 5 ; 5 ; >
+    au < ready ; exists ; 1993 ; Competitiveness Review: An International Business Journal Volume 3 ; 3 ; > #500 error 
+    au < ready ; exists ; 1994 ; Competitiveness Review: An International Business Journal Volume 4 ; 4 ; > #500 error 
+    au < ready ; exists ; 1995 ; Competitiveness Review: An International Business Journal Volume 5 ; 5 ; >
     au < notReady ; exists ; 1996 ; Competitiveness Review: An International Business Journal Volume 6 ; 6 ; >
-    au < notReady ; exists ; 1997 ; Competitiveness Review: An International Business Journal Volume 7 ; 7 ; >
-    au < notReady ; exists ; 1998 ; Competitiveness Review: An International Business Journal Volume 8 ; 8 ; >
+    au < ready ; exists ; 1997 ; Competitiveness Review: An International Business Journal Volume 7 ; 7 ; >
+    au < ready ; exists ; 1998 ; Competitiveness Review: An International Business Journal Volume 8 ; 8 ; >
     au < notReady ; exists ; 1999 ; Competitiveness Review: An International Business Journal Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2000 ; Competitiveness Review: An International Business Journal Volume 10 ; 10 ; >
     au < notReady ; exists ; 2001 ; Competitiveness Review: An International Business Journal Volume 11 ; 11 ; > #500 error on https://www.emerald.com/insight/content/doi/10.1108/CR-05-2020-0078/full/html
