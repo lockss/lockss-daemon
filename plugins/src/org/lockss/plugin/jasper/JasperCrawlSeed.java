@@ -1,7 +1,6 @@
 /*
 
-Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
-All rights reserved.
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -33,15 +32,9 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.jasper;
 
-import org.apache.commons.codec.net.URLCodec;
-import org.apache.commons.httpclient.HttpClient;
-import org.apache.commons.httpclient.methods.StringRequestEntity;
-import org.apache.commons.lang3.StringUtils;
 import org.lockss.crawler.BaseCrawlSeed;
 import org.lockss.daemon.*;
-import org.lockss.daemon.AuParamType.InvalidFormatException;
 import org.lockss.plugin.*;
-import org.lockss.plugin.UrlFetcher.FetchResult;
 import org.lockss.plugin.base.*;
 import org.lockss.state.AuState;
 import org.lockss.util.*;
@@ -50,14 +43,11 @@ import org.lockss.util.urlconn.*;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.net.URLEncoder;
-import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  * <p>
@@ -139,9 +129,7 @@ public class JasperCrawlSeed extends BaseCrawlSeed {
     AuState aus = AuUtil.getAuState(au);
     populateUrlList();
     if (fetchUrls.isEmpty() && !aus.hasCrawled()) {
-      // maybe a deepcrawl check ?
-      // facade.getCrawlerStatus().getRefetchDepth() > 2
-      throw new CacheException.UnexpectedNoRetryFailException("Found no start urls");
+      throw new CacheException.UnexpectedNoRetryFailException("Found no start urls, and AU has not crawled before.");
     }
     return fetchUrls;
   }
@@ -174,7 +162,7 @@ public class JasperCrawlSeed extends BaseCrawlSeed {
       facade.getCrawlerStatus().addPendingUrl(url);
 
       // Make request
-      UrlFetcher.FetchResult fr = null;
+      UrlFetcher.FetchResult fr;
       try {
         fr = uf.fetch();
       }
@@ -211,13 +199,12 @@ public class JasperCrawlSeed extends BaseCrawlSeed {
   }
 
   protected String makeApiUrl(int page) {
-    String url = String.format("%s%s",
+    return String.format("%s%s",
         API_URL,
         collection
     );
-    return url;
+  }
 
-  };
   protected UrlFetcher makeApiUrlFetcher(final JasperJsonLinkExtractor jjle,
                                          final String url) {
     // Make a URL fetcher
@@ -259,8 +246,8 @@ public class JasperCrawlSeed extends BaseCrawlSeed {
             finally {
               // Logging
               log.debug2(String.format("Step ending with %d URLs", urlsAndTimes.size()));
-              List allWarcs = getAllUrls(urlsAndTimes);
-              List toFetchWarcs = getOnlyNeedFetchedUrls(urlsAndTimes);
+              List<String> allWarcs = getAllUrls(urlsAndTimes);
+              List<String> toFetchWarcs = getOnlyNeedFetchedUrls(urlsAndTimes);
               log.debug2(String.format("Needing to fetch or refetch %d URLS", toFetchWarcs.size()));
               // Output accumulated URLs to start URL list
               if (toFetchWarcs != null) {
@@ -292,14 +279,20 @@ public class JasperCrawlSeed extends BaseCrawlSeed {
     StringBuilder sb = new StringBuilder();
     sb.append("<html>\n");
     try {
-      sb.append("<h1>" + au.getTdbAu().getName() + "</h1>");
+      sb.append("<h1>").append(au.getTdbAu().getName()).append("</h1>");
     } catch (NullPointerException npe) {
       log.debug2("could not get name from tdb au");
-      sb.append("<h1>" + au.getName() + "</h1>");
+      sb.append("<h1>").append(au.getName()).append("</h1>");
     }
     sb.append("<h3>Collected and preserved urls:</h3>");
     for (String u : urlList) {
-      sb.append("<a href=\"" + u + "\">" + u + "</a><br/>\n");
+      sb.append("<a href=\"/ViewContent?url=")
+          .append(URLEncoder.encode(u, Constants.ENCODING_UTF_8))
+          .append("&frame=content&auid=")
+          .append(URLEncoder.encode(au.getAuId(), Constants.ENCODING_UTF_8))
+          .append("\">")
+          .append(u)
+          .append("</a><br/>\n");
     }
     sb.append("</html>");
     CIProperties headers = new CIProperties();
