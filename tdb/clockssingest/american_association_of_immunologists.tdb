@@ -2,11 +2,12 @@
 
   publisher <
     name = American Association of Immunologists ;
-    info[back] = 2010 ;
+    info[back] = 2000 ;
     info[contract] = 2016 ;
     info[tester] = 8 ;
     info[poller] = 6
   >
+    #Moving SC in 2022
 
   {
   
@@ -230,8 +231,8 @@
         au < aai.ClockssAAIDrupalPlugin ; finished ; crawling ; 2020 ; The Journal of Immunology Volume 205 ; 205 ; https://www.jimmunol.org/ ; reingest2.clockss.org:8085 >
         au < aai.ClockssAAIDrupalPlugin ; crawling ; exists ; 2021 ; The Journal of Immunology Volume 206 ; 206 ; https://www.jimmunol.org/ ; >
         au < aai.ClockssAAIDrupalPlugin ; crawling ; exists ; 2021 ; The Journal of Immunology Volume 207 ; 207 ; https://www.jimmunol.org/ ; >
-        au < aai.ClockssAAIDrupalPlugin ; expected ; exists ; 2022 ; The Journal of Immunology Volume 208 ; 208 ; https://www.jimmunol.org/ ; >
-        au < aai.ClockssAAIDrupalPlugin ; expected ; exists ; 2022 ; The Journal of Immunology Volume 209 ; 209 ; https://www.jimmunol.org/ ; >
+        au < aai.ClockssAAIDrupalPlugin ; doNotProcess ; exists ; 2022 ; The Journal of Immunology Volume 208 ; 208 ; https://www.jimmunol.org/ ; >
+        au < aai.ClockssAAIDrupalPlugin ; doNotProcess ; exists ; 2022 ; The Journal of Immunology Volume 209 ; 209 ; https://www.jimmunol.org/ ; >
 
   }
 
@@ -252,7 +253,7 @@
         au < aai.ClockssAAIDrupalPlugin ; finished ; crawling ; 2019 ; ImmunoHorizons Volume 3 ; 3 ; https://www.immunohorizons.org/ ; reingest2.clockss.org:8085 >
         au < aai.ClockssAAIDrupalPlugin ; finished ; crawling ; 2020 ; ImmunoHorizons Volume 4 ; 4 ; https://www.immunohorizons.org/ ; reingest3.clockss.org:8083 >
         au < aai.ClockssAAIDrupalPlugin ; crawling ; exists ; 2021 ; ImmunoHorizons Volume 5 ; 5 ; https://www.immunohorizons.org/ ; >
-        au < aai.ClockssAAIDrupalPlugin ; manifest ; exists ; 2022 ; ImmunoHorizons Volume 6 ; 6 ; https://www.immunohorizons.org/ ; >
+        au < aai.ClockssAAIDrupalPlugin ; doNotProcess ; exists ; 2022 ; ImmunoHorizons Volume 6 ; 6 ; https://www.immunohorizons.org/ ; >
 
   }
 }
