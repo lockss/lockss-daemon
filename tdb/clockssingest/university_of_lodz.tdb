@@ -106,7 +106,7 @@
       au < finished ; manifest ; 2018 ; Convivium: Germanistisches Jahrbuch Polen Volume 2018 ; 2018 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Convivium: Germanistisches Jahrbuch Polen Volume 2019 ; 2019 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2020 ; Convivium: Germanistisches Jahrbuch Polen Volume 2020 ; 2020 ; reingest3.clockss.org:8083 >
-      au < testing ; exists ; 2021 ; Convivium: Germanistisches Jahrbuch Polen Volume 2021 ; 2021 ; >
+      au < ready ; exists ; 2021 ; Convivium: Germanistisches Jahrbuch Polen Volume 2021 ; 2021 ; >
       au < expected ; exists ; 2022 ; Convivium: Germanistisches Jahrbuch Polen Volume 2022 ; 2022 ; >
 
   }
@@ -166,7 +166,7 @@
       au < finished ; manifest ; 2018 ; Logopaedica Lodziensia Volume 2 ; 2 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Logopaedica Lodziensia Volume 3 ; 3 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2020 ; Logopaedica Lodziensia Volume 4 ; 4 ; reingest1.clockss.org:8082 >
-      au < testing ; exists ; 2021 ; Logopaedica Lodziensia Volume 5 ; 5 ; >
+      au < ready ; exists ; 2021 ; Logopaedica Lodziensia Volume 5 ; 5 ; >
       au < expected ; exists ; 2022 ; Logopaedica Lodziensia Volume 6 ; 6 ; >
 
   }
@@ -209,7 +209,7 @@
       au < finished ; manifest ; 2018 ; Research in Language Volume 16 ; 16 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Research in Language Volume 17 ; 17 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2020 ; Research in Language Volume 18 ; 18 ; reingest2.clockss.org:8085 >
-      au < testing ; exists ; 2021 ; Research in Language Volume 19 ; 19 ; >
+      au < ready ; exists ; 2021 ; Research in Language Volume 19 ; 19 ; >
       au < expected ; exists ; 2022 ; Research in Language Volume 20 ; 20 ; >
 
   }

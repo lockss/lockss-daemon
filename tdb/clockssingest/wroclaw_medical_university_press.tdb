@@ -44,7 +44,7 @@
 
     param[base_url] = https://advances.umw.edu.pl/
 
-    au < testing ; exists ; 2021 ; 2021 ; Advances in Clinical and Experimental Medicine Volume 30 ; 30 ; >
+    au < ready ; exists ; 2021 ; 2021 ; Advances in Clinical and Experimental Medicine Volume 30 ; 30 ; >
     au < manifest ; exists ; 2022 ; 2022 ; Advances in Clinical and Experimental Medicine Volume 31 ; 31 ; >
 
     }
@@ -80,7 +80,7 @@
     {
     param[base_url] = https://dmp.umw.edu.pl/
 
-    au < testing ; exists ; 2021 ; 2021 ; Dental and Medical Problems Volume 58 ; 58 ; >
+    au < ready ; exists ; 2021 ; 2021 ; Dental and Medical Problems Volume 58 ; 58 ; >
     au < manifest ; exists ; 2022 ; 2022 ; Dental and Medical Problems Volume 59 ; 59 ; >
 
     }
@@ -116,7 +116,7 @@
     {
     param[base_url] = https://polimery.umw.edu.pl/
 
-    au < testing ; exists ; 2021 ; 2021 ; Polymers in Medicine Volume 51 ; 51 ; >
+    au < ready ; exists ; 2021 ; 2021 ; Polymers in Medicine Volume 51 ; 51 ; >
     au < expected ; exists ; 2022 ; 2022 ; Polymers in Medicine Volume 52 ; 52 ; >
 
     }
