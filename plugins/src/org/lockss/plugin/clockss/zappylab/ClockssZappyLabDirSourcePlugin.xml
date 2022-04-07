@@ -40,18 +40,18 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Substance</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
     </map>
   </entry>
@@ -75,7 +75,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>au_substance_url_pattern</string>
     <list>
       <!--https://clockss-test.lockss.org/sourcefiles/protocols-released/2021/-->
-      <string>"^%s%s/.+\.pdf", base_url, directory</string>
+      <string>"^%s%s/.+\.pdf$", base_url, directory</string>
     </list>
   </entry>
   <entry>
