@@ -66,7 +66,7 @@ public class MigrationTask {
   ArchivalUnit au;
   TaskType type;
   Counters counters;
-  V2AuMover.AuStatus auStat;
+  AuStatus auStat;
   CountUpDownLatch countDownLatch;
   CountUpDownLatch waitLatch;
   BiConsumer completionAction;
@@ -130,7 +130,7 @@ public class MigrationTask {
     return this;
   }
 
-  public MigrationTask setAuStatus(V2AuMover.AuStatus stat) {
+  public MigrationTask setAuStatus(AuStatus stat) {
     this.auStat = stat;
     return this;
   }
@@ -158,7 +158,7 @@ public class MigrationTask {
     return counters;
   }
 
-  public V2AuMover.AuStatus getAuStatus() {
+  public AuStatus getAuStatus() {
     return auStat;
   }
 

@@ -30,7 +30,6 @@ package org.lockss.laaws;
 import static java.nio.file.StandardOpenOption.APPEND;
 import static java.nio.file.StandardOpenOption.CREATE;
 
-import org.apache.commons.lang3.time.StopWatch;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -234,8 +233,16 @@ public class V2AuMover {
   /** Flag to getCurrentStatus() to build status string on the fly. */
   private static final String STATUS_COPYING = "**Copying**";
 
-  public static final NumberFormat bigIntFmt = NumberFormat.getInstance();
-  private static final DecimalFormat percentFmt = new DecimalFormat("0");
+  public static final ThreadLocal<NumberFormat> TH_BIGINT_FMT =
+    new ThreadLocal<NumberFormat>() {
+      @Override protected NumberFormat initialValue() {
+        return NumberFormat.getInstance();
+      }};
+  public static final ThreadLocal<DecimalFormat> TH_PERCENT_FMT =
+    new ThreadLocal<DecimalFormat>() {
+      @Override protected DecimalFormat initialValue() {
+        return new DecimalFormat("0");
+      }};
 
   //////////////////////////////////////////////////////////////////////
   // Fields
@@ -596,7 +603,7 @@ public class V2AuMover {
    */
   protected void moveAu(ArchivalUnit au) {
     log.debug2("Starting " + au.getName() + " - " + auMoveQueue.size() + " AUs remaining.");
-    AuStatus auStat = new AuStatus(au);
+    AuStatus auStat = new AuStatus(this, au);
     auStat.getCounters().setParent(totalCounters);
     String auName = au.getName();
     log.debug("Handling request to move AU: " + auName);
@@ -960,7 +967,9 @@ public class V2AuMover {
     auStat.setLatch(Phase.COPY, latch);
     ArchivalUnit au = auStat.getAu();
     // Queue copies for all CUs in the v1 repo.
+    boolean hasContent = false;
     for (CachedUrl cu : au.getAuCachedUrlSet().getCuIterable()) {
+      hasContent = true;
       MigrationTask task = MigrationTask.copyCuVersions(this, au, cu)
         .setCounters(auStat.getCounters())
         .setAuStatus(auStat)
@@ -968,6 +977,7 @@ public class V2AuMover {
       latch.countUp();
       copyExecutor.execute(new TaskRunner(this, task));
     }
+    auStat.setHasV1Content(hasContent);
     latch.countDown();
   }
 
@@ -1437,8 +1447,8 @@ public class V2AuMover {
   private long totalAusSkipped = 0;
   // XXX s.b. incremented by tasks that get errors, isn't
   private long totalAusWithErrors = 0;
-  private Counters totalCounters = new Counters();
-  private OpTimers totalTimers = new OpTimers();
+  private OpTimers totalTimers = new OpTimers(this);
+  private Counters totalCounters = totalTimers.getCounters();
 
   private Map<String,AuStatus> activeAus = new LinkedHashMap<>();
   private Map<String,AuStatus> finishedAus = new LinkedHashMap<>();
@@ -1446,163 +1456,6 @@ public class V2AuMover {
   private final List<String> errorList = new ArrayList<>();
 
   private PrintWriter reportWriter;
-
-  /*
-   * Collection of counters and timers for either the whole request or
-   * a single AU.
-   */
-  public static class OpTimers {
-    protected Map<Phase,StopWatch> timerMap = new HashMap<>();
-    protected Counters ctrs = new Counters();
-
-    public void start(Phase phase) {
-      timerMap.put(phase, StopWatch.createStarted());
-    }
-
-    public void stop(Phase phase) {
-      if (!timerMap.containsKey(phase)) {
-        throw new IllegalStateException("No " + phase + " timer, can't stop");
-      }
-      timerMap.get(phase).stop();
-    }
-
-    public void suspend(Phase phase) {
-      if (!timerMap.containsKey(phase)) {
-        throw new IllegalStateException("No " + phase + " timer, can't suspend");
-      }
-      timerMap.get(phase).suspend();
-    }
-
-    public void resume(Phase phase) {
-      if (!timerMap.containsKey(phase)) {
-        throw new IllegalStateException("No " + phase + " timer, can't resume");
-      }
-      timerMap.get(phase).resume();
-    }
-
-    public boolean hasStarted(Phase phase) {
-      return timerMap.containsKey(phase) && getStartTime(phase) > 0;
-    }
-
-    public long getStartTime(Phase phase) {
-      if (!timerMap.containsKey(phase)) {
-        throw new IllegalStateException("No " + phase + " timer, can't get start time");
-      }
-      return timerMap.get(phase).getStartTime();
-    }
-
-    public long getStopTime(Phase phase) {
-      if (!timerMap.containsKey(phase)) {
-        throw new IllegalStateException("No " + phase + " timer, can't get stop time");
-      }
-      return timerMap.get(phase).getStopTime();
-    }
-
-    public long getElapsedTime(Phase phase) {
-      if (!timerMap.containsKey(phase)) {
-        throw new IllegalStateException("No " + phase + " timer, can't get elapsed time");
-      }
-      return timerMap.get(phase).getTime();
-    }
-  }
-
-  /** Counters and timers plus per-AU state */
-  public class AuStatus extends OpTimers {
-
-    ArchivalUnit au;
-    String auid;
-    String auname;
-    boolean isBulk;
-    Phase auPhase = Phase.START;
-    protected Map<Phase,CountUpDownLatch> latchMap = new HashMap<>();
-    boolean abortAu;
-
-    public AuStatus(ArchivalUnit au) {
-      super();
-      this.au = au;
-      auid = au.getAuId();
-      auname = au.getName();
-    }
-
-    public ArchivalUnit getAu() {
-      return au;
-    }
-
-    public String getAuName() {
-      return auname;
-    }
-
-    public String getAuId() {
-      return auid;
-    }
-
-    public Counters getCounters() {
-      return ctrs;
-    }
-
-    public boolean isBulk() {
-      return isBulk;
-    }
-
-    public AuStatus setIsBulk(boolean isBulk) {
-      this.isBulk = isBulk;
-      return this;
-    }
-
-    public Phase getPhase() {
-      return auPhase;
-    }
-
-    public AuStatus setPhase(Phase phase) {
-      auPhase = phase;
-      return this;
-    }
-
-    public void setLatch(Phase phase, CountUpDownLatch latch) {
-      latchMap.put(phase, latch);
-    }
-
-    public CountUpDownLatch getLatch(Phase phase) {
-      return latchMap.get(phase);
-    }
-
-    public void endPhase() {
-      exitPhase(this);
-    }
-
-    public List<String> getErrors() {
-      return ctrs.getErrors();
-    }
-
-    public int getErrorCount() {
-      return ctrs.getErrors().size();
-    }
-
-    public void addError(String msg) {
-      ctrs.addError(msg);
-    }
-
-    public void abortAu() {
-      abortAu = true;
-    }
-
-    public boolean isAbort() {
-      return abortAu || globalAbort;
-    }
-
-    public int hashCode() {
-      return 33 * auid.hashCode();
-    }
-
-    public boolean equals(Object obj) {
-      if (obj == null) { return false; }
-      if (obj == this) { return true; }
-      if (obj.getClass() != getClass()) {
-        return false;
-      }
-      return auid.equals(((AuStatus)obj).auid);
-    }
-  }
 
   /**
    * Return a string describing the current progress, or completion state.
@@ -1615,7 +1468,7 @@ public class V2AuMover {
       sb.append(" of ");
       sb.append(totalAusToMove);
       sb.append(" AUs, ");
-      addCounterStatus(sb, totalCounters, totalTimers, Phase.TOTAL);
+      totalTimers.addCounterStatus(sb, Phase.TOTAL);
       return sb.toString();
     }
     return currentStatus;
@@ -1657,124 +1510,42 @@ public class V2AuMover {
     StringBuilder sb = new StringBuilder();
     Phase phase = auStat.getPhase();
     String phaseName = phase.toString();
-    switch (auStat.getPhase()) {
-    case DONE:
-      break;
-    case COPY:
-    case VERIFY:
-      if (!auStat.hasStarted(phase)) {
-        phaseName = unGerund(phaseName) + " queued";
+    if (auStat.isAbort()) {
+      sb.append("Aborted: ");
+    } else {
+      switch (auStat.getPhase()) {
+      case DONE:
+        break;
+      case COPY:
+      case VERIFY:
+      case INDEX:
+        if (!auStat.hasStarted(phase)) {
+          phaseName = unGerund(phaseName) + " queued";
+        }
+        break;
       }
-      break;
-    }
-    if (!StringUtil.isNullString(phaseName)) {
-      sb.append(phaseName);
-      sb.append(": ");
+      if (!StringUtil.isNullString(phaseName)) {
+        sb.append(phaseName);
+        sb.append(": ");
+      }
     }
     sb.append(auStat.getAuName());
     switch (auStat.getPhase()) {
     case START:
       break;
+    case DONE:
+      if (!auStat.hasV1Content()) {
+        sb.append(": No content");
+        break;
+      }
     default:
-      addCounterStatus(sb, ctrs, auStat, Phase.COPY, ": ");
+      auStat.addCounterStatus(sb, Phase.COPY, ": ");
     }
     return sb.toString();
   }
 
   String unGerund(String gerund) {
     return gerund.replaceAll("ing", "");
-  }
-
-  private void addCounterStatus(StringBuilder sb, Counters ctrs,
-                                OpTimers auStat, Phase phase) {
-    addCounterStatus(sb, ctrs, auStat, phase, null);
-  }
-
-  private void addCounterStatus(StringBuilder sb, Counters ctrs,
-                                OpTimers auStat, Phase phase,
-                                String separator) {
-    // No stats if not started yet
-    if (!auStat.hasStarted(phase)) {
-      return;
-    }
-    if (separator != null) {
-      sb.append(separator);
-    }
-    sb.append(StringUtil.bigNumberOfUnits(ctrs.getVal(CounterType.URLS_MOVED),
-                                          "URL"));
-    if (ctrs.isNonZero(CounterType.URLS_SKIPPED)) {
-      sb.append(" (");
-      sb.append(bigIntFmt.format(ctrs.getVal(CounterType.URLS_SKIPPED)));
-      sb.append(" skipped)");
-    }
-    sb.append(", ");
-    sb.append(StringUtil.bigNumberOfUnits(ctrs.getVal(CounterType.ARTIFACTS_MOVED),
-                                          "version"));
-    if (ctrs.isNonZero(CounterType.ARTIFACTS_SKIPPED)) {
-      sb.append(" (");
-      sb.append(bigIntFmt.format(ctrs.getVal(CounterType.ARTIFACTS_SKIPPED)));
-      sb.append(" skipped)");
-    }
-    sb.append(", ");
-    sb.append(StringUtil.bigNumberOfUnits(ctrs.getVal(CounterType.BYTES_MOVED),
-                                          "byte"));
-    sb.append(", in ");
-    sb.append(StringUtil.timeIntervalToString(auStat.getElapsedTime(phase)));
-    if (ctrs.getVal(CounterType.BYTES_MOVED) > 0) {
-      sb.append(", at ");
-      sb.append(StringUtil.byteRateToString(ctrs.getVal(CounterType.BYTES_MOVED),
-                                            auStat.getElapsedTime(phase)));
-
-    }
-    if (isDetailedStats &&
-        (ctrs.getVal(CounterType.COPY_TIME) > 0 ||
-         ctrs.getVal(CounterType.VERIFY_TIME) > 0)) {
-      double c = ctrs.getVal(CounterType.COPY_TIME);
-      double v = ctrs.getVal(CounterType.VERIFY_TIME);
-      double s = ctrs.getVal(CounterType.STATE_TIME);
-      double t = c + v + s;
-      double cp = Math.round(100*c/t);
-      double vp = Math.round(100*v/t);
-      double sp = Math.round(100*s/t);
-      if (log.isDebug3()) {
-        log.debug3("c: " + c + ", v: " + v + ", s: " + s + ", t: " + t +
-                   ", cp: " + cp + ", vp: " + vp + ", sp: " + sp);
-      }
-      sb.append(" (");
-      appendPhaseStats(sb, ctrs, auStat, phase, cp, CounterType.BYTES_MOVED, " copy");
-      if (vp != 0.0) {
-        if (cp != 0.0) {
-          sb.append(", ");
-        }
-        appendPhaseStats(sb, ctrs, auStat, phase, vp, CounterType.BYTES_VERIFIED, " verify");
-      }
-      if (sp != 0.0) {
-        if (cp + vp != 0.0) {
-          sb.append(", ");
-        }
-        sb.append(percentFmt.format(sp));
-        sb.append("% state");
-      }
-      sb.append(")");
-    }
-  }
-
-  void appendPhaseStats(StringBuilder sb, Counters ctrs,
-                        OpTimers auStat, Phase phase,
-                        double percent, CounterType ct, String name) {
-    if (percent != 0.0) {
-      sb.append(percentFmt.format(percent));
-      sb.append("%");
-      sb.append(name);
-      if (ctrs.getVal(ct) > 0) {
-        long ms = (long)(auStat.getElapsedTime(phase) * (percent / 100.0));
-        if (ms > 0) {
-          sb.append(" (");
-          sb.append(StringUtil.byteRateToString(ctrs.getVal(ct), ms));
-          sb.append(")");
-        }
-      }
-    }
   }
 
   public boolean isRunning() {
@@ -1867,8 +1638,7 @@ public class V2AuMover {
                 new Throwable());
       return;
     }
-    AuStatus austat = getAuStatus(au);
-    if (austat == null) {
+    if (auStat == null) {
       log.error("updateReport called with AU that's not running: " +
                 au.getName(),
                 new Throwable());
@@ -1877,14 +1647,16 @@ public class V2AuMover {
       return;
     }
     StringBuilder sb = new StringBuilder();
-    addCounterStatus(sb, austat.getCounters(), austat, Phase.COPY);
-    sb.append(", ");
-    sb.append(StringUtil.bigNumberOfUnits(auStat.getErrorCount(), "error"));
+    auStat.addCounterStatus(sb, Phase.COPY);
+    if (auStat.getErrorCount() > 0) {
+      sb.append(", ");
+      sb.append(StringUtil.bigNumberOfUnits(auStat.getErrorCount(), "error"));
+    }
     String auData = sb.toString();
     reportWriter.println("AU Name: " + auStat.getAuName());
     reportWriter.println("AU ID: " + auStat.getAuId());
     if (auStat.isAbort()) {
-      reportWriter.println("Move terminated with error.");
+      reportWriter.print("Aborted after ");
     }
     reportWriter.println(auData);
 //       else {
@@ -1922,19 +1694,19 @@ public class V2AuMover {
     if (totalAusPartiallyMoved > 0 || totalAusSkipped > 0) {
       sb.append(" (");
       if (totalAusSkipped > 0) {
-        sb.append(bigIntFmt.format(totalAusSkipped));
+        sb.append(bigIntFormat(totalAusSkipped));
         sb.append(" previously");
         if (totalAusPartiallyMoved > 0) {
           sb.append(", ");
         }
       }
       if (totalAusPartiallyMoved > 0) {
-        sb.append(bigIntFmt.format(totalAusPartiallyMoved));
+        sb.append(bigIntFormat(totalAusPartiallyMoved));
         sb.append(" partially");
       }
       sb.append(")");
     }
-    addCounterStatus(sb, totalCounters, totalTimers, Phase.TOTAL, ": ");
+    totalTimers.addCounterStatus(sb, Phase.TOTAL, ": ");
     String summary = sb.toString();
     running = false;
     currentStatus = summary;
@@ -1954,6 +1726,14 @@ public class V2AuMover {
   //////////////////////////////////////////////////////////////////////
   // Utilities
   //////////////////////////////////////////////////////////////////////
+
+  public static String bigIntFormat(long x) {
+    return TH_BIGINT_FMT.get().format(x);
+  }
+
+  public static String percentFormat(double x) {
+    return TH_PERCENT_FMT.get().format(x);
+  }
 
   long now() {
     return System.currentTimeMillis();

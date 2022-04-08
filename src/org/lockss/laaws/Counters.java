@@ -28,9 +28,15 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.laaws;
 import java.util.*;
+import org.lockss.util.*;
+import org.lockss.laaws.V2AuMover.Phase;
 
+/** Collection of named counters.  If has a parent Counters, they are
+ * incremented also.  Thread safe. */
 public class Counters {
+  private static final Logger log = Logger.getLogger(V2AuMover.class);
 
+  /** Counter types */
   public enum CounterType {
     URLS_MOVED,
     URLS_SKIPPED,
@@ -48,7 +54,6 @@ public class Counters {
   }
 
   Map<CounterType,Counter> counters = new HashMap<>();
-  private long errorCount = 0;
   private List<String> errors = new ArrayList<>();
   private Counters parent;
 
@@ -105,6 +110,34 @@ public class Counters {
       get(type).add(ctrs.get(type));
     }
     errors.addAll(ctrs.errors);
+  }
+
+  /** Individual counter */
+  static class Counter {
+    private long val = 0;
+
+    public Counter() {
+    }
+
+    public synchronized void incr() {
+      val++;
+    }
+
+    public synchronized void add(long incr) {
+      val += incr;
+    }
+
+    public synchronized void add(Counter ctr) {
+      val += ctr.getVal();
+    }
+
+    public synchronized void setVal(long val) {
+      this.val = val;
+    }
+
+    public synchronized long getVal() {
+      return val;
+    }
   }
 }
 
