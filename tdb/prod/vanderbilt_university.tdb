@@ -43,7 +43,7 @@
 
     {
       plugin = org.lockss.plugin.ojs3.Ojs3Plugin
-      param[base_url] = http://ejournals.library.vanderbilt.edu/
+      param[base_url] = https://ejournals.library.vanderbilt.edu/
       attr[start_stem] = index.php/
       param[journal_id] = ameriquests
 
