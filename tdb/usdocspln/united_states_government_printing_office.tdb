@@ -29,8 +29,8 @@
     param[collection_id] = GOVPUB
 
     au < released ; 2019 ; Account of the Receipts and Expenditures of the United States 2019 ; 2019 ; https://www.govinfo.gov/ >
-    au < manifest ; 2020 ; Account of the Receipts and Expenditures of the United States 2020 ; 2020 ; https://www.govinfo.gov/ >
-    au < manifest ; 2021 ; Account of the Receipts and Expenditures of the United States 2021 ; 2021 ; https://www.govinfo.gov/ >
+    au < ready ; 2020 ; Account of the Receipts and Expenditures of the United States 2020 ; 2020 ; https://www.govinfo.gov/ >
+    au < ready ; 2021 ; Account of the Receipts and Expenditures of the United States 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < manifest ; 2022 ; Account of the Receipts and Expenditures of the United States 2022 ; 2022 ; https://www.govinfo.gov/ >
     au < exists ; 2029 ; Account of the Receipts and Expenditures of the United States 2029 ; 2029 ; https://www.govinfo.gov/ > #empty
     au < exists ; 2101 ; Account of the Receipts and Expenditures of the United States 2101 ; 2101 ; https://www.govinfo.gov/ > #empty
@@ -121,7 +121,7 @@
     au < doNotProcess ; 1941 ; Additional Government Publications 1941 ; 1941 ; https://www.govinfo.gov/ >
     au < released ; 2019 ; Additional Government Publications 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < ready ; 2020 ; Additional Government Publications 2020 ; 2020 ; https://www.govinfo.gov/ >
-    au < manifest ; 2021 ; Additional Government Publications 2021 ; 2021 ; https://www.govinfo.gov/ >
+    au < ready ; 2021 ; Additional Government Publications 2021 ; 2021 ; https://www.govinfo.gov/ >
 
   }
 
@@ -136,7 +136,7 @@
 
     au < released ; 2019 ; Budget of the United States Government 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < manifest ; 2020 ; Budget of the United States Government 2020 ; 2020 ; https://www.govinfo.gov/ >
-    au < manifest ; 2021 ; Budget of the United States Government 2021 ; 2021 ; https://www.govinfo.gov/ >
+    au < ready ; 2021 ; Budget of the United States Government 2021 ; 2021 ; https://www.govinfo.gov/ >
 
 
   }
@@ -881,7 +881,7 @@
     au < ready ; 1818 ; U.S. Congressional Serial Set 1818 ; 1818 ; https://www.govinfo.gov/ >
     au < ready ; 1819 ; U.S. Congressional Serial Set 1819 ; 1819 ; https://www.govinfo.gov/ >
     au < ready ; 1820 ; U.S. Congressional Serial Set 1820 ; 1820 ; https://www.govinfo.gov/ >
-    au < manifest ; 1821 ; U.S. Congressional Serial Set 1821 ; 1821 ; https://www.govinfo.gov/ >
+    au < ready ; 1821 ; U.S. Congressional Serial Set 1821 ; 1821 ; https://www.govinfo.gov/ >
     au < ready ; 1822 ; U.S. Congressional Serial Set 1822 ; 1822 ; https://www.govinfo.gov/ >
     au < ready ; 1823 ; U.S. Congressional Serial Set 1823 ; 1823 ; https://www.govinfo.gov/ >
     au < ready ; 1824 ; U.S. Congressional Serial Set 1824 ; 1824 ; https://www.govinfo.gov/ >
