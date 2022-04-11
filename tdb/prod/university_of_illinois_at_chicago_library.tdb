@@ -124,7 +124,7 @@
       au < manifest ; 2019 ; Dialogue & Discourse Volume 10 ; 10 ; 2019 ; https://journals.uic.edu/ojs/ >
       au < manifest ; 2020 ; Dialogue & Discourse Volume 11 ; 11 ; 2020 ; https://journals.uic.edu/ojs/ >
       au < manifest ; 2021 ; Dialogue & Discourse Volume 12 ; 12 ; 2021 ; https://journals.uic.edu/ojs/ >
-      au < expected ; 2022 ; Dialogue & Discourse Volume 13 ; 13 ; 2022 ; https://journals.uic.edu/ojs/ >
+      au < manifest ; 2022 ; Dialogue & Discourse Volume 13 ; 13 ; 2022 ; https://journals.uic.edu/ojs/ >
     }
   }
 
@@ -274,14 +274,14 @@
       param[journal_id] = eppendix
       attr[start_stem] = index.php/
     
-      au < exists ; 2010 ; E-PPENDIX Volume 1 ; 1 ; 2010 ; https://journals.uic.edu/ojs/ >
-      au < exists ; 2011 ; E-PPENDIX Volume 2 ; 2 ; 2011 ; https://journals.uic.edu/ojs/ >
-      au < exists ; 2012 ; E-PPENDIX Volume 3 ; 3 ; 2012 ; https://journals.uic.edu/ojs/ >
-      au < exists ; 2013 ; E-PPENDIX Volume 4 ; 4 ; 2013 ; https://journals.uic.edu/ojs/ >
-      au < exists ; 2014 ; E-PPENDIX Volume 5 ; 5 ; 2014 ; https://journals.uic.edu/ojs/ >
-      au < exists ; 2015 ; E-PPENDIX Volume 6 ; 6 ; 2015 ; https://journals.uic.edu/ojs/ >
-      au < exists ; 2016 ; E-PPENDIX Volume 7 ; 7 ; 2016 ; https://journals.uic.edu/ojs/ >
-      au < exists ; 2017 ; E-PPENDIX Volume 8 ; 8 ; 2017 ; https://journals.uic.edu/ojs/ >
+      au < manifest ; 2010 ; E-PPENDIX Volume 1 ; 1 ; 2010 ; https://journals.uic.edu/ojs/ >
+      au < manifest ; 2011 ; E-PPENDIX Volume 2 ; 2 ; 2011 ; https://journals.uic.edu/ojs/ >
+      au < manifest ; 2012 ; E-PPENDIX Volume 3 ; 3 ; 2012 ; https://journals.uic.edu/ojs/ >
+      au < manifest ; 2013 ; E-PPENDIX Volume 4 ; 4 ; 2013 ; https://journals.uic.edu/ojs/ >
+      au < manifest ; 2014 ; E-PPENDIX Volume 5 ; 5 ; 2014 ; https://journals.uic.edu/ojs/ >
+      au < manifest ; 2015 ; E-PPENDIX Volume 6 ; 6 ; 2015 ; https://journals.uic.edu/ojs/ >
+      au < manifest ; 2016 ; E-PPENDIX Volume 7 ; 7 ; 2016 ; https://journals.uic.edu/ojs/ >
+      au < manifest ; 2017 ; E-PPENDIX Volume 8 ; 8 ; 2017 ; https://journals.uic.edu/ojs/ >
     }
   }
 
@@ -298,8 +298,8 @@
       param[journal_id] = IURJ
       attr[start_stem] = index.php/
     
-      au < exists ; 2015 ; Interdisciplinary Undergraduate Research Journal Volume 1 ; 1 ; 2015 ; https://journals.uic.edu/ojs/ >
-      au < exists ; 2016 ; Interdisciplinary Undergraduate Research Journal Volume 2 ; 2 ; 2016 ; https://journals.uic.edu/ojs/ >
+      au < manifest ; 2015 ; Interdisciplinary Undergraduate Research Journal Volume 1 ; 1 ; 2015 ; https://journals.uic.edu/ojs/ >
+      au < manifest ; 2016 ; Interdisciplinary Undergraduate Research Journal Volume 2 ; 2 ; 2016 ; https://journals.uic.edu/ojs/ >
     }
   }
 
