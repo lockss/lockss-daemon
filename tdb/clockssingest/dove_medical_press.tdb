@@ -357,7 +357,7 @@
     au < finished ; crawling ; 2018 ; Patient Preference and Adherence Volume 12 ; 12 ; 2018 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; Patient Preference and Adherence Volume 13 ; 13 ; 2019 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Patient Preference and Adherence Volume 14 ; 14 ; 2020 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2021 ; Patient Preference and Adherence Volume 15 ; 15 ; 2021 ; >
+    au < frozen ; exists ; 2021 ; Patient Preference and Adherence Volume 15 ; 15 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Patient Preference and Adherence Volume 16 ; 16 ; 2022 ; >
 
   }
@@ -1117,7 +1117,7 @@
     au < finished ; crawling ; 2018 ; Open Access Journal of Clinical Trials Volume 10 ; 10 ; 2018 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; Open Access Journal of Clinical Trials Volume 11 ; 11 ; 2019 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Open Access Journal of Clinical Trials Volume 12 ; 12 ; 2020 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2021 ; Open Access Journal of Clinical Trials Volume 13 ; 13 ; 2021 ; >
+    au < frozen ; exists ; 2021 ; Open Access Journal of Clinical Trials Volume 13 ; 13 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Open Access Journal of Clinical Trials Volume 14 ; 14 ; 2022 ; >
 
   }
@@ -1170,7 +1170,7 @@
     au < finished ; crawling ; 2018 ; Psychology Research and Behavior Management Volume 11 ; 11 ; 2018 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; Psychology Research and Behavior Management Volume 12 ; 12 ; 2019 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Psychology Research and Behavior Management Volume 13 ; 13 ; 2020 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2021 ; Psychology Research and Behavior Management Volume 14 ; 14 ; 2021 ; >
+    au < frozen ; exists ; 2021 ; Psychology Research and Behavior Management Volume 14 ; 14 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Psychology Research and Behavior Management Volume 15 ; 15 ; 2022 ; >
 
   }
@@ -1196,7 +1196,7 @@
     au < finished ; crawling ; 2018 ; Clinical, Cosmetic and Investigational Dentistry Volume 10 ; 10 ; 2018 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; Clinical, Cosmetic and Investigational Dentistry Volume 11 ; 11 ; 2019 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Clinical, Cosmetic and Investigational Dentistry Volume 12 ; 12 ; 2020 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2021 ; Clinical, Cosmetic and Investigational Dentistry Volume 13 ; 13 ; 2021 ; >
+    au < frozen ; exists ; 2021 ; Clinical, Cosmetic and Investigational Dentistry Volume 13 ; 13 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Clinical, Cosmetic and Investigational Dentistry Volume 14 ; 14 ; 2022 ; >
 
   }
@@ -1249,7 +1249,7 @@
     au < finished ; crawling ; 2018 ; Risk Management and Healthcare Policy Volume 11 ; 11 ; 2018 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; Risk Management and Healthcare Policy Volume 12 ; 12 ; 2019 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2020 ; Risk Management and Healthcare Policy Volume 13 ; 13 ; 2020 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2021 ; Risk Management and Healthcare Policy Volume 14 ; 14 ; 2021 ; >
+    au < frozen ; exists ; 2021 ; Risk Management and Healthcare Policy Volume 14 ; 14 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Risk Management and Healthcare Policy Volume 15 ; 15 ; 2022 ; >
 
   }
@@ -1275,7 +1275,7 @@
     au < finished ; crawling ; 2018 ; Transplant Research and Risk Management Volume 10 ; 10 ; 2018 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; Transplant Research and Risk Management Volume 11 ; 11 ; 2019 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2020 ; Transplant Research and Risk Management Volume 12 ; 12 ; 2020 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2021 ; Transplant Research and Risk Management Volume 13 ; 13 ; 2021 ; >
+    au < frozen ; exists ; 2021 ; Transplant Research and Risk Management Volume 13 ; 13 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Transplant Research and Risk Management Volume 14 ; 14 ; 2022 ; >
 
   }
@@ -1322,7 +1322,7 @@
     au < finished ; crawling ; 2018 ; Open Access Rheumatology: Research and Reviews Volume 10 ; 10 ; 2018 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; Open Access Rheumatology: Research and Reviews Volume 11 ; 11 ; 2019 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2020 ; Open Access Rheumatology: Research and Reviews Volume 12 ; 12 ; 2020 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2021 ; Open Access Rheumatology: Research and Reviews Volume 13 ; 13 ; 2021 ; >
+    au < frozen ; exists ; 2021 ; Open Access Rheumatology: Research and Reviews Volume 13 ; 13 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Open Access Rheumatology: Research and Reviews Volume 14 ; 14 ; 2022 ; >
 
   }
@@ -1370,7 +1370,7 @@
     au < finished ; crawling ; 2018 ; Hepatic Medicine: Evidence and Research Volume 10 ; 10 ; 2018 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; Hepatic Medicine: Evidence and Research Volume 11 ; 11 ; 2019 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2020 ; Hepatic Medicine: Evidence and Research Volume 12 ; 12 ; 2020 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2021 ; Hepatic Medicine: Evidence and Research Volume 13 ; 13 ; 2021 ; >
+    au < frozen ; exists ; 2021 ; Hepatic Medicine: Evidence and Research Volume 13 ; 13 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Hepatic Medicine: Evidence and Research Volume 14 ; 14 ; 2022 ; >
 
   }
@@ -1410,7 +1410,7 @@
     au < finished ; crawling ; 2018 ; Open Access Journal of Sports Medicine Volume 9 ; 9 ; 2018 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; Open Access Journal of Sports Medicine Volume 10 ; 10 ; 2019 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2020 ; Open Access Journal of Sports Medicine Volume 11 ; 11 ; 2020 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2021 ; Open Access Journal of Sports Medicine Volume 12 ; 12 ; 2021 ; >
+    au < frozen ; exists ; 2021 ; Open Access Journal of Sports Medicine Volume 12 ; 12 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Open Access Journal of Sports Medicine Volume 13 ; 13 ; 2022 ; >
 
   }
@@ -1436,7 +1436,7 @@
     au < finished ; crawling ; 2018 ; Clinical Pharmacology: Advances and Applications Volume 10 ; 10 ; 2018 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; Clinical Pharmacology: Advances and Applications Volume 11 ; 11 ; 2019 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Clinical Pharmacology: Advances and Applications Volume 12 ; 12 ; 2020 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2021 ; Clinical Pharmacology: Advances and Applications Volume 13 ; 13 ; 2021 ; >
+    au < frozen ; exists ; 2021 ; Clinical Pharmacology: Advances and Applications Volume 13 ; 13 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Clinical Pharmacology: Advances and Applications Volume 14 ; 14 ; 2022 ; >
 
   }
@@ -1462,7 +1462,7 @@
     au < finished ; crawling ; 2018 ; Journal of Experimental Pharmacology Volume 10 ; 10 ; 2018 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; Journal of Experimental Pharmacology Volume 11 ; 11 ; 2019 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Journal of Experimental Pharmacology Volume 12 ; 12 ; 2020 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2021 ; Journal of Experimental Pharmacology Volume 13 ; 13 ; 2021 ; >
+    au < frozen ; exists ; 2021 ; Journal of Experimental Pharmacology Volume 13 ; 13 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Journal of Experimental Pharmacology Volume 14 ; 14 ; 2022 ; >
 
   }
@@ -1488,7 +1488,7 @@
     au < finished ; crawling ; 2018 ; HIV/AIDS - Research and Palliative Care Volume 10 ; 10 ; 2018 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; HIV/AIDS - Research and Palliative Care Volume 11 ; 11 ; 2019 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; HIV/AIDS - Research and Palliative Care Volume 12 ; 12 ; 2020 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2021 ; HIV/AIDS - Research and Palliative Care Volume 13 ; 13 ; 2021 ; >
+    au < frozen ; exists ; 2021 ; HIV/AIDS - Research and Palliative Care Volume 13 ; 13 ; 2021 ; >
     au < manifest ; exists ; 2022 ; HIV/AIDS - Research and Palliative Care Volume 14 ; 14 ; 2022 ; >
 
   }
@@ -1514,7 +1514,7 @@
     au < finished ; crawling ; 2018 ; Breast Cancer: Targets and Therapy Volume 10 ; 10 ; 2018 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; Breast Cancer: Targets and Therapy Volume 11 ; 11 ; 2019 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2020 ; Breast Cancer: Targets and Therapy Volume 12 ; 12 ; 2020 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2021 ; Breast Cancer: Targets and Therapy Volume 13 ; 13 ; 2021 ; >
+    au < frozen ; exists ; 2021 ; Breast Cancer: Targets and Therapy Volume 13 ; 13 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Breast Cancer: Targets and Therapy Volume 14 ; 14 ; 2022 ; >
 
   }
@@ -1540,7 +1540,7 @@
     au < finished ; crawling ; 2018 ; Nutrition and Dietary Supplements Volume 10 ; 10 ; 2018 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; Nutrition and Dietary Supplements Volume 11 ; 11 ; 2019 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Nutrition and Dietary Supplements Volume 12 ; 12 ; 2020 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2021 ; Nutrition and Dietary Supplements Volume 13 ; 13 ; 2021 ; >
+    au < frozen ; exists ; 2021 ; Nutrition and Dietary Supplements Volume 13 ; 13 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Nutrition and Dietary Supplements Volume 14 ; 14 ; 2022 ; >
 
   }
@@ -2029,7 +2029,7 @@
     au < finished ; crawling ; 2018 ; Research and Reports in Tropical Medicine Volume 9 ; 9 ; 2018 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; Research and Reports in Tropical Medicine Volume 10 ; 10 ; 2019 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Research and Reports in Tropical Medicine Volume 11 ; 11 ; 2020 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2021 ; Research and Reports in Tropical Medicine Volume 12 ; 12 ; 2021 ; >
+    au < frozen ; exists ; 2021 ; Research and Reports in Tropical Medicine Volume 12 ; 12 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Research and Reports in Tropical Medicine Volume 13 ; 13 ; 2022 ; >
 
   }
@@ -2865,7 +2865,7 @@
     au < finished ; crawling ; 2018 ; Oncolytic Virotherapy Volume 7 ; 7 ; 2018 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; Oncolytic Virotherapy Volume 8 ; 8 ; 2019 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2020 ; Oncolytic Virotherapy Volume 9 ; 9 ; 2020 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2021 ; Oncolytic Virotherapy Volume 10 ; 10 ; 2021 ; >
+    au < frozen ; exists ; 2021 ; Oncolytic Virotherapy Volume 10 ; 10 ; 2021 ; >
     au < expected ; exists ; 2022 ; Oncolytic Virotherapy Volume 11 ; 11 ; 2022 ; >
 
   }
