@@ -75,17 +75,14 @@ public class ChineseUniversityHongKongSourceXmlMetadataExtractorFactory extends 
     	log.debug3("setting publication type in postcook process");
         StringBuilder titleVal = new StringBuilder();
 
-        if (thisAM.getRaw(ChineseUniversityHongKongSourceXmlSchemaHelper.article_title) != null) {
-            log.debug3("get article title");
-          titleVal.append(thisAM.getRaw(ChineseUniversityHongKongSourceXmlSchemaHelper.article_title));
-        } else if (thisAM.getRaw(ChineseUniversityHongKongSourceXmlSchemaHelper.article_subtitle) != null){
-            log.debug3("get article subtitle");
-          titleVal.append(TITLE_SEPARATOR);
-          titleVal.append(thisAM.getRaw(ChineseUniversityHongKongSourceXmlSchemaHelper.article_subtitle));
+        String page = thisAM.getRaw(ChineseUniversityHongKongSourceXmlSchemaHelper.start_page);
+        if (page != null) {
+            log.debug3("get article page: " + page);
+            thisAM.put(MetadataField.FIELD_START_PAGE,page.substring(0, page.indexOf("-")));
+            thisAM.put(MetadataField.FIELD_END_PAGE,page.substring(page.indexOf("-") + 1));
+
         }
 
-
-        thisAM.put(MetadataField.FIELD_PUBLICATION_TITLE,titleVal.toString());
     	thisAM.put(MetadataField.FIELD_PUBLICATION_TYPE,MetadataField.PUBLICATION_TYPE_JOURNAL);
     	thisAM.put(MetadataField.FIELD_ARTICLE_TYPE,MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
     }

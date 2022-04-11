@@ -136,14 +136,14 @@ implements SourceXmlSchemaHelper {
     }
   };
 
-
-
-  protected static final String article_title = "/mods/relatedItem[@type=\"host\"]/titleInfo/title";
-  protected static final String article_subtitle = "/mods/relatedItem[@type=\"host\"]/titleInfo/subTitle";
+  protected static final String article_title = "/mods/titleInfo/title";
+  protected static final String journal_subtitle = "/mods/relatedItem[@type=\"host\"]/titleInfo/subTitle";
+  protected static final String journal_title = "/mods/relatedItem[@type=\"host\"]/titleInfo/title";
+  protected static final String author = "/mods/name[@type = \"personal\"]/namePart";
   private static final String publisher = "/mods/originInfo/publisher";
   private static final String art_pubdate = "/mods/originInfo/dateCreated";
-  private static final String article_id = "/mods/identifier";
-  private static final String issue = "/mods/relatedItem[@type=\"host\"]/part/detail[@type=\"issue\"]/number";
+  private static final String issue = "/mods/relatedItem[@type = \"host\"]/part/detail[@type = \"issue\"]/number";
+  protected static final String start_page = "/mods/relatedItem[@type = \"host\"]/part/extent[@unit = \"pages\"]/start";
 
   static private final Map<String,XPathValue>     
   articleMap = new HashMap<String,XPathValue>();
@@ -152,10 +152,11 @@ implements SourceXmlSchemaHelper {
     articleMap.put(art_pubdate, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(publisher, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(article_title, XmlDomMetadataExtractor.TEXT_VALUE);
-    articleMap.put(article_subtitle, XmlDomMetadataExtractor.TEXT_VALUE);
+    articleMap.put(journal_title, XmlDomMetadataExtractor.TEXT_VALUE);
+    articleMap.put(journal_subtitle, XmlDomMetadataExtractor.TEXT_VALUE);
+    articleMap.put(author, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(issue, XmlDomMetadataExtractor.TEXT_VALUE);
-    //articleMap.put(article_id, ARTICLE_ID);
-    //articleMap.put(article_id, XmlDomMetadataExtractor.TEXT_VALUE);
+    articleMap.put(start_page, XmlDomMetadataExtractor.TEXT_VALUE);
   }
 
   static private final Map<String,XPathValue>     
@@ -163,6 +164,9 @@ implements SourceXmlSchemaHelper {
 
   protected static final MultiValueMap cookMap = new MultiValueMap();
   static {
+    cookMap.put(article_title, MetadataField.FIELD_ARTICLE_TITLE);
+    cookMap.put(journal_title, MetadataField.FIELD_PUBLICATION_TITLE);
+    cookMap.put(author, MetadataField.FIELD_AUTHOR);
     cookMap.put(art_pubdate, MetadataField.FIELD_DATE);
     cookMap.put(publisher, MetadataField.FIELD_PUBLISHER);
     cookMap.put(issue, MetadataField.FIELD_ISSUE);
