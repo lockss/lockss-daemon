@@ -95,7 +95,7 @@
     au < finished ; crawling ; 2019 ; Breast Cancer Management Volume 8 ; 8 ; https://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; Breast Cancer Management Volume 9 ; 9 ; https://www.futuremedicine.com/ ; >
     au < crawling ; exists ; 2021 ; Breast Cancer Management Volume 10 ; 10 ; https://www.futuremedicine.com/ ; >
-    au < expected ; exists ; 2022 ; Breast Cancer Management Volume 11 ; 11 ; https://www.futuremedicine.com/ ; >
+    au < manifest ; exists ; 2022 ; Breast Cancer Management Volume 11 ; 11 ; https://www.futuremedicine.com/ ; >
 
   }
 
@@ -172,7 +172,7 @@
     au < finished ; crawling ; 2019 ; CNS Oncology Volume 8 ; 8 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; CNS Oncology Volume 9 ; 9 ; https://www.futuremedicine.com/ ; >
     au < crawling ; exists ; 2021 ; CNS Oncology Volume 10 ; 10 ; https://www.futuremedicine.com/ ; >
-    au < expected ; exists ; 2022 ; CNS Oncology Volume 11 ; 11 ; https://www.futuremedicine.com/ ; >
+    au < manifest ; exists ; 2022 ; CNS Oncology Volume 11 ; 11 ; https://www.futuremedicine.com/ ; >
 
   }
 
