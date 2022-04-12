@@ -513,7 +513,7 @@
 
     param[journal_issn] = 2349-2422
 
-    au < manifest ; 2017 ; AYUHOM Volume 4 ; 2017 ; 4 ; https://www.ayuhom.com/ >
+    au < notReady ; 2017 ; AYUHOM Volume 4 ; 2017 ; 4 ; https://www.ayuhom.com/ > #500 error
     au < released ; 2018 ; AYUHOM Volume 5 ; 2018 ; 5 ; https://www.ayuhom.com/ >
     au < released ; 2019 ; AYUHOM Volume 6 ; 2019 ; 6 ; https://www.ayuhom.com/ >
     au < released ; 2020 ; AYUHOM Volume 7 ; 2020 ; 7 ; https://www.ayuhom.com/ >
@@ -758,7 +758,7 @@
     au < released ; 2017 ; Indian Dermatology Online Journal Volume 8 ; 2017 ; 8 ; http://www.idoj.in/ >
     au < released ; 2018 ; Indian Dermatology Online Journal Volume 9 ; 2018 ; 9 ; http://www.idoj.in/ >
     au < released ; 2019 ; Indian Dermatology Online Journal Volume 10 ; 2019 ; 10 ; https://www.idoj.in/ >
-    au < manifest ; 2020 ; Indian Dermatology Online Journal Volume 11 ; 2020 ; 11 ; https://www.idoj.in/ >
+    au < notReady ; 2020 ; Indian Dermatology Online Journal Volume 11 ; 2020 ; 11 ; https://www.idoj.in/ > #500 error
     au < manifest ; 2021 ; Indian Dermatology Online Journal Volume 12 ; 2021 ; 12 ; https://www.idoj.in/ >
     au < manifest ; 2022 ; Indian Dermatology Online Journal Volume 13 ; 2022 ; 13 ; https://www.idoj.in/ >
 
@@ -1383,7 +1383,6 @@
       issnl = 0301-4738
    >
 #    param[base_url] = http://www.ijo.in/
-
     param[journal_issn] = 0301-4738
 
     au < manifest ; 1953 ; Indian Journal of Ophthalmology Volume 1 ; 1953 ; 1 ; https://www.ijo.in/ >
@@ -1435,28 +1434,16 @@
     au < manifest ; 1999 ; Indian Journal of Ophthalmology Volume 47 ; 1999 ; 47 ; https://www.ijo.in/ >
     au < manifest ; 2000 ; Indian Journal of Ophthalmology Volume 48 ; 2000 ; 48 ; https://www.ijo.in/ >
     au < manifest ; 2001 ; Indian Journal of Ophthalmology Volume 49 ; 2001 ; 49 ; https://www.ijo.in/ >
-    au < manifest ; 2002 ; Indian Journal of Ophthalmology Volume 50 ; 2002 ; 50 ; https://www.ijo.in/ >
-    au < manifest ; 2003 ; Indian Journal of Ophthalmology Volume 51 ; 2003 ; 51 ; https://www.ijo.in/ >
-    au < manifest ; 2004 ; Indian Journal of Ophthalmology Volume 52 ; 2004 ; 52 ; https://www.ijo.in/ >
-    au < manifest ; 2005 ; Indian Journal of Ophthalmology Volume 53 ; 2005 ; 53 ; https://www.ijo.in/ >
-    au < manifest ; 2006 ; Indian Journal of Ophthalmology Volume 54 ; 2006 ; 54 ; https://www.ijo.in/ >
-    au < manifest ; 2007 ; Indian Journal of Ophthalmology Volume 55 ; 2007 ; 55 ; https://www.ijo.in/ >
-    au < manifest ; 2008 ; Indian Journal of Ophthalmology Volume 56 ; 2008 ; 56 ; https://www.ijo.in/ >
-    au < manifest ; 2009 ; Indian Journal of Ophthalmology Volume 57 ; 2009 ; 57 ; https://www.ijo.in/ >
-    au < notReady ; 2010 ; Indian Journal of Ophthalmology Volume 58 ; 2010 ; 58 ; https://www.ijo.in/ > #no substance
-    au < released ; 2011 ; Indian Journal of Ophthalmology Volume 59 ; 2011 ; 59 ; http://www.ijo.in/ >
-    au < released ; 2012 ; Indian Journal of Ophthalmology Volume 60 ; 2012 ; 60 ; http://www.ijo.in/ >
-    au < released ; 2013 ; Indian Journal of Ophthalmology Volume 61 ; 2013 ; 61 ; http://www.ijo.in/ >
-    au < released ; 2014 ; Indian Journal of Ophthalmology Volume 62 ; 2014 ; 62 ; http://www.ijo.in/ >
-    au < released ; 2015 ; Indian Journal of Ophthalmology Volume 63 ; 2015 ; 63 ; http://www.ijo.in/ >
-    au < released ; 2016 ; Indian Journal of Ophthalmology Volume 64 ; 2016 ; 64 ; http://www.ijo.in/ >
-    au < released ; 2017 ; Indian Journal of Ophthalmology Volume 65 ; 2017 ; 65 ; http://www.ijo.in/ >
-    au < released ; 2018 ; Indian Journal of Ophthalmology Volume 66 ; 2018 ; 66 ; http://www.ijo.in/ >
-    au < notReady ; 2019 ; Indian Journal of Ophthalmology Volume 67 ; 2019 ; 67 ; https://www.ijo.in/ > #no substance
-    au < manifest ; 2020 ; Indian Journal of Ophthalmology Volume 68 ; 2020 ; 68 ; https://www.ijo.in/ >
-    au < expected ; 2021 ; Indian Journal of Ophthalmology Volume 69 ; 2021 ; 69 ; https://www.ijo.in/ >
-    au < expected ; 2022 ; Indian Journal of Ophthalmology Volume 70 ; 2022 ; 70 ; https://www.ijo.in/ >
 
+    au < down ; 2011 ; Indian Journal of Ophthalmology Volume 59 ; 2011 ; 59 ; http://www.ijo.in/ >
+    au < down ; 2012 ; Indian Journal of Ophthalmology Volume 60 ; 2012 ; 60 ; http://www.ijo.in/ >
+    au < down ; 2013 ; Indian Journal of Ophthalmology Volume 61 ; 2013 ; 61 ; http://www.ijo.in/ >
+    au < down ; 2014 ; Indian Journal of Ophthalmology Volume 62 ; 2014 ; 62 ; http://www.ijo.in/ >
+    au < down ; 2015 ; Indian Journal of Ophthalmology Volume 63 ; 2015 ; 63 ; http://www.ijo.in/ >
+    au < down ; 2016 ; Indian Journal of Ophthalmology Volume 64 ; 2016 ; 64 ; http://www.ijo.in/ >
+    au < down ; 2017 ; Indian Journal of Ophthalmology Volume 65 ; 2017 ; 65 ; http://www.ijo.in/ >
+    au < down ; 2018 ; Indian Journal of Ophthalmology Volume 66 ; 2018 ; 66 ; http://www.ijo.in/ >
+    #On Medknow 1953-2001. Moved to LLW
   }
 
   {
@@ -2745,7 +2732,7 @@
     au < released ; 2017 ; Journal of Conservative Dentistry Volume 20 ; 2017 ; 20 ; http://www.jcd.org.in/ >
     au < released ; 2018 ; Journal of Conservative Dentistry Volume 21 ; 2018 ; 21 ; http://www.jcd.org.in/ >
     au < released ; 2019 ; Journal of Conservative Dentistry Volume 22 ; 2019 ; 22 ; https://www.jcd.org.in/ >
-    au < manifest ; 2020 ; Journal of Conservative Dentistry Volume 23 ; 2020 ; 23 ; https://www.jcd.org.in/ >
+    au < notReady ; 2020 ; Journal of Conservative Dentistry Volume 23 ; 2020 ; 23 ; https://www.jcd.org.in/ > #500 error
     au < released ; 2021 ; Journal of Conservative Dentistry Volume 24 ; 2021 ; 24 ; https://www.jcd.org.in/ >
     au < expected ; 2022 ; Journal of Conservative Dentistry Volume 25 ; 2022 ; 25 ; https://www.jcd.org.in/ >
 
@@ -6895,7 +6882,7 @@
       au < released ; 2017 ; Journal of Dental Research and Review Volume 4 ; 2017 ; 4 ; http://www.jdrr.org/ >
       au < released ; 2018 ; Journal of Dental Research and Review Volume 5 ; 2018 ; 5 ; http://www.jdrr.org/ >
       au < released ; 2019 ; Journal of Dental Research and Review Volume 6 ; 2019 ; 6 ; https://www.jdrr.org/ >
-      au < manifest ; 2020 ; Journal of Dental Research and Review Volume 7 ; 2020 ; 7 ; https://www.jdrr.org/ >
+      au < notReady ; 2020 ; Journal of Dental Research and Review Volume 7 ; 2020 ; 7 ; https://www.jdrr.org/ > #500 error
       au < manifest ; 2021 ; Journal of Dental Research and Review Volume 8 ; 2021 ; 8 ; https://www.jdrr.org/ >
       au < manifest ; 2022 ; Journal of Dental Research and Review Volume 9 ; 2022 ; 9 ; https://www.jdrr.org/ >
 
@@ -8828,7 +8815,7 @@
       au < released ; 2017 ; The Journal of Indian Prosthodontic Society Volume 17 ; 2017 ; 17 ; http://www.j-ips.org/ >
       au < released ; 2018 ; The Journal of Indian Prosthodontic Society Volume 18 ; 2018 ; 18 ; http://www.j-ips.org/ >
       au < released ; 2019 ; The Journal of Indian Prosthodontic Society Volume 19 ; 2019 ; 19 ; https://www.j-ips.org/ >
-      au < manifest ; 2020 ; The Journal of Indian Prosthodontic Society Volume 20 ; 2020 ; 20 ; https://www.j-ips.org/ >
+      au < notReady ; 2020 ; The Journal of Indian Prosthodontic Society Volume 20 ; 2020 ; 20 ; https://www.j-ips.org/ > #500 error
       au < released ; 2021 ; The Journal of Indian Prosthodontic Society Volume 21 ; 2021 ; 21 ; https://www.j-ips.org/ >
       au < manifest ; 2022 ; The Journal of Indian Prosthodontic Society Volume 22 ; 2022 ; 22 ; https://www.j-ips.org/ >
 
@@ -10000,18 +9987,17 @@
 
       param[journal_issn] = 2319-1775
 
-      au < released ; 2012 ; International Journal of Food and Nutritional Sciences Volume 1 ; 2012 ; 1 ; https://www.ijfans.org/ >
-      au < released ; 2013 ; International Journal of Food and Nutritional Sciences Volume 2 ; 2013 ; 2 ; https://www.ijfans.org/ >
-      au < released ; 2014 ; International Journal of Food and Nutritional Sciences Volume 3 ; 2014 ; 3 ; https://www.ijfans.org/ >
-      au < notReady ; 2015 ; International Journal of Food and Nutritional Sciences Volume 4 ; 2015 ; 4 ; https://www.ijfans.org/ > #500
-      au < notReady ; 2016 ; International Journal of Food and Nutritional Sciences Volume 5 ; 2016 ; 5 ; https://www.ijfans.org/ > #500
-      au < notReady ; 2017 ; International Journal of Food and Nutritional Sciences Volume 6 ; 2017 ; 6 ; https://www.ijfans.org/ > #500
-      au < notReady ; 2018 ; International Journal of Food and Nutritional Sciences Volume 7 ; 2018 ; 7 ; https://www.ijfans.org/ > #500
-      au < notReady ; 2019 ; International Journal of Food and Nutritional Sciences Volume 8 ; 2019 ; 8 ; https://www.ijfans.org/ > #500
-      au < manifest ; 2020 ; International Journal of Food and Nutritional Sciences Volume 9 ; 2020 ; 9 ; https://www.ijfans.org/ >
-      au < manifest ; 2021 ; International Journal of Food and Nutritional Sciences Volume 10 ; 2021 ; 10 ; https://www.ijfans.org/ >
+      au < down ; 2012 ; International Journal of Food and Nutritional Sciences Volume 1 ; 2012 ; 1 ; https://www.ijfans.org/ >
+      au < down ; 2013 ; International Journal of Food and Nutritional Sciences Volume 2 ; 2013 ; 2 ; https://www.ijfans.org/ >
+      au < down ; 2014 ; International Journal of Food and Nutritional Sciences Volume 3 ; 2014 ; 3 ; https://www.ijfans.org/ >
+      au < doNotProcess ; 2015 ; International Journal of Food and Nutritional Sciences Volume 4 ; 2015 ; 4 ; https://ijfans.org/ > #500
+      au < doNotProcess ; 2016 ; International Journal of Food and Nutritional Sciences Volume 5 ; 2016 ; 5 ; https://ijfans.org/ > #500
+      au < doNotProcess ; 2017 ; International Journal of Food and Nutritional Sciences Volume 6 ; 2017 ; 6 ; https://ijfans.org/ > #500
+      au < doNotProcess ; 2018 ; International Journal of Food and Nutritional Sciences Volume 7 ; 2018 ; 7 ; https://ijfans.org/ > #500
+      au < doNotProcess ; 2019 ; International Journal of Food and Nutritional Sciences Volume 8 ; 2019 ; 8 ; https://ijfans.org/ > #500
+      au < doNotProcess ; 2020 ; International Journal of Food and Nutritional Sciences Volume 9 ; 2020 ; 9 ; https://ijfans.org/ >
+      au < doNotProcess ; 2021 ; International Journal of Food and Nutritional Sciences Volume 10 ; 2021 ; 10 ; https://ijfans.org/ >
       #deactivated
-      au < expected ; 2022 ; International Journal of Food and Nutritional Sciences Volume 11 ; 2022 ; 11 ; https://www.ijfans.org/ >
   }
 
 
@@ -11104,7 +11090,7 @@
       au < released ; 2012 ; Taiwan Journal of Ophthalmology Volume 2 ; 2012 ; 2 ; https://www.e-tjo.org/ >
       au < released ; 2013 ; Taiwan Journal of Ophthalmology Volume 3 ; 2013 ; 3 ; https://www.e-tjo.org/ >
       au < released ; 2014 ; Taiwan Journal of Ophthalmology Volume 4 ; 2014 ; 4 ; https://www.e-tjo.org/ >
-      au < manifest ; 2015 ; Taiwan Journal of Ophthalmology Volume 5 ; 2015 ; 5 ; https://www.e-tjo.org/ >
+      au < notReady ; 2015 ; Taiwan Journal of Ophthalmology Volume 5 ; 2015 ; 5 ; https://www.e-tjo.org/ > #500 error
       au < released ; 2016 ; Taiwan Journal of Ophthalmology Volume 6 ; 2016 ; 6 ; https://www.e-tjo.org/ >
       au < released ; 2017 ; Taiwan Journal of Ophthalmology Volume 7 ; 2017 ; 7 ; http://www.e-tjo.org/ >
       au < released ; 2018 ; Taiwan Journal of Ophthalmology Volume 8 ; 2018 ; 8 ; https://www.e-tjo.org/ >
