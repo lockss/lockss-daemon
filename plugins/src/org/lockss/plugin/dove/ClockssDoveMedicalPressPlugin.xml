@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>9</string>
+    <string>10</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -50,6 +50,8 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <!--exclude person email address embedded in the article context-->
+      <string>2,"^%scr_data/article_fulltext/.*/mailto:.*", base_url</string>
       <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)(\?[0-9]+)?$", url_host(base_url)</string>
       <!--  and the toc -->
       <!--  https://www.dovepress.com/reports-in-theoretical-chemistry-i1116-j129 -->
