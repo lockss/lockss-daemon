@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>10</string>
+    <string>11</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -210,6 +210,10 @@ POSSIBILITY OF SUCH DAMAGE.
     <list>
       <!-- 504s occur on certain image files, we want to collect these but if they 504 they shouldnt kill the crawl -->
       <string>504=org.lockss.plugin.usdocspln.gov.govinfo.GovInfoSitemapsHttpResponseHandler</string>
+      <!-- 520s currently don't retry by default like 500; make it retry -->
+      <string>520=org.lockss.plugin.usdocspln.gov.govinfo.GovInfoSitemapsHttpResponseHandler</string>
+      <!-- "chunked stream ended unexpectedly" is currently a plain IOException -->
+      <string>java.io.IOException=org.lockss.plugin.usdocspln.gov.govinfo.GovInfoSitemapsHttpResponseHandler</string>
     </list>
   </entry>
   <entry>

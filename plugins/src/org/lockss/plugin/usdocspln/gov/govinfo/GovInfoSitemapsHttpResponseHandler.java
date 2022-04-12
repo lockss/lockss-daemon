@@ -40,6 +40,7 @@ import org.lockss.util.urlconn.CacheException.RetryableException;
 import org.lockss.util.urlconn.CacheResultHandler;
 import org.lockss.util.urlconn.CacheResultMap;
 
+import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -76,7 +77,7 @@ public class GovInfoSitemapsHttpResponseHandler implements CacheResultHandler {
   public CacheException handleResult(ArchivalUnit au,
                                      String url,
                                      int responseCode) {
-      logger.debug2(responseCode + " " + url);
+      logger.debug2(String.format("URL: %s, response code: %d", url, responseCode));
       switch (responseCode) {
         case 504:
           Matcher fmat = NON_FATAL_GRAPHICS_PATTERN.matcher(url);
@@ -84,18 +85,28 @@ public class GovInfoSitemapsHttpResponseHandler implements CacheResultHandler {
             return new GovInfoRetryNoFailException(responseCode + " Gateway Timeout (non-fatal)");
           }
           return new GovInfoRetryFailException(responseCode + " Gateway Timeout");
-
+        case 520:
+          return new CacheException.RetrySameUrlException();
         default:
           logger.warning("Unexpected responseCode (" + responseCode + ") in handleResult(): AU " + au.getName() + "; URL " + url);
-          throw new UnsupportedOperationException("Unexpected responseCode (" + responseCode + ")");
+          throw new UnsupportedOperationException("Unexpected response code: " + responseCode);
       }
     }
 
   @Override
-  public CacheException handleResult(final ArchivalUnit au, final String url, final Exception ex)
+  public CacheException handleResult(ArchivalUnit au,
+                                     String url,
+                                     Exception exc)
       throws PluginException {
-    logger.warning("Unexpected exception (" + ex + ") in handleResult(): AU " + au.getName() + "; URL " + url);
-    throw new UnsupportedOperationException("Unexpected exception (" + ex + ")");
+    logger.debug2(String.format("URL: %s, exception: %s", url, exc));
+    Class<? extends Exception> cla = exc.getClass();
+    if (cla == IOException.class) {
+      if ("chunked stream ended unexpectedly".equals(exc.getMessage())) {
+        return new CacheException.RetryableNetworkException();
+      }
+      return new CacheException.UnknownExceptionException("Unmapped exception: " + exc, exc);
+    }
+    throw new UnsupportedOperationException("Unexpected exception: " + exc);
   }
   
   public static class GovInfoRetryableException extends RetryableException {
@@ -116,7 +127,7 @@ public class GovInfoSitemapsHttpResponseHandler implements CacheResultHandler {
     
     @Override
     public int getRetryCount() {
-      return 30;
+      return 60;
     }
 
     @Override
