@@ -630,7 +630,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Historical Studies in Industrial Relations Volume 39 ; 39 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Historical Studies in Industrial Relations Volume 40 ; 40 ; >
     au < manifest ; exists ; 2020 ; Historical Studies in Industrial Relations Volume 41 ; 41 ; >
-    au < manifest ; exists ; 2021 ; Historical Studies in Industrial Relations Volume 42 ; 42 ; >
+    au < ready ; exists ; 2021 ; Historical Studies in Industrial Relations Volume 42 ; 42 ; >
     au < expected ; exists ; 2022 ; Historical Studies in Industrial Relations Volume 43 ; 43 ; >
 
   }
@@ -669,7 +669,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; The Indexer: The International Journal of Indexing Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; The Indexer: The International Journal of Indexing Volume 37 ; 37 ; >
     au < crawling ; exists ; 2020 ; The Indexer: The International Journal of Indexing Volume 38 ; 38 ; >
-    au < manifest ; exists ; 2021 ; The Indexer: The International Journal of Indexing Volume 39 ; 39 ; >
+    au < ready ; exists ; 2021 ; The Indexer: The International Journal of Indexing Volume 39 ; 39 ; >
     au < manifest ; exists ; 2022 ; The Indexer: The International Journal of Indexing Volume 40 ; 40 ; >
 
   }
@@ -705,7 +705,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Development Planning Review Volume 40 ; 40 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; International Development Planning Review Volume 41 ; 41 ; >
     au < crawling ; exists ; 2020 ; International Development Planning Review Volume 42 ; 42 ; >
-    au < manifest ; exists ; 2021 ; International Development Planning Review Volume 43 ; 43 ; >
+    au < ready ; exists ; 2021 ; International Development Planning Review Volume 43 ; 43 ; >
     au < manifest ; exists ; 2022 ; International Development Planning Review Volume 44 ; 44 ; >
 
   }
@@ -721,7 +721,7 @@
     param[journal_id] = ijeap
     #Published 2021-present
 
-    au < manifest ; exists ; 2021 ; International Journal of English for Academic Purposes: Research and Practice Volume 2021 ; 2021 ; >
+    au < ready ; exists ; 2021 ; International Journal of English for Academic Purposes: Research and Practice Volume 2021 ; 2021 ; >
     au < expected ; exists ; 2022 ; International Journal of English for Academic Purposes: Research and Practice Volume 2022 ; 2022 ; >
   }
 
@@ -788,7 +788,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Literary & Cultural Disability Studies Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Journal of Literary & Cultural Disability Studies Volume 13 ; 13 ; >
     au < crawling ; exists ; 2020 ; Journal of Literary & Cultural Disability Studies Volume 14 ; 14 ; >
-    au < manifest ; exists ; 2021 ; Journal of Literary & Cultural Disability Studies Volume 15 ; 15 ; >
+    au < ready ; exists ; 2021 ; Journal of Literary & Cultural Disability Studies Volume 15 ; 15 ; >
     au < manifest ; exists ; 2022 ; Journal of Literary & Cultural Disability Studies Volume 16 ; 16 ; >
 
   }
@@ -819,14 +819,14 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Journal of Romance Studies Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Romance Studies Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Romance Studies Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2014 ; Journal of Romance Studies Volume 14 ; 14 ; >
-    au < manifest ; exists ; 2015 ; Journal of Romance Studies Volume 15 ; 15 ; >
+    au < ready ; exists ; 2014 ; Journal of Romance Studies Volume 14 ; 14 ; >
+    au < ready ; exists ; 2015 ; Journal of Romance Studies Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Romance Studies Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Romance Studies Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Romance Studies Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Journal of Romance Studies Volume 19 ; 19 ; >
     au < crawling ; exists ; 2020 ; Journal of Romance Studies Volume 20 ; 20 ; >
-    au < manifest ; exists ; 2021 ; Journal of Romance Studies Volume 21 ; 21 ; >
+    au < ready ; exists ; 2021 ; Journal of Romance Studies Volume 21 ; 21 ; >
     au < manifest ; exists ; 2022 ; Journal of Romance Studies Volume 22 ; 22 ; >
 
   }
@@ -956,11 +956,11 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Labour History: A Journal of Labour and Social History Volume 114 ; 114 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Labour History: A Journal of Labour and Social History Volume 115 ; 115 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Labour History: A Journal of Labour and Social History Volume 116 ; 116 ; >
-    au < manifest ; exists ; 2019 ; Labour History: A Journal of Labour and Social History Volume 117 ; 117 ; >
+    au < ready ; exists ; 2019 ; Labour History: A Journal of Labour and Social History Volume 117 ; 117 ; >
     au < crawling ; exists ; 2020 ; Labour History: A Journal of Labour and Social History Volume 118 ; 118 ; >
     au < manifest ; exists ; 2020 ; Labour History: A Journal of Labour and Social History Volume 119 ; 119 ; >
-    au < manifest ; exists ; 2021 ; Labour History: A Journal of Labour and Social History Volume 120 ; 120 ; >
-    au < manifest ; exists ; 2021 ; Labour History: A Journal of Labour and Social History Volume 121 ; 121 ; >
+    au < ready ; exists ; 2021 ; Labour History: A Journal of Labour and Social History Volume 120 ; 120 ; >
+    au < ready ; exists ; 2021 ; Labour History: A Journal of Labour and Social History Volume 121 ; 121 ; >
     au < expected ; exists ; 2022 ; Labour History: A Journal of Labour and Social History Volume 122 ; 122 ; >
 
   }
@@ -998,7 +998,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Labour History Review Volume 83 ; 83 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Labour History Review Volume 84 ; 84 ; >
     au < crawling ; exists ; 2020 ; Labour History Review Volume 85 ; 85 ; >
-    au < manifest ; exists ; 2021 ; Labour History Review Volume 86 ; 86 ; >
+    au < ready ; exists ; 2021 ; Labour History Review Volume 86 ; 86 ; >
     au < expected ; exists ; 2022 ; Labour History Review Volume 87 ; 87 ; >
 
   }
@@ -1178,7 +1178,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Modern Believing Volume 59 ; 59 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Modern Believing Volume 60 ; 60 ; >
     au < crawling ; exists ; 2020 ; Modern Believing Volume 61 ; 61 ; >
-    au < manifest ; exists ; 2021 ; Modern Believing Volume 62 ; 62 ; >
+    au < ready ; exists ; 2021 ; Modern Believing Volume 62 ; 62 ; >
     au < manifest ; exists ; 2022 ; Modern Believing Volume 63 ; 63 ; >
 
   }
@@ -1257,7 +1257,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Music, Sound, and the Moving Image Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Music, Sound, and the Moving Image Volume 13 ; 13 ; >
     au < crawling ; exists ; 2020 ; Music, Sound, and the Moving Image Volume 14 ; 14 ; >
-    au < manifest ; exists ; 2021 ; Music, Sound, and the Moving Image Volume 15 ; 15 ; >
+    au < ready ; exists ; 2021 ; Music, Sound, and the Moving Image Volume 15 ; 15 ; >
     au < expected ; exists ; 2022 ; Music, Sound, and the Moving Image Volume 16 ; 16 ; >
 
   }
@@ -1304,7 +1304,7 @@
     au < doNotProcess ; doNotProcess ; 2017-2018 ; Quaker Studies Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2018-2019 ; Quaker Studies Volume 23 ; 23 ; >
     au < crawling ; exists ; 2019-2020 ; Quaker Studies Volume 24 ; 24 ; >
-    au < manifest ; exists ; 2020-2021 ; Quaker Studies Volume 25 ; 25 ; >
+    au < ready ; exists ; 2020-2021 ; Quaker Studies Volume 25 ; 25 ; >
     au < manifest ; exists ; 2021-2022 ; Quaker Studies Volume 26 ; 26 ; >
     au < expected ; exists ; 2022-2023 ; Quaker Studies Volume 27 ; 27 ; >
 
@@ -1426,7 +1426,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Romani Studies Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Romani Studies Volume 29 ; 29 ; >
     au < crawling ; exists ; 2020 ; Romani Studies Volume 30 ; 30 ; >
-    au < manifest ; exists ; 2021 ; Romani Studies Volume 31 ; 31 ; >
+    au < ready ; exists ; 2021 ; Romani Studies Volume 31 ; 31 ; >
     au < expected ; exists ; 2022 ; Romani Studies Volume 32 ; 32 ; >
 
   }
@@ -1482,11 +1482,11 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Quebec Studies Volume 65 ; 65 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Quebec Studies Volume 66 ; 66 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Quebec Studies Volume 67 ; 67 ; >
-    au < manifest ; exists ; 2019 ; Quebec Studies Volume 68 ; 68 ; >
+    au < ready ; exists ; 2019 ; Quebec Studies Volume 68 ; 68 ; >
     au < crawling ; exists ; 2020 ; Quebec Studies Volume 69 ; 69 ; >
     au < manifest ; exists ; 2020 ; Quebec Studies Volume 70 ; 70 ; >
-    au < manifest ; exists ; 2021 ; Quebec Studies Volume 71 ; 71 ; >
-    au < manifest ; exists ; 2021 ; Quebec Studies Volume 72 ; 72 ; >
+    au < ready ; exists ; 2021 ; Quebec Studies Volume 71 ; 71 ; >
+    au < ready ; exists ; 2021 ; Quebec Studies Volume 72 ; 72 ; >
     au < expected ; exists ; 2022 ; Quebec Studies Volume 73 ; 73 ; >
 
   }
@@ -1515,7 +1515,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Science Fiction Film and Television Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Science Fiction Film and Television Volume 12 ; 12 ; >
     au < crawling ; exists ; 2020 ; Science Fiction Film and Television Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2021 ; Science Fiction Film and Television Volume 14 ; 14 ; >
+    au < ready ; exists ; 2021 ; Science Fiction Film and Television Volume 14 ; 14 ; >
     au < manifest ; exists ; 2022 ; Science Fiction Film and Television Volume 15 ; 15 ; >
 
   }
@@ -1551,7 +1551,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Sculpture Journal Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Sculpture Journal Volume 28 ; 28 ; >
     au < crawling ; exists ; 2020 ; Sculpture Journal Volume 29 ; 29 ; >
-    au < manifest ; exists ; 2021 ; Sculpture Journal Volume 30 ; 30 ; >
+    au < ready ; exists ; 2021 ; Sculpture Journal Volume 30 ; 30 ; >
     au < manifest ; exists ; 2022 ; Sculpture Journal Volume 31 ; 31 ; >
 
   }
@@ -1577,7 +1577,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Studia Hibernica Volume 44 ; 44 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Studia Hibernica Volume 45 ; 45 ; >
     au < crawling ; exists ; 2020 ; Studia Hibernica Volume 46 ; 46 ; >
-    au < manifest ; exists ; 2021 ; Studia Hibernica Volume 47 ; 47 ; >
+    au < ready ; exists ; 2021 ; Studia Hibernica Volume 47 ; 47 ; >
     au < expected ; exists ; 2022 ; Studia Hibernica Volume 48 ; 48 ; >
 
   }
@@ -1594,7 +1594,7 @@
     
     #no earlier volumes available at Liverpool 
     au < crawling ; exists ; 2011 ; Praxis Volume 154 ; 154 ; >
-    au < manifest ; exists ; 2012 ; Praxis Volume 155 ; 155 ; >
+    au < ready ; exists ; 2012 ; Praxis Volume 155 ; 155 ; >
     #title is now continued as Theory & Struggle - different ISBN, different journal_id
 
   }
@@ -1616,7 +1616,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Theory & Struggle Volume 119 ; 119 ; >
     au < crawling ; exists ; 2019 ; Theory & Struggle Volume 120 ; 120 ; >
     au < manifest ; exists ; 2020 ; Theory & Struggle Volume 121 ; 121 ; >
-    au < manifest ; exists ; 2021 ; Theory & Struggle Volume 122 ; 122 ; >
+    au < ready ; exists ; 2021 ; Theory & Struggle Volume 122 ; 122 ; >
     au < expected ; exists ; 2022 ; Theory & Struggle Volume 123 ; 123 ; >
 
 
@@ -1747,7 +1747,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Town Planning Review Volume 88 ; 88 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Town Planning Review Volume 89 ; 89 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Town Planning Review Volume 90 ; 90 ; >
-    au < manifest ; exists ; 2020 ; Town Planning Review Volume 91 ; 91 ; >
+    au < ready ; exists ; 2020 ; Town Planning Review Volume 91 ; 91 ; >
     au < manifest ; exists ; 2021 ; Town Planning Review Volume 92 ; 92 ; >
     au < manifest ; exists ; 2022 ; Town Planning Review Volume 93 ; 93 ; >
 
@@ -1779,7 +1779,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 167 ; 167 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 168 ; 168 ; >
     au < crawling ; exists ; 2020 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 169 ; 169 ; >
-    au < manifest ; exists ; 2021 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 170 ; 170 ; >
+    au < ready ; exists ; 2021 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 170 ; 170 ; >
     au < expected ; exists ; 2022 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 171 ; 171 ; >
 
   }
