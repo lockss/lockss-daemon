@@ -1113,6 +1113,8 @@ while (my $line = <>) {
             if ($resp_s->is_success) {
                 if ($resp_s->content =~ m/results in an empty (set|list)/is) {
                     $result = "--EMPTY_LIST--"
+                } elsif ($resp_s->content !~ m/<dc:date>$param{year}/ ) {
+                    $result = "--MISSING-YEAR--"
                 } else {
                     $result = "Manifest";
                 }
