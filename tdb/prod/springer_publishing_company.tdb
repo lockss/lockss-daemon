@@ -15,8 +15,7 @@
     >
     param[base_url] = https://connect.springerpub.com/
     param[journal_id] = sgrehpp
-    #plugin = needs.plugin
-    plugin = org.lockss.HWOriginsPlugin
+    plugin = org.lockss.plugin.highwire.spc.SpringerPublishingCompanyScolarisPlugin
     #example manifest https://connect.springerpub.com/content/sgrehpp/lockss-manifest/vol_10_manifest.html
 
     au < doNotProcess ; 2005 ; Ethical Human Psychology and Psychiatry Volume 7 ; 7 >
