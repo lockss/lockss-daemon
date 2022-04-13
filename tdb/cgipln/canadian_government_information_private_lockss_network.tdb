@@ -31,28 +31,28 @@
       nondefparam[user_pass] = cgipln_U_P
       implicit < status ; name ; param[collection] >
 
-      au < expected ; Government of Canada Publications (Archive-It Collection 3572) ; 3572 >
+      au < testing ; Government of Canada Publications (Archive-It Collection 3572) ; 3572 >
       au < expected ; Government of Canada Web Content (Archive-It Collection 5060) ; 5060 >
-      au < expected ; Nova Scotia Government Information (Archive-It Collection 7620) ; 7620 >
+      au < testing ; Nova Scotia Government Information (Archive-It Collection 7620) ; 7620 >
       au < expected ; Yukon Government Information (Archive-It Collection 7655) ; 7655 >
       au < expected ; British Columbia Government Information (Archive-It Collection 7711) ; 7711 >
-      au < expected ; Nunavut Government Information (Archive-It Collection 7774) ; 7774 >
+      au < testing ; Nunavut Government Information (Archive-It Collection 7774) ; 7774 >
       au < expected ; Prince Edward Island Government Information (Archive-It Collection 7777) ; 7777 >
-      au < expected ; Northwest Territories Government Information (Archive-It Collection 7778) ; 7778 >
+      au < testing ; Northwest Territories Government Information (Archive-It Collection 7778) ; 7778 >
       au < expected ; New Brunswick Government Information (Archive-It Collection 8074) ; 8074 >
-      au < expected ; Saskatchewan Government Information (Archive-It Collection 8313) ; 8313 >
+      au < testing ; Saskatchewan Government Information (Archive-It Collection 8313) ; 8313 >
       au < expected ; Opioid Crisis in Canada (Archive-It Collection 9304) ; 9304 >
-      au < expected ; Indian Affairs and Northern Development (Archive-It Collection 9331) ; 9331 >
+      au < testing ; Indian Affairs and Northern Development (Archive-It Collection 9331) ; 9331 >
       au < expected ; National Energy Board (Archive-It Collection 10072) ; 10072 >
       au < expected ; Statistics Canada (Archive-It Collection 10492) ; 10492 >
       au < expected ; Canadian Research Institute for Law and the Family (Archive-It Collection 10655) ; 10655 >
-      au < expected ; Wildfires 2018 (Archive-It Collection 10971) ; 10971 >
+      au < testing ; Wildfires 2018 (Archive-It Collection 10971) ; 10971 >
       au < expected ; British Columbia Referendum (Archive-It Collection 11363) ; 11363 >
-      au < expected ; BC Legislature RCMP Criminal Investigation (Archive-It Collection 11433) ; 11433 >
+      au < testing ; BC Legislature RCMP Criminal Investigation (Archive-It Collection 11433) ; 11433 >
       au < expected ; Government Information Conferences (Archive-It Collection 11490) ; 11490 >
-      au < expected ; Federal Election Candidates 2019 (Archive-It Collection 12838) ; 12838 >
+      au < testing ; Federal Election Candidates 2019 (Archive-It Collection 12838) ; 12838 >
       au < expected ; Canadian Provincial and Municipal Collection on COVID-19 (Archive-It Collection 13750) ; 13750 >
-      #au < expected ; Government of Canada ? (Archive-It Collection 5596) ; 5596 >
+      au < testing ; Government of Canada ? (Archive-It Collection 5596) ; 5596 >
 
     }
 
