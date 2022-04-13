@@ -9,14 +9,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -52,11 +52,11 @@
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.clockss.SourceXmlArticleIteratorFactory</string>
+    <string>org.lockss.plugin.clockss.onixbooks.Onix3BooksXmlArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.clockss.SourceXmlArticleIteratorFactory</string>
+    <string>org.lockss.plugin.clockss.onixbooks.Onix3BooksXmlArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>text/xml_metadata_extractor_factory_map</string>
