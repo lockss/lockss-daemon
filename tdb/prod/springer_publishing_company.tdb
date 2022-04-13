@@ -19,15 +19,15 @@
     plugin = org.lockss.HWOriginsPlugin
     #example manifest https://connect.springerpub.com/content/sgrehpp/lockss-manifest/vol_10_manifest.html
 
-    au < exists ; 2005 ; Ethical Human Psychology and Psychiatry Volume 7 ; 7 >
-    au < manifest ; 2006 ; Ethical Human Psychology and Psychiatry Volume 8 ; 8 >
-    au < manifest ; 2007 ; Ethical Human Psychology and Psychiatry Volume 9 ; 9 >
-    au < manifest ; 2008 ; Ethical Human Psychology and Psychiatry Volume 10 ; 10 >
-    au < manifest ; 2009 ; Ethical Human Psychology and Psychiatry Volume 11 ; 11 >
+    au < doNotProcess ; 2005 ; Ethical Human Psychology and Psychiatry Volume 7 ; 7 >
+    au < doNotProcess ; 2006 ; Ethical Human Psychology and Psychiatry Volume 8 ; 8 >
+    au < doNotProcess ; 2007 ; Ethical Human Psychology and Psychiatry Volume 9 ; 9 >
+    au < doNotProcess ; 2008 ; Ethical Human Psychology and Psychiatry Volume 10 ; 10 >
+    au < doNotProcess ; 2009 ; Ethical Human Psychology and Psychiatry Volume 11 ; 11 >
     au < manifest ; 2010 ; Ethical Human Psychology and Psychiatry Volume 12 ; 12 >
     au < manifest ; 2011-2012 ; Ethical Human Psychology and Psychiatry Volume 13 ; 13 >
     au < manifest ; 2012 ; Ethical Human Psychology and Psychiatry Volume 14 ; 14 >
-    au < exists ; 2013 ; Ethical Human Psychology and Psychiatry Volume 15 ; 15 >
+    au < manifest ; 2013 ; Ethical Human Psychology and Psychiatry Volume 15 ; 15 >
     au < manifest ; 2014 ; Ethical Human Psychology and Psychiatry Volume 16 ; 16 >
     au < manifest ; 2015 ; Ethical Human Psychology and Psychiatry Volume 17 ; 17 >
     au < manifest ; 2016 ; Ethical Human Psychology and Psychiatry Volume 18 ; 18 >
