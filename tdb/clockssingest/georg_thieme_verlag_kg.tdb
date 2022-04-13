@@ -5408,12 +5408,12 @@
     au < manifest ; exists ; 1987 ; 1987 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 159 ; 159 ; >
     au < manifest ; exists ; 1988 ; 1988 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 160 ; 160 ; >
     au < manifest ; exists ; 1989 ; 1989 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 161 ; 161 ; >
-    au < frozen ; exists ; 1990 ; 1990 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 162 ; 162 ; >
-    au < frozen ; exists ; 1991 ; 1991 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 163 ; 163 ; >
+    au < finished ; manifest ; 1990 ; 1990 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 162 ; 162 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1991 ; 1991 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 163 ; 163 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 1992 ; 1992 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 164 ; 164 ; >
     au < frozen ; exists ; 1993 ; 1993 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 165 ; 165 ; >
     au < frozen ; exists ; 1994 ; 1994 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 166 ; 166 ; >
-    au < frozen ; exists ; 1995 ; 1995 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 167 ; 167 ; >
+    au < finished ; manifest ; 1995 ; 1995 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 167 ; 167 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 1996 ; 1996 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 168 ; 168 ; >
     au < frozen ; exists ; 1997 ; 1997 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 169 ; 169 ; >
     au < frozen ; exists ; 1998 ; 1998 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 170 ; 170 ; >
@@ -5463,20 +5463,20 @@
    au < manifest ; exists ; 1987 ; 1987 ; Seminars in Hearing Volume 8 ; 8 ; >
    au < manifest ; exists ; 1988 ; 1988 ; Seminars in Hearing Volume 9 ; 9 ; >
    au < manifest ; exists ; 1989 ; 1989 ; Seminars in Hearing Volume 10 ; 10 ; >
-   au < frozen ; exists ; 1990 ; 1990 ; Seminars in Hearing Volume 11 ; 11 ; >
+   au < finished ; manifest ; 1990 ; 1990 ; Seminars in Hearing Volume 11 ; 11 ; reingest4.clockss.org:8082 >
    au < frozen ; exists ; 1991 ; 1991 ; Seminars in Hearing Volume 12 ; 12 ; >
-   au < frozen ; exists ; 1992 ; 1992 ; Seminars in Hearing Volume 13 ; 13 ; >
-   au < frozen ; exists ; 1993 ; 1993 ; Seminars in Hearing Volume 14 ; 14 ; >
-   au < frozen ; exists ; 1994 ; 1994 ; Seminars in Hearing Volume 15 ; 15 ; >
-   au < frozen ; exists ; 1995 ; 1995 ; Seminars in Hearing Volume 16 ; 16 ; >
+   au < finished ; manifest ; 1992 ; 1992 ; Seminars in Hearing Volume 13 ; 13 ; reingest5.clockss.org:8082 >
+   au < finished ; manifest ; 1993 ; 1993 ; Seminars in Hearing Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+   au < finished ; manifest ; 1994 ; 1994 ; Seminars in Hearing Volume 15 ; 15 ; reingest2.clockss.org:8085 >
+   au < finished ; manifest ; 1995 ; 1995 ; Seminars in Hearing Volume 16 ; 16 ; reingest3.clockss.org:8083 >
    au < frozen ; exists ; 1996 ; 1996 ; Seminars in Hearing Volume 17 ; 17 ; >
-   au < frozen ; exists ; 1997 ; 1997 ; Seminars in Hearing Volume 18 ; 18 ; >
-   au < frozen ; exists ; 1998 ; 1998 ; Seminars in Hearing Volume 19 ; 19 ; >
-   au < frozen ; exists ; 1999 ; 1999 ; Seminars in Hearing Volume 20 ; 20 ; >
-   au < frozen ; exists ; 2000 ; 2000 ; Seminars in Hearing Volume 21 ; 21 ; >
-   au < frozen ; exists ; 2001 ; 2001 ; Seminars in Hearing Volume 22 ; 22 ; >
-   au < frozen ; exists ; 2002 ; 2002 ; Seminars in Hearing Volume 23 ; 23 ; >
-   au < frozen ; exists ; 2003 ; 2003 ; Seminars in Hearing Volume 24 ; 24 ; >
+   au < finished ; manifest ; 1997 ; 1997 ; Seminars in Hearing Volume 18 ; 18 ; reingest4.clockss.org:8082 >
+   au < finished ; manifest ; 1998 ; 1998 ; Seminars in Hearing Volume 19 ; 19 ; reingest5.clockss.org:8082 >
+   au < finished ; manifest ; 1999 ; 1999 ; Seminars in Hearing Volume 20 ; 20 ; reingest1.clockss.org:8082 >
+   au < finished ; manifest ; 2000 ; 2000 ; Seminars in Hearing Volume 21 ; 21 ; reingest2.clockss.org:8085 >
+   au < finished ; manifest ; 2001 ; 2001 ; Seminars in Hearing Volume 22 ; 22 ; reingest3.clockss.org:8083 >
+   au < finished ; manifest ; 2002 ; 2002 ; Seminars in Hearing Volume 23 ; 23 ; reingest4.clockss.org:8082 >
+   au < finished ; manifest ; 2003 ; 2003 ; Seminars in Hearing Volume 24 ; 24 ; reingest5.clockss.org:8082 >
    au < frozen ; exists ; 2004 ; 2004 ; Seminars in Hearing Volume 25 ; 25 ; >
    au < frozen ; exists ; 2005 ; 2005 ; Seminars in Hearing Volume 26 ; 26 ; >
    au < frozen ; exists ; 2006 ; 2006 ; Seminars in Hearing Volume 27 ; 27 ; >
@@ -5517,22 +5517,22 @@
    au < manifest ; exists ; 1987 ; 1987 ; Seminars in Interventional Radiology Volume 4 ; 4 ; >
    au < manifest ; exists ; 1988 ; 1988 ; Seminars in Interventional Radiology Volume 5 ; 5 ; >
    au < manifest ; exists ; 1989 ; 1989 ; Seminars in Interventional Radiology Volume 6 ; 6 ; >
-   au < frozen ; exists ; 1990 ; 1990 ; Seminars in Interventional Radiology Volume 7 ; 7 ; >
-   au < frozen ; exists ; 1991 ; 1991 ; Seminars in Interventional Radiology Volume 8 ; 8 ; >
-   au < frozen ; exists ; 1992 ; 1992 ; Seminars in Interventional Radiology Volume 9 ; 9 ; >
-   au < frozen ; exists ; 1993 ; 1993 ; Seminars in Interventional Radiology Volume 10 ; 10 ; >
+   au < finished ; manifest ; 1990 ; 1990 ; Seminars in Interventional Radiology Volume 7 ; 7 ; reingest1.clockss.org:8082 >
+   au < finished ; manifest ; 1991 ; 1991 ; Seminars in Interventional Radiology Volume 8 ; 8 ; reingest2.clockss.org:8085 >
+   au < finished ; manifest ; 1992 ; 1992 ; Seminars in Interventional Radiology Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+   au < finished ; manifest ; 1993 ; 1993 ; Seminars in Interventional Radiology Volume 10 ; 10 ; reingest4.clockss.org:8082 >
    au < frozen ; exists ; 1994 ; 1994 ; Seminars in Interventional Radiology Volume 11 ; 11 ; >
-   au < frozen ; exists ; 1995 ; 1995 ; Seminars in Interventional Radiology Volume 12 ; 12 ; >
-   au < frozen ; exists ; 1996 ; 1996 ; Seminars in Interventional Radiology Volume 13 ; 13 ; >
-   au < frozen ; exists ; 1997 ; 1997 ; Seminars in Interventional Radiology Volume 14 ; 14 ; >
-   au < frozen ; exists ; 1998 ; 1998 ; Seminars in Interventional Radiology Volume 15 ; 15 ; >
-   au < frozen ; exists ; 1999 ; 1999 ; Seminars in Interventional Radiology Volume 16 ; 16 ; >
-   au < frozen ; exists ; 2000 ; 2000 ; Seminars in Interventional Radiology Volume 17 ; 17 ; >
-   au < frozen ; exists ; 2001 ; 2001 ; Seminars in Interventional Radiology Volume 18 ; 18 ; >
-   au < frozen ; exists ; 2002 ; 2002 ; Seminars in Interventional Radiology Volume 19 ; 19 ; >
+   au < finished ; manifest ; 1995 ; 1995 ; Seminars in Interventional Radiology Volume 12 ; 12 ; reingest5.clockss.org:8082 >
+   au < finished ; manifest ; 1996 ; 1996 ; Seminars in Interventional Radiology Volume 13 ; 13 ; reingest1.clockss.org:8082 >
+   au < finished ; manifest ; 1997 ; 1997 ; Seminars in Interventional Radiology Volume 14 ; 14 ; reingest2.clockss.org:8085 >
+   au < finished ; manifest ; 1998 ; 1998 ; Seminars in Interventional Radiology Volume 15 ; 15 ; reingest3.clockss.org:8083 >
+   au < finished ; manifest ; 1999 ; 1999 ; Seminars in Interventional Radiology Volume 16 ; 16 ; reingest4.clockss.org:8082 >
+   au < finished ; manifest ; 2000 ; 2000 ; Seminars in Interventional Radiology Volume 17 ; 17 ; reingest5.clockss.org:8082 >
+   au < finished ; manifest ; 2001 ; 2001 ; Seminars in Interventional Radiology Volume 18 ; 18 ; reingest1.clockss.org:8082 >
+   au < finished ; manifest ; 2002 ; 2002 ; Seminars in Interventional Radiology Volume 19 ; 19 ; reingest2.clockss.org:8085 >
    au < frozen ; exists ; 2003 ; 2003 ; Seminars in Interventional Radiology Volume 20 ; 20 ; >
    au < frozen ; exists ; 2004 ; 2004 ; Seminars in Interventional Radiology Volume 21 ; 21 ; >
-   au < frozen ; exists ; 2005 ; 2005 ; Seminars in Interventional Radiology Volume 22 ; 22 ; >
+   au < finished ; manifest ; 2005 ; 2005 ; Seminars in Interventional Radiology Volume 22 ; 22 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2006 ; 2006 ; Seminars in Interventional Radiology Volume 23 ; 23 ; reingest2.clockss.org:8085 >
    au < frozen ; exists ; 2007 ; 2007 ; Seminars in Interventional Radiology Volume 24 ; 24 ; >
    au < finished ; crawling ; 2008 ; 2008 ; Seminars in Interventional Radiology Volume 25 ; 25 ; reingest5.clockss.org:8082 >
@@ -5574,20 +5574,20 @@
    au < manifest ; exists ; 1987 ; 1987 ; Seminars in Liver Disease Volume 7 ; 7 ; >
    au < manifest ; exists ; 1988 ; 1988 ; Seminars in Liver Disease Volume 8 ; 8 ; >
    au < manifest ; exists ; 1989 ; 1989 ; Seminars in Liver Disease Volume 9 ; 9 ; >
-   au < frozen ; exists ; 1990 ; 1990 ; Seminars in Liver Disease Volume 10 ; 10 ; >
-   au < frozen ; exists ; 1991 ; 1991 ; Seminars in Liver Disease Volume 11 ; 11 ; >
-   au < frozen ; exists ; 1992 ; 1992 ; Seminars in Liver Disease Volume 12 ; 12 ; >
-   au < frozen ; exists ; 1993 ; 1993 ; Seminars in Liver Disease Volume 13 ; 13 ; >
+   au < finished ; manifest ; 1990 ; 1990 ; Seminars in Liver Disease Volume 10 ; 10 ; reingest4.clockss.org:8082 >
+   au < finished ; manifest ; 1991 ; 1991 ; Seminars in Liver Disease Volume 11 ; 11 ; reingest5.clockss.org:8082 >
+   au < finished ; manifest ; 1992 ; 1992 ; Seminars in Liver Disease Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+   au < finished ; manifest ; 1993 ; 1993 ; Seminars in Liver Disease Volume 13 ; 13 ; reingest2.clockss.org:8085 >
    au < frozen ; exists ; 1994 ; 1994 ; Seminars in Liver Disease Volume 14 ; 14 ; >
-   au < frozen ; exists ; 1995 ; 1995 ; Seminars in Liver Disease Volume 15 ; 15 ; >
-   au < frozen ; exists ; 1996 ; 1996 ; Seminars in Liver Disease Volume 16 ; 16 ; >
-   au < frozen ; exists ; 1997 ; 1997 ; Seminars in Liver Disease Volume 17 ; 17 ; >
+   au < finished ; manifest ; 1995 ; 1995 ; Seminars in Liver Disease Volume 15 ; 15 ; reingest3.clockss.org:8083 >
+   au < finished ; manifest ; 1996 ; 1996 ; Seminars in Liver Disease Volume 16 ; 16 ; reingest4.clockss.org:8082 >
+   au < finished ; manifest ; 1997 ; 1997 ; Seminars in Liver Disease Volume 17 ; 17 ; reingest5.clockss.org:8082 >
    au < frozen ; exists ; 1998 ; 1998 ; Seminars in Liver Disease Volume 18 ; 18 ; >
-   au < frozen ; exists ; 1999 ; 1999 ; Seminars in Liver Disease Volume 19 ; 19 ; >
-   au < frozen ; exists ; 2000 ; 2000 ; Seminars in Liver Disease Volume 20 ; 20 ; >
-   au < frozen ; exists ; 2001 ; 2001 ; Seminars in Liver Disease Volume 21 ; 21 ; >
-   au < frozen ; exists ; 2002 ; 2002 ; Seminars in Liver Disease Volume 22 ; 22 ; >
-   au < frozen ; exists ; 2003 ; 2003 ; Seminars in Liver Disease Volume 23 ; 23 ; >
+   au < finished ; manifest ; 1999 ; 1999 ; Seminars in Liver Disease Volume 19 ; 19 ; reingest1.clockss.org:8082 >
+   au < finished ; manifest ; 2000 ; 2000 ; Seminars in Liver Disease Volume 20 ; 20 ; reingest2.clockss.org:8085 >
+   au < finished ; manifest ; 2001 ; 2001 ; Seminars in Liver Disease Volume 21 ; 21 ; reingest3.clockss.org:8083 >
+   au < finished ; manifest ; 2002 ; 2002 ; Seminars in Liver Disease Volume 22 ; 22 ; reingest4.clockss.org:8082 >
+   au < finished ; manifest ; 2003 ; 2003 ; Seminars in Liver Disease Volume 23 ; 23 ; reingest5.clockss.org:8082 >
    au < frozen ; exists ; 2004 ; 2004 ; Seminars in Liver Disease Volume 24 ; 24 ; >
    au < frozen ; exists ; 2005 ; 2005 ; Seminars in Liver Disease Volume 25 ; 25 ; >
    au < frozen ; exists ; 2006 ; 2006 ; Seminars in Liver Disease Volume 26 ; 26 ; >
@@ -5625,13 +5625,13 @@
    au < crawling ; exists ; 1997 ; 1997 ; Seminars in Musculoskeletal Radiology Volume 1 ; 1 ; >
    au < crawling ; exists ; 1998 ; 1998 ; Seminars in Musculoskeletal Radiology Volume 2 ; 2 ; >
    au < crawling ; exists ; 1999 ; 1999 ; Seminars in Musculoskeletal Radiology Volume 3 ; 3 ; >
-   au < frozen ; exists ; 2000 ; 2000 ; Seminars in Musculoskeletal Radiology Volume 4 ; 4 ; >
-   au < frozen ; exists ; 2001 ; 2001 ; Seminars in Musculoskeletal Radiology Volume 5 ; 5 ; >
-   au < frozen ; exists ; 2002 ; 2002 ; Seminars in Musculoskeletal Radiology Volume 6 ; 6 ; >
-   au < frozen ; exists ; 2003 ; 2003 ; Seminars in Musculoskeletal Radiology Volume 7 ; 7 ; >
+   au < finished ; manifest ; 2000 ; 2000 ; Seminars in Musculoskeletal Radiology Volume 4 ; 4 ; reingest1.clockss.org:8082 >
+   au < finished ; manifest ; 2001 ; 2001 ; Seminars in Musculoskeletal Radiology Volume 5 ; 5 ; reingest2.clockss.org:8085 >
+   au < finished ; manifest ; 2002 ; 2002 ; Seminars in Musculoskeletal Radiology Volume 6 ; 6 ; reingest3.clockss.org:8083 >
+   au < finished ; manifest ; 2003 ; 2003 ; Seminars in Musculoskeletal Radiology Volume 7 ; 7 ; reingest4.clockss.org:8082 >
    au < frozen ; exists ; 2004 ; 2004 ; Seminars in Musculoskeletal Radiology Volume 8 ; 8 ; >
-   au < frozen ; exists ; 2005 ; 2005 ; Seminars in Musculoskeletal Radiology Volume 9 ; 9 ; >
-   au < frozen ; exists ; 2006 ; 2006 ; Seminars in Musculoskeletal Radiology Volume 10 ; 10 ; >
+   au < finished ; manifest ; 2005 ; 2005 ; Seminars in Musculoskeletal Radiology Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+   au < finished ; manifest ; 2006 ; 2006 ; Seminars in Musculoskeletal Radiology Volume 10 ; 10 ; reingest1.clockss.org:8082 >
    au < frozen ; exists ; 2007 ; 2007 ; Seminars in Musculoskeletal Radiology Volume 11 ; 11 ; >
    au < finished ; crawling ; 2008 ; 2008 ; Seminars in Musculoskeletal Radiology Volume 12 ; 12 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2009 ; 2009 ; Seminars in Musculoskeletal Radiology Volume 13 ; 13 ; reingest2.clockss.org:8085 >
@@ -5672,20 +5672,20 @@
    au < manifest ; exists ; 1987 ; 1987 ; Seminars in Neurology Volume 7 ; 7 ; >
    au < manifest ; exists ; 1988 ; 1988 ; Seminars in Neurology Volume 8 ; 8 ; >
    au < manifest ; exists ; 1989 ; 1989 ; Seminars in Neurology Volume 9 ; 9 ; >
-   au < frozen ; exists ; 1990 ; 1990 ; Seminars in Neurology Volume 10 ; 10 ; >
-   au < frozen ; exists ; 1991 ; 1991 ; Seminars in Neurology Volume 11 ; 11 ; >
+   au < finished ; manifest ; 1990 ; 1990 ; Seminars in Neurology Volume 10 ; 10 ; reingest2.clockss.org:8085 >
+   au < finished ; manifest ; 1991 ; 1991 ; Seminars in Neurology Volume 11 ; 11 ; reingest3.clockss.org:8083 >
    au < frozen ; exists ; 1992 ; 1992 ; Seminars in Neurology Volume 12 ; 12 ; >
-   au < frozen ; exists ; 1993 ; 1993 ; Seminars in Neurology Volume 13 ; 13 ; >
-   au < frozen ; exists ; 1994 ; 1994 ; Seminars in Neurology Volume 14 ; 14 ; >
+   au < finished ; manifest ; 1993 ; 1993 ; Seminars in Neurology Volume 13 ; 13 ; reingest4.clockss.org:8082 >
+   au < finished ; manifest ; 1994 ; 1994 ; Seminars in Neurology Volume 14 ; 14 ; reingest5.clockss.org:8082 >
    au < frozen ; exists ; 1995 ; 1995 ; Seminars in Neurology Volume 15 ; 15 ; >
-   au < frozen ; exists ; 1996 ; 1996 ; Seminars in Neurology Volume 16 ; 16 ; >
+   au < finished ; manifest ; 1996 ; 1996 ; Seminars in Neurology Volume 16 ; 16 ; reingest1.clockss.org:8082 >
    au < frozen ; exists ; 1997 ; 1997 ; Seminars in Neurology Volume 17 ; 17 ; >
    au < frozen ; exists ; 1998 ; 1998 ; Seminars in Neurology Volume 18 ; 18 ; >
-   au < frozen ; exists ; 1999 ; 1999 ; Seminars in Neurology Volume 19 ; 19 ; >
-   au < frozen ; exists ; 2000 ; 2000 ; Seminars in Neurology Volume 20 ; 20 ; >
-   au < frozen ; exists ; 2001 ; 2001 ; Seminars in Neurology Volume 21 ; 21 ; >
-   au < frozen ; exists ; 2002 ; 2002 ; Seminars in Neurology Volume 22 ; 22 ; >
-   au < frozen ; exists ; 2003 ; 2003 ; Seminars in Neurology Volume 23 ; 23 ; >
+   au < finished ; manifest ; 1999 ; 1999 ; Seminars in Neurology Volume 19 ; 19 ; reingest2.clockss.org:8085 >
+   au < finished ; manifest ; 2000 ; 2000 ; Seminars in Neurology Volume 20 ; 20 ; reingest3.clockss.org:8083 >
+   au < finished ; manifest ; 2001 ; 2001 ; Seminars in Neurology Volume 21 ; 21 ; reingest4.clockss.org:8082 >
+   au < finished ; manifest ; 2002 ; 2002 ; Seminars in Neurology Volume 22 ; 22 ; reingest5.clockss.org:8082 >
+   au < finished ; manifest ; 2003 ; 2003 ; Seminars in Neurology Volume 23 ; 23 ; reingest1.clockss.org:8082 >
    au < frozen ; exists ; 2004 ; 2004 ; Seminars in Neurology Volume 24 ; 24 ; >
    au < frozen ; exists ; 2005 ; 2005 ; Seminars in Neurology Volume 25 ; 25 ; >
    au < frozen ; exists ; 2006 ; 2006 ; Seminars in Neurology Volume 26 ; 26 ; >
