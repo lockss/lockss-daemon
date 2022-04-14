@@ -170,6 +170,8 @@ implements SourceXmlSchemaHelper {
     cookMap.put(art_pubdate, MetadataField.FIELD_DATE);
     cookMap.put(publisher, MetadataField.FIELD_PUBLISHER);
     cookMap.put(issue, MetadataField.FIELD_ISSUE);
+    // issue will be used as volume, it is confirmed by publihser
+    cookMap.put(issue, MetadataField.FIELD_VOLUME);
   }
 
 
