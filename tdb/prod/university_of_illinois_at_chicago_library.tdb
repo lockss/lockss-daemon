@@ -140,10 +140,16 @@
     
       plugin = org.lockss.plugin.ojs3.Ojs3Plugin
       #param[base_url] = https://journals.uic.edu/ojs/
-      param[journal_id] = dad
+      param[journal_id] = fwd
       attr[start_stem] = index.php/
     
-    #This journal is not OJS3
+    #This journal uses OJS as an entry point only.
+      au < doNotProcess ; 2016 ; FWD: Museums Volume 2016 ; 2016 ; 2016 ; https://journals.uic.edu/ojs/ >
+      au < doNotProcess ; 2017 ; FWD: Museums Volume 2017 ; 2017 ; 2017 ; https://journals.uic.edu/ojs/ >
+      au < doNotProcess ; 2018 ; FWD: Museums Volume 2018 ; 2018 ; 2018 ; https://journals.uic.edu/ojs/ >
+      au < doNotProcess ; 2019 ; FWD: Museums Volume 2019 ; 2019 ; 2019 ; https://journals.uic.edu/ojs/ >
+      au < doNotProcess ; 2020 ; FWD: Museums Volume 2020 ; 2020 ; 2020 ; https://journals.uic.edu/ojs/ >
+      au < doNotProcess ; 2021 ; FWD: Museums Volume 2021 ; 2021 ; 2021 ; https://journals.uic.edu/ojs/ >
     }
   }
 
