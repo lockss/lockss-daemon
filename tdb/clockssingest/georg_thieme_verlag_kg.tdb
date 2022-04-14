@@ -5720,10 +5720,10 @@
     param[journal_id] = 10.1055/s-00000050
     comment[years] = 2000-2004
 
-   au < frozen ; exists ; 2000 ; 2000 ; Seminars in Neurosurgery Volume 11 ; 11 ; >
-   au < frozen ; exists ; 2001 ; 2001 ; Seminars in Neurosurgery Volume 12 ; 12 ; >
-   au < frozen ; exists ; 2002 ; 2002 ; Seminars in Neurosurgery Volume 13 ; 13 ; >
-   au < frozen ; exists ; 2003 ; 2003 ; Seminars in Neurosurgery Volume 14 ; 14 ; >
+   au < finished ; manifest ; 2000 ; 2000 ; Seminars in Neurosurgery Volume 11 ; 11 ; reingest1.clockss.org:8082 >
+   au < finished ; manifest ; 2001 ; 2001 ; Seminars in Neurosurgery Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+   au < finished ; manifest ; 2002 ; 2002 ; Seminars in Neurosurgery Volume 13 ; 13 ; reingest3.clockss.org:8083 >
+   au < finished ; manifest ; 2003 ; 2003 ; Seminars in Neurosurgery Volume 14 ; 14 ; reingest4.clockss.org:8082 >
    au < frozen ; exists ; 2004 ; 2004 ; Seminars in Neurosurgery Volume 15 ; 15 ; >
 
   }
@@ -5740,11 +5740,11 @@
     param[journal_id] = 10.1055/s-00000051
     comment[years] = 2002-current
 
-   au < frozen ; exists ; 2002 ; 2002 ; Seminars in Plastic Surgery Volume 16 ; 16 ; >
-   au < frozen ; exists ; 2003 ; 2003 ; Seminars in Plastic Surgery Volume 17 ; 17 ; >
+   au < finished ; manifest ; 2002 ; 2002 ; Seminars in Plastic Surgery Volume 16 ; 16 ; reingest5.clockss.org:8082 >
+   au < finished ; manifest ; 2003 ; 2003 ; Seminars in Plastic Surgery Volume 17 ; 17 ; reingest1.clockss.org:8082 >
    au < frozen ; exists ; 2004 ; 2004 ; Seminars in Plastic Surgery Volume 18 ; 18 ; >
    au < frozen ; exists ; 2005 ; 2005 ; Seminars in Plastic Surgery Volume 19 ; 19 ; >
-   au < frozen ; exists ; 2006 ; 2006 ; Seminars in Plastic Surgery Volume 20 ; 20 ; >
+   au < finished ; manifest ; 2006 ; 2006 ; Seminars in Plastic Surgery Volume 20 ; 20 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2007 ; 2007 ; Seminars in Plastic Surgery Volume 21 ; 21 ; reingest2.clockss.org:8085 >
    au < frozen ; exists ; 2008 ; 2008 ; Seminars in Plastic Surgery Volume 22 ; 22 ; >
    au < finished ; crawling ; 2009 ; 2009 ; Seminars in Plastic Surgery Volume 23 ; 23 ; reingest4.clockss.org:8082 >
@@ -5807,10 +5807,10 @@
     param[journal_id] = 10.1055/s-00000072
     comment[years] = 2000-current
 
-   au < frozen ; exists ; 2000 ; 2000 ; Seminars in Reproductive Medicine Volume 18 ; 18 ; >
-   au < frozen ; exists ; 2001 ; 2001 ; Seminars in Reproductive Medicine Volume 19 ; 19 ; >
-   au < frozen ; exists ; 2002 ; 2002 ; Seminars in Reproductive Medicine Volume 20 ; 20 ; >
-   au < frozen ; exists ; 2003 ; 2003 ; Seminars in Reproductive Medicine Volume 21 ; 21 ; >
+   au < finished ; manifest ; 2000 ; 2000 ; Seminars in Reproductive Medicine Volume 18 ; 18 ; reingest3.clockss.org:8083 >
+   au < finished ; manifest ; 2001 ; 2001 ; Seminars in Reproductive Medicine Volume 19 ; 19 ; reingest4.clockss.org:8082 >
+   au < finished ; manifest ; 2002 ; 2002 ; Seminars in Reproductive Medicine Volume 20 ; 20 ; reingest5.clockss.org:8082 >
+   au < finished ; manifest ; 2003 ; 2003 ; Seminars in Reproductive Medicine Volume 21 ; 21 ; reingest1.clockss.org:8082 >
    au < frozen ; exists ; 2004 ; 2004 ; Seminars in Reproductive Medicine Volume 22 ; 22 ; >
    au < frozen ; exists ; 2005 ; 2005 ; Seminars in Reproductive Medicine Volume 23 ; 23 ; >
    au < frozen ; exists ; 2006 ; 2006 ; Seminars in Reproductive Medicine Volume 24 ; 24 ; >
@@ -5851,10 +5851,10 @@
    au < crawling ; exists ; 1997 ; 1997 ; Seminars in Respiratory and Critical Care Medicine Volume 18 ; 18 ; >
    au < crawling ; exists ; 1998 ; 1998 ; Seminars in Respiratory and Critical Care Medicine Volume 19 ; 19 ; >
    au < crawling ; exists ; 1999 ; 1999 ; Seminars in Respiratory and Critical Care Medicine Volume 20 ; 20 ; >
-   au < frozen ; exists ; 2000 ; 2000 ; Seminars in Respiratory and Critical Care Medicine Volume 21 ; 21 ; >
-   au < frozen ; exists ; 2001 ; 2001 ; Seminars in Respiratory and Critical Care Medicine Volume 22 ; 22 ; >
-   au < frozen ; exists ; 2002 ; 2002 ; Seminars in Respiratory and Critical Care Medicine Volume 23 ; 23 ; >
-   au < frozen ; exists ; 2003 ; 2003 ; Seminars in Respiratory and Critical Care Medicine Volume 24 ; 24 ; >
+   au < finished ; manifest ; 2000 ; 2000 ; Seminars in Respiratory and Critical Care Medicine Volume 21 ; 21 ; reingest2.clockss.org:8085 >
+   au < finished ; manifest ; 2001 ; 2001 ; Seminars in Respiratory and Critical Care Medicine Volume 22 ; 22 ; reingest3.clockss.org:8083 >
+   au < finished ; manifest ; 2002 ; 2002 ; Seminars in Respiratory and Critical Care Medicine Volume 23 ; 23 ; reingest4.clockss.org:8082 >
+   au < finished ; manifest ; 2003 ; 2003 ; Seminars in Respiratory and Critical Care Medicine Volume 24 ; 24 ; reingest5.clockss.org:8082 >
    au < frozen ; exists ; 2004 ; 2004 ; Seminars in Respiratory and Critical Care Medicine Volume 25 ; 25 ; >
    au < frozen ; exists ; 2005 ; 2005 ; Seminars in Respiratory and Critical Care Medicine Volume 26 ; 26 ; >
    au < frozen ; exists ; 2006 ; 2006 ; Seminars in Respiratory and Critical Care Medicine Volume 27 ; 27 ; >
@@ -5895,20 +5895,20 @@
     au < manifest ; exists ; 1987 ; 1987 ; Seminars in Speech and Language Volume 8 ; 8 ; >
     au < manifest ; exists ; 1988 ; 1988 ; Seminars in Speech and Language Volume 9 ; 9 ; >
     au < manifest ; exists ; 1989 ; 1989 ; Seminars in Speech and Language Volume 10 ; 10 ; >
-    au < frozen ; exists ; 1990 ; 1990 ; Seminars in Speech and Language Volume 11 ; 11 ; >
+    au < finished ; manifest ; 1990 ; 1990 ; Seminars in Speech and Language Volume 11 ; 11 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 1991 ; 1991 ; Seminars in Speech and Language Volume 12 ; 12 ; >
     au < frozen ; exists ; 1992 ; 1992 ; Seminars in Speech and Language Volume 13 ; 13 ; >
     au < frozen ; exists ; 1993 ; 1993 ; Seminars in Speech and Language Volume 14 ; 14 ; >
-    au < frozen ; exists ; 1994 ; 1994 ; Seminars in Speech and Language Volume 15 ; 15 ; >
-    au < frozen ; exists ; 1995 ; 1995 ; Seminars in Speech and Language Volume 16 ; 16 ; >
-    au < frozen ; exists ; 1996 ; 1996 ; Seminars in Speech and Language Volume 17 ; 17 ; >
+    au < finished ; manifest ; 1994 ; 1994 ; Seminars in Speech and Language Volume 15 ; 15 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1995 ; 1995 ; Seminars in Speech and Language Volume 16 ; 16 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1996 ; 1996 ; Seminars in Speech and Language Volume 17 ; 17 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 1997 ; 1997 ; Seminars in Speech and Language Volume 18 ; 18 ; >
-    au < frozen ; exists ; 1998 ; 1998 ; Seminars in Speech and Language Volume 19 ; 19 ; >
-    au < frozen ; exists ; 1999 ; 1999 ; Seminars in Speech and Language Volume 20 ; 20 ; >
-    au < frozen ; exists ; 2000 ; 2000 ; Seminars in Speech and Language Volume 21 ; 21 ; >
-    au < frozen ; exists ; 2001 ; 2001 ; Seminars in Speech and Language Volume 22 ; 22 ; >
-    au < frozen ; exists ; 2002 ; 2002 ; Seminars in Speech and Language Volume 23 ; 23 ; >
-    au < frozen ; exists ; 2003 ; 2003 ; Seminars in Speech and Language Volume 24 ; 24 ; >
+    au < finished ; manifest ; 1998 ; 1998 ; Seminars in Speech and Language Volume 19 ; 19 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1999 ; 1999 ; Seminars in Speech and Language Volume 20 ; 20 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2000 ; 2000 ; Seminars in Speech and Language Volume 21 ; 21 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2001 ; 2001 ; Seminars in Speech and Language Volume 22 ; 22 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2002 ; 2002 ; Seminars in Speech and Language Volume 23 ; 23 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2003 ; 2003 ; Seminars in Speech and Language Volume 24 ; 24 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2004 ; 2004 ; Seminars in Speech and Language Volume 25 ; 25 ; >
     au < frozen ; exists ; 2005 ; 2005 ; Seminars in Speech and Language Volume 26 ; 26 ; >
     au < frozen ; exists ; 2006 ; 2006 ; Seminars in Speech and Language Volume 27 ; 27 ; >
@@ -5962,17 +5962,17 @@
     au < frozen ; exists ; 1990 ; 1990 ; Seminars in Thrombosis and Hemostasis Volume 16 ; 16 ; >
     au < frozen ; exists ; 1991 ; 1991 ; Seminars in Thrombosis and Hemostasis Volume 17 ; 17 ; >
     au < frozen ; exists ; 1992 ; 1992 ; Seminars in Thrombosis and Hemostasis Volume 18 ; 18 ; >
-    au < frozen ; exists ; 1993 ; 1993 ; Seminars in Thrombosis and Hemostasis Volume 19 ; 19 ; >
+    au < finished ; manifest ; 1993 ; 1993 ; Seminars in Thrombosis and Hemostasis Volume 19 ; 19 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 1994 ; 1994 ; Seminars in Thrombosis and Hemostasis Volume 20 ; 20 ; >
-    au < frozen ; exists ; 1995 ; 1995 ; Seminars in Thrombosis and Hemostasis Volume 21 ; 21 ; >
-    au < frozen ; exists ; 1996 ; 1996 ; Seminars in Thrombosis and Hemostasis Volume 22 ; 22 ; >
-    au < frozen ; exists ; 1997 ; 1997 ; Seminars in Thrombosis and Hemostasis Volume 23 ; 23 ; >
+    au < finished ; manifest ; 1995 ; 1995 ; Seminars in Thrombosis and Hemostasis Volume 21 ; 21 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1996 ; 1996 ; Seminars in Thrombosis and Hemostasis Volume 22 ; 22 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1997 ; 1997 ; Seminars in Thrombosis and Hemostasis Volume 23 ; 23 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 1998 ; 1998 ; Seminars in Thrombosis and Hemostasis Volume 24 ; 24 ; >
-    au < frozen ; exists ; 1999 ; 1999 ; Seminars in Thrombosis and Hemostasis Volume 25 ; 25 ; >
-    au < frozen ; exists ; 2000 ; 2000 ; Seminars in Thrombosis and Hemostasis Volume 26 ; 26 ; >
-    au < frozen ; exists ; 2001 ; 2001 ; Seminars in Thrombosis and Hemostasis Volume 27 ; 27 ; >
-    au < frozen ; exists ; 2002 ; 2002 ; Seminars in Thrombosis and Hemostasis Volume 28 ; 28 ; >
-    au < frozen ; exists ; 2003 ; 2003 ; Seminars in Thrombosis and Hemostasis Volume 29 ; 29 ; >
+    au < finished ; manifest ; 1999 ; 1999 ; Seminars in Thrombosis and Hemostasis Volume 25 ; 25 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2000 ; 2000 ; Seminars in Thrombosis and Hemostasis Volume 26 ; 26 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2001 ; 2001 ; Seminars in Thrombosis and Hemostasis Volume 27 ; 27 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2002 ; 2002 ; Seminars in Thrombosis and Hemostasis Volume 28 ; 28 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2003 ; 2003 ; Seminars in Thrombosis and Hemostasis Volume 29 ; 29 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2004 ; 2004 ; Seminars in Thrombosis and Hemostasis Volume 30 ; 30 ; >
     au < frozen ; exists ; 2005 ; 2005 ; Seminars in Thrombosis and Hemostasis Volume 31 ; 31 ; >
     au < frozen ; exists ; 2006 ; 2006 ; Seminars in Thrombosis and Hemostasis Volume 32 ; 32 ; >
@@ -6007,11 +6007,11 @@
     param[journal_id] = 10.1055/s-00000116
     comment[years] = 2001-2005
 
-    au < frozen ; exists ; 2001 ; 2001 ; Seminars in Vascular Medicine Volume 1 ; 1 ; >
-    au < frozen ; exists ; 2002 ; 2002 ; Seminars in Vascular Medicine Volume 2 ; 2 ; >
-    au < frozen ; exists ; 2003 ; 2003 ; Seminars in Vascular Medicine Volume 3 ; 3 ; >
+    au < finished ; manifest ; 2001 ; 2001 ; Seminars in Vascular Medicine Volume 1 ; 1 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2002 ; 2002 ; Seminars in Vascular Medicine Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2003 ; 2003 ; Seminars in Vascular Medicine Volume 3 ; 3 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2004 ; 2004 ; Seminars in Vascular Medicine Volume 4 ; 4 ; >
-    au < frozen ; exists ; 2005 ; 2005 ; Seminars in Vascular Medicine Volume 5 ; 5 ; >
+    au < finished ; manifest ; 2005 ; 2005 ; Seminars in Vascular Medicine Volume 5 ; 5 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -6061,9 +6061,9 @@
     param[journal_id] = 10.1055/s-00000079
     comment[years] = 2001-2011
 
-    au < frozen ; exists ; 2001 ; 2001 ; Skull Base Volume 11 ; 11 ; >
-    au < frozen ; exists ; 2002 ; 2002 ; Skull Base Volume 12 ; 12 ; >
-    au < frozen ; exists ; 2003 ; 2003 ; Skull Base Volume 13 ; 13 ; >
+    au < finished ; manifest ; 2001 ; 2001 ; Skull Base Volume 11 ; 11 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2002 ; 2002 ; Skull Base Volume 12 ; 12 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2003 ; 2003 ; Skull Base Volume 13 ; 13 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2004 ; 2004 ; Skull Base Volume 14 ; 14 ; >
     au < frozen ; exists ; 2005 ; 2005 ; Skull Base Volume 15 ; 15 ; >
     au < frozen ; exists ; 2006 ; 2006 ; Skull Base Volume 16 ; 16 ; >
@@ -6105,10 +6105,10 @@
     comment[years] = 1999-2004
 
     au < crawling ; exists ; 1999 ; 1999 ; Sleep and Breathing Volume 3 ; 3 ; >
-    au < frozen ; exists ; 2000 ; 2000 ; Sleep and Breathing Volume 4 ; 4 ; >
-    au < frozen ; exists ; 2001 ; 2001 ; Sleep and Breathing Volume 5 ; 5 ; >
-    au < frozen ; exists ; 2002 ; 2002 ; Sleep and Breathing Volume 6 ; 6 ; >
-    au < frozen ; exists ; 2003 ; 2003 ; Sleep and Breathing Volume 7 ; 7 ; >
+    au < finished ; manifest ; 2000 ; 2000 ; Sleep and Breathing Volume 4 ; 4 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2001 ; 2001 ; Sleep and Breathing Volume 5 ; 5 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2002 ; 2002 ; Sleep and Breathing Volume 6 ; 6 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2003 ; 2003 ; Sleep and Breathing Volume 7 ; 7 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2004 ; 2004 ; Sleep and Breathing Volume 8 ; 8 ; >
 
   }
@@ -6173,16 +6173,16 @@
    au < manifest ; exists ; 1987 ; 1987 ; Sportverletzung - Sportschaden Volume 1 ; 1 ; >
    au < manifest ; exists ; 1988 ; 1988 ; Sportverletzung - Sportschaden Volume 2 ; 2 ; >
    au < manifest ; exists ; 1989 ; 1989 ; Sportverletzung - Sportschaden Volume 3 ; 3 ; >
-   au < frozen ; exists ; 1990 ; 1990 ; Sportverletzung - Sportschaden Volume 4 ; 4 ; >
-   au < frozen ; exists ; 1991 ; 1991 ; Sportverletzung - Sportschaden Volume 5 ; 5 ; >
-   au < frozen ; exists ; 1992 ; 1992 ; Sportverletzung - Sportschaden Volume 6 ; 6 ; >
-   au < frozen ; exists ; 1993 ; 1993 ; Sportverletzung - Sportschaden Volume 7 ; 7 ; >
-   au < frozen ; exists ; 1994 ; 1994 ; Sportverletzung - Sportschaden Volume 8 ; 8 ; >
-   au < frozen ; exists ; 1995 ; 1995 ; Sportverletzung - Sportschaden Volume 9 ; 9 ; >
-   au < frozen ; exists ; 1996 ; 1996 ; Sportverletzung - Sportschaden Volume 10 ; 10 ; >
-   au < frozen ; exists ; 1997 ; 1997 ; Sportverletzung - Sportschaden Volume 11 ; 11 ; >
-   au < frozen ; exists ; 1998 ; 1998 ; Sportverletzung - Sportschaden Volume 12 ; 12 ; >
-   au < frozen ; exists ; 1999 ; 1999 ; Sportverletzung - Sportschaden Volume 13 ; 13 ; >
+   au < finished ; manifest ; 1990 ; 1990 ; Sportverletzung - Sportschaden Volume 4 ; 4 ; reingest1.clockss.org:8082 >
+   au < finished ; manifest ; 1991 ; 1991 ; Sportverletzung - Sportschaden Volume 5 ; 5 ; reingest2.clockss.org:8085 >
+   au < finished ; manifest ; 1992 ; 1992 ; Sportverletzung - Sportschaden Volume 6 ; 6 ; reingest3.clockss.org:8083 >
+   au < finished ; manifest ; 1993 ; 1993 ; Sportverletzung - Sportschaden Volume 7 ; 7 ; reingest4.clockss.org:8082 >
+   au < finished ; manifest ; 1994 ; 1994 ; Sportverletzung - Sportschaden Volume 8 ; 8 ; reingest5.clockss.org:8082 >
+   au < finished ; manifest ; 1995 ; 1995 ; Sportverletzung - Sportschaden Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+   au < finished ; manifest ; 1996 ; 1996 ; Sportverletzung - Sportschaden Volume 10 ; 10 ; reingest2.clockss.org:8085 >
+   au < finished ; manifest ; 1997 ; 1997 ; Sportverletzung - Sportschaden Volume 11 ; 11 ; reingest3.clockss.org:8083 >
+   au < finished ; manifest ; 1998 ; 1998 ; Sportverletzung - Sportschaden Volume 12 ; 12 ; reingest4.clockss.org:8082 >
+   au < finished ; manifest ; 1999 ; 1999 ; Sportverletzung - Sportschaden Volume 13 ; 13 ; reingest5.clockss.org:8082 >
    au < frozen ; exists ; 2000 ; 2000 ; Sportverletzung - Sportschaden Volume 14 ; 14 ; >
    au < frozen ; exists ; 2001 ; 2001 ; Sportverletzung - Sportschaden Volume 15 ; 15 ; >
    au < frozen ; exists ; 2002 ; 2002 ; Sportverletzung - Sportschaden Volume 16 ; 16 ; >
@@ -6320,8 +6320,8 @@
     param[journal_id] = 10.1055/s-00000131
     comment[years] = 2005-current
 
-   au < frozen ; exists ; 2005 ; 2005 ; SYNFACTS Volume 1 ; 1 ; >
-   au < frozen ; exists ; 2006 ; 2006 ; SYNFACTS Volume 2 ; 2 ; >
+   au < finished ; manifest ; 2005 ; 2005 ; SYNFACTS Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+   au < finished ; manifest ; 2006 ; 2006 ; SYNFACTS Volume 2 ; 2 ; reingest2.clockss.org:8085 >
    au < frozen ; exists ; 2007 ; 2007 ; SYNFACTS Volume 3 ; 3 ; >
    au < finished ; crawling ; 2008 ; 2008 ; SYNFACTS Volume 4 ; 4 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2009 ; 2009 ; SYNFACTS Volume 5 ; 5 ; reingest3.clockss.org:8083 >
@@ -6356,8 +6356,8 @@
    au < manifest ; exists ; 1989 ; 1989 ; SYNLETT Volume 1 (1989) ; 1 ; >
    au < frozen ; exists ; 1990 ; 1990 ; SYNLETT Volume 1 (1990) ; 1 ; >
    au < frozen ; exists ; 1991 ; 1991 ; SYNLETT Volume 2 ; 2 ; >
-   au < frozen ; exists ; 1992 ; 1992 ; SYNLETT Volume 3 ; 3 ; >
-   au < frozen ; exists ; 1993 ; 1993 ; SYNLETT Volume 4 ; 4 ; >
+   au < finished ; manifest ; 1992 ; 1992 ; SYNLETT Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+   au < finished ; manifest ; 1993 ; 1993 ; SYNLETT Volume 4 ; 4 ; reingest4.clockss.org:8082 >
    au < frozen ; exists ; 1994 ; 1994 ; SYNLETT Volume 5 ; 5 ; >
    au < frozen ; exists ; 1995 ; 1995 ; SYNLETT Volume 6 ; 6 ; >
    au < frozen ; exists ; 1996 ; 1996 ; SYNLETT Volume 7 ; 7 ; >
@@ -6426,8 +6426,8 @@
    au < frozen ; exists ; 1990 ; 1990 ; SYNTHESIS Volume 22 ; 22 ; >
    au < frozen ; exists ; 1991 ; 1991 ; SYNTHESIS Volume 23 ; 23 ; >
    au < frozen ; exists ; 1992 ; 1992 ; SYNTHESIS Volume 24 ; 24 ; >
-   au < frozen ; exists ; 1993 ; 1993 ; SYNTHESIS Volume 25 ; 25 ; >
-   au < frozen ; exists ; 1994 ; 1994 ; SYNTHESIS Volume 26 ; 26 ; >
+   au < finished ; manifest ; 1993 ; 1993 ; SYNTHESIS Volume 25 ; 25 ; reingest5.clockss.org:8082 >
+   au < finished ; manifest ; 1994 ; 1994 ; SYNTHESIS Volume 26 ; 26 ; reingest1.clockss.org:8082 >
    au < frozen ; exists ; 1995 ; 1995 ; SYNTHESIS Volume 27 ; 27 ; >
    au < frozen ; exists ; 1996 ; 1996 ; SYNTHESIS Volume 28 ; 28 ; >
    au < frozen ; exists ; 1997 ; 1997 ; SYNTHESIS Volume 29 ; 29 ; >
@@ -6471,12 +6471,12 @@
     param[journal_id] = 10.1055/s-00000156
     comment[years] = 2003-2009
 
-   au < frozen ; exists ; 2003 ; 2003 ; team spiegel Volume 10 ; 10 ; >
-   au < frozen ; exists ; 2004 ; 2004 ; team spiegel Volume 11 ; 11 ; >
-   au < frozen ; exists ; 2005 ; 2005 ; team spiegel Volume 12 ; 12 ; >
-   au < frozen ; exists ; 2006 ; 2006 ; team spiegel Volume 13 ; 13 ; >
+   au < finished ; manifest ; 2003 ; 2003 ; team spiegel Volume 10 ; 10 ; reingest2.clockss.org:8085 >
+   au < finished ; manifest ; 2004 ; 2004 ; team spiegel Volume 11 ; 11 ; reingest3.clockss.org:8083 >
+   au < finished ; manifest ; 2005 ; 2005 ; team spiegel Volume 12 ; 12 ; reingest4.clockss.org:8082 >
+   au < finished ; manifest ; 2006 ; 2006 ; team spiegel Volume 13 ; 13 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2007 ; 2007 ; team spiegel Volume 14 ; 14 ; reingest3.clockss.org:8083 >
-   au < frozen ; exists ; 2008 ; 2008 ; team spiegel Volume 15 ; 15 ; >
+   au < finished ; manifest ; 2008 ; 2008 ; team spiegel Volume 15 ; 15 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2009 ; 2009 ; team spiegel Volume 16 ; 16 ; reingest1.clockss.org:8082 >
 
   }
@@ -6532,13 +6532,13 @@
     au < manifest ; exists ; 1987 ; 1987 ; The Thoracic and Cardiovascular Surgeon Volume 35 ; 35 ; >
     au < manifest ; exists ; 1988 ; 1988 ; The Thoracic and Cardiovascular Surgeon Volume 36 ; 36 ; >
     au < manifest ; exists ; 1989 ; 1989 ; The Thoracic and Cardiovascular Surgeon Volume 37 ; 37 ; >
-    au < frozen ; exists ; 1990 ; 1990 ; The Thoracic and Cardiovascular Surgeon Volume 38 ; 38 ; >
-    au < frozen ; exists ; 1991 ; 1991 ; The Thoracic and Cardiovascular Surgeon Volume 39 ; 39 ; >
+    au < finished ; manifest ; 1990 ; 1990 ; The Thoracic and Cardiovascular Surgeon Volume 38 ; 38 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1991 ; 1991 ; The Thoracic and Cardiovascular Surgeon Volume 39 ; 39 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 1992 ; 1992 ; The Thoracic and Cardiovascular Surgeon Volume 40 ; 40 ; >
     au < frozen ; exists ; 1993 ; 1993 ; The Thoracic and Cardiovascular Surgeon Volume 41 ; 41 ; >
-    au < frozen ; exists ; 1994 ; 1994 ; The Thoracic and Cardiovascular Surgeon Volume 42 ; 42 ; >
-    au < frozen ; exists ; 1995 ; 1995 ; The Thoracic and Cardiovascular Surgeon Volume 43 ; 43 ; >
-    au < frozen ; exists ; 1996 ; 1996 ; The Thoracic and Cardiovascular Surgeon Volume 44 ; 44 ; >
+    au < finished ; manifest ; 1994 ; 1994 ; The Thoracic and Cardiovascular Surgeon Volume 42 ; 42 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1995 ; 1995 ; The Thoracic and Cardiovascular Surgeon Volume 43 ; 43 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1996 ; 1996 ; The Thoracic and Cardiovascular Surgeon Volume 44 ; 44 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 1997 ; 1997 ; The Thoracic and Cardiovascular Surgeon Volume 45 ; 45 ; >
     au < frozen ; exists ; 1998 ; 1998 ; The Thoracic and Cardiovascular Surgeon Volume 46 ; 46 ; >
     au < frozen ; exists ; 1999 ; 1999 ; The Thoracic and Cardiovascular Surgeon Volume 47 ; 47 ; >
@@ -6701,15 +6701,15 @@
     au < manifest ; exists ; 1988 ; 1988 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 9 ; 9 ; >
     au < manifest ; exists ; 1989 ; 1989 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 10 ; 10 ; >
     au < frozen ; exists ; 1990 ; 1990 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 11 ; 11 ; >
-    au < frozen ; exists ; 1991 ; 1991 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 12 ; 12 ; >
-    au < frozen ; exists ; 1992 ; 1992 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 13 ; 13 ; >
-    au < frozen ; exists ; 1993 ; 1993 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 14 ; 14 ; >
+    au < finished ; manifest ; 1991 ; 1991 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1992 ; 1992 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 13 ; 13 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1993 ; 1993 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 14 ; 14 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 1994 ; 1994 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 15 ; 15 ; >
-    au < frozen ; exists ; 1995 ; 1995 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 16 ; 16 ; >
+    au < finished ; manifest ; 1995 ; 1995 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 16 ; 16 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 1996 ; 1996 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 17 ; 17 ; >
-    au < frozen ; exists ; 1997 ; 1997 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 18 ; 18 ; >
-    au < frozen ; exists ; 1998 ; 1998 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 19 ; 19 ; >
-    au < frozen ; exists ; 1999 ; 1999 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 20 ; 20 ; >
+    au < finished ; manifest ; 1997 ; 1997 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 18 ; 18 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1998 ; 1998 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 19 ; 19 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1999 ; 1999 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 20 ; 20 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2000 ; 2000 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 21 ; 21 ; >
     au < frozen ; exists ; 2001 ; 2001 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 22 ; 22 ; >
     au < frozen ; exists ; 2002 ; 2002 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 23 ; 23 ; >
@@ -6788,12 +6788,12 @@
     param[journal_id] = 10.1055/s-00000154
     comment[years] = 2003-current
 
-    au < frozen ; exists ; 2003 ; 2003 ; veterinär spiegel Volume 13 ; 13 ; >
-    au < frozen ; exists ; 2004 ; 2004 ; veterinär spiegel Volume 14 ; 14 ; >
-    au < frozen ; exists ; 2005 ; 2005 ; veterinär spiegel Volume 15 ; 15 ; >
-    au < frozen ; exists ; 2006 ; 2006 ; veterinär spiegel Volume 16 ; 16 ; >
+    au < finished ; manifest ; 2003 ; 2003 ; veterinär spiegel Volume 13 ; 13 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2004 ; 2004 ; veterinär spiegel Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2005 ; 2005 ; veterinär spiegel Volume 15 ; 15 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2006 ; 2006 ; veterinär spiegel Volume 16 ; 16 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2007 ; 2007 ; veterinär spiegel Volume 17 ; 17 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2008 ; 2008 ; veterinär spiegel Volume 18 ; 18 ; >
+    au < finished ; manifest ; 2008 ; 2008 ; veterinär spiegel Volume 18 ; 18 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2009 ; 2009 ; veterinär spiegel Volume 19 ; 19 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; veterinär spiegel Volume 20 ; 20 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; 2011 ; veterinär spiegel Volume 21 ; 21 ; reingest1.clockss.org:8082 >
@@ -7084,17 +7084,17 @@
     au < manifest ; exists ; 1989 ; 1989 ; Zeitschrift für Klassische Homöopathie Volume 33 ; 33 ; >
     au < frozen ; exists ; 1990 ; 1990 ; Zeitschrift für Klassische Homöopathie Volume 34 ; 34 ; >
     au < frozen ; exists ; 1991 ; 1991 ; Zeitschrift für Klassische Homöopathie Volume 35 ; 35 ; >
-    au < frozen ; exists ; 1992 ; 1992 ; Zeitschrift für Klassische Homöopathie Volume 36 ; 36 ; >
-    au < frozen ; exists ; 1993 ; 1993 ; Zeitschrift für Klassische Homöopathie Volume 37 ; 37 ; >
-    au < frozen ; exists ; 1994 ; 1994 ; Zeitschrift für Klassische Homöopathie Volume 38 ; 38 ; >
-    au < frozen ; exists ; 1995 ; 1995 ; Zeitschrift für Klassische Homöopathie Volume 39 ; 39 ; >
-    au < frozen ; exists ; 1996 ; 1996 ; Zeitschrift für Klassische Homöopathie Volume 40 ; 40 ; >
-    au < frozen ; exists ; 1997 ; 1997 ; Zeitschrift für Klassische Homöopathie Volume 41 ; 41 ; >
-    au < frozen ; exists ; 1998 ; 1998 ; Zeitschrift für Klassische Homöopathie Volume 42 ; 42 ; >
+    au < finished ; manifest ; 1992 ; 1992 ; Zeitschrift für Klassische Homöopathie Volume 36 ; 36 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1993 ; 1993 ; Zeitschrift für Klassische Homöopathie Volume 37 ; 37 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1994 ; 1994 ; Zeitschrift für Klassische Homöopathie Volume 38 ; 38 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1995 ; 1995 ; Zeitschrift für Klassische Homöopathie Volume 39 ; 39 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1996 ; 1996 ; Zeitschrift für Klassische Homöopathie Volume 40 ; 40 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1997 ; 1997 ; Zeitschrift für Klassische Homöopathie Volume 41 ; 41 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1998 ; 1998 ; Zeitschrift für Klassische Homöopathie Volume 42 ; 42 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 1999 ; 1999 ; Zeitschrift für Klassische Homöopathie Volume 43 ; 43 ; >
-    au < frozen ; exists ; 2000 ; 2000 ; Zeitschrift für Klassische Homöopathie Volume 44 ; 44 ; >
-    au < frozen ; exists ; 2001 ; 2001 ; Zeitschrift für Klassische Homöopathie Volume 45 ; 45 ; >
-    au < frozen ; exists ; 2002 ; 2002 ; Zeitschrift für Klassische Homöopathie Volume 46 ; 46 ; >
+    au < finished ; manifest ; 2000 ; 2000 ; Zeitschrift für Klassische Homöopathie Volume 44 ; 44 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2001 ; 2001 ; Zeitschrift für Klassische Homöopathie Volume 45 ; 45 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2002 ; 2002 ; Zeitschrift für Klassische Homöopathie Volume 46 ; 46 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2003 ; 2003 ; Zeitschrift für Klassische Homöopathie Volume 47 ; 47 ; >
     au < frozen ; exists ; 2004 ; 2004 ; Zeitschrift für Klassische Homöopathie Volume 48 ; 48 ; >
     au < frozen ; exists ; 2005 ; 2005 ; Zeitschrift für Klassische Homöopathie Volume 49 ; 49 ; >
@@ -7228,16 +7228,16 @@
     au < manifest ; exists ; 1987 ; 1987 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1987 ; 0 ; >
     au < manifest ; exists ; 1988 ; 1988 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1988 ; 0 ; >
     au < manifest ; exists ; 1989 ; 1989 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1989 ; 0 ; >
-    au < frozen ; exists ; 1990 ; 1990 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1990 ; 0 ; >
-    au < frozen ; exists ; 1991 ; 1991 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1991 ; 0 ; >
-    au < frozen ; exists ; 1992 ; 1992 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1992 ; 0 ; >
-    au < frozen ; exists ; 1993 ; 1993 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1993 ; 0 ; >
+    au < finished ; manifest ; 1990 ; 1990 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1990 ; 0 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1991 ; 1991 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1991 ; 0 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1992 ; 1992 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1992 ; 0 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1993 ; 1993 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1993 ; 0 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 1994 ; 1994 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1994 ; 0 ; >
     au < frozen ; exists ; 1995 ; 1995 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1995 ; 0 ; >
-    au < frozen ; exists ; 1996 ; 1996 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1996 ; 0 ; >
-    au < frozen ; exists ; 1997 ; 1997 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1997 ; 0 ; >
-    au < frozen ; exists ; 1998 ; 1998 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1998 ; 0 ; >
-    au < frozen ; exists ; 1999 ; 1999 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1999 ; 0 ; >
+    au < finished ; manifest ; 1996 ; 1996 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1996 ; 0 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1997 ; 1997 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1997 ; 0 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1998 ; 1998 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1998 ; 0 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1999 ; 1999 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1999 ; 0 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2000 ; 2000 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2000 ; 0 ; >
     au < frozen ; exists ; 2001 ; 2001 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2001 ; 0 ; >
     au < frozen ; exists ; 2002 ; 2002 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2002 ; 0 ; >
