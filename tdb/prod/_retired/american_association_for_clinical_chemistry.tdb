@@ -87,9 +87,9 @@
       au < aacc.AmAssocClinChemDrupalPlugin ; doNotProcess ; 2003 ; Clinical Chemistry Volume 49 ; 49 >
       au < aacc.AmAssocClinChemDrupalPlugin ; doNotProcess ; 2004 ; Clinical Chemistry Volume 50 ; 50 >
 
-      au < aacc.AmAssocClinChemDrupalPlugin ; down ; 2016 ; Clinical Chemistry Volume 62 ; 62 >
-      au < aacc.AmAssocClinChemDrupalPlugin ; down ; 2017 ; Clinical Chemistry Volume 63 ; 63 >
-      au < aacc.AmAssocClinChemDrupalPlugin ; down ; 2018 ; Clinical Chemistry Volume 64 ; 64 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; superseded ; 2016 ; Clinical Chemistry Volume 62 [superseded] ; 62 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; superseded ; 2017 ; Clinical Chemistry Volume 63 [superseded] ; 63 >
+      au < aacc.AmAssocClinChemDrupalPlugin ; superseded ; 2018 ; Clinical Chemistry Volume 64 [superseded] ; 64 >
 
     }
 
