@@ -67,6 +67,9 @@ public class WileyBooksSourceArticleIteratorFactory implements ArticleIteratorFa
   https://clockss-test.lockss.org/sourcefiles/wileybooks-released/2022_01/9780470007259.zip!/gloss/gloss.xml
   https://clockss-test.lockss.org/sourcefiles/wileybooks-released/2022_01/9780470007259.zip!/index/index.pdf
   https://clockss-test.lockss.org/sourcefiles/wileybooks-released/2022_01/9780470007259.zip!/index/index.xml
+
+  Besides "fmatter.xml", also need to try "fmatter1.xml"/"fmatter_indsub.xml"
+
    */
 
   protected static final String ALL_ZIP_XML_PATTERN_TEMPLATE =
@@ -85,8 +88,8 @@ public class WileyBooksSourceArticleIteratorFactory implements ArticleIteratorFa
     return ALL_ZIP_XML_PATTERN_TEMPLATE;
   }
 
-  public static final Pattern XML_PATTERN = Pattern.compile("/fmatter/(.*)\\.xml$", Pattern.CASE_INSENSITIVE);
-  public static final Pattern PDF_PATTERN = Pattern.compile("/fmatter/(.*)\\.pdf$", Pattern.CASE_INSENSITIVE);
+  public static final Pattern XML_PATTERN = Pattern.compile("/fmatter/(fmatter|fmatter1|fmatter_indsub)\\.xml$", Pattern.CASE_INSENSITIVE);
+  public static final Pattern PDF_PATTERN = Pattern.compile("/fmatter/(fmatter|fmatter1|fmatter_indsub)\\.pdf$", Pattern.CASE_INSENSITIVE);
   public static final String XML_REPLACEMENT = "/fmatter/$1.xml";
   private static final String PDF_REPLACEMENT = "/fmatter/$1.pdf";
 
