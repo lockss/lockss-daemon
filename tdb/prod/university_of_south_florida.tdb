@@ -8,6 +8,7 @@
     plugin = org.lockss.plugin.bepress.BePressPlugin 
     #param[base_url] = http://scholarcommons.usf.edu/
     implicit < status ; year ; name ; param[volume] ; param[base_url] >
+    #Moved 2022 from https://scholarcommons.usf.edu/ to https://digitalcommons.usf.edu/
 
   {
   

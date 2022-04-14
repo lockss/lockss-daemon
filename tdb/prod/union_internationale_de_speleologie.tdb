@@ -7,6 +7,7 @@
   {
   
    # RT3894 GLN only for now (manifest pages have both LOCKSS and CLOCKSS permission statements)
+    #Moved 2022 from https://scholarcommons.usf.edu/ to https://digitalcommons.usf.edu/
 
   }
 
@@ -24,57 +25,58 @@
     param[journal_abbr] = ijs
     implicit < status ; year ; name ; param[volume] ; param[base_url] >
 
-    au < released ; 1972 ; International Journal of Speleology Volume 1 ; 1 ; http://scholarcommons.usf.edu/ >
-    au < released ; 1973 ; International Journal of Speleology Volume 2 ; 2 ; http://scholarcommons.usf.edu/ >
-    au < released ; 1974 ; International Journal of Speleology Volume 3 ; 3 ; http://scholarcommons.usf.edu/ >
-    au < released ; 1975 ; International Journal of Speleology Volume 4 ; 4 ; http://scholarcommons.usf.edu/ >
-    au < released ; 1976 ; International Journal of Speleology Volume 5 ; 5 ; http://scholarcommons.usf.edu/ >
-    au < released ; 1977 ; International Journal of Speleology Volume 6 ; 6 ; http://scholarcommons.usf.edu/ >
-    au < released ; 1978 ; International Journal of Speleology Volume 7 ; 7 ; http://scholarcommons.usf.edu/ >
-    au < released ; 1979 ; International Journal of Speleology Volume 8 ; 8 ; http://scholarcommons.usf.edu/ >
-    au < released ; 1980 ; International Journal of Speleology Volume 9 ; 9 ; http://scholarcommons.usf.edu/ >
-    au < released ; 1981 ; International Journal of Speleology Volume 10 ; 10 ; http://scholarcommons.usf.edu/ >
-    au < released ; 1982 ; International Journal of Speleology Volume 11 ; 11 ; http://scholarcommons.usf.edu/ >
-    au < released ; 1983 ; International Journal of Speleology Volume 12 ; 12 ; http://scholarcommons.usf.edu/ >
-    au < released ; 1984 ; International Journal of Speleology Volume 13 ; 13 ; http://scholarcommons.usf.edu/ >
-    au < released ; 1985 ; International Journal of Speleology Volume 14 ; 14 ; http://scholarcommons.usf.edu/ >
-    au < released ; 1986 ; International Journal of Speleology Volume 15 ; 15 ; http://scholarcommons.usf.edu/ >
-    au < released ; 1987 ; International Journal of Speleology Volume 16 ; 16 ; http://scholarcommons.usf.edu/ >
-    au < released ; 1988 ; International Journal of Speleology Volume 17 ; 17 ; http://scholarcommons.usf.edu/ >
-    au < released ; 1989 ; International Journal of Speleology Volume 18 ; 18 ; http://scholarcommons.usf.edu/ >
-    au < released ; 1990 ; International Journal of Speleology Volume 19 ; 19 ; http://scholarcommons.usf.edu/ >
-    au < released ; 1991 ; International Journal of Speleology Volume 20 ; 20 ; http://scholarcommons.usf.edu/ >
-    au < released ; 1992 ; International Journal of Speleology Volume 21 ; 21 ; http://scholarcommons.usf.edu/ >
-    au < released ; 1993 ; International Journal of Speleology Volume 22 ; 22 ; http://scholarcommons.usf.edu/ >
-    au < released ; 1994 ; International Journal of Speleology Volume 23 ; 23 ; http://scholarcommons.usf.edu/ >
-    au < released ; 1995 ; International Journal of Speleology Volume 24 ; 24 ; http://scholarcommons.usf.edu/ >
-    au < released ; 1996 ; International Journal of Speleology Volume 25 ; 25 ; http://scholarcommons.usf.edu/ >
-    au < released ; 1997 ; International Journal of Speleology Volume 26 ; 26 ; http://scholarcommons.usf.edu/ >
-    au < released ; 1998 ; International Journal of Speleology Volume 27 ; 27 ; http://scholarcommons.usf.edu/ >
-    au < released ; 1999 ; International Journal of Speleology Volume 28 ; 28 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2000 ; International Journal of Speleology Volume 29 ; 29 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2001 ; International Journal of Speleology Volume 30 ; 30 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2002 ; International Journal of Speleology Volume 31 ; 31 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2003 ; International Journal of Speleology Volume 32 ; 32 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2004 ; International Journal of Speleology Volume 33 ; 33 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2005 ; International Journal of Speleology Volume 34 ; 34 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2006 ; International Journal of Speleology Volume 35 ; 35 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2007 ; International Journal of Speleology Volume 36 ; 36 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2008 ; International Journal of Speleology Volume 37 ; 37 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2009 ; International Journal of Speleology Volume 38 ; 38 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2010 ; International Journal of Speleology Volume 39 ; 39 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2011 ; International Journal of Speleology Volume 40 ; 40 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2012 ; International Journal of Speleology Volume 41 ; 41 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2013 ; International Journal of Speleology Volume 42 ; 42 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2014 ; International Journal of Speleology Volume 43 ; 43 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2015 ; International Journal of Speleology Volume 44 ; 44 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2016 ; International Journal of Speleology Volume 45 ; 45 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2017 ; International Journal of Speleology Volume 46 ; 46 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2018 ; International Journal of Speleology Volume 47 ; 47 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2019 ; International Journal of Speleology Volume 48 ; 48 ; https://scholarcommons.usf.edu/ >
-    au < released ; 2020 ; International Journal of Speleology Volume 49 ; 49 ; https://scholarcommons.usf.edu/ >
-    au < manifest ; 2021 ; International Journal of Speleology Volume 50 ; 50 ; https://scholarcommons.usf.edu/ >
-    au < expected ; 2022 ; International Journal of Speleology Volume 51 ; 51 ; https://scholarcommons.usf.edu/ >
+    au < down ; 1972 ; International Journal of Speleology Volume 1 ; 1 ; http://scholarcommons.usf.edu/ >
+    au < down ; 1973 ; International Journal of Speleology Volume 2 ; 2 ; http://scholarcommons.usf.edu/ >
+    au < down ; 1974 ; International Journal of Speleology Volume 3 ; 3 ; http://scholarcommons.usf.edu/ >
+    au < down ; 1975 ; International Journal of Speleology Volume 4 ; 4 ; http://scholarcommons.usf.edu/ >
+    au < down ; 1976 ; International Journal of Speleology Volume 5 ; 5 ; http://scholarcommons.usf.edu/ >
+    au < down ; 1977 ; International Journal of Speleology Volume 6 ; 6 ; http://scholarcommons.usf.edu/ >
+    au < down ; 1978 ; International Journal of Speleology Volume 7 ; 7 ; http://scholarcommons.usf.edu/ >
+    au < down ; 1979 ; International Journal of Speleology Volume 8 ; 8 ; http://scholarcommons.usf.edu/ >
+    au < down ; 1980 ; International Journal of Speleology Volume 9 ; 9 ; http://scholarcommons.usf.edu/ >
+    au < down ; 1981 ; International Journal of Speleology Volume 10 ; 10 ; http://scholarcommons.usf.edu/ >
+    au < down ; 1982 ; International Journal of Speleology Volume 11 ; 11 ; http://scholarcommons.usf.edu/ >
+    au < down ; 1983 ; International Journal of Speleology Volume 12 ; 12 ; http://scholarcommons.usf.edu/ >
+    au < down ; 1984 ; International Journal of Speleology Volume 13 ; 13 ; http://scholarcommons.usf.edu/ >
+    au < down ; 1985 ; International Journal of Speleology Volume 14 ; 14 ; http://scholarcommons.usf.edu/ >
+    au < down ; 1986 ; International Journal of Speleology Volume 15 ; 15 ; http://scholarcommons.usf.edu/ >
+    au < down ; 1987 ; International Journal of Speleology Volume 16 ; 16 ; http://scholarcommons.usf.edu/ >
+    au < down ; 1988 ; International Journal of Speleology Volume 17 ; 17 ; http://scholarcommons.usf.edu/ >
+    au < down ; 1989 ; International Journal of Speleology Volume 18 ; 18 ; http://scholarcommons.usf.edu/ >
+    au < down ; 1990 ; International Journal of Speleology Volume 19 ; 19 ; http://scholarcommons.usf.edu/ >
+    au < down ; 1991 ; International Journal of Speleology Volume 20 ; 20 ; http://scholarcommons.usf.edu/ >
+    au < down ; 1992 ; International Journal of Speleology Volume 21 ; 21 ; http://scholarcommons.usf.edu/ >
+    au < down ; 1993 ; International Journal of Speleology Volume 22 ; 22 ; http://scholarcommons.usf.edu/ >
+    au < down ; 1994 ; International Journal of Speleology Volume 23 ; 23 ; http://scholarcommons.usf.edu/ >
+    au < down ; 1995 ; International Journal of Speleology Volume 24 ; 24 ; http://scholarcommons.usf.edu/ >
+    au < down ; 1996 ; International Journal of Speleology Volume 25 ; 25 ; http://scholarcommons.usf.edu/ >
+    au < down ; 1997 ; International Journal of Speleology Volume 26 ; 26 ; http://scholarcommons.usf.edu/ >
+    au < down ; 1998 ; International Journal of Speleology Volume 27 ; 27 ; http://scholarcommons.usf.edu/ >
+    au < down ; 1999 ; International Journal of Speleology Volume 28 ; 28 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2000 ; International Journal of Speleology Volume 29 ; 29 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2001 ; International Journal of Speleology Volume 30 ; 30 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2002 ; International Journal of Speleology Volume 31 ; 31 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2003 ; International Journal of Speleology Volume 32 ; 32 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2004 ; International Journal of Speleology Volume 33 ; 33 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2005 ; International Journal of Speleology Volume 34 ; 34 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2006 ; International Journal of Speleology Volume 35 ; 35 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2007 ; International Journal of Speleology Volume 36 ; 36 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2008 ; International Journal of Speleology Volume 37 ; 37 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2009 ; International Journal of Speleology Volume 38 ; 38 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2010 ; International Journal of Speleology Volume 39 ; 39 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2011 ; International Journal of Speleology Volume 40 ; 40 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2012 ; International Journal of Speleology Volume 41 ; 41 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2013 ; International Journal of Speleology Volume 42 ; 42 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2014 ; International Journal of Speleology Volume 43 ; 43 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2015 ; International Journal of Speleology Volume 44 ; 44 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2016 ; International Journal of Speleology Volume 45 ; 45 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2017 ; International Journal of Speleology Volume 46 ; 46 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2018 ; International Journal of Speleology Volume 47 ; 47 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2019 ; International Journal of Speleology Volume 48 ; 48 ; https://scholarcommons.usf.edu/ >
+    au < down ; 2020 ; International Journal of Speleology Volume 49 ; 49 ; https://scholarcommons.usf.edu/ >
+
+    au < exists ; 2021 ; International Journal of Speleology Volume 50 ; 50 ; https://digitalcommons.usf.edu/ >
+    au < expected ; 2022 ; International Journal of Speleology Volume 51 ; 51 ; https://digitalcommons.usf.edu/ >
 
   }
 
