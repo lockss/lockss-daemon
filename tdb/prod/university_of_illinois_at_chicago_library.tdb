@@ -143,13 +143,14 @@
       param[journal_id] = fwd
       attr[start_stem] = index.php/
     
-    #This journal uses OJS as an entry point only.
+    #This journal uses OJS as an entry point only till 2021. Moving to OJS soon.
       au < doNotProcess ; 2016 ; FWD: Museums Volume 2016 ; 2016 ; 2016 ; https://journals.uic.edu/ojs/ >
       au < doNotProcess ; 2017 ; FWD: Museums Volume 2017 ; 2017 ; 2017 ; https://journals.uic.edu/ojs/ >
       au < doNotProcess ; 2018 ; FWD: Museums Volume 2018 ; 2018 ; 2018 ; https://journals.uic.edu/ojs/ >
       au < doNotProcess ; 2019 ; FWD: Museums Volume 2019 ; 2019 ; 2019 ; https://journals.uic.edu/ojs/ >
       au < doNotProcess ; 2020 ; FWD: Museums Volume 2020 ; 2020 ; 2020 ; https://journals.uic.edu/ojs/ >
       au < doNotProcess ; 2021 ; FWD: Museums Volume 2021 ; 2021 ; 2021 ; https://journals.uic.edu/ojs/ >
+      au < expected ; 2022 ; FWD: Museums Volume 2022 ; 2022 ; 2022 ; https://journals.uic.edu/ojs/ >
     }
   }
 
