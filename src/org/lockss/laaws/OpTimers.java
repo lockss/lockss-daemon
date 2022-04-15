@@ -81,6 +81,12 @@ public class OpTimers {
     return timerMap.containsKey(phase) && getStartTime(phase) > 0;
   }
 
+  public synchronized void startIfNotStarted(Phase phase) {
+    if (!hasStarted(phase)) {
+      start(phase);
+    }
+  }
+
   public long getStartTime(Phase phase) {
     if (!timerMap.containsKey(phase)) {
       throw new IllegalStateException("No " + phase + " timer, can't get start time");
@@ -101,6 +107,21 @@ public class OpTimers {
     }
     return timerMap.get(phase).getTime();
   }
+
+
+  public List<String> getErrors() {
+    return ctrs.getErrors();
+  }
+
+  public int getErrorCount() {
+    return ctrs.getErrors().size();
+  }
+
+  public void addError(String msg) {
+    ctrs.addError(msg);
+  }
+
+
 
   public void addCounterStatus(StringBuilder sb, Phase phase) {
     addCounterStatus(sb, phase, null);

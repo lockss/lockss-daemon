@@ -180,8 +180,10 @@ public class CuMover extends Worker {
     DigestCachedUrl dcu = new DigestCachedUrl(cu);
     Artifact uncommitted = collectionsApi.createArtifact(collectionId, auid, v2Url, dcu, collectionDate);
     if (uncommitted != null) {
-      log.debug3("createArtifact returned,  content bytes: " + cu.getContentSize() + ", total: "
-          + dcu.getBytesMoved());
+      if (log.isDebug3()) {
+        log.debug3("createArtifact returned,  content bytes: " +
+                   cu.getContentSize() + ", total: " + dcu.getBytesMoved());
+      }
       commitArtifact(uncommitted, dcu);
     }
   }

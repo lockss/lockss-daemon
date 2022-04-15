@@ -105,18 +105,6 @@ public class AuStatus extends OpTimers {
     auMover.exitPhase(this);
   }
 
-  public List<String> getErrors() {
-    return ctrs.getErrors();
-  }
-
-  public int getErrorCount() {
-    return ctrs.getErrors().size();
-  }
-
-  public void addError(String msg) {
-    ctrs.addError(msg);
-  }
-
   public void abortAu() {
     abortAu = true;
   }

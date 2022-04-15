@@ -43,11 +43,7 @@ public class MigrationManager extends BaseLockssManager
 
   protected static Logger log = Logger.getLogger("MigrationManager");
 
-  public static final String PREFIX = Configuration.PREFIX + "foo.";
-
-  public static final String PARAM_CACHE_MAX_MB =
-    PREFIX + "cacheMaxMb";
-  public static final long DEFAULT_CACHE_MAX_MB = 100;
+  public static final String PREFIX = Configuration.PREFIX + "v2.migrate.";
 
   static final String STATUS_RUNNING = "running";
   static final String STATUS_ACTIVE_LIST = "active_list";
@@ -72,6 +68,10 @@ public class MigrationManager extends BaseLockssManager
   public void setConfig(Configuration config, Configuration oldConfig,
 			Configuration.Differences changedKeys) {
     if (changedKeys.contains(PREFIX)) {
+      V2AuMover m = mover;
+      if (m != null) {
+        m.setConfig(config, oldConfig, changedKeys);
+      }
     }
   }
 

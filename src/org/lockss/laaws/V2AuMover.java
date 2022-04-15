@@ -68,7 +68,7 @@ public class V2AuMover {
   // Config params
   //////////////////////////////////////////////////////////////////////
 
-  static final String PREFIX = Configuration.PREFIX + "v2.migrate.";
+  static final String PREFIX = MigrationManager.PREFIX;
 
   /**
    * User agent that the migrator will use when connecting to V2 services
@@ -179,11 +179,18 @@ public class V2AuMover {
   public static final long DEFAULT_CONNECTION_TIMEOUT = 30 * Constants.SECOND;
 
   /**
-   * Read/write timeout, Must be long enough for long-running REST
-   * call, such as finishBulk()
+   * Read/write timeout
    */
   public static final String PARAM_READ_TIMEOUT = PREFIX + "read.timeout";
   public static final long DEFAULT_READ_TIMEOUT =  1 * Constants.HOUR;
+
+  /**
+   * Read/write timeout for long-running REST call, such as
+   * finishBulk()
+   */
+  public static final String PARAM_LONG_READ_TIMEOUT =
+    PREFIX + "read.timeout.long";
+  public static final long DEFAULT_LONG_READ_TIMEOUT =  12 * Constants.HOUR;
 
   /**
    * Path to directory holding daemon logs
@@ -252,12 +259,16 @@ public class V2AuMover {
 
   /** V2 Repository Client */
   private V2RestClient repoClient;
+  /** V2 Repository Client with very long timeout */
+  private V2RestClient repoLongCallClient;
 
   /** V2 repo REST status api client */
   private org.lockss.laaws.api.rs.StatusApi repoStatusApiClient;
 
   /** V2 repo REST collections api client */
   private StreamingCollectionsApi repoCollectionsApiClient;
+  /** V2 repo REST collections api client with long timeout */
+  private StreamingCollectionsApi repoCollectionsApiLongCallClient;
 
   /** Repository service port */
   private int repoPort;
@@ -306,7 +317,8 @@ public class V2AuMover {
   private long connectTimeout;
   /** the time to wait for read/write before timing out */
   private long readTimeout;
-  private long threadTimeout;
+  /** the time to wait for long operations (index) before timing out */
+  private long longReadTimeout;
 
   /** Max number of times to retry requests (after retryable failures) */
   private int maxRetryCount;
@@ -342,57 +354,77 @@ public class V2AuMover {
 
   public V2AuMover() {
     pluginManager = LockssDaemon.getLockssDaemon().getPluginManager();
-    setConfig(ConfigManager.getCurrentConfig());
+    Configuration config = ConfigManager.getCurrentConfig();
+    setInitialConfig(config);
+    setConfig(config, null, config.differences(null));
   }
 
   /**
-   * Read config and store in locals.  Currently done once at the
-   * start of each request, but many of these params could/should be
-   * settable on the fly.
+   * Process one-time config params, which take effect only at the
+   * start of a request.
    */
-  private void setConfig(Configuration config) {
+  private void setInitialConfig(Configuration config) {
     userAgent = config.get(PARAM_V2_USER_AGENT, DEFAULT_V2_USER_AGENT);
     collection = config.get(PARAM_V2_COLLECTION, DEFAULT_V2_COLLECTION);
     cfgPort = config.getInt(PARAM_CFG_PORT, DEFAULT_CFG_PORT);
     repoPort = config.getInt(PARAM_RS_PORT, DEFAULT_RS_PORT);
-    connectTimeout = config.getTimeInterval(PARAM_CONNECTION_TIMEOUT, DEFAULT_CONNECTION_TIMEOUT);
-    readTimeout = config.getTimeInterval(PARAM_READ_TIMEOUT, DEFAULT_READ_TIMEOUT);
-    maxRetryCount = config.getInt(PARAM_MAX_RETRY_COUNT, DEFAULT_MAX_RETRY_COUNT);
-    retryBackoffDelay = config.getLong(PARAM_RETRY_BACKOFF_DELAY, DEFAULT_RETRY_BACKOFF_DELAY);
-    checkMissingContent = config.getBoolean(PARAM_CHECK_MISSING_CONTENT,
-        DEFAULT_CHECK_MISSING_CONTENT);
-    isVerifyContent=config.getBoolean(PARAM_VERIFY_CONTENT, DEFAULT_VERIFY_CONTENT);
-    isCompareBytes=config.getBoolean(PARAM_COMPARE_CONTENT, DEFAULT_COMPARE_CONTENT);
-    isDetailedStats=config.getBoolean(PARAM_DETAILED_STATS, DEFAULT_DETAILED_STATS);
-
-    threadTimeout =
-      config.getTimeInterval(PARAM_THREAD_TIMEOUT, DEFAULT_THREAD_TIMEOUT);
-
     debugRepoReq = config.getBoolean(DEBUG_REPO_REQUEST,
                                      DEFAULT_DEBUG_REPO_REQUEST);
     debugConfigReq = config.getBoolean(DEBUG_CONFIG_REQUEST,
                                        DEFAULT_DEBUG_CONFIG_REQUEST);
 
-    enqueueExecutor =
-      makeExecutorFromSpec(config.get(PARAM_ENQUEUE_EXECUTOR_SPEC),
-                           DEFAULT_ENQUEUE_EXECUTOR_SPEC,
-                           threadTimeout);
-    copyExecutor = makeExecutorFromSpec(config.get(PARAM_COPY_EXECUTOR_SPEC),
-                                        DEFAULT_COPY_EXECUTOR_SPEC,
-                                        threadTimeout);
-    verifyExecutor = makeExecutorFromSpec(config.get(PARAM_VERIFY_EXECUTOR_SPEC),
-                                          DEFAULT_VERIFY_EXECUTOR_SPEC,
-                                          threadTimeout);
-    indexExecutor = makeExecutorFromSpec(config.get(PARAM_INDEX_EXECUTOR_SPEC),
-                                         DEFAULT_INDEX_EXECUTOR_SPEC,
-                                         threadTimeout);
-    miscExecutor = makeExecutorFromSpec(config.get(PARAM_MISC_EXECUTOR_SPEC),
-                                        DEFAULT_MISC_EXECUTOR_SPEC,
-                                        threadTimeout);
-
     String logdir = config.get(PARAM_REPORT_DIR, DEFAULT_REPORT_DIR);
     String logfile = config.get(PARAM_REPORT_FILE, DEFAULT_REPORT_FILE);
     reportFile = new File(logdir, logfile);
+  }
+
+  /**
+   * Set or update config params that can be changed on the fly.
+   */
+  public void setConfig(Configuration config, Configuration oldConfig,
+			Configuration.Differences changedKeys) {
+    if (changedKeys.contains(PREFIX)) {
+
+      // XXX timeouts take effect only at request start.  Check
+      // whether ok to call V2RestClient.setConnectTimeout(), etc. on
+      // the fly - creates a new OkHttpClient
+      connectTimeout = config.getTimeInterval(PARAM_CONNECTION_TIMEOUT,
+                                              DEFAULT_CONNECTION_TIMEOUT);
+      readTimeout = config.getTimeInterval(PARAM_READ_TIMEOUT,
+                                           DEFAULT_READ_TIMEOUT);
+      longReadTimeout = config.getTimeInterval(PARAM_LONG_READ_TIMEOUT,
+                                               DEFAULT_LONG_READ_TIMEOUT);
+
+      maxRetryCount = config.getInt(PARAM_MAX_RETRY_COUNT,
+                                    DEFAULT_MAX_RETRY_COUNT);
+      retryBackoffDelay = config.getLong(PARAM_RETRY_BACKOFF_DELAY,
+                                         DEFAULT_RETRY_BACKOFF_DELAY);
+      checkMissingContent = config.getBoolean(PARAM_CHECK_MISSING_CONTENT,
+                                              DEFAULT_CHECK_MISSING_CONTENT);
+      isVerifyContent=config.getBoolean(PARAM_VERIFY_CONTENT,
+                                        DEFAULT_VERIFY_CONTENT);
+      isCompareBytes=config.getBoolean(PARAM_COMPARE_CONTENT,
+                                       DEFAULT_COMPARE_CONTENT);
+      isDetailedStats=config.getBoolean(PARAM_DETAILED_STATS,
+                                        DEFAULT_DETAILED_STATS);
+
+      enqueueExecutor =
+        createOrReConfigureExecutor(enqueueExecutor, config,
+                                    PARAM_ENQUEUE_EXECUTOR_SPEC,
+                                    DEFAULT_ENQUEUE_EXECUTOR_SPEC);
+      copyExecutor = createOrReConfigureExecutor(copyExecutor, config,
+                                                 PARAM_COPY_EXECUTOR_SPEC,
+                                                 DEFAULT_COPY_EXECUTOR_SPEC);
+      verifyExecutor = createOrReConfigureExecutor(verifyExecutor, config,
+                                                   PARAM_VERIFY_EXECUTOR_SPEC,
+                                                   DEFAULT_VERIFY_EXECUTOR_SPEC);
+      indexExecutor = createOrReConfigureExecutor(indexExecutor, config,
+                                                  PARAM_INDEX_EXECUTOR_SPEC,
+                                                  DEFAULT_INDEX_EXECUTOR_SPEC);
+      miscExecutor = createOrReConfigureExecutor(miscExecutor, config,
+                                                 PARAM_MISC_EXECUTOR_SPEC,
+                                                 DEFAULT_MISC_EXECUTOR_SPEC);
+    }
   }
 
   /**
@@ -406,38 +438,29 @@ public class V2AuMover {
 
     currentStatus = "Initializing";
     running = true;
-    // allow for changing these between runs when testing
-    if (args.host != null) {
-      hostName = args.host;
-    }
-    if (args.uname != null) {
-      userName = args.uname;
-    }
-    if (args.upass != null) {
-      userPass = args.upass;
-    }
+    hostName = args.host;
+    userName = args.uname;
+    userPass = args.upass;
+
     if (StringUtil.isNullString(hostName)) {
       String msg = "Destination hostname must be supplied.";
-      errorList.add(msg);
+      totalCounters.addError(msg);
       throw new IllegalArgumentException(msg);
     }
     if (userName == null || userPass == null) {
       String msg = "Missing user name or password.";
-      errorList.add(msg);
+      totalCounters.addError(msg);
       throw new IllegalArgumentException(msg);
     }
     try {
       cfgAccessUrl = new URL("http", hostName, cfgPort, "").toString();
       if (cfgAccessUrl == null || UrlUtil.isMalformedUrl(cfgAccessUrl)) {
-        errorList.add("Missing or invalid configuration service url: " + cfgAccessUrl);
+        totalCounters.addError("Missing or invalid configuration service url: " + cfgAccessUrl);
         throw new IllegalArgumentException(
             "Missing or invalid configuration service url: " + cfgAccessUrl);
       }
-      repoClient = makeV2RestClient();
-      repoStatusApiClient = new org.lockss.laaws.api.rs.StatusApi(repoClient);
-      repoCollectionsApiClient = new StreamingCollectionsApi(repoClient);
-
       configClient = makeV2RestClient();
+      setTimeouts(configClient, connectTimeout, readTimeout);
       // Assign the client to the status api and aus api
       cfgStatusApiClient = new org.lockss.laaws.api.cfg.StatusApi(configClient);
       cfgAusApiClient = new AusApi(configClient);
@@ -449,7 +472,7 @@ public class V2AuMover {
       configClient.addInterceptor(new RetryErrorInterceptor());
     }
     catch (MalformedURLException mue) {
-      errorList.add("Error parsing REST Configuration Service URL: "
+      totalCounters.addError("Error parsing REST Configuration Service URL: "
           + mue.getMessage());
       throw new IllegalArgumentException(
           "Missing or invalid configuration service hostName: " + hostName + " port: " + cfgPort);
@@ -458,11 +481,21 @@ public class V2AuMover {
     try {
       repoAccessUrl = new URL("http", hostName, repoPort, "").toString();
       if (repoAccessUrl == null || UrlUtil.isMalformedUrl(repoAccessUrl)) {
-        errorList.add("Missing or invalid repository service url: " + repoAccessUrl);
+        totalCounters.addError("Missing or invalid repository service url: " + repoAccessUrl);
         throw new IllegalArgumentException(
             "Missing or invalid configuration service url: " + repoAccessUrl);
       }
       // Create a new RepoClient
+      repoClient = makeV2RestClient();
+      setTimeouts(repoClient, connectTimeout, readTimeout);
+      repoLongCallClient = makeV2RestClient(repoClient);
+      setTimeouts(repoLongCallClient, connectTimeout, longReadTimeout);
+
+      repoStatusApiClient = new org.lockss.laaws.api.rs.StatusApi(repoClient);
+      repoCollectionsApiClient = new StreamingCollectionsApi(repoClient);
+      repoCollectionsApiLongCallClient =
+        new StreamingCollectionsApi(repoLongCallClient);
+
       repoClient.setUsername(userName);
       repoClient.setPassword(userPass);
       repoClient.setUserAgent(userAgent);
@@ -471,7 +504,7 @@ public class V2AuMover {
       repoClient.addInterceptor(new RetryErrorInterceptor());
     }
     catch (MalformedURLException mue) {
-      errorList.add("Error parsing REST Configuration Service URL: " + mue.getMessage());
+      totalCounters.addError("Error parsing REST Configuration Service URL: " + mue.getMessage());
       throw new IllegalArgumentException(
           "Missing or invalid configuration service hostName: " + hostName + " port: " + repoPort);
     }
@@ -480,12 +513,29 @@ public class V2AuMover {
   }
 
   V2RestClient makeV2RestClient() {
-    V2RestClient res = new V2RestClient();
-    res.setConnectTimeout((int)connectTimeout);
-    res.setReadTimeout((int)readTimeout);
-    res.setWriteTimeout((int)readTimeout);
+    return makeV2RestClient(null);
+  }
+
+  V2RestClient makeV2RestClient(V2RestClient derivedFromClient) {
+    V2RestClient res;
+    if (derivedFromClient == null) {
+      res = new V2RestClient();
+    } else {
+      res = new V2RestClient(derivedFromClient.getHttpClient());
+    }
     res.setTempFolderPath(PlatformUtil.getSystemTempDir());
     return res;
+  }
+
+  V2RestClient setTimeouts(V2RestClient client,
+                           long connectTimeout, long dataTimeout) {
+    log.debug2("setTimeouts: connect = " +
+               StringUtil.timeIntervalToString(connectTimeout) + ", data = " +
+               StringUtil.timeIntervalToString(dataTimeout));
+    client.setConnectTimeout((int)connectTimeout);
+    client.setReadTimeout((int)dataTimeout);
+    client.setWriteTimeout((int)dataTimeout);
+    return client;
   }
 
   //////////////////////////////////////////////////////////////////////
@@ -563,7 +613,6 @@ public class V2AuMover {
     currentStatus = "Checking V2 services";
     checkV2ServicesAvailable();
     // get the aus known to the v2 repo
-    log.critical("collection: " + collection);
     getV2Aus();
     // get the local AUs to move
     for (ArchivalUnit au : pluginManager.getAllAus()) {
@@ -619,7 +668,8 @@ public class V2AuMover {
     }
 
     try {
-      auStat.setPhase(Phase.QUEUE);     // For display purposes only
+      auStat.setPhase(Phase.QUEUE);     // For display purposes only,
+                                        // unlikely to be seen.
       addActiveAu(au, auStat);
       log.debug("Enqueueing: " + auName);
       // Bulk mode works correctly only if the AU is completely absent
@@ -688,7 +738,7 @@ public class V2AuMover {
     START("Starting"),
     QUEUE("Queued"),                    // First phase
 
-    TOTAL("Total");                     // not really a phase
+    TOTAL("Total");    // not really a phase, used for aggregate stats
 
     private String name;
     private Action enterAction;
@@ -749,10 +799,10 @@ public class V2AuMover {
     if (phase == null) {
       return;
     }
-    Phase next = phase.getNextPhase();
     if (auStat.hasStarted(phase)) {
       auStat.stop(phase);
     }
+    Phase next = phase.getNextPhase();
     if (next != null) {
       enterPhase(auStat, next);
     }
@@ -856,9 +906,7 @@ public class V2AuMover {
       Phase phase = task.getTaskPhase();
       // Set phase start time the first time a task for that phase starts
       if (phase != null && auStat != null) {
-        if (auStat != null && !auStat.hasStarted(phase)) {
-          auStat.start(phase);
-        }
+        auStat.startIfNotStarted(phase);
       }
       try {
         switch (task.getType()) {
@@ -937,10 +985,11 @@ public class V2AuMover {
    * exitPhase() to be called when the task completes */
   void enqueueTask(MigrationTask task, AuStatus auStat,
                    ThreadPoolExecutor executor) {
-    if (auStat.isAbort()) {
-      auStat.endPhase();
-      return;
-    }
+//     if (auStat.isAbort()) {
+//       // XXX correct to call endPhase() here?
+//       auStat.endPhase();
+//       return;
+//     }
     Phase phase = task.getTaskPhase();
     log.debug2("enqueueTask "+task.getType() + ", phase: " + phase);
     CountUpDownLatch latch = null;
@@ -1060,10 +1109,9 @@ public class V2AuMover {
       if (apie.getMessage().indexOf("404: Not Found") > 0) {
         return;
       } else {
-        log.critical("xxxxxxxxxx", apie);
         //LockssRestServiceException: The collection does not exist
         String err = "Error occurred while retrieving V2 Au list: " + apie.getMessage();
-        errorList.add(err);
+        totalCounters.addError(err);
         log.error(err, apie);
         String msg = apie.getCode() == 0 ? apie.getMessage()
           : apie.getCode() + " - " + apie.getMessage();
@@ -1238,10 +1286,10 @@ public class V2AuMover {
       response.headers().forEach(header -> sb.append(header.getFirst()).append(":").append(header.getSecond()));
       ResponseBody body = response.body();
       if (body != null) {
-        // XXX Need to parse a json, extract various fields
+        // XXX Should parse as json, extract various fields
         sb.append(", body: ").append(body.string());
       }
-      log.warning(sb.toString(), new Throwable());
+      log.warning(sb.toString());
     }
     catch (Exception e) {
       log.error("Exception trying to retrieve error response body", e);
@@ -1343,11 +1391,11 @@ public class V2AuMover {
     int maxThreads;
   }
 
-  ExecSpec parseSpec(String spec) {
-    return parseSpecInto(spec, new ExecSpec());
+  ExecSpec parsePoolSpec(String spec) {
+    return parsePoolSpecInto(spec, new ExecSpec());
   }
 
-  ExecSpec parseSpecInto(String spec, ExecSpec eSpec) {
+  ExecSpec parsePoolSpecInto(String spec, ExecSpec eSpec) {
     List<String> specList = StringUtil.breakAt(spec, ";", 3, false, true);
     switch (specList.size()) {
     case 3: eSpec.maxThreads = Integer.parseInt(specList.get(2));
@@ -1358,19 +1406,41 @@ public class V2AuMover {
   }
 
 
-  ThreadPoolExecutor makeExecutorFromSpec(String spec, String defaultSpec,
-                                          long threadTimeout) {
-    ExecSpec eSpec = parseSpec(defaultSpec);
-    eSpec = parseSpecInto(spec, eSpec);
-    return makeExecutor(eSpec.queueSize, threadTimeout,
-                        eSpec.coreThreads, eSpec.maxThreads);
+  ThreadPoolExecutor createOrReConfigureExecutor(ThreadPoolExecutor executer,
+                                                 Configuration config,
+                                                 String specParam,
+                                                 String defaultSpec) {
+    String spec = config.get(specParam);
+    // Set default for each field
+    ExecSpec eSpec = parsePoolSpec(defaultSpec);
+    // Override from param
+    eSpec = parsePoolSpecInto(spec, eSpec);
+    // If illegal, use default
+    if (eSpec.coreThreads > eSpec.maxThreads) {
+      log.warning("coreThreads (" + eSpec.coreThreads +
+                  ") must be less than maxThreads (" + eSpec.maxThreads + ")");
+      eSpec = parsePoolSpec(defaultSpec);
+    }
+    long threadTimeout =
+      config.getTimeInterval(PARAM_THREAD_TIMEOUT, DEFAULT_THREAD_TIMEOUT);
+    if (executer == null) {
+      return makeExecutor(eSpec.queueSize, threadTimeout,
+                          eSpec.coreThreads, eSpec.maxThreads);
+    } else {
+      executer.setCorePoolSize(eSpec.coreThreads);
+      executer.setMaximumPoolSize(eSpec.maxThreads);
+      executer.setKeepAliveTime(threadTimeout, TimeUnit.MILLISECONDS);
+      // Can't change queue capacity, would need to copy to new queue
+      // which requires awkward locking/synchronzation?
+      return executer;
+    }
   }
 
-  public ThreadPoolExecutor makeExecutor(int queueMax, long queueTimeout,
+  public ThreadPoolExecutor makeExecutor(int queueMax, long threadTimeout,
                                          int coreThreads, int maxThreads) {
     ThreadPoolExecutor exec =
       new ThreadPoolExecutor(coreThreads, maxThreads,
-                             queueTimeout, TimeUnit.MILLISECONDS,
+                             threadTimeout, TimeUnit.MILLISECONDS,
                              new LinkedBlockingQueue<>(queueMax));
     exec.allowCoreThreadTimeOut(true);
     exec.setRejectedExecutionHandler(new RejectedExecutionHandler() {
@@ -1453,7 +1523,7 @@ public class V2AuMover {
   private Map<String,AuStatus> activeAus = new LinkedHashMap<>();
   private Map<String,AuStatus> finishedAus = new LinkedHashMap<>();
 
-  private final List<String> errorList = new ArrayList<>();
+//   private final List<String> errorList = new ArrayList<>();
 
   private PrintWriter reportWriter;
 
@@ -1510,7 +1580,7 @@ public class V2AuMover {
     StringBuilder sb = new StringBuilder();
     Phase phase = auStat.getPhase();
     String phaseName = phase.toString();
-    if (auStat.isAbort()) {
+    if (false && auStat.isAbort()) {
       sb.append("Aborted: ");
     } else {
       switch (auStat.getPhase()) {

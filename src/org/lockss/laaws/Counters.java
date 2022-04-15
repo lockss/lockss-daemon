@@ -95,21 +95,27 @@ public class Counters {
   }
 
   public void addError(String msg) {
-    errors.add(msg);
+    synchronized (errors) {
+      errors.add(msg);
+    }
     if (parent != null) {
       parent.addError(msg);
     }
   }
 
   public List<String> getErrors() {
-    return errors;
+    synchronized (errors) {
+      return new ArrayList<>(errors);
+    }
   }
 
   public synchronized void add(Counters ctrs) {
     for (CounterType type : CounterType.values()) {
       get(type).add(ctrs.get(type));
     }
-    errors.addAll(ctrs.errors);
+    synchronized (errors) {
+      errors.addAll(ctrs.errors);
+    }
   }
 
   /** Individual counter */
