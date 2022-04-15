@@ -624,8 +624,13 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
   /** Respond appropriately to successful login attempt.  Default action is
    * to record the last login time */
   protected void handleSuccessfulLoginAttempt() {
-    lastLogin = TimeBase.nowMs();
-    storeUser();
+    // Frequent AJAX requests cause significant time to be spent in
+    // storeUser().  Hard to discern request context at this level so
+    // just avoid too-frequent updates.
+    if (TimeBase.msSince(lastLogin) > 10 * Constants.MINUTE) {
+      lastLogin = TimeBase.nowMs();
+      storeUser();
+    }
   }
 
   private void clearCaches() {
