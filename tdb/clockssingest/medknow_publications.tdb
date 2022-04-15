@@ -521,8 +521,8 @@
     param[journal_issn] = 2349-2422
 
     au < manifest ; exists ; 2017 ; AYUHOM Volume 4 ; 2017 ; 4 ; https://www.ayuhom.com/ ; ; >
-    au < ready ; exists ; 2018 ; AYUHOM Volume 5 ; 2018 ; 5 ; https://www.ayuhom.com/ ; ; >
-    au < ready ; exists ; 2019 ; AYUHOM Volume 6 ; 2019 ; 6 ; https://www.ayuhom.com/ ; ; >
+    au < crawling ; exists ; 2018 ; AYUHOM Volume 5 ; 2018 ; 5 ; https://www.ayuhom.com/ ; ; >
+    au < crawling ; exists ; 2019 ; AYUHOM Volume 6 ; 2019 ; 6 ; https://www.ayuhom.com/ ; ; >
     au < crawling ; exists ; 2020 ; AYUHOM Volume 7 ; 2020 ; 7 ; https://www.ayuhom.com/ ; ; >
     au < crawling ; exists ; 2021 ; AYUHOM Volume 8 ; 2021 ; 8 ; https://www.ayuhom.com/ ; ; >
     au < expected ; exists ; 2022 ; AYUHOM Volume 9 ; 2022 ; 9 ; https://www.ayuhom.com/ ; ; >
@@ -2272,11 +2272,11 @@
 
     param[journal_issn] = 2455-9393
 
-    au < ready ; exists ; 2016 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 1 ; 2016 ; 1 ; https://www.ijghtn.com/ ; ; >
+    au < crawling ; exists ; 2016 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 1 ; 2016 ; 1 ; https://www.ijghtn.com/ ; ; >
     au < crawling ; exists ; 2017 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 2 ; 2017 ; 2 ; https://www.ijghtn.com/ ; ; >
-    au < ready ; exists ; 2018 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 3 ; 2018 ; 3 ; https://www.ijghtn.com/ ; ; >
+    au < crawling ; exists ; 2018 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 3 ; 2018 ; 3 ; https://www.ijghtn.com/ ; ; >
     au < crawling ; exists ; 2019 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 4 ; 2019 ; 4 ; https://www.ijghtn.com/ ; ; >
-    au < ready ; exists ; 2020 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 5 ; 2020 ; 5 ; https://www.ijghtn.com/ ; ; >
+    au < crawling ; exists ; 2020 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 5 ; 2020 ; 5 ; https://www.ijghtn.com/ ; ; >
     au < expected ; exists ; 2021 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 6 ; 2021 ; 6 ; https://www.ijghtn.com/ ; ; >
     au < expected ; exists ; 2022 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 7 ; 2022 ; 7 ; https://www.ijghtn.com/ ; ; >
 
@@ -6032,7 +6032,7 @@
       au < finished ; crawling ; 2018 ; Indian Journal of Allergy, Asthma and Immunology Volume 32 ; 2018 ; 32 ; http://www.ijaai.in/ ; ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; Indian Journal of Allergy, Asthma and Immunology Volume 33 ; 2019 ; 33 ; https://www.ijaai.in/ ; ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2020 ; Indian Journal of Allergy, Asthma and Immunology Volume 34 ; 2020 ; 34 ; https://www.ijaai.in/ ; ; reingest1.clockss.org:8082 >
-      au < ready ; exists ; 2021 ; Indian Journal of Allergy, Asthma and Immunology Volume 35 ; 2021 ; 35 ; https://www.ijaai.in/ ; ; >
+      au < crawling ; exists ; 2021 ; Indian Journal of Allergy, Asthma and Immunology Volume 35 ; 2021 ; 35 ; https://www.ijaai.in/ ; ; >
       au < expected ; exists ; 2022 ; Indian Journal of Allergy, Asthma and Immunology Volume 36 ; 2022 ; 36 ; https://www.ijaai.in/ ; ; >
 
   }
@@ -6479,7 +6479,7 @@
       au < notReady ; exists ; 2015 ; International Journal of Environmental Health Engineering Volume 4 ; 2015 ; 4 ; https://www.ijehe.org/ ; ; >
       au < notReady ; exists ; 2016 ; International Journal of Environmental Health Engineering Volume 5 ; 2016 ; 5 ; https://www.ijehe.org/ ; ; >
       au < crawling ; exists ; 2017 ; International Journal of Environmental Health Engineering Volume 6 ; 2017 ; 6 ; https://www.ijehe.org/ ; ; >
-      au < ready ; exists ; 2018 ; International Journal of Environmental Health Engineering Volume 7 ; 2018 ; 7 ; https://www.ijehe.org/ ; ; >
+      au < crawling ; exists ; 2018 ; International Journal of Environmental Health Engineering Volume 7 ; 2018 ; 7 ; https://www.ijehe.org/ ; ; >
       au < crawling ; exists ; 2019 ; International Journal of Environmental Health Engineering Volume 8 ; 2019 ; 8 ; https://www.ijehe.org/ ; ; >
       au < crawling ; exists ; 2020 ; International Journal of Environmental Health Engineering Volume 9 ; 2020 ; 9 ; https://www.ijehe.org/ ; ; >
       au < manifest ; exists ; 2021 ; International Journal of Environmental Health Engineering Volume 10 ; 2021 ; 10 ; https://www.ijehe.org/ ; ; >
@@ -7933,7 +7933,7 @@
 
       param[journal_issn] = 2589-8302
 
-      au < ready ; exists ; 2018 ; Medical Journal of Dr DY Patil Vidyapeeth Volume 11 ; 2018 ; 11 ; https://www.mjdrdypv.org/ ; ; >
+      au < crawling ; exists ; 2018 ; Medical Journal of Dr DY Patil Vidyapeeth Volume 11 ; 2018 ; 11 ; https://www.mjdrdypv.org/ ; ; >
       au < finished ; crawling ; 2019 ; Medical Journal of Dr DY Patil Vidyapeeth Volume 12 ; 2019 ; 12 ; https://www.mjdrdypv.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2020 ; Medical Journal of Dr DY Patil Vidyapeeth Volume 13 ; 2020 ; 13 ; https://www.mjdrdypv.org/ ; ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Medical Journal of Dr DY Patil Vidyapeeth Volume 14 ; 2021 ; 14 ; https://www.mjdrdypv.org/ ; ; >
@@ -8969,7 +8969,7 @@
       au < finished ; crawling ; 2018 ; Thyroid Research and Practice Volume 15 ; 2018 ; 15 ; http://www.thetrp.net/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; Thyroid Research and Practice Volume 16 ; 2019 ; 16 ; https://www.thetrp.net/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Thyroid Research and Practice Volume 17 ; 2020 ; 17 ; https://www.thetrp.net/ ; ; reingest1.clockss.org:8082 >
-      au < ready ; exists ; 2021 ; Thyroid Research and Practice Volume 18 ; 2021 ; 18 ; https://www.thetrp.net/ ; ; >
+      au < crawling ; exists ; 2021 ; Thyroid Research and Practice Volume 18 ; 2021 ; 18 ; https://www.thetrp.net/ ; ; >
       au < expected ; exists ; 2022 ; Thyroid Research and Practice Volume 19 ; 2022 ; 19 ; https://www.thetrp.net/ ; ; >
 
   }
@@ -9827,9 +9827,9 @@
 #      param[base_url] = http://www.e-ijas.org/
 
       au < crawling ; exists ; 2016 ; Imam Journal of Applied Sciences Volume 1 ; 2016 ; 1 ; https://www.e-ijas.org/ ; ; >
-      au < ready ; exists ; 2017 ; Imam Journal of Applied Sciences Volume 2 ; 2017 ; 2 ; https://www.e-ijas.org/ ; ; >
+      au < crawling ; exists ; 2017 ; Imam Journal of Applied Sciences Volume 2 ; 2017 ; 2 ; https://www.e-ijas.org/ ; ; >
       au < crawling ; exists ; 2018 ; Imam Journal of Applied Sciences Volume 3 ; 2018 ; 3 ; https://www.e-ijas.org/ ; ; >
-      au < ready ; exists ; 2019 ; Imam Journal of Applied Sciences Volume 4 ; 2019 ; 4 ; https://www.e-ijas.org/ ; ; >
+      au < crawling ; exists ; 2019 ; Imam Journal of Applied Sciences Volume 4 ; 2019 ; 4 ; https://www.e-ijas.org/ ; ; >
       au < crawling ; exists ; 2020 ; Imam Journal of Applied Sciences Volume 5 ; 2020 ; 5 ; https://www.e-ijas.org/ ; ; >
       au < crawling ; exists ; 2021 ; Imam Journal of Applied Sciences Volume 6 ; 2021 ; 6 ; https://www.e-ijas.org/ ; ; >
       au < expected ; exists ; 2022 ; Imam Journal of Applied Sciences Volume 7 ; 2022 ; 7 ; https://www.e-ijas.org/ ; ; >
@@ -9895,9 +9895,9 @@
 
       au < manifest ; exists ; 2012 ; Indian Journal of Respiratory Care Volume 1 ; 2012 ; 1 ; https://www.ijrc.in/ ; ; >
       au < crawling ; exists ; 2013 ; Indian Journal of Respiratory Care Volume 2 ; 2013 ; 2 ; https://www.ijrc.in/ ; ; >
-      au < ready ; exists ; 2014 ; Indian Journal of Respiratory Care Volume 3 ; 2014 ; 3 ; https://www.ijrc.in/ ; ; >
+      au < crawling ; exists ; 2014 ; Indian Journal of Respiratory Care Volume 3 ; 2014 ; 3 ; https://www.ijrc.in/ ; ; >
       au < crawling ; exists ; 2015 ; Indian Journal of Respiratory Care Volume 4 ; 2015 ; 4 ; https://www.ijrc.in/ ; ; >
-      au < ready ; exists ; 2016 ; Indian Journal of Respiratory Care Volume 5 ; 2016 ; 5 ; https://www.ijrc.in/ ; ; >
+      au < crawling ; exists ; 2016 ; Indian Journal of Respiratory Care Volume 5 ; 2016 ; 5 ; https://www.ijrc.in/ ; ; >
       au < doNotProcess ; doNotProcess ; 2017 ; Indian Journal of Respiratory Care Volume 6 ; 2017 ; 6 ; http://www.ijrconline.org/ ; ; >
       au < crawling ; exists ; 2017 ; Indian Journal of Respiratory Care Volume 6 ; 2017 ; 6 ; https://www.ijrc.in/ ; ; >
       au < crawling ; exists ; 2018 ; Indian Journal of Respiratory Care Volume 7 ; 2018 ; 7 ; https://www.ijrc.in/ ; ; >
@@ -10265,7 +10265,7 @@
       au < finished ; crawling ; 2018 ; Journal of Cardiothoracic Trauma Volume 3 ; 2018 ; 3 ; https://www.jctt.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; Journal of Cardiothoracic Trauma Volume 4 ; 2019 ; 4 ; https://www.jctt.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Journal of Cardiothoracic Trauma Volume 5 ; 2020 ; 5 ; https://www.jctt.org/ ; ; reingest5.clockss.org:8082 >
-      au < ready ; exists ; 2021 ; Journal of Cardiothoracic Trauma Volume 6 ; 2021 ; 6 ; https://www.jctt.org/ ; ; >
+      au < crawling ; exists ; 2021 ; Journal of Cardiothoracic Trauma Volume 6 ; 2021 ; 6 ; https://www.jctt.org/ ; ; >
       au < expected ; exists ; 2022 ; Journal of Cardiothoracic Trauma Volume 7 ; 2022 ; 7 ; https://www.jctt.org/ ; ; >
 
   }
@@ -10991,7 +10991,7 @@
       au < finished ; crawling ; 2018 ; Pediatric Respirology and Critical Care Medicine Volume 2 ; 2018 ; 2 ; https://www.prccm.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; Pediatric Respirology and Critical Care Medicine Volume 3 ; 2019 ; 3 ; https://www.prccm.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Pediatric Respirology and Critical Care Medicine Volume 4 ; 2020 ; 4 ; https://www.prccm.org/ ; ; reingest5.clockss.org:8082 >
-      au < ready ; exists ; 2021 ; Pediatric Respirology and Critical Care Medicine Volume 5 ; 2021 ; 5 ; https://www.prccm.org/ ; ; >
+      au < crawling ; exists ; 2021 ; Pediatric Respirology and Critical Care Medicine Volume 5 ; 2021 ; 5 ; https://www.prccm.org/ ; ; >
       au < expected ; exists ; 2022 ; Pediatric Respirology and Critical Care Medicine Volume 6 ; 2022 ; 6 ; https://www.prccm.org/ ; ; >
 
   }
