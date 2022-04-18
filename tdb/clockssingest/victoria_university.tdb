@@ -10,6 +10,46 @@
 
     implicit < status ; status2 ; year ; param[year] ; name ; volume ; param[base_url] ; hidden[proxy] >
 
+    # Only: Victoria University Law and Justice Journal
+    # Do not preserve other Victoria U titles: 
+    # Journal of Business Systems, Governance & Ethics 1833-4318 #continued_by = 2206-088X
+    # Journal of Law and Governance 2206-088X #continues = 1833-4318
+    # Offset 2204-3659
+
+  {
+    title <
+      name = Victoria University Law and Justice Journal ;
+      issn = 2202-7912 ;
+      eissn = 2203-2908 ;
+      issnl = 2202-7912
+    >
+      #param[base_url] = http://vulj.vu.edu.au/
+
+      param[journal_id] = vulj
+      comment[name_change0] = Title changed name/issn from DICTUM - Victoria Law School Journal
+      comment[name_change1] = Volumes 1-2 are available under issn 1838-6849
+      comment[continues] = 1838-6849
+
+      {
+      plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+      attr[start_stem] = index.php/
+
+      au < manifest ; exists ; 2017 ; 2017 ; Victoria University Law and Justice Journal Volume 7 ; 7 ; https://vulj.vu.edu.au/ ; reingest1.clockss.org:8082 >
+      au < manifest ; exists ; 2018 ; 2018 ; Victoria University Law and Justice Journal Volume 8 ; 8 ; https://vulj.vu.edu.au/ ; reingest1.clockss.org:8082 >
+      #nothing published since 2018 as of 1/14/2021
+      }
+
+      {
+      plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
+
+      au < finished ; finished ; 2013 ; 2013 ; Victoria University Law and Justice Journal Volume 3 ; 3 ; http://vulj.vu.edu.au/ ; >
+      au < finished ; finished ; 2014 ; 2014 ; Victoria University Law and Justice Journal Volume 4 ; 4 ; http://vulj.vu.edu.au/ ; >
+      au < finished ; crawling ; 2015 ; 2015 ; Victoria University Law and Justice Journal Volume 5 ; 5 ; http://vulj.vu.edu.au/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; 2016 ; Victoria University Law and Justice Journal Volume 6 ; 6 ; https://vulj.vu.edu.au/ ; reingest1.clockss.org:8082 >
+      }
+
+  }
+
   {
     title <
       name = DICTUM - Victoria Law School Journal ;
@@ -31,40 +71,6 @@
 
   {
     title <
-      name = Victoria University Law and Justice Journal ;
-      issn = 2202-7912 ;
-      eissn = 2203-2908 ;
-      issnl = 2202-7912
-    >
-      #param[base_url] = http://vulj.vu.edu.au/
-
-      param[journal_id] = vulj
-      comment[name_change0] = Title changed name/issn from DICTUM - Victoria Law School Journal
-      comment[name_change1] = Volumes 1-2 are available under issn 1838-6849
-      comment[continues] = 1838-6849
-
-      {
-      plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
-
-      au < finished ; finished ; 2013 ; 2013 ; Victoria University Law and Justice Journal Volume 3 ; 3 ; http://vulj.vu.edu.au/ ; >
-      au < finished ; finished ; 2014 ; 2014 ; Victoria University Law and Justice Journal Volume 4 ; 4 ; http://vulj.vu.edu.au/ ; >
-      au < finished ; crawling ; 2015 ; 2015 ; Victoria University Law and Justice Journal Volume 5 ; 5 ; http://vulj.vu.edu.au/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2016 ; 2016 ; Victoria University Law and Justice Journal Volume 6 ; 6 ; https://vulj.vu.edu.au/ ; reingest1.clockss.org:8082 >
-      }
-
-      {
-      plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
-      attr[start_stem] = index.php/
-
-      au < manifest ; exists ; 2017 ; 2017 ; Victoria University Law and Justice Journal Volume 7 ; 7 ; https://vulj.vu.edu.au/ ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 2018 ; 2018 ; Victoria University Law and Justice Journal Volume 8 ; 8 ; https://vulj.vu.edu.au/ ; reingest1.clockss.org:8082 >
-      #nothing published since 2018 as of 1/14/2021
-      }
-
-  }
-
-  {
-    title <
       name = Journal of Business Systems, Governance & Ethics ;
       eissn = 1833-4318 ;
       issnl = 1833-4318
@@ -78,15 +84,15 @@
 
       comment[notReady] = V9 notReady. url with no http causing unending redirects "www.ft.com/cms/s/..." on page http://jbsge.vu.edu.au/article/view/612/
 
-      au < exists ; exists ; 2006 ; 2006 ; Journal of Business Systems, Governance & Ethics Volume 1 ; 1 ; https://jbsge.vu.edu.au/ ; >
-      au < exists ; exists ; 2007 ; 2007 ; Journal of Business Systems, Governance & Ethics Volume 2 ; 2 ; https://jbsge.vu.edu.au/ ; >
-      au < exists ; exists ; 2008 ; 2008 ; Journal of Business Systems, Governance & Ethics Volume 3 ; 3 ; https://jbsge.vu.edu.au/ ; >
-      au < exists ; exists ; 2009 ; 2009 ; Journal of Business Systems, Governance & Ethics Volume 4 ; 4 ; https://jbsge.vu.edu.au/ ; >
-      au < exists ; exists ; 2010 ; 2010 ; Journal of Business Systems, Governance & Ethics Volume 5 ; 5 ; https://jbsge.vu.edu.au/ ; >
-      au < exists ; exists ; 2011 ; 2011 ; Journal of Business Systems, Governance & Ethics Volume 6 ; 6 ; https://jbsge.vu.edu.au/ ; >
-      au < exists ; exists ; 2012 ; 2012 ; Journal of Business Systems, Governance & Ethics Volume 7 ; 7 ; https://jbsge.vu.edu.au/ ; >
-      au < exists ; exists ; 2013 ; 2013 ; Journal of Business Systems, Governance & Ethics Volume 8 ; 8 ; https://jbsge.vu.edu.au/ ; >
-      au < exists ; exists ; 2014 ; 2014 ; Journal of Business Systems, Governance & Ethics Volume 9 ; 9 ; https://jbsge.vu.edu.au/ ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; 2006 ; Journal of Business Systems, Governance & Ethics Volume 1 ; 1 ; https://jbsge.vu.edu.au/ ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; 2007 ; Journal of Business Systems, Governance & Ethics Volume 2 ; 2 ; https://jbsge.vu.edu.au/ ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; Journal of Business Systems, Governance & Ethics Volume 3 ; 3 ; https://jbsge.vu.edu.au/ ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Journal of Business Systems, Governance & Ethics Volume 4 ; 4 ; https://jbsge.vu.edu.au/ ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Journal of Business Systems, Governance & Ethics Volume 5 ; 5 ; https://jbsge.vu.edu.au/ ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Journal of Business Systems, Governance & Ethics Volume 6 ; 6 ; https://jbsge.vu.edu.au/ ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Journal of Business Systems, Governance & Ethics Volume 7 ; 7 ; https://jbsge.vu.edu.au/ ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Journal of Business Systems, Governance & Ethics Volume 8 ; 8 ; https://jbsge.vu.edu.au/ ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Business Systems, Governance & Ethics Volume 9 ; 9 ; https://jbsge.vu.edu.au/ ; >
       #Changed name and ISSN
   }
 
@@ -122,10 +128,10 @@
       plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
       attr[start_stem] = index.php/
 
-      au < exists ; exists ; 2009 ; 2009 ; Offset Volume 9 ; 9 ; https://offsetartsjournal.vu.edu.au/ ; >
-      au < exists ; exists ; 2010 ; 2010 ; Offset Volume 10 ; 10 ; https://offsetartsjournal.vu.edu.au/ ; >
-      au < exists ; exists ; 2011 ; 2011 ; Offset Volume 11 ; 11 ; https://offsetartsjournal.vu.edu.au/ ; >
-      au < exists ; exists ; 2012 ; 2012 ; Offset Volume 12 ; 12 ; https://offsetartsjournal.vu.edu.au/ ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Offset Volume 9 ; 9 ; https://offsetartsjournal.vu.edu.au/ ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Offset Volume 10 ; 10 ; https://offsetartsjournal.vu.edu.au/ ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Offset Volume 11 ; 11 ; https://offsetartsjournal.vu.edu.au/ ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Offset Volume 12 ; 12 ; https://offsetartsjournal.vu.edu.au/ ; >
       }
       {
       plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
