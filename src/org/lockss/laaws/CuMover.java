@@ -34,11 +34,9 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Queue;
 import org.lockss.laaws.V2AuMover.DigestCachedUrl;
-import org.lockss.laaws.api.rs.StreamingCollectionsApi;
 import org.lockss.laaws.client.ApiException;
 import org.lockss.laaws.model.rs.Artifact;
 import org.lockss.laaws.model.rs.ArtifactPageInfo;
-import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.util.Logger;
@@ -152,10 +150,11 @@ public class CuMover extends Worker {
     }
     catch (ApiException apie) {
       String err = v2Url + ": failed to create version: " + cu.getVersion() + ": " +
-        apie.getCode() + " - " + apie.getMessage();
+          apie.getCode() + " - " + apie.getMessage();
       log.warning(err);
       task.addError(err);
-    } catch (Exception | Error e) {
+    }
+    catch (Exception | Error e) {
       log.critical("Error copying " + v1Url + "(" + cu.getVersion(), e);
       throw e;
     }
@@ -178,7 +177,8 @@ public class CuMover extends Worker {
       CachedUrl cu, String collectionId) throws ApiException {
     log.debug3("createArtifact("+v2Url+")");
     DigestCachedUrl dcu = new DigestCachedUrl(cu);
-    Artifact uncommitted = collectionsApi.createArtifact(collectionId, auid, v2Url, dcu, collectionDate);
+    Artifact uncommitted = collectionsApi.createArtifact(collectionId, auid, v2Url, dcu,
+        collectionDate);
     if (uncommitted != null) {
       if (log.isDebug3()) {
         log.debug3("createArtifact returned,  content bytes: " +

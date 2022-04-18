@@ -62,6 +62,7 @@ import org.lockss.state.AuState;
 import org.lockss.util.Logger;
 
 public class AuStateChecker extends Worker {
+
   private static final Logger log = Logger.getLogger(AuStateChecker.class);
 
   IdentityManagerImpl idManager;
@@ -83,7 +84,7 @@ public class AuStateChecker extends Worker {
   public void run() {
     try {
       String auName = au.getName();
-      log.debug2("Starting Au State Check: " + auName );
+      log.debug2("Starting Au State Check: " + auName);
       log.info(auName + ": Checking AU Agreements...");
       checkAuAgreements(au);
       log.info(auName + ": Checking AU Suspect Urls...");
@@ -116,15 +117,15 @@ public class AuStateChecker extends Worker {
                 new EnumMapInstanceCreator<AgreementType, PeerAgreement>(AgreementType.class))
             .create();
         AuAgreementsBean v2Bean = gson.fromJson(json, AuAgreementsBean.class);
-        if(v2Bean.equals(v1Bean)) {
+        if (v2Bean.equals(v1Bean)) {
           log.info("V2 Au Agreements are the same");
         }
         else {
-          if( log.isDebug()) {
-            log.debug("AuAgreements v1Bean: "+ v1Bean.toString());
-            log.debug("AuAgreements v2Bean: " + v2Bean.toString());
+          if (log.isDebug()) {
+            log.debug("AuAgreements v1Bean: " + v1Bean.toString());
+            log.debug("AuAgreements v2Bean: " + v2Bean);
           }
-          err= auName +": V2 Au Agreements do not match.";
+          err = auName + ": V2 Au Agreements do not match.";
           log.error(err);
         }
       }
@@ -136,7 +137,7 @@ public class AuStateChecker extends Worker {
     else {
       log.warning("No Au agreements found for au in V1");
     }
-    if(err != null) {
+    if (err != null) {
       task.addError(err);
       //what should we do to propagate this up.
     }
@@ -152,28 +153,28 @@ public class AuStateChecker extends Worker {
       AuSuspectUrlVersionsBean v1Bean = asuv.getBean(au.getAuId());
       try {
         final String json = cfgApiClient.getAuSuspectUrlVersions(au.getAuId());
-        AuSuspectUrlVersionsBean v2Bean=new Gson().fromJson(json, AuSuspectUrlVersionsBean.class);
-        if(v2Bean.equals(v1Bean)) {
+        AuSuspectUrlVersionsBean v2Bean = new Gson().fromJson(json, AuSuspectUrlVersionsBean.class);
+        if (v2Bean.equals(v1Bean)) {
           log.info("V2 Au Suspect Url Versions are the same");
         }
         else {
-          if( log.isDebug()) {
-              log.debug("AuSuspectUrlVersions v1Bean: "+ v1Bean.toString());
-              log.debug("AuSuspectUrlVersions v2Bean: " + v2Bean.toString());
+          if (log.isDebug()) {
+            log.debug("AuSuspectUrlVersions v1Bean: " + v1Bean.toString());
+            log.debug("AuSuspectUrlVersions v2Bean: " + v2Bean);
           }
-          err= auName +": V2 Au Suspect Url Versions do not match.";
+          err = auName + ": V2 Au Suspect Url Versions do not match.";
           log.error(err);
         }
       }
       catch (Exception ex) {
-        err =auName + ": Attempt to check au suspect url versions failed: " + ex.getMessage();
+        err = auName + ": Attempt to check au suspect url versions failed: " + ex.getMessage();
         log.error(err, ex);
       }
     }
     else {
       log.info(auName + ": No v1 Au suspect url versions found.");
     }
-    if(err != null) {
+    if (err != null) {
       task.addError(err);
       //what should we do to propagate this up.
     }
@@ -188,17 +189,17 @@ public class AuStateChecker extends Worker {
     if (v1 instanceof DatedPeerIdSetImpl) {
       try {
         DatedPeerIdSetBean v1Bean = ((DatedPeerIdSetImpl) v1).getBean(au.getAuId());
-        String json=cfgApiClient.getNoAuPeers(au.getAuId());
-        DatedPeerIdSetBean v2Bean =  new Gson().fromJson(json, DatedPeerIdSetBean.class);
-        if(v2Bean.equals(v1Bean)) {
+        String json = cfgApiClient.getNoAuPeers(au.getAuId());
+        DatedPeerIdSetBean v2Bean = new Gson().fromJson(json, DatedPeerIdSetBean.class);
+        if (v2Bean.equals(v1Bean)) {
           log.info("V2 No AU PeerSet are the same");
         }
         else {
-          if( log.isDebug()) {
-            log.debug("NoAuPeerSet v1Bean: "+ v1Bean.toString());
-            log.debug("NoAuPeerSet v2Bean: "+ v2Bean.toString());
+          if (log.isDebug()) {
+            log.debug("NoAuPeerSet v1Bean: " + v1Bean.toString());
+            log.debug("NoAuPeerSet v2Bean: " + v2Bean);
           }
-          err= auName +": V2 No AU PeerSet do not match.";
+          err = auName + ": V2 No AU PeerSet do not match.";
           log.error(err);
         }
         log.info(auName + ": Successfully checked no Au peer set.");
@@ -211,7 +212,7 @@ public class AuStateChecker extends Worker {
     else {
       log.warning(auName + ": No Au peer set found for au");
     }
-    if(err != null) {
+    if (err != null) {
       task.addError(err);
     }
   }
@@ -223,19 +224,19 @@ public class AuStateChecker extends Worker {
     Configuration v1 = au.getConfiguration();
     AuConfiguration v1Config = new AuConfiguration().auId(au.getAuId());
     try {
-      if(v1 != null) {
+      if (v1 != null) {
         v1.keySet().stream().filter(key -> !key.equalsIgnoreCase("reserved.repository"))
             .forEach(key -> v1Config.putAuConfigItem(key, v1.get(key)));
         v2Config = cfgApiClient.getAuConfig(au.getAuId());
-        if(v2Config.equals(v1Config)) {
+        if (v2Config.equals(v1Config)) {
           log.info("Au Config is the same");
         }
         else {
-          if( log.isDebug()) {
-            log.debug("AuConfiguration v1Bean: "+ v1Config.toString());
-            log.debug("AuConfiguration v2Bean: "+ v2Config.toString());
+          if (log.isDebug()) {
+            log.debug("AuConfiguration v1Bean: " + v1Config.toString());
+            log.debug("AuConfiguration v2Bean: " + v2Config);
           }
-          err= auName +": V2 Au Configuration does not match.";
+          err = auName + ": V2 Au Configuration does not match.";
           log.error(err);
         }
       }
@@ -244,7 +245,7 @@ public class AuStateChecker extends Worker {
       err = auName + ": Attempt to check v2 Au configuration failed: " + ex.getMessage();
       log.error(err, ex);
     }
-    if(err != null) {
+    if (err != null) {
       task.addError(err);
       //what should we do to propagate this up.
     }
@@ -257,19 +258,19 @@ public class AuStateChecker extends Worker {
     String err = null;
     if (v1 != null) {
       try {
-        V2AuStateBean v1Bean=new V2AuStateBean(v1);
+        V2AuStateBean v1Bean = new V2AuStateBean(v1);
         String json = cfgApiClient.getAuState(au.getAuId());
         V2AuStateBean v2Bean = new Gson().fromJson(json, V2AuStateBean.class);
         v2Bean.setCdnStems(v2Bean.getCdnStems());
-        if(v2Bean.equals(v1Bean)) {
+        if (v2Bean.equals(v1Bean)) {
           log.info("V2 AuState is the same");
         }
         else {
-          if( log.isDebug()) {
-            log.debug("AuState v1Bean: "+ v1Bean.toString());
-            log.debug("AuState v2Bean: "+ v2Bean.toString());
+          if (log.isDebug()) {
+            log.debug("AuState v1Bean: " + v1Bean);
+            log.debug("AuState v2Bean: " + v2Bean);
           }
-          err= auName +": V2 AuState does not match.";
+          err = auName + ": V2 AuState does not match.";
           log.error(err);
         }
       }
@@ -282,7 +283,7 @@ public class AuStateChecker extends Worker {
     else {
       log.warning(auName + ": No State information found for au");
     }
-    if(err != null) {
+    if (err != null) {
       task.addError(err);
       //what should we do to propagate this up.
     }
@@ -290,6 +291,7 @@ public class AuStateChecker extends Worker {
 
   class EnumMapInstanceCreator<K extends Enum<K>, V> implements
       InstanceCreator<EnumMap<K, V>> {
+
     private final Class<K> enumClazz;
 
     public EnumMapInstanceCreator(final Class<K> enumClazz) {

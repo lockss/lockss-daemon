@@ -30,54 +30,48 @@
 
 package org.lockss.laaws;
 
-import junit.framework.Test; 
-import junit.framework.TestSuite; 
-import junit.framework.TestCase;
+import junit.framework.Test;
+import junit.framework.TestSuite;
 import org.lockss.test.LockssTestCase;
 
-/** 
-* AuStateChecker Tester. 
-* 
-* @version 1.0
-*/ 
+/**
+ * AuStateChecker Tester.
+ *
+ * @version 1.0
+ */
 public class TestAuStateChecker extends LockssTestCase {
-public TestAuStateChecker(String name) {
-super(name); 
-} 
 
-public void setUp() throws Exception { 
-super.setUp(); 
-} 
+  public TestAuStateChecker(String name) {
+    super(name);
+  }
 
-public void tearDown() throws Exception { 
-super.tearDown(); 
-} 
+  public void setUp() throws Exception {
+    super.setUp();
+  }
 
-/** 
-* 
-* Method: run() 
-* 
-*/ 
-public void testRun() throws Exception { 
+  public void tearDown() throws Exception {
+    super.tearDown();
+  }
+
+  /**
+   * Method: run()
+   */
+  public void testRun() throws Exception {
 //TODO: Test goes here... 
-} 
+  }
 
-/** 
-* 
-* Method: createInstance(final Type type) 
-* 
-*/ 
-public void testCreateInstance() throws Exception { 
+  /**
+   * Method: createInstance(final Type type)
+   */
+  public void testCreateInstance() throws Exception {
 //TODO: Test goes here... 
-} 
+  }
 
 
-/** 
-* 
-* Method: checkAuAgreements(ArchivalUnit au) 
-* 
-*/ 
-public void testCheckAuAgreements() throws Exception { 
+  /**
+   * Method: checkAuAgreements(ArchivalUnit au)
+   */
+  public void testCheckAuAgreements() throws Exception {
 //TODO: Test goes here... 
 /* 
 try { 
@@ -88,15 +82,13 @@ try {
 } catch(IllegalAccessException e) { 
 } catch(InvocationTargetException e) { 
 } 
-*/ 
-} 
+*/
+  }
 
-/** 
-* 
-* Method: checkAuSuspectUrlVersions(ArchivalUnit au) 
-* 
-*/ 
-public void testCheckAuSuspectUrlVersions() throws Exception { 
+  /**
+   * Method: checkAuSuspectUrlVersions(ArchivalUnit au)
+   */
+  public void testCheckAuSuspectUrlVersions() throws Exception {
 //TODO: Test goes here... 
 /* 
 try { 
@@ -107,15 +99,13 @@ try {
 } catch(IllegalAccessException e) { 
 } catch(InvocationTargetException e) { 
 } 
-*/ 
-} 
+*/
+  }
 
-/** 
-* 
-* Method: checkNoAuPeerSet(ArchivalUnit au) 
-* 
-*/ 
-public void testCheckNoAuPeerSet() throws Exception { 
+  /**
+   * Method: checkNoAuPeerSet(ArchivalUnit au)
+   */
+  public void testCheckNoAuPeerSet() throws Exception {
 //TODO: Test goes here... 
 /* 
 try { 
@@ -126,15 +116,13 @@ try {
 } catch(IllegalAccessException e) { 
 } catch(InvocationTargetException e) { 
 } 
-*/ 
-} 
+*/
+  }
 
-/** 
-* 
-* Method: checkAuConfig(ArchivalUnit au) 
-* 
-*/ 
-public void testCheckAuConfig() throws Exception { 
+  /**
+   * Method: checkAuConfig(ArchivalUnit au)
+   */
+  public void testCheckAuConfig() throws Exception {
 //TODO: Test goes here... 
 /* 
 try { 
@@ -145,15 +133,13 @@ try {
 } catch(IllegalAccessException e) { 
 } catch(InvocationTargetException e) { 
 } 
-*/ 
-} 
+*/
+  }
 
-/** 
-* 
-* Method: checkAuState(ArchivalUnit au) 
-* 
-*/ 
-public void testCheckAuState() throws Exception { 
+  /**
+   * Method: checkAuState(ArchivalUnit au)
+   */
+  public void testCheckAuState() throws Exception {
 //TODO: Test goes here... 
 /* 
 try { 
@@ -164,11 +150,11 @@ try {
 } catch(IllegalAccessException e) { 
 } catch(InvocationTargetException e) { 
 } 
-*/ 
-} 
+*/
+  }
 
 
-public static Test suite() { 
-return new TestSuite(TestAuStateChecker.class);
-} 
+  public static Test suite() {
+    return new TestSuite(TestAuStateChecker.class);
+  }
 } 

@@ -390,6 +390,7 @@ Args:
   <property name="gson.jar" value="${lib}/gson-2.8.6.jar" />
   <property name="gson-fire.jar" value="${lib}/gson-fire-1.8.4.jar" />
   <property name="swagger-annotations.jar" value="${lib}/swagger-annotations-1.5.24.jar" />
+  <property name="jsr305.jar" value="${lib}/jsr305-3.0.2.jar" />
 
   <property name="json-path.jar" value="${lib}/json-path-2.6.0.jar" />
 
@@ -618,6 +619,7 @@ Args:
     <pathelement path="${gson.jar}" />
     <pathelement path="${gson-fire.jar}" />
     <pathelement path="${swagger-annotations.jar}" />
+    <pathelement path="${jsr305.jar}" />
     <pathelement path="${json-path.jar}" />
     <!-- Needed for TDB tools: -->
     <pathelement path="${antlr.runtime.jar}" />

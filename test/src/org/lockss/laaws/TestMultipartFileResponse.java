@@ -31,7 +31,6 @@
 package org.lockss.laaws;
 
 import java.io.File;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -43,15 +42,16 @@ import org.lockss.util.FileUtil;
  * MultipartFileResponse Tester.
  */
 public class TestMultipartFileResponse extends LockssTestCase {
+
   Headers mpHeaders;
   File mpFile;
   MultipartFileResponse mpfResponse;
   String tempDirPath;
-  Map<String, String> hdrMap = Stream.of(new String[][] {
-      { "Hello", "World" },
-      { "John", "Doe" },
+  Map<String, String> hdrMap = Stream.of(new String[][]{
+      {"Hello", "World"},
+      {"John", "Doe"},
   }).collect(Collectors.toMap(data -> data[0], data -> data[1]));
-  String mpFileContents= "--SW1NdBeKdGkZY2DundzDWq4eqosBqkOQOMPcZX\n"
+  String mpFileContents = "--SW1NdBeKdGkZY2DundzDWq4eqosBqkOQOMPcZX\n"
       + "Content-Disposition: form-data; name=\"artifact-repo-props\"\n"
       + "Content-Type: application/json\n"
       + "\n"
@@ -79,7 +79,7 @@ public class TestMultipartFileResponse extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    mpFile =FileUtil.createTempFile("multipart","");
+    mpFile = FileUtil.createTempFile("multipart", "");
     mpHeaders = Headers.of(hdrMap);
     mpfResponse = new MultipartFileResponse(mpFile, mpHeaders);
   }

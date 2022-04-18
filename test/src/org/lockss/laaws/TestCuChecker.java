@@ -32,11 +32,11 @@ package org.lockss.laaws;
 
 import org.lockss.test.LockssTestCase;
 
-/** 
-* TestCuChecker Tester.
-* 
-* @version 1.0
-*/ 
+/**
+ * TestCuChecker Tester.
+ *
+ * @version 1.0
+ */
 public class TestCuChecker extends LockssTestCase {
 
   public void setUp() throws Exception {
