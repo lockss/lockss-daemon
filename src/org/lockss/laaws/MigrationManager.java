@@ -144,4 +144,34 @@ public class MigrationManager extends BaseLockssManager
     }
   }
 
+  private static final int COPY_BIT = 1;
+  private static final int VERIFY_BIT = 2;
+
+  public enum OpType {
+    CopyOnly("Copy Only", COPY_BIT),
+    CopyAndVerify("Copy and Verify", COPY_BIT | VERIFY_BIT),
+    VerifyOnly("Verify Only", VERIFY_BIT);
+
+    private String label;
+    private int bits;
+
+    OpType(String label, int bits) {
+      this.label = label;
+      this.bits = bits;
+    }
+
+    public boolean isCopy() {
+      return (bits & COPY_BIT) != 0;
+    }
+
+    public boolean isVerify() {
+      return (bits & VERIFY_BIT) != 0;
+    }
+
+
+    public String toString() {
+      return label;
+    }
+  }
+
 }

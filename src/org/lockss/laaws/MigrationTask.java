@@ -51,8 +51,8 @@ public class MigrationTask {
     static {
       COPY_CU_VERSIONS.phase = V2AuMover.Phase.COPY;
       CHECK_CU_VERSIONS.phase = V2AuMover.Phase.VERIFY;
-      COPY_AU_STATE.phase = V2AuMover.Phase.STATE;
-//       CHECK_AU_STATE.phase = V2AuMover.Phase.STATE;
+      COPY_AU_STATE.phase = V2AuMover.Phase.COPY_STATE;
+      CHECK_AU_STATE.phase = V2AuMover.Phase.CHECK_STATE;
       FINISH_AU_BULK.phase = V2AuMover.Phase.INDEX;
     }
 

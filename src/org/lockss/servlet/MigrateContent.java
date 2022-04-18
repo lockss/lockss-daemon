@@ -48,6 +48,7 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.PluginManager;
 import org.lockss.util.*;
 import org.lockss.laaws.*;
+import org.lockss.laaws.MigrationManager.OpType;
 import org.mortbay.html.Block;
 import org.mortbay.html.Composite;
 import org.mortbay.html.Element;
@@ -76,6 +77,16 @@ public class MigrateContent extends LockssServlet {
   public static final String PARAM_AU_SELECT_FILTER=PREFIX +"au_select_filter";
   public static final List<String> DEFAULT_AU_SELECT_FILTER=ListUtil.fromArray(new String[] {".*"});
 
+  public static final String PARAM_DEFAULT_OPTYPE = PREFIX + "defaultOpType";
+  static final OpType DEFAULT_DEFAULT_OPTYPE = OpType.CopyOnly;
+
+  /**
+   * If true, the verify step will perform a byte-by-byte comparison
+   * between V1 and V2 content
+   */
+  public static final String PARAM_DEFAULT_COMPARE = PREFIX + "defaultCompare";
+  public static final boolean DEFAULT_DEFAULT_COMPARE = false;
+
   // paramdoc only
   static final String KEY_OUTPUT = "output";
   static final String KEY_ACTION = "action";
@@ -84,6 +95,9 @@ public class MigrateContent extends LockssServlet {
   static final String HOSTNAME="hostname";
   static final String KEY_USER_NAME="username";
   static final String KEY_PASSWD="password";
+  static final String KEY_OP_TYPE = "op_type";
+  static final String KEY_COMPARE_CONTENT = "compare_content";
+
 
   public static final String ACTION_MIGRATE_AU= "Migrate One AU to V2 Repository";
   public static final String ACTION_MIGRATE_ALL= "Migrate All AUs to V2 Repository";
@@ -104,6 +118,10 @@ public class MigrateContent extends LockssServlet {
   String userName;
   String userPass;
   String hostName=DEFAULT_HOSTNAME;
+  OpType defaultOpType = DEFAULT_DEFAULT_OPTYPE;
+  boolean defaultCompare = DEFAULT_DEFAULT_COMPARE;
+  OpType opType;
+  boolean isCompareContent;
   List<String> auSelectFilter;
   List<Pattern> auSelectPatterns;
 
@@ -112,8 +130,9 @@ public class MigrateContent extends LockssServlet {
     auid = null;
     errMsg = null;
     statusMsg = null;
-    userName=null;
-    userPass =null;
+    userName = null;
+    userPass = null;
+    opType = null;
     super.resetLocals();
   }
 
@@ -142,13 +161,31 @@ public class MigrateContent extends LockssServlet {
       return;
     }
 
-    String action = getParameter(KEY_ACTION);
+    Configuration config = ConfigManager.getCurrentConfig();
+    defaultOpType = config.getEnum(OpType.class,
+                                   PARAM_DEFAULT_OPTYPE,
+                                   DEFAULT_DEFAULT_OPTYPE);
+    // default, if no value from form
+    isCompareContent = config.getBoolean(PARAM_DEFAULT_COMPARE,
+                                         DEFAULT_DEFAULT_COMPARE);
 
+    String action = getParameter(KEY_ACTION);
     if (!StringUtil.isNullString(action)) {
       auid = getParameter(KEY_AUID);
       userName=getParameter(KEY_USER_NAME);
       userPass =getParameter(KEY_PASSWD);
       hostName=getParameter(HOSTNAME);
+      isCompareContent = getParameter(KEY_COMPARE_CONTENT) != null;
+
+      String opTypeStr = getParameter(KEY_OP_TYPE);
+      if (!StringUtil.isNullString(opTypeStr)) {
+        try {
+          opType = OpType.valueOf(opTypeStr);
+        } catch (IllegalArgumentException e) {
+          errMsg = "Unknown op type: " + opTypeStr;
+        }
+      }
+
       if(hostName==null) hostName="localhost";
       if (ACTION_MIGRATE_AU.equals(action)) {
         //Todo: This should be eliminated when we are done with testing.
@@ -187,7 +224,9 @@ public class MigrateContent extends LockssServlet {
     return new V2AuMover.Args()
       .setHost(hostName)
       .setUname(userName)
-      .setUpass(userPass);
+      .setUpass(userPass)
+      .setCompareContent(isCompareContent)
+      .setOpType(opType);
   }
 
   private void startRunner(V2AuMover.Args args) {
@@ -280,6 +319,22 @@ public class MigrateContent extends LockssServlet {
       "V2 Rest Services Password" + addFootnote(PASSWD_FOOT),
       KEY_PASSWD,"", 20);
 
+    OpType selOpType = opType != null ? opType : defaultOpType;
+
+    tbl.newRow();
+    tbl.newCell(CENTERED_CELL);
+    tbl.add(opRadioBtn(OpType.CopyOnly, selOpType));
+    tbl.add("&nbsp;&nbsp;");
+    tbl.add(opRadioBtn(OpType.CopyAndVerify, selOpType));
+    tbl.add("&nbsp;&nbsp;");
+    tbl.add(opRadioBtn(OpType.VerifyOnly, selOpType));
+
+    tbl.newRow();
+    tbl.newCell(CENTERED_CELL);
+    tbl.add(checkBox("Full content compare", "true", KEY_COMPARE_CONTENT,
+                     isCompareContent));
+
+
     tbl.newRow();
     tbl.newCell(CENTERED_CELL);
     Input migrateAu = new Input(Input.Submit, KEY_ACTION, ACTION_MIGRATE_AU);
@@ -296,6 +351,10 @@ public class MigrateContent extends LockssServlet {
     return comp;
   }
 
+  Element opRadioBtn(OpType op, OpType selected) {
+    return radioButton(op.toString(), op.name(), KEY_OP_TYPE,
+                       selected == op);
+  }
 
   private void addInputToTable(Table tbl, String label, String key, String init, int size) {
     Input in = new Input(Input.Text, key, init);
