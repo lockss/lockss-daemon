@@ -136,7 +136,7 @@
 
 
     au < released ; 2019 ; Budget of the United States Government 2019 ; 2019 ; https://www.govinfo.gov/ >
-    au < manifest ; 2020 ; Budget of the United States Government 2020 ; 2020 ; https://www.govinfo.gov/ >
+    au < ready ; 2020 ; Budget of the United States Government 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < ready ; 2021 ; Budget of the United States Government 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < manifest ; 2022 ; Budget of the United States Government 2022 ; 2022 ; https://www.govinfo.gov/ >
     au < manifest ; 2023 ; Budget of the United States Government 2023 ; 2023 ; https://www.govinfo.gov/ >
@@ -165,8 +165,8 @@
 
 
     au < released ; 2019 ; Code of Federal Regulations 2019 ; 2019 ; https://www.govinfo.gov/ >
-    au < manifest ; 2020 ; Code of Federal Regulations 2020 ; 2020 ; https://www.govinfo.gov/ >
-    au < manifest ; 2021 ; Code of Federal Regulations 2021 ; 2021 ; https://www.govinfo.gov/ >
+    au < ready ; 2020 ; Code of Federal Regulations 2020 ; 2020 ; https://www.govinfo.gov/ >
+    au < ready ; 2021 ; Code of Federal Regulations 2021 ; 2021 ; https://www.govinfo.gov/ >
 
   }
 
@@ -200,7 +200,7 @@
 
  
     au < released ; 2019 ; Congressional Calendars 2019 ; 2019 ; https://www.govinfo.gov/ >
-    au < manifest ; 2020 ; Congressional Calendars 2020 ; 2020 ; https://www.govinfo.gov/ >
+    au < ready ; 2020 ; Congressional Calendars 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < manifest ; 2021 ; Congressional Calendars 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < manifest ; 2022 ; Congressional Calendars 2022 ; 2022 ; https://www.govinfo.gov/ >
 
@@ -220,7 +220,7 @@
     au < ready ; 1993 ; Congressional Committee Prints 1993 ; 1993 ; https://www.govinfo.gov/ >
     au < released ; 2019 ; Congressional Committee Prints 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < ready ; 2020 ; Congressional Committee Prints 2020 ; 2020 ; https://www.govinfo.gov/ >
-    au < manifest ; 2021 ; Congressional Committee Prints 2021 ; 2021 ; https://www.govinfo.gov/ >
+    au < ready ; 2021 ; Congressional Committee Prints 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < manifest ; 2022 ; Congressional Committee Prints 2022 ; 2022 ; https://www.govinfo.gov/ >
 
   }
@@ -236,7 +236,7 @@
 
 
     au < released ; 2018 ; Congressional Directory 2018 ; 2018 ; https://www.govinfo.gov/ >
-    au < manifest ; 2020 ; Congressional Directory 2020 ; 2020 ; https://www.govinfo.gov/ >
+    au < ready ; 2020 ; Congressional Directory 2020 ; 2020 ; https://www.govinfo.gov/ >
 
   }
 
@@ -268,9 +268,9 @@
 
     au < ready ; 1933 ; Congressional Hearings 1933 ; 1933 ; https://www.govinfo.gov/ >
     au < ready ; 1934 ; Congressional Hearings 1934 ; 1934 ; https://www.govinfo.gov/ >
-    au < manifest ; 1946 ; Congressional Hearings 1946 ; 1946 ; https://www.govinfo.gov/ >
-    au < manifest ; 1955 ; Congressional Hearings 1955 ; 1955 ; https://www.govinfo.gov/ >
-    au < manifest ; 1956 ; Congressional Hearings 1956 ; 1956 ; https://www.govinfo.gov/ >
+    au < ready ; 1946 ; Congressional Hearings 1946 ; 1946 ; https://www.govinfo.gov/ >
+    au < ready ; 1955 ; Congressional Hearings 1955 ; 1955 ; https://www.govinfo.gov/ >
+    au < ready ; 1956 ; Congressional Hearings 1956 ; 1956 ; https://www.govinfo.gov/ >
     au < ready ; 1958 ; Congressional Hearings 1958 ; 1958 ; https://www.govinfo.gov/ > #zip file has a pdf. link on sitemap page does not have a pdf. See https://www.govinfo.gov/sitemap/CHRG_1958_sitemap.xml
     au < doesNotExist ; 1959 ; Congressional Hearings 1959 ; 1959 ; https://www.govinfo.gov/ >
     au < released ; 1960 ; Congressional Hearings 1960 ; 1960 ; https://www.govinfo.gov/ >
@@ -334,7 +334,7 @@
     au < doNotProcess ; 2018 ; Congressional Hearings 2018 ; 2018 ; https://www.govinfo.gov/ >
     au < released ; 2019 ; Congressional Hearings 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < ready ; 2020 ; Congressional Hearings 2020 ; 2020 ; https://www.govinfo.gov/ >
-    au < manifest ; 2021 ; Congressional Hearings 2021 ; 2021 ; https://www.govinfo.gov/ >
+    au < ready ; 2021 ; Congressional Hearings 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < manifest ; 2022 ; Congressional Hearings 2022 ; 2022 ; https://www.govinfo.gov/ >
     au < exists ; 2024 ; Congressional Hearings 2024 ; 2024 ; https://www.govinfo.gov/ >#empty
 
@@ -351,7 +351,7 @@
 
     au < released ; 2019 ; Congressional Record 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < ready ; 2020 ; Congressional Record 2020 ; 2020 ; https://www.govinfo.gov/ >
-    au < manifest ; 2021 ; Congressional Record 2021 ; 2021 ; https://www.govinfo.gov/ >
+    au < ready ; 2021 ; Congressional Record 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < manifest ; 2022 ; Congressional Record 2022 ; 2022 ; https://www.govinfo.gov/ >
 
   }
@@ -386,7 +386,7 @@
     au < released ; 2014 ; Congressional Record (Bound) 2014 ; 2014 ; https://www.govinfo.gov/ >
     au < released ; 2015 ; Congressional Record (Bound) 2015 ; 2015 ; https://www.govinfo.gov/ >
     au < ready ; 2016 ; Congressional Record (Bound) 2016 ; 2016 ; https://www.govinfo.gov/ >
-    au < manifest ; 2020 ; Congressional Record (Bound) 2020 ; 2020 ; https://www.govinfo.gov/ >
+    au < ready ; 2020 ; Congressional Record (Bound) 2020 ; 2020 ; https://www.govinfo.gov/ >
 
     }
   }
@@ -909,7 +909,7 @@
     au < ready ; 1841 ; U.S. Congressional Serial Set 1841 ; 1841 ; https://www.govinfo.gov/ >
     au < ready ; 1842 ; U.S. Congressional Serial Set 1842 ; 1842 ; https://www.govinfo.gov/ >
     au < ready ; 1843 ; U.S. Congressional Serial Set 1843 ; 1843 ; https://www.govinfo.gov/ >
-    au < manifest ; 1844 ; U.S. Congressional Serial Set 1844 ; 1844 ; https://www.govinfo.gov/ >
+    au < ready ; 1844 ; U.S. Congressional Serial Set 1844 ; 1844 ; https://www.govinfo.gov/ >
     au < ready ; 1845 ; U.S. Congressional Serial Set 1845 ; 1845 ; https://www.govinfo.gov/ >
     au < ready ; 1846 ; U.S. Congressional Serial Set 1846 ; 1846 ; https://www.govinfo.gov/ >
     au < manifest ; 1847 ; U.S. Congressional Serial Set 1847 ; 1847 ; https://www.govinfo.gov/ >
