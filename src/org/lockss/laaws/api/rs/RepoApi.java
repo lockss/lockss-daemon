@@ -48,22 +48,27 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.lockss.laaws.client.*;
+import org.lockss.laaws.client.ApiCallback;
+import org.lockss.laaws.client.V2RestClient;
+import org.lockss.laaws.client.ApiException;
+import org.lockss.laaws.client.ApiResponse;
+import org.lockss.laaws.client.Configuration;
+import org.lockss.laaws.client.Pair;
 import org.lockss.laaws.model.rs.RepositoryInfo;
 
 public class RepoApi {
-  private V2RestClient localVarApiClient;
+  private V2RestClient apiClient;
   private int localHostIndex;
   private String localCustomBaseUrl;
 
   public RepoApi() { this(Configuration.getDefaultApiClient()); }
 
-  public RepoApi(V2RestClient apiClient) { this.localVarApiClient = apiClient; }
+  public RepoApi(V2RestClient apiClient) { this.apiClient = apiClient; }
 
-  public V2RestClient getApiClient() { return localVarApiClient; }
+  public V2RestClient getApiClient() { return apiClient; }
 
   public void setApiClient(V2RestClient apiClient) {
-    this.localVarApiClient = apiClient;
+    this.apiClient = apiClient;
   }
 
   public int getHostIndex() { return localHostIndex; }
@@ -119,7 +124,7 @@ public class RepoApi {
 
     final String[] localVarAccepts = {"application/json"};
     final String localVarAccept =
-        localVarApiClient.selectHeaderAccept(localVarAccepts);
+        apiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
@@ -127,13 +132,13 @@ public class RepoApi {
     final String[] localVarContentTypes = {};
 
     final String localVarContentType =
-        localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        apiClient.selectHeaderContentType(localVarContentTypes);
     if (localVarContentType != null) {
       localVarHeaderParams.put("Content-Type", localVarContentType);
     }
 
         String[] localVarAuthNames = new String[]{ "basicAuth" };
-    return localVarApiClient.buildCall(
+    return apiClient.buildCall(
         basePath, localVarPath, "GET", localVarQueryParams,
         localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams,
         localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -187,7 +192,7 @@ public class RepoApi {
     okhttp3.Call localVarCall =
         getRepositoryInformationValidateBeforeCall(null);
     Type localVarReturnType = new TypeToken<RepositoryInfo>() {}.getType();
-    return localVarApiClient.execute(localVarCall, localVarReturnType);
+    return apiClient.execute(localVarCall, localVarReturnType);
   }
 
   /**
@@ -212,7 +217,7 @@ public class RepoApi {
     okhttp3.Call localVarCall =
         getRepositoryInformationValidateBeforeCall(_callback);
     Type localVarReturnType = new TypeToken<RepositoryInfo>() {}.getType();
-    localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+    apiClient.executeAsync(localVarCall, localVarReturnType, _callback);
     return localVarCall;
   }
 }

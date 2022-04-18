@@ -49,7 +49,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.lockss.laaws.client.*;
+import org.lockss.laaws.client.ApiCallback;
+import org.lockss.laaws.client.ApiException;
+import org.lockss.laaws.client.ApiResponse;
+import org.lockss.laaws.client.Configuration;
+import org.lockss.laaws.client.Pair;
+import org.lockss.laaws.client.V2RestClient;
 import org.lockss.laaws.model.rs.Artifact;
 import org.lockss.laaws.model.rs.ArtifactPageInfo;
 import org.lockss.laaws.model.rs.AuSize;
@@ -106,15 +111,14 @@ public class CollectionsApi {
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    * @http.response.details     <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 201 </td><td> Artifact created </td><td>  -  </td></tr>
-   * <tr><td> 302 </td><td> Duplicate content; artifact not created </td><td>
-   * Location - Repository query URL to duplicate artifacts <br>  </td></tr>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 201 </td><td> Artifact created </td><td>  -  </td></tr>
+   * <tr><td> 302 </td><td> Duplicate content; artifact not created </td><td>  * Location -
+   * Repository query URL to duplicate artifacts <br>  </td></tr>
    * <tr><td> 400 </td><td> Invalid input </td><td>  -  </td></tr>
    * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Client not authorized to create artifacts </td><td>
-   * -  </td></tr> <tr><td> 502 </td><td> Internal error creating artifact
-   * </td><td>  -  </td></tr>
+   * <tr><td> 403 </td><td> Client not authorized to create artifacts </td><td>  -  </td></tr>
+   * <tr><td> 502 </td><td> Internal error creating artifact </td><td>  -  </td></tr>
    * </table>
    */
   public okhttp3.Call createArtifactCall(String collectionid, String auid,
@@ -237,15 +241,14 @@ public class CollectionsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    * response body
    * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 201 </td><td> Artifact created </td><td>  -  </td></tr>
-   * <tr><td> 302 </td><td> Duplicate content; artifact not created </td><td>
-   * Location - Repository query URL to duplicate artifacts <br>  </td></tr>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 201 </td><td> Artifact created </td><td>  -  </td></tr>
+   * <tr><td> 302 </td><td> Duplicate content; artifact not created </td><td>  * Location -
+   * Repository query URL to duplicate artifacts <br>  </td></tr>
    * <tr><td> 400 </td><td> Invalid input </td><td>  -  </td></tr>
    * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Client not authorized to create artifacts </td><td>
-   * -  </td></tr> <tr><td> 502 </td><td> Internal error creating artifact
-   * </td><td>  -  </td></tr>
+   * <tr><td> 403 </td><td> Client not authorized to create artifacts </td><td>  -  </td></tr>
+   * <tr><td> 502 </td><td> Internal error creating artifact </td><td>  -  </td></tr>
    * </table>
    */
   public Artifact createArtifact(String collectionid, String auid, String uri,
@@ -269,15 +272,14 @@ public class CollectionsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    * response body
    * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 201 </td><td> Artifact created </td><td>  -  </td></tr>
-   * <tr><td> 302 </td><td> Duplicate content; artifact not created </td><td>
-   * Location - Repository query URL to duplicate artifacts <br>  </td></tr>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 201 </td><td> Artifact created </td><td>  -  </td></tr>
+   * <tr><td> 302 </td><td> Duplicate content; artifact not created </td><td>  * Location -
+   * Repository query URL to duplicate artifacts <br>  </td></tr>
    * <tr><td> 400 </td><td> Invalid input </td><td>  -  </td></tr>
    * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Client not authorized to create artifacts </td><td>
-   * -  </td></tr> <tr><td> 502 </td><td> Internal error creating artifact
-   * </td><td>  -  </td></tr>
+   * <tr><td> 403 </td><td> Client not authorized to create artifacts </td><td>  -  </td></tr>
+   * <tr><td> 502 </td><td> Internal error creating artifact </td><td>  -  </td></tr>
    * </table>
    */
   public ApiResponse<Artifact>
@@ -304,15 +306,14 @@ public class CollectionsApi {
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 201 </td><td> Artifact created </td><td>  -  </td></tr>
-   * <tr><td> 302 </td><td> Duplicate content; artifact not created </td><td>
-   * Location - Repository query URL to duplicate artifacts <br>  </td></tr>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 201 </td><td> Artifact created </td><td>  -  </td></tr>
+   * <tr><td> 302 </td><td> Duplicate content; artifact not created </td><td>  * Location -
+   * Repository query URL to duplicate artifacts <br>  </td></tr>
    * <tr><td> 400 </td><td> Invalid input </td><td>  -  </td></tr>
    * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Client not authorized to create artifacts </td><td>
-   * -  </td></tr> <tr><td> 502 </td><td> Internal error creating artifact
-   * </td><td>  -  </td></tr>
+   * <tr><td> 403 </td><td> Client not authorized to create artifacts </td><td>  -  </td></tr>
+   * <tr><td> 502 </td><td> Internal error creating artifact </td><td>  -  </td></tr>
    * </table>
    */
   public okhttp3.Call createArtifactAsync(String collectionid, String auid,
@@ -338,13 +339,12 @@ public class CollectionsApi {
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Successfully removed artifact </td><td>  -
-   * </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
-   * </td></tr> <tr><td> 403 </td><td> Client not authorized to delete artifact
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Artifact not found </td><td>
-   * -  </td></tr> <tr><td> 409 </td><td> Cannot delete committed artifact
-   * </td><td>  -  </td></tr>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 200 </td><td> Successfully removed artifact </td><td>  -  </td></tr>
+   * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
+   * <tr><td> 403 </td><td> Client not authorized to delete artifact </td><td>  -  </td></tr>
+   * <tr><td> 404 </td><td> Artifact not found </td><td>  -  </td></tr>
+   * <tr><td> 409 </td><td> Cannot delete committed artifact </td><td>  -  </td></tr>
    * </table>
    */
   public okhttp3.Call deleteArtifactCall(String collectionid, String artifactid,
@@ -435,13 +435,12 @@ public class CollectionsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    * response body
    * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Successfully removed artifact </td><td>  -
-   * </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
-   * </td></tr> <tr><td> 403 </td><td> Client not authorized to delete artifact
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Artifact not found </td><td>
-   * -  </td></tr> <tr><td> 409 </td><td> Cannot delete committed artifact
-   * </td><td>  -  </td></tr>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 200 </td><td> Successfully removed artifact </td><td>  -  </td></tr>
+   * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
+   * <tr><td> 403 </td><td> Client not authorized to delete artifact </td><td>  -  </td></tr>
+   * <tr><td> 404 </td><td> Artifact not found </td><td>  -  </td></tr>
+   * <tr><td> 409 </td><td> Cannot delete committed artifact </td><td>  -  </td></tr>
    * </table>
    */
   public void deleteArtifact(String collectionid, String artifactid)
@@ -458,13 +457,12 @@ public class CollectionsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    * response body
    * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Successfully removed artifact </td><td>  -
-   * </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
-   * </td></tr> <tr><td> 403 </td><td> Client not authorized to delete artifact
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Artifact not found </td><td>
-   * -  </td></tr> <tr><td> 409 </td><td> Cannot delete committed artifact
-   * </td><td>  -  </td></tr>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 200 </td><td> Successfully removed artifact </td><td>  -  </td></tr>
+   * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
+   * <tr><td> 403 </td><td> Client not authorized to delete artifact </td><td>  -  </td></tr>
+   * <tr><td> 404 </td><td> Artifact not found </td><td>  -  </td></tr>
+   * <tr><td> 409 </td><td> Cannot delete committed artifact </td><td>  -  </td></tr>
    * </table>
    */
   public ApiResponse<Void> deleteArtifactWithHttpInfo(String collectionid,
@@ -484,13 +482,12 @@ public class CollectionsApi {
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Successfully removed artifact </td><td>  -
-   * </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
-   * </td></tr> <tr><td> 403 </td><td> Client not authorized to delete artifact
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Artifact not found </td><td>
-   * -  </td></tr> <tr><td> 409 </td><td> Cannot delete committed artifact
-   * </td><td>  -  </td></tr>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 200 </td><td> Successfully removed artifact </td><td>  -  </td></tr>
+   * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
+   * <tr><td> 403 </td><td> Client not authorized to delete artifact </td><td>  -  </td></tr>
+   * <tr><td> 404 </td><td> Artifact not found </td><td>  -  </td></tr>
+   * <tr><td> 409 </td><td> Cannot delete committed artifact </td><td>  -  </td></tr>
    * </table>
    */
   public okhttp3.Call deleteArtifactAsync(String collectionid,
@@ -515,13 +512,12 @@ public class CollectionsApi {
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Artifact created </td><td>  -  </td></tr>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 200 </td><td> Artifact created </td><td>  -  </td></tr>
    * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Client not authorized to retrieve artifact
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Artifact not found </td><td>
-   * -  </td></tr> <tr><td> 502 </td><td> Could not read from external resource
-   * </td><td>  -  </td></tr>
+   * <tr><td> 403 </td><td> Client not authorized to retrieve artifact </td><td>  -  </td></tr>
+   * <tr><td> 404 </td><td> Artifact not found </td><td>  -  </td></tr>
+   * <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
    * </table>
    */
   public okhttp3.Call getArtifactCall(String collectionid, String artifactid,
@@ -622,13 +618,12 @@ public class CollectionsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    * response body
    * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Artifact created </td><td>  -  </td></tr>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 200 </td><td> Artifact created </td><td>  -  </td></tr>
    * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Client not authorized to retrieve artifact
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Artifact not found </td><td>
-   * -  </td></tr> <tr><td> 502 </td><td> Could not read from external resource
-   * </td><td>  -  </td></tr>
+   * <tr><td> 403 </td><td> Client not authorized to retrieve artifact </td><td>  -  </td></tr>
+   * <tr><td> 404 </td><td> Artifact not found </td><td>  -  </td></tr>
+   * <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
    * </table>
    */
   public File getArtifact(String collectionid, String artifactid,
@@ -649,13 +644,12 @@ public class CollectionsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    * response body
    * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Artifact created </td><td>  -  </td></tr>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 200 </td><td> Artifact created </td><td>  -  </td></tr>
    * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Client not authorized to retrieve artifact
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Artifact not found </td><td>
-   * -  </td></tr> <tr><td> 502 </td><td> Could not read from external resource
-   * </td><td>  -  </td></tr>
+   * <tr><td> 403 </td><td> Client not authorized to retrieve artifact </td><td>  -  </td></tr>
+   * <tr><td> 404 </td><td> Artifact not found </td><td>  -  </td></tr>
+   * <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
    * </table>
    */
   public ApiResponse<File> getArtifactWithHttpInfo(String collectionid,
@@ -680,13 +674,12 @@ public class CollectionsApi {
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Artifact created </td><td>  -  </td></tr>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 200 </td><td> Artifact created </td><td>  -  </td></tr>
    * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Client not authorized to retrieve artifact
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Artifact not found </td><td>
-   * -  </td></tr> <tr><td> 502 </td><td> Could not read from external resource
-   * </td><td>  -  </td></tr>
+   * <tr><td> 403 </td><td> Client not authorized to retrieve artifact </td><td>  -  </td></tr>
+   * <tr><td> 404 </td><td> Artifact not found </td><td>  -  </td></tr>
+   * <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
    * </table>
    */
   public okhttp3.Call getArtifactAsync(String collectionid, String artifactid,
@@ -719,13 +712,12 @@ public class CollectionsApi {
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> The requested artifacts </td><td>  -
-   * </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
-   * </td></tr> <tr><td> 403 </td><td> Client not authorized to retrieve data
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not found
-   * </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from external
-   * resource </td><td>  -  </td></tr>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 200 </td><td> The requested artifacts </td><td>  -  </td></tr>
+   * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
+   * <tr><td> 403 </td><td> Client not authorized to retrieve data </td><td>  -  </td></tr>
+   * <tr><td> 404 </td><td> Collection not found </td><td>  -  </td></tr>
+   * <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
    * </table>
    */
   public okhttp3.Call
@@ -858,13 +850,12 @@ public class CollectionsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    * response body
    * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> The requested artifacts </td><td>  -
-   * </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
-   * </td></tr> <tr><td> 403 </td><td> Client not authorized to retrieve data
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not found
-   * </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from external
-   * resource </td><td>  -  </td></tr>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 200 </td><td> The requested artifacts </td><td>  -  </td></tr>
+   * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
+   * <tr><td> 403 </td><td> Client not authorized to retrieve data </td><td>  -  </td></tr>
+   * <tr><td> 404 </td><td> Collection not found </td><td>  -  </td></tr>
+   * <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
    * </table>
    */
   public ArtifactPageInfo getArtifacts(
@@ -898,13 +889,12 @@ public class CollectionsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    * response body
    * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> The requested artifacts </td><td>  -
-   * </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
-   * </td></tr> <tr><td> 403 </td><td> Client not authorized to retrieve data
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not found
-   * </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from external
-   * resource </td><td>  -  </td></tr>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 200 </td><td> The requested artifacts </td><td>  -  </td></tr>
+   * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
+   * <tr><td> 403 </td><td> Client not authorized to retrieve data </td><td>  -  </td></tr>
+   * <tr><td> 404 </td><td> Collection not found </td><td>  -  </td></tr>
+   * <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
    * </table>
    */
   public ApiResponse<ArtifactPageInfo>
@@ -939,13 +929,12 @@ public class CollectionsApi {
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> The requested artifacts </td><td>  -
-   * </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
-   * </td></tr> <tr><td> 403 </td><td> Client not authorized to retrieve data
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not found
-   * </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from external
-   * resource </td><td>  -  </td></tr>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 200 </td><td> The requested artifacts </td><td>  -  </td></tr>
+   * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
+   * <tr><td> 403 </td><td> Client not authorized to retrieve data </td><td>  -  </td></tr>
+   * <tr><td> 404 </td><td> Collection not found </td><td>  -  </td></tr>
+   * <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
    * </table>
    */
   public okhttp3.Call getArtifactsAsync(
@@ -977,13 +966,12 @@ public class CollectionsApi {
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> The requested artifacts </td><td>  -
-   * </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
-   * </td></tr> <tr><td> 403 </td><td> Client not authorized to retrieve data
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not found
-   * </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from external
-   * resource </td><td>  -  </td></tr>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 200 </td><td> The requested artifacts </td><td>  -  </td></tr>
+   * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
+   * <tr><td> 403 </td><td> Client not authorized to retrieve data </td><td>  -  </td></tr>
+   * <tr><td> 404 </td><td> Collection not found </td><td>  -  </td></tr>
+   * <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
    * </table>
    */
   public okhttp3.Call getArtifactsFromAllAusCall(String collectionid,
@@ -1038,13 +1026,12 @@ public class CollectionsApi {
     }
 
     if (limit != null) {
-      localVarQueryParams.addAll(
-          apiClient.parameterToPair("limit", limit));
+      localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
     }
 
     if (continuationToken != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair(
-          "continuationToken", continuationToken));
+      localVarQueryParams.addAll(
+          apiClient.parameterToPair("continuationToken", continuationToken));
     }
 
     final String[] localVarAccepts = {"application/json"};
@@ -1102,13 +1089,12 @@ public class CollectionsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    * response body
    * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> The requested artifacts </td><td>  -
-   * </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
-   * </td></tr> <tr><td> 403 </td><td> Client not authorized to retrieve data
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not found
-   * </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from external
-   * resource </td><td>  -  </td></tr>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 200 </td><td> The requested artifacts </td><td>  -  </td></tr>
+   * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
+   * <tr><td> 403 </td><td> Client not authorized to retrieve data </td><td>  -  </td></tr>
+   * <tr><td> 404 </td><td> Collection not found </td><td>  -  </td></tr>
+   * <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
    * </table>
    */
   public ArtifactPageInfo getArtifactsFromAllAus(String collectionid,
@@ -1137,13 +1123,12 @@ public class CollectionsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    * response body
    * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> The requested artifacts </td><td>  -
-   * </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
-   * </td></tr> <tr><td> 403 </td><td> Client not authorized to retrieve data
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not found
-   * </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from external
-   * resource </td><td>  -  </td></tr>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 200 </td><td> The requested artifacts </td><td>  -  </td></tr>
+   * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
+   * <tr><td> 403 </td><td> Client not authorized to retrieve data </td><td>  -  </td></tr>
+   * <tr><td> 404 </td><td> Collection not found </td><td>  -  </td></tr>
+   * <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
    * </table>
    */
   public ApiResponse<ArtifactPageInfo> getArtifactsFromAllAusWithHttpInfo(
@@ -1171,13 +1156,12 @@ public class CollectionsApi {
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> The requested artifacts </td><td>  -
-   * </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
-   * </td></tr> <tr><td> 403 </td><td> Client not authorized to retrieve data
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not found
-   * </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from external
-   * resource </td><td>  -  </td></tr>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 200 </td><td> The requested artifacts </td><td>  -  </td></tr>
+   * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
+   * <tr><td> 403 </td><td> Client not authorized to retrieve data </td><td>  -  </td></tr>
+   * <tr><td> 404 </td><td> Collection not found </td><td>  -  </td></tr>
+   * <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
    * </table>
    */
   public okhttp3.Call getArtifactsFromAllAusAsync(
@@ -1203,15 +1187,14 @@ public class CollectionsApi {
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Returns an AuSize containing the sizes of
-   * all the artifacts, only the latest artifact version of all URLs, and the sum of the size of all
-   * the underlying WARC files, of an AU. </td><td>  -
-   * </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
-   * </td></tr> <tr><td> 403 </td><td> Client not authorized to retrieve data
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not found
-   * </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from external
-   * resource </td><td>  -  </td></tr>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 200 </td><td> Returns an AuSize containing the sizes of all the artifacts, only the
+   * latest artifact version of all URLs, and the sum of the size of all the underlying WARC files,
+   * of an AU. </td><td>  -  </td></tr>
+   * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
+   * <tr><td> 403 </td><td> Client not authorized to retrieve data </td><td>  -  </td></tr>
+   * <tr><td> 404 </td><td> Collection not found </td><td>  -  </td></tr>
+   * <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
    * </table>
    */
   public okhttp3.Call getArtifactsSizeCall(String collectionid, String auid,
@@ -1301,15 +1284,14 @@ public class CollectionsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    * response body
    * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Returns an AuSize containing the sizes of
-   * all the artifacts, only the latest artifact version of all URLs, and the sum of the size of all
-   * the underlying WARC files, of an AU. </td><td>  -
-   * </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
-   * </td></tr> <tr><td> 403 </td><td> Client not authorized to retrieve data
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not found
-   * </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from external
-   * resource </td><td>  -  </td></tr>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 200 </td><td> Returns an AuSize containing the sizes of all the artifacts, only the
+   * latest artifact version of all URLs, and the sum of the size of all the underlying WARC files,
+   * of an AU. </td><td>  -  </td></tr>
+   * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
+   * <tr><td> 403 </td><td> Client not authorized to retrieve data </td><td>  -  </td></tr>
+   * <tr><td> 404 </td><td> Collection not found </td><td>  -  </td></tr>
+   * <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
    * </table>
    */
   public AuSize getArtifactsSize(String collectionid, String auid)
@@ -1328,15 +1310,14 @@ public class CollectionsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    * response body
    * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Returns an AuSize containing the sizes of
-   * all the artifacts, only the latest artifact version of all URLs, and the sum of the size of all
-   * the underlying WARC files, of an AU. </td><td>  -
-   * </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
-   * </td></tr> <tr><td> 403 </td><td> Client not authorized to retrieve data
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not found
-   * </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from external
-   * resource </td><td>  -  </td></tr>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 200 </td><td> Returns an AuSize containing the sizes of all the artifacts, only the
+   * latest artifact version of all URLs, and the sum of the size of all the underlying WARC files,
+   * of an AU. </td><td>  -  </td></tr>
+   * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
+   * <tr><td> 403 </td><td> Client not authorized to retrieve data </td><td>  -  </td></tr>
+   * <tr><td> 404 </td><td> Collection not found </td><td>  -  </td></tr>
+   * <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
    * </table>
    */
   public ApiResponse<AuSize> getArtifactsSizeWithHttpInfo(String collectionid,
@@ -1358,15 +1339,14 @@ public class CollectionsApi {
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Returns an AuSize containing the sizes of
-   * all the artifacts, only the latest artifact version of all URLs, and the sum of the size of all
-   * the underlying WARC files, of an AU. </td><td>  -
-   * </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
-   * </td></tr> <tr><td> 403 </td><td> Client not authorized to retrieve data
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not found
-   * </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from external
-   * resource </td><td>  -  </td></tr>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 200 </td><td> Returns an AuSize containing the sizes of all the artifacts, only the
+   * latest artifact version of all URLs, and the sum of the size of all the underlying WARC files,
+   * of an AU. </td><td>  -  </td></tr>
+   * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
+   * <tr><td> 403 </td><td> Client not authorized to retrieve data </td><td>  -  </td></tr>
+   * <tr><td> 404 </td><td> Collection not found </td><td>  -  </td></tr>
+   * <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
    * </table>
    */
   public okhttp3.Call getArtifactsSizeAsync(String collectionid, String auid,
@@ -1385,20 +1365,20 @@ public class CollectionsApi {
    * Build call for getAus
    *
    * @param collectionid Identifier of the collection containing the Archival Units (required)
-   * @param limit The requested maximum number of Archival Unit identifiers per response (optional)
+   * @param limit             The requested maximum number of Archival Unit identifiers per response
+   *                          (optional)
    * @param continuationToken The continuation token of the next page of Archival Unit identifiers
    * to be returned (optional)
    * @param _callback Callback for upload/download progress
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> The requested Archival Unit identifiers
-   * </td><td>  -  </td></tr> <tr><td> 401 </td><td> Unauthorized request
-   * </td><td>  -  </td></tr> <tr><td> 403 </td><td> Client not authorized to
-   * retrieve data </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not found </td><td>  -
-   *  </td></tr> <tr><td> 502 </td><td> Could not read from external resource </td><td>  -
-   * </td></tr>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 200 </td><td> The requested Archival Unit identifiers </td><td>  -  </td></tr>
+   * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
+   * <tr><td> 403 </td><td> Client not authorized to retrieve data </td><td>  -  </td></tr>
+   * <tr><td> 404 </td><td> Collection not found </td><td>  -  </td></tr>
+   * <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
    * </table>
    */
   public okhttp3.Call getAusCall(String collectionid, Integer limit,
@@ -1491,20 +1471,20 @@ public class CollectionsApi {
    * collection or a pageful of the list defined by the continuation token and size
    *
    * @param collectionid Identifier of the collection containing the Archival Units (required)
-   * @param limit The requested maximum number of Archival Unit identifiers per response (optional)
+   * @param limit             The requested maximum number of Archival Unit identifiers per response
+   *                          (optional)
    * @param continuationToken The continuation token of the next page of Archival Unit identifiers
    * to be returned (optional)
    * @return AuidPageInfo
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    * response body
    * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> The requested Archival Unit identifiers
-   * </td><td>  -  </td></tr> <tr><td> 401 </td><td> Unauthorized request
-   * </td><td>  -  </td></tr> <tr><td> 403 </td><td> Client not authorized to
-   * retrieve data </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not found </td><td>  -
-   *  </td></tr> <tr><td> 502 </td><td> Could not read from external resource </td><td>  -
-   * </td></tr>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 200 </td><td> The requested Archival Unit identifiers </td><td>  -  </td></tr>
+   * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
+   * <tr><td> 403 </td><td> Client not authorized to retrieve data </td><td>  -  </td></tr>
+   * <tr><td> 404 </td><td> Collection not found </td><td>  -  </td></tr>
+   * <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
    * </table>
    */
   public AuidPageInfo getAus(String collectionid, Integer limit,
@@ -1519,20 +1499,20 @@ public class CollectionsApi {
    * collection or a pageful of the list defined by the continuation token and size
    *
    * @param collectionid Identifier of the collection containing the Archival Units (required)
-   * @param limit The requested maximum number of Archival Unit identifiers per response (optional)
+   * @param limit             The requested maximum number of Archival Unit identifiers per response
+   *                          (optional)
    * @param continuationToken The continuation token of the next page of Archival Unit identifiers
    * to be returned (optional)
    * @return ApiResponse&lt;AuidPageInfo&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    * response body
    * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> The requested Archival Unit identifiers
-   * </td><td>  -  </td></tr> <tr><td> 401 </td><td> Unauthorized request
-   * </td><td>  -  </td></tr> <tr><td> 403 </td><td> Client not authorized to
-   * retrieve data </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not found </td><td>  -
-   *  </td></tr> <tr><td> 502 </td><td> Could not read from external resource </td><td>  -
-   * </td></tr>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 200 </td><td> The requested Archival Unit identifiers </td><td>  -  </td></tr>
+   * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
+   * <tr><td> 403 </td><td> Client not authorized to retrieve data </td><td>  -  </td></tr>
+   * <tr><td> 404 </td><td> Collection not found </td><td>  -  </td></tr>
+   * <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
    * </table>
    */
   public ApiResponse<AuidPageInfo> getAusWithHttpInfo(String collectionid,
@@ -1552,20 +1532,20 @@ public class CollectionsApi {
    * size
    *
    * @param collectionid Identifier of the collection containing the Archival Units (required)
-   * @param limit The requested maximum number of Archival Unit identifiers per response (optional)
+   * @param limit             The requested maximum number of Archival Unit identifiers per response
+   *                          (optional)
    * @param continuationToken The continuation token of the next page of Archival Unit identifiers
    * to be returned (optional)
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> The requested Archival Unit identifiers
-   * </td><td>  -  </td></tr> <tr><td> 401 </td><td> Unauthorized request
-   * </td><td>  -  </td></tr> <tr><td> 403 </td><td> Client not authorized to
-   * retrieve data </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not found </td><td>  -
-   *  </td></tr> <tr><td> 502 </td><td> Could not read from external resource </td><td>  -
-   * </td></tr>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 200 </td><td> The requested Archival Unit identifiers </td><td>  -  </td></tr>
+   * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
+   * <tr><td> 403 </td><td> Client not authorized to retrieve data </td><td>  -  </td></tr>
+   * <tr><td> 404 </td><td> Collection not found </td><td>  -  </td></tr>
+   * <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
    * </table>
    */
   public okhttp3.Call getAusAsync(String collectionid, Integer limit,
@@ -1588,8 +1568,8 @@ public class CollectionsApi {
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Status 200 </td><td>  -  </td></tr>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 200 </td><td> Status 200 </td><td>  -  </td></tr>
    * </table>
    */
   public okhttp3.Call getCollectionsCall(final ApiCallback _callback)
@@ -1659,8 +1639,8 @@ public class CollectionsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    * response body
    * @http.response.details     <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Status 200 </td><td>  -  </td></tr>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 200 </td><td> Status 200 </td><td>  -  </td></tr>
    * </table>
    */
   public List<String> getCollections() throws ApiException {
@@ -1675,8 +1655,8 @@ public class CollectionsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    * response body
    * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Status 200 </td><td>  -  </td></tr>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 200 </td><td> Status 200 </td><td>  -  </td></tr>
    * </table>
    */
   public ApiResponse<List<String>> getCollectionsWithHttpInfo()
@@ -1694,8 +1674,8 @@ public class CollectionsApi {
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Status 200 </td><td>  -  </td></tr>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 200 </td><td> Status 200 </td><td>  -  </td></tr>
    * </table>
    */
   public okhttp3.Call
@@ -1719,12 +1699,12 @@ public class CollectionsApi {
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Bulk operation succeeded </td><td>  -
-   * </td></tr> <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Client is forbidden from performing bulk operation
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection or AUID not found
-   * </td><td>  -  </td></tr>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 200 </td><td> Bulk operation succeeded </td><td>  -  </td></tr>
+   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+   * <tr><td> 403 </td><td> Client is forbidden from performing bulk operation </td><td>  -
+   * </td></tr>
+   * <tr><td> 404 </td><td> Collection or AUID not found </td><td>  -  </td></tr>
    * </table>
    */
   public okhttp3.Call handleBulkAuOpCall(String collectionid, String auid,
@@ -1824,12 +1804,12 @@ public class CollectionsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    * response body
    * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Bulk operation succeeded </td><td>  -
-   * </td></tr> <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Client is forbidden from performing bulk operation
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection or AUID not found
-   * </td><td>  -  </td></tr>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 200 </td><td> Bulk operation succeeded </td><td>  -  </td></tr>
+   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+   * <tr><td> 403 </td><td> Client is forbidden from performing bulk operation </td><td>  -
+   * </td></tr>
+   * <tr><td> 404 </td><td> Collection or AUID not found </td><td>  -  </td></tr>
    * </table>
    */
   public void handleBulkAuOp(String collectionid, String auid, String op)
@@ -1847,12 +1827,12 @@ public class CollectionsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    * response body
    * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Bulk operation succeeded </td><td>  -
-   * </td></tr> <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Client is forbidden from performing bulk operation
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection or AUID not found
-   * </td><td>  -  </td></tr>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 200 </td><td> Bulk operation succeeded </td><td>  -  </td></tr>
+   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+   * <tr><td> 403 </td><td> Client is forbidden from performing bulk operation </td><td>  -
+   * </td></tr>
+   * <tr><td> 404 </td><td> Collection or AUID not found </td><td>  -  </td></tr>
    * </table>
    */
   public ApiResponse<Void> handleBulkAuOpWithHttpInfo(String collectionid,
@@ -1873,12 +1853,12 @@ public class CollectionsApi {
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Bulk operation succeeded </td><td>  -
-   * </td></tr> <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Client is forbidden from performing bulk operation
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection or AUID not found
-   * </td><td>  -  </td></tr>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 200 </td><td> Bulk operation succeeded </td><td>  -  </td></tr>
+   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+   * <tr><td> 403 </td><td> Client is forbidden from performing bulk operation </td><td>  -
+   * </td></tr>
+   * <tr><td> 404 </td><td> Collection or AUID not found </td><td>  -  </td></tr>
    * </table>
    */
   public okhttp3.Call handleBulkAuOpAsync(String collectionid, String auid,
@@ -1902,13 +1882,12 @@ public class CollectionsApi {
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Artifact updated </td><td>  -  </td></tr>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 200 </td><td> Artifact updated </td><td>  -  </td></tr>
    * <tr><td> 400 </td><td> Invalid input </td><td>  -  </td></tr>
    * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Client not authorized to update artifact </td><td>
-   * -  </td></tr> <tr><td> 404 </td><td> Artifact not found </td><td>  -
-   * </td></tr>
+   * <tr><td> 403 </td><td> Client not authorized to update artifact </td><td>  -  </td></tr>
+   * <tr><td> 404 </td><td> Artifact not found </td><td>  -  </td></tr>
    * </table>
    */
   public okhttp3.Call updateArtifactCall(String collectionid, String artifactid,
@@ -2013,13 +1992,12 @@ public class CollectionsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    * response body
    * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Artifact updated </td><td>  -  </td></tr>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 200 </td><td> Artifact updated </td><td>  -  </td></tr>
    * <tr><td> 400 </td><td> Invalid input </td><td>  -  </td></tr>
    * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Client not authorized to update artifact </td><td>
-   * -  </td></tr> <tr><td> 404 </td><td> Artifact not found </td><td>  -
-   * </td></tr>
+   * <tr><td> 403 </td><td> Client not authorized to update artifact </td><td>  -  </td></tr>
+   * <tr><td> 404 </td><td> Artifact not found </td><td>  -  </td></tr>
    * </table>
    */
   public Artifact updateArtifact(String collectionid, String artifactid,
@@ -2039,13 +2017,12 @@ public class CollectionsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    * response body
    * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Artifact updated </td><td>  -  </td></tr>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 200 </td><td> Artifact updated </td><td>  -  </td></tr>
    * <tr><td> 400 </td><td> Invalid input </td><td>  -  </td></tr>
    * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Client not authorized to update artifact </td><td>
-   * -  </td></tr> <tr><td> 404 </td><td> Artifact not found </td><td>  -
-   * </td></tr>
+   * <tr><td> 403 </td><td> Client not authorized to update artifact </td><td>  -  </td></tr>
+   * <tr><td> 404 </td><td> Artifact not found </td><td>  -  </td></tr>
    * </table>
    */
   public ApiResponse<Artifact> updateArtifactWithHttpInfo(String collectionid,
@@ -2069,13 +2046,12 @@ public class CollectionsApi {
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Artifact updated </td><td>  -  </td></tr>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 200 </td><td> Artifact updated </td><td>  -  </td></tr>
    * <tr><td> 400 </td><td> Invalid input </td><td>  -  </td></tr>
    * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Client not authorized to update artifact </td><td>
-   * -  </td></tr> <tr><td> 404 </td><td> Artifact not found </td><td>  -
-   * </td></tr>
+   * <tr><td> 403 </td><td> Client not authorized to update artifact </td><td>  -  </td></tr>
+   * <tr><td> 404 </td><td> Artifact not found </td><td>  -  </td></tr>
    * </table>
    */
   public okhttp3.Call updateArtifactAsync(String collectionid,

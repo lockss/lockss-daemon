@@ -32,6 +32,7 @@ package org.lockss.laaws;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
+import junit.framework.TestCase;
 import org.lockss.test.LockssTestCase;
 
 /**
@@ -54,14 +55,18 @@ public class TestAuStateChecker extends LockssTestCase {
   }
 
   /**
+*
    * Method: run()
+*
    */
   public void testRun() throws Exception {
 //TODO: Test goes here... 
   }
 
   /**
+*
    * Method: createInstance(final Type type)
+*
    */
   public void testCreateInstance() throws Exception {
 //TODO: Test goes here... 
@@ -69,7 +74,9 @@ public class TestAuStateChecker extends LockssTestCase {
 
 
   /**
+*
    * Method: checkAuAgreements(ArchivalUnit au)
+*
    */
   public void testCheckAuAgreements() throws Exception {
 //TODO: Test goes here... 
@@ -86,7 +93,9 @@ try {
   }
 
   /**
+*
    * Method: checkAuSuspectUrlVersions(ArchivalUnit au)
+*
    */
   public void testCheckAuSuspectUrlVersions() throws Exception {
 //TODO: Test goes here... 
@@ -103,7 +112,9 @@ try {
   }
 
   /**
+*
    * Method: checkNoAuPeerSet(ArchivalUnit au)
+*
    */
   public void testCheckNoAuPeerSet() throws Exception {
 //TODO: Test goes here... 
@@ -120,7 +131,9 @@ try {
   }
 
   /**
+*
    * Method: checkAuConfig(ArchivalUnit au)
+*
    */
   public void testCheckAuConfig() throws Exception {
 //TODO: Test goes here... 
@@ -137,7 +150,9 @@ try {
   }
 
   /**
+*
    * Method: checkAuState(ArchivalUnit au)
+*
    */
   public void testCheckAuState() throws Exception {
 //TODO: Test goes here... 

@@ -59,7 +59,7 @@ import org.lockss.laaws.client.Pair;
 import org.lockss.laaws.model.cfg.PlatformConfigurationWsResult;
 
 public class ConfigApi {
-  private V2RestClient localVarApiClient;
+  private V2RestClient apiClient;
   private int localHostIndex;
   private String localCustomBaseUrl;
 
@@ -68,15 +68,15 @@ public class ConfigApi {
   }
 
   public ConfigApi(V2RestClient apiClient) {
-    this.localVarApiClient = apiClient;
+    this.apiClient = apiClient;
   }
 
   public V2RestClient getApiClient() {
-    return localVarApiClient;
+    return apiClient;
   }
 
   public void setApiClient(V2RestClient apiClient) {
-    this.localVarApiClient = apiClient;
+    this.apiClient = apiClient;
   }
 
   public int getHostIndex() {
@@ -137,7 +137,7 @@ public class ConfigApi {
     Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
     final String[] localVarAccepts = {"application/json"};
-    final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
@@ -145,13 +145,13 @@ public class ConfigApi {
     final String[] localVarContentTypes = {};
 
     final String localVarContentType =
-        localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        apiClient.selectHeaderContentType(localVarContentTypes);
     if (localVarContentType != null) {
       localVarHeaderParams.put("Content-Type", localVarContentType);
     }
 
     String[] localVarAuthNames = new String[] {"basicAuth"};
-    return localVarApiClient.buildCall(
+    return apiClient.buildCall(
         basePath,
         localVarPath,
         "GET",
@@ -213,7 +213,7 @@ public class ConfigApi {
   public ApiResponse<OffsetDateTime> getLastUpdateTimeWithHttpInfo() throws ApiException {
     okhttp3.Call localVarCall = getLastUpdateTimeValidateBeforeCall(null);
     Type localVarReturnType = new TypeToken<OffsetDateTime>() {}.getType();
-    return localVarApiClient.execute(localVarCall, localVarReturnType);
+    return apiClient.execute(localVarCall, localVarReturnType);
   }
 
   /**
@@ -237,7 +237,7 @@ public class ConfigApi {
 
     okhttp3.Call localVarCall = getLastUpdateTimeValidateBeforeCall(_callback);
     Type localVarReturnType = new TypeToken<OffsetDateTime>() {}.getType();
-    localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+    apiClient.executeAsync(localVarCall, localVarReturnType, _callback);
     return localVarCall;
   }
   /**
@@ -282,7 +282,7 @@ public class ConfigApi {
     Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
     final String[] localVarAccepts = {"application/json"};
-    final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
@@ -290,13 +290,13 @@ public class ConfigApi {
     final String[] localVarContentTypes = {};
 
     final String localVarContentType =
-        localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        apiClient.selectHeaderContentType(localVarContentTypes);
     if (localVarContentType != null) {
       localVarHeaderParams.put("Content-Type", localVarContentType);
     }
 
     String[] localVarAuthNames = new String[] {"basicAuth"};
-    return localVarApiClient.buildCall(
+    return apiClient.buildCall(
         basePath,
         localVarPath,
         "GET",
@@ -358,7 +358,7 @@ public class ConfigApi {
   public ApiResponse<List<String>> getLoadedUrlListWithHttpInfo() throws ApiException {
     okhttp3.Call localVarCall = getLoadedUrlListValidateBeforeCall(null);
     Type localVarReturnType = new TypeToken<List<String>>() {}.getType();
-    return localVarApiClient.execute(localVarCall, localVarReturnType);
+    return apiClient.execute(localVarCall, localVarReturnType);
   }
 
   /**
@@ -382,7 +382,7 @@ public class ConfigApi {
 
     okhttp3.Call localVarCall = getLoadedUrlListValidateBeforeCall(_callback);
     Type localVarReturnType = new TypeToken<List<String>>() {}.getType();
-    localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+    apiClient.executeAsync(localVarCall, localVarReturnType, _callback);
     return localVarCall;
   }
   /**
@@ -426,7 +426,7 @@ public class ConfigApi {
     Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
     final String[] localVarAccepts = {"application/json"};
-    final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
@@ -434,13 +434,13 @@ public class ConfigApi {
     final String[] localVarContentTypes = {};
 
     final String localVarContentType =
-        localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        apiClient.selectHeaderContentType(localVarContentTypes);
     if (localVarContentType != null) {
       localVarHeaderParams.put("Content-Type", localVarContentType);
     }
 
     String[] localVarAuthNames = new String[] {"basicAuth"};
-    return localVarApiClient.buildCall(
+    return apiClient.buildCall(
         basePath,
         localVarPath,
         "GET",
@@ -499,7 +499,7 @@ public class ConfigApi {
       throws ApiException {
     okhttp3.Call localVarCall = getPlatformConfigValidateBeforeCall(null);
     Type localVarReturnType = new TypeToken<PlatformConfigurationWsResult>() {}.getType();
-    return localVarApiClient.execute(localVarCall, localVarReturnType);
+    return apiClient.execute(localVarCall, localVarReturnType);
   }
 
   /**
@@ -521,7 +521,7 @@ public class ConfigApi {
 
     okhttp3.Call localVarCall = getPlatformConfigValidateBeforeCall(_callback);
     Type localVarReturnType = new TypeToken<PlatformConfigurationWsResult>() {}.getType();
-    localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+    apiClient.executeAsync(localVarCall, localVarReturnType, _callback);
     return localVarCall;
   }
   /**
@@ -578,7 +578,7 @@ public class ConfigApi {
         "/config/file/{sectionName}"
             .replaceAll(
                 "\\{" + "sectionName" + "\\}",
-                localVarApiClient.escapeString(sectionName));
+                apiClient.escapeString(sectionName));
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -587,25 +587,25 @@ public class ConfigApi {
     Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
     if (ifMatch != null) {
-      localVarHeaderParams.put("If-Match", localVarApiClient.parameterToString(ifMatch));
+      localVarHeaderParams.put("If-Match", apiClient.parameterToString(ifMatch));
     }
 
     if (ifModifiedSince != null) {
       localVarHeaderParams.put(
-          "If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
+          "If-Modified-Since", apiClient.parameterToString(ifModifiedSince));
     }
 
     if (ifNoneMatch != null) {
-      localVarHeaderParams.put("If-None-Match", localVarApiClient.parameterToString(ifNoneMatch));
+      localVarHeaderParams.put("If-None-Match", apiClient.parameterToString(ifNoneMatch));
     }
 
     if (ifUnmodifiedSince != null) {
       localVarHeaderParams.put(
-          "If-Unmodified-Since", localVarApiClient.parameterToString(ifUnmodifiedSince));
+          "If-Unmodified-Since", apiClient.parameterToString(ifUnmodifiedSince));
     }
 
     final String[] localVarAccepts = {"multipart/form-data"};
-    final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
@@ -613,13 +613,13 @@ public class ConfigApi {
     final String[] localVarContentTypes = {};
 
     final String localVarContentType =
-        localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        apiClient.selectHeaderContentType(localVarContentTypes);
     if (localVarContentType != null) {
       localVarHeaderParams.put("Content-Type", localVarContentType);
     }
 
     String[] localVarAuthNames = new String[] {"basicAuth"};
-    return localVarApiClient.buildCall(
+    return apiClient.buildCall(
         basePath,
         localVarPath,
         "GET",
@@ -729,7 +729,7 @@ public class ConfigApi {
         getSectionConfigValidateBeforeCall(
             sectionName, ifMatch, ifModifiedSince, ifNoneMatch, ifUnmodifiedSince, null);
     Type localVarReturnType = new TypeToken<File>() {}.getType();
-    return localVarApiClient.execute(localVarCall, localVarReturnType);
+    return apiClient.execute(localVarCall, localVarReturnType);
   }
 
   /**
@@ -771,7 +771,7 @@ public class ConfigApi {
         getSectionConfigValidateBeforeCall(
             sectionName, ifMatch, ifModifiedSince, ifNoneMatch, ifUnmodifiedSince, _callback);
     Type localVarReturnType = new TypeToken<File>() {}.getType();
-    localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+    apiClient.executeAsync(localVarCall, localVarReturnType, _callback);
     return localVarCall;
   }
   /**
@@ -832,29 +832,29 @@ public class ConfigApi {
     Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
     if (url != null) {
-      localVarQueryParams.addAll(localVarApiClient.parameterToPair("url", url));
+      localVarQueryParams.addAll(apiClient.parameterToPair("url", url));
     }
 
     if (ifMatch != null) {
-      localVarHeaderParams.put("If-Match", localVarApiClient.parameterToString(ifMatch));
+      localVarHeaderParams.put("If-Match", apiClient.parameterToString(ifMatch));
     }
 
     if (ifModifiedSince != null) {
       localVarHeaderParams.put(
-          "If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
+          "If-Modified-Since", apiClient.parameterToString(ifModifiedSince));
     }
 
     if (ifNoneMatch != null) {
-      localVarHeaderParams.put("If-None-Match", localVarApiClient.parameterToString(ifNoneMatch));
+      localVarHeaderParams.put("If-None-Match", apiClient.parameterToString(ifNoneMatch));
     }
 
     if (ifUnmodifiedSince != null) {
       localVarHeaderParams.put(
-          "If-Unmodified-Since", localVarApiClient.parameterToString(ifUnmodifiedSince));
+          "If-Unmodified-Since", apiClient.parameterToString(ifUnmodifiedSince));
     }
 
     final String[] localVarAccepts = {"multipart/form-data"};
-    final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
@@ -862,13 +862,13 @@ public class ConfigApi {
     final String[] localVarContentTypes = {};
 
     final String localVarContentType =
-        localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        apiClient.selectHeaderContentType(localVarContentTypes);
     if (localVarContentType != null) {
       localVarHeaderParams.put("Content-Type", localVarContentType);
     }
 
     String[] localVarAuthNames = new String[] {"basicAuth"};
-    return localVarApiClient.buildCall(
+    return apiClient.buildCall(
         basePath,
         localVarPath,
         "GET",
@@ -974,7 +974,7 @@ public class ConfigApi {
         getUrlConfigValidateBeforeCall(
             url, ifMatch, ifModifiedSince, ifNoneMatch, ifUnmodifiedSince, null);
     Type localVarReturnType = new TypeToken<File>() {}.getType();
-    return localVarApiClient.execute(localVarCall, localVarReturnType);
+    return apiClient.execute(localVarCall, localVarReturnType);
   }
 
   /**
@@ -1015,7 +1015,7 @@ public class ConfigApi {
         getUrlConfigValidateBeforeCall(
             url, ifMatch, ifModifiedSince, ifNoneMatch, ifUnmodifiedSince, _callback);
     Type localVarReturnType = new TypeToken<File>() {}.getType();
-    localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+    apiClient.executeAsync(localVarCall, localVarReturnType, _callback);
     return localVarCall;
   }
   /**
@@ -1073,7 +1073,7 @@ public class ConfigApi {
         "/config/file/{sectionName}"
             .replaceAll(
                 "\\{" + "sectionName" + "\\}",
-                localVarApiClient.escapeString(sectionName));
+                apiClient.escapeString(sectionName));
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1086,39 +1086,39 @@ public class ConfigApi {
     }
 
     if (ifMatch != null) {
-      localVarHeaderParams.put("If-Match", localVarApiClient.parameterToString(ifMatch));
+      localVarHeaderParams.put("If-Match", apiClient.parameterToString(ifMatch));
     }
 
     if (ifModifiedSince != null) {
       localVarHeaderParams.put(
-          "If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
+          "If-Modified-Since", apiClient.parameterToString(ifModifiedSince));
     }
 
     if (ifNoneMatch != null) {
-      localVarHeaderParams.put("If-None-Match", localVarApiClient.parameterToString(ifNoneMatch));
+      localVarHeaderParams.put("If-None-Match", apiClient.parameterToString(ifNoneMatch));
     }
 
     if (ifUnmodifiedSince != null) {
       localVarHeaderParams.put(
-          "If-Unmodified-Since", localVarApiClient.parameterToString(ifUnmodifiedSince));
+          "If-Unmodified-Since", apiClient.parameterToString(ifUnmodifiedSince));
     }
 
     final String[] localVarAccepts = {};
 
-    final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
 
     final String[] localVarContentTypes = {"multipart/form-data"};
     final String localVarContentType =
-        localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        apiClient.selectHeaderContentType(localVarContentTypes);
     if (localVarContentType != null) {
       localVarHeaderParams.put("Content-Type", localVarContentType);
     }
 
     String[] localVarAuthNames = new String[] {"basicAuth"};
-    return localVarApiClient.buildCall(
+    return apiClient.buildCall(
         basePath,
         localVarPath,
         "PUT",
@@ -1245,7 +1245,7 @@ public class ConfigApi {
             ifNoneMatch,
             ifUnmodifiedSince,
             null);
-    return localVarApiClient.execute(localVarCall);
+    return apiClient.execute(localVarCall);
   }
 
   /**
@@ -1293,7 +1293,7 @@ public class ConfigApi {
             ifNoneMatch,
             ifUnmodifiedSince,
             _callback);
-    localVarApiClient.executeAsync(localVarCall, _callback);
+    apiClient.executeAsync(localVarCall, _callback);
     return localVarCall;
   }
   /**
@@ -1339,7 +1339,7 @@ public class ConfigApi {
 
     final String[] localVarAccepts = {};
 
-    final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
@@ -1347,13 +1347,13 @@ public class ConfigApi {
     final String[] localVarContentTypes = {};
 
     final String localVarContentType =
-        localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        apiClient.selectHeaderContentType(localVarContentTypes);
     if (localVarContentType != null) {
       localVarHeaderParams.put("Content-Type", localVarContentType);
     }
 
     String[] localVarAuthNames = new String[] {"basicAuth"};
-    return localVarApiClient.buildCall(
+    return apiClient.buildCall(
         basePath,
         localVarPath,
         "PUT",
@@ -1410,7 +1410,7 @@ public class ConfigApi {
    */
   public ApiResponse<Void> putConfigReloadWithHttpInfo() throws ApiException {
     okhttp3.Call localVarCall = putConfigReloadValidateBeforeCall(null);
-    return localVarApiClient.execute(localVarCall);
+    return apiClient.execute(localVarCall);
   }
 
   /**
@@ -1432,7 +1432,7 @@ public class ConfigApi {
   public okhttp3.Call putConfigReloadAsync(final ApiCallback<Void> _callback) throws ApiException {
 
     okhttp3.Call localVarCall = putConfigReloadValidateBeforeCall(_callback);
-    localVarApiClient.executeAsync(localVarCall, _callback);
+    apiClient.executeAsync(localVarCall, _callback);
     return localVarCall;
   }
 }

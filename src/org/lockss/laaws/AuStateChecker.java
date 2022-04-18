@@ -123,7 +123,7 @@ public class AuStateChecker extends Worker {
         else {
           if (log.isDebug()) {
             log.debug("AuAgreements v1Bean: " + v1Bean.toString());
-            log.debug("AuAgreements v2Bean: " + v2Bean);
+            log.debug("AuAgreements v2Bean: " + v2Bean.toString());
           }
           err = auName + ": V2 Au Agreements do not match.";
           log.error(err);
@@ -160,7 +160,7 @@ public class AuStateChecker extends Worker {
         else {
           if (log.isDebug()) {
             log.debug("AuSuspectUrlVersions v1Bean: " + v1Bean.toString());
-            log.debug("AuSuspectUrlVersions v2Bean: " + v2Bean);
+              log.debug("AuSuspectUrlVersions v2Bean: " + v2Bean.toString());
           }
           err = auName + ": V2 Au Suspect Url Versions do not match.";
           log.error(err);
@@ -197,7 +197,7 @@ public class AuStateChecker extends Worker {
         else {
           if (log.isDebug()) {
             log.debug("NoAuPeerSet v1Bean: " + v1Bean.toString());
-            log.debug("NoAuPeerSet v2Bean: " + v2Bean);
+            log.debug("NoAuPeerSet v2Bean: "+ v2Bean.toString());
           }
           err = auName + ": V2 No AU PeerSet do not match.";
           log.error(err);
@@ -234,7 +234,7 @@ public class AuStateChecker extends Worker {
         else {
           if (log.isDebug()) {
             log.debug("AuConfiguration v1Bean: " + v1Config.toString());
-            log.debug("AuConfiguration v2Bean: " + v2Config);
+            log.debug("AuConfiguration v2Bean: "+ v2Config.toString());
           }
           err = auName + ": V2 Au Configuration does not match.";
           log.error(err);
@@ -267,8 +267,8 @@ public class AuStateChecker extends Worker {
         }
         else {
           if (log.isDebug()) {
-            log.debug("AuState v1Bean: " + v1Bean);
-            log.debug("AuState v2Bean: " + v2Bean);
+            log.debug("AuState v1Bean: "+ v1Bean.toString());
+            log.debug("AuState v2Bean: "+ v2Bean.toString());
           }
           err = auName + ": V2 AuState does not match.";
           log.error(err);

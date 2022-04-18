@@ -82,13 +82,8 @@ public class AuidPageInfo implements Serializable {
    *
    * @return auids
    */
-  @javax.annotation.Nonnull
-  @ApiModelProperty(
-      required = true,
-      value = "The Archival Unit identifiers included in the page")
-
-  public List<String>
-  getAuids() {
+  @ApiModelProperty(required = true, value = "The Archival Unit identifiers included in the page")
+  public List<String> getAuids() {
     return auids;
   }
 
