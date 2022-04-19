@@ -3196,7 +3196,7 @@ while (my $line = <>) {
         $result = "--NOT_DEF--";
     } elsif ($man_contents !~ m/$lockss_tag/) {
         $result = "--NO_TAG--";
-    } elsif ($man_contents !~ m/href=\"\/$param{journal_id}\/issue\/$param{volume_name}\//) {
+    } elsif (($man_contents !~ m/href=\"\/$param{journal_id}\/issue\/$param{volume_name}\//) && ($man_contents !~ m/href=\"\/$param{journal_id}\/issue\/volume\/$param{volume_name}/)) {
         $result = "--BAD_VOL--";
     } else {
         $result = "Manifest";
