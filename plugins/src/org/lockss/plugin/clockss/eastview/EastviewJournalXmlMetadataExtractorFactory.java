@@ -189,6 +189,18 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
 
       if (raw_title != null) {
 
+        //http://clockss-ingest.lockss.org/sourcefiles/eastview-released/2021_03/Eastview%20Journal%20Content/Digital%20Archives/Ogonek%20(St.%20Petersburg)%20Digital%20Archive%201899-1918/DA-OGN-SP.zip!/DA-OGN-SP/1918/ognsp_1918_17.xml
+        //http://clockss-ingest.lockss.org/sourcefiles/eastview-released/2021_01/Eastview%20Journal%20Content/Digital%20Archives/Military%20Thought%20(DA-MLT)%201990-2019/DA-MLT.zip!/DA-MLT/MTH/1990/01/001_01/0010004.xhtml
+        String access_url = cu.getUrl();
+        Pattern urlPattern = Pattern.compile("(.*)\\.zip!/([^/]+)/([^/]+)/(.*)");
+
+        Matcher urlm = urlPattern.matcher(access_url);
+        
+        if (urlm.matches()) {
+          directory = urlm.group(2).trim();      //	DA-OGN-SP or DA-MLT, it is used on mutiple places down
+          subdir = urlm.group(3).trim();         //   1918 or  MTH
+        }
+
         // eastview_journal_2021_02/DA-NN/NEW/1993/09/004_30/12375018_new_19930901_000_001.xml: <TITLE>01-09-1993(NEW-No.004 Vol.033) In This Issue</TITLE>
         // eastview_journal_2021_02/DA-VI/ISM/1932/06/003_30/193203im002.xml: <TITLE>30-06-1932(ISM-No. 003(025)) something!</TITLE>
         // eastview_journal_2021_02/DA-VI/ISM/1932/06/003_30/193203im060.xml<TITLE>30-06-1932(ISM-No. 003(025)) something (1874 - 1932) </TITLE>
@@ -234,17 +246,8 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
 
           // map publisher short cut to full name is failed, use partial url to map
 
-          //http://clockss-ingest.lockss.org/sourcefiles/eastview-released/2021_03/Eastview%20Journal%20Content/Digital%20Archives/Ogonek%20(St.%20Petersburg)%20Digital%20Archive%201899-1918/DA-OGN-SP.zip!/DA-OGN-SP/1918/ognsp_1918_17.xml
-          //http://clockss-ingest.lockss.org/sourcefiles/eastview-released/2021_01/Eastview%20Journal%20Content/Digital%20Archives/Military%20Thought%20(DA-MLT)%201990-2019/DA-MLT.zip!/DA-MLT/MTH/1990/01/001_01/0010004.xhtml
-          String access_url = cu.getUrl();
-          Pattern urlPattern = Pattern.compile("(.*)\\.zip!/([^/]+)/([^/]+)/(.*)");
-
-          Matcher urlm = urlPattern.matcher(access_url);
-
           if (urlm.matches()) {
 
-            directory = urlm.group(2).trim();      //	DA-OGN-SP or DA-MLT
-            subdir = urlm.group(3).trim();         //   1918 or  MTH
             directory_subsection =  directory.substring(directory.indexOf("-") + 1).replace("-",""); //"OGNSP" of "DA-OGN-SP"
             publisher_mapped_alt = EastViewPublisherNameMappingHelper.canonical.get(directory);
             publisher_mapped_alt2 = EastViewPublisherNameMappingHelper.canonical.get(subdir);
@@ -337,7 +340,12 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
           thisAM.put(MetadataField.FIELD_ISSN, MetadataUtil.validateIssn(issn));
         }
       } else {
-        log.debug3("Eastview Journal: publicationTitle is null");
+        // Since "<SOURCE/>" and "<SRC/>" is not guaranteed, use part of the access_url as the publication title
+        //we will use "DA-OGN-SP" in the example.
+        ///eastview-released/2021_03/Eastview Journal Content/Digital Archives/Ogonek (St. Petersburg) Digital Archive 1899-1918/DA-OGN-SP.zip!/DA-OGN-SP/1900/ognsp_1900_01.xml
+        thisAM.replace(MetadataField.FIELD_PUBLICATION_TITLE, directory);
+        log.debug3("Eastview Journal: publicationTitle is null, set to diretory " + directory);
+        pubnamelog.debug3("Eastview Journal: publicationTitle is null, set to diretory " + directory);
       }
 
       thisAM.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
