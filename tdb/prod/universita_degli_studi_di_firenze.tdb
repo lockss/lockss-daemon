@@ -13,13 +13,13 @@
     >
     
     rights = openaccess
-    plugin = org.lockss.plugin.ojs2.OJS2Plugin
     implicit < status ; year ; name ; volume ; param[year] >
     
     {
     
       param[base_url] = http://leo.cilea.it/
       param[journal_id] = jlis
+      plugin = org.lockss.plugin.ojs2.OJS2Plugin
     
       au < down ; 2010 ; JLIS.it Volume 1 ; 1 ; 2010 >
       au < down ; 2011 ; JLIS.it Volume 2 ; 2 ; 2011 >
@@ -31,6 +31,7 @@
     
       param[base_url] = http://leo.cineca.it/
       param[journal_id] = jlis
+      plugin = org.lockss.plugin.ojs2.OJS2Plugin
     
       au < down ; 2013 ; JLIS.it Volume 4 ; 4 ; 2013 >
       au < down ; 2014 ; JLIS.it Volume 5 ; 5 ; 2014 >
@@ -42,19 +43,24 @@
     
       param[base_url] = https://www.jlis.it/
       param[journal_id] = jlis
+      plugin = org.lockss.plugin.ojs2.OJS2Plugin
     
-      au < doNotProcess ; 2010 ; JLIS.it Volume 1 ; 1 ; 2010 >
-      au < doNotProcess ; 2011 ; JLIS.it Volume 2 ; 2 ; 2011 >
-      au < doNotProcess ; 2012 ; JLIS.it Volume 3 ; 3 ; 2012 >
-      au < doNotProcess ; 2013 ; JLIS.it Volume 4 ; 4 ; 2013 >
-      au < doNotProcess ; 2014 ; JLIS.it Volume 5 ; 5 ; 2014 >
-      au < doNotProcess ; 2015 ; JLIS.it Volume 6 ; 6 ; 2015 >
-      au < released ; 2016 ; JLIS.it Volume 7 ; 7 ; 2016 >
-      au < released ; 2017 ; JLIS.it Volume 8 ; 8 ; 2017 >
-      au < released ; 2018 ; JLIS.it Volume 9 ; 9 ; 2018 >
-      au < released ; 2019 ; JLIS.it Volume 10 ; 10 ; 2019 >
-      au < released ; 2020 ; JLIS.it Volume 11 ; 11 ; 2020 >
-      au < ready ; 2021 ; JLIS.it Volume 12 ; 12 ; 2021 >
+      au < down ; 2016 ; JLIS.it Volume 7 ; 7 ; 2016 >
+      au < down ; 2017 ; JLIS.it Volume 8 ; 8 ; 2017 >
+      au < down ; 2018 ; JLIS.it Volume 9 ; 9 ; 2018 >
+      au < down ; 2019 ; JLIS.it Volume 10 ; 10 ; 2019 >
+      au < down ; 2020 ; JLIS.it Volume 11 ; 11 ; 2020 >
+
+    }
+
+    {
+    
+      param[base_url] = https://www.jlis.it/
+      param[journal_id] = jlis
+      plugin = org.lockss.plugin.ojs3.Ojs3Plugin
+      attr[start_stem] = index.php/
+    
+      au < exists ; 2021 ; JLIS.it Volume 12 ; 12 ; 2021 >
       au < expected ; 2022 ; JLIS.it Volume 13 ; 13 ; 2022 >
 
     }

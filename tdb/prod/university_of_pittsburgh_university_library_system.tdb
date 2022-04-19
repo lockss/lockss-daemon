@@ -3,8 +3,10 @@
     name = University of Pittsburgh University Library System
   >
 
-    plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; param[year] ; name ; volume ; param[base_url] >
+    #plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    pluginPrefix = org.lockss.plugin.
+    attr[start_stem] = index.php/
+    implicit < pluginSuffix ; status ; year ; param[year] ; name ; volume ; param[base_url] >
 
   {
     title <
@@ -15,18 +17,18 @@
 
     param[journal_id] = biblios
 
-    au < released ; 2011 ; 2011 ; BIBLIOS: Librarianship and Information Science Journal Volume 2011 ; 2011 ; http://biblios.pitt.edu/ojs/ >
-    au < released ; 2012 ; 2012 ; BIBLIOS: Librarianship and Information Science Journal Volume 2012 ; 2012 ; http://biblios.pitt.edu/ojs/ >
-    au < released ; 2013 ; 2013 ; BIBLIOS: Librarianship and Information Science Journal Volume 2013 ; 2013 ; http://biblios.pitt.edu/ojs/ >
-    au < released ; 2014 ; 2014 ; BIBLIOS: Librarianship and Information Science Journal Volume 2014 ; 2014 ; http://biblios.pitt.edu/ojs/ >
-    au < released ; 2015 ; 2015 ; BIBLIOS: Librarianship and Information Science Journal Volume 2015 ; 2015 ; http://biblios.pitt.edu/ojs/ >
-    au < released ; 2016 ; 2016 ; BIBLIOS: Librarianship and Information Science Journal Volume 2016 ; 2016 ; http://biblios.pitt.edu/ojs/ >
-    au < released ; 2017 ; 2017 ; BIBLIOS: Librarianship and Information Science Journal Volume 2017 ; 2017 ; http://biblios.pitt.edu/ojs/ >
-    au < released ; 2018 ; 2018 ; BIBLIOS: Librarianship and Information Science Journal Volume 2018 ; 2018 ; http://biblios.pitt.edu/ojs/ >
-    au < released ; 2019 ; 2019 ; BIBLIOS: Librarianship and Information Science Journal Volume 2019 ; 2019 ; https://biblios.pitt.edu/ojs/ >
-    au < ready ; 2020 ; 2020 ; BIBLIOS: Librarianship and Information Science Journal Volume 2020 ; 2020 ; https://biblios.pitt.edu/ojs/ >
-    au < expected ; 2021 ; 2021 ; BIBLIOS: Librarianship and Information Science Journal Volume 2021 ; 2021 ; https://biblios.pitt.edu/ojs/ >
-    au < expected ; 2022 ; 2022 ; BIBLIOS: Librarianship and Information Science Journal Volume 2022 ; 2022 ; https://biblios.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2011 ; 2011 ; BIBLIOS: Librarianship and Information Science Journal Volume 2011 ; 2011 ; http://biblios.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2012 ; 2012 ; BIBLIOS: Librarianship and Information Science Journal Volume 2012 ; 2012 ; http://biblios.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2013 ; 2013 ; BIBLIOS: Librarianship and Information Science Journal Volume 2013 ; 2013 ; http://biblios.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2014 ; 2014 ; BIBLIOS: Librarianship and Information Science Journal Volume 2014 ; 2014 ; http://biblios.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2015 ; 2015 ; BIBLIOS: Librarianship and Information Science Journal Volume 2015 ; 2015 ; http://biblios.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2016 ; 2016 ; BIBLIOS: Librarianship and Information Science Journal Volume 2016 ; 2016 ; http://biblios.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2017 ; 2017 ; BIBLIOS: Librarianship and Information Science Journal Volume 2017 ; 2017 ; http://biblios.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2018 ; 2018 ; BIBLIOS: Librarianship and Information Science Journal Volume 2018 ; 2018 ; http://biblios.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2019 ; 2019 ; BIBLIOS: Librarianship and Information Science Journal Volume 2019 ; 2019 ; https://biblios.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; ready ; 2020 ; 2020 ; BIBLIOS: Librarianship and Information Science Journal Volume 2020 ; 2020 ; https://biblios.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; expected ; 2021 ; 2021 ; BIBLIOS: Librarianship and Information Science Journal Volume 2021 ; 2021 ; https://biblios.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; expected ; 2022 ; 2022 ; BIBLIOS: Librarianship and Information Science Journal Volume 2022 ; 2022 ; https://biblios.pitt.edu/ojs/ >
 
   }
 
@@ -40,14 +42,14 @@
 
     param[journal_id] = bsj
 
-    au < released ; 2008-2010 ; 2010 ; Bolivian Studies Journal Volume 15-17 ; 15-17 ; http://bsj.pitt.edu/ojs/ >
-    au < released ; 2011 ; 2011 ; Blivian Studies Journal Volume 18 ; 18 ; http://bsj.pitt.edu/ojs/ >
-    au < released ; 2012-2013 ; 2012 ; Bolivian Studies Journal Volume 19 ; 19 ; http://bsj.pitt.edu/ojs/ >
-    au < released ; 2014 ; 2014 ; Bolivian Studies Journal Volume 20 ; 20 ; http://bsj.pitt.edu/ojs/ >
-    au < released ; 2015 ; 2015 ; Bolivian Studies Journal Volume 21 ; 21 ; http://bsj.pitt.edu/ojs/ >
-    au < released ; 2016 ; 2016 ; Bolivian Studies Journal Volume 22 ; 22 ; http://bsj.pitt.edu/ojs/ >
-    au < released ; 2017-2018 ; 2018 ; Bolivian Studies Journal Volume 23-24 ; 23-24 ; http://bsj.pitt.edu/ojs/ >
-    au < released ; 2019 ; 2019 ; Bolivian Studies Journal Volume 25 ; 25 ; https://bsj.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2008-2010 ; 2010 ; Bolivian Studies Journal Volume 15-17 ; 15-17 ; http://bsj.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2011 ; 2011 ; Blivian Studies Journal Volume 18 ; 18 ; http://bsj.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2012-2013 ; 2012 ; Bolivian Studies Journal Volume 19 ; 19 ; http://bsj.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2014 ; 2014 ; Bolivian Studies Journal Volume 20 ; 20 ; http://bsj.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2015 ; 2015 ; Bolivian Studies Journal Volume 21 ; 21 ; http://bsj.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2016 ; 2016 ; Bolivian Studies Journal Volume 22 ; 22 ; http://bsj.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2017-2018 ; 2018 ; Bolivian Studies Journal Volume 23-24 ; 23-24 ; http://bsj.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2019 ; 2019 ; Bolivian Studies Journal Volume 25 ; 25 ; https://bsj.pitt.edu/ojs/ >
 
   }
 
@@ -60,43 +62,43 @@
 
     param[journal_id] = cbp
 
-    au < released ; 1981 ; 1981 ; The Carl Beck Papers In Russian And East European Studies Volume 1981 ; 1981 ; http://carlbeckpapers.pitt.edu/ojs/ >
-    au < released ; 1982 ; 1982 ; The Carl Beck Papers In Russian And East European Studies Volume 1982 ; 1982 ; http://carlbeckpapers.pitt.edu/ojs/ >
-    au < released ; 1983 ; 1983 ; The Carl Beck Papers In Russian And East European Studies Volume 1983 ; 1983 ; http://carlbeckpapers.pitt.edu/ojs/ >
-    au < released ; 1984 ; 1984 ; The Carl Beck Papers In Russian And East European Studies Volume 1984 ; 1984 ; http://carlbeckpapers.pitt.edu/ojs/ >
-    au < released ; 1985 ; 1985 ; The Carl Beck Papers In Russian And East European Studies Volume 1985 ; 1985 ; http://carlbeckpapers.pitt.edu/ojs/ >
-    au < released ; 1986 ; 1986 ; The Carl Beck Papers In Russian And East European Studies Volume 1986 ; 1986 ; http://carlbeckpapers.pitt.edu/ojs/ >
-    au < released ; 1987 ; 1987 ; The Carl Beck Papers In Russian And East European Studies Volume 1987 ; 1987 ; http://carlbeckpapers.pitt.edu/ojs/ >
-    au < released ; 1988 ; 1988 ; The Carl Beck Papers In Russian And East European Studies Volume 1988 ; 1988 ; http://carlbeckpapers.pitt.edu/ojs/ >
-    au < released ; 1989 ; 1989 ; The Carl Beck Papers In Russian And East European Studies Volume 1989 ; 1989 ; http://carlbeckpapers.pitt.edu/ojs/ >
-    au < released ; 1990 ; 1990 ; The Carl Beck Papers In Russian And East European Studies Volume 1990 ; 1990 ; http://carlbeckpapers.pitt.edu/ojs/ >
-    au < released ; 1991 ; 1991 ; The Carl Beck Papers In Russian And East European Studies Volume 1991 ; 1991 ; http://carlbeckpapers.pitt.edu/ojs/ >
-    au < released ; 1992 ; 1992 ; The Carl Beck Papers In Russian And East European Studies Volume 1992 ; 1992 ; http://carlbeckpapers.pitt.edu/ojs/ >
-    au < released ; 1993 ; 1993 ; The Carl Beck Papers In Russian And East European Studies Volume 1993 ; 1993 ; http://carlbeckpapers.pitt.edu/ojs/ >
-    au < released ; 1994 ; 1994 ; The Carl Beck Papers In Russian And East European Studies Volume 1994 ; 1994 ; http://carlbeckpapers.pitt.edu/ojs/ >
-    au < released ; 1995 ; 1995 ; The Carl Beck Papers In Russian And East European Studies Volume 1995 ; 1995 ; http://carlbeckpapers.pitt.edu/ojs/ >
-    au < released ; 1996 ; 1996 ; The Carl Beck Papers In Russian And East European Studies Volume 1996 ; 1996 ; http://carlbeckpapers.pitt.edu/ojs/ >
-    au < released ; 1997 ; 1997 ; The Carl Beck Papers In Russian And East European Studies Volume 1997 ; 1997 ; http://carlbeckpapers.pitt.edu/ojs/ >
-    au < released ; 1998 ; 1998 ; The Carl Beck Papers In Russian And East European Studies Volume 1998 ; 1998 ; http://carlbeckpapers.pitt.edu/ojs/ >
-    au < released ; 1999 ; 1999 ; The Carl Beck Papers In Russian And East European Studies Volume 1999 ; 1999 ; http://carlbeckpapers.pitt.edu/ojs/ >
-    au < released ; 2000 ; 2000 ; The Carl Beck Papers In Russian And East European Studies Volume 2000 ; 2000 ; http://carlbeckpapers.pitt.edu/ojs/ >
-    au < released ; 2001 ; 2001 ; The Carl Beck Papers In Russian And East European Studies Volume 2001 ; 2001 ; http://carlbeckpapers.pitt.edu/ojs/ >
-    au < released ; 2002 ; 2002 ; The Carl Beck Papers In Russian And East European Studies Volume 2002 ; 2002 ; http://carlbeckpapers.pitt.edu/ojs/ >
-    au < released ; 2003 ; 2003 ; The Carl Beck Papers In Russian And East European Studies Volume 2003 ; 2003 ; http://carlbeckpapers.pitt.edu/ojs/ >
-    au < released ; 2004 ; 2004 ; The Carl Beck Papers In Russian And East European Studies Volume 2004 ; 2004 ; http://carlbeckpapers.pitt.edu/ojs/ >
-    au < released ; 2005 ; 2005 ; The Carl Beck Papers In Russian And East European Studies Volume 2005 ; 2005 ; http://carlbeckpapers.pitt.edu/ojs/ >
-    au < released ; 2006 ; 2006 ; The Carl Beck Papers In Russian And East European Studies Volume 2006 ; 2006 ; http://carlbeckpapers.pitt.edu/ojs/ >
-    au < released ; 2007 ; 2007 ; The Carl Beck Papers In Russian And East European Studies Volume 2007 ; 2007 ; http://carlbeckpapers.pitt.edu/ojs/ >
-    au < released ; 2008 ; 2008 ; The Carl Beck Papers In Russian And East European Studies Volume 2008 ; 2008 ; http://carlbeckpapers.pitt.edu/ojs/ >
-    au < released ; 2009 ; 2009 ; The Carl Beck Papers In Russian And East European Studies Volume 2009 ; 2009 ; http://carlbeckpapers.pitt.edu/ojs/ >
-    au < released ; 2010 ; 2010 ; The Carl Beck Papers In Russian And East European Studies Volume 2010 ; 2010 ; http://carlbeckpapers.pitt.edu/ojs/ >
-    au < released ; 2011 ; 2011 ; The Carl Beck Papers In Russian And East European Studies Volume 2011 ; 2011 ; http://carlbeckpapers.pitt.edu/ojs/ >
-    au < released ; 2012 ; 2012 ; The Carl Beck Papers In Russian And East European Studies Volume 2012 ; 2012 ; http://carlbeckpapers.pitt.edu/ojs/ >
-    au < released ; 2013 ; 2013 ; The Carl Beck Papers In Russian And East European Studies Volume 2013 ; 2013 ; http://carlbeckpapers.pitt.edu/ojs/ >
-    au < released ; 2014 ; 2014 ; The Carl Beck Papers In Russian And East European Studies Volume 2014 ; 2014 ; http://carlbeckpapers.pitt.edu/ojs/ >
-    au < released ; 2015 ; 2015 ; The Carl Beck Papers In Russian And East European Studies Volume 2015 ; 2015 ; http://carlbeckpapers.pitt.edu/ojs/ >
-    au < released ; 2016 ; 2016 ; The Carl Beck Papers In Russian And East European Studies Volume 2016 ; 2016 ; http://carlbeckpapers.pitt.edu/ojs/ >
-    au < released ; 2017 ; 2017 ; The Carl Beck Papers In Russian And East European Studies Volume 2017 ; 2017 ; http://carlbeckpapers.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1981 ; 1981 ; The Carl Beck Papers In Russian And East European Studies Volume 1981 ; 1981 ; http://carlbeckpapers.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1982 ; 1982 ; The Carl Beck Papers In Russian And East European Studies Volume 1982 ; 1982 ; http://carlbeckpapers.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1983 ; 1983 ; The Carl Beck Papers In Russian And East European Studies Volume 1983 ; 1983 ; http://carlbeckpapers.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1984 ; 1984 ; The Carl Beck Papers In Russian And East European Studies Volume 1984 ; 1984 ; http://carlbeckpapers.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1985 ; 1985 ; The Carl Beck Papers In Russian And East European Studies Volume 1985 ; 1985 ; http://carlbeckpapers.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1986 ; 1986 ; The Carl Beck Papers In Russian And East European Studies Volume 1986 ; 1986 ; http://carlbeckpapers.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1987 ; 1987 ; The Carl Beck Papers In Russian And East European Studies Volume 1987 ; 1987 ; http://carlbeckpapers.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1988 ; 1988 ; The Carl Beck Papers In Russian And East European Studies Volume 1988 ; 1988 ; http://carlbeckpapers.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1989 ; 1989 ; The Carl Beck Papers In Russian And East European Studies Volume 1989 ; 1989 ; http://carlbeckpapers.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1990 ; 1990 ; The Carl Beck Papers In Russian And East European Studies Volume 1990 ; 1990 ; http://carlbeckpapers.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1991 ; 1991 ; The Carl Beck Papers In Russian And East European Studies Volume 1991 ; 1991 ; http://carlbeckpapers.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1992 ; 1992 ; The Carl Beck Papers In Russian And East European Studies Volume 1992 ; 1992 ; http://carlbeckpapers.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1993 ; 1993 ; The Carl Beck Papers In Russian And East European Studies Volume 1993 ; 1993 ; http://carlbeckpapers.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1994 ; 1994 ; The Carl Beck Papers In Russian And East European Studies Volume 1994 ; 1994 ; http://carlbeckpapers.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1995 ; 1995 ; The Carl Beck Papers In Russian And East European Studies Volume 1995 ; 1995 ; http://carlbeckpapers.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1996 ; 1996 ; The Carl Beck Papers In Russian And East European Studies Volume 1996 ; 1996 ; http://carlbeckpapers.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1997 ; 1997 ; The Carl Beck Papers In Russian And East European Studies Volume 1997 ; 1997 ; http://carlbeckpapers.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1998 ; 1998 ; The Carl Beck Papers In Russian And East European Studies Volume 1998 ; 1998 ; http://carlbeckpapers.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1999 ; 1999 ; The Carl Beck Papers In Russian And East European Studies Volume 1999 ; 1999 ; http://carlbeckpapers.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2000 ; 2000 ; The Carl Beck Papers In Russian And East European Studies Volume 2000 ; 2000 ; http://carlbeckpapers.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2001 ; 2001 ; The Carl Beck Papers In Russian And East European Studies Volume 2001 ; 2001 ; http://carlbeckpapers.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2002 ; 2002 ; The Carl Beck Papers In Russian And East European Studies Volume 2002 ; 2002 ; http://carlbeckpapers.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2003 ; 2003 ; The Carl Beck Papers In Russian And East European Studies Volume 2003 ; 2003 ; http://carlbeckpapers.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2004 ; 2004 ; The Carl Beck Papers In Russian And East European Studies Volume 2004 ; 2004 ; http://carlbeckpapers.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2005 ; 2005 ; The Carl Beck Papers In Russian And East European Studies Volume 2005 ; 2005 ; http://carlbeckpapers.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2006 ; 2006 ; The Carl Beck Papers In Russian And East European Studies Volume 2006 ; 2006 ; http://carlbeckpapers.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2007 ; 2007 ; The Carl Beck Papers In Russian And East European Studies Volume 2007 ; 2007 ; http://carlbeckpapers.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2008 ; 2008 ; The Carl Beck Papers In Russian And East European Studies Volume 2008 ; 2008 ; http://carlbeckpapers.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2009 ; 2009 ; The Carl Beck Papers In Russian And East European Studies Volume 2009 ; 2009 ; http://carlbeckpapers.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2010 ; 2010 ; The Carl Beck Papers In Russian And East European Studies Volume 2010 ; 2010 ; http://carlbeckpapers.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2011 ; 2011 ; The Carl Beck Papers In Russian And East European Studies Volume 2011 ; 2011 ; http://carlbeckpapers.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2012 ; 2012 ; The Carl Beck Papers In Russian And East European Studies Volume 2012 ; 2012 ; http://carlbeckpapers.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2013 ; 2013 ; The Carl Beck Papers In Russian And East European Studies Volume 2013 ; 2013 ; http://carlbeckpapers.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2014 ; 2014 ; The Carl Beck Papers In Russian And East European Studies Volume 2014 ; 2014 ; http://carlbeckpapers.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2015 ; 2015 ; The Carl Beck Papers In Russian And East European Studies Volume 2015 ; 2015 ; http://carlbeckpapers.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2016 ; 2016 ; The Carl Beck Papers In Russian And East European Studies Volume 2016 ; 2016 ; http://carlbeckpapers.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2017 ; 2017 ; The Carl Beck Papers In Russian And East European Studies Volume 2017 ; 2017 ; http://carlbeckpapers.pitt.edu/ojs/ >
 
   }
 
@@ -110,16 +112,16 @@
 
       param[journal_id] = catedraltomada
 
-      au < released ; 2013 ; 2013 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 1 ; 1 ; http://catedraltomada.pitt.edu/ojs/ >
-      au < released ; 2014 ; 2014 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 2 ; 2 ; http://catedraltomada.pitt.edu/ojs/ >
-      au < released ; 2015 ; 2015 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 3 ; 3 ; http://catedraltomada.pitt.edu/ojs/ >
-      au < released ; 2016 ; 2016 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 4 ; 4 ; http://catedraltomada.pitt.edu/ojs/ >
-      au < released ; 2017 ; 2017 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 5 ; 5 ; http://catedraltomada.pitt.edu/ojs/ >
-      au < released ; 2018 ; 2018 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 6 ; 6 ; http://catedraltomada.pitt.edu/ojs/ >
-      au < released ; 2019 ; 2019 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 7 ; 7 ; https://catedraltomada.pitt.edu/ojs/ >
-      au < released ; 2020 ; 2020 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 8 ; 8 ; https://catedraltomada.pitt.edu/ojs/ >
-      au < ready ; 2021 ; 2021 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 9 ; 9 ; https://catedraltomada.pitt.edu/ojs/ >
-      au < expected ; 2022 ; 2022 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 10 ; 10 ; https://catedraltomada.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2013 ; 2013 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 1 ; 1 ; http://catedraltomada.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2014 ; 2014 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 2 ; 2 ; http://catedraltomada.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2015 ; 2015 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 3 ; 3 ; http://catedraltomada.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2016 ; 2016 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 4 ; 4 ; http://catedraltomada.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2017 ; 2017 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 5 ; 5 ; http://catedraltomada.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2018 ; 2018 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 6 ; 6 ; http://catedraltomada.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2019 ; 2019 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 7 ; 7 ; https://catedraltomada.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2020 ; 2020 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 8 ; 8 ; https://catedraltomada.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; ready ; 2021 ; 2021 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 9 ; 9 ; https://catedraltomada.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; expected ; 2022 ; 2022 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 10 ; 10 ; https://catedraltomada.pitt.edu/ojs/ >
 
   }
 
@@ -132,19 +134,19 @@
 #      param[base_url] = http://cajgh.pitt.edu/ojs/
 
       param[journal_id] = cajgh
-      # subscription journal.
+      # subscription journal. certificate failed.
 
-      au < notReady ; 2012 ; 2012 ; Central Asian Journal of Global Health Volume 1 ; 1 ; https://cajgh.pitt.edu/ojs/ >
-      au < notReady ; 2013 ; 2013 ; Central Asian Journal of Global Health Volume 2 ; 2 ; https://cajgh.pitt.edu/ojs/ >
-      au < notReady ; 2014 ; 2014 ; Central Asian Journal of Global Health Volume 3 ; 3 ; https://cajgh.pitt.edu/ojs/ >
-      au < notReady ; 2015 ; 2015 ; Central Asian Journal of Global Health Volume 4 ; 4 ; https://cajgh.pitt.edu/ojs/ >
-      au < notReady ; 2016 ; 2016 ; Central Asian Journal of Global Health Volume 5 ; 5 ; https://cajgh.pitt.edu/ojs/ >
-      au < notReady ; 2017 ; 2017 ; Central Asian Journal of Global Health Volume 6 ; 6 ; https://cajgh.pitt.edu/ojs/ >
-      au < released ; 2018 ; 2018 ; Central Asian Journal of Global Health Volume 7 ; 7 ; http://cajgh.pitt.edu/ojs/ >
-      au < released ; 2019 ; 2019 ; Central Asian Journal of Global Health Volume 8 ; 8 ; https://cajgh.pitt.edu/ojs/ >
-      au < exists ; 2020 ; 2020 ; Central Asian Journal of Global Health Volume 9 ; 9 ; https://cajgh.pitt.edu/ojs/ >
-      au < exists ; 2021 ; 2021 ; Central Asian Journal of Global Health Volume 10 ; 10 ; https://cajgh.pitt.edu/ojs/ >
-      au < expected ; 2022 ; 2022 ; Central Asian Journal of Global Health Volume 11 ; 11 ; https://cajgh.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; notReady ; 2012 ; 2012 ; Central Asian Journal of Global Health Volume 1 ; 1 ; https://cajgh.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; notReady ; 2013 ; 2013 ; Central Asian Journal of Global Health Volume 2 ; 2 ; https://cajgh.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; notReady ; 2014 ; 2014 ; Central Asian Journal of Global Health Volume 3 ; 3 ; https://cajgh.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; notReady ; 2015 ; 2015 ; Central Asian Journal of Global Health Volume 4 ; 4 ; https://cajgh.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; notReady ; 2016 ; 2016 ; Central Asian Journal of Global Health Volume 5 ; 5 ; https://cajgh.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; notReady ; 2017 ; 2017 ; Central Asian Journal of Global Health Volume 6 ; 6 ; https://cajgh.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2018 ; 2018 ; Central Asian Journal of Global Health Volume 7 ; 7 ; http://cajgh.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2019 ; 2019 ; Central Asian Journal of Global Health Volume 8 ; 8 ; https://cajgh.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; exists ; 2020 ; 2020 ; Central Asian Journal of Global Health Volume 9 ; 9 ; https://cajgh.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; exists ; 2021 ; 2021 ; Central Asian Journal of Global Health Volume 10 ; 10 ; https://cajgh.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; expected ; 2022 ; 2022 ; Central Asian Journal of Global Health Volume 11 ; 11 ; https://cajgh.pitt.edu/ojs/ >
 
   }
 
@@ -158,18 +160,18 @@
 
     param[journal_id] = cinej
 
-    au < released ; 2011 ; 2011 ; CINEJ Cinema e-Journal Volume 1 ; 1 ; http://cinej.pitt.edu/ojs/ >
-    au < released ; 2012 ; 2012 ; CINEJ Cinema e-Journal Volume 1-2 ; 1-2 ; http://cinej.pitt.edu/ojs/ >
-    au < released ; 2013 ; 2013 ; CINEJ Cinema e-Journal Volume 2-3 ; 2-3 ; http://cinej.pitt.edu/ojs/ >
-    au < released ; 2014 ; 2014 ; CINEJ Cinema e-Journal Volume 3-4 ; 3-4 ; http://cinej.pitt.edu/ojs/ >
-    au < released ; 2015 ; 2015 ; CINEJ Cinema e-Journal Volume 5 (2015) ; 5 (2015) ; http://cinej.pitt.edu/ojs/ >
-    au < released ; 2016 ; 2016 ; CINEJ Cinema e-Journal Volume 5 (2016) ; 5 (2016) ; http://cinej.pitt.edu/ojs/ >
-    au < released ; 2017 ; 2017 ; CINEJ Cinema e-Journal Volume 6 ; 6 ; http://cinej.pitt.edu/ojs/ >
-    au < released ; 2018 ; 2018 ; CINEJ Cinema e-Journal Volume 7 (2018) ; 7 (2018) ; http://cinej.pitt.edu/ojs/ >
-    au < released ; 2019 ; 2019 ; CINEJ Cinema e-Journal Volume 7 (2019) ; 7 (2019) ; https://cinej.pitt.edu/ojs/ >
-    au < released ; 2020 ; 2020 ; CINEJ Cinema e-Journal Volume 8 ; 8 ; https://cinej.pitt.edu/ojs/ >
-    au < ready ; 2021 ; 2021 ; CINEJ Cinema e-Journal Volume 9 ; 9 ; https://cinej.pitt.edu/ojs/ >
-    au < expected ; 2022 ; 2022 ; CINEJ Cinema e-Journal Volume 10 ; 10 ; https://cinej.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2011 ; 2011 ; CINEJ Cinema e-Journal Volume 1 ; 1 ; http://cinej.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2012 ; 2012 ; CINEJ Cinema e-Journal Volume 1-2 ; 1-2 ; http://cinej.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2013 ; 2013 ; CINEJ Cinema e-Journal Volume 2-3 ; 2-3 ; http://cinej.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2014 ; 2014 ; CINEJ Cinema e-Journal Volume 3-4 ; 3-4 ; http://cinej.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2015 ; 2015 ; CINEJ Cinema e-Journal Volume 5 (2015) ; 5 (2015) ; http://cinej.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2016 ; 2016 ; CINEJ Cinema e-Journal Volume 5 (2016) ; 5 (2016) ; http://cinej.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2017 ; 2017 ; CINEJ Cinema e-Journal Volume 6 ; 6 ; http://cinej.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2018 ; 2018 ; CINEJ Cinema e-Journal Volume 7 (2018) ; 7 (2018) ; http://cinej.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2019 ; 2019 ; CINEJ Cinema e-Journal Volume 7 (2019) ; 7 (2019) ; https://cinej.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2020 ; 2020 ; CINEJ Cinema e-Journal Volume 8 ; 8 ; https://cinej.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; ready ; 2021 ; 2021 ; CINEJ Cinema e-Journal Volume 9 ; 9 ; https://cinej.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; expected ; 2022 ; 2022 ; CINEJ Cinema e-Journal Volume 10 ; 10 ; https://cinej.pitt.edu/ojs/ >
 
   }
 
@@ -182,16 +184,16 @@
 
     param[journal_id] = contemporaneity
 
-    au < released ; 2011 ; 2011 ; Contemporaneity: Historical Presence in Visual Culture Volume 1 ; 1 ; http://contemporaneity.pitt.edu/ojs/ >
-    au < released ; 2012 ; 2012 ; Contemporaneity: Historical Presence in Visual Culture Volume 2 ; 2 ; http://contemporaneity.pitt.edu/ojs/ >
-    au < released ; 2014 ; 2014 ; Contemporaneity: Historical Presence in Visual Culture Volume 3 ; 3 ; http://contemporaneity.pitt.edu/ojs/ >
-    au < released ; 2015 ; 2015 ; Contemporaneity: Historical Presence in Visual Culture Volume 4 ; 4 ; http://contemporaneity.pitt.edu/ojs/ >
-    au < released ; 2016 ; 2016 ; Contemporaneity: Historical Presence in Visual Culture Volume 5 ; 5 ; http://contemporaneity.pitt.edu/ojs/ >
-    au < released ; 2017 ; 2017 ; Contemporaneity: Historical Presence in Visual Culture Volume 6 ; 6 ; http://contemporaneity.pitt.edu/ojs/ >
-    au < released ; 2018 ; 2018 ; Contemporaneity: Historical Presence in Visual Culture Volume 7 ; 7 ; http://contemporaneity.pitt.edu/ojs/ >
-    au < exists ; 2019 ; 2019 ; Contemporaneity: Historical Presence in Visual Culture Volume 8 ; 8 ; https://contemporaneity.pitt.edu/ojs/ >
-    au < exists ; 2021 ; 2021 ; Contemporaneity: Historical Presence in Visual Culture Volume 9 ; 9 ; https://contemporaneity.pitt.edu/ojs/ >
-    au < expected ; 2022 ; 2022 ; Contemporaneity: Historical Presence in Visual Culture Volume 10 ; 10 ; https://contemporaneity.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2011 ; 2011 ; Contemporaneity: Historical Presence in Visual Culture Volume 1 ; 1 ; http://contemporaneity.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2012 ; 2012 ; Contemporaneity: Historical Presence in Visual Culture Volume 2 ; 2 ; http://contemporaneity.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2014 ; 2014 ; Contemporaneity: Historical Presence in Visual Culture Volume 3 ; 3 ; http://contemporaneity.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2015 ; 2015 ; Contemporaneity: Historical Presence in Visual Culture Volume 4 ; 4 ; http://contemporaneity.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2016 ; 2016 ; Contemporaneity: Historical Presence in Visual Culture Volume 5 ; 5 ; http://contemporaneity.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2017 ; 2017 ; Contemporaneity: Historical Presence in Visual Culture Volume 6 ; 6 ; http://contemporaneity.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2018 ; 2018 ; Contemporaneity: Historical Presence in Visual Culture Volume 7 ; 7 ; http://contemporaneity.pitt.edu/ojs/ >
+    au < ojs3.Ojs3Plugin ; exists ; 2019 ; 2019 ; Contemporaneity: Historical Presence in Visual Culture Volume 8 ; 8 ; https://contemporaneity.pitt.edu/ojs/ >
+    au < ojs3.Ojs3Plugin ; exists ; 2021 ; 2021 ; Contemporaneity: Historical Presence in Visual Culture Volume 9 ; 9 ; https://contemporaneity.pitt.edu/ojs/ >
+    au < ojs3.Ojs3Plugin ; expected ; 2022 ; 2022 ; Contemporaneity: Historical Presence in Visual Culture Volume 10 ; 10 ; https://contemporaneity.pitt.edu/ojs/ >
 
   }
 
@@ -205,16 +207,16 @@
 
     param[journal_id] = dentistry3000
 
-    au < released ; 2013 ; 2013 ; Dentistry 3000 Volume 1 (2013) ; 1 ; http://dentistry3000.pitt.edu/ojs/ >
-    au < released ; 2014 ; 2014 ; Dentistry 3000 Volume 2 (2014) ; 2 ; http://dentistry3000.pitt.edu/ojs/ >
-    au < released ; 2015 ; 2015 ; Dentistry 3000 Volume 3 (2015) ; 3 ; http://dentistry3000.pitt.edu/ojs/ >
-    au < released ; 2016 ; 2016 ; Dentistry 3000 Volume 4 (2016) ; 4 ; http://dentistry3000.pitt.edu/ojs/ >
-    au < released ; 2017 ; 2017 ; Dentistry 3000 Volume 5 (2017) ; 5 ; http://dentistry3000.pitt.edu/ojs/ >
-    au < released ; 2018 ; 2018 ; Dentistry 3000 Volume 6 (2018) ; 6 ; http://dentistry3000.pitt.edu/ojs/ >
-    au < released ; 2019 ; 2019 ; Dentistry 3000 Volume 7 (2019) ; 7 ; https://dentistry3000.pitt.edu/ojs/ >
-    au < released ; 2020 ; 2020 ; Dentistry 3000 Volume 8 (2020) ; 8 ; https://dentistry3000.pitt.edu/ojs/ >
-    au < ready ; 2021 ; 2021 ; Dentistry 3000 Volume 9 (2021) ; 9 ; https://dentistry3000.pitt.edu/ojs/ >
-    au < manifest ; 2022 ; 2022 ; Dentistry 3000 Volume 10 (2022) ; 10 ; https://dentistry3000.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2013 ; 2013 ; Dentistry 3000 Volume 1 (2013) ; 1 ; http://dentistry3000.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2014 ; 2014 ; Dentistry 3000 Volume 2 (2014) ; 2 ; http://dentistry3000.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2015 ; 2015 ; Dentistry 3000 Volume 3 (2015) ; 3 ; http://dentistry3000.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2016 ; 2016 ; Dentistry 3000 Volume 4 (2016) ; 4 ; http://dentistry3000.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2017 ; 2017 ; Dentistry 3000 Volume 5 (2017) ; 5 ; http://dentistry3000.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2018 ; 2018 ; Dentistry 3000 Volume 6 (2018) ; 6 ; http://dentistry3000.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2019 ; 2019 ; Dentistry 3000 Volume 7 (2019) ; 7 ; https://dentistry3000.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2020 ; 2020 ; Dentistry 3000 Volume 8 (2020) ; 8 ; https://dentistry3000.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; ready ; 2021 ; 2021 ; Dentistry 3000 Volume 9 (2021) ; 9 ; https://dentistry3000.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; manifest ; 2022 ; 2022 ; Dentistry 3000 Volume 10 (2022) ; 10 ; https://dentistry3000.pitt.edu/ojs/ >
 
   }
 
@@ -228,16 +230,16 @@
 
       param[journal_id] = dpj1
 
-      au < released ; 2013 ; 2013 ; Dialogic Pedagogy: An International Online Journal Volume 1 ; 1 ; http://dpj.pitt.edu/ojs/ >
-      au < released ; 2014 ; 2014 ; Dialogic Pedagogy: An International Online Journal Volume 2 ; 2 ; http://dpj.pitt.edu/ojs/ >
-      au < released ; 2015 ; 2015 ; Dialogic Pedagogy: An International Online Journal Volume 3 ; 3 ; http://dpj.pitt.edu/ojs/ >
-      au < released ; 2016 ; 2016 ; Dialogic Pedagogy: An International Online Journal Volume 4 ; 4 ; http://dpj.pitt.edu/ojs/ >
-      au < released ; 2017 ; 2017 ; Dialogic Pedagogy: An International Online Journal Volume 5 ; 5 ; http://dpj.pitt.edu/ojs/ >
-      au < released ; 2018 ; 2018 ; Dialogic Pedagogy: An International Online Journal Volume 6 ; 6 ; http://dpj.pitt.edu/ojs/ >
-      au < released ; 2019 ; 2019 ; Dialogic Pedagogy: An International Online Journal Volume 7 ; 7 ; https://dpj.pitt.edu/ojs/ >
-      au < exists ; 2020 ; 2020 ; Dialogic Pedagogy: An International Online Journal Volume 8 ; 8 ; https://dpj.pitt.edu/ojs/ >
-      au < exists ; 2021 ; 2021 ; Dialogic Pedagogy: An International Online Journal Volume 9 ; 9 ; https://dpj.pitt.edu/ojs/ >
-      au < expected ; 2022 ; 2022 ; Dialogic Pedagogy: An International Online Journal Volume 10 ; 10 ; https://dpj.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2013 ; 2013 ; Dialogic Pedagogy: An International Online Journal Volume 1 ; 1 ; http://dpj.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2014 ; 2014 ; Dialogic Pedagogy: An International Online Journal Volume 2 ; 2 ; http://dpj.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2015 ; 2015 ; Dialogic Pedagogy: An International Online Journal Volume 3 ; 3 ; http://dpj.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2016 ; 2016 ; Dialogic Pedagogy: An International Online Journal Volume 4 ; 4 ; http://dpj.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2017 ; 2017 ; Dialogic Pedagogy: An International Online Journal Volume 5 ; 5 ; http://dpj.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2018 ; 2018 ; Dialogic Pedagogy: An International Online Journal Volume 6 ; 6 ; http://dpj.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2019 ; 2019 ; Dialogic Pedagogy: An International Online Journal Volume 7 ; 7 ; https://dpj.pitt.edu/ojs/ >
+      au < ojs3.Ojs3Plugin ; exists ; 2020 ; 2020 ; Dialogic Pedagogy: An International Online Journal Volume 8 ; 8 ; https://dpj.pitt.edu/ojs/ >
+      au < ojs3.Ojs3Plugin ; exists ; 2021 ; 2021 ; Dialogic Pedagogy: An International Online Journal Volume 9 ; 9 ; https://dpj.pitt.edu/ojs/ >
+      au < ojs3.Ojs3Plugin ; expected ; 2022 ; 2022 ; Dialogic Pedagogy: An International Online Journal Volume 10 ; 10 ; https://dpj.pitt.edu/ojs/ >
 
   }
 
@@ -251,18 +253,18 @@
 
     param[journal_id] = emaj
 
-    au < released ; 2011 ; 2011 ; EMAJ: Emerging Markets e-Journal of Management Volume 1 ; 1 ; http://emaj.pitt.edu/ojs/ >
-    au < released ; 2012 ; 2012 ; EMAJ: Emerging Markets e-Journal of Management Volume 2 ; 2 ; http://emaj.pitt.edu/ojs/ >
-    au < released ; 2013 ; 2013 ; EMAJ: Emerging Markets e-Journal of Management Volume 3 (2013) ; 3 ; http://emaj.pitt.edu/ojs/ >
-    au < released ; 2014 ; 2014 ; EMAJ: Emerging Markets e-Journal of Management Volume 3-4 (2014) ; 3-4 ; http://emaj.pitt.edu/ojs/ >
-    au < released ; 2015 ; 2015 ; EMAJ: Emerging Markets e-Journal of Management Volume 5 (2015) ; 5 ; http://emaj.pitt.edu/ojs/ >
-    au < released ; 2016 ; 2016 ; EMAJ: Emerging Markets e-Journal of Management Volume 6 (2016) ; 6 ; http://emaj.pitt.edu/ojs/ >
-    au < released ; 2017 ; 2017 ; EMAJ: Emerging Markets e-Journal of Management Volume 7 (2017) ; 7 ; http://emaj.pitt.edu/ojs/ >
-    au < released ; 2018 ; 2018 ; EMAJ: Emerging Markets e-Journal of Management Volume 8 (2018) ; 8 ; http://emaj.pitt.edu/ojs/ >
-    au < released ; 2019 ; 2019 ; EMAJ: Emerging Markets e-Journal of Management Volume 9 (2019) ; 9 ; https://emaj.pitt.edu/ojs/ >
-    au < released ; 2020 ; 2020 ; EMAJ: Emerging Markets e-Journal of Management Volume 10 (2020) ; 10 ; https://emaj.pitt.edu/ojs/ >
-    au < ready ; 2021 ; 2021 ; EMAJ: Emerging Markets e-Journal of Management Volume 11 (2021) ; 11 ; https://emaj.pitt.edu/ojs/ >
-    au < expected ; 2022 ; 2022 ; EMAJ: Emerging Markets e-Journal of Management Volume 12 (2022) ; 12 ; https://emaj.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2011 ; 2011 ; EMAJ: Emerging Markets e-Journal of Management Volume 1 ; 1 ; http://emaj.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2012 ; 2012 ; EMAJ: Emerging Markets e-Journal of Management Volume 2 ; 2 ; http://emaj.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2013 ; 2013 ; EMAJ: Emerging Markets e-Journal of Management Volume 3 (2013) ; 3 ; http://emaj.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2014 ; 2014 ; EMAJ: Emerging Markets e-Journal of Management Volume 3-4 (2014) ; 3-4 ; http://emaj.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2015 ; 2015 ; EMAJ: Emerging Markets e-Journal of Management Volume 5 (2015) ; 5 ; http://emaj.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2016 ; 2016 ; EMAJ: Emerging Markets e-Journal of Management Volume 6 (2016) ; 6 ; http://emaj.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2017 ; 2017 ; EMAJ: Emerging Markets e-Journal of Management Volume 7 (2017) ; 7 ; http://emaj.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2018 ; 2018 ; EMAJ: Emerging Markets e-Journal of Management Volume 8 (2018) ; 8 ; http://emaj.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2019 ; 2019 ; EMAJ: Emerging Markets e-Journal of Management Volume 9 (2019) ; 9 ; https://emaj.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2020 ; 2020 ; EMAJ: Emerging Markets e-Journal of Management Volume 10 (2020) ; 10 ; https://emaj.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; ready ; 2021 ; 2021 ; EMAJ: Emerging Markets e-Journal of Management Volume 11 (2021) ; 11 ; https://emaj.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; expected ; 2022 ; 2022 ; EMAJ: Emerging Markets e-Journal of Management Volume 12 (2022) ; 12 ; https://emaj.pitt.edu/ojs/ >
 
   }
 
@@ -276,11 +278,11 @@
     param[journal_id] = Ethnology
     #Ethnology publication discontinued
 
-    au < released ; 2008 ; 2008 ; Ethnology Volume 47 ; 47 ; http://ethnology.pitt.edu/ojs/ >
-    au < released ; 2009 ; 2009 ; Ethnology Volume 48 ; 48 ; http://ethnology.pitt.edu/ojs/ >
-    au < released ; 2010 ; 2010 ; Ethnology Volume 49 ; 49 ; http://ethnology.pitt.edu/ojs/ >
-    au < released ; 2011 ; 2011 ; Ethnology Volume 50 ; 50 ; http://ethnology.pitt.edu/ojs/ >
-    au < released ; 2012 ; 2012 ; Ethnology Volume 51 ; 51 ; http://ethnology.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2008 ; 2008 ; Ethnology Volume 47 ; 47 ; http://ethnology.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2009 ; 2009 ; Ethnology Volume 48 ; 48 ; http://ethnology.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2010 ; 2010 ; Ethnology Volume 49 ; 49 ; http://ethnology.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2011 ; 2011 ; Ethnology Volume 50 ; 50 ; http://ethnology.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2012 ; 2012 ; Ethnology Volume 51 ; 51 ; http://ethnology.pitt.edu/ojs/ >
 
   }
 
@@ -294,14 +296,14 @@
 
     param[journal_id] = ehe
 
-    au < released ; 2010 ; 2010 ; Excellence in Higher Education Volume 1 ; 1 ; http://ehe.pitt.edu/ojs/ >
-    au < released ; 2011 ; 2011 ; Excellence in Higher Education Volume 2 ; 2 ; http://ehe.pitt.edu/ojs/ >
-    au < released ; 2012 ; 2012 ; Excellence in Higher Education Volume 3 ; 3 ; http://ehe.pitt.edu/ojs/ >
-    au < released ; 2013 ; 2013 ; Excellence in Higher Education Volume 4 ; 4 ; http://ehe.pitt.edu/ojs/ >
-    au < released ; 2014 ; 2014 ; Excellence in Higher Education Volume 5 ; 5 ; http://ehe.pitt.edu/ojs/ >
-    au < released ; 2015 ; 2015 ; Excellence in Higher Education Volume 6 ; 6 ; http://ehe.pitt.edu/ojs/ >
-    au < released ; 2016 ; 2016 ; Excellence in Higher Education Volume 7 ; 7 ; http://ehe.pitt.edu/ojs/ >
-    au < released ; 2017-2018 ; 2018 ; Excellence in Higher Education Volume 8-9 ; 8-9 ; http://ehe.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2010 ; 2010 ; Excellence in Higher Education Volume 1 ; 1 ; http://ehe.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2011 ; 2011 ; Excellence in Higher Education Volume 2 ; 2 ; http://ehe.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2012 ; 2012 ; Excellence in Higher Education Volume 3 ; 3 ; http://ehe.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2013 ; 2013 ; Excellence in Higher Education Volume 4 ; 4 ; http://ehe.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2014 ; 2014 ; Excellence in Higher Education Volume 5 ; 5 ; http://ehe.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2015 ; 2015 ; Excellence in Higher Education Volume 6 ; 6 ; http://ehe.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2016 ; 2016 ; Excellence in Higher Education Volume 7 ; 7 ; http://ehe.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2017-2018 ; 2018 ; Excellence in Higher Education Volume 8-9 ; 8-9 ; http://ehe.pitt.edu/ojs/ >
 
   }
 
@@ -315,9 +317,9 @@
     param[journal_id] = forbes5
     #move to http://archive.forbes5.pitt.edu/ojs/index.php/forbes5
 
-    au < released ; 2012 ; 2012 ; Forbes and Fifth Volume 1-2 ; 1-2 ; http://forbes5.pitt.edu/ojs/ >
-    au < released ; 2013 ; 2013 ; Forbes and Fifth Volume 3-4 ; 3-4 ; http://forbes5.pitt.edu/ojs/ >
-    au < released ; 2014 ; 2014 ; Forbes and Fifth Volume 5 ; 5 ; http://forbes5.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2012 ; 2012 ; Forbes and Fifth Volume 1-2 ; 1-2 ; http://forbes5.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2013 ; 2013 ; Forbes and Fifth Volume 3-4 ; 3-4 ; http://forbes5.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2014 ; 2014 ; Forbes and Fifth Volume 5 ; 5 ; http://forbes5.pitt.edu/ojs/ >
 
   }
 
@@ -330,12 +332,12 @@
 
     param[journal_id] = hcs
 
-    au < released ; 2011 ; 2011 ; Health, Culture, and Society Volume 1 ; 1 ; http://hcs.pitt.edu/ojs/ >
-    au < released ; 2012 ; 2012 ; Health, Culture, and Society Volume 2-3 ; 2-3 ; http://hcs.pitt.edu/ojs/ >
-    au < released ; 2013 ; 2013 ; Health, Culture, and Society Volume 4-5 ; 4-5 ; http://hcs.pitt.edu/ojs/ >
-    au < released ; 2014 ; 2014 ; Health, Culture, and Society Volume 6-7 ; 6-7 ; http://hcs.pitt.edu/ojs/ >
-    au < released ; 2015 ; 2015 ; Health, Culture, and Society Volume 8 ; 8 ; http://hcs.pitt.edu/ojs/ >
-    au < released ; 2017 ; 2017 ; Health, Culture, and Society Perspectives II ; 2017 ; http://hcs.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2011 ; 2011 ; Health, Culture, and Society Volume 1 ; 1 ; http://hcs.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2012 ; 2012 ; Health, Culture, and Society Volume 2-3 ; 2-3 ; http://hcs.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2013 ; 2013 ; Health, Culture, and Society Volume 4-5 ; 4-5 ; http://hcs.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2014 ; 2014 ; Health, Culture, and Society Volume 6-7 ; 6-7 ; http://hcs.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2015 ; 2015 ; Health, Culture, and Society Volume 8 ; 8 ; http://hcs.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2017 ; 2017 ; Health, Culture, and Society Perspectives II ; 2017 ; http://hcs.pitt.edu/ojs/ >
 
   }
 
@@ -348,9 +350,9 @@
 
     param[journal_id] = iioablett
 
-    au < released ; 2011 ; 2011 ; IIOAB Letters Volume 1 ; 1 ; http://iioablett.pitt.edu/ojs/ >
-    au < released ; 2012 ; 2012 ; IIOAB Letters Volume 2 ; 2 ; http://iioablett.pitt.edu/ojs/ >
-    au < released ; 2013 ; 2013 ; IIOAB Letters Volume 3 ; 3 ; http://iioablett.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2011 ; 2011 ; IIOAB Letters Volume 1 ; 1 ; http://iioablett.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2012 ; 2012 ; IIOAB Letters Volume 2 ; 2 ; http://iioablett.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2013 ; 2013 ; IIOAB Letters Volume 3 ; 3 ; http://iioablett.pitt.edu/ojs/ >
 
   }
 
@@ -360,24 +362,24 @@
       eissn = 1945-2020
     >
 #    param[base_url] = http://telerehab.pitt.edu/ojs/
-
     param[journal_id] = telerehab
+    #bad certificate
 
-    au < released ; 2008 ; 2008 ; International Journal of Telerehabilitation Special Prepublication Issue ; 0 ; http://telerehab.pitt.edu/ojs/ >
-    au < released ; 2009 ; 2009 ; International Journal of Telerehabilitation Volume 1 ; 1 ; http://telerehab.pitt.edu/ojs/ >
-    au < released ; 2010 ; 2010 ; International Journal of Telerehabilitation Volume 2 ; 2 ; http://telerehab.pitt.edu/ojs/ >
-    au < released ; 2011 ; 2011 ; International Journal of Telerehabilitation Volume 3 ; 3 ; http://telerehab.pitt.edu/ojs/ >
-    au < released ; 2012 ; 2012 ; International Journal of Telerehabilitation Volume 4 ; 4 ; http://telerehab.pitt.edu/ojs/ >
-    au < released ; 2013 ; 2013 ; International Journal of Telerehabilitation Volume 5 ; 5 ; http://telerehab.pitt.edu/ojs/ >
-    au < released ; 2014 ; 2014 ; International Journal of Telerehabilitation Volume 6 ; 6 ; http://telerehab.pitt.edu/ojs/ >
-    au < released ; 2015 ; 2015 ; International Journal of Telerehabilitation Volume 7 ; 7 ; http://telerehab.pitt.edu/ojs/ >
-    au < released ; 2016 ; 2016 ; International Journal of Telerehabilitation Volume 8 ; 8 ; http://telerehab.pitt.edu/ojs/ >
-    au < released ; 2017 ; 2017 ; International Journal of Telerehabilitation Volume 9 ; 9 ; http://telerehab.pitt.edu/ojs/ >
-    au < released ; 2018 ; 2018 ; International Journal of Telerehabilitation Volume 10 ; 10 ; http://telerehab.pitt.edu/ojs/ >
-    au < released ; 2019 ; 2019 ; International Journal of Telerehabilitation Volume 11 ; 11 ; https://telerehab.pitt.edu/ojs/ >
-    au < exists ; 2020 ; 2020 ; International Journal of Telerehabilitation Volume 12 ; 12 ; https://telerehab.pitt.edu/ojs/ >
-    au < exists ; 2021 ; 2021 ; International Journal of Telerehabilitation Volume 13 ; 13 ; https://telerehab.pitt.edu/ojs/ >
-    au < expected ; 2022 ; 2022 ; International Journal of Telerehabilitation Volume 14 ; 14 ; https://telerehab.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2008 ; 2008 ; International Journal of Telerehabilitation Special Prepublication Issue ; 0 ; http://telerehab.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2009 ; 2009 ; International Journal of Telerehabilitation Volume 1 ; 1 ; http://telerehab.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2010 ; 2010 ; International Journal of Telerehabilitation Volume 2 ; 2 ; http://telerehab.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2011 ; 2011 ; International Journal of Telerehabilitation Volume 3 ; 3 ; http://telerehab.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2012 ; 2012 ; International Journal of Telerehabilitation Volume 4 ; 4 ; http://telerehab.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2013 ; 2013 ; International Journal of Telerehabilitation Volume 5 ; 5 ; http://telerehab.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2014 ; 2014 ; International Journal of Telerehabilitation Volume 6 ; 6 ; http://telerehab.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2015 ; 2015 ; International Journal of Telerehabilitation Volume 7 ; 7 ; http://telerehab.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2016 ; 2016 ; International Journal of Telerehabilitation Volume 8 ; 8 ; http://telerehab.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2017 ; 2017 ; International Journal of Telerehabilitation Volume 9 ; 9 ; http://telerehab.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2018 ; 2018 ; International Journal of Telerehabilitation Volume 10 ; 10 ; http://telerehab.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2019 ; 2019 ; International Journal of Telerehabilitation Volume 11 ; 11 ; https://telerehab.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; exists ; 2020 ; 2020 ; International Journal of Telerehabilitation Volume 12 ; 12 ; https://telerehab.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; exists ; 2021 ; 2021 ; International Journal of Telerehabilitation Volume 13 ; 13 ; https://telerehab.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; expected ; 2022 ; 2022 ; International Journal of Telerehabilitation Volume 14 ; 14 ; https://telerehab.pitt.edu/ojs/ >
 
   }
 
@@ -391,36 +393,36 @@
 
     param[journal_id] = jffp
 
-    au < released ; 1989 ; 1989 ; Journal of French and Francophone Philosophy Volume 1 ; 1 ; http://jffp.pitt.edu/ojs/ >
-    au < released ; 1990 ; 1990 ; Journal of French and Francophone Philosophy Volume 2 ; 2 ; http://jffp.pitt.edu/ojs/ >
-    au < released ; 1991 ; 1991 ; Journal of French and Francophone Philosophy Volume 3 ; 3 ; http://jffp.pitt.edu/ojs/ >
-    au < released ; 1992 ; 1992 ; Journal of French and Francophone Philosophy Volume 4 ; 4 ; http://jffp.pitt.edu/ojs/ >
-    au < released ; 1993 ; 1993 ; Journal of French and Francophone Philosophy Volume 5 ; 5 ; http://jffp.pitt.edu/ojs/ >
-    au < released ; 1994 ; 1994 ; Journal of French and Francophone Philosophy Volume 6 ; 6 ; http://jffp.pitt.edu/ojs/ >
-    au < released ; 1995 ; 1995 ; Journal of French and Francophone Philosophy Volume 7 ; 7 ; http://jffp.pitt.edu/ojs/ >
-    au < released ; 1996 ; 1996 ; Journal of French and Francophone Philosophy Volume 8 ; 8 ; http://jffp.pitt.edu/ojs/ >
-    au < released ; 1997 ; 1997 ; Journal of French and Francophone Philosophy Volume 9 ; 9 ; http://jffp.pitt.edu/ojs/ >
-    au < released ; 1998 ; 1998 ; Journal of French and Francophone Philosophy Volume 10 ; 10 ; http://jffp.pitt.edu/ojs/ >
-    au < released ; 1999 ; 1999 ; Journal of French and Francophone Philosophy Volume 11 ; 11 ; http://jffp.pitt.edu/ojs/ >
-    au < released ; 2000 ; 2000 ; Journal of French and Francophone Philosophy Volume 12 ; 12 ; http://jffp.pitt.edu/ojs/ >
-    au < released ; 2003 ; 2003 ; Journal of French and Francophone Philosophy Volume 13 ; 13 ; http://jffp.pitt.edu/ojs/ >
-    au < released ; 2004 ; 2004 ; Journal of French and Francophone Philosophy Volume 14 ; 14 ; http://jffp.pitt.edu/ojs/ >
-    au < released ; 2005 ; 2005 ; Journal of French and Francophone Philosophy Volume 15 ; 15 ; http://jffp.pitt.edu/ojs/ >
-    au < released ; 2006 ; 2006 ; Journal of French and Francophone Philosophy Volume 16 ; 16 ; http://jffp.pitt.edu/ojs/ >
-    au < released ; 2007 ; 2007 ; Journal of French and Francophone Philosophy Volume 17 ; 17 ; http://jffp.pitt.edu/ojs/ >
-    au < released ; 2010 ; 2010 ; Journal of French and Francophone Philosophy Volume 18 ; 18 ; http://jffp.pitt.edu/ojs/ >
-    au < released ; 2011 ; 2011 ; Journal of French and Francophone Philosophy Volume 19 ; 19 ; http://jffp.pitt.edu/ojs/ >
-    au < released ; 2012 ; 2012 ; Journal of French and Francophone Philosophy Volume 20 ; 20 ; http://jffp.pitt.edu/ojs/ >
-    au < released ; 2013 ; 2013 ; Journal of French and Francophone Philosophy Volume 21 ; 21 ; http://jffp.pitt.edu/ojs/ >
-    au < released ; 2014 ; 2014 ; Journal of French and Francophone Philosophy Volume 22 ; 22 ; http://jffp.pitt.edu/ojs/ >
-    au < released ; 2015 ; 2015 ; Journal of French and Francophone Philosophy Volume 23 ; 23 ; http://jffp.pitt.edu/ojs/ >
-    au < released ; 2016 ; 2016 ; Journal of French and Francophone Philosophy Volume 24 ; 24 ; http://jffp.pitt.edu/ojs/ >
-    au < released ; 2017 ; 2017 ; Journal of French and Francophone Philosophy Volume 25 ; 25 ; http://jffp.pitt.edu/ojs/ >
-    au < released ; 2018 ; 2018 ; Journal of French and Francophone Philosophy Volume 26 ; 26 ; http://jffp.pitt.edu/ojs/ >
-    au < released ; 2019 ; 2019 ; Journal of French and Francophone Philosophy Volume 27 ; 27 ; https://jffp.pitt.edu/ojs/ >
-    au < released ; 2020 ; 2020 ; Journal of French and Francophone Philosophy Volume 28 ; 28 ; https://jffp.pitt.edu/ojs/ >
-    au < ready ; 2021 ; 2021 ; Journal of French and Francophone Philosophy Volume 29 ; 29 ; https://jffp.pitt.edu/ojs/ >
-    au < expected ; 2022 ; 2022 ; Journal of French and Francophone Philosophy Volume 30 ; 30 ; https://jffp.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1989 ; 1989 ; Journal of French and Francophone Philosophy Volume 1 ; 1 ; http://jffp.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1990 ; 1990 ; Journal of French and Francophone Philosophy Volume 2 ; 2 ; http://jffp.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1991 ; 1991 ; Journal of French and Francophone Philosophy Volume 3 ; 3 ; http://jffp.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1992 ; 1992 ; Journal of French and Francophone Philosophy Volume 4 ; 4 ; http://jffp.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1993 ; 1993 ; Journal of French and Francophone Philosophy Volume 5 ; 5 ; http://jffp.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1994 ; 1994 ; Journal of French and Francophone Philosophy Volume 6 ; 6 ; http://jffp.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1995 ; 1995 ; Journal of French and Francophone Philosophy Volume 7 ; 7 ; http://jffp.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1996 ; 1996 ; Journal of French and Francophone Philosophy Volume 8 ; 8 ; http://jffp.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1997 ; 1997 ; Journal of French and Francophone Philosophy Volume 9 ; 9 ; http://jffp.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1998 ; 1998 ; Journal of French and Francophone Philosophy Volume 10 ; 10 ; http://jffp.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1999 ; 1999 ; Journal of French and Francophone Philosophy Volume 11 ; 11 ; http://jffp.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2000 ; 2000 ; Journal of French and Francophone Philosophy Volume 12 ; 12 ; http://jffp.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2003 ; 2003 ; Journal of French and Francophone Philosophy Volume 13 ; 13 ; http://jffp.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2004 ; 2004 ; Journal of French and Francophone Philosophy Volume 14 ; 14 ; http://jffp.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2005 ; 2005 ; Journal of French and Francophone Philosophy Volume 15 ; 15 ; http://jffp.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2006 ; 2006 ; Journal of French and Francophone Philosophy Volume 16 ; 16 ; http://jffp.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2007 ; 2007 ; Journal of French and Francophone Philosophy Volume 17 ; 17 ; http://jffp.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2010 ; 2010 ; Journal of French and Francophone Philosophy Volume 18 ; 18 ; http://jffp.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2011 ; 2011 ; Journal of French and Francophone Philosophy Volume 19 ; 19 ; http://jffp.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2012 ; 2012 ; Journal of French and Francophone Philosophy Volume 20 ; 20 ; http://jffp.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2013 ; 2013 ; Journal of French and Francophone Philosophy Volume 21 ; 21 ; http://jffp.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2014 ; 2014 ; Journal of French and Francophone Philosophy Volume 22 ; 22 ; http://jffp.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2015 ; 2015 ; Journal of French and Francophone Philosophy Volume 23 ; 23 ; http://jffp.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2016 ; 2016 ; Journal of French and Francophone Philosophy Volume 24 ; 24 ; http://jffp.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2017 ; 2017 ; Journal of French and Francophone Philosophy Volume 25 ; 25 ; http://jffp.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2018 ; 2018 ; Journal of French and Francophone Philosophy Volume 26 ; 26 ; http://jffp.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2019 ; 2019 ; Journal of French and Francophone Philosophy Volume 27 ; 27 ; https://jffp.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2020 ; 2020 ; Journal of French and Francophone Philosophy Volume 28 ; 28 ; https://jffp.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; ready ; 2021 ; 2021 ; Journal of French and Francophone Philosophy Volume 29 ; 29 ; https://jffp.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; expected ; 2022 ; 2022 ; Journal of French and Francophone Philosophy Volume 30 ; 30 ; https://jffp.pitt.edu/ojs/ >
 
   }
 
@@ -434,22 +436,23 @@
 #      param[base_url] = http://jlc.law.pitt.edu/ojs/
 
       param[journal_id] = jlc
+      #bad certificate
 
-      au < released ; 2008 ; 2008 ; Journal of Law and Commerce Volume 26-27 ; 26-27 ; http://jlc.law.pitt.edu/ojs/ >
-      au < released ; 2009 ; 2009 ; Journal of Law and Commerce Volume 27-28 ; 27-28 ; http://jlc.law.pitt.edu/ojs/ >
-      au < released ; 2010 ; 2010 ; Journal of Law and Commerce Volume 28-29 ; 28-29 ; http://jlc.law.pitt.edu/ojs/ >
-      au < released ; 2011 ; 2011 ; Journal of Law and Commerce Volume 29 ; 29 ; http://jlc.law.pitt.edu/ojs/ >
-      au < released ; 2012 ; 2012 ; Journal of Law and Commerce Volume 30 ; 30 ; http://jlc.law.pitt.edu/ojs/ >
-      au < released ; 2013 ; 2013 ; Journal of Law and Commerce Volume 31-32 ; 31-32 ; http://jlc.law.pitt.edu/ojs/ >
-      au < released ; 2014 ; 2014 ; Journal of Law and Commerce Volume 32-33 ; 32-33 ; http://jlc.law.pitt.edu/ojs/ >
-      au < released ; 2015 ; 2015 ; Journal of Law and Commerce Volume 33-34 ; 33-34 ; http://jlc.law.pitt.edu/ojs/ >
-      au < released ; 2016 ; 2016 ; Journal of Law and Commerce Volume 34-35 ; 34-35 ; http://jlc.law.pitt.edu/ojs/ >
-      au < released ; 2017 ; 2017 ; Journal of Law and Commerce Volume 35-36 ; 35-36 ; http://jlc.law.pitt.edu/ojs/ >
-      au < released ; 2018 ; 2018 ; Journal of Law and Commerce Volume 36-37 ; 36-37 ; http://jlc.law.pitt.edu/ojs/ >
-      au < released ; 2019 ; 2019 ; Journal of Law and Commerce Volume 37-38 ; 37-38 ; https://jlc.law.pitt.edu/ojs/ >
-      au < exists ; 2020 ; 2020 ; Journal of Law and Commerce Volume 39 (2020) ; 39 ; https://jlc.law.pitt.edu/ojs/ >
-      au < exists ; 2021 ; 2021 ; Journal of Law and Commerce Volume 39 (2021) ; 39 ; https://jlc.law.pitt.edu/ojs/ >
-      au < expected ; 2022 ; 2022 ; Journal of Law and Commerce Volume 40 (2022) ; 40 ; https://jlc.law.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2008 ; 2008 ; Journal of Law and Commerce Volume 26-27 ; 26-27 ; http://jlc.law.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2009 ; 2009 ; Journal of Law and Commerce Volume 27-28 ; 27-28 ; http://jlc.law.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2010 ; 2010 ; Journal of Law and Commerce Volume 28-29 ; 28-29 ; http://jlc.law.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2011 ; 2011 ; Journal of Law and Commerce Volume 29 ; 29 ; http://jlc.law.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2012 ; 2012 ; Journal of Law and Commerce Volume 30 ; 30 ; http://jlc.law.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2013 ; 2013 ; Journal of Law and Commerce Volume 31-32 ; 31-32 ; http://jlc.law.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2014 ; 2014 ; Journal of Law and Commerce Volume 32-33 ; 32-33 ; http://jlc.law.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2015 ; 2015 ; Journal of Law and Commerce Volume 33-34 ; 33-34 ; http://jlc.law.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2016 ; 2016 ; Journal of Law and Commerce Volume 34-35 ; 34-35 ; http://jlc.law.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2017 ; 2017 ; Journal of Law and Commerce Volume 35-36 ; 35-36 ; http://jlc.law.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2018 ; 2018 ; Journal of Law and Commerce Volume 36-37 ; 36-37 ; http://jlc.law.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2019 ; 2019 ; Journal of Law and Commerce Volume 37-38 ; 37-38 ; https://jlc.law.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; exists ; 2020 ; 2020 ; Journal of Law and Commerce Volume 39 (2020) ; 39 ; https://jlc.law.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; exists ; 2021 ; 2021 ; Journal of Law and Commerce Volume 39 (2021) ; 39 ; https://jlc.law.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; expected ; 2022 ; 2022 ; Journal of Law and Commerce Volume 40 (2022) ; 40 ; https://jlc.law.pitt.edu/ojs/ >
 
   }
 
@@ -463,9 +466,9 @@
 
       param[journal_id] = jwhi
 
-      au < released ; 2013 ; 2013 ; Journal of World-Historical Information Volume 1 ; 1 ; http://jwhi.pitt.edu/ojs/ >
-      au < released ; 2015 ; 2015 ; Journal of World-Historical Information Volume 2-3 ; 2-3 ; http://jwhi.pitt.edu/ojs/ >
-      au < released ; 2016-2017 ; 2017 ; Journal of World-Historical Information Volume 3-4 ; 3-4 ; http://jwhi.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2013 ; 2013 ; Journal of World-Historical Information Volume 1 ; 1 ; http://jwhi.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2015 ; 2015 ; Journal of World-Historical Information Volume 2-3 ; 2-3 ; http://jwhi.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2016-2017 ; 2017 ; Journal of World-Historical Information Volume 3-4 ; 3-4 ; http://jwhi.pitt.edu/ojs/ >
 
   }
 
@@ -480,14 +483,14 @@
     {
 #    param[base_url] = http://lesli-journal.org/ojs/
 
-    au < down ; 2013 ; 2013 ; Linguistic Evidence in Security, Law and Intelligence Volume 1 ; 1 ; http://lesli-journal.org/ojs/ >
+    au < ojs2.OJS2Plugin ; down ; 2013 ; 2013 ; Linguistic Evidence in Security, Law and Intelligence Volume 1 ; 1 ; http://lesli-journal.org/ojs/ >
     }
     {
 #    param[base_url] = http://www.lesli-journal.org/ojs/
 
-    au < doNotProcess ; 2013 ; 2013 ; Linguistic Evidence in Security, Law and Intelligence Volume 1 ; 1 ; http://www.lesli-journal.org/ojs/ >
-    au < released ; 2014 ; 2014 ; Linguistic Evidence in Security, Law and Intelligence Volume 2 ; 2 ; http://www.lesli-journal.org/ojs/ >
-    au < released ; 2019 ; 2019 ; Linguistic Evidence in Security, Law and Intelligence Volume 3 ; 3 ; https://www.lesli-journal.org/ojs/ >
+    au < ojs2.OJS2Plugin ; doNotProcess ; 2013 ; 2013 ; Linguistic Evidence in Security, Law and Intelligence Volume 1 ; 1 ; http://www.lesli-journal.org/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2014 ; 2014 ; Linguistic Evidence in Security, Law and Intelligence Volume 2 ; 2 ; http://www.lesli-journal.org/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2019 ; 2019 ; Linguistic Evidence in Security, Law and Intelligence Volume 3 ; 3 ; https://www.lesli-journal.org/ojs/ >
 
     }
   }
@@ -502,9 +505,9 @@
 
       param[journal_id] = mitrip
 
-      au < released ; 2012 ; 2012 ; Motivational Interviewing: Training, Research, Implementation, Practice Volume 1 (2012) ; 1 ; http://www.mitrip.org/ojs/ >
-      au < released ; 2013 ; 2013 ; Motivational Interviewing: Training, Research, Implementation, Practice Volume 1 (2013) ; 1 ; http://www.mitrip.org/ojs/ >
-      au < released ; 2014 ; 2014 ; Motivational Interviewing: Training, Research, Implementation, Practice Volume 1 (2014) ; 1 ; http://www.mitrip.org/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2012 ; 2012 ; Motivational Interviewing: Training, Research, Implementation, Practice Volume 1 (2012) ; 1 ; http://www.mitrip.org/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2013 ; 2013 ; Motivational Interviewing: Training, Research, Implementation, Practice Volume 1 (2013) ; 1 ; http://www.mitrip.org/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2014 ; 2014 ; Motivational Interviewing: Training, Research, Implementation, Practice Volume 1 (2014) ; 1 ; http://www.mitrip.org/ojs/ >
 
   }
 
@@ -517,16 +520,16 @@
 
     param[journal_id] = palrap
 
-    au < released ; 2013 ; 2013 ; Pennsylvania Libraries: Research and Practice Volume 1 ; 1 ; http://palrap.pitt.edu/ojs/ >
-    au < released ; 2014 ; 2014 ; Pennsylvania Libraries: Research and Practice Volume 2 ; 2 ; http://palrap.pitt.edu/ojs/ >
-    au < released ; 2015 ; 2015 ; Pennsylvania Libraries: Research and Practice Volume 3 ; 3 ; http://palrap.pitt.edu/ojs/ >
-    au < released ; 2016 ; 2016 ; Pennsylvania Libraries: Research and Practice Volume 4 ; 4 ; http://palrap.pitt.edu/ojs/ >
-    au < released ; 2017 ; 2017 ; Pennsylvania Libraries: Research and Practice Volume 5 ; 5 ; http://palrap.pitt.edu/ojs/ >
-    au < released ; 2018 ; 2018 ; Pennsylvania Libraries: Research and Practice Volume 6 ; 6 ; http://palrap.pitt.edu/ojs/ >
-    au < released ; 2019 ; 2019 ; Pennsylvania Libraries: Research and Practice Volume 7 ; 7 ; https://palrap.pitt.edu/ojs/ >
-    au < released ; 2020 ; 2020 ; Pennsylvania Libraries: Research and Practice Volume 8 ; 8 ; https://palrap.pitt.edu/ojs/ >
-    au < ready ; 2021 ; 2021 ; Pennsylvania Libraries: Research and Practice Volume 9 ; 9 ; https://palrap.pitt.edu/ojs/ >
-    au < expected ; 2022 ; 2022 ; Pennsylvania Libraries: Research and Practice Volume 10 ; 10 ; https://palrap.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2013 ; 2013 ; Pennsylvania Libraries: Research and Practice Volume 1 ; 1 ; http://palrap.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2014 ; 2014 ; Pennsylvania Libraries: Research and Practice Volume 2 ; 2 ; http://palrap.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2015 ; 2015 ; Pennsylvania Libraries: Research and Practice Volume 3 ; 3 ; http://palrap.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2016 ; 2016 ; Pennsylvania Libraries: Research and Practice Volume 4 ; 4 ; http://palrap.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2017 ; 2017 ; Pennsylvania Libraries: Research and Practice Volume 5 ; 5 ; http://palrap.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2018 ; 2018 ; Pennsylvania Libraries: Research and Practice Volume 6 ; 6 ; http://palrap.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2019 ; 2019 ; Pennsylvania Libraries: Research and Practice Volume 7 ; 7 ; https://palrap.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2020 ; 2020 ; Pennsylvania Libraries: Research and Practice Volume 8 ; 8 ; https://palrap.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; ready ; 2021 ; 2021 ; Pennsylvania Libraries: Research and Practice Volume 9 ; 9 ; https://palrap.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; expected ; 2022 ; 2022 ; Pennsylvania Libraries: Research and Practice Volume 10 ; 10 ; https://palrap.pitt.edu/ojs/ >
 
   }
 
@@ -539,11 +542,11 @@
 
     param[journal_id] = ppr
 
-    au < released ; 2011 ; 2011 ; Pitt Political Review Volume 8 (2011) ; 8 ; http://ppr.pitt.edu/ojs/ >
-    au < released ; 2012 ; 2012 ; Pitt Political Review Volume 8 (2012) ; 8 ; http://ppr.pitt.edu/ojs/ >
-    au < ready ; 2014 ; 2014 ; Pitt Political Review Volume 11 (2014) ; 11 ; https://ppr.pitt.edu/ojs/ >
-    au < ready ; 2015 ; 2015 ; Pitt Political Review Volume 11 (2015) ; 11 ; https://ppr.pitt.edu/ojs/ >
-    au < ready ; 2016-2017 ; 2017 ; Pitt Political Review Volume 12 ; 12 ; https://ppr.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2011 ; 2011 ; Pitt Political Review Volume 8 (2011) ; 8 ; http://ppr.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2012 ; 2012 ; Pitt Political Review Volume 8 (2012) ; 8 ; http://ppr.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; ready ; 2014 ; 2014 ; Pitt Political Review Volume 11 (2014) ; 11 ; https://ppr.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; ready ; 2015 ; 2015 ; Pitt Political Review Volume 11 (2015) ; 11 ; https://ppr.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; ready ; 2016-2017 ; 2017 ; Pitt Political Review Volume 12 ; 12 ; https://ppr.pitt.edu/ojs/ >
 
   }
 
@@ -557,14 +560,14 @@
 
       param[journal_id] = pjephl
 
-      au < released ; 2007 ; 2007 ; Pittsburgh Journal of Environmental and Public Health Law Volume 1 ; 1 ; http://pjephl.law.pitt.edu/ojs/ >
-      au < released ; 2008 ; 2008 ; Pittsburgh Journal of Environmental and Public Health Law Volume 2 ; 2 ; http://pjephl.law.pitt.edu/ojs/ >
-      au < released ; 2009 ; 2009 ; Pittsburgh Journal of Environmental and Public Health Law Volume 3 ; 3 ; http://pjephl.law.pitt.edu/ojs/ >
-      au < released ; 2010 ; 2010 ; Pittsburgh Journal of Environmental and Public Health Law Volume 4 ; 4 ; http://pjephl.law.pitt.edu/ojs/ >
-      au < released ; 2011 ; 2011 ; Pittsburgh Journal of Environmental and Public Health Law Volume 5 ; 5 ; http://pjephl.law.pitt.edu/ojs/ >
-      au < released ; 2012 ; 2012 ; Pittsburgh Journal of Environmental and Public Health Law Volume 5-6 ; 5-6 ; http://pjephl.law.pitt.edu/ojs/ >
-      au < released ; 2013 ; 2013 ; Pittsburgh Journal of Environmental and Public Health Law Volume 7 ; 7 ; http://pjephl.law.pitt.edu/ojs/ >
-      au < released ; 2014 ; 2014 ; Pittsburgh Journal of Environmental and Public Health Law Volume 8-9 ; 8-9 ; http://pjephl.law.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2007 ; 2007 ; Pittsburgh Journal of Environmental and Public Health Law Volume 1 ; 1 ; http://pjephl.law.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2008 ; 2008 ; Pittsburgh Journal of Environmental and Public Health Law Volume 2 ; 2 ; http://pjephl.law.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2009 ; 2009 ; Pittsburgh Journal of Environmental and Public Health Law Volume 3 ; 3 ; http://pjephl.law.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2010 ; 2010 ; Pittsburgh Journal of Environmental and Public Health Law Volume 4 ; 4 ; http://pjephl.law.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2011 ; 2011 ; Pittsburgh Journal of Environmental and Public Health Law Volume 5 ; 5 ; http://pjephl.law.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2012 ; 2012 ; Pittsburgh Journal of Environmental and Public Health Law Volume 5-6 ; 5-6 ; http://pjephl.law.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2013 ; 2013 ; Pittsburgh Journal of Environmental and Public Health Law Volume 7 ; 7 ; http://pjephl.law.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2014 ; 2014 ; Pittsburgh Journal of Environmental and Public Health Law Volume 8-9 ; 8-9 ; http://pjephl.law.pitt.edu/ojs/ >
 
   }
 
@@ -580,28 +583,28 @@
       param[journal_id] = tlp
       #base_url changed
 
-      au < down ; 2001 ; 2001 ; Pittsburgh Journal of Technology Law and Policy Volume 1 ; 1 ; http://tlp.law-dev.library.pitt.edu/ojs/ >
-      au < down ; 2002 ; 2002 ; Pittsburgh Journal of Technology Law and Policy Volume 2 ; 2 ; http://tlp.law-dev.library.pitt.edu/ojs/ >
-      au < down ; 2003 ; 2003 ; Pittsburgh Journal of Technology Law and Policy Volume 3 ; 3 ; http://tlp.law-dev.library.pitt.edu/ojs/ >
-      au < down ; 2004 ; 2004 ; Pittsburgh Journal of Technology Law and Policy Volume 4 ; 4 ; http://tlp.law-dev.library.pitt.edu/ojs/ >
-      au < down ; 2005 ; 2005 ; Pittsburgh Journal of Technology Law and Policy Volume 5 ; 5 ; http://tlp.law-dev.library.pitt.edu/ojs/ >
-      au < down ; 2006 ; 2006 ; Pittsburgh Journal of Technology Law and Policy Volume 6 ; 6 ; http://tlp.law-dev.library.pitt.edu/ojs/ >
-      au < down ; 2007 ; 2007 ; Pittsburgh Journal of Technology Law and Policy Volume 7 ; 7 ; http://tlp.law-dev.library.pitt.edu/ojs/ >
-      au < down ; 2008 ; 2008 ; Pittsburgh Journal of Technology Law and Policy Volume 8 ; 8 ; http://tlp.law-dev.library.pitt.edu/ojs/ >
-      au < down ; 2009 ; 2009 ; Pittsburgh Journal of Technology Law and Policy Volume 9 ; 9 ; http://tlp.law-dev.library.pitt.edu/ojs/ >
-      au < down ; 2010 ; 2010 ; Pittsburgh Journal of Technology Law and Policy Volume 10 ; 10 ; http://tlp.law-dev.library.pitt.edu/ojs/ >
-      au < down ; 2011 ; 2011 ; Pittsburgh Journal of Technology Law and Policy Volume 11 ; 11 ; http://tlp.law-dev.library.pitt.edu/ojs/ >
-      au < down ; 2012 ; 2012 ; Pittsburgh Journal of Technology Law and Policy Volume 12-13 ; 12-13 ; http://tlp.law-dev.library.pitt.edu/ojs/ >
-      au < down ; 2013 ; 2013 ; Pittsburgh Journal of Technology Law and Policy Volume 13 ; 13 ; http://tlp.law-dev.library.pitt.edu/ojs/ >
-      au < down ; 2014 ; 2014 ; Pittsburgh Journal of Technology Law and Policy Volume 14 ; 14 ; http://tlp.law-dev.library.pitt.edu/ojs/ >
-      au < down ; 2015 ; 2015 ; Pittsburgh Journal of Technology Law and Policy Volume 15 ; 15 ; http://tlp.law-dev.library.pitt.edu/ojs/ >
-      au < down ; 2016 ; 2016 ; Pittsburgh Journal of Technology Law and Policy Volume 16 ; 16 ; http://tlp.law-dev.library.pitt.edu/ojs/ >
-      au < released ; 2017 ; 2017 ; Pittsburgh Journal of Technology Law and Policy Volume 17 ; 17 ; https://tlp.law.pitt.edu/ojs/ >
-      au < released ; 2018 ; 2018 ; Pittsburgh Journal of Technology Law and Policy Volume 18 ; 18 ; https://tlp.law.pitt.edu/ojs/ >
-      au < released ; 2019 ; 2019 ; Pittsburgh Journal of Technology Law and Policy Volume 19 ; 19 ; https://tlp.law.pitt.edu/ojs/ >
-      au < released ; 2020 ; 2020 ; Pittsburgh Journal of Technology Law and Policy Volume 20 ; 20 ; https://tlp.law.pitt.edu/ojs/ >
-      au < ready ; 2021 ; 2021 ; Pittsburgh Journal of Technology Law and Policy Volume 21 ; 21 ; https://tlp.law.pitt.edu/ojs/ >
-      au < expected ; 2022 ; 2022 ; Pittsburgh Journal of Technology Law and Policy Volume 22 ; 22 ; https://tlp.law.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; down ; 2001 ; 2001 ; Pittsburgh Journal of Technology Law and Policy Volume 1 ; 1 ; http://tlp.law-dev.library.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; down ; 2002 ; 2002 ; Pittsburgh Journal of Technology Law and Policy Volume 2 ; 2 ; http://tlp.law-dev.library.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; down ; 2003 ; 2003 ; Pittsburgh Journal of Technology Law and Policy Volume 3 ; 3 ; http://tlp.law-dev.library.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; down ; 2004 ; 2004 ; Pittsburgh Journal of Technology Law and Policy Volume 4 ; 4 ; http://tlp.law-dev.library.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; down ; 2005 ; 2005 ; Pittsburgh Journal of Technology Law and Policy Volume 5 ; 5 ; http://tlp.law-dev.library.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; down ; 2006 ; 2006 ; Pittsburgh Journal of Technology Law and Policy Volume 6 ; 6 ; http://tlp.law-dev.library.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; down ; 2007 ; 2007 ; Pittsburgh Journal of Technology Law and Policy Volume 7 ; 7 ; http://tlp.law-dev.library.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; down ; 2008 ; 2008 ; Pittsburgh Journal of Technology Law and Policy Volume 8 ; 8 ; http://tlp.law-dev.library.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; down ; 2009 ; 2009 ; Pittsburgh Journal of Technology Law and Policy Volume 9 ; 9 ; http://tlp.law-dev.library.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; down ; 2010 ; 2010 ; Pittsburgh Journal of Technology Law and Policy Volume 10 ; 10 ; http://tlp.law-dev.library.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; down ; 2011 ; 2011 ; Pittsburgh Journal of Technology Law and Policy Volume 11 ; 11 ; http://tlp.law-dev.library.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; down ; 2012 ; 2012 ; Pittsburgh Journal of Technology Law and Policy Volume 12-13 ; 12-13 ; http://tlp.law-dev.library.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; down ; 2013 ; 2013 ; Pittsburgh Journal of Technology Law and Policy Volume 13 ; 13 ; http://tlp.law-dev.library.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; down ; 2014 ; 2014 ; Pittsburgh Journal of Technology Law and Policy Volume 14 ; 14 ; http://tlp.law-dev.library.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; down ; 2015 ; 2015 ; Pittsburgh Journal of Technology Law and Policy Volume 15 ; 15 ; http://tlp.law-dev.library.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; down ; 2016 ; 2016 ; Pittsburgh Journal of Technology Law and Policy Volume 16 ; 16 ; http://tlp.law-dev.library.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2017 ; 2017 ; Pittsburgh Journal of Technology Law and Policy Volume 17 ; 17 ; https://tlp.law.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2018 ; 2018 ; Pittsburgh Journal of Technology Law and Policy Volume 18 ; 18 ; https://tlp.law.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2019 ; 2019 ; Pittsburgh Journal of Technology Law and Policy Volume 19 ; 19 ; https://tlp.law.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2020 ; 2020 ; Pittsburgh Journal of Technology Law and Policy Volume 20 ; 20 ; https://tlp.law.pitt.edu/ojs/ >
+      au < ojs3.Ojs3Plugin ; exists ; 2021 ; 2021 ; Pittsburgh Journal of Technology Law and Policy Volume 21 ; 21 ; https://tlp.law.pitt.edu/ojs/ >
+      au < ojs3.Ojs3Plugin ; expected ; 2022 ; 2022 ; Pittsburgh Journal of Technology Law and Policy Volume 22 ; 22 ; https://tlp.law.pitt.edu/ojs/ >
 
   }
 
@@ -615,10 +618,10 @@
 
       param[journal_id] = pgheupapers
 
-      au < released ; 2012 ; 2012 ; Pittsburgh Papers on the European Union Volume 1 ; 1 ; http://pgheupapers.pitt.edu/ojs/ >
-      au < released ; 2013 ; 2013 ; Pittsburgh Papers on the European Union Volume 2 ; 2 ; http://pgheupapers.pitt.edu/ojs/ >
-      au < released ; 2014 ; 2014 ; Pittsburgh Papers on the European Union Volume 3 ; 3 ; http://pgheupapers.pitt.edu/ojs/ >
-      au < released ; 2017 ; 2017 ; Pittsburgh Papers on the European Union Volume 4 ; 4 ; http://pgheupapers.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2012 ; 2012 ; Pittsburgh Papers on the European Union Volume 1 ; 1 ; http://pgheupapers.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2013 ; 2013 ; Pittsburgh Papers on the European Union Volume 2 ; 2 ; http://pgheupapers.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2014 ; 2014 ; Pittsburgh Papers on the European Union Volume 3 ; 3 ; http://pgheupapers.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2017 ; 2017 ; Pittsburgh Papers on the European Union Volume 4 ; 4 ; http://pgheupapers.pitt.edu/ojs/ >
 
   }
 
@@ -632,17 +635,17 @@
 
     param[journal_id] = taxreview
 
-    au < released ; 2012 ; 2012 ; Pittsburgh Tax Review Volume 1 ; 1 ; http://taxreview.law.pitt.edu/ojs/ >
-    au < released ; 2013 ; 2013 ; Pittsburgh Tax Review Volume 2 ; 2 ; http://taxreview.law.pitt.edu/ojs/ >
-    au < released ; 2014 ; 2014 ; Pittsburgh Tax Review Volume 3 ; 3 ; http://taxreview.law.pitt.edu/ojs/ >
-    au < released ; 2015 ; 2015 ; Pittsburgh Tax Review Volume 4 ; 4 ; http://taxreview.law.pitt.edu/ojs/ >
-    au < released ; 2016 ; 2016 ; Pittsburgh Tax Review Volume 5 ; 5 ; http://taxreview.law.pitt.edu/ojs/ >
-    au < released ; 2017 ; 2017 ; Pittsburgh Tax Review Volume 6 ; 6 ; http://taxreview.law.pitt.edu/ojs/ >
-    au < released ; 2018 ; 2018 ; Pittsburgh Tax Review Volume 7 ; 7 ; http://taxreview.law.pitt.edu/ojs/ >
-    au < released ; 2019 ; 2019 ; Pittsburgh Tax Review Volume 8 ; 8 ; https://taxreview.law.pitt.edu/ojs/ >
-    au < released ; 2020 ; 2020 ; Pittsburgh Tax Review Volume 9 ; 9 ; https://taxreview.law.pitt.edu/ojs/ >
-    au < ready ; 2021 ; 2021 ; Pittsburgh Tax Review Volume 10 ; 10 ; https://taxreview.law.pitt.edu/ojs/ >
-    au < expected ; 2022 ; 2022 ; Pittsburgh Tax Review Volume 11 ; 11 ; https://taxreview.law.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2012 ; 2012 ; Pittsburgh Tax Review Volume 1 ; 1 ; http://taxreview.law.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2013 ; 2013 ; Pittsburgh Tax Review Volume 2 ; 2 ; http://taxreview.law.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2014 ; 2014 ; Pittsburgh Tax Review Volume 3 ; 3 ; http://taxreview.law.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2015 ; 2015 ; Pittsburgh Tax Review Volume 4 ; 4 ; http://taxreview.law.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2016 ; 2016 ; Pittsburgh Tax Review Volume 5 ; 5 ; http://taxreview.law.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2017 ; 2017 ; Pittsburgh Tax Review Volume 6 ; 6 ; http://taxreview.law.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2018 ; 2018 ; Pittsburgh Tax Review Volume 7 ; 7 ; http://taxreview.law.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2019 ; 2019 ; Pittsburgh Tax Review Volume 8 ; 8 ; https://taxreview.law.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2020 ; 2020 ; Pittsburgh Tax Review Volume 9 ; 9 ; https://taxreview.law.pitt.edu/ojs/ >
+    au < ojs3.Ojs3Plugin ; exists ; 2021 ; 2021 ; Pittsburgh Tax Review Volume 10 ; 10 ; https://taxreview.law.pitt.edu/ojs/ >
+    au < ojs3.Ojs3Plugin ; expected ; 2022 ; 2022 ; Pittsburgh Tax Review Volume 11 ; 11 ; https://taxreview.law.pitt.edu/ojs/ >
 
   }
 
@@ -656,15 +659,15 @@
 
     param[journal_id] = radicalteacher
 
-    au < released ; 2013 ; 2013 ; Radical Teacher Volume 96-97 ; 96-97 ; http://radicalteacher.library.pitt.edu/ojs/ >
-    au < released ; 2014 ; 2014 ; Radical Teacher Volume 98-100 ; 98-100 ; http://radicalteacher.library.pitt.edu/ojs/ >
-    au < released ; 2015 ; 2015 ; Radical Teacher Volume 101-103 ; 101-103 ; http://radicalteacher.library.pitt.edu/ojs/ >
-    au < released ; 2016 ; 2016 ; Radical Teacher Volume 104-106 ; 104-106 ; http://radicalteacher.library.pitt.edu/ojs/ >
-    au < released ; 2017 ; 2017 ; Radical Teacher Volume 107-109 ; 107-109 ; http://radicalteacher.library.pitt.edu/ojs/ >
-    au < released ; 2018 ; 2018 ; Radical Teacher Volume 110-112 ; 110-112 ; http://radicalteacher.library.pitt.edu/ojs/ >
-    au < released ; 2019 ; 2019 ; Radical Teacher Volume 113-115 ; 113-115 ; https://radicalteacher.library.pitt.edu/ojs/ >
-    au < exists ; 2020 ; 2020 ; Radical Teacher Volume 116-118 ; 116-118 ; https://radicalteacher.library.pitt.edu/ojs/ >
-    au < exists ; 2021 ; 2021 ; Radical Teacher Volume 119-121 ; 119-121 ; https://radicalteacher.library.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2013 ; 2013 ; Radical Teacher Volume 96-97 ; 96-97 ; http://radicalteacher.library.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2014 ; 2014 ; Radical Teacher Volume 98-100 ; 98-100 ; http://radicalteacher.library.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2015 ; 2015 ; Radical Teacher Volume 101-103 ; 101-103 ; http://radicalteacher.library.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2016 ; 2016 ; Radical Teacher Volume 104-106 ; 104-106 ; http://radicalteacher.library.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2017 ; 2017 ; Radical Teacher Volume 107-109 ; 107-109 ; http://radicalteacher.library.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2018 ; 2018 ; Radical Teacher Volume 110-112 ; 110-112 ; http://radicalteacher.library.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2019 ; 2019 ; Radical Teacher Volume 113-115 ; 113-115 ; https://radicalteacher.library.pitt.edu/ojs/ >
+    au < ojs3.Ojs3Plugin ; exists ; 2020 ; 2020 ; Radical Teacher Volume 116-118 ; 116-118 ; https://radicalteacher.library.pitt.edu/ojs/ >
+    au < ojs3.Ojs3Plugin ; exists ; 2021 ; 2021 ; Radical Teacher Volume 119-121 ; 119-121 ; https://radicalteacher.library.pitt.edu/ojs/ >
 
   }
 
@@ -678,89 +681,89 @@
 
     param[journal_id] = Iberoamericana
 
-    au < released ; 1939 ; 1939 ; Revista Iberoamericana Volume I ; I ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1940 ; 1940 ; Revista Iberoamericana Volume II ; II ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1941 ; 1941 ; Revista Iberoamericana Volume III-IV ; III-IV ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1942 ; 1942 ; Revista Iberoamericana Volume IV-V ; IV-V ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1943 ; 1943 ; Revista Iberoamericana Volume VI-VII ; VI-VII ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1944 ; 1944 ; Revista Iberoamericana Volume VII-VIII ; VII-VIII ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1945 ; 1945 ; Revista Iberoamericana Volume IX-X ; IX-X ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1946 ; 1946 ; Revista Iberoamericana Volume X-XI ; X-XI ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1947 ; 1947 ; Revista Iberoamericana Volume XII-XIII ; XII-XIII ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1948 ; 1948 ; Revista Iberoamericana Volume XIII-XIV ; XIII-XIV ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1949 ; 1949 ; Revista Iberoamericana Volume XV ; XV ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1950 ; 1950 ; Revista Iberoamericana Volume XV-XVI ; XV-XVI ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1951 ; 1951 ; Revista Iberoamericana Volume XVI-XVII ; XVI-XVII ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1952 ; 1952 ; Revista Iberoamericana Volume XVII-XVIII ; XVII-XVIII ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1953 ; 1953 ; Revista Iberoamericana Volume XVIII-XIX ; XVIII-XIX ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1954 ; 1954 ; Revista Iberoamericana Volume XIX ; XIX ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1955 ; 1955 ; Revista Iberoamericana Volume XX ; XX ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1956 ; 1956 ; Revista Iberoamericana Volume XXI ; XXI ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1957 ; 1957 ; Revista Iberoamericana Volume XXII ; XXII ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1958 ; 1958 ; Revista Iberoamericana Volume XXIII ; XXIII ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1959 ; 1959 ; Revista Iberoamericana Volume XXIV ; XXIV ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1960 ; 1960 ; Revista Iberoamericana Volume XXV ; XXV ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1961 ; 1961 ; Revista Iberoamericana Volume XXVI-XXVII ; XXVI-XXVII ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1962 ; 1962 ; Revista Iberoamericana Volume XXVIII ; XXVIII ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1963 ; 1963 ; Revista Iberoamericana Volume XXIX ; XXIX ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1964 ; 1964 ; Revista Iberoamericana Volume XXX ; XXX ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1965 ; 1965 ; Revista Iberoamericana Volume XXXI ; XXXI ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1966 ; 1966 ; Revista Iberoamericana Volume XXXII ; XXXII ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1967 ; 1967 ; Revista Iberoamericana Volume XXXIII ; XXXIII ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1968 ; 1968 ; Revista Iberoamericana Volume XXXIV ; XXXIV ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1969 ; 1969 ; Revista Iberoamericana Volume XXXV ; XXXV ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1970 ; 1970 ; Revista Iberoamericana Volume XXXVI ; XXXVI ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1971 ; 1971 ; Revista Iberoamericana Volume XXXVII ; XXXVII ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1972 ; 1972 ; Revista Iberoamericana Volume XXXVIII ; XXXVIII ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1973 ; 1973 ; Revista Iberoamericana Volume XXXIX ; XXXIX ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1974 ; 1974 ; Revista Iberoamericana Volume XL ; XL ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1975 ; 1975 ; Revista Iberoamericana Volume XLI ; XLI ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1976 ; 1976 ; Revista Iberoamericana Volume XLII ; XLII ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1977 ; 1977 ; Revista Iberoamericana Volume XLIII ; XLIII ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1978 ; 1978 ; Revista Iberoamericana Volume XLIV ; XLIV ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1979 ; 1979 ; Revista Iberoamericana Volume XLV ; XLV ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1980 ; 1980 ; Revista Iberoamericana Volume XLVI ; XLVI ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1981 ; 1981 ; Revista Iberoamericana Volume XLVII ; XLVII ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1982 ; 1982 ; Revista Iberoamericana Volume XLVIII ; XLVIII ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1983 ; 1983 ; Revista Iberoamericana Volume XLIX ; XLIX ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1984 ; 1984 ; Revista Iberoamericana Volume L ; L ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1985 ; 1985 ; Revista Iberoamericana Volume LI ; LI ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1986 ; 1986 ; Revista Iberoamericana Volume LII ; LII ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1987 ; 1987 ; Revista Iberoamericana Volume LIII ; LIII ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1988 ; 1988 ; Revista Iberoamericana Volume LIV ; LIV ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1989 ; 1989 ; Revista Iberoamericana Volume LV ; LV ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1990 ; 1990 ; Revista Iberoamericana Volume LVI ; LVI ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1991 ; 1991 ; Revista Iberoamericana Volume LVII ; LVII ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1992 ; 1992 ; Revista Iberoamericana Volume LVIII ; LVIII ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1993 ; 1993 ; Revista Iberoamericana Volume LIX ; LIX ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1994 ; 1994 ; Revista Iberoamericana Volume LX ; LX ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1995 ; 1995 ; Revista Iberoamericana Volume LXI ; LXI ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1996 ; 1996 ; Revista Iberoamericana Volume LXII ; LXII ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1997 ; 1997 ; Revista Iberoamericana Volume LXIII ; LXIII ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1998 ; 1998 ; Revista Iberoamericana Volume LXIV ; LXIV ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 1999 ; 1999 ; Revista Iberoamericana Volume LXV ; LXV ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 2000 ; 2000 ; Revista Iberoamericana Volume LXVI ; LXVI ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 2001 ; 2001 ; Revista Iberoamericana Volume LXVII ; LXVII ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 2002 ; 2002 ; Revista Iberoamericana Volume LXVIII ; LXVIII ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 2003 ; 2003 ; Revista Iberoamericana Volume LXIX ; LXIX ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 2004 ; 2004 ; Revista Iberoamericana Volume LXX ; LXX ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 2005 ; 2005 ; Revista Iberoamericana Volume LXXI ; LXXI ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 2006 ; 2006 ; Revista Iberoamericana Volume LXXII ; LXXII ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 2007 ; 2007 ; Revista Iberoamericana Volume LXXIII ; LXXIII ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 2008 ; 2008 ; Revista Iberoamericana Volume LXXIV ; LXXIV ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 2009 ; 2009 ; Revista Iberoamericana Volume LXXV ; LXXV ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 2010 ; 2010 ; Revista Iberoamericana Volume LXXVI ; LXXVI ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 2011 ; 2011 ; Revista Iberoamericana Volume LXXVII ; LXXVII ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 2012 ; 2012 ; Revista Iberoamericana Volume LXXVIII ; LXXVIII ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 2013 ; 2013 ; Revista Iberoamericana Volume LXXIX ; LXXIX ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 2014 ; 2014 ; Revista Iberoamericana Volume LXXX ; LXXX ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 2015 ; 2015 ; Revista Iberoamericana Volume LXXXI ; LXXXI ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 2016 ; 2016 ; Revista Iberoamericana Volume LXXXII ; LXXXII ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 2017 ; 2017 ; Revista Iberoamericana Volume LXXXIII ; LXXXIII ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 2018 ; 2018 ; Revista Iberoamericana Volume LXXXIV ; LXXXIV ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 2019 ; 2019 ; Revista Iberoamericana Volume LXXXV ; LXXXV ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < released ; 2020 ; 2020 ; Revista Iberoamericana Volume LXXXVI ; LXXXVI ; http://revista-iberoamericana.pitt.edu/ojs/ >
-    au < ready ; 2021 ; 2021 ; Revista Iberoamericana Volume LXXXVII ; LXXXVII ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1939 ; 1939 ; Revista Iberoamericana Volume I ; I ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1940 ; 1940 ; Revista Iberoamericana Volume II ; II ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1941 ; 1941 ; Revista Iberoamericana Volume III-IV ; III-IV ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1942 ; 1942 ; Revista Iberoamericana Volume IV-V ; IV-V ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1943 ; 1943 ; Revista Iberoamericana Volume VI-VII ; VI-VII ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1944 ; 1944 ; Revista Iberoamericana Volume VII-VIII ; VII-VIII ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1945 ; 1945 ; Revista Iberoamericana Volume IX-X ; IX-X ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1946 ; 1946 ; Revista Iberoamericana Volume X-XI ; X-XI ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1947 ; 1947 ; Revista Iberoamericana Volume XII-XIII ; XII-XIII ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1948 ; 1948 ; Revista Iberoamericana Volume XIII-XIV ; XIII-XIV ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1949 ; 1949 ; Revista Iberoamericana Volume XV ; XV ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1950 ; 1950 ; Revista Iberoamericana Volume XV-XVI ; XV-XVI ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1951 ; 1951 ; Revista Iberoamericana Volume XVI-XVII ; XVI-XVII ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1952 ; 1952 ; Revista Iberoamericana Volume XVII-XVIII ; XVII-XVIII ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1953 ; 1953 ; Revista Iberoamericana Volume XVIII-XIX ; XVIII-XIX ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1954 ; 1954 ; Revista Iberoamericana Volume XIX ; XIX ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1955 ; 1955 ; Revista Iberoamericana Volume XX ; XX ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1956 ; 1956 ; Revista Iberoamericana Volume XXI ; XXI ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1957 ; 1957 ; Revista Iberoamericana Volume XXII ; XXII ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1958 ; 1958 ; Revista Iberoamericana Volume XXIII ; XXIII ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1959 ; 1959 ; Revista Iberoamericana Volume XXIV ; XXIV ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1960 ; 1960 ; Revista Iberoamericana Volume XXV ; XXV ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1961 ; 1961 ; Revista Iberoamericana Volume XXVI-XXVII ; XXVI-XXVII ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1962 ; 1962 ; Revista Iberoamericana Volume XXVIII ; XXVIII ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1963 ; 1963 ; Revista Iberoamericana Volume XXIX ; XXIX ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1964 ; 1964 ; Revista Iberoamericana Volume XXX ; XXX ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1965 ; 1965 ; Revista Iberoamericana Volume XXXI ; XXXI ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1966 ; 1966 ; Revista Iberoamericana Volume XXXII ; XXXII ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1967 ; 1967 ; Revista Iberoamericana Volume XXXIII ; XXXIII ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1968 ; 1968 ; Revista Iberoamericana Volume XXXIV ; XXXIV ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1969 ; 1969 ; Revista Iberoamericana Volume XXXV ; XXXV ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1970 ; 1970 ; Revista Iberoamericana Volume XXXVI ; XXXVI ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1971 ; 1971 ; Revista Iberoamericana Volume XXXVII ; XXXVII ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1972 ; 1972 ; Revista Iberoamericana Volume XXXVIII ; XXXVIII ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1973 ; 1973 ; Revista Iberoamericana Volume XXXIX ; XXXIX ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1974 ; 1974 ; Revista Iberoamericana Volume XL ; XL ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1975 ; 1975 ; Revista Iberoamericana Volume XLI ; XLI ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1976 ; 1976 ; Revista Iberoamericana Volume XLII ; XLII ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1977 ; 1977 ; Revista Iberoamericana Volume XLIII ; XLIII ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1978 ; 1978 ; Revista Iberoamericana Volume XLIV ; XLIV ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1979 ; 1979 ; Revista Iberoamericana Volume XLV ; XLV ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1980 ; 1980 ; Revista Iberoamericana Volume XLVI ; XLVI ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1981 ; 1981 ; Revista Iberoamericana Volume XLVII ; XLVII ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1982 ; 1982 ; Revista Iberoamericana Volume XLVIII ; XLVIII ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1983 ; 1983 ; Revista Iberoamericana Volume XLIX ; XLIX ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1984 ; 1984 ; Revista Iberoamericana Volume L ; L ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1985 ; 1985 ; Revista Iberoamericana Volume LI ; LI ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1986 ; 1986 ; Revista Iberoamericana Volume LII ; LII ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1987 ; 1987 ; Revista Iberoamericana Volume LIII ; LIII ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1988 ; 1988 ; Revista Iberoamericana Volume LIV ; LIV ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1989 ; 1989 ; Revista Iberoamericana Volume LV ; LV ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1990 ; 1990 ; Revista Iberoamericana Volume LVI ; LVI ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1991 ; 1991 ; Revista Iberoamericana Volume LVII ; LVII ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1992 ; 1992 ; Revista Iberoamericana Volume LVIII ; LVIII ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1993 ; 1993 ; Revista Iberoamericana Volume LIX ; LIX ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1994 ; 1994 ; Revista Iberoamericana Volume LX ; LX ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1995 ; 1995 ; Revista Iberoamericana Volume LXI ; LXI ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1996 ; 1996 ; Revista Iberoamericana Volume LXII ; LXII ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1997 ; 1997 ; Revista Iberoamericana Volume LXIII ; LXIII ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1998 ; 1998 ; Revista Iberoamericana Volume LXIV ; LXIV ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 1999 ; 1999 ; Revista Iberoamericana Volume LXV ; LXV ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2000 ; 2000 ; Revista Iberoamericana Volume LXVI ; LXVI ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2001 ; 2001 ; Revista Iberoamericana Volume LXVII ; LXVII ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2002 ; 2002 ; Revista Iberoamericana Volume LXVIII ; LXVIII ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2003 ; 2003 ; Revista Iberoamericana Volume LXIX ; LXIX ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2004 ; 2004 ; Revista Iberoamericana Volume LXX ; LXX ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2005 ; 2005 ; Revista Iberoamericana Volume LXXI ; LXXI ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2006 ; 2006 ; Revista Iberoamericana Volume LXXII ; LXXII ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2007 ; 2007 ; Revista Iberoamericana Volume LXXIII ; LXXIII ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2008 ; 2008 ; Revista Iberoamericana Volume LXXIV ; LXXIV ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2009 ; 2009 ; Revista Iberoamericana Volume LXXV ; LXXV ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2010 ; 2010 ; Revista Iberoamericana Volume LXXVI ; LXXVI ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2011 ; 2011 ; Revista Iberoamericana Volume LXXVII ; LXXVII ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2012 ; 2012 ; Revista Iberoamericana Volume LXXVIII ; LXXVIII ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2013 ; 2013 ; Revista Iberoamericana Volume LXXIX ; LXXIX ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2014 ; 2014 ; Revista Iberoamericana Volume LXXX ; LXXX ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2015 ; 2015 ; Revista Iberoamericana Volume LXXXI ; LXXXI ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2016 ; 2016 ; Revista Iberoamericana Volume LXXXII ; LXXXII ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2017 ; 2017 ; Revista Iberoamericana Volume LXXXIII ; LXXXIII ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2018 ; 2018 ; Revista Iberoamericana Volume LXXXIV ; LXXXIV ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2019 ; 2019 ; Revista Iberoamericana Volume LXXXV ; LXXXV ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2020 ; 2020 ; Revista Iberoamericana Volume LXXXVI ; LXXXVI ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; ready ; 2021 ; 2021 ; Revista Iberoamericana Volume LXXXVII ; LXXXVII ; http://revista-iberoamericana.pitt.edu/ojs/ >
 
   }
 
@@ -773,19 +776,19 @@
 
     param[journal_id] = ricoeur
 
-    au < released ; 2010 ; 2010 ; Ricoeur Studies Volume 1 ; 1 ; http://ricoeur.pitt.edu/ojs/ >
-    au < released ; 2011 ; 2011 ; Ricoeur Studies Volume 2 ; 2 ; http://ricoeur.pitt.edu/ojs/ >
-    au < released ; 2012 ; 2012 ; Ricoeur Studies Volume 3 ; 3 ; http://ricoeur.pitt.edu/ojs/ >
-    au < released ; 2013 ; 2013 ; Ricoeur Studies Volume 4 ; 4 ; http://ricoeur.pitt.edu/ojs/ >
-    au < released ; 2014 ; 2014 ; Ricoeur Studies Volume 5 ; 5 ; http://ricoeur.pitt.edu/ojs/ >
-    au < released ; 2015 ; 2015 ; Ricoeur Studies Volume 6 ; 6 ; http://ricoeur.pitt.edu/ojs/ >
-    au < released ; 2016 ; 2016 ; Ricoeur Studies Volume 7 ; 7 ; http://ricoeur.pitt.edu/ojs/ >
-    au < released ; 2017 ; 2017 ; Ricoeur Studies Volume 8 ; 8 ; http://ricoeur.pitt.edu/ojs/ >
-    au < released ; 2018 ; 2018 ; Ricoeur Studies Volume 9 ; 9 ; http://ricoeur.pitt.edu/ojs/ >
-    au < released ; 2019 ; 2019 ; Ricoeur Studies Volume 10 ; 10 ; https://ricoeur.pitt.edu/ojs/ >
-    au < released ; 2020 ; 2020 ; Ricoeur Studies Volume 11 ; 11 ; https://ricoeur.pitt.edu/ojs/ >
-    au < ready ; 2021 ; 2021 ; Ricoeur Studies Volume 12 ; 12 ; https://ricoeur.pitt.edu/ojs/ >
-    au < expected ; 2022 ; 2022 ; Ricoeur Studies Volume 13 ; 13 ; https://ricoeur.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2010 ; 2010 ; Ricoeur Studies Volume 1 ; 1 ; http://ricoeur.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2011 ; 2011 ; Ricoeur Studies Volume 2 ; 2 ; http://ricoeur.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2012 ; 2012 ; Ricoeur Studies Volume 3 ; 3 ; http://ricoeur.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2013 ; 2013 ; Ricoeur Studies Volume 4 ; 4 ; http://ricoeur.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2014 ; 2014 ; Ricoeur Studies Volume 5 ; 5 ; http://ricoeur.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2015 ; 2015 ; Ricoeur Studies Volume 6 ; 6 ; http://ricoeur.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2016 ; 2016 ; Ricoeur Studies Volume 7 ; 7 ; http://ricoeur.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2017 ; 2017 ; Ricoeur Studies Volume 8 ; 8 ; http://ricoeur.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2018 ; 2018 ; Ricoeur Studies Volume 9 ; 9 ; http://ricoeur.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2019 ; 2019 ; Ricoeur Studies Volume 10 ; 10 ; https://ricoeur.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; released ; 2020 ; 2020 ; Ricoeur Studies Volume 11 ; 11 ; https://ricoeur.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; ready ; 2021 ; 2021 ; Ricoeur Studies Volume 12 ; 12 ; https://ricoeur.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; expected ; 2022 ; 2022 ; Ricoeur Studies Volume 13 ; 13 ; https://ricoeur.pitt.edu/ojs/ >
 
   }
 
@@ -799,10 +802,10 @@
 
       param[journal_id] = shashi
 
-      au < released ; 2012 ; 2012 ; SHASHI: The Journal of Japanese Business and Company History Volume 1 ; 1 ; http://shashi.pitt.edu/ojs/ >
-      au < released ; 2013 ; 2013 ; SHASHI: The Journal of Japanese Business and Company History Volume 2 ; 2 ; http://shashi.pitt.edu/ojs/ >
-      au < released ; 2014 ; 2014 ; SHASHI: The Journal of Japanese Business and Company History Volume 3 ; 3 ; http://shashi.pitt.edu/ojs/ >
-      au < released ; 2016 ; 2016 ; SHASHI: The Journal of Japanese Business and Company History Volume 4 ; 4 ; http://shashi.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2012 ; 2012 ; SHASHI: The Journal of Japanese Business and Company History Volume 1 ; 1 ; http://shashi.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2013 ; 2013 ; SHASHI: The Journal of Japanese Business and Company History Volume 2 ; 2 ; http://shashi.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2014 ; 2014 ; SHASHI: The Journal of Japanese Business and Company History Volume 3 ; 3 ; http://shashi.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2016 ; 2016 ; SHASHI: The Journal of Japanese Business and Company History Volume 4 ; 4 ; http://shashi.pitt.edu/ojs/ >
 
   }
 
@@ -816,7 +819,7 @@
 
       param[journal_id] = timely
 
-      au < released ; 2013 ; 2013 ; Timely Interventions Volume 1 ; 1 ; http://timelyinterventions.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2013 ; 2013 ; Timely Interventions Volume 1 ; 1 ; http://timelyinterventions.pitt.edu/ojs/ >
 
   }
 
@@ -830,27 +833,27 @@
 #      param[base_url] = http://lawreview.law-dev.library.pitt.edu/ojs/
 
       param[journal_id] = lawreview
-      #base_url changed.
+      #base_url changed. bad certificate
 
-      au < exists ; 2003 ; 2003 ; University of Pittsburgh Law Review Volume 65 ; 65 ; http://lawreview.law-dev.library.pitt.edu/ojs/ >
-      au < exists ; 2004 ; 2004 ; University of Pittsburgh Law Review Volume 65-66 ; 65-66 ; http://lawreview.law-dev.library.pitt.edu/ojs/ >
-      au < down ; 2005 ; 2005 ; University of Pittsburgh Law Review Volume 66-67 ; 66-67 ; http://lawreview.law-dev.library.pitt.edu/ojs/ >
-      au < down ; 2006 ; 2006 ; University of Pittsburgh Law Review Volume 67-68 ; 67-68 ; http://lawreview.law-dev.library.pitt.edu/ojs/ >
-      au < down ; 2007 ; 2007 ; University of Pittsburgh Law Review Volume 68-69 ; 68-69 ; http://lawreview.law-dev.library.pitt.edu/ojs/ >
-      au < down ; 2008 ; 2008 ; University of Pittsburgh Law Review Volume 69-70 ; 69-70 ; http://lawreview.law-dev.library.pitt.edu/ojs/ >
-      au < down ; 2009 ; 2009 ; University of Pittsburgh Law Review Volume 71 ; 71 ; http://lawreview.law-dev.library.pitt.edu/ojs/ >
-      au < down ; 2010 ; 2010 ; University of Pittsburgh Law Review Volume 72 ; 72 ; http://lawreview.law-dev.library.pitt.edu/ojs/ >
-      au < down ; 2011 ; 2011 ; University of Pittsburgh Law Review Volume 72-73 ; 72-73 ; http://lawreview.law-dev.library.pitt.edu/ojs/ >
-      au < down ; 2012 ; 2012 ; University of Pittsburgh Law Review Volume 73-74 ; 73-74 ; http://lawreview.law-dev.library.pitt.edu/ojs/ >
-      au < down ; 2013 ; 2013 ; University of Pittsburgh Law Review Volume 74-75 ; 74-75 ; http://lawreview.law-dev.library.pitt.edu/ojs/ >
-      au < down ; 2014 ; 2014 ; University of Pittsburgh Law Review Volume 75-76 ; 75-76 ; http://lawreview.law-dev.library.pitt.edu/ojs/ >
-      au < released ; 2015 ; 2015 ; University of Pittsburgh Law Review Volume 76-77 ; 76-77 ; http://lawreview.law.pitt.edu/ojs/ >
-      au < released ; 2016 ; 2016 ; University of Pittsburgh Law Review Volume 77-78 ; 77-78 ; http://lawreview.law.pitt.edu/ojs/ >
-      au < released ; 2017 ; 2017 ; University of Pittsburgh Law Review Volume 78-79 ; 78-79 ; http://lawreview.law.pitt.edu/ojs/ >
-      au < released ; 2018 ; 2018 ; University of Pittsburgh Law Review Volume 79-80 ; 79-80 ; http://lawreview.law.pitt.edu/ojs/ >
-      au < released ; 2019 ; 2019 ; University of Pittsburgh Law Review Volume 80-81 ; 80-81 ; https://lawreview.law.pitt.edu/ojs/ >
-      au < exists ; 2020 ; 2020 ; University of Pittsburgh Law Review Volume 81-82 ; 81-82 ; https://lawreview.law.pitt.edu/ojs/ >
-      au < exists ; 2021 ; 2021 ; University of Pittsburgh Law Review Volume 82-83 ; 82-83 ; https://lawreview.law.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; exists ; 2003 ; 2003 ; University of Pittsburgh Law Review Volume 65 ; 65 ; http://lawreview.law-dev.library.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; exists ; 2004 ; 2004 ; University of Pittsburgh Law Review Volume 65-66 ; 65-66 ; http://lawreview.law-dev.library.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; down ; 2005 ; 2005 ; University of Pittsburgh Law Review Volume 66-67 ; 66-67 ; http://lawreview.law-dev.library.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; down ; 2006 ; 2006 ; University of Pittsburgh Law Review Volume 67-68 ; 67-68 ; http://lawreview.law-dev.library.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; down ; 2007 ; 2007 ; University of Pittsburgh Law Review Volume 68-69 ; 68-69 ; http://lawreview.law-dev.library.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; down ; 2008 ; 2008 ; University of Pittsburgh Law Review Volume 69-70 ; 69-70 ; http://lawreview.law-dev.library.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; down ; 2009 ; 2009 ; University of Pittsburgh Law Review Volume 71 ; 71 ; http://lawreview.law-dev.library.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; down ; 2010 ; 2010 ; University of Pittsburgh Law Review Volume 72 ; 72 ; http://lawreview.law-dev.library.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; down ; 2011 ; 2011 ; University of Pittsburgh Law Review Volume 72-73 ; 72-73 ; http://lawreview.law-dev.library.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; down ; 2012 ; 2012 ; University of Pittsburgh Law Review Volume 73-74 ; 73-74 ; http://lawreview.law-dev.library.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; down ; 2013 ; 2013 ; University of Pittsburgh Law Review Volume 74-75 ; 74-75 ; http://lawreview.law-dev.library.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; down ; 2014 ; 2014 ; University of Pittsburgh Law Review Volume 75-76 ; 75-76 ; http://lawreview.law-dev.library.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2015 ; 2015 ; University of Pittsburgh Law Review Volume 76-77 ; 76-77 ; http://lawreview.law.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2016 ; 2016 ; University of Pittsburgh Law Review Volume 77-78 ; 77-78 ; http://lawreview.law.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2017 ; 2017 ; University of Pittsburgh Law Review Volume 78-79 ; 78-79 ; http://lawreview.law.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2018 ; 2018 ; University of Pittsburgh Law Review Volume 79-80 ; 79-80 ; http://lawreview.law.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; released ; 2019 ; 2019 ; University of Pittsburgh Law Review Volume 80-81 ; 80-81 ; https://lawreview.law.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; exists ; 2020 ; 2020 ; University of Pittsburgh Law Review Volume 81-82 ; 81-82 ; https://lawreview.law.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; exists ; 2021 ; 2021 ; University of Pittsburgh Law Review Volume 82-83 ; 82-83 ; https://lawreview.law.pitt.edu/ojs/ >
 
   }
 
