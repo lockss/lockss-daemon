@@ -15,39 +15,6 @@
 
     {
 
-      plugin = org.lockss.plugin.elsevier.ClockssElsevierSourcePlugin
-      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/elsevier-released/
-      hidden[proxy] = DIRECT
-      implicit < status ; status2 ; year ; name ; param[year] >
-
-      # 2008 not on oclc or nii - down/not crawling
-      au < zapped ; finished ; 2008 ; Elsevier Source Content 2008 ; 2008 >
-      au < zapped ; finished ; 2009 ; Elsevier Source Content 2009 ; 2009 >
-      au < zapped ; finished ; 2010 ; Elsevier Source Content 2010 ; 2010 >
-      au < zapped ; finished ; 2011 ; Elsevier Source Content 2011 ; 2011 >
-      au < zapped ; finished ; 2012 ; Elsevier Source Content 2012 ; 2012 >
-      au < zapped ; finished ; 2013 ; Elsevier Source Content 2013 ; 2013 >
-      au < zapped ; finished ; 2014 ; Elsevier Source Content (legacy) 2014 ; 2014 >
-      #no more AUs expected for this plugin
-
-    }
-
-    {
-
-      plugin = org.lockss.plugin.elsevier.ClockssElsevierDTD5SourcePlugin
-      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/elsevierdtd5-released/
-      hidden[proxy] = DIRECT
-      implicit < status ; status2 ; year ; name ; param[year] >
-
-      au < zapped ; finished ; 2014 ; Elsevier Source Content 2014 ; 2014 >
-      au < zapped ; finished ; 2015 ; Elsevier Source Content 2015 ; 2015 >
-      au < zapped ; finished ; 2016 ; Elsevier Source Content 2016 ; 2016 >
-      #no more AUs expected for this plugin
-
-    }
-
-    {
-
       plugin = org.lockss.plugin.elsevier.ClockssElsevierDirSourcePlugin
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/elsevierdtd5-released/
       hidden[proxy] = DIRECT
@@ -150,6 +117,43 @@
       au < manifest ; exists ; 2022 ; Elsevier Source Content 2022_09 ; 2022_09 >
       au < manifest ; exists ; 2022 ; Elsevier Source Content 2022_10 ; 2022_10 >
       au < expected ; exists ; 2022 ; Elsevier Source Content 2022_11 ; 2022_11 >
+      au < expected ; exists ; 2022 ; Elsevier Source Content 2022_12 ; 2022_12 >
+      au < expected ; exists ; 2022 ; Elsevier Source Content 2022_13 ; 2022_13 >
+      au < expected ; exists ; 2022 ; Elsevier Source Content 2022_14 ; 2022_14 >
+      au < expected ; exists ; 2022 ; Elsevier Source Content 2022_15 ; 2022_15 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.elsevier.ClockssElsevierSourcePlugin
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/elsevier-released/
+      hidden[proxy] = DIRECT
+      implicit < status ; status2 ; year ; name ; param[year] >
+
+      # 2008 not on oclc or nii - down/not crawling
+      au < zapped ; finished ; 2008 ; Elsevier Source Content 2008 ; 2008 >
+      au < zapped ; finished ; 2009 ; Elsevier Source Content 2009 ; 2009 >
+      au < zapped ; finished ; 2010 ; Elsevier Source Content 2010 ; 2010 >
+      au < zapped ; finished ; 2011 ; Elsevier Source Content 2011 ; 2011 >
+      au < zapped ; finished ; 2012 ; Elsevier Source Content 2012 ; 2012 >
+      au < zapped ; finished ; 2013 ; Elsevier Source Content 2013 ; 2013 >
+      au < zapped ; finished ; 2014 ; Elsevier Source Content (legacy) 2014 ; 2014 >
+      #no more AUs expected for this plugin
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.elsevier.ClockssElsevierDTD5SourcePlugin
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/elsevierdtd5-released/
+      hidden[proxy] = DIRECT
+      implicit < status ; status2 ; year ; name ; param[year] >
+
+      au < zapped ; finished ; 2014 ; Elsevier Source Content 2014 ; 2014 >
+      au < zapped ; finished ; 2015 ; Elsevier Source Content 2015 ; 2015 >
+      au < zapped ; finished ; 2016 ; Elsevier Source Content 2016 ; 2016 >
+      #no more AUs expected for this plugin
 
     }
 
