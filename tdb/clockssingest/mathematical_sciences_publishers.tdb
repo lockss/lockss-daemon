@@ -312,7 +312,10 @@
       
       param[journal_id] = obs
     
-     au < finished ; finished ; 2013 ; The Open Book Series in 2013 ; 1 ; 2013 ; http://msp.org/ ; >
+     au < finished ; finished ; 2013 ; The Open Book Series Volume 2013 ; 1 ; 2013 ; http://msp.org/ ; >
+     au < manifest ; exists ; 2019 ; The Open Book Series Volume 2019 ; 2 ; 2019 ; https://msp.org/ ; >
+     au < manifest ; exists ; 2020 ; The Open Book Series Volume 2020 ; 3-4 ; 2020 ; https://msp.org/ ; >
+
   }
    
   {
