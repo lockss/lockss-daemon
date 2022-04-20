@@ -48,7 +48,8 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /** AuSize */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@javax.annotation.
+Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AuSize implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -63,9 +64,7 @@ public class AuSize implements Serializable {
   private Long totalAllVersions;
 
   public static final String SERIALIZED_NAME_TOTAL_WARC_SIZE = "totalWarcSize";
-
-  @SerializedName(SERIALIZED_NAME_TOTAL_WARC_SIZE)
-  private Long totalWarcSize;
+  @SerializedName(SERIALIZED_NAME_TOTAL_WARC_SIZE) private Long totalWarcSize;
 
   public AuSize() {}
 
@@ -82,6 +81,7 @@ public class AuSize implements Serializable {
    */
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Long getTotalLatestVersions() {
     return totalLatestVersions;
   }
@@ -103,6 +103,7 @@ public class AuSize implements Serializable {
    */
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Long getTotalAllVersions() {
     return totalAllVersions;
   }
@@ -124,6 +125,7 @@ public class AuSize implements Serializable {
    */
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Long getTotalWarcSize() {
     return totalWarcSize;
   }
@@ -140,7 +142,7 @@ public class AuSize implements Serializable {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    AuSize auSize = (AuSize) o;
+    AuSize auSize = (AuSize)o;
     return Objects.equals(this.totalLatestVersions, auSize.totalLatestVersions)
         && Objects.equals(this.totalAllVersions, auSize.totalAllVersions)
         && Objects.equals(this.totalWarcSize, auSize.totalWarcSize);
@@ -158,8 +160,12 @@ public class AuSize implements Serializable {
     sb.append("    totalLatestVersions: ")
         .append(toIndentedString(totalLatestVersions))
         .append("\n");
-    sb.append("    totalAllVersions: ").append(toIndentedString(totalAllVersions)).append("\n");
-    sb.append("    totalWarcSize: ").append(toIndentedString(totalWarcSize)).append("\n");
+    sb.append("    totalAllVersions: ")
+        .append(toIndentedString(totalAllVersions))
+        .append("\n");
+    sb.append("    totalWarcSize: ")
+        .append(toIndentedString(totalWarcSize))
+        .append("\n");
     sb.append("}");
     return sb.toString();
   }

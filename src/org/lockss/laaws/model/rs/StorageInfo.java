@@ -50,34 +50,25 @@ import java.util.Objects;
 
 /** Information about a repository storage area */
 @ApiModel(description = "Information about a repository storage area")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@javax.annotation.
+Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class StorageInfo implements Serializable {
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
-
-  @SerializedName(SERIALIZED_NAME_TYPE)
-  private String type;
+  @SerializedName(SERIALIZED_NAME_TYPE) private String type;
 
   public static final String SERIALIZED_NAME_NAME = "name";
-
-  @SerializedName(SERIALIZED_NAME_NAME)
-  private String name;
+  @SerializedName(SERIALIZED_NAME_NAME) private String name;
 
   public static final String SERIALIZED_NAME_SIZE = "size";
-
-  @SerializedName(SERIALIZED_NAME_SIZE)
-  private Long size;
+  @SerializedName(SERIALIZED_NAME_SIZE) private Long size;
 
   public static final String SERIALIZED_NAME_USED = "used";
-
-  @SerializedName(SERIALIZED_NAME_USED)
-  private Long used;
+  @SerializedName(SERIALIZED_NAME_USED) private Long used;
 
   public static final String SERIALIZED_NAME_AVAIL = "avail";
-
-  @SerializedName(SERIALIZED_NAME_AVAIL)
-  private Long avail;
+  @SerializedName(SERIALIZED_NAME_AVAIL) private Long avail;
 
   public static final String SERIALIZED_NAME_PERCENT_USED_STRING = "percentUsedString";
 
@@ -85,9 +76,7 @@ public class StorageInfo implements Serializable {
   private String percentUsedString;
 
   public static final String SERIALIZED_NAME_PERCENT_USED = "percentUsed";
-
-  @SerializedName(SERIALIZED_NAME_PERCENT_USED)
-  private Double percentUsed;
+  @SerializedName(SERIALIZED_NAME_PERCENT_USED) private Double percentUsed;
 
   public StorageInfo() {}
 
@@ -104,13 +93,12 @@ public class StorageInfo implements Serializable {
    */
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "Type of the storage area")
+
   public String getType() {
     return type;
   }
 
-  public void setType(String type) {
-    this.type = type;
-  }
+  public void setType(String type) { this.type = type; }
 
   public StorageInfo name(String name) {
 
@@ -125,13 +113,12 @@ public class StorageInfo implements Serializable {
    */
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "Name of the storage area")
+
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
-    this.name = name;
-  }
+  public void setName(String name) { this.name = name; }
 
   public StorageInfo size(Long size) {
 
@@ -145,14 +132,15 @@ public class StorageInfo implements Serializable {
    * @return size
    */
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Size in bytes of the storage area")
-  public Long getSize() {
+  @ApiModelProperty(required = true,
+                    value = "Size in bytes of the storage area")
+
+  public Long
+  getSize() {
     return size;
   }
 
-  public void setSize(Long size) {
-    this.size = size;
-  }
+  public void setSize(Long size) { this.size = size; }
 
   public StorageInfo used(Long used) {
 
@@ -166,14 +154,15 @@ public class StorageInfo implements Serializable {
    * @return used
    */
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Used size in bytes of the torage area")
-  public Long getUsed() {
+  @ApiModelProperty(required = true,
+                    value = "Used size in bytes of the torage area")
+
+  public Long
+  getUsed() {
     return used;
   }
 
-  public void setUsed(Long used) {
-    this.used = used;
-  }
+  public void setUsed(Long used) { this.used = used; }
 
   public StorageInfo avail(Long avail) {
 
@@ -187,14 +176,15 @@ public class StorageInfo implements Serializable {
    * @return avail
    */
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Available size in bytes of the storage area")
-  public Long getAvail() {
+  @ApiModelProperty(required = true,
+                    value = "Available size in bytes of the storage area")
+
+  public Long
+  getAvail() {
     return avail;
   }
 
-  public void setAvail(Long avail) {
-    this.avail = avail;
-  }
+  public void setAvail(Long avail) { this.avail = avail; }
 
   public StorageInfo percentUsedString(String percentUsedString) {
 
@@ -208,8 +198,11 @@ public class StorageInfo implements Serializable {
    * @return percentUsedString
    */
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Percentage of size used, formatted as a string")
-  public String getPercentUsedString() {
+  @ApiModelProperty(required = true,
+                    value = "Percentage of size used, formatted as a string")
+
+  public String
+  getPercentUsedString() {
     return percentUsedString;
   }
 
@@ -230,6 +223,7 @@ public class StorageInfo implements Serializable {
    */
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "Percentage of size used")
+
   public Double getPercentUsed() {
     return percentUsed;
   }
@@ -246,7 +240,7 @@ public class StorageInfo implements Serializable {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    StorageInfo storageInfo = (StorageInfo) o;
+    StorageInfo storageInfo = (StorageInfo)o;
     return Objects.equals(this.type, storageInfo.type)
         && Objects.equals(this.name, storageInfo.name)
         && Objects.equals(this.size, storageInfo.size)
@@ -258,7 +252,8 @@ public class StorageInfo implements Serializable {
 
   @Override
   public int hashCode() {
-    return Objects.hash(type, name, size, used, avail, percentUsedString, percentUsed);
+    return Objects.hash(type, name, size, used, avail, percentUsedString,
+                        percentUsed);
   }
 
   @Override
@@ -270,8 +265,12 @@ public class StorageInfo implements Serializable {
     sb.append("    size: ").append(toIndentedString(size)).append("\n");
     sb.append("    used: ").append(toIndentedString(used)).append("\n");
     sb.append("    avail: ").append(toIndentedString(avail)).append("\n");
-    sb.append("    percentUsedString: ").append(toIndentedString(percentUsedString)).append("\n");
-    sb.append("    percentUsed: ").append(toIndentedString(percentUsed)).append("\n");
+    sb.append("    percentUsedString: ")
+        .append(toIndentedString(percentUsedString))
+        .append("\n");
+    sb.append("    percentUsed: ")
+        .append(toIndentedString(percentUsed))
+        .append("\n");
     sb.append("}");
     return sb.toString();
   }

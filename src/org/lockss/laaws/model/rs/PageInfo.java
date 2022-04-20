@@ -50,14 +50,13 @@ import java.util.Objects;
 
 /** The information related to pagination of content */
 @ApiModel(description = "The information related to pagination of content")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@javax.annotation.
+Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class PageInfo implements Serializable {
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_TOTAL_COUNT = "totalCount";
-
-  @SerializedName(SERIALIZED_NAME_TOTAL_COUNT)
-  private Integer totalCount;
+  @SerializedName(SERIALIZED_NAME_TOTAL_COUNT) private Integer totalCount;
 
   public static final String SERIALIZED_NAME_RESULTS_PER_PAGE = "resultsPerPage";
 
@@ -70,14 +69,10 @@ public class PageInfo implements Serializable {
   private String continuationToken;
 
   public static final String SERIALIZED_NAME_CUR_LINK = "curLink";
-
-  @SerializedName(SERIALIZED_NAME_CUR_LINK)
-  private String curLink;
+  @SerializedName(SERIALIZED_NAME_CUR_LINK) private String curLink;
 
   public static final String SERIALIZED_NAME_NEXT_LINK = "nextLink";
-
-  @SerializedName(SERIALIZED_NAME_NEXT_LINK)
-  private String nextLink;
+  @SerializedName(SERIALIZED_NAME_NEXT_LINK) private String nextLink;
 
   public PageInfo() {}
 
@@ -94,6 +89,7 @@ public class PageInfo implements Serializable {
    */
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "The total number of results")
+
   public Integer getTotalCount() {
     return totalCount;
   }
@@ -115,6 +111,7 @@ public class PageInfo implements Serializable {
    */
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "The number of results per page")
+
   public Integer getResultsPerPage() {
     return resultsPerPage;
   }
@@ -136,6 +133,7 @@ public class PageInfo implements Serializable {
    */
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "The continuation token")
+
   public String getContinuationToken() {
     return continuationToken;
   }
@@ -157,13 +155,12 @@ public class PageInfo implements Serializable {
    */
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "The link of the current request")
+
   public String getCurLink() {
     return curLink;
   }
 
-  public void setCurLink(String curLink) {
-    this.curLink = curLink;
-  }
+  public void setCurLink(String curLink) { this.curLink = curLink; }
 
   public PageInfo nextLink(String nextLink) {
 
@@ -178,13 +175,12 @@ public class PageInfo implements Serializable {
    */
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "The link of the next request")
+
   public String getNextLink() {
     return nextLink;
   }
 
-  public void setNextLink(String nextLink) {
-    this.nextLink = nextLink;
-  }
+  public void setNextLink(String nextLink) { this.nextLink = nextLink; }
 
   @Override
   public boolean equals(Object o) {
@@ -194,7 +190,7 @@ public class PageInfo implements Serializable {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    PageInfo pageInfo = (PageInfo) o;
+    PageInfo pageInfo = (PageInfo)o;
     return Objects.equals(this.totalCount, pageInfo.totalCount)
         && Objects.equals(this.resultsPerPage, pageInfo.resultsPerPage)
         && Objects.equals(this.continuationToken, pageInfo.continuationToken)
@@ -204,16 +200,23 @@ public class PageInfo implements Serializable {
 
   @Override
   public int hashCode() {
-    return Objects.hash(totalCount, resultsPerPage, continuationToken, curLink, nextLink);
+    return Objects.hash(totalCount, resultsPerPage, continuationToken, curLink,
+                        nextLink);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PageInfo {\n");
-    sb.append("    totalCount: ").append(toIndentedString(totalCount)).append("\n");
-    sb.append("    resultsPerPage: ").append(toIndentedString(resultsPerPage)).append("\n");
-    sb.append("    continuationToken: ").append(toIndentedString(continuationToken)).append("\n");
+    sb.append("    totalCount: ")
+        .append(toIndentedString(totalCount))
+        .append("\n");
+    sb.append("    resultsPerPage: ")
+        .append(toIndentedString(resultsPerPage))
+        .append("\n");
+    sb.append("    continuationToken: ")
+        .append(toIndentedString(continuationToken))
+        .append("\n");
     sb.append("    curLink: ").append(toIndentedString(curLink)).append("\n");
     sb.append("    nextLink: ").append(toIndentedString(nextLink)).append("\n");
     sb.append("}");

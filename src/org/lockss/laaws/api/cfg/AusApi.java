@@ -596,8 +596,6 @@ public class AusApi {
       basePath = localCustomBaseUrl;
     } else if (localBasePaths.length > 0) {
       basePath = localBasePaths[localHostIndex];
-    } else {
-      basePath = null;
     }
 
     Object localVarPostBody = null;
@@ -1722,7 +1720,7 @@ public class AusApi {
    * </table>
    */
   public okhttp3.Call patchAuAgreementsCall(
-      String auid, String auAgreements, String xLockssRequestCookie, final ApiCallback _callback)
+      String auid, Object auAgreements, String xLockssRequestCookie, final ApiCallback _callback)
       throws ApiException {
     String basePath = null;
 
@@ -1787,7 +1785,7 @@ public class AusApi {
 
   @SuppressWarnings("rawtypes")
   private okhttp3.Call patchAuAgreementsValidateBeforeCall(
-      String auid, String auAgreements, String xLockssRequestCookie, final ApiCallback _callback)
+      String auid, Object auAgreements, String xLockssRequestCookie, final ApiCallback _callback)
       throws ApiException {
 
     // verify the required parameter 'auid' is set
@@ -1829,7 +1827,7 @@ public class AusApi {
    * </td></tr>
    * </table>
    */
-  public void patchAuAgreements(String auid, String auAgreements, String xLockssRequestCookie)
+  public void patchAuAgreements(String auid, Object auAgreements, String xLockssRequestCookie)
       throws ApiException {
     patchAuAgreementsWithHttpInfo(auid, auAgreements, xLockssRequestCookie);
   }
@@ -1858,7 +1856,7 @@ public class AusApi {
    * </table>
    */
   public ApiResponse<Void> patchAuAgreementsWithHttpInfo(
-      String auid, String auAgreements, String xLockssRequestCookie) throws ApiException {
+      String auid, Object auAgreements, String xLockssRequestCookie) throws ApiException {
     okhttp3.Call localVarCall =
         patchAuAgreementsValidateBeforeCall(auid, auAgreements, xLockssRequestCookie, null);
     return localVarApiClient.execute(localVarCall);
@@ -1890,7 +1888,7 @@ public class AusApi {
    */
   public okhttp3.Call patchAuAgreementsAsync(
       String auid,
-      String auAgreements,
+      Object auAgreements,
       String xLockssRequestCookie,
       final ApiCallback<Void> _callback)
       throws ApiException {
@@ -1922,7 +1920,7 @@ public class AusApi {
    * </table>
    */
   public okhttp3.Call patchAuStateCall(
-      String auid, String auState, String xLockssRequestCookie, final ApiCallback _callback)
+      String auid, Object auState, String xLockssRequestCookie, final ApiCallback _callback)
       throws ApiException {
     String basePath = null;
 
@@ -1987,7 +1985,7 @@ public class AusApi {
 
   @SuppressWarnings("rawtypes")
   private okhttp3.Call patchAuStateValidateBeforeCall(
-      String auid, String auState, String xLockssRequestCookie, final ApiCallback _callback)
+      String auid, Object auState, String xLockssRequestCookie, final ApiCallback _callback)
       throws ApiException {
 
     // verify the required parameter 'auid' is set
@@ -2026,7 +2024,7 @@ public class AusApi {
    * </td></tr>
    * </table>
    */
-  public void patchAuState(String auid, String auState, String xLockssRequestCookie)
+  public void patchAuState(String auid, Object auState, String xLockssRequestCookie)
       throws ApiException {
     patchAuStateWithHttpInfo(auid, auState, xLockssRequestCookie);
   }
@@ -2053,7 +2051,7 @@ public class AusApi {
    * </table>
    */
   public ApiResponse<Void> patchAuStateWithHttpInfo(
-      String auid, String auState, String xLockssRequestCookie) throws ApiException {
+      String auid, Object auState, String xLockssRequestCookie) throws ApiException {
     okhttp3.Call localVarCall =
         patchAuStateValidateBeforeCall(auid, auState, xLockssRequestCookie, null);
     return localVarApiClient.execute(localVarCall);
@@ -2081,7 +2079,7 @@ public class AusApi {
    * </table>
    */
   public okhttp3.Call patchAuStateAsync(
-      String auid, String auState, String xLockssRequestCookie, final ApiCallback<Void> _callback)
+      String auid, Object auState, String xLockssRequestCookie, final ApiCallback<Void> _callback)
       throws ApiException {
 
     okhttp3.Call localVarCall =
@@ -2253,6 +2251,7 @@ public class AusApi {
   /**
    * Build call for putAuConfig
    *
+   * @param auid The identifier of the AU for which the configuration is\\ \\ requested (required)
    * @param auConfiguration The Archival Unit configuration to be stored (required)
    * @param _callback Callback for upload/download progress
    * @return Call to execute
@@ -2269,8 +2268,8 @@ public class AusApi {
    * </td></tr>
    * </table>
    */
-  public okhttp3.Call putAuConfigCall(AuConfiguration auConfiguration, final ApiCallback _callback)
-      throws ApiException {
+  public okhttp3.Call putAuConfigCall(String auid, AuConfiguration auConfiguration,
+    final ApiCallback _callback) throws ApiException {
     String basePath = null;
 
     // Operation Servers
@@ -2288,7 +2287,8 @@ public class AusApi {
     Object localVarPostBody = auConfiguration;
 
     // create path and map variables
-    String localVarPath = "/aus/{auid}";
+    String localVarPath = "/aus/{auid}"
+      .replaceAll("\\{" + "auid" + "\\}", localVarApiClient.escapeString(auid));
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2326,8 +2326,14 @@ public class AusApi {
   }
 
   @SuppressWarnings("rawtypes")
-  private okhttp3.Call putAuConfigValidateBeforeCall(
-      AuConfiguration auConfiguration, final ApiCallback _callback) throws ApiException {
+  private okhttp3.Call putAuConfigValidateBeforeCall(String auid, AuConfiguration auConfiguration,
+    final ApiCallback _callback) throws ApiException {
+
+    // verify the required parameter 'auid' is set
+    if (auid == null) {
+      throw new ApiException(
+        "Missing the required parameter 'auid' when calling putAuConfig(Async)");
+    }
 
     // verify the required parameter 'auConfiguration' is set
     if (auConfiguration == null) {
@@ -2335,13 +2341,14 @@ public class AusApi {
           "Missing the required parameter 'auConfiguration' when calling putAuConfig(Async)");
     }
 
-    okhttp3.Call localVarCall = putAuConfigCall(auConfiguration, _callback);
+    okhttp3.Call localVarCall = putAuConfigCall(auid, auConfiguration, _callback);
     return localVarCall;
   }
 
   /**
    * Store the configuration of an AU Store the configuration of an AU given the AU identifier
    *
+   * @param auid            The identifier of the AU for which the configuration is\\ \\ requested (required)
    * @param auConfiguration The Archival Unit configuration to be stored (required)
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
@@ -2357,13 +2364,14 @@ public class AusApi {
    * </td></tr>
    * </table>
    */
-  public void putAuConfig(AuConfiguration auConfiguration) throws ApiException {
-    putAuConfigWithHttpInfo(auConfiguration);
+  public void putAuConfig(String auid, AuConfiguration auConfiguration) throws ApiException {
+    putAuConfigWithHttpInfo(auid, auConfiguration);
   }
 
   /**
    * Store the configuration of an AU Store the configuration of an AU given the AU identifier
    *
+   * @param auid            The identifier of the AU for which the configuration is\\ \\ requested (required)
    * @param auConfiguration The Archival Unit configuration to be stored (required)
    * @return ApiResponse&lt;Void&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -2380,9 +2388,9 @@ public class AusApi {
    * </td></tr>
    * </table>
    */
-  public ApiResponse<Void> putAuConfigWithHttpInfo(AuConfiguration auConfiguration)
+  public ApiResponse<Void> putAuConfigWithHttpInfo(String auid, AuConfiguration auConfiguration)
       throws ApiException {
-    okhttp3.Call localVarCall = putAuConfigValidateBeforeCall(auConfiguration, null);
+    okhttp3.Call localVarCall = putAuConfigValidateBeforeCall(auid, auConfiguration, null);
     return localVarApiClient.execute(localVarCall);
   }
 
@@ -2390,6 +2398,7 @@ public class AusApi {
    * Store the configuration of an AU (asynchronously) Store the configuration of an AU given the AU
    * identifier
    *
+   * @param auid            The identifier of the AU for which the configuration is\\ \\ requested (required)
    * @param auConfiguration The Archival Unit configuration to be stored (required)
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
@@ -2406,10 +2415,10 @@ public class AusApi {
    * </td></tr>
    * </table>
    */
-  public okhttp3.Call putAuConfigAsync(
-      AuConfiguration auConfiguration, final ApiCallback<Void> _callback) throws ApiException {
+  public okhttp3.Call putAuConfigAsync(String auid, AuConfiguration auConfiguration,
+    final ApiCallback<Void> _callback) throws ApiException {
 
-    okhttp3.Call localVarCall = putAuConfigValidateBeforeCall(auConfiguration, _callback);
+    okhttp3.Call localVarCall = putAuConfigValidateBeforeCall(auid, auConfiguration, _callback);
     localVarApiClient.executeAsync(localVarCall, _callback);
     return localVarCall;
   }
@@ -2597,9 +2606,7 @@ public class AusApi {
    * </td></tr>
    * </table>
    */
-  public okhttp3.Call putAuSuspectUrlVersionsCall(
-      String auid,
-      String auSuspectUrlVersions,
+  public okhttp3.Call putAuSuspectUrlVersionsCall(String auid, Object auSuspectUrlVersions,
       String xLockssRequestCookie,
       final ApiCallback _callback)
       throws ApiException {
@@ -2667,9 +2674,7 @@ public class AusApi {
   @SuppressWarnings("rawtypes")
   private okhttp3.Call putAuSuspectUrlVersionsValidateBeforeCall(
       String auid,
-      String auSuspectUrlVersions,
-      String xLockssRequestCookie,
-      final ApiCallback _callback)
+    Object auSuspectUrlVersions, String xLockssRequestCookie, final ApiCallback _callback)
       throws ApiException {
 
     // verify the required parameter 'auid' is set
@@ -2712,8 +2717,8 @@ public class AusApi {
    * </td></tr>
    * </table>
    */
-  public void putAuSuspectUrlVersions(
-      String auid, String auSuspectUrlVersions, String xLockssRequestCookie) throws ApiException {
+  public void putAuSuspectUrlVersions(String auid, Object auSuspectUrlVersions,
+    String xLockssRequestCookie) throws ApiException {
     putAuSuspectUrlVersionsWithHttpInfo(auid, auSuspectUrlVersions, xLockssRequestCookie);
   }
 
@@ -2741,8 +2746,8 @@ public class AusApi {
    * </td></tr>
    * </table>
    */
-  public ApiResponse<Void> putAuSuspectUrlVersionsWithHttpInfo(
-      String auid, String auSuspectUrlVersions, String xLockssRequestCookie) throws ApiException {
+  public ApiResponse<Void> putAuSuspectUrlVersionsWithHttpInfo(String auid,
+    Object auSuspectUrlVersions, String xLockssRequestCookie) throws ApiException {
     okhttp3.Call localVarCall =
         putAuSuspectUrlVersionsValidateBeforeCall(
             auid, auSuspectUrlVersions, xLockssRequestCookie, null);
@@ -2773,9 +2778,7 @@ public class AusApi {
    * </td></tr>
    * </table>
    */
-  public okhttp3.Call putAuSuspectUrlVersionsAsync(
-      String auid,
-      String auSuspectUrlVersions,
+  public okhttp3.Call putAuSuspectUrlVersionsAsync(String auid, Object auSuspectUrlVersions,
       String xLockssRequestCookie,
       final ApiCallback<Void> _callback)
       throws ApiException {
@@ -2892,8 +2895,8 @@ public class AusApi {
    * </table>
    */
   public List<ContentConfigurationResult> putAusDeactivate(List<String> auIds) throws ApiException {
-    ApiResponse<List<ContentConfigurationResult>> localVarResp =
-        putAusDeactivateWithHttpInfo(auIds);
+    ApiResponse<List<ContentConfigurationResult>> localVarResp = putAusDeactivateWithHttpInfo(
+      auIds);
     return localVarResp.getData();
   }
 
@@ -2982,8 +2985,6 @@ public class AusApi {
       basePath = localCustomBaseUrl;
     } else if (localBasePaths.length > 0) {
       basePath = localBasePaths[localHostIndex];
-    } else {
-      basePath = null;
     }
 
     Object localVarPostBody = null;
@@ -3491,9 +3492,8 @@ public class AusApi {
    * </td></tr>
    * </table>
    */
-  public okhttp3.Call putNoAuPeersCall(
-      String auid, String noAuPeerSet, String xLockssRequestCookie, final ApiCallback _callback)
-      throws ApiException {
+  public okhttp3.Call putNoAuPeersCall(String auid, Object noAuPeerSet, String xLockssRequestCookie,
+    final ApiCallback _callback) throws ApiException {
     String basePath = null;
 
     // Operation Servers
@@ -3556,9 +3556,8 @@ public class AusApi {
   }
 
   @SuppressWarnings("rawtypes")
-  private okhttp3.Call putNoAuPeersValidateBeforeCall(
-      String auid, String noAuPeerSet, String xLockssRequestCookie, final ApiCallback _callback)
-      throws ApiException {
+  private okhttp3.Call putNoAuPeersValidateBeforeCall(String auid, Object noAuPeerSet,
+    String xLockssRequestCookie, final ApiCallback _callback) throws ApiException {
 
     // verify the required parameter 'auid' is set
     if (auid == null) {
@@ -3600,7 +3599,7 @@ public class AusApi {
    * </td></tr>
    * </table>
    */
-  public void putNoAuPeers(String auid, String noAuPeerSet, String xLockssRequestCookie)
+  public void putNoAuPeers(String auid, Object noAuPeerSet, String xLockssRequestCookie)
       throws ApiException {
     putNoAuPeersWithHttpInfo(auid, noAuPeerSet, xLockssRequestCookie);
   }
@@ -3630,7 +3629,7 @@ public class AusApi {
    * </table>
    */
   public ApiResponse<Void> putNoAuPeersWithHttpInfo(
-      String auid, String noAuPeerSet, String xLockssRequestCookie) throws ApiException {
+      String auid, Object noAuPeerSet, String xLockssRequestCookie) throws ApiException {
     okhttp3.Call localVarCall =
         putNoAuPeersValidateBeforeCall(auid, noAuPeerSet, xLockssRequestCookie, null);
     return localVarApiClient.execute(localVarCall);
@@ -3662,7 +3661,7 @@ public class AusApi {
    */
   public okhttp3.Call putNoAuPeersAsync(
       String auid,
-      String noAuPeerSet,
+      Object noAuPeerSet,
       String xLockssRequestCookie,
       final ApiCallback<Void> _callback)
       throws ApiException {

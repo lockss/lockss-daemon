@@ -51,12 +51,7 @@ import java.util.List;
 import java.util.Map;
 import org.lockss.laaws.MultipartFileResponse;
 import org.lockss.laaws.V2AuMover.DigestCachedUrl;
-import org.lockss.laaws.client.ApiCallback;
-import org.lockss.laaws.client.ApiException;
-import org.lockss.laaws.client.ApiResponse;
-import org.lockss.laaws.client.Configuration;
-import org.lockss.laaws.client.Pair;
-import org.lockss.laaws.client.V2RestClient;
+import org.lockss.laaws.client.*;
 import org.lockss.laaws.model.rs.Artifact;
 
 public class StreamingCollectionsApi extends CollectionsApi {
@@ -321,13 +316,13 @@ public class StreamingCollectionsApi extends CollectionsApi {
    * @throws ApiException If fail to serialize the request body object
    * @http.response.details
   <table summary="Response Details" border="1">
-  <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-  <tr><td> 200 </td><td> Artifact created </td><td>  -  </td></tr>
-  <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
-  <tr><td> 403 </td><td> Client not authorized to retrieve artifact </td><td>  -  </td></tr>
-  <tr><td> 404 </td><td> Artifact not found </td><td>  -  </td></tr>
-  <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
-  </table>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 200 </td><td> Artifact created </td><td>  -  </td></tr>
+   * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
+   * <tr><td> 403 </td><td> Client not authorized to retrieve artifact </td><td>  -  </td></tr>
+   * <tr><td> 404 </td><td> Artifact not found </td><td>  -  </td></tr>
+   * <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
+   * </table>
    */
   public okhttp3.Call getMultipartArtifactCall(String collectionid, String artifactid, String includeContent,
       final ApiCallback _callback) throws ApiException {
@@ -341,16 +336,16 @@ public class StreamingCollectionsApi extends CollectionsApi {
       basePath = localCustomBaseUrl;
     } else if ( localBasePaths.length > 0 ) {
       basePath = localBasePaths[localHostIndex];
-    } else {
-      basePath = null;
     }
 
     Object localVarPostBody = null;
 
     // create path and map variables
     String localVarPath = "/collections/{collectionid}/artifacts/{artifactid}"
-        .replaceAll("\\{" + "collectionid" + "\\}", apiClient.escapeString(collectionid))
-        .replaceAll("\\{" + "artifactid" + "\\}", apiClient.escapeString(artifactid));
+        .replaceAll("\\{" + "collectionid" + "\\}",
+            apiClient.escapeString(collectionid.toString()))
+        .replaceAll("\\{" + "artifactid" + "\\}",
+            apiClient.escapeString(artifactid.toString()));
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -418,13 +413,13 @@ public class StreamingCollectionsApi extends CollectionsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
    * @http.response.details
   <table summary="Response Details" border="1">
-  <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-  <tr><td> 200 </td><td> Artifact created </td><td>  -  </td></tr>
-  <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
-  <tr><td> 403 </td><td> Client not authorized to retrieve artifact </td><td>  -  </td></tr>
-  <tr><td> 404 </td><td> Artifact not found </td><td>  -  </td></tr>
-  <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
-  </table>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 200 </td><td> Artifact created </td><td>  -  </td></tr>
+   * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
+   * <tr><td> 403 </td><td> Client not authorized to retrieve artifact </td><td>  -  </td></tr>
+   * <tr><td> 404 </td><td> Artifact not found </td><td>  -  </td></tr>
+   * <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
+   * </table>
    */
   public MultipartFileResponse getMultipartArtifact(String collectionid, String artifactid, String includeContent)
       throws ApiException {
@@ -443,13 +438,13 @@ public class StreamingCollectionsApi extends CollectionsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
    * @http.response.details
   <table summary="Response Details" border="1">
-  <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-  <tr><td> 200 </td><td> Artifact created </td><td>  -  </td></tr>
-  <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
-  <tr><td> 403 </td><td> Client not authorized to retrieve artifact </td><td>  -  </td></tr>
-  <tr><td> 404 </td><td> Artifact not found </td><td>  -  </td></tr>
-  <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
-  </table>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 200 </td><td> Artifact created </td><td>  -  </td></tr>
+   * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
+   * <tr><td> 403 </td><td> Client not authorized to retrieve artifact </td><td>  -  </td></tr>
+   * <tr><td> 404 </td><td> Artifact not found </td><td>  -  </td></tr>
+   * <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
+   * </table>
    */
   public ApiResponse<MultipartFileResponse> getMultipartArtifactWithHttpInfo(String collectionid, String artifactid,
       String includeContent) throws ApiException {
@@ -471,13 +466,13 @@ public class StreamingCollectionsApi extends CollectionsApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    * @http.response.details
   <table summary="Response Details" border="1">
-  <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-  <tr><td> 200 </td><td> Artifact created </td><td>  -  </td></tr>
-  <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
-  <tr><td> 403 </td><td> Client not authorized to retrieve artifact </td><td>  -  </td></tr>
-  <tr><td> 404 </td><td> Artifact not found </td><td>  -  </td></tr>
-  <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
-  </table>
+   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+   * <tr><td> 200 </td><td> Artifact created </td><td>  -  </td></tr>
+   * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
+   * <tr><td> 403 </td><td> Client not authorized to retrieve artifact </td><td>  -  </td></tr>
+   * <tr><td> 404 </td><td> Artifact not found </td><td>  -  </td></tr>
+   * <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
+   * </table>
    */
   public okhttp3.Call getMultipartArtifactAsync(String collectionid, String artifactid,
       String includeContent, final ApiCallback<MultipartFileResponse> _callback) throws ApiException {

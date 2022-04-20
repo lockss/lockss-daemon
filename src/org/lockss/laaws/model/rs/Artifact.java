@@ -48,59 +48,40 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /** Artifact */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@javax.annotation.
+Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class Artifact implements Serializable {
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_ID = "id";
-
-  @SerializedName(SERIALIZED_NAME_ID)
-  private String id;
+  @SerializedName(SERIALIZED_NAME_ID) private String id;
 
   public static final String SERIALIZED_NAME_COLLECTION = "collection";
-
-  @SerializedName(SERIALIZED_NAME_COLLECTION)
-  private String collection;
+  @SerializedName(SERIALIZED_NAME_COLLECTION) private String collection;
 
   public static final String SERIALIZED_NAME_AUID = "auid";
-
-  @SerializedName(SERIALIZED_NAME_AUID)
-  private String auid;
+  @SerializedName(SERIALIZED_NAME_AUID) private String auid;
 
   public static final String SERIALIZED_NAME_URI = "uri";
-
-  @SerializedName(SERIALIZED_NAME_URI)
-  private String uri;
+  @SerializedName(SERIALIZED_NAME_URI) private String uri;
 
   public static final String SERIALIZED_NAME_VERSION = "version";
-
-  @SerializedName(SERIALIZED_NAME_VERSION)
-  private Integer version;
+  @SerializedName(SERIALIZED_NAME_VERSION) private Integer version;
 
   public static final String SERIALIZED_NAME_COMMITTED = "committed";
-
-  @SerializedName(SERIALIZED_NAME_COMMITTED)
-  private Boolean committed;
+  @SerializedName(SERIALIZED_NAME_COMMITTED) private Boolean committed;
 
   public static final String SERIALIZED_NAME_STORAGE_URL = "storageUrl";
-
-  @SerializedName(SERIALIZED_NAME_STORAGE_URL)
-  private String storageUrl;
+  @SerializedName(SERIALIZED_NAME_STORAGE_URL) private String storageUrl;
 
   public static final String SERIALIZED_NAME_CONTENT_LENGTH = "contentLength";
-
-  @SerializedName(SERIALIZED_NAME_CONTENT_LENGTH)
-  private Integer contentLength;
+  @SerializedName(SERIALIZED_NAME_CONTENT_LENGTH) private Long contentLength;
 
   public static final String SERIALIZED_NAME_CONTENT_DIGEST = "contentDigest";
-
-  @SerializedName(SERIALIZED_NAME_CONTENT_DIGEST)
-  private String contentDigest;
+  @SerializedName(SERIALIZED_NAME_CONTENT_DIGEST) private String contentDigest;
 
   public static final String SERIALIZED_NAME_COLLECTION_DATE = "collectionDate";
-
-  @SerializedName(SERIALIZED_NAME_COLLECTION_DATE)
-  private Long collectionDate;
+  @SerializedName(SERIALIZED_NAME_COLLECTION_DATE) private Long collectionDate;
 
   public Artifact() {}
 
@@ -117,13 +98,12 @@ public class Artifact implements Serializable {
    */
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public String getId() {
     return id;
   }
 
-  public void setId(String id) {
-    this.id = id;
-  }
+  public void setId(String id) { this.id = id; }
 
   public Artifact collection(String collection) {
 
@@ -138,13 +118,12 @@ public class Artifact implements Serializable {
    */
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public String getCollection() {
     return collection;
   }
 
-  public void setCollection(String collection) {
-    this.collection = collection;
-  }
+  public void setCollection(String collection) { this.collection = collection; }
 
   public Artifact auid(String auid) {
 
@@ -159,13 +138,12 @@ public class Artifact implements Serializable {
    */
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public String getAuid() {
     return auid;
   }
 
-  public void setAuid(String auid) {
-    this.auid = auid;
-  }
+  public void setAuid(String auid) { this.auid = auid; }
 
   public Artifact uri(String uri) {
 
@@ -180,13 +158,12 @@ public class Artifact implements Serializable {
    */
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public String getUri() {
     return uri;
   }
 
-  public void setUri(String uri) {
-    this.uri = uri;
-  }
+  public void setUri(String uri) { this.uri = uri; }
 
   public Artifact version(Integer version) {
 
@@ -201,13 +178,12 @@ public class Artifact implements Serializable {
    */
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getVersion() {
     return version;
   }
 
-  public void setVersion(Integer version) {
-    this.version = version;
-  }
+  public void setVersion(Integer version) { this.version = version; }
 
   public Artifact committed(Boolean committed) {
 
@@ -222,13 +198,12 @@ public class Artifact implements Serializable {
    */
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Boolean getCommitted() {
     return committed;
   }
 
-  public void setCommitted(Boolean committed) {
-    this.committed = committed;
-  }
+  public void setCommitted(Boolean committed) { this.committed = committed; }
 
   public Artifact storageUrl(String storageUrl) {
 
@@ -243,15 +218,14 @@ public class Artifact implements Serializable {
    */
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public String getStorageUrl() {
     return storageUrl;
   }
 
-  public void setStorageUrl(String storageUrl) {
-    this.storageUrl = storageUrl;
-  }
+  public void setStorageUrl(String storageUrl) { this.storageUrl = storageUrl; }
 
-  public Artifact contentLength(Integer contentLength) {
+  public Artifact contentLength(Long contentLength) {
 
     this.contentLength = contentLength;
     return this;
@@ -264,11 +238,12 @@ public class Artifact implements Serializable {
    */
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
-  public Integer getContentLength() {
+
+  public Long getContentLength() {
     return contentLength;
   }
 
-  public void setContentLength(Integer contentLength) {
+  public void setContentLength(Long contentLength) {
     this.contentLength = contentLength;
   }
 
@@ -285,6 +260,7 @@ public class Artifact implements Serializable {
    */
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public String getContentDigest() {
     return contentDigest;
   }
@@ -306,6 +282,7 @@ public class Artifact implements Serializable {
    */
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Long getCollectionDate() {
     return collectionDate;
   }
@@ -322,7 +299,7 @@ public class Artifact implements Serializable {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Artifact artifact = (Artifact) o;
+    Artifact artifact = (Artifact)o;
     return Objects.equals(this.id, artifact.id)
         && Objects.equals(this.collection, artifact.collection)
         && Objects.equals(this.auid, artifact.auid)
@@ -337,17 +314,9 @@ public class Artifact implements Serializable {
 
   @Override
   public int hashCode() {
-    return Objects.hash(
-        id,
-        collection,
-        auid,
-        uri,
-        version,
-        committed,
-        storageUrl,
-        contentLength,
-        contentDigest,
-        collectionDate);
+    return Objects.hash(id, collection, auid, uri, version, committed,
+                        storageUrl, contentLength, contentDigest,
+                        collectionDate);
   }
 
   @Override
@@ -355,15 +324,27 @@ public class Artifact implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class Artifact {\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    collection: ").append(toIndentedString(collection)).append("\n");
+    sb.append("    collection: ")
+        .append(toIndentedString(collection))
+        .append("\n");
     sb.append("    auid: ").append(toIndentedString(auid)).append("\n");
     sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
     sb.append("    version: ").append(toIndentedString(version)).append("\n");
-    sb.append("    committed: ").append(toIndentedString(committed)).append("\n");
-    sb.append("    storageUrl: ").append(toIndentedString(storageUrl)).append("\n");
-    sb.append("    contentLength: ").append(toIndentedString(contentLength)).append("\n");
-    sb.append("    contentDigest: ").append(toIndentedString(contentDigest)).append("\n");
-    sb.append("    collectionDate: ").append(toIndentedString(collectionDate)).append("\n");
+    sb.append("    committed: ")
+        .append(toIndentedString(committed))
+        .append("\n");
+    sb.append("    storageUrl: ")
+        .append(toIndentedString(storageUrl))
+        .append("\n");
+    sb.append("    contentLength: ")
+        .append(toIndentedString(contentLength))
+        .append("\n");
+    sb.append("    contentDigest: ")
+        .append(toIndentedString(contentDigest))
+        .append("\n");
+    sb.append("    collectionDate: ")
+        .append(toIndentedString(collectionDate))
+        .append("\n");
     sb.append("}");
     return sb.toString();
   }

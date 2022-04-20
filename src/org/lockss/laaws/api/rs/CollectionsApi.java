@@ -49,12 +49,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.lockss.laaws.client.ApiCallback;
-import org.lockss.laaws.client.ApiException;
-import org.lockss.laaws.client.ApiResponse;
-import org.lockss.laaws.client.Configuration;
-import org.lockss.laaws.client.Pair;
-import org.lockss.laaws.client.V2RestClient;
+import org.lockss.laaws.client.*;
 import org.lockss.laaws.model.rs.Artifact;
 import org.lockss.laaws.model.rs.ArtifactPageInfo;
 import org.lockss.laaws.model.rs.AuSize;
@@ -65,33 +60,23 @@ public class CollectionsApi {
   private int localHostIndex;
   private String localCustomBaseUrl;
 
-  public CollectionsApi() {
-    this(Configuration.getDefaultApiClient());
-  }
+  public CollectionsApi() { this(Configuration.getDefaultApiClient()); }
 
   public CollectionsApi(V2RestClient apiClient) {
     this.localVarApiClient = apiClient;
   }
 
-  public V2RestClient getApiClient() {
-    return localVarApiClient;
-  }
+  public V2RestClient getApiClient() { return localVarApiClient; }
 
   public void setApiClient(V2RestClient apiClient) {
     this.localVarApiClient = apiClient;
   }
 
-  public int getHostIndex() {
-    return localHostIndex;
-  }
+  public int getHostIndex() { return localHostIndex; }
 
-  public void setHostIndex(int hostIndex) {
-    this.localHostIndex = hostIndex;
-  }
+  public void setHostIndex(int hostIndex) { this.localHostIndex = hostIndex; }
 
-  public String getCustomBaseUrl() {
-    return localCustomBaseUrl;
-  }
+  public String getCustomBaseUrl() { return localCustomBaseUrl; }
 
   public void setCustomBaseUrl(String customBaseUrl) {
     this.localCustomBaseUrl = customBaseUrl;
@@ -104,7 +89,8 @@ public class CollectionsApi {
    * @param auid Archival Unit ID (AUID) of new artifact (required)
    * @param uri URI represented by this artifact (required)
    * @param artifact Artifact data (required)
-   * @param collectionDate Artifact collection/crawl date (milliseconds since epoch; UTC) (optional)
+   * @param collectionDate Artifact collection/crawl date (milliseconds since
+   epoch; UTC) (optional)
    * @param _callback Callback for upload/download progress
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
@@ -121,13 +107,10 @@ public class CollectionsApi {
    * </td><td>  -  </td></tr>
    * </table>
    */
-  public okhttp3.Call createArtifactCall(
-      String collectionid,
-      String auid,
-      String uri,
-      File artifact,
-      Long collectionDate,
-      final ApiCallback _callback)
+  public okhttp3.Call createArtifactCall(String collectionid, String auid,
+                                         String uri, File artifact,
+                                         Long collectionDate,
+                                         final ApiCallback _callback)
       throws ApiException {
     String basePath = null;
 
@@ -175,7 +158,8 @@ public class CollectionsApi {
     }
 
     final String[] localVarAccepts = {"application/json"};
-    final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+    final String localVarAccept =
+        localVarApiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
@@ -189,28 +173,15 @@ public class CollectionsApi {
 
     String[] localVarAuthNames = new String[] { "basicAuth" };
     return localVarApiClient.buildCall(
-        basePath,
-        localVarPath,
-        "POST",
-        localVarQueryParams,
-        localVarCollectionQueryParams,
-        localVarPostBody,
-        localVarHeaderParams,
-        localVarCookieParams,
-        localVarFormParams,
-        localVarAuthNames,
-        _callback);
+        basePath, localVarPath, "POST", localVarQueryParams,
+        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams,
+        localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
   }
 
   @SuppressWarnings("rawtypes")
   private okhttp3.Call createArtifactValidateBeforeCall(
-      String collectionid,
-      String auid,
-      String uri,
-      File artifact,
-      Long collectionDate,
-      final ApiCallback _callback)
-      throws ApiException {
+      String collectionid, String auid, String uri, File artifact,
+      Long collectionDate, final ApiCallback _callback) throws ApiException {
 
     // verify the required parameter 'collectionid' is set
     if (collectionid == null) {
@@ -236,8 +207,8 @@ public class CollectionsApi {
           "Missing the required parameter 'artifact' when calling createArtifact(Async)");
     }
 
-    okhttp3.Call localVarCall =
-        createArtifactCall(collectionid, auid, uri, artifact, collectionDate, _callback);
+    okhttp3.Call localVarCall = createArtifactCall(
+        collectionid, auid, uri, artifact, collectionDate, _callback);
     return localVarCall;
   }
 
@@ -248,28 +219,29 @@ public class CollectionsApi {
    * @param auid Archival Unit ID (AUID) of new artifact (required)
    * @param uri URI represented by this artifact (required)
    * @param artifact Artifact data (required)
-   * @param collectionDate Artifact collection/crawl date (milliseconds since epoch; UTC) (optional)
+   * @param collectionDate Artifact collection/crawl date (milliseconds since
+   epoch; UTC) (optional)
    * @return Artifact
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    * @http.response.details
-   *     <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 201 </td><td> Artifact created </td><td>  -  </td></tr>
-   * <tr><td> 302 </td><td> Duplicate content; artifact not created </td><td>
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 201 </td><td> Artifact created </td><td>  -  </td></tr>
+      <tr><td> 302 </td><td> Duplicate content; artifact not created </td><td>
    * Location - Repository query URL to duplicate artifacts <br>  </td></tr>
-   * <tr><td> 400 </td><td> Invalid input </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Client not authorized to create artifacts </td><td>
-   * -  </td></tr> <tr><td> 502 </td><td> Internal error creating artifact
-   * </td><td>  -  </td></tr>
-   * </table>
+      <tr><td> 400 </td><td> Invalid input </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Client not authorized to create artifacts </td><td>
+   -  </td></tr> <tr><td> 502 </td><td> Internal error creating artifact
+   </td><td>  -  </td></tr>
+   </table>
    */
-  public Artifact createArtifact(
-      String collectionid, String auid, String uri, File artifact, Long collectionDate)
+  public Artifact createArtifact(String collectionid, String auid, String uri,
+                                 File artifact, Long collectionDate)
       throws ApiException {
-    ApiResponse<Artifact> localVarResp =
-        createArtifactWithHttpInfo(collectionid, auid, uri, artifact, collectionDate);
+    ApiResponse<Artifact> localVarResp = createArtifactWithHttpInfo(
+        collectionid, auid, uri, artifact, collectionDate);
     return localVarResp.getData();
   }
 
@@ -280,28 +252,30 @@ public class CollectionsApi {
    * @param auid Archival Unit ID (AUID) of new artifact (required)
    * @param uri URI represented by this artifact (required)
    * @param artifact Artifact data (required)
-   * @param collectionDate Artifact collection/crawl date (milliseconds since epoch; UTC) (optional)
+   * @param collectionDate Artifact collection/crawl date (milliseconds since
+   epoch; UTC) (optional)
    * @return ApiResponse&lt;Artifact&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    * @http.response.details
-   *     <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 201 </td><td> Artifact created </td><td>  -  </td></tr>
-   * <tr><td> 302 </td><td> Duplicate content; artifact not created </td><td>
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 201 </td><td> Artifact created </td><td>  -  </td></tr>
+      <tr><td> 302 </td><td> Duplicate content; artifact not created </td><td>
    * Location - Repository query URL to duplicate artifacts <br>  </td></tr>
-   * <tr><td> 400 </td><td> Invalid input </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Client not authorized to create artifacts </td><td>
-   * -  </td></tr> <tr><td> 502 </td><td> Internal error creating artifact
-   * </td><td>  -  </td></tr>
-   * </table>
+      <tr><td> 400 </td><td> Invalid input </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Client not authorized to create artifacts </td><td>
+   -  </td></tr> <tr><td> 502 </td><td> Internal error creating artifact
+   </td><td>  -  </td></tr>
+   </table>
    */
-  public ApiResponse<Artifact> createArtifactWithHttpInfo(
-      String collectionid, String auid, String uri, File artifact, Long collectionDate)
+  public ApiResponse<Artifact>
+  createArtifactWithHttpInfo(String collectionid, String auid, String uri,
+                             File artifact, Long collectionDate)
       throws ApiException {
-    okhttp3.Call localVarCall =
-        createArtifactValidateBeforeCall(collectionid, auid, uri, artifact, collectionDate, null);
+    okhttp3.Call localVarCall = createArtifactValidateBeforeCall(
+        collectionid, auid, uri, artifact, collectionDate, null);
     Type localVarReturnType = new TypeToken<Artifact>() {}.getType();
     return localVarApiClient.execute(localVarCall, localVarReturnType);
   }
@@ -313,35 +287,33 @@ public class CollectionsApi {
    * @param auid Archival Unit ID (AUID) of new artifact (required)
    * @param uri URI represented by this artifact (required)
    * @param artifact Artifact data (required)
-   * @param collectionDate Artifact collection/crawl date (milliseconds since epoch; UTC) (optional)
+   * @param collectionDate Artifact collection/crawl date (milliseconds since
+   epoch; UTC) (optional)
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
-   * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+   * @throws ApiException If fail to process the API call, e.g. serializing the
+   request body object
    * @http.response.details
-   *     <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 201 </td><td> Artifact created </td><td>  -  </td></tr>
-   * <tr><td> 302 </td><td> Duplicate content; artifact not created </td><td>
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 201 </td><td> Artifact created </td><td>  -  </td></tr>
+      <tr><td> 302 </td><td> Duplicate content; artifact not created </td><td>
    * Location - Repository query URL to duplicate artifacts <br>  </td></tr>
-   * <tr><td> 400 </td><td> Invalid input </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Client not authorized to create artifacts </td><td>
-   * -  </td></tr> <tr><td> 502 </td><td> Internal error creating artifact
-   * </td><td>  -  </td></tr>
-   * </table>
+      <tr><td> 400 </td><td> Invalid input </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Client not authorized to create artifacts </td><td>
+   -  </td></tr> <tr><td> 502 </td><td> Internal error creating artifact
+   </td><td>  -  </td></tr>
+   </table>
    */
-  public okhttp3.Call createArtifactAsync(
-      String collectionid,
-      String auid,
-      String uri,
-      File artifact,
-      Long collectionDate,
-      final ApiCallback<Artifact> _callback)
+  public okhttp3.Call createArtifactAsync(String collectionid, String auid,
+                                          String uri, File artifact,
+                                          Long collectionDate,
+                                          final ApiCallback<Artifact> _callback)
       throws ApiException {
 
-    okhttp3.Call localVarCall =
-        createArtifactValidateBeforeCall(
-            collectionid, auid, uri, artifact, collectionDate, _callback);
+    okhttp3.Call localVarCall = createArtifactValidateBeforeCall(
+        collectionid, auid, uri, artifact, collectionDate, _callback);
     Type localVarReturnType = new TypeToken<Artifact>() {}.getType();
     localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
     return localVarCall;
@@ -355,18 +327,19 @@ public class CollectionsApi {
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    * @http.response.details
-   *     <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Successfully removed artifact </td><td>  -
-   * </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
-   * </td></tr> <tr><td> 403 </td><td> Client not authorized to delete artifact
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Artifact not found </td><td>
-   * -  </td></tr> <tr><td> 409 </td><td> Cannot delete committed artifact
-   * </td><td>  -  </td></tr>
-   * </table>
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 200 </td><td> Successfully removed artifact </td><td>  -
+   </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
+   </td></tr> <tr><td> 403 </td><td> Client not authorized to delete artifact
+   </td><td>  -  </td></tr> <tr><td> 404 </td><td> Artifact not found </td><td>
+   -  </td></tr> <tr><td> 409 </td><td> Cannot delete committed artifact
+   </td><td>  -  </td></tr>
+   </table>
    */
-  public okhttp3.Call deleteArtifactCall(
-      String collectionid, String artifactid, final ApiCallback _callback) throws ApiException {
+  public okhttp3.Call deleteArtifactCall(String collectionid, String artifactid,
+                                         final ApiCallback _callback)
+      throws ApiException {
     String basePath = null;
 
     // Operation Servers
@@ -416,17 +389,9 @@ public class CollectionsApi {
 
     String[] localVarAuthNames = new String[] { "basicAuth" };
     return localVarApiClient.buildCall(
-        basePath,
-        localVarPath,
-        "DELETE",
-        localVarQueryParams,
-        localVarCollectionQueryParams,
-        localVarPostBody,
-        localVarHeaderParams,
-        localVarCookieParams,
-        localVarFormParams,
-        localVarAuthNames,
-        _callback);
+        basePath, localVarPath, "DELETE", localVarQueryParams,
+        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams,
+        localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
   }
 
   @SuppressWarnings("rawtypes")
@@ -445,7 +410,8 @@ public class CollectionsApi {
           "Missing the required parameter 'artifactid' when calling deleteArtifact(Async)");
     }
 
-    okhttp3.Call localVarCall = deleteArtifactCall(collectionid, artifactid, _callback);
+    okhttp3.Call localVarCall =
+        deleteArtifactCall(collectionid, artifactid, _callback);
     return localVarCall;
   }
 
@@ -457,17 +423,18 @@ public class CollectionsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    * @http.response.details
-   *     <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Successfully removed artifact </td><td>  -
-   * </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
-   * </td></tr> <tr><td> 403 </td><td> Client not authorized to delete artifact
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Artifact not found </td><td>
-   * -  </td></tr> <tr><td> 409 </td><td> Cannot delete committed artifact
-   * </td><td>  -  </td></tr>
-   * </table>
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 200 </td><td> Successfully removed artifact </td><td>  -
+   </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
+   </td></tr> <tr><td> 403 </td><td> Client not authorized to delete artifact
+   </td><td>  -  </td></tr> <tr><td> 404 </td><td> Artifact not found </td><td>
+   -  </td></tr> <tr><td> 409 </td><td> Cannot delete committed artifact
+   </td><td>  -  </td></tr>
+   </table>
    */
-  public void deleteArtifact(String collectionid, String artifactid) throws ApiException {
+  public void deleteArtifact(String collectionid, String artifactid)
+      throws ApiException {
     deleteArtifactWithHttpInfo(collectionid, artifactid);
   }
 
@@ -480,19 +447,21 @@ public class CollectionsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    * @http.response.details
-   *     <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Successfully removed artifact </td><td>  -
-   * </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
-   * </td></tr> <tr><td> 403 </td><td> Client not authorized to delete artifact
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Artifact not found </td><td>
-   * -  </td></tr> <tr><td> 409 </td><td> Cannot delete committed artifact
-   * </td><td>  -  </td></tr>
-   * </table>
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 200 </td><td> Successfully removed artifact </td><td>  -
+   </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
+   </td></tr> <tr><td> 403 </td><td> Client not authorized to delete artifact
+   </td><td>  -  </td></tr> <tr><td> 404 </td><td> Artifact not found </td><td>
+   -  </td></tr> <tr><td> 409 </td><td> Cannot delete committed artifact
+   </td><td>  -  </td></tr>
+   </table>
    */
-  public ApiResponse<Void> deleteArtifactWithHttpInfo(String collectionid, String artifactid)
+  public ApiResponse<Void> deleteArtifactWithHttpInfo(String collectionid,
+                                                      String artifactid)
       throws ApiException {
-    okhttp3.Call localVarCall = deleteArtifactValidateBeforeCall(collectionid, artifactid, null);
+    okhttp3.Call localVarCall =
+        deleteArtifactValidateBeforeCall(collectionid, artifactid, null);
     return localVarApiClient.execute(localVarCall);
   }
 
@@ -503,20 +472,22 @@ public class CollectionsApi {
    * @param artifactid Identifier of the artifact (required)
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
-   * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+   * @throws ApiException If fail to process the API call, e.g. serializing the
+   request body object
    * @http.response.details
-   *     <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Successfully removed artifact </td><td>  -
-   * </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
-   * </td></tr> <tr><td> 403 </td><td> Client not authorized to delete artifact
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Artifact not found </td><td>
-   * -  </td></tr> <tr><td> 409 </td><td> Cannot delete committed artifact
-   * </td><td>  -  </td></tr>
-   * </table>
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 200 </td><td> Successfully removed artifact </td><td>  -
+   </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
+   </td></tr> <tr><td> 403 </td><td> Client not authorized to delete artifact
+   </td><td>  -  </td></tr> <tr><td> 404 </td><td> Artifact not found </td><td>
+   -  </td></tr> <tr><td> 409 </td><td> Cannot delete committed artifact
+   </td><td>  -  </td></tr>
+   </table>
    */
-  public okhttp3.Call deleteArtifactAsync(
-      String collectionid, String artifactid, final ApiCallback<Void> _callback)
+  public okhttp3.Call deleteArtifactAsync(String collectionid,
+                                          String artifactid,
+                                          final ApiCallback<Void> _callback)
       throws ApiException {
 
     okhttp3.Call localVarCall =
@@ -535,18 +506,19 @@ public class CollectionsApi {
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    * @http.response.details
-   *     <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Artifact created </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Client not authorized to retrieve artifact
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Artifact not found </td><td>
-   * -  </td></tr> <tr><td> 502 </td><td> Could not read from external resource
-   * </td><td>  -  </td></tr>
-   * </table>
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 200 </td><td> Artifact created </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Client not authorized to retrieve artifact
+   </td><td>  -  </td></tr> <tr><td> 404 </td><td> Artifact not found </td><td>
+   -  </td></tr> <tr><td> 502 </td><td> Could not read from external resource
+   </td><td>  -  </td></tr>
+   </table>
    */
-  public okhttp3.Call getArtifactCall(
-      String collectionid, String artifactid, String includeContent, final ApiCallback _callback)
+  public okhttp3.Call getArtifactCall(String collectionid, String artifactid,
+                                      String includeContent,
+                                      final ApiCallback _callback)
       throws ApiException {
     String basePath = null;
 
@@ -586,7 +558,8 @@ public class CollectionsApi {
     }
 
     final String[] localVarAccepts = {"multipart/form-data"};
-    final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+    final String localVarAccept =
+        localVarApiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
@@ -601,23 +574,15 @@ public class CollectionsApi {
 
     String[] localVarAuthNames = new String[] { "basicAuth" };
     return localVarApiClient.buildCall(
-        basePath,
-        localVarPath,
-        "GET",
-        localVarQueryParams,
-        localVarCollectionQueryParams,
-        localVarPostBody,
-        localVarHeaderParams,
-        localVarCookieParams,
-        localVarFormParams,
-        localVarAuthNames,
-        _callback);
+        basePath, localVarPath, "GET", localVarQueryParams,
+        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams,
+        localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
   }
 
   @SuppressWarnings("rawtypes")
   private okhttp3.Call getArtifactValidateBeforeCall(
-      String collectionid, String artifactid, String includeContent, final ApiCallback _callback)
-      throws ApiException {
+      String collectionid, String artifactid, String includeContent,
+      final ApiCallback _callback) throws ApiException {
 
     // verify the required parameter 'collectionid' is set
     if (collectionid == null) {
@@ -647,18 +612,18 @@ public class CollectionsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    * @http.response.details
-   *     <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Artifact created </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Client not authorized to retrieve artifact
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Artifact not found </td><td>
-   * -  </td></tr> <tr><td> 502 </td><td> Could not read from external resource
-   * </td><td>  -  </td></tr>
-   * </table>
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 200 </td><td> Artifact created </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Client not authorized to retrieve artifact
+   </td><td>  -  </td></tr> <tr><td> 404 </td><td> Artifact not found </td><td>
+   -  </td></tr> <tr><td> 502 </td><td> Could not read from external resource
+   </td><td>  -  </td></tr>
+   </table>
    */
-  public File getArtifact(String collectionid, String artifactid, String includeContent)
-      throws ApiException {
+  public File getArtifact(String collectionid, String artifactid,
+                          String includeContent) throws ApiException {
     ApiResponse<File> localVarResp =
         getArtifactWithHttpInfo(collectionid, artifactid, includeContent);
     return localVarResp.getData();
@@ -675,18 +640,20 @@ public class CollectionsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    * @http.response.details
-   *     <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Artifact created </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Client not authorized to retrieve artifact
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Artifact not found </td><td>
-   * -  </td></tr> <tr><td> 502 </td><td> Could not read from external resource
-   * </td><td>  -  </td></tr>
-   * </table>
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 200 </td><td> Artifact created </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Client not authorized to retrieve artifact
+   </td><td>  -  </td></tr> <tr><td> 404 </td><td> Artifact not found </td><td>
+   -  </td></tr> <tr><td> 502 </td><td> Could not read from external resource
+   </td><td>  -  </td></tr>
+   </table>
    */
-  public ApiResponse<File> getArtifactWithHttpInfo(
-      String collectionid, String artifactid, String includeContent) throws ApiException {
+  public ApiResponse<File> getArtifactWithHttpInfo(String collectionid,
+                                                   String artifactid,
+                                                   String includeContent)
+      throws ApiException {
     okhttp3.Call localVarCall =
         getArtifactValidateBeforeCall(collectionid, artifactid, includeContent, null);
     Type localVarReturnType = new TypeToken<File>() {}.getType();
@@ -702,27 +669,26 @@ public class CollectionsApi {
    *     response (optional, default to ALWAYS)
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
-   * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+   * @throws ApiException If fail to process the API call, e.g. serializing the
+   request body object
    * @http.response.details
-   *     <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Artifact created </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Client not authorized to retrieve artifact
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Artifact not found </td><td>
-   * -  </td></tr> <tr><td> 502 </td><td> Could not read from external resource
-   * </td><td>  -  </td></tr>
-   * </table>
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 200 </td><td> Artifact created </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Client not authorized to retrieve artifact
+   </td><td>  -  </td></tr> <tr><td> 404 </td><td> Artifact not found </td><td>
+   -  </td></tr> <tr><td> 502 </td><td> Could not read from external resource
+   </td><td>  -  </td></tr>
+   </table>
    */
-  public okhttp3.Call getArtifactAsync(
-      String collectionid,
-      String artifactid,
-      String includeContent,
-      final ApiCallback<File> _callback)
+  public okhttp3.Call getArtifactAsync(String collectionid, String artifactid,
+                                       String includeContent,
+                                       final ApiCallback<File> _callback)
       throws ApiException {
 
-    okhttp3.Call localVarCall =
-        getArtifactValidateBeforeCall(collectionid, artifactid, includeContent, _callback);
+    okhttp3.Call localVarCall = getArtifactValidateBeforeCall(
+        collectionid, artifactid, includeContent, _callback);
     Type localVarReturnType = new TypeToken<File>() {}.getType();
     localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
     return localVarCall;
@@ -731,7 +697,8 @@ public class CollectionsApi {
    * Build call for getArtifacts
    *
    * @param collectionid Identifier of the collection containing the artifacts (required)
-   * @param auid Identifier of the Archival Unit containing the artifacts (required)
+   * @param auid Identifier of the Archival Unit containing the artifacts
+   (required)
    * @param url The URL contained by the artifacts (optional)
    * @param urlPrefix The prefix to be matched by the artifact URLs (optional)
    * @param version The version of the artifact (optional)
@@ -744,27 +711,21 @@ public class CollectionsApi {
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    * @http.response.details
-   *     <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> The requested artifacts </td><td>  -
-   * </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
-   * </td></tr> <tr><td> 403 </td><td> Client not authorized to retrieve data
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not found
-   * </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from external
-   * resource </td><td>  -  </td></tr>
-   * </table>
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 200 </td><td> The requested artifacts </td><td>  -
+   </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
+   </td></tr> <tr><td> 403 </td><td> Client not authorized to retrieve data
+   </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not found
+   </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from external
+   resource </td><td>  -  </td></tr>
+   </table>
    */
-  public okhttp3.Call getArtifactsCall(
-      String collectionid,
-      String auid,
-      String url,
-      String urlPrefix,
-      String version,
-      Boolean includeUncommitted,
-      Integer limit,
-      String continuationToken,
-      final ApiCallback _callback)
-      throws ApiException {
+  public okhttp3.Call
+  getArtifactsCall(String collectionid, String auid, String url,
+                   String urlPrefix, String version, Boolean includeUncommitted,
+                   Integer limit, String continuationToken,
+                   final ApiCallback _callback) throws ApiException {
     String basePath = null;
 
     // Operation Servers
@@ -800,11 +761,13 @@ public class CollectionsApi {
     }
 
     if (urlPrefix != null) {
-      localVarQueryParams.addAll(localVarApiClient.parameterToPair("urlPrefix", urlPrefix));
+      localVarQueryParams.addAll(
+          localVarApiClient.parameterToPair("urlPrefix", urlPrefix));
     }
 
     if (version != null) {
-      localVarQueryParams.addAll(localVarApiClient.parameterToPair("version", version));
+      localVarQueryParams.addAll(
+          localVarApiClient.parameterToPair("version", version));
     }
 
     if (includeUncommitted != null) {
@@ -817,12 +780,13 @@ public class CollectionsApi {
     }
 
     if (continuationToken != null) {
-      localVarQueryParams.addAll(
-          localVarApiClient.parameterToPair("continuationToken", continuationToken));
+      localVarQueryParams.addAll(localVarApiClient.parameterToPair(
+          "continuationToken", continuationToken));
     }
 
     final String[] localVarAccepts = {"application/json"};
-    final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+    final String localVarAccept =
+        localVarApiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
@@ -837,30 +801,16 @@ public class CollectionsApi {
 
     String[] localVarAuthNames = new String[] { "basicAuth" };
     return localVarApiClient.buildCall(
-        basePath,
-        localVarPath,
-        "GET",
-        localVarQueryParams,
-        localVarCollectionQueryParams,
-        localVarPostBody,
-        localVarHeaderParams,
-        localVarCookieParams,
-        localVarFormParams,
-        localVarAuthNames,
-        _callback);
+        basePath, localVarPath, "GET", localVarQueryParams,
+        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams,
+        localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
   }
 
   @SuppressWarnings("rawtypes")
   private okhttp3.Call getArtifactsValidateBeforeCall(
-      String collectionid,
-      String auid,
-      String url,
-      String urlPrefix,
-      String version,
-      Boolean includeUncommitted,
-      Integer limit,
-      String continuationToken,
-      final ApiCallback _callback)
+      String collectionid, String auid, String url, String urlPrefix,
+      String version, Boolean includeUncommitted, Integer limit,
+      String continuationToken, final ApiCallback _callback)
       throws ApiException {
 
     // verify the required parameter 'collectionid' is set
@@ -875,17 +825,9 @@ public class CollectionsApi {
           "Missing the required parameter 'auid' when calling getArtifacts(Async)");
     }
 
-    okhttp3.Call localVarCall =
-        getArtifactsCall(
-            collectionid,
-            auid,
-            url,
-            urlPrefix,
-            version,
-            includeUncommitted,
-            limit,
-            continuationToken,
-            _callback);
+    okhttp3.Call localVarCall = getArtifactsCall(
+        collectionid, auid, url, urlPrefix, version, includeUncommitted, limit,
+        continuationToken, _callback);
     return localVarCall;
   }
 
@@ -893,8 +835,10 @@ public class CollectionsApi {
    * Get artifacts in a collection and Archival Unit Get a list of all artifacts in a collection and
    * Archival Unit or a pageful of the list defined by the continuation token and size
    *
-   * @param collectionid Identifier of the collection containing the artifacts (required)
-   * @param auid Identifier of the Archival Unit containing the artifacts (required)
+   * @param collectionid Identifier of the collection containing the artifacts
+   (required)
+   * @param auid Identifier of the Archival Unit containing the artifacts
+   (required)
    * @param url The URL contained by the artifacts (optional)
    * @param urlPrefix The prefix to be matched by the artifact URLs (optional)
    * @param version The version of the artifact (optional)
@@ -907,36 +851,26 @@ public class CollectionsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    * @http.response.details
-   *     <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> The requested artifacts </td><td>  -
-   * </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
-   * </td></tr> <tr><td> 403 </td><td> Client not authorized to retrieve data
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not found
-   * </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from external
-   * resource </td><td>  -  </td></tr>
-   * </table>
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 200 </td><td> The requested artifacts </td><td>  -
+   </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
+   </td></tr> <tr><td> 403 </td><td> Client not authorized to retrieve data
+   </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not found
+   </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from external
+   resource </td><td>  -  </td></tr>
+   </table>
    */
   public ArtifactPageInfo getArtifacts(
       String collectionid,
       String auid,
       String url,
       String urlPrefix,
-      String version,
-      Boolean includeUncommitted,
-      Integer limit,
-      String continuationToken)
-      throws ApiException {
+               String version, Boolean includeUncommitted, Integer limit,
+               String continuationToken) throws ApiException {
     ApiResponse<ArtifactPageInfo> localVarResp =
-        getArtifactsWithHttpInfo(
-            collectionid,
-            auid,
-            url,
-            urlPrefix,
-            version,
-            includeUncommitted,
-            limit,
-            continuationToken);
+        getArtifactsWithHttpInfo(collectionid, auid, url, urlPrefix, version,
+                                 includeUncommitted, limit, continuationToken);
     return localVarResp.getData();
   }
 
@@ -944,8 +878,10 @@ public class CollectionsApi {
    * Get artifacts in a collection and Archival Unit Get a list of all artifacts in a collection and
    * Archival Unit or a pageful of the list defined by the continuation token and size
    *
-   * @param collectionid Identifier of the collection containing the artifacts (required)
-   * @param auid Identifier of the Archival Unit containing the artifacts (required)
+   * @param collectionid Identifier of the collection containing the artifacts
+   (required)
+   * @param auid Identifier of the Archival Unit containing the artifacts
+   (required)
    * @param url The URL contained by the artifacts (optional)
    * @param urlPrefix The prefix to be matched by the artifact URLs (optional)
    * @param version The version of the artifact (optional)
@@ -958,37 +894,24 @@ public class CollectionsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    * @http.response.details
-   *     <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> The requested artifacts </td><td>  -
-   * </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
-   * </td></tr> <tr><td> 403 </td><td> Client not authorized to retrieve data
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not found
-   * </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from external
-   * resource </td><td>  -  </td></tr>
-   * </table>
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 200 </td><td> The requested artifacts </td><td>  -
+   </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
+   </td></tr> <tr><td> 403 </td><td> Client not authorized to retrieve data
+   </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not found
+   </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from external
+   resource </td><td>  -  </td></tr>
+   </table>
    */
-  public ApiResponse<ArtifactPageInfo> getArtifactsWithHttpInfo(
-      String collectionid,
-      String auid,
-      String url,
-      String urlPrefix,
-      String version,
-      Boolean includeUncommitted,
-      Integer limit,
-      String continuationToken)
-      throws ApiException {
-    okhttp3.Call localVarCall =
-        getArtifactsValidateBeforeCall(
-            collectionid,
-            auid,
-            url,
-            urlPrefix,
-            version,
-            includeUncommitted,
-            limit,
-            continuationToken,
-            null);
+  public ApiResponse<ArtifactPageInfo>
+  getArtifactsWithHttpInfo(String collectionid, String auid, String url,
+                           String urlPrefix, String version,
+                           Boolean includeUncommitted, Integer limit,
+                           String continuationToken) throws ApiException {
+    okhttp3.Call localVarCall = getArtifactsValidateBeforeCall(
+        collectionid, auid, url, urlPrefix, version, includeUncommitted, limit,
+        continuationToken, null);
     Type localVarReturnType = new TypeToken<ArtifactPageInfo>() {}.getType();
     return localVarApiClient.execute(localVarCall, localVarReturnType);
   }
@@ -998,8 +921,10 @@ public class CollectionsApi {
    * a collection and Archival Unit or a pageful of the list defined by the continuation token and
    * size
    *
-   * @param collectionid Identifier of the collection containing the artifacts (required)
-   * @param auid Identifier of the Archival Unit containing the artifacts (required)
+   * @param collectionid Identifier of the collection containing the artifacts
+   (required)
+   * @param auid Identifier of the Archival Unit containing the artifacts
+   (required)
    * @param url The URL contained by the artifacts (optional)
    * @param urlPrefix The prefix to be matched by the artifact URLs (optional)
    * @param version The version of the artifact (optional)
@@ -1010,41 +935,28 @@ public class CollectionsApi {
    *     (optional)
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
-   * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+   * @throws ApiException If fail to process the API call, e.g. serializing the
+   request body object
    * @http.response.details
-   *     <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> The requested artifacts </td><td>  -
-   * </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
-   * </td></tr> <tr><td> 403 </td><td> Client not authorized to retrieve data
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not found
-   * </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from external
-   * resource </td><td>  -  </td></tr>
-   * </table>
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 200 </td><td> The requested artifacts </td><td>  -
+   </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
+   </td></tr> <tr><td> 403 </td><td> Client not authorized to retrieve data
+   </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not found
+   </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from external
+   resource </td><td>  -  </td></tr>
+   </table>
    */
   public okhttp3.Call getArtifactsAsync(
-      String collectionid,
-      String auid,
-      String url,
-      String urlPrefix,
-      String version,
-      Boolean includeUncommitted,
-      Integer limit,
-      String continuationToken,
-      final ApiCallback<ArtifactPageInfo> _callback)
+      String collectionid, String auid, String url, String urlPrefix,
+      String version, Boolean includeUncommitted, Integer limit,
+      String continuationToken, final ApiCallback<ArtifactPageInfo> _callback)
       throws ApiException {
 
-    okhttp3.Call localVarCall =
-        getArtifactsValidateBeforeCall(
-            collectionid,
-            auid,
-            url,
-            urlPrefix,
-            version,
-            includeUncommitted,
-            limit,
-            continuationToken,
-            _callback);
+    okhttp3.Call localVarCall = getArtifactsValidateBeforeCall(
+        collectionid, auid, url, urlPrefix, version, includeUncommitted, limit,
+        continuationToken, _callback);
     Type localVarReturnType = new TypeToken<ArtifactPageInfo>() {}.getType();
     localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
     return localVarCall;
@@ -1055,32 +967,31 @@ public class CollectionsApi {
    * @param collectionid Identifier of the collection containing the artifacts (required)
    * @param url The URL contained by the artifacts (optional)
    * @param urlPrefix The prefix to be matched by the artifact URLs (optional)
-   * @param versions Versions of the artifacts to return (optional, default to all)
-   * @param limit The requested maximum number of artifacts per response (optional)
+   * @param versions Versions of the artifacts to return (optional, default to
+   all)
+   * @param limit The requested maximum number of artifacts per response
+   (optional)
    * @param continuationToken The continuation token of the next page of artifacts to be returned
    *     (optional)
    * @param _callback Callback for upload/download progress
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    * @http.response.details
-   *     <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> The requested artifacts </td><td>  -
-   * </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
-   * </td></tr> <tr><td> 403 </td><td> Client not authorized to retrieve data
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not found
-   * </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from external
-   * resource </td><td>  -  </td></tr>
-   * </table>
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 200 </td><td> The requested artifacts </td><td>  -
+   </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
+   </td></tr> <tr><td> 403 </td><td> Client not authorized to retrieve data
+   </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not found
+   </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from external
+   resource </td><td>  -  </td></tr>
+   </table>
    */
-  public okhttp3.Call getArtifactsFromAllAusCall(
-      String collectionid,
-      String url,
-      String urlPrefix,
-      String versions,
-      Integer limit,
-      String continuationToken,
-      final ApiCallback _callback)
+  public okhttp3.Call getArtifactsFromAllAusCall(String collectionid,
+                                                 String url, String urlPrefix,
+                                                 String versions, Integer limit,
+                                                 String continuationToken,
+                                                 final ApiCallback _callback)
       throws ApiException {
     String basePath = null;
 
@@ -1116,24 +1027,28 @@ public class CollectionsApi {
     }
 
     if (urlPrefix != null) {
-      localVarQueryParams.addAll(localVarApiClient.parameterToPair("urlPrefix", urlPrefix));
+      localVarQueryParams.addAll(
+          localVarApiClient.parameterToPair("urlPrefix", urlPrefix));
     }
 
     if (versions != null) {
-      localVarQueryParams.addAll(localVarApiClient.parameterToPair("versions", versions));
+      localVarQueryParams.addAll(
+          localVarApiClient.parameterToPair("versions", versions));
     }
 
     if (limit != null) {
-      localVarQueryParams.addAll(localVarApiClient.parameterToPair("limit", limit));
+      localVarQueryParams.addAll(
+          localVarApiClient.parameterToPair("limit", limit));
     }
 
     if (continuationToken != null) {
-      localVarQueryParams.addAll(
-          localVarApiClient.parameterToPair("continuationToken", continuationToken));
+      localVarQueryParams.addAll(localVarApiClient.parameterToPair(
+          "continuationToken", continuationToken));
     }
 
     final String[] localVarAccepts = {"application/json"};
-    final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+    final String localVarAccept =
+        localVarApiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
@@ -1148,28 +1063,15 @@ public class CollectionsApi {
 
     String[] localVarAuthNames = new String[] { "basicAuth" };
     return localVarApiClient.buildCall(
-        basePath,
-        localVarPath,
-        "GET",
-        localVarQueryParams,
-        localVarCollectionQueryParams,
-        localVarPostBody,
-        localVarHeaderParams,
-        localVarCookieParams,
-        localVarFormParams,
-        localVarAuthNames,
-        _callback);
+        basePath, localVarPath, "GET", localVarQueryParams,
+        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams,
+        localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
   }
 
   @SuppressWarnings("rawtypes")
   private okhttp3.Call getArtifactsFromAllAusValidateBeforeCall(
-      String collectionid,
-      String url,
-      String urlPrefix,
-      String versions,
-      Integer limit,
-      String continuationToken,
-      final ApiCallback _callback)
+      String collectionid, String url, String urlPrefix, String versions,
+      Integer limit, String continuationToken, final ApiCallback _callback)
       throws ApiException {
 
     // verify the required parameter 'collectionid' is set
@@ -1179,8 +1081,8 @@ public class CollectionsApi {
     }
 
     okhttp3.Call localVarCall =
-        getArtifactsFromAllAusCall(
-            collectionid, url, urlPrefix, versions, limit, continuationToken, _callback);
+        getArtifactsFromAllAusCall(collectionid, url, urlPrefix, versions,
+                                   limit, continuationToken, _callback);
     return localVarCall;
   }
 
@@ -1188,38 +1090,38 @@ public class CollectionsApi {
    * This endpoint returns the committed artifacts of all versions of a given URL, from a specified
    * collection.
    *
-   * @param collectionid Identifier of the collection containing the artifacts (required)
+   * @param collectionid Identifier of the collection containing the artifacts
+   (required)
    * @param url The URL contained by the artifacts (optional)
    * @param urlPrefix The prefix to be matched by the artifact URLs (optional)
-   * @param versions Versions of the artifacts to return (optional, default to all)
-   * @param limit The requested maximum number of artifacts per response (optional)
+   * @param versions Versions of the artifacts to return (optional, default to
+   all)
+   * @param limit The requested maximum number of artifacts per response
+   (optional)
    * @param continuationToken The continuation token of the next page of artifacts to be returned
    *     (optional)
    * @return ArtifactPageInfo
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    * @http.response.details
-   *     <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> The requested artifacts </td><td>  -
-   * </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
-   * </td></tr> <tr><td> 403 </td><td> Client not authorized to retrieve data
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not found
-   * </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from external
-   * resource </td><td>  -  </td></tr>
-   * </table>
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 200 </td><td> The requested artifacts </td><td>  -
+   </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
+   </td></tr> <tr><td> 403 </td><td> Client not authorized to retrieve data
+   </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not found
+   </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from external
+   resource </td><td>  -  </td></tr>
+   </table>
    */
-  public ArtifactPageInfo getArtifactsFromAllAus(
-      String collectionid,
-      String url,
-      String urlPrefix,
-      String versions,
-      Integer limit,
-      String continuationToken)
+  public ArtifactPageInfo getArtifactsFromAllAus(String collectionid,
+                                                 String url, String urlPrefix,
+                                                 String versions, Integer limit,
+                                                 String continuationToken)
       throws ApiException {
     ApiResponse<ArtifactPageInfo> localVarResp =
-        getArtifactsFromAllAusWithHttpInfo(
-            collectionid, url, urlPrefix, versions, limit, continuationToken);
+        getArtifactsFromAllAusWithHttpInfo(collectionid, url, urlPrefix,
+                                           versions, limit, continuationToken);
     return localVarResp.getData();
   }
 
@@ -1227,38 +1129,35 @@ public class CollectionsApi {
    * This endpoint returns the committed artifacts of all versions of a given URL, from a specified
    * collection.
    *
-   * @param collectionid Identifier of the collection containing the artifacts (required)
+   * @param collectionid Identifier of the collection containing the artifacts
+   (required)
    * @param url The URL contained by the artifacts (optional)
    * @param urlPrefix The prefix to be matched by the artifact URLs (optional)
-   * @param versions Versions of the artifacts to return (optional, default to all)
-   * @param limit The requested maximum number of artifacts per response (optional)
+   * @param versions Versions of the artifacts to return (optional, default to
+   all)
+   * @param limit The requested maximum number of artifacts per response
+   (optional)
    * @param continuationToken The continuation token of the next page of artifacts to be returned
    *     (optional)
    * @return ApiResponse&lt;ArtifactPageInfo&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    * @http.response.details
-   *     <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> The requested artifacts </td><td>  -
-   * </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
-   * </td></tr> <tr><td> 403 </td><td> Client not authorized to retrieve data
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not found
-   * </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from external
-   * resource </td><td>  -  </td></tr>
-   * </table>
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 200 </td><td> The requested artifacts </td><td>  -
+   </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
+   </td></tr> <tr><td> 403 </td><td> Client not authorized to retrieve data
+   </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not found
+   </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from external
+   resource </td><td>  -  </td></tr>
+   </table>
    */
   public ApiResponse<ArtifactPageInfo> getArtifactsFromAllAusWithHttpInfo(
-      String collectionid,
-      String url,
-      String urlPrefix,
-      String versions,
-      Integer limit,
-      String continuationToken)
-      throws ApiException {
-    okhttp3.Call localVarCall =
-        getArtifactsFromAllAusValidateBeforeCall(
-            collectionid, url, urlPrefix, versions, limit, continuationToken, null);
+      String collectionid, String url, String urlPrefix, String versions,
+      Integer limit, String continuationToken) throws ApiException {
+    okhttp3.Call localVarCall = getArtifactsFromAllAusValidateBeforeCall(
+        collectionid, url, urlPrefix, versions, limit, continuationToken, null);
     Type localVarReturnType = new TypeToken<ArtifactPageInfo>() {}.getType();
     return localVarApiClient.execute(localVarCall, localVarReturnType);
   }
@@ -1267,40 +1166,39 @@ public class CollectionsApi {
    * This endpoint returns the committed artifacts of all versions of a given URL, from a specified
    * collection. (asynchronously)
    *
-   * @param collectionid Identifier of the collection containing the artifacts (required)
+   * @param collectionid Identifier of the collection containing the artifacts
+   (required)
    * @param url The URL contained by the artifacts (optional)
    * @param urlPrefix The prefix to be matched by the artifact URLs (optional)
-   * @param versions Versions of the artifacts to return (optional, default to all)
-   * @param limit The requested maximum number of artifacts per response (optional)
+   * @param versions Versions of the artifacts to return (optional, default to
+   all)
+   * @param limit The requested maximum number of artifacts per response
+   (optional)
    * @param continuationToken The continuation token of the next page of artifacts to be returned
    *     (optional)
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
-   * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+   * @throws ApiException If fail to process the API call, e.g. serializing the
+   request body object
    * @http.response.details
-   *     <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> The requested artifacts </td><td>  -
-   * </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
-   * </td></tr> <tr><td> 403 </td><td> Client not authorized to retrieve data
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not found
-   * </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from external
-   * resource </td><td>  -  </td></tr>
-   * </table>
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 200 </td><td> The requested artifacts </td><td>  -
+   </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
+   </td></tr> <tr><td> 403 </td><td> Client not authorized to retrieve data
+   </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not found
+   </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from external
+   resource </td><td>  -  </td></tr>
+   </table>
    */
   public okhttp3.Call getArtifactsFromAllAusAsync(
-      String collectionid,
-      String url,
-      String urlPrefix,
-      String versions,
-      Integer limit,
-      String continuationToken,
-      final ApiCallback<ArtifactPageInfo> _callback)
-      throws ApiException {
+      String collectionid, String url, String urlPrefix, String versions,
+      Integer limit, String continuationToken,
+      final ApiCallback<ArtifactPageInfo> _callback) throws ApiException {
 
-    okhttp3.Call localVarCall =
-        getArtifactsFromAllAusValidateBeforeCall(
-            collectionid, url, urlPrefix, versions, limit, continuationToken, _callback);
+    okhttp3.Call localVarCall = getArtifactsFromAllAusValidateBeforeCall(
+        collectionid, url, urlPrefix, versions, limit, continuationToken,
+        _callback);
     Type localVarReturnType = new TypeToken<ArtifactPageInfo>() {}.getType();
     localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
     return localVarCall;
@@ -1309,25 +1207,27 @@ public class CollectionsApi {
    * Build call for getArtifactsSize
    *
    * @param collectionid Identifier of the collection containing the artifacts (required)
-   * @param auid Identifier of the Archival Unit containing the artifacts (required)
+   * @param auid Identifier of the Archival Unit containing the artifacts
+   (required)
    * @param _callback Callback for upload/download progress
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    * @http.response.details
-   *     <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Returns an AuSize containing the sizes of
-   * all the artifacts, only the latest artifact version of all URLs, and the sum
-   * of the size of all the underlying WARC files, of an AU. </td><td>  -
-   * </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
-   * </td></tr> <tr><td> 403 </td><td> Client not authorized to retrieve data
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not found
-   * </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from external
-   * resource </td><td>  -  </td></tr>
-   * </table>
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 200 </td><td> Returns an AuSize containing the sizes of
+   all the artifacts, only the latest artifact version of all URLs, and the sum
+   of the size of all the underlying WARC files, of an AU. </td><td>  -
+   </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
+   </td></tr> <tr><td> 403 </td><td> Client not authorized to retrieve data
+   </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not found
+   </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from external
+   resource </td><td>  -  </td></tr>
+   </table>
    */
-  public okhttp3.Call getArtifactsSizeCall(
-      String collectionid, String auid, final ApiCallback _callback) throws ApiException {
+  public okhttp3.Call getArtifactsSizeCall(String collectionid, String auid,
+                                           final ApiCallback _callback)
+      throws ApiException {
     String basePath = null;
 
     // Operation Servers
@@ -1359,7 +1259,8 @@ public class CollectionsApi {
     Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
     final String[] localVarAccepts = {"application/json"};
-    final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+    final String localVarAccept =
+        localVarApiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
@@ -1374,17 +1275,9 @@ public class CollectionsApi {
 
     String[] localVarAuthNames = new String[] { "basicAuth" };
     return localVarApiClient.buildCall(
-        basePath,
-        localVarPath,
-        "GET",
-        localVarQueryParams,
-        localVarCollectionQueryParams,
-        localVarPostBody,
-        localVarHeaderParams,
-        localVarCookieParams,
-        localVarFormParams,
-        localVarAuthNames,
-        _callback);
+        basePath, localVarPath, "GET", localVarQueryParams,
+        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams,
+        localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
   }
 
   @SuppressWarnings("rawtypes")
@@ -1403,60 +1296,69 @@ public class CollectionsApi {
           "Missing the required parameter 'auid' when calling getArtifactsSize(Async)");
     }
 
-    okhttp3.Call localVarCall = getArtifactsSizeCall(collectionid, auid, _callback);
+    okhttp3.Call localVarCall =
+        getArtifactsSizeCall(collectionid, auid, _callback);
     return localVarCall;
   }
 
   /**
    * Get the size of Archival Unit artifacts in a collection
    *
-   * @param collectionid Identifier of the collection containing the artifacts (required)
-   * @param auid Identifier of the Archival Unit containing the artifacts (required)
+   * @param collectionid Identifier of the collection containing the artifacts
+   (required)
+   * @param auid Identifier of the Archival Unit containing the artifacts
+   (required)
    * @return AuSize
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    * @http.response.details
-   *     <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Returns an AuSize containing the sizes of
-   * all the artifacts, only the latest artifact version of all URLs, and the sum
-   * of the size of all the underlying WARC files, of an AU. </td><td>  -
-   * </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
-   * </td></tr> <tr><td> 403 </td><td> Client not authorized to retrieve data
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not found
-   * </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from external
-   * resource </td><td>  -  </td></tr>
-   * </table>
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 200 </td><td> Returns an AuSize containing the sizes of
+   all the artifacts, only the latest artifact version of all URLs, and the sum
+   of the size of all the underlying WARC files, of an AU. </td><td>  -
+   </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
+   </td></tr> <tr><td> 403 </td><td> Client not authorized to retrieve data
+   </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not found
+   </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from external
+   resource </td><td>  -  </td></tr>
+   </table>
    */
-  public AuSize getArtifactsSize(String collectionid, String auid) throws ApiException {
-    ApiResponse<AuSize> localVarResp = getArtifactsSizeWithHttpInfo(collectionid, auid);
+  public AuSize getArtifactsSize(String collectionid, String auid)
+      throws ApiException {
+    ApiResponse<AuSize> localVarResp =
+        getArtifactsSizeWithHttpInfo(collectionid, auid);
     return localVarResp.getData();
   }
 
   /**
    * Get the size of Archival Unit artifacts in a collection
    *
-   * @param collectionid Identifier of the collection containing the artifacts (required)
-   * @param auid Identifier of the Archival Unit containing the artifacts (required)
+   * @param collectionid Identifier of the collection containing the artifacts
+   (required)
+   * @param auid Identifier of the Archival Unit containing the artifacts
+   (required)
    * @return ApiResponse&lt;AuSize&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    * @http.response.details
-   *     <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Returns an AuSize containing the sizes of
-   * all the artifacts, only the latest artifact version of all URLs, and the sum
-   * of the size of all the underlying WARC files, of an AU. </td><td>  -
-   * </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
-   * </td></tr> <tr><td> 403 </td><td> Client not authorized to retrieve data
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not found
-   * </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from external
-   * resource </td><td>  -  </td></tr>
-   * </table>
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 200 </td><td> Returns an AuSize containing the sizes of
+   all the artifacts, only the latest artifact version of all URLs, and the sum
+   of the size of all the underlying WARC files, of an AU. </td><td>  -
+   </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
+   </td></tr> <tr><td> 403 </td><td> Client not authorized to retrieve data
+   </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not found
+   </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from external
+   resource </td><td>  -  </td></tr>
+   </table>
    */
-  public ApiResponse<AuSize> getArtifactsSizeWithHttpInfo(String collectionid, String auid)
+  public ApiResponse<AuSize> getArtifactsSizeWithHttpInfo(String collectionid,
+                                                          String auid)
       throws ApiException {
-    okhttp3.Call localVarCall = getArtifactsSizeValidateBeforeCall(collectionid, auid, null);
+    okhttp3.Call localVarCall =
+        getArtifactsSizeValidateBeforeCall(collectionid, auid, null);
     Type localVarReturnType = new TypeToken<AuSize>() {}.getType();
     return localVarApiClient.execute(localVarCall, localVarReturnType);
   }
@@ -1464,28 +1366,33 @@ public class CollectionsApi {
   /**
    * Get the size of Archival Unit artifacts in a collection (asynchronously)
    *
-   * @param collectionid Identifier of the collection containing the artifacts (required)
-   * @param auid Identifier of the Archival Unit containing the artifacts (required)
+   * @param collectionid Identifier of the collection containing the artifacts
+   (required)
+   * @param auid Identifier of the Archival Unit containing the artifacts
+   (required)
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
-   * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+   * @throws ApiException If fail to process the API call, e.g. serializing the
+   request body object
    * @http.response.details
-   *     <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Returns an AuSize containing the sizes of
-   * all the artifacts, only the latest artifact version of all URLs, and the sum
-   * of the size of all the underlying WARC files, of an AU. </td><td>  -
-   * </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
-   * </td></tr> <tr><td> 403 </td><td> Client not authorized to retrieve data
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not found
-   * </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from external
-   * resource </td><td>  -  </td></tr>
-   * </table>
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 200 </td><td> Returns an AuSize containing the sizes of
+   all the artifacts, only the latest artifact version of all URLs, and the sum
+   of the size of all the underlying WARC files, of an AU. </td><td>  -
+   </td></tr> <tr><td> 401 </td><td> Unauthorized request </td><td>  -
+   </td></tr> <tr><td> 403 </td><td> Client not authorized to retrieve data
+   </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not found
+   </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from external
+   resource </td><td>  -  </td></tr>
+   </table>
    */
-  public okhttp3.Call getArtifactsSizeAsync(
-      String collectionid, String auid, final ApiCallback<AuSize> _callback) throws ApiException {
+  public okhttp3.Call getArtifactsSizeAsync(String collectionid, String auid,
+                                            final ApiCallback<AuSize> _callback)
+      throws ApiException {
 
-    okhttp3.Call localVarCall = getArtifactsSizeValidateBeforeCall(collectionid, auid, _callback);
+    okhttp3.Call localVarCall =
+        getArtifactsSizeValidateBeforeCall(collectionid, auid, _callback);
     Type localVarReturnType = new TypeToken<AuSize>() {}.getType();
     localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
     return localVarCall;
@@ -1501,18 +1408,19 @@ public class CollectionsApi {
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    * @http.response.details
-   *     <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> The requested Archival Unit identifiers
-   * </td><td>  -  </td></tr> <tr><td> 401 </td><td> Unauthorized request
-   * </td><td>  -  </td></tr> <tr><td> 403 </td><td> Client not authorized to
-   * retrieve data </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not
-   * found </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from
-   * external resource </td><td>  -  </td></tr>
-   * </table>
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 200 </td><td> The requested Archival Unit identifiers
+   </td><td>  -  </td></tr> <tr><td> 401 </td><td> Unauthorized request
+   </td><td>  -  </td></tr> <tr><td> 403 </td><td> Client not authorized to
+   retrieve data </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not
+   found </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from
+   external resource </td><td>  -  </td></tr>
+   </table>
    */
-  public okhttp3.Call getAusCall(
-      String collectionid, Integer limit, String continuationToken, final ApiCallback _callback)
+  public okhttp3.Call getAusCall(String collectionid, Integer limit,
+                                 String continuationToken,
+                                 final ApiCallback _callback)
       throws ApiException {
     String basePath = null;
 
@@ -1544,16 +1452,18 @@ public class CollectionsApi {
     Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
     if (limit != null) {
-      localVarQueryParams.addAll(localVarApiClient.parameterToPair("limit", limit));
+      localVarQueryParams.addAll(
+          localVarApiClient.parameterToPair("limit", limit));
     }
 
     if (continuationToken != null) {
-      localVarQueryParams.addAll(
-          localVarApiClient.parameterToPair("continuationToken", continuationToken));
+      localVarQueryParams.addAll(localVarApiClient.parameterToPair(
+          "continuationToken", continuationToken));
     }
 
     final String[] localVarAccepts = {"application/json"};
-    final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+    final String localVarAccept =
+        localVarApiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
@@ -1566,24 +1476,18 @@ public class CollectionsApi {
       localVarHeaderParams.put("Content-Type", localVarContentType);
     }
 
-    String[] localVarAuthNames = new String[] { "basicAuth" };
+    String[] localVarAuthNames = new String[] {"basicAuth"};
     return localVarApiClient.buildCall(
-        basePath,
-        localVarPath,
-        "GET",
-        localVarQueryParams,
-        localVarCollectionQueryParams,
-        localVarPostBody,
-        localVarHeaderParams,
-        localVarCookieParams,
-        localVarFormParams,
-        localVarAuthNames,
-        _callback);
+        basePath, localVarPath, "GET", localVarQueryParams,
+        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams,
+        localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
   }
 
   @SuppressWarnings("rawtypes")
-  private okhttp3.Call getAusValidateBeforeCall(
-      String collectionid, Integer limit, String continuationToken, final ApiCallback _callback)
+  private okhttp3.Call getAusValidateBeforeCall(String collectionid,
+                                                Integer limit,
+                                                String continuationToken,
+                                                final ApiCallback _callback)
       throws ApiException {
 
     // verify the required parameter 'collectionid' is set
@@ -1592,7 +1496,8 @@ public class CollectionsApi {
           "Missing the required parameter 'collectionid' when calling getAus(Async)");
     }
 
-    okhttp3.Call localVarCall = getAusCall(collectionid, limit, continuationToken, _callback);
+    okhttp3.Call localVarCall =
+        getAusCall(collectionid, limit, continuationToken, _callback);
     return localVarCall;
   }
 
@@ -1608,18 +1513,18 @@ public class CollectionsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    * @http.response.details
-   *     <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> The requested Archival Unit identifiers
-   * </td><td>  -  </td></tr> <tr><td> 401 </td><td> Unauthorized request
-   * </td><td>  -  </td></tr> <tr><td> 403 </td><td> Client not authorized to
-   * retrieve data </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not
-   * found </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from
-   * external resource </td><td>  -  </td></tr>
-   * </table>
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 200 </td><td> The requested Archival Unit identifiers
+   </td><td>  -  </td></tr> <tr><td> 401 </td><td> Unauthorized request
+   </td><td>  -  </td></tr> <tr><td> 403 </td><td> Client not authorized to
+   retrieve data </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not
+   found </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from
+   external resource </td><td>  -  </td></tr>
+   </table>
    */
-  public AuidPageInfo getAus(String collectionid, Integer limit, String continuationToken)
-      throws ApiException {
+  public AuidPageInfo getAus(String collectionid, Integer limit,
+                             String continuationToken) throws ApiException {
     ApiResponse<AuidPageInfo> localVarResp =
         getAusWithHttpInfo(collectionid, limit, continuationToken);
     return localVarResp.getData();
@@ -1637,18 +1542,20 @@ public class CollectionsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    * @http.response.details
-   *     <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> The requested Archival Unit identifiers
-   * </td><td>  -  </td></tr> <tr><td> 401 </td><td> Unauthorized request
-   * </td><td>  -  </td></tr> <tr><td> 403 </td><td> Client not authorized to
-   * retrieve data </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not
-   * found </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from
-   * external resource </td><td>  -  </td></tr>
-   * </table>
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 200 </td><td> The requested Archival Unit identifiers
+   </td><td>  -  </td></tr> <tr><td> 401 </td><td> Unauthorized request
+   </td><td>  -  </td></tr> <tr><td> 403 </td><td> Client not authorized to
+   retrieve data </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not
+   found </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from
+   external resource </td><td>  -  </td></tr>
+   </table>
    */
-  public ApiResponse<AuidPageInfo> getAusWithHttpInfo(
-      String collectionid, Integer limit, String continuationToken) throws ApiException {
+  public ApiResponse<AuidPageInfo> getAusWithHttpInfo(String collectionid,
+                                                      Integer limit,
+                                                      String continuationToken)
+      throws ApiException {
     okhttp3.Call localVarCall =
         getAusValidateBeforeCall(collectionid, limit, continuationToken, null);
     Type localVarReturnType = new TypeToken<AuidPageInfo>() {}.getType();
@@ -1665,27 +1572,26 @@ public class CollectionsApi {
    *     to be returned (optional)
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
-   * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+   * @throws ApiException If fail to process the API call, e.g. serializing the
+   request body object
    * @http.response.details
-   *     <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> The requested Archival Unit identifiers
-   * </td><td>  -  </td></tr> <tr><td> 401 </td><td> Unauthorized request
-   * </td><td>  -  </td></tr> <tr><td> 403 </td><td> Client not authorized to
-   * retrieve data </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not
-   * found </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from
-   * external resource </td><td>  -  </td></tr>
-   * </table>
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 200 </td><td> The requested Archival Unit identifiers
+   </td><td>  -  </td></tr> <tr><td> 401 </td><td> Unauthorized request
+   </td><td>  -  </td></tr> <tr><td> 403 </td><td> Client not authorized to
+   retrieve data </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection not
+   found </td><td>  -  </td></tr> <tr><td> 502 </td><td> Could not read from
+   external resource </td><td>  -  </td></tr>
+   </table>
    */
-  public okhttp3.Call getAusAsync(
-      String collectionid,
-      Integer limit,
-      String continuationToken,
-      final ApiCallback<AuidPageInfo> _callback)
+  public okhttp3.Call getAusAsync(String collectionid, Integer limit,
+                                  String continuationToken,
+                                  final ApiCallback<AuidPageInfo> _callback)
       throws ApiException {
 
-    okhttp3.Call localVarCall =
-        getAusValidateBeforeCall(collectionid, limit, continuationToken, _callback);
+    okhttp3.Call localVarCall = getAusValidateBeforeCall(
+        collectionid, limit, continuationToken, _callback);
     Type localVarReturnType = new TypeToken<AuidPageInfo>() {}.getType();
     localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
     return localVarCall;
@@ -1697,12 +1603,13 @@ public class CollectionsApi {
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    * @http.response.details
-   *     <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Status 200 </td><td>  -  </td></tr>
-   * </table>
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 200 </td><td> Status 200 </td><td>  -  </td></tr>
+   </table>
    */
-  public okhttp3.Call getCollectionsCall(final ApiCallback _callback) throws ApiException {
+  public okhttp3.Call getCollectionsCall(final ApiCallback _callback)
+      throws ApiException {
     String basePath = null;
 
     // Operation Servers
@@ -1729,7 +1636,8 @@ public class CollectionsApi {
     Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
     final String[] localVarAccepts = {"application/json"};
-    final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+    final String localVarAccept =
+        localVarApiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
@@ -1744,21 +1652,14 @@ public class CollectionsApi {
 
     String[] localVarAuthNames = new String[] { "basicAuth" };
     return localVarApiClient.buildCall(
-        basePath,
-        localVarPath,
-        "GET",
-        localVarQueryParams,
-        localVarCollectionQueryParams,
-        localVarPostBody,
-        localVarHeaderParams,
-        localVarCookieParams,
-        localVarFormParams,
-        localVarAuthNames,
-        _callback);
+        basePath, localVarPath, "GET", localVarQueryParams,
+        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams,
+        localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
   }
 
   @SuppressWarnings("rawtypes")
-  private okhttp3.Call getCollectionsValidateBeforeCall(final ApiCallback _callback)
+  private okhttp3.Call
+  getCollectionsValidateBeforeCall(final ApiCallback _callback)
       throws ApiException {
 
     okhttp3.Call localVarCall = getCollectionsCall(_callback);
@@ -1789,30 +1690,34 @@ public class CollectionsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    * @http.response.details
-   *     <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Status 200 </td><td>  -  </td></tr>
-   * </table>
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 200 </td><td> Status 200 </td><td>  -  </td></tr>
+   </table>
    */
-  public ApiResponse<List<String>> getCollectionsWithHttpInfo() throws ApiException {
+  public ApiResponse<List<String>> getCollectionsWithHttpInfo()
+      throws ApiException {
     okhttp3.Call localVarCall = getCollectionsValidateBeforeCall(null);
     Type localVarReturnType = new TypeToken<List<String>>() {}.getType();
     return localVarApiClient.execute(localVarCall, localVarReturnType);
   }
 
   /**
-   * Get collection identifiers of the committed artifacts in the repository (asynchronously)
+   * Get collection identifiers of the committed artifacts in the repository
+   (asynchronously)
    *
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
-   * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+   * @throws ApiException If fail to process the API call, e.g. serializing the
+   request body object
    * @http.response.details
-   *     <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Status 200 </td><td>  -  </td></tr>
-   * </table>
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 200 </td><td> Status 200 </td><td>  -  </td></tr>
+   </table>
    */
-  public okhttp3.Call getCollectionsAsync(final ApiCallback<List<String>> _callback)
+  public okhttp3.Call
+  getCollectionsAsync(final ApiCallback<List<String>> _callback)
       throws ApiException {
 
     okhttp3.Call localVarCall = getCollectionsValidateBeforeCall(_callback);
@@ -1830,17 +1735,17 @@ public class CollectionsApi {
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    * @http.response.details
-   *     <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Bulk operation succeeded </td><td>  -
-   * </td></tr> <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Client is forbidden from performing bulk operation
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection or AUID not found
-   * </td><td>  -  </td></tr>
-   * </table>
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 200 </td><td> Bulk operation succeeded </td><td>  -
+   </td></tr> <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Client is forbidden from performing bulk operation
+   </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection or AUID not found
+   </td><td>  -  </td></tr>
+   </table>
    */
-  public okhttp3.Call handleBulkAuOpCall(
-      String collectionid, String auid, String op, final ApiCallback _callback)
+  public okhttp3.Call handleBulkAuOpCall(String collectionid, String auid,
+                                         String op, final ApiCallback _callback)
       throws ApiException {
     String basePath = null;
 
@@ -1892,17 +1797,9 @@ public class CollectionsApi {
 
     String[] localVarAuthNames = new String[] { "basicAuth" };
     return localVarApiClient.buildCall(
-        basePath,
-        localVarPath,
-        "POST",
-        localVarQueryParams,
-        localVarCollectionQueryParams,
-        localVarPostBody,
-        localVarHeaderParams,
-        localVarCookieParams,
-        localVarFormParams,
-        localVarAuthNames,
-        _callback);
+        basePath, localVarPath, "POST", localVarQueryParams,
+        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams,
+        localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
   }
 
   @SuppressWarnings("rawtypes")
@@ -1928,7 +1825,8 @@ public class CollectionsApi {
           "Missing the required parameter 'op' when calling handleBulkAuOp(Async)");
     }
 
-    okhttp3.Call localVarCall = handleBulkAuOpCall(collectionid, auid, op, _callback);
+    okhttp3.Call localVarCall =
+        handleBulkAuOpCall(collectionid, auid, op, _callback);
     return localVarCall;
   }
 
@@ -1941,16 +1839,17 @@ public class CollectionsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    * @http.response.details
-   *     <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Bulk operation succeeded </td><td>  -
-   * </td></tr> <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Client is forbidden from performing bulk operation
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection or AUID not found
-   * </td><td>  -  </td></tr>
-   * </table>
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 200 </td><td> Bulk operation succeeded </td><td>  -
+   </td></tr> <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Client is forbidden from performing bulk operation
+   </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection or AUID not found
+   </td><td>  -  </td></tr>
+   </table>
    */
-  public void handleBulkAuOp(String collectionid, String auid, String op) throws ApiException {
+  public void handleBulkAuOp(String collectionid, String auid, String op)
+      throws ApiException {
     handleBulkAuOpWithHttpInfo(collectionid, auid, op);
   }
 
@@ -1964,18 +1863,20 @@ public class CollectionsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    * @http.response.details
-   *     <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Bulk operation succeeded </td><td>  -
-   * </td></tr> <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Client is forbidden from performing bulk operation
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection or AUID not found
-   * </td><td>  -  </td></tr>
-   * </table>
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 200 </td><td> Bulk operation succeeded </td><td>  -
+   </td></tr> <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Client is forbidden from performing bulk operation
+   </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection or AUID not found
+   </td><td>  -  </td></tr>
+   </table>
    */
-  public ApiResponse<Void> handleBulkAuOpWithHttpInfo(String collectionid, String auid, String op)
+  public ApiResponse<Void> handleBulkAuOpWithHttpInfo(String collectionid,
+                                                      String auid, String op)
       throws ApiException {
-    okhttp3.Call localVarCall = handleBulkAuOpValidateBeforeCall(collectionid, auid, op, null);
+    okhttp3.Call localVarCall =
+        handleBulkAuOpValidateBeforeCall(collectionid, auid, op, null);
     return localVarApiClient.execute(localVarCall);
   }
 
@@ -1987,22 +1888,25 @@ public class CollectionsApi {
    * @param op Bulk AU transfer operation (required)
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
-   * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+   * @throws ApiException If fail to process the API call, e.g. serializing the
+   request body object
    * @http.response.details
-   *     <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Bulk operation succeeded </td><td>  -
-   * </td></tr> <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Client is forbidden from performing bulk operation
-   * </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection or AUID not found
-   * </td><td>  -  </td></tr>
-   * </table>
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 200 </td><td> Bulk operation succeeded </td><td>  -
+   </td></tr> <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Client is forbidden from performing bulk operation
+   </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection or AUID not found
+   </td><td>  -  </td></tr>
+   </table>
    */
-  public okhttp3.Call handleBulkAuOpAsync(
-      String collectionid, String auid, String op, final ApiCallback<Void> _callback)
+  public okhttp3.Call handleBulkAuOpAsync(String collectionid, String auid,
+                                          String op,
+                                          final ApiCallback<Void> _callback)
       throws ApiException {
 
-    okhttp3.Call localVarCall = handleBulkAuOpValidateBeforeCall(collectionid, auid, op, _callback);
+    okhttp3.Call localVarCall =
+        handleBulkAuOpValidateBeforeCall(collectionid, auid, op, _callback);
     localVarApiClient.executeAsync(localVarCall, _callback);
     return localVarCall;
   }
@@ -2016,18 +1920,19 @@ public class CollectionsApi {
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    * @http.response.details
-   *     <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Artifact updated </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Invalid input </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Client not authorized to update artifact </td><td>
-   * -  </td></tr> <tr><td> 404 </td><td> Artifact not found </td><td>  -
-   * </td></tr>
-   * </table>
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 200 </td><td> Artifact updated </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Invalid input </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Client not authorized to update artifact </td><td>
+   -  </td></tr> <tr><td> 404 </td><td> Artifact not found </td><td>  -
+   </td></tr>
+   </table>
    */
-  public okhttp3.Call updateArtifactCall(
-      String collectionid, String artifactid, Boolean committed, final ApiCallback _callback)
+  public okhttp3.Call updateArtifactCall(String collectionid, String artifactid,
+                                         Boolean committed,
+                                         final ApiCallback _callback)
       throws ApiException {
     String basePath = null;
 
@@ -2066,7 +1971,8 @@ public class CollectionsApi {
     }
 
     final String[] localVarAccepts = {"application/json"};
-    final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+    final String localVarAccept =
+        localVarApiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
@@ -2080,23 +1986,15 @@ public class CollectionsApi {
 
     String[] localVarAuthNames = new String[] { "basicAuth" };
     return localVarApiClient.buildCall(
-        basePath,
-        localVarPath,
-        "PUT",
-        localVarQueryParams,
-        localVarCollectionQueryParams,
-        localVarPostBody,
-        localVarHeaderParams,
-        localVarCookieParams,
-        localVarFormParams,
-        localVarAuthNames,
-        _callback);
+        basePath, localVarPath, "PUT", localVarQueryParams,
+        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams,
+        localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
   }
 
   @SuppressWarnings("rawtypes")
   private okhttp3.Call updateArtifactValidateBeforeCall(
-      String collectionid, String artifactid, Boolean committed, final ApiCallback _callback)
-      throws ApiException {
+      String collectionid, String artifactid, Boolean committed,
+      final ApiCallback _callback) throws ApiException {
 
     // verify the required parameter 'collectionid' is set
     if (collectionid == null) {
@@ -2116,7 +2014,8 @@ public class CollectionsApi {
           "Missing the required parameter 'committed' when calling updateArtifact(Async)");
     }
 
-    okhttp3.Call localVarCall = updateArtifactCall(collectionid, artifactid, committed, _callback);
+    okhttp3.Call localVarCall =
+        updateArtifactCall(collectionid, artifactid, committed, _callback);
     return localVarCall;
   }
 
@@ -2130,18 +2029,18 @@ public class CollectionsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    * @http.response.details
-   *     <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Artifact updated </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Invalid input </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Client not authorized to update artifact </td><td>
-   * -  </td></tr> <tr><td> 404 </td><td> Artifact not found </td><td>  -
-   * </td></tr>
-   * </table>
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 200 </td><td> Artifact updated </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Invalid input </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Client not authorized to update artifact </td><td>
+   -  </td></tr> <tr><td> 404 </td><td> Artifact not found </td><td>  -
+   </td></tr>
+   </table>
    */
-  public Artifact updateArtifact(String collectionid, String artifactid, Boolean committed)
-      throws ApiException {
+  public Artifact updateArtifact(String collectionid, String artifactid,
+                                 Boolean committed) throws ApiException {
     ApiResponse<Artifact> localVarResp =
         updateArtifactWithHttpInfo(collectionid, artifactid, committed);
     return localVarResp.getData();
@@ -2157,20 +2056,22 @@ public class CollectionsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    * @http.response.details
-   *     <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Artifact updated </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Invalid input </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Client not authorized to update artifact </td><td>
-   * -  </td></tr> <tr><td> 404 </td><td> Artifact not found </td><td>  -
-   * </td></tr>
-   * </table>
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 200 </td><td> Artifact updated </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Invalid input </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Client not authorized to update artifact </td><td>
+   -  </td></tr> <tr><td> 404 </td><td> Artifact not found </td><td>  -
+   </td></tr>
+   </table>
    */
-  public ApiResponse<Artifact> updateArtifactWithHttpInfo(
-      String collectionid, String artifactid, Boolean committed) throws ApiException {
-    okhttp3.Call localVarCall =
-        updateArtifactValidateBeforeCall(collectionid, artifactid, committed, null);
+  public ApiResponse<Artifact> updateArtifactWithHttpInfo(String collectionid,
+                                                          String artifactid,
+                                                          Boolean committed)
+      throws ApiException {
+    okhttp3.Call localVarCall = updateArtifactValidateBeforeCall(
+        collectionid, artifactid, committed, null);
     Type localVarReturnType = new TypeToken<Artifact>() {}.getType();
     return localVarApiClient.execute(localVarCall, localVarReturnType);
   }
@@ -2183,27 +2084,26 @@ public class CollectionsApi {
    * @param committed New commit status of artifact (required)
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
-   * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+   * @throws ApiException If fail to process the API call, e.g. serializing the
+   request body object
    * @http.response.details
-   *     <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   * </td></tr> <tr><td> 200 </td><td> Artifact updated </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Invalid input </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Client not authorized to update artifact </td><td>
-   * -  </td></tr> <tr><td> 404 </td><td> Artifact not found </td><td>  -
-   * </td></tr>
-   * </table>
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 200 </td><td> Artifact updated </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Invalid input </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Client not authorized to update artifact </td><td>
+   -  </td></tr> <tr><td> 404 </td><td> Artifact not found </td><td>  -
+   </td></tr>
+   </table>
    */
-  public okhttp3.Call updateArtifactAsync(
-      String collectionid,
-      String artifactid,
-      Boolean committed,
-      final ApiCallback<Artifact> _callback)
+  public okhttp3.Call updateArtifactAsync(String collectionid,
+                                          String artifactid, Boolean committed,
+                                          final ApiCallback<Artifact> _callback)
       throws ApiException {
 
-    okhttp3.Call localVarCall =
-        updateArtifactValidateBeforeCall(collectionid, artifactid, committed, _callback);
+    okhttp3.Call localVarCall = updateArtifactValidateBeforeCall(
+        collectionid, artifactid, committed, _callback);
     Type localVarReturnType = new TypeToken<Artifact>() {}.getType();
     localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
     return localVarCall;

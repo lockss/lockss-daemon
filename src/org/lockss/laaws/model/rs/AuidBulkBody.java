@@ -48,7 +48,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModelProperty;
-
 import java.io.IOException;
 import java.util.Objects;
 /**

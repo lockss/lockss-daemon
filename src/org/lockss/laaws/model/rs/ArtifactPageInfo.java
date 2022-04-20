@@ -52,19 +52,17 @@ import java.util.Objects;
 
 /** A display page of artifacts */
 @ApiModel(description = "A display page of artifacts")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@javax.annotation.
+Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ArtifactPageInfo implements Serializable {
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_ARTIFACTS = "artifacts";
-
   @SerializedName(SERIALIZED_NAME_ARTIFACTS)
   private List<Artifact> artifacts = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_PAGE_INFO = "pageInfo";
-
-  @SerializedName(SERIALIZED_NAME_PAGE_INFO)
-  private PageInfo pageInfo;
+  @SerializedName(SERIALIZED_NAME_PAGE_INFO) private PageInfo pageInfo;
 
   public ArtifactPageInfo() {}
 
@@ -85,8 +83,11 @@ public class ArtifactPageInfo implements Serializable {
    * @return artifacts
    */
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The artifacts included in the page")
-  public List<Artifact> getArtifacts() {
+  @ApiModelProperty(required = true,
+                    value = "The artifacts included in the page")
+
+  public List<Artifact>
+  getArtifacts() {
     return artifacts;
   }
 
@@ -107,13 +108,12 @@ public class ArtifactPageInfo implements Serializable {
    */
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
+
   public PageInfo getPageInfo() {
     return pageInfo;
   }
 
-  public void setPageInfo(PageInfo pageInfo) {
-    this.pageInfo = pageInfo;
-  }
+  public void setPageInfo(PageInfo pageInfo) { this.pageInfo = pageInfo; }
 
   @Override
   public boolean equals(Object o) {
@@ -123,7 +123,7 @@ public class ArtifactPageInfo implements Serializable {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ArtifactPageInfo artifactPageInfo = (ArtifactPageInfo) o;
+    ArtifactPageInfo artifactPageInfo = (ArtifactPageInfo)o;
     return Objects.equals(this.artifacts, artifactPageInfo.artifacts)
         && Objects.equals(this.pageInfo, artifactPageInfo.pageInfo);
   }
@@ -137,7 +137,9 @@ public class ArtifactPageInfo implements Serializable {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ArtifactPageInfo {\n");
-    sb.append("    artifacts: ").append(toIndentedString(artifacts)).append("\n");
+    sb.append("    artifacts: ")
+        .append(toIndentedString(artifacts))
+        .append("\n");
     sb.append("    pageInfo: ").append(toIndentedString(pageInfo)).append("\n");
     sb.append("}");
     return sb.toString();

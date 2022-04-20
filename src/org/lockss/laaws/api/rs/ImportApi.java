@@ -48,178 +48,179 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.lockss.laaws.client.ApiCallback;
-import org.lockss.laaws.client.V2RestClient;
-import org.lockss.laaws.client.ApiException;
-import org.lockss.laaws.client.ApiResponse;
-import org.lockss.laaws.client.Configuration;
-import org.lockss.laaws.client.Pair;
+import org.lockss.laaws.client.*;
 
 public class ImportApi {
     private V2RestClient localVarApiClient;
     private int localHostIndex;
     private String localCustomBaseUrl;
 
-    public ImportApi() {
-        this(Configuration.getDefaultApiClient());
+  public ImportApi() { this(Configuration.getDefaultApiClient()); }
+
+  public ImportApi(V2RestClient apiClient) { this.localVarApiClient = apiClient; }
+
+  public V2RestClient getApiClient() { return localVarApiClient; }
+
+  public void setApiClient(V2RestClient apiClient) {
+    this.localVarApiClient = apiClient;
+  }
+
+  public int getHostIndex() { return localHostIndex; }
+
+  public void setHostIndex(int hostIndex) { this.localHostIndex = hostIndex; }
+
+  public String getCustomBaseUrl() { return localCustomBaseUrl; }
+
+  public void setCustomBaseUrl(String customBaseUrl) {
+    this.localCustomBaseUrl = customBaseUrl;
+  }
+
+  /**
+   * Build call for getSupportedChecksumAlgorithms
+   * @param _callback Callback for upload/download progress
+   * @return Call to execute
+   * @throws ApiException If fail to serialize the request body object
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 200 </td><td> The names of the supported checksum
+   algorithms </td><td>  -  </td></tr> <tr><td> 400 </td><td> Bad Request
+   </td><td>  -  </td></tr> <tr><td> 401 </td><td> Unauthorized </td><td>  -
+   </td></tr> <tr><td> 500 </td><td> Internal Server Error </td><td>  -
+   </td></tr>
+   </table>
+   */
+  public okhttp3.Call
+  getSupportedChecksumAlgorithmsCall(final ApiCallback _callback)
+      throws ApiException {
+    String basePath = null;
+
+    // Operation Servers
+    String[] localBasePaths = new String[] {};
+
+    // Determine Base Path to Use
+    if (localCustomBaseUrl != null) {
+      basePath = localCustomBaseUrl;
+    } else if (localBasePaths.length > 0) {
+      basePath = localBasePaths[localHostIndex];
+    } else {
+      basePath = null;
     }
 
-    public ImportApi(V2RestClient apiClient) {
-        this.localVarApiClient = apiClient;
+    Object localVarPostBody = null;
+
+    // create path and map variables
+    String localVarPath = "/checksumalgorithms";
+
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, String> localVarCookieParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    final String[] localVarAccepts = {"application/json"};
+    final String localVarAccept =
+        localVarApiClient.selectHeaderAccept(localVarAccepts);
+    if (localVarAccept != null) {
+      localVarHeaderParams.put("Accept", localVarAccept);
     }
 
-    public V2RestClient getApiClient() {
-        return localVarApiClient;
+    final String[] localVarContentTypes = {
+
+    };
+    final String localVarContentType =
+        localVarApiClient.selectHeaderContentType(localVarContentTypes);
+    if (localVarContentType != null) {
+      localVarHeaderParams.put("Content-Type", localVarContentType);
     }
-
-    public void setApiClient(V2RestClient apiClient) {
-        this.localVarApiClient = apiClient;
-    }
-
-    public int getHostIndex() {
-        return localHostIndex;
-    }
-
-    public void setHostIndex(int hostIndex) {
-        this.localHostIndex = hostIndex;
-    }
-
-    public String getCustomBaseUrl() {
-        return localCustomBaseUrl;
-    }
-
-    public void setCustomBaseUrl(String customBaseUrl) {
-        this.localCustomBaseUrl = customBaseUrl;
-    }
-
-    /**
-     * Build call for getSupportedChecksumAlgorithms
-     * @param _callback Callback for upload/download progress
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> The names of the supported checksum algorithms </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-        <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call getSupportedChecksumAlgorithmsCall(final ApiCallback _callback) throws ApiException {
-        String basePath = null;
-
-        // Operation Servers
-        String[] localBasePaths = new String[] {  };
-
-        // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
-            basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
-            basePath = localBasePaths[localHostIndex];
-        } else {
-            basePath = null;
-        }
-
-        Object localVarPostBody = null;
-
-        // create path and map variables
-        String localVarPath = "/checksumalgorithms";
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            "application/json"
-        };
-        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) {
-            localVarHeaderParams.put("Accept", localVarAccept);
-        }
-
-        final String[] localVarContentTypes = {
-
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarContentType != null) {
-            localVarHeaderParams.put("Content-Type", localVarContentType);
-        }
 
         String[] localVarAuthNames = new String[]{ "basicAuth" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
-    }
+    return localVarApiClient.buildCall(
+        basePath, localVarPath, "GET", localVarQueryParams,
+        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams,
+        localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+  }
 
-    @SuppressWarnings("rawtypes")
-    private okhttp3.Call getSupportedChecksumAlgorithmsValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+  @SuppressWarnings("rawtypes")
+  private okhttp3.Call
+  getSupportedChecksumAlgorithmsValidateBeforeCall(final ApiCallback _callback)
+      throws ApiException {
 
+    okhttp3.Call localVarCall = getSupportedChecksumAlgorithmsCall(_callback);
+    return localVarCall;
+  }
 
-        okhttp3.Call localVarCall = getSupportedChecksumAlgorithmsCall(_callback);
-        return localVarCall;
+  /**
+   * Get the supported checksum algorithms
+   * Get a list of the names of the supported checksum algorithms
+   * @return List&lt;String&gt;
+   * @throws ApiException If fail to call the API, e.g. server error or cannot
+   deserialize the response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 200 </td><td> The names of the supported checksum
+   algorithms </td><td>  -  </td></tr> <tr><td> 400 </td><td> Bad Request
+   </td><td>  -  </td></tr> <tr><td> 401 </td><td> Unauthorized </td><td>  -
+   </td></tr> <tr><td> 500 </td><td> Internal Server Error </td><td>  -
+   </td></tr>
+   </table>
+   */
+  public List<String> getSupportedChecksumAlgorithms() throws ApiException {
+    ApiResponse<List<String>> localVarResp =
+        getSupportedChecksumAlgorithmsWithHttpInfo();
+    return localVarResp.getData();
+  }
 
-    }
+  /**
+   * Get the supported checksum algorithms
+   * Get a list of the names of the supported checksum algorithms
+   * @return ApiResponse&lt;List&lt;String&gt;&gt;
+   * @throws ApiException If fail to call the API, e.g. server error or cannot
+   deserialize the response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 200 </td><td> The names of the supported checksum
+   algorithms </td><td>  -  </td></tr> <tr><td> 400 </td><td> Bad Request
+   </td><td>  -  </td></tr> <tr><td> 401 </td><td> Unauthorized </td><td>  -
+   </td></tr> <tr><td> 500 </td><td> Internal Server Error </td><td>  -
+   </td></tr>
+   </table>
+   */
+  public ApiResponse<List<String>> getSupportedChecksumAlgorithmsWithHttpInfo()
+      throws ApiException {
+    okhttp3.Call localVarCall =
+        getSupportedChecksumAlgorithmsValidateBeforeCall(null);
+    Type localVarReturnType = new TypeToken<List<String>>() {}.getType();
+    return localVarApiClient.execute(localVarCall, localVarReturnType);
+  }
 
-    /**
-     * Get the supported checksum algorithms
-     * Get a list of the names of the supported checksum algorithms
-     * @return List&lt;String&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> The names of the supported checksum algorithms </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-        <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-     </table>
-     */
-    public List<String> getSupportedChecksumAlgorithms() throws ApiException {
-        ApiResponse<List<String>> localVarResp = getSupportedChecksumAlgorithmsWithHttpInfo();
-        return localVarResp.getData();
-    }
+  /**
+   * Get the supported checksum algorithms (asynchronously)
+   * Get a list of the names of the supported checksum algorithms
+   * @param _callback The callback to be executed when the API call finishes
+   * @return The request call
+   * @throws ApiException If fail to process the API call, e.g. serializing the
+   request body object
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers
+   </td></tr> <tr><td> 200 </td><td> The names of the supported checksum
+   algorithms </td><td>  -  </td></tr> <tr><td> 400 </td><td> Bad Request
+   </td><td>  -  </td></tr> <tr><td> 401 </td><td> Unauthorized </td><td>  -
+   </td></tr> <tr><td> 500 </td><td> Internal Server Error </td><td>  -
+   </td></tr>
+   </table>
+   */
+  public okhttp3.Call
+  getSupportedChecksumAlgorithmsAsync(final ApiCallback<List<String>> _callback)
+      throws ApiException {
 
-    /**
-     * Get the supported checksum algorithms
-     * Get a list of the names of the supported checksum algorithms
-     * @return ApiResponse&lt;List&lt;String&gt;&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> The names of the supported checksum algorithms </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-        <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-     </table>
-     */
-    public ApiResponse<List<String>> getSupportedChecksumAlgorithmsWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = getSupportedChecksumAlgorithmsValidateBeforeCall(null);
-        Type localVarReturnType = new TypeToken<List<String>>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
-    }
-
-    /**
-     * Get the supported checksum algorithms (asynchronously)
-     * Get a list of the names of the supported checksum algorithms
-     * @param _callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> The names of the supported checksum algorithms </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-        <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call getSupportedChecksumAlgorithmsAsync(final ApiCallback<List<String>> _callback) throws ApiException {
-
-        okhttp3.Call localVarCall = getSupportedChecksumAlgorithmsValidateBeforeCall(_callback);
-        Type localVarReturnType = new TypeToken<List<String>>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
-        return localVarCall;
-    }
+    okhttp3.Call localVarCall =
+        getSupportedChecksumAlgorithmsValidateBeforeCall(_callback);
+    Type localVarReturnType = new TypeToken<List<String>>() {}.getType();
+    localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+    return localVarCall;
+  }
 }

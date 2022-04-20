@@ -50,19 +50,16 @@ import java.util.Objects;
 
 /** The status information of the service */
 @ApiModel(description = "The status information of the service")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@javax.annotation.
+Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ApiStatus implements Serializable {
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_API_VERSION = "apiVersion";
-
-  @SerializedName(SERIALIZED_NAME_API_VERSION)
-  private String apiVersion;
+  @SerializedName(SERIALIZED_NAME_API_VERSION) private String apiVersion;
 
   public static final String SERIALIZED_NAME_COMPONENT_NAME = "componentName";
-
-  @SerializedName(SERIALIZED_NAME_COMPONENT_NAME)
-  private String componentName;
+  @SerializedName(SERIALIZED_NAME_COMPONENT_NAME) private String componentName;
 
   public static final String SERIALIZED_NAME_COMPONENT_VERSION = "componentVersion";
 
@@ -70,19 +67,13 @@ public class ApiStatus implements Serializable {
   private String componentVersion;
 
   public static final String SERIALIZED_NAME_LOCKSS_VERSION = "lockssVersion";
-
-  @SerializedName(SERIALIZED_NAME_LOCKSS_VERSION)
-  private String lockssVersion;
+  @SerializedName(SERIALIZED_NAME_LOCKSS_VERSION) private String lockssVersion;
 
   public static final String SERIALIZED_NAME_READY = "ready";
-
-  @SerializedName(SERIALIZED_NAME_READY)
-  private Boolean ready;
+  @SerializedName(SERIALIZED_NAME_READY) private Boolean ready;
 
   public static final String SERIALIZED_NAME_SERVICE_NAME = "serviceName";
-
-  @SerializedName(SERIALIZED_NAME_SERVICE_NAME)
-  private String serviceName;
+  @SerializedName(SERIALIZED_NAME_SERVICE_NAME) private String serviceName;
 
   public ApiStatus() {}
 
@@ -99,13 +90,12 @@ public class ApiStatus implements Serializable {
    */
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "The version of the API")
+
   public String getApiVersion() {
     return apiVersion;
   }
 
-  public void setApiVersion(String apiVersion) {
-    this.apiVersion = apiVersion;
-  }
+  public void setApiVersion(String apiVersion) { this.apiVersion = apiVersion; }
 
   public ApiStatus componentName(String componentName) {
 
@@ -120,6 +110,7 @@ public class ApiStatus implements Serializable {
    */
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "The name of the component")
+
   public String getComponentName() {
     return componentName;
   }
@@ -140,8 +131,11 @@ public class ApiStatus implements Serializable {
    * @return componentVersion
    */
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The version of the component software")
-  public String getComponentVersion() {
+  @ApiModelProperty(required = true,
+                    value = "The version of the component software")
+
+  public String
+  getComponentVersion() {
     return componentVersion;
   }
 
@@ -162,6 +156,7 @@ public class ApiStatus implements Serializable {
    */
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "The version of the LOCKSS system")
+
   public String getLockssVersion() {
     return lockssVersion;
   }
@@ -182,14 +177,16 @@ public class ApiStatus implements Serializable {
    * @return ready
    */
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The indication of whether the service is available")
-  public Boolean getReady() {
+  @ApiModelProperty(
+      required = true,
+      value = "The indication of whether the service is available")
+
+  public Boolean
+  getReady() {
     return ready;
   }
 
-  public void setReady(Boolean ready) {
-    this.ready = ready;
-  }
+  public void setReady(Boolean ready) { this.ready = ready; }
 
   public ApiStatus serviceName(String serviceName) {
 
@@ -204,6 +201,7 @@ public class ApiStatus implements Serializable {
    */
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "The name of the service")
+
   public String getServiceName() {
     return serviceName;
   }
@@ -220,7 +218,7 @@ public class ApiStatus implements Serializable {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ApiStatus apiStatus = (ApiStatus) o;
+    ApiStatus apiStatus = (ApiStatus)o;
     return Objects.equals(this.apiVersion, apiStatus.apiVersion)
         && Objects.equals(this.componentName, apiStatus.componentName)
         && Objects.equals(this.componentVersion, apiStatus.componentVersion)
@@ -231,20 +229,30 @@ public class ApiStatus implements Serializable {
 
   @Override
   public int hashCode() {
-    return Objects.hash(
-        apiVersion, componentName, componentVersion, lockssVersion, ready, serviceName);
+    return Objects.hash(apiVersion, componentName, componentVersion,
+                        lockssVersion, ready, serviceName);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ApiStatus {\n");
-    sb.append("    apiVersion: ").append(toIndentedString(apiVersion)).append("\n");
-    sb.append("    componentName: ").append(toIndentedString(componentName)).append("\n");
-    sb.append("    componentVersion: ").append(toIndentedString(componentVersion)).append("\n");
-    sb.append("    lockssVersion: ").append(toIndentedString(lockssVersion)).append("\n");
+    sb.append("    apiVersion: ")
+        .append(toIndentedString(apiVersion))
+        .append("\n");
+    sb.append("    componentName: ")
+        .append(toIndentedString(componentName))
+        .append("\n");
+    sb.append("    componentVersion: ")
+        .append(toIndentedString(componentVersion))
+        .append("\n");
+    sb.append("    lockssVersion: ")
+        .append(toIndentedString(lockssVersion))
+        .append("\n");
     sb.append("    ready: ").append(toIndentedString(ready)).append("\n");
-    sb.append("    serviceName: ").append(toIndentedString(serviceName)).append("\n");
+    sb.append("    serviceName: ")
+        .append(toIndentedString(serviceName))
+        .append("\n");
     sb.append("}");
     return sb.toString();
   }

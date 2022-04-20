@@ -513,8 +513,19 @@ public class V2RestClient {
   public V2RestClient setDebugging(boolean debugging) {
     if (debugging != this.debugging) {
       if (debugging) {
-        loggingInterceptor = new HttpLoggingInterceptor();
-        loggingInterceptor.setLevel(Level.BODY);
+        loggingInterceptor =
+            new HttpLoggingInterceptor((msg) -> {
+              log.debug(msg);
+            });
+        if(log.isDebug()) {
+          loggingInterceptor.level(Level.BASIC);
+        }
+        else if(log.isDebug2()) {
+          loggingInterceptor.level(Level.HEADERS);
+        }
+        else if(log.isDebug3()) {
+          loggingInterceptor.level(Level.BODY);
+        }
         httpClient = httpClient.newBuilder().addInterceptor(loggingInterceptor).build();
       }
       else {
@@ -527,7 +538,6 @@ public class V2RestClient {
     this.debugging = debugging;
     return this;
   }
-
   public V2RestClient addInterceptor(Interceptor interceptor) {
     if (interceptor != null) {
       httpClient = httpClient.newBuilder().addInterceptor(interceptor).build();

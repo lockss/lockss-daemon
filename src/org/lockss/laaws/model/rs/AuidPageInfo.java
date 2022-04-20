@@ -52,19 +52,17 @@ import java.util.Objects;
 
 /** A display page of Archival Unit identifiers */
 @ApiModel(description = "A display page of Archival Unit identifiers")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@javax.annotation.
+Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AuidPageInfo implements Serializable {
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_AUIDS = "auids";
-
   @SerializedName(SERIALIZED_NAME_AUIDS)
   private List<String> auids = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_PAGE_INFO = "pageInfo";
-
-  @SerializedName(SERIALIZED_NAME_PAGE_INFO)
-  private PageInfo pageInfo;
+  @SerializedName(SERIALIZED_NAME_PAGE_INFO) private PageInfo pageInfo;
 
   public AuidPageInfo() {}
 
@@ -85,14 +83,16 @@ public class AuidPageInfo implements Serializable {
    * @return auids
    */
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The Archival Unit identifiers included in the page")
-  public List<String> getAuids() {
+  @ApiModelProperty(
+      required = true,
+      value = "The Archival Unit identifiers included in the page")
+
+  public List<String>
+  getAuids() {
     return auids;
   }
 
-  public void setAuids(List<String> auids) {
-    this.auids = auids;
-  }
+  public void setAuids(List<String> auids) { this.auids = auids; }
 
   public AuidPageInfo pageInfo(PageInfo pageInfo) {
 
@@ -107,13 +107,12 @@ public class AuidPageInfo implements Serializable {
    */
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
+
   public PageInfo getPageInfo() {
     return pageInfo;
   }
 
-  public void setPageInfo(PageInfo pageInfo) {
-    this.pageInfo = pageInfo;
-  }
+  public void setPageInfo(PageInfo pageInfo) { this.pageInfo = pageInfo; }
 
   @Override
   public boolean equals(Object o) {
@@ -123,7 +122,7 @@ public class AuidPageInfo implements Serializable {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    AuidPageInfo auidPageInfo = (AuidPageInfo) o;
+    AuidPageInfo auidPageInfo = (AuidPageInfo)o;
     return Objects.equals(this.auids, auidPageInfo.auids)
         && Objects.equals(this.pageInfo, auidPageInfo.pageInfo);
   }

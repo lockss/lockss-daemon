@@ -50,19 +50,16 @@ import java.util.Objects;
 
 /** Information about the repository */
 @ApiModel(description = "Information about the repository")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@javax.annotation.
+Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RepositoryInfo implements Serializable {
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_STORE_INFO = "storeInfo";
-
-  @SerializedName(SERIALIZED_NAME_STORE_INFO)
-  private StorageInfo storeInfo;
+  @SerializedName(SERIALIZED_NAME_STORE_INFO) private StorageInfo storeInfo;
 
   public static final String SERIALIZED_NAME_INDEX_INFO = "indexInfo";
-
-  @SerializedName(SERIALIZED_NAME_INDEX_INFO)
-  private StorageInfo indexInfo;
+  @SerializedName(SERIALIZED_NAME_INDEX_INFO) private StorageInfo indexInfo;
 
   public RepositoryInfo() {}
 
@@ -79,6 +76,7 @@ public class RepositoryInfo implements Serializable {
    */
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
+
   public StorageInfo getStoreInfo() {
     return storeInfo;
   }
@@ -100,6 +98,7 @@ public class RepositoryInfo implements Serializable {
    */
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
+
   public StorageInfo getIndexInfo() {
     return indexInfo;
   }
@@ -116,7 +115,7 @@ public class RepositoryInfo implements Serializable {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    RepositoryInfo repositoryInfo = (RepositoryInfo) o;
+    RepositoryInfo repositoryInfo = (RepositoryInfo)o;
     return Objects.equals(this.storeInfo, repositoryInfo.storeInfo)
         && Objects.equals(this.indexInfo, repositoryInfo.indexInfo);
   }
@@ -130,8 +129,12 @@ public class RepositoryInfo implements Serializable {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RepositoryInfo {\n");
-    sb.append("    storeInfo: ").append(toIndentedString(storeInfo)).append("\n");
-    sb.append("    indexInfo: ").append(toIndentedString(indexInfo)).append("\n");
+    sb.append("    storeInfo: ")
+        .append(toIndentedString(storeInfo))
+        .append("\n");
+    sb.append("    indexInfo: ")
+        .append(toIndentedString(indexInfo))
+        .append("\n");
     sb.append("}");
     return sb.toString();
   }
