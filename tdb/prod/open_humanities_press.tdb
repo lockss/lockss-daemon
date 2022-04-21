@@ -12,7 +12,8 @@
     #plugin = org.lockss.plugin.ojs2.OJS2Plugin
     #plugin = org.lockss.plugin.ojs3.Ojs3Plugin
     implicit < pluginSuffix ; status ; year ; name ; volume ; param[year] >
-  
+    attr[start_stem] = index.php/
+
     {
   
       title <
