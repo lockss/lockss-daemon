@@ -73,14 +73,18 @@ public class ChineseUniversityHongKongSourceXmlMetadataExtractorFactory extends 
     		CachedUrl cu, ArticleMetadata thisAM) {
 
     	log.debug3("setting publication type in postcook process");
+        log.debug3("get cu url = " + cu.getUrl());
         StringBuilder titleVal = new StringBuilder();
 
         String page = thisAM.getRaw(ChineseUniversityHongKongSourceXmlSchemaHelper.start_page);
-        if (page != null) {
-            log.debug3("get article page: " + page);
+        if (page != null && page.contains("-")) {
             thisAM.put(MetadataField.FIELD_START_PAGE,page.substring(0, page.indexOf("-")));
             thisAM.put(MetadataField.FIELD_END_PAGE,page.substring(page.indexOf("-") + 1));
 
+        } else if (page != null) {
+            //in cuhk-released/2022_01/LPJ/i45a.zip!/i45a_cover.xml, the start page is not a range
+            // so set it to '0'
+            thisAM.put(MetadataField.FIELD_START_PAGE,"1");
         }
 
     	thisAM.put(MetadataField.FIELD_PUBLICATION_TYPE,MetadataField.PUBLICATION_TYPE_JOURNAL);
