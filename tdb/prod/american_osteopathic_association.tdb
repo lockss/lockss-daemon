@@ -17,7 +17,7 @@
 
     {
     
-    plugin = needs.plugin
+    plugin = needs.plugin BLOCKED see LXPUB-475
     implicit < status ; year ; name ; param[year] >
     param[base_url] = https://www.degruyter.com/
     param[journal_id] = jom
