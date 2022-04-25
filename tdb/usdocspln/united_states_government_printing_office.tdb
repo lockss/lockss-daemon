@@ -188,8 +188,8 @@
     param[collection_id] = BILLS
 
  
-    au < manifest ; 2019 ; Congressional Bills 2019 ; 2019 ; https://www.govinfo.gov/ >
-    au < manifest ; 2020 ; Congressional Bills 2020 ; 2020 ; https://www.govinfo.gov/ >
+    au < ready ; 2019 ; Congressional Bills 2019 ; 2019 ; https://www.govinfo.gov/ >
+    au < ready ; 2020 ; Congressional Bills 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < manifest ; 2021 ; Congressional Bills 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < manifest ; 2022 ; Congressional Bills 2022 ; 2022 ; https://www.govinfo.gov/ >
 
@@ -206,7 +206,7 @@
  
     au < released ; 2019 ; Congressional Calendars 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < ready ; 2020 ; Congressional Calendars 2020 ; 2020 ; https://www.govinfo.gov/ >
-    au < manifest ; 2021 ; Congressional Calendars 2021 ; 2021 ; https://www.govinfo.gov/ >
+    au < ready ; 2021 ; Congressional Calendars 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < manifest ; 2022 ; Congressional Calendars 2022 ; 2022 ; https://www.govinfo.gov/ >
 
   }
@@ -487,9 +487,9 @@
     au < released ; 1998 ; Statute Compilations 1998 ; 1998 ; https://www.govinfo.gov/ >
     au < released ; 1999 ; Statute Compilations 1999 ; 1999 ; https://www.govinfo.gov/ >
     au < released ; 2000 ; Statute Compilations 2000 ; 2000 ; https://www.govinfo.gov/ >
-    au < manifest ; 2001 ; Statute Compilations 2001 ; 2001 ; https://www.govinfo.gov/ >
+    au < ready ; 2001 ; Statute Compilations 2001 ; 2001 ; https://www.govinfo.gov/ >
     au < released ; 2002 ; Statute Compilations 2002 ; 2002 ; https://www.govinfo.gov/ >
-    au < manifest ; 2003 ; Statute Compilations 2003 ; 2003 ; https://www.govinfo.gov/ >
+    au < ready ; 2003 ; Statute Compilations 2003 ; 2003 ; https://www.govinfo.gov/ >
     au < released ; 2004 ; Statute Compilations 2004 ; 2004 ; https://www.govinfo.gov/ >
     au < released ; 2005 ; Statute Compilations 2005 ; 2005 ; https://www.govinfo.gov/ >
     au < released ; 2006 ; Statute Compilations 2006 ; 2006 ; https://www.govinfo.gov/ >
@@ -506,8 +506,8 @@
     au < released ; 2017 ; Statute Compilations 2017 ; 2017 ; https://www.govinfo.gov/ >
     au < released ; 2018 ; Statute Compilations 2018 ; 2018 ; https://www.govinfo.gov/ >
     au < released ; 2019 ; Statute Compilations 2019 ; 2019 ; https://www.govinfo.gov/ >
-    au < manifest ; 2020 ; Statute Compilations 2020 ; 2020 ; https://www.govinfo.gov/ >
-    au < manifest ; 2021 ; Statute Compilations 2021 ; 2021 ; https://www.govinfo.gov/ >
+    au < ready ; 2020 ; Statute Compilations 2020 ; 2020 ; https://www.govinfo.gov/ >
+    au < ready ; 2021 ; Statute Compilations 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < manifest ; 2022 ; Statute Compilations 2022 ; 2022 ; https://www.govinfo.gov/ >
 
   }
@@ -539,8 +539,8 @@
 
 
     au < released ; 2019 ; Congressional Reports 2019 ; 2019 ; https://www.govinfo.gov/ >
-    au < manifest ; 2020 ; Congressional Reports 2020 ; 2020 ; https://www.govinfo.gov/ >
-    au < manifest ; 2021 ; Congressional Reports 2021 ; 2021 ; https://www.govinfo.gov/ >
+    au < ready ; 2020 ; Congressional Reports 2020 ; 2020 ; https://www.govinfo.gov/ >
+    au < ready ; 2021 ; Congressional Reports 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < manifest ; 2022 ; Congressional Reports 2022 ; 2022 ; https://www.govinfo.gov/ >
 
   }
@@ -556,8 +556,8 @@
 
     au < released ; 2018 ; Daily Compilation of Presidential Documents 2018 ; 2018 ; https://www.govinfo.gov/ >
     au < released ; 2019 ; Daily Compilation of Presidential Documents 2019 ; 2019 ; https://www.govinfo.gov/ >
-    au < manifest ; 2020 ; Daily Compilation of Presidential Documents 2020 ; 2020 ; https://www.govinfo.gov/ >
-    au < manifest ; 2021 ; Daily Compilation of Presidential Documents 2021 ; 2021 ; https://www.govinfo.gov/ >
+    au < ready ; 2020 ; Daily Compilation of Presidential Documents 2020 ; 2020 ; https://www.govinfo.gov/ >
+    au < ready ; 2021 ; Daily Compilation of Presidential Documents 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < manifest ; 2022 ; Daily Compilation of Presidential Documents 2022 ; 2022 ; https://www.govinfo.gov/ >
 
   }
@@ -573,7 +573,7 @@
 
     au < released ; 2019 ; Economic Indicators 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < ready ; 2020 ; Economic Indicators 2020 ; 2020 ; https://www.govinfo.gov/ >
-    au < manifest ; 2021 ; Economic Indicators 2021 ; 2021 ; https://www.govinfo.gov/ >
+    au < ready ; 2021 ; Economic Indicators 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < manifest ; 2022 ; Economic Indicators 2022 ; 2022 ; https://www.govinfo.gov/ >
 
   }
@@ -588,8 +588,8 @@
 
 
     au < released ; 2019 ; Economic Report of the President 2019 ; 2019 ; https://www.govinfo.gov/ >
-    au < manifest ; 2020 ; Economic Report of the President 2020 ; 2020 ; https://www.govinfo.gov/ >
-    au < manifest ; 2021 ; Economic Report of the President 2021 ; 2021 ; https://www.govinfo.gov/ >
+    au < ready ; 2020 ; Economic Report of the President 2020 ; 2020 ; https://www.govinfo.gov/ >
+    au < ready ; 2021 ; Economic Report of the President 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < manifest ; 2022 ; Economic Report of the President 2022 ; 2022 ; https://www.govinfo.gov/ >
 
   }
