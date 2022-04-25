@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>11</string>
+    <string>12</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -51,7 +51,7 @@ POSSIBILITY OF SUCH DAMAGE.
       </entry>
       <entry>
         <string>Substance</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -139,11 +139,19 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)", url_host(base_url)</string>
     </list>
   </entry>
+<!-- for a long time this was shadowed by the other, simpler entry with the same key; 
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
       <string>"^%scontent/(?:granule|pkg)/(%s)[^/]+/html?/\1[^/]+\.html?$", base_url, collection_id</string>
       <string>"^%scontent/(?:granule|pkg)/(%s)[^/]+/(mp3|pdf|xml)/\1[^/]+\.\2$", base_url, collection_id</string>
+    </list>
+  </entry>
+-->
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"content/pkg/(%s-[^/]+)/(html?|pdf)/\1\.\2$", collection_id</string>
     </list>
   </entry>
   <entry>
@@ -173,12 +181,6 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_crawl_depth</string>
     <int>99</int>
-  </entry>
-  <entry>
-    <string>au_substance_url_pattern</string>
-    <list>
-      <string>"content/pkg/(%s-[^/]+)/pdf/\1\.pdf$", collection_id</string>
-    </list>
   </entry>
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
