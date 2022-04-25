@@ -164,6 +164,11 @@
     param[collection_id] = CFR
 
 
+    au < manifest ; 1807 ; Code of Federal Regulations 1807 ; 1807 ; https://www.govinfo.gov/ >
+    au < manifest ; 2014 ; Code of Federal Regulations 2014 ; 2014 ; https://www.govinfo.gov/ >
+    au < manifest ; 2016 ; Code of Federal Regulations 2016 ; 2016 ; https://www.govinfo.gov/ >
+    au < manifest ; 2017 ; Code of Federal Regulations 2017 ; 2017 ; https://www.govinfo.gov/ >
+    au < manifest ; 2018 ; Code of Federal Regulations 2018 ; 2018 ; https://www.govinfo.gov/ >
     au < released ; 2019 ; Code of Federal Regulations 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < ready ; 2020 ; Code of Federal Regulations 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < ready ; 2021 ; Code of Federal Regulations 2021 ; 2021 ; https://www.govinfo.gov/ >
@@ -585,6 +590,7 @@
     au < released ; 2019 ; Economic Report of the President 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < manifest ; 2020 ; Economic Report of the President 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < manifest ; 2021 ; Economic Report of the President 2021 ; 2021 ; https://www.govinfo.gov/ >
+    au < manifest ; 2022 ; Economic Report of the President 2022 ; 2022 ; https://www.govinfo.gov/ >
 
   }
 
