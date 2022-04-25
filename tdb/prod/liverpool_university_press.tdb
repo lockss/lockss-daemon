@@ -30,7 +30,7 @@
     au < manifest ; 2003 ; Archives Volume 28 ; 28 >
     au < manifest ; 2004 ; Archives Volume 29 ; 29 >
     au < manifest ; 2005 ; Archives Volume 30 ; 30 >
-    au < ready ; 2005 ; Archives Volume 31 ; 31 >
+    au < releasing ; 2005 ; Archives Volume 31 ; 31 >
     au < manifest ; 2007 ; Archives Volume 32 ; 32 >
     au < doNotProcess ; 2008 ; Archives Volume 33 ; 33 >
     au < doNotProcess ; 2009 ; Archives Volume 34 ; 34 >
@@ -123,7 +123,7 @@
 
     au < released ; 2019 ; Bulletin of Contemporary Hispanic Studies Volume 1 ; 1 >
     au < released ; 2020 ; Bulletin of Contemporary Hispanic Studies Volume 2 ; 2 >
-    au < ready ; 2021 ; Bulletin of Contemporary Hispanic Studies Volume 3 ; 3 >
+    au < releasing ; 2021 ; Bulletin of Contemporary Hispanic Studies Volume 3 ; 3 >
     au < expected ; 2022 ; Bulletin of Contemporary Hispanic Studies Volume 4 ; 4 >
 
   }
@@ -220,7 +220,7 @@
     au < doNotProcess ; 2018 ; Bulletin of Hispanic Studies Volume 95 ; 95 >
     au < doNotProcess ; 2019 ; Bulletin of Hispanic Studies Volume 96 ; 96 >
     au < released ; 2020 ; Bulletin of Hispanic Studies Volume 97 ; 97 >
-    au < ready ; 2021 ; Bulletin of Hispanic Studies Volume 98 ; 98 >
+    au < releasing ; 2021 ; Bulletin of Hispanic Studies Volume 98 ; 98 >
     au < manifest ; 2022 ; Bulletin of Hispanic Studies Volume 99 ; 99 >
 
   }
@@ -330,7 +330,7 @@
     au < doNotProcess ; 2018 ; Catalan Review Volume 32 ; 32 >
     au < doNotProcess ; 2019 ; Catalan Review Volume 33 ; 33 >
     au < released ; 2020 ; Catalan Review Volume 34 ; 34 >
-    au < ready ; 2021 ; Catalan Review Volume 35 ; 35 >
+    au < releasing ; 2021 ; Catalan Review Volume 35 ; 35 >
     au < expected ; 2022 ; Catalan Review Volume 36 ; 36 >
 
   }
@@ -369,7 +369,7 @@
     au < doNotProcess ; 2018 ; Contemporary French Civilization Volume 43 ; 43 >
     au < doNotProcess ; 2019 ; Contemporary French Civilization Volume 44 ; 44 >
     au < released ; 2020 ; Contemporary French Civilization Volume 45 ; 45 >
-    au < ready ; 2021 ; Contemporary French Civilization Volume 46 ; 46 >
+    au < releasing ; 2021 ; Contemporary French Civilization Volume 46 ; 46 >
     au < expected ; 2022 ; Contemporary French Civilization Volume 47 ; 47 >
 
   }
@@ -385,7 +385,7 @@
     param[journal_id] = dap
     #Published 2021-present
 
-    au < ready ; 2021 ; Developing Academic Practice Volume 2021 ; 2021 >
+    au < releasing ; 2021 ; Developing Academic Practice Volume 2021 ; 2021 >
     au < manifest ; 2022 ; Developing Academic Practice Volume 2022 ; 2022 >
 
   }
@@ -424,8 +424,8 @@
     au < manifest ; 2005 ; Eighteenth-Century Ireland Volume 20 ; 20 >
     au < manifest ; 2006 ; Eighteenth-Century Ireland Volume 21 ; 21 >
     au < manifest ; 2007 ; Eighteenth-Century Ireland Volume 22 ; 22 >
-    au < ready ; 2008 ; Eighteenth-Century Ireland Volume 23 ; 23 >
-    au < ready ; 2009 ; Eighteenth-Century Ireland Volume 24 ; 24 >
+    au < releasing ; 2008 ; Eighteenth-Century Ireland Volume 23 ; 23 >
+    au < releasing ; 2009 ; Eighteenth-Century Ireland Volume 24 ; 24 >
     au < released ; 2010 ; Eighteenth-Century Ireland Volume 25 ; 25 >
     au < released ; 2011 ; Eighteenth-Century Ireland Volume 26 ; 26 >
     au < doNotProcess ; 2011 ; Eighteenth-Century Ireland Volume Special_Issue ; Special_Issue >
@@ -461,7 +461,7 @@
     au < manifest ; 1997 ; Essays in Romanticism Volume 4 ; 4 >
     au < manifest ; 1998 ; Essays in Romanticism Volume 5 ; 5 >
     au < manifest ; 1999 ; Essays in Romanticism Volume 6 ; 6 >
-    au < ready ; 2000 ; Essays in Romanticism Volume 7 ; 7 >
+    au < releasing ; 2000 ; Essays in Romanticism Volume 7 ; 7 >
     au < manifest ; 2001 ; Essays in Romanticism Volume 8 ; 8 >
     au < manifest ; 2002 ; Essays in Romanticism Volume 9 ; 9 >
     au < manifest ; 2003 ; Essays in Romanticism Volume 10 ; 10 >
@@ -469,7 +469,7 @@
     au < manifest ; 2005 ; Essays in Romanticism Volume 12 ; 12 >
     au < manifest ; 2006 ; Essays in Romanticism Volume 13 ; 13 >
     au < manifest ; 2007 ; Essays in Romanticism Volume 14 ; 14 >
-    au < ready ; 2008 ; Essays in Romanticism Volume 15 ; 15 >
+    au < releasing ; 2008 ; Essays in Romanticism Volume 15 ; 15 >
     au < doNotProcess ; 2009 ; Essays in Romanticism Volume 16 ; 16 >
     au < doNotProcess ; 2010 ; Essays in Romanticism Volume 17 ; 17 >
     au < doNotProcess ; 2011 ; Essays in Romanticism Volume 18 ; 18 >
@@ -482,7 +482,7 @@
     au < doNotProcess ; 2018 ; Essays in Romanticism Volume 25 ; 25 >
     au < doNotProcess ; 2019 ; Essays in Romanticism Volume 26 ; 26 >
     au < released ; 2020 ; Essays in Romanticism Volume 27 ; 27 >
-    au < ready ; 2021 ; Essays in Romanticism Volume 28 ; 28 >
+    au < releasing ; 2021 ; Essays in Romanticism Volume 28 ; 28 >
     au < expected ; 2022 ; Essays in Romanticism Volume 29 ; 29 >
 
   }
@@ -613,7 +613,7 @@
     au < manifest ; 2005 ; Historical Studies in Industrial Relations Volume 19 ; 19 >
     au < manifest ; 2005 ; Historical Studies in Industrial Relations Volume 20 ; 20 >
     au < manifest ; 2006 ; Historical Studies in Industrial Relations Volume 21 ; 21 >
-    au < ready ; 2006 ; Historical Studies in Industrial Relations Volume 22 ; 22 >
+    au < releasing ; 2006 ; Historical Studies in Industrial Relations Volume 22 ; 22 >
     au < exists ; 2007 ; Historical Studies in Industrial Relations Volume 23-24 ; 23-24 >
     au < doNotProcess ; 2008 ; Historical Studies in Industrial Relations Volume 25-26 ; 25-26 >
     au < doNotProcess ; 2009 ; Historical Studies in Industrial Relations Volume 27-28 ; 27-28 >
@@ -788,7 +788,7 @@
     au < doNotProcess ; 2018 ; Journal of Literary & Cultural Disability Studies Volume 12 ; 12 >
     au < doNotProcess ; 2019 ; Journal of Literary & Cultural Disability Studies Volume 13 ; 13 >
     au < released ; 2020 ; Journal of Literary & Cultural Disability Studies Volume 14 ; 14 >
-    au < ready ; 2021 ; Journal of Literary & Cultural Disability Studies Volume 15 ; 15 >
+    au < releasing ; 2021 ; Journal of Literary & Cultural Disability Studies Volume 15 ; 15 >
     au < manifest ; 2022 ; Journal of Literary & Cultural Disability Studies Volume 16 ; 16 >
 
   }
@@ -958,7 +958,7 @@
     au < released ; 2019 ; Labour History: A Journal of Labour and Social History Volume 117 ; 117 >
     au < released ; 2020 ; Labour History: A Journal of Labour and Social History Volume 118 ; 118 >
     au < released ; 2020 ; Labour History: A Journal of Labour and Social History Volume 119 ; 119 >
-    au < ready ; 2021 ; Labour History: A Journal of Labour and Social History Volume 120 ; 120 >
+    au < releasing ; 2021 ; Labour History: A Journal of Labour and Social History Volume 120 ; 120 >
     au < manifest ; 2021 ; Labour History: A Journal of Labour and Social History Volume 121 ; 121 >
     au < expected ; 2022 ; Labour History: A Journal of Labour and Social History Volume 122 ; 122 >
 
@@ -997,7 +997,7 @@
     au < doNotProcess ; 2018 ; Labour History Review Volume 83 ; 83 >
     au < doNotProcess ; 2019 ; Labour History Review Volume 84 ; 84 >
     au < released ; 2020 ; Labour History Review Volume 85 ; 85 >
-    au < ready ; 2021 ; Labour History Review Volume 86 ; 86 >
+    au < releasing ; 2021 ; Labour History Review Volume 86 ; 86 >
     au < manifest ; 2022 ; Labour History Review Volume 87 ; 87 >
 
   }
@@ -1341,7 +1341,7 @@
     au < doNotProcess ; 2018 ; Music, Sound, and the Moving Image Volume 12 ; 12 >
     au < doNotProcess ; 2019 ; Music, Sound, and the Moving Image Volume 13 ; 13 >
     au < released ; 2020 ; Music, Sound, and the Moving Image Volume 14 ; 14 >
-    au < ready ; 2021 ; Music, Sound, and the Moving Image Volume 15 ; 15 >
+    au < releasing ; 2021 ; Music, Sound, and the Moving Image Volume 15 ; 15 >
     au < expected ; 2022 ; Music, Sound, and the Moving Image Volume 16 ; 16 >
 
   }
@@ -1429,7 +1429,7 @@
     au < doNotProcess ; 2018 ; Romani Studies Volume 28 ; 28 >
     au < doNotProcess ; 2019 ; Romani Studies Volume 29 ; 29 >
     au < released ; 2020 ; Romani Studies Volume 30 ; 30 >
-    au < ready ; 2021 ; Romani Studies Volume 31 ; 31 >
+    au < releasing ; 2021 ; Romani Studies Volume 31 ; 31 >
     au < expected ; 2022 ; Romani Studies Volume 32 ; 32 >
 
   }
@@ -1520,7 +1520,7 @@
     au < doNotProcess ; 2018 ; Science Fiction Film and Television Volume 11 ; 11 >
     au < doNotProcess ; 2019 ; Science Fiction Film and Television Volume 12 ; 12 >
     au < released ; 2020 ; Science Fiction Film and Television Volume 13 ; 13 >
-    au < ready ; 2021 ; Science Fiction Film and Television Volume 14 ; 14 >
+    au < releasing ; 2021 ; Science Fiction Film and Television Volume 14 ; 14 >
     au < manifest ; 2022 ; Science Fiction Film and Television Volume 15 ; 15 >
 
   }
@@ -1623,7 +1623,7 @@
     au < doNotProcess ; 2018 ; Theory & Struggle Volume 119 ; 119 >
     au < released ; 2019 ; Theory & Struggle Volume 120 ; 120 >
     au < released ; 2020 ; Theory & Struggle Volume 121 ; 121 >
-    au < ready ; 2021 ; Theory & Struggle Volume 122 ; 122 >
+    au < releasing ; 2021 ; Theory & Struggle Volume 122 ; 122 >
     au < expected ; 2022 ; Theory & Struggle Volume 123 ; 123 >
 
   }  
@@ -1647,7 +1647,7 @@
     au < doNotProcess ; 1998 ; Third World Planning Review Volume 20 ; 20 >
     au < doNotProcess ; 1999 ; Third World Planning Review Volume 21 ; 21 >
     au < doNotProcess ; 2000 ; Third World Planning Review Volume 22 ; 22 >
-    au < ready ; 2001 ; Third World Planning Review Volume 23 ; 23 >
+    au < releasing ; 2001 ; Third World Planning Review Volume 23 ; 23 >
 
   }
 

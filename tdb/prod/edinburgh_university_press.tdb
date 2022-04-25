@@ -36,7 +36,7 @@
       au < released ; 2018 ; African Journal of International and Comparative Law Volume 26 ; 26 ; https://www.euppublishing.com/ >
       au < released ; 2019 ; African Journal of International and Comparative Law Volume 27 ; 27 ; https://www.euppublishing.com/ >
       au < released ; 2020 ; African Journal of International and Comparative Law Volume 28 ; 28 ; https://www.euppublishing.com/ >
-      au < ready ; 2021 ; African Journal of International and Comparative Law Volume 29 ; 29 ; https://www.euppublishing.com/ >
+      au < releasing ; 2021 ; African Journal of International and Comparative Law Volume 29 ; 29 ; https://www.euppublishing.com/ >
       au < manifest ; 2022 ; African Journal of International and Comparative Law Volume 30 ; 30 ; https://www.euppublishing.com/ >
 
     }
@@ -97,7 +97,7 @@
     implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
     param[journal_id] = legal
 
-    au < ready ; 2021 ; Legalities: The Australian and New Zealand Journal of Law and Society Volume 1 ; 1 ; https://www.euppublishing.com/ >
+    au < releasing ; 2021 ; Legalities: The Australian and New Zealand Journal of Law and Society Volume 1 ; 1 ; https://www.euppublishing.com/ >
     au < expected ; 2022 ; Legalities: The Australian and New Zealand Journal of Law and Society Volume 2 ; 2 ; https://www.euppublishing.com/ >
   }
 
@@ -151,7 +151,7 @@
     au < released ; 2018 ; Scottish Church History Volume 47 ; 47 ; https://www.euppublishing.com/ >
     au < released ; 2019 ; Scottish Church History Volume 48 ; 48 ; https://www.euppublishing.com/ >
     au < released ; 2020 ; Scottish Church History Volume 49 ; 49 ; https://www.euppublishing.com/ >
-    au < ready ; 2021 ; Scottish Church History Volume 50 ; 50 ; https://www.euppublishing.com/ >
+    au < releasing ; 2021 ; Scottish Church History Volume 50 ; 50 ; https://www.euppublishing.com/ >
     au < manifest ; 2022 ; Scottish Church History Volume 51 ; 51 ; https://www.euppublishing.com/ >
   }
 
@@ -178,7 +178,7 @@
     au < released ; 2018 ; Somatechnics Volume 8 ; 8 ; https://www.euppublishing.com/ >
     au < released ; 2019 ; Somatechnics Volume 9 ; 9 ; https://www.euppublishing.com/ >
     au < released ; 2020 ; Somatechnics Volume 10 ; 10 ; https://www.euppublishing.com/ >
-    au < ready ; 2021 ; Somatechnics Volume 11 ; 11 ; https://www.euppublishing.com/ >
+    au < releasing ; 2021 ; Somatechnics Volume 11 ; 11 ; https://www.euppublishing.com/ >
     au < expected ; 2022 ; Somatechnics Volume 12 ; 12 ; https://www.euppublishing.com/ >
 
   }
@@ -206,7 +206,7 @@
     au < released ; 2018 ; Victoriographies – A Journal of Nineteenth-Century Writing, 1790-1914 Volume 8 ; 8 ; https://www.euppublishing.com/ >
     au < released ; 2019 ; Victoriographies – A Journal of Nineteenth-Century Writing, 1790-1914 Volume 9 ; 9 ; https://www.euppublishing.com/ >
     au < released ; 2020 ; Victoriographies – A Journal of Nineteenth-Century Writing, 1790-1914 Volume 10 ; 10 ; https://www.euppublishing.com/ >
-    au < ready ; 2021 ; Victoriographies – A Journal of Nineteenth-Century Writing, 1790-1914 Volume 11 ; 11 ; https://www.euppublishing.com/ >
+    au < releasing ; 2021 ; Victoriographies – A Journal of Nineteenth-Century Writing, 1790-1914 Volume 11 ; 11 ; https://www.euppublishing.com/ >
     au < manifest ; 2022 ; Victoriographies – A Journal of Nineteenth-Century Writing, 1790-1914 Volume 12 ; 12 ; https://www.euppublishing.com/ >
 
   }
@@ -229,7 +229,7 @@
     au < released ; 2018 ; Deleuze and Guattari Studies Volume 12 ; 12 ; https://www.euppublishing.com/ >
     au < released ; 2019 ; Deleuze and Guattari Studies Volume 13 ; 13 ; https://www.euppublishing.com/ >
     au < released ; 2020 ; Deleuze and Guattari Studies Volume 14 ; 14 ; https://www.euppublishing.com/ >
-    au < ready ; 2021 ; Deleuze and Guattari Studies Volume 15 ; 15 ; https://www.euppublishing.com/ >
+    au < releasing ; 2021 ; Deleuze and Guattari Studies Volume 15 ; 15 ; https://www.euppublishing.com/ >
     au < manifest ; 2022 ; Deleuze and Guattari Studies Volume 16 ; 16 ; https://www.euppublishing.com/ >
 
   }
@@ -379,7 +379,7 @@
       au < released ; 2018 ; Ben Jonson Journal Volume 25 ; 25 ; https://www.euppublishing.com/ >
       au < released ; 2019 ; Ben Jonson Journal Volume 26 ; 26 ; https://www.euppublishing.com/ >
       au < released ; 2020 ; Ben Jonson Journal Volume 27 ; 27 ; https://www.euppublishing.com/ >
-      au < ready ; 2021 ; Ben Jonson Journal Volume 28 ; 28 ; https://www.euppublishing.com/ >
+      au < releasing ; 2021 ; Ben Jonson Journal Volume 28 ; 28 ; https://www.euppublishing.com/ >
       au < manifest ; 2022 ; Ben Jonson Journal Volume 29 ; 29 ; https://www.euppublishing.com/ >
 
     }
@@ -608,13 +608,13 @@
     au < manifest ; 2010 ; Library and Information History Volume 26 ; 26 ; https://www.euppublishing.com/ >
     au < manifest ; 2011 ; Library and Information History Volume 27 ; 27 ; https://www.euppublishing.com/ >
     au < manifest ; 2012 ; Library and Information History Volume 28 ; 28 ; https://www.euppublishing.com/ >
-    au < ready ; 2013 ; Library and Information History Volume 29 ; 29 ; https://www.euppublishing.com/ >
+    au < releasing ; 2013 ; Library and Information History Volume 29 ; 29 ; https://www.euppublishing.com/ >
     au < manifest ; 2014 ; Library and Information History Volume 30 ; 30 ; https://www.euppublishing.com/ >
-    au < ready ; 2015 ; Library and Information History Volume 31 ; 31 ; https://www.euppublishing.com/ >
+    au < releasing ; 2015 ; Library and Information History Volume 31 ; 31 ; https://www.euppublishing.com/ >
     au < manifest ; 2016 ; Library and Information History Volume 32 ; 32 ; https://www.euppublishing.com/ >
-    au < ready ; 2017 ; Library and Information History Volume 33 ; 33 ; https://www.euppublishing.com/ >
+    au < releasing ; 2017 ; Library and Information History Volume 33 ; 33 ; https://www.euppublishing.com/ >
     au < manifest ; 2018 ; Library and Information History Volume 34 ; 34 ; https://www.euppublishing.com/ >
-    au < ready ; 2019 ; Library and Information History Volume 35 ; 35 ; https://www.euppublishing.com/ >
+    au < releasing ; 2019 ; Library and Information History Volume 35 ; 35 ; https://www.euppublishing.com/ >
     au < released ; 2020 ; Library and Information History Volume 36 ; 36 ; https://www.euppublishing.com/ >
     au < released ; 2021 ; Library and Information History Volume 37 ; 37 ; https://www.euppublishing.com/ >
     au < manifest ; 2022 ; Library and Information History Volume 38 ; 38 ; https://www.euppublishing.com/ >
@@ -955,7 +955,7 @@
      au < released ; 2018 ; Gothic Studies Volume 20 ; 20 ; https://www.euppublishing.com/ >
      au < released ; 2019 ; Gothic Studies Volume 21 ; 21 ; https://www.euppublishing.com/ >
      au < released ; 2020 ; Gothic Studies Volume 22 ; 22 ; https://www.euppublishing.com/ >
-     au < ready ; 2021 ; Gothic Studies Volume 23 ; 23 ; https://www.euppublishing.com/ >
+     au < releasing ; 2021 ; Gothic Studies Volume 23 ; 23 ; https://www.euppublishing.com/ >
      au < manifest ; 2022 ; Gothic Studies Volume 24 ; 24 ; https://www.euppublishing.com/ >
 
   }
@@ -1203,7 +1203,7 @@
       au < released ; 2018 ; International Research in Children's Literature Volume 11 ; 11 ; https://www.euppublishing.com/ >
       au < released ; 2019 ; International Research in Children's Literature Volume 12 ; 12 ; https://www.euppublishing.com/ >
       au < released ; 2020 ; International Research in Children's Literature Volume 13 ; 13 ; https://www.euppublishing.com/ >
-      au < ready ; 2021 ; International Research in Children's Literature Volume 14 ; 14 ; https://www.euppublishing.com/ >
+      au < releasing ; 2021 ; International Research in Children's Literature Volume 14 ; 14 ; https://www.euppublishing.com/ >
       au < manifest ; 2022 ; International Research in Children's Literature Volume 15 ; 15 ; https://www.euppublishing.com/ >
 
     }
@@ -1236,7 +1236,7 @@
   
       au < released ; 2019 ; Irish University Review Volume 49 ; 49 ; https://www.euppublishing.com/ >
       au < released ; 2020 ; Irish University Review Volume 50 ; 50 ; https://www.euppublishing.com/ >
-      au < ready ; 2021 ; Irish University Review Volume 51 ; 51 ; https://www.euppublishing.com/ >
+      au < releasing ; 2021 ; Irish University Review Volume 51 ; 51 ; https://www.euppublishing.com/ >
       au < expected ; 2022 ; Irish University Review Volume 52 ; 52 ; https://www.euppublishing.com/ >
     }
   
@@ -1280,7 +1280,7 @@
     
       au < released ; 2019 ; Journal of Beckett Studies Volume 28 ; 28 ; https://www.euppublishing.com/ >
       au < released ; 2020 ; Journal of Beckett Studies Volume 29 ; 29 ; https://www.euppublishing.com/ >
-      au < ready ; 2021 ; Journal of Beckett Studies Volume 30 ; 30 ; https://www.euppublishing.com/ >
+      au < releasing ; 2021 ; Journal of Beckett Studies Volume 30 ; 30 ; https://www.euppublishing.com/ >
       au < expected ; 2022 ; Journal of Beckett Studies Volume 31 ; 31 ; https://www.euppublishing.com/ >
     }
     
@@ -1320,7 +1320,7 @@
     
       au < released ; 2019 ; Journal of British Cinema and Television Volume 16 ; 16 ; https://www.euppublishing.com/ >
       au < released ; 2020 ; Journal of British Cinema and Television Volume 17 ; 17 ; https://www.euppublishing.com/ >
-      au < ready ; 2021 ; Journal of British Cinema and Television Volume 18 ; 18 ; https://www.euppublishing.com/ >
+      au < releasing ; 2021 ; Journal of British Cinema and Television Volume 18 ; 18 ; https://www.euppublishing.com/ >
       au < manifest ; 2022 ; Journal of British Cinema and Television Volume 19 ; 19 ; https://www.euppublishing.com/ >
     }
     
@@ -1512,7 +1512,7 @@
       au < released ; 2018 ; Journal of Scottish Historical Studies Volume 38 ; 38 ; https://www.euppublishing.com/ >
       au < released ; 2019 ; Journal of Scottish Historical Studies Volume 39 ; 39 ; https://www.euppublishing.com/ >
       au < released ; 2020 ; Journal of Scottish Historical Studies Volume 40 ; 40 ; https://www.euppublishing.com/ >
-      au < ready ; 2021 ; Journal of Scottish Historical Studies Volume 41 ; 41 ; https://www.euppublishing.com/ >
+      au < releasing ; 2021 ; Journal of Scottish Historical Studies Volume 41 ; 41 ; https://www.euppublishing.com/ >
       au < expected ; 2022 ; Journal of Scottish Historical Studies Volume 42 ; 42 ; https://www.euppublishing.com/ >
 
     }
@@ -1649,7 +1649,7 @@
       au < released ; 2018 ; Modernist Cultures Volume 13 ; 13 ; https://www.euppublishing.com/ >
       au < released ; 2019 ; Modernist Cultures Volume 14 ; 14 ; https://www.euppublishing.com/ >
       au < released ; 2020 ; Modernist Cultures Volume 15 ; 15 ; https://www.euppublishing.com/ >
-      au < ready ; 2021 ; Modernist Cultures Volume 16 ; 16 ; https://www.euppublishing.com/ >
+      au < releasing ; 2021 ; Modernist Cultures Volume 16 ; 16 ; https://www.euppublishing.com/ >
       au < manifest ; 2022 ; Modernist Cultures Volume 17 ; 17 ; https://www.euppublishing.com/ >
 
     }
@@ -2419,7 +2419,7 @@
       au < released ; 2018 ; Studies in World Christianity Volume 24 ; 24 ; https://www.euppublishing.com/ >
       au < released ; 2019 ; Studies in World Christianity Volume 25 ; 25 ; https://www.euppublishing.com/ >
       au < released ; 2020 ; Studies in World Christianity Volume 26 ; 26 ; https://www.euppublishing.com/ >
-      au < ready ; 2021 ; Studies in World Christianity Volume 27 ; 27 ; https://www.euppublishing.com/ >
+      au < releasing ; 2021 ; Studies in World Christianity Volume 27 ; 27 ; https://www.euppublishing.com/ >
       au < manifest ; 2022 ; Studies in World Christianity Volume 28 ; 28 ; https://www.euppublishing.com/ >
 
     }
@@ -2539,7 +2539,7 @@
       au < released ; 2018 ; Word Structure Volume 11 ; 11 ; https://www.euppublishing.com/ >
       au < released ; 2019 ; Word Structure Volume 12 ; 12 ; https://www.euppublishing.com/ >
       au < released ; 2020 ; Word Structure Volume 13 ; 13 ; https://www.euppublishing.com/ >
-      au < ready ; 2021 ; Word Structure Volume 14 ; 14 ; https://www.euppublishing.com/ >
+      au < releasing ; 2021 ; Word Structure Volume 14 ; 14 ; https://www.euppublishing.com/ >
       au < manifest ; 2022 ; Word Structure Volume 15 ; 15 ; https://www.euppublishing.com/ >
 
     }
@@ -2616,7 +2616,7 @@
       au < released ; 2018 ; Costume Volume 52 ; 52 ; https://www.euppublishing.com/ >
       au < released ; 2019 ; Costume Volume 53 ; 53 ; https://www.euppublishing.com/ >
       au < released ; 2020 ; Costume Volume 54 ; 54 ; https://www.euppublishing.com/ >
-      au < ready ; 2021 ; Costume Volume 55 ; 55 ; https://www.euppublishing.com/ >
+      au < releasing ; 2021 ; Costume Volume 55 ; 55 ; https://www.euppublishing.com/ >
       au < manifest ; 2022 ; Costume Volume 56 ; 56 ; https://www.euppublishing.com/ >
 
     }
