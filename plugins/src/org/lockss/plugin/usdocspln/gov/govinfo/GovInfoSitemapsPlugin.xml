@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>12</string>
+    <string>13</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -51,7 +51,7 @@ POSSIBILITY OF SUCH DAMAGE.
       </entry>
       <entry>
         <string>Substance</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -151,7 +151,7 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"content/pkg/(%s-[^/]+)/(html?|pdf)/\1\.\2$", collection_id</string>
+      <string>"content/pkg/(%s-[^/]+)/(html?|pdf)/\1\.(html?|pdf)$", collection_id</string>
     </list>
   </entry>
   <entry>
