@@ -53,7 +53,6 @@ import java.util.Map;
  */
 public class ChineseUniversityHongKongSourceXmlSchemaHelper
 implements SourceXmlSchemaHelper {
-  static Logger log = Logger.getLogger(ChineseUniversityHongKongSourceXmlSchemaHelper.class);
 
   /*
    <?xml version="1.0" encoding="UTF-8"?>
@@ -102,40 +101,6 @@ implements SourceXmlSchemaHelper {
 
   */
 
-  static private final NodeValue ARTICLE_ID = new NodeValue() {
-    @Override
-    public String getValue(Node node) {
-
-      log.debug3("getValue of Chinese University of Hong Kong Article ID");
-      String issue = null;
-      Node parent = node.getParentNode();
-      NodeList childNodes = parent.getChildNodes();
-      for (int m = 0; m < childNodes.getLength(); m++) {
-        Node child = childNodes.item(m);
-        if (article_title.equals(child.getNodeName()) ){
-          issue = child.getTextContent();
-        }
-        if (issue != null) {
-          break;
-        }
-      }
-
-      StringBuilder issueVal = new StringBuilder();
-      if (issue != null) {
-        issueVal.append(issue);
-      }
-
-      if (issueVal.length() != 0)  {
-        log.debug3("Article ID: " + issueVal.toString());
-        return issueVal.toString();
-      } else {
-        log.debug3("no value in this Article ID");
-        return null;
-      }
-
-    }
-  };
-
   protected static final String article_title = "/mods/titleInfo/title";
   protected static final String journal_subtitle = "/mods/relatedItem[@type=\"host\"]/titleInfo/subTitle";
   protected static final String journal_title = "/mods/relatedItem[@type=\"host\"]/titleInfo/title";
@@ -144,6 +109,16 @@ implements SourceXmlSchemaHelper {
   private static final String art_pubdate = "/mods/originInfo/dateCreated";
   private static final String issue = "/mods/relatedItem[@type = \"host\"]/part/detail[@type = \"issue\"]/number";
   protected static final String start_page = "/mods/relatedItem[@type = \"host\"]/part/extent[@unit = \"pages\"]/start";
+
+  protected static final String article_title_alt = "/modsCollection/mods/titleInfo/title";
+  protected static final String journal_subtitle_alt = "/modsCollection/mods/relatedItem[@type=\"host\"]/titleInfo/subTitle";
+  protected static final String journal_title_alt = "/modsCollection/mods/relatedItem[@type=\"host\"]/titleInfo/title";
+  protected static final String author_alt = "/modsCollection/mods/name[@type = \"personal\"]/namePart";
+  private static final String publisher_alt = "/modsCollection/mods/originInfo/publisher";
+  private static final String art_pubdate_alt = "/modsCollection/mods/originInfo/dateCreated";
+  private static final String issue_alt = "/modsCollection/mods/relatedItem[@type = \"host\"]/part/detail[@type = \"issue\"]/number";
+  protected static final String start_page_alt = "/modsCollection/mods/relatedItem[@type = \"host\"]/part/extent[@unit = \"pages\"]/start";
+
 
   static private final Map<String,XPathValue>     
   articleMap = new HashMap<String,XPathValue>();
@@ -157,6 +132,15 @@ implements SourceXmlSchemaHelper {
     articleMap.put(author, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(issue, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(start_page, XmlDomMetadataExtractor.TEXT_VALUE);
+
+    articleMap.put(art_pubdate_alt, XmlDomMetadataExtractor.TEXT_VALUE);
+    articleMap.put(publisher_alt, XmlDomMetadataExtractor.TEXT_VALUE);
+    articleMap.put(article_title_alt, XmlDomMetadataExtractor.TEXT_VALUE);
+    articleMap.put(journal_title_alt, XmlDomMetadataExtractor.TEXT_VALUE);
+    articleMap.put(journal_subtitle_alt, XmlDomMetadataExtractor.TEXT_VALUE);
+    articleMap.put(author_alt, XmlDomMetadataExtractor.TEXT_VALUE);
+    articleMap.put(issue_alt, XmlDomMetadataExtractor.TEXT_VALUE);
+    articleMap.put(start_page_alt, XmlDomMetadataExtractor.TEXT_VALUE);
   }
 
   static private final Map<String,XPathValue>     
@@ -172,6 +156,13 @@ implements SourceXmlSchemaHelper {
     cookMap.put(issue, MetadataField.FIELD_ISSUE);
     // issue will be used as volume, it is confirmed by publihser
     cookMap.put(issue, MetadataField.FIELD_VOLUME);
+
+    cookMap.put(article_title_alt, MetadataField.FIELD_ARTICLE_TITLE);
+    cookMap.put(journal_title_alt, MetadataField.FIELD_PUBLICATION_TITLE);
+    cookMap.put(author_alt, MetadataField.FIELD_AUTHOR);
+    cookMap.put(art_pubdate_alt, MetadataField.FIELD_DATE);
+    cookMap.put(publisher_alt, MetadataField.FIELD_PUBLISHER);
+    cookMap.put(issue_alt, MetadataField.FIELD_ISSUE);
   }
 
 

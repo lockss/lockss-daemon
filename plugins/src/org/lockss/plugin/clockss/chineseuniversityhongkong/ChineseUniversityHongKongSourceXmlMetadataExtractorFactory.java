@@ -44,7 +44,10 @@ import org.lockss.util.Logger;
 
 
 public class ChineseUniversityHongKongSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
+  private static final String unmappedMetadata = "ChineseUniversityHongKongUnmappedMetadata";
+
   private static final Logger log = Logger.getLogger(ChineseUniversityHongKongSourceXmlMetadataExtractorFactory.class);
+  static Logger upmappedlog = Logger.getLogger(unmappedMetadata);
 
   private static SourceXmlSchemaHelper  schemaHelper = null;
   private static final String TITLE_SEPARATOR = ":";
@@ -77,7 +80,8 @@ public class ChineseUniversityHongKongSourceXmlMetadataExtractorFactory extends 
         StringBuilder titleVal = new StringBuilder();
 
         String page = thisAM.getRaw(ChineseUniversityHongKongSourceXmlSchemaHelper.start_page);
-        if (page != null && page.contains("-")) {
+        String page_alt = thisAM.getRaw(ChineseUniversityHongKongSourceXmlSchemaHelper.start_page_alt);
+        if (page != null && page.contains("-"))  {
             thisAM.put(MetadataField.FIELD_START_PAGE,page.substring(0, page.indexOf("-")));
             thisAM.put(MetadataField.FIELD_END_PAGE,page.substring(page.indexOf("-") + 1));
 
@@ -85,6 +89,28 @@ public class ChineseUniversityHongKongSourceXmlMetadataExtractorFactory extends 
             //in cuhk-released/2022_01/LPJ/i45a.zip!/i45a_cover.xml, the start page is not a range
             // so set it to '0'
             thisAM.put(MetadataField.FIELD_START_PAGE,"1");
+        } else {
+            if (page_alt != null && page_alt.contains("-")) {
+                thisAM.put(MetadataField.FIELD_START_PAGE,page_alt.substring(0, page_alt.indexOf("-")));
+                thisAM.put(MetadataField.FIELD_END_PAGE,page_alt.substring(page_alt.indexOf("-") + 1));
+
+            } else if (page_alt != null) {
+                //in cuhk-released/2022_01/LPJ/i45a.zip!/i45a_cover.xml, the start page is not a range
+                // so set it to '0'
+                thisAM.put(MetadataField.FIELD_START_PAGE,"1");
+            } else {
+                upmappedlog.debug2("missing data: startpage && startpage_alt, cu = " + cu.getUrl());
+            }
+        }
+
+        if ( (thisAM.getRaw(ChineseUniversityHongKongSourceXmlSchemaHelper.article_title) == null) &&
+                (thisAM.getRaw(ChineseUniversityHongKongSourceXmlSchemaHelper.article_title_alt) == null)) {
+            upmappedlog.debug2("missing data: article_title, cu = " + cu.getUrl());
+        }
+
+        if ( (thisAM.getRaw(ChineseUniversityHongKongSourceXmlSchemaHelper.journal_title) == null) &&
+                (thisAM.getRaw(ChineseUniversityHongKongSourceXmlSchemaHelper.journal_title_alt) == null)) {
+            upmappedlog.debug2("missing data: journal_title, cu = " + cu.getUrl());
         }
 
     	thisAM.put(MetadataField.FIELD_PUBLICATION_TYPE,MetadataField.PUBLICATION_TYPE_JOURNAL);
