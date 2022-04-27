@@ -39,6 +39,11 @@
         -->
       <string>1,"^(%s|%s)(ojs/)?(journals/)?(index\.php/)?(%s/)?(index\.php/)?(%s/)?(article|issue)/(download(SuppFile)?|view(Article|File|(Download|PDF)Interstitial|RST)?)/", to_http(base_url),to_https(base_url), journal_id, journal_id</string>
       <string>1,"^(%s|%s)(ojs/)?(journals/)?(index\.php/)?(%s/)?rt/(bio|metadata|printerFriendly|suppFileMetadata|suppFiles)/", to_http(base_url),to_https(base_url), journal_id</string>
+        <!-- citation files
+         https://www.aijournals.com/index.php/ajmr/citationstylelanguage/get/chicago-author-date?submissionId=2230
+         https://www.aijournals.com/index.php/ajmr/citationstylelanguage/download/ris?submissionId=2230
+         -->
+      <string>1,"^(%s|%s)(ojs/)?(journals/)?(index\.php/)?(%s/)?(index\.php/)?(%s/)?citationstylelanguage/(get|download)/", to_http(base_url),to_https(base_url), journal_id, journal_id</string>
       <string>2,"^(%s|%s).*plugins/generic/pdfJsViewer/pdf\.js/web/viewer\.html\?file=https?[%%]25", to_http(base_url),to_https(base_url)</string>
       <string>1,"^(%s|%s).*plugins/generic/pdfJsViewer/pdf\.js/web/viewer\.html\?file=", to_http(base_url),to_https(base_url)</string>
     </list>
