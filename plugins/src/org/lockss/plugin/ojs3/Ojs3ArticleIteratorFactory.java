@@ -85,9 +85,9 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
                					     ArticleMetadataExtractorFactory {
 
   private static final Logger log = Logger.getLogger(Ojs3ArticleIteratorFactory.class);
-    
-  protected static final String PATTERN_TEMPLATE = "\".*/(issue|article)/view/[^/]+\"";
-  protected static Pattern ABSTRACT_PATTERN = Pattern.compile("(issue|article)/view/[^/]+", Pattern.CASE_INSENSITIVE);
+
+  protected static final String PATTERN_TEMPLATE = "\".*/article/view/[^/]+$\"";
+  protected static Pattern ABSTRACT_PATTERN = Pattern.compile("article/view/[^/]+$", Pattern.CASE_INSENSITIVE);
 
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
