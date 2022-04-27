@@ -44,6 +44,7 @@ import org.htmlparser.lexer.InputStreamSource;
 import org.htmlparser.lexer.Lexer;
 import org.htmlparser.lexer.Page;
 import org.htmlparser.lexer.Stream;
+import org.htmlparser.tags.LinkTag;
 import org.htmlparser.tags.MetaTag;
 import org.htmlparser.util.NodeList;
 import org.htmlparser.util.ParserException;
@@ -155,42 +156,67 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
         } catch(ParserException e) {
           log.debug("Unable to parse abstract page html", e);
         } catch(UnsupportedEncodingException e) {
-          log.debug("Bad encoding in abstact page html", e);
+          log.debug("Bad encoding in abstract page html", e);
         } finally {
           absCu.release();
         }
       }
-      try {
+      // process the nodelists that were found.
+      processNodes(af, nl, ArticleFiles.ROLE_FULL_TEXT_PDF, true, true, ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE);
+
+      return af;
+    }
+
+    protected void processNodes(ArticleFiles af,
+                                NodeList nl,
+                                String role,
+                                boolean setToFullTextCu,
+                                boolean convertToLandingPage,
+                                String landingRole) {
+      try{
         if(nl != null) {
+          // there may be more than one of any aspect.
+          // e.g. a spanish and an english pdf file.
+          // the first one is usually' the default of that journal
+          // so we just use the first one.
           if (nl.size() > 0) {
-            String pdfUrlStr = ((MetaTag)nl.elementAt(0)).getMetaContent();
-            if (pdfUrlStr == null) {
-            	return af;
+            String urlStr = null;
+            if (nl.elementAt(0) instanceof MetaTag) {
+              urlStr = ((MetaTag) nl.elementAt(0)).getMetaContent();
+            } else if (nl.elementAt(0) instanceof LinkTag) {
+              urlStr = ((LinkTag) nl.elementAt(0)).getLink();
+            } else {
+              log.debug("node was an unexpected type.");
             }
-            log.debug3("citation_pdf_url is " + pdfUrlStr);
-            CachedUrl pdfCu = au.makeCachedUrl(pdfUrlStr);
-            if (pdfCu != null && pdfCu.hasContent()) {
-                // replace absCU with pdfCU if exists and has content
-        	  af.setFullTextCu(pdfCu);
-        	  af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
-            }
-            // NOw try for the PDF landing page which is the same as the PDF 
-            // but with "download" turned to "view"
-            String pdfLandStr = pdfUrlStr.replace("download/","view/");
-            pdfCu = au.makeCachedUrl(pdfLandStr);
-            if (pdfCu != null && pdfCu.hasContent()) {
-                // replace absCU with pdfCU if exists and has content
-        	  af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, pdfCu);
+            if (urlStr != null) {
+              log.debug3(role + " is " + urlStr);
+              CachedUrl cu = au.makeCachedUrl(urlStr);
+              if (cu != null && cu.hasContent()) {
+                // replace the fulltext with this cu if exists and has content
+                if (setToFullTextCu) {
+                  af.setFullTextCu(cu);
+                }
+                af.setRoleCu(role, cu);
+              }
+              // Now try for the PDF landing page which is the same as the PDF
+              // but with "download" turned to "view"
+              if (convertToLandingPage) {
+                String landingStr = urlStr.replace("download/", "view/");
+                cu = au.makeCachedUrl(landingStr);
+                if (cu != null && cu.hasContent()) {
+                  // replace absCU with landCu if exists and has content
+                  af.setRoleCu(landingRole, cu);
+                }
+              }
             }
           }
         }
       } catch (IllegalArgumentException e) {
-	    log.debug("Badly formatted pdf url link", e);
+        log.debug("Badly formatted url link for " + role, e);
       }
-      
-      return af;
     }
   }
+
   
   @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
