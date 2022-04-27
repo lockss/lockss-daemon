@@ -89,15 +89,33 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
 
   protected static final String PATTERN_TEMPLATE = "\".*/article/view/[^/]+$\"";
   protected static Pattern ABSTRACT_PATTERN = Pattern.compile("article/view/[^/]+$", Pattern.CASE_INSENSITIVE);
+  protected static String PUB_ID = "";
 
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                       MetadataTarget target)
       throws PluginException {
+    PUB_ID = getPudIdFromAu(au);
     return new CitationArticleIterator(au,
-                                     new SubTreeArticleIterator.Spec()
-                                                     	       .setTarget(target)
-                                                     	       .setPatternTemplate(PATTERN_TEMPLATE));
+        new SubTreeArticleIterator.Spec()
+            .setTarget(target)
+            .setPatternTemplate(PATTERN_TEMPLATE));
+  }
+
+  protected String getPudIdFromAu(ArchivalUnit au) {
+    String pubIdParam = "&publicationId=";
+    String risCitationParam = "citationstylelanguage/download/ris?submissionId=";
+    for (CachedUrl cu : au.getAuCachedUrlSet().getCuIterable()) {
+      String cuUrl = cu.getUrl();
+      if (cuUrl.contains(risCitationParam)) {
+        if (cuUrl.contains(pubIdParam)) {
+          // return the param and the value, we just need it for this url construction
+          return cuUrl.substring(cuUrl.lastIndexOf(pubIdParam));
+        }
+        return "";
+      }
+    }
+    return "";
   }
 
   protected static class CitationArticleIterator extends SubTreeArticleIterator {
@@ -159,9 +177,11 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
       }
       // process the nodelists that were found.
       processNodes(af, pdfnl, ArticleFiles.ROLE_FULL_TEXT_PDF, true, true, ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE);
-      processNodes(af, htmlnl, ArticleFiles.ROLE_FULL_TEXT_HTML, true, true, ArticleFiles.ROLE_FULL_TEXT_HTML_LANDING_PAGE);      processNodes(af, xmlnl, ArticleFiles.ROLE_FULL_TEXT_XML, false, false, null);
+      processNodes(af, htmlnl, ArticleFiles.ROLE_FULL_TEXT_HTML, true, true, ArticleFiles.ROLE_FULL_TEXT_HTML_LANDING_PAGE);
+      processNodes(af, xmlnl, ArticleFiles.ROLE_FULL_TEXT_XML, false, false, null);
       processNodes(af, epubnl, ArticleFiles.ROLE_FULL_TEXT_EPUB, false, false, null);
       processNodes(af, wordnl, "FullTextWord", false, false, null);
+      setCitationFiles(af, absCu.getUrl());
       return af;
     }
 
@@ -250,6 +270,31 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
         }
       } catch (IllegalArgumentException e) {
         log.debug("Badly formatted url link for " + role, e);
+      }
+    }
+
+    protected final void setCitationFiles(ArticleFiles af,
+                                          String absUrl) {
+      // https://www.aijournals.com/index.php/ajmr/article/view/6664
+      // https://www.aijournals.com/index.php/ajmr/citationstylelanguage/download/bibtex?submissionId=6664
+      // https://www.aijournals.com/index.php/ajmr/citationstylelanguage/download/ris?submissionId=6664
+      String risUrl = absUrl.replace(
+          "article/view/",
+          "citationstylelanguage/download/ris?submissionId="
+      );
+      String bibtexUrl = absUrl.replace(
+          "article/view/",
+          "citationstylelanguage/download/bibtex?submissionId="
+      );
+      risUrl += PUB_ID;
+      bibtexUrl += PUB_ID;
+      CachedUrl cu = au.makeCachedUrl(risUrl);
+      if (cu != null && cu.hasContent()) {
+        af.setRoleCu(ArticleFiles.ROLE_CITATION_RIS, cu);
+      }
+      cu = au.makeCachedUrl(bibtexUrl);
+      if (cu != null && cu.hasContent()) {
+        af.setRoleCu(ArticleFiles.ROLE_CITATION_BIBTEX, cu);
       }
     }
   }
