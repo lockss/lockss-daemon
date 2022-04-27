@@ -37,7 +37,6 @@ import java.util.Iterator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.Parser;
 import org.htmlparser.lexer.InputStreamSource;
@@ -102,6 +101,10 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
             .setPatternTemplate(PATTERN_TEMPLATE));
   }
 
+  /*
+   * Iterates over the AUs cachedUrl sets and grabs the publicationId, if it exists
+   * this gets used when converting the abstract url to citation urls in setCitationFiles
+   */
   protected String getPudIdFromAu(ArchivalUnit au) {
     String pubIdParam = "&publicationId=";
     String risCitationParam = "citationstylelanguage/download/ris?submissionId=";
@@ -119,25 +122,25 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
   }
 
   protected static class CitationArticleIterator extends SubTreeArticleIterator {
-   
+
     public CitationArticleIterator(ArchivalUnit au,
-                                 SubTreeArticleIterator.Spec spec) {
+                                   SubTreeArticleIterator.Spec spec) {
       super(au, spec);
     }
-    
+
     @Override
     protected ArticleFiles createArticleFiles(CachedUrl cu) {
       String url = cu.getUrl();
       Matcher mat = ABSTRACT_PATTERN.matcher(url);
       if (mat.find()) {
-          return processAbstract(cu, mat);
+        return processAbstract(cu, mat);
       } else {
         log.warning("Mismatch between article iterator factory and article iterator: " + url);
       }
       return null;
     }
-    
-    /* 
+
+    /*
      * In order to find full text PDF you need to find the citation_pdf_url meta tag in the
      * abstract html pull out the pdf url and find the matching cached url
      * The PDF landing page is a variant of the pdf url
@@ -159,7 +162,8 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
           return af;
         }
 
-        // now find the PDF from the meta tags on the abstract page
+        // now find the PDF and Full Text HTML from the meta tags on the abstract page
+        // as well as the XML, EPUB, WORD, etc from the Body tag on the abstract page.
         try {
           pdfnl = getNodesFromAbstract(absCu, MetaTagNameNodeFilter("citation_pdf_url"));
           htmlnl = getNodesFromAbstract(absCu, MetaTagNameNodeFilter("citation_fulltext_html_url"));
@@ -181,10 +185,14 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
       processNodes(af, xmlnl, ArticleFiles.ROLE_FULL_TEXT_XML, false, false, null);
       processNodes(af, epubnl, ArticleFiles.ROLE_FULL_TEXT_EPUB, false, false, null);
       processNodes(af, wordnl, "FullTextWord", false, false, null);
-      setCitationFiles(af, absCu.getUrl());
+      // finally, set ris and bibtext citation files if they exist.
+      if (absCu != null) setCitationFiles(af, absCu.getUrl());
       return af;
     }
 
+    /*
+     * Applies a given NodeFilter to the content of the given CachedUrl.
+     */
     protected final NodeList getNodesFromAbstract(CachedUrl absCu,
                                                   NodeFilter nf
     ) throws ParserException, UnsupportedEncodingException {
@@ -196,18 +204,24 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
       return parser.extractAllNodesThatMatch(nf);
     }
 
+    /*
+     * Creates a NodeFilter which acts on a metatag name attribute
+     */
     protected final NodeFilter MetaTagNameNodeFilter(String metaTagName) {
-      NodeFilter nf = node -> {
+      return node -> {
         if (!(node instanceof MetaTag)) return false;
         MetaTag meta = (MetaTag) node;
-        if (!metaTagName.equalsIgnoreCase(meta.getMetaTagName())) return false;
-        return true;
+        return metaTagName.equalsIgnoreCase(meta.getMetaTagName());
       };
-      return nf;
     }
 
+    /*
+     * Creates a NodeFilter which acts on LinkTag class attribute
+     *   which contains "obj_galley_link file"
+     *   or which meets the regex "galley-link.*file"
+     */
     protected final NodeFilter FileLinkNodeFilter(String fileType) {
-      NodeFilter nf = node -> {
+      return node -> {
         if (!(node instanceof LinkTag)) return false;
         LinkTag aTag = (LinkTag) node;
         String aClass = aTag.getAttribute("class");
@@ -221,9 +235,14 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
         }
         return false;
       };
-      return nf;
     }
 
+    /*
+     * Iterates over a given NodeList and
+     * assigns urls to given roles in the ArticleFiles
+     * additionally will set to fulltext and
+     * identify a landing page if desired.
+     */
     protected void processNodes(ArticleFiles af,
                                 NodeList nl,
                                 String role,
@@ -273,6 +292,11 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
       }
     }
 
+    /*
+     * Converts the given abstract url to a ris and bibtext url
+     * and if they are in the AU will assign them the
+     * citation aspects in the ArticleFiles
+     */
     protected final void setCitationFiles(ArticleFiles af,
                                           String absUrl) {
       // https://www.aijournals.com/index.php/ajmr/article/view/6664
@@ -299,7 +323,6 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
     }
   }
 
-  
   @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
