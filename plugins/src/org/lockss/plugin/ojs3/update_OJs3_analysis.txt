@@ -186,11 +186,11 @@ ArticleIterator aspect characterization
   url root: http://jrp.icaap.org/index.php/jrp/
   iss: issue/view/26
    htmltag: div class="article_summary" --- but also div class="article_summary_body"
-    art land: http://jrp.icaap.org/index.php/jrp/article/view/555
-    art html: http://jrp.icaap.org/index.php/jrp/article/view/555/455
-    pdf land: http://jrp.icaap.org/index.php/jrp/article/view/555/465
+    art land: article/view/555
+    art html: article/view/555/455
+    pdf land: article/view/555/465
     on landing pdf: div class="pdf-download-button" embedded a tag
-      pdf down: http://jrp.icaap.org/index.php/jrp/article/download/555/465/
+      pdf down: article/download/555/465/
     on art land: NA
       citation: NA
 
@@ -210,8 +210,8 @@ ArticleIterator aspect characterization
   ---- NOTE: eng and spanish of most things
   iss: issue/view/20
    htmltag: div class="obj_article_summary"
-    art land:
-    art html:
+    art land: article/view/595
+    art html: NA
     pdf land: article/view/595/2292
          eng: article/view/595/2293
     xml: article/view/594/2484
@@ -374,10 +374,10 @@ ArticleIterator aspect characterization
    htmltag: div class="obj_article_summary"
     art land: article/view/1682
     htmltag: class="obj_galley_link pdf" or "file" for each of the others...
-    art html: https://www.aijournals.com/index.php/ajmr/article/view/1682/1545
-    art xml: https://www.aijournals.com/index.php/ajmr/article/view/1682/1544
-    art epub: https://www.aijournals.com/index.php/ajmr/article/view/1682/1546
-    pdf land: https://www.aijournals.com/index.php/ajmr/article/view/1682/1543
+    art html: article/view/1682/1545
+    art xml: article/view/1682/1544
+    art epub: article/view/1682/1546
+    pdf land: article/view/1682/1543
     on landing pdf: a class="download"
       pdf down: article/download/1682/1543/
     on art land: ul class="citation_formats_styles"
@@ -509,3 +509,13 @@ ArticleIterator aspect characterization
       pdf down: article/download/7208/8325/44103
     on art land: ul class="dropdown-menu" -> li -> a
       citation: citationstylelanguage/download/ris?submissionId=7208&publicationId=9617
+
+
+- Add ris files to crawl rules
+- Confine the abstract_pattern to abstract.landing pages
+- Make replay work with the crawl seed
+- Add a param in tdb for language(s) (not a definitional param)
+    on journal/au start url there is a table listing the languages
+    default_locale, prefered locale or something.
+
+- Do same as above for OJS2 plugin.
