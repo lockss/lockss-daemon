@@ -126,6 +126,10 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
      */
     protected ArticleFiles processAbstract(CachedUrl absCu, Matcher absMat) {
       NodeList pdfnl = null;
+      NodeList htmlnl = null;
+      NodeList xmlnl = null;
+      NodeList epubnl = null;
+      NodeList wordnl = null;
       ArticleFiles af = new ArticleFiles();
       if (absCu != null && absCu.hasContent()) {
         // set absCU as default full text CU in case there is
@@ -140,6 +144,11 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
         // now find the PDF from the meta tags on the abstract page
         try {
           pdfnl = getNodesFromAbstract(absCu, MetaTagNameNodeFilter("citation_pdf_url"));
+          htmlnl = getNodesFromAbstract(absCu, MetaTagNameNodeFilter("citation_fulltext_html_url"));
+          xmlnl = getNodesFromAbstract(absCu, FileLinkNodeFilter("xml"));
+          epubnl = getNodesFromAbstract(absCu, FileLinkNodeFilter("epub"));
+          // there is rarely a word document of the article
+          wordnl =  getNodesFromAbstract(absCu, FileLinkNodeFilter("word"));
         } catch(ParserException e) {
           log.debug("Unable to parse abstract page html", e);
         } catch(UnsupportedEncodingException e) {
@@ -150,6 +159,9 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
       }
       // process the nodelists that were found.
       processNodes(af, pdfnl, ArticleFiles.ROLE_FULL_TEXT_PDF, true, true, ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE);
+      processNodes(af, htmlnl, ArticleFiles.ROLE_FULL_TEXT_HTML, true, true, ArticleFiles.ROLE_FULL_TEXT_HTML_LANDING_PAGE);      processNodes(af, xmlnl, ArticleFiles.ROLE_FULL_TEXT_XML, false, false, null);
+      processNodes(af, epubnl, ArticleFiles.ROLE_FULL_TEXT_EPUB, false, false, null);
+      processNodes(af, wordnl, "FullTextWord", false, false, null);
       return af;
     }
 
@@ -172,7 +184,25 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
         return true;
       };
       return nf;
-    };
+    }
+
+    protected final NodeFilter FileLinkNodeFilter(String fileType) {
+      NodeFilter nf = node -> {
+        if (!(node instanceof LinkTag)) return false;
+        LinkTag aTag = (LinkTag) node;
+        String aClass = aTag.getAttribute("class");
+        if (aClass == null) return false;
+        if (aClass.contains("obj_galley_link file") ||
+            aClass.matches("galley-link.*file") ) {
+          String tagText = aTag.getLinkText();
+          if (tagText != null) {
+            return tagText.toLowerCase().contains(fileType);
+          }
+        }
+        return false;
+      };
+      return nf;
+    }
 
     protected void processNodes(ArticleFiles af,
                                 NodeList nl,
