@@ -125,7 +125,7 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
      * The PDF landing page is a variant of the pdf url
      */
     protected ArticleFiles processAbstract(CachedUrl absCu, Matcher absMat) {
-      NodeList nl = null;
+      NodeList pdfnl = null;
       ArticleFiles af = new ArticleFiles();
       if (absCu != null && absCu.hasContent()) {
         // set absCU as default full text CU in case there is
@@ -139,20 +139,7 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
 
         // now find the PDF from the meta tags on the abstract page
         try {
-          InputStreamSource is = new InputStreamSource(new Stream(absCu.getUnfilteredInputStream()));
-          Page pg = new Page(is);
-          Lexer lx = new Lexer(pg);
-          Parser parser = new Parser(lx);
-          Lexer.STRICT_REMARKS = false;
-      	  NodeFilter nf = new NodeFilter() {
-	    public boolean accept(Node node) {
-    	      if (!(node instanceof MetaTag)) return false;
-    	      MetaTag meta = (MetaTag)node;
-    	      if (!"citation_pdf_url".equalsIgnoreCase(meta.getMetaTagName())) return false;
-    	      return true;
-            }
-          };
-          nl = parser.extractAllNodesThatMatch(nf);
+          pdfnl = getNodesFromAbstract(absCu, MetaTagNameNodeFilter("citation_pdf_url"));
         } catch(ParserException e) {
           log.debug("Unable to parse abstract page html", e);
         } catch(UnsupportedEncodingException e) {
@@ -162,10 +149,30 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
         }
       }
       // process the nodelists that were found.
-      processNodes(af, nl, ArticleFiles.ROLE_FULL_TEXT_PDF, true, true, ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE);
-
+      processNodes(af, pdfnl, ArticleFiles.ROLE_FULL_TEXT_PDF, true, true, ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE);
       return af;
     }
+
+    protected final NodeList getNodesFromAbstract(CachedUrl absCu,
+                                                  NodeFilter nf
+    ) throws ParserException, UnsupportedEncodingException {
+      InputStreamSource is = new InputStreamSource(new Stream(absCu.getUnfilteredInputStream()));
+      Page pg = new Page(is);
+      Lexer lx = new Lexer(pg);
+      Parser parser = new Parser(lx);
+      Lexer.STRICT_REMARKS = false;
+      return parser.extractAllNodesThatMatch(nf);
+    }
+
+    protected final NodeFilter MetaTagNameNodeFilter(String metaTagName) {
+      NodeFilter nf = node -> {
+        if (!(node instanceof MetaTag)) return false;
+        MetaTag meta = (MetaTag) node;
+        if (!metaTagName.equalsIgnoreCase(meta.getMetaTagName())) return false;
+        return true;
+      };
+      return nf;
+    };
 
     protected void processNodes(ArticleFiles af,
                                 NodeList nl,
