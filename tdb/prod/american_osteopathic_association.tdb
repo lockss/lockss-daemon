@@ -2,7 +2,7 @@
 
   publisher <
     name = American Osteopathic Association ;
-    info[platform] = Moved to Degruyter. May need to retire this title.
+    info[platform] = Moved to Degruyter. May need to retire this title. BLOCKED see LXPUB-475
   >
 
   {
@@ -17,7 +17,7 @@
 
     {
     
-    plugin = needs.plugin BLOCKED see LXPUB-475
+    plugin = needs.plugin 
     implicit < status ; year ; name ; param[year] >
     param[base_url] = https://www.degruyter.com/
     param[journal_id] = jom
