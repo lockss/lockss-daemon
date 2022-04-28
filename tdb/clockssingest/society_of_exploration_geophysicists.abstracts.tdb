@@ -53,11 +53,11 @@
    au < manifest ; exists ; 2010 ; 10.1190/SEGEAB.29 ; SEG Technical Program Expanded Abstracts Volume 2010 ; >
    au < manifest ; exists ; 2011 ; 10.1190/SEGEAB.30 ; SEG Technical Program Expanded Abstracts Volume 2011 ; >
    au < manifest ; exists ; 2012 ; 10.1190/segeab.31 ; SEG Technical Program Expanded Abstracts Volume 2012 ; >
-   au < manifest ; exists ; 2013 ; 10.1190/segeab.32 ; SEG Technical Program Expanded Abstracts Volume 2013 ; >
-   au < manifest ; exists ; 2014 ; 10.1190/segeab.33 ; SEG Technical Program Expanded Abstracts Volume 2014 ; >
-   au < manifest ; exists ; 2015 ; 10.1190/segeab.34 ; SEG Technical Program Expanded Abstracts Volume 2015 ; >
-   au < manifest ; exists ; 2016 ; 10.1190/segeab.35 ; SEG Technical Program Expanded Abstracts Volume 2016 ; >
-   au < manifest ; exists ; 2017 ; 10.1190/segeab.36 ; SEG Technical Program Expanded Abstracts Volume 2017 ; >
+   au < ready ; exists ; 2013 ; 10.1190/segeab.32 ; SEG Technical Program Expanded Abstracts Volume 2013 ; >
+   au < ready ; exists ; 2014 ; 10.1190/segeab.33 ; SEG Technical Program Expanded Abstracts Volume 2014 ; >
+   au < ready ; exists ; 2015 ; 10.1190/segeab.34 ; SEG Technical Program Expanded Abstracts Volume 2015 ; >
+   au < ready ; exists ; 2016 ; 10.1190/segeab.35 ; SEG Technical Program Expanded Abstracts Volume 2016 ; >
+   au < ready ; exists ; 2017 ; 10.1190/segeab.36 ; SEG Technical Program Expanded Abstracts Volume 2017 ; >
    au < crawling ; exists ; 2018 ; 10.1190/segeab.37 ; SEG Technical Program Expanded Abstracts Volume 2018 ; >
    au < crawling ; exists ; 2019 ; 10.1190/segeab.38 ; SEG Technical Program Expanded Abstracts Volume 2019 ; >
    au < crawling ; exists ; 2020 ; 10.1190/segeab.39 ; SEG Technical Program Expanded Abstracts Volume 2020 ; >
@@ -100,11 +100,11 @@
    au < manifest ; exists ; 2010 ; 10.1190/SAGEEP.23 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2010 ; >
    au < manifest ; exists ; 2011 ; 10.1190/SAGEEP.24 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2011 ; >
    au < manifest ; exists ; 2012 ; 10.1190/SAGEEP.25 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2012 ; >
-   au < manifest ; exists ; 2013 ; 10.1190/sageep2013 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2013 ; >
-   au < manifest ; exists ; 2014 ; 10.1190/SAGEEP.27 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2014 ; >
-   au < manifest ; exists ; 2015 ; 10.1190/SAGEEP.28 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2015 ; >
-   au < manifest ; exists ; 2016 ; 10.1190/SAGEEP.29 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2016 ; >
-   au < manifest ; exists ; 2017 ; 10.1190/SAGEEP.30 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2017 ; >
+   au < ready ; exists ; 2013 ; 10.1190/sageep2013 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2013 ; >
+   au < ready ; exists ; 2014 ; 10.1190/SAGEEP.27 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2014 ; >
+   au < ready ; exists ; 2015 ; 10.1190/SAGEEP.28 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2015 ; >
+   au < ready ; exists ; 2016 ; 10.1190/SAGEEP.29 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2016 ; >
+   au < ready ; exists ; 2017 ; 10.1190/SAGEEP.30 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2017 ; >
    au < crawling ; exists ; 2018 ; 10.1190/SAGEEP.31 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2018 ; >
    au < crawling ; exists ; 2019 ; 10.1190/SAGEEP.32 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2019 ; >
    au < crawling ; exists ; 2021 ; 10.1190/sageep.33 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2021 ; >
@@ -126,24 +126,24 @@
    au < manifest ; exists ; 2007 ; 10.1190/SBGf2007 ; 10th International Congress of the Brazilian Geophysical Society & EXPOGEF 2007 ; >
    au < manifest ; exists ; 2009 ; 10.1190/SBGf2009 ; 11th International Congress of the Brazilian Geophysical Society & EXPOGEF 2009 ; >
    au < manifest ; exists ; 2011 ; 10.1190/SBGf2011 ; 12th International Congress of the Brazilian Geophysical Society & EXPOGEF 2011 ; >
-   au < manifest ; exists ; 2013 ; 10.1190/SBGf2013 ; 13th International Congress of the Brazilian Geophysical Society & EXPOGEF 2013 ; >
-   au < manifest ; exists ; 2015 ; 10.1190/SBGf2015 ; 14th International Congress of the Brazilian Geophysical Society & EXPOGEF 2015 ; >
-   au < manifest ; exists ; 2017 ; 10.1190/SBGf2017 ; 15th International Congress of the Brazilian Geophysical Society & EXPOGEF 2017 ; >
+   au < ready ; exists ; 2013 ; 10.1190/SBGf2013 ; 13th International Congress of the Brazilian Geophysical Society & EXPOGEF 2013 ; >
+   au < ready ; exists ; 2015 ; 10.1190/SBGf2015 ; 14th International Congress of the Brazilian Geophysical Society & EXPOGEF 2015 ; >
+   au < ready ; exists ; 2017 ; 10.1190/SBGf2017 ; 15th International Congress of the Brazilian Geophysical Society & EXPOGEF 2017 ; >
 
    #SEGJ International Symposium https://library.seg.org/topic/gma-series/segj
    au < manifest ; exists ; 2006 ; 10.1190/segj082006 ; Proceedings of the 8th SEGJ International Symposium ; >
    au < manifest ; exists ; 2009 ; 10.1190/segj092009 ; Proceedings of the 9th SEGJ International Symposium ; >
    au < manifest ; exists ; 2011 ; 10.1190/segj102011 ; Proceedings of the 10th SEGJ International Symposium ; >
-   au < manifest ; exists ; 2013 ; 10.1190/segj112013 ; Proceedings of the 11th SEGJ International Symposium ; >
-   au < manifest ; exists ; 2015 ; 10.1190/segj122015 ; Proceedings of the 12th SEGJ International Symposium ; >
-   au < manifest ; exists ; 2018 ; 10.1190/SEGJ2018 ; Proceedings of the 13th SEGJ International Symposium ; >
+   au < ready ; exists ; 2013 ; 10.1190/segj112013 ; Proceedings of the 11th SEGJ International Symposium ; >
+   au < ready ; exists ; 2015 ; 10.1190/segj122015 ; Proceedings of the 12th SEGJ International Symposium ; >
+   au < ready ; exists ; 2018 ; 10.1190/SEGJ2018 ; Proceedings of the 13th SEGJ International Symposium ; >
    au < crawling ; exists ; 2021 ; 10.1190/segj2021 ; Proceedings of the 14th SEGJ International Symposium ; >
 
    #Unconventional Resources Technology Conference https://library.seg.org/topic/gma-series/urtec
-   au < manifest ; exists ; 2013 ; 10.1190/URTEC2013 ; Unconventional Resources Technology Conference 2013 ; >
-   au < manifest ; exists ; 2014 ; 10.15530/URTEC2014 ; Unconventional Resources Technology Conference 2014 ; >
-   au < manifest ; exists ; 2015 ; 10.15530/URTEC2015 ; Unconventional Resources Technology Conference 2015 ; >
-   au < manifest ; exists ; 2016 ; 10.15530/URTEC2016 ; Unconventional Resources Technology Conference 2016 ; >
+   au < ready ; exists ; 2013 ; 10.1190/URTEC2013 ; Unconventional Resources Technology Conference 2013 ; >
+   au < ready ; exists ; 2014 ; 10.15530/URTEC2014 ; Unconventional Resources Technology Conference 2014 ; >
+   au < ready ; exists ; 2015 ; 10.15530/URTEC2015 ; Unconventional Resources Technology Conference 2015 ; >
+   au < ready ; exists ; 2016 ; 10.15530/URTEC2016 ; Unconventional Resources Technology Conference 2016 ; >
    au < manifest ; exists ; 2017 ; 10.15530/urtec2017 ; Unconventional Resources Technology Conference 2017 ; >
    au < manifest ; exists ; 2018 ; 10.15530/urtec2018 ; Unconventional Resources Technology Conference 2018 ; >
    au < crawling ; exists ; 2019 ; 10.15530/urtec2019 ; Unconventional Resources Technology Conference 2019 ; >
@@ -156,19 +156,19 @@
    au < manifest ; exists ; 2009 ; 10.1190/978-1-56080-284-6.10 ; International Geophysical Conference and Exposition 2009 ; >
    au < manifest ; exists ; 2011 ; 10.1190/GMALCH.16 ; International Geophysical Conference 2011 ; >
    au < manifest ; exists ; 2012 ; 10.1190/IST092012 ; International Geophysical Conference and Oil & Gas Exhibition 2012 ; >
-   au < manifest ; exists ; 2014 ; 10.1190/IGCBeijing2014 ; Beijing 2014 International Geophysical Conference & Exposition ; >
-   au < manifest ; exists ; 2016 ; 10.1190/IGCBeijing2016 ; SPG/SEG 2016 International Geophysical Conference ; >
-   au < manifest ; exists ; 2017 ; 10.1190/IGC2017 ; International Geophysical Conference 2017 ; >
+   au < ready ; exists ; 2014 ; 10.1190/IGCBeijing2014 ; Beijing 2014 International Geophysical Conference & Exposition ; >
+   au < ready ; exists ; 2016 ; 10.1190/IGCBeijing2016 ; SPG/SEG 2016 International Geophysical Conference ; >
+   au < ready ; exists ; 2017 ; 10.1190/IGC2017 ; International Geophysical Conference 2017 ; >
    au < crawling ; exists ; 2018 ; 10.1190/IGC2018 ; International Geophysical Conference 2018 ; >
 
    #https://library.seg.org/topic/gma-series/ice
    au < doesNotExist ; doesNotExist ; 2015 ; 10.1190/ICEMelbourne2015 ; International Conference and Exhibition 2015 ; > #no pdf files https://library.seg.org/doi/book/10.1190/ICEMelbourne2015
    au < manifest ; exists ; 2016 ; 10.1190/ICEBarcelona2016 ; International Conference and Exhibition 2016 ; >
 
-   au < manifest ; exists ; 2013 ; 10.1190/NSGAPC2013 ; Near Surface Geophysics Asia Pacific Conference 2013 ; >
-   au < manifest ; exists ; 2015 ; 10.1190/978-1-56080-284-6.15 ; International Workshop on Gravity, Electrical & Magnetic Methods and Their Applications 2015 ; >
-   au < manifest ; exists ; 2015 ; 10.1190/NSAPC2015 ; Near-Surface Asia Pacific Conference 2015 ; >
-   au < manifest ; exists ; 2015 ; 10.1190/GEM2015 ; International Workshop and Gravity, Electrical & Magnetic Methods and their Applications 2015 ; >
+   au < ready ; exists ; 2013 ; 10.1190/NSGAPC2013 ; Near Surface Geophysics Asia Pacific Conference 2013 ; >
+   au < ready ; exists ; 2015 ; 10.1190/978-1-56080-284-6.15 ; International Workshop on Gravity, Electrical & Magnetic Methods and Their Applications 2015 ; >
+   au < ready ; exists ; 2015 ; 10.1190/NSAPC2015 ; Near-Surface Asia Pacific Conference 2015 ; >
+   au < ready ; exists ; 2015 ; 10.1190/GEM2015 ; International Workshop and Gravity, Electrical & Magnetic Methods and their Applications 2015 ; >
    au < manifest ; exists ; 2015 ; 10.1190/ICEG2015 ; International Conference on Engineering Geophysics 2015 ; >
    au < manifest ; exists ; 2016 ; 10.1190/RP2016 ; 2016 Workshop: Rock Physics and Borehole Geophysics ; >
    au < manifest ; exists ; 2016 ; 10.1190/hpc2016 ; 2016 Workshop: Workshop High Performance Computing ; >
