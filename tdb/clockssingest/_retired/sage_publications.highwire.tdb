@@ -47577,7 +47577,7 @@
     {
 
       title <
-        name = World Future Review ;
+        name = World Futures Review ;
         issn = 1946-7567 ;
         issnl = 1946-7567
       >
@@ -47585,14 +47585,14 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://wfr.sagepub.com/
 
-    au < doNotProcess ; exists ; 2009 ; World Future Review Volume 1 ; 1 ; >
-    au < doNotProcess ; exists ; 2010 ; World Future Review Volume 2 ; 2 ; >
-    au < doNotProcess ; exists ; 2011 ; World Future Review Volume 3 ; 3 ; >
-    au < doNotProcess ; exists ; 2012 ; World Future Review Volume 4 ; 4 ; >
-    au < finished ; finished ; 2013 ; World Future Review Volume 5 ; 5 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2014 ; World Future Review Volume 6 ; 6 ; >
-    au < finished ; finished ; 2015 ; World Future Review Volume 7 ; 7 ; reingest4.clockss.org:8082 >
-    au < doNotProcess ; exists ; 2016 ; World Future Review Volume 8 ; 8 ; >
+    au < doNotProcess ; exists ; 2009 ; World Futures Review Volume 1 ; 1 ; >
+    au < doNotProcess ; exists ; 2010 ; World Futures Review Volume 2 ; 2 ; >
+    au < doNotProcess ; exists ; 2011 ; World Futures Review Volume 3 ; 3 ; >
+    au < doNotProcess ; exists ; 2012 ; World Futures Review Volume 4 ; 4 ; >
+    au < finished ; finished ; 2013 ; World Futures Review Volume 5 ; 5 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; World Futures Review Volume 6 ; 6 ; >
+    au < finished ; finished ; 2015 ; World Futures Review Volume 7 ; 7 ; reingest4.clockss.org:8082 >
+    au < doNotProcess ; exists ; 2016 ; World Futures Review Volume 8 ; 8 ; >
 
     }
 
