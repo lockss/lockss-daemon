@@ -14860,7 +14860,7 @@
 
     param[journal_id] = neurosurgery
     #this title was ONLY in the publisher listing
-    #move to Medknow 2022
+    #moved to Medknow 2022
 
     au < doNotProcess ; exists ; 1977 ; 1977 ; Neurosurgery Volume 1 ; 1 ; >
     au < doNotProcess ; exists ; 1978 ; 1978 ; Neurosurgery Volume 2-3 ; 2-3 ; >
@@ -14904,10 +14904,9 @@
     au < frozen ; exists ; 2016 ; 2016 ; Neurosurgery Volume 63,78-79 ; 63,78-79 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Neurosurgery Volume 64,80-81 ; 64,80-81 ; >
     au < finished ; finished ; 2018 ; 2018 ; Neurosurgery Volume 82-83 ; 82-83 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2019 ; 2019 ; Neurosurgery Volume 84-85 ; 84-85 ; >
-    au < deepCrawl ; exists ; 2020 ; 2020 ; Neurosurgery Volume 86-87 ; 86-87 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Neurosurgery Volume 88-89 ; 88-89 ; >
-    au < expected ; exists ; 2022 ; 2022 ; Neurosurgery Volume 90-91 ; 90-91 ; >
+    au < frozen ; exists ; 2019 ; 2019 ; Neurosurgery Volume 84-85 ; 84-85 ; >
+    au < frozen ; exists ; 2020 ; 2020 ; Neurosurgery Volume 86-87 ; 86-87 ; >
+    au < doNotProcess ; exists ; 2021 ; 2021 ; Neurosurgery Volume 88-89 ; 88-89 ; >
 
   }
 
