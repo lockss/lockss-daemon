@@ -348,7 +348,7 @@
     au < finished ; crawling ; 2019 ; Future Neurology Volume 14 ; 14 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; Future Neurology Volume 15 ; 15 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2021 ; Future Neurology Volume 16 ; 16 ; https://www.futuremedicine.com/ ; >
-    au < expected ; exists ; 2022 ; Future Neurology Volume 17 ; 17 ; https://www.futuremedicine.com/ ; >
+    au < manifest ; exists ; 2022 ; Future Neurology Volume 17 ; 17 ; https://www.futuremedicine.com/ ; >
 
   }
 
@@ -666,7 +666,7 @@
     au < finished ; crawling ; 2019 ; Lung Cancer Management Volume 8 ; 8 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Lung Cancer Management Volume 9 ; 9 ; https://www.futuremedicine.com/ ; >
     au < crawling ; exists ; 2021 ; Lung Cancer Management Volume 10 ; 10 ; https://www.futuremedicine.com/ ; >
-    au < expected ; exists ; 2022 ; Lung Cancer Management Volume 11 ; 11 ; https://www.futuremedicine.com/ ; >
+    au < manifest ; exists ; 2022 ; Lung Cancer Management Volume 11 ; 11 ; https://www.futuremedicine.com/ ; >
 
   }
 
@@ -688,7 +688,7 @@
     au < finished ; crawling ; 2019 ; Melanoma Management Volume 6 ; 6 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Melanoma Management Volume 7 ; 7 ; https://www.futuremedicine.com/ ; >
     au < crawling ; exists ; 2021 ; Melanoma Management Volume 8 ; 8 ; https://www.futuremedicine.com/ ; >
-    au < expected ; exists ; 2022 ; Melanoma Management Volume 9 ; 9 ; https://www.futuremedicine.com/ ; >
+    au < manifest ; exists ; 2022 ; Melanoma Management Volume 9 ; 9 ; https://www.futuremedicine.com/ ; >
 
   }
 

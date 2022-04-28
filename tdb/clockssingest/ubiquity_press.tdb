@@ -1341,7 +1341,7 @@
       au < finished ; crawling ; 2019 ; 6 ; Open Health Data Volume 2019 ; 2019 ; https://openhealthdata.metajnl.com/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; 7 ; Open Health Data Volume 2020 ; 2020 ; https://openhealthdata.metajnl.com/ ; >
       au < crawling ; exists ; 2021 ; 8 ; Open Health Data Volume 2021 ; 2021 ; https://openhealthdata.metajnl.com/ ; >
-      au < expected ; exists ; 2022 ; 9 ; Open Health Data Volume 2022 ; 2022 ; https://openhealthdata.metajnl.com/ ; >
+      au < manifest ; exists ; 2022 ; 9 ; Open Health Data Volume 2022 ; 2022 ; https://openhealthdata.metajnl.com/ ; >
 
   }
 
@@ -2174,7 +2174,7 @@
       au < finished ; crawling ; 2019 ; 2 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2019 ; 2019 ; https://www.worldwidewastejournal.com/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; 3 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2020 ; 2020 ; https://www.worldwidewastejournal.com/ ; >
       au < crawling ; exists ; 2021 ; 4 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2021 ; 2021 ; https://www.worldwidewastejournal.com/ ; >
-      au < expected ; exists ; 2022 ; 5 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2022 ; 2022 ; https://www.worldwidewastejournal.com/ ; >
+      au < manifest ; exists ; 2022 ; 5 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2022 ; 2022 ; https://www.worldwidewastejournal.com/ ; >
 
   }
 
@@ -2613,7 +2613,7 @@
       au < finished ; crawling ; 2019 ; 12 ; International Journal for Court Administration Volume 2019 ; 2019 ; https://www.iacajournal.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 13 ; International Journal for Court Administration Volume 2020 ; 2020 ; https://www.iacajournal.org/ ; >
       au < crawling ; exists ; 2021 ; 14 ; International Journal for Court Administration Volume 2021 ; 2021 ; https://www.iacajournal.org/ ; >
-      au < expected ; exists ; 2022 ; 15 ; International Journal for Court Administration Volume 2022 ; 2022 ; https://www.iacajournal.org/ ; >
+      au < manifest ; exists ; 2022 ; 15 ; International Journal for Court Administration Volume 2022 ; 2022 ; https://www.iacajournal.org/ ; >
 
   }
 
