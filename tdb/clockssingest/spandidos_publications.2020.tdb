@@ -177,8 +177,8 @@
       au < doNotProcess ; doNotProcess ; 2018 ; Experimental and Therapeutic Medicine Volume 16 ; 16 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; Experimental and Therapeutic Medicine Volume 17 ; 17 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; Experimental and Therapeutic Medicine Volume 18 ; 18 ; >
-      au < manifest ; exists ; 2020 ; Experimental and Therapeutic Medicine Volume 19 ; 19 ; >
-      au < manifest ; exists ; 2020 ; Experimental and Therapeutic Medicine Volume 20 ; 20 ; >
+      au < ready ; exists ; 2020 ; Experimental and Therapeutic Medicine Volume 19 ; 19 ; >
+      au < ready ; exists ; 2020 ; Experimental and Therapeutic Medicine Volume 20 ; 20 ; >
       au < manifest ; exists ; 2021 ; Experimental and Therapeutic Medicine Volume 21 ; 21 ; >
       au < crawling ; exists ; 2021 ; Experimental and Therapeutic Medicine Volume 22 ; 22 ; >
       au < manifest ; exists ; 2022 ; Experimental and Therapeutic Medicine Volume 23 ; 23 ; >
@@ -329,7 +329,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; Oncology Reports Volume 41 ; 41 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; Oncology Reports Volume 42 ; 42 ; >
       au < frozen ; exists ; 2020 ; Oncology Reports Volume 43 ; 43 ; >
-      au < testing ; exists ; 2020 ; Oncology Reports Volume 44 ; 44 ; >
+      au < manifest ; exists ; 2020 ; Oncology Reports Volume 44 ; 44 ; >
       au < crawling ; exists ; 2021 ; Oncology Reports Volume 45 ; 45 ; >
       au < crawling ; exists ; 2021 ; Oncology Reports Volume 46 ; 46 ; >
       au < manifest ; exists ; 2022 ; Oncology Reports Volume 47 ; 47 ; >
@@ -366,7 +366,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; Molecular Medicine Reports Volume 18 ; 18 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; Molecular Medicine Reports Volume 19 ; 19 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; Molecular Medicine Reports Volume 20 ; 20 ; >
-      au < testing ; exists ; 2020 ; Molecular Medicine Reports Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2020 ; Molecular Medicine Reports Volume 21 ; 21 ; >
       au < frozen ; exists ; 2020 ; Molecular Medicine Reports Volume 22 ; 22 ; >
       au < crawling ; exists ; 2021 ; Molecular Medicine Reports Volume 23 ; 23 ; >
       au < crawling ; exists ; 2021 ; Molecular Medicine Reports Volume 24 ; 24 ; >
@@ -385,7 +385,7 @@
       param[journal_id] = wasj
   
       au < doNotProcess ; doNotProcess ; 2019 ; World Academy of Sciences Journal Volume 1 ; 1 ; >
-      au < testing ; exists ; 2020 ; World Academy of Sciences Journal Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2020 ; World Academy of Sciences Journal Volume 2 ; 2 ; >
       au < crawling ; exists ; 2021 ; World Academy of Sciences Journal Volume 3 ; 3 ; >
       au < manifest ; exists ; 2022 ; World Academy of Sciences Journal Volume 4 ; 4 ; >
 
