@@ -1,0 +1,53 @@
+{
+
+  publisher <
+    name = Medical Journals Sweden AB ;
+    info[contract] = 2019 ;
+    info[back] = 2019 ;
+    info[tester] = 8 ;
+    info[poller] = 8
+  >
+
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
+    #OJS3
+
+  {
+  
+    title < 
+      name = Acta Dermato-Venereologica ;
+      eissn = 1651-2057 
+    >
+
+      param[base_url] = https://medicaljournalssweden.se/
+      param[journal_id] = actadv
+      attr[start_stem] = 
+      #First publication Volume 2, 1921
+
+      au < exists ; exists ; 2019 ; Acta Dermato-Venereologica Volume 2019 ; 99 ; 2019 ; >
+      au < manifest ; exists ; 2020 ; Acta Dermato-Venereologica Volume 2020 ; 100 ; 2020 ; >
+      au < crawling ; exists ; 2021 ; Acta Dermato-Venereologica Volume 2021 ; 101 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; Acta Dermato-Venereologica Volume 2022 ; 102 ; 2022 ; >
+
+  }
+
+  {
+  
+    title < 
+      name = Acta Orthopaedica ;
+      eissn = 1745-3682 
+    >
+
+      param[base_url] = https://actaorthop.org/
+      param[journal_id] = actao
+      attr[start_stem] = index.php/
+      #First publication Vol. 1, 1930
+
+      au < crawling ; exists ; 2019 ; Acta Orthopaedica Volume 2019 ; 90 ; 2019 ; >
+      au < crawling ; exists ; 2020 ; Acta Orthopaedica Volume 2020 ; 91 ; 2020 ; >
+      au < crawling ; exists ; 2021 ; Acta Orthopaedica Volume 2021 ; 92 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; Acta Orthopaedica Volume 2022 ; 93 ; 2022 ; >
+
+  }
+
+}

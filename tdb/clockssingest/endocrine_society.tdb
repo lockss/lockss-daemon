@@ -6,8 +6,8 @@
     info[tester] = 8 ;
     info[poller] = 3
   >
-
   #######**** When Endocrine Society moves to OUP, do not change publisher.
+
   provider = Oxford University Press
 
   plugin = org.lockss.plugin.silverchair.oup.ClockssOupSilverchairPlugin
@@ -23,13 +23,14 @@
 
     param[base_url] = https://academic.oup.com/
     param[journal_id] = jes
-
     #this title was ONLY in the publisher listing
+
     au < finished ; crawling ; 2017 ; 1 ; Journal of the Endocrine Society Volume 1 ; 2017 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; 2 ; Journal of the Endocrine Society Volume 2 ; 2018 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; 3 ; Journal of the Endocrine Society Volume 3 ; 2019 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; 4 ; Journal of the Endocrine Society Volume 4 ; 2020 ; >
     au < crawling ; exists ; 2021 ; 5 ; Journal of the Endocrine Society Volume 5 ; 2021 ; >
+    au < manifest ; exists ; 2022 ; 6 ; Journal of the Endocrine Society Volume 6 ; 2022 ; >
 
   }
 
@@ -88,6 +89,7 @@
       au < finished ; crawling ; 2019 ; 40 ; Endocrine Reviews Volume 40 ; 2019 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 41 ; Endocrine Reviews Volume 41 ; 2020 ; >
       au < crawling ; exists ; 2021 ; 42 ; Endocrine Reviews Volume 42 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; 43 ; Endocrine Reviews Volume 43 ; 2022 ; >
 
     }
 
@@ -211,6 +213,7 @@
       au < finished ; crawling ; 2019 ; 160 ; Endocrinology Volume 160 ; 2019 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 161 ; Endocrinology Volume 161 ; 2020 ; >
       au < crawling ; exists ; 2021 ; 162 ; Endocrinology Volume 162 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; 163 ; Endocrinology Volume 163 ; 2022 ; >
 
     }
 
@@ -310,6 +313,7 @@
       au < finished ; crawling ; 2019 ; 104 ; Journal of Clinical Endocrinology & Metabolism Volume 104 ; 2019 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2020 ; 105 ; Journal of Clinical Endocrinology & Metabolism Volume 105 ; 2020 ; >
       au < crawling ; exists ; 2021 ; 106 ; Journal of Clinical Endocrinology & Metabolism Volume 106 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; 107 ; Journal of Clinical Endocrinology & Metabolism Volume 107 ; 2022 ; >
 
     }
 

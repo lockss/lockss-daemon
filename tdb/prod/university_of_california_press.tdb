@@ -60,6 +60,7 @@
       au < manifest ; 2019 ; 2019 ; Afterimage Volume 46 ; 46 >
       au < manifest ; 2020 ; 2020 ; Afterimage Volume 47 ; 47 >
       au < manifest ; 2021 ; 2021 ; Afterimage Volume 48 ; 48 >
+      au < manifest ; 2022 ; 2022 ; Afterimage Volume 49 ; 49 >
 
   }
 
@@ -166,6 +167,7 @@
       au < doNotProcess ; 2019 ; 2019 ; The American Biology Teacher Volume 81 ; 81 >
       au < manifest ; 2020 ; 2020 ; The American Biology Teacher Volume 82 ; 82 >
       au < manifest ; 2021 ; 2021 ; The American Biology Teacher Volume 83 ; 83 >
+      au < manifest ; 2022 ; 2022 ; The American Biology Teacher Volume 84 ; 84 >
 
   }
 
@@ -182,35 +184,35 @@
       param[journal_id] = as
 
       au < exists ; 1961 ; 1961 ; Asian Survey Volume 1 [1961] ; 1 > #incorrect vol #
-      au < exists ; 1962 ; 1962 ; Asian Survey Volume 1 [1962] ; 1 > #incorrect vol #
-      au < exists ; 1962 ; 1962 ; Asian Survey Volume 2 ; 2 > #incorrect vol #
+      au < doesNotExist ; 1962 ; 1962 ; Asian Survey Volume 1 [1962] ; 1 >
+      au < doesNotExist ; 1962 ; 1962 ; Asian Survey Volume 2 ; 2 >
       au < manifest ; 1963 ; 1963 ; Asian Survey Volume 3 ; 3 >
       au < manifest ; 1964 ; 1964 ; Asian Survey Volume 4 ; 4 >
       au < manifest ; 1965 ; 1965 ; Asian Survey Volume 5 ; 5 >
       au < manifest ; 1966 ; 1966 ; Asian Survey Volume 6 ; 6 >
       au < manifest ; 1967 ; 1967 ; Asian Survey Volume 7 ; 7 >
-      au < exists ; 1968 ; 1968 ; Asian Survey Volume 8 ; 8 > #incorrect vol #
-      au < exists ; 1969 ; 1969 ; Asian Survey Volume 9 ; 9 > #incorrect vol #
-      au < exists ; 1970 ; 1970 ; Asian Survey Volume 10 ; 10 > #incorrect vol #
-      au < exists ; 1971 ; 1971 ; Asian Survey Volume 11 ; 11 > #incorrect vol #
+      au < doesNotExist ; 1968 ; 1968 ; Asian Survey Volume 8 ; 8 >
+      au < doesNotExist ; 1969 ; 1969 ; Asian Survey Volume 9 ; 9 >
+      au < doesNotExist ; 1970 ; 1970 ; Asian Survey Volume 10 ; 10 >
+      au < doesNotExist ; 1971 ; 1971 ; Asian Survey Volume 11 ; 11 >
       au < manifest ; 1972 ; 1972 ; Asian Survey Volume 12 ; 12 >
-      au < exists ; 1973 ; 1973 ; Asian Survey Volume 13 ; 13 > #incorrect vol #
+      au < doesNotExist ; 1973 ; 1973 ; Asian Survey Volume 13 ; 13 >
       au < manifest ; 1974 ; 1974 ; Asian Survey Volume 14 ; 14 >
       au < manifest ; 1975 ; 1975 ; Asian Survey Volume 15 ; 15 >
-      au < exists ; 1976 ; 1976 ; Asian Survey Volume 16 ; 16 > #incorrect vol #
-      au < exists ; 1977 ; 1977 ; Asian Survey Volume 17 ; 17 > #incorrect vol #
+      au < doesNotExist ; 1976 ; 1976 ; Asian Survey Volume 16 ; 16 >
+      au < doesNotExist ; 1977 ; 1977 ; Asian Survey Volume 17 ; 17 >
       au < manifest ; 1978 ; 1978 ; Asian Survey Volume 18 ; 18 >
-      au < exists ; 1979 ; 1979 ; Asian Survey Volume 19 ; 19 > #incorrect vol #
-      au < exists ; 1980 ; 1980 ; Asian Survey Volume 20 ; 20 > #incorrect vol #
-      au < exists ; 1981 ; 1981 ; Asian Survey Volume 21 ; 21 > #incorrect vol #
+      au < doesNotExist ; 1979 ; 1979 ; Asian Survey Volume 19 ; 19 >
+      au < doesNotExist ; 1980 ; 1980 ; Asian Survey Volume 20 ; 20 >
+      au < doesNotExist ; 1981 ; 1981 ; Asian Survey Volume 21 ; 21 >
       au < manifest ; 1982 ; 1982 ; Asian Survey Volume 22 ; 22 >
       au < manifest ; 1983 ; 1983 ; Asian Survey Volume 23 ; 23 >
-      au < exists ; 1984 ; 1984 ; Asian Survey Volume 24 ; 24 > #incorrect vol #
-      au < exists ; 1985 ; 1985 ; Asian Survey Volume 25 ; 25 > #incorrect vol #
-      au < exists ; 1986 ; 1986 ; Asian Survey Volume 26 ; 26 > #incorrect vol #
-      au < exists ; 1987 ; 1987 ; Asian Survey Volume 27 ; 27 > #incorrect vol #
-      au < exists ; 1988 ; 1988 ; Asian Survey Volume 28 ; 28 > #incorrect vol #
-      au < exists ; 1989 ; 1989 ; Asian Survey Volume 29 ; 29 > #incorrect vol #
+      au < doesNotExist ; 1984 ; 1984 ; Asian Survey Volume 24 ; 24 >
+      au < doesNotExist ; 1985 ; 1985 ; Asian Survey Volume 25 ; 25 >
+      au < doesNotExist ; 1986 ; 1986 ; Asian Survey Volume 26 ; 26 >
+      au < doesNotExist ; 1987 ; 1987 ; Asian Survey Volume 27 ; 27 >
+      au < doesNotExist ; 1988 ; 1988 ; Asian Survey Volume 28 ; 28 >
+      au < doesNotExist ; 1989 ; 1989 ; Asian Survey Volume 29 ; 29 >
       au < manifest ; 1990 ; 1990 ; Asian Survey Volume 30 ; 30 >
       au < manifest ; 1991 ; 1991 ; Asian Survey Volume 31 ; 31 >
       au < manifest ; 1992 ; 1992 ; Asian Survey Volume 32 ; 32 >
@@ -243,6 +245,7 @@
       au < doNotProcess ; 2019 ; 2019 ; Asian Survey Volume 59 ; 59 >
       au < manifest ; 2020 ; 2020 ; Asian Survey Volume 60 ; 60 >
       au < manifest ; 2021 ; 2021 ; Asian Survey Volume 61 ; 61 >
+      au < manifest ; 2022 ; 2022 ; Asian Survey Volume 62 ; 62 >
 
   }
 
@@ -273,7 +276,6 @@
 #      au < exists ; 2021 ; 2021 ; Boom: A Journal of California Volume 11 ; 11 > #manifest page is blank
 
   }
-
 #  {
 #      title <
 #        name = Case Studies in the Environment ;
@@ -286,6 +288,7 @@
 #      au < exists ; 2021 ; 2021 ; Case Studies in the Environment Volume 2021 ; 2021 >
 #
 #  }
+
 
   {
       title <
@@ -332,6 +335,7 @@
       au < manifest ; 2019 ; 2019 ; Communist and Post-Communist Studies Volume 52 ; 52 >
       au < manifest ; 2020 ; 2020 ; Communist and Post-Communist Studies Volume 53 ; 53 >
       au < manifest ; 2021 ; 2021 ; Communist and Post-Communist Studies Volume 54 ; 54 >
+      au < manifest ; 2022 ; 2022 ; Communist and Post-Communist Studies Volume 55 ; 55 >
 
   }
 
@@ -351,6 +355,7 @@
       au < doNotProcess ; 2019 ; 2019 ; Collabra: Psychology Volume 5 ; 5 >
       au < manifest ; 2020 ; 2020 ; Collabra: Psychology Volume 6 ; 6 >
       au < manifest ; 2021 ; 2021 ; Collabra: Psychology Volume 7 ; 7 >
+      au < manifest ; 2022 ; 2022 ; Collabra: Psychology Volume 8 ; 8 >
 
   }
 
@@ -378,6 +383,7 @@
       au < manifest ; 2019 ; 2019 ; Contemporary Arab Affairs Volume 12 ; 12 >
       au < manifest ; 2020 ; 2020 ; Contemporary Arab Affairs Volume 13 ; 13 >
       au < manifest ; 2021 ; 2021 ; Contemporary Arab Affairs Volume 14 ; 14 >
+      au < manifest ; 2022 ; 2022 ; Contemporary Arab Affairs Volume 15 ; 15 >
 
   }
 
@@ -432,6 +438,7 @@
       au < doNotProcess ; 2019 ; 2019 ; Classical Antiquity Volume 38 ; 38 >
       au < manifest ; 2020 ; 2020 ; Classical Antiquity Volume 39 ; 39 >
       au < manifest ; 2021 ; 2021 ; Classical Antiquity Volume 40 ; 40 >
+      au < manifest ; 2022 ; 2022 ; Classical Antiquity Volume 41 ; 41 >
 
   }
 
@@ -555,6 +562,7 @@
       au < doNotProcess ; 2019 ; 2019 ; California History Volume 96 ; 96 >
       au < manifest ; 2020 ; 2020 ; California History Volume 97 ; 97 >
       au < manifest ; 2021 ; 2021 ; California History Volume 98 ; 98 >
+      au < manifest ; 2022 ; 2022 ; California History Volume 99 ; 99 >
 
   }
 
@@ -579,6 +587,7 @@
       au < manifest ; 2019 ; 2019 ; Current History Volume 118 ; 118 >
       au < manifest ; 2020 ; 2020 ; Current History Volume 119 ; 119 >
       au < manifest ; 2021 ; 2021 ; Current History Volume 120 ; 120 >
+      au < manifest ; 2022 ; 2022 ; Current History Volume 121 ; 121 >
 
   }
 
@@ -602,6 +611,7 @@
       au < doNotProcess ; 2019 ; 2019 ; Departures in Critical Qualitative Research Volume 8 ; 8 >
       au < manifest ; 2020 ; 2020 ; Departures in Critical Qualitative Research Volume 9 ; 9 >
       au < manifest ; 2021 ; 2021 ; Departures in Critical Qualitative Research Volume 10 ; 10 >
+      au < expected ; 2022 ; 2022 ; Departures in Critical Qualitative Research Volume 11 ; 11 >
 
   }
 
@@ -624,6 +634,7 @@
       au < doNotProcess ; 2019 ; 2019 ; Elementa: Science of the Anthropocene Volume 7 ; 7 >
       au < manifest ; 2020 ; 2020 ; Elementa: Science of the Anthropocene Volume 8 ; 8 >
       au < manifest ; 2021 ; 2021 ; Elementa: Science of the Anthropocene Volume 9 ; 9 >
+      au < manifest ; 2022 ; 2022 ; Elementa: Science of the Anthropocene Volume 10 ; 10 >
 
   }
 #  {
@@ -693,6 +704,7 @@
       au < manifest ; 2019 ; 2019 ; Ethnic Studies Review Volume 42 ; 42 >
       au < manifest ; 2020 ; 2020 ; Ethnic Studies Review Volume 43 ; 43 >
       au < manifest ; 2021 ; 2021 ; Ethnic Studies Review Volume 44 ; 44 >
+      au < expected ; 2022 ; 2022 ; Ethnic Studies Review Volume 45 ; 45 >
 
   }
 
@@ -773,6 +785,7 @@
       au < doNotProcess ; 2020 ; 2020 ; Federal Sentencing Reporter Volume 32 [2020] ; 32 >
       au < manifest ; 2020 ; 2020 ; Federal Sentencing Reporter Volume 33 [2020] ; 33 >
       au < manifest ; 2021 ; 2021 ; Federal Sentencing Reporter Volume 33 [2021] ; 33 >
+      au < manifest ; 2022 ; 2022 ; Federal Sentencing Reporter Volume 34 [2022] ; 34 >
 
   }
 
@@ -793,6 +806,7 @@
       au < doNotProcess ; 2019 ; 2019 ; Feminist Media Histories Volume 5 ; 5 >
       au < manifest ; 2020 ; 2020 ; Feminist Media Histories Volume 6 ; 6 >
       au < manifest ; 2021 ; 2021 ; Feminist Media Histories Volume 7 ; 7 >
+      au < manifest ; 2022 ; 2022 ; Feminist Media Histories Volume 8 ; 8 >
 
   }
 
@@ -888,6 +902,8 @@
       au < manifest ; 2020 ; 2020 ; Film Quarterly Volume 74 [2020] ; 74 >
       au < manifest ; 2021 ; 2021 ; Film Quarterly Volume 74 [2021] ; 74 >
       au < manifest ; 2021 ; 2021 ; Film Quarterly Volume 75 [2021] ; 75 >
+      au < expected ; 2022 ; 2022 ; Film Quarterly Volume 76 [2022] ; 76 >
+      au < expected ; 2022 ; 2022 ; Film Quarterly Volume 77 [2022] ; 77 >
 
   }
 
@@ -924,6 +940,7 @@
 
       au < manifest ; 2020 ; 2020 ; Gastronomica: The Journal of Critical Food Studies Volume 20 ; 20 >
       au < manifest ; 2021 ; 2021 ; Gastronomica: The Journal of Critical Food Studies Volume 21 ; 21 >
+      au < manifest ; 2022 ; 2022 ; Gastronomica: The Journal of Critical Food Studies Volume 22 ; 22 >
 
   }
 
@@ -938,43 +955,98 @@
 
       param[journal_id] = hsns
 
-      au < exists ; 1969 ; 1969 ; Historical Studies in the Natural Sciences Volume 1 ; 1 >
-      au < exists ; 1970 ; 1970 ; Historical Studies in the Natural Sciences Volume 2 ; 2 >
-      au < exists ; 1971 ; 1971 ; Historical Studies in the Natural Sciences Volume 3 ; 3 >
-      au < exists ; 1974 ; 1974 ; Historical Studies in the Natural Sciences Volume 4 ; 4 >
-      au < exists ; 1975 ; 1975 ; Historical Studies in the Natural Sciences Volume 5 ; 5 >
-      au < exists ; 1976 ; 1976 ; Historical Studies in the Natural Sciences Volume 6 ; 6 >
-      au < exists ; 1977 ; 1977 ; Historical Studies in the Natural Sciences Volume 7 ; 7 >
-      au < exists ; 1978 ; 1978 ; Historical Studies in the Natural Sciences Volume 8 ; 8 >
-      au < exists ; 1979 ; 1979 ; Historical Studies in the Natural Sciences Volume 9 ; 9 >
-      au < exists ; 1980 ; 1980 ; Historical Studies in the Natural Sciences Volume 10 ; 10 >
-      au < manifest ; 1981 ; 1981 ; Historical Studies in the Natural Sciences Volume 11 ; 11 >
-      au < manifest ; 1982 ; 1982 ; Historical Studies in the Natural Sciences Volume 12 ; 12 >
-      au < manifest ; 1983 ; 1983 ; Historical Studies in the Natural Sciences Volume 13 ; 13 >
-      au < manifest ; 1984 ; 1984 ; Historical Studies in the Natural Sciences Volume 14 ; 14 >
-      au < manifest ; 1985 ; 1985 ; Historical Studies in the Natural Sciences Volume 15 ; 15 >
-      au < manifest ; 1986 ; 1986 ; Historical Studies in the Natural Sciences Volume 16 ; 16 >
-      au < manifest ; 1987 ; 1987 ; Historical Studies in the Natural Sciences Volume 17 ; 17 >
-      au < manifest ; 1988 ; 1988 ; Historical Studies in the Natural Sciences Volume 18 ; 18 >
-      au < manifest ; 1989 ; 1989 ; Historical Studies in the Natural Sciences Volume 19 ; 19 >
-      au < manifest ; 1990 ; 1990 ; Historical Studies in the Natural Sciences Volume 20 ; 20 >
-      au < manifest ; 1991 ; 1991 ; Historical Studies in the Natural Sciences Volume 21 ; 21 >
-      au < manifest ; 1992 ; 1992 ; Historical Studies in the Natural Sciences Volume 22 ; 22 >
-      au < manifest ; 1993 ; 1993 ; Historical Studies in the Natural Sciences Volume 23 ; 23 >
-      au < manifest ; 1994 ; 1994 ; Historical Studies in the Natural Sciences Volume 24 ; 24 >
-      au < manifest ; 1995 ; 1995 ; Historical Studies in the Natural Sciences Volume 25 ; 25 >
-      au < manifest ; 1996 ; 1996 ; Historical Studies in the Natural Sciences Volume 26 ; 26 >
-      au < manifest ; 1997 ; 1997 ; Historical Studies in the Natural Sciences Volume 27 ; 27 >
-      au < manifest ; 1998 ; 1998 ; Historical Studies in the Natural Sciences Volume 28 ; 28 >
-      au < manifest ; 1999 ; 1999 ; Historical Studies in the Natural Sciences Volume 29 ; 29 >
-      au < manifest ; 2000 ; 2000 ; Historical Studies in the Natural Sciences Volume 30 ; 30 >
-      au < manifest ; 2001 ; 2001 ; Historical Studies in the Natural Sciences Volume 31 ; 31 >
-      au < manifest ; 2002 ; 2002 ; Historical Studies in the Natural Sciences Volume 32 ; 32 >
-      au < manifest ; 2003 ; 2003 ; Historical Studies in the Natural Sciences Volume 33 ; 33 >
-      au < manifest ; 2004 ; 2004 ; Historical Studies in the Natural Sciences Volume 34 ; 34 >
-      au < manifest ; 2005 ; 2005 ; Historical Studies in the Natural Sciences Volume 35 ; 35 >
-      au < manifest ; 2006 ; 2006 ; Historical Studies in the Natural Sciences Volume 36 ; 36 >
+      au < manifest ; 1969 ; 1969 ; Historical Studies in the Natural Sciences Volume 1 ; 1 >
+      au < doesNotExist ; 1970 ; 1970 ; Historical Studies in the Natural Sciences Volume 2 ; 2 >
+      au < manifest ; 1971 ; 1971 ; Historical Studies in the Natural Sciences Volume 3 ; 3 >
+      au < manifest ; 1974 ; 1974 ; Historical Studies in the Natural Sciences Volume 4 ; 4 >
+      au < manifest ; 1975 ; 1975 ; Historical Studies in the Natural Sciences Volume 5 ; 5 >
+      au < manifest ; 1975 ; 1975 ; Historical Studies in the Natural Sciences Volume 6 ; 6 >
+      au < manifest ; 1976 ; 1976 ; Historical Studies in the Natural Sciences Volume 7 ; 7 >
+      au < manifest ; 1977 ; 1977 ; Historical Studies in the Natural Sciences Volume 8 ; 8 >
+      au < manifest ; 1978 ; 1978 ; Historical Studies in the Natural Sciences Volume 9 ; 9 >
+      au < manifest ; 1979 ; 1979 ; Historical Studies in the Natural Sciences Volume 10 ; 10 >
+      au < manifest ; 1980 ; 1980 ; Historical Studies in the Natural Sciences Volume 11 (1980) ; 11 >
+
+      au < manifest ; 1981 ; 1981 ; Historical Studies in the Natural Sciences Volume 11 (1981) ; 11 >
+      au < manifest ; 1981 ; 1981 ; Historical Studies in the Natural Sciences Volume 12 (1981) ; 12 >
+
+      au < manifest ; 1982 ; 1982 ; Historical Studies in the Natural Sciences Volume 12 (1982) ; 12 >
+      au < manifest ; 1982 ; 1982 ; Historical Studies in the Natural Sciences Volume 13 (1982) ; 13 >
+
+      au < manifest ; 1983 ; 1983 ; Historical Studies in the Natural Sciences Volume 13 (1983) ; 13 >
+      au < manifest ; 1983 ; 1983 ; Historical Studies in the Natural Sciences Volume 14 (1983) ; 14 >
+
+      au < manifest ; 1984 ; 1984 ; Historical Studies in the Natural Sciences Volume 14 (1984) ; 14 >
+      au < manifest ; 1984 ; 1984 ; Historical Studies in the Natural Sciences Volume 15 (1984) ; 15 >
+
+      au < manifest ; 1985 ; 1985 ; Historical Studies in the Natural Sciences Volume 15 (1985) ; 15 >
+      au < doesNotExist ; 1985 ; 1985 ; Historical Studies in the Natural Sciences Volume 16 (1985) ; 16 >
+
+      au < manifest ; 1986 ; 1986 ; Historical Studies in the Natural Sciences Volume 16 (1986) ; 16 >
+      au < manifest ; 1986 ; 1986 ; Historical Studies in the Natural Sciences Volume 17 (1986) ; 17 >
+
+      au < manifest ; 1987 ; 1987 ; Historical Studies in the Natural Sciences Volume 17 (1987) ; 17 >
+      au < manifest ; 1987 ; 1987 ; Historical Studies in the Natural Sciences Volume 18 (1987) ; 18 >
+
+      au < manifest ; 1988 ; 1988 ; Historical Studies in the Natural Sciences Volume 18 (1988) ; 18 >
+      au < manifest ; 1988 ; 1988 ; Historical Studies in the Natural Sciences Volume 19 (1988) ; 19 >
+
+      au < manifest ; 1989 ; 1989 ; Historical Studies in the Natural Sciences Volume 19 (1989) ; 19 >
+      au < manifest ; 1989 ; 1989 ; Historical Studies in the Natural Sciences Volume 20 (1989) ; 20 >
+
+      au < manifest ; 1990 ; 1990 ; Historical Studies in the Natural Sciences Volume 20 (1990) ; 20 >
+      au < manifest ; 1990 ; 1990 ; Historical Studies in the Natural Sciences Volume 21 (1990) ; 21 >
+
+      au < manifest ; 1991 ; 1991 ; Historical Studies in the Natural Sciences Volume 21 (1991) ; 21 >
+      au < manifest ; 1991 ; 1991 ; Historical Studies in the Natural Sciences Volume 22 (1991) ; 22 >
+
+      au < manifest ; 1992 ; 1992 ; Historical Studies in the Natural Sciences Volume 22 (1992) ; 22 >
+      au < manifest ; 1992 ; 1992 ; Historical Studies in the Natural Sciences Volume 23 (1992) ; 23 >
+
+      au < manifest ; 1993 ; 1993 ; Historical Studies in the Natural Sciences Volume 23 (1993) ; 23 >
+      au < manifest ; 1993 ; 1993 ; Historical Studies in the Natural Sciences Volume 24 (1993) ; 24 >
+
+      au < manifest ; 1994 ; 1994 ; Historical Studies in the Natural Sciences Volume 24 (1994) ; 24 >
+      au < manifest ; 1994 ; 1994 ; Historical Studies in the Natural Sciences Volume 25 (1994) ; 25 >
+
+      au < manifest ; 1995 ; 1995 ; Historical Studies in the Natural Sciences Volume 25 (1995) ; 25 >
+      au < manifest ; 1995 ; 1995 ; Historical Studies in the Natural Sciences Volume 26 (1995) ; 26 >
+
+      au < manifest ; 1996 ; 1996 ; Historical Studies in the Natural Sciences Volume 26 (1996) ; 26 >
+      au < manifest ; 1996 ; 1996 ; Historical Studies in the Natural Sciences Volume 27 (1996) ; 27 >
+
+      au < manifest ; 1997 ; 1997 ; Historical Studies in the Natural Sciences Volume 27 (1997) ; 27 >
+      au < manifest ; 1997 ; 1997 ; Historical Studies in the Natural Sciences Volume 28 (1997) ; 28 >
+
+      au < manifest ; 1998 ; 1998 ; Historical Studies in the Natural Sciences Volume 28 (1998) ; 28 >
+      au < manifest ; 1998 ; 1998 ; Historical Studies in the Natural Sciences Volume 29 (1998) ; 29 >
+
+      au < manifest ; 1999 ; 1999 ; Historical Studies in the Natural Sciences Volume 29 (1999) ; 29 >
+      au < manifest ; 1999 ; 1999 ; Historical Studies in the Natural Sciences Volume 30 (1999) ; 30 >
+
+      au < manifest ; 2000 ; 2000 ; Historical Studies in the Natural Sciences Volume 30 (2000) ; 30 >
+      au < manifest ; 2000 ; 2000 ; Historical Studies in the Natural Sciences Volume 31 (2000) ; 31 >
+
+      au < manifest ; 2001 ; 2001 ; Historical Studies in the Natural Sciences Volume 31 (2001) ; 31 >
+      au < manifest ; 2001 ; 2001 ; Historical Studies in the Natural Sciences Volume 32 (2001) ; 32 >
+
+      au < manifest ; 2002 ; 2002 ; Historical Studies in the Natural Sciences Volume 32 (2002) ; 32 >
+      au < manifest ; 2002 ; 2002 ; Historical Studies in the Natural Sciences Volume 33 (2002) ; 33 >
+
+      au < manifest ; 2003 ; 2003 ; Historical Studies in the Natural Sciences Volume 33 (2003) ; 33 >
+      au < manifest ; 2003 ; 2003 ; Historical Studies in the Natural Sciences Volume 34 (2003) ; 34 >
+
+      au < manifest ; 2004 ; 2004 ; Historical Studies in the Natural Sciences Volume 34 (2004) ; 34 >
+      au < manifest ; 2004 ; 2004 ; Historical Studies in the Natural Sciences Volume 35 (2004) ; 35 >
+
+      au < manifest ; 2005 ; 2005 ; Historical Studies in the Natural Sciences Volume 35 (2005) ; 35 >
+      au < manifest ; 2005 ; 2005 ; Historical Studies in the Natural Sciences Volume 36 (2005) ; 36 >
+
+      au < manifest ; 2006 ; 2006 ; Historical Studies in the Natural Sciences Volume 36 (2006) ; 36 >
+      au < manifest ; 2006 ; 2006 ; Historical Studies in the Natural Sciences Volume 37 (2006) ; 37 >
+
       au < manifest ; 2007 ; 2007 ; Historical Studies in the Natural Sciences Volume 37 ; 37 >
+
       au < doNotProcess ; 2008 ; 2008 ; Historical Studies in the Natural Sciences Volume 38 ; 38 >
       au < doNotProcess ; 2009 ; 2009 ; Historical Studies in the Natural Sciences Volume 39 ; 39 >
       au < doNotProcess ; 2010 ; 2010 ; Historical Studies in the Natural Sciences Volume 40 ; 40 >
@@ -987,11 +1059,12 @@
       au < doNotProcess ; 2017 ; 2017 ; Historical Studies in the Natural Sciences Volume 47 ; 47 >
       au < doNotProcess ; 2018 ; 2018 ; Historical Studies in the Natural Sciences Volume 48 ; 48 >
       au < doNotProcess ; 2019 ; 2019 ; Historical Studies in the Natural Sciences Volume 49 ; 49 >
+
       au < manifest ; 2020 ; 2020 ; Historical Studies in the Natural Sciences Volume 50 ; 50 >
       au < manifest ; 2021 ; 2021 ; Historical Studies in the Natural Sciences Volume 51 ; 51 >
+      au < manifest ; 2022 ; 2022 ; Historical Studies in the Natural Sciences Volume 52 ; 52 >
 
   }
-
 #  {
 #
 #      title <
@@ -1019,6 +1092,7 @@
 #      au < expected ; 2021 ; 2021 ; International Review of Qualitative Research Volume 14 ; 14 >
 #
 #  }
+
 
   {
 
@@ -1106,6 +1180,7 @@
       au < doNotProcess ; 2019 ; 2019 ; Journal of the American Musicological Society Volume 72 ; 72 >
       au < manifest ; 2020 ; 2020 ; Journal of the American Musicological Society Volume 73 ; 73 >
       au < manifest ; 2021 ; 2021 ; Journal of the American Musicological Society Volume 74 ; 74 >
+      au < expected ; 2022 ; 2022 ; Journal of the American Musicological Society Volume 75 ; 75 >
 
     }
 
@@ -1122,6 +1197,7 @@
 
       au < manifest ; 2020 ; 2020 ; The Journal of Autoethnography Volume 1 ; 1 >
       au < manifest ; 2021 ; 2021 ; The Journal of Autoethnography Volume 2 ; 2 >
+      au < manifest ; 2022 ; 2022 ; The Journal of Autoethnography Volume 3 ; 3 >
 
   }
 
@@ -1137,6 +1213,7 @@
       au < manifest ; 2019 ; 2019 ; The Journal of Medieval Worlds Volume 1 ; 1 >
       au < manifest ; 2020 ; 2020 ; The Journal of Medieval Worlds Volume 2 ; 2 >
       au < expected ; 2021 ; 2021 ; The Journal of Medieval Worlds Volume 3 ; 3 >
+      au < expected ; 2022 ; 2022 ; The Journal of Medieval Worlds Volume 4 ; 4 >
 
   }
 
@@ -1190,6 +1267,7 @@
       au < doNotProcess ; 2019 ; 2019 ; The Journal of Musicology Volume 36 ; 36 >
       au < manifest ; 2020 ; 2020 ; The Journal of Musicology Volume 37 ; 37 >
       au < manifest ; 2021 ; 2021 ; The Journal of Musicology Volume 38 ; 38 >
+      au < manifest ; 2022 ; 2022 ; The Journal of Musicology Volume 39 ; 39 >
 
   }
 
@@ -1257,6 +1335,7 @@
       au < doNotProcess ; 2019 ; 2019 ; Journal of Palestine Studies Volume 49 [2019] ; 49 >
       au < manifest ; 2020 ; 2020 ; Journal of Palestine Studies Volume 49 [2020] ; 49 >
       au < expected ; 2021 ; 2021 ; Journal of Palestine Studies Volume 50 [2021] ; 50 >
+      au < expected ; 2022 ; 2022 ; Journal of Palestine Studies Volume 51 [2022] ; 51 >
 
   }
 
@@ -1274,6 +1353,7 @@
       au < manifest ; 2019 ; 2019 ; Journal of Popular Music Studies Volume 31 ; 31 >
       au < manifest ; 2020 ; 2020 ; Journal of Popular Music Studies Volume 32 ; 32 >
       au < manifest ; 2021 ; 2021 ; Journal of Popular Music Studies Volume 33 ; 33 >
+      au < manifest ; 2022 ; 2022 ; Journal of Popular Music Studies Volume 34 ; 34 >
 
   }
 
@@ -1288,6 +1368,7 @@
 
       au < manifest ; 2020 ; 2020 ; Journal of Sound and Music in Games Volume 1 ; 1 >
       au < manifest ; 2021 ; 2021 ; Journal of Sound and Music in Games Volume 2 ; 2 >
+      au < manifest ; 2022 ; 2022 ; Journal of Sound and Music in Games Volume 3 ; 3 >
 
   }
 
@@ -1306,7 +1387,7 @@
       au < manifest ; 1942 ; 1942 ; Journal of the Society of Architectural Historians Volume 2 ; 2 >
       au < manifest ; 1943 ; 1943 ; Journal of the Society of Architectural Historians Volume 3 ; 3 >
       au < manifest ; 1944 ; 1944 ; Journal of the Society of Architectural Historians Volume 4 ; 4 >
-      au < exists ; 1945 ; 1945 ; Journal of the Society of Architectural Historians Volume 5 ; 5 >
+      au < manifest ; 1945 ; 1945 ; Journal of the Society of Architectural Historians Volume 5 ; 5 >
       au < manifest ; 1947 ; 1947 ; Journal of the Society of Architectural Historians Volume 6 ; 6 >
       au < manifest ; 1948 ; 1948 ; Journal of the Society of Architectural Historians Volume 7 ; 7 >
       au < manifest ; 1949 ; 1949 ; Journal of the Society of Architectural Historians Volume 8 ; 8 >
@@ -1382,6 +1463,7 @@
       au < doNotProcess ; 2019 ; 2019 ; Journal of the Society of Architectural Historians Volume 78 ; 78 >
       au < manifest ; 2020 ; 2020 ; Journal of the Society of Architectural Historians Volume 79 ; 79 >
       au < manifest ; 2021 ; 2021 ; Journal of the Society of Architectural Historians Volume 80 ; 80 >
+      au < manifest ; 2022 ; 2022 ; Journal of the Society of Architectural Historians Volume 81 ; 81 >
 
   }
 
@@ -1397,6 +1479,7 @@
       au < manifest ; 2019 ; 2019 ; Latin American and Latinx Visual Culture Volume 1 ; 1 >
       au < manifest ; 2020 ; 2020 ; Latin American and Latinx Visual Culture Volume 2 ; 2 >
       au < manifest ; 2021 ; 2021 ; Latin American and Latinx Visual Culture Volume 3 ; 3 >
+      au < manifest ; 2022 ; 2022 ; Latin American and Latinx Visual Culture Volume 4 ; 4 >
 
   }
 
@@ -1448,6 +1531,7 @@
       au < doNotProcess ; 2019 ; 2019 ; Mexican Studies/Estudios Mexicanos Volume 35 ; 35 >
       au < manifest ; 2020 ; 2020 ; Mexican Studies/Estudios Mexicanos Volume 36 ; 36 >
       au < manifest ; 2021 ; 2021 ; Mexican Studies/Estudios Mexicanos Volume 37 ; 37 >
+      au < manifest ; 2022 ; 2022 ; Mexican Studies/Estudios Mexicanos Volume 38 ; 38 >
 
   }
 
@@ -1501,6 +1585,7 @@
       au < doNotProcess ; 2019 ; 2019 ; Music Perception: An Interdisciplinary Journal Volume 37 ; 37 >
       au < manifest ; 2020 ; 2020 ; Music Perception: An Interdisciplinary Journal Volume 38 ; 38 >
       au < manifest ; 2021 ; 2021 ; Music Perception: An Interdisciplinary Journal Volume 39 ; 39 >
+      au < expected ; 2022 ; 2022 ; Music Perception: An Interdisciplinary Journal Volume 40 ; 40 >
 
   }
 
@@ -1516,6 +1601,7 @@
 
       au < manifest ; 2020 ; 2020 ; National Review of Black Politics Volume 1 ; 1 >
       au < manifest ; 2021 ; 2021 ; National Review of Black Politics Volume 2 ; 2 >
+      au < expected ; 2022 ; 2022 ; National Review of Black Politics Volume 3 ; 3 >
 
   }
 
@@ -1611,6 +1697,8 @@
 
       au < manifest ; 2021 ; 2021 ; Nineteenth-Century Literature Volume 76 [2021] ; 76 >
       au < expected ; 2022 ; 2022 ; Nineteenth-Century Literature Volume 76 [2022] ; 76 >
+      au < expected ; 2022 ; 2022 ; Nineteenth-Century Literature Volume 77 [2022] ; 77 >
+      au < expected ; 2022 ; 2022 ; Nineteenth-Century Literature Volume 78 [2022] ; 78 >
 
   }
 
@@ -1651,6 +1739,7 @@
       au < doNotProcess ; 2019 ; 2019 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 22 ; 22 >
       au < manifest ; 2020 ; 2020 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 23 ; 23 >
       au < manifest ; 2021 ; 2021 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 24 ; 24 >
+      au < expected ; 2022 ; 2022 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 25 ; 25 >
 
   }
 
@@ -1714,6 +1803,8 @@
       au < manifest ; 2021 ; 2021 ; 19th-Century Music Volume 44 [2021] ; 44 >
 
       au < manifest ; 2021 ; 2021 ; 19th-Century Music Volume 45 [2021] ; 45 >
+      au < expected ; 2022 ; 2022 ; 19th-Century Music Volume 46 [2022] ; 46 >
+      au < expected ; 2022 ; 2022 ; 19th-Century Music Volume 47 [2022] ; 47 >
 
   }
 
@@ -1727,7 +1818,6 @@
       #param[base_url] = http://nr.ucpress.edu/
 
       param[journal_id] = nr
-
 #      au < exists ; 1997-1998 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 1 ; 1 >
 #      au < exists ; 1998-1999 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 2 ; 2 >
 #      au < exists ; 1999-2000 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 3 ; 3 >
@@ -1752,8 +1842,10 @@
 #      au < doNotProcess ; 2018-2019 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 22 ; 22 >
 #      au < doNotProcess ; 2019-2020 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 23 ; 23 >
 
+
       au < manifest ; 2020 ; 2020 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 24 [2020] ; 24 >
       au < manifest ; 2021 ; 2021 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 25 [2021] ; 25 >
+      au < expected ; 2022 ; 2022 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 26 [2022] ; 26 >
 
   }
 
@@ -1858,9 +1950,9 @@
       au < doNotProcess ; 2019 ; 2019 ; Pacific Historical Review Volume 88 ; 88 >
       au < manifest ; 2020 ; 2020 ; Pacific Historical Review Volume 89 ; 89 >
       au < manifest ; 2021 ; 2021 ; Pacific Historical Review Volume 90 ; 90 >
+      au < manifest ; 2022 ; 2022 ; Pacific Historical Review Volume 91 ; 91 >
 
   }
-
 #  {
 #
 #      title <
@@ -1873,6 +1965,7 @@
 #
 #  }
 
+
   {
 
       title <
@@ -1884,6 +1977,7 @@
 
       au < manifest ; 2020 ; 2020 ; Resonance: The Journal of Sound and Culture Volume 1 ; 1 >
       au < manifest ; 2021 ; 2021 ; Resonance: The Journal of Sound and Culture Volume 2 ; 2 >
+      au < manifest ; 2022 ; 2022 ; Resonance: The Journal of Sound and Culture Volume 3 ; 3 >
 
   }
 
@@ -1898,78 +1992,78 @@
 
       param[journal_id] = representations
 
-      au < exists ; 1983 ; 1983 ; Representations Volume 1 ; 1 >
-      au < exists ; 1983 ; 1983 ; Representations Volume 2 ; 2 >
-      au < exists ; 1983 ; 1983 ; Representations Volume 3 ; 3 >
-      au < exists ; 1983 ; 1983 ; Representations Volume 4 ; 4 >
-      au < exists ; 1984 ; 1984 ; Representations Volume 5 ; 5 >
-      au < exists ; 1984 ; 1984 ; Representations Volume 6 ; 6 >
-      au < exists ; 1984 ; 1984 ; Representations Volume 7 ; 7 >
-      au < exists ; 1984 ; 1984 ; Representations Volume 8 ; 8 >
-      au < exists ; 1985 ; 1985 ; Representations Volume 9 ; 9 >
+      au < manifest ; 1983 ; 1983 ; Representations Volume 1 ; 1 >
+      au < manifest ; 1983 ; 1983 ; Representations Volume 2 ; 2 >
+      au < manifest ; 1983 ; 1983 ; Representations Volume 3 ; 3 >
+      au < manifest ; 1983 ; 1983 ; Representations Volume 4 ; 4 >
+      au < manifest ; 1984 ; 1984 ; Representations Volume 5 ; 5 >
+      au < manifest ; 1984 ; 1984 ; Representations Volume 6 ; 6 >
+      au < manifest ; 1984 ; 1984 ; Representations Volume 7 ; 7 >
+      au < manifest ; 1984 ; 1984 ; Representations Volume 8 ; 8 >
+      au < manifest ; 1985 ; 1985 ; Representations Volume 9 ; 9 >
       au < doesNotExist ; 1985 ; 1985 ; Representations Volume 10 ; 10 >
-      au < exists ; 1985 ; 1985 ; Representations Volume 11 ; 11 >
-      au < exists ; 1985 ; 1985 ; Representations Volume 12 ; 12 >
-      au < exists ; 1986 ; 1986 ; Representations Volume 13 ; 13 >
-      au < exists ; 1986 ; 1986 ; Representations Volume 14 ; 14 >
-      au < exists ; 1986 ; 1986 ; Representations Volume 15 ; 15 >
-      au < exists ; 1986 ; 1986 ; Representations Volume 16 ; 16 >
-      au < exists ; 1987 ; 1987 ; Representations Volume 17 ; 17 >
-      au < exists ; 1987 ; 1987 ; Representations Volume 18 ; 18 >
-      au < exists ; 1987 ; 1987 ; Representations Volume 19 ; 19 >
-      au < exists ; 1987 ; 1987 ; Representations Volume 20 ; 20 >
-      au < exists ; 1988 ; 1988 ; Representations Volume 21 ; 21 >
-      au < exists ; 1988 ; 1988 ; Representations Volume 22 ; 22 >
-      au < exists ; 1988 ; 1988 ; Representations Volume 23 ; 23 >
-      au < exists ; 1988 ; 1988 ; Representations Volume 24 ; 24 >
-      au < exists ; 1989 ; 1989 ; Representations Volume 25 ; 25 >
-      au < exists ; 1989 ; 1989 ; Representations Volume 26 ; 26 >
-      au < exists ; 1989 ; 1989 ; Representations Volume 27 ; 27 >
-      au < exists ; 1989 ; 1989 ; Representations Volume 28 ; 28 >
-      au < exists ; 1990 ; 1990 ; Representations Volume 29 ; 29 >
-      au < exists ; 1990 ; 1990 ; Representations Volume 30 ; 30 >
-      au < exists ; 1990 ; 1990 ; Representations Volume 31 ; 31 >
-      au < exists ; 1990 ; 1990 ; Representations Volume 32 ; 32 >
-      au < exists ; 1991 ; 1991 ; Representations Volume 33 ; 33 >
-      au < exists ; 1991 ; 1991 ; Representations Volume 34 ; 34 >
-      au < exists ; 1991 ; 1991 ; Representations Volume 35 ; 35 >
-      au < exists ; 1991 ; 1991 ; Representations Volume 36 ; 36 >
-      au < exists ; 1992 ; 1992 ; Representations Volume 37 ; 37 >
-      au < exists ; 1992 ; 1992 ; Representations Volume 38 ; 38 >
-      au < exists ; 1992 ; 1992 ; Representations Volume 39 ; 39 >
-      au < exists ; 1992 ; 1992 ; Representations Volume 40 ; 40 >
-      au < exists ; 1993 ; 1993 ; Representations Volume 41 ; 41 >
-      au < exists ; 1993 ; 1993 ; Representations Volume 42 ; 42 >
-      au < exists ; 1993 ; 1993 ; Representations Volume 43 ; 43 >
-      au < exists ; 1993 ; 1993 ; Representations Volume 44 ; 44 >
-      au < exists ; 1994 ; 1994 ; Representations Volume 45 ; 45 >
-      au < exists ; 1994 ; 1994 ; Representations Volume 46 ; 46 >
-      au < exists ; 1994 ; 1994 ; Representations Volume 47 ; 47 >
-      au < exists ; 1994 ; 1994 ; Representations Volume 48 ; 48 >
-      au < exists ; 1995 ; 1995 ; Representations Volume 49 ; 49 >
-      au < exists ; 1995 ; 1995 ; Representations Volume 50 ; 50 >
-      au < exists ; 1995 ; 1995 ; Representations Volume 51 ; 51 >
-      au < exists ; 1995 ; 1995 ; Representations Volume 52 ; 52 >
-      au < exists ; 1996 ; 1996 ; Representations Volume 53 ; 53 >
-      au < exists ; 1996 ; 1996 ; Representations Volume 54 ; 54 >
-      au < exists ; 1996 ; 1996 ; Representations Volume 55 ; 55 >
-      au < exists ; 1996 ; 1996 ; Representations Volume 56 ; 56 >
-      au < exists ; 1997 ; 1997 ; Representations Volume 57 ; 57 >
-      au < exists ; 1997 ; 1997 ; Representations Volume 58 ; 58 >
-      au < exists ; 1997 ; 1997 ; Representations Volume 59 ; 59 >
-      au < exists ; 1997 ; 1997 ; Representations Volume 60 ; 60 >
-      au < exists ; 1998 ; 1998 ; Representations Volume 61 ; 61 >
-      au < exists ; 1998 ; 1998 ; Representations Volume 62 ; 62 >
-      au < exists ; 1998 ; 1998 ; Representations Volume 63 ; 63 >
-      au < exists ; 1998 ; 1998 ; Representations Volume 64 ; 64 >
-      au < exists ; 1999 ; 1999 ; Representations Volume 65 ; 65 >
-      au < exists ; 1999 ; 1999 ; Representations Volume 66 ; 66 >
-      au < exists ; 1999 ; 1999 ; Representations Volume 67 ; 67 >
-      au < exists ; 1999 ; 1999 ; Representations Volume 68 ; 68 >
-      au < exists ; 2000 ; 2000 ; Representations Volume 69 ; 69 >
-      au < exists ; 2000 ; 2000 ; Representations Volume 70 ; 70 >
-      au < exists ; 2000 ; 2000 ; Representations Volume 71 ; 71 >
-      au < exists ; 2000 ; 2000 ; Representations Volume 72 ; 72 >
+      au < manifest ; 1985 ; 1985 ; Representations Volume 11 ; 11 >
+      au < manifest ; 1985 ; 1985 ; Representations Volume 12 ; 12 >
+      au < manifest ; 1986 ; 1986 ; Representations Volume 13 ; 13 >
+      au < manifest ; 1986 ; 1986 ; Representations Volume 14 ; 14 >
+      au < manifest ; 1986 ; 1986 ; Representations Volume 15 ; 15 >
+      au < manifest ; 1986 ; 1986 ; Representations Volume 16 ; 16 >
+      au < manifest ; 1987 ; 1987 ; Representations Volume 17 ; 17 >
+      au < manifest ; 1987 ; 1987 ; Representations Volume 18 ; 18 >
+      au < manifest ; 1987 ; 1987 ; Representations Volume 19 ; 19 >
+      au < manifest ; 1987 ; 1987 ; Representations Volume 20 ; 20 >
+      au < manifest ; 1988 ; 1988 ; Representations Volume 21 ; 21 >
+      au < manifest ; 1988 ; 1988 ; Representations Volume 22 ; 22 >
+      au < manifest ; 1988 ; 1988 ; Representations Volume 23 ; 23 >
+      au < manifest ; 1988 ; 1988 ; Representations Volume 24 ; 24 >
+      au < manifest ; 1989 ; 1989 ; Representations Volume 25 ; 25 >
+      au < manifest ; 1989 ; 1989 ; Representations Volume 26 ; 26 >
+      au < manifest ; 1989 ; 1989 ; Representations Volume 27 ; 27 >
+      au < manifest ; 1989 ; 1989 ; Representations Volume 28 ; 28 >
+      au < manifest ; 1990 ; 1990 ; Representations Volume 29 ; 29 >
+      au < manifest ; 1990 ; 1990 ; Representations Volume 30 ; 30 >
+      au < manifest ; 1990 ; 1990 ; Representations Volume 31 ; 31 >
+      au < manifest ; 1990 ; 1990 ; Representations Volume 32 ; 32 >
+      au < manifest ; 1991 ; 1991 ; Representations Volume 33 ; 33 >
+      au < manifest ; 1991 ; 1991 ; Representations Volume 34 ; 34 >
+      au < manifest ; 1991 ; 1991 ; Representations Volume 35 ; 35 >
+      au < manifest ; 1991 ; 1991 ; Representations Volume 36 ; 36 >
+      au < manifest ; 1992 ; 1992 ; Representations Volume 37 ; 37 >
+      au < manifest ; 1992 ; 1992 ; Representations Volume 38 ; 38 >
+      au < manifest ; 1992 ; 1992 ; Representations Volume 39 ; 39 >
+      au < manifest ; 1992 ; 1992 ; Representations Volume 40 ; 40 >
+      au < manifest ; 1993 ; 1993 ; Representations Volume 41 ; 41 >
+      au < manifest ; 1993 ; 1993 ; Representations Volume 42 ; 42 >
+      au < manifest ; 1993 ; 1993 ; Representations Volume 43 ; 43 >
+      au < manifest ; 1993 ; 1993 ; Representations Volume 44 ; 44 >
+      au < manifest ; 1994 ; 1994 ; Representations Volume 45 ; 45 >
+      au < manifest ; 1994 ; 1994 ; Representations Volume 46 ; 46 >
+      au < manifest ; 1994 ; 1994 ; Representations Volume 47 ; 47 >
+      au < manifest ; 1994 ; 1994 ; Representations Volume 48 ; 48 >
+      au < manifest ; 1995 ; 1995 ; Representations Volume 49 ; 49 >
+      au < manifest ; 1995 ; 1995 ; Representations Volume 50 ; 50 >
+      au < manifest ; 1995 ; 1995 ; Representations Volume 51 ; 51 >
+      au < manifest ; 1995 ; 1995 ; Representations Volume 52 ; 52 >
+      au < manifest ; 1996 ; 1996 ; Representations Volume 53 ; 53 >
+      au < manifest ; 1996 ; 1996 ; Representations Volume 54 ; 54 >
+      au < manifest ; 1996 ; 1996 ; Representations Volume 55 ; 55 >
+      au < manifest ; 1996 ; 1996 ; Representations Volume 56 ; 56 >
+      au < manifest ; 1997 ; 1997 ; Representations Volume 57 ; 57 >
+      au < manifest ; 1997 ; 1997 ; Representations Volume 58 ; 58 >
+      au < manifest ; 1997 ; 1997 ; Representations Volume 59 ; 59 >
+      au < manifest ; 1997 ; 1997 ; Representations Volume 60 ; 60 >
+      au < manifest ; 1998 ; 1998 ; Representations Volume 61 ; 61 >
+      au < manifest ; 1998 ; 1998 ; Representations Volume 62 ; 62 >
+      au < manifest ; 1998 ; 1998 ; Representations Volume 63 ; 63 >
+      au < manifest ; 1998 ; 1998 ; Representations Volume 64 ; 64 >
+      au < manifest ; 1999 ; 1999 ; Representations Volume 65 ; 65 >
+      au < manifest ; 1999 ; 1999 ; Representations Volume 66 ; 66 >
+      au < manifest ; 1999 ; 1999 ; Representations Volume 67 ; 67 >
+      au < manifest ; 1999 ; 1999 ; Representations Volume 68 ; 68 >
+      au < manifest ; 2000 ; 2000 ; Representations Volume 69 ; 69 >
+      au < manifest ; 2000 ; 2000 ; Representations Volume 70 ; 70 >
+      au < manifest ; 2000 ; 2000 ; Representations Volume 71 ; 71 >
+      au < manifest ; 2000 ; 2000 ; Representations Volume 72 ; 72 >
       au < manifest ; 2001 ; 2001 ; Representations Volume 73 ; 73 >
       au < manifest ; 2001 ; 2001 ; Representations Volume 74 ; 74 >
       au < manifest ; 2001 ; 2001 ; Representations Volume 75 ; 75 >
@@ -2058,6 +2152,10 @@
       au < manifest ; 2021 ; 2021 ; Representations Volume 154 ; 154 >
       au < manifest ; 2021 ; 2021 ; Representations Volume 155 ; 155 >
       au < manifest ; 2021 ; 2021 ; Representations Volume 156 ; 156 >
+      au < manifest ; 2022 ; 2022 ; Representations Volume 157 ; 157 >
+      au < expected ; 2022 ; 2022 ; Representations Volume 158 ; 158 >
+      au < expected ; 2022 ; 2022 ; Representations Volume 159 ; 159 >
+      au < expected ; 2022 ; 2022 ; Representations Volume 160 ; 160 >
 
   }
 
@@ -2111,6 +2209,7 @@
       au < doNotProcess ; 2019 ; 2019 ; Rhetorica: A Journal of the History of Rhetoric Volume 37 ; 37 >
       au < manifest ; 2020 ; 2020 ; Rhetorica: A Journal of the History of Rhetoric Volume 38 ; 38 >
       au < manifest ; 2021 ; 2021 ; Rhetorica: A Journal of the History of Rhetoric Volume 39 ; 39 >
+      au < manifest ; 2022 ; 2022 ; Rhetorica: A Journal of the History of Rhetoric Volume 40 ; 40 >
 
   }
 
@@ -2142,7 +2241,7 @@
       au < manifest ; 1929 ; 1929 ; Southern California Quarterly Volume 14 [1929] ; 14 >
       au < manifest ; 1930 ; 1930 ; Southern California Quarterly Volume 14 [1930] ; 14 >
       au < manifest ; 1931 ; 1931 ; Southern California Quarterly Volume 15 ; 15 >
-      au < exists ; 1934 ; 1934 ; Southern California Quarterly Volume 16 ; 16 >
+      au < manifest ; 1934 ; 1934 ; Southern California Quarterly Volume 16 ; 16 >
       au < manifest ; 1935 ; 1935 ; Southern California Quarterly Volume 17 ; 17 >
       au < manifest ; 1936 ; 1936 ; Southern California Quarterly Volume 18 ; 18 >
       au < manifest ; 1937 ; 1937 ; Southern California Quarterly Volume 19 ; 19 >
@@ -2230,6 +2329,7 @@
       au < doNotProcess ; 2019 ; 2019 ; Southern California Quarterly Volume 101 ; 101 >
       au < manifest ; 2020 ; 2020 ; Southern California Quarterly Volume 102 ; 102 >
       au < manifest ; 2021 ; 2021 ; Southern California Quarterly Volume 103 ; 103 >
+      au < expected ; 2022 ; 2022 ; Southern California Quarterly Volume 104 ; 104 >
 
   }
 
@@ -2249,6 +2349,7 @@
       au < doNotProcess ; 2019 ; 2019 ; Studies in Late Antiquity Volume 3 ; 3 >
       au < manifest ; 2020 ; 2020 ; Studies in Late Antiquity Volume 4 ; 4 >
       au < manifest ; 2021 ; 2021 ; Studies in Late Antiquity Volume 5 ; 5 >
+      au < manifest ; 2022 ; 2022 ; Studies in Late Antiquity Volume 6 ; 6 >
 
   }
 
@@ -2269,6 +2370,7 @@
       au < doNotProcess ; 2019 ; 2019 ; Sociology of Development Volume 5 ; 5 >
       au < manifest ; 2020 ; 2020 ; Sociology of Development Volume 6 ; 6 >
       au < manifest ; 2021 ; 2021 ; Sociology of Development Volume 7 ; 7 >
+      au < manifest ; 2022 ; 2022 ; Sociology of Development Volume 8 ; 8 >
 
   }
 
@@ -2328,6 +2430,7 @@
       au < doNotProcess ; 2019 ; 2019 ; The Public Historian Volume 41 ; 41 >
       au < manifest ; 2020 ; 2020 ; The Public Historian Volume 42 ; 42 >
       au < manifest ; 2021 ; 2021 ; The Public Historian Volume 43 ; 43 >
+      au < manifest ; 2022 ; 2022 ; The Public Historian Volume 44 ; 44 >
 
   }
 
@@ -2358,6 +2461,7 @@
       au < doNotProcess ; 2019 ; 2019 ; Journal of Vietnamese Studies Volume 14 ; 14 >
       au < manifest ; 2020 ; 2020 ; Journal of Vietnamese Studies Volume 15 ; 15 >
       au < manifest ; 2021 ; 2021 ; Journal of Vietnamese Studies Volume 16 ; 16 >
+      au < manifest ; 2022 ; 2022 ; Journal of Vietnamese Studies Volume 17 ; 17 >
 
   }
 

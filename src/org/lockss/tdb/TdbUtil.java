@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2018, Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University,
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,
@@ -34,6 +34,8 @@ package org.lockss.tdb;
 
 import java.io.*;
 import java.util.*;
+
+import org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream;
 
 /**
  * Temporary until a few things are in lockss-util or similar.
@@ -72,7 +74,7 @@ public class TdbUtil {
   public static String encode(String str) {
     int maxBytesPerChar = 10;
     StringBuffer out = new StringBuffer(str.length());
-    ByteArrayOutputStream buf = new ByteArrayOutputStream(maxBytesPerChar);
+    UnsynchronizedByteArrayOutputStream buf = new UnsynchronizedByteArrayOutputStream(maxBytesPerChar);
     OutputStreamWriter writer = new OutputStreamWriter(buf);
     
     for (int i = 0, len = str.length(); i < len; i++) {

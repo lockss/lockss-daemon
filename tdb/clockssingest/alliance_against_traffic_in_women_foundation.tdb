@@ -25,8 +25,8 @@
       plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
       param[base_url] = https://www.antitraffickingreview.org/
       attr[start_stem] = index.php/
-
       #example permission page: https://www.antitraffickingreview.org/index.php/atrjournal/gateway/lockss?year=2017
+
       
       au < doNotProcess ; exists ; 2012 ; Anti-Trafficking Review Number 1 ; 1 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; Anti-Trafficking Review Number 2 ; 2 ; 2013 ; >
@@ -38,6 +38,7 @@
       au < finished ; frozen ; 2019 ; Anti-Trafficking Review Number 9 ; 9 ; 2019 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Anti-Trafficking Review Number 10 ; 10 ; 2020 ; >
       au < crawling ; exists ; 2021 ; Anti-Trafficking Review Number 11 ; 11 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; Anti-Trafficking Review Number 12 ; 12 ; 2022 ; >
 
      }
 

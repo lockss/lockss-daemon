@@ -7,16 +7,16 @@
     info[tester] = 8 ;
     info[poller] = 8
   >
-
     #plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
+
     implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
     
     #manifest pages don't include index.php.
-
     # Move to OJS3, need patch from publisher. 3.1.1 as of 9/12/2019
     # Note: the correct value for start_stem will be the empty string (meaning
     # there is no index.php/ portion).
     #attr[start_stem] = 
+
 
     {
 
@@ -29,9 +29,9 @@
       param[base_url] = https://mulpress.mcmaster.ca/
       param[journal_id] = bridges
 
-      au < frozen ; exists ; 2012 ; Bridges : Conversations in Global Politics and Public Policy Volume 1 ; 1 ; 2012 ; > 
-      au < frozen ; exists ; 2013 ; Bridges : Conversations in Global Politics and Public Policy Volume 2 ; 2 ; 2013 ; > 
-      au < frozen ; exists ; 2014 ; Bridges : Conversations in Global Politics and Public Policy Volume 3 ; 3 ; 2014 ; > 
+      au < finished ; manifest ; 2012 ; Bridges : Conversations in Global Politics and Public Policy Volume 1 ; 1 ; 2012 ; reingest1.clockss.org:8082 > 
+      au < finished ; manifest ; 2013 ; Bridges : Conversations in Global Politics and Public Policy Volume 2 ; 2 ; 2013 ; reingest2.clockss.org:8085 > 
+      au < finished ; manifest ; 2014 ; Bridges : Conversations in Global Politics and Public Policy Volume 3 ; 3 ; 2014 ; reingest3.clockss.org:8083 > 
 
     }
 
@@ -49,28 +49,29 @@
 
       au < manifest ; exists ; 1998 ; Early Theatre Volume 1 ; 1 ; 1998 ; > 
       au < manifest ; exists ; 1999 ; Early Theatre Volume 2 ; 2 ; 1999 ; > 
-      au < frozen ; exists ; 2000 ; Early Theatre Volume 3 ; 3 ; 2000 ; > 
-      au < frozen ; exists ; 2001 ; Early Theatre Volume 4 ; 4 ; 2001 ; > 
-      au < frozen ; exists ; 2002 ; Early Theatre Volume 5 ; 5 ; 2002 ; > 
-      au < frozen ; exists ; 2003 ; Early Theatre Volume 6 ; 6 ; 2003 ; > 
-      au < frozen ; exists ; 2004 ; Early Theatre Volume 7 ; 7 ; 2004 ; > 
-      au < frozen ; exists ; 2005 ; Early Theatre Volume 8 ; 8 ; 2005 ; > 
-      au < frozen ; exists ; 2006 ; Early Theatre Volume 9 ; 9 ; 2006 ; > 
-      au < frozen ; exists ; 2007 ; Early Theatre Volume 10 ; 10 ; 2007 ; > 
-      au < frozen ; exists ; 2008 ; Early Theatre Volume 11 ; 11 ; 2008 ; > 
-      au < frozen ; exists ; 2009 ; Early Theatre Volume 12 ; 12 ; 2009 ; > 
-      au < frozen ; exists ; 2010 ; Early Theatre Volume 13 ; 13 ; 2010 ; > 
-      au < frozen ; exists ; 2011 ; Early Theatre Volume 14 ; 14 ; 2011 ; > 
-      au < frozen ; exists ; 2012 ; Early Theatre Volume 15 ; 15 ; 2012 ; > 
-      au < frozen ; exists ; 2013 ; Early Theatre Volume 16 ; 16 ; 2013 ; > 
-      au < frozen ; exists ; 2014 ; Early Theatre Volume 17 ; 17 ; 2014 ; > 
-      au < frozen ; exists ; 2015 ; Early Theatre Volume 18 ; 18 ; 2015 ; > 
-      au < frozen ; exists ; 2016 ; Early Theatre Volume 19 ; 19 ; 2016 ; > 
-      au < frozen ; exists ; 2017 ; Early Theatre Volume 20 ; 20 ; 2017 ; > 
-      au < frozen ; exists ; 2018 ; Early Theatre Volume 21 ; 21 ; 2018 ; >
-      au < frozen ; exists ; 2019 ; Early Theatre Volume 22 ; 22 ; 2019 ; >
+      au < finished ; manifest ; 2000 ; Early Theatre Volume 3 ; 3 ; 2000 ; reingest4.clockss.org:8082 > 
+      au < finished ; manifest ; 2001 ; Early Theatre Volume 4 ; 4 ; 2001 ; reingest5.clockss.org:8082 > 
+      au < finished ; manifest ; 2002 ; Early Theatre Volume 5 ; 5 ; 2002 ; reingest1.clockss.org:8082 > 
+      au < finished ; manifest ; 2003 ; Early Theatre Volume 6 ; 6 ; 2003 ; reingest2.clockss.org:8085 > 
+      au < finished ; manifest ; 2004 ; Early Theatre Volume 7 ; 7 ; 2004 ; reingest3.clockss.org:8083 > 
+      au < finished ; manifest ; 2005 ; Early Theatre Volume 8 ; 8 ; 2005 ; reingest4.clockss.org:8082 > 
+      au < finished ; manifest ; 2006 ; Early Theatre Volume 9 ; 9 ; 2006 ; reingest5.clockss.org:8082 > 
+      au < finished ; manifest ; 2007 ; Early Theatre Volume 10 ; 10 ; 2007 ; reingest1.clockss.org:8082 > 
+      au < finished ; manifest ; 2008 ; Early Theatre Volume 11 ; 11 ; 2008 ; reingest2.clockss.org:8085 > 
+      au < finished ; manifest ; 2009 ; Early Theatre Volume 12 ; 12 ; 2009 ; reingest3.clockss.org:8083 > 
+      au < finished ; manifest ; 2010 ; Early Theatre Volume 13 ; 13 ; 2010 ; reingest4.clockss.org:8082 > 
+      au < finished ; manifest ; 2011 ; Early Theatre Volume 14 ; 14 ; 2011 ; reingest5.clockss.org:8082 > 
+      au < finished ; manifest ; 2012 ; Early Theatre Volume 15 ; 15 ; 2012 ; reingest1.clockss.org:8082 > 
+      au < finished ; manifest ; 2013 ; Early Theatre Volume 16 ; 16 ; 2013 ; reingest2.clockss.org:8085 > 
+      au < finished ; manifest ; 2014 ; Early Theatre Volume 17 ; 17 ; 2014 ; reingest3.clockss.org:8083 > 
+      au < finished ; manifest ; 2015 ; Early Theatre Volume 18 ; 18 ; 2015 ; reingest4.clockss.org:8082 > 
+      au < finished ; manifest ; 2016 ; Early Theatre Volume 19 ; 19 ; 2016 ; reingest5.clockss.org:8082 > 
+      au < finished ; manifest ; 2017 ; Early Theatre Volume 20 ; 20 ; 2017 ; reingest1.clockss.org:8082 > 
+      au < finished ; manifest ; 2018 ; Early Theatre Volume 21 ; 21 ; 2018 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2019 ; Early Theatre Volume 22 ; 22 ; 2019 ; reingest3.clockss.org:8083 >
       au < notReady ; exists ; 2020 ; Early Theatre Volume 23 ; 23 ; 2020 ; > #subscription for a year. Wait till 2022
       au < crawling ; exists ; 2021 ; Early Theatre Volume 24 ; 24 ; 2021 ; >
+      au < expected ; exists ; 2022 ; Early Theatre Volume 25 ; 25 ; 2022 ; >
 
     }
 
@@ -94,20 +95,20 @@
       au < manifest ; exists ; 1995 ; Energy Studies Review Volume 7 ; 7 ; 1995 ; > 
       au < manifest ; exists ; 1996 ; Energy Studies Review Volume 8 ; 8 ; 1996 ; > 
       au < manifest ; exists ; 1999 ; Energy Studies Review Volume 9 ; 9 ; 1999 ; > 
-      au < frozen ; exists ; 2002 ; Energy Studies Review Volume 10 ; 10 ; 2002 ; > 
-      au < frozen ; exists ; 2003 ; Energy Studies Review Volume 11 ; 11 ; 2003 ; > 
-      au < frozen ; exists ; 2004 ; Energy Studies Review Volume 12 ; 12 ; 2004 ; > 
-      au < frozen ; exists ; 2005 ; Energy Studies Review Volume 13 ; 13 ; 2005 ; > 
-      au < frozen ; exists ; 2006 ; Energy Studies Review Volume 14 ; 14 ; 2006 ; > 
-      au < frozen ; exists ; 2007 ; Energy Studies Review Volume 15 ; 15 ; 2007 ; > 
-      au < frozen ; exists ; 2009 ; Energy Studies Review Volume 16 ; 16 ; 2009 ; > 
-      au < frozen ; exists ; 2010 ; Energy Studies Review Volume 17 ; 17 ; 2010 ; > 
-      au < frozen ; exists ; 2011 ; Energy Studies Review Volume 18 ; 18 ; 2011 ; > 
-      au < frozen ; exists ; 2012 ; Energy Studies Review Volume 19 ; 19 ; 2012 ; > 
-      au < frozen ; exists ; 2013 ; Energy Studies Review Volume 20 ; 20 ; 2013 ; > 
-      au < frozen ; exists ; 2014 ; Energy Studies Review Volume 21 ; 21 ; 2014 ; > 
-      au < frozen ; exists ; 2015 ; Energy Studies Review Volume 22 ; 22 ; 2015 ; > #clockss permission page missing index.php. See https://energystudiesreview.ca/esr/about/editorialPolicies
-      au < frozen ; exists ; 2016 ; Energy Studies Review Volume 23 ; 23 ; 2016 ; > #clockss permission page missing index.php. See https://energystudiesreview.ca/esr/about/editorialPolicies
+      au < finished ; manifest ; 2002 ; Energy Studies Review Volume 10 ; 10 ; 2002 ; reingest4.clockss.org:8082 > 
+      au < finished ; manifest ; 2003 ; Energy Studies Review Volume 11 ; 11 ; 2003 ; reingest5.clockss.org:8082 > 
+      au < finished ; manifest ; 2004 ; Energy Studies Review Volume 12 ; 12 ; 2004 ; reingest1.clockss.org:8082 > 
+      au < finished ; manifest ; 2005 ; Energy Studies Review Volume 13 ; 13 ; 2005 ; reingest2.clockss.org:8085 > 
+      au < finished ; manifest ; 2006 ; Energy Studies Review Volume 14 ; 14 ; 2006 ; reingest3.clockss.org:8083 > 
+      au < finished ; manifest ; 2007 ; Energy Studies Review Volume 15 ; 15 ; 2007 ; reingest4.clockss.org:8082 > 
+      au < finished ; manifest ; 2009 ; Energy Studies Review Volume 16 ; 16 ; 2009 ; reingest5.clockss.org:8082 > 
+      au < finished ; manifest ; 2010 ; Energy Studies Review Volume 17 ; 17 ; 2010 ; reingest1.clockss.org:8082 > 
+      au < finished ; manifest ; 2011 ; Energy Studies Review Volume 18 ; 18 ; 2011 ; reingest2.clockss.org:8085 > 
+      au < finished ; manifest ; 2012 ; Energy Studies Review Volume 19 ; 19 ; 2012 ; reingest3.clockss.org:8083 > 
+      au < finished ; manifest ; 2013 ; Energy Studies Review Volume 20 ; 20 ; 2013 ; reingest4.clockss.org:8082 > 
+      au < finished ; manifest ; 2014 ; Energy Studies Review Volume 21 ; 21 ; 2014 ; reingest5.clockss.org:8082 > 
+      au < finished ; manifest ; 2015 ; Energy Studies Review Volume 22 ; 22 ; 2015 ; reingest1.clockss.org:8082 > #clockss permission page missing index.php. See https://energystudiesreview.ca/esr/about/editorialPolicies
+      au < finished ; manifest ; 2016 ; Energy Studies Review Volume 23 ; 23 ; 2016 ; reingest2.clockss.org:8085 > #clockss permission page missing index.php. See https://energystudiesreview.ca/esr/about/editorialPolicies
 
     }
 
@@ -124,18 +125,19 @@
       {
       plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
 
-      au < frozen ; exists ; 2010 ; Global Labour Journal Volume 1 ; 1 ; 2010 ; > 
-      au < frozen ; exists ; 2011 ; Global Labour Journal Volume 2 ; 2 ; 2011 ; > 
-      au < frozen ; exists ; 2012 ; Global Labour Journal Volume 3 ; 3 ; 2012 ; > 
-      au < frozen ; exists ; 2013 ; Global Labour Journal Volume 4 ; 4 ; 2013 ; > 
-      au < frozen ; exists ; 2014 ; Global Labour Journal Volume 5 ; 5 ; 2014 ; > 
+      au < finished ; manifest ; 2010 ; Global Labour Journal Volume 1 ; 1 ; 2010 ; reingest3.clockss.org:8083 > 
+      au < finished ; manifest ; 2011 ; Global Labour Journal Volume 2 ; 2 ; 2011 ; reingest4.clockss.org:8082 > 
+      au < finished ; manifest ; 2012 ; Global Labour Journal Volume 3 ; 3 ; 2012 ; reingest5.clockss.org:8082 > 
+      au < finished ; manifest ; 2013 ; Global Labour Journal Volume 4 ; 4 ; 2013 ; reingest1.clockss.org:8082 > 
+      au < finished ; manifest ; 2014 ; Global Labour Journal Volume 5 ; 5 ; 2014 ; reingest2.clockss.org:8085 > 
       au < doNotProcess ; exists ; 2015 ; Global Labour Journal Volume 6 ; 6 ; 2015 ; > 
       au < doNotProcess ; exists ; 2016 ; Global Labour Journal Volume 7 ; 7 ; 2016 ; > 
       au < doNotProcess ; exists ; 2017 ; Global Labour Journal Volume 8 ; 8 ; 2017 ; > 
-      au < frozen ; exists ; 2018 ; Global Labour Journal Volume 9 ; 9 ; 2018 ; > 
-      au < deepCrawl ; exists ; 2019 ; Global Labour Journal Volume 10 ; 10 ; 2019 ; > 
-      au < deepCrawl ; exists ; 2020 ; Global Labour Journal Volume 11 ; 11 ; 2020 ; >
+      au < finished ; manifest ; 2018 ; Global Labour Journal Volume 9 ; 9 ; 2018 ; reingest3.clockss.org:8083 > 
+      au < finished ; manifest ; 2019 ; Global Labour Journal Volume 10 ; 10 ; 2019 ; reingest1.clockss.org:8082 > 
+      au < finished ; manifest ; 2020 ; Global Labour Journal Volume 11 ; 11 ; 2020 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; Global Labour Journal Volume 12 ; 12 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; Global Labour Journal Volume 13 ; 13 ; 2022 ; >
 
       }
 
@@ -162,15 +164,16 @@
       {
       plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
 
-      au < frozen ; exists ; 2013 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 1 ; 1 ; 2013 ; > 
-      au < frozen ; exists ; 2014 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 2 ; 2 ; 2014 ; > 
+      au < finished ; manifest ; 2013 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 1 ; 1 ; 2013 ; reingest4.clockss.org:8082 > 
+      au < finished ; manifest ; 2014 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 2 ; 2 ; 2014 ; reingest5.clockss.org:8082 > 
       au < doNotProcess ; exists ; 2015 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 3 ; 3 ; 2015 ; > 
       au < doNotProcess ; exists ; 2016 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 4 ; 4 ; 2016 ; > 
       au < doNotProcess ; exists ; 2017 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 5 ; 5 ; 2017 ; > 
-      au < frozen ; exists ; 2018 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 6 ; 6 ; 2018 ; > 
-      au < deepCrawl ; exists ; 2019 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 7 ; 7 ; 2019 ; > 
-      au < deepCrawl ; exists ; 2020 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 8 ; 8 ; 2020 ; >
+      au < finished ; manifest ; 2018 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 6 ; 6 ; 2018 ; reingest1.clockss.org:8082 > 
+      au < finished ; manifest ; 2019 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 7 ; 7 ; 2019 ; reingest3.clockss.org:8083 > 
+      au < finished ; manifest ; 2020 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 8 ; 8 ; 2020 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 9 ; 9 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 10 ; 10 ; 2022 ; >
 
       }
 
@@ -197,10 +200,11 @@
       plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
 
       au < doNotProcess ; exists ; 2017 ; International Journal for Students as Partners Volume 1 ; 1 ; 2017 ; > 
-      au < frozen ; exists ; 2018 ; International Journal for Students as Partners Volume 2 ; 2 ; 2018 ; > 
-      au < deepCrawl ; exists ; 2019 ; International Journal for Students as Partners Volume 3 ; 3 ; 2019 ; > 
-      au < frozen ; exists ; 2020 ; International Journal for Students as Partners Volume 4 ; 4 ; 2020 ; >
+      au < finished ; manifest ; 2018 ; International Journal for Students as Partners Volume 2 ; 2 ; 2018 ; reingest2.clockss.org:8085 > 
+      au < finished ; manifest ; 2019 ; International Journal for Students as Partners Volume 3 ; 3 ; 2019 ; reingest5.clockss.org:8082 > 
+      au < finished ; manifest ; 2020 ; International Journal for Students as Partners Volume 4 ; 4 ; 2020 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2021 ; International Journal for Students as Partners Volume 5 ; 5 ; 2021 ; >
+      au < expected ; exists ; 2022 ; International Journal for Students as Partners Volume 6 ; 6 ; 2022 ; >
 
       }
 
@@ -223,20 +227,20 @@
       param[base_url] = https://jhaponline.org/
       param[journal_id] = jhap
 
-      au < frozen ; exists ; 2011 ; Journal for the History of Analytical Philosophy Volume 1 ; 1 ; 2011 ; > 
-      au < frozen ; exists ; 2012 ; Journal for the History of Analytical Philosophy Volume 2 ; 2 ; 2012 ; > 
-      au < frozen ; exists ; 2013 ; Journal for the History of Analytical Philosophy Volume 3 ; 3 ; 2013 ; > 
-      au < frozen ; exists ; 2014 ; Journal for the History of Analytical Philosophy Volume 4 ; 4 ; 2014 ; > 
-      au < frozen ; exists ; 2015 ; Journal for the History of Analytical Philosophy Volume 5 ; 5 ; 2015 ; >  #clockss permission page missing index.php
-      au < frozen ; exists ; 2016 ; Journal for the History of Analytical Philosophy Volume 6 ; 6 ; 2016 ; >  #clockss permission page missing index.php
-      au < frozen ; exists ; 2017 ; Journal for the History of Analytical Philosophy Volume 7 ; 7 ; 2017 ; >  #clockss permission page missing index.php
-      au < frozen ; exists ; 2018 ; Journal for the History of Analytical Philosophy Volume 8 ; 8 ; 2018 ; >
-      au < deepCrawl ; exists ; 2019 ; Journal for the History of Analytical Philosophy Volume 9 ; 9 ; 2019 ; >
-      au < deepCrawl ; exists ; 2020 ; Journal for the History of Analytical Philosophy Volume 10 ; 10 ; 2020 ; >
+      au < finished ; manifest ; 2011 ; Journal for the History of Analytical Philosophy Volume 1 ; 1 ; 2011 ; reingest4.clockss.org:8082 > 
+      au < finished ; manifest ; 2012 ; Journal for the History of Analytical Philosophy Volume 2 ; 2 ; 2012 ; reingest5.clockss.org:8082 > 
+      au < finished ; manifest ; 2013 ; Journal for the History of Analytical Philosophy Volume 3 ; 3 ; 2013 ; reingest1.clockss.org:8082 > 
+      au < finished ; manifest ; 2014 ; Journal for the History of Analytical Philosophy Volume 4 ; 4 ; 2014 ; reingest2.clockss.org:8085 > 
+      au < finished ; manifest ; 2015 ; Journal for the History of Analytical Philosophy Volume 5 ; 5 ; 2015 ; reingest3.clockss.org:8083 >  #clockss permission page missing index.php
+      au < finished ; manifest ; 2016 ; Journal for the History of Analytical Philosophy Volume 6 ; 6 ; 2016 ; reingest4.clockss.org:8082 >  #clockss permission page missing index.php
+      au < finished ; manifest ; 2017 ; Journal for the History of Analytical Philosophy Volume 7 ; 7 ; 2017 ; reingest5.clockss.org:8082 >  #clockss permission page missing index.php
+      au < finished ; manifest ; 2018 ; Journal for the History of Analytical Philosophy Volume 8 ; 8 ; 2018 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; Journal for the History of Analytical Philosophy Volume 9 ; 9 ; 2019 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; Journal for the History of Analytical Philosophy Volume 10 ; 10 ; 2020 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; Journal for the History of Analytical Philosophy Volume 11 ; 11 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; Journal for the History of Analytical Philosophy Volume 12 ; 12 ; 2022 ; >
 
     }
-
 #    {
 #
 #      title < 
@@ -254,6 +258,7 @@
 #      au < exists ; exists ; 9999 ; Journal of Professional Communication Volume 0 ; 0 ; 0 ; > 
 #
 #    }
+
 
     {
 
@@ -298,28 +303,29 @@
       au < manifest ; exists ; 1997 ; Russell: the Journal of Bertrand Russell Studies Volume 17 ; 17 ; 1997 ; >
       au < manifest ; exists ; 1998 ; Russell: the Journal of Bertrand Russell Studies Volume 18 ; 18 ; 1998 ; >
       au < manifest ; exists ; 1999 ; Russell: the Journal of Bertrand Russell Studies Volume 19 ; 19 ; 1999 ; >
-      au < frozen ; exists ; 2000 ; Russell: the Journal of Bertrand Russell Studies Volume 20 ; 20 ; 2000 ; >
-      au < frozen ; exists ; 2001 ; Russell: the Journal of Bertrand Russell Studies Volume 21 ; 21 ; 2001 ; >
-      au < frozen ; exists ; 2002 ; Russell: the Journal of Bertrand Russell Studies Volume 22 ; 22 ; 2002 ; >
-      au < frozen ; exists ; 2003 ; Russell: the Journal of Bertrand Russell Studies Volume 23 ; 23 ; 2003 ; >
-      au < frozen ; exists ; 2004 ; Russell: the Journal of Bertrand Russell Studies Volume 24 ; 24 ; 2004 ; >
-      au < frozen ; exists ; 2005 ; Russell: the Journal of Bertrand Russell Studies Volume 25 ; 25 ; 2005 ; >
-      au < frozen ; exists ; 2006 ; Russell: the Journal of Bertrand Russell Studies Volume 26 ; 26 ; 2006 ; >
-      au < frozen ; exists ; 2007 ; Russell: the Journal of Bertrand Russell Studies Volume 27 ; 27 ; 2007 ; >
-      au < frozen ; exists ; 2008 ; Russell: the Journal of Bertrand Russell Studies Volume 28 ; 28 ; 2008 ; >
-      au < frozen ; exists ; 2009 ; Russell: the Journal of Bertrand Russell Studies Volume 29 ; 29 ; 2009 ; >
-      au < frozen ; exists ; 2010 ; Russell: the Journal of Bertrand Russell Studies Volume 30 ; 30 ; 2010 ; >
-      au < frozen ; exists ; 2011 ; Russell: the Journal of Bertrand Russell Studies Volume 31 ; 31 ; 2011 ; >
+      au < finished ; manifest ; 2000 ; Russell: the Journal of Bertrand Russell Studies Volume 20 ; 20 ; 2000 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2001 ; Russell: the Journal of Bertrand Russell Studies Volume 21 ; 21 ; 2001 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2002 ; Russell: the Journal of Bertrand Russell Studies Volume 22 ; 22 ; 2002 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2003 ; Russell: the Journal of Bertrand Russell Studies Volume 23 ; 23 ; 2003 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2004 ; Russell: the Journal of Bertrand Russell Studies Volume 24 ; 24 ; 2004 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2005 ; Russell: the Journal of Bertrand Russell Studies Volume 25 ; 25 ; 2005 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2006 ; Russell: the Journal of Bertrand Russell Studies Volume 26 ; 26 ; 2006 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2007 ; Russell: the Journal of Bertrand Russell Studies Volume 27 ; 27 ; 2007 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2008 ; Russell: the Journal of Bertrand Russell Studies Volume 28 ; 28 ; 2008 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2009 ; Russell: the Journal of Bertrand Russell Studies Volume 29 ; 29 ; 2009 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2010 ; Russell: the Journal of Bertrand Russell Studies Volume 30 ; 30 ; 2010 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2011 ; Russell: the Journal of Bertrand Russell Studies Volume 31 ; 31 ; 2011 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; exists ; 2012 ; Russell: the Journal of Bertrand Russell Studies Volume 32 ; 32 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; Russell: the Journal of Bertrand Russell Studies Volume 33 ; 33 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; Russell: the Journal of Bertrand Russell Studies Volume 34 ; 34 ; 2014 ; >
       au < doNotProcess ; exists ; 2015 ; Russell: the Journal of Bertrand Russell Studies Volume 35 ; 35 ; 2015 ; >
       au < doNotProcess ; exists ; 2016 ; Russell: the Journal of Bertrand Russell Studies Volume 36 ; 36 ; 2016 ; >
       au < doNotProcess ; exists ; 2017 ; Russell: the Journal of Bertrand Russell Studies Volume 37 ; 37 ; 2017 ; > 
-      au < frozen ; exists ; 2018 ; Russell: the Journal of Bertrand Russell Studies Volume 38 ; 38 ; 2018 ; > 
-      au < deepCrawl ; exists ; 2019 ; Russell: the Journal of Bertrand Russell Studies Volume 39 ; 39 ; 2019 ; > 
-      au < frozen ; exists ; 2020 ; Russell: the Journal of Bertrand Russell Studies Volume 40 ; 40 ; 2020 ; >
+      au < finished ; manifest ; 2018 ; Russell: the Journal of Bertrand Russell Studies Volume 38 ; 38 ; 2018 ; reingest4.clockss.org:8082 > 
+      au < finished ; manifest ; 2019 ; Russell: the Journal of Bertrand Russell Studies Volume 39 ; 39 ; 2019 ; reingest3.clockss.org:8083 > 
+      au < finished ; manifest ; 2020 ; Russell: the Journal of Bertrand Russell Studies Volume 40 ; 40 ; 2020 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Russell: the Journal of Bertrand Russell Studies Volume 41 ; 41 ; 2021 ; >
+      au < expected ; exists ; 2022 ; Russell: the Journal of Bertrand Russell Studies Volume 42 ; 42 ; 2022 ; >
 
       }
 
@@ -349,8 +355,8 @@
       {
       plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
 
-      au < frozen ; exists ; 2011 ; The Sophie Journal Volume 1 ; 1 ; 2011 ; > 
-      au < frozen ; exists ; 2012 ; The Sophie Journal Volume 2 ; 2 ; 2012 ; > 
+      au < finished ; manifest ; 2011 ; The Sophie Journal Volume 1 ; 1 ; 2011 ; reingest5.clockss.org:8082 > 
+      au < finished ; manifest ; 2012 ; The Sophie Journal Volume 2 ; 2 ; 2012 ; reingest1.clockss.org:8082 > 
       au < doNotProcess ; exists ; 2015 ; The Sophie Journal Volume 3 ; 3 ; 2015 ; > 
       au < doNotProcess ; exists ; 2017 ; The Sophie Journal Volume 4 ; 4 ; 2017 ; > 
       au < expected ; exists ; 2018 ; The Sophie Journal Volume 5 ; 5 ; 2018 ; > 
@@ -393,9 +399,10 @@
       param[journal_id] = ijrr
 
       au < finished ; crawling ; 2018 ; International Journal of Risk and Recovery Volume 1 ; 1 ; 2018 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2019 ; International Journal of Risk and Recovery Volume 2 ; 2 ; 2019 ; > 
-      au < frozen ; exists ; 2020 ; International Journal of Risk and Recovery Volume 3 ; 3 ; 2020 ; >
+      au < finished ; manifest ; 2019 ; International Journal of Risk and Recovery Volume 2 ; 2 ; 2019 ; reingest2.clockss.org:8085 > 
+      au < finished ; manifest ; 2020 ; International Journal of Risk and Recovery Volume 3 ; 3 ; 2020 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2021 ; International Journal of Risk and Recovery Volume 4 ; 4 ; 2021 ; >
+      au < expected ; exists ; 2022 ; International Journal of Risk and Recovery Volume 5 ; 5 ; 2022 ; >
 
     }
 

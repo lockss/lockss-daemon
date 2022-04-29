@@ -1,0 +1,184 @@
+<!--
+
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<map>
+    <entry>
+        <string>plugin_status</string>
+        <string>testing</string>
+    </entry>
+    <entry>
+        <string>plugin_identifier</string>
+        <string>org.lockss.plugin.oecd.OecdBooksPlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_name</string>
+        <string>OECD iLibrary Books Plugin</string>
+    </entry>
+    <entry>
+        <string>plugin_version</string>
+        <string>4</string>
+    </entry>
+    <entry>
+        <string>plugin_feature_version_map</string>
+        <map>
+            <entry>
+                <string>Poll</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Substance</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Metadata</string>
+                <string>1</string>
+            </entry>
+        </map>
+    </entry>
+    <entry>
+        <string>plugin_parent</string>
+        <string>org.lockss.plugin.oecd.OecdParentPlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_parent_version</string>
+        <string>6</string>
+    </entry>
+    <entry>
+        <string>au_name</string>
+        <string>"OECD iLibrary Books Plugin, Base URL %s, Publication URL Path %s, Publication ID %s", base_url, pub_path, pub_id</string>
+    </entry>
+    <entry>
+        <string>plugin_config_props</string>
+        <list>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>base_url</key>
+                <displayName>Base URL</displayName>
+                <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+                <type>3</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>pub_path</key>
+                <displayName>Publication URL Path</displayName>
+                <description>Publication URL Path</description>
+                <type>1</type>
+                <size>150</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>pub_id</key>
+                <displayName>Publication ID (as found on OECD)</displayName>
+                <type>1</type>
+                <size>20</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+        </list>
+    </entry>
+    <entry>
+        <string>au_crawlrules</string>
+        <list>
+            <string>1,"^%s[^?]*\.(bmp|css|gif|ico|svg|eot|ttf|woff2?|jpe?g|js|png|tif?f)(\?.+)?$", base_url</string>
+            <string>1,"^https://(fonts|ajax)\.(googleapis|gstatic)\.com"</string>
+            <string>1,"^https://oecd-.+\.kxcdn\.com"</string>
+            <string>1,"^https://cdnjs\.cloudflare\.com"</string>
+            <string>1,"^https://cdn\.datatables\.net"</string>
+            <string>1,"^https://assets\.oecdcode\.org"</string>
+            <!-- book-url and chapters
+                 https://www.oecd-ilibrary.org/agriculture-and-food/oecd-fao-agricultural-outlook-2021-2030_19428846-en
+                 chapter has some url with change of isbn
+                 https://www.oecd-ilibrary.org/agriculture-and-food/oecd-fao-agricultural-outlook-2021-2030_d494ca9a-en
+            -->
+            <!-- <string>1,"^%s%s/", base_url, topic</string> -->
+            <!-- html of book and chapters
+                 https://www.oecd-ilibrary.org/sites/1e1ecb53-en/index.html?itemId=/content/publication/1e1ecb53-en
+                 https://www.oecd-ilibrary.org/sites/c510039b-en/index.html?itemId=/content/publication/c510039b-en
+                 https://www.oecd-ilibrary.org/sites/c510039b-en/1/2/2/index.html
+            -->
+            <!-- per OECD, we should only collect the pdf files.
+            <string>1,"^%s.+index\.html\?itemId=", base_url</string> -->
+            <!-- data tables -->
+            <!-- ibid
+            <string>1,"^%s.+\.xlsx?\?itemId=.+&amp;mimeType=", base_url</string> -->
+            <!-- pdf & epub files -->
+            <string>1,"^%s.+\.pdf\?itemId=.+&amp;mimeType=pdf$", base_url</string>
+            <!-- pdf redirect
+                 https://www.oecd-ilibrary.org/docserver/7a3b07d2-en.pdf?expires=1643843528&id=id&accname=ocid194777&checksum=063C56734FAFCB0F81A2F8646E0B6DEC -->
+            <string>1,"^%sdocserver", base_url</string>
+            <!-- dont follow this:
+                 https://www.oecd-ilibrary.org/deliver?redirecturl=http%3A%2F%2Fwww.keepeek.com%2FDigital-Asset-Management%2Foecd%2Feconomics%2Fthe-swedish-business-cycle-1969-2013_jbcma-2015-5jlz9hhpj4th&isPreview=true&itemId=%2Fcontent%2Fpaper%2Fjbcma-2015-5jlz9hhpj4th -->
+            <string>2,"^%sdeliver\?redirecturl=.*keepeek\.com", base_url</string>
+            <!-- there are api calls to urls like this that load related files, e.g.
+                 citations, summaries, tocs etc. -->
+            <!-- <string>1,"^%scontent/(component|publication|thematicgrouping)/[^/]+/(all)?((c|C)itation|(s|S)ummaries|(t|T)oc|(t|T)ables|(g|G)raphs|(s|S)ectionchapters)", base_url</string> -->
+            <string>1,"^%scontent/(component|publication|thematicgrouping)/[^/]+/(c|C)itation", base_url</string>
+            <!--  <book-url>/cite/ris  <book-url>/cite/endnote  <book-url>/cite/txt  <book-url>/cite/bib -->
+            <string>1,"^%s[^/]+/.*/cite/(ris|endnote|txt|bib)$", base_url</string>
+            <!-- https://www.oecd-ilibrary.org/unemployment-has-declined_0e7f3937-en.xlsx?itemId=%2Fcontent%2Fcomponent%2F0e7f3937-en&mimeType=vnd.openxmlformats-officedocument.spreadsheetml.sheet
+                 https://www.oecd-ilibrary.org/sites/ccbbfa5e-en/index.html?itemId=/content/component/ccbbfa5e-en - covered by previos html rule
+                 https://www.oecd-ilibrary.org/improving-school-results-and-equity-in-compulsory-education_ccbbfa5e-en.pdf?itemId=%2Fcontent%2Fcomponent%2Fccbbfa5e-en&mimeType=pdf - coverd by previous pdf rule
+            -->
+        </list>
+    </entry>
+    <entry>
+        <string>au_start_url</string>
+        <list>
+            <!-- https://www.oecd-ilibrary.org/science-and-technology/bridging-digital-divides-in-g20-countries_35c1d850-en -->
+            <string>"%s%s_%s", base_url, pub_path, pub_id</string>
+            <!-- https://www.oecd-ilibrary.org/content/publication/35c1d850-en -->
+            <string>"%scontent/publication/%s", base_url, pub_id</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_substance_url_pattern</string>
+        <list>
+            <!-- start_page, and pdfs -->
+            <string>"%s%s_%s$", base_url, pub_path, pub_id</string>
+            <string>"%s.+\.pdf", base_url</string>
+        </list>
+    </entry>
+    <entry>
+        <string>text/html_crawl_filter_factory</string>
+        <string>org.lockss.plugin.oecd.OecdBooksHtmlCrawlFilterFactory</string>
+    </entry>
+    <entry>
+        <string>plugin_article_iterator_factory</string>
+        <string>org.lockss.plugin.oecd.OecdBooksArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>plugin_article_metadata_extractor_factory</string>
+        <string>org.lockss.plugin.oecd.OecdBooksArticleIteratorFactory</string>
+    </entry>
+</map>

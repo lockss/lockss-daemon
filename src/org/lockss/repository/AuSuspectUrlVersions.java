@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.repository;
 
+import java.io.IOException;
 import java.util.*;
 import org.lockss.util.*;
 import org.lockss.plugin.ArchivalUnit;
@@ -196,4 +197,10 @@ public class AuSuspectUrlVersions implements LockssSerializable {
     }
     return ret;
   }
+
+
+  public AuSuspectUrlVersionsBean getBean(String auId) {
+    return new AuSuspectUrlVersionsBean(auId, suspectVersions);
+  }
+
 }

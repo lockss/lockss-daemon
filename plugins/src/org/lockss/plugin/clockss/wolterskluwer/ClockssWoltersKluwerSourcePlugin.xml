@@ -5,11 +5,11 @@
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.clockss.wolterskluwer.CLockssWoltersKluwerSourcePlugin</string>
+    <string>org.lockss.plugin.clockss.wolterskluwer.ClockssWoltersKluwerSourcePlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>11</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -28,7 +28,7 @@
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>5</string>
+        <string>6</string>
       </entry>
       <entry>
         <string>Substance</string>

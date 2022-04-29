@@ -256,6 +256,35 @@
     au < down ; 2005-2007 ; Journal of Individual Employment Rights Volume 12 ; 12 >
     
   }
-  
+  {
+
+    title <
+      name = MD Conference Express ;
+      issn = 1559-8977 ;
+      eissn = 2155-756X
+    >
+
+    #This block is only so that the material will appear in Keepers.
+    #These AUs are not related to content preserved on lockss servers
+    #See http://wayback.clockss.org:8000/wayback/20151219013445/http://mdc.sagepub.com/
+    #A plugin name is needed, but the specific plugin name does not matter
+    plugin = org.lockss.plugin.clockss.mdpi.ClockssMdpiDirSourcePlugin
+
+    param[base_url] = http://mdc.sagepub.com/
+    implicit < status ; year ; param[year] ; name ; param[volume_name] >
+    param[journal_id] = mdc
+
+    au < down ; 2005 ; 2005 ; MD Conference Express Volume 5 ; 5 >
+    au < down ; 2006 ; 2006 ; MD Conference Express Volume 6 ; 6 >
+    au < down ; 2007 ; 2007 ; MD Conference Express Volume 7 ; 7 >
+    au < down ; 2008 ; 2008 ; MD Conference Express Volume 8 ; 8 >
+    au < down ; 2009 ; 2009 ; MD Conference Express Volume 9 ; 9 >
+    au < down ; 2010 ; 2010 ; MD Conference Express Volume 10 ; 10 >
+    au < down ; 2011 ; 2011 ; MD Conference Express Volume 11 ; 11 >
+    au < down ; 2012 ; 2012 ; MD Conference Express Volume 12 ; 12 >
+    au < down ; 2013 ; 2013 ; MD Conference Express Volume 13 ; 13 >
+    au < down ; 2014 ; 2014 ; MD Conference Express Volume 14 ; 14 >
+    au < down ; 2015 ; 2015 ; MD Conference Express Volume 15 ; 15 >
+  }
 
 }

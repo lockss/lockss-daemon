@@ -1,0 +1,25 @@
+{
+
+  publisher <
+    name = United States Bureau of Labor Statistics
+  >
+
+  {
+  
+    title <
+      name = Monthly Labor Review ;
+      issn = 0098-1818 ;
+      eissn = 1937-4658 ;
+      issnl = 0098-1818
+    >
+    
+    rights = openaccess
+    plugin = gov.gpo.access.permanent.plugin.monthlylaborreview.MonthlyLaborReviewPlugin
+    param[base_url] = http://permanent.access.gpo.gov/lockss/Monthly_Labor_Review/
+    implicit < status ; year ; name ; param[year] >  
+
+    au < down ; 2005 ; Monthly Labor Review 2005 ; 2005 >
+      
+  }
+  
+}

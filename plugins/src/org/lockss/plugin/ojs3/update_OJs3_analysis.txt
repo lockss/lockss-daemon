@@ -128,3 +128,403 @@ https://journals.library.ualberta.ca/eblip/index.php/EBLIP/gateway/lockss?year=2
 
 Working with OJS3
 https://www.jidc.org/index.php/journal/gateway/lockss?year=2017
+
+
+ArticleIterator aspect characterization
+
+
+  Univ. of Baghdad
+  url root: https://bsj.uobaghdad.edu.iq/index.php/BSJ/
+  iss: issue/view/199
+   htmltag: div class="article-summary media"
+    art land: article/view/5861
+    art html: NA
+    pdf land: article/view/5861/3639
+    on landing pdf: a class="download"
+      pdf down: article/download/5861/3639/43459
+    on art land:
+      citation: citationstylelanguage/download/ris?submissionId=5861&publicationId=8385
+
+  International Journal of E-Learning & Distance Education
+  url root: http://www.ijede.ca/index.php/jde/
+  iss: issue/view/85
+   htmltag: div class="article_summary" --- but also div class="article_summary_body"
+    art land: article/view/1198
+    art html: article/view/1198/1853
+    pdf land: article/view/1198/1852
+    on landing pdf: a class="download"
+      pdf down: article/download/1198/1852/
+    on art land:
+      citation: citationstylelanguage/download/ris?submissionId=1198
+
+  Ciencia y Tecnología Agropecuaria
+   --- NOTE: there are english and spanich versions of everything for this journal
+  url root: http://revistacta.agrosavia.co/index.php/revista/
+  iss: issue/view/50
+   htmltag: div class="card obj_article_summary"
+    art land: article/view/1457
+    art html: NA
+    pdf land: article/view/1457/574
+    on landing pdf: a class="download"
+      pdf down: article/download/1457/574/6442
+    on art land: class="dropdown-cite-link dropdown-item"
+      citation: %20citationstylelanguage/download/ris?submissionId=1457&publicationId=1002
+
+  Alliance Against Traffic in Women Foundation
+  url root: https://www.antitraffickingreview.org/index.php/atrjournal/
+  iss: issue/view/14
+   htmltag: div class="obj_article_summary"
+    art land: article/view/171
+    art html: article/view/171/174
+    pdf land: article/view/171/159
+    on landing pdf: a class="download"
+      pdf down: article/download/171/159/377
+    on art land:
+      citation: citationstylelanguage/download/ris?submissionId=171&publicationId=140
+
+  Journal of Research Practice
+  url root: http://jrp.icaap.org/index.php/jrp/
+  iss: issue/view/26
+   htmltag: div class="article_summary" --- but also div class="article_summary_body"
+    art land: article/view/555
+    art html: article/view/555/455
+    pdf land: article/view/555/465
+    on landing pdf: div class="pdf-download-button" embedded a tag
+      pdf down: article/download/555/465/
+    on art land: NA
+      citation: NA
+
+  Clinical & Investigative Medicine
+  url root: https://cimonline.ca/index.php/cim
+  iss: issue/view/2088
+   htmltag:
+    art land: article/view/30789
+    art html:
+    pdf land: article/view/30789/23247
+    on landing pdf:
+      pdf down: article/download/30858/23280/72369
+    on art land: NA
+      citation: NA
+
+  url root: https://www.ride.org.mx/index.php/RIDE/
+  ---- NOTE: eng and spanish of most things
+  iss: issue/view/20
+   htmltag: div class="obj_article_summary"
+    art land: article/view/595
+    art html: NA
+    pdf land: article/view/595/2292
+         eng: article/view/595/2293
+    xml: article/view/594/2484
+    epub: article/view/595/2416
+    word: article/view/594/2291
+    on landing pdf: a class="download"
+      pdf down: article/download/595/2293/
+    on art land: ul class="citation_formats_styles" -> li -> a
+      citation: citationstylelanguage/download/ris?submissionId=595
+
+  CLEI Electronic Journal
+  url root: https://www.clei.org/cleiej/index.php/cleiej/
+  iss: issue/view/54
+   htmltag: div class="obj_article_summary"
+    art land: article/view/437
+    art html: NA
+    pdf land: article/view/437/372
+    on landing pdf:
+      pdf down: article/download/437/372/1777
+    on art land: NA
+      citation: NA
+
+   International Journal of Population Data Science
+  url root: https://ijpds.org/
+  iss: issue/view/20
+   htmltag: div class="article-summary media"
+    art land: article/view/1407
+    XML, PDF are on art land, not issue TOC
+    art html: art land art html
+    html tag: div class="download" with child a class="galley-link btn btn-primary pdf" or "file" in place of pdf
+    art XML: article/view/1407/3089
+    pdf land: article/view/1407/3088
+    on landing pdf:  a  class="download"
+      pdf down: article/download/1407/3088/5759
+    on art land: JAVASCRIPT! button aria-controls="cslCitationFormats"
+      citation: citationstylelanguage/download/ris?submissionId=1407&publicationId=1778
+
+  Anthropology of East Europe Review
+  url root: https://scholarworks.iu.edu/journals/index.php/aeer/
+  iss: issue/view/1575
+   htmltag: div class="article-summary media"
+    art land: article/view/24601
+    art html: NA
+    html tag: div class="download" with child a class="galley-link btn btn-primary pdf"
+    pdf land: article/view/24601/30111
+    on landing pdf: a class="download"
+      pdf down: article/download/24601/30111/57908
+    on art land: ul class="dropdown-menu"
+      citation: citationstylelanguage/download/ris?submissionId=24601&publicationId=23133
+
+  Journal of Privacy and Confidentiality
+  url root: https://journalprivacyconfidentiality.org/index.php/jpc/
+  iss: issue/view/107
+   htmltag: div class="article-summary media"
+    art land: article/view/749
+    art html: NA
+    html tag: div class="download" with child a class="galley-link btn btn-primary pdf"
+    pdf land: article/view/749/705
+    on landing pdf: a class="download"
+      pdf down: article/download/749/705/1321
+    on art land: div class="btn-group open"
+      citation: citationstylelanguage/download/ris?submissionId=749&publicationId=723
+
+   Lecturas de Economía
+  url root: https://revistas.udea.edu.co/index.php/lecturasdeeconomia/
+  iss:article/view/330629
+   htmltag: div class="obj_article_summary"
+    art land: article/view/330629
+    htmltags: a class="obj_galley_link file" or "pdf" in place of file
+    art html: NA?
+    art xml: article/view/330629/20790903
+    pdf land: article/view/330629/20787012
+    on landing pdf: a class="download"
+      pdf down: article/download/330629/20787012/138734
+    on art land: ul class="citation_formats_styles"
+      citation: citationstylelanguage/download/ris?submissionId=330629&publicationId=29756
+
+  Sexual Offending: Theory, Research, and Prevention
+  url root: https://sotrap.psychopen.eu/index.php/sotrap/
+  iss: issue/view/313
+   htmltag: div class="article-sum"
+    art land: article/view/3699
+    html tags: a class="btn btn-secondary btn-download galley-link" aria-label="html" or "xml" or "pdf"
+    art html: article/view/3699/3699.html
+    art xml:  article/view/3699/3699.xml
+    pdf land: article/view/3699/3699.pdf
+    on landing pdf:
+      pdf down: article/download/3699/3699.pdf
+    on art land: div class="row mb-2 article-details-cite"  -- a child of a child of a child....
+      citation: citationstylelanguage/download/ris?submissionId=3699
+
+  Literacy in Composition Studies
+  url root: https://licsjournal.org/index.php/LiCS/
+  iss: issue/view/37
+   htmltag: div class="obj_article_summary"
+    art land: article/view/700
+    htmltags: a class="obj_galley_link file" or "pdf" in place of file
+    art html: article/view/700/430
+    pdf land: article/view/700/431
+    on landing pdf: a class="download"
+      pdf down: article/download/700/431/243
+    on art land: ul class="citation_formats_styles"
+      citation: citationstylelanguage/download/ris?submissionId=700&publicationId=701
+
+  International Journal for Students as Partners
+  url root: https://mulpress.mcmaster.ca/ijsap/
+  iss: issue/view/386
+   htmltag: div class="obj_article_summary"
+    art land: article/view/4086
+    art html:  NA
+    htmltag: a class="obj_galley_link pdf"
+    pdf land: https://mulpress.mcmaster.ca/ijsap/article/view/4182/3766
+    on landing pdf: REDIRECTS TO DOWNLOAD
+      pdf down: article/download/4182/3766
+    on art land: ul class="citation_formats_styles"
+      citation: citationstylelanguage/download/ris?submissionId=4182&publicationId=3830
+
+  Acta Orthopaedica
+  url root: https://actaorthop.org/actao/
+  iss: issue/view/16
+   htmltag: div class="obj_article_summary"
+    art land: article/view/1015
+    art html: NA
+    htmltag: a class="obj_galley_link pdf"
+    pdf land: article/view/1015/1209
+    on landing pdf: a class="download"
+      pdf down: article/download/1015/1209/5477
+    on art land: ul class="citation_formats_styles"
+      citation: citationstylelanguage/download/ris?submissionId=1015&publicationId=1015
+
+  Mental Health: Global Challenges
+  url root: https://www.mhgcj.org/index.php/MHGCJ/
+  iss: issue/view/10
+   htmltag: div class="obj_article_summary"
+    art land: article/view/75
+    htmltag: a class="obj_galley_link file" or "pdf"
+    art html: article/view/75/61
+    pdf land: article/view/75/60
+    on landing pdf: a class="download"
+      pdf down: article/download/75/60/204
+    on art land: ul class="citation_formats_styles"
+      citation: citationstylelanguage/download/ris?submissionId=75&publicationId=58
+
+  Société Internationale d’Urologie Journal
+  url root: https://siuj.org/index.php/siuj/
+  iss: issue/view/6
+   htmltag: div class="obj_article_summary"
+    art land: article/view/140
+    htmltag:
+    art html:
+    pdf land: article/view/140/76
+    on landing pdf: a class="download"
+      pdf down: article/download/140/76/
+    on art land: ul class="citation_formats_styles"
+      citation: citationstylelanguage/download/ris?submissionId=140
+
+  Asian Journal of Medical Research
+  url root: https://www.aijournals.com/index.php/ajmr/
+  iss: issue/view/109
+   htmltag: div class="obj_article_summary"
+    art land: article/view/1682
+    htmltag: class="obj_galley_link pdf" or "file" for each of the others...
+    art html: article/view/1682/1545
+    art xml: article/view/1682/1544
+    art epub: article/view/1682/1546
+    pdf land: article/view/1682/1543
+    on landing pdf: a class="download"
+      pdf down: article/download/1682/1543/
+    on art land: ul class="citation_formats_styles"
+      citation: citationstylelanguage/download/ris?submissionId=1682
+
+  Te Kaharoa - the eJournal of Indigenous Pacific Issues
+  url root: https://ojs.aut.ac.nz/te-kaharoa/index.php/tekaharoa/
+  iss: issue/view/21
+   htmltag: div class="obj_article_summary"
+    art land: article/view/351
+    art html: NA
+    htmltag: ul class="value galleys_links" -> li -> a class="obj_galley_link pdf"
+    pdf land: article/view/351/310
+    on landing pdf: a class="download"
+      pdf down: article/download/351/310/
+    on art land: ul class="citation_formats_styles"
+      citation: citationstylelanguage/download/ris?submissionId=351
+
+  Journal of Pharmacy and Pharmaceutical Science
+  url root: https://journals.library.ualberta.ca/eblip/index.php/EBLIP/
+  iss: issue/view/1948
+   htmltag: div class="obj_article_summary"
+    art land: article/view/29515
+    htmltag: ul class="value galleys_links" -> li -> a class="obj_galley_link pdf" or "file"
+    art html: article/view/29515/22022
+    pdf land: article/view/29515/22048
+    on landing pdf: a class="download"
+      pdf down: article/download/29515/22048/80824
+    on art land: ul class="citation_formats_styles"
+      citation: citationstylelanguage/download/ris?submissionId=29515&publicationId=2076
+
+  Al-Academy Journal
+  url root: https://jcofarts.uobaghdad.edu.iq/index.php/jcofarts/
+  iss: article/view/338
+   htmltag: div class="obj_article_summary"
+    art land: article/view/338
+    htmltag: ul class="value galleys_links" -> li -> a class="obj_galley_link pdf"
+    art html: NA
+    pdf land: https://jcofarts.uobaghdad.edu.iq/index.php/jcofarts/article/view/338/280
+    on landing pdf: a class="download"
+      pdf down: article/download/338/280/1382
+    on art land: ul class="citation_formats_styles"
+      citation: citationstylelanguage/download/ris?submissionId=338&publicationId=244
+
+  Urology Journal
+  url root: https://journals.sbmu.ac.ir/urolj/index.php/uj/
+  iss: issue/view/120
+   htmltag: article class="row equal"
+    art land: article/view/6129
+    htmltag: ul class="galley-links" -> li class="galley-links-items"
+    art html: NA
+    pdf land: article/view/6129/4017
+    on landing pdf: a class="download"
+      pdf down: article/download/6129/4017
+    on art land: div id="citeTab" -> div -> ul class="dropdown-menu" -> li -> a
+      citation: citationstylelanguage/download/ris?submissionId=6129
+
+  Construction Economics and Building
+  url root: https://epress.lib.uts.edu.au/journals/index.php/AJCEB/
+  iss: issue/view/480
+   htmltag: div class="article-summary media"
+    art land: article/view/7145
+    htmltag: div class="download" ->  a class="galley-link btn btn-primary pdf"
+    art html: NA
+    pdf land: article/view/7145/7486-> redirect to download
+    pdf down: article/download/7145/7486
+    on art land: NA
+      citation: NA - just embedded citations
+
+  Victoria University Law and Justice Journal
+  url root: https://vulj.vu.edu.au/index.php/vulj/
+  iss: issue/view/53
+   htmltag: div class="obj_article_summary"
+    art land: article/view/1135
+    htmltag: ul class="value galleys_links" -> li -> a class="obj_galley_link pdf"
+    art html: article/view/1135/1817
+    pdf land: NA
+      pdf down: NA
+    on art land: ul class="citation_formats_styles"
+      citation: citationstylelanguage/download/ris?submissionId=1135
+
+  Offset
+  url root: https://offsetartsjournal.vu.edu.au/index.php/offset/
+  iss: issue/view/44
+   htmltag: div class="obj_article_summary"
+    art land: article/view/891
+    htmltag: ul class="value galleys_links" -> li -> a class="obj_galley_link pdf"
+    art html: article/view/891/1272
+    pdf land: article/view/891/1179
+    on landing pdf: a class="download"
+      pdf down: article/download/891/1179/
+    on art land: ul class="citation_formats_styles" -> li -> a
+      citation: citationstylelanguage/download/ris?submissionId=891
+
+  Aviation
+  url root: https://journals.vilniustech.lt/index.php/Aviation/
+  iss: issue/view/1211
+   htmltag: div class="article-summary media"
+    art land: article/view/16398
+    htmltag: a class="galley-link " role="button" data-type="pdf"
+    art html: NA
+    pdf land: article/view/16398/11007
+    on landing pdf: a class="download"
+      pdf down: article/download/16398/11007/
+    on art land: NA
+      citation: NA
+
+  Groupwork: An Interdisciplinary Journal for Working with Groups
+  url root: https://journals.whitingbirch.net/index.php/GPWK/
+  iss: issue/view/164
+   htmltag: div class="obj_article_summary"
+    art land: article/view/1321
+    htmltag: class="obj_galley_link pdf"
+    art html: NA
+    pdf land: article/view/1321/1491 -> REDIRECT to download
+      pdf down: article/download/1321/1491
+    on art land: ul class="citation_formats_styles" -> li -> a
+      citation: citationstylelanguage/download/ris?submissionId=1321&publicationId=1056
+
+  Journal of Threatened Taxa
+  url root: https://threatenedtaxa.org/JoTT/
+  iss: issue/view/303
+   div class="article-summary media"
+    art land: article/view/6664
+    htmltag: div class="download" -> a class="galley-link btn btn-primary pdf"
+    art html: article/view/7208/8326
+    pdf land: article/view/6664/8284
+    on landing pdf: a class="download"
+      pdf down: article/download/7208/8325/44103
+    on art land: ul class="dropdown-menu" -> li -> a
+      citation: citationstylelanguage/download/ris?submissionId=7208&publicationId=9617
+
+                                                                    OJS3   OJS2            Notes
+- Add ris files to crawl rules                                        X      X             both need recrawls due to crawl rule update
+- Confine the abstract_pattern to abstract.landing pages              X      already done
+- Make replay work with the crawl seed                                X      already done
+- Add a param in tdb for language(s) (not a definitional param)                            OJS calls the default language 'Primary locale' which is a choice the publisher makes.
+    on journal/au start url there is a table listing the languages                         ojs3: https://openjournalsystems.com/ojs-3-user-guide/site-management/
+    default_locale, prefered locale or something.                                          ojs2: https://openjournalsystems.com/ojs-2-user-guide/languages/
+    if there is more than 1, change the start url to get the                               more: https://openjournaltheme.com/how-to-fix-translation-on-ojs-3
+    correct cookies loaded.
+    may need a url fetcher rewriting
+
+
+
+ojs2 citation format
+
+   dialogue  https://www.afrjournal.org/index.php/afr/rt/captureCite/356/0
+      ris    https://www.afrjournal.org/index.php/afr/rt/captureCite/356/0/ProCiteCitationPlugin
+      bibtex https://www.afrjournal.org/index.php/afr/rt/captureCite/356/0/BibtexCitationPlugin

@@ -1,0 +1,135 @@
+<!--
+
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>development - humanities_project registry</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>edu.indiana.lib.plugin.mto.MTO2022Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>4</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Music Theory Online Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume</key>
+        <displayName>Volume No.</displayName>
+        <type>6</type>
+        <size>8</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Music Theory Online Plugin, Base URL %s, Volume %d", base_url, volume</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%sissues/issues.php", base_url</string>
+  </entry>
+  <entry>
+    <string>au_permission_url</string>
+    <string>"%sclassic/mto.04.10.3/toc.10.3.html", base_url</string><!-- a surviving permission statement -->
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1, "https?://cdn\.mathjax\.org/mathjax/.*\.js"</string>
+      <string>1, "https://cdnjs\.cloudflare\.com/ajax/.*\.js"</string>
+      <string>1, "https://code\.jquery\.com/.*/jquery.*\.js"</string>
+      <string>1, "https://code\.jquery\.com/ui/.*\.css"</string>
+      <!--	https://cdn.jquerytools.org/1.2.2/jquery.tools.min.js, no longer exsit-->
+      <string>2, "https://cdn\.jquerytools\.org/.*jquery.*\.js"</string>
+      <string>1,"^https?://(%s|www\.mtosmt\.org)/[^?]*\.(bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$", url_host(base_url)</string>
+      <string>1,"^https?://(%s|www\.mtosmt\.org)/(classic|issues)/mto\.[0-9]{2}\.%d\.[0-9]+/", url_host(base_url), volume</string>
+      <string>1, "^https?://(%s|www\.mtosmt\.org)/issues/mto\.[0-9]{2}\.%d\.[0-9]+/", base_url, volume</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>edu.indiana.lib.plugin.mto.MTO2022UrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <string>www\.mtosmt\.org</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_additional_url_stems</string>
+    <list>
+      <string>http://mtosmt.org/</string>
+      <string>http://www.mtosmt.org/</string>
+      <string>https://www.mtosmt.org/</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <string>www\.mtosmt\.org</string>
+      <string>cdn\.mathjax\.org</string>
+      <string>cdnjs\.cloudflare\.com</string>
+      <string>code\.jquery\.com</string>
+      <string>cdnjs\.cloudflare\.com</string>
+      <string>cdn\.jquerytools\.org</string>
+    </list>
+  </entry>
+</map>

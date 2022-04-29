@@ -45,6 +45,27 @@ import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.FilterFactory;
 import org.lockss.util.Logger;
+import org.lockss.util.StringUtil;
+
+import org.apache.commons.io.FileUtils;
+import org.htmlparser.NodeFilter;
+import org.htmlparser.filters.OrFilter;
+import org.htmlparser.filters.TagNameFilter;
+import org.lockss.filter.FilterUtil;
+import org.lockss.filter.html.HtmlFilterInputStream;
+import org.lockss.filter.html.HtmlNodeFilterTransform;
+import org.lockss.filter.html.HtmlNodeFilters;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.FilterFactory;
+import org.lockss.util.Constants;
+import org.lockss.util.Logger;
+import org.lockss.util.ReaderInputStream;
+import org.lockss.util.StringUtil;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.Reader;
 
 /*
  * SO far we only have two publishers who have migrated to OJS3 and the html is basic and
@@ -72,20 +93,29 @@ public class Ojs3HtmlHashFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttribute("div", "id", "article_tab"),
             // article page: https://www.clei.org/cleiej/index.php/cleiej/article/view/202
             HtmlNodeFilters.tagWithAttribute("div", "class", "main_entry"),
+
+            // article page: 	https://haematologica.org/article/view/10276
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-container"),
+            // issue page: https://haematologica.org/issue/view/377
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "one-article-intoc"),
 	    };
-  
-  private static final NodeFilter[] excludeNodes = new NodeFilter[] {
+
+    private static final NodeFilter[] includeNodes2 = new NodeFilter[] {};
+
+    private static final NodeFilter[] excludeNodes = new NodeFilter[] {
 	        // on the article landing page - remove the bottom stuff
 	        HtmlNodeFilters.tagWithAttribute("section","class","article-more-details"),
 
-	    };  
+	    };
+
+    private static final NodeFilter[] excludeNodes2 = new NodeFilter[] {};
  
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
       InputStream in, 
       String encoding) {
 
-    return new HtmlFilterInputStream(in,
+      return new HtmlFilterInputStream(in,
             encoding,
             new HtmlCompoundTransform(
                 HtmlNodeFilterTransform.include(new OrFilter(includeNodes)),

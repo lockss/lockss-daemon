@@ -1,0 +1,43 @@
+{
+  publisher <
+    name = Oregon Historical Society
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:432
+
+    {
+    title <
+      name = Oregon Historical Quarterly ;
+      issn = 0030-4727 ;
+      eissn = 2329-3780
+
+    >
+
+      attr[journal_id] = 845
+
+      au < manifest ; 2003 ; Oregon Historical Quarterly Volume 104 [2003] ; 16632 >
+      au < manifest ; 2004 ; Oregon Historical Quarterly Volume 105 [2004] ; 16635 >
+      au < manifest ; 2005 ; Oregon Historical Quarterly Volume 106 [2005] ; 16636 >
+      au < manifest ; 2006 ; Oregon Historical Quarterly Volume 107 [2006] ; 16637 >
+      au < manifest ; 2007 ; Oregon Historical Quarterly Volume 108 [2007] ; 16638 >
+      au < manifest ; 2008 ; Oregon Historical Quarterly Volume 109 [2008] ; 16639 >
+      au < manifest ; 2009 ; Oregon Historical Quarterly Volume 110 [2009] ; 16640 >
+      au < released ; 2010 ; Oregon Historical Quarterly Volume 111 [2010] ; 16641 >
+      au < released ; 2011 ; Oregon Historical Quarterly Volume 112 [2011] ; 16642 >
+      au < released ; 2012 ; Oregon Historical Quarterly Volume 113 [2012] ; 16643 >
+      au < released ; 2013 ; Oregon Historical Quarterly Volume 114 [2013] ; 16644 >
+      au < released ; 2014 ; Oregon Historical Quarterly Volume 115 [2014] ; 16645 >
+      au < released ; 2015 ; Oregon Historical Quarterly Volume 116 [2015] ; 16646 >
+      au < released ; 2016 ; Oregon Historical Quarterly Volume 117 [2016] ; 16647 >
+      au < released ; 2017 ; Oregon Historical Quarterly Volume 118 [2017] ; 16648 >
+      au < released ; 2018 ; Oregon Historical Quarterly Volume 119 [2018] ; 16649 >
+      au < released ; 2019 ; Oregon Historical Quarterly Volume 120 [2019] ; 16650 >
+      au < released ; 2020 ; Oregon Historical Quarterly Volume 121 [2020] ; 16651 >
+      au < released ; 2021 ; Oregon Historical Quarterly Volume 122 [2021] ; 16652 >
+
+    }
+
+}

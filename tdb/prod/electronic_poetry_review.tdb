@@ -1,0 +1,50 @@
+{
+
+  publisher <
+    name = Electronic Poetry Review
+  >
+  
+  {
+  
+    title <
+      name = Electronic Poetry Review ;
+      eissn = 1552-2083 ;
+      issnl = 1552-2083
+    >  
+
+    rights = openaccess
+    
+    {
+    
+      plugin = edu.cornell.library.epr.EPRPlugin2001
+      param[base_url] = http://www.epoetry.org/  
+      implicit < status ; year ; name >
+  
+      au < superseded ; 2001 ; Electronic Poetry Review 2001 >
+      
+    }
+    
+    {
+
+      plugin = edu.cornell.library.epr.EPRPlugin2002On
+      param[base_url] = http://www.epoetry.org/  
+      implicit < status ; name ; param[year] ; param[num_issue_range] >    
+    
+      au < superseded ; Electronic Poetry Review 2002 ; 2002 ; 3-4 >
+      au < superseded ; Electronic Poetry Review 2003 ; 2003 ; 5-6 >
+    
+    }
+
+    {
+    
+      plugin = edu.cornell.library.epr.EPRPlugin
+      param[base_url] = http://www.epoetry.org/  
+      implicit < status ; year ; name >
+  
+      au < released ; 1996-2008 ; Electronic Poetry Review 1996-2008 >
+      
+    }
+    
+  }
+  
+}

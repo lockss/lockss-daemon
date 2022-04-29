@@ -54,6 +54,8 @@ public class TestPeerAgreement extends LockssTestCase {
     assertEquals(100, agreement.getPercentAgreementTime());
     assertEquals(0.5f, agreement.getHighestPercentAgreement());
     assertEquals(100, agreement.getHighestPercentAgreementTime());
+    // ensure that the NO_AGREEMENT instance wasn't changed.
+    testNoAgreementInstance();
 
     // Make a new one with another signal.
     agreement = agreement.signalAgreement(0.4f, 200);

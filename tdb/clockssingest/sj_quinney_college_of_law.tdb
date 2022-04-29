@@ -29,6 +29,7 @@
       au < finished ; finished ; 2019 ; Utah Law Review Volume 2019 ; 2019 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Utah Law Review Volume 2020 ; 2020 ; >
       au < crawling ; exists ; 2021 ; Utah Law Review Volume 2021 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; Utah Law Review Volume 2022 ; 2022 ; >
 
   }
 
@@ -38,8 +39,8 @@
         name = Utah Law Review ;
         eissn = 0042-1448
       >
-
       #Supplement. Utah Law Review (title). Utah Law Review OnLaw (AU name)
+
       comment[publisher] = S.J. Quinney College of Law
       param[base_url] = https://dc.law.utah.edu/
       param[journal_abbr] = onlaw

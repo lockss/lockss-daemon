@@ -1,0 +1,22 @@
+{
+
+  publisher <
+    name = Virginia Polytechnic Institute and State University
+  >
+
+  {
+  
+    title <
+      name = Virginia Polytechnic Institute and State University Electronic Theses and Dissertations
+    >
+    
+    plugin = org.lockss.plugin.etd.vtetdplugin.VTETDLegacyPlugin
+    param[base_url] = http://scholar.lib.vt.edu/
+    param[oai_request_url] = http://scholar.lib.vt.edu/theses/OAI2/
+    implicit < status ; year ; name ; param[year] >  
+
+    au < down ; 2004 ; Virginia Polytechnic Institute and State University Electronic Theses and Dissertations 2004 ; 2004 >
+      
+  }
+  
+}

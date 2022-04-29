@@ -1,0 +1,28 @@
+{
+
+  publisher <
+    name = University of Kentucky
+  >
+
+  {
+  
+    title <
+      name = University of Kentucky Electronic Theses and Dissertations
+    >
+    
+    plugin = org.lockss.plugin.etd.ukyplugin.UKYETDPlugin
+    param[base_url] = http://kdl.kyvl.org/
+    param[base_url2] = http://lib.uky.edu/
+    param[oai_request_url] = http://kdl.kyvl.org/cgi-bin-oai22/XMLFile/uketds/oai.pl/
+    implicit < status ; year ; name ; param[year] >  
+
+    au < down ; 2000 ; University of Kentucky Electronic Theses and Dissertations 2000 ; 2000 >
+    au < down ; 2001 ; University of Kentucky Electronic Theses and Dissertations 2001 ; 2001 >
+    au < down ; 2002 ; University of Kentucky Electronic Theses and Dissertations 2002 ; 2002 >
+    au < down ; 2003 ; University of Kentucky Electronic Theses and Dissertations 2003 ; 2003 >
+    au < down ; 2004 ; University of Kentucky Electronic Theses and Dissertations 2004 ; 2004 >
+    au < down ; 2005 ; University of Kentucky Electronic Theses and Dissertations 2005 ; 2005 >
+      
+  }
+  
+}

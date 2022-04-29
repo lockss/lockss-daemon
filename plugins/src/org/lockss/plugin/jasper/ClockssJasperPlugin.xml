@@ -1,7 +1,6 @@
 <!--
 
-Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
-All rights reserved.
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -33,7 +32,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
     <entry>
         <string>plugin_status</string>
-        <string>development</string>
+        <string>ready</string>
     </entry>
     <entry>
         <string>plugin_identifier</string>
@@ -41,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>1</string>
+        <string>3</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -86,23 +85,6 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>au_def_pause_time</string>
         <long>3000</long>
     </entry>
-<!--     <entry> -->
-<!--         <string>plugin_feature_version_map</string> -->
-<!--         <map> -->
-<!--             <entry> -->
-<!--                 <string>Poll</string> -->
-<!--                 <string>1</string> -->
-<!--             </entry> -->
-<!--             <entry> -->
-<!--                 <string>Substance</string> -->
-<!--                 <string>1</string> -->
-<!--             </entry> -->
-<!--             <entry> -->
-<!--                 <string>Metadata</string> -->
-<!--                 <string>1</string> -->
-<!--             </entry> -->
-<!--         </map> -->
-<!--     </entry> -->
     <entry>
         <string>au_def_new_content_crawl</string>
         <long>1209600000</long>
@@ -112,17 +94,28 @@ POSSIBILITY OF SUCH DAMAGE.
         <list>
             <string>1,"^%sdownload/%s/", base_url, collection</string>
             <string>1,"^https?://.*\.archive\.org/[0-9]*/items/"</string>
+            <!-- Added so that test URL in
+                 TestJasperJsonMetadataExtractorFactory is in crawl spec -->
+            <string>1,"^%s.*metadata/", base_url</string>
+            <!-- synthetic start url, if you want to update the pattern you must update it in all of these places
+            // 1. crawl_rules & start_url
+            // 2. JasperCrawlSeed.initialize() -->
+            <string>1,"^%sProjectJasper\?collection=", base_url</string>
         </list>
     </entry>
-    <!-- crawlseed supersedes this, but leave in just in case. -->
-<!--     <entry> -->
-<!--         <string>au_start_url</string> -->
-<!--         https://warcs.archive-it.org/wasapi/v1/webdata?collection=10181 -->
-<!--         <string>"%swasapi/v1/webdata?collection=%s", base_url, collection</string> -->
-<!--     </entry> -->
+    <entry>
+        <string>au_start_url</string>
+        <string>"%sProjectJasper?collection=%s", base_url, collection</string>
+    </entry>
     <entry>
         <string>au_permission_url</string>
         <string>"%srobots.txt", base_url</string>
+    </entry>
+    <entry>
+        <string>au_substance_url_pattern</string>
+        <list>
+            <string>"^%s.*\.tar\.gz$", base_url</string>
+        </list>
     </entry>
     <entry>
         <string>required_daemon_version</string>
@@ -176,5 +169,26 @@ POSSIBILITY OF SUCH DAMAGE.
         <list>
             <string>.*\.json$,application/json</string>
         </list>
+    </entry>
+    <entry>
+        <string>clockss_override</string>
+        <map>
+            <entry>
+                <string>au_def_pause_time</string>
+                <long>100</long>
+            </entry>
+            <entry>
+                <string>plugin_crawl_seed_factory</string>
+                <org.lockss.util.Default/>
+            </entry>
+            <entry>
+                <string>plugin_url_fetcher_factory</string>
+                <org.lockss.util.Default/>
+            </entry>
+            <entry>
+                <string>plugin_url_consumer_factory</string>
+                <org.lockss.util.Default/>
+            </entry>
+        </map>
     </entry>
 </map>

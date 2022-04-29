@@ -1,43 +1,51 @@
+<!--
+
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>deprecated</string>
+    <string>deprecated - humanities_project registry</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
     <string>edu.jhu.library.plugin.jrf.JournalOfReligionAndFilmPlugin</string>
   </entry>
   <entry>
-    <string>au_name</string>
-    <string>&quot;Journal of Religion and Film Plugin, Base URL %s, Volume %d&quot;, base_url, volume</string>
+    <string>plugin_version</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_name</string>
     <string>Journal of Religion and Film Plugin</string>
-  </entry>
-  <entry>
-    <string>plugin_version</string>
-    <string>2</string>
-  </entry>
-  <entry>
-    <string>au_def_new_content_crawl</string>
-    <long>1209600000</long>
-  </entry>
-  <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%smanifests/TheJournalOfReligionAndFilm.Vol.%d.LOCKSS.ManifestPage.htm&quot;, base_url, volume</string>
-      <string>1,&quot;^%s[Vv]ol%d[Nn]o[0-9]+/&quot;, base_url, volume</string>
-      <string>2,&quot;^%simages/[Aa]dvertising/&quot;, base_url</string>
-      <string>1,&quot;^%simages/&quot;, base_url</string>
-      <string>1,&quot;^%sCREDITS/&quot;, base_url</string>
-      <string>1,&quot;^%sAuthorBiosPhotos/&quot;, base_url</string>
-    </list>
-  </entry>
-  <entry>
-    <string>au_start_url</string>
-    <string>&quot;%smanifests/TheJournalOfReligionAndFilm.Vol.%d.LOCKSS.ManifestPage.htm&quot;, base_url, volume</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -60,5 +68,33 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
     </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Journal of Religion and Film Plugin, Base URL %s, Volume %d", base_url, volume</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%smanifests/TheJournalOfReligionAndFilm.Vol.%d.LOCKSS.ManifestPage.htm", base_url, volume</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%smanifests/TheJournalOfReligionAndFilm.Vol.%d.LOCKSS.ManifestPage.htm", base_url, volume</string>
+      <string>1,"^%s[Vv]ol%d[Nn]o[0-9]+/", base_url, volume</string>
+      <string>2,"^%simages/[Aa]dvertising/", base_url</string>
+      <string>1,"^%simages/", base_url</string>
+      <string>1,"^%sCREDITS/", base_url</string>
+      <string>1,"^%sAuthorBiosPhotos/", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
   </entry>
 </map>

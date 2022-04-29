@@ -8,23 +8,24 @@
       name = European Journal of Taxonomy ;
       eissn = 2118-9773
     >
-      plugin = org.lockss.plugin.ojs2.OJS2Plugin
-      implicit < status ; year ; name ; volume ; param[year] ; param[base_url] >
+      pluginPrefix = org.lockss.plugin.
+      implicit < pluginSuffix ; status ; year ; name ; volume ; param[year] ; param[base_url] >
       
       #param[base_url] = http://www.europeanjournaloftaxonomy.eu/
       param[journal_id] = ejt
 
-      au < down ; 2011 ; European Journal of Taxonomy Volume 2011 ; 1-4 ; 2011 ; http://www.europeanjournaloftaxonomy.eu/ >
-      au < down ; 2012 ; European Journal of Taxonomy Volume 2012 ; 5-34 ; 2012 ; http://www.europeanjournaloftaxonomy.eu/ >
-      au < down ; 2013 ; European Journal of Taxonomy Volume 2013 ; 35-70 ; 2013 ; http://www.europeanjournaloftaxonomy.eu/ >
-      au < down ; 2014 ; European Journal of Taxonomy Volume 2014 ; 71-107 ; 2014 ; http://www.europeanjournaloftaxonomy.eu/ >
-      au < down ; 2015 ; European Journal of Taxonomy Volume 2015 ; 108-169 ; 2015 ; http://www.europeanjournaloftaxonomy.eu/ >
-      au < down ; 2016 ; European Journal of Taxonomy Volume 2016 ; 170-256 ; 2016 ; http://www.europeanjournaloftaxonomy.eu/ >
-      au < down ; 2017 ; European Journal of Taxonomy Volume 2017 ; 257-391 ; 2017 ; http://www.europeanjournaloftaxonomy.eu/ >
-      au < released ; 2018 ; European Journal of Taxonomy Volume 2018 ; 392-490 ; 2018 ; https://europeanjournaloftaxonomy.eu/ >
-      au < released ; 2019 ; European Journal of Taxonomy Volume 2019 ; 491-590 ; 2019 ; https://europeanjournaloftaxonomy.eu/ >
-      au < released ; 2020 ; European Journal of Taxonomy Volume 2020 ; 591-730 ; 2020 ; https://europeanjournaloftaxonomy.eu/ >
-      au < expected ; 2021 ; European Journal of Taxonomy Volume 2021 ; 731-830 ; 2021 ; https://europeanjournaloftaxonomy.eu/ >
+      au < ojs2.OJS2Plugin ; down ; 2011 ; European Journal of Taxonomy Volume 2011 ; 1-4 ; 2011 ; http://www.europeanjournaloftaxonomy.eu/ >
+      au < ojs2.OJS2Plugin ; down ; 2012 ; European Journal of Taxonomy Volume 2012 ; 5-34 ; 2012 ; http://www.europeanjournaloftaxonomy.eu/ >
+      au < ojs2.OJS2Plugin ; down ; 2013 ; European Journal of Taxonomy Volume 2013 ; 35-70 ; 2013 ; http://www.europeanjournaloftaxonomy.eu/ >
+      au < ojs2.OJS2Plugin ; down ; 2014 ; European Journal of Taxonomy Volume 2014 ; 71-107 ; 2014 ; http://www.europeanjournaloftaxonomy.eu/ >
+      au < ojs2.OJS2Plugin ; down ; 2015 ; European Journal of Taxonomy Volume 2015 ; 108-169 ; 2015 ; http://www.europeanjournaloftaxonomy.eu/ >
+      au < ojs2.OJS2Plugin ; down ; 2016 ; European Journal of Taxonomy Volume 2016 ; 170-256 ; 2016 ; http://www.europeanjournaloftaxonomy.eu/ >
+      au < ojs2.OJS2Plugin ; down ; 2017 ; European Journal of Taxonomy Volume 2017 ; 257-391 ; 2017 ; http://www.europeanjournaloftaxonomy.eu/ >
+      au < ojs2.OJS2Plugin ; released ; 2018 ; European Journal of Taxonomy Volume 2018 ; 392-490 ; 2018 ; https://europeanjournaloftaxonomy.eu/ >
+      au < ojs2.OJS2Plugin ; released ; 2019 ; European Journal of Taxonomy Volume 2019 ; 491-590 ; 2019 ; https://europeanjournaloftaxonomy.eu/ >
+      au < ojs2.OJS2Plugin ; released ; 2020 ; European Journal of Taxonomy Volume 2020 ; 591-730 ; 2020 ; https://europeanjournaloftaxonomy.eu/ >
+      au < ojs3.Ojs3Plugin ; manifest ; 2021 ; European Journal of Taxonomy Volume 2021 ; 731-787 ; 2021 ; https://europeanjournaloftaxonomy.eu/ >
+      au < ojs3.Ojs3Plugin ; manifest ; 2022 ; European Journal of Taxonomy Volume 2022 ; 788-830 ; 2022 ; https://europeanjournaloftaxonomy.eu/ >
 
   }
 

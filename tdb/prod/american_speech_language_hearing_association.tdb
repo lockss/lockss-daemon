@@ -49,7 +49,8 @@
       au < released ; 2018 ; American Journal of Audiology Volume 27 ; 27 >
       au < released ; 2019 ; American Journal of Audiology Volume 28 ; 28 >
       au < released ; 2020 ; American Journal of Audiology Volume 29 ; 29 >
-      au < manifest ; 2021 ; American Journal of Audiology Volume 30 ; 30 >
+      au < released ; 2021 ; American Journal of Audiology Volume 30 ; 30 >
+      au < manifest ; 2022 ; American Journal of Audiology Volume 31 ; 31 >
 
   }
 
@@ -93,7 +94,8 @@
       au < released ; 2018 ; American Journal of Speech-Language Pathology Volume 27 ; 27 >
       au < released ; 2019 ; American Journal of Speech-Language Pathology Volume 28 ; 28 >
       au < released ; 2020 ; American Journal of Speech-Language Pathology Volume 29 ; 29 >
-      au < manifest ; 2021 ; American Journal of Speech-Language Pathology Volume 30 ; 30 >
+      au < released ; 2021 ; American Journal of Speech-Language Pathology Volume 30 ; 30 >
+      au < manifest ; 2022 ; American Journal of Speech-Language Pathology Volume 31 ; 31 >
 
   }
 
@@ -103,8 +105,8 @@
       issn = 0885-9426 ;
       issnl = 0885-9426
     >
-
       #continued_by = 0022-4677
+
 
       param[journal_id] = jsd
       param[base_url] = https://pubs.asha.org/
@@ -131,9 +133,9 @@
       eissn = 2163-6184 ;
       issnl = 0022-4677
     >
-
       #continues = 0885-9426
       #merged_into = 1092-4388
+
 
       param[journal_id] = jshd
       param[base_url] = https://pubs.asha.org/
@@ -190,8 +192,8 @@
       issn = 0022-4685 ;
       issnl = 0022-4685
     >
-
       #continued_by = 1092-4388
+
 
       param[journal_id] = jshr
       param[base_url] = https://pubs.asha.org/
@@ -273,7 +275,8 @@
       au < released ; 2018 ; Journal of Speech, Language, and Hearing Research Volume 61 ; 61 >
       au < released ; 2019 ; Journal of Speech, Language, and Hearing Research Volume 62 ; 62 >
       au < released ; 2020 ; Journal of Speech, Language, and Hearing Research Volume 63 ; 63 >
-      au < manifest ; 2021 ; Journal of Speech, Language, and Hearing Research Volume 64 ; 64 >
+      au < released ; 2021 ; Journal of Speech, Language, and Hearing Research Volume 64 ; 64 >
+      au < manifest ; 2022 ; Journal of Speech, Language, and Hearing Research Volume 65 ; 65 >
 
   }
 
@@ -340,6 +343,7 @@
       au < released ; 2019 ; Language, Speech, and Hearing Services in Schools Volume 50 ; 50 >
       au < released ; 2020 ; Language, Speech, and Hearing Services in Schools Volume 51 ; 51 >
       au < manifest ; 2021 ; Language, Speech, and Hearing Services in Schools Volume 52 ; 52 >
+      au < manifest ; 2022 ; Language, Speech, and Hearing Services in Schools Volume 53 ; 53 >
 
   }
 
@@ -375,6 +379,7 @@
       au < released ; 2019 ; ASHA Leader Volume 24 ; 24 >
       au < released ; 2020 ; ASHA Leader Volume 25 ; 25 >
       au < expected ; 2021 ; ASHA Leader Volume 26 ; 26 >
+      au < expected ; 2022 ; ASHA Leader Volume 27 ; 27 >
   }
 
   {
@@ -392,7 +397,8 @@
       au < released ; 2018 ; Perspectives of the ASHA Special Interest Groups Volume 3 ; 3 >
       au < released ; 2019 ; Perspectives of the ASHA Special Interest Groups Volume 4 ; 4 >
       au < released ; 2020 ; Perspectives of the ASHA Special Interest Groups Volume 5 ; 5 >
-      au < manifest ; 2021 ; Perspectives of the ASHA Special Interest Groups Volume 6 ; 6 >
+      au < released ; 2021 ; Perspectives of the ASHA Special Interest Groups Volume 6 ; 6 >
+      au < manifest ; 2022 ; Perspectives of the ASHA Special Interest Groups Volume 7 ; 7 >
   }
 
 }

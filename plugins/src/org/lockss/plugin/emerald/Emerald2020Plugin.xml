@@ -45,7 +45,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -130,6 +130,10 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>org.lockss.plugin.emerald.Emerald2020HtmlFilterFactory</string>
   </entry>
   <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.emerald.Emerald2020HtmlFilterFactory</string>
+  </entry>
+  <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.emerald.Emerald2020ArticleIteratorFactory</string>
   </entry>
@@ -145,6 +149,17 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>org.lockss.plugin.emerald.Emerald2020MetadataExtractorFactory</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <!--
+      Handle the following error:
+      https://www.emerald.com/insight/content/doi/10.1108/13552550710780894/full/html
+      File size (60326) differs from Content-Length header (60325): https://www.emerald.com/insight/content/doi/10.1108/13552550710780894/full/html
+      -->
+      <string>org.lockss.plugin.ContentValidationException$WrongLength=org.lockss.util.urlconn.CacheException$WarningOnly</string>
+    </list>
   </entry>
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>

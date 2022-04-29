@@ -4,6 +4,7 @@
     name = Canadian Science Publishing ;
     #name = NRC Research Press ; #previously
     info[contract] = 2012 ;
+    info[back] = 2000 ;
     info[tester] = 8 ;
     info[poller] = 6 ;
     info[platform] = Atypon
@@ -40,6 +41,7 @@
     au < deepCrawl ; exists ; 2019 ; Applied Physiology, Nutrition, and Metabolism Volume 44 ; 44 ; https://www.nrcresearchpress.com/ ; >
     au < deepCrawl ; exists ; 2020 ; Applied Physiology, Nutrition, and Metabolism Volume 45 ; 45 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 2021 ; Applied Physiology, Nutrition, and Metabolism Volume 46 ; 46 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2022 ; Applied Physiology, Nutrition, and Metabolism Volume 47 ; 47 ; https://cdnsciencepub.com/ ; >
 
   }
   
@@ -50,11 +52,11 @@
       issn = 0829-8211 ;
       eissn = 1208-6002
     >
-
     # curently Biochemistry and Cell Biology (1986 - present)
     # formerly part of Canadian Journal of Biochemistry and Physiology (1954 - 1963)
     # formerly known as Canadian Journal of Biochemistry (1964 - 1982)
     # formerly known as Canadian Journal of Biochemistry and Cell Biology (1983 - 1985)
+
     
     {
       
@@ -96,6 +98,7 @@
       au < deepCrawl ; exists ; 2019 ; Biochemistry and Cell Biology Volume 97 ; 97 ; https://www.nrcresearchpress.com/ ; >
       au < deepCrawl ; exists ; 2020 ; Biochemistry and Cell Biology Volume 98 ; 98 ; https://cdnsciencepub.com/ ; >
       au < crawling ; exists ; 2021 ; Biochemistry and Cell Biology Volume 99 ; 99 ; https://cdnsciencepub.com/ ; >
+      au < manifest ; exists ; 2022 ; Biochemistry and Cell Biology Volume 100 ; 100 ; https://cdnsciencepub.com/ ; >
 
     }
   
@@ -107,11 +110,11 @@
       name = Canadian Journal of Biochemistry and Physiology ;
       issn = 0576-5544
     >
-
     # curently Biochemistry and Cell Biology (1986 - present)
     # formerly part of Canadian Journal of Biochemistry and Physiology (1954 - 1963)
     # formerly known as Canadian Journal of Biochemistry (1964 - 1982)
     # formerly known as Canadian Journal of Biochemistry and Cell Biology (1983 - 1985)
+
     
     {
     
@@ -138,11 +141,11 @@
       name = Canadian Journal of Biochemistry ;
       issn = 0008-4018
     >
-
     # curently Biochemistry and Cell Biology (1986 - present)
     # formerly part of Canadian Journal of Biochemistry and Physiology (1954 - 1963)
     # formerly known as Canadian Journal of Biochemistry (1964 - 1982)
     # formerly known as Canadian Journal of Biochemistry and Cell Biology (1983 - 1985)
+
     
     {
       
@@ -178,11 +181,11 @@
       name = Canadian Journal of Biochemistry and Cell Biology ;
       issn = 0714-7511
     >
-
     # curently Biochemistry and Cell Biology (1986 - present)
     # formerly part of Canadian Journal of Biochemistry and Physiology (1954 - 1963)
     # formerly known as Canadian Journal of Biochemistry (1964 - 1982)
     # formerly known as Canadian Journal of Biochemistry and Cell Biology (1983 - 1985)
+
     
     {
       
@@ -203,9 +206,9 @@
       issn = 1916-2790 ;
       eissn = 1916-2804
     >
-
     # currently Botony (2008 - present)
     # formerly Canadian Journal of Botany (1951 - 2007)
+
     
     {
     
@@ -225,6 +228,7 @@
       au < deepCrawl ; exists ; 2019 ; Botany Volume 97 ; 97 ; https://www.nrcresearchpress.com/ ; >
       au < deepCrawl ; exists ; 2020 ; Botany Volume 98 ; 98 ; https://cdnsciencepub.com/ ; >
       au < crawling ; exists ; 2021 ; Botany Volume 99 ; 99 ; https://cdnsciencepub.com/ ; >
+      au < manifest ; exists ; 2022 ; Botany Volume 100 ; 100 ; https://cdnsciencepub.com/ ; >
 
     }
     
@@ -237,9 +241,9 @@
       issn = 0008-4026 ;
       eissn = 1480-3305
     >
-
     # currently Botony (2008 - present)
     # formerly Canadian Journal of Botany (1951 - 2007)
+
     
     {
     
@@ -375,6 +379,7 @@
     au < deepCrawl ; exists ; 2019 ; Canadian Geotechnical Journal Volume 56 ; 56 ; https://www.nrcresearchpress.com/ ; >
     au < deepCrawl ; exists ; 2020 ; Canadian Geotechnical Journal Volume 57 ; 57 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 2021 ; Canadian Geotechnical Journal Volume 58 ; 58 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2022 ; Canadian Geotechnical Journal Volume 59 ; 59 ; https://cdnsciencepub.com/ ; >
 
   }
 
@@ -486,6 +491,7 @@
     au < deepCrawl ; exists ; 2019 ; Canadian Journal of Chemistry Volume 97 ; 97 ; https://www.nrcresearchpress.com/ ; >
     au < deepCrawl ; exists ; 2020 ; Canadian Journal of Chemistry Volume 98 ; 98 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 2021 ; Canadian Journal of Chemistry Volume 99 ; 99 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2022 ; Canadian Journal of Chemistry Volume 100 ; 100 ; https://cdnsciencepub.com/ ; >
 
     }
     
@@ -547,6 +553,7 @@
     au < deepCrawl ; exists ; 2019 ; Canadian Journal of Civil Engineering Volume 46 ; 46 ; https://www.nrcresearchpress.com/ ; >
     au < deepCrawl ; exists ; 2020 ; Canadian Journal of Civil Engineering Volume 47 ; 47 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 2021 ; Canadian Journal of Civil Engineering Volume 48 ; 48 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2022 ; Canadian Journal of Civil Engineering Volume 49 ; 49 ; https://cdnsciencepub.com/ ; >
 
     }
 
@@ -618,6 +625,7 @@
     au < deepCrawl ; exists ; 2019 ; Canadian Journal of Earth Sciences Volume 56 ; 56 ; https://www.nrcresearchpress.com/ ; >
     au < deepCrawl ; exists ; 2020 ; Canadian Journal of Earth Sciences Volume 57 ; 57 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 2021 ; Canadian Journal of Earth Sciences Volume 58 ; 58 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2022 ; Canadian Journal of Earth Sciences Volume 59 ; 59 ; https://cdnsciencepub.com/ ; >
 
     }
     
@@ -628,11 +636,11 @@
       issn = 0706-652X ;
       eissn = 1205-7533
       >
-
     # currently Canadian Journal of Fisheries and Aquatic Sciences (1980 - present) journal_id = cjfas
     # formerly Contributions to Canadian Biology and Fisheries (1901 - 1933) journal_id = ccbf
     # formerly Journal of the Biological Board of Canada (1934 - 1937) journal_id = jbbc
     # formerly Journal of the Fisheries Research Board of Canada (1938 - 1979) journal_id = jfrbc
+
     
     {
     
@@ -680,6 +688,7 @@
     au < deepCrawl ; exists ; 2019 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 76 ; 76 ; https://www.nrcresearchpress.com/ ; >
     au < deepCrawl ; exists ; 2020 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 77 ; 77 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 2021 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 78 ; 78 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2022 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 79 ; 79 ; https://cdnsciencepub.com/ ; >
 
     }
 
@@ -691,11 +700,11 @@
       name = Journal of the Fisheries Research Board of Canada ;
       issn = 0015-296X
       >
-
     # currently Canadian Journal of Fisheries and Aquatic Sciences (1980 - present) journal_id = cjfas
     # formerly Contributions to Canadian Biology and Fisheries (1901 - 1933) journal_id = ccbf
     # formerly Journal of the Biological Board of Canada (1934 - 1937) journal_id = jbbc
     # formerly Journal of the Fisheries Research Board of Canada (1938 - 1979) journal_id = jfrbc
+
     
     {
     
@@ -758,11 +767,11 @@
       name = Journal of the Biological Board of Canada ;
       issn = 0368-1424
       >
-
     # currently Canadian Journal of Fisheries and Aquatic Sciences (1980 - present) journal_id = cjfas
     # formerly Contributions to Canadian Biology and Fisheries (1901 - 1933) journal_id = ccbf
     # formerly Journal of the Biological Board of Canada (1934 - 1937) journal_id = jbbc
     # formerly Journal of the Fisheries Research Board of Canada (1938 - 1979) journal_id = jfrbc
+
     
     {
     
@@ -782,11 +791,11 @@
       name = Contributions to Canadian Biology and Fisheries ;
       issn = 0366-5348
       >
-
     # currently Canadian Journal of Fisheries and Aquatic Sciences (1980 - present) journal_id = cjfas
     # formerly Contributions to Canadian Biology and Fisheries (1901 - 1933) journal_id = ccbf
     # formerly Journal of the Biological Board of Canada (1934 - 1937) journal_id = jbbc
     # formerly Journal of the Fisheries Research Board of Canada (1938 - 1979) journal_id = jfrbc
+
     
     {
     
@@ -877,6 +886,7 @@
     au < deepCrawl ; exists ; 2019 ; Canadian Journal of Forest Research Volume 49 ; 49 ; https://www.nrcresearchpress.com/ ; >
     au < deepCrawl ; exists ; 2020 ; Canadian Journal of Forest Research Volume 50 ; 50 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 2021 ; Canadian Journal of Forest Research Volume 51 ; 51 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2022 ; Canadian Journal of Forest Research Volume 52 ; 52 ; https://cdnsciencepub.com/ ; >
 
     }
 
@@ -957,6 +967,7 @@
     au < deepCrawl ; exists ; 2019 ; Canadian Journal of Microbiology Volume 65 ; 65 ; https://www.nrcresearchpress.com/ ; >
     au < deepCrawl ; exists ; 2020 ; Canadian Journal of Microbiology Volume 66 ; 66 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 2021 ; Canadian Journal of Microbiology Volume 67 ; 67 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2022 ; Canadian Journal of Microbiology Volume 68 ; 68 ; https://cdnsciencepub.com/ ; >
 
     }
 
@@ -1041,6 +1052,7 @@
     au < deepCrawl ; exists ; 2019 ; Canadian Journal of Physics Volume 97 ; 97 ; https://www.nrcresearchpress.com/ ; >
     au < deepCrawl ; exists ; 2020 ; Canadian Journal of Physics Volume 98 ; 98 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 2021 ; Canadian Journal of Physics Volume 99 ; 99 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2022 ; Canadian Journal of Physics Volume 100 ; 100 ; https://cdnsciencepub.com/ ; >
 
     }
     
@@ -1114,6 +1126,7 @@
     au < deepCrawl ; exists ; 2019 ; Canadian Journal of Physiology and Pharmacology Volume 97 ; 97 ; https://www.nrcresearchpress.com/ ; >
     au < deepCrawl ; exists ; 2020 ; Canadian Journal of Physiology and Pharmacology Volume 98 ; 98 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 2021 ; Canadian Journal of Physiology and Pharmacology Volume 99 ; 99 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2022 ; Canadian Journal of Physiology and Pharmacology Volume 100 ; 100 ; https://cdnsciencepub.com/ ; >
 
     }
     
@@ -1286,6 +1299,7 @@
     au < deepCrawl ; exists ; 2019 ; Canadian Journal of Zoology Volume 97 ; 97 ; https://www.nrcresearchpress.com/ ; >
     au < deepCrawl ; exists ; 2020 ; Canadian Journal of Zoology Volume 98 ; 98 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 2021 ; Canadian Journal of Zoology Volume 99 ; 99 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2022 ; Canadian Journal of Zoology Volume 100 ; 100 ; https://cdnsciencepub.com/ ; >
 
     }
 
@@ -1328,6 +1342,7 @@
     au < deepCrawl ; exists ; 2019 ; Environmental Reviews Volume 27 ; 27 ; https://www.nrcresearchpress.com/ ; >
     au < deepCrawl ; exists ; 2020 ; Environmental Reviews Volume 28 ; 28 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 2021 ; Environmental Reviews Volume 29 ; 29 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2022 ; Environmental Reviews Volume 30 ; 30 ; https://cdnsciencepub.com/ ; >
 
     }
 
@@ -1381,6 +1396,7 @@
       au < deepCrawl ; exists ; 2019 ; Genome Volume 62 ; 62 ; https://www.nrcresearchpress.com/ ; >
       au < deepCrawl ; exists ; 2020 ; Genome Volume 63 ; 63 ; https://cdnsciencepub.com/ ; >
       au < crawling ; exists ; 2021 ; Genome Volume 64 ; 64 ; https://cdnsciencepub.com/ ; >
+      au < manifest ; exists ; 2022 ; Genome Volume 65 ; 65 ; https://cdnsciencepub.com/ ; >
 
     }
     
@@ -1460,7 +1476,6 @@
       >
      
     param[journal_id] = juvs
-    # quarterly journal expected to launch April 1 2013
     #Volume 1 and early part of 2 used non-standard 0 in front of number
 
     au < frozen ; exists ; 2013 ; Journal of Unmanned Vehicle Systems Volume 1 ; 01 ; http://www.nrcresearchpress.com/ ; >
@@ -1473,6 +1488,20 @@
     au < deepCrawl ; exists ; 2019 ; Journal of Unmanned Vehicle Systems Volume 7 ; 7 ; https://www.nrcresearchpress.com/ ; >
     au < manifest ; exists ; 2020 ; Journal of Unmanned Vehicle Systems Volume 8 ; 8 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 2021 ; Journal of Unmanned Vehicle Systems Volume 9 ; 9 ; https://cdnsciencepub.com/ ; >
+    #As of 2022 journal changed name to Drone Systems and Applications 2564-4939
+    au < expected ; exists ; 2022 ; Journal of Unmanned Vehicle Systems Volume 10 ; 10 ; https://cdnsciencepub.com/ ; >
+    }
+    
+    {
+    
+    title < 
+      name = Drone Systems and Applications ;
+      issn = 2564-4939
+      >
+     
+    param[journal_id] = dsa
+
+    au < manifest ; exists ; 2022 ; Drone Systems and Applications Volume 10 ; 10 ; https://cdnsciencepub.com/ ; >
 
     }
     
@@ -1509,6 +1538,7 @@
     au < deepCrawl ; exists ; 2019 ; Canadian Journal of Animal Science Volume 99 ; 99 ; https://www.nrcresearchpress.com/ ; >
     au < deepCrawl ; exists ; 2020 ; Canadian Journal of Animal Science Volume 100 ; 100 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 2021 ; Canadian Journal of Animal Science Volume 101 ; 101 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2022 ; Canadian Journal of Animal Science Volume 102 ; 102 ; https://cdnsciencepub.com/ ; >
 
     }
     
@@ -1545,6 +1575,7 @@
     au < deepCrawl ; exists ; 2019 ; Canadian Journal of Plant Science Volume 99 ; 99 ; https://www.nrcresearchpress.com/ ; >
     au < deepCrawl ; exists ; 2020 ; Canadian Journal of Plant Science Volume 100 ; 100 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 2021 ; Canadian Journal of Plant Science Volume 101 ; 101 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2022 ; Canadian Journal of Plant Science Volume 102 ; 102 ; https://cdnsciencepub.com/ ; >
 
     }
     
@@ -1581,6 +1612,7 @@
     au < deepCrawl ; exists ; 2019 ; Canadian Journal of Soil Science Volume 99 ; 99 ; https://www.nrcresearchpress.com/ ; >
     au < frozen ; exists ; 2020 ; Canadian Journal of Soil Science Volume 100 ; 100 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 2021 ; Canadian Journal of Soil Science Volume 101 ; 101 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2022 ; Canadian Journal of Soil Science Volume 102 ; 102 ; https://cdnsciencepub.com/ ; >
 
     }
     
@@ -1679,6 +1711,7 @@
     au < frozen ; exists ; 2019 ; Transactions of the Canadian Society for Mechanical Engineering Volume 43 ; 43 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 2020 ; Transactions of the Canadian Society for Mechanical Engineering Volume 44 ; 44 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 2021 ; Transactions of the Canadian Society for Mechanical Engineering Volume 45 ; 45 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2022 ; Transactions of the Canadian Society for Mechanical Engineering Volume 46 ; 46 ; https://cdnsciencepub.com/ ; >
 
     }
     
@@ -1691,7 +1724,6 @@
       >
      
     param[journal_id] = geomat
-
 #    au < exists ; exists ; 1993 ; Geomatica Volume 47 ; 47 ; https://cdnsciencepub.com/ ; >
 #    au < exists ; exists ; 1994 ; Geomatica Volume 48 ; 48 ; https://cdnsciencepub.com/ ; >
 #    au < exists ; exists ; 1995 ; Geomatica Volume 49 ; 49 ; https://cdnsciencepub.com/ ; >
@@ -1717,10 +1749,12 @@
 #    au < exists ; exists ; 2015 ; Geomatica Volume 69 ; 69 ; https://cdnsciencepub.com/ ; >
 #    au < exists ; exists ; 2016 ; Geomatica Volume 70 ; 70 ; https://cdnsciencepub.com/ ; >
 #    au < exists ; exists ; 2017 ; Geomatica Volume 71 ; 71 ; https://cdnsciencepub.com/ ; >
+
     au < frozen ; exists ; 2018 ; Geomatica Volume 72 ; 72 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 2019 ; Geomatica Volume 73 ; 73 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 2020 ; Geomatica Volume 74 ; 74 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 2021 ; Geomatica Volume 75 ; 75 ; https://cdnsciencepub.com/ ; >
+    au < expected ; exists ; 2022 ; Geomatica Volume 76 ; 76 ; https://cdnsciencepub.com/ ; >
 
     }
     
@@ -1737,6 +1771,7 @@
     au < frozen ; exists ; 2019 ; Anthropocene Coasts Volume 2 ; 2 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 2020 ; Anthropocene Coasts Volume 3 ; 3 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 2021 ; Anthropocene Coasts Volume 4 ; 4 ; https://cdnsciencepub.com/ ; >
+    au < expected ; exists ; 2022 ; Anthropocene Coasts Volume 5 ; 5 ; https://cdnsciencepub.com/ ; >
 
     }
     
@@ -1776,6 +1811,7 @@
     au < deepCrawl ; exists ; 2019 ; Arctic Science Volume 5 ; 5 ; https://www.nrcresearchpress.com/ ; >
     au < frozen ; exists ; 2020 ; Arctic Science Volume 6 ; 6 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 2021 ; Arctic Science Volume 7 ; 7 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2022 ; Arctic Science Volume 8 ; 8 ; https://cdnsciencepub.com/ ; >
 
     }
 }
@@ -1808,6 +1844,7 @@
     au < manifest ; exists ; 2019 ; FACETS Volume 4 ; 4 ; >
     au < manifest ; exists ; 2020 ; FACETS Volume 5 ; 5 ; >
     au < manifest ; exists ; 2021 ; FACETS Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2022 ; FACETS Volume 7 ; 7 ; >
 
     }
     

@@ -1,0 +1,25 @@
+{
+
+  publisher <
+    name = United States Bureau of Economic Analysis
+  >
+
+  {
+  
+    title <
+      name = Survey of Current Business ;
+      issn = 0039-6222 ;
+      eissn = 1937-4534 ;
+      issnl = 0039-6222
+    >
+    
+    rights = openaccess
+    plugin = gov.gpo.access.permanent.plugin.surveyofcurrentbusiness.SurveyOfCurrentBusinessPlugin
+    param[base_url] = http://permanent.access.gpo.gov/lockss/Survey_of_Current_Business/
+    implicit < status ; year ; name ; param[year] >  
+
+    au < down ; 2005 ; Survey of Current Business 2005 ; 2005 >
+      
+  }
+  
+}

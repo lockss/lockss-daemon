@@ -25,6 +25,7 @@
       au < finished ; crawling ; 2019 ; Armstrong Undergraduate Journal of History Volume 9 ; 9 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2020 ; Armstrong Undergraduate Journal of History Volume 10 ; 10 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2021 ; Armstrong Undergraduate Journal of History Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2022 ; Armstrong Undergraduate Journal of History Volume 12 ; 12 ; >
 
   }
 
@@ -43,6 +44,7 @@
       au < testing ; exists ; 2019 ; Becoming: Journal of the Georgia Middle School Association Volume 30 ; 30 ; >
       au < finished ; crawling ; 2020 ; Becoming: Journal of the Georgia Middle School Association Volume 31 ; 31 ; reingest4.clockss.org:8082 >
       au < expected ; exists ; 2021 ; Becoming: Journal of the Georgia Middle School Association Volume 32 ; 32 ; >
+      au < expected ; exists ; 2022 ; Becoming: Journal of the Georgia Middle School Association Volume 33 ; 33 ; >
 
   }
 
@@ -59,7 +61,8 @@
 
       au < finished ; crawling ; 2019 ; Current Issues in Middle Level Education Volume 24 ; 24 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Current Issues in Middle Level Education Volume 25 ; 25 ; reingest5.clockss.org:8082 >
-      au < expected ; exists ; 2021 ; Current Issues in Middle Level Education Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2021 ; Current Issues in Middle Level Education Volume 26 ; 26 ; >
+      au < expected ; exists ; 2022 ; Current Issues in Middle Level Education Volume 27 ; 27 ; >
 
   }
 
@@ -92,7 +95,8 @@
       au < finished ; finished ; 2018 ; Georgia Educational Researcher Volume 16 ; 16 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2019 ; Georgia Educational Researcher Volume 17 ; 17 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Georgia Educational Researcher Volume 18 ; 18 ; reingest3.clockss.org:8083 >
-      au < expected ; exists ; 2021 ; Georgia Educational Researcher Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2021 ; Georgia Educational Researcher Volume 19 ; 19 ; >
+      au < expected ; exists ; 2022 ; Georgia Educational Researcher Volume 20 ; 20 ; >
 
   }
 
@@ -141,6 +145,7 @@
       au < finished ; crawling ; 2019 ; International Journal for the Scholarship of Teaching & Learning Volume 13 ; 13 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; International Journal for the Scholarship of Teaching & Learning Volume 14 ; 14 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; International Journal for the Scholarship of Teaching & Learning Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2022 ; International Journal for the Scholarship of Teaching & Learning Volume 16 ; 16 ; >
 
   }
 
@@ -179,6 +184,7 @@
       au < finished ; crawling ; 2016-2017 ; Journal of the Georgia Public Health Association Volume 6 ; 6 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2017-2019 ; Journal of the Georgia Public Health Association Volume 7 ; 7 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2020-2021 ; Journal of the Georgia Public Health Association Volume 8 ; 8 ; >
+      au < expected ; exists ; 2022 ; Journal of the Georgia Public Health Association Volume 9 ; 9 ; >
 
   }
 
@@ -210,9 +216,10 @@
       comment[publisher] = Georgia Southern University
       param[base_url] = https://digitalcommons.georgiasouthern.edu/
       param[journal_abbr] = nyar
-
       #Title and ISSN changed from National Youth-At-Risk Journal (ISSN: 2470-6426)
+
       au < crawling ; exists ; 2021 ; National Youth Advocacy and Resilience Journal Volume 5 ; 5 ; >
+      au < expected ; exists ; 2022 ; National Youth Advocacy and Resilience Journal Volume 6 ; 6 ; >
 
   }
 
@@ -238,6 +245,7 @@
 
       au < finished ; crawling ; 2019 ; Proceedings of the Annual Meeting of the Georgia Association of Mathematics Teacher Educators Volume 13 ; 13 ; reingest3.clockss.org:8083 >
       au < expected ; exists ; 2021 ; Proceedings of the Annual Meeting of the Georgia Association of Mathematics Teacher Educators Volume 14 ; 14 ; >
+      au < expected ; exists ; 2022 ; Proceedings of the Annual Meeting of the Georgia Association of Mathematics Teacher Educators Volume 15 ; 15 ; >
 
   }
 
@@ -256,6 +264,7 @@
       au < finished ; finished ; 2018 ; Proceedings of the Interdisciplinary STEM Teaching and Learning Conference Volume 2 ; 2 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; Proceedings of the Interdisciplinary STEM Teaching and Learning Conference Volume 3 ; 3 ; reingest1.clockss.org:8082 >
       au < expected ; exists ; 2021 ; Proceedings of the Interdisciplinary STEM Teaching and Learning Conference Volume 4 ; 4 ; >
+      au < expected ; exists ; 2022 ; Proceedings of the Interdisciplinary STEM Teaching and Learning Conference Volume 5 ; 5 ; >
 
   }
 
@@ -312,6 +321,7 @@
       au < finished ; crawling ; 2019-2020 ; The Coastal Review Volume 11 ; 11 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2020-2021 ; The Coastal Review Volume 12 ; 12 ; >
       au < expected ; exists ; 2021-2022 ; The Coastal Review Volume 13 ; 13 ; >
+      au < expected ; exists ; 2022-2023 ; The Coastal Review Volume 14 ; 14 ; >
 
   }
 
@@ -329,6 +339,7 @@
 
       au < finished ; crawling ; 2017-2019 ; The Journal of Student Success in Writing Volume 1 ; 1 ; reingest5.clockss.org:8082 >
       au < expected ; exists ; 2021 ; The Journal of Student Success in Writing Volume 2 ; 2 ; >
+      au < expected ; exists ; 2022 ; The Journal of Student Success in Writing Volume 3 ; 3 ; >
 
   }
 
@@ -351,6 +362,7 @@
       au < finished ; crawling ; 2019 ; Theory and Applications of Graphs Volume 5 ; 5 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2020 ; Theory and Applications of Graphs Volume 6 ; 6 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; Theory and Applications of Graphs Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2022 ; Theory and Applications of Graphs Volume 8 ; 8 ; >
 
   }
 

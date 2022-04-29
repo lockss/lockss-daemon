@@ -1,34 +1,34 @@
 /*
- * $Id$
- */
 
-/*
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
 
- Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
- all rights reserved.
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
- Permission is hereby granted, free of charge, to any person obtaining a copy
- of this software and associated documentation files (the "Software"), to deal
- in the Software without restriction, including without limitation the rights
- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- copies of the Software, and to permit persons to whom the Software is
- furnished to do so, subject to the following conditions:
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
 
- The above copyright notice and this permission notice shall be included in
- all copies or substantial portions of the Software.
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
 
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
- STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
- WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
- IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
 
- Except as contained in this notice, the name of Stanford University shall not
- be used in advertising or otherwise to promote the sale, use or other dealings
- in this Software without prior written authorization from Stanford University.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
 
- */
+*/
 
 package org.lockss.plugin.clockss.phildoc;
 
@@ -54,18 +54,22 @@ implements SourceXmlSchemaHelper {
    *  Philosophy Documentation Center 
    */
   // The following are all under the article node /doc
-  private static String pub_title = "field[@name=\"publication\"]";
-  private static String pub_issn = "field[@name=\"issn\"]";
-  private static String pub_isbn = "field[@name=\"isbn\"]";
-  private static String art_title = "field[@name=\"title\"]";
-  public static String art_subtitle = "field[@name=\"subtitle\"]";
-  private static String pub_volume = "field[@name=\"volume\"]";
-  private static String pub_issue = "field[@name=\"issue\"]";
-  private static String pub_year = "field[@name=\"year\"]";
-  private static String art_auth = "field[@name=\"author\"]";
-  private static String art_sp = "field[@name=\"pagenumber_first\"]";
-  private static String art_lp = "field[@name=\"pagenumber_last\"]";
-  private static String art_filename = "field[@name=\"imuse_id\"]";  
+  public static final String pub_title = "field[@name=\"publication\"]";
+  public static final String pub_issn = "field[@name=\"issn\"]";
+  public static final String pub_eissn = "field[@name=\"onlineissn\"]";
+  public static final String pub_isbn = "field[@name=\"isbn\"]";
+  public static final String art_title = "field[@name=\"title\"]";
+  public static final String art_subtitle = "field[@name=\"subtitle\"]";
+  public static final String pub_volume = "field[@name=\"volume\"]";
+  public static final String pub_issue = "field[@name=\"issue\"]";
+  public static final String pub_year = "field[@name=\"year\"]";
+  public static final String art_auth = "field[@name=\"author\"]";
+  public static final String art_sp = "field[@name=\"pagenumber_first\"]";
+  public static final String art_lp = "field[@name=\"pagenumber_last\"]";
+  public static final String art_imuse_id = "field[@name=\"imuse_id\"]";  
+  public static final String art_pdfname = "field[@name=\"pdfname\"]";  
+  public static final String art_xmlname = "field[@name=\"xmlname\"]";
+  public static final String art_doi = "field[@name=\"DOI\"]";
 
   /*
    *  The following 3 variables are needed to use the XPathXmlMetadataParser
@@ -77,6 +81,7 @@ implements SourceXmlSchemaHelper {
   static {
     pdoc_articleMap.put(pub_title, XmlDomMetadataExtractor.TEXT_VALUE);
     pdoc_articleMap.put(pub_issn, XmlDomMetadataExtractor.TEXT_VALUE);
+    pdoc_articleMap.put(pub_eissn, XmlDomMetadataExtractor.TEXT_VALUE);
     pdoc_articleMap.put(pub_isbn, XmlDomMetadataExtractor.TEXT_VALUE);
     pdoc_articleMap.put(art_title, XmlDomMetadataExtractor.TEXT_VALUE);
     pdoc_articleMap.put(art_subtitle, XmlDomMetadataExtractor.TEXT_VALUE);
@@ -86,7 +91,10 @@ implements SourceXmlSchemaHelper {
     pdoc_articleMap.put(art_auth, XmlDomMetadataExtractor.TEXT_VALUE);
     pdoc_articleMap.put(art_sp, XmlDomMetadataExtractor.TEXT_VALUE); 
     pdoc_articleMap.put(art_lp, XmlDomMetadataExtractor.TEXT_VALUE);
-    pdoc_articleMap.put(art_filename, XmlDomMetadataExtractor.TEXT_VALUE); 
+    pdoc_articleMap.put(art_imuse_id, XmlDomMetadataExtractor.TEXT_VALUE); 
+    pdoc_articleMap.put(art_pdfname, XmlDomMetadataExtractor.TEXT_VALUE); 
+    pdoc_articleMap.put(art_xmlname, XmlDomMetadataExtractor.TEXT_VALUE); 
+    pdoc_articleMap.put(art_doi, XmlDomMetadataExtractor.TEXT_VALUE); 
   }
 
   /* 2.  Top level per-article node */
@@ -103,6 +111,7 @@ implements SourceXmlSchemaHelper {
     // normal journal article schema
     cookMap.put(pub_title, MetadataField.FIELD_PUBLICATION_TITLE);
     cookMap.put(pub_issn, MetadataField.FIELD_ISSN);
+    cookMap.put(pub_eissn, MetadataField.FIELD_EISSN);
     cookMap.put(pub_isbn, MetadataField.FIELD_ISBN);
     cookMap.put(art_title, MetadataField.FIELD_ARTICLE_TITLE);
     cookMap.put(pub_volume, MetadataField.FIELD_VOLUME);
@@ -111,6 +120,7 @@ implements SourceXmlSchemaHelper {
     cookMap.put(art_auth, MetadataField.FIELD_AUTHOR);
     cookMap.put(art_sp, MetadataField.FIELD_START_PAGE);
     cookMap.put(art_lp, MetadataField.FIELD_END_PAGE);
+    cookMap.put(art_doi, MetadataField.FIELD_DOI);
   }
 
   /**
@@ -170,7 +180,7 @@ implements SourceXmlSchemaHelper {
 
   @Override
   public String getFilenameXPathKey() {
-    return art_filename;
+    return null;
   }
 
 }

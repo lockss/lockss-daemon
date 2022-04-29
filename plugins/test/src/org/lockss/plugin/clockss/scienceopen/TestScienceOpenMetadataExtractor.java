@@ -33,24 +33,27 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.clockss.scienceopen;
 
+import org.lockss.config.ConfigManager;
+import org.lockss.config.Tdb;
+import org.lockss.config.TdbAu;
+import org.lockss.daemon.ConfigParamDescr;
+import org.lockss.daemon.PluginException;
 import org.lockss.daemon.ShouldNotHappenException;
-import org.lockss.extractor.ArticleMetadata;
-import org.lockss.extractor.FileMetadataExtractor;
-import org.lockss.extractor.FileMetadataListExtractor;
-import org.lockss.extractor.MetadataField;
-import org.lockss.plugin.CachedUrl;
+import org.lockss.extractor.*;
+import org.lockss.plugin.*;
 import org.lockss.plugin.clockss.JatsPublishingSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorTest;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
-import org.lockss.util.IOUtil;
-import org.lockss.util.Logger;
-import org.lockss.util.StringUtil;
+import org.lockss.test.ConfigurationUtil;
+import org.lockss.util.*;
 import org.w3c.dom.Document;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.apache.commons.io.IOUtils;
 
 public class TestScienceOpenMetadataExtractor extends SourceXmlMetadataExtractorTest {
 
@@ -58,6 +61,25 @@ public class TestScienceOpenMetadataExtractor extends SourceXmlMetadataExtractor
 
     private static String BaseUrl = "http://source.host.org/sourcefiles/scienceopen/";
     private static String Directory = "2020";
+
+    private ArchivalUnit bau;
+    static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
+
+    @Override
+    public void setUp() throws Exception {
+        super.setUp();
+
+        ConfigurationUtil.addFromUrl(getResource("test_scienceopen.xml"));
+        Tdb tdb = ConfigManager.getCurrentConfig().getTdb();
+
+        TdbAu tdbau1 = tdb.getTdbAusLikeName( "").get(0);
+        assertNotNull("Didn't find named TdbAu",tdbau1);
+        bau = PluginTestUtil.createAndStartAu(tdbau1);
+        assertNotNull(bau);
+        TypedEntryMap auConfig =  bau.getProperties();
+        assertEquals(BaseUrl, auConfig.getString(BASE_URL_KEY));
+
+    }
 
     private String getXmlFileContent(String fname) {
         String xmlContent = "";
@@ -75,18 +97,35 @@ public class TestScienceOpenMetadataExtractor extends SourceXmlMetadataExtractor
         return xmlContent;
     }
 
+    private List<ArticleMetadata> setupContentForAU(ArchivalUnit au,
+                                                    String fname
+    ) throws IOException, PluginException {
+        String content = getXmlFileContent(fname);
+        return setupContentForAU(au, fname, content);
+    }
+
+    private List<ArticleMetadata> setupContentForAU(ArchivalUnit au,
+                                                    String fname,
+                                                    String content
+    ) throws IOException, PluginException {
+        String url =  BaseUrl + Directory + "/" + fname;
+        InputStream input = IOUtils.toInputStream(content, "utf-8");
+        CIProperties xmlHead = new CIProperties();
+        xmlHead.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
+        FileMetadataExtractor me =
+            new ScienceOpenSourceXmlMetadataExtractorFactory.JatsPublishingSourceXmlMetadataExtractor();
+        UrlData ud = new UrlData(input, xmlHead, url);
+        UrlCacher uc = au.makeUrlCacher(ud);
+        uc.storeContent();
+        CachedUrl cu = uc.getCachedUrl();
+        FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
+        return mle.extract(MetadataTarget.Any(), cu);
+    }
+
     public void testExtractArticleXmlSchema() throws Exception {
 
         String fname = "sample_test_jats.xml";
-        String journalXml = getXmlFileContent(fname);
-        assertNotNull(journalXml);
-
-        String xml_url = BaseUrl + Directory + "/" + fname;
-
-        FileMetadataExtractor me = new MyJatsPublishingSourceXmlMetadataExtractor();
-        FileMetadataListExtractor mle =
-                new FileMetadataListExtractor(me);
-        List<ArticleMetadata> mdlist = extractFromContent(xml_url, "text/xml", journalXml, mle);
+        List<ArticleMetadata> mdlist = setupContentForAU(bau, fname);
         assertNotEmpty(mdlist);
         ArticleMetadata md = mdlist.get(0);
         assertNotNull(md);
@@ -100,6 +139,9 @@ public class TestScienceOpenMetadataExtractor extends SourceXmlMetadataExtractor
         assertEquals("0", md.get(MetadataField.FIELD_ISSUE));
         assertEquals("Ellina, Maria-Ioanna", md.get(MetadataField.FIELD_AUTHOR));
         assertEquals("ScienceOpen Research", md.get(MetadataField.FIELD_PUBLICATION_TITLE));
+        assertEquals("BCS Learning & Development", md.get(MetadataField.FIELD_PUBLISHER));
+        // ensure ScienceOpen was set from tdb file
+        assertEquals("ScienceOpen", md.get(MetadataField.FIELD_PROVIDER));
         assertEquals("Epidermal growth factor/epidermal growth factor receptor signaling axis is a significant regulator of the proteasome expression and activity in colon cancer cells", md.get(MetadataField.FIELD_ARTICLE_TITLE));
 
     }
@@ -116,6 +158,8 @@ public class TestScienceOpenMetadataExtractor extends SourceXmlMetadataExtractor
         FileMetadataListExtractor mle =
                 new FileMetadataListExtractor(me);
         List<ArticleMetadata> mdlist = extractFromContent(xml_url, "text/xml", journalXml, mle);
+
+
         assertNotEmpty(mdlist);
         ArticleMetadata md = mdlist.get(0);
         assertNotNull(md);

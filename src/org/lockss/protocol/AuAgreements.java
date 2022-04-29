@@ -35,14 +35,12 @@ package org.lockss.protocol;
 import java.io.*;
 import java.util.*;
 
+import org.lockss.plugin.AuUtil;
 import org.lockss.protocol.IdentityManager;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.repository.LockssRepositoryException;
 import org.lockss.state.HistoryRepository;
-import org.lockss.util.Logger;
-import org.lockss.util.StreamUtil;
-import org.lockss.util.IOUtil;
-import org.lockss.util.LockssSerializable;
+import org.lockss.util.*;
 
 
 /**
@@ -297,12 +295,41 @@ public class AuAgreements implements LockssSerializable {
     }
   }
 
+ public AuAgreementsBean getBean(String auId) {
+    HashMap<String, PeerAgreements> rawMap = new HashMap<>();
+    for (Map.Entry<PeerIdentity,PeerAgreements> ent : map.entrySet()) {
+        rawMap.put(ent.getKey().getIdString(), ent.getValue());
+    }
+    AuAgreementsBean res = new AuAgreementsBean(auId, rawMap);
+    return res;
+  }
+
+ public AuAgreementsBean getPrunedBean(String auId) {
+    HashMap<String, PeerAgreements> rawMap = new HashMap<>();
+    for (Map.Entry<PeerIdentity,PeerAgreements> pasEnt : map.entrySet()) {
+      PeerAgreements pas = pasEnt.getValue();
+      PeerIdentity id = pasEnt.getKey();
+      PeerAgreements newPas = new PeerAgreements(pas.getId());
+      for (Map.Entry<AgreementType,PeerAgreement> paEnt : pas.getEntries()) {
+        AgreementType type = paEnt.getKey();
+        PeerAgreement pa = paEnt.getValue();
+        if (pa.getPercentAgreement() > 0.0 ||
+            pa.getHighestPercentAgreement() > 0.0) {
+          newPas.addPeerAgreement(type, pa);
+          rawMap.put(id.getIdString(), newPas);
+        }
+      }
+    }
+    AuAgreementsBean res = new AuAgreementsBean(auId, rawMap);
+    return res;
+  }
+
   /**
    * @param pid a {@link PeerIdentity}.
    * @return The {@link PeerAgreements} or {@code null} if no agreement
    * exists.
    */
-  private PeerAgreements getPeerAgreements(PeerIdentity pid) {
+  PeerAgreements getPeerAgreements(PeerIdentity pid) {
     return map.get(pid);
   }
 

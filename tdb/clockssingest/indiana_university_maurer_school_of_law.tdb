@@ -7,8 +7,8 @@
     info[poller] = 8
   >
   provider = bepress
-
   # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
+
 
   plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
   implicit < status ; status2 ; year ; name ; param[volume] ; param[base_url] ; hidden[proxy] >
@@ -89,6 +89,7 @@
     au < finished ; crawling ; 2019 ; Indiana Journal of Law and Social Equality Volume 7 ; 7 ; https://www.repository.law.indiana.edu/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Indiana Journal of Law and Social Equality Volume 8 ; 8 ; https://www.repository.law.indiana.edu/ ; >
     au < crawling ; exists ; 2021 ; Indiana Journal of Law and Social Equality Volume 9 ; 9 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 2022 ; Indiana Journal of Law and Social Equality Volume 10 ; 10 ; https://www.repository.law.indiana.edu/ ; >
 
   }
 
@@ -198,6 +199,7 @@
     au < finished ; crawling ; 2019 ; Indiana Law Journal Volume 94 ; 94 ; https://www.repository.law.indiana.edu/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Indiana Law Journal Volume 95 ; 95 ; https://www.repository.law.indiana.edu/ ; >
     au < crawling ; exists ; 2021 ; Indiana Law Journal Volume 96 ; 96 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 2022 ; Indiana Law Journal Volume 97 ; 97 ; https://www.repository.law.indiana.edu/ ; >
 
   }
 
@@ -221,7 +223,8 @@
     au < finished ; finished ; 2018 ; IP Theory Volume 8 ; 8 ; https://www.repository.law.indiana.edu/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; IP Theory Volume 9 ; 9 ; https://www.repository.law.indiana.edu/ ; reingest3.clockss.org:8083 >
     au < notReady ; exists ; 2020 ; IP Theory Volume 10 ; 10 ; https://www.repository.law.indiana.edu/ ; > #no metadata found
-    au < expected ; exists ; 2021 ; IP Theory Volume 11 ; 11 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 2021 ; IP Theory Volume 11 ; 11 ; https://www.repository.law.indiana.edu/ ; >
+    au < expected ; exists ; 2022 ; IP Theory Volume 12 ; 12 ; https://www.repository.law.indiana.edu/ ; >
 
   }
 

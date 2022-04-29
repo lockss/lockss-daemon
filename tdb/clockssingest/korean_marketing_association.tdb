@@ -1,0 +1,54 @@
+{
+  publisher <
+    name = Korean Marketing Association ;
+    info[contract] = 2015 ;
+    info[back] = 2014 ;
+    info[tester] = 5 ;
+    info[poller] = 8
+  >
+  provider = bepress
+  # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
+
+
+  plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+  implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+  param[base_url] = https://amj.kma.re.kr/
+
+  {
+
+    title <
+      name = Asia Marketing Journal ;
+      issn = 1598-7868 ;
+      eissn = 2765-6500
+    >
+
+    param[journal_abbr] = journal
+
+    au < manifest ; exists ; 1998 ; Asia Marketing Journal Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2000 ; Asia Marketing Journal Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2001 ; Asia Marketing Journal Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2002 ; Asia Marketing Journal Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2003 ; Asia Marketing Journal Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2004 ; Asia Marketing Journal Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2005 ; Asia Marketing Journal Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2006 ; Asia Marketing Journal Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2007 ; Asia Marketing Journal Volume 9 ; 9 ; >
+    au < manifest ; exists ; 2008 ; Asia Marketing Journal Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2009 ; Asia Marketing Journal Volume 11 ; 11 ; >
+    au < manifest ; exists ; 2010 ; Asia Marketing Journal Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2011 ; Asia Marketing Journal Volume 13 ; 13 ; >
+    au < manifest ; exists ; 2012 ; Asia Marketing Journal Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2013 ; Asia Marketing Journal Volume 15 ; 15 ; >
+    au < manifest ; exists ; 2014 ; Asia Marketing Journal Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2015 ; Asia Marketing Journal Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2016 ; Asia Marketing Journal Volume 18 ; 18 ; >
+    au < manifest ; exists ; 2017 ; Asia Marketing Journal Volume 19 ; 19 ; >
+    au < manifest ; exists ; 2018 ; Asia Marketing Journal Volume 20 ; 20 ; >
+    au < manifest ; exists ; 2019 ; Asia Marketing Journal Volume 21 ; 21 ; >
+    au < manifest ; exists ; 2020 ; Asia Marketing Journal Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2021 ; Asia Marketing Journal Volume 23 ; 23 ; >
+    au < exists ; exists ; 2022 ; Asia Marketing Journal Volume 24 ; 24 ; >
+
+  }
+
+}

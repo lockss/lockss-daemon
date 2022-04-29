@@ -1,4 +1,5 @@
 {
+
   publisher <
     name = Bridgewater State College
   >
@@ -12,55 +13,55 @@
       issnl = 0703-8240
     >  
 
+    # moved to digital commons platform.
+
     rights = openaccess
-
-    comment[jiws1] = moved to digital commons platform.
     
-   {
-    
-    plugin = org.lockss.plugin.bepress.BePressPlugin
-    param[base_url] = https://vc.bridgew.edu/
-    param[journal_abbr] = jiws
-    implicit < status ; year ; name ; param[volume] >
-
-    au < exists ; 2000 ; Journal of International Women's Studies Volume 1 ; 1 >
-    au < exists ; 2000-2001 ; Journal of International Women's Studies Volume 2 ; 2 >
-    au < exists ; 2001-2002 ; Journal of International Women's Studies Volume 3 ; 3 >
-    au < exists ; 2002-2003 ; Journal of International Women's Studies Volume 4 ; 4 >
-    au < exists ; 2003-2004 ; Journal of International Women's Studies Volume 5 ; 5 >
-    au < exists ; 2004-2005 ; Journal of International Women's Studies Volume 6 ; 6 >
-    au < exists ; 2005-2006 ; Journal of International Women's Studies Volume 7 ; 7 >
-    au < exists ; 2006-2007 ; Journal of International Women's Studies Volume 8 ; 8 >
-    au < exists ; 2007-2008 ; Journal of International Women's Studies Volume 9 ; 9 >
-    au < exists ; 2008-2009 ; Journal of International Women's Studies Volume 10 ; 10 >
-    au < exists ; 2009-2010 ; Journal of International Women's Studies Volume 11 ; 11 >
-    au < exists ; 2011 ; Journal of International Women's Studies Volume 12 ; 12 >
-    au < exists ; 2012 ; Journal of International Women's Studies Volume 13 ; 13 >
-    au < exists ; 2013 ; Journal of International Women's Studies Volume 14 ; 14 >
-    au < exists ; 2014 ; Journal of International Women's Studies Volume 15 ; 15 >
-    au < exists ; 2015 ; Journal of International Women's Studies Volume 16 ; 16 >
-    au < exists ; 2016 ; Journal of International Women's Studies Volume 17 ; 17 >
-    au < exists ; 2017 ; Journal of International Women's Studies Volume 18 ; 18 >
-    au < exists ; 2018 ; Journal of International Women's Studies Volume 19 ; 19 >
-    au < exists ; 2019 ; Journal of International Women's Studies Volume 20 ; 20 >
-
-   }
+    {
+     
+      plugin = edu.columbia.plugin.JiwsPlugin
+      param[base_url] = http://www.bridgew.edu/SoAS/jiws/ 
+      implicit < status ; year ; name ; volume ; param[year] >
+      
+      au < down ; 2000 ; Journal of International Women's Studies 2000 ; 1-2 ; 2000 >
+      au < down ; 2001 ; Journal of International Women's Studies 2001 ; 2-3 ; 2001 >
+      au < down ; 2002 ; Journal of International Women's Studies 2002 ; 3-4 ; 2002 >
+      au < down ; 2003 ; Journal of International Women's Studies 2003 ; 4-5 ; 2003 >
+      au < down ; 2004 ; Journal of International Women's Studies 2004 ; 5-6 ; 2004 >
+      au < down ; 2005 ; Journal of International Women's Studies 2005 ; 6-7 ; 2005 >
+      au < down ; 2006 ; Journal of International Women's Studies 2006 ; 7-8 ; 2006 >
+     
+    }
   
-   {
+    {
+     
+      plugin = org.lockss.plugin.bepress.BePressPlugin
+      param[base_url] = https://vc.bridgew.edu/
+      param[journal_abbr] = jiws
+      implicit < status ; year ; name ; param[volume] >
+      
+      au < exists ; 2000 ; Journal of International Women's Studies Volume 1 ; 1 >
+      au < exists ; 2000-2001 ; Journal of International Women's Studies Volume 2 ; 2 >
+      au < exists ; 2001-2002 ; Journal of International Women's Studies Volume 3 ; 3 >
+      au < exists ; 2002-2003 ; Journal of International Women's Studies Volume 4 ; 4 >
+      au < exists ; 2003-2004 ; Journal of International Women's Studies Volume 5 ; 5 >
+      au < exists ; 2004-2005 ; Journal of International Women's Studies Volume 6 ; 6 >
+      au < exists ; 2005-2006 ; Journal of International Women's Studies Volume 7 ; 7 >
+      au < exists ; 2006-2007 ; Journal of International Women's Studies Volume 8 ; 8 >
+      au < exists ; 2007-2008 ; Journal of International Women's Studies Volume 9 ; 9 >
+      au < exists ; 2008-2009 ; Journal of International Women's Studies Volume 10 ; 10 >
+      au < exists ; 2009-2010 ; Journal of International Women's Studies Volume 11 ; 11 >
+      au < exists ; 2011 ; Journal of International Women's Studies Volume 12 ; 12 >
+      au < exists ; 2012 ; Journal of International Women's Studies Volume 13 ; 13 >
+      au < exists ; 2013 ; Journal of International Women's Studies Volume 14 ; 14 >
+      au < exists ; 2014 ; Journal of International Women's Studies Volume 15 ; 15 >
+      au < exists ; 2015 ; Journal of International Women's Studies Volume 16 ; 16 >
+      au < exists ; 2016 ; Journal of International Women's Studies Volume 17 ; 17 >
+      au < exists ; 2017 ; Journal of International Women's Studies Volume 18 ; 18 >
+      au < exists ; 2018 ; Journal of International Women's Studies Volume 19 ; 19 >
+      au < exists ; 2019 ; Journal of International Women's Studies Volume 20 ; 20 >
     
-    plugin = edu.columbia.plugin.JiwsPlugin
-    param[base_url] = http://www.bridgew.edu/SoAS/jiws/ 
-    implicit < status ; name ; volume ; param[year] >
-
-    au < down ; Journal of International Women's Studies 2000 ; 1-2 ; 2000 >
-    au < down ; Journal of International Women's Studies 2001 ; 2-3 ; 2001 >
-    au < down ; Journal of International Women's Studies 2002 ; 3-4 ; 2002 >
-    au < down ; Journal of International Women's Studies 2003 ; 4-5 ; 2003 >
-    au < down ; Journal of International Women's Studies 2004 ; 5-6 ; 2004 >
-    au < down ; Journal of International Women's Studies 2005 ; 6-7 ; 2005 >
-    au < down ; Journal of International Women's Studies 2006 ; 7-8 ; 2006 >
-    
-   }
+    }
   
   }
   

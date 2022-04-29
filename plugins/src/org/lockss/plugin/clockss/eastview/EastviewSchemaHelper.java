@@ -1,34 +1,34 @@
 /*
- * $Id$
- */
 
-/*
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
 
- Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
- all rights reserved.
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
- Permission is hereby granted, free of charge, to any person obtaining a copy
- of this software and associated documentation files (the "Software"), to deal
- in the Software without restriction, including without limitation the rights
- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- copies of the Software, and to permit persons to whom the Software is
- furnished to do so, subject to the following conditions:
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
 
- The above copyright notice and this permission notice shall be included in
- all copies or substantial portions of the Software.
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
 
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
- STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
- WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
- IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
 
- Except as contained in this notice, the name of Stanford University shall not
- be used in advertising or otherwise to promote the sale, use or other dealings
- in this Software without prior written authorization from Stanford University.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
 
- */
+*/
 
 package org.lockss.plugin.clockss.eastview;
 
@@ -98,7 +98,7 @@ implements SourceXmlSchemaHelper {
   private static String pub_year = "DATE";
   private static String pub_volume = "VOLUME";
   private static String pub_issue = "NUMBER";
-  private static String art_title = "ATITLE";
+  protected static String ART_RAW_ATITLE = "ATITLE";
   protected static String ART_RAW_TITLE = "TITLE";
   private static String art_contrib = "AUTHOR";
   private static String art_sp = "PAGE";
@@ -115,11 +115,11 @@ implements SourceXmlSchemaHelper {
     articleMap.put(pub_title, CLEAN_TEXT);
     //This is raw title, it contains publisher acroname, like this:
     //title: 31-05-1961(DASZD-No.005) НОВЫЕ КНИГИ
-    articleMap.put(ART_RAW_TITLE, XmlDomMetadataExtractor.TEXT_VALUE);
+    articleMap.put(ART_RAW_ATITLE, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(pub_volume, XmlDomMetadataExtractor.TEXT_VALUE); 
     articleMap.put(pub_issue, XmlDomMetadataExtractor.TEXT_VALUE); 
     articleMap.put(pub_year, XmlDomMetadataExtractor.TEXT_VALUE); 
-    articleMap.put(art_title, XmlDomMetadataExtractor.TEXT_VALUE); 
+    articleMap.put(ART_RAW_TITLE, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(art_contrib, XmlDomMetadataExtractor.TEXT_VALUE); 
     articleMap.put(art_sp, STARTPAGE_VALUE);
   }
@@ -140,7 +140,6 @@ implements SourceXmlSchemaHelper {
     cookMap.put(pub_volume, MetadataField.FIELD_VOLUME);
     cookMap.put(pub_issue, MetadataField.FIELD_ISSUE);
     cookMap.put(pub_year, MetadataField.FIELD_DATE);
-    cookMap.put(art_title, MetadataField.FIELD_ARTICLE_TITLE);
     cookMap.put(art_contrib, 
         new MetadataField(MetadataField.FIELD_AUTHOR, MetadataField.splitAt(AUTHOR_SPLIT_CH)));
     cookMap.put(art_sp, MetadataField.FIELD_START_PAGE);

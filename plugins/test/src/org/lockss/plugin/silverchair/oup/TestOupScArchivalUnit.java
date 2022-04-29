@@ -162,8 +162,8 @@ public class TestOupScArchivalUnit extends LockssTestCase {
     shouldCacheTest("https://fonts.googleapis.com/css?family=Merriweather:300,400,400italic,700,700italic%7CSource+Sans+Pro:400,400italic,700,700italic", true, au);
     shouldCacheTest("https://fonts.gstatic.com/s/merriweather/v15/EYh7Vl4ywhowqULgRdYwICxQL91WRy8t8mPvAX_dIgA.ttf", true, au);
     shouldCacheTest("https://fonts.gstatic.com/s/sourcesanspro/v10/fpTVHK8qsXbIeTHTrnQH6Edtd7Dq2ZflsctMEexj2lw.ttf", true, au);
-    shouldCacheTest("https://oup.silverchair-cdn.com/cassette.axd/file/UI/app/fonts/icomoon-10c8cce3e34f3a0fe0d722e3ee322184b824f902.ttf?2wsrjz", true, au);
-    shouldCacheTest("https://oup.silverchair-cdn.com/cassette.axd/script/92f525bab295d0ffa6f942402d5f7034757b1440/OupCookiePolicyJS", true, au);
+    shouldCacheTest("https://oup.silverchair-cdn.com/cassette.axd/file/UI/app/fonts/icomoon-10c8cce3e34f3a0fe0d722e3ee322184b824f902.ttf?2wsrjz", false, au);
+    shouldCacheTest("https://oup.silverchair-cdn.com/cassette.axd/script/92f525bab295d0ffa6f942402d5f7034757b1440/OupCookiePolicyJS", false, au);
     shouldCacheTest("https://oup.silverchair-cdn.com/data/SiteBuilderAssets/Live/CSS/database/Site1329903961.css", true, au);
     
     // non-redirecting supplemental data, images and figures with expiration but only for constant expiration time of 2032: 2147483647? 

@@ -165,11 +165,15 @@ public class ScienceOpenBookXmlSchemaHelper
   public static final String book_doi = book_meta + "book-id[@book-id-type = 'doi']";
   public static final String book_title = book_meta + "book-title-group/book-title";
   public static final String book_publisher = book_meta + "publisher/publisher-name";
+  public static final String book_pages = book_meta + "counts/book-page-count";
+
   public static final String book_pub_date = book_meta + "pub-date";
   public static final String book_isbn = book_meta + "isbn[@publication-format = 'print']";
   public static final String book_eisbn = book_meta + "isbn[@publication-format = 'electronic']";
   public static final String book_editor = book_meta + "contrib-group/contrib[@contrib-type = 'editor']/name";
+  public static final String book_author = book_meta + "contrib-group/contrib[@contrib-type = 'author']/name";
   public static final String book_page_count = book_meta + "counts/book-page-count/@count";
+  public static final String book_abstract = book_meta + "abstract";
 
   // set parent of chapter meta
   public static final String chapter_meta = "book-body/book-part[@book-part-type = 'chapter']/book-part-meta/";
@@ -190,9 +194,12 @@ public class ScienceOpenBookXmlSchemaHelper
     articleMap.put(book_isbn, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(book_eisbn, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(book_pub_date, DATE_VALUE);
+    articleMap.put(book_page_count, XmlDomMetadataExtractor.NUMBER_VALUE);
+    articleMap.put(book_abstract, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(chapter_doi, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(chapter_title, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(book_editor, AUTHOR_VALUE);
+    articleMap.put(book_author, AUTHOR_VALUE);
     articleMap.put(chapter_author, AUTHOR_VALUE);
     articleMap.put(chapter_copyright_year, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(chapter_pdf, XmlDomMetadataExtractor.TEXT_VALUE);
@@ -210,10 +217,12 @@ public class ScienceOpenBookXmlSchemaHelper
     cookMap.put(book_eisbn, MetadataField.FIELD_EISBN);
     cookMap.put(book_title, MetadataField.FIELD_PUBLICATION_TITLE);
     cookMap.put(book_publisher, MetadataField.FIELD_PUBLISHER);
+    cookMap.put(book_abstract, MetadataField.FIELD_ABSTRACT);
     cookMap.put(book_page_count, MetadataField.FIELD_END_PAGE);
     cookMap.put(chapter_title, MetadataField.FIELD_ARTICLE_TITLE);
-    cookMap.put(chapter_author, MetadataField.FIELD_AUTHOR);
     cookMap.put(book_editor, MetadataField.FIELD_AUTHOR);
+    cookMap.put(book_author, MetadataField.FIELD_AUTHOR);
+    cookMap.put(chapter_author, MetadataField.FIELD_AUTHOR);
     cookMap.put(chapter_doi, MetadataField.FIELD_DOI);
     cookMap.put(book_pub_date, MetadataField.FIELD_DATE);
   }

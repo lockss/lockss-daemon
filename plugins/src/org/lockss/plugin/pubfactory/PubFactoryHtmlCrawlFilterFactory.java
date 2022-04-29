@@ -27,10 +27,13 @@ public class PubFactoryHtmlCrawlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "content-references-list"),
         // article content references
         HtmlNodeFilters.tagWithAttributeRegex("section", "class", "refSection"),
+        // class="chap-endnotes"
+        HtmlNodeFilters.tagWithAttribute("section", "class", "chap-endnotes"),
         // ibid
         HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "refList"),
       // related content is similarly unnecessary
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "component-related-content"),
+      HtmlNodeFilters.tagWithAttributeRegex("a", "class", "relatedArticle"),
     };
 
     return new HtmlFilterInputStream(in,

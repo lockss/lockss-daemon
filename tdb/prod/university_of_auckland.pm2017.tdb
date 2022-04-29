@@ -1,0 +1,25 @@
+{
+  publisher <
+    name = University of Auckland
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:426
+
+    {
+    title <
+      name = New Zealand Journal of History ;
+      issn = 0028-8322 ;
+      eissn = 2463-5057
+
+    >
+
+      attr[journal_id] = 818
+
+      au < released ; 2021 ; New Zealand Journal of History Volume 55 [2021] ; 16534 >
+
+    }
+
+}

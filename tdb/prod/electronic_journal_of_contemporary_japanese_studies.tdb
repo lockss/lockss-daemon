@@ -1,0 +1,65 @@
+{
+
+  publisher <
+    name = Electronic Journal of Contemporary Japanese Studies
+  >
+  
+  {
+  
+    title <
+      name = Electronic Journal of Contemporary Japanese Studies ;
+      eissn = 1476-9158 ;
+      issnl = 1476-9158
+    >  
+    
+    rights = openaccess
+    
+    {
+    
+      plugin = edu.nyu.plugin.ejcjs.EJCJSPlugin
+      param[base_url] = http://www.japanesestudies.org.uk/
+      implicit < status ; year ; volume ; name ; param[year] >
+    
+      au < superseded ; 2001 ; 1 ; Electronic Journal of Contemporary Japanese Studies Volume 1 [superseded] ; 2001 >
+      au < superseded ; 2002 ; 2 ; Electronic Journal of Contemporary Japanese Studies Volume 2 [superseded] ; 2002 >
+      au < superseded ; 2003 ; 3 ; Electronic Journal of Contemporary Japanese Studies Volume 3 [superseded] ; 2003 >
+      au < superseded ; 2004 ; 4 ; Electronic Journal of Contemporary Japanese Studies Volume 4 [superseded] ; 2004 >
+      au < superseded ; 2005 ; 5 ; Electronic Journal of Contemporary Japanese Studies Volume 5 [superseded] ; 2005 >
+      au < superseded ; 2006 ; 6 ; Electronic Journal of Contemporary Japanese Studies Volume 6 [superseded] ; 2006 >
+      
+    }
+  
+    {
+    
+      plugin = edu.nyu.plugin.ejcjs.EJCJS2022Plugin
+      param[base_url] = http://www.japanesestudies.org.uk/
+      implicit < status ; year ; volume ; name ; param[volume] >
+    
+      au < released ; 2001 ; 1 ; Electronic Journal of Contemporary Japanese Studies Volume 1 ; 1 >
+      au < released ; 2002 ; 2 ; Electronic Journal of Contemporary Japanese Studies Volume 2 ; 2 >
+      au < released ; 2003 ; 3 ; Electronic Journal of Contemporary Japanese Studies Volume 3 ; 3 >
+      au < released ; 2004 ; 4 ; Electronic Journal of Contemporary Japanese Studies Volume 4 ; 4 >
+      au < released ; 2005 ; 5 ; Electronic Journal of Contemporary Japanese Studies Volume 5 ; 5 >
+      au < released ; 2006 ; 6 ; Electronic Journal of Contemporary Japanese Studies Volume 6 ; 6 >
+      au < released ; 2007 ; 7 ; Electronic Journal of Contemporary Japanese Studies Volume 7 ; 7 >
+      au < released ; 2008 ; 8 ; Electronic Journal of Contemporary Japanese Studies Volume 8 ; 8 >
+      au < released ; 2009 ; 9 ; Electronic Journal of Contemporary Japanese Studies Volume 9 ; 9 >
+      au < released ; 2010 ; 10 ; Electronic Journal of Contemporary Japanese Studies Volume 10 ; 10 >
+      au < released ; 2011 ; 11 ; Electronic Journal of Contemporary Japanese Studies Volume 11 ; 11 >
+      au < released ; 2012 ; 12 ; Electronic Journal of Contemporary Japanese Studies Volume 12 ; 12 >
+      au < released ; 2013 ; 13 ; Electronic Journal of Contemporary Japanese Studies Volume 13 ; 13 >
+      au < released ; 2014 ; 14 ; Electronic Journal of Contemporary Japanese Studies Volume 14 ; 14 >
+      au < released ; 2015 ; 15 ; Electronic Journal of Contemporary Japanese Studies Volume 15 ; 15 >
+      au < released ; 2016 ; 16 ; Electronic Journal of Contemporary Japanese Studies Volume 16 ; 16 >
+      au < released ; 2017 ; 17 ; Electronic Journal of Contemporary Japanese Studies Volume 17 ; 17 >
+      au < released ; 2018 ; 18 ; Electronic Journal of Contemporary Japanese Studies Volume 18 ; 18 >
+      au < released ; 2019 ; 19 ; Electronic Journal of Contemporary Japanese Studies Volume 19 ; 19 >
+      au < released ; 2020 ; 10 ; Electronic Journal of Contemporary Japanese Studies Volume 20 ; 20 >
+      au < released ; 2021 ; 11 ; Electronic Journal of Contemporary Japanese Studies Volume 21 ; 21 >
+      au < expected ; 2022 ; 12 ; Electronic Journal of Contemporary Japanese Studies Volume 22 ; 22 >
+      
+    }
+  
+  }
+  
+}

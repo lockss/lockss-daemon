@@ -979,6 +979,22 @@ public class TestStringUtil extends LockssTestCase {
     assertEquals("123MB", StringUtil.sizeToString(123*1024*1024));
   }
 
+  public void testByteRate() throws Exception {
+    assertEquals("0", StringUtil.byteRateToString(0, 1000));
+    assertEquals("(undefined)", StringUtil.byteRateToString(1000, 0));
+    assertEquals("1000B/s", StringUtil.byteRateToString(1000, 1000));
+    assertEquals("977KB/s", StringUtil.byteRateToString(1000, 1));
+    assertEquals("3.26KB/s", StringUtil.byteRateToString(1000, 300));
+    assertEquals("12.01KB/s", StringUtil.byteRateToString(123, 10));
+    assertEquals("1.2KB/s", StringUtil.byteRateToString(123, 100));
+    assertEquals("97.66KB/s", StringUtil.byteRateToString(100000, 1000));
+    assertEquals("9.54MB/s", StringUtil.byteRateToString(100000, 10));
+    assertEquals("118MB/s", StringUtil.byteRateToString(1234567, 10));
+    assertEquals("11.77MB/s", StringUtil.byteRateToString(1234567, 100));
+    assertEquals("1.18MB/s", StringUtil.byteRateToString(1234567, 1000));
+    assertEquals("8.1B/s", StringUtil.byteRateToString(10000, 1234567));
+  }
+
   public void testTrimStackTrace() {
     String s1 = "Exception string: Nested error: java.io.FileNotFoundException: /tmp/iddb/idmapping.xml (No such file or directory)";
     String s2 = "java.io.FileNotFoundException: /tmp/iddb/idmapping.xml (No such file or directory)";
@@ -1333,6 +1349,10 @@ public class TestStringUtil extends LockssTestCase {
     assertEquals("Na er tiden", StringUtil.toUnaccented("N\u00e5 er tiden"));
     // swedish: Now is the time (small letter 'a' with diaeresis
     assertEquals("Nu ar det dags", StringUtil.toUnaccented("Nu \u00e4r det dags"));
+    assertEquals("University of Lodz", StringUtil.toUnaccented("University of Łódź"));
+    assertEquals("oe", StringUtil.toUnaccented("œ"));
+    assertEquals("OE", StringUtil.toUnaccented("Œ"));
+    assertEquals("ffl", StringUtil.toUnaccented("\uFB04"));
   }
 
   public void testHash64NullPayload() {

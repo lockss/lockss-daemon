@@ -1,3 +1,32 @@
+<!--
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+-->
 <map>
   <entry>
     <string>plugin_status</string>
@@ -9,7 +38,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>18</string>
+    <string>21</string>
   </entry>
    <entry>
     <string>plugin_name</string>
@@ -39,6 +68,11 @@
         -->
       <string>1,"^(%s|%s)(ojs/)?(journals/)?(index\.php/)?(%s/)?(index\.php/)?(%s/)?(article|issue)/(download(SuppFile)?|view(Article|File|(Download|PDF)Interstitial|RST)?)/", to_http(base_url),to_https(base_url), journal_id, journal_id</string>
       <string>1,"^(%s|%s)(ojs/)?(journals/)?(index\.php/)?(%s/)?rt/(bio|metadata|printerFriendly|suppFileMetadata|suppFiles)/", to_http(base_url),to_https(base_url), journal_id</string>
+        <!-- citation files
+         https://www.aijournals.com/index.php/ajmr/citationstylelanguage/get/chicago-author-date?submissionId=2230
+         https://www.aijournals.com/index.php/ajmr/citationstylelanguage/download/ris?submissionId=2230
+         -->
+      <string>1,"^(%s|%s)(ojs/)?(journals/)?(index\.php/)?(%s/)?(index\.php/)?(%s/)?citationstylelanguage/(get|download)/", to_http(base_url),to_https(base_url), journal_id, journal_id</string>
       <string>2,"^(%s|%s).*plugins/generic/pdfJsViewer/pdf\.js/web/viewer\.html\?file=https?[%%]25", to_http(base_url),to_https(base_url)</string>
       <string>1,"^(%s|%s).*plugins/generic/pdfJsViewer/pdf\.js/web/viewer\.html\?file=", to_http(base_url),to_https(base_url)</string>
     </list>
@@ -55,7 +89,22 @@
     <string>plugin_crawl_seed_factory</string>
     <string>org.lockss.plugin.ojs3.Ojs3CrawlSeedFactory</string>
   </entry>
-<!--  end of start_url definition  -->
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <!--  ServeContent sometimes needs the start_stem inserted into the url -->
+        <string>au_volume</string>
+        <string>org.lockss.plugin.ojs3.Ojs3FeatureUrlHelperFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+      <!--  ServeAU sometimes needs the start_stem inserted into the url -->
+    <string>plugin_access_url_factory</string>
+    <string>org.lockss.plugin.ojs3.Ojs3FeatureUrlHelperFactory</string>
+  </entry>
+  <!--  end of start_url definition  -->
   <entry>
     <string>au_def_pause_time</string>
     <long>3000</long>
@@ -101,7 +150,7 @@
         <map>
             <entry>
                 <string>Metadata</string>
-                <string>1</string>
+                <string>2</string>
             </entry>
             <entry>
                 <string>Poll</string>

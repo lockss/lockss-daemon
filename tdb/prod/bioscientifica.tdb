@@ -16,8 +16,7 @@
       
     >
 
-    param[journal_id] = echo
-
+      param[journal_id] = echo
       param[base_url] = https://erp.bioscientifica.com/
       ## http://www.echorespract.com/
 
@@ -26,9 +25,36 @@
       au < doNotProcess ; 2016 ; Echo Research and Practice Volume 3 ; 3 >
       au < doNotProcess ; 2017 ; Echo Research and Practice Volume 4 ; 4 >
       au < released ; 2018 ; Echo Research and Practice Volume 5 ; 5 >
+      au < released ; 2019 ; Echo Research and Practice Volume 6 ; 6 >
+      au < released ; 2020 ; Echo Research and Practice Volume 7 ; 7 >
+      au < released ; 2021 ; Echo Research and Practice Volume 8 ; 8 >
+      au < expected ; 2022 ; Echo Research and Practice Volume 9 ; 9 >
 
   }
   
+  {
+
+    title <
+      name = EFORT Open Reviews ;
+      issn = 2396-7544 ;
+      eissn = 2058-5241 ;
+      issnl = 2396-7544
+    >
+
+    param[journal_id] = eor
+    param[base_url] = https://eor.bioscientifica.com/
+    #Moved from Atypon/British Ed Soc BJS
+
+    au < doNotProcess ; 2016 ; EFORT Open Reviews Volume 1 ; 1 >
+    au < doNotProcess ; 2017 ; EFORT Open Reviews Volume 2 ; 2 >
+    au < doNotProcess ; 2018 ; EFORT Open Reviews Volume 3 ; 3 >
+    au < doNotProcess ; 2019 ; EFORT Open Reviews Volume 4 ; 4 >
+    au < doNotProcess ; 2020 ; EFORT Open Reviews Volume 5 ; 5 >
+    au < released ; 2021 ; EFORT Open Reviews Volume 6 ; 6 >
+    au < manifest ; 2022 ; EFORT Open Reviews Volume 7 ; 7 >
+
+  }
+
 {
     title <
       name = Endocrine Connections ;
@@ -36,10 +62,7 @@
       
     >
 
-    param[journal_id] = ec
-
-    {
-
+      param[journal_id] = ec
       param[base_url] = https://ec.bioscientifica.com/
       ## http://www.endocrineconnections.com/
 
@@ -50,8 +73,10 @@
       au < doNotProcess ; 2016 ; Endocrine Connections Volume 5 ; 5 >
       au < doNotProcess ; 2017 ; Endocrine Connections Volume 6 ; 6 >
       au < released ; 2018 ; Endocrine Connections Volume 7 ; 7 >
-
-    }
+      au < released ; 2019 ; Endocrine Connections Volume 8 ; 8 >
+      au < released ; 2020 ; Endocrine Connections Volume 9 ; 9 >
+      au < released ; 2021 ; Endocrine Connections Volume 10 ; 10 >
+      au < manifest ; 2022 ; Endocrine Connections Volume 11 ; 11 >
 
   }
   
@@ -63,10 +88,7 @@
       issnl = 0804-4643
     >
 
-    param[journal_id] = eje
-
-    {
-
+      param[journal_id] = eje
       param[base_url] = https://eje.bioscientifica.com/
       ## http://www.eje-online.org/
 
@@ -122,8 +144,14 @@
       au < doNotProcess ; 2017 ; European Journal of Endocrinology Volume 177 ; 177 >
       au < released ; 2018 ; European Journal of Endocrinology Volume 178 ; 178 >
       au < released ; 2018 ; European Journal of Endocrinology Volume 179 ; 179 >
-
-    }
+      au < released ; 2019 ; European Journal of Endocrinology Volume 180 ; 180 >
+      au < released ; 2019 ; European Journal of Endocrinology Volume 181 ; 181 >
+      au < released ; 2020 ; European Journal of Endocrinology Volume 182 ; 182 >
+      au < released ; 2020 ; European Journal of Endocrinology Volume 183 ; 183 >
+      au < released ; 2021 ; European Journal of Endocrinology Volume 184 ; 184 >
+      au < released ; 2021 ; European Journal of Endocrinology Volume 185 ; 185 >
+      au < manifest ; 2022 ; European Journal of Endocrinology Volume 186 ; 186 >
+      au < expected ; 2022 ; European Journal of Endocrinology Volume 187 ; 187 >
 
   }
   
@@ -135,10 +163,7 @@
       issnl = 1470-1626
     >
 
-    param[journal_id] = rep
-
-    {
-
+      param[journal_id] = rep
       param[base_url] = https://rep.bioscientifica.com/
       ## http://www.reproduction-online.org/
 
@@ -298,8 +323,14 @@
       au < doNotProcess ; 2017 ; Reproduction Volume 154 ; 154 >
       au < released ; 2018 ; Reproduction Volume 155 ; 155 >
       au < released ; 2018 ; Reproduction Volume 156 ; 156 >
-
-    }
+      au < released ; 2019 ; Reproduction Volume 157 ; 157 >
+      au < released ; 2019 ; Reproduction Volume 158 ; 158 >
+      au < released ; 2020 ; Reproduction Volume 159 ; 159 >
+      au < released ; 2020 ; Reproduction Volume 160 ; 160 >
+      au < released ; 2021 ; Reproduction Volume 161 ; 161 >
+      au < released ; 2021 ; Reproduction Volume 162 ; 162 >
+      au < manifest ; 2022 ; Reproduction Volume 163 ; 163 >
+      au < expected ; 2022 ; Reproduction Volume 164 ; 164 >
 
   }
 
@@ -312,8 +343,6 @@
 
     param[journal_id] = revreprod
 
-    {
-
       param[base_url] = https://rep.bioscientifica.com/
       ## http://ror.reproduction-online.org/
 
@@ -322,8 +351,7 @@
       au < doNotProcess ; 1998 ; Reviews of Reproduction Volume 3 ; 3 >
       au < doNotProcess ; 1999 ; Reviews of Reproduction Volume 4 ; 4 >
       au < doNotProcess ; 2000 ; Reviews of Reproduction Volume 5 ; 5 >
-      
-    }
+      #stopped publishing after 2000
     
   }
 

@@ -1,7 +1,7 @@
 {
   publisher <
     name = Manchester University Press ;
-    info[back] = 2000 ;
+    info[back] = 1980 ;
     info[contract] = 2012 ;
     info[tester] = 8 ;
     info[poller] = 8 ;
@@ -22,66 +22,66 @@
     #Manchester Hive
     param[base_url] = https://www.manchesterhive.com/
 
-    au < crawling ; exists ; 2016 ; 9780719098352 ;  ; 9780719098352 ; Interrogation, intelligence and security ; >
-    au < crawling ; exists ; 2015 ; 9780719099038 ;  ; 9780719099038 ; Conflict to peace ; >
-    au < crawling ; exists ; 2016 ; 9781526101204 ;  ; 9781526101204 ; Donors, technical assistance and public administration in Kosovo ; >
-    au < crawling ; exists ; 2015 ; 9781526102416 ;  ; 9781526102416 ; EU foreign and security policy in Bosnia ; >
-    au < crawling ; exists ; 2015 ; 9781526102492 ;  ; 9781526102492 ; Leaders in conflict ; >
-    au < crawling ; exists ; 2016 ; 9781526103833 ;  ; 9781526103833 ; The United States, the Soviet Union and the Arab-Israeli conflict, 1948–67 ; >
-    au < crawling ; exists ; 2016 ; 9781526108128 ;  ; 9781526108128 ; Death and security ; >
-    au < crawling ; exists ; 2016 ; 9781526108227 ;  ; 9781526108227 ; Medicine, health and Irish experiences of conflict, 1914–45 ; >
-    au < ready ; exists ; 2017 ; 9781526108326 ;  ; 9781526108326 ; Humanitarian aid, genocide and mass killings ; >
-    au < crawling ; exists ; 2016 ; 9781526108999 ;  ; 9781526108999 ; Everyday security threats ; >
-    au < crawling ; exists ; 2016 ; 9781526109453 ;  ; 9781526109453 ; Intelligence, security and the Attlee governments, 1945–51 ; >
-    au < crawling ; exists ; 2016 ; 9781526110657 ;  ; 9781526110657 ; Calculating compassion ; >
-    au < crawling ; exists ; 2016 ; 9781526112316 ;  ; 9781526112316 ; Transforming conflict through social and economic development ; >
-    au < ready ; exists ; 2018 ; 9781526114839 ;  ; 9781526114839 ; Death machines ; >
-    au < crawling ; exists ; 2017 ; 9781526116390 ;  ; 9781526116390 ; Conflict, peace and mental health ; >
-    au < crawling ; exists ; 2017 ; 9781526117229 ;  ; 9781526117229 ; The NGO CARE and food aid from America 1945-80 ; >
-    au < crawling ; exists ; 2018 ; 9781526117786 ;  ; 9781526117786 ; A theory of the super soldier ; >
-    au < crawling ; exists ; 2017 ; 9781526120434 ;  ; 9781526120434 ; Teens and territory in 'post-conflict' Belfast ; >
-    au < crawling ; exists ; 2016 ; 9781526123787 ;  ; 9781526123787 ; The military-humanitarian complex in Afghanistan ; >
-    au < ready ; exists ; 2018 ; 9781526129871 ;  ; 9781526129871 ; Political cartoons and the Israeli-Palestinian conflict ; >
-    au < crawling ; exists ; 2017 ; 9781526130235 ;  ; 9781526130235 ; Justifying violence ; >
-    au < crawling ; exists ; 2018 ; 9781526130860 ;  ; 9781526130860 ; The security dimensions of EU enlargement ; >
-    au < crawling ; exists ; 2018 ; 9781526130877 ;  ; 9781526130877 ; Critical security in the Asia-Pacific ; >
-    au < crawling ; exists ; 2018 ; 9781526130891 ;  ; 9781526130891 ; Security sector reform in transforming societies ; >
-    au < crawling ; exists ; 2018 ; 9781526130907 ;  ; 9781526130907 ; The contemporary law of armed conflict (3rd edn) ; >
-    au < crawling ; exists ; 2018 ; 9781526130914 ;  ; 9781526130914 ; Framing post-Cold War conflicts ; >
-    au < ready ; exists ; 2018 ; 9781526130921 ;  ; 9781526130921 ; Writing the war on terrorism ; >
-    au < crawling ; exists ; 2018 ; 9781526130938 ;  ; 9781526130938 ; European Internal Security ; >
-    au < crawling ; exists ; 2018 ; 9781526130945 ;  ; 9781526130945 ; EU security governance ; >
-    au < crawling ; exists ; 2018 ; 9781526130952 ;  ; 9781526130952 ; Everyday life after the Irish conflict ; >
-    au < crawling ; exists ; 2018 ; 9781526130969 ;  ; 9781526130969 ; Intelligence and national security policymaking on Iraq ; >
-    au < crawling ; exists ; 2018 ; 9781526130990 ;  ; 9781526130990 ; Culture and international conflict resolution ; >
-    au < crawling ; exists ; 2018 ; 9781526131010 ;  ; 9781526131010 ; The Northern Ireland experience of conflict and agreement ; >
-    au < manifest ; exists ; 2018 ; 9781526135063 ;  ; 9781526135063 ; Syria and the chemical weapons taboo ; >
-    au < crawling ; exists ; 2018 ; 9781526135070 ;  ; 9781526135070 ; Order and conflict ; >
-    au < ready ; exists ; 2015 ; 9781784991548 ;  ; 9781784991548 ; Anti-terrorism, citizenship and security ; >
-    au < crawling ; exists ; 2015 ; 9781784997168 ;  ; 9781784997168 ; Violence and the state ; >
-    au < crawling ; exists ; 2016 ; 9781784997373 ;  ; 9781784997373 ; Conspiracy theory and American foreign policy ; >
-    au < crawling ; exists ; 2016 ; 9781784997458 ;  ; 9781784997458 ; Islamic charities and Islamic humanism in troubled times ; >
-    au < crawling ; exists ; 2013 ; 9781847791993 ;  ; 9781847791993 ; The social construction of Swedish neutrality ; >
-    au < ready ; exists ; 2013 ; 9781847792006 ;  ; 9781847792006 ; Between growth and security ; >
-    au < crawling ; exists ; 2013 ; 9781847792259 ;  ; 9781847792259 ; Socio-ideological fantasy and the Northern Ireland conflict ; >
-    au < crawling ; exists ; 2013 ; 9781847792372 ;  ; 9781847792372 ; Security in a greater Europe ; >
-    au < crawling ; exists ; 2013 ; 9781847792396 ;  ; 9781847792396 ; Inclusion, exclusion and the governance of European security ; >
-    au < crawling ; exists ; 2013 ; 9781847792914 ;  ; 9781847792914 ; In/security in Colombia ; >
-    au < crawling ; exists ; 2013 ; 9781847793300 ;  ; 9781847793300 ; Re-evaluating Irish national security policy ; >
-    au < crawling ; exists ; 2013 ; 9781847793430 ;  ; 9781847793430 ; Abandoning historical conflict? ; >
-    au < crawling ; exists ; 2013 ; 9781847794093 ;  ; 9781847794093 ; The Europeanisation of Conflict Resolutions ; >
+    au < frozen ; exists ; 2016 ; 9780719098352 ;  ; 9780719098352 ; Interrogation, intelligence and security ; >
+    au < frozen ; exists ; 2015 ; 9780719099038 ;  ; 9780719099038 ; Conflict to peace ; >
+    au < frozen ; exists ; 2016 ; 9781526101204 ;  ; 9781526101204 ; Donors, technical assistance and public administration in Kosovo ; >
+    au < frozen ; exists ; 2015 ; 9781526102416 ;  ; 9781526102416 ; EU foreign and security policy in Bosnia ; >
+    au < frozen ; exists ; 2015 ; 9781526102492 ;  ; 9781526102492 ; Leaders in conflict ; >
+    au < frozen ; exists ; 2016 ; 9781526103833 ;  ; 9781526103833 ; The United States, the Soviet Union and the Arab-Israeli conflict, 1948–67 ; >
+    au < frozen ; exists ; 2016 ; 9781526108128 ;  ; 9781526108128 ; Death and security ; >
+    au < frozen ; exists ; 2016 ; 9781526108227 ;  ; 9781526108227 ; Medicine, health and Irish experiences of conflict, 1914–45 ; >
+    au < frozen ; exists ; 2017 ; 9781526108326 ;  ; 9781526108326 ; Humanitarian aid, genocide and mass killings ; >
+    au < frozen ; exists ; 2016 ; 9781526108999 ;  ; 9781526108999 ; Everyday security threats ; >
+    au < frozen ; exists ; 2016 ; 9781526109453 ;  ; 9781526109453 ; Intelligence, security and the Attlee governments, 1945–51 ; >
+    au < frozen ; exists ; 2016 ; 9781526110657 ;  ; 9781526110657 ; Calculating compassion ; >
+    au < frozen ; exists ; 2016 ; 9781526112316 ;  ; 9781526112316 ; Transforming conflict through social and economic development ; >
+    au < frozen ; exists ; 2018 ; 9781526114839 ;  ; 9781526114839 ; Death machines ; >
+    au < frozen ; exists ; 2017 ; 9781526116390 ;  ; 9781526116390 ; Conflict, peace and mental health ; >
+    au < frozen ; exists ; 2017 ; 9781526117229 ;  ; 9781526117229 ; The NGO CARE and food aid from America 1945-80 ; >
+    au < frozen ; exists ; 2018 ; 9781526117786 ;  ; 9781526117786 ; A theory of the super soldier ; >
+    au < frozen ; exists ; 2017 ; 9781526120434 ;  ; 9781526120434 ; Teens and territory in 'post-conflict' Belfast ; >
+    au < frozen ; exists ; 2016 ; 9781526123787 ;  ; 9781526123787 ; The military-humanitarian complex in Afghanistan ; >
+    au < frozen ; exists ; 2018 ; 9781526129871 ;  ; 9781526129871 ; Political cartoons and the Israeli-Palestinian conflict ; >
+    au < frozen ; exists ; 2017 ; 9781526130235 ;  ; 9781526130235 ; Justifying violence ; >
+    au < frozen ; exists ; 2018 ; 9781526130860 ;  ; 9781526130860 ; The security dimensions of EU enlargement ; >
+    au < frozen ; exists ; 2018 ; 9781526130877 ;  ; 9781526130877 ; Critical security in the Asia-Pacific ; >
+    au < frozen ; exists ; 2018 ; 9781526130891 ;  ; 9781526130891 ; Security sector reform in transforming societies ; >
+    au < frozen ; exists ; 2018 ; 9781526130907 ;  ; 9781526130907 ; The contemporary law of armed conflict (3rd edn) ; >
+    au < frozen ; exists ; 2018 ; 9781526130914 ;  ; 9781526130914 ; Framing post-Cold War conflicts ; >
+    au < frozen ; exists ; 2018 ; 9781526130921 ;  ; 9781526130921 ; Writing the war on terrorism ; >
+    au < frozen ; exists ; 2018 ; 9781526130938 ;  ; 9781526130938 ; European Internal Security ; >
+    au < frozen ; exists ; 2018 ; 9781526130945 ;  ; 9781526130945 ; EU security governance ; >
+    au < frozen ; exists ; 2018 ; 9781526130952 ;  ; 9781526130952 ; Everyday life after the Irish conflict ; >
+    au < frozen ; exists ; 2018 ; 9781526130969 ;  ; 9781526130969 ; Intelligence and national security policymaking on Iraq ; >
+    au < frozen ; exists ; 2018 ; 9781526130990 ;  ; 9781526130990 ; Culture and international conflict resolution ; >
+    au < frozen ; exists ; 2018 ; 9781526131010 ;  ; 9781526131010 ; The Northern Ireland experience of conflict and agreement ; >
+    au < notReady ; exists ; 2018 ; 9781526135063 ;  ; 9781526135063 ; Syria and the chemical weapons taboo ; > #no substance
+    au < frozen ; exists ; 2018 ; 9781526135070 ;  ; 9781526135070 ; Order and conflict ; >
+    au < frozen ; exists ; 2015 ; 9781784991548 ;  ; 9781784991548 ; Anti-terrorism, citizenship and security ; >
+    au < frozen ; exists ; 2015 ; 9781784997168 ;  ; 9781784997168 ; Violence and the state ; >
+    au < frozen ; exists ; 2016 ; 9781784997373 ;  ; 9781784997373 ; Conspiracy theory and American foreign policy ; >
+    au < frozen ; exists ; 2016 ; 9781784997458 ;  ; 9781784997458 ; Islamic charities and Islamic humanism in troubled times ; >
+    au < frozen ; exists ; 2013 ; 9781847791993 ;  ; 9781847791993 ; The social construction of Swedish neutrality ; >
+    au < frozen ; exists ; 2013 ; 9781847792006 ;  ; 9781847792006 ; Between growth and security ; >
+    au < frozen ; exists ; 2013 ; 9781847792259 ;  ; 9781847792259 ; Socio-ideological fantasy and the Northern Ireland conflict ; >
+    au < frozen ; exists ; 2013 ; 9781847792372 ;  ; 9781847792372 ; Security in a greater Europe ; >
+    au < frozen ; exists ; 2013 ; 9781847792396 ;  ; 9781847792396 ; Inclusion, exclusion and the governance of European security ; >
+    au < frozen ; exists ; 2013 ; 9781847792914 ;  ; 9781847792914 ; In/security in Colombia ; >
+    au < frozen ; exists ; 2013 ; 9781847793300 ;  ; 9781847793300 ; Re-evaluating Irish national security policy ; >
+    au < frozen ; exists ; 2013 ; 9781847793430 ;  ; 9781847793430 ; Abandoning historical conflict? ; >
+    au < frozen ; exists ; 2013 ; 9781847794093 ;  ; 9781847794093 ; The Europeanisation of Conflict Resolutions ; >
   }
   
   {
     #Manchester Open Hive
     param[base_url] = https://www.manchesteropenhive.com/
 
-    au < crawling ; exists ; 2018 ; 9781526108364 ;  ; 9781526108364 ; Security/Mobility ; >
-    au < crawling ; exists ; 2017 ; 9781526125125 ;  ; 9781526125125 ; Humanitarian intervention in the long nineteenth century ; >
-    au < crawling ; exists ; 2013 ; 9781526137517 ;  ; 9781526137517 ; Mapping European security after Kosovo ; >
-    au < crawling ; exists ; 2013 ; 9781526137623 ;  ; 9781526137623 ; Redefining security in the Middle East ; >
-    au < ready ; exists ; 2013 ; 9781526137784 ;  ; 9781526137784 ; The Kosovo crisis and the evolution of a post-Cold War European security ; >
-    au < crawling ; exists ; 2013 ; 9781526137906 ;  ; 9781526137906 ; The United Nations, intra-state peacekeeping and normative change ; >
+    au < frozen ; exists ; 2018 ; 9781526108364 ;  ; 9781526108364 ; Security/Mobility ; >
+    au < frozen ; exists ; 2017 ; 9781526125125 ;  ; 9781526125125 ; Humanitarian intervention in the long nineteenth century ; >
+    au < frozen ; exists ; 2013 ; 9781526137517 ;  ; 9781526137517 ; Mapping European security after Kosovo ; >
+    au < frozen ; exists ; 2013 ; 9781526137623 ;  ; 9781526137623 ; Redefining security in the Middle East ; >
+    au < frozen ; exists ; 2013 ; 9781526137784 ;  ; 9781526137784 ; The Kosovo crisis and the evolution of a post-Cold War European security ; >
+    au < frozen ; exists ; 2013 ; 9781526137906 ;  ; 9781526137906 ; The United Nations, intra-state peacekeeping and normative change ; >
   }
  }
  {
@@ -96,50 +96,50 @@
     #Manchester Hive
     param[base_url] = https://www.manchesterhive.com/
 
-    au < ready ; exists ; 2015 ; 9780719098796 ;  ; 9780719098796 ; Between two stools ; >
-    au < ready ; exists ; 2015 ; 9780719098956 ;  ; 9780719098956 ; The Renaissance of emotion ; >
-    au < ready ; exists ; 2015 ; 9781526101860 ;  ; 9781526101860 ; John Lyly and early modern authorship ; >
-    au < crawling ; exists ; 2015 ; 9781526101914 ;  ; 9781526101914 ; Titus Andronicus ; >
-    au < crawling ; exists ; 2015 ; 9781526101952 ;  ; 9781526101952 ; Coriolanus ; >
-    au < crawling ; exists ; 2015 ; 9781526102478 ;  ; 9781526102478 ; Julius Caesar ; >
-    au < crawling ; exists ; 2015 ; 9781526102997 ;  ; 9781526102997 ; Cultural value in twenty-first-century England ; >
-    au < crawling ; exists ; 2016 ; 9781526106506 ;  ; 9781526106506 ; Finding Shakespeare's New Place ; >
-    au < ready ; exists ; 2017 ; 9781526107046 ;  ; 9781526107046 ; Conversions ; >
-    au < crawling ; exists ; 2016 ; 9781526107824 ;  ; 9781526107824 ; Shakespeare's cinema of love ; >
-    au < crawling ; exists ; 2017 ; 9781526107893 ;  ; 9781526107893 ; Tasso's art and afterlives ; >
-    au < crawling ; exists ; 2018 ; 9781526108944 ;  ; 9781526108944 ; Doing Kyd ; >
-    au < crawling ; exists ; 2017 ; 9781526109194 ;  ; 9781526109194 ; Renaissance psychologies ; >
-    au < crawling ; exists ; 2016 ; 9781526110633 ;  ; 9781526110633 ; Biblical women in early modern literary culture, 1550–1700 ; >
-    au < crawling ; exists ; 2016 ; 9781526110992 ;  ; 9781526110992 ; Essex ; >
-    au < crawling ; exists ; 2016 ; 9781526111036 ;  ; 9781526111036 ; Formal matters ; >
-    au < crawling ; exists ; 2016 ; 9781526111050 ;  ; 9781526111050 ; Free Will ; >
-    au < crawling ; exists ; 2016 ; 9781526111852 ;  ; 9781526111852 ; Shakespeare's storms ; >
-    au < manifest ; exists ; 2017 ; 9781526113283 ;  ; 9781526113283 ; Reading Shakespeare's mind ; >
-    au < crawling ; exists ; 2017 ; 9781526115720 ;  ; 9781526115720 ; As You Like It ; >
-    au < crawling ; exists ; 2017 ; 9781526117694 ;  ; 9781526117694 ; Interweaving myths in Shakespeare and his contemporaries ; >
-    au < crawling ; exists ; 2017 ; 9781526130532 ;  ; 9781526130532 ; Spectacular Performances ; >
-    au < crawling ; exists ; 2018 ; 9781526135087 ;  ; 9781526135087 ; Shakespeare’s histories and counter-histories ; >
-    au < crawling ; exists ; 2018 ; 9781526135094 ;  ; 9781526135094 ; French Reflections in the Shakespearean Tragic ; >
-    au < crawling ; exists ; 2018 ; 9781526135100 ;  ; 9781526135100 ; Shakespeare and Scotland ; >
-    au < crawling ; exists ; 2018 ; 9781526135117 ;  ; 9781526135117 ; European Erotic Romance ; >
-    au < crawling ; exists ; 2018 ; 9781526135124 ;  ; 9781526135124 ; Shakespeare for the wiser sort ; >
-    au < crawling ; exists ; 2018 ; 9781526135131 ;  ; 9781526135131 ; Literature and psychoanalysis ; >
-    au < crawling ; exists ; 2018 ; 9781526135148 ;  ; 9781526135148 ; Shakespeare's London 1613 ; >
-    au < crawling ; exists ; 2016 ; 9781784996796 ;  ; 9781784996796 ; Love, history and emotion in Chaucer and Shakespeare ; >
-    au < crawling ; exists ; 2013 ; 9781847791696 ;  ; 9781847791696 ; Shakespeare and laughter ; >
-    au < crawling ; exists ; 2013 ; 9781847791764 ;  ; 9781847791764 ; Shakespeare and Spenser ; >
-    au < crawling ; exists ; 2013 ; 9781847791917 ;  ; 9781847791917 ; Robert Southwell ; >
-    au < crawling ; exists ; 2013 ; 9781847792891 ;  ; 9781847792891 ; Mothers and meaning on the early modern English stage ; >
-    au < ready ; exists ; 2013 ; 9781847793096 ;  ; 9781847793096 ; French origins of English tragedy ; >
-    au < crawling ; exists ; 2013 ; 9781847793515 ;  ; 9781847793515 ; On Anachronism ; >
-    au < crawling ; exists ; 2013 ; 9781847794390 ;  ; 9781847794390 ; ‘Who the Devil taught thee so much Italian?’ ; >
+    au < frozen ; exists ; 2015 ; 9780719098796 ;  ; 9780719098796 ; Between two stools ; >
+    au < frozen ; exists ; 2015 ; 9780719098956 ;  ; 9780719098956 ; The Renaissance of emotion ; >
+    au < frozen ; exists ; 2015 ; 9781526101860 ;  ; 9781526101860 ; John Lyly and early modern authorship ; >
+    au < frozen ; exists ; 2015 ; 9781526101914 ;  ; 9781526101914 ; Titus Andronicus ; >
+    au < frozen ; exists ; 2015 ; 9781526101952 ;  ; 9781526101952 ; Coriolanus ; >
+    au < frozen ; exists ; 2015 ; 9781526102478 ;  ; 9781526102478 ; Julius Caesar ; >
+    au < frozen ; exists ; 2015 ; 9781526102997 ;  ; 9781526102997 ; Cultural value in twenty-first-century England ; >
+    au < frozen ; exists ; 2016 ; 9781526106506 ;  ; 9781526106506 ; Finding Shakespeare's New Place ; >
+    au < frozen ; exists ; 2017 ; 9781526107046 ;  ; 9781526107046 ; Conversions ; >
+    au < frozen ; exists ; 2016 ; 9781526107824 ;  ; 9781526107824 ; Shakespeare's cinema of love ; >
+    au < frozen ; exists ; 2017 ; 9781526107893 ;  ; 9781526107893 ; Tasso's art and afterlives ; >
+    au < frozen ; exists ; 2018 ; 9781526108944 ;  ; 9781526108944 ; Doing Kyd ; >
+    au < frozen ; exists ; 2017 ; 9781526109194 ;  ; 9781526109194 ; Renaissance psychologies ; >
+    au < frozen ; exists ; 2016 ; 9781526110633 ;  ; 9781526110633 ; Biblical women in early modern literary culture, 1550–1700 ; >
+    au < frozen ; exists ; 2016 ; 9781526110992 ;  ; 9781526110992 ; Essex ; >
+    au < frozen ; exists ; 2016 ; 9781526111036 ;  ; 9781526111036 ; Formal matters ; >
+    au < frozen ; exists ; 2016 ; 9781526111050 ;  ; 9781526111050 ; Free Will ; >
+    au < frozen ; exists ; 2016 ; 9781526111852 ;  ; 9781526111852 ; Shakespeare's storms ; >
+    au < notReady ; exists ; 2017 ; 9781526113283 ;  ; 9781526113283 ; Reading Shakespeare's mind ; > #Not able to access permission page
+    au < frozen ; exists ; 2017 ; 9781526115720 ;  ; 9781526115720 ; As You Like It ; >
+    au < frozen ; exists ; 2017 ; 9781526117694 ;  ; 9781526117694 ; Interweaving myths in Shakespeare and his contemporaries ; >
+    au < frozen ; exists ; 2017 ; 9781526130532 ;  ; 9781526130532 ; Spectacular Performances ; >
+    au < frozen ; exists ; 2018 ; 9781526135087 ;  ; 9781526135087 ; Shakespeare’s histories and counter-histories ; >
+    au < frozen ; exists ; 2018 ; 9781526135094 ;  ; 9781526135094 ; French Reflections in the Shakespearean Tragic ; >
+    au < frozen ; exists ; 2018 ; 9781526135100 ;  ; 9781526135100 ; Shakespeare and Scotland ; >
+    au < frozen ; exists ; 2018 ; 9781526135117 ;  ; 9781526135117 ; European Erotic Romance ; >
+    au < frozen ; exists ; 2018 ; 9781526135124 ;  ; 9781526135124 ; Shakespeare for the wiser sort ; >
+    au < frozen ; exists ; 2018 ; 9781526135131 ;  ; 9781526135131 ; Literature and psychoanalysis ; >
+    au < frozen ; exists ; 2018 ; 9781526135148 ;  ; 9781526135148 ; Shakespeare's London 1613 ; >
+    au < frozen ; exists ; 2016 ; 9781784996796 ;  ; 9781784996796 ; Love, history and emotion in Chaucer and Shakespeare ; >
+    au < frozen ; exists ; 2013 ; 9781847791696 ;  ; 9781847791696 ; Shakespeare and laughter ; >
+    au < frozen ; exists ; 2013 ; 9781847791764 ;  ; 9781847791764 ; Shakespeare and Spenser ; >
+    au < frozen ; exists ; 2013 ; 9781847791917 ;  ; 9781847791917 ; Robert Southwell ; >
+    au < frozen ; exists ; 2013 ; 9781847792891 ;  ; 9781847792891 ; Mothers and meaning on the early modern English stage ; >
+    au < frozen ; exists ; 2013 ; 9781847793096 ;  ; 9781847793096 ; French origins of English tragedy ; >
+    au < frozen ; exists ; 2013 ; 9781847793515 ;  ; 9781847793515 ; On Anachronism ; >
+    au < frozen ; exists ; 2013 ; 9781847794390 ;  ; 9781847794390 ; ‘Who the Devil taught thee so much Italian?’ ; >
   }
 
   {
     #Manchester Open Hive
     param[base_url] = https://www.manchesteropenhive.com/
 
-    au < crawling ; exists ; 2015 ; 9781847798916 ;  ; 9781847798916 ; Making and unmaking in early modern English drama ; >
+    au < frozen ; exists ; 2015 ; 9781847798916 ;  ; 9781847798916 ; Making and unmaking in early modern English drama ; >
   }
  }
 
@@ -157,13 +157,13 @@
    param[base_url] = https://www.manchesterhive.com/
    #Website says collection is 41 texts. We have 34 on previous platform. These are the remaining 7
 
-   au < manifest ; exists ; 2018 ; 9781526119162 ;  ; 9781526119162 ; Noble Society: Five lives from twelfth-century Germany  ; >
-   au < manifest ; exists ; 2018 ; 9781526135193 ;  ; 9781526135193 ; Towns in Medieval England: Selected Sources ; >
-   au < manifest ; exists ; 2019 ; 9781526127228 ;  ; 9781526127228 ; Hermits and Anchorites in England: 1200-1550 ; >
-   au < manifest ; exists ; 2019 ; 9781526121837 ;  ; 9781526121837 ; John Wyclif: Selected Latin Works in Translation ; >
-   au < manifest ; exists ; 2019 ; 9781526142900 ;  ; 9781526142900 ; Jacopo Da Varagine's: Chronicle of the City of Genoa ; >
-   au < manifest ; exists ; 2020 ; 9781526126795 ;  ; 9781526126795 ; Monastic Experience in Twelfth-Century Germany: The Chronicle of Petershausen ; >
-   au < manifest ; exists ; 2020 ; 9781526134837 ;  ; 9781526134837 ; Confronting Crisis in the Carolingian Empire: Paschasius Radbertus' Funeral Oration for Wala of Corbie ; >
+   au < frozen ; exists ; 2018 ; 9781526119162 ;  ; 9781526119162 ; Noble Society: Five lives from twelfth-century Germany  ; >
+   au < frozen ; exists ; 2018 ; 9781526135193 ;  ; 9781526135193 ; Towns in Medieval England: Selected Sources ; >
+   au < frozen ; exists ; 2019 ; 9781526127228 ;  ; 9781526127228 ; Hermits and Anchorites in England: 1200-1550 ; >
+   au < frozen ; exists ; 2019 ; 9781526121837 ;  ; 9781526121837 ; John Wyclif: Selected Latin Works in Translation ; >
+   au < frozen ; exists ; 2019 ; 9781526142900 ;  ; 9781526142900 ; Jacopo Da Varagine's: Chronicle of the City of Genoa ; >
+   au < frozen ; exists ; 2020 ; 9781526126795 ;  ; 9781526126795 ; Monastic Experience in Twelfth-Century Germany: The Chronicle of Petershausen ; >
+   au < frozen ; exists ; 2020 ; 9781526134837 ;  ; 9781526134837 ; Confronting Crisis in the Carolingian Empire: Paschasius Radbertus' Funeral Oration for Wala of Corbie ; >
 
   }
 
@@ -212,4 +212,220 @@
 
  }
 
+ {
+  title <
+   name = Manchester University Press Books ;
+   type = bookSeries
+  >
+  plugin = org.lockss.plugin.pubfactory.manchesteruniversitypress.ClockssManchesterUniversityPressBooksPlugin
+  implicit < status ; status2 ; year ; isbn ; eisbn ; param[book_isbn] ; name ; hidden[proxy] >
+
+  {
+    #Manchester Hive
+    param[base_url] = https://www.manchesterhive.com/
+
+    au < crawling ; exists ; 1984 ; ; 9781526119544 ; 9781526119544 ; Propaganda and Empire (9781526119544) ; >
+    au < crawling ; exists ; 1986 ; ; 9781526119568 ; 9781526119568 ; Imperialism and Popular Culture (9781526119568) ; >
+    au < crawling ; exists ; 1988 ; ; 9781526119506 ; 9781526119506 ; At Duty's Call (9781526119506) ; >
+    au < crawling ; exists ; 1988 ; ; 9781526123657 ; 9781526123657 ; Ephemeral vistas (9781526123657) ; >
+    au < crawling ; exists ; 1988 ; ; 9781526123596 ; 9781526123596 ; Images of the army (9781526123596) ; >
+    au < crawling ; exists ; 1988 ; ; 9781526123664 ; 9781526123664 ; Imperial medicine and indigenous societies (9781526123664) ; >
+    au < crawling ; exists ; 1988 ; ; 9781526119582 ; 9781526119582 ; The empire of nature (9781526119582) ; >
+    au < crawling ; exists ; 1989 ; ; 9781526123558 ; 9781526123558 ; Imperialism and juvenile literature (9781526123558) ; >
+    au < crawling ; exists ; 1990 ; ; 9781526123589 ; 9781526123589 ; Air power and colonial control (9781526123589) ; >
+    au < crawling ; exists ; 1990 ; ; 9781526123534 ; 9781526123534 ; Asia in Western fiction (9781526123534) ; >
+    au < crawling ; exists ; 1990 ; ; 9781526123541 ; 9781526123541 ; Emigrants and empire (9781526123541) ; >
+    au < crawling ; exists ; 1990 ; ; 9781526119520 ; 9781526119520 ; Empire and sexuality (9781526119520) ; >
+    au < crawling ; exists ; 1990 ; ; 9781526123671 ; 9781526123671 ; Imperialism and the natural world (9781526123671) ; >
+    au < crawling ; exists ; 1991 ; ; 9781526123619 ; 9781526123619 ; Acts of supremacy (9781526123619) ; >
+    au < crawling ; exists ; 1992 ; ; 9781526125637 ; 9781526125637 ; Over her dead body (9781526125637) ; >
+    au < crawling ; exists ; 1992 ; ; 9781526123688 ; 9781526123688 ; Policing and decolonisation (9781526123688) ; >
+    au < crawling ; exists ; 1992 ; ; 9781526123695 ; 9781526123695 ; Policing the empire (9781526123695) ; >
+    au < crawling ; exists ; 1992 ; ; 9781526123602 ; 9781526123602 ; Popular imperialism and the military, 1850-1950 (9781526123602) ; >
+    au < crawling ; exists ; 1993 ; ; 9781526125538 ; 9781526125538 ; Dissolute Characters (9781526125538) ; >
+    au < crawling ; exists ; 1993 ; ; 9781526125712 ; 9781526125712 ; Gothic writing 1750–1820 (9781526125712) ; >
+    au < crawling ; exists ; 1993 ; ; 9781526123701 ; 9781526123701 ; Revolution and empire (9781526123701) ; >
+    au < crawling ; exists ; 1994 ; ; 9781526123718 ; 9781526123718 ; The language of empire (9781526123718) ; >
+    au < crawling ; exists ; 1994 ; ; 9781526123725 ; 9781526123725 ; Travellers in Africa (9781526123725) ; >
+    au < crawling ; exists ; 1995 ; ; 9781526123640 ; 9781526123640 ; Colonial masculinity (9781526123640) ; >
+    au < crawling ; exists ; 1995 ; ; 9781526123565 ; 9781526123565 ; Unfit for heroes (9781526123565) ; >
+    au < crawling ; exists ; 1996 ; ; 9781526123626 ; 9781526123626 ; An Irish empire? (9781526123626) ; >
+    au < crawling ; exists ; 1996 ; ; 9781526123633 ; 9781526123633 ; Britannia's children (9781526123633) ; >
+    au < crawling ; exists ; 1997 ; ; 9781526123572 ; 9781526123572 ; Western medicine as contested knowledge (9781526123572) ; >
+    au < crawling ; exists ; 1998 ; ; 9781526119667 ; 9781526119667 ; Emigration from Scotland between the wars (9781526119667) ; >
+    au < crawling ; exists ; 1998 ; ; 9781526119681 ; 9781526119681 ; Gender and imperialism (9781526119681) ; >
+    au < crawling ; exists ; 1998 ; ; 9781526121486 ; 9781526121486 ; Jute and empire (9781526121486) ; >
+    au < crawling ; exists ; 1998 ; ; 9781526123824 ; 9781526123824 ; The imperial game (9781526123824) ; >
+    au < crawling ; exists ; 1999 ; ; 9781526119605 ; 9781526119605 ; Britain in China (9781526119605) ; >
+    au < crawling ; exists ; 1999 ; ; 9781526125378 ; 9781526125378 ; Gothic forms of feminine fictions (9781526125378) ; >
+    au < crawling ; exists ; 1999 ; ; 9781526121462 ; 9781526121462 ; Guardians of Empire (9781526121462) ; >
+    au < crawling ; exists ; 1999 ; ; 9781526117960 ; 9781526117960 ; Imperial cities (9781526117960) ; >
+    au < crawling ; exists ; 2000 ; ; 9781526125736 ; 9781526125736 ; Contemporary Australian cinema (9781526125736) ; >
+    au < crawling ; exists ; 2000 ; ; 9781526125675 ; 9781526125675 ; Gothic Documents (9781526125675) ; >
+    au < crawling ; exists ; 2000 ; ; 9781526119742 ; 9781526119742 ; New frontiers (9781526119742) ; >
+    au < crawling ; exists ; 2000 ; ; 9781526119780 ; 9781526119780 ; Science and society in southern Africa (9781526119780) ; >
+    au < crawling ; exists ; 2000 ; ; 9781526121509 ; 9781526121509 ; The Arctic in the British imagination 1818–1914 (9781526121509) ; >
+    au < crawling ; exists ; 2000 ; ; 9781526121523 ; 9781526121523 ; The South African War reappraised (9781526121523) ; >
+    au < crawling ; exists ; 2001 ; ; 9781526119629 ; 9781526119629 ; British culture and the end of empire (9781526119629) ; >
+    au < crawling ; exists ; 2001 ; ; 9781526123800 ; 9781526123800 ; Colonial frontiers (9781526123800) ; >
+    au < crawling ; exists ; 2001 ; ; 9781526121370 ; 9781526121370 ; Imperialism and music (9781526121370) ; >
+    au < crawling ; exists ; 2001 ; ; 9781526119704 ; 9781526119704 ; Law, history, colonialism (9781526119704) ; >
+    au < crawling ; exists ; 2001 ; ; 9781526125477 ; 9781526125477 ; Terence Fisher (9781526125477) ; >
+    au < crawling ; exists ; 2002 ; ; 9781526125699 ; 9781526125699 ; European Gothic (9781526125699) ; >
+    au < crawling ; exists ; 2002 ; ; 9781526119728 ; 9781526119728 ; Married to the empire (9781526119728) ; >
+    au < crawling ; exists ; 2003 ; ; 9781526118578 ; 9781526118578 ; Imperial persuaders (9781526118578) ; >
+    au < crawling ; exists ; 2003 ; ; 9781526119766 ; 9781526119766 ; Reporting the Raj (9781526119766) ; >
+    au < crawling ; exists ; 2004 ; ; 9781526117519 ; 9781526117519 ; Cultural identities and the aesthetics of Britishness (9781526117519) ; >
+    au < crawling ; exists ; 2004 ; ; 9781526125590 ; 9781526125590 ; Fashioning Gothic bodies (9781526125590) ; >
+    au < crawling ; exists ; 2004 ; ; 9781847793942 ; 9781847793942 ; Martial races (9781847793942) ; >
+    au < crawling ; exists ; 2004 ; ; 9781526118653 ; 9781526118653 ; Migrant races (9781526118653) ; >
+    au < crawling ; exists ; 2004 ; ; 9781526125651 ; 9781526125651 ; Stained glass and the Victorian Gothic revival (9781526125651) ; >
+    au < crawling ; exists ; 2004 ; ; 9781526125576 ; 9781526125576 ; Victorian demons (9781526125576) ; >
+    au < crawling ; exists ; 2005 ; ; 9781847794406 ; 9781847794406 ; Colonial connections, 1815–45 (9781847794406) ; >
+    au < crawling ; exists ; 2005 ; ; 9781526119643 ; 9781526119643 ; Emigrant homecomings (9781526119643) ; >
+    au < crawling ; exists ; 2005 ; ; 9781526125392 ; 9781526125392 ; Popular television drama (9781526125392) ; >
+    au < crawling ; exists ; 2005 ; ; 9781847793034 ; 9781847793034 ; Scotland, the Caribbean and the Atlantic world, 1750–1820 (9781847793034) ; >
+    au < crawling ; exists ; 2005 ; ; 9781526118110 ; 9781526118110 ; Silk and empire (9781526118110) ; >
+    au < crawling ; exists ; 2005 ; ; 9781526118691 ; 9781526118691 ; The French empire between the wars (9781526118691) ; >
+    au < crawling ; exists ; 2006 ; ; 9781847791450 ; 9781847791450 ; Flagships of imperialism (9781847791450) ; >
+    au < crawling ; exists ; 2006 ; ; 9781526125613 ; 9781526125613 ; Gothic television (9781526125613) ; >
+    au < crawling ; exists ; 2006 ; ; 9781847791429 ; 9781847791429 ; Imperial citizenship (9781847791429) ; >
+    au < crawling ; exists ; 2006 ; ; 9781526121547 ; 9781526121547 ; Rethinking settler colonialism (9781526121547) ; >
+    au < crawling ; exists ; 2006 ; ; 9781526118455 ; 9781526118455 ; Sex, politics and empire (9781526118455) ; >
+    au < crawling ; exists ; 2006 ; ; 9781526118639 ; 9781526118639 ; The harem, slavery and British imperial culture (9781526118639) ; >
+    au < crawling ; exists ; 2007 ; ; 9781526118097 ; 9781526118097 ; Engendering whiteness (9781526118097) ; >
+    au < crawling ; exists ; 2007 ; ; 9781526118592 ; 9781526118592 ; Gender, crime and empire (9781526118592) ; >
+    au < crawling ; exists ; 2007 ; ; 9781526125439 ; 9781526125439 ; Monstrous adaptations (9781526125439) ; >
+    au < crawling ; exists ; 2007 ; ; 9781526118714 ; 9781526118714 ; Ordering Africa (9781526118714) ; >
+    au < crawling ; exists ; 2007 ; ; 9781847791351 ; 9781847791351 ; Race and empire (9781847791351) ; >
+    au < crawling ; exists ; 2007 ; ; 9781526121431 ; 9781526121431 ; The French empire at War, 1940–1945 (9781526121431) ; >
+    au < crawling ; exists ; 2007 ; ; 9781847794468 ; 9781847794468 ; The Scots in South Africa (9781847794468) ; >
+    au < crawling ; exists ; 2008 ; ; 9781526118431 ; 9781526118431 ; Ireland, India and empire (9781526118431) ; >
+    au < crawling ; exists ; 2008 ; ; 9781847794505 ; 9781847794505 ; Limits of horror (9781847794505) ; >
+    au < crawling ; exists ; 2008 ; ; 9781526119179 ; 9781526119179 ; Missionaries and their medicine (9781526119179) ; >
+    au < crawling ; exists ; 2008 ; ; 9781526118035 ; 9781526118035 ; The empire in one city? (9781526118035) ; >
+    au < crawling ; exists ; 2009 ; ; 9781526118493 ; 9781526118493 ; Air empire (9781526118493) ; >
+    au < crawling ; exists ; 2009 ; ; 9781526117632 ; 9781526117632 ; Borders and conflict in South Asia (9781526117632) ; >
+    au < crawling ; exists ; 2009 ; ; 9781526118738 ; 9781526118738 ; British imperialism in Cyprus, 1878–1915 (9781526118738) ; >
+    au < crawling ; exists ; 2009 ; ; 9781526118615 ; 9781526118615 ; Chocolate, women and empire (9781526118615) ; >
+    au < crawling ; exists ; 2009 ; ; 9781526118516 ; 9781526118516 ; Ending British rule in Africa (9781526118516) ; >
+    au < crawling ; exists ; 2009 ; ; 9781526117656 ; 9781526117656 ; From Jack Tar to Union Jack (9781526117656) ; >
+    au < crawling ; exists ; 2009 ; ; 9781526118325 ; 9781526118325 ; Museums and empire (9781526118325) ; >
+    au < crawling ; exists ; 2009 ; ; 9781526125453 ; 9781526125453 ; Queering the Gothic (9781526125453) ; >
+    au < crawling ; exists ; 2009 ; ; 9781526125514 ; 9781526125514 ; Terry Gilliam (9781526125514) ; >
+    au < crawling ; exists ; 2010 ; ; 9781847793911 ; 9781847793911 ; At the end of the line (9781847793911) ; >
+    au < frozen ; exists ; 2010 ; ; 9781526118059 ; 9781526118059 ; Child, nation, race and empire (9781526118059) ; >
+    au < frozen ; exists ; 2010 ; ; 9781847792785 ; 9781847792785 ; Empire and nation-building in the Caribbean (9781847792785) ; >
+    au < frozen ; exists ; 2010 ; ; 9781526117618 ; 9781526117618 ; Materials and medicine (9781526117618) ; >
+    au < crawling ; exists ; 2010 ; ; 9781526118370 ; 9781526118370 ; Representing Africa (9781526118370) ; >
+    au < crawling ; exists ; 2010 ; ; 9781847793454 ; 9781847793454 ; The ghost story 1840 –1920 (9781847793454) ; >
+    au < frozen ; exists ; 2011 ; ; 9781526125552 ; 9781526125552 ; Charles Robert Maturin and the haunting of Irish romantic Fiction (9781526125552) ; >
+    au < frozen ; exists ; 2011 ; ; 9781526118264 ; 9781526118264 ; Conflict, Politics and Proselytism (9781526118264) ; >
+    au < frozen ; exists ; 2011 ; ; 9781526117670 ; 9781526117670 ; Conquering nature in Spain and its empire, 1750–1850 (9781526117670) ; >
+    au < frozen ; exists ; 2011 ; ; 9781526118301 ; 9781526118301 ; European Empires and the People (9781526118301) ; >
+    au < frozen ; exists ; 2011 ; ; 9781847794512 ; 9781847794512 ; Imperial spaces (9781847794512) ; >
+    au < frozen ; exists ; 2011 ; ; 9781526118134 ; 9781526118134 ; Labour and the politics of Empire (9781526118134) ; >
+    au < frozen ; exists ; 2011 ; ; 9781526119193 ; 9781526119193 ; Oceania under steam (9781526119193) ; >
+    au < frozen ; exists ; 2011 ; ; 9781526118776 ; 9781526118776 ; Scottishness and Irishness in New Zealand since 1840 (9781526118776) ; >
+    au < frozen ; exists ; 2011 ; ; 9781526118417 ; 9781526118417 ; Servants of the empire (9781526118417) ; >
+    au < frozen ; exists ; 2011 ; ; 9781526117571 ; 9781526117571 ; Wales and the British overseas empire (9781526117571) ; >
+    au < frozen ; exists ; 2012 ; ; 9781526125415 ; 9781526125415 ; A familiar compound ghost (9781526125415) ; >
+    au < frozen ; exists ; 2012 ; ; 9781526118479 ; 9781526118479 ; Cultures and caricatures of British imperial aviation (9781526118479) ; >
+    au < frozen ; exists ; 2012 ; ; 9781526118240 ; 9781526118240 ; Genteel women (9781526118240) ; >
+    au < frozen ; exists ; 2012 ; ; 9781526121417 ; 9781526121417 ; The better class' of Indians (9781526121417) ; >
+    au < frozen ; exists ; 2012 ; ; 9781526118394 ; 9781526118394 ; The colonisation of time (9781526118394) ; >
+    au < frozen ; exists ; 2012 ; ; 9781526117557 ; 9781526117557 ; Visions of empire (9781526117557) ; >
+    au < frozen ; exists ; 2012 ; ; 9781526118752 ; 9781526118752 ; Welsh missionaries and British imperialism (9781526118752) ; >
+    au < frozen ; exists ; 2013 ; ; 9781526101839 ; 9781526101839 ; Alan Moore and the Gothic tradition (9781526101839) ; >
+    au < frozen ; exists ; 2013 ; ; 9781526103444 ; 9781526103444 ; Decadent daughters and monstrous mothers (9781526103444) ; >
+    au < frozen ; exists ; 2013 ; ; 9781526102911 ; 9781526102911 ; EcoGothic (9781526102911) ; >
+    au < frozen ; exists ; 2013 ; ; 9781526118226 ; 9781526118226 ; Empire careers (9781526118226) ; >
+    au < frozen ; exists ; 2013 ; ; 9781526103215 ; 9781526103215 ; Empire, migration and identity in the British World (9781526103215) ; >
+    au < frozen ; exists ; 2013 ; ; 9781526118554 ; 9781526118554 ; Exporting empire (9781526118554) ; >
+    au < frozen ; exists ; 2013 ; ; 9781526102973 ; 9781526102973 ; Globalgothic (9781526102973) ; >
+    au < frozen ; exists ; 2013 ; ; 9781526103031 ; 9781526103031 ; Gothic kinship (9781526103031) ; >
+    au < frozen ; exists ; 2013 ; ; 9781526103505 ; 9781526103505 ; Heroic imperialists in Africa (9781526103505) ; >
+    au < frozen ; exists ; 2013 ; ; 9781526118073 ; 9781526118073 ; Madness and marginality (9781526118073) ; >
+    au < frozen ; exists ; 2013 ; ; 9781526111531 ; 9781526111531 ; Missionary families (9781526111531) ; >
+    au < frozen ; exists ; 2013 ; ; 9781526102157 ; 9781526102157 ; Open graves, open minds (9781526102157) ; >
+    au < frozen ; exists ; 2013 ; ; 9781526102669 ; 9781526102669 ; Science, race relations and resistance (9781526102669) ; >
+    au < frozen ; exists ; 2013 ; ; 9781526112620 ; 9781526112620 ; Tyrants of Sicily by Hugo Falcandus (9781526112620) ; >
+    au < frozen ; exists ; 2013 ; ; 9781526112552 ; 9781526112552 ; Writing imperial histories (9781526112552) ; >
+    au < frozen ; exists ; 2014 ; ; 9780719097126 ; 9780719097126 ; An Anglican British world (9780719097126) ; >
+    au < frozen ; exists ; 2014 ; ; 9781526117533 ; 9781526117533 ; Country houses and the British Empire, 1700–1930 (9781526117533) ; >
+    au < frozen ; exists ; 2014 ; ; 9781526118288 ; 9781526118288 ; Curating empire (9781526118288) ; >
+    au < frozen ; exists ; 2014 ; ; 9781526110879 ; 9781526110879 ; Developing Africa (9781526110879) ; >
+    au < frozen ; exists ; 2014 ; ; 9781526111098 ; 9781526111098 ; Garden cities and colonial planning (9781526111098) ; >
+    au < frozen ; exists ; 2014 ; ; 9781526111159 ; 9781526111159 ; Gothic Renaissance (9781526111159) ; >
+    au < frozen ; exists ; 2014 ; ; 9781526102560 ; 9781526102560 ; Listen in terror (9781526102560) ; >
+    au < frozen ; exists ; 2014 ; ; 9781847799135 ; 9781847799135 ; Livingstone's 'lives' (9781847799135) ; >
+    au < frozen ; exists ; 2014 ; ; 9781526112170 ; 9781526112170 ; The relic state (9781526112170) ; >
+    au < frozen ; exists ; 2014 ; ; 9781847799210 ; 9781847799210 ; We are no longer in France (9781847799210) ; >
+    au < frozen ; exists ; 2015 ; ; 9780719098017 ; 9780719098017 ; Beastly encounters of the Raj (9780719098017) ; >
+    au < exists ; exists ; 2015 ; ; 9781784996789 ; 9781784996789 ; Beyond the state (9781784996789) ; >
+    au < frozen ; exists ; 2015 ; ; 9781847799999 ; 9781847799999 ; Citizenship, nation, empire (9781847799999) ; >
+    au < frozen ; exists ; 2015 ; ; 9781526102331 ; 9781526102331 ; Colonial naval culture and British imperialism, 1922–67 (9781526102331) ; >
+    au < frozen ; exists ; 2015 ; ; 9781784996864 ; 9781784996864 ; Cultures of decolonisation (9781784996864) ; >
+    au < frozen ; exists ; 2015 ; ; 9781784996758 ; 9781784996758 ; Dangerous bodies (9781784996758) ; >
+    au < frozen ; exists ; 2015 ; ; 9781784991760 ; 9781784991760 ; Empire of scholars (9781784991760) ; >
+    au < frozen ; exists ; 2015 ; ; 9781784991807 ; 9781784991807 ; Engines for empire (9781784991807) ; >
+    au < frozen ; exists ; 2015 ; ; 9781526118349 ; 9781526118349 ; Exhibiting the Empire (9781526118349) ; >
+    au < frozen ; exists ; 2015 ; ; 9781784991920 ; 9781784991920 ; History, heritage, and colonialism (9781784991920) ; >
+    au < frozen ; exists ; 2015 ; ; 9781784996925 ; 9781784996925 ; Hong Kong and British culture, 1945–97 (9781784996925) ; >
+    au < frozen ; exists ; 2015 ; ; 9781784997090 ; 9781784997090 ; Imperial expectations and realities (9781784997090) ; >
+    au < frozen ; exists ; 2015 ; ; 9780719098116 ; 9780719098116 ; In the club (9780719098116) ; >
+    au < frozen ; exists ; 2015 ; ; 9781784996710 ; 9781784996710 ; Insanity, identity and empire (9781784996710) ; >
+    au < frozen ; exists ; 2015 ; ; 9781784992071 ; 9781784992071 ; Knowledge, mediation and empire (9781784992071) ; >
+
+    #Imperialism
+    au < frozen ; exists ; 2015 ; ; 9781784996987 ; 9781784996987 ; Learning femininity in colonial India, 1820–1932 (9781784996987) ; >
+    au < frozen ; exists ; 2015 ; ; 9781784996857 ; 9781784996857 ; New Zealand's empire (9781784996857) ; >
+    au < frozen ; exists ; 2015 ; ; 9781784996819 ; 9781784996819 ; Rocks of nation (9781784996819) ; >
+    au < frozen ; exists ; 2015 ; ; 9781784992255 ; 9781784992255 ; Scotland, empire and decolonisation in the twentieth century (9781784992255) ; >
+    au < frozen ; exists ; 2015 ; ; 9781526111890 ; 9781526111890 ; Sites of imperial memory (9781526111890) ; >
+    au < frozen ; exists ; 2015 ; ; 9780719098291 ; 9780719098291 ; The souls of white folk (9780719098291) ; >
+    au < frozen ; exists ; 2015 ; ; 9781784992361 ; 9781784992361 ; The suppression of the Atlantic slave trade (9781784992361) ; >
+    au < frozen ; exists ; 2016 ; ; 9781784997328 ; 9781784997328 ; Britain and the formation of the Gulf States (9781784997328) ; >
+    au < frozen ; exists ; 2016 ; ; 9781526100887 ; 9781526100887 ; Crowns and colonies (9781526100887) ; >
+    au < frozen ; exists ; 2016 ; ; 9781784997427 ; 9781784997427 ; French colonial Dakar (9781784997427) ; >
+    au < frozen ; exists ; 2016 ; ; 9781784996918 ; 9781784996918 ; The cultural construction of the British world (9781784996918) ; >
+    au < frozen ; exists ; 2017 ; ; 9781526120410 ; 9781526120410 ; Britain and its internal others, 1750–1800 (9781526120410) ; >
+    au < frozen ; exists ; 2017 ; ; 9781526105967 ; 9781526105967 ; Egypt (9781526105967) ; >
+    au < frozen ; exists ; 2017 ; ; 9781526106018 ; 9781526106018 ; Gendered transactions (9781526106018) ; >
+    au < frozen ; exists ; 2017 ; ; 9781526106070 ; 9781526106070 ; Imperium of the soul (9781526106070) ; >
+    au < frozen ; exists ; 2017 ; ; 9781526107596 ; 9781526107596 ; Interventions (9781526107596) ; >
+    au < frozen ; exists ; 2017 ; ; 9781526123893 ; 9781526123893 ; Medicine, mobility and the empire (9781526123893) ; >
+    au < frozen ; exists ; 2017 ; ; 9781526120496 ; 9781526120496 ; Rhetorics of empire (9781526120496) ; >
+    au < frozen ; exists ; 2017 ; ; 9781526103680 ; 9781526103680 ; Serving the empire in the Great War (9781526103680) ; >
+    au < frozen ; exists ; 2017 ; ; 9781526106223 ; 9781526106223 ; Sounds of liberty (9781526106223) ; >
+    au < frozen ; exists ; 2017 ; ; 9781526119346 ; 9781526119346 ; The Germans in India (9781526119346) ; >
+
+    #Gothic Studies
+    au < frozen ; exists ; 2015 ; ; 9780719098130 ; 9780719098130 ; Monstrous media/spectral subjects (9780719098130) ; >
+    au < frozen ; exists ; 2015 ; ; 9780719098192 ; 9780719098192 ; She-wolf (9780719098192) ; >
+    au < frozen ; exists ; 2015 ; ; 9781526101976 ; 9781526101976 ; That devil's trick (9781526101976) ; >
+    au < frozen ; exists ; 2016 ; ; 9781526101075 ; 9781526101075 ; Gothic death 1740–1914 (9781526101075) ; >
+    au < frozen ; exists ; 2016 ; ; 9781784997496 ; 9781784997496 ; Masters and servants (9781784997496) ; >
+    au < frozen ; exists ; 2016 ; ; 9781784996901 ; 9781784996901 ; Men with stakes (9781784996901) ; >
+    au < frozen ; exists ; 2016 ; ; 9781526100320 ; 9781526100320 ; Mistress of everything (9781526100320) ; >
+    au < frozen ; exists ; 2016 ; ; 9781784997540 ; 9781784997540 ; Sinister histories (9781784997540) ; >
+    au < frozen ; exists ; 2017 ; ; 9781526122070 ; 9781526122070 ; Clive Barker (9781526122070) ; >
+    au < frozen ; exists ; 2017 ; ; 9781526113450 ; 9781526113450 ; Neoliberal gothic (9781526113450) ; >
+    au < frozen ; exists ; 2017 ; ; 9781526107916 ; 9781526107916 ; The Gothic and death (9781526107916) ; >
+    au < frozen ; exists ; 2017 ; ; 9781526106278 ; 9781526106278 ; Venomous encounters (9781526106278) ; >
+  }
+  {
+    #Manchester Open Hive
+    param[base_url] = https://www.manchesteropenhive.com/
+
+    #Impirialism
+    au < crawling ; exists ; 2002 ; ; 9781526137357 ; 9781526137357 ; Female imperialism and national identity (9781526137357) ; >
+    au < crawling ; exists ; 2003 ; ; 9781526137333 ; 9781526137333 ; Equal subjects, unequal rights (9781526137333) ; >
+    au < crawling ; exists ; 2003 ; ; 9781526137968 ; 9781526137968 ; West Indian intellectuals in Britain (9781526137968) ; >
+    au < crawling ; exists ; 2004 ; ; 9781526137913 ; 9781526137913 ; The Victorian soldier in Africa (9781526137913) ; >
+    au < crawling ; exists ; 2009 ; ; 9781526137838 ; 9781526137838 ; The other empire (9781526137838) ; >
+    au < frozen ; exists ; 2016 ; ; 9781526123848 ; 9781526123848 ; Royal tourists, colonial subjects and the making of a British world, 1860–1911 (9781526123848) ; >
+
+  }
+  }
 }

@@ -1,0 +1,38 @@
+{
+  publisher <
+    name = University of Oklahoma
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:431
+
+    {
+    title <
+      name = World Literature Today ;
+      issn = 0196-3570 ;
+      eissn = 1945-8134
+
+    >
+
+      attr[journal_id] = 842
+
+      au < manifest ; 2009 ; World Literature Today Volume 83 [2009] ; 16664 >
+      au < released ; 2010 ; World Literature Today Volume 84 [2010] ; 16665 >
+      au < released ; 2011 ; World Literature Today Volume 85 [2011] ; 16666 >
+      au < released ; 2012 ; World Literature Today Volume 86 [2012] ; 16667 >
+      au < released ; 2013 ; World Literature Today Volume 87 [2013] ; 16668 >
+      au < released ; 2014 ; World Literature Today Volume 88 [2014] ; 16669 >
+      au < released ; 2015 ; World Literature Today Volume 89 [2015] ; 16670 >
+      au < released ; 2016 ; World Literature Today Volume 90 [2016] ; 16671 >
+      au < released ; 2017 ; World Literature Today Volume 91 [2017] ; 16672 >
+      au < released ; 2018 ; World Literature Today Volume 92 [2018] ; 16673 >
+      au < released ; 2019 ; World Literature Today Volume 93 [2019] ; 16674 >
+      au < released ; 2020 ; World Literature Today Volume 94 [2020] ; 16675 >
+      au < released ; 2021 ; World Literature Today Volume 95 [2021] ; 16676 >
+      au < manifest ; 2022 ; World Literature Today Volume 96 [2022] ; 16792 >
+
+    }
+
+}

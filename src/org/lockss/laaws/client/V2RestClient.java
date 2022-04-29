@@ -12,6 +12,21 @@
 
 package org.lockss.laaws.client;
 
+import okhttp3.*;
+import okhttp3.internal.http.HttpMethod;
+import okhttp3.internal.tls.OkHostnameVerifier;
+import okhttp3.logging.HttpLoggingInterceptor;
+import okhttp3.logging.HttpLoggingInterceptor.Level;
+import okio.BufferedSink;
+import okio.Okio;
+import org.lockss.laaws.V2AuMover.DigestCachedUrl;
+import org.lockss.laaws.client.auth.ApiKeyAuth;
+import org.lockss.laaws.client.auth.Authentication;
+import org.lockss.laaws.client.auth.HttpBasicAuth;
+import org.lockss.laaws.client.auth.OAuth;
+import org.lockss.util.Logger;
+
+import javax.net.ssl.*;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -29,47 +44,11 @@ import java.text.DateFormat;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.Map.Entry;
-import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import javax.net.ssl.HostnameVerifier;
-import javax.net.ssl.KeyManager;
-import javax.net.ssl.SSLContext;
-import javax.net.ssl.SSLSession;
-import javax.net.ssl.TrustManager;
-import javax.net.ssl.TrustManagerFactory;
-import javax.net.ssl.X509TrustManager;
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.Headers;
-import okhttp3.Interceptor;
-import okhttp3.MediaType;
-import okhttp3.MultipartBody;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.RequestBody;
-import okhttp3.Response;
-import okhttp3.internal.http.HttpMethod;
-import okhttp3.internal.tls.OkHostnameVerifier;
-import okhttp3.logging.HttpLoggingInterceptor;
-import okhttp3.logging.HttpLoggingInterceptor.Level;
-import okio.BufferedSink;
-import okio.Okio;
-import org.lockss.laaws.client.auth.ApiKeyAuth;
-import org.lockss.laaws.client.auth.Authentication;
-import org.lockss.laaws.client.auth.HttpBasicAuth;
-import org.lockss.laaws.client.auth.OAuth;
-import org.lockss.plugin.CachedUrl;
-import org.lockss.util.Logger;
 
 public class V2RestClient {
 
@@ -133,7 +112,6 @@ public class V2RestClient {
     for (Interceptor interceptor : interceptors) {
       builder.addInterceptor(interceptor);
     }
-
     httpClient = builder.build();
   }
 
@@ -467,6 +445,13 @@ public class V2RestClient {
     return this;
   }
 
+  public V2RestClient addInterceptor(Interceptor interceptor) {
+    if (interceptor != null) {
+      httpClient = httpClient.newBuilder().addInterceptor(interceptor).build();
+    }
+    return this;
+  }
+
   /**
    * The path of temporary folder used to store downloaded files from endpoints
    * with file response. The default value is <code>null</code>, i.e. using
@@ -509,7 +494,7 @@ public class V2RestClient {
    */
   public V2RestClient setConnectTimeout(int connectionTimeout) {
     httpClient = httpClient.newBuilder().connectTimeout(connectionTimeout, TimeUnit.MILLISECONDS)
-      .build();
+        .build();
     return this;
   }
 
@@ -568,7 +553,7 @@ public class V2RestClient {
     if (param == null) {
       return "";
     } else if (param instanceof Date || param instanceof OffsetDateTime
-      || param instanceof LocalDate) {
+        || param instanceof LocalDate) {
       //Serialize to json string and remove the " enclosing characters
       String jsonStr = json.serialize(param);
       return jsonStr.substring(1, jsonStr.length() - 1);
@@ -831,10 +816,10 @@ public class V2RestClient {
       return (T) respBody;
     } else {
       throw new ApiException(
-        "Content type \"" + contentType + "\" is not supported for type: " + returnType,
-        response.code(),
-        response.headers().toMultimap(),
-        respBody);
+          "Content type \"" + contentType + "\" is not supported for type: " + returnType,
+          response.code(),
+          response.headers().toMultimap(),
+          respBody);
     }
   }
 
@@ -854,8 +839,9 @@ public class V2RestClient {
     } else if (obj instanceof File) {
       // File body parameter support.
       return RequestBody.create(MediaType.parse(contentType), (File) obj);
-    } else if (obj instanceof CachedUrl) {
-      return new CachedUrlRequestBody(MediaType.parse(contentType), (CachedUrl) obj);
+    } else if (obj instanceof DigestCachedUrl) {
+      DigestCachedUrl dcu = (DigestCachedUrl) obj;
+      return new CachedUrlRequestBody(MediaType.parse(contentType), dcu);
     } else if (isJsonMime(contentType)) {
       String content;
       if (obj != null) {
@@ -1031,7 +1017,7 @@ public class V2RestClient {
             response.body().close();
           } catch (Exception e) {
             throw new ApiException(response.message(), e, response.code(),
-              response.headers().toMultimap());
+                response.headers().toMultimap());
           }
         }
         return null;
@@ -1045,11 +1031,11 @@ public class V2RestClient {
           respBody = response.body().string();
         } catch (IOException e) {
           throw new ApiException(response.message(), e, response.code(),
-            response.headers().toMultimap());
+              response.headers().toMultimap());
         }
       }
       throw new ApiException(response.message(), response.code(), response.headers().toMultimap(),
-        respBody);
+          respBody);
     }
   }
 
@@ -1070,11 +1056,11 @@ public class V2RestClient {
    * @throws ApiException If fail to serialize the request body object
    */
   public Call buildCall(String path, String method, List<Pair> queryParams,
-    List<Pair> collectionQueryParams, Object body, Map<String, String> headerParams,
-    Map<String, String> cookieParams, Map<String, Object> formParams, String[] authNames,
-    ApiCallback callback) throws ApiException {
+                        List<Pair> collectionQueryParams, Object body, Map<String, String> headerParams,
+                        Map<String, String> cookieParams, Map<String, Object> formParams, String[] authNames,
+                        ApiCallback callback) throws ApiException {
     Request request = buildRequest(path, method, queryParams, collectionQueryParams, body,
-      headerParams, cookieParams, formParams, authNames, callback);
+        headerParams, cookieParams, formParams, authNames, callback);
 
     return httpClient.newCall(request);
   }
@@ -1096,9 +1082,9 @@ public class V2RestClient {
    * @throws ApiException If fail to serialize the request body object
    */
   public Request buildRequest(String path, String method, List<Pair> queryParams,
-    List<Pair> collectionQueryParams, Object body, Map<String, String> headerParams,
-    Map<String, String> cookieParams, Map<String, Object> formParams, String[] authNames,
-    ApiCallback callback) throws ApiException {
+                              List<Pair> collectionQueryParams, Object body, Map<String, String> headerParams,
+                              Map<String, String> cookieParams, Map<String, Object> formParams, String[] authNames,
+                              ApiCallback callback) throws ApiException {
     updateParamsForAuth(authNames, queryParams, headerParams, cookieParams);
 
     final String url = buildUrl(path, queryParams, collectionQueryParams);
@@ -1239,7 +1225,7 @@ public class V2RestClient {
    * @param cookieParams Map of cookie parameters
    */
   public void updateParamsForAuth(String[] authNames, List<Pair> queryParams,
-    Map<String, String> headerParams, Map<String, String> cookieParams) {
+                                  Map<String, String> headerParams, Map<String, String> cookieParams) {
     for (String authName : authNames) {
       Authentication auth = authentications.get(authName);
       if (auth == null) {
@@ -1276,20 +1262,20 @@ public class V2RestClient {
       if (param.getValue() instanceof File) {
         File file = (File) param.getValue();
         Headers partHeaders = Headers.of("Content-Disposition",
-          "form-data; name=\"" + param.getKey() + "\"; filename=\"" + file.getName() + "\"");
+            "form-data; name=\"" + param.getKey() + "\"; filename=\"" + file.getName() + "\"");
         MediaType mediaType = MediaType.parse(guessContentTypeFromFile(file));
         mpBuilder.addPart(partHeaders, RequestBody.create(mediaType, file));
-      } else if (param.getValue() instanceof CachedUrl) {
-        CachedUrl cu = (CachedUrl) param.getValue();
+      } else if (param.getValue() instanceof DigestCachedUrl) {
+        DigestCachedUrl dcu = (DigestCachedUrl) param.getValue();
         Headers partHeaders = Headers.of("Content-Disposition",
-          "form-data; name=\"" + param.getKey() + "\"; filename=\"artifact\"");
+            "form-data; name=\"" + param.getKey() + "\"; filename=\"artifact\"");
         MediaType mediaType = MediaType.parse("application/http;msgtype=response");
-        mpBuilder.addPart(partHeaders, new CachedUrlRequestBody(mediaType, cu));
+        mpBuilder.addPart(partHeaders, new CachedUrlRequestBody(mediaType, dcu));
       } else {
         Headers partHeaders = Headers.of("Content-Disposition",
-          "form-data; name=\"" + param.getKey() + "\"");
+            "form-data; name=\"" + param.getKey() + "\"");
         mpBuilder.addPart(partHeaders,
-          RequestBody.create(null, parameterToString(param.getValue())));
+            RequestBody.create(null, parameterToString(param.getValue())));
       }
     }
     return mpBuilder.build();
@@ -1323,8 +1309,8 @@ public class V2RestClient {
         if (request.tag() instanceof ApiCallback) {
           final ApiCallback callback = (ApiCallback) request.tag();
           return originalResponse.newBuilder()
-            .body(new ProgressResponseBody(originalResponse.body(), callback))
-            .build();
+              .body(new ProgressResponseBody(originalResponse.body(), callback))
+              .build();
         }
         return originalResponse;
       }
@@ -1341,22 +1327,22 @@ public class V2RestClient {
       HostnameVerifier hostnameVerifier;
       if (!verifyingSsl) {
         trustManagers = new TrustManager[]{
-          new X509TrustManager() {
-            @Override
-            public void checkClientTrusted(java.security.cert.X509Certificate[] chain,
-              String authType) throws CertificateException {
-            }
+            new X509TrustManager() {
+              @Override
+              public void checkClientTrusted(java.security.cert.X509Certificate[] chain,
+                                             String authType) throws CertificateException {
+              }
 
-            @Override
-            public void checkServerTrusted(java.security.cert.X509Certificate[] chain,
-              String authType) throws CertificateException {
-            }
+              @Override
+              public void checkServerTrusted(java.security.cert.X509Certificate[] chain,
+                                             String authType) throws CertificateException {
+              }
 
-            @Override
-            public java.security.cert.X509Certificate[] getAcceptedIssuers() {
-              return new java.security.cert.X509Certificate[]{};
+              @Override
+              public java.security.cert.X509Certificate[] getAcceptedIssuers() {
+                return new java.security.cert.X509Certificate[]{};
+              }
             }
-          }
         };
         hostnameVerifier = new HostnameVerifier() {
           @Override
@@ -1366,7 +1352,7 @@ public class V2RestClient {
         };
       } else {
         TrustManagerFactory trustManagerFactory = TrustManagerFactory.getInstance(
-          TrustManagerFactory.getDefaultAlgorithm());
+            TrustManagerFactory.getDefaultAlgorithm());
 
         if (sslCaCert == null) {
           trustManagerFactory.init((KeyStore) null);
@@ -1374,7 +1360,7 @@ public class V2RestClient {
           char[] password = null; // Any password will work.
           CertificateFactory certificateFactory = CertificateFactory.getInstance("X.509");
           Collection<? extends Certificate> certificates = certificateFactory.generateCertificates(
-            sslCaCert);
+              sslCaCert);
           if (certificates.isEmpty()) {
             throw new IllegalArgumentException("expected non-empty set of trusted certificates");
           }
@@ -1393,9 +1379,9 @@ public class V2RestClient {
       SSLContext sslContext = SSLContext.getInstance("TLS");
       sslContext.init(keyManagers, trustManagers, new SecureRandom());
       httpClient = httpClient.newBuilder()
-        .sslSocketFactory(sslContext.getSocketFactory(), (X509TrustManager) trustManagers[0])
-        .hostnameVerifier(hostnameVerifier)
-        .build();
+          .sslSocketFactory(sslContext.getSocketFactory(), (X509TrustManager) trustManagers[0])
+          .hostnameVerifier(hostnameVerifier)
+          .build();
     } catch (GeneralSecurityException e) {
       throw new RuntimeException(e);
     }

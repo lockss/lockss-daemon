@@ -1,0 +1,109 @@
+{
+
+  publisher <
+    name = Kripke Center at Creighton University
+  >
+  
+  {
+  
+    title <
+      name = Journal of Religion and Society ;
+      eissn = 1522-5658 ;
+      issnl = 1522-5658
+    >
+  
+    rights = openaccess
+
+    {
+
+      plugin = edu.harvard.plugin.jrs.JRSPlugin
+      param[base_url] = http://moses.creighton.edu/JRS/
+      implicit < status ; year ; volume ; name ; param[year] >
+    
+      au < superseded ; 1999 ; 1 ; Journal of Religion & Society Volume 1 [superseded] ; 1999 >
+      au < superseded ; 2000 ; 2 ; Journal of Religion & Society Volume 2 [superseded] ; 2000 >
+      au < superseded ; 2001 ; 3 ; Journal of Religion & Society Volume 3 [superseded] ; 2001 >
+      au < superseded ; 2002 ; 4 ; Journal of Religion & Society Volume 4 [superseded] ; 2002 >
+      au < superseded ; 2003 ; 5 ; Journal of Religion & Society Volume 5 [superseded] ; 2003 >
+      au < superseded ; 2004 ; 6 ; Journal of Religion & Society Volume 6 [superseded] ; 2004 >
+      au < superseded ; 2005 ; 7 ; Journal of Religion & Society Volume 7 [superseded] ; 2005 >
+      au < superseded ; 2006 ; 8 ; Journal of Religion & Society Volume 8 [superseded] ; 2006 >
+      
+    }
+
+    {
+
+      plugin = edu.harvard.plugin.jrs.JRS2022Plugin
+      param[base_url] = http://moses.creighton.edu/JRS/
+      implicit < status ; year ; volume ; name ; param[volume_name] >
+    
+      au < released ; 1999 ; 1 ; Journal of Religion & Society Volume 1 ; 1999 >
+      au < released ; 2000 ; 2 ; Journal of Religion & Society Volume 2 ; 2000 >
+      au < released ; 2001 ; 3 ; Journal of Religion & Society Volume 3 ; 2001 >
+      au < released ; 2002 ; 4 ; Journal of Religion & Society Volume 4 ; 2002 >
+      au < released ; 2003 ; 5 ; Journal of Religion & Society Volume 5 ; 2003 >
+      au < released ; 2004 ; 6 ; Journal of Religion & Society Volume 6 ; 2004 >
+      au < released ; 2005 ; 7 ; Journal of Religion & Society Volume 7 ; 2005 >
+      au < released ; 2006 ; 8 ; Journal of Religion & Society Volume 8 ; 2006 >
+      au < released ; 2007 ; 9 ; Journal of Religion & Society Volume 9 ; 2007 >
+      au < released ; 2008 ; 10 ; Journal of Religion & Society Volume 10 ; 2008 >
+      au < released ; 2009 ; 11 ; Journal of Religion & Society Volume 11 ; 2009 >
+      au < released ; 2010 ; 12 ; Journal of Religion & Society Volume 12 ; 2010 >
+      au < released ; 2011 ; 13 ; Journal of Religion & Society Volume 13 ; 2011 >
+      au < released ; 2012 ; 14 ; Journal of Religion & Society Volume 14 ; 2012 >
+      au < released ; 2013 ; 15 ; Journal of Religion & Society Volume 15 ; 2013 >
+      au < released ; 2014 ; 16 ; Journal of Religion & Society Volume 16 ; 2014 >
+      au < released ; 2015 ; 17 ; Journal of Religion & Society Volume 17 ; 2015 >
+      au < released ; 2016 ; 18 ; Journal of Religion & Society Volume 18 ; 2016 >
+      au < released ; 2017 ; 19 ; Journal of Religion & Society Volume 19 ; 2017 >
+      au < released ; 2018 ; 20 ; Journal of Religion & Society Volume 20 ; 2018 >
+      au < released ; 2019 ; 21 ; Journal of Religion & Society Volume 21 ; 2019 >
+      au < released ; 2020 ; 22 ; Journal of Religion & Society Volume 22 ; 2020 >
+      au < released ; 2021 ; 23 ; Journal of Religion & Society Volume 23 ; 2021 >
+      au < expected ; 2022 ; 24 ; Journal of Religion & Society Volume 24 ; 2022 >
+      
+    }
+
+  }
+
+  {
+  
+    title <
+      name = Journal of Religion and Society Supplement Series ;
+      eissn = 1941-8450 ;
+      issnl = 1941-8450
+    >
+  
+    rights = openaccess
+    
+    plugin = edu.harvard.plugin.jrs.JRS2022Plugin
+    param[base_url] = http://moses.creighton.edu/JRS/
+    implicit < status ; year ; volume ; name ; param[volume_name] >
+
+    au < released ; 2004 ; 1 ; Journal of Religion & Society Supplement 1 (2004) ; SS01 >
+    au < released ; 2007 ; 2 ; Journal of Religion & Society Supplement 2 (2007) ; SS02 >
+    au < released ; 2008 ; 3 ; Journal of Religion & Society Supplement 3 (2008) ; SS03 >
+    au < released ; 2008 ; 4 ; Journal of Religion & Society Supplement 4 (2008) ; SS04 >
+    au < released ; 2009 ; 5 ; Journal of Religion & Society Supplement 5 (2009) ; SS05 >
+    au < released ; 2011 ; 6 ; Journal of Religion & Society Supplement 6 (2011) ; SS06 >
+    au < released ; 2011 ; 7 ; Journal of Religion & Society Supplement 7 (2011) ; SS07 >
+    au < released ; 2012 ; 8 ; Journal of Religion & Society Supplement 8 (2012) ; SS08 >
+    au < released ; 2013 ; 9 ; Journal of Religion & Society Supplement 9 (2013) ; SS09 >
+    au < released ; 2014 ; 10 ; Journal of Religion & Society Supplement 10 (2014) ; SS10 >
+    au < released ; 2015 ; 11 ; Journal of Religion & Society Supplement 11 (2015) ; SS11 >
+    au < released ; 2015 ; 12 ; Journal of Religion & Society Supplement 12 (2015) ; SS12 >
+    au < released ; 2016 ; 13 ; Journal of Religion & Society Supplement 13 (2016) ; SS13 >
+    au < released ; 2017 ; 14 ; Journal of Religion & Society Supplement 14 (2017) ; SS14 >
+    au < released ; 2018 ; 15 ; Journal of Religion & Society Supplement 15 (2018) ; SS15 >
+    au < released ; 2018 ; 16 ; Journal of Religion & Society Supplement 16 (2018) ; SS16 >
+    au < released ; 2018 ; 17 ; Journal of Religion & Society Supplement 17 (2018) ; SS17 >
+    au < released ; 2019 ; 18 ; Journal of Religion & Society Supplement 18 (2019) ; SS18 >
+    au < released ; 2019 ; 19 ; Journal of Religion & Society Supplement 19 (2019) ; SS19 >
+    au < released ; 2019 ; 20 ; Journal of Religion & Society Supplement 20 (2019) ; SS20 >
+    au < released ; 2020 ; 21 ; Journal of Religion & Society Supplement 21 (2020) ; SS21 >
+    au < released ; 2020 ; 22 ; Journal of Religion & Society Supplement 22 (2020) ; SS22 >
+    au < released ; 2021 ; 23 ; Journal of Religion & Society Supplement 23 (2021) ; SS23 >
+    
+  }
+
+}

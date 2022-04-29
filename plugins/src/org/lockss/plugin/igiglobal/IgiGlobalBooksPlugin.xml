@@ -14,7 +14,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>24</string>
+    <string>26</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -71,7 +71,10 @@
 -->
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^https?://%s/.*[.](bmp|css|gif|ico|jpe?g|js|png|tif?f)([?]v=.+)?$", url_host(base_url)</string>
+      <string>1,"^https?://%s/.*[.](bmp|css|gif|ico|jpe?g|js|png|tif?f|eot|woff2?|ttf|svg|webp)([?]v=.+)?$", url_host(base_url)</string>
+      <string>1,"^https?://%s/ScriptResource[.]axd", url_host(base_url)</string>
+      <string>1,"^https?://%s/bundles/(js|css)/gateway", url_host(base_url)</string>
+      <string>1,"^https?://coverimages.igi-global.com/"</string>
       <string>4,"^https?://%s/", url_host(base_url)</string>
       <string>1,"^https?://%s/gateway/book/%s$", url_host(base_url),volume</string>
       <string>1,"^https?://%s/gateway/chapter(/full-text-pdf|/full-text-html)?/[0-9]+$", url_host(base_url)</string>
@@ -135,6 +138,10 @@
     </list>
   </entry>
   <entry>
+    <string>text/css_link_rewriter_factory</string>
+    <string>org.lockss.plugin.igiglobal.IgiGlobalRegexpCssLinkRewriterFactory</string>
+  </entry>
+  <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.igiglobal.IgiGlobalHtmlFilterFactory</string>
   </entry>
@@ -196,6 +203,12 @@
       <string>"[.](css|js)$", 0</string>
       <!-- needs 0 weight because titles are continually being added to the manifest page -->
       <string>"^https?://[^/]+/lockss/books.aspx$", 0</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <string>coverimages\.igi-global\.com</string>
     </list>
   </entry>
 </map>

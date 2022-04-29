@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?><component xmlns="http://www.wiley.com/namespaces/wiley" xmlns:wiley="http://www.wiley.com/namespaces/wiley/wiley" type="bookChapter" version="1.0.2" xml:lang="de">
+
+    <?documentInfo RNGSchema="WileyML3G/V102/rnc/WileyML3G.rnc" type="compact" sourceDTD="JWSCHA15"?>
+
+    <header>
+
+        <publicationMeta level="product">
+
+            <publisherInfo>
+
+                <publisherName>Wiley‐VCH Verlag GmbH &amp; Co. KGaA</publisherName>
+
+                <publisherLoc>Weinheim, Germany</publisherLoc>
+
+            </publisherInfo>
+
+            <doi origin="wiley" registered="yes">10.1002/9783433600894</doi>
+
+            <isbn type="online-13">9783433600894</isbn>
+
+            <isbn type="printCloth-13">9783433012536</isbn>
+
+            <idGroup>
+
+                <id type="product" value="W600894"/>
+
+            </idGroup>
+
+            <titleGroup>
+
+                <title sort="BAUGRUBEN: BERECHNUNGSVERFAHREN" type="main" xml:lang="de">Baugruben</title>
+
+                <title type="tocForm">Baugruben: Berechnungsverfahren</title>
+
+                <title type="subtitle">Berechnungsverfahren</title>
+
+                <title type="short">WEISSENB.:BAUGRUBEN 3 A2 O‐BK</title>
+
+            </titleGroup>
+
+            <copyright ownership="publisher">Copyright © 2011 Ernst &amp; Sohn Verlag für Architektur und technische Wissenschaften GmbH &amp; Co. KG, Berlin</copyright>
+
+            <eventGroup>
+
+                <event date="2010-10-20" type="publishedPrint"/>
+
+            </eventGroup>
+
+            <numberingGroup>
+
+                <numbering type="edition">2. Auflage</numbering>
+
+            </numberingGroup>
+
+            <creators>
+
+                <creator affiliationRef="#af1" creatorRole="author" xml:id="au1">
+
+                    <personName>
+
+                        <honorifics>Univ.‐Prof. Dr.‐Ing. habil. Dr.‐Ing. E.h.</honorifics>
+
+                        <givenNames>Anton</givenNames>
+
+                        <familyName>Weißenbach</familyName>
+
+                    </personName>
+
+                </creator>
+
+                <creator affiliationRef="#af2" creatorRole="author" xml:id="au2">
+
+                    <personName>
+
+                        <honorifics>Univ.‐Prof. Dr.‐Ing. habil</honorifics>
+
+                        <givenNames>Achim</givenNames>
+
+                        <familyName>Hettler</familyName>
+
+                    </personName>
+
+                </creator>
+
+            </creators>
+
+            <affiliationGroup>
+
+                <affiliation countryCode="DE" type="private" xml:id="af1">
+
+                    <unparsedAffiliation>Am Gehölz 14, 22844 Norderstedt, Deutschland</unparsedAffiliation>
+
+                </affiliation>
+
+                <affiliation countryCode="DE" type="organization" xml:id="af2">
+
+                    <unparsedAffiliation>Lehrstuhl Baugrund – Grundbau, Fakultät Bauwesen, Technische Universität Dortmund, August‐Schmidt‐Straße 8, 44227 Dortmund, Deutschland</unparsedAffiliation>
+
+                </affiliation>
+
+            </affiliationGroup>
+
+        </publicationMeta>
+
+        <publicationMeta level="unit" position="10" type="frontmatter">
+
+            <doi origin="wiley" registered="yes">10.1002/9783433600894.fmatter</doi>
+
+            <idGroup>
+
+                <id type="unit" value="fmatter"/>
+
+                <id type="file" value="fmatter"/>
+
+            </idGroup>
+
+            <countGroup>
+
+                <count number="8" type="pageTotal"/>
+
+            </countGroup>
+
+            <copyright ownership="publisher">Copyright © 2011 Ernst &amp; Sohn Verlag für Architektur und technische Wissenschaften GmbH &amp; Co. KG, Berlin</copyright>
+
+            <eventGroup><event agent="Converter:JWSCHA_TO_WML3G version:2.5.2 mode:FullText" date="2011-07-19" type="xmlConverted"/><event date="2011-07-19" type="firstOnline"/><event date="2011-07-19" type="publishedOnlineFinalForm"/><event agent="Converter:WML3G_To_WML3G version:5.9.9 mode:FullText" date="2021-03-18" type="xmlConverted"/><event type="xmlConverted" agent="Converter:WML3G_To_WML3G version:1.7.4 mode:FullText,remove_FC" date="2022-03-18"/></eventGroup>
+
+            <numberingGroup>
+
+                <numbering type="pageFirst">I</numbering>
+
+                <numbering type="pageLast">IX</numbering>
+
+            </numberingGroup>
+
+            <linkGroup>
+
+                <link href="file://fmatter.pdf" type="toTypesetVersion"/>
+
+            </linkGroup>
+
+        </publicationMeta>
+
+        <contentMeta>
+
+            <countGroup>
+
+                <count number="0" type="figureTotal"/>
+
+                <count number="0" type="tableTotal"/>
+
+                <count number="0" type="referenceTotal"/>
+
+            </countGroup>
+
+            <titleGroup>
+
+                <title type="main" xml:lang="en">Front Matter</title>
+
+            </titleGroup>
+
+            <abstractGroup>
+
+                <abstract type="main" xml:lang="de">
+
+                    <title type="main">Summary</title>
+
+                    <p>
+                        Die Titelei enthält:
+
+                        <list style="bulleted" xml:id="l1">
+
+                            <listItem>
+
+                                <p>Vortitel</p>
+
+                            </listItem>
+
+                            <listItem>
+
+                                <p>Titelseite</p>
+
+                            </listItem>
+
+                            <listItem>
+
+                                <p>Copyrightseite</p>
+
+                            </listItem>
+
+                            <listItem>
+
+                                <p>Vorwort</p>
+
+                            </listItem>
+
+                            <listItem>
+
+                                <p>Inhaltsverzeichnis</p>
+
+                            </listItem>
+
+                        </list>
+                    </p>
+
+                </abstract>
+
+            </abstractGroup>
+
+        </contentMeta>
+
+    </header>
+
+</component>

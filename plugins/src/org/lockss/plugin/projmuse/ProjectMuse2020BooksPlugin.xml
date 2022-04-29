@@ -1,6 +1,6 @@
 <!--
 
-Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -33,7 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>development</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -45,7 +45,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -60,7 +60,7 @@ POSSIBILITY OF SUCH DAMAGE.
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
     </map>
   </entry>
@@ -107,8 +107,8 @@ POSSIBILITY OF SUCH DAMAGE.
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
         <key>book_id</key>
-        <displayName>>Book Identifier</displayName>
-        <description>>Book Identifier</description>
+        <displayName>Book Identifier</displayName>
+        <description>Book Identifier</description>
         <type>1</type>
         <size>40</size>
         <definitional>true</definitional>
@@ -133,6 +133,15 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
      <string>plugin_article_metadata_extractor_factory</string>
      <string>org.lockss.plugin.projmuse.ProjectMuse2020BooksArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.projmuse.ProjectMuse2020BooksMetadataExtractorFactory</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>

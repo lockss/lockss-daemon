@@ -6,6 +6,7 @@
   >
   
    # RT3894 GLN only for now (manifest pages have both LOCKSS and CLOCKSS permission statements)
+   #Moved 2022 from https://scholarcommons.usf.edu/ to https://digitalcommons.usf.edu/
 
   {
   
@@ -20,20 +21,22 @@
     param[journal_abbr] = jss
     implicit < status ; year ; name ; param[volume] ; param[base_url] >
     
-    au < released ; 2008 ; Journal of Strategic Security (JSS) Volume 1 ; 1 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2009 ; Journal of Strategic Security (JSS) Volume 2 ; 2 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2010 ; Journal of Strategic Security (JSS) Volume 3 ; 3 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2011 ; Journal of Strategic Security (JSS) Volume 4 ; 4 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2012 ; Journal of Strategic Security (JSS) Volume 5 ; 5 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2013 ; Journal of Strategic Security (JSS) Volume 6 ; 6 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2014 ; Journal of Strategic Security (JSS) Volume 7 ; 7 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2015 ; Journal of Strategic Security (JSS) Volume 8 ; 8 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2016 ; Journal of Strategic Security (JSS) Volume 9 ; 9 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2017 ; Journal of Strategic Security (JSS) Volume 10 ; 10 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2018 ; Journal of Strategic Security (JSS) Volume 11 ; 11 ; http://scholarcommons.usf.edu/ >
-    au < released ; 2019 ; Journal of Strategic Security (JSS) Volume 12 ; 12 ; https://scholarcommons.usf.edu/ >
-    au < testing ; 2020 ; Journal of Strategic Security (JSS) Volume 13 ; 13 ; https://digitalcommons.usf.edu/ >
-    au < manifest ; 2021 ; Journal of Strategic Security (JSS) Volume 14 ; 14 ; https://digitalcommons.usf.edu/ >
+    au < down ; 2008 ; Journal of Strategic Security (JSS) Volume 1 ; 1 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2009 ; Journal of Strategic Security (JSS) Volume 2 ; 2 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2010 ; Journal of Strategic Security (JSS) Volume 3 ; 3 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2011 ; Journal of Strategic Security (JSS) Volume 4 ; 4 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2012 ; Journal of Strategic Security (JSS) Volume 5 ; 5 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2013 ; Journal of Strategic Security (JSS) Volume 6 ; 6 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2014 ; Journal of Strategic Security (JSS) Volume 7 ; 7 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2015 ; Journal of Strategic Security (JSS) Volume 8 ; 8 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2016 ; Journal of Strategic Security (JSS) Volume 9 ; 9 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2017 ; Journal of Strategic Security (JSS) Volume 10 ; 10 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2018 ; Journal of Strategic Security (JSS) Volume 11 ; 11 ; http://scholarcommons.usf.edu/ >
+    au < down ; 2019 ; Journal of Strategic Security (JSS) Volume 12 ; 12 ; https://scholarcommons.usf.edu/ >
+
+    au < released ; 2020 ; Journal of Strategic Security (JSS) Volume 13 ; 13 ; https://digitalcommons.usf.edu/ >
+    au < released ; 2021 ; Journal of Strategic Security (JSS) Volume 14 ; 14 ; https://digitalcommons.usf.edu/ >
+    au < manifest ; 2022 ; Journal of Strategic Security (JSS) Volume 15 ; 15 ; https://digitalcommons.usf.edu/ >
 
   }
 

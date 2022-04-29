@@ -336,7 +336,7 @@ implements SourceXmlSchemaHelper {
   private static String JATS_eissn = JATS_jmeta + "/issn[@pub-type = \"epub\" or @publication-format=\"electronic\"]";
   public static String JATS_pubname = JATS_jmeta + "/publisher/publisher-name";
   
-  private static String JATS_doi =  JATS_ameta + "/article-id[@pub-id-type = \"doi\"]";
+  public static String JATS_doi =  JATS_ameta + "/article-id[@pub-id-type = \"doi\"]";
   private static String JATS_atitle = JATS_ameta + "/title-group";
   private static String JATS_volume = JATS_ameta + "/volume";
   private static String JATS_issue = JATS_ameta + "/issue";

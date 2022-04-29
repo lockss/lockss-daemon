@@ -1,0 +1,22 @@
+{
+
+  publisher <
+    name = Inter-Research Science Publisher
+  >
+
+  plugin = org.lockss.plugin.interresearch.ClockssInterResearchPlugin
+  param[base_url] = https://www.int-res.com/
+
+  implicit < status ; status2 ; year ; param[year] ; param[volume] ; name ; hidden[proxy] >
+
+  {
+
+    title <
+      name = Marine Ecology Progress Series
+    >
+      param[journal_id] = meps
+
+      au < testing ; testing ; 2021 ; 2021 ; 43-47 ; Marine Ecology Progress Series Volume 2021 ; >
+
+  }
+}

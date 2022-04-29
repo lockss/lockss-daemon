@@ -4,6 +4,7 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.SequenceInputStream;
+import java.security.DigestInputStream;
 import java.util.Map;
 import java.util.Set;
 import okhttp3.MediaType;
@@ -23,6 +24,7 @@ import org.apache.http.impl.io.HttpTransportMetricsImpl;
 import org.apache.http.impl.io.SessionOutputBufferImpl;
 import org.apache.http.message.BasicHttpResponse;
 import org.apache.http.message.BasicStatusLine;
+import org.lockss.laaws.V2AuMover.DigestCachedUrl;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.util.CIProperties;
@@ -36,13 +38,15 @@ public class CachedUrlRequestBody extends RequestBody {
 
   private final MediaType contentType;
   private final CachedUrl artifactCu;
+  private final DigestCachedUrl dcu;
 
-  public CachedUrlRequestBody(MediaType contentType, CachedUrl cu) {
-    if (cu == null) {
+  public CachedUrlRequestBody(MediaType contentType, DigestCachedUrl dcu) {
+    if (dcu == null) {
       throw new NullPointerException("cachedUrl == null");
     }
     this.contentType = contentType;
-    this.artifactCu = cu;
+    this.artifactCu = dcu.getCu();
+    this.dcu =dcu;
   }
 
   /**
@@ -135,8 +139,9 @@ public class CachedUrlRequestBody extends RequestBody {
     BasicHttpResponse response = new BasicHttpResponse(STATUS_LINE_OK);
     // Create an InputStreamEntity from artifact InputStream
     try {
-      InputStream is = artifactCu.getUnfilteredInputStream();
-      response.setEntity(new InputStreamEntity(artifactCu.getUnfilteredInputStream()));
+      DigestInputStream dis = new DigestInputStream(artifactCu.getUnfilteredInputStream(),
+          dcu.createMessageDigest()) ;
+      response.setEntity(new InputStreamEntity(dis));
       // Add artifact headers into HTTP response
       CIProperties props = artifactCu.getProperties();
       if (props != null) {
@@ -167,10 +172,19 @@ public class CachedUrlRequestBody extends RequestBody {
     Source source = null;
     try {
       InputStream inputStream = getHttpResponseStreamFromCachedUrl();
+      log.debug3("Writing " + (inputStream == null ? "(null) " : "") +
+                 artifactCu);
       if (inputStream != null) {
         source = Okio.source(inputStream);
         sink.writeAll(source);
+        long avail = inputStream.available();
+        if (avail > 0) {
+          log.error("Still CU bytes available after sink.writeAll(): " + avail);
+        }
       }
+    } catch (Exception e) {
+      log.error("Exception writing CU body to V2: " + artifactCu, e);
+      throw e;
     } finally {
       Util.closeQuietly(source);
       AuUtil.safeRelease(artifactCu);

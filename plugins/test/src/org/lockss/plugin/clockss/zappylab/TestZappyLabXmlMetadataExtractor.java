@@ -107,9 +107,10 @@ public class TestZappyLabXmlMetadataExtractor extends LockssTestCase {
   private static final String realXMLFile = "ZappyLabTest.xml";
 
 
-  
+
   public void testFromXMLFile() throws Exception {
     InputStream file_input = null;
+
     try {
       file_input = getResourceAsStream(realXMLFile);
       String string_input = StringUtil.fromInputStream(file_input);
@@ -118,7 +119,7 @@ public class TestZappyLabXmlMetadataExtractor extends LockssTestCase {
       // set up the content for this test
       mcu.setContent(string_input);
       mcu.setContentSize(string_input.length());
-
+      
       List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
       assertNotEmpty(mdlist);
       assertEquals(1, mdlist.size());
@@ -131,6 +132,5 @@ public class TestZappyLabXmlMetadataExtractor extends LockssTestCase {
     }
 
   }
-  
 
 }

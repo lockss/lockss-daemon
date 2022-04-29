@@ -1,48 +1,51 @@
+<!--
+
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>deprecated</string>
+    <string>deprecated - humanities_project registry</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
     <string>edu.nyu.plugin.ejce.EJCEPlugin</string>
   </entry>
   <entry>
-    <string>au_def_pause_time</string>
-    <long>6000</long>
-  </entry>
-  <entry>
-    <string>au_crawl_depth</string>
-    <int>5</int>
-  </entry>
-  <entry>
-    <string>au_name</string>
-    <string>&quot;EJCE %d (%s)&quot;, year, base_url</string>
-  </entry>
-  <entry>
-    <string>au_def_new_content_crawl</string>
-    <long>1209600000</long>
+    <string>plugin_version</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>EJCE plugin</string>
-  </entry>
-  <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%slockss/%d-manifesto\.html&quot;, base_url, year</string>
-      <string>1,&quot;^%sfasc%d[0-9]+\.asp&quot;, base_url, year</string>
-      <string>1,&quot;^%sarticles.asp.*&quot;, base_url</string>
-      <string>1,&quot;^%s[0-9]+.*\.pdf&quot;, base_url</string>
-      <string>1,&quot;%sinfo\.asp\?tipo=(scope|editorial|history|contacts|instructions)&quot;, base_url</string>
-      <string>1,&quot;%s(EJCE-Styles\.doc|Instructions\.pdf)&quot;, base_url</string>
-      <string>1,&quot;.*\.([cC][sS][sS]|[gG][iI][fF]|[jJ][pP][eE][gG]|[jJ][pP][gG]|[jJ][sS]|[pP][nN][gG])$&quot;</string>
-    </list>
-  </entry>
-  <entry>
-    <string>au_start_url</string>
-    <string>&quot;%slockss/%d-manifesto.html&quot;, base_url, year</string>
+    <string>European Journal of Comparative Economics Plugin</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -66,5 +69,37 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
     </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"European Journal of Comparative Economics Plugin, Base URL %s, Year %d", base_url, year</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%slockss/%d-manifesto.html", base_url, year</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%sfasc%d[0-9]+\.asp", base_url, year</string>
+      <string>1,"^%sarticles.asp", base_url</string>
+      <string>1,"^%s[0-9]+.*\.pdf", base_url</string>
+      <string>1,"^%sinfo\.asp\?tipo=(scope|editorial|history|contacts|instructions)", base_url</string>
+      <string>1,"^%s(EJCE-Styles\.doc|Instructions\.pdf)", base_url</string>
+      <string>1,"^%s[^?]*\.(bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_crawl_depth</string>
+    <int>5</int>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
   </entry>
 </map>

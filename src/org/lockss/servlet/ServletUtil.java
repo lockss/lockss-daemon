@@ -1381,7 +1381,7 @@ public class ServletUtil {
           if (numOk > 0) {
             isAnySelectable.setValue(true);
             tbl.add(checkbox(servlet, checkboxGroup,
-			     set.getId(), false));
+			     encodeAttr(set.getId()), false));
           }
           tbl.newCell(CHOOSESETS_CELL_ATTRIBUTES);
           String txt = encodeText(set.getName()) + " (" + numOk + ")";

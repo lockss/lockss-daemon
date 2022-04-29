@@ -1,0 +1,80 @@
+{
+
+  publisher <
+    name = University of Nebraska at Omaha
+  >
+  
+  {
+  
+    title <
+      name = The Journal of Religion and Film ;
+      eissn = 1092-1311 ;
+      issnl = 1092-1311
+    >
+    
+    rights = openaccess
+    #Moved to bepress
+    
+    # FIXME This will induce a slight complication someday because the original plugin is in the humanities_project registry but BePressPlugin is in the non-Alliance prod registry
+
+    {
+    
+      plugin = org.lockss.plugin.bepress.BePressPlugin
+      param[base_url] = https://digitalcommons.unomaha.edu/
+      param[journal_abbr] = jrf
+      implicit < status ; year ; name ; param[volume] >
+    
+      au < manifest ; 1997 ; The Journal of Religion and Film Volume 1 ; 1 >
+      au < manifest ; 1998 ; The Journal of Religion and Film Volume 2 ; 2 >
+      au < manifest ; 1999 ; The Journal of Religion and Film Volume 3 ; 3 >
+      au < manifest ; 2000 ; The Journal of Religion and Film Volume 4 ; 4 >
+      au < manifest ; 2001 ; The Journal of Religion and Film Volume 5 ; 5 >
+      au < manifest ; 2002 ; The Journal of Religion and Film Volume 6 ; 6 >
+      au < manifest ; 2003 ; The Journal of Religion and Film Volume 7 ; 7 >
+      au < manifest ; 2004 ; The Journal of Religion and Film Volume 8 ; 8 >
+      au < manifest ; 2005 ; The Journal of Religion and Film Volume 9 ; 9 >
+      au < manifest ; 2006 ; The Journal of Religion and Film Volume 10 ; 10 >
+      au < manifest ; 2007 ; The Journal of Religion and Film Volume 11 ; 11 >
+      au < manifest ; 2008 ; The Journal of Religion and Film Volume 12 ; 12 >
+      au < manifest ; 2009 ; The Journal of Religion and Film Volume 13 ; 13 >
+      au < released ; 2010 ; The Journal of Religion and Film Volume 14 ; 14 >
+      au < released ; 2011 ; The Journal of Religion and Film Volume 15 ; 15 >
+      au < released ; 2012 ; The Journal of Religion and Film Volume 16 ; 16 >
+      au < released ; 2013 ; The Journal of Religion and Film Volume 17 ; 17 >
+      au < released ; 2014 ; The Journal of Religion and Film Volume 18 ; 18 >
+      au < released ; 2015 ; The Journal of Religion and Film Volume 19 ; 19 >
+      au < released ; 2016 ; The Journal of Religion and Film Volume 20 ; 20 >
+      au < released ; 2017 ; The Journal of Religion and Film Volume 21 ; 21 >
+      au < released ; 2018 ; The Journal of Religion and Film Volume 22 ; 22 >
+      au < released ; 2019 ; The Journal of Religion and Film Volume 23 ; 23 >
+      au < released ; 2020 ; The Journal of Religion and Film Volume 24 ; 24 >
+      au < released ; 2021 ; The Journal of Religion and Film Volume 25 ; 25 >
+      au < manifest ; 2022 ; The Journal of Religion and Film Volume 26 ; 26 >
+
+    }
+    
+    {
+    
+      plugin = edu.jhu.library.plugin.jrf.JournalOfReligionAndFilmPlugin
+      param[base_url] = http://www.unomaha.edu/jrf/
+      implicit < status ; year ; name ; param[volume] >
+    
+      au < superseded ; 1997 ; The Journal of Religion and Film Volume 1 [superseded] ; 1 >
+      au < superseded ; 1998 ; The Journal of Religion and Film Volume 2 [superseded] ; 2 >
+      au < superseded ; 1999 ; The Journal of Religion and Film Volume 3 [superseded] ; 3 >
+      au < superseded ; 2000 ; The Journal of Religion and Film Volume 4 [superseded] ; 4 >
+      au < superseded ; 2001 ; The Journal of Religion and Film Volume 5 [superseded] ; 5 >
+      au < superseded ; 2002 ; The Journal of Religion and Film Volume 6 [superseded] ; 6 >
+      au < superseded ; 2003 ; The Journal of Religion and Film Volume 7 [superseded] ; 7 >
+      au < superseded ; 2004 ; The Journal of Religion and Film Volume 8 [superseded] ; 8 >
+      au < superseded ; 2005 ; The Journal of Religion and Film Volume 9 [superseded] ; 9 >
+      au < superseded ; 2006 ; The Journal of Religion and Film Volume 10 [superseded] ; 10 >
+      au < superseded ; 2007 ; The Journal of Religion and Film Volume 11 [superseded] ; 11 >
+      au < superseded ; 2008 ; The Journal of Religion and Film Volume 12 [superseded] ; 12 >
+      au < superseded ; 2009 ; The Journal of Religion and Film Volume 13 [superseded] ; 13 >
+      
+    }
+    
+  }
+  
+}

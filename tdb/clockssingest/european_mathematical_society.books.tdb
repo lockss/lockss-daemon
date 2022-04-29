@@ -13,6 +13,17 @@
 
   {
     title <
+      name = EMS Books ;
+      type = bookSeries
+    >
+      #Books that are not in a series
+
+      au < manifest ; exists ; 2021 ; 978-3-98547-006-8 ; 978-3-98547-506-3 ; Handbook of Automata Theory ; 248 ; >
+
+  }
+
+  {
+    title <
       name = EMS Monographs in Mathematics ;
       issn = 2523-5192 ;
       eissn = 2523-5206 ;
@@ -77,6 +88,7 @@
       au < finished ; crawling ; 2019 ; 978-3-03719-197-2 ; 978-3-03719-697-7 ; Spectral Structures and Topological Methods in Mathematics ; 244 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 978-3-03719-198-9 ; 978-3-03719-698-4 ; $t$-Motives: Hodge Structures, Transcendence and Other Motivic Aspects ; 235 ; >
       au < crawling ; exists ; 2021 ; 978-3-98547-005-1 ; 978-3-98547-505-6 ; Probabilistic Structures in Evolution ; 264 ; >
+      au < manifest ; exists ; 2021 ; 978-3-98547-007-5 ; 978-3-98547-507-0 ; Partial Differential Equations, Spectral Theory, and Mathematical Physics ; 265 ; >
 
   }
 
@@ -122,6 +134,7 @@
       au < finished ; crawling ; 2019 ; 978-3-03719-195-8 ; 978-3-03719-695-3 ; Function Spaces with Dominating Mixed Smoothness ; 241 ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2020 ; 978-3-03719-210-8 ; 978-3-03719-710-3 ; Classification of Complex Algebraic Surfaces ; 257 ; >
       au < crawling ; exists ; 2021 ; 978-3-98547-004-4 ; 978-3-98547-504-9 ; Lectures on Selected Topics in von Neumann Algebras ; 262 ; >
+      au < manifest ; exists ; 2021 ; 978-3-98547-008-2 ; 978-3-98547-508-7 ; Orthogonal Polynomials and Linear Functionals ; 268 ; >
 
   }
 
@@ -155,6 +168,8 @@
       au < finished ; crawling ; 2017 ; 978-3-03719-179-8 ; 978-3-03719-679-3 ; A Course In Error-Correcting Codes (978-3-03719-679-3) ; 223 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; 978-3-03719-188-0 ; 978-3-03719-688-5 ; A Brief Introduction to Spectral Graph Theory ; 233 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2018 ; 978-3-03719-187-3 ; 978-3-03719-687-8 ; An Introduction to Kac-Moody Groups over Fields ; 232 ; reingest3.clockss.org:8083 >
+      au < manifest ; exists ; 2021 ; 978-3-98547-010-5 ; 978-3-98547-510-0 ; An Invitation to Optimal Transport, Wasserstein Distances, and Gradient Flows ; 267 ; >
+      au < manifest ; exists ; 2021 ; 978-3-98547-012-9 ; 978-3-98547-512-4 ; Dynamic Optimization for Beginners ; 269 ; >
 
   }
 
@@ -199,6 +214,7 @@
       au < finished ; crawling ; 2019 ; 978-3-03719-191-0 ; 978-3-03719-691-5 ; Estimates for Differential Operators in Half-space ; 237 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; 978-3-03719-208-5 ; 978-3-03719-708-0 ; $K3$ Surfaces ; 255 ; >
       au < crawling ; exists ; 2020 ; 978-3-03719-206-1 ; 978-3-03719-706-6 ; Accuracy of Mathematical Models ; 253 ; >
+      au < manifest ; exists ; 2021 ; 978-3-98547-009-9 ; 978-3-98547-509-4 ; Homogenized Models of Suspension Dynamics ; 270 ; >
 
   }
 
@@ -307,6 +323,7 @@
       au < deepCrawl ; exists ; 2020 ; 978-3-03719-203-0 ; 978-3-03719-703-5 ; Handbook of Teichmüller Theory, Volume VII ; 250 ; >
       au < deepCrawl ; exists ; 2020 ; 978-3-03719-204-7 ; 978-3-03719-704-2 ; Algebraic Combinatorics, Resurgence, Moulds and Applications (CARMA), Volume 1 ; 251 ; >
       au < deepCrawl ; exists ; 2020 ; 978-3-03719-205-4 ; 978-3-03719-705-9 ; Algebraic Combinatorics, Resurgence, Moulds and Applications (CARMA), Volume 2 ; 252 ; >
+      au < manifest ; exists ; 2021 ; 978-3-98547-001-3 ; 978-3-98547-501-8 ; Topology and Geometry ; 266 ; >
 
   }
 

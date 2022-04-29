@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2018, Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University,
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,
@@ -33,14 +33,15 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 package org.lockss.tdb;
 
 import java.io.*;
+import java.nio.charset.*;
 import java.util.*;
 
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.misc.*;
 import org.antlr.v4.runtime.tree.*;
 
-import org.lockss.tdb.AntlrUtil.NamedAntlrInputStream;
 import org.lockss.tdb.AntlrUtil.SyntaxError;
+import org.lockss.tdb.StrictInputStreamReader.MalformedInputRangeException;
 import org.lockss.tdb.TdbParser.*;
 
 /**
@@ -68,7 +69,7 @@ public class TdbBuilder extends TdbParserBaseListener {
    * 
    * @since 1.68
    */
-  public static final String VERSION = "[TdbBuilder:0.3.3]";
+  public static final String VERSION = "[TdbBuilder:0.4.0]";
   
   /**
    * <p>
@@ -380,8 +381,8 @@ public class TdbBuilder extends TdbParserBaseListener {
    * 
    * @param fileName
    *          A file name.
-   * @param encoding
-   *          The encoding of the file.
+   * @param charset
+   *          The character set of the file.
    * @throws IOException
    *           if an I/O exception occurs.
    * @throws SyntaxError
@@ -389,9 +390,9 @@ public class TdbBuilder extends TdbParserBaseListener {
    * @since 1.68
    */
   public void parse(String fileName,
-                    String encoding)
-      throws IOException, SyntaxError {
-    parse(new ANTLRFileStream(fileName, encoding));
+                    Charset charset)
+      throws MalformedInputRangeException, MalformedInputException, IOException, SyntaxError {
+    parse(CharStreams.fromReader(new StrictInputStreamReader(new FileInputStream(fileName), charset), fileName));
   }
 
   /**
@@ -400,12 +401,12 @@ public class TdbBuilder extends TdbParserBaseListener {
    * the {@link Tdb} structure.
    * </p>
    * 
-   * @param fileName
+   * @param name
    *          A source name.
    * @param inputStream
    *          An input stream.
-   * @param inputStream
-   *          The encoding of the input stream.
+   * @param charset
+   *          The character set of the input stream.
    * @throws UnsupportedEncodingException
    *           if the given encoding is invalid.
    * @throws IOException
@@ -416,9 +417,9 @@ public class TdbBuilder extends TdbParserBaseListener {
    */
   public void parse(String name,
                     InputStream inputStream,
-                    String encoding)
-      throws UnsupportedEncodingException, IOException, SyntaxError {
-    parse(new NamedAntlrInputStream(name, inputStream, encoding));
+                    Charset charset)
+      throws MalformedInputRangeException, MalformedInputException, IOException, SyntaxError {
+    parse(CharStreams.fromReader(new StrictInputStreamReader(inputStream, charset), name));
   }
 
   /**

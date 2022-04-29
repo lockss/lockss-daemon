@@ -1,0 +1,26 @@
+{
+
+  publisher <
+    name = United States Department of Agriculture
+  >
+
+  {
+  
+    title <
+      name = Amber Waves ;
+      issn = 1545-875X ;
+      issnl = 1545-8741
+    >
+    
+    rights = openaccess
+    # Ancient plugin name has an underscore in it
+    plugin = gov.gpo.access.permanent.plugin.amberwaves.Amber_WavesPlugin
+    # Ancient AU definition has no slash at the end of the base_url
+    param[base_url] = http://permanent.access.gpo.gov/lockss/Amber_Waves
+    implicit < status ; year ; name ; param[year] >  
+
+    au < down ; 2005 ; Amber Waves 2005 ; 2005 >
+      
+  }
+  
+}

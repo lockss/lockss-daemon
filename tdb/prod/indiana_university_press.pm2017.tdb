@@ -38,8 +38,8 @@
         au < released ; 2017-2018 ; Africa Today Volume 64 [2017-2018] ; 13019 >
         au < released ; 2018-2019 ; Africa Today Volume 65 [2018-2019] ; 13900 >
         au < released ; 2019 ; Africa Today Volume 66 [2019] ; 14516 >
-        au < manifest ; 2020-2021 ; Africa Today Volume 67 [2020-2021] ; 15296 >
-        au < manifest ; 2021 ; Africa Today Volume 68 [2021] ; 16532 >
+        au < released ; 2020-2021 ; Africa Today Volume 67 [2020-2021] ; 15296 >
+        au < released ; 2021 ; Africa Today Volume 68 [2021] ; 16532 >
 
     }
 
@@ -62,7 +62,7 @@
         au < released ; 2018 ; African Conflict & Peacebuilding Review Volume 8 [2018] ; 13518 >
         au < released ; 2019 ; African Conflict & Peacebuilding Review Volume 9 [2019] ; 14230 >
         au < released ; 2020 ; African Conflict & Peacebuilding Review Volume 10 [2020] ; 14971 >
-        au < manifest ; 2021 ; African Conflict & Peacebuilding Review Volume 11 [2021] ; 15869 >
+        au < released ; 2021 ; African Conflict & Peacebuilding Review Volume 11 [2021] ; 15869 >
 
     }
 
@@ -97,7 +97,23 @@
         au < released ; 2018 ; Aleph: Historical Studies in Science and Judaism Volume 18 [2018] ; 13485 >
         au < released ; 2019 ; Aleph: Historical Studies in Science and Judaism Volume 19 [2019] ; 14203 >
         au < released ; 2020 ; Aleph: Historical Studies in Science and Judaism Volume 20 [2020] ; 15306 >
-        au < manifest ; 2021 ; Aleph: Historical Studies in Science and Judaism Volume 21 [2021] ; 16086 >
+        au < released ; 2021 ; Aleph: Historical Studies in Science and Judaism Volume 21 [2021] ; 16086 >
+
+    }
+
+    {
+    title <
+      name = American Religion ;
+      issn = 2643-9255 ;
+      eissn = 2643-9247
+
+    >
+
+      attr[journal_id] = 825
+
+      au < released ; 2019-2020 ; American Religion Volume 1 [2019-2020] ; 16131 >
+      au < released ; 2020-2021 ; American Religion Volume 2 [2020-2021] ; 16132 >
+      au < manifest ; 2021-2022 ; American Religion Volume 3 [2021-2022] ; 16809 >
 
     }
 
@@ -114,7 +130,7 @@
         au < released ; 2018 ; Antisemitism Studies 2 [2018] ; 13974 >
         au < released ; 2019 ; Antisemitism Studies Volume 3 [2019] ; 14090 >
         au < released ; 2020 ; Antisemitism Studies Volume 4 [2020] ; 14863 >
-        au < manifest ; 2021 ; Antisemitism Studies Volume 5 [2021] ; 15711 >
+        au < released ; 2021 ; Antisemitism Studies Volume 5 [2021] ; 15711 >
 
     }
 
@@ -192,7 +208,7 @@
         au < released ; 2018 ; Ethics & the Environment Volume 23 [2018] ; 13540 >
         au < released ; 2019 ; Ethics & the Environment Volume 24 [2019] ; 14208 >
         au < released ; 2020 ; Ethics & the Environment Volume 25 [2020] ; 14952 >
-        au < manifest ; 2021 ; Ethics & the Environment Volume 26 [2021] ; 15881 >
+        au < released ; 2021 ; Ethics & the Environment Volume 26 [2021] ; 15881 >
 
     }
 
@@ -223,7 +239,7 @@
         au < released ; 2018 ; Film History: An International Journal Volume 30 [2018] ; 13565 >
         au < released ; 2019 ; Film History: An International Journal Volume 31 [2019] ; 14233 >
         au < released ; 2020 ; Film History: An International Journal Volume 32 [2020] ; 15066 >
-        au < manifest ; 2021 ; Film History: An International Journal Volume 33 [2021] ; 15791 >
+        au < released ; 2021 ; Film History: An International Journal Volume 33 [2021] ; 15791 >
 
     }
 
@@ -317,7 +333,7 @@
         au < released ; 2018 ; Indiana Journal of Global Legal Studies Volume 25 [2018] ; 13529 >
         au < released ; 2019 ; Indiana Journal of Global Legal Studies Volume 26 [2019] ; 14104 >
         au < released ; 2020 ; Indiana Journal of Global Legal Studies Volume 27 [2020] ; 15029 >
-        au < manifest ; 2021 ; Indiana Journal of Global Legal Studies Volume 28 [2021] ; 15672 >
+        au < released ; 2021 ; Indiana Journal of Global Legal Studies Volume 28 [2021] ; 15672 >
 
     }
 
@@ -338,6 +354,7 @@
         au < released ; 2017 ; Indiana Theory Review Volume 34 [2017] ; 13165 >
         au < released ; 2018 ; Indiana Theory Review Volume 35 [2018] ; 13942 >
         au < released ; 2020 ; Indiana Theory Review Volume 36 [2020] ; 15167 >
+        au < released ; 2021 ; Indiana Theory Review Volume 37 [2021] ; 16628 >
 
     }
 
@@ -377,7 +394,8 @@
         au < released ; 2018 ; Israel Studies Volume 23 [2018] ; 13028 >
         au < released ; 2019 ; Israel Studies Volume 24 [2019] ; 13776 >
         au < released ; 2020 ; Israel Studies Volume 25 [2020] ; 14525 >
-        au < manifest ; 2021 ; Israel Studies Volume 26 [2021] ; 15277 >
+        au < released ; 2021 ; Israel Studies Volume 26 [2021] ; 15277 >
+        au < manifest ; 2022 ; Israel Studies Volume 27 [2022] ; 16791 >
 
     }
 
@@ -418,6 +436,22 @@
     
     {
     title <
+      name = Journal of Education in Muslim Societies ;
+      issn = 2641-0044 ;
+      eissn =  2641-0052
+
+    >
+
+      attr[journal_id] = 830
+
+      au < released ; 2019-2020 ; Journal of Education in Muslim Societies Volume 1 [2019-2020] ; 16186 >
+      au < released ; 2020-2021 ; Journal of Education in Muslim Societies Volume 2 [2020-2021] ; 16187 >
+      au < manifest ; 2021-2022 ; Journal of Education in Muslim Societies Volume 3 [2021-2022] ; 16758 >
+
+    }
+
+    {
+    title <
       name = Journal of Feminist Studies in Religion ;
       issn = 8755-4178  ;
       eissn = 1553-3913  ;
@@ -443,7 +477,7 @@
         au < released ; 2018 ; Journal of Feminist Studies in Religion Volume 34 [2018] ; 13392 >
         au < released ; 2019 ; Journal of Feminist Studies in Religion Volume 35 [2019] ; 14157 >
         au < released ; 2020 ; Journal of Feminist Studies in Religion Volume 36 [2020] ; 14879 >
-        au < manifest ; 2021 ; Journal of Feminist Studies in Religion Volume 37 [2021] ; 15710 >
+        au < released ; 2021 ; Journal of Feminist Studies in Religion Volume 37 [2021] ; 15710 >
 
     }
 
@@ -476,7 +510,7 @@
         au < released ; 2018 ; Journal of Folklore Research Volume 55 [2018] ; 13309 >
         au < released ; 2019 ; Journal of Folklore Research Volume 56 [2019] ; 13993 >
         au < released ; 2020 ; Journal of Folklore Research Volume 57 [2020] ; 14787 >
-        au < manifest ; 2021 ; Journal of Folklore Research Volume 58 [2021] ; 15513 >
+        au < released ; 2021 ; Journal of Folklore Research Volume 58 [2021] ; 15513 >
 
     }
 
@@ -496,6 +530,7 @@
         au < released ; 2018 ; Journal of Islamic and Muslim Studies Volume 3 [2018] ; 13687 >
         au < released ; 2019 ; Journal of Islamic and Muslim Studies Volume 4 [2019] ; 14435 >
         au < released ; 2020 ; Journal of Islamic and Muslim Studies Volume 5 [2020] ; 15282 >
+        au < released ; 2021 ; Journal of Islamic and Muslim Studies Volume 6 [2021] ; 16861 >
 
     }
     
@@ -530,7 +565,8 @@
         au < released ; 2017-2018 ; Journal of Modern Literature Volume 41 [2017-2018] ; 13123 >
         au < released ; 2018-2019 ; Journal of Modern Literature Volume 42 [2018-2019] ; 13830 >
         au < released ; 2019-2020 ; Journal of Modern Literature Volume 43 [2019-2020] ; 14583 >
-        au < manifest ; 2020-2021 ; Journal of Modern Literature Volume 44 [2020-2021] ; 15388 >
+        au < released ; 2020-2021 ; Journal of Modern Literature Volume 44 [2020-2021] ; 15388 >
+        au < released ; 2021 ; Journal of Modern Literature Volume 45 [2021] ; 16828 >
 
     }
 
@@ -551,6 +587,7 @@
       au < released ; 2018 ; Journal of the Ottoman and Turkish Studies Association Volume 5 [2018] ; 14419 >
       au < released ; 2019 ; Journal of the Ottoman and Turkish Studies Association Volume 6 [2019] ; 14420 >
       au < released ; 2020 ; Journal of the Ottoman and Turkish Studies Association Volume 7 [2020] ; 15101 >
+      au < released ; 2021 ; Journal of the Ottoman and Turkish Studies Association Volume 8 [2021] ; 16849 >
 
     }
 
@@ -617,6 +654,43 @@
         au < released ; 2018 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 33 [Spring 5779/2018] ; 13816 >
         au < released ; 2019 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 34 [Spring 5779/2019] ; 14268 >
         au < released ; 2019 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 35 [Fall 5779/2019] ; 14564 >
+
+    }
+
+    {
+    title <
+      name = Pakistan Journal of Historical Studies ;
+      issn = 2412-611X ;
+      eissn = 2470-8518
+
+    >
+
+      attr[journal_id] = 828
+
+      au < released ; 2016 ; Pakistan Journal of Historical Studies Volume 1 [2016] ; 16188 >
+      au < released ; 2017 ; Pakistan Journal of Historical Studies Volume 2 [2017] ; 16189 >
+      au < released ; 2018 ; Pakistan Journal of Historical Studies Volume 3 [2018] ; 16190 >
+      au < released ; 2019 ; Pakistan Journal of Historical Studies Volume 4 [2019] ; 16191 >
+      au < released ; 2020 ; Pakistan Journal of Historical Studies Volume 5 [2020] ; 16626 >
+      au < notReady ; 2021 ; Pakistan Journal of Historical Studies Volume 6 [2021] ; 16733 > #manifest page exists without content link
+
+    }
+
+    {
+    title <
+      name = Philanthropy & Education ;
+      issn = 2470-7686 ;
+      eissn = 2470-7694
+
+    >
+
+      attr[journal_id] = 833
+
+      au < released ; 2017-2018 ; Philanthropy & Education Volume 1 [2017-2018] ; 16192 >
+      au < released ; 2018-2019 ; Philanthropy & Education Volume 2 [2018-2019] ; 16193 >
+      au < released ; 2019-2020 ; Philanthropy & Education Volume 3 [2019-2020] ; 16194 >
+      au < released ; 2020-2021 ; Philanthropy & Education Volume 4 [2020-2021] ; 16195 >
+      au < manifest ; 2021-2022 ; Philanthropy & Education Volume 5 [2021-2022] ; 16714 >
 
     }
 
@@ -706,6 +780,24 @@
     
     {
     title <
+      name = Recreation, Parks, and Tourism in Public Health ;
+      issn = 2474-1825 ;
+      eissn = 2474-1833
+
+    >
+
+      attr[journal_id] = 827
+
+      au < released ; 2017 ; Recreation, Parks, and Tourism in Public Health Volume 1 [2017] ; 16196 >
+      au < released ; 2018 ; Recreation, Parks, and Tourism in Public Health Volume 2 [2018] ; 16197 >
+      au < released ; 2019 ; Recreation, Parks, and Tourism in Public Health Volume 3 [2019] ; 16198 >
+      au < released ; 2020 ; Recreation, Parks, and Tourism in Public Health Volume 4 [2020] ; 16199 >
+      au < released ; 2021 ; Recreation, Parks, and Tourism in Public Health Volume 5 [2021] ; 16627 >
+
+    }
+
+    {
+    title <
       name = Research in African Literatures ;
       issn = 0034-5210  ;
       eissn = 1527-2044 
@@ -735,6 +827,7 @@
         au < released ; 2018 ; Research in African Literatures Volume 49 [2018] ; 13603 >
         au < released ; 2019 ; Research in African Literatures Volume 50 [2019] ; 14289 >
         au < released ; 2020 ; Research in African Literatures Volume 51 [2020] ; 15178 >
+        au < manifest ; 2021-2022 ; Research in African Literatures Volume 52 [2021-2022] ; 16761 >
 
     }
 
@@ -756,7 +849,8 @@
         au < released ; 2016-2017 ; Spectrum: A Journal on Black Men Volume 5 [2016-2017] ; 12159 >
         au < released ; 2017-2018 ; Spectrum: A Journal on Black Men Volume 6 [2017-2018] ; 13044 >
         au < released ; 2018-2019 ; Spectrum: A Journal on Black Men Volume 7 [2018-2019] ; 14328 >
-        au < manifest ; 2020-2021 ; Spectrum: A Journal on Black Men Volume 8 [2020-2021] ; 15263 >
+        au < released ; 2020-2021 ; Spectrum: A Journal on Black Men Volume 8 [2020-2021] ; 15263 >
+        au < released ; 2021 ; Spectrum: A Journal on Black Men Volume 9 [2021] ; 16724 >
 
     }
 
@@ -832,7 +926,7 @@
         au < released ; 2018 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 54 [2018] ; 13580 >
         au < released ; 2019 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 55 [2019] ; 14292 >
         au < released ; 2020 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 56 [2020] ; 15046 >
-        au < manifest ; 2021 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 57 [2021] ; 15927 >
+        au < released ; 2021 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 57 [2021] ; 15927 >
 
     }
 
@@ -941,6 +1035,21 @@
         au < released ; 2016-2018 ; e-Service Journal Volume 10 [2016-2018] ; 12468 >
         au < released ; 2019 ; e-Service Journal Volume 11 [2019] ; 14352 >
         au < released ; 2020 ; e-Service Journal Volume 12 [2020] ; 15182 >
+        au < released ; 2021 ; e-Service Journal Volume 13 [2021] ; 16689 >
+
+    }
+
+    {
+    title <
+      name = Jazz Education in Research and Practice ;
+      issn = 2639-7668 ;
+      eissn = 2639-7676
+
+    >
+
+      attr[journal_id] = 831
+
+      au < manifest ; 2022 ; Jazz Education in Research and Practice Volume 3 [2022] ; 16811 >
 
     }
 

@@ -68,6 +68,7 @@
     au < exists ; 2019 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 9 ; 9 ; 2019 >
     au < exists ; 2020 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 10 (2020) ; 10 ; 2020 >
     au < exists ; 2021 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 10 (2021) ; 10 ; 2021 >
+    au < expected ; 2022 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 11 (2022) ; 11 ; 2022 >
 
     }
   }
@@ -115,6 +116,7 @@
     au < exists ; 2019 ; International Journal of Infection Control Volume 15 ; 15 ; 2019 >
     au < exists ; 2020 ; International Journal of Infection Control Volume 16 ; 16 ; 2020 >
     au < exists ; 2021 ; International Journal of Infection Control Volume 17 ; 17 ; 2021 >
+    au < expected ; 2022 ; International Journal of Infection Control Volume 18 ; 18 ; 2022 >
 
     }
   }
@@ -162,6 +164,7 @@
     au < exists ; 2019 ; International Journal of Transactional Analysis Research & Practice Volume 10 ; 10 ; 2019 >
     au < exists ; 2020 ; International Journal of Transactional Analysis Research & Practice Volume 11 ; 11 ; 2020 >
     au < exists ; 2021 ; International Journal of Transactional Analysis Research & Practice Volume 12 ; 12 ; 2021 >
+    au < expected ; 2022 ; International Journal of Transactional Analysis Research & Practice Volume 13 ; 13 ; 2022 >
 
     }
   }
@@ -211,6 +214,7 @@
     au < exists ; 2019 ; Intersticios Volume 13 ; 13 ; 2019 >
     au < exists ; 2020 ; Intersticios Volume 14 ; 14 ; 2020 >
     au < exists ; 2021 ; Intersticios Volume 15 ; 15 ; 2021 >
+    au < expected ; 2022 ; Intersticios Volume 16 ; 16 ; 2022 >
 
     }
 
@@ -373,10 +377,10 @@
     implicit < status ; year ; name ; volume ; param[year] >
     param[base_url] = https://www.kcajournals.com/
     param[journal_id] = KCAJBM
-
     #moved to ojs3
     #NOT READY - requires registration to access full-text content; we have sent an email 
     # to see if this can be turned off, otherwise not preservable in the GLN
+
 
 
     au < exists ; 2008 ; KCA Journal of Business Management Volume 1 ; 1 ; 2008 >
@@ -434,6 +438,7 @@
     au < exists ; 2019 ; Khyber Medical University Journal Volume 11 ; 11 ; 2019 >
     au < exists ; 2020 ; Khyber Medical University Journal Volume 12 ; 12 ; 2020 >
     au < exists ; 2021 ; Khyber Medical University Journal Volume 13 ; 13 ; 2021 >
+    au < expected ; 2022 ; Khyber Medical University Journal Volume 14 ; 14 ; 2022 >
 
     }
   }
@@ -481,7 +486,8 @@
     au < notReady ; 2018 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 10 ; 10 ; 2018 > #malformed url https://www.mjhid.org/index.php/mjhid/article/view/2018.017/ayodeleolaniyi8@gmail.com
     au < notReady ; 2019 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 11 ; 11 ; 2019 > #malformed url https://www.mjhid.org/index.php/mjhid/article/view/2019.064/www.graphpad.com
     au < released ; 2020 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 12 ; 12 ; 2020 >
-    au < manifest ; 2021 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 13 ; 13 ; 2021 >
+    au < testing ; 2021 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 13 ; 13 ; 2021 >
+    au < manifest ; 2022 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 14 ; 14 ; 2022 >
 
     }
   }
@@ -525,7 +531,8 @@
     attr[start_stem] = index.php/
     param[base_url] = https://www.syllabusjournal.org/
 
-    au < manifest ; 2021 ; Syllabus Volume 10 ; 10 ; 2021 >
+    au < released ; 2021 ; Syllabus Volume 10 ; 10 ; 2021 >
+    au < expected ; 2022 ; Syllabus Volume 11 ; 11 ; 2022 >
 
     }
   }

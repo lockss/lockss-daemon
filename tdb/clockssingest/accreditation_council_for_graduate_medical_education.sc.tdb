@@ -34,10 +34,12 @@
     au < doNotProcess ; exists ; 2017 ; 2017 ; Journal of Graduate Medical Education Volume 9 ; 9 ; >
     au < doNotProcess ; exists ; 2018 ; 2018 ; Journal of Graduate Medical Education Volume 10 ; 10 ; >
     au < doNotProcess ; exists ; 2019 ; 2019 ; Journal of Graduate Medical Education Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; Journal of Graduate Medical Education Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Journal of Graduate Medical Education Volume 13 ; 13 ; >
+    au < notReady ; exists ; 2020 ; 2020 ; Journal of Graduate Medical Education Volume 12 ; 12 ; >
+    au < notReady ; exists ; 2021 ; 2021 ; Journal of Graduate Medical Education Volume 13 ; 13 ; >
+    au < notReady ; exists ; 2022 ; 2022 ; Journal of Graduate Medical Education Volume 14 ; 14 ; >
 
     }
+
     {
     param[base_url] = https://allenpress.com/
     au < superseded ; exists ; 2020 ; 2020 ; Journal of Graduate Medical Education 12 [superseded] ; 12 ; >

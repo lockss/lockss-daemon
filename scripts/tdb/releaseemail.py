@@ -19,7 +19,97 @@ RELEASING = set(['releasing'])
 RELEASED = set(['released', 'down', 'superseded', 'zapped'])
 
 # Set of non-Alliance plugins
-NON_ALLIANCE = set(['edu.columbia.plugin.JiwsPlugin', 'edu.cornell.library.epr.EPRPlugin2001', 'edu.cornell.library.epr.EPRPlugin2002On', 'edu.cornell.library.jbe.JBEPlugin', 'edu.fcla.plugin.arkivoc.ArkivocPlugin', 'edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin', 'edu.harvard.plugin.jrs.JRSPlugin', 'edu.harvard.plugin.WorldHaikuReview.WorldHaikuReviewPlugin', 'edu.indiana.lib.plugin.jcjpc.JcjpcPlugin', 'edu.indiana.lib.plugin.mto.MTOPlugin', 'edu.jhu.library.plugin.jrf.JournalOfReligionAndFilmPlugin', 'edu.jhu.library.plugin.MedievalForumPlugin', 'edu.nyu.plugin.bonefolder.BonefolderPlugin', 'edu.nyu.plugin.ejce.EJCEPlugin', 'edu.nyu.plugin.ejcjs.EJCJSPlugin', 'edu.nyu.plugin.heplwebzine.HEPLwebzine', 'edu.nyu.plugin.journalofglobalbuddhism.JournalOfGlobalBuddhismPlugin', 'edu.nyu.plugin.LeedsICSPlugin', 'edu.princeton.plugin.bmcr.BMCRPlugin', 'edu.princeton.plugin.ncaw.19thCenturyArtWorldwidePlugin', 'edu.stanford.plugin.exquisitecorpse.ExquisiteCorpsePlugin', 'edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin', 'edu.upenn.library.plugin.clcweb.CLCWebPlugin', 'edu.wisc.library.plugin.BigBridgePlugin', 'edu.wisc.library.plugin.BigBridgeVol1Plugin', 'edu.wisc.library.plugin.CortlandReviewPlugin', 'edu.wisc.library.plugin.CortlandReview00Plugin', 'edu.wisc.library.plugin.CortlandReview98Plugin', 'edu.wisc.library.plugin.CortlandReview99Plugin', 'edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin', 'edu.yale.library.lockss.plugin.mitejmes.MITEJMESPlugin', 'gov.loc.plugin.CJPentecostalCharismaticResearchPlugin', 'gov.loc.plugin.TESLEJPlugin', 'nz.ac.otago.plugin.scholia.ScholiaPlugin', 'org.lockss.plugin.absinthe.AbsinthePlugin', 'org.lockss.plugin.bepress.BePressPlugin', 'org.lockss.plugin.bioone.BioOnePlugin', 'org.lockss.plugin.blackbird.BlackbirdPlugin', 'org.lockss.plugin.clogic.CulturalLogicPlugin', 'org.lockss.plugin.disputatio.DisputatioPlugin', 'org.lockss.plugin.emc.EarlyModernCulturePlugin', 'org.lockss.plugin.emls.EmlsPlugin', 'org.lockss.plugin.evergreenreview.EvergreenReviewPlugin', 'org.lockss.plugin.GendersPlugin', 'org.lockss.plugin.histcoop.HistoryCooperativePlugin', 'org.lockss.plugin.invisibleculture.InvisibleCulturePlugin', 'org.lockss.plugin.jackmagazine.JackMagazinePlugin', 'org.lockss.plugin.jscm.JSCMPlugin', 'org.lockss.plugin.lapetitezine.LaPetiteZinePlugin', 'org.lockss.plugin.locksscard.LockssCardPlugin', 'org.lockss.plugin.madhattersreview.MadHattersReviewPlugin', 'org.lockss.plugin.minerva.MinervaPlugin', 'org.lockss.plugin.minerva.Minerva2020Plugin', 'org.lockss.plugin.msr.MSRPlugin', 'org.lockss.plugin.ojs.OJSPlugin', 'org.lockss.plugin.othervoices.OtherVoicesPlugin', 'org.lockss.plugin.projmuse.ProjectMusePlugin', 'org.lockss.plugin.prok.ProkPlugin', 'org.molvis.plugin.MolVisPlugin', 'org.lockss.plugin.sfpoetrybroadside.SantaFePoetryBroadsidePlugin', 'org.nypl.plugin.failbetter.FailbetterPlugin', 'org.nypl.plugin.PoetryBayPlugin', 'org.nypl.plugin.shampoo.ShampooPlugin', 'org.nypl.plugin.WordsWithoutBordersPlugin', 'za.ac.nlsa.lockss.plugin.WaterSAPlugin'])
+NON_ALLIANCE = set([ \
+                 "edu.columbia.plugin.JiwsPlugin", # humanities_project
+                 "edu.cornell.library.epr.EPRPlugin2001", # humanities_project
+                 "edu.cornell.library.epr.EPRPlugin2002On", # humanities_project
+                 "edu.cornell.library.epr.EPRPlugin", # humanities_project
+                 "edu.cornell.library.jbe.JBEPlugin", # humanities_project
+                 "edu.fcla.plugin.arkivoc.ArkivocPlugin", # prod
+                 "edu.fcla.plugin.arkivoc.Arkivoc2022Plugin", # prod
+                 "edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin", # humanities_project
+                 "edu.harvard.plugin.AppliedSemiotics.AppliedSemiotics2022Plugin", # humanities_project
+                 "edu.harvard.plugin.jrs.JRSPlugin", # humanities_project
+                 "edu.harvard.plugin.jrs.JRS2022Plugin", # humanities_project
+                 "edu.harvard.plugin.WorldHaikuReview.WorldHaikuReviewPlugin", # humanities_project
+                 "edu.indiana.lib.plugin.jcjpc.JcjpcPlugin", # humanities_project
+                 "edu.indiana.lib.plugin.mto.MTOPlugin", # humanities_project
+                 "edu.indiana.lib.plugin.mto.MTO2022Plugin", # humanities_project
+                 "edu.jhu.library.plugin.jrf.JournalOfReligionAndFilmPlugin", # humanities_project
+                 "edu.jhu.library.plugin.MedievalForumPlugin", # humanities_project
+                 "edu.nyu.plugin.bonefolder.BonefolderPlugin", # humanities_project
+                 "edu.nyu.plugin.ejce.EJCEPlugin", # humanities_project
+                 "edu.nyu.plugin.ejcjs.EJCJSPlugin", # humanities_project
+                 "edu.nyu.plugin.ejcjs.EJCJS2022Plugin", # humanities_project
+                 "edu.nyu.plugin.heplwebzine.HEPLwebzine", # humanities_project
+                 "edu.nyu.plugin.heplwebzine.HEPLWebzine2022Plugin", # humanities_project
+                 "edu.nyu.plugin.journalofglobalbuddhism.JournalOfGlobalBuddhismPlugin",
+                 "edu.nyu.plugin.LeedsICSPlugin",
+                 "edu.princeton.plugin.bmcr.BMCRPlugin",
+                 "edu.princeton.plugin.ncaw.19thCenturyArtWorldwidePlugin",
+                 "edu.stanford.plugin.exquisitecorpse.ExquisiteCorpsePlugin",
+                 "edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin",
+                 "edu.upenn.library.plugin.clcweb.CLCWebPlugin",
+                 "edu.wisc.library.plugin.BigBridgePlugin",
+                 "edu.wisc.library.plugin.BigBridgeVol1Plugin",
+                 "edu.wisc.library.plugin.CortlandReviewPlugin",
+                 "edu.wisc.library.plugin.CortlandReview00Plugin",
+                 "edu.wisc.library.plugin.CortlandReview98Plugin",
+                 "edu.wisc.library.plugin.CortlandReview99Plugin",
+                 "edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin",
+                 "edu.yale.library.lockss.plugin.mitejmes.MITEJMESPlugin",
+                 "gov.gpo.access.permanent.plugin.amberwaves.Amber_WavesPlugin", # gpo-pilot
+                 "gov.gpo.access.permanent.plugin.environmentalhealthperspectives.Environmental_Health_PerspectivesPlugin", # gpo-pilot
+                 "gov.gpo.access.permanent.plugin.fbilawenforcementbulletin.FBI_Law_Enforcement_BulletinPlugin", # gpo-pilot
+                 "gov.gpo.access.permanent.plugin.humanities.HumanitiesPlugin", # gpo-pilot
+                 "gov.gpo.access.permanent.plugin.monthlyenergyreview.MonthlyEnergyReviewPlugin", # gpo-pilot
+                 "gov.gpo.access.permanent.plugin.monthlylaborreview.MonthlyLaborReviewPlugin", # gpo-pilot
+                 "gov.gpo.access.permanent.plugin.nistjournalofresearch.NISTJournalOfResearchPlugin", # gpo-pilot
+                 "gov.gpo.access.permanent.plugin.socialsecuritybulletin.SocialSecurityBulletinPlugin", # gpo-pilot
+                 "gov.gpo.access.permanent.plugin.surveyofcurrentbusiness.SurveyOfCurrentBusinessPlugin", # gpo-pilot
+                 "gov.gpo.access.permanent.plugin.treasurybulletin.TreasuryBulletinPlugin", # gpo-pilot
+                 "gov.loc.plugin.CJPentecostalCharismaticResearchPlugin",
+                 "gov.loc.plugin.TESLEJPlugin", # humanities_project
+                 "gov.loc.plugin.TESLEJ2022Plugin", # humanities_project
+                 "nz.ac.otago.plugin.scholia.ScholiaPlugin",
+                 "org.lockss.plugin.absinthe.AbsinthePlugin",
+                 "org.lockss.plugin.bepress.BePressPlugin",
+                 "org.lockss.plugin.bioone.BioOnePlugin",
+                 "org.lockss.plugin.blackbird.BlackbirdPlugin",
+                 "org.lockss.plugin.clogic.CulturalLogicPlugin",
+                 "org.lockss.plugin.disputatio.DisputatioPlugin",
+                 "org.lockss.plugin.emc.EarlyModernCulturePlugin",
+                 "org.lockss.plugin.emls.EmlsPlugin",
+                 "org.lockss.plugin.etd.fsuplugin.FSUETDPlugin", # aserl-etd
+                 "org.lockss.plugin.etd.gatechplugin.GATechETDPlugin", # aserl-etd
+                 "org.lockss.plugin.etd.ncstateplugin.NCStateETDLegacyPlugin", # aserl-etd
+                 "org.lockss.plugin.etd.ukyplugin.UKYETDPlugin", # aserl-etd
+                 "org.lockss.plugin.etd.vanderbiltetdplugin.VanderbiltETDPlugin", # aserl-etd
+                 "org.lockss.plugin.etd.vtetdplugin.VTETDLegacyPlugin", # aserl-etd
+                 "org.lockss.plugin.evergreenreview.EvergreenReviewPlugin",
+                 "org.lockss.plugin.GendersPlugin",
+                 "org.lockss.plugin.histcoop.HistoryCooperativePlugin",
+                 "org.lockss.plugin.invisibleculture.InvisibleCulturePlugin",
+                 "org.lockss.plugin.jackmagazine.JackMagazinePlugin",
+                 "org.lockss.plugin.jscm.JSCMPlugin",
+                 "org.lockss.plugin.lapetitezine.LaPetiteZinePlugin",
+                 "org.lockss.plugin.locksscard.LockssCardPlugin",
+                 "org.lockss.plugin.madhattersreview.MadHattersReviewPlugin",
+                 "org.lockss.plugin.minerva.MinervaPlugin",
+                 "org.lockss.plugin.minerva.Minerva2020Plugin",
+                 "org.lockss.plugin.msr.MSRPlugin",
+                 "org.lockss.plugin.ojs.OJSPlugin",
+                 "org.lockss.plugin.othervoices.OtherVoicesPlugin",
+                 "org.lockss.plugin.projmuse.ProjectMusePlugin",
+                 "org.lockss.plugin.prok.ProkPlugin",
+                 "org.molvis.plugin.MolVisPlugin",
+                 "org.lockss.plugin.sfpoetrybroadside.SantaFePoetryBroadsidePlugin",
+                 "org.nypl.plugin.failbetter.FailbetterPlugin",
+                 "org.nypl.plugin.PoetryBayPlugin",
+                 "org.nypl.plugin.shampoo.ShampooPlugin",
+                 "org.nypl.plugin.WordsWithoutBordersPlugin",
+                 "za.ac.nlsa.lockss.plugin.WaterSAPlugin"
+])
 
 def nonRepeated(seq):
   '''Makes a new sequence in the same order as the input but with no

@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2018, Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University,
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,
@@ -39,7 +39,6 @@ import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
 import org.apache.commons.cli.*;
-import org.lockss.tdb.AntlrUtil.NamedAntlrInputStream;
 import org.lockss.tdb.Predicates.*;
 import org.lockss.tdb.TdbQueryParser.*;
 
@@ -77,7 +76,7 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * 
    * @since 1.68
    */
-  public static final String VERSION = "[TdbQueryBuilder:0.2.4]";
+  public static final String VERSION = "[TdbQueryBuilder:0.3.0]";
   
   /**
    * <p>
@@ -653,22 +652,30 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * @since 1.67
    */
   public static final List<String> NON_ALLIANCE_PLUGINS =
-      AppUtil.ul("edu.columbia.plugin.JiwsPlugin",
-                 "edu.cornell.library.epr.EPRPlugin2001",
-                 "edu.cornell.library.epr.EPRPlugin2002On",
-                 "edu.cornell.library.jbe.JBEPlugin",
-                 "edu.fcla.plugin.arkivoc.ArkivocPlugin",
-                 "edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin",
-                 "edu.harvard.plugin.jrs.JRSPlugin",
-                 "edu.harvard.plugin.WorldHaikuReview.WorldHaikuReviewPlugin",
-                 "edu.indiana.lib.plugin.jcjpc.JcjpcPlugin",
-                 "edu.indiana.lib.plugin.mto.MTOPlugin",
-                 "edu.jhu.library.plugin.jrf.JournalOfReligionAndFilmPlugin",
-                 "edu.jhu.library.plugin.MedievalForumPlugin",
-                 "edu.nyu.plugin.bonefolder.BonefolderPlugin",
-                 "edu.nyu.plugin.ejce.EJCEPlugin",
-                 "edu.nyu.plugin.ejcjs.EJCJSPlugin",
-                 "edu.nyu.plugin.heplwebzine.HEPLwebzine",
+      AppUtil.ul(// (keep releaseemail.py in sync)
+                 "edu.columbia.plugin.JiwsPlugin", // humanities_project
+                 "edu.cornell.library.epr.EPRPlugin2001", // humanities_project
+                 "edu.cornell.library.epr.EPRPlugin2002On", // humanities_project
+                 "edu.cornell.library.epr.EPRPlugin", // humanities_project
+                 "edu.cornell.library.jbe.JBEPlugin", // humanities_project
+                 "edu.fcla.plugin.arkivoc.ArkivocPlugin", // prod
+                 "edu.fcla.plugin.arkivoc.Arkivoc2022Plugin", // prod
+                 "edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin", // humanities_project
+                 "edu.harvard.plugin.AppliedSemiotics.AppliedSemiotics2022Plugin", // humanities_project
+                 "edu.harvard.plugin.jrs.JRSPlugin", // humanities_project
+                 "edu.harvard.plugin.jrs.JRS2022Plugin", // humanities_project
+                 "edu.harvard.plugin.WorldHaikuReview.WorldHaikuReviewPlugin", // humanities_project
+                 "edu.indiana.lib.plugin.jcjpc.JcjpcPlugin", // humanities_project
+                 "edu.indiana.lib.plugin.mto.MTOPlugin", // humanities_project
+                 "edu.indiana.lib.plugin.mto.MTO2022Plugin", // humanities_project
+                 "edu.jhu.library.plugin.jrf.JournalOfReligionAndFilmPlugin", // humanities_project
+                 "edu.jhu.library.plugin.MedievalForumPlugin", // humanities_project
+                 "edu.nyu.plugin.bonefolder.BonefolderPlugin", // humanities_project
+                 "edu.nyu.plugin.ejce.EJCEPlugin", // humanities_project
+                 "edu.nyu.plugin.ejcjs.EJCJSPlugin", // humanities_project
+                 "edu.nyu.plugin.ejcjs.EJCJS2022Plugin", // humanities_project
+                 "edu.nyu.plugin.heplwebzine.HEPLwebzine", // humanities_project
+                 "edu.nyu.plugin.heplwebzine.HEPLWebzine2022Plugin", // humanities_project
                  "edu.nyu.plugin.journalofglobalbuddhism.JournalOfGlobalBuddhismPlugin",
                  "edu.nyu.plugin.LeedsICSPlugin",
                  "edu.princeton.plugin.bmcr.BMCRPlugin",
@@ -684,8 +691,19 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
                  "edu.wisc.library.plugin.CortlandReview99Plugin",
                  "edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin",
                  "edu.yale.library.lockss.plugin.mitejmes.MITEJMESPlugin",
+                 "gov.gpo.access.permanent.plugin.amberwaves.Amber_WavesPlugin", // gpo-pilot
+                 "gov.gpo.access.permanent.plugin.environmentalhealthperspectives.Environmental_Health_PerspectivesPlugin", // gpo-pilot
+                 "gov.gpo.access.permanent.plugin.fbilawenforcementbulletin.FBI_Law_Enforcement_BulletinPlugin", // gpo-pilot
+                 "gov.gpo.access.permanent.plugin.humanities.HumanitiesPlugin", // gpo-pilot
+                 "gov.gpo.access.permanent.plugin.monthlyenergyreview.MonthlyEnergyReviewPlugin", // gpo-pilot
+                 "gov.gpo.access.permanent.plugin.monthlylaborreview.MonthlyLaborReviewPlugin", // gpo-pilot
+                 "gov.gpo.access.permanent.plugin.nistjournalofresearch.NISTJournalOfResearchPlugin", // gpo-pilot
+                 "gov.gpo.access.permanent.plugin.socialsecuritybulletin.SocialSecurityBulletinPlugin", // gpo-pilot
+                 "gov.gpo.access.permanent.plugin.surveyofcurrentbusiness.SurveyOfCurrentBusinessPlugin", // gpo-pilot
+                 "gov.gpo.access.permanent.plugin.treasurybulletin.TreasuryBulletinPlugin", // gpo-pilot
                  "gov.loc.plugin.CJPentecostalCharismaticResearchPlugin",
-                 "gov.loc.plugin.TESLEJPlugin",
+                 "gov.loc.plugin.TESLEJPlugin", // humanities_project
+                 "gov.loc.plugin.TESLEJ2022Plugin", // humanities_project
                  "nz.ac.otago.plugin.scholia.ScholiaPlugin",
                  "org.lockss.plugin.absinthe.AbsinthePlugin",
                  "org.lockss.plugin.bepress.BePressPlugin",
@@ -695,6 +713,12 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
                  "org.lockss.plugin.disputatio.DisputatioPlugin",
                  "org.lockss.plugin.emc.EarlyModernCulturePlugin",
                  "org.lockss.plugin.emls.EmlsPlugin",
+                 "org.lockss.plugin.etd.fsuplugin.FSUETDPlugin", // aserl-etd
+                 "org.lockss.plugin.etd.gatechplugin.GATechETDPlugin", // aserl-etd
+                 "org.lockss.plugin.etd.ncstateplugin.NCStateETDLegacyPlugin", // aserl-etd
+                 "org.lockss.plugin.etd.ukyplugin.UKYETDPlugin", // aserl-etd
+                 "org.lockss.plugin.etd.vanderbiltetdplugin.VanderbiltETDPlugin", // aserl-etd
+                 "org.lockss.plugin.etd.vtetdplugin.VTETDLegacyPlugin", // aserl-etd
                  "org.lockss.plugin.evergreenreview.EvergreenReviewPlugin",
                  "org.lockss.plugin.GendersPlugin",
                  "org.lockss.plugin.histcoop.HistoryCooperativePlugin",
@@ -717,7 +741,8 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
                  "org.nypl.plugin.PoetryBayPlugin",
                  "org.nypl.plugin.shampoo.ShampooPlugin",
                  "org.nypl.plugin.WordsWithoutBordersPlugin",
-                 "za.ac.nlsa.lockss.plugin.WaterSAPlugin");
+                 "za.ac.nlsa.lockss.plugin.WaterSAPlugin"
+                 );
   
   /**
    * <p>
@@ -1334,7 +1359,7 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
     Predicate<Au> queryPredicate = null;
     if (cmd.hasOption(KEY_QUERY)) {
       String query = cmd.getOptionValue(KEY_QUERY);
-      CharStream charStream = new NamedAntlrInputStream("<query>", query);
+      CharStream charStream = CharStreams.fromString(query, "<query>");
       TdbQueryLexer lexer = new TdbQueryLexer(charStream);
       AntlrUtil.setEmacsErrorListener(lexer);
       CommonTokenStream tokens = new CommonTokenStream(lexer);

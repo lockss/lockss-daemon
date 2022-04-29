@@ -1,0 +1,475 @@
+{
+  publisher <
+    name = Sagamore Publishing
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
+    #param[base_url] = http://js.sagamorepub.com/
+    
+    comment[CAUTION] = This publisher has subscription journals. in the past our test process showed successful result, even though pdf file sizes are zero.
+    comment[subscription] = See PD-1032. See base_url for list of journals.
+    
+  {
+    title <
+      name = Journal of Outdoor Recreation, Education, and Leadership ;
+      issn = 1948-5123
+    >
+
+    param[journal_id] = jorel
+
+    au < released ; 2009 ; 1 ; Journal of Leisure Research Volume 1 ; 2009 ; https://js.sagamorepub.com/ >
+    au < released ; 2010 ; 2 ; Journal of Leisure Research Volume 2 ; 2010 ; https://js.sagamorepub.com/ >
+    au < released ; 2011 ; 3 ; Journal of Leisure Research Volume 3 ; 2011 ; https://js.sagamorepub.com/ >
+    au < released ; 2012 ; 4 ; Journal of Leisure Research Volume 4 ; 2012 ; https://js.sagamorepub.com/ >
+    au < released ; 2013 ; 5 ; Journal of Leisure Research Volume 5 ; 2013 ; https://js.sagamorepub.com/ >
+    au < released ; 2014 ; 6 ; Journal of Leisure Research Volume 6 ; 2014 ; https://js.sagamorepub.com/ >
+    au < released ; 2015 ; 7 ; Journal of Leisure Research Volume 7 ; 2015 ; https://js.sagamorepub.com/ >
+    au < released ; 2016 ; 8 ; Journal of Leisure Research Volume 8 ; 2016 ; https://js.sagamorepub.com/ >
+    au < released ; 2017 ; 9 ; Journal of Leisure Research Volume 9 ; 2017 ; https://js.sagamorepub.com/ >
+    au < released ; 2018 ; 10 ; Journal of Leisure Research Volume 10 ; 2018 ; https://js.sagamorepub.com/ >
+    au < notReady ; 2019 ; 11 ; Journal of Leisure Research Volume 11 ; 2019 ; https://js.sagamorepub.com/ >
+    au < notReady ; 2020 ; 12 ; Journal of Leisure Research Volume 12 ; 2020 ; https://js.sagamorepub.com/ >
+    au < notReady ; 2021 ; 13 ; Journal of Leisure Research Volume 13 ; 2021 ; https://js.sagamorepub.com/ >
+    au < notReady ; 2022 ; 14 ; Journal of Leisure Research Volume 14 ; 2022 ; https://js.sagamorepub.com/ >
+
+  }
+
+  {
+    title <
+      name = Asian Journal of Exercise and Sports Science ;
+      issn = 1975-2938
+    >
+
+    param[journal_id] = ajess
+
+    au < down ; 2004 ; 1 ; Asian Journal of Exercise and Sports Science Volume 1 ; 2004 ; http://js.sagamorepub.com/ >
+    au < down ; 2005 ; 2 ; Asian Journal of Exercise and Sports Science Volume 2 ; 2005 ; http://js.sagamorepub.com/ >
+    au < down ; 2006 ; 3 ; Asian Journal of Exercise and Sports Science Volume 3 ; 2006 ; http://js.sagamorepub.com/ >
+    au < down ; 2007 ; 4 ; Asian Journal of Exercise and Sports Science Volume 4 ; 2007 ; http://js.sagamorepub.com/ >
+    au < down ; 2008 ; 5 ; Asian Journal of Exercise and Sports Science Volume 5 ; 2008 ; http://js.sagamorepub.com/ >
+    au < down ; 2009 ; 6 ; Asian Journal of Exercise and Sports Science Volume 6 ; 2009 ; http://js.sagamorepub.com/ >
+    au < down ; 2010 ; 7 ; Asian Journal of Exercise and Sports Science Volume 7 ; 2010 ; http://js.sagamorepub.com/ >
+    au < down ; 2011 ; 8 ; Asian Journal of Exercise and Sports Science Volume 8 ; 2011 ; http://js.sagamorepub.com/ >
+    au < down ; 2012 ; 9 ; Asian Journal of Exercise and Sports Science Volume 9 ; 2012 ; http://js.sagamorepub.com/ >
+    au < down ; 2013 ; 10 ; Asian Journal of Exercise and Sports Science Volume 10 ; 2013 ; http://js.sagamorepub.com/ >
+    au < down ; 2014 ; 11 ; Asian Journal of Exercise and Sports Science Volume 11 ; 2014 ; http://js.sagamorepub.com/ >
+    #No longer published by Sagamore
+  }
+
+  {
+    title <
+      name = The Global Journal of Health and Physical Education Pedagogy ;
+      issn = 2165-2570
+    >
+
+    param[journal_id] = gjhpep
+
+    au < down ; 2012 ; 1 ; The Global Journal of Health and Physical Education Pedagogy Volume 1 ; 2012 ; http://js.sagamorepub.com/ >
+    au < down ; 2013 ; 2 ; The Global Journal of Health and Physical Education Pedagogy Volume 2 ; 2013 ; http://js.sagamorepub.com/ >
+    #No longer published by Sagamore
+  }
+
+  {
+    title <
+      name = Global Journal of Health Education and Promotion ;
+      eissn = 2332-1016 
+    >
+
+    param[journal_id] = gjhep
+
+    au < doNotProcess ; 1998 ; 1 ; Global Journal of Health Education and Promotion Volume 1 ; 1998 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 1999 ; 2 ; Global Journal of Health Education and Promotion Volume 2 ; 1999 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 2000 ; 3 ; Global Journal of Health Education and Promotion Volume 3 ; 2000 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 2001 ; 4 ; Global Journal of Health Education and Promotion Volume 4 ; 2001 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 2002 ; 5 ; Global Journal of Health Education and Promotion Volume 5 ; 2002 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 2003 ; 6 ; Global Journal of Health Education and Promotion Volume 6 ; 2003 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 2004 ; 7 ; Global Journal of Health Education and Promotion Volume 7 ; 2004 ; https://js.sagamorepub.com/ >
+    au < down ; 2005 ; 8 ; Global Journal of Health Education and Promotion Volume 8 ; 2005 ; http://js.sagamorepub.com/ >
+    au < down ; 2006 ; 9 ; Global Journal of Health Education and Promotion Volume 9 ; 2006 ; http://js.sagamorepub.com/ >
+    au < down ; 2007 ; 10 ; Global Journal of Health Education and Promotion Volume 10 ; 2007 ; http://js.sagamorepub.com/ >
+    au < down ; 2008 ; 11 ; Global Journal of Health Education and Promotion Volume 11 ; 2008 ; http://js.sagamorepub.com/ >
+    au < down ; 2009 ; 12 ; Global Journal of Health Education and Promotion Volume 12 ; 2009 ; http://js.sagamorepub.com/ >
+    au < down ; 2010 ; 13 ; Global Journal of Health Education and Promotion Volume 13 ; 2010 ; http://js.sagamorepub.com/ >
+    au < down ; 2011 ; 14 ; Global Journal of Health Education and Promotion Volume 14 ; 2011 ; http://js.sagamorepub.com/ >
+    au < down ; 2012 ; 15 ; Global Journal of Health Education and Promotion Volume 15 ; 2012 ; http://js.sagamorepub.com/ >
+    #No longer published by Sagamore
+  }
+
+  {
+    title <
+      name = Journal of Applied Sport Management: Research that Matters ;
+      issn = 2327-0187
+    >
+
+    param[journal_id] = jasm
+
+    au < down ; 2009 ; 1 ; Journal of Applied Sport Management: Research that Matters Volume 1 ; 2009 ; http://js.sagamorepub.com/ >
+    au < down ; 2010 ; 2 ; Journal of Applied Sport Management: Research that Matters Volume 2 ; 2010 ; http://js.sagamorepub.com/ >
+    au < down ; 2011 ; 3 ; Journal of Applied Sport Management: Research that Matters Volume 3 ; 2011 ; http://js.sagamorepub.com/ >
+    au < down ; 2012 ; 4 ; Journal of Applied Sport Management: Research that Matters Volume 4 ; 2012 ; http://js.sagamorepub.com/ >
+    au < down ; 2013 ; 5 ; Journal of Applied Sport Management: Research that Matters Volume 5 ; 2013 ; http://js.sagamorepub.com/ >
+    au < down ; 2014 ; 6 ; Journal of Applied Sport Management: Research that Matters Volume 6 ; 2014 ; http://js.sagamorepub.com/ >
+    au < down ; 2015 ; 7 ; Journal of Applied Sport Management: Research that Matters Volume 7 ; 2015 ; http://js.sagamorepub.com/ >
+    au < down ; 2016 ; 8 ; Journal of Applied Sport Management: Research that Matters Volume 8 ; 2016 ; http://js.sagamorepub.com/ >
+    au < notReady ; 2017 ; 9 ; Journal of Applied Sport Management: Research that Matters Volume 9 ; 2017 ; https://js.sagamorepub.com/ > #login found
+    au < notReady ; 2018 ; 10 ; Journal of Applied Sport Management: Research that Matters Volume 10 ; 2018 ; https://js.sagamorepub.com/ > #login found
+    au < notReady ; 2019 ; 11 ; Journal of Applied Sport Management: Research that Matters Volume 11 ; 2019 ; https://js.sagamorepub.com/ > #login found
+    #No longer published by Sagamore. See LXQUEUE-1700. No more volumes after 2019. Subscription needed.
+  }
+
+  {
+    title <
+      name = Journal of Facility Planning, Design, and Management
+    >
+
+    param[journal_id] = jfpdm
+
+    au < down ; 2013 ; 1 ; Journal of Facility Planning, Design, and Management Volume 1 ; 2013 ; http://js.sagamorepub.com/ >
+    au < down ; 2014 ; 2 ; Journal of Facility Planning, Design, and Management Volume 2 ; 2014 ; http://js.sagamorepub.com/ >
+    au < down ; 2015 ; 3 ; Journal of Facility Planning, Design, and Management Volume 3 ; 2015 ; http://js.sagamorepub.com/ >
+    au < down ; 2016 ; 4 ; Journal of Facility Planning, Design, and Management Volume 4 ; 2016 ; http://js.sagamorepub.com/ >
+    #No longer published by Sagamore.
+  }
+
+  {
+    title <
+      name = Journal of Leisure Research ;
+      issn = 0022-2216 ;
+      eissn = 2159-6417 ;
+      issnl = 0022-2216
+    >
+
+    param[journal_id] = jlr
+
+    au < down ; 2005 ; 37 ; Journal of Leisure Research Volume 37 ; 2005 ; http://js.sagamorepub.com/ >
+    au < down ; 2006 ; 38 ; Journal of Leisure Research Volume 38 ; 2006 ; http://js.sagamorepub.com/ >
+    au < down ; 2007 ; 39 ; Journal of Leisure Research Volume 39 ; 2007 ; http://js.sagamorepub.com/ >
+    au < down ; 2008 ; 40 ; Journal of Leisure Research Volume 40 ; 2008 ; http://js.sagamorepub.com/ >
+    au < down ; 2009 ; 41 ; Journal of Leisure Research Volume 41 ; 2009 ; http://js.sagamorepub.com/ >
+    au < down ; 2010 ; 42 ; Journal of Leisure Research Volume 42 ; 2010 ; http://js.sagamorepub.com/ >
+    au < down ; 2011 ; 43 ; Journal of Leisure Research Volume 43 ; 2011 ; http://js.sagamorepub.com/ >
+    au < down ; 2012 ; 44 ; Journal of Leisure Research Volume 44 ; 2012 ; http://js.sagamorepub.com/ >
+    au < down ; 2013 ; 45 ; Journal of Leisure Research Volume 45 ; 2013 ; http://js.sagamorepub.com/ >
+    au < down ; 2014 ; 46 ; Journal of Leisure Research Volume 46 ; 2014 ; http://js.sagamorepub.com/ >
+    au < down ; 2015 ; 47 ; Journal of Leisure Research Volume 47 ; 2015 ; http://js.sagamorepub.com/ > #article url redirected to login page. http://js.sagamorepub.com/jlr/article/view/6174/4888
+    au < down ; 2016 ; 48 ; Journal of Leisure Research Volume 48 ; 2016 ; http://js.sagamorepub.com/ >
+    #No longer published by Sagamore.
+  }
+
+  {
+    title <
+      name = Journal of Park and Recreation Administration ;
+      issn = 0735-1968
+    >
+
+    param[journal_id] = jpra
+
+    au < released ; 1983 ; 1 ; Journal of Park and Recreation Administration Volume 1 ; 1983 ; https://js.sagamorepub.com/ >
+    au < released ; 1984 ; 2 ; Journal of Park and Recreation Administration Volume 2 ; 1984 ; https://js.sagamorepub.com/ >
+    au < released ; 1985 ; 3 ; Journal of Park and Recreation Administration Volume 3 ; 1985 ; https://js.sagamorepub.com/ >
+    au < released ; 1986 ; 4 ; Journal of Park and Recreation Administration Volume 4 ; 1986 ; https://js.sagamorepub.com/ >
+    au < released ; 1987 ; 5 ; Journal of Park and Recreation Administration Volume 5 ; 1987 ; https://js.sagamorepub.com/ >
+    au < released ; 1988 ; 6 ; Journal of Park and Recreation Administration Volume 6 ; 1988 ; https://js.sagamorepub.com/ >
+    au < released ; 1989 ; 7 ; Journal of Park and Recreation Administration Volume 7 ; 1989 ; https://js.sagamorepub.com/ >
+    au < released ; 1990 ; 8 ; Journal of Park and Recreation Administration Volume 8 ; 1990 ; https://js.sagamorepub.com/ >
+    au < released ; 1991 ; 9 ; Journal of Park and Recreation Administration Volume 9 ; 1991 ; https://js.sagamorepub.com/ >
+    au < released ; 1992 ; 10 ; Journal of Park and Recreation Administration Volume 10 ; 1992 ; https://js.sagamorepub.com/ >
+    au < released ; 1993 ; 11 ; Journal of Park and Recreation Administration Volume 11 ; 1993 ; https://js.sagamorepub.com/ >
+    au < released ; 1994 ; 12 ; Journal of Park and Recreation Administration Volume 12 ; 1994 ; https://js.sagamorepub.com/ >
+    au < released ; 1995 ; 13 ; Journal of Park and Recreation Administration Volume 13 ; 1995 ; https://js.sagamorepub.com/ >
+    au < released ; 1996 ; 14 ; Journal of Park and Recreation Administration Volume 14 ; 1996 ; https://js.sagamorepub.com/ >
+    au < released ; 1997 ; 15 ; Journal of Park and Recreation Administration Volume 15 ; 1997 ; https://js.sagamorepub.com/ >
+    au < released ; 1998 ; 16 ; Journal of Park and Recreation Administration Volume 16 ; 1998 ; https://js.sagamorepub.com/ >
+    au < released ; 1999 ; 17 ; Journal of Park and Recreation Administration Volume 17 ; 1999 ; https://js.sagamorepub.com/ >
+    au < released ; 2000 ; 18 ; Journal of Park and Recreation Administration Volume 18 ; 2000 ; https://js.sagamorepub.com/ >
+    au < released ; 2001 ; 19 ; Journal of Park and Recreation Administration Volume 19 ; 2001 ; https://js.sagamorepub.com/ >
+    au < released ; 2002 ; 20 ; Journal of Park and Recreation Administration Volume 20 ; 2002 ; https://js.sagamorepub.com/ >
+    au < released ; 2003 ; 21 ; Journal of Park and Recreation Administration Volume 21 ; 2003 ; https://js.sagamorepub.com/ >
+    au < released ; 2004 ; 22 ; Journal of Park and Recreation Administration Volume 22 ; 2004 ; https://js.sagamorepub.com/ >
+    au < released ; 2005 ; 23 ; Journal of Park and Recreation Administration Volume 23 ; 2005 ; http://js.sagamorepub.com/ >
+    au < released ; 2006 ; 24 ; Journal of Park and Recreation Administration Volume 24 ; 2006 ; http://js.sagamorepub.com/ >
+    au < released ; 2007 ; 25 ; Journal of Park and Recreation Administration Volume 25 ; 2007 ; http://js.sagamorepub.com/ >
+    au < released ; 2008 ; 26 ; Journal of Park and Recreation Administration Volume 26 ; 2008 ; http://js.sagamorepub.com/ >
+    au < released ; 2009 ; 27 ; Journal of Park and Recreation Administration Volume 27 ; 2009 ; http://js.sagamorepub.com/ >
+    au < released ; 2010 ; 28 ; Journal of Park and Recreation Administration Volume 28 ; 2010 ; http://js.sagamorepub.com/ >
+    au < released ; 2011 ; 29 ; Journal of Park and Recreation Administration Volume 29 ; 2011 ; http://js.sagamorepub.com/ >
+    au < released ; 2012 ; 30 ; Journal of Park and Recreation Administration Volume 30 ; 2012 ; http://js.sagamorepub.com/ >
+    au < released ; 2013 ; 31 ; Journal of Park and Recreation Administration Volume 31 ; 2013 ; http://js.sagamorepub.com/ >
+    au < released ; 2014 ; 32 ; Journal of Park and Recreation Administration Volume 32 ; 2014 ; http://js.sagamorepub.com/ >
+    au < released ; 2015 ; 33 ; Journal of Park and Recreation Administration Volume 33 ; 2015 ; http://js.sagamorepub.com/ >
+    au < released ; 2016 ; 34 ; Journal of Park and Recreation Administration Volume 34 ; 2016 ; http://js.sagamorepub.com/ >
+    au < released ; 2017 ; 35 ; Journal of Park and Recreation Administration Volume 35 ; 2017 ; http://js.sagamorepub.com/ >
+    au < released ; 2018 ; 36 ; Journal of Park and Recreation Administration Volume 36 ; 2018 ; https://js.sagamorepub.com/ >
+    au < notReady ; 2019 ; 37 ; Journal of Park and Recreation Administration Volume 37 ; 2019 ; https://js.sagamorepub.com/ >
+    au < notReady ; 2020 ; 38 ; Journal of Park and Recreation Administration Volume 38 ; 2020 ; https://js.sagamorepub.com/ >
+    au < notReady ; 2021 ; 39 ; Journal of Park and Recreation Administration Volume 39 ; 2021 ; https://js.sagamorepub.com/ > #login found
+    au < notReady ; 2022 ; 40 ; Journal of Park and Recreation Administration Volume 40 ; 2022 ; https://js.sagamorepub.com/ >
+    #Subscription needed.
+  }
+
+  {
+    title <
+      name = The Physical Educator ;
+      issn = 0031-8981
+    >
+
+    param[journal_id] = pe
+
+    au < released ; 1980 ; 37 ; The Physical Educator Volume 37 ; 1980 ; https://js.sagamorepub.com/ >
+    au < released ; 1981 ; 38 ; The Physical Educator Volume 38 ; 1981 ; https://js.sagamorepub.com/ >
+    au < released ; 1982 ; 39 ; The Physical Educator Volume 39 ; 1982 ; https://js.sagamorepub.com/ >
+    au < released ; 1983 ; 40 ; The Physical Educator Volume 40 ; 1983 ; https://js.sagamorepub.com/ >
+    au < released ; 1984 ; 41 ; The Physical Educator Volume 41 ; 1984 ; https://js.sagamorepub.com/ >
+    au < released ; 1985 ; 42 ; The Physical Educator Volume 42 ; 1985 ; https://js.sagamorepub.com/ >
+    au < released ; 1986 ; 43 ; The Physical Educator Volume 43 ; 1986 ; https://js.sagamorepub.com/ >
+    au < released ; 1987 ; 44 ; The Physical Educator Volume 44 ; 1987 ; https://js.sagamorepub.com/ >
+    au < released ; 1988 ; 45 ; The Physical Educator Volume 45 ; 1988 ; https://js.sagamorepub.com/ >
+    au < released ; 1989 ; 46 ; The Physical Educator Volume 46 ; 1989 ; https://js.sagamorepub.com/ >
+    au < released ; 1990 ; 47 ; The Physical Educator Volume 47 ; 1990 ; https://js.sagamorepub.com/ >
+    au < released ; 1991 ; 48 ; The Physical Educator Volume 48 ; 1991 ; https://js.sagamorepub.com/ >
+    au < released ; 1992 ; 49 ; The Physical Educator Volume 49 ; 1992 ; https://js.sagamorepub.com/ >
+    au < released ; 1993 ; 50 ; The Physical Educator Volume 50 ; 1993 ; https://js.sagamorepub.com/ >
+    au < released ; 1994 ; 51 ; The Physical Educator Volume 51 ; 1994 ; https://js.sagamorepub.com/ >
+    au < released ; 1995 ; 52 ; The Physical Educator Volume 52 ; 1995 ; https://js.sagamorepub.com/ >
+    au < released ; 1996 ; 53 ; The Physical Educator Volume 53 ; 1996 ; https://js.sagamorepub.com/ >
+    au < released ; 1997 ; 54 ; The Physical Educator Volume 54 ; 1997 ; https://js.sagamorepub.com/ >
+    au < released ; 1998 ; 55 ; The Physical Educator Volume 55 ; 1998 ; https://js.sagamorepub.com/ >
+    au < released ; 1999 ; 56 ; The Physical Educator Volume 56 ; 1999 ; https://js.sagamorepub.com/ >
+    au < released ; 2000 ; 57 ; The Physical Educator Volume 57 ; 2000 ; https://js.sagamorepub.com/ >
+    au < released ; 2001 ; 58 ; The Physical Educator Volume 58 ; 2001 ; https://js.sagamorepub.com/ >
+    au < released ; 2002 ; 59 ; The Physical Educator Volume 59 ; 2002 ; https://js.sagamorepub.com/ >
+    au < released ; 2003 ; 60 ; The Physical Educator Volume 60 ; 2003 ; https://js.sagamorepub.com/ >
+    au < released ; 2004 ; 61 ; The Physical Educator Volume 61 ; 2004 ; https://js.sagamorepub.com/ >
+    au < released ; 2005 ; 62 ; The Physical Educator Volume 62 ; 2005 ; http://js.sagamorepub.com/ >
+    au < released ; 2006 ; 63 ; The Physical Educator Volume 63 ; 2006 ; http://js.sagamorepub.com/ >
+    au < released ; 2007 ; 64 ; The Physical Educator Volume 64 ; 2007 ; http://js.sagamorepub.com/ >
+    au < released ; 2008 ; 65 ; The Physical Educator Volume 65 ; 2008 ; http://js.sagamorepub.com/ >
+    au < released ; 2009 ; 66 ; The Physical Educator Volume 66 ; 2009 ; http://js.sagamorepub.com/ >
+    au < released ; 2010 ; 67 ; The Physical Educator Volume 67 ; 2010 ; http://js.sagamorepub.com/ >
+    au < released ; 2011 ; 68 ; The Physical Educator Volume 68 ; 2011 ; http://js.sagamorepub.com/ >
+    au < released ; 2012 ; 69 ; The Physical Educator Volume 69 ; 2012 ; http://js.sagamorepub.com/ >
+    au < released ; 2013 ; 70 ; The Physical Educator Volume 70 ; 2013 ; http://js.sagamorepub.com/ >
+    au < released ; 2014 ; 71 ; The Physical Educator Volume 71 ; 2014 ; http://js.sagamorepub.com/ >
+    au < released ; 2015 ; 72 ; The Physical Educator Volume 72 ; 2015 ; http://js.sagamorepub.com/ >
+    au < released ; 2016 ; 73 ; The Physical Educator Volume 73 ; 2016 ; http://js.sagamorepub.com/ >
+    au < released ; 2017 ; 74 ; The Physical Educator Volume 74 ; 2017 ; http://js.sagamorepub.com/ >
+    au < released ; 2018 ; 75 ; The Physical Educator Volume 75 ; 2018 ; https://js.sagamorepub.com/ >
+    au < notReady ; 2019 ; 76 ; The Physical Educator Volume 76 ; 2019 ; https://js.sagamorepub.com/ >
+    au < notReady ; 2020 ; 77 ; The Physical Educator Volume 77 ; 2020 ; https://js.sagamorepub.com/ >
+    au < notReady ; 2021 ; 78 ; The Physical Educator Volume 78 ; 2021 ; https://js.sagamorepub.com/ > #login found
+    au < notReady ; 2022 ; 79 ; The Physical Educator Volume 79 ; 2022 ; https://js.sagamorepub.com/ >
+    #Subscription needed.
+  }
+
+  {
+    title <
+      name = SCHOLE: A Journal of Leisure Studies and Recreation Education ;
+      issn = 1937-156X ;
+      eissn = 2162-4097
+    >
+
+    param[journal_id] = schole
+
+    au < down ; 2005 ; 20 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 20 ; 2005 ; http://js.sagamorepub.com/ >
+    au < down ; 2006 ; 21 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 21 ; 2006 ; http://js.sagamorepub.com/ >
+    au < down ; 2007 ; 22 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 22 ; 2007 ; http://js.sagamorepub.com/ >
+    au < down ; 2008 ; 23 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 23 ; 2008 ; http://js.sagamorepub.com/ >
+    au < down ; 2009 ; 24 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 24 ; 2009 ; http://js.sagamorepub.com/ >
+    au < down ; 2010 ; 25 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 25 ; 2010 ; http://js.sagamorepub.com/ >
+    au < down ; 2011 ; 26 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 26 ; 2011 ; http://js.sagamorepub.com/ >
+    au < down ; 2012 ; 27 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 27 ; 2012 ; http://js.sagamorepub.com/ >
+    au < down ; 2013 ; 28 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 28 ; 2013 ; http://js.sagamorepub.com/ >
+    au < down ; 2014 ; 29 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 29 ; 2014 ; http://js.sagamorepub.com/ >
+    au < down ; 2015 ; 30 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 30 ; 2015 ; http://js.sagamorepub.com/ >
+    au < down ; 2016 ; 31 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 31 ; 2016 ; http://js.sagamorepub.com/ > #subscription needed?
+    #No longer published by Sagamore.
+  }
+
+  {
+    title <
+      name = Therapeutic Recreation Journal ;
+      issn = 0040-5914
+    >
+
+    param[journal_id] = trj
+
+    au < released ; 1983 ; 17 ; Therapeutic Recreation Journal Volume 17 ; 1983 ; https://js.sagamorepub.com/ >
+    au < released ; 1984 ; 18 ; Therapeutic Recreation Journal Volume 18 ; 1984 ; https://js.sagamorepub.com/ >
+    au < released ; 1985 ; 19 ; Therapeutic Recreation Journal Volume 19 ; 1985 ; https://js.sagamorepub.com/ >
+    au < released ; 1986 ; 20 ; Therapeutic Recreation Journal Volume 20 ; 1986 ; https://js.sagamorepub.com/ >
+    au < released ; 1987 ; 21 ; Therapeutic Recreation Journal Volume 21 ; 1987 ; https://js.sagamorepub.com/ >
+    au < released ; 1988 ; 22 ; Therapeutic Recreation Journal Volume 22 ; 1988 ; https://js.sagamorepub.com/ >
+    au < released ; 1989 ; 23 ; Therapeutic Recreation Journal Volume 23 ; 1989 ; https://js.sagamorepub.com/ >
+    au < released ; 1990 ; 24 ; Therapeutic Recreation Journal Volume 24 ; 1990 ; https://js.sagamorepub.com/ >
+    au < released ; 1991 ; 25 ; Therapeutic Recreation Journal Volume 25 ; 1991 ; https://js.sagamorepub.com/ >
+    au < released ; 1992 ; 26 ; Therapeutic Recreation Journal Volume 26 ; 1992 ; https://js.sagamorepub.com/ >
+    au < released ; 1993 ; 27 ; Therapeutic Recreation Journal Volume 27 ; 1993 ; https://js.sagamorepub.com/ >
+    au < released ; 1994 ; 28 ; Therapeutic Recreation Journal Volume 28 ; 1994 ; https://js.sagamorepub.com/ >
+    au < released ; 1995 ; 29 ; Therapeutic Recreation Journal Volume 29 ; 1995 ; https://js.sagamorepub.com/ >
+    au < released ; 1996 ; 30 ; Therapeutic Recreation Journal Volume 30 ; 1996 ; https://js.sagamorepub.com/ >
+    au < released ; 1997 ; 31 ; Therapeutic Recreation Journal Volume 31 ; 1997 ; https://js.sagamorepub.com/ >
+    au < released ; 1998 ; 32 ; Therapeutic Recreation Journal Volume 32 ; 1998 ; https://js.sagamorepub.com/ >
+    au < released ; 1999 ; 33 ; Therapeutic Recreation Journal Volume 33 ; 1999 ; https://js.sagamorepub.com/ >
+    au < released ; 2000 ; 34 ; Therapeutic Recreation Journal Volume 34 ; 2000 ; https://js.sagamorepub.com/ >
+    au < released ; 2001 ; 35 ; Therapeutic Recreation Journal Volume 35 ; 2001 ; https://js.sagamorepub.com/ >
+    au < released ; 2002 ; 36 ; Therapeutic Recreation Journal Volume 36 ; 2002 ; https://js.sagamorepub.com/ >
+    au < released ; 2003 ; 37 ; Therapeutic Recreation Journal Volume 37 ; 2003 ; https://js.sagamorepub.com/ >
+    au < released ; 2004 ; 38 ; Therapeutic Recreation Journal Volume 38 ; 2004 ; https://js.sagamorepub.com/ >
+    au < released ; 2005 ; 39 ; Therapeutic Recreation Journal Volume 39 ; 2005 ; http://js.sagamorepub.com/ >
+    au < released ; 2006 ; 40 ; Therapeutic Recreation Journal Volume 40 ; 2006 ; http://js.sagamorepub.com/ >
+    au < released ; 2007 ; 41 ; Therapeutic Recreation Journal Volume 41 ; 2007 ; http://js.sagamorepub.com/ >
+    au < released ; 2008 ; 42 ; Therapeutic Recreation Journal Volume 42 ; 2008 ; http://js.sagamorepub.com/ >
+    au < released ; 2009 ; 43 ; Therapeutic Recreation Journal Volume 43 ; 2009 ; http://js.sagamorepub.com/ >
+    au < released ; 2010 ; 44 ; Therapeutic Recreation Journal Volume 44 ; 2010 ; http://js.sagamorepub.com/ >
+    au < released ; 2011 ; 45 ; Therapeutic Recreation Journal Volume 45 ; 2011 ; http://js.sagamorepub.com/ >
+    au < released ; 2012 ; 46 ; Therapeutic Recreation Journal Volume 46 ; 2012 ; http://js.sagamorepub.com/ >
+    au < released ; 2013 ; 47 ; Therapeutic Recreation Journal Volume 47 ; 2013 ; http://js.sagamorepub.com/ >
+    au < released ; 2014 ; 48 ; Therapeutic Recreation Journal Volume 48 ; 2014 ; http://js.sagamorepub.com/ >
+    au < released ; 2015 ; 49 ; Therapeutic Recreation Journal Volume 49 ; 2015 ; http://js.sagamorepub.com/ >
+    au < released ; 2016 ; 50 ; Therapeutic Recreation Journal Volume 50 ; 2016 ; http://js.sagamorepub.com/ >
+    au < released ; 2017 ; 51 ; Therapeutic Recreation Journal Volume 51 ; 2017 ; http://js.sagamorepub.com/ >
+    au < released ; 2018 ; 52 ; Therapeutic Recreation Journal Volume 52 ; 2018 ; https://js.sagamorepub.com/ >
+    au < notReady ; 2019 ; 53 ; Therapeutic Recreation Journal Volume 53 ; 2019 ; https://js.sagamorepub.com/ >
+    au < notReady ; 2020 ; 54 ; Therapeutic Recreation Journal Volume 54 ; 2020 ; https://js.sagamorepub.com/ >
+    au < notReady ; 2021 ; 55 ; Therapeutic Recreation Journal Volume 55 ; 2021 ; https://js.sagamorepub.com/ > #login found
+    au < notReady ; 2022 ; 56 ; Therapeutic Recreation Journal Volume 56 ; 2022 ; https://js.sagamorepub.com/ >
+    #Subscription needed.
+  }
+  
+  {
+    title <
+      name = Journal of Health Education Teaching Techniques ;
+      issn = 2332-1008
+    >
+
+    param[journal_id] = jhett
+
+    au < down ; 2014 ; 1 ; Journal of Health Education Teaching Techniques Volume 1 ; 2014 ; http://js.sagamorepub.com/ >
+    au < down ; 2015 ; 2 ; Journal of Health Education Teaching Techniques Volume 2 ; 2015 ; http://js.sagamorepub.com/ >
+    #No longer published by Sagamore.
+  }
+  
+  {
+    title <
+      name = Journal of Nonprofit Education and Leadership ;
+      issn = 2157-0604
+    >
+
+    {
+    param[journal_id] = jnel
+
+    au < released ; 2010 ; 0 ; Journal of Nonprofit Education and Leadership Volume 0 ; 2010 ; http://js.sagamorepub.com/ >
+    au < released ; 2011 ; 1 ; Journal of Nonprofit Education and Leadership Volume 1 ; 2011 ; http://js.sagamorepub.com/ >
+    au < released ; 2012 ; 2 ; Journal of Nonprofit Education and Leadership Volume 2 ; 2012 ; http://js.sagamorepub.com/ >
+    au < released ; 2013 ; 3 ; Journal of Nonprofit Education and Leadership Volume 3 ; 2013 ; http://js.sagamorepub.com/ >
+    au < released ; 2014 ; 4 ; Journal of Nonprofit Education and Leadership Volume 4 ; 2014 ; http://js.sagamorepub.com/ >
+    au < released ; 2015 ; 5 ; Journal of Nonprofit Education and Leadership Volume 5 ; 2015 ; http://js.sagamorepub.com/ >
+    au < released ; 2016 ; 6 ; Journal of Nonprofit Education and Leadership Volume 6 ; 2016 ; http://js.sagamorepub.com/ >
+    au < released ; 2017 ; 7 ; Journal of Nonprofit Education and Leadership Volume 7 ; 2017 ; http://js.sagamorepub.com/ >
+    au < released ; 2018 ; 8 ; Journal of Nonprofit Education and Leadership Volume 8 ; 2018 ; https://js.sagamorepub.com/ >
+    au < notReady ; 2019 ; 9 ; Journal of Nonprofit Education and Leadership Volume 9 ; 2019 ; https://js.sagamorepub.com/ >
+    au < notReady ; 2020 ; 10 ; Journal of Nonprofit Education and Leadership Volume 10 ; 2020 ; https://js.sagamorepub.com/ >
+    au < notReady ; 2021 ; 11 ; Journal of Nonprofit Education and Leadership Volume 11 ; 2021 ; https://js.sagamorepub.com/ > #login found
+    au < notReady ; 2022 ; 12 ; Journal of Nonprofit Education and Leadership Volume 12 ; 2022 ; https://js.sagamorepub.com/ >
+    #Subscription needed.
+    }
+
+    {
+    param[journal_id] = jnelsi
+
+    au < notReady ; 2017 ; I ; JNEL Special Issues I ; 2017 ; https://js.sagamorepub.com/ > #login found
+    #Subscription needed.
+    }
+
+    {
+    param[journal_id] = jnelsi2
+
+    au < notReady ; 2017 ; II ; JNEL Special Issues II ; 2017 ; https://js.sagamorepub.com/ > #login found
+    #Subscription needed.
+    }
+  }
+  
+  {
+    title <
+      name = Learning Disabilities: A Multidisciplinary Journal ;
+      issn = 2374-7846
+    >
+
+    param[journal_id] = ldmj
+
+    au < released ; 1989 ; 1 ; Learning Disabilities: A Multidisciplinary Journal Volume 1 ; 1989 ; https://js.sagamorepub.com/ >
+    au < released ; 1991 ; 2 ; Learning Disabilities: A Multidisciplinary Journal Volume 2 ; 1991 ; https://js.sagamorepub.com/ >
+    au < released ; 1992 ; 3 ; Learning Disabilities: A Multidisciplinary Journal Volume 3 ; 1992 ; https://js.sagamorepub.com/ >
+    au < released ; 1993 ; 4 ; Learning Disabilities: A Multidisciplinary Journal Volume 4 ; 1993 ; https://js.sagamorepub.com/ >
+    au < released ; 1994 ; 5 ; Learning Disabilities: A Multidisciplinary Journal Volume 5 ; 1994 ; https://js.sagamorepub.com/ >
+    au < released ; 1995 ; 6 ; Learning Disabilities: A Multidisciplinary Journal Volume 6 ; 1995 ; https://js.sagamorepub.com/ >
+    au < released ; 1996 ; 7 ; Learning Disabilities: A Multidisciplinary Journal Volume 7 ; 1996 ; https://js.sagamorepub.com/ >
+    au < released ; 1997 ; 8 ; Learning Disabilities: A Multidisciplinary Journal Volume 8 ; 1997 ; https://js.sagamorepub.com/ >
+    au < released ; 1998 ; 9 ; Learning Disabilities: A Multidisciplinary Journal Volume 9 ; 1998 ; https://js.sagamorepub.com/ >
+    au < released ; 2000 ; 10 ; Learning Disabilities: A Multidisciplinary Journal Volume 10 ; 2000 ; https://js.sagamorepub.com/ >
+    au < released ; 2001 ; 11 ; Learning Disabilities: A Multidisciplinary Journal Volume 11 ; 2001 ; https://js.sagamorepub.com/ >
+    au < released ; 2003 ; 12 ; Learning Disabilities: A Multidisciplinary Journal Volume 12 ; 2003 ; https://js.sagamorepub.com/ >
+    au < released ; 2004 ; 13 ; Learning Disabilities: A Multidisciplinary Journal Volume 13 ; 2004 ; https://js.sagamorepub.com/ >
+    au < released ; 2006 ; 14 ; Learning Disabilities: A Multidisciplinary Journal Volume 14 ; 2006 ; http://js.sagamorepub.com/ >
+    au < released ; 2009 ; 15 ; Learning Disabilities: A Multidisciplinary Journal Volume 15 ; 2009 ; http://js.sagamorepub.com/ >
+    au < released ; 2010 ; 16 ; Learning Disabilities: A Multidisciplinary Journal Volume 16 ; 2010 ; http://js.sagamorepub.com/ >
+    au < released ; 2011 ; 17 ; Learning Disabilities: A Multidisciplinary Journal Volume 17 ; 2011 ; http://js.sagamorepub.com/ >
+    au < released ; 2012 ; 18 ; Learning Disabilities: A Multidisciplinary Journal Volume 18 ; 2012 ; http://js.sagamorepub.com/ >
+    au < released ; 2013 ; 19 ; Learning Disabilities: A Multidisciplinary Journal Volume 19 ; 2013 ; http://js.sagamorepub.com/ >
+    au < released ; 2014 ; 20 ; Learning Disabilities: A Multidisciplinary Journal Volume 20 ; 2014 ; http://js.sagamorepub.com/ >
+    au < released ; 2016 ; 21 ; Learning Disabilities: A Multidisciplinary Journal Volume 21 ; 2016 ; http://js.sagamorepub.com/ >
+    au < released ; 2017 ; 22 ; Learning Disabilities: A Multidisciplinary Journal Volume 22 ; 2017 ; http://js.sagamorepub.com/ >
+    au < released ; 2018 ; 23 ; Learning Disabilities: A Multidisciplinary Journal Volume 23 ; 2018 ; https://js.sagamorepub.com/ >
+    au < notReady ; 2019 ; 24 ; Learning Disabilities: A Multidisciplinary Journal Volume 24 ; 2019 ; https://js.sagamorepub.com/ >
+    au < notReady ; 2020 ; 25 ; Learning Disabilities: A Multidisciplinary Journal Volume 25 ; 2020 ; https://js.sagamorepub.com/ >
+    au < notReady ; 2021 ; 26 ; Learning Disabilities: A Multidisciplinary Journal Volume 26 ; 2021 ; https://js.sagamorepub.com/ > #login found
+    au < notReady ; 2022 ; 27 ; Learning Disabilities: A Multidisciplinary Journal Volume 27 ; 2022 ; https://js.sagamorepub.com/ >
+    #Subscription needed.
+  }
+
+  {
+    title <
+      name = PALAESTRA ;
+      issn = 2372-1391
+    >
+
+    param[journal_id] = palaestra
+    #manifest page not found, https://js.sagamorepub.com/palaestra/index
+
+    au < notReady ; 1984 ; 1 ; PALAESTRA Volume 1 ; 1984 ; https://js.sagamorepub.com/ >
+    au < notReady ; 1985 ; 1-2 ; PALAESTRA Volume 1-2 ; 1985 ; https://js.sagamorepub.com/ >
+    au < notReady ; 1986 ; 2-3 ; PALAESTRA Volume 2-3 ; 1986 ; https://js.sagamorepub.com/ >
+    au < notReady ; 1987 ; 3-4 ; PALAESTRA Volume 3-4 ; 1987 ; https://js.sagamorepub.com/ >
+    au < notReady ; 1988 ; 4-5 ; PALAESTRA Volume 4-5 ; 1988 ; https://js.sagamorepub.com/ >
+    au < notReady ; 1989 ; 5-6 ; PALAESTRA Volume 5-6 ; 1989 ; https://js.sagamorepub.com/ >
+    au < notReady ; 1990 ; 6-7 ; PALAESTRA Volume 6-7 ; 1990 ; https://js.sagamorepub.com/ >
+    au < notReady ; 1991 ; 7-8 ; PALAESTRA Volume 7-8 ; 1991 ; https://js.sagamorepub.com/ >
+    au < notReady ; 1992 ; 8-9 ; PALAESTRA Volume 8-9 ; 1992 ; https://js.sagamorepub.com/ >
+    au < notReady ; 1993 ; 9-10 ; PALAESTRA Volume 9-10 ; 1993 ; https://js.sagamorepub.com/ >
+    au < notReady ; 1994 ; 10-11 ; PALAESTRA Volume 10-11 ; 1994 ; https://js.sagamorepub.com/ >
+    au < notReady ; 1995 ; 11 ; PALAESTRA Volume 11 ; 1995 ; https://js.sagamorepub.com/ >
+    au < notReady ; 1996 ; 12 ; PALAESTRA Volume 12 ; 1996 ; https://js.sagamorepub.com/ >
+    au < notReady ; 1997 ; 13 ; PALAESTRA Volume 13 ; 1997 ; https://js.sagamorepub.com/ >
+    au < notReady ; 1998 ; 14 ; PALAESTRA Volume 14 ; 1998 ; https://js.sagamorepub.com/ >
+    au < notReady ; 1999 ; 15 ; PALAESTRA Volume 15 ; 1999 ; https://js.sagamorepub.com/ >
+    au < notReady ; 2000 ; 16 ; PALAESTRA Volume 16 ; 2000 ; https://js.sagamorepub.com/ >
+    au < notReady ; 2001 ; 17 ; PALAESTRA Volume 17 ; 2001 ; https://js.sagamorepub.com/ >
+    au < notReady ; 2002 ; 18 ; PALAESTRA Volume 18 ; 2002 ; https://js.sagamorepub.com/ >
+    au < notReady ; 2003 ; 19 ; PALAESTRA Volume 19 ; 2003 ; https://js.sagamorepub.com/ >
+    au < notReady ; 2004 ; 20 ; PALAESTRA Volume 20 ; 2004 ; https://js.sagamorepub.com/ >
+    au < doesNotExist ; 2005 ; 21 ; PALAESTRA Volume 21 ; 2005 ; https://js.sagamorepub.com/ >
+    au < doesNotExist ; 2006 ; 22 ; PALAESTRA Volume 22 ; 2006 ; https://js.sagamorepub.com/ >
+    au < notReady ; 2007 ; 23 ; PALAESTRA Volume 23 ; 2007 ; https://js.sagamorepub.com/ >
+    au < notReady ; 2010 ; 24 ; PALAESTRA Volume 24 ; 2010 ; https://js.sagamorepub.com/ >
+    au < notReady ; 2011 ; 25 ; PALAESTRA Volume 25 ; 2011 ; https://js.sagamorepub.com/ >
+    au < notReady ; 2012 ; 26 ; PALAESTRA Volume 26 ; 2012 ; https://js.sagamorepub.com/ >
+    au < notReady ; 2013 ; 27 ; PALAESTRA Volume 27 ; 2013 ; https://js.sagamorepub.com/ >
+    au < notReady ; 2014 ; 28 ; PALAESTRA Volume 28 ; 2014 ; https://js.sagamorepub.com/ >
+    au < notReady ; 2015 ; 29 ; PALAESTRA Volume 29 ; 2015 ; https://js.sagamorepub.com/ >
+    au < notReady ; 2016 ; 30 ; PALAESTRA Volume 30 ; 2016 ; https://js.sagamorepub.com/ >
+    au < notReady ; 2017 ; 31 ; PALAESTRA Volume 31 ; 2017 ; https://js.sagamorepub.com/ >
+    au < notReady ; 2018 ; 32 ; PALAESTRA Volume 32 ; 2018 ; https://js.sagamorepub.com/ >
+    #Subscription needed.
+  }
+}

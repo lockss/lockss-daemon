@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-4.xsd">
+    <titleInfo>
+        <title>封面</title>
+    </titleInfo>
+    <typeOfResource>text</typeOfResource>
+    <genre>article</genre>
+    <originInfo>
+        <place>
+            <placeTerm type="text">香港</placeTerm>
+        </place>
+        <publisher>道風山基督教叢林</publisher>
+        <dateCreated>1994-06</dateCreated>
+        <issuance>serial</issuance>
+    </originInfo>
+    <language>
+        <languageTerm type="text">Chi</languageTerm>
+    </language>
+    <physicalDescription>
+        <form>digital</form>
+    </physicalDescription>
+    <relatedItem type="host">
+        <titleInfo>
+            <title>道風</title>
+            <subTitle>漢語神學學刊</subTitle>
+        </titleInfo>
+        <part>
+            <detail type="issue">
+                <number>第一期</number>
+            </detail>
+            <extent unit="pages"><start></start></extent>
+            <date>1994-06</date>
+        </part>
+    </relatedItem>
+    <location>
+        <url>http://library.cuhk.edu.hk/record=b2057943</url>
+    </location>
+    <accessCondition type="useAndReproduction">Use of this resource is governed by the terms and conditions of the Creative Commons “Attribution-NonCommercial-NoDerivatives 4.0 International” License (http://creativecommons.org/licenses/by-nc-nd/4.0/)</accessCondition>
+    <identifier type="local" displayLabel="FileName">i01_cover</identifier>
+    <identifier type="local"></identifier>
+    <recordInfo>
+        <recordOrigin>Created by CUHK Library using Google Refine</recordOrigin>
+    </recordInfo></mods>

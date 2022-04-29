@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2022 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -894,6 +890,23 @@ public class TestNumberUtil extends LockssTestCase {
     assertEquals(5.25, NumberUtil.roundToNDecimals(5.252, 2));
     assertEquals(5.252, NumberUtil.roundToNDecimals(5.252, 3));
     assertEquals(5.252, NumberUtil.roundToNDecimals(5.252, 4));
+  }
+
+  public void testIntPow() {
+    assertEquals(0, NumberUtil.intPow(0, 6));
+    assertEquals(1, NumberUtil.intPow(10, 0));
+    assertEquals(10, NumberUtil.intPow(10, 1));
+    assertEquals(100, NumberUtil.intPow(10, 2));
+    assertEquals(1000, NumberUtil.intPow(10, 3));
+    assertEquals(10000, NumberUtil.intPow(10, 4));
+    assertEquals(10000000, (long)Math.pow(10, 7));
+    assertEquals(100000000, (long)Math.pow(10, 8));
+    assertEquals(425927596977747L, NumberUtil.intPow(123, 7));
+    try {
+      assertEquals(10000, NumberUtil.intPow(10, -4));
+      fail("Negative exponent should throw");
+    } catch (IllegalArgumentException e) {
+    }
   }
 
 }

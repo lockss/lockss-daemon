@@ -1,0 +1,271 @@
+{
+
+  publisher <
+    name = Genetics Society of America
+  >
+
+    pluginPrefix = org.lockss.plugin.highwire.
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] ; param[base_url] >
+    #Moved to OUP
+
+  {
+
+    title <
+      name = G3: Genes, Genomes, Genetics ;
+      eissn = 2160-1836 
+    >
+    #param[base_url] = http://www.g3journal.org/
+    #move to OUP
+
+    au < HighWirePressH20Plugin ; down ; 2011 ; G3: Genes, Genomes, Genetics Volume 1 ; 1 ; http://www.g3journal.org/ >
+    au < HighWirePressH20Plugin ; down ; 2012 ; G3: Genes, Genomes, Genetics Volume 2 ; 2 ; http://www.g3journal.org/ >
+    au < HighWirePressH20Plugin ; down ; 2013 ; G3: Genes, Genomes, Genetics Volume 3 ; 3 ; http://www.g3journal.org/ >
+    au < HighWirePressH20Plugin ; down ; 2014 ; G3: Genes, Genomes, Genetics Volume 4 ; 4 ; http://www.g3journal.org/ >
+    au < HighWirePressH20Plugin ; down ; 2015 ; G3: Genes, Genomes, Genetics Volume 5 ; 5 ; http://www.g3journal.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2016 ; G3: Genes, Genomes, Genetics Volume 6 ; 6 ; http://www.g3journal.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2017 ; G3: Genes, Genomes, Genetics Volume 7 ; 7 ; http://www.g3journal.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2018 ; G3: Genes, Genomes, Genetics Volume 8 ; 8 ; https://www.g3journal.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2019 ; G3: Genes, Genomes, Genetics Volume 9 ; 9 ; https://www.g3journal.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2020 ; G3: Genes, Genomes, Genetics Volume 10 ; 10 ; https://www.g3journal.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; doNotProcess ; 2021 ; G3: Genes, Genomes, Genetics Volume 11 ; 11 ; https://www.g3journal.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; doNotProcess ; 2022 ; G3: Genes, Genomes, Genetics Volume 12 ; 12 ; https://www.g3journal.org/ >
+
+  }
+    
+  {
+
+    title <
+      name = Genetics ;
+      issn = 0016-6731 ;
+      eissn = 1943-2631 ;
+      issnl = 0016-6731
+    >
+    #param[base_url] = http://www.genetics.org/
+    #move to OUP
+
+    au < HighWirePressH20Plugin ; down ; 1916 ; Genetics Volume 1 ; 1 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1917 ; Genetics Volume 2 ; 2 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1918 ; Genetics Volume 3 ; 3 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1919 ; Genetics Volume 4 ; 4 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1920 ; Genetics Volume 5 ; 5 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1921 ; Genetics Volume 6 ; 6 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1922 ; Genetics Volume 7 ; 7 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1923 ; Genetics Volume 8 ; 8 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1924 ; Genetics Volume 9 ; 9 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1925 ; Genetics Volume 10 ; 10 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1926 ; Genetics Volume 11 ; 11 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1927 ; Genetics Volume 12 ; 12 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1928 ; Genetics Volume 13 ; 13 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1929 ; Genetics Volume 14 ; 14 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1930 ; Genetics Volume 15 ; 15 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1931 ; Genetics Volume 16 ; 16 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1932 ; Genetics Volume 17 ; 17 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1933 ; Genetics Volume 18 ; 18 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1934 ; Genetics Volume 19 ; 19 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1935 ; Genetics Volume 20 ; 20 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1936 ; Genetics Volume 21 ; 21 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1937 ; Genetics Volume 22 ; 22 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1938 ; Genetics Volume 23 ; 23 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1939 ; Genetics Volume 24 ; 24 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1940 ; Genetics Volume 25 ; 25 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1941 ; Genetics Volume 26 ; 26 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1942 ; Genetics Volume 27 ; 27 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1943 ; Genetics Volume 28 ; 28 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1944 ; Genetics Volume 29 ; 29 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1945 ; Genetics Volume 30 ; 30 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1946 ; Genetics Volume 31 ; 31 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1947 ; Genetics Volume 32 ; 32 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1948 ; Genetics Volume 33 ; 33 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1949 ; Genetics Volume 34 ; 34 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1950 ; Genetics Volume 35 ; 35 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1951 ; Genetics Volume 36 ; 36 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1952 ; Genetics Volume 37 ; 37 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1953 ; Genetics Volume 38 ; 38 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1954 ; Genetics Volume 39 ; 39 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1955 ; Genetics Volume 40 ; 40 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1956 ; Genetics Volume 41 ; 41 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1957 ; Genetics Volume 42 ; 42 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1958 ; Genetics Volume 43 ; 43 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1959 ; Genetics Volume 44 ; 44 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1960 ; Genetics Volume 45 ; 45 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1961 ; Genetics Volume 46 ; 46 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1962 ; Genetics Volume 47 ; 47 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1963 ; Genetics Volume 48 ; 48 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1964 ; Genetics Volume 49 ; 49 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1964 ; Genetics Volume 50 ; 50 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1965 ; Genetics Volume 51 ; 51 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1965 ; Genetics Volume 52 ; 52 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1966 ; Genetics Volume 53 ; 53 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1966 ; Genetics Volume 54 ; 54 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1967 ; Genetics Volume 55 ; 55 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1967 ; Genetics Volume 56 ; 56 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1967 ; Genetics Volume 57 ; 57 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1968 ; Genetics Volume 58 ; 58 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1968 ; Genetics Volume 59 ; 59 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1968 ; Genetics Volume 60 ; 60 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1969 ; Genetics Volume 61 ; 61 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1969 ; Genetics Volume 62 ; 62 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1969 ; Genetics Volume 63 ; 63 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1970 ; Genetics Volume 64 ; 64 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1970 ; Genetics Volume 65 ; 65 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1970 ; Genetics Volume 66 ; 66 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1971 ; Genetics Volume 67 ; 67 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1971 ; Genetics Volume 68 ; 68 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1971 ; Genetics Volume 69 ; 69 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1972 ; Genetics Volume 70 ; 70 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1972 ; Genetics Volume 71 ; 71 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1972 ; Genetics Volume 72 ; 72 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1973 ; Genetics Volume 73 ; 73 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1973 ; Genetics Volume 74 ; 74 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1973 ; Genetics Volume 75 ; 75 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1974 ; Genetics Volume 76 ; 76 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1974 ; Genetics Volume 77 ; 77 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1974 ; Genetics Volume 78 ; 78 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1975 ; Genetics Volume 79 ; 79 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1975 ; Genetics Volume 80 ; 80 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1975 ; Genetics Volume 81 ; 81 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1976 ; Genetics Volume 82 ; 82 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1976 ; Genetics Volume 83 ; 83 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1976 ; Genetics Volume 84 ; 84 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1977 ; Genetics Volume 85 ; 85 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1977 ; Genetics Volume 86 ; 86 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1977 ; Genetics Volume 87 ; 87 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1978 ; Genetics Volume 88 ; 88 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1978 ; Genetics Volume 89 ; 89 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1978 ; Genetics Volume 90 ; 90 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1979 ; Genetics Volume 91 ; 91 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1979 ; Genetics Volume 92 ; 92 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1979 ; Genetics Volume 93 ; 93 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1980 ; Genetics Volume 94 ; 94 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1980 ; Genetics Volume 95 ; 95 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1980 ; Genetics Volume 96 ; 96 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1981 ; Genetics Volume 97 ; 97 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1981 ; Genetics Volume 98 ; 98 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1981 ; Genetics Volume 99 ; 99 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1982 ; Genetics Volume 100 ; 100 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1982 ; Genetics Volume 101 ; 101 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1982 ; Genetics Volume 102 ; 102 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1983 ; Genetics Volume 103 ; 103 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1983 ; Genetics Volume 104 ; 104 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1983 ; Genetics Volume 105 ; 105 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1984 ; Genetics Volume 106 ; 106 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1984 ; Genetics Volume 107 ; 107 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1984 ; Genetics Volume 108 ; 108 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1985 ; Genetics Volume 109 ; 109 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1985 ; Genetics Volume 110 ; 110 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1985 ; Genetics Volume 111 ; 111 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1986 ; Genetics Volume 112 ; 112 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1986 ; Genetics Volume 113 ; 113 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1986 ; Genetics Volume 114 ; 114 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1987 ; Genetics Volume 115 ; 115 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1987 ; Genetics Volume 116 ; 116 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1987 ; Genetics Volume 117 ; 117 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1988 ; Genetics Volume 118 ; 118 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1988 ; Genetics Volume 119 ; 119 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1988 ; Genetics Volume 120 ; 120 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1989 ; Genetics Volume 121 ; 121 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1989 ; Genetics Volume 122 ; 122 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1989 ; Genetics Volume 123 ; 123 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1990 ; Genetics Volume 124 ; 124 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1990 ; Genetics Volume 125 ; 125 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1990 ; Genetics Volume 126 ; 126 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1991 ; Genetics Volume 127 ; 127 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1991 ; Genetics Volume 128 ; 128 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1991 ; Genetics Volume 129 ; 129 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1992 ; Genetics Volume 130 ; 130 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1992 ; Genetics Volume 131 ; 131 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1992 ; Genetics Volume 132 ; 132 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1993 ; Genetics Volume 133 ; 133 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1993 ; Genetics Volume 134 ; 134 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1993 ; Genetics Volume 135 ; 135 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1994 ; Genetics Volume 136 ; 136 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1994 ; Genetics Volume 137 ; 137 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1994 ; Genetics Volume 138 ; 138 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1995 ; Genetics Volume 139 ; 139 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1995 ; Genetics Volume 140 ; 140 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1995 ; Genetics Volume 141 ; 141 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1996 ; Genetics Volume 142 ; 142 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1996 ; Genetics Volume 143 ; 143 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1996 ; Genetics Volume 144 ; 144 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1997 ; Genetics Volume 145 ; 145 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1997 ; Genetics Volume 146 ; 146 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1997 ; Genetics Volume 147 ; 147 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1998 ; Genetics Volume 148 ; 148 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1998 ; Genetics Volume 149 ; 149 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1998 ; Genetics Volume 150 ; 150 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1999 ; Genetics Volume 151 ; 151 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1999 ; Genetics Volume 152 ; 152 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 1999 ; Genetics Volume 153 ; 153 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2000 ; Genetics Volume 154 ; 154 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2000 ; Genetics Volume 155 ; 155 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2000 ; Genetics Volume 156 ; 156 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2001 ; Genetics Volume 157 ; 157 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2001 ; Genetics Volume 158 ; 158 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2001 ; Genetics Volume 159 ; 159 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2002 ; Genetics Volume 160 ; 160 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2002 ; Genetics Volume 161 ; 161 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2002 ; Genetics Volume 162 ; 162 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2003 ; Genetics Volume 163 ; 163 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2003 ; Genetics Volume 164 ; 164 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2003 ; Genetics Volume 165 ; 165 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2004 ; Genetics Volume 166 ; 166 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2004 ; Genetics Volume 167 ; 167 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2004 ; Genetics Volume 168 ; 168 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2005 ; Genetics Volume 169 ; 169 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2005 ; Genetics Volume 170 ; 170 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2005 ; Genetics Volume 171 ; 171 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2006 ; Genetics Volume 172 ; 172 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2006 ; Genetics Volume 173 ; 173 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2006 ; Genetics Volume 174 ; 174 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2007 ; Genetics Volume 175 ; 175 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2007 ; Genetics Volume 176 ; 176 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2007 ; Genetics Volume 177 ; 177 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2008 ; Genetics Volume 178 ; 178 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2008 ; Genetics Volume 179 ; 179 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2008 ; Genetics Volume 180 ; 180 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2009 ; Genetics Volume 181 ; 181 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2009 ; Genetics Volume 182 ; 182 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2009 ; Genetics Volume 183 ; 183 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2010 ; Genetics Volume 184 ; 184 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2010 ; Genetics Volume 185 ; 185 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2010 ; Genetics Volume 186 ; 186 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2011 ; Genetics Volume 187 ; 187 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2011 ; Genetics Volume 188 ; 188 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2011 ; Genetics Volume 189 ; 189 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2012 ; Genetics Volume 190 ; 190 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2012 ; Genetics Volume 191 ; 191 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2012 ; Genetics Volume 192 ; 192 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2013 ; Genetics Volume 193 ; 193 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2013 ; Genetics Volume 194 ; 194 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2013 ; Genetics Volume 195 ; 195 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2014 ; Genetics Volume 196 ; 196 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2014 ; Genetics Volume 197 ; 197 ; http://www.genetics.org/ >
+    au < HighWirePressH20Plugin ; down ; 2014 ; Genetics Volume 198 ; 198 ; http://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2015 ; Genetics Volume 199 ; 199 ; http://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2015 ; Genetics Volume 200 ; 200 ; http://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2015 ; Genetics Volume 201 ; 201 ; http://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2016 ; Genetics Volume 202 ; 202 ; http://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2016 ; Genetics Volume 203 ; 203 ; http://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2016 ; Genetics Volume 204 ; 204 ; http://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2017 ; Genetics Volume 205 ; 205 ; http://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2017 ; Genetics Volume 206 ; 206 ; http://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2017 ; Genetics Volume 207 ; 207 ; http://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2018 ; Genetics Volume 208 ; 208 ; https://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2018 ; Genetics Volume 209 ; 209 ; https://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2018 ; Genetics Volume 210 ; 210 ; https://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2019 ; Genetics Volume 211 ; 211 ; https://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2019 ; Genetics Volume 212 ; 212 ; https://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2019 ; Genetics Volume 213 ; 213 ; https://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2020 ; Genetics Volume 214 ; 214 ; https://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2020 ; Genetics Volume 215 ; 215 ; https://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; down ; 2020 ; Genetics Volume 216 ; 216 ; https://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; doNotProcess ; 2021 ; Genetics Volume 217 ; 217 ; https://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; doNotProcess ; 2021 ; Genetics Volume 218 ; 218 ; https://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; doNotProcess ; 2021 ; Genetics Volume 219 ; 219 ; https://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; doNotProcess ; 2022 ; Genetics Volume 220 ; 220 ; https://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; doNotProcess ; 2022 ; Genetics Volume 221 ; 221 ; https://www.genetics.org/ >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; doNotProcess ; 2022 ; Genetics Volume 222 ; 222 ; https://www.genetics.org/ >
+
+  }
+
+}

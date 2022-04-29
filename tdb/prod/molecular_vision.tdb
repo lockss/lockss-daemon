@@ -2,7 +2,7 @@
 
   publisher <
     name = Molecular Vision ;
-    info[platform] = Custom. Open Access. See LXQUEUE-1699, BLOCKED, Jira#LXPLUG-2082, need permission statement
+    info[platform] = Custom. Open Access. See LXQUEUE-1699, BLOCKED, LXPLUG-2082, need permission statement
   >
   
     rights = openaccess
@@ -14,22 +14,23 @@
       issnl = 1090-0535
     >
     
-    #plugin needs update. see lxq-1699
-    #platform changed. Plugin down.
     {
-    plugin = needs.plugin
-    param[base_url] = http://www.molvis.org/molvis/
+    plugin = org.molvis.plugin.MolecularVisionPlugin
+    param[base_url] = http://www.molvis.org/
+    param[journal_id] = molvis
+
     implicit < status ; year ; name ; param[volume] >
 
-    au < exists ; 2013 ; Molecular Vision Volume 19 ; 19 >
-    au < exists ; 2014 ; Molecular Vision Volume 20 ; 20 >
-    au < exists ; 2015 ; Molecular Vision Volume 21 ; 21 >
-    au < exists ; 2016 ; Molecular Vision Volume 22 ; 22 >
-    au < exists ; 2017 ; Molecular Vision Volume 23 ; 23 >
-    au < exists ; 2018 ; Molecular Vision Volume 24 ; 24 >
-    au < exists ; 2019 ; Molecular Vision Volume 25 ; 25 >
-    au < exists ; 2020 ; Molecular Vision Volume 26 ; 26 >
+    au < released ; 2013 ; Molecular Vision Volume 19 ; 19 >
+    au < released ; 2014 ; Molecular Vision Volume 20 ; 20 >
+    au < released ; 2015 ; Molecular Vision Volume 21 ; 21 >
+    au < released ; 2016 ; Molecular Vision Volume 22 ; 22 >
+    au < released ; 2017 ; Molecular Vision Volume 23 ; 23 >
+    au < released ; 2018 ; Molecular Vision Volume 24 ; 24 >
+    au < released ; 2019 ; Molecular Vision Volume 25 ; 25 >
+    au < released ; 2020 ; Molecular Vision Volume 26 ; 26 >
     au < expected ; 2021 ; Molecular Vision Volume 27 ; 27 >
+    au < expected ; 2022 ; Molecular Vision Volume 28 ; 28 >
     }
     {
     plugin = org.molvis.plugin.MolVisPlugin

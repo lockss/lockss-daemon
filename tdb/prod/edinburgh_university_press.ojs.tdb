@@ -3,10 +3,10 @@
     name = Edinburgh University Press ;
     info[platform] = OJS3
   >
+#########################
+### Open Journal Systems 3.1.1.2 as of 4/19/2022
+#########################
 
-#########################
-### Open Journal Systems 3.1.1.2 as of 8/31/2021
-#########################
 
     plugin = org.lockss.plugin.ojs3.Ojs3Plugin
     implicit < status ; year ; volume ; name ; param[year] >
@@ -24,6 +24,7 @@
     au < exists ; 2018 ; 1 ; Airea: Arts & Interdisciplinary Research Volume 2018 ; 2018 >
     au < exists ; 2020 ; 2 ; Airea: Arts & Interdisciplinary Research Volume 2020 ; 2020 >
     au < expected ; 2021 ; 3 ; Airea: Arts & Interdisciplinary Research Volume 2021 ; 2021 >
+    au < expected ; 2022 ; 4 ; Airea: Arts & Interdisciplinary Research Volume 2022 ; 2022 >
 
   }
 
@@ -37,6 +38,7 @@
     
     au < exists ; 2020 ; 1 ; Contemporary Challenges: The Global Crime, Justice, and Security Journal Volume 2020 ; 2020 >
     au < expected ; 2021 ; 2 ; Contemporary Challenges: The Global Crime, Justice, and Security Journal Volume 2021 ; 2021 >
+    au < expected ; 2022 ; 3 ; Contemporary Challenges: The Global Crime, Justice, and Security Journal Volume 2022 ; 2022 >
 
   }
 
@@ -51,6 +53,7 @@
     au < exists ; 2019 ; 1 ; IUPHAR/BPS Guide to Pharmacology CITE Volume 2019 ; 2019 >
     au < exists ; 2020 ; 2 ; IUPHAR/BPS Guide to Pharmacology CITE Volume 2020 ; 2020 >
     au < exists ; 2021 ; 3 ; IUPHAR/BPS Guide to Pharmacology CITE Volume 2021 ; 2021 >
+    au < expected ; 2022 ; 4 ; IUPHAR/BPS Guide to Pharmacology CITE Volume 2022 ; 2022 >
 
   }
 
@@ -70,6 +73,7 @@
     au < exists ; 2019 ; 10 ; Leviathan Volume 2019 ; 2019 >
     au < exists ; 2020 ; 10 ; Leviathan Volume 2020 ; 2020 >
     au < expected ; 2021 ; 11 ; Leviathan Volume 2021 ; 2021 >
+    au < expected ; 2022 ; 12 ; Leviathan Volume 2022 ; 2022 >
 
   }
 
@@ -89,6 +93,7 @@
     au < exists ; 2019 ; 6 ; Medicine Anthropology Theory Volume 2019 ; 2019 >
     au < exists ; 2020 ; 7 ; Medicine Anthropology Theory Volume 2020 ; 2020 >
     au < exists ; 2021 ; 8 ; Medicine Anthropology Theory Volume 2021 ; 2021 >
+    au < expected ; 2022 ; 9 ; Medicine Anthropology Theory Volume 2022 ; 2022 >
 
   }
 

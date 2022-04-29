@@ -11,8 +11,8 @@
    #param[base_url] = https://www.microbiologyresearch.org/
    implicit < status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
    plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
-
    # Formerly: Society for General Microbiology
+
 
   {
   
@@ -126,8 +126,9 @@
       au < finished ; crawling ; 2017 ; International Journal of Systematic and Evolutionary Microbiology Volume 67 ; 67 ; https://www.microbiologyresearch.org/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2018 ; International Journal of Systematic and Evolutionary Microbiology Volume 68 ; 68 ; https://www.microbiologyresearch.org/ ; >
       au < frozen ; exists ; 2019 ; International Journal of Systematic and Evolutionary Microbiology Volume 69 ; 69 ; https://www.microbiologyresearch.org/ ; >
-      au < crawling ; exists ; 2020 ; International Journal of Systematic and Evolutionary Microbiology Volume 70 ; 70 ; https://www.microbiologyresearch.org/ ; >
+      au < frozen ; exists ; 2020 ; International Journal of Systematic and Evolutionary Microbiology Volume 70 ; 70 ; https://www.microbiologyresearch.org/ ; >
       au < crawling ; exists ; 2021 ; International Journal of Systematic and Evolutionary Microbiology Volume 71 ; 71 ; https://www.microbiologyresearch.org/ ; >
+      au < manifest ; exists ; 2022 ; International Journal of Systematic and Evolutionary Microbiology Volume 72 ; 72 ; https://www.microbiologyresearch.org/ ; >
 
   }
 
@@ -396,6 +397,7 @@
       au < frozen ; exists ; 2019 ; Journal of General Virology Volume 100 ; 100 ; https://www.microbiologyresearch.org/ ; >
       au < deepCrawl ; exists ; 2020 ; Journal of General Virology Volume 101 ; 101 ; https://www.microbiologyresearch.org/ ; >
       au < crawling ; exists ; 2021 ; Journal of General Virology Volume 102 ; 102 ; https://www.microbiologyresearch.org/ ; >
+      au < manifest ; exists ; 2022 ; Journal of General Virology Volume 103 ; 103 ; https://www.microbiologyresearch.org/ ; >
 
   }
 
@@ -482,6 +484,7 @@
       au < frozen ; exists ; 2019 ; Journal of Medical Microbiology Volume 68 ; 68 ; https://www.microbiologyresearch.org/ ; >
       au < deepCrawl ; exists ; 2020 ; Journal of Medical Microbiology Volume 69 ; 69 ; https://www.microbiologyresearch.org/ ; >
       au < crawling ; exists ; 2021 ; Journal of Medical Microbiology Volume 70 ; 70 ; https://www.microbiologyresearch.org/ ; >
+      au < manifest ; exists ; 2022 ; Journal of Medical Microbiology Volume 71 ; 71 ; https://www.microbiologyresearch.org/ ; >
 
   }
 
@@ -526,6 +529,7 @@
       au < frozen ; exists ; 2019 ; Microbial Genomics Volume 5 ; 5 ; https://www.microbiologyresearch.org/ ; >
       au < deepCrawl ; exists ; 2020 ; Microbial Genomics Volume 6 ; 6 ; https://www.microbiologyresearch.org/ ; >
       au < crawling ; exists ; 2021 ; Microbial Genomics Volume 7 ; 7 ; https://www.microbiologyresearch.org/ ; >
+      au < manifest ; exists ; 2022 ; Microbial Genomics Volume 8 ; 8 ; https://www.microbiologyresearch.org/ ; >
 
   }
 
@@ -572,6 +576,7 @@
       au < frozen ; exists ; 2019 ; Microbiology Volume 165 ; 165 ; https://www.microbiologyresearch.org/ ; >
       au < deepCrawl ; exists ; 2020 ; Microbiology Volume 166 ; 166 ; https://www.microbiologyresearch.org/ ; >
       au < crawling ; exists ; 2021 ; Microbiology Volume 167 ; 167 ; https://www.microbiologyresearch.org/ ; >
+      au < manifest ; exists ; 2022 ; Microbiology Volume 168 ; 168 ; https://www.microbiologyresearch.org/ ; >
 
   }
 

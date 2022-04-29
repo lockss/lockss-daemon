@@ -31,7 +31,8 @@
     au < released ; 2018 ; Bone & Joint 360 Volume 7 ; 7 >
     au < released ; 2019 ; Bone & Joint 360 Volume 8 ; 8 >
     au < released ; 2020 ; Bone & Joint 360 Volume 9 ; 9 >
-    au < expected ; 2021 ; Bone & Joint 360 Volume 10 ; 10 >
+    au < released ; 2021 ; Bone & Joint 360 Volume 10 ; 10 >
+    au < manifest ; 2022 ; Bone & Joint 360 Volume 11 ; 11 >
 
     }
 
@@ -71,7 +72,8 @@
     au < released ; 2018 ; Bone & Joint Research Volume 7 ; 7 >
     au < released ; 2019 ; Bone & Joint Research Volume 8 ; 8 >
     au < released ; 2020 ; Bone & Joint Research Volume 9 ; 9 >
-    au < expected ; 2021 ; Bone & Joint Research Volume 10 ; 10 >
+    au < released ; 2021 ; Bone & Joint Research Volume 10 ; 10 >
+    au < manifest ; 2022 ; Bone & Joint Research Volume 11 ; 11 >
 
     }
 
@@ -209,17 +211,18 @@
     param[base_url] = https://online.boneandjoint.org.uk/
     param[journal_id] = bjj
     
-    au < doNotProcess ; 2011 ; Journal of Bone & Joint Surgery, British Volume Volume 93 ; 93-B >
-    au < doNotProcess ; 2012 ; Journal of Bone & Joint Surgery, British Volume Volume 94 ; 94-B >
-    au < doNotProcess ; 2013 ; Journal of Bone & Joint Surgery, British Volume Volume 95 ; 95-B >
-    au < doNotProcess ; 2014 ; Journal of Bone & Joint Surgery, British Volume Volume 96 ; 96-B >
-    au < doNotProcess ; 2015 ; Journal of Bone & Joint Surgery, British Volume Volume 97 ; 97-B >
-    au < doNotProcess ; 2016 ; Journal of Bone & Joint Surgery, British Volume Volume 98 ; 98-B >
-    au < released ; 2017 ; Journal of Bone & Joint Surgery, British Volume Volume 99 ; 99-B >
-    au < released ; 2018 ; Journal of Bone & Joint Surgery, British Volume Volume 100 ; 100-B >
-    au < released ; 2019 ; Journal of Bone & Joint Surgery, British Volume Volume 101 ; 101-B >
-    au < released ; 2020 ; Journal of Bone & Joint Surgery, British Volume Volume 102 ; 102-B >
-    au < expected ; 2021 ; Journal of Bone & Joint Surgery, British Volume Volume 103 ; 103-B >
+    au < doNotProcess ; 2011 ; The Bone & Joint Journal Volume Volume 93-B ; 93-B >
+    au < doNotProcess ; 2012 ; The Bone & Joint Journal Volume Volume 94-B ; 94-B >
+    au < doNotProcess ; 2013 ; The Bone & Joint Journal Volume Volume 95-B ; 95-B >
+    au < doNotProcess ; 2014 ; The Bone & Joint Journal Volume Volume 96-B ; 96-B >
+    au < doNotProcess ; 2015 ; The Bone & Joint Journal Volume Volume 97-B ; 97-B >
+    au < doNotProcess ; 2016 ; The Bone & Joint Journal Volume Volume 98-B ; 98-B >
+    au < released ; 2017 ; The Bone & Joint Journal Volume Volume 99-B ; 99-B >
+    au < released ; 2018 ; The Bone & Joint Journal Volume Volume 100-B ; 100-B >
+    au < released ; 2019 ; The Bone & Joint Journal Volume Volume 101-B ; 101-B >
+    au < released ; 2020 ; The Bone & Joint Journal Volume Volume 102-B ; 102-B >
+    au < released ; 2021 ; The Bone & Joint Journal Volume Volume 103-B ; 103-B >
+    au < manifest ; 2022 ; The Bone & Joint Journal Volume Volume 104-B ; 104-B >
 
     }
 
@@ -267,13 +270,14 @@
     param[base_url] = https://online.boneandjoint.org.uk/
     param[journal_id] = eor
 
-    au < released ; 2016 ; EFORT Open Reviews Volume 1 ; 1 >
-    au < released ; 2017 ; EFORT Open Reviews Volume 2 ; 2 >
-    au < released ; 2018 ; EFORT Open Reviews Volume 3 ; 3 >
-    au < released ; 2019 ; EFORT Open Reviews Volume 4 ; 4 >
-    au < released ; 2020 ; EFORT Open Reviews Volume 5 ; 5 >
-    au < expected ; 2021 ; EFORT Open Reviews Volume 6 ; 6 >
-
+    au < down ; 2016 ; EFORT Open Reviews Volume 1 ; 1 >
+    au < down ; 2017 ; EFORT Open Reviews Volume 2 ; 2 >
+    au < down ; 2018 ; EFORT Open Reviews Volume 3 ; 3 >
+    au < down ; 2019 ; EFORT Open Reviews Volume 4 ; 4 >
+    au < down ; 2020 ; EFORT Open Reviews Volume 5 ; 5 >
+    au < doNotProcess ; 2021 ; EFORT Open Reviews Volume 6 ; 6 >
+    au < doNotProcess ; 2022 ; EFORT Open Reviews Volume 7 ; 7 >
+    #Moved to BioScientifica
   }
   
 }

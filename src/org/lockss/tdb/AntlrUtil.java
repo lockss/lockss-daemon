@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2018, Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University,
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,
@@ -117,73 +117,6 @@ public class AntlrUtil {
      */
     public SyntaxError(Throwable cause) {
       super(cause);
-    }
-    
-  }
-  
-  /**
-   * <p>
-   * A named {@link ANTLRInputStream}.
-   * </p>
-   * 
-   * @author Thib Guicherd-Callin
-   * @since 1.67
-   */
-  public static class NamedAntlrInputStream extends ANTLRInputStream {
-    
-    /**
-     * <p>
-     * The stream's name.
-     * </p>
-     * 
-     * @since 1.67
-     */
-    protected String name;
-    
-    /**
-     * <p>
-     * Makes a named {@link ANTLRInputStream} out of the given string of input.
-     * </p>
-     * 
-     * @param name
-     *          The stream's name.
-     * @param input
-     *          A string of input.
-     * @since 1.67
-     */
-    public NamedAntlrInputStream(String name, String input) {
-      super(input);
-      this.name = name;
-    }
-    
-    /**
-     * <p>
-     * Makes a named {@link ANTLRInputStream} out of the given input stream.
-     * </p>
-     * 
-     * @param name
-     *          The stream's name.
-     * @param input
-     *          An input stream.
-     * @param encoding
-     *          The encoding of the input stream.
-     * @throws UnsupportedEncodingException
-     *           if the given encoding is invalid.
-     * @throws IOException
-     *           if some other I/O exception occurs.
-     * @since 1.68
-     */
-    public NamedAntlrInputStream(String name,
-                                 InputStream input,
-                                 String encoding)
-        throws UnsupportedEncodingException, IOException {
-      super(new InputStreamReader(input, encoding));
-      this.name = name;
-    }
-    
-    @Override
-    public String getSourceName() {
-      return name;
     }
     
   }

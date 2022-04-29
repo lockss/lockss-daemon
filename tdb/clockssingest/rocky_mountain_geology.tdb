@@ -11,7 +11,6 @@
     plugin = org.lockss.plugin.silverchair.geoscienceworld.ClockssGeoscienceWorldSilverchairPlugin
     implicit < status ; status2 ; year ; param[year] ; name ; param[volume_name] ; hidden[proxy] >
     param[base_url] = https://pubs.geoscienceworld.org/
-
 #    {
 #    
 #      title < 
@@ -58,6 +57,7 @@
 #  
 #    }
 #  
+
     {
     
       title < 
@@ -92,9 +92,10 @@
       au < frozen ; exists ; 2017 ; 2017 ; Rocky Mountain Geology Volume 52 ; 52 ; >
       au < frozen ; exists ; 2018 ; 2018 ; Rocky Mountain Geology Volume 53 ; 53 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Rocky Mountain Geology Volume 54 ; 54 ; >
-      au < testing ; exists ; 2020 ; 2020 ; Rocky Mountain Geology Volume 55 ; 55 ; >
-      au < manifest ; exists ; 2021 ; 2021 ; Rocky Mountain Geology Volume 56 ; 56 ; >
+      au < notReady ; exists ; 2020 ; 2020 ; Rocky Mountain Geology Volume 55 ; 55 ; > #svg file, 403 Forbidden
+      au < notReady ; exists ; 2021 ; 2021 ; Rocky Mountain Geology Volume 56 ; 56 ; > #svg file, 403 Forbidden
       
+      au < expected ; exists ; 2022 ; 2022 ; Rocky Mountain Geology Volume 57 ; 57 ; > #svg file, 403 Forbidden
     }
   
 }

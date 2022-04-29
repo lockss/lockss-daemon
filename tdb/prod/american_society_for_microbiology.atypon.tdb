@@ -8,12 +8,12 @@
     plugin = org.lockss.plugin.atypon.asm.AsmPlugin
     param[base_url] = https://journals.asm.org/
     implicit < status ; year ; name ; param[volume_name] >
-
     #
     #Two titles are also in clockss, and in atypon2 tdb file.
     #EcoSal Plus, Journal of Microbiology & Biology Education, 
     #Microbiology Spectrum 
     #
+
 
   {
 
@@ -91,6 +91,7 @@
       au < released ; 2019 ; Antimicrobial Agents and Chemotherapy Volume 63 ; 63 >
       au < released ; 2019-2020 ; Antimicrobial Agents and Chemotherapy Volume 64 ; 64 >
       au < released ; 2020-2021 ; Antimicrobial Agents and Chemotherapy Volume 65 ; 65 >
+      au < manifest ; 2022 ; Antimicrobial Agents and Chemotherapy Volume 66 ; 66 >
 
   }
 
@@ -207,6 +208,7 @@
       au < notReady ; 2019 ; Applied and Environmental Microbiology Volume 85 ; 85 > #Supplemental material causes daemon crash.
       au < released ; 2019-2020 ; Applied and Environmental Microbiology Volume 86 ; 86 >
       au < released ; 2020-2021 ; Applied and Environmental Microbiology Volume 87 ; 87 >
+      au < manifest ; 2022 ; Applied and Environmental Microbiology Volume 88 ; 88 >
 
   }
 
@@ -254,7 +256,8 @@
       au < doNotProcess ; 2018 ; Clinical Microbiology Reviews Volume 31 ; 31 >
       au < doNotProcess ; 2018-2019 ; Clinical Microbiology Reviews Volume 32 ; 32 >
       au < released ; 2019-2020 ; Clinical Microbiology Reviews Volume 33 ; 33 >
-      au < manifest ; 2020-2021 ; Clinical Microbiology Reviews Volume 34 ; 34 >
+      au < released ; 2020-2021 ; Clinical Microbiology Reviews Volume 34 ; 34 >
+      au < manifest ; 2022 ; Clinical Microbiology Reviews Volume 35 ; 35 >
 
   }
 
@@ -436,7 +439,8 @@
       au < doNotProcess ; 2018 ; Infection and Immunity Volume 86 ; 86 >
       au < released ; 2019 ; Infection and Immunity Volume 87 ; 87 >
       au < released ; 2020 ; Infection and Immunity Volume 88 ; 88 >
-      au < manifest ; 2021 ; Infection and Immunity Volume 89 ; 89 >
+      au < released ; 2021 ; Infection and Immunity Volume 89 ; 89 >
+      au < manifest ; 2022 ; Infection and Immunity Volume 90 ; 90 >
 
   }
 
@@ -653,6 +657,7 @@
       au < released ; 2019 ; Journal of Bacteriology Volume 201 ; 201 >
       au < released ; 2019-2020 ; Journal of Bacteriology Volume 202 ; 202 >
       au < released ; 2020-2021 ; Journal of Bacteriology Volume 203 ; 203 >
+      au < manifest ; 2022 ; Journal of Bacteriology Volume 204 ; 204 >
 
   }
 
@@ -725,6 +730,7 @@
       au < released ; 2019 ; Journal of Clinical Microbiology Volume 57 ; 57 >
       au < released ; 2019-2020 ; Journal of Clinical Microbiology Volume 58 ; 58 >
       au < released ; 2020-2021 ; Journal of Clinical Microbiology Volume 59 ; 59 >
+      au < manifest ; 2022 ; Journal of Clinical Microbiology Volume 60 ; 60 >
 
   }
 
@@ -832,7 +838,8 @@
       au < doNotProcess ; 2018 ; Journal of Virology Volume 92 ; 92 >
       au < released ; 2019 ; Journal of Virology Volume 93 ; 93 >
       au < released ; 2019-2020 ; Journal of Virology Volume 94 ; 94 >
-      au < manifest ; 2020-2021 ; Journal of Virology Volume 95 ; 95 >
+      au < released ; 2020-2021 ; Journal of Virology Volume 95 ; 95 >
+      au < manifest ; 2022 ; Journal of Virology Volume 96 ; 96 >
 
   }
 
@@ -857,6 +864,7 @@
       au < released ; 2019 ; mBio Volume 10 ; 10 >
       au < released ; 2020 ; mBio Volume 11 ; 11 >
       au < released ; 2021 ; mBio Volume 12 ; 12 >
+      au < manifest ; 2022 ; mBio Volume 13 ; 13 >
 
   }
 
@@ -954,7 +962,8 @@
       au < doNotProcess ; 2018 ; Microbiology and Molecular Biology Reviews Volume 82 ; 82 >
       au < released ; 2019 ; Microbiology and Molecular Biology Reviews Volume 83 ; 83 >
       au < released ; 2020 ; Microbiology and Molecular Biology Reviews Volume 84 ; 84 >
-      au < manifest ; 2021 ; Microbiology and Molecular Biology Reviews Volume 85 ; 85 >
+      au < released ; 2021 ; Microbiology and Molecular Biology Reviews Volume 85 ; 85 >
+      au < manifest ; 2022 ; Microbiology and Molecular Biology Reviews Volume 86 ; 86 >
 
   }
 
@@ -991,6 +1000,7 @@
       au < released ; 2019 ; Microbiology Resource Announcements Volume 8 ; 8 >
       au < released ; 2020 ; Microbiology Resource Announcements Volume 9 ; 9 >
       au < released ; 2021 ; Microbiology Resource Announcements Volume 10 ; 10 >
+      au < manifest ; 2022 ; Microbiology Resource Announcements Volume 11 ; 11 >
 
   }
 
@@ -1044,7 +1054,8 @@
       au < doNotProcess ; 2018 ; Molecular and Cellular Biology Volume 38 ; 38 >
       au < released ; 2019 ; Molecular and Cellular Biology Volume 39 ; 39 >
       au < released ; 2019-2020 ; Molecular and Cellular Biology Volume 40 ; 40 >
-      au < manifest ; 2020-2021 ; Molecular and Cellular Biology Volume 41 ; 41 >
+      au < released ; 2020-2021 ; Molecular and Cellular Biology Volume 41 ; 41 >
+      au < manifest ; 2022 ; Molecular and Cellular Biology Volume 42 ; 42 >
 
   }
 
@@ -1063,7 +1074,8 @@
       au < doNotProcess ; 2018 ; mSphere Volume 3 ; 3 >
       au < released ; 2019 ; mSphere Volume 4 ; 4 >
       au < released ; 2020 ; mSphere Volume 5 ; 5 >
-      au < manifest ; 2021 ; mSphere Volume 6 ; 6 >
+      au < released ; 2021 ; mSphere Volume 6 ; 6 >
+      au < manifest ; 2022 ; mSphere Volume 7 ; 7 >
 
   }
 
@@ -1082,6 +1094,7 @@
       au < released ; 2019 ; mSystems Volume 4 ; 4 >
       au < released ; 2020 ; mSystems Volume 5 ; 5 >
       au < released ; 2021 ; mSystems Volume 6 ; 6 >
+      au < manifest ; 2022 ; mSystems Volume 7 ; 7 >
 
   }
 

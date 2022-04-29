@@ -55,7 +55,7 @@
         au < released ; 2018 ; Criticism Volume 60 [2018] ; 13902 >
         au < released ; 2019 ; Criticism Volume 61 [2019] ; 14199 >
         au < released ; 2020 ; Criticism Volume 62 [2020] ; 15143 >
-        au < manifest ; 2021 ; Criticism Volume 63 [2021] ; 15939 >
+        au < released ; 2021 ; Criticism Volume 63 [2021] ; 15939 >
 
     }
     
@@ -91,7 +91,7 @@
         au < released ; 2018 ; Discourse Volume 40 [2018] ; 13305 >
         au < released ; 2019 ; Discourse Volume 41 [2019] ; 14799 >
         au < released ; 2020 ; Discourse Volume 42 [2020] ; 15179 >
-        au < manifest ; 2021 ; Discourse Volume 43 [2021] ; 15792 >
+        au < released ; 2021 ; Discourse Volume 43 [2021] ; 15792 >
 
     }
 
@@ -121,7 +121,7 @@
         au < released ; 2018 ; Framework: The Journal of Cinema and Media Volume 59 [2018] ; 13715 >
         au < released ; 2019 ; Framework: The Journal of Cinema and Media Volume 60 [2019] ; 14201 >
         au < released ; 2020 ; Framework: The Journal of Cinema and Media Volume 61 [2020] ; 15043 >
-        au < manifest ; 2021 ; Framework: The Journal of Cinema and Media Volume 62 [2021] ; 15787 >
+        au < released ; 2021 ; Framework: The Journal of Cinema and Media Volume 62 [2021] ; 15787 >
 
     }
 
@@ -156,6 +156,7 @@
         au < released ; 2018 ; Human Biology Volume 90 [2018] ; 13746 >
         au < released ; 2019 ; Human Biology Volume 91 [2019] ; 14731 >
         au < released ; 2020 ; Human Biology Volume 92 [2020] ; 15232 >
+        au < released ; 2021 ; Human Biology Volume 93 [2021] ; 16756 >
 
     }
 
@@ -212,7 +213,7 @@
         au < released ; 2018 ; Marvels & Tales Volume 32 [2018] ; 13686 >
         au < released ; 2019 ; Marvels & Tales Volume 33 [2019] ; 14384 >
         au < released ; 2020 ; Marvels & Tales Volume 34 [2020] ; 15177 >
-        au < manifest ; 2021 ; Marvels & Tales Volume 35 [2021] ; 15902 >
+        au < released ; 2021 ; Marvels & Tales Volume 35 [2021] ; 15902 >
 
     }
 
@@ -247,7 +248,7 @@
         au < released ; 2018 ; Merrill-Palmer Quarterly Volume 64 [2018] ; 13690 >
         au < released ; 2019 ; Merrill-Palmer Quarterly Volume 65 [2019] ; 14092 >
         au < released ; 2020 ; Merrill-Palmer Quarterly Volume 66 [2020] ; 15176 >
-        au < manifest ; 2021 ; Merrill-Palmer Quarterly Volume 67 [2021] ; 15503 >
+        au < released ; 2021 ; Merrill-Palmer Quarterly Volume 67 [2021] ; 15503 >
 
     }
 
@@ -264,7 +265,31 @@
       au < released ; 2018 ; Narrative Culture Volume 5 [2018] ; 14511 >
       au < released ; 2019 ; Narrative Culture Volume 6 [2019] ; 14512 >
       au < released ; 2020 ; Narrative Culture Volume 7 [2020] ; 14852 >
-      au < manifest ; 2021 ; Narrative Culture Volume 8 [2021] ; 15536 >
+      au < released ; 2021 ; Narrative Culture Volume 8 [2021] ; 15536 >
+
+    }
+
+    {
+    title <
+      name = Storytelling, Self, Society ;
+      issn = 1550-5340 ;
+      eissn = 1932-0280
+
+    >
+
+      attr[journal_id] = 836
+
+      au < released ; 2011 ; Storytelling, Self, Society Volume 7 [2011] ; 16313 >
+      au < released ; 2012 ; Storytelling, Self, Society Volume 8 [2012] ; 16314 >
+      au < released ; 2013 ; Storytelling, Self, Society Volume 9 [2013] ; 16315 >
+      au < released ; 2014 ; Storytelling, Self, Society Volume 10 [2014] ; 16316 >
+      au < released ; 2015 ; Storytelling, Self, Society Volume 11 [2015] ; 16317 >
+      au < released ; 2016 ; Storytelling, Self, Society Volume 12 [2016] ; 16318 >
+      au < released ; 2017 ; Storytelling, Self, Society Volume 13 [2017] ; 16319 >
+      au < released ; 2018 ; Storytelling, Self, Society Volume 14 [2018] ; 16320 >
+      au < released ; 2019 ; Storytelling, Self, Society Volume 15 [2019] ; 16321 >
+      au < released ; 2020 ; Storytelling, Self, Society Volume 16 [2020] ; 16322 >
+      au < released ; 2021 ; Storytelling, Self, Society Volume 17 [2021] ; 16701 >
 
     }
 

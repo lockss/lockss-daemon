@@ -227,10 +227,9 @@ Args:
 <!--  <property name="derby.jar"      value="${lib}/derby-${derby.version}.jar"/>-->
 <!--  <property name="derbyclient.jar" value="${lib}/derbyclient-${derby.version}.jar"/>-->
 <!--  <property name="derbynet.jar"   value="${lib}/derbynet-${derby.version}.jar"/>-->
-  <property name="postgresql-jdbc.jar"
-                                  value="${lib}/postgresql-42.2.5.jre7.jar" />
+  <property name="postgresql-jdbc.jar" value="${lib}/postgresql-42.3.1.jar" />
   <property name="mysql-connector-java.jar"
-				  value="${lib}/mysql-connector-java-8.0.24.jar" />
+				  value="${lib}/mysql-connector-java-8.0.27.jar" />
   <property name="mailapi.jar"    value="${lib}/javamail-mailapi-1.3.2.jar"/>
   <property name="activation.jar" value="${lib}/activation-1.0.2.jar"/>
   <property name="castor.jar"     value="${lib}/castor-0.9.4.1-xml.jar"/>
@@ -248,7 +247,7 @@ Args:
                                   value="${lib}/pjl-comp-filter-1.6.5.jar"/>
   <property name="jaxp.jar"       value="${lib}/javax.xml.jaxp.jar"/>
 <!--    <property name="xml.jar"  value="${lib}/org.apache.crimson.jar"/> -->
-  <property name="log4j2.version" value="2.17.0"/>
+  <property name="log4j2.version" value="2.17.1"/>
   <property name="log4j2-api.jar" value="${lib}/log4j-api-${log4j2.version}.jar"/>
   <property name="log4j2-core.jar" value="${lib}/log4j-core-${log4j2.version}.jar"/>
   <property name="log4j2-1.2-compat.jar" value="${lib}/log4j-1.2-api-${log4j2.version}.jar"/>
@@ -299,9 +298,9 @@ Args:
   <property name="concurrent.jar" value="${lib}/concurrent.jar"/>
   <property name="htmlparser.jar" value="${lib}/htmlparser-1.6p.jar"/>
   <property name="jsoup.jar" value="${lib}/jsoup-1.14.3.jar"/>
-  <property name="marc4j.jar" value="${lib}/marc4j-2.9.1.jar" />
+  <property name="marc4j.jar" value="${lib}/marc4j-2.9.2.jar" />
   <!-- Jonix -->
-  <property name="jonix.version" value="8.0.1" />
+  <property name="jonix.version" value="8.0.1" /><!-- last Java 8 version, 9.0 is Java 9 -->
   <property name="jonix.jar" value="${lib}/jonix-${jonix.version}.jar" />
   <property name="jonix-common.jar" value="${lib}/jonix-common-${jonix.version}.jar" />
   <property name="jonix-xml.jar" value="${lib}/jonix-xml-${jonix.version}.jar" />
@@ -311,7 +310,7 @@ Args:
   <!-- W3C RDF Parser -->
   <property name="rdf.jar"        value="${lib}/rdf-api-2001-01-19.jar" />
   <property name="xstream.jar"    value="${lib}/xstream-1.1.3.jar" />
-  <property name="xmlunit.jar"    value="${lib}/xmlunit1.0.jar" />
+  <property name="xmlunit.jar"    value="${lib}/xmlunit-1.6.jar" />
   <property name="oai-harvester.jar" value="${lib}/harvester2-0.1.12-p1.jar"/>
   <!-- Needed by OAI harvester: Xalan, Xerces, XML-APIs, Log4j -->
 
@@ -379,6 +378,10 @@ Args:
   <property name="jackson-databind.jar" value="${lib}/jackson-databind-${jackson.version}.1.jar" /><!-- NOTE: 2.9.10.8 -->
   <property name="jackson-annotations.jar" value="${lib}/jackson-annotations-${jackson.version}.jar" />
 
+  <!-- Needed by StringUtil.toUnaccented(): -->
+  <property name="lucene-analyzers-common.jar" value="${lib}/lucene-analyzers-common-8.9.0.jar" />
+  <property name="lucene-core.jar" value="${lib}/lucene-core-8.9.0.jar" />
+
   <!-- Jars for okhttp -->
   <property name="okhttp.version" value="3.14.9" />
   <property name="okhttp.jar" value="${lib}/okhttp-${okhttp.version}.jar" />
@@ -390,8 +393,10 @@ Args:
 
   <property name="json-path.jar" value="${lib}/json-path-2.6.0.jar" />
 
-  <property name="antlr.runtime.jar" value="${lib}/antlr-runtime-4.5.3.jar" />
-  <property name="antlr.tools.jar" value="${lib}/antlr-4.5.3-complete.jar" />
+  <property name="antlr.version" value="4.9.3" />
+  <property name="antlr.runtime.jar" value="${lib}/antlr-runtime-${antlr.version}.jar" />
+  <property name="antlr.tools.jar" value="${lib}/antlr-${antlr.version}-complete.jar" />
+
   <!-- Jars we create -->
   <property name="lockss.jar"     value="${lib}/lockss.jar"/>
   <property name="lockss.rewoven.jar"    value="${lib}/lockss-rewoven.jar"/>
@@ -464,8 +469,6 @@ Args:
   <property name="esapi-2.0GA.jar" value="${lib}/esapi-2.0GA.jar" />
   <property name="joda-time-joda-time.jar"
   	value="${lib}/joda-time-joda-time.jar" />
-  <property name="not-yet-commons-ssl-0.3.9.jar"
-  	value="${lib}/not-yet-commons-ssl-0.3.9.jar" />
   <property name="oiosaml.java-21188-PATCHED.jar"
   	value="${lib}/oiosaml.java-21188-PATCHED.jar" />
   <property name="opensaml-2.5.1.jar" value="${lib}/opensaml-2.5.1.jar" />
@@ -604,6 +607,8 @@ Args:
     <pathelement path="${jackson-annotations.jar}" />
     <pathelement path="${jackson-core.jar}" />
     <pathelement path="${jackson-databind.jar}" />
+    <pathelement path="${lucene-analyzers-common.jar}" />
+    <pathelement path="${lucene-core.jar}" />
     <!-- Jersey jars -->
     <pathelement path="${okhttp.jar}" />
     <pathelement path="${logging-interceptor.jar}" />
@@ -629,7 +634,6 @@ Args:
     <pathelement path="${commons-fileupload-commons-fileupload.jar}" />
     <pathelement path="${esapi-2.0GA.jar}" />
     <pathelement path="${joda-time-joda-time.jar}" />
-    <pathelement path="${not-yet-commons-ssl-0.3.9.jar}" />
     <pathelement path="${oiosaml.java-21188-PATCHED.jar}" />
     <pathelement path="${opensaml-2.5.1.jar}" />
     <pathelement path="${openws-1.4.2.jar}" />
@@ -2312,7 +2316,8 @@ published on the Web. http://www.lockss.org
              verbose="false"
              overview="${src}/overview.html"
              header="${javadoc.header}"
-             bottom="Copyright &amp;copy; 2000-2013 Board of Trustees of Leland Stanford Jr. University, all rights reserved.">
+             bottom="Copyright &amp;copy; 2000-2022 Board of Trustees of Leland Stanford Jr. University, all rights reserved."
+    	     additionalparam="-Xdoclint:none">
        <classpath refid="compile.classpath" />
 
 <!-- disabled until javadoc back online -->

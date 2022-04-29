@@ -20,14 +20,15 @@
     param[journal_id] = hlthaff
     implicit < status ; year ; name ; param[volume_name] >
     
-    au < exists ; 2014 ; Health Affairs Volume 33 ; 33 >
-    au < exists ; 2015 ; Health Affairs Volume 34 ; 34 >
-    au < exists ; 2016 ; Health Affairs Volume 35 ; 35 >
+    au < released ; 2014 ; Health Affairs Volume 33 ; 33 >
+    au < released ; 2015 ; Health Affairs Volume 34 ; 34 >
+    au < manifest ; 2016 ; Health Affairs Volume 35 ; 35 >
     au < released ; 2017 ; Health Affairs Volume 36 ; 36 >
     au < released ; 2018 ; Health Affairs Volume 37 ; 37 >
-    au < exists ; 2019 ; Health Affairs Volume 38 ; 38 >
-    au < exists ; 2020 ; Health Affairs Volume 39 ; 39 >
-    au < exists ; 2021 ; Health Affairs Volume 40 ; 40 >
+    au < released ; 2019 ; Health Affairs Volume 38 ; 38 >
+    au < released ; 2020 ; Health Affairs Volume 39 ; 39 >
+    au < manifest ; 2021 ; Health Affairs Volume 40 ; 40 >
+    au < manifest ; 2022 ; Health Affairs Volume 41 ; 41 >
 
     }
 

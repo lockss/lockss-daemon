@@ -10,7 +10,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>8</string>
+        <string>9</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -87,6 +87,10 @@
     <entry>
         <string>au_crawlrules</string>
         <list>
+            <!--Exclude this particular ".svg" file based on publisher's request, it will return 403
+            https://ash.silverchair-cdn.com/cassette.axd/file/Themes/Client/app/img/split-view_figures-tables-53a6d02348118354786b056ee1d24882350dc90b.svg
+            -->
+            <string>2,"^https?://([^/]+\.silverchair-cdn\.com)/cassette\.axd/.*"</string>
             <!--
             Rockefeller: https://rupress.org/jem/article-pdf/215/1/1/1018472/jem_20172022.pdf
             -->
@@ -171,6 +175,7 @@
     <entry>
         <string>au_substance_url_pattern</string>
         <!--
+           https://publications.aap.org/aapgrandrounds/article-pdf/43/1/10/811194/gr_0120_010.pdf
            https://pubs.geoscienceworld.org/gsa/gsabulletin/article-pdf/131/1-2/3/4604549/3.pdf
         -->
         <!-- long PDF patterns are article PDF, shorter PDF patterns are for supplement PDF -->

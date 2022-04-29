@@ -1,0 +1,27 @@
+{
+
+  publisher <
+    name = Federal Bureau of Investigation
+  >
+
+  {
+  
+    title <
+      name = FBI Law Enforcement Bulletin ;
+      issn = 0014-5688 ;
+      eissn = 1937-4674 ;
+      issnl = 0014-5688
+    >
+    
+    rights = openaccess
+    # Ancient plugin name has an underscore in it
+    plugin = gov.gpo.access.permanent.plugin.fbilawenforcementbulletin.FBI_Law_Enforcement_BulletinPlugin
+    # Ancient AU definition has no slash at the end of the base_url
+    param[base_url] = http://permanent.access.gpo.gov/lockss/FBI_Law_Enforcement_Bulletin
+    implicit < status ; year ; name ; param[year] >  
+
+    au < down ; 2005 ; FBI Law Enforcement Bulletin 2005 ; 2005 >
+      
+  }
+  
+}

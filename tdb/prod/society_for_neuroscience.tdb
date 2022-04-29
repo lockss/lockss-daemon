@@ -25,6 +25,7 @@
       au < released ; 2019 ; eNeuro Volume 6 ; 6 >
       au < released ; 2020 ; eNeuro Volume 7 ; 7 >
       au < released ; 2021 ; eNeuro Volume 8 ; 8 > #unknown host css file  https://sn-eneuro-movie.glencoesoftware.com/static/video-js.min.css
+      au < expected ; 2022 ; eNeuro Volume 9 ; 9 > #unknown host css file  https://sn-eneuro-movie.glencoesoftware.com/static/video-js.min.css
     }
 
     {
@@ -91,6 +92,7 @@
       au < released ; 2019 ; Journal of Neuroscience Volume 39 ; 39 ; https://www.jneurosci.org/ > #error. 403 forbidden
       au < released ; 2020 ; Journal of Neuroscience Volume 40 ; 40 ; https://www.jneurosci.org/ >
       au < released ; 2021 ; Journal of Neuroscience Volume 41 ; 41 ; https://www.jneurosci.org/ >
+      au < manifest ; 2022 ; Journal of Neuroscience Volume 42 ; 42 ; https://www.jneurosci.org/ >
     }
     {
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin

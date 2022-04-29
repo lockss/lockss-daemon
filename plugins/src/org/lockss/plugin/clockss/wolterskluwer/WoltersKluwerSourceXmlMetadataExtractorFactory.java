@@ -38,6 +38,7 @@ import java.util.*;
 import javax.xml.xpath.XPathExpressionException;
 
 import org.apache.commons.io.FilenameUtils;
+import org.lockss.plugin.clockss.JatsPublishingSchemaHelper;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
@@ -52,6 +53,7 @@ import org.xml.sax.SAXException;
 
 public class WoltersKluwerSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
   private static final Logger log = Logger.getLogger(WoltersKluwerSourceXmlMetadataExtractorFactory.class);
+  private static SourceXmlSchemaHelper WKJATSHelper = null;
   private static SourceXmlSchemaHelper WKHelper = null;
 
   @Override
@@ -65,11 +67,31 @@ public class WoltersKluwerSourceXmlMetadataExtractorFactory extends SourceXmlMet
 
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
-    // Once you have it, just keep returning the same one. It won't change.
-      if (WKHelper == null) {
-        WKHelper = new WoltersKluwerSourceXmlSchemaHelper();
+
+      //Starting 2020, the content need more than one schemas to handle
+      //One schema has "_" in folder, others do not
+      String cuBase = FilenameUtils.getFullPath(cu.getUrl());
+
+      //log.debug3("Wolters Kluwer schema setup: cuBase = " + cuBase);
+
+      if (!cuBase.contains("_")) {
+        //log.debug3("Wolters Kluwer schema setup: old schema cuBase = " + cuBase);
+        if (WKHelper == null){
+          WKHelper  = new WoltersKluwerSourceXmlSchemaHelper();
+        }
+        return WKHelper;
+        
+      } else if (cuBase.contains("_")) {
+        //log.debug3("Wolters Kluwer schema setup: new schema cuBase = " + cuBase);
+        if (WKJATSHelper == null) {
+          WKJATSHelper = new JatsPublishingSchemaHelper();
+        }
+        return WKJATSHelper;
       }
+
+      //log.debug3("Wolters Kluwer schema setup: unknown cuBase = " + cuBase);
       return WKHelper;
+      
     }
        
     /*

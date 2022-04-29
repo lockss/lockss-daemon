@@ -20,8 +20,8 @@
       eissn = 1943-2674 ;
       issnl = 0016-7606
     >
-
       #param[base_url] = http://gsabulletin.gsapubs.org/
+
       param[journal_id] = gsabulletin
 
       au < doNotProcess ; exists ; 1918 ; 1918 ; Geological Society of America Bulletin Volume 29 ; 29 ; >
@@ -124,11 +124,12 @@
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Geological Society of America Bulletin Volume 126 ; 126 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Geological Society of America Bulletin Volume 127 ; 127 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Geological Society of America Bulletin Volume 128 ; 128 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; Geological Society of America Bulletin Volume 129 ; 129 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Geological Society of America Bulletin Volume 130 ; 130 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; Geological Society of America Bulletin Volume 131 ; 131 ; >
-      au < frozen ; exists ; 2020 ; 2020 ; Geological Society of America Bulletin Volume 132 ; 132 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Geological Society of America Bulletin Volume 129 ; 129 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2018 ; 2018 ; Geological Society of America Bulletin Volume 130 ; 130 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2019 ; 2019 ; Geological Society of America Bulletin Volume 131 ; 131 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2020 ; 2020 ; Geological Society of America Bulletin Volume 132 ; 132 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; 2021 ; Geological Society of America Bulletin Volume 133 ; 133 ; >
+      au < manifest ; exists ; 2022 ; 2022 ; Geological Society of America Bulletin Volume 134 ; 134 ; >
 
   }
 
@@ -140,8 +141,8 @@
       eissn = 1943-2682 ;
       issnl = 0091-7613
     >
-
     #param[base_url] = http://geology.gsapubs.org/
+
     param[journal_id] = geology
 
     au < doNotProcess ; exists ; 1973 ; 1973 ; Geology Volume 1 ; 1 ; >
@@ -188,11 +189,12 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Geology Volume 42 ; 42 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Geology Volume 43 ; 43 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Geology Volume 44 ; 44 ; >
-    au < frozen ; exists ; 2017 ; 2017 ; Geology Volume 45 ; 45 ; >
-    au < frozen ; exists ; 2018 ; 2018 ; Geology Volume 46 ; 46 ; >
-    au < frozen ; exists ; 2019 ; 2019 ; Geology Volume 47 ; 47 ; >
-    au < frozen ; exists ; 2020 ; 2020 ; Geology Volume 48 ; 48 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Geology Volume 45 ; 45 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2018 ; 2018 ; Geology Volume 46 ; 46 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2019 ; 2019 ; Geology Volume 47 ; 47 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; 2020 ; Geology Volume 48 ; 48 ; reingest2.clockss.org:8085 >
     au < testing ; exists ; 2021 ; 2021 ; Geology Volume 49 ; 49 ; >
+    au < manifest ; exists ; 2022 ; 2022 ; Geology Volume 50 ; 50 ; >
 
   }
 
@@ -202,8 +204,8 @@
       name = Geosphere ;
       eissn = 1553-040X
     >
-
     #param[base_url] = http://geosphere.gsapubs.org/
+
     param[journal_id] = geosphere
 
     au < doNotProcess ; exists ; 2005 ; 2005 ; Geosphere Volume 1 ; 1 ; >
@@ -218,11 +220,12 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Geosphere Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Geosphere Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Geosphere Volume 12 ; 12 ; >
-    au < frozen ; exists ; 2017 ; 2017 ; Geosphere Volume 13 ; 13 ; >
-    au < frozen ; exists ; 2018 ; 2018 ; Geosphere Volume 14 ; 14 ; >
-    au < frozen ; exists ; 2019 ; 2019 ; Geosphere Volume 15 ; 15 ; >
-    au < frozen ; exists ; 2020 ; 2020 ; Geosphere Volume 16 ; 16 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Geosphere Volume 13 ; 13 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2018 ; 2018 ; Geosphere Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; 2019 ; Geosphere Volume 15 ; 15 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2020 ; 2020 ; Geosphere Volume 16 ; 16 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; 2021 ; Geosphere Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2022 ; 2022 ; Geosphere Volume 18 ; 18 ; >
 
   }
 
@@ -234,8 +237,8 @@
       eissn = 1947-4253 ;
       issnl = 1947-4253
     >
-
     #param[base_url] = http://lithosphere.gsapubs.org/
+
     param[journal_id] = lithosphere
 
     au < doNotProcess ; exists ; 2009 ; 2009 ; Lithosphere Volume 1 ; 1 ; >
@@ -246,11 +249,12 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Lithosphere Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Lithosphere Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Lithosphere Volume 8 ; 8 ; >
-    au < exists ; exists ; 2017 ; 2017 ; Lithosphere Volume 9 ; 9 ; >
-    au < exists ; exists ; 2018 ; 2018 ; Lithosphere Volume 10 ; 10 ; >
-    au < exists ; exists ; 2019 ; 2019 ; Lithosphere Volume 11 ; 11 ; >
-    au < exists ; exists ; 2020 ; 2020 ; Lithosphere Volume 12 ; 12 ; >
-    au < exists ; exists ; 2021 ; 2021 ; Lithosphere Volume 13 ; 13 ; >
+    au < manifest ; exists ; 2017 ; 2017 ; Lithosphere Volume 9 ; 9 ; >
+    au < manifest ; exists ; 2018 ; 2018 ; Lithosphere Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Lithosphere Volume 11 ; 11 ; >
+    au < manifest ; exists ; 2020 ; 2020 ; Lithosphere Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2021 ; 2021 ; Lithosphere Volume 2021 ; 2021 ; >
+    au < manifest ; exists ; 2022 ; 2022 ; Lithosphere Volume 2022 ; 2022 ; >
 
   }
 

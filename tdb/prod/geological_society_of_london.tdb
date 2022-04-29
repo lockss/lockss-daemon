@@ -82,8 +82,9 @@
     au < gsl.GSLDrupalPlugin ; released ; 2017 ; Geochemistry: Exploration, Environment, Analysis Volume 17 ; 17 ; http://geea.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; released ; 2018 ; Geochemistry: Exploration, Environment, Analysis Volume 18 ; 18 ; https://geea.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; released ; 2019 ; Geochemistry: Exploration, Environment, Analysis Volume 19 ; 19 ; https://geea.lyellcollection.org/ >
-    au < gsl.GSLDrupalPlugin ; manifest ; 2020 ; Geochemistry: Exploration, Environment, Analysis Volume 20 ; 20 ; https://geea.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; released ; 2020 ; Geochemistry: Exploration, Environment, Analysis Volume 20 ; 20 ; https://geea.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; manifest ; 2021 ; Geochemistry: Exploration, Environment, Analysis Volume 21 ; 21 ; https://geea.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; manifest ; 2022 ; Geochemistry: Exploration, Environment, Analysis Volume 22 ; 22 ; https://geea.lyellcollection.org/ >
 
   }
 
@@ -154,9 +155,13 @@
     au < gsl.GSLDrupalPlugin ; released ; 2020 ; Geological Society of London Memoirs Volume 52 ; 52 ; https://mem.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; released ; 2020 ; Geological Society of London Memoirs Volume 53 ; 53 ; https://mem.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; manifest ; 2021 ; Geological Society of London Memoirs Volume 54 ; 54 ; https://mem.lyellcollection.org/ >
-    au < gsl.GSLDrupalPlugin ; manifest ; 2021 ; Geological Society of London Memoirs Volume 55 ; 55 ; https://mem.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; released ; 2021 ; Geological Society of London Memoirs Volume 55 ; 55 ; https://mem.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; expected ; 2021 ; Geological Society of London Memoirs Volume 56 ; 56 ; https://mem.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; expected ; 2021 ; Geological Society of London Memoirs Volume 57 ; 57 ; https://mem.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; expected ; 2022 ; Geological Society of London Memoirs Volume 58 ; 58 ; https://mem.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; expected ; 2022 ; Geological Society of London Memoirs Volume 59 ; 59 ; https://mem.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; expected ; 2022 ; Geological Society of London Memoirs Volume 60 ; 60 ; https://mem.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; expected ; 2022 ; Geological Society of London Memoirs Volume 61 ; 61 ; https://mem.lyellcollection.org/ >
 
   }
 
@@ -661,12 +666,12 @@
     au < gsl.GSLDrupalPlugin ; released ; 2020 ; Geological Society of London Special Publications Volume 486 ; 486 ; https://sp.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; released ; 2020 ; Geological Society of London Special Publications Volume 487 ; 487 ; https://sp.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; released ; 2019 ; Geological Society of London Special Publications Volume 488 ; 488 ; https://sp.lyellcollection.org/ >
-    au < gsl.GSLDrupalPlugin ; manifest ; 2021 ; Geological Society of London Special Publications Volume 489 ; 489 ; https://sp.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; released ; 2020 ; Geological Society of London Special Publications Volume 489 ; 489 ; https://sp.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; released ; 2020 ; Geological Society of London Special Publications Volume 490 ; 490 ; https://sp.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; released ; 2020 ; Geological Society of London Special Publications Volume 491 ; 491 ; https://sp.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; expected ; 2021 ; Geological Society of London Special Publications Volume 492 ; 492 ; https://sp.lyellcollection.org/ >
-    au < gsl.GSLDrupalPlugin ; manifest ; 2021 ; Geological Society of London Special Publications Volume 493 ; 493 ; https://sp.lyellcollection.org/ >
-    au < gsl.GSLDrupalPlugin ; expected ; 2021 ; Geological Society of London Special Publications Volume 494 ; 494 ; https://sp.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; released ; 2021 ; Geological Society of London Special Publications Volume 493 ; 493 ; https://sp.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; manifest ; 2021 ; Geological Society of London Special Publications Volume 494 ; 494 ; https://sp.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; expected ; 2021 ; Geological Society of London Special Publications Volume 495 ; 495 ; https://sp.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; released ; 2020 ; Geological Society of London Special Publications Volume 496 ; 496 ; https://sp.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; released ; 2020 ; Geological Society of London Special Publications Volume 497 ; 497 ; https://sp.lyellcollection.org/ >
@@ -678,16 +683,37 @@
     au < gsl.GSLDrupalPlugin ; manifest ; 2021 ; Geological Society of London Special Publications Volume 503 ; 503 ; https://sp.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; manifest ; 2021 ; Geological Society of London Special Publications Volume 504 ; 504 ; https://sp.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; expected ; 2021 ; Geological Society of London Special Publications Volume 505 ; 505 ; https://sp.lyellcollection.org/ >
-    au < gsl.GSLDrupalPlugin ; manifest ; 2021 ; Geological Society of London Special Publications Volume 506 ; 506 ; https://sp.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; released ; 2021 ; Geological Society of London Special Publications Volume 506 ; 506 ; https://sp.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; expected ; 2021 ; Geological Society of London Special Publications Volume 507 ; 507 ; https://sp.lyellcollection.org/ >
-    au < gsl.GSLDrupalPlugin ; manifest ; 2021 ; Geological Society of London Special Publications Volume 508 ; 508 ; https://sp.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; released ; 2021 ; Geological Society of London Special Publications Volume 508 ; 508 ; https://sp.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; expected ; 2021 ; Geological Society of London Special Publications Volume 509 ; 509 ; https://sp.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; expected ; 2021 ; Geological Society of London Special Publications Volume 510 ; 510 ; https://sp.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; expected ; 2021 ; Geological Society of London Special Publications Volume 511 ; 511 ; https://sp.lyellcollection.org/ >
-    au < gsl.GSLDrupalPlugin ; expected ; 2021 ; Geological Society of London Special Publications Volume 512 ; 512 ; https://sp.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; manifest ; 2021 ; Geological Society of London Special Publications Volume 512 ; 512 ; https://sp.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; expected ; 2021 ; Geological Society of London Special Publications Volume 513 ; 513 ; https://sp.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; expected ; 2021 ; Geological Society of London Special Publications Volume 514 ; 514 ; https://sp.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; expected ; 2021 ; Geological Society of London Special Publications Volume 515 ; 515 ; https://sp.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; expected ; 2022 ; Geological Society of London Special Publications Volume 516 ; 516 ; https://sp.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; expected ; 2022 ; Geological Society of London Special Publications Volume 517 ; 517 ; https://sp.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; expected ; 2022 ; Geological Society of London Special Publications Volume 518 ; 518 ; https://sp.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; expected ; 2022 ; Geological Society of London Special Publications Volume 519 ; 519 ; https://sp.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; expected ; 2022 ; Geological Society of London Special Publications Volume 520 ; 520 ; https://sp.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; expected ; 2022 ; Geological Society of London Special Publications Volume 521 ; 521 ; https://sp.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; expected ; 2022 ; Geological Society of London Special Publications Volume 522 ; 522 ; https://sp.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; expected ; 2022 ; Geological Society of London Special Publications Volume 523 ; 523 ; https://sp.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; expected ; 2022 ; Geological Society of London Special Publications Volume 524 ; 524 ; https://sp.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; expected ; 2022 ; Geological Society of London Special Publications Volume 525 ; 525 ; https://sp.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; expected ; 2022 ; Geological Society of London Special Publications Volume 526 ; 526 ; https://sp.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; expected ; 2022 ; Geological Society of London Special Publications Volume 527 ; 527 ; https://sp.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; expected ; 2022 ; Geological Society of London Special Publications Volume 528 ; 528 ; https://sp.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; expected ; 2022 ; Geological Society of London Special Publications Volume 529 ; 529 ; https://sp.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; expected ; 2022 ; Geological Society of London Special Publications Volume 530 ; 530 ; https://sp.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; expected ; 2022 ; Geological Society of London Special Publications Volume 531 ; 531 ; https://sp.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; expected ; 2022 ; Geological Society of London Special Publications Volume 532 ; 532 ; https://sp.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; expected ; 2022 ; Geological Society of London Special Publications Volume 533 ; 533 ; https://sp.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; expected ; 2022 ; Geological Society of London Special Publications Volume 534 ; 534 ; https://sp.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; expected ; 2022 ; Geological Society of London Special Publications Volume 535 ; 535 ; https://sp.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; expected ; 2022 ; Geological Society of London Special Publications Volume 536 ; 536 ; https://sp.lyellcollection.org/ >
 
   }
 
@@ -895,8 +921,9 @@
     au < gsl.GSLDrupalPlugin ; released ; 2017 ; Journal of the Geological Society of London Volume 174 ; 174 ; http://jgs.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; released ; 2018 ; Journal of the Geological Society of London Volume 175 ; 175 ; https://jgs.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; released ; 2019 ; Journal of the Geological Society of London Volume 176 ; 176 ; https://jgs.lyellcollection.org/ >
-    au < gsl.GSLDrupalPlugin ; manifest ; 2020 ; Journal of the Geological Society of London Volume 177 ; 177 ; https://jgs.lyellcollection.org/ >
-    au < gsl.GSLDrupalPlugin ; manifest ; 2021 ; Journal of the Geological Society of London Volume 178 ; 178 ; https://jgs.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; released ; 2020 ; Journal of the Geological Society of London Volume 177 ; 177 ; https://jgs.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; released ; 2021 ; Journal of the Geological Society of London Volume 178 ; 178 ; https://jgs.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; manifest ; 2022 ; Journal of the Geological Society of London Volume 179 ; 179 ; https://jgs.lyellcollection.org/ >
 
   }
 
@@ -937,8 +964,9 @@
       au < gsl.GSLDrupalPlugin ; released ; 2017 ; Petroleum Geoscience Volume 23 ; 23 ; http://pg.lyellcollection.org/ >
       au < gsl.GSLDrupalPlugin ; released ; 2018 ; Petroleum Geoscience Volume 24 ; 24 ; https://pg.lyellcollection.org/ >
       au < gsl.GSLDrupalPlugin ; released ; 2019 ; Petroleum Geoscience Volume 25 ; 25 ; https://pg.lyellcollection.org/ >
-      au < gsl.GSLDrupalPlugin ; manifest ; 2020 ; Petroleum Geoscience Volume 26 ; 26 ; https://pg.lyellcollection.org/ >
+      au < gsl.GSLDrupalPlugin ; released ; 2020 ; Petroleum Geoscience Volume 26 ; 26 ; https://pg.lyellcollection.org/ >
       au < gsl.GSLDrupalPlugin ; manifest ; 2021 ; Petroleum Geoscience Volume 27 ; 27 ; https://pg.lyellcollection.org/ >
+      au < gsl.GSLDrupalPlugin ; manifest ; 2022 ; Petroleum Geoscience Volume 28 ; 28 ; https://pg.lyellcollection.org/ >
 
   }
 
@@ -1027,8 +1055,9 @@
       au < gsl.GSLDrupalPlugin ; released ; 2017 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 50 ; 50 ; http://qjegh.lyellcollection.org/ >
       au < gsl.GSLDrupalPlugin ; released ; 2018 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 51 ; 51 ; https://qjegh.lyellcollection.org/ >
       au < gsl.GSLDrupalPlugin ; released ; 2019 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 52 ; 52 ; https://qjegh.lyellcollection.org/ >
-      au < gsl.GSLDrupalPlugin ; manifest ; 2020 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 53 ; 53 ; https://qjegh.lyellcollection.org/ >
-      au < gsl.GSLDrupalPlugin ; manifest ; 2021 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 54 ; 54 ; https://qjegh.lyellcollection.org/ >
+      au < gsl.GSLDrupalPlugin ; released ; 2020 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 53 ; 53 ; https://qjegh.lyellcollection.org/ >
+      au < gsl.GSLDrupalPlugin ; released ; 2021 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 54 ; 54 ; https://qjegh.lyellcollection.org/ >
+      au < gsl.GSLDrupalPlugin ; manifest ; 2022 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 55 ; 55 ; https://qjegh.lyellcollection.org/ >
 
   }
 
@@ -1301,7 +1330,8 @@
     au < gsl.GSLDrupalPlugin ; released ; 2018 ; Scottish Journal of Geology Volume 54 ; 54 ; https://sjg.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; released ; 2019 ; Scottish Journal of Geology Volume 55 ; 55 ; https://sjg.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; released ; 2020 ; Scottish Journal of Geology Volume 56 ; 56 ; https://sjg.lyellcollection.org/ >
-    au < gsl.GSLDrupalPlugin ; manifest ; 2021 ; Scottish Journal of Geology Volume 57 ; 57 ; https://sjg.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; released ; 2021 ; Scottish Journal of Geology Volume 57 ; 57 ; https://sjg.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; expected ; 2022 ; Scottish Journal of Geology Volume 58 ; 58 ; https://sjg.lyellcollection.org/ >
 
     }
     

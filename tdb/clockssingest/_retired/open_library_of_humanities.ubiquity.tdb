@@ -262,5 +262,207 @@
 
   }
 
+  {
+
+      title <
+        name = ASIANetwork Exchange ;
+        eissn = 1943-9946
+      >
+
+      comment[publisher] = Open Library of Humanities
+#      param[base_url] = http://www.asianetworkexchange.org/
+
+      au < finished ; finished ; 2008 ; 16 ; ASIANetwork Exchange Volume 2008 ; 2008 ; https://www.asianetworkexchange.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; 16-17 ; ASIANetwork Exchange Volume 2009 ; 2009 ; https://www.asianetworkexchange.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2010 ; 17-18 ; ASIANetwork Exchange Volume 2010 ; 2010 ; http://www.asianetworkexchange.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2011 ; 18-19 ; ASIANetwork Exchange Volume 2011 ; 2011 ; http://www.asianetworkexchange.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2012 ; 19-20 ; ASIANetwork Exchange Volume 2012 ; 2012 ; http://www.asianetworkexchange.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; 20-21 ; ASIANetwork Exchange Volume 2013 ; 2013 ; http://www.asianetworkexchange.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; 21-22 ; ASIANetwork Exchange Volume 2014 ; 2014 ; http://www.asianetworkexchange.org/ ; >
+      au < finished ; finished ; 2015 ; 22 ; ASIANetwork Exchange Volume 2015 ; 2015 ; http://www.asianetworkexchange.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2016 ; 23 ; ASIANetwork Exchange Volume 2016 ; 2016 ; http://www.asianetworkexchange.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2017 ; 24 ; ASIANetwork Exchange Volume 2017 ; 2017 ; http://www.asianetworkexchange.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; 25 ; ASIANetwork Exchange Volume 2018 ; 2018 ; https://www.asianetworkexchange.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2019 ; 26 ; ASIANetwork Exchange Volume 2019 ; 2019 ; https://www.asianetworkexchange.org/ ; reingest2.clockss.org:8085 >
+      au < frozen ; exists ; 2020 ; 27 ; ASIANetwork Exchange Volume 2020 ; 2020 ; https://www.asianetworkexchange.org/ ; >
+      au < superseded ; exists ; 2021 ; 28 ; ASIANetwork Exchange Volume 2021 [superseded] ; 2021 ; https://www.asianetworkexchange.org/ ; >
+
+  }
+
+  {
+
+      title <
+        name = Glossa: a journal of general linguistics ;
+        eissn = 2397-1835
+      >
+
+      comment[publisher] = Open Library of Humanities
+#      param[base_url] = http://www.glossa-journal.org/
+      #Moved to janeway?
+
+      au < finished ; finished ; 2016 ; 1 ; Glossa: a journal of general linguistics Volume 2016 ; 2016 ; http://www.glossa-journal.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2017 ; 2 ; Glossa: a journal of general linguistics Volume 2017 ; 2017 ; http://www.glossa-journal.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; 3 ; Glossa: a journal of general linguistics Volume 2018 ; 2018 ; https://www.glossa-journal.org/ ; reingest4.clockss.org:8082 > #no permission statement 7.31.2018
+      au < finished ; crawling ; 2019 ; 4 ; Glossa: a journal of general linguistics Volume 2019 ; 2019 ; https://www.glossa-journal.org/ ; reingest3.clockss.org:8083 > #no permission statement 7.31.2019
+      au < frozen ; exists ; 2020 ; 5 ; Glossa: a journal of general linguistics Volume 2020 ; 2020 ; https://www.glossa-journal.org/ ; > 
+      au < doNotProcess ; doNotProcess ; 2021 ; 6 ; Glossa: a journal of general linguistics Volume 2021 ; 2021 ; https://www.glossa-journal.org/ ; > #moved to janeway?
+
+  }
+
+  {
+
+      title <
+        name = Open Screens ;
+        eissn = 2516-2888
+      >
+
+      comment[publisher] = Open Library of Humanities
+#      param[base_url] = https://openscreensjournal.com/
+
+      au < finished ; crawling ; 2018 ; 1 ; Open Screens Volume 2018 ; 2018 ; https://openscreensjournal.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2019 ; 2 ; Open Screens Volume 2019 ; 2019 ; https://openscreensjournal.com/ ; reingest4.clockss.org:8082 >
+      au < frozen ; exists ; 2020 ; 3 ; Open Screens Volume 2020 ; 2020 ; https://openscreensjournal.com/ ; >
+      au < superseded ; exists ; 2021 ; 4 ; Open Screens Volume 2021 [superseded] ; 2021 ; https://openscreensjournal.com/ ; >
+
+  }
+
+  {
+
+      title <
+        name = Body, Space & Technology ;
+        eissn = 1470-9120
+      >
+
+      comment[publisher] = Open Library of Humanities
+#      param[base_url] = https://www.bstjournal.com/
+      #plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
+      #implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
+
+
+      au < finished ; finished ; 2000 ; 2000 ; Body, Space & Technology Volume 2000 ; 2000 ; https://www.bstjournal.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2001 ; 2001 ; Body, Space & Technology Volume 2001 ; 2001 ; https://www.bstjournal.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2002 ; 2002 ; Body, Space & Technology Volume 2002 ; 2002 ; https://www.bstjournal.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2003 ; 2003 ; Body, Space & Technology Volume 2003 ; 2003 ; https://www.bstjournal.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2004 ; 2004 ; Body, Space & Technology Volume 2004 ; 2004 ; https://www.bstjournal.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2005 ; 2005 ; Body, Space & Technology Volume 2005 ; 2005 ; https://www.bstjournal.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2006 ; 2006 ; Body, Space & Technology Volume 2006 ; 2006 ; https://www.bstjournal.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2007 ; 2007 ; Body, Space & Technology Volume 2007 ; 2007 ; https://www.bstjournal.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2008 ; 2008 ; Body, Space & Technology Volume 2008 ; 2008 ; https://www.bstjournal.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; 2009 ; Body, Space & Technology Volume 2009 ; 2009 ; https://www.bstjournal.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; 2010 ; Body, Space & Technology Volume 2010 ; 2010 ; https://www.bstjournal.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; 2011 ; Body, Space & Technology Volume 2011 ; 2011 ; https://www.bstjournal.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2012 ; 2012 ; Body, Space & Technology Volume 2012 ; 2012 ; https://www.bstjournal.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2013 ; 2013 ; Body, Space & Technology Volume 2013 ; 2013 ; https://www.bstjournal.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; 2014 ; Body, Space & Technology Volume 2014 ; 2014 ; https://www.bstjournal.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; 2015 ; Body, Space & Technology Volume 2015 ; 2015 ; https://www.bstjournal.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; 2016 ; Body, Space & Technology Volume 2016 ; 2016 ; https://www.bstjournal.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2017 ; 2017 ; Body, Space & Technology Volume 2017 ; 2017 ; https://www.bstjournal.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2018 ; 2018 ; Body, Space & Technology Volume 2018 ; 2018 ; https://www.bstjournal.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2019 ; 2019 ; Body, Space & Technology Volume 2019 ; 2019 ; https://www.bstjournal.com/ ; reingest4.clockss.org:8082 >
+      au < frozen ; exists ; 2020 ; 2020 ; Body, Space & Technology Volume 2020 ; 2020 ; https://www.bstjournal.com/ ; >
+      au < superseded ; exists ; 2021 ; 2021 ; Body, Space & Technology Volume 2021 [superseded] ; 2021 ; https://www.bstjournal.com/ ; >
+
+  }
+
+  {
+
+      title <
+        name = Digital Medievalist ;
+        eissn = 1715-0736
+      >
+
+      comment[publisher] = Open Library of Humanities
+#      param[base_url] = https://journal.digitalmedievalist.org/
+      #plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
+      #implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
+
+      au < finished ; finished ; 2005 ; 1 ; Digital Medievalist Volume 2005 ; 2005 ; https://journal.digitalmedievalist.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2006 ; 2 ; Digital Medievalist Volume 2006 ; 2006 ; https://journal.digitalmedievalist.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2007 ; 3 ; Digital Medievalist Volume 2007 ; 2007 ; https://journal.digitalmedievalist.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2008 ; 4 ; Digital Medievalist Volume 2008 ; 2008 ; https://journal.digitalmedievalist.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2009 ; 5 ; Digital Medievalist Volume 2009 ; 2009 ; https://journal.digitalmedievalist.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2010 ; 6 ; Digital Medievalist Volume 2010 ; 2010 ; https://journal.digitalmedievalist.org/ ; reingest2.clockss.org:8085 > #M exists. No articles for that year.
+      au < finished ; finished ; 2011 ; 7 ; Digital Medievalist Volume 2011 ; 2011 ; https://journal.digitalmedievalist.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2012 ; 8 ; Digital Medievalist Volume 2012 ; 2012 ; https://journal.digitalmedievalist.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; 9 ; Digital Medievalist Volume 2013 ; 2013 ; https://journal.digitalmedievalist.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; 10 ; Digital Medievalist Volume 2014 ; 2014 ; https://journal.digitalmedievalist.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2015 ; 11 ; Digital Medievalist Volume 2015 ; 2015 ; https://journal.digitalmedievalist.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; 12 ; Digital Medievalist Volume 2016 ; 2016 ; https://journal.digitalmedievalist.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2017 ; 13 ; Digital Medievalist Volume 2017 ; 2017 ; https://journal.digitalmedievalist.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2018 ; 14 ; Digital Medievalist Volume 2018 ; 2018 ; https://journal.digitalmedievalist.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2019 ; 15 ; Digital Medievalist Volume 2019 ; 2019 ; https://journal.digitalmedievalist.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2020 ; 16 ; Digital Medievalist Volume 2020 ; 2020 ; https://journal.digitalmedievalist.org/ ; reingest1.clockss.org:8082 >
+      au < superseded ; exists ; 2021 ; 17 ; Digital Medievalist Volume 2021 [superseded] ; 2021 ; https://journal.digitalmedievalist.org/ ; >
+
+  }
+
+  {
+
+      title <
+        name = Digital Studies / Le champ numérique ;
+        eissn = 1918-3666
+      >
+
+      comment[publisher] = Open Library of Humanities
+#      param[base_url] = https://www.digitalstudies.org/
+      #plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
+      #implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
+
+      au < finished ; finished ; 2011 ; 2011 ; Digital Studies / Le champ numérique Volume 2011 ; 2011 ; https://www.digitalstudies.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2012 ; 2012 ; Digital Studies / Le champ numérique Volume 2012 ; 2012 ; https://www.digitalstudies.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2013 ; 2013 ; Digital Studies / Le champ numérique Volume 2013 ; 2013 ; https://www.digitalstudies.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2014 ; 2014 ; Digital Studies / Le champ numérique Volume 2014 ; 2014 ; https://www.digitalstudies.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; 2015 ; Digital Studies / Le champ numérique Volume 2015 ; 2015 ; https://www.digitalstudies.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; 2016 ; Digital Studies / Le champ numérique Volume 2016 ; 2016 ; https://www.digitalstudies.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; 2017 ; Digital Studies / Le champ numérique Volume 2017 ; 2017 ; https://www.digitalstudies.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2018 ; 2018 ; Digital Studies / Le champ numérique Volume 2018 ; 2018 ; https://www.digitalstudies.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2019 ; 2019 ; Digital Studies / Le champ numérique Volume 2019 ; 2019 ; https://www.digitalstudies.org/ ; reingest3.clockss.org:8083 >
+      au < frozen ; exists ; 2020 ; 2020 ; Digital Studies / Le champ numérique Volume 2020 ; 2020 ; https://www.digitalstudies.org/ ; >
+      au < superseded ; exists ; 2021 ; 2021 ; Digital Studies / Le champ numérique Volume 2021 [superseded] ; 2021 ; https://www.digitalstudies.org/ ; >
+
+  }
+
+  {
+
+      title <
+        name = Le foucaldien ;
+        eissn = 2515-2076
+      >
+
+      comment[publisher] = Open Library of Humanities
+#      param[base_url] = https://foucaldien.net/
+      #plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
+      #implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
+
+
+      au < finished ; finished ; 2015 ; 1 ; Le foucaldien Volume 2015 ; 2015 ; https://foucaldien.net/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; 2 ; Le foucaldien Volume 2016 ; 2016 ; https://foucaldien.net/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; 3 ; Le foucaldien Volume 2017 ; 2017 ; https://foucaldien.net/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; 4 ; Le foucaldien Volume 2018 ; 2018 ; https://foucaldien.net/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2019 ; 5 ; Le foucaldien Volume 2019 ; 2019 ; https://foucaldien.net/ ; reingest3.clockss.org:8083 >
+      au < frozen ; exists ; 2020 ; 6 ; Le foucaldien Volume 2020 ; 2020 ; https://foucaldien.net/ ; >
+      au < superseded ; exists ; 2021 ; 7 ; Le foucaldien Volume 2021 [superseded] ; 2021 ; https://foucaldien.net/ ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Embodied Research ;
+        eissn = 2513-8421
+      >
+
+      comment[publisher] = Open Library of Humanities
+#      param[base_url] = https://jer.openlibhums.org/
+      #plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
+      #implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
+
+
+      au < finished ; crawling ; 2018 ; 1 ; Journal of Embodied Research Volume 2018 ; 2018 ; https://jer.openlibhums.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2019 ; 2 ; Journal of Embodied Research Volume 2019 ; 2019 ; https://jer.openlibhums.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2020 ; 3 ; Journal of Embodied Research Volume 2020 ; 2020 ; https://jer.openlibhums.org/ ; reingest1.clockss.org:8082 >
+
+  }
+
 }
 

@@ -13,7 +13,8 @@
        name = protocols.io ;
        issn = 2473-1838
     >
-
+    
+    {
     plugin = org.lockss.plugin.clockss.zappylab.ClockssZappyLabSourcePlugin
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/protocols-released/
 
@@ -25,8 +26,18 @@
     au < zapped ; finished ; 2019 ; protocols.io Source Content 2019 ; 2019 >
     au < zapped ; finished ; 2020 ; protocols.io Source Content 2020 ; 2020 >
     au < readySource ; crawling ; 2021 ; protocols.io Source Content 2021 ; 2021 >
-    au < expected ; exists ; 2022 ; protocols.io Source Content 2022 ; 2022 >
+    au < readySource ; crawling ; 2022 ; protocols.io Source Content 2022 ; 2022 >
+    }
 
+    {
+    plugin = org.lockss.plugin.clockss.zappylab.ClockssZappyLabDirSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/protocols-released/
+
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[directory] >
+
+    au < readySource ; crawling ; 2022 ; protocols.io Source Content 2022_01 ; 2022_01 >
+    }
   }
 
 }

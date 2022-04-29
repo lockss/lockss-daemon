@@ -1,38 +1,37 @@
 /*
- * $Id:$
- */
 
-/*
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
 
- Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
- all rights reserved.
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
- Permission is hereby granted, free of charge, to any person obtaining a copy
- of this software and associated documentation files (the "Software"), to deal
- in the Software without restriction, including without limitation the rights
- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- copies of the Software, and to permit persons to whom the Software is
- furnished to do so, subject to the following conditions:
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
 
- The above copyright notice and this permission notice shall be included in
- all copies or substantial portions of the Software.
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
 
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
- STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
- WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
- IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
 
- Except as contained in this notice, the name of Stanford University shall not
- be used in advertising or otherwise to promote the sale, use or other dealings
- in this Software without prior written authorization from Stanford University.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
 
- */
+*/
 
 package org.lockss.plugin.clockss.eastview;
 
-import org.apache.commons.io.FilenameUtils;
 import org.lockss.config.TdbAu;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadata;
@@ -44,7 +43,6 @@ import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.lockss.util.Logger;
 import org.lockss.util.MetadataUtil;
-import org.lockss.util.UrlUtil;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -56,6 +54,8 @@ import java.util.regex.Pattern;
 
 
 public class EastviewNewspaperXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
+  private static final String unmappedPublisherName = "EastviewUnmappedPublisherName";
+  private static final Logger pubnamelog = Logger.getLogger(unmappedPublisherName);
   private static final Logger log = Logger.getLogger(EastviewNewspaperXmlMetadataExtractorFactory.class);
   public static Map<String, String> issnMap = new HashMap<>();
 
@@ -110,6 +110,7 @@ public class EastviewNewspaperXmlMetadataExtractorFactory extends SourceXmlMetad
     protected void postCookProcess(SourceXmlSchemaHelper schemaHelper, 
         CachedUrl cu, ArticleMetadata thisAM) {
 
+
       String raw_title = thisAM.getRaw(EastviewSchemaHelper.ART_RAW_TITLE);
       log.debug3(String.format("Eastview Newspaper: metadata raw title parsed: %s", raw_title));
 
@@ -121,6 +122,26 @@ public class EastviewNewspaperXmlMetadataExtractorFactory extends SourceXmlMetad
       String publisher_mapped = null;
       String volume = null;
       String title = null;
+
+      String directory = null;
+      String subdir = null;
+      String directory_subsection = null;    // use the part after directory as the last effor, for example, DA-IR use "IR"
+      String publisher_mapped_alt = null;
+      String publisher_mapped_alt2 = null;
+      String publisher_mapped_alt3 = null;
+
+      //http://clockss-ingest.lockss.org/sourcefiles/eastview-released/2021_03/Eastview%20Journal%20Content/Digital%20Archives/Ogonek%20(St.%20Petersburg)%20Digital%20Archive%201899-1918/DA-OGN-SP.zip!/DA-OGN-SP/1918/ognsp_1918_17.xml
+      //http://clockss-ingest.lockss.org/sourcefiles/eastview-released/2021_01/Eastview%20Journal%20Content/Digital%20Archives/Military%20Thought%20(DA-MLT)%201990-2019/DA-MLT.zip!/DA-MLT/MTH/1990/01/001_01/0010004.xhtml
+      String access_url = cu.getUrl();
+      Pattern urlPattern = Pattern.compile("(.*)\\.zip!/([^/]+)/([^/]+)/(.*)");
+
+      Matcher urlm = urlPattern.matcher(access_url);
+
+
+      if (urlm.matches()) {
+        directory = urlm.group(2).trim();      //	DA-OGN-SP or DA-MLT, it is used on mutiple places down
+        subdir = urlm.group(3).trim();         //   1918 or  MTH
+      }
 
       if(m.matches()){
         publisher_shortcut = m.group(1).trim();
@@ -147,6 +168,55 @@ public class EastviewNewspaperXmlMetadataExtractorFactory extends SourceXmlMetad
                 publisher_mapped,
                 volume,
                 title));
+
+
+        pubnamelog.debug2(String.format("Eastview metadata alternative mapping: metadata raw title parsed = %s | " +
+                        "publisher_shortcut = %s | Null publisher_mapped = %s | volume = %s | title = %s",
+                raw_title,
+                publisher_shortcut,
+                publisher_mapped,
+                volume,
+                title));
+
+        if (urlm.matches()) {
+          directory_subsection = directory.substring(directory.indexOf("-") + 1).replace("-", ""); //"OGNSP" of "DA-OGN-SP"
+          publisher_mapped_alt = EastViewPublisherNameMappingHelper.canonical.get(directory);
+          publisher_mapped_alt2 = EastViewPublisherNameMappingHelper.canonical.get(subdir);
+          publisher_mapped_alt3 = EastViewPublisherNameMappingHelper.canonical.get(directory_subsection);
+
+        }
+
+        if (publisher_mapped_alt != null && publisher_mapped_alt2 == null) {
+          thisAM.put(MetadataField.FIELD_PUBLISHER, publisher_mapped_alt);
+        } else if (publisher_mapped_alt2 != null && publisher_mapped_alt == null) {
+          thisAM.put(MetadataField.FIELD_PUBLISHER, publisher_mapped_alt2);
+        } else if (publisher_mapped_alt3 != null && publisher_mapped_alt == null && publisher_mapped_alt2 == null) {
+          thisAM.put(MetadataField.FIELD_PUBLISHER, publisher_mapped_alt3);
+        } else {
+
+          log.debug2(String.format("Eastview metadata alternative mapping failed try, access_url = %s, raw_title = %s, directory  = %s | " + "subdir = %s | directory_subsection = %s | publisher_mapped_alt = %s | publisher_mapped_alt2 = %s | publisher_mapped_alt3 = %s",
+                  access_url,
+                  raw_title,
+                  directory,
+                  subdir,
+                  directory_subsection,
+                  publisher_mapped_alt,
+                  publisher_mapped_alt2,
+                  publisher_mapped_alt3));
+
+          pubnamelog.debug2(String.format("Eastview metadata alternative mapping failed try, access_url = %s, raw_title = %s, directory  = %s | " + "subdir = %s | directory_subsection = %s | publisher_mapped_alt = %s | publisher_mapped_alt2 = %s | publisher_mapped_alt3 = %s",
+                  access_url,
+                  raw_title,
+                  directory,
+                  subdir,
+                  directory_subsection,
+                  publisher_mapped_alt,
+                  publisher_mapped_alt2,
+                  publisher_mapped_alt3));
+
+
+          thisAM.put(MetadataField.FIELD_PUBLISHER, publisher_shortcut);
+        }
       }
       
 
@@ -160,7 +230,12 @@ public class EastviewNewspaperXmlMetadataExtractorFactory extends SourceXmlMetad
           thisAM.put(MetadataField.FIELD_ISSN, MetadataUtil.validateIssn(issn));
         }
       } else {
-        log.debug3("Eastview Newspaper: publicationTitle is null");
+        // Since "<SOURCE/>" and "<SRC/>" is not guaranteed, use part of the access_url as the publication title
+        //we will use "DA-OGN-SP" in the example.
+        ///eastview-released/2021_03/Eastview Journal Content/Digital Archives/Ogonek (St. Petersburg) Digital Archive 1899-1918/DA-OGN-SP.zip!/DA-OGN-SP/1900/ognsp_1900_01.xml
+        thisAM.replace(MetadataField.FIELD_PUBLICATION_TITLE, directory);
+        log.debug3("Eastview Newspaper: publicationTitle is null, set to diretory " + directory);
+        pubnamelog.debug3("Eastview Newspaper: publicationTitle is null, set to diretory " + directory);
       }
       
       thisAM.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
@@ -174,6 +249,10 @@ public class EastviewNewspaperXmlMetadataExtractorFactory extends SourceXmlMetad
       }
 
       thisAM.put(MetadataField.FIELD_PROVIDER, publisherName);
+      
+      // Since raw ATITLE is not guaranteed to be uniqu, it may be called "Page 1, Page 2, etc"
+      // Use ATITLE - TITLE as the unique string for reporting purpose
+      thisAM.put(MetadataField.FIELD_ARTICLE_TITLE, thisAM.getRaw(EastviewSchemaHelper.ART_RAW_ATITLE) + " - " + raw_title);
 
     }
   }

@@ -6,6 +6,7 @@
   >
   
     #RT3894 
+   #Moved 2022 from https://scholarcommons.usf.edu/ to https://digitalcommons.usf.edu/
 
   {
   
@@ -26,24 +27,30 @@
     {
     param[base_url] = http://scholarcommons.usf.edu/
 
-    au < released ; 2007 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 52 ; 52 >
-    au < released ; 2008 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 53 ; 53 >
-    au < released ; 2009 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 54 ; 54 >
-    au < released ; 2010 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 55 ; 55 >
-    au < released ; 2011 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 56 ; 56 >
-    au < released ; 2012 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 57 ; 57 >
+    au < down ; 2007 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 52 ; 52 >
+    au < down ; 2008 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 53 ; 53 >
+    au < down ; 2009 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 54 ; 54 >
+    au < down ; 2010 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 55 ; 55 >
+    au < down ; 2011 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 56 ; 56 >
+    au < down ; 2012 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 57 ; 57 >
     }
 
     {
     param[base_url] = https://scholarcommons.usf.edu/
 
-    au < released ; 2013 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 58 ; 58 >
-    au < released ; 2014 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 59 ; 59 >
-    au < released ; 2016 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 60 ; 60 >
-    au < released ; 2017 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 61 ; 61 >
-    au < released ; 2018 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 62 ; 62 >
-    au < released ; 2020 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 63 ; 63 >
+    au < down ; 2013 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 58 ; 58 >
+    au < down ; 2014 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 59 ; 59 >
+    au < down ; 2016 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 60 ; 60 >
+    au < down ; 2017 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 61 ; 61 >
+    au < down ; 2018 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 62 ; 62 >
+    au < down ; 2020 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 63 ; 63 >
+    }
+
+    {
+    param[base_url] = https://digitalcommons.usf.edu/
+
     au < expected ; 2021 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 64 ; 64 >
+    au < expected ; 2022 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 65 ; 65 >
 
     }
 

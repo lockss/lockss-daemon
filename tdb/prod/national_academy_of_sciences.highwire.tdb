@@ -138,17 +138,19 @@
     au < HighWirePressH20Plugin ; down ; 2014 ; Proceedings of the National Academy of Sciences Volume 111 ; 111 >
     au < HighWirePressH20Plugin ; down ; 2015 ; Proceedings of the National Academy of Sciences Volume 112 ; 112 >
     au < HighWirePressH20Plugin ; down ; 2016 ; Proceedings of the National Academy of Sciences Volume 113 ; 113 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2017 ; Proceedings of the National Academy of Sciences Volume 114 ; 114 >
 
     }
 
     {
         param[base_url] = https://www.pnas.org/
 
-    au < nas.NasDrupalPlugin ; released ; 2017 ; Proceedings of the National Academy of Sciences Volume 114 ; 114 >
-    au < nas.NasDrupalPlugin ; released ; 2018 ; Proceedings of the National Academy of Sciences Volume 115 ; 115 >
-    au < nas.NasDrupalPlugin ; released ; 2019 ; Proceedings of the National Academy of Sciences Volume 116 ; 116 >
-    au < nas.NasDrupalPlugin ; released ; 2020 ; Proceedings of the National Academy of Sciences Volume 117 ; 117 >
-    au < nas.NasDrupalPlugin ; released ; 2021 ; Proceedings of the National Academy of Sciences Volume 118 ; 118 >
+    au < nas.NasDrupalPlugin ; down ; 2017 ; Proceedings of the National Academy of Sciences Volume 114 ; 114 >
+    au < nas.NasDrupalPlugin ; down ; 2018 ; Proceedings of the National Academy of Sciences Volume 115 ; 115 >
+    au < nas.NasDrupalPlugin ; down ; 2019 ; Proceedings of the National Academy of Sciences Volume 116 ; 116 >
+    au < nas.NasDrupalPlugin ; down ; 2020 ; Proceedings of the National Academy of Sciences Volume 117 ; 117 >
+    au < nas.NasDrupalPlugin ; down ; 2021 ; Proceedings of the National Academy of Sciences Volume 118 ; 118 >
+    #Moving platforms.
 
     }
 

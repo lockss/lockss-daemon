@@ -1,7 +1,6 @@
 /*
 
-Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
-All rights reserved.
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -123,27 +122,12 @@ import com.fasterxml.jackson.databind.node.ValueNode;
 public class JasperJsonMetadataExtractorFactory implements FileMetadataExtractorFactory {
   static Logger log = Logger.getLogger(JasperJsonMetadataExtractorFactory.class);
 
-  static MultiMap jsonPathToMetadataField = new MultiValueMap();
 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
                                                            String contentType)
       throws PluginException {
-    JasperJsonMetadataExtractor jjme = new JasperJsonMetadataExtractor();
-    jsonPathToMetadataField.put("created_date", MetadataField.FIELD_DATE);
-    jsonPathToMetadataField.put("bibjson.abstract", MetadataField.FIELD_ABSTRACT);
-    jsonPathToMetadataField.put("bibjson.start_page", MetadataField.FIELD_START_PAGE);
-    jsonPathToMetadataField.put("bibjson.end_page", MetadataField.FIELD_END_PAGE);
-    jsonPathToMetadataField.put("bibjson.title", MetadataField.FIELD_ARTICLE_TITLE);
-    jsonPathToMetadataField.put("bibjson.keywords", MetadataField.FIELD_KEYWORDS);
-    jsonPathToMetadataField.put("bibjson.journal.volume", MetadataField.FIELD_VOLUME);
-    jsonPathToMetadataField.put("bibjson.journal.title", MetadataField.FIELD_PUBLICATION_TITLE);
-    jsonPathToMetadataField.put("bibjson.journal.language", MetadataField.FIELD_LANGUAGE);
-    jsonPathToMetadataField.put("bibjson.journal.issns", MetadataField.FIELD_ISSN);
-    jsonPathToMetadataField.put("bibjson.journal.publisher", MetadataField.FIELD_PUBLISHER);
-    jsonPathToMetadataField.put("bibjson.link.url", MetadataField.FIELD_ACCESS_URL);
-    jsonPathToMetadataField.put("bibjson.author.name", MetadataField.FIELD_AUTHOR);
-    return jjme;
+    return new JasperJsonMetadataExtractor();
   }
 
   public static class JasperJsonMetadataExtractor implements FileMetadataExtractor {
@@ -152,6 +136,22 @@ public class JasperJsonMetadataExtractorFactory implements FileMetadataExtractor
     private String currentTag;
     private StringBuilder currentValue;
 
+    static MultiMap jsonPathToMetadataField = new MultiValueMap();
+    static {
+      jsonPathToMetadataField.put("created_date", MetadataField.FIELD_DATE);
+      jsonPathToMetadataField.put("bibjson.abstract", MetadataField.FIELD_ABSTRACT);
+      jsonPathToMetadataField.put("bibjson.start_page", MetadataField.FIELD_START_PAGE);
+      jsonPathToMetadataField.put("bibjson.end_page", MetadataField.FIELD_END_PAGE);
+      jsonPathToMetadataField.put("bibjson.title", MetadataField.FIELD_ARTICLE_TITLE);
+      jsonPathToMetadataField.put("bibjson.keywords", MetadataField.FIELD_KEYWORDS);
+      jsonPathToMetadataField.put("bibjson.journal.volume", MetadataField.FIELD_VOLUME);
+      jsonPathToMetadataField.put("bibjson.journal.title", MetadataField.FIELD_PUBLICATION_TITLE);
+      jsonPathToMetadataField.put("bibjson.journal.language", MetadataField.FIELD_LANGUAGE);
+      jsonPathToMetadataField.put("bibjson.journal.issns", MetadataField.FIELD_ISSN);
+      jsonPathToMetadataField.put("bibjson.journal.publisher", MetadataField.FIELD_PUBLISHER);
+      jsonPathToMetadataField.put("bibjson.link.url", MetadataField.FIELD_ACCESS_URL);
+      jsonPathToMetadataField.put("bibjson.author.name", MetadataField.FIELD_AUTHOR);
+    }
 
     static String stripBrackets(String value) {
       if (value.matches("\\[.*\\]") ) {

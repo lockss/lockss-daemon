@@ -51233,7 +51233,7 @@ comment[mpj] = now published by Brill
     {
 
       title <
-        name = World Future Review ;
+        name = World Futures Review ;
         issn = 1946-7567 ;
         issnl = 1946-7567
       >
@@ -51242,14 +51242,14 @@ comment[mpj] = now published by Brill
     param[base_url] = http://wfr.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < doNotProcess ; 2009 ; World Future Review Volume 1 ; 1 >
-    au < doNotProcess ; 2010 ; World Future Review Volume 2 ; 2 >
-    au < doNotProcess ; 2011 ; World Future Review Volume 3 ; 3 >
-    au < doNotProcess ; 2012 ; World Future Review Volume 4 ; 4 >
-    au < down ; 2013 ; World Future Review Volume 5 ; 5 >
-    au < down ; 2014 ; World Future Review Volume 6 ; 6 >
-    au < down ; 2015 ; World Future Review Volume 7 ; 7 >
-    au < doNotProcess ; 2016 ; World Future Review Volume 8 ; 8 >
+    au < doNotProcess ; 2009 ; World Futures Review Volume 1 ; 1 >
+    au < doNotProcess ; 2010 ; World Futures Review Volume 2 ; 2 >
+    au < doNotProcess ; 2011 ; World Futures Review Volume 3 ; 3 >
+    au < doNotProcess ; 2012 ; World Futures Review Volume 4 ; 4 >
+    au < down ; 2013 ; World Futures Review Volume 5 ; 5 >
+    au < down ; 2014 ; World Futures Review Volume 6 ; 6 >
+    au < down ; 2015 ; World Futures Review Volume 7 ; 7 >
+    au < doNotProcess ; 2016 ; World Futures Review Volume 8 ; 8 >
 
     }
 

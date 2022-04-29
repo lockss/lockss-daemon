@@ -56,7 +56,7 @@ public class ScienceOpenSourceXmlMetadataExtractorFactory extends SourceXmlMetad
         return new JatsPublishingSourceXmlMetadataExtractor();
     }
 
-    public class JatsPublishingSourceXmlMetadataExtractor extends SourceXmlMetadataExtractor {
+    public static class JatsPublishingSourceXmlMetadataExtractor extends SourceXmlMetadataExtractor {
 
         /*
          * This setUpSchema shouldn't be called directly
@@ -101,6 +101,9 @@ public class ScienceOpenSourceXmlMetadataExtractorFactory extends SourceXmlMetad
 
             thisAM.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
             thisAM.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_JOURNAL);
+
+            ScienceOpenMetadataUtils.fillPublisherAndProviderFromTdb(thisAM, cu);
+            ScienceOpenMetadataUtils.normalizePublisher(thisAM);
         }
 
     }

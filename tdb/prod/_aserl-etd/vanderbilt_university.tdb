@@ -1,0 +1,25 @@
+{
+
+  publisher <
+    name = Vanderbilt University
+  >
+
+  {
+  
+    title <
+      name = Vanderbilt University Electronic Theses and Dissertations
+    >
+    
+    plugin = org.lockss.plugin.etd.vanderbiltetdplugin.VanderbiltETDPlugin
+    param[base_url] = http://etd.library.vanderbilt.edu/
+    param[oai_request_url] = http://etd.library.vanderbilt.edu/ETD-db/NDLTD-OAI/oai.pl
+    implicit < status ; year ; name ; param[year] >  
+
+    au < down ; 2003 ; Vanderbilt University Electronic Theses and Dissertations 2003 ; 2003 >
+    au < down ; 2004 ; Vanderbilt University Electronic Theses and Dissertations 2004 ; 2004 >
+    au < down ; 2005 ; Vanderbilt University Electronic Theses and Dissertations 2005 ; 2005 >
+    au < down ; 2006 ; Vanderbilt University Electronic Theses and Dissertations 2006 ; 2006 >
+      
+  }
+  
+}

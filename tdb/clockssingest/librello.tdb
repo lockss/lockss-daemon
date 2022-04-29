@@ -29,6 +29,7 @@
       au < exists ; exists ; 2019 ; Challenges in Sustainability Volume 7 ; 7 ; 2019 ; >
       au < exists ; exists ; 2020 ; Challenges in Sustainability Volume 8 ; 8 ; 2020 ; >
       au < expected ; exists ; 2021 ; Challenges in Sustainability Volume 9 ; 9 ; 2021 ; >
+      au < expected ; exists ; 2022 ; Challenges in Sustainability Volume 10 ; 10 ; 2022 ; >
   }
 
   {
@@ -48,6 +49,7 @@
       au < exists ; exists ; 2019 ; Journal of Human Security Volume 15 ; 15 ; 2019 ; >
       au < exists ; exists ; 2020 ; Journal of Human Security Volume 16 ; 16 ; 2020 ; >
       au < expected ; exists ; 2021 ; Journal of Human Security Volume 17 ; 17 ; 2021 ; >
+      au < expected ; exists ; 2022 ; Journal of Human Security Volume 18 ; 18 ; 2022 ; >
 
   }
 
@@ -68,6 +70,7 @@
       au < exists ; exists ; 2019 ; Organic Farming Volume 5 ; 5 ; 2019 ; >
       au < exists ; exists ; 2020 ; Organic Farming Volume 6 ; 6 ; 2020 ; >
       au < expected ; exists ; 2021 ; Organic Farming Volume 7 ; 7 ; 2021 ; >
+      au < expected ; exists ; 2022 ; Organic Farming Volume 8 ; 8 ; 2022 ; >
 
   }
 
@@ -79,6 +82,8 @@
       param[journal_id] = mediaandcommunication
       comment[issn] = missing
       comment[publisher] = as of 2014 moved to another publisher
+
+      # Has moved to Cogitatio Press, ISSN 2183-2439
 
       au < finished ; crawling ; 2013 ; Media and Communication Volume 1 ; 1 ; 2013 ; reingest1.clockss.org:8082 >
 
@@ -93,6 +98,8 @@
       comment[issn] = missing
       comment[publisher] = as of 2014 moved to another publisher? http://www.librelloph.com/politicsandgovernance/issue/view/14
 
+      # Has moved to Cogitatio Press, ISSN 2183-2463
+
       au < finished ; crawling ; 2013 ; Politics and Governance Volume 1 ; 1 ; 2013 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; exists ; 2014 ; Politics and Governance Volume 2 ; 2 ; 2014 ; >
 
@@ -106,6 +113,8 @@
       param[journal_id] = socialinclusion
       comment[issn] = missing
       comment[publisher] = as of 2014 moved to another publisher
+
+      # Has moved to Cogitatio Press, ISSN 2183-2803
 
       au < finished ; crawling ; 2013 ; Social Inclusion Volume 1 ; 1 ; 2013 ; reingest1.clockss.org:8082 >
 

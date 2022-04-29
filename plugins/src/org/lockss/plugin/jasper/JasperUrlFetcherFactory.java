@@ -1,7 +1,6 @@
 /*
 
-Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
-All rights reserved.
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -33,32 +32,19 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.jasper;
 
-import java.util.Map;
-
-import org.apache.commons.collections4.map.PassiveExpiringMap;
-import org.apache.commons.lang3.tuple.Pair;
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.*;
-import org.lockss.util.Constants;
 
 public class JasperUrlFetcherFactory implements UrlFetcherFactory {
 
-  protected Map<Pair<ArchivalUnit, CrawlerFacade>, JasperUrlFetcherHelper> helpers;
-  
-  public JasperUrlFetcherFactory() {
-    this.helpers = new PassiveExpiringMap<>(Constants.HOUR);
-  }
-  
   @Override
   public UrlFetcher createUrlFetcher(CrawlerFacade crawlerFacade, String url) {
-    ArchivalUnit au = crawlerFacade.getAu();
-    Pair<ArchivalUnit, CrawlerFacade> pair = Pair.of(au, crawlerFacade);
-    JasperUrlFetcherHelper helper = helpers.get(pair);
-    if (helper == null) {
-      helper = new JasperUrlFetcherHelper(au, crawlerFacade);
-      helpers.put(pair, helper);
+    if (crawlerFacade.getStateObj(JasperUrlFetcher.FACADE_KEY_MAKE_POSTER)
+        != null) {
+      return new JasperUrlFetcher.JasperUrlPoster(crawlerFacade, url);
+    } else {
+      return new JasperUrlFetcher(crawlerFacade, url);
     }
-    return new JasperUrlFetcher(crawlerFacade, url, helper);
   }
   
 }

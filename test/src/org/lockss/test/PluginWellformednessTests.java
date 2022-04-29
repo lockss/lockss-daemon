@@ -1,10 +1,6 @@
 /*
-n * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2022 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -52,9 +48,7 @@ import org.lockss.extractor.*;
  * supplied (with org.lockss.test.TestPluginNames or -pj on the command
  * line) it is loaded as a normal packaged plugin jar and the plugins are
  * assumed to be contained in it.
-
  */
-
 public final class PluginWellformednessTests extends LockssTestCase {
   static Logger log = Logger.getLogger("PluginWellformednessTests");
 
@@ -167,7 +161,7 @@ public final class PluginWellformednessTests extends LockssTestCase {
       } catch (PluginFailedToLoadException e) {
 	log.error("Plugin " + pluginName + " failed");
 	failed.add(new ImmutablePair(pluginName, e.toString()));
-      } catch (Exception e) {
+      } catch (Exception | ExceptionInInitializerError e) {
 	log.error("Plugin " + pluginName + " failed", e);
 	failed.add(new ImmutablePair(pluginName, e.getMessage()));
       }
@@ -200,97 +194,16 @@ public final class PluginWellformednessTests extends LockssTestCase {
    * and the factories are loadable and runnable.
    */
   public void testWellFormed(String pluginName) throws Exception {
-    if (getPlugin() == null) {
+    Plugin plugin = getPlugin();
+    if (plugin == null) {
       throw new PluginFailedToLoadException();
     }
-    ArchivalUnit au = createAu();
+    validatePlugin(plugin);
+  }
 
-    assertSame(plugin, au.getPlugin());
-    assertEquals(plugin.getPluginId(), au.getPluginId());
-
-    if (plugin instanceof DefinablePlugin) {
-      DefinablePlugin dplug = (DefinablePlugin)(plugin);
-      TypedEntryMap plugDef = dplug.getDefinitionMap();
-      if (!pluginName.equals(plugDef.getString(DefinablePlugin.KEY_PLUGIN_IDENTIFIER))) {
-	log.warning("Wrong plugin_id: " +
-		    plugDef.getString(DefinablePlugin.KEY_PLUGIN_IDENTIFIER) +
-		    " should be " + pluginName);
-      }
-      if (dplug.getPluginId().endsWith("SourcePlugin")) {
-	if (plugDef.containsKey(DefinablePlugin.KEY_PLUGIN_BULK_CONTENT)) {
-	  if (!plugDef.getBoolean(DefinablePlugin.KEY_PLUGIN_BULK_CONTENT)) {
-	    log.warning("Plugin name " + pluginName + " suggests it's a source plugin, but it has " + DefinablePlugin.KEY_PLUGIN_BULK_CONTENT + " explicitly set false");
-	  }
-	} else {
-	  fail("Plugin " + pluginName + " is treated as a source/bulk plugin becuase of its name - it should have " + DefinablePlugin.KEY_PLUGIN_BULK_CONTENT + " set to true");
-	}
-      }
-
-      // assertEquals("Wrong plugin_id", pluginName,
-      // 		   plugDef.getString(DefinablePlugin.KEY_PLUGIN_IDENTIFIER));
-    }
-
-    assertEquals(getSampleAuConfig(), au.getConfiguration());
-
-    au.getAuId();
-    assertNotNull(au.getName());
-
-    au.getAuCachedUrlSet();
-
-    au.shouldBeCached(URL1);
-    au.isLoginPageUrl(URL1);
-    au.makeCachedUrl(URL1);
-    au.makeUrlCacher(
-        new UrlData(new StringInputStream(""), new CIProperties(), URL1));
-    assertNotNull(au.siteNormalizeUrl(URL1));
-
-    au.getUrlStems();
-    au.getTitleConfig();
-
-    for (String mime : getSupportedMimeTypes()) {
-      au.getLinkExtractor(mime);
-      au.getLinkRewriterFactory(mime);
-      au.getFilterRule(mime);
-      au.getHashFilterFactory(mime);
-      au.getCrawlFilterFactory(mime);
-      au.getFileMetadataExtractor(new MetadataTarget(), mime);
-    }
-    au.getArticleIterator();
-
-    RateLimiterInfo rli = au.getRateLimiterInfo();
-    new RateLimiter(rli.getDefaultRate());
-    au.getFetchRateLimiterKey();
-    au.getPermissionUrls();
-    au.getStartUrls();
-    au.getAccessUrls();
-    au.getPerHostPermissionPath();
-    au.makeExcludeUrlsFromPollsPatterns();
-    au.makeUrlPollResultWeightMap();
-    au.makeNonSubstanceUrlPatterns();
-    au.makeSubstanceUrlPatterns();
-    au.makeSubstancePredicate();
-    au.makePermittedHostPatterns();
-    au.makeRepairFromPeerIfMissingUrlPatterns();
-    au.getCrawlUrlComparator();
-
-    au.getCrawlWindow();
-    au.makePermissionCheckers();
-    au.getLoginPageChecker();
-    au.getCookiePolicy();
-
-    au.siteNormalizeUrl("http://exmaple.com/path/");
-
-    AuUtil.getConfigUserMessage(au);
-    AuUtil.getProtocolVersion(au);
-    AuUtil.getPollVersion(au);
-    AuUtil.isDeleteExtraFiles(au, false);
-    AuUtil.isDeleteExtraFiles(au, true);
-
-    AuUtil.isRepairFromPublisherWhenTooClose(au, true);
-    AuUtil.isRepairFromPublisherWhenTooClose(au, false);
-    AuUtil.minReplicasForNoQuorumPeerRepair(au, 2);
-    
-    au.getUrlConsumerFactory();
+  public void validatePlugin(Plugin plugin) throws Exception {
+    PluginValidator pv = new PluginValidator(daemon, pluginName, plugin);
+    pv.validatePlugin();
   }
 
   private class MyPluginManager extends PluginManager {

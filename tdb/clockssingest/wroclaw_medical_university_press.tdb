@@ -10,7 +10,7 @@
 
     plugin = org.lockss.plugin.wroclawmedicaluniversity.ClockssWroclawMedicalUniversityJournalsPlugin
     implicit < status ; status2 ; year ; param[year] ; name ; param[volume_name] ; hidden[proxy] >
-    #**********No manifest page checker********Still http 20201207
+
   {
 
     title <
@@ -19,6 +19,7 @@
       eissn = 2451-2680
     >
     
+    {
     param[base_url] = http://www.advances.umed.wroc.pl/
     
     au < finished ; finished ; 2006 ; 2006 ; Advances in Clinical and Experimental Medicine Volume 15 ; 15 ; reingest4.clockss.org:8082 >
@@ -36,7 +37,17 @@
     au < finished ; finished ; 2018 ; 2018 ; Advances in Clinical and Experimental Medicine Volume 27 ; 27 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2019 ; 2019 ; Advances in Clinical and Experimental Medicine Volume 28 ; 28 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2020 ; 2020 ; Advances in Clinical and Experimental Medicine Volume 29 ; 29 ; reingest1.clockss.org:8082 >
-    au < manifest ; exists ; 2021 ; 2021 ; Advances in Clinical and Experimental Medicine Volume 30 ; 30 ; >
+
+    }
+
+    {
+
+    param[base_url] = https://advances.umw.edu.pl/
+
+    au < crawling ; exists ; 2021 ; 2021 ; Advances in Clinical and Experimental Medicine Volume 30 ; 30 ; >
+    au < manifest ; exists ; 2022 ; 2022 ; Advances in Clinical and Experimental Medicine Volume 31 ; 31 ; >
+
+    }
 
   }
 
@@ -48,6 +59,7 @@
       eissn = 2300-9020
     >
     
+    {
     param[base_url] = http://www.dmp.umed.wroc.pl/
     
     au < finished ; finished ; 2009 ; 2009 ; Dental and Medical Problems Volume 46 ; 46 ; reingest1.clockss.org:8082 >
@@ -62,7 +74,16 @@
     au < finished ; finished ; 2018 ; 2018 ; Dental and Medical Problems Volume 55 ; 55 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2019 ; 2019 ; Dental and Medical Problems Volume 56 ; 56 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2020 ; 2020 ; Dental and Medical Problems Volume 57 ; 57 ; reingest2.clockss.org:8085 >
-    au < manifest ; exists ; 2021 ; 2021 ; Dental and Medical Problems Volume 58 ; 58 ; >
+
+    }
+
+    {
+    param[base_url] = https://dmp.umw.edu.pl/
+
+    au < crawling ; exists ; 2021 ; 2021 ; Dental and Medical Problems Volume 58 ; 58 ; >
+    au < manifest ; exists ; 2022 ; 2022 ; Dental and Medical Problems Volume 59 ; 59 ; >
+
+    }
 
   }
 
@@ -74,6 +95,7 @@
       eissn = 2451-2699
     >
     
+    {
     param[base_url] = http://www.polimery.umed.wroc.pl/
     
     au < finished ; finished ; 2009 ; 2009 ; Polymers in Medicine Volume 39 ; 39 ; reingest5.clockss.org:8082 >
@@ -88,7 +110,16 @@
     au < finished ; finished ; 2018 ; 2018 ; Polymers in Medicine Volume 48 ; 48 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2019 ; 2019 ; Polymers in Medicine Volume 49 ; 49 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2020 ; 2020 ; Polymers in Medicine Volume 50 ; 50 ; reingest3.clockss.org:8083 >
-    au < manifest ; exists ; 2021 ; 2021 ; Polymers in Medicine Volume 51 ; 51 ; >
+
+    }
+
+    {
+    param[base_url] = https://polimery.umw.edu.pl/
+
+    au < crawling ; exists ; 2021 ; 2021 ; Polymers in Medicine Volume 51 ; 51 ; >
+    au < expected ; exists ; 2022 ; 2022 ; Polymers in Medicine Volume 52 ; 52 ; >
+
+    }
 
   }
 
@@ -100,6 +131,7 @@
       eissn = 2451-1870
     >
     
+    {
     param[base_url] = http://www.pzp.umed.wroc.pl/
     
     au < finished ; finished ; 2011 ; 2011 ; Nursing and Public Health Volume 1 ; 1 ; reingest4.clockss.org:8082 >
@@ -112,7 +144,14 @@
     au < finished ; finished ; 2018 ; 2018 ; Nursing and Public Health Volume 8 ; 8 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2019 ; 2019 ; Nursing and Public Health Volume 9 ; 9 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2020 ; 2020 ; Nursing and Public Health Volume 10 ; 10 ; reingest4.clockss.org:8082 >
-    au < manifest ; exists ; 2021 ; 2021 ; Nursing and Public Health Volume 11 ; 11 ; >
+    }
+
+    {
+    param[base_url] = https://pzp.umw.edu.pl/
+
+    au < expected ; exists ; 2021 ; 2021 ; Nursing and Public Health Volume 11 ; 11 ; >
+    au < expected ; exists ; 2022 ; 2022 ; Nursing and Public Health Volume 12 ; 12 ; >
+    }
 
   }
 
@@ -128,7 +167,6 @@
     au < finished ; finished ; 2019 ; 2019 ; Clinical Education & Medical Simulation Volume 2 ; 2 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2020 ; 2020 ; Clinical Education & Medical Simulation Volume 3 ; 3 ; reingest3.clockss.org:8083 >
     # needs an issn 2021-03-25. Ceased publication
-    au < expected ; exists ; 2021 ; 2021 ; Clinical Education & Medical Simulation Volume 4 ; 4 ; >
 
   }
 

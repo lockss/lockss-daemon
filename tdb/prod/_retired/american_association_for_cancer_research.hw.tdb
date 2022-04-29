@@ -1,0 +1,369 @@
+{
+
+  publisher <
+    name = American Association for Cancer Research 
+  >
+  
+   pluginPrefix = org.lockss.plugin.highwire.
+   implicit < pluginSuffix ; status ; year ; name ; param[volume_name] ; param[base_url] >
+   #move to SilverChair
+
+  {
+
+    title <
+      name = Cancer Discovery ;
+      issn = 2159-8274 ;
+      eissn = 2159-8290 
+
+    >
+    #param[base_url] = http://cancerdiscovery.aacrjournals.org/
+
+    
+    au < HighWirePressH20Plugin ; down ; 2011 ; Cancer Discovery Volume 1 ; 1 ; http://cancerdiscovery.aacrjournals.org/ >
+    au < HighWirePressH20Plugin ; down ; 2012 ; Cancer Discovery Volume 2 ; 2 ; http://cancerdiscovery.aacrjournals.org/ >
+    au < HighWirePressH20Plugin ; down ; 2013 ; Cancer Discovery Volume 3 ; 3 ; http://cancerdiscovery.aacrjournals.org/ >
+    au < HighWirePressH20Plugin ; down ; 2014 ; Cancer Discovery Volume 4 ; 4 ; http://cancerdiscovery.aacrjournals.org/ >
+    au < HighWirePressH20Plugin ; down ; 2015 ; Cancer Discovery Volume 5 ; 5 ; http://cancerdiscovery.aacrjournals.org/ >
+    au < aacr.AmAssocCancerResearchDrupalPlugin ; down ; 2016 ; Cancer Discovery Volume 6 ; 6 ; http://cancerdiscovery.aacrjournals.org/ >
+    au < aacr.AmAssocCancerResearchDrupalPlugin ; down ; 2017 ; Cancer Discovery Volume 7 ; 7 ; http://cancerdiscovery.aacrjournals.org/ >
+    au < aacr.AmAssocCancerResearchDrupalPlugin ; down ; 2018 ; Cancer Discovery Volume 8 ; 8 ; http://cancerdiscovery.aacrjournals.org/ >
+    au < aacr.AmAssocCancerResearchDrupalPlugin ; down ; 2019 ; Cancer Discovery Volume 9 ; 9 ; https://cancerdiscovery.aacrjournals.org/ >
+    au < aacr.AmAssocCancerResearchDrupalPlugin ; down ; 2020 ; Cancer Discovery Volume 10 ; 10 ; https://cancerdiscovery.aacrjournals.org/ >
+    au < aacr.AmAssocCancerResearchDrupalPlugin ; doNotProcess ; 2021 ; Cancer Discovery Volume 11 ; 11 ; https://cancerdiscovery.aacrjournals.org/ >
+    au < aacr.AmAssocCancerResearchDrupalPlugin ; doNotProcess ; 2022 ; Cancer Discovery Volume 12 ; 12 ; https://cancerdiscovery.aacrjournals.org/ >
+
+  }
+
+  {
+
+    title <
+      name = Cancer Epidemiology Biomarkers & Prevention ;
+      issn = 1055-9965 ;
+      eissn = 1538-7755 ;
+      issnl = 1055-9965
+    >
+
+    {
+      #param[base_url] = http://cebp.aacrjournals.org/
+
+
+      au < HighWirePressH20Plugin ; down ; 1991-1992 ; Cancer Epidemiology Biomarkers & Prevention Volume 1 ; 1 ; http://cebp.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 1993 ; Cancer Epidemiology Biomarkers & Prevention Volume 2 ; 2 ; http://cebp.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 1994 ; Cancer Epidemiology Biomarkers & Prevention Volume 3 ; 3 ; http://cebp.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 1995 ; Cancer Epidemiology Biomarkers & Prevention Volume 4 ; 4 ; http://cebp.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 1996 ; Cancer Epidemiology Biomarkers & Prevention Volume 5 ; 5 ; http://cebp.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 1997 ; Cancer Epidemiology Biomarkers & Prevention Volume 6 ; 6 ; http://cebp.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 1998 ; Cancer Epidemiology Biomarkers & Prevention Volume 7 ; 7 ; http://cebp.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 1999 ; Cancer Epidemiology Biomarkers & Prevention Volume 8 ; 8 ; http://cebp.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2000 ; Cancer Epidemiology Biomarkers & Prevention Volume 9 ; 9 ; http://cebp.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2001 ; Cancer Epidemiology Biomarkers & Prevention Volume 10 ; 10 ; http://cebp.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2002 ; Cancer Epidemiology Biomarkers & Prevention Volume 11 ; 11 ; http://cebp.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2003 ; Cancer Epidemiology Biomarkers & Prevention Volume 12 ; 12 ; http://cebp.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2004 ; Cancer Epidemiology Biomarkers & Prevention Volume 13 ; 13 ; http://cebp.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2005 ; Cancer Epidemiology Biomarkers & Prevention Volume 14 ; 14 ; http://cebp.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2006 ; Cancer Epidemiology Biomarkers & Prevention Volume 15 ; 15 ; http://cebp.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2007 ; Cancer Epidemiology Biomarkers & Prevention Volume 16 ; 16 ; http://cebp.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2008 ; Cancer Epidemiology Biomarkers & Prevention Volume 17 ; 17 ; http://cebp.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2009 ; Cancer Epidemiology Biomarkers & Prevention Volume 18 ; 18 ; http://cebp.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2010 ; Cancer Epidemiology Biomarkers & Prevention Volume 19 ; 19 ; http://cebp.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2011 ; Cancer Epidemiology Biomarkers & Prevention Volume 20 ; 20 ; http://cebp.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2012 ; Cancer Epidemiology Biomarkers & Prevention Volume 21 ; 21 ; http://cebp.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2013 ; Cancer Epidemiology Biomarkers & Prevention Volume 22 ; 22 ; http://cebp.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2014 ; Cancer Epidemiology Biomarkers & Prevention Volume 23 ; 23 ; http://cebp.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2015 ; Cancer Epidemiology Biomarkers & Prevention Volume 24 ; 24 ; http://cebp.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; down ; 2016 ; Cancer Epidemiology Biomarkers & Prevention Volume 25 ; 25 ; http://cebp.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; down ; 2017 ; Cancer Epidemiology Biomarkers & Prevention Volume 26 ; 26 ; http://cebp.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; down ; 2018 ; Cancer Epidemiology Biomarkers & Prevention Volume 27 ; 27 ; http://cebp.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; down ; 2019 ; Cancer Epidemiology Biomarkers & Prevention Volume 28 ; 28 ; https://cebp.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; down ; 2020 ; Cancer Epidemiology Biomarkers & Prevention Volume 29 ; 29 ; https://cebp.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; doNotProcess ; 2021 ; Cancer Epidemiology Biomarkers & Prevention Volume 30 ; 30 ; https://cebp.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; doNotProcess ; 2022 ; Cancer Epidemiology Biomarkers & Prevention Volume 31 ; 31 ; https://cebp.aacrjournals.org/ >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Cancer Immunology Research ;
+      issn = 2326-6066 ;
+      eissn = 2326-6074 ;
+      issnl = 2326-6066
+    >
+
+    {
+      #param[base_url] = http://cancerimmunolres.aacrjournals.org/
+
+      au < HighWirePressH20Plugin ; down ; 2013 ; Cancer Immunology Research Volume 1 ; 1 ; http://cancerimmunolres.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2014 ; Cancer Immunology Research Volume 2 ; 2 ; http://cancerimmunolres.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2015 ; Cancer Immunology Research Volume 3 ; 3 ; http://cancerimmunolres.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; down ; 2016 ; Cancer Immunology Research Volume 4 ; 4 ; http://cancerimmunolres.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; down ; 2017 ; Cancer Immunology Research Volume 5 ; 5 ; http://cancerimmunolres.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; down ; 2018 ; Cancer Immunology Research Volume 6 ; 6 ; http://cancerimmunolres.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; down ; 2019 ; Cancer Immunology Research Volume 7 ; 7 ; https://cancerimmunolres.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; down ; 2020 ; Cancer Immunology Research Volume 8 ; 8 ; https://cancerimmunolres.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; doNotProcess ; 2021 ; Cancer Immunology Research Volume 9 ; 9 ; https://cancerimmunolres.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; doNotProcess ; 2022 ; Cancer Immunology Research Volume 10 ; 10 ; https://cancerimmunolres.aacrjournals.org/ >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Cancer Prevention Research ;
+      issn = 1940-6207 ;
+      eissn = 1940-6215 ;
+      issnl = 1940-6215
+    >
+
+    {
+      #param[base_url] = http://cancerpreventionresearch.aacrjournals.org/
+
+
+      au < HighWirePressPlugin ; down ; 2008 ; Cancer Prevention Research Volume 1 ; 1 ; http://cancerpreventionresearch.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 2009 ; Cancer Prevention Research Volume 2 ; 2 ; http://cancerpreventionresearch.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 2010 ; Cancer Prevention Research Volume 3 ; 3 ; http://cancerpreventionresearch.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2011 ; Cancer Prevention Research Volume 4 ; 4 ; http://cancerpreventionresearch.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2012 ; Cancer Prevention Research Volume 5 ; 5 ; http://cancerpreventionresearch.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2013 ; Cancer Prevention Research Volume 6 ; 6 ; http://cancerpreventionresearch.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2014 ; Cancer Prevention Research Volume 7 ; 7 ; http://cancerpreventionresearch.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2015 ; Cancer Prevention Research Volume 8 ; 8 ; http://cancerpreventionresearch.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; down ; 2016 ; Cancer Prevention Research Volume 9 ; 9 ; http://cancerpreventionresearch.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; down ; 2017 ; Cancer Prevention Research Volume 10 ; 10 ; http://cancerpreventionresearch.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; down ; 2018 ; Cancer Prevention Research Volume 11 ; 11 ; http://cancerpreventionresearch.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; down ; 2019 ; Cancer Prevention Research Volume 12 ; 12 ; https://cancerpreventionresearch.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; down ; 2020 ; Cancer Prevention Research Volume 13 ; 13 ; https://cancerpreventionresearch.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; doNotProcess ; 2021 ; Cancer Prevention Research Volume 14 ; 14 ; https://cancerpreventionresearch.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; doNotProcess ; 2022 ; Cancer Prevention Research Volume 15 ; 15 ; https://cancerpreventionresearch.aacrjournals.org/ >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Cancer Research ;
+      issn = 0008-5472 ;
+      eissn = 1538-7445 ;
+      issnl = 0008-5472
+    >
+
+    {
+      #param[base_url] = http://cancerres.aacrjournals.org/
+
+
+      au < HighWirePressPlugin ; down ; 1941 ; Cancer Research Volume 1 ; 1 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1942 ; Cancer Research Volume 2 ; 2 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1943 ; Cancer Research Volume 3 ; 3 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1944 ; Cancer Research Volume 4 ; 4 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1945 ; Cancer Research Volume 5 ; 5 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1946 ; Cancer Research Volume 6 ; 6 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1947 ; Cancer Research Volume 7 ; 7 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1948 ; Cancer Research Volume 8 ; 8 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1949 ; Cancer Research Volume 9 ; 9 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1950 ; Cancer Research Volume 10 ; 10 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1951 ; Cancer Research Volume 11 ; 11 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1952 ; Cancer Research Volume 12 ; 12 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1953 ; Cancer Research Volume 13 ; 13 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1954 ; Cancer Research Volume 14 ; 14 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1955 ; Cancer Research Volume 15 ; 15 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1956 ; Cancer Research Volume 16 ; 16 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1957 ; Cancer Research Volume 17 ; 17 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1958 ; Cancer Research Volume 18 ; 18 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1959 ; Cancer Research Volume 19 ; 19 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1960 ; Cancer Research Volume 20 ; 20 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1961 ; Cancer Research Volume 21 ; 21 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1962 ; Cancer Research Volume 22 ; 22 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1963 ; Cancer Research Volume 23 ; 23 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1964 ; Cancer Research Volume 24 ; 24 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1965 ; Cancer Research Volume 25 ; 25 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1966 ; Cancer Research Volume 26 ; 26 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1967 ; Cancer Research Volume 27 ; 27 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1968 ; Cancer Research Volume 28 ; 28 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1969 ; Cancer Research Volume 29 ; 29 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1970 ; Cancer Research Volume 30 ; 30 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1971 ; Cancer Research Volume 31 ; 31 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1972 ; Cancer Research Volume 32 ; 32 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1973 ; Cancer Research Volume 33 ; 33 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1974 ; Cancer Research Volume 34 ; 34 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1975 ; Cancer Research Volume 35 ; 35 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1976 ; Cancer Research Volume 36 ; 36 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1977 ; Cancer Research Volume 37 ; 37 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1978 ; Cancer Research Volume 38 ; 38 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1979 ; Cancer Research Volume 39 ; 39 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1980 ; Cancer Research Volume 40 ; 40 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1981 ; Cancer Research Volume 41 ; 41 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1982 ; Cancer Research Volume 42 ; 42 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1983 ; Cancer Research Volume 43 ; 43 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1984 ; Cancer Research Volume 44 ; 44 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1985 ; Cancer Research Volume 45 ; 45 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1986 ; Cancer Research Volume 46 ; 46 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1987 ; Cancer Research Volume 47 ; 47 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1988 ; Cancer Research Volume 48 ; 48 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1989 ; Cancer Research Volume 49 ; 49 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1990 ; Cancer Research Volume 50 ; 50 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1991 ; Cancer Research Volume 51 ; 51 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1992 ; Cancer Research Volume 52 ; 52 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1993 ; Cancer Research Volume 53 ; 53 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1994 ; Cancer Research Volume 54 ; 54 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1995 ; Cancer Research Volume 55 ; 55 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1996 ; Cancer Research Volume 56 ; 56 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1997 ; Cancer Research Volume 57 ; 57 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1998 ; Cancer Research Volume 58 ; 58 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 1999 ; Cancer Research Volume 59 ; 59 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 2000 ; Cancer Research Volume 60 ; 60 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 2001 ; Cancer Research Volume 61 ; 61 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 2002 ; Cancer Research Volume 62 ; 62 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 2003 ; Cancer Research Volume 63 ; 63 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 2004 ; Cancer Research Volume 64 ; 64 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 2005 ; Cancer Research Volume 65 ; 65 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 2006 ; Cancer Research Volume 66 ; 66 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 2007 ; Cancer Research Volume 67 ; 67 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 2008 ; Cancer Research Volume 68 ; 68 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 2009 ; Cancer Research Volume 69 ; 69 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressPlugin ; down ; 2010 ; Cancer Research Volume 70 ; 70 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2011 ; Cancer Research Volume 71 ; 71 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2012 ; Cancer Research Volume 72 ; 72 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2013 ; Cancer Research Volume 73 ; 73 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2014 ; Cancer Research Volume 74 ; 74 ; http://cancerres.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2015 ; Cancer Research Volume 75 ; 75 ; http://cancerres.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; down ; 2016 ; Cancer Research Volume 76 ; 76 ; http://cancerres.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; down ; 2017 ; Cancer Research Volume 77 ; 77 ; http://cancerres.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; down ; 2018 ; Cancer Research Volume 78 ; 78 ; http://cancerres.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; down ; 2019 ; Cancer Research Volume 79 ; 79 ; https://cancerres.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; down ; 2020 ; Cancer Research Volume 80 ; 80 ; https://cancerres.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; doNotProcess ; 2021 ; Cancer Research Volume 81 ; 81 ; https://cancerres.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; doNotProcess ; 2022 ; Cancer Research Volume 82 ; 82 ; https://cancerres.aacrjournals.org/ >
+
+    }
+
+  }
+
+  {
+  
+    title <
+      name = Clinical Cancer Research ;
+      issn = 1078-0432 ;
+      eissn = 1557-3265 ;
+      issnl = 1078-0432
+    >
+
+    {
+      #param[base_url] = http://clincancerres.aacrjournals.org/
+
+
+      au < HighWirePressH20Plugin ; down ; 1995 ; Clinical Cancer Research Volume 1 ; 1 ; http://clincancerres.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 1996 ; Clinical Cancer Research Volume 2 ; 2 ; http://clincancerres.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 1997 ; Clinical Cancer Research Volume 3 ; 3 ; http://clincancerres.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 1998 ; Clinical Cancer Research Volume 4 ; 4 ; http://clincancerres.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 1999 ; Clinical Cancer Research Volume 5 ; 5 ; http://clincancerres.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2000 ; Clinical Cancer Research Volume 6 ; 6 ; http://clincancerres.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2001 ; Clinical Cancer Research Volume 7 ; 7 ; http://clincancerres.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2002 ; Clinical Cancer Research Volume 8 ; 8 ; http://clincancerres.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2003 ; Clinical Cancer Research Volume 9 ; 9 ; http://clincancerres.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2004 ; Clinical Cancer Research Volume 10 ; 10 ; http://clincancerres.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2005 ; Clinical Cancer Research Volume 11 ; 11 ; http://clincancerres.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2006 ; Clinical Cancer Research Volume 12 ; 12 ; http://clincancerres.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2007 ; Clinical Cancer Research Volume 13 ; 13 ; http://clincancerres.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2008 ; Clinical Cancer Research Volume 14 ; 14 ; http://clincancerres.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2009 ; Clinical Cancer Research Volume 15 ; 15 ; http://clincancerres.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2010 ; Clinical Cancer Research Volume 16 ; 16 ; http://clincancerres.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2011 ; Clinical Cancer Research Volume 17 ; 17 ; http://clincancerres.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2012 ; Clinical Cancer Research Volume 18 ; 18 ; http://clincancerres.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2013 ; Clinical Cancer Research Volume 19 ; 19 ; http://clincancerres.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2014 ; Clinical Cancer Research Volume 20 ; 20 ; http://clincancerres.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2015 ; Clinical Cancer Research Volume 21 ; 21 ; http://clincancerres.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; down ; 2016 ; Clinical Cancer Research Volume 22 ; 22 ; http://clincancerres.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; down ; 2017 ; Clinical Cancer Research Volume 23 ; 23 ; http://clincancerres.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; down ; 2018 ; Clinical Cancer Research Volume 24 ; 24 ; http://clincancerres.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; down ; 2019 ; Clinical Cancer Research Volume 25 ; 25 ; https://clincancerres.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; down ; 2020 ; Clinical Cancer Research Volume 26 ; 26 ; https://clincancerres.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; doNotProcess ; 2021 ; Clinical Cancer Research Volume 27 ; 27 ; https://clincancerres.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; doNotProcess ; 2022 ; Clinical Cancer Research Volume 28 ; 28 ; https://clincancerres.aacrjournals.org/ >
+
+    }
+
+  }
+
+  {
+  
+    title <
+      name = Molecular Cancer Research ;
+      issn = 1541-7786 ;
+      eissn = 1557-3125 ;
+      issnl = 1541-7786
+    >
+
+    {
+      #param[base_url] = http://mcr.aacrjournals.org/
+
+
+      au < HighWirePressH20Plugin ; down ; 2002-2003 ; Molecular Cancer Research Volume 1 ; 1 ; http://mcr.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2004 ; Molecular Cancer Research Volume 2 ; 2 ; http://mcr.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2005 ; Molecular Cancer Research Volume 3 ; 3 ; http://mcr.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2006 ; Molecular Cancer Research Volume 4 ; 4 ; http://mcr.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2007 ; Molecular Cancer Research Volume 5 ; 5 ; http://mcr.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2008 ; Molecular Cancer Research Volume 6 ; 6 ; http://mcr.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2009 ; Molecular Cancer Research Volume 7 ; 7 ; http://mcr.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2010 ; Molecular Cancer Research Volume 8 ; 8 ; http://mcr.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2011 ; Molecular Cancer Research Volume 9 ; 9 ; http://mcr.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2012 ; Molecular Cancer Research Volume 10 ; 10 ; http://mcr.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2013 ; Molecular Cancer Research Volume 11 ; 11 ; http://mcr.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2014 ; Molecular Cancer Research Volume 12 ; 12 ; http://mcr.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2015 ; Molecular Cancer Research Volume 13 ; 13 ; http://mcr.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; down ; 2016 ; Molecular Cancer Research Volume 14 ; 14 ; http://mcr.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; down ; 2017 ; Molecular Cancer Research Volume 15 ; 15 ; http://mcr.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; down ; 2018 ; Molecular Cancer Research Volume 16 ; 16 ; http://mcr.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; down ; 2019 ; Molecular Cancer Research Volume 17 ; 17 ; https://mcr.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; down ; 2020 ; Molecular Cancer Research Volume 18 ; 18 ; https://mcr.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; doNotProcess ; 2021 ; Molecular Cancer Research Volume 19 ; 19 ; https://mcr.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; doNotProcess ; 2022 ; Molecular Cancer Research Volume 20 ; 20 ; https://mcr.aacrjournals.org/ >
+
+    }
+
+  }
+
+  {
+  
+    title <
+      name = Molecular Cancer Therapeutics ;
+      issn = 1535-7163 ;
+      eissn = 1538-8514 ;
+      issnl = 1535-7163
+    >
+
+    {
+      #param[base_url] = http://mct.aacrjournals.org/
+
+
+      au < HighWirePressH20Plugin ; down ; 2001-2002 ; Molecular Cancer Therapeutics Volume 1 ; 1 ; http://mct.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2003 ; Molecular Cancer Therapeutics Volume 2 ; 2 ; http://mct.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2004 ; Molecular Cancer Therapeutics Volume 3 ; 3 ; http://mct.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2005 ; Molecular Cancer Therapeutics Volume 4 ; 4 ; http://mct.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2006 ; Molecular Cancer Therapeutics Volume 5 ; 5 ; http://mct.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2007 ; Molecular Cancer Therapeutics Volume 6 ; 6 ; http://mct.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2008 ; Molecular Cancer Therapeutics Volume 7 ; 7 ; http://mct.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2009 ; Molecular Cancer Therapeutics Volume 8 ; 8 ; http://mct.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2010 ; Molecular Cancer Therapeutics Volume 9 ; 9 ; http://mct.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2011 ; Molecular Cancer Therapeutics Volume 10 ; 10 ; http://mct.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2012 ; Molecular Cancer Therapeutics Volume 11 ; 11 ; http://mct.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2013 ; Molecular Cancer Therapeutics Volume 12 ; 12 ; http://mct.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2014 ; Molecular Cancer Therapeutics Volume 13 ; 13 ; http://mct.aacrjournals.org/ >
+      au < HighWirePressH20Plugin ; down ; 2015 ; Molecular Cancer Therapeutics Volume 14 ; 14 ; http://mct.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; down ; 2016 ; Molecular Cancer Therapeutics Volume 15 ; 15 ; http://mct.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; down ; 2017 ; Molecular Cancer Therapeutics Volume 16 ; 16 ; http://mct.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; down ; 2018 ; Molecular Cancer Therapeutics Volume 17 ; 17 ; http://mct.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; down ; 2019 ; Molecular Cancer Therapeutics Volume 18 ; 18 ; https://mct.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; down ; 2020 ; Molecular Cancer Therapeutics Volume 19 ; 19 ; https://mct.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; doNotProcess ; 2021 ; Molecular Cancer Therapeutics Volume 20 ; 20 ; https://mct.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; doNotProcess ; 2022 ; Molecular Cancer Therapeutics Volume 21 ; 21 ; https://mct.aacrjournals.org/ >
+
+    }
+
+  }
+
+}

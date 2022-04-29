@@ -58,11 +58,12 @@ public abstract class JettyManager
   public static final String PARAM_MAX_FORM_SIZE =
     PREFIX + "MaxFormSize";
 
-  public static final String DEFAULT_MAX_FORM_SIZE = "2000000";
+  public static final int DEFAULT_MAX_FORM_SIZE = 2000000;
 
   private String prioParam;
 
   private static Logger log = Logger.getLogger("JettyMgr");
+  protected static int maxFormSize = -1;
   private static boolean isJettyInited = false;
 
   protected ResourceManager resourceMgr;
@@ -104,9 +105,11 @@ public abstract class JettyManager
       System.setProperty("org.mortbay.util.FileResource.checkAliases",
 			 "false");
       String maxform = CurrentConfig.getParam(PARAM_MAX_FORM_SIZE,
-					      DEFAULT_MAX_FORM_SIZE);
+					      DEFAULT_MAX_FORM_SIZE + "");
       System.setProperty("org.mortbay.http.HttpRequest.maxFormContentSize",
 			 maxform);
+      maxFormSize = CurrentConfig.getIntParam(PARAM_MAX_FORM_SIZE,
+					      DEFAULT_MAX_FORM_SIZE);
       // Jetty grabs System property in static initializer.  Ensure no
       // loading order dependence
       try {
@@ -131,6 +134,10 @@ public abstract class JettyManager
     if (runningServer != null && changedKeys.contains(prioParam)) {
       setListenerParams(runningServer);
     }
+  }
+
+  public int getMaxFormSize() {
+    return maxFormSize;
   }
 
   long[] delayTime = {10 * Constants.SECOND, 60 * Constants.SECOND, 0};

@@ -1,7 +1,6 @@
 /*
 
-Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
-All rights reserved.
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -100,7 +99,7 @@ public class TestOUPJCorePlugin extends LockssTestCase {
         "https://www.example.com/lockss-manifest/vol_303_manifest.html", 
     };
     DefinableArchivalUnit au = makeAuFromProps(props);
-    assertEquals("Oxford University Press Plugin (Legacy), Base URL http://www.example.com/, Volume 303",
+    assertEquals("Oxford University Press Journals Plugin (Legacy), Base URL http://www.example.com/, Volume 303",
         au.getName());
     assertEquals(ListUtil.list(starturl[0],starturl[1]), au.getStartUrls());
   }

@@ -19,14 +19,14 @@
 
       au < released ; 2011 ; The American Journal of Tropical Medicine and Hygiene Volume 84 ; 84 >
       au < released ; 2011 ; The American Journal of Tropical Medicine and Hygiene Volume 85 ; 85 >
-      au < manifest ; 2012 ; The American Journal of Tropical Medicine and Hygiene Volume 86 ; 86 >
-      au < manifest ; 2012 ; The American Journal of Tropical Medicine and Hygiene Volume 87 ; 87 >
+      au < notReady ; 2012 ; The American Journal of Tropical Medicine and Hygiene Volume 86 ; 86 > #hanging urls (no http) causing 403 error.
+      au < notReady ; 2012 ; The American Journal of Tropical Medicine and Hygiene Volume 87 ; 87 > #hanging urls (no http) causing 403 error.
       au < released ; 2013 ; The American Journal of Tropical Medicine and Hygiene Volume 88 ; 88 >
       au < released ; 2013 ; The American Journal of Tropical Medicine and Hygiene Volume 89 ; 89 >
       au < released ; 2014 ; The American Journal of Tropical Medicine and Hygiene Volume 90 ; 90 >
       au < released ; 2014 ; The American Journal of Tropical Medicine and Hygiene Volume 91 ; 91 >
       au < released ; 2015 ; The American Journal of Tropical Medicine and Hygiene Volume 92 ; 92 >
-      au < manifest ; 2015 ; The American Journal of Tropical Medicine and Hygiene Volume 93 ; 93 >
+      au < notReady ; 2015 ; The American Journal of Tropical Medicine and Hygiene Volume 93 ; 93 > #hanging urls (no http) causing 403 error.
       au < released ; 2016 ; The American Journal of Tropical Medicine and Hygiene Volume 94 ; 94 >
       au < released ; 2016 ; The American Journal of Tropical Medicine and Hygiene Volume 95 ; 95 >
       au < released ; 2017 ; The American Journal of Tropical Medicine and Hygiene Volume 96 ; 96 >
@@ -35,10 +35,12 @@
       au < released ; 2018 ; The American Journal of Tropical Medicine and Hygiene Volume 99 ; 99 >
       au < released ; 2019 ; The American Journal of Tropical Medicine and Hygiene Volume 100 ; 100 >
       au < released ; 2019 ; The American Journal of Tropical Medicine and Hygiene Volume 101 ; 101 >
-      au < manifest ; 2020 ; The American Journal of Tropical Medicine and Hygiene Volume 102 ; 102 >
-      au < manifest ; 2020 ; The American Journal of Tropical Medicine and Hygiene Volume 103 ; 103 >
+      au < released ; 2020 ; The American Journal of Tropical Medicine and Hygiene Volume 102 ; 102 >
+      au < released ; 2020 ; The American Journal of Tropical Medicine and Hygiene Volume 103 ; 103 >
       au < released ; 2021 ; The American Journal of Tropical Medicine and Hygiene Volume 104 ; 104 >
-      au < manifest ; 2021 ; The American Journal of Tropical Medicine and Hygiene Volume 105 ; 105 >
+      au < released ; 2021 ; The American Journal of Tropical Medicine and Hygiene Volume 105 ; 105 >
+      au < released ; 2022 ; The American Journal of Tropical Medicine and Hygiene Volume 106 ; 106 >
+      au < expected ; 2022 ; The American Journal of Tropical Medicine and Hygiene Volume 107 ; 107 >
 
   }
 }

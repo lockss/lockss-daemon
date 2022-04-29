@@ -115,12 +115,12 @@ public class SpringerLinkJournalsCrawlSeed extends BaseSpringerLinkCrawlSeed {
    * @return The query URL for the given starting index.
    * @since 1.67.5
    */
-  protected String makeApiUrl(int startingIndex) {
+  protected String makeApiUrl(int startingIndex) throws PluginException {
     String url = String.format("%smeta/v1/pam?q=issn:%s%%20volume:%s&api_key=%s&p=%d&s=%d",
                                API_URL,
                                eissn,
                                volume,
-                               API_KEY,
+                               getApiKey(),
                                EXPECTED_RECORDS_PER_RESPONSE,
                                startingIndex);
     return url;

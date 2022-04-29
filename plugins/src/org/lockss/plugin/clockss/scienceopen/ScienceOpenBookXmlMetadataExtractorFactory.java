@@ -42,7 +42,6 @@ import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.lockss.util.Logger;
-import org.lockss.config.TdbAu;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -68,20 +67,17 @@ public class ScienceOpenBookXmlMetadataExtractorFactory extends SourceXmlMetadat
   //example: .....foo.zip!/miecec13/6.2013-4027/6.2013-4027.pdf
   private static final Pattern DATEPAT = Pattern.compile("/[^/.]+\\.([0-9]{4})-[^/.-]+\\.pdf$", Pattern.CASE_INSENSITIVE);
 
-
   // currently only for meeting papers which is book format
   private static SourceXmlSchemaHelper ScienceOpenBookHelper = null;
 
-  private static String ScienceOpen = "ScienceOpen";
-
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
-                                                           String contentType)
+                                                                  String contentType)
       throws PluginException {
     return new ScienceOpenBookXmlMetadataExtractor();
   }
 
-  public class ScienceOpenBookXmlMetadataExtractor extends SourceXmlMetadataExtractor {
+  public static class ScienceOpenBookXmlMetadataExtractor extends SourceXmlMetadataExtractor {
 
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
@@ -89,6 +85,7 @@ public class ScienceOpenBookXmlMetadataExtractorFactory extends SourceXmlMetadat
       if (ScienceOpenBookHelper == null) {
         ScienceOpenBookHelper = new ScienceOpenBookXmlSchemaHelper();
       }
+
       return ScienceOpenBookHelper;
     }
 
@@ -101,6 +98,7 @@ public class ScienceOpenBookXmlMetadataExtractorFactory extends SourceXmlMetadat
         log.debug3("found a book_chapter, not emitting");
         return false;
       }
+
       return super.preEmitCheck(schemaHelper, cu, thisAM);
     }
 
@@ -115,6 +113,7 @@ public class ScienceOpenBookXmlMetadataExtractorFactory extends SourceXmlMetadat
     @Override
     protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
                                                             ArticleMetadata oneAM) {
+
 
       String url_string = cu.getUrl();
       List<String> returnList = new ArrayList<String>();
@@ -135,7 +134,7 @@ public class ScienceOpenBookXmlMetadataExtractorFactory extends SourceXmlMetadat
     protected void postCookProcess(SourceXmlSchemaHelper schemaHelper,
                                    CachedUrl cu, ArticleMetadata thisAM) {
 
-      log.debug3("in postCookProcess");
+
       //If we didn't get a valid date value, use the copyright year if it's there
       if (thisAM.get(MetadataField.FIELD_DATE) == null) {
         if (thisAM.getRaw(ScienceOpenBookXmlSchemaHelper.chapter_copyright_year) != null) {
@@ -164,18 +163,8 @@ public class ScienceOpenBookXmlMetadataExtractorFactory extends SourceXmlMetadat
           thisAM.put(MetadataField.FIELD_DOI,thisAM.getRaw(ScienceOpenBookXmlSchemaHelper.book_doi));
         }
       }
-      // Fill in Publisher Name from TDB, if missing, with this fall back for safety.
-      String publisherName = ScienceOpen; //"Carl Grossman";
-      TdbAu tdbau = cu.getArchivalUnit().getTdbAu();
-      if (tdbau != null) {
-        publisherName =  tdbau.getPublisherName();
-      }
-      if (thisAM.getRaw(ScienceOpenBookXmlSchemaHelper.book_publisher) != null) {
-        thisAM.putIfBetter(MetadataField.FIELD_PUBLISHER, publisherName);
-      }
-      // as ScienceOpen wants to all material they provide 'counted' as one,
-      // setting the Provider field to ScienceOpen makes sense.
-      thisAM.put(MetadataField.FIELD_PROVIDER, ScienceOpen);
+      ScienceOpenMetadataUtils.fillPublisherAndProviderFromTdb(thisAM, cu);
+      ScienceOpenMetadataUtils.normalizePublisher(thisAM);
     }
 
   }

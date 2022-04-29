@@ -1,42 +1,38 @@
 /*
- * $Id$
- */
 
-/*
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
 
- Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
- all rights reserved.
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
- Permission is hereby granted, free of charge, to any person obtaining a copy
- of this software and associated documentation files (the "Software"), to deal
- in the Software without restriction, including without limitation the rights
- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- copies of the Software, and to permit persons to whom the Software is
- furnished to do so, subject to the following conditions:
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
 
- The above copyright notice and this permission notice shall be included in
- all copies or substantial portions of the Software.
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
 
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
- STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
- WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
- IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
 
- Except as contained in this notice, the name of Stanford University shall not
- be used in advertising or otherwise to promote the sale, use or other dealings
- in this Software without prior written authorization from Stanford University.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
 
- */
+*/
 
 package org.lockss.plugin.clockss.onixbooks;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import org.apache.commons.io.FilenameUtils;
 import org.apache.cxf.common.util.StringUtils;
@@ -48,11 +44,11 @@ import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 
-
 public class Onix3LongSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
   private static final Logger log = Logger.getLogger(Onix3LongSourceXmlMetadataExtractorFactory.class);
 
   private static SourceXmlSchemaHelper Onix3Helper = null;
+  private final Map<String,HashSet<String>> allRecordsSet = new HashMap<>();
 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
@@ -62,6 +58,17 @@ public class Onix3LongSourceXmlMetadataExtractorFactory extends SourceXmlMetadat
   }
 
   public class Onix3LongSourceXmlMetadataExtractor extends SourceXmlMetadataExtractor {
+
+    public void resetRecordsSet(String auid) {
+      // we make a hashset for each AU, this is to avoid resetting another AUs
+      // hashset in the middle of metadata operation.
+      HashSet<String> auidsSet = allRecordsSet.get(auid);
+      if (auidsSet != null) {
+          auidsSet.clear();
+      } else {
+        allRecordsSet.put(auid, new HashSet<>());
+      }
+    }
 
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
@@ -82,7 +89,7 @@ public class Onix3LongSourceXmlMetadataExtractorFactory extends SourceXmlMetadat
 
       String filenameValue = oneAM.getRaw(helper.getFilenameXPathKey());
       String cuBase = FilenameUtils.getFullPath(cu.getUrl());
-      List<String> returnList = new ArrayList<String>();
+      List<String> returnList = new ArrayList<>();
       returnList.add(cuBase + filenameValue + ".pdf");
       returnList.add(cuBase + filenameValue + ".epub");
       return returnList;
@@ -102,25 +109,22 @@ public class Onix3LongSourceXmlMetadataExtractorFactory extends SourceXmlMetadat
       String deDupKey = helper.getDeDuplicationXPathKey(); 
       boolean deDuping = (!StringUtils.isEmpty(deDupKey));
       if (deDuping) {
-        Map<String,ArticleMetadata> uniqueRecordMap = new HashMap<String,ArticleMetadata>();
-        String consolidationXPathKey = helper.getConsolidationXPathKey();
+        Map<String,ArticleMetadata> uniqueRecordMap = new HashMap<>();
+        HashSet<String> auidsSet = allRecordsSet.get(cu.getArchivalUnit().getAuId());
+        if (auidsSet == null) { auidsSet = new HashSet<>(); } // for testing
 
-        // Look at each item in AM list and put those with unique values
-        // associated with the deDupKey in a map of unique records.
-        // For duplicates, use the consolidateRecords() method to combine
+        // Look at each item in AM list and compare them to a running set of records
+        // to only return unique records from this AM
         for ( ArticleMetadata oneAM : allAMs) {
-          String deDupRawVal = oneAM.getRaw(deDupKey); 
-          ArticleMetadata prevDupRecord = uniqueRecordMap.get(deDupRawVal);
-          if (prevDupRecord == null) {
+          String deDupRawVal = oneAM.getRaw(deDupKey);
+          log.debug3("anArticleMD deDupKey: " + deDupRawVal);
+          if (!auidsSet.contains(deDupRawVal)) {
             log.debug3("no record already existed with that raw val");
             uniqueRecordMap.put(deDupRawVal,  oneAM);
-          } else if (!StringUtils.isEmpty(consolidationXPathKey)){
-            log.debug3("combining two AM records");
-            // ArticleMetadata.putRaw appends if a value(s) exists
-            prevDupRecord.putRaw(consolidationXPathKey,  oneAM.getRaw(consolidationXPathKey));
-          } 
+            auidsSet.add(deDupRawVal);
+          }
         }
-        log.debug3("After consolidation, " + uniqueRecordMap.size() + "records");
+        log.debug3("After consolidation, added " + uniqueRecordMap.size() + " for a total of " + allRecordsSet.size() + " records");
         return uniqueRecordMap.values();
       }
       return allAMs;

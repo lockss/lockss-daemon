@@ -1,0 +1,27 @@
+{
+  publisher <
+    name = Baldwin Wallace University, Conservatory of Music
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:356
+
+    {
+    title <
+      name = BACH: Journal of the Riemenschneider Bach Institute ;
+      issn = 0005-3600 ;
+      eissn = 2767-4843
+
+    >
+
+      attr[journal_id] = 791
+
+      au < released ; 2010 ; BACH: Journal of the Riemenschneider Bach Institute Volume 41 [2010] ; 16625 >
+      au < released ; 2011 ; BACH: Journal of the Riemenschneider Bach Institute Volume 42 [2011] ; 16624 >
+      au < released ; 2012 ; BACH: Journal of the Riemenschneider Bach Institute Volume 43 [2012] ; 16623 >
+
+    }
+
+}

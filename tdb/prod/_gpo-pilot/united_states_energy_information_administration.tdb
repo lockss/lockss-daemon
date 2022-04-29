@@ -1,0 +1,25 @@
+{
+
+  publisher <
+    name = United States Energy Information Administration
+  >
+
+  {
+  
+    title <
+      name = Monthly Energy Review ;
+      issn = 0095-7356 ;
+      eissn = 2169-1835 ;
+      issnl = 0095-7356
+    >
+    
+    rights = openaccess
+    plugin = gov.gpo.access.permanent.plugin.monthlyenergyreview.MonthlyEnergyReviewPlugin
+    param[base_url] = http://permanent.access.gpo.gov/lockss/Monthly_Energy_Review/
+    implicit < status ; year ; name ; param[year] >  
+
+    au < down ; 2005 ; Monthly Energy Review 2005 ; 2005 >
+      
+  }
+  
+}

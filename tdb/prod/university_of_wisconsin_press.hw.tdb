@@ -51,7 +51,6 @@
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://aa.uwpress.org/
       implicit < status ; year ; name ; param[volume_name] >
-      comment[RU4143] = minor differences, unknown if they are ok to pass
 
       au < released ; 2003 ; Arctic Anthropology Volume 40 ; 40 >
       au < released ; 2004 ; Arctic Anthropology Volume 41 ; 41 >
@@ -71,8 +70,6 @@
       au < released ; 2018 ; Arctic Anthropology Volume 55 ; 55 >
       au < released ; 2019 ; Arctic Anthropology Volume 56 ; 56 >
       au < released ; 2020 ; Arctic Anthropology Volume 57 ; 57 >
-      au < expected ; 2021 ; Arctic Anthropology Volume 58 ; 58 >
-    
   }
 
   {
@@ -106,7 +103,8 @@
       au < released ; 2018 ; Contemporary Literature Volume 59 ; 59 >
       au < released ; 2018 ; Contemporary Literature Volume 60 ; 60 >
       au < released ; 2020 ; Contemporary Literature Volume 61 ; 61 >
-      au < expected ; 2021 ; Contemporary Literature Volume 62 ; 62 >
+      au < released ; 2021 ; Contemporary Literature Volume 62 ; 62 >
+      au < exists ; 2022 ; Contemporary Literature Volume 63 ; 63 >
 
   }
 
@@ -161,7 +159,8 @@
       au < released ; 2018 ; Ecological Restoration Volume 36 ; 36 >
       au < released ; 2019 ; Ecological Restoration Volume 37 ; 37 >
       au < released ; 2020 ; Ecological Restoration Volume 38 ; 38 >
-      au < manifest ; 2021 ; Ecological Restoration Volume 39 ; 39 >
+      au < released ; 2021 ; Ecological Restoration Volume 39 ; 39 >
+      au < manifest ; 2022 ; Ecological Restoration Volume 40 ; 40 >
 
   }
 
@@ -196,7 +195,8 @@
       au < released ; 2018 ; The Journal of Human Resources Volume 53 ; 53 >
       au < released ; 2019 ; The Journal of Human Resources Volume 54 ; 54 >
       au < released ; 2020 ; The Journal of Human Resources Volume 55 ; 55 >
-      au < manifest ; 2021 ; The Journal of Human Resources Volume 56 ; 56 >
+      au < released ; 2021 ; The Journal of Human Resources Volume 56 ; 56 >
+      au < manifest ; 2022 ; The Journal of Human Resources Volume 57 ; 57 >
 
   }
 
@@ -233,7 +233,8 @@
       au < released ; 2018 ; Land Economics Volume 94 ; 94 >
       au < released ; 2019 ; Land Economics Volume 95 ; 95 >
       au < released ; 2020 ; Land Economics Volume 96 ; 96 >
-      au < manifest ; 2021 ; Land Economics Volume 97 ; 97 >
+      au < notReady ; 2021 ; Land Economics Volume 97 ; 97 > #urls fail
+      au < manifest ; 2022 ; Land Economics Volume 98 ; 98 >
 
   }
 
@@ -289,7 +290,8 @@
       au < released ; 2018 ; Landscape Journal: design, planning, and management of the land Volume 37 ; 37 >
       au < released ; 2019 ; Landscape Journal: design, planning, and management of the land Volume 38 ; 38 >
       au < released ; 2020 ; Landscape Journal: design, planning, and management of the land Volume 39 ; 39 >
-      au < manifest ; 2021 ; Landscape Journal: design, planning, and management of the land Volume 40 ; 40 >
+      au < notReady ; 2021 ; Landscape Journal: design, planning, and management of the land Volume 40 ; 40 > #urls fail
+      au < expected ; 2022 ; Landscape Journal: design, planning, and management of the land Volume 41 ; 41 >
 
   }
 
@@ -322,11 +324,11 @@
       au < released ; 2014 ; Luso-Brazilian Review Volume 51 ; 51 >
       au < released ; 2015 ; Luso-Brazilian Review Volume 52 ; 52 >
       au < released ; 2016 ; Luso-Brazilian Review Volume 53 ; 53 >
-      au < released ; 2017 ; Luso-Brazilian Review Volume 54 ; 54 >
-      au < released ; 2018 ; Luso-Brazilian Review Volume 55 ; 55 >
-      au < released ; 2019 ; Luso-Brazilian Review Volume 56 ; 56 >
-      au < released ; 2020 ; Luso-Brazilian Review Volume 57 ; 57 >
-      au < manifest ; 2021 ; Luso-Brazilian Review Volume 58 ; 58 >
+      au < down ; 2017 ; Luso-Brazilian Review Volume 54 ; 54 >
+      au < down ; 2018 ; Luso-Brazilian Review Volume 55 ; 55 >
+      au < down ; 2019 ; Luso-Brazilian Review Volume 56 ; 56 >
+      au < down ; 2020 ; Luso-Brazilian Review Volume 57 ; 57 >
+      #Moved to Project Muse. 2002-2016 still on highwire.
 
   }
 
@@ -361,7 +363,8 @@
       au < released ; 2018 ; Monatshefte Volume 110 ; 110 >
       au < released ; 2019 ; Monatshefte Volume 111 ; 111 >
       au < released ; 2020 ; Monatshefte Volume 112 ; 112 >
-      au < manifest ; 2021 ; Monatshefte Volume 113 ; 113 >
+      au < notReady ; 2021 ; Monatshefte Volume 113 ; 113 > #urls fail
+      au < manifest ; 2022 ; Monatshefte Volume 114 ; 114 >
 
   }
 
@@ -397,11 +400,11 @@
       au < released ; 2016 ; Native Plants Journal Volume 17 ; 17 >
       au < released ; 2017 ; Native Plants Journal Volume 18 ; 18 >
       au < released ; 2018 ; Native Plants Journal Volume 19 ; 19 >
-      au < manifest ; 2019 ; Native Plants Journal Volume 20 ; 20 >
+      au < released ; 2019 ; Native Plants Journal Volume 20 ; 20 >
       au < released ; 2020 ; Native Plants Journal Volume 21 ; 21 >
+      au < notReady ; 2021 ; Native Plants Journal Volume 22 ; 22 > #urls fail
     
-      au < manifest ; 2021 ; Native Plants Journal Volume 22 ; 22 >
-    
+      au < expected ; 2022 ; Native Plants Journal Volume 23 ; 23 >
   }
 
   {
@@ -432,11 +435,7 @@
       au < released ; 2015 ; SubStance Volume 44 ; 44 >
       au < released ; 2016 ; SubStance Volume 45 ; 45 >
       au < released ; 2017 ; SubStance Volume 46 ; 46 >
-      au < exists ; 2018 ; SubStance Volume 47 ; 47 >
-      au < exists ; 2019 ; SubStance Volume 48 ; 48 >
-      au < exists ; 2020 ; SubStance Volume 49 ; 49 >
-      au < expected ; 2021 ; SubStance Volume 50 ; 50 >
-
+      #Moved to Project Muse
   }
 
 }

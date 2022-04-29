@@ -38,7 +38,9 @@ import java.net.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.htmlparser.tags.SelectTag;
 import org.lockss.extractor.GoslingHtmlLinkExtractor;
+import org.lockss.extractor.JsoupHtmlLinkExtractor;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuUtil;
 import org.lockss.util.*;
@@ -51,6 +53,9 @@ public class OJS2HtmlLinkExtractor extends GoslingHtmlLinkExtractor {
 	protected static final String PDF_NAME = "citation_pdf_url";
 	protected static final String FT_NAME = "citation_fulltext_html_url";
 	protected static final String CONTENT = "content";
+
+	// url path to citations, need to append the citation format
+	protected static String CITATION_DOWNLOAD_URL = null;
 
 	// instead of a crawl filter, limit which links are foundon which pages
 	protected static final String MANIFEST_PATH = "/gateway/";
@@ -67,6 +72,12 @@ public class OJS2HtmlLinkExtractor extends GoslingHtmlLinkExtractor {
 
 	protected static final Pattern JLA_ARTICLE_PATTERN = Pattern.compile(
 			"(http://www[.]logicandanalysis[.]org/index.php/jla/article/view/[\\d]+)/[\\d]+$");
+
+	protected static final Pattern JS_CITATION_REPLACEMENT_PATTERN = Pattern.compile(
+			"document\\.location='(https?://.*/rt/captureCite/.*/)([^/)]+)'\\.replace\\('\\2',.*",
+			Pattern.CASE_INSENSITIVE);
+
+	protected static final Pattern CITATION_FORMAT_PATH = Pattern.compile(".+CitationPlugin", Pattern.CASE_INSENSITIVE);
 
 	@Override
 	public void extractUrls(final ArchivalUnit au, InputStream in, String encoding, final String srcUrl,
@@ -217,6 +228,43 @@ public class OJS2HtmlLinkExtractor extends GoslingHtmlLinkExtractor {
 				}
 			}
 			break;
+
+		case 'o':
+		case 'O':
+			if (beginsWithTag(link, OPTIONTAG)) {
+				String valueAttr = getAttributeValue("value", link);
+				Matcher mat = CITATION_FORMAT_PATH.matcher(valueAttr);
+				//       <option value="BibtexCitationPlugin">BibTeX</option>
+				//       <option value="ProCiteCitationPlugin">ProCite - RIS format (Macintosh &amp; Windows)</option>
+				if (mat.matches()) {
+					if (CITATION_DOWNLOAD_URL != null) {
+						String citationFormatUrl = CITATION_DOWNLOAD_URL + valueAttr;
+						log.debug3("FOUND A MATCH FOR CITATION DOWNLOAD, setting to: " + citationFormatUrl);
+						cb.foundLink(citationFormatUrl);
+					}
+				}
+			}
+			break;
+
+		case 's':
+		case 'S':
+			if (beginsWithTag(link, "select")) {
+				String onchange = getAttributeValue("onchange", link);
+				Matcher mat = JS_CITATION_REPLACEMENT_PATTERN.matcher(onchange);
+				//     <select onchange="document.location='https://www.afrjournal.org/index.php/afr/rt/captureCite/356/0/REPLACE'.replace('REPLACE', this.options[this.selectedIndex].value)">
+				//       <option selected="selected" value="AbntCitationPlugin">ABNT</option>
+				//       ...
+				//       <option value="TurabianCitationPlugin">Turabian</option>
+				//     </select>
+				if (mat.matches()) {
+					// set CITATION_DOWNLOAD_URL to this link, this gets used in the
+					// following option tags to construct citation urls.
+					CITATION_DOWNLOAD_URL = mat.group(1);
+					log.debug3("FOUND A MATCH FOR JAVASCRIPT CITATION REPLACE, setting to: " + CITATION_DOWNLOAD_URL);
+				}
+			}
+			break;
+
 		}
 
 		return super.extractLinkFromTag(link, au, cb);

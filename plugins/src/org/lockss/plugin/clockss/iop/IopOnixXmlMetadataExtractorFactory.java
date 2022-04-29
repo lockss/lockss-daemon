@@ -1,34 +1,35 @@
 /*
- * $Id$
- */
 
-/*
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
 
- Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
- all rights reserved.
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
- Permission is hereby granted, free of charge, to any person obtaining a copy
- of this software and associated documentation files (the "Software"), to deal
- in the Software without restriction, including without limitation the rights
- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- copies of the Software, and to permit persons to whom the Software is
- furnished to do so, subject to the following conditions:
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
 
- The above copyright notice and this permission notice shall be included in
- all copies or substantial portions of the Software.
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
 
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
- STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
- WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
- IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
 
- Except as contained in this notice, the name of Stanford University shall not
- be used in advertising or otherwise to promote the sale, use or other dealings
- in this Software without prior written authorization from Stanford University.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
 
- */
+*/
 
 package org.lockss.plugin.clockss.iop;
 
@@ -37,6 +38,7 @@ import java.util.List;
 
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang.StringUtils;
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
@@ -92,6 +94,7 @@ public class IopOnixXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
       // Once you have it, just keep returning the same one. It won't change.
       String system = null;
       String release = null;
+      String cuBase = FilenameUtils.getFullPath(cu.getUrl());
       
       if (doc == null) return null;
       DocumentType doctype = doc.getDoctype();
@@ -109,12 +112,14 @@ public class IopOnixXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
       if( ((system != null) && system.contains("/onix/2")) ||
            (( release != null) && release.startsWith("2")) ) {
         if (Onix2Helper == null) {
+          log.debug3("Onix2-Schema file: " + cuBase);
           Onix2Helper = new Onix2BooksSchemaHelper();
         }
         return Onix2Helper;
       } else if ( ((system != null) && system.contains("/onix/3")) ||
         (( release != null) && release.startsWith("3")) ) {
         if (Onix3Helper == null) {
+          log.debug3("Onix3-Schema file: " + cuBase);
           Onix3Helper = new Onix3BooksSchemaHelper();
         }
         return Onix3Helper;
@@ -208,6 +213,37 @@ public class IopOnixXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
       }
       //log.debug3("RETURNLIST: " + returnList.toString());
       return returnList;
+    }
+
+    @Override
+    protected boolean preEmitCheck(SourceXmlSchemaHelper schemaHelper,
+                                   CachedUrl cu, ArticleMetadata thisAM) {
+
+      String cuBase = FilenameUtils.getFullPath(cu.getUrl());
+
+      List<String> filesToCheck;
+
+      // If no files get returned in the list, nothing to check
+      if ((filesToCheck = getFilenamesAssociatedWithRecord(schemaHelper, cu,thisAM)) == null) {
+        return true;
+      }
+      ArchivalUnit B_au = cu.getArchivalUnit();
+      CachedUrl fileCu;
+      for (int i=0; i < filesToCheck.size(); i++)
+      {
+        fileCu = B_au.makeCachedUrl(filesToCheck.get(i));
+        //log.info("Check for existence of " + filesToCheck.get(i));
+        if(fileCu != null && (fileCu.hasContent())) {
+          // Set a cooked value for an access file. Otherwise it would get set to xml file
+          thisAM.put(MetadataField.FIELD_ACCESS_URL, fileCu.getUrl());
+          log.debug3("Check for existence of " + filesToCheck.get(i));
+          return true;
+        } else {
+          log.debug3("Check for failed existence of " + filesToCheck.get(i));
+        }
+      }
+      log.debug3("No file exists associated with this record");
+      return false; //No files found that match this record
     }
 
     /*

@@ -20,8 +20,8 @@
     implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
 
     {
-
       # Do not create any more AUs with this base URL
+
     
       param[base_url] = http://africaninvertebrates.org/ojs/
       param[journal_id] = AI
@@ -35,8 +35,8 @@
     }
     
     {
-
       # Create any new AUs with this base URL
+
     
       param[base_url] = http://www.africaninvertebrates.org/ojs/
       param[journal_id] = AI

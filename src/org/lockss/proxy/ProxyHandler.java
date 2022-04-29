@@ -328,6 +328,7 @@ public class ProxyHandler extends AbstractHttpHandler {
                       HttpRequest request,
                       HttpResponse response)
       throws HttpException, IOException {
+    InputStream reqBodyStrm = null;
     URI uri = request.getURI();
     long reqStartTime = TimeBase.nowMs();
     if (proxyMgr.isLogReqStart()) {
@@ -374,12 +375,24 @@ public class ProxyHandler extends AbstractHttpHandler {
     //
     // This logic is similar to logic in ServeContent.
     //TODO -- CTG: we need to determine the mime type and dispatch based on it
-    if (HttpRequest.__POST.equals(request.getMethod()) &&
-	proxyMgr.isHandleFormPost()) {
+
+    // Avoid doing this if possible, as we need to buffer the request
+    // in case we decide later to forward it
+    String source = request.getField(Constants.X_LOCKSS_SOURCE);
+
+    if (HttpRequest.__POST.equals(request.getMethod())
+        && proxyMgr.isHandleFormPost()
+        && !Constants.X_LOCKSS_SOURCE_PUBLISHER.equals(source)
+
+        ) {
       log.debug3("POST request found!");
-      // We don't have any way to know order from request headers instead to
-      // so we just sort the elements.
-      MultiMap params = request.getParameters();
+      // Get a map of the request parameters, and the complete body
+      // InputStream which will be needed if we forward the request.
+      MultiMap params = new MultiMap(16);
+      reqBodyStrm = extractParametersTo(request, params);
+
+      // Canonical order for form args assembled into a query string
+      // is alphabetical
       Set<String> unsortedKeys = SetUtils.typedSet(params.keySet(), String.class);
       SortedSet<String> keys = new TreeSet<String>(unsortedKeys);
 
@@ -494,8 +507,6 @@ public class ProxyHandler extends AbstractHttpHandler {
       if (log.isDebug2()) {
         log.debug2("cu: " + (isRepairRequest ? "(repair) " : "") + cu);
       }
-      String source = request.getField(Constants.X_LOCKSS_SOURCE);
-
       if (isRepairRequest || neverProxy ||
 	  Constants.X_LOCKSS_SOURCE_CACHE.equals(source) ||
 	  (isInCache && proxyMgr.isHostDown(uri.getHost()))) {
@@ -561,7 +572,7 @@ public class ProxyHandler extends AbstractHttpHandler {
           return;
         }
       }
-      doSun(pathInContext, pathParams, request, response);
+      doSun(pathInContext, pathParams, request, response, reqBodyStrm);
       logAccess(request, "unrecognized request type, forwarded",
           TimeBase.msSince(reqStartTime));
     } finally {
@@ -573,7 +584,8 @@ public class ProxyHandler extends AbstractHttpHandler {
   void doSun(String pathInContext,
              String pathParams,
              HttpRequest request,
-             HttpResponse response) throws IOException {
+             HttpResponse response,
+             InputStream reqIn) throws IOException {
     URI uri = request.getURI();
     try {
       // Do we proxy this?
@@ -652,7 +664,7 @@ public class ProxyHandler extends AbstractHttpHandler {
         connection.setDoInput(true);
 
         // do input thang!
-        InputStream in=request.getInputStream();
+        InputStream in = reqIn != null ? reqIn : request.getInputStream();
         if (hasContent) {
           connection.setDoOutput(true);
           IO.copy(in,connection.getOutputStream());
@@ -724,6 +736,83 @@ public class ProxyHandler extends AbstractHttpHandler {
       return null;
     }
     return pluginMgr.getAuFromId(auid);
+  }
+
+  /** Extract query args and form parameters from request URI and
+   * body, and return an InputStream for the complete body. */
+  // Adapted from org.mortbay.http.HttpRequest
+  private InputStream extractParametersTo(HttpRequest request,
+                                          MultiMap paramMap) {
+    InputStream reqIn = null;
+    ByteArrayOutputStream2 bout = null;
+    int maxFormContentSize = proxyMgr.getMaxFormSize();
+
+    // Handle query string
+    String encoding = request.getCharacterEncoding();
+    if (encoding == null) {
+      // No encoding, so use the existing characters.
+      encoding = org.mortbay.util.StringUtil.__ISO_8859_1;
+      request.getURI().putParametersTo(paramMap);
+    } else {
+      // An encoding has been set, so reencode query string.
+      String query = request.getURI().getQuery();
+      if (query != null) UrlEncoded.decodeTo(query, paramMap, encoding);
+    }
+
+    // handle any content.
+    String content_type = request.getField(HttpFields.__ContentType);
+    if (content_type != null && content_type.length() > 0) {
+      content_type = org.mortbay.util.StringUtil.asciiToLowerCase(content_type);
+      content_type = HttpFields.valueParameters(content_type, null);
+
+      if (HttpFields.__WwwFormUrlEncode.equalsIgnoreCase(content_type)
+          && HttpRequest.__POST.equals(request.getMethod())) {
+        int content_length = request.getIntField(HttpFields.__ContentLength);
+        if (content_length == 0) {
+          log.debug("No form content");
+        } else {
+          try {
+            int max = content_length;
+            if (maxFormContentSize > 0) {
+              if (max < 0) {
+                max = maxFormContentSize;
+              } else if (max > maxFormContentSize) {
+                throw new IllegalStateException("Form too large");
+              }
+            }
+
+            // Read the content
+            bout = new ByteArrayOutputStream2(max > 0 ? max : 4096);
+            reqIn = request.getInputStream();
+
+            // Copy to a byte array.
+            // TODO - this is very inefficient and we could
+            // save lots of memory by streaming this!!!!
+            IO.copy(reqIn, bout, max);
+
+            if (bout.size()==maxFormContentSize && reqIn.available()>0) {
+              log.warning("Ignoring POST body larger than " + maxFormContentSize);
+            } else {
+              // Add form params to query params
+              UrlEncoded.decodeTo(bout.toByteArray(), 0, bout.getCount(),
+                                  paramMap, encoding);
+            }
+          } catch (org.mortbay.http.EOFException e) {
+            LogSupport.ignore(jlog, e);
+          } catch (IOException e) {
+            log.warning("Error processing POST body", e);
+          }
+        }
+      }
+    }
+    if (bout != null) {
+      return new SequenceInputStream(new ByteArrayInputStream(bout.getBuf()),
+                                     reqIn);
+    } else if (reqIn != null) {
+      return reqIn;
+    } else {
+      return request.getInputStream();
+    }
   }
 
   void logAccess(HttpRequest request, String msg) {
@@ -839,7 +928,7 @@ public class ProxyHandler extends AbstractHttpHandler {
         // another way
         log.info("Malformed URL, trying doSun(): " + urlString);
         // XXX make this path display manifest index if erro resp?
-        doSun(pathInContext, pathParams, request, response);
+        doSun(pathInContext, pathParams, request, response, null);
         return;
       }
       // check connection header

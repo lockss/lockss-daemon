@@ -83,11 +83,11 @@
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://aapnews.aappublications.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-
       #doNotProcess = platform changed. Platform is not HWDrupal. 
       #See http://www.aappublications.org/news
       #See https://www.aappublications.org/content
       #RT 9102 asked for clarification.
+
 
       au < HighWirePressH20Plugin ; down ; 1985 ; AAP News Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; down ; 1986 ; AAP News Volume 2 ; 2 >
@@ -439,8 +439,8 @@
     
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
     pluginPrefix = org.lockss.plugin.highwire.
-
     # This is a serialized book. As of 8/2012 HW has not defined how book manifests will work.
+
     
     # The 2012 Volume is located at http://aapredbook.aappublications.org/
     

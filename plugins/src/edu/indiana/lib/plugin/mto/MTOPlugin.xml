@@ -1,47 +1,51 @@
+<!--
+
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>deprecated</string>
+    <string>deprecated - humanities_project registry</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
     <string>edu.indiana.lib.plugin.mto.MTOPlugin</string>
   </entry>
   <entry>
-    <string>au_def_pause_time</string>
-    <long>6000</long>
-  </entry>
-  <entry>
-    <string>au_name</string>
-    <string>&quot;Music Theory Online Plugin, Base URL %s, Year %d, Volume %d&quot;, base_url, year, volume</string>
-  </entry>
-  <entry>
-    <string>au_def_new_content_crawl</string>
-    <long>1209600000</long>
+    <string>plugin_version</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Music Theory Online Plugin</string>
-  </entry>
-  <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;%smto/lockss/index%d.html&quot;, base_url, year</string>
-      <string>1,&quot;%smto/issues/mto\.%02d\.%d\.[0-9]+/.*&quot;, base_url, au_short_year, volume</string>
-      <string>2,&quot;%smto/issues/mto\.[0-9]+\.[0-9]+\.[0-9]+/.*&quot;, base_url</string>
-      <string>2,&quot;%smto/issues/issues\.html&quot;, base_url</string>
-      <string>1,&quot;%smto/issues/.*&quot;, base_url</string>
-      <string>1,&quot;%smto/gifs/.*&quot;, base_url</string>
-      <string>2,&quot;%smto/index\.html&quot;, base_url</string>
-      <string>2,&quot;%smto/docs/.*&quot;, base_url</string>
-      <string>2,&quot;%ssmt-list/.*&quot;, base_url</string>
-      <string>2,&quot;%scgi-bin/.*&quot;, base_url</string>
-    </list>
-  </entry>
-  <entry>
-    <string>au_start_url</string>
-    <string>&quot;%smto/lockss/index%d.html&quot;, base_url, year</string>
+    <string>Music Theory Online Plugin (Legacy)</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -73,5 +77,37 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
     </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Music Theory Online Plugin (Legacy), Base URL %s, Year %d, Volume %d", base_url, year, volume</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%smto/lockss/index%d.html", base_url, year</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%smto/lockss/index%d\.html$", base_url, year</string>
+      <string>1,"^%smto/issues/mto\.%02d\.%d\.[0-9]+/", base_url, au_short_year, volume</string>
+      <string>2,"^%smto/issues/mto\.[0-9]+\.[0-9]+\.[0-9]+/", base_url</string>
+      <string>2,"^%smto/issues/issues\.html$", base_url</string>
+      <string>1,"^%smto/issues/", base_url</string>
+      <string>1,"^%smto/gifs/", base_url</string>
+      <string>2,"^%smto/index\.html$", base_url</string>
+      <string>2,"^%smto/docs/", base_url</string>
+      <string>2,"^%ssmt-list/", base_url</string>
+      <string>2,"^%scgi-bin/", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
   </entry>
 </map>

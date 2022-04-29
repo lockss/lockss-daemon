@@ -43,15 +43,16 @@
 
     {
       plugin = org.lockss.plugin.ojs3.Ojs3Plugin
-      param[base_url] = http://ejournals.library.vanderbilt.edu/
+      param[base_url] = https://ejournals.library.vanderbilt.edu/
       attr[start_stem] = index.php/
       param[journal_id] = ameriquests
 
-      au < exists ; 2017 ; AmeriQuests Volume 13 ; 13 ; 2017 >
-      au < exists ; 2018 ; AmeriQuests Volume 14 ; 14 ; 2018 >
-      au < exists ; 2019 ; AmeriQuests Volume 15 ; 15 ; 2019 >
-      au < exists ; 2020 ; AmeriQuests Volume 16 ; 16 ; 2020 >
-      au < exists ; 2021 ; AmeriQuests Volume 17 ; 17 ; 2021 >
+      au < released ; 2017 ; AmeriQuests Volume 13 ; 13 ; 2017 >
+      au < released ; 2018 ; AmeriQuests Volume 14 ; 14 ; 2018 >
+      au < released ; 2019 ; AmeriQuests Volume 15 ; 15 ; 2019 >
+      au < released ; 2020 ; AmeriQuests Volume 16 ; 16 ; 2020 >
+      au < released ; 2021 ; AmeriQuests Volume 17 ; 17 ; 2021 >
+      au < manifest ; 2022 ; AmeriQuests Volume 18 ; 18 ; 2022 >
 
     }
 

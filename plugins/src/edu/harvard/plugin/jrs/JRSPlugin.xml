@@ -1,6 +1,6 @@
 <!--
 
-Copyright (c) 2000-2020, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -33,7 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down</string>
+    <string>deprecated - humanities_project registry</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -41,24 +41,15 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Journal of Religion and Society Plugin</string>
+    <string>Journal of Religion and Society Plugin (Legacy)</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
     <list>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>year</key>
-        <displayName>Year</displayName>
-        <description>Four digit year (e.g., 2004)</description>
-        <type>4</type>
-        <size>4</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
         <key>base_url</key>
         <displayName>Base URL</displayName>
@@ -68,11 +59,20 @@ POSSIBILITY OF SUCH DAMAGE.
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
     </list>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Journal of Religion and Society Plugin, Base URL %s, Year %d", base_url, year</string>
+    <string>"Journal of Religion and Society Plugin (Legacy), Base URL %s, Year %d", base_url, year</string>
   </entry>
   <entry>
     <string>au_start_url</string>
@@ -94,11 +94,11 @@ POSSIBILITY OF SUCH DAMAGE.
     </list>
   </entry>
   <entry>
-    <string>au_def_pause_time</string>
-    <long>3000</long>
+    <string>au_def_new_content_crawl</string>
+    <long>15724800000</long><!-- sic: 182 days -->
   </entry>
   <entry>
-    <string>au_def_new_content_crawl</string>
-    <long>15724800000</long>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
   </entry>
 </map>

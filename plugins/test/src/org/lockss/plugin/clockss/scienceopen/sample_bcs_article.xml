@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd">
+<article xmlns:ali="http://www.niso.org/schemas/ali/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="proceedings-article" xml:lang="en">
+    <front>
+        <article-meta>
+            <article-id pub-id-type="doi">10.14236/ewic/EVA2016.5</article-id>
+            <article-categories>
+                <series-title>Electronic Workshops in Computing</series-title>
+            </article-categories>
+            <title-group>
+                <article-title>Improving Animation Technology through Digital Transformation</article-title>
+            </title-group>
+            <contrib-group>
+                <contrib contrib-type="author">
+                    <name name-style="western">
+                        <surname>Wallen</surname>
+                        <given-names>Lincoln</given-names>
+                    </name>
+                    <email>lincoln.wallen@dreamworks.com</email>
+                    <ext-link ext-link-type="uri" xlink:href="www.dreamworksanimation.com">www.dreamworksanimation.com</ext-link>
+                    <xref ref-type="aff" rid="aff0001">1</xref>
+                </contrib>
+                <aff id="aff0001">
+                    <label>1</label> Chief Technology Officer <break/>DreamWorks Animation <break/>1000 Flower Street <break/>Glendale <break/>California <break/>USA
+                </aff>
+            </contrib-group>
+            <pub-date>
+                <year>2016</year>
+                <month>07</month>
+            </pub-date>
+            <pub-date pub-type="ppub">
+                <year>2016</year>
+                <month>07</month>
+            </pub-date>
+            <fpage>23</fpage>
+            <lpage>23</lpage>
+            <product>
+                <issn>1477-9358</issn>
+                <publisher-name>BCS Learning &amp; Development</publisher-name>
+            </product>
+            <permissions>
+                <copyright-year>2016</copyright-year>
+                <license license-type="open-access" xlink:href="http://creativecommons.org/licenses/by/4.0/">
+                    <license-p>This work is licensed under a Creative Commons Attribution 4.0 Unported License. To view a copy of this license, visit <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</ext-link>
+                    </license-p>
+                </license>
+            </permissions>
+            <self-uri content-type="article_page" xlink:href="https://www.scienceopen.com/hosted-document?doi=10.14236/ewic/EVA2016.5"/>
+            <self-uri content-type="journal_page" xlink:href="https://ewic.bcs.org/"/>
+            <abstract>
+                <p>DreamWorks Animation creates high-quality family entertainment centred on groundbreaking computer generated (CG) animated feature films, which include the properties of Shrek, Kung Fu Panda, and How to Train Your Dragon. Five years ago, DreamWorks Animation completed the single most significant business transformation in the studio’s 20 year history. Today, Lincoln Wallen (CTO of DreamWorks Animation) is sharing how the studio is optimising their digital transformation to achieve bottom line results.</p>
+            </abstract>
+            <conference>
+                <conf-name>Electronic Visualisation and the Arts</conf-name>
+                <conf-acronym>EVA</conf-acronym>
+                <conf-sponsor>Electronic Workshops in Computing (eWiC)</conf-sponsor>
+                <conf-theme>Electronic Visualisation and the Arts</conf-theme>
+                <conf-num/>
+                <conf-loc>London, UK</conf-loc>
+                <conf-date>12 - 14 July 2016</conf-date>
+            </conference>
+        </article-meta>
+    </front>
+</article>

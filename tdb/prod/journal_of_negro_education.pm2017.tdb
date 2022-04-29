@@ -1,0 +1,37 @@
+{
+  publisher <
+    name = Journal of Negro Education
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:417
+
+    {
+    title <
+      name = Journal of Negro Education ;
+      issn = 0022-2984 ;
+      eissn = 2167-6437
+
+    >
+
+      attr[journal_id] = 794
+
+      au < manifest ; 2009 ; Journal of Negro Education Volume 78 [2009] ; 15969 >
+      au < released ; 2010 ; Journal of Negro Education Volume 79 [2010] ; 15970 >
+      au < released ; 2011 ; Journal of Negro Education Volume 80 [2011] ; 15971 >
+      au < released ; 2012 ; Journal of Negro Education Volume 81 [2012] ; 15972 >
+      au < released ; 2013 ; Journal of Negro Education Volume 82 [2013] ; 15973 >
+      au < released ; 2014 ; Journal of Negro Education Volume 83 [2014] ; 15974 >
+      au < released ; 2015 ; Journal of Negro Education Volume 84 [2015] ; 15975 >
+      au < released ; 2016 ; Journal of Negro Education Volume 85 [2016] ; 15976 >
+      au < released ; 2017 ; Journal of Negro Education Volume 86 [2017] ; 15977 >
+      au < released ; 2018 ; Journal of Negro Education Volume 87 [2018] ; 15978 >
+      au < released ; 2019 ; Journal of Negro Education Volume 88 [2019] ; 15979 >
+      au < released ; 2020 ; Journal of Negro Education Volume 89 [2020] ; 15888 >
+      au < released ; 2021 ; Journal of Negro Education Volume 90 [2021] ; 16618 >
+
+    }
+
+}

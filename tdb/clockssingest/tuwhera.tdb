@@ -10,12 +10,12 @@
 
     plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
     implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
-
     # Note: in principle, we should explicitly set the start_stem to the empty
     # string (meaning, there is no index.php/ portion). But it wasn't that way
     # on day one, it just relied on the start_stem being commented out, so we
     # are leaving it that way right now.
     #attr[start_stem] = 
+
     
     #manifest pages don't include index.php.
 
@@ -41,6 +41,7 @@
       au < frozen ; exists ; 2019 ; Applied Finance Letters Volume 8 ; 8 ; 2019 ; >
       au < frozen ; exists ; 2020 ; Applied Finance Letters Volume 9 ; 9 ; 2020 ; >
       au < crawling ; exists ; 2021 ; Applied Finance Letters Volume 10 ; 10 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; Applied Finance Letters Volume 11 ; 11 ; 2022 ; >
 
     }
 
@@ -66,6 +67,7 @@
       au < frozen ; exists ; 2019 ; Pacific Journalism Review Volume 25 ; 25 ; 2019 ; >
       au < frozen ; exists ; 2020 ; Pacific Journalism Review Volume 26 ; 26 ; 2020 ; >
       au < crawling ; exists ; 2021 ; Pacific Journalism Review Volume 27 ; 27 ; 2021 ; >
+      au < expected ; exists ; 2022 ; Pacific Journalism Review Volume 28 ; 28 ; 2022 ; >
 
     }
 
@@ -79,11 +81,11 @@
       param[base_url] = https://ojs.aut.ac.nz/te-kaharoa/
       param[journal_id] = tekaharoa
       attr[start_stem] = index.php/
-
       ### Note from plugin developer:
       ### https://ojs.aut.ac.nz/te-kaharoa/index.php/tekaharoa/gateway/lockss?year=2016
       ### it seemed it need an "index.php" start_stem from the Jira ticket.
       ### Manifest page checker does not work with this title.
+
 
       au < frozen ; exists ; 2011 ; Te Kaharoa Volume 4 ; 4 ; 2011 ; > 
       au < frozen ; exists ; 2012 ; Te Kaharoa Volume 5 ; 5 ; 2012 ; > 
@@ -95,7 +97,8 @@
       au < frozen ; exists ; 2018 ; Te Kaharoa Volume 11 ; 11 ; 2018 ; >
       au < frozen ; exists ; 2019 ; Te Kaharoa Volume 12 ; 12 ; 2019 ; >
       au < deepCrawl ; exists ; 2020 ; Te Kaharoa Volume 13 ; 13 ; 2020 ; >
-      au < expected ; exists ; 2021 ; Te Kaharoa Volume 14 ; 14 ; 2021 ; >
+      au < crawling ; exists ; 2021 ; Te Kaharoa Volume 14 ; 14 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; Te Kaharoa Volume 15 ; 15 ; 2022 ; >
 
     }
 
@@ -111,6 +114,7 @@
       attr[start_stem] = 
 
       au < crawling ; exists ; 2021 ; Aotearoa New Zealand Journal of Social Issues Volume 1 ; 1 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; Aotearoa New Zealand Journal of Social Issues Volume 2 ; 2 ; 2022 ; >
 
   }
 
@@ -135,6 +139,7 @@
       au < frozen ; exists ; 2018 ; Ata: Journal of Psychotherapy Aotearoa New Zealand  Volume 22 ; 22 ; 2018 ; >
       au < frozen ; exists ; 2020 ; Ata: Journal of Psychotherapy Aotearoa New Zealand  Volume 23 ; 23 ; 2020 ; >
       au < crawling ; exists ; 2021 ; Ata: Journal of Psychotherapy Aotearoa New Zealand  Volume 25 ; 25 ; 2021 ; >
+      au < expected ; exists ; 2022 ; Ata: Journal of Psychotherapy Aotearoa New Zealand  Volume 26 ; 26 ; 2022 ; >
 
   }
 
@@ -153,7 +158,8 @@
       au < frozen ; exists ; 2016 ; Back Story  Volume 1 ; 1 ; 2016 ; >
       au < frozen ; exists ; 2017 ; Back Story  Volume 2 ; 2 ; 2017 ; >
       au < frozen ; exists ; 2018 ; Back Story  Volume 3 ; 3 ; 2018 ; >
-      au < expected ; exists ; 2021 ; Back Story  Volume 4 ; 4 ; 2021 ; >
+      au < crawling ; exists ; 2021 ; Back Story  Volume 4 ; 4 ; 2021 ; >
+      au < expected ; exists ; 2022 ; Back Story  Volume 5 ; 5 ; 2022 ; >
 
   }
 
@@ -171,6 +177,7 @@
       au < frozen ; exists ; 2019 ; Decolonization of Criminology and Justice  Volume 1 ; 1 ; 2019 ; >
       au < frozen ; exists ; 2020 ; Decolonization of Criminology and Justice  Volume 2 ; 2 ; 2020 ; >
       au < crawling ; exists ; 2021 ; Decolonization of Criminology and Justice  Volume 3 ; 3 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; Decolonization of Criminology and Justice  Volume 4 ; 4 ; 2022 ; >
 
   }
 
@@ -190,6 +197,7 @@
       au < frozen ; exists ; 2019 ; Hospitality Insights Volume 3 ; 3 ; 2019 ; >
       au < frozen ; exists ; 2020 ; Hospitality Insights Volume 4 ; 4 ; 2020 ; >
       au < crawling ; exists ; 2021 ; Hospitality Insights Volume 5 ; 5 ; 2021 ; >
+      au < expected ; exists ; 2022 ; Hospitality Insights Volume 6 ; 6 ; 2022 ; >
 
   }
 
@@ -204,6 +212,9 @@
       param[base_url] = https://interstices.ac.nz/
       param[journal_id] = Interstices
       attr[start_stem] = index.php/
+      ### Note:
+      ### https://interstices.ac.nz/index.php/Interstices/gateway/lockss?year=2016
+      ### all redirect to 1992.
 
       au < exists ; exists ; 1990 ; Interstices Volume 1 ; 1 ; 1990 ; >
       au < manifest ; exists ; 1992 ; Interstices Volume 2 ; 2 ; 1992 ; >
@@ -226,6 +237,7 @@
       au < exists ; exists ; 2019 ; Interstices Volume 19 ; 19 ; 2019 ; >
       au < exists ; exists ; 2020 ; Interstices Volume 20 ; 20 ; 2020 ; >
       au < expected ; exists ; 2021 ; Interstices Volume 21 ; 21 ; 2021 ; >
+      au < expected ; exists ; 2022 ; Interstices Volume 22 ; 22 ; 2022 ; >
 
   }
 
@@ -263,6 +275,7 @@
 
       au < frozen ; exists ; 2020 ; NZJER: New Zealand Journal of Employment Relations  Volume 45 ; 45 ; 2020 ; >
       au < crawling ; exists ; 2021 ; NZJER: New Zealand Journal of Employment Relations  Volume 46 ; 46 ; 2021 ; >
+      au < expected ; exists ; 2022 ; NZJER: New Zealand Journal of Employment Relations  Volume 47 ; 47 ; 2022 ; >
 
   }
 
@@ -281,6 +294,7 @@
       au < frozen ; exists ; 2019 ; Pacific Health Volume 2 ; 2 ; 2019 ; >
       au < frozen ; exists ; 2020 ; Pacific Health Volume 3 ; 3 ; 2020 ; >
       au < crawling ; exists ; 2021 ; Pacific Health Volume 4 ; 4 ; 2021 ; >
+      au < expected ; exists ; 2022 ; Pacific Health Volume 5 ; 5 ; 2022 ; >
 
   }
 
@@ -298,13 +312,14 @@
       au < frozen ; exists ; 2019 ; PJTEL: Pacific Journal of Technology Enhanced Learning  Volume 1 ; 1 ; 2019 ; >
       au < frozen ; exists ; 2020 ; PJTEL: Pacific Journal of Technology Enhanced Learning  Volume 2 ; 2 ; 2020 ; >
       au < crawling ; exists ; 2021 ; PJTEL: Pacific Journal of Technology Enhanced Learning  Volume 3 ; 3 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; PJTEL: Pacific Journal of Technology Enhanced Learning  Volume 4 ; 4 ; 2022 ; >
 
   }
 
   {
 
       title <
-        name = Te Wharenga ;
+        name = Te Wharenga: New Zealand Criminal Law Review ;
         eissn = 2463-5804
       >
 
@@ -312,11 +327,10 @@
       param[journal_id] = new-zealand-criminal-law-review
       attr[start_stem] = 
 
-      au < exists ; exists ; 2016 ; Te Wharenga Volume 1 ; 1 ; 2016 ; >
-      au < frozen ; exists ; 2017 ; Te Wharenga Volume 2 ; 2 ; 2017 ; >
-      au < exists ; exists ; 2018 ; Te Wharenga Volume 3 ; 3 ; 2018 ; >
-      au < frozen ; exists ; 2019 ; Te Wharenga Volume 4 ; 4 ; 2019 ; >
-      au < expected ; exists ; 2021 ; Te Wharenga Volume 6 ; 6 ; 2021 ; >
+      au < exists ; exists ; 2016 ; Te Wharenga: New Zealand Criminal Law Review Volume 1 ; 1 ; 2016 ; >
+      au < frozen ; exists ; 2017 ; Te Wharenga: New Zealand Criminal Law Review Volume 2 ; 2 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Te Wharenga: New Zealand Criminal Law Review Volume 3 ; 3 ; 2018 ; >
+      au < frozen ; exists ; 2019 ; Te Wharenga: New Zealand Criminal Law Review Volume 4 ; 4 ; 2019 ; >
 
   }
 
@@ -339,6 +353,7 @@
       au < frozen ; exists ; 2019 ; Teachers Work Volume 16 ; 16 ; 2019 ; >
       au < frozen ; exists ; 2020 ; Teachers Work Volume 17 ; 17 ; 2020 ; >
       au < crawling ; exists ; 2021 ; Teachers Work Volume 18 ; 18 ; 2021 ; >
+      au < expected ; exists ; 2022 ; Teachers Work Volume 19 ; 19 ; 2022 ; >
 
   }
 
@@ -352,8 +367,8 @@
       param[base_url] = https://ojs.aut.ac.nz/
       param[journal_id] = wcdc
       attr[start_stem] = 
-
       #Manifest pages not enabled
+
       au < crawling ; exists ; 2001 ; Working Papers in Communication Volume 1 ; 1 ; 2001 ; >
       au < crawling ; exists ; 2005 ; Working Papers in Communication Volume 2 ; 2 ; 2005 ; >
       au < crawling ; exists ; 2008 ; Working Papers in Communication Volume 3 ; 3 ; 2008 ; >

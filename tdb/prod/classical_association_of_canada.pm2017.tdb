@@ -1,0 +1,25 @@
+{
+  publisher <
+    name = Classical Association of Canada
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:77
+
+    {
+    title <
+      name = Phoenix ;
+      issn = 1929-4883 ;
+      eissn = 0031-8299
+
+    >
+
+      attr[journal_id] = 807
+
+      au < released ; 2020 ; Phoenix Volume 74 [2020] ; 16694 >
+
+    }
+
+}

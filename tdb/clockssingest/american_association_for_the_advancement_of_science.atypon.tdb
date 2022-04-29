@@ -6,13 +6,13 @@
     info[contract] = 2015 ;
     info[tester] = 8 ;
     info[poller] = 2 ;
-    info[platform] = Atypon. 7/19/2021. Not moved yet.
+    info[platform] = Atypon.
   >
 
   plugin = org.lockss.plugin.atypon.aaas.ClockssAaasPlugin
   implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
   # Moved to Drupal July 15 2015
-  # Moving to Atypon Summer 2021
+  # Moved to Atypon Summer 2021
     
   {
 
@@ -24,9 +24,9 @@
     
       param[base_url] = https://www.science.org/
       param[journal_id] = science
-
       #content available from 1880 volume os-1 to 2009 volume 326. 4 volumes/year starting 1962. 2 volumes/year starting 1895 volume 1.
       #volume 344 File size (346438) differs from Content-Length header (461302): https://www.science.org/content/sci/suppl/2014/04/23/344.6182.380.DC1/1249656s-tables.zip
+
 
       au < doNotProcess ; doNotProcess ; 1880 ; Science Volume os-1 ; os-1 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 1881 ; Science Volume os-2 ; os-2 ; reingest2.clockss.org:8085 >
@@ -442,6 +442,10 @@
       au < crawling ; exists ; 2021 ; Science Volume 372 ; 372 ; >
       au < crawling ; exists ; 2021 ; Science Volume 373 ; 373 ; >
       au < manifest ; exists ; 2021 ; Science Volume 374 ; 374 ; >
+      au < manifest ; exists ; 2022 ; Science Volume 375 ; 375 ; >
+      au < manifest ; exists ; 2022 ; Science Volume 376 ; 376 ; >
+      au < expected ; exists ; 2022 ; Science Volume 377 ; 377 ; >
+      au < expected ; exists ; 2022 ; Science Volume 378 ; 378 ; >
 
   }
 
@@ -470,6 +474,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; Science Signaling Volume 12 ; 12 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; Science Signaling Volume 13 ; 13 ; >
       au < crawling ; exists ; 2021 ; Science Signaling Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2022 ; Science Signaling Volume 15 ; 15 ; >
 
   }
 
@@ -497,6 +502,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; Science Translational Medicine Volume 11 ; 11 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; Science Translational Medicine Volume 12 ; 12 ; >
       au < crawling ; exists ; 2021 ; Science Translational Medicine Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2022 ; Science Translational Medicine Volume 14 ; 14 ; >
 
   }
 
@@ -517,6 +523,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; Science Advances Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; Science Advances Volume 6 ; 6 ; >
       au < crawling ; exists ; 2021 ; Science Advances Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2022 ; Science Advances Volume 8 ; 8 ; >
 
   }
 
@@ -536,6 +543,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; Science Robotics Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; Science Robotics Volume 5 ; 5 ; >
       au < crawling ; exists ; 2021 ; Science Robotics Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2022 ; Science Robotics Volume 7 ; 7 ; >
 
   }
 
@@ -555,6 +563,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; Science Immunology Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; Science Immunology Volume 5 ; 5 ; >
       au < crawling ; exists ; 2021 ; Science Immunology Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2022 ; Science Immunology Volume 7 ; 7 ; >
 
   }
 

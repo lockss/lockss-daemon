@@ -3,6 +3,7 @@
   publisher <
     name = University of Iowa
   >
+  #All journals but 1 have moved to Janeway
 
     {
       title <
@@ -14,24 +15,26 @@
       #param[base_url] = http://ir.uiowa.edu/
       param[journal_abbr] = annals-of-iowa
       implicit < status ; year ; name ; param[volume] ; param[base_url] >
+      #Moved to Janeway https://pubs.lib.uiowa.edu/annals-of-iowa/
 
-      au < released ; 2005 ; Annals at Iowa Volume 64 ; 64 ; http://ir.uiowa.edu/ >
-      au < released ; 2006 ; Annals at Iowa Volume 65 ; 65 ; http://ir.uiowa.edu/ >
-      au < released ; 2007 ; Annals at Iowa Volume 66 ; 66 ; http://ir.uiowa.edu/ >
-      au < released ; 2008 ; Annals at Iowa Volume 67 ; 67 ; http://ir.uiowa.edu/ >
-      au < released ; 2009 ; Annals at Iowa Volume 68 ; 68 ; http://ir.uiowa.edu/ >
-      au < released ; 2010 ; Annals at Iowa Volume 69 ; 69 ; http://ir.uiowa.edu/ >
-      au < released ; 2011 ; Annals at Iowa Volume 70 ; 70 ; http://ir.uiowa.edu/ >
-      au < released ; 2012 ; Annals at Iowa Volume 71 ; 71 ; http://ir.uiowa.edu/ >
-      au < released ; 2013 ; Annals at Iowa Volume 72 ; 72 ; http://ir.uiowa.edu/ >
-      au < released ; 2014 ; Annals at Iowa Volume 73 ; 73 ; http://ir.uiowa.edu/ >
-      au < released ; 2015 ; Annals at Iowa Volume 74 ; 74 ; http://ir.uiowa.edu/ >
-      au < released ; 2016 ; Annals at Iowa Volume 75 ; 75 ; http://ir.uiowa.edu/ >
-      au < released ; 2017 ; Annals at Iowa Volume 76 ; 76 ; https://ir.uiowa.edu/ >
-      au < released ; 2018 ; Annals at Iowa Volume 77 ; 77 ; https://ir.uiowa.edu/ >
-      au < released ; 2019 ; Annals at Iowa Volume 78 ; 78 ; https://ir.uiowa.edu/ >
-      au < released ; 2020 ; Annals at Iowa Volume 79 ; 79 ; https://ir.uiowa.edu/ >
-      au < expected ; 2021 ; Annals at Iowa Volume 80 ; 80 ; https://ir.uiowa.edu/ >
+      au < down ; 2005 ; Annals at Iowa Volume 64 ; 64 ; http://ir.uiowa.edu/ >
+      au < down ; 2006 ; Annals at Iowa Volume 65 ; 65 ; http://ir.uiowa.edu/ >
+      au < down ; 2007 ; Annals at Iowa Volume 66 ; 66 ; http://ir.uiowa.edu/ >
+      au < down ; 2008 ; Annals at Iowa Volume 67 ; 67 ; http://ir.uiowa.edu/ >
+      au < down ; 2009 ; Annals at Iowa Volume 68 ; 68 ; http://ir.uiowa.edu/ >
+      au < down ; 2010 ; Annals at Iowa Volume 69 ; 69 ; http://ir.uiowa.edu/ >
+      au < down ; 2011 ; Annals at Iowa Volume 70 ; 70 ; http://ir.uiowa.edu/ >
+      au < down ; 2012 ; Annals at Iowa Volume 71 ; 71 ; http://ir.uiowa.edu/ >
+      au < down ; 2013 ; Annals at Iowa Volume 72 ; 72 ; http://ir.uiowa.edu/ >
+      au < down ; 2014 ; Annals at Iowa Volume 73 ; 73 ; http://ir.uiowa.edu/ >
+      au < down ; 2015 ; Annals at Iowa Volume 74 ; 74 ; http://ir.uiowa.edu/ >
+      au < down ; 2016 ; Annals at Iowa Volume 75 ; 75 ; http://ir.uiowa.edu/ >
+      au < down ; 2017 ; Annals at Iowa Volume 76 ; 76 ; https://ir.uiowa.edu/ >
+      au < down ; 2018 ; Annals at Iowa Volume 77 ; 77 ; https://ir.uiowa.edu/ >
+      au < down ; 2019 ; Annals at Iowa Volume 78 ; 78 ; https://ir.uiowa.edu/ >
+      au < down ; 2020 ; Annals at Iowa Volume 79 ; 79 ; https://ir.uiowa.edu/ >
+      au < doNotProcess ; 2021 ; Annals at Iowa Volume 80 ; 80 ; https://ir.uiowa.edu/ >
+      au < doNotProcess ; 2022 ; Annals at Iowa Volume 81 ; 81 ; https://ir.uiowa.edu/ >
 
     }
     
@@ -46,23 +49,24 @@
       param[base_url] = http://ir.uiowa.edu/
       param[journal_abbr] = bai
       implicit < status ; year ; name ; param[volume] >
+      #Moved to Janeway https://pubs.lib.uiowa.edu/bai/
 
-      au < released ; 1989 ; Books at Iowa Volume 50 ; 50 >
-      au < released ; 1989 ; Books at Iowa Volume 51 ; 51 >
-      au < released ; 1990 ; Books at Iowa Volume 52 ; 52 >
-      au < released ; 1990 ; Books at Iowa Volume 53 ; 53 >
-      au < released ; 1991 ; Books at Iowa Volume 54 ; 54 >
-      au < released ; 1991 ; Books at Iowa Volume 55 ; 55 >
-      au < released ; 1992 ; Books at Iowa Volume 56 ; 56 >
-      au < released ; 1992 ; Books at Iowa Volume 57 ; 57 >
-      au < released ; 1993 ; Books at Iowa Volume 58 ; 58 >
-      au < released ; 1993 ; Books at Iowa Volume 59 ; 59 >
-      au < released ; 1994 ; Books at Iowa Volume 60 ; 60 >
-      au < released ; 1994 ; Books at Iowa Volume 61 ; 61 >
-      au < released ; 1995 ; Books at Iowa Volume 62 ; 62 >
-      au < released ; 1995 ; Books at Iowa Volume 63 ; 63 >
-      au < released ; 1996 ; Books at Iowa Volume 64 ; 64 >
-      au < released ; 1996 ; Books at Iowa Volume 65 ; 65 >
+      au < down ; 1989 ; Books at Iowa Volume 50 ; 50 >
+      au < down ; 1989 ; Books at Iowa Volume 51 ; 51 >
+      au < down ; 1990 ; Books at Iowa Volume 52 ; 52 >
+      au < down ; 1990 ; Books at Iowa Volume 53 ; 53 >
+      au < down ; 1991 ; Books at Iowa Volume 54 ; 54 >
+      au < down ; 1991 ; Books at Iowa Volume 55 ; 55 >
+      au < down ; 1992 ; Books at Iowa Volume 56 ; 56 >
+      au < down ; 1992 ; Books at Iowa Volume 57 ; 57 >
+      au < down ; 1993 ; Books at Iowa Volume 58 ; 58 >
+      au < down ; 1993 ; Books at Iowa Volume 59 ; 59 >
+      au < down ; 1994 ; Books at Iowa Volume 60 ; 60 >
+      au < down ; 1994 ; Books at Iowa Volume 61 ; 61 >
+      au < down ; 1995 ; Books at Iowa Volume 62 ; 62 >
+      au < down ; 1995 ; Books at Iowa Volume 63 ; 63 >
+      au < down ; 1996 ; Books at Iowa Volume 64 ; 64 >
+      au < down ; 1996 ; Books at Iowa Volume 65 ; 65 >
 
     }
     
@@ -76,13 +80,14 @@
       param[base_url] = https://ir.uiowa.edu/
       param[journal_abbr] = bsides
       implicit < status ; year ; name ; param[volume] >
+      #Moved to Janeway https://pubs.lib.uiowa.edu/bsides/
 
-      au < exists ; 2010 ; B Sides Volume 2010 ; 2010 >
-      au < exists ; 2011 ; B Sides Volume 2011 ; 2011 >
-      au < exists ; 2012 ; B Sides Volume 2012 ; 2012 >
-      au < exists ; 2013 ; B Sides Volume 2013 ; 2013 >
-      au < exists ; 2014 ; B Sides Volume 2014 ; 2014 >
-      au < exists ; 2015 ; B Sides Volume 2015 ; 2015 >
+      au < doNotProcess ; 2010 ; B Sides Volume 2010 ; 2010 >
+      au < doNotProcess ; 2011 ; B Sides Volume 2011 ; 2011 >
+      au < doNotProcess ; 2012 ; B Sides Volume 2012 ; 2012 >
+      au < doNotProcess ; 2013 ; B Sides Volume 2013 ; 2013 >
+      au < doNotProcess ; 2014 ; B Sides Volume 2014 ; 2014 >
+      au < doNotProcess ; 2015 ; B Sides Volume 2015 ; 2015 >
 
     }
     
@@ -97,29 +102,32 @@
       #param[base_url] = http://ir.uiowa.edu/
       param[journal_abbr] = dadasur
       implicit < status ; year ; name ; param[volume] ; param[base_url] >
+      #Moved to Janeway https://pubs.lib.uiowa.edu/dadasur/
 
-      au < manifest ; 1971 ; Dada/Surrealism Volume 1 ; 1 ; https://ir.uiowa.edu/ >
-      au < manifest ; 1972 ; Dada/Surrealism Volume 2 ; 2 ; https://ir.uiowa.edu/ >
-      au < manifest ; 1973 ; Dada/Surrealism Volume 3 ; 3 ; https://ir.uiowa.edu/ >
-      au < manifest ; 1974 ; Dada/Surrealism Volume 4 ; 4 ; https://ir.uiowa.edu/ >
-      au < manifest ; 1975 ; Dada/Surrealism Volume 5 ; 5 ; https://ir.uiowa.edu/ >
-      au < manifest ; 1976 ; Dada/Surrealism Volume 6 ; 6 ; https://ir.uiowa.edu/ >
-      au < manifest ; 1977 ; Dada/Surrealism Volume 7 ; 7 ; https://ir.uiowa.edu/ >
-      au < manifest ; 1978 ; Dada/Surrealism Volume 8 ; 8 ; https://ir.uiowa.edu/ >
-      au < manifest ; 1979 ; Dada/Surrealism Volume 9 ; 9 ; https://ir.uiowa.edu/ >
-      au < manifest ; 1982 ; Dada/Surrealism Volume 10 ; 10 ; https://ir.uiowa.edu/ >
+      au < doNotProcess ; 1971 ; Dada/Surrealism Volume 1 ; 1 ; https://ir.uiowa.edu/ >
+      au < doNotProcess ; 1972 ; Dada/Surrealism Volume 2 ; 2 ; https://ir.uiowa.edu/ >
+      au < doNotProcess ; 1973 ; Dada/Surrealism Volume 3 ; 3 ; https://ir.uiowa.edu/ >
+      au < doNotProcess ; 1974 ; Dada/Surrealism Volume 4 ; 4 ; https://ir.uiowa.edu/ >
+      au < doNotProcess ; 1975 ; Dada/Surrealism Volume 5 ; 5 ; https://ir.uiowa.edu/ >
+      au < doNotProcess ; 1976 ; Dada/Surrealism Volume 6 ; 6 ; https://ir.uiowa.edu/ >
+      au < doNotProcess ; 1977 ; Dada/Surrealism Volume 7 ; 7 ; https://ir.uiowa.edu/ >
+      au < doNotProcess ; 1978 ; Dada/Surrealism Volume 8 ; 8 ; https://ir.uiowa.edu/ >
+      au < doNotProcess ; 1979 ; Dada/Surrealism Volume 9 ; 9 ; https://ir.uiowa.edu/ >
+      au < doNotProcess ; 1982 ; Dada/Surrealism Volume 10 ; 10 ; https://ir.uiowa.edu/ >
       au < doesNotExist ; 0 ; Dada/Surrealism Volume 11 ; 11 ; https://ir.uiowa.edu/ >
-      au < released ; 1983 ; Dada/Surrealism Volume 12 ; 12 ; https://ir.uiowa.edu/ >
-      au < released ; 1984 ; Dada/Surrealism Volume 13 ; 13 ; https://ir.uiowa.edu/ >
-      au < released ; 1985 ; Dada/Surrealism Volume 14 ; 14 ; https://ir.uiowa.edu/ >
-      au < released ; 1986 ; Dada/Surrealism Volume 15 ; 15 ; https://ir.uiowa.edu/ >
-      au < released ; 1987 ; Dada/Surrealism Volume 16 ; 16 ; https://ir.uiowa.edu/ >
-      au < released ; 1988 ; Dada/Surrealism Volume 17 ; 17 ; https://ir.uiowa.edu/ >
-      au < released ; 1990 ; Dada/Surrealism Volume 18 ; 18 ; https://ir.uiowa.edu/ >
-      au < released ; 2013 ; Dada/Surrealism Volume 19 ; 19 ; http://ir.uiowa.edu/ >
-      au < released ; 2015 ; Dada/Surrealism Volume 20 ; 20 ; http://ir.uiowa.edu/ >
-      au < released ; 2017 ; Dada/Surrealism Volume 21 ; 21 ; https://ir.uiowa.edu/ >
-      au < released ; 2018 ; Dada/Surrealism Volume 22 ; 22 ; https://ir.uiowa.edu/ >
+      au < down ; 1983 ; Dada/Surrealism Volume 12 ; 12 ; https://ir.uiowa.edu/ >
+      au < down ; 1984 ; Dada/Surrealism Volume 13 ; 13 ; https://ir.uiowa.edu/ >
+      au < down ; 1985 ; Dada/Surrealism Volume 14 ; 14 ; https://ir.uiowa.edu/ >
+      au < down ; 1986 ; Dada/Surrealism Volume 15 ; 15 ; https://ir.uiowa.edu/ >
+      au < down ; 1987 ; Dada/Surrealism Volume 16 ; 16 ; https://ir.uiowa.edu/ >
+      au < down ; 1988 ; Dada/Surrealism Volume 17 ; 17 ; https://ir.uiowa.edu/ >
+      au < down ; 1990 ; Dada/Surrealism Volume 18 ; 18 ; https://ir.uiowa.edu/ >
+      au < down ; 2013 ; Dada/Surrealism Volume 19 ; 19 ; http://ir.uiowa.edu/ >
+      au < down ; 2015 ; Dada/Surrealism Volume 20 ; 20 ; http://ir.uiowa.edu/ >
+      au < down ; 2017 ; Dada/Surrealism Volume 21 ; 21 ; https://ir.uiowa.edu/ >
+      au < down ; 2018 ; Dada/Surrealism Volume 22 ; 22 ; https://ir.uiowa.edu/ >
+      au < doNotProcess ; 2019 ; Dada/Surrealism Volume 23 ; 23 ; https://ir.uiowa.edu/ >
+      au < doNotProcess ; 2020 ; Dada/Surrealism Volume 24 ; 24 ; https://ir.uiowa.edu/ >
 
     }
     
@@ -133,23 +141,24 @@
       param[base_url] = http://ir.uiowa.edu/
       param[journal_abbr] = ejab
       implicit < status ; year ; name ; param[volume] >
+      #Moved to OJS https://journals.library.columbia.edu/index.php/ejab
 
-      au < released ; 1997 ; Electronic Journal of Africana Bibliography Volume 1 ; 1 >
-      au < released ; 1997 ; Electronic Journal of Africana Bibliography Volume 2 ; 2 >
-      au < released ; 1997 ; Electronic Journal of Africana Bibliography Volume 3 ; 3 >
-      au < released ; 1999 ; Electronic Journal of Africana Bibliography Volume 4 ; 4 >
-      au < released ; 1999 ; Electronic Journal of Africana Bibliography Volume 5 ; 5 >
-      au < released ; 2000 ; Electronic Journal of Africana Bibliography Volume 6 ; 6 >
-      au < released ; 2001 ; Electronic Journal of Africana Bibliography Volume 7 ; 7 >
-      au < released ; 2002 ; Electronic Journal of Africana Bibliography Volume 8 ; 8 >
-      au < released ; 2004 ; Electronic Journal of Africana Bibliography Volume 9 ; 9 >
-      au < released ; 2006 ; Electronic Journal of Africana Bibliography Volume 10 ; 10 >
-      au < released ; 2009 ; Electronic Journal of Africana Bibliography Volume 11 ; 11 >
-      au < released ; 2009 ; Electronic Journal of Africana Bibliography Volume 12 ; 12 >
-      au < released ; 2012 ; Electronic Journal of Africana Bibliography Volume 13 ; 13 >
-      au < released ; 2013 ; Electronic Journal of Africana Bibliography Volume 14 ; 14 >
-      au < released ; 2014 ; Electronic Journal of Africana Bibliography Volume 15 ; 15 >
-      au < released ; 2014 ; Electronic Journal of Africana Bibliography Volume 16 ; 16 >
+      au < down ; 1997 ; Electronic Journal of Africana Bibliography Volume 1 ; 1 >
+      au < down ; 1997 ; Electronic Journal of Africana Bibliography Volume 2 ; 2 >
+      au < down ; 1997 ; Electronic Journal of Africana Bibliography Volume 3 ; 3 >
+      au < down ; 1999 ; Electronic Journal of Africana Bibliography Volume 4 ; 4 >
+      au < down ; 1999 ; Electronic Journal of Africana Bibliography Volume 5 ; 5 >
+      au < down ; 2000 ; Electronic Journal of Africana Bibliography Volume 6 ; 6 >
+      au < down ; 2001 ; Electronic Journal of Africana Bibliography Volume 7 ; 7 >
+      au < down ; 2002 ; Electronic Journal of Africana Bibliography Volume 8 ; 8 >
+      au < down ; 2004 ; Electronic Journal of Africana Bibliography Volume 9 ; 9 >
+      au < down ; 2006 ; Electronic Journal of Africana Bibliography Volume 10 ; 10 >
+      au < down ; 2009 ; Electronic Journal of Africana Bibliography Volume 11 ; 11 >
+      au < down ; 2009 ; Electronic Journal of Africana Bibliography Volume 12 ; 12 >
+      au < down ; 2012 ; Electronic Journal of Africana Bibliography Volume 13 ; 13 >
+      au < down ; 2013 ; Electronic Journal of Africana Bibliography Volume 14 ; 14 >
+      au < down ; 2014 ; Electronic Journal of Africana Bibliography Volume 15 ; 15 >
+      au < down ; 2014 ; Electronic Journal of Africana Bibliography Volume 16 ; 16 >
 
     }
     
@@ -164,45 +173,46 @@
       param[base_url] = https://ir.uiowa.edu/
       param[journal_abbr] = igsar
       implicit < status ; year ; name ; param[volume] >
+      #Moved to Janeway https://pubs.lib.uiowa.edu/igsar/
 
-      au < manifest ; 1893 ; Iowa Geological Survey Annual Report Volume 1 ; 1 >
-      au < manifest ; 1894 ; Iowa Geological Survey Annual Report Volume 2 ; 2 >
-      au < manifest ; 1893 ; Iowa Geological Survey Annual Report Volume 3 ; 3 >
-      au < manifest ; 1894 ; Iowa Geological Survey Annual Report Volume 4 ; 4 >
-      au < manifest ; 1895 ; Iowa Geological Survey Annual Report Volume 5 ; 5 >
-      au < manifest ; 1897 ; Iowa Geological Survey Annual Report Volume 6 ; 6 >
-      au < manifest ; 1896 ; Iowa Geological Survey Annual Report Volume 7 ; 7 >
-      au < manifest ; 1897 ; Iowa Geological Survey Annual Report Volume 8 ; 8 >
-      au < manifest ; 1898 ; Iowa Geological Survey Annual Report Volume 9 ; 9 >
-      au < manifest ; 1899 ; Iowa Geological Survey Annual Report Volume 10 ; 10 >
-      au < manifest ; 1900 ; Iowa Geological Survey Annual Report Volume 11 ; 11 >
-      au < manifest ; 1901 ; Iowa Geological Survey Annual Report Volume 12 ; 12 >
-      au < manifest ; 1902 ; Iowa Geological Survey Annual Report Volume 13 ; 13 >
-      au < manifest ; 1903 ; Iowa Geological Survey Annual Report Volume 14 ; 14 >
-      au < manifest ; 1904 ; Iowa Geological Survey Annual Report Volume 15 ; 15 >
-      au < manifest ; 1905 ; Iowa Geological Survey Annual Report Volume 16 ; 16 >
-      au < manifest ; 1906 ; Iowa Geological Survey Annual Report Volume 17 ; 17 >
-      au < manifest ; 1907 ; Iowa Geological Survey Annual Report Volume 18 ; 18 >
-      au < manifest ; 1908 ; Iowa Geological Survey Annual Report Volume 19 ; 19 >
-      au < manifest ; 1909 ; Iowa Geological Survey Annual Report Volume 20 ; 20 >
-      au < manifest ; 1911 ; Iowa Geological Survey Annual Report Volume 21 ; 21 >
-      au < manifest ; 1913 ; Iowa Geological Survey Annual Report Volume 22 ; 22 >
-      au < manifest ; 1912 ; Iowa Geological Survey Annual Report Volume 23 ; 23 >
-      au < manifest ; 1913 ; Iowa Geological Survey Annual Report Volume 24 ; 24 >
-      au < manifest ; 1914 ; Iowa Geological Survey Annual Report Volume 25 ; 25 >
-      au < manifest ; 1917 ; Iowa Geological Survey Annual Report Volume 26 ; 26 >
-      au < manifest ; 1918 ; Iowa Geological Survey Annual Report Volume 27 ; 27 >
-      au < manifest ; 1918 ; Iowa Geological Survey Annual Report Volume 28 ; 28 >
-      au < manifest ; 1920 ; Iowa Geological Survey Annual Report Volume 29 ; 29 >
-      au < manifest ; 1922 ; Iowa Geological Survey Annual Report Volume 30 ; 30 >
-      au < manifest ; 1924 ; Iowa Geological Survey Annual Report Volume 31 ; 31 >
-      au < manifest ; 1926 ; Iowa Geological Survey Annual Report Volume 32 ; 32 >
-      au < manifest ; 1927 ; Iowa Geological Survey Annual Report Volume 33 ; 33 >
-      au < manifest ; 1928 ; Iowa Geological Survey Annual Report Volume 34 ; 34 >
-      au < manifest ; 1929 ; Iowa Geological Survey Annual Report Volume 35 ; 35 >
-      au < manifest ; 1936 ; Iowa Geological Survey Annual Report Volume 36 ; 36 >
-      au < manifest ; 1939 ; Iowa Geological Survey Annual Report Volume 37 ; 37 >
-      au < released ; 1941 ; Iowa Geological Survey Annual Report Volume 38 ; 38 >
+      au < doNotProcess ; 1893 ; Iowa Geological Survey Annual Report Volume 1 ; 1 >
+      au < doNotProcess ; 1894 ; Iowa Geological Survey Annual Report Volume 2 ; 2 >
+      au < doNotProcess ; 1893 ; Iowa Geological Survey Annual Report Volume 3 ; 3 >
+      au < doNotProcess ; 1894 ; Iowa Geological Survey Annual Report Volume 4 ; 4 >
+      au < doNotProcess ; 1895 ; Iowa Geological Survey Annual Report Volume 5 ; 5 >
+      au < doNotProcess ; 1897 ; Iowa Geological Survey Annual Report Volume 6 ; 6 >
+      au < doNotProcess ; 1896 ; Iowa Geological Survey Annual Report Volume 7 ; 7 >
+      au < doNotProcess ; 1897 ; Iowa Geological Survey Annual Report Volume 8 ; 8 >
+      au < doNotProcess ; 1898 ; Iowa Geological Survey Annual Report Volume 9 ; 9 >
+      au < doNotProcess ; 1899 ; Iowa Geological Survey Annual Report Volume 10 ; 10 >
+      au < doNotProcess ; 1900 ; Iowa Geological Survey Annual Report Volume 11 ; 11 >
+      au < doNotProcess ; 1901 ; Iowa Geological Survey Annual Report Volume 12 ; 12 >
+      au < doNotProcess ; 1902 ; Iowa Geological Survey Annual Report Volume 13 ; 13 >
+      au < doNotProcess ; 1903 ; Iowa Geological Survey Annual Report Volume 14 ; 14 >
+      au < doNotProcess ; 1904 ; Iowa Geological Survey Annual Report Volume 15 ; 15 >
+      au < doNotProcess ; 1905 ; Iowa Geological Survey Annual Report Volume 16 ; 16 >
+      au < doNotProcess ; 1906 ; Iowa Geological Survey Annual Report Volume 17 ; 17 >
+      au < doNotProcess ; 1907 ; Iowa Geological Survey Annual Report Volume 18 ; 18 >
+      au < doNotProcess ; 1908 ; Iowa Geological Survey Annual Report Volume 19 ; 19 >
+      au < doNotProcess ; 1909 ; Iowa Geological Survey Annual Report Volume 20 ; 20 >
+      au < doNotProcess ; 1911 ; Iowa Geological Survey Annual Report Volume 21 ; 21 >
+      au < doNotProcess ; 1913 ; Iowa Geological Survey Annual Report Volume 22 ; 22 >
+      au < doNotProcess ; 1912 ; Iowa Geological Survey Annual Report Volume 23 ; 23 >
+      au < doNotProcess ; 1913 ; Iowa Geological Survey Annual Report Volume 24 ; 24 >
+      au < doNotProcess ; 1914 ; Iowa Geological Survey Annual Report Volume 25 ; 25 >
+      au < doNotProcess ; 1917 ; Iowa Geological Survey Annual Report Volume 26 ; 26 >
+      au < doNotProcess ; 1918 ; Iowa Geological Survey Annual Report Volume 27 ; 27 >
+      au < doNotProcess ; 1918 ; Iowa Geological Survey Annual Report Volume 28 ; 28 >
+      au < doNotProcess ; 1920 ; Iowa Geological Survey Annual Report Volume 29 ; 29 >
+      au < doNotProcess ; 1922 ; Iowa Geological Survey Annual Report Volume 30 ; 30 >
+      au < doNotProcess ; 1924 ; Iowa Geological Survey Annual Report Volume 31 ; 31 >
+      au < doNotProcess ; 1926 ; Iowa Geological Survey Annual Report Volume 32 ; 32 >
+      au < doNotProcess ; 1927 ; Iowa Geological Survey Annual Report Volume 33 ; 33 >
+      au < doNotProcess ; 1928 ; Iowa Geological Survey Annual Report Volume 34 ; 34 >
+      au < doNotProcess ; 1929 ; Iowa Geological Survey Annual Report Volume 35 ; 35 >
+      au < doNotProcess ; 1936 ; Iowa Geological Survey Annual Report Volume 36 ; 36 >
+      au < doNotProcess ; 1939 ; Iowa Geological Survey Annual Report Volume 37 ; 37 >
+      au < down ; 1941 ; Iowa Geological Survey Annual Report Volume 38 ; 38 >
 
     }
     
@@ -216,14 +226,16 @@
       #param[base_url] = http://ir.uiowa.edu/
       param[journal_abbr] = iowa-historical-review
       implicit < status ; year ; name ; param[volume] ; param[base_url] >
+      #Moved to Janeway https://pubs.lib.uiowa.edu/iowa-historical-review/
 
-      au < released ; 2007-2008 ; Iowa Historical Review Volume 1 ; 1 ; http://ir.uiowa.edu/ >
-      au < released ; 2011 ; Iowa Historical Review Volume 2 ; 2 ; http://ir.uiowa.edu/ >
-      au < released ; 2013 ; Iowa Historical Review Volume 3 ; 3 ; http://ir.uiowa.edu/ >
-      au < released ; 2013-2014 ; Iowa Historical Review Volume 4 ; 4 ; http://ir.uiowa.edu/ >
-      au < released ; 2015 ; Iowa Historical Review Volume 5 ; 5 ; http://ir.uiowa.edu/ >
-      au < released ; 2016 ; Iowa Historical Review Volume 6 ; 6 ; http://ir.uiowa.edu/ >
-      au < released ; 2017 ; Iowa Historical Review Volume 7 ; 7 ; https://ir.uiowa.edu/ >
+      au < down ; 2007-2008 ; Iowa Historical Review Volume 1 ; 1 ; http://ir.uiowa.edu/ >
+      au < down ; 2011 ; Iowa Historical Review Volume 2 ; 2 ; http://ir.uiowa.edu/ >
+      au < down ; 2013 ; Iowa Historical Review Volume 3 ; 3 ; http://ir.uiowa.edu/ >
+      au < down ; 2013-2014 ; Iowa Historical Review Volume 4 ; 4 ; http://ir.uiowa.edu/ >
+      au < down ; 2015 ; Iowa Historical Review Volume 5 ; 5 ; http://ir.uiowa.edu/ >
+      au < down ; 2016 ; Iowa Historical Review Volume 6 ; 6 ; http://ir.uiowa.edu/ >
+      au < down ; 2017 ; Iowa Historical Review Volume 7 ; 7 ; https://ir.uiowa.edu/ >
+      au < doNotProcess ; 2020 ; Iowa Historical Review Volume 8 ; 8 ; https://ir.uiowa.edu/ >
 
     }
     
@@ -238,37 +250,39 @@
       #param[base_url] = http://ir.uiowa.edu/
       param[journal_abbr] = ijcs
       implicit < status ; year ; name ; param[volume] ; param[base_url] >
+      #Moved to Janeway https://pubs.lib.uiowa.edu/ijcs/
 
-      au < released ; 1993 ; Iowa Journal of Cultural Studies Volume 1993 ; 1993 ; http://ir.uiowa.edu/ >
-      au < released ; 1994 ; Iowa Journal of Cultural Studies Volume 1994 ; 1994 ; http://ir.uiowa.edu/ >
-      au < released ; 1995 ; Iowa Journal of Cultural Studies Volume 1995 ; 1995 ; http://ir.uiowa.edu/ >
-      au < released ; 1996 ; Iowa Journal of Cultural Studies Volume 1996 ; 1996 ; http://ir.uiowa.edu/ >
-      au < released ; 1997 ; Iowa Journal of Cultural Studies Volume 1997 ; 1997 ; http://ir.uiowa.edu/ >
-      au < released ; 1998 ; Iowa Journal of Cultural Studies Volume 1998 ; 1998 ; http://ir.uiowa.edu/ >
-      au < released ; 1999 ; Iowa Journal of Cultural Studies Volume 1999 ; 1999 ; http://ir.uiowa.edu/ >
-      au < released ; 2000 ; Iowa Journal of Cultural Studies Volume 2000 ; 2000 ; http://ir.uiowa.edu/ >
-      au < released ; 2001 ; Iowa Journal of Cultural Studies Volume 2001 ; 2001 ; http://ir.uiowa.edu/ >
-      au < released ; 2002 ; Iowa Journal of Cultural Studies Volume 1 ; 1 ; http://ir.uiowa.edu/ >
-      au < released ; 2002 ; Iowa Journal of Cultural Studies Volume 2 ; 2 ; http://ir.uiowa.edu/ >
-      au < released ; 2003 ; Iowa Journal of Cultural Studies Volume 3 ; 3 ; http://ir.uiowa.edu/ >
-      au < released ; 2004 ; Iowa Journal of Cultural Studies Volume 4 ; 4 ; http://ir.uiowa.edu/ >
-      au < released ; 2004 ; Iowa Journal of Cultural Studies Volume 5 ; 5 ; http://ir.uiowa.edu/ >
-      au < released ; 2005 ; Iowa Journal of Cultural Studies Volume 6 ; 6 ; http://ir.uiowa.edu/ >
-      au < released ; 2005 ; Iowa Journal of Cultural Studies Volume 7 ; 7 ; http://ir.uiowa.edu/ >
-      au < released ; 2006 ; Iowa Journal of Cultural Studies Volume 8 ; 8 ; http://ir.uiowa.edu/ >
+      au < down ; 1993 ; Iowa Journal of Cultural Studies Volume 1993 ; 1993 ; http://ir.uiowa.edu/ >
+      au < down ; 1994 ; Iowa Journal of Cultural Studies Volume 1994 ; 1994 ; http://ir.uiowa.edu/ >
+      au < down ; 1995 ; Iowa Journal of Cultural Studies Volume 1995 ; 1995 ; http://ir.uiowa.edu/ >
+      au < down ; 1996 ; Iowa Journal of Cultural Studies Volume 1996 ; 1996 ; http://ir.uiowa.edu/ >
+      au < down ; 1997 ; Iowa Journal of Cultural Studies Volume 1997 ; 1997 ; http://ir.uiowa.edu/ >
+      au < down ; 1998 ; Iowa Journal of Cultural Studies Volume 1998 ; 1998 ; http://ir.uiowa.edu/ >
+      au < down ; 1999 ; Iowa Journal of Cultural Studies Volume 1999 ; 1999 ; http://ir.uiowa.edu/ >
+      au < down ; 2000 ; Iowa Journal of Cultural Studies Volume 2000 ; 2000 ; http://ir.uiowa.edu/ >
+      au < down ; 2001 ; Iowa Journal of Cultural Studies Volume 2001 ; 2001 ; http://ir.uiowa.edu/ >
+      au < down ; 2002 ; Iowa Journal of Cultural Studies Volume 1 ; 1 ; http://ir.uiowa.edu/ >
+      au < down ; 2002 ; Iowa Journal of Cultural Studies Volume 2 ; 2 ; http://ir.uiowa.edu/ >
+      au < down ; 2003 ; Iowa Journal of Cultural Studies Volume 3 ; 3 ; http://ir.uiowa.edu/ >
+      au < down ; 2004 ; Iowa Journal of Cultural Studies Volume 4 ; 4 ; http://ir.uiowa.edu/ >
+      au < down ; 2004 ; Iowa Journal of Cultural Studies Volume 5 ; 5 ; http://ir.uiowa.edu/ >
+      au < down ; 2005 ; Iowa Journal of Cultural Studies Volume 6 ; 6 ; http://ir.uiowa.edu/ >
+      au < down ; 2005 ; Iowa Journal of Cultural Studies Volume 7 ; 7 ; http://ir.uiowa.edu/ >
+      au < down ; 2006 ; Iowa Journal of Cultural Studies Volume 8 ; 8 ; http://ir.uiowa.edu/ >
       au < doesNotExist ; 2006 ; Iowa Journal of Cultural Studies Volume 9 ; 9 ; http://ir.uiowa.edu/ >
-      au < released ; 2009 ; Iowa Journal of Cultural Studies Volume 10 ; 10 ; http://ir.uiowa.edu/ >
+      au < down ; 2009 ; Iowa Journal of Cultural Studies Volume 10 ; 10 ; http://ir.uiowa.edu/ >
       au < doesNotExist ; 2009 ; Iowa Journal of Cultural Studies Volume 11 ; 11 ; http://ir.uiowa.edu/ >
-      au < released ; 2010 ; Iowa Journal of Cultural Studies Volume 12 ; 12 ; http://ir.uiowa.edu/ >
+      au < down ; 2010 ; Iowa Journal of Cultural Studies Volume 12 ; 12 ; http://ir.uiowa.edu/ >
       au < doesNotExist ; 2010 ; Iowa Journal of Cultural Studies Volume 13 ; 13 ; http://ir.uiowa.edu/ >
-      au < released ; 2013 ; Iowa Journal of Cultural Studies Volume 14 ; 14 ; http://ir.uiowa.edu/ >
-      au < released ; 2014 ; Iowa Journal of Cultural Studies Volume 15 ; 15 ; http://ir.uiowa.edu/ >
-      au < released ; 2014 ; Iowa Journal of Cultural Studies Volume 16 ; 16 ; http://ir.uiowa.edu/ >
-      au < released ; 2017 ; Iowa Journal of Cultural Studies Volume 17 ; 17 ; https://ir.uiowa.edu/ >
-      au < released ; 2018 ; Iowa Journal of Cultural Studies Volume 18 ; 18 ; https://ir.uiowa.edu/ >
-      au < released ; 2019 ; Iowa Journal of Cultural Studies Volume 19 ; 19 ; https://ir.uiowa.edu/ >
-      au < released ; 2020 ; Iowa Journal of Cultural Studies Volume 20 ; 20 ; https://ir.uiowa.edu/ >
-      au < manifest ; 2021 ; Iowa Journal of Cultural Studies Volume 21 ; 21 ; https://ir.uiowa.edu/ >
+      au < down ; 2013 ; Iowa Journal of Cultural Studies Volume 14 ; 14 ; http://ir.uiowa.edu/ >
+      au < down ; 2014 ; Iowa Journal of Cultural Studies Volume 15 ; 15 ; http://ir.uiowa.edu/ >
+      au < down ; 2014 ; Iowa Journal of Cultural Studies Volume 16 ; 16 ; http://ir.uiowa.edu/ >
+      au < down ; 2017 ; Iowa Journal of Cultural Studies Volume 17 ; 17 ; https://ir.uiowa.edu/ >
+      au < down ; 2018 ; Iowa Journal of Cultural Studies Volume 18 ; 18 ; https://ir.uiowa.edu/ >
+      au < down ; 2019 ; Iowa Journal of Cultural Studies Volume 19 ; 19 ; https://ir.uiowa.edu/ >
+      au < down ; 2020 ; Iowa Journal of Cultural Studies Volume 20 ; 20 ; https://ir.uiowa.edu/ >
+      au < doNotProcess ; 2021 ; Iowa Journal of Cultural Studies Volume 21 ; 21 ; https://ir.uiowa.edu/ >
+      au < doNotProcess ; 2022 ; Iowa Journal of Cultural Studies Volume 22 ; 22 ; https://ir.uiowa.edu/ >
 
     }
     
@@ -283,18 +297,19 @@
       param[base_url] = http://ir.uiowa.edu/
       param[journal_abbr] = ijls
       implicit < status ; year ; name ; param[volume] >
+      #Moved to Janeway https://pubs.lib.uiowa.edu/ijls/
 
-      au < released ; 1977 ; Iowa Journal of Literary Studies Volume 1 ; 1 >
-      au < released ; 1978 ; Iowa Journal of Literary Studies Volume 2 ; 2 >
-      au < released ; 1981 ; Iowa Journal of Literary Studies Volume 3 ; 3 >
-      au < released ; 1983 ; Iowa Journal of Literary Studies Volume 4 ; 4 >
-      au < released ; 1984 ; Iowa Journal of Literary Studies Volume 5 ; 5 >
-      au < released ; 1985 ; Iowa Journal of Literary Studies Volume 6 ; 6 >
-      au < released ; 1986 ; Iowa Journal of Literary Studies Volume 7 ; 7 >
-      au < released ; 1987 ; Iowa Journal of Literary Studies Volume 8 ; 8 >
-      au < released ; 1988 ; Iowa Journal of Literary Studies Volume 9 ; 9 >
-      au < released ; 1989 ; Iowa Journal of Literary Studies Volume 10 ; 10 >
-      au < released ; 1991 ; Iowa Journal of Literary Studies Volume 11 ; 11 >
+      au < down ; 1977 ; Iowa Journal of Literary Studies Volume 1 ; 1 >
+      au < down ; 1978 ; Iowa Journal of Literary Studies Volume 2 ; 2 >
+      au < down ; 1981 ; Iowa Journal of Literary Studies Volume 3 ; 3 >
+      au < down ; 1983 ; Iowa Journal of Literary Studies Volume 4 ; 4 >
+      au < down ; 1984 ; Iowa Journal of Literary Studies Volume 5 ; 5 >
+      au < down ; 1985 ; Iowa Journal of Literary Studies Volume 6 ; 6 >
+      au < down ; 1986 ; Iowa Journal of Literary Studies Volume 7 ; 7 >
+      au < down ; 1987 ; Iowa Journal of Literary Studies Volume 8 ; 8 >
+      au < down ; 1988 ; Iowa Journal of Literary Studies Volume 9 ; 9 >
+      au < down ; 1989 ; Iowa Journal of Literary Studies Volume 10 ; 10 >
+      au < down ; 1991 ; Iowa Journal of Literary Studies Volume 11 ; 11 >
 
     }
     
@@ -308,13 +323,14 @@
       #param[base_url] = http://ir.uiowa.edu/
       param[journal_abbr] = mathal
       implicit < status ; year ; name ; param[volume] ; param[base_url] >
+      #Moved to Janeway https://pubs.lib.uiowa.edu/mathal/
 
-      au < released ; 2011 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 1 ; 1 ; http://ir.uiowa.edu/ >
-      au < released ; 2012 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 2 ; 2 ; http://ir.uiowa.edu/ >
-      au < released ; 2013 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 3 ; 3 ; http://ir.uiowa.edu/ >
-      au < released ; 2015 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 4 ; 4 ; http://ir.uiowa.edu/ >
-      au < released ; 2016 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 5 ; 5 ; http://ir.uiowa.edu/ >
-      au < released ; 2019 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 6 ; 6 ; https://ir.uiowa.edu/ >
+      au < down ; 2011 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 1 ; 1 ; http://ir.uiowa.edu/ >
+      au < down ; 2012 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 2 ; 2 ; http://ir.uiowa.edu/ >
+      au < down ; 2013 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 3 ; 3 ; http://ir.uiowa.edu/ >
+      au < down ; 2015 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 4 ; 4 ; http://ir.uiowa.edu/ >
+      au < down ; 2016 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 5 ; 5 ; http://ir.uiowa.edu/ >
+      au < down ; 2019 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 6 ; 6 ; https://ir.uiowa.edu/ >
 
     }
     
@@ -329,19 +345,21 @@
       #param[base_url] = http://ir.uiowa.edu/
       param[journal_abbr] = mzwp
       implicit < status ; year ; name ; param[volume] ; param[base_url] >
+      #Moved to Janeway https://pubs.lib.uiowa.edu/mzwp/
 
-      au < released ; 2005 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2005 ; 2005 ; http://ir.uiowa.edu/ >
-      au < released ; 2006 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2006 ; 2006 ; http://ir.uiowa.edu/ >
-      au < released ; 2007 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2007 ; 2007 ; http://ir.uiowa.edu/ >
-      au < released ; 2011 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2011 ; 2011 ; http://ir.uiowa.edu/ >
-      au < released ; 2012 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2012 ; 2012 ; http://ir.uiowa.edu/ >
-      au < released ; 2014 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2014 ; 2014 ; http://ir.uiowa.edu/ >
-      au < released ; 2015 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2015 ; 2015 ; http://ir.uiowa.edu/ >
-      au < released ; 2016 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2016 ; 2016 ; http://ir.uiowa.edu/ >
-      au < released ; 2017 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2017 ; 2017 ; https://ir.uiowa.edu/ >
-      au < released ; 2018 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2018 ; 2018 ; https://ir.uiowa.edu/ >
-      au < released ; 2019 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2019 ; 2019 ; https://ir.uiowa.edu/ >
-      au < exists ; 2021 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2021 ; 2021 ; https://ir.uiowa.edu/ >
+      au < down ; 2005 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2005 ; 2005 ; http://ir.uiowa.edu/ >
+      au < down ; 2006 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2006 ; 2006 ; http://ir.uiowa.edu/ >
+      au < down ; 2007 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2007 ; 2007 ; http://ir.uiowa.edu/ >
+      au < down ; 2011 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2011 ; 2011 ; http://ir.uiowa.edu/ >
+      au < down ; 2012 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2012 ; 2012 ; http://ir.uiowa.edu/ >
+      au < down ; 2014 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2014 ; 2014 ; http://ir.uiowa.edu/ >
+      au < down ; 2015 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2015 ; 2015 ; http://ir.uiowa.edu/ >
+      au < down ; 2016 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2016 ; 2016 ; http://ir.uiowa.edu/ >
+      au < down ; 2017 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2017 ; 2017 ; https://ir.uiowa.edu/ >
+      au < down ; 2018 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2018 ; 2018 ; https://ir.uiowa.edu/ >
+      au < down ; 2019 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2019 ; 2019 ; https://ir.uiowa.edu/ >
+      au < doNotProcess ; 2021 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2021 ; 2021 ; https://ir.uiowa.edu/ >
+      au < doNotProcess ; 2022 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2022 ; 2022 ; https://ir.uiowa.edu/ >
 
     }
     
@@ -356,64 +374,66 @@
       #param[base_url] = http://ir.uiowa.edu/
       param[journal_abbr] = mff
       implicit < status ; year ; name ; param[volume] ; param[base_url] >
+      #Moved to Western Mich U https://scholarworks.wmich.edu/mff/
 
-      au < released ; 1986 ; Medieval Feminist Forum Volume 1 ; 1 ; http://ir.uiowa.edu/ >
-      au < released ; 1986 ; Medieval Feminist Forum Volume 2 ; 2 ; http://ir.uiowa.edu/ >
-      au < released ; 1987 ; Medieval Feminist Forum Volume 3 ; 3 ; http://ir.uiowa.edu/ >
-      au < released ; 1987 ; Medieval Feminist Forum Volume 4 ; 4 ; http://ir.uiowa.edu/ >
-      au < released ; 1988 ; Medieval Feminist Forum Volume 5 ; 5 ; http://ir.uiowa.edu/ >
-      au < released ; 1988 ; Medieval Feminist Forum Volume 6 ; 6 ; http://ir.uiowa.edu/ >
-      au < released ; 1989 ; Medieval Feminist Forum Volume 7 ; 7 ; http://ir.uiowa.edu/ >
-      au < released ; 1989 ; Medieval Feminist Forum Volume 8 ; 8 ; http://ir.uiowa.edu/ >
-      au < released ; 1990 ; Medieval Feminist Forum Volume 9 ; 9 ; http://ir.uiowa.edu/ >
-      au < released ; 1990 ; Medieval Feminist Forum Volume 10 ; 10 ; http://ir.uiowa.edu/ >
-      au < released ; 1991 ; Medieval Feminist Forum Volume 11 ; 11 ; http://ir.uiowa.edu/ >
-      au < released ; 1991 ; Medieval Feminist Forum Volume 12 ; 12 ; http://ir.uiowa.edu/ >
-      au < released ; 1992 ; Medieval Feminist Forum Volume 13 ; 13 ; http://ir.uiowa.edu/ >
-      au < released ; 1992 ; Medieval Feminist Forum Volume 14 ; 14 ; http://ir.uiowa.edu/ >
-      au < released ; 1993 ; Medieval Feminist Forum Volume 15 ; 15 ; http://ir.uiowa.edu/ >
-      au < released ; 1993 ; Medieval Feminist Forum Volume 16 ; 16 ; http://ir.uiowa.edu/ >
-      au < released ; 1994 ; Medieval Feminist Forum Volume 17 ; 17 ; http://ir.uiowa.edu/ >
-      au < released ; 1994 ; Medieval Feminist Forum Volume 18 ; 18 ; http://ir.uiowa.edu/ >
-      au < released ; 1995 ; Medieval Feminist Forum Volume 19 ; 19 ; http://ir.uiowa.edu/ >
-      au < released ; 1995 ; Medieval Feminist Forum Volume 20 ; 20 ; http://ir.uiowa.edu/ >
-      au < released ; 1996 ; Medieval Feminist Forum Volume 21 ; 21 ; http://ir.uiowa.edu/ >
-      au < released ; 1996 ; Medieval Feminist Forum Volume 22 ; 22 ; http://ir.uiowa.edu/ >
-      au < released ; 1997 ; Medieval Feminist Forum Volume 23 ; 23 ; http://ir.uiowa.edu/ >
-      au < released ; 1997 ; Medieval Feminist Forum Volume 24 ; 24 ; http://ir.uiowa.edu/ >
-      au < released ; 1998 ; Medieval Feminist Forum Volume 25 ; 25 ; http://ir.uiowa.edu/ >
-      au < released ; 1998 ; Medieval Feminist Forum Volume 26 ; 26 ; http://ir.uiowa.edu/ >
-      au < released ; 1999 ; Medieval Feminist Forum Volume 27 ; 27 ; http://ir.uiowa.edu/ >
-      au < released ; 1999 ; Medieval Feminist Forum Volume 28 ; 28 ; http://ir.uiowa.edu/ >
-      au < released ; 2000 ; Medieval Feminist Forum Volume 29 ; 29 ; http://ir.uiowa.edu/ >
-      au < released ; 2000 ; Medieval Feminist Forum Volume 30 ; 30 ; http://ir.uiowa.edu/ >
-      au < released ; 2001 ; Medieval Feminist Forum Volume 31 ; 31 ; http://ir.uiowa.edu/ >
-      au < released ; 2001 ; Medieval Feminist Forum Volume 32 ; 32 ; http://ir.uiowa.edu/ >
-      au < released ; 2002 ; Medieval Feminist Forum Volume 33 ; 33 ; http://ir.uiowa.edu/ >
-      au < released ; 2002 ; Medieval Feminist Forum Volume 34 ; 34 ; http://ir.uiowa.edu/ >
-      au < released ; 2003 ; Medieval Feminist Forum Volume 35 ; 35 ; http://ir.uiowa.edu/ >
-      au < released ; 2003 ; Medieval Feminist Forum Volume 36 ; 36 ; http://ir.uiowa.edu/ >
-      au < released ; 2004 ; Medieval Feminist Forum Volume 37 ; 37 ; http://ir.uiowa.edu/ >
-      au < released ; 2004 ; Medieval Feminist Forum Volume 38 ; 38 ; http://ir.uiowa.edu/ >
-      au < released ; 2005 ; Medieval Feminist Forum Volume 39 ; 39 ; http://ir.uiowa.edu/ >
-      au < released ; 2005 ; Medieval Feminist Forum Volume 40 ; 40 ; http://ir.uiowa.edu/ >
-      au < released ; 2006 ; Medieval Feminist Forum Volume 41 ; 41 ; http://ir.uiowa.edu/ >
-      au < released ; 2006 ; Medieval Feminist Forum Volume 42 ; 42 ; http://ir.uiowa.edu/ >
-      au < released ; 2007 ; Medieval Feminist Forum Volume 43 ; 43 ; http://ir.uiowa.edu/ >
-      au < released ; 2008 ; Medieval Feminist Forum Volume 44 ; 44 ; http://ir.uiowa.edu/ >
-      au < released ; 2009 ; Medieval Feminist Forum Volume 45 ; 45 ; http://ir.uiowa.edu/ >
-      au < released ; 2010 ; Medieval Feminist Forum Volume 46 ; 46 ; http://ir.uiowa.edu/ >
-      au < released ; 2011 ; Medieval Feminist Forum Volume 47 ; 47 ; http://ir.uiowa.edu/ >
-      au < released ; 2012 ; Medieval Feminist Forum Volume 48 ; 48 ; http://ir.uiowa.edu/ >
-      au < released ; 2013 ; Medieval Feminist Forum Volume 49 ; 49 ; http://ir.uiowa.edu/ >
-      au < released ; 2014 ; Medieval Feminist Forum Volume 50 ; 50 ; http://ir.uiowa.edu/ >
-      au < released ; 2015 ; Medieval Feminist Forum Volume 51 ; 51 ; http://ir.uiowa.edu/ >
-      au < released ; 2016 ; Medieval Feminist Forum Volume 52 ; 52 ; http://ir.uiowa.edu/ >
-      au < released ; 2017-2018 ; Medieval Feminist Forum Volume 53 ; 53 ; https://ir.uiowa.edu/ >
-      au < released ; 2018 ; Medieval Feminist Forum Volume 54 ; 54 ; https://ir.uiowa.edu/ >
-      au < released ; 2019-2020 ; Medieval Feminist Forum Volume 55 ; 55 ; https://ir.uiowa.edu/ >
-      au < manifest ; 2021 ; Medieval Feminist Forum Volume 56 ; 56 ; https://ir.uiowa.edu/ >
-
+      au < down ; 1986 ; Medieval Feminist Forum Volume 1 ; 1 ; http://ir.uiowa.edu/ >
+      au < down ; 1986 ; Medieval Feminist Forum Volume 2 ; 2 ; http://ir.uiowa.edu/ >
+      au < down ; 1987 ; Medieval Feminist Forum Volume 3 ; 3 ; http://ir.uiowa.edu/ >
+      au < down ; 1987 ; Medieval Feminist Forum Volume 4 ; 4 ; http://ir.uiowa.edu/ >
+      au < down ; 1988 ; Medieval Feminist Forum Volume 5 ; 5 ; http://ir.uiowa.edu/ >
+      au < down ; 1988 ; Medieval Feminist Forum Volume 6 ; 6 ; http://ir.uiowa.edu/ >
+      au < down ; 1989 ; Medieval Feminist Forum Volume 7 ; 7 ; http://ir.uiowa.edu/ >
+      au < down ; 1989 ; Medieval Feminist Forum Volume 8 ; 8 ; http://ir.uiowa.edu/ >
+      au < down ; 1990 ; Medieval Feminist Forum Volume 9 ; 9 ; http://ir.uiowa.edu/ >
+      au < down ; 1990 ; Medieval Feminist Forum Volume 10 ; 10 ; http://ir.uiowa.edu/ >
+      au < down ; 1991 ; Medieval Feminist Forum Volume 11 ; 11 ; http://ir.uiowa.edu/ >
+      au < down ; 1991 ; Medieval Feminist Forum Volume 12 ; 12 ; http://ir.uiowa.edu/ >
+      au < down ; 1992 ; Medieval Feminist Forum Volume 13 ; 13 ; http://ir.uiowa.edu/ >
+      au < down ; 1992 ; Medieval Feminist Forum Volume 14 ; 14 ; http://ir.uiowa.edu/ >
+      au < down ; 1993 ; Medieval Feminist Forum Volume 15 ; 15 ; http://ir.uiowa.edu/ >
+      au < down ; 1993 ; Medieval Feminist Forum Volume 16 ; 16 ; http://ir.uiowa.edu/ >
+      au < down ; 1994 ; Medieval Feminist Forum Volume 17 ; 17 ; http://ir.uiowa.edu/ >
+      au < down ; 1994 ; Medieval Feminist Forum Volume 18 ; 18 ; http://ir.uiowa.edu/ >
+      au < down ; 1995 ; Medieval Feminist Forum Volume 19 ; 19 ; http://ir.uiowa.edu/ >
+      au < down ; 1995 ; Medieval Feminist Forum Volume 20 ; 20 ; http://ir.uiowa.edu/ >
+      au < down ; 1996 ; Medieval Feminist Forum Volume 21 ; 21 ; http://ir.uiowa.edu/ >
+      au < down ; 1996 ; Medieval Feminist Forum Volume 22 ; 22 ; http://ir.uiowa.edu/ >
+      au < down ; 1997 ; Medieval Feminist Forum Volume 23 ; 23 ; http://ir.uiowa.edu/ >
+      au < down ; 1997 ; Medieval Feminist Forum Volume 24 ; 24 ; http://ir.uiowa.edu/ >
+      au < down ; 1998 ; Medieval Feminist Forum Volume 25 ; 25 ; http://ir.uiowa.edu/ >
+      au < down ; 1998 ; Medieval Feminist Forum Volume 26 ; 26 ; http://ir.uiowa.edu/ >
+      au < down ; 1999 ; Medieval Feminist Forum Volume 27 ; 27 ; http://ir.uiowa.edu/ >
+      au < down ; 1999 ; Medieval Feminist Forum Volume 28 ; 28 ; http://ir.uiowa.edu/ >
+      au < down ; 2000 ; Medieval Feminist Forum Volume 29 ; 29 ; http://ir.uiowa.edu/ >
+      au < down ; 2000 ; Medieval Feminist Forum Volume 30 ; 30 ; http://ir.uiowa.edu/ >
+      au < down ; 2001 ; Medieval Feminist Forum Volume 31 ; 31 ; http://ir.uiowa.edu/ >
+      au < down ; 2001 ; Medieval Feminist Forum Volume 32 ; 32 ; http://ir.uiowa.edu/ >
+      au < down ; 2002 ; Medieval Feminist Forum Volume 33 ; 33 ; http://ir.uiowa.edu/ >
+      au < down ; 2002 ; Medieval Feminist Forum Volume 34 ; 34 ; http://ir.uiowa.edu/ >
+      au < down ; 2003 ; Medieval Feminist Forum Volume 35 ; 35 ; http://ir.uiowa.edu/ >
+      au < down ; 2003 ; Medieval Feminist Forum Volume 36 ; 36 ; http://ir.uiowa.edu/ >
+      au < down ; 2004 ; Medieval Feminist Forum Volume 37 ; 37 ; http://ir.uiowa.edu/ >
+      au < down ; 2004 ; Medieval Feminist Forum Volume 38 ; 38 ; http://ir.uiowa.edu/ >
+      au < down ; 2005 ; Medieval Feminist Forum Volume 39 ; 39 ; http://ir.uiowa.edu/ >
+      au < down ; 2005 ; Medieval Feminist Forum Volume 40 ; 40 ; http://ir.uiowa.edu/ >
+      au < down ; 2006 ; Medieval Feminist Forum Volume 41 ; 41 ; http://ir.uiowa.edu/ >
+      au < down ; 2006 ; Medieval Feminist Forum Volume 42 ; 42 ; http://ir.uiowa.edu/ >
+      au < down ; 2007 ; Medieval Feminist Forum Volume 43 ; 43 ; http://ir.uiowa.edu/ >
+      au < down ; 2008 ; Medieval Feminist Forum Volume 44 ; 44 ; http://ir.uiowa.edu/ >
+      au < down ; 2009 ; Medieval Feminist Forum Volume 45 ; 45 ; http://ir.uiowa.edu/ >
+      au < down ; 2010 ; Medieval Feminist Forum Volume 46 ; 46 ; http://ir.uiowa.edu/ >
+      au < down ; 2011 ; Medieval Feminist Forum Volume 47 ; 47 ; http://ir.uiowa.edu/ >
+      au < down ; 2012 ; Medieval Feminist Forum Volume 48 ; 48 ; http://ir.uiowa.edu/ >
+      au < down ; 2013 ; Medieval Feminist Forum Volume 49 ; 49 ; http://ir.uiowa.edu/ >
+      au < down ; 2014 ; Medieval Feminist Forum Volume 50 ; 50 ; http://ir.uiowa.edu/ >
+      au < down ; 2015 ; Medieval Feminist Forum Volume 51 ; 51 ; http://ir.uiowa.edu/ >
+      au < down ; 2016 ; Medieval Feminist Forum Volume 52 ; 52 ; http://ir.uiowa.edu/ >
+      au < down ; 2017-2018 ; Medieval Feminist Forum Volume 53 ; 53 ; https://ir.uiowa.edu/ >
+      au < down ; 2018 ; Medieval Feminist Forum Volume 54 ; 54 ; https://ir.uiowa.edu/ >
+      au < down ; 2019-2020 ; Medieval Feminist Forum Volume 55 ; 55 ; https://ir.uiowa.edu/ >
+      #au < manifest ; 2021 ; Medieval Feminist Forum Volume 56 ; 56 ; https://scholarworks.wmich.edu/ >
+      #au < manifest ; 2022 ; Medieval Feminist Forum Volume 57 ; 57 ; https://scholarworks.wmich.edu/ >
+      #Now a subscription journal
     }
     
     {
@@ -426,23 +446,25 @@
       #param[base_url] = http://ir.uiowa.edu/
       param[journal_abbr] = poroi
       implicit < status ; year ; name ; param[volume] ; param[base_url] >
+      #Moved to Janeway https://pubs.lib.uiowa.edu/poroi/
 
-      au < released ; 2001 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 1 ; 1 ; http://ir.uiowa.edu/ >
-      au < released ; 2003 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 2 ; 2 ; http://ir.uiowa.edu/ >
-      au < released ; 2004 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 3 ; 3 ; http://ir.uiowa.edu/ >
-      au < released ; 2005 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 4 ; 4 ; http://ir.uiowa.edu/ >
-      au < released ; 2008 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 5 ; 5 ; http://ir.uiowa.edu/ >
-      au < released ; 2009 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 6 ; 6 ; http://ir.uiowa.edu/ >
-      au < released ; 2011 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 7 ; 7 ; http://ir.uiowa.edu/ >
-      au < released ; 2012 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 8 ; 8 ; http://ir.uiowa.edu/ >
-      au < released ; 2013 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 9 ; 9 ; http://ir.uiowa.edu/ >
-      au < released ; 2014 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 10 ; 10 ; http://ir.uiowa.edu/ >
-      au < released ; 2015 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 11 ; 11 ; http://ir.uiowa.edu/ >
-      au < released ; 2016 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 12 ; 12 ; http://ir.uiowa.edu/ >
-      au < released ; 2017 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 13 ; 13 ; https://ir.uiowa.edu/ >
-      au < released ; 2018 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 14 ; 14 ; https://ir.uiowa.edu/ >
-      au < released ; 2020 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 15 ; 15 ; https://ir.uiowa.edu/ >
-      au < manifest ; 2021 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 16 ; 16 ; https://ir.uiowa.edu/ >
+      au < down ; 2001 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 1 ; 1 ; http://ir.uiowa.edu/ >
+      au < down ; 2003 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 2 ; 2 ; http://ir.uiowa.edu/ >
+      au < down ; 2004 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 3 ; 3 ; http://ir.uiowa.edu/ >
+      au < down ; 2005 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 4 ; 4 ; http://ir.uiowa.edu/ >
+      au < down ; 2008 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 5 ; 5 ; http://ir.uiowa.edu/ >
+      au < down ; 2009 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 6 ; 6 ; http://ir.uiowa.edu/ >
+      au < down ; 2011 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 7 ; 7 ; http://ir.uiowa.edu/ >
+      au < down ; 2012 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 8 ; 8 ; http://ir.uiowa.edu/ >
+      au < down ; 2013 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 9 ; 9 ; http://ir.uiowa.edu/ >
+      au < down ; 2014 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 10 ; 10 ; http://ir.uiowa.edu/ >
+      au < down ; 2015 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 11 ; 11 ; http://ir.uiowa.edu/ >
+      au < down ; 2016 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 12 ; 12 ; http://ir.uiowa.edu/ >
+      au < down ; 2017 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 13 ; 13 ; https://ir.uiowa.edu/ >
+      au < down ; 2018 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 14 ; 14 ; https://ir.uiowa.edu/ >
+      au < down ; 2020 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 15 ; 15 ; https://ir.uiowa.edu/ >
+      au < doNotProcess ; 2021 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 16 ; 16 ; https://ir.uiowa.edu/ >
+      au < doNotProcess ; 2022 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 17 ; 17 ; https://ir.uiowa.edu/ >
 
     }
     
@@ -456,84 +478,22 @@
       #param[base_url] = http://ir.uiowa.edu/
       param[journal_abbr] = pog
       implicit < status ; year ; name ; param[volume] ; param[base_url] >
+      #Moved to Janeway https://pubs.lib.uiowa.edu/pog/
 
-      au < released ; 2010 ; Proceedings in Obstetrics and Gynecology Volume 1 ; 1 ; http://ir.uiowa.edu/ >
-      au < released ; 2011 ; Proceedings in Obstetrics and Gynecology Volume 2 ; 2 ; http://ir.uiowa.edu/ >
-      au < released ; 2013 ; Proceedings in Obstetrics and Gynecology Volume 3 ; 3 ; http://ir.uiowa.edu/ >
-      au < released ; 2014 ; Proceedings in Obstetrics and Gynecology Volume 4 ; 4 ; http://ir.uiowa.edu/ >
-      au < released ; 2015 ; Proceedings in Obstetrics and Gynecology Volume 5 ; 5 ; http://ir.uiowa.edu/ >
-      au < released ; 2016 ; Proceedings in Obstetrics and Gynecology Volume 6 ; 6 ; http://ir.uiowa.edu/ >
-      au < released ; 2017 ; Proceedings in Obstetrics and Gynecology Volume 7 ; 7 ; https://ir.uiowa.edu/ >
-      au < released ; 2018 ; Proceedings in Obstetrics and Gynecology Volume 8 ; 8 ; https://ir.uiowa.edu/ >
-      au < released ; 2019 ; Proceedings in Obstetrics and Gynecology Volume 9 ; 9 ; https://ir.uiowa.edu/ >
-      au < released ; 2020 ; Proceedings in Obstetrics and Gynecology Volume 10 ; 10 ; https://ir.uiowa.edu/ >
-      au < exists ; 2021 ; Proceedings in Obstetrics and Gynecology Volume 11 ; 11 ; https://ir.uiowa.edu/ >
-
-    }
-    
-  {
-  
-    title <
-      name = Syllecta Classica ;
-      issn = 1040-3612 ;
-      eissn = 2160-5157
-    >
-
-    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[journal_dir] = syllecta_classica
-    implicit < status ; year ; name ; param[volume] >
-
-    attr[journal_id] = syl
-
-    {
-
-      param[base_url] = https://muse.jhu.edu/
-
-      au < down ; 1989 ; Syllecta Classica Volume 1 ; 1 >
-      au < down ; 1990 ; Syllecta Classica Volume 2 ; 2 >
-      au < down ; 1992 ; Syllecta Classica Volume 3 ; 3 >
-      au < down ; 1993 ; Syllecta Classica Volume 4 ; 4 >
-      au < down ; 1994 ; Syllecta Classica Volume 5 ; 5 >
-      au < down ; 1995 ; Syllecta Classica Volume 6 ; 6 >
-      au < down ; 1996 ; Syllecta Classica Volume 7 ; 7 >
-      au < down ; 1997 ; Syllecta Classica Volume 8 ; 8 >
-      au < down ; 1998 ; Syllecta Classica Volume 9 ; 9 >
-      au < down ; 1999 ; Syllecta Classica Volume 10 ; 10 >
-      au < down ; 2000 ; Syllecta Classica Volume 11 ; 11 >
-      au < down ; 2001 ; Syllecta Classica Volume 12 ; 12 >
-      au < down ; 2002 ; Syllecta Classica Volume 13 ; 13 >
-      au < down ; 2003 ; Syllecta Classica Volume 14 ; 14 >
-      au < down ; 2004 ; Syllecta Classica Volume 15 ; 15 >
-      au < down ; 2005 ; Syllecta Classica Volume 16 ; 16 >
-      au < down ; 2006 ; Syllecta Classica Volume 17 ; 17 >
-      au < down ; 2007 ; Syllecta Classica Volume 18 ; 18 >
-      au < down ; 2008 ; Syllecta Classica Volume 19 ; 19 >
+      au < down ; 2010 ; Proceedings in Obstetrics and Gynecology Volume 1 ; 1 ; http://ir.uiowa.edu/ >
+      au < down ; 2011 ; Proceedings in Obstetrics and Gynecology Volume 2 ; 2 ; http://ir.uiowa.edu/ >
+      au < down ; 2013 ; Proceedings in Obstetrics and Gynecology Volume 3 ; 3 ; http://ir.uiowa.edu/ >
+      au < down ; 2014 ; Proceedings in Obstetrics and Gynecology Volume 4 ; 4 ; http://ir.uiowa.edu/ >
+      au < down ; 2015 ; Proceedings in Obstetrics and Gynecology Volume 5 ; 5 ; http://ir.uiowa.edu/ >
+      au < down ; 2016 ; Proceedings in Obstetrics and Gynecology Volume 6 ; 6 ; http://ir.uiowa.edu/ >
+      au < down ; 2017 ; Proceedings in Obstetrics and Gynecology Volume 7 ; 7 ; https://ir.uiowa.edu/ >
+      au < down ; 2018 ; Proceedings in Obstetrics and Gynecology Volume 8 ; 8 ; https://ir.uiowa.edu/ >
+      au < down ; 2019 ; Proceedings in Obstetrics and Gynecology Volume 9 ; 9 ; https://ir.uiowa.edu/ >
+      au < down ; 2020 ; Proceedings in Obstetrics and Gynecology Volume 10 ; 10 ; https://ir.uiowa.edu/ >
+      au < doNotProcess ; 2021 ; Proceedings in Obstetrics and Gynecology Volume 11 ; 11 ; https://ir.uiowa.edu/ >
+      au < doNotProcess ; 2022 ; Proceedings in Obstetrics and Gynecology Volume 12 ; 12 ; https://ir.uiowa.edu/ >
 
     }
-
-    {
-
-      param[base_url] = http://muse.jhu.edu/
-
-      au < down ; 2009 ; Syllecta Classica Volume 20 ; 20 >
-      au < down ; 2010 ; Syllecta Classica Volume 21 ; 21 >
-      au < down ; 2011 ; Syllecta Classica Volume 22 ; 22 >
-      au < down ; 2012 ; Syllecta Classica Volume 23 ; 23 >
-      au < down ; 2013 ; Syllecta Classica Volume 24 ; 24 >
-
-    }
-
-    {
-
-      param[base_url] = https://muse.jhu.edu/
-
-      au < down ; 2014 ; Syllecta Classica Volume 25 ; 25 >
-      au < doNotProcess ; 2015 ; Syllecta Classica Volume 26 ; 26 >
-      au < doNotProcess ; 2016 ; Syllecta Classica Volume 27 ; 27 >
-
-    }
-
-  }
     
     {
       title <
@@ -546,46 +506,48 @@
       #param[base_url] = http://ir.uiowa.edu/
       param[journal_abbr] = wwqr
       implicit < status ; year ; name ; param[volume] ; param[base_url] >
+      #Moved to Janeway https://pubs.lib.uiowa.edu/wwqr/
 
-      au < released ; 1983-1984 ; Walt Whitman Quarterly Review Volume 1 ; 1 ; http://ir.uiowa.edu/ >
-      au < released ; 1984-1985 ; Walt Whitman Quarterly Review Volume 2 ; 2 ; http://ir.uiowa.edu/ >
-      au < released ; 1985-1986 ; Walt Whitman Quarterly Review Volume 3 ; 3 ; http://ir.uiowa.edu/ >
-      au < released ; 1986-1987 ; Walt Whitman Quarterly Review Volume 4 ; 4 ; http://ir.uiowa.edu/ >
-      au < released ; 1987-1988 ; Walt Whitman Quarterly Review Volume 5 ; 5 ; http://ir.uiowa.edu/ >
-      au < released ; 1988-1989 ; Walt Whitman Quarterly Review Volume 6 ; 6 ; http://ir.uiowa.edu/ >
-      au < released ; 1989-1990 ; Walt Whitman Quarterly Review Volume 7 ; 7 ; http://ir.uiowa.edu/ >
-      au < released ; 1990-1991 ; Walt Whitman Quarterly Review Volume 8 ; 8 ; http://ir.uiowa.edu/ >
-      au < released ; 1991-1992 ; Walt Whitman Quarterly Review Volume 9 ; 9 ; http://ir.uiowa.edu/ >
-      au < released ; 1992-1993 ; Walt Whitman Quarterly Review Volume 10 ; 10 ; http://ir.uiowa.edu/ >
-      au < released ; 1993-1994 ; Walt Whitman Quarterly Review Volume 11 ; 11 ; http://ir.uiowa.edu/ >
-      au < released ; 1994-1995 ; Walt Whitman Quarterly Review Volume 12 ; 12 ; http://ir.uiowa.edu/ >
-      au < released ; 1995-1996 ; Walt Whitman Quarterly Review Volume 13 ; 13 ; http://ir.uiowa.edu/ >
-      au < released ; 1996-1997 ; Walt Whitman Quarterly Review Volume 14 ; 14 ; http://ir.uiowa.edu/ >
-      au < released ; 1997-1998 ; Walt Whitman Quarterly Review Volume 15 ; 15 ; http://ir.uiowa.edu/ >
-      au < released ; 1998-1999 ; Walt Whitman Quarterly Review Volume 16 ; 16 ; http://ir.uiowa.edu/ >
-      au < released ; 1999-2000 ; Walt Whitman Quarterly Review Volume 17 ; 17 ; http://ir.uiowa.edu/ >
-      au < released ; 2000-2001 ; Walt Whitman Quarterly Review Volume 18 ; 18 ; http://ir.uiowa.edu/ >
-      au < released ; 2001-2002 ; Walt Whitman Quarterly Review Volume 19 ; 19 ; http://ir.uiowa.edu/ >
-      au < released ; 2002-2003 ; Walt Whitman Quarterly Review Volume 20 ; 20 ; http://ir.uiowa.edu/ >
-      au < released ; 2003-2004 ; Walt Whitman Quarterly Review Volume 21 ; 21 ; http://ir.uiowa.edu/ >
-      au < released ; 2004-2005 ; Walt Whitman Quarterly Review Volume 22 ; 22 ; http://ir.uiowa.edu/ >
-      au < released ; 2005-2006 ; Walt Whitman Quarterly Review Volume 23 ; 23 ; http://ir.uiowa.edu/ >
-      au < released ; 2006-2007 ; Walt Whitman Quarterly Review Volume 24 ; 24 ; http://ir.uiowa.edu/ >
-      au < released ; 2007-2008 ; Walt Whitman Quarterly Review Volume 25 ; 25 ; http://ir.uiowa.edu/ >
-      au < released ; 2008-2009 ; Walt Whitman Quarterly Review Volume 26 ; 26 ; http://ir.uiowa.edu/ >
-      au < released ; 2009-2010 ; Walt Whitman Quarterly Review Volume 27 ; 27 ; http://ir.uiowa.edu/ >
-      au < released ; 2010-2011 ; Walt Whitman Quarterly Review Volume 28 ; 28 ; http://ir.uiowa.edu/ >
-      au < released ; 2011-2012 ; Walt Whitman Quarterly Review Volume 29 ; 29 ; http://ir.uiowa.edu/ >
-      au < released ; 2012-2013 ; Walt Whitman Quarterly Review Volume 30 ; 30 ; http://ir.uiowa.edu/ >
-      au < released ; 2013-2014 ; Walt Whitman Quarterly Review Volume 31 ; 31 ; http://ir.uiowa.edu/ >
-      au < released ; 2014-2015 ; Walt Whitman Quarterly Review Volume 32 ; 32 ; http://ir.uiowa.edu/ >
-      au < released ; 2015-2016 ; Walt Whitman Quarterly Review Volume 33 ; 33 ; http://ir.uiowa.edu/ >
-      au < released ; 2016-2017 ; Walt Whitman Quarterly Review Volume 34 ; 34 ; https://ir.uiowa.edu/ >
-      au < released ; 2017-2018 ; Walt Whitman Quarterly Review Volume 35 ; 35 ; https://ir.uiowa.edu/ >
-      au < released ; 2018-2019 ; Walt Whitman Quarterly Review Volume 36 ; 36 ; https://ir.uiowa.edu/ >
-      au < released ; 2019-2020 ; Walt Whitman Quarterly Review Volume 37 ; 37 ; https://ir.uiowa.edu/ >
-      au < manifest ; 2020-2021 ; Walt Whitman Quarterly Review Volume 38 ; 38 ; https://ir.uiowa.edu/ >
-      au < manifest ; 2021-2022 ; Walt Whitman Quarterly Review Volume 39 ; 39 ; https://ir.uiowa.edu/ >
+      au < down ; 1983-1984 ; Walt Whitman Quarterly Review Volume 1 ; 1 ; http://ir.uiowa.edu/ >
+      au < down ; 1984-1985 ; Walt Whitman Quarterly Review Volume 2 ; 2 ; http://ir.uiowa.edu/ >
+      au < down ; 1985-1986 ; Walt Whitman Quarterly Review Volume 3 ; 3 ; http://ir.uiowa.edu/ >
+      au < down ; 1986-1987 ; Walt Whitman Quarterly Review Volume 4 ; 4 ; http://ir.uiowa.edu/ >
+      au < down ; 1987-1988 ; Walt Whitman Quarterly Review Volume 5 ; 5 ; http://ir.uiowa.edu/ >
+      au < down ; 1988-1989 ; Walt Whitman Quarterly Review Volume 6 ; 6 ; http://ir.uiowa.edu/ >
+      au < down ; 1989-1990 ; Walt Whitman Quarterly Review Volume 7 ; 7 ; http://ir.uiowa.edu/ >
+      au < down ; 1990-1991 ; Walt Whitman Quarterly Review Volume 8 ; 8 ; http://ir.uiowa.edu/ >
+      au < down ; 1991-1992 ; Walt Whitman Quarterly Review Volume 9 ; 9 ; http://ir.uiowa.edu/ >
+      au < down ; 1992-1993 ; Walt Whitman Quarterly Review Volume 10 ; 10 ; http://ir.uiowa.edu/ >
+      au < down ; 1993-1994 ; Walt Whitman Quarterly Review Volume 11 ; 11 ; http://ir.uiowa.edu/ >
+      au < down ; 1994-1995 ; Walt Whitman Quarterly Review Volume 12 ; 12 ; http://ir.uiowa.edu/ >
+      au < down ; 1995-1996 ; Walt Whitman Quarterly Review Volume 13 ; 13 ; http://ir.uiowa.edu/ >
+      au < down ; 1996-1997 ; Walt Whitman Quarterly Review Volume 14 ; 14 ; http://ir.uiowa.edu/ >
+      au < down ; 1997-1998 ; Walt Whitman Quarterly Review Volume 15 ; 15 ; http://ir.uiowa.edu/ >
+      au < down ; 1998-1999 ; Walt Whitman Quarterly Review Volume 16 ; 16 ; http://ir.uiowa.edu/ >
+      au < down ; 1999-2000 ; Walt Whitman Quarterly Review Volume 17 ; 17 ; http://ir.uiowa.edu/ >
+      au < down ; 2000-2001 ; Walt Whitman Quarterly Review Volume 18 ; 18 ; http://ir.uiowa.edu/ >
+      au < down ; 2001-2002 ; Walt Whitman Quarterly Review Volume 19 ; 19 ; http://ir.uiowa.edu/ >
+      au < down ; 2002-2003 ; Walt Whitman Quarterly Review Volume 20 ; 20 ; http://ir.uiowa.edu/ >
+      au < down ; 2003-2004 ; Walt Whitman Quarterly Review Volume 21 ; 21 ; http://ir.uiowa.edu/ >
+      au < down ; 2004-2005 ; Walt Whitman Quarterly Review Volume 22 ; 22 ; http://ir.uiowa.edu/ >
+      au < down ; 2005-2006 ; Walt Whitman Quarterly Review Volume 23 ; 23 ; http://ir.uiowa.edu/ >
+      au < down ; 2006-2007 ; Walt Whitman Quarterly Review Volume 24 ; 24 ; http://ir.uiowa.edu/ >
+      au < down ; 2007-2008 ; Walt Whitman Quarterly Review Volume 25 ; 25 ; http://ir.uiowa.edu/ >
+      au < down ; 2008-2009 ; Walt Whitman Quarterly Review Volume 26 ; 26 ; http://ir.uiowa.edu/ >
+      au < down ; 2009-2010 ; Walt Whitman Quarterly Review Volume 27 ; 27 ; http://ir.uiowa.edu/ >
+      au < down ; 2010-2011 ; Walt Whitman Quarterly Review Volume 28 ; 28 ; http://ir.uiowa.edu/ >
+      au < down ; 2011-2012 ; Walt Whitman Quarterly Review Volume 29 ; 29 ; http://ir.uiowa.edu/ >
+      au < down ; 2012-2013 ; Walt Whitman Quarterly Review Volume 30 ; 30 ; http://ir.uiowa.edu/ >
+      au < down ; 2013-2014 ; Walt Whitman Quarterly Review Volume 31 ; 31 ; http://ir.uiowa.edu/ >
+      au < down ; 2014-2015 ; Walt Whitman Quarterly Review Volume 32 ; 32 ; http://ir.uiowa.edu/ >
+      au < down ; 2015-2016 ; Walt Whitman Quarterly Review Volume 33 ; 33 ; http://ir.uiowa.edu/ >
+      au < down ; 2016-2017 ; Walt Whitman Quarterly Review Volume 34 ; 34 ; https://ir.uiowa.edu/ >
+      au < down ; 2017-2018 ; Walt Whitman Quarterly Review Volume 35 ; 35 ; https://ir.uiowa.edu/ >
+      au < down ; 2018-2019 ; Walt Whitman Quarterly Review Volume 36 ; 36 ; https://ir.uiowa.edu/ >
+      au < down ; 2019-2020 ; Walt Whitman Quarterly Review Volume 37 ; 37 ; https://ir.uiowa.edu/ >
+      au < doNotProcess ; 2020-2021 ; Walt Whitman Quarterly Review Volume 38 ; 38 ; https://ir.uiowa.edu/ >
+      au < doNotProcess ; 2021-2022 ; Walt Whitman Quarterly Review Volume 39 ; 39 ; https://ir.uiowa.edu/ >
+      au < doNotProcess ; 2022-2023 ; Walt Whitman Quarterly Review Volume 40 ; 40 ; https://ir.uiowa.edu/ >
 
     }
     

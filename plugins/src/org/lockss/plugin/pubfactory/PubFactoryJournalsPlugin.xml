@@ -1,7 +1,6 @@
 <!--
 
-Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
-All rights reserved.
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -45,7 +44,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>12</string>
+    <string>14</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -82,6 +81,10 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?v=[^/]*)?$", base_url_host</string>
       <string>4,"^%s", base_url</string>
       <string>2,"^%s.*print$", base_url</string>
+      <!--  any pseudo-absolute url masquerading as relative url should be ignored. PubFactory has a bug where they
+            will improperly format href attributes.
+                    note: if you will update the rule here, do so in PubFactoryBooksPlugin as well. -->
+      <string>2,"^%s.+(www\.|\.(gov|com|edu|org|net|uk))", base_url </string>
       <!--  looks like an error - pdf tab while on pdf tab view has ?amp -->
       <string>2,"^%s.*\.xml\?&amp;pdfVersion=true$", base_url</string>
       <!--  citation overlay and ris download have odd normalization; allow for both -->

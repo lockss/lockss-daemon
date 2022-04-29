@@ -7,10 +7,10 @@
     info[tester] = 8 ;
     info[poller] = 3
   >
-
   # years and volumes don't line up - use volume year (not volume number)
   # manifest pages on this platform from 2005 onward only, sometimes less than that.
   # Moving AUs with malformed manifest pages (no links to content) to doNotProcess-exists
+
 
   plugin = org.lockss.plugin.jstor.ClockssJstorCurrentScholarshipPlugin
   # param[base_url] = http://www.jstor.org/
@@ -45,6 +45,7 @@
       au < finished ; crawling ; 2019 ; The Chaucer Review Volume 2019 ; 2019 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; The Chaucer Review Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; The Chaucer Review Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; The Chaucer Review Volume 2022 ; 2022 ; https://www.jstor.org/ ; >
 
   }
   
@@ -71,6 +72,7 @@
       au < finished ; crawling ; 2019 ; Comparative Literature Studies Volume 56 ; 2019 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Comparative Literature Studies Volume 57 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Comparative Literature Studies Volume 58 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Comparative Literature Studies Volume 59 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -94,6 +96,7 @@
       au < finished ; crawling ; 2019 ; Critical Philosophy of Race Volume 7 ; 2019 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Critical Philosophy of Race Volume 8 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Critical Philosophy of Race Volume 9 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Critical Philosophy of Race Volume10 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -119,6 +122,7 @@
       au < finished ; crawling ; 2019 ; The Edgar Allan Poe Review Volume 20 ; 2019 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; The Edgar Allan Poe Review Volume 21 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; The Edgar Allan Poe Review Volume 22 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; The Edgar Allan Poe Review Volume 23 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -143,6 +147,7 @@
       au < finished ; crawling ; 2019 ; The Eugene O'Neill Review Volume 40 ; 2019 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; The Eugene O'Neill Review Volume 41 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; The Eugene O'Neill Review Volume 42 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; The Eugene O'Neill Review Volume 43 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -170,6 +175,7 @@
       au < finished ; crawling ; 2019 ; The F. Scott Fitzgerald Review Volume 17 ; 2019 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2020 ; The F. Scott Fitzgerald Review Volume 18 ; 2020 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < expected ; exists ; 2021 ; The F. Scott Fitzgerald Review Volume 19 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; The F. Scott Fitzgerald Review Volume 20 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -197,6 +203,7 @@
       au < finished ; crawling ; 2019 ; The Good Society Volume 28 ; 2019 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; The Good Society Volume 29 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; The Good Society Volume 30 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; The Good Society Volume 31 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -235,6 +242,7 @@
       au < finished ; crawling ; 2019 ; Interdisciplinary Literary Studies Volume 21 ; 2019 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Interdisciplinary Literary Studies Volume 22 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Interdisciplinary Literary Studies Volume 23 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Interdisciplinary Literary Studies Volume 24 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -258,6 +266,7 @@
       au < finished ; crawling ; 2019 ; Journal of Africana Religions Volume 8 ; 2019 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Journal of Africana Religions Volume 9 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Journal of Africana Religions Volume 10 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Journal of Africana Religions Volume 11 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -282,6 +291,7 @@
       au < finished ; crawling ; 2019 ; Journal of Assessment and Institutional Effectiveness Volume 8 ; 2019 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < ingNotReady ; exists ; 2020 ; Journal of Assessment and Institutional Effectiveness Volume 9 ; 2020 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2021 ; Journal of Assessment and Institutional Effectiveness Volume 10 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Journal of Assessment and Institutional Effectiveness Volume 11 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -307,6 +317,7 @@
       au < finished ; crawling ; 2019 ; The Journal of Ayn Rand Studies Volume 19 ; 2019 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; The Journal of Ayn Rand Studies Volume 20 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; The Journal of Ayn Rand Studies Volume 21 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; The Journal of Ayn Rand Studies Volume 22 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -330,6 +341,7 @@
       au < finished ; crawling ; 2019 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 7 ; 2019 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 8 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 9 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 10 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -356,6 +368,7 @@
       au < finished ; crawling ; 2019 ; The Journal of General Education Volume 68 ; 2019 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < ingNotReady ; exists ; 2020 ; The Journal of General Education Volume 69 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; The Journal of General Education Volume 70 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; The Journal of General Education Volume 71 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -383,6 +396,7 @@
       au < finished ; crawling ; 2019 ; Journal of Medieval Religious Cultures Volume 45 ; 2019 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Journal of Medieval Religious Cultures Volume 46 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Journal of Medieval Religious Cultures Volume 47 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Journal of Medieval Religious Cultures Volume 48 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -410,6 +424,7 @@
       au < finished ; crawling ; 2019 ; Journal of Modern Periodical Studies Volume 9 ; 2019 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Journal of Modern Periodical Studies Volume 10 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Journal of Modern Periodical Studies Volume 11 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Journal of Modern Periodical Studies Volume 12 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -440,6 +455,7 @@
       au < finished ; crawling ; 2019 ; Journal of Moravian History Volume 19 ; 2019 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Journal of Moravian History Volume 20 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Journal of Moravian History Volume 21 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Journal of Moravian History Volume 22 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -465,6 +481,7 @@
       au < finished ; crawling ; 2019 ; The Journal of Nietzsche Studies Volume 50 ; 2019 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; The Journal of Nietzsche Studies Volume 51 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; The Journal of Nietzsche Studies Volume 52 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; The Journal of Nietzsche Studies Volume 53 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -491,6 +508,7 @@
       au < finished ; crawling ; 2019 ; The Journal of Speculative Philosophy Volume 33 ; 2019 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; The Journal of Speculative Philosophy Volume 34 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; The Journal of Speculative Philosophy Volume 35 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; The Journal of Speculative Philosophy Volume 36 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -518,6 +536,7 @@
       au < finished ; crawling ; 2019 ; The Mark Twain Annual Volume 17 ; 2019 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; The Mark Twain Annual Volume 18 ; 2020 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2021 ; The Mark Twain Annual Volume 19 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; The Mark Twain Annual Volume 20 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -529,9 +548,9 @@
       eissn = 2161-4741 ;
       issnl = 1074-164X
     >
-
     # This title moved from Manchester University Press to Pennsylvania State University Press
     # See pennsylvania_state_university_press.ingenta.tdb for 2005-2010
+
 
       param[journal_id] = mediterraneanstu
 
@@ -546,6 +565,7 @@
       au < finished ; crawling ; 2019 ; Mediterranean Studies Volume 27 ; 2019 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Mediterranean Studies Volume 28 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Mediterranean Studies Volume 29 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Mediterranean Studies Volume 30 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -573,6 +593,7 @@
       au < finished ; crawling ; 2019 ; Pacific Coast Philology Volume 54 ; 2019 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Pacific Coast Philology Volume 55 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Pacific Coast Philology Volume 56 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Pacific Coast Philology Volume 57 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -598,6 +619,7 @@
       au < finished ; crawling ; 2019 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 86 ; 2019 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 87 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 88 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 89 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -624,6 +646,7 @@
       au < finished ; crawling ; 2019 ; Philosophy and Rhetoric Volume 52 ; 2019 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Philosophy and Rhetoric Volume 53 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Philosophy and Rhetoric Volume 54 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Philosophy and Rhetoric Volume 55 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -648,6 +671,7 @@
       au < finished ; crawling ; 2019 ; Preternature: Critical and Historical Studies on the Preternatural Volume 8 ; 2019 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Preternature: Critical and Historical Studies on the Preternatural Volume 9 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Preternature: Critical and Historical Studies on the Preternatural Volume 10 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Preternature: Critical and Historical Studies on the Preternatural Volume 11 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -677,6 +701,7 @@
       au < finished ; crawling ; 2019 ; Reception: Texts, Readers, Audiences, History Volume 11 ; 2019 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Reception: Texts, Readers, Audiences, History Volume 12 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Reception: Texts, Readers, Audiences, History Volume 13 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Reception: Texts, Readers, Audiences, History Volume 14 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -704,6 +729,7 @@
       au < finished ; crawling ; 2019 ; SHAW: The Journal of Bernard Shaw Studies Volume 39 ; 2019 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; SHAW: The Journal of Bernard Shaw Studies Volume 40 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; SHAW: The Journal of Bernard Shaw Studies Volume 41 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; SHAW: The Journal of Bernard Shaw Studies Volume 42 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -730,6 +756,7 @@
       au < finished ; crawling ; 2019 ; Soundings: An Interdisciplinary Journal Volume 102 ; 2019 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Soundings: An Interdisciplinary Journal Volume 103 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Soundings: An Interdisciplinary Journal Volume 104 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Soundings: An Interdisciplinary Journal Volume 105 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -756,6 +783,7 @@
       au < finished ; crawling ; 2019 ; Steinbeck Review Volume 16 ; 2019 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; Steinbeck Review Volume 17 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Steinbeck Review Volume 18 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Steinbeck Review Volume 19 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -782,6 +810,7 @@
       au < finished ; crawling ; 2019 ; Studies in American Jewish Literature Volume 38 ; 2019 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Studies in American Jewish Literature Volume 39 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Studies in American Jewish Literature Volume 40 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Studies in American Jewish Literature Volume 41 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -808,6 +837,7 @@
       au < finished ; crawling ; 2019 ; Transportation Journal Volume 58 ; 2019 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Transportation Journal Volume 59 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Transportation Journal Volume 60 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Transportation Journal Volume 61 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -834,6 +864,7 @@
       au < finished ; crawling ; 2019 ; Utopian Studies Volume 30 ; 2019 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Utopian Studies Volume 31 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Utopian Studies Volume 32 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Utopian Studies Volume 33 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -853,6 +884,7 @@
       au < finished ; crawling ; 2019 ; ab-Original Volume 3 ; 2019 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; ab-Original Volume 4 ; 2020 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2021 ; ab-Original Volume 5 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; ab-Original Volume 6 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -898,6 +930,7 @@
       au < finished ; crawling ; 2019 ; Bulletin for Biblical Research Volume 29 ; 2019 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; Bulletin for Biblical Research Volume 30 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Bulletin for Biblical Research Volume 31 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Bulletin for Biblical Research Volume 32 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -924,6 +957,7 @@
       au < finished ; crawling ; 2019 ; Bustan - The Middle East Book Review Volume 10 ; 2019 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; Bustan - The Middle East Book Review Volume 11 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Bustan - The Middle East Book Review Volume 12 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Bustan - The Middle East Book Review Volume 13 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -954,6 +988,7 @@
       au < finished ; crawling ; 2019 ; The Arthur Miller Journal Volume 14 ; 2019 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; The Arthur Miller Journal Volume 15 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; The Arthur Miller Journal Volume 16 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; The Arthur Miller Journal Volume 17 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -995,6 +1030,7 @@
       au < finished ; crawling ; 2019 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 24 ; 2019 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 25 ; 2020 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 26 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 27 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -1027,6 +1063,7 @@
       au < finished ; crawling ; 2019 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 16 ; 2019 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 17 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 18 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 19 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -1093,6 +1130,7 @@
       au < finished ; crawling ; 2019 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 50 ; 2019 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 51 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 52 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 53 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -1121,6 +1159,7 @@
       au < finished ; crawling ; 2019 ; Ecumenica: Performance and Religion Volume 12 ; 2019 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Ecumenica: Performance and Religion Volume 13 ; 2020 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Ecumenica: Performance and Religion Volume 14 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Ecumenica: Performance and Religion Volume 15 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -1166,6 +1205,7 @@
       au < finished ; crawling ; 2019 ; Edith Wharton Review Volume 35 ; 2019 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Edith Wharton Review Volume 36 (2020) ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Edith Wharton Review Volume 36 (2021) ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Edith Wharton Review Volume 37 (2022) ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -1210,6 +1250,7 @@
       au < finished ; crawling ; 2019 ; George Eliot-George Henry Lewes Studies Volume 71 ; 2019 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; George Eliot-George Henry Lewes Studies Volume 72 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; George Eliot-George Henry Lewes Studies Volume 73 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; George Eliot-George Henry Lewes Studies Volume 74 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -1249,6 +1290,7 @@
       au < finished ; crawling ; 2019 ; Gestalt Review Volume 23 ; 2019 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Gestalt Review Volume 24 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Gestalt Review Volume 25 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Gestalt Review Volume 26 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -1269,6 +1311,7 @@
       au < finished ; crawling ; 2019 ; International Journal of Persian Literature Volume 2019 ; 2019 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; International Journal of Persian Literature Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; International Journal of Persian Literature Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; International Journal of Persian Literature Volume 2022 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -1294,6 +1337,7 @@
       au < finished ; crawling ; 2019 ; Journal for the Study of Paul and His Letters Volume 9 ; 2019 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Journal for the Study of Paul and His Letters Volume 10 ; 2020 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < expected ; exists ; 2021 ; Journal for the Study of Paul and His Letters Volume 11 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Journal for the Study of Paul and His Letters Volume 12 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -1314,6 +1358,7 @@
       au < finished ; crawling ; 2019 ; Journal of Asia-Pacific Pop Culture Volume 2019 ; 2019 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Journal of Asia-Pacific Pop Culture Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Journal of Asia-Pacific Pop Culture Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Journal of Asia-Pacific Pop Culture Volume 2022 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -1339,6 +1384,7 @@
       au < finished ; crawling ; 2019 ; Journal of Information Policy Volume 2019 ; 2019 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Journal of Information Policy Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Journal of Information Policy Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Journal of Information Policy Volume 2022 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -1360,6 +1406,7 @@
       au < finished ; crawling ; 2019 ; Journal of Jewish Ethics Volume 2019 ; 2019 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2020 ; Journal of Jewish Ethics Volume 2020 ; 2020 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Journal of Jewish Ethics Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Journal of Jewish Ethics Volume 2022 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -1402,6 +1449,7 @@
       au < finished ; crawling ; 2019 ; Journal of Posthuman Studies Volume 2019 ; 2019 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Journal of Posthuman Studies Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2021 ; Journal of Posthuman Studies Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Journal of Posthuman Studies Volume 2022 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -1449,6 +1497,7 @@
       au < finished ; crawling ; 2018 ; Journal of the Pennsylvania Academy of Science Volume 92 ; 2018 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2019 ; Journal of the Pennsylvania Academy of Science Volume 93 ; 2019 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Journal of the Pennsylvania Academy of Science Volume 94 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Journal of the Pennsylvania Academy of Science Volume 95 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -1478,6 +1527,7 @@
       au < finished ; crawling ; 2019 ; Journal of Theological Interpretation Volume 13 ; 2019 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Journal of Theological Interpretation Volume 14 ; 2020 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2021 ; Journal of Theological Interpretation Volume 15 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Journal of Theological Interpretation Volume 16 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -1497,6 +1547,7 @@
       au < finished ; crawling ; 2019 ; Libraries: Culture, History, and Society Volume 2019 ; 2019 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Libraries: Culture, History, and Society Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Libraries: Culture, History, and Society Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Libraries: Culture, History, and Society Volume 2022 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -1547,6 +1598,7 @@
       au < finished ; crawling ; 2019 ; Nathaniel Hawthorne Review Volume 45 ; 2019 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Nathaniel Hawthorne Review Volume 46 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Nathaniel Hawthorne Review Volume 47 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Nathaniel Hawthorne Review Volume 48 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -1601,9 +1653,10 @@
       au < finished ; crawling ; 2014 ; Resources for American Literary Study Volume 37 ; 2014 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2015 ; Resources for American Literary Study Volume 38 ; 2015 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; Resources for American Literary Study Volume 39 ; 2017 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2018 ; Resources for American Literary Study Volume 40 ; 2018 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2018 ; Resources for American Literary Study Volume 40 ; 2018 ; https://www.jstor.org/ ; >
       au < finished ; crawling ; 2019 ; Resources for American Literary Study Volume 41 ; 2019 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Resources for American Literary Study Volume 42 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Resources for American Literary Study Volume 43 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -1666,6 +1719,7 @@
       au < finished ; crawling ; 2019 ; Studies in American Humor Volume 2019 ; 2019 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Studies in American Humor Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Studies in American Humor Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Studies in American Humor Volume 2022 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -1735,6 +1789,7 @@
       au < finished ; crawling ; 2019 ; Style Volume 2019 ; 2019 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Style Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Style Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Style Volume 2022 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -1767,6 +1822,7 @@
       au < finished ; crawling ; 2019 ; The Cormac McCarthy Journal Volume 17 ; 2019 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; The Cormac McCarthy Journal Volume 18 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; The Cormac McCarthy Journal Volume 19 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; The Cormac McCarthy Journal Volume 20 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -1786,6 +1842,7 @@
       au < finished ; crawling ; 2019 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 2019 ; 2019 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 2022 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -1828,6 +1885,7 @@
       au < finished ; crawling ; 2019 ; The Journal of World Christianity Volume 9 ; 2019 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; The Journal of World Christianity Volume 10 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; The Journal of World Christianity Volume 11 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; The Journal of World Christianity Volume 12 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -1866,6 +1924,7 @@
       au < finished ; crawling ; 2019 ; The Korean Language in America Volume 22-23 ; 2019 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; The Korean Language in America Volume 23-24 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; The Korean Language in America Volume 24-25 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; The Korean Language in America Volume 26-27 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -1907,6 +1966,7 @@
       au < finished ; crawling ; 2019 ; The Langston Hughes Review Volume 25 ; 2019 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; The Langston Hughes Review Volume 26 ; 2020 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; The Langston Hughes Review Volume 27 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; The Langston Hughes Review Volume 28 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -1952,6 +2012,7 @@
       au < finished ; crawling ; 2019 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 29 ; 2019 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 30 ; 2020 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2021 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 31 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 32 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -1979,6 +2040,7 @@
       au < finished ; crawling ; 2019 ; Wesley and Methodist Studies Volume 11 ; 2019 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Wesley and Methodist Studies Volume 12 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Wesley and Methodist Studies Volume 13 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Wesley and Methodist Studies Volume 14 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -2027,6 +2089,7 @@
       au < finished ; crawling ; 2019 ; William Carlos Williams Review Volume 36 ; 2019 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; William Carlos Williams Review Volume 37 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; William Carlos Williams Review Volume 38 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; William Carlos Williams Review Volume 39 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -2051,6 +2114,7 @@
       au < finished ; crawling ; 2019 ; Hiperboreea Volume 2019 ; 2019 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2020 ; Hiperboreea Volume 2020 ; 2020 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Hiperboreea Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Hiperboreea Volume 2022 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -2070,6 +2134,7 @@
       au < finished ; crawling ; 2018 ; Hungarian Studies Review Volume 45 ; 2018 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Hungarian Studies Review Volume 46-47 ; 2020 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; Hungarian Studies Review Volume 48 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Hungarian Studies Review Volume 49 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -2100,6 +2165,7 @@
       au < finished ; crawling ; 2018 ; Journal of African Development Volume 20 ; 2018 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Journal of African Development Volume 21 ; 2020 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < manifest ; exists ; 2021 ; Journal of African Development Volume 22 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Journal of African Development Volume 23 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -2118,6 +2184,7 @@
       au < finished ; crawling ; 2019 ; Journal of Austrian-American History Volume 2019 ; 2019 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2020 ; Journal of Austrian-American History Volume 2020 ; 2020 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < expected ; exists ; 2021 ; Journal of Austrian-American History Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Journal of Austrian-American History Volume 2022 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -2133,7 +2200,8 @@
       param[journal_id] = minoachicrealead
 
       au < finished ; crawling ; 2020 ; Journal of Minority Achievement, Creativity, and Leadership Volume 2020 ; 2020 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < expected ; exists ; 2021 ; Journal of Minority Achievement, Creativity, and Leadership Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2021 ; Journal of Minority Achievement, Creativity, and Leadership Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Journal of Minority Achievement, Creativity, and Leadership Volume 2022 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -2148,42 +2216,42 @@
 
       param[journal_id] = miltonstudies
 
-      au < exists ; exists ; 1969 ; Milton Studies Volume 1969 ; 1969 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1970 ; Milton Studies Volume 1970 ; 1970 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1971 ; Milton Studies Volume 1971 ; 1971 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1972 ; Milton Studies Volume 1972 ; 1972 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1973 ; Milton Studies Volume 1973 ; 1973 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1974 ; Milton Studies Volume 1974 ; 1974 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1975 ; Milton Studies Volume 1975 ; 1975 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1976 ; Milton Studies Volume 1976 ; 1976 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1977 ; Milton Studies Volume 1977 ; 1977 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1978 ; Milton Studies Volume 1978 ; 1978 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1979 ; Milton Studies Volume 1979 ; 1979 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1980 ; Milton Studies Volume 1980 ; 1980 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1981 ; Milton Studies Volume 1981 ; 1981 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1982 ; Milton Studies Volume 1982 ; 1982 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1983 ; Milton Studies Volume 1983 ; 1983 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1984 ; Milton Studies Volume 1984 ; 1984 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1985 ; Milton Studies Volume 1985 ; 1985 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1986 ; Milton Studies Volume 1986 ; 1986 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1987 ; Milton Studies Volume 1987 ; 1987 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1988 ; Milton Studies Volume 1988 ; 1988 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1989 ; Milton Studies Volume 1989 ; 1989 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1990 ; Milton Studies Volume 1990 ; 1990 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1991 ; Milton Studies Volume 1991 ; 1991 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1992 ; Milton Studies Volume 1992 ; 1992 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1993 ; Milton Studies Volume 1993 ; 1993 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1994 ; Milton Studies Volume 1994 ; 1994 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1995 ; Milton Studies Volume 1995 ; 1995 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1996 ; Milton Studies Volume 1996 ; 1996 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1997 ; Milton Studies Volume 1997 ; 1997 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1998 ; Milton Studies Volume 1998 ; 1998 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1999 ; Milton Studies Volume 1999 ; 1999 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 2000 ; Milton Studies Volume 2000 ; 2000 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 2001 ; Milton Studies Volume 2001 ; 2001 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 2002 ; Milton Studies Volume 2002 ; 2002 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 2003 ; Milton Studies Volume 2003 ; 2003 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 2004 ; Milton Studies Volume 2004 ; 2004 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1969 ; Milton Studies Volume 1969 ; 1969 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1970 ; Milton Studies Volume 1970 ; 1970 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1971 ; Milton Studies Volume 1971 ; 1971 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1972 ; Milton Studies Volume 1972 ; 1972 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1973 ; Milton Studies Volume 1973 ; 1973 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1974 ; Milton Studies Volume 1974 ; 1974 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1975 ; Milton Studies Volume 1975 ; 1975 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1976 ; Milton Studies Volume 1976 ; 1976 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1977 ; Milton Studies Volume 1977 ; 1977 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1978 ; Milton Studies Volume 1978 ; 1978 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1979 ; Milton Studies Volume 1979 ; 1979 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1980 ; Milton Studies Volume 1980 ; 1980 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1981 ; Milton Studies Volume 1981 ; 1981 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1982 ; Milton Studies Volume 1982 ; 1982 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1983 ; Milton Studies Volume 1983 ; 1983 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1984 ; Milton Studies Volume 1984 ; 1984 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1985 ; Milton Studies Volume 1985 ; 1985 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1986 ; Milton Studies Volume 1986 ; 1986 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1987 ; Milton Studies Volume 1987 ; 1987 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1988 ; Milton Studies Volume 1988 ; 1988 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1989 ; Milton Studies Volume 1989 ; 1989 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1990 ; Milton Studies Volume 1990 ; 1990 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1991 ; Milton Studies Volume 1991 ; 1991 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1992 ; Milton Studies Volume 1992 ; 1992 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1993 ; Milton Studies Volume 1993 ; 1993 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1994 ; Milton Studies Volume 1994 ; 1994 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1995 ; Milton Studies Volume 1995 ; 1995 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1996 ; Milton Studies Volume 1996 ; 1996 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1997 ; Milton Studies Volume 1997 ; 1997 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1998 ; Milton Studies Volume 1998 ; 1998 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1999 ; Milton Studies Volume 1999 ; 1999 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 2000 ; Milton Studies Volume 2000 ; 2000 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 2001 ; Milton Studies Volume 2001 ; 2001 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 2002 ; Milton Studies Volume 2002 ; 2002 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 2003 ; Milton Studies Volume 2003 ; 2003 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 2004 ; Milton Studies Volume 2004 ; 2004 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2005 ; Milton Studies Volume 2005 ; 2005 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2006 ; Milton Studies Volume 2006 ; 2006 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2007 ; Milton Studies Volume 2007 ; 2007 ; https://www.jstor.org/ ; >
@@ -2201,6 +2269,7 @@
       au < finished ; crawling ; 2019 ; Milton Studies Volume 2019 ; 2019 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Milton Studies Volume 2020 ; 2020 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; Milton Studies Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Milton Studies Volume 2022 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -2215,24 +2284,24 @@
 
       param[journal_id] = ninecentstud
 
-      au < exists ; exists ; 1987 ; Nineteenth Century Studies Volume 1987 ; 1987 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1988 ; Nineteenth Century Studies Volume 1988 ; 1988 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1989 ; Nineteenth Century Studies Volume 1989 ; 1989 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1990 ; Nineteenth Century Studies Volume 1990 ; 1990 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1991 ; Nineteenth Century Studies Volume 1991 ; 1991 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1992 ; Nineteenth Century Studies Volume 1992 ; 1992 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1993 ; Nineteenth Century Studies Volume 1993 ; 1993 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1994 ; Nineteenth Century Studies Volume 1994 ; 1994 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1995 ; Nineteenth Century Studies Volume 1995 ; 1995 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1996 ; Nineteenth Century Studies Volume 1996 ; 1996 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1997 ; Nineteenth Century Studies Volume 1997 ; 1997 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1998 ; Nineteenth Century Studies Volume 1998 ; 1998 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 1999 ; Nineteenth Century Studies Volume 1999 ; 1999 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 2000 ; Nineteenth Century Studies Volume 2000 ; 2000 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 2001 ; Nineteenth Century Studies Volume 2001 ; 2001 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 2002 ; Nineteenth Century Studies Volume 2002 ; 2002 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 2003 ; Nineteenth Century Studies Volume 2003 ; 2003 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 2004 ; Nineteenth Century Studies Volume 2004 ; 2004 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1987 ; Nineteenth Century Studies Volume 1987 ; 1987 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1988 ; Nineteenth Century Studies Volume 1988 ; 1988 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1989 ; Nineteenth Century Studies Volume 1989 ; 1989 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1990 ; Nineteenth Century Studies Volume 1990 ; 1990 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1991 ; Nineteenth Century Studies Volume 1991 ; 1991 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1992 ; Nineteenth Century Studies Volume 1992 ; 1992 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1993 ; Nineteenth Century Studies Volume 1993 ; 1993 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1994 ; Nineteenth Century Studies Volume 1994 ; 1994 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1995 ; Nineteenth Century Studies Volume 1995 ; 1995 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1996 ; Nineteenth Century Studies Volume 1996 ; 1996 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1997 ; Nineteenth Century Studies Volume 1997 ; 1997 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1998 ; Nineteenth Century Studies Volume 1998 ; 1998 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 1999 ; Nineteenth Century Studies Volume 1999 ; 1999 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 2000 ; Nineteenth Century Studies Volume 2000 ; 2000 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 2001 ; Nineteenth Century Studies Volume 2001 ; 2001 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 2002 ; Nineteenth Century Studies Volume 2002 ; 2002 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 2003 ; Nineteenth Century Studies Volume 2003 ; 2003 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; exists ; 2004 ; Nineteenth Century Studies Volume 2004 ; 2004 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2005 ; Nineteenth Century Studies Volume 2005 ; 2005 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2006 ; Nineteenth Century Studies Volume 2006 ; 2006 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2007 ; Nineteenth Century Studies Volume 2007 ; 2007 ; https://www.jstor.org/ ; >
@@ -2250,6 +2319,7 @@
       au < finished ; crawling ; 2019 ; Nineteenth Century Studies Volume 2019 ; 2019 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Nineteenth Century Studies Volume 2020 ; 2020 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < expected ; exists ; 2021 ; Nineteenth Century Studies Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Nineteenth Century Studies Volume 2022 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -2266,6 +2336,7 @@
 
       au < finished ; crawling ; 2020 ; Studies in the American Short Story Volume 2020 ; 2020 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2021 ; Studies in the American Short Story Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Studies in the American Short Story Volume 2022 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 
@@ -2282,6 +2353,7 @@
 
       au < finished ; crawling ; 2020 ; Thornton Wilder Journal Volume 2020 ; 2020 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Thornton Wilder Journal Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Thornton Wilder Journal Volume 2022 ; 2022 ; https://www.jstor.org/ ; >
 
   }
 

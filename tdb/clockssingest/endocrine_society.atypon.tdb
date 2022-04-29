@@ -377,9 +377,9 @@
 
       param[base_url] = http://press.endocrine.org/
       param[journal_id] = mend
-
 #adding all of the AUs to the ingest machines becuase of likely 2017 trigger
 #even recollecting the 2012/2013
+
       au < finished ; crawling ; 1987 ; Molecular Endocrinology Volume 1 ; 1 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 1988 ; Molecular Endocrinology Volume 2 ; 2 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 1989 ; Molecular Endocrinology Volume 3 ; 3 ; reingest4.clockss.org:8082 >

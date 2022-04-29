@@ -3,7 +3,8 @@
   publisher <
     name = Company of Biologists ;
     info[contract] = 2011 ;
-    info[back] = 2005 ;
+    info[back] = 2000 ;
+    #info[back] = 1923 ;
     info[tester] = 5 ;
     info[poller] = 2 ;
     info[platform] = Silverchair
@@ -21,9 +22,10 @@
       eissn = 2046-6390 ;
       issnl = 2046-6390
     >
-
     #param[base_url] = http://bio.biologists.org/
+
     param[journal_id] = bio
+    #2012-2020 processed on HW.
 
     au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Biology Open Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Biology Open Volume 2 ; 2 ; >
@@ -35,6 +37,7 @@
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Biology Open Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Biology Open Volume 9 ; 9 ; >
     au < manifest ; exists ; 2021 ; 2021 ; Biology Open Volume 10 ; 10 ; >
+    au < expected ; exists ; 2022 ; 2022 ; Biology Open Volume 11 ; 11 ; >
 
   }
 
@@ -46,9 +49,10 @@
       eissn = 1477-9129 ;
       issnl = 0950-1991
     >
-
     #param[base_url] = http://dev.biologists.org/
+
     param[journal_id] = dev
+    #Vol 119, 121, 123-147 processed on HW
 
     au < manifest ; exists ; 1953 ; 1953 ; Journal of Embryology and Experimental Morphology Volume 1 ; 1 ; >
     au < manifest ; exists ; 1954 ; 1954 ; Journal of Embryology and Experimental Morphology Volume 2 ; 2 ; >
@@ -198,6 +202,7 @@
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Development Volume 146 ; 146 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Development Volume 147 ; 147 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Development Volume 148 ; 148 ; >
+    au < expected ; exists ; 2022 ; 2022 ; Development Volume 149 ; 149 ; >
 
   }
 
@@ -209,9 +214,10 @@
       eissn = 1754-8411 ;
       issnl = 1754-8403
     >
-
     #param[base_url] = http://dmm.biologists.org/
+
     param[journal_id] = dmm
+    #Processed V1-13 on HW
 
     au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; Disease Models & Mechanisms Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Disease Models & Mechanisms Volume 2 ; 2 ; >
@@ -227,6 +233,7 @@
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Disease Models & Mechanisms Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Disease Models & Mechanisms Volume 13 ; 13 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Disease Models & Mechanisms Volume 14 ; 14 ; >
+    au < expected ; exists ; 2022 ; 2022 ; Disease Models & Mechanisms Volume 15 ; 15 ; >
 
   }
 
@@ -240,9 +247,10 @@
     >
 
     comment[legacy] = 1853-1965 under a different name, with three series of synthetic volume names
-
     #param[base_url] = http://jcs.biologists.org/
+
     param[journal_id] = jcs
+    #Processed 111-133 on HW
 
     au < manifest ; exists ; 1940 ; 1940 ; The Quarterly Journal of Microscopical Science Volume s2-81 ; s2-81 ; >
     au < manifest ; exists ; 1941 ; 1941 ; The Quarterly Journal of Microscopical Science Volume s2-82 ; s2-82 ; >
@@ -404,6 +412,7 @@
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Journal of Cell Science Volume 132 ; 132 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Journal of Cell Science Volume 133 ; 133 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Journal of Cell Science Volume 134 ; 134 ; >
+    au < expected ; exists ; 2022 ; 2022 ; Journal of Cell Science Volume 135 ; 135 ; >
 
   }
 
@@ -415,8 +424,8 @@
       eissn = 1477-9145 ;
       issnl = 0022-0949
     >
-
     #param[base_url] = http://jeb.biologists.org/
+
     param[journal_id] = jeb
 
     au < manifest ; exists ; 1923 ; 1923 ; The British Journal of Experimental Biology Volume 1 ; 1 ; > #1923-1924
@@ -643,6 +652,7 @@
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Journal of Experimental Biology Volume 222 ; 222 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Journal of Experimental Biology Volume 223 ; 223 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Journal of Experimental Biology Volume 224 ; 224 ; >
+    au < expected ; exists ; 2022 ; 2022 ; Journal of Experimental Biology Volume 225 ; 225 ; >
 
   }
 

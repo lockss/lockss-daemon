@@ -24,14 +24,15 @@
     param[base_url] = https://www.silvafennica.fi/
     param[journal_id] = sf
     implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
-
     #back content collected as a warc.
+
     au < finished ; finished ; 2016 ; Silva Fennica vol. 50 ; 50 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Silva Fennica vol. 51 ; 51 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Silva Fennica vol. 52 ; 52 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; Silva Fennica vol. 53 ; 53 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; Silva Fennica vol. 54 ; 54 ; >
     au < crawling ; exists ; 2021 ; Silva Fennica vol. 55 ; 55 ; >
+    au < manifest ; exists ; 2022 ; Silva Fennica vol. 56 ; 56 ; >
 
   }
 
@@ -49,23 +50,24 @@
     param[base_url] = https://www.dissertationesforestales.fi/
     implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
-    au < finished ; crawling ; 2005 ; Dissertationes Forestales 2005 ; 2005 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2005 ; Dissertationes Forestales 2005 ; 2005 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2006 ; Dissertationes Forestales 2006 ; 2006 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2007 ; Dissertationes Forestales 2007 ; 2007 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2008 ; Dissertationes Forestales 2008 ; 2008 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2009 ; Dissertationes Forestales 2009 ; 2009 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2010 ; Dissertationes Forestales 2010 ; 2010 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2010 ; Dissertationes Forestales 2010 ; 2010 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2011 ; Dissertationes Forestales 2011 ; 2011 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2012 ; Dissertationes Forestales 2012 ; 2012 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2012 ; Dissertationes Forestales 2012 ; 2012 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2013 ; Dissertationes Forestales 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Dissertationes Forestales 2014 ; 2014 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Dissertationes Forestales 2015 ; 2015 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Dissertationes Forestales 2015 ; 2015 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2016 ; Dissertationes Forestales 2016 ; 2016 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2017 ; Dissertationes Forestales 2017 ; 2017 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2017 ; Dissertationes Forestales 2017 ; 2017 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2018 ; Dissertationes Forestales 2018 ; 2018 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; Dissertationes Forestales 2019 ; 2019 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Dissertationes Forestales 2020 ; 2020 ; >
     au < crawling ; exists ; 2021 ; Dissertationes Forestales 2021 ; 2021 ; >
+    au < manifest ; exists ; 2022 ; Dissertationes Forestales 2022 ; 2022 ; >
 
   }
   
@@ -83,33 +85,34 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
     au < finished ; finished ; 1994 ; Metsätieteen aikakauskirja vuosikerta 1994 ; 1994 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 1995 ; Metsätieteen aikakauskirja vuosikerta 1995 ; 1995 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1995 ; Metsätieteen aikakauskirja vuosikerta 1995 ; 1995 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 1996 ; Metsätieteen aikakauskirja vuosikerta 1996 ; 1996 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1997 ; Metsätieteen aikakauskirja vuosikerta 1997 ; 1997 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1997 ; Metsätieteen aikakauskirja vuosikerta 1997 ; 1997 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 1998 ; Metsätieteen aikakauskirja vuosikerta 1998 ; 1998 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 1999 ; Metsätieteen aikakauskirja vuosikerta 1999 ; 1999 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2000 ; Metsätieteen aikakauskirja vuosikerta 2000 ; 2000 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2000 ; Metsätieteen aikakauskirja vuosikerta 2000 ; 2000 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2001 ; Metsätieteen aikakauskirja vuosikerta 2001 ; 2001 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2002 ; Metsätieteen aikakauskirja vuosikerta 2002 ; 2002 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2002 ; Metsätieteen aikakauskirja vuosikerta 2002 ; 2002 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2003 ; Metsätieteen aikakauskirja vuosikerta 2003 ; 2003 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2004 ; Metsätieteen aikakauskirja vuosikerta 2004 ; 2004 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2005 ; Metsätieteen aikakauskirja vuosikerta 2005 ; 2005 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2005 ; Metsätieteen aikakauskirja vuosikerta 2005 ; 2005 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2006 ; Metsätieteen aikakauskirja vuosikerta 2006 ; 2006 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2007 ; Metsätieteen aikakauskirja vuosikerta 2007 ; 2007 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2007 ; Metsätieteen aikakauskirja vuosikerta 2007 ; 2007 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2008 ; Metsätieteen aikakauskirja vuosikerta 2008 ; 2008 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2009 ; Metsätieteen aikakauskirja vuosikerta 2009 ; 2009 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2010 ; Metsätieteen aikakauskirja vuosikerta 2010 ; 2010 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2010 ; Metsätieteen aikakauskirja vuosikerta 2010 ; 2010 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2011 ; Metsätieteen aikakauskirja vuosikerta 2011 ; 2011 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2012 ; Metsätieteen aikakauskirja vuosikerta 2012 ; 2012 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2012 ; Metsätieteen aikakauskirja vuosikerta 2012 ; 2012 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2013 ; Metsätieteen aikakauskirja vuosikerta 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Metsätieteen aikakauskirja vuosikerta 2014 ; 2014 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Metsätieteen aikakauskirja vuosikerta 2015 ; 2015 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Metsätieteen aikakauskirja vuosikerta 2015 ; 2015 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2016 ; Metsätieteen aikakauskirja vuosikerta 2016 ; 2016 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2017 ; Metsätieteen aikakauskirja vuosikerta 2017 ; 2017 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2018 ; Metsätieteen aikakauskirja vuosikerta 2018 ; 2018 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2018 ; Metsätieteen aikakauskirja vuosikerta 2018 ; 2018 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; Metsätieteen aikakauskirja vuosikerta 2019 ; 2019 ; >
     au < deepCrawl ; exists ; 2020 ; Metsätieteen aikakauskirja vuosikerta 2020 ; 2020 ; >
     au < crawling ; exists ; 2021 ; Metsätieteen aikakauskirja vuosikerta 2021 ; 2021 ; >
  
+    au < manifest ; exists ; 2022 ; Metsätieteen aikakauskirja vuosikerta 2022 ; 2022 ; >
   }
 }

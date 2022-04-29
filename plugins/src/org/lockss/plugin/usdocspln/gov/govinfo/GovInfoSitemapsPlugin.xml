@@ -1,7 +1,6 @@
 <!--
 
-Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
-All rights reserved.
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -41,18 +40,18 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>13</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Substance</string>
-        <string>1</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -140,11 +139,19 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)", url_host(base_url)</string>
     </list>
   </entry>
+<!-- for a long time this was shadowed by the other, simpler entry with the same key; 
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
       <string>"^%scontent/(?:granule|pkg)/(%s)[^/]+/html?/\1[^/]+\.html?$", base_url, collection_id</string>
       <string>"^%scontent/(?:granule|pkg)/(%s)[^/]+/(mp3|pdf|xml)/\1[^/]+\.\2$", base_url, collection_id</string>
+    </list>
+  </entry>
+-->
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"content/pkg/(%s-[^/]+)/(html?|pdf)/\1\.(html?|pdf)$", collection_id</string>
     </list>
   </entry>
   <entry>
@@ -176,12 +183,6 @@ POSSIBILITY OF SUCH DAMAGE.
     <int>99</int>
   </entry>
   <entry>
-    <string>au_substance_url_pattern</string>
-    <list>
-      <string>"content/pkg/(%s-[^/]+)/pdf/\1\.pdf$", collection_id</string>
-    </list>
-  </entry>
-  <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
     <string>"/pkg/(%s[^/]+)/(pdf|xml)/\1[^/]+\.\2$", collection_id</string>
     <string>^https://maxcdn\.bootstrapcdn\.com/.*\.css$</string>
@@ -211,10 +212,14 @@ POSSIBILITY OF SUCH DAMAGE.
     <list>
       <!-- 504s occur on certain image files, we want to collect these but if they 504 they shouldnt kill the crawl -->
       <string>504=org.lockss.plugin.usdocspln.gov.govinfo.GovInfoSitemapsHttpResponseHandler</string>
+      <!-- 520s currently don't retry by default like 500; make it retry -->
+      <string>520=org.lockss.plugin.usdocspln.gov.govinfo.GovInfoSitemapsHttpResponseHandler</string>
+      <!-- "chunked stream ended unexpectedly" is currently a plain IOException -->
+      <string>java.io.IOException=org.lockss.plugin.usdocspln.gov.govinfo.GovInfoSitemapsHttpResponseHandler</string>
     </list>
   </entry>
   <entry>
-    <string>au_rate_limiter_info</string>
+    <string>au_rate_limiter_info</string><!-- note: see plugin override -->
     <org.lockss.plugin.RateLimiterInfo>
       <rate>1/3333ms</rate><!-- note: this default rate is actually ignored because the conditional rates cover 100% of cases -->
       <cond>
@@ -230,7 +235,7 @@ POSSIBILITY OF SUCH DAMAGE.
             <rate>1/1h</rate>
           </org.lockss.plugin.RateLimiterInfo>
         </entry>
-        <!-- the rest of the time, 1/3s -->
+        <!-- the rest of the time, 1/3333ms -->
         <entry>
           <org.lockss.daemon.CrawlWindows-Always />
           <org.lockss.plugin.RateLimiterInfo>
@@ -240,6 +245,11 @@ POSSIBILITY OF SUCH DAMAGE.
       </cond>
     </org.lockss.plugin.RateLimiterInfo>
   </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.usdocspln.gov.govinfo.GovInfoHtmlHashFilterFactory</string>
+  </entry>
+  <!-- note: we are allowed to crawl 24/7 in testing only -->
   <entry>
     <string>content-testing_override</string>
     <map>

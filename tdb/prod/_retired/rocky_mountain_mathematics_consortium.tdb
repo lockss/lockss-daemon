@@ -5,7 +5,7 @@
     info[platform] = Project Euclid. LXPLUG-241
   >
   
-  plugin = needs.plugin
+  plugin = noplugin
   param[base_url] = http://rmmc.asu.edu/
   implicit < status ; year ; name ; param[volume_name] >
   

@@ -4,7 +4,7 @@
     name = Copernicus Publications ;
     info[contract] = 2012 ;
     info[tester] = S ;
-    info[platform] = BLOCKED. ISPRS, see LXPLUG-290
+    info[platform] = BLOCKED. ISPRS Archives, Annals, see LXPUB-544
   >
 
   {
@@ -19,7 +19,7 @@
     hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[directory] >
 
-    au < exists ; exists ; 2021 ; Copernicus Publications Source Content 2021 ; 2021 >
+    au < exists ; exists ; 2022 ; Copernicus Publications Source Content 2022 ; 2022 >
 
   }
 

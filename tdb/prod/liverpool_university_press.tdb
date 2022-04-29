@@ -2,14 +2,13 @@
 
   publisher <
     name = Liverpool University Press ;
-    info[platform] = CloudPublish BLOCKED LXPLUG-2054
+    info[platform] = CloudPublish LXPLUG-2054
   >
 
   comment[moving1] = from MetaPress to Atypon
   comment[moving2] = from Atypon to CloudPublish
 
-  plugin = needs.plugin
-#  plugin = org.lockss.plugin.atypon.liverpool.LiverpoolJournalsPlugin
+  plugin = org.lockss.plugin.cloudpublish.liverpool.LupPlugin
   param[base_url] = https://www.liverpooluniversitypress.co.uk/
   implicit < status ; year ; name ; param[volume_name] >
 
@@ -23,9 +22,16 @@
     >
 
     param[journal_id] = archives
+    #Published 1949-present
 
-    au < exists ; 2006 ; Archives Volume 31 ; 31 >
-    au < exists ; 2007 ; Archives Volume 32 ; 32 >
+    au < manifest ; 2000 ; Archives Volume 25 ; 25 >
+    au < manifest ; 2001 ; Archives Volume 26 ; 26 >
+    au < manifest ; 2002 ; Archives Volume 27 ; 27 >
+    au < manifest ; 2003 ; Archives Volume 28 ; 28 >
+    au < manifest ; 2004 ; Archives Volume 29 ; 29 >
+    au < manifest ; 2005 ; Archives Volume 30 ; 30 >
+    au < released ; 2005 ; Archives Volume 31 ; 31 >
+    au < manifest ; 2007 ; Archives Volume 32 ; 32 >
     au < doNotProcess ; 2008 ; Archives Volume 33 ; 33 >
     au < doNotProcess ; 2009 ; Archives Volume 34 ; 34 >
     au < doNotProcess ; 2010 ; Archives Volume 35 ; 35 >
@@ -39,8 +45,30 @@
     au < doNotProcess ; 2017 ; Archives Volume 52 ; 52 >
     au < doNotProcess ; 2018 ; Archives Volume 53 ; 53 >
     au < doNotProcess ; 2019 ; Archives Volume 54 ; 54 >
-    au < exists ; 2020 ; Archives Volume 55 ; 55 >
-    au < expected ; 2021 ; Archives Volume 56 ; 56 >
+    au < released ; 2020 ; Archives Volume 55 ; 55 >
+    au < manifest ; 2021 ; Archives Volume 56 ; 56 >
+    au < expected ; 2022 ; Archives Volume 57 ; 57 >
+
+  }
+
+  {
+
+    title <
+      name = Ars Judaica The Bar Ilan Journal of Jewish Art ;
+      issn = 1565-6721 ;
+      eissn = 2516-4252 ;
+      issnl = 1565-6721
+    >
+
+    param[journal_id] = arsjudaica
+    #Published 2015-2020
+
+    au < released ; 2015 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 11 ; 11 >
+    au < released ; 2016 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 12 ; 12 >
+    au < released ; 2017 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 13 ; 13 >
+    au < released ; 2018 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 14 ; 14 >
+    au < released ; 2019 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 15 ; 15 >
+    au < released ; 2020 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 16 ; 16 >
 
   }
 
@@ -54,7 +82,12 @@
     >
 
     param[journal_id] = ajfs
+    #Published 1964-present
 
+    au < manifest ; 2000 ; Australian Journal of French Studies Volume 37 ; 37 >
+    au < manifest ; 2001 ; Australian Journal of French Studies Volume 38 ; 38 >
+    au < manifest ; 2002 ; Australian Journal of French Studies Volume 39 ; 39 >
+    au < manifest ; 2003 ; Australian Journal of French Studies Volume 40 ; 40 >
     au < doNotProcess ; 2004 ; Australian Journal of French Studies Volume 41 ; 41 >
     au < doNotProcess ; 2005 ; Australian Journal of French Studies Volume 42 ; 42 >
     au < doNotProcess ; 2006 ; Australian Journal of French Studies Volume 43 ; 43 >
@@ -64,15 +97,16 @@
     au < doNotProcess ; 2010 ; Australian Journal of French Studies Volume 47 ; 47 >
     au < doNotProcess ; 2011 ; Australian Journal of French Studies Volume 48 ; 48 >
     au < doNotProcess ; 2012 ; Australian Journal of French Studies Volume 49 ; 49 >
-    au < exists ; 2013 ; Australian Journal of French Studies Volume 50 ; 50 >
+    au < released ; 2013 ; Australian Journal of French Studies Volume 50 ; 50 >
     au < doNotProcess ; 2014 ; Australian Journal of French Studies Volume 51 ; 51 >
     au < doNotProcess ; 2015 ; Australian Journal of French Studies Volume 52 ; 52 >
     au < doNotProcess ; 2016 ; Australian Journal of French Studies Volume 53 ; 53 >
     au < doNotProcess ; 2017 ; Australian Journal of French Studies Volume 54 ; 54 >
     au < doNotProcess ; 2018 ; Australian Journal of French Studies Volume 55 ; 55 >
     au < doNotProcess ; 2019 ; Australian Journal of French Studies Volume 56 ; 56 >
-    au < exists ; 2020 ; Australian Journal of French Studies Volume 57 ; 57 >
-    au < expected ; 2021 ; Australian Journal of French Studies Volume 58 ; 58 >
+    au < released ; 2020 ; Australian Journal of French Studies Volume 57 ; 57 >
+    au < manifest ; 2021 ; Australian Journal of French Studies Volume 58 ; 58 >
+    au < manifest ; 2022 ; Australian Journal of French Studies Volume 59 ; 59 >
 
   }
 
@@ -85,37 +119,12 @@
     >
 
     param[journal_id] = bchs
+    #Published 2019-present
 
-    au < exists ; 2019 ; Bulletin of Contemporary Hispanic Studies Volume 1 ; 2019 >
-    au < exists ; 2020 ; Bulletin of Contemporary Hispanic Studies Volume 2 ; 2020 >
-    au < expected ; 2021 ; Bulletin of Contemporary Hispanic Studies Volume 3 ; 2021 >
-
-  }
-
-  {
-
-    title <
-      name = Before Farming ;
-      issn = 1476-4253 ;
-      eissn = 2056-3264 ;
-      issnl = 1476-4253
-    >
-
-    param[journal_id] = bfarm
-
-    comment[continued_by] = Hunter Gatherer Research
-
-    au < exists ; 2002 ; Before Farming Volume 2002 ; 2002 >
-    au < exists ; 2003 ; Before Farming Volume 2003 ; 2003 >
-    au < exists ; 2004 ; Before Farming Volume 2004 ; 2004 >
-    au < exists ; 2005 ; Before Farming Volume 2005 ; 2005 >
-    au < exists ; 2006 ; Before Farming Volume 2006 ; 2006 >
-    au < exists ; 2007 ; Before Farming Volume 2007 ; 2007 >
-    au < doNotProcess ; 2008 ; Before Farming Volume 2008 ; 2008 >
-    au < doNotProcess ; 2009 ; Before Farming Volume 2009 ; 2009 >
-    au < doNotProcess ; 2010 ; Before Farming Volume 2010 ; 2010 >
-    au < doNotProcess ; 2011 ; Before Farming Volume 2011 ; 2011 >
-    au < doNotProcess ; 2012 ; Before Farming Volume 2012 ; 2012 >
+    au < released ; 2019 ; Bulletin of Contemporary Hispanic Studies Volume 1 ; 1 >
+    au < released ; 2020 ; Bulletin of Contemporary Hispanic Studies Volume 2 ; 2 >
+    au < released ; 2021 ; Bulletin of Contemporary Hispanic Studies Volume 3 ; 3 >
+    au < expected ; 2022 ; Bulletin of Contemporary Hispanic Studies Volume 4 ; 4 >
 
   }
 
@@ -129,6 +138,7 @@
     >
 
     param[journal_id] = bjcs
+    #Published 2003-present
 
     au < doNotProcess ; 2003 ; British Journal of Canadian Studies Volume 16 ; 16 >
     au < doNotProcess ; 2004 ; British Journal of Canadian Studies Volume 17 ; 17 >
@@ -140,14 +150,15 @@
     au < doNotProcess ; 2010 ; British Journal of Canadian Studies Volume 23 ; 23 >
     au < doNotProcess ; 2011 ; British Journal of Canadian Studies Volume 24 ; 24 >
     au < doNotProcess ; 2012 ; British Journal of Canadian Studies Volume 25 ; 25 >
-    au < exists ; 2013 ; British Journal of Canadian Studies Volume 26 ; 26 >
+    au < released ; 2013 ; British Journal of Canadian Studies Volume 26 ; 26 >
     au < doNotProcess ; 2014 ; British Journal of Canadian Studies Volume 27 ; 27 >
     au < doNotProcess ; 2015 ; British Journal of Canadian Studies Volume 28 ; 28 >
     au < doNotProcess ; 2016 ; British Journal of Canadian Studies Volume 29 ; 29 >
     au < doNotProcess ; 2017 ; British Journal of Canadian Studies Volume 30 ; 30 >
     au < doNotProcess ; 2018 ; British Journal of Canadian Studies Volume 31 ; 31 >
-    au < exists ; 2020 ; British Journal of Canadian Studies Volume 32 ; 32 >
-    au < exists ; 2021 ; British Journal of Canadian Studies Volume 33 ; 33 >
+    au < released ; 2020 ; British Journal of Canadian Studies Volume 32 ; 32 >
+    au < manifest ; 2021 ; British Journal of Canadian Studies Volume 33 ; 33 >
+    au < manifest ; 2022 ; British Journal of Canadian Studies Volume 34 ; 34 >
 
   }
 
@@ -161,7 +172,18 @@
     >
 
     param[journal_id] = bhs
+    #Published 1923-present
 
+    au < manifest ; 1975 ; Bulletin of Hispanic Studies Volume 52 ; 52 >
+    au < manifest ; 1976 ; Bulletin of Hispanic Studies Volume 53 ; 53 >
+    au < manifest ; 1977 ; Bulletin of Hispanic Studies Volume 54 ; 54 >
+    au < manifest ; 1978 ; Bulletin of Hispanic Studies Volume 55 ; 55 >
+    au < manifest ; 1979 ; Bulletin of Hispanic Studies Volume 56 ; 56 >
+    au < manifest ; 1980 ; Bulletin of Hispanic Studies Volume 57 ; 57 >
+    au < manifest ; 1981 ; Bulletin of Hispanic Studies Volume 58 ; 58 >
+    au < manifest ; 1982 ; Bulletin of Hispanic Studies Volume 59 ; 59 >
+    au < manifest ; 1983 ; Bulletin of Hispanic Studies Volume 60 ; 60 >
+    au < manifest ; 1984 ; Bulletin of Hispanic Studies Volume 61 ; 61 >
     au < doNotProcess ; 1985 ; Bulletin of Hispanic Studies Volume 62 ; 62 >
     au < doNotProcess ; 1986 ; Bulletin of Hispanic Studies Volume 63 ; 63 >
     au < doNotProcess ; 1987 ; Bulletin of Hispanic Studies Volume 64 ; 64 >
@@ -177,8 +199,8 @@
     au < doNotProcess ; 1997 ; Bulletin of Hispanic Studies Volume 74 ; 74 >
     au < doNotProcess ; 1998 ; Bulletin of Hispanic Studies Volume 75 ; 75 >
     au < doNotProcess ; 1999 ; Bulletin of Hispanic Studies Volume 76 ; 76 >
-    au < exists ; 2000 ; Bulletin of Hispanic Studies Volume 77 ; 77 >
-    au < exists ; 2001 ; Bulletin of Hispanic Studies Volume 78 ; 78 >
+    au < manifest ; 2000 ; Bulletin of Hispanic Studies Volume 77 ; 77 >
+    au < manifest ; 2001 ; Bulletin of Hispanic Studies Volume 78 ; 78 >
     au < doNotProcess ; 2002 ; Bulletin of Hispanic Studies Volume 79 ; 79 >
     au < doNotProcess ; 2003 ; Bulletin of Hispanic Studies Volume 80 ; 80 >
     au < doNotProcess ; 2004 ; Bulletin of Hispanic Studies Volume 81 ; 81 >
@@ -190,15 +212,16 @@
     au < doNotProcess ; 2010 ; Bulletin of Hispanic Studies Volume 87 ; 87 >
     au < doNotProcess ; 2011 ; Bulletin of Hispanic Studies Volume 88 ; 88 >
     au < doNotProcess ; 2012 ; Bulletin of Hispanic Studies Volume 89 ; 89 >
-    au < exists ; 2013 ; Bulletin of Hispanic Studies Volume 90 ; 90 >
+    au < released ; 2013 ; Bulletin of Hispanic Studies Volume 90 ; 90 >
     au < doNotProcess ; 2014 ; Bulletin of Hispanic Studies Volume 91 ; 91 >
     au < doNotProcess ; 2015 ; Bulletin of Hispanic Studies Volume 92 ; 92 >
     au < doNotProcess ; 2016 ; Bulletin of Hispanic Studies Volume 93 ; 93 >
     au < doNotProcess ; 2017 ; Bulletin of Hispanic Studies Volume 94 ; 94 >
     au < doNotProcess ; 2018 ; Bulletin of Hispanic Studies Volume 95 ; 95 >
     au < doNotProcess ; 2019 ; Bulletin of Hispanic Studies Volume 96 ; 96 >
-    au < exists ; 2020 ; Bulletin of Hispanic Studies Volume 97 ; 97 >
-    au < expected ; 2021 ; Bulletin of Hispanic Studies Volume 98 ; 98 >
+    au < released ; 2020 ; Bulletin of Hispanic Studies Volume 97 ; 97 >
+    au < released ; 2021 ; Bulletin of Hispanic Studies Volume 98 ; 98 >
+    au < manifest ; 2022 ; Bulletin of Hispanic Studies Volume 99 ; 99 >
 
   }
 
@@ -212,7 +235,12 @@
     >
 
     param[journal_id] = bj
+    #Published 1973-present
 
+    au < manifest ; 2000 ; The Byron Journal Volume 28 ; 28 >
+    au < manifest ; 2001 ; The Byron Journal Volume 29 ; 29 >
+    au < manifest ; 2002 ; The Byron Journal Volume 30 ; 30 >
+    au < manifest ; 2003 ; The Byron Journal Volume 31 ; 31 >
     au < doNotProcess ; 2004 ; The Byron Journal Volume 32 ; 32 >
     au < doNotProcess ; 2005 ; The Byron Journal Volume 33 ; 33 >
     au < doNotProcess ; 2006 ; The Byron Journal Volume 34 ; 34 >
@@ -222,15 +250,16 @@
     au < doNotProcess ; 2010 ; The Byron Journal Volume 38 ; 38 >
     au < doNotProcess ; 2011 ; The Byron Journal Volume 39 ; 39 >
     au < doNotProcess ; 2012 ; The Byron Journal Volume 40 ; 40 >
-    au < exists ; 2013 ; The Byron Journal Volume 41 ; 41 >
+    au < released ; 2013 ; The Byron Journal Volume 41 ; 41 >
     au < doNotProcess ; 2014 ; The Byron Journal Volume 42 ; 42 >
     au < doNotProcess ; 2015 ; The Byron Journal Volume 43 ; 43 >
     au < doNotProcess ; 2016 ; The Byron Journal Volume 44 ; 44 >
     au < doNotProcess ; 2017 ; The Byron Journal Volume 45 ; 45 >
     au < doNotProcess ; 2018 ; The Byron Journal Volume 46 ; 46 >
     au < doNotProcess ; 2019 ; The Byron Journal Volume 47 ; 47 >
-    au < exists ; 2020 ; The Byron Journal Volume 48 ; 48 >
-    au < expected ; 2021 ; The Byron Journal Volume 49 ; 49 >
+    au < released ; 2020 ; The Byron Journal Volume 48 ; 48 >
+    au < manifest ; 2021 ; The Byron Journal Volume 49 ; 49 >
+    au < expected ; 2022 ; The Byron Journal Volume 50 ; 50 >
 
   }
 
@@ -244,6 +273,7 @@
     >
 
     param[journal_id] = coma
+    #Published 2004-present
 
     au < doNotProcess ; 2004 ; Comma Volume 2004 ; 2004 >
     au < doNotProcess ; 2005 ; Comma Volume 2005 ; 2005 >
@@ -259,6 +289,11 @@
     au < doNotProcess ; 2015 ; Comma Volume 2015 ; 2015 >
     au < doNotProcess ; 2016 ; Comma Volume 2016 ; 2016 >
     au < doNotProcess ; 2017 ; Comma Volume 2017 ; 2017 >
+    au < released ; 2018 ; Comma Volume 2018 ; 2018 >
+    au < released ; 2019 ; Comma Volume 2019 ; 2019 >
+    au < released ; 2020 ; Comma Volume 2020 ; 2020 >
+    au < exists ; 2021 ; Comma Volume 2021 ; 2021 >
+    au < expected ; 2022 ; Comma Volume 2022 ; 2022 >
 
   }
 
@@ -272,7 +307,17 @@
     >
 
     param[journal_id] = catr
+    #Published 1986-present
 
+    au < manifest ; 2000 ; Catalan Review Volume 14 ; 14 >
+    au < manifest ; 2001 ; Catalan Review Volume 15 ; 15 >
+    au < manifest ; 2002 ; Catalan Review Volume 16 ; 16 >
+    au < manifest ; 2003 ; Catalan Review Volume 17 ; 17 >
+    au < manifest ; 2004 ; Catalan Review Volume 18 ; 18 >
+    au < manifest ; 2005 ; Catalan Review Volume 19 ; 19 >
+    au < manifest ; 2006 ; Catalan Review Volume 20 ; 20 >
+    au < manifest ; 2007 ; Catalan Review Volume 21 ; 21 >
+    au < doesNotExist ; 2008 ; Catalan Review Volume 22 ; 22 >
     au < doNotProcess ; 2009 ; Catalan Review Volume 23 ; 23 >
     au < doNotProcess ; 2010 ; Catalan Review Volume 24 ; 24 >
     au < doNotProcess ; 2011 ; Catalan Review Volume 25 ; 25 >
@@ -284,8 +329,9 @@
     au < doNotProcess ; 2017 ; Catalan Review Volume 31 ; 31 >
     au < doNotProcess ; 2018 ; Catalan Review Volume 32 ; 32 >
     au < doNotProcess ; 2019 ; Catalan Review Volume 33 ; 33 >
-    au < exists ; 2020 ; Catalan Review Volume 34 ; 34 >
-    au < expected ; 2021 ; Catalan Review Volume 35 ; 35 >
+    au < released ; 2020 ; Catalan Review Volume 34 ; 34 >
+    au < released ; 2021 ; Catalan Review Volume 35 ; 35 >
+    au < expected ; 2022 ; Catalan Review Volume 36 ; 36 >
 
   }
 
@@ -299,7 +345,13 @@
     >
 
     param[journal_id] = cfc
+    #Published 1976-present
 
+    au < manifest ; 2000 ; Contemporary French Civilization Volume 24 ; 24 >
+    au < manifest ; 2001 ; Contemporary French Civilization Volume 25 ; 25 >
+    au < manifest ; 2002 ; Contemporary French Civilization Volume 26 ; 26 >
+    au < manifest ; 2003 ; Contemporary French Civilization Volume 27 ; 27 >
+    au < manifest ; 2004 ; Contemporary French Civilization Volume 28 ; 28 >
     au < doNotProcess ; 2005 ; Contemporary French Civilization Volume 29 ; 29 >
     au < doNotProcess ; 2006 ; Contemporary French Civilization Volume 30 ; 30 >
     au < doNotProcess ; 2007 ; Contemporary French Civilization Volume 31 ; 31 >
@@ -309,15 +361,85 @@
     au < doNotProcess ; 2011 ; Contemporary French Civilization Volume 35 ; 35 >
     au < doNotProcess ; 2011 ; Contemporary French Civilization Volume 36 ; 36 >
     au < doNotProcess ; 2012 ; Contemporary French Civilization Volume 37 ; 37 >
-    au < exists ; 2013 ; Contemporary French Civilization Volume 38 ; 38 >
-    au < exists ; 2014 ; Contemporary French Civilization Volume 39 ; 39 >
+    au < released ; 2013 ; Contemporary French Civilization Volume 38 ; 38 >
+    au < released ; 2014 ; Contemporary French Civilization Volume 39 ; 39 >
     au < doNotProcess ; 2015 ; Contemporary French Civilization Volume 40 ; 40 >
     au < doNotProcess ; 2016 ; Contemporary French Civilization Volume 41 ; 41 >
     au < doNotProcess ; 2017 ; Contemporary French Civilization Volume 42 ; 42 >
     au < doNotProcess ; 2018 ; Contemporary French Civilization Volume 43 ; 43 >
     au < doNotProcess ; 2019 ; Contemporary French Civilization Volume 44 ; 44 >
-    au < exists ; 2020 ; Contemporary French Civilization Volume 45 ; 45 >
-    au < expected ; 2021 ; Contemporary French Civilization Volume 46 ; 46 >
+    au < released ; 2020 ; Contemporary French Civilization Volume 45 ; 45 >
+    au < released ; 2021 ; Contemporary French Civilization Volume 46 ; 46 >
+    au < manifest ; 2022 ; Contemporary French Civilization Volume 47 ; 47 >
+
+  }
+
+  {
+
+    title <
+      name = Developing Academic Practice ;
+      eissn = 2732-5725 ;
+      issnl = 2732-5725
+    >
+
+    param[journal_id] = dap
+    #Published 2021-present
+
+    au < released ; 2021 ; Developing Academic Practice Volume 2021 ; 2021 >
+    au < manifest ; 2022 ; Developing Academic Practice Volume 2022 ; 2022 >
+
+  }
+
+  {
+
+    title <
+      name = Eighteenth-Century Ireland ;
+      issn = 0790-7915 ;
+      eissn = 2753-9725 ;
+      issnl = 0790-7915
+    >
+
+    param[journal_id] = eci
+    #Published 1986-present
+
+    au < manifest ; 1986 ; Eighteenth-Century Ireland Volume 1 ; 1 >
+    au < manifest ; 1987 ; Eighteenth-Century Ireland Volume 2 ; 2 >
+    au < manifest ; 1988 ; Eighteenth-Century Ireland Volume 3 ; 3 >
+    au < manifest ; 1989 ; Eighteenth-Century Ireland Volume 4 ; 4 >
+    au < manifest ; 1990 ; Eighteenth-Century Ireland Volume 5 ; 5 >
+    au < manifest ; 1991 ; Eighteenth-Century Ireland Volume 6 ; 6 >
+    au < manifest ; 1992 ; Eighteenth-Century Ireland Volume 7 ; 7 >
+    au < manifest ; 1993 ; Eighteenth-Century Ireland Volume 8 ; 8 >
+    au < manifest ; 1994 ; Eighteenth-Century Ireland Volume 9 ; 9 >
+    au < manifest ; 1995 ; Eighteenth-Century Ireland Volume 10 ; 10 >
+    au < manifest ; 1996 ; Eighteenth-Century Ireland Volume 11 ; 11 >
+    au < manifest ; 1997 ; Eighteenth-Century Ireland Volume 12 ; 12 >
+    au < manifest ; 1998 ; Eighteenth-Century Ireland Volume 13 ; 13 >
+    au < manifest ; 1999 ; Eighteenth-Century Ireland Volume 14 ; 14 >
+    au < manifest ; 2000 ; Eighteenth-Century Ireland Volume 15 ; 15 >
+    au < manifest ; 2001 ; Eighteenth-Century Ireland Volume 16 ; 16 >
+    au < manifest ; 2002 ; Eighteenth-Century Ireland Volume 17 ; 17 >
+    au < manifest ; 2003 ; Eighteenth-Century Ireland Volume 18 ; 18 >
+    au < manifest ; 2004 ; Eighteenth-Century Ireland Volume 19 ; 19 >
+    au < manifest ; 2005 ; Eighteenth-Century Ireland Volume 20 ; 20 >
+    au < manifest ; 2006 ; Eighteenth-Century Ireland Volume 21 ; 21 >
+    au < manifest ; 2007 ; Eighteenth-Century Ireland Volume 22 ; 22 >
+    au < released ; 2008 ; Eighteenth-Century Ireland Volume 23 ; 23 >
+    au < released ; 2009 ; Eighteenth-Century Ireland Volume 24 ; 24 >
+    au < released ; 2010 ; Eighteenth-Century Ireland Volume 25 ; 25 >
+    au < released ; 2011 ; Eighteenth-Century Ireland Volume 26 ; 26 >
+    au < doNotProcess ; 2011 ; Eighteenth-Century Ireland Volume Special_Issue ; Special_Issue >
+    au < released ; 2012 ; Eighteenth-Century Ireland Volume 27 ; 27 >
+    au < released ; 2013 ; Eighteenth-Century Ireland Volume 28 ; 28 >
+    au < released ; 2014 ; Eighteenth-Century Ireland Volume 29 ; 29 >
+    au < released ; 2015 ; Eighteenth-Century Ireland Volume 30 ; 30 >
+    au < released ; 2016 ; Eighteenth-Century Ireland Volume 31 ; 31 >
+    au < released ; 2017 ; Eighteenth-Century Ireland Volume 32 ; 32 >
+    au < released ; 2018 ; Eighteenth-Century Ireland Volume 33 ; 33 >
+    au < released ; 2019 ; Eighteenth-Century Ireland Volume 34 ; 34 >
+    au < released ; 2020 ; Eighteenth-Century Ireland Volume 35 ; 35 >
+    au < manifest ; 2021 ; Eighteenth-Century Ireland Volume 36 ; 36 >
+    au < expected ; 2022 ; Eighteenth-Century Ireland Volume 37 ; 37 >
 
   }
 
@@ -331,25 +453,26 @@
     >
 
     param[journal_id] = eir
+    #Published 1994-present
 
-    au < exists ; 1993 ; Essays in Romanticism Volume 1 ; 1 >
-    au < exists ; 1994 ; Essays in Romanticism Volume 2 ; 2 >
-    au < exists ; 1995 ; Essays in Romanticism Volume 3 ; 3 >
-    au < exists ; 1996 ; Essays in Romanticism Volume 4 ; 4 >
-    au < exists ; 1997 ; Essays in Romanticism Volume 5 ; 5 >
-    au < exists ; 1998 ; Essays in Romanticism Volume 6 ; 6 >
-    au < exists ; 1999 ; Essays in Romanticism Volume 7 ; 7 >
-    au < exists ; 2000 ; Essays in Romanticism Volume 8 ; 8 >
-    au < exists ; 2001 ; Essays in Romanticism Volume 9 ; 9 >
-    au < exists ; 2002 ; Essays in Romanticism Volume 10 ; 10 >
-    au < exists ; 2003 ; Essays in Romanticism Volume 11 ; 11 >
-    au < exists ; 2004 ; Essays in Romanticism Volume 12 ; 12 >
-    au < exists ; 2005 ; Essays in Romanticism Volume 13 ; 13 >
-    au < exists ; 2006 ; Essays in Romanticism Volume 14 ; 14 >
-    au < exists ; 2007 ; Essays in Romanticism Volume 15 ; 15 >
-    au < doNotProcess ; 2008 ; Essays in Romanticism Volume 16 ; 16 >
-    au < doNotProcess ; 2009 ; Essays in Romanticism Volume 17 ; 17 >
-    au < doNotProcess ; 2010 ; Essays in Romanticism Volume 18 ; 18 >
+    au < manifest ; 1994 ; Essays in Romanticism Volume 1 ; 1 >
+    au < manifest ; 1995 ; Essays in Romanticism Volume 2 ; 2 >
+    au < manifest ; 1996 ; Essays in Romanticism Volume 3 ; 3 >
+    au < manifest ; 1997 ; Essays in Romanticism Volume 4 ; 4 >
+    au < manifest ; 1998 ; Essays in Romanticism Volume 5 ; 5 >
+    au < manifest ; 1999 ; Essays in Romanticism Volume 6 ; 6 >
+    au < released ; 2000 ; Essays in Romanticism Volume 7 ; 7 >
+    au < manifest ; 2001 ; Essays in Romanticism Volume 8 ; 8 >
+    au < manifest ; 2002 ; Essays in Romanticism Volume 9 ; 9 >
+    au < manifest ; 2003 ; Essays in Romanticism Volume 10 ; 10 >
+    au < manifest ; 2004 ; Essays in Romanticism Volume 11 ; 11 >
+    au < manifest ; 2005 ; Essays in Romanticism Volume 12 ; 12 >
+    au < manifest ; 2006 ; Essays in Romanticism Volume 13 ; 13 >
+    au < manifest ; 2007 ; Essays in Romanticism Volume 14 ; 14 >
+    au < released ; 2008 ; Essays in Romanticism Volume 15 ; 15 >
+    au < doNotProcess ; 2009 ; Essays in Romanticism Volume 16 ; 16 >
+    au < doNotProcess ; 2010 ; Essays in Romanticism Volume 17 ; 17 >
+    au < doNotProcess ; 2011 ; Essays in Romanticism Volume 18 ; 18 >
     au < doNotProcess ; 2012 ; Essays in Romanticism Volume 19 ; 19 >
     au < doNotProcess ; 2013 ; Essays in Romanticism Volume 20 ; 20 >
     au < doNotProcess ; 2014 ; Essays in Romanticism Volume 21 ; 21 >
@@ -358,8 +481,9 @@
     au < doNotProcess ; 2017 ; Essays in Romanticism Volume 24 ; 24 >
     au < doNotProcess ; 2018 ; Essays in Romanticism Volume 25 ; 25 >
     au < doNotProcess ; 2019 ; Essays in Romanticism Volume 26 ; 26 >
-    au < exists ; 2020 ; Essays in Romanticism Volume 27 ; 27 >
-    au < expected ; 2021 ; Essays in Romanticism Volume 28 ; 28 >
+    au < released ; 2020 ; Essays in Romanticism Volume 27 ; 27 >
+    au < released ; 2021 ; Essays in Romanticism Volume 28 ; 28 >
+    au < expected ; 2022 ; Essays in Romanticism Volume 29 ; 29 >
 
   }
 
@@ -373,20 +497,22 @@
     >
 
     param[journal_id] = ejlp
+    #Published 2009-present
 
     au < doNotProcess ; 2009 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 1 ; 1 >
     au < doNotProcess ; 2010 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 2 ; 2 >
     au < doNotProcess ; 2011 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 3 ; 3 >
     au < doNotProcess ; 2012 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 4 ; 4 >
-    au < exists ; 2013 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 5 ; 5 >
+    au < released ; 2013 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 5 ; 5 >
     au < doNotProcess ; 2014 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 6 ; 6 >
     au < doNotProcess ; 2015 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 7 ; 7 >
     au < doNotProcess ; 2016 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 8 ; 8 >
     au < doNotProcess ; 2017 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 9 ; 9 >
     au < doNotProcess ; 2018 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 10 ; 10 >
     au < doNotProcess ; 2019 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 11 ; 11 >
-    au < exists ; 2020 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 12 ; 12 >
-    au < expected ; 2021 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 13 ; 13 >
+    au < released ; 2020 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 12 ; 12 >
+    au < manifest ; 2021 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 13 ; 13 >
+    au < manifest ; 2022 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 14 ; 14 >
 
   }
 
@@ -400,21 +526,31 @@
     >
 
     param[journal_id] = extr
+    #Published 1959-present
 
+    au < manifest ; 2000 ; Extrapolation Volume 41 ; 41 >
+    au < manifest ; 2001 ; Extrapolation Volume 42 ; 42 >
+    au < manifest ; 2002 ; Extrapolation Volume 43 ; 43 >
+    au < manifest ; 2003 ; Extrapolation Volume 44 ; 44 >
+    au < manifest ; 2004 ; Extrapolation Volume 45 ; 45 >
+    au < manifest ; 2005 ; Extrapolation Volume 46 ; 46 >
+    au < manifest ; 2006 ; Extrapolation Volume 47 ; 47 >
+    au < manifest ; 2007 ; Extrapolation Volume 48 ; 48 >
     au < doNotProcess ; 2008 ; Extrapolation Volume 49 ; 49 >
     au < doNotProcess ; 2009 ; Extrapolation Volume 50 ; 50 >
     au < doNotProcess ; 2010 ; Extrapolation Volume 51 ; 51 >
     au < doNotProcess ; 2011 ; Extrapolation Volume 52 ; 52 >
     au < doNotProcess ; 2012 ; Extrapolation Volume 53 ; 53 >
-    au < exists ; 2013 ; Extrapolation Volume 54 ; 54 >
+    au < released ; 2013 ; Extrapolation Volume 54 ; 54 >
     au < doNotProcess ; 2014 ; Extrapolation Volume 55 ; 55 >
     au < doNotProcess ; 2015 ; Extrapolation Volume 56 ; 56 >
     au < doNotProcess ; 2016 ; Extrapolation Volume 57 ; 57 >
     au < doNotProcess ; 2017 ; Extrapolation Volume 58 ; 58 >
     au < doNotProcess ; 2018 ; Extrapolation Volume 59 ; 59 >
     au < doNotProcess ; 2019 ; Extrapolation Volume 60 ; 60 >
-    au < exists ; 2020 ; Extrapolation Volume 61 ; 61 >
-    au < expected ; 2021 ; Extrapolation Volume 62 ; 62 >
+    au < released ; 2020 ; Extrapolation Volume 61 ; 61 >
+    au < manifest ; 2021 ; Extrapolation Volume 62 ; 62 >
+    au < expected ; 2022 ; Extrapolation Volume 63 ; 63 >
 
   }
 
@@ -428,6 +564,7 @@
     >
 
     param[journal_id] = franc
+    #Published 2012-present
 
     au < doNotProcess ; 2012 ; Francosphères Volume 1 ; 1 >
     au < doNotProcess ; 2013 ; Francosphères Volume 2 ; 2 >
@@ -437,8 +574,9 @@
     au < doNotProcess ; 2017 ; Francosphères Volume 6 ; 6 >
     au < doNotProcess ; 2018 ; Francosphères Volume 7 ; 7 >
     au < doNotProcess ; 2019 ; Francosphères Volume 8 ; 8 >
-    au < exists ; 2020 ; Francosphères Volume 9 ; 9 >
-    au < expected ; 2021 ; Francosphères Volume 10 ; 10 >
+    au < released ; 2020 ; Francosphères Volume 9 ; 9 >
+    au < manifest ; 2021 ; Francosphères Volume 10 ; 10 >
+    au < expected ; 2022 ; Francosphères Volume 11 ; 11 >
 
   }
 
@@ -452,29 +590,30 @@
     >
 
     param[journal_id] = hsir
+    #Published 1996-present
 
-    au < exists ; 1996 ; Historical Studies in Industrial Relations Volume 1 ; 1 >
-    au < exists ; 1996 ; Historical Studies in Industrial Relations Volume 2 ; 2 >
-    au < exists ; 1997 ; Historical Studies in Industrial Relations Volume 3 ; 3 >
-    au < exists ; 1997 ; Historical Studies in Industrial Relations Volume 4 ; 4 >
-    au < exists ; 1998 ; Historical Studies in Industrial Relations Volume 5 ; 5 >
-    au < exists ; 1998 ; Historical Studies in Industrial Relations Volume 6 ; 6 >
-    au < exists ; 1999 ; Historical Studies in Industrial Relations Volume 7 ; 7 >
-    au < exists ; 1999 ; Historical Studies in Industrial Relations Volume 8 ; 8 >
-    au < exists ; 2000 ; Historical Studies in Industrial Relations Volume 9 ; 9 >
-    au < exists ; 2000 ; Historical Studies in Industrial Relations Volume 10 ; 10 >
-    au < exists ; 2001 ; Historical Studies in Industrial Relations Volume 11 ; 11 >
-    au < exists ; 2001 ; Historical Studies in Industrial Relations Volume 12 ; 12 >
-    au < exists ; 2002 ; Historical Studies in Industrial Relations Volume 13 ; 13 >
-    au < exists ; 2002 ; Historical Studies in Industrial Relations Volume 14 ; 14 >
-    au < exists ; 2003 ; Historical Studies in Industrial Relations Volume 15 ; 15 >
-    au < exists ; 2003 ; Historical Studies in Industrial Relations Volume 16 ; 16 >
-    au < exists ; 2004 ; Historical Studies in Industrial Relations Volume 17 ; 17 >
-    au < exists ; 2004 ; Historical Studies in Industrial Relations Volume 18 ; 18 >
-    au < exists ; 2005 ; Historical Studies in Industrial Relations Volume 19 ; 19 >
-    au < exists ; 2005 ; Historical Studies in Industrial Relations Volume 20 ; 20 >
-    au < exists ; 2006 ; Historical Studies in Industrial Relations Volume 21 ; 21 >
-    au < exists ; 2006 ; Historical Studies in Industrial Relations Volume 22 ; 22 >
+    au < manifest ; 1996 ; Historical Studies in Industrial Relations Volume 1 ; 1 >
+    au < manifest ; 1996 ; Historical Studies in Industrial Relations Volume 2 ; 2 >
+    au < manifest ; 1997 ; Historical Studies in Industrial Relations Volume 3 ; 3 >
+    au < manifest ; 1997 ; Historical Studies in Industrial Relations Volume 4 ; 4 >
+    au < manifest ; 1998 ; Historical Studies in Industrial Relations Volume 5 ; 5 >
+    au < manifest ; 1998 ; Historical Studies in Industrial Relations Volume 6 ; 6 >
+    au < manifest ; 1999 ; Historical Studies in Industrial Relations Volume 7 ; 7 >
+    au < manifest ; 1999 ; Historical Studies in Industrial Relations Volume 8 ; 8 >
+    au < manifest ; 2000 ; Historical Studies in Industrial Relations Volume 9 ; 9 >
+    au < manifest ; 2000 ; Historical Studies in Industrial Relations Volume 10 ; 10 >
+    au < manifest ; 2001 ; Historical Studies in Industrial Relations Volume 11 ; 11 >
+    au < manifest ; 2001 ; Historical Studies in Industrial Relations Volume 12 ; 12 >
+    au < manifest ; 2002 ; Historical Studies in Industrial Relations Volume 13 ; 13 >
+    au < manifest ; 2002 ; Historical Studies in Industrial Relations Volume 14 ; 14 >
+    au < manifest ; 2003 ; Historical Studies in Industrial Relations Volume 15 ; 15 >
+    au < manifest ; 2003 ; Historical Studies in Industrial Relations Volume 16 ; 16 >
+    au < manifest ; 2004 ; Historical Studies in Industrial Relations Volume 17 ; 17 >
+    au < manifest ; 2004 ; Historical Studies in Industrial Relations Volume 18 ; 18 >
+    au < manifest ; 2005 ; Historical Studies in Industrial Relations Volume 19 ; 19 >
+    au < manifest ; 2005 ; Historical Studies in Industrial Relations Volume 20 ; 20 >
+    au < manifest ; 2006 ; Historical Studies in Industrial Relations Volume 21 ; 21 >
+    au < released ; 2006 ; Historical Studies in Industrial Relations Volume 22 ; 22 >
     au < exists ; 2007 ; Historical Studies in Industrial Relations Volume 23-24 ; 23-24 >
     au < doNotProcess ; 2008 ; Historical Studies in Industrial Relations Volume 25-26 ; 25-26 >
     au < doNotProcess ; 2009 ; Historical Studies in Industrial Relations Volume 27-28 ; 27-28 >
@@ -488,37 +627,48 @@
     au < doNotProcess ; 2017 ; Historical Studies in Industrial Relations Volume 38 ; 38 >
     au < doNotProcess ; 2018 ; Historical Studies in Industrial Relations Volume 39 ; 39 >
     au < doNotProcess ; 2019 ; Historical Studies in Industrial Relations Volume 40 ; 40 >
-    au < expected ; 2020 ; Historical Studies in Industrial Relations Volume 41 ; 41 >
-    au < expected ; 2021 ; Historical Studies in Industrial Relations Volume 42 ; 42 >
+    au < released ; 2020 ; Historical Studies in Industrial Relations Volume 41 ; 41 >
+    au < manifest ; 2021 ; Historical Studies in Industrial Relations Volume 42 ; 42 >
+    au < expected ; 2022 ; Historical Studies in Industrial Relations Volume 43 ; 43 >
 
   }
 
   {
 
     title <
-      name = The Indexer: the international journal of indexing ;
+      name = The Indexer: The International Journal of Indexing ;
       issn = 0019-4131 ;
       eissn = 1756-0632 ;
       issnl = 0019-4131
     >
 
     param[journal_id] = index
+    #Published 1958-present
 
-    au < exists ; 2006-2007 ; The Indexer: the international journal of indexing Volume 25 ; 25 >
-    au < doNotProcess ; 2008 ; The Indexer: the international journal of indexing Volume 26 ; 26 >
-    au < doNotProcess ; 2009 ; The Indexer: the international journal of indexing Volume 27 ; 27 >
-    au < doNotProcess ; 2010 ; The Indexer: the international journal of indexing Volume 28 ; 28 >
-    au < doNotProcess ; 2011 ; The Indexer: the international journal of indexing Volume 29 ; 29 >
-    au < doNotProcess ; 2012 ; The Indexer: the international journal of indexing Volume 30 ; 30 >
-    au < doNotProcess ; 2013 ; The Indexer: the international journal of indexing Volume 31 ; 31 >
-    au < doNotProcess ; 2014 ; The Indexer: the international journal of indexing Volume 32 ; 32 >
-    au < doNotProcess ; 2015 ; The Indexer: the international journal of indexing Volume 33 ; 33 >
-    au < doNotProcess ; 2016 ; The Indexer: the international journal of indexing Volume 34 ; 34 >
-    au < doNotProcess ; 2017 ; The Indexer: the international journal of indexing Volume 35 ; 35 >
-    au < doNotProcess ; 2018 ; The Indexer: the international journal of indexing Volume 36 ; 36 >
-    au < doNotProcess ; 2019 ; The Indexer: the international journal of indexing Volume 37 ; 37 >
-    au < exists ; 2020 ; The Indexer: the international journal of indexing Volume 38 ; 38 >
-    au < expected ; 2021 ; The Indexer: the international journal of indexing Volume 39 ; 39 >
+    au < manifest ; 1990 ; The Indexer: The International Journal of Indexing Volume 17 ; 17 >
+    au < manifest ; 1992 ; The Indexer: The International Journal of Indexing Volume 18 ; 18 >
+    au < manifest ; 1994 ; The Indexer: The International Journal of Indexing Volume 19 ; 19 >
+    au < manifest ; 1996 ; The Indexer: The International Journal of Indexing Volume 20 ; 20 >
+    au < manifest ; 1998 ; The Indexer: The International Journal of Indexing Volume 21 ; 21 >
+    au < manifest ; 2000 ; The Indexer: The International Journal of Indexing Volume 22 ; 22 >
+    au < manifest ; 2002 ; The Indexer: The International Journal of Indexing Volume 23 ; 23 >
+    au < manifest ; 2004 ; The Indexer: The International Journal of Indexing Volume 24 ; 24 >
+    au < released ; 2006 ; The Indexer: The International Journal of Indexing Volume 25 ; 25 >
+    au < doNotProcess ; 2008 ; The Indexer: The International Journal of Indexing Volume 26 ; 26 >
+    au < doNotProcess ; 2009 ; The Indexer: The International Journal of Indexing Volume 27 ; 27 >
+    au < doNotProcess ; 2010 ; The Indexer: The International Journal of Indexing Volume 28 ; 28 >
+    au < doNotProcess ; 2011 ; The Indexer: The International Journal of Indexing Volume 29 ; 29 >
+    au < doNotProcess ; 2012 ; The Indexer: The International Journal of Indexing Volume 30 ; 30 >
+    au < doNotProcess ; 2013 ; The Indexer: The International Journal of Indexing Volume 31 ; 31 >
+    au < doNotProcess ; 2014 ; The Indexer: The International Journal of Indexing Volume 32 ; 32 >
+    au < doNotProcess ; 2015 ; The Indexer: The International Journal of Indexing Volume 33 ; 33 >
+    au < doNotProcess ; 2016 ; The Indexer: The International Journal of Indexing Volume 34 ; 34 >
+    au < doNotProcess ; 2017 ; The Indexer: The International Journal of Indexing Volume 35 ; 35 >
+    au < doNotProcess ; 2018 ; The Indexer: The International Journal of Indexing Volume 36 ; 36 >
+    au < doNotProcess ; 2019 ; The Indexer: The International Journal of Indexing Volume 37 ; 37 >
+    au < released ; 2020 ; The Indexer: The International Journal of Indexing Volume 38 ; 38 >
+    au < manifest ; 2021 ; The Indexer: The International Journal of Indexing Volume 39 ; 39 >
+    au < manifest ; 2022 ; The Indexer: The International Journal of Indexing Volume 40 ; 40 >
 
   }
 
@@ -532,6 +682,7 @@
     >
 
     param[journal_id] = idpr
+    #Published 2002-present
     comment[continues] = 0142-7849
 
     au < doNotProcess ; 2002 ; International Development Planning Review Volume 24 ; 24 >
@@ -545,37 +696,70 @@
     au < doNotProcess ; 2010 ; International Development Planning Review Volume 32 ; 32 >
     au < doNotProcess ; 2011 ; International Development Planning Review Volume 33 ; 33 >
     au < doNotProcess ; 2012 ; International Development Planning Review Volume 34 ; 34 >
-    au < exists ; 2013 ; International Development Planning Review Volume 35 ; 35 >
+    au < released ; 2013 ; International Development Planning Review Volume 35 ; 35 >
     au < doNotProcess ; 2014 ; International Development Planning Review Volume 36 ; 36 >
     au < doNotProcess ; 2015 ; International Development Planning Review Volume 37 ; 37 >
     au < doNotProcess ; 2016 ; International Development Planning Review Volume 38 ; 38 >
     au < doNotProcess ; 2017 ; International Development Planning Review Volume 39 ; 39 >
     au < doNotProcess ; 2018 ; International Development Planning Review Volume 40 ; 40 >
     au < doNotProcess ; 2019 ; International Development Planning Review Volume 41 ; 41 >
-    au < exists ; 2020 ; International Development Planning Review Volume 42 ; 42 >
-    au < expected ; 2021 ; International Development Planning Review Volume 43 ; 43 >
+    au < released ; 2020 ; International Development Planning Review Volume 42 ; 42 >
+    au < manifest ; 2021 ; International Development Planning Review Volume 43 ; 43 >
+    au < manifest ; 2022 ; International Development Planning Review Volume 44 ; 44 >
 
   }
 
   {
 
     title <
-      name = Hunter Gatherer Research ;
-      eissn = 1476-4261 ;
-      issnl = 1476-4261
+      name = International Journal of English for Academic Purposes: Research and Practice ;
+      eissn = 2634-4610 ;
+      issnl = 2634-4610
     >
 
+    param[journal_id] = ijeap
+    #Published 2021-present
+
+    au < manifest ; 2021 ; International Journal of English for Academic Purposes: Research and Practice Volume 2021 ; 2021 >
+    au < expected ; 2022 ; International Journal of English for Academic Purposes: Research and Practice Volume 2022 ; 2022 >
+  }
+
+  {
+
+    title <
+      name = Hunter Gatherer Research ;
+      eissn = 2056-3264 ;
+      issnl = 2056-3264
+    >
+    {
     param[journal_id] = hgr
-    #V2 I1=2016, I2=2016, I3=2016, I4=2017
-    #V3 I1=2017, I2=2018, I3=2019, I4=2019
-    #V4 I1=2019, I2=2019, I3=2020
+    comment[continues] = Before Farming
+    #Published 2015-2018
 
     au < doNotProcess ; 2015 ; Hunter Gatherer Research Volume 1 ; 1 >
-    au < doNotProcess ; 2016-2017 ; Hunter Gatherer Research Volume 2 ; 2 >
-    au < doNotProcess ; 2017-2019 ; Hunter Gatherer Research Volume 3 ; 3 > #issue 3, 4 not online
-    au < exists ; 2019-2020 ; Hunter Gatherer Research Volume 4 ; 4 > #issue 3, 4 not online
-    au < expected ; 2021 ; Hunter Gatherer Research Volume 5 ; 5 > #issue 3, 5 not online
+    au < doNotProcess ; 2016 ; Hunter Gatherer Research Volume 2 ; 2 >
+    au < doNotProcess ; 2017 ; Hunter Gatherer Research Volume 3 ; 3 >
+    au < released ; 2018 ; Hunter Gatherer Research Volume 4 ; 4 >
+    }
 
+    {
+    param[journal_id] = bfarm
+    comment[continued_by] = Hunter Gatherer Research
+    #issn 1476-4253
+    #Published 2002-2012
+
+    au < manifest ; 2002 ; Before Farming Volume 2002 ; 2002 >
+    au < manifest ; 2003 ; Before Farming Volume 2003 ; 2003 >
+    au < manifest ; 2004 ; Before Farming Volume 2004 ; 2004 >
+    au < manifest ; 2005 ; Before Farming Volume 2005 ; 2005 >
+    au < manifest ; 2006 ; Before Farming Volume 2006 ; 2006 >
+    au < manifest ; 2007 ; Before Farming Volume 2007 ; 2007 >
+    au < doNotProcess ; 2008 ; Before Farming Volume 2008 ; 2008 >
+    au < doNotProcess ; 2009 ; Before Farming Volume 2009 ; 2009 >
+    au < doNotProcess ; 2010 ; Before Farming Volume 2010 ; 2010 >
+    au < doNotProcess ; 2011 ; Before Farming Volume 2011 ; 2011 >
+    au < doNotProcess ; 2012 ; Before Farming Volume 2012 ; 2012 >
+    }
   }
 
   {
@@ -587,9 +771,8 @@
       issnl = 1757-6458
     >
 
-    {
-
     param[journal_id] = jlcds
+    #Published 2007-present
 
     au < doNotProcess ; 2007 ; Journal of Literary & Cultural Disability Studies Volume 1 ; 1 >
     au < doNotProcess ; 2008 ; Journal of Literary & Cultural Disability Studies Volume 2 ; 2 >
@@ -597,17 +780,16 @@
     au < doNotProcess ; 2010 ; Journal of Literary & Cultural Disability Studies Volume 4 ; 4 >
     au < doNotProcess ; 2011 ; Journal of Literary & Cultural Disability Studies Volume 5 ; 5 >
     au < doNotProcess ; 2012 ; Journal of Literary & Cultural Disability Studies Volume 6 ; 6 >
-    au < exists ; 2013 ; Journal of Literary & Cultural Disability Studies Volume 7 ; 7 >
+    au < released ; 2013 ; Journal of Literary & Cultural Disability Studies Volume 7 ; 7 >
     au < doNotProcess ; 2014 ; Journal of Literary & Cultural Disability Studies Volume 8 ; 8 >
     au < doNotProcess ; 2015 ; Journal of Literary & Cultural Disability Studies Volume 9 ; 9 >
     au < doNotProcess ; 2016 ; Journal of Literary & Cultural Disability Studies Volume 10 ; 10 >
     au < doNotProcess ; 2017 ; Journal of Literary & Cultural Disability Studies Volume 11 ; 11 >
     au < doNotProcess ; 2018 ; Journal of Literary & Cultural Disability Studies Volume 12 ; 12 >
     au < doNotProcess ; 2019 ; Journal of Literary & Cultural Disability Studies Volume 13 ; 13 >
-    au < exists ; 2020 ; Journal of Literary & Cultural Disability Studies Volume 14 ; 14 >
-    au < expected ; 2021 ; Journal of Literary & Cultural Disability Studies Volume 15 ; 15 >
-
-    }
+    au < released ; 2020 ; Journal of Literary & Cultural Disability Studies Volume 14 ; 14 >
+    au < released ; 2021 ; Journal of Literary & Cultural Disability Studies Volume 15 ; 15 >
+    au < manifest ; 2022 ; Journal of Literary & Cultural Disability Studies Volume 16 ; 16 >
 
   }
 
@@ -622,6 +804,7 @@
     > 
     
     param[journal_id] = jrs
+    #Published 2001-present
        
     au < doNotProcess ; 2001 ; Journal of Romance Studies Volume 1 ; 1 >
     au < doNotProcess ; 2002 ; Journal of Romance Studies Volume 2 ; 2 >
@@ -641,10 +824,10 @@
     au < doNotProcess ; 2016 ; Journal of Romance Studies Volume 16 ; 16 >
     au < doNotProcess ; 2017 ; Journal of Romance Studies Volume 17 ; 17 >
     au < doNotProcess ; 2018 ; Journal of Romance Studies Volume 18 ; 18 >
-    
     au < doNotProcess ; 2019 ; Journal of Romance Studies Volume 19 ; 19 >
-    au < exists ; 2020 ; Journal of Romance Studies Volume 20 ; 20 >
-    au < expected ; 2021 ; Journal of Romance Studies Volume 21 ; 21 >
+    au < released ; 2020 ; Journal of Romance Studies Volume 20 ; 20 >
+    au < manifest ; 2021 ; Journal of Romance Studies Volume 21 ; 21 >
+    au < manifest ; 2022 ; Journal of Romance Studies Volume 22 ; 22 >
   }
 
   {
@@ -657,97 +840,98 @@
     >
 
     param[journal_id] = labourhistory
+    #Published 1963-present
 
-    au < exists ; 1963 ; Labour History: A Journal of Labour and Social History Volume 4 ; 4 >
-    au < exists ; 1963 ; Labour History: A Journal of Labour and Social History Volume 5 ; 5 >
-    au < exists ; 1964 ; Labour History: A Journal of Labour and Social History Volume 6 ; 6 >
-    au < exists ; 1964 ; Labour History: A Journal of Labour and Social History Volume 7 ; 7 >
-    au < exists ; 1965 ; Labour History: A Journal of Labour and Social History Volume 8 ; 8 >
-    au < exists ; 1965 ; Labour History: A Journal of Labour and Social History Volume 9 ; 9 >
-    au < exists ; 1966 ; Labour History: A Journal of Labour and Social History Volume 10 ; 10 >
-    au < exists ; 1966 ; Labour History: A Journal of Labour and Social History Volume 11 ; 11 >
-    au < exists ; 1967 ; Labour History: A Journal of Labour and Social History Volume 12 ; 12 >
-    au < exists ; 1967 ; Labour History: A Journal of Labour and Social History Volume 13 ; 13 >
-    au < exists ; 1968 ; Labour History: A Journal of Labour and Social History Volume 14 ; 14 >
-    au < exists ; 1968 ; Labour History: A Journal of Labour and Social History Volume 15 ; 15 >
-    au < exists ; 1969 ; Labour History: A Journal of Labour and Social History Volume 16 ; 16 >
-    au < exists ; 1969 ; Labour History: A Journal of Labour and Social History Volume 17 ; 17 >
-    au < exists ; 1970 ; Labour History: A Journal of Labour and Social History Volume 18 ; 18 >
-    au < exists ; 1970 ; Labour History: A Journal of Labour and Social History Volume 19 ; 19 >
-    au < exists ; 1971 ; Labour History: A Journal of Labour and Social History Volume 20 ; 20 >
-    au < exists ; 1971 ; Labour History: A Journal of Labour and Social History Volume 21 ; 21 >
-    au < exists ; 1972 ; Labour History: A Journal of Labour and Social History Volume 22 ; 22 >
-    au < exists ; 1972 ; Labour History: A Journal of Labour and Social History Volume 23 ; 23 >
-    au < exists ; 1973 ; Labour History: A Journal of Labour and Social History Volume 24 ; 24 >
-    au < exists ; 1973 ; Labour History: A Journal of Labour and Social History Volume 25 ; 25 >
-    au < exists ; 1974 ; Labour History: A Journal of Labour and Social History Volume 26 ; 26 >
-    au < exists ; 1974 ; Labour History: A Journal of Labour and Social History Volume 27 ; 27 >
-    au < exists ; 1975 ; Labour History: A Journal of Labour and Social History Volume 28 ; 28 >
-    au < exists ; 1975 ; Labour History: A Journal of Labour and Social History Volume 29 ; 29 >
-    au < exists ; 1976 ; Labour History: A Journal of Labour and Social History Volume 30 ; 30 >
-    au < exists ; 1976 ; Labour History: A Journal of Labour and Social History Volume 31 ; 31 >
-    au < exists ; 1977 ; Labour History: A Journal of Labour and Social History Volume 32 ; 32 >
-    au < exists ; 1977 ; Labour History: A Journal of Labour and Social History Volume 33 ; 33 >
-    au < exists ; 1978 ; Labour History: A Journal of Labour and Social History Volume 34 ; 34 >
-    au < exists ; 1978 ; Labour History: A Journal of Labour and Social History Volume 35 ; 35 >
-    au < exists ; 1979 ; Labour History: A Journal of Labour and Social History Volume 36 ; 36 >
-    au < exists ; 1979 ; Labour History: A Journal of Labour and Social History Volume 37 ; 37 >
-    au < exists ; 1980 ; Labour History: A Journal of Labour and Social History Volume 38 ; 38 >
-    au < exists ; 1980 ; Labour History: A Journal of Labour and Social History Volume 39 ; 39 >
-    au < exists ; 1981 ; Labour History: A Journal of Labour and Social History Volume 40 ; 40 >
-    au < exists ; 1981 ; Labour History: A Journal of Labour and Social History Volume 41 ; 41 >
-    au < exists ; 1982 ; Labour History: A Journal of Labour and Social History Volume 42 ; 42 >
-    au < exists ; 1982 ; Labour History: A Journal of Labour and Social History Volume 43 ; 43 >
-    au < exists ; 1983 ; Labour History: A Journal of Labour and Social History Volume 44 ; 44 >
-    au < exists ; 1983 ; Labour History: A Journal of Labour and Social History Volume 45 ; 45 >
-    au < exists ; 1984 ; Labour History: A Journal of Labour and Social History Volume 46 ; 46 >
-    au < exists ; 1984 ; Labour History: A Journal of Labour and Social History Volume 47 ; 47 >
-    au < exists ; 1985 ; Labour History: A Journal of Labour and Social History Volume 48 ; 48 >
-    au < exists ; 1985 ; Labour History: A Journal of Labour and Social History Volume 49 ; 49 >
-    au < exists ; 1986 ; Labour History: A Journal of Labour and Social History Volume 50 ; 50 >
-    au < exists ; 1986 ; Labour History: A Journal of Labour and Social History Volume 51 ; 51 >
-    au < exists ; 1987 ; Labour History: A Journal of Labour and Social History Volume 52 ; 52 >
-    au < exists ; 1987 ; Labour History: A Journal of Labour and Social History Volume 53 ; 53 >
-    au < exists ; 1988 ; Labour History: A Journal of Labour and Social History Volume 54 ; 54 >
-    au < exists ; 1988 ; Labour History: A Journal of Labour and Social History Volume 55 ; 55 >
-    au < exists ; 1989 ; Labour History: A Journal of Labour and Social History Volume 56 ; 56 >
-    au < exists ; 1989 ; Labour History: A Journal of Labour and Social History Volume 57 ; 57 >
-    au < exists ; 1990 ; Labour History: A Journal of Labour and Social History Volume 58 ; 58 >
-    au < exists ; 1990 ; Labour History: A Journal of Labour and Social History Volume 59 ; 59 >
-    au < exists ; 1991 ; Labour History: A Journal of Labour and Social History Volume 60 ; 60 >
-    au < exists ; 1991 ; Labour History: A Journal of Labour and Social History Volume 61 ; 61 >
-    au < exists ; 1992 ; Labour History: A Journal of Labour and Social History Volume 62 ; 62 >
-    au < exists ; 1992 ; Labour History: A Journal of Labour and Social History Volume 63 ; 63 >
-    au < exists ; 1993 ; Labour History: A Journal of Labour and Social History Volume 64 ; 64 >
-    au < exists ; 1993 ; Labour History: A Journal of Labour and Social History Volume 65 ; 65 >
-    au < exists ; 1994 ; Labour History: A Journal of Labour and Social History Volume 66 ; 66 >
-    au < exists ; 1994 ; Labour History: A Journal of Labour and Social History Volume 67 ; 67 >
-    au < exists ; 1995 ; Labour History: A Journal of Labour and Social History Volume 68 ; 68 >
-    au < exists ; 1995 ; Labour History: A Journal of Labour and Social History Volume 69 ; 69 >
-    au < exists ; 1996 ; Labour History: A Journal of Labour and Social History Volume 70 ; 70 >
-    au < exists ; 1996 ; Labour History: A Journal of Labour and Social History Volume 71 ; 71 >
-    au < exists ; 1997 ; Labour History: A Journal of Labour and Social History Volume 72 ; 72 >
-    au < exists ; 1997 ; Labour History: A Journal of Labour and Social History Volume 73 ; 73 >
-    au < exists ; 1998 ; Labour History: A Journal of Labour and Social History Volume 74 ; 74 >
-    au < exists ; 1998 ; Labour History: A Journal of Labour and Social History Volume 75 ; 75 >
-    au < exists ; 1999 ; Labour History: A Journal of Labour and Social History Volume 76 ; 76 >
-    au < exists ; 1999 ; Labour History: A Journal of Labour and Social History Volume 77 ; 77 >
-    au < exists ; 2000 ; Labour History: A Journal of Labour and Social History Volume 78 ; 78 >
-    au < exists ; 2000 ; Labour History: A Journal of Labour and Social History Volume 79 ; 79 >
-    au < exists ; 2001 ; Labour History: A Journal of Labour and Social History Volume 80 ; 80 >
-    au < exists ; 2001 ; Labour History: A Journal of Labour and Social History Volume 81 ; 81 >
-    au < exists ; 2002 ; Labour History: A Journal of Labour and Social History Volume 82 ; 82 >
-    au < exists ; 2002 ; Labour History: A Journal of Labour and Social History Volume 83 ; 83 >
-    au < exists ; 2003 ; Labour History: A Journal of Labour and Social History Volume 84 ; 84 >
-    au < exists ; 2003 ; Labour History: A Journal of Labour and Social History Volume 85 ; 85 >
-    au < exists ; 2004 ; Labour History: A Journal of Labour and Social History Volume 86 ; 86 >
-    au < exists ; 2004 ; Labour History: A Journal of Labour and Social History Volume 87 ; 87 >
-    au < exists ; 2005 ; Labour History: A Journal of Labour and Social History Volume 88 ; 88 >
-    au < exists ; 2005 ; Labour History: A Journal of Labour and Social History Volume 89 ; 89 >
-    au < exists ; 2006 ; Labour History: A Journal of Labour and Social History Volume 90 ; 90 >
-    au < exists ; 2006 ; Labour History: A Journal of Labour and Social History Volume 91 ; 91 >
-    au < exists ; 2007 ; Labour History: A Journal of Labour and Social History Volume 92 ; 92 >
-    au < exists ; 2007 ; Labour History: A Journal of Labour and Social History Volume 93 ; 93 >
+    au < manifest ; 1963 ; Labour History: A Journal of Labour and Social History Volume 4 ; 4 >
+    au < manifest ; 1963 ; Labour History: A Journal of Labour and Social History Volume 5 ; 5 >
+    au < manifest ; 1964 ; Labour History: A Journal of Labour and Social History Volume 6 ; 6 >
+    au < manifest ; 1964 ; Labour History: A Journal of Labour and Social History Volume 7 ; 7 >
+    au < doesNotExist ; 1965 ; Labour History: A Journal of Labour and Social History Volume 8 ; 8 >
+    au < doesNotExist ; 1965 ; Labour History: A Journal of Labour and Social History Volume 9 ; 9 >
+    au < manifest ; 1966 ; Labour History: A Journal of Labour and Social History Volume 10 ; 10 >
+    au < manifest ; 1966 ; Labour History: A Journal of Labour and Social History Volume 11 ; 11 >
+    au < manifest ; 1967 ; Labour History: A Journal of Labour and Social History Volume 12 ; 12 >
+    au < manifest ; 1967 ; Labour History: A Journal of Labour and Social History Volume 13 ; 13 >
+    au < manifest ; 1968 ; Labour History: A Journal of Labour and Social History Volume 14 ; 14 >
+    au < manifest ; 1968 ; Labour History: A Journal of Labour and Social History Volume 15 ; 15 >
+    au < manifest ; 1969 ; Labour History: A Journal of Labour and Social History Volume 16 ; 16 >
+    au < manifest ; 1969 ; Labour History: A Journal of Labour and Social History Volume 17 ; 17 >
+    au < manifest ; 1970 ; Labour History: A Journal of Labour and Social History Volume 18 ; 18 >
+    au < manifest ; 1970 ; Labour History: A Journal of Labour and Social History Volume 19 ; 19 >
+    au < manifest ; 1971 ; Labour History: A Journal of Labour and Social History Volume 20 ; 20 >
+    au < manifest ; 1971 ; Labour History: A Journal of Labour and Social History Volume 21 ; 21 >
+    au < manifest ; 1972 ; Labour History: A Journal of Labour and Social History Volume 22 ; 22 >
+    au < manifest ; 1972 ; Labour History: A Journal of Labour and Social History Volume 23 ; 23 >
+    au < manifest ; 1973 ; Labour History: A Journal of Labour and Social History Volume 24 ; 24 >
+    au < manifest ; 1973 ; Labour History: A Journal of Labour and Social History Volume 25 ; 25 >
+    au < manifest ; 1974 ; Labour History: A Journal of Labour and Social History Volume 26 ; 26 >
+    au < manifest ; 1974 ; Labour History: A Journal of Labour and Social History Volume 27 ; 27 >
+    au < manifest ; 1975 ; Labour History: A Journal of Labour and Social History Volume 28 ; 28 >
+    au < manifest ; 1975 ; Labour History: A Journal of Labour and Social History Volume 29 ; 29 >
+    au < manifest ; 1976 ; Labour History: A Journal of Labour and Social History Volume 30 ; 30 >
+    au < manifest ; 1976 ; Labour History: A Journal of Labour and Social History Volume 31 ; 31 >
+    au < manifest ; 1977 ; Labour History: A Journal of Labour and Social History Volume 32 ; 32 >
+    au < manifest ; 1977 ; Labour History: A Journal of Labour and Social History Volume 33 ; 33 >
+    au < manifest ; 1978 ; Labour History: A Journal of Labour and Social History Volume 34 ; 34 >
+    au < manifest ; 1978 ; Labour History: A Journal of Labour and Social History Volume 35 ; 35 >
+    au < manifest ; 1979 ; Labour History: A Journal of Labour and Social History Volume 36 ; 36 >
+    au < manifest ; 1979 ; Labour History: A Journal of Labour and Social History Volume 37 ; 37 >
+    au < manifest ; 1980 ; Labour History: A Journal of Labour and Social History Volume 38 ; 38 >
+    au < manifest ; 1980 ; Labour History: A Journal of Labour and Social History Volume 39 ; 39 >
+    au < manifest ; 1981 ; Labour History: A Journal of Labour and Social History Volume 40 ; 40 >
+    au < manifest ; 1981 ; Labour History: A Journal of Labour and Social History Volume 41 ; 41 >
+    au < manifest ; 1982 ; Labour History: A Journal of Labour and Social History Volume 42 ; 42 >
+    au < manifest ; 1982 ; Labour History: A Journal of Labour and Social History Volume 43 ; 43 >
+    au < manifest ; 1983 ; Labour History: A Journal of Labour and Social History Volume 44 ; 44 >
+    au < manifest ; 1983 ; Labour History: A Journal of Labour and Social History Volume 45 ; 45 >
+    au < manifest ; 1984 ; Labour History: A Journal of Labour and Social History Volume 46 ; 46 >
+    au < manifest ; 1984 ; Labour History: A Journal of Labour and Social History Volume 47 ; 47 >
+    au < manifest ; 1985 ; Labour History: A Journal of Labour and Social History Volume 48 ; 48 >
+    au < manifest ; 1985 ; Labour History: A Journal of Labour and Social History Volume 49 ; 49 >
+    au < manifest ; 1986 ; Labour History: A Journal of Labour and Social History Volume 50 ; 50 >
+    au < manifest ; 1986 ; Labour History: A Journal of Labour and Social History Volume 51 ; 51 >
+    au < manifest ; 1987 ; Labour History: A Journal of Labour and Social History Volume 52 ; 52 >
+    au < manifest ; 1987 ; Labour History: A Journal of Labour and Social History Volume 53 ; 53 >
+    au < manifest ; 1988 ; Labour History: A Journal of Labour and Social History Volume 54 ; 54 >
+    au < manifest ; 1988 ; Labour History: A Journal of Labour and Social History Volume 55 ; 55 >
+    au < manifest ; 1989 ; Labour History: A Journal of Labour and Social History Volume 56 ; 56 >
+    au < manifest ; 1989 ; Labour History: A Journal of Labour and Social History Volume 57 ; 57 >
+    au < manifest ; 1990 ; Labour History: A Journal of Labour and Social History Volume 58 ; 58 >
+    au < manifest ; 1990 ; Labour History: A Journal of Labour and Social History Volume 59 ; 59 >
+    au < manifest ; 1991 ; Labour History: A Journal of Labour and Social History Volume 60 ; 60 >
+    au < manifest ; 1991 ; Labour History: A Journal of Labour and Social History Volume 61 ; 61 >
+    au < manifest ; 1992 ; Labour History: A Journal of Labour and Social History Volume 62 ; 62 >
+    au < manifest ; 1992 ; Labour History: A Journal of Labour and Social History Volume 63 ; 63 >
+    au < manifest ; 1993 ; Labour History: A Journal of Labour and Social History Volume 64 ; 64 >
+    au < manifest ; 1993 ; Labour History: A Journal of Labour and Social History Volume 65 ; 65 >
+    au < manifest ; 1994 ; Labour History: A Journal of Labour and Social History Volume 66 ; 66 >
+    au < manifest ; 1994 ; Labour History: A Journal of Labour and Social History Volume 67 ; 67 >
+    au < manifest ; 1995 ; Labour History: A Journal of Labour and Social History Volume 68 ; 68 >
+    au < manifest ; 1995 ; Labour History: A Journal of Labour and Social History Volume 69 ; 69 >
+    au < manifest ; 1996 ; Labour History: A Journal of Labour and Social History Volume 70 ; 70 >
+    au < manifest ; 1996 ; Labour History: A Journal of Labour and Social History Volume 71 ; 71 >
+    au < manifest ; 1997 ; Labour History: A Journal of Labour and Social History Volume 72 ; 72 >
+    au < manifest ; 1997 ; Labour History: A Journal of Labour and Social History Volume 73 ; 73 >
+    au < manifest ; 1998 ; Labour History: A Journal of Labour and Social History Volume 74 ; 74 >
+    au < manifest ; 1998 ; Labour History: A Journal of Labour and Social History Volume 75 ; 75 >
+    au < manifest ; 1999 ; Labour History: A Journal of Labour and Social History Volume 76 ; 76 >
+    au < manifest ; 1999 ; Labour History: A Journal of Labour and Social History Volume 77 ; 77 >
+    au < manifest ; 2000 ; Labour History: A Journal of Labour and Social History Volume 78 ; 78 >
+    au < manifest ; 2000 ; Labour History: A Journal of Labour and Social History Volume 79 ; 79 >
+    au < manifest ; 2001 ; Labour History: A Journal of Labour and Social History Volume 80 ; 80 >
+    au < manifest ; 2001 ; Labour History: A Journal of Labour and Social History Volume 81 ; 81 >
+    au < manifest ; 2002 ; Labour History: A Journal of Labour and Social History Volume 82 ; 82 >
+    au < manifest ; 2002 ; Labour History: A Journal of Labour and Social History Volume 83 ; 83 >
+    au < manifest ; 2003 ; Labour History: A Journal of Labour and Social History Volume 84 ; 84 >
+    au < manifest ; 2003 ; Labour History: A Journal of Labour and Social History Volume 85 ; 85 >
+    au < manifest ; 2004 ; Labour History: A Journal of Labour and Social History Volume 86 ; 86 >
+    au < manifest ; 2004 ; Labour History: A Journal of Labour and Social History Volume 87 ; 87 >
+    au < manifest ; 2005 ; Labour History: A Journal of Labour and Social History Volume 88 ; 88 >
+    au < manifest ; 2005 ; Labour History: A Journal of Labour and Social History Volume 89 ; 89 >
+    au < manifest ; 2006 ; Labour History: A Journal of Labour and Social History Volume 90 ; 90 >
+    au < manifest ; 2006 ; Labour History: A Journal of Labour and Social History Volume 91 ; 91 >
+    au < manifest ; 2007 ; Labour History: A Journal of Labour and Social History Volume 92 ; 92 >
+    au < manifest ; 2007 ; Labour History: A Journal of Labour and Social History Volume 93 ; 93 >
     au < doNotProcess ; 2008 ; Labour History: A Journal of Labour and Social History Volume 94 ; 94 >
     au < doNotProcess ; 2008 ; Labour History: A Journal of Labour and Social History Volume 95 ; 95 >
     au < doNotProcess ; 2009 ; Labour History: A Journal of Labour and Social History Volume 96 ; 96 >
@@ -771,11 +955,12 @@
     au < doNotProcess ; 2018 ; Labour History: A Journal of Labour and Social History Volume 114 ; 114 >
     au < doNotProcess ; 2018 ; Labour History: A Journal of Labour and Social History Volume 115 ; 115 >
     au < doNotProcess ; 2019 ; Labour History: A Journal of Labour and Social History Volume 116 ; 116 >
-    au < exists ; 2019 ; Labour History: A Journal of Labour and Social History Volume 117 ; 117 >
-    au < exists ; 2020 ; Labour History: A Journal of Labour and Social History Volume 118 ; 118 >
-    au < expected ; 2020 ; Labour History: A Journal of Labour and Social History Volume 119 ; 119 >
-    au < expected ; 2021 ; Labour History: A Journal of Labour and Social History Volume 120 ; 120 >
-    au < expected ; 2021 ; Labour History: A Journal of Labour and Social History Volume 121 ; 121 >
+    au < released ; 2019 ; Labour History: A Journal of Labour and Social History Volume 117 ; 117 >
+    au < released ; 2020 ; Labour History: A Journal of Labour and Social History Volume 118 ; 118 >
+    au < released ; 2020 ; Labour History: A Journal of Labour and Social History Volume 119 ; 119 >
+    au < released ; 2021 ; Labour History: A Journal of Labour and Social History Volume 120 ; 120 >
+    au < manifest ; 2021 ; Labour History: A Journal of Labour and Social History Volume 121 ; 121 >
+    au < expected ; 2022 ; Labour History: A Journal of Labour and Social History Volume 122 ; 122 >
 
   }
 
@@ -789,24 +974,257 @@
     >
 
     param[journal_id] = lhr
+    #Published 1960-present
 
-    au < doNotProcess ; 2005 ; Labour History Review Volume 70 [Atypon] ; 70 >
-    au < doNotProcess ; 2006 ; Labour History Review Volume 71 [Atypon] ; 71 >
-    au < doNotProcess ; 2007 ; Labour History Review Volume 72 [Atypon] ; 72 >
-    au < doNotProcess ; 2008 ; Labour History Review Volume 73 [Atypon] ; 73 >
-    au < doNotProcess ; 2009 ; Labour History Review Volume 74 [Atypon] ; 74 >
-    au < doNotProcess ; 2010 ; Labour History Review Volume 75 [Atypon] ; 75 >
-    au < doNotProcess ; 2011 ; Labour History Review Volume 76 [Atypon] ; 76 >
-    au < doNotProcess ; 2012 ; Labour History Review Volume 77 [Atypon] ; 77 >
-    au < exists ; 2013 ; Labour History Review Volume 78 [Atypon] ; 78 >
-    au < doNotProcess ; 2014 ; Labour History Review Volume 79 [Atypon] ; 79 >
-    au < doNotProcess ; 2015 ; Labour History Review Volume 80 [Atypon] ; 80 >
-    au < doNotProcess ; 2016 ; Labour History Review Volume 81 [Atypon] ; 81 >
-    au < doNotProcess ; 2017 ; Labour History Review Volume 82 [Atypon] ; 82 >
-    au < doNotProcess ; 2018 ; Labour History Review Volume 83 [Atypon] ; 83 >
-    au < doNotProcess ; 2019 ; Labour History Review Volume 84 [Atypon] ; 84 >
-    au < exists ; 2020 ; Labour History Review Volume 85 [Atypon] ; 85 >
-    au < expected ; 2021 ; Labour History Review Volume 86 [Atypon] ; 86 >
+    au < manifest ; 2000 ; Labour History Review Volume 65 ; 65 >
+    au < manifest ; 2001 ; Labour History Review Volume 66 ; 66 >
+    au < manifest ; 2002 ; Labour History Review Volume 67 ; 67 >
+    au < manifest ; 2003 ; Labour History Review Volume 68 ; 68 >
+    au < manifest ; 2004 ; Labour History Review Volume 69 ; 69 >
+    au < doNotProcess ; 2005 ; Labour History Review Volume 70 ; 70 >
+    au < doNotProcess ; 2006 ; Labour History Review Volume 71 ; 71 >
+    au < doNotProcess ; 2007 ; Labour History Review Volume 72 ; 72 >
+    au < doNotProcess ; 2008 ; Labour History Review Volume 73 ; 73 >
+    au < doNotProcess ; 2009 ; Labour History Review Volume 74 ; 74 >
+    au < doNotProcess ; 2010 ; Labour History Review Volume 75 ; 75 >
+    au < doNotProcess ; 2011 ; Labour History Review Volume 76 ; 76 >
+    au < doNotProcess ; 2012 ; Labour History Review Volume 77 ; 77 >
+    au < released ; 2013 ; Labour History Review Volume 78 ; 78 >
+    au < doNotProcess ; 2014 ; Labour History Review Volume 79 ; 79 >
+    au < doNotProcess ; 2015 ; Labour History Review Volume 80 ; 80 >
+    au < doNotProcess ; 2016 ; Labour History Review Volume 81 ; 81 >
+    au < doNotProcess ; 2017 ; Labour History Review Volume 82 ; 82 >
+    au < doNotProcess ; 2018 ; Labour History Review Volume 83 ; 83 >
+    au < doNotProcess ; 2019 ; Labour History Review Volume 84 ; 84 >
+    au < released ; 2020 ; Labour History Review Volume 85 ; 85 >
+    au < released ; 2021 ; Labour History Review Volume 86 ; 86 >
+    au < manifest ; 2022 ; Labour History Review Volume 87 ; 87 >
+
+  }
+
+  {
+
+    title <
+      name = Marx House Bulletin ;
+      eissn = 2634-8233 ;
+      issnl = 2634-8233
+    >
+
+    param[journal_id] = mhb
+    #Published 1934-2002
+
+    au < manifest ; 1934 ; Marx House Bulletin Volume 1 ; 1 >
+    au < manifest ; 1935 ; Marx House Bulletin Volume 2 ; 2 >
+    au < manifest ; 1935 ; Marx House Bulletin Volume 3 ; 3 >
+    au < manifest ; 1935 ; Marx House Bulletin Volume 4 ; 4 >
+    au < manifest ; 1941 ; Marx House Bulletin Volume 5 ; 5 >
+    au < manifest ; 1941 ; Marx House Bulletin Volume 6 ; 6 >
+    au < manifest ; 1941 ; Marx House Bulletin Volume 7 ; 7 >
+    au < manifest ; 1942 ; Marx House Bulletin Volume 8 ; 8 >
+    au < manifest ; 1942 ; Marx House Bulletin Volume 9 ; 9 >
+    au < manifest ; 1942 ; Marx House Bulletin Volume 10 ; 10 >
+    au < manifest ; 1942 ; Marx House Bulletin Volume 11 ; 11 >
+    au < manifest ; 1943 ; Marx House Bulletin Volume 12 ; 12 >
+    au < manifest ; 1944 ; Marx House Bulletin Volume 13 ; 13 >
+    au < manifest ; 1945 ; Marx House Bulletin Volume 14 ; 14 >
+    au < manifest ; 1945 ; Marx House Bulletin Volume 15 ; 15 >
+    au < manifest ; 1945 ; Marx House Bulletin Volume 16 ; 16 >
+    au < manifest ; 1945 ; Marx House Bulletin Volume 17 ; 17 >
+    au < manifest ; 1945 ; Marx House Bulletin Volume 18 ; 18 >
+    au < manifest ; 1946 ; Marx House Bulletin Volume 19 ; 19 >
+    au < manifest ; 1961 ; Marx House Bulletin Volume 20 ; 20 >
+    au < manifest ; 1962 ; Marx House Bulletin Volume 21 ; 21 >
+    au < manifest ; 1962 ; Marx House Bulletin Volume 22 ; 22 >
+    au < manifest ; 1962 ; Marx House Bulletin Volume 23 ; 23 >
+    au < manifest ; 1962 ; Marx House Bulletin Volume 24 ; 24 >
+    au < manifest ; 1963 ; Marx House Bulletin Volume 25 ; 25 >
+    au < manifest ; 1963 ; Marx House Bulletin Volume 26 ; 26 >
+    au < manifest ; 1963 ; Marx House Bulletin Volume 27 ; 27 >
+    au < manifest ; 1963 ; Marx House Bulletin Volume 28 ; 28 >
+    au < manifest ; 1964 ; Marx House Bulletin Volume 29 ; 29 >
+    au < manifest ; 1964 ; Marx House Bulletin Volume 30 ; 30 >
+    au < manifest ; 1964 ; Marx House Bulletin Volume 31 ; 31 >
+    au < manifest ; 1964 ; Marx House Bulletin Volume 32 ; 32 >
+    au < manifest ; 1965 ; Marx House Bulletin Volume 33 ; 33 >
+    au < manifest ; 1965 ; Marx House Bulletin Volume 34 ; 34 >
+    au < manifest ; 1965 ; Marx House Bulletin Volume 35 ; 35 >
+    au < manifest ; 1965 ; Marx House Bulletin Volume 36 ; 36 >
+    au < manifest ; 1966 ; Marx House Bulletin Volume 37 ; 37 >
+    au < manifest ; 1966 ; Marx House Bulletin Volume 38 ; 38 >
+    au < manifest ; 1966 ; Marx House Bulletin Volume 39 ; 39 >
+    au < manifest ; 1966 ; Marx House Bulletin Volume 40 ; 40 >
+    au < manifest ; 1967 ; Marx House Bulletin Volume 44 ; 44 >
+    au < manifest ; 1968 ; Marx House Bulletin Volume 45 ; 45 >
+    au < manifest ; 1968 ; Marx House Bulletin Volume 46 ; 46 >
+    au < manifest ; 1968 ; Marx House Bulletin Volume 47 ; 47 >
+    au < manifest ; 1968 ; Marx House Bulletin Volume 48 ; 48 >
+    au < manifest ; 1969 ; Marx House Bulletin Volume 49 ; 49 >
+    au < manifest ; 1969 ; Marx House Bulletin Volume 50 ; 50 >
+    au < manifest ; 1969 ; Marx House Bulletin Volume 51 ; 51 >
+    au < manifest ; 1970 ; Marx House Bulletin Volume 53 ; 53 >
+    au < manifest ; 1970 ; Marx House Bulletin Volume 54 ; 54 >
+    au < manifest ; 1970 ; Marx House Bulletin Volume 55 ; 55 >
+    au < manifest ; 1970 ; Marx House Bulletin Volume 56 ; 56 >
+    au < manifest ; 1971 ; Marx House Bulletin Volume 57 ; 57 >
+    au < manifest ; 1971 ; Marx House Bulletin Volume 58 ; 58 >
+    au < manifest ; 1971 ; Marx House Bulletin Volume 59 ; 59 >
+    au < manifest ; 1971 ; Marx House Bulletin Volume 60 ; 60 >
+    au < manifest ; 1972 ; Marx House Bulletin Volume 61 ; 61 >
+    au < manifest ; 1972 ; Marx House Bulletin Volume 62 ; 62 >
+    au < manifest ; 1972 ; Marx House Bulletin Volume 63 ; 63 >
+    au < manifest ; 1972 ; Marx House Bulletin Volume 64 ; 64 >
+    au < manifest ; 1973 ; Marx House Bulletin Volume 65 ; 65 >
+    au < manifest ; 1973 ; Marx House Bulletin Volume 66 ; 66 >
+    au < manifest ; 1973 ; Marx House Bulletin Volume 67 ; 67 >
+    au < manifest ; 1973 ; Marx House Bulletin Volume 68 ; 68 >
+    au < manifest ; 1974 ; Marx House Bulletin Volume 69 ; 69 >
+    au < manifest ; 1974 ; Marx House Bulletin Volume 70 ; 70 >
+    au < manifest ; 1974 ; Marx House Bulletin Volume 71 ; 71 >
+    au < manifest ; 1974 ; Marx House Bulletin Volume 72 ; 72 >
+    au < manifest ; 1975 ; Marx House Bulletin Volume 73 ; 73 >
+    au < manifest ; 1975 ; Marx House Bulletin Volume 74 ; 74 >
+    au < manifest ; 1975 ; Marx House Bulletin Volume 75 ; 75 >
+    au < manifest ; 1975 ; Marx House Bulletin Volume 76 ; 76 >
+    au < manifest ; 1976 ; Marx House Bulletin Volume 77 ; 77 >
+    au < manifest ; 1976 ; Marx House Bulletin Volume 78 ; 78 >
+    au < manifest ; 1976 ; Marx House Bulletin Volume 79 ; 79 >
+    au < manifest ; 1976 ; Marx House Bulletin Volume 80 ; 80 >
+    au < manifest ; 1977 ; Marx House Bulletin Volume 81 ; 81 >
+    au < manifest ; 1977 ; Marx House Bulletin Volume 82 ; 82 >
+    au < manifest ; 1977 ; Marx House Bulletin Volume 83 ; 83 >
+    au < manifest ; 1977 ; Marx House Bulletin Volume 84 ; 84 >
+    au < manifest ; 1978 ; Marx House Bulletin Volume 85 ; 85 >
+    au < manifest ; 1978 ; Marx House Bulletin Volume 86 ; 86 >
+    au < exists ; 1978 ; Marx House Bulletin Volume 87-88 ; 87-88 >
+    au < manifest ; 1979 ; Marx House Bulletin Volume 89 ; 89 >
+    au < manifest ; 1979 ; Marx House Bulletin Volume 90 ; 90 >
+    au < manifest ; 1979 ; Marx House Bulletin Volume 91 ; 91 >
+    au < manifest ; 1979 ; Marx House Bulletin Volume 92 ; 92 >
+    au < manifest ; 1980 ; Marx House Bulletin Volume 93 ; 93 >
+    au < exists ; 1980 ; Marx House Bulletin Volume 94-95 ; 94-95 >
+    au < exists ; 1980 ; Marx House Bulletin Volume 96-97 ; 96-97 >
+    au < exists ; 1981 ; Marx House Bulletin Volume 98-99 ; 98-99 >
+    au < manifest ; 1982 ; Marx House Bulletin Volume 100 ; 100 >
+    au < manifest ; 1982 ; Marx House Bulletin Volume 101 ; 101 >
+    au < manifest ; 1983 ; Marx House Bulletin Volume 102 ; 102 >
+    au < manifest ; 1983 ; Marx House Bulletin Volume 103 ; 103 >
+    au < manifest ; 1984 ; Marx House Bulletin Volume 104 ; 104 >
+    au < manifest ; 1984 ; Marx House Bulletin Volume 105 ; 105 >
+    au < manifest ; 1985 ; Marx House Bulletin Volume 106 ; 106 >
+    au < manifest ; 1985 ; Marx House Bulletin Volume 107 ; 107 >
+    au < manifest ; 1986 ; Marx House Bulletin Volume 108 ; 108 >
+    au < manifest ; 1987 ; Marx House Bulletin Volume 109 ; 109 >
+    au < manifest ; 1988 ; Marx House Bulletin Volume 110 ; 110 >
+    au < manifest ; 1988 ; Marx House Bulletin Volume 111 ; 111 >
+    au < manifest ; 1989 ; Marx House Bulletin Volume 112 ; 112 >
+    au < manifest ; 1989 ; Marx House Bulletin Volume 113 ; 113 >
+    au < manifest ; 1990 ; Marx House Bulletin Volume 114 ; 114 >
+    au < manifest ; 1990 ; Marx House Bulletin Volume 115 ; 115 >
+    au < manifest ; 1991 ; Marx House Bulletin Volume 116 ; 116 >
+    au < manifest ; 1992 ; Marx House Bulletin Volume 117 ; 117 >
+    au < manifest ; 1993 ; Marx House Bulletin Volume 118 ; 118 >
+    au < manifest ; 1993 ; Marx House Bulletin Volume 119 ; 119 >
+    au < doesNotExist ; 1992 ; Marx House Bulletin Volume 120 ; 120 >
+    au < manifest ; 1994 ; Marx House Bulletin Volume 121 ; 121 >
+    au < manifest ; 1994 ; Marx House Bulletin Volume 122 ; 122 >
+    au < manifest ; 1995 ; Marx House Bulletin Volume 123 ; 123 >
+    au < manifest ; 1995 ; Marx House Bulletin Volume 124 ; 124 >
+    au < manifest ; 1996 ; Marx House Bulletin Volume 125 ; 125 >
+    au < manifest ; 1996 ; Marx House Bulletin Volume 126 ; 126 >
+    au < manifest ; 1997 ; Marx House Bulletin Volume 127 ; 127 >
+    au < manifest ; 1997 ; Marx House Bulletin Volume 128 ; 128 >
+    au < manifest ; 1998 ; Marx House Bulletin Volume 129 ; 129 >
+    au < manifest ; 1999 ; Marx House Bulletin Volume 130 ; 130 >
+    au < manifest ; 2000 ; Marx House Bulletin Volume 131 ; 131 >
+    au < manifest ; 2000 ; Marx House Bulletin Volume 132 ; 132 >
+    au < manifest ; 2001 ; Marx House Bulletin Volume 133 ; 133 >
+    au < manifest ; 2001 ; Marx House Bulletin Volume 134 ; 134 >
+    au < manifest ; 2002 ; Marx House Bulletin Volume 135 ; 135 >
+    au < manifest ; 2002 ; Marx House Bulletin Volume 136 ; 136 >
+
+  }
+
+  {
+
+    title <
+      name = Marx Memorial Library Quarterly Bulletin ;
+      eissn = 0025-410X ;
+      issnl = 0025-410X
+    >
+
+    param[journal_id] = mmlqb
+    #Published 1957-1969
+
+    au < manifest ; 1957 ; Marx Memorial Library Quarterly Bulletin Volume 1 ; 1 >
+    au < manifest ; 1957 ; Marx Memorial Library Quarterly Bulletin Volume 2 ; 2 >
+    au < manifest ; 1957 ; Marx Memorial Library Quarterly Bulletin Volume 3 ; 3 >
+    au < manifest ; 1957 ; Marx Memorial Library Quarterly Bulletin Volume 4 ; 4 >
+    au < manifest ; 1958 ; Marx Memorial Library Quarterly Bulletin Volume 5 ; 5 >
+    au < manifest ; 1958 ; Marx Memorial Library Quarterly Bulletin Volume 6 ; 6 >
+    au < manifest ; 1958 ; Marx Memorial Library Quarterly Bulletin Volume 7 ; 7 >
+    au < manifest ; 1958 ; Marx Memorial Library Quarterly Bulletin Volume 8 ; 8 >
+    au < manifest ; 1959 ; Marx Memorial Library Quarterly Bulletin Volume 9 ; 9 >
+    au < manifest ; 1959 ; Marx Memorial Library Quarterly Bulletin Volume 10 ; 10 >
+    au < manifest ; 1959 ; Marx Memorial Library Quarterly Bulletin Volume 11 ; 11 >
+    au < manifest ; 1959 ; Marx Memorial Library Quarterly Bulletin Volume 12 ; 12 >
+    au < manifest ; 1960 ; Marx Memorial Library Quarterly Bulletin Volume 13 ; 13 >
+    au < manifest ; 1960 ; Marx Memorial Library Quarterly Bulletin Volume 14 ; 14 >
+    au < manifest ; 1960 ; Marx Memorial Library Quarterly Bulletin Volume 15 ; 15 >
+    au < manifest ; 1960 ; Marx Memorial Library Quarterly Bulletin Volume 16 ; 16 >
+    au < manifest ; 1961 ; Marx Memorial Library Quarterly Bulletin Volume 17 ; 17 >
+    au < doesNotExist ; 1962 ; Marx Memorial Library Quarterly Bulletin Volume 18 ; 18 >
+    au < manifest ; 1961 ; Marx Memorial Library Quarterly Bulletin Volume 19 ; 19 >
+    au < manifest ; 1961 ; Marx Memorial Library Quarterly Bulletin Volume 20 ; 20 >
+    au < manifest ; 1962 ; Marx Memorial Library Quarterly Bulletin Volume 21 ; 21 >
+    au < manifest ; 1962 ; Marx Memorial Library Quarterly Bulletin Volume 22 ; 22 >
+    au < manifest ; 1962 ; Marx Memorial Library Quarterly Bulletin Volume 23 ; 23 >
+    au < manifest ; 1962 ; Marx Memorial Library Quarterly Bulletin Volume 24 ; 24 >
+    au < manifest ; 1963 ; Marx Memorial Library Quarterly Bulletin Volume 25 ; 25 >
+    au < manifest ; 1963 ; Marx Memorial Library Quarterly Bulletin Volume 26 ; 26 >
+    au < manifest ; 1963 ; Marx Memorial Library Quarterly Bulletin Volume 27 ; 27 >
+    au < manifest ; 1963 ; Marx Memorial Library Quarterly Bulletin Volume 28 ; 28 >
+    au < manifest ; 1964 ; Marx Memorial Library Quarterly Bulletin Volume 29 ; 29 >
+    au < manifest ; 1964 ; Marx Memorial Library Quarterly Bulletin Volume 30 ; 30 >
+    au < manifest ; 1964 ; Marx Memorial Library Quarterly Bulletin Volume 31 ; 31 >
+    au < manifest ; 1964 ; Marx Memorial Library Quarterly Bulletin Volume 32 ; 32 >
+    au < manifest ; 1965 ; Marx Memorial Library Quarterly Bulletin Volume 33 ; 33 >
+    au < manifest ; 1965 ; Marx Memorial Library Quarterly Bulletin Volume 34 ; 34 >
+    au < manifest ; 1965 ; Marx Memorial Library Quarterly Bulletin Volume 35 ; 35 >
+    au < manifest ; 1965 ; Marx Memorial Library Quarterly Bulletin Volume 36 ; 36 >
+    au < manifest ; 1966 ; Marx Memorial Library Quarterly Bulletin Volume 37 ; 37 >
+    au < manifest ; 1966 ; Marx Memorial Library Quarterly Bulletin Volume 38 ; 38 >
+    au < manifest ; 1966 ; Marx Memorial Library Quarterly Bulletin Volume 39 ; 39 >
+    au < manifest ; 1966 ; Marx Memorial Library Quarterly Bulletin Volume 40 ; 40 >
+    au < doesNotExist ; 1967 ; Marx Memorial Library Quarterly Bulletin Volume 41 ; 41 >
+    au < doesNotExist ; 1967 ; Marx Memorial Library Quarterly Bulletin Volume 42 ; 42 >
+    au < doesNotExist ; 1967 ; Marx Memorial Library Quarterly Bulletin Volume 43 ; 43 >
+    au < manifest ; 1967 ; Marx Memorial Library Quarterly Bulletin Volume 44 ; 44 >
+    au < manifest ; 1968 ; Marx Memorial Library Quarterly Bulletin Volume 45 ; 45 >
+    au < manifest ; 1968 ; Marx Memorial Library Quarterly Bulletin Volume 46 ; 46 >
+    au < manifest ; 1968 ; Marx Memorial Library Quarterly Bulletin Volume 47 ; 47 >
+    au < manifest ; 1968 ; Marx Memorial Library Quarterly Bulletin Volume 48 ; 48 >
+    au < manifest ; 1969 ; Marx Memorial Library Quarterly Bulletin Volume 49 ; 49 >
+    au < manifest ; 1969 ; Marx Memorial Library Quarterly Bulletin Volume 50 ; 50 >
+    au < manifest ; 1969 ; Marx Memorial Library Quarterly Bulletin Volume 51 ; 51 >
+
+  }
+
+  {
+
+    title <
+      name = The Quarterly Bulletin of the Marx Memorial Library ;
+      eissn = 0025-410X ;
+      issnl = 0025-410X
+    >
+
+    param[journal_id] = mmlb
+    #Published 1970-2004
+
+    au < released ; 1982 ; The Quarterly Bulletin of the Marx Memorial Library Volume 100 ; 100 >
+    au < manifest ; 2003 ; The Quarterly Bulletin of the Marx Memorial Library Volume 137 ; 137 >
+    au < manifest ; 2003 ; The Quarterly Bulletin of the Marx Memorial Library Volume 138 ; 138 >
+    au < manifest ; 2004 ; The Quarterly Bulletin of the Marx Memorial Library Volume 139 ; 139 >
+    au < manifest ; 2004 ; The Quarterly Bulletin of the Marx Memorial Library Volume 140 ; 140 >
 
   }
 
@@ -820,7 +1238,16 @@
     >
 
     param[journal_id] = mb
+    #Published 1994-present
 
+    au < manifest ; 2000 ; Modern Believing Volume 41 ; 41 >
+    au < manifest ; 2001 ; Modern Believing Volume 42 ; 42 >
+    au < manifest ; 2002 ; Modern Believing Volume 43 ; 43 >
+    au < manifest ; 2003 ; Modern Believing Volume 44 ; 44 >
+    au < manifest ; 2004 ; Modern Believing Volume 45 ; 45 >
+    au < manifest ; 2005 ; Modern Believing Volume 46 ; 46 >
+    au < manifest ; 2006 ; Modern Believing Volume 47 ; 47 >
+    au < manifest ; 2007 ; Modern Believing Volume 48 ; 48 >
     au < doNotProcess ; 2008 ; Modern Believing Volume 49 ; 49 >
     au < doNotProcess ; 2009 ; Modern Believing Volume 50 ; 50 >
     au < doNotProcess ; 2010 ; Modern Believing Volume 51 ; 51 >
@@ -833,8 +1260,9 @@
     au < doNotProcess ; 2017 ; Modern Believing Volume 58 ; 58 >
     au < doNotProcess ; 2018 ; Modern Believing Volume 59 ; 59 >
     au < doNotProcess ; 2019 ; Modern Believing Volume 60 ; 60 >
-    au < exists ; 2020 ; Modern Believing Volume 61 ; 61 >
-    au < expected ; 2021 ; Modern Believing Volume 62 ; 62 >
+    au < released ; 2020 ; Modern Believing Volume 61 ; 61 >
+    au < manifest ; 2021 ; Modern Believing Volume 62 ; 62 >
+    au < manifest ; 2022 ; Modern Believing Volume 63 ; 63 >
 
   }
 
@@ -847,43 +1275,43 @@
     >
 
     param[journal_id] = mc
-
+    #Published 1957-1992
     comment[continued_by] = Modern Believing
 
-    au < exists ; 1957-1958 ; The Modern Churchman Volume 1 ; 1 >
-    au < exists ; 1958-1959 ; The Modern Churchman Volume 2 ; 2 >
-    au < exists ; 1959-1960 ; The Modern Churchman Volume 3 ; 3 >
-    au < exists ; 1960-1961 ; The Modern Churchman Volume 4 ; 4 >
-    au < exists ; 1961-1962 ; The Modern Churchman Volume 5 ; 5 >
-    au < exists ; 1962-1963 ; The Modern Churchman Volume 6 ; 6 >
-    au < exists ; 1963-1964 ; The Modern Churchman Volume 7 ; 7 >
-    au < exists ; 1964-1965 ; The Modern Churchman Volume 8 ; 8 >
-    au < exists ; 1965-1966 ; The Modern Churchman Volume 9 ; 9 >
-    au < exists ; 1966-1967 ; The Modern Churchman Volume 10 ; 10 >
-    au < exists ; 1967-1968 ; The Modern Churchman Volume 11 ; 11 >
-    au < exists ; 1968-1969 ; The Modern Churchman Volume 12 ; 12 >
-    au < exists ; 1969-1970 ; The Modern Churchman Volume 13 ; 13 >
-    au < exists ; 1970-1971 ; The Modern Churchman Volume 14 ; 14 >
-    au < exists ; 1971-1972 ; The Modern Churchman Volume 15 ; 15 >
-    au < exists ; 1972-1973 ; The Modern Churchman Volume 16 ; 16 >
-    au < exists ; 1973-1974 ; The Modern Churchman Volume 17 ; 17 >
-    au < exists ; 1974-1975 ; The Modern Churchman Volume 18 ; 18 >
-    au < exists ; 1975-1976 ; The Modern Churchman Volume 19 ; 19 >
-    au < exists ; 1977 ; The Modern Churchman Volume 20 ; 20 >
-    au < exists ; 1977-1978 ; The Modern Churchman Volume 21 ; 21 >
-    au < exists ; 1978-1979 ; The Modern Churchman Volume 22 ; 22 >
-    au < exists ; 1980 ; The Modern Churchman Volume 23 ; 23 >
-    au < exists ; 1981 ; The Modern Churchman Volume 24 ; 24 >
-    au < exists ; 1982-1983 ; The Modern Churchman Volume 25 ; 25 >
-    au < exists ; 1983-1984 ; The Modern Churchman Volume 26 ; 26 >
-    au < exists ; 1984-1985 ; The Modern Churchman Volume 27 ; 27 >
-    au < exists ; 1985-1986 ; The Modern Churchman Volume 28 ; 28 >
-    au < exists ; 1986-1987 ; The Modern Churchman Volume 29 ; 29 >
-    au < exists ; 1988-1989 ; The Modern Churchman Volume 30 ; 30 >
-    au < exists ; 1989-1990 ; The Modern Churchman Volume 31 ; 31 >
-    au < exists ; 1990-1991 ; The Modern Churchman Volume 32 ; 32 >
-    au < exists ; 1991-1992 ; The Modern Churchman Volume 33 ; 33 >
-    au < exists ; 1992-1993 ; The Modern Churchman Volume 34 ; 34 >
+    au < manifest ; 1957-1958 ; The Modern Churchman Volume 1 ; 1 >
+    au < manifest ; 1958-1959 ; The Modern Churchman Volume 2 ; 2 >
+    au < manifest ; 1959-1960 ; The Modern Churchman Volume 3 ; 3 >
+    au < manifest ; 1960-1961 ; The Modern Churchman Volume 4 ; 4 >
+    au < manifest ; 1961-1962 ; The Modern Churchman Volume 5 ; 5 >
+    au < manifest ; 1962-1963 ; The Modern Churchman Volume 6 ; 6 >
+    au < manifest ; 1963-1964 ; The Modern Churchman Volume 7 ; 7 >
+    au < manifest ; 1964-1965 ; The Modern Churchman Volume 8 ; 8 >
+    au < manifest ; 1965-1966 ; The Modern Churchman Volume 9 ; 9 >
+    au < manifest ; 1966-1967 ; The Modern Churchman Volume 10 ; 10 >
+    au < manifest ; 1967-1968 ; The Modern Churchman Volume 11 ; 11 >
+    au < manifest ; 1968-1969 ; The Modern Churchman Volume 12 ; 12 >
+    au < manifest ; 1969-1970 ; The Modern Churchman Volume 13 ; 13 >
+    au < manifest ; 1970-1971 ; The Modern Churchman Volume 14 ; 14 >
+    au < manifest ; 1971-1972 ; The Modern Churchman Volume 15 ; 15 >
+    au < manifest ; 1972-1973 ; The Modern Churchman Volume 16 ; 16 >
+    au < manifest ; 1973-1974 ; The Modern Churchman Volume 17 ; 17 >
+    au < manifest ; 1974-1975 ; The Modern Churchman Volume 18 ; 18 >
+    au < manifest ; 1975-1976 ; The Modern Churchman Volume 19 ; 19 >
+    au < manifest ; 1977 ; The Modern Churchman Volume 20 ; 20 >
+    au < manifest ; 1977-1978 ; The Modern Churchman Volume 21 ; 21 >
+    au < manifest ; 1978-1979 ; The Modern Churchman Volume 22 ; 22 >
+    au < manifest ; 1980 ; The Modern Churchman Volume 23 ; 23 >
+    au < manifest ; 1981 ; The Modern Churchman Volume 24 ; 24 >
+    au < manifest ; 1982-1983 ; The Modern Churchman Volume 25 ; 25 >
+    au < manifest ; 1983-1984 ; The Modern Churchman Volume 26 ; 26 >
+    au < manifest ; 1984-1985 ; The Modern Churchman Volume 27 ; 27 >
+    au < manifest ; 1985-1986 ; The Modern Churchman Volume 28 ; 28 >
+    au < manifest ; 1986-1987 ; The Modern Churchman Volume 29 ; 29 >
+    au < manifest ; 1988-1989 ; The Modern Churchman Volume 30 ; 30 >
+    au < manifest ; 1989-1990 ; The Modern Churchman Volume 31 ; 31 >
+    au < manifest ; 1990-1991 ; The Modern Churchman Volume 32 ; 32 >
+    au < manifest ; 1991-1992 ; The Modern Churchman Volume 33 ; 33 >
+    au < manifest ; 1992-1993 ; The Modern Churchman Volume 34 ; 34 >
 
   }
 
@@ -897,6 +1325,7 @@
     >
 
     param[journal_id] = msmi
+    #Published 2007-present
 
     au < doNotProcess ; 2007 ; Music, Sound, and the Moving Image Volume 1 ; 1 >
     au < doNotProcess ; 2008 ; Music, Sound, and the Moving Image Volume 2 ; 2 >
@@ -904,15 +1333,16 @@
     au < doNotProcess ; 2010 ; Music, Sound, and the Moving Image Volume 4 ; 4 >
     au < doNotProcess ; 2011 ; Music, Sound, and the Moving Image Volume 5 ; 5 >
     au < doNotProcess ; 2012 ; Music, Sound, and the Moving Image Volume 6 ; 6 >
-    au < exists ; 2013 ; Music, Sound, and the Moving Image Volume 7 ; 7 >
+    au < released ; 2013 ; Music, Sound, and the Moving Image Volume 7 ; 7 >
     au < doNotProcess ; 2014 ; Music, Sound, and the Moving Image Volume 8 ; 8 >
     au < doNotProcess ; 2015 ; Music, Sound, and the Moving Image Volume 9 ; 9 >
     au < doNotProcess ; 2016 ; Music, Sound, and the Moving Image Volume 10 ; 10 >
     au < doNotProcess ; 2017 ; Music, Sound, and the Moving Image Volume 11 ; 11 >
     au < doNotProcess ; 2018 ; Music, Sound, and the Moving Image Volume 12 ; 12 >
     au < doNotProcess ; 2019 ; Music, Sound, and the Moving Image Volume 13 ; 13 >
-    au < expected ; 2020 ; Music, Sound, and the Moving Image Volume 14 ; 14 >
-    au < expected ; 2021 ; Music, Sound, and the Moving Image Volume 15 ; 15 >
+    au < released ; 2020 ; Music, Sound, and the Moving Image Volume 14 ; 14 >
+    au < released ; 2021 ; Music, Sound, and the Moving Image Volume 15 ; 15 >
+    au < expected ; 2022 ; Music, Sound, and the Moving Image Volume 16 ; 16 >
 
   }
 
@@ -925,6 +1355,7 @@
     >
 
     param[journal_id] = newsletter
+    #Published 2012-2017
 
     au < doNotProcess ; 2012 ; Newsletter of the Gypsy Lore Society Volume 35 ; 35 >
     au < doNotProcess ; 2013 ; Newsletter of the Gypsy Lore Society Volume 36 ; 36 >
@@ -944,6 +1375,7 @@
     >
 
     param[journal_id] = quaker
+    #Published 2008-present
 
     au < doNotProcess ; 2007-2008 ; Quaker Studies Volume 12 ; 12 >
     au < doNotProcess ; 2008-2009 ; Quaker Studies Volume 13 ; 13 >
@@ -957,9 +1389,10 @@
     au < doNotProcess ; 2016-2017 ; Quaker Studies Volume 21 ; 21 >
     au < doNotProcess ; 2017-2018 ; Quaker Studies Volume 22 ; 22 >
     au < doNotProcess ; 2018-2019 ; Quaker Studies Volume 23 ; 23 >
-    au < exists ; 2019-2020 ; Quaker Studies Volume 24 ; 24 >
-    au < exists ; 2020-2021 ; Quaker Studies Volume 25 ; 25 >
-    au < expected ; 2021-2022 ; Quaker Studies Volume 26 ; 26 >
+    au < released ; 2019-2020 ; Quaker Studies Volume 24 ; 24 >
+    au < released ; 2020-2021 ; Quaker Studies Volume 25 ; 25 >
+    au < manifest ; 2021-2022 ; Quaker Studies Volume 26 ; 26 >
+    au < expected ; 2022-2023 ; Quaker Studies Volume 27 ; 27 >
 
   }
 
@@ -973,9 +1406,10 @@
     >
 
     param[journal_id] = rost
+    #Published 2000-present
 
-    au < exists ; 2000 ; Romani Studies Volume 10 ; 10 >
-    au < exists ; 2001 ; Romani Studies Volume 11 ; 11 >
+    au < manifest ; 2000 ; Romani Studies Volume 10 ; 10 >
+    au < manifest ; 2001 ; Romani Studies Volume 11 ; 11 >
     au < doNotProcess ; 2002 ; Romani Studies Volume 12 ; 12 >
     au < doNotProcess ; 2003 ; Romani Studies Volume 13 ; 13 >
     au < doNotProcess ; 2004 ; Romani Studies Volume 14 ; 14 >
@@ -987,15 +1421,16 @@
     au < doNotProcess ; 2010 ; Romani Studies Volume 20 ; 20 >
     au < doNotProcess ; 2011 ; Romani Studies Volume 21 ; 21 >
     au < doNotProcess ; 2012 ; Romani Studies Volume 22 ; 22 >
-    au < exists ; 2013 ; Romani Studies Volume 23 ; 23 >
+    au < released ; 2013 ; Romani Studies Volume 23 ; 23 >
     au < doNotProcess ; 2014 ; Romani Studies Volume 24 ; 24 >
     au < doNotProcess ; 2015 ; Romani Studies Volume 25 ; 25 >
     au < doNotProcess ; 2016 ; Romani Studies Volume 26 ; 26 >
     au < doNotProcess ; 2017 ; Romani Studies Volume 27 ; 27 >
     au < doNotProcess ; 2018 ; Romani Studies Volume 28 ; 28 >
     au < doNotProcess ; 2019 ; Romani Studies Volume 29 ; 29 >
-    au < exists ; 2020 ; Romani Studies Volume 30 ; 30 >
-    au < expected ; 2021 ; Romani Studies Volume 31 ; 31 >
+    au < released ; 2020 ; Romani Studies Volume 30 ; 30 >
+    au < released ; 2021 ; Romani Studies Volume 31 ; 31 >
+    au < expected ; 2022 ; Romani Studies Volume 32 ; 32 >
 
   }
 
@@ -1009,7 +1444,24 @@
     >
 
     param[journal_id] = qs
+    #Published 1983-present
 
+    au < manifest ; 2000 ; Quebec Studies Volume 29 ; 29 >
+    au < manifest ; 2000 ; Quebec Studies Volume 30 ; 30 >
+    au < manifest ; 2001 ; Quebec Studies Volume 31 ; 31 >
+    au < manifest ; 2001 ; Quebec Studies Volume 32 ; 32 >
+    au < manifest ; 2002 ; Quebec Studies Volume 33 ; 33 >
+    au < manifest ; 2002 ; Quebec Studies Volume 34 ; 34 >
+    au < manifest ; 2003 ; Quebec Studies Volume 35 ; 35 >
+    au < manifest ; 2003 ; Quebec Studies Volume 36 ; 36 >
+    au < manifest ; 2004 ; Quebec Studies Volume 37 ; 37 >
+    au < manifest ; 2004 ; Quebec Studies Volume 38 ; 38 >
+    au < manifest ; 2005 ; Quebec Studies Volume 39 ; 39 >
+    au < manifest ; 2005 ; Quebec Studies Volume 40 ; 40 >
+    au < manifest ; 2006 ; Quebec Studies Volume 41 ; 41 >
+    au < manifest ; 2006 ; Quebec Studies Volume 42 ; 42 >
+    au < manifest ; 2007 ; Quebec Studies Volume 43 ; 43 >
+    au < manifest ; 2007 ; Quebec Studies Volume 44 ; 44 >
     au < doNotProcess ; 2008 ; Quebec Studies Volume 45 ; 45 >
     au < doNotProcess ; 2008 ; Quebec Studies Volume 46 ; 46 >
     au < doNotProcess ; 2009 ; Quebec Studies Volume 47 ; 47 >
@@ -1034,11 +1486,12 @@
     au < doNotProcess ; 2018 ; Quebec Studies Volume 65 ; 65 >
     au < doNotProcess ; 2018 ; Quebec Studies Volume 66 ; 66 >
     au < doNotProcess ; 2019 ; Quebec Studies Volume 67 ; 67 >
-    au < exists ; 2019 ; Quebec Studies Volume 68 ; 68 >
-    au < exists ; 2020 ; Quebec Studies Volume 69 ; 69 >
-    au < expected ; 2020 ; Quebec Studies Volume 70 ; 70 >
-    au < expected ; 2021 ; Quebec Studies Volume 71 ; 71 >
-    au < expected ; 2021 ; Quebec Studies Volume 72 ; 72 >
+    au < released ; 2019 ; Quebec Studies Volume 68 ; 68 >
+    au < released ; 2020 ; Quebec Studies Volume 69 ; 69 >
+    au < released ; 2020 ; Quebec Studies Volume 70 ; 70 >
+    au < manifest ; 2021 ; Quebec Studies Volume 71 ; 71 >
+    au < manifest ; 2021 ; Quebec Studies Volume 72 ; 72 >
+    au < expected ; 2022 ; Quebec Studies Volume 73 ; 73 >
 
   }
 
@@ -1052,21 +1505,23 @@
     >
 
     param[journal_id] = sfftv
+    #Published 2008-present
 
     au < doNotProcess ; 2008 ; Science Fiction Film and Television Volume 1 ; 1 >
     au < doNotProcess ; 2009 ; Science Fiction Film and Television Volume 2 ; 2 >
     au < doNotProcess ; 2010 ; Science Fiction Film and Television Volume 3 ; 3 >
     au < doNotProcess ; 2011 ; Science Fiction Film and Television Volume 4 ; 4 >
     au < doNotProcess ; 2012 ; Science Fiction Film and Television Volume 5 ; 5 >
-    au < exists ; 2013 ; Science Fiction Film and Television Volume 6 ; 6 >
+    au < released ; 2013 ; Science Fiction Film and Television Volume 6 ; 6 >
     au < doNotProcess ; 2014 ; Science Fiction Film and Television Volume 7 ; 7 >
     au < doNotProcess ; 2015 ; Science Fiction Film and Television Volume 8 ; 8 >
     au < doNotProcess ; 2016 ; Science Fiction Film and Television Volume 9 ; 9 >
     au < doNotProcess ; 2017 ; Science Fiction Film and Television Volume 10 ; 10 >
     au < doNotProcess ; 2018 ; Science Fiction Film and Television Volume 11 ; 11 >
     au < doNotProcess ; 2019 ; Science Fiction Film and Television Volume 12 ; 12 >
-    au < exists ; 2020 ; Science Fiction Film and Television Volume 13 ; 13 >
-    au < expected ; 2021 ; Science Fiction Film and Television Volume 14 ; 14 >
+    au < released ; 2020 ; Science Fiction Film and Television Volume 13 ; 13 >
+    au < released ; 2021 ; Science Fiction Film and Television Volume 14 ; 14 >
+    au < manifest ; 2022 ; Science Fiction Film and Television Volume 15 ; 15 >
 
   }
 
@@ -1080,7 +1535,10 @@
     >
 
     param[journal_id] = sj
+    #Published 1997-present
 
+    au < manifest ; 2004 ; Sculpture Journal Volume 11 ; 11 >
+    au < manifest ; 2004 ; Sculpture Journal Volume 12 ; 12 >
     au < doNotProcess ; 2005 ; Sculpture Journal Volume 13 ; 13 >
     au < doNotProcess ; 2005 ; Sculpture Journal Volume 14 ; 14 >
     au < doNotProcess ; 2006 ; Sculpture Journal Volume 15 ; 15 >
@@ -1090,15 +1548,16 @@
     au < doNotProcess ; 2010 ; Sculpture Journal Volume 19 ; 19 >
     au < doNotProcess ; 2011 ; Sculpture Journal Volume 20 ; 20 >
     au < doNotProcess ; 2012 ; Sculpture Journal Volume 21 ; 21 >
-    au < exists ; 2013 ; Sculpture Journal Volume 22 ; 22 >
+    au < released ; 2013 ; Sculpture Journal Volume 22 ; 22 >
     au < doNotProcess ; 2014 ; Sculpture Journal Volume 23 ; 23 >
     au < doNotProcess ; 2015 ; Sculpture Journal Volume 24 ; 24 >
     au < doNotProcess ; 2016 ; Sculpture Journal Volume 25 ; 25 >
     au < doNotProcess ; 2017 ; Sculpture Journal Volume 26 ; 26 >
     au < doNotProcess ; 2018 ; Sculpture Journal Volume 27 ; 27 >
     au < doNotProcess ; 2019 ; Sculpture Journal Volume 28 ; 28 >
-    au < exists ; 2020 ; Sculpture Journal Volume 29 ; 29 >
-    au < expected ; 2021 ; Sculpture Journal Volume 30 ; 30 >
+    au < released ; 2020 ; Sculpture Journal Volume 29 ; 29 >
+    au < manifest ; 2021 ; Sculpture Journal Volume 30 ; 30 >
+    au < manifest ; 2022 ; Sculpture Journal Volume 31 ; 31 >
 
   }
 
@@ -1112,6 +1571,7 @@
     >
 
     param[journal_id] = studia
+    #Published 1961-present. Volumes and years don't align well
 
     au < doNotProcess ; 2011 ; Studia Hibernica Volume 37 ; 37 >
     au < doNotProcess ; 2012 ; Studia Hibernica Volume 38 ; 38 >
@@ -1122,12 +1582,12 @@
     au < doNotProcess ; 2017 ; Studia Hibernica Volume 43 ; 43 >
     au < doNotProcess ; 2018 ; Studia Hibernica Volume 44 ; 44 >
     au < doNotProcess ; 2019 ; Studia Hibernica Volume 45 ; 45 >
-    au < expected ; 2020 ; Studia Hibernica Volume 46 ; 46 >
-    au < expected ; 2021 ; Studia Hibernica Volume 47 ; 47 >
+    au < released ; 2020 ; Studia Hibernica Volume 46 ; 46 >
+    au < manifest ; 2021 ; Studia Hibernica Volume 47 ; 47 >
+    au < expected ; 2022 ; Studia Hibernica Volume 48 ; 48 >
 
   }
   
-  #this title is here because it is now Theory & Struggle
   {
 
     title <
@@ -1135,12 +1595,12 @@
       issn = 0969-1154
     >
 
-    param[journal_id] = theory
+    param[journal_id] = praxis
+    #Published 2011-2012
+    #title is continued as Theory & Struggle
     
-    #no earlier volumes available at Liverpool 
-    au < exists ; 2011 ; Praxis Volume 154 ; 154 >
-    au < exists ; 2012 ; Praxis Volume 155 ; 155 >
-    #title is now continued as Theory & Struggle - different ISBN, same journal_id
+    au < released ; 2011 ; Praxis Volume 154 ; 154 >
+    au < released ; 2012 ; Praxis Volume 155 ; 155 >
 
   }
   
@@ -1153,15 +1613,18 @@
     >
 
     param[journal_id] = theory
-    #title was Praxis - different ISBN, same journal_id
+    #Published 2014-present
+    #title previously was Praxis
+
     au < doNotProcess ; 2014 ; Theory & Struggle Volume 115 ; 115 >
     au < doNotProcess ; 2015 ; Theory & Struggle Volume 116 ; 116 >
     au < doNotProcess ; 2016 ; Theory & Struggle Volume 117 ; 117 >
     au < doNotProcess ; 2017 ; Theory & Struggle Volume 118 ; 118 >
     au < doNotProcess ; 2018 ; Theory & Struggle Volume 119 ; 119 >
-    au < exists ; 2019 ; Theory & Struggle Volume 120 ; 120 >
-    au < exists ; 2020 ; Theory & Struggle Volume 121 ; 121 >
-    au < expected ; 2021 ; Theory & Struggle Volume 122 ; 122 >
+    au < released ; 2019 ; Theory & Struggle Volume 120 ; 120 >
+    au < released ; 2020 ; Theory & Struggle Volume 121 ; 121 >
+    au < released ; 2021 ; Theory & Struggle Volume 122 ; 122 >
+    au < expected ; 2022 ; Theory & Struggle Volume 123 ; 123 >
 
   }  
 
@@ -1184,7 +1647,7 @@
     au < doNotProcess ; 1998 ; Third World Planning Review Volume 20 ; 20 >
     au < doNotProcess ; 1999 ; Third World Planning Review Volume 21 ; 21 >
     au < doNotProcess ; 2000 ; Third World Planning Review Volume 22 ; 22 >
-    au < exists ; 2001 ; Third World Planning Review Volume 23 ; 23 >
+    au < released ; 2001 ; Third World Planning Review Volume 23 ; 23 >
 
   }
 
@@ -1270,7 +1733,7 @@
     au < doNotProcess ; 1998 ; Town Planning Review Volume 69 ; 69 >
     au < doNotProcess ; 1999 ; Town Planning Review Volume 70 ; 70 >
     au < doNotProcess ; 2000 ; Town Planning Review Volume 71 ; 71 >
-    au < exists ; 0 ; Town Planning Review Volume 72 ; 72 >
+    au < manifest ; 0 ; Town Planning Review Volume 72 ; 72 >
     au < doNotProcess ; 2002 ; Town Planning Review Volume 73 ; 73 >
     au < doNotProcess ; 2003 ; Town Planning Review Volume 74 ; 74 >
     au < doNotProcess ; 2004 ; Town Planning Review Volume 75 ; 75 >
@@ -1282,15 +1745,16 @@
     au < doNotProcess ; 2010 ; Town Planning Review Volume 81 ; 81 >
     au < doNotProcess ; 2011 ; Town Planning Review Volume 82 ; 82 >
     au < doNotProcess ; 2012 ; Town Planning Review Volume 83 ; 83 >
-    au < exists ; 2013 ; Town Planning Review Volume 84 ; 84 >
+    au < released ; 2013 ; Town Planning Review Volume 84 ; 84 >
     au < doNotProcess ; 2014 ; Town Planning Review Volume 85 ; 85 >
     au < doNotProcess ; 2015 ; Town Planning Review Volume 86 ; 86 >
     au < doNotProcess ; 2016 ; Town Planning Review Volume 87 ; 87 >
     au < doNotProcess ; 2017 ; Town Planning Review Volume 88 ; 88 >
     au < doNotProcess ; 2018 ; Town Planning Review Volume 89 ; 89 >
     au < doNotProcess ; 2019 ; Town Planning Review Volume 90 ; 90 >
-    au < exists ; 2020 ; Town Planning Review Volume 91 ; 91 >
-    au < expected ; 2021 ; Town Planning Review Volume 92 ; 92 >
+    au < released ; 2020 ; Town Planning Review Volume 91 ; 91 >
+    au < manifest ; 2021 ; Town Planning Review Volume 92 ; 92 >
+    au < manifest ; 2022 ; Town Planning Review Volume 93 ; 93 >
 
   }
 
@@ -1305,7 +1769,7 @@
 
     param[journal_id] = transactions
 
-    au < exists ; 2007 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 156 ; 156 >
+    au < manifest ; 2007 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 156 ; 156 >
     au < doNotProcess ; 2008 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 157 ; 157 >
     au < doNotProcess ; 2009 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 158 ; 158 >
     au < doNotProcess ; 2010 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 159 ; 159 >
@@ -1318,8 +1782,9 @@
     au < doNotProcess ; 2017 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 166 ; 166 >
     au < doNotProcess ; 2018 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 167 ; 167 >
     au < doNotProcess ; 2019 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 168 ; 168 >
-    au < expected ; 2020 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 169 ; 169 >
-    au < expected ; 2021 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 170 ; 170 >
+    au < released ; 2020 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 169 ; 169 >
+    au < manifest ; 2021 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 170 ; 170 >
+    au < expected ; 2022 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 171 ; 171 >
 
   }
 

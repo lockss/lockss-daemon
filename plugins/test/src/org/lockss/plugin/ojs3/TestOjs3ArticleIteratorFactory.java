@@ -105,6 +105,7 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
     
     // issue
     assertNotMatchesRE(pat,"https://www.foo.com/index.php/test/issue/view/99");
+    assertNotMatchesRE(pat,"https://www.foo.com/index.php/test/article/view/99/100");
     // abstract
     assertMatchesRE(pat,"https://www.foo.com/index.php/test/article/view/99");
     // an article view but not an abstract
