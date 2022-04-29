@@ -102,6 +102,13 @@ public class OJS2ArticleIteratorFactory
   // so if that form of URL is needed, then that could mean a problem
   // XXX protected static final String PDF_REPLACEMENT3 = "/article/view/$1/$2";
   protected static final String ABSTRACT_REPLACEMENT = "/article/view/$1";
+
+  // CITATION files
+  //        https://www.afrjournal.org/index.php/afr/article/view/356
+  // ris    https://www.afrjournal.org/index.php/afr/rt/captureCite/356/0/ProCiteCitationPlugin
+  // bibtex https://www.afrjournal.org/index.php/afr/rt/captureCite/356/0/BibtexCitationPlugin
+  protected static final String RIS_REPLACEMENT = "/rt/captureCite/$1/0/ProCiteCitationPlugin";
+  protected static final String BIBTEX_REPLACEMENT = "/rt/captureCite/$1/0/BibtexCitationPlugin";
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -150,10 +157,17 @@ public class OJS2ArticleIteratorFactory
         PDF_PATTERN, Arrays.asList(PDF_REPLACEMENT1, PDF_REPLACEMENT2),
         ArticleFiles.ROLE_FULL_TEXT_PDF);
     
-    // set up abstract to be an aspect 
+    // set up abstract to be an aspect
     builder.addAspect(
         ABSTRACT_REPLACEMENT,
         ArticleFiles.ROLE_ABSTRACT, ArticleFiles.ROLE_ARTICLE_METADATA);
+
+    builder.addAspect(
+        RIS_REPLACEMENT,
+        ArticleFiles.ROLE_CITATION_RIS);
+    builder.addAspect(
+        BIBTEX_REPLACEMENT,
+        ArticleFiles.ROLE_CITATION_BIBTEX);
     
     return builder.getSubTreeArticleIterator();
   } // createArticleIterator
