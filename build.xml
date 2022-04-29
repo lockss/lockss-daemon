@@ -341,7 +341,7 @@ Args:
   <property name="httpclient.jar" value="${lib}/httpclient-4.3.1.jar"/>
 
   <!-- PDFBox 2.0 -->
-  <property name="pdfbox2.version" value="2.0.25" />
+  <property name="pdfbox2.version" value="2.0.26" />
   <property name="pdfbox2.jar" value="${lib}/pdfbox-${pdfbox2.version}.jar" />
   <!-- PDFBox 2.0 dependencies (https://pdfbox.apache.org/2.0/dependencies.html): -->
   <!-- Commons Logging, which we already have -->
