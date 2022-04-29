@@ -510,12 +510,21 @@ ArticleIterator aspect characterization
     on art land: ul class="dropdown-menu" -> li -> a
       citation: citationstylelanguage/download/ris?submissionId=7208&publicationId=9617
 
+                                                                    OJS3   OJS2            Notes
+- Add ris files to crawl rules                                        X      X             both need recrawls due to crawl rule update
+- Confine the abstract_pattern to abstract.landing pages              X      already done
+- Make replay work with the crawl seed                                X      already done
+- Add a param in tdb for language(s) (not a definitional param)                            OJS calls the default language 'Primary locale' which is a choice the publisher makes.
+    on journal/au start url there is a table listing the languages                         ojs3: https://openjournalsystems.com/ojs-3-user-guide/site-management/
+    default_locale, prefered locale or something.                                          ojs2: https://openjournalsystems.com/ojs-2-user-guide/languages/
+    if there is more than 1, change the start url to get the                               more: https://openjournaltheme.com/how-to-fix-translation-on-ojs-3
+    correct cookies loaded.
+    may need a url fetcher rewriting
 
-- Add ris files to crawl rules
-- Confine the abstract_pattern to abstract.landing pages
-- Make replay work with the crawl seed
-- Add a param in tdb for language(s) (not a definitional param)
-    on journal/au start url there is a table listing the languages
-    default_locale, prefered locale or something.
 
-- Do same as above for OJS2 plugin.
+
+ojs2 citation format
+
+   dialogue  https://www.afrjournal.org/index.php/afr/rt/captureCite/356/0
+      ris    https://www.afrjournal.org/index.php/afr/rt/captureCite/356/0/ProCiteCitationPlugin
+      bibtex https://www.afrjournal.org/index.php/afr/rt/captureCite/356/0/BibtexCitationPlugin
