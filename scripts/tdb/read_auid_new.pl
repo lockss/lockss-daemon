@@ -330,7 +330,7 @@ while (my $line = <>) {
     sleep(4);
 
 #GLN Highwire HW Origins
-  } elsif ($plugin =~ m/^(?!Clockss).+OriginsPlugin/) {
+  } elsif (($plugin =~ m/^(?!Clockss).+OriginsPlugin/) || ($plugin =~ m/^(?!Clockss).+ScolarisPlugin/)) {
     $url = sprintf("%scontent/%s/lockss-manifest/vol_%s_manifest.html",
         $param{base_url}, $param{journal_id}, $param{volume_name});
         #printf("********************\n");  #debug
@@ -408,7 +408,7 @@ while (my $line = <>) {
     sleep(4);
 
 #CLOCKSS HighWire HW Origins
-  } elsif ($plugin =~ m/^Clockss.+OriginsPlugin/) {
+  } elsif (($plugin =~ m/^Clockss.+OriginsPlugin/) || ($plugin =~ m/^Clockss.+ScolarisPlugin/)) {
     $url = sprintf("%scontent/%s/clockss-manifest/vol_%s_manifest.html",
         $param{base_url}, $param{journal_id}, $param{volume_name});
         #printf("********************\n");  #debug
