@@ -137,6 +137,8 @@ Note: also push this plugin to coppulpln, dkdemopln, ibictpln, italytestpln, syn
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <!-- https://www.ride.org.mx/index.php/RIDE/user/setLocale/es_ES?source=%2Findex.php%2FRIDE%2Fgateway%2Flockss%3Fyear%3D2020 -->
+      <string>1,"^https?://%s%s(index\.php/)?(%s/)?user/setLocale/[^?]{5}[?]source=%%2F(index[.]php%%2F)?(%s%%2F)?gateway%%2Flockss%%3Fyear%%3D%d", url_host(base_url), url_path(base_url), journal_id, journal_id, year</string>
       <string>2,"(/[^.?/]+)(\1){2,}"</string>
       <!-- all content from CDN -->
       <!--  for NOW removing dependence on jquery.com until research shows what is needed -->
@@ -148,6 +150,7 @@ Note: also push this plugin to coppulpln, dkdemopln, ibictpln, italytestpln, syn
       <string>4,"^https?://%s%s", url_host(base_url), url_path(base_url)</string>
       <!--  allow optional second year=1234 argument due to OJS bug on redirect from http to http that we will normalize off -->
       <string>1,"^https?://%s%s(index\.php/)?(%s/)?(gateway/lockss\?year=%d(\?year=[0-9]+)?|about/editorialPolicies)$", url_host(base_url), url_path(base_url), journal_id, year</string>
+      <string>1,"^https?://%s%s(index\.php/)?(%s/)?(user/setLocale/)", url_host(base_url), url_path(base_url), journal_id, year</string>
       <string>2,"\?acceptCookies="</string>
       <string>2,"^https?://%s%s(index\.php/)?(%s/)?(article|issue)/viewFile/[0-9]+(/[0-9]+)?/%%20http:", url_host(base_url), url_path(base_url), journal_id</string>
       <string>1,"^https?://%s%s(index\.php/)?(%s/)?(article|issue)/(download(SuppFile)?|view(Article|File|(Download|PDF)Interstitial|RST)?)/", url_host(base_url), url_path(base_url), journal_id</string>

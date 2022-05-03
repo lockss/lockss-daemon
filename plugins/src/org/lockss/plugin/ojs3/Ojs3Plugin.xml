@@ -51,6 +51,8 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <!-- https://www.ride.org.mx/index.php/RIDE/user/setLocale/es_ES?source=%2Findex.php%2FRIDE%2Fgateway%2Flockss%3Fyear%3D2020 -->
+      <string>1,"^https?://%s%s(index\.php/)?(%s/)?user/setLocale/[^?]{5}[?]source=%%2F(index[.]php%%2F)?(%s%%2F)?gateway%%2Fc?lockss%%3Fyear%%3D%d", url_host(base_url), url_path(base_url), journal_id, journal_id, year</string>
       <string>1,"https://docs.lib.purdue.edu/cgi/viewcontent.cgi\?article="</string>
       <string>1,"^(%s|%s).*\.(bmp|css|gif|ico|js|jpe?g|png|tif?f|eot|svg|ttf|woff.?)([?]((itok|v)=)?[^&amp;]+)?$", to_http(base_url),to_https(base_url)</string>
       <string>1,"^(%s|%s).*/css([?]name=stylesheet)?$", to_http(base_url),to_https(base_url)</string>
