@@ -56,10 +56,10 @@ public class ChineseUniversityHongKongSourceXmlMetadataExtractorFactory extends 
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
       String contentType)
           throws PluginException {
-    return new WileySourceXmlMetadataExtractor();
+    return new ChineseUniversityHongKongSourceXmlMetadataExtractor();
   }
 
-  public static class WileySourceXmlMetadataExtractor extends SourceXmlMetadataExtractor {
+  public static class ChineseUniversityHongKongSourceXmlMetadataExtractor extends SourceXmlMetadataExtractor {
 
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
