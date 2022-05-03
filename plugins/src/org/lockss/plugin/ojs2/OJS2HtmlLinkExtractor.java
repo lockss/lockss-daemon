@@ -38,9 +38,7 @@ import java.net.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.htmlparser.tags.SelectTag;
 import org.lockss.extractor.GoslingHtmlLinkExtractor;
-import org.lockss.extractor.JsoupHtmlLinkExtractor;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuUtil;
 import org.lockss.util.*;
