@@ -43,6 +43,7 @@ import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
+import org.lockss.plugin.AuUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.UrlUtil;
 
@@ -57,13 +58,13 @@ public class OJS2CrawlSeedFactory implements CrawlSeedFactory {
   
   private static final Logger log = Logger.getLogger(OJS2CrawlSeedFactory.class);
   
-  protected static final HashSet<String> dualBaseUrlHosts = new HashSet<String>();
+  protected static final HashSet<String> dualBaseUrlHosts = new HashSet<>();
   static {
     dualBaseUrlHosts.add("ejournals.library.ualberta.ca");
     dualBaseUrlHosts.add("scholarworks.iu.edu");
   }
 
-  protected static final HashSet<String> noIndexBaseUrlHosts = new HashSet<String>();
+  protected static final HashSet<String> noIndexBaseUrlHosts = new HashSet<>();
   static {
     noIndexBaseUrlHosts.add("mulpress.mcmaster.ca");
     noIndexBaseUrlHosts.add("ijms.nmdl.org");
@@ -78,9 +79,66 @@ public class OJS2CrawlSeedFactory implements CrawlSeedFactory {
     noIndexBaseUrlHosts.add("www.kmuj.kmu.edu.pk");
 
   }
+
+  public static class LocaleUrlCrawlSeed extends BaseCrawlSeed {
+
+    private String jid;
+    private String baseUrl;
+    private String primaryLocale;
+    private final String PRIMARY_LOCAL_ATTR = "primary_locale";
+
+
+    public LocaleUrlCrawlSeed(CrawlerFacade crawlerFacade) {
+      super(crawlerFacade);
+    }
+
+    /**
+     * Add any initialization here for lazy initialization
+     */
+    @Override
+    protected void initialize() throws ConfigurationException, PluginException, IOException {
+      log.info("initializing localcrawlseed");
+      baseUrl = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
+      jid = au.getConfiguration().get(ConfigParamDescr.JOURNAL_ID.getKey());
+      primaryLocale = AuUtil.getTitleAttribute(au, PRIMARY_LOCAL_ATTR);
+      log.info("stored params: " + baseUrl + jid + primaryLocale);
+    }
+
+    @Override
+    public Collection<String> doGetPermissionUrls() throws ConfigurationException,
+        PluginException, IOException {
+      return addLocale(super.doGetPermissionUrls());
+    }
+
+    @Override
+    public Collection<String> doGetStartUrls() throws ConfigurationException,
+        PluginException, IOException {
+      return addLocale(super.doGetStartUrls());
+    }
+
+    private Collection<String> addLocale(Collection<String> urls) {
+      log.info("In addLocale w/primaryLocale: " + primaryLocale);
+      if (primaryLocale == null) {
+        // nothing to do if this is missing.
+        return urls;
+      }
+      String SET_LOCAL_QUERY = "/user/setLocale/primary_locale?source=";
+      Collection<String> localeUrls = new ArrayList<>(urls.size());
+      for (String url : urls) {
+        // https://www.ride.org.mx/index.php/RIDE/user/setLocale/es_ES?source=%2Findex.php%2FRIDE%2Fgateway%2Flockss%3Fyear%3D2020
+        String sourcePath = "/" + url.substring(baseUrl.length());
+        String setLocaleUrlRoot = url.substring(0, url.lastIndexOf(jid) + jid.length());
+        setLocaleUrlRoot += SET_LOCAL_QUERY.replace(PRIMARY_LOCAL_ATTR, primaryLocale);
+        localeUrls.add(setLocaleUrlRoot + UrlUtil.encodeUrl(sourcePath));
+        log.info("adding Url: " + setLocaleUrlRoot + UrlUtil.encodeUrl(sourcePath));
+
+      }
+      return localeUrls;
+    }
+
+  }
   
-  
-  public static class DualBaseUrlCrawlSeed extends BaseCrawlSeed {
+  public static class DualBaseUrlCrawlSeed extends LocaleUrlCrawlSeed {
     
     public DualBaseUrlCrawlSeed(CrawlerFacade crawlerFacade) {
       super(crawlerFacade);
@@ -89,21 +147,18 @@ public class OJS2CrawlSeedFactory implements CrawlSeedFactory {
     @Override
     public Collection<String> doGetPermissionUrls() throws ConfigurationException,
         PluginException, IOException {
-      Collection<String> uUrls = dupUrls(super.doGetPermissionUrls());
-      return uUrls;
+      return dupUrls(super.doGetPermissionUrls());
     }
     
     @Override
     public Collection<String> doGetStartUrls() throws ConfigurationException,
         PluginException, IOException {
-      Collection<String> uUrls = dupUrls(super.doGetStartUrls());
-      return uUrls;
+      return dupUrls(super.doGetStartUrls());
     }
 
     private Collection<String> dupUrls(Collection<String> sUrls) {
-      Collection<String> uUrls = new ArrayList<String>(sUrls.size() * 2);
-      for (Iterator<String> iter = sUrls.iterator(); iter.hasNext();) {
-        String url = iter.next();
+      Collection<String> uUrls = new ArrayList<>(sUrls.size() * 2);
+      for (String url : sUrls) {
         uUrls.add(UrlUtil.replaceScheme(url, "https", "http"));
         uUrls.add(UrlUtil.replaceScheme(url, "http", "https"));
       }
@@ -112,7 +167,7 @@ public class OJS2CrawlSeedFactory implements CrawlSeedFactory {
 
   }
 
-  public static class NoIndexBaseUrlCrawlSeed extends BaseCrawlSeed {
+  public static class NoIndexBaseUrlCrawlSeed extends LocaleUrlCrawlSeed {
     
     public NoIndexBaseUrlCrawlSeed(CrawlerFacade crawlerFacade) {
       super(crawlerFacade);
@@ -121,23 +176,21 @@ public class OJS2CrawlSeedFactory implements CrawlSeedFactory {
     @Override
     public Collection<String> doGetPermissionUrls() throws ConfigurationException,
         PluginException, IOException {
-      Collection<String> uUrls = removeIndex(super.doGetPermissionUrls());
-      return uUrls;
+      return removeIndex(super.doGetPermissionUrls());
     }
     
     @Override
     public Collection<String> doGetStartUrls() throws ConfigurationException,
         PluginException, IOException {
-      Collection<String> uUrls = removeIndex(super.doGetStartUrls());
-      return uUrls;
+      return removeIndex(super.doGetStartUrls());
     }
 
     private Collection<String> removeIndex(Collection<String> sUrls) {
-      Collection<String> uUrls = new ArrayList<String>(sUrls.size());
-      for (Iterator<String> iter = sUrls.iterator(); iter.hasNext();) {
-        String url = iter.next();
+      Collection<String> uUrls = new ArrayList<>(sUrls.size());
+      for (String url : sUrls) {
         // we know these will contain index.php
-        uUrls.add(url.replace("index.php/", ""));
+        // remove url encoded version as well.
+        uUrls.add(url.replace("index.php/", "").replace("index.php%2F", ""));
       }
       return uUrls;
     }
