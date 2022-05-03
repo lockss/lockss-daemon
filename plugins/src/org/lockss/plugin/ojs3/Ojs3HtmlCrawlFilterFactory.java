@@ -31,11 +31,6 @@ package org.lockss.plugin.ojs3;
 
 import java.io.InputStream;
 
-
-//import java.io.FileInputStream;
-//import java.io.FileOutputStream;
-//import org.apache.commons.io.IOUtils;
-
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.OrFilter;
 import org.lockss.filter.html.HtmlFilterInputStream;
@@ -68,6 +63,8 @@ public class Ojs3HtmlCrawlFilterFactory implements FilterFactory {
 //	        HtmlNodeFilters.tagWithAttribute("aside","id","sidebar"),
 	        // on the article page - most read articles by this author
 	        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "articlesBySameAuthor"),
+			// ignore the setLocale urls, we dont want the other languages until they stop redirecting to the landing pages.
+			HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/user/setLocale")
 	    };  
  
   @Override

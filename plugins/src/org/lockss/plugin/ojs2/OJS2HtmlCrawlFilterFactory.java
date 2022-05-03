@@ -77,6 +77,9 @@ public class OJS2HtmlCrawlFilterFactory implements FilterFactory {
         //Athabasca is now putting ALL issue volumes on the manifest page in the footer
         // see http://jrp.icaap.org/index.php/jrp/gateway/lockss?year=2018
         HtmlNodeFilters.tagWithAttribute("div", "id", "pageFooter"),
+
+        // ignore the setLocale urls, we dont want the other languages until they stop redirecting to the landing pages.
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/user/setLocale")
         
     };
     return new HtmlFilterInputStream(in,
