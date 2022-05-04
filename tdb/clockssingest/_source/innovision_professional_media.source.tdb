@@ -1,0 +1,25 @@
+{
+
+  publisher <
+    name = InnoVision Professional Media ;
+    info[contract] = 2022 ;
+    info[tester] = S ;
+    info[platform] = Source
+  >
+
+  {
+
+    title <
+       name = InnoVision Professional Media Source Content
+    >
+    {
+
+      plugin = org.lockss.plugin.clockss.innovisionpm.ClockssInnoVisionPMDirSourcePlugin
+      param[base_url] = https://clockss-test.lockss.org/sourcefiles/innovisionhm-released/
+      hidden[proxy] = DIRECT
+      implicit < status ; status2 ; year ; name ; param[directory] >
+
+      au < testing ; testing ; 2022 ; InnoVision Professional Media Source Content 2022 ; 2022_01 >
+    }
+  }
+}
