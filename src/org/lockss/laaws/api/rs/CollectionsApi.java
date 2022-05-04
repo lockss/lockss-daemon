@@ -1792,7 +1792,7 @@ public class CollectionsApi {
     }
 
     final String[] localVarContentTypes = {
-
+        "multipart/form-data"
     };
     final String localVarContentType =
         apiClient.selectHeaderContentType(localVarContentTypes);

@@ -30,6 +30,7 @@
 
 package org.lockss.laaws;
 
+import com.google.gson.Gson;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.Configuration;
 import org.lockss.laaws.model.cfg.AuConfiguration;
@@ -119,8 +120,8 @@ public class AuStateMover extends Worker {
     String auName = au.getName();
     if (v1AuAgreements != null) {
       try {
-        cfgApiClient.patchAuAgreements(au.getAuId(), v1AuAgreements.getPrunedBean(au.getAuId()),
-            auMover.makeCookie());
+        String json_str = new Gson().toJson(v1AuAgreements.getPrunedBean(au.getAuId()));
+        cfgApiClient.patchAuAgreements(au.getAuId(), json_str, auMover.makeCookie());
         log.info(auName + ": Successfully moved AU Agreements.");
       }
       catch (Exception ex) {
@@ -144,7 +145,8 @@ public class AuStateMover extends Worker {
     String auName = au.getName();
     if (asuv != null) {
       try {
-        cfgApiClient.putAuSuspectUrlVersions(au.getAuId(), asuv.getBean(au.getAuId()),
+        String json_str = new Gson().toJson(asuv.getBean(au.getAuId()));
+        cfgApiClient.putAuSuspectUrlVersions(au.getAuId(), json_str,
             auMover.makeCookie());
         log.info(auName + ": Successfully moved AU Suspect Url Versions.");
       }
@@ -171,8 +173,8 @@ public class AuStateMover extends Worker {
     String auName = au.getName();
     if (noAuPeerSet instanceof DatedPeerIdSetImpl) {
       try {
-        cfgApiClient.putNoAuPeers(au.getAuId(),
-            ((DatedPeerIdSetImpl) noAuPeerSet).getBean(au.getAuId()), auMover.makeCookie());
+        String json_str = new Gson().toJson(((DatedPeerIdSetImpl) noAuPeerSet).getBean(au.getAuId()));
+        cfgApiClient.putNoAuPeers(au.getAuId(), json_str, auMover.makeCookie());
         log.info(auName + ": Successfully moved no Au peers.");
       }
       catch (Exception ex) {
@@ -197,7 +199,8 @@ public class AuStateMover extends Worker {
     if (v1State != null) {
       try {
         V2AuStateBean v2State = new V2AuStateBean(v1State);
-        cfgApiClient.patchAuState(au.getAuId(), v2State.toMap(), auMover.makeCookie());
+        String json_str = new Gson().toJson(v2State.toMap());
+        cfgApiClient.patchAuState(au.getAuId(), json_str, auMover.makeCookie());
         log.info(auName + ": Successfully moved AU State.");
       }
       catch (Exception ex) {

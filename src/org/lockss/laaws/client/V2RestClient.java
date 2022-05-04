@@ -955,7 +955,10 @@ public class V2RestClient {
     else if (isJsonMime(contentType)) {
       String content;
       if (obj != null) {
-        content = json.serialize(obj);
+        if(obj instanceof String)
+          content = (String) obj;
+        else
+          content = json.serialize(obj);
       }
       else {
         content = null;

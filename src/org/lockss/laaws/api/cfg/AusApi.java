@@ -2084,6 +2084,7 @@ public class AusApi {
   }
   /**
    * Build call for putAuConfig
+   * @param auid The identifier of the AU for this configuration. (required)
    * @param auConfiguration The Archival Unit configuration to be stored (required)
    * @param _callback Callback for upload/download progress
    * @return Call to execute
@@ -2100,8 +2101,8 @@ public class AusApi {
       <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
    </table>
    */
-  public okhttp3.Call putAuConfigCall(AuConfiguration auConfiguration, final ApiCallback _callback)
-      throws ApiException {
+  public okhttp3.Call putAuConfigCall(String auid, AuConfiguration auConfiguration,
+      final ApiCallback _callback) throws ApiException {
     String basePath = null;
 
     // Operation Servers
@@ -2119,7 +2120,10 @@ public class AusApi {
     Object localVarPostBody = auConfiguration;
 
     // create path and map variables
-    String localVarPath = "/aus/{auid}";
+    String localVarPath = "/aus/{auid}".replaceAll("\\{"
+            + "auid"
+            + "\\}",
+        apiClient.escapeString(auid.toString()));
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2149,21 +2153,28 @@ public class AusApi {
   }
 
   @SuppressWarnings("rawtypes")
-  private okhttp3.Call putAuConfigValidateBeforeCall(
-      AuConfiguration auConfiguration, final ApiCallback _callback) throws ApiException {
+  private okhttp3.Call putAuConfigValidateBeforeCall(String auid, AuConfiguration auConfiguration,
+      final ApiCallback _callback) throws ApiException {
+    // verify the required parameter 'auid' is set
+    if (auid == null) {
+      throw new ApiException(
+          "Missing the required parameter 'auid' when calling putAuConfig(Async)");
+    }
+
     // verify the required parameter 'auConfiguration' is set
     if (auConfiguration == null) {
       throw new ApiException(
           "Missing the required parameter 'auConfiguration' when calling putAuConfig(Async)");
     }
 
-    okhttp3.Call localVarCall = putAuConfigCall(auConfiguration, _callback);
+    okhttp3.Call localVarCall = putAuConfigCall(auid, auConfiguration, _callback);
     return localVarCall;
   }
 
   /**
    * Store the configuration of an AU
    * Store the configuration of an AU given the AU identifier
+   * @param auid The identifier of the AU for this configuration. (required)
    * @param auConfiguration The Archival Unit configuration to be stored (required)
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    response body
@@ -2179,13 +2190,14 @@ public class AusApi {
       <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
    </table>
    */
-  public void putAuConfig(AuConfiguration auConfiguration) throws ApiException {
-    putAuConfigWithHttpInfo(auConfiguration);
+  public void putAuConfig(String auid, AuConfiguration auConfiguration) throws ApiException {
+    putAuConfigWithHttpInfo(auid, auConfiguration);
   }
 
   /**
    * Store the configuration of an AU
    * Store the configuration of an AU given the AU identifier
+   * @param auid The identifier of the AU for this configuration. (required)
    * @param auConfiguration The Archival Unit configuration to be stored (required)
    * @return ApiResponse&lt;Void&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -2202,15 +2214,16 @@ public class AusApi {
       <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
    </table>
    */
-  public ApiResponse<Void> putAuConfigWithHttpInfo(AuConfiguration auConfiguration)
+  public ApiResponse<Void> putAuConfigWithHttpInfo(String auid, AuConfiguration auConfiguration)
       throws ApiException {
-    okhttp3.Call localVarCall = putAuConfigValidateBeforeCall(auConfiguration, null);
+    okhttp3.Call localVarCall = putAuConfigValidateBeforeCall(auid, auConfiguration, null);
     return apiClient.execute(localVarCall);
   }
 
   /**
    * Store the configuration of an AU (asynchronously)
    * Store the configuration of an AU given the AU identifier
+   * @param auid The identifier of the AU for this configuration. (required)
    * @param auConfiguration The Archival Unit configuration to be stored (required)
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
@@ -2227,9 +2240,9 @@ public class AusApi {
       <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
    </table>
    */
-  public okhttp3.Call putAuConfigAsync(
-      AuConfiguration auConfiguration, final ApiCallback<Void> _callback) throws ApiException {
-    okhttp3.Call localVarCall = putAuConfigValidateBeforeCall(auConfiguration, _callback);
+  public okhttp3.Call putAuConfigAsync(String auid, AuConfiguration auConfiguration,
+      final ApiCallback<Void> _callback) throws ApiException {
+    okhttp3.Call localVarCall = putAuConfigValidateBeforeCall(auid, auConfiguration, _callback);
     apiClient.executeAsync(localVarCall, _callback);
     return localVarCall;
   }
