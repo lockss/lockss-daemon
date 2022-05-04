@@ -1,32 +1,32 @@
 /*
- * 2022, Board of Trustees of Leland Stanford Jr. University,
- * All rights reserved.
+ * Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
  *
- * Redistribution and use in source and binary forms, with or without modification,
- * are permitted provided that the following conditions are met:
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
  *
- * 1. Redistributions of source code must retain the above copyright notice, this
- * list of conditions and the following disclaimer.
+ * 1. Redistributions of source code must retain the above copyright notice,
+ * this list of conditions and the following disclaimer.
  *
  * 2. Redistributions in binary form must reproduce the above copyright notice,
- * this list of conditions and the following disclaimer in the documentation and/or
- * other materials provided with the distribution.
+ * this list of conditions and the following disclaimer in the documentation
+ * and/or other materials provided with the distribution.
  *
  * 3. Neither the name of the copyright holder nor the names of its contributors
  * may be used to endorse or promote products derived from this software without
  * specific prior written permission.
  *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
- * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
- * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
- * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
- * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
- * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
- * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
- * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- *  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
- *  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+*/
 
 /*
  * LOCKSS Repository Service REST API
@@ -47,9 +47,10 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 import java.util.Objects;
 
-/** Artifact */
-@javax.annotation.
-Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+/**
+ * Artifact
+ */
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class Artifact implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -86,16 +87,14 @@ public class Artifact implements Serializable {
   public Artifact() {}
 
   public Artifact id(String id) {
-
     this.id = id;
     return this;
   }
 
   /**
    * Get id
-   *
    * @return id
-   */
+   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -103,19 +102,19 @@ public class Artifact implements Serializable {
     return id;
   }
 
-  public void setId(String id) { this.id = id; }
+  public void setId(String id) {
+    this.id = id;
+  }
 
   public Artifact collection(String collection) {
-
     this.collection = collection;
     return this;
   }
 
   /**
    * Get collection
-   *
    * @return collection
-   */
+   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -123,19 +122,19 @@ public class Artifact implements Serializable {
     return collection;
   }
 
-  public void setCollection(String collection) { this.collection = collection; }
+  public void setCollection(String collection) {
+    this.collection = collection;
+  }
 
   public Artifact auid(String auid) {
-
     this.auid = auid;
     return this;
   }
 
   /**
    * Get auid
-   *
    * @return auid
-   */
+   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -143,19 +142,19 @@ public class Artifact implements Serializable {
     return auid;
   }
 
-  public void setAuid(String auid) { this.auid = auid; }
+  public void setAuid(String auid) {
+    this.auid = auid;
+  }
 
   public Artifact uri(String uri) {
-
     this.uri = uri;
     return this;
   }
 
   /**
    * Get uri
-   *
    * @return uri
-   */
+   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -163,19 +162,19 @@ public class Artifact implements Serializable {
     return uri;
   }
 
-  public void setUri(String uri) { this.uri = uri; }
+  public void setUri(String uri) {
+    this.uri = uri;
+  }
 
   public Artifact version(Integer version) {
-
     this.version = version;
     return this;
   }
 
   /**
    * Get version
-   *
    * @return version
-   */
+   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -183,19 +182,19 @@ public class Artifact implements Serializable {
     return version;
   }
 
-  public void setVersion(Integer version) { this.version = version; }
+  public void setVersion(Integer version) {
+    this.version = version;
+  }
 
   public Artifact committed(Boolean committed) {
-
     this.committed = committed;
     return this;
   }
 
   /**
    * Get committed
-   *
    * @return committed
-   */
+   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -203,19 +202,19 @@ public class Artifact implements Serializable {
     return committed;
   }
 
-  public void setCommitted(Boolean committed) { this.committed = committed; }
+  public void setCommitted(Boolean committed) {
+    this.committed = committed;
+  }
 
   public Artifact storageUrl(String storageUrl) {
-
     this.storageUrl = storageUrl;
     return this;
   }
 
   /**
    * Get storageUrl
-   *
    * @return storageUrl
-   */
+   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -223,19 +222,19 @@ public class Artifact implements Serializable {
     return storageUrl;
   }
 
-  public void setStorageUrl(String storageUrl) { this.storageUrl = storageUrl; }
+  public void setStorageUrl(String storageUrl) {
+    this.storageUrl = storageUrl;
+  }
 
   public Artifact contentLength(Long contentLength) {
-
     this.contentLength = contentLength;
     return this;
   }
 
   /**
    * Get contentLength
-   *
    * @return contentLength
-   */
+   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -248,16 +247,14 @@ public class Artifact implements Serializable {
   }
 
   public Artifact contentDigest(String contentDigest) {
-
     this.contentDigest = contentDigest;
     return this;
   }
 
   /**
    * Get contentDigest
-   *
    * @return contentDigest
-   */
+   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -270,16 +267,14 @@ public class Artifact implements Serializable {
   }
 
   public Artifact collectionDate(Long collectionDate) {
-
     this.collectionDate = collectionDate;
     return this;
   }
 
   /**
    * Get collectionDate
-   *
    * @return collectionDate
-   */
+   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -299,11 +294,10 @@ public class Artifact implements Serializable {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Artifact artifact = (Artifact)o;
+    Artifact artifact = (Artifact) o;
     return Objects.equals(this.id, artifact.id)
         && Objects.equals(this.collection, artifact.collection)
-        && Objects.equals(this.auid, artifact.auid)
-        && Objects.equals(this.uri, artifact.uri)
+        && Objects.equals(this.auid, artifact.auid) && Objects.equals(this.uri, artifact.uri)
         && Objects.equals(this.version, artifact.version)
         && Objects.equals(this.committed, artifact.committed)
         && Objects.equals(this.storageUrl, artifact.storageUrl)
@@ -314,9 +308,8 @@ public class Artifact implements Serializable {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, collection, auid, uri, version, committed,
-                        storageUrl, contentLength, contentDigest,
-                        collectionDate);
+    return Objects.hash(id, collection, auid, uri, version, committed, storageUrl, contentLength,
+        contentDigest, collectionDate);
   }
 
   @Override
@@ -324,33 +317,22 @@ public class Artifact implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class Artifact {\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    collection: ")
-        .append(toIndentedString(collection))
-        .append("\n");
+    sb.append("    collection: ").append(toIndentedString(collection)).append("\n");
     sb.append("    auid: ").append(toIndentedString(auid)).append("\n");
     sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
     sb.append("    version: ").append(toIndentedString(version)).append("\n");
-    sb.append("    committed: ")
-        .append(toIndentedString(committed))
-        .append("\n");
-    sb.append("    storageUrl: ")
-        .append(toIndentedString(storageUrl))
-        .append("\n");
-    sb.append("    contentLength: ")
-        .append(toIndentedString(contentLength))
-        .append("\n");
-    sb.append("    contentDigest: ")
-        .append(toIndentedString(contentDigest))
-        .append("\n");
-    sb.append("    collectionDate: ")
-        .append(toIndentedString(collectionDate))
-        .append("\n");
+    sb.append("    committed: ").append(toIndentedString(committed)).append("\n");
+    sb.append("    storageUrl: ").append(toIndentedString(storageUrl)).append("\n");
+    sb.append("    contentLength: ").append(toIndentedString(contentLength)).append("\n");
+    sb.append("    contentDigest: ").append(toIndentedString(contentDigest)).append("\n");
+    sb.append("    collectionDate: ").append(toIndentedString(collectionDate)).append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(Object o) {
     if (o == null) {

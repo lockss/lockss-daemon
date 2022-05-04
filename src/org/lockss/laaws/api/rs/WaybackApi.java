@@ -1,32 +1,32 @@
 /*
- * 2022, Board of Trustees of Leland Stanford Jr. University,
- * All rights reserved.
+ * Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
  *
- * Redistribution and use in source and binary forms, with or without modification,
- * are permitted provided that the following conditions are met:
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
  *
- * 1. Redistributions of source code must retain the above copyright notice, this
- * list of conditions and the following disclaimer.
+ * 1. Redistributions of source code must retain the above copyright notice,
+ * this list of conditions and the following disclaimer.
  *
  * 2. Redistributions in binary form must reproduce the above copyright notice,
- * this list of conditions and the following disclaimer in the documentation and/or
- * other materials provided with the distribution.
+ * this list of conditions and the following disclaimer in the documentation
+ * and/or other materials provided with the distribution.
  *
  * 3. Neither the name of the copyright holder nor the names of its contributors
  * may be used to endorse or promote products derived from this software without
  * specific prior written permission.
  *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
- * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
- * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
- * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
- * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
- * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
- * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
- * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- *  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
- *  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+*/
 
 /*
  * LOCKSS Repository Service REST API
@@ -49,33 +49,40 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.lockss.laaws.client.ApiCallback;
-import org.lockss.laaws.client.V2RestClient;
-import org.lockss.laaws.client.ApiException;
-import org.lockss.laaws.client.ApiResponse;
-import org.lockss.laaws.client.Configuration;
-import org.lockss.laaws.client.Pair;
+import org.lockss.laaws.client.*;
 
 public class WaybackApi {
   private V2RestClient apiClient;
   private int localHostIndex;
   private String localCustomBaseUrl;
 
-  public WaybackApi() { this(Configuration.getDefaultApiClient()); }
+  public WaybackApi() {
+    this(Configuration.getDefaultApiClient());
+  }
 
-  public WaybackApi(V2RestClient apiClient) { this.apiClient = apiClient; }
+  public WaybackApi(V2RestClient apiClient) {
+    this.apiClient = apiClient;
+  }
 
-  public V2RestClient getApiClient() { return apiClient; }
+  public V2RestClient getApiClient() {
+    return apiClient;
+  }
 
   public void setApiClient(V2RestClient apiClient) {
     this.apiClient = apiClient;
   }
 
-  public int getHostIndex() { return localHostIndex; }
+  public int getHostIndex() {
+    return localHostIndex;
+  }
 
-  public void setHostIndex(int hostIndex) { this.localHostIndex = hostIndex; }
+  public void setHostIndex(int hostIndex) {
+    this.localHostIndex = hostIndex;
+  }
 
-  public String getCustomBaseUrl() { return localCustomBaseUrl; }
+  public String getCustomBaseUrl() {
+    return localCustomBaseUrl;
+  }
 
   public void setCustomBaseUrl(String customBaseUrl) {
     this.localCustomBaseUrl = customBaseUrl;
@@ -83,10 +90,9 @@ public class WaybackApi {
 
   /**
    * Build call for getCdxOwb
-   *
    * @param collectionid Identifier of the collection (required)
-   * @param q Query string. Supported fields are url, type\\ \\
-   (urlquery/prefixquery), offset and limit. (optional)
+   * @param q Query string. Supported fields are url, type\\ \\ (urlquery/prefixquery), offset and
+   limit. (optional)
    * @param count . (optional)
    * @param startPage . (optional)
    * @param accept The Accept header (optional)
@@ -96,20 +102,15 @@ public class WaybackApi {
    * @throws ApiException If fail to serialize the request body object
    * @http.response.details
    <table summary="Response Details" border="1">
-      <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   </td></tr> <tr><td> 200 </td><td> The OpenWayback CDX records of the URL in
-   the collection </td><td>  -  </td></tr> <tr><td> 401 </td><td> Unauthorized
-   </td><td>  -  </td></tr> <tr><td> 403 </td><td> Forbidden </td><td>  -
-   </td></tr> <tr><td> 404 </td><td> Collection/URL not found </td><td>  -
-   </td></tr> <tr><td> 500 </td><td> Internal Server Error </td><td>  -
-   </td></tr>
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The OpenWayback CDX records of the URL in the collection </td><td>  -
+   </td></tr> <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr> <tr><td> 403 </td><td>
+   Forbidden </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection/URL not found </td><td>  -
+   </td></tr> <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
    </table>
    */
-  public okhttp3.Call getCdxOwbCall(String collectionid, String q,
-                                    Integer count, Integer startPage,
-                                    String accept, String acceptEncoding,
-                                    final ApiCallback _callback)
-      throws ApiException {
+  public okhttp3.Call getCdxOwbCall(String collectionid, String q, Integer count, Integer startPage,
+      String accept, String acceptEncoding, final ApiCallback _callback) throws ApiException {
     String basePath = null;
 
     // Operation Servers
@@ -127,8 +128,10 @@ public class WaybackApi {
     Object localVarPostBody = null;
 
     // create path and map variables
-        String localVarPath = "/cdx/owb/{collectionid}"
-            .replaceAll("\\{" + "collectionid" + "\\}", apiClient.escapeString(collectionid));
+    String localVarPath = "/cdx/owb/{collectionid}".replaceAll("\\{"
+            + "collectionid"
+            + "\\}",
+        apiClient.escapeString(collectionid.toString()));
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -141,97 +144,84 @@ public class WaybackApi {
     }
 
     if (count != null) {
-      localVarQueryParams.addAll(
-          apiClient.parameterToPair("count", count));
+      localVarQueryParams.addAll(apiClient.parameterToPair("count", count));
     }
 
     if (startPage != null) {
-      localVarQueryParams.addAll(
-          apiClient.parameterToPair("start_page", startPage));
+      localVarQueryParams.addAll(apiClient.parameterToPair("start_page", startPage));
     }
 
     if (accept != null) {
-      localVarHeaderParams.put("Accept",
-                               apiClient.parameterToString(accept));
+      localVarHeaderParams.put("Accept", apiClient.parameterToString(accept));
     }
 
     if (acceptEncoding != null) {
       localVarHeaderParams.put(
-          "Accept-Encoding",
-          apiClient.parameterToString(acceptEncoding));
+          "Accept-Encoding", apiClient.parameterToString(acceptEncoding));
     }
 
     final String[] localVarAccepts = {"application/xml"};
-    final String localVarAccept =
-        apiClient.selectHeaderAccept(localVarAccepts);
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
 
-    final String[] localVarContentTypes = {};
+    final String[] localVarContentTypes = {
 
+    };
     final String localVarContentType =
         apiClient.selectHeaderContentType(localVarContentTypes);
     if (localVarContentType != null) {
       localVarHeaderParams.put("Content-Type", localVarContentType);
     }
 
-        String[] localVarAuthNames = new String[]{ "basicAuth" };
-    return apiClient.buildCall(
-        basePath, localVarPath, "GET", localVarQueryParams,
-        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams,
-        localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    String[] localVarAuthNames = new String[] {"basicAuth"};
+    return apiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams,
+        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
+        localVarFormParams, localVarAuthNames, _callback);
   }
 
   @SuppressWarnings("rawtypes")
-  private okhttp3.Call getCdxOwbValidateBeforeCall(
-      String collectionid,
-      String q,
-      Integer count,
-                              Integer startPage, String accept,
-                              String acceptEncoding,
-                              final ApiCallback _callback) throws ApiException {
-
+  private okhttp3.Call getCdxOwbValidateBeforeCall(String collectionid, String q, Integer count,
+      Integer startPage, String accept, String acceptEncoding, final ApiCallback _callback)
+      throws ApiException {
     // verify the required parameter 'collectionid' is set
     if (collectionid == null) {
       throw new ApiException(
           "Missing the required parameter 'collectionid' when calling getCdxOwb(Async)");
     }
 
-    okhttp3.Call localVarCall = getCdxOwbCall(
-        collectionid, q, count, startPage, accept, acceptEncoding, _callback);
+    okhttp3.Call localVarCall =
+        getCdxOwbCall(collectionid, q, count, startPage, accept, acceptEncoding, _callback);
     return localVarCall;
   }
 
   /**
-     * Get OpenWayback CDX records
-     * Get the OpenWayback CDX records of a URL in a collection
+   * Get OpenWayback CDX records
+   * Get the OpenWayback CDX records of a URL in a collection
    * @param collectionid Identifier of the collection (required)
-   * @param q Query string. Supported fields are url, type\\ \\
-   (urlquery/prefixquery), offset and limit. (optional)
+   * @param q Query string. Supported fields are url, type\\ \\ (urlquery/prefixquery), offset and
+   limit. (optional)
    * @param count . (optional)
    * @param startPage . (optional)
    * @param accept The Accept header (optional)
    * @param acceptEncoding The Accept-Encoding header (optional)
    * @return String
-   * @throws ApiException If fail to call the API, e.g. server error or cannot
-   deserialize the response body
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
    * @http.response.details
    <table summary="Response Details" border="1">
-      <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   </td></tr> <tr><td> 200 </td><td> The OpenWayback CDX records of the URL in
-   the collection </td><td>  -  </td></tr> <tr><td> 401 </td><td> Unauthorized
-   </td><td>  -  </td></tr> <tr><td> 403 </td><td> Forbidden </td><td>  -
-   </td></tr> <tr><td> 404 </td><td> Collection/URL not found </td><td>  -
-   </td></tr> <tr><td> 500 </td><td> Internal Server Error </td><td>  -
-   </td></tr>
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The OpenWayback CDX records of the URL in the collection </td><td>  -
+   </td></tr> <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr> <tr><td> 403 </td><td>
+   Forbidden </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection/URL not found </td><td>  -
+   </td></tr> <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
    </table>
    */
-  public String getCdxOwb(String collectionid, String q, Integer count,
-                          Integer startPage, String accept,
-                          String acceptEncoding) throws ApiException {
-    ApiResponse<String> localVarResp = getCdxOwbWithHttpInfo(
-        collectionid, q, count, startPage, accept, acceptEncoding);
+  public String getCdxOwb(String collectionid, String q, Integer count, Integer startPage,
+      String accept, String acceptEncoding) throws ApiException {
+    ApiResponse<String> localVarResp =
+        getCdxOwbWithHttpInfo(collectionid, q, count, startPage, accept, acceptEncoding);
     return localVarResp.getData();
   }
 
@@ -239,30 +229,26 @@ public class WaybackApi {
    * Get OpenWayback CDX records
    * Get the OpenWayback CDX records of a URL in a collection
    * @param collectionid Identifier of the collection (required)
-   * @param q Query string. Supported fields are url, type\\ \\
-   (urlquery/prefixquery), offset and limit. (optional)
+   * @param q Query string. Supported fields are url, type\\ \\ (urlquery/prefixquery), offset and
+   limit. (optional)
    * @param count . (optional)
    * @param startPage . (optional)
    * @param accept The Accept header (optional)
    * @param acceptEncoding The Accept-Encoding header (optional)
    * @return ApiResponse&lt;String&gt;
-   * @throws ApiException If fail to call the API, e.g. server error or cannot
-   deserialize the response body
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
    * @http.response.details
    <table summary="Response Details" border="1">
-      <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   </td></tr> <tr><td> 200 </td><td> The OpenWayback CDX records of the URL in
-   the collection </td><td>  -  </td></tr> <tr><td> 401 </td><td> Unauthorized
-   </td><td>  -  </td></tr> <tr><td> 403 </td><td> Forbidden </td><td>  -
-   </td></tr> <tr><td> 404 </td><td> Collection/URL not found </td><td>  -
-   </td></tr> <tr><td> 500 </td><td> Internal Server Error </td><td>  -
-   </td></tr>
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The OpenWayback CDX records of the URL in the collection </td><td>  -
+   </td></tr> <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr> <tr><td> 403 </td><td>
+   Forbidden </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection/URL not found </td><td>  -
+   </td></tr> <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
    </table>
    */
-  public ApiResponse<String>
-  getCdxOwbWithHttpInfo(String collectionid, String q, Integer count,
-                        Integer startPage, String accept, String acceptEncoding)
-      throws ApiException {
+  public ApiResponse<String> getCdxOwbWithHttpInfo(String collectionid, String q, Integer count,
+      Integer startPage, String accept, String acceptEncoding) throws ApiException {
     okhttp3.Call localVarCall = getCdxOwbValidateBeforeCall(
         collectionid, q, count, startPage, accept, acceptEncoding, null);
     Type localVarReturnType = new TypeToken<String>() {}.getType();
@@ -273,33 +259,27 @@ public class WaybackApi {
    * Get OpenWayback CDX records (asynchronously)
    * Get the OpenWayback CDX records of a URL in a collection
    * @param collectionid Identifier of the collection (required)
-   * @param q Query string. Supported fields are url, type\\ \\
-   (urlquery/prefixquery), offset and limit. (optional)
+   * @param q Query string. Supported fields are url, type\\ \\ (urlquery/prefixquery), offset and
+   limit. (optional)
    * @param count . (optional)
    * @param startPage . (optional)
    * @param accept The Accept header (optional)
    * @param acceptEncoding The Accept-Encoding header (optional)
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
-   * @throws ApiException If fail to process the API call, e.g. serializing the
-   request body object
+   * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    * @http.response.details
    <table summary="Response Details" border="1">
-      <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   </td></tr> <tr><td> 200 </td><td> The OpenWayback CDX records of the URL in
-   the collection </td><td>  -  </td></tr> <tr><td> 401 </td><td> Unauthorized
-   </td><td>  -  </td></tr> <tr><td> 403 </td><td> Forbidden </td><td>  -
-   </td></tr> <tr><td> 404 </td><td> Collection/URL not found </td><td>  -
-   </td></tr> <tr><td> 500 </td><td> Internal Server Error </td><td>  -
-   </td></tr>
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The OpenWayback CDX records of the URL in the collection </td><td>  -
+   </td></tr> <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr> <tr><td> 403 </td><td>
+   Forbidden </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection/URL not found </td><td>  -
+   </td></tr> <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
    </table>
    */
-  public okhttp3.Call getCdxOwbAsync(String collectionid, String q,
-                                     Integer count, Integer startPage,
-                                     String accept, String acceptEncoding,
-                                     final ApiCallback<String> _callback)
+  public okhttp3.Call getCdxOwbAsync(String collectionid, String q, Integer count,
+      Integer startPage, String accept, String acceptEncoding, final ApiCallback<String> _callback)
       throws ApiException {
-
     okhttp3.Call localVarCall = getCdxOwbValidateBeforeCall(
         collectionid, q, count, startPage, accept, acceptEncoding, _callback);
     Type localVarReturnType = new TypeToken<String>() {}.getType();
@@ -323,20 +303,16 @@ public class WaybackApi {
    * @throws ApiException If fail to serialize the request body object
    * @http.response.details
    <table summary="Response Details" border="1">
-      <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   </td></tr> <tr><td> 200 </td><td> The PyWayback CDX records of the URL in the
-   collection </td><td>  -  </td></tr> <tr><td> 401 </td><td> Unauthorized
-   </td><td>  -  </td></tr> <tr><td> 403 </td><td> Forbidden </td><td>  -
-   </td></tr> <tr><td> 404 </td><td> Collection/URL not found </td><td>  -
-   </td></tr> <tr><td> 500 </td><td> Internal Server Error </td><td>  -
-   </td></tr>
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The PyWayback CDX records of the URL in the collection </td><td>  -
+   </td></tr> <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr> <tr><td> 403 </td><td>
+   Forbidden </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection/URL not found </td><td>  -
+   </td></tr> <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
    </table>
    */
-  public okhttp3.Call
-  getCdxPywbCall(String collectionid, String url, Integer limit,
-                 String matchType, String sort, String closest, String output,
-                 String fl, String accept, String acceptEncoding,
-                 final ApiCallback _callback) throws ApiException {
+  public okhttp3.Call getCdxPywbCall(String collectionid, String url, Integer limit,
+      String matchType, String sort, String closest, String output, String fl, String accept,
+      String acceptEncoding, final ApiCallback _callback) throws ApiException {
     String basePath = null;
 
     // Operation Servers
@@ -354,8 +330,10 @@ public class WaybackApi {
     Object localVarPostBody = null;
 
     // create path and map variables
-        String localVarPath = "/cdx/pywb/{collectionid}"
-            .replaceAll("\\{" + "collectionid" + "\\}", apiClient.escapeString(collectionid));
+    String localVarPath = "/cdx/pywb/{collectionid}".replaceAll("\\{"
+            + "collectionid"
+            + "\\}",
+        apiClient.escapeString(collectionid.toString()));
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -368,28 +346,23 @@ public class WaybackApi {
     }
 
     if (limit != null) {
-      localVarQueryParams.addAll(
-          apiClient.parameterToPair("limit", limit));
+      localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
     }
 
     if (matchType != null) {
-      localVarQueryParams.addAll(
-          apiClient.parameterToPair("matchType", matchType));
+      localVarQueryParams.addAll(apiClient.parameterToPair("matchType", matchType));
     }
 
     if (sort != null) {
-      localVarQueryParams.addAll(
-          apiClient.parameterToPair("sort", sort));
+      localVarQueryParams.addAll(apiClient.parameterToPair("sort", sort));
     }
 
     if (closest != null) {
-      localVarQueryParams.addAll(
-          apiClient.parameterToPair("closest", closest));
+      localVarQueryParams.addAll(apiClient.parameterToPair("closest", closest));
     }
 
     if (output != null) {
-      localVarQueryParams.addAll(
-          apiClient.parameterToPair("output", output));
+      localVarQueryParams.addAll(apiClient.parameterToPair("output", output));
     }
 
     if (fl != null) {
@@ -397,53 +370,47 @@ public class WaybackApi {
     }
 
     if (accept != null) {
-      localVarHeaderParams.put("Accept",
-                               apiClient.parameterToString(accept));
+      localVarHeaderParams.put("Accept", apiClient.parameterToString(accept));
     }
 
     if (acceptEncoding != null) {
       localVarHeaderParams.put(
-          "Accept-Encoding",
-          apiClient.parameterToString(acceptEncoding));
+          "Accept-Encoding", apiClient.parameterToString(acceptEncoding));
     }
 
     final String[] localVarAccepts = {"text/plain"};
-    final String localVarAccept =
-        apiClient.selectHeaderAccept(localVarAccepts);
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
 
-    final String[] localVarContentTypes = {};
+    final String[] localVarContentTypes = {
 
+    };
     final String localVarContentType =
         apiClient.selectHeaderContentType(localVarContentTypes);
     if (localVarContentType != null) {
       localVarHeaderParams.put("Content-Type", localVarContentType);
     }
 
-        String[] localVarAuthNames = new String[]{ "basicAuth" };
-    return apiClient.buildCall(
-        basePath, localVarPath, "GET", localVarQueryParams,
-        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams,
-        localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    String[] localVarAuthNames = new String[] {"basicAuth"};
+    return apiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams,
+        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
+        localVarFormParams, localVarAuthNames, _callback);
   }
 
   @SuppressWarnings("rawtypes")
-  private okhttp3.Call getCdxPywbValidateBeforeCall(
-      String collectionid, String url, Integer limit, String matchType,
-      String sort, String closest, String output, String fl, String accept,
+  private okhttp3.Call getCdxPywbValidateBeforeCall(String collectionid, String url, Integer limit,
+      String matchType, String sort, String closest, String output, String fl, String accept,
       String acceptEncoding, final ApiCallback _callback) throws ApiException {
-
     // verify the required parameter 'collectionid' is set
     if (collectionid == null) {
       throw new ApiException(
           "Missing the required parameter 'collectionid' when calling getCdxPywb(Async)");
     }
 
-    okhttp3.Call localVarCall =
-        getCdxPywbCall(collectionid, url, limit, matchType, sort, closest,
-                       output, fl, accept, acceptEncoding, _callback);
+    okhttp3.Call localVarCall = getCdxPywbCall(collectionid, url, limit, matchType, sort, closest,
+        output, fl, accept, acceptEncoding, _callback);
     return localVarCall;
   }
 
@@ -461,26 +428,22 @@ public class WaybackApi {
    * @param accept The Accept header (optional)
    * @param acceptEncoding The Accept-Encoding header (optional)
    * @return String
-   * @throws ApiException If fail to call the API, e.g. server error or cannot
-   deserialize the response body
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
    * @http.response.details
    <table summary="Response Details" border="1">
-      <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   </td></tr> <tr><td> 200 </td><td> The PyWayback CDX records of the URL in the
-   collection </td><td>  -  </td></tr> <tr><td> 401 </td><td> Unauthorized
-   </td><td>  -  </td></tr> <tr><td> 403 </td><td> Forbidden </td><td>  -
-   </td></tr> <tr><td> 404 </td><td> Collection/URL not found </td><td>  -
-   </td></tr> <tr><td> 500 </td><td> Internal Server Error </td><td>  -
-   </td></tr>
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The PyWayback CDX records of the URL in the collection </td><td>  -
+   </td></tr> <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr> <tr><td> 403 </td><td>
+   Forbidden </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection/URL not found </td><td>  -
+   </td></tr> <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
    </table>
    */
-  public String getCdxPywb(String collectionid, String url, Integer limit,
-                           String matchType, String sort, String closest,
-                           String output, String fl, String accept,
-                           String acceptEncoding) throws ApiException {
-    ApiResponse<String> localVarResp =
-        getCdxPywbWithHttpInfo(collectionid, url, limit, matchType, sort,
-                               closest, output, fl, accept, acceptEncoding);
+  public String getCdxPywb(String collectionid, String url, Integer limit, String matchType,
+      String sort, String closest, String output, String fl, String accept, String acceptEncoding)
+      throws ApiException {
+    ApiResponse<String> localVarResp = getCdxPywbWithHttpInfo(
+        collectionid, url, limit, matchType, sort, closest, output, fl, accept, acceptEncoding);
     return localVarResp.getData();
   }
 
@@ -498,27 +461,22 @@ public class WaybackApi {
    * @param accept The Accept header (optional)
    * @param acceptEncoding The Accept-Encoding header (optional)
    * @return ApiResponse&lt;String&gt;
-   * @throws ApiException If fail to call the API, e.g. server error or cannot
-   deserialize the response body
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
    * @http.response.details
    <table summary="Response Details" border="1">
-      <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   </td></tr> <tr><td> 200 </td><td> The PyWayback CDX records of the URL in the
-   collection </td><td>  -  </td></tr> <tr><td> 401 </td><td> Unauthorized
-   </td><td>  -  </td></tr> <tr><td> 403 </td><td> Forbidden </td><td>  -
-   </td></tr> <tr><td> 404 </td><td> Collection/URL not found </td><td>  -
-   </td></tr> <tr><td> 500 </td><td> Internal Server Error </td><td>  -
-   </td></tr>
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The PyWayback CDX records of the URL in the collection </td><td>  -
+   </td></tr> <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr> <tr><td> 403 </td><td>
+   Forbidden </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection/URL not found </td><td>  -
+   </td></tr> <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
    </table>
    */
-  public ApiResponse<String>
-  getCdxPywbWithHttpInfo(String collectionid, String url, Integer limit,
-                         String matchType, String sort, String closest,
-                         String output, String fl, String accept,
-                         String acceptEncoding) throws ApiException {
-    okhttp3.Call localVarCall = getCdxPywbValidateBeforeCall(
-        collectionid, url, limit, matchType, sort, closest, output, fl, accept,
-        acceptEncoding, null);
+  public ApiResponse<String> getCdxPywbWithHttpInfo(String collectionid, String url, Integer limit,
+      String matchType, String sort, String closest, String output, String fl, String accept,
+      String acceptEncoding) throws ApiException {
+    okhttp3.Call localVarCall = getCdxPywbValidateBeforeCall(collectionid, url, limit, matchType,
+        sort, closest, output, fl, accept, acceptEncoding, null);
     Type localVarReturnType = new TypeToken<String>() {}.getType();
     return apiClient.execute(localVarCall, localVarReturnType);
   }
@@ -538,28 +496,21 @@ public class WaybackApi {
    * @param acceptEncoding The Accept-Encoding header (optional)
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
-   * @throws ApiException If fail to process the API call, e.g. serializing the
-   request body object
+   * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    * @http.response.details
    <table summary="Response Details" border="1">
-      <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   </td></tr> <tr><td> 200 </td><td> The PyWayback CDX records of the URL in the
-   collection </td><td>  -  </td></tr> <tr><td> 401 </td><td> Unauthorized
-   </td><td>  -  </td></tr> <tr><td> 403 </td><td> Forbidden </td><td>  -
-   </td></tr> <tr><td> 404 </td><td> Collection/URL not found </td><td>  -
-   </td></tr> <tr><td> 500 </td><td> Internal Server Error </td><td>  -
-   </td></tr>
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The PyWayback CDX records of the URL in the collection </td><td>  -
+   </td></tr> <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr> <tr><td> 403 </td><td>
+   Forbidden </td><td>  -  </td></tr> <tr><td> 404 </td><td> Collection/URL not found </td><td>  -
+   </td></tr> <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
    </table>
    */
-  public okhttp3.Call
-  getCdxPywbAsync(String collectionid, String url, Integer limit,
-                  String matchType, String sort, String closest, String output,
-                  String fl, String accept, String acceptEncoding,
-                  final ApiCallback<String> _callback) throws ApiException {
-
-    okhttp3.Call localVarCall = getCdxPywbValidateBeforeCall(
-        collectionid, url, limit, matchType, sort, closest, output, fl, accept,
-        acceptEncoding, _callback);
+  public okhttp3.Call getCdxPywbAsync(String collectionid, String url, Integer limit,
+      String matchType, String sort, String closest, String output, String fl, String accept,
+      String acceptEncoding, final ApiCallback<String> _callback) throws ApiException {
+    okhttp3.Call localVarCall = getCdxPywbValidateBeforeCall(collectionid, url, limit, matchType,
+        sort, closest, output, fl, accept, acceptEncoding, _callback);
     Type localVarReturnType = new TypeToken<String>() {}.getType();
     apiClient.executeAsync(localVarCall, localVarReturnType, _callback);
     return localVarCall;
@@ -575,18 +526,15 @@ public class WaybackApi {
    * @throws ApiException If fail to serialize the request body object
    * @http.response.details
    <table summary="Response Details" border="1">
-      <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   </td></tr> <tr><td> 200 </td><td> The contents of the requested WARC archive
-   </td><td>  -  </td></tr> <tr><td> 401 </td><td> Unauthorized </td><td>  -
-   </td></tr> <tr><td> 404 </td><td> WARC archive not found </td><td>  -
-   </td></tr> <tr><td> 500 </td><td> Internal Server Error </td><td>  -
-   </td></tr>
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The contents of the requested WARC archive </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> WARC archive not found </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
    </table>
    */
-  public okhttp3.Call getWarcArchiveCall(String fileName, String accept,
-                                         String acceptEncoding, String range,
-                                         final ApiCallback _callback)
-      throws ApiException {
+  public okhttp3.Call getWarcArchiveCall(String fileName, String accept, String acceptEncoding,
+      String range, final ApiCallback _callback) throws ApiException {
     String basePath = null;
 
     // Operation Servers
@@ -604,8 +552,10 @@ public class WaybackApi {
     Object localVarPostBody = null;
 
     // create path and map variables
-        String localVarPath = "/warcs/{fileName}"
-            .replaceAll("\\{" + "fileName" + "\\}", apiClient.escapeString(fileName));
+    String localVarPath = "/warcs/{fileName}".replaceAll("\\{"
+            + "fileName"
+            + "\\}",
+        apiClient.escapeString(fileName.toString()));
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -614,24 +564,20 @@ public class WaybackApi {
     Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
     if (accept != null) {
-      localVarHeaderParams.put("Accept",
-                               apiClient.parameterToString(accept));
+      localVarHeaderParams.put("Accept", apiClient.parameterToString(accept));
     }
 
     if (acceptEncoding != null) {
       localVarHeaderParams.put(
-          "Accept-Encoding",
-          apiClient.parameterToString(acceptEncoding));
+          "Accept-Encoding", apiClient.parameterToString(acceptEncoding));
     }
 
     if (range != null) {
-      localVarHeaderParams.put("Range",
-                               apiClient.parameterToString(range));
+      localVarHeaderParams.put("Range", apiClient.parameterToString(range));
     }
 
     final String[] localVarAccepts = {"application/warc"};
-    final String localVarAccept =
-        apiClient.selectHeaderAccept(localVarAccepts);
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
@@ -645,18 +591,15 @@ public class WaybackApi {
       localVarHeaderParams.put("Content-Type", localVarContentType);
     }
 
-        String[] localVarAuthNames = new String[]{ "basicAuth" };
-    return apiClient.buildCall(
-        basePath, localVarPath, "GET", localVarQueryParams,
-        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams,
-        localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    String[] localVarAuthNames = new String[] {"basicAuth"};
+    return apiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams,
+        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
+        localVarFormParams, localVarAuthNames, _callback);
   }
 
   @SuppressWarnings("rawtypes")
-  private okhttp3.Call getWarcArchiveValidateBeforeCall(
-      String fileName, String accept, String acceptEncoding, String range,
-      final ApiCallback _callback) throws ApiException {
-
+  private okhttp3.Call getWarcArchiveValidateBeforeCall(String fileName, String accept,
+      String acceptEncoding, String range, final ApiCallback _callback) throws ApiException {
     // verify the required parameter 'fileName' is set
     if (fileName == null) {
       throw new ApiException(
@@ -676,20 +619,18 @@ public class WaybackApi {
    * @param acceptEncoding The Accept-Encoding header (optional)
    * @param range The Range header (optional)
    * @return File
-   * @throws ApiException If fail to call the API, e.g. server error or cannot
-   deserialize the response body
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
    * @http.response.details
    <table summary="Response Details" border="1">
-      <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   </td></tr> <tr><td> 200 </td><td> The contents of the requested WARC archive
-   </td><td>  -  </td></tr> <tr><td> 401 </td><td> Unauthorized </td><td>  -
-   </td></tr> <tr><td> 404 </td><td> WARC archive not found </td><td>  -
-   </td></tr> <tr><td> 500 </td><td> Internal Server Error </td><td>  -
-   </td></tr>
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The contents of the requested WARC archive </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> WARC archive not found </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
    </table>
    */
-  public File getWarcArchive(String fileName, String accept,
-                             String acceptEncoding, String range)
+  public File getWarcArchive(String fileName, String accept, String acceptEncoding, String range)
       throws ApiException {
     ApiResponse<File> localVarResp =
         getWarcArchiveWithHttpInfo(fileName, accept, acceptEncoding, range);
@@ -704,24 +645,21 @@ public class WaybackApi {
    * @param acceptEncoding The Accept-Encoding header (optional)
    * @param range The Range header (optional)
    * @return ApiResponse&lt;File&gt;
-   * @throws ApiException If fail to call the API, e.g. server error or cannot
-   deserialize the response body
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
    * @http.response.details
    <table summary="Response Details" border="1">
-      <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   </td></tr> <tr><td> 200 </td><td> The contents of the requested WARC archive
-   </td><td>  -  </td></tr> <tr><td> 401 </td><td> Unauthorized </td><td>  -
-   </td></tr> <tr><td> 404 </td><td> WARC archive not found </td><td>  -
-   </td></tr> <tr><td> 500 </td><td> Internal Server Error </td><td>  -
-   </td></tr>
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The contents of the requested WARC archive </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> WARC archive not found </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
    </table>
    */
-  public ApiResponse<File>
-  getWarcArchiveWithHttpInfo(String fileName, String accept,
-                             String acceptEncoding, String range)
-      throws ApiException {
-    okhttp3.Call localVarCall = getWarcArchiveValidateBeforeCall(
-        fileName, accept, acceptEncoding, range, null);
+  public ApiResponse<File> getWarcArchiveWithHttpInfo(
+      String fileName, String accept, String acceptEncoding, String range) throws ApiException {
+    okhttp3.Call localVarCall =
+        getWarcArchiveValidateBeforeCall(fileName, accept, acceptEncoding, range, null);
     Type localVarReturnType = new TypeToken<File>() {}.getType();
     return apiClient.execute(localVarCall, localVarReturnType);
   }
@@ -735,25 +673,20 @@ public class WaybackApi {
    * @param range The Range header (optional)
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
-   * @throws ApiException If fail to process the API call, e.g. serializing the
-   request body object
+   * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    * @http.response.details
    <table summary="Response Details" border="1">
-      <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   </td></tr> <tr><td> 200 </td><td> The contents of the requested WARC archive
-   </td><td>  -  </td></tr> <tr><td> 401 </td><td> Unauthorized </td><td>  -
-   </td></tr> <tr><td> 404 </td><td> WARC archive not found </td><td>  -
-   </td></tr> <tr><td> 500 </td><td> Internal Server Error </td><td>  -
-   </td></tr>
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The contents of the requested WARC archive </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> WARC archive not found </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
    </table>
    */
-  public okhttp3.Call getWarcArchiveAsync(String fileName, String accept,
-                                          String acceptEncoding, String range,
-                                          final ApiCallback<File> _callback)
-      throws ApiException {
-
-    okhttp3.Call localVarCall = getWarcArchiveValidateBeforeCall(
-        fileName, accept, acceptEncoding, range, _callback);
+  public okhttp3.Call getWarcArchiveAsync(String fileName, String accept, String acceptEncoding,
+      String range, final ApiCallback<File> _callback) throws ApiException {
+    okhttp3.Call localVarCall =
+        getWarcArchiveValidateBeforeCall(fileName, accept, acceptEncoding, range, _callback);
     Type localVarReturnType = new TypeToken<File>() {}.getType();
     apiClient.executeAsync(localVarCall, localVarReturnType, _callback);
     return localVarCall;

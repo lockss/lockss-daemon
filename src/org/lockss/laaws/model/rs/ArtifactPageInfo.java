@@ -1,32 +1,32 @@
 /*
- * 2022, Board of Trustees of Leland Stanford Jr. University,
- * All rights reserved.
+ * Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
  *
- * Redistribution and use in source and binary forms, with or without modification,
- * are permitted provided that the following conditions are met:
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
  *
- * 1. Redistributions of source code must retain the above copyright notice, this
- * list of conditions and the following disclaimer.
+ * 1. Redistributions of source code must retain the above copyright notice,
+ * this list of conditions and the following disclaimer.
  *
  * 2. Redistributions in binary form must reproduce the above copyright notice,
- * this list of conditions and the following disclaimer in the documentation and/or
- * other materials provided with the distribution.
+ * this list of conditions and the following disclaimer in the documentation
+ * and/or other materials provided with the distribution.
  *
  * 3. Neither the name of the copyright holder nor the names of its contributors
  * may be used to endorse or promote products derived from this software without
  * specific prior written permission.
  *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
- * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
- * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
- * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
- * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
- * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
- * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
- * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- *  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
- *  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+*/
 
 /*
  * LOCKSS Repository Service REST API
@@ -50,16 +50,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/** A display page of artifacts */
+/**
+ * A display page of artifacts
+ */
 @ApiModel(description = "A display page of artifacts")
-@javax.annotation.
-Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ArtifactPageInfo implements Serializable {
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_ARTIFACTS = "artifacts";
-  @SerializedName(SERIALIZED_NAME_ARTIFACTS)
-  private List<Artifact> artifacts = new ArrayList<>();
+  @SerializedName(SERIALIZED_NAME_ARTIFACTS) private List<Artifact> artifacts = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_PAGE_INFO = "pageInfo";
   @SerializedName(SERIALIZED_NAME_PAGE_INFO) private PageInfo pageInfo;
@@ -67,7 +67,6 @@ public class ArtifactPageInfo implements Serializable {
   public ArtifactPageInfo() {}
 
   public ArtifactPageInfo artifacts(List<Artifact> artifacts) {
-
     this.artifacts = artifacts;
     return this;
   }
@@ -79,15 +78,12 @@ public class ArtifactPageInfo implements Serializable {
 
   /**
    * The artifacts included in the page
-   *
    * @return artifacts
-   */
+   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true,
-                    value = "The artifacts included in the page")
+  @ApiModelProperty(required = true, value = "The artifacts included in the page")
 
-  public List<Artifact>
-  getArtifacts() {
+  public List<Artifact> getArtifacts() {
     return artifacts;
   }
 
@@ -96,16 +92,14 @@ public class ArtifactPageInfo implements Serializable {
   }
 
   public ArtifactPageInfo pageInfo(PageInfo pageInfo) {
-
     this.pageInfo = pageInfo;
     return this;
   }
 
   /**
    * Get pageInfo
-   *
    * @return pageInfo
-   */
+   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
@@ -113,7 +107,9 @@ public class ArtifactPageInfo implements Serializable {
     return pageInfo;
   }
 
-  public void setPageInfo(PageInfo pageInfo) { this.pageInfo = pageInfo; }
+  public void setPageInfo(PageInfo pageInfo) {
+    this.pageInfo = pageInfo;
+  }
 
   @Override
   public boolean equals(Object o) {
@@ -123,7 +119,7 @@ public class ArtifactPageInfo implements Serializable {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ArtifactPageInfo artifactPageInfo = (ArtifactPageInfo)o;
+    ArtifactPageInfo artifactPageInfo = (ArtifactPageInfo) o;
     return Objects.equals(this.artifacts, artifactPageInfo.artifacts)
         && Objects.equals(this.pageInfo, artifactPageInfo.pageInfo);
   }
@@ -137,16 +133,15 @@ public class ArtifactPageInfo implements Serializable {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ArtifactPageInfo {\n");
-    sb.append("    artifacts: ")
-        .append(toIndentedString(artifacts))
-        .append("\n");
+    sb.append("    artifacts: ").append(toIndentedString(artifacts)).append("\n");
     sb.append("    pageInfo: ").append(toIndentedString(pageInfo)).append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(Object o) {
     if (o == null) {

@@ -1,32 +1,32 @@
 /*
- * 2022, Board of Trustees of Leland Stanford Jr. University,
- * All rights reserved.
+ * Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
  *
- * Redistribution and use in source and binary forms, with or without modification,
- * are permitted provided that the following conditions are met:
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
  *
- * 1. Redistributions of source code must retain the above copyright notice, this
- * list of conditions and the following disclaimer.
+ * 1. Redistributions of source code must retain the above copyright notice,
+ * this list of conditions and the following disclaimer.
  *
  * 2. Redistributions in binary form must reproduce the above copyright notice,
- * this list of conditions and the following disclaimer in the documentation and/or
- * other materials provided with the distribution.
+ * this list of conditions and the following disclaimer in the documentation
+ * and/or other materials provided with the distribution.
  *
  * 3. Neither the name of the copyright holder nor the names of its contributors
  * may be used to endorse or promote products derived from this software without
  * specific prior written permission.
  *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
- * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
- * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
- * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
- * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
- * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
- * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
- * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- *  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
- *  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+*/
 
 /*
  * LOCKSS Configuration Service REST API
@@ -48,18 +48,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.lockss.laaws.client.ApiCallback;
-import org.lockss.laaws.client.ApiException;
-import org.lockss.laaws.client.ApiResponse;
-import org.lockss.laaws.client.Configuration;
-import org.lockss.laaws.client.Pair;
-import org.lockss.laaws.client.V2RestClient;
+import org.lockss.laaws.client.*;
 import org.lockss.laaws.model.cfg.PluginWsResult;
 
 public class PluginsApi {
   private V2RestClient apiClient;
-  private String localCustomBaseUrl;
   private int localHostIndex;
+  private String localCustomBaseUrl;
 
   public PluginsApi() {
     this(Configuration.getDefaultApiClient());
@@ -77,14 +72,6 @@ public class PluginsApi {
     this.apiClient = apiClient;
   }
 
-  public String getCustomBaseUrl() {
-    return localCustomBaseUrl;
-  }
-
-  public void setCustomBaseUrl(String customBaseUrl) {
-    this.localCustomBaseUrl = customBaseUrl;
-  }
-
   public int getHostIndex() {
     return localHostIndex;
   }
@@ -93,20 +80,28 @@ public class PluginsApi {
     this.localHostIndex = hostIndex;
   }
 
+  public String getCustomBaseUrl() {
+    return localCustomBaseUrl;
+  }
+
+  public void setCustomBaseUrl(String customBaseUrl) {
+    this.localCustomBaseUrl = customBaseUrl;
+  }
+
   /**
    * Build call for getPlugins
-   *
    * @param pluginQuery The query that specifies the plugins to be returned (required)
    * @param _callback Callback for upload/download progress
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the requested plugins </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the requested plugins </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public okhttp3.Call getPluginsCall(String pluginQuery, final ApiCallback _callback)
       throws ApiException {
@@ -145,8 +140,9 @@ public class PluginsApi {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
 
-    final String[] localVarContentTypes = {};
+    final String[] localVarContentTypes = {
 
+    };
     final String localVarContentType =
         apiClient.selectHeaderContentType(localVarContentTypes);
     if (localVarContentType != null) {
@@ -154,24 +150,14 @@ public class PluginsApi {
     }
 
     String[] localVarAuthNames = new String[] {"basicAuth"};
-    return apiClient.buildCall(
-        basePath,
-        localVarPath,
-        "GET",
-        localVarQueryParams,
-        localVarCollectionQueryParams,
-        localVarPostBody,
-        localVarHeaderParams,
-        localVarCookieParams,
-        localVarFormParams,
-        localVarAuthNames,
-        _callback);
+    return apiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams,
+        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
+        localVarFormParams, localVarAuthNames, _callback);
   }
 
   @SuppressWarnings("rawtypes")
   private okhttp3.Call getPluginsValidateBeforeCall(String pluginQuery, final ApiCallback _callback)
       throws ApiException {
-
     // verify the required parameter 'pluginQuery' is set
     if (pluginQuery == null) {
       throw new ApiException(
@@ -185,17 +171,18 @@ public class PluginsApi {
   /**
    * Query for plugin properties
    * Query for plugins that meet a set of specified conditions
-   *
    * @param pluginQuery The query that specifies the plugins to be returned (required)
    * @return List&lt;PluginWsResult&gt;
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the requested plugins </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the requested plugins </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public List<PluginWsResult> getPlugins(String pluginQuery) throws ApiException {
     ApiResponse<List<PluginWsResult>> localVarResp = getPluginsWithHttpInfo(pluginQuery);
@@ -205,17 +192,18 @@ public class PluginsApi {
   /**
    * Query for plugin properties
    * Query for plugins that meet a set of specified conditions
-   *
    * @param pluginQuery The query that specifies the plugins to be returned (required)
    * @return ApiResponse&lt;List&lt;PluginWsResult&gt;&gt;
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the requested plugins </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the requested plugins </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public ApiResponse<List<PluginWsResult>> getPluginsWithHttpInfo(String pluginQuery)
       throws ApiException {
@@ -227,22 +215,21 @@ public class PluginsApi {
   /**
    * Query for plugin properties (asynchronously)
    * Query for plugins that meet a set of specified conditions
-   *
    * @param pluginQuery The query that specifies the plugins to be returned (required)
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the requested plugins </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the requested plugins </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public okhttp3.Call getPluginsAsync(
       String pluginQuery, final ApiCallback<List<PluginWsResult>> _callback) throws ApiException {
-
     okhttp3.Call localVarCall = getPluginsValidateBeforeCall(pluginQuery, _callback);
     Type localVarReturnType = new TypeToken<List<PluginWsResult>>() {}.getType();
     apiClient.executeAsync(localVarCall, localVarReturnType, _callback);

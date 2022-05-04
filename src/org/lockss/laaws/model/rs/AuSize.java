@@ -1,32 +1,32 @@
 /*
- * 2022, Board of Trustees of Leland Stanford Jr. University,
- * All rights reserved.
+ * Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
  *
- * Redistribution and use in source and binary forms, with or without modification,
- * are permitted provided that the following conditions are met:
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
  *
- * 1. Redistributions of source code must retain the above copyright notice, this
- * list of conditions and the following disclaimer.
+ * 1. Redistributions of source code must retain the above copyright notice,
+ * this list of conditions and the following disclaimer.
  *
  * 2. Redistributions in binary form must reproduce the above copyright notice,
- * this list of conditions and the following disclaimer in the documentation and/or
- * other materials provided with the distribution.
+ * this list of conditions and the following disclaimer in the documentation
+ * and/or other materials provided with the distribution.
  *
  * 3. Neither the name of the copyright holder nor the names of its contributors
  * may be used to endorse or promote products derived from this software without
  * specific prior written permission.
  *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
- * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
- * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
- * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
- * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
- * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
- * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
- * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- *  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
- *  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+*/
 
 /*
  * LOCKSS Repository Service REST API
@@ -47,21 +47,18 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 import java.util.Objects;
 
-/** AuSize */
-@javax.annotation.
-Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+/**
+ * AuSize
+ */
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AuSize implements Serializable {
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_TOTAL_LATEST_VERSIONS = "totalLatestVersions";
-
-  @SerializedName(SERIALIZED_NAME_TOTAL_LATEST_VERSIONS)
-  private Long totalLatestVersions;
+  @SerializedName(SERIALIZED_NAME_TOTAL_LATEST_VERSIONS) private Long totalLatestVersions;
 
   public static final String SERIALIZED_NAME_TOTAL_ALL_VERSIONS = "totalAllVersions";
-
-  @SerializedName(SERIALIZED_NAME_TOTAL_ALL_VERSIONS)
-  private Long totalAllVersions;
+  @SerializedName(SERIALIZED_NAME_TOTAL_ALL_VERSIONS) private Long totalAllVersions;
 
   public static final String SERIALIZED_NAME_TOTAL_WARC_SIZE = "totalWarcSize";
   @SerializedName(SERIALIZED_NAME_TOTAL_WARC_SIZE) private Long totalWarcSize;
@@ -69,16 +66,14 @@ public class AuSize implements Serializable {
   public AuSize() {}
 
   public AuSize totalLatestVersions(Long totalLatestVersions) {
-
     this.totalLatestVersions = totalLatestVersions;
     return this;
   }
 
   /**
    * Get totalLatestVersions
-   *
    * @return totalLatestVersions
-   */
+   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -91,16 +86,14 @@ public class AuSize implements Serializable {
   }
 
   public AuSize totalAllVersions(Long totalAllVersions) {
-
     this.totalAllVersions = totalAllVersions;
     return this;
   }
 
   /**
    * Get totalAllVersions
-   *
    * @return totalAllVersions
-   */
+   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -113,16 +106,14 @@ public class AuSize implements Serializable {
   }
 
   public AuSize totalWarcSize(Long totalWarcSize) {
-
     this.totalWarcSize = totalWarcSize;
     return this;
   }
 
   /**
    * Get totalWarcSize
-   *
    * @return totalWarcSize
-   */
+   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -142,7 +133,7 @@ public class AuSize implements Serializable {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    AuSize auSize = (AuSize)o;
+    AuSize auSize = (AuSize) o;
     return Objects.equals(this.totalLatestVersions, auSize.totalLatestVersions)
         && Objects.equals(this.totalAllVersions, auSize.totalAllVersions)
         && Objects.equals(this.totalWarcSize, auSize.totalWarcSize);
@@ -160,18 +151,15 @@ public class AuSize implements Serializable {
     sb.append("    totalLatestVersions: ")
         .append(toIndentedString(totalLatestVersions))
         .append("\n");
-    sb.append("    totalAllVersions: ")
-        .append(toIndentedString(totalAllVersions))
-        .append("\n");
-    sb.append("    totalWarcSize: ")
-        .append(toIndentedString(totalWarcSize))
-        .append("\n");
+    sb.append("    totalAllVersions: ").append(toIndentedString(totalAllVersions)).append("\n");
+    sb.append("    totalWarcSize: ").append(toIndentedString(totalWarcSize)).append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(Object o) {
     if (o == null) {

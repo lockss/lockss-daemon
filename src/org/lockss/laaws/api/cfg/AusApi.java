@@ -1,32 +1,32 @@
 /*
- * 2022, Board of Trustees of Leland Stanford Jr. University,
- * All rights reserved.
+ * Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
  *
- * Redistribution and use in source and binary forms, with or without modification,
- * are permitted provided that the following conditions are met:
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
  *
- * 1. Redistributions of source code must retain the above copyright notice, this
- * list of conditions and the following disclaimer.
+ * 1. Redistributions of source code must retain the above copyright notice,
+ * this list of conditions and the following disclaimer.
  *
  * 2. Redistributions in binary form must reproduce the above copyright notice,
- * this list of conditions and the following disclaimer in the documentation and/or
- * other materials provided with the distribution.
+ * this list of conditions and the following disclaimer in the documentation
+ * and/or other materials provided with the distribution.
  *
  * 3. Neither the name of the copyright holder nor the names of its contributors
  * may be used to endorse or promote products derived from this software without
  * specific prior written permission.
  *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
- * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
- * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
- * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
- * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
- * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
- * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
- * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- *  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
- *  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+*/
 
 /*
  * LOCKSS Configuration Service REST API
@@ -48,23 +48,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.lockss.laaws.client.ApiCallback;
-import org.lockss.laaws.client.ApiException;
-import org.lockss.laaws.client.ApiResponse;
-import org.lockss.laaws.client.Configuration;
-import org.lockss.laaws.client.Pair;
-import org.lockss.laaws.client.V2RestClient;
-import org.lockss.laaws.model.cfg.AuConfiguration;
-import org.lockss.laaws.model.cfg.AuStatus;
-import org.lockss.laaws.model.cfg.AuWsResult;
-import org.lockss.laaws.model.cfg.CheckSubstanceResult;
-import org.lockss.laaws.model.cfg.ContentConfigurationResult;
-import org.lockss.laaws.model.cfg.RequestAuControlResult;
+import org.lockss.laaws.client.*;
+import org.lockss.laaws.model.cfg.*;
 
 public class AusApi {
   private V2RestClient apiClient;
-  private String localCustomBaseUrl;
   private int localHostIndex;
+  private String localCustomBaseUrl;
 
   public AusApi() {
     this(Configuration.getDefaultApiClient());
@@ -82,14 +72,6 @@ public class AusApi {
     this.apiClient = apiClient;
   }
 
-  public String getCustomBaseUrl() {
-    return localCustomBaseUrl;
-  }
-
-  public void setCustomBaseUrl(String customBaseUrl) {
-    this.localCustomBaseUrl = customBaseUrl;
-  }
-
   public int getHostIndex() {
     return localHostIndex;
   }
@@ -98,23 +80,31 @@ public class AusApi {
     this.localHostIndex = hostIndex;
   }
 
+  public String getCustomBaseUrl() {
+    return localCustomBaseUrl;
+  }
+
+  public void setCustomBaseUrl(String customBaseUrl) {
+    this.localCustomBaseUrl = customBaseUrl;
+  }
 
   /**
    * Build call for deleteAuConfig
-   *
-   * @param auid      The identifier of the AU for which the configuration is\\ \\ to be deleted (required)
+   * @param auid The identifier of the AU for which the configuration is\\ \\ to be deleted
+   (required)
    * @param _callback Callback for upload/download progress
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> The deleted configuration of the specified AU </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The deleted configuration of the specified AU </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public okhttp3.Call deleteAuConfigCall(String auid, final ApiCallback _callback)
       throws ApiException {
@@ -135,9 +125,10 @@ public class AusApi {
     Object localVarPostBody = null;
 
     // create path and map variables
-    String localVarPath =
-        "/aus/{auid}"
-            .replaceAll("\\{" + "auid" + "\\}", apiClient.escapeString(auid));
+    String localVarPath = "/aus/{auid}".replaceAll("\\{"
+            + "auid"
+            + "\\}",
+        apiClient.escapeString(auid.toString()));
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -151,32 +142,24 @@ public class AusApi {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
 
-    final String[] localVarContentTypes = {};
+    final String[] localVarContentTypes = {
 
+    };
     final String localVarContentType =
         apiClient.selectHeaderContentType(localVarContentTypes);
     if (localVarContentType != null) {
       localVarHeaderParams.put("Content-Type", localVarContentType);
     }
+
     String[] localVarAuthNames = new String[] {"basicAuth"};
-    return apiClient.buildCall(
-        basePath,
-        localVarPath,
-        "DELETE",
-        localVarQueryParams,
-        localVarCollectionQueryParams,
-        localVarPostBody,
-        localVarHeaderParams,
-        localVarCookieParams,
-        localVarFormParams,
-        localVarAuthNames,
-        _callback);
+    return apiClient.buildCall(basePath, localVarPath, "DELETE", localVarQueryParams,
+        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
+        localVarFormParams, localVarAuthNames, _callback);
   }
 
   @SuppressWarnings("rawtypes")
   private okhttp3.Call deleteAuConfigValidateBeforeCall(String auid, final ApiCallback _callback)
       throws ApiException {
-
     // verify the required parameter 'auid' is set
     if (auid == null) {
       throw new ApiException(
@@ -190,19 +173,21 @@ public class AusApi {
   /**
    * Delete the configuration of an AU
    * Delete the configuration of an AU given the AU identifier
-   *
-   * @param auid The identifier of the AU for which the configuration is\\ \\ to be deleted (required)
+   * @param auid The identifier of the AU for which the configuration is\\ \\ to be deleted
+   (required)
    * @return AuConfiguration
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> The deleted configuration of the specified AU </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The deleted configuration of the specified AU </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public AuConfiguration deleteAuConfig(String auid) throws ApiException {
     ApiResponse<AuConfiguration> localVarResp = deleteAuConfigWithHttpInfo(auid);
@@ -212,19 +197,21 @@ public class AusApi {
   /**
    * Delete the configuration of an AU
    * Delete the configuration of an AU given the AU identifier
-   *
-   * @param auid The identifier of the AU for which the configuration is\\ \\ to be deleted (required)
+   * @param auid The identifier of the AU for which the configuration is\\ \\ to be deleted
+   (required)
    * @return ApiResponse&lt;AuConfiguration&gt;
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> The deleted configuration of the specified AU </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The deleted configuration of the specified AU </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public ApiResponse<AuConfiguration> deleteAuConfigWithHttpInfo(String auid) throws ApiException {
     okhttp3.Call localVarCall = deleteAuConfigValidateBeforeCall(auid, null);
@@ -235,24 +222,24 @@ public class AusApi {
   /**
    * Delete the configuration of an AU (asynchronously)
    * Delete the configuration of an AU given the AU identifier
-   *
-   * @param auid      The identifier of the AU for which the configuration is\\ \\ to be deleted (required)
+   * @param auid The identifier of the AU for which the configuration is\\ \\ to be deleted
+   (required)
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> The deleted configuration of the specified AU </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The deleted configuration of the specified AU </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public okhttp3.Call deleteAuConfigAsync(String auid, final ApiCallback<AuConfiguration> _callback)
       throws ApiException {
-
     okhttp3.Call localVarCall = deleteAuConfigValidateBeforeCall(auid, _callback);
     Type localVarReturnType = new TypeToken<AuConfiguration>() {}.getType();
     apiClient.executeAsync(localVarCall, localVarReturnType, _callback);
@@ -260,20 +247,20 @@ public class AusApi {
   }
   /**
    * Build call for deleteAusDelete
-   *
    * @param auIds The identifiers of the Archival Units to be deleted (required)
    * @param _callback Callback for upload/download progress
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the deleted AUs </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the deleted AUs </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public okhttp3.Call deleteAusDeleteCall(List<String> auIds, final ApiCallback _callback)
       throws ApiException {
@@ -316,24 +303,14 @@ public class AusApi {
     }
 
     String[] localVarAuthNames = new String[] {"basicAuth"};
-    return apiClient.buildCall(
-        basePath,
-        localVarPath,
-        "DELETE",
-        localVarQueryParams,
-        localVarCollectionQueryParams,
-        localVarPostBody,
-        localVarHeaderParams,
-        localVarCookieParams,
-        localVarFormParams,
-        localVarAuthNames,
-        _callback);
+    return apiClient.buildCall(basePath, localVarPath, "DELETE", localVarQueryParams,
+        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
+        localVarFormParams, localVarAuthNames, _callback);
   }
 
   @SuppressWarnings("rawtypes")
   private okhttp3.Call deleteAusDeleteValidateBeforeCall(
       List<String> auIds, final ApiCallback _callback) throws ApiException {
-
     // verify the required parameter 'auIds' is set
     if (auIds == null) {
       throw new ApiException(
@@ -347,19 +324,20 @@ public class AusApi {
   /**
    * Delete AUs
    * Delete a group of AUs given their identifiers
-   *
    * @param auIds The identifiers of the Archival Units to be deleted (required)
    * @return List&lt;ContentConfigurationResult&gt;
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the deleted AUs </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the deleted AUs </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public List<ContentConfigurationResult> deleteAusDelete(List<String> auIds) throws ApiException {
     ApiResponse<List<ContentConfigurationResult>> localVarResp = deleteAusDeleteWithHttpInfo(auIds);
@@ -369,19 +347,20 @@ public class AusApi {
   /**
    * Delete AUs
    * Delete a group of AUs given their identifiers
-   *
    * @param auIds The identifiers of the Archival Units to be deleted (required)
    * @return ApiResponse&lt;List&lt;ContentConfigurationResult&gt;&gt;
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the deleted AUs </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the deleted AUs </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public ApiResponse<List<ContentConfigurationResult>> deleteAusDeleteWithHttpInfo(
       List<String> auIds) throws ApiException {
@@ -393,25 +372,23 @@ public class AusApi {
   /**
    * Delete AUs (asynchronously)
    * Delete a group of AUs given their identifiers
-   *
    * @param auIds The identifiers of the Archival Units to be deleted (required)
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the deleted AUs </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the deleted AUs </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
-  public okhttp3.Call deleteAusDeleteAsync(
-      List<String> auIds, final ApiCallback<List<ContentConfigurationResult>> _callback)
-      throws ApiException {
-
+  public okhttp3.Call deleteAusDeleteAsync(List<String> auIds,
+      final ApiCallback<List<ContentConfigurationResult>> _callback) throws ApiException {
     okhttp3.Call localVarCall = deleteAusDeleteValidateBeforeCall(auIds, _callback);
     Type localVarReturnType = new TypeToken<List<ContentConfigurationResult>>() {}.getType();
     apiClient.executeAsync(localVarCall, localVarReturnType, _callback);
@@ -419,16 +396,16 @@ public class AusApi {
   }
   /**
    * Build call for getAllAuConfig
-   *
    * @param _callback Callback for upload/download progress
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> The configuration of all AUs </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The configuration of all AUs </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public okhttp3.Call getAllAuConfigCall(final ApiCallback _callback) throws ApiException {
     String basePath = null;
@@ -462,8 +439,9 @@ public class AusApi {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
 
-    final String[] localVarContentTypes = {};
+    final String[] localVarContentTypes = {
 
+    };
     final String localVarContentType =
         apiClient.selectHeaderContentType(localVarContentTypes);
     if (localVarContentType != null) {
@@ -471,24 +449,14 @@ public class AusApi {
     }
 
     String[] localVarAuthNames = new String[] {"basicAuth"};
-    return apiClient.buildCall(
-        basePath,
-        localVarPath,
-        "GET",
-        localVarQueryParams,
-        localVarCollectionQueryParams,
-        localVarPostBody,
-        localVarHeaderParams,
-        localVarCookieParams,
-        localVarFormParams,
-        localVarAuthNames,
-        _callback);
+    return apiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams,
+        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
+        localVarFormParams, localVarAuthNames, _callback);
   }
 
   @SuppressWarnings("rawtypes")
   private okhttp3.Call getAllAuConfigValidateBeforeCall(final ApiCallback _callback)
       throws ApiException {
-
     okhttp3.Call localVarCall = getAllAuConfigCall(_callback);
     return localVarCall;
   }
@@ -496,15 +464,16 @@ public class AusApi {
   /**
    * Get the configurations of all AUs
    * Get the configuration of all AUs
-   *
    * @return List&lt;AuConfiguration&gt;
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> The configuration of all AUs </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The configuration of all AUs </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public List<AuConfiguration> getAllAuConfig() throws ApiException {
     ApiResponse<List<AuConfiguration>> localVarResp = getAllAuConfigWithHttpInfo();
@@ -514,15 +483,16 @@ public class AusApi {
   /**
    * Get the configurations of all AUs
    * Get the configuration of all AUs
-   *
    * @return ApiResponse&lt;List&lt;AuConfiguration&gt;&gt;
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> The configuration of all AUs </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The configuration of all AUs </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public ApiResponse<List<AuConfiguration>> getAllAuConfigWithHttpInfo() throws ApiException {
     okhttp3.Call localVarCall = getAllAuConfigValidateBeforeCall(null);
@@ -533,20 +503,19 @@ public class AusApi {
   /**
    * Get the configurations of all AUs (asynchronously)
    * Get the configuration of all AUs
-   *
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> The configuration of all AUs </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The configuration of all AUs </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public okhttp3.Call getAllAuConfigAsync(final ApiCallback<List<AuConfiguration>> _callback)
       throws ApiException {
-
     okhttp3.Call localVarCall = getAllAuConfigValidateBeforeCall(_callback);
     Type localVarReturnType = new TypeToken<List<AuConfiguration>>() {}.getType();
     apiClient.executeAsync(localVarCall, localVarReturnType, _callback);
@@ -554,19 +523,20 @@ public class AusApi {
   }
   /**
    * Build call for getAuAgreements
-   *
-   * @param auid      The identifier of the AU for which the poll agreements\\ \\ are requested (required)
+   * @param auid The identifier of the AU for which the poll agreements\\ \\ are requested
+   (required)
    * @param _callback Callback for upload/download progress
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> The poll agreements of the specified AU </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The poll agreements of the specified AU </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public okhttp3.Call getAuAgreementsCall(String auid, final ApiCallback _callback)
       throws ApiException {
@@ -580,14 +550,17 @@ public class AusApi {
       basePath = localCustomBaseUrl;
     } else if (localBasePaths.length > 0) {
       basePath = localBasePaths[localHostIndex];
+    } else {
+      basePath = null;
     }
 
     Object localVarPostBody = null;
 
     // create path and map variables
-    String localVarPath =
-        "/auagreements/{auid}"
-            .replaceAll("\\{" + "auid" + "\\}", apiClient.escapeString(auid));
+    String localVarPath = "/auagreements/{auid}".replaceAll("\\{"
+            + "auid"
+            + "\\}",
+        apiClient.escapeString(auid.toString()));
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -601,8 +574,9 @@ public class AusApi {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
 
-    final String[] localVarContentTypes = {};
+    final String[] localVarContentTypes = {
 
+    };
     final String localVarContentType =
         apiClient.selectHeaderContentType(localVarContentTypes);
     if (localVarContentType != null) {
@@ -610,24 +584,14 @@ public class AusApi {
     }
 
     String[] localVarAuthNames = new String[] {"basicAuth"};
-    return apiClient.buildCall(
-        basePath,
-        localVarPath,
-        "GET",
-        localVarQueryParams,
-        localVarCollectionQueryParams,
-        localVarPostBody,
-        localVarHeaderParams,
-        localVarCookieParams,
-        localVarFormParams,
-        localVarAuthNames,
-        _callback);
+    return apiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams,
+        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
+        localVarFormParams, localVarAuthNames, _callback);
   }
 
   @SuppressWarnings("rawtypes")
   private okhttp3.Call getAuAgreementsValidateBeforeCall(String auid, final ApiCallback _callback)
       throws ApiException {
-
     // verify the required parameter 'auid' is set
     if (auid == null) {
       throw new ApiException(
@@ -641,18 +605,20 @@ public class AusApi {
   /**
    * Get the poll agreements of an AU
    * Get the poll agreements of an AU given the AU identifier
-   *
-   * @param auid The identifier of the AU for which the poll agreements\\ \\ are requested (required)
+   * @param auid The identifier of the AU for which the poll agreements\\ \\ are requested
+   (required)
    * @return String
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> The poll agreements of the specified AU </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The poll agreements of the specified AU </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public String getAuAgreements(String auid) throws ApiException {
     ApiResponse<String> localVarResp = getAuAgreementsWithHttpInfo(auid);
@@ -662,18 +628,20 @@ public class AusApi {
   /**
    * Get the poll agreements of an AU
    * Get the poll agreements of an AU given the AU identifier
-   *
-   * @param auid The identifier of the AU for which the poll agreements\\ \\ are requested (required)
+   * @param auid The identifier of the AU for which the poll agreements\\ \\ are requested
+   (required)
    * @return ApiResponse&lt;String&gt;
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> The poll agreements of the specified AU </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The poll agreements of the specified AU </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public ApiResponse<String> getAuAgreementsWithHttpInfo(String auid) throws ApiException {
     okhttp3.Call localVarCall = getAuAgreementsValidateBeforeCall(auid, null);
@@ -684,23 +652,23 @@ public class AusApi {
   /**
    * Get the poll agreements of an AU (asynchronously)
    * Get the poll agreements of an AU given the AU identifier
-   *
-   * @param auid      The identifier of the AU for which the poll agreements\\ \\ are requested (required)
+   * @param auid The identifier of the AU for which the poll agreements\\ \\ are requested
+   (required)
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> The poll agreements of the specified AU </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The poll agreements of the specified AU </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public okhttp3.Call getAuAgreementsAsync(String auid, final ApiCallback<String> _callback)
       throws ApiException {
-
     okhttp3.Call localVarCall = getAuAgreementsValidateBeforeCall(auid, _callback);
     Type localVarReturnType = new TypeToken<String>() {}.getType();
     apiClient.executeAsync(localVarCall, localVarReturnType, _callback);
@@ -708,19 +676,19 @@ public class AusApi {
   }
   /**
    * Build call for getAuConfig
-   *
    * @param auid The identifier of the AU for which the configuration is\\ \\ requested (required)
    * @param _callback Callback for upload/download progress
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> The configuration of the specified AU </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The configuration of the specified AU </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public okhttp3.Call getAuConfigCall(String auid, final ApiCallback _callback)
       throws ApiException {
@@ -741,9 +709,10 @@ public class AusApi {
     Object localVarPostBody = null;
 
     // create path and map variables
-    String localVarPath =
-        "/aus/{auid}"
-            .replaceAll("\\{" + "auid" + "\\}", apiClient.escapeString(auid));
+    String localVarPath = "/aus/{auid}".replaceAll("\\{"
+            + "auid"
+            + "\\}",
+        apiClient.escapeString(auid.toString()));
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -757,8 +726,9 @@ public class AusApi {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
 
-    final String[] localVarContentTypes = {};
+    final String[] localVarContentTypes = {
 
+    };
     final String localVarContentType =
         apiClient.selectHeaderContentType(localVarContentTypes);
     if (localVarContentType != null) {
@@ -766,24 +736,14 @@ public class AusApi {
     }
 
     String[] localVarAuthNames = new String[] {"basicAuth"};
-    return apiClient.buildCall(
-        basePath,
-        localVarPath,
-        "GET",
-        localVarQueryParams,
-        localVarCollectionQueryParams,
-        localVarPostBody,
-        localVarHeaderParams,
-        localVarCookieParams,
-        localVarFormParams,
-        localVarAuthNames,
-        _callback);
+    return apiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams,
+        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
+        localVarFormParams, localVarAuthNames, _callback);
   }
 
   @SuppressWarnings("rawtypes")
   private okhttp3.Call getAuConfigValidateBeforeCall(String auid, final ApiCallback _callback)
       throws ApiException {
-
     // verify the required parameter 'auid' is set
     if (auid == null) {
       throw new ApiException(
@@ -797,18 +757,19 @@ public class AusApi {
   /**
    * Get the configuration of an AU
    * Get the configuration of an AU given the AU identifier
-   *
    * @param auid The identifier of the AU for which the configuration is\\ \\ requested (required)
    * @return AuConfiguration
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> The configuration of the specified AU </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The configuration of the specified AU </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public AuConfiguration getAuConfig(String auid) throws ApiException {
     ApiResponse<AuConfiguration> localVarResp = getAuConfigWithHttpInfo(auid);
@@ -818,18 +779,19 @@ public class AusApi {
   /**
    * Get the configuration of an AU
    * Get the configuration of an AU given the AU identifier
-   *
    * @param auid The identifier of the AU for which the configuration is\\ \\ requested (required)
    * @return ApiResponse&lt;AuConfiguration&gt;
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> The configuration of the specified AU </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The configuration of the specified AU </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public ApiResponse<AuConfiguration> getAuConfigWithHttpInfo(String auid) throws ApiException {
     okhttp3.Call localVarCall = getAuConfigValidateBeforeCall(auid, null);
@@ -840,23 +802,22 @@ public class AusApi {
   /**
    * Get the configuration of an AU (asynchronously)
    * Get the configuration of an AU given the AU identifier
-   *
    * @param auid The identifier of the AU for which the configuration is\\ \\ requested (required)
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> The configuration of the specified AU </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The configuration of the specified AU </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public okhttp3.Call getAuConfigAsync(String auid, final ApiCallback<AuConfiguration> _callback)
       throws ApiException {
-
     okhttp3.Call localVarCall = getAuConfigValidateBeforeCall(auid, _callback);
     Type localVarReturnType = new TypeToken<AuConfiguration>() {}.getType();
     apiClient.executeAsync(localVarCall, localVarReturnType, _callback);
@@ -864,19 +825,19 @@ public class AusApi {
   }
   /**
    * Build call for getAuState
-   *
    * @param auid The identifier of the AU for which the state is requested (required)
    * @param _callback Callback for upload/download progress
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> The state of the specified AU </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The state of the specified AU </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public okhttp3.Call getAuStateCall(String auid, final ApiCallback _callback) throws ApiException {
     String basePath = null;
@@ -896,9 +857,10 @@ public class AusApi {
     Object localVarPostBody = null;
 
     // create path and map variables
-    String localVarPath =
-        "/austates/{auid}"
-            .replaceAll("\\{" + "auid" + "\\}", apiClient.escapeString(auid));
+    String localVarPath = "/austates/{auid}".replaceAll("\\{"
+            + "auid"
+            + "\\}",
+        apiClient.escapeString(auid.toString()));
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -912,8 +874,9 @@ public class AusApi {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
 
-    final String[] localVarContentTypes = {};
+    final String[] localVarContentTypes = {
 
+    };
     final String localVarContentType =
         apiClient.selectHeaderContentType(localVarContentTypes);
     if (localVarContentType != null) {
@@ -921,24 +884,14 @@ public class AusApi {
     }
 
     String[] localVarAuthNames = new String[] {"basicAuth"};
-    return apiClient.buildCall(
-        basePath,
-        localVarPath,
-        "GET",
-        localVarQueryParams,
-        localVarCollectionQueryParams,
-        localVarPostBody,
-        localVarHeaderParams,
-        localVarCookieParams,
-        localVarFormParams,
-        localVarAuthNames,
-        _callback);
+    return apiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams,
+        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
+        localVarFormParams, localVarAuthNames, _callback);
   }
 
   @SuppressWarnings("rawtypes")
   private okhttp3.Call getAuStateValidateBeforeCall(String auid, final ApiCallback _callback)
       throws ApiException {
-
     // verify the required parameter 'auid' is set
     if (auid == null) {
       throw new ApiException(
@@ -952,18 +905,19 @@ public class AusApi {
   /**
    * Get the state of an AU
    * Get the state of an AU given the AU identifier
-   *
    * @param auid The identifier of the AU for which the state is requested (required)
    * @return String
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> The state of the specified AU </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The state of the specified AU </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public String getAuState(String auid) throws ApiException {
     ApiResponse<String> localVarResp = getAuStateWithHttpInfo(auid);
@@ -973,18 +927,19 @@ public class AusApi {
   /**
    * Get the state of an AU
    * Get the state of an AU given the AU identifier
-   *
    * @param auid The identifier of the AU for which the state is requested (required)
    * @return ApiResponse&lt;String&gt;
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> The state of the specified AU </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The state of the specified AU </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public ApiResponse<String> getAuStateWithHttpInfo(String auid) throws ApiException {
     okhttp3.Call localVarCall = getAuStateValidateBeforeCall(auid, null);
@@ -995,23 +950,22 @@ public class AusApi {
   /**
    * Get the state of an AU (asynchronously)
    * Get the state of an AU given the AU identifier
-   *
    * @param auid The identifier of the AU for which the state is requested (required)
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> The state of the specified AU </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The state of the specified AU </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public okhttp3.Call getAuStateAsync(String auid, final ApiCallback<String> _callback)
       throws ApiException {
-
     okhttp3.Call localVarCall = getAuStateValidateBeforeCall(auid, _callback);
     Type localVarReturnType = new TypeToken<String>() {}.getType();
     apiClient.executeAsync(localVarCall, localVarReturnType, _callback);
@@ -1019,19 +973,19 @@ public class AusApi {
   }
   /**
    * Build call for getAuStatus
-   *
    * @param auid The identifier of the AU for which the status is\\ \\ requested (required)
    * @param _callback Callback for upload/download progress
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> The status of the specified AU </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The status of the specified AU </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public okhttp3.Call getAuStatusCall(String auid, final ApiCallback _callback)
       throws ApiException {
@@ -1052,9 +1006,10 @@ public class AusApi {
     Object localVarPostBody = null;
 
     // create path and map variables
-    String localVarPath =
-        "/austatuses/{auid}"
-            .replaceAll("\\{" + "auid" + "\\}", apiClient.escapeString(auid));
+    String localVarPath = "/austatuses/{auid}".replaceAll("\\{"
+            + "auid"
+            + "\\}",
+        apiClient.escapeString(auid.toString()));
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1068,8 +1023,9 @@ public class AusApi {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
 
-    final String[] localVarContentTypes = {};
+    final String[] localVarContentTypes = {
 
+    };
     final String localVarContentType =
         apiClient.selectHeaderContentType(localVarContentTypes);
     if (localVarContentType != null) {
@@ -1077,24 +1033,14 @@ public class AusApi {
     }
 
     String[] localVarAuthNames = new String[] {"basicAuth"};
-    return apiClient.buildCall(
-        basePath,
-        localVarPath,
-        "GET",
-        localVarQueryParams,
-        localVarCollectionQueryParams,
-        localVarPostBody,
-        localVarHeaderParams,
-        localVarCookieParams,
-        localVarFormParams,
-        localVarAuthNames,
-        _callback);
+    return apiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams,
+        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
+        localVarFormParams, localVarAuthNames, _callback);
   }
 
   @SuppressWarnings("rawtypes")
   private okhttp3.Call getAuStatusValidateBeforeCall(String auid, final ApiCallback _callback)
       throws ApiException {
-
     // verify the required parameter 'auid' is set
     if (auid == null) {
       throw new ApiException(
@@ -1108,18 +1054,19 @@ public class AusApi {
   /**
    * Get the status of an AU
    * Get the status of an AU given the AU identifier
-   *
    * @param auid The identifier of the AU for which the status is\\ \\ requested (required)
    * @return AuStatus
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> The status of the specified AU </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The status of the specified AU </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public AuStatus getAuStatus(String auid) throws ApiException {
     ApiResponse<AuStatus> localVarResp = getAuStatusWithHttpInfo(auid);
@@ -1129,18 +1076,19 @@ public class AusApi {
   /**
    * Get the status of an AU
    * Get the status of an AU given the AU identifier
-   *
    * @param auid The identifier of the AU for which the status is\\ \\ requested (required)
    * @return ApiResponse&lt;AuStatus&gt;
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> The status of the specified AU </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The status of the specified AU </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public ApiResponse<AuStatus> getAuStatusWithHttpInfo(String auid) throws ApiException {
     okhttp3.Call localVarCall = getAuStatusValidateBeforeCall(auid, null);
@@ -1151,23 +1099,22 @@ public class AusApi {
   /**
    * Get the status of an AU (asynchronously)
    * Get the status of an AU given the AU identifier
-   *
    * @param auid The identifier of the AU for which the status is\\ \\ requested (required)
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> The status of the specified AU </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The status of the specified AU </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public okhttp3.Call getAuStatusAsync(String auid, final ApiCallback<AuStatus> _callback)
       throws ApiException {
-
     okhttp3.Call localVarCall = getAuStatusValidateBeforeCall(auid, _callback);
     Type localVarReturnType = new TypeToken<AuStatus>() {}.getType();
     apiClient.executeAsync(localVarCall, localVarReturnType, _callback);
@@ -1175,19 +1122,20 @@ public class AusApi {
   }
   /**
    * Build call for getAuSuspectUrlVersions
-   *
-   * @param auid      The identifier of the AU for which the suspect URL\\ \\ versions are requested (required)
+   * @param auid The identifier of the AU for which the suspect URL\\ \\ versions are requested
+   (required)
    * @param _callback Callback for upload/download progress
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> The suspect URL versions of the specified AU </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The suspect URL versions of the specified AU </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public okhttp3.Call getAuSuspectUrlVersionsCall(String auid, final ApiCallback _callback)
       throws ApiException {
@@ -1208,9 +1156,10 @@ public class AusApi {
     Object localVarPostBody = null;
 
     // create path and map variables
-    String localVarPath =
-        "/aususpecturls/{auid}"
-            .replaceAll("\\{" + "auid" + "\\}", apiClient.escapeString(auid));
+    String localVarPath = "/aususpecturls/{auid}".replaceAll("\\{"
+            + "auid"
+            + "\\}",
+        apiClient.escapeString(auid.toString()));
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1224,8 +1173,9 @@ public class AusApi {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
 
-    final String[] localVarContentTypes = {};
+    final String[] localVarContentTypes = {
 
+    };
     final String localVarContentType =
         apiClient.selectHeaderContentType(localVarContentTypes);
     if (localVarContentType != null) {
@@ -1233,24 +1183,14 @@ public class AusApi {
     }
 
     String[] localVarAuthNames = new String[] {"basicAuth"};
-    return apiClient.buildCall(
-        basePath,
-        localVarPath,
-        "GET",
-        localVarQueryParams,
-        localVarCollectionQueryParams,
-        localVarPostBody,
-        localVarHeaderParams,
-        localVarCookieParams,
-        localVarFormParams,
-        localVarAuthNames,
-        _callback);
+    return apiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams,
+        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
+        localVarFormParams, localVarAuthNames, _callback);
   }
 
   @SuppressWarnings("rawtypes")
   private okhttp3.Call getAuSuspectUrlVersionsValidateBeforeCall(
       String auid, final ApiCallback _callback) throws ApiException {
-
     // verify the required parameter 'auid' is set
     if (auid == null) {
       throw new ApiException(
@@ -1264,18 +1204,20 @@ public class AusApi {
   /**
    * Get the suspect URL versions of an AU
    * Get the suspect URL versions of an AU given the AU identifier
-   *
-   * @param auid The identifier of the AU for which the suspect URL\\ \\ versions are requested (required)
+   * @param auid The identifier of the AU for which the suspect URL\\ \\ versions are requested
+   (required)
    * @return String
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> The suspect URL versions of the specified AU </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The suspect URL versions of the specified AU </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public String getAuSuspectUrlVersions(String auid) throws ApiException {
     ApiResponse<String> localVarResp = getAuSuspectUrlVersionsWithHttpInfo(auid);
@@ -1285,18 +1227,20 @@ public class AusApi {
   /**
    * Get the suspect URL versions of an AU
    * Get the suspect URL versions of an AU given the AU identifier
-   *
-   * @param auid The identifier of the AU for which the suspect URL\\ \\ versions are requested (required)
+   * @param auid The identifier of the AU for which the suspect URL\\ \\ versions are requested
+   (required)
    * @return ApiResponse&lt;String&gt;
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> The suspect URL versions of the specified AU </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The suspect URL versions of the specified AU </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public ApiResponse<String> getAuSuspectUrlVersionsWithHttpInfo(String auid) throws ApiException {
     okhttp3.Call localVarCall = getAuSuspectUrlVersionsValidateBeforeCall(auid, null);
@@ -1307,23 +1251,23 @@ public class AusApi {
   /**
    * Get the suspect URL versions of an AU (asynchronously)
    * Get the suspect URL versions of an AU given the AU identifier
-   *
-   * @param auid      The identifier of the AU for which the suspect URL\\ \\ versions are requested (required)
+   * @param auid The identifier of the AU for which the suspect URL\\ \\ versions are requested
+   (required)
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> The suspect URL versions of the specified AU </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The suspect URL versions of the specified AU </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public okhttp3.Call getAuSuspectUrlVersionsAsync(String auid, final ApiCallback<String> _callback)
       throws ApiException {
-
     okhttp3.Call localVarCall = getAuSuspectUrlVersionsValidateBeforeCall(auid, _callback);
     Type localVarReturnType = new TypeToken<String>() {}.getType();
     apiClient.executeAsync(localVarCall, localVarReturnType, _callback);
@@ -1331,18 +1275,18 @@ public class AusApi {
   }
   /**
    * Build call for getAuqueries
-   *
    * @param auQuery The query that specifies the archival units to be\\ \\ returned (required)
    * @param _callback Callback for upload/download progress
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the requested archival units </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the requested archival units </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public okhttp3.Call getAuqueriesCall(String auQuery, final ApiCallback _callback)
       throws ApiException {
@@ -1381,8 +1325,9 @@ public class AusApi {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
 
-    final String[] localVarContentTypes = {};
+    final String[] localVarContentTypes = {
 
+    };
     final String localVarContentType =
         apiClient.selectHeaderContentType(localVarContentTypes);
     if (localVarContentType != null) {
@@ -1390,24 +1335,14 @@ public class AusApi {
     }
 
     String[] localVarAuthNames = new String[] {"basicAuth"};
-    return apiClient.buildCall(
-        basePath,
-        localVarPath,
-        "GET",
-        localVarQueryParams,
-        localVarCollectionQueryParams,
-        localVarPostBody,
-        localVarHeaderParams,
-        localVarCookieParams,
-        localVarFormParams,
-        localVarAuthNames,
-        _callback);
+    return apiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams,
+        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
+        localVarFormParams, localVarAuthNames, _callback);
   }
 
   @SuppressWarnings("rawtypes")
   private okhttp3.Call getAuqueriesValidateBeforeCall(String auQuery, final ApiCallback _callback)
       throws ApiException {
-
     // verify the required parameter 'auQuery' is set
     if (auQuery == null) {
       throw new ApiException(
@@ -1421,17 +1356,18 @@ public class AusApi {
   /**
    * Query for archival unit properties
    * Query for archival units that meet a set of specified\\ \\ conditions
-   *
    * @param auQuery The query that specifies the archival units to be\\ \\ returned (required)
    * @return List&lt;AuWsResult&gt;
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the requested archival units </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the requested archival units </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public List<AuWsResult> getAuqueries(String auQuery) throws ApiException {
     ApiResponse<List<AuWsResult>> localVarResp = getAuqueriesWithHttpInfo(auQuery);
@@ -1441,17 +1377,18 @@ public class AusApi {
   /**
    * Query for archival unit properties
    * Query for archival units that meet a set of specified\\ \\ conditions
-   *
    * @param auQuery The query that specifies the archival units to be\\ \\ returned (required)
    * @return ApiResponse&lt;List&lt;AuWsResult&gt;&gt;
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the requested archival units </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the requested archival units </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public ApiResponse<List<AuWsResult>> getAuqueriesWithHttpInfo(String auQuery)
       throws ApiException {
@@ -1463,22 +1400,21 @@ public class AusApi {
   /**
    * Query for archival unit properties (asynchronously)
    * Query for archival units that meet a set of specified\\ \\ conditions
-   *
    * @param auQuery The query that specifies the archival units to be\\ \\ returned (required)
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the requested archival units </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the requested archival units </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public okhttp3.Call getAuqueriesAsync(
       String auQuery, final ApiCallback<List<AuWsResult>> _callback) throws ApiException {
-
     okhttp3.Call localVarCall = getAuqueriesValidateBeforeCall(auQuery, _callback);
     Type localVarReturnType = new TypeToken<List<AuWsResult>>() {}.getType();
     apiClient.executeAsync(localVarCall, localVarReturnType, _callback);
@@ -1486,19 +1422,20 @@ public class AusApi {
   }
   /**
    * Build call for getNoAuPeers
-   *
-   * @param auid      The identifier of the AU for which the NoAuPeerSet\\ \\ object is requested (required)
+   * @param auid The identifier of the AU for which the NoAuPeerSet\\ \\ object is requested
+   (required)
    * @param _callback Callback for upload/download progress
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> The NoAuPeerSet object of the specified AU </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The NoAuPeerSet object of the specified AU </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public okhttp3.Call getNoAuPeersCall(String auid, final ApiCallback _callback)
       throws ApiException {
@@ -1519,9 +1456,10 @@ public class AusApi {
     Object localVarPostBody = null;
 
     // create path and map variables
-    String localVarPath =
-        "/noaupeers/{auid}"
-            .replaceAll("\\{" + "auid" + "\\}", apiClient.escapeString(auid));
+    String localVarPath = "/noaupeers/{auid}".replaceAll("\\{"
+            + "auid"
+            + "\\}",
+        apiClient.escapeString(auid.toString()));
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1535,8 +1473,9 @@ public class AusApi {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
 
-    final String[] localVarContentTypes = {};
+    final String[] localVarContentTypes = {
 
+    };
     final String localVarContentType =
         apiClient.selectHeaderContentType(localVarContentTypes);
     if (localVarContentType != null) {
@@ -1544,24 +1483,14 @@ public class AusApi {
     }
 
     String[] localVarAuthNames = new String[] {"basicAuth"};
-    return apiClient.buildCall(
-        basePath,
-        localVarPath,
-        "GET",
-        localVarQueryParams,
-        localVarCollectionQueryParams,
-        localVarPostBody,
-        localVarHeaderParams,
-        localVarCookieParams,
-        localVarFormParams,
-        localVarAuthNames,
-        _callback);
+    return apiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams,
+        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
+        localVarFormParams, localVarAuthNames, _callback);
   }
 
   @SuppressWarnings("rawtypes")
   private okhttp3.Call getNoAuPeersValidateBeforeCall(String auid, final ApiCallback _callback)
       throws ApiException {
-
     // verify the required parameter 'auid' is set
     if (auid == null) {
       throw new ApiException(
@@ -1575,18 +1504,20 @@ public class AusApi {
   /**
    * Get the NoAuPeerSet object of an AU
    * Get the NoAuPeerSet object of an AU given the AU identifier
-   *
-   * @param auid The identifier of the AU for which the NoAuPeerSet\\ \\ object is requested (required)
+   * @param auid The identifier of the AU for which the NoAuPeerSet\\ \\ object is requested
+   (required)
    * @return String
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> The NoAuPeerSet object of the specified AU </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The NoAuPeerSet object of the specified AU </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public String getNoAuPeers(String auid) throws ApiException {
     ApiResponse<String> localVarResp = getNoAuPeersWithHttpInfo(auid);
@@ -1596,18 +1527,20 @@ public class AusApi {
   /**
    * Get the NoAuPeerSet object of an AU
    * Get the NoAuPeerSet object of an AU given the AU identifier
-   *
-   * @param auid The identifier of the AU for which the NoAuPeerSet\\ \\ object is requested (required)
+   * @param auid The identifier of the AU for which the NoAuPeerSet\\ \\ object is requested
+   (required)
    * @return ApiResponse&lt;String&gt;
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> The NoAuPeerSet object of the specified AU </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The NoAuPeerSet object of the specified AU </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public ApiResponse<String> getNoAuPeersWithHttpInfo(String auid) throws ApiException {
     okhttp3.Call localVarCall = getNoAuPeersValidateBeforeCall(auid, null);
@@ -1618,23 +1551,23 @@ public class AusApi {
   /**
    * Get the NoAuPeerSet object of an AU (asynchronously)
    * Get the NoAuPeerSet object of an AU given the AU identifier
-   *
-   * @param auid      The identifier of the AU for which the NoAuPeerSet\\ \\ object is requested (required)
+   * @param auid The identifier of the AU for which the NoAuPeerSet\\ \\ object is requested
+   (required)
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> The NoAuPeerSet object of the specified AU </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The NoAuPeerSet object of the specified AU </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public okhttp3.Call getNoAuPeersAsync(String auid, final ApiCallback<String> _callback)
       throws ApiException {
-
     okhttp3.Call localVarCall = getNoAuPeersValidateBeforeCall(auid, _callback);
     Type localVarReturnType = new TypeToken<String>() {}.getType();
     apiClient.executeAsync(localVarCall, localVarReturnType, _callback);
@@ -1642,27 +1575,28 @@ public class AusApi {
   }
   /**
    * Build call for patchAuAgreements
-   *
-   * @param auid                 The identifier of the AU for which the poll agreements\\ \\ are to be updated (required)
-   * @param auAgreements         The parts of the Archival Unit poll agreements to be\\ \\ updated (required)
+   * @param auid The identifier of the AU for which the poll agreements\\ \\ are to be updated
+   (required)
+   * @param auAgreements The parts of the Archival Unit poll agreements to be\\ \\ updated
+   (required)
    * @param xLockssRequestCookie The LOCKSS-specific request cookie header (optional)
    * @param _callback Callback for upload/download progress
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
-  public okhttp3.Call patchAuAgreementsCall(
-      String auid, Object auAgreements, String xLockssRequestCookie, final ApiCallback _callback)
-      throws ApiException {
+  public okhttp3.Call patchAuAgreementsCall(String auid, String auAgreements,
+      String xLockssRequestCookie, final ApiCallback _callback) throws ApiException {
     String basePath = null;
 
     // Operation Servers
@@ -1680,9 +1614,10 @@ public class AusApi {
     Object localVarPostBody = auAgreements;
 
     // create path and map variables
-    String localVarPath =
-        "/auagreements/{auid}"
-            .replaceAll("\\{" + "auid" + "\\}", apiClient.escapeString(auid));
+    String localVarPath = "/auagreements/{auid}".replaceAll("\\{"
+            + "auid"
+            + "\\}",
+        apiClient.escapeString(auid.toString()));
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1695,8 +1630,9 @@ public class AusApi {
           "X-Lockss-Request-Cookie", apiClient.parameterToString(xLockssRequestCookie));
     }
 
-    final String[] localVarAccepts = {};
+    final String[] localVarAccepts = {
 
+    };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) {
       localVarHeaderParams.put("Accept", localVarAccept);
@@ -1710,25 +1646,14 @@ public class AusApi {
     }
 
     String[] localVarAuthNames = new String[] {"basicAuth"};
-    return apiClient.buildCall(
-        basePath,
-        localVarPath,
-        "PATCH",
-        localVarQueryParams,
-        localVarCollectionQueryParams,
-        localVarPostBody,
-        localVarHeaderParams,
-        localVarCookieParams,
-        localVarFormParams,
-        localVarAuthNames,
-        _callback);
+    return apiClient.buildCall(basePath, localVarPath, "PATCH", localVarQueryParams,
+        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
+        localVarFormParams, localVarAuthNames, _callback);
   }
 
   @SuppressWarnings("rawtypes")
-  private okhttp3.Call patchAuAgreementsValidateBeforeCall(
-      String auid, Object auAgreements, String xLockssRequestCookie, final ApiCallback _callback)
-      throws ApiException {
-
+  private okhttp3.Call patchAuAgreementsValidateBeforeCall(String auid, String auAgreements,
+      String xLockssRequestCookie, final ApiCallback _callback) throws ApiException {
     // verify the required parameter 'auid' is set
     if (auid == null) {
       throw new ApiException(
@@ -1749,23 +1674,26 @@ public class AusApi {
   /**
    * Update the poll agreements of an AU
    * Update the poll agreements of an AU given the AU identifier
-   *
-   * @param auid                 The identifier of the AU for which the poll agreements\\ \\ are to be updated (required)
-   * @param auAgreements         The parts of the Archival Unit poll agreements to be\\ \\ updated (required)
+   * @param auid The identifier of the AU for which the poll agreements\\ \\ are to be updated
+   (required)
+   * @param auAgreements The parts of the Archival Unit poll agreements to be\\ \\ updated
+   (required)
    * @param xLockssRequestCookie The LOCKSS-specific request cookie header (optional)
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
-  public void patchAuAgreements(String auid, Object auAgreements, String xLockssRequestCookie)
+  public void patchAuAgreements(String auid, String auAgreements, String xLockssRequestCookie)
       throws ApiException {
     patchAuAgreementsWithHttpInfo(auid, auAgreements, xLockssRequestCookie);
   }
@@ -1773,25 +1701,28 @@ public class AusApi {
   /**
    * Update the poll agreements of an AU
    * Update the poll agreements of an AU given the AU identifier
-   *
-   * @param auid                 The identifier of the AU for which the poll agreements\\ \\ are to be updated (required)
-   * @param auAgreements         The parts of the Archival Unit poll agreements to be\\ \\ updated (required)
+   * @param auid The identifier of the AU for which the poll agreements\\ \\ are to be updated
+   (required)
+   * @param auAgreements The parts of the Archival Unit poll agreements to be\\ \\ updated
+   (required)
    * @param xLockssRequestCookie The LOCKSS-specific request cookie header (optional)
    * @return ApiResponse&lt;Void&gt;
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public ApiResponse<Void> patchAuAgreementsWithHttpInfo(
-      String auid, Object auAgreements, String xLockssRequestCookie) throws ApiException {
+      String auid, String auAgreements, String xLockssRequestCookie) throws ApiException {
     okhttp3.Call localVarCall =
         patchAuAgreementsValidateBeforeCall(auid, auAgreements, xLockssRequestCookie, null);
     return apiClient.execute(localVarCall);
@@ -1800,31 +1731,28 @@ public class AusApi {
   /**
    * Update the poll agreements of an AU (asynchronously)
    * Update the poll agreements of an AU given the AU identifier
-   *
-   * @param auid                 The identifier of the AU for which the poll agreements\\ \\ are to be updated (required)
-   * @param auAgreements         The parts of the Archival Unit poll agreements to be\\ \\ updated (required)
+   * @param auid The identifier of the AU for which the poll agreements\\ \\ are to be updated
+   (required)
+   * @param auAgreements The parts of the Archival Unit poll agreements to be\\ \\ updated
+   (required)
    * @param xLockssRequestCookie The LOCKSS-specific request cookie header (optional)
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
-  public okhttp3.Call patchAuAgreementsAsync(
-      String auid,
-      Object auAgreements,
-      String xLockssRequestCookie,
-      final ApiCallback<Void> _callback)
-      throws ApiException {
-
+  public okhttp3.Call patchAuAgreementsAsync(String auid, String auAgreements,
+      String xLockssRequestCookie, final ApiCallback<Void> _callback) throws ApiException {
     okhttp3.Call localVarCall =
         patchAuAgreementsValidateBeforeCall(auid, auAgreements, xLockssRequestCookie, _callback);
     apiClient.executeAsync(localVarCall, _callback);
@@ -1832,27 +1760,26 @@ public class AusApi {
   }
   /**
    * Build call for patchAuState
-   *
    * @param auid The identifier of the AU for which the state is to be\\ \\ updated (required)
    * @param auState The parts of the Archival Unit state to be updated (required)
    * @param xLockssRequestCookie The LOCKSS-specific request cookie header (optional)
    * @param _callback Callback for upload/download progress
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
-  public okhttp3.Call patchAuStateCall(
-      String auid, Object auState, String xLockssRequestCookie, final ApiCallback _callback)
-      throws ApiException {
+  public okhttp3.Call patchAuStateCall(String auid, String auState, String xLockssRequestCookie,
+      final ApiCallback _callback) throws ApiException {
     String basePath = null;
 
     // Operation Servers
@@ -1870,9 +1797,10 @@ public class AusApi {
     Object localVarPostBody = auState;
 
     // create path and map variables
-    String localVarPath =
-        "/austates/{auid}"
-            .replaceAll("\\{" + "auid" + "\\}", apiClient.escapeString(auid));
+    String localVarPath = "/austates/{auid}".replaceAll("\\{"
+            + "auid"
+            + "\\}",
+        apiClient.escapeString(auid.toString()));
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1885,8 +1813,9 @@ public class AusApi {
           "X-Lockss-Request-Cookie", apiClient.parameterToString(xLockssRequestCookie));
     }
 
-    final String[] localVarAccepts = {};
+    final String[] localVarAccepts = {
 
+    };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) {
       localVarHeaderParams.put("Accept", localVarAccept);
@@ -1900,25 +1829,14 @@ public class AusApi {
     }
 
     String[] localVarAuthNames = new String[] {"basicAuth"};
-    return apiClient.buildCall(
-        basePath,
-        localVarPath,
-        "PATCH",
-        localVarQueryParams,
-        localVarCollectionQueryParams,
-        localVarPostBody,
-        localVarHeaderParams,
-        localVarCookieParams,
-        localVarFormParams,
-        localVarAuthNames,
-        _callback);
+    return apiClient.buildCall(basePath, localVarPath, "PATCH", localVarQueryParams,
+        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
+        localVarFormParams, localVarAuthNames, _callback);
   }
 
   @SuppressWarnings("rawtypes")
-  private okhttp3.Call patchAuStateValidateBeforeCall(
-      String auid, Object auState, String xLockssRequestCookie, final ApiCallback _callback)
-      throws ApiException {
-
+  private okhttp3.Call patchAuStateValidateBeforeCall(String auid, String auState,
+      String xLockssRequestCookie, final ApiCallback _callback) throws ApiException {
     // verify the required parameter 'auid' is set
     if (auid == null) {
       throw new ApiException(
@@ -1938,23 +1856,24 @@ public class AusApi {
   /**
    * Update the state of an AU
    * Update the state of an AU given the AU identifier
-   *
    * @param auid The identifier of the AU for which the state is to be\\ \\ updated (required)
    * @param auState The parts of the Archival Unit state to be updated (required)
    * @param xLockssRequestCookie The LOCKSS-specific request cookie header (optional)
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
-  public void patchAuState(String auid, Object auState, String xLockssRequestCookie)
+  public void patchAuState(String auid, String auState, String xLockssRequestCookie)
       throws ApiException {
     patchAuStateWithHttpInfo(auid, auState, xLockssRequestCookie);
   }
@@ -1962,25 +1881,26 @@ public class AusApi {
   /**
    * Update the state of an AU
    * Update the state of an AU given the AU identifier
-   *
    * @param auid The identifier of the AU for which the state is to be\\ \\ updated (required)
    * @param auState The parts of the Archival Unit state to be updated (required)
    * @param xLockssRequestCookie The LOCKSS-specific request cookie header (optional)
    * @return ApiResponse&lt;Void&gt;
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public ApiResponse<Void> patchAuStateWithHttpInfo(
-      String auid, Object auState, String xLockssRequestCookie) throws ApiException {
+      String auid, String auState, String xLockssRequestCookie) throws ApiException {
     okhttp3.Call localVarCall =
         patchAuStateValidateBeforeCall(auid, auState, xLockssRequestCookie, null);
     return apiClient.execute(localVarCall);
@@ -1989,28 +1909,26 @@ public class AusApi {
   /**
    * Update the state of an AU (asynchronously)
    * Update the state of an AU given the AU identifier
-   *
    * @param auid The identifier of the AU for which the state is to be\\ \\ updated (required)
    * @param auState The parts of the Archival Unit state to be updated (required)
    * @param xLockssRequestCookie The LOCKSS-specific request cookie header (optional)
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
-  public okhttp3.Call patchAuStateAsync(
-      String auid, Object auState, String xLockssRequestCookie, final ApiCallback<Void> _callback)
-      throws ApiException {
-
+  public okhttp3.Call patchAuStateAsync(String auid, String auState, String xLockssRequestCookie,
+      final ApiCallback<Void> _callback) throws ApiException {
     okhttp3.Call localVarCall =
         patchAuStateValidateBeforeCall(auid, auState, xLockssRequestCookie, _callback);
     apiClient.executeAsync(localVarCall, _callback);
@@ -2018,20 +1936,20 @@ public class AusApi {
   }
   /**
    * Build call for postAus
-   *
    * @param auIds The identifiers of the Archival Units to be added (required)
    * @param _callback Callback for upload/download progress
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the added AUs </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the added AUs </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public okhttp3.Call postAusCall(List<String> auIds, final ApiCallback _callback)
       throws ApiException {
@@ -2074,24 +1992,14 @@ public class AusApi {
     }
 
     String[] localVarAuthNames = new String[] {"basicAuth"};
-    return apiClient.buildCall(
-        basePath,
-        localVarPath,
-        "POST",
-        localVarQueryParams,
-        localVarCollectionQueryParams,
-        localVarPostBody,
-        localVarHeaderParams,
-        localVarCookieParams,
-        localVarFormParams,
-        localVarAuthNames,
-        _callback);
+    return apiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams,
+        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
+        localVarFormParams, localVarAuthNames, _callback);
   }
 
   @SuppressWarnings("rawtypes")
   private okhttp3.Call postAusValidateBeforeCall(List<String> auIds, final ApiCallback _callback)
       throws ApiException {
-
     // verify the required parameter 'auIds' is set
     if (auIds == null) {
       throw new ApiException("Missing the required parameter 'auIds' when calling postAus(Async)");
@@ -2104,19 +2012,20 @@ public class AusApi {
   /**
    * Add AUs
    * Add a group of AUs given their identifiers
-   *
    * @param auIds The identifiers of the Archival Units to be added (required)
    * @return List&lt;ContentConfigurationResult&gt;
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the added AUs </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the added AUs </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public List<ContentConfigurationResult> postAus(List<String> auIds) throws ApiException {
     ApiResponse<List<ContentConfigurationResult>> localVarResp = postAusWithHttpInfo(auIds);
@@ -2126,19 +2035,20 @@ public class AusApi {
   /**
    * Add AUs
    * Add a group of AUs given their identifiers
-   *
    * @param auIds The identifiers of the Archival Units to be added (required)
    * @return ApiResponse&lt;List&lt;ContentConfigurationResult&gt;&gt;
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the added AUs </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the added AUs </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public ApiResponse<List<ContentConfigurationResult>> postAusWithHttpInfo(List<String> auIds)
       throws ApiException {
@@ -2150,25 +2060,23 @@ public class AusApi {
   /**
    * Add AUs (asynchronously)
    * Add a group of AUs given their identifiers
-   *
    * @param auIds The identifiers of the Archival Units to be added (required)
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the added AUs </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the added AUs </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
-  public okhttp3.Call postAusAsync(
-      List<String> auIds, final ApiCallback<List<ContentConfigurationResult>> _callback)
-      throws ApiException {
-
+  public okhttp3.Call postAusAsync(List<String> auIds,
+      final ApiCallback<List<ContentConfigurationResult>> _callback) throws ApiException {
     okhttp3.Call localVarCall = postAusValidateBeforeCall(auIds, _callback);
     Type localVarReturnType = new TypeToken<List<ContentConfigurationResult>>() {}.getType();
     apiClient.executeAsync(localVarCall, localVarReturnType, _callback);
@@ -2176,25 +2084,24 @@ public class AusApi {
   }
   /**
    * Build call for putAuConfig
-   *
-   * @param auid The identifier of the AU for which the configuration is\\ \\ requested (required)
    * @param auConfiguration The Archival Unit configuration to be stored (required)
    * @param _callback Callback for upload/download progress
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
-  public okhttp3.Call putAuConfigCall(String auid, AuConfiguration auConfiguration,
-    final ApiCallback _callback) throws ApiException {
+  public okhttp3.Call putAuConfigCall(AuConfiguration auConfiguration, final ApiCallback _callback)
+      throws ApiException {
     String basePath = null;
 
     // Operation Servers
@@ -2212,8 +2119,7 @@ public class AusApi {
     Object localVarPostBody = auConfiguration;
 
     // create path and map variables
-    String localVarPath = "/aus/{auid}"
-      .replaceAll("\\{" + "auid" + "\\}", apiClient.escapeString(auid));
+    String localVarPath = "/aus/{auid}";
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2221,8 +2127,9 @@ public class AusApi {
     Map<String, String> localVarCookieParams = new HashMap<String, String>();
     Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-    final String[] localVarAccepts = {};
+    final String[] localVarAccepts = {
 
+    };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) {
       localVarHeaderParams.put("Accept", localVarAccept);
@@ -2236,129 +2143,111 @@ public class AusApi {
     }
 
     String[] localVarAuthNames = new String[] {"basicAuth"};
-    return apiClient.buildCall(
-        basePath,
-        localVarPath,
-        "PUT",
-        localVarQueryParams,
-        localVarCollectionQueryParams,
-        localVarPostBody,
-        localVarHeaderParams,
-        localVarCookieParams,
-        localVarFormParams,
-        localVarAuthNames,
-        _callback);
+    return apiClient.buildCall(basePath, localVarPath, "PUT", localVarQueryParams,
+        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
+        localVarFormParams, localVarAuthNames, _callback);
   }
 
   @SuppressWarnings("rawtypes")
-  private okhttp3.Call putAuConfigValidateBeforeCall(String auid, AuConfiguration auConfiguration,
-    final ApiCallback _callback) throws ApiException {
-
-    // verify the required parameter 'auid' is set
-    if (auid == null) {
-      throw new ApiException(
-        "Missing the required parameter 'auid' when calling putAuConfig(Async)");
-    }
-
+  private okhttp3.Call putAuConfigValidateBeforeCall(
+      AuConfiguration auConfiguration, final ApiCallback _callback) throws ApiException {
     // verify the required parameter 'auConfiguration' is set
     if (auConfiguration == null) {
       throw new ApiException(
           "Missing the required parameter 'auConfiguration' when calling putAuConfig(Async)");
     }
 
-    okhttp3.Call localVarCall = putAuConfigCall(auid, auConfiguration, _callback);
+    okhttp3.Call localVarCall = putAuConfigCall(auConfiguration, _callback);
     return localVarCall;
   }
 
   /**
    * Store the configuration of an AU
    * Store the configuration of an AU given the AU identifier
-   *
-   * @param auid            The identifier of the AU for which the configuration is\\ \\ requested (required)
    * @param auConfiguration The Archival Unit configuration to be stored (required)
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
-  public void putAuConfig(String auid, AuConfiguration auConfiguration) throws ApiException {
-    putAuConfigWithHttpInfo(auid, auConfiguration);
+  public void putAuConfig(AuConfiguration auConfiguration) throws ApiException {
+    putAuConfigWithHttpInfo(auConfiguration);
   }
 
   /**
    * Store the configuration of an AU
    * Store the configuration of an AU given the AU identifier
-   *
-   * @param auid            The identifier of the AU for which the configuration is\\ \\ requested (required)
    * @param auConfiguration The Archival Unit configuration to be stored (required)
    * @return ApiResponse&lt;Void&gt;
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
-  public ApiResponse<Void> putAuConfigWithHttpInfo(String auid, AuConfiguration auConfiguration)
+  public ApiResponse<Void> putAuConfigWithHttpInfo(AuConfiguration auConfiguration)
       throws ApiException {
-    okhttp3.Call localVarCall = putAuConfigValidateBeforeCall(auid, auConfiguration, null);
+    okhttp3.Call localVarCall = putAuConfigValidateBeforeCall(auConfiguration, null);
     return apiClient.execute(localVarCall);
   }
 
   /**
    * Store the configuration of an AU (asynchronously)
    * Store the configuration of an AU given the AU identifier
-   *
-   * @param auid            The identifier of the AU for which the configuration is\\ \\ requested (required)
    * @param auConfiguration The Archival Unit configuration to be stored (required)
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
-  public okhttp3.Call putAuConfigAsync(String auid, AuConfiguration auConfiguration,
-    final ApiCallback<Void> _callback) throws ApiException {
-
-    okhttp3.Call localVarCall = putAuConfigValidateBeforeCall(auid, auConfiguration, _callback);
+  public okhttp3.Call putAuConfigAsync(
+      AuConfiguration auConfiguration, final ApiCallback<Void> _callback) throws ApiException {
+    okhttp3.Call localVarCall = putAuConfigValidateBeforeCall(auConfiguration, _callback);
     apiClient.executeAsync(localVarCall, _callback);
     return localVarCall;
   }
   /**
    * Build call for putAuSubstanceCheck
-   *
    * @param auid The identifier of the AU for which the substance check\\ \\ is requested (required)
    * @param _callback Callback for upload/download progress
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> The substance check of the specified AU </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The substance check of the specified AU </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public okhttp3.Call putAuSubstanceCheckCall(String auid, final ApiCallback _callback)
       throws ApiException {
@@ -2379,9 +2268,10 @@ public class AusApi {
     Object localVarPostBody = null;
 
     // create path and map variables
-    String localVarPath =
-        "/ausubstances/{auid}"
-            .replaceAll("\\{" + "auid" + "\\}", apiClient.escapeString(auid));
+    String localVarPath = "/ausubstances/{auid}".replaceAll("\\{"
+            + "auid"
+            + "\\}",
+        apiClient.escapeString(auid.toString()));
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2395,8 +2285,9 @@ public class AusApi {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
 
-    final String[] localVarContentTypes = {};
+    final String[] localVarContentTypes = {
 
+    };
     final String localVarContentType =
         apiClient.selectHeaderContentType(localVarContentTypes);
     if (localVarContentType != null) {
@@ -2404,24 +2295,14 @@ public class AusApi {
     }
 
     String[] localVarAuthNames = new String[] {"basicAuth"};
-    return apiClient.buildCall(
-        basePath,
-        localVarPath,
-        "PUT",
-        localVarQueryParams,
-        localVarCollectionQueryParams,
-        localVarPostBody,
-        localVarHeaderParams,
-        localVarCookieParams,
-        localVarFormParams,
-        localVarAuthNames,
-        _callback);
+    return apiClient.buildCall(basePath, localVarPath, "PUT", localVarQueryParams,
+        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
+        localVarFormParams, localVarAuthNames, _callback);
   }
 
   @SuppressWarnings("rawtypes")
   private okhttp3.Call putAuSubstanceCheckValidateBeforeCall(
       String auid, final ApiCallback _callback) throws ApiException {
-
     // verify the required parameter 'auid' is set
     if (auid == null) {
       throw new ApiException(
@@ -2435,18 +2316,19 @@ public class AusApi {
   /**
    * Update the substance of an AU
    * Update the substance of an AU given the AU identifier
-   *
    * @param auid The identifier of the AU for which the substance check\\ \\ is requested (required)
    * @return CheckSubstanceResult
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> The substance check of the specified AU </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The substance check of the specified AU </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public CheckSubstanceResult putAuSubstanceCheck(String auid) throws ApiException {
     ApiResponse<CheckSubstanceResult> localVarResp = putAuSubstanceCheckWithHttpInfo(auid);
@@ -2456,18 +2338,19 @@ public class AusApi {
   /**
    * Update the substance of an AU
    * Update the substance of an AU given the AU identifier
-   *
    * @param auid The identifier of the AU for which the substance check\\ \\ is requested (required)
    * @return ApiResponse&lt;CheckSubstanceResult&gt;
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> The substance check of the specified AU </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The substance check of the specified AU </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public ApiResponse<CheckSubstanceResult> putAuSubstanceCheckWithHttpInfo(String auid)
       throws ApiException {
@@ -2479,23 +2362,22 @@ public class AusApi {
   /**
    * Update the substance of an AU (asynchronously)
    * Update the substance of an AU given the AU identifier
-   *
    * @param auid The identifier of the AU for which the substance check\\ \\ is requested (required)
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> The substance check of the specified AU </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The substance check of the specified AU </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public okhttp3.Call putAuSubstanceCheckAsync(
       String auid, final ApiCallback<CheckSubstanceResult> _callback) throws ApiException {
-
     okhttp3.Call localVarCall = putAuSubstanceCheckValidateBeforeCall(auid, _callback);
     Type localVarReturnType = new TypeToken<CheckSubstanceResult>() {}.getType();
     apiClient.executeAsync(localVarCall, localVarReturnType, _callback);
@@ -2503,28 +2385,28 @@ public class AusApi {
   }
   /**
    * Build call for putAuSuspectUrlVersions
-   *
-   * @param auid                 The identifier of the AU for which the suspect URL\\ \\ versions are to be updated (required)
-   * @param auSuspectUrlVersions The parts of the Archival Unit suspect URL versions to\\ \\ be updated (required)
+   * @param auid The identifier of the AU for which the suspect URL\\ \\ versions are to be updated
+   (required)
+   * @param auSuspectUrlVersions The parts of the Archival Unit suspect URL versions to\\ \\ be
+   updated (required)
    * @param xLockssRequestCookie The LOCKSS-specific request cookie header (optional)
    * @param _callback Callback for upload/download progress
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
-  public okhttp3.Call putAuSuspectUrlVersionsCall(String auid, Object auSuspectUrlVersions,
-      String xLockssRequestCookie,
-      final ApiCallback _callback)
-      throws ApiException {
+  public okhttp3.Call putAuSuspectUrlVersionsCall(String auid, String auSuspectUrlVersions,
+      String xLockssRequestCookie, final ApiCallback _callback) throws ApiException {
     String basePath = null;
 
     // Operation Servers
@@ -2542,9 +2424,10 @@ public class AusApi {
     Object localVarPostBody = auSuspectUrlVersions;
 
     // create path and map variables
-    String localVarPath =
-        "/aususpecturls/{auid}"
-            .replaceAll("\\{" + "auid" + "\\}", apiClient.escapeString(auid));
+    String localVarPath = "/aususpecturls/{auid}".replaceAll("\\{"
+            + "auid"
+            + "\\}",
+        apiClient.escapeString(auid.toString()));
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2557,8 +2440,9 @@ public class AusApi {
           "X-Lockss-Request-Cookie", apiClient.parameterToString(xLockssRequestCookie));
     }
 
-    final String[] localVarAccepts = {};
+    final String[] localVarAccepts = {
 
+    };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) {
       localVarHeaderParams.put("Accept", localVarAccept);
@@ -2572,26 +2456,15 @@ public class AusApi {
     }
 
     String[] localVarAuthNames = new String[] {"basicAuth"};
-    return apiClient.buildCall(
-        basePath,
-        localVarPath,
-        "PUT",
-        localVarQueryParams,
-        localVarCollectionQueryParams,
-        localVarPostBody,
-        localVarHeaderParams,
-        localVarCookieParams,
-        localVarFormParams,
-        localVarAuthNames,
-        _callback);
+    return apiClient.buildCall(basePath, localVarPath, "PUT", localVarQueryParams,
+        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
+        localVarFormParams, localVarAuthNames, _callback);
   }
 
   @SuppressWarnings("rawtypes")
-  private okhttp3.Call putAuSuspectUrlVersionsValidateBeforeCall(
-      String auid,
-    Object auSuspectUrlVersions, String xLockssRequestCookie, final ApiCallback _callback)
+  private okhttp3.Call putAuSuspectUrlVersionsValidateBeforeCall(String auid,
+      String auSuspectUrlVersions, String xLockssRequestCookie, final ApiCallback _callback)
       throws ApiException {
-
     // verify the required parameter 'auid' is set
     if (auid == null) {
       throw new ApiException(
@@ -2612,101 +2485,106 @@ public class AusApi {
   /**
    * Update the suspect URL versions of an AU
    * Update the suspect URL versions of an AU given the AU\\ \\ identifier
-   *
-   * @param auid                 The identifier of the AU for which the suspect URL\\ \\ versions are to be updated (required)
-   * @param auSuspectUrlVersions The parts of the Archival Unit suspect URL versions to\\ \\ be updated (required)
+   * @param auid The identifier of the AU for which the suspect URL\\ \\ versions are to be updated
+   (required)
+   * @param auSuspectUrlVersions The parts of the Archival Unit suspect URL versions to\\ \\ be
+   updated (required)
    * @param xLockssRequestCookie The LOCKSS-specific request cookie header (optional)
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
-  public void putAuSuspectUrlVersions(String auid, Object auSuspectUrlVersions,
-    String xLockssRequestCookie) throws ApiException {
+  public void putAuSuspectUrlVersions(
+      String auid, String auSuspectUrlVersions, String xLockssRequestCookie) throws ApiException {
     putAuSuspectUrlVersionsWithHttpInfo(auid, auSuspectUrlVersions, xLockssRequestCookie);
   }
 
   /**
    * Update the suspect URL versions of an AU
    * Update the suspect URL versions of an AU given the AU\\ \\ identifier
-   *
-   * @param auid                 The identifier of the AU for which the suspect URL\\ \\ versions are to be updated (required)
-   * @param auSuspectUrlVersions The parts of the Archival Unit suspect URL versions to\\ \\ be updated (required)
+   * @param auid The identifier of the AU for which the suspect URL\\ \\ versions are to be updated
+   (required)
+   * @param auSuspectUrlVersions The parts of the Archival Unit suspect URL versions to\\ \\ be
+   updated (required)
    * @param xLockssRequestCookie The LOCKSS-specific request cookie header (optional)
    * @return ApiResponse&lt;Void&gt;
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
-  public ApiResponse<Void> putAuSuspectUrlVersionsWithHttpInfo(String auid,
-    Object auSuspectUrlVersions, String xLockssRequestCookie) throws ApiException {
-    okhttp3.Call localVarCall = putAuSuspectUrlVersionsValidateBeforeCall(auid,
-      auSuspectUrlVersions, xLockssRequestCookie, null);
+  public ApiResponse<Void> putAuSuspectUrlVersionsWithHttpInfo(
+      String auid, String auSuspectUrlVersions, String xLockssRequestCookie) throws ApiException {
+    okhttp3.Call localVarCall = putAuSuspectUrlVersionsValidateBeforeCall(
+        auid, auSuspectUrlVersions, xLockssRequestCookie, null);
     return apiClient.execute(localVarCall);
   }
 
   /**
    * Update the suspect URL versions of an AU (asynchronously)
    * Update the suspect URL versions of an AU given the AU\\ \\ identifier
-   *
-   * @param auid                 The identifier of the AU for which the suspect URL\\ \\ versions are to be updated (required)
-   * @param auSuspectUrlVersions The parts of the Archival Unit suspect URL versions to\\ \\ be updated (required)
+   * @param auid The identifier of the AU for which the suspect URL\\ \\ versions are to be updated
+   (required)
+   * @param auSuspectUrlVersions The parts of the Archival Unit suspect URL versions to\\ \\ be
+   updated (required)
    * @param xLockssRequestCookie The LOCKSS-specific request cookie header (optional)
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
-  public okhttp3.Call putAuSuspectUrlVersionsAsync(String auid, Object auSuspectUrlVersions,
-      String xLockssRequestCookie,
-      final ApiCallback<Void> _callback)
-      throws ApiException {
-
-    okhttp3.Call localVarCall = putAuSuspectUrlVersionsValidateBeforeCall(auid,
-      auSuspectUrlVersions, xLockssRequestCookie, _callback);
+  public okhttp3.Call putAuSuspectUrlVersionsAsync(String auid, String auSuspectUrlVersions,
+      String xLockssRequestCookie, final ApiCallback<Void> _callback) throws ApiException {
+    okhttp3.Call localVarCall = putAuSuspectUrlVersionsValidateBeforeCall(
+        auid, auSuspectUrlVersions, xLockssRequestCookie, _callback);
     apiClient.executeAsync(localVarCall, _callback);
     return localVarCall;
   }
   /**
    * Build call for putAusDeactivate
-   *
    * @param auIds The identifiers of the Archival Units to be deactivated (required)
    * @param _callback Callback for upload/download progress
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the deactivated AUs </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the deactivated AUs </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public okhttp3.Call putAusDeactivateCall(List<String> auIds, final ApiCallback _callback)
       throws ApiException {
@@ -2749,24 +2627,14 @@ public class AusApi {
     }
 
     String[] localVarAuthNames = new String[] {"basicAuth"};
-    return apiClient.buildCall(
-        basePath,
-        localVarPath,
-        "PUT",
-        localVarQueryParams,
-        localVarCollectionQueryParams,
-        localVarPostBody,
-        localVarHeaderParams,
-        localVarCookieParams,
-        localVarFormParams,
-        localVarAuthNames,
-        _callback);
+    return apiClient.buildCall(basePath, localVarPath, "PUT", localVarQueryParams,
+        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
+        localVarFormParams, localVarAuthNames, _callback);
   }
 
   @SuppressWarnings("rawtypes")
   private okhttp3.Call putAusDeactivateValidateBeforeCall(
       List<String> auIds, final ApiCallback _callback) throws ApiException {
-
     // verify the required parameter 'auIds' is set
     if (auIds == null) {
       throw new ApiException(
@@ -2780,42 +2648,44 @@ public class AusApi {
   /**
    * Deactivate AUs
    * Deactivate a group of AUs given their identifiers
-   *
    * @param auIds The identifiers of the Archival Units to be deactivated (required)
    * @return List&lt;ContentConfigurationResult&gt;
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the deactivated AUs </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the deactivated AUs </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public List<ContentConfigurationResult> putAusDeactivate(List<String> auIds) throws ApiException {
-    ApiResponse<List<ContentConfigurationResult>> localVarResp = putAusDeactivateWithHttpInfo(
-      auIds);
+    ApiResponse<List<ContentConfigurationResult>> localVarResp =
+        putAusDeactivateWithHttpInfo(auIds);
     return localVarResp.getData();
   }
 
   /**
    * Deactivate AUs
    * Deactivate a group of AUs given their identifiers
-   *
    * @param auIds The identifiers of the Archival Units to be deactivated (required)
    * @return ApiResponse&lt;List&lt;ContentConfigurationResult&gt;&gt;
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the deactivated AUs </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the deactivated AUs </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public ApiResponse<List<ContentConfigurationResult>> putAusDeactivateWithHttpInfo(
       List<String> auIds) throws ApiException {
@@ -2827,25 +2697,23 @@ public class AusApi {
   /**
    * Deactivate AUs (asynchronously)
    * Deactivate a group of AUs given their identifiers
-   *
    * @param auIds The identifiers of the Archival Units to be deactivated (required)
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the deactivated AUs </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the deactivated AUs </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
-  public okhttp3.Call putAusDeactivateAsync(
-      List<String> auIds, final ApiCallback<List<ContentConfigurationResult>> _callback)
-      throws ApiException {
-
+  public okhttp3.Call putAusDeactivateAsync(List<String> auIds,
+      final ApiCallback<List<ContentConfigurationResult>> _callback) throws ApiException {
     okhttp3.Call localVarCall = putAusDeactivateValidateBeforeCall(auIds, _callback);
     Type localVarReturnType = new TypeToken<List<ContentConfigurationResult>>() {}.getType();
     apiClient.executeAsync(localVarCall, localVarReturnType, _callback);
@@ -2853,22 +2721,23 @@ public class AusApi {
   }
   /**
    * Build call for putAusMdDisable
-   *
-   * @param auid      The identifier of the Archival Units for which metadata\\ \\ extraction is to be disabled (required)
+   * @param auid The identifier of the Archival Units for which metadata\\ \\ extraction is to be
+   disabled (required)
    * @param _callback Callback for upload/download progress
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the AU for which metadata extraction\\ \\ has been disabled </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 409 </td><td> Conflict </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the AU for which metadata extraction\\ \\ has been
+   disabled </td><td>  -  </td></tr> <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 409 </td><td> Conflict </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public okhttp3.Call putAusMdDisableCall(String auid, final ApiCallback _callback)
       throws ApiException {
@@ -2882,14 +2751,17 @@ public class AusApi {
       basePath = localCustomBaseUrl;
     } else if (localBasePaths.length > 0) {
       basePath = localBasePaths[localHostIndex];
+    } else {
+      basePath = null;
     }
 
     Object localVarPostBody = null;
 
     // create path and map variables
-    String localVarPath =
-        "/aus/{auid}/mddisable"
-            .replaceAll("\\{" + "auid" + "\\}", apiClient.escapeString(auid));
+    String localVarPath = "/aus/{auid}/mddisable".replaceAll("\\{"
+            + "auid"
+            + "\\}",
+        apiClient.escapeString(auid.toString()));
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2903,8 +2775,9 @@ public class AusApi {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
 
-    final String[] localVarContentTypes = {};
+    final String[] localVarContentTypes = {
 
+    };
     final String localVarContentType =
         apiClient.selectHeaderContentType(localVarContentTypes);
     if (localVarContentType != null) {
@@ -2912,24 +2785,14 @@ public class AusApi {
     }
 
     String[] localVarAuthNames = new String[] {"basicAuth"};
-    return apiClient.buildCall(
-        basePath,
-        localVarPath,
-        "PUT",
-        localVarQueryParams,
-        localVarCollectionQueryParams,
-        localVarPostBody,
-        localVarHeaderParams,
-        localVarCookieParams,
-        localVarFormParams,
-        localVarAuthNames,
-        _callback);
+    return apiClient.buildCall(basePath, localVarPath, "PUT", localVarQueryParams,
+        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
+        localVarFormParams, localVarAuthNames, _callback);
   }
 
   @SuppressWarnings("rawtypes")
   private okhttp3.Call putAusMdDisableValidateBeforeCall(String auid, final ApiCallback _callback)
       throws ApiException {
-
     // verify the required parameter 'auid' is set
     if (auid == null) {
       throw new ApiException(
@@ -2943,21 +2806,23 @@ public class AusApi {
   /**
    * Disable AU metadata extraction
    * Disable the metadata extraction for an AU given its\\ \\ identifier
-   *
-   * @param auid The identifier of the Archival Units for which metadata\\ \\ extraction is to be disabled (required)
+   * @param auid The identifier of the Archival Units for which metadata\\ \\ extraction is to be
+   disabled (required)
    * @return RequestAuControlResult
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the AU for which metadata extraction\\ \\ has been disabled </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 409 </td><td> Conflict </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the AU for which metadata extraction\\ \\ has been
+   disabled </td><td>  -  </td></tr> <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 409 </td><td> Conflict </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public RequestAuControlResult putAusMdDisable(String auid) throws ApiException {
     ApiResponse<RequestAuControlResult> localVarResp = putAusMdDisableWithHttpInfo(auid);
@@ -2967,21 +2832,23 @@ public class AusApi {
   /**
    * Disable AU metadata extraction
    * Disable the metadata extraction for an AU given its\\ \\ identifier
-   *
-   * @param auid The identifier of the Archival Units for which metadata\\ \\ extraction is to be disabled (required)
+   * @param auid The identifier of the Archival Units for which metadata\\ \\ extraction is to be
+   disabled (required)
    * @return ApiResponse&lt;RequestAuControlResult&gt;
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the AU for which metadata extraction\\ \\ has been disabled </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 409 </td><td> Conflict </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the AU for which metadata extraction\\ \\ has been
+   disabled </td><td>  -  </td></tr> <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 409 </td><td> Conflict </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public ApiResponse<RequestAuControlResult> putAusMdDisableWithHttpInfo(String auid)
       throws ApiException {
@@ -2993,26 +2860,26 @@ public class AusApi {
   /**
    * Disable AU metadata extraction (asynchronously)
    * Disable the metadata extraction for an AU given its\\ \\ identifier
-   *
-   * @param auid      The identifier of the Archival Units for which metadata\\ \\ extraction is to be disabled (required)
+   * @param auid The identifier of the Archival Units for which metadata\\ \\ extraction is to be
+   disabled (required)
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the AU for which metadata extraction\\ \\ has been disabled </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 409 </td><td> Conflict </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the AU for which metadata extraction\\ \\ has been
+   disabled </td><td>  -  </td></tr> <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 409 </td><td> Conflict </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public okhttp3.Call putAusMdDisableAsync(
       String auid, final ApiCallback<RequestAuControlResult> _callback) throws ApiException {
-
     okhttp3.Call localVarCall = putAusMdDisableValidateBeforeCall(auid, _callback);
     Type localVarReturnType = new TypeToken<RequestAuControlResult>() {}.getType();
     apiClient.executeAsync(localVarCall, localVarReturnType, _callback);
@@ -3020,22 +2887,23 @@ public class AusApi {
   }
   /**
    * Build call for putAusMdEnable
-   *
-   * @param auid      The identifier of the Archival Units for which metadata\\ \\ extraction is to be enabled (required)
+   * @param auid The identifier of the Archival Units for which metadata\\ \\ extraction is to be
+   enabled (required)
    * @param _callback Callback for upload/download progress
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the AU for which metadata extraction\\ \\ has been enabled </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 409 </td><td> Conflict </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the AU for which metadata extraction\\ \\ has been
+   enabled </td><td>  -  </td></tr> <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 409 </td><td> Conflict </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public okhttp3.Call putAusMdEnableCall(String auid, final ApiCallback _callback)
       throws ApiException {
@@ -3056,9 +2924,10 @@ public class AusApi {
     Object localVarPostBody = null;
 
     // create path and map variables
-    String localVarPath =
-        "/aus/{auid}/mdenable"
-            .replaceAll("\\{" + "auid" + "\\}", apiClient.escapeString(auid));
+    String localVarPath = "/aus/{auid}/mdenable".replaceAll("\\{"
+            + "auid"
+            + "\\}",
+        apiClient.escapeString(auid.toString()));
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -3072,8 +2941,9 @@ public class AusApi {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
 
-    final String[] localVarContentTypes = {};
+    final String[] localVarContentTypes = {
 
+    };
     final String localVarContentType =
         apiClient.selectHeaderContentType(localVarContentTypes);
     if (localVarContentType != null) {
@@ -3081,24 +2951,14 @@ public class AusApi {
     }
 
     String[] localVarAuthNames = new String[] {"basicAuth"};
-    return apiClient.buildCall(
-        basePath,
-        localVarPath,
-        "PUT",
-        localVarQueryParams,
-        localVarCollectionQueryParams,
-        localVarPostBody,
-        localVarHeaderParams,
-        localVarCookieParams,
-        localVarFormParams,
-        localVarAuthNames,
-        _callback);
+    return apiClient.buildCall(basePath, localVarPath, "PUT", localVarQueryParams,
+        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
+        localVarFormParams, localVarAuthNames, _callback);
   }
 
   @SuppressWarnings("rawtypes")
   private okhttp3.Call putAusMdEnableValidateBeforeCall(String auid, final ApiCallback _callback)
       throws ApiException {
-
     // verify the required parameter 'auid' is set
     if (auid == null) {
       throw new ApiException(
@@ -3112,21 +2972,23 @@ public class AusApi {
   /**
    * Enable AU metadata extraction
    * Enable the metadata extraction for an AU given its identifier
-   *
-   * @param auid The identifier of the Archival Units for which metadata\\ \\ extraction is to be enabled (required)
+   * @param auid The identifier of the Archival Units for which metadata\\ \\ extraction is to be
+   enabled (required)
    * @return RequestAuControlResult
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the AU for which metadata extraction\\ \\ has been enabled </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 409 </td><td> Conflict </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the AU for which metadata extraction\\ \\ has been
+   enabled </td><td>  -  </td></tr> <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 409 </td><td> Conflict </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public RequestAuControlResult putAusMdEnable(String auid) throws ApiException {
     ApiResponse<RequestAuControlResult> localVarResp = putAusMdEnableWithHttpInfo(auid);
@@ -3136,21 +2998,23 @@ public class AusApi {
   /**
    * Enable AU metadata extraction
    * Enable the metadata extraction for an AU given its identifier
-   *
-   * @param auid The identifier of the Archival Units for which metadata\\ \\ extraction is to be enabled (required)
+   * @param auid The identifier of the Archival Units for which metadata\\ \\ extraction is to be
+   enabled (required)
    * @return ApiResponse&lt;RequestAuControlResult&gt;
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the AU for which metadata extraction\\ \\ has been enabled </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 409 </td><td> Conflict </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the AU for which metadata extraction\\ \\ has been
+   enabled </td><td>  -  </td></tr> <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 409 </td><td> Conflict </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public ApiResponse<RequestAuControlResult> putAusMdEnableWithHttpInfo(String auid)
       throws ApiException {
@@ -3162,26 +3026,26 @@ public class AusApi {
   /**
    * Enable AU metadata extraction (asynchronously)
    * Enable the metadata extraction for an AU given its identifier
-   *
-   * @param auid      The identifier of the Archival Units for which metadata\\ \\ extraction is to be enabled (required)
+   * @param auid The identifier of the Archival Units for which metadata\\ \\ extraction is to be
+   enabled (required)
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the AU for which metadata extraction\\ \\ has been enabled </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 409 </td><td> Conflict </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the AU for which metadata extraction\\ \\ has been
+   enabled </td><td>  -  </td></tr> <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 409 </td><td> Conflict </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public okhttp3.Call putAusMdEnableAsync(
       String auid, final ApiCallback<RequestAuControlResult> _callback) throws ApiException {
-
     okhttp3.Call localVarCall = putAusMdEnableValidateBeforeCall(auid, _callback);
     Type localVarReturnType = new TypeToken<RequestAuControlResult>() {}.getType();
     apiClient.executeAsync(localVarCall, localVarReturnType, _callback);
@@ -3189,20 +3053,20 @@ public class AusApi {
   }
   /**
    * Build call for putAusReactivate
-   *
    * @param auIds The identifiers of the Archival Units to be reactivated (required)
    * @param _callback Callback for upload/download progress
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the reactivated AUs </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the reactivated AUs </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public okhttp3.Call putAusReactivateCall(List<String> auIds, final ApiCallback _callback)
       throws ApiException {
@@ -3245,24 +3109,14 @@ public class AusApi {
     }
 
     String[] localVarAuthNames = new String[] {"basicAuth"};
-    return apiClient.buildCall(
-        basePath,
-        localVarPath,
-        "PUT",
-        localVarQueryParams,
-        localVarCollectionQueryParams,
-        localVarPostBody,
-        localVarHeaderParams,
-        localVarCookieParams,
-        localVarFormParams,
-        localVarAuthNames,
-        _callback);
+    return apiClient.buildCall(basePath, localVarPath, "PUT", localVarQueryParams,
+        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
+        localVarFormParams, localVarAuthNames, _callback);
   }
 
   @SuppressWarnings("rawtypes")
   private okhttp3.Call putAusReactivateValidateBeforeCall(
       List<String> auIds, final ApiCallback _callback) throws ApiException {
-
     // verify the required parameter 'auIds' is set
     if (auIds == null) {
       throw new ApiException(
@@ -3276,19 +3130,20 @@ public class AusApi {
   /**
    * Reactivate AUs
    * Reactivate a group of AUs given their identifiers
-   *
    * @param auIds The identifiers of the Archival Units to be reactivated (required)
    * @return List&lt;ContentConfigurationResult&gt;
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the reactivated AUs </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the reactivated AUs </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public List<ContentConfigurationResult> putAusReactivate(List<String> auIds) throws ApiException {
     ApiResponse<List<ContentConfigurationResult>> localVarResp =
@@ -3299,19 +3154,20 @@ public class AusApi {
   /**
    * Reactivate AUs
    * Reactivate a group of AUs given their identifiers
-   *
    * @param auIds The identifiers of the Archival Units to be reactivated (required)
    * @return ApiResponse&lt;List&lt;ContentConfigurationResult&gt;&gt;
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the reactivated AUs </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the reactivated AUs </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public ApiResponse<List<ContentConfigurationResult>> putAusReactivateWithHttpInfo(
       List<String> auIds) throws ApiException {
@@ -3323,25 +3179,23 @@ public class AusApi {
   /**
    * Reactivate AUs (asynchronously)
    * Reactivate a group of AUs given their identifiers
-   *
    * @param auIds The identifiers of the Archival Units to be reactivated (required)
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the reactivated AUs </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the reactivated AUs </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
-  public okhttp3.Call putAusReactivateAsync(
-      List<String> auIds, final ApiCallback<List<ContentConfigurationResult>> _callback)
-      throws ApiException {
-
+  public okhttp3.Call putAusReactivateAsync(List<String> auIds,
+      final ApiCallback<List<ContentConfigurationResult>> _callback) throws ApiException {
     okhttp3.Call localVarCall = putAusReactivateValidateBeforeCall(auIds, _callback);
     Type localVarReturnType = new TypeToken<List<ContentConfigurationResult>>() {}.getType();
     apiClient.executeAsync(localVarCall, localVarReturnType, _callback);
@@ -3349,26 +3203,28 @@ public class AusApi {
   }
   /**
    * Build call for putNoAuPeers
-   *
-   * @param auid                 The identifier of the AU for which the NoAuPeerSet\\ \\ object is to be updated (required)
-   * @param noAuPeerSet          The parts of the Archival Unit NoAuPeerSet object to be\\ \\ updated (required)
+   * @param auid The identifier of the AU for which the NoAuPeerSet\\ \\ object is to be updated
+   (required)
+   * @param noAuPeerSet The parts of the Archival Unit NoAuPeerSet object to be\\ \\ updated
+   (required)
    * @param xLockssRequestCookie The LOCKSS-specific request cookie header (optional)
    * @param _callback Callback for upload/download progress
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
-  public okhttp3.Call putNoAuPeersCall(String auid, Object noAuPeerSet, String xLockssRequestCookie,
-    final ApiCallback _callback) throws ApiException {
+  public okhttp3.Call putNoAuPeersCall(String auid, String noAuPeerSet, String xLockssRequestCookie,
+      final ApiCallback _callback) throws ApiException {
     String basePath = null;
 
     // Operation Servers
@@ -3386,9 +3242,10 @@ public class AusApi {
     Object localVarPostBody = noAuPeerSet;
 
     // create path and map variables
-    String localVarPath =
-        "/noaupeers/{auid}"
-            .replaceAll("\\{" + "auid" + "\\}", apiClient.escapeString(auid));
+    String localVarPath = "/noaupeers/{auid}".replaceAll("\\{"
+            + "auid"
+            + "\\}",
+        apiClient.escapeString(auid.toString()));
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -3401,8 +3258,9 @@ public class AusApi {
           "X-Lockss-Request-Cookie", apiClient.parameterToString(xLockssRequestCookie));
     }
 
-    final String[] localVarAccepts = {};
+    final String[] localVarAccepts = {
 
+    };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) {
       localVarHeaderParams.put("Accept", localVarAccept);
@@ -3416,24 +3274,14 @@ public class AusApi {
     }
 
     String[] localVarAuthNames = new String[] {"basicAuth"};
-    return apiClient.buildCall(
-        basePath,
-        localVarPath,
-        "PUT",
-        localVarQueryParams,
-        localVarCollectionQueryParams,
-        localVarPostBody,
-        localVarHeaderParams,
-        localVarCookieParams,
-        localVarFormParams,
-        localVarAuthNames,
-        _callback);
+    return apiClient.buildCall(basePath, localVarPath, "PUT", localVarQueryParams,
+        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
+        localVarFormParams, localVarAuthNames, _callback);
   }
 
   @SuppressWarnings("rawtypes")
-  private okhttp3.Call putNoAuPeersValidateBeforeCall(String auid, Object noAuPeerSet,
-    String xLockssRequestCookie, final ApiCallback _callback) throws ApiException {
-
+  private okhttp3.Call putNoAuPeersValidateBeforeCall(String auid, String noAuPeerSet,
+      String xLockssRequestCookie, final ApiCallback _callback) throws ApiException {
     // verify the required parameter 'auid' is set
     if (auid == null) {
       throw new ApiException(
@@ -3454,23 +3302,26 @@ public class AusApi {
   /**
    * Update the NoAuPeerSet object of an AU
    * Update the NoAuPeerSet object of an AU given the AU\\ \\ identifier
-   *
-   * @param auid                 The identifier of the AU for which the NoAuPeerSet\\ \\ object is to be updated (required)
-   * @param noAuPeerSet          The parts of the Archival Unit NoAuPeerSet object to be\\ \\ updated (required)
+   * @param auid The identifier of the AU for which the NoAuPeerSet\\ \\ object is to be updated
+   (required)
+   * @param noAuPeerSet The parts of the Archival Unit NoAuPeerSet object to be\\ \\ updated
+   (required)
    * @param xLockssRequestCookie The LOCKSS-specific request cookie header (optional)
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
-  public void putNoAuPeers(String auid, Object noAuPeerSet, String xLockssRequestCookie)
+  public void putNoAuPeers(String auid, String noAuPeerSet, String xLockssRequestCookie)
       throws ApiException {
     putNoAuPeersWithHttpInfo(auid, noAuPeerSet, xLockssRequestCookie);
   }
@@ -3478,25 +3329,28 @@ public class AusApi {
   /**
    * Update the NoAuPeerSet object of an AU
    * Update the NoAuPeerSet object of an AU given the AU\\ \\ identifier
-   *
-   * @param auid                 The identifier of the AU for which the NoAuPeerSet\\ \\ object is to be updated (required)
-   * @param noAuPeerSet          The parts of the Archival Unit NoAuPeerSet object to be\\ \\ updated (required)
+   * @param auid The identifier of the AU for which the NoAuPeerSet\\ \\ object is to be updated
+   (required)
+   * @param noAuPeerSet The parts of the Archival Unit NoAuPeerSet object to be\\ \\ updated
+   (required)
    * @param xLockssRequestCookie The LOCKSS-specific request cookie header (optional)
    * @return ApiResponse&lt;Void&gt;
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public ApiResponse<Void> putNoAuPeersWithHttpInfo(
-      String auid, Object noAuPeerSet, String xLockssRequestCookie) throws ApiException {
+      String auid, String noAuPeerSet, String xLockssRequestCookie) throws ApiException {
     okhttp3.Call localVarCall =
         putNoAuPeersValidateBeforeCall(auid, noAuPeerSet, xLockssRequestCookie, null);
     return apiClient.execute(localVarCall);
@@ -3505,31 +3359,28 @@ public class AusApi {
   /**
    * Update the NoAuPeerSet object of an AU (asynchronously)
    * Update the NoAuPeerSet object of an AU given the AU\\ \\ identifier
-   *
-   * @param auid                 The identifier of the AU for which the NoAuPeerSet\\ \\ object is to be updated (required)
-   * @param noAuPeerSet          The parts of the Archival Unit NoAuPeerSet object to be\\ \\ updated (required)
+   * @param auid The identifier of the AU for which the NoAuPeerSet\\ \\ object is to be updated
+   (required)
+   * @param noAuPeerSet The parts of the Archival Unit NoAuPeerSet object to be\\ \\ updated
+   (required)
    * @param xLockssRequestCookie The LOCKSS-specific request cookie header (optional)
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
-   * <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-   * <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+      <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+      <tr><td> 415 </td><td> Unsupported Media Type </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
-  public okhttp3.Call putNoAuPeersAsync(
-      String auid,
-      Object noAuPeerSet,
-      String xLockssRequestCookie,
-      final ApiCallback<Void> _callback)
-      throws ApiException {
-
+  public okhttp3.Call putNoAuPeersAsync(String auid, String noAuPeerSet,
+      String xLockssRequestCookie, final ApiCallback<Void> _callback) throws ApiException {
     okhttp3.Call localVarCall =
         putNoAuPeersValidateBeforeCall(auid, noAuPeerSet, xLockssRequestCookie, _callback);
     apiClient.executeAsync(localVarCall, _callback);

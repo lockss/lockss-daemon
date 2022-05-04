@@ -1,32 +1,32 @@
 /*
- * 2022, Board of Trustees of Leland Stanford Jr. University,
- * All rights reserved.
+ * Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
  *
- * Redistribution and use in source and binary forms, with or without modification,
- * are permitted provided that the following conditions are met:
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
  *
- * 1. Redistributions of source code must retain the above copyright notice, this
- * list of conditions and the following disclaimer.
+ * 1. Redistributions of source code must retain the above copyright notice,
+ * this list of conditions and the following disclaimer.
  *
  * 2. Redistributions in binary form must reproduce the above copyright notice,
- * this list of conditions and the following disclaimer in the documentation and/or
- * other materials provided with the distribution.
+ * this list of conditions and the following disclaimer in the documentation
+ * and/or other materials provided with the distribution.
  *
  * 3. Neither the name of the copyright holder nor the names of its contributors
  * may be used to endorse or promote products derived from this software without
  * specific prior written permission.
  *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
- * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
- * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
- * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
- * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
- * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
- * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
- * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- *  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
- *  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+*/
 
 /*
  * LOCKSS Repository Service REST API
@@ -50,16 +50,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/** A display page of Archival Unit identifiers */
+/**
+ * A display page of Archival Unit identifiers
+ */
 @ApiModel(description = "A display page of Archival Unit identifiers")
-@javax.annotation.
-Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AuidPageInfo implements Serializable {
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_AUIDS = "auids";
-  @SerializedName(SERIALIZED_NAME_AUIDS)
-  private List<String> auids = new ArrayList<>();
+  @SerializedName(SERIALIZED_NAME_AUIDS) private List<String> auids = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_PAGE_INFO = "pageInfo";
   @SerializedName(SERIALIZED_NAME_PAGE_INFO) private PageInfo pageInfo;
@@ -67,7 +67,6 @@ public class AuidPageInfo implements Serializable {
   public AuidPageInfo() {}
 
   public AuidPageInfo auids(List<String> auids) {
-
     this.auids = auids;
     return this;
   }
@@ -79,27 +78,28 @@ public class AuidPageInfo implements Serializable {
 
   /**
    * The Archival Unit identifiers included in the page
-   *
    * @return auids
-   */
+   **/
+  @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "The Archival Unit identifiers included in the page")
+
   public List<String> getAuids() {
     return auids;
   }
 
-  public void setAuids(List<String> auids) { this.auids = auids; }
+  public void setAuids(List<String> auids) {
+    this.auids = auids;
+  }
 
   public AuidPageInfo pageInfo(PageInfo pageInfo) {
-
     this.pageInfo = pageInfo;
     return this;
   }
 
   /**
    * Get pageInfo
-   *
    * @return pageInfo
-   */
+   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
@@ -107,7 +107,9 @@ public class AuidPageInfo implements Serializable {
     return pageInfo;
   }
 
-  public void setPageInfo(PageInfo pageInfo) { this.pageInfo = pageInfo; }
+  public void setPageInfo(PageInfo pageInfo) {
+    this.pageInfo = pageInfo;
+  }
 
   @Override
   public boolean equals(Object o) {
@@ -117,7 +119,7 @@ public class AuidPageInfo implements Serializable {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    AuidPageInfo auidPageInfo = (AuidPageInfo)o;
+    AuidPageInfo auidPageInfo = (AuidPageInfo) o;
     return Objects.equals(this.auids, auidPageInfo.auids)
         && Objects.equals(this.pageInfo, auidPageInfo.pageInfo);
   }
@@ -138,7 +140,8 @@ public class AuidPageInfo implements Serializable {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(Object o) {
     if (o == null) {

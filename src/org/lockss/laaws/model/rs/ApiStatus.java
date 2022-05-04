@@ -1,32 +1,32 @@
 /*
- * 2022, Board of Trustees of Leland Stanford Jr. University,
- * All rights reserved.
+ * Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
  *
- * Redistribution and use in source and binary forms, with or without modification,
- * are permitted provided that the following conditions are met:
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
  *
- * 1. Redistributions of source code must retain the above copyright notice, this
- * list of conditions and the following disclaimer.
+ * 1. Redistributions of source code must retain the above copyright notice,
+ * this list of conditions and the following disclaimer.
  *
  * 2. Redistributions in binary form must reproduce the above copyright notice,
- * this list of conditions and the following disclaimer in the documentation and/or
- * other materials provided with the distribution.
+ * this list of conditions and the following disclaimer in the documentation
+ * and/or other materials provided with the distribution.
  *
  * 3. Neither the name of the copyright holder nor the names of its contributors
  * may be used to endorse or promote products derived from this software without
  * specific prior written permission.
  *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
- * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
- * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
- * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
- * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
- * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
- * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
- * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- *  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
- *  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+*/
 
 /*
  * LOCKSS Repository Service REST API
@@ -48,10 +48,11 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 import java.util.Objects;
 
-/** The status information of the service */
+/**
+ * The status information of the service
+ */
 @ApiModel(description = "The status information of the service")
-@javax.annotation.
-Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ApiStatus implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -62,9 +63,7 @@ public class ApiStatus implements Serializable {
   @SerializedName(SERIALIZED_NAME_COMPONENT_NAME) private String componentName;
 
   public static final String SERIALIZED_NAME_COMPONENT_VERSION = "componentVersion";
-
-  @SerializedName(SERIALIZED_NAME_COMPONENT_VERSION)
-  private String componentVersion;
+  @SerializedName(SERIALIZED_NAME_COMPONENT_VERSION) private String componentVersion;
 
   public static final String SERIALIZED_NAME_LOCKSS_VERSION = "lockssVersion";
   @SerializedName(SERIALIZED_NAME_LOCKSS_VERSION) private String lockssVersion;
@@ -78,16 +77,14 @@ public class ApiStatus implements Serializable {
   public ApiStatus() {}
 
   public ApiStatus apiVersion(String apiVersion) {
-
     this.apiVersion = apiVersion;
     return this;
   }
 
   /**
    * The version of the API
-   *
    * @return apiVersion
-   */
+   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "The version of the API")
 
@@ -95,19 +92,19 @@ public class ApiStatus implements Serializable {
     return apiVersion;
   }
 
-  public void setApiVersion(String apiVersion) { this.apiVersion = apiVersion; }
+  public void setApiVersion(String apiVersion) {
+    this.apiVersion = apiVersion;
+  }
 
   public ApiStatus componentName(String componentName) {
-
     this.componentName = componentName;
     return this;
   }
 
   /**
    * The name of the component
-   *
    * @return componentName
-   */
+   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "The name of the component")
 
@@ -120,22 +117,18 @@ public class ApiStatus implements Serializable {
   }
 
   public ApiStatus componentVersion(String componentVersion) {
-
     this.componentVersion = componentVersion;
     return this;
   }
 
   /**
    * The version of the component software
-   *
    * @return componentVersion
-   */
+   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true,
-                    value = "The version of the component software")
+  @ApiModelProperty(required = true, value = "The version of the component software")
 
-  public String
-  getComponentVersion() {
+  public String getComponentVersion() {
     return componentVersion;
   }
 
@@ -144,16 +137,14 @@ public class ApiStatus implements Serializable {
   }
 
   public ApiStatus lockssVersion(String lockssVersion) {
-
     this.lockssVersion = lockssVersion;
     return this;
   }
 
   /**
    * The version of the LOCKSS system
-   *
    * @return lockssVersion
-   */
+   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "The version of the LOCKSS system")
 
@@ -166,39 +157,34 @@ public class ApiStatus implements Serializable {
   }
 
   public ApiStatus ready(Boolean ready) {
-
     this.ready = ready;
     return this;
   }
 
   /**
    * The indication of whether the service is available
-   *
    * @return ready
-   */
+   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(
-      required = true,
-      value = "The indication of whether the service is available")
+  @ApiModelProperty(required = true, value = "The indication of whether the service is available")
 
-  public Boolean
-  getReady() {
+  public Boolean getReady() {
     return ready;
   }
 
-  public void setReady(Boolean ready) { this.ready = ready; }
+  public void setReady(Boolean ready) {
+    this.ready = ready;
+  }
 
   public ApiStatus serviceName(String serviceName) {
-
     this.serviceName = serviceName;
     return this;
   }
 
   /**
    * The name of the service
-   *
    * @return serviceName
-   */
+   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "The name of the service")
 
@@ -218,7 +204,7 @@ public class ApiStatus implements Serializable {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ApiStatus apiStatus = (ApiStatus)o;
+    ApiStatus apiStatus = (ApiStatus) o;
     return Objects.equals(this.apiVersion, apiStatus.apiVersion)
         && Objects.equals(this.componentName, apiStatus.componentName)
         && Objects.equals(this.componentVersion, apiStatus.componentVersion)
@@ -229,36 +215,27 @@ public class ApiStatus implements Serializable {
 
   @Override
   public int hashCode() {
-    return Objects.hash(apiVersion, componentName, componentVersion,
-                        lockssVersion, ready, serviceName);
+    return Objects.hash(
+        apiVersion, componentName, componentVersion, lockssVersion, ready, serviceName);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ApiStatus {\n");
-    sb.append("    apiVersion: ")
-        .append(toIndentedString(apiVersion))
-        .append("\n");
-    sb.append("    componentName: ")
-        .append(toIndentedString(componentName))
-        .append("\n");
-    sb.append("    componentVersion: ")
-        .append(toIndentedString(componentVersion))
-        .append("\n");
-    sb.append("    lockssVersion: ")
-        .append(toIndentedString(lockssVersion))
-        .append("\n");
+    sb.append("    apiVersion: ").append(toIndentedString(apiVersion)).append("\n");
+    sb.append("    componentName: ").append(toIndentedString(componentName)).append("\n");
+    sb.append("    componentVersion: ").append(toIndentedString(componentVersion)).append("\n");
+    sb.append("    lockssVersion: ").append(toIndentedString(lockssVersion)).append("\n");
     sb.append("    ready: ").append(toIndentedString(ready)).append("\n");
-    sb.append("    serviceName: ")
-        .append(toIndentedString(serviceName))
-        .append("\n");
+    sb.append("    serviceName: ").append(toIndentedString(serviceName)).append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(Object o) {
     if (o == null) {

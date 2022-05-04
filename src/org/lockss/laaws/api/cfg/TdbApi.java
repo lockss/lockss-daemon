@@ -1,32 +1,32 @@
 /*
- * 2022, Board of Trustees of Leland Stanford Jr. University,
- * All rights reserved.
+ * Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
  *
- * Redistribution and use in source and binary forms, with or without modification,
- * are permitted provided that the following conditions are met:
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
  *
- * 1. Redistributions of source code must retain the above copyright notice, this
- * list of conditions and the following disclaimer.
+ * 1. Redistributions of source code must retain the above copyright notice,
+ * this list of conditions and the following disclaimer.
  *
  * 2. Redistributions in binary form must reproduce the above copyright notice,
- * this list of conditions and the following disclaimer in the documentation and/or
- * other materials provided with the distribution.
+ * this list of conditions and the following disclaimer in the documentation
+ * and/or other materials provided with the distribution.
  *
  * 3. Neither the name of the copyright holder nor the names of its contributors
  * may be used to endorse or promote products derived from this software without
  * specific prior written permission.
  *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
- * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
- * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
- * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
- * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
- * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
- * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
- * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- *  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
- *  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+*/
 
 /*
  * LOCKSS Configuration Service REST API
@@ -48,20 +48,15 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.lockss.laaws.client.ApiCallback;
-import org.lockss.laaws.client.ApiException;
-import org.lockss.laaws.client.ApiResponse;
-import org.lockss.laaws.client.Configuration;
-import org.lockss.laaws.client.Pair;
-import org.lockss.laaws.client.V2RestClient;
+import org.lockss.laaws.client.*;
 import org.lockss.laaws.model.cfg.TdbAuWsResult;
 import org.lockss.laaws.model.cfg.TdbPublisherWsResult;
 import org.lockss.laaws.model.cfg.TdbTitleWsResult;
 
 public class TdbApi {
   private V2RestClient apiClient;
-  private String localCustomBaseUrl;
   private int localHostIndex;
+  private String localCustomBaseUrl;
 
   public TdbApi() {
     this(Configuration.getDefaultApiClient());
@@ -79,14 +74,6 @@ public class TdbApi {
     this.apiClient = apiClient;
   }
 
-  public String getCustomBaseUrl() {
-    return localCustomBaseUrl;
-  }
-
-  public void setCustomBaseUrl(String customBaseUrl) {
-    this.localCustomBaseUrl = customBaseUrl;
-  }
-
   public int getHostIndex() {
     return localHostIndex;
   }
@@ -95,20 +82,28 @@ public class TdbApi {
     this.localHostIndex = hostIndex;
   }
 
+  public String getCustomBaseUrl() {
+    return localCustomBaseUrl;
+  }
+
+  public void setCustomBaseUrl(String customBaseUrl) {
+    this.localCustomBaseUrl = customBaseUrl;
+  }
+
   /**
    * Build call for getTdbAus
-   *
    * @param tdbAuQuery The query that specifies the TDB AUs to be returned (required)
    * @param _callback Callback for upload/download progress
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the requested TDB AUs </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the requested TDB AUs </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public okhttp3.Call getTdbAusCall(String tdbAuQuery, final ApiCallback _callback)
       throws ApiException {
@@ -147,8 +142,9 @@ public class TdbApi {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
 
-    final String[] localVarContentTypes = {};
+    final String[] localVarContentTypes = {
 
+    };
     final String localVarContentType =
         apiClient.selectHeaderContentType(localVarContentTypes);
     if (localVarContentType != null) {
@@ -156,24 +152,14 @@ public class TdbApi {
     }
 
     String[] localVarAuthNames = new String[] {"basicAuth"};
-    return apiClient.buildCall(
-        basePath,
-        localVarPath,
-        "GET",
-        localVarQueryParams,
-        localVarCollectionQueryParams,
-        localVarPostBody,
-        localVarHeaderParams,
-        localVarCookieParams,
-        localVarFormParams,
-        localVarAuthNames,
-        _callback);
+    return apiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams,
+        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
+        localVarFormParams, localVarAuthNames, _callback);
   }
 
   @SuppressWarnings("rawtypes")
   private okhttp3.Call getTdbAusValidateBeforeCall(String tdbAuQuery, final ApiCallback _callback)
       throws ApiException {
-
     // verify the required parameter 'tdbAuQuery' is set
     if (tdbAuQuery == null) {
       throw new ApiException(
@@ -187,17 +173,18 @@ public class TdbApi {
   /**
    * Query the TDB for AUs
    * Query the TDB for AUs that meet a set of specified conditions
-   *
    * @param tdbAuQuery The query that specifies the TDB AUs to be returned (required)
    * @return List&lt;TdbAuWsResult&gt;
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the requested TDB AUs </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the requested TDB AUs </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public List<TdbAuWsResult> getTdbAus(String tdbAuQuery) throws ApiException {
     ApiResponse<List<TdbAuWsResult>> localVarResp = getTdbAusWithHttpInfo(tdbAuQuery);
@@ -207,17 +194,18 @@ public class TdbApi {
   /**
    * Query the TDB for AUs
    * Query the TDB for AUs that meet a set of specified conditions
-   *
    * @param tdbAuQuery The query that specifies the TDB AUs to be returned (required)
    * @return ApiResponse&lt;List&lt;TdbAuWsResult&gt;&gt;
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the requested TDB AUs </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the requested TDB AUs </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public ApiResponse<List<TdbAuWsResult>> getTdbAusWithHttpInfo(String tdbAuQuery)
       throws ApiException {
@@ -229,22 +217,21 @@ public class TdbApi {
   /**
    * Query the TDB for AUs (asynchronously)
    * Query the TDB for AUs that meet a set of specified conditions
-   *
    * @param tdbAuQuery The query that specifies the TDB AUs to be returned (required)
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the requested TDB AUs </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the requested TDB AUs </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public okhttp3.Call getTdbAusAsync(
       String tdbAuQuery, final ApiCallback<List<TdbAuWsResult>> _callback) throws ApiException {
-
     okhttp3.Call localVarCall = getTdbAusValidateBeforeCall(tdbAuQuery, _callback);
     Type localVarReturnType = new TypeToken<List<TdbAuWsResult>>() {}.getType();
     apiClient.executeAsync(localVarCall, localVarReturnType, _callback);
@@ -252,18 +239,19 @@ public class TdbApi {
   }
   /**
    * Build call for getTdbPublishers
-   *
-   * @param tdbPublisherQuery The query that specifies the TDB Publishers to be\\ \\ returned (required)
+   * @param tdbPublisherQuery The query that specifies the TDB Publishers to be\\ \\ returned
+   (required)
    * @param _callback Callback for upload/download progress
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the requested TDB Publishers </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the requested TDB Publishers </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public okhttp3.Call getTdbPublishersCall(String tdbPublisherQuery, final ApiCallback _callback)
       throws ApiException {
@@ -303,8 +291,9 @@ public class TdbApi {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
 
-    final String[] localVarContentTypes = {};
+    final String[] localVarContentTypes = {
 
+    };
     final String localVarContentType =
         apiClient.selectHeaderContentType(localVarContentTypes);
     if (localVarContentType != null) {
@@ -312,24 +301,14 @@ public class TdbApi {
     }
 
     String[] localVarAuthNames = new String[] {"basicAuth"};
-    return apiClient.buildCall(
-        basePath,
-        localVarPath,
-        "GET",
-        localVarQueryParams,
-        localVarCollectionQueryParams,
-        localVarPostBody,
-        localVarHeaderParams,
-        localVarCookieParams,
-        localVarFormParams,
-        localVarAuthNames,
-        _callback);
+    return apiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams,
+        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
+        localVarFormParams, localVarAuthNames, _callback);
   }
 
   @SuppressWarnings("rawtypes")
   private okhttp3.Call getTdbPublishersValidateBeforeCall(
       String tdbPublisherQuery, final ApiCallback _callback) throws ApiException {
-
     // verify the required parameter 'tdbPublisherQuery' is set
     if (tdbPublisherQuery == null) {
       throw new ApiException(
@@ -343,17 +322,19 @@ public class TdbApi {
   /**
    * Query the TDB for Publishers
    * Query the TDB for Publishers that meet a set of specified\\ \\ conditions
-   *
-   * @param tdbPublisherQuery The query that specifies the TDB Publishers to be\\ \\ returned (required)
+   * @param tdbPublisherQuery The query that specifies the TDB Publishers to be\\ \\ returned
+   (required)
    * @return List&lt;TdbPublisherWsResult&gt;
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the requested TDB Publishers </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the requested TDB Publishers </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public List<TdbPublisherWsResult> getTdbPublishers(String tdbPublisherQuery) throws ApiException {
     ApiResponse<List<TdbPublisherWsResult>> localVarResp =
@@ -364,17 +345,19 @@ public class TdbApi {
   /**
    * Query the TDB for Publishers
    * Query the TDB for Publishers that meet a set of specified\\ \\ conditions
-   *
-   * @param tdbPublisherQuery The query that specifies the TDB Publishers to be\\ \\ returned (required)
+   * @param tdbPublisherQuery The query that specifies the TDB Publishers to be\\ \\ returned
+   (required)
    * @return ApiResponse&lt;List&lt;TdbPublisherWsResult&gt;&gt;
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the requested TDB Publishers </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the requested TDB Publishers </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public ApiResponse<List<TdbPublisherWsResult>> getTdbPublishersWithHttpInfo(
       String tdbPublisherQuery) throws ApiException {
@@ -386,23 +369,22 @@ public class TdbApi {
   /**
    * Query the TDB for Publishers (asynchronously)
    * Query the TDB for Publishers that meet a set of specified\\ \\ conditions
-   *
-   * @param tdbPublisherQuery The query that specifies the TDB Publishers to be\\ \\ returned (required)
+   * @param tdbPublisherQuery The query that specifies the TDB Publishers to be\\ \\ returned
+   (required)
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the requested TDB Publishers </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the requested TDB Publishers </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
-  public okhttp3.Call getTdbPublishersAsync(
-      String tdbPublisherQuery, final ApiCallback<List<TdbPublisherWsResult>> _callback)
-      throws ApiException {
-
+  public okhttp3.Call getTdbPublishersAsync(String tdbPublisherQuery,
+      final ApiCallback<List<TdbPublisherWsResult>> _callback) throws ApiException {
     okhttp3.Call localVarCall = getTdbPublishersValidateBeforeCall(tdbPublisherQuery, _callback);
     Type localVarReturnType = new TypeToken<List<TdbPublisherWsResult>>() {}.getType();
     apiClient.executeAsync(localVarCall, localVarReturnType, _callback);
@@ -410,18 +392,18 @@ public class TdbApi {
   }
   /**
    * Build call for getTdbTitles
-   *
    * @param tdbTitleQuery The query that specifies the TDB Titles to be returned (required)
    * @param _callback Callback for upload/download progress
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the requested TDB Titles </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the requested TDB Titles </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public okhttp3.Call getTdbTitlesCall(String tdbTitleQuery, final ApiCallback _callback)
       throws ApiException {
@@ -460,8 +442,9 @@ public class TdbApi {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
 
-    final String[] localVarContentTypes = {};
+    final String[] localVarContentTypes = {
 
+    };
     final String localVarContentType =
         apiClient.selectHeaderContentType(localVarContentTypes);
     if (localVarContentType != null) {
@@ -469,24 +452,14 @@ public class TdbApi {
     }
 
     String[] localVarAuthNames = new String[] {"basicAuth"};
-    return apiClient.buildCall(
-        basePath,
-        localVarPath,
-        "GET",
-        localVarQueryParams,
-        localVarCollectionQueryParams,
-        localVarPostBody,
-        localVarHeaderParams,
-        localVarCookieParams,
-        localVarFormParams,
-        localVarAuthNames,
-        _callback);
+    return apiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams,
+        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
+        localVarFormParams, localVarAuthNames, _callback);
   }
 
   @SuppressWarnings("rawtypes")
   private okhttp3.Call getTdbTitlesValidateBeforeCall(
       String tdbTitleQuery, final ApiCallback _callback) throws ApiException {
-
     // verify the required parameter 'tdbTitleQuery' is set
     if (tdbTitleQuery == null) {
       throw new ApiException(
@@ -500,17 +473,18 @@ public class TdbApi {
   /**
    * Query the TDB for Titles
    * Query the TDB for Titles that meet a set of specified\\ \\ conditions
-   *
    * @param tdbTitleQuery The query that specifies the TDB Titles to be returned (required)
    * @return List&lt;TdbTitleWsResult&gt;
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the requested TDB Titles </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the requested TDB Titles </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public List<TdbTitleWsResult> getTdbTitles(String tdbTitleQuery) throws ApiException {
     ApiResponse<List<TdbTitleWsResult>> localVarResp = getTdbTitlesWithHttpInfo(tdbTitleQuery);
@@ -520,17 +494,18 @@ public class TdbApi {
   /**
    * Query the TDB for Titles
    * Query the TDB for Titles that meet a set of specified\\ \\ conditions
-   *
    * @param tdbTitleQuery The query that specifies the TDB Titles to be returned (required)
    * @return ApiResponse&lt;List&lt;TdbTitleWsResult&gt;&gt;
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the requested TDB Titles </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the requested TDB Titles </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
   public ApiResponse<List<TdbTitleWsResult>> getTdbTitlesWithHttpInfo(String tdbTitleQuery)
       throws ApiException {
@@ -542,23 +517,21 @@ public class TdbApi {
   /**
    * Query the TDB for Titles (asynchronously)
    * Query the TDB for Titles that meet a set of specified\\ \\ conditions
-   *
    * @param tdbTitleQuery The query that specifies the TDB Titles to be returned (required)
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-   * @http.response.details <table summary="Response Details" border="1">
-   * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-   * <tr><td> 200 </td><td> Information about the requested TDB Titles </td><td>  -  </td></tr>
-   * <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-   * <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
-   * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-   * </table>
+   * @http.response.details
+   <table summary="Response Details" border="1">
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> Information about the requested TDB Titles </td><td>  -  </td></tr>
+      <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+   </table>
    */
-  public okhttp3.Call getTdbTitlesAsync(
-      String tdbTitleQuery, final ApiCallback<List<TdbTitleWsResult>> _callback)
-      throws ApiException {
-
+  public okhttp3.Call getTdbTitlesAsync(String tdbTitleQuery,
+      final ApiCallback<List<TdbTitleWsResult>> _callback) throws ApiException {
     okhttp3.Call localVarCall = getTdbTitlesValidateBeforeCall(tdbTitleQuery, _callback);
     Type localVarReturnType = new TypeToken<List<TdbTitleWsResult>>() {}.getType();
     apiClient.executeAsync(localVarCall, localVarReturnType, _callback);

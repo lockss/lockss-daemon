@@ -1,32 +1,32 @@
 /*
- * 2022, Board of Trustees of Leland Stanford Jr. University,
- * All rights reserved.
+ * Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
  *
- * Redistribution and use in source and binary forms, with or without modification,
- * are permitted provided that the following conditions are met:
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
  *
- * 1. Redistributions of source code must retain the above copyright notice, this
- * list of conditions and the following disclaimer.
+ * 1. Redistributions of source code must retain the above copyright notice,
+ * this list of conditions and the following disclaimer.
  *
  * 2. Redistributions in binary form must reproduce the above copyright notice,
- * this list of conditions and the following disclaimer in the documentation and/or
- * other materials provided with the distribution.
+ * this list of conditions and the following disclaimer in the documentation
+ * and/or other materials provided with the distribution.
  *
  * 3. Neither the name of the copyright holder nor the names of its contributors
  * may be used to endorse or promote products derived from this software without
  * specific prior written permission.
  *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
- * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
- * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
- * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
- * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
- * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
- * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
- * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- *  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
- *  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+*/
 
 /*
  * LOCKSS Repository Service REST API
@@ -48,10 +48,11 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 import java.util.Objects;
 
-/** The information related to pagination of content */
+/**
+ * The information related to pagination of content
+ */
 @ApiModel(description = "The information related to pagination of content")
-@javax.annotation.
-Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class PageInfo implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -59,14 +60,10 @@ public class PageInfo implements Serializable {
   @SerializedName(SERIALIZED_NAME_TOTAL_COUNT) private Integer totalCount;
 
   public static final String SERIALIZED_NAME_RESULTS_PER_PAGE = "resultsPerPage";
-
-  @SerializedName(SERIALIZED_NAME_RESULTS_PER_PAGE)
-  private Integer resultsPerPage;
+  @SerializedName(SERIALIZED_NAME_RESULTS_PER_PAGE) private Integer resultsPerPage;
 
   public static final String SERIALIZED_NAME_CONTINUATION_TOKEN = "continuationToken";
-
-  @SerializedName(SERIALIZED_NAME_CONTINUATION_TOKEN)
-  private String continuationToken;
+  @SerializedName(SERIALIZED_NAME_CONTINUATION_TOKEN) private String continuationToken;
 
   public static final String SERIALIZED_NAME_CUR_LINK = "curLink";
   @SerializedName(SERIALIZED_NAME_CUR_LINK) private String curLink;
@@ -77,16 +74,14 @@ public class PageInfo implements Serializable {
   public PageInfo() {}
 
   public PageInfo totalCount(Integer totalCount) {
-
     this.totalCount = totalCount;
     return this;
   }
 
   /**
    * The total number of results
-   *
    * @return totalCount
-   */
+   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "The total number of results")
 
@@ -99,16 +94,14 @@ public class PageInfo implements Serializable {
   }
 
   public PageInfo resultsPerPage(Integer resultsPerPage) {
-
     this.resultsPerPage = resultsPerPage;
     return this;
   }
 
   /**
    * The number of results per page
-   *
    * @return resultsPerPage
-   */
+   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "The number of results per page")
 
@@ -121,16 +114,14 @@ public class PageInfo implements Serializable {
   }
 
   public PageInfo continuationToken(String continuationToken) {
-
     this.continuationToken = continuationToken;
     return this;
   }
 
   /**
    * The continuation token
-   *
    * @return continuationToken
-   */
+   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "The continuation token")
 
@@ -143,16 +134,14 @@ public class PageInfo implements Serializable {
   }
 
   public PageInfo curLink(String curLink) {
-
     this.curLink = curLink;
     return this;
   }
 
   /**
    * The link of the current request
-   *
    * @return curLink
-   */
+   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "The link of the current request")
 
@@ -160,19 +149,19 @@ public class PageInfo implements Serializable {
     return curLink;
   }
 
-  public void setCurLink(String curLink) { this.curLink = curLink; }
+  public void setCurLink(String curLink) {
+    this.curLink = curLink;
+  }
 
   public PageInfo nextLink(String nextLink) {
-
     this.nextLink = nextLink;
     return this;
   }
 
   /**
    * The link of the next request
-   *
    * @return nextLink
-   */
+   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "The link of the next request")
 
@@ -180,7 +169,9 @@ public class PageInfo implements Serializable {
     return nextLink;
   }
 
-  public void setNextLink(String nextLink) { this.nextLink = nextLink; }
+  public void setNextLink(String nextLink) {
+    this.nextLink = nextLink;
+  }
 
   @Override
   public boolean equals(Object o) {
@@ -190,7 +181,7 @@ public class PageInfo implements Serializable {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    PageInfo pageInfo = (PageInfo)o;
+    PageInfo pageInfo = (PageInfo) o;
     return Objects.equals(this.totalCount, pageInfo.totalCount)
         && Objects.equals(this.resultsPerPage, pageInfo.resultsPerPage)
         && Objects.equals(this.continuationToken, pageInfo.continuationToken)
@@ -200,23 +191,16 @@ public class PageInfo implements Serializable {
 
   @Override
   public int hashCode() {
-    return Objects.hash(totalCount, resultsPerPage, continuationToken, curLink,
-                        nextLink);
+    return Objects.hash(totalCount, resultsPerPage, continuationToken, curLink, nextLink);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PageInfo {\n");
-    sb.append("    totalCount: ")
-        .append(toIndentedString(totalCount))
-        .append("\n");
-    sb.append("    resultsPerPage: ")
-        .append(toIndentedString(resultsPerPage))
-        .append("\n");
-    sb.append("    continuationToken: ")
-        .append(toIndentedString(continuationToken))
-        .append("\n");
+    sb.append("    totalCount: ").append(toIndentedString(totalCount)).append("\n");
+    sb.append("    resultsPerPage: ").append(toIndentedString(resultsPerPage)).append("\n");
+    sb.append("    continuationToken: ").append(toIndentedString(continuationToken)).append("\n");
     sb.append("    curLink: ").append(toIndentedString(curLink)).append("\n");
     sb.append("    nextLink: ").append(toIndentedString(nextLink)).append("\n");
     sb.append("}");
@@ -224,7 +208,8 @@ public class PageInfo implements Serializable {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(Object o) {
     if (o == null) {

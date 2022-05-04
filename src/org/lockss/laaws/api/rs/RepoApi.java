@@ -1,32 +1,32 @@
 /*
- * 2022, Board of Trustees of Leland Stanford Jr. University,
- * All rights reserved.
+ * Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
  *
- * Redistribution and use in source and binary forms, with or without modification,
- * are permitted provided that the following conditions are met:
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
  *
- * 1. Redistributions of source code must retain the above copyright notice, this
- * list of conditions and the following disclaimer.
+ * 1. Redistributions of source code must retain the above copyright notice,
+ * this list of conditions and the following disclaimer.
  *
  * 2. Redistributions in binary form must reproduce the above copyright notice,
- * this list of conditions and the following disclaimer in the documentation and/or
- * other materials provided with the distribution.
+ * this list of conditions and the following disclaimer in the documentation
+ * and/or other materials provided with the distribution.
  *
  * 3. Neither the name of the copyright holder nor the names of its contributors
  * may be used to endorse or promote products derived from this software without
  * specific prior written permission.
  *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
- * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
- * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
- * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
- * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
- * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
- * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
- * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- *  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
- *  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+*/
 
 /*
  * LOCKSS Repository Service REST API
@@ -48,12 +48,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.lockss.laaws.client.ApiCallback;
-import org.lockss.laaws.client.V2RestClient;
-import org.lockss.laaws.client.ApiException;
-import org.lockss.laaws.client.ApiResponse;
-import org.lockss.laaws.client.Configuration;
-import org.lockss.laaws.client.Pair;
+import org.lockss.laaws.client.*;
 import org.lockss.laaws.model.rs.RepositoryInfo;
 
 public class RepoApi {
@@ -61,21 +56,33 @@ public class RepoApi {
   private int localHostIndex;
   private String localCustomBaseUrl;
 
-  public RepoApi() { this(Configuration.getDefaultApiClient()); }
+  public RepoApi() {
+    this(Configuration.getDefaultApiClient());
+  }
 
-  public RepoApi(V2RestClient apiClient) { this.apiClient = apiClient; }
+  public RepoApi(V2RestClient apiClient) {
+    this.apiClient = apiClient;
+  }
 
-  public V2RestClient getApiClient() { return apiClient; }
+  public V2RestClient getApiClient() {
+    return apiClient;
+  }
 
   public void setApiClient(V2RestClient apiClient) {
     this.apiClient = apiClient;
   }
 
-  public int getHostIndex() { return localHostIndex; }
+  public int getHostIndex() {
+    return localHostIndex;
+  }
 
-  public void setHostIndex(int hostIndex) { this.localHostIndex = hostIndex; }
+  public void setHostIndex(int hostIndex) {
+    this.localHostIndex = hostIndex;
+  }
 
-  public String getCustomBaseUrl() { return localCustomBaseUrl; }
+  public String getCustomBaseUrl() {
+    return localCustomBaseUrl;
+  }
 
   public void setCustomBaseUrl(String customBaseUrl) {
     this.localCustomBaseUrl = customBaseUrl;
@@ -83,15 +90,14 @@ public class RepoApi {
 
   /**
    * Build call for getRepositoryInformation
-   *
    * @param _callback Callback for upload/download progress
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    * @http.response.details
    <table summary="Response Details" border="1">
-      <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   </td></tr> <tr><td> 200 </td><td> The repository information </td><td>  -
-   </td></tr> <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The repository information </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
       <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
    </table>
    */
@@ -123,32 +129,29 @@ public class RepoApi {
     Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
     final String[] localVarAccepts = {"application/json"};
-    final String localVarAccept =
-        apiClient.selectHeaderAccept(localVarAccepts);
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
 
-    final String[] localVarContentTypes = {};
+    final String[] localVarContentTypes = {
 
+    };
     final String localVarContentType =
         apiClient.selectHeaderContentType(localVarContentTypes);
     if (localVarContentType != null) {
       localVarHeaderParams.put("Content-Type", localVarContentType);
     }
 
-        String[] localVarAuthNames = new String[]{ "basicAuth" };
-    return apiClient.buildCall(
-        basePath, localVarPath, "GET", localVarQueryParams,
-        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams,
-        localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    String[] localVarAuthNames = new String[] {"basicAuth"};
+    return apiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams,
+        localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
+        localVarFormParams, localVarAuthNames, _callback);
   }
 
   @SuppressWarnings("rawtypes")
-  private okhttp3.Call
-  getRepositoryInformationValidateBeforeCall(final ApiCallback _callback)
+  private okhttp3.Call getRepositoryInformationValidateBeforeCall(final ApiCallback _callback)
       throws ApiException {
-
     okhttp3.Call localVarCall = getRepositoryInformationCall(_callback);
     return localVarCall;
   }
@@ -157,19 +160,18 @@ public class RepoApi {
    * Get repository information
    * Get properties of the repository
    * @return RepositoryInfo
-   * @throws ApiException If fail to call the API, e.g. server error or cannot
-   deserialize the response body
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
    * @http.response.details
    <table summary="Response Details" border="1">
-      <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   </td></tr> <tr><td> 200 </td><td> The repository information </td><td>  -
-   </td></tr> <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The repository information </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
       <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
    </table>
    */
   public RepositoryInfo getRepositoryInformation() throws ApiException {
-    ApiResponse<RepositoryInfo> localVarResp =
-        getRepositoryInformationWithHttpInfo();
+    ApiResponse<RepositoryInfo> localVarResp = getRepositoryInformationWithHttpInfo();
     return localVarResp.getData();
   }
 
@@ -177,20 +179,18 @@ public class RepoApi {
    * Get repository information
    * Get properties of the repository
    * @return ApiResponse&lt;RepositoryInfo&gt;
-   * @throws ApiException If fail to call the API, e.g. server error or cannot
-   deserialize the response body
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   response body
    * @http.response.details
    <table summary="Response Details" border="1">
-      <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   </td></tr> <tr><td> 200 </td><td> The repository information </td><td>  -
-   </td></tr> <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The repository information </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
       <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
    </table>
    */
-  public ApiResponse<RepositoryInfo> getRepositoryInformationWithHttpInfo()
-      throws ApiException {
-    okhttp3.Call localVarCall =
-        getRepositoryInformationValidateBeforeCall(null);
+  public ApiResponse<RepositoryInfo> getRepositoryInformationWithHttpInfo() throws ApiException {
+    okhttp3.Call localVarCall = getRepositoryInformationValidateBeforeCall(null);
     Type localVarReturnType = new TypeToken<RepositoryInfo>() {}.getType();
     return apiClient.execute(localVarCall, localVarReturnType);
   }
@@ -200,22 +200,18 @@ public class RepoApi {
    * Get properties of the repository
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
-   * @throws ApiException If fail to process the API call, e.g. serializing the
-   request body object
+   * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    * @http.response.details
    <table summary="Response Details" border="1">
-      <tr><td> Status Code </td><td> Description </td><td> Response Headers
-   </td></tr> <tr><td> 200 </td><td> The repository information </td><td>  -
-   </td></tr> <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+      <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+      <tr><td> 200 </td><td> The repository information </td><td>  -  </td></tr>
+      <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
       <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
    </table>
    */
-  public okhttp3.Call
-  getRepositoryInformationAsync(final ApiCallback<RepositoryInfo> _callback)
+  public okhttp3.Call getRepositoryInformationAsync(final ApiCallback<RepositoryInfo> _callback)
       throws ApiException {
-
-    okhttp3.Call localVarCall =
-        getRepositoryInformationValidateBeforeCall(_callback);
+    okhttp3.Call localVarCall = getRepositoryInformationValidateBeforeCall(_callback);
     Type localVarReturnType = new TypeToken<RepositoryInfo>() {}.getType();
     apiClient.executeAsync(localVarCall, localVarReturnType, _callback);
     return localVarCall;
