@@ -13,13 +13,12 @@
       name = Pro Medicina Foundation Source Content
     >
 
-    plugin = needs.SourcePlugin
-    #plugin = org.lockss.plugin.clockss.airiti.ClockssAiritiSourcePlugin
-    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/NEEDS-PLUGIN-released/
+    plugin = org.lockss.plugin.clockss.promedicina.ClockssProMedicinaDirSourcePlugin
+    param[base_url] = https://clockss-test.lockss.org/sourcefiles/promed-released/
     hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[directory] >
 
-    au < exists ; exists ; 2022 ; Pro Medicina Foundation Source Content 2022 ; 2022 >
+    au < exists ; exists ; 2022 ; Pro Medicina Foundation Source Content 2022 ; 2022_01 >
 
   }
 
