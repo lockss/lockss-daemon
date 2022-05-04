@@ -68,25 +68,22 @@ public class PhilDocXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
       return PhilDocHelper;
     }
 
-
-    
     // The sample used pdf subdir but the later deposit had the pdf in the same
     // directory as the XML file - try both
-    protected List<String> getFilenamesAssociatedWithRecord(PhilDocSchemaHelper helper, 
+    @Override
+    protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, 
         CachedUrl cu,
         ArticleMetadata oneAM) {
-      // Note the altered method signature: PhilDocSchemaHelper instead of SourceXmlSchemaHelper
-      String imuse_id = oneAM.getRaw(helper.art_imuse_id);
-      String pdfname = oneAM.getRaw(helper.art_pdfname);
-      String xmlname = oneAM.getRaw(helper.art_xmlname);
+      String imuse_id = oneAM.getRaw(PhilDocSchemaHelper.art_imuse_id);
+      String pdfname = oneAM.getRaw(PhilDocSchemaHelper.art_pdfname);
       
       String cuBase = FilenameUtils.getFullPath(cu.getUrl());
       ArrayList<String> returnList = new ArrayList<String>();
-//      log.debug3("looking for filename of: " + cuBase + "pdf/" + filenameValue + ".pdf");
       returnList.add(cuBase + imuse_id + ".pdf");
       returnList.add(cuBase + "pdf/" + imuse_id + ".pdf");
       returnList.add(cuBase + pdfname + ".pdf");
       returnList.add(cuBase + "pdf/" + pdfname + ".pdf");
+      log.debug3(String.format("getFilenamesAssociatedWithRecord for %s returns %s", cu.getUrl(), returnList));
       return returnList;
     }    
     
