@@ -220,6 +220,7 @@
       #param[base_url] = https://jbdgm.psychopen.eu/
 
       param[journal_id] = JBDGM
+      attr[primary_locale] = de_DE
       #Moved to OJS3
 #      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 1984 ; Jahrbuch Musikpsychologie Volume 1 ; 1 ; 1984 ; https://jbdgm.psychopen.eu/ ; >
 #      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 1985 ; Jahrbuch Musikpsychologie Volume 2 ; 2 ; 1985 ; https://jbdgm.psychopen.eu/ ; >

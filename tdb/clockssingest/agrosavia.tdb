@@ -13,6 +13,7 @@
     implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
     #OJS3
     attr[start_stem] = index.php/
+    attr[primary_locale] = es_ES
 
   {
   

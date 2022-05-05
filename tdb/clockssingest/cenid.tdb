@@ -12,6 +12,7 @@
     #moved to OJS3
     attr[start_stem] = index.php/
     plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    attr[primary_locale] = es_ES
 
   {
   

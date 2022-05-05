@@ -23,6 +23,7 @@
     param[base_url] = https://revistas.udea.edu.co/
     plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
     attr[start_stem] = index.php/
+    attr[primary_locale] = es_ES
     #Previously processed 2013-2015 through Scielo.
     
     #published 1980-present
