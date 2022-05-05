@@ -58,17 +58,6 @@ implements SourceXmlSchemaHelper {
   private static final String AUTHOR_SPLIT_CH = ",";
   private static final String TITLE_SEPARATOR = ":";
 
-  /*
-     <creators>
-            <creator xml:id="au1" creatorRole="author">
-               <personName>
-                  <givenNames>Daniel R.</givenNames>
-                  <familyName>Schwarz</familyName>
-               </personName>
-            </creator>
-   </creators>
-   */
-
   static private final NodeValue AUTHOR_VALUE = new NodeValue() {
     @Override
     public String getValue(Node node) {
@@ -104,61 +93,6 @@ implements SourceXmlSchemaHelper {
       return valbuilder.toString();
     }
   };
-
-  /*
-   "fmatter.xml" example
-   <?xml version="1.0" encoding="UTF-8"?>
-<component xmlns="http://www.wiley.com/namespaces/wiley" xmlns:wiley="http://www.wiley.com/namespaces/wiley/wiley" version="1.0.2" type="bookChapter" xml:lang="en">
-   <?documentdebug3 RNGSchema="wileyML3G/V102/rnc/wileyML3G.rnc" type="compact" sourceDTD="JWSCHA15"?>
-   <header>
-      <publicationMeta level="series">
-         <titleGroup>
-            <title type="main" xml:lang="en">Blackwell Manifestos</title>
-         </titleGroup>
-      </publicationMeta>
-      <publicationMeta level="product" position="220">
-         <publisherdebug3>
-            <publisherName>wiley‐Blackwell</publisherName>
-            <publisherLoc>Oxford, UK</publisherLoc>
-         </publisherdebug3>
-         <doi origin="wiley" registered="yes">10.1002/9781444304831</doi>
-         <isbn type="online-13">9781444304831</isbn>
-         <isbn type="printCloth-13">9781405130981</isbn>
-         <idGroup>
-            <id type="product" value="O9781444304831" />
-         </idGroup>
-         <titleGroup>
-            <title type="main" xml:lang="en" sort="IN DEFENSE OF READING">In Defense of Reading</title>
-            <title type="tocForm">In Defense of Reading: Teaching Literature in the Twenty‐First Century</title>
-            <title type="subtitle">Teaching Literature in the Twenty‐First Century</title>
-            <title type="short">Schwarz/In Defense of Reading</title>
-         </titleGroup>
-         <copyright ownership="thirdParty">Copyright © 2008 Daniel R. Schwarz</copyright>
-         <eventGroup>
-            <event type="publishedPrint" date="2008-09-05" />
-            <event type="publishedOnlineProduct" date="2009-02-20" />
-         </eventGroup>
-         <creators>
-            <creator xml:id="au1" creatorRole="author">
-               <personName>
-                  <givenNames>Daniel R.</givenNames>
-                  <familyName>Schwarz</familyName>
-               </personName>
-            </creator>
-         </creators>
-      </publicationMeta>
-      <publicationMeta level="unit" type="frontmatter" position="10">
-         <doi origin="wiley" registered="yes">10.1002/9781444304831.fmatter</doi>
-         <idGroup>
-            <id type="unit" value="fmatter" />
-            <id type="file" value="fmatter" />
-         </idGroup>
-         <countGroup>
-            <count type="pageTotal" number="16" />
-         </countGroup>
-         <copyright ownership="thirdParty">Copyright © 2008 Daniel R. Schwarz</copyright>
-  */
-
 
   static private final String topNode = "/component/header/publicationMeta[@level = \"product\"]";
   private static final String publisher = topNode + "/publisherdebug3/publisherName";
@@ -200,8 +134,6 @@ implements SourceXmlSchemaHelper {
 
   @Override
   public Map<String, XPathValue> getGlobalMetaMap() {
-
-    log.debug3("=====WileyMRWSourceZip, WileyMRWSourceXmlSchemaHelper is initiatted, getGlobalMetaMap");
     return null; //globalMap;
   }
 
@@ -210,7 +142,6 @@ implements SourceXmlSchemaHelper {
    */
   @Override
   public Map<String, XPathValue> getArticleMetaMap() {
-    log.debug3("=====WileyMRWSourceZip, WileyMRWSourceXmlSchemaHelper is initiatted, getArticleMetaMap");
     return articleMap;
   }
 
@@ -219,7 +150,6 @@ implements SourceXmlSchemaHelper {
    */
   @Override
   public String getArticleNode() {
-    log.debug3("=====WileyMRWSourceZip, WileyMRWSourceXmlSchemaHelper is initiatted, getArticleNode");
     return topNode;
   }
 

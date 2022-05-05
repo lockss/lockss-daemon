@@ -74,7 +74,7 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <!--https://clockss-test.lockss.org/sourcefiles/wileybooks-released/2022_01/-->
+      <!--https://clockss-test.lockss.org/sourcefiles/wileymrw-released/2022_01/9783527809080.zip-->
       <string>"^%s%s/[^/]+\.zip$", base_url, directory</string>
     </list>
   </entry>
@@ -91,21 +91,21 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>org.lockss.plugin.clockss.wiley.WileyMRWSourceArticleIteratorFactory</string>
   </entry>
   <entry>
-    <string>application/zip_metadata_extractor_factory_map</string>
+    <string>text/xml_metadata_extractor_factory_map</string>
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.clockss.wiley.WileyMRWSourceZipMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.clockss.wiley.WileyMRWSourceXmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>
   <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>1,"https://clockss-test.lockss.org/sourcefiles/wileybooks-released/2022_01/?$"</string>
-      <string>1,"https://clockss-test.lockss.org/sourcefiles/wileybooks-released/2022_01/97804.*"</string>
-      <string>1,"https://clockss-test.lockss.org/sourcefiles/wileybooks-released/2022_01/9783.*"</string>
-      <!--<string>1,"https://clockss-test.lockss.org/sourcefiles/wileybooks-released/2022_01/9780470007259.*"</string>-->
-    </list>
+    <string>application/xml_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.clockss.wiley.WileyMRWSourceXmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
   </entry>
 </map>    

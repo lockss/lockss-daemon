@@ -51,13 +51,12 @@ public class WileyMRWSourceArticleIteratorFactory implements ArticleIteratorFact
   protected static Logger log = Logger.getLogger(WileyMRWSourceArticleIteratorFactory.class);
 
   /*
-  Each book is a zip file. But there is no PDF file for the whole book, it is chapter based + additional stuff
-  The publisher confirmed the folder name and file name are not guaranteed, so they suggest us using "first" xml
-  inside zip 
-   */
+  Each zip contains a lot of sub folders, each subfolder contains a 'MRW', which guarantee to
+  have 1 xml, but PDF file and other content are not guaranteed
 
+   */
   protected static final String ALL_ZIP_PATTERN_TEMPLATE =
-          "\"%s[^/]+/.*\\.zip\", base_url";
+          "\"%s[^/]+/.*\\.zip!/(.*)\\.(xml|pdf)$\", base_url";
 
   // Be sure to exclude all nested archives in case supplemental data is provided this way
   protected static final Pattern SUB_NESTED_ARCHIVE_PATTERN =
@@ -72,8 +71,8 @@ public class WileyMRWSourceArticleIteratorFactory implements ArticleIteratorFact
     return ALL_ZIP_PATTERN_TEMPLATE;
   }
 
-  public static final Pattern ZIP_PATTERN = Pattern.compile("/(.*)\\.zip$", Pattern.CASE_INSENSITIVE);
-  public static final String ZIP_REPLACEMENT = "/$1.zip";
+  public static final Pattern XML_PATTERN = Pattern.compile("/(.*\\.xml)$", Pattern.CASE_INSENSITIVE);
+  public static final String XML_REPLACEMENT = "/$1.xml";
 
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -89,8 +88,8 @@ public class WileyMRWSourceArticleIteratorFactory implements ArticleIteratorFact
             .setVisitArchiveMembers(true)
             .setVisitArchiveMembers(getIsArchive()));
 
-    builder.addAspect(ZIP_PATTERN,
-            ZIP_REPLACEMENT,
+    builder.addAspect(XML_PATTERN,
+            XML_REPLACEMENT,
             ArticleFiles.ROLE_ARTICLE_METADATA);
 
     return builder.getSubTreeArticleIterator();
@@ -99,7 +98,7 @@ public class WileyMRWSourceArticleIteratorFactory implements ArticleIteratorFact
   // NOTE - for a child to create their own version of this
   // indicates if the iterator should descend in to archives (for tar/zip deliveries)
   protected boolean getIsArchive() {
-    return false;
+    return true;
   }
 
   @Override

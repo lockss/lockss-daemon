@@ -60,18 +60,14 @@ public class WileyMRWSourceXmlMetadataExtractorFactory extends SourceXmlMetadata
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
 
-      log.debug3("WileyMRWSourceZip, inside setUpSchema for cu " + cu.getUrl());
+      log.debug3("WileyMRWSource, inside setUpSchema for cu " + cu.getUrl());
 
       if (cu.hasContent()) {
-        log.debug3("WileyMRWSourceZip cu has content");
+        log.debug3("WileyMRWSource cu has content");
       } else {
-        log.debug3("WileyMRWSourceZip cu has NO content");
+        log.debug3("WileyMRWSource cu has NO content");
       }
-
-      // Once you have it, just keep returning the same one. It won't change.
-      //if ( schemaHelper != null) {
-        //return  schemaHelper;
-      //}
+      
       schemaHelper = new  WileyMRWSourceXmlSchemaHelper();
       return  schemaHelper;
     }
@@ -80,7 +76,7 @@ public class WileyMRWSourceXmlMetadataExtractorFactory extends SourceXmlMetadata
     protected void postCookProcess(SourceXmlSchemaHelper schemaHelper,
                                    CachedUrl cu, ArticleMetadata thisAM) {
 
-      log.debug3("WileyMRWSourceZip setting publication type in postcook process");
+      log.debug3("WileyMRWSource setting publication type in postcook process");
       // this is a book volume
       thisAM.put(MetadataField.FIELD_PUBLICATION_TYPE,MetadataField.PUBLICATION_TYPE_BOOK);
       thisAM.put(MetadataField.FIELD_ARTICLE_TYPE,MetadataField.ARTICLE_TYPE_BOOKVOLUME);
