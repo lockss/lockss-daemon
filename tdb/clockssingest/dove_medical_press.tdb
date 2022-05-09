@@ -43,7 +43,7 @@
     au < finished ; crawling ; 2018 ; Therapeutics and Clinical Risk Management Volume 14 ; 14 ; 2018 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; Therapeutics and Clinical Risk Management Volume 15 ; 15 ; 2019 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2020 ; Therapeutics and Clinical Risk Management Volume 16 ; 16 ; 2020 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2021 ; Therapeutics and Clinical Risk Management Volume 17 ; 17 ; 2021 ; >
+    au < frozen ; exists ; 2021 ; Therapeutics and Clinical Risk Management Volume 17 ; 17 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Therapeutics and Clinical Risk Management Volume 18 ; 18 ; 2022 ; >
 
   }
@@ -73,7 +73,7 @@
     au < finished ; crawling ; 2018 ; Vascular Health and Risk Management Volume 14 ; 14 ; 2018 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; Vascular Health and Risk Management Volume 15 ; 15 ; 2019 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2020 ; Vascular Health and Risk Management Volume 16 ; 16 ; 2020 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2021 ; Vascular Health and Risk Management Volume 17 ; 17 ; 2021 ; >
+    au < frozen ; exists ; 2021 ; Vascular Health and Risk Management Volume 17 ; 17 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Vascular Health and Risk Management Volume 18 ; 18 ; 2022 ; >
 
   }
@@ -103,7 +103,7 @@
     au < finished ; crawling ; 2018 ; Neuropsychiatric Disease and Treatment Volume 14 ; 14 ; 2018 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; Neuropsychiatric Disease and Treatment Volume 15 ; 15 ; 2019 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2020 ; Neuropsychiatric Disease and Treatment Volume 16 ; 16 ; 2020 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2021 ; Neuropsychiatric Disease and Treatment Volume 17 ; 17 ; 2021 ; >
+    au < frozen ; exists ; 2021 ; Neuropsychiatric Disease and Treatment Volume 17 ; 17 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Neuropsychiatric Disease and Treatment Volume 18 ; 18 ; 2022 ; >
 
   }
@@ -132,7 +132,7 @@
     au < finished ; crawling ; 2018 ; Clinical Interventions in Aging Volume 13 ; 13 ; 2018 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; Clinical Interventions in Aging Volume 14 ; 14 ; 2019 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Clinical Interventions in Aging Volume 15 ; 15 ; 2020 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2021 ; Clinical Interventions in Aging Volume 16 ; 16 ; 2021 ; >
+    au < frozen ; exists ; 2021 ; Clinical Interventions in Aging Volume 16 ; 16 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Clinical Interventions in Aging Volume 17 ; 17 ; 2022 ; >
 
   }
@@ -161,7 +161,7 @@
     au < finished ; crawling ; 2018 ; International Journal of Nanomedicine Volume 13 ; 13 ; 2018 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; International Journal of Nanomedicine Volume 14 ; 14 ; 2019 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2020 ; International Journal of Nanomedicine Volume 15 ; 15 ; 2020 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2021 ; International Journal of Nanomedicine Volume 16 ; 16 ; 2021 ; >
+    au < frozen ; exists ; 2021 ; International Journal of Nanomedicine Volume 16 ; 16 ; 2021 ; >
     au < manifest ; exists ; 2022 ; International Journal of Nanomedicine Volume 17 ; 17 ; 2022 ; >
 
   }
@@ -190,7 +190,7 @@
     au < finished ; crawling ; 2018 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 13 ; 13 ; 2018 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 14 ; 14 ; 2019 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 15 ; 15 ; 2020 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2021 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 16 ; 16 ; 2021 ; >
+    au < frozen ; exists ; 2021 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 16 ; 16 ; 2021 ; >
     au < manifest ; exists ; 2022 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 17 ; 17 ; 2022 ; >
 
   }
@@ -217,7 +217,7 @@
     au < finished ; crawling ; 2018 ; Journal of Multidisciplinary Healthcare Volume 11 ; 11 ; 2018 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; Journal of Multidisciplinary Healthcare Volume 12 ; 12 ; 2019 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Journal of Multidisciplinary Healthcare Volume 13 ; 13 ; 2020 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2021 ; Journal of Multidisciplinary Healthcare Volume 14 ; 14 ; 2021 ; >
+    au < frozen ; exists ; 2021 ; Journal of Multidisciplinary Healthcare Volume 14 ; 14 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Journal of Multidisciplinary Healthcare Volume 15 ; 15 ; 2022 ; >
 
   }
@@ -246,7 +246,7 @@
     au < finished ; crawling ; 2018 ; Biologics: Targets and Therapy Volume 12 ; 12 ; 2018 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; Biologics: Targets and Therapy Volume 13 ; 13 ; 2019 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Biologics: Targets and Therapy Volume 14 ; 14 ; 2020 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2021 ; Biologics: Targets and Therapy Volume 15 ; 15 ; 2021 ; >
+    au < frozen ; exists ; 2021 ; Biologics: Targets and Therapy Volume 15 ; 15 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Biologics: Targets and Therapy Volume 16 ; 16 ; 2022 ; >
 
   }
