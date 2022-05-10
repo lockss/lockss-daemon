@@ -10133,14 +10133,15 @@
 
       param[journal_issn] = 2321-6662
 #      param[base_url] = http://www.ijsronline.net/
+      #Manifest page: Doesn't work with https. 500 Can't connect to www.ijsronline.net:443 (Connection reset by peer). See http://www.ijsronline.net/backissues.asp
 
-      au < exists ; 2011 ; International Journal of Students' Research Volume 1 ; 2011 ; 1 ; https://www.ijsronline.net/ >
-      au < exists ; 2012 ; International Journal of Students' Research Volume 2 ; 2012 ; 2 ; https://www.ijsronline.net/ >
-      au < exists ; 2013 ; International Journal of Students' Research Volume 3 ; 2013 ; 3 ; https://www.ijsronline.net/ >
-      au < exists ; 2014 ; International Journal of Students' Research Volume 4 ; 2014 ; 4 ; https://www.ijsronline.net/ >
-      au < exists ; 2015 ; International Journal of Students' Research Volume 5 ; 2015 ; 5 ; https://www.ijsronline.net/ >
-      au < exists ; 2016 ; International Journal of Students' Research Volume 6 ; 2016 ; 6 ; https://www.ijsronline.net/ >
-      au < exists ; 2017 ; International Journal of Students' Research Volume 7 ; 2017 ; 7 ; https://www.ijsronline.net/ >
+      au < exists ; 2011 ; International Journal of Students' Research Volume 1 ; 2011 ; 1 ; http://www.ijsronline.net/ >
+      au < exists ; 2012 ; International Journal of Students' Research Volume 2 ; 2012 ; 2 ; http://www.ijsronline.net/ >
+      au < exists ; 2013 ; International Journal of Students' Research Volume 3 ; 2013 ; 3 ; http://www.ijsronline.net/ >
+      au < exists ; 2014 ; International Journal of Students' Research Volume 4 ; 2014 ; 4 ; http://www.ijsronline.net/ >
+      au < exists ; 2015 ; International Journal of Students' Research Volume 5 ; 2015 ; 5 ; http://www.ijsronline.net/ >
+      au < exists ; 2016 ; International Journal of Students' Research Volume 6 ; 2016 ; 6 ; http://www.ijsronline.net/ >
+      au < down ; 2017 ; International Journal of Students' Research Volume 7 ; 2017 ; 7 ; http://www.ijsronline.net/ >
 
   }
 
