@@ -58,7 +58,7 @@ public class Ojs3HtmlCrawlFilterFactory implements FilterFactory {
 		  //HtmlNodeFilters.tag("header"),
 		    HtmlNodeFilters.tag("footer"),
 		    HtmlNodeFilters.tag("aside"),
-		    HtmlNodeFilters.tag("script"),
+		    //HtmlNodeFilters.tag("script"),
 		    HtmlNodeFilters.tag("nav"),
 		  
 	        // on the article landing page - remove the bottom stuff

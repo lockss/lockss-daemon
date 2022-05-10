@@ -80,6 +80,8 @@ public class Ojs3HtmlHashFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-container"),
             // issue page: https://haematologica.org/issue/view/377
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "one-article-intoc"),
+            // the citation files https://ojs.aut.ac.nz/hospitality-insights/citationstylelanguage/get/acm-sig-proceedings?submissionId=58
+            HtmlNodeFilters.tagWithAttribute("div", "class=", "csl-entry"), // alternatively div.csl-bib-body
 	    };
 
     private static final NodeFilter[] includeNodes2 = new NodeFilter[] {};

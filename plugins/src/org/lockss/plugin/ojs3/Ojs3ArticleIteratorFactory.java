@@ -47,6 +47,7 @@ import org.htmlparser.tags.LinkTag;
 import org.htmlparser.tags.MetaTag;
 import org.htmlparser.util.NodeList;
 import org.htmlparser.util.ParserException;
+import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.ArticleMetadataExtractorFactory;
@@ -89,6 +90,8 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
   protected static final String PATTERN_TEMPLATE = "\".*/article/view/[^/]+$\"";
   protected static Pattern ABSTRACT_PATTERN = Pattern.compile("article/view/[^/]+$", Pattern.CASE_INSENSITIVE);
   protected static String PUB_ID = "";
+  protected static String JOURNAL_ID;
+  protected static String YEAR;
 
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -157,10 +160,6 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
         af.setFullTextCu(absCu);
         af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, absCu);
         af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, absCu);
-
-        if (absCu.getUrl().contains("scholarworks.iu.edu")) {
-          return af;
-        }
 
         // now find the PDF and Full Text HTML from the meta tags on the abstract page
         // as well as the XML, EPUB, WORD, etc from the Body tag on the abstract page.

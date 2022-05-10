@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>22</string>
+    <string>23</string>
   </entry>
    <entry>
     <string>plugin_name</string>
@@ -56,8 +56,9 @@ POSSIBILITY OF SUCH DAMAGE.
       <!-- https://www.ride.org.mx/index.php/RIDE/user/setLocale/es_ES?source=%2Findex.php%2FRIDE%2Fgateway%2Flockss%3Fyear%3D2020 -->
       <string>1,"^https?://%s%s(index\.php/)?(%s/)?user/setLocale/[^?]{5}[?]source=%%2F(index[.]php%%2F)?(%s%%2F)?gateway%%2Fc?lockss%%3Fyear%%3D%d", url_host(base_url), url_path(base_url), journal_id, journal_id, year</string>
       <string>1,"https://docs.lib.purdue.edu/cgi/viewcontent.cgi\?article="</string>
-      <string>1,"^(%s|%s).*\.(bmp|css|gif|ico|js|jpe?g|png|tif?f|eot|svg|ttf|woff.?)([?]((itok|v)=)?[^&amp;]+)?$", to_http(base_url),to_https(base_url)</string>
-      <string>1,"^(%s|%s).*/css([?]name=stylesheet)?$", to_http(base_url),to_https(base_url)</string>
+      <string>1,"^https://%s/.*\.(bmp|css|gif|ico|js|jpe?g|png|tif?f|eot|svg|ttf|woff.?)([?]((itok|v)=)?[^&amp;]+)?$", base_url_host</string>
+      <string>1,"^https://%s/.*/css([?]name=((child-)?stylesheet|bootstrap))?$", base_url_host</string>
+        <string>1,"^https://(cdnjs\.cloudflare|(ajax|fonts)\.(googleapis|gstatic))\.com/"</string>
         <!--  index.php or journals/index.php are an optional attr so allow but do not require -->
         <!-- Some publisher using "ojs" instead of journal_id in start_url -->
         <!-- https://www.combinatorics.org/ojs/index.php/eljc/gateway/lockss?year=2018-->
@@ -77,8 +78,7 @@ POSSIBILITY OF SUCH DAMAGE.
          https://www.aijournals.com/index.php/ajmr/citationstylelanguage/download/ris?submissionId=2230
          -->
       <string>1,"^(%s|%s)(ojs/)?(journals/)?(index\.php/)?(%s/)?(index\.php/)?(%s/)?citationstylelanguage/(get|download)/", to_http(base_url),to_https(base_url), journal_id, journal_id</string>
-      <string>2,"^(%s|%s).*plugins/generic/pdfJsViewer/pdf\.js/web/viewer\.html\?file=https?[%%]25", to_http(base_url),to_https(base_url)</string>
-      <string>1,"^(%s|%s).*plugins/generic/pdfJsViewer/pdf\.js/web/viewer\.html\?file=", to_http(base_url),to_https(base_url)</string>
+      <string>1,"^(%s|%s).*plugins/generic/pdfJsViewer/pdf\.js/web/", to_http(base_url), to_https(base_url)</string>
     </list>
   </entry>
   <!--  The default. The start_stem attribute is inserted as needed by the crawl seed-->
@@ -268,6 +268,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>au_url_poll_result_weight</string>
     <list>
       <string>"/(plugins/(generic|themes)|lib/pkp|public/journals)/.+[.](css|eot|gif|png|jpe?g|js|svg|ttf|woff)([?]((itok|v)=)?[^&amp;]+)?$", 0</string>
+      <string>"/pdfJsViewer/pdf.js/web/viewer.html/.+[?]file=.+$", 0</string>
     </list>
   </entry>
 </map>

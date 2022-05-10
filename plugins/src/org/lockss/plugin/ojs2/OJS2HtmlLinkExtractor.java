@@ -231,14 +231,16 @@ public class OJS2HtmlLinkExtractor extends GoslingHtmlLinkExtractor {
 		case 'O':
 			if (beginsWithTag(link, OPTIONTAG)) {
 				String valueAttr = getAttributeValue("value", link);
-				Matcher mat = CITATION_FORMAT_PATH.matcher(valueAttr);
-				//       <option value="BibtexCitationPlugin">BibTeX</option>
-				//       <option value="ProCiteCitationPlugin">ProCite - RIS format (Macintosh &amp; Windows)</option>
-				if (mat.matches()) {
-					if (CITATION_DOWNLOAD_URL != null) {
-						String citationFormatUrl = CITATION_DOWNLOAD_URL + valueAttr;
-						log.debug3("FOUND A MATCH FOR CITATION DOWNLOAD, setting to: " + citationFormatUrl);
-						cb.foundLink(citationFormatUrl);
+				if (valueAttr != null) {
+					Matcher mat = CITATION_FORMAT_PATH.matcher(valueAttr);
+					//       <option value="BibtexCitationPlugin">BibTeX</option>
+					//       <option value="ProCiteCitationPlugin">ProCite - RIS format (Macintosh &amp; Windows)</option>
+					if (mat.matches()) {
+						if (CITATION_DOWNLOAD_URL != null) {
+							String citationFormatUrl = CITATION_DOWNLOAD_URL + valueAttr;
+							log.debug3("FOUND A MATCH FOR CITATION DOWNLOAD, setting to: " + citationFormatUrl);
+							cb.foundLink(citationFormatUrl);
+						}
 					}
 				}
 			}
@@ -248,17 +250,19 @@ public class OJS2HtmlLinkExtractor extends GoslingHtmlLinkExtractor {
 		case 'S':
 			if (beginsWithTag(link, "select")) {
 				String onchange = getAttributeValue("onchange", link);
-				Matcher mat = JS_CITATION_REPLACEMENT_PATTERN.matcher(onchange);
-				//     <select onchange="document.location='https://www.afrjournal.org/index.php/afr/rt/captureCite/356/0/REPLACE'.replace('REPLACE', this.options[this.selectedIndex].value)">
-				//       <option selected="selected" value="AbntCitationPlugin">ABNT</option>
-				//       ...
-				//       <option value="TurabianCitationPlugin">Turabian</option>
-				//     </select>
-				if (mat.matches()) {
-					// set CITATION_DOWNLOAD_URL to this link, this gets used in the
-					// following option tags to construct citation urls.
-					CITATION_DOWNLOAD_URL = mat.group(1);
-					log.debug3("FOUND A MATCH FOR JAVASCRIPT CITATION REPLACE, setting to: " + CITATION_DOWNLOAD_URL);
+				if (onchange != null) {
+					Matcher mat = JS_CITATION_REPLACEMENT_PATTERN.matcher(onchange);
+					//     <select onchange="document.location='https://www.afrjournal.org/index.php/afr/rt/captureCite/356/0/REPLACE'.replace('REPLACE', this.options[this.selectedIndex].value)">
+					//       <option selected="selected" value="AbntCitationPlugin">ABNT</option>
+					//       ...
+					//       <option value="TurabianCitationPlugin">Turabian</option>
+					//     </select>
+					if (mat.matches()) {
+						// set CITATION_DOWNLOAD_URL to this link, this gets used in the
+						// following option tags to construct citation urls.
+						CITATION_DOWNLOAD_URL = mat.group(1);
+						log.debug3("FOUND A MATCH FOR JAVASCRIPT CITATION REPLACE, setting to: " + CITATION_DOWNLOAD_URL);
+					}
 				}
 			}
 			break;
