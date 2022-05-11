@@ -1944,15 +1944,15 @@
 
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://egems.academyhealth.org/
-#     Shutting down during 2019.
+#     Shutting down during 2019. Gone from site as of 2022. See https://academyhealth.org/publications/2017-04/egems-journal-electronic-health-data-and-methods
 
-      au < released ; 2013 ; 1 ; eGEMs Volume 2013 ; 2013 ; https://egems.academyhealth.org/ >
-      au < released ; 2014 ; 2 ; eGEMs Volume 2014 ; 2014 ; https://egems.academyhealth.org/ >
-      au < released ; 2015 ; 3 ; eGEMs Volume 2015 ; 2015 ; https://egems.academyhealth.org/ >
-      au < released ; 2016 ; 4 ; eGEMs Volume 2016 ; 2016 ; https://egems.academyhealth.org/ >
-      au < released ; 2017 ; 5 ; eGEMs Volume 2017 ; 2017 ; https://egems.academyhealth.org/ >
-      au < released ; 2018 ; 6 ; eGEMs Volume 2018 ; 2018 ; https://egems.academyhealth.org/ >
-      au < released ; 2019 ; 7 ; eGEMs Volume 2019 ; 2019 ; https://egems.academyhealth.org/ >
+      au < down ; 2013 ; 1 ; eGEMs Volume 2013 ; 2013 ; https://egems.academyhealth.org/ >
+      au < down ; 2014 ; 2 ; eGEMs Volume 2014 ; 2014 ; https://egems.academyhealth.org/ >
+      au < down ; 2015 ; 3 ; eGEMs Volume 2015 ; 2015 ; https://egems.academyhealth.org/ >
+      au < down ; 2016 ; 4 ; eGEMs Volume 2016 ; 2016 ; https://egems.academyhealth.org/ >
+      au < down ; 2017 ; 5 ; eGEMs Volume 2017 ; 2017 ; https://egems.academyhealth.org/ >
+      au < down ; 2018 ; 6 ; eGEMs Volume 2018 ; 2018 ; https://egems.academyhealth.org/ >
+      au < down ; 2019 ; 7 ; eGEMs Volume 2019 ; 2019 ; https://egems.academyhealth.org/ >
 
   }
 
