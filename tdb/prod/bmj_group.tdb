@@ -395,56 +395,56 @@
       au < bmj.BMJDrupalPlugin ; exists ; 1857-1960 ; BMJ Volume s4-1 (1857-1960) ; s4-1 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; exists ; 1861-1979 ; BMJ Volume 1 (1861-1979, January-June) ; 1 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; exists ; 1861-1979 ; BMJ Volume 2 (1861-1979, July-December) ; 2 ; https://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1980 ; BMJ Volume 280 ; 280 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1980 ; BMJ Volume 281 ; 281 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1981 ; BMJ Volume 282 ; 282 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1981 ; BMJ Volume 283 ; 283 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1982 ; BMJ Volume 284 ; 284 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1982 ; BMJ Volume 285 ; 285 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1983 ; BMJ Volume 286 ; 286 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1983 ; BMJ Volume 287 ; 287 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1984 ; BMJ Volume 288 ; 288 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 1980 ; BMJ Volume 280 [superseded] ; 280 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 1980 ; BMJ Volume 281 [superseded] ; 281 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 1981 ; BMJ Volume 282 [superseded] ; 282 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 1981 ; BMJ Volume 283 [superseded] ; 283 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 1982 ; BMJ Volume 284 [superseded] ; 284 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 1982 ; BMJ Volume 285 [superseded] ; 285 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 1983 ; BMJ Volume 286 [superseded] ; 286 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 1983 ; BMJ Volume 287 [superseded] ; 287 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 1984 ; BMJ Volume 288 [superseded] ; 288 ; http://www.bmj.com/ >
       au < HighWirePressH20Plugin ; doNotProcess ; 1984 ; BMJ Volume 289 ; 289 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1985 ; BMJ Volume 290 ; 290 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1985 ; BMJ Volume 291 ; 291 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1986 ; BMJ Volume 292 ; 292 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1986 ; BMJ Volume 293 ; 293 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1987 ; BMJ Volume 294 ; 294 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1987 ; BMJ Volume 295 ; 295 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1988 ; BMJ Volume 296 ; 296 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1988 ; BMJ Volume 297 ; 297 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1989 ; BMJ Volume 298 ; 298 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1989 ; BMJ Volume 299 ; 299 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1990 ; BMJ Volume 300 ; 300 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1990 ; BMJ Volume 301 ; 301 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1991 ; BMJ Volume 302 ; 302 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1991 ; BMJ Volume 303 ; 303 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 1985 ; BMJ Volume 290 [superseded] ; 290 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 1985 ; BMJ Volume 291 [superseded] ; 291 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 1986 ; BMJ Volume 292 [superseded] ; 292 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 1986 ; BMJ Volume 293 [superseded] ; 293 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 1987 ; BMJ Volume 294 [superseded] ; 294 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 1987 ; BMJ Volume 295 [superseded] ; 295 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 1988 ; BMJ Volume 296 [superseded] ; 296 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 1988 ; BMJ Volume 297 [superseded] ; 297 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 1989 ; BMJ Volume 298 [superseded] ; 298 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 1989 ; BMJ Volume 299 [superseded] ; 299 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 1990 ; BMJ Volume 300 [superseded] ; 300 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 1990 ; BMJ Volume 301 [superseded] ; 301 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 1991 ; BMJ Volume 302 [superseded] ; 302 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 1991 ; BMJ Volume 303 [superseded] ; 303 ; http://www.bmj.com/ >
       au < HighWirePressH20Plugin ; superseded ; 1992 ; BMJ Volume 304 [superseded] ; 304 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1992 ; BMJ Volume 305 ; 305 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1993 ; BMJ Volume 306 ; 306 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1993 ; BMJ Volume 307 ; 307 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1994 ; BMJ Volume 308 ; 308 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1994 ; BMJ Volume 309 ; 309 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1995 ; BMJ Volume 310 ; 310 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1995 ; BMJ Volume 311 ; 311 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1996 ; BMJ Volume 312 ; 312 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1996 ; BMJ Volume 313 ; 313 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1997 ; BMJ Volume 314 ; 314 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1997 ; BMJ Volume 315 ; 315 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1998 ; BMJ Volume 316 ; 316 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1998 ; BMJ Volume 317 ; 317 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1999 ; BMJ Volume 318 ; 318 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1999 ; BMJ Volume 319 ; 319 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 2000 ; BMJ Volume 320 ; 320 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 2000 ; BMJ Volume 321 ; 321 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; BMJ Volume 322 ; 322 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 1992 ; BMJ Volume 305 [superseded] ; 305 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 1993 ; BMJ Volume 306 [superseded] ; 306 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 1993 ; BMJ Volume 307 [superseded] ; 307 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 1994 ; BMJ Volume 308 [superseded] ; 308 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 1994 ; BMJ Volume 309 [superseded] ; 309 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 1995 ; BMJ Volume 310 [superseded] ; 310 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 1995 ; BMJ Volume 311 [superseded] ; 311 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 1996 ; BMJ Volume 312 [superseded] ; 312 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 1996 ; BMJ Volume 313 [superseded] ; 313 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 1997 ; BMJ Volume 314 [superseded] ; 314 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 1997 ; BMJ Volume 315 [superseded] ; 315 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 1998 ; BMJ Volume 316 [superseded] ; 316 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 1998 ; BMJ Volume 317 [superseded] ; 317 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 1999 ; BMJ Volume 318 [superseded] ; 318 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 1999 ; BMJ Volume 319 [superseded] ; 319 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 2000 ; BMJ Volume 320 [superseded] ; 320 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 2000 ; BMJ Volume 321 [superseded] ; 321 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 2001 ; BMJ Volume 322 [superseded] ; 322 ; http://www.bmj.com/ >
       au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; BMJ Volume 323 ; 323 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; BMJ Volume 324 ; 324 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; BMJ Volume 325 ; 325 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 2002 ; BMJ Volume 324 [superseded] ; 324 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 2002 ; BMJ Volume 325 [superseded] ; 325 ; http://www.bmj.com/ >
       au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; BMJ Volume 326 ; 326 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; BMJ Volume 327 ; 327 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; BMJ Volume 328 ; 328 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; BMJ Volume 329 ; 329 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 2003 ; BMJ Volume 327 [superseded] ; 327 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 2004 ; BMJ Volume 328 ; 328 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 2004 ; BMJ Volume 329 [superseded] [superseded] ; 329 ; http://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; down ; 2005 ; BMJ Volume 330 ; 330 ; http://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; down ; 2005 ; BMJ Volume 331 ; 331 ; http://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; down ; 2006 ; BMJ Volume 332 ; 332 ; http://www.bmj.com/ >
@@ -476,7 +476,56 @@
     {
       #param[base_url] = https://www.bmj.com/
 
+      au < bmj.BMJDrupalPlugin ; exists ; 1980 ; BMJ Volume 280 ; 280 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1980 ; BMJ Volume 281 ; 281 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1981 ; BMJ Volume 282 ; 282 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1981 ; BMJ Volume 283 ; 283 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1982 ; BMJ Volume 284 ; 284 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1982 ; BMJ Volume 285 ; 285 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1983 ; BMJ Volume 286 ; 286 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1983 ; BMJ Volume 287 ; 287 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1984 ; BMJ Volume 288 ; 288 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1984 ; BMJ Volume 289 ; 289 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1985 ; BMJ Volume 290 ; 290 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1985 ; BMJ Volume 291 ; 291 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1986 ; BMJ Volume 292 ; 292 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1986 ; BMJ Volume 293 ; 293 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1987 ; BMJ Volume 294 ; 294 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1987 ; BMJ Volume 295 ; 295 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1988 ; BMJ Volume 296 ; 296 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1988 ; BMJ Volume 297 ; 297 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1989 ; BMJ Volume 298 ; 298 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1989 ; BMJ Volume 299 ; 299 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1990 ; BMJ Volume 300 ; 300 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1990 ; BMJ Volume 301 ; 301 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1991 ; BMJ Volume 302 ; 302 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1991 ; BMJ Volume 303 ; 303 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; exists ; 1992 ; BMJ Volume 304 ; 304 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1992 ; BMJ Volume 305 ; 305 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1993 ; BMJ Volume 306 ; 306 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1993 ; BMJ Volume 307 ; 307 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1994 ; BMJ Volume 308 ; 308 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1994 ; BMJ Volume 309 ; 309 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1995 ; BMJ Volume 310 ; 310 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1995 ; BMJ Volume 311 ; 311 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1996 ; BMJ Volume 312 ; 312 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1996 ; BMJ Volume 313 ; 313 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1997 ; BMJ Volume 314 ; 314 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1997 ; BMJ Volume 315 ; 315 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1998 ; BMJ Volume 316 ; 316 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1998 ; BMJ Volume 317 ; 317 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1999 ; BMJ Volume 318 ; 318 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1999 ; BMJ Volume 319 ; 319 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 2000 ; BMJ Volume 320 ; 320 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 2000 ; BMJ Volume 321 ; 321 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 2001 ; BMJ Volume 322 ; 322 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 2001 ; BMJ Volume 323 ; 323 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 2002 ; BMJ Volume 324 ; 324 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 2002 ; BMJ Volume 325 ; 325 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 2003 ; BMJ Volume 326 ; 326 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 2003 ; BMJ Volume 327 ; 327 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 2004 ; BMJ Volume 328 ; 328 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 2004 ; BMJ Volume 329 ; 329 ; https://www.bmj.com/ >
 
       au < bmj.BMJDrupalPlugin ; released ; 2017 ; BMJ Volume 356 ; 356 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2017 ; BMJ Volume 357 ; 357 ; https://www.bmj.com/ > #per autest, this AU has 1 article.
