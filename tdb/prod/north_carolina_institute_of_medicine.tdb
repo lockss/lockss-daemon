@@ -18,11 +18,11 @@
     implicit < status ; year ; name ; param[volume_name] >
     # 2002-2013 content on http://classic.ncmedicaljournal.com/
 
-    au < released ; 2014 ; North Carolina Medical Journal Volume 75 ; 75 >
-    au < released ; 2015 ; North Carolina Medical Journal Volume 76 ; 76 >
-    au < released ; 2016 ; North Carolina Medical Journal Volume 77 ; 77 >
-    au < released ; 2017 ; North Carolina Medical Journal Volume 78 ; 78 >
-    au < released ; 2018 ; North Carolina Medical Journal Volume 79 ; 79 >
+    au < superseded ; 2014 ; North Carolina Medical Journal Volume 75 [superseded] ; 75 >
+    au < superseded ; 2015 ; North Carolina Medical Journal Volume 76 [superseded] ; 76 >
+    au < superseded ; 2016 ; North Carolina Medical Journal Volume 77 [superseded] ; 77 >
+    au < superseded ; 2017 ; North Carolina Medical Journal Volume 78 [superseded] ; 78 >
+    au < superseded ; 2018 ; North Carolina Medical Journal Volume 79 [superseded] ; 79 >
 
     }
 
@@ -31,6 +31,15 @@
     param[base_url] = https://www.ncmedicaljournal.com/
     implicit < status ; year ; name ; param[volume_name] >
 
+    au < exists ; 2010 ; North Carolina Medical Journal Volume 71 ; 71 >
+    au < exists ; 2011 ; North Carolina Medical Journal Volume 72 ; 72 >
+    au < exists ; 2012 ; North Carolina Medical Journal Volume 73 ; 73 >
+    au < exists ; 2013 ; North Carolina Medical Journal Volume 74 ; 74 >
+    au < exists ; 2014 ; North Carolina Medical Journal Volume 75 ; 75 >
+    au < exists ; 2015 ; North Carolina Medical Journal Volume 76 ; 76 >
+    au < exists ; 2016 ; North Carolina Medical Journal Volume 77 ; 77 >
+    au < exists ; 2017 ; North Carolina Medical Journal Volume 78 ; 78 >
+    au < exists ; 2018 ; North Carolina Medical Journal Volume 79 ; 79 >
     au < released ; 2019 ; North Carolina Medical Journal Volume 80 ; 80 >
     au < released ; 2020 ; North Carolina Medical Journal Volume 81 ; 81 >
     au < released ; 2021 ; North Carolina Medical Journal Volume 82 ; 82 >
