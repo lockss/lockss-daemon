@@ -419,7 +419,7 @@
       au < HighWirePressH20Plugin ; doNotProcess ; 1990 ; BMJ Volume 301 ; 301 ; http://www.bmj.com/ >
       au < HighWirePressH20Plugin ; doNotProcess ; 1991 ; BMJ Volume 302 ; 302 ; http://www.bmj.com/ >
       au < HighWirePressH20Plugin ; doNotProcess ; 1991 ; BMJ Volume 303 ; 303 ; http://www.bmj.com/ >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1992 ; BMJ Volume 304 ; 304 ; http://www.bmj.com/ >
+      au < HighWirePressH20Plugin ; superseded ; 1992 ; BMJ Volume 304 [superseded] ; 304 ; http://www.bmj.com/ >
       au < HighWirePressH20Plugin ; doNotProcess ; 1992 ; BMJ Volume 305 ; 305 ; http://www.bmj.com/ >
       au < HighWirePressH20Plugin ; doNotProcess ; 1993 ; BMJ Volume 306 ; 306 ; http://www.bmj.com/ >
       au < HighWirePressH20Plugin ; doNotProcess ; 1993 ; BMJ Volume 307 ; 307 ; http://www.bmj.com/ >
@@ -475,6 +475,8 @@
 
     {
       #param[base_url] = https://www.bmj.com/
+
+      au < bmj.BMJDrupalPlugin ; exists ; 1992 ; BMJ Volume 304 ; 304 ; https://www.bmj.com/ >
 
       au < bmj.BMJDrupalPlugin ; released ; 2017 ; BMJ Volume 356 ; 356 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2017 ; BMJ Volume 357 ; 357 ; https://www.bmj.com/ > #per autest, this AU has 1 article.
