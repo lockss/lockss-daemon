@@ -240,6 +240,8 @@ public class TestOJS2Plugin extends LockssTestCase {
         URLEncoder.encode(ROOT_URL + "index.php/j_id/article/view/123/456", "UTF-8"), true, au);
     shouldCacheTest(ROOT_URL + "plugins/generic/pdfJsViewer/pdf.js/web/viewer.html?file=" +
         URLEncoder.encode(ROOT_URL + "j_id/article/view/123/456", "UTF-8"), true, au);
+    shouldCacheTest(ROOT_URL + "plugins/generic/pdfJsViewer/pdf.js/web/locale/locale.properties", true, au);
+    shouldCacheTest(ROOT_URL + "plugins/generic/pdfJsViewer/pdf.js/build/pdf.js", true, au);
     shouldCacheTest(ROOT_URL + "plugins/generic/pdfJsViewer/pdf.js/web/viewer.html?file=" +
         URLEncoder.encode(URLEncoder.encode(ROOT_URL + "index.php/j_id/article/view/123/456", "UTF-8"), "UTF-8"), false, au);
     shouldCacheTest(ROOT_URL + "plugins/generic/pdfJsViewer/pdf.js/web/viewer.html?file=" +

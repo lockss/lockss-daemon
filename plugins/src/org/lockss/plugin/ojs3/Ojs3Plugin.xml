@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>23</string>
+    <string>24</string>
   </entry>
    <entry>
     <string>plugin_name</string>
@@ -78,6 +78,7 @@ POSSIBILITY OF SUCH DAMAGE.
          https://www.aijournals.com/index.php/ajmr/citationstylelanguage/download/ris?submissionId=2230
          -->
       <string>1,"^(%s|%s)(ojs/)?(journals/)?(index\.php/)?(%s/)?(index\.php/)?(%s/)?citationstylelanguage/(get|download)/", to_http(base_url),to_https(base_url), journal_id, journal_id</string>
+      <string>2,"^(%s|%s).*plugins/generic/pdfJsViewer/pdf\.js/web/viewer\.html\?file=https?[%%]25", to_http(base_url), to_https(base_url)</string>
       <string>1,"^(%s|%s).*plugins/generic/pdfJsViewer/pdf\.js/web/", to_http(base_url), to_https(base_url)</string>
     </list>
   </entry>
