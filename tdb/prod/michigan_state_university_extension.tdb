@@ -9,7 +9,8 @@
   param[base_url] = http://web2.msue.msu.edu/
   implicit < status ; year ; name ; param[year] >
 
-  comment[progress] = still crawling successfully on delta machines 20150220
+  comment[progress1] = still crawling successfully on delta machines 20150220
+  comment[progress2] = no longer crawling successfully on delta machines 20220511
 
   {
     title <
@@ -17,15 +18,15 @@
       type = bookSeries
     >
   
-    au < released ; 1917 ; Michigan State University Extension Bulletins 1917 ; 1917 >
-    au < released ; 1918 ; Michigan State University Extension Bulletins 1918 ; 1918 >
-    au < released ; 1919 ; Michigan State University Extension Bulletins 1919 ; 1919 >
-    au < released ; 1920 ; Michigan State University Extension Bulletins 1920 ; 1920 >
-    au < released ; 1924 ; Michigan State University Extension Bulletins 1924 ; 1924 >
-    au < released ; 1925 ; Michigan State University Extension Bulletins 1925 ; 1925 >
-    au < released ; 1927 ; Michigan State University Extension Bulletins 1927 ; 1927 >
-    au < released ; 1928 ; Michigan State University Extension Bulletins 1928 ; 1928 >
-    au < released ; 1929 ; Michigan State University Extension Bulletins 1929 ; 1929 >
+    au < down ; 1917 ; Michigan State University Extension Bulletins 1917 ; 1917 >
+    au < down ; 1918 ; Michigan State University Extension Bulletins 1918 ; 1918 >
+    au < down ; 1919 ; Michigan State University Extension Bulletins 1919 ; 1919 >
+    au < down ; 1920 ; Michigan State University Extension Bulletins 1920 ; 1920 >
+    au < down ; 1924 ; Michigan State University Extension Bulletins 1924 ; 1924 >
+    au < down ; 1925 ; Michigan State University Extension Bulletins 1925 ; 1925 >
+    au < down ; 1927 ; Michigan State University Extension Bulletins 1927 ; 1927 >
+    au < down ; 1928 ; Michigan State University Extension Bulletins 1928 ; 1928 >
+    au < down ; 1929 ; Michigan State University Extension Bulletins 1929 ; 1929 >
 
   }
 
