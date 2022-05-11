@@ -17,27 +17,20 @@
     implicit < status ; name ; param[volume_name] ; attr[year]>
     param[base_url] = http://www.drunkenboat.com/
   
-    au < released ; Drunken Boat Volume 1 ; 1  ; 2000 >
-    au < released ; Drunken Boat Volume 2 ; 2  ; 2001 >
-    au < released ; Drunken Boat Volume 3 ; 3  ; 2001-2002 >
-    au < released ; Drunken Boat Volume 4 ; 4  ; 2002 >
-    au < released ; Drunken Boat Volume 5 ; 5 ; 2002-2003 >
-    au < released ; Drunken Boat Volume 6 ; 6 ; 2004 >
-    au < released ; Drunken Boat Volume 7 ; 7 ; 2005 >
-    au < released ; Drunken Boat Volume 8 ; 8 ; 2006 >
-    au < released ; Drunken Boat Volume 9 ; 9 ; 2008 >
-    au < released ; Drunken Boat Volume 10 ; 10 ; 2009 >
-    au < released ; Drunken Boat Volume 11 ; 11 ; 2010 >
-    au < released ; Drunken Boat Volume 12 ; 12 ; 2010 >
-    au < released ; Drunken Boat Volume 13 ; 13 ; 2010 >
-    au < released ; Drunken Boat Volume 14 ; 14 ; 2011 >
-    au < exists ; Drunken Boat Volume 15 ; 15 ; 2012 >
-    au < exists ; Drunken Boat Volume 16 ; 16 ; 2012 >
-    au < exists ; Drunken Boat Volume 17 ; 17 ; 2013 >
-    au < exists ; Drunken Boat Volume 18 ; 18 ; 2013 >
-    au < exists ; Drunken Boat Volume 19 ; 19 ; 2014 >
-    au < exists ; Drunken Boat Volume 20 ; 20 ; 2014 >
-    au < expected ; Drunken Boat Volume 21 ; 21 ; 2015 >
+    au < down ; Drunken Boat Volume 1 ; 1 ; 2000 >
+    au < down ; Drunken Boat Volume 2 ; 2 ; 2001 >
+    au < down ; Drunken Boat Volume 3 ; 3 ; 2001-2002 >
+    au < down ; Drunken Boat Volume 4 ; 4 ; 2002 >
+    au < down ; Drunken Boat Volume 5 ; 5 ; 2002-2003 >
+    au < down ; Drunken Boat Volume 6 ; 6 ; 2004 >
+    au < down ; Drunken Boat Volume 7 ; 7 ; 2005 >
+    au < down ; Drunken Boat Volume 8 ; 8 ; 2006 >
+    au < down ; Drunken Boat Volume 9 ; 9 ; 2008 >
+    au < down ; Drunken Boat Volume 10 ; 10 ; 2009 >
+    au < down ; Drunken Boat Volume 11 ; 11 ; 2010 >
+    au < down ; Drunken Boat Volume 12 ; 12 ; 2010 >
+    au < down ; Drunken Boat Volume 13 ; 13 ; 2010 >
+    au < down ; Drunken Boat Volume 14 ; 14 ; 2011 >
 
   }
   
