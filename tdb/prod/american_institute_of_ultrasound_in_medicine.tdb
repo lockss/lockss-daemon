@@ -15,8 +15,8 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://www.jultrasoundmed.org/
-      # moving to wiley
       implicit < status ; year ; name ; param[volume_name] >
+      # moved to wiley
 
       {
 
@@ -39,25 +39,25 @@
         au < doNotProcess ; 1996 ; Journal of Ultrasound in Medicine Volume 15 [abstracts only] ; 15 >
         au < doNotProcess ; 1997 ; Journal of Ultrasound in Medicine Volume 16 [abstracts only] ; 16 >
       }
-      au < released ; 1998 ; Journal of Ultrasound in Medicine Volume 17 ; 17 >
-      au < released ; 1999 ; Journal of Ultrasound in Medicine Volume 18 ; 18 >
-      au < released ; 2000 ; Journal of Ultrasound in Medicine Volume 19 ; 19 >
-      au < released ; 2001 ; Journal of Ultrasound in Medicine Volume 20 ; 20 >
-      au < released ; 2002 ; Journal of Ultrasound in Medicine Volume 21 ; 21 >
-      au < released ; 2003 ; Journal of Ultrasound in Medicine Volume 22 ; 22 >
-      au < released ; 2004 ; Journal of Ultrasound in Medicine Volume 23 ; 23 >
-      au < released ; 2005 ; Journal of Ultrasound in Medicine Volume 24 ; 24 >
-      au < released ; 2006 ; Journal of Ultrasound in Medicine Volume 25 ; 25 >
-      au < released ; 2007 ; Journal of Ultrasound in Medicine Volume 26 ; 26 >
-      au < released ; 2008 ; Journal of Ultrasound in Medicine Volume 27 ; 27 >
-      au < released ; 2009 ; Journal of Ultrasound in Medicine Volume 28 ; 28 >
-      au < released ; 2010 ; Journal of Ultrasound in Medicine Volume 29 ; 29 >
-      au < released ; 2011 ; Journal of Ultrasound in Medicine Volume 30 ; 30 >
-      au < released ; 2012 ; Journal of Ultrasound in Medicine Volume 31 ; 31 >
-      au < released ; 2013 ; Journal of Ultrasound in Medicine Volume 32 ; 32 >
-      au < released ; 2014 ; Journal of Ultrasound in Medicine Volume 33 ; 33 >
-      au < released ; 2015 ; Journal of Ultrasound in Medicine Volume 34 ; 34 >
-      au < released ; 2016 ; Journal of Ultrasound in Medicine Volume 35 ; 35 >
+      au < down ; 1998 ; Journal of Ultrasound in Medicine Volume 17 ; 17 >
+      au < down ; 1999 ; Journal of Ultrasound in Medicine Volume 18 ; 18 >
+      au < down ; 2000 ; Journal of Ultrasound in Medicine Volume 19 ; 19 >
+      au < down ; 2001 ; Journal of Ultrasound in Medicine Volume 20 ; 20 >
+      au < down ; 2002 ; Journal of Ultrasound in Medicine Volume 21 ; 21 >
+      au < down ; 2003 ; Journal of Ultrasound in Medicine Volume 22 ; 22 >
+      au < down ; 2004 ; Journal of Ultrasound in Medicine Volume 23 ; 23 >
+      au < down ; 2005 ; Journal of Ultrasound in Medicine Volume 24 ; 24 >
+      au < down ; 2006 ; Journal of Ultrasound in Medicine Volume 25 ; 25 >
+      au < down ; 2007 ; Journal of Ultrasound in Medicine Volume 26 ; 26 >
+      au < down ; 2008 ; Journal of Ultrasound in Medicine Volume 27 ; 27 >
+      au < down ; 2009 ; Journal of Ultrasound in Medicine Volume 28 ; 28 >
+      au < down ; 2010 ; Journal of Ultrasound in Medicine Volume 29 ; 29 >
+      au < down ; 2011 ; Journal of Ultrasound in Medicine Volume 30 ; 30 >
+      au < down ; 2012 ; Journal of Ultrasound in Medicine Volume 31 ; 31 >
+      au < down ; 2013 ; Journal of Ultrasound in Medicine Volume 32 ; 32 >
+      au < down ; 2014 ; Journal of Ultrasound in Medicine Volume 33 ; 33 >
+      au < down ; 2015 ; Journal of Ultrasound in Medicine Volume 34 ; 34 >
+      au < down ; 2016 ; Journal of Ultrasound in Medicine Volume 35 ; 35 >
 
     }
 
