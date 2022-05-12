@@ -3,11 +3,9 @@
   publisher <
     name = International Water Association Publishing ;
     info[contract] = 2013 ;
-    info[tester] = 5
+    info[tester] = 5 ;
+    info[platform] = Moved from HW to SC
   >
-
-    plugin = org.lockss.plugin.highwire.iwa.IWADrupalPlugin
-    implicit < status ; year ; name ; param[volume_name] >
 
   {
 
@@ -17,8 +15,36 @@
       issnl = 1476-1777
     >
 
-    param[base_url] = http://wio.iwaponline.com/
     type = bookSeries
+    {
+    param[base_url] = http://wio.iwaponline.com/
+    plugin = needs.plugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2002 ; Water Intelligence Online Volume 1 ; 1 >
+    au < exists ; 2003 ; Water Intelligence Online Volume 2 ; 2 >
+    au < exists ; 2004 ; Water Intelligence Online Volume 3 ; 3 >
+    au < exists ; 2005 ; Water Intelligence Online Volume 4 ; 4 >
+    au < exists ; 2006 ; Water Intelligence Online Volume 5 ; 5 >
+    au < exists ; 2007 ; Water Intelligence Online Volume 6 ; 6 >
+    au < exists ; 2008 ; Water Intelligence Online Volume 7 ; 7 >
+    au < exists ; 2009 ; Water Intelligence Online Volume 8 ; 8 >
+    au < exists ; 2010 ; Water Intelligence Online Volume 9 ; 9 >
+    au < exists ; 2011 ; Water Intelligence Online Volume 10 ; 10 >
+    au < exists ; 2012 ; Water Intelligence Online Volume 11 ; 11 >
+    au < exists ; 2013 ; Water Intelligence Online Volume 12 ; 12 >
+    au < exists ; 2014 ; Water Intelligence Online Volume 13 ; 13 >
+    au < exists ; 2015 ; Water Intelligence Online Volume 14 ; 14 >
+    au < exists ; 2016 ; Water Intelligence Online Volume 15 ; 15 >
+    au < exists ; 2017 ; Water Intelligence Online Volume 16 ; 16 >
+    au < exists ; 2018 ; Water Intelligence Online Volume 17 ; 17 >
+    au < exists ; 2019 ; Water Intelligence Online Volume 18 ; 18 >
+    au < exists ; 2020 ; Water Intelligence Online Volume 19 ; 19 >
+    }
+    {
+    param[base_url] = http://wio.iwaponline.com/
+    plugin = org.lockss.plugin.highwire.iwa.IWADrupalPlugin
+    implicit < status ; year ; name ; param[volume_name] >
     #These AUs all have 0 size.
 
     au < superseded ; 2002 ; Water Intelligence Online Volume 1 [superseded] ; 1 >
@@ -36,7 +62,7 @@
     au < superseded ; 2014 ; Water Intelligence Online Volume 13 [superseded] ; 13 >
     au < superseded ; 2015 ; Water Intelligence Online Volume 14 [superseded] ; 14 >
     au < superseded ; 2016 ; Water Intelligence Online Volume 15 [superseded] ; 15 >
-
+    }
   }
 
 }
