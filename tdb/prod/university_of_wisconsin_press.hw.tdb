@@ -17,25 +17,25 @@
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://aoj.uwpress.org/
       implicit < status ; year ; name ; param[volume_name] >
-      #move to T&F in 2018
+      #moved to T&F in 2018
 
-      au < released ; 2001 ; American Orthoptic Journal Volume 51 ; 51 >
-      au < released ; 2002 ; American Orthoptic Journal Volume 52 ; 52 >
-      au < released ; 2003 ; American Orthoptic Journal Volume 53 ; 53 >
-      au < released ; 2004 ; American Orthoptic Journal Volume 54 ; 54 >
-      au < released ; 2005 ; American Orthoptic Journal Volume 55 ; 55 >
-      au < released ; 2006 ; American Orthoptic Journal Volume 56 ; 56 >
-      au < released ; 2007 ; American Orthoptic Journal Volume 57 ; 57 >
-      au < released ; 2008 ; American Orthoptic Journal Volume 58 ; 58 >
-      au < released ; 2009 ; American Orthoptic Journal Volume 59 ; 59 >
-      au < released ; 2010 ; American Orthoptic Journal Volume 60 ; 60 >
-      au < released ; 2011 ; American Orthoptic Journal Volume 61 ; 61 >
-      au < released ; 2012 ; American Orthoptic Journal Volume 62 ; 62 >
-      au < released ; 2013 ; American Orthoptic Journal Volume 63 ; 63 >
-      au < released ; 2014 ; American Orthoptic Journal Volume 64 ; 64 >
-      au < released ; 2015 ; American Orthoptic Journal Volume 65 ; 65 >
-      au < released ; 2016 ; American Orthoptic Journal Volume 66 ; 66 >
-      au < released ; 2017 ; American Orthoptic Journal Volume 67 ; 67 >
+      au < down ; 2001 ; American Orthoptic Journal Volume 51 ; 51 >
+      au < down ; 2002 ; American Orthoptic Journal Volume 52 ; 52 >
+      au < down ; 2003 ; American Orthoptic Journal Volume 53 ; 53 >
+      au < down ; 2004 ; American Orthoptic Journal Volume 54 ; 54 >
+      au < down ; 2005 ; American Orthoptic Journal Volume 55 ; 55 >
+      au < down ; 2006 ; American Orthoptic Journal Volume 56 ; 56 >
+      au < down ; 2007 ; American Orthoptic Journal Volume 57 ; 57 >
+      au < down ; 2008 ; American Orthoptic Journal Volume 58 ; 58 >
+      au < down ; 2009 ; American Orthoptic Journal Volume 59 ; 59 >
+      au < down ; 2010 ; American Orthoptic Journal Volume 60 ; 60 >
+      au < down ; 2011 ; American Orthoptic Journal Volume 61 ; 61 >
+      au < down ; 2012 ; American Orthoptic Journal Volume 62 ; 62 >
+      au < down ; 2013 ; American Orthoptic Journal Volume 63 ; 63 >
+      au < down ; 2014 ; American Orthoptic Journal Volume 64 ; 64 >
+      au < down ; 2015 ; American Orthoptic Journal Volume 65 ; 65 >
+      au < down ; 2016 ; American Orthoptic Journal Volume 66 ; 66 >
+      au < down ; 2017 ; American Orthoptic Journal Volume 67 ; 67 >
 
   }
 
@@ -420,21 +420,21 @@
       param[base_url] = http://sub.uwpress.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; 2003 ; SubStance Volume 32 ; 32 >
-      au < released ; 2004 ; SubStance Volume 33 ; 33 >
-      au < released ; 2005 ; SubStance Volume 34 ; 34 >
-      au < released ; 2006 ; SubStance Volume 35 ; 35 >
-      au < released ; 2007 ; SubStance Volume 36 ; 36 >
-      au < released ; 2008 ; SubStance Volume 37 ; 37 >
-      au < released ; 2009 ; SubStance Volume 38 ; 38 >
-      au < released ; 2010 ; SubStance Volume 39 ; 39 >
-      au < released ; 2011 ; SubStance Volume 40 ; 40 >
-      au < released ; 2012 ; SubStance Volume 41 ; 41 >
-      au < released ; 2013 ; SubStance Volume 42 ; 42 >
-      au < released ; 2014 ; SubStance Volume 43 ; 43 >
-      au < released ; 2015 ; SubStance Volume 44 ; 44 >
-      au < released ; 2016 ; SubStance Volume 45 ; 45 >
-      au < released ; 2017 ; SubStance Volume 46 ; 46 >
+      au < superseded ; 2003 ; SubStance Volume 32 [superseded] ; 32 >
+      au < superseded ; 2004 ; SubStance Volume 33 [superseded] ; 33 >
+      au < superseded ; 2005 ; SubStance Volume 34 [superseded] ; 34 >
+      au < superseded ; 2006 ; SubStance Volume 35 [superseded] ; 35 >
+      au < superseded ; 2007 ; SubStance Volume 36 [superseded] ; 36 >
+      au < superseded ; 2008 ; SubStance Volume 37 [superseded] ; 37 >
+      au < superseded ; 2009 ; SubStance Volume 38 [superseded] ; 38 >
+      au < superseded ; 2010 ; SubStance Volume 39 [superseded] ; 39 >
+      au < superseded ; 2011 ; SubStance Volume 40 [superseded] ; 40 >
+      au < superseded ; 2012 ; SubStance Volume 41 [superseded] ; 41 >
+      au < superseded ; 2013 ; SubStance Volume 42 [superseded] ; 42 >
+      au < superseded ; 2014 ; SubStance Volume 43 [superseded] ; 43 >
+      au < superseded ; 2015 ; SubStance Volume 44 [superseded] ; 44 >
+      au < superseded ; 2016 ; SubStance Volume 45 [superseded] ; 45 >
+      au < superseded ; 2017 ; SubStance Volume 46 [superseded] ; 46 >
       #Moved to Project Muse
   }
 
