@@ -9,7 +9,7 @@
 #  param[api_url] = http://api.ingentaconnect.com/
   param[graphics_url] = http://graphics.ingentaconnect.com/
   param[publisher_id] = sesc
-  #publisher content not available from ingenta
+  #publisher content not available from ingenta. Moved to Sage.
 
   implicit < status ; year ; name ; param[volume_name] >
 
