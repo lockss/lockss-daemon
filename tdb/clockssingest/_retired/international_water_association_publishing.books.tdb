@@ -5,13 +5,11 @@
     info[contract] = 2013 ;
     info[back] = 2000 ;
     info[tester] = 8 ;
-    info[poller] = 2
+    info[poller] = 2 ;
+    info[platform] = Moved from HW to SC
   >
   
-    plugin = org.lockss.plugin.highwire.iwa.ClockssIWADrupalPlugin
-    implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
-
-    #Looks like this publisher has moved from HWDrupal to Silverchair
+    #This publisher has moved from HWDrupal to Silverchair
   
   {
   
@@ -21,8 +19,24 @@
       issnl = 1476-1777
     >
 
-    param[base_url] = http://wio.iwaponline.com/
     type = bookSeries
+    {
+    param[base_url] = http://wio.iwaponline.com/
+    plugin = needs.plugin
+    implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+
+    au < exists ; exists ; 2017 ; Water Intelligence Online Volume 16 ; 16 ; > 
+    au < exists ; exists ; 2018 ; Water Intelligence Online Volume 17 ; 17 ; > 
+    au < exists ; exists ; 2019 ; Water Intelligence Online Volume 18 ; 18 ; > 
+    au < exists ; exists ; 2020 ; Water Intelligence Online Volume 19 ; 19 ; > 
+    au < exists ; exists ; 2021 ; Water Intelligence Online Volume 20 ; 20 ; > 
+    au < exists ; exists ; 2022 ; Water Intelligence Online Volume 21 ; 21 ; > 
+
+    }
+    {
+    param[base_url] = http://wio.iwaponline.com/
+    plugin = org.lockss.plugin.highwire.iwa.ClockssIWADrupalPlugin
+    implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
     au < finished ; finished ; 2002 ; Water Intelligence Online Volume 1 ; 1 ; reingest5.clockss.org:8082 > 
     au < finished ; finished ; 2003 ; Water Intelligence Online Volume 2 ; 2 ; reingest5.clockss.org:8082 > 
@@ -39,7 +53,7 @@
     au < zapped ; finished ; 2014 ; Water Intelligence Online Volume 13 ; 13 ; reingest1.clockss.org:8082 > 
     au < zapped ; finished ; 2015 ; Water Intelligence Online Volume 14 ; 14 ; reingest1.clockss.org:8082 > 
     au < finished ; finished ; 2016 ; Water Intelligence Online Volume 15 ; 15 ; reingest5.clockss.org:8082 > 
-
+    }
   }
 
 }
