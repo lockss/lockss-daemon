@@ -7609,21 +7609,26 @@
         eissn = 2279-042X
       >
 
-      param[journal_issn] = 2279-042X
 #      param[base_url] = http://www.jrpp.net/
+      {
+      param[journal_issn] = 2319-9644
 
-      au < released ; 2012 ; Journal of Research in Pharmacy Practice Volume 1 ; 2012 ; 1 ; http://www.jrpp.net/ >
-      au < released ; 2013 ; Journal of Research in Pharmacy Practice Volume 2 ; 2013 ; 2 ; http://www.jrpp.net/ >
-      au < released ; 2014 ; Journal of Research in Pharmacy Practice Volume 3 ; 2014 ; 3 ; http://www.jrpp.net/ >
-      au < released ; 2015 ; Journal of Research in Pharmacy Practice Volume 4 ; 2015 ; 4 ; http://www.jrpp.net/ >
-      au < released ; 2016 ; Journal of Research in Pharmacy Practice Volume 5 ; 2016 ; 5 ; http://www.jrpp.net/ >
-      au < released ; 2017 ; Journal of Research in Pharmacy Practice Volume 6 ; 2017 ; 6 ; http://www.jrpp.net/ >
-      au < exists ; 2018 ; Journal of Research in Pharmacy Practice Volume 7 ; 2018 ; 7 ; https://www.jrpp.net/ >
-      au < exists ; 2019 ; Journal of Research in Pharmacy Practice Volume 8 ; 2019 ; 8 ; https://www.jrpp.net/ >
-      au < exists ; 2020 ; Journal of Research in Pharmacy Practice Volume 9 ; 2020 ; 9 ; https://www.jrpp.net/ >
-      au < exists ; 2021 ; Journal of Research in Pharmacy Practice Volume 10 ; 2021 ; 10 ; https://www.jrpp.net/ >
+      au < manifest ; 2018 ; Journal of Research in Pharmacy Practice Volume 7 ; 2018 ; 7 ; https://www.jrpp.net/ >
+      au < manifest ; 2019 ; Journal of Research in Pharmacy Practice Volume 8 ; 2019 ; 8 ; https://www.jrpp.net/ >
+      au < manifest ; 2020 ; Journal of Research in Pharmacy Practice Volume 9 ; 2020 ; 9 ; https://www.jrpp.net/ >
+      au < manifest ; 2021 ; Journal of Research in Pharmacy Practice Volume 10 ; 2021 ; 10 ; https://www.jrpp.net/ >
       au < expected ; 2022 ; Journal of Research in Pharmacy Practice Volume 11 ; 2022 ; 11 ; https://www.jrpp.net/ >
+      }
+      {
+      param[journal_issn] = 2279-042X
 
+      au < down ; 2012 ; Journal of Research in Pharmacy Practice Volume 1 ; 2012 ; 1 ; http://www.jrpp.net/ >
+      au < down ; 2013 ; Journal of Research in Pharmacy Practice Volume 2 ; 2013 ; 2 ; http://www.jrpp.net/ >
+      au < down ; 2014 ; Journal of Research in Pharmacy Practice Volume 3 ; 2014 ; 3 ; http://www.jrpp.net/ >
+      au < down ; 2015 ; Journal of Research in Pharmacy Practice Volume 4 ; 2015 ; 4 ; http://www.jrpp.net/ >
+      au < down ; 2016 ; Journal of Research in Pharmacy Practice Volume 5 ; 2016 ; 5 ; http://www.jrpp.net/ >
+      au < down ; 2017 ; Journal of Research in Pharmacy Practice Volume 6 ; 2017 ; 6 ; http://www.jrpp.net/ >
+      }
   }
 
   {
@@ -7635,11 +7640,12 @@
 
       param[journal_issn] = 2321-4619
 #      param[base_url] = http://www.jresdent.org/
+      #website down
 
-      au < released ; 2013 ; Journal of Restorative Dentistry Volume 1 ; 2013 ; 1 ; http://www.jresdent.org/ >
-      au < released ; 2014 ; Journal of Restorative Dentistry Volume 2 ; 2014 ; 2 ; http://www.jresdent.org/ >
-      au < released ; 2015 ; Journal of Restorative Dentistry Volume 3 ; 2015 ; 3 ; http://www.jresdent.org/ >
-      au < released ; 2016 ; Journal of Restorative Dentistry Volume 4 ; 2016 ; 4 ; http://www.jresdent.org/ >
+      au < down ; 2013 ; Journal of Restorative Dentistry Volume 1 ; 2013 ; 1 ; http://www.jresdent.org/ >
+      au < down ; 2014 ; Journal of Restorative Dentistry Volume 2 ; 2014 ; 2 ; http://www.jresdent.org/ >
+      au < down ; 2015 ; Journal of Restorative Dentistry Volume 3 ; 2015 ; 3 ; http://www.jresdent.org/ >
+      au < down ; 2016 ; Journal of Restorative Dentistry Volume 4 ; 2016 ; 4 ; http://www.jresdent.org/ >
 
   }
 
@@ -9780,15 +9786,15 @@
         eissn = 2589-0611
       >
 
-      param[journal_issn] = WKMP-0143
+      param[journal_issn] = 2589-0603
 #      param[base_url] = http://www.e-ijas.org/
 
-      au < exists ; 2016 ; Imam Journal of Applied Sciences Volume 1 ; 2016 ; 1 ; https://www.e-ijas.org/ >
-      au < exists ; 2017 ; Imam Journal of Applied Sciences Volume 2 ; 2017 ; 2 ; https://www.e-ijas.org/ >
-      au < exists ; 2018 ; Imam Journal of Applied Sciences Volume 3 ; 2018 ; 3 ; https://www.e-ijas.org/ >
-      au < exists ; 2019 ; Imam Journal of Applied Sciences Volume 4 ; 2019 ; 4 ; https://www.e-ijas.org/ >
-      au < exists ; 2020 ; Imam Journal of Applied Sciences Volume 5 ; 2020 ; 5 ; https://www.e-ijas.org/ >
-      au < exists ; 2021 ; Imam Journal of Applied Sciences Volume 6 ; 2021 ; 6 ; https://www.e-ijas.org/ >
+      au < manifest ; 2016 ; Imam Journal of Applied Sciences Volume 1 ; 2016 ; 1 ; https://www.e-ijas.org/ >
+      au < manifest ; 2017 ; Imam Journal of Applied Sciences Volume 2 ; 2017 ; 2 ; https://www.e-ijas.org/ >
+      au < manifest ; 2018 ; Imam Journal of Applied Sciences Volume 3 ; 2018 ; 3 ; https://www.e-ijas.org/ >
+      au < manifest ; 2019 ; Imam Journal of Applied Sciences Volume 4 ; 2019 ; 4 ; https://www.e-ijas.org/ >
+      au < manifest ; 2020 ; Imam Journal of Applied Sciences Volume 5 ; 2020 ; 5 ; https://www.e-ijas.org/ >
+      au < manifest ; 2021 ; Imam Journal of Applied Sciences Volume 6 ; 2021 ; 6 ; https://www.e-ijas.org/ >
       au < expected ; 2022 ; Imam Journal of Applied Sciences Volume 7 ; 2022 ; 7 ; https://www.e-ijas.org/ >
 
   }
@@ -9827,13 +9833,13 @@
       param[journal_issn] = 0976-4003
 #      param[base_url] = http://www.ijds.in/
 
-      au < exists ; 2016 ; Indian Journal of Dental Sciences Volume 8 ; 2016 ; 8 ; https://www.ijds.in/ >
+      au < manifest ; 2016 ; Indian Journal of Dental Sciences Volume 8 ; 2016 ; 8 ; http://www.ijds.in/ >
       au < released ; 2017 ; Indian Journal of Dental Sciences Volume 9 ; 2017 ; 9 ; http://www.ijds.in/ >
-      au < exists ; 2018 ; Indian Journal of Dental Sciences Volume 10 ; 2018 ; 10 ; https://www.ijds.in/ >
-      au < exists ; 2019 ; Indian Journal of Dental Sciences Volume 11 ; 2019 ; 11 ; https://www.ijds.in/ >
-      au < exists ; 2020 ; Indian Journal of Dental Sciences Volume 12 ; 2020 ; 12 ; https://www.ijds.in/ >
-      au < exists ; 2021 ; Indian Journal of Dental Sciences Volume 13 ; 2021 ; 13 ; https://www.ijds.in/ >
-      au < expected ; 2022 ; Indian Journal of Dental Sciences Volume 14 ; 2022 ; 14 ; https://www.ijds.in/ >
+      au < manifest ; 2018 ; Indian Journal of Dental Sciences Volume 10 ; 2018 ; 10 ; http://www.ijds.in/ >
+      au < manifest ; 2019 ; Indian Journal of Dental Sciences Volume 11 ; 2019 ; 11 ; http://www.ijds.in/ >
+      au < manifest ; 2020 ; Indian Journal of Dental Sciences Volume 12 ; 2020 ; 12 ; http://www.ijds.in/ >
+      au < manifest ; 2021 ; Indian Journal of Dental Sciences Volume 13 ; 2021 ; 13 ; http://www.ijds.in/ >
+      au < manifest ; 2022 ; Indian Journal of Dental Sciences Volume 14 ; 2022 ; 14 ; http://www.ijds.in/ >
 
   }
 
@@ -9943,14 +9949,14 @@
         eissn = 2589-1731
       >
 
-      param[journal_issn] = WKMP-0139
+      param[journal_issn] = 2589-1731
 #      param[base_url] = http://www.ijcpc.org/
 
-      au < exists ; 2017 ; International Journal of Clinicopathological Correlation Volume 1 ; 2017 ; 1 ; https://www.ijcpc.org/ >
-      au < exists ; 2018 ; International Journal of Clinicopathological Correlation Volume 2 ; 2018 ; 2 ; https://www.ijcpc.org/ >
-      au < exists ; 2019 ; International Journal of Clinicopathological Correlation Volume 3 ; 2019 ; 3 ; https://www.ijcpc.org/ >
-      au < exists ; 2020 ; International Journal of Clinicopathological Correlation Volume 4 ; 2020 ; 4 ; https://www.ijcpc.org/ >
-      au < exists ; 2021 ; International Journal of Clinicopathological Correlation Volume 5 ; 2021 ; 5 ; https://www.ijcpc.org/ >
+      au < manifest ; 2017 ; International Journal of Clinicopathological Correlation Volume 1 ; 2017 ; 1 ; https://www.ijcpc.org/ >
+      au < manifest ; 2018 ; International Journal of Clinicopathological Correlation Volume 2 ; 2018 ; 2 ; https://www.ijcpc.org/ >
+      au < manifest ; 2019 ; International Journal of Clinicopathological Correlation Volume 3 ; 2019 ; 3 ; https://www.ijcpc.org/ >
+      au < manifest ; 2020 ; International Journal of Clinicopathological Correlation Volume 4 ; 2020 ; 4 ; https://www.ijcpc.org/ >
+      au < manifest ; 2021 ; International Journal of Clinicopathological Correlation Volume 5 ; 2021 ; 5 ; https://www.ijcpc.org/ >
       au < expected ; 2022 ; International Journal of Clinicopathological Correlation Volume 6 ; 2022 ; 6 ; https://www.ijcpc.org/ >
 
   }
