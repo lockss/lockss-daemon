@@ -744,6 +744,40 @@ while (my $line = <>) {
       }
       sleep(5);
 
+  } elsif ($plugin eq "IUMJ2018Plugin") {
+      ####start url
+      #https://www.iumj.indiana.edu/IUMJ/toc.php?writeyear=2017
+      $url = sprintf("%sIUMJ/toc.php?writeyear=%d",
+          $param{base_url}, $param{year});
+      $man_url = uri_unescape($url);
+      my $req = HTTP::Request->new(GET, $man_url);
+      my $resp = $ua->request($req);
+      ####permission url
+      $url_p = sprintf("%slockss.txt",
+          $param{base_url});
+      $man_url_p = uri_unescape($url_p);
+      my $req_p = HTTP::Request->new(GET, $man_url_p);
+      my $resp_p = $ua->request($req_p);
+      if ($resp->is_success) {
+          my $man_contents_p = $resp_p->content;
+          if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+          } elsif (defined($man_contents_p) && ($man_contents_p =~ m/$lockss_tag/)) {
+              my $man_contents = $resp->content;
+              if (defined($man_contents) && ($man_contents =~ m/\($param{year}\)/)) {
+                  $result = "Manifest";
+              } else {
+                  $result = "--NO_CONT--";
+              }
+          } else {
+              $result = "--NO_TAG--";
+          }
+      } else {
+          $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+      }
+      sleep(5);
+
   } elsif ($plugin eq "BePressPlugin") {
       $url = sprintf("%s%s/lockss-volume%d.html",
           $param{base_url}, $param{journal_abbr}, $param{volume});
