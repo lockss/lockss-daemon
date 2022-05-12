@@ -46,27 +46,27 @@
       au < manifest ; exists ; 1965 ; 1965 ; Realm Volume 1965 ; 1965 ; >
       au < manifest ; exists ; 1966 ; 1966 ; Realm Volume 1966 ; 1966 ; >
       au < manifest ; exists ; 1967 ; 1967 ; Realm Volume 1967 ; 1967 ; >
-      au < manifest ; exists ; 1968 ; 1968 ; Analecta Volume 1968 ; 1968 ; >
-      au < manifest ; exists ; 1969 ; 1969 ; Analecta Volume 1969 ; 1969 ; >
+      au < ready ; exists ; 1968 ; 1968 ; Analecta Volume 1968 ; 1968 ; >
+      au < ready ; exists ; 1969 ; 1969 ; Analecta Volume 1969 ; 1969 ; >
 
-      au < manifest ; exists ; 1973 ; 1973 ; Analecta Volume 1973 ; 1973 ; >
-      au < manifest ; exists ; 1974 ; 1974 ; Analecta Volume 1974 ; 1974 ; >
-      au < manifest ; exists ; 1975 ; 1975 ; Analecta Volume 1975 ; 1975 ; >
+      au < ready ; exists ; 1973 ; 1973 ; Analecta Volume 1973 ; 1973 ; >
+      au < ready ; exists ; 1974 ; 1974 ; Analecta Volume 1974 ; 1974 ; >
+      au < ready ; exists ; 1975 ; 1975 ; Analecta Volume 1975 ; 1975 ; >
 
-      au < manifest ; exists ; 1979 ; 1979 ; Analecta Volume 1979 ; 1979 ; >
-      au < manifest ; exists ; 1980 ; 1980 ; Analecta Volume 1980 ; 1980 ; >
+      au < ready ; exists ; 1979 ; 1979 ; Analecta Volume 1979 ; 1979 ; >
+      au < ready ; exists ; 1980 ; 1980 ; Analecta Volume 1980 ; 1980 ; >
 
-      au < manifest ; exists ; 1983 ; 1983 ; Analecta Volume 15 ; 15 ; >
-      au < manifest ; exists ; 1984 ; 1984 ; Analecta Volume 16 ; 16 ; >
-      au < manifest ; exists ; 1985 ; 1985 ; Analecta Volume 17 ; 17 ; >
-      au < manifest ; exists ; 1986 ; 1986 ; Analecta Volume 18 ; 18 ; >
-      au < manifest ; exists ; 1987 ; 1987 ; Analecta Volume 19 ; 19 ; >
-      au < manifest ; exists ; 1988 ; 1988 ; Analecta Volume 1988 ; 1988 ; >
-      au < manifest ; exists ; 1989 ; 1989 ; Analecta Volume 1989 ; 1989 ; >
-      au < manifest ; exists ; 1990 ; 1990 ; Analecta Volume 1990 ; 1990 ; >
-      au < manifest ; exists ; 1991 ; 1991 ; Current Volume 1991 ; 1991 ; >
-      au < manifest ; exists ; 1992 ; 1992 ; Current Volume 1992 ; 1992 ; >
-      au < manifest ; exists ; 1993 ; 1993 ; Current Volume 1993 ; 1993 ; >
+      au < ready ; exists ; 1983 ; 1983 ; Analecta Volume 15 ; 15 ; >
+      au < ready ; exists ; 1984 ; 1984 ; Analecta Volume 16 ; 16 ; >
+      au < ready ; exists ; 1985 ; 1985 ; Analecta Volume 17 ; 17 ; >
+      au < ready ; exists ; 1986 ; 1986 ; Analecta Volume 18 ; 18 ; >
+      au < ready ; exists ; 1987 ; 1987 ; Analecta Volume 19 ; 19 ; >
+      au < ready ; exists ; 1988 ; 1988 ; Analecta Volume 1988 ; 1988 ; >
+      au < ready ; exists ; 1989 ; 1989 ; Analecta Volume 1989 ; 1989 ; >
+      au < ready ; exists ; 1990 ; 1990 ; Analecta Volume 1990 ; 1990 ; >
+      au < ready ; exists ; 1991 ; 1991 ; Current Volume 1991 ; 1991 ; >
+      au < ready ; exists ; 1992 ; 1992 ; Current Volume 1992 ; 1992 ; >
+      au < ready ; exists ; 1993 ; 1993 ; Current Volume 1993 ; 1993 ; >
       au < crawling ; exists ; 1994 ; 1994 ; Current Volume 1994 ; 1994 ; >
       au < crawling ; exists ; 1995 ; 1995 ; Analecta Volume 1995 ; 1995 ; >
       au < crawling ; exists ; 1996 ; 1996 ; Visceral Pagoda Volume 1996 ; 1996 ; >
@@ -104,16 +104,16 @@
       param[journal_id] = aeer
       # no issue in 1992
 
-      au < manifest ; exists ; 1983 ; 1983 ; Anthropology of East Europe Review Volume 3 ; 3 ; >
-      au < manifest ; exists ; 1984 ; 1984 ; Anthropology of East Europe Review Volume 4 ; 4 ; >
-      au < manifest ; exists ; 1985 ; 1985 ; Anthropology of East Europe Review Volume 5 (1985) ; 5 ; >
-      au < manifest ; exists ; 1986 ; 1986 ; Anthropology of East Europe Review Volume 5 (1986) ; 5 ; >
-      au < manifest ; exists ; 1987 ; 1987 ; Anthropology of East Europe Review Volume 6 ; 6 ; >
-      au < manifest ; exists ; 1988 ; 1988 ; Anthropology of East Europe Review Volume 7 ; 7 ; >
-      au < manifest ; exists ; 1989 ; 1989 ; Anthropology of East Europe Review Volume 8 ; 8 ; >
-      au < manifest ; exists ; 1990 ; 1990 ; Anthropology of East Europe Review Volume 9 ; 9 ; >
-      au < manifest ; exists ; 1991 ; 1991 ; Anthropology of East Europe Review Volume 10 ; 10 ; >
-      au < manifest ; exists ; 1993 ; 1993 ; Anthropology of East Europe Review Volume 11 ; 11 ; >
+      au < ready ; exists ; 1983 ; 1983 ; Anthropology of East Europe Review Volume 3 ; 3 ; >
+      au < ready ; exists ; 1984 ; 1984 ; Anthropology of East Europe Review Volume 4 ; 4 ; >
+      au < ready ; exists ; 1985 ; 1985 ; Anthropology of East Europe Review Volume 5 (1985) ; 5 ; >
+      au < ready ; exists ; 1986 ; 1986 ; Anthropology of East Europe Review Volume 5 (1986) ; 5 ; >
+      au < ready ; exists ; 1987 ; 1987 ; Anthropology of East Europe Review Volume 6 ; 6 ; >
+      au < ready ; exists ; 1988 ; 1988 ; Anthropology of East Europe Review Volume 7 ; 7 ; >
+      au < ready ; exists ; 1989 ; 1989 ; Anthropology of East Europe Review Volume 8 ; 8 ; >
+      au < ready ; exists ; 1990 ; 1990 ; Anthropology of East Europe Review Volume 9 ; 9 ; >
+      au < ready ; exists ; 1991 ; 1991 ; Anthropology of East Europe Review Volume 10 ; 10 ; >
+      au < ready ; exists ; 1993 ; 1993 ; Anthropology of East Europe Review Volume 11 ; 11 ; >
       au < crawling ; exists ; 1994 ; 1994 ; Anthropology of East Europe Review Volume 12 ; 12 ; >
       au < crawling ; exists ; 1995 ; 1995 ; Anthropology of East Europe Review Volume 13 ; 13 ; >
       au < crawling ; exists ; 1996 ; 1996 ; Anthropology of East Europe Review Volume 14 ; 14 ; >
@@ -156,27 +156,27 @@
       au < manifest ; exists ; 1960 ; 1960 ; Bulletin Bibliographique de la Société Rencesvals Volume 2 ; 2 ; >
       au < manifest ; exists ; 1963 ; 1963 ; Bulletin Bibliographique de la Société Rencesvals Volume 3 ; 3 ; >
       au < manifest ; exists ; 1967 ; 1967 ; Bulletin Bibliographique de la Société Rencesvals Volume 4 ; 4 ; >
-      au < manifest ; exists ; 1970 ; 1970 ; Bulletin Bibliographique de la Société Rencesvals Volume 5 ; 5 ; >
-      au < manifest ; exists ; 1971 ; 1971 ; Bulletin Bibliographique de la Société Rencesvals Volume 6 ; 6 ; >
-      au < manifest ; exists ; 1972 ; 1972 ; Bulletin Bibliographique de la Société Rencesvals Volume 7 ; 7 ; >
-      au < manifest ; exists ; 1973 ; 1973 ; Bulletin Bibliographique de la Société Rencesvals Volume 8 ; 8 ; >
-      au < manifest ; exists ; 1975 ; 1975 ; Bulletin Bibliographique de la Société Rencesvals Volume 9 ; 9 ; >
-      au < manifest ; exists ; 1976 ; 1976 ; Bulletin Bibliographique de la Société Rencesvals Volume 10 ; 10 ; >
-      au < manifest ; exists ; 1978 ; 1978 ; Bulletin Bibliographique de la Société Rencesvals Volume 11 ; 11 ; >
-      au < manifest ; exists ; 1979 ; 1979 ; Bulletin Bibliographique de la Société Rencesvals Volume 12 ; 12 ; >
-      au < manifest ; exists ; 1980 ; 1980 ; Bulletin Bibliographique de la Société Rencesvals Volume 13 ; 13 ; >
-      au < manifest ; exists ; 1981 ; 1981 ; Bulletin Bibliographique de la Société Rencesvals Volume 14 ; 14 ; >
-      au < manifest ; exists ; 1982 ; 1982 ; Bulletin Bibliographique de la Société Rencesvals Volume 15 ; 15 ; >
-      au < manifest ; exists ; 1983 ; 1983 ; Bulletin Bibliographique de la Société Rencesvals Volume 16 ; 16 ; >
-      au < manifest ; exists ; 1984 ; 1984 ; Bulletin Bibliographique de la Société Rencesvals Volume 17 ; 17 ; >
-      au < manifest ; exists ; 1986 ; 1986 ; Bulletin Bibliographique de la Société Rencesvals Volume 18 ; 18 ; >
-      au < manifest ; exists ; 1987 ; 1987 ; Bulletin Bibliographique de la Société Rencesvals Volume 19 ; 19 ; >
-      au < manifest ; exists ; 1988 ; 1988 ; Bulletin Bibliographique de la Société Rencesvals Volume 20 ; 20 ; >
-      au < manifest ; exists ; 1989 ; 1989 ; Bulletin Bibliographique de la Société Rencesvals Volume 21 ; 21 ; >
-      au < manifest ; exists ; 1990 ; 1990 ; Bulletin Bibliographique de la Société Rencesvals Volume 22 ; 22 ; >
-      au < manifest ; exists ; 1991 ; 1991 ; Bulletin Bibliographique de la Société Rencesvals Volume 23 ; 23 ; >
-      au < manifest ; exists ; 1992 ; 1992 ; Bulletin Bibliographique de la Société Rencesvals Volume 24 ; 24 ; >
-      au < manifest ; exists ; 1993 ; 1993 ; Bulletin Bibliographique de la Société Rencesvals Volume 25 ; 25 ; >
+      au < ready ; exists ; 1970 ; 1970 ; Bulletin Bibliographique de la Société Rencesvals Volume 5 ; 5 ; >
+      au < ready ; exists ; 1971 ; 1971 ; Bulletin Bibliographique de la Société Rencesvals Volume 6 ; 6 ; >
+      au < ready ; exists ; 1972 ; 1972 ; Bulletin Bibliographique de la Société Rencesvals Volume 7 ; 7 ; >
+      au < ready ; exists ; 1973 ; 1973 ; Bulletin Bibliographique de la Société Rencesvals Volume 8 ; 8 ; >
+      au < ready ; exists ; 1975 ; 1975 ; Bulletin Bibliographique de la Société Rencesvals Volume 9 ; 9 ; >
+      au < ready ; exists ; 1976 ; 1976 ; Bulletin Bibliographique de la Société Rencesvals Volume 10 ; 10 ; >
+      au < ready ; exists ; 1978 ; 1978 ; Bulletin Bibliographique de la Société Rencesvals Volume 11 ; 11 ; >
+      au < ready ; exists ; 1979 ; 1979 ; Bulletin Bibliographique de la Société Rencesvals Volume 12 ; 12 ; >
+      au < ready ; exists ; 1980 ; 1980 ; Bulletin Bibliographique de la Société Rencesvals Volume 13 ; 13 ; >
+      au < ready ; exists ; 1981 ; 1981 ; Bulletin Bibliographique de la Société Rencesvals Volume 14 ; 14 ; >
+      au < ready ; exists ; 1982 ; 1982 ; Bulletin Bibliographique de la Société Rencesvals Volume 15 ; 15 ; >
+      au < ready ; exists ; 1983 ; 1983 ; Bulletin Bibliographique de la Société Rencesvals Volume 16 ; 16 ; >
+      au < ready ; exists ; 1984 ; 1984 ; Bulletin Bibliographique de la Société Rencesvals Volume 17 ; 17 ; >
+      au < ready ; exists ; 1986 ; 1986 ; Bulletin Bibliographique de la Société Rencesvals Volume 18 ; 18 ; >
+      au < ready ; exists ; 1987 ; 1987 ; Bulletin Bibliographique de la Société Rencesvals Volume 19 ; 19 ; >
+      au < ready ; exists ; 1988 ; 1988 ; Bulletin Bibliographique de la Société Rencesvals Volume 20 ; 20 ; >
+      au < ready ; exists ; 1989 ; 1989 ; Bulletin Bibliographique de la Société Rencesvals Volume 21 ; 21 ; >
+      au < ready ; exists ; 1990 ; 1990 ; Bulletin Bibliographique de la Société Rencesvals Volume 22 ; 22 ; >
+      au < ready ; exists ; 1991 ; 1991 ; Bulletin Bibliographique de la Société Rencesvals Volume 23 ; 23 ; >
+      au < ready ; exists ; 1992 ; 1992 ; Bulletin Bibliographique de la Société Rencesvals Volume 24 ; 24 ; >
+      au < ready ; exists ; 1993 ; 1993 ; Bulletin Bibliographique de la Société Rencesvals Volume 25 ; 25 ; >
       au < crawling ; exists ; 1994 ; 1994 ; Bulletin Bibliographique de la Société Rencesvals Volume 26 ; 26 ; >
       au < crawling ; exists ; 1995 ; 1995 ; Bulletin Bibliographique de la Société Rencesvals Volume 27 ; 27 ; >
       au < crawling ; exists ; 1996 ; 1996 ; Bulletin Bibliographique de la Société Rencesvals Volume 28 ; 28 ; >
