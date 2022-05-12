@@ -16,6 +16,7 @@
     
     param[base_url] = https://digitalcommons.du.edu/
     param[journal_abbr] = collaborativelibrarianship
+    #contacted publisher for permission statements 20220511
 
     au < exists ; 2009 ; Collaborative Librarianship Volume 1 ; 1 >
     au < exists ; 2010 ; Collaborative Librarianship Volume 2 ; 2 >
@@ -29,7 +30,7 @@
     au < exists ; 2018 ; Collaborative Librarianship Volume 10 ; 10 >
     au < exists ; 2019 ; Collaborative Librarianship Volume 11 ; 11 >
     au < exists ; 2020 ; Collaborative Librarianship Volume 12 ; 12 >
-    au < expected ; 2021 ; Collaborative Librarianship Volume 13 ; 13 >
+    au < exists ; 2021 ; Collaborative Librarianship Volume 13 ; 13 >
     au < expected ; 2022 ; Collaborative Librarianship Volume 14 ; 14 >
 
   }

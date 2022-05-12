@@ -19,23 +19,23 @@
 
     param[base_url] = http://wio.iwaponline.com/
     type = bookSeries
+    #These AUs all have 0 size.
 
-    au < released ; 2002 ; Water Intelligence Online Volume 1 ; 1 >
-    au < released ; 2003 ; Water Intelligence Online Volume 2 ; 2 >
-    au < released ; 2004 ; Water Intelligence Online Volume 3 ; 3 >
-    au < released ; 2005 ; Water Intelligence Online Volume 4 ; 4 >
-    au < released ; 2006 ; Water Intelligence Online Volume 5 ; 5 >
-    au < released ; 2007 ; Water Intelligence Online Volume 6 ; 6 >
-    au < released ; 2008 ; Water Intelligence Online Volume 7 ; 7 >
-    au < released ; 2009 ; Water Intelligence Online Volume 8 ; 8 >
-    au < released ; 2010 ; Water Intelligence Online Volume 9 ; 9 >
-    au < released ; 2011 ; Water Intelligence Online Volume 10 ; 10 >
-    au < released ; 2012 ; Water Intelligence Online Volume 11 ; 11 >
-    au < released ; 2013 ; Water Intelligence Online Volume 12 ; 12 >
-    au < released ; 2014 ; Water Intelligence Online Volume 13 ; 13 >
-    au < released ; 2015 ; Water Intelligence Online Volume 14 ; 14 >
-    au < released ; 2016 ; Water Intelligence Online Volume 15 ; 15 >
-    au < doNotProcess ; 2017 ; Water Intelligence Online Volume 16 ; 16 >
+    au < superseded ; 2002 ; Water Intelligence Online Volume 1 [superseded] ; 1 >
+    au < superseded ; 2003 ; Water Intelligence Online Volume 2 [superseded] ; 2 >
+    au < superseded ; 2004 ; Water Intelligence Online Volume 3 [superseded] ; 3 >
+    au < superseded ; 2005 ; Water Intelligence Online Volume 4 [superseded] ; 4 >
+    au < superseded ; 2006 ; Water Intelligence Online Volume 5 [superseded] ; 5 >
+    au < superseded ; 2007 ; Water Intelligence Online Volume 6 [superseded] ; 6 >
+    au < superseded ; 2008 ; Water Intelligence Online Volume 7 [superseded] ; 7 >
+    au < superseded ; 2009 ; Water Intelligence Online Volume 8 [superseded] ; 8 >
+    au < superseded ; 2010 ; Water Intelligence Online Volume 9 [superseded] ; 9 >
+    au < superseded ; 2011 ; Water Intelligence Online Volume 10 [superseded] ; 10 >
+    au < superseded ; 2012 ; Water Intelligence Online Volume 11 [superseded] ; 11 >
+    au < superseded ; 2013 ; Water Intelligence Online Volume 12 [superseded] ; 12 >
+    au < superseded ; 2014 ; Water Intelligence Online Volume 13 [superseded] ; 13 >
+    au < superseded ; 2015 ; Water Intelligence Online Volume 14 [superseded] ; 14 >
+    au < superseded ; 2016 ; Water Intelligence Online Volume 15 [superseded] ; 15 >
 
   }
 
