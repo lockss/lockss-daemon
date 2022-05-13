@@ -304,7 +304,7 @@ public class TestLogger extends LockssTestCase {
     }
     assertIsomorphic(ListUtil.list("Warning: 1-test-log1: msg2 warning",
 				   "Error: 1-test-log1: msg3 error",
-				   "Info: 1-Config: Config updated, 3 keys from foo",
+				   "Info: 1-Config: Config updated, 4 keys from foo",
 				   "Info: 1-Config: New TdbAus: 0"),
 		     target.getMessages());
   }

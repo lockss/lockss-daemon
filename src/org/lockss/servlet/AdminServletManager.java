@@ -38,7 +38,7 @@ import java.util.*;
 import javax.servlet.http.*;
 import org.mortbay.http.*;
 import org.mortbay.jetty.servlet.*;
-import com.planetj.servlet.filter.compression.*;
+import com.github.ziplet.filter.compression.*;
 import dk.itst.oiosaml.common.SAMLUtil;
 import dk.itst.oiosaml.configuration.FileConfiguration;
 import dk.itst.oiosaml.configuration.SAMLConfigurationFactory;

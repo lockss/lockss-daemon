@@ -242,8 +242,8 @@ Args:
   <property name="jimi.jar"       value="${lib}/JimiProClasses.jar"/>
   <property name="jetty.jar"      value="${lib}/jetty-5.1.5L.jar"/>
   <property name="servlet.jar"    value="${lib}/javax.servlet.jar"/>
-  <property name="pjl-comp-filter.jar"
-                                  value="${lib}/pjl-comp-filter-1.6.5.jar"/>
+  <property name="ziplet-filter.jar"
+                                  value="${lib}/ziplet-2.4.1.jar"/>
   <property name="jaxp.jar"       value="${lib}/javax.xml.jaxp.jar"/>
 <!--    <property name="xml.jar"  value="${lib}/org.apache.crimson.jar"/> -->
   <property name="log4j2.version" value="2.17.2" />
@@ -534,7 +534,7 @@ Args:
     <pathelement path="${concurrent.jar}" />
     <pathelement path="${jetty.jar}" />
     <pathelement path="${servlet.jar}" />
-    <pathelement path="${pjl-comp-filter.jar}" />
+    <pathelement path="${ziplet-filter.jar}" />
     <pathelement path="${js-engine.jar}" />
     <pathelement path="${script.jar}" />
     <pathelement path="${rhino.jar}" />

@@ -44,7 +44,7 @@ import org.lockss.proxy.*;
 import org.mortbay.http.*;
 import org.mortbay.http.handler.*;
 import org.mortbay.jetty.servlet.*;
-import com.planetj.servlet.filter.compression.*;
+import com.github.ziplet.filter.compression.*;
 
 /**
  * Content servlet starter

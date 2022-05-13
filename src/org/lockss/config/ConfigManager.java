@@ -312,6 +312,16 @@ public class ConfigManager implements LockssManager {
   public static final String PARAM_PLATFORM_LOG_DIR = PLATFORM + "logdirectory";
   static final String PARAM_PLATFORM_LOG_FILE = PLATFORM + "logfile";
 
+  /** Shorthand and default for servlet response compressor
+   * (<tt>com.github.ziplet.*</tt>, which logs too much at debug level
+   */
+  public static final String PARAM_ZIPLET_LOG_LEVEL =
+    PREFIX + "log.ziplet.level";
+  public static final String DEFAULT_ZIPLET_LOG_LEVEL = "info";
+
+  private static final String ZIPLET_LOG_PARAM =
+    "org.lockss.log.com.github.ziplet.filter.compression.*.level";
+
   /** SMTP relay host that will accept mail from this host.
    * @ParamCategory Platform
    * @ParamRelevance Common
@@ -1594,6 +1604,11 @@ public class ConfigManager implements LockssManager {
   }
 
   private void setConfigMacros(Configuration config) {
+    String zipletLevel = config.get(PARAM_ZIPLET_LOG_LEVEL,
+                                    DEFAULT_ZIPLET_LOG_LEVEL);
+    config.put(ZIPLET_LOG_PARAM, zipletLevel);
+
+    // Account types
     String acctPolicy = config.get(AccountManager.PARAM_POLICY,
 				   AccountManager.DEFAULT_POLICY);
     if ("lc".equalsIgnoreCase(acctPolicy)) {
