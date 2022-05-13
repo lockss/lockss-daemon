@@ -95,7 +95,7 @@ implements SourceXmlSchemaHelper {
   };
 
   static private final String topNode = "/component/header/publicationMeta[@level = \"product\"]";
-  private static final String publisher = topNode + "/publisherdebug3/publisherName";
+  private static final String publisher = topNode + "/publisherInfo/publisherName";
   private static final String book_title = topNode + "/titleGroup/title[@type = \"main\"]";
   private static final String book_title_alt = topNode + "/titleGroup/title[@type = \"tocForm\"]";
   private static final String isbn = topNode + "/isbn[@type = \"online-13\"]";
