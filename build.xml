@@ -391,7 +391,7 @@ Args:
   <property name="gson-fire.jar" value="${lib}/gson-fire-1.8.4.jar" />
   <property name="swagger-annotations.jar" value="${lib}/swagger-annotations-1.5.24.jar" />
 
-  <property name="json-path.jar" value="${lib}/json-path-2.6.0.jar" />
+  <property name="json-path.jar" value="${lib}/json-path-2.7.0.jar" />
 
   <property name="antlr.version" value="4.9.3" />
   <property name="antlr.runtime.jar" value="${lib}/antlr-runtime-${antlr.version}.jar" />
