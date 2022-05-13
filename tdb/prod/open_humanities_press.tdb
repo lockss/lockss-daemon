@@ -46,7 +46,7 @@
       {
       param[base_url] = https://www.cosmosandhistory.org/
 
-      au < ojs3.Ojs3Plugin ; manifest ; 2021 ; Cosmos and History Volume 17 ; 17 ; 2021 >
+      au < ojs3.Ojs3Plugin ; ready ; 2021 ; Cosmos and History Volume 17 ; 17 ; 2021 >
       au < ojs3.Ojs3Plugin ; expected ; 2022 ; Cosmos and History Volume 18 ; 18 ; 2022 >
       }
     }
