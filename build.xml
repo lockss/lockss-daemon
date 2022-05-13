@@ -226,7 +226,7 @@ Args:
 <!--  <property name="derby.jar"      value="${lib}/derby-${derby.version}.jar"/>-->
 <!--  <property name="derbyclient.jar" value="${lib}/derbyclient-${derby.version}.jar"/>-->
 <!--  <property name="derbynet.jar"   value="${lib}/derbynet-${derby.version}.jar"/>-->
-  <property name="postgresql-jdbc.jar" value="${lib}/postgresql-42.3.1.jar" />
+  <property name="postgresql-jdbc.jar" value="${lib}/postgresql-42.3.5.jar" />
   <property name="mysql-connector-java.jar"
 				  value="${lib}/mysql-connector-java-8.0.27.jar" />
   <property name="mailapi.jar"    value="${lib}/javamail-mailapi-1.3.2.jar"/>
