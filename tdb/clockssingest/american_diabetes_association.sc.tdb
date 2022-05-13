@@ -8,8 +8,7 @@
     info[platform] = SC
   >
 
-    plugin = needs.plugin
-    #plugin is like ClockssAAPSilverchairPlugin
+    plugin = org.lockss.plugin.silverchair.ada.ClockssAmericanDiabetesAssociationSilverchairPlugin
     implicit < status ; status2 ; year ; param[year] ; name ; param[volume_name] ; hidden[proxy] >
     param[base_url] = https://diabetesjournals.org/
     

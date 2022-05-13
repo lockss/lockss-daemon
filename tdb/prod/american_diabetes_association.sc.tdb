@@ -5,8 +5,7 @@
     
   >
 
-     plugin = needs.plugin
-     #plugin is like AAPSilverchairPlugin
+     plugin = org.lockss.plugin.silverchair.geoscienceworld.GeoscienceWorldSilverchairPlugin
      implicit < status ; year ; param[year] ; name ; param[volume_name] >
      param[base_url] = https://diabetesjournals.org/
      
