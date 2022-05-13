@@ -165,7 +165,7 @@
 
 
     au < manifest ; 1807 ; Code of Federal Regulations 1807 ; 1807 ; https://www.govinfo.gov/ >
-    au < manifest ; 2014 ; Code of Federal Regulations 2014 ; 2014 ; https://www.govinfo.gov/ >
+    au < ready ; 2014 ; Code of Federal Regulations 2014 ; 2014 ; https://www.govinfo.gov/ >
     au < manifest ; 2016 ; Code of Federal Regulations 2016 ; 2016 ; https://www.govinfo.gov/ >
     au < manifest ; 2017 ; Code of Federal Regulations 2017 ; 2017 ; https://www.govinfo.gov/ >
     au < manifest ; 2018 ; Code of Federal Regulations 2018 ; 2018 ; https://www.govinfo.gov/ >
@@ -190,7 +190,7 @@
  
     au < ready ; 2019 ; Congressional Bills 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < ready ; 2020 ; Congressional Bills 2020 ; 2020 ; https://www.govinfo.gov/ >
-    au < manifest ; 2021 ; Congressional Bills 2021 ; 2021 ; https://www.govinfo.gov/ >
+    au < ready ; 2021 ; Congressional Bills 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < manifest ; 2022 ; Congressional Bills 2022 ; 2022 ; https://www.govinfo.gov/ >
 
   }
@@ -522,7 +522,7 @@
 
 
     au < notReady ; 1998 ; Congressional Record Index 1998 ; 1998 ; https://www.govinfo.gov/ > #no substance
-    au < manifest ; 2019 ; Congressional Record Index 2019 ; 2019 ; https://www.govinfo.gov/ >
+    au < ready ; 2019 ; Congressional Record Index 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < manifest ; 2020 ; Congressional Record Index 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < manifest ; 2021 ; Congressional Record Index 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < manifest ; 2022 ; Congressional Record Index 2022 ; 2022 ; https://www.govinfo.gov/ >
@@ -706,9 +706,9 @@
 
     param[collection_id] = HOB
 
-    au < manifest ; 2019 ; History of Bills 2019 ; 2019 ; https://www.govinfo.gov/ >
-    au < manifest ; 2020 ; History of Bills 2020 ; 2020 ; https://www.govinfo.gov/ >
-    au < manifest ; 2021 ; History of Bills 2021 ; 2021 ; https://www.govinfo.gov/ >
+    au < ready ; 2019 ; History of Bills 2019 ; 2019 ; https://www.govinfo.gov/ >
+    au < ready ; 2020 ; History of Bills 2020 ; 2020 ; https://www.govinfo.gov/ >
+    au < ready ; 2021 ; History of Bills 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < manifest ; 2022 ; History of Bills 2022 ; 2022 ; https://www.govinfo.gov/ >
 
   }
@@ -723,14 +723,14 @@
 
 
     au < ready ; 1997 ; House Rules and Manual 1997 ; 1997 ; https://www.govinfo.gov/ >
-    au < manifest ; 2003 ; House Rules and Manual 2003 ; 2003 ; https://www.govinfo.gov/ >
+    au < ready ; 2003 ; House Rules and Manual 2003 ; 2003 ; https://www.govinfo.gov/ >
     au < doesNotExist ; 2014 ; House Rules and Manual 2014 ; 2014 ; https://www.govinfo.gov/ >
     au < doNotProcess ; 2015 ; House Rules and Manual 2015 ; 2015 ; https://www.govinfo.gov/ >
     au < doesNotExist ; 2016 ; House Rules and Manual 2016 ; 2016 ; https://www.govinfo.gov/ >
     au < released ; 2017 ; House Rules and Manual 2017 ; 2017 ; https://www.govinfo.gov/ >
     au < doesNotExist ; 2018 ; House Rules and Manual 2018 ; 2018 ; https://www.govinfo.gov/ >
-    au < manifest ; 2019 ; House Rules and Manual 2019 ; 2019 ; https://www.govinfo.gov/ >
-    au < manifest ; 2021 ; House Rules and Manual 2021 ; 2021 ; https://www.govinfo.gov/ >
+    au < ready ; 2019 ; House Rules and Manual 2019 ; 2019 ; https://www.govinfo.gov/ >
+    au < ready ; 2021 ; House Rules and Manual 2021 ; 2021 ; https://www.govinfo.gov/ >
 
   }
 
@@ -753,8 +753,8 @@
     param[collection_id] = LSA
 
     au < released ; 2019 ; List of CFR Sections Affected 2019 ; 2019 ; https://www.govinfo.gov/ >
-    au < manifest ; 2020 ; List of CFR Sections Affected 2020 ; 2020 ; https://www.govinfo.gov/ >
-    au < manifest ; 2021 ; List of CFR Sections Affected 2021 ; 2021 ; https://www.govinfo.gov/ >
+    au < ready ; 2020 ; List of CFR Sections Affected 2020 ; 2020 ; https://www.govinfo.gov/ >
+    au < ready ; 2021 ; List of CFR Sections Affected 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < manifest ; 2022 ; List of CFR Sections Affected 2022 ; 2022 ; https://www.govinfo.gov/ >
 
   }
