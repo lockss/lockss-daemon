@@ -710,7 +710,7 @@
     au < released ; 2019 ; Heart Views Volume 20 ; 2019 ; 20 ; https://www.heartviews.org/ >
     au < released ; 2020 ; Heart Views Volume 21 ; 2020 ; 21 ; https://www.heartviews.org/ >
     au < released ; 2021 ; Heart Views Volume 22 ; 2021 ; 22 ; https://www.heartviews.org/ >
-    au < expected ; 2022 ; Heart Views Volume 23 ; 2022 ; 23 ; https://www.heartviews.org/ >
+    au < manifest ; 2022 ; Heart Views Volume 23 ; 2022 ; 23 ; https://www.heartviews.org/ >
 
   }
     
@@ -8260,7 +8260,7 @@
       au < released ; 2019 ; Pigment International Volume 6 ; 2019 ; 6 ; https://www.pigmentinternational.com/ >
       au < released ; 2020 ; Pigment International Volume 7 ; 2020 ; 7 ; https://www.pigmentinternational.com/ >
       au < released ; 2021 ; Pigment International Volume 8 ; 2021 ; 8 ; https://www.pigmentinternational.com/ >
-      au < expected ; 2022 ; Pigment International Volume 9 ; 2022 ; 9 ; https://www.pigmentinternational.com/ >
+      au < manifest ; 2022 ; Pigment International Volume 9 ; 2022 ; 9 ; https://www.pigmentinternational.com/ >
 
   }
 
@@ -8302,7 +8302,7 @@
       au < released ; 2019 ; Research and Opinion in Anesthesia and Intensive Care Volume 6 ; 2019 ; 6 ; https://www.roaic.eg.net/ >
       au < released ; 2020 ; Research and Opinion in Anesthesia and Intensive Care Volume 7 ; 2020 ; 7 ; https://www.roaic.eg.net/ >
       au < released ; 2021 ; Research and Opinion in Anesthesia and Intensive Care Volume 8 ; 2021 ; 8 ; https://www.roaic.eg.net/ >
-      au < expected ; 2022 ; Research and Opinion in Anesthesia and Intensive Care Volume 9 ; 2022 ; 9 ; https://www.roaic.eg.net/ >
+      au < manifest ; 2022 ; Research and Opinion in Anesthesia and Intensive Care Volume 9 ; 2022 ; 9 ; https://www.roaic.eg.net/ >
 
   }
 
@@ -10141,12 +10141,12 @@
 #      param[base_url] = http://www.ijsronline.net/
       #Manifest page: Doesn't work with https. 500 Can't connect to www.ijsronline.net:443 (Connection reset by peer). See http://www.ijsronline.net/backissues.asp
 
-      au < exists ; 2011 ; International Journal of Students' Research Volume 1 ; 2011 ; 1 ; http://www.ijsronline.net/ >
-      au < exists ; 2012 ; International Journal of Students' Research Volume 2 ; 2012 ; 2 ; http://www.ijsronline.net/ >
-      au < exists ; 2013 ; International Journal of Students' Research Volume 3 ; 2013 ; 3 ; http://www.ijsronline.net/ >
-      au < exists ; 2014 ; International Journal of Students' Research Volume 4 ; 2014 ; 4 ; http://www.ijsronline.net/ >
-      au < exists ; 2015 ; International Journal of Students' Research Volume 5 ; 2015 ; 5 ; http://www.ijsronline.net/ >
-      au < exists ; 2016 ; International Journal of Students' Research Volume 6 ; 2016 ; 6 ; http://www.ijsronline.net/ >
+      au < manifest ; 2011 ; International Journal of Students' Research Volume 1 ; 2011 ; 1 ; http://www.ijsronline.net/ >
+      au < manifest ; 2012 ; International Journal of Students' Research Volume 2 ; 2012 ; 2 ; http://www.ijsronline.net/ >
+      au < manifest ; 2013 ; International Journal of Students' Research Volume 3 ; 2013 ; 3 ; http://www.ijsronline.net/ >
+      au < manifest ; 2014 ; International Journal of Students' Research Volume 4 ; 2014 ; 4 ; http://www.ijsronline.net/ >
+      au < manifest ; 2015 ; International Journal of Students' Research Volume 5 ; 2015 ; 5 ; http://www.ijsronline.net/ >
+      au < manifest ; 2016 ; International Journal of Students' Research Volume 6 ; 2016 ; 6 ; http://www.ijsronline.net/ >
       au < released ; 2017 ; International Journal of Students' Research Volume 7 ; 2017 ; 7 ; http://www.ijsronline.net/ >
 
   }
