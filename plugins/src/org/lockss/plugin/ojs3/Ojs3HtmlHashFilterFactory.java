@@ -59,53 +59,52 @@ public class Ojs3HtmlHashFilterFactory implements FilterFactory {
   private static final Logger log = Logger.getLogger(Ojs3HtmlHashFilterFactory.class);
 
   private static final NodeFilter[] includeNodes = new NodeFilter[] {
-	    	// manifest page
-	    	HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "page clockss"),
-            HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "page lockss"),
-	        // toc - contents only
-	        HtmlNodeFilters.tagWithAttribute("div", "class", "issue-toc"),
-	        // abstract landing page html
-	        HtmlNodeFilters.tagWithAttribute("article", "class", "article-details"),
-	        // pdf landing page - just get the header with title and link information
-	        HtmlNodeFilters.tagWithAttribute("header", "class", "header_view"),
-            // article page, https://journals.vgtu.lt/index.php/BME/article/view/10292
+    // manifest page
+    HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "page clockss"),
+    HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "page lockss"),
+    // toc - contents only
+    HtmlNodeFilters.tagWithAttribute("div", "class", "issue-toc"),
+    // abstract landing page html
+    HtmlNodeFilters.tagWithAttribute("article", "class", "article-details"),
+    // pdf landing page - just get the header with title and link information
+    HtmlNodeFilters.tagWithAttribute("header", "class", "header_view"),
+    // article page, https://journals.vgtu.lt/index.php/BME/article/view/10292
 
-            HtmlNodeFilters.tagWithAttribute("h2", "class", "headings"),
-            HtmlNodeFilters.tagWithAttribute("div", "class", "authors"),
-            HtmlNodeFilters.tagWithAttribute("div", "id", "article_tab"),
-            // article page: https://www.clei.org/cleiej/index.php/cleiej/article/view/202
-            HtmlNodeFilters.tagWithAttribute("div", "class", "main_entry"),
+    HtmlNodeFilters.tagWithAttribute("h2", "class", "headings"),
+    HtmlNodeFilters.tagWithAttribute("div", "class", "authors"),
+    HtmlNodeFilters.tagWithAttribute("div", "id", "article_tab"),
+    // article page: https://www.clei.org/cleiej/index.php/cleiej/article/view/202
+    HtmlNodeFilters.tagWithAttribute("div", "class", "main_entry"),
 
-            // article page: 	https://haematologica.org/article/view/10276
-            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-container"),
-            // issue page: https://haematologica.org/issue/view/377
-            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "one-article-intoc"),
-            // the citation files https://ojs.aut.ac.nz/hospitality-insights/citationstylelanguage/get/acm-sig-proceedings?submissionId=58
-            HtmlNodeFilters.tagWithAttribute("div", "class=", "csl-entry"), // alternatively div.csl-bib-body
-	    };
+    // article page: 	https://haematologica.org/article/view/10276
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-container"),
+    // issue page: https://haematologica.org/issue/view/377
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "one-article-intoc"),
+    // the citation files https://ojs.aut.ac.nz/hospitality-insights/citationstylelanguage/get/acm-sig-proceedings?submissionId=58
+    HtmlNodeFilters.tagWithAttribute("div", "class", "csl-entry"), // alternatively div.csl-bib-body
+  };
 
-    private static final NodeFilter[] includeNodes2 = new NodeFilter[] {};
+  private static final NodeFilter[] includeNodes2 = new NodeFilter[] {};
 
-    private static final NodeFilter[] excludeNodes = new NodeFilter[] {
-	        // on the article landing page - remove the bottom stuff
-	        HtmlNodeFilters.tagWithAttribute("section","class","article-more-details"),
+  private static final NodeFilter[] excludeNodes = new NodeFilter[] {
+        // on the article landing page - remove the bottom stuff
+        HtmlNodeFilters.tagWithAttribute("section","class","article-more-details"),
+  };
 
-	    };
-
-    private static final NodeFilter[] excludeNodes2 = new NodeFilter[] {};
+  private static final NodeFilter[] excludeNodes2 = new NodeFilter[] {};
  
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
-      InputStream in, 
-      String encoding) {
-
-      return new HtmlFilterInputStream(in,
-            encoding,
-            new HtmlCompoundTransform(
-                HtmlNodeFilterTransform.include(new OrFilter(includeNodes)),
-                HtmlNodeFilterTransform.exclude(new OrFilter(excludeNodes))
-                ));
-    
+                                               InputStream in,
+                                               String encoding) {
+    return new HtmlFilterInputStream(
+      in,
+      encoding,
+      new HtmlCompoundTransform(
+          HtmlNodeFilterTransform.include(new OrFilter(includeNodes)),
+          HtmlNodeFilterTransform.exclude(new OrFilter(excludeNodes))
+          )
+    );
   }
 
 }
