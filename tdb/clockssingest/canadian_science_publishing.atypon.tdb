@@ -29,8 +29,8 @@
     au < manifest ; exists ; 2007 ; Applied Physiology, Nutrition, and Metabolism Volume 32 ; 32 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 2008 ; Applied Physiology, Nutrition, and Metabolism Volume 33 ; 33 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 2009 ; Applied Physiology, Nutrition, and Metabolism Volume 34 ; 34 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 2010 ; Applied Physiology, Nutrition, and Metabolism Volume 35 ; 35 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 2011 ; Applied Physiology, Nutrition, and Metabolism Volume 36 ; 36 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 2010 ; Applied Physiology, Nutrition, and Metabolism Volume 35 ; 35 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 2011 ; Applied Physiology, Nutrition, and Metabolism Volume 36 ; 36 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 2012 ; Applied Physiology, Nutrition, and Metabolism Volume 37 ; 37 ; http://www.nrcresearchpress.com/ ; >
     au < deepCrawl ; exists ; 2013 ; Applied Physiology, Nutrition, and Metabolism Volume 38 ; 38 ; http://www.nrcresearchpress.com/ ; >
     au < frozen ; exists ; 2014 ; Applied Physiology, Nutrition, and Metabolism Volume 39 ; 39 ; http://www.nrcresearchpress.com/ ; >
@@ -86,7 +86,7 @@
       au < manifest ; exists ; 2007 ; Biochemistry and Cell Biology Volume 85 ; 85 ; https://cdnsciencepub.com/ ; >
       au < manifest ; exists ; 2008 ; Biochemistry and Cell Biology Volume 86 ; 86 ; https://cdnsciencepub.com/ ; >
       au < crawling ; exists ; 2009 ; Biochemistry and Cell Biology Volume 87 ; 87 ; https://cdnsciencepub.com/ ; >
-      au < ready ; exists ; 2010 ; Biochemistry and Cell Biology Volume 88 ; 88 ; https://cdnsciencepub.com/ ; >
+      au < crawling ; exists ; 2010 ; Biochemistry and Cell Biology Volume 88 ; 88 ; https://cdnsciencepub.com/ ; >
       au < crawling ; exists ; 2011 ; Biochemistry and Cell Biology Volume 89 ; 89 ; https://cdnsciencepub.com/ ; >
       au < finished ; finished ; 2012 ; Biochemistry and Cell Biology Volume 90 ; 90 ; http://www.nrcresearchpress.com/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2013 ; Biochemistry and Cell Biology Volume 91 ; 91 ; http://www.nrcresearchpress.com/ ; >
@@ -216,8 +216,8 @@
       
       au < manifest ; exists ; 2008 ; Botany Volume 86 ; 86 ; https://cdnsciencepub.com/ ; >
       au < crawling ; exists ; 2009 ; Botany Volume 87 ; 87 ; https://cdnsciencepub.com/ ; >
-      au < ready ; exists ; 2010 ; Botany Volume 88 ; 88 ; https://cdnsciencepub.com/ ; >
-      au < ready ; exists ; 2011 ; Botany Volume 89 ; 89 ; https://cdnsciencepub.com/ ; >
+      au < crawling ; exists ; 2010 ; Botany Volume 88 ; 88 ; https://cdnsciencepub.com/ ; >
+      au < crawling ; exists ; 2011 ; Botany Volume 89 ; 89 ; https://cdnsciencepub.com/ ; >
       au < frozen ; exists ; 2012 ; Botany Volume 90 ; 90 ; http://www.nrcresearchpress.com/ ; >
       au < deepCrawl ; exists ; 2013 ; Botany Volume 91 ; 91 ; http://www.nrcresearchpress.com/ ; >
       au < frozen ; exists ; 2014 ; Botany Volume 92 ; 92 ; http://www.nrcresearchpress.com/ ; >
@@ -366,7 +366,7 @@
     au < manifest ; exists ; 2006 ; Canadian Geotechnical Journal Volume 43 ; 43 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 2007 ; Canadian Geotechnical Journal Volume 44 ; 44 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 2008 ; Canadian Geotechnical Journal Volume 45 ; 45 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 2009 ; Canadian Geotechnical Journal Volume 46 ; 46 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 2009 ; Canadian Geotechnical Journal Volume 46 ; 46 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 2010 ; Canadian Geotechnical Journal Volume 47 ; 47 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 2011 ; Canadian Geotechnical Journal Volume 48 ; 48 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 2012 ; Canadian Geotechnical Journal Volume 49 ; 49 ; http://www.nrcresearchpress.com/ ; >
@@ -478,9 +478,9 @@
     au < manifest ; exists ; 2006 ; Canadian Journal of Chemistry Volume 84 ; 84 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 2007 ; Canadian Journal of Chemistry Volume 85 ; 85 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 2008 ; Canadian Journal of Chemistry Volume 86 ; 86 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 2009 ; Canadian Journal of Chemistry Volume 87 ; 87 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 2009 ; Canadian Journal of Chemistry Volume 87 ; 87 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 2010 ; Canadian Journal of Chemistry Volume 88 ; 88 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 2011 ; Canadian Journal of Chemistry Volume 89 ; 89 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 2011 ; Canadian Journal of Chemistry Volume 89 ; 89 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 2012 ; Canadian Journal of Chemistry Volume 90 ; 90 ; http://www.nrcresearchpress.com/ ; >
     au < deepCrawl ; exists ; 2013 ; Canadian Journal of Chemistry Volume 91 ; 91 ; http://www.nrcresearchpress.com/ ; >
     au < frozen ; exists ; 2014 ; Canadian Journal of Chemistry Volume 92 ; 92 ; http://www.nrcresearchpress.com/ ; >
@@ -542,7 +542,7 @@
     au < manifest ; exists ; 2008 ; Canadian Journal of Civil Engineering Volume 35 ; 35 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 2009 ; Canadian Journal of Civil Engineering Volume 36 ; 36 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 2010 ; Canadian Journal of Civil Engineering Volume 37 ; 37 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 2011 ; Canadian Journal of Civil Engineering Volume 38 ; 38 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 2011 ; Canadian Journal of Civil Engineering Volume 38 ; 38 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 2012 ; Canadian Journal of Civil Engineering Volume 39 ; 39 ; http://www.nrcresearchpress.com/ ; >
     au < deepCrawl ; exists ; 2013 ; Canadian Journal of Civil Engineering Volume 40 ; 40 ; http://www.nrcresearchpress.com/ ; >
     au < frozen ; exists ; 2014 ; Canadian Journal of Civil Engineering Volume 41 ; 41 ; http://www.nrcresearchpress.com/ ; >
@@ -874,8 +874,8 @@
     au < manifest ; exists ; 2007 ; Canadian Journal of Forest Research Volume 37 ; 37 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 2008 ; Canadian Journal of Forest Research Volume 38 ; 38 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 2009 ; Canadian Journal of Forest Research Volume 39 ; 39 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 2010 ; Canadian Journal of Forest Research Volume 40 ; 40 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 2011 ; Canadian Journal of Forest Research Volume 41 ; 41 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 2010 ; Canadian Journal of Forest Research Volume 40 ; 40 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 2011 ; Canadian Journal of Forest Research Volume 41 ; 41 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 2012 ; Canadian Journal of Forest Research Volume 42 ; 42 ; http://www.nrcresearchpress.com/ ; >
     au < deepCrawl ; exists ; 2013 ; Canadian Journal of Forest Research Volume 43 ; 43 ; http://www.nrcresearchpress.com/ ; >
     au < frozen ; exists ; 2014 ; Canadian Journal of Forest Research Volume 44 ; 44 ; http://www.nrcresearchpress.com/ ; >
@@ -1041,7 +1041,7 @@
     au < manifest ; exists ; 2008 ; Canadian Journal of Physics Volume 86 ; 86 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 2009 ; Canadian Journal of Physics Volume 87 ; 87 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 2010 ; Canadian Journal of Physics Volume 88 ; 88 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 2011 ; Canadian Journal of Physics Volume 89 ; 89 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 2011 ; Canadian Journal of Physics Volume 89 ; 89 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 2012 ; Canadian Journal of Physics Volume 90 ; 90 ; http://www.nrcresearchpress.com/ ; >
     au < deepCrawl ; exists ; 2013 ; Canadian Journal of Physics Volume 91 ; 91 ; http://www.nrcresearchpress.com/ ; >
     au < frozen ; exists ; 2014 ; Canadian Journal of Physics Volume 92 ; 92 ; http://www.nrcresearchpress.com/ ; >
@@ -1115,7 +1115,7 @@
     au < manifest ; exists ; 2008 ; Canadian Journal of Physiology and Pharmacology Volume 86 ; 86 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 2009 ; Canadian Journal of Physiology and Pharmacology Volume 87 ; 87 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 2010 ; Canadian Journal of Physiology and Pharmacology Volume 88 ; 88 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 2011 ; Canadian Journal of Physiology and Pharmacology Volume 89 ; 89 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 2011 ; Canadian Journal of Physiology and Pharmacology Volume 89 ; 89 ; https://cdnsciencepub.com/ ; >
     au < finished ; finished ; 2012 ; Canadian Journal of Physiology and Pharmacology Volume 90 ; 90 ; http://www.nrcresearchpress.com/ ; >
     au < deepCrawl ; exists ; 2013 ; Canadian Journal of Physiology and Pharmacology Volume 91 ; 91 ; http://www.nrcresearchpress.com/ ; >
     au < frozen ; exists ; 2014 ; Canadian Journal of Physiology and Pharmacology Volume 92 ; 92 ; http://www.nrcresearchpress.com/ ; >
@@ -1287,8 +1287,8 @@
     au < manifest ; exists ; 2007 ; Canadian Journal of Zoology Volume 85 ; 85 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 2008 ; Canadian Journal of Zoology Volume 86 ; 86 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 2009 ; Canadian Journal of Zoology Volume 87 ; 87 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 2010 ; Canadian Journal of Zoology Volume 88 ; 88 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 2011 ; Canadian Journal of Zoology Volume 89 ; 89 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 2010 ; Canadian Journal of Zoology Volume 88 ; 88 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 2011 ; Canadian Journal of Zoology Volume 89 ; 89 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 2012 ; Canadian Journal of Zoology Volume 90 ; 90 ; http://www.nrcresearchpress.com/ ; >
     au < deepCrawl ; exists ; 2013 ; Canadian Journal of Zoology Volume 91 ; 91 ; http://www.nrcresearchpress.com/ ; >
     au < frozen ; exists ; 2014 ; Canadian Journal of Zoology Volume 92 ; 92 ; http://www.nrcresearchpress.com/ ; >
@@ -1384,7 +1384,7 @@
       au < manifest ; exists ; 2007 ; Genome Volume 50 ; 50 ; https://cdnsciencepub.com/ ; >
       au < manifest ; exists ; 2008 ; Genome Volume 51 ; 51 ; https://cdnsciencepub.com/ ; >
       au < manifest ; exists ; 2009 ; Genome Volume 52 ; 52 ; https://cdnsciencepub.com/ ; >
-      au < ready ; exists ; 2010 ; Genome Volume 53 ; 53 ; https://cdnsciencepub.com/ ; >
+      au < crawling ; exists ; 2010 ; Genome Volume 53 ; 53 ; https://cdnsciencepub.com/ ; >
       au < crawling ; exists ; 2011 ; Genome Volume 54 ; 54 ; https://cdnsciencepub.com/ ; >
       au < frozen ; exists ; 2012 ; Genome Volume 55 ; 55 ; http://www.nrcresearchpress.com/ ; >
       au < deepCrawl ; exists ; 2013 ; Genome Volume 56 ; 56 ; http://www.nrcresearchpress.com/ ; >
@@ -1526,8 +1526,8 @@
     au < manifest ; exists ; 2007 ; Canadian Journal of Animal Science Volume 87 ; 87 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 2008 ; Canadian Journal of Animal Science Volume 88 ; 88 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 2009 ; Canadian Journal of Animal Science Volume 89 ; 89 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 2010 ; Canadian Journal of Animal Science Volume 90 ; 90 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 2011 ; Canadian Journal of Animal Science Volume 91 ; 91 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 2010 ; Canadian Journal of Animal Science Volume 90 ; 90 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 2011 ; Canadian Journal of Animal Science Volume 91 ; 91 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 2012 ; Canadian Journal of Animal Science Volume 92 ; 92 ; http://www.nrcresearchpress.com/ ; >
     au < frozen ; exists ; 2013 ; Canadian Journal of Animal Science Volume 93 ; 93 ; http://www.nrcresearchpress.com/ ; >
     au < frozen ; exists ; 2014 ; Canadian Journal of Animal Science Volume 94 ; 94 ; http://www.nrcresearchpress.com/ ; >
@@ -1563,7 +1563,7 @@
     au < manifest ; exists ; 2007 ; Canadian Journal of Plant Science Volume 87 ; 87 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 2008 ; Canadian Journal of Plant Science Volume 88 ; 88 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 2009 ; Canadian Journal of Plant Science Volume 89 ; 89 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 2010 ; Canadian Journal of Plant Science Volume 90 ; 90 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 2010 ; Canadian Journal of Plant Science Volume 90 ; 90 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 2011 ; Canadian Journal of Plant Science Volume 91 ; 91 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 2012 ; Canadian Journal of Plant Science Volume 92 ; 92 ; http://www.nrcresearchpress.com/ ; >
     au < frozen ; exists ; 2013 ; Canadian Journal of Plant Science Volume 93 ; 93 ; http://www.nrcresearchpress.com/ ; >
@@ -1839,11 +1839,11 @@
     param[journal_id] = facets
 
     au < crawling ; exists ; 2016 ; FACETS Volume 1 ; 1 ; >
-    au < ready ; exists ; 2017 ; FACETS Volume 2 ; 2 ; >
-    au < ready ; exists ; 2018 ; FACETS Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2017 ; FACETS Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2018 ; FACETS Volume 3 ; 3 ; >
     au < crawling ; exists ; 2019 ; FACETS Volume 4 ; 4 ; >
-    au < ready ; exists ; 2020 ; FACETS Volume 5 ; 5 ; >
-    au < ready ; exists ; 2021 ; FACETS Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2020 ; FACETS Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2021 ; FACETS Volume 6 ; 6 ; >
     au < manifest ; exists ; 2022 ; FACETS Volume 7 ; 7 ; >
 
     }
