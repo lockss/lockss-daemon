@@ -164,11 +164,11 @@
     param[collection_id] = CFR
 
 
-    au < manifest ; 1807 ; Code of Federal Regulations 1807 ; 1807 ; https://www.govinfo.gov/ >
+    au < ready ; 1807 ; Code of Federal Regulations 1807 ; 1807 ; https://www.govinfo.gov/ >
     au < ready ; 2014 ; Code of Federal Regulations 2014 ; 2014 ; https://www.govinfo.gov/ >
-    au < manifest ; 2016 ; Code of Federal Regulations 2016 ; 2016 ; https://www.govinfo.gov/ >
-    au < manifest ; 2017 ; Code of Federal Regulations 2017 ; 2017 ; https://www.govinfo.gov/ >
-    au < manifest ; 2018 ; Code of Federal Regulations 2018 ; 2018 ; https://www.govinfo.gov/ >
+    au < ready ; 2016 ; Code of Federal Regulations 2016 ; 2016 ; https://www.govinfo.gov/ >
+    au < ready ; 2017 ; Code of Federal Regulations 2017 ; 2017 ; https://www.govinfo.gov/ >
+    au < ready ; 2018 ; Code of Federal Regulations 2018 ; 2018 ; https://www.govinfo.gov/ >
     au < released ; 2019 ; Code of Federal Regulations 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < ready ; 2020 ; Code of Federal Regulations 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < ready ; 2021 ; Code of Federal Regulations 2021 ; 2021 ; https://www.govinfo.gov/ >
@@ -521,9 +521,9 @@
     param[collection_id] = CRI
 
 
-    au < notReady ; 1998 ; Congressional Record Index 1998 ; 1998 ; https://www.govinfo.gov/ > #no substance
+    au < manifest ; 1998 ; Congressional Record Index 1998 ; 1998 ; https://www.govinfo.gov/ > #no substance
     au < ready ; 2019 ; Congressional Record Index 2019 ; 2019 ; https://www.govinfo.gov/ >
-    au < manifest ; 2020 ; Congressional Record Index 2020 ; 2020 ; https://www.govinfo.gov/ >
+    au < ready ; 2020 ; Congressional Record Index 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < manifest ; 2021 ; Congressional Record Index 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < manifest ; 2022 ; Congressional Record Index 2022 ; 2022 ; https://www.govinfo.gov/ >
 
@@ -767,9 +767,9 @@
     comment[0] = published from 1995 to 2005
     param[collection_id] = PAI
 
-    au < manifest ; 2007 ; Privacy Act Issuances 2007 ; 2007 ; https://www.govinfo.gov/ >
+    au < ready ; 2007 ; Privacy Act Issuances 2007 ; 2007 ; https://www.govinfo.gov/ >
     au < doesNotExist ; 2008 ; Privacy Act Issuances 2008 ; 2008 ; https://www.govinfo.gov/ >
-    au < manifest ; 2009 ; Privacy Act Issuances 2009 ; 2009 ; https://www.govinfo.gov/ >
+    au < ready ; 2009 ; Privacy Act Issuances 2009 ; 2009 ; https://www.govinfo.gov/ >
     au < manifest ; 2011 ; Privacy Act Issuances 2011 ; 2011 ; https://www.govinfo.gov/ >
     au < doNotProcess ; 2013 ; Privacy Act Issuances 2013 ; 2013 ; https://www.govinfo.gov/ >
     au < manifest ; 2015 ; Privacy Act Issuances 2015 ; 2015 ; https://www.govinfo.gov/ >
