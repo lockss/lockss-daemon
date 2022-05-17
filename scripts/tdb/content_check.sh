@@ -176,6 +176,15 @@ echo " "
 #echo "expect 89"
 #echo " "
 #
+# Find AUs possibly ready to be moved to retirement.
+echo "---------------------"
+echo "---------------------"
+echo "GLN. tdb files ready to retire?"
+grep -L -e exists -e released -e manifest -e testing -e expected tdb/prod/*.tdb
+echo "---------------------"
+echo "---------------------"
+echo "CLOCKSS. tdb files ready to retire?"
+grep -L -e exists -e crawling -e manifest -e testing -e expected tdb/clockssingest/*.tdb
 # Find issn problems in gln title database
 echo "---------------------"
 echo "---------------------"
