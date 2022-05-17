@@ -5,7 +5,7 @@
     
   >
 
-     plugin = org.lockss.plugin.silverchair.geoscienceworld.GeoscienceWorldSilverchairPlugin
+     plugin = org.lockss.plugin.silverchair.ada.AmericanDiabetesAssociationSilverchairPlugin
      implicit < status ; year ; param[year] ; name ; param[volume_name] >
      param[base_url] = https://diabetesjournals.org/
      
