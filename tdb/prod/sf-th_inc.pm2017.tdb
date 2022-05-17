@@ -1,18 +1,18 @@
 {
   publisher <
-    name = PUBLISHER_NAME
+    name = SF-TH, Inc.
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
-  #publisher_id:PUB_ID
+  #publisher_id:347
 
     {
     title <
       name = Science Fiction Studies ;
-      issn = ISSN ;
-      eissn = EISSN
+      issn = 2327-6207 ;
+      eissn = 2327-6207
 
     >
 

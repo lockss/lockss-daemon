@@ -1,18 +1,18 @@
 {
   publisher <
-    name = PUBLISHER_NAME
+    name = Historical Society of Southern California
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
-  #publisher_id:PUB_ID
+  #publisher_id:443
 
     {
     title <
       name = Southern California Quarterly ;
-      issn = ISSN ;
-      eissn = EISSN
+      issn = 0038-3929 ;
+      eissn = 2162-8637
 
     >
 

@@ -115,6 +115,20 @@
 
     {
     title <
+      name = Environment, Space, Place ;
+      issn = 2068-9616 ;
+      eissn = 2068-9616
+
+    >
+
+      attr[journal_id] = 800
+
+      au < manifest ; 2022 ; Environment, Space, Place Volume 14 [2022] ; 17114 >
+
+    }
+
+    {
+    title <
       name = Future Anterior ;
       issn = 1549-9715  ;
       eissn = 1934-6026  ;
