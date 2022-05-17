@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = National Institute of Environmental Health Sciences
+    name = National Institute of Environmental Health Sciences ;
+    info[platform] = Atypon. gov.gpo.access.permanent.plugin.environmentalhealthperspectives.EnvHealthPersp2022Plugin
   >
 
   {
@@ -14,13 +15,25 @@
     >
     
     rights = openaccess
-    # Ancient plugin name has an underscore in it
-    plugin = gov.gpo.access.permanent.plugin.environmentalhealthperspectives.Environmental_Health_PerspectivesPlugin
     param[base_url] = http://permanent.access.gpo.gov/lockss/Environmental_Health_Perspectives/
     implicit < status ; year ; name ; param[year] >  
 
+    {
+    # Ancient plugin name has an underscore in it
+    plugin = needs.plugin
+    #plugin = gov.gpo.access.permanent.plugin.environmentalhealthperspectives.EnvHealthPersp2022Plugin
+
+    au < exists ; 2006 ; Environmental Health Perspectives 2006 ; 2006 >
+    au < exists ; 2007 ; Environmental Health Perspectives 2007 ; 2007 >
+    au < exists ; 2008 ; Environmental Health Perspectives 2008 ; 2008 >
+    au < exists ; 2009 ; Environmental Health Perspectives 2009 ; 2009 >
+    }
+    {
+    # Ancient plugin name has an underscore in it
+    plugin = gov.gpo.access.permanent.plugin.environmentalhealthperspectives.Environmental_Health_PerspectivesPlugin
+
     au < down ; 2005 ; Environmental Health Perspectives 2005 ; 2005 >
-      
+    }
   }
   
 }
