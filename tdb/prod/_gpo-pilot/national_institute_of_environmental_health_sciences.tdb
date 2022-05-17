@@ -2,7 +2,7 @@
 
   publisher <
     name = National Institute of Environmental Health Sciences ;
-    info[platform] = Atypon. gov.gpo.access.permanent.plugin.environmentalhealthperspectives.EnvHealthPersp2022Plugin
+    info[platform] = Atypon. Manifest pages exist. gov.gpo.access.permanent.plugin.environmentalhealthperspectives.EHPAtypon2022Plugin
   >
 
   {
@@ -15,22 +15,41 @@
     >
     
     rights = openaccess
-    param[base_url] = http://permanent.access.gpo.gov/lockss/Environmental_Health_Perspectives/
-    implicit < status ; year ; name ; param[year] >  
 
     {
     # Ancient plugin name has an underscore in it
-    plugin = needs.plugin
-    #plugin = gov.gpo.access.permanent.plugin.environmentalhealthperspectives.EnvHealthPersp2022Plugin
+    plugin = gov.gpo.access.permanent.plugin.environmentalhealthperspectives.GenericAtyponPlugin  #This is a placeholder name
+    #plugin = gov.gpo.access.permanent.plugin.environmentalhealthperspectives.EHPAtypon2022Plugin #This is a suggested name.
+    param[base_url] = https://ehp.niehs.nih.gov/
+    implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2006 ; Environmental Health Perspectives 2006 ; 2006 >
-    au < exists ; 2007 ; Environmental Health Perspectives 2007 ; 2007 >
-    au < exists ; 2008 ; Environmental Health Perspectives 2008 ; 2008 >
-    au < exists ; 2009 ; Environmental Health Perspectives 2009 ; 2009 >
+    param[journal_id] = ehp
+
+    au < manifest ; 2004 ; Environmental Health Perspectives Volume 112 ; 112 >
+    au < manifest ; 2005 ; Environmental Health Perspectives Volume 113 ; 113 >
+    au < manifest ; 2006 ; Environmental Health Perspectives Volume 114 ; 114 >
+    au < manifest ; 2007 ; Environmental Health Perspectives Volume 115 ; 115 >
+    au < manifest ; 2008 ; Environmental Health Perspectives Volume 116 ; 116 >
+    au < manifest ; 2009 ; Environmental Health Perspectives Volume 117 ; 117 >
+    au < manifest ; 2010 ; Environmental Health Perspectives Volume 118 ; 118 >
+    au < manifest ; 2011 ; Environmental Health Perspectives Volume 119 ; 119 >
+    au < manifest ; 2012 ; Environmental Health Perspectives Volume 120 ; 120 >
+    au < manifest ; 2013 ; Environmental Health Perspectives Volume 121 ; 121 >
+    au < manifest ; 2014 ; Environmental Health Perspectives Volume 122 ; 122 >
+    au < manifest ; 2015 ; Environmental Health Perspectives Volume 123 ; 123 >
+    au < manifest ; 2016 ; Environmental Health Perspectives Volume 124 ; 124 >
+    au < manifest ; 2017 ; Environmental Health Perspectives Volume 125 ; 125 >
+    au < manifest ; 2018 ; Environmental Health Perspectives Volume 126 ; 126 >
+    au < manifest ; 2019 ; Environmental Health Perspectives Volume 127 ; 127 >
+    au < manifest ; 2020 ; Environmental Health Perspectives Volume 128 ; 128 >
+    au < manifest ; 2021 ; Environmental Health Perspectives Volume 129 ; 129 >
+    au < manifest ; 2022 ; Environmental Health Perspectives Volume 130 ; 130 >
     }
     {
     # Ancient plugin name has an underscore in it
     plugin = gov.gpo.access.permanent.plugin.environmentalhealthperspectives.Environmental_Health_PerspectivesPlugin
+    param[base_url] = http://permanent.access.gpo.gov/lockss/Environmental_Health_Perspectives/
+    implicit < status ; year ; name ; param[year] >  
 
     au < down ; 2005 ; Environmental Health Perspectives 2005 ; 2005 >
     }
