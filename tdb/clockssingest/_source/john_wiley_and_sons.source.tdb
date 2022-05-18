@@ -11,6 +11,20 @@
 
   {
     title <
+      name = John Wiley and Sons MRW Source Content
+    >
+
+      plugin = org.lockss.plugin.clockss.wiley.ClockssNEEDSPLUGINSourcePlugin
+      #param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/wileyMRW-released/
+      hidden[proxy] = DIRECT
+      implicit < status ; status2 ; year ; name ; param[directory] >
+
+      au < expected ; exists ; 2022 ; Wiley MRW Source Content 2022_01 ; 2022_01 >
+
+  }
+
+  {
+    title <
       name = John Wiley and Sons Books Source Content
     >
 
@@ -19,8 +33,8 @@
       hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[directory] >
 
-      au < readySource ; crawling ; 2022 ; Wiley Source Content 2022_01 ; 2022_01 >
-      au < readySource ; crawling ; 2022 ; Wiley Source Content 2022_02 ; 2022_02 >
+      au < readySource ; crawling ; 2022 ; Wiley Books Source Content 2022_01 ; 2022_01 >
+      au < readySource ; crawling ; 2022 ; Wiley Books Source Content 2022_02 ; 2022_02 >
 
   }
 
