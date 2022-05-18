@@ -42,6 +42,8 @@
 
 package org.lockss.laaws.client;
 
+import static com.ibm.icu.text.PluralRules.Operand.e;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -81,23 +83,15 @@ import javax.net.ssl.SSLSession;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.TrustManagerFactory;
 import javax.net.ssl.X509TrustManager;
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.Headers;
-import okhttp3.Interceptor;
-import okhttp3.MediaType;
-import okhttp3.MultipartBody;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.RequestBody;
-import okhttp3.Response;
+import okhttp3.*;
 import okhttp3.internal.http.HttpMethod;
 import okhttp3.internal.tls.OkHostnameVerifier;
 import okhttp3.logging.HttpLoggingInterceptor;
 import okhttp3.logging.HttpLoggingInterceptor.Level;
 import okio.BufferedSink;
 import okio.Okio;
-import org.lockss.laaws.MultipartFileResponse;
+import org.apache.commons.io.IOUtils;
+import org.lockss.laaws.model.rs.ArtifactData;
 import org.lockss.laaws.V2AuMover.DigestCachedUrl;
 import org.lockss.laaws.client.auth.ApiKeyAuth;
 import org.lockss.laaws.client.auth.Authentication;
@@ -885,11 +879,24 @@ public class V2RestClient {
       // Handle file downloading.
       return (T) downloadFileFromResponse(response);
     }
-    else if (returnType.equals(MultipartFileResponse.class)) {
-      File contentFile = downloadFileFromResponse(response);
-      return (T) new MultipartFileResponse(contentFile, response.headers());
+    else if (returnType.equals(ArtifactData.class)) {
+      MultipartReader reader = null;
+      try {
+        if (response.body() != null) {
+          reader = new MultipartReader(response.body());
+          return (T) new ArtifactData(reader, response.headers());
+        }
+        return null;
+      }
+      catch (IOException ex) {
+        throw new ApiException("Artifact Data is unreadable: " + response);
+      }
+      finally {
+        if(reader != null) {
+          IOUtils.closeQuietly(reader);
+        }
+      }
     }
-
     String respBody;
     try {
       if (response.body() != null) {

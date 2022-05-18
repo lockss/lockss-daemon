@@ -76,7 +76,6 @@ public class CuChecker extends Worker {
   void compareCuToArtifact(CachedUrl cu, Artifact artifact) {
     Long collectionDate = null;
     ArtifactData artifactData=null;
-    MultipartFileResponse mfr=null;
     try {
       String fetchTime =
           cu.getProperties().getProperty(CachedUrl.PROPERTY_FETCH_TIME);
@@ -96,10 +95,9 @@ public class CuChecker extends Worker {
       }
       if ( isMatch && auMover.isCompareBytes()) {
         log.debug3("Fetching  content for byte compare");
-        mfr = collectionsApi.getMultipartArtifact(collection,
+        artifactData = collectionsApi.getMultipartArtifact(collection,
             artifact.getId(),
             "ALWAYS");
-        artifactData = new ArtifactData(mfr.getMimeMultipart());
         log.debug3("Successfully fetched Artifact Data");
         isMatch = IOUtils.contentEquals(artifactData.getInputStream(),
             cu.getUncompressedInputStream());
@@ -114,7 +112,7 @@ public class CuChecker extends Worker {
         ctrs.incr(CounterType.ARTIFACTS_VERIFIED);
         // stats to update when available
         ctrs.add(CounterType.CONTENT_BYTES_VERIFIED, artifactData.getContentLength());
-        ctrs.add(CounterType.BYTES_VERIFIED, mfr.getSize()); // http response total bytes
+        ctrs.add(CounterType.BYTES_VERIFIED, artifactData.getSize()); // http response total bytes
       }
     }
     catch (ApiException | IOException ex) {
@@ -128,9 +126,6 @@ public class CuChecker extends Worker {
       AuUtil.safeRelease(cu);
       if(artifactData !=null) {
         artifactData.release();
-      }
-      if(mfr != null) {
-        mfr.delete();
       }
     }
   }

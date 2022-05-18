@@ -49,7 +49,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.lockss.laaws.MultipartFileResponse;
+import org.lockss.laaws.model.rs.ArtifactData;
 import org.lockss.laaws.V2AuMover.DigestCachedUrl;
 import org.lockss.laaws.client.*;
 import org.lockss.laaws.model.rs.Artifact;
@@ -409,7 +409,7 @@ public class StreamingCollectionsApi extends CollectionsApi {
    * @param collectionid   Collection containing the artifact (required)
    * @param artifactid     Identifier of the artifact (required)
    * @param includeContent Controls whether to include the artifact content part in multipart response (optional, default to ALWAYS)
-   * @return MultipartFileResponse
+   * @return ArtifactData
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
    * @http.response.details
   <table summary="Response Details" border="1">
@@ -421,9 +421,9 @@ public class StreamingCollectionsApi extends CollectionsApi {
    * <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
    * </table>
    */
-  public MultipartFileResponse getMultipartArtifact(String collectionid, String artifactid, String includeContent)
+  public ArtifactData getMultipartArtifact(String collectionid, String artifactid, String includeContent)
       throws ApiException {
-    ApiResponse<MultipartFileResponse> localVarResp = getMultipartArtifactWithHttpInfo(collectionid, artifactid,
+    ApiResponse<ArtifactData> localVarResp = getMultipartArtifactWithHttpInfo(collectionid, artifactid,
         includeContent);
     return localVarResp.getData();
   }
@@ -434,7 +434,7 @@ public class StreamingCollectionsApi extends CollectionsApi {
    * @param collectionid   Collection containing the artifact (required)
    * @param artifactid     Identifier of the artifact (required)
    * @param includeContent Controls whether to include the artifact content part in multipart response (optional, default to ALWAYS)
-   * @return ApiResponse&lt;MultiPartMultipartFileResponseResponse&gt;
+   * @return ApiResponse&lt;ArtifactData&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
    * @http.response.details
   <table summary="Response Details" border="1">
@@ -446,11 +446,11 @@ public class StreamingCollectionsApi extends CollectionsApi {
    * <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
    * </table>
    */
-  public ApiResponse<MultipartFileResponse> getMultipartArtifactWithHttpInfo(String collectionid, String artifactid,
+  public ApiResponse<ArtifactData> getMultipartArtifactWithHttpInfo(String collectionid, String artifactid,
       String includeContent) throws ApiException {
     okhttp3.Call localVarCall = getMultipartArtifactValidateBeforeCall(collectionid, artifactid,
         includeContent, null);
-    Type localVarReturnType = new TypeToken<MultipartFileResponse>() {
+    Type localVarReturnType = new TypeToken<ArtifactData>() {
     }.getType();
     return apiClient.execute(localVarCall, localVarReturnType);
   }
@@ -475,11 +475,11 @@ public class StreamingCollectionsApi extends CollectionsApi {
    * </table>
    */
   public okhttp3.Call getMultipartArtifactAsync(String collectionid, String artifactid,
-      String includeContent, final ApiCallback<MultipartFileResponse> _callback) throws ApiException {
+      String includeContent, final ApiCallback<ArtifactData> _callback) throws ApiException {
 
     okhttp3.Call localVarCall = getMultipartArtifactValidateBeforeCall(collectionid, artifactid,
         includeContent, _callback);
-    Type localVarReturnType = new TypeToken<MultipartFileResponse>() {
+    Type localVarReturnType = new TypeToken<ArtifactData>() {
     }.getType();
     apiClient.executeAsync(localVarCall, localVarReturnType, _callback);
     return localVarCall;

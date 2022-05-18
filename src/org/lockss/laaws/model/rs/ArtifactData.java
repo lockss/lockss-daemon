@@ -32,11 +32,17 @@ package org.lockss.laaws.model.rs;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.net.URI;
-import javax.mail.BodyPart;
-import javax.mail.internet.MimeMultipart;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import okhttp3.Headers;
+import okhttp3.MultipartReader;
+import okhttp3.MultipartReader.Part;
+import okio.BufferedSink;
+import okio.Okio;
+import okio.Source;
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.io.input.CountingInputStream;
 import org.apache.commons.lang3.StringUtils;
@@ -45,7 +51,7 @@ import org.apache.http.impl.io.HttpTransportMetricsImpl;
 import org.apache.http.impl.io.SessionInputBufferImpl;
 import org.apache.http.message.BasicLineParser;
 import org.lockss.laaws.CuChecker;
-import org.lockss.util.EofRememberingInputStream;
+import org.lockss.util.FileUtil;
 import org.lockss.util.Logger;
 import org.springframework.http.HttpHeaders;
 
@@ -54,7 +60,6 @@ import org.springframework.http.HttpHeaders;
  * LOCKSS Repository.
  * <br>
  * Reusability and release:<ul>
- * <li>{@link #getInputStream()} may be called only once.</li>
  * <li>Once an ArtifactData is obtained, it <b>must</b> be released (by
  * calling {@link #release()}, whether or not {@link #getInputStream()} has
  * been called.
@@ -92,14 +97,11 @@ public class ArtifactData implements AutoCloseable {
 
   // Artifact data stream
   private InputStream artifactStream;
-  private CountingInputStream cis;
-  private EofRememberingInputStream eofis;
 
   // Artifact data properties
   private HttpHeaders artifactMetadata;
   private StatusLine httpStatus;
   private InputStream origInputStream;
-  private boolean hadAnInputStream = false;
   private long contentLength = -1;
   private String contentDigest;
 
@@ -113,66 +115,92 @@ public class ArtifactData implements AutoCloseable {
 
   private boolean isReleased;
 
-   public ArtifactData(MimeMultipart multipart) throws IOException {
-     ObjectMapper mapper = new ObjectMapper();
-     mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-    try {
-      // Assemble ArtifactData object from multipart response parts
-      BodyPart part;
-      int numParts = multipart.getCount();
-      log.debug3("Found " + numParts + " in Multipart Message");
-      for (int i = 0; i < numParts; i++) {
-        part = multipart.getBodyPart(i);
-        String[] dispositions = part.getHeader(CONTENT_DISPOSITION);
-        String disposition = dispositions[0];
+  Headers respHeaders;
+  File contentFile;
+
+  long artifactDataSize;
+
+  public ArtifactData(MultipartReader mpReader, Headers respHeaders) throws IOException {
+    this.respHeaders = respHeaders;
+    artifactDataSize = respHeaders.byteCount();
+    ObjectMapper mapper = new ObjectMapper();
+    mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+    while (true) {
+      try {
+        Part part = mpReader.nextPart();
+        if (part == null)
+          break;
+        CountingInputStream cis;
+        Headers partHdrs = part.headers();
+        String disposition = partHdrs.get(CONTENT_DISPOSITION);
+        artifactDataSize += partHdrs.byteCount();
+
         if (disposition.contains(MULTIPART_ARTIFACT_REPO_PROPS)) {
-          HttpHeaders headers = mapper.readValue(part.getInputStream(), HttpHeaders.class);
+          cis = new CountingInputStream(part.body().inputStream());
+          HttpHeaders hdrs = mapper.readValue(cis, HttpHeaders.class);
           // Set ArtifactIdentifier
           ArtifactIdentifier id = new ArtifactIdentifier(
-              headers.getFirst(ARTIFACT_ID_KEY),
-              headers.getFirst(ARTIFACT_COLLECTION_KEY),
-              headers.getFirst(ARTIFACT_AUID_KEY),
-              headers.getFirst(ARTIFACT_URI_KEY),
-              Integer.valueOf(headers.getFirst(ARTIFACT_VERSION_KEY))
+              hdrs.getFirst(ARTIFACT_ID_KEY),
+              hdrs.getFirst(ARTIFACT_COLLECTION_KEY),
+              hdrs.getFirst(ARTIFACT_AUID_KEY),
+              hdrs.getFirst(ARTIFACT_URI_KEY),
+              Integer.valueOf(hdrs.getFirst(ARTIFACT_VERSION_KEY))
           );
           this.identifier = id;
-          String committedHeaderValue = headers.getFirst(ARTIFACT_STATE_COMMITTED);
-          String deletedHeaderValue = headers.getFirst(ARTIFACT_STATE_DELETED);
+          String committedHeaderValue = hdrs.getFirst(ARTIFACT_STATE_COMMITTED);
+          String deletedHeaderValue = hdrs.getFirst(ARTIFACT_STATE_DELETED);
           if (!(StringUtils.isEmpty(committedHeaderValue) || StringUtils.isEmpty(
               deletedHeaderValue))) {
             this.artifactRepositoryState = new ArtifactRepositoryState(
                 id,
-                Boolean.parseBoolean(headers.getFirst(ARTIFACT_STATE_COMMITTED)),
-                Boolean.parseBoolean(headers.getFirst(ARTIFACT_STATE_DELETED))
+                Boolean.parseBoolean(hdrs.getFirst(ARTIFACT_STATE_COMMITTED)),
+                Boolean.parseBoolean(hdrs.getFirst(ARTIFACT_STATE_DELETED))
             );
           }
           // Set misc. artifact properties
-          this.contentLength = Long.parseLong(headers.getFirst(ARTIFACT_LENGTH_KEY));
-          this.contentDigest = headers.getFirst(ARTIFACT_DIGEST_KEY);
+          this.contentLength = Long.parseLong(hdrs.getFirst(ARTIFACT_LENGTH_KEY));
+          this.contentDigest = hdrs.getFirst(ARTIFACT_DIGEST_KEY);
+          artifactDataSize += cis.getByteCount();
+          part.close();
         }
         else if (disposition.contains(MULTIPART_ARTIFACT_HEADER)) {
-          this.artifactMetadata = mapper.readValue(part.getInputStream(), HttpHeaders.class);
+          cis = new CountingInputStream(part.body().inputStream());
+          this.artifactMetadata = mapper.readValue(cis, HttpHeaders.class);
+          artifactDataSize += cis.getByteCount();
+          part.close();
         }
         else if (disposition.contains(MULTIPART_ARTIFACT_HTTP_STATUS)) {
+          cis = new CountingInputStream(part.body().inputStream());
           // Create a SessionInputBuffer and bind the InputStream from the multipart
           SessionInputBufferImpl buffer = new SessionInputBufferImpl(new HttpTransportMetricsImpl(),
               4096);
-          buffer.bind(part.getInputStream());
+          buffer.bind(cis);
           // Read and parse HTTP status line
           StatusLine httpStatus = BasicLineParser.parseStatusLine(buffer.readLine(), null);
           this.setHttpStatus(httpStatus);
+          artifactDataSize += cis.getByteCount();
+          part.close();
         }
         else if (disposition.contains(MULTIPART_ARTIFACT_CONTENT)) {
-          setInputStream(part.getInputStream());
+          cis = new CountingInputStream(part.body().inputStream());
+          contentFile = fileFromContentDisposition(disposition);
+          BufferedSink sink = Okio.buffer(Okio.sink(contentFile));
+          sink.writeAll(Okio.buffer(Okio.source(cis)));
+          contentLength = cis.getByteCount();
+          artifactDataSize += contentLength;
+          sink.close();
+          part.close();
         }
       }
-    }
-    catch (Exception ex) {
-      log.error("Unable to read ArtifactData",ex);
+      catch (Exception ex) {
+        log.error("Unable to read ArtifactData",ex);
+        throw new IOException("Unable to read ArtifactData", ex);
+      }
     }
   }
 
-     /**
+
+  /**
    * Returns additional key-value properties associated with this artifact.
    *
    * @return A {@code HttpHeaders} containing this artifact's additional properties.
@@ -183,58 +211,6 @@ public class ArtifactData implements AutoCloseable {
 
   public void setMetadata(HttpHeaders headers) {
     this.artifactMetadata = headers;
-  }
-
-  /**
-   * Returns true if an InputStream is available.
-   *
-   * @return true if this artifact's byte stream is available
-   */
-  public boolean hasContentInputStream() {
-    return origInputStream != null;
-  }
-
-  /**
-   * Returns true if this ArtifactData originally had an InputStream.  Used
-   * for stats
-   */
-  public boolean hadAnInputStream() {
-    return hadAnInputStream;
-  }
-
-
-  /**
-   * Returns this artifact's byte stream in a one-time use {@code InputStream}.
-   *
-   * @return An {@code InputStream} containing this artifact's byte stream.
-   */
-  public synchronized InputStream getInputStream() {
-    // Comment in to log creation point of unused InputStreams
-
-    // Wrap the stream in a DigestInputStream
-    if (!hadAnInputStream) {
-      throw new IllegalStateException(
-          "Attempt to get InputStream from ArtifactData that was created without one");
-    }
-    if (origInputStream == null) {
-      throw new IllegalStateException(
-          "Attempt to get InputStream from ArtifactData whose InputStream has been used");
-    }
-    cis = new CountingInputStream(origInputStream);
-    eofis = new EofRememberingInputStream(cis);
-    artifactStream = eofis;
-    origInputStream = null;
-    InputStream res = artifactStream;
-    artifactStream = null;
-    return res;
-
-  }
-
-  public void setInputStream(InputStream inputStream) {
-    if (inputStream != null) {
-      this.origInputStream = inputStream;
-      hadAnInputStream = true;
-    }
   }
 
   /**
@@ -271,9 +247,30 @@ public class ArtifactData implements AutoCloseable {
   }
 
   /**
+   * Returns this artifact's byte stream in a one-time use {@code InputStream}.
+   *
+   * @return An {@code InputStream} containing this artifact's byte stream.
+   */
+  public synchronized InputStream getInputStream() {
+    // Comment in to log creation point of unused InputStreams
+    if (contentFile != null && contentFile.exists() && contentFile.canRead()) {
+      try {
+        artifactStream = new BufferedInputStream(new FileInputStream(contentFile));
+        return artifactStream;
+      }
+      catch (FileNotFoundException ex) {
+        throw new IllegalStateException(
+            "Attempt to get InputStream from ArtifactData with no data.");
+      }
+    }
+    return null;
+  }
+
+  /**
    * Returns the repository state information for this artifact data.
    *
-   * @return A {@code RepositoryArtifactMetadata} containing the repository state information for this artifact data.
+   * @return A {@code RepositoryArtifactMetadata} containing the repository state information for
+   * this artifact data.
    */
   public ArtifactRepositoryState getArtifactRepositoryState() {
     return artifactRepositoryState;
@@ -282,7 +279,8 @@ public class ArtifactData implements AutoCloseable {
   /**
    * Sets the repository state information for this artifact data.
    *
-   * @param metadata A {@code RepositoryArtifactMetadata} containing the repository state information for this artifact.
+   * @param metadata A {@code RepositoryArtifactMetadata} containing the repository state
+   * information for this artifact.
    * @return this ArtifactData object
    */
   public ArtifactData setArtifactRepositoryState(ArtifactRepositoryState metadata) {
@@ -320,12 +318,6 @@ public class ArtifactData implements AutoCloseable {
   }
 
   public long getContentLength() {
-    if(cis != null) {
-      contentLength = cis.getByteCount();
-    }
-    if (contentLength < 0) {
-      throw new RuntimeException("Content length has not been set");
-    }
     return contentLength;
   }
 
@@ -336,8 +328,7 @@ public class ArtifactData implements AutoCloseable {
   /**
    * Provides the artifact collection date.
    *
-   * @return a long with the artifact collection date in milliseconds since
-   * the epoch.
+   * @return a long with the artifact collection date in milliseconds since the epoch.
    */
   public long getCollectionDate() {
     return collectionDate;
@@ -346,8 +337,8 @@ public class ArtifactData implements AutoCloseable {
   /**
    * Saves the artifact collection date.
    *
-   * @param collectionDate A long with the artifact collection date in milliseconds since
-   *                       the epoch.
+   * @param collectionDate A long with the artifact collection date in milliseconds since the
+   * epoch.
    */
   public void setCollectionDate(long collectionDate) {
     if (collectionDate >= 0) {
@@ -365,22 +356,11 @@ public class ArtifactData implements AutoCloseable {
         + getCollectionDate() + "]";
   }
 
-  public long getBytesRead() {
-    if (!eofis.isAtEof()) {
-      throw new RuntimeException("Content length has not been computed");
-    }
-    return cis.getByteCount();
-  }
-
-
-
   @Override
   public void close() throws IOException {
-    if (hasContentInputStream()) {
-      origInputStream.close();
-      origInputStream = null;
+    if (artifactStream != null) {
+      IOUtils.close(artifactStream);
     }
-
   }
 
   /**
@@ -388,8 +368,11 @@ public class ArtifactData implements AutoCloseable {
    */
   public synchronized void release() {
     if (!isReleased) {
-      IOUtils.closeQuietly(origInputStream);
-      artifactStream = null;
+      IOUtils.closeQuietly(artifactStream);
+      if(contentFile != null) {
+        FileUtil.safeDeleteFile(contentFile);
+        contentFile = null;
+      }
       isReleased = true;
     }
   }
@@ -401,6 +384,55 @@ public class ArtifactData implements AutoCloseable {
 
   public void setStoredDate(long storedDate) {
     this.storedDate = storedDate;
+  }
+
+   public long  getSize() {
+    return artifactDataSize;
+  }
+
+  File fileFromContentDisposition(String contentDisposition) throws IOException{
+    String filename = null;
+    if (contentDisposition != null && !"".equals(contentDisposition)) {
+      // Get filename from the Content-Disposition header.
+      Pattern pattern = Pattern.compile("filename=['\"]?([^'\"\\s]+)['\"]?");
+      Matcher matcher = pattern.matcher(contentDisposition);
+      if (matcher.find()) {
+        filename = sanitizeFilename(matcher.group(1));
+      }
+    }
+
+    String prefix = null;
+    String suffix = null;
+    if (filename == null) {
+      prefix = "download-";
+      suffix = "";
+    }
+    else {
+      int pos = filename.lastIndexOf(".");
+      if (pos == -1) {
+        prefix = filename + "-";
+      }
+      else {
+        prefix = filename.substring(0, pos) + "-";
+        suffix = filename.substring(pos);
+      }
+      // Files.createTempFile requires the prefix to be at least three characters long
+      if (prefix.length() < 3) {
+        prefix = "download-";
+      }
+      return FileUtil.createTempFile(prefix, suffix);
+    }
+    return null;
+  }
+
+  /**
+   * Sanitize filename by removing path. e.g. ../../sun.gif becomes sun.gif
+   *
+   * @param filename The filename to be sanitized
+   * @return The sanitized filename
+   */
+  public String sanitizeFilename(String filename) {
+    return filename.replaceAll(".*[/\\\\]", "");
   }
 
 }
