@@ -10,12 +10,10 @@ echo "---------------------"
 echo "---------------------"
 echo "*Status typos gln: "
 scripts/tdb/tdbout -t status tdb/prod/ | sort | uniq -c | grep -vw manifest | grep -vw released | grep -vw expected | grep -vw exists | grep -vw testing | grep -vw wanted | grep -vw ready | grep -vw down | grep -vw superseded | grep -vw doNotProcess | grep -vw notReady | grep -vw doesNotExist
+echo "*Status typos usdocs: "
+scripts/tdb/tdbout -t status tdb/usdocspln/ | sort | uniq -c | grep -vw manifest | grep -vw released | grep -vw expected | grep -vw exists | grep -vw testing | grep -vw wanted | grep -vw down | grep -vw superseded | grep -vw doNotProcess | grep -vw notReady | grep -vw doesNotExist
 echo "*Status variations clockssingest: "
 scripts/tdb/tdbout -c status,status2 tdb/clockssingest/ | sort | uniq -c | sort -n | grep -vw "manifest,exists" | grep -vw "crawling,exists" | grep -vw "finished,crawling" | grep -vw "exists,exists" | grep -vw "down,crawling" | grep -vw "doNotProcess,doNotProcess" | grep -vw "expected,exists" | grep -vw "testing,exists" | grep -vw "notReady,exists" | grep -vw "ingNotReady,exists" | grep -vw "zapped,finished" | grep -vw "doesNotExist,doesNotExist"
-#echo "*Status typos ibictpln: "
-#scripts/tdb/tdbout -t status tdb/ibictpln/ | grep -vx manifest | grep -vx released | grep -vx expected | grep -vx exists | grep -vx testing | grep -vx wanted | grep -vx ready | grep -vx down | grep -vx superseded | grep -vx doNotProcess | grep -vx notReady | grep -vx doesNotExist
-#echo "*Status typos coppulpln: "
-#scripts/tdb/tdbout -t status tdb/coppulpln/ | grep -vx manifest | grep -vx released | grep -vx expected | grep -vx exists | grep -vx testing | grep -vx wanted | grep -vx ready | grep -vx down | grep -vx superseded | grep -vx doNotProcess | grep -vx notReady | grep -vx doesNotExist
 #
 # Find plugins listed in tdb files, that don't exist
 echo "---------------------"
@@ -114,28 +112,6 @@ echo "Clockss. Duplicate Released Names. Commented out."
 echo "----------------------"
 ./scripts/tdb/tdbout -Y -t status tdb/clockssingest/ | sort | uniq -c
 echo " "
-#
-# Find duplicate auids in the ibictpln title database
-#echo "---------------------"
-#echo "---------------------"
-#scripts/tdb/tdbout -AXEa tdb/ibictpln/ | sort > $tpath/allAUs
-#uniq $tpath/allAUs > $tpath/dedupedAUs
-#allAUs=`cat $tpath/allAUs | wc -l`
-#uniqAUs=`cat $tpath/dedupedAUs | wc -l`
-#echo "IBICT. All AUids = $allAUs"
-#echo "IBICT. AUids without duplicates = $uniqAUs"
-#diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
-#
-# Find duplicate name/plugin pairs in the ibictpln title database
-#echo "---------------------"
-#scripts/tdb/tdbout -AXE -c plugin,name tdb/ibictpln/ | sort > $tpath/allAUs
-#uniq $tpath/allAUs > $tpath/dedupedAUs
-#allAUs=`cat $tpath/allAUs | wc -l`
-#uniqAUs=`cat $tpath/dedupedAUs | wc -l`
-#echo "IBICT. All plugin/names = $allAUs"
-#echo "IBICT. Plugin/names without duplicates = $uniqAUs"
-#diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
-#
 # Find number of AUs ready for release in the ibictpln title database
 #echo "----------------------"
 #./scripts/tdb/tdbout -Y -t status tdb/ibictpln/ | sort | uniq -c
