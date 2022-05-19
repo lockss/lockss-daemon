@@ -6823,7 +6823,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Combustion Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Combustion Volume 2018 ; 2018 ; 2018 ; >
     au < finished ; manifest ; 2019 ; Journal of Combustion Volume 2019 ; 2019 ; 2019 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2020 ; Journal of Combustion Volume 2020 ; 2020 ; 2020 ; >
+    au < finished ; manifest ; 2020 ; Journal of Combustion Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Journal of Combustion Volume 2021 ; 2021 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Journal of Combustion Volume 2022 ; 2022 ; 2022 ; >
 
@@ -6840,13 +6840,13 @@
     param[journal_id] = jca
     #Moved to archive
     
-    au < frozen ; exists ; 2013 ; Journal of Complex Analysis Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Complex Analysis Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Complex Analysis Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Complex Analysis Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Complex Analysis Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Complex Analysis Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Complex Analysis Volume 2018 ; 2018 ; 2018 ; >
-    au < frozen ; exists ; 2019 ; Journal of Complex Analysis Volume 2019 ; 2019 ; 2019 ; >
+    au < finished ; manifest ; 2019 ; Journal of Complex Analysis Volume 2019 ; 2019 ; 2019 ; reingest3.clockss.org:8083 >
     au < exists ; exists ; 2020 ; Journal of Complex Analysis Volume 2020 ; 2020 ; 2020 ; >
     au < expected ; exists ; 2021 ; Journal of Complex Analysis Volume 2021 ; 2021 ; 2021 ; >
     au < expected ; exists ; 2022 ; Journal of Complex Analysis Volume 2022 ; 2022 ; 2022 ; >
@@ -6864,7 +6864,7 @@
     param[journal_id] = jcs
     #Moved to archive
     
-    au < frozen ; exists ; 2013 ; Journal of Complex Systems Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Complex Systems Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Complex Systems Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Complex Systems Volume 2015 ; 2015 ; 2015 ; >
 
@@ -6881,7 +6881,7 @@
     param[journal_id] = jcomp
     #Moved to archive
     
-    au < frozen ; exists ; 2013 ; Journal of Composites Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Composites Volume 2013 ; 2013 ; 2013 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Composites Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Composites Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Composites Volume 2016 ; 2016 ; 2016 ; >
@@ -6899,7 +6899,7 @@
     param[journal_id] = jcengi
     #ceased publication in 2017
     
-    au < frozen ; exists ; 2013 ; Journal of Computational Engineering Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Computational Engineering Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Computational Engineering Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Computational Engineering Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Computational Engineering Volume 2016 ; 2016 ; 2016 ; >
@@ -6934,7 +6934,7 @@
     param[journal_id] = jcm
     #Moved to archive
     
-    au < frozen ; exists ; 2013 ; Journal of Computational Medicine Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Computational Medicine Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Computational Medicine Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Computational Medicine Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Computational Medicine Volume 2016 ; 2016 ; 2016 ; >
@@ -6952,7 +6952,7 @@
     param[journal_id] = jcmp
     #Moved to archive
     
-    au < frozen ; exists ; 2013 ; Journal of Computational Methods in Physics Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Computational Methods in Physics Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Computational Methods in Physics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Computational Methods in Physics Volume 2016 ; 2016 ; 2015 ; >
 
@@ -6973,14 +6973,14 @@
     au < manifest ; exists ; 2010 ; Journal of Computer Systems, Networks, and Communications Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Computer Networks and Communications Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Computer Networks and Communications Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Journal of Computer Networks and Communications Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Computer Networks and Communications Volume 2013 ; 2013 ; 2013 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Computer Networks and Communications Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Computer Networks and Communications Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Computer Networks and Communications Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Computer Networks and Communications Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Computer Networks and Communications Volume 2018 ; 2018 ; 2018 ; >
-    au < frozen ; exists ; 2019 ; Journal of Computer Networks and Communications Volume 2019 ; 2019 ; 2019 ; >
-    au < frozen ; exists ; 2020 ; Journal of Computer Networks and Communications Volume 2020 ; 2020 ; 2020 ; >
+    au < finished ; manifest ; 2019 ; Journal of Computer Networks and Communications Volume 2019 ; 2019 ; 2019 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; Journal of Computer Networks and Communications Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Journal of Computer Networks and Communications Volume 2021 ; 2021 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Journal of Computer Networks and Communications Volume 2022 ; 2022 ; 2022 ; >
 
@@ -6997,7 +6997,7 @@
     param[journal_id] = jcen
     #ceased publication in 2018
     
-    au < frozen ; exists ; 2013 ; Journal of Construction Engineering Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Construction Engineering Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Construction Engineering Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Construction Engineering Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Construction Engineering Volume 2016 ; 2016 ; 2016 ; >
@@ -7021,7 +7021,7 @@
     au < manifest ; exists ; 2010 ; Journal of Control Science and Engineering Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Control Science and Engineering Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Control Science and Engineering Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Journal of Control Science and Engineering Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Control Science and Engineering Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Control Science and Engineering Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Control Science and Engineering Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Control Science and Engineering Volume 2016 ; 2016 ; 2016 ; >
@@ -7045,7 +7045,7 @@
     param[journal_id] = jcrim
     #Moved to archive
     
-    au < frozen ; exists ; 2013 ; Journal of Criminology Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Criminology Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Criminology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Criminology Volume 2015 ; 2015 ; 2015 ; >
 
@@ -7078,7 +7078,7 @@
     param[journal_id] = jcrys
     #Moved to archive
     
-    au < frozen ; exists ; 2013 ; Journal of Crystallography Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Crystallography Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Crystallography Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Crystallography Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Crystallography Volume 2016 ; 2016 ; 2016 ; >
@@ -7123,7 +7123,7 @@
     au < manifest ; exists ; 2010 ; Experimental Diabetes Research Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Experimental Diabetes Research Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Experimental Diabetes Research Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Journal of Diabetes Research Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Diabetes Research Volume 2013 ; 2013 ; 2013 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Diabetes Research Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Diabetes Research Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Diabetes Research Volume 2016 ; 2016 ; 2016 ; >
@@ -7164,7 +7164,7 @@
     param[journal_id] = jdm
     #Moved to archive
     
-    au < frozen ; exists ; 2013 ; Journal of Discrete Mathematics Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Discrete Mathematics Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Discrete Mathematics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Discrete Mathematics Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Discrete Mathematics Volume 2016 ; 2016 ; 2016 ; >
@@ -7183,7 +7183,7 @@
     
     au < manifest ; exists ; 2011 ; Journal of Drug Delivery Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Drug Delivery Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Journal of Drug Delivery Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Drug Delivery Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Drug Delivery Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Drug Delivery Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Drug Delivery Volume 2016 ; 2016 ; 2016 ; >
@@ -7224,7 +7224,7 @@
     param[journal_id] = jeco
     #Moved to archive
     
-    au < frozen ; exists ; 2013 ; Journal of Ecosystems Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Ecosystems Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Ecosystems Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Ecosystems Volume 2015 ; 2015 ; 2015 ; >
 
@@ -7249,14 +7249,14 @@
     au < manifest ; exists ; 2010 ; Journal of Electrical and Computer Engineering Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Electrical and Computer Engineering Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Electrical and Computer Engineering Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Journal of Electrical and Computer Engineering Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Electrical and Computer Engineering Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Electrical and Computer Engineering Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Electrical and Computer Engineering Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Electrical and Computer Engineering Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Electrical and Computer Engineering Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Electrical and Computer Engineering Volume 2018 ; 2018 ; 2018 ; >
-    au < frozen ; exists ; 2019 ; Journal of Electrical and Computer Engineering Volume 2019 ; 2019 ; 2019 ; >
-    au < frozen ; exists ; 2020 ; Journal of Electrical and Computer Engineering Volume 2020 ; 2020 ; 2020 ; >
+    au < finished ; manifest ; 2019 ; Journal of Electrical and Computer Engineering Volume 2019 ; 2019 ; 2019 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; Journal of Electrical and Computer Engineering Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Journal of Electrical and Computer Engineering Volume 2021 ; 2021 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Journal of Electrical and Computer Engineering Volume 2022 ; 2022 ; 2022 ; >
 
