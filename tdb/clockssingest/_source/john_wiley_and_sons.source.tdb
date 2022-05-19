@@ -14,8 +14,9 @@
       name = John Wiley and Sons MRW Source Content
     >
 
-      plugin = org.lockss.plugin.clockss.wiley.ClockssNEEDSPLUGINSourcePlugin
-      #param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/wileyMRW-released/
+      plugin = org.lockss.plugin.clockss.wiley.ClockssWileyMRWSourcePlugin
+      #this is a test url, please update with prodution url when it is ready
+      #param[base_url] = https://clockss-test.lockss.org/sourcefiles/wileymrw-released/2022_01/
       hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[directory] >
 
