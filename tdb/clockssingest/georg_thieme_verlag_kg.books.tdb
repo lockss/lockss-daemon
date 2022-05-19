@@ -1513,7 +1513,7 @@
    au < finished ; finished ; 2018 ; 9783132407480 ; 9783132407558 ; 10.1055/b-005-145212 ; Erfahrungsschatz Neurologie (9783132407558) ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2018 ; 9781626236943 ; 9781626238640 ; 10.1055/b-005-143644 ; Facial Volumization (9781626238640) ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2018 ; 9783132422155 ; 9783132422186 ; 10.1055/b-005-145259 ; Hüftarthroskopie und gelenkerhaltende Chirurgie der Hüfte (9783132422186) ; reingest1.clockss.org:8082 >
-   au < exists ; exists ; 2018 ; 9783131181640 ; 9783132407749 ; 10.1055/b-005-145255 ; Innere Medizin (9783132407749) ; >
+   au < doesNotExist ; exists ; 2018 ; 9783131181640 ; 9783132407749 ; 10.1055/b-005-145255 ; Innere Medizin (9783132407749) ; >
    au < frozen ; exists ; 2018 ; 9783132422315 ; 9783132422346 ; 10.1055/b-005-145260 ; Mündliche Prüfung Anatomie (9783132422346) ; >
    au < frozen ; exists ; 2018 ; 9783132411531 ; 9783132411555 ; 10.1055/b-005-145246 ; Pädiatrie (9783132411555) ; >
    au < finished ; finished ; 2018 ; 9783132418974 ; 9783132419001 ; 10.1055/b-005-145249 ; Radiologie-Trainer Körperstamm, Innere Organe und Gefäße (9783132419001) ; reingest2.clockss.org:8085 >
@@ -1576,7 +1576,6 @@
    au < finished ; crawling ; 2015 ; 9783830412427 ; 9783131953735 ; 10.1055/b-003-117815 ; Krankheiten der Katze (9783131953735) ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2015 ; 9783830494416 ; 9783830490043 ; 10.1055/b-003-127008 ; Mykotherapie für Tiere (9783830490043) ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2015 ; 9783794530496 ; 9783132428003 ; 10.1055/b-005-148986 ; Notfallchirurgie bei Hund und Katze (9783132428003) ; reingest2.clockss.org:8085 >
-   ###au < testing ; exists ; 2015 ; 9781604067996 ; 9781804068014 ; 10.1055/b-002-98013 ; Principles and Practice of Pediatric Neurosurgery (9781804068014) ; > #duplicate AU
    au < finished ; crawling ; 2016 ; 9783131731319 ; 9783132402522 ; 10.1055/b-003-128286 ; Applications of Domino Transformations in Organic Synthesis 1 (9783132402522) ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2016 ; 9783794531394 ; 9783132427822 ; 10.1055/b-005-148983 ; KommunikationsSkills (9783132427822) ; reingest4.clockss.org:8082 >
    au < frozen ; exists ; 2016 ; 9783132400306 ; 9783132404052 ; 10.1055/b-004-129590 ; Kurzlehrbuch Physik (9783132404052) ; >
@@ -1589,7 +1588,6 @@
    au < frozen ; exists ; 2017 ; 9783132415577 ; 9783132415591 ; 10.1055/b-004-140695 ; Fallbuch Gynäkologie und Geburtshilfe (9783132415591) ; >
    au < finished ; crawling ; 2017 ; 9783794531110 ; 9783132427969 ; 10.1055/b-005-148996 ; HeimtierSkills (9783132427969) ; reingest3.clockss.org:8083 >
    au < frozen ; exists ; 2017 ; 9783132401129 ; 9783132417755 ; 10.1055/b-004-140694 ; Memorix Zahnmedizin (9783132417755) ; >
-   ###au < exists ; exists ; 2017 ; 9783131994417 ; 9783131994516 ; 10.1055/b-003-127183 ; MRT der Leber (9783131994516) ; > #duplicate AU
    au < finished ; crawling ; 2017 ; 9781626230033 ; 9781626230040 ; 10.1055/b-004-135640 ; Robotic Head and Neck Surgery (9781626230040) ; reingest5.clockss.org:8082 >
    au < frozen ; exists ; 2017 ;  ; 9783132413740 ; 10.1055/b-005-143306 ; Statistik (9783132413740) ; >
    au < finished ; crawling ; 2017 ; 9783794531127 ; 9783132427983 ; 10.1055/b-005-148981 ; Verhaltensberatung bei kleinen Heimtieren (9783132427983) ; reingest2.clockss.org:8085 >
@@ -2124,6 +2122,230 @@
    au < crawling ; exists ; 2021 ; 9783132408920 ; 9783132408951 ; 10.1055/b000000495 ; Triggerpunkte und Muskelfunktionsketten (9783132408951) ; >
    au < crawling ; exists ; 2021 ; 9781626237124 ; 9781626237131 ; 10.1055/b-006-163839 ; Video Atlas of Arthroscopic Rotator Cuff Repair (9781626237131) ; >
    au < crawling ; exists ; 2021 ; 9783132442429 ; 9783132442450 ; 10.1055/b000000528 ; Zahnärztliche Radiologie (9783132442450) ; >
+
+   au < manifest ; exists ; 2000 ; 9783135729046 ; 9783132408784 ; 10.1055/b-004-134413 ; Checkliste Urologie (9783132408784) ; >
+   au < manifest ; exists ; 2002 ; 9783131412119 ; 9783132408791 ; 10.1055/b-004-133323 ; Differenzialdiagnostik in der MRT (9783132408791) ; >
+   au < manifest ; exists ; 2002 ; 9783131261311 ; 9783132408258 ; 10.1055/b-004-133329 ; Kontaktlinsenkomplikationen (9783132408258) ; >
+   au < manifest ; exists ; 2003 ; 9783131005922 ; 9783132407565 ; 10.1055/b-004-132221 ; Orofaziale Dysfunktionen im Kindesalter (9783132407565) ; >
+   au < manifest ; exists ; 2004 ; 9783131291516 ; 9783132408838 ; 10.1055/b-004-133336 ; Praxis der Gynäkologie und Geburtshilfe (9783132408838) ; >
+   au < manifest ; exists ; 2004 ; 9783131312211 ; 9783132407589 ; 10.1055/b-004-132225 ; Stimmstörungen im Kindesalter (9783132407589) ; >
+   au < manifest ; exists ; 2005 ; 9783131403711 ; 9783132408241 ; 10.1055/b-004-133328 ; Augenärztliche Rehabilitation (9783132408241) ; >
+   au < manifest ; exists ; 2006 ; 9783131367426 ; 9783131980229 ; 10.1055/b-003-125762 ; Atlas der Mammadiagnostik (9783131980229) ; >
+   au < manifest ; exists ; 2006 ; 9783131411310 ; 9783132408814 ; 10.1055/b-004-133335 ; Herz und Gefäße (9783132408814) ; >
+   au < manifest ; exists ; 2006 ; 9783131432315 ; 9783132411340 ; 10.1055/b-004-135628 ; Orale Implantologie (9783132411340) ; >
+   au < manifest ; exists ; 2007 ; 9783131089120 ; 9783132408265 ; 10.1055/b-004-133330 ; Ganzkörper-Computertomographie: Spiral- und Multislice-CT (9783132408265) ; >
+   au < manifest ; exists ; 2007 ; 9783131427915 ; 9783132413412 ; 10.1055/b-004-138024 ; Krankheiten verstehen 1 (9783132413412) ; >
+   au < manifest ; exists ; 2007 ; 9783131442314 ; 9783132413429 ; 10.1055/b-004-138025 ; Krankheiten verstehen 2 (9783132413429) ; >
+   au < manifest ; exists ; 2007 ; 9783131434418 ; 9783132438675 ; 10.1055/b000000463 ; Kursbuch Spiroergometrie (9783132438675) ; >
+   au < manifest ; exists ; 2007 ; 9783136327067 ; 9783132413559 ; 10.1055/b-004-138033 ; Medikamentöse Therapie (9783132413559) ; >
+   au < manifest ; exists ; 2007 ; 9783830453345 ; 9783132446519 ; 10.1055/b000000673 ; Psychologie und Psychopathologie für Hebammen (9783132446519) ; >
+   au < manifest ; exists ; 2008 ; 9783131438713 ; 9783132414051 ; 10.1055/b-004-139114 ; Onkologische Pflege (9783132414051) ; >
+   au < manifest ; exists ; 2008 ; 9783131456618 ; 9783132409385 ; 10.1055/b-004-134454 ; Radiologische Diagnostik von Knochentumoren (9783132409385) ; >
+   au < manifest ; exists ; 2008 ; 9783131273161 ; 9783132411319 ; 10.1055/b-004-135631 ; Zahnärztliche Werkstoffe und ihre Verarbeitung (9783132411319) ; >
+   au < manifest ; exists ; 2009 ; 9783131478917 ; 9783132413344 ; 10.1055/b-004-138018 ; Endoskopieassistenz (9783132413344) ; >
+   au < manifest ; exists ; 2009 ; 9783131498519 ; 9783132413351 ; 10.1055/b-004-138019 ; EXPRESS Pflegewissen: Chirurgie und Orthopädie (9783132413351) ; >
+   au < manifest ; exists ; 2009 ; 9783131498113 ; 9783132413405 ; 10.1055/b-004-138020 ; EXPRESS Pflegewissen: Gesundheits- und Krankenpflege (9783132413405) ; >
+   au < manifest ; exists ; 2009 ; 9783131498410 ; 9783132413368 ; 10.1055/b-004-138022 ; EXPRESS Pflegewissen: Innere Medizin (9783132413368) ; >
+   au < manifest ; exists ; 2009 ; 9783131361424 ; 9783132414099 ; 10.1055/b-004-139118 ; Wundtherapie (9783132414099) ; >
+   au < manifest ; exists ; 2010 ; 9783131499219 ; 9783132409507 ; 10.1055/b-004-134436 ; Trainer Kinderradiologie  (9783132409507) ; >
+   au < manifest ; exists ; 2011 ; 9783830455066 ; 9783132446465 ; 10.1055/b000000659 ; Der Geburtsschmerz (9783132446465) ; >
+   au < manifest ; exists ; 2011 ; 9783134712049 ; 9783132408753 ; 10.1055/b-004-133331 ; Gelenke – Wirbelverbindungen (9783132408753) ; >
+   au < manifest ; exists ; 2011 ; 9783131407221 ; 9783132413436 ; 10.1055/b-004-138026 ; Gerontopsychiatrie für Pflegeberufe (9783132413436) ; >
+   au < manifest ; exists ; 2011 ; 9783131118639 ; 9783132413399 ; 10.1055/b-004-138029 ; Kinästhetik – Kommunikatives Bewegungslernen (9783132413399) ; >
+   au < manifest ; exists ; 2011 ; 9783131429421 ; 9783132413573 ; 10.1055/b-004-139106 ; Palliative Care (9783132413573) ; >
+   au < manifest ; exists ; 2011 ; 9783131397225 ; 9783132409422 ; 10.1055/b-004-134432 ; Praxiskurs MRT (9783132409422) ; >
+   au < manifest ; exists ; 2011 ; 9783830473817 ; 9783132427754 ; 10.1055/b-006-149728 ; TCM in der Sportmedizin (9783132427754) ; >
+   au < manifest ; exists ; 2012 ; 9783131695710 ; 9783132409293 ; 10.1055/b-004-134457 ; Differenzialdiagnosen in der pädiatrischen Radiologie (9783132409293) ; >
+   au < manifest ; exists ; 2012 ; 9783131611611 ; 9783132410466 ; 10.1055/b-004-135621 ; Kopf-Hals-Radiologie (9783132410466) ; >
+   au < manifest ; exists ; 2012 ; 9783131653314 ; 9783132409323 ; 10.1055/b-004-134453 ; Magnetresonanztomografie für MTRA/RT (9783132409323) ; >
+   au < manifest ; exists ; 2012 ; 9783131389725 ; 9783132413634 ; 10.1055/b-004-139113 ; Stoma- und Kontinenzberatung (9783132413634) ; >
+   au < manifest ; exists ; 2012 ; 9783131539618 ; 9783132409309 ; 10.1055/b-004-134402 ; Tumorerfassung (9783132409309) ; >
+   au < manifest ; exists ; 2013 ; 9783131003171 ; 9783132411333 ; 10.1055/b-004-135629 ; Alles Wissenswerte über Staat, Bürger, Recht (9783132411333) ; >
+   au < manifest ; exists ; 2013 ; 9783830474685 ; 9783132436015 ; 10.1055/b000000123 ; CMD in der Osteopathie (9783132436015) ; >
+   au < manifest ; exists ; 2013 ; 9783131479419 ; 9783132407497 ; 10.1055/b-004-132223 ; Diagnostik und Therapie der akuten Aphasie (9783132407497) ; >
+   au < manifest ; exists ; 2013 ; 9783830455400 ; 9783132446397 ; 10.1055/b000000661 ; Geburtsarbeit (9783132446397) ; >
+   au < manifest ; exists ; 2013 ; 9783131361325 ; 9783132411326 ; 10.1055/b-004-135630 ; Hygiene, Infektiologie, Mikrobiologie (9783132411326) ; >
+   au < manifest ; exists ; 2013 ; 9783131306425 ; 9783132411357 ; 10.1055/b-004-135627 ; Der MR-Trainer (9783132411357) ; >
+   au < manifest ; exists ; 2013 ; 9783830455042 ; 9783132446458 ; 10.1055/b000000658 ; Wochenbett- und Rückbildungsgymnastik (9783132446458) ; >
+   au < manifest ; exists ; 2014 ; 9783830492825 ; 9783132405837 ; 10.1055/b-004-129964 ; Bewährte Indikationen der Homöopathie in der Veterinärmedizin (9783132405837) ; >
+   au < manifest ; exists ; 2014 ; 9783830455370 ; 9783132446434 ; 10.1055/b000000656 ; Ernährungsberatung in Schwangerschaft und Stillzeit (9783132446434) ; >
+   au < manifest ; exists ; 2014 ; 9789382076674 ; 9789382076773 ; 10.1055/b000000666 ; Guidelines in Fracture Management (9789382076773) ; >
+   au < manifest ; exists ; 2014 ; 9789382076681 ; 9789382076780 ; 10.1055/b000000667 ; Guidelines in Fracture Management (9789382076780) ; >
+   au < manifest ; exists ; 2014 ; 9789382076575 ; 9789382076889 ; 10.1055/b000000697 ; K-wiring (9789382076889) ; >
+   au < manifest ; exists ; 2014 ; 9783830411444 ; 9783132405738 ; 10.1055/b-004-129948 ; Pathohistologie für die Tiermedizin (9783132405738) ; >
+   au < manifest ; exists ; 2014 ; 9783830455851 ; 9783132446410 ; 10.1055/b000000654 ; Schwangerenvorsorge durch Hebammen (9783132446410) ; >
+   au < manifest ; exists ; 2014 ; 9783830478614 ; 9783132427761 ; 10.1055/b-006-149726 ; Stretching und Beweglichkeit (9783132427761) ; >
+   au < manifest ; exists ; 2015 ; 9783132005211 ; 9783131975416 ; 10.1055/b-003-125842 ; Aktuelle psychiatrische Diagnostik (9783131975416) ; >
+   au < manifest ; exists ; 2015 ; 9789382076933 ; 9789385062070 ; 10.1055/b000000682 ; Atlas of Neurotology and Lateral Skull Base Surgery (9789385062070) ; >
+   au < manifest ; exists ; 2015 ; 9783794530472 ; 9783132432727 ; 10.1055/b-005-149008 ; Dosierungsvorschläge für Arzneimittel bei Hund und Katze (9783132432727) ; >
+   au < manifest ; exists ; 2015 ; 9783131390721 ; 9783131958723 ; 10.1055/b-003-106500 ; Der Echo-Guide (9783131958723) ; >
+   au < manifest ; exists ; 2015 ; 9783132002210 ; 9783131978615 ; 10.1055/b-003-117817 ; Fehler in der Urologie (9783131978615) ; >
+   au < manifest ; exists ; 2015 ; 9783830474838 ; 9783830479475 ; 10.1055/b-003-128225 ; Osteopathie von A-Z (9783830479475) ; >
+   au < manifest ; exists ; 2015 ; 9781604067996 ; 9781804068014 ; 10.1055/b-002-98013 ; Principles and Practice of Pediatric Neurosurgery (9781804068014) ; >
+   au < manifest ; exists ; 2015 ; 9789382076896 ; 9789382076902 ; 10.1055/b000000663 ; Progress in Clinical Neurosciences (9789382076902) ; >
+   au < manifest ; exists ; 2015 ; 9783132030718 ; 9783132066212 ; 10.1055/b-003-125872 ; Schlaglicht Augenheilkunde: Hornhaut, Sklera, Bindehaut (9783132066212) ; >
+   au < manifest ; exists ; 2015 ; 9783132013919 ; 9783131952813 ; 10.1055/b-003-117818 ; SOPs in der Urologie (9783131952813) ; >
+   au < manifest ; exists ; 2015 ; 9783830455912 ; 9783132446427 ; 10.1055/b000000655 ; Wochenbettbetreuung in der Klinik und zu Hause (9783132446427) ; >
+   au < manifest ; exists ; 2016 ; 9789385062339 ; 9789385062544 ; 10.1055/b000000675 ; Basics of Vitrectomy (9789385062544) ; >
+   au < manifest ; exists ; 2016 ; 9783132406155 ; 9783132411807 ; 10.1055/b-004-135635 ; Bildgebende Diagnostik in Neurologie und Neurochirurgie (9783132411807) ; >
+   au < manifest ; exists ; 2016 ; 9783131714114 ; 9783131979315 ; 10.1055/b-003-125859 ; Expertise Orthopädische Rheumatologie (9783131979315) ; >
+   au < manifest ; exists ; 2016 ; 9783132402409 ; 9783132402430 ; 10.1055/b-004-132207 ; Fachwortschatz Medizin Englisch (9783132402430) ; >
+   au < manifest ; exists ; 2016 ; 9789385062001 ; 9789385062216 ; 10.1055/b000000742 ; Guidelines in Fracture Management (9789385062216) ; >
+   au < manifest ; exists ; 2016 ; 9789385062094 ; 9789385062223 ; 10.1055/b000000741 ; Guidelines in Fracture Management (9789385062223) ; >
+   au < manifest ; exists ; 2016 ; 9783131343345 ; 9783132066540 ; 10.1055/b-003-125701 ; Psychopharmakotherapie in Schwangerschaft und Stillzeit (9783132066540) ; >
+   au < manifest ; exists ; 2016 ; 9789385062490 ; 9789385062506 ; 10.1055/b000000807 ; Surgery of Brachial Plexus (9789385062506) ; >
+   au < manifest ; exists ; 2017 ; 9783135315072 ; 9783132414396 ; 10.1055/b-004-140242 ; Allgemeine Psychopathologie (9783132414396) ; >
+   au < manifest ; exists ; 2017 ; 9783132412842 ; 9783132416536 ; 10.1055/b-004-140679 ; Allgemeine und Spezielle Krankheitslehre (9783132416536) ; >
+   au < manifest ; exists ; 2017 ; 9789386293091 ; 9789386293107 ; 10.1055/b000000674 ; Complex Primary Total Knee Arthorplasty (9789386293107) ; >
+   au < manifest ; exists ; 2017 ; 9789385062124 ; 9789385062131 ; 10.1055/b000000695 ; Endoscopic Spine Surgery (9789385062131) ; >
+   au < manifest ; exists ; 2017 ; 9789385062766 ; 9789386293015 ; 10.1055/b000000694 ; Juvenile Nasopharyngeal Angiofibroma (9789386293015) ; >
+   au < manifest ; exists ; 2017 ; 9783131399106 ; 9783132407602 ; 10.1055/b-004-132245 ; Memorix Notfallmedizin (9783132407602) ; >
+   au < manifest ; exists ; 2017 ; 9783131994417 ; 9783131994516 ; 10.1055/b-003-127183 ; MRT der Leber (9783131994516) ; >
+   au < manifest ; exists ; 2017 ; 9789385062780 ; 9789385062896 ; 10.1055/b000000711 ; Practical Neurosurgery (9789385062896) ; >
+   au < manifest ; exists ; 2017 ; 9783132418936 ; 9783132418967 ; 10.1055/b-005-143318 ; Praxis der HNO-Heilkunde, Kopf- und Halschirurgie (9783132418967) ; >
+   au < manifest ; exists ; 2017 ; 9789385062759 ; 9789385062797 ; 10.1055/b000000679 ; Textbook of Plastic, Reconstructive, and Aesthetic Surgery (9789385062797) ; >
+   au < manifest ; exists ; 2018 ; 9789386293510 ; 9789386293527 ; 10.1055/b000000696 ; The ASSI Monographs (9789386293527) ; >
+   au < manifest ; exists ; 2018 ; 9789386293497 ; 9789386293503 ; 10.1055/b000000683 ; The ASSI Monographs (9789386293503) ; >
+   au < manifest ; exists ; 2018 ; 9789386293534 ; 9789386293541 ; 10.1055/b000000684 ; The ASSI Monographs (9789386293541) ; >
+   au < manifest ; exists ; 2018 ; 9789386293411 ; 9789386293428 ; 10.1055/b000000710 ; Atlas of Cavityless Cholesteatoma Surgery (9789386293428) ; >
+   au < manifest ; exists ; 2018 ; 9789386293350 ; 9789386293367 ; 10.1055/b000000685 ; Essentials of Diagnostic Surgical Neuropathology (9789386293367) ; >
+   au < manifest ; exists ; 2018 ; 9783132400337 ; 9783132401488 ; 10.1055/b-003-128217 ; Geburtshilfliche Notfälle (9783132401488) ; >
+   au < manifest ; exists ; 2018 ; 9783132420977 ; 9783132421004 ; 10.1055/b-006-149432 ; GOT - Ganzheitliche Osteopathische Therapie (9783132421004) ; >
+   au < manifest ; exists ; 2018 ; 9783132415263 ; 9783132415294 ; 10.1055/b-005-145232 ; Kinderheilkunde für Hebammen (9783132415294) ; >
+   au < manifest ; exists ; 2018 ; 9783132400047 ; 9783132415812 ; 10.1055/b-004-140663 ; Kursbuch gynäkologische Endoskopie (9783132415812) ; >
+   au < manifest ; exists ; 2018 ; 9789386293565 ; 9789386293572 ; 10.1055/b000000413 ; Tenets of Craniosynostosis (9789386293572) ; >
+   au < manifest ; exists ; 2018 ; 9789386293336 ; 9789386293343 ; 10.1055/b000000678 ; Textbook of Plastic, Reconstructive, and Aesthetic Surgery (9789386293343) ; >
+   au < manifest ; exists ; 2019 ; 9789388257305 ; 9789388257312 ; 10.1055/b000000670 ; The ASSI Monographs (9789388257312) ; >
+   au < manifest ; exists ; 2019 ; 9789388257190 ; 9789388257206 ; 10.1055/b000000709 ; Atlas of Cavityless Cholesteatoma Surgery (9789388257206) ; >
+   au < manifest ; exists ; 2019 ; 9789388257237 ; 9789388257244 ; 10.1055/b000000501 ; Endoscopic Transsphenoidal Surgery (9789388257244) ; >
+   au < manifest ; exists ; 2019 ; 9783132430297 ; 9783132430310 ; 10.1055/b-006-164892 ; Facharztprüfung Kinder- und Jugendmedizin (9783132430310) ; >
+   au < manifest ; exists ; 2019 ; 9783132434585 ; 9783132434592 ; 10.1055/b-007-173122 ; Manual of Fracture Management - Foot and Ankle (9783132434592) ; >
+   au < manifest ; exists ; 2019 ; 9789388257107 ; 9789388257114 ; 10.1055/b000000681 ; Missile Injuries of the Brain, Spine, and Peripheral Nerves (9789388257114) ; >
+   au < manifest ; exists ; 2019 ; 9789388257060 ; 9789388257077 ; 10.1055/b000000487 ; Step-By-Step Approach to Endoscopic Cadaveric Dissection (9789388257077) ; >
+   au < manifest ; exists ; 2019 ; 9783132426726 ; 9783132426740 ; 10.1055/b-006-164897 ; Strukturen und Funktionen begreifen (9783132426740) ; >
+   au < manifest ; exists ; 2019 ; 9789388257152 ; 9789388257169 ; 10.1055/b000000677 ; Textbook of Plastic, Reconstructive, and Aesthetic Surgery (9789388257169) ; >
+   au < manifest ; exists ; 2020 ; 9789388257879 ; 9789388257886 ; 10.1055/b000000757 ; The Art of Refractive Surgery (9789388257886) ; >
+   au < manifest ; exists ; 2020 ; 9789388257534 ; 9789388257732 ; 10.1055/b000000680 ; Atlas of Sellar, Suprasellar, and Parasellar Lesions (9789388257732) ; >
+   au < manifest ; exists ; 2020 ; 978313242981-9 ; 978313242985-7 ; 10.1055/b-006-166041 ; Dual Catalysis in Organic Synthesis 2 (978313242985-7) ; >
+   au < manifest ; exists ; 2020 ; 9783132434875 ; 9783132446403 ; 10.1055/b000000653 ; Geburtsvorbereitung (9783132446403) ; >
+   au < manifest ; exists ; 2020 ; 9783132425521 ; 9783132425675 ; 10.1055/b-006-163234 ; Herzschrittmacher- und Defibrillator-Therapie (9783132425675) ; >
+   au < manifest ; exists ; 2020 ; 9789388257541 ; 9789388257558 ; 10.1055/b000000138 ; Lumbar Interbody Fusion (9789388257558) ; >
+   au < manifest ; exists ; 2020 ; 9783132434486 ; 9783132434516 ; 10.1055/b-007-170972 ; Neurologie compact (9783132434516) ; >
+   au < manifest ; exists ; 2020 ; 9789388257756 ; 9789388257763 ; 10.1055/b000000669 ; Neurosurgery Updates (9789388257763) ; >
+   au < manifest ; exists ; 2020 ; 9789388257718 ; 9789388257725 ; 10.1055/b000000137 ; Textbook of Plastic, Reconstructive, and Aesthetic Surgery (9789388257725) ; >
+   au < manifest ; exists ; 2020 ; 9789388257855 ; 9789388257862 ; 10.1055/b000000717 ; Textbook of Plastic, Reconstructive, and Aesthetic Surgery (9789388257862) ; >
+   au < manifest ; exists ; 2020 ; 9783132431362 ; 9783132431393 ; 10.1055/b-006-166356 ; Zivilisationskrankheiten des Pferdes (9783132431393) ; >
+   au < manifest ; exists ; 2021 ; 9783132200265 ; 9783132200296 ; 10.1055/b000000428 ; Anatomisches Wörterbuch (9783132200296) ; >
+   au < manifest ; exists ; 2021 ; 9783132431744 ; 9783132437227 ; 10.1055/b000000262 ; Arthroplasty in Hand Surgery (9783132437227) ; >
+   au < manifest ; exists ; 2021 ; 9783132426832 ; 9783132444706 ; 10.1055/b000000042 ; Assistenz in der Gesundheitsversorgung (9783132444706) ; >
+   au < manifest ; exists ; 2021 ; 9783132007512 ; 9783132406964 ; 10.1055/b-004-132242 ; Atlas der digitalen Volumentomografie (9783132406964) ; >
+   au < manifest ; exists ; 2021 ; 9781626238268 ; 9781684202683 ; 10.1055/b000000338 ; Auditory Brainstem Implants (9781684202683) ; >
+   au < manifest ; exists ; 2021 ; 9783132424906 ; 9783132424937 ; 10.1055/b-006-163284 ; Autoimmunerkrankungen (9783132424937) ; >
+   au < manifest ; exists ; 2021 ; 9783132443976 ; 9783132444003 ; 10.1055/b000000609 ; Bewegungsapparat Pferd (9783132444003) ; >
+   au < manifest ; exists ; 2021 ; 9783132443907 ; 9783132443921 ; 10.1055/b000000607 ; Bindegewebsmassage (9783132443921) ; >
+   au < manifest ; exists ; 2021 ; 9783132439481 ; 9783132439511 ; 10.1055/b000000497 ; Checkliste Anästhesie (9783132439511) ; >
+   au < manifest ; exists ; 2021 ; 9783132442382 ; 9783132442412 ; 10.1055/b000000527 ; Checkliste Orthopädie (9783132442412) ; >
+   au < manifest ; exists ; 2021 ; 9783132442634 ; 9783132442665 ; 10.1055/b000000534 ; CT Teaching Manual (9783132442665) ; >
+   au < manifest ; exists ; 2021 ; 9783132428911 ; 9783132428935 ; 10.1055/b000000048 ; Diabetologie in Klinik und Praxis (9783132428935) ; >
+   au < manifest ; exists ; 2021 ; 9783132434387 ; 9783132434417 ; 10.1055/b000000095 ; Das EMG-Buch (9783132434417) ; >
+   au < manifest ; exists ; 2021 ; 9781626232754 ; 9781684203062 ; 10.1055/b000000307 ; Endovascular Management of Ischemic Stroke (9781684203062) ; >
+   au < manifest ; exists ; 2021 ; 9783132437807 ; 9783132437838 ; 10.1055/b000000436 ; Ergotherapie – durch Betätigung und Klientenzentrierung Teilhabe verbessern (9783132437838) ; >
+   au < manifest ; exists ; 2021 ; 9783132017511 ; 9783132427297 ; 10.1055/b-006-149527 ; Expertise Orthopädie und Unfallchirurgie Fuß und Sprunggelenk (9783132427297) ; >
+   au < manifest ; exists ; 2021 ; 9783132443228 ; 9783132443259 ; 10.1055/b000000581 ; Fasziale Osteopathie (9783132443259) ; >
+   au < manifest ; exists ; 2021 ; 9783132435520 ; 9783132435537 ; 10.1055/b000000087 ; Free Radicals: Fundamentals and Applications in Organic Synthesis 1 (9783132435537) ; >
+   au < manifest ; exists ; 2021 ;   ; 9783132442290 ; 10.1055/b000000524 ; Funktionelle Histologie (9783132442290) ; >
+   au < manifest ; exists ; 2021 ;   ; 9783132444577 ; 10.1055/b000000624 ; Funktionelle Neuroanatomie für die Tiermedizin (9783132444577) ; >
+   au < manifest ; exists ; 2021 ; 9783132443013 ; 9783132443044 ; 10.1055/b000000569 ; Füße in guten Händen (9783132443044) ; >
+   au < manifest ; exists ; 2021 ; 9781684201464 ; 9781684203505 ; 10.1055/b000000347 ; Head & Neck Endocrine Surgery (9781684203505) ; >
+   au < manifest ; exists ; 2021 ; 9783132439061 ; 9783132439092 ; 10.1055/b000000478 ; Integrative Manuelle Therapie (9783132439092) ; >
+   au < manifest ; exists ; 2021 ; 9783132444010 ; 9783132444041 ; 10.1055/b000000610 ; Klinik der Schaf- und Ziegenkrankheiten (9783132444041) ; >
+   au < manifest ; exists ; 2021 ; 9783131307392 ; 9783132407725 ; 10.1055/b-004-132262 ; Klinische Ernährung und Infusionstherapie (9783132407725) ; >
+   au < manifest ; exists ; 2021 ; 9783132442061 ; 9783132442085 ; 10.1055/b000000477 ; Knowledge Updates 2021/2 (9783132442085) ; >
+   au < manifest ; exists ; 2021 ; 9783132442092 ; 9783132442115 ; 10.1055/b000000500 ; Knowledge Updates 2021/3 (9783132442115) ; >
+   au < manifest ; exists ; 2021 ; 9783132200005 ; 9783132200036 ; 10.1055/b000000422 ; Kurzlehrbuch Innere Medizin (9783132200036) ; >
+   au < manifest ; exists ; 2021 ; 9781684201334 ; 9781684203703 ; 10.1055/b000000240 ; Management of Orthopaedic Infections (9781684203703) ; >
+   au < manifest ; exists ; 2021 ; 9781684202171 ; 9781684202997 ; 10.1055/b000000369 ; Masters of Cosmetic Surgery—The Video Atlas (9781684202997) ; >
+   au < manifest ; exists ; 2021 ; 9781626239661 ; 9781684203772 ; 10.1055/b000000340 ; Microsurgical and Endoscopic Approaches to the Skull Base (9781684203772) ; >
+   au < manifest ; exists ; 2021 ; 9783132442825 ; 9783132442849 ; 10.1055/b000000546 ; Nach der Geburt (9783132442849) ; >
+   au < manifest ; exists ; 2021 ; 9781684200078 ; 9781684203086 ; 10.1055/b000000302 ; Neurointerventional Surgery (9781684203086) ; >
+   au < manifest ; exists ; 2021 ; 9783132438699 ; 9783132438750 ; 10.1055/b000000433 ; Neurologie für Physiotherapeuten (9783132438750) ; >
+   au < manifest ; exists ; 2021 ; 9783132438842 ; 9783132438873 ; 10.1055/b000000470 ; Orthopädie und Unfallchirurgie essentials (9783132438873) ; >
+   au < manifest ; exists ; 2021 ; 9783132441996 ; 9783132442023 ; 10.1055/b000000517 ; Phytotherapie in der Frauenheilkunde (9783132442023) ; >
+   au < manifest ; exists ; 2021 ; 9781684200627 ; 9781684202652 ; 10.1055/b000000308 ; Plastic Surgery Case Review (9781684202652) ; >
+   au < manifest ; exists ; 2021 ; 9783132439184 ; 9783132439214 ; 10.1055/b000000481 ; Praxisbuch: Besondere Stillsituationen (9783132439214) ; >
+   au < manifest ; exists ; 2021 ; 9781684201068 ; 9781684203307 ; 10.1055/b000000288 ; Principles of Facial Reconstruction (9781684203307) ; >
+   au < manifest ; exists ; 2021 ; 9783132213715 ; 9783132407282 ; 10.1055/b-004-132205 ; Radiologie der Gewalt (9783132407282) ; >
+   au < manifest ; exists ; 2021 ; 9781684201518 ; 9781684203758 ; 10.1055/b000000232 ; Radiology Structured Reporting Handbook (9781684203758) ; >
+   au < manifest ; exists ; 2021 ; 9783132422421 ; 9783132422452 ; 10.1055/b-007-170974 ; Referenz HNO-Heilkunde (9783132422452) ; >
+   au < manifest ; exists ; 2021 ; 9783132432468 ; 9783132432567 ; 10.1055/b000000068 ; Referenz Psychische Störungen (9783132432567) ; >
+   au < manifest ; exists ; 2021 ; 9783132443426 ; 9783132443457 ; 10.1055/b000000586 ; Reiki in der therapeutischen Praxis (9783132443457) ; >
+   au < manifest ; exists ; 2021 ; 9783132444324 ; 9783132444348 ; 10.1055/b000000618 ; Der Sono-Trainer (9783132444348) ; >
+   au < manifest ; exists ; 2021 ; 9783132434080 ; 9783132434097 ; 10.1055/b000000049 ; Spectroscopic Methods in Organic Chemistry (9783132434097) ; >
+   au < manifest ; exists ; 2021 ; 9783132204317 ; 9783132431539 ; 10.1055/b-006-166361 ; Stillen und Muttermilch – von den biochemischen Grundlagen bis zur gesellschaftlichen Wirkung (9783132431539) ; >
+   au < manifest ; exists ; 2021 ; 9781684200764 ; 9781684203314 ; 10.1055/b000000282 ; Synopsis of Hand Surgery (9781684203314) ; >
+   au < manifest ; exists ; 2022 ; 9783132445840 ; 9783132445871 ; 10.1055/b000000632 ; Aktivierende Therapien bei Parkinson-Syndromen (9783132445871) ; >
+   au < manifest ; exists ; 2022 ; 9783132438804 ; 9783132438835 ; 10.1055/b000000469 ; Allergologie in Klinik und Praxis (9783132438835) ; >
+   au < manifest ; exists ; 2022 ; 9783132434776 ; 9783132434806 ; 10.1055/b000000100 ; Allgemeine Mikrobiologie (9783132434806) ; >
+   au < manifest ; exists ; 2022 ; 9783132432062 ; 9783132440098 ; 10.1055/b000000064 ; Anatomie und Biomechanik der Hand (9783132440098) ; >
+   au < manifest ; exists ; 2022 ; 9783132447400 ; 9783132447431 ; 10.1055/b000000752 ; Angewandte Physiologie (9783132447431) ; >
+   au < manifest ; exists ; 2022 ; 9783131186232 ; 9783132422377 ; 10.1055/b-006-163258 ; Augenärztliche Differenzialdiagnose (9783132422377) ; >
+   au < manifest ; exists ; 2022 ; 9783132443860 ; 9783132443891 ; 10.1055/b000000606 ; Biomechanik in Osteopathischer und Manueller Medizin (9783132443891) ; >
+   au < manifest ; exists ; 2022 ; 9783132446854 ; 9783132446984 ; 10.1055/b000000736 ; Checkliste Gynäkologie (9783132446984) ; >
+   au < manifest ; exists ; 2022 ; 9783132442252 ; 9783132442283 ; 10.1055/b000000523 ; Checkliste Neonatologie (9783132442283) ; >
+   au < manifest ; exists ; 2022 ; 9783132438088 ; 9783132438118 ; 10.1055/b000000449 ; Checkliste Neurologie (9783132438118) ; >
+   au < manifest ; exists ; 2022 ; 9783132435568 ; 9783132435575 ; 10.1055/b000000077 ; Click Chemistry (9783132435575) ; >
+   au < manifest ; exists ; 2022 ; 9783132443280 ; 9783132443341 ; 10.1055/b000000583 ; Differenzialdiagnose für Heilpraktiker (9783132443341) ; >
+   au < manifest ; exists ; 2022 ; 9783132200135 ; 9783132200166 ; 10.1055/b000000425 ; Duale Reihe Biochemie (9783132200166) ; >
+   au < manifest ; exists ; 2022 ; 9783132443174 ; 9783132443204 ; 10.1055/b000000575 ; Duale Reihe Medizinische Mikrobiologie (9783132443204) ; >
+   au < manifest ; exists ; 2022 ; 9783132443136 ; 9783132443167 ; 10.1055/b000000573 ; Duale Reihe Orthopädie und Unfallchirurgie (9783132443167) ; >
+   au < manifest ; exists ; 2022 ; 9783132432659 ; 9783132432680 ; 10.1055/b000000071 ; Duale Reihe Psychiatrie, Psychosomatik und Psychotherapie (9783132432680) ; >
+   au < manifest ; exists ; 2022 ; 9783132442122 ; 9783132442146 ; 10.1055/b000000126 ; Electrochemistry in Organic Synthesis (9783132442146) ; >
+   au < manifest ; exists ; 2022 ; 9783132432574 ; 9783132432604 ; 10.1055/b000000069 ; Fehler und Irrtümer in der Dermatologie und Allergologie (9783132432604) ; >
+   au < manifest ; exists ; 2022 ; 9783132400528 ; 9783132437845 ; 10.1055/b-006-163737 ; The Frontal Sinus (9783132437845) ; >
+   au < manifest ; exists ; 2022 ; 9783132419834 ; 9783132420250 ; 10.1055/b-006-160389 ; Fuß- und Sprunggelenkchirurgie (9783132420250) ; >
+   au < manifest ; exists ; 2022 ; 9783132437470 ; 9783132437500 ; 10.1055/b000000420 ; Hormonelle Dysbalancen (9783132437500) ; >
+   au < manifest ; exists ; 2022 ; 9781684200559 ; 9781684203130 ; 10.1055/b000000290 ; Idiopathic Scoliosis (9781684203130) ; >
+   au < manifest ; exists ; 2022 ; 9783132420649 ; 9783132420670 ; 10.1055/b-006-163250 ; Kinderdermatologie (9783132420670) ; >
+   au < manifest ; exists ; 2022 ; 9783132442702 ; 9783132442733 ; 10.1055/b000000536 ; Kinderheilkunde für Hebammen (9783132442733) ; >
+   au < manifest ; exists ; 2022 ; 9783132447059 ; 9783132447080 ; 10.1055/b000000740 ; Klinische Neuropsychologie - Kognitive Neurologie (9783132447080) ; >
+   au < manifest ; exists ; 2022 ; 9783132431003 ; 9783132431034 ; 10.1055/b-007-167432 ; Klinische Notfälle griffbereit (9783132431034) ; >
+   au < manifest ; exists ; 2022 ; 9781626235410 ; 9781684202812 ; 10.1055/b000000314 ; Knee Surgery (9781684202812) ; >
+   au < manifest ; exists ; 2022 ; 9783132451476 ; 9783132451490 ; 10.1055/b000000641 ; Knowledge Updates 2022/1 (9783132451490) ; >
+   au < manifest ; exists ; 2022 ; 9783132444355 ; 9783132444386 ; 10.1055/b000000619 ; Kursbuch Echokardiografie (9783132444386) ; >
+   au < manifest ; exists ; 2022 ; 9783132438552 ; 9783132438583 ; 10.1055/b000000460 ; Lungenfunktionsdiagnostik und Spiroergometrie (9783132438583) ; >
+   au < manifest ; exists ; 2022 ; 9783132436039 ; 9783132436060 ; 10.1055/b000000124 ; Management of Complications in Common Hand and Wrist Procedures (9783132436060) ; >
+   au < manifest ; exists ; 2022 ; 9783132437562 ; 9783132437593 ; 10.1055/b000000421 ; Der Mensch – Anatomie und Physiologie (9783132437593) ; >
+   au < manifest ; exists ; 2022 ; 9783132444669 ; 9783132444690 ; 10.1055/b000000628 ; MRT Einstelltechniken und Protokolle (9783132444690) ; >
+   au < manifest ; exists ; 2022 ; 9783132413641 ; 9783132413672 ; 10.1055/b-006-161657 ; N.A.P. – Neuroorthopädische Therapie (9783132413672) ; >
+   au < manifest ; exists ; 2022 ; 9783132445925 ; 9783132445963 ; 10.1055/b000000636 ; Nährstofftherapie (9783132445963) ; >
+   au < manifest ; exists ; 2022 ; 9783897521605 ; 9783897521636 ; 10.1055/b000000516 ; NANDA-I-Pflegediagnosen: Definitionen und Klassifikation 2021-2023 (9783897521636) ; >
+   au < manifest ; exists ; 2022 ; 9783132430358 ; 9783132430389 ; 10.1055/b000000096 ; Neurologie compact (9783132430389) ; >
+   au < manifest ; exists ; 2022 ; 9783132200050 ; 9783132200081 ; 10.1055/b000000423 ; Neurologisch-topische Diagnostik (9783132200081) ; >
+   au < manifest ; exists ; 2022 ; 9781684200511 ; 9781684203338 ; 10.1055/b000000281 ; Neurosurgical Diseases (9781684203338) ; >
+   au < manifest ; exists ; 2022 ; 9781684202478 ; 9781684202980 ; 10.1055/b000000397 ; Optical Coherence Tomography in Glaucoma (9781684202980) ; >
+   au < manifest ; exists ; 2022 ; 9783132051812 ; 9783132417601 ; 10.1055/b-006-149528 ; Orale Präventivmedizin (9783132417601) ; >
+   au < manifest ; exists ; 2022 ; 9783132439146 ; 9783132439177 ; 10.1055/b000000480 ; Pferd - Sattel - Reiter (9783132439177) ; >
+   au < manifest ; exists ; 2022 ; 9783132430099 ; 9783132430129 ; 10.1055/b000000057 ; Physiotherapie in der Inneren Medizin (9783132430129) ; >
+   au < manifest ; exists ; 2022 ; 9783132434202 ; 9783132434233 ; 10.1055/b000000091 ; Physiotherapie in der Pädiatrie (9783132434233) ; >
+   au < manifest ; exists ; 2022 ; 9783132443648 ; 9783132443679 ; 10.1055/b000000600 ; Praxisbuch Evozierte Potenziale (9783132443679) ; >
+   au < manifest ; exists ; 2022 ; 9783132447622 ; 9783132447653 ; 10.1055/b000000760 ; Praxisbuch Zahnmedizin beim Heimtier (9783132447653) ; >
+   au < manifest ; exists ; 2022 ; 9783131296245 ; 9783132405165 ; 10.1055/b-006-163232 ; Praxis der Echokardiografie (9783132405165) ; >
+   au < manifest ; exists ; 2022 ; 9783132447363 ; 9783132447394 ; 10.1055/b000000750 ; Psychosomatik (9783132447394) ; >
+   au < manifest ; exists ; 2022 ; 9781626235175 ; 9781626235182 ; 10.1055/b-006-163733 ; Reconstructive Plastic Surgery (9781626235182) ; >
+   au < manifest ; exists ; 2022 ; 9783132424623 ; 9783132424654 ; 10.1055/b-006-163289 ; Referenz Allgemein- und Viszeralchirurgie: Leber und Gallenwege (9783132424654) ; >
+   au < manifest ; exists ; 2022 ; 9783132424586 ; 9783132424616 ; 10.1055/b-006-163242 ; Referenz Allgemein- und Viszeralchirurgie – Pankreas (9783132424616) ; >
+   au < manifest ; exists ; 2022 ; 9783132424708 ; 9783132424739 ; 10.1055/b-006-163299 ; Referenz Allgemein- und Viszeralchirurgie – Unterer Gastrointestinaltrakt (9783132424739) ; >
+   au < manifest ; exists ; 2022 ; 9783132429895 ; 9783132429925 ; 10.1055/b000000055 ; Die Schulter in der Physiotherapie (9783132429925) ; >
+   au < manifest ; exists ; 2022 ; 9783132443518 ; 9783132446144 ; 10.1055/b000000594 ; Sonographie der Säuglingshüfte (9783132446144) ; >
+   au < manifest ; exists ; 2022 ; 9783132429178 ; 9783132429208 ; 10.1055/b000000050 ; Sport und Ernährung (9783132429208) ; >
+   au < manifest ; exists ; 2022 ; 9783132442610 ; 9783132442764 ; 10.1055/b000000537 ; Stretching und Beweglichkeit (9783132442764) ; >
+   au < manifest ; exists ; 2022 ; 9781684202324 ; 9781684203048 ; 10.1055/b000000379 ; Techniques and Key Points for Endoscopic Cranial Base Reconstruction (9781684203048) ; >
+   au < manifest ; exists ; 2022 ; 9781626239319 ; 9781626239326 ; 10.1055/b-006-161162 ; Tumors of the Spinal Canal (9781626239326) ; >
+   au < manifest ; exists ; 2022 ; 9783132447981 ; 9783132448018 ; 10.1055/b000000775 ; Übungen in der Neurorehabilitation (9783132448018) ; >
+   au < manifest ; exists ; 2022 ; 9781684200689 ; 9781684200696 ; 10.1055/b-006-161160 ; Vascular Challenges in Skull Base Surgery (9781684200696) ; >
+   au < manifest ; exists ; 2022 ; 9783132421462 ; 9783132446823 ; 10.1055/b-006-164737 ; Video Atlas of Neurophysiological Monitoring in Surgery of Infiltrating Brain Tumors (9783132446823) ; >
+   au < manifest ; exists ; 2022 ; 9781684202300 ; 9781684203321 ; 10.1055/b000000319 ; Wide Awake Hand Surgery and Therapy Tips (9781684203321) ; >
+   au < manifest ; exists ; 2022 ; 9783132437975 ; 9783132439610 ; 10.1055/b000000446 ; Wundmanagement - Wundversorgung in der täglichen Praxis (9783132439610) ; >
 
  }
 
@@ -2759,6 +2981,7 @@
    au < finished ; finished ; 2005 ; 9783131009531 ; 9783131834133 ; 10.1055/b-001-44 ; Ultraschalldiagnostik in Pädiatrie und Kinderchirurgie (9783131834133) ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2005 ; 9783830410386 ; 9783132405622 ; 10.1055/b-004-129759 ; Zahn- und Kieferheilkunde bei Klein- und Heimtieren (9783132405622) ; reingest1.clockss.org:8082 >
    au < doNotProcess ; doNotProcess ; 2005 ; 9783131585714 ; 9783131847515 ; 10.1055/b-002-57167 ; Chirurgie der Nasennebenhöhlen (9783131847515) (duplicate) ; > #duplicate eisbn, name. Different doi, isbn.
+
    au < finished ; finished ; 2006 ; 9781588904935 ; 9783131608918 ; 10.1055/b-002-52045 ; Advanced Techniques in Oriental Medicine (9783131608918) ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2006 ; 9781588904317 ; 9781588906786 ; 10.1055/b-002-59201 ; Atlas of Colonoscopy (9781588906786) ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2006 ; 9781588904386 ; 9783131612717 ; 10.1055/b-002-56128 ; Atlas of Fundus Angiography (9783131612717) ; reingest3.clockss.org:8083 >
@@ -2895,6 +3118,7 @@
    au < finished ; finished ; 2006 ; 9781588902177 ; 9781604064957 ; 10.1055/b-002-51023 ; Wrist Surgery (9781604064957) ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2006 ; 9783131408327 ; 9783131855923 ; 10.1055/b-002-21509 ; Wundatlas (9783131855923) ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2006 ; 9783131365118 ; 9783131918918 ; 10.1055/b-002-21513 ; Zusatzweiterbildung Intensivmedizin (9783131918918) ; reingest4.clockss.org:8082 >
+
    au < finished ; finished ; 2007 ; 9781588905468 ; 9783131618313 ; 10.1055/b-002-59221 ; Atlas of CSF Cytology (9783131618313) ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2007 ; 9781588905802 ; 9783131619617 ; 10.1055/b-002-66282 ; Breast Cancer: Early Detection with Mammography: Casting Type Calcifications: Sign of a Subtype with Deceptive Features (9783131619617) ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2007 ; 9781588904065 ; 9781604064704 ; 10.1055/b-002-72194 ; Comprehensive Board Review in Neurology (9781604064704) ; reingest5.clockss.org:8082 >
@@ -2984,7 +3208,9 @@
    au < finished ; finished ; 2007 ; 9783131346513 ; 9783131864611 ; 10.1055/b-002-19465 ; Von der Pathophysiologie zur Pneumologie und Thoraxchirurgie: 60 Jahre Lungenklinik Heckeshorn (9783131864611) ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2007 ; 9783131458018 ; 9783131895714 ; 10.1055/b-002-40806 ; Wie wirkt Psychotherapie? (9783131895714) ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2007 ; 9783131418210 ; 9783131871015 ; 10.1055/b-002-39783 ; Zahnärztliche Implantologie unter schwierigen Umständen (9783131871015) ; reingest2.clockss.org:8085 >
+
    au < finished ; finished ; 2008 ; 9783131485014 ; 9783131841117 ; 10.1055/b-003-125707 ; Category 4. Compounds with Two Carbon Heteroatom Bonds (9783131841117) ; reingest3.clockss.org:8083 >
+
    au < finished ; finished ; 2009 ; 9783131381125 ; 9783131871923 ; 10.1055/b-002-21507 ; Chronisch entzündliche Darmerkrankungen (9783131871923) ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2009 ; 9783131476227 ; 9783131883728 ; 10.1055/b-002-29670 ; Das EMG-Buch (9783131883728) ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2009 ; 9783131182449 ; 9783131898142 ; 10.1055/b-002-5210 ; EMDR (9783131898142) ; reingest1.clockss.org:8082 >
@@ -2997,13 +3223,16 @@
    au < finished ; finished ; 2009 ; 9783131179326 ; 9783131853622 ; 10.1055/b-001-3194 ; Schmerztherapie mit Lokalanästhetika (9783131853622) ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2009 ; 9783131175267 ; 9783132409460 ; 10.1055/b-004-134403 ; Sonographie der Säuglingshüfte und therapeutische Konsequenzen (9783132409460) ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2009 ; 9783131465023 ; 9783131870025 ; 10.1055/b-002-40822 ; Urologische Differenzialdiagnose (9783131870025) ; reingest4.clockss.org:8082 >
+
    au < doNotProcess ; doNotProcess ; 2013 ; 9783131406439 ; 9783131908032 ; 10.1055/b-002-23558 ; Praxis der Orthopädie und Unfallchirurgie (9783131908032) (duplicate) ; > #duplicate title/issn. Diff DOI
+
    au < finished ; finished ; 2015 ; 9783131383631 ; 9783131645630 ; 10.1055/b-004-140255 ; Abdominal Ultrasound: Step by Step (9783131645630) ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2015 ; 9781626233881 ; 9781626233898 ; 10.1055/b-004-129822 ; Atlas of Neurosurgical Techniques: Brain (9781626233898) ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2015 ; 9783131751812 ; 9783131751911 ; 10.1055/b-004-140247 ; Facial Nerve Disorders and Diseases: Diagnosis and Management (9783131751911) ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 9781626236646 ; 9781626237513 ; 10.1055/b-004-140252 ; Nonsurgical (9781626237513) ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2015 ; 9781604069198 ; 9781604069211 ; 10.1055/b-004-140246 ; Robotic Head and Neck Surgery (9781604069211) ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2015 ; 9781626236660 ; 9781626237520 ; 10.1055/b-004-140251 ; Surgical (9781626237520) ; reingest5.clockss.org:8082 >
+
    au < finished ; crawling ; 2016 ; 9781626230897 ; 9781626230903 ; 10.1055/b-004-140684 ; Aesthetic Rejuvenation of the Face and Neck (9781626230903) ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2016 ; 9783132038516 ; 9783132407640 ; 10.1055/b-004-132246 ; Aggressivität, Impulsivität und Delinquenz (9783132407640) ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2016 ; 9783132401815 ; 9783132404700 ; 10.1055/b-004-129719 ; Allgemeinmedizin (9783132404700) ; reingest3.clockss.org:8083 >
@@ -3053,6 +3282,7 @@
    au < finished ; finished ; 2016 ; 9783131695918 ; 9783132404175 ; 10.1055/b-004-129679 ; Thoraxdiagnostik (9783132404175) ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2016 ; 9781626230088 ; 9781626230095 ; 10.1055/b-004-140683 ; Thyroid and Parathyroid Diseases (9781626230095) ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2016 ; 9783131532015 ; 9783132401280 ; 10.1055/b-003-127182 ; Vaskuläre Interventionen (9783132401280) ; reingest3.clockss.org:8083 >
+
    au < finished ; finished ; 2017 ; 9783132401075 ; 9783132414228 ; 10.1055/b-004-139125 ; Audiometrie (9783132414228) ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2017 ; 9783132205611 ; 9783132403901 ; 10.1055/b-004-129576 ; Bildatlas Podologie (9783132403901) ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2017 ; 9781626234611 ; 9781626234628 ; 10.1055/b-005-143319 ; Decision Making in Orthopaedic Trauma (9781626234628) ; reingest1.clockss.org:8082 >
