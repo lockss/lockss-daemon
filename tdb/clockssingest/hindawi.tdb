@@ -6288,7 +6288,7 @@
     au < manifest ; exists ; 2010 ; Journal of Analytical Methods in Chemistry Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Analytical Methods in Chemistry Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Analytical Methods in Chemistry Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Journal of Analytical Methods in Chemistry Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Analytical Methods in Chemistry Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Analytical Methods in Chemistry Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Analytical Methods in Chemistry Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Analytical Methods in Chemistry Volume 2016 ; 2016 ; 2016 ; >
@@ -6329,7 +6329,7 @@
     param[journal_id] = jangi
     #Moved to archive
 
-    au < frozen ; exists ; 2013 ; Journal of Angiology Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Angiology Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Angiology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Angiology Volume 2015 ; 2015 ; 2015 ; >
 
@@ -6363,7 +6363,7 @@
 
     au < manifest ; exists ; 2011 ; Journal of Anthropology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Anthropology Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Journal of Anthropology Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Anthropology Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Anthropology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Anthropology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Anthropology Volume 2016 ; 2016 ; 2016 ; >
@@ -6382,12 +6382,12 @@
     param[journal_id] = jac
     #moved to archive
 
-    au < frozen ; exists ; 2013 ; Journal of Applied Chemistry Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Applied Chemistry Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Applied Chemistry Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Applied Chemistry Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Applied Chemistry Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Applied Chemistry Volume 2017 ; 2017 ; 2017 ; >
-    au < frozen ; exists ; 2018 ; Journal of Applied Chemistry Volume 2018 ; 2018 ; 2018 ; >
+    au < finished ; manifest ; 2018 ; Journal of Applied Chemistry Volume 2018 ; 2018 ; 2018 ; reingest5.clockss.org:8082 >
     au < exists ; exists ; 2019 ; Journal of Applied Chemistry Volume 2019 ; 2019 ; 2019 ; >
 
   }
@@ -6414,7 +6414,7 @@
     au < manifest ; exists ; 2010 ; Journal of Applied Mathematics Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Applied Mathematics Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Applied Mathematics Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Journal of Applied Mathematics Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Applied Mathematics Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Applied Mathematics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Applied Mathematics Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Applied Mathematics Volume 2016 ; 2016 ; 2016 ; >
@@ -6438,7 +6438,7 @@
     param[journal_id] = jarchae
     #Moved to archive
 
-    au < frozen ; exists ; 2013 ; Journal of Archaeology Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Archaeology Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Archaeology Volume 2014 ; 2014 ; 2014 ; >
 
   }
@@ -6453,7 +6453,7 @@
 
     param[journal_id] = jas
 
-    au < frozen ; exists ; 2013 ; Journal of Astrophysics Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Astrophysics Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Astrophysics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Astrophysics Volume 2015 ; 2015 ; 2015 ; >
 
@@ -6475,7 +6475,7 @@
     au < manifest ; exists ; 2010 ; Journal of Atomic, Molecular, and Optical Physics Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Atomic, Molecular, and Optical Physics Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Atomic, Molecular, and Optical Physics Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Journal of Atomic, Molecular, and Optical Physics Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Atomic, Molecular, and Optical Physics Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -6506,7 +6506,7 @@
     param[journal_id] = jbm
     #ceased publication in 2017
 
-    au < frozen ; exists ; 2013 ; Journal of Biomarkers Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Biomarkers Volume 2013 ; 2013 ; 2013 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Biomarkers Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Biomarkers Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Biomarkers Volume 2016 ; 2016 ; 2016 ; >
@@ -6524,7 +6524,7 @@
 
     param[journal_id] = jbe
 
-    au < frozen ; exists ; 2013 ; Journal of Biomedical Education Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Biomedical Education Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Biomedical Education Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Biomedical Education Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Biomedical Education Volume 2016 ; 2016 ; 2016 ; >
@@ -6549,12 +6549,12 @@
     au < manifest ; exists ; 2010 ; Journal of Biophysics Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Biophysics Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Biophysics Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Journal of Biophysics Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Biophysics Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Biophysics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Biophysics Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Biophysics Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Biophysics Volume 2017 ; 2017 ; 2017 ; >
-    au < frozen ; exists ; 2018 ; Journal of Biophysics Volume 2018 ; 2018 ; 2018 ; >  #Hindawi moves content on archive directory
+    au < finished ; manifest ; 2018 ; Journal of Biophysics Volume 2018 ; 2018 ; 2018 ; reingest3.clockss.org:8083 >  #Hindawi moves content on archive directory
     #stopped publishing after 2017, 2018 contains one article (corrigendum). 
   }
 
@@ -6571,12 +6571,12 @@
 
     au < manifest ; exists ; 2011 ; Journal of Blood Transfusion Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Blood Transfusion Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Journal of Blood Transfusion Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Blood Transfusion Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Blood Transfusion Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Blood Transfusion Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Blood Transfusion Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Blood Transfusion Volume 2017 ; 2017 ; 2017 ; >
-    au < frozen ; exists ; 2018 ; Journal of Blood Transfusion Volume 2018 ; 2018 ; 2018 ; >
+    au < finished ; manifest ; 2018 ; Journal of Blood Transfusion Volume 2018 ; 2018 ; 2018 ; reingest5.clockss.org:8082 >
     au < exists ; exists ; 2019 ; Journal of Blood Transfusion Volume 2019 ; 2019 ; 2019 ; >
 
   }
@@ -6596,13 +6596,13 @@
     au < manifest ; exists ; 2010 ; Journal of Botany Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Botany Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Botany Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Journal of Botany Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Botany Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Botany Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Botany Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Botany Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Botany Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Botany Volume 2018 ; 2018 ; 2018 ; >
-    au < frozen ; exists ; 2019 ; Journal of Botany Volume 2019 ; 2019 ; 2019 ; >
+    au < finished ; manifest ; 2019 ; Journal of Botany Volume 2019 ; 2019 ; 2019 ; reingest2.clockss.org:8085 >
     au < exists ; exists ; 2020 ; Journal of Botany Volume 2020 ; 2020 ; 2020 ; >
     au < expected ; exists ; 2021 ; Journal of Botany Volume 2021 ; 2021 ; 2021 ; >
     au < expected ; exists ; 2022 ; Journal of Botany Volume 2022 ; 2022 ; 2022 ; >
@@ -6639,7 +6639,7 @@
     au < manifest ; exists ; 2010 ; Journal of Cancer Epidemiology Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Cancer Epidemiology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Cancer Epidemiology Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Journal of Cancer Epidemiology Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Cancer Epidemiology Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Cancer Epidemiology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Cancer Epidemiology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Cancer Epidemiology Volume 2016 ; 2016 ; 2016 ; >
@@ -6663,7 +6663,7 @@
     param[journal_id] = jcr
     #Moved to archive
 
-    au < frozen ; exists ; 2013 ; Journal of Cancer Research Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Cancer Research Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Cancer Research Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Cancer Research Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Cancer Research Volume 2016 ; 2016 ; 2016 ; >
@@ -6680,7 +6680,7 @@
 
     param[journal_id] = jcat
 
-    au < frozen ; exists ; 2013 ; Journal of Catalysts Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Catalysts Volume 2013 ; 2013 ; 2013 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Catalysts Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Catalysts Volume 2015 ; 2015 ; 2015 ; >
 
@@ -6711,7 +6711,7 @@
 
     param[journal_id] = jceram
     
-    au < frozen ; exists ; 2013 ; Journal of Ceramics Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Ceramics Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Ceramics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Ceramics Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Ceramics Volume 2016 ; 2016 ; 2016 ; >
@@ -6729,7 +6729,7 @@
     param[journal_id] = jcha
     #Moved to archive
     
-    au < frozen ; exists ; 2013 ; Journal of Chaos Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Chaos Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Chaos Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Chaos Volume 2016 ; 2016 ; 2016 ; > #Only one article published this year.
 
@@ -6754,7 +6754,7 @@
     au < manifest ; exists ; 2010 ; E-Journal of Chemistry Volume 7 (2010) ; 2010 ; 7 ; >
     au < manifest ; exists ; 2011 ; E-Journal of Chemistry Volume 8 (2011) ; 2011 ; 8 ; >
     au < manifest ; exists ; 2012 ; E-Journal of Chemistry Volume 9 (2012) ; 2012 ; 9 ; >
-    au < frozen ; exists ; 2013 ; Journal of Chemistry Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Chemistry Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Chemistry Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Chemistry Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Chemistry Volume 2016 ; 2016 ; 2016 ; >
@@ -6778,7 +6778,7 @@
     param[journal_id] = jcli
     #Moved to archive
     
-    au < frozen ; exists ; 2013 ; Journal of Climatology Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Climatology Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Climatology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Climatology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Climatology Volume 2016 ; 2016 ; 2016 ; >
@@ -6796,7 +6796,7 @@
     param[journal_id] = jcoat
     #Moved to archive
     
-    au < frozen ; exists ; 2013 ; Journal of Coatings Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Coatings Volume 2013 ; 2013 ; 2013 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Coatings Volume 2014 ; 2014 ; 2014 ; >
 
   }
@@ -6816,13 +6816,13 @@
     au < manifest ; exists ; 2010 ; Journal of Combustion Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Combustion Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Combustion Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Journal of Combustion Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Combustion Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Combustion Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Combustion Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Combustion Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Combustion Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Combustion Volume 2018 ; 2018 ; 2018 ; >
-    au < frozen ; exists ; 2019 ; Journal of Combustion Volume 2019 ; 2019 ; 2019 ; >
+    au < finished ; manifest ; 2019 ; Journal of Combustion Volume 2019 ; 2019 ; 2019 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2020 ; Journal of Combustion Volume 2020 ; 2020 ; 2020 ; >
     au < crawling ; exists ; 2021 ; Journal of Combustion Volume 2021 ; 2021 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Journal of Combustion Volume 2022 ; 2022 ; 2022 ; >
