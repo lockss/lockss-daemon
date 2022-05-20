@@ -3376,7 +3376,7 @@ while (my $line = <>) {
         # no lockss permission statement on start page. Permission statement is here: https://press.anu.edu.au/lockss.txt
         # In order to do more better validation, would require searching all the pages for a match to the specific issue link(s)
         # CLOCKSS only so probably okay to not do this
-        if ($man_contents =~ m/<title>(.*) - ANU Press - ANU<\/title>/si) {
+        if ($man_contents =~ m/<title>(.*)<\/title>/si) {
           #$vol_title = $1 . ": " . $param{volume_name}
           $vol_title = $1 
         }
