@@ -7272,14 +7272,14 @@
 
     param[journal_id] = jen
     
-    au < frozen ; exists ; 2013 ; Journal of Energy Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Energy Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Energy Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Energy Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Energy Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Energy Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Energy Volume 2018 ; 2018 ; 2018 ; >
-    au < frozen ; exists ; 2019 ; Journal of Energy Volume 2019 ; 2019 ; 2019 ; >
-    au < frozen ; exists ; 2020 ; Journal of Energy Volume 2020 ; 2020 ; 2020 ; >
+    au < finished ; manifest ; 2019 ; Journal of Energy Volume 2019 ; 2019 ; 2019 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; Journal of Energy Volume 2020 ; 2020 ; 2020 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2021 ; Journal of Energy Volume 2021 ; 2021 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Journal of Energy Volume 2022 ; 2022 ; 2022 ; >
 
@@ -7295,14 +7295,14 @@
 
     param[journal_id] = je
     
-    au < frozen ; exists ; 2013 ; Journal of Engineering Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Engineering Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Engineering Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Engineering Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Engineering Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Engineering Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Engineering Volume 2018 ; 2018 ; 2018 ; >
-    au < frozen ; exists ; 2019 ; Journal of Engineering Volume 2019 ; 2019 ; 2019 ; >
-    au < frozen ; exists ; 2020 ; Journal of Engineering Volume 2020 ; 2020 ; 2020 ; >
+    au < finished ; manifest ; 2019 ; Journal of Engineering Volume 2019 ; 2019 ; 2019 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; Journal of Engineering Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Journal of Engineering Volume 2021 ; 2021 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Journal of Engineering Volume 2022 ; 2022 ; 2022 ; >
 
@@ -7321,7 +7321,7 @@
     au < manifest ; exists ; 2009 ; Journal of Environmental and Public Health Volume 2009 ; 2009 ; 2009 ; > 
     au < manifest ; exists ; 2010 ; Journal of Environmental and Public Health Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2012 ; Journal of Environmental and Public Health Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Journal of Environmental and Public Health Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Environmental and Public Health Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Environmental and Public Health Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Environmental and Public Health Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Environmental and Public Health Volume 2016 ; 2016 ; 2016 ; >
@@ -7361,7 +7361,7 @@
     param[journal_id] = fluids
     #Moved to archive
     
-    au < frozen ; exists ; 2013 ; Journal of Fluids Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Fluids Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Fluids Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Fluids Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Fluids Volume 2016 ; 2016 ; 2016 ; >
@@ -7441,14 +7441,14 @@
     au < manifest ; exists ; 2010 ; Journal of Function Spaces and Applications Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Function Spaces and Applications Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Function Spaces and Applications Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Journal of Function Spaces and Applications Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Function Spaces and Applications Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Function Spaces Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Function Spaces Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Function Spaces Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Function Spaces Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Function Spaces Volume 2018 ; 2018 ; 2018 ; >
-    au < frozen ; exists ; 2019 ; Journal of Function Spaces Volume 2019 ; 2019 ; 2019 ; >
-    au < frozen ; exists ; 2020 ; Journal of Function Spaces Volume 2020 ; 2020 ; 2020 ; >
+    au < finished ; manifest ; 2019 ; Journal of Function Spaces Volume 2019 ; 2019 ; 2019 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; Journal of Function Spaces Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Journal of Function Spaces Volume 2021 ; 2021 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Journal of Function Spaces Volume 2022 ; 2022 ; 2022 ; >
 
@@ -7485,12 +7485,12 @@
     au < manifest ; exists ; 2010 ; Journal of Geological Research Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Geological Research Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Geological Research Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Journal of Geological Research Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Geological Research Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Geological Research Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Geological Research Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Geological Research Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Geological Research Volume 2017 ; 2017 ; 2017 ; >
-    au < frozen ; exists ; 2018 ; Journal of Geological Research Volume 2018 ; 2018 ; 2018 ; >
+    au < finished ; manifest ; 2018 ; Journal of Geological Research Volume 2018 ; 2018 ; 2018 ; reingest3.clockss.org:8083 >
     au < exists ; exists ; 2019 ; Journal of Geological Research Volume 2019 ; 2019 ; 2019 ; >
 
   }
@@ -7523,12 +7523,12 @@
     param[journal_id] = jgrav
     #Moved to archive
     
-    au < frozen ; exists ; 2013 ; Journal of Gravity Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Gravity Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Gravity Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Gravity Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Gravity Volume 2016 ; 2016 ; 2016 ; >
-    au < frozen ; exists ; 2017 ; Journal of Gravity Volume 2017 ; 2017 ; 2017 ; > # Hindawi moves content on archive directory
-    au < frozen ; exists ; 2018 ; Journal of Gravity Volume 2018 ; 2018 ; 2018 ; > # Hindawi moves content on archive directory
+    au < finished ; manifest ; 2017 ; Journal of Gravity Volume 2017 ; 2017 ; 2017 ; reingest1.clockss.org:8082 > # Hindawi moves content on archive directory
+    au < finished ; manifest ; 2018 ; Journal of Gravity Volume 2018 ; 2018 ; 2018 ; reingest5.clockss.org:8082 > # Hindawi moves content on archive directory
     #no issues published after 2017; 2018 contains one article (corrigendum)
   }
 
@@ -7547,9 +7547,9 @@
     au < manifest ; exists ; 2010 ; Journal of Healthcare Engineering Volume 1 (2010) ; 2010 ; 1 ; >
     au < manifest ; exists ; 2011 ; Journal of Healthcare Engineering Volume 2 (2011) ; 2011 ; 2 ; >
     au < manifest ; exists ; 2012 ; Journal of Healthcare Engineering Volume 3 (2012) ; 2012 ; 3 ; >
-    au < frozen ; exists ; 2013 ; Journal of Healthcare Engineering Volume 4 (2013) ; 2013 ; 4 ; >
-    au < frozen ; exists ; 2014 ; Journal of Healthcare Engineering Volume 5 (2014) ; 2014 ; 5 ; >
-    au < frozen ; exists ; 2015 ; Journal of Healthcare Engineering Volume 6 (2015) ; 2015 ; 6 ; >
+    au < finished ; manifest ; 2013 ; Journal of Healthcare Engineering Volume 4 (2013) ; 2013 ; 4 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2014 ; Journal of Healthcare Engineering Volume 5 (2014) ; 2014 ; 5 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2015 ; Journal of Healthcare Engineering Volume 6 (2015) ; 2015 ; 6 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Healthcare Engineering Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Healthcare Engineering Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Healthcare Engineering Volume 2018 ; 2018 ; 2018 ; >
@@ -7571,7 +7571,7 @@
     param[journal_id] = jh
     #Moved to archive
     
-    au < frozen ; exists ; 2013 ; Journal of Histology Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Histology Volume 2013 ; 2013 ; 2013 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Histology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Histology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Histology Volume 2016 ; 2016 ; 2016 ; >
@@ -7589,7 +7589,7 @@
     param[journal_id] = jhor
     #Moved to archive
     
-    au < frozen ; exists ; 2013 ; Journal of Hormones Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Hormones Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Hormones Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Hormones Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Hormones Volume 2016 ; 2016 ; 2016 ; >
@@ -7629,7 +7629,7 @@
     au < manifest ; exists ; 2010 ; Clinical and Developmental Immunology Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Clinical and Developmental Immunology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Clinical and Developmental Immunology Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Clinical and Developmental Immunology Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Clinical and Developmental Immunology Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Immunology Research Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Immunology Research Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Immunology Research Volume 2016 ; 2016 ; 2016 ; >
@@ -7653,7 +7653,7 @@
     param[journal_id] = jie
     #ceased publication in 2017
     
-    au < frozen ; exists ; 2013 ; Journal of Industrial Engineering Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Industrial Engineering Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Industrial Engineering Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Industrial Engineering Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Industrial Engineering Volume 2016 ; 2016 ; 2016 ; >
@@ -7672,7 +7672,7 @@
     param[journal_id] = jim
     #Moved to archive
     
-    au < frozen ; exists ; 2013 ; Journal of Industrial Mathematics Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Industrial Mathematics Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Industrial Mathematics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Industrial Mathematics Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Industrial Mathematics Volume 2016 ; 2016 ; 2016 ; >
@@ -7690,7 +7690,7 @@
     param[journal_id] = jic
     #Moved to archive
     
-    au < frozen ; exists ; 2013 ; Journal of Inorganic Chemistry Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Inorganic Chemistry Volume 2013 ; 2013 ; 2013 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Inorganic Chemistry Volume 2014 ; 2014 ; 2014 ; >
 
   }
@@ -7706,7 +7706,7 @@
     param[journal_id] = insects
     #Moved to archive
     
-    au < frozen ; exists ; 2013 ; Journal of Insects Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Insects Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Insects Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Insects Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Insects Volume 2016 ; 2016 ; 2016 ; >
@@ -7725,14 +7725,14 @@
 
     au < manifest ; exists ; 2011 ; Journal of Lipids Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Lipids Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Journal of Lipids Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Lipids Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Lipids Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Lipids Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Lipids Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Lipids Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Lipids Volume 2018 ; 2018 ; 2018 ; >
-    au < frozen ; exists ; 2019 ; Journal of Lipids Volume 2019 ; 2019 ; 2019 ; >
-    au < frozen ; exists ; 2020 ; Journal of Lipids Volume 2020 ; 2020 ; 2020 ; >
+    au < finished ; manifest ; 2019 ; Journal of Lipids Volume 2019 ; 2019 ; 2019 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2020 ; Journal of Lipids Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Journal of Lipids Volume 2021 ; 2021 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Journal of Lipids Volume 2022 ; 2022 ; 2022 ; >
 
@@ -7752,14 +7752,14 @@
     au < manifest ; exists ; 2010 ; Journal of Marine Biology Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Marine Biology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Marine Biology Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Journal of Marine Biology Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Marine Biology Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Marine Biology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Marine Biology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Marine Biology Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Marine Biology Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Marine Biology Volume 2018 ; 2018 ; 2018 ; >
     au < finished ; manifest ; 2019 ; Journal of Marine Biology Volume 2019 ; 2019 ; 2019 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2020 ; Journal of Marine Biology Volume 2020 ; 2020 ; 2020 ; >
+    au < finished ; manifest ; 2020 ; Journal of Marine Biology Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < expected ; exists ; 2021 ; Journal of Marine Biology Volume 2021 ; 2021 ; 2021 ; >
     au < expected ; exists ; 2022 ; Journal of Marine Biology Volume 2022 ; 2022 ; 2022 ; >
 
@@ -7775,7 +7775,7 @@
 
     param[journal_id] = jma
     
-    au < frozen ; exists ; 2013 ; Journal of Materials Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Materials Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Materials Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Materials Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Materials Volume 2016 ; 2016 ; 2016 ; >
@@ -7795,14 +7795,14 @@
 
     param[journal_id] = jmath
     
-    au < frozen ; exists ; 2013 ; Journal of Mathematics Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Mathematics Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Mathematics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Mathematics Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Mathematics Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Mathematics Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Mathematics Volume 2018 ; 2018 ; 2018 ; >
-    au < frozen ; exists ; 2019 ; Journal of Mathematics Volume 2019 ; 2019 ; 2019 ; >
-    au < frozen ; exists ; 2020 ; Journal of Mathematics Volume 2020 ; 2020 ; 2020 ; >
+    au < finished ; manifest ; 2019 ; Journal of Mathematics Volume 2019 ; 2019 ; 2019 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2020 ; Journal of Mathematics Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Journal of Mathematics Volume 2021 ; 2021 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Journal of Mathematics Volume 2022 ; 2022 ; 2022 ; >
 
@@ -7819,7 +7819,7 @@
     param[journal_id] = jme
     #ceased publication in 2017
     
-    au < frozen ; exists ; 2013 ; Journal of Medical Engineering Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Medical Engineering Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Medical Engineering Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Medical Engineering Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Medical Engineering Volume 2016 ; 2016 ; 2016 ; >
@@ -7842,11 +7842,11 @@
     au < manifest ; exists ; 2010 ; Journal of Metallurgy Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Metallurgy Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Metallurgy Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Journal of Metallurgy Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Metallurgy Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Metallurgy Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Metallurgy Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Metallurgy Volume 2016 ; 2016 ; 2016 ; >
-    au < frozen ; exists ; 2017 ; Journal of Metallurgy Volume 2017 ; 2017 ; 2017 ; >
+    au < finished ; manifest ; 2017 ; Journal of Metallurgy Volume 2017 ; 2017 ; 2017 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -7861,7 +7861,7 @@
     param[journal_id] = jmin
     #Moved to archive
     
-    au < frozen ; exists ; 2013 ; Journal of Mining Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Mining Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Mining Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Mining Volume 2015 ; 2015 ; 2015 ; >
 
@@ -7878,7 +7878,7 @@
     param[journal_id] = jmy
     #Moved to archive
     
-    au < frozen ; exists ; 2013 ; Journal of Mycology Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Mycology Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Mycology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Mycology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Mycology Volume 2016 ; 2016 ; 2016 ; >
@@ -7902,7 +7902,7 @@
     au < manifest ; exists ; 2010 ; Journal of Nanomaterials Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Nanomaterials Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Nanomaterials Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Journal of Nanomaterials Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Nanomaterials Volume 2013 ; 2013 ; 2013 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Nanomaterials Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Nanomaterials Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Nanomaterials Volume 2016 ; 2016 ; 2016 ; >
@@ -7926,7 +7926,7 @@
     param[journal_id] = jnp
     #ceased publication in 2017
     
-    au < frozen ; exists ; 2013 ; Journal of Nanoparticles Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Nanoparticles Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Nanoparticles Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Nanoparticles Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Nanoparticles Volume 2016 ; 2016 ; 2016 ; >
@@ -7945,7 +7945,7 @@
     param[journal_id] = jns
     #ceased publication in 2017
     
-    au < frozen ; exists ; 2013 ; Journal of Nanoscience Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Nanoscience Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Nanoscience Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Nanoscience Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Nanoscience Volume 2016 ; 2016 ; 2016 ; >
@@ -7969,7 +7969,7 @@
     au < manifest ; exists ; 2010 ; Journal of Nanotechnology Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Nanotechnology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Nanotechnology Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Journal of Nanotechnology Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Nanotechnology Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Nanotechnology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Nanotechnology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Nanotechnology Volume 2016 ; 2016 ; 2016 ; >
@@ -7993,7 +7993,7 @@
     param[journal_id] = jnd
     #ceased publication in 2017
     
-    au < frozen ; exists ; 2013 ; Journal of Neurodegenerative Diseases Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Neurodegenerative Diseases Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Neurodegenerative Diseases Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Neurodegenerative Diseases Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Neurodegenerative Diseases Volume 2016 ; 2016 ; 2016 ; >
@@ -8012,11 +8012,11 @@
     param[journal_id] = jndy
     #Moved to archive
     
-    au < frozen ; exists ; 2013 ; Journal of Nonlinear Dynamics Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Nonlinear Dynamics Volume 2013 ; 2013 ; 2013 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Nonlinear Dynamics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Nonlinear Dynamics Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Nonlinear Dynamics Volume 2016 ; 2016 ; 2016 ; >
-    au < frozen ; exists ; 2017 ; Journal of Nonlinear Dynamics Volume 2017 ; 2017 ; 2017 ; >
+    au < finished ; manifest ; 2017 ; Journal of Nonlinear Dynamics Volume 2017 ; 2017 ; 2017 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -8048,7 +8048,7 @@
     au < manifest ; exists ; 2010 ; Journal of Nucleic Acids Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Nucleic Acids Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Nucleic Acids Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Journal of Nucleic Acids Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Nucleic Acids Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Nucleic Acids Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Nucleic Acids Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Nucleic Acids Volume 2016 ; 2016 ; 2016 ; >
@@ -8090,7 +8090,7 @@
     au < manifest ; exists ; 2010 ; Journal of Nutrition and Metabolism Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Nutrition and Metabolism Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Nutrition and Metabolism Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Journal of Nutrition and Metabolism Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Nutrition and Metabolism Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Nutrition and Metabolism Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Nutrition and Metabolism Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Nutrition and Metabolism Volume 2016 ; 2016 ; 2016 ; >
@@ -8116,7 +8116,7 @@
     au < manifest ; exists ; 2010 ; Journal of Obesity Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Obesity Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Obesity Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Journal of Obesity Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Obesity Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Obesity Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Obesity Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Obesity Volume 2016 ; 2016 ; 2016 ; >
@@ -8144,7 +8144,7 @@
     au < manifest ; exists ; 2010 ; Journal of Oncology Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Oncology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Oncology Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Journal of Oncology Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Oncology Volume 2013 ; 2013 ; 2013 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Oncology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Oncology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Oncology Volume 2016 ; 2016 ; 2016 ; >
@@ -8168,7 +8168,7 @@
     param[journal_id] = joper
     #no longer published
     
-    au < frozen ; exists ; 2013 ; Journal of Operators Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Operators Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Operators Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Operators Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Operators Volume 2016 ; 2016 ; 2016 ; >
@@ -8189,7 +8189,7 @@
     au < manifest ; exists ; 2010 ; Journal of Ophthalmology Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Ophthalmology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Ophthalmology Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Journal of Ophthalmology Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Ophthalmology Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Ophthalmology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Ophthalmology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Ophthalmology Volume 2016 ; 2016 ; 2016 ; >
@@ -8212,13 +8212,13 @@
 
     param[journal_id] = jopti
     
-    au < frozen ; exists ; 2013 ; Journal of Optimization Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Optimization Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Optimization Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Optimization Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Optimization Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Optimization Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Optimization Volume 2018 ; 2018 ; 2018 ; >
-    au < frozen ; exists ; 2019 ; Journal of Optimization Volume 2019 ; 2019 ; 2019 ; >
+    au < finished ; manifest ; 2019 ; Journal of Optimization Volume 2019 ; 2019 ; 2019 ; reingest4.clockss.org:8082 >
     au < exists ; exists ; 2020 ; Journal of Optimization Volume 2020 ; 2020 ; 2020 ; >
     au < manifest ; exists ; 2021 ; Journal of Optimization Volume 2021 ; 2021 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Journal of Optimization Volume 2022 ; 2022 ; 2022 ; >
@@ -8236,7 +8236,7 @@
     param[journal_id] = jod
     #Moved to archive
     
-    au < frozen ; exists ; 2013 ; Journal of Oral Diseases Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Oral Diseases Volume 2013 ; 2013 ; 2013 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Oral Diseases Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Oral Diseases Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Oral Diseases Volume 2016 ; 2016 ; 2016 ; >
@@ -8270,7 +8270,7 @@
     param[journal_id] = joo
     #Moved to archive
     
-    au < frozen ; exists ; 2013 ; Journal of Oral Oncology Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Oral Oncology Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Oral Oncology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Oral Oncology Volume 2015 ; 2015 ; 2015 ; >
 
@@ -8289,14 +8289,14 @@
     au < manifest ; exists ; 2010 ; Journal of Osteoporosis Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Osteoporosis Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Osteoporosis Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Journal of Osteoporosis Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Osteoporosis Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Osteoporosis Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Osteoporosis Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Osteoporosis Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Osteoporosis Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Osteoporosis Volume 2018 ; 2018 ; 2018 ; >
     au < finished ; manifest ; 2019 ; Journal of Osteoporosis Volume 2019 ; 2019 ; 2019 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2020 ; Journal of Osteoporosis Volume 2020 ; 2020 ; 2020 ; >
+    au < finished ; manifest ; 2020 ; Journal of Osteoporosis Volume 2020 ; 2020 ; 2020 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2021 ; Journal of Osteoporosis Volume 2021 ; 2021 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Journal of Osteoporosis Volume 2022 ; 2022 ; 2022 ; >
 
@@ -8316,7 +8316,7 @@
     au < manifest ; exists ; 2010 ; Journal of Parasitology Research Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Parasitology Research Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Parasitology Research Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Journal of Parasitology Research Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Parasitology Research Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Parasitology Research Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Parasitology Research Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Parasitology Research Volume 2016 ; 2016 ; 2016 ; >
@@ -8341,14 +8341,14 @@
 
     au < manifest ; exists ; 2011 ; Journal of Pathogens Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Pathogens Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Journal of Pathogens Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Pathogens Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Pathogens Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Pathogens Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Pathogens Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Pathogens Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Pathogens Volume 2018 ; 2018 ; 2018 ; >
-    au < frozen ; exists ; 2019 ; Journal of Pathogens Volume 2019 ; 2019 ; 2019 ; >
-    au < frozen ; exists ; 2020 ; Journal of Pathogens Volume 2020 ; 2020 ; 2020 ; >
+    au < finished ; manifest ; 2019 ; Journal of Pathogens Volume 2019 ; 2019 ; 2019 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; Journal of Pathogens Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Journal of Pathogens Volume 2021 ; 2021 ; 2021 ; >
     au < expected ; exists ; 2022 ; Journal of Pathogens Volume 2022 ; 2022 ; 2022 ; >
 
@@ -8365,11 +8365,11 @@
     param[journal_id] = jpe
     #Moved to archive
     
-    au < frozen ; exists ; 2013 ; Journal of Petroleum Engineering Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Petroleum Engineering Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Petroleum Engineering Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Petroleum Engineering Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Petroleum Engineering Volume 2016 ; 2016 ; 2016 ; >
-    au < frozen ; exists ; 2017 ; Journal of Petroleum Engineering Volume 2017 ; 2017 ; 2017 ; >
+    au < finished ; manifest ; 2017 ; Journal of Petroleum Engineering Volume 2017 ; 2017 ; 2017 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -8383,14 +8383,14 @@
 
     param[journal_id] = jphar
     
-    au < frozen ; exists ; 2013 ; Journal of Pharmaceutics Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Pharmaceutics Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Pharmaceutics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Pharmaceutics Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Pharmaceutics Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Pharmaceutics Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Pharmaceutics Volume 2018 ; 2018 ; 2018 ; >
-    au < frozen ; exists ; 2019 ; Journal of Pharmaceutics Volume 2019 ; 2019 ; 2019 ; >
-    au < frozen ; exists ; 2020 ; Journal of Pharmaceutics Volume 2020 ; 2020 ; 2020 ; >
+    au < finished ; manifest ; 2019 ; Journal of Pharmaceutics Volume 2019 ; 2019 ; 2019 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; Journal of Pharmaceutics Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
     au < expected ; exists ; 2021 ; Journal of Pharmaceutics Volume 2021 ; 2021 ; 2021 ; >
     au < expected ; exists ; 2022 ; Journal of Pharmaceutics Volume 2022 ; 2022 ; 2022 ; >
 
@@ -8407,7 +8407,7 @@
     param[journal_id] = jpho
     #Moved to archive
     
-    au < frozen ; exists ; 2013 ; Journal of Photonics Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Photonics Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Photonics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Photonics Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Photonics Volume 2016 ; 2016 ; 2016 ; >
@@ -8425,7 +8425,7 @@
     param[journal_id] = jpol
     #ceased publication in 2017
     
-    au < frozen ; exists ; 2013 ; Journal of Polymers Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Polymers Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Polymers Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Polymers Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Polymers Volume 2016 ; 2016 ; 2016 ; >
@@ -8444,7 +8444,7 @@
     param[journal_id] = jpt
     #Moved to archive
     
-    au < frozen ; exists ; 2013 ; Journal of Powder Technology Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Powder Technology Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Powder Technology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Powder Technology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Powder Technology Volume 2016 ; 2016 ; 2016 ; >
@@ -8464,14 +8464,14 @@
     au < manifest ; exists ; 2010 ; Journal of Pregnancy Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Pregnancy Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Pregnancy Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Journal of Pregnancy Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Pregnancy Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Pregnancy Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Pregnancy Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Pregnancy Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Pregnancy Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Pregnancy Volume 2018 ; 2018 ; 2018 ; >
-    au < frozen ; exists ; 2019 ; Journal of Pregnancy Volume 2019 ; 2019 ; 2019 ; >
-    au < frozen ; exists ; 2020 ; Journal of Pregnancy Volume 2020 ; 2020 ; 2020 ; >
+    au < finished ; manifest ; 2019 ; Journal of Pregnancy Volume 2019 ; 2019 ; 2019 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; Journal of Pregnancy Volume 2020 ; 2020 ; 2020 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2021 ; Journal of Pregnancy Volume 2021 ; 2021 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Journal of Pregnancy Volume 2022 ; 2022 ; 2022 ; >
 
@@ -8506,7 +8506,7 @@
     au < manifest ; exists ; 2009 ; Journal of Probability and Statistics Volume 2009 ; 2009 ; 2009 ; >
     au < manifest ; exists ; 2010 ; Journal of Probability and Statistics Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2012 ; Journal of Probability and Statistics Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Journal of Probability and Statistics Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Probability and Statistics Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Probability and Statistics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Probability and Statistics Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Probability and Statistics Volume 2016 ; 2016 ; 2016 ; >
@@ -8535,7 +8535,7 @@
     au < manifest ; exists ; 2010 ; Journal of Quality and Reliability Engineering Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Quality and Reliability Engineering Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Quality and Reliability Engineering Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Journal of Quality and Reliability Engineering Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Quality and Reliability Engineering Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Quality and Reliability Engineering Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Quality and Reliability Engineering Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Quality and Reliability Engineering Volume 2016 ; 2016 ; 2016 ; >
@@ -8583,14 +8583,14 @@
 
     param[journal_id] = jre
 
-    au < frozen ; exists ; 2013 ; Journal of Renewable Energy Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Renewable Energy Volume 2013 ; 2013 ; 2013 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Renewable Energy Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Renewable Energy Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Renewable Energy Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Renewable Energy Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Renewable Energy Volume 2018 ; 2018 ; 2018 ; >
     au < finished ; manifest ; 2019 ; Journal of Renewable Energy Volume 2019 ; 2019 ; 2019 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2020 ; Journal of Renewable Energy Volume 2020 ; 2020 ; 2020 ; >
+    au < finished ; manifest ; 2020 ; Journal of Renewable Energy Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Journal of Renewable Energy Volume 2021 ; 2021 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Journal of Renewable Energy Volume 2022 ; 2022 ; 2022 ; >
 
@@ -8607,7 +8607,7 @@
     param[journal_id] = jrm
     #Moved to archive
 
-    au < frozen ; exists ; 2013 ; Journal of Respiratory Medicine Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Respiratory Medicine Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Respiratory Medicine Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Respiratory Medicine Volume 2015 ; 2015 ; 2015 ; >
 
@@ -8626,13 +8626,13 @@
     au < manifest ; exists ; 2009 ; Journal of Robotics Volume 2009 ; 2009 ; 2009 ; >
     au < manifest ; exists ; 2010 ; Journal of Robotics Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2012 ; Journal of Robotics Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Journal of Robotics Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Journal of Robotics Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Robotics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Robotics Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Robotics Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Robotics Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Robotics Volume 2018 ; 2018 ; 2018 ; >
-    au < frozen ; exists ; 2019 ; Journal of Robotics Volume 2019 ; 2019 ; 2019 ; >
+    au < finished ; manifest ; 2019 ; Journal of Robotics Volume 2019 ; 2019 ; 2019 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2020 ; Journal of Robotics Volume 2020 ; 2020 ; 2020 ; >
     au < crawling ; exists ; 2021 ; Journal of Robotics Volume 2021 ; 2021 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Journal of Robotics Volume 2022 ; 2022 ; 2022 ; >
