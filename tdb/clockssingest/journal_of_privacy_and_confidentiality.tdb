@@ -22,7 +22,7 @@
     
       param[journal_id] = jpc
 
-      au < manifest ; exists ; 2009 ; 2009 ; Journal of Privacy and Confidentiality Volume 1 ; 1 ; >
+      au < testing ; exists ; 2009 ; 2009 ; Journal of Privacy and Confidentiality Volume 1 ; 1 ; >
       au < finished ; crawling ; 2010 ; 2010 ; Journal of Privacy and Confidentiality Volume 1-2 ; 1-2 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2011 ; 2011 ; Journal of Privacy and Confidentiality Volume 2-3 ; 2-3 ; >
       au < frozen ; exists ; 2012 ; 2012 ; Journal of Privacy and Confidentiality Volume 4 No 1 ; 4 ; >
