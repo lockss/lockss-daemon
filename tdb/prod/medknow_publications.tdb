@@ -7614,9 +7614,9 @@
       {
       param[journal_issn] = 2319-9644
 
-      au < manifest ; 2018 ; Journal of Research in Pharmacy Practice Volume 7 ; 2018 ; 7 ; https://www.jrpp.net/ >
-      au < manifest ; 2019 ; Journal of Research in Pharmacy Practice Volume 8 ; 2019 ; 8 ; https://www.jrpp.net/ >
-      au < manifest ; 2020 ; Journal of Research in Pharmacy Practice Volume 9 ; 2020 ; 9 ; https://www.jrpp.net/ >
+      au < ready ; 2018 ; Journal of Research in Pharmacy Practice Volume 7 ; 2018 ; 7 ; https://www.jrpp.net/ >
+      au < ready ; 2019 ; Journal of Research in Pharmacy Practice Volume 8 ; 2019 ; 8 ; https://www.jrpp.net/ >
+      au < ready ; 2020 ; Journal of Research in Pharmacy Practice Volume 9 ; 2020 ; 9 ; https://www.jrpp.net/ >
       au < manifest ; 2021 ; Journal of Research in Pharmacy Practice Volume 10 ; 2021 ; 10 ; https://www.jrpp.net/ >
       au < expected ; 2022 ; Journal of Research in Pharmacy Practice Volume 11 ; 2022 ; 11 ; https://www.jrpp.net/ >
       }
@@ -9789,11 +9789,11 @@
       param[journal_issn] = 2589-0603
 #      param[base_url] = http://www.e-ijas.org/
 
-      au < manifest ; 2016 ; Imam Journal of Applied Sciences Volume 1 ; 2016 ; 1 ; https://www.e-ijas.org/ >
-      au < manifest ; 2017 ; Imam Journal of Applied Sciences Volume 2 ; 2017 ; 2 ; https://www.e-ijas.org/ >
-      au < manifest ; 2018 ; Imam Journal of Applied Sciences Volume 3 ; 2018 ; 3 ; https://www.e-ijas.org/ >
-      au < manifest ; 2019 ; Imam Journal of Applied Sciences Volume 4 ; 2019 ; 4 ; https://www.e-ijas.org/ >
-      au < manifest ; 2020 ; Imam Journal of Applied Sciences Volume 5 ; 2020 ; 5 ; https://www.e-ijas.org/ >
+      au < ready ; 2016 ; Imam Journal of Applied Sciences Volume 1 ; 2016 ; 1 ; https://www.e-ijas.org/ >
+      au < ready ; 2017 ; Imam Journal of Applied Sciences Volume 2 ; 2017 ; 2 ; https://www.e-ijas.org/ >
+      au < ready ; 2018 ; Imam Journal of Applied Sciences Volume 3 ; 2018 ; 3 ; https://www.e-ijas.org/ >
+      au < ready ; 2019 ; Imam Journal of Applied Sciences Volume 4 ; 2019 ; 4 ; https://www.e-ijas.org/ >
+      au < ready ; 2020 ; Imam Journal of Applied Sciences Volume 5 ; 2020 ; 5 ; https://www.e-ijas.org/ >
       au < manifest ; 2021 ; Imam Journal of Applied Sciences Volume 6 ; 2021 ; 6 ; https://www.e-ijas.org/ >
       au < expected ; 2022 ; Imam Journal of Applied Sciences Volume 7 ; 2022 ; 7 ; https://www.e-ijas.org/ >
 
@@ -9832,14 +9832,15 @@
 
       param[journal_issn] = 0976-4003
 #      param[base_url] = http://www.ijds.in/
+      #Plugin does not work with http AUs.
 
-      au < manifest ; 2016 ; Indian Journal of Dental Sciences Volume 8 ; 2016 ; 8 ; http://www.ijds.in/ >
+      au < notReady ; 2016 ; Indian Journal of Dental Sciences Volume 8 ; 2016 ; 8 ; http://www.ijds.in/ >
       au < released ; 2017 ; Indian Journal of Dental Sciences Volume 9 ; 2017 ; 9 ; http://www.ijds.in/ >
-      au < manifest ; 2018 ; Indian Journal of Dental Sciences Volume 10 ; 2018 ; 10 ; http://www.ijds.in/ >
-      au < manifest ; 2019 ; Indian Journal of Dental Sciences Volume 11 ; 2019 ; 11 ; http://www.ijds.in/ >
-      au < manifest ; 2020 ; Indian Journal of Dental Sciences Volume 12 ; 2020 ; 12 ; http://www.ijds.in/ >
-      au < manifest ; 2021 ; Indian Journal of Dental Sciences Volume 13 ; 2021 ; 13 ; http://www.ijds.in/ >
-      au < manifest ; 2022 ; Indian Journal of Dental Sciences Volume 14 ; 2022 ; 14 ; http://www.ijds.in/ >
+      au < notReady ; 2018 ; Indian Journal of Dental Sciences Volume 10 ; 2018 ; 10 ; http://www.ijds.in/ >
+      au < notReady ; 2019 ; Indian Journal of Dental Sciences Volume 11 ; 2019 ; 11 ; http://www.ijds.in/ >
+      au < notReady ; 2020 ; Indian Journal of Dental Sciences Volume 12 ; 2020 ; 12 ; http://www.ijds.in/ >
+      au < notReady ; 2021 ; Indian Journal of Dental Sciences Volume 13 ; 2021 ; 13 ; http://www.ijds.in/ >
+      au < notReady ; 2022 ; Indian Journal of Dental Sciences Volume 14 ; 2022 ; 14 ; http://www.ijds.in/ >
 
   }
 
