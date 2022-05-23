@@ -51,11 +51,13 @@ except ImportError:
     sys.exit('The Python Zeep module must be installed (or on the PYTHONPATH)')
 import zeep.helpers
 
+import getpass
 from wsutil import file_lines, make_client, enable_zeep_debugging, host_help_prefix
 
 
 def request_deep_crawl_by_id(host, username, password, auid, refetch_depth, priority, force):
     client = make_client(host, username, password, _service)
+
     return zeep.helpers.serialize_object(
         client.service.requestDeepCrawlById(auId=auid, refetchDepth=refetch_depth, priority=priority, force=force))
 
@@ -142,8 +144,8 @@ class _AuControlServiceOptions(object):
         self.request_deep_crawl_by_id=args.request_deep_crawl_by_id
         self.request_deep_crawl_by_id_list=args.request_deep_crawl_by_id_list
         self.host=args.host
-        self.password=args.password
-        self.username=args.username
+        self.username = args.username or getpass.getpass('UI username: ')
+        self.password = args.password or getpass.getpass('UI password: ')
         self.force = args.force
         self.priority = args.priority
         self.refetch_depth = args.refetch_depth
