@@ -718,7 +718,7 @@
     au < finished ; crawling ; 2019 ; Heart Views Volume 20 ; 2019 ; 20 ; https://www.heartviews.org/ ; ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Heart Views Volume 21 ; 2020 ; 21 ; https://www.heartviews.org/ ; ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2021 ; Heart Views Volume 22 ; 2021 ; 22 ; https://www.heartviews.org/ ; ; >
-    au < expected ; exists ; 2022 ; Heart Views Volume 23 ; 2022 ; 23 ; https://www.heartviews.org/ ; ; >
+    au < manifest ; exists ; 2022 ; Heart Views Volume 23 ; 2022 ; 23 ; https://www.heartviews.org/ ; ; >
 
   }
 
@@ -2166,7 +2166,7 @@
     au < finished ; crawling ; 2019 ; Industrial Psychiatry Journal Volume 28 ; 2019 ; 28 ; https://www.industrialpsychiatry.org/ ; ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Industrial Psychiatry Journal Volume 29 ; 2020 ; 29 ; https://www.industrialpsychiatry.org/ ; ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Industrial Psychiatry Journal Volume 30 ; 2021 ; 30 ; https://www.industrialpsychiatry.org/ ; ; >
-    au < expected ; exists ; 2022 ; Industrial Psychiatry Journal Volume 31 ; 2022 ; 31 ; https://www.industrialpsychiatry.org/ ; ; >
+    au < manifest ; exists ; 2022 ; Industrial Psychiatry Journal Volume 31 ; 2022 ; 31 ; https://www.industrialpsychiatry.org/ ; ; >
 
   }
 
@@ -2810,7 +2810,7 @@
     au < finished ; crawling ; 2019 ; Journal of Cutaneous and Aesthetic Surgery Volume 12 ; 2019 ; 12 ; https://www.jcasonline.com/ ; ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Journal of Cutaneous and Aesthetic Surgery Volume 13 ; 2020 ; 13 ; https://www.jcasonline.com/ ; ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Journal of Cutaneous and Aesthetic Surgery Volume 14 ; 2021 ; 14 ; https://www.jcasonline.com/ ; ; >
-    au < expected ; exists ; 2022 ; Journal of Cutaneous and Aesthetic Surgery Volume 15 ; 2022 ; 15 ; https://www.jcasonline.com/ ; ; >
+    au < manifest ; exists ; 2022 ; Journal of Cutaneous and Aesthetic Surgery Volume 15 ; 2022 ; 15 ; https://www.jcasonline.com/ ; ; >
 
   }
 
@@ -3719,7 +3719,7 @@
     au < finished ; crawling ; 2019 ; Journal of Pharmacy and Bioallied Sciences Volume 11 ; 2019 ; 11 ; https://www.jpbsonline.org/ ; ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Journal of Pharmacy and Bioallied Sciences Volume 12 ; 2020 ; 12 ; https://www.jpbsonline.org/ ; ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Journal of Pharmacy and Bioallied Sciences Volume 13 ; 2021 ; 13 ; https://www.jpbsonline.org/ ; ; >
-    au < expected ; exists ; 2022 ; Journal of Pharmacy and Bioallied Sciences Volume 14 ; 2022 ; 14 ; https://www.jpbsonline.org/ ; ; >
+    au < manifest ; exists ; 2022 ; Journal of Pharmacy and Bioallied Sciences Volume 14 ; 2022 ; 14 ; https://www.jpbsonline.org/ ; ; >
 
   }
 
@@ -5733,7 +5733,7 @@
       au < finished ; crawling ; 2019 ; Egyptian Pharmaceutical Journal Volume 18 ; 2019 ; 18 ; https://www.epj.eg.net/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Egyptian Pharmaceutical Journal Volume 19 ; 2020 ; 19 ; https://www.epj.eg.net/ ; ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; Egyptian Pharmaceutical Journal Volume 20 ; 2021 ; 20 ; https://www.epj.eg.net/ ; ; >
-      au < expected ; exists ; 2022 ; Egyptian Pharmaceutical Journal Volume 21 ; 2022 ; 21 ; https://www.epj.eg.net/ ; ; >
+      au < manifest ; exists ; 2022 ; Egyptian Pharmaceutical Journal Volume 21 ; 2022 ; 21 ; https://www.epj.eg.net/ ; ; >
 
   }
 
@@ -8139,7 +8139,7 @@
       au < finished ; crawling ; 2019 ; Nigerian Journal of Ophthalmology Volume 27 ; 2019 ; 27 ; https://www.nigerianjournalofophthalmology.com/ ; ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Nigerian Journal of Ophthalmology Volume 28 ; 2020 ; 28 ; https://www.nigerianjournalofophthalmology.com/ ; ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; Nigerian Journal of Ophthalmology Volume 29 ; 2021 ; 29 ; https://www.nigerianjournalofophthalmology.com/ ; ; >
-      au < expected ; exists ; 2022 ; Nigerian Journal of Ophthalmology Volume 30 ; 2022 ; 30 ; https://www.nigerianjournalofophthalmology.com/ ; ; >
+      au < manifest ; exists ; 2022 ; Nigerian Journal of Ophthalmology Volume 30 ; 2022 ; 30 ; https://www.nigerianjournalofophthalmology.com/ ; ; >
 
   }
 
@@ -8295,7 +8295,7 @@
       au < finished ; crawling ; 2019 ; Pigment International Volume 6 ; 2019 ; 6 ; https://www.pigmentinternational.com/ ; ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Pigment International Volume 7 ; 2020 ; 7 ; https://www.pigmentinternational.com/ ; ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; Pigment International Volume 8 ; 2021 ; 8 ; https://www.pigmentinternational.com/ ; ; >
-      au < expected ; exists ; 2022 ; Pigment International Volume 9 ; 2022 ; 9 ; https://www.pigmentinternational.com/ ; ; >
+      au < manifest ; exists ; 2022 ; Pigment International Volume 9 ; 2022 ; 9 ; https://www.pigmentinternational.com/ ; ; >
 
   }
 
@@ -8695,7 +8695,7 @@
       au < finished ; crawling ; 2019 ; The Egyptian Journal of Cardiothoracic Anesthesia Volume 13 ; 2019 ; 13 ; https://www.ejca.eg.net/ ; ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; The Egyptian Journal of Cardiothoracic Anesthesia Volume 14 ; 2020 ; 14 ; https://www.ejca.eg.net/ ; ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; The Egyptian Journal of Cardiothoracic Anesthesia Volume 15 ; 2021 ; 15 ; https://www.ejca.eg.net/ ; ; >
-      au < expected ; exists ; 2022 ; The Egyptian Journal of Cardiothoracic Anesthesia Volume 16 ; 2022 ; 16 ; https://www.ejca.eg.net/ ; ; >
+      au < manifest ; exists ; 2022 ; The Egyptian Journal of Cardiothoracic Anesthesia Volume 16 ; 2022 ; 16 ; https://www.ejca.eg.net/ ; ; >
 
   }
 
