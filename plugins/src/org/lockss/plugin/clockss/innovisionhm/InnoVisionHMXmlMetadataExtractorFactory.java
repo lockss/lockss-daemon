@@ -30,7 +30,7 @@ POSSIBILITY OF SUCH DAMAGE.
 
 */
 
-package org.lockss.plugin.clockss.innovisionpm;
+package org.lockss.plugin.clockss.innovisionhm;
 
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadata;
@@ -45,8 +45,8 @@ import org.lockss.util.Logger;
 import java.util.ArrayList;
 import java.util.List;
 
-public class InnoVisionPMXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
-  private static final Logger log = Logger.getLogger(InnoVisionPMXmlMetadataExtractorFactory.class);
+public class InnoVisionHMXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
+  private static final Logger log = Logger.getLogger(InnoVisionHMXmlMetadataExtractorFactory.class);
 
 
   private static SourceXmlSchemaHelper PubMedHelper = null;
@@ -55,10 +55,10 @@ public class InnoVisionPMXmlMetadataExtractorFactory extends SourceXmlMetadataEx
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
                                                            String contentType)
       throws PluginException {
-    return new InnoVisionPMXmlMetadataExtractor();
+    return new InnoVisionHMXmlMetadataExtractor();
   }
 
-  public class InnoVisionPMXmlMetadataExtractor extends SourceXmlMetadataExtractor {
+  public class InnoVisionHMXmlMetadataExtractor extends SourceXmlMetadataExtractor {
 
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {

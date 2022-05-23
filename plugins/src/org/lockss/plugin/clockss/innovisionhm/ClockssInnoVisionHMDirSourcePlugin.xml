@@ -36,7 +36,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_identifier</string>
-        <string>org.lockss.plugin.clockss.innovisionpm.ClockssInnoVisionPMDirSourcePlugin</string>
+        <string>org.lockss.plugin.clockss.innovisionhm.ClockssInnoVisionHMDirSourcePlugin</string>
     </entry>
     <entry>
         <string>plugin_version</string>
@@ -98,7 +98,7 @@ POSSIBILITY OF SUCH DAMAGE.
         <map>
             <entry>
                 <string>*</string>
-                <string>org.lockss.plugin.clockss.innovisionpm.InnoVisionPMXmlMetadataExtractorFactory</string>
+                <string>org.lockss.plugin.clockss.innovisionhm.InnoVisionHMXmlMetadataExtractorFactory</string>
             </entry>
         </map>
     </entry>
@@ -107,7 +107,7 @@ POSSIBILITY OF SUCH DAMAGE.
         <map>
             <entry>
                 <string>*</string>
-                <string>org.lockss.plugin.clockss.innovisionpm.InnoVisionPMXmlMetadataExtractorFactory</string>
+                <string>org.lockss.plugin.clockss.innovisionhm.InnoVisionHMXmlMetadataExtractorFactory</string>
             </entry>
         </map>
     </entry>
