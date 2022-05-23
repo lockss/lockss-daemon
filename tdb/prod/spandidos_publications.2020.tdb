@@ -38,7 +38,7 @@
     au < released ; 2020 ; Oncology Letters Volume 19 ; 19 >
     au < released ; 2020 ; Oncology Letters Volume 20 ; 20 >
     au < released ; 2021 ; Oncology Letters Volume 21 ; 21 >
-    au < releasing ; 2021 ; Oncology Letters Volume 22 ; 22 >
+    au < released ; 2021 ; Oncology Letters Volume 22 ; 22 >
     au < manifest ; 2022 ; Oncology Letters Volume 23 ; 23 >
     au < manifest ; 2022 ; Oncology Letters Volume 24 ; 24 >
 
@@ -177,7 +177,7 @@
     au < notReady ; 2020 ; Experimental and Therapeutic Medicine Volume 19 ; 19 >
     au < notReady ; 2020 ; Experimental and Therapeutic Medicine Volume 20 ; 20 >
     au < notReady ; 2021 ; Experimental and Therapeutic Medicine Volume 21 ; 21 >
-    au < releasing ; 2021 ; Experimental and Therapeutic Medicine Volume 22 ; 22 >
+    au < released ; 2021 ; Experimental and Therapeutic Medicine Volume 22 ; 22 >
     au < manifest ; 2022 ; Experimental and Therapeutic Medicine Volume 23 ; 23 >
     au < manifest ; 2022 ; Experimental and Therapeutic Medicine Volume 24 ; 24 >
 
@@ -238,7 +238,7 @@
     au < released ; 2019 ; International Journal of Molecular Medicine Volume 44 ; 44 >
     au < released ; 2020 ; International Journal of Molecular Medicine Volume 45 ; 45 >
     au < released ; 2020 ; International Journal of Molecular Medicine Volume 46 ; 46 >
-    au < releasing ; 2021 ; International Journal of Molecular Medicine Volume 47 ; 47 >
+    au < released ; 2021 ; International Journal of Molecular Medicine Volume 47 ; 47 >
     au < released ; 2021 ; International Journal of Molecular Medicine Volume 48 ; 48 >
     au < manifest ; 2022 ; International Journal of Molecular Medicine Volume 49 ; 49 >
     au < manifest ; 2022 ; International Journal of Molecular Medicine Volume 50 ; 50 >
@@ -326,7 +326,7 @@
     au < released ; 2019 ; Oncology Reports Volume 41 ; 41 >
     au < released ; 2019 ; Oncology Reports Volume 42 ; 42 >
     au < released ; 2020 ; Oncology Reports Volume 43 ; 43 >
-    au < releasing ; 2020 ; Oncology Reports Volume 44 ; 44 >
+    au < released ; 2020 ; Oncology Reports Volume 44 ; 44 >
     au < released ; 2021 ; Oncology Reports Volume 45 ; 45 >
     au < released ; 2021 ; Oncology Reports Volume 46 ; 46 >
     au < manifest ; 2022 ; Oncology Reports Volume 47 ; 47 >
@@ -348,7 +348,7 @@
     au < released ; 2010 ; Molecular Medicine Reports Volume 3 ; 3 >
     au < released ; 2011 ; Molecular Medicine Reports Volume 4 ; 4 >
     au < released ; 2012 ; Molecular Medicine Reports Volume 5 ; 5 >
-    au < releasing ; 2012 ; Molecular Medicine Reports Volume 6 ; 6 >
+    au < released ; 2012 ; Molecular Medicine Reports Volume 6 ; 6 >
     au < manifest ; 2013 ; Molecular Medicine Reports Volume 7 ; 7 >
     au < released ; 2013 ; Molecular Medicine Reports Volume 8 ; 8 >
     au < released ; 2014 ; Molecular Medicine Reports Volume 9 ; 9 >
@@ -363,9 +363,9 @@
     au < doNotProcess ; 2018 ; Molecular Medicine Reports Volume 18 ; 18 >
     au < released ; 2019 ; Molecular Medicine Reports Volume 19 ; 19 >
     au < released ; 2019 ; Molecular Medicine Reports Volume 20 ; 20 >
-    au < releasing ; 2020 ; Molecular Medicine Reports Volume 21 ; 21 >
+    au < released ; 2020 ; Molecular Medicine Reports Volume 21 ; 21 >
     au < released ; 2020 ; Molecular Medicine Reports Volume 22 ; 22 >
-    au < releasing ; 2021 ; Molecular Medicine Reports Volume 23 ; 23 >
+    au < released ; 2021 ; Molecular Medicine Reports Volume 23 ; 23 >
     au < released ; 2021 ; Molecular Medicine Reports Volume 24 ; 24 >
     au < manifest ; 2022 ; Molecular Medicine Reports Volume 25 ; 25 >
     au < manifest ; 2022 ; Molecular Medicine Reports Volume 26 ; 26 >
@@ -382,7 +382,7 @@
       param[journal_id] = wasj
   
       au < released ; 2019 ; World Academy of Sciences Journal Volume 1 ; 1 >
-      au < releasing ; 2020 ; World Academy of Sciences Journal Volume 2 ; 2 >
+      au < released ; 2020 ; World Academy of Sciences Journal Volume 2 ; 2 >
       au < released ; 2021 ; World Academy of Sciences Journal Volume 3 ; 3 >
       au < manifest ; 2022 ; World Academy of Sciences Journal Volume 4 ; 4 >
     }

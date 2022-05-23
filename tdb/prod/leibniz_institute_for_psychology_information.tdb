@@ -100,7 +100,7 @@
       au < ojs2.OJS2Plugin ; released ; 2018 ; Journal of Social and Political Psychology Volume 6 ; 6 ; 2018 ; https://jspp.psychopen.eu/ >
       au < ojs2.OJS2Plugin ; released ; 2019 ; Journal of Social and Political Psychology Volume 7 ; 7 ; 2019 ; https://jspp.psychopen.eu/ >
       au < ojs3.Ojs3Plugin ; released ; 2020 ; Journal of Social and Political Psychology Volume 8 ; 8 ; 2020 ; https://jspp.psychopen.eu/ >
-      au < ojs3.Ojs3Plugin ; releasing ; 2021 ; Journal of Social and Political Psychology Volume 9 ; 9 ; 2021 ; https://jspp.psychopen.eu/ >
+      au < ojs3.Ojs3Plugin ; released ; 2021 ; Journal of Social and Political Psychology Volume 9 ; 9 ; 2021 ; https://jspp.psychopen.eu/ >
       au < ojs3.Ojs3Plugin ; manifest ; 2022 ; Journal of Social and Political Psychology Volume 10 ; 10 ; 2022 ; https://jspp.psychopen.eu/ >
 
   }
@@ -145,7 +145,7 @@
 
       param[journal_id] = qcmb
 
-      au < ojs3.Ojs3Plugin ; releasing ; 2021 ; Quantitative and Computational Methods in Behavioral Sciences Volume 1 ; 1 ; 2021 ; https://qcmb.psychopen.eu/ >
+      au < ojs3.Ojs3Plugin ; released ; 2021 ; Quantitative and Computational Methods in Behavioral Sciences Volume 1 ; 1 ; 2021 ; https://qcmb.psychopen.eu/ >
       au < ojs3.Ojs3Plugin ; expected ; 2022 ; Quantitative and Computational Methods in Behavioral Sciences Volume 2 ; 2 ; 2022 ; https://qcmb.psychopen.eu/ >
 
   }
@@ -160,7 +160,7 @@
       param[journal_id] = sotrap
 
       au < ojs3.Ojs3Plugin ; released ; 2020 ; Sexual Offending: Theory, Research, and Prevention Volume 15 ; 15 ; 2020 ; https://sotrap.psychopen.eu/ > #no substance urls
-      au < ojs3.Ojs3Plugin ; releasing ; 2021 ; Sexual Offending: Theory, Research, and Prevention Volume 16 ; 16 ; 2021 ; https://sotrap.psychopen.eu/ >
+      au < ojs3.Ojs3Plugin ; released ; 2021 ; Sexual Offending: Theory, Research, and Prevention Volume 16 ; 16 ; 2021 ; https://sotrap.psychopen.eu/ >
       au < ojs3.Ojs3Plugin ; manifest ; 2022 ; Sexual Offending: Theory, Research, and Prevention Volume 17 ; 17 ; 2022 ; https://sotrap.psychopen.eu/ >
 
   }
