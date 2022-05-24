@@ -19,7 +19,8 @@
     {
 
       title <
-        name = Finnish Literature Society (SKS) Books
+        name = Finnish Literature Society (SKS) Books ;
+        type = bookSeries
       >
 
       param[base_url] = https://oa.finlit.fi/
@@ -118,7 +119,8 @@
     {
 
       title <
-        name = Kriterium Books
+        name = Kriterium Books ;
+        type = bookSeries
       >
 
       param[base_url] = https://www.kriterium.se/
@@ -165,7 +167,8 @@
     {
 
       title <
-        name = London School of Economics Press Books
+        name = London School of Economics Press Books ;
+        type = bookSeries
       >
 
       param[base_url] = https://press.lse.ac.uk/
@@ -193,7 +196,8 @@
     {
 
       title <
-        name = Modern Academic Publishing Books
+        name = Modern Academic Publishing Books ;
+        type = bookSeries
       >
 
       param[base_url] = https://www.humanities-map.net/
@@ -231,7 +235,8 @@
     {
 
       title <
-        name = Penn State University Press Books
+        name = Penn State University Press Books ;
+        type = bookSeries
       >
 
       param[base_url] = https://oa.psupress.org/
@@ -269,7 +274,8 @@
     {
 
       title <
-        name = Stockholm University Press Books
+        name = Stockholm University Press Books ;
+        type = bookSeries
       >
 
       param[base_url] = https://www.stockholmuniversitypress.se/
@@ -324,7 +330,8 @@
     {
 
       title <
-        name = Ubiquity Press Books
+        name = Ubiquity Press Books ;
+        type = bookSeries
       >
       {
       #Released in error to the ingest machines.
@@ -399,7 +406,8 @@
     {
 
       title <
-        name = University of California Press Books
+        name = University of California Press Books ;
+        type = bookSeries
       >
 
       param[base_url] = https://www.luminosoa.org/
@@ -486,7 +494,8 @@
     {
 
       title <
-        name = University of Westminster Press Books
+        name = University of Westminster Press Books ;
+        type = bookSeries
       >
 
       param[base_url] = https://www.uwestminsterpress.co.uk/
@@ -545,7 +554,8 @@
     {
 
       title <
-        name = Virginia Tech Publishing Books
+        name = Virginia Tech Publishing Books ;
+        type = bookSeries
       >
 
       param[base_url] = https://publishing.vt.edu/
@@ -585,7 +595,8 @@
     {
 
       title <
-        name = White Rose University Press Books
+        name = White Rose University Press Books ;
+        type = bookSeries
       >
 
       param[base_url] = https://universitypress.whiterose.ac.uk/
@@ -603,25 +614,27 @@
 
     {
 
-          title <
-            name = University of Westminster Press
-          >
+      title <
+        name = University of Westminster Press ;
+        type = bookSeries
+      >
 
-          param[base_url] = https://www.uwestminsterpress.co.uk/
+      param[base_url] = https://www.uwestminsterpress.co.uk/
 
-          au < crawling ; exists ; 2021 ; 978-1-912656-92-9 ; Fashion Media and Sustainability  (978-1-912656-92-9) ; 10.16997/book50 ;  >
+      au < crawling ; exists ; 2021 ; 978-1-912656-92-9 ; Fashion Media and Sustainability  (978-1-912656-92-9) ; 10.16997/book50 ;  >
 
     }
 
     {
 
-          title <
-            name = Stockholm University Press
-          >
+      title <
+        name = Stockholm University Press ;
+        type = bookSeries
+      >
 
-          param[base_url] = https://www.stockholmuniversitypress.se/
+      param[base_url] = https://www.stockholmuniversitypress.se/
 
-          au < crawling ; exists ; 2020 ;  978-91-7635-125-3 ; Working-Class Literature(s) Volume II  ( 	978-91-7635-125-3) ; 10.16993/bbf ;  >
+      au < crawling ; exists ; 2020 ;  978-91-7635-125-3 ; Working-Class Literature(s) Volume II  ( 	978-91-7635-125-3) ; 10.16993/bbf ;  >
 
     }
 
