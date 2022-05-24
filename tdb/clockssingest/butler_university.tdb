@@ -56,7 +56,7 @@
     au < finished ; finished ; 2018 ; Journal of Hindu-Christian Studies Volume 31 ; 31 ; https://digitalcommons.butler.edu/ ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2019 ; Journal of Hindu-Christian Studies Volume 32 ; 32 ; https://digitalcommons.butler.edu/ ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2020 ; Journal of Hindu-Christian Studies Volume 33 ; 33 ; https://digitalcommons.butler.edu/ ; reingest1.clockss.org:8082 > #unable to fetch probe permission page on content3/ingest3 https://digitalcommons.butler.edu/cgi/viewcontent.cgi?article=1761&context=jhcs
-    au < manifest ; exists ; 2021 ; Journal of Hindu-Christian Studies Volume 34 ; 34 ; https://digitalcommons.butler.edu/ ; > 
+    au < testing ; exists ; 2021 ; Journal of Hindu-Christian Studies Volume 34 ; 34 ; https://digitalcommons.butler.edu/ ; > 
     au < expected ; exists ; 2022 ; Journal of Hindu-Christian Studies Volume 35 ; 35 ; https://digitalcommons.butler.edu/ ; > 
 
   }
