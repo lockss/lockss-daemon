@@ -10402,8 +10402,8 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Shock and Vibration Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Shock and Vibration Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Shock and Vibration Volume 2018 ; 2018 ; 2018 ; >
-    au < frozen ; exists ; 2019 ; Shock and Vibration Volume 2019 ; 2019 ; 2019 ; >
-    au < frozen ; exists ; 2020 ; Shock and Vibration Volume 2020 ; 2020 ; 2020 ; >
+    au < finished ; manifest ; 2019 ; Shock and Vibration Volume 2019 ; 2019 ; 2019 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2020 ; Shock and Vibration Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Shock and Vibration Volume 2021 ; 2021 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Shock and Vibration Volume 2022 ; 2022 ; 2022 ; >
 
@@ -10421,14 +10421,14 @@
 
     au < manifest ; exists ; 2011 ; Sleep Disorders Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Sleep Disorders Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Sleep Disorders Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Sleep Disorders Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Sleep Disorders Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Sleep Disorders Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Sleep Disorders Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Sleep Disorders Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Sleep Disorders Volume 2018 ; 2018 ; 2018 ; >
     au < finished ; manifest ; 2019 ; Sleep Disorders Volume 2019 ; 2019 ; 2019 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2020 ; Sleep Disorders Volume 2020 ; 2020 ; 2020 ; >
+    au < finished ; manifest ; 2020 ; Sleep Disorders Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Sleep Disorders Volume 2021 ; 2021 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Sleep Disorders Volume 2022 ; 2022 ; 2022 ; >
 
@@ -10447,11 +10447,11 @@
 
     au < manifest ; exists ; 2011 ; Smart Materials Research Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Smart Materials Research Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Smart Materials Research Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Smart Materials Research Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Smart Materials Research Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Smart Materials Research Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Smart Materials Research Volume 2016 ; 2016 ; 2016 ; >
-    au < frozen ; exists ; 2017 ; Smart Materials Research Volume 2017 ; 2017 ; 2017 ; >
+    au < finished ; manifest ; 2017 ; Smart Materials Research Volume 2017 ; 2017 ; 2017 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -10468,7 +10468,7 @@
     au < manifest ; exists ; 2010 ; Stem Cells International Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Stem Cells International Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Stem Cells International Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Stem Cells International Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Stem Cells International Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Stem Cells International Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Stem Cells International Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Stem Cells International Volume 2016 ; 2016 ; 2016 ; >
@@ -10494,7 +10494,7 @@
     au < manifest ; exists ; 2010 ; Stroke Research and Treatment Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Stroke Research and Treatment Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Stroke Research and Treatment Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Stroke Research and Treatment Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Stroke Research and Treatment Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Stroke Research and Treatment Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Stroke Research and Treatment Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Stroke Research and Treatment Volume 2016 ; 2016 ; 2016 ; >
@@ -10538,7 +10538,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Surgery Research and Practice Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Surgery Research and Practice Volume 2018 ; 2018 ; 2018 ; >
     au < finished ; manifest ; 2019 ; Surgery Research and Practice Volume 2019 ; 2019 ; 2019 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2020 ; Surgery Research and Practice Volume 2020 ; 2020 ; 2020 ; >
+    au < finished ; manifest ; 2020 ; Surgery Research and Practice Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Surgery Research and Practice Volume 2021 ; 2021 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Surgery Research and Practice Volume 2022 ; 2022 ; 2022 ; >
 
@@ -10567,7 +10567,7 @@
     au < manifest ; exists ; 2010 ; TheScientificWorldJOURNAL Volume 10 (2010) ; 2010 ; 10 ; >
     au < manifest ; exists ; 2011 ; TheScientificWorldJOURNAL Volume 11 (2011) ; 2011 ; 11 ; >
     au < manifest ; exists ; 2012 ; The Scientific World Journal Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; The Scientific World Journal Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; The Scientific World Journal Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; The Scientific World Journal Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; The Scientific World Journal Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; The Scientific World Journal Volume 2016 ; 2016 ; 2016 ; >
@@ -10594,7 +10594,7 @@
     au < manifest ; exists ; 2010 ; Thrombosis Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Thrombosis Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Thrombosis Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Thrombosis Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Thrombosis Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Thrombosis Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Thrombosis Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Thrombosis Volume 2016 ; 2016 ; 2016 ; >
@@ -10615,14 +10615,14 @@
     au < manifest ; exists ; 2010 ; Tuberculosis Research and Treatment Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Tuberculosis Research and Treatment Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Tuberculosis Research and Treatment Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Tuberculosis Research and Treatment Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Tuberculosis Research and Treatment Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Tuberculosis Research and Treatment Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Tuberculosis Research and Treatment Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Tuberculosis Research and Treatment Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Tuberculosis Research and Treatment Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Tuberculosis Research and Treatment Volume 2018 ; 2018 ; 2018 ; >
     au < finished ; manifest ; 2019 ; Tuberculosis Research and Treatment Volume 2019 ; 2019 ; 2019 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2020 ; Tuberculosis Research and Treatment Volume 2020 ; 2020 ; 2020 ; >
+    au < finished ; manifest ; 2020 ; Tuberculosis Research and Treatment Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Tuberculosis Research and Treatment Volume 2021 ; 2021 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Tuberculosis Research and Treatment Volume 2022 ; 2022 ; 2022 ; >
 
@@ -10641,7 +10641,7 @@
     au < manifest ; exists ; 2010 ; Ulcers Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Ulcers Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Ulcers Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Ulcers Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Ulcers Volume 2013 ; 2013 ; 2013 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Ulcers Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Ulcers Volume 2015 ; 2015 ; 2015 ; >
     
@@ -10681,7 +10681,7 @@
     au < manifest ; exists ; 2010 ; Veterinary Medicine International Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Veterinary Medicine International Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Veterinary Medicine International Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Veterinary Medicine International Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Veterinary Medicine International Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Veterinary Medicine International Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Veterinary Medicine International Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Veterinary Medicine International Volume 2016 ; 2016 ; 2016 ; >
@@ -10725,7 +10725,7 @@
     au < manifest ; exists ; 2010 ; VLSI Design Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; VLSI Design Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; VLSI Design Volume 2012 ; 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; VLSI Design Volume 2013 ; 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; VLSI Design Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; VLSI Design Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; VLSI Design Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; VLSI Design Volume 2016 ; 2016 ; 2016 ; >
@@ -10752,7 +10752,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Wireless Communications and Mobile Computing Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Wireless Communications and Mobile Computing Volume 2018 ; 2018 ; 2018 ; >
     au < finished ; manifest ; 2019 ; Wireless Communications and Mobile Computing Volume 2019 ; 2019 ; 2019 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2020 ; Wireless Communications and Mobile Computing Volume 2020 ; 2020 ; 2020 ; >
+    au < finished ; manifest ; 2020 ; Wireless Communications and Mobile Computing Volume 2020 ; 2020 ; 2020 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2021 ; Wireless Communications and Mobile Computing Volume 2021 ; 2021 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Wireless Communications and Mobile Computing Volume 2022 ; 2022 ; 2022 ; >
 
