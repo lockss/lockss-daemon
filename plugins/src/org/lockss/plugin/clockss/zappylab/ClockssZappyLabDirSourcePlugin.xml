@@ -32,7 +32,8 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <!--do not process content for it until spammed preprint content is resolved-->
+    <string>down</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
