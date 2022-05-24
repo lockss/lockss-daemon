@@ -95,13 +95,15 @@ implements SourceXmlSchemaHelper {
   };
 
   static private final String topNode = "/component/header/publicationMeta[@level = \"product\"]";
+
   private static final String publisher = topNode + "/publisherInfo/publisherName";
   private static final String book_title = topNode + "/titleGroup/title[@type = \"main\"]";
   private static final String book_title_alt = topNode + "/titleGroup/title[@type = \"tocForm\"]";
   private static final String isbn = topNode + "/isbn[@type = \"online-13\"]";
   private static final String doi = topNode + "/doi";
-  private static final String art_pubdate = topNode + "/eventGroup/event[@type = \"publishedPrint\"]/@date";
-  private static final String author =  topNode + "/creators/creator[@creatorRole = \"author\"]/personName\n";
+
+  private static final String art_pubdate = "/component/header/publicationMeta[@level = \"unit\"]/eventGroup/event[@type = \"publishedPrint\"]/@date";
+  private static final String author =  "/component/header/contentMeta/creators/creator[@creatorRole = \"author\"]/personName\n";
 
 
   static private final Map<String,XPathValue>     

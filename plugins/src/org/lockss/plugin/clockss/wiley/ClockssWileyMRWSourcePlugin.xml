@@ -40,14 +40,14 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -107,5 +107,11 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>org.lockss.plugin.clockss.wiley.WileyMRWSourceXmlMetadataExtractorFactory</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"https://clockss-test.lockss.org/sourcefiles/wileymrw-released/2022_01/9780471443391.*/?$"</string>
+    </list>
   </entry>
 </map>    
