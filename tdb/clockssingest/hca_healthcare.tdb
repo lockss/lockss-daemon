@@ -23,8 +23,8 @@
 
     param[journal_abbr] = hcahealthcarejournal
 
-    au < testing ; exists ; 2020 ; Bulletin of the Faculty of Pharmacy Cairo University Volume 1 ; 1 ; >
-    au < testing ; exists ; 2021 ; Bulletin of the Faculty of Pharmacy Cairo University Volume 2 ; 2 ; >
+    au < ready ; exists ; 2020 ; Bulletin of the Faculty of Pharmacy Cairo University Volume 1 ; 1 ; >
+    au < ready ; exists ; 2021 ; Bulletin of the Faculty of Pharmacy Cairo University Volume 2 ; 2 ; >
     au < manifest ; exists ; 2022 ; Bulletin of the Faculty of Pharmacy Cairo University Volume 3 ; 3 ; >
 
   }
