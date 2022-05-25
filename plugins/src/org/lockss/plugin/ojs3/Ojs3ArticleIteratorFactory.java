@@ -47,7 +47,6 @@ import org.htmlparser.tags.LinkTag;
 import org.htmlparser.tags.MetaTag;
 import org.htmlparser.util.NodeList;
 import org.htmlparser.util.ParserException;
-import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.ArticleMetadataExtractorFactory;
@@ -87,8 +86,18 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
 
   private static final Logger log = Logger.getLogger(Ojs3ArticleIteratorFactory.class);
 
-  protected static final String PATTERN_TEMPLATE = "\".*/article/view/[^/]+$\"";
+  protected static String AF_PATTERN_TEMPLATE;
+  protected static Pattern AF_PATTERN;
+
+  protected static String ABSTRACT_PATTERN_TEMPLATE = "\".*/article/view/[^/]+$\"";
   protected static Pattern ABSTRACT_PATTERN = Pattern.compile("article/view/[^/]+$", Pattern.CASE_INSENSITIVE);
+
+  protected static final String GENERIC_ARTICLE_PATTERN_TEMPLATE = "\".*/article/view/[^/]+/[^/]+$\"";
+  protected static Pattern GENERIC_ARTICLE_PATTERN = Pattern.compile("article/view/[^/]+/[^/]+$", Pattern.CASE_INSENSITIVE);
+
+  protected static String ISSUE_PATTERN_TEMPLATE = "\".*/issue/view/[^/]+$\"";
+  protected static Pattern ISSUE_PATTERN = Pattern.compile("issue/view/[^/]+$", Pattern.CASE_INSENSITIVE);
+
   protected static String PUB_ID = "";
   protected static String JOURNAL_ID;
   protected static String YEAR;
@@ -98,10 +107,11 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
                                                       MetadataTarget target)
       throws PluginException {
     PUB_ID = getPudIdFromAu(au);
+    setPatterns(au);
     return new CitationArticleIterator(au,
         new SubTreeArticleIterator.Spec()
             .setTarget(target)
-            .setPatternTemplate(PATTERN_TEMPLATE));
+            .setPatternTemplate(AF_PATTERN_TEMPLATE));
   }
 
   /*
@@ -109,6 +119,7 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
    * this gets used when converting the abstract url to citation urls in setCitationFiles
    */
   protected String getPudIdFromAu(ArchivalUnit au) {
+    log.debug3("getting PUB_ID");
     String pubIdParam = "&publicationId=";
     String risCitationParam = "citationstylelanguage/download/ris?submissionId=";
     for (CachedUrl cu : au.getAuCachedUrlSet().getCuIterable()) {
@@ -124,6 +135,49 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
     return "";
   }
 
+  /*
+   * Searches through the CachedUrl set in the au for the default ABSTRACT_PATTERN
+   * if it finds a url like that, AF_PATTERN is set to the default ABSTRACT_PATTERN
+   * otherwise, a search of the CachedUrls for one that matches GENERIC_ARTICLE_PATTERN
+   * is conducted, if found, AF_PATTERN is set to that.
+   * Finally, if neither the ABSTRACT_PATTERN nor GENERIC_ARTICLE_PATTERN were found
+   * we assume there are no article pages, and we set AF_PATTERN to ISSUE_PATTERN.
+   */
+  protected void setPatterns(ArchivalUnit au) {
+    if (searchCusForPattern(au, ABSTRACT_PATTERN)) {
+      log.debug3("found abstract pattern");
+      AF_PATTERN = ABSTRACT_PATTERN;
+      AF_PATTERN_TEMPLATE = ABSTRACT_PATTERN_TEMPLATE;
+    } else if (searchCusForPattern(au, GENERIC_ARTICLE_PATTERN)) {
+      log.debug3("found Generic pattern");
+      // if we didnt find an ARTICLE_PATTERN we search for the generic PATTERN
+      AF_PATTERN = GENERIC_ARTICLE_PATTERN;
+      AF_PATTERN_TEMPLATE = GENERIC_ARTICLE_PATTERN_TEMPLATE;
+    } else {
+      log.debug3("found neither pattern");
+      // if we didn't find the generic article pattern, we fall back to issue pattern
+      AF_PATTERN = ISSUE_PATTERN;
+      AF_PATTERN_TEMPLATE = ISSUE_PATTERN_TEMPLATE;
+    }
+  }
+
+
+  /*
+   * Helper function that iterates over the AUs cachedUrl set
+   * and searches for the supplied pattern in the urls.
+   */
+  protected boolean searchCusForPattern(ArchivalUnit au,
+                                          Pattern urlPattern) {
+    Matcher mat;
+    for (CachedUrl cu : au.getAuCachedUrlSet().getCuIterable()) {
+      String cuUrl = cu.getUrl();
+      mat = urlPattern.matcher(cuUrl);
+      if (mat.find()) {
+        return true;
+      }
+    }
+    return false;
+  }
   protected static class CitationArticleIterator extends SubTreeArticleIterator {
 
     public CitationArticleIterator(ArchivalUnit au,
@@ -134,7 +188,7 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
     @Override
     protected ArticleFiles createArticleFiles(CachedUrl cu) {
       String url = cu.getUrl();
-      Matcher mat = ABSTRACT_PATTERN.matcher(url);
+      Matcher mat = AF_PATTERN.matcher(url);
       if (mat.find()) {
         return processAbstract(cu, mat);
       } else {
@@ -166,6 +220,12 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
         try {
           pdfnl = getNodesFromAbstract(absCu, MetaTagNameNodeFilter("citation_pdf_url"));
           htmlnl = getNodesFromAbstract(absCu, MetaTagNameNodeFilter("citation_fulltext_html_url"));
+          if (pdfnl.size() == 0) {
+            pdfnl = getNodesFromAbstract(absCu, PdfLinkNodeFilter());
+          }
+          if(htmlnl.size() == 0) {
+            htmlnl = getNodesFromAbstract(absCu, FileLinkNodeFilter("html"));
+          }
           xmlnl = getNodesFromAbstract(absCu, FileLinkNodeFilter("xml"));
           epubnl = getNodesFromAbstract(absCu, FileLinkNodeFilter("epub"));
           // there is rarely a word document of the article
@@ -235,6 +295,21 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
         return false;
       };
     }
+    /*
+     * Creates a NodeFilter which acts on LinkTag class attribute
+     *   which contains "obj_galley_link pdf"
+     *   or which meets the regex "galley-link.*pdf"
+     */
+    protected final NodeFilter PdfLinkNodeFilter() {
+      return node -> {
+        if (!(node instanceof LinkTag)) return false;
+        LinkTag aTag = (LinkTag) node;
+        String aClass = aTag.getAttribute("class");
+        if (aClass == null) return false;
+        return (aClass.contains("obj_galley_link pdf") ||
+            aClass.matches("galley-link.*pdf") );
+      };
+    }
 
     /*
      * Iterates over a given NodeList and
@@ -261,7 +336,7 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
             } else if (nl.elementAt(0) instanceof LinkTag) {
               urlStr = ((LinkTag) nl.elementAt(0)).getLink();
             } else {
-              log.debug("node was an unexpected type.");
+              log.debug3("node was an unexpected type.");
             }
             if (urlStr != null) {
               log.debug3(role + " is " + urlStr);
