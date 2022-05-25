@@ -204,6 +204,15 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>org.lockss.plugin.ojs3.Ojs3HtmlHashFilterFactory</string>
   </entry>
   <entry>
+    <string>application/x-research-info-systems_filter_factory</string>
+    <string>org.lockss.plugin.ojs3.Ojs3RisHashFilterFactory</string>
+  </entry>
+    <!--  RIS citation URLs may come in as text/plain; we do additional RIS check in the factory -->
+  <entry>
+    <string>text/plain_filter_factory</string>
+    <string>org.lockss.plugin.ojs3.Ojs3RisHashFilterFactory</string>
+  </entry>
+  <entry>
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.ojs3.Ojs3HtmlCrawlFilterFactory</string>
   </entry>
