@@ -53,6 +53,7 @@ public class Ojs3HtmlLinkExtractorFactory implements LinkExtractorFactory {
 	// instead of a crawl filter, limit which links are found on which pages
 	protected static final String MANIFEST_PATH = "/gateway/";
 	protected static final String TOC_PATH = "/issue/view/";
+protected static final Pattern TOC_PAT = Pattern.compile(TOC_PATH + "[^/]+$", Pattern.CASE_INSENSITIVE);
 	protected static final Pattern LAND_PAT = Pattern.compile("/article/view/[^/]+$", Pattern.CASE_INSENSITIVE);
 
 
@@ -72,7 +73,9 @@ public class Ojs3HtmlLinkExtractorFactory implements LinkExtractorFactory {
 					public void foundLink(String url) {
 						// If the found url is an issue TOC then we should only "find" it on a manifest
 						// to avoid overcrawling
-						if ((url.contains(TOC_PATH)) && !(srcUrl.contains(MANIFEST_PATH))) {
+						// we allow issue/view/123/456 because these are pdfs, htmls etc. that are on the TOC page
+						Matcher tocMat = TOC_PAT.matcher(url);
+						if (tocMat.find() && !srcUrl.contains(MANIFEST_PATH)) {
 							log.debug3("Suppressing found link: " + url + " from page " + srcUrl);
 							return;
 						}
