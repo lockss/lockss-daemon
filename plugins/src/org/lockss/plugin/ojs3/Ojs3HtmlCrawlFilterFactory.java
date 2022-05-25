@@ -54,21 +54,21 @@ public class Ojs3HtmlCrawlFilterFactory implements FilterFactory {
 
   
   private static final NodeFilter[] excludeNodes = new NodeFilter[] {
-		  // Need the header for the download content in the pdf viewing frame
-		  //HtmlNodeFilters.tag("header"),
-		    HtmlNodeFilters.tag("footer"),
-		    HtmlNodeFilters.tag("aside"),
-		    //HtmlNodeFilters.tag("script"),
-		    HtmlNodeFilters.tag("nav"),
-		  
-	        // on the article landing page - remove the bottom stuff
-	        HtmlNodeFilters.tagWithAttribute("section","class","article-more-details"),
+		// Need the header for the download content in the pdf viewing frame
+		//HtmlNodeFilters.tag("header"),
+		HtmlNodeFilters.tag("footer"),
+		HtmlNodeFilters.tag("aside"),
+		//HtmlNodeFilters.tag("script"),
+		HtmlNodeFilters.tag("nav"),
+
+		// on the article landing page - remove the bottom stuff
+		HtmlNodeFilters.tagWithAttribute("section","class","article-more-details"),
 //	        HtmlNodeFilters.tagWithAttribute("aside","id","sidebar"),
-	        // on the article page - most read articles by this author
-	        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "articlesBySameAuthor"),
-			// ignore the setLocale urls, we dont want the other languages until they stop redirecting to the landing pages.
-			HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/user/setLocale")
-	    };  
+		// on the article page - most read articles by this author
+		HtmlNodeFilters.tagWithAttributeRegex("div", "id", "articlesBySameAuthor"),
+		// ignore the setLocale urls, we dont want the other languages until they stop redirecting to the landing pages.
+		HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/user/setLocale")
+	};
  
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
@@ -76,8 +76,8 @@ public class Ojs3HtmlCrawlFilterFactory implements FilterFactory {
       String encoding) {
 
 	  return new HtmlFilterInputStream(in,
-              encoding,
-              HtmlNodeFilterTransform.exclude(new OrFilter(excludeNodes)));
+																	 	 encoding,
+																		 HtmlNodeFilterTransform.exclude(new OrFilter(excludeNodes)));
     
   }
 
