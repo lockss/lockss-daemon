@@ -12,21 +12,40 @@
       eissn = 2330-2976 ;
       issnl = 2330-2976
     >
-    
+    {
+    plugin = org.lockss.plugin.ojs3.Ojs3Plugin
+    attr[start_stem] = index.php/ 
+    param[base_url] = https://ajlpublishing.org/
+    param[journal_id] = jl
+    implicit < status ; year ; param[year] ; name ; volume >
+
+    au < doNotProcess ; 2006 ; 2006 ; Judaica Librarianship Volume 12 ; 12 >
+    au < doNotProcess ; 2007 ; 2007 ; Judaica Librarianship Volume 13 ; 13 >
+    au < doNotProcess ; 2008 ; 2008 ; Judaica Librarianship Volume 14 ; 14 >
+    au < doNotProcess ; 2009 ; 2009 ; Judaica Librarianship Volume 15 ; 15 >
+    au < exists ; 2011 ; 2011 ; Judaica Librarianship Volume 16-17 ; 16 >
+    au < exists ; 2014 ; 2014 ; Judaica Librarianship Volume 18 ; 18 >
+    au < exists ; 2016 ; 2016 ; Judaica Librarianship Volume 19 ; 19 >
+    au < exists ; 2017 ; 2017 ; Judaica Librarianship Volume 20 ; 20 >
+    au < exists ; 2020 ; 2020 ; Judaica Librarianship Volume 21 ; 21 >
+    au < expected ; 2022 ; 2022 ; Judaica Librarianship Volume 22 ; 22 >
+
+    }
+    {
     plugin = org.lockss.plugin.bepress.BePressPlugin 
 #    param[base_url] = http://ajlpublishing.org/
     param[journal_abbr] = jl
     implicit < status ; year ; name ; param[volume] ; param[base_url] >
 
-    au < released ; 2006 ; Judaica Librarianship Volume 12 ; 12 ; https://ajlpublishing.org/ >
-    au < released ; 2007 ; Judaica Librarianship Volume 13 ; 13 ; https://ajlpublishing.org/ >
-    au < released ; 2008 ; Judaica Librarianship Volume 14 ; 14 ; https://ajlpublishing.org/ >
-    au < released ; 2009 ; Judaica Librarianship Volume 15 ; 15 ; https://ajlpublishing.org/ >
-    au < released ; 2011 ; Judaica Librarianship Volume 16-17 ; 16 ; http://ajlpublishing.org/ >
-    au < released ; 2014 ; Judaica Librarianship Volume 18 ; 18 ; http://ajlpublishing.org/ >
-    au < released ; 2016 ; Judaica Librarianship Volume 19 ; 19 ; http://ajlpublishing.org/ >
-    au < released ; 2017 ; Judaica Librarianship Volume 20 ; 20 ; https://ajlpublishing.org/ >
-
+    au < down ; 2006 ; Judaica Librarianship Volume 12 ; 12 ; https://ajlpublishing.org/ >
+    au < down ; 2007 ; Judaica Librarianship Volume 13 ; 13 ; https://ajlpublishing.org/ >
+    au < down ; 2008 ; Judaica Librarianship Volume 14 ; 14 ; https://ajlpublishing.org/ >
+    au < down ; 2009 ; Judaica Librarianship Volume 15 ; 15 ; https://ajlpublishing.org/ >
+    au < superseded ; 2011 ; Judaica Librarianship Volume 16-17 [superseded] ; 16 ; http://ajlpublishing.org/ >
+    au < superseded ; 2014 ; Judaica Librarianship Volume 18 [superseded] ; 18 ; http://ajlpublishing.org/ >
+    au < superseded ; 2016 ; Judaica Librarianship Volume 19 [superseded] ; 19 ; http://ajlpublishing.org/ >
+    au < superseded ; 2017 ; Judaica Librarianship Volume 20 [superseded] ; 20 ; https://ajlpublishing.org/ >
+    }
   }
 
 }

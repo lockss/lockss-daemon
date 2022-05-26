@@ -19,19 +19,19 @@
     param[journal_id] = ebl
     #moved to ojs3
 
-    au < ojs2.OJS2Plugin ; released ; 2010 ; 1 ; Ethnobiology Letters Volume 1 ; 2010 ; http://ojs.ethnobiology.org/ >
-    au < ojs2.OJS2Plugin ; released ; 2011 ; 2 ; Ethnobiology Letters Volume 2 ; 2011 ; http://ojs.ethnobiology.org/ >
-    au < ojs2.OJS2Plugin ; released ; 2012 ; 3 ; Ethnobiology Letters Volume 3 ; 2012 ; http://ojs.ethnobiology.org/ >
-    au < ojs2.OJS2Plugin ; released ; 2013 ; 4 ; Ethnobiology Letters Volume 4 ; 2013 ; http://ojs.ethnobiology.org/ >
-    au < ojs2.OJS2Plugin ; released ; 2014 ; 5 ; Ethnobiology Letters Volume 5 ; 2014 ; http://ojs.ethnobiology.org/ >
-    au < ojs2.OJS2Plugin ; released ; 2015 ; 6 ; Ethnobiology Letters Volume 6 ; 2015 ; http://ojs.ethnobiology.org/ >
-    au < ojs2.OJS2Plugin ; released ; 2016 ; 7 ; Ethnobiology Letters Volume 7 ; 2016 ; http://ojs.ethnobiology.org/ >
-    au < ojs2.OJS2Plugin ; released ; 2017 ; 8 ; Ethnobiology Letters Volume 8 ; 2017 ; http://ojs.ethnobiology.org/ >
+    au < ojs2.OJS2Plugin ; down ; 2010 ; 1 ; Ethnobiology Letters Volume 1 ; 2010 ; http://ojs.ethnobiology.org/ >
+    au < ojs2.OJS2Plugin ; down ; 2011 ; 2 ; Ethnobiology Letters Volume 2 ; 2011 ; http://ojs.ethnobiology.org/ >
+    au < ojs2.OJS2Plugin ; down ; 2012 ; 3 ; Ethnobiology Letters Volume 3 ; 2012 ; http://ojs.ethnobiology.org/ >
+    au < ojs2.OJS2Plugin ; down ; 2013 ; 4 ; Ethnobiology Letters Volume 4 ; 2013 ; http://ojs.ethnobiology.org/ >
+    au < ojs2.OJS2Plugin ; down ; 2014 ; 5 ; Ethnobiology Letters Volume 5 ; 2014 ; http://ojs.ethnobiology.org/ >
+    au < ojs2.OJS2Plugin ; down ; 2015 ; 6 ; Ethnobiology Letters Volume 6 ; 2015 ; http://ojs.ethnobiology.org/ >
+    au < ojs2.OJS2Plugin ; down ; 2016 ; 7 ; Ethnobiology Letters Volume 7 ; 2016 ; http://ojs.ethnobiology.org/ >
+    au < ojs2.OJS2Plugin ; down ; 2017 ; 8 ; Ethnobiology Letters Volume 8 ; 2017 ; http://ojs.ethnobiology.org/ >
     au < ojs3.Ojs3Plugin ; exists ; 2018 ; 9 ; Ethnobiology Letters Volume 9 ; 2018 ; https://ojs.ethnobiology.org/ >
-    au < ojs3.Ojs3Plugin ; expected ; 2019 ; 10 ; Ethnobiology Letters Volume 10 ; 2019 ; https://ojs.ethnobiology.org/ >
-    au < ojs3.Ojs3Plugin ; expected ; 2020 ; 11 ; Ethnobiology Letters Volume 11 ; 2020 ; https://ojs.ethnobiology.org/ >
-    au < ojs3.Ojs3Plugin ; expected ; 2021 ; 12 ; Ethnobiology Letters Volume 12 ; 2021 ; https://ojs.ethnobiology.org/ >
-    au < ojs3.Ojs3Plugin ; expected ; 2022 ; 13 ; Ethnobiology Letters Volume 13 ; 2022 ; https://ojs.ethnobiology.org/ >
+    au < ojs3.Ojs3Plugin ; exists ; 2019 ; 10 ; Ethnobiology Letters Volume 10 ; 2019 ; https://ojs.ethnobiology.org/ >
+    au < ojs3.Ojs3Plugin ; exists ; 2020 ; 11 ; Ethnobiology Letters Volume 11 ; 2020 ; https://ojs.ethnobiology.org/ >
+    au < ojs3.Ojs3Plugin ; exists ; 2021 ; 12 ; Ethnobiology Letters Volume 12 ; 2021 ; https://ojs.ethnobiology.org/ >
+    au < ojs3.Ojs3Plugin ; exists ; 2022 ; 13 ; Ethnobiology Letters Volume 13 ; 2022 ; https://ojs.ethnobiology.org/ >
 
   }
 
@@ -84,7 +84,7 @@
     au < down ; 2015 ; Journal of Ethnobiology Volume 35 ; 35 >
     au < down ; 2016 ; Journal of Ethnobiology Volume 36 ; 36 >
     au < down ; 2017 ; Journal of Ethnobiology Volume 37 ; 37 >
-    au < testing ; 2018 ; Journal of Ethnobiology Volume 38 ; 38 >
+    au < doNotProcess ; 2018 ; Journal of Ethnobiology Volume 38 ; 38 >
 
     }
   }
