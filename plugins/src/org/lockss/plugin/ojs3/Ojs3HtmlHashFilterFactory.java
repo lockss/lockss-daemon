@@ -32,21 +32,31 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.ojs3;
 
+import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 //import java.io.FileInputStream;
 //import java.io.FileOutputStream;
 //import org.apache.commons.io.IOUtils;
 
+import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
+import org.htmlparser.Tag;
+import org.htmlparser.Text;
 import org.htmlparser.filters.OrFilter;
-import org.lockss.filter.html.HtmlCompoundTransform;
-import org.lockss.filter.html.HtmlFilterInputStream;
-import org.lockss.filter.html.HtmlNodeFilterTransform;
-import org.lockss.filter.html.HtmlNodeFilters;
+import org.htmlparser.nodes.TextNode;
+import org.htmlparser.tags.*;
+import org.htmlparser.util.NodeList;
+import org.htmlparser.util.ParserException;
+import org.htmlparser.visitors.NodeVisitor;
+import org.lockss.filter.html.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.FilterFactory;
+import org.lockss.util.Constants;
 import org.lockss.util.Logger;
 
 /*
@@ -57,6 +67,20 @@ import org.lockss.util.Logger;
 public class Ojs3HtmlHashFilterFactory implements FilterFactory {
 
   private static final Logger log = Logger.getLogger(Ojs3HtmlHashFilterFactory.class);
+
+  private static final String CIT_ENTRY_CLASS = "csl-entry";
+  // [cited 2022May18]
+  public static final Pattern VANCOUVER_CIT_PATTERN =
+      Pattern.compile("\\[cited \\d\\d\\d\\d[a-z]+\\d\\d?]", Pattern.CASE_INSENSITIVE);
+  // Accessed May 18, 2022.
+  public static final Pattern TURABIAN_CIT_PATTERN =
+      Pattern.compile("Accessed [a-z]+ \\d\\d?, \\d\\d\\d\\d", Pattern.CASE_INSENSITIVE);
+  //(Accessed: 20May2022)
+  public static final Pattern HARVARD_CIT_PATTERN =
+      Pattern.compile("\\(Accessed: \\d\\d?[a-z]+\\d\\d\\d\\d\\)", Pattern.CASE_INSENSITIVE);
+  // Acesso em: 19 may. 2022.
+  public static final Pattern ASSOCIACAO_BRAZILEIRA_DE_NORMAS_TECNICAS_PATTERN =
+      Pattern.compile("Acesso em: \\d\\d? [a-z]+\\. \\d\\d\\d\\d", Pattern.CASE_INSENSITIVE);
 
   private static final NodeFilter[] includeNodes = new NodeFilter[] {
     // manifest page
@@ -80,8 +104,44 @@ public class Ojs3HtmlHashFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-container"),
     // issue page: https://haematologica.org/issue/view/377
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "one-article-intoc"),
+
     // the citation files https://ojs.aut.ac.nz/hospitality-insights/citationstylelanguage/get/acm-sig-proceedings?submissionId=58
-    HtmlNodeFilters.tagWithAttribute("div", "class", "csl-entry"), // alternatively div.csl-bib-body
+    //HtmlNodeFilters.tagWithAttribute("div", "class", "csl-entry"), // alternatively div.csl-bib-body
+    /*
+     * Custom node filter which first accepts and div.csl-entry nodes.
+     * additionally, it searches children nodes of this div for common citation date accessed patterns
+     * and removes them.
+     */
+    new NodeFilter() {
+      @Override public boolean accept(Node node) {
+
+        if (node instanceof Div) {
+          String className = ((Div) node).getAttribute("class");
+          if (className != null && className.equals(CIT_ENTRY_CLASS)) {
+            for (Node child : ((Div) node).getChildrenAsNodeArray()) {
+              String allText = child.getText();
+              ArrayList<Pattern> citPats = new ArrayList<>();
+              citPats.add(VANCOUVER_CIT_PATTERN);
+              citPats.add(ASSOCIACAO_BRAZILEIRA_DE_NORMAS_TECNICAS_PATTERN);
+              citPats.add(HARVARD_CIT_PATTERN);
+              citPats.add(TURABIAN_CIT_PATTERN);
+              Matcher mat;
+              for (Pattern citPat : citPats) {
+                mat = citPat.matcher(allText);
+                if (mat.find()) {
+                  // remove the identified Date Accessed bit, and accept the node
+                  child.setText(mat.replaceAll(""));
+                  return true;
+                }
+              }
+            }
+            // if no transform was made, still accept the node
+            return true;
+          }
+        }
+        return false;
+      }
+    },
   };
 
   private static final NodeFilter[] includeNodes2 = new NodeFilter[] {};
@@ -101,9 +161,9 @@ public class Ojs3HtmlHashFilterFactory implements FilterFactory {
       in,
       encoding,
       new HtmlCompoundTransform(
-          HtmlNodeFilterTransform.include(new OrFilter(includeNodes)),
-          HtmlNodeFilterTransform.exclude(new OrFilter(excludeNodes))
-          )
+        HtmlNodeFilterTransform.include(new OrFilter(includeNodes)),
+        HtmlNodeFilterTransform.exclude(new OrFilter(excludeNodes))
+      )
     );
   }
 
