@@ -28,10 +28,10 @@
     au < released ; 2016 ; 8 ; Journal of Leisure Research Volume 8 ; 2016 ; https://js.sagamorepub.com/ >
     au < released ; 2017 ; 9 ; Journal of Leisure Research Volume 9 ; 2017 ; https://js.sagamorepub.com/ >
     au < released ; 2018 ; 10 ; Journal of Leisure Research Volume 10 ; 2018 ; https://js.sagamorepub.com/ >
-    au < notReady ; 2019 ; 11 ; Journal of Leisure Research Volume 11 ; 2019 ; https://js.sagamorepub.com/ >
-    au < notReady ; 2020 ; 12 ; Journal of Leisure Research Volume 12 ; 2020 ; https://js.sagamorepub.com/ >
-    au < notReady ; 2021 ; 13 ; Journal of Leisure Research Volume 13 ; 2021 ; https://js.sagamorepub.com/ >
-    au < notReady ; 2022 ; 14 ; Journal of Leisure Research Volume 14 ; 2022 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 2019 ; 11 ; Journal of Leisure Research Volume 11 ; 2019 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 2020 ; 12 ; Journal of Leisure Research Volume 12 ; 2020 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 2021 ; 13 ; Journal of Leisure Research Volume 13 ; 2021 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 2022 ; 14 ; Journal of Leisure Research Volume 14 ; 2022 ; https://js.sagamorepub.com/ >
 
   }
 
@@ -112,9 +112,9 @@
     au < down ; 2014 ; 6 ; Journal of Applied Sport Management: Research that Matters Volume 6 ; 2014 ; http://js.sagamorepub.com/ >
     au < down ; 2015 ; 7 ; Journal of Applied Sport Management: Research that Matters Volume 7 ; 2015 ; http://js.sagamorepub.com/ >
     au < down ; 2016 ; 8 ; Journal of Applied Sport Management: Research that Matters Volume 8 ; 2016 ; http://js.sagamorepub.com/ >
-    au < notReady ; 2017 ; 9 ; Journal of Applied Sport Management: Research that Matters Volume 9 ; 2017 ; https://js.sagamorepub.com/ > #login found
-    au < notReady ; 2018 ; 10 ; Journal of Applied Sport Management: Research that Matters Volume 10 ; 2018 ; https://js.sagamorepub.com/ > #login found
-    au < notReady ; 2019 ; 11 ; Journal of Applied Sport Management: Research that Matters Volume 11 ; 2019 ; https://js.sagamorepub.com/ > #login found
+    au < doNotProcess ; 2017 ; 9 ; Journal of Applied Sport Management: Research that Matters Volume 9 ; 2017 ; https://js.sagamorepub.com/ > #login found
+    au < doNotProcess ; 2018 ; 10 ; Journal of Applied Sport Management: Research that Matters Volume 10 ; 2018 ; https://js.sagamorepub.com/ > #login found
+    au < doNotProcess ; 2019 ; 11 ; Journal of Applied Sport Management: Research that Matters Volume 11 ; 2019 ; https://js.sagamorepub.com/ > #login found
     #No longer published by Sagamore. See LXQUEUE-1700. No more volumes after 2019. Subscription needed.
   }
 
@@ -201,10 +201,10 @@
     au < released ; 2016 ; 34 ; Journal of Park and Recreation Administration Volume 34 ; 2016 ; http://js.sagamorepub.com/ >
     au < released ; 2017 ; 35 ; Journal of Park and Recreation Administration Volume 35 ; 2017 ; http://js.sagamorepub.com/ >
     au < released ; 2018 ; 36 ; Journal of Park and Recreation Administration Volume 36 ; 2018 ; https://js.sagamorepub.com/ >
-    au < notReady ; 2019 ; 37 ; Journal of Park and Recreation Administration Volume 37 ; 2019 ; https://js.sagamorepub.com/ >
-    au < notReady ; 2020 ; 38 ; Journal of Park and Recreation Administration Volume 38 ; 2020 ; https://js.sagamorepub.com/ >
-    au < notReady ; 2021 ; 39 ; Journal of Park and Recreation Administration Volume 39 ; 2021 ; https://js.sagamorepub.com/ > #login found
-    au < notReady ; 2022 ; 40 ; Journal of Park and Recreation Administration Volume 40 ; 2022 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 2019 ; 37 ; Journal of Park and Recreation Administration Volume 37 ; 2019 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 2020 ; 38 ; Journal of Park and Recreation Administration Volume 38 ; 2020 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 2021 ; 39 ; Journal of Park and Recreation Administration Volume 39 ; 2021 ; https://js.sagamorepub.com/ > #login found
+    au < doNotProcess ; 2022 ; 40 ; Journal of Park and Recreation Administration Volume 40 ; 2022 ; https://js.sagamorepub.com/ >
     #Subscription needed.
   }
 
@@ -255,10 +255,10 @@
     au < released ; 2016 ; 73 ; The Physical Educator Volume 73 ; 2016 ; http://js.sagamorepub.com/ >
     au < released ; 2017 ; 74 ; The Physical Educator Volume 74 ; 2017 ; http://js.sagamorepub.com/ >
     au < released ; 2018 ; 75 ; The Physical Educator Volume 75 ; 2018 ; https://js.sagamorepub.com/ >
-    au < notReady ; 2019 ; 76 ; The Physical Educator Volume 76 ; 2019 ; https://js.sagamorepub.com/ >
-    au < notReady ; 2020 ; 77 ; The Physical Educator Volume 77 ; 2020 ; https://js.sagamorepub.com/ >
-    au < notReady ; 2021 ; 78 ; The Physical Educator Volume 78 ; 2021 ; https://js.sagamorepub.com/ > #login found
-    au < notReady ; 2022 ; 79 ; The Physical Educator Volume 79 ; 2022 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 2019 ; 76 ; The Physical Educator Volume 76 ; 2019 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 2020 ; 77 ; The Physical Educator Volume 77 ; 2020 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 2021 ; 78 ; The Physical Educator Volume 78 ; 2021 ; https://js.sagamorepub.com/ > #login found
+    au < doNotProcess ; 2022 ; 79 ; The Physical Educator Volume 79 ; 2022 ; https://js.sagamorepub.com/ >
     #Subscription needed.
   }
 
@@ -330,10 +330,10 @@
     au < released ; 2016 ; 50 ; Therapeutic Recreation Journal Volume 50 ; 2016 ; http://js.sagamorepub.com/ >
     au < released ; 2017 ; 51 ; Therapeutic Recreation Journal Volume 51 ; 2017 ; http://js.sagamorepub.com/ >
     au < released ; 2018 ; 52 ; Therapeutic Recreation Journal Volume 52 ; 2018 ; https://js.sagamorepub.com/ >
-    au < notReady ; 2019 ; 53 ; Therapeutic Recreation Journal Volume 53 ; 2019 ; https://js.sagamorepub.com/ >
-    au < notReady ; 2020 ; 54 ; Therapeutic Recreation Journal Volume 54 ; 2020 ; https://js.sagamorepub.com/ >
-    au < notReady ; 2021 ; 55 ; Therapeutic Recreation Journal Volume 55 ; 2021 ; https://js.sagamorepub.com/ > #login found
-    au < notReady ; 2022 ; 56 ; Therapeutic Recreation Journal Volume 56 ; 2022 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 2019 ; 53 ; Therapeutic Recreation Journal Volume 53 ; 2019 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 2020 ; 54 ; Therapeutic Recreation Journal Volume 54 ; 2020 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 2021 ; 55 ; Therapeutic Recreation Journal Volume 55 ; 2021 ; https://js.sagamorepub.com/ > #login found
+    au < doNotProcess ; 2022 ; 56 ; Therapeutic Recreation Journal Volume 56 ; 2022 ; https://js.sagamorepub.com/ >
     #Subscription needed.
   }
   
@@ -368,24 +368,24 @@
     au < released ; 2016 ; 6 ; Journal of Nonprofit Education and Leadership Volume 6 ; 2016 ; http://js.sagamorepub.com/ >
     au < released ; 2017 ; 7 ; Journal of Nonprofit Education and Leadership Volume 7 ; 2017 ; http://js.sagamorepub.com/ >
     au < released ; 2018 ; 8 ; Journal of Nonprofit Education and Leadership Volume 8 ; 2018 ; https://js.sagamorepub.com/ >
-    au < notReady ; 2019 ; 9 ; Journal of Nonprofit Education and Leadership Volume 9 ; 2019 ; https://js.sagamorepub.com/ >
-    au < notReady ; 2020 ; 10 ; Journal of Nonprofit Education and Leadership Volume 10 ; 2020 ; https://js.sagamorepub.com/ >
-    au < notReady ; 2021 ; 11 ; Journal of Nonprofit Education and Leadership Volume 11 ; 2021 ; https://js.sagamorepub.com/ > #login found
-    au < notReady ; 2022 ; 12 ; Journal of Nonprofit Education and Leadership Volume 12 ; 2022 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 2019 ; 9 ; Journal of Nonprofit Education and Leadership Volume 9 ; 2019 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 2020 ; 10 ; Journal of Nonprofit Education and Leadership Volume 10 ; 2020 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 2021 ; 11 ; Journal of Nonprofit Education and Leadership Volume 11 ; 2021 ; https://js.sagamorepub.com/ > #login found
+    au < doNotProcess ; 2022 ; 12 ; Journal of Nonprofit Education and Leadership Volume 12 ; 2022 ; https://js.sagamorepub.com/ >
     #Subscription needed.
     }
 
     {
     param[journal_id] = jnelsi
 
-    au < notReady ; 2017 ; I ; JNEL Special Issues I ; 2017 ; https://js.sagamorepub.com/ > #login found
+    au < doNotProcess ; 2017 ; I ; JNEL Special Issues I ; 2017 ; https://js.sagamorepub.com/ > #login found
     #Subscription needed.
     }
 
     {
     param[journal_id] = jnelsi2
 
-    au < notReady ; 2017 ; II ; JNEL Special Issues II ; 2017 ; https://js.sagamorepub.com/ > #login found
+    au < doNotProcess ; 2017 ; II ; JNEL Special Issues II ; 2017 ; https://js.sagamorepub.com/ > #login found
     #Subscription needed.
     }
   }
@@ -421,10 +421,10 @@
     au < released ; 2016 ; 21 ; Learning Disabilities: A Multidisciplinary Journal Volume 21 ; 2016 ; http://js.sagamorepub.com/ >
     au < released ; 2017 ; 22 ; Learning Disabilities: A Multidisciplinary Journal Volume 22 ; 2017 ; http://js.sagamorepub.com/ >
     au < released ; 2018 ; 23 ; Learning Disabilities: A Multidisciplinary Journal Volume 23 ; 2018 ; https://js.sagamorepub.com/ >
-    au < notReady ; 2019 ; 24 ; Learning Disabilities: A Multidisciplinary Journal Volume 24 ; 2019 ; https://js.sagamorepub.com/ >
-    au < notReady ; 2020 ; 25 ; Learning Disabilities: A Multidisciplinary Journal Volume 25 ; 2020 ; https://js.sagamorepub.com/ >
-    au < notReady ; 2021 ; 26 ; Learning Disabilities: A Multidisciplinary Journal Volume 26 ; 2021 ; https://js.sagamorepub.com/ > #login found
-    au < notReady ; 2022 ; 27 ; Learning Disabilities: A Multidisciplinary Journal Volume 27 ; 2022 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 2019 ; 24 ; Learning Disabilities: A Multidisciplinary Journal Volume 24 ; 2019 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 2020 ; 25 ; Learning Disabilities: A Multidisciplinary Journal Volume 25 ; 2020 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 2021 ; 26 ; Learning Disabilities: A Multidisciplinary Journal Volume 26 ; 2021 ; https://js.sagamorepub.com/ > #login found
+    au < doNotProcess ; 2022 ; 27 ; Learning Disabilities: A Multidisciplinary Journal Volume 27 ; 2022 ; https://js.sagamorepub.com/ >
     #Subscription needed.
   }
 
@@ -437,39 +437,39 @@
     param[journal_id] = palaestra
     #manifest page not found, https://js.sagamorepub.com/palaestra/index
 
-    au < notReady ; 1984 ; 1 ; PALAESTRA Volume 1 ; 1984 ; https://js.sagamorepub.com/ >
-    au < notReady ; 1985 ; 1-2 ; PALAESTRA Volume 1-2 ; 1985 ; https://js.sagamorepub.com/ >
-    au < notReady ; 1986 ; 2-3 ; PALAESTRA Volume 2-3 ; 1986 ; https://js.sagamorepub.com/ >
-    au < notReady ; 1987 ; 3-4 ; PALAESTRA Volume 3-4 ; 1987 ; https://js.sagamorepub.com/ >
-    au < notReady ; 1988 ; 4-5 ; PALAESTRA Volume 4-5 ; 1988 ; https://js.sagamorepub.com/ >
-    au < notReady ; 1989 ; 5-6 ; PALAESTRA Volume 5-6 ; 1989 ; https://js.sagamorepub.com/ >
-    au < notReady ; 1990 ; 6-7 ; PALAESTRA Volume 6-7 ; 1990 ; https://js.sagamorepub.com/ >
-    au < notReady ; 1991 ; 7-8 ; PALAESTRA Volume 7-8 ; 1991 ; https://js.sagamorepub.com/ >
-    au < notReady ; 1992 ; 8-9 ; PALAESTRA Volume 8-9 ; 1992 ; https://js.sagamorepub.com/ >
-    au < notReady ; 1993 ; 9-10 ; PALAESTRA Volume 9-10 ; 1993 ; https://js.sagamorepub.com/ >
-    au < notReady ; 1994 ; 10-11 ; PALAESTRA Volume 10-11 ; 1994 ; https://js.sagamorepub.com/ >
-    au < notReady ; 1995 ; 11 ; PALAESTRA Volume 11 ; 1995 ; https://js.sagamorepub.com/ >
-    au < notReady ; 1996 ; 12 ; PALAESTRA Volume 12 ; 1996 ; https://js.sagamorepub.com/ >
-    au < notReady ; 1997 ; 13 ; PALAESTRA Volume 13 ; 1997 ; https://js.sagamorepub.com/ >
-    au < notReady ; 1998 ; 14 ; PALAESTRA Volume 14 ; 1998 ; https://js.sagamorepub.com/ >
-    au < notReady ; 1999 ; 15 ; PALAESTRA Volume 15 ; 1999 ; https://js.sagamorepub.com/ >
-    au < notReady ; 2000 ; 16 ; PALAESTRA Volume 16 ; 2000 ; https://js.sagamorepub.com/ >
-    au < notReady ; 2001 ; 17 ; PALAESTRA Volume 17 ; 2001 ; https://js.sagamorepub.com/ >
-    au < notReady ; 2002 ; 18 ; PALAESTRA Volume 18 ; 2002 ; https://js.sagamorepub.com/ >
-    au < notReady ; 2003 ; 19 ; PALAESTRA Volume 19 ; 2003 ; https://js.sagamorepub.com/ >
-    au < notReady ; 2004 ; 20 ; PALAESTRA Volume 20 ; 2004 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 1984 ; 1 ; PALAESTRA Volume 1 ; 1984 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 1985 ; 1-2 ; PALAESTRA Volume 1-2 ; 1985 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 1986 ; 2-3 ; PALAESTRA Volume 2-3 ; 1986 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 1987 ; 3-4 ; PALAESTRA Volume 3-4 ; 1987 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 1988 ; 4-5 ; PALAESTRA Volume 4-5 ; 1988 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 1989 ; 5-6 ; PALAESTRA Volume 5-6 ; 1989 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 1990 ; 6-7 ; PALAESTRA Volume 6-7 ; 1990 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 1991 ; 7-8 ; PALAESTRA Volume 7-8 ; 1991 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 1992 ; 8-9 ; PALAESTRA Volume 8-9 ; 1992 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 1993 ; 9-10 ; PALAESTRA Volume 9-10 ; 1993 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 1994 ; 10-11 ; PALAESTRA Volume 10-11 ; 1994 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 1995 ; 11 ; PALAESTRA Volume 11 ; 1995 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 1996 ; 12 ; PALAESTRA Volume 12 ; 1996 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 1997 ; 13 ; PALAESTRA Volume 13 ; 1997 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 1998 ; 14 ; PALAESTRA Volume 14 ; 1998 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 1999 ; 15 ; PALAESTRA Volume 15 ; 1999 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 2000 ; 16 ; PALAESTRA Volume 16 ; 2000 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 2001 ; 17 ; PALAESTRA Volume 17 ; 2001 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 2002 ; 18 ; PALAESTRA Volume 18 ; 2002 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 2003 ; 19 ; PALAESTRA Volume 19 ; 2003 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 2004 ; 20 ; PALAESTRA Volume 20 ; 2004 ; https://js.sagamorepub.com/ >
     au < doesNotExist ; 2005 ; 21 ; PALAESTRA Volume 21 ; 2005 ; https://js.sagamorepub.com/ >
     au < doesNotExist ; 2006 ; 22 ; PALAESTRA Volume 22 ; 2006 ; https://js.sagamorepub.com/ >
-    au < notReady ; 2007 ; 23 ; PALAESTRA Volume 23 ; 2007 ; https://js.sagamorepub.com/ >
-    au < notReady ; 2010 ; 24 ; PALAESTRA Volume 24 ; 2010 ; https://js.sagamorepub.com/ >
-    au < notReady ; 2011 ; 25 ; PALAESTRA Volume 25 ; 2011 ; https://js.sagamorepub.com/ >
-    au < notReady ; 2012 ; 26 ; PALAESTRA Volume 26 ; 2012 ; https://js.sagamorepub.com/ >
-    au < notReady ; 2013 ; 27 ; PALAESTRA Volume 27 ; 2013 ; https://js.sagamorepub.com/ >
-    au < notReady ; 2014 ; 28 ; PALAESTRA Volume 28 ; 2014 ; https://js.sagamorepub.com/ >
-    au < notReady ; 2015 ; 29 ; PALAESTRA Volume 29 ; 2015 ; https://js.sagamorepub.com/ >
-    au < notReady ; 2016 ; 30 ; PALAESTRA Volume 30 ; 2016 ; https://js.sagamorepub.com/ >
-    au < notReady ; 2017 ; 31 ; PALAESTRA Volume 31 ; 2017 ; https://js.sagamorepub.com/ >
-    au < notReady ; 2018 ; 32 ; PALAESTRA Volume 32 ; 2018 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 2007 ; 23 ; PALAESTRA Volume 23 ; 2007 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 2010 ; 24 ; PALAESTRA Volume 24 ; 2010 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 2011 ; 25 ; PALAESTRA Volume 25 ; 2011 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 2012 ; 26 ; PALAESTRA Volume 26 ; 2012 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 2013 ; 27 ; PALAESTRA Volume 27 ; 2013 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 2014 ; 28 ; PALAESTRA Volume 28 ; 2014 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 2015 ; 29 ; PALAESTRA Volume 29 ; 2015 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 2016 ; 30 ; PALAESTRA Volume 30 ; 2016 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 2017 ; 31 ; PALAESTRA Volume 31 ; 2017 ; https://js.sagamorepub.com/ >
+    au < doNotProcess ; 2018 ; 32 ; PALAESTRA Volume 32 ; 2018 ; https://js.sagamorepub.com/ >
     #Subscription needed.
   }
 }
