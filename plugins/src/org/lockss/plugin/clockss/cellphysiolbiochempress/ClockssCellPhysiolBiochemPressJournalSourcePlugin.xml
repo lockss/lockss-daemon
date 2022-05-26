@@ -74,21 +74,17 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <!--https://clockss-test.lockss.org/sourcefiles/cuhk-released/2022_01/LPJ/i01/i01.zip-->
-      <string>"^%s%s/.*\.zip$", base_url, directory</string>
+      <!--https://clockss-test.lockss.org/sourcefiles/cpbp-released/2022_01-->
+      <string>"^%s%d/.+\.pdf$", base_url, year</string>
     </list>
   </entry>
   <entry>
-    <string>plugin_archive_file_types</string>
-    <string>standard</string>
-  </entry>
-  <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.clockss.cellphysiolbiochempress.CellPhysiolBiochemPressSourceArticleIteratorFactory</string>
+    <string>org.lockss.plugin.clockss.SourceXmlArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.clockss.cellphysiolbiochempress.CellPhysiolBiochemPressSourceArticleIteratorFactory</string>
+    <string>org.lockss.plugin.clockss.SourceXmlArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>text/xml_metadata_extractor_factory_map</string>

@@ -103,6 +103,7 @@ implements SourceXmlSchemaHelper {
   private static final String doi = topNode + "/doi";
 
   private static final String art_pubdate = "/component/header/publicationMeta[@level = \"unit\"]/eventGroup/event[@type = \"publishedPrint\"]/@date";
+  private static final String art_pubdate_alt = "/component/header/publicationMeta[@level = \"product\"]/eventGroup/event[@type = \"publishedOnlineProduct\"]/@date";
   private static final String author =  "/component/header/contentMeta/creators/creator[@creatorRole = \"author\"]/personName\n";
 
 
@@ -111,7 +112,8 @@ implements SourceXmlSchemaHelper {
   static {
     // article specific stuff
     articleMap.put(publisher, XmlDomMetadataExtractor.TEXT_VALUE);
-    articleMap.put(art_pubdate, XmlDomMetadataExtractor.TEXT_VALUE); 
+    articleMap.put(art_pubdate, XmlDomMetadataExtractor.TEXT_VALUE);
+    articleMap.put(art_pubdate_alt, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(author, AUTHOR_VALUE);
     articleMap.put(book_title, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(book_title_alt, XmlDomMetadataExtractor.TEXT_VALUE);
@@ -131,6 +133,7 @@ implements SourceXmlSchemaHelper {
     cookMap.put(book_title_alt, MetadataField.FIELD_PUBLICATION_TITLE);
     cookMap.put(author, MetadataField.FIELD_AUTHOR);
     cookMap.put(art_pubdate, MetadataField.FIELD_DATE);
+    cookMap.put(art_pubdate_alt, MetadataField.FIELD_DATE);
   }
 
 
