@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>25</string>
+    <string>26</string>
   </entry>
    <entry>
     <string>plugin_name</string>
@@ -58,7 +58,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"https://docs.lib.purdue.edu/cgi/viewcontent.cgi\?article="</string>
       <string>1,"^https://%s/.*\.(bmp|css|gif|ico|js|jpe?g|png|tif?f|eot|svg|ttf|woff.?)([?]((itok|v)=)?[^&amp;]+)?$", base_url_host</string>
       <string>1,"^https://%s/.*/css([?]name=((child-)?stylesheet|bootstrap))?$", base_url_host</string>
-        <string>1,"^https://(cdnjs\.cloudflare|(ajax|fonts)\.(googleapis|gstatic))\.com/"</string>
+      <string>1,"^https://(cdnjs\.cloudflare|(ajax|fonts)\.(googleapis|gstatic))\.com/"</string>
         <!--  index.php or journals/index.php are an optional attr so allow but do not require -->
         <!-- Some publisher using "ojs" instead of journal_id in start_url -->
         <!-- https://www.combinatorics.org/ojs/index.php/eljc/gateway/lockss?year=2018-->
