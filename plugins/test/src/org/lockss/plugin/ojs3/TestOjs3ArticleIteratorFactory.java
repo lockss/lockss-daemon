@@ -29,15 +29,20 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.ojs3;
 
 import java.io.*;
+
+import com.sun.org.apache.xerces.internal.impl.xpath.regex.Match;
 import org.apache.commons.io.IOUtils;
 
 import java.util.*;
 import java.util.Iterator;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.plugin.*;
+import org.lockss.plugin.simulated.SimulatedArchivalUnit;
+import org.lockss.plugin.simulated.SimulatedContentGenerator;
 import org.lockss.test.*;
 import org.lockss.util.*;
 
@@ -49,10 +54,12 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
   
   static Logger log = Logger.getLogger(TestOjs3ArticleIteratorFactory.class);
 
+  SimulatedArchivalUnit sau;
   private final String PLUGIN_NAME = "org.lockss.plugin.ojs3.Ojs3Plugin";
   private final String BASE_URL = "https://www.foo.com/";
   private final String JOURNAL_ID = "test";
   private final String YEAR = "2018";
+  private static final int DEFAULT_FILESIZE = 3000;
   
   // expected urls for article 1
   private final String EXPECTED_ABS_URL_1 =
@@ -74,6 +81,8 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
   public void setUp() throws Exception {
     super.setUp();
     au = createAu();
+    sau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath));
+    ConfigurationUtil.addFromArgs(CachedUrl.PARAM_ALLOW_DELETE, "true");
   }
     
   public void tearDown() throws Exception {
@@ -92,33 +101,21 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
     conf.put("year", YEAR);
     return conf;
   }
-  
-  
-  /* 
-   * Basic test of the Article Iterator pattern matching  
-   *   
-   *   */
-  public void testUrlsWithPrefixes() throws Exception {
-    SubTreeArticleIterator artIter = createSubTreeIter();
-    Pattern pat = getPattern(artIter);
-
-    
-    // issue
-    assertNotMatchesRE(pat,"https://www.foo.com/index.php/test/issue/view/99");
-    assertNotMatchesRE(pat,"https://www.foo.com/index.php/test/article/view/99/100");
-    // abstract
-    assertMatchesRE(pat,"https://www.foo.com/index.php/test/article/view/99");
-    // an article view but not an abstract
-    //assertNotMatchesRE(pat,"https://www.foo.com/index.php/test/article/view/99/22");
-    // probably pdf
-    assertNotMatchesRE(pat,"https://www.foo.com/index.php/test/article/download/99/22");
-    
-    // specific to this test
-    assertMatchesRE(pat,EXPECTED_ABS_URL_1);
-    assertMatchesRE(pat,EXPECTED_ARTICLE_METADATA_URL_1);
-    //assertNotMatchesRE(pat,EXPECTED_PDF_LAND);
-    assertNotMatchesRE(pat,EXPECTED_PDF);
+  private Configuration simAuConfig(String rootPath) {
+    Configuration conf = ConfigManager.newConfiguration();
+    conf.put("root", rootPath);
+    conf.put("base_url", BASE_URL);
+    conf.put("depth", Integer.toString(1));
+    conf.put("branch", Integer.toString(4));
+    conf.put("numFiles", Integer.toString(3));
+    conf.put("fileTypes",
+        "" + (  SimulatedContentGenerator.FILE_TYPE_PDF
+            | SimulatedContentGenerator.FILE_TYPE_XML));
+    conf.put("binFileSize", "" + DEFAULT_FILESIZE);
+    return conf;
   }
+  
+
 
   
   // Simulated content URLs stored in the UrlCacher object.
@@ -137,8 +134,8 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
       props = getHtmlProperties();
     } else {
     	// default blank html
-        input = new StringInputStream("<html></html>");
-        props = getHtmlProperties();
+      input = new StringInputStream("<html></html>");
+      props = getHtmlProperties();
     }
     UrlData ud = new UrlData(input, props, url);
     UrlCacher uc = au.makeUrlCacher(ud);
@@ -146,28 +143,8 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
   }  
   
   public void testCreateArticleFiles() throws Exception {
-     
-    ArrayList<String> articleUrls = new ArrayList<String>();
-    articleUrls.add(String.format("%sindex.php/%s/issue/view/478",
-                                  BASE_URL, JOURNAL_ID)); // table of contents
-    articleUrls.add(String.format("%sindex.php/%s/article/view/8110",
-                                  BASE_URL, JOURNAL_ID)); // abstract
-    articleUrls.add(String.format("%sindex.php/%s/article/view/8110/8514",
-                                  BASE_URL, JOURNAL_ID)); // full-text html
-    articleUrls.add(String.format("%sindex.php/%s/article/view/8110/8601",
-            BASE_URL, JOURNAL_ID)); // pdf landing - html
-    articleUrls.add(String.format("%sindex.php/%s/article/download/8110/8601",
-            BASE_URL, JOURNAL_ID)); // pdf
 
-    
-    // Store test cases - articleUrls
-    Iterator<String> itr = articleUrls.iterator();
-    while (itr.hasNext()) {
-      String url = itr.next();
-      log.debug3("testCreateArticleFiles() url: " + url);
-      storeTestContent(url);
-    }
-    
+    simCrawlBasic();
     // access Ojs3ArticleItrerator
     Iterator<ArticleFiles> it = au.getArticleIterator();
     // ensure you have found articles - this would not otherwise not fail before completion
@@ -194,9 +171,127 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
       }
       
     }
+  }
+
+  /*
+   * Test of the Article Iterator pattern matching when only issue level content exists
+   *
+   *   */
+  public void testIssueUrlsWithPrefixes() throws Exception {
+    Iterator<ArticleFiles> artIter = getArticleIteratorAfterSimCrawl(au, "issue");
+    Pattern pat = getPattern((SubTreeArticleIterator) artIter);
+
+    // issue
+    assertMatchesRE(pat,"https://www.foo.com/index.php/test/issue/view/99");
+    // wont exist
+    assertNotMatchesRE(pat,"https://www.foo.com/index.php/test/article/view/99/100");
+    // abstract, wont exist
+    assertNotMatchesRE(pat,"https://www.foo.com/index.php/test/article/view/99");
+    // an article view but not an abstract
+    assertNotMatchesRE(pat,"https://www.foo.com/index.php/test/article/view/99/22");
+    // probably pdf
+    assertNotMatchesRE(pat,"https://www.foo.com/index.php/test/article/download/99/22");
 
   }
-  
+
+  /*
+   * Test of the Article Iterator pattern matching when "typical" single level article content exists
+   *
+   *   */
+  public void testArticleSingleUrlsWithPrefixes() throws Exception {
+    Iterator<ArticleFiles> artIter = getArticleIteratorAfterSimCrawl(au, "article/123");
+    Pattern pat = getPattern((SubTreeArticleIterator) artIter);
+
+    // issue
+    assertNotMatchesRE(pat,"https://www.foo.com/index.php/test/issue/view/99");
+    // wont exist
+    assertNotMatchesRE(pat,"https://www.foo.com/index.php/test/article/view/99/100");
+    // abstract, wont exist
+    assertMatchesRE(pat,"https://www.foo.com/index.php/test/article/view/99");
+    // an article view but not an abstract
+    assertNotMatchesRE(pat,"https://www.foo.com/index.php/test/article/view/99/22");
+    // probably pdf
+    assertNotMatchesRE(pat,"https://www.foo.com/index.php/test/article/download/99/22");
+  }
+  /*
+   * Test of the Article Iterator pattern matching when only double level article content exists
+   *
+   *   */
+  public void testArticleDoubleUrlsWithPrefixes() throws Exception {
+    Iterator<ArticleFiles> artIter = getArticleIteratorAfterSimCrawl(au, "article/123/456");
+    Pattern pat = getPattern((SubTreeArticleIterator) artIter);
+
+    // issue
+    assertNotMatchesRE(pat,"https://www.foo.com/index.php/test/issue/view/99");
+    // wont exist
+    assertMatchesRE(pat,"https://www.foo.com/index.php/test/article/view/99/100");
+    // abstract, wont exist
+    assertNotMatchesRE(pat,"https://www.foo.com/index.php/test/article/view/99");
+    // an article view but not an abstract
+    assertMatchesRE(pat,"https://www.foo.com/index.php/test/article/view/99/22");
+    // probably pdf
+    assertNotMatchesRE(pat,"https://www.foo.com/index.php/test/article/download/99/22");
+  }
+
+
+  private Iterator<ArticleFiles> getArticleIteratorAfterSimCrawl(ArchivalUnit au,
+                                                                        String urlType)
+      throws Exception {
+    ArrayList<Pattern> removalPatterns =  new ArrayList<>();
+    removalPatterns.add(Pattern.compile("/article/view/[^/]+$"));
+    removalPatterns.add(Pattern.compile("/article/view/[^/]+/[^/]+$"));
+    // simulate the crawl
+    simCrawlBasic();
+    if (Objects.equals(urlType, "issue")) {
+      // remove all article urls
+      deleteFromCrawl(removalPatterns);
+    } else if (Objects.equals(urlType, "article/123/456")) {
+      removalPatterns.remove(1);
+      // remove single level article urls
+      deleteFromCrawl(removalPatterns);
+    }
+    // return an articleIterator for the crawl content
+    return au.getArticleIterator();
+  }
+
+  private void simCrawlBasic() throws Exception {
+    ArrayList<String> articleUrls = new ArrayList<>();
+    articleUrls.add(String.format("%sindex.php/%s/issue/view/478",
+        BASE_URL, JOURNAL_ID)); // table of contents
+    articleUrls.add(String.format("%sindex.php/%s/issue/view/478/577",
+        BASE_URL, JOURNAL_ID)); // pdf of entire issue
+    articleUrls.add(String.format("%sindex.php/%s/article/view/8110",
+        BASE_URL, JOURNAL_ID)); // abstract
+    articleUrls.add(String.format("%sindex.php/%s/article/view/8110/8514",
+        BASE_URL, JOURNAL_ID)); // full-text html
+    articleUrls.add(String.format("%sindex.php/%s/article/view/8110/8601",
+        BASE_URL, JOURNAL_ID)); // pdf landing - html
+    articleUrls.add(String.format("%sindex.php/%s/article/download/8110/8601",
+        BASE_URL, JOURNAL_ID)); // pdf
+    articleUrls.add(String.format("%sindex.php/%s/article/view/8220/8514",
+        BASE_URL, JOURNAL_ID)); // full-text html
+    articleUrls.add(String.format("%sindex.php/%s/article/view/8220/8601",
+        BASE_URL, JOURNAL_ID)); // pdf landing - html
+
+    // Store test cases - articleUrls
+    for (String url : articleUrls) {
+      log.debug3("testCreateArticleFiles() url: " + url);
+      storeTestContent(url);
+    }
+  }
+  private void deleteFromCrawl(ArrayList<Pattern> removalPatterns) throws IOException {
+    for (CachedUrl cu : AuUtil.getCuIterable(au)) {
+      String url = cu.getUrl();
+      for (Pattern pat : removalPatterns) {
+        Matcher art = pat.matcher(url);
+        if (art.find()) {
+          log.debug3("deleting: " + url + " as well as all children of this url path...");
+          cu.delete();
+        }
+      }
+    }
+  }
+
   private static final String abstractMetadata=
 		  "<!DOCTYPE html>\n" + 
 		  "<html lang=\"en-US\" xml:lang=\"en-US\">\n" + 
