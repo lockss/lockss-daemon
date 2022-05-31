@@ -110,7 +110,7 @@
     au < frozen ; exists ; 2019 ; Geophysics Volume 84 ; 84 ; https://library.seg.org/ ; >
     au < deepCrawl ; exists ; 2020 ; Geophysics Volume 85 ; 85 ; https://library.seg.org/ ; >
     au < crawling ; exists ; 2021 ; Geophysics Volume 86 ; 86 ; https://library.seg.org/ ; >
-    au < testing ; exists ; 2022 ; Geophysics Volume 87 ; 87 ; https://library.seg.org/ ; >
+    au < ready ; exists ; 2022 ; Geophysics Volume 87 ; 87 ; https://library.seg.org/ ; >
 
   }
 
@@ -187,7 +187,7 @@
     au < finished ; crawling ; 2019 ; Interpretation Volume 7 ; 7 ; https://library.seg.org/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Interpretation Volume 8 ; 8 ; https://library.seg.org/ ; >
     au < crawling ; exists ; 2021 ; Interpretation Volume 9 ; 9 ; https://library.seg.org/ ; >
-    au < testing ; exists ; 2022 ; Interpretation Volume 10 ; 10 ; https://library.seg.org/ ; >
+    au < ready ; exists ; 2022 ; Interpretation Volume 10 ; 10 ; https://library.seg.org/ ; >
 
   }
   
