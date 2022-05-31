@@ -23,7 +23,7 @@
 
     param[journal_abbr] = advances
 
-    au < ready ; exists ; 2021 ; Advances in Clinical Medical Research and Healthcare Delivery Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2021 ; Advances in Clinical Medical Research and Healthcare Delivery Volume 1 ; 1 ; >
     au < manifest ; exists ; 2022 ; Advances in Clinical Medical Research and Healthcare Delivery Volume 2 ; 2 ; >
 
   }

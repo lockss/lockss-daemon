@@ -24,9 +24,9 @@
 
     param[journal_abbr] = journal
 
-    au < ready ; exists ; 2019 ; Bulletin of the Faculty of Pharmacy Cairo University Volume 57 ; 57 ; >
-    au < ready ; exists ; 2020 ; Bulletin of the Faculty of Pharmacy Cairo University Volume 58 ; 58 ; >
-    au < ready ; exists ; 2021 ; Bulletin of the Faculty of Pharmacy Cairo University Volume 59 ; 59 ; >
+    au < crawling ; exists ; 2019 ; Bulletin of the Faculty of Pharmacy Cairo University Volume 57 ; 57 ; >
+    au < crawling ; exists ; 2020 ; Bulletin of the Faculty of Pharmacy Cairo University Volume 58 ; 58 ; >
+    au < crawling ; exists ; 2021 ; Bulletin of the Faculty of Pharmacy Cairo University Volume 59 ; 59 ; >
     au < expected ; exists ; 2022 ; Bulletin of the Faculty of Pharmacy Cairo University Volume 60 ; 60 ; >
 
   }
