@@ -4232,7 +4232,7 @@
     au < finished ; crawling ; 2019 ; Noise and Health Volume 21 ; 2019 ; 21 ; https://www.noiseandhealth.org/ ; ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Noise and Health Volume 22 ; 2020 ; 22 ; https://www.noiseandhealth.org/ ; ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Noise and Health Volume 23 ; 2021 ; 23 ; https://www.noiseandhealth.org/ ; ; >
-    au < expected ; exists ; 2022 ; Noise and Health Volume 24 ; 2022 ; 24 ; https://www.noiseandhealth.org/ ; ; >
+    au < manifest ; exists ; 2022 ; Noise and Health Volume 24 ; 2022 ; 24 ; https://www.noiseandhealth.org/ ; ; >
 
   }
 
@@ -6976,7 +6976,7 @@
       au < finished ; crawling ; 2019 ; Journal of Dr. NTR University of Health Sciences Volume 8 ; 2019 ; 8 ; https://www.jdrntruhs.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2020 ; Journal of Dr. NTR University of Health Sciences Volume 9 ; 2020 ; 9 ; https://www.jdrntruhs.org/ ; ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Journal of Dr. NTR University of Health Sciences Volume 10 ; 2021 ; 10 ; https://www.jdrntruhs.org/ ; ; >
-      au < expected ; exists ; 2022 ; Journal of Dr. NTR University of Health Sciences Volume 11 ; 2022 ; 11 ; https://www.jdrntruhs.org/ ; ; >
+      au < manifest ; exists ; 2022 ; Journal of Dr. NTR University of Health Sciences Volume 11 ; 2022 ; 11 ; https://www.jdrntruhs.org/ ; ; >
 
   }
 
@@ -7857,7 +7857,7 @@
       au < finished ; crawling ; 2018 ; Kasr Al Ainy Medical Journal Volume 24 ; 2018 ; 24 ; http://www.kamj.eg.net/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; Kasr Al Ainy Medical Journal Volume 25 ; 2019 ; 25 ; https://www.kamj.eg.net/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Kasr Al Ainy Medical Journal Volume 26 ; 2020 ; 26 ; https://www.kamj.eg.net/ ; ; reingest2.clockss.org:8085 >
-      au < expected ; exists ; 2021 ; Kasr Al Ainy Medical Journal Volume 27 ; 2021 ; 27 ; https://www.kamj.eg.net/ ; ; >
+      au < manifest ; exists ; 2021 ; Kasr Al Ainy Medical Journal Volume 27 ; 2021 ; 27 ; https://www.kamj.eg.net/ ; ; >
       au < expected ; exists ; 2022 ; Kasr Al Ainy Medical Journal Volume 28 ; 2022 ; 28 ; https://www.kamj.eg.net/ ; ; >
 
   }
@@ -9649,7 +9649,7 @@
       au < finished ; crawling ; 2019 ; Egyptian Nursing Journal Volume 16 ; 2019 ; 16 ; https://www.enj.eg.net/ ; ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Egyptian Nursing Journal Volume 17 ; 2020 ; 17 ; https://www.enj.eg.net/ ; ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Egyptian Nursing Journal Volume 18 ; 2021 ; 18 ; https://www.enj.eg.net/ ; ; >
-      au < expected ; exists ; 2022 ; Egyptian Nursing Journal Volume 19 ; 2022 ; 19 ; https://www.enj.eg.net/ ; ; >
+      au < manifest ; exists ; 2022 ; Egyptian Nursing Journal Volume 19 ; 2022 ; 19 ; https://www.enj.eg.net/ ; ; >
 
   }
 
