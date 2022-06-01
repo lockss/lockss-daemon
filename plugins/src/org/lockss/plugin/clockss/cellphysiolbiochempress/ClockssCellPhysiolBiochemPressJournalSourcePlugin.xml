@@ -36,7 +36,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.clockss.cellphysiolbiochempress.ClockssCellPhysiolBiochemPressSourcePlugin</string>
+    <string>org.lockss.plugin.clockss.cellphysiolbiochempress.ClockssCellPhysiolBiochemPressJournalSourcePlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -75,7 +75,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>au_substance_url_pattern</string>
     <list>
       <!--https://clockss-test.lockss.org/sourcefiles/cpbp-released/2022_01-->
-      <string>"^%s%d/.+\.pdf$", base_url, year</string>
+      <string>"^%s%s/.+\.pdf$", base_url, directory</string>
     </list>
   </entry>
   <entry>

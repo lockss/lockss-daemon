@@ -37,6 +37,10 @@ import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.XmlDomMetadataExtractor;
 import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
+import org.lockss.plugin.clockss.wiley.WileyMRWSourceXmlSchemaHelper;
+import org.lockss.util.Logger;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -50,71 +54,53 @@ import java.util.Map;
 public class CellPhysiolBiochemPressSourceXmlSchemaHelper
 implements SourceXmlSchemaHelper {
 
-  /*
-   <?xml version="1.0" encoding="UTF-8"?>
-<mods xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-4.xsd">
-    <titleInfo>
-        <title>版權、稿約及稿例、目錄</title>
-    </titleInfo>
-    <typeOfResource>text</typeOfResource>
-    <genre>article</genre>
-    <originInfo>
-        <place>
-            <placeTerm type="text">香港</placeTerm>
-        </place>
-        <publisher>道風山基督教叢林</publisher>
-        <dateCreated>1994-06</dateCreated>
-        <issuance>serial</issuance>
-    </originInfo>
-    <language>
-        <languageTerm type="text">Chi</languageTerm>
-    </language>
-    <physicalDescription>
-        <form>digital</form>
-    </physicalDescription>
-    <relatedItem type="host">
-        <titleInfo>
-            <title>道風</title>
-            <subTitle>漢語神學學刊</subTitle>
-        </titleInfo>
-        <part>
-            <detail type="issue">
-                <number>第一期</number>
-            </detail>
-            <extent unit="pages"><start>1-7</start></extent>
-            <date>1994-06</date>
-        </part>
-    </relatedItem>
-    <location>
-        <url>http://library.cuhk.edu.hk/record=b2057943</url>
-    </location>
-    <accessCondition type="useAndReproduction">Use of this resource is governed by the terms and conditions of the Creative Commons “Attribution-NonCommercial-NoDerivatives 4.0 International” License (http://creativecommons.org/licenses/by-nc-nd/4.0/)</accessCondition>
-    <identifier type="local" displayLabel="FileName">i01_p001007</identifier>
-    <identifier type="local"></identifier>
-    <recordInfo>
-        <recordOrigin>Created by CUHK Library using Google Refine</recordOrigin>
-    </recordInfo></mods>
+  static Logger log = Logger.getLogger(CellPhysiolBiochemPressSourceXmlSchemaHelper.class);
 
-  */
+  static private final XmlDomMetadataExtractor.NodeValue AUTHOR_VALUE = new XmlDomMetadataExtractor.NodeValue() {
+    @Override
+    public String getValue(Node node) {
 
-  protected static final String article_title = "/mods/titleInfo/title";
-  protected static final String journal_subtitle = "/mods/relatedItem[@type=\"host\"]/titleInfo/subTitle";
-  protected static final String journal_title = "/mods/relatedItem[@type=\"host\"]/titleInfo/title";
-  protected static final String author = "/mods/name[@type = \"personal\"]/namePart";
-  private static final String publisher = "/mods/originInfo/publisher";
-  private static final String art_pubdate = "/mods/originInfo/dateCreated";
-  private static final String issue = "/mods/relatedItem[@type = \"host\"]/part/detail[@type = \"issue\"]/number";
+      log.debug3("getValue of wiley author name");
+      NodeList elementChildren = node.getChildNodes();
+      if (elementChildren == null) return null;
+
+      String tgiven = null;
+      String tsurname = null;
+      // look at each child of the TitleElement for debug3rmation
+      for (int j = 0; j < elementChildren.getLength(); j++) {
+        Node checkNode = elementChildren.item(j);
+        String nodeName = checkNode.getNodeName();
+        if ("FirstName".equals(nodeName)) {
+          tgiven = checkNode.getTextContent();
+        } else if ("LastName".equals(nodeName) ) {
+          tsurname = checkNode.getTextContent();
+        }
+      }
+
+      StringBuilder valbuilder = new StringBuilder();
+      if (tsurname != null) {
+        valbuilder.append(tsurname);
+        if (tgiven != null) {
+          valbuilder.append(", " + tgiven);
+        }
+      } else {
+        log.debug3("no name found");
+        return null;
+      }
+      log.debug3("name found: " + valbuilder.toString());
+      return valbuilder.toString();
+    }
+  };
+
+  protected static final String article_title = "/ArticleSet/Article/ArticleTitle";
+  protected static final String journal_title = "/ArticleSet/Article/Journal/JournalTitle";
+  protected static final String author = "/ArticleSet/Article/AuthorList/Author";
+  private static final String publisher = "/ArticleSet/Article/Journal/PublisherName";
+  private static final String art_pubdate = "/ArticleSet/Article/Journal/PubDate[@PubStatus = \"ppublish\"]/Year";
+  private static final String volume = "/ArticleSet/Article/Journal/Volume";
+  private static final String issue = "/ArticleSet/Article/Journal/Issue";
   protected static final String start_page = "/mods/relatedItem[@type = \"host\"]/part/extent[@unit = \"pages\"]/start";
-
-  protected static final String article_title_alt = "/modsCollection/mods/titleInfo/title";
-  protected static final String journal_subtitle_alt = "/modsCollection/mods/relatedItem[@type=\"host\"]/titleInfo/subTitle";
-  protected static final String journal_title_alt = "/modsCollection/mods/relatedItem[@type=\"host\"]/titleInfo/title";
-  protected static final String author_alt = "/modsCollection/mods/name[@type = \"personal\"]/namePart";
-  private static final String publisher_alt = "/modsCollection/mods/originInfo/publisher";
-  private static final String art_pubdate_alt = "/modsCollection/mods/originInfo/dateCreated";
-  private static final String issue_alt = "/modsCollection/mods/relatedItem[@type = \"host\"]/part/detail[@type = \"issue\"]/number";
-  protected static final String start_page_alt = "/modsCollection/mods/relatedItem[@type = \"host\"]/part/extent[@unit = \"pages\"]/start";
-
+  protected static final String end_page = "/ArticleSet/Article/LastPage";
 
   static private final Map<String,XPathValue>     
   articleMap = new HashMap<String,XPathValue>();
@@ -124,19 +110,10 @@ implements SourceXmlSchemaHelper {
     articleMap.put(publisher, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(article_title, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(journal_title, XmlDomMetadataExtractor.TEXT_VALUE);
-    articleMap.put(journal_subtitle, XmlDomMetadataExtractor.TEXT_VALUE);
-    articleMap.put(author, XmlDomMetadataExtractor.TEXT_VALUE);
+    articleMap.put(author, AUTHOR_VALUE);
     articleMap.put(issue, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(start_page, XmlDomMetadataExtractor.TEXT_VALUE);
 
-    articleMap.put(art_pubdate_alt, XmlDomMetadataExtractor.TEXT_VALUE);
-    articleMap.put(publisher_alt, XmlDomMetadataExtractor.TEXT_VALUE);
-    articleMap.put(article_title_alt, XmlDomMetadataExtractor.TEXT_VALUE);
-    articleMap.put(journal_title_alt, XmlDomMetadataExtractor.TEXT_VALUE);
-    articleMap.put(journal_subtitle_alt, XmlDomMetadataExtractor.TEXT_VALUE);
-    articleMap.put(author_alt, XmlDomMetadataExtractor.TEXT_VALUE);
-    articleMap.put(issue_alt, XmlDomMetadataExtractor.TEXT_VALUE);
-    articleMap.put(start_page_alt, XmlDomMetadataExtractor.TEXT_VALUE);
   }
 
   static private final Map<String,XPathValue>     
@@ -150,15 +127,9 @@ implements SourceXmlSchemaHelper {
     cookMap.put(art_pubdate, MetadataField.FIELD_DATE);
     cookMap.put(publisher, MetadataField.FIELD_PUBLISHER);
     cookMap.put(issue, MetadataField.FIELD_ISSUE);
-    // issue will be used as volume, it is confirmed by publihser
-    cookMap.put(issue, MetadataField.FIELD_VOLUME);
-
-    cookMap.put(article_title_alt, MetadataField.FIELD_ARTICLE_TITLE);
-    cookMap.put(journal_title_alt, MetadataField.FIELD_PUBLICATION_TITLE);
-    cookMap.put(author_alt, MetadataField.FIELD_AUTHOR);
-    cookMap.put(art_pubdate_alt, MetadataField.FIELD_DATE);
-    cookMap.put(publisher_alt, MetadataField.FIELD_PUBLISHER);
-    cookMap.put(issue_alt, MetadataField.FIELD_ISSUE);
+    cookMap.put(volume, MetadataField.FIELD_VOLUME);
+    cookMap.put(start_page, MetadataField.FIELD_START_PAGE);
+    cookMap.put(end_page, MetadataField.FIELD_END_PAGE);
   }
 
 

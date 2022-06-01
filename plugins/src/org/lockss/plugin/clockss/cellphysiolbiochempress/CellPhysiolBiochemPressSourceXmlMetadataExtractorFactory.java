@@ -80,7 +80,6 @@ public class CellPhysiolBiochemPressSourceXmlMetadataExtractorFactory extends So
         StringBuilder titleVal = new StringBuilder();
 
         String page = thisAM.getRaw(CellPhysiolBiochemPressSourceXmlSchemaHelper.start_page);
-        String page_alt = thisAM.getRaw(CellPhysiolBiochemPressSourceXmlSchemaHelper.start_page_alt);
         if (page != null && page.contains("-"))  {
             thisAM.put(MetadataField.FIELD_START_PAGE,page.substring(0, page.indexOf("-")));
             thisAM.put(MetadataField.FIELD_END_PAGE,page.substring(page.indexOf("-") + 1));
@@ -89,27 +88,13 @@ public class CellPhysiolBiochemPressSourceXmlMetadataExtractorFactory extends So
             //in cuhk-released/2022_01/LPJ/i45a.zip!/i45a_cover.xml, the start page is not a range
             // so set it to '0'
             thisAM.put(MetadataField.FIELD_START_PAGE,"1");
-        } else {
-            if (page_alt != null && page_alt.contains("-")) {
-                thisAM.put(MetadataField.FIELD_START_PAGE,page_alt.substring(0, page_alt.indexOf("-")));
-                thisAM.put(MetadataField.FIELD_END_PAGE,page_alt.substring(page_alt.indexOf("-") + 1));
+        } 
 
-            } else if (page_alt != null) {
-                //in cuhk-released/2022_01/LPJ/i45a.zip!/i45a_cover.xml, the start page is not a range
-                // so set it to '0'
-                thisAM.put(MetadataField.FIELD_START_PAGE,"1");
-            } else {
-                upmappedlog.debug2("missing data: startpage && startpage_alt, cu = " + cu.getUrl());
-            }
-        }
-
-        if ( (thisAM.getRaw(CellPhysiolBiochemPressSourceXmlSchemaHelper.article_title) == null) &&
-                (thisAM.getRaw(CellPhysiolBiochemPressSourceXmlSchemaHelper.article_title_alt) == null)) {
+        if (thisAM.getRaw(CellPhysiolBiochemPressSourceXmlSchemaHelper.article_title) == null) {
             upmappedlog.debug2("missing data: article_title, cu = " + cu.getUrl());
         }
 
-        if ( (thisAM.getRaw(CellPhysiolBiochemPressSourceXmlSchemaHelper.journal_title) == null) &&
-                (thisAM.getRaw(CellPhysiolBiochemPressSourceXmlSchemaHelper.journal_title_alt) == null)) {
+        if (thisAM.getRaw(CellPhysiolBiochemPressSourceXmlSchemaHelper.journal_title) == null) {
             upmappedlog.debug2("missing data: journal_title, cu = " + cu.getUrl());
         }
 
