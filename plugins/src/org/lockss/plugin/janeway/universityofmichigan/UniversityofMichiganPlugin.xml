@@ -33,7 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down</string>
+    <string>development</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -45,7 +45,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -111,7 +111,8 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_start_url</string>
     <list>
-      <!--https://www.comicsgrid.com/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2019-01-01&until=2019-12-31-->
+      <!--https://delibdemjournal.org/api/oai/?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=2019-01-01&amp;until=2019-12-31
+      https://delibdemjournal.org/api/oai/?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=2020-01-01&amp;until=2020-12-31&amp;page=2-->
       <string>"%sapi/oai?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=%d-01-01&amp;until=%d-12-31", base_url, year, year</string>
     </list>
   </entry>
@@ -125,11 +126,14 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"https://cdnjs.cloudflare.com/.+\.(css|js)"</string>
       <string>1,"https://use.typekit.net/.*\.js"</string>
       <string>1,"https://maxcdn.bootstrapcdn.com/.+\.css"</string>
+      <string>1,"https://maxcdn.bootstrapcdn.com/font-awesome/.*\.svg"</string>
+      <string>1,"https://cdnjs.cloudflare.com/ajax/libs/materialize/[^/]+/fonts/.*"</string>
       <!--exclude the following link, so it will not overcrawl-->
       <!--Some API is at https, but it is fullTextUrl still uses http-->
       <string>2, "^https?://%s/([^/]+/)?issue/[^/]+/info/", url_host(base_url)</string>
       <string>1, "^https?://%s/([^/]+/)?article/", url_host(base_url)</string>
       <string>1, "^https?://%s/(static|media/cover_images)/", url_host(base_url)</string>
+      <string>1, "^https?://%s/api/oai/?verb=ListRecords&amp;resumptionToken=", url_host(base_url)</string>
     </list>
   </entry>
   <entry>
