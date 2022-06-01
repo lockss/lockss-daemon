@@ -521,10 +521,10 @@
     param[collection_id] = CRI
 
 
-    au < manifest ; 1998 ; Congressional Record Index 1998 ; 1998 ; https://www.govinfo.gov/ > #no substance
+    au < ready ; 1998 ; Congressional Record Index 1998 ; 1998 ; https://www.govinfo.gov/ > #no substance
     au < ready ; 2019 ; Congressional Record Index 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < ready ; 2020 ; Congressional Record Index 2020 ; 2020 ; https://www.govinfo.gov/ >
-    au < manifest ; 2021 ; Congressional Record Index 2021 ; 2021 ; https://www.govinfo.gov/ >
+    au < ready ; 2021 ; Congressional Record Index 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < manifest ; 2022 ; Congressional Record Index 2022 ; 2022 ; https://www.govinfo.gov/ >
 
   }
@@ -770,14 +770,14 @@
     au < ready ; 2007 ; Privacy Act Issuances 2007 ; 2007 ; https://www.govinfo.gov/ >
     au < doesNotExist ; 2008 ; Privacy Act Issuances 2008 ; 2008 ; https://www.govinfo.gov/ >
     au < ready ; 2009 ; Privacy Act Issuances 2009 ; 2009 ; https://www.govinfo.gov/ >
-    au < manifest ; 2011 ; Privacy Act Issuances 2011 ; 2011 ; https://www.govinfo.gov/ >
+    au < ready ; 2011 ; Privacy Act Issuances 2011 ; 2011 ; https://www.govinfo.gov/ >
     au < doNotProcess ; 2013 ; Privacy Act Issuances 2013 ; 2013 ; https://www.govinfo.gov/ >
-    au < manifest ; 2015 ; Privacy Act Issuances 2015 ; 2015 ; https://www.govinfo.gov/ >
-    au < manifest ; 2017 ; Privacy Act Issuances 2017 ; 2017 ; https://www.govinfo.gov/ >
-    au < manifest ; 2019 ; Privacy Act Issuances 2019 ; 2019 ; https://www.govinfo.gov/ >
-    au < manifest ; 2020 ; Privacy Act Issuances 2020 ; 2020 ; https://www.govinfo.gov/ >
-    au < manifest ; 2021 ; Privacy Act Issuances 2021 ; 2021 ; https://www.govinfo.gov/ >
-    au < manifest ; 2023 ; Privacy Act Issuances 2023 ; 2023 ; https://www.govinfo.gov/ >
+    au < ready ; 2015 ; Privacy Act Issuances 2015 ; 2015 ; https://www.govinfo.gov/ >
+    au < ready ; 2017 ; Privacy Act Issuances 2017 ; 2017 ; https://www.govinfo.gov/ >
+    au < ready ; 2019 ; Privacy Act Issuances 2019 ; 2019 ; https://www.govinfo.gov/ >
+    au < ready ; 2020 ; Privacy Act Issuances 2020 ; 2020 ; https://www.govinfo.gov/ >
+    au < ready ; 2021 ; Privacy Act Issuances 2021 ; 2021 ; https://www.govinfo.gov/ >
+    au < ready ; 2023 ; Privacy Act Issuances 2023 ; 2023 ; https://www.govinfo.gov/ >
 
   }
 
@@ -791,8 +791,8 @@
 
     au < manifest ; 1946 ; Public and Private Laws 1946 ; 1946 ; https://www.govinfo.gov/ >
     au < released ; 2019 ; Public and Private Laws 2019 ; 2019 ; https://www.govinfo.gov/ >
-    au < manifest ; 2020 ; Public and Private Laws 2020 ; 2020 ; https://www.govinfo.gov/ >
-    au < manifest ; 2021 ; Public and Private Laws 2021 ; 2021 ; https://www.govinfo.gov/ >
+    au < ready ; 2020 ; Public and Private Laws 2020 ; 2020 ; https://www.govinfo.gov/ >
+    au < ready ; 2021 ; Public and Private Laws 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < manifest ; 2022 ; Public and Private Laws 2022 ; 2022 ; https://www.govinfo.gov/ >
 
   }
@@ -856,13 +856,13 @@
     au < ready ; 1988 ; Public Papers of the Presidents of the United States 1988 ; 1988 ; https://www.govinfo.gov/ >
     au < ready ; 1989 ; Public Papers of the Presidents of the United States 1989 ; 1989 ; https://www.govinfo.gov/ >
     au < ready ; 1990 ; Public Papers of the Presidents of the United States 1990 ; 1990 ; https://www.govinfo.gov/ >
-    au < manifest ; 2007 ; Public Papers of the Presidents of the United States 2007 ; 2007 ; https://www.govinfo.gov/ >
-    au < manifest ; 2008 ; Public Papers of the Presidents of the United States 2008 ; 2008 ; https://www.govinfo.gov/ >
+    au < ready ; 2007 ; Public Papers of the Presidents of the United States 2007 ; 2007 ; https://www.govinfo.gov/ >
+    au < ready ; 2008 ; Public Papers of the Presidents of the United States 2008 ; 2008 ; https://www.govinfo.gov/ >
     au < released ; 2013 ; Public Papers of the Presidents of the United States 2013 ; 2013 ; https://www.govinfo.gov/ >
-    au < manifest ; 2014 ; Public Papers of the Presidents of the United States 2014 ; 2014 ; https://www.govinfo.gov/ >
-    au < manifest ; 2015 ; Public Papers of the Presidents of the United States 2015 ; 2015 ; https://www.govinfo.gov/ >
-    au < manifest ; 2016 ; Public Papers of the Presidents of the United States 2016 ; 2016 ; https://www.govinfo.gov/ >
-    au < manifest ; 2020 ; Public Papers of the Presidents of the United States 2020 ; 2020 ; https://www.govinfo.gov/ >
+    au < ready ; 2014 ; Public Papers of the Presidents of the United States 2014 ; 2014 ; https://www.govinfo.gov/ >
+    au < ready ; 2015 ; Public Papers of the Presidents of the United States 2015 ; 2015 ; https://www.govinfo.gov/ >
+    au < ready ; 2016 ; Public Papers of the Presidents of the United States 2016 ; 2016 ; https://www.govinfo.gov/ >
+    au < ready ; 2020 ; Public Papers of the Presidents of the United States 2020 ; 2020 ; https://www.govinfo.gov/ >
 
   }
 
@@ -918,16 +918,16 @@
     au < ready ; 1844 ; U.S. Congressional Serial Set 1844 ; 1844 ; https://www.govinfo.gov/ >
     au < ready ; 1845 ; U.S. Congressional Serial Set 1845 ; 1845 ; https://www.govinfo.gov/ >
     au < ready ; 1846 ; U.S. Congressional Serial Set 1846 ; 1846 ; https://www.govinfo.gov/ >
-    au < manifest ; 1847 ; U.S. Congressional Serial Set 1847 ; 1847 ; https://www.govinfo.gov/ >
+    au < ready ; 1847 ; U.S. Congressional Serial Set 1847 ; 1847 ; https://www.govinfo.gov/ >
 
-    au < manifest ; 1848 ; U.S. Congressional Serial Set 1848 ; 1848 ; https://www.govinfo.gov/ >
-    au < manifest ; 1849 ; U.S. Congressional Serial Set 1849 ; 1849 ; https://www.govinfo.gov/ >
-    au < manifest ; 1850 ; U.S. Congressional Serial Set 1850 ; 1850 ; https://www.govinfo.gov/ >
-    au < manifest ; 1851 ; U.S. Congressional Serial Set 1851 ; 1851 ; https://www.govinfo.gov/ >
-    au < manifest ; 1852 ; U.S. Congressional Serial Set 1852 ; 1852 ; https://www.govinfo.gov/ >
-    au < manifest ; 1853 ; U.S. Congressional Serial Set 1853 ; 1853 ; https://www.govinfo.gov/ >
-    au < manifest ; 1854 ; U.S. Congressional Serial Set 1854 ; 1854 ; https://www.govinfo.gov/ >
-    au < manifest ; 1855 ; U.S. Congressional Serial Set 1855 ; 1855 ; https://www.govinfo.gov/ >
+    au < ready ; 1848 ; U.S. Congressional Serial Set 1848 ; 1848 ; https://www.govinfo.gov/ >
+    au < ready ; 1849 ; U.S. Congressional Serial Set 1849 ; 1849 ; https://www.govinfo.gov/ >
+    au < ready ; 1850 ; U.S. Congressional Serial Set 1850 ; 1850 ; https://www.govinfo.gov/ >
+    au < ready ; 1851 ; U.S. Congressional Serial Set 1851 ; 1851 ; https://www.govinfo.gov/ >
+    au < ready ; 1852 ; U.S. Congressional Serial Set 1852 ; 1852 ; https://www.govinfo.gov/ >
+    au < ready ; 1853 ; U.S. Congressional Serial Set 1853 ; 1853 ; https://www.govinfo.gov/ >
+    au < ready ; 1854 ; U.S. Congressional Serial Set 1854 ; 1854 ; https://www.govinfo.gov/ >
+    au < ready ; 1855 ; U.S. Congressional Serial Set 1855 ; 1855 ; https://www.govinfo.gov/ >
     au < manifest ; 1856 ; U.S. Congressional Serial Set 1856 ; 1856 ; https://www.govinfo.gov/ >
     au < manifest ; 1857 ; U.S. Congressional Serial Set 1857 ; 1857 ; https://www.govinfo.gov/ >
 
