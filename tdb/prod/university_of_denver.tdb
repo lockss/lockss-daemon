@@ -187,4 +187,36 @@
     au < exists ; 2019 ; The Liminal: Interdisciplinary Journal of Technology in Education Volume 1 ; 1 >
     au < expected ; 2023 ; The Liminal: Interdisciplinary Journal of Technology in Education Volume 2 ; 2 >
   }
+  {
+  
+    title <
+      name = University of Denver Criminal Law Review
+    >
+    
+    param[journal_abbr] = crimlawrev
+    #Volume 1-7
+
+    au < exists ; 2011 ; University of Denver Criminal Law Review Volume 1 ; 1 >
+    au < exists ; 2012 ; University of Denver Criminal Law Review Volume 2 ; 2 >
+    au < exists ; 2013 ; University of Denver Criminal Law Review Volume 3 ; 3 >
+    au < exists ; 2014 ; University of Denver Criminal Law Review Volume 4 ; 4 >
+    au < exists ; 2015 ; University of Denver Criminal Law Review Volume 5 ; 5 >
+    au < exists ; 2016 ; University of Denver Criminal Law Review Volume 6 ; 6 >
+    au < exists ; 2017 ; University of Denver Criminal Law Review Volume 7 ; 7 >
+  }
+  {
+  
+    title <
+      name = Water Law Review ;
+      eissn = 1521-3455
+    >
+    
+    param[journal_abbr] = wlr
+    #Volume 1-21
+
+    au < exists ; 2015 ; Water Law Review Volume 18 ; 18 >
+    au < exists ; 2016 ; Water Law Review Volume 19 ; 19 >
+    au < exists ; 2017 ; Water Law Review Volume 20 ; 20 >
+    au < exists ; 2018 ; Water Law Review Volume 21 ; 21 >
+  }
 }
