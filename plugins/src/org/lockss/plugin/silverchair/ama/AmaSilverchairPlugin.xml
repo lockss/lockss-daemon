@@ -11,7 +11,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -87,6 +87,7 @@
   <entry>  
     <string>au_start_url</string>
     <list>
+      <!--https://jamanetwork.com/LOCKSS/ListOfIssues.aspx?resourceId=184&year=2021-->
       <string>"%sLOCKSS/ListOfIssues.aspx?resourceId=%d&amp;year=%d", to_http(base_url), resource_id, year</string>
       <string>"%sLOCKSS/ListOfIssues.aspx?resourceId=%d&amp;year=%d", to_https(base_url), resource_id, year</string>
     </list>    
@@ -132,6 +133,10 @@
 	  <!--  journals/CARDIOLOGY/articlepdf/2557840/hoi160066supp1_prod.pdf --> 
       <string>1,"^https?://%s/journals/[^/]+/articlepdf/[^./]+/[^/]+\.pdf$", url_host(base_url)</string>
       <string>1,"^https?://%s/(journals/%s/)?data/(J|j)ournals/[^/]+/[^/]+/[^./]+\.pdf$", url_host(base_url), journal_id</string>
+      <!--https://jamanetwork.com/ama/content_public/journal/cardiology/938625/jamacardiology_pelliccia_2020_oi_200064_1618340437.28198.pdf-->
+      <string>1, "^https?://%s/[^/]+/content_public/journal/.*\.pdf", url_host(base_url)</string>
+      <!--https://cdn.jamanetwork.com/ama/content_public/journal/cardiology/938625/hoi200065supp1_prod_1610043959.42043.pdf?Expires=2147483647&Signature=um5ghwH1p8UUQYXxyUXF4~y2~69kKe4Qt5urkA0e5jtdnhufvHP0MZ66PAFwjuVGqoHIEumKzAkv3-m2PZl5N04LhPZgwYZslOMgC13vKxmM-0v-aJCRpxuofZFfg8hufMXezOYMONq~qh1zKqrO6OrY8h6hllseh6B9uuWKq6u28yenrNAtsQcgY1aD1G7XTkg1fPwkjHJhlof2NA9q-FMW0m8bTGCeXdxOCPqmJqVbao4ir4zDzqQhB7f2Nc5-HnM8yJLrzF3-vPffoEtDFSy0xlcAwdHzIFiKuN-U2aF9st7El3SlKzE50tXjQzx~Q67q3qkT6MxvEzchU0oJ7A__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA-->
+      <string>1, "^https?://(cdn\.[^.]+\.com)/[^/]+/content_public/journal/.*\.(pdf|png|jpeg|jpg|gif)\?Expires=2147483647", journal_id</string>
       <string>1,"^https?://%s/pdfaccess\.ashx[?]url=/data/journals/(.+routename=%s|[^/]+/[^/]+(/[^/]+)?$)", url_host(base_url), journal_id</string>
       <string>1,"^https?://%s/journals/%s/downloadcitation/[^?/]+\?format=ris$", url_host(base_url), journal_id</string>
       <string>2,"^https?://%s/downloadimage\.aspx\?", url_host(base_url)</string>
@@ -179,7 +184,10 @@
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
-    <!-- long PDF patterns are article PDF, shorter PDF patterns are for supplement PDF -->
+    <!--
+       https://jamanetwork.com/ama/content_public/journal/cardiology/938625/jamacardiology_rubin_2020_oi_200065_1610043959.42043.pdf
+       https://cdn.jamanetwork.com/ama/content_public/journal/cardiology/938625/hoi200065supp1_prod_1610043959.42043.pdf?Expires=2147483647&Signature=um5ghwH1p8UUQYXxyUXF4~y2~69kKe4Qt5urkA0e5jtdnhufvHP0MZ66PAFwjuVGqoHIEumKzAkv3-m2PZl5N04LhPZgwYZslOMgC13vKxmM-0v-aJCRpxuofZFfg8hufMXezOYMONq~qh1zKqrO6OrY8h6hllseh6B9uuWKq6u28yenrNAtsQcgY1aD1G7XTkg1fPwkjHJhlof2NA9q-FMW0m8bTGCeXdxOCPqmJqVbao4ir4zDzqQhB7f2Nc5-HnM8yJLrzF3-vPffoEtDFSy0xlcAwdHzIFiKuN-U2aF9st7El3SlKzE50tXjQzx~Q67q3qkT6MxvEzchU0oJ7A__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA
+    -->
     <list>
       <string>"^%sjournals/%s/fullarticle/\d+$", base_url, journal_id</string>
       <string>"^%sjournals/%s/data/journals/[^/]+/[^.]+\.pdf$", base_url, journal_id</string>
@@ -226,6 +234,7 @@
       <string>.*silverchair-?cdn\.com</string>
       <string>.*\.brightcove\.net</string>
       <string>.*\.cloudfront\.net</string>
+      <string>cdn\.jamanetwork\.com</string>
     </list>
   </entry>
   <entry>
