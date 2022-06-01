@@ -69,6 +69,7 @@ public class Ojs3HtmlHashFilterFactory implements FilterFactory {
   private static final Logger log = Logger.getLogger(Ojs3HtmlHashFilterFactory.class);
 
   private static final String CIT_ENTRY_CLASS = "csl-entry";
+  private static final String CIT_RIGHT_INLINE_CLASS = "csl-right-inline";
   // [cited 2022May18]
   public static final Pattern VANCOUVER_CIT_PATTERN =
       Pattern.compile("\\[cited \\d\\d\\d\\d[a-z]+\\d\\d?]", Pattern.CASE_INSENSITIVE);
@@ -118,23 +119,7 @@ public class Ojs3HtmlHashFilterFactory implements FilterFactory {
         if (node instanceof Div) {
           String className = ((Div) node).getAttribute("class");
           if (className != null && className.equals(CIT_ENTRY_CLASS)) {
-            for (Node child : ((Div) node).getChildrenAsNodeArray()) {
-              String allText = child.getText();
-              ArrayList<Pattern> citPats = new ArrayList<>();
-              citPats.add(VANCOUVER_CIT_PATTERN);
-              citPats.add(ASSOCIACAO_BRAZILEIRA_DE_NORMAS_TECNICAS_PATTERN);
-              citPats.add(HARVARD_CIT_PATTERN);
-              citPats.add(TURABIAN_CIT_PATTERN);
-              Matcher mat;
-              for (Pattern citPat : citPats) {
-                mat = citPat.matcher(allText);
-                if (mat.find()) {
-                  // remove the identified Date Accessed bit, and accept the node
-                  child.setText(mat.replaceAll(""));
-                  return true;
-                }
-              }
-            }
+            recurseCslNodes(node);
             // if no transform was made, still accept the node
             return true;
           }
@@ -143,6 +128,32 @@ public class Ojs3HtmlHashFilterFactory implements FilterFactory {
       }
     },
   };
+
+  private static void recurseCslNodes(Node node) {
+    for (Node child : ((Div) node).getChildrenAsNodeArray()) {
+      checkText(child);
+      if (child instanceof Div) {
+        recurseCslNodes(child);
+      }
+    }
+  }
+
+  private static void checkText(Node node) {
+    String allText = node.getText();
+    ArrayList<Pattern> citPats = new ArrayList<>();
+    citPats.add(VANCOUVER_CIT_PATTERN);
+    citPats.add(ASSOCIACAO_BRAZILEIRA_DE_NORMAS_TECNICAS_PATTERN);
+    citPats.add(HARVARD_CIT_PATTERN);
+    citPats.add(TURABIAN_CIT_PATTERN);
+    Matcher mat;
+    for (Pattern citPat : citPats) {
+      mat = citPat.matcher(allText);
+      if (mat.find()) {
+        // remove the identified Date Accessed bit, and accept the node
+        node.setText(mat.replaceAll(""));
+      }
+    }
+  }
 
   private static final NodeFilter[] includeNodes2 = new NodeFilter[] {};
 
