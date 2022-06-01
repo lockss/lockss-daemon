@@ -18704,8 +18704,8 @@
     au < manifest ; exists ; 2017 ; 2017 ; Stem Cells Volume 35 ; 35 ; >
     au < manifest ; exists ; 2018 ; 2018 ; Stem Cells Volume 36 ; 36 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Stem Cells Volume 37 ; 37 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; Stem Cells Volume 38 ; 38 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Stem Cells Volume 39 ; 39 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Stem Cells Volume 38 ; 38 ; >
+    au < testing ; exists ; 2021 ; 2021 ; Stem Cells Volume 39 ; 39 ; >
     au < manifest ; exists ; 2022 ; 2022 ; Stem Cells Volume 40 ; 40 ; >
 
   }
@@ -18721,16 +18721,16 @@
 
     param[journal_id] = stcltm
 
-    au < manifest ; exists ; 2012 ; 2012 ; Stem Cells Translational Medicine Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; Stem Cells Translational Medicine Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; Stem Cells Translational Medicine Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; Stem Cells Translational Medicine Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2016 ; 2016 ; Stem Cells Translational Medicine Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2017 ; 2017 ; Stem Cells Translational Medicine Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2018 ; 2018 ; Stem Cells Translational Medicine Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2019 ; 2019 ; Stem Cells Translational Medicine Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; Stem Cells Translational Medicine Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Stem Cells Translational Medicine Volume 10 ; 10 ; >
+    au < testing ; exists ; 2012 ; 2012 ; Stem Cells Translational Medicine Volume 1 ; 1 ; >
+    au < testing ; exists ; 2013 ; 2013 ; Stem Cells Translational Medicine Volume 2 ; 2 ; >
+    au < testing ; exists ; 2014 ; 2014 ; Stem Cells Translational Medicine Volume 3 ; 3 ; >
+    au < testing ; exists ; 2015 ; 2015 ; Stem Cells Translational Medicine Volume 4 ; 4 ; >
+    au < testing ; exists ; 2016 ; 2016 ; Stem Cells Translational Medicine Volume 5 ; 5 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Stem Cells Translational Medicine Volume 6 ; 6 ; >
+    au < testing ; exists ; 2018 ; 2018 ; Stem Cells Translational Medicine Volume 7 ; 7 ; >
+    au < testing ; exists ; 2019 ; 2019 ; Stem Cells Translational Medicine Volume 8 ; 8 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Stem Cells Translational Medicine Volume 9 ; 9 ; >
+    au < testing ; exists ; 2021 ; 2021 ; Stem Cells Translational Medicine Volume 10 ; 10 ; >
     au < manifest ; exists ; 2022 ; 2022 ; Stem Cells Translational Medicine Volume 11 ; 11 ; >
 
   }
@@ -18750,7 +18750,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; Synthetic Biology Volume 3 ; 3 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Synthetic Biology Volume 4 ; 4 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Synthetic Biology Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Synthetic Biology Volume 6 ; 6 ; >
+    au < testing ; exists ; 2021 ; 2021 ; Synthetic Biology Volume 6 ; 6 ; >
     au < manifest ; exists ; 2022 ; 2022 ; Synthetic Biology Volume 7 ; 7 ; >
 
   }
@@ -18835,7 +18835,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; Systematic Biology Volume 67 ; 67 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Systematic Biology Volume 68 ; 68 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Systematic Biology Volume 69 ; 69 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Systematic Biology Volume 70 ; 70 ; >
+    au < testing ; exists ; 2021 ; 2021 ; Systematic Biology Volume 70 ; 70 ; >
     au < manifest ; exists ; 2022 ; 2022 ; Systematic Biology Volume 71 ; 71 ; >
 
   }
@@ -18890,7 +18890,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; Teaching Mathematics and its Applications: An International Journal of the IMA Volume 37 ; 37 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Teaching Mathematics and its Applications: An International Journal of the IMA Volume 38 ; 38 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Teaching Mathematics and its Applications: An International Journal of the IMA Volume 39 ; 39 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Teaching Mathematics and its Applications: An International Journal of the IMA Volume 40 ; 40 ; >
+    au < testing ; exists ; 2021 ; 2021 ; Teaching Mathematics and its Applications: An International Journal of the IMA Volume 40 ; 40 ; >
     au < manifest ; exists ; 2022 ; 2022 ; Teaching Mathematics and its Applications: An International Journal of the IMA Volume 41 ; 41 ; >
 
   }
@@ -19031,7 +19031,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; The American Historical Review Volume 123 ; 123 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The American Historical Review Volume 124 ; 124 ; >
     au < frozen ; exists ; 2020 ; 2020 ; The American Historical Review Volume 125 ; 125 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The American Historical Review Volume 126 ; 126 ; >
+    au < testing ; exists ; 2021 ; 2021 ; The American Historical Review Volume 126 ; 126 ; >
     au < manifest ; exists ; 2022 ; 2022 ; The American Historical Review Volume 127 ; 127 ; >
 
   }
@@ -19058,7 +19058,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; The American Journal of Comparative Law Volume 66 ; 66 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The American Journal of Comparative Law Volume 67 ; 67 ; >
     au < frozen ; exists ; 2020 ; 2020 ; The American Journal of Comparative Law Volume 68 ; 68 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The American Journal of Comparative Law Volume 69 ; 69 ; >
+    au < testing ; exists ; 2021 ; 2021 ; The American Journal of Comparative Law Volume 69 ; 69 ; >
     au < expected ; exists ; 2022 ; 2022 ; The American Journal of Comparative Law Volume 70 ; 70 ; >
 
   }
@@ -19139,7 +19139,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; The American Journal of Jurisprudence Volume 63 ; 63 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The American Journal of Jurisprudence Volume 64 ; 64 ; >
     au < frozen ; exists ; 2020 ; 2020 ; The American Journal of Jurisprudence Volume 65 ; 65 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The American Journal of Jurisprudence Volume 66 ; 66 ; >
+    au < testing ; exists ; 2021 ; 2021 ; The American Journal of Jurisprudence Volume 66 ; 66 ; >
     au < manifest ; exists ; 2022 ; 2022 ; The American Journal of Jurisprudence Volume 67 ; 67 ; >
 
   }
@@ -19320,7 +19320,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; The British Journal of Aesthetics Volume 58 ; 58 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The British Journal of Aesthetics Volume 59 ; 59 ; >
     au < frozen ; exists ; 2020 ; 2020 ; The British Journal of Aesthetics Volume 60 ; 60 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The British Journal of Aesthetics Volume 61 ; 61 ; >
+    au < testing ; exists ; 2021 ; 2021 ; The British Journal of Aesthetics Volume 61 ; 61 ; >
     au < manifest ; exists ; 2022 ; 2022 ; The British Journal of Aesthetics Volume 62 ; 62 ; >
 
   }
@@ -19397,7 +19397,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; The British Journal of Criminology Volume 58 ; 58 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The British Journal of Criminology Volume 59 ; 59 ; >
     au < frozen ; exists ; 2020 ; 2020 ; The British Journal of Criminology Volume 60 ; 60 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The British Journal of Criminology Volume 61 ; 61 ; >
+    au < testing ; exists ; 2021 ; 2021 ; The British Journal of Criminology Volume 61 ; 61 ; >
     au < manifest ; exists ; 2022 ; 2022 ; The British Journal of Criminology Volume 62 ; 62 ; >
 
   }
@@ -19463,7 +19463,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; The British Journal of Social Work Volume 48 ; 48 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The British Journal of Social Work Volume 49 ; 49 ; >
     au < frozen ; exists ; 2020 ; 2020 ; The British Journal of Social Work Volume 50 ; 50 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The British Journal of Social Work Volume 51 ; 51 ; >
+    au < testing ; exists ; 2021 ; 2021 ; The British Journal of Social Work Volume 51 ; 51 ; >
     au < manifest ; exists ; 2022 ; 2022 ; The British Journal of Social Work Volume 52 ; 52 ; >
 
   }
@@ -19528,7 +19528,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; The Cambridge Quarterly Volume 47 ; 47 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The Cambridge Quarterly Volume 48 ; 48 ; >
     au < frozen ; exists ; 2020 ; 2020 ; The Cambridge Quarterly Volume 49 ; 49 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The Cambridge Quarterly Volume 50 ; 50 ; >
+    au < testing ; exists ; 2021 ; 2021 ; The Cambridge Quarterly Volume 50 ; 50 ; >
     au < manifest ; exists ; 2022 ; 2022 ; The Cambridge Quarterly Volume 51 ; 51 ; >
 
   }
@@ -19552,7 +19552,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; The Chinese Journal of Comparative Law Volume 6 ; 6 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The Chinese Journal of Comparative Law Volume 7 ; 7 ; >
     au < frozen ; exists ; 2020 ; 2020 ; The Chinese Journal of Comparative Law Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The Chinese Journal of Comparative Law Volume 9 ; 9 ; >
+    au < testing ; exists ; 2021 ; 2021 ; The Chinese Journal of Comparative Law Volume 9 ; 9 ; >
     au < manifest ; exists ; 2022 ; 2022 ; The Chinese Journal of Comparative Law Volume 10 ; 10 ; >
 
   }
@@ -19582,7 +19582,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; The Chinese Journal of International Politics Volume 11 ; 11 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The Chinese Journal of International Politics Volume 12 ; 12 ; >
     au < frozen ; exists ; 2020 ; 2020 ; The Chinese Journal of International Politics Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The Chinese Journal of International Politics Volume 14 ; 14 ; >
+    au < testing ; exists ; 2021 ; 2021 ; The Chinese Journal of International Politics Volume 14 ; 14 ; >
     au < manifest ; exists ; 2022 ; 2022 ; The Chinese Journal of International Politics Volume 15 ; 15 ; >
 
   }
@@ -19661,7 +19661,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; The Computer Journal Volume 61 ; 61 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The Computer Journal Volume 62 ; 62 ; >
     au < frozen ; exists ; 2020 ; 2020 ; The Computer Journal Volume 63 ; 63 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The Computer Journal Volume 64 ; 64 ; >
+    au < testing ; exists ; 2021 ; 2021 ; The Computer Journal Volume 64 ; 64 ; >
     au < manifest ; exists ; 2022 ; 2022 ; The Computer Journal Volume 65 ; 65 ; >
 
   }
@@ -19812,7 +19812,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; The English Historical Review Volume 133 ; 133 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The English Historical Review Volume 134 ; 134 ; >
     au < frozen ; exists ; 2020 ; 2020 ; The English Historical Review Volume 135 ; 135 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The English Historical Review Volume 136 ; 136 ; >
+    au < testing ; exists ; 2021 ; 2021 ; The English Historical Review Volume 136 ; 136 ; >
     au < manifest ; exists ; 2022 ; 2022 ; The English Historical Review Volume 137 ; 137 ; >
 
   }
@@ -19888,7 +19888,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; The Gerontologist Volume 58 ; 58 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The Gerontologist Volume 59 ; 59 ; >
     au < frozen ; exists ; 2020 ; 2020 ; The Gerontologist Volume 60 ; 60 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The Gerontologist Volume 61 ; 61 ; >
+    au < testing ; exists ; 2021 ; 2021 ; The Gerontologist Volume 61 ; 61 ; >
     au < manifest ; exists ; 2022 ; 2022 ; The Gerontologist Volume 62 ; 62 ; >
 
   }
@@ -19972,19 +19972,19 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; The Journal of Aesthetics & Art Criticism Volume 64 ; 64 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; The Journal of Aesthetics & Art Criticism Volume 65 ; 65 ; >
     au < manifest ; exists ; 2008 ; 2008 ; The Journal of Aesthetics & Art Criticism Volume 66 ; 66 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; The Journal of Aesthetics & Art Criticism Volume 67 ; 67 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; The Journal of Aesthetics & Art Criticism Volume 68 ; 68 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; The Journal of Aesthetics & Art Criticism Volume 69 ; 69 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; The Journal of Aesthetics & Art Criticism Volume 70 ; 70 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; The Journal of Aesthetics & Art Criticism Volume 71 ; 71 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; The Journal of Aesthetics & Art Criticism Volume 72 ; 72 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; The Journal of Aesthetics & Art Criticism Volume 73 ; 73 ; >
-    au < manifest ; exists ; 2016 ; 2016 ; The Journal of Aesthetics & Art Criticism Volume 74 ; 74 ; >
-    au < manifest ; exists ; 2017 ; 2017 ; The Journal of Aesthetics & Art Criticism Volume 75 ; 75 ; >
-    au < manifest ; exists ; 2018 ; 2018 ; The Journal of Aesthetics & Art Criticism Volume 76 ; 76 ; >
-    au < manifest ; exists ; 2019 ; 2019 ; The Journal of Aesthetics & Art Criticism Volume 77 ; 77 ; >
+    au < testing ; exists ; 2009 ; 2009 ; The Journal of Aesthetics & Art Criticism Volume 67 ; 67 ; >
+    au < testing ; exists ; 2010 ; 2010 ; The Journal of Aesthetics & Art Criticism Volume 68 ; 68 ; >
+    au < testing ; exists ; 2011 ; 2011 ; The Journal of Aesthetics & Art Criticism Volume 69 ; 69 ; >
+    au < testing ; exists ; 2012 ; 2012 ; The Journal of Aesthetics & Art Criticism Volume 70 ; 70 ; >
+    au < testing ; exists ; 2013 ; 2013 ; The Journal of Aesthetics & Art Criticism Volume 71 ; 71 ; >
+    au < testing ; exists ; 2014 ; 2014 ; The Journal of Aesthetics & Art Criticism Volume 72 ; 72 ; >
+    au < testing ; exists ; 2015 ; 2015 ; The Journal of Aesthetics & Art Criticism Volume 73 ; 73 ; >
+    au < testing ; exists ; 2016 ; 2016 ; The Journal of Aesthetics & Art Criticism Volume 74 ; 74 ; >
+    au < testing ; exists ; 2017 ; 2017 ; The Journal of Aesthetics & Art Criticism Volume 75 ; 75 ; >
+    au < testing ; exists ; 2018 ; 2018 ; The Journal of Aesthetics & Art Criticism Volume 76 ; 76 ; >
+    au < testing ; exists ; 2019 ; 2019 ; The Journal of Aesthetics & Art Criticism Volume 77 ; 77 ; >
     au < frozen ; exists ; 2020 ; 2020 ; The Journal of Aesthetics & Art Criticism Volume 78 ; 78 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The Journal of Aesthetics & Art Criticism Volume 79 ; 79 ; >
+    au < testing ; exists ; 2021 ; 2021 ; The Journal of Aesthetics & Art Criticism Volume 79 ; 79 ; >
     au < manifest ; exists ; 2022 ; 2022 ; The Journal of Aesthetics & Art Criticism Volume 80 ; 80 ; >
 
   }
@@ -20000,12 +20000,12 @@
 
     param[journal_id] = jalm
 
-      au < manifest ; exists ; 2016 ; 2016 ; The Journal of Applied Laboratory Medicine Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2017 ; 2017 ; The Journal of Applied Laboratory Medicine Volume 1-2 ; 1-2 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; The Journal of Applied Laboratory Medicine Volume 2-3 ; 2-3 ; >
+      au < testing ; exists ; 2016 ; 2016 ; The Journal of Applied Laboratory Medicine Volume 1 ; 1 ; >
+      au < testing ; exists ; 2017 ; 2017 ; The Journal of Applied Laboratory Medicine Volume 1-2 ; 1-2 ; >
+      au < testing ; exists ; 2018 ; 2018 ; The Journal of Applied Laboratory Medicine Volume 2-3 ; 2-3 ; >
       au < frozen ; exists ; 2019 ; 2019 ; The Journal of Applied Laboratory Medicine Volume 3-4 ; 3-4 ; >
       au < frozen ; exists ; 2020 ; 2020 ; The Journal of Applied Laboratory Medicine Volume 5 ; 5 ; >
-      au < manifest ; exists ; 2021 ; 2021 ; The Journal of Applied Laboratory Medicine Volume 6 ; 6 ; >
+      au < testing ; exists ; 2021 ; 2021 ; The Journal of Applied Laboratory Medicine Volume 6 ; 6 ; >
       au < manifest ; exists ; 2022 ; 2022 ; The Journal of Applied Laboratory Medicine Volume 7 ; 7 ; >
 
   }
@@ -20161,7 +20161,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; The Journal of Biochemistry Volume 163-164 ; 163-164 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The Journal of Biochemistry Volume 165-166 ; 165-166 ; >
     au < frozen ; exists ; 2020 ; 2020 ; The Journal of Biochemistry Volume 167-168 ; 167-168 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The Journal of Biochemistry Volume 169-170 ; 169-170 ; >
+    au < testing ; exists ; 2021 ; 2021 ; The Journal of Biochemistry Volume 169-170 ; 169-170 ; >
     au < manifest ; exists ; 2022 ; 2022 ; The Journal of Biochemistry Volume 171-172 ; 171-172 ; >
 
   }
@@ -20225,7 +20225,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; The Journal of Deaf Studies and Deaf Education Volume 23 ; 23 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The Journal of Deaf Studies and Deaf Education Volume 24 ; 24 ; >
     au < frozen ; exists ; 2020 ; 2020 ; The Journal of Deaf Studies and Deaf Education Volume 25 ; 25 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The Journal of Deaf Studies and Deaf Education Volume 26 ; 26 ; >
+    au < testing ; exists ; 2021 ; 2021 ; The Journal of Deaf Studies and Deaf Education Volume 26 ; 26 ; >
     au < manifest ; exists ; 2022 ; 2022 ; The Journal of Deaf Studies and Deaf Education Volume 27 ; 27 ; >
 
   }
@@ -20254,7 +20254,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; The Journal of Hindu Studies Volume 11 ; 11 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The Journal of Hindu Studies Volume 12 ; 12 ; >
     au < frozen ; exists ; 2020 ; 2020 ; The Journal of Hindu Studies Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The Journal of Hindu Studies Volume 14 ; 14 ; >
+    au < testing ; exists ; 2021 ; 2021 ; The Journal of Hindu Studies Volume 14 ; 14 ; >
     au < manifest ; exists ; 2022 ; 2022 ; The Journal of Hindu Studies Volume 15 ; 15 ; >
 
   }
@@ -20387,7 +20387,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; The Journal of Infectious Diseases Volume 217-218 ; 217-218 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The Journal of Infectious Diseases Volume 219-220 ; 219-220 ; >
     au < frozen ; exists ; 2020 ; 2020 ; The Journal of Infectious Diseases Volume 221-222 ; 221-222 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The Journal of Infectious Diseases Volume 223-224 ; 223-224 ; >
+    au < testing ; exists ; 2021 ; 2021 ; The Journal of Infectious Diseases Volume 223-224 ; 223-224 ; >
     au < manifest ; exists ; 2022 ; 2022 ; The Journal of Infectious Diseases Volume 225-226 ; 225-226 ; >
 
   }
@@ -20439,7 +20439,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; The Journal of Law, Economics, and Organization Volume 34 ; 34 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The Journal of Law, Economics, and Organization Volume 35 ; 35 ; >
     au < frozen ; exists ; 2020 ; 2020 ; The Journal of Law, Economics, and Organization Volume 36 ; 36 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The Journal of Law, Economics, and Organization Volume 37 ; 37 ; >
+    au < testing ; exists ; 2021 ; 2021 ; The Journal of Law, Economics, and Organization Volume 37 ; 37 ; >
     au < manifest ; exists ; 2022 ; 2022 ; The Journal of Law, Economics, and Organization Volume 38 ; 38 ; >
 
   }
@@ -20464,17 +20464,17 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; Journal of Mechanics Volume 22 ; 22 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Journal of Mechanics Volume 23 ; 23 ; >
     au < manifest ; exists ; 2008 ; 2008 ; Journal of Mechanics Volume 24 ; 24 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; Journal of Mechanics Volume 25 ; 25 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; Journal of Mechanics Volume 26 ; 26 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; Journal of Mechanics Volume 27 ; 27 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; Journal of Mechanics Volume 28 ; 28 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; Journal of Mechanics Volume 29 ; 29 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; Journal of Mechanics Volume 30 ; 30 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; Journal of Mechanics Volume 31 ; 31 ; >
-    au < manifest ; exists ; 2016 ; 2016 ; Journal of Mechanics Volume 32 ; 32 ; >
-    au < manifest ; exists ; 2017 ; 2017 ; Journal of Mechanics Volume 33 ; 33 ; >
-    au < manifest ; exists ; 2018 ; 2018 ; Journal of Mechanics Volume 34 ; 34 ; >
-    au < manifest ; exists ; 2019 ; 2019 ; Journal of Mechanics Volume 35 ; 35 ; >
+    au < testing ; exists ; 2009 ; 2009 ; Journal of Mechanics Volume 25 ; 25 ; >
+    au < testing ; exists ; 2010 ; 2010 ; Journal of Mechanics Volume 26 ; 26 ; >
+    au < testing ; exists ; 2011 ; 2011 ; Journal of Mechanics Volume 27 ; 27 ; >
+    au < testing ; exists ; 2012 ; 2012 ; Journal of Mechanics Volume 28 ; 28 ; >
+    au < testing ; exists ; 2013 ; 2013 ; Journal of Mechanics Volume 29 ; 29 ; >
+    au < testing ; exists ; 2014 ; 2014 ; Journal of Mechanics Volume 30 ; 30 ; >
+    au < testing ; exists ; 2015 ; 2015 ; Journal of Mechanics Volume 31 ; 31 ; >
+    au < testing ; exists ; 2016 ; 2016 ; Journal of Mechanics Volume 32 ; 32 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Journal of Mechanics Volume 33 ; 33 ; >
+    au < testing ; exists ; 2018 ; 2018 ; Journal of Mechanics Volume 34 ; 34 ; >
+    au < testing ; exists ; 2019 ; 2019 ; Journal of Mechanics Volume 35 ; 35 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Journal of Mechanics Volume 36 ; 36 ; >
     au < expected ; exists ; 2021 ; 2021 ; Journal of Mechanics Volume 37 ; 37 ; >
     au < expected ; exists ; 2022 ; 2022 ; Journal of Mechanics Volume 38 ; 38 ; >
@@ -20537,7 +20537,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 43 ; 43 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 44 ; 44 ; >
     au < frozen ; exists ; 2020 ; 2020 ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 45 ; 45 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 46 ; 46 ; >
+    au < testing ; exists ; 2021 ; 2021 ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 46 ; 46 ; >
     au < manifest ; exists ; 2022 ; 2022 ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 47 ; 47 ; >
 
   }
@@ -20674,7 +20674,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; The Journal of Theological Studies Volume 69 ; 69 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The Journal of Theological Studies Volume 70 ; 70 ; >
     au < frozen ; exists ; 2020 ; 2020 ; The Journal of Theological Studies Volume 71 ; 71 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The Journal of Theological Studies Volume 72 ; 72 ; >
+    au < testing ; exists ; 2021 ; 2021 ; The Journal of Theological Studies Volume 72 ; 72 ; >
     au < manifest ; exists ; 2022 ; 2022 ; The Journal of Theological Studies Volume 73 ; 73 ; >
 
   }
@@ -20703,7 +20703,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; The Journal of World Energy Law & Business Volume 11 ; 11 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The Journal of World Energy Law & Business Volume 12 ; 12 ; >
     au < frozen ; exists ; 2020 ; 2020 ; The Journal of World Energy Law & Business Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The Journal of World Energy Law & Business Volume 14 ; 14 ; >
+    au < testing ; exists ; 2021 ; 2021 ; The Journal of World Energy Law & Business Volume 14 ; 14 ; >
     au < manifest ; exists ; 2022 ; 2022 ; The Journal of World Energy Law & Business Volume 15 ; 15 ; >
 
   }
@@ -20745,7 +20745,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; The Journals of Gerontology: Series A Volume 73 ; 73 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The Journals of Gerontology: Series A Volume 74 ; 74 ; >
     au < frozen ; exists ; 2020 ; 2020 ; The Journals of Gerontology: Series A Volume 75 ; 75 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The Journals of Gerontology: Series A Volume 76 ; 76 ; >
+    au < testing ; exists ; 2021 ; 2021 ; The Journals of Gerontology: Series A Volume 76 ; 76 ; >
     au < manifest ; exists ; 2022 ; 2022 ; The Journals of Gerontology: Series A Volume 77 ; 77 ; >
 
   }
@@ -20787,7 +20787,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; The Journals of Gerontology: Series B Volume 73 ; 73 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The Journals of Gerontology: Series B Volume 74 ; 74 ; >
     au < frozen ; exists ; 2020 ; 2020 ; The Journals of Gerontology: Series B Volume 75 ; 75 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The Journals of Gerontology: Series B Volume 76 ; 76 ; >
+    au < testing ; exists ; 2021 ; 2021 ; The Journals of Gerontology: Series B Volume 76 ; 76 ; >
     au < manifest ; exists ; 2022 ; 2022 ; The Journals of Gerontology: Series B Volume 77 ; 77 ; >
 
   }
@@ -20867,7 +20867,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; The Leo Baeck Institute Year Book Volume 62 ; 62 ; >
     au < frozen ; exists ; 2018 ; 2018 ; The Leo Baeck Institute Year Book Volume 63 ; 63 ; >
     au < frozen ; exists ; 2019 ; 2019 ; The Leo Baeck Institute Year Book Volume 64 ; 64 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The Leo Baeck Institute Year Book Volume 65 ; 65 ; >
+    au < testing ; exists ; 2021 ; 2021 ; The Leo Baeck Institute Year Book Volume 65 ; 65 ; >
     au < expected ; exists ; 2022 ; 2022 ; The Leo Baeck Institute Year Book Volume 66 ; 66 ; >
 
   }
@@ -21016,7 +21016,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; The Library Volume 19 ; 19 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The Library Volume 20 ; 20 ; >
     au < frozen ; exists ; 2020 ; 2020 ; The Library Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The Library Volume 22 ; 22 ; >
+    au < testing ; exists ; 2021 ; 2021 ; The Library Volume 22 ; 22 ; >
     au < manifest ; exists ; 2022 ; 2022 ; The Library Volume 23 ; 23 ; >
 
   }
@@ -21056,7 +21056,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; The Monist Volume 101 ; 101 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The Monist Volume 102 ; 102 ; >
     au < frozen ; exists ; 2020 ; 2020 ; The Monist Volume 103 ; 103 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The Monist Volume 104 ; 104 ; >
+    au < testing ; exists ; 2021 ; 2021 ; The Monist Volume 104 ; 104 ; >
     au < manifest ; exists ; 2022 ; 2022 ; The Monist Volume 105 ; 105 ; >
 
   }
@@ -21175,7 +21175,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; The Musical Quarterly Volume 101 ; 101 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The Musical Quarterly Volume 102 ; 102 ; >
     au < frozen ; exists ; 2020 ; 2020 ; The Musical Quarterly Volume 103 ; 103 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The Musical Quarterly Volume 104 ; 104 ; >
+    au < testing ; exists ; 2021 ; 2021 ; The Musical Quarterly Volume 104 ; 104 ; >
     au < manifest ; exists ; 2022 ; 2022 ; The Musical Quarterly Volume 105 ; 105 ; >
 
   }
@@ -21226,7 +21226,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; The Opera Quarterly Volume 33 ; 33 ; >
     au < frozen ; exists ; 2018 ; 2018 ; The Opera Quarterly Volume 34 ; 34 ; >
     au < frozen ; exists ; 2019 ; 2019 ; The Opera Quarterly Volume 35 (2019) ; 35 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The Opera Quarterly Volume 36 (2021) ; 36 ; >
+    au < testing ; exists ; 2021 ; 2021 ; The Opera Quarterly Volume 36 (2021) ; 36 ; >
     au < expected ; exists ; 2022 ; 2022 ; The Opera Quarterly Volume 37 (2022) ; 37 ; >
 
   }
@@ -21374,7 +21374,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; The Philosophical Quarterly Volume 68 ; 68 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The Philosophical Quarterly Volume 69 ; 69 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; The Philosophical Quarterly Volume 70 ; 70 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The Philosophical Quarterly Volume 71 ; 71 ; >
+    au < testing ; exists ; 2021 ; 2021 ; The Philosophical Quarterly Volume 71 ; 71 ; >
     au < manifest ; exists ; 2022 ; 2022 ; The Philosophical Quarterly Volume 72 ; 72 ; >
 
   }
@@ -21523,7 +21523,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; The Quarterly Journal of Economics Volume 133 ; 133 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The Quarterly Journal of Economics Volume 134 ; 134 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; The Quarterly Journal of Economics Volume 135 ; 135 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The Quarterly Journal of Economics Volume 136 ; 136 ; >
+    au < testing ; exists ; 2021 ; 2021 ; The Quarterly Journal of Economics Volume 136 ; 136 ; >
     au < manifest ; exists ; 2022 ; 2022 ; The Quarterly Journal of Economics Volume 137 ; 137 ; >
 
   }
@@ -21630,7 +21630,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; The Quarterly Journal of Mathematics Volume 69 ; 69 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The Quarterly Journal of Mathematics Volume 70 ; 70 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; The Quarterly Journal of Mathematics Volume 71 ; 71 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The Quarterly Journal of Mathematics Volume 72 ; 72 ; >
+    au < testing ; exists ; 2021 ; 2021 ; The Quarterly Journal of Mathematics Volume 72 ; 72 ; >
     au < manifest ; exists ; 2022 ; 2022 ; The Quarterly Journal of Mathematics Volume 73 ; 73 ; >
 
   }
@@ -21719,7 +21719,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 71 ; 71 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 72 ; 72 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 73 ; 73 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 74 ; 74 ; >
+    au < testing ; exists ; 2021 ; 2021 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 74 ; 74 ; >
     au < manifest ; exists ; 2022 ; 2022 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 75 ; 75 ; >
 
   }
@@ -21745,7 +21745,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; The Review of Asset Pricing Studies Volume 8 ; 8 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The Review of Asset Pricing Studies Volume 9 ; 9 ; >
     au < frozen ; exists ; 2020 ; 2020 ; The Review of Asset Pricing Studies Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The Review of Asset Pricing Studies Volume 11 ; 11 ; >
+    au < testing ; exists ; 2021 ; 2021 ; The Review of Asset Pricing Studies Volume 11 ; 11 ; >
     au < manifest ; exists ; 2022 ; 2022 ; The Review of Asset Pricing Studies Volume 12 ; 12 ; >
 
   }
@@ -21770,7 +21770,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; The Review of Corporate Finance Studies Volume 7 ; 7 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The Review of Corporate Finance Studies Volume 8 ; 8 ; >
     au < frozen ; exists ; 2020 ; 2020 ; The Review of Corporate Finance Studies Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The Review of Corporate Finance Studies Volume 10 ; 10 ; >
+    au < testing ; exists ; 2021 ; 2021 ; The Review of Corporate Finance Studies Volume 10 ; 10 ; >
     au < manifest ; exists ; 2022 ; 2022 ; The Review of Corporate Finance Studies Volume 11 ; 11 ; >
 
   }
@@ -21873,7 +21873,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; The Review of Economic Studies Volume 85 ; 85 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The Review of Economic Studies Volume 86 ; 86 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; The Review of Economic Studies Volume 87 ; 87 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The Review of Economic Studies Volume 88 ; 88 ; >
+    au < testing ; exists ; 2021 ; 2021 ; The Review of Economic Studies Volume 88 ; 88 ; >
     au < manifest ; exists ; 2022 ; 2022 ; The Review of Economic Studies Volume 89 ; 89 ; >
 
   }
@@ -21984,7 +21984,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; The Review of English Studies Volume 69 ; 69 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The Review of English Studies Volume 70 ; 70 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; The Review of English Studies Volume 71 ; 71 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The Review of English Studies Volume 72 ; 72 ; >
+    au < testing ; exists ; 2021 ; 2021 ; The Review of English Studies Volume 72 ; 72 ; >
     au < manifest ; exists ; 2022 ; 2022 ; The Review of English Studies Volume 73 ; 73 ; >
 
   }
@@ -22033,7 +22033,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; The Review of Financial Studies Volume 31 ; 31 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The Review of Financial Studies Volume 32 ; 32 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; The Review of Financial Studies Volume 33 ; 33 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The Review of Financial Studies Volume 34 ; 34 ; >
+    au < testing ; exists ; 2021 ; 2021 ; The Review of Financial Studies Volume 34 ; 34 ; >
     au < manifest ; exists ; 2022 ; 2022 ; The Review of Financial Studies Volume 35 ; 35 ; >
 
   }
@@ -22083,7 +22083,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; The World Bank Economic Review Volume 32 ; 32 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The World Bank Economic Review Volume 33 ; 33 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; The World Bank Economic Review Volume 34 ; 34 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The World Bank Economic Review Volume 35 ; 35 ; >
+    au < testing ; exists ; 2021 ; 2021 ; The World Bank Economic Review Volume 35 ; 35 ; >
     au < manifest ; exists ; 2022 ; 2022 ; The World Bank Economic Review Volume 36 ; 36 ; >
 
   }
@@ -22134,7 +22134,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; The World Bank Research Observer Volume 33 ; 33 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The World Bank Research Observer Volume 34 ; 34 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; The World Bank Research Observer Volume 35 ; 35 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The World Bank Research Observer Volume 36 ; 36 ; >
+    au < testing ; exists ; 2021 ; 2021 ; The World Bank Research Observer Volume 36 ; 36 ; >
     au < manifest ; exists ; 2022 ; 2022 ; The World Bank Research Observer Volume 37 ; 37 ; >
 
   }
@@ -22175,8 +22175,8 @@
     au < frozen ; exists ; 2016 ; 2016 ; The Year's Work in Critical and Cultural Theory Volume 24 ; 24 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Year's Work in Critical and Cultural Theory Volume 25 ; 25 ; >
     au < frozen ; exists ; 2018 ; 2018 ; The Year's Work in Critical and Cultural Theory Volume 26 ; 26 ; >
-    au < manifest ; exists ; 2019 ; 2019 ; The Year's Work in Critical and Cultural Theory Volume 27 ; 27 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The Year's Work in Critical and Cultural Theory Volume 28 ; 28 ; >
+    au < testing ; exists ; 2019 ; 2019 ; The Year's Work in Critical and Cultural Theory Volume 27 ; 27 ; >
+    au < testing ; exists ; 2021 ; 2021 ; The Year's Work in Critical and Cultural Theory Volume 28 ; 28 ; >
     au < expected ; exists ; 2022 ; 2022 ; The Year's Work in Critical and Cultural Theory Volume 29 ; 29 ; >
 
   }
@@ -22286,9 +22286,9 @@
     au < frozen ; exists ; 2016 ; 2016 ; The Year's Work in English Studies Volume 95 ; 95 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Year's Work in English Studies Volume 96 ; 96 ; >
     au < frozen ; exists ; 2018 ; 2018 ; The Year's Work in English Studies Volume 97 ; 97 ; >
-    au < manifest ; exists ; 2019 ; 2019 ; The Year's Work in English Studies Volume 98 ; 98 ; >
+    au < testing ; exists ; 2019 ; 2019 ; The Year's Work in English Studies Volume 98 ; 98 ; >
     au < frozen ; exists ; 2020 ; 2020 ; The Year's Work in English Studies Volume 99 ; 99 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The Year's Work in English Studies Volume 100 ; 100 ; >
+    au < testing ; exists ; 2021 ; 2021 ; The Year's Work in English Studies Volume 100 ; 100 ; >
     au < expected ; exists ; 2022 ; 2022 ; The Year's Work in English Studies Volume 101 ; 101 ; >
 
   }
@@ -22344,7 +22344,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; Toxicological Sciences Volume 161-166 ; 161-166 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Toxicological Sciences Volume 167-172 ; 167-172 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Toxicological Sciences Volume 173-178 ; 173-178 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Toxicological Sciences Volume 179-184 ; 179-184 ; >
+    au < testing ; exists ; 2021 ; 2021 ; Toxicological Sciences Volume 179-184 ; 179-184 ; >
     au < manifest ; exists ; 2022 ; 2022 ; Toxicological Sciences Volume 185-190 ; 185-190 ; >
 
   }
@@ -22473,7 +22473,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 112 ; 112 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 113 ; 113 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 114 ; 114 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 115 ; 115 ; >
+    au < testing ; exists ; 2021 ; 2021 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 115 ; 115 ; >
     au < manifest ; exists ; 2022 ; 2022 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 116 ; 116 ; >
 
   }
@@ -22506,7 +22506,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; Translational Animal Science Volume 2 ; 2 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Translational Animal Science Volume 3 ; 3 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Translational Animal Science Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Translational Animal Science Volume 5 ; 5 ; >
+    au < testing ; exists ; 2021 ; 2021 ; Translational Animal Science Volume 5 ; 5 ; >
     au < manifest ; exists ; 2022 ; 2022 ; Translational Animal Science Volume 6 ; 6 ; >
 
   }
@@ -22532,7 +22532,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; Translational Behavioral Medicine Volume 8 ; 8 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Translational Behavioral Medicine Volume 9 ; 9 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Translational Behavioral Medicine Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Translational Behavioral Medicine Volume 11 ; 11 ; >
+    au < testing ; exists ; 2021 ; 2021 ; Translational Behavioral Medicine Volume 11 ; 11 ; >
     au < manifest ; exists ; 2022 ; 2022 ; Translational Behavioral Medicine Volume 12 ; 12 ; >
 
   }
@@ -22583,7 +22583,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; Tree Physiology Volume 38 ; 38 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Tree Physiology Volume 39 ; 39 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Tree Physiology Volume 40 ; 40 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Tree Physiology Volume 41 ; 41 ; >
+    au < testing ; exists ; 2021 ; 2021 ; Tree Physiology Volume 41 ; 41 ; >
     au < manifest ; exists ; 2022 ; 2022 ; Tree Physiology Volume 42 ; 42 ; >
 
   }
@@ -22613,7 +22613,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; Trusts & Trustees Volume 24 ; 24 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Trusts & Trustees Volume 25 ; 25 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Trusts & Trustees Volume 26 ; 26 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Trusts & Trustees Volume 27 ; 27 ; >
+    au < testing ; exists ; 2021 ; 2021 ; Trusts & Trustees Volume 27 ; 27 ; >
     au < manifest ; exists ; 2022 ; 2022 ; Trusts & Trustees Volume 28 ; 28 ; >
 
   }
@@ -22660,7 +22660,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; Twentieth Century British History Volume 29 ; 29 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Twentieth Century British History Volume 30 ; 30 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Twentieth Century British History Volume 31 ; 31 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Twentieth Century British History Volume 32 ; 32 ; >
+    au < testing ; exists ; 2021 ; 2021 ; Twentieth Century British History Volume 32 ; 32 ; >
     au < manifest ; exists ; 2022 ; 2022 ; Twentieth Century British History Volume 33 ; 33 ; >
 
   }
@@ -22721,7 +22721,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; Uniform Law Review - Revue de droit uniforme Volume 23 ; 23 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Uniform Law Review - Revue de droit uniforme Volume 24 ; 24 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Uniform Law Review - Revue de droit uniforme Volume 25 ; 25 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Uniform Law Review - Revue de droit uniforme Volume 26 ; 26 ; >
+    au < testing ; exists ; 2021 ; 2021 ; Uniform Law Review - Revue de droit uniforme Volume 26 ; 26 ; >
     au < manifest ; exists ; 2022 ; 2022 ; Uniform Law Review - Revue de droit uniforme Volume 27 ; 27 ; >
 
   }
@@ -22742,7 +22742,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; Virus Evolution Volume 4 ; 4 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Virus Evolution Volume 5 ; 5 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Virus Evolution Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Virus Evolution Volume 7 ; 7 ; >
+    au < testing ; exists ; 2021 ; 2021 ; Virus Evolution Volume 7 ; 7 ; >
     au < manifest ; exists ; 2022 ; 2022 ; Virus Evolution Volume 8 ; 8 ; >
 
   }
@@ -22808,7 +22808,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; Western Historical Quarterly Volume 49 ; 49 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Western Historical Quarterly Volume 50 ; 50 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Western Historical Quarterly Volume 51 ; 51 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Western Historical Quarterly Volume 52 ; 52 ; >
+    au < testing ; exists ; 2021 ; 2021 ; Western Historical Quarterly Volume 52 ; 52 ; >
     au < manifest ; exists ; 2022 ; 2022 ; Western Historical Quarterly Volume 53 ; 53 ; >
 
   }
@@ -22830,7 +22830,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; Work, Aging and Retirement Volume 4 ; 4 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Work, Aging and Retirement Volume 5 ; 5 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Work, Aging and Retirement Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Work, Aging and Retirement Volume 7 ; 7 ; >
+    au < testing ; exists ; 2021 ; 2021 ; Work, Aging and Retirement Volume 7 ; 7 ; >
     au < manifest ; exists ; 2022 ; 2022 ; Work, Aging and Retirement Volume 8 ; 8 ; >
 
   }
@@ -22883,8 +22883,8 @@
     au < frozen ; exists ; 2016 ; 2016 ; Yearbook of European Law Volume 35 ; 35 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Yearbook of European Law Volume 36 ; 36 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Yearbook of European Law Volume 37 ; 37 ; >
-    au < manifest ; exists ; 2019 ; 2019 ; Yearbook of European Law Volume 38 ; 38 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Yearbook of European Law Volume 39 ; 39 ; >
+    au < testing ; exists ; 2019 ; 2019 ; Yearbook of European Law Volume 38 ; 38 ; >
+    au < ready ; exists ; 2021 ; 2021 ; Yearbook of European Law Volume 39 ; 39 ; >
     au < expected ; exists ; 2022 ; 2022 ; Yearbook of European Law Volume 40 ; 40 ; >
 
   }
