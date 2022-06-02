@@ -2074,7 +2074,7 @@
     comment[journal_id] = dlo
     # online from 2003
 
-    au < manifest ; exists ; 2003 ; Development and Learning in Organizations Volume 17 ; 17 ; >
+    au < notReady ; exists ; 2003 ; Development and Learning in Organizations Volume 17 ; 17 ; > #no pdfs
     au < crawling ; exists ; 2004 ; Development and Learning in Organizations Volume 18 ; 18 ; >
     au < crawling ; exists ; 2005 ; Development and Learning in Organizations Volume 19 ; 19 ; >
     au < frozen ; exists ; 2006 ; Development and Learning in Organizations Volume 20 ; 20 ; >
@@ -3221,7 +3221,7 @@
     # online from 2002
 
     au < crawling ; exists ; 2002 ; Human Resource Management International Digest Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2003 ; Human Resource Management International Digest Volume 11 ; 11 ; >
+    au < notReady ; exists ; 2003 ; Human Resource Management International Digest Volume 11 ; 11 ; > #no pdfs
     au < crawling ; exists ; 2004 ; Human Resource Management International Digest Volume 12 ; 12 ; >
     au < crawling ; exists ; 2005 ; Human Resource Management International Digest Volume 13 ; 13 ; >
     au < crawling ; exists ; 2006 ; Human Resource Management International Digest Volume 14 ; 14 ; >
@@ -9542,7 +9542,7 @@
     au < frozen ; exists ; 2000 ; Library Hi Tech News Volume 17 ; 17 ; >
     au < notReady ; exists ; 2001 ; Library Hi Tech News Volume 18 ; 18 ; > #403 Forbidden https://d1bxh8uas1mnw7.cloudfront.net/assets/embed
     au < crawling ; exists ; 2002 ; Library Hi Tech News Volume 19 ; 19 ; >
-    au < manifest ; exists ; 2003 ; Library Hi Tech News Volume 20 ; 20 ; >
+    au < notReady ; exists ; 2003 ; Library Hi Tech News Volume 20 ; 20 ; > #No pdfs
     au < doNotProcess ; doNotProcess ; 2004 ; Library Hi Tech News Volume 21 ; 21 ; >
     au < crawling ; exists ; 2005 ; Library Hi Tech News Volume 22 ; 22 ; >
     au < crawling ; exists ; 2006 ; Library Hi Tech News Volume 23 ; 23 ; >
@@ -12988,7 +12988,7 @@
     # online from 2002
     comment[continued_by] = 1477-7282
 
-    au < manifest ; exists ; 2002 ; Training Strategies for Tomorrow Volume 16 ; 16 ; >
+    au < notReady ; exists ; 2002 ; Training Strategies for Tomorrow Volume 16 ; 16 ; > #html only. No pdf
 
   }
 
