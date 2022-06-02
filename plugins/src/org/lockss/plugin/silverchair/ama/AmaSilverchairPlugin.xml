@@ -11,7 +11,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>14</string>
+    <string>15</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -139,6 +139,13 @@
       <string>1, "^https?://(cdn\.[^.]+\.com)/[^/]+/content_public/journal/.*\.(pdf|png|jpeg|jpg|gif)\?Expires=2147483647", journal_id</string>
       <string>1,"^https?://%s/pdfaccess\.ashx[?]url=/data/journals/(.+routename=%s|[^/]+/[^/]+(/[^/]+)?$)", url_host(base_url), journal_id</string>
       <string>1,"^https?://%s/journals/%s/downloadcitation/[^?/]+\?format=ris$", url_host(base_url), journal_id</string>
+      <!--
+        https://jamanetwork.com/Citation/Download?resourceId=2792304&resourceType=3&citationFormat=0
+        https://jamanetwork.com/Citation/Download?resourceId=2792304&resourceType=3&citationFormat=1
+        https://jamanetwork.com/Citation/Download?resourceId=2792304&resourceType=3&citationFormat=2
+        https://jamanetwork.com/Citation/Download?resourceId=2792304&resourceType=3&citationFormat=3
+      -->
+      <string>1,"%sCitation/Download\?resourceId=[^&amp;]+&amp;resourceType=[^&amp;]+&amp;citationFormat=0", base_url</string>
       <string>2,"^https?://%s/downloadimage\.aspx\?", url_host(base_url)</string>
       
       <!--  Not collecting audio/video/interactive content
