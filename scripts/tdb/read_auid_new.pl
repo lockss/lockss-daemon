@@ -1118,7 +1118,7 @@ while (my $line = <>) {
     }
     sleep(4);
 
-  #Janeway
+  #Janeway. No journal_id
   } elsif (($plugin eq "OLHPlugin") || 
            ($plugin eq "ClockssOLHPlugin") ||
            ($plugin eq "UniversityofMichiganPlugin") ||
@@ -1166,9 +1166,9 @@ while (my $line = <>) {
     }
     sleep(4);
 
-  #Janeway
+  #Janeway. With journal_id
   } elsif (($plugin eq "ClockssIowaStateDPPlugin") ||
-#           ($plugin eq "IowaStateDPPlugin") ||
+           ($plugin eq "IowaStateDPPlugin") ||
            ($plugin eq "ClockssGhentUniversityLibraryPlugin") ||
            ($plugin eq "GhentUniversityLibraryPlugin")) {
     #permission is different from start
