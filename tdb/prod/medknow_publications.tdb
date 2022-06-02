@@ -206,19 +206,20 @@
 #    param[base_url] = http://www.amsjournal.com/
 
     param[journal_issn] = 2231-0746
+    #Moved to LWW
 
-    au < released ; 2011 ; Annals of Maxillofacial Surgery Volume 1 ; 2011 ; 1 ; http://www.amsjournal.com/ >
-    au < released ; 2012 ; Annals of Maxillofacial Surgery Volume 2 ; 2012 ; 2 ; http://www.amsjournal.com/ >
-    au < released ; 2013 ; Annals of Maxillofacial Surgery Volume 3 ; 2013 ; 3 ; http://www.amsjournal.com/ >
-    au < released ; 2014 ; Annals of Maxillofacial Surgery Volume 4 ; 2014 ; 4 ; http://www.amsjournal.com/ >
-    au < released ; 2015 ; Annals of Maxillofacial Surgery Volume 5 ; 2015 ; 5 ; http://www.amsjournal.com/ >
-    au < released ; 2016 ; Annals of Maxillofacial Surgery Volume 6 ; 2016 ; 6 ; http://www.amsjournal.com/ >
-    au < released ; 2017 ; Annals of Maxillofacial Surgery Volume 7 ; 2017 ; 7 ; http://www.amsjournal.com/ >
-    au < released ; 2018 ; Annals of Maxillofacial Surgery Volume 8 ; 2018 ; 8 ; http://www.amsjournal.com/ >
-    au < released ; 2019 ; Annals of Maxillofacial Surgery Volume 9 ; 2019 ; 9 ; https://www.amsjournal.com/ >
-    au < released ; 2020 ; Annals of Maxillofacial Surgery Volume 10 ; 2020 ; 10 ; https://www.amsjournal.com/ >
-    au < released ; 2021 ; Annals of Maxillofacial Surgery Volume 11 ; 2021 ; 11 ; https://www.amsjournal.com/ >
-    au < expected ; 2022 ; Annals of Maxillofacial Surgery Volume 12 ; 2022 ; 12 ; https://www.amsjournal.com/ >
+    au < down ; 2011 ; Annals of Maxillofacial Surgery Volume 1 ; 2011 ; 1 ; http://www.amsjournal.com/ >
+    au < down ; 2012 ; Annals of Maxillofacial Surgery Volume 2 ; 2012 ; 2 ; http://www.amsjournal.com/ >
+    au < down ; 2013 ; Annals of Maxillofacial Surgery Volume 3 ; 2013 ; 3 ; http://www.amsjournal.com/ >
+    au < down ; 2014 ; Annals of Maxillofacial Surgery Volume 4 ; 2014 ; 4 ; http://www.amsjournal.com/ >
+    au < down ; 2015 ; Annals of Maxillofacial Surgery Volume 5 ; 2015 ; 5 ; http://www.amsjournal.com/ >
+    au < down ; 2016 ; Annals of Maxillofacial Surgery Volume 6 ; 2016 ; 6 ; http://www.amsjournal.com/ >
+    au < down ; 2017 ; Annals of Maxillofacial Surgery Volume 7 ; 2017 ; 7 ; http://www.amsjournal.com/ >
+    au < down ; 2018 ; Annals of Maxillofacial Surgery Volume 8 ; 2018 ; 8 ; http://www.amsjournal.com/ >
+    au < down ; 2019 ; Annals of Maxillofacial Surgery Volume 9 ; 2019 ; 9 ; https://www.amsjournal.com/ >
+    au < down ; 2020 ; Annals of Maxillofacial Surgery Volume 10 ; 2020 ; 10 ; https://www.amsjournal.com/ >
+    au < down ; 2021 ; Annals of Maxillofacial Surgery Volume 11 ; 2021 ; 11 ; https://www.amsjournal.com/ >
+    au < doNotProcess ; 2022 ; Annals of Maxillofacial Surgery Volume 12 ; 2022 ; 12 ; https://www.amsjournal.com/ >
 
   }
 
@@ -531,9 +532,9 @@
     >
 #    param[base_url] = https://www.bengaljcancer.org/
 
-    param[journal_issn] = 0000-0000
+    param[journal_issn] = 2773-1332
 
-    au < expected ; 2021 ; Bengal Journal of Cancer Volume 1 ; 2021 ; 1 ; https://www.bengaljcancer.org/ >
+    au < manifest ; 2021 ; Bengal Journal of Cancer Volume 1 ; 2021 ; 1 ; https://www.bengaljcancer.org/ >
     au < expected ; 2022 ; Bengal Journal of Cancer Volume 2 ; 2022 ; 2 ; https://www.bengaljcancer.org/ >
 
   }
@@ -2256,8 +2257,7 @@
     au < released ; 2018 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 3 ; 2018 ; 3 ; https://www.ijghtn.com/ >
     au < released ; 2019 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 4 ; 2019 ; 4 ; https://www.ijghtn.com/ >
     au < released ; 2020 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 5 ; 2020 ; 5 ; https://www.ijghtn.com/ >
-    au < expected ; 2021 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 6 ; 2021 ; 6 ; https://www.ijghtn.com/ >
-    au < expected ; 2022 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 7 ; 2022 ; 7 ; https://www.ijghtn.com/ >
+    au < expected ; 2022 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 6 ; 2022 ; 6 ; https://www.ijghtn.com/ >
 
   }
 
@@ -2295,9 +2295,9 @@
     >
 #    param[base_url] = https://ijos.in/
 
-    param[journal_issn] = 2772-915X
+    param[journal_issn] = 2773-1367
 
-    au < exists ; 2021 ; International Journal of Orthopaedic Surgery Volume 29 ; 2021 ; 29 ; https://ijos.in/ >
+    au < manifest ; 2021 ; International Journal of Orthopaedic Surgery Volume 29 ; 2021 ; 29 ; https://ijos.in/ >
     au < expected ; 2022 ; International Journal of Orthopaedic Surgery Volume 30 ; 2022 ; 30 ; https://ijos.in/ >
 
   }
@@ -2577,32 +2577,28 @@
 #    param[base_url] = http://www.carcinogenesis.com/
 
     param[journal_issn] = 1477-3163
-    # different format from other journals. Issues are accessed individually by clicking http://www.carcinogenesis.com/browse.asp
-    # instead of by a listing like this: http://www.jcnonweb.com/backissues.asp
-    # does have a lockss/clockss permission statement. http://www.carcinogenesis.com/lockss.txt
+    # Moved to wordpress. https://carcinogenesis.com/
 
-    au < notReady ; 2002 ; Journal of Carcinogenesis Volume 1 ; 2002 ; 1 ; http://www.carcinogenesis.com/ >
-    au < notReady ; 2003 ; Journal of Carcinogenesis Volume 2 ; 2003 ; 2 ; http://www.carcinogenesis.com/ >
-    au < notReady ; 2004 ; Journal of Carcinogenesis Volume 3 ; 2004 ; 3 ; http://www.carcinogenesis.com/ >
-    au < notReady ; 2005 ; Journal of Carcinogenesis Volume 4 ; 2005 ; 4 ; http://www.carcinogenesis.com/ >
-    au < notReady ; 2006 ; Journal of Carcinogenesis Volume 5 ; 2006 ; 5 ; http://www.carcinogenesis.com/ >
-    au < notReady ; 2007 ; Journal of Carcinogenesis Volume 6 ; 2007 ; 6 ; http://www.carcinogenesis.com/ >
-    au < notReady ; 2008 ; Journal of Carcinogenesis Volume 7 ; 2008 ; 7 ; http://www.carcinogenesis.com/ >
-    au < notReady ; 2009 ; Journal of Carcinogenesis Volume 8 ; 2009 ; 8 ; http://www.carcinogenesis.com/ >
-    au < notReady ; 2010 ; Journal of Carcinogenesis Volume 9 ; 2010 ; 9 ; http://www.carcinogenesis.com/ >
-    au < notReady ; 2011 ; Journal of Carcinogenesis Volume 10 ; 2011 ; 10 ; http://www.carcinogenesis.com/ >
-    au < notReady ; 2012 ; Journal of Carcinogenesis Volume 11 ; 2012 ; 11 ; http://www.carcinogenesis.com/ >
-    au < notReady ; 2013 ; Journal of Carcinogenesis Volume 12 ; 2013 ; 12 ; http://www.carcinogenesis.com/ >
-    au < released ; 2014 ; Journal of Carcinogenesis Volume 13 ; 2014 ; 13 ; http://www.carcinogenesis.com/ >
-    au < notReady ; 2015 ; Journal of Carcinogenesis Volume 14 ; 2015 ; 14 ; http://www.carcinogenesis.com/ >
-    au < notReady ; 2016 ; Journal of Carcinogenesis Volume 15 ; 2016 ; 15 ; http://www.carcinogenesis.com/ >
-    au < released ; 2017 ; Journal of Carcinogenesis Volume 16 ; 2017 ; 16 ; http://www.carcinogenesis.com/ >
-    au < released ; 2018 ; Journal of Carcinogenesis Volume 17 ; 2018 ; 17 ; http://www.carcinogenesis.com/ >
-    au < notReady ; 2019 ; Journal of Carcinogenesis Volume 18 ; 2019 ; 18 ; http://www.carcinogenesis.com/ >
-    au < notReady ; 2020 ; Journal of Carcinogenesis Volume 19 ; 2020 ; 19 ; http://www.carcinogenesis.com/ >
-    au < notReady ; 2021 ; Journal of Carcinogenesis Volume 20 ; 2021 ; 20 ; http://www.carcinogenesis.com/ >
-    #deactivated. No further content.
-    au < expected ; 2022 ; Journal of Carcinogenesis Volume 21 ; 2022 ; 21 ; http://www.carcinogenesis.com/ >
+    au < doNotProcess ; 2002 ; Journal of Carcinogenesis Volume 1 ; 2002 ; 1 ; http://www.carcinogenesis.com/ >
+    au < doNotProcess ; 2003 ; Journal of Carcinogenesis Volume 2 ; 2003 ; 2 ; http://www.carcinogenesis.com/ >
+    au < doNotProcess ; 2004 ; Journal of Carcinogenesis Volume 3 ; 2004 ; 3 ; http://www.carcinogenesis.com/ >
+    au < doNotProcess ; 2005 ; Journal of Carcinogenesis Volume 4 ; 2005 ; 4 ; http://www.carcinogenesis.com/ >
+    au < doNotProcess ; 2006 ; Journal of Carcinogenesis Volume 5 ; 2006 ; 5 ; http://www.carcinogenesis.com/ >
+    au < doNotProcess ; 2007 ; Journal of Carcinogenesis Volume 6 ; 2007 ; 6 ; http://www.carcinogenesis.com/ >
+    au < doNotProcess ; 2008 ; Journal of Carcinogenesis Volume 7 ; 2008 ; 7 ; http://www.carcinogenesis.com/ >
+    au < doNotProcess ; 2009 ; Journal of Carcinogenesis Volume 8 ; 2009 ; 8 ; http://www.carcinogenesis.com/ >
+    au < doNotProcess ; 2010 ; Journal of Carcinogenesis Volume 9 ; 2010 ; 9 ; http://www.carcinogenesis.com/ >
+    au < doNotProcess ; 2011 ; Journal of Carcinogenesis Volume 10 ; 2011 ; 10 ; http://www.carcinogenesis.com/ >
+    au < doNotProcess ; 2012 ; Journal of Carcinogenesis Volume 11 ; 2012 ; 11 ; http://www.carcinogenesis.com/ >
+    au < doNotProcess ; 2013 ; Journal of Carcinogenesis Volume 12 ; 2013 ; 12 ; http://www.carcinogenesis.com/ >
+    au < down ; 2014 ; Journal of Carcinogenesis Volume 13 ; 2014 ; 13 ; http://www.carcinogenesis.com/ >
+    au < doNotProcess ; 2015 ; Journal of Carcinogenesis Volume 14 ; 2015 ; 14 ; http://www.carcinogenesis.com/ >
+    au < doNotProcess ; 2016 ; Journal of Carcinogenesis Volume 15 ; 2016 ; 15 ; http://www.carcinogenesis.com/ >
+    au < down ; 2017 ; Journal of Carcinogenesis Volume 16 ; 2017 ; 16 ; http://www.carcinogenesis.com/ >
+    au < down ; 2018 ; Journal of Carcinogenesis Volume 17 ; 2018 ; 17 ; http://www.carcinogenesis.com/ >
+    au < doNotProcess ; 2019 ; Journal of Carcinogenesis Volume 18 ; 2019 ; 18 ; http://www.carcinogenesis.com/ >
+    au < doNotProcess ; 2020 ; Journal of Carcinogenesis Volume 19 ; 2020 ; 19 ; http://www.carcinogenesis.com/ >
+    au < doNotProcess ; 2021 ; Journal of Carcinogenesis Volume 20 ; 2021 ; 20 ; http://www.carcinogenesis.com/ >
 
   }
 #  {
@@ -2636,24 +2632,20 @@
 #    param[base_url] = http://www.clinicalimagingscience.org/
 
     param[journal_issn] = 2156-7514 
-    # different format from other journals. Issues are accessed individually by clicking http://www.clinicalimagingscience.org/browse.asp
-    # instead of by a listing like this: http://www.clinicalimagingscience.org/backissues.asp
-    # has a lockss permission statement http://www.clinicalimagingscience.org/lockss.txt
+    # previous: http://www.clinicalimagingscience.org/backissues.asp
     #move to Scientific Scholar
 
-
-    au < notReady ; 2011 ; Journal of Clinical Imaging Science Volume 1 ; 2011 ; 1 ; http://www.clinicalimagingscience.org/ >
-    au < notReady ; 2012 ; Journal of Clinical Imaging Science Volume 2 ; 2012 ; 2 ; http://www.clinicalimagingscience.org/ >
-    au < notReady ; 2013 ; Journal of Clinical Imaging Science Volume 3 ; 2013 ; 3 ; http://www.clinicalimagingscience.org/ >
-    au < notReady ; 2014 ; Journal of Clinical Imaging Science Volume 4 ; 2014 ; 4 ; http://www.clinicalimagingscience.org/ >
-    au < notReady ; 2015 ; Journal of Clinical Imaging Science Volume 5 ; 2015 ; 5 ; http://www.clinicalimagingscience.org/ >
-    au < notReady ; 2016 ; Journal of Clinical Imaging Science Volume 6 ; 2016 ; 6 ; http://www.clinicalimagingscience.org/ >
-    au < notReady ; 2017 ; Journal of Clinical Imaging Science Volume 7 ; 2017 ; 7 ; http://www.clinicalimagingscience.org/ >
-    au < notReady ; 2018 ; Journal of Clinical Imaging Science Volume 8 ; 2018 ; 8 ; http://www.clinicalimagingscience.org/ >
-    au < notReady ; 2019 ; Journal of Clinical Imaging Science Volume 9 ; 2019 ; 9 ; https://www.clinicalimagingscience.org/ >
-    au < notReady ; 2020 ; Journal of Clinical Imaging Science Volume 10 ; 2020 ; 10 ; https://www.clinicalimagingscience.org/ >
-    au < notReady ; 2021 ; Journal of Clinical Imaging Science Volume 11 ; 2021 ; 11 ; https://www.clinicalimagingscience.org/ >
-    au < expected ; 2022 ; Journal of Clinical Imaging Science Volume 12 ; 2022 ; 12 ; https://www.clinicalimagingscience.org/ >
+    au < doNotProcess ; 2011 ; Journal of Clinical Imaging Science Volume 1 ; 2011 ; 1 ; http://www.clinicalimagingscience.org/ >
+    au < doNotProcess ; 2012 ; Journal of Clinical Imaging Science Volume 2 ; 2012 ; 2 ; http://www.clinicalimagingscience.org/ >
+    au < doNotProcess ; 2013 ; Journal of Clinical Imaging Science Volume 3 ; 2013 ; 3 ; http://www.clinicalimagingscience.org/ >
+    au < doNotProcess ; 2014 ; Journal of Clinical Imaging Science Volume 4 ; 2014 ; 4 ; http://www.clinicalimagingscience.org/ >
+    au < doNotProcess ; 2015 ; Journal of Clinical Imaging Science Volume 5 ; 2015 ; 5 ; http://www.clinicalimagingscience.org/ >
+    au < doNotProcess ; 2016 ; Journal of Clinical Imaging Science Volume 6 ; 2016 ; 6 ; http://www.clinicalimagingscience.org/ >
+    au < doNotProcess ; 2017 ; Journal of Clinical Imaging Science Volume 7 ; 2017 ; 7 ; http://www.clinicalimagingscience.org/ >
+    au < doNotProcess ; 2018 ; Journal of Clinical Imaging Science Volume 8 ; 2018 ; 8 ; http://www.clinicalimagingscience.org/ >
+    au < doNotProcess ; 2019 ; Journal of Clinical Imaging Science Volume 9 ; 2019 ; 9 ; https://www.clinicalimagingscience.org/ >
+    au < doNotProcess ; 2020 ; Journal of Clinical Imaging Science Volume 10 ; 2020 ; 10 ; https://www.clinicalimagingscience.org/ >
+    au < doNotProcess ; 2021 ; Journal of Clinical Imaging Science Volume 11 ; 2021 ; 11 ; https://www.clinicalimagingscience.org/ >
 
   }
 
@@ -3047,8 +3039,9 @@
 #    param[base_url] = http://www.gynecendoscopy.org/
 
     param[journal_issn] = 0974-1216
+    #stored here https://www.ncbi.nlm.nih.gov/pmc/journals/1763/
 
-    au < exists ; 2009 ; Journal of Gynecological Endoscopy and Surgery Volume 1 ; 2009 ; 1 ; https://www.gynecendoscopy.org/ >
+    au < doNotProcess ; 2009 ; Journal of Gynecological Endoscopy and Surgery Volume 1 ; 2009 ; 1 ; https://www.gynecendoscopy.org/ >
     au < released ; 2011 ; Journal of Gynecological Endoscopy and Surgery Volume 2 ; 2011 ; 2 ; http://www.gynecendoscopy.org/ >
 
   }
@@ -3992,10 +3985,10 @@
 
     param[journal_issn] = 0974-9233
 
-    au < exists ; 2007 ; Middle East African Journal of Ophthalmology Volume 14 ; 2007 ; 14 ; https://www.meajo.org/ >
-    au < exists ; 2008 ; Middle East African Journal of Ophthalmology Volume 15 ; 2008 ; 15 ; https://www.meajo.org/ >
-    au < exists ; 2009 ; Middle East African Journal of Ophthalmology Volume 16 ; 2009 ; 16 ; https://www.meajo.org/ >
-    au < exists ; 2010 ; Middle East African Journal of Ophthalmology Volume 17 ; 2010 ; 17 ; https://www.meajo.org/ >
+    au < manifest ; 2007 ; Middle East African Journal of Ophthalmology Volume 14 ; 2007 ; 14 ; http://www.meajo.org/ >
+    au < manifest ; 2008 ; Middle East African Journal of Ophthalmology Volume 15 ; 2008 ; 15 ; http://www.meajo.org/ >
+    au < manifest ; 2009 ; Middle East African Journal of Ophthalmology Volume 16 ; 2009 ; 16 ; http://www.meajo.org/ >
+    au < manifest ; 2010 ; Middle East African Journal of Ophthalmology Volume 17 ; 2010 ; 17 ; http://www.meajo.org/ >
     au < released ; 2011 ; Middle East African Journal of Ophthalmology Volume 18 ; 2011 ; 18 ; http://www.meajo.org/ >
     au < released ; 2012 ; Middle East African Journal of Ophthalmology Volume 19 ; 2012 ; 19 ; http://www.meajo.org/ >
     au < released ; 2013 ; Middle East African Journal of Ophthalmology Volume 20 ; 2013 ; 20 ; http://www.meajo.org/ >
@@ -4004,10 +3997,10 @@
     au < released ; 2016 ; Middle East African Journal of Ophthalmology Volume 23 ; 2016 ; 23 ; http://www.meajo.org/ >
     au < released ; 2017 ; Middle East African Journal of Ophthalmology Volume 24 ; 2017 ; 24 ; http://www.meajo.org/ >
     au < released ; 2018 ; Middle East African Journal of Ophthalmology Volume 25 ; 2018 ; 25 ; http://www.meajo.org/ >
-    au < exists ; 2019 ; Middle East African Journal of Ophthalmology Volume 26 ; 2019 ; 26 ; https://www.meajo.org/ >
-    au < exists ; 2020 ; Middle East African Journal of Ophthalmology Volume 27 ; 2020 ; 27 ; https://www.meajo.org/ >
-    au < exists ; 2021 ; Middle East African Journal of Ophthalmology Volume 28 ; 2021 ; 28 ; https://www.meajo.org/ >
-    au < expected ; 2022 ; Middle East African Journal of Ophthalmology Volume 29 ; 2022 ; 29 ; https://www.meajo.org/ >
+    au < manifest ; 2019 ; Middle East African Journal of Ophthalmology Volume 26 ; 2019 ; 26 ; http://www.meajo.org/ >
+    au < manifest ; 2020 ; Middle East African Journal of Ophthalmology Volume 27 ; 2020 ; 27 ; http://www.meajo.org/ >
+    au < manifest ; 2021 ; Middle East African Journal of Ophthalmology Volume 28 ; 2021 ; 28 ; http://www.meajo.org/ >
+    au < expected ; 2022 ; Middle East African Journal of Ophthalmology Volume 29 ; 2022 ; 29 ; http://www.meajo.org/ >
 
   }
 
@@ -4165,8 +4158,7 @@
     au < released ; 2018 ; Nigerian Medical Journal Volume 59 ; 2018 ; 59 ; https://www.nigeriamedj.com/ >
     au < released ; 2019 ; Nigerian Medical Journal Volume 60 ; 2019 ; 60 ; https://www.nigeriamedj.com/ >
     au < released ; 2020 ; Nigerian Medical Journal Volume 61 ; 2020 ; 61 ; https://www.nigeriamedj.com/ >
-    au < expected ; 2021 ; Nigerian Medical Journal Volume 62 ; 2021 ; 62 ; https://www.nigeriamedj.com/ >
-    au < expected ; 2022 ; Nigerian Medical Journal Volume 63 ; 2022 ; 63 ; https://www.nigeriamedj.com/ >
+    au < expected ; 2022 ; Nigerian Medical Journal Volume 62 ; 2022 ; 62 ; https://www.nigeriamedj.com/ >
 
   }
 
@@ -4941,8 +4933,7 @@
       au < released ; 2018 ; Al-Basar International Journal of Ophthalmology Volume 5 ; 2018 ; 5 ; https://www.bijojournal.org/ >
       au < released ; 2019 ; Al-Basar International Journal of Ophthalmology Volume 6 ; 2019 ; 6 ; https://www.bijojournal.org/ >
       au < released ; 2020 ; Al-Basar International Journal of Ophthalmology Volume 7 ; 2020 ; 7 ; https://www.bijojournal.org/ >
-      au < expected ; 2021 ; Al-Basar International Journal of Ophthalmology Volume 8 ; 2021 ; 8 ; https://www.bijojournal.org/ >
-      au < expected ; 2022 ; Al-Basar International Journal of Ophthalmology Volume 9 ; 2022 ; 9 ; https://www.bijojournal.org/ >
+      au < expected ; 2022 ; Al-Basar International Journal of Ophthalmology Volume 8 ; 2022 ; 8 ; https://www.bijojournal.org/ >
 
   }
 
@@ -5419,7 +5410,8 @@
       param[journal_issn] = 2278-0513
 #      param[base_url] = http://www.ccij-online.org/
 #      changed url to:
-#      param[base_url] = http://ccij-online.org/
+#      param[base_url] = http://ccij-online.org/ 
+#      Archive at https://ccij-online.org/journal/archives
 
       au < down ; 2012 ; Clinical Cancer Investigation Journal Volume 1 ; 2012 ; 1 ; http://www.ccij-online.org/ >
       au < down ; 2013 ; Clinical Cancer Investigation Journal Volume 2 ; 2013 ; 2 ; http://www.ccij-online.org/ >
@@ -5431,7 +5423,6 @@
       au < down ; 2019 ; Clinical Cancer Investigation Journal Volume 8 ; 2019 ; 8 ; https://www.ccij-online.org/ >
       au < down ; 2020 ; Clinical Cancer Investigation Journal Volume 9 ; 2020 ; 9 ; https://www.ccij-online.org/ >
       au < down ; 2021 ; Clinical Cancer Investigation Journal Volume 10 ; 2021 ; 10 ; https://www.ccij-online.org/ >
-      au < expected ; 2022 ; Clinical Cancer Investigation Journal Volume 11 ; 2022 ; 11 ; https://ccij-online.org/ >
 
   }
 
@@ -6122,7 +6113,6 @@
       au < released ; 2015 ; Indian Journal of Health Sciences and Biomedical Research Volume 8 ; 2015 ; 8 ; http://www.ijournalhs.org/ >
       au < released ; 2016 ; Indian Journal of Health Sciences and Biomedical Research Volume 9 ; 2016 ; 9 ; http://www.ijournalhs.org/ >
       au < released ; 2017 ; Indian Journal of Health Sciences and Biomedical Research Volume 10 ; 2017 ; 10 ; http://www.ijournalhs.org/ >
-      au < exists ; 2018 ; Indian Journal of Health Sciences and Biomedical Research Volume 11 ; 2018 ; 11 ; https://www.ijournalhs.org/ >
 
   }
 
@@ -6134,12 +6124,13 @@
         eissn = 2542-6222
       >
 
-      param[journal_issn] = 2349-5006
+      param[journal_issn] = 2542-6214
       #continues = 2349-5006
 
-      au < exists ; 2019 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 12 ; 2019 ; 12 ; https://www.ijournalhs.org/ >
-      au < exists ; 2020 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 13 ; 2020 ; 13 ; https://www.ijournalhs.org/ >
-      au < exists ; 2021 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 14 ; 2021 ; 14 ; https://www.ijournalhs.org/ >
+      au < manifest ; 2018 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 11 ; 2018 ; 11 ; https://www.ijournalhs.org/ >
+      au < manifest ; 2019 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 12 ; 2019 ; 12 ; https://www.ijournalhs.org/ >
+      au < manifest ; 2020 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 13 ; 2020 ; 13 ; https://www.ijournalhs.org/ >
+      au < manifest ; 2021 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 14 ; 2021 ; 14 ; https://www.ijournalhs.org/ >
       au < expected ; 2022 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 15 ; 2022 ; 15 ; https://www.ijournalhs.org/ >
 
   }
@@ -7092,13 +7083,14 @@
 
       param[journal_issn] = 2229-3019
 #      param[base_url] = http://www.jiadsr.org/
+      # Moved to https://jiadsr.org/index.php/archives
 
       au < released ; 2014 ; Journal of Indian Academy of Dental Specialist Researchers Volume 1 ; 2014 ; 1 ; http://www.jiadsr.org/ >
       au < released ; 2015 ; Journal of Indian Academy of Dental Specialist Researchers Volume 2 ; 2015 ; 2 ; http://www.jiadsr.org/ >
       au < released ; 2016 ; Journal of Indian Academy of Dental Specialist Researchers Volume 3 ; 2016 ; 3 ; http://www.jiadsr.org/ >
       au < released ; 2017 ; Journal of Indian Academy of Dental Specialist Researchers Volume 4 ; 2017 ; 4 ; http://www.jiadsr.org/ >
-      au < exists ; 2018 ; Journal of Indian Academy of Dental Specialist Researchers Volume 5 ; 2018 ; 5 ; https://www.jiadsr.org/ >
-      au < exists ; 2019 ; Journal of Indian Academy of Dental Specialist Researchers Volume 6 ; 2019 ; 6 ; https://www.jiadsr.org/ >
+      au < doNotProcess ; 2018 ; Journal of Indian Academy of Dental Specialist Researchers Volume 5 ; 2018 ; 5 ; https://www.jiadsr.org/ >
+      au < doNotProcess ; 2019 ; Journal of Indian Academy of Dental Specialist Researchers Volume 6 ; 2019 ; 6 ; https://www.jiadsr.org/ >
 
   }
 
@@ -8812,11 +8804,11 @@
       au < manifest ; 2007 ; The Journal of Indian Prosthodontic Society Volume 7 ; 2007 ; 7 ; https://www.j-ips.org/ >
       au < manifest ; 2008 ; The Journal of Indian Prosthodontic Society Volume 8 ; 2008 ; 8 ; https://www.j-ips.org/ >
       au < manifest ; 2009 ; The Journal of Indian Prosthodontic Society Volume 9 ; 2009 ; 9 ; https://www.j-ips.org/ >
-      au < exists ; 2010 ; The Journal of Indian Prosthodontic Society Volume 10 ; 2010 ; 10 ; https://www.j-ips.org/ >
-      au < exists ; 2011 ; The Journal of Indian Prosthodontic Society Volume 11 ; 2011 ; 11 ; https://www.j-ips.org/ >
-      au < exists ; 2012 ; The Journal of Indian Prosthodontic Society Volume 12 ; 2012 ; 12 ; https://www.j-ips.org/ >
-      au < exists ; 2013 ; The Journal of Indian Prosthodontic Society Volume 13 ; 2013 ; 13 ; https://www.j-ips.org/ >
-      au < exists ; 2014 ; The Journal of Indian Prosthodontic Society Volume 14 ; 2014 ; 14 ; https://www.j-ips.org/ >
+      au < doesNotExist ; 2010 ; The Journal of Indian Prosthodontic Society Volume 10 ; 2010 ; 10 ; https://www.j-ips.org/ >
+      au < doesNotExist ; 2011 ; The Journal of Indian Prosthodontic Society Volume 11 ; 2011 ; 11 ; https://www.j-ips.org/ >
+      au < doesNotExist ; 2012 ; The Journal of Indian Prosthodontic Society Volume 12 ; 2012 ; 12 ; https://www.j-ips.org/ >
+      au < doesNotExist ; 2013 ; The Journal of Indian Prosthodontic Society Volume 13 ; 2013 ; 13 ; https://www.j-ips.org/ >
+      au < doesNotExist ; 2014 ; The Journal of Indian Prosthodontic Society Volume 14 ; 2014 ; 14 ; https://www.j-ips.org/ >
       au < released ; 2015 ; The Journal of Indian Prosthodontic Society Volume 15 ; 2015 ; 15 ; http://www.j-ips.org/ >
       au < released ; 2016 ; The Journal of Indian Prosthodontic Society Volume 16 ; 2016 ; 16 ; http://www.j-ips.org/ >
       au < released ; 2017 ; The Journal of Indian Prosthodontic Society Volume 17 ; 2017 ; 17 ; http://www.j-ips.org/ >
@@ -9952,12 +9944,13 @@
 
       param[journal_issn] = 2589-1731
 #      param[base_url] = http://www.ijcpc.org/
+      #Empty backissues page https://www.ijcpc.org/backissues.asp
 
-      au < manifest ; 2017 ; International Journal of Clinicopathological Correlation Volume 1 ; 2017 ; 1 ; https://www.ijcpc.org/ >
-      au < manifest ; 2018 ; International Journal of Clinicopathological Correlation Volume 2 ; 2018 ; 2 ; https://www.ijcpc.org/ >
-      au < manifest ; 2019 ; International Journal of Clinicopathological Correlation Volume 3 ; 2019 ; 3 ; https://www.ijcpc.org/ >
-      au < manifest ; 2020 ; International Journal of Clinicopathological Correlation Volume 4 ; 2020 ; 4 ; https://www.ijcpc.org/ >
-      au < manifest ; 2021 ; International Journal of Clinicopathological Correlation Volume 5 ; 2021 ; 5 ; https://www.ijcpc.org/ >
+      au < exists ; 2017 ; International Journal of Clinicopathological Correlation Volume 1 ; 2017 ; 1 ; https://www.ijcpc.org/ >
+      au < exists ; 2018 ; International Journal of Clinicopathological Correlation Volume 2 ; 2018 ; 2 ; https://www.ijcpc.org/ >
+      au < exists ; 2019 ; International Journal of Clinicopathological Correlation Volume 3 ; 2019 ; 3 ; https://www.ijcpc.org/ >
+      au < exists ; 2020 ; International Journal of Clinicopathological Correlation Volume 4 ; 2020 ; 4 ; https://www.ijcpc.org/ >
+      au < exists ; 2021 ; International Journal of Clinicopathological Correlation Volume 5 ; 2021 ; 5 ; https://www.ijcpc.org/ >
       au < expected ; 2022 ; International Journal of Clinicopathological Correlation Volume 6 ; 2022 ; 6 ; https://www.ijcpc.org/ >
 
   }
@@ -10269,11 +10262,11 @@
 #      param[base_url] = http://www.journaldmims.com/
 
       au < released ; 2017 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 12 ; 2017 ; 12 ; http://www.journaldmims.com/ >
-      au < exists ; 2018 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 13 ; 2018 ; 13 ; https://www.journaldmims.com/ >
-      au < exists ; 2019 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 14 ; 2019 ; 14 ; https://www.journaldmims.com/ >
-      au < exists ; 2020 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 15 ; 2020 ; 15 ; https://www.journaldmims.com/ >
-      au < exists ; 2021 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 16 ; 2021 ; 16 ; https://www.journaldmims.com/ >
-      au < expected ; 2022 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 17 ; 2022 ; 17 ; https://www.journaldmims.com/ >
+      au < manifest ; 2018 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 13 ; 2018 ; 13 ; http://www.journaldmims.com/ >
+      au < manifest ; 2019 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 14 ; 2019 ; 14 ; http://www.journaldmims.com/ >
+      au < manifest ; 2020 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 15 ; 2020 ; 15 ; http://www.journaldmims.com/ >
+      au < manifest ; 2021 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 16 ; 2021 ; 16 ; http://www.journaldmims.com/ >
+      au < expected ; 2022 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 17 ; 2022 ; 17 ; http://www.journaldmims.com/ >
 
   }
 
@@ -10304,14 +10297,15 @@
         eissn = 2772-7653
       >
 
-      param[journal_issn] = 2078-7685
+      param[journal_issn] = 2772-7653
 #      param[base_url] = https://www.jdeponline.com/
       #move to Thieme, 2022. Archive will stay with Medknow until further notice
 
-      au < exists ; 2018 ; Journal of Diabetes and Endocrine Practice Volume 1 ; 2018 ; 1 ; https://www.jdeponline.com/ >
-      au < exists ; 2019 ; Journal of Diabetes and Endocrine Practice Volume 2 ; 2019 ; 2 ; https://www.jdeponline.com/ >
-      au < exists ; 2020 ; Journal of Diabetes and Endocrine Practice Volume 3 ; 2020 ; 3 ; https://www.jdeponline.com/ >
-      au < exists ; 2021 ; Journal of Diabetes and Endocrine Practice Volume 4 ; 2021 ; 4 ; https://www.jdeponline.com/ >
+      au < manifest ; 2018 ; Journal of Diabetes and Endocrine Practice Volume 1 ; 2018 ; 1 ; https://www.jdeponline.com/ >
+      au < manifest ; 2019 ; Journal of Diabetes and Endocrine Practice Volume 2 ; 2019 ; 2 ; https://www.jdeponline.com/ >
+      au < manifest ; 2020 ; Journal of Diabetes and Endocrine Practice Volume 3 ; 2020 ; 3 ; https://www.jdeponline.com/ >
+      au < manifest ; 2021 ; Journal of Diabetes and Endocrine Practice Volume 4 ; 2021 ; 4 ; https://www.jdeponline.com/ >
+      au < expected ; 2022 ; Journal of Diabetes and Endocrine Practice Volume 5 ; 2022 ; 5 ; https://www.jdeponline.com/ >
 
   }
 
@@ -10610,12 +10604,13 @@
       param[journal_issn] = 2395-1540
 #      param[base_url] = http://www.jrnm.in/
 
-      au < exists ; 2016 ; Journal of Renal Nutrition and Metabolism Volume 2 ; 2016 ; 2 ; https://www.jrnm.in/ >
-      au < exists ; 2018 ; Journal of Renal Nutrition and Metabolism Volume 3 ; 2018 ; 3 ; https://www.jrnm.in/ >
-      au < exists ; 2019 ; Journal of Renal Nutrition and Metabolism Volume 4 ; 2019 ; 4 ; https://www.jrnm.in/ >
-      au < exists ; 2020 ; Journal of Renal Nutrition and Metabolism Volume 5 ; 2020 ; 5 ; https://www.jrnm.in/ >
-      au < exists ; 2021 ; Journal of Renal Nutrition and Metabolism Volume 6 ; 2021 ; 6 ; https://www.jrnm.in/ >
-      au < expected ; 2022 ; Journal of Renal Nutrition and Metabolism Volume 7 ; 2022 ; 7 ; https://www.jrnm.in/ >
+      au < manifest ; 2016 ; Journal of Renal Nutrition and Metabolism Volume 2 ; 2016 ; 2 ; http://www.jrnm.in/ >
+      au < manifest ; 2018 ; Journal of Renal Nutrition and Metabolism Volume 3 ; 2018 ; 3 ; http://www.jrnm.in/ >
+      au < manifest ; 2018 ; Journal of Renal Nutrition and Metabolism Volume 4 ; 2018 ; 4 ; http://www.jrnm.in/ >
+      au < manifest ; 2019 ; Journal of Renal Nutrition and Metabolism Volume 5 ; 2019 ; 5 ; http://www.jrnm.in/ >
+      au < manifest ; 2020 ; Journal of Renal Nutrition and Metabolism Volume 6 ; 2020 ; 6 ; http://www.jrnm.in/ >
+      au < manifest ; 2021 ; Journal of Renal Nutrition and Metabolism Volume 7 ; 2021 ; 7 ; http://www.jrnm.in/ >
+      au < expected ; 2022 ; Journal of Renal Nutrition and Metabolism Volume 8 ; 2022 ; 8 ; http://www.jrnm.in/ >
 
   }
 
@@ -10864,13 +10859,12 @@
       param[journal_issn] = 2468-7391
 #      param[base_url] = http://www.nigjourcvtsurg.org/
 
-      au < exists ; 2016 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 1 ; 2016 ; 1 ; https://www.nigjourcvtsurg.org/ >
+      au < manifest ; 2016 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 1 ; 2016 ; 1 ; http://www.nigjourcvtsurg.org/ >
       au < released ; 2017 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 2 ; 2017 ; 2 ; http://www.nigjourcvtsurg.org/ >
-      au < exists ; 2018 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 3 ; 2018 ; 3 ; https://www.nigjourcvtsurg.org/ >
-      au < exists ; 2019 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 4 ; 2019 ; 4 ; https://www.nigjourcvtsurg.org/ >
-      au < exists ; 2020 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 5 ; 2020 ; 5 ; https://www.nigjourcvtsurg.org/ >
-      au < expected ; 2021 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 6 ; 2021 ; 6 ; https://www.nigjourcvtsurg.org/ >
-      au < expected ; 2022 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 7 ; 2022 ; 7 ; https://www.nigjourcvtsurg.org/ >
+      au < manifest ; 2018 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 3 ; 2018 ; 3 ; http://www.nigjourcvtsurg.org/ >
+      au < manifest ; 2019 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 4 ; 2019 ; 4 ; http://www.nigjourcvtsurg.org/ >
+      au < manifest ; 2020 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 5 ; 2020 ; 5 ; http://www.nigjourcvtsurg.org/ >
+      au < expected ; 2022 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 6 ; 2022 ; 6 ; http://www.nigjourcvtsurg.org/ >
 
   }
 
@@ -11158,11 +11152,11 @@
       param[journal_issn] = 1300-6878
 #      param[base_url] = http://www.turkjplastsurg.org/
 
-      au < exists ; 2018 ; Turkish Journal of Plastic Surgery Volume 26 ; 2018 ; 26 ; https://www.turkjplastsurg.org/ >
-      au < exists ; 2019 ; Turkish Journal of Plastic Surgery Volume 27 ; 2019 ; 27 ; https://www.turkjplastsurg.org/ >
-      au < exists ; 2020 ; Turkish Journal of Plastic Surgery Volume 28 ; 2020 ; 28 ; https://www.turkjplastsurg.org/ >
-      au < exists ; 2021 ; Turkish Journal of Plastic Surgery Volume 29 ; 2021 ; 29 ; https://www.turkjplastsurg.org/ >
-      au < expected ; 2022 ; Turkish Journal of Plastic Surgery Volume 30 ; 2022 ; 30 ; https://www.turkjplastsurg.org/ >
+      au < manifest ; 2018 ; Turkish Journal of Plastic Surgery Volume 26 ; 2018 ; 26 ; http://www.turkjplastsurg.org/ >
+      au < manifest ; 2019 ; Turkish Journal of Plastic Surgery Volume 27 ; 2019 ; 27 ; http://www.turkjplastsurg.org/ >
+      au < manifest ; 2020 ; Turkish Journal of Plastic Surgery Volume 28 ; 2020 ; 28 ; http://www.turkjplastsurg.org/ >
+      au < manifest ; 2021 ; Turkish Journal of Plastic Surgery Volume 29 ; 2021 ; 29 ; http://www.turkjplastsurg.org/ >
+      au < exists ; 2022 ; Turkish Journal of Plastic Surgery Volume 30 ; 2022 ; 30 ; http://www.turkjplastsurg.org/ >
 
   }
 

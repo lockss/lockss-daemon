@@ -2599,9 +2599,7 @@
 #    param[base_url] = http://www.carcinogenesis.com/
 
     param[journal_issn] = 1477-3163
-    # different format from other journals. Issues are accessed individually by clicking http://www.carcinogenesis.com/browse.asp
-    # instead of by a listing like this: http://www.carcinogenesis.com/backissues.asp
-    # does have a lockss/clockss permission statement. http://www.carcinogenesis.com/lockss.txt
+    # Moved to wordpress. https://carcinogenesis.com/
 
     au < doNotProcess ; doNotProcess ; 2002 ; Journal of Carcinogenesis Volume 1 ; 2002 ; 1 ; https://www.carcinogenesis.com/ ; ; >
     au < doNotProcess ; doNotProcess ; 2003 ; Journal of Carcinogenesis Volume 2 ; 2003 ; 2 ; https://www.carcinogenesis.com/ ; ; >
