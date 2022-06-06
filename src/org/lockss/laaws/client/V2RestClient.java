@@ -73,9 +73,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Objects;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.KeyManager;
 import javax.net.ssl.SSLContext;
@@ -157,6 +159,7 @@ public class V2RestClient {
   private void initHttpClient(List<Interceptor> interceptors) {
     OkHttpClient.Builder builder = new OkHttpClient.Builder();
     builder.addNetworkInterceptor(getProgressInterceptor());
+    builder.cookieJar(new MemoryCookieJar());
     for (Interceptor interceptor : interceptors) {
       builder.addInterceptor(interceptor);
     }
@@ -1561,6 +1564,27 @@ public class V2RestClient {
     }
     catch (IOException e) {
       throw new AssertionError(e);
+    }
+  }
+
+  /** Minimal CookieJar for a single-host client */
+  static class MemoryCookieJar implements CookieJar {
+    private List<Cookie> cookies = new CopyOnWriteArrayList<>();
+
+    @Override
+    public void saveFromResponse(HttpUrl url, List<Cookie> cookies) {
+        this.cookies.addAll(cookies);
+    }
+
+    @Override
+    public List<Cookie> loadForRequest(HttpUrl url) {
+      // Remove expired Cookies
+      cookies.removeIf(cookie ->
+                       cookie.expiresAt() < System.currentTimeMillis());
+      // Return matching Cookies
+      return cookies.stream()
+        .filter(cookie -> cookie.matches(url))
+        .collect(Collectors.toList());
     }
   }
 }
