@@ -99,6 +99,8 @@ implements SourceXmlSchemaHelper {
   private static final String art_pubdate = "/ArticleSet/Article/Journal/PubDate[@PubStatus = \"ppublish\"]/Year";
   private static final String volume = "/ArticleSet/Article/Journal/Volume";
   private static final String issue = "/ArticleSet/Article/Journal/Issue";
+  private static final String issn = "/ArticleSet/Article/Journal/Issn";
+  private static final String doi = "/ArticleSet/Article/ArticleIdList/ArticleId[@IdType = \"doi\"]";
   protected static final String start_page = "/mods/relatedItem[@type = \"host\"]/part/extent[@unit = \"pages\"]/start";
   protected static final String end_page = "/ArticleSet/Article/LastPage";
 
@@ -111,7 +113,10 @@ implements SourceXmlSchemaHelper {
     articleMap.put(article_title, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(journal_title, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(author, AUTHOR_VALUE);
+    articleMap.put(volume, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(issue, XmlDomMetadataExtractor.TEXT_VALUE);
+    articleMap.put(issn, XmlDomMetadataExtractor.TEXT_VALUE);
+    articleMap.put(doi, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(start_page, XmlDomMetadataExtractor.TEXT_VALUE);
 
   }
@@ -128,6 +133,8 @@ implements SourceXmlSchemaHelper {
     cookMap.put(publisher, MetadataField.FIELD_PUBLISHER);
     cookMap.put(issue, MetadataField.FIELD_ISSUE);
     cookMap.put(volume, MetadataField.FIELD_VOLUME);
+    cookMap.put(issn, MetadataField.FIELD_ISSN);
+    cookMap.put(doi, MetadataField.FIELD_DOI);
     cookMap.put(start_page, MetadataField.FIELD_START_PAGE);
     cookMap.put(end_page, MetadataField.FIELD_END_PAGE);
   }

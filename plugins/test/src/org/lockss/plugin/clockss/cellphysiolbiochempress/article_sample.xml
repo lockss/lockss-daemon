@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ArticleSet>
+    <Article>
+        <Journal>
+            <PublisherName>Cell Physiol Biochem Press</PublisherName>
+            <JournalTitle>Cell Physiol Biochem</JournalTitle>
+            <Issn>1015-8987</Issn>
+            <Volume>56</Volume>
+            <Issue>1</Issue>
+            <PubDate PubStatus="ppublish">
+                <Year>2022</Year>
+                <Month>1</Month>
+                <Day>12</Day>
+            </PubDate>
+        </Journal>
+        <ArticleTitle>Apelin-13 Decreases Epithelial Sodium Channel (ENaC) Expression and Activity in Kidney Collecting Duct Cells</ArticleTitle>
+        <FirstPage>1</FirstPage>
+        <LastPage>12</LastPage>
+        <ELocationID EIdType="doi">10.33594/000000488</ELocationID>
+        <Language>EN</Language>
+        <AuthorList>
+            <Author>
+                <FirstName>Houda</FirstName>
+                <LastName>Ayari</LastName>
+                <AffiliationInfo>
+                    <Affiliation>Department of Pharmacology and Physiology, Faculté de Médecine et des Sciences de la Santé, Université de Sherbrooke, Sherbrooke, QC, Canada</Affiliation>
+                </AffiliationInfo>
+            </Author>
+            <Author>
+                <FirstName>Ahmed</FirstName>
+                <LastName>Chraibi</LastName>
+                <AffiliationInfo>
+                    <Affiliation>Department of Pharmacology and Physiology, Faculté de Médecine et des Sciences de la Santé, Université de Sherbrooke, Sherbrooke, QC, Canada, Ahmed.chraibi@usherbrooke.ca</Affiliation>
+                </AffiliationInfo>
+                <AffiliationInfo>
+                    <Affiliation>Research Center of the Centre Hospitalier Universitaire de Sherbrooke (CR-CHUS), Université de Sherbrooke, Sherbrooke, QC, Canada</Affiliation>
+                </AffiliationInfo>
+            </Author>
+        </AuthorList>
+        <PublicationType>Journal Article</PublicationType>
+        <ArticleIdList>
+            <ArticleId IdType="doi">10.33594/000000488</ArticleId>
+        </ArticleIdList>
+        <History>
+            <PubDate PubStatus="accepted">
+                <Year>2021</Year>
+                <Month>12</Month>
+                <Day>22</Day>
+            </PubDate>
+            <PubDate PubStatus="ppublish">
+                <Year>2022</Year>
+                <Month>1</Month>
+                <Day>12</Day>
+            </PubDate>
+        </History>
+        <Abstract>
+            <AbstractText Label="BACKGROUND/AIMS">Apelin and its G protein-coupled receptor APLNR (also known as APJ) are widely expressed within the central nervous system and peripheral organs including heart, lung and kidney. Several studies have shown that the apelin/APJ system is involved in various important physiological processes such as energy metabolism, cardiovascular functions and fluid homeostasis. In the kidney, the apelin/APJ system performs a wide range of activities. We recently demonstrated that apelin antagonises the hydro-osmotic effect of vasopressin on aquaporin-2 water channel (AQP-2) expression by reducing its mRNA and protein levels in collecting duct principal cells. The central role of these cells in water and sodium transport is governed by AQP-2 and the epithelial sodium channel (ENaC). The coordination of these channels is essential for the control of extracellular fluid volume, sodium homeostasis and blood pressure. This study aimed at investigating the role of apelin in the regulation of sodium balance in the distal nephron, and more specifically its involvement in modulating the expression and activity of ENaC in collecting duct principal cells.</AbstractText>
+            <AbstractText Label="METHODS">
+                mpkCCD cells were incubated in the presence of aldosterone and treated with or without apelin-13. Transepithelial Na
+                <sup>+</sup>
+                current was measured and the changes in ENaC expression determined by RT-PCR and immunoblotting.
+            </AbstractText>
+            <AbstractText Label="RESULTS">Our data show that apelin-13 reduces the transepithelial sodium amiloride-sensitive current in collecting duct principal cells after 8h and 24h treatment. This effect was associated with a decrease in αENaC subunit expression and mediated through the ERK pathway as well as SGK1 and Nedd4-2.</AbstractText>
+            <AbstractText Label="CONCLUSION">Our findings indicate that apelin is involved in the fine regulation of sodium balance in the renal collecting duct by opposing the effects of aldosterone, likely by activation of ENaC ubiquitination.</AbstractText>
+        </Abstract>
+        <CopyrightInformation>© Copyright by the Author(s). Published by Cell Physiol Biochem Press.</CopyrightInformation>
+        <CoiStatement>The authors declare that they have no conflicts of interest.</CoiStatement>
+        <ObjectList>
+            <Object Type="keyword">
+                <Param Name="value">Apelin; ENaC; Sodium homeostasis; mpkCCD; Kidney</Param>
+            </Object>
+        </ObjectList>
+    </Article>
+</ArticleSet>
