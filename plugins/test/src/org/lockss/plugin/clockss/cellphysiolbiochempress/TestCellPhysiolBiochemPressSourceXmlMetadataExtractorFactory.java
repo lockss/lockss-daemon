@@ -67,7 +67,7 @@ public class TestCellPhysiolBiochemPressSourceXmlMetadataExtractorFactory extend
         assertEquals("Cell Physiol Biochem", md.get(MetadataField.FIELD_PUBLICATION_TITLE));
         assertEquals("56", md.get(MetadataField.FIELD_VOLUME));
         assertEquals("1", md.get(MetadataField.FIELD_ISSUE));
-        assertEquals("2022", md.get(MetadataField.FIELD_DATE));
+        assertEquals("2022-1-12", md.get(MetadataField.FIELD_DATE));
         assertEquals("Cell Physiol Biochem Press", md.get(MetadataField.FIELD_PUBLISHER));
         assertEquals("10.33594/000000488", md.get(MetadataField.FIELD_DOI));
         assertEquals("1015-8987", md.get(MetadataField.FIELD_ISSN));

@@ -92,11 +92,51 @@ implements SourceXmlSchemaHelper {
     }
   };
 
+  static private final XmlDomMetadataExtractor.NodeValue PUBDATE_VALUE = new XmlDomMetadataExtractor.NodeValue() {
+    @Override
+    public String getValue(Node node) {
+
+      log.debug3("getValue of JATS publishing date");
+      NodeList elementChildren = node.getChildNodes();
+      if (elementChildren == null) return null;
+
+      // perhaps pick up iso attr if it's available
+      String tyear = null;
+      String tday = null;
+      String tmonth = null;
+      // look at each child of the TitleElement for information
+      for (int j = 0; j < elementChildren.getLength(); j++) {
+        Node checkNode = elementChildren.item(j);
+        String nodeName = checkNode.getNodeName();
+        if ("Day".equals(nodeName)) {
+          tday = checkNode.getTextContent();
+        } else if ("Month".equals(nodeName) ) {
+          tmonth = checkNode.getTextContent();
+        } else if ("Year".equals(nodeName)) {
+          tyear = checkNode.getTextContent();
+        }
+      }
+
+      StringBuilder valbuilder = new StringBuilder();
+      if (tyear != null) {
+        valbuilder.append(tyear);
+        if (tday != null && tmonth != null) {
+          valbuilder.append("-" + tmonth + "-" + tday);
+        }
+      } else {
+        log.debug3("no date found");
+        return null;
+      }
+      log.debug3("date found: " + valbuilder.toString());
+      return valbuilder.toString();
+    }
+  };
+
   protected static final String article_title = "/ArticleSet/Article/ArticleTitle";
   protected static final String journal_title = "/ArticleSet/Article/Journal/JournalTitle";
   protected static final String author = "/ArticleSet/Article/AuthorList/Author";
   private static final String publisher = "/ArticleSet/Article/Journal/PublisherName";
-  private static final String art_pubdate = "/ArticleSet/Article/Journal/PubDate[@PubStatus = \"ppublish\"]/Year";
+  private static final String art_pubdate = "/ArticleSet/Article/Journal/PubDate[@PubStatus = \"ppublish\"]";
   private static final String volume = "/ArticleSet/Article/Journal/Volume";
   private static final String issue = "/ArticleSet/Article/Journal/Issue";
   private static final String issn = "/ArticleSet/Article/Journal/Issn";
@@ -108,7 +148,7 @@ implements SourceXmlSchemaHelper {
   articleMap = new HashMap<String,XPathValue>();
   static {
     // article specific stuff
-    articleMap.put(art_pubdate, XmlDomMetadataExtractor.TEXT_VALUE);
+    articleMap.put(art_pubdate, PUBDATE_VALUE);
     articleMap.put(publisher, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(article_title, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(journal_title, XmlDomMetadataExtractor.TEXT_VALUE);
