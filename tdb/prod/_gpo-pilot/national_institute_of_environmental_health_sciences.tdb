@@ -2,7 +2,7 @@
 
   publisher <
     name = National Institute of Environmental Health Sciences ;
-    info[platform] = Atypon. Manifest pages exist. gov.gpo.access.permanent.plugin.environmentalhealthperspectives.EHPAtypon2022Plugin
+    info[platform] = Atypon. Manifest pages exist. gov.gpo.access.permanent.plugin.environmentalhealthperspectives.EHP2022Plugin
   >
 
   {
@@ -18,8 +18,7 @@
 
     {
     # Ancient plugin name has an underscore in it
-    plugin = gov.gpo.access.permanent.plugin.environmentalhealthperspectives.GenericAtyponPlugin  #This is a placeholder name
-    #plugin = gov.gpo.access.permanent.plugin.environmentalhealthperspectives.EHPAtypon2022Plugin #This is a suggested name.
+    plugin = gov.gpo.access.permanent.plugin.environmentalhealthperspectives.EHP2022JournalPlugin #This is a suggested name.
     param[base_url] = https://ehp.niehs.nih.gov/
     implicit < status ; year ; name ; param[volume_name] >
 

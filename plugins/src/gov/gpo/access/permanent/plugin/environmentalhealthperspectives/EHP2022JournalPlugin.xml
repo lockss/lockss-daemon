@@ -1,0 +1,225 @@
+<!--
+
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>development</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>gov.gpo.access.permanent.plugin.environmentalhealthperspectives.EHP2022JournalPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_url_mime_type</string>
+    <list>
+      <string>.*&amp;downloadType=(e?pdf|PDF)$, application/pdf</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_id</key>
+        <displayName>Journal Identifier</displayName>
+        <description>Identifier for journal (often used as part of file names)</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume_name</key>
+        <displayName>Volume</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^https?://%s/doi/(e?pdf|e?pdfplus|full)/[.0-9]+/[^\?&amp;]+$", url_host(base_url)</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+    <string>plugin_fetch_rate_limiter_source</string>
+    <string>host:base_url</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>2,"^https?://%s/imgJawr/[^/]+/templates/jsp/_style2/_tandf/images/favicon\.png$", url_host(base_url)</string>
+      <string>2,"^https?://%s/doi/.*/googleAnalyticsPlugin\.js$", url_host(base_url)</string>
+      <string>2,"^https?://%s/.*/www\.tandf\.co\.uk/", url_host(base_url)</string>
+      <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)(_v[0-9]+|\?v=[0-9.]+|\?[a-z0-9]+)?$", url_host(base_url)</string>
+      <string>1,"^https?://((fonts|ajax)\.googleapis\.com)/"</string>
+      <string>1,"^https?://(cdn\.nejm\.org)/."</string>
+      <string>1,"^https?://faseb-prod-cdn\.literatumonline\.com/journals/content/fasebj/"</string>
+      <string>1,"^https?://%s\.global\.prod\.fastly\.net/[^?]*\.(css|gif|jpe?g|js|png)$", url_host(base_url)</string>
+      <string>1,"^https?://%s/na[0-9]+/home/literatum/publisher/[^/]+/journals/[^/]+/%s/", url_host(base_url), journal_id</string>
+      <string>1,"^https?://%s/toc/%s(\.[0-9]+)?(/\d{4})?/%s($|/)", url_host(base_url), journal_id, volume_name</string>
+      <string>1,"^https?://%s/toc/%s([^/]+)?(/\d{4})?/%s($|/)", url_host(base_url), journal_id, volume_name</string>
+      <!-- the only difference between the last two crawl rules is what can be optional at the end of the journal_id (dot+digits or anything); not sure if this is needed -->
+      <string>2,"^https?://%s/doi/([^/]+/)?[0-9.]+/(null\?|[-.9]+$)", url_host(base_url)</string>
+      <string>2,"^https?://%s/doi/.*\?(prevSearch=|queryID=%%24%%7BresultBean.queryID%%7D|tab=permissions)", url_host(base_url)</string>
+      <string>2,"^https?://%s/doi/suppl/.*/suppl_file/\.", url_host(base_url)</string>
+      <string>1,"^https?://%s/doi/((e?pdf|e?pdfplus|full|abs|ref(erences)?|suppl|figure|video[^/]+|reader)/)?[0-9.]+/", url_host(base_url)</string>
+      <string>2,"^https?://%s/action/showFullPopup\?doi=.*&amp;id=$", url_host(base_url)</string>
+      <string>1,"^https?://%s/action/downloadCitation\?doi=.*&amp;format=ris&amp;include=(cit|abs)$", url_host(base_url)</string>
+      <string>1,"^https?://%s/action/downloadTable\?(doi=.+&amp;id=[^&amp;]+|id=.+&amp;doi=[^&amp;]+)(&amp;downloadType=[^&amp;]+)?$", url_host(base_url)</string>
+      <!-- note downloadFigures should *not* be added in to this as we do not want the ppt download associated -->
+      <string>1,"^https?://%s/action/(downloadPdfFig|showImage|showFullPopup|showCitFormats|showSupplements|showMediaPlayer|showPopup)\?([^=]+=[^&amp;]+&amp;)*doi=", url_host(base_url)</string>
+      <string>1,"^https?://%s/topic/eb-abstracts-", url_host(base_url)</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_url_mime_type</string>
+    <list>
+      <string>.*&amp;downloadType=(e?pdf|PDF)$, application/pdf</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Environmental Health Perspectives 2022 Journals Plugin</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Environmental Health Perspectives 2022 Journals Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+  </entry>
+  <!--  override start url from parent to support http to https conversion -->
+  <entry>
+    <string>au_start_url</string>
+    <list>
+      <!--https://ehp.niehs.nih.gov/lockss/ehp/128/index.html-->
+      <string>"%slockss/%s/%s/index.html", to_https(base_url), journal_id, volume_name</string>
+    </list>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>gov.gpo.access.permanent.plugin.environmentalhealthperspectives.EHPHtmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>gov.gpo.access.permanent.plugin.environmentalhealthperspectives.EHP2022JournalHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>gov.gpo.access.permanent.plugin.environmentalhealthperspectives.EHPArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>gov.gpo.access.permanent.plugin.environmentalhealthperspectives.EHPArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/plain_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;RIS</string>
+        <string>gov.gpo.access.permanent.plugin.environmentalhealthperspectives.EHPRisMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>application/x-research-info-systems_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;RIS</string>                                                   EHPRisMetadataExtractorFactory
+        <string>gov.gpo.access.permanent.plugin.environmentalhealthperspectives.EHPRisMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <string>(fonts|ajax)\.googleapis\.com</string>
+      <string>"faseb-prod-cdn\.literatumonline\.com"</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <list>
+      <string>://[^/]+/(templates/jsp|(css|img|js)Jawr|fonts|pb-assets|releasedAssets|resources|sda|wro|products/photo-theme)/</string>
+      <string>/(assets?|css|img|js|wro|card-type\d?)/.+\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$</string>
+      <string>://[^/]+/na[0-9]+/home/(readonly|literatum)/publisher/.*(cover\.jpg|/covergifs/.*\.jpg|\.fp\.png(_v[0-9]+)?)$</string>
+      <string>://[^/]+/na[0-9]+/home/(readonly|literatum)/publisher/.*/images/.*\.(gif|jpe?g|png)$</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_url_poll_result_weight</string>
+    <list>
+      <string>://[^/]+/(templates/jsp|(css|img|js)Jawr|fonts|pb-assets|releasedAssets|resources|sda|wro|products/photo-theme)/, 0</string>
+      <string>/(assets?|css|img|js|wro|card-type\d?)/.+\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$, 0</string>
+      <string>://[^/]+/na[0-9]+/home/(readonly|literatum)/publisher/.*(cover\.jpg|/covergifs/.*\.jpg|\.fp\.png(_v[0-9]+)?)$, 0</string>
+    </list>
+  </entry>
+</map>
