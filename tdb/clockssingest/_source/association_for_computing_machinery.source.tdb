@@ -7,59 +7,13 @@
     info[platform] = Source
   >
 
-
   {
 
     title <
       name = Association for Computing Machinery Source Content
     >
 
-      {
-
-      plugin = org.lockss.plugin.associationforcomputingmachinery.ClockssAssociationForComputingMachinerySourcePlugin
-      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/acm-released/
-      hidden[proxy] = DIRECT
-      implicit < status ; status2 ; year ; name ; param[year] >
-
-      au < zapped ; finished ; 2010 ; Association for Computing Machinery Source Content 2010 ; 2010 >
-      au < zapped ; finished ; 2011 ; Association for Computing Machinery Source Content 2011 ; 2011 >
-      au < zapped ; finished ; 2012 ; Association for Computing Machinery Source Content 2012 ; 2012 >
-      au < zapped ; finished ; 2013 ; Association for Computing Machinery Source Content 2013 ; 2013 >
-      au < zapped ; finished ; 2014 ; Association for Computing Machinery Source Content 2014 ; 2014 >
-      au < zapped ; finished ; 2015 ; Association for Computing Machinery Source Content 2015 ; 2015 >
-      au < zapped ; finished ; 2016 ; Association for Computing Machinery Source Content 2016 ; 2016 >
-      au < zapped ; finished ; 2017 ; Association for Computing Machinery Source Content 2017 ; 2017 >
-      #no more AUs here.
-     }
-
-     {
-
-      plugin = org.lockss.plugin.associationforcomputingmachinery.ClockssACMDirSourcePlugin
-      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/acm-released/
-      hidden[proxy] = DIRECT
-      implicit < status ; status2 ; year ; name ; param[directory] >
-
-      au < zapped ; finished ; 2018 ; Association for Computing Machinery Source Content 2018_1 ; 2018_1 >
-      au < zapped ; finished ; 2018 ; Association for Computing Machinery Source Content 2018_2 ; 2018_2 >
-      au < zapped ; finished ; 2018 ; Association for Computing Machinery Source Content 2018_3 ; 2018_3 >
-      au < zapped ; finished ; 2018 ; Association for Computing Machinery Source Content 2018_4 ; 2018_4 >
-      au < zapped ; finished ; 2018 ; Association for Computing Machinery Source Content 2018_5 ; 2018_5 >
-      au < zapped ; finished ; 2018 ; Association for Computing Machinery Source Content 2018_6 ; 2018_6 >
-
-      au < zapped ; finished ; 2019 ; Association for Computing Machinery Source Content 2019_1 ; 2019_1 >
-      au < zapped ; finished ; 2019 ; Association for Computing Machinery Source Content 2019_2 ; 2019_2 >
-      au < zapped ; finished ; 2019 ; Association for Computing Machinery Source Content 2019_3 ; 2019_3 >
-      au < zapped ; finished ; 2019 ; Association for Computing Machinery Source Content 2019_4 ; 2019_4 >
-      au < zapped ; finished ; 2019 ; Association for Computing Machinery Source Content 2019_5 ; 2019_5 >
-      au < zapped ; finished ; 2019 ; Association for Computing Machinery Source Content 2019_6 ; 2019_6 >
-      au < readySource ; crawling ; 2020 ; Association for Computing Machinery Source Content 2020_1 (Legacy) ; 2020_1 >
-      au < readySource ; crawling ; 2020 ; Association for Computing Machinery Source Content 2020_2 (Legacy) ; 2020_2 >
-      au < readySource ; crawling ; 2020 ; Association for Computing Machinery Source Content 2020_3 (Legacy) ; 2020_3 >
-
-
-     }
-
-     {
+    {
        plugin = org.lockss.plugin.associationforcomputingmachinery.ClockssACMJatsSourcePlugin
        param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/acmjats-released/
        hidden[proxy] = DIRECT
@@ -86,12 +40,56 @@
        au < readySource ; crawling ; 2021 ; Association for Computing Machinery Source Content 2021_02 ; 2021_02 >
 
        au < readySource ; crawling ; 2022 ; Association for Computing Machinery Source Content 2022_01 ; 2022_01 >
-       au < expected ; exists ; 2022 ; Association for Computing Machinery Source Content 2022_02 ; 2022_02 >
+       au < manifest ; exists ; 2022 ; Association for Computing Machinery Source Content 2022_02 ; 2022_02 >
        au < expected ; exists ; 2022 ; Association for Computing Machinery Source Content 2022_03 ; 2022_03 >
        au < expected ; exists ; 2022 ; Association for Computing Machinery Source Content 2022_04 ; 2022_04 >
 
+    }
 
-     }
+    {
+
+      plugin = org.lockss.plugin.associationforcomputingmachinery.ClockssAssociationForComputingMachinerySourcePlugin
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/acm-released/
+      hidden[proxy] = DIRECT
+      implicit < status ; status2 ; year ; name ; param[year] >
+
+      au < zapped ; finished ; 2010 ; Association for Computing Machinery Source Content 2010 ; 2010 >
+      au < zapped ; finished ; 2011 ; Association for Computing Machinery Source Content 2011 ; 2011 >
+      au < zapped ; finished ; 2012 ; Association for Computing Machinery Source Content 2012 ; 2012 >
+      au < zapped ; finished ; 2013 ; Association for Computing Machinery Source Content 2013 ; 2013 >
+      au < zapped ; finished ; 2014 ; Association for Computing Machinery Source Content 2014 ; 2014 >
+      au < zapped ; finished ; 2015 ; Association for Computing Machinery Source Content 2015 ; 2015 >
+      au < zapped ; finished ; 2016 ; Association for Computing Machinery Source Content 2016 ; 2016 >
+      au < zapped ; finished ; 2017 ; Association for Computing Machinery Source Content 2017 ; 2017 >
+      #no more AUs here.
+    }
+
+    {
+
+      plugin = org.lockss.plugin.associationforcomputingmachinery.ClockssACMDirSourcePlugin
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/acm-released/
+      hidden[proxy] = DIRECT
+      implicit < status ; status2 ; year ; name ; param[directory] >
+
+      au < zapped ; finished ; 2018 ; Association for Computing Machinery Source Content 2018_1 ; 2018_1 >
+      au < zapped ; finished ; 2018 ; Association for Computing Machinery Source Content 2018_2 ; 2018_2 >
+      au < zapped ; finished ; 2018 ; Association for Computing Machinery Source Content 2018_3 ; 2018_3 >
+      au < zapped ; finished ; 2018 ; Association for Computing Machinery Source Content 2018_4 ; 2018_4 >
+      au < zapped ; finished ; 2018 ; Association for Computing Machinery Source Content 2018_5 ; 2018_5 >
+      au < zapped ; finished ; 2018 ; Association for Computing Machinery Source Content 2018_6 ; 2018_6 >
+
+      au < zapped ; finished ; 2019 ; Association for Computing Machinery Source Content 2019_1 ; 2019_1 >
+      au < zapped ; finished ; 2019 ; Association for Computing Machinery Source Content 2019_2 ; 2019_2 >
+      au < zapped ; finished ; 2019 ; Association for Computing Machinery Source Content 2019_3 ; 2019_3 >
+      au < zapped ; finished ; 2019 ; Association for Computing Machinery Source Content 2019_4 ; 2019_4 >
+      au < zapped ; finished ; 2019 ; Association for Computing Machinery Source Content 2019_5 ; 2019_5 >
+      au < zapped ; finished ; 2019 ; Association for Computing Machinery Source Content 2019_6 ; 2019_6 >
+      au < readySource ; crawling ; 2020 ; Association for Computing Machinery Source Content 2020_1 (Legacy) ; 2020_1 >
+      au < readySource ; crawling ; 2020 ; Association for Computing Machinery Source Content 2020_2 (Legacy) ; 2020_2 >
+      au < readySource ; crawling ; 2020 ; Association for Computing Machinery Source Content 2020_3 (Legacy) ; 2020_3 >
+
+    }
+
   }
 
 }
