@@ -77,10 +77,12 @@ public class IsassJatsXmlMetadataExtractorFactory extends SourceXmlMetadataExtra
         ArticleMetadata oneAM) {
 
       String url_string = cu.getUrl();
-      String pdfName = url_string.substring(0,url_string.length() - 3) + "pdf";
-      log.debug3("pdfName is " + pdfName);
-      List<String> returnList = new ArrayList<String>();
+      String pdfName = url_string.replaceAll("xml", "pdf");
+      String pdfNameOld = url_string.substring(0,url_string.length() - 3) + "pdf";
+      log.debug3("trying pdfNames: " + pdfName + " " + pdfNameOld);
+      List<String> returnList = new ArrayList<>();
       returnList.add(pdfName);
+      returnList.add(pdfNameOld);
       return returnList;
     }
     
