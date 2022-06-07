@@ -33,6 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.medknow;
 
+import org.apache.cxf.ws.security.policy.model.RecipientEncryptionToken;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
@@ -89,6 +90,16 @@ public class MedknowHttpResponseHandler implements CacheResultHandler {
     if (ex instanceof javax.net.ssl.SSLHandshakeException) {
       logger.warning("Warning - SSLHandshakeException " + url);
       return new RetryableNetworkException_2_10S(ex);
+    }
+
+    if (ex instanceof javax.net.ssl.SSLException) {
+      if (au.getStartUrls().contains(url) ||
+          au.getPermissionUrls().contains(url)) {
+        logger.warning("Warning - Connection reset, ignoring for start and permission urls " + url);
+        // ignore and continue
+        return new CacheException.NoStoreWarningOnly("Encountered known SSLException. Ignoring.");
+      }
+      return new CacheException("Encountered unexpected url: " + url + " for SSLException: " + ex);
     }
     
     // we should only get in her cases that we specifically map...be very unhappy

@@ -306,6 +306,8 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>org.lockss.plugin.ContentValidationException=org.lockss.plugin.medknow.MedknowHttpResponseHandler</string>
       <!-- SSL Handshake -->
       <string>javax.net.ssl.SSLHandshakeException=org.lockss.plugin.medknow.MedknowHttpResponseHandler</string>
+      <!-- Connection Reset or Timeout -->
+      <string>javax.net.ssl.SSLException=org.lockss.plugin.medknow.MedknowHttpResponseHandler</string>
     </list>
   </entry>
   <entry>

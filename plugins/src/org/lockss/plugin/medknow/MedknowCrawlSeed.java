@@ -32,70 +32,13 @@ package org.lockss.plugin.medknow;
 
 import org.lockss.crawler.BaseCrawlSeed;
 import org.lockss.daemon.Crawler;
-import org.lockss.daemon.PluginException;
-import org.lockss.plugin.*;
-import org.lockss.util.Logger;
-import org.lockss.util.urlconn.CacheException;
-
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collection;
 
 public class MedknowCrawlSeed extends BaseCrawlSeed {
-
-  private static final Logger log = Logger.getLogger(MedknowCrawlSeed.class);
-
-  public boolean isFailOnStartUrlError() {
-    return false;
-  }
-  protected Crawler.CrawlerFacade facade;
+  @Override
+  public boolean isFailOnStartUrlError() { return false; }
 
   public MedknowCrawlSeed(Crawler.CrawlerFacade crawlerFacade) {
     super(crawlerFacade);
-    this.facade = crawlerFacade;
   }
 
-  @Override
-  public Collection<String> doGetStartUrls()
-      throws ArchivalUnit.ConfigurationException, PluginException, IOException {
-    Collection<String> startUrls = super.doGetStartUrls();
-    return checkUrls(startUrls);
-  }
-
-  @Override
-  public Collection<String> doGetPermissionUrls()
-      throws ArchivalUnit.ConfigurationException, PluginException, IOException {
-    Collection<String> permUrls = super.doGetPermissionUrls();
-    return checkUrls(permUrls);
-  }
-
-  private Collection<String> checkUrls(Collection<String> urls)
-      throws IOException {
-    Collection<String> okUrls = new ArrayList<>();
-    for (String url : urls) {
-      // Make a URL fetcher
-      UrlFetcher uf = facade.makeUrlFetcher(url);
-
-      UrlFetcher.FetchResult fr;
-      try {
-        fr = uf.fetch();
-      }
-      catch (CacheException ce) {
-        log.debug2("Stopping due to fatal CacheException", ce);
-        Throwable cause = ce.getCause();
-        if (cause != null && IOException.class.equals(cause.getClass())) {
-          throw (IOException)cause; // Unwrap IOException
-        }
-        else {
-          throw ce;
-        }
-      }
-      if (fr != UrlFetcher.FetchResult.NOT_FETCHED) {
-        facade.getCrawlerStatus().removePendingUrl(url);
-        facade.getCrawlerStatus().signalUrlFetched(url);
-        okUrls.add(url);
-      }
-    }
-    return okUrls;
-  }
 }
