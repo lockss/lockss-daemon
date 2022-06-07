@@ -14,7 +14,7 @@
     >
 
     plugin = org.lockss.plugin.clockss.chineseuniversityhongkong.ClockssChineseUniversityHongKongSourcePlugin
-    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/NEEDS-PLUGIN-released/
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/cuhk-released/
     hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[directory] >
 
