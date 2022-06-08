@@ -64,10 +64,10 @@
     param[journal_id] = futurehosp
     plugin = org.lockss.plugin.highwire.rcp.RcpOriginsPlugin
 
-    au < exists ; 2019 ; Future Hospital Journal Volume 6 ; 6 >
-    au < exists ; 2020 ; Future Hospital Journal Volume 7 ; 7 >
+    au < manifest ; 2019 ; Future Hospital Journal Volume 6 ; 6 >
+    au < manifest ; 2020 ; Future Hospital Journal Volume 7 ; 7 >
     au < released ; 2021 ; Future Hospital Journal Volume 8 ; 8 >
-    au < expected ; 2022 ; Future Hospital Journal Volume 9 ; 9 >
+    au < manifest ; 2022 ; Future Hospital Journal Volume 9 ; 9 >
     }
     {
     param[base_url] = http://futurehospital.rcpjournal.org/
