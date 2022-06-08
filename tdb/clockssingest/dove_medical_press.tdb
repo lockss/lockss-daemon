@@ -274,7 +274,7 @@
     au < finished ; crawling ; 2018 ; Clinical Ophthalmology Volume 12 ; 12 ; 2018 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; Clinical Ophthalmology Volume 13 ; 13 ; 2019 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2020 ; Clinical Ophthalmology Volume 14 ; 14 ; 2020 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2021 ; Clinical Ophthalmology Volume 15 ; 15 ; 2021 ; >
+    au < frozen ; exists ; 2021 ; Clinical Ophthalmology Volume 15 ; 15 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Clinical Ophthalmology Volume 16 ; 16 ; 2022 ; >
 
   }
@@ -301,7 +301,7 @@
     au < finished ; crawling ; 2018 ; Nanotechnology, Science and Applications Volume 11 ; 11 ; 2018 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; Nanotechnology, Science and Applications Volume 12 ; 12 ; 2019 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2020 ; Nanotechnology, Science and Applications Volume 13 ; 13 ; 2020 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2021 ; Nanotechnology, Science and Applications Volume 14 ; 14 ; 2021 ; >
+    au < frozen ; exists ; 2021 ; Nanotechnology, Science and Applications Volume 14 ; 14 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Nanotechnology, Science and Applications Volume 15 ; 15 ; 2022 ; >
 
   }
@@ -329,7 +329,7 @@
     au < finished ; crawling ; 2018 ; Drug Design, Development and Therapy Volume 12 ; 12 ; 2018 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; Drug Design, Development and Therapy Volume 13 ; 13 ; 2019 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2020 ; Drug Design, Development and Therapy Volume 14 ; 14 ; 2020 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2021 ; Drug Design, Development and Therapy Volume 15 ; 15 ; 2021 ; >
+    au < frozen ; exists ; 2021 ; Drug Design, Development and Therapy Volume 15 ; 15 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Drug Design, Development and Therapy Volume 16 ; 16 ; 2022 ; >
 
   }
@@ -384,7 +384,7 @@
     au < finished ; crawling ; 2018 ; OncoTargets and Therapy Volume 11 ; 11 ; 2018 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; OncoTargets and Therapy Volume 12 ; 12 ; 2019 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; OncoTargets and Therapy Volume 13 ; 13 ; 2020 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2021 ; OncoTargets and Therapy Volume 14 ; 14 ; 2021 ; >
+    au < frozen ; exists ; 2021 ; OncoTargets and Therapy Volume 14 ; 14 ; 2021 ; >
     au < manifest ; exists ; 2022 ; OncoTargets and Therapy Volume 15 ; 15 ; 2022 ; >
 
   }
@@ -411,7 +411,7 @@
     au < finished ; crawling ; 2018 ; Medical Devices: Evidence and Research Volume 11 ; 11 ; 2018 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; Medical Devices: Evidence and Research Volume 12 ; 12 ; 2019 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2020 ; Medical Devices: Evidence and Research Volume 13 ; 13 ; 2020 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2021 ; Medical Devices: Evidence and Research Volume 14 ; 14 ; 2021 ; >
+    au < frozen ; exists ; 2021 ; Medical Devices: Evidence and Research Volume 14 ; 14 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Medical Devices: Evidence and Research Volume 15 ; 15 ; 2022 ; >
 
   }
@@ -460,7 +460,7 @@
     au < finished ; crawling ; 2018 ; Stem Cells and Cloning: Advances and Applications Volume 11 ; 11 ; 2018 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; Stem Cells and Cloning: Advances and Applications Volume 12 ; 12 ; 2019 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Stem Cells and Cloning: Advances and Applications Volume 13 ; 13 ; 2020 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2021 ; Stem Cells and Cloning: Advances and Applications Volume 14 ; 14 ; 2021 ; >
+    au < frozen ; exists ; 2021 ; Stem Cells and Cloning: Advances and Applications Volume 14 ; 14 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Stem Cells and Cloning: Advances and Applications Volume 15 ; 15 ; 2022 ; >
 
   }
@@ -487,7 +487,7 @@
     au < finished ; crawling ; 2018 ; Journal of Asthma and Allergy Volume 11 ; 11 ; 2018 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; Journal of Asthma and Allergy Volume 12 ; 12 ; 2019 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2020 ; Journal of Asthma and Allergy Volume 13 ; 13 ; 2020 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2021 ; Journal of Asthma and Allergy Volume 14 ; 14 ; 2021 ; >
+    au < frozen ; exists ; 2021 ; Journal of Asthma and Allergy Volume 14 ; 14 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Journal of Asthma and Allergy Volume 15 ; 15 ; 2022 ; >
 
   }
@@ -514,7 +514,7 @@
     au < finished ; crawling ; 2018 ; Infection and Drug Resistance Volume 11 ; 11 ; 2018 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; Infection and Drug Resistance Volume 12 ; 12 ; 2019 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Infection and Drug Resistance Volume 13 ; 13 ; 2020 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2021 ; Infection and Drug Resistance Volume 14 ; 14 ; 2021 ; >
+    au < frozen ; exists ; 2021 ; Infection and Drug Resistance Volume 14 ; 14 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Infection and Drug Resistance Volume 15 ; 15 ; 2022 ; >
 
   }
@@ -540,7 +540,7 @@
     au < finished ; crawling ; 2018 ; ClinicoEconomics and Outcomes Research Volume 10 ; 10 ; 2018 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; ClinicoEconomics and Outcomes Research Volume 11 ; 11 ; 2019 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2020 ; ClinicoEconomics and Outcomes Research Volume 12 ; 12 ; 2020 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2021 ; ClinicoEconomics and Outcomes Research Volume 13 ; 13 ; 2021 ; >
+    au < frozen ; exists ; 2021 ; ClinicoEconomics and Outcomes Research Volume 13 ; 13 ; 2021 ; >
     au < manifest ; exists ; 2022 ; ClinicoEconomics and Outcomes Research Volume 14 ; 14 ; 2022 ; >
 
   }
@@ -589,7 +589,7 @@
     au < finished ; crawling ; 2018 ; Local and Regional Anesthesia Volume 11 ; 11 ; 2018 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; Local and Regional Anesthesia Volume 12 ; 12 ; 2019 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Local and Regional Anesthesia Volume 13 ; 13 ; 2020 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2021 ; Local and Regional Anesthesia Volume 14 ; 14 ; 2021 ; >
+    au < frozen ; exists ; 2021 ; Local and Regional Anesthesia Volume 14 ; 14 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Local and Regional Anesthesia Volume 15 ; 15 ; 2022 ; >
 
   }
