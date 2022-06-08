@@ -99,7 +99,7 @@
       au < manifest ; 2012 ; 2012 ; B Sides Volume 2012 ; 2012 >
       au < manifest ; 2013 ; 2013 ; B Sides Volume 2013 ; 2013 >
       au < manifest ; 2014 ; 2014 ; B Sides Volume 2014 ; 2014 >
-      au < exists ; 2015 ; 2015 ; B Sides Volume 2015 ; 2015 >
+      au < manifest ; 2015 ; 2015 ; B Sides Volume 2015 ; 2015 >
 
     }
     
@@ -141,7 +141,7 @@
       au < doNotProcess ; 2017 ; 2017 ; Dada/Surrealism Volume 21 ; 21 >
       au < doNotProcess ; 2018 ; 2018 ; Dada/Surrealism Volume 22 ; 22 >
       au < exists ; 2019 ; 2019 ; Dada/Surrealism Volume 23 ; 23 >
-      au < exists ; 2020 ; 2020 ; Dada/Surrealism Volume 24 ; 24 >
+      au < manifest ; 2020 ; 2020 ; Dada/Surrealism Volume 24 ; 24 >
 
     }
     
@@ -220,9 +220,9 @@
       au < exists ; 1921 ; 1921 ; Iowa Geological Survey Annual Report Volume 29 ; 29 >
       au < exists ; 1923 ; 1923 ; Iowa Geological Survey Annual Report Volume 30 ; 30 >
       au < exists ; 1925 ; 1925 ; Iowa Geological Survey Annual Report Volume 31 ; 31 >
-      au < exists ; 1927 ; 1927 ; Iowa Geological Survey Annual Report Volume 32 ; 32 >
-      au < exists ; 1928 ; 1928 ; Iowa Geological Survey Annual Report Volume 33 ; 33 >
-      au < exists ; 1929 ; 1929 ; Iowa Geological Survey Annual Report Volume 34 ; 34 >
+      au < manifest ; 1927 ; 1927 ; Iowa Geological Survey Annual Report Volume 32 ; 32 >
+      au < manifest ; 1928 ; 1928 ; Iowa Geological Survey Annual Report Volume 33 ; 33 >
+      au < manifest ; 1929 ; 1929 ; Iowa Geological Survey Annual Report Volume 34 ; 34 >
       au < exists ; 1930 ; 1930 ; Iowa Geological Survey Annual Report Volume 35 ; 35 >
       au < exists ; 1934 ; 1934 ; Iowa Geological Survey Annual Report Volume 36 ; 36 >
       au < exists ; 1940 ; 1940 ; Iowa Geological Survey Annual Report Volume 37 ; 37 >
@@ -251,7 +251,7 @@
       au < doNotProcess ; 2015 ; 2015 ; Iowa Historical Review Volume 5 ; 5 >
       au < doNotProcess ; 2016 ; 2016 ; Iowa Historical Review Volume 6 ; 6 >
       au < doNotProcess ; 2017 ; 2017 ; Iowa Historical Review Volume 7 ; 7 >
-      au < exists ; 2020 ; 2020 ; Iowa Historical Review Volume 8 ; 8 >
+      au < manifest ; 2020 ; 2020 ; Iowa Historical Review Volume 8 ; 8 >
 
     }
     
@@ -299,7 +299,7 @@
       au < doNotProcess ; 2018 ; 2018 ; Iowa Journal of Cultural Studies Volume 18 ; 18 >
       au < doNotProcess ; 2019 ; 2019 ; Iowa Journal of Cultural Studies Volume 19 ; 19 >
       au < doNotProcess ; 2020 ; 2020 ; Iowa Journal of Cultural Studies Volume 20 ; 20 >
-      au < exists ; 2021 ; 2021 ; Iowa Journal of Cultural Studies Volume 21 ; 21 >
+      au < manifest ; 2021 ; 2021 ; Iowa Journal of Cultural Studies Volume 21 ; 21 >
       au < exists ; 2022 ; 2022 ; Iowa Journal of Cultural Studies Volume 22 ; 22 >
 
     }
@@ -382,7 +382,7 @@
       au < doNotProcess ; 2017 ; 2017 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2017 ; 2017 >
       au < doNotProcess ; 2018 ; 2018 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2018 ; 2018 >
       au < doNotProcess ; 2019 ; 2019 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2019 ; 2019 >
-      au < exists ; 2021 ; 2021 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2021 ; 2021 >
+      au < manifest ; 2021 ; 2021 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2021 ; 2021 >
       au < exists ; 2022 ; 2022 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2022 ; 2022 >
 
     }
@@ -416,8 +416,8 @@
       au < doNotProcess ; 2017 ; 2017 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 13 ; 13 >
       au < doNotProcess ; 2018 ; 2018 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 14 ; 14 >
       au < doNotProcess ; 2020 ; 2020 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 15 ; 15 >
-      au < exists ; 2021 ; 2021 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 16 ; 16 >
-      au < exists ; 2022 ; 2022 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 17 ; 17 >
+      au < manifest ; 2021 ; 2021 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 16 ; 16 >
+      au < manifest ; 2022 ; 2022 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 17 ; 17 >
 
     }
     
@@ -445,8 +445,8 @@
       au < doNotProcess ; 2018 ; 2018 ; Proceedings in Obstetrics and Gynecology Volume 8 ; 8 >
       au < doNotProcess ; 2019 ; 2019 ; Proceedings in Obstetrics and Gynecology Volume 9 ; 9 >
       au < doNotProcess ; 2020 ; 2020 ; Proceedings in Obstetrics and Gynecology Volume 10 ; 10 >
-      au < exists ; 2021 ; 2021 ; Proceedings in Obstetrics and Gynecology Volume 11 ; 11 >
-      au < exists ; 2022 ; 2022 ; Proceedings in Obstetrics and Gynecology Volume 12 ; 12 >
+      au < manifest ; 2021 ; 2021 ; Proceedings in Obstetrics and Gynecology Volume 11 ; 11 >
+      au < manifest ; 2022 ; 2022 ; Proceedings in Obstetrics and Gynecology Volume 12 ; 12 >
 
     }
     
@@ -502,9 +502,9 @@
       au < doNotProcess ; 2017 ; 2017 ; Walt Whitman Quarterly Review Volume 35 ; 35 >
       au < doNotProcess ; 2018 ; 2018 ; Walt Whitman Quarterly Review Volume 36 ; 36 >
       au < doNotProcess ; 2019 ; 2019 ; Walt Whitman Quarterly Review Volume 37 ; 37 >
-      au < exists ; 2020 ; 2020 ; Walt Whitman Quarterly Review Volume 38 ; 38 >
-      au < exists ; 2021 ; 2021 ; Walt Whitman Quarterly Review Volume 39 ; 39 >
-      au < exists ; 2022 ; 2022 ; Walt Whitman Quarterly Review Volume 40 ; 40 >
+      au < manifest ; 2020 ; 2020 ; Walt Whitman Quarterly Review Volume 38 ; 38 >
+      au < manifest ; 2021 ; 2021 ; Walt Whitman Quarterly Review Volume 39 ; 39 >
+      au < manifest ; 2022 ; 2022 ; Walt Whitman Quarterly Review Volume 40 ; 40 >
 
     }
     
