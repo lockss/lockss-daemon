@@ -585,7 +585,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; AORTA Volume 7 ; 7 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; AORTA Volume 8 ; 8 ; >
     au < crawling ; exists ; 2021 ; 2021 ; AORTA Volume 9 ; 9 ; >
-    au < expected ; exists ; 2022 ; 2022 ; AORTA Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2022 ; 2022 ; AORTA Volume 10 ; 10 ; >
 
    }
 
@@ -7722,7 +7722,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; Journal of Cardiac Critical Care TSS Volume 3 ; 3 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Cardiac Critical Care TSS Volume 4 ; 4 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Journal of Cardiac Critical Care TSS Volume 5 ; 5 ; >
-    au < expected ; exists ; 2022 ; 2022 ; Journal of Cardiac Critical Care TSS Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2022 ; 2022 ; Journal of Cardiac Critical Care TSS Volume 6 ; 6 ; >
 
   }
 
@@ -8754,7 +8754,7 @@
     au < crawling ; exists ; 2019 ; 2019 ; Journal of Neuroanaesthesiology and Critical Care Volume 6 ; 6 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Journal of Neuroanaesthesiology and Critical Care Volume 7 ; 7 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Journal of Neuroanaesthesiology and Critical Care Volume 8 ; 8 ; >
-    au < expected ; exists ; 2022 ; 2022 ; Journal of Neuroanaesthesiology and Critical Care Volume 9 ; 9 ; >
+    au < manifest ; exists ; 2022 ; 2022 ; Journal of Neuroanaesthesiology and Critical Care Volume 9 ; 9 ; >
 
   }
 

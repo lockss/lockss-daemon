@@ -8375,7 +8375,7 @@
       au < finished ; crawling ; 2019 ; Sahel Medical Journal Volume 22 ; 2019 ; 22 ; https://www.smjonline.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Sahel Medical Journal Volume 23 ; 2020 ; 23 ; https://www.smjonline.org/ ; ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Sahel Medical Journal Volume 24 ; 2021 ; 24 ; https://www.smjonline.org/ ; ; >
-      au < expected ; exists ; 2022 ; Sahel Medical Journal Volume 25 ; 2022 ; 25 ; https://www.smjonline.org/ ; ; >
+      au < manifest ; exists ; 2022 ; Sahel Medical Journal Volume 25 ; 2022 ; 25 ; https://www.smjonline.org/ ; ; >
 
   }
 
@@ -8803,7 +8803,7 @@
       au < finished ; crawling ; 2019 ; The Egyptian Orthopaedic Journal Volume 54 ; 2019 ; 54 ; https://www.eoj.eg.net/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; The Egyptian Orthopaedic Journal Volume 55 ; 2020 ; 55 ; https://www.eoj.eg.net/ ; ; reingest4.clockss.org:8082 >
       au < notReady ; exists ; 2021 ; The Egyptian Orthopaedic Journal Volume 56 ; 2021 ; 56 ; https://www.eoj.eg.net/ ; ; > #site cert failed
-      au < expected ; exists ; 2022 ; The Egyptian Orthopaedic Journal Volume 57 ; 2022 ; 57 ; https://www.eoj.eg.net/ ; ; > #site cert failed
+      au < manifest ; exists ; 2022 ; The Egyptian Orthopaedic Journal Volume 57 ; 2022 ; 57 ; https://www.eoj.eg.net/ ; ; > #site cert failed
 
   }
 
@@ -10223,7 +10223,7 @@
       au < finished ; crawling ; 2019 ; Intervention Volume 17 ; 2019 ; 17 ; https://www.interventionjournal.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Intervention Volume 18 ; 2020 ; 18 ; https://www.interventionjournal.org/ ; ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Intervention Volume 19 ; 2021 ; 19 ; https://www.interventionjournal.org/ ; ; >
-      au < expected ; exists ; 2022 ; Intervention Volume 20 ; 2022 ; 20 ; https://www.interventionjournal.org/ ; ; >
+      au < manifest ; exists ; 2022 ; Intervention Volume 20 ; 2022 ; 20 ; https://www.interventionjournal.org/ ; ; >
 
   }
 
@@ -11080,7 +11080,7 @@
       au < finished ; crawling ; 2019 ; Saudi Critical Care Journal Volume 3 ; 2019 ; 3 ; https://www.sccj-sa.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Saudi Critical Care Journal Volume 4 ; 2020 ; 4 ; https://www.sccj-sa.org/ ; ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; Saudi Critical Care Journal Volume 5 ; 2021 ; 5 ; https://www.sccj-sa.org/ ; ; >
-      au < expected ; exists ; 2022 ; Saudi Critical Care Journal Volume 6 ; 2022 ; 6 ; https://www.sccj-sa.org/ ; ; >
+      au < manifest ; exists ; 2022 ; Saudi Critical Care Journal Volume 6 ; 2022 ; 6 ; https://www.sccj-sa.org/ ; ; >
 
   }
 
@@ -11100,7 +11100,7 @@
       au < finished ; crawling ; 2019 ; Scientific Journal of Al-Azhar Medical Faculty, Girls Volume 3 ; 2019 ; 3 ; https://www.sjamf.eg.net/ ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Scientific Journal of Al-Azhar Medical Faculty, Girls Volume 4 ; 2020 ; 4 ; https://www.sjamf.eg.net/ ; ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Scientific Journal of Al-Azhar Medical Faculty, Girls Volume 5 ; 2021 ; 5 ; https://www.sjamf.eg.net/ ; ; >
-      au < expected ; exists ; 2022 ; Scientific Journal of Al-Azhar Medical Faculty, Girls Volume 6 ; 2022 ; 6 ; https://www.sjamf.eg.net/ ; ; >
+      au < manifest ; exists ; 2022 ; Scientific Journal of Al-Azhar Medical Faculty, Girls Volume 6 ; 2022 ; 6 ; https://www.sjamf.eg.net/ ; ; >
 
   }
 
