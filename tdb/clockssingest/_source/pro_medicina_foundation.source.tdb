@@ -14,11 +14,11 @@
     >
 
     plugin = org.lockss.plugin.clockss.promedicina.ClockssProMedicinaDirSourcePlugin
-    param[base_url] = https://clockss-test.lockss.org/sourcefiles/promed-released/
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/promed-released/
     hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[directory] >
 
-    au < testing ; testing ; 2022 ; Pro Medicina Foundation Source Content 2022 ; 2022_01 >
+    au < expected ; exists ; 2022 ; Pro Medicina Foundation Source Content 2022 ; 2022_01 >
 
   }
 

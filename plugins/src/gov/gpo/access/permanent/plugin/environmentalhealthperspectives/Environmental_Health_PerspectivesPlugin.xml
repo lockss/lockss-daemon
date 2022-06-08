@@ -1,7 +1,6 @@
 <!--
 
 Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
-All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -41,11 +40,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Environmental Health Perspectives Plugin</string>
+    <string>Environmental Health Perspectives Journal Plugin (Legacy)</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -72,7 +71,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Environmental Health Perspectives Plugin, Base URL %s, Year %d", base_url, year</string>
+    <string>"Environmental Health Perspectives Journal Plugin (Legacy), Base URL %s, Year %d", base_url, year</string>
   </entry>
   <entry>
     <string>au_start_url</string>

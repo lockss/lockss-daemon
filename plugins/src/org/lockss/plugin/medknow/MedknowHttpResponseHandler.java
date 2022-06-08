@@ -1,7 +1,6 @@
 /*
 
-Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
-All rights reserved.
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -33,7 +32,6 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.medknow;
 
-import org.apache.cxf.ws.security.policy.model.RecipientEncryptionToken;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
