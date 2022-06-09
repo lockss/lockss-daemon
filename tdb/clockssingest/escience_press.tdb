@@ -1,0 +1,30 @@
+{
+
+  publisher <
+    name = EScience Press ;
+    info[contract] = 2015 ;
+    info[tester] = 5 ;
+    info[poller] = 8
+  >
+  provider = bepress
+  
+  # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
+
+  {
+  
+    title <
+      name = Journal of STEPS for Humanities and Social Sciences ;
+      eissn = 2790-4237 ;
+      issnl = 2790-4237
+    >
+    
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
+    param[base_url] = https://www.steps-journal.com/
+    param[journal_abbr] = jshss
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+
+    au < manifest ; exists ; 2022 ; Journal of STEPS for Humanities and Social Sciences Volume 1 ; 1 ; >
+
+  }
+
+}
