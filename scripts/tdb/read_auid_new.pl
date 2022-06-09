@@ -3209,11 +3209,12 @@ while (my $line = <>) {
     sleep(4);
     
   #Silverchair GLN. Includes year/volume_name. Common Theme
-  } elsif (($plugin eq "RockefellerUniversityPressSilverchairPlugin") || 
-           ($plugin eq "UCPressSilverchairPlugin") || 
+  } elsif (($plugin eq "AAPSilverchairPlugin") || 
+           ($plugin eq "AmericanDiabetesAssociationSilverchairPlugin") || 
            ($plugin eq "CompanyBiologistsSilverchairPlugin") || 
-           ($plugin eq "AAPSilverchairPlugin") || 
-           ($plugin eq "PortlandPressSilverchairPlugin")) {
+           ($plugin eq "PortlandPressSilverchairPlugin") || 
+           ($plugin eq "RockefellerUniversityPressSilverchairPlugin") || 
+           ($plugin eq "UCPressSilverchairPlugin")) {
     $url = sprintf("%s%s/issue/browse-by-year/%d",
       $param{base_url}, $param{journal_id}, $param{year});
     $man_url = uri_unescape($url);
@@ -3245,6 +3246,7 @@ while (my $line = <>) {
   } elsif (($plugin eq "ClockssRockefellerUniversityPressSilverchairPlugin") || 
            ($plugin eq "ClockssCompanyBiologistsSilverchairPlugin") || 
            ($plugin eq "ClockssAAPSilverchairPlugin") || 
+           ($plugin eq "ClockssAmericanDiabetesAssociationSilverchairPlugin") || 
            ($plugin eq "ClockssPortlandPressSilverchairPlugin")) { 
     $url = sprintf("%s%s/issue/browse-by-year/%d",
       $param{base_url}, $param{journal_id}, $param{year});
