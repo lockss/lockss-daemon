@@ -1403,15 +1403,15 @@
     param[journal_issn] = 1065-0741
     comment[journal_id] = cwis
 
-    au < exists ; 1984 ; Library Workstation Report Volume 1 ; 1 >
-    au < exists ; 1985 ; Library Workstation Report Volume 2 ; 2 >
-    au < exists ; 1986 ; Library Workstation Report Volume 3 ; 3 >
-    au < exists ; 1987 ; Library Workstation Report Volume 4 ; 4 >
-    au < exists ; 1988 ; Library Workstation Report Volume 5 ; 5 >
-    au < exists ; 1989 ; Library Workstation Report Volume 6 ; 6 >
-    au < exists ; 1990 ; Library Workstation Report Volume 7 ; 7 >
-    au < exists ; 1991 ; Academic and Library Computing Volume 8 ; 8 >
-    au < exists ; 1992 ; Academic and Library Computing Volume 9 ; 9 >
+    #au < exists ; 1984 ; Library Workstation Report Volume 1 ; 1 >
+    #au < exists ; 1985 ; Library Workstation Report Volume 2 ; 2 >
+    #au < exists ; 1986 ; Library Workstation Report Volume 3 ; 3 >
+    #au < exists ; 1987 ; Library Workstation Report Volume 4 ; 4 >
+    #au < exists ; 1988 ; Library Workstation Report Volume 5 ; 5 >
+    #au < exists ; 1989 ; Library Workstation Report Volume 6 ; 6 >
+    #au < exists ; 1990 ; Library Workstation Report Volume 7 ; 7 >
+    #au < exists ; 1991 ; Academic and Library Computing Volume 8 ; 8 >
+    #au < exists ; 1992 ; Academic and Library Computing Volume 9 ; 9 >
     au < manifest ; 1993 ; Campus-Wide Information Systems Volume 10 ; 10 >
     au < manifest ; 1994 ; Campus-Wide Information Systems Volume 11 ; 11 >
     au < manifest ; 1995 ; Campus-Wide Information Systems Volume 12 ; 12 >
@@ -3569,57 +3569,57 @@
       issnl = 0143-991X
     >
 
-    param[journal_issn] = 0143-991X
+    param[journal_issn] = 0143-991x
     comment[journal_id] = ir
 
-    au < exists ; 1973-1974 ; Industrial Robot: The international journal of industrial and service robotics Volume 1 ; 1 >
-    au < exists ; 1975 ; Industrial Robot: The international journal of industrial and service robotics Volume 2 ; 2 >
-    au < exists ; 1976 ; Industrial Robot: The international journal of industrial and service robotics Volume 3 ; 3 >
-    au < exists ; 1977 ; Industrial Robot: The international journal of industrial and service robotics Volume 4 ; 4 >
-    au < exists ; 1978 ; Industrial Robot: The international journal of industrial and service robotics Volume 5 ; 5 >
-    au < exists ; 1979 ; Industrial Robot: The international journal of industrial and service robotics Volume 6 ; 6 >
-    au < exists ; 1980 ; Industrial Robot: The international journal of industrial and service robotics Volume 7 ; 7 >
-    au < exists ; 1981 ; Industrial Robot: The international journal of industrial and service robotics Volume 8 ; 8 >
-    au < exists ; 1982 ; Industrial Robot: The international journal of industrial and service robotics Volume 9 ; 9 >
-    au < exists ; 1983 ; Industrial Robot: The international journal of industrial and service robotics Volume 10 ; 10 >
-    au < exists ; 1984 ; Industrial Robot: The international journal of industrial and service robotics Volume 11 ; 11 >
-    au < exists ; 1985 ; Industrial Robot: The international journal of industrial and service robotics Volume 12 ; 12 >
-    au < exists ; 1986 ; Industrial Robot: The international journal of industrial and service robotics Volume 13 ; 13 >
-    au < exists ; 1987 ; Industrial Robot: The international journal of industrial and service robotics Volume 14 ; 14 >
-    au < exists ; 1988 ; Industrial Robot: The international journal of industrial and service robotics Volume 15 ; 15 >
-    au < exists ; 1989 ; Industrial Robot: The international journal of industrial and service robotics Volume 16 ; 16 >
-    au < exists ; 1990 ; Industrial Robot: The international journal of industrial and service robotics Volume 17 ; 17 >
-    au < exists ; 1991 ; Industrial Robot: The international journal of industrial and service robotics Volume 18 ; 18 >
+    au < manifest ; 1973-1974 ; Industrial Robot: The international journal of industrial and service robotics Volume 1 ; 1 >
+    au < manifest ; 1975 ; Industrial Robot: The international journal of industrial and service robotics Volume 2 ; 2 >
+    au < manifest ; 1976 ; Industrial Robot: The international journal of industrial and service robotics Volume 3 ; 3 >
+    au < manifest ; 1977 ; Industrial Robot: The international journal of industrial and service robotics Volume 4 ; 4 >
+    au < manifest ; 1978 ; Industrial Robot: The international journal of industrial and service robotics Volume 5 ; 5 >
+    au < manifest ; 1979 ; Industrial Robot: The international journal of industrial and service robotics Volume 6 ; 6 >
+    au < manifest ; 1980 ; Industrial Robot: The international journal of industrial and service robotics Volume 7 ; 7 >
+    au < manifest ; 1981 ; Industrial Robot: The international journal of industrial and service robotics Volume 8 ; 8 >
+    au < manifest ; 1982 ; Industrial Robot: The international journal of industrial and service robotics Volume 9 ; 9 >
+    au < manifest ; 1983 ; Industrial Robot: The international journal of industrial and service robotics Volume 10 ; 10 >
+    au < manifest ; 1984 ; Industrial Robot: The international journal of industrial and service robotics Volume 11 ; 11 >
+    au < manifest ; 1985 ; Industrial Robot: The international journal of industrial and service robotics Volume 12 ; 12 >
+    au < manifest ; 1986 ; Industrial Robot: The international journal of industrial and service robotics Volume 13 ; 13 >
+    au < manifest ; 1987 ; Industrial Robot: The international journal of industrial and service robotics Volume 14 ; 14 >
+    au < manifest ; 1988 ; Industrial Robot: The international journal of industrial and service robotics Volume 15 ; 15 >
+    au < manifest ; 1989 ; Industrial Robot: The international journal of industrial and service robotics Volume 16 ; 16 >
+    au < manifest ; 1990 ; Industrial Robot: The international journal of industrial and service robotics Volume 17 ; 17 >
+    au < manifest ; 1991 ; Industrial Robot: The international journal of industrial and service robotics Volume 18 ; 18 >
     au < doesNotExist ; 1992 ; Industrial Robot: The international journal of industrial and service robotics Volume 19 ; 19 >
-    au < exists ; 1993 ; Industrial Robot: The international journal of industrial and service robotics Volume 20 ; 20 >
-    au < exists ; 1994 ; Industrial Robot: The international journal of industrial and service robotics Volume 21 ; 21 >
-    au < exists ; 1995 ; Industrial Robot: The international journal of industrial and service robotics Volume 22 ; 22 >
-    au < exists ; 1996 ; Industrial Robot: The international journal of industrial and service robotics Volume 23 ; 23 >
-    au < exists ; 1997 ; Industrial Robot: The international journal of industrial and service robotics Volume 24 ; 24 >
-    au < exists ; 1998 ; Industrial Robot: The international journal of industrial and service robotics Volume 25 ; 25 >
-    au < exists ; 1999 ; Industrial Robot: The international journal of industrial and service robotics Volume 26 ; 26 >
-    au < exists ; 2000 ; Industrial Robot: The international journal of industrial and service robotics Volume 27 ; 27 >
-    au < exists ; 2001 ; Industrial Robot: The international journal of industrial and service robotics Volume 28 ; 28 >
-    au < exists ; 2002 ; Industrial Robot: The international journal of industrial and service robotics Volume 29 ; 29 >
-    au < exists ; 2003 ; Industrial Robot: The international journal of industrial and service robotics Volume 30 ; 30 >
-    au < exists ; 2004 ; Industrial Robot: The international journal of industrial and service robotics Volume 31 ; 31 >
-    au < exists ; 2005 ; Industrial Robot: The international journal of industrial and service robotics Volume 32 ; 32 >
-    au < exists ; 2006 ; Industrial Robot: The international journal of industrial and service robotics Volume 33 ; 33 >
-    au < exists ; 2007 ; Industrial Robot: The international journal of industrial and service robotics Volume 34 ; 34 >
-    au < exists ; 2008 ; Industrial Robot: The international journal of industrial and service robotics Volume 35 ; 35 >
-    au < exists ; 2009 ; Industrial Robot: The international journal of industrial and service robotics Volume 36 ; 36 >
-    au < exists ; 2010 ; Industrial Robot: The international journal of industrial and service robotics Volume 37 ; 37 >
-    au < exists ; 2010-2011 ; Industrial Robot: The international journal of industrial and service robotics Volume 38 ; 38 >
-    au < exists ; 2012 ; Industrial Robot: The international journal of industrial and service robotics Volume 39 ; 39 >
+    au < manifest ; 1993 ; Industrial Robot: The international journal of industrial and service robotics Volume 20 ; 20 >
+    au < manifest ; 1994 ; Industrial Robot: The international journal of industrial and service robotics Volume 21 ; 21 >
+    au < manifest ; 1995 ; Industrial Robot: The international journal of industrial and service robotics Volume 22 ; 22 >
+    au < manifest ; 1996 ; Industrial Robot: The international journal of industrial and service robotics Volume 23 ; 23 >
+    au < manifest ; 1997 ; Industrial Robot: The international journal of industrial and service robotics Volume 24 ; 24 >
+    au < manifest ; 1998 ; Industrial Robot: The international journal of industrial and service robotics Volume 25 ; 25 >
+    au < manifest ; 1999 ; Industrial Robot: The international journal of industrial and service robotics Volume 26 ; 26 >
+    au < manifest ; 2000 ; Industrial Robot: The international journal of industrial and service robotics Volume 27 ; 27 >
+    au < manifest ; 2001 ; Industrial Robot: The international journal of industrial and service robotics Volume 28 ; 28 >
+    au < manifest ; 2002 ; Industrial Robot: The international journal of industrial and service robotics Volume 29 ; 29 >
+    au < manifest ; 2003 ; Industrial Robot: The international journal of industrial and service robotics Volume 30 ; 30 >
+    au < manifest ; 2004 ; Industrial Robot: The international journal of industrial and service robotics Volume 31 ; 31 >
+    au < manifest ; 2005 ; Industrial Robot: The international journal of industrial and service robotics Volume 32 ; 32 >
+    au < manifest ; 2006 ; Industrial Robot: The international journal of industrial and service robotics Volume 33 ; 33 >
+    au < manifest ; 2007 ; Industrial Robot: The international journal of industrial and service robotics Volume 34 ; 34 >
+    au < manifest ; 2008 ; Industrial Robot: The international journal of industrial and service robotics Volume 35 ; 35 >
+    au < manifest ; 2009 ; Industrial Robot: The international journal of industrial and service robotics Volume 36 ; 36 >
+    au < manifest ; 2010 ; Industrial Robot: The international journal of industrial and service robotics Volume 37 ; 37 >
+    au < manifest ; 2010-2011 ; Industrial Robot: The international journal of industrial and service robotics Volume 38 ; 38 >
+    au < manifest ; 2012 ; Industrial Robot: The international journal of industrial and service robotics Volume 39 ; 39 >
     au < doNotProcess ; 2013 ; Industrial Robot: The international journal of industrial and service robotics Volume 40 ; 40 >
     au < doNotProcess ; 2014 ; Industrial Robot: The international journal of industrial and service robotics Volume 41 ; 41 >
     au < doNotProcess ; 2015 ; Industrial Robot: The international journal of industrial and service robotics Volume 42 ; 42 >
     au < doNotProcess ; 2016 ; Industrial Robot: The international journal of industrial and service robotics Volume 43 ; 43 >
     au < doNotProcess ; 2017 ; Industrial Robot: The international journal of industrial and service robotics Volume 44 ; 44 >
-    au < exists ; 2018 ; Industrial Robot: The international journal of industrial and service robotics Volume 45 ; 45 >
-    au < exists ; 2019 ; Industrial Robot: The international journal of industrial and service robotics Volume 46 ; 46 >
-    au < exists ; 2020 ; Industrial Robot: The international journal of industrial and service robotics Volume 47 ; 47 >
-    au < exists ; 2021 ; Industrial Robot: The international journal of industrial and service robotics Volume 48 ; 48 >
+    au < manifest ; 2018 ; Industrial Robot: The international journal of industrial and service robotics Volume 45 ; 45 >
+    au < manifest ; 2019 ; Industrial Robot: The international journal of industrial and service robotics Volume 46 ; 46 >
+    au < manifest ; 2020 ; Industrial Robot: The international journal of industrial and service robotics Volume 47 ; 47 >
+    au < manifest ; 2021 ; Industrial Robot: The international journal of industrial and service robotics Volume 48 ; 48 >
     au < expected ; 2022 ; Industrial Robot: The international journal of industrial and service robotics Volume 49 ; 49 >
 
   }
@@ -3887,19 +3887,19 @@
   {
     title <
       name = International Journal for Researcher Development ;
-      issn = 1759-751X ;
-      issnl = 1759-751X
+      issn = 2048-8696 ;
+      issnl = 2048-8696
     >
 
-    param[journal_issn] = 1759-751X
+    param[journal_issn] = 2048-8696
     comment[journal_id] = ijrd
 
-    au < exists ; 2009-2010 ; International Journal for Researcher Development Volume 1 ; 1 >
-    au < exists ; 2011 ; International Journal for Researcher Development Volume 2 ; 2 >
-    au < exists ; 2012 ; International Journal for Researcher Development Volume 3 ; 3 >
-    au < exists ; 2013 ; International Journal for Researcher Development Volume 4 ; 4 >
-    au < exists ; 2014 ; International Journal for Researcher Development Volume 5 ; 5 >
-    au < exists ; 2015 ; International Journal for Researcher Development Volume 6 ; 6 >
+    au < manifest ; 2009-2010 ; International Journal for Researcher Development Volume 1 ; 1 >
+    au < manifest ; 2011 ; International Journal for Researcher Development Volume 2 ; 2 >
+    au < manifest ; 2012 ; International Journal for Researcher Development Volume 3 ; 3 >
+    au < manifest ; 2013 ; International Journal for Researcher Development Volume 4 ; 4 >
+    au < manifest ; 2014 ; International Journal for Researcher Development Volume 5 ; 5 >
+    au < manifest ; 2015 ; International Journal for Researcher Development Volume 6 ; 6 >
     au < doNotProcess ; 2016 ; International Journal for Researcher Development Volume 7 ; 7 >
 
   }
@@ -13392,6 +13392,943 @@
     au < released ; 2020 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 21 ; 21 >
     au < released ; 2021 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 22 ; 22 >
     au < manifest ; 2022 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 23 ; 23 >
+
+  }
+
+
+  {
+
+    title <
+      name = Advances in Autism ;
+      eissn = 2056-3868
+    >
+
+    param[journal_issn] = 2056-3868
+
+    au < manifest ; 2015 ; Advances in Autism Volume 1 ; 1 >
+    au < manifest ; 2016 ; Advances in Autism Volume 2 ; 2 >
+    au < manifest ; 2017 ; Advances in Autism Volume 3 ; 3 >
+    au < manifest ; 2018 ; Advances in Autism Volume 4 ; 4 >
+    au < manifest ; 2019 ; Advances in Autism Volume 5 ; 5 >
+    au < manifest ; 2020 ; Advances in Autism Volume 6 ; 6 >
+    au < manifest ; 2021 ; Advances in Autism Volume 7 ; 7 >
+    au < expected ; 2022 ; Advances in Autism Volume 8 ; 8 >
+
+  }
+
+
+  {
+
+    title <
+      name = Annals in Social Responsibility ;
+      eissn = 2056-3515
+    >
+
+    param[journal_issn] = 2056-3515
+
+    au < manifest ; 2015 ; Annals in Social Responsibility Volume 2 ; 2 >
+    au < manifest ; 2016 ; Annals in Social Responsibility Volume 3 ; 3 >
+    au < manifest ; 2017 ; Annals in Social Responsibility Volume 4 ; 4 >
+    au < manifest ; 2018 ; Annals in Social Responsibility Volume 5 ; 5 >
+    au < manifest ; 2019 ; Annals in Social Responsibility Volume 6 ; 6 >
+    au < manifest ; 2020 ; Annals in Social Responsibility Volume 7 ; 7 >
+    au < manifest ; 2021 ; Annals in Social Responsibility Volume 8 ; 8 >
+    au < expected ; 2022 ; Annals in Social Responsibility Volume 9 ; 9 >
+
+  }
+
+
+  {
+
+    title <
+      name = Aslib Journal of Information Management ;
+      eissn = 2050-3806
+    >
+
+    param[journal_issn] = 2050-3806
+
+    au < exists ; 2014 ; Aslib Journal of Information Management Volume 66 ; 66 >
+    au < exists ; 2015 ; Aslib Journal of Information Management Volume 67 ; 67 >
+    au < exists ; 2016 ; Aslib Journal of Information Management Volume 68 ; 68 >
+    au < exists ; 2017 ; Aslib Journal of Information Management Volume 69 ; 69 >
+    au < exists ; 2018 ; Aslib Journal of Information Management Volume 70 ; 70 >
+    au < exists ; 2019 ; Aslib Journal of Information Management Volume 71 ; 71 >
+    au < exists ; 2020 ; Aslib Journal of Information Management Volume 72 ; 72 >
+    au < exists ; 2021 ; Aslib Journal of Information Management Volume 73 ; 73 >
+    au < expected ; 2022 ; Aslib Journal of Information Management Volume 74 ; 74 >
+
+  }
+
+
+  {
+
+    title <
+      name = Continuity and Resilience Review ;
+      eissn = 2516-7502
+    >
+
+    param[journal_issn] = 2516-7502
+
+    au < exists ; 2019 ; Continuity and Resilience Review Volume 1 ; 1 >
+    au < exists ; 2020 ; Continuity and Resilience Review Volume 2 ; 2 >
+    au < exists ; 2021 ; Continuity and Resilience Review Volume 3 ; 3 >
+    au < expected ; 2022 ; Continuity and Resilience Review Volume 4 ; 4 >
+
+  }
+
+
+  {
+
+    title <
+      name = English Teaching: Practice & Critique ;
+      eissn = 1175-8708
+    >
+
+    param[journal_issn] = 1175-8708
+
+    au < exists ; 2015 ; English Teaching: Practice & Critique Volume 14 ; 14 >
+    au < exists ; 2016 ; English Teaching: Practice & Critique Volume 15 ; 15 >
+    au < exists ; 2017 ; English Teaching: Practice & Critique Volume 16 ; 16 >
+    au < exists ; 2018 ; English Teaching: Practice & Critique Volume 17 ; 17 >
+    au < exists ; 2019 ; English Teaching: Practice & Critique Volume 18 ; 18 >
+    au < exists ; 2020 ; English Teaching: Practice & Critique Volume 19 ; 19 >
+    au < exists ; 2021 ; English Teaching: Practice & Critique Volume 20 ; 20 >
+    au < expected ; 2022 ; English Teaching: Practice & Critique Volume 21 ; 21 >
+
+  }
+
+
+  {
+
+    title <
+      name = European Journal of Training and Development ;
+      eissn = 2046-9012
+    >
+
+    param[journal_issn] = 2046-9012
+
+    au < exists ; 2012 ; European Journal of Training and Development Volume 36 ; 36 >
+    au < exists ; 2013 ; European Journal of Training and Development Volume 37 ; 37 >
+    au < exists ; 2014 ; European Journal of Training and Development Volume 38 ; 38 >
+    au < exists ; 2015 ; European Journal of Training and Development Volume 39 ; 39 >
+    au < exists ; 2016 ; European Journal of Training and Development Volume 40 ; 40 >
+    au < exists ; 2017 ; European Journal of Training and Development Volume 41 ; 41 >
+    au < exists ; 2018 ; European Journal of Training and Development Volume 42 ; 42 >
+    au < exists ; 2019 ; European Journal of Training and Development Volume 43 ; 43 >
+    au < exists ; 2020 ; European Journal of Training and Development Volume 44 ; 44 >
+    au < exists ; 2021 ; European Journal of Training and Development Volume 45 ; 45 >
+    au < expected ; 2022 ; European Journal of Training and Development Volume 46 ; 46 >
+
+  }
+
+
+  {
+
+    title <
+      name = Evidence-based HRM ;
+      eissn = 2049-3983
+    >
+
+    param[journal_issn] = 2049-3983
+
+    au < exists ; 2013 ; Evidence-based HRM Volume 1 ; 1 >
+    au < exists ; 2014 ; Evidence-based HRM Volume 2 ; 2 >
+    au < exists ; 2015 ; Evidence-based HRM Volume 3 ; 3 >
+    au < exists ; 2016 ; Evidence-based HRM Volume 4 ; 4 >
+    au < exists ; 2017 ; Evidence-based HRM Volume 5 ; 5 >
+    au < exists ; 2018 ; Evidence-based HRM Volume 6 ; 6 >
+    au < exists ; 2019 ; Evidence-based HRM Volume 7 ; 7 >
+    au < exists ; 2020 ; Evidence-based HRM Volume 8 ; 8 >
+    au < exists ; 2021 ; Evidence-based HRM Volume 9 ; 9 >
+    au < expected ; 2022 ; Evidence-based HRM Volume 10 ; 10 >
+
+  }
+
+
+  {
+
+    title <
+      name = Information and Computer Security ;
+      eissn = 2056-4961
+    >
+
+    param[journal_issn] = 2056-4961
+
+    au < exists ; 2015 ; Information and Computer Security Volume 23 ; 23 >
+    au < exists ; 2016 ; Information and Computer Security Volume 24 ; 24 >
+    au < exists ; 2017 ; Information and Computer Security Volume 25 ; 25 >
+    au < exists ; 2018 ; Information and Computer Security Volume 26 ; 26 >
+    au < exists ; 2019 ; Information and Computer Security Volume 27 ; 27 >
+    au < exists ; 2020 ; Information and Computer Security Volume 28 ; 28 >
+    au < exists ; 2021 ; Information and Computer Security Volume 29 ; 29 >
+    au < expected ; 2022 ; Information and Computer Security Volume 30 ; 30 >
+
+  }
+
+
+  {
+
+    title <
+      name = Information Discovery and Delivery ;
+      eissn = 2398-6247
+    >
+
+    param[journal_issn] = 2398-6247
+
+    au < exists ; 2017 ; Information Discovery and Delivery Volume 45 ; 45 >
+    au < exists ; 2018 ; Information Discovery and Delivery Volume 46 ; 46 >
+    au < exists ; 2019 ; Information Discovery and Delivery Volume 47 ; 47 >
+    au < exists ; 2020 ; Information Discovery and Delivery Volume 48 ; 48 >
+    au < exists ; 2021 ; Information Discovery and Delivery Volume 49 ; 49 >
+    au < expected ; 2022 ; Information Discovery and Delivery Volume 50 ; 50 >
+
+  }
+
+
+  {
+
+    title <
+      name = International Journal of Comparative Education and Development ;
+      eissn = 2396-7404
+    >
+
+    param[journal_issn] = 2396-7404
+
+    au < exists ; 2016 ; International Journal of Comparative Education and Development Volume 18 ; 18 >
+    au < exists ; 2017 ; International Journal of Comparative Education and Development Volume 19 ; 19 >
+    au < exists ; 2018 ; International Journal of Comparative Education and Development Volume 20 ; 20 >
+    au < exists ; 2019 ; International Journal of Comparative Education and Development Volume 21 ; 21 >
+    au < exists ; 2020 ; International Journal of Comparative Education and Development Volume 22 ; 22 >
+    au < exists ; 2021 ; International Journal of Comparative Education and Development Volume 23 ; 23 >
+    au < expected ; 2022 ; International Journal of Comparative Education and Development Volume 24 ; 24 >
+
+  }
+
+
+  {
+
+    title <
+      name = International Journal of Human Rights in Healthcare ;
+      eissn = 2056-4902
+    >
+
+    param[journal_issn] = 2056-4902
+
+    au < exists ; 2016 ; International Journal of Human Rights in Healthcare Volume 8 ; 8 >
+    au < exists ; 2017 ; International Journal of Human Rights in Healthcare Volume 9 ; 9 >
+    au < exists ; 2018 ; International Journal of Human Rights in Healthcare Volume 10 ; 10 >
+    au < exists ; 2019 ; International Journal of Human Rights in Healthcare Volume 11 ; 11 >
+    au < exists ; 2020 ; International Journal of Human Rights in Healthcare Volume 12 ; 12 >
+    au < exists ; 2021 ; International Journal of Human Rights in Healthcare Volume 13 ; 13 >
+    au < expected ; 2022 ; International Journal of Human Rights in Healthcare Volume 14 ; 14 >
+
+  }
+
+
+  {
+
+    title <
+      name = International Journal of Information and Learning Technology ;
+      eissn = 2056-4880
+    >
+
+    param[journal_issn] = 2056-4880
+
+    au < exists ; 2015 ; International Journal of Information and Learning Technology Volume 32 ; 32 >
+    au < exists ; 2016 ; International Journal of Information and Learning Technology Volume 33 ; 33 >
+    au < exists ; 2017 ; International Journal of Information and Learning Technology Volume 34 ; 34 >
+    au < exists ; 2018 ; International Journal of Information and Learning Technology Volume 35 ; 35 >
+    au < exists ; 2019 ; International Journal of Information and Learning Technology Volume 36 ; 36 >
+    au < exists ; 2020 ; International Journal of Information and Learning Technology Volume 37 ; 37 >
+    au < exists ; 2021 ; International Journal of Information and Learning Technology Volume 38 ; 38 >
+    au < expected ; 2022 ; International Journal of Information and Learning Technology Volume 39 ; 39 >
+
+  }
+
+
+  {
+
+    title <
+      name = International Journal of Innovation Science ;
+      eissn = 1757-2223
+    >
+
+    param[journal_issn] = 1757-2223
+
+    au < exists ; 2009 ; International Journal of Innovation Science Volume 1 ; 1 >
+    au < exists ; 2010 ; International Journal of Innovation Science Volume 2 ; 2 >
+    au < exists ; 2011 ; International Journal of Innovation Science Volume 3 ; 3 >
+    au < exists ; 2012 ; International Journal of Innovation Science Volume 4 ; 4 >
+    au < exists ; 2013 ; International Journal of Innovation Science Volume 5 ; 5 >
+    au < exists ; 2014 ; International Journal of Innovation Science Volume 6 ; 6 >
+    au < exists ; 2015 ; International Journal of Innovation Science Volume 7 ; 7 >
+    au < exists ; 2016 ; International Journal of Innovation Science Volume 8 ; 8 >
+    au < exists ; 2017 ; International Journal of Innovation Science Volume 9 ; 9 >
+    au < exists ; 2018 ; International Journal of Innovation Science Volume 10 ; 10 >
+    au < exists ; 2019 ; International Journal of Innovation Science Volume 11 ; 11 >
+    au < exists ; 2020 ; International Journal of Innovation Science Volume 12 ; 12 >
+    au < exists ; 2021 ; International Journal of Innovation Science Volume 13 ; 13 >
+    au < expected ; 2022 ; International Journal of Innovation Science Volume 14 ; 14 >
+
+  }
+
+
+  {
+
+    title <
+      name = International Journal of Intelligent Unmanned Systems ;
+      eissn = 2049-6427
+    >
+
+    param[journal_issn] = 2049-6427
+
+    au < exists ; 2013 ; International Journal of Intelligent Unmanned Systems Volume 1 ; 1 >
+    au < exists ; 2014 ; International Journal of Intelligent Unmanned Systems Volume 2 ; 2 >
+    au < exists ; 2015 ; International Journal of Intelligent Unmanned Systems Volume 3 ; 3 >
+    au < exists ; 2016 ; International Journal of Intelligent Unmanned Systems Volume 4 ; 4 >
+    au < exists ; 2017 ; International Journal of Intelligent Unmanned Systems Volume 5 ; 5 >
+    au < exists ; 2018 ; International Journal of Intelligent Unmanned Systems Volume 6 ; 6 >
+    au < exists ; 2019 ; International Journal of Intelligent Unmanned Systems Volume 7 ; 7 >
+    au < exists ; 2020 ; International Journal of Intelligent Unmanned Systems Volume 8 ; 8 >
+    au < exists ; 2021 ; International Journal of Intelligent Unmanned Systems Volume 9 ; 9 >
+    au < expected ; 2022 ; International Journal of Intelligent Unmanned Systems Volume 10 ; 10 >
+
+  }
+
+
+  {
+
+    title <
+      name = International Journal of Organization Theory & Behavior ;
+      eissn = 1093-4537
+    >
+
+    param[journal_issn] = 1093-4537
+
+    au < exists ; 1998 ; International Journal of Organization Theory & Behavior Volume 1 ; 1 >
+    au < exists ; 1999 ; International Journal of Organization Theory & Behavior Volume 2 ; 2 >
+    au < exists ; 2000 ; International Journal of Organization Theory & Behavior Volume 3 ; 3 >
+    au < exists ; 2001 ; International Journal of Organization Theory & Behavior Volume 4 ; 4 >
+    au < exists ; 2002 ; International Journal of Organization Theory & Behavior Volume 5 ; 5 >
+    au < exists ; 2003 ; International Journal of Organization Theory & Behavior Volume 6 ; 6 >
+    au < exists ; 2004 ; International Journal of Organization Theory & Behavior Volume 7 ; 7 >
+    au < exists ; 2005 ; International Journal of Organization Theory & Behavior Volume 8 ; 8 >
+    au < exists ; 2006 ; International Journal of Organization Theory & Behavior Volume 9 ; 9 >
+    au < exists ; 2007 ; International Journal of Organization Theory & Behavior Volume 10 ; 10 >
+    au < exists ; 2008 ; International Journal of Organization Theory & Behavior Volume 11 ; 11 >
+    au < exists ; 2009 ; International Journal of Organization Theory & Behavior Volume 12 ; 12 >
+    au < exists ; 2010 ; International Journal of Organization Theory & Behavior Volume 13 ; 13 >
+    au < exists ; 2011 ; International Journal of Organization Theory & Behavior Volume 14 ; 14 >
+    au < exists ; 2012 ; International Journal of Organization Theory & Behavior Volume 15 ; 15 >
+    au < exists ; 2013 ; International Journal of Organization Theory & Behavior Volume 16 ; 16 >
+    au < exists ; 2014 ; International Journal of Organization Theory & Behavior Volume 17 ; 17 >
+    au < exists ; 2015 ; International Journal of Organization Theory & Behavior Volume 18 ; 18 >
+    au < exists ; 2016 ; International Journal of Organization Theory & Behavior Volume 19 ; 19 >
+    au < exists ; 2017 ; International Journal of Organization Theory & Behavior Volume 20 ; 20 >
+    au < exists ; 2018 ; International Journal of Organization Theory & Behavior Volume 21 ; 21 >
+    au < exists ; 2019 ; International Journal of Organization Theory & Behavior Volume 22 ; 22 >
+    au < exists ; 2020 ; International Journal of Organization Theory & Behavior Volume 23 ; 23 >
+    au < exists ; 2021 ; International Journal of Organization Theory & Behavior Volume 24 ; 24 >
+    au < expected ; 2022 ; International Journal of Organization Theory & Behavior Volume 25 ; 25 >
+
+  }
+
+
+  {
+
+    title <
+      name = International Journal of Sports Marketing and Sponsorship ;
+      eissn = 1464-6668
+    >
+
+    param[journal_issn] = 1464-6668
+
+    au < exists ; 1999 ; International Journal of Sports Marketing and Sponsorship Volume 1 ; 1 >
+    au < exists ; 2000 ; International Journal of Sports Marketing and Sponsorship Volume 2 ; 2 >
+    au < exists ; 2001 ; International Journal of Sports Marketing and Sponsorship Volume 3 ; 3 >
+    au < exists ; 2002 ; International Journal of Sports Marketing and Sponsorship Volume 4 ; 4 >
+    au < exists ; 2003 ; International Journal of Sports Marketing and Sponsorship Volume 5 ; 5 >
+    au < exists ; 2004 ; International Journal of Sports Marketing and Sponsorship Volume 6 ; 6 >
+    au < exists ; 2005 ; International Journal of Sports Marketing and Sponsorship Volume 7 ; 7 >
+    au < exists ; 2006 ; International Journal of Sports Marketing and Sponsorship Volume 8 ; 8 >
+    au < exists ; 2007 ; International Journal of Sports Marketing and Sponsorship Volume 9 ; 9 >
+    au < exists ; 2008 ; International Journal of Sports Marketing and Sponsorship Volume 10 ; 10 >
+    au < exists ; 2009 ; International Journal of Sports Marketing and Sponsorship Volume 11 ; 11 >
+    au < exists ; 2010 ; International Journal of Sports Marketing and Sponsorship Volume 12 ; 12 >
+    au < exists ; 2011 ; International Journal of Sports Marketing and Sponsorship Volume 13 ; 13 >
+    au < exists ; 2012 ; International Journal of Sports Marketing and Sponsorship Volume 14 ; 14 >
+    au < exists ; 2013 ; International Journal of Sports Marketing and Sponsorship Volume 15 ; 15 >
+    au < exists ; 2014 ; International Journal of Sports Marketing and Sponsorship Volume 16 ; 16 >
+    au < exists ; 2015 ; International Journal of Sports Marketing and Sponsorship Volume 17 ; 17 >
+    au < exists ; 2016 ; International Journal of Sports Marketing and Sponsorship Volume 18 ; 18 >
+    au < exists ; 2017 ; International Journal of Sports Marketing and Sponsorship Volume 19 ; 19 >
+    au < exists ; 2018 ; International Journal of Sports Marketing and Sponsorship Volume 20 ; 20 >
+    au < exists ; 2019 ; International Journal of Sports Marketing and Sponsorship Volume 21 ; 21 >
+    au < exists ; 2020 ; International Journal of Sports Marketing and Sponsorship Volume 22 ; 22 >
+    au < exists ; 2021 ; International Journal of Sports Marketing and Sponsorship Volume 23 ; 23 >
+    au < expected ; 2022 ; International Journal of Sports Marketing and Sponsorship Volume 24 ; 24 >
+
+  }
+
+
+  {
+
+    title <
+      name = International Journal of Tourism Cities ;
+      eissn = 2056-5607
+    >
+
+    param[journal_issn] = 2056-5607
+
+    au < exists ; 2015 ; International Journal of Tourism Cities Volume 1 ; 1 >
+    au < exists ; 2016 ; International Journal of Tourism Cities Volume 2 ; 2 >
+    au < exists ; 2017 ; International Journal of Tourism Cities Volume 3 ; 3 >
+    au < exists ; 2018 ; International Journal of Tourism Cities Volume 4 ; 4 >
+    au < exists ; 2019 ; International Journal of Tourism Cities Volume 5 ; 5 >
+    au < exists ; 2020 ; International Journal of Tourism Cities Volume 6 ; 6 >
+    au < exists ; 2021 ; International Journal of Tourism Cities Volume 7 ; 7 >
+    au < expected ; 2022 ; International Journal of Tourism Cities Volume 8 ; 8 >
+
+  }
+
+
+  {
+
+    title <
+      name = Journal for Multicultural Education ;
+      eissn = 2053-535X
+    >
+
+    param[journal_issn] = 2053-535X
+
+    au < exists ; 2014 ; Journal for Multicultural Education Volume 8 ; 8 >
+    au < exists ; 2015 ; Journal for Multicultural Education Volume 9 ; 9 >
+    au < exists ; 2016 ; Journal for Multicultural Education Volume 10 ; 10 >
+    au < exists ; 2017 ; Journal for Multicultural Education Volume 11 ; 11 >
+    au < exists ; 2018 ; Journal for Multicultural Education Volume 12 ; 12 >
+    au < exists ; 2019 ; Journal for Multicultural Education Volume 13 ; 13 >
+    au < exists ; 2020 ; Journal for Multicultural Education Volume 14 ; 14 >
+    au < exists ; 2021 ; Journal for Multicultural Education Volume 15 ; 15 >
+    au < expected ; 2022 ; Journal for Multicultural Education Volume 16 ; 16 >
+
+  }
+
+
+  {
+
+    title <
+      name = Journal of Contemporary Marketing Science ;
+      eissn = 2516-7480
+    >
+
+    param[journal_issn] = 2516-7480
+
+    au < exists ; 2018 ; Journal of Contemporary Marketing Science Volume 1 ; 1 >
+    au < exists ; 2019 ; Journal of Contemporary Marketing Science Volume 2 ; 2 >
+    au < exists ; 2020 ; Journal of Contemporary Marketing Science Volume 3 ; 3 >
+    au < exists ; 2021 ; Journal of Contemporary Marketing Science Volume 4 ; 4 >
+    au < expected ; 2022 ; Journal of Contemporary Marketing Science Volume 5 ; 5 >
+
+  }
+
+
+  {
+
+    title <
+      name = Journal of Criminological Research, Policy and Practice ;
+      eissn = 2056-3841
+    >
+
+    param[journal_issn] = 2056-3841
+
+    au < exists ; 2015 ; Journal of Criminological Research, Policy and Practice Volume 1 ; 1 >
+    au < exists ; 2016 ; Journal of Criminological Research, Policy and Practice Volume 2 ; 2 >
+    au < exists ; 2017 ; Journal of Criminological Research, Policy and Practice Volume 3 ; 3 >
+    au < exists ; 2018 ; Journal of Criminological Research, Policy and Practice Volume 4 ; 4 >
+    au < exists ; 2019 ; Journal of Criminological Research, Policy and Practice Volume 5 ; 5 >
+    au < exists ; 2020 ; Journal of Criminological Research, Policy and Practice Volume 6 ; 6 >
+    au < exists ; 2021 ; Journal of Criminological Research, Policy and Practice Volume 7 ; 7 >
+    au < expected ; 2022 ; Journal of Criminological Research, Policy and Practice Volume 8 ; 8 >
+
+  }
+
+
+  {
+
+    title <
+      name = Journal of Entrepreneurship in Emerging Economies ;
+      eissn = 2053-4604
+    >
+
+    param[journal_issn] = 2053-4604
+
+    au < exists ; 2014 ; Journal of Entrepreneurship in Emerging Economies Volume 6 ; 6 >
+    au < exists ; 2015 ; Journal of Entrepreneurship in Emerging Economies Volume 7 ; 7 >
+    au < exists ; 2016 ; Journal of Entrepreneurship in Emerging Economies Volume 8 ; 8 >
+    au < exists ; 2017 ; Journal of Entrepreneurship in Emerging Economies Volume 9 ; 9 >
+    au < exists ; 2018 ; Journal of Entrepreneurship in Emerging Economies Volume 10 ; 10 >
+    au < exists ; 2019 ; Journal of Entrepreneurship in Emerging Economies Volume 11 ; 11 >
+    au < exists ; 2020 ; Journal of Entrepreneurship in Emerging Economies Volume 12 ; 12 >
+    au < exists ; 2021 ; Journal of Entrepreneurship in Emerging Economies Volume 13 ; 13 >
+    au < expected ; 2022 ; Journal of Entrepreneurship in Emerging Economies Volume 14 ; 14 >
+
+  }
+
+
+  {
+
+    title <
+      name = Journal of Global Mobility ;
+      eissn = 2049-8799
+    >
+
+    param[journal_issn] = 2049-8799
+
+    au < exists ; 2013 ; Journal of Global Mobility Volume 1 ; 1 >
+    au < exists ; 2014 ; Journal of Global Mobility Volume 2 ; 2 >
+    au < exists ; 2015 ; Journal of Global Mobility Volume 3 ; 3 >
+    au < exists ; 2016 ; Journal of Global Mobility Volume 4 ; 4 >
+    au < exists ; 2017 ; Journal of Global Mobility Volume 5 ; 5 >
+    au < exists ; 2018 ; Journal of Global Mobility Volume 6 ; 6 >
+    au < exists ; 2019 ; Journal of Global Mobility Volume 7 ; 7 >
+    au < exists ; 2020 ; Journal of Global Mobility Volume 8 ; 8 >
+    au < exists ; 2021 ; Journal of Global Mobility Volume 9 ; 9 >
+    au < expected ; 2022 ; Journal of Global Mobility Volume 10 ; 10 >
+
+  }
+
+
+  {
+
+    title <
+      name = Journal of Hospitality and Tourism Insights ;
+      eissn = 2514-9792
+    >
+
+    param[journal_issn] = 2514-9792
+
+    au < exists ; 2018 ; Journal of Hospitality and Tourism Insights Volume 1 ; 1 >
+    au < exists ; 2019 ; Journal of Hospitality and Tourism Insights Volume 2 ; 2 >
+    au < exists ; 2020 ; Journal of Hospitality and Tourism Insights Volume 3 ; 3 >
+    au < exists ; 2021 ; Journal of Hospitality and Tourism Insights Volume 4 ; 4 >
+    au < expected ; 2022 ; Journal of Hospitality and Tourism Insights Volume 5 ; 5 >
+
+  }
+
+
+  {
+
+    title <
+      name = Journal of Intellectual Disabilities and Offending Behaviour ;
+      eissn = 2050-8824
+    >
+
+    param[journal_issn] = 2050-8824
+
+    au < exists ; 2013 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 4 ; 4 >
+    au < exists ; 2014 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 5 ; 5 >
+    au < exists ; 2015 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 6 ; 6 >
+    au < exists ; 2016 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 7 ; 7 >
+    au < exists ; 2017 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 8 ; 8 >
+    au < exists ; 2018 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 9 ; 9 >
+    au < exists ; 2019 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 10 ; 10 >
+    au < exists ; 2020 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 11 ; 11 >
+    au < exists ; 2021 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 12 ; 12 >
+    au < expected ; 2022 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 13 ; 13 >
+
+  }
+
+
+  {
+
+    title <
+      name = Journal of Organizational Effectiveness: People and Performance ;
+      eissn = 2051-6614
+    >
+
+    param[journal_issn] = 2051-6614
+
+    au < exists ; 2014 ; Journal of Organizational Effectiveness: People and Performance Volume 1 ; 1 >
+    au < exists ; 2015 ; Journal of Organizational Effectiveness: People and Performance Volume 2 ; 2 >
+    au < exists ; 2016 ; Journal of Organizational Effectiveness: People and Performance Volume 3 ; 3 >
+    au < exists ; 2017 ; Journal of Organizational Effectiveness: People and Performance Volume 4 ; 4 >
+    au < exists ; 2018 ; Journal of Organizational Effectiveness: People and Performance Volume 5 ; 5 >
+    au < exists ; 2019 ; Journal of Organizational Effectiveness: People and Performance Volume 6 ; 6 >
+    au < exists ; 2020 ; Journal of Organizational Effectiveness: People and Performance Volume 7 ; 7 >
+    au < exists ; 2021 ; Journal of Organizational Effectiveness: People and Performance Volume 8 ; 8 >
+    au < expected ; 2022 ; Journal of Organizational Effectiveness: People and Performance Volume 9 ; 9 >
+
+  }
+
+
+  {
+
+    title <
+      name = Journal of Participation and Employee Ownership ;
+      eissn = 2514-7641
+    >
+
+    param[journal_issn] = 2514-7641
+
+    au < exists ; 2018 ; Journal of Participation and Employee Ownership Volume 1 ; 1 >
+    au < exists ; 2019 ; Journal of Participation and Employee Ownership Volume 2 ; 2 >
+    au < exists ; 2020 ; Journal of Participation and Employee Ownership Volume 3 ; 3 >
+    au < exists ; 2021 ; Journal of Participation and Employee Ownership Volume 4 ; 4 >
+    au < expected ; 2022 ; Journal of Participation and Employee Ownership Volume 5 ; 5 >
+
+  }
+
+
+  {
+
+    title <
+      name = Journal of Professional Capital and Community ;
+      eissn = 2056-9548
+    >
+
+    param[journal_issn] = 2056-9548
+
+    au < exists ; 2016 ; Journal of Professional Capital and Community Volume 1 ; 1 >
+    au < exists ; 2017 ; Journal of Professional Capital and Community Volume 2 ; 2 >
+    au < exists ; 2018 ; Journal of Professional Capital and Community Volume 3 ; 3 >
+    au < exists ; 2019 ; Journal of Professional Capital and Community Volume 4 ; 4 >
+    au < exists ; 2020 ; Journal of Professional Capital and Community Volume 5 ; 5 >
+    au < exists ; 2021 ; Journal of Professional Capital and Community Volume 6 ; 6 >
+    au < expected ; 2022 ; Journal of Professional Capital and Community Volume 7 ; 7 >
+
+  }
+
+
+  {
+
+    title <
+      name = Journal of Public Budgeting, Accounting & Financial Management ;
+      eissn = 1096-3367
+    >
+
+    param[journal_issn] = 1096-3367
+
+    au < exists ; 1994 ; Journal of Public Budgeting, Accounting & Financial Management Volume 6 ; 6 >
+    au < exists ; 1995 ; Journal of Public Budgeting, Accounting & Financial Management Volume 7 ; 7 >
+    au < exists ; 1996 ; Journal of Public Budgeting, Accounting & Financial Management Volume 8 ; 8 >
+    au < exists ; 1997 ; Journal of Public Budgeting, Accounting & Financial Management Volume 9 ; 9 >
+    au < exists ; 1998 ; Journal of Public Budgeting, Accounting & Financial Management Volume 10 ; 10 >
+    au < exists ; 1999 ; Journal of Public Budgeting, Accounting & Financial Management Volume 11 ; 11 >
+    au < exists ; 2000 ; Journal of Public Budgeting, Accounting & Financial Management Volume 12 ; 12 >
+    au < exists ; 2001 ; Journal of Public Budgeting, Accounting & Financial Management Volume 13 ; 13 >
+    au < exists ; 2002 ; Journal of Public Budgeting, Accounting & Financial Management Volume 14 ; 14 >
+    au < exists ; 2003 ; Journal of Public Budgeting, Accounting & Financial Management Volume 15 ; 15 >
+    au < exists ; 2004 ; Journal of Public Budgeting, Accounting & Financial Management Volume 16 ; 16 >
+    au < exists ; 2005 ; Journal of Public Budgeting, Accounting & Financial Management Volume 17 ; 17 >
+    au < exists ; 2006 ; Journal of Public Budgeting, Accounting & Financial Management Volume 18 ; 18 >
+    au < exists ; 2007 ; Journal of Public Budgeting, Accounting & Financial Management Volume 19 ; 19 >
+    au < exists ; 2008 ; Journal of Public Budgeting, Accounting & Financial Management Volume 20 ; 20 >
+    au < exists ; 2009 ; Journal of Public Budgeting, Accounting & Financial Management Volume 21 ; 21 >
+    au < exists ; 2010 ; Journal of Public Budgeting, Accounting & Financial Management Volume 22 ; 22 >
+    au < exists ; 2011 ; Journal of Public Budgeting, Accounting & Financial Management Volume 23 ; 23 >
+    au < exists ; 2012 ; Journal of Public Budgeting, Accounting & Financial Management Volume 24 ; 24 >
+    au < exists ; 2013 ; Journal of Public Budgeting, Accounting & Financial Management Volume 25 ; 25 >
+    au < exists ; 2014 ; Journal of Public Budgeting, Accounting & Financial Management Volume 26 ; 26 >
+    au < exists ; 2015 ; Journal of Public Budgeting, Accounting & Financial Management Volume 27 ; 27 >
+    au < exists ; 2016 ; Journal of Public Budgeting, Accounting & Financial Management Volume 28 ; 28 >
+    au < exists ; 2017 ; Journal of Public Budgeting, Accounting & Financial Management Volume 29 ; 29 >
+    au < exists ; 2018 ; Journal of Public Budgeting, Accounting & Financial Management Volume 30 ; 30 >
+    au < exists ; 2019 ; Journal of Public Budgeting, Accounting & Financial Management Volume 31 ; 31 >
+    au < exists ; 2020 ; Journal of Public Budgeting, Accounting & Financial Management Volume 32 ; 32 >
+    au < exists ; 2021 ; Journal of Public Budgeting, Accounting & Financial Management Volume 33 ; 33 >
+    au < expected ; 2022 ; Journal of Public Budgeting, Accounting & Financial Management Volume 34 ; 34 >
+
+  }
+
+
+  {
+
+    title <
+      name = Journal of Public Procurement ;
+      eissn = 1535-0118
+    >
+
+    param[journal_issn] = 1535-0118
+
+    au < exists ; 2001 ; Journal of Public Procurement Volume 1 ; 1 >
+    au < exists ; 2002 ; Journal of Public Procurement Volume 2 ; 2 >
+    au < exists ; 2003 ; Journal of Public Procurement Volume 3 ; 3 >
+    au < exists ; 2004 ; Journal of Public Procurement Volume 4 ; 4 >
+    au < exists ; 2005 ; Journal of Public Procurement Volume 5 ; 5 >
+    au < exists ; 2006 ; Journal of Public Procurement Volume 6 ; 6 >
+    au < exists ; 2007 ; Journal of Public Procurement Volume 7 ; 7 >
+    au < exists ; 2008 ; Journal of Public Procurement Volume 8 ; 8 >
+    au < exists ; 2009 ; Journal of Public Procurement Volume 9 ; 9 >
+    au < exists ; 2010 ; Journal of Public Procurement Volume 10 ; 10 >
+    au < exists ; 2011 ; Journal of Public Procurement Volume 11 ; 11 >
+    au < exists ; 2012 ; Journal of Public Procurement Volume 12 ; 12 >
+    au < exists ; 2013 ; Journal of Public Procurement Volume 13 ; 13 >
+    au < exists ; 2014 ; Journal of Public Procurement Volume 14 ; 14 >
+    au < exists ; 2015 ; Journal of Public Procurement Volume 15 ; 15 >
+    au < exists ; 2016 ; Journal of Public Procurement Volume 16 ; 16 >
+    au < exists ; 2017 ; Journal of Public Procurement Volume 17 ; 17 >
+    au < exists ; 2018 ; Journal of Public Procurement Volume 18 ; 18 >
+    au < exists ; 2019 ; Journal of Public Procurement Volume 19 ; 19 >
+    au < exists ; 2020 ; Journal of Public Procurement Volume 20 ; 20 >
+    au < exists ; 2021 ; Journal of Public Procurement Volume 21 ; 21 >
+    au < expected ; 2022 ; Journal of Public Procurement Volume 22 ; 22 >
+
+  }
+
+
+  {
+
+    title <
+      name = Journal of Science and Technology Policy Management ;
+      eissn = 2053-4620
+    >
+
+    param[journal_issn] = 2053-4620
+
+    au < exists ; 2014 ; Journal of Science and Technology Policy Management Volume 5 ; 5 >
+    au < exists ; 2015 ; Journal of Science and Technology Policy Management Volume 6 ; 6 >
+    au < exists ; 2016 ; Journal of Science and Technology Policy Management Volume 7 ; 7 >
+    au < exists ; 2017 ; Journal of Science and Technology Policy Management Volume 8 ; 8 >
+    au < exists ; 2018 ; Journal of Science and Technology Policy Management Volume 9 ; 9 >
+    au < exists ; 2019 ; Journal of Science and Technology Policy Management Volume 10 ; 10 >
+    au < exists ; 2020 ; Journal of Science and Technology Policy Management Volume 11 ; 11 >
+    au < exists ; 2021 ; Journal of Science and Technology Policy Management Volume 12 ; 12 >
+    au < expected ; 2022 ; Journal of Science and Technology Policy Management Volume 13 ; 13 >
+
+  }
+
+
+  {
+
+    title <
+      name = Journal of Service Theory and Practice ;
+      eissn = 2055-6225
+    >
+
+    param[journal_issn] = 2055-6225
+
+    au < exists ; 2015 ; Journal of Service Theory and Practice Volume 25 ; 25 >
+    au < exists ; 2016 ; Journal of Service Theory and Practice Volume 26 ; 26 >
+    au < exists ; 2017 ; Journal of Service Theory and Practice Volume 27 ; 27 >
+    au < exists ; 2018 ; Journal of Service Theory and Practice Volume 28 ; 28 >
+    au < exists ; 2019 ; Journal of Service Theory and Practice Volume 29 ; 29 >
+    au < exists ; 2020 ; Journal of Service Theory and Practice Volume 30 ; 30 >
+    au < exists ; 2021 ; Journal of Service Theory and Practice Volume 31 ; 31 >
+    au < expected ; 2022 ; Journal of Service Theory and Practice Volume 32 ; 32 >
+
+  }
+
+
+  {
+
+    title <
+      name = Journal of Structural Fire Engineering ;
+      eissn = 2040-2317
+    >
+
+    param[journal_issn] = 2040-2317
+
+    au < exists ; 2010 ; Journal of Structural Fire Engineering Volume 1 ; 1 >
+    au < exists ; 2011 ; Journal of Structural Fire Engineering Volume 2 ; 2 >
+    au < exists ; 2012 ; Journal of Structural Fire Engineering Volume 3 ; 3 >
+    au < exists ; 2013 ; Journal of Structural Fire Engineering Volume 4 ; 4 >
+    au < exists ; 2014 ; Journal of Structural Fire Engineering Volume 5 ; 5 >
+    au < exists ; 2015 ; Journal of Structural Fire Engineering Volume 6 ; 6 >
+    au < exists ; 2016 ; Journal of Structural Fire Engineering Volume 7 ; 7 >
+    au < exists ; 2017 ; Journal of Structural Fire Engineering Volume 8 ; 8 >
+    au < exists ; 2018 ; Journal of Structural Fire Engineering Volume 9 ; 9 >
+    au < exists ; 2019 ; Journal of Structural Fire Engineering Volume 10 ; 10 >
+    au < exists ; 2020 ; Journal of Structural Fire Engineering Volume 11 ; 11 >
+    au < exists ; 2021 ; Journal of Structural Fire Engineering Volume 12 ; 12 >
+    au < expected ; 2022 ; Journal of Structural Fire Engineering Volume 13 ; 13 >
+
+  }
+
+
+  {
+
+    title <
+      name = Open House International ;
+      eissn = 0168-2601
+    >
+
+    param[journal_issn] = 0168-2601
+
+    au < exists ; 2005 ; Open House International Volume 30 ; 30 >
+    au < exists ; 2006 ; Open House International Volume 31 ; 31 >
+    au < exists ; 2007 ; Open House International Volume 32 ; 32 >
+    au < exists ; 2008 ; Open House International Volume 33 ; 33 >
+    au < exists ; 2009 ; Open House International Volume 34 ; 34 >
+    au < exists ; 2010 ; Open House International Volume 35 ; 35 >
+    au < exists ; 2011 ; Open House International Volume 36 ; 36 >
+    au < exists ; 2012 ; Open House International Volume 37 ; 37 >
+    au < exists ; 2013 ; Open House International Volume 38 ; 38 >
+    au < exists ; 2014 ; Open House International Volume 39 ; 39 >
+    au < exists ; 2015 ; Open House International Volume 40 ; 40 >
+    au < exists ; 2016 ; Open House International Volume 41 ; 41 >
+    au < exists ; 2017 ; Open House International Volume 42 ; 42 >
+    au < exists ; 2018 ; Open House International Volume 43 ; 43 >
+    au < exists ; 2019 ; Open House International Volume 44 ; 44 >
+    au < exists ; 2020 ; Open House International Volume 45 ; 45 >
+    au < exists ; 2021 ; Open House International Volume 46 ; 46 >
+    au < expected ; 2022 ; Open House International Volume 47 ; 47 >
+
+  }
+
+
+  {
+
+    title <
+      name = Research Journal of Textile and Apparel ;
+      eissn = 1560-6074
+    >
+
+    param[journal_issn] = 1560-6074
+
+    au < exists ; 1997 ; Research Journal of Textile and Apparel Volume 1 ; 1 >
+    au < exists ; 1998 ; Research Journal of Textile and Apparel Volume 2 ; 2 >
+    au < exists ; 1999 ; Research Journal of Textile and Apparel Volume 3 ; 3 >
+    au < exists ; 2000 ; Research Journal of Textile and Apparel Volume 4 ; 4 >
+    au < exists ; 2001 ; Research Journal of Textile and Apparel Volume 5 ; 5 >
+    au < exists ; 2002 ; Research Journal of Textile and Apparel Volume 6 ; 6 >
+    au < exists ; 2003 ; Research Journal of Textile and Apparel Volume 7 ; 7 >
+    au < exists ; 2004 ; Research Journal of Textile and Apparel Volume 8 ; 8 >
+    au < exists ; 2005 ; Research Journal of Textile and Apparel Volume 9 ; 9 >
+    au < exists ; 2006 ; Research Journal of Textile and Apparel Volume 10 ; 10 >
+    au < exists ; 2007 ; Research Journal of Textile and Apparel Volume 11 ; 11 >
+    au < exists ; 2008 ; Research Journal of Textile and Apparel Volume 12 ; 12 >
+    au < exists ; 2009 ; Research Journal of Textile and Apparel Volume 13 ; 13 >
+    au < exists ; 2010 ; Research Journal of Textile and Apparel Volume 14 ; 14 >
+    au < exists ; 2011 ; Research Journal of Textile and Apparel Volume 15 ; 15 >
+    au < exists ; 2012 ; Research Journal of Textile and Apparel Volume 16 ; 16 >
+    au < exists ; 2013 ; Research Journal of Textile and Apparel Volume 17 ; 17 >
+    au < exists ; 2014 ; Research Journal of Textile and Apparel Volume 18 ; 18 >
+    au < exists ; 2015 ; Research Journal of Textile and Apparel Volume 19 ; 19 >
+    au < exists ; 2016 ; Research Journal of Textile and Apparel Volume 20 ; 20 >
+    au < exists ; 2017 ; Research Journal of Textile and Apparel Volume 21 ; 21 >
+    au < exists ; 2018 ; Research Journal of Textile and Apparel Volume 22 ; 22 >
+    au < exists ; 2019 ; Research Journal of Textile and Apparel Volume 23 ; 23 >
+    au < exists ; 2020 ; Research Journal of Textile and Apparel Volume 24 ; 24 >
+    au < exists ; 2021 ; Research Journal of Textile and Apparel Volume 25 ; 25 >
+    au < expected ; 2022 ; Research Journal of Textile and Apparel Volume 26 ; 26 >
+
+  }
+
+
+  {
+
+    title <
+      name = Social Studies Research and Practice ;
+      eissn = 1933-5415
+    >
+
+    param[journal_issn] = 1933-5415
+
+    au < exists ; 2006 ; Social Studies Research and Practice Volume 1 ; 1 >
+    au < exists ; 2007 ; Social Studies Research and Practice Volume 2 ; 2 >
+    au < exists ; 2008 ; Social Studies Research and Practice Volume 3 ; 3 >
+    au < exists ; 2009 ; Social Studies Research and Practice Volume 4 ; 4 >
+    au < exists ; 2010 ; Social Studies Research and Practice Volume 5 ; 5 >
+    au < exists ; 2011 ; Social Studies Research and Practice Volume 6 ; 6 >
+    au < exists ; 2012 ; Social Studies Research and Practice Volume 7 ; 7 >
+    au < exists ; 2013 ; Social Studies Research and Practice Volume 8 ; 8 >
+    au < exists ; 2014 ; Social Studies Research and Practice Volume 9 ; 9 >
+    au < exists ; 2015 ; Social Studies Research and Practice Volume 10 ; 10 >
+    au < exists ; 2016 ; Social Studies Research and Practice Volume 11 ; 11 >
+    au < exists ; 2017 ; Social Studies Research and Practice Volume 12 ; 12 >
+    au < exists ; 2018 ; Social Studies Research and Practice Volume 13 ; 13 >
+    au < exists ; 2019 ; Social Studies Research and Practice Volume 14 ; 14 >
+    au < exists ; 2020 ; Social Studies Research and Practice Volume 15 ; 15 >
+    au < exists ; 2021 ; Social Studies Research and Practice Volume 16 ; 16 >
+    au < expected ; 2022 ; Social Studies Research and Practice Volume 17 ; 17 >
+
+  }
+
+
+  {
+
+    title <
+      name = Social Transformations in Chinese Societies ;
+      eissn = 1871-2673
+    >
+
+    param[journal_issn] = 1871-2673
+
+    au < exists ; 2016 ; Social Transformations in Chinese Societies Volume 12 ; 12 >
+    au < exists ; 2017 ; Social Transformations in Chinese Societies Volume 13 ; 13 >
+    au < exists ; 2018 ; Social Transformations in Chinese Societies Volume 14 ; 14 >
+    au < exists ; 2019 ; Social Transformations in Chinese Societies Volume 15 ; 15 >
+    au < exists ; 2020 ; Social Transformations in Chinese Societies Volume 16 ; 16 >
+    au < exists ; 2021 ; Social Transformations in Chinese Societies Volume 17 ; 17 >
+    au < expected ; 2022 ; Social Transformations in Chinese Societies Volume 18 ; 18 >
+
+  }
+
+
+  {
+
+    title <
+      name = The Journal of Forensic Practice ;
+      eissn = 2050-8794
+    >
+
+    param[journal_issn] = 2050-8794
+
+    au < exists ; 2013 ; The Journal of Forensic Practice Volume 15 ; 15 >
+    au < exists ; 2014 ; The Journal of Forensic Practice Volume 16 ; 16 >
+    au < exists ; 2015 ; The Journal of Forensic Practice Volume 17 ; 17 >
+    au < exists ; 2016 ; The Journal of Forensic Practice Volume 18 ; 18 >
+    au < exists ; 2017 ; The Journal of Forensic Practice Volume 19 ; 19 >
+    au < exists ; 2018 ; The Journal of Forensic Practice Volume 20 ; 20 >
+    au < exists ; 2019 ; The Journal of Forensic Practice Volume 21 ; 21 >
+    au < exists ; 2020 ; The Journal of Forensic Practice Volume 22 ; 22 >
+    au < exists ; 2021 ; The Journal of Forensic Practice Volume 23 ; 23 >
+    au < expected ; 2022 ; The Journal of Forensic Practice Volume 24 ; 24 >
+
+  }
+
+
+  {
+
+    title <
+      name = VINE Journal of Information and Knowledge Management Systems ;
+      eissn = 2059-5891
+    >
+
+    param[journal_issn] = 2059-5891
+
+    au < exists ; 2016 ; VINE Journal of Information and Knowledge Management Systems Volume 46 ; 46 >
+    au < exists ; 2017 ; VINE Journal of Information and Knowledge Management Systems Volume 47 ; 47 >
+    au < exists ; 2018 ; VINE Journal of Information and Knowledge Management Systems Volume 48 ; 48 >
+    au < exists ; 2019 ; VINE Journal of Information and Knowledge Management Systems Volume 49 ; 49 >
+    au < exists ; 2020 ; VINE Journal of Information and Knowledge Management Systems Volume 50 ; 50 >
+    au < exists ; 2021 ; VINE Journal of Information and Knowledge Management Systems Volume 51 ; 51 >
+    au < expected ; 2022 ; VINE Journal of Information and Knowledge Management Systems Volume 52 ; 52 >
+
+  }
+
+
+  {
+
+    title <
+      name = World Journal of Engineering ;
+      eissn = 1708-5284
+    >
+
+    param[journal_issn] = 1708-5284
+
+    au < exists ; 2011 ; World Journal of Engineering Volume 8 ; 8 >
+    au < exists ; 2012 ; World Journal of Engineering Volume 9 ; 9 >
+    au < exists ; 2013 ; World Journal of Engineering Volume 10 ; 10 >
+    au < exists ; 2014 ; World Journal of Engineering Volume 11 ; 11 >
+    au < exists ; 2015 ; World Journal of Engineering Volume 12 ; 12 >
+    au < exists ; 2016 ; World Journal of Engineering Volume 13 ; 13 >
+    au < exists ; 2017 ; World Journal of Engineering Volume 14 ; 14 >
+    au < exists ; 2018 ; World Journal of Engineering Volume 15 ; 15 >
+    au < exists ; 2019 ; World Journal of Engineering Volume 16 ; 16 >
+    au < exists ; 2020 ; World Journal of Engineering Volume 17 ; 17 >
+    au < exists ; 2021 ; World Journal of Engineering Volume 18 ; 18 >
+    au < expected ; 2022 ; World Journal of Engineering Volume 19 ; 19 >
 
   }
 
