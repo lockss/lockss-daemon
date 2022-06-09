@@ -429,8 +429,10 @@ public class SimulatedContentGenerator {
    * Deletes the generated content tree.
    */
   public void deleteContentTree() {
-    logger.debug("deleting " + contentRoot);
-    FileUtil.delTree(new File(contentRoot));
+    if (!Boolean.getBoolean("org.lockss.keepTempFiles")) {
+      logger.debug("deleting " + contentRoot);
+      FileUtil.delTree(new File(contentRoot));
+    }
   }
   /**
    * Generates a content tree using the current parameters.  Depth of 0 is

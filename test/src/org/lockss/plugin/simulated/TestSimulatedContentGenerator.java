@@ -420,7 +420,7 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
     scgen.generateContentTree();
     assertTrue(scgen.isContentTree());
     scgen.deleteContentTree();
-    assertFalse(scgen.isContentTree());
+    assertEquals(isKeepTempFiles(), scgen.isContentTree());
   }
 
   private void makeFile(File file, String content) throws Exception {

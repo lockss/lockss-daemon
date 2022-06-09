@@ -412,7 +412,7 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit
 	    gen.getAbnormalBranchString().equals(scgen.getAbnormalBranchString()) &&
 	    gen.getAbnormalFileNumber() == scgen.getAbnormalFileNumber())) {
 	scgen = gen;
-	resetContentTree();
+        resetContentTree();
       } else if (scgen != null && !scgen.isContentTree()) {
 	simRoot = scgen.generateContentTree();
       }

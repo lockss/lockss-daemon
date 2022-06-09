@@ -39,6 +39,8 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 import org.lockss.util.*;
+import org.lockss.util.urlconn.CacheException;
+import org.lockss.util.urlconn.HttpResultMap;
 import org.lockss.test.*;
 
 /**
@@ -407,6 +409,16 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
 // 			      "never/happens");
     log.debug("DefaultArticleMimeType is " + ret);
     return ret;
+  }
+
+  /** When fetching from simulated content, FileNotFoundException
+   * exception should be treated like 404 */
+  @Override
+  protected void initResultMap() throws PluginException.InvalidDefinition {
+    HttpResultMap hResultMap = new HttpResultMap();
+    hResultMap.storeMapEntry(java.io.FileNotFoundException.class,
+                            CacheException.NoRetryDeadLinkException.class);
+    resultMap = hResultMap;
   }
 
   // SimulatedPlugin methods, not part of Plugin interface

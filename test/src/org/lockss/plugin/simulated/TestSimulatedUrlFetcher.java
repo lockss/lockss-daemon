@@ -136,7 +136,7 @@ public class TestSimulatedUrlFetcher extends LockssTestCase {
     String testStr = "http://www.example.com/branch1";
     SimulatedUrlFetcher suf = new SimulatedUrlFetcher(mcf, testStr, tempDirPath);
     String cont = StringUtil.fromInputStream(suf.getUncachedInputStream());
-    assertMatchesRE("<A HREF=\"branch1/index.html\">", cont);
+    assertMatchesRE("In " + suf, "<A HREF=\"branch1/index.html\">", cont);
   }
 
 

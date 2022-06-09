@@ -90,9 +90,20 @@ public class SimulatedUrlFetcher extends BaseUrlFetcher {
     return scgen;
   }
 
-  // overrides base behavior to get local file
+  // overrides base behavior to get local file.  BaseUrlFetcher maps
+  // exceptions below this method, so we must do it here.
   @Override
   protected InputStream getUncachedInputStreamOnly(String lastModified)
+      throws IOException {
+    try {
+      return getUncachedInputStreamOnly0(lastModified);
+    } catch (IOException ex) {
+      log.debug2("openConnection: " + ex);
+      throw resultMap.mapException(au, getUrl(), ex, null);
+    }
+  }
+
+  private InputStream getUncachedInputStreamOnly0(String lastModified)
       throws IOException {
     pauseBeforeFetch();
     if (getUrl().indexOf("xxxfail") > 0) {
@@ -185,6 +196,10 @@ public class SimulatedUrlFetcher extends BaseUrlFetcher {
 
   private String mapUrlToContentFileName() {
     return ((SimulatedArchivalUnit) au).mapUrlToContentFileName(fetchUrl);
+  }
+
+  public String toString() {
+    return "[SUF: " + contentFile + "]";
   }
 
 }
