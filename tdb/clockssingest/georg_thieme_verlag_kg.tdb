@@ -5777,9 +5777,9 @@
     comment[years] = 1987-2001
     comment[title] = doi does not match the AUs below
 
-    au < testing ; exists ; 1987 ; 1987 ; Perspectives in Plastic Surgery Volume 1 ; 1 ; >
-    au < testing ; exists ; 1988 ; 1988 ; Perspectives in Plastic Surgery Volume 2 ; 2 ; >
-    au < testing ; exists ; 1989 ; 1989 ; Perspectives in Plastic Surgery Volume 3 ; 3 ; >
+    au < notReady ; exists ; 1987 ; 1987 ; Perspectives in Plastic Surgery Volume 1 ; 1 ; > #no  metadata
+    au < notReady ; exists ; 1988 ; 1988 ; Perspectives in Plastic Surgery Volume 2 ; 2 ; > #no  metadata
+    au < notReady ; exists ; 1989 ; 1989 ; Perspectives in Plastic Surgery Volume 3 ; 3 ; > #no  metadata
     au < notReady ; exists ; 1990 ; 1990 ; Perspectives in Plastic Surgery Volume 4 ; 4 ; > #no  metadata
     au < notReady ; exists ; 1991 ; 1991 ; Perspectives in Plastic Surgery Volume 5 ; 5 ; > #no  metadata
     au < notReady ; exists ; 1992 ; 1992 ; Perspectives in Plastic Surgery Volume 6 ; 6 ; > #no  metadata
