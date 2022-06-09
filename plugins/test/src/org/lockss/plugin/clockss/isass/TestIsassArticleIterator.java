@@ -44,12 +44,6 @@ public class TestIsassArticleIterator extends ArticleIteratorTestCase {
     super.setUp();
     String tempDirPath = setUpDiskSpace();
 
-    Properties props = new Properties();
-    props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
-    props.setProperty("org.lockss.plugin.simulated.SimulatedContentGenerator.doZipFile", "true");
-    props.setProperty(FollowLinkCrawler.PARAM_STORE_ARCHIVES, "true");
-    ConfigurationUtil.setCurrentConfigFromProps(props);
-
     au = createAu();
     sau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath));
 
@@ -66,6 +60,8 @@ public class TestIsassArticleIterator extends ArticleIteratorTestCase {
   }
 
   Configuration simAuConfig(String rootPath) {
+    ConfigurationUtil.addFromArgs(SimulatedContentGenerator.CONFIG_PREFIX + "doZipFile", 
+                                  "true");
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("root", rootPath);
     conf.put(BASE_URL_KEY, BASE_URL);
@@ -95,8 +91,6 @@ public class TestIsassArticleIterator extends ArticleIteratorTestCase {
   public void testCreateArticleFiles() throws Exception {
     // 1 depth, 4 branches, 5 files, but removing some later in test
 
-    sau.setExploderPattern(".zip$");
-    sau.setExploderHelper(new FuncZipExploder.MyExploderHelper("bad"));
     PluginTestUtil.crawlSimAu(sau);
     /*
      *  Go through the simulated content you just crawled and modify the results to emulate
