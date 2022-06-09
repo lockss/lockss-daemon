@@ -1,29 +1,17 @@
 package org.lockss.plugin.clockss.isass;
 
-import org.lockss.app.LockssApp;
-import org.lockss.app.LockssDaemon;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
-import org.lockss.crawler.Exploder;
-import org.lockss.crawler.FollowLinkCrawler;
-import org.lockss.crawler.FuncZipExploder;
 import org.lockss.daemon.ConfigParamDescr;
-import org.lockss.extractor.ArticleMetadataExtractor;
-import org.lockss.extractor.FileMetadataExtractor;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.SimulatedArchivalUnit;
 import org.lockss.plugin.simulated.SimulatedContentGenerator;
 import org.lockss.test.ArticleIteratorTestCase;
 import org.lockss.test.ConfigurationUtil;
-import org.lockss.util.CIProperties;
 
-import java.io.File;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.Iterator;
-import java.util.Properties;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class TestIsassArticleIterator extends ArticleIteratorTestCase {
@@ -79,51 +67,46 @@ public class TestIsassArticleIterator extends ArticleIteratorTestCase {
     SubTreeArticleIterator artIter = createSubTreeIter();
     Pattern pat = getPattern(artIter);
 
-    assertNotMatchesRE(pat, "http://clockss-ingest.lockss.org/sourcefiles/ijssurgery-released/SPECIAL_DELIVERY_ijss_25_3_2022.zip!/ijss_11_2.pdf.zip/IJSS-11-14444-4009.pdf");
+    // Should match these
+    // new pattern
     assertMatchesRE(pat, "http://clockss-ingest.lockss.org/sourcefiles/ijssurgery-released/2016/SPECIAL_DELIVERY_ijss_25_3_2022.zip!/ijss_11_2.xml.zip/IJSS-11-14444-4009.xml");
+    // old pattern
     assertMatchesRE(pat, "http://clockss-ingest.lockss.org/sourcefiles/ijssurgery-released/2016/IJSS-1-01.zip!/IJSS-1-2006-0002-RR.xml");
+
+    // Should NOT match these
+    // new pattern pdf
+    assertNotMatchesRE(pat, "http://clockss-ingest.lockss.org/sourcefiles/ijssurgery-released/SPECIAL_DELIVERY_ijss_25_3_2022.zip!/ijss_11_2.pdf.zip/IJSS-11-14444-4009.pdf");
+    // old pattern pdf
     assertNotMatchesRE(pat, "http://clockss-ingest.lockss.org/sourcefiles/ijssurgery-released/2016/IJSS-1-01.zip!/IJSS-1-2006-0002-RR.pdf");
+    // new pattern non-article xml
     assertNotMatchesRE(pat, "https://clockss-test.lockss.org/sourcefiles/ijssurgery-released/2022/Archive%20for%20CLOCKSS/SPECIAL_DELIVERY_ijss_25_3_2022.zip!/ijss_15_6.peripherals.zip/meta_issue.xml");
   }
 
 
 
   public void testCreateArticleFiles() throws Exception {
-    // 1 depth, 4 branches, 5 files, but removing some later in test
-
     PluginTestUtil.crawlSimAu(sau);
     /*
      *  Go through the simulated content you just crawled and modify the results to emulate
      *  what you would find in a "real" crawl with this plugin:
-     *  <base_url>/48/<page#>/2011/art#file.{html, pdf & ris}
     */
+    // xml old and new
+    // BASE_URL + YEAR + "/IJSS-1-01.zip!/IJSS-1-2006-0002-RR.xml",
     String pat1 = "branch(\\d+)/(\\d+file)\\.xml";
-    String rep1 = YEAR + "/directory.zip/$2.xml";
-    //PluginTestUtil.copyAu(sau, au, ".*\\.xml", pat1, rep1);
-    String pat3 = "branch(\\d+)/branch(\\d+)/(\\d+file)\\.xml";
-    String rep3 = YEAR + "/DIR/Dir2.zip/ISSAJ-$1$2.xml.zip/$3.xml";
-    //PluginTestUtil.copyAu(sau, au, ".*\\.xml", pat3, rep3);
-    String pat2 = "branch(\\d+)/(\\d+file)\\.pdf";
-    String rep2 = YEAR + "/directory.zip/$2.pdf";
-    //PluginTestUtil.copyAu(sau, au, ".*\\.pdf$", pat2, rep2);
+    String rep1 = YEAR + "/IJSS-$1.zip!/IJSS-$1-" + YEAR + "-$2.xml";
+    PluginTestUtil.copyAu(sau, au, ".*\\.xml", pat1, rep1);
+    // BASE_URL + YEAR + "/Archive%20for%20CLOCKSS/SPECIAL_DELIVERY_ijss_25_3_2022.zip!/ijss_11_1.xml.zip/IJSS-11-14444-4001.xml",
+    String pat2 = "branch(\\d+)/branch(\\d+)/(\\d+file)\\.xml";
+    String rep2 = YEAR + "/Archive%20for%20CLOCKSS/DELIVERY_ijss_" + YEAR + ".zip!/ijss_$1_$2.xml.zip/IJSS-$1-$3.xml";
+    PluginTestUtil.copyAu(sau, au, ".*\\.xml", pat2, rep2);
+    // pdf old and new
+    // BASE_URL + YEAR + "/IJSS-1-01.zip!/IJSS-1-2006-0002-RR.pdf",
+    String pat3 = "branch(\\d+)/(\\d+file)\\.pdf";
+    String rep3 = YEAR + "/IJSS-$1.zip!/IJSS-$1-" + YEAR + "-$2.pdf";
+    PluginTestUtil.copyAu(sau, au, ".*\\.pdf$", pat3, rep3);
     String pat4 = "branch(\\d+)/branch(\\d+)/(\\d+file)\\.pdf";
-    String rep4 = YEAR + "/DIR/Dir2.zip!/ISSAJ-$1$2.pdf.zip/$3.pdf";
-    //PluginTestUtil.copyAu(sau, au, ".*\\.pdf", pat4, rep4);
-
-    // Remove some of the URLs just created to make test more robust
-    // Remove files art1file.html and art2file.ris in each branch (and there are 4 branches)
-    // Remove art3file.pdf in only one of the branches
-    for (String url : Arrays.asList(
-        BASE_URL + YEAR + "/IJSS-1-01.zip!/IJSS-1-2006-0002-RR.xml",
-        BASE_URL + YEAR + "/IJSS-1-01.zip!/IJSS-1-2006-0002-RR.pdf",
-        BASE_URL + YEAR + "/IJSS-1-01.zip!/IJSS-1-2006-0004-RR.pdf",
-        BASE_URL + YEAR + "/IJSS-1-01.zip!/IJSS-1-2006-0004-RR.xml",
-        BASE_URL + YEAR + "/Archive%20for%20CLOCKSS/SPECIAL_DELIVERY_ijss_25_3_2022.zip!/ijss_11_1.xml.zip/IJSS-11-14444-4001.xml",
-        BASE_URL + YEAR + "/Archive%20for%20CLOCKSS/SPECIAL_DELIVERY_ijss_25_3_2022.zip!/ijss_15_6.peripherals.zip/meta_issue.xml"
-      )) {
-
-      CachedUrl cu = au.makeCachedUrl(url);
-    }
+    String rep4 = YEAR + "/Archive%20for%20CLOCKSS/DELIVERY_ijss_" + YEAR + ".zip!/ijss_$1_$2.pdf.zip/IJSS-$1-$3.pdf";
+    PluginTestUtil.copyAu(sau, au, ".*\\.pdf", pat4, rep4);
 
     for (CachedUrl cu : AuUtil.getCuIterable(au)) {
       String url = cu.getUrl();
