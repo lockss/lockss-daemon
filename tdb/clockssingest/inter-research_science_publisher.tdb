@@ -62,7 +62,7 @@
       au < manifest ; exists ; 2017 ; 2017 ; 123-127 ; Diseases of Aquatic Organisms Volume 2017 ; >
       au < manifest ; exists ; 2018 ; 2018 ; 128-132 ; Diseases of Aquatic Organisms Volume 2018 ; >
       au < manifest ; exists ; 2019 ; 2019 ; 133-137 ; Diseases of Aquatic Organisms Volume 2019 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; 138-142 ; Diseases of Aquatic Organisms Volume 2020 ; >
+      au < testing ; exists ; 2020 ; 2020 ; 138-142 ; Diseases of Aquatic Organisms Volume 2020 ; >
       au < crawling ; exists ; 2021 ; 2021 ; 143-147 ; Diseases of Aquatic Organisms Volume 2021 ; >
       au < expected ; exists ; 2022 ; 2022 ; 148-152 ; Diseases of Aquatic Organisms Volume 2022 ; >
 
@@ -88,7 +88,7 @@
       au < manifest ; exists ; 2017 ; 2017 ; 70-73 ; Climate Research Volume 2017 ; >
       au < manifest ; exists ; 2018 ; 2018 ; 74-77 ; Climate Research Volume 2018 ; >
       au < crawling ; exists ; 2019 ; 2019 ; 78-80 ; Climate Research Volume 2019 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; 81-83 ; Climate Research Volume 2020 ; >
+      au < testing ; exists ; 2020 ; 2020 ; 81-83 ; Climate Research Volume 2020 ; >
       au < crawling ; exists ; 2021 ; 2021 ; 84-86 ; Climate Research Volume 2021 ; >
       au < expected ; exists ; 2022 ; 2022 ; 87-89 ; Climate Research Volume 2022 ; >
 
@@ -140,7 +140,7 @@
       au < manifest ; exists ; 2017 ; 2017 ; 17 ; Ethics in Science and Enviromental Politics Volume 2017 ; >
       au < manifest ; exists ; 2018 ; 2018 ; 18 ; Ethics in Science and Enviromental Politics Volume 2018 ; >
       au < crawling ; exists ; 2019 ; 2019 ; 19 ; Ethics in Science and Enviromental Politics Volume 2019 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; 20 ; Ethics in Science and Enviromental Politics Volume 2020 ; >
+      au < testing ; exists ; 2020 ; 2020 ; 20 ; Ethics in Science and Enviromental Politics Volume 2020 ; >
       au < crawling ; exists ; 2021 ; 2021 ; 21 ; Ethics in Science and Enviromental Politics Volume 2021 ; >
       au < expected ; exists ; 2022 ; 2022 ; 22 ; Ethics in Science and Enviromental Politics Volume 2022 ; >
 
@@ -166,7 +166,7 @@
       au < manifest ; exists ; 2017 ; 2017 ; 32-34 ; Endangered Species Research Volume 2017 ; ># extra string "tooltip". Does not pass manifest page checker.
       au < manifest ; exists ; 2018 ; 2018 ; 35-37 ; Endangered Species Research Volume 2018 ; >
       au < crawling ; exists ; 2019 ; 2019 ; 38-40 ; Endangered Species Research Volume 2019 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; 41-43 ; Endangered Species Research Volume 2020 ; >
+      au < testing ; exists ; 2020 ; 2020 ; 41-43 ; Endangered Species Research Volume 2020 ; >
       au < crawling ; exists ; 2021 ; 2021 ; 44-46 ; Endangered Species Research Volume 2021 ; >
       au < expected ; exists ; 2022 ; 2022 ; 47-49 ; Endangered Species Research Volume 2022 ; >
 
@@ -192,7 +192,7 @@
       au < manifest ; exists ; 2017 ; 2017 ; 26 ; Aquatic Biology Volume 2017 ; >
       au < manifest ; exists ; 2018 ; 2018 ; 27 ; Aquatic Biology Volume 2018 ; >
       au < manifest ; exists ; 2019 ; 2019 ; 28 ; Aquatic Biology Volume 2019 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; 29 ; Aquatic Biology Volume 2020 ; >
+      au < testing ; exists ; 2020 ; 2020 ; 29 ; Aquatic Biology Volume 2020 ; >
       au < crawling ; exists ; 2021 ; 2021 ; 30 ; Aquatic Biology Volume 2021 ; >
       au < expected ; exists ; 2022 ; 2022 ; 31 ; Aquatic Biology Volume 2022 ; >
 
