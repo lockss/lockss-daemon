@@ -48,8 +48,9 @@ public class TestIsassArticleIterator extends ArticleIteratorTestCase {
   }
 
   Configuration simAuConfig(String rootPath) {
-    ConfigurationUtil.addFromArgs(SimulatedContentGenerator.CONFIG_PREFIX + "doZipFile", 
-                                  "true");
+    ConfigurationUtil.addFromArgs(
+        SimulatedContentGenerator.CONFIG_PREFIX + "doZipFile",
+        "true");
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("root", rootPath);
     conf.put(BASE_URL_KEY, BASE_URL);
@@ -92,25 +93,25 @@ public class TestIsassArticleIterator extends ArticleIteratorTestCase {
     */
     // xml old and new
     // BASE_URL + YEAR + "/IJSS-1-01.zip!/IJSS-1-2006-0002-RR.xml",
-    String pat1 = "branch(\\d+)/(\\d+file)\\.xml";
+    String pat1 = "content.zip!/branch(\\d+)/(\\d+file)\\.xml";
     String rep1 = YEAR + "/IJSS-$1.zip!/IJSS-$1-" + YEAR + "-$2.xml";
-    PluginTestUtil.copyAu(sau, au, ".*\\.xml", pat1, rep1);
+    PluginTestUtil.copyAu(sau, au, ".*\\.zip", pat1, rep1);
     // BASE_URL + YEAR + "/Archive%20for%20CLOCKSS/SPECIAL_DELIVERY_ijss_25_3_2022.zip!/ijss_11_1.xml.zip/IJSS-11-14444-4001.xml",
-    String pat2 = "branch(\\d+)/branch(\\d+)/(\\d+file)\\.xml";
+    String pat2 = "content.zip!/branch(\\d+)/branch(\\d+)/(\\d+file)\\.xml";
     String rep2 = YEAR + "/Archive%20for%20CLOCKSS/DELIVERY_ijss_" + YEAR + ".zip!/ijss_$1_$2.xml.zip/IJSS-$1-$3.xml";
-    PluginTestUtil.copyAu(sau, au, ".*\\.xml", pat2, rep2);
+    PluginTestUtil.copyAu(sau, au, ".*\\.zip", pat2, rep2);
     // pdf old and new
     // BASE_URL + YEAR + "/IJSS-1-01.zip!/IJSS-1-2006-0002-RR.pdf",
-    String pat3 = "branch(\\d+)/(\\d+file)\\.pdf";
+    String pat3 = "content.zip!/branch(\\d+)/(\\d+file)\\.pdf";
     String rep3 = YEAR + "/IJSS-$1.zip!/IJSS-$1-" + YEAR + "-$2.pdf";
-    PluginTestUtil.copyAu(sau, au, ".*\\.pdf$", pat3, rep3);
-    String pat4 = "branch(\\d+)/branch(\\d+)/(\\d+file)\\.pdf";
+    PluginTestUtil.copyAu(sau, au, ".*\\.zip", pat3, rep3);
+    String pat4 = "content.zip!/branch(\\d+)/branch(\\d+)/(\\d+file)\\.pdf";
     String rep4 = YEAR + "/Archive%20for%20CLOCKSS/DELIVERY_ijss_" + YEAR + ".zip!/ijss_$1_$2.pdf.zip/IJSS-$1-$3.pdf";
-    PluginTestUtil.copyAu(sau, au, ".*\\.pdf", pat4, rep4);
+    PluginTestUtil.copyAu(sau, au, ".*\\.zip", pat4, rep4);
 
     for (CachedUrl cu : AuUtil.getCuIterable(au)) {
       String url = cu.getUrl();
-      log.info(url);
+      log.info("cu!: " + url);
     }
     Iterator<ArticleFiles> it = au.getArticleIterator(MetadataTarget.Any());
     int count = 0;
@@ -118,7 +119,7 @@ public class TestIsassArticleIterator extends ArticleIteratorTestCase {
     int countMetadata = 0;
     while (it.hasNext()) {
       ArticleFiles af = it.next();
-      log.info(af.toString());
+      log.info("Af: " + af.toString());
       count ++;
       CachedUrl cu = af.getFullTextCu();
       if ( cu != null) {
@@ -142,8 +143,4 @@ public class TestIsassArticleIterator extends ArticleIteratorTestCase {
     assertEquals(13, countMetadata); // if you have an articlefiles and either ris or abstract
   }
 
-  private void deleteBlock(CachedUrl cu) throws IOException {
-    log.info("deleting " + cu.getUrl());
-    cu.delete();
-  }
 }

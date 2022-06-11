@@ -30,9 +30,15 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin;
 
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.*;
 import java.util.regex.*;
 import java.lang.reflect.*;
+import java.util.zip.*;
+
+import org.apache.commons.io.IOUtils;
 import org.lockss.test.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.simulated.*;
@@ -295,6 +301,7 @@ public class PluginTestUtil {
       try {
         String fromUrl = cu.getUrl();
         String toUrl = fromUrl;
+
         if (ifMatchPat != null) {
           Matcher mat = ifMatchPat.matcher(fromUrl);
           if (!mat.find()) {
@@ -302,18 +309,24 @@ public class PluginTestUtil {
             continue;
           }
         }
-        if (pattern != null) {
-          Matcher mat = pattern.matcher(fromUrl);
-          toUrl = mat.replaceAll(rep);
+        if (fromUrl.endsWith(".zip")) {
+          log.info("doing zip copy");
+          zipCopy(cu, toAu, fromUrl + "!/", pattern, rep);
+        } else {
+          if (pattern != null) {
+            Matcher mat = pattern.matcher(fromUrl);
+            toUrl = mat.replaceAll(rep);
+          }
+          CIProperties props = cu.getProperties();
+          if (props == null) {
+            log.debug3("in copyCus() props was null for url: " + fromUrl);
+          }
+          UrlCacher uc = toAu.makeUrlCacher(
+              new UrlData(cu.getUnfilteredInputStream(), props, toUrl));
+          uc.storeContent();
         }
-        CIProperties props = cu.getProperties();
-        if (props == null) {
-        }
-        UrlCacher uc = toAu.makeUrlCacher(
-            new UrlData(cu.getUnfilteredInputStream(), props, toUrl));
-        uc.storeContent();
         if (!toUrl.equals(fromUrl)) {
-          log.debug2("Copied " + fromUrl + " to " + toUrl);
+          log.info("Copied " + fromUrl + " to " + toUrl);
         } else {
           log.debug2("Copied " + fromUrl);
         }
@@ -326,6 +339,86 @@ public class PluginTestUtil {
     }
     return res;
   }
+
+  /*
+   Use the normal iterator, invoking a new zipCopy() method to open and
+   iterate through each zip it encounters.  Then it doesn't have to keep
+   track of anything, just open a temp output zip whenever it starts
+   processing an input zip, and close and store when it gets to the end.
+   Nested zips are easy - just call zipCopy() recursively.  (The store
+   operation actually wants to be handled by zipCopy()'s caller, as at
+   top level "store" means use a UrlCacher, but in nested zips it means
+   write a zip member.  (This is all easy using ZipFile).
+   */
+  public static void zipCopy(CachedUrl cu, ArchivalUnit toAu, String zipUrl,
+                             Pattern pattern, String rep)
+    throws IOException {
+    boolean doCache = false;
+    String toUrl = ""; String toFile; String zippedFile; String fromFile;
+    ZipInputStream zis = null;
+    ZipOutputStream zos;
+    try {
+      log.info("first 4: " + StringUtil.fromInputStream(cu.getUnfilteredInputStream()).substring(0, 4));
+      zis = new ZipInputStream(cu.getUnfilteredInputStream());
+      log.info(" cu content size: " + cu.getContentSize());
+      zos = new ZipOutputStream(Files.newOutputStream(
+          Paths.get(cu.getArchivalUnit().getProperties().getString("root") +
+              "temp.zip")));
+      zos.setMethod(ZipOutputStream.DEFLATED);
+      zos.setLevel(Deflater.BEST_COMPRESSION);
+      ZipEntry entry;
+
+      while ((entry = zis.getNextEntry()) != null) {
+        if (entry.isDirectory()) {
+          continue;
+        } else if (entry.getName().endsWith(".zip") ) {
+          // zipCopy(cu, toAu, zipUrl + );
+          // TODO
+        }
+        fromFile = entry.getName();
+        zippedFile = zipUrl + fromFile;
+        toUrl = zippedFile;
+        if (pattern != null) {
+          Matcher mat = pattern.matcher(zippedFile);
+          toUrl = mat.replaceAll(rep);
+        }
+        //if (toUrl != zippedFile) {
+        doCache = true;
+        toFile = toUrl.split("!/")[1];
+        //log.info("Copying: " + zippedFile + " to " + toUrl);
+        ZipEntry outEntry = new ZipEntry(toFile);
+        if (entry.getSize() != -1) {
+          log.info("entry size was not -1");
+          outEntry.setSize(entry.getSize());
+        } else {
+        }
+        zos.putNextEntry(outEntry);
+        StreamUtil.copy(zis, zos);
+        zos.closeEntry();
+        //}
+      }
+      zos.close();
+      if (doCache) {
+        FileInputStream is = new FileInputStream(new File(
+            cu.getArchivalUnit().getProperties().getString("root"),
+            "temp.zip"));
+        // save all the copied zip entries to a new zip on the toAu
+        String outZip = toUrl.split("!/")[0];
+        CIProperties props = cu.getProperties();
+        if (props == null) {
+          log.debug3("in copyCus() props was null for url: " + cu.getUrl());
+        }
+        log.info("Storing new cu: " + outZip);
+        UrlCacher uc = toAu.makeUrlCacher(
+            new UrlData(is, props, outZip));
+        uc.storeContent();
+        is.close();
+      }
+    } finally {
+      IOUtil.safeClose(zis);
+    }
+  }
+
 
   public static List<String> urlsOf(final Iterable<CachedUrl> cus) {
     return new ArrayList<String>() {{
