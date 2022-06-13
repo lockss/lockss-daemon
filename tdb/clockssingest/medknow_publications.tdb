@@ -520,7 +520,7 @@
 
     param[journal_issn] = 2349-2422
 
-    au < manifest ; exists ; 2017 ; AYUHOM Volume 4 ; 2017 ; 4 ; https://www.ayuhom.com/ ; ; >
+    au < notReady ; exists ; 2017 ; AYUHOM Volume 4 ; 2017 ; 4 ; https://www.ayuhom.com/ ; ; > #500 error
     au < crawling ; exists ; 2018 ; AYUHOM Volume 5 ; 2018 ; 5 ; https://www.ayuhom.com/ ; ; >
     au < crawling ; exists ; 2019 ; AYUHOM Volume 6 ; 2019 ; 6 ; https://www.ayuhom.com/ ; ; >
     au < crawling ; exists ; 2020 ; AYUHOM Volume 7 ; 2020 ; 7 ; https://www.ayuhom.com/ ; ; >
@@ -4790,7 +4790,7 @@
     au < manifest ; exists ; 2008 ; World Journal of Nuclear Medicine Volume 7 ; 2008 ; 7 ; https://www.wjnm.org/ ; ; >
     au < manifest ; exists ; 2009 ; World Journal of Nuclear Medicine Volume 8 ; 2009 ; 8 ; https://www.wjnm.org/ ; ; >
     au < doesNotExist ; doesNotExist ; 2010 ; World Journal of Nuclear Medicine Volume 9 ; 2010 ; 9 ; https://www.wjnm.org/ ; ; >
-    au < manifest ; exists ; 2011 ; World Journal of Nuclear Medicine Volume 10 ; 2011 ; 10 ; https://www.wjnm.org/ ; ; >
+    au < notReady ; exists ; 2011 ; World Journal of Nuclear Medicine Volume 10 ; 2011 ; 10 ; https://www.wjnm.org/ ; ; > #500 error
     au < finished ; finished ; 2012 ; World Journal of Nuclear Medicine Volume 11 ; 2012 ; 11 ; http://www.wjnm.org/ ; ; >
     au < finished ; frozen ; 2013 ; World Journal of Nuclear Medicine Volume 12 ; 2013 ; 12 ; http://www.wjnm.org/ ; ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2014 ; World Journal of Nuclear Medicine Volume 13 ; 2014 ; 13 ; http://www.wjnm.org/ ; ; reingest5.clockss.org:8082 >
@@ -5957,9 +5957,9 @@
       au < notReady ; exists ; 2016 ; Genome Integrity Volume 7 ; 2016 ; 7 ; https://www.genome-integrity.org/ ; ; > #500 Internal Server error. http://www.genome-integrity.org/showbackIssue.asp?issn=2041-9414;year=2016;volume=7;issue=1
       au < notReady ; exists ; 2017 ; Genome Integrity Volume 8 ; 2017 ; 8 ; https://www.genome-integrity.org/ ; ; > #500 Internal Server error.
       au < notReady ; exists ; 2018 ; Genome Integrity Volume 9 ; 2018 ; 9 ; https://www.genome-integrity.org/ ; ; > #500 Internal Server error.
-      au < manifest ; exists ; 2019 ; Genome Integrity Volume 10 ; 2019 ; 10 ; https://www.genome-integrity.org/ ; ; >
-      au < manifest ; exists ; 2020 ; Genome Integrity Volume 11 ; 2020 ; 11 ; https://www.genome-integrity.org/ ; ; >
-      au < manifest ; exists ; 2021 ; Genome Integrity Volume 12 ; 2021 ; 12 ; https://www.genome-integrity.org/ ; ; >
+      au < notReady ; exists ; 2019 ; Genome Integrity Volume 10 ; 2019 ; 10 ; https://www.genome-integrity.org/ ; ; > #500 Error
+      au < notReady ; exists ; 2020 ; Genome Integrity Volume 11 ; 2020 ; 11 ; https://www.genome-integrity.org/ ; ; > #500 Error
+      au < notReady ; exists ; 2021 ; Genome Integrity Volume 12 ; 2021 ; 12 ; https://www.genome-integrity.org/ ; ; > #500 Error
       au < manifest ; exists ; 2022 ; Genome Integrity Volume 13 ; 2022 ; 13 ; https://www.genome-integrity.org/ ; ; >
 
   }
@@ -6480,7 +6480,7 @@
       au < crawling ; exists ; 2018 ; International Journal of Environmental Health Engineering Volume 7 ; 2018 ; 7 ; https://www.ijehe.org/ ; ; >
       au < crawling ; exists ; 2019 ; International Journal of Environmental Health Engineering Volume 8 ; 2019 ; 8 ; https://www.ijehe.org/ ; ; >
       au < crawling ; exists ; 2020 ; International Journal of Environmental Health Engineering Volume 9 ; 2020 ; 9 ; https://www.ijehe.org/ ; ; >
-      au < manifest ; exists ; 2021 ; International Journal of Environmental Health Engineering Volume 10 ; 2021 ; 10 ; https://www.ijehe.org/ ; ; >
+      au < notReady ; exists ; 2021 ; International Journal of Environmental Health Engineering Volume 10 ; 2021 ; 10 ; https://www.ijehe.org/ ; ; > #500 error
 
   }
 
@@ -7855,7 +7855,7 @@
       au < finished ; crawling ; 2018 ; Kasr Al Ainy Medical Journal Volume 24 ; 2018 ; 24 ; http://www.kamj.eg.net/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; Kasr Al Ainy Medical Journal Volume 25 ; 2019 ; 25 ; https://www.kamj.eg.net/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Kasr Al Ainy Medical Journal Volume 26 ; 2020 ; 26 ; https://www.kamj.eg.net/ ; ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 2021 ; Kasr Al Ainy Medical Journal Volume 27 ; 2021 ; 27 ; https://www.kamj.eg.net/ ; ; >
+      au < ready ; exists ; 2021 ; Kasr Al Ainy Medical Journal Volume 27 ; 2021 ; 27 ; https://www.kamj.eg.net/ ; ; >
       au < expected ; exists ; 2022 ; Kasr Al Ainy Medical Journal Volume 28 ; 2022 ; 28 ; https://www.kamj.eg.net/ ; ; >
 
   }
@@ -9892,7 +9892,7 @@
       param[journal_issn] = 2277-9019
 #      param[base_url] = http://www.ijrconline.org/
 
-      au < manifest ; exists ; 2012 ; Indian Journal of Respiratory Care Volume 1 ; 2012 ; 1 ; https://www.ijrc.in/ ; ; >
+      au < ready ; exists ; 2012 ; Indian Journal of Respiratory Care Volume 1 ; 2012 ; 1 ; https://www.ijrc.in/ ; ; >
       au < crawling ; exists ; 2013 ; Indian Journal of Respiratory Care Volume 2 ; 2013 ; 2 ; https://www.ijrc.in/ ; ; >
       au < crawling ; exists ; 2014 ; Indian Journal of Respiratory Care Volume 3 ; 2014 ; 3 ; https://www.ijrc.in/ ; ; >
       au < crawling ; exists ; 2015 ; Indian Journal of Respiratory Care Volume 4 ; 2015 ; 4 ; https://www.ijrc.in/ ; ; >
@@ -10031,16 +10031,16 @@
 
       param[journal_issn] = 2319-1775
 
-      au < manifest ; exists ; 2012 ; International Journal of Food and Nutritional Sciences Volume 1 ; 2012 ; 1 ; https://www.ijfans.org/ ; ; >
-      au < manifest ; exists ; 2013 ; International Journal of Food and Nutritional Sciences Volume 2 ; 2013 ; 2 ; https://www.ijfans.org/ ; ; >
-      au < manifest ; exists ; 2014 ; International Journal of Food and Nutritional Sciences Volume 3 ; 2014 ; 3 ; https://www.ijfans.org/ ; ; >
-      au < notReady ; exists ; 2015 ; International Journal of Food and Nutritional Sciences Volume 4 ; 2015 ; 4 ; https://www.ijfans.org/ ; ; > #500
-      au < notReady ; exists ; 2016 ; International Journal of Food and Nutritional Sciences Volume 5 ; 2016 ; 5 ; https://www.ijfans.org/ ; ; > #500
-      au < notReady ; exists ; 2017 ; International Journal of Food and Nutritional Sciences Volume 6 ; 2017 ; 6 ; https://www.ijfans.org/ ; ; > #500
-      au < notReady ; exists ; 2018 ; International Journal of Food and Nutritional Sciences Volume 7 ; 2018 ; 7 ; https://www.ijfans.org/ ; ; > #500
-      au < notReady ; exists ; 2019 ; International Journal of Food and Nutritional Sciences Volume 8 ; 2019 ; 8 ; https://www.ijfans.org/ ; ; > #500 error https://www.ijfans.org/article.asp?issn=2319-1775;year=2019;volume=8;issue=4;spage=1;epage=6;aulast=Ugale;type=2
-      au < crawling ; exists ; 2020 ; International Journal of Food and Nutritional Sciences Volume 9 ; 2020 ; 9 ; https://www.ijfans.org/ ; ; >
-      au < crawling ; exists ; 2021 ; International Journal of Food and Nutritional Sciences Volume 10 ; 2021 ; 10 ; https://www.ijfans.org/ ; ; >
+      au < doNotProcess ; exists ; 2012 ; International Journal of Food and Nutritional Sciences Volume 1 ; 2012 ; 1 ; https://www.ijfans.org/ ; ; >
+      au < doNotProcess ; exists ; 2013 ; International Journal of Food and Nutritional Sciences Volume 2 ; 2013 ; 2 ; https://www.ijfans.org/ ; ; >
+      au < doNotProcess ; exists ; 2014 ; International Journal of Food and Nutritional Sciences Volume 3 ; 2014 ; 3 ; https://www.ijfans.org/ ; ; >
+      au < doNotProcess ; exists ; 2015 ; International Journal of Food and Nutritional Sciences Volume 4 ; 2015 ; 4 ; https://www.ijfans.org/ ; ; > #500
+      au < doNotProcess ; exists ; 2016 ; International Journal of Food and Nutritional Sciences Volume 5 ; 2016 ; 5 ; https://www.ijfans.org/ ; ; > #500
+      au < doNotProcess ; exists ; 2017 ; International Journal of Food and Nutritional Sciences Volume 6 ; 2017 ; 6 ; https://www.ijfans.org/ ; ; > #500
+      au < doNotProcess ; exists ; 2018 ; International Journal of Food and Nutritional Sciences Volume 7 ; 2018 ; 7 ; https://www.ijfans.org/ ; ; > #500
+      au < doNotProcess ; exists ; 2019 ; International Journal of Food and Nutritional Sciences Volume 8 ; 2019 ; 8 ; https://www.ijfans.org/ ; ; > #500 error https://www.ijfans.org/article.asp?issn=2319-1775;year=2019;volume=8;issue=4;spage=1;epage=6;aulast=Ugale;type=2
+      au < frozen ; exists ; 2020 ; International Journal of Food and Nutritional Sciences Volume 9 ; 2020 ; 9 ; https://www.ijfans.org/ ; ; >
+      au < frozen ; exists ; 2021 ; International Journal of Food and Nutritional Sciences Volume 10 ; 2021 ; 10 ; https://www.ijfans.org/ ; ; >
       #deactivated
 
   }
@@ -11261,7 +11261,7 @@
       au < finished ; crawling ; 2018 ; World Journal of Colorectal Surgery Volume 7 ; 2018 ; 7 ; https://www.wjcs.us.com/ ; ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; World Journal of Colorectal Surgery Volume 8 ; 2019 ; 8 ; https://www.wjcs.us.com/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; World Journal of Colorectal Surgery Volume 9 ; 2020 ; 9 ; https://www.wjcs.us.com/ ; ; reingest5.clockss.org:8082 >
-      au < manifest ; exists ; 2021 ; World Journal of Colorectal Surgery Volume 10 ; 2021 ; 10 ; https://www.wjcs.us.com/ ; ; >
+      au < ready ; exists ; 2021 ; World Journal of Colorectal Surgery Volume 10 ; 2021 ; 10 ; https://www.wjcs.us.com/ ; ; >
       au < expected ; exists ; 2022 ; World Journal of Colorectal Surgery Volume 11 ; 2022 ; 11 ; https://www.wjcs.us.com/ ; ; >
 
   }
