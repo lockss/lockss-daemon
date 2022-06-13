@@ -206,7 +206,6 @@
    au < finished ; finished ; 2007 ; 9781560801429 ; 9781560801931 ; 9781560801931 ; Classics of Elastic Wave Theory (9781560801931) ; http://library.seg.org/ ; reingest1.clockss.org:8082 >
    au < zapped ; finished ; 2008 ; 9781560801474 ; 9781560801917 ; 9781560801917 ; Prestack Depth Migration and Velocity Model Building (9781560801917) ; http://library.seg.org/ ; reingest2.clockss.org:8085 >
    au < finished ; frozen ; 2008 ; 9781560801504 ; 9781560801924 ; 9781560801924 ; Seismic Interferometry: History and Present Status (9781560801924) ; http://library.seg.org/ ; reingest1.clockss.org:8082 >
-   au < manifest ; exists ; 2008 ;  9781560801474 ; 9781560801917 ; 9781560801917 ; Prestack Depth Migration and Velocity Model Building (9781560801917) ; https://library.seg.org/ ; >
    au < finished ; finished ; 2012 ; 9781560802907 ; 9781560803089 ; 9781560803089 ; Numerical Modeling of Seismic Wave Propagation: Gridded Two-way Wave-equation Methods (9781560803089) ; http://library.seg.org/ ;  >
    au < finished ; crawling ; 2016 ; 9781560803171 ; 9781560803188 ; 9781560803188 ; Seismic Diffraction (9781560803188) ; https://library.seg.org/ ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2016 ; 9781560803225 ; 9781560803232 ; 9781560803232 ; Classical and Modern Diffraction Theory (9781560803232) ; https://library.seg.org/ ; reingest4.clockss.org:8082 >
@@ -221,20 +220,20 @@
   #series# = iig0464
 
    au < finished ; finished ; 1988 ; 9780931830518 ; 9781560802631 ; 9781560802631 ; Electromagnetic Methods in Applied Geophysics: Volume 1, Theory (9781560802631) ; http://library.seg.org/ ; reingest1.clockss.org:8082 >
-   au < manifest ; exists ; 1990 ; 9781560800002 ; 9781560802785.1 ; 9781560802785.1 ; Geotechnical and Environmental Geophysics: Volume I: Review and Tutorial (9781560802785) ; https://library.seg.org/ ; >
+   au < notReady ; exists ; 1990 ; 9781560800002 ; 9781560802785.1 ; 9781560802785.1 ; Geotechnical and Environmental Geophysics: Volume I: Review and Tutorial (9781560802785) ; https://library.seg.org/ ; > #manifest page does not exist
    au < finished ; finished ; 1990 ;  9781560800019 ; 9781560802785 ; 9781560802785 ; Geotechnical and Environmental Geophysics: Volume II: Environmental and Groundwater (9781560802785.2) ; http://library.seg.org/ ; reingest2.clockss.org:8085 >
-   au < manifest ; exists ; 1990 ; 9781560800026 ; 9781560802785.3 ; 9781560802785.3 ; Geotechnical and Environmental Geophysics: Volume III: Geotechnical (9781560802785.3) ; https://library.seg.org/ ;  >
-   au < finished ; finished ; 1990 ; 9780931830891 ; 9781560802594 ; 9781560802594 ; Induced Polarization Applications and Case Histories (9781560802594) ; http://library.seg.org/ ;  >
-   au < finished ; finished ; 1991 ; 9781560800224 ; 9781560802686 ; 9781560802686 ; Electromagnetic Methods in Applied Geophysics: Volume 2, Application, Parts A and B (9781560802686) ; http://library.seg.org/ ;  >
-   au < finished ; finished ; 1991 ; 9781560800514 ; 9781560802556 ; 9781560802556 ; Multicomponent Seismology in Petroleum Exploration (9781560802556) ; http://library.seg.org/ ;  >
-   au < finished ; finished ; 1993 ; 9781560800590 ; 9781560802624 ; 9781560802624 ; Offset-Dependent Reflectivity-Theory and Practice of AVO Analysis (9781560802624) ; http://library.seg.org/ ;  >
+   au < notReady ; exists ; 1990 ; 9781560800026 ; 9781560802785.3 ; 9781560802785.3 ; Geotechnical and Environmental Geophysics: Volume III: Geotechnical (9781560802785.3) ; https://library.seg.org/ ; > #manifest page does not exist
+   au < finished ; finished ; 1990 ; 9780931830891 ; 9781560802594 ; 9781560802594 ; Induced Polarization Applications and Case Histories (9781560802594) ; http://library.seg.org/ ; >
+   au < finished ; finished ; 1991 ; 9781560800224 ; 9781560802686 ; 9781560802686 ; Electromagnetic Methods in Applied Geophysics: Volume 2, Application, Parts A and B (9781560802686) ; http://library.seg.org/ ; >
+   au < finished ; finished ; 1991 ; 9781560800514 ; 9781560802556 ; 9781560802556 ; Multicomponent Seismology in Petroleum Exploration (9781560802556) ; http://library.seg.org/ ; >
+   au < finished ; finished ; 1993 ; 9781560800590 ; 9781560802624 ; 9781560802624 ; Offset-Dependent Reflectivity-Theory and Practice of AVO Analysis (9781560802624) ; http://library.seg.org/ ; >
    au < finished ; finished ; 2001 ; 9781560800941 ; 9781560801580 ; 9781560801580 ; Seismic Data Analysis: Processing, Inversion, and Interpretation of Seismic Data (9781560801580) ; http://library.seg.org/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2002 ; 9781560801061 ; 9781560802068 ; 9781560802068 ; Magnetotellurics in the Context of the Theory of Ill-Posed Problems (9781560802068) ; http://library.seg.org/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2005 ; 9781560801290 ; 9781560801702 ; 9781560801702 ; Introduction to Petroleum Seismology (9781560801702) ; http://library.seg.org/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2005 ; 9781560801306 ; 9781560801719 ; 9781560801719 ; Near-Surface Geophysics (9781560801719) ; http://library.seg.org/ ;  >
    au < finished ; finished ; 2006 ; 9781560801375 ; 9781560801689 ; 9781560801689 ; 3D Seismic Imaging (9781560801689) ; http://library.seg.org/ ;  >
    au < finished ; finished ; 2010 ; 9781560802167 ; 9781560802174 ; 9781560802174 ; Methods and Applications in Reservoir Geophysics (9781560802174) ; http://library.seg.org/ ; reingest2.clockss.org:8085 >
-   au < finished ; finished ; 2011 ; 9780891813743 ; 9781560802884 ; 9781560802884 ; Interpretation of Three-Dimensional Seismic Data, Seventh edition (9781560802884) ; http://library.seg.org/ ;  >
+   au < finished ; finished ; 2011 ; 9780891813743 ; 9781560802884 ; 9781560802884 ; Interpretation of Three-Dimensional Seismic Data, Seventh edition (9781560802884) ; http://library.seg.org/ ; >
    au < finished ; finished ; 2014 ; 9781560803195 ; 9781560803201 ; 9781560803201 ; AVO (9781560803201) ; http://library.seg.org/ ; reingest5.clockss.org:8082 >
    au < zapped ; finished ; 2015 ; 9781560803294 ; 9781560803300 ; 9781560803300 ; Engineering Seismology with Applications to Geotechnical Engineering (9781560803300) ; http://library.seg.org/ ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 9781560803379 ; 9781560803386 ; 9781560803386 ; Elements of 3D Seismology, Third edition (9781560803386) ; https://library.seg.org/ ; reingest5.clockss.org:8082 >

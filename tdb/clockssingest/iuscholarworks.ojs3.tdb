@@ -937,13 +937,13 @@
 
       param[journal_id] = tmr
 
-      au < manifest ; exists ; 1993 ; 1993 ; The Medieval Review Volume 1993 ; 1 ; >
+      au < notReady ; exists ; 1993 ; 1993 ; The Medieval Review Volume 1993 ; 1 ; > #Failed health check
       au < finished ; crawling ; 1994 ; 1994 ; The Medieval Review Volume 1994 ; 2 ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1995 ; 1995 ; The Medieval Review Volume 1995 ; 3 ; >
+      au < notReady ; exists ; 1995 ; 1995 ; The Medieval Review Volume 1995 ; 3 ; > #500 error
       au < crawling ; exists ; 1996 ; 1996 ; The Medieval Review Volume 1996 ; 4 ; >
-      au < manifest ; exists ; 1997 ; 1997 ; The Medieval Review Volume 1997 ; 5 ; >
+      au < notReady ; exists ; 1997 ; 1997 ; The Medieval Review Volume 1997 ; 5 ; > #500 error
       au < crawling ; exists ; 1998 ; 1998 ; The Medieval Review Volume 1998 ; 6 ; >
-      au < manifest ; exists ; 1999 ; 1999 ; The Medieval Review Volume 1999 ; 7 ; >
+      au < notReady ; exists ; 1999 ; 1999 ; The Medieval Review Volume 1999 ; 7 ; > #500 error
       au < finished ; crawling ; 2000 ; 2000 ; The Medieval Review Volume 2000 ; 8 ; reingest1.clockss.org:8082 >
       au < notReady ; exists ; 2001 ; 2001 ; The Medieval Review Volume 2001 ; 9 ; > #0 article, 0 metadata
       au < notReady ; exists ; 2002 ; 2002 ; The Medieval Review Volume 2002 ; 10 ; > #0 article, 0 metadata

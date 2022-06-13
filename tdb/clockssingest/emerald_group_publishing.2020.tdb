@@ -2362,7 +2362,7 @@
 
     au < manifest ; exists ; 1997 ; Electronic Resources Review Volume 1 ; 1 ; >
     au < manifest ; exists ; 1998 ; Electronic Resources Review Volume 2 ; 2 ; >
-    au < manifest ; exists ; 1999 ; Electronic Resources Review Volume 3 ; 3 ; >
+    au < notReady ; exists ; 1999 ; Electronic Resources Review Volume 3 ; 3 ; > #no substance
     au < doNotProcess ; doNotProcess ; 2000 ; Electronic Resources Review Volume 4 ; 4 ; >
 
   }
@@ -9538,7 +9538,7 @@
     param[journal_issn] = 0741-9058
     comment[journal_id] = lhtn
 
-    au < manifest ; exists ; 1999 ; Library Hi Tech News Volume 16 ; 16 ; >
+    au < notReady ; exists ; 1999 ; Library Hi Tech News Volume 16 ; 16 ; > #no substance
     au < frozen ; exists ; 2000 ; Library Hi Tech News Volume 17 ; 17 ; >
     au < notReady ; exists ; 2001 ; Library Hi Tech News Volume 18 ; 18 ; > #403 Forbidden https://d1bxh8uas1mnw7.cloudfront.net/assets/embed
     au < crawling ; exists ; 2002 ; Library Hi Tech News Volume 19 ; 19 ; >
