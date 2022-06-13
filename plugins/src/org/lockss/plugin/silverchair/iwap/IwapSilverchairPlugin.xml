@@ -10,7 +10,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>11</string>
+    <string>12</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -111,6 +111,10 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <!--Exclude this particular ".svg" file based on publisher's request, it will return 403
+      https://iwa.silverchair-cdn.com/cassette.axd/file/Themes/Client/app/img/split-view_figures-tables-53a6d02348118354786b056ee1d24882350dc90b.svg
+     -->
+      <string>2,"^https?://([^/]+\.silverchair-cdn\.com)/cassette\.axd/.*"</string>
       <string>1,"^https?://((fonts|ajax)\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|cdn\.mathjax\.org|cdnjs\.cloudflare\.com)/"</string>
       <!-- images/figures/supplemental have Expires that will always be 2147483647 and don't redirect - allow -->
       <string>1,"^https?://(%s|iwa\.silverchair-cdn\.com)/iwa/content_public/journal/[^?]+\?Expires=2147483647", url_host(base_url)</string>
