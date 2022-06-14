@@ -1584,17 +1584,16 @@
     au < doNotProcess ; 2008 ; Indian Journal of Palliative Care Volume 14 ; 2008 ; 14 ; https://www.jpalliativecare.com/ >
     au < doNotProcess ; 2009 ; Indian Journal of Palliative Care Volume 15 ; 2009 ; 15 ; https://www.jpalliativecare.com/ >
     au < doNotProcess ; 2010 ; Indian Journal of Palliative Care Volume 16 ; 2010 ; 16 ; https://www.jpalliativecare.com/ >
-    au < released ; 2011 ; Indian Journal of Palliative Care Volume 17 ; 2011 ; 17 ; http://www.jpalliativecare.com/ >
-    au < released ; 2012 ; Indian Journal of Palliative Care Volume 18 ; 2012 ; 18 ; http://www.jpalliativecare.com/ >
-    au < released ; 2013 ; Indian Journal of Palliative Care Volume 19 ; 2013 ; 19 ; http://www.jpalliativecare.com/ >
-    au < released ; 2014 ; Indian Journal of Palliative Care Volume 20 ; 2014 ; 20 ; http://www.jpalliativecare.com/ >
-    au < released ; 2015 ; Indian Journal of Palliative Care Volume 21 ; 2015 ; 21 ; http://www.jpalliativecare.com/ >
-    au < released ; 2016 ; Indian Journal of Palliative Care Volume 22 ; 2016 ; 22 ; http://www.jpalliativecare.com/ >
-    au < released ; 2017 ; Indian Journal of Palliative Care Volume 23 ; 2017 ; 23 ; http://www.jpalliativecare.com/ >
-    au < released ; 2018 ; Indian Journal of Palliative Care Volume 24 ; 2018 ; 24 ; http://www.jpalliativecare.com/ >
-    au < released ; 2019 ; Indian Journal of Palliative Care Volume 25 ; 2019 ; 25 ; https://www.jpalliativecare.com/ >
-    au < released ; 2020 ; Indian Journal of Palliative Care Volume 26 ; 2020 ; 26 ; https://www.jpalliativecare.com/ >
-    au < doNotProcess ; 2021 ; Indian Journal of Palliative Care Volume 27 ; 2021 ; 27 ; https://www.jpalliativecare.com/ >
+    au < down ; 2011 ; Indian Journal of Palliative Care Volume 17 ; 2011 ; 17 ; http://www.jpalliativecare.com/ >
+    au < down ; 2012 ; Indian Journal of Palliative Care Volume 18 ; 2012 ; 18 ; http://www.jpalliativecare.com/ >
+    au < down ; 2013 ; Indian Journal of Palliative Care Volume 19 ; 2013 ; 19 ; http://www.jpalliativecare.com/ >
+    au < down ; 2014 ; Indian Journal of Palliative Care Volume 20 ; 2014 ; 20 ; http://www.jpalliativecare.com/ >
+    au < down ; 2015 ; Indian Journal of Palliative Care Volume 21 ; 2015 ; 21 ; http://www.jpalliativecare.com/ >
+    au < down ; 2016 ; Indian Journal of Palliative Care Volume 22 ; 2016 ; 22 ; http://www.jpalliativecare.com/ >
+    au < down ; 2017 ; Indian Journal of Palliative Care Volume 23 ; 2017 ; 23 ; http://www.jpalliativecare.com/ >
+    au < down ; 2018 ; Indian Journal of Palliative Care Volume 24 ; 2018 ; 24 ; http://www.jpalliativecare.com/ >
+    au < down ; 2019 ; Indian Journal of Palliative Care Volume 25 ; 2019 ; 25 ; https://www.jpalliativecare.com/ >
+    au < down ; 2020 ; Indian Journal of Palliative Care Volume 26 ; 2020 ; 26 ; https://www.jpalliativecare.com/ >
 
   }
 
@@ -5280,14 +5279,14 @@
 
       param[journal_issn] = 2395-3977
 #      param[base_url] = http://www.cancertm.com/
-      #Moved to publisher Plascipub per Medknow.
+      #Moved to publisher Plascipub per Medknow. To https://tcr.amegroups.com/
 
-      au < released ; 2015 ; Cancer Translational Medicine Volume 1 ; 2015 ; 1 ; http://www.cancertm.com/ >
-      au < released ; 2016 ; Cancer Translational Medicine Volume 2 ; 2016 ; 2 ; http://www.cancertm.com/ >
-      au < released ; 2017 ; Cancer Translational Medicine Volume 3 ; 2017 ; 3 ; http://www.cancertm.com/ >
-      au < released ; 2018 ; Cancer Translational Medicine Volume 4 ; 2018 ; 4 ; http://www.cancertm.com/ >
-      au < released ; 2019 ; Cancer Translational Medicine Volume 5 ; 2019 ; 5 ; https://www.cancertm.com/ >
-      au < released ; 2020 ; Cancer Translational Medicine Volume 6 ; 2020 ; 6 ; https://www.cancertm.com/ >
+      au < down ; 2015 ; Cancer Translational Medicine Volume 1 ; 2015 ; 1 ; http://www.cancertm.com/ >
+      au < down ; 2016 ; Cancer Translational Medicine Volume 2 ; 2016 ; 2 ; http://www.cancertm.com/ >
+      au < down ; 2017 ; Cancer Translational Medicine Volume 3 ; 2017 ; 3 ; http://www.cancertm.com/ >
+      au < down ; 2018 ; Cancer Translational Medicine Volume 4 ; 2018 ; 4 ; http://www.cancertm.com/ >
+      au < down ; 2019 ; Cancer Translational Medicine Volume 5 ; 2019 ; 5 ; https://www.cancertm.com/ >
+      au < down ; 2020 ; Cancer Translational Medicine Volume 6 ; 2020 ; 6 ; https://www.cancertm.com/ >
 
   }
 
@@ -6272,6 +6271,7 @@
 
       param[journal_issn] = 0974-7168
 #      param[base_url] = http://www.ijrh.org/
+      #Moving to Elsevier. Still at Medknow 20220614
 
       au < manifest ; 2007 ; Indian Journal of Research in Homoeopathy Volume 1 ; 2007 ; 1 ; https://www.ijrh.org/ >
       au < manifest ; 2008 ; Indian Journal of Research in Homoeopathy Volume 2 ; 2008 ; 2 ; https://www.ijrh.org/ >
@@ -6288,7 +6288,6 @@
       au < released ; 2019 ; Indian Journal of Research in Homoeopathy Volume 13 ; 2019 ; 13 ; https://www.ijrh.org/ >
       au < released ; 2020 ; Indian Journal of Research in Homoeopathy Volume 14 ; 2020 ; 14 ; https://www.ijrh.org/ >
       au < released ; 2021 ; Indian Journal of Research in Homoeopathy Volume 15 ; 2021 ; 15 ; https://www.ijrh.org/ >
-      au < expected ; 2022 ; Indian Journal of Research in Homoeopathy Volume 16 ; 2022 ; 16 ; https://www.ijrh.org/ >
 
   }
 
@@ -8942,10 +8941,10 @@
 #      param[base_url] = http://www.translsurg.com/
       #Moved to publisher Plascipub per Medknow.
 
-      au < released ; 2016 ; Translational Surgery Volume 1 ; 2016 ; 1 ; http://www.translsurg.com/ >
-      au < released ; 2017 ; Translational Surgery Volume 2 ; 2017 ; 2 ; http://www.translsurg.com/ >
-      au < released ; 2018 ; Translational Surgery Volume 3 ; 2018 ; 3 ; http://www.translsurg.com/ >
-      au < released ; 2019 ; Translational Surgery Volume 4 ; 2019 ; 4 ; https://www.translsurg.com/ >
+      au < down ; 2016 ; Translational Surgery Volume 1 ; 2016 ; 1 ; http://www.translsurg.com/ >
+      au < down ; 2017 ; Translational Surgery Volume 2 ; 2017 ; 2 ; http://www.translsurg.com/ >
+      au < down ; 2018 ; Translational Surgery Volume 3 ; 2018 ; 3 ; http://www.translsurg.com/ >
+      au < down ; 2019 ; Translational Surgery Volume 4 ; 2019 ; 4 ; https://www.translsurg.com/ >
 
   }
 
