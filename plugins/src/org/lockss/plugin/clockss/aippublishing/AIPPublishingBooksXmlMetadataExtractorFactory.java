@@ -36,6 +36,7 @@ import org.apache.commons.io.FilenameUtils;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.FileMetadataExtractor;
+import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.Onix3BooksSchemaHelper;
@@ -103,6 +104,8 @@ public class AIPPublishingBooksXmlMetadataExtractorFactory extends SourceXmlMeta
         CachedUrl cu, ArticleMetadata thisAM) {
 
       log.debug3("in AIP Publishing postCookProcess");
+      thisAM.put(MetadataField.FIELD_PUBLICATION_TYPE,MetadataField.PUBLICATION_TYPE_BOOK);
+      thisAM.put(MetadataField.FIELD_ARTICLE_TYPE,MetadataField.ARTICLE_TYPE_BOOKVOLUME);
     }
   }
 }
