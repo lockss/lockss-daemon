@@ -5777,21 +5777,21 @@
     comment[years] = 1987-2001
     comment[title] = doi does not match the AUs below
 
-    au < notReady ; exists ; 1987 ; 1987 ; Perspectives in Plastic Surgery Volume 1 ; 1 ; > #no  metadata
-    au < notReady ; exists ; 1988 ; 1988 ; Perspectives in Plastic Surgery Volume 2 ; 2 ; > #no  metadata
-    au < notReady ; exists ; 1989 ; 1989 ; Perspectives in Plastic Surgery Volume 3 ; 3 ; > #no  metadata
-    au < notReady ; exists ; 1990 ; 1990 ; Perspectives in Plastic Surgery Volume 4 ; 4 ; > #no  metadata
-    au < notReady ; exists ; 1991 ; 1991 ; Perspectives in Plastic Surgery Volume 5 ; 5 ; > #no  metadata
-    au < notReady ; exists ; 1992 ; 1992 ; Perspectives in Plastic Surgery Volume 6 ; 6 ; > #no  metadata
-    au < notReady ; exists ; 1993 ; 1993 ; Perspectives in Plastic Surgery Volume 7 ; 7 ; > #no  metadata
-    au < notReady ; exists ; 1994 ; 1994 ; Perspectives in Plastic Surgery Volume 8 ; 8 ; > #no  metadata
-    au < notReady ; exists ; 1995 ; 1995 ; Perspectives in Plastic Surgery Volume 9 ; 9 ; > #no  metadata
-    au < notReady ; exists ; 1996 ; 1996 ; Perspectives in Plastic Surgery Volume 10 ; 10 ; > #no  metadata
-    au < notReady ; exists ; 1997 ; 1997 ; Perspectives in Plastic Surgery Volume 11 ; 11 ; > #no  metadata
-    au < notReady ; exists ; 1998 ; 1998 ; Perspectives in Plastic Surgery Volume 12 ; 12 ; > #no  metadata
-    au < notReady ; exists ; 1999 ; 1999 ; Perspectives in Plastic Surgery Volume 13 ; 13 ; > #no  metadata
-    au < notReady ; exists ; 2000 ; 2000 ; Perspectives in Plastic Surgery Volume 14 ; 14 ; > #no  metadata
-    au < notReady ; exists ; 2001 ; 2001 ; Perspectives in Plastic Surgery Volume 15 ; 15 ; > #no  metadata
+    au < doNotProcess ; exists ; 1987 ; 1987 ; Perspectives in Plastic Surgery Volume 1 ; 1 ; > #no metadata
+    au < doNotProcess ; exists ; 1988 ; 1988 ; Perspectives in Plastic Surgery Volume 2 ; 2 ; > #no metadata
+    au < doNotProcess ; exists ; 1989 ; 1989 ; Perspectives in Plastic Surgery Volume 3 ; 3 ; > #no metadata
+    au < doNotProcess ; exists ; 1990 ; 1990 ; Perspectives in Plastic Surgery Volume 4 ; 4 ; > #no metadata
+    au < doNotProcess ; exists ; 1991 ; 1991 ; Perspectives in Plastic Surgery Volume 5 ; 5 ; > #no metadata
+    au < doNotProcess ; exists ; 1992 ; 1992 ; Perspectives in Plastic Surgery Volume 6 ; 6 ; > #no metadata
+    au < doNotProcess ; exists ; 1993 ; 1993 ; Perspectives in Plastic Surgery Volume 7 ; 7 ; > #no metadata
+    au < doNotProcess ; exists ; 1994 ; 1994 ; Perspectives in Plastic Surgery Volume 8 ; 8 ; > #no metadata
+    au < doNotProcess ; exists ; 1995 ; 1995 ; Perspectives in Plastic Surgery Volume 9 ; 9 ; > #no metadata
+    au < doNotProcess ; exists ; 1996 ; 1996 ; Perspectives in Plastic Surgery Volume 10 ; 10 ; > #no metadata
+    au < doNotProcess ; exists ; 1997 ; 1997 ; Perspectives in Plastic Surgery Volume 11 ; 11 ; > #no metadata
+    au < doNotProcess ; exists ; 1998 ; 1998 ; Perspectives in Plastic Surgery Volume 12 ; 12 ; > #no metadata
+    au < doNotProcess ; exists ; 1999 ; 1999 ; Perspectives in Plastic Surgery Volume 13 ; 13 ; > #no metadata
+    au < doNotProcess ; exists ; 2000 ; 2000 ; Perspectives in Plastic Surgery Volume 14 ; 14 ; > #no metadata
+    au < doNotProcess ; exists ; 2001 ; 2001 ; Perspectives in Plastic Surgery Volume 15 ; 15 ; > #no metadata
 
   }
 
