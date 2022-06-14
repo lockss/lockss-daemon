@@ -214,7 +214,7 @@
     au < finished ; crawling ; 2019 ; Concussion Volume 4 ; 4 ; https://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; Concussion Volume 5 ; 5 ; https://www.futuremedicine.com/ ; >
     au < crawling ; exists ; 2021 ; Concussion Volume 6 ; 6 ; https://www.futuremedicine.com/ ; >
-    au < expected ; exists ; 2022 ; Concussion Volume 7 ; 7 ; https://www.futuremedicine.com/ ; >
+    au < manifest ; exists ; 2022 ; Concussion Volume 7 ; 7 ; https://www.futuremedicine.com/ ; >
 
   }
 
