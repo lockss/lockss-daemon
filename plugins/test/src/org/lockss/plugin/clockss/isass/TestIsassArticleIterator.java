@@ -11,7 +11,9 @@ import org.lockss.test.ArticleIteratorTestCase;
 import org.lockss.test.ConfigurationUtil;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Iterator;
+import java.util.List;
 import java.util.regex.Pattern;
 
 public class TestIsassArticleIterator extends ArticleIteratorTestCase {
@@ -85,62 +87,84 @@ public class TestIsassArticleIterator extends ArticleIteratorTestCase {
 
 
 
-  public void testCreateArticleFiles() throws Exception {
+  public void testCreateNewFormatArticleFiles() throws Exception {
     PluginTestUtil.crawlSimAu(sau);
     /*
      *  Go through the simulated content you just crawled and modify the results to emulate
      *  what you would find in a "real" crawl with this plugin:
+     * Note: using copyAuZip is different than copyAu
     */
-    // xml old and new
-    // BASE_URL + YEAR + "/IJSS-1-01.zip!/IJSS-1-2006-0002-RR.xml",
-    String pat1 = "content.zip!/branch(\\d+)/(\\d+file)\\.xml";
-    String rep1 = YEAR + "/IJSS-$1.zip!/IJSS-$1-" + YEAR + "-$2.xml";
-    PluginTestUtil.copyAu(sau, au, ".*\\.zip", pat1, rep1);
-    // BASE_URL + YEAR + "/Archive%20for%20CLOCKSS/SPECIAL_DELIVERY_ijss_25_3_2022.zip!/ijss_11_1.xml.zip/IJSS-11-14444-4001.xml",
-    String pat2 = "content.zip!/branch(\\d+)/branch(\\d+)/(\\d+file)\\.xml";
-    String rep2 = YEAR + "/Archive%20for%20CLOCKSS/DELIVERY_ijss_" + YEAR + ".zip!/ijss_$1_$2.xml.zip/IJSS-$1-$3.xml";
-    PluginTestUtil.copyAu(sau, au, ".*\\.zip", pat2, rep2);
-    // pdf old and new
-    // BASE_URL + YEAR + "/IJSS-1-01.zip!/IJSS-1-2006-0002-RR.pdf",
-    String pat3 = "content.zip!/branch(\\d+)/(\\d+file)\\.pdf";
-    String rep3 = YEAR + "/IJSS-$1.zip!/IJSS-$1-" + YEAR + "-$2.pdf";
-    PluginTestUtil.copyAu(sau, au, ".*\\.zip", pat3, rep3);
-    String pat4 = "content.zip!/branch(\\d+)/branch(\\d+)/(\\d+file)\\.pdf";
-    String rep4 = YEAR + "/Archive%20for%20CLOCKSS/DELIVERY_ijss_" + YEAR + ".zip!/ijss_$1_$2.pdf.zip/IJSS-$1-$3.pdf";
-    PluginTestUtil.copyAu(sau, au, ".*\\.zip", pat4, rep4);
+    PluginTestUtil.copyAuZip(
+      sau,
+      au,
+      Arrays.asList(
+        "content.zip!/branch(\\d+)/branch(\\d+)/(\\d+file)\\.xml",
+        "content.zip!/branch(\\d+)/branch(\\d+)/(\\d+file)\\.pdf"
+      ),
+      Arrays.asList(
+        YEAR + "/Archive%20for%20CLOCKSS/DELIVERY_ijss_" + YEAR + ".zip!/ijss_$1_$2.xml.zip/IJSS-$1-$3.xml",
+        YEAR + "/Archive%20for%20CLOCKSS/DELIVERY_ijss_" + YEAR + ".zip!/ijss_$1_$2.pdf.zip/IJSS-$1-$3.pdf"
+    ));
 
-    for (CachedUrl cu : AuUtil.getCuIterable(au)) {
-      String url = cu.getUrl();
-      log.info("cu!: " + url);
-    }
     Iterator<ArticleFiles> it = au.getArticleIterator(MetadataTarget.Any());
     int count = 0;
-    int countFullText = 0;
-    int countMetadata = 0;
+    int countFullTextPdf = 0;
     while (it.hasNext()) {
       ArticleFiles af = it.next();
-      log.info("Af: " + af.toString());
+      log.debug("Af: " + af.toString());
       count ++;
       CachedUrl cu = af.getFullTextCu();
       if ( cu != null) {
         String url = cu.getUrl();
         String contentType = cu.getContentType();
-        log.debug("countFullText " + count + " url " + url + " " + contentType);
-        ++countFullText;
-      }
-      cu = af.getRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA);
-      if (cu != null) {
-        ++countMetadata; //could be ris file or abstract
+        log.debug("countFullText url " + url + " " + contentType);
+        if (url.endsWith(".pdf")) {
+          ++countFullTextPdf;
+        }
       }
     }
 
-    // 20 possible articles 
-    //     count & countFullText - 1 for RIS only (branch1, file1)
-    //     countMetadata - 2 (pdf only branch1, file 5)
-    log.debug("Article count is " + count);
-    assertEquals(14, count); //20 (5 x 4 branches; minus branch1, file1 which only has a ris version
-    assertEquals(14, countFullText); // current builder counts abstract as full text if all there is
-    assertEquals(13, countMetadata); // if you have an articlefiles and either ris or abstract
+    assertEquals(80, count); // (4 branches x 4 sub-branches x 5 files)
+    assertEquals(80, countFullTextPdf); // ensure the pdf
+  }
+  public void testCreateOldFormatArticleFiles() throws Exception {
+    PluginTestUtil.crawlSimAu(sau);
+    /*
+     *  Go through the simulated content you just crawled and modify the results to emulate
+     *  what you would find in a "real" crawl with this plugin:
+     */
+    PluginTestUtil.copyAuZip(
+        sau,
+        au,
+        Arrays.asList(
+            "content.zip!/branch(\\d+)/(\\d+file)\\.xml",
+            "content.zip!/branch(\\d+)/(\\d+file)\\.pdf"
+        ),
+        Arrays.asList(
+            YEAR + "/IJSS-$1.zip!/IJSS-$1-" + YEAR + "-$2.xml",
+            YEAR + "/IJSS-$1.zip!/IJSS-$1-" + YEAR + "-$2.pdf"
+        ));
+
+    Iterator<ArticleFiles> it = au.getArticleIterator(MetadataTarget.Any());
+    int countAf = 0;
+    int countFullTextPdf = 0;
+    while (it.hasNext()) {
+      ArticleFiles af = it.next();
+      log.debug("Af: " + af.toString());
+      countAf ++;
+      CachedUrl cu = af.getFullTextCu();
+      if ( cu != null) {
+        String url = cu.getUrl();
+        String contentType = cu.getContentType();
+        log.debug("countFullText url " + url + " " + contentType);
+        if (url.endsWith(".pdf")) {
+          ++countFullTextPdf;
+        }
+      }
+    }
+
+    assertEquals(20, countAf); // (5 x 4 branches)
+    assertEquals(20, countFullTextPdf); // ensure there is a corresponding pdf fulltext
   }
 
 }

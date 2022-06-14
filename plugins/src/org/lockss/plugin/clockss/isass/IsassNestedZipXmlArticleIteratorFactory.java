@@ -59,12 +59,12 @@ public class IsassNestedZipXmlArticleIteratorFactory implements ArticleIteratorF
       "\"%s[^/]+/(?>[^/]+/)?.+\\.zip!?/.+\\.xml\", base_url";
 
 
-  public static final Pattern XML_PATTERN = Pattern.compile("zip!?/(?>(.+)\\.xml\\.zip/)?([^/]+)\\.xml$", Pattern.CASE_INSENSITIVE);
+  public static final Pattern XML_PATTERN = Pattern.compile("zip!/(?>(.+)\\.xml\\.zip/)?([^/]+)\\.xml$", Pattern.CASE_INSENSITIVE);
   public static final String XML_REPLACEMENT_NEW = "zip!/$1.xml.zip/$2.xml";
   public static final String XML_REPLACEMENT_OLD = "zip!/$2.xml";
   // should always be a 1:1 relationship
-  public static final String PDF_REPLACEMENT_NEW = "zip/$1.pdf.zip/$2.pdf";
-  public static final String PDF_REPLACEMENT_OLD = "zip/$2.pdf";
+  public static final String PDF_REPLACEMENT_NEW = "zip!/$1.pdf.zip/$2.pdf";
+  public static final String PDF_REPLACEMENT_OLD = "zip!/$2.pdf";
 
 
   //
