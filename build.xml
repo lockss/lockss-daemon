@@ -412,6 +412,7 @@ Args:
   <!--  Files -->
   <property name="default.releasename.file" value="${src}/defaultreleasename"/>
   <property name="test.classpath.file" value="${test}/test-classpath"/>
+  <property name="test.plugin.classpath.file" value="${test}/test-plugin-classpath"/>
   <property name="test.param.classpath.file" value="${test}/test-p-classpath"/>
   <property name="run.classpath.file" value="${test}/run-classpath"/>
   <property name="openbsd.classpath.file" value="${lib}/run-classpath"/>
@@ -1089,6 +1090,7 @@ Java ${my.ant.java.version} found, 1.8 required
     <delete file="${lockss.ant.jar}" quiet="true"/>
     <delete file="${lockss.platform.jar}" quiet="true"/>
     <delete file="${test.classpath.file}" quiet="true"/>
+    <delete file="${test.plugin.classpath.file}" quiet="true"/>
     <delete file="${test.param.classpath.file}" quiet="true"/>
     <delete file="${run.classpath.file}" quiet="true"/>
     <delete file="${openbsd.classpath.file}" quiet="true"/>
@@ -1825,7 +1827,10 @@ Must specify output dir with -Doutdir=dir
     <!-- Write test classpath to a file, so test scripts can get it -->
     <pathconvert refid="tools.test.run.classpath" property="tmp.test.clspth"
       targetos="${detected.os}" />
+    <pathconvert refid="plugins.test.run.classpath" property="tmp.test.plugin.clspth"
+      targetos="${detected.os}" />
     <echo message="${tmp.test.clspth}" file="${test.classpath.file}"/>
+    <echo message="${tmp.test.plugin.clspth}" file="${test.plugin.classpath.file}"/>
     <!-- Make a parameterized version -->
     <pathconvert refid="tools.test.run.classpath" property="tmp.param.test.clspth"
       targetos="${detected.os}" >
