@@ -2,12 +2,12 @@
 
   publisher <
     name = University of Iowa ;
-    info[platform] = Janeway
+    info[platform] = Janeway. LXPLUG-2222 BLOCKED.
   >
   #Moved from BePress to Janeway
 
-    #plugin = needs.plugin
-    plugin = org.lockss.plugin.janeway.iowastatedp.IowaStateDPPlugin
+    plugin = needs.plugin
+    #plugin = org.lockss.plugin.janeway.iowastatedp.IowaStateDPPlugin
     param[base_url] = https://pubs.lib.uiowa.edu/
     implicit < status ; year ; param[year] ; name ; volume >
 
