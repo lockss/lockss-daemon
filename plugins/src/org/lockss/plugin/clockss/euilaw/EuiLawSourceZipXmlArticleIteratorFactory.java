@@ -17,13 +17,21 @@ public class EuiLawSourceZipXmlArticleIteratorFactory extends SourceZipXmlArticl
 
   protected static Logger log = Logger.getLogger(EuiLawSourceZipXmlArticleIteratorFactory.class);
 
-  protected static final String ALL_PATTERN_TEMPLATE = "\"^%s[^/]+/.*\\.zip!/.*\\.xml$\",base_url";
+  protected static final String ALL_PATTERN_TEMPLATE = "\"^%s[^/]+/.*\\.zip!/.*\\.(xml|pdf)$\",base_url";
 
-  public static final Pattern XML_PATTERN = Pattern.compile("/(.*)XML_(.*)\\.zip!/(.*)\\.xml$", Pattern.CASE_INSENSITIVE);
-  //public static final Pattern PDF_PATTERN = Pattern.compile("/(.*)(Volume_.*)/(.*)\\.pdf$", Pattern.CASE_INSENSITIVE);
-  public static final String XML_REPLACEMENT = "/$1XML_$2.zip!/$3.xml";
-  private static final String PDF_REPLACEMENT = "/$1$2/$3.pdf";
+  // Old way. they may go back to it.
+  // <base_url>/<dir>/lawandworld_XML_Volume_8_Issue_1_2022.zip!/First_Last.xml
+  // <base_url>/<dir>/lawandworld_Volume_8_Issue_1_2022/First_Last.pdf
+  //public static final Pattern XML_PATTERN = Pattern.compile("/([^/]*)XML_([^/]*)\\.zip!/([^/]*)\\.xml$", Pattern.CASE_INSENSITIVE);
+  //  public static final String XML_REPLACEMENT = "/$1XML_$2.zip!/$3.xml";
+  //  private static final String PDF_REPLACEMENT = "/$1$2/$3.pdf";
 
+  // New way. still need work from them.
+  // <base_url>/<dir>/Volume_1_Issue_2_2015.zip!/Volume_1_Issue_2_2015/Volume_1_Issue_2_2015_PDF/First_Last.pdf
+  // <base_url>/<dir>/Volume_1_Issue_2_2015.zip!/Volume_1_Issue_2_2015/Volume_1_Issue_2_2015_XML/First_Last.xml
+  public static final Pattern XML_PATTERN = Pattern.compile("/([^/]*\\.zip!)/(.*)_XML/([^/]*)\\.xml$", Pattern.CASE_INSENSITIVE);
+  private static final String XML_REPLACEMENT = "/$1/$2_XML/$3.xml";
+  private static final String PDF_REPLACEMENT = "/$1/$2_PDF/$3.pdf";
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                       MetadataTarget target)
