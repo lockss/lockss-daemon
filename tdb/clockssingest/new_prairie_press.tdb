@@ -92,16 +92,16 @@
       au < manifest ; exists ; 1987 ; GDR Bulletin Volume 13 ; 13 ; >
       au < manifest ; exists ; 1988 ; GDR Bulletin Volume 14 ; 14 ; >
       au < manifest ; exists ; 1989 ; GDR Bulletin Volume 15 ; 15 ; >
-      au < testing ; exists ; 1990 ; GDR Bulletin Volume 16 ; 16 ; >
-      au < testing ; exists ; 1991 ; GDR Bulletin Volume 17 ; 17 ; >
-      au < testing ; exists ; 1992 ; GDR Bulletin Volume 18 ; 18 ; >
-      au < testing ; exists ; 1993 ; GDR Bulletin Volume 19 ; 19 ; >
+      au < ready ; exists ; 1990 ; GDR Bulletin Volume 16 ; 16 ; >
+      au < ready ; exists ; 1991 ; GDR Bulletin Volume 17 ; 17 ; >
+      au < ready ; exists ; 1992 ; GDR Bulletin Volume 18 ; 18 ; >
+      au < ready ; exists ; 1993 ; GDR Bulletin Volume 19 ; 19 ; >
       au < testing ; exists ; 1994 ; GDR Bulletin Volume 20-21 ; 20-21 ; >
-      au < testing ; exists ; 1995 ; GDR Bulletin Volume 22 ; 22 ; >
-      au < testing ; exists ; 1996 ; GDR Bulletin Volume 23 ; 23 ; >
-      au < testing ; exists ; 1997 ; GDR Bulletin Volume 24 ; 24 ; >
-      au < testing ; exists ; 1998 ; GDR Bulletin Volume 25 ; 25 ; >
-      au < testing ; exists ; 1999 ; GDR Bulletin Volume 26 ; 26 ; >
+      au < ready ; exists ; 1995 ; GDR Bulletin Volume 22 ; 22 ; >
+      au < ready ; exists ; 1996 ; GDR Bulletin Volume 23 ; 23 ; >
+      au < ready ; exists ; 1997 ; GDR Bulletin Volume 24 ; 24 ; >
+      au < ready ; exists ; 1998 ; GDR Bulletin Volume 25 ; 25 ; >
+      au < ready ; exists ; 1999 ; GDR Bulletin Volume 26 ; 26 ; >
 
     }
   }
@@ -290,10 +290,10 @@
       #param[base_url] = http://newprairiepress.org/
       param[journal_abbr] = burgonsociety
 
-      au < testing ; exists ; 2001 ; Transactions of the Burgon Society Volume 1 ; 1 ; https://newprairiepress.org/ ; >
-      au < testing ; exists ; 2002 ; Transactions of the Burgon Society Volume 2 ; 2 ; https://newprairiepress.org/ ; >
-      au < testing ; exists ; 2003 ; Transactions of the Burgon Society Volume 3 ; 3 ; https://newprairiepress.org/ ; >
-      au < testing ; exists ; 2004 ; Transactions of the Burgon Society Volume 4 ; 4 ; https://newprairiepress.org/ ; >
+      au < ready ; exists ; 2001 ; Transactions of the Burgon Society Volume 1 ; 1 ; https://newprairiepress.org/ ; >
+      au < ready ; exists ; 2002 ; Transactions of the Burgon Society Volume 2 ; 2 ; https://newprairiepress.org/ ; >
+      au < ready ; exists ; 2003 ; Transactions of the Burgon Society Volume 3 ; 3 ; https://newprairiepress.org/ ; >
+      au < ready ; exists ; 2004 ; Transactions of the Burgon Society Volume 4 ; 4 ; https://newprairiepress.org/ ; >
       au < finished ; finished ; 2005 ; Transactions of the Burgon Society Volume 5 ; 5 ; https://newprairiepress.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2006 ; Transactions of the Burgon Society Volume 6 ; 6 ; https://newprairiepress.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2007 ; Transactions of the Burgon Society Volume 7 ; 7 ; https://newprairiepress.org/ ; reingest3.clockss.org:8083 >
@@ -391,21 +391,21 @@
       au < manifest ; exists ; 1986-1987 ; Educational Considerations Volume 14 ; 14 ; >
       au < manifest ; exists ; 1987-1988 ; Educational Considerations Volume 15 ; 15 ; >
       au < manifest ; exists ; 1988-1989 ; Educational Considerations Volume 16 ; 16 ; >
-      au < testing ; exists ; 1989-1990 ; Educational Considerations Volume 17 ; 17 ; >
-      au < testing ; exists ; 1990-1991 ; Educational Considerations Volume 18 ; 18 ; >
-      au < testing ; exists ; 1991-1992 ; Educational Considerations Volume 19 ; 19 ; >
-      au < testing ; exists ; 1992-1993 ; Educational Considerations Volume 20 ; 20 ; >
-      au < testing ; exists ; 1993-1994 ; Educational Considerations Volume 21 ; 21 ; >
-      au < testing ; exists ; 1994-1995 ; Educational Considerations Volume 22 ; 22 ; >
-      au < testing ; exists ; 1995-1996 ; Educational Considerations Volume 23 ; 23 ; >
-      au < testing ; exists ; 1996-1997 ; Educational Considerations Volume 24 ; 24 ; >
-      au < testing ; exists ; 1997-1998 ; Educational Considerations Volume 25 ; 25 ; >
-      au < testing ; exists ; 1998-1999 ; Educational Considerations Volume 26 ; 26 ; >
-      au < testing ; exists ; 1999-2000 ; Educational Considerations Volume 27 ; 27 ; >
-      au < testing ; exists ; 2000-2001 ; Educational Considerations Volume 28 ; 28 ; >
-      au < testing ; exists ; 2001-2002 ; Educational Considerations Volume 29 ; 29 ; >
-      au < testing ; exists ; 2002-2003 ; Educational Considerations Volume 30 ; 30 ; >
-      au < testing ; exists ; 2003-2004 ; Educational Considerations Volume 31 ; 31 ; >
+      au < ready ; exists ; 1989-1990 ; Educational Considerations Volume 17 ; 17 ; >
+      au < ready ; exists ; 1990-1991 ; Educational Considerations Volume 18 ; 18 ; >
+      au < ready ; exists ; 1991-1992 ; Educational Considerations Volume 19 ; 19 ; >
+      au < ready ; exists ; 1992-1993 ; Educational Considerations Volume 20 ; 20 ; >
+      au < ready ; exists ; 1993-1994 ; Educational Considerations Volume 21 ; 21 ; >
+      au < ready ; exists ; 1994-1995 ; Educational Considerations Volume 22 ; 22 ; >
+      au < ready ; exists ; 1995-1996 ; Educational Considerations Volume 23 ; 23 ; >
+      au < ready ; exists ; 1996-1997 ; Educational Considerations Volume 24 ; 24 ; >
+      au < ready ; exists ; 1997-1998 ; Educational Considerations Volume 25 ; 25 ; >
+      au < ready ; exists ; 1998-1999 ; Educational Considerations Volume 26 ; 26 ; >
+      au < ready ; exists ; 1999-2000 ; Educational Considerations Volume 27 ; 27 ; >
+      au < ready ; exists ; 2000-2001 ; Educational Considerations Volume 28 ; 28 ; >
+      au < ready ; exists ; 2001-2002 ; Educational Considerations Volume 29 ; 29 ; >
+      au < ready ; exists ; 2002-2003 ; Educational Considerations Volume 30 ; 30 ; >
+      au < ready ; exists ; 2003-2004 ; Educational Considerations Volume 31 ; 31 ; >
       au < finished ; finished ; 2004-2005 ; Educational Considerations Volume 32 ; 32 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2005-2006 ; Educational Considerations Volume 33 ; 33 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2006-2007 ; Educational Considerations Volume 34 ; 34 ; reingest2.clockss.org:8085 >
@@ -530,21 +530,21 @@
       au < manifest ; exists ; 1987 ; Fungal Genetics Newsletter Volume 34 ; 34 ; >
       au < manifest ; exists ; 1988 ; Fungal Genetics Newsletter Volume 35 ; 35 ; >
       au < manifest ; exists ; 1989 ; Fungal Genetics Newsletter Volume 36 ; 36 ; >
-      au < testing ; exists ; 1990 ; Fungal Genetics Newsletter Volume 37 ; 37 ; >
-      au < testing ; exists ; 1991 ; Fungal Genetics Newsletter Volume 38 ; 38 ; >
-      au < testing ; exists ; 1992 ; Fungal Genetics Newsletter Volume 39 ; 39 ; >
-      au < testing ; exists ; 1993 ; Fungal Genetics Newsletter Volume 40 ; 40 ; >
-      au < testing ; exists ; 1994 ; Fungal Genetics Newsletter Volume 41 ; 41 ; >
-      au < testing ; exists ; 1995 ; Fungal Genetics Newsletter Volume 42 ; 42 ; >
-      au < testing ; exists ; 1996 ; Fungal Genetics Newsletter Volume 43 ; 43 ; >
-      au < testing ; exists ; 1997 ; Fungal Genetics Newsletter Volume 44 ; 44 ; >
-      au < testing ; exists ; 1998 ; Fungal Genetics Newsletter Volume 45 ; 45 ; >
-      au < testing ; exists ; 1999 ; Fungal Genetics Newsletter Volume 46 ; 46 ; >
-      au < testing ; exists ; 2000 ; Fungal Genetics Newsletter Volume 47 ; 47 ; >
-      au < testing ; exists ; 2001 ; Fungal Genetics Newsletter Volume 48 ; 48 ; >
-      au < testing ; exists ; 2002 ; Fungal Genetics Newsletter Volume 49 ; 49 ; >
-      au < testing ; exists ; 2003 ; Fungal Genetics Newsletter Volume 50 ; 50 ; >
-      au < testing ; exists ; 2004 ; Fungal Genetics Newsletter Volume 51 ; 51 ; >
+      au < ready ; exists ; 1990 ; Fungal Genetics Newsletter Volume 37 ; 37 ; >
+      au < ready ; exists ; 1991 ; Fungal Genetics Newsletter Volume 38 ; 38 ; >
+      au < ready ; exists ; 1992 ; Fungal Genetics Newsletter Volume 39 ; 39 ; >
+      au < ready ; exists ; 1993 ; Fungal Genetics Newsletter Volume 40 ; 40 ; >
+      au < ready ; exists ; 1994 ; Fungal Genetics Newsletter Volume 41 ; 41 ; >
+      au < ready ; exists ; 1995 ; Fungal Genetics Newsletter Volume 42 ; 42 ; >
+      au < ready ; exists ; 1996 ; Fungal Genetics Newsletter Volume 43 ; 43 ; >
+      au < ready ; exists ; 1997 ; Fungal Genetics Newsletter Volume 44 ; 44 ; >
+      au < ready ; exists ; 1998 ; Fungal Genetics Newsletter Volume 45 ; 45 ; >
+      au < ready ; exists ; 1999 ; Fungal Genetics Newsletter Volume 46 ; 46 ; >
+      au < ready ; exists ; 2000 ; Fungal Genetics Newsletter Volume 47 ; 47 ; >
+      au < ready ; exists ; 2001 ; Fungal Genetics Newsletter Volume 48 ; 48 ; >
+      au < ready ; exists ; 2002 ; Fungal Genetics Newsletter Volume 49 ; 49 ; >
+      au < ready ; exists ; 2003 ; Fungal Genetics Newsletter Volume 50 ; 50 ; >
+      au < ready ; exists ; 2004 ; Fungal Genetics Newsletter Volume 51 ; 51 ; >
       au < finished ; finished ; 2005 ; Fungal Genetics Newsletter Volume 52 ; 52 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2006 ; Fungal Genetics Newsletter Volume 53 ; 53 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2007 ; Fungal Genetics Newsletter Volume 54 ; 54 ; reingest4.clockss.org:8082 >
@@ -660,20 +660,20 @@
       au < manifest ; exists ; 1988 ; Journal of Applied Communications Volume 71 ; 71 ; >
       au < manifest ; exists ; 1989 ; Journal of Applied Communications Volume 72 ; 72 ; >
       au < manifest ; exists ; 1989 ; Journal of Applied Communications Volume 73 ; 73 ; >
-      au < testing ; exists ; 1990 ; Journal of Applied Communications Volume 74 ; 74 ; >
-      au < testing ; exists ; 1991 ; Journal of Applied Communications Volume 75 ; 75 ; >
-      au < testing ; exists ; 1992 ; Journal of Applied Communications Volume 76 ; 76 ; >
-      au < testing ; exists ; 1993 ; Journal of Applied Communications Volume 77 ; 77 ; >
-      au < testing ; exists ; 1994 ; Journal of Applied Communications Volume 78 ; 78 ; >
-      au < testing ; exists ; 1995 ; Journal of Applied Communications Volume 79 ; 79 ; >
-      au < testing ; exists ; 1996 ; Journal of Applied Communications Volume 80 ; 80 ; >
-      au < testing ; exists ; 1997 ; Journal of Applied Communications Volume 81 ; 81 ; >
-      au < testing ; exists ; 1998 ; Journal of Applied Communications Volume 82 ; 82 ; >
-      au < testing ; exists ; 1999 ; Journal of Applied Communications Volume 83 ; 83 ; >
-      au < testing ; exists ; 2000 ; Journal of Applied Communications Volume 84 ; 84 ; >
-      au < testing ; exists ; 2001 ; Journal of Applied Communications Volume 85 ; 85 ; >
-      au < testing ; exists ; 2002 ; Journal of Applied Communications Volume 86 ; 86 ; >
-      au < testing ; exists ; 2003 ; Journal of Applied Communications Volume 87 ; 87 ; >
+      au < ready ; exists ; 1990 ; Journal of Applied Communications Volume 74 ; 74 ; >
+      au < ready ; exists ; 1991 ; Journal of Applied Communications Volume 75 ; 75 ; >
+      au < ready ; exists ; 1992 ; Journal of Applied Communications Volume 76 ; 76 ; >
+      au < ready ; exists ; 1993 ; Journal of Applied Communications Volume 77 ; 77 ; >
+      au < ready ; exists ; 1994 ; Journal of Applied Communications Volume 78 ; 78 ; >
+      au < ready ; exists ; 1995 ; Journal of Applied Communications Volume 79 ; 79 ; >
+      au < ready ; exists ; 1996 ; Journal of Applied Communications Volume 80 ; 80 ; >
+      au < ready ; exists ; 1997 ; Journal of Applied Communications Volume 81 ; 81 ; >
+      au < ready ; exists ; 1998 ; Journal of Applied Communications Volume 82 ; 82 ; >
+      au < ready ; exists ; 1999 ; Journal of Applied Communications Volume 83 ; 83 ; >
+      au < ready ; exists ; 2000 ; Journal of Applied Communications Volume 84 ; 84 ; >
+      au < ready ; exists ; 2001 ; Journal of Applied Communications Volume 85 ; 85 ; >
+      au < ready ; exists ; 2002 ; Journal of Applied Communications Volume 86 ; 86 ; >
+      au < ready ; exists ; 2003 ; Journal of Applied Communications Volume 87 ; 87 ; >
       au < finished ; finished ; 2004 ; Journal of Applied Communications Volume 88 ; 88 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2005 ; Journal of Applied Communications Volume 89 ; 89 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2006 ; Journal of Applied Communications Volume 90 ; 90 ; reingest5.clockss.org:8082 >
@@ -709,10 +709,10 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = jhsr
 
-      au < testing ; exists ; 1998 ; Journal of Hazardous Substance Research Volume 1 ; 1 ; >
-      au < testing ; exists ; 1999-2000 ; Journal of Hazardous Substance Research Volume 2 ; 2 ; >
-      au < testing ; exists ; 2001-2002 ; Journal of Hazardous Substance Research Volume 3 ; 3 ; >
-      au < testing ; exists ; 2003 ; Journal of Hazardous Substance Research Volume 4 ; 4 ; >
+      au < ready ; exists ; 1998 ; Journal of Hazardous Substance Research Volume 1 ; 1 ; >
+      au < ready ; exists ; 1999-2000 ; Journal of Hazardous Substance Research Volume 2 ; 2 ; >
+      au < ready ; exists ; 2001-2002 ; Journal of Hazardous Substance Research Volume 3 ; 3 ; >
+      au < ready ; exists ; 2003 ; Journal of Hazardous Substance Research Volume 4 ; 4 ; >
       au < finished ; finished ; 2006 ; Journal of Hazardous Substance Research Volume 5 ; 5 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2007 ; Journal of Hazardous Substance Research Volume 6 ; 6 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2007 ; Journal of Hazardous Substance Research Volume 7 ; 7 ; reingest4.clockss.org:8082 >
@@ -782,13 +782,13 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = networks
 
-      au < testing ; exists ; 1998 ; Networks: An Online Journal for Teacher Research Volume 1 ; 1 ; >
-      au < testing ; exists ; 1999 ; Networks: An Online Journal for Teacher Research Volume 2 ; 2 ; >
-      au < testing ; exists ; 2000 ; Networks: An Online Journal for Teacher Research Volume 3 ; 3 ; >
-      au < testing ; exists ; 2001 ; Networks: An Online Journal for Teacher Research Volume 4 ; 4 ; >
-      au < testing ; exists ; 2002 ; Networks: An Online Journal for Teacher Research Volume 5 ; 5 ; >
-      au < testing ; exists ; 2003 ; Networks: An Online Journal for Teacher Research Volume 6 ; 6 ; >
-      au < testing ; exists ; 2004 ; Networks: An Online Journal for Teacher Research Volume 7 ; 7 ; >
+      au < ready ; exists ; 1998 ; Networks: An Online Journal for Teacher Research Volume 1 ; 1 ; >
+      au < ready ; exists ; 1999 ; Networks: An Online Journal for Teacher Research Volume 2 ; 2 ; >
+      au < ready ; exists ; 2000 ; Networks: An Online Journal for Teacher Research Volume 3 ; 3 ; >
+      au < ready ; exists ; 2001 ; Networks: An Online Journal for Teacher Research Volume 4 ; 4 ; >
+      au < ready ; exists ; 2002 ; Networks: An Online Journal for Teacher Research Volume 5 ; 5 ; >
+      au < ready ; exists ; 2003 ; Networks: An Online Journal for Teacher Research Volume 6 ; 6 ; >
+      au < ready ; exists ; 2004 ; Networks: An Online Journal for Teacher Research Volume 7 ; 7 ; >
       au < finished ; finished ; 2005 ; Networks: An Online Journal for Teacher Research Volume 8 ; 8 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2006 ; Networks: An Online Journal for Teacher Research Volume 9 ; 9 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2008 ; Networks: An Online Journal for Teacher Research Volume 10 ; 10 ; reingest3.clockss.org:8083 >
@@ -833,21 +833,21 @@
       au < manifest ; exists ; 1987 ; Oz Volume 9 ; 9 ; >
       au < manifest ; exists ; 1988 ; Oz Volume 10 ; 10 ; >
       au < manifest ; exists ; 1989 ; Oz Volume 11 ; 11 ; >
-      au < testing ; exists ; 1990 ; Oz Volume 12 ; 12 ; >
-      au < testing ; exists ; 1991 ; Oz Volume 13 ; 13 ; >
-      au < testing ; exists ; 1992 ; Oz Volume 14 ; 14 ; >
-      au < testing ; exists ; 1993 ; Oz Volume 15 ; 15 ; >
-      au < testing ; exists ; 1994 ; Oz Volume 16 ; 16 ; >
-      au < testing ; exists ; 1995 ; Oz Volume 17 ; 17 ; >
-      au < testing ; exists ; 1996 ; Oz Volume 18 ; 18 ; >
-      au < testing ; exists ; 1997 ; Oz Volume 19 ; 19 ; >
-      au < testing ; exists ; 1998 ; Oz Volume 20 ; 20 ; >
-      au < testing ; exists ; 1999 ; Oz Volume 21 ; 21 ; >
-      au < testing ; exists ; 2000 ; Oz Volume 22 ; 22 ; >
-      au < testing ; exists ; 2001 ; Oz Volume 23 ; 23 ; >
-      au < testing ; exists ; 2002 ; Oz Volume 24 ; 24 ; >
-      au < testing ; exists ; 2003 ; Oz Volume 25 ; 25 ; >
-      au < testing ; exists ; 2004 ; Oz Volume 26 ; 26 ; >
+      au < ready ; exists ; 1990 ; Oz Volume 12 ; 12 ; >
+      au < ready ; exists ; 1991 ; Oz Volume 13 ; 13 ; >
+      au < ready ; exists ; 1992 ; Oz Volume 14 ; 14 ; >
+      au < ready ; exists ; 1993 ; Oz Volume 15 ; 15 ; >
+      au < ready ; exists ; 1994 ; Oz Volume 16 ; 16 ; >
+      au < ready ; exists ; 1995 ; Oz Volume 17 ; 17 ; >
+      au < ready ; exists ; 1996 ; Oz Volume 18 ; 18 ; >
+      au < ready ; exists ; 1997 ; Oz Volume 19 ; 19 ; >
+      au < ready ; exists ; 1998 ; Oz Volume 20 ; 20 ; >
+      au < ready ; exists ; 1999 ; Oz Volume 21 ; 21 ; >
+      au < ready ; exists ; 2000 ; Oz Volume 22 ; 22 ; >
+      au < ready ; exists ; 2001 ; Oz Volume 23 ; 23 ; >
+      au < ready ; exists ; 2002 ; Oz Volume 24 ; 24 ; >
+      au < ready ; exists ; 2003 ; Oz Volume 25 ; 25 ; >
+      au < ready ; exists ; 2004 ; Oz Volume 26 ; 26 ; >
       au < finished ; finished ; 2005 ; Oz Volume 27 ; 27 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2006 ; Oz Volume 28 ; 28 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2007 ; Oz Volume 29 ; 29 ; reingest1.clockss.org:8082 >
@@ -955,21 +955,21 @@
       au < manifest ; exists ; 1986-1987 ; Studies in 20th & 21st Century Literature Volume 11 ; 11 ; >
       au < manifest ; exists ; 1987-1988 ; Studies in 20th & 21st Century Literature Volume 12 ; 12 ; >
       au < manifest ; exists ; 1989 ; Studies in 20th & 21st Century Literature Volume 13 ; 13 ; >
-      au < testing ; exists ; 1990 ; Studies in 20th & 21st Century Literature Volume 14 ; 14 ; >
-      au < testing ; exists ; 1991 ; Studies in 20th & 21st Century Literature Volume 15 ; 15 ; >
-      au < testing ; exists ; 1992 ; Studies in 20th & 21st Century Literature Volume 16 ; 16 ; >
-      au < testing ; exists ; 1993 ; Studies in 20th & 21st Century Literature Volume 17 ; 17 ; >
-      au < testing ; exists ; 1994 ; Studies in 20th & 21st Century Literature Volume 18 ; 18 ; >
-      au < testing ; exists ; 1995 ; Studies in 20th & 21st Century Literature Volume 19 ; 19 ; >
-      au < testing ; exists ; 1996 ; Studies in 20th & 21st Century Literature Volume 20 ; 20 ; >
-      au < testing ; exists ; 1997 ; Studies in 20th & 21st Century Literature Volume 21 ; 21 ; >
-      au < testing ; exists ; 1998 ; Studies in 20th & 21st Century Literature Volume 22 ; 22 ; >
-      au < testing ; exists ; 1999 ; Studies in 20th & 21st Century Literature Volume 23 ; 23 ; >
-      au < testing ; exists ; 2000 ; Studies in 20th & 21st Century Literature Volume 24 ; 24 ; >
-      au < testing ; exists ; 2001 ; Studies in 20th & 21st Century Literature Volume 25 ; 25 ; >
-      au < testing ; exists ; 2002 ; Studies in 20th & 21st Century Literature Volume 26 ; 26 ; >
-      au < testing ; exists ; 2003 ; Studies in 20th & 21st Century Literature Volume 27 ; 27 ; >
-      au < testing ; exists ; 2004 ; Studies in 20th & 21st Century Literature Volume 28 ; 28 ; >
+      au < ready ; exists ; 1990 ; Studies in 20th & 21st Century Literature Volume 14 ; 14 ; >
+      au < ready ; exists ; 1991 ; Studies in 20th & 21st Century Literature Volume 15 ; 15 ; >
+      au < ready ; exists ; 1992 ; Studies in 20th & 21st Century Literature Volume 16 ; 16 ; >
+      au < ready ; exists ; 1993 ; Studies in 20th & 21st Century Literature Volume 17 ; 17 ; >
+      au < ready ; exists ; 1994 ; Studies in 20th & 21st Century Literature Volume 18 ; 18 ; >
+      au < ready ; exists ; 1995 ; Studies in 20th & 21st Century Literature Volume 19 ; 19 ; >
+      au < ready ; exists ; 1996 ; Studies in 20th & 21st Century Literature Volume 20 ; 20 ; >
+      au < ready ; exists ; 1997 ; Studies in 20th & 21st Century Literature Volume 21 ; 21 ; >
+      au < ready ; exists ; 1998 ; Studies in 20th & 21st Century Literature Volume 22 ; 22 ; >
+      au < ready ; exists ; 1999 ; Studies in 20th & 21st Century Literature Volume 23 ; 23 ; >
+      au < ready ; exists ; 2000 ; Studies in 20th & 21st Century Literature Volume 24 ; 24 ; >
+      au < ready ; exists ; 2001 ; Studies in 20th & 21st Century Literature Volume 25 ; 25 ; >
+      au < ready ; exists ; 2002 ; Studies in 20th & 21st Century Literature Volume 26 ; 26 ; >
+      au < ready ; exists ; 2003 ; Studies in 20th & 21st Century Literature Volume 27 ; 27 ; >
+      au < ready ; exists ; 2004 ; Studies in 20th & 21st Century Literature Volume 28 ; 28 ; >
       au < finished ; crawling ; 2005 ; Studies in 20th & 21st Century Literature Volume 29 ; 29 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2006 ; Studies in 20th & 21st Century Literature Volume 30 ; 30 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2007 ; Studies in 20th & 21st Century Literature Volume 31 ; 31 ; reingest5.clockss.org:8082 >
