@@ -94,16 +94,13 @@ public class TestIsassArticleIterator extends ArticleIteratorTestCase {
      *  what you would find in a "real" crawl with this plugin:
      * Note: using copyAuZip is different than copyAu
     */
-    PluginTestUtil.copyAu(
-      sau,
-      au,
-      "\\.zip$",
+    PluginTestUtil.copyAu(sau, au, "\\.zip$",
       Arrays.asList(
-        PluginTestUtil.makePatRepPair(
+        PluginTestUtil.makePatRep(
           "content.zip!/branch(\\d+)/branch(\\d+)/(\\d+file)\\.xml",
           YEAR + "/Archive%20for%20CLOCKSS/DELIVERY_ijss_" + YEAR + ".zip!/ijss_$1_$2.xml.zip/IJSS-$1-$3.xml"
         ),
-        PluginTestUtil.makePatRepPair(
+        PluginTestUtil.makePatRep(
           "content.zip!/branch(\\d+)/branch(\\d+)/(\\d+file)\\.pdf",
           YEAR + "/Archive%20for%20CLOCKSS/DELIVERY_ijss_" + YEAR + ".zip!/ijss_$1_$2.pdf.zip/IJSS-$1-$3.pdf"
         )
@@ -137,16 +134,13 @@ public class TestIsassArticleIterator extends ArticleIteratorTestCase {
      *  Go through the simulated content you just crawled and modify the results to emulate
      *  what you would find in a "real" crawl with this plugin:
      */
-    PluginTestUtil.copyAu(
-      sau,
-      au,
-      "\\.zip$",
+    PluginTestUtil.copyAu(sau, au, "\\.zip$",
       Arrays.asList(
-        PluginTestUtil.makePatRepPair(
+        PluginTestUtil.makePatRep(
           "content.zip!/branch(\\d+)/(\\d+file)\\.xml",
           YEAR + "/IJSS-$1.zip!/IJSS-$1-" + YEAR + "-$2.xml"
         ),
-        PluginTestUtil.makePatRepPair(
+        PluginTestUtil.makePatRep(
           "content.zip!/branch(\\d+)/(\\d+file)\\.pdf",
           YEAR + "/IJSS-$1.zip!/IJSS-$1-" + YEAR + "-$2.pdf"
         )

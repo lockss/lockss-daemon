@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.atypon;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.regex.Pattern;
 
@@ -164,16 +165,23 @@ public class TestBaseAtyponArticleIteratorFactory extends ArticleIteratorTestCas
     String pat1 = "branch(\\d+)/(\\d+)file\\.html";
     String repAbs = "doi/abs/10.1137/b$1.art$2";
     String repFull = "doi/full/10.1137/b$1.art$2";
-    PluginTestUtil.copyAu(sau, au, ".*\\.html$", pat1, repAbs);
-    PluginTestUtil.copyAu(sau, au, ".*\\.html$", pat1, repFull);
+    PluginTestUtil.copyAu(sau, au, ".*\\.html$",
+      Arrays.asList(
+        PluginTestUtil.makePatRep(
+          pat1,
+          repAbs,
+          repFull
+      ))
+    );
 
     // turn xxfile.pdf in to both pdf and pdfplus 
     String pat2 = "branch(\\d+)/(\\d+)file\\.pdf";
     String reppdf = "doi/pdf/10.1137/b$1.art$2";
     String reppdfplus = "doi/pdfplus/10.1137/b$1.art$2";
     
-    PluginTestUtil.copyAu(sau, au, ".*\\.pdf$", pat2, reppdf);
-    PluginTestUtil.copyAu(sau, au, ".*\\.pdf$", pat2, reppdfplus);
+    PluginTestUtil.copyAu(sau, au, ".*\\.pdf$",
+      Arrays.asList(PluginTestUtil.makePatRep(pat2, reppdf, reppdfplus))
+    );
 
     // "fix" the URL for *.txt files which represent the RIS download URL
     String pat3 = "branch(\\d+)/(\\d+)file\\.txt";
