@@ -31,6 +31,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin;
 
 import java.io.*;
+import java.net.MalformedURLException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
@@ -38,6 +39,7 @@ import java.util.regex.*;
 import java.lang.reflect.*;
 import java.util.zip.*;
 
+import okhttp3.Cache;
 import org.apache.commons.io.IOUtils;
 import org.lockss.test.*;
 import org.lockss.daemon.*;
@@ -271,26 +273,32 @@ public class PluginTestUtil {
   }
 
 
-  public static boolean copyAu(ArchivalUnit fromAu, ArchivalUnit toAu) {
+  public static boolean copyAu(ArchivalUnit fromAu, ArchivalUnit toAu) throws MalformedURLException {
     return copyAu(fromAu, toAu, null, null, null);
   }
 
   public static boolean copyAu(ArchivalUnit fromAu, ArchivalUnit toAu,
-			       String ifMatch) {
+                               String ifMatch) throws MalformedURLException {
     return copyAu(fromAu, toAu, ifMatch, null, null);
   }
 
   public static boolean copyAu(ArchivalUnit fromAu, ArchivalUnit toAu,
-			       String ifMatch, String pat, String rep) {
+			       String ifMatch, String pat, String rep) throws MalformedURLException {
     return copyCus(fromAu.getAuCachedUrlSet(), toAu, ifMatch, pat, rep);
   }
+  public static boolean copyAu(ArchivalUnit fromAu,
+                               ArchivalUnit toAu,
+                               String ifMatch,
+                               List<PatternReplacementPair> patRepPairs) throws MalformedURLException {
+    return copyCus(fromAu.getAuCachedUrlSet(), toAu, ifMatch, patRepPairs);
+  }
 
-  public static boolean copyCus(CachedUrlSet fromCus, ArchivalUnit toAu) {
+  public static boolean copyCus(CachedUrlSet fromCus, ArchivalUnit toAu) throws MalformedURLException {
     return copyCus(fromCus, toAu, null, null, null);
   }
 
   public static boolean copyCus(CachedUrlSet fromCus, ArchivalUnit toAu,
-				String ifMatch, String pat, String rep) {
+				String ifMatch, String pat, String rep) throws MalformedURLException {
     boolean res = true;
     ArchivalUnit fromAu = fromCus.getArchivalUnit();
     Pattern pattern = null;
@@ -329,7 +337,7 @@ public class PluginTestUtil {
             new UrlData(cu.getUnfilteredInputStream(), props, toUrl));
         uc.storeContent();
         if (!toUrl.equals(fromUrl)) {
-          log.info("Copied " + fromUrl + " to " + toUrl);
+          log.debug2("Copied " + fromUrl + " to " + toUrl);
         } else {
           log.debug2("Copied " + fromUrl);
         }
@@ -347,8 +355,85 @@ public class PluginTestUtil {
    * Overloaded method of copyCus which takes pattern-replacement set
    */
   public static boolean copyCus(CachedUrlSet fromCus, ArchivalUnit toAu,
-                                String ifMatch, PatternReplacements prps) {
-    return false;
+                                String ifMatch, List<PatternReplacementPair> patRepPairs)
+      throws MalformedURLException {
+    boolean res = true;
+    ArchivalUnit fromAu = fromCus.getArchivalUnit();
+    Pattern ifMatchPat = null;
+    if (ifMatch != null) {
+      ifMatchPat = Pattern.compile(ifMatch);
+    }
+    String isArchive;
+    for (CachedUrl cu : fromCus.getCuIterable()) {
+      try {
+        String fromUrl = cu.getUrl();
+        String toUrl = fromUrl;
+        if (ifMatchPat != null) {
+          Matcher mat = ifMatchPat.matcher(fromUrl);
+          if (!mat.find()) {
+            log.debug3("no match: " + fromUrl + ", " + ifMatchPat);
+            continue;
+          }
+        }
+        isArchive = toAu.getArchiveFileTypes().getFromCu(cu);
+        if (isArchive == null) {
+          if (patRepPairs != null) {
+            for (PatternReplacementPair prp : patRepPairs) {
+              Matcher mat = prp.pat.matcher(fromUrl);
+              toUrl = mat.replaceAll(prp.rep);
+              if (fromUrl != toUrl) {
+                doCopyCu(cu, toAu, fromUrl, toUrl);
+                break;
+              }
+            }
+          } else {
+            doCopyCu(cu, toAu, fromUrl, toUrl);
+          }
+        } else {
+          switch (isArchive) {
+            case ".zip":
+              copyZip(cu, toAu, patRepPairs);
+              break;
+            case ".tar":
+              //TODO
+              log.info("support for .tar coming");
+              break;
+            case ".tar.gz":
+            case ".tgz":
+              //TODO
+              log.info("support for .tgz coming");
+              break;
+            default:
+              throw new Exception("Unexpected Archive file type: '" + isArchive + "'");
+          }
+        }
+      } catch (Exception e) {
+        log.error("Couldn't copy " + cu.getUrl(), e);
+        res = false;
+      } finally {
+        cu.release();
+      }
+    }
+    return res;
+  }
+
+  private static void doCopyCu(CachedUrl cu,
+                               ArchivalUnit toAu,
+                               String fromUrl,
+                               String toUrl
+  ) throws IOException {
+    CIProperties props = cu.getProperties();
+    if (props == null) {
+      log.debug3("in copyCus() props was null for url: " + fromUrl);
+    }
+    UrlCacher uc = toAu.makeUrlCacher(
+        new UrlData(cu.getUnfilteredInputStream(), props, toUrl));
+    uc.storeContent();
+    if (!toUrl.equals(fromUrl)) {
+      log.info("Copied " + fromUrl + " to " + toUrl);
+    } else {
+      log.debug2("Copied " + fromUrl);
+    }
   }
 
   /**
@@ -370,43 +455,29 @@ public class PluginTestUtil {
   /**
    * Copies all zips in from one crawl into another without modification.
    *
-   * @see PluginTestUtil#copyZip(CachedUrl, ArchivalUnit, PatternReplacements)
    */
-  public static boolean copyAuZip(ArchivalUnit fromAu, ArchivalUnit toAu) {
+  public static boolean copyAuZip(ArchivalUnit fromAu, ArchivalUnit toAu) throws MalformedURLException {
     return copyZipCus(fromAu.getAuCachedUrlSet(), toAu, null);
   }
 
   /**
-   * Works just like {@link PluginTestUtil#copyZipCus(CachedUrlSet, ArchivalUnit, List, List)}.
+   * Works just like {@link PluginTestUtil#copyZipCus(CachedUrlSet, ArchivalUnit, List)}.
    * Just gets the cachedUrlSet in fromAU and Makes lists from pat & rep.
    *
-   * @see PluginTestUtil#copyZipCus(CachedUrlSet, ArchivalUnit, List, List)
+   * @see PluginTestUtil#copyZipCus(CachedUrlSet, ArchivalUnit, List)
    */
   public static boolean copyAuZip(ArchivalUnit fromAu, ArchivalUnit toAu, String pat, String rep) throws Exception {
-    return copyZipCus(fromAu.getAuCachedUrlSet(), toAu, pat, rep);
+    return copyZipCus(fromAu.getAuCachedUrlSet(), toAu, Collections.singletonList(makePatRepPair(pat, rep)));
   }
 
-  /**
-   * Works just like {@link PluginTestUtil#copyZipCus(CachedUrlSet, ArchivalUnit, List, List)}.
-   * Just gets the cachedUrlSet in fromAu.
-   *
-   * @see PluginTestUtil#copyZipCus(CachedUrlSet, ArchivalUnit, List, List)
-   */
-  public static boolean copyAuZip(ArchivalUnit fromAu, ArchivalUnit toAu, List<String> pats, List<String> reps)
-      throws Exception {
-    return copyZipCus(fromAu.getAuCachedUrlSet(), toAu, pats, reps);
-  }
 
   /**
-  * Works just like {@link PluginTestUtil#copyZipCus(CachedUrlSet, ArchivalUnit, List, List)}.
+  * Works just like {@link PluginTestUtil#copyZipCus(CachedUrlSet, ArchivalUnit, List)}.
   * Just makes lists and adds pat and rep to them.
    *
-  * @see PluginTestUtil#copyZipCus(CachedUrlSet, ArchivalUnit, List, List)
  */
   public static boolean copyZipCus(CachedUrlSet fromCus, ArchivalUnit toAu, String pat, String rep) throws Exception {
-    List<String> pats = Collections.singletonList(pat);
-    List<String> reps = Collections.singletonList(rep);
-    return copyZipCus(fromCus, toAu, pats, reps);
+    return copyZipCus(fromCus, toAu, Collections.singletonList(makePatRepPair(pat, rep)));
   }
 
   /**
@@ -415,25 +486,13 @@ public class PluginTestUtil {
    *
    * @param fromCus the CachedUrlSet which has been crawled
    * @param toAu the Archival Unit to copy content to
-   * @param pats List of regexes to search in the zipped contents
-   * @param reps List of replacements for each pattern
+   * @param patReps A List of PatternReplacementPairs to selectively copy zipped content and rename it in the new zip.
    * @return true, if all copies attempted succeeded, false otherwise
    */
-  public static boolean copyZipCus(CachedUrlSet fromCus, ArchivalUnit toAu, List<String> pats, List<String> reps)
-      throws Exception {
-    return copyZipCus(fromCus, toAu,
-        new PatternReplacements(pats, reps));
-  }
-
-  /**
-   * Iterates over all CachedUrls in a simulated crawl and copies them to a mock Au if patterns and replacements
-   * are identified in the simulated crawl from the Pattern-Replacements given.
-   *
-   * @see PluginTestUtil#copyZipCus(CachedUrlSet, ArchivalUnit, List, List)
-   */
-  private static boolean copyZipCus(CachedUrlSet fromCus, ArchivalUnit toAu, PatternReplacements patReps) {
+  private static boolean copyZipCus(CachedUrlSet fromCus, ArchivalUnit toAu, List<PatternReplacementPair> patReps) throws MalformedURLException {
     boolean res = true;
     for (CachedUrl cu : fromCus.getCuIterable()) {
+      log.info(toAu.getArchiveFileTypes().getFromCu(cu));
       try {
         String fromUrl = cu.getUrl();
         // only copy the file if it is a zip.
@@ -465,10 +524,10 @@ public class PluginTestUtil {
    * given pattern(s) and replacements.
    * @param cu A CachedUrl of compressed content.
    * @param toAu The ArchivalUnit to copy the cu into.
-   * @param patReps Pattern-Replacement pairs to selectively copy zipped content and rename it in the new zip.
+   * @param patRepPairs A List of PatternReplacementPairs to selectively copy zipped content and rename it in the new zip.
    * @throws IOException When I/O zip files encounter any number of problems.
    */
-  private static void copyZip(CachedUrl cu, ArchivalUnit toAu, PatternReplacements patReps)
+  private static void copyZip(CachedUrl cu, ArchivalUnit toAu, List<PatternReplacementPair> patRepPairs)
     throws IOException {
     boolean doCache = false;
     String zipUrl = cu.getUrl() + "!/";
@@ -495,7 +554,7 @@ public class PluginTestUtil {
         }
         fromFile = entry.getName();
         zippedFile = zipUrl + fromFile;
-        for (PatternReplacementPair prp : patReps.pairs) {
+        for (PatternReplacementPair prp : patRepPairs) {
           Matcher mat = prp.pat.matcher(zippedFile);
           if (mat.find()) {
             toUrl = mat.replaceAll(prp.rep);
@@ -566,34 +625,6 @@ public class PluginTestUtil {
     PatternReplacementPair(String pat, String rep) {
       this.pat = Pattern.compile(pat, Pattern.CASE_INSENSITIVE);
       this.rep = rep;
-    }
-  }
-
-  // TODO Remove this class
-  private static class PatternReplacements {
-    public PatternReplacementPair[] pairs;
-
-    /**
-     * Simple array class which stores Pattern-Replacement pairs.
-     *
-     * @param pats List of regex patterns in string format
-     * @param reps List of corresponding replacement patterns.
-     * @throws Exception if the inputs are not compliant
-     */
-    PatternReplacements(List<String> pats, List<String> reps) throws Exception {
-      if (pats == null || reps == null) {
-        throw new Exception("Patterns and Replacements cannot be null");
-      }
-      if (pats.size() != reps.size()) {
-        throw new Exception("Patterns and Replacements do not match up. Must contain the same number of elements.");
-      }
-      if (pats.size() < 1) {
-        throw new Exception("No patterns/replacements given. Must provide at least one pair.");
-      }
-      pairs = new PatternReplacementPair[pats.size()];
-      for (int i=0; i<pats.size(); i++) {
-        pairs[i] = new PatternReplacementPair(pats.get(i), reps.get(i));
-      }
     }
   }
 
