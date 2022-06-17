@@ -266,19 +266,42 @@ public class PluginTestUtil {
     crawler.doCrawl();
   }
 
-
+  /**
+   * {@code ifMatch, patRepPairs} defaults to {null}.
+   * {@code fromAu} defaults to {fromAu.getCachedUrlSet()}.
+   *
+   * @see PluginTestUtil#copyCus(CachedUrlSet, ArchivalUnit, String, List)
+   */
   public static boolean copyAu(ArchivalUnit fromAu, ArchivalUnit toAu) throws MalformedURLException {
     return copyAu(fromAu, toAu, null, null, null);
   }
 
+  /**
+   * {@code patRepPairs} defaults to {null}.
+   * {@code fromAu} defaults to {fromAu.getCachedUrlSet()}.
+   *
+   * @see PluginTestUtil#copyCus(CachedUrlSet, ArchivalUnit, String, List)
+   */
   public static boolean copyAu(ArchivalUnit fromAu, ArchivalUnit toAu, String ifMatch) throws MalformedURLException {
     return copyAu(fromAu, toAu, ifMatch, null, null);
   }
 
+  /**
+   * {@code pat, rep} converted to {PatternReplacements}.
+   * {@code fromAu} defaults to {fromAu.getCachedUrlSet()}.
+   *
+   * @see PluginTestUtil#copyCus(CachedUrlSet, ArchivalUnit, String, List)
+   */
   public static boolean copyAu(ArchivalUnit fromAu, ArchivalUnit toAu,
 			       String ifMatch, String pat, String rep) throws MalformedURLException {
     return copyCus(fromAu.getAuCachedUrlSet(), toAu, ifMatch, pat, rep);
   }
+
+  /**
+   * {@code fromAu} defaults to {fromAu.getCachedUrlSet()}.
+   *
+   * @see PluginTestUtil#copyCus(CachedUrlSet, ArchivalUnit, String, List)
+   */
   public static boolean copyAu(ArchivalUnit fromAu,
                                ArchivalUnit toAu,
                                String ifMatch,
@@ -286,18 +309,21 @@ public class PluginTestUtil {
     return copyCus(fromAu.getAuCachedUrlSet(), toAu, ifMatch, patRepPairs);
   }
 
+  /**
+   * {@code ifMatch, patRepPairs} defaults to {null}.
+   *
+   * @see PluginTestUtil#copyCus(CachedUrlSet, ArchivalUnit, String, List)
+   */
   public static boolean copyCus(CachedUrlSet fromCus, ArchivalUnit toAu) throws MalformedURLException {
     return copyCus(fromCus, toAu, null, null, null);
   }
 
   /**
+   * {@code pat, rep} converted to {PatternReplacements}.
    *
-   * @param fromCus
-   * @param toAu
-   * @param ifMatch
-   * @param pat
-   * @param rep
-   * @return true if all files copied, false otherwise
+   * @param pat a regex used to match files in the simulated crawl
+   * @param rep regex replacement pattern(s) to rename the original file.
+   * @see PluginTestUtil#copyCus(CachedUrlSet, ArchivalUnit, String, List)
    */
   public static boolean copyCus(CachedUrlSet fromCus, ArchivalUnit toAu,
 				String ifMatch, String pat, String rep) throws MalformedURLException {
@@ -312,19 +338,20 @@ public class PluginTestUtil {
 
   /**
    * Utility to copy files from a simulated crawl to a mock archival unit.
-   * For each file matched by ifMatch, The first Pattern matched will be copied to each replacement associated with it.  
+   * For each file matched by ifMatch, the first Pattern matched will be copied for as many
+   * replacements as are associated with it.
    * If only fromAu and toAu are provided, all files are copied without modification.
    *
    * @param fromCus the CachedUrlSet which has been crawled
    * @param toAu the Archival Unit to copy content to
-   * @param patRepPairs A List of PatternReplacements to selectively copy zipped content and rename it in the new zip.
+   * @param ifMatch String, a regex to check on the url before pattern replacement transforming. e.g. .zip
+   * @param patRepPairs A List of PatternReplacements to rename files from matched patterns to replacements.
    * @return true, if all copies attempted succeeded, false otherwise
    */
   public static boolean copyCus(CachedUrlSet fromCus, ArchivalUnit toAu,
                                 String ifMatch, List<PatternReplacements> patRepPairs)
       throws MalformedURLException {
     boolean res = true;
-    ArchivalUnit fromAu = fromCus.getArchivalUnit();
     Pattern ifMatchPat = null;
     if (ifMatch != null) {
       ifMatchPat = Pattern.compile(ifMatch);
@@ -367,13 +394,17 @@ public class PluginTestUtil {
               break;
             case ".tar":
               //TODO
+              // com.ice.tar.TarInputStream
               log.info("support for .tar coming");
-              break;
+              throw new Exception("support for .tar coming");
+              //break;
             case ".tar.gz":
             case ".tgz":
               //TODO
+              // double wrap - unwrap gzip, then TarInputStream
               log.info("support for .tgz coming");
-              break;
+              throw new Exception("support for .tgz coming");
+              //break;
             default:
               throw new Exception("Unexpected Archive file type: '" + isArchive + "'");
           }
@@ -408,24 +439,11 @@ public class PluginTestUtil {
   }
 
   /**
-   * TODO: Take the plugin as param and check it for which types of files to see as archives
-   * e.g. toAu.getArchiveFileTypes().getFromCu(cu)
-   * if null
-   *   copy cu as normal
-   * elsif in map:
-   *   switch :
-   *      zip - use the copyzip
-   *      tar - either figure it out or Throw an error
-   *         com.ice.tar.TarInputStream
-   *      tgz - ibid
-   *        double wrap - unwrap gzip, then TarInputStream
-   * else:
-   *   Throw error
-   */
-
-  /**
    * Opens a single CachedUrl zip file, iterates over its contents and copies the contents if they pass
    * given pattern(s) and replacements.
+   *
+   * Note: replacement(s) can rename the zip file, but all zip files should be the same in the replacement string(s)
+   *
    * @param cu A CachedUrl of compressed content.
    * @param toAu The ArchivalUnit to copy the cu into.
    * @param patRepPairs A List of PatternReplacementss to selectively copy zipped content and rename it in the new zip.
@@ -524,7 +542,7 @@ public class PluginTestUtil {
     public String[] rep;
 
     /**
-     * Simple Container class for Regex pattern -> Replacement pairs.
+     * Simple Container class for Regex pattern -> Replacement associations.
      * @param pat String regex, gets compiled to a Pattern
      * @param rep Replacement string
      */
