@@ -71,8 +71,8 @@
     au < finished ; finished ; 2012 ; SPIE Proceedings 2012 ; 2012 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; SPIE Proceedings 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; SPIE Proceedings 2014 ; 2014 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2015 ; SPIE Proceedings 2015 ; 2015 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; SPIE Proceedings 2016 ; 2016 ; reingest1.clockss.org:8082 > 
+    au < finished ; manifest ; 2015 ; SPIE Proceedings 2015 ; 2015 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2016 ; SPIE Proceedings 2016 ; 2016 ; reingest1.clockss.org:8082 >
   #SPIE is no longer participating. Do not process any content after 2016
   }
  
