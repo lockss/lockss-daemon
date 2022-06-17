@@ -313,11 +313,6 @@ public class PluginTestUtil {
       try {
         String fromUrl = cu.getUrl();
         String toUrl = fromUrl;
-        Matcher compMat = COMPRESSED_PATTERN.matcher(fromUrl);
-        if (compMat.find()) {
-          log.debug("encountered a compressed file, skipping");
-          continue;
-        }
         if (ifMatchPat != null) {
           Matcher mat = ifMatchPat.matcher(fromUrl);
           if (!mat.find()) {
@@ -329,13 +324,7 @@ public class PluginTestUtil {
           Matcher mat = pattern.matcher(fromUrl);
           toUrl = mat.replaceAll(rep);
         }
-        CIProperties props = cu.getProperties();
-        if (props == null) {
-          log.debug3("in copyCus() props was null for url: " + fromUrl);
-        }
-        UrlCacher uc = toAu.makeUrlCacher(
-            new UrlData(cu.getUnfilteredInputStream(), props, toUrl));
-        uc.storeContent();
+        doCopyCu(cu, toAu, fromUrl, toUrl);
         if (!toUrl.equals(fromUrl)) {
           log.debug2("Copied " + fromUrl + " to " + toUrl);
         } else {
