@@ -344,6 +344,30 @@ public class PluginTestUtil {
   }
 
   /**
+   * Overloaded method of copyCus which takes pattern-replacement set
+   */
+  public static boolean copyCus(CachedUrlSet fromCus, ArchivalUnit toAu,
+                                String ifMatch, PatternReplacements prps) {
+    return false;
+  }
+
+  /**
+   * TODO: Take the plugin as param and check it for which types of files to see as archives
+   * e.g. toAu.getArchiveFileTypes().getFromCu(cu)
+   * if null
+   *   copy cu as normal
+   * elsif in map:
+   *   switch :
+   *      zip - use the copyzip
+   *      tar - either figure it out or Throw an error
+   *         com.ice.tar.TarInputStream
+   *      tgz - ibid
+   *        double wrap - unwrap gzip, then TarInputStream
+   * else:
+   *   Throw error
+   */
+
+  /**
    * Copies all zips in from one crawl into another without modification.
    *
    * @see PluginTestUtil#copyZip(CachedUrl, ArchivalUnit, PatternReplacements)
@@ -466,23 +490,26 @@ public class PluginTestUtil {
         if (entry.isDirectory()) {
           continue;
         } else if (entry.getName().endsWith(".zip") ) {
+          // TODO recurse through nested
           // zipCopy(cu, toAu, zipUrl + );
-          // TODO
         }
         fromFile = entry.getName();
         zippedFile = zipUrl + fromFile;
         for (PatternReplacementPair prp : patReps.pairs) {
           Matcher mat = prp.pat.matcher(zippedFile);
-          toUrl = mat.replaceAll(prp.rep);
-          if (!toUrl.equals(zippedFile)) {
-            log.debug("Found a zipped file match: " + zippedFile + " -> " + toUrl);
-            doCache = true;
-            outZip = toUrl.split("!/")[0];
-            toFile = toUrl.split("!/")[1];
-            ZipEntry outEntry = new ZipEntry(toFile);
-            zos.putNextEntry(outEntry);
-            StreamUtil.copy(zis, zos);
-            zos.closeEntry();
+          if (mat.find()) {
+            toUrl = mat.replaceAll(prp.rep);
+            if (!toUrl.equals(zippedFile)) {
+              log.debug("Found a zipped file match: " + zippedFile + " -> " + toUrl);
+              doCache = true;
+              outZip = toUrl.split("!/")[0];
+              toFile = toUrl.split("!/")[1];
+              ZipEntry outEntry = new ZipEntry(toFile);
+              zos.putNextEntry(outEntry);
+              StreamUtil.copy(zis, zos);
+              zos.closeEntry();
+            }
+            break;
           }
         }
       }
@@ -512,10 +539,10 @@ public class PluginTestUtil {
 
   public static List<String> urlsOf(final Iterable<CachedUrl> cus) {
     return new ArrayList<String>() {{
-	for (CachedUrl cu : cus) {
-	  add(cu.getUrl());
-	}
-      }};
+        for (CachedUrl cu : cus) {
+          add(cu.getUrl());
+        }
+    }};
   }
 
   private static PluginManager getPluginManager() {
@@ -523,7 +550,11 @@ public class PluginTestUtil {
       (PluginManager)LockssDaemon.getManager(LockssDaemon.PLUGIN_MANAGER);
   }
 
-  private static class PatternReplacementPair {
+  public static PatternReplacementPair makePatRepPair(String pat, String rep) {
+    return new PatternReplacementPair(pat , rep);
+  }
+
+  public static class PatternReplacementPair {
     public Pattern pat;
     public String rep;
 
@@ -538,6 +569,7 @@ public class PluginTestUtil {
     }
   }
 
+  // TODO Remove this class
   private static class PatternReplacements {
     public PatternReplacementPair[] pairs;
 
