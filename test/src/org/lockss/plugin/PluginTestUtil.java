@@ -55,10 +55,6 @@ import org.lockss.config.*;
 public class PluginTestUtil {
   static Logger log = Logger.getLogger("PluginTestUtil");
   static List aulist = new LinkedList();
-  static final Pattern COMPRESSED_PATTERN = Pattern.compile(
-      "\\.(zip|tar\\.gz|tgz)$",
-      Pattern.CASE_INSENSITIVE
-  );
 
   public static void registerArchivalUnit(Plugin plug, ArchivalUnit au) {
     PluginManager mgr = getPluginManager();
@@ -297,8 +293,19 @@ public class PluginTestUtil {
     return copyCus(fromCus, toAu, null, null, null);
   }
 
+  /**
+   * Utility to copy zip files from a simulated crawl to a mock archival unit.
+   * if only fromAu and toAu are provided, all zips encountered are copied without modification.
+   *
+   * @param fromCus
+   * @param toAu
+   * @param ifMatch
+   * @param pat
+   * @param rep
+   * @return true if all files copied, false otherwise
+   */
   public static boolean copyCus(CachedUrlSet fromCus, ArchivalUnit toAu,
-				String ifMatch, String pat, String rep) throws MalformedURLException {
+				String ifMatch, String pat, String rep) {
     boolean res = true;
     ArchivalUnit fromAu = fromCus.getArchivalUnit();
     Pattern pattern = null;
@@ -342,6 +349,11 @@ public class PluginTestUtil {
 
   /**
    * Overloaded method of copyCus which takes pattern-replacement set
+   *
+   * @param fromCus the CachedUrlSet which has been crawled
+   * @param toAu the Archival Unit to copy content to
+   * @param patRepPairs A List of PatternReplacementPairs to selectively copy zipped content and rename it in the new zip.
+   * @return true, if all copies attempted succeeded, false otherwise
    */
   public static boolean copyCus(CachedUrlSet fromCus, ArchivalUnit toAu,
                                 String ifMatch, List<PatternReplacementPair> patRepPairs)
@@ -440,73 +452,6 @@ public class PluginTestUtil {
    * else:
    *   Throw error
    */
-
-  /**
-   * Copies all zips in from one crawl into another without modification.
-   *
-   */
-  public static boolean copyAuZip(ArchivalUnit fromAu, ArchivalUnit toAu) throws MalformedURLException {
-    return copyZipCus(fromAu.getAuCachedUrlSet(), toAu, null);
-  }
-
-  /**
-   * Works just like {@link PluginTestUtil#copyZipCus(CachedUrlSet, ArchivalUnit, List)}.
-   * Just gets the cachedUrlSet in fromAU and Makes lists from pat & rep.
-   *
-   * @see PluginTestUtil#copyZipCus(CachedUrlSet, ArchivalUnit, List)
-   */
-  public static boolean copyAuZip(ArchivalUnit fromAu, ArchivalUnit toAu, String pat, String rep) throws Exception {
-    return copyZipCus(fromAu.getAuCachedUrlSet(), toAu, Collections.singletonList(makePatRepPair(pat, rep)));
-  }
-
-
-  /**
-  * Works just like {@link PluginTestUtil#copyZipCus(CachedUrlSet, ArchivalUnit, List)}.
-  * Just makes lists and adds pat and rep to them.
-   *
- */
-  public static boolean copyZipCus(CachedUrlSet fromCus, ArchivalUnit toAu, String pat, String rep) throws Exception {
-    return copyZipCus(fromCus, toAu, Collections.singletonList(makePatRepPair(pat, rep)));
-  }
-
-  /**
-   * Utility to copy zip files from a simulated crawl to a mock archival unit.
-   * if only fromAu and toAu are provided, all zips encountered are copied without modification.
-   *
-   * @param fromCus the CachedUrlSet which has been crawled
-   * @param toAu the Archival Unit to copy content to
-   * @param patReps A List of PatternReplacementPairs to selectively copy zipped content and rename it in the new zip.
-   * @return true, if all copies attempted succeeded, false otherwise
-   */
-  private static boolean copyZipCus(CachedUrlSet fromCus, ArchivalUnit toAu, List<PatternReplacementPair> patReps) throws MalformedURLException {
-    boolean res = true;
-    for (CachedUrl cu : fromCus.getCuIterable()) {
-      log.info(toAu.getArchiveFileTypes().getFromCu(cu));
-      try {
-        String fromUrl = cu.getUrl();
-        // only copy the file if it is a zip.
-        Matcher mat = COMPRESSED_PATTERN.matcher(fromUrl);
-        if (mat.find()) {
-          if (patReps!=null) {
-            log.debug("entering zip file to copy contents");
-            copyZip(cu, toAu, patReps);
-          } else {
-            log.debug("copying unmodified zip");
-            CIProperties props = cu.getProperties();
-            UrlCacher uc = toAu.makeUrlCacher(
-                new UrlData(cu.getUnfilteredInputStream(), props, fromUrl));
-            uc.storeContent();
-          }
-        }
-      } catch (Exception e) {
-        log.error("Couldn't copy " + cu.getUrl(), e);
-        res = false;
-      } finally {
-        cu.release();
-      }
-    }
-    return res;
-  }
 
   /**
    * Opens a single CachedUrl zip file, iterates over its contents and copies the contents if they pass
