@@ -314,7 +314,7 @@ public class PluginTestUtil {
    *
    * @see PluginTestUtil#copyCus(CachedUrlSet, ArchivalUnit, String, List)
    */
-  public static boolean copyCus(CachedUrlSet fromCus, ArchivalUnit toAu) throws MalformedURLException {
+  public static boolean copyCus(CachedUrlSet fromCus, ArchivalUnit toAu) {
     return copyCus(fromCus, toAu, null, null, null);
   }
 
@@ -326,7 +326,7 @@ public class PluginTestUtil {
    * @see PluginTestUtil#copyCus(CachedUrlSet, ArchivalUnit, String, List)
    */
   public static boolean copyCus(CachedUrlSet fromCus, ArchivalUnit toAu,
-				String ifMatch, String pat, String rep) throws MalformedURLException {
+				String ifMatch, String pat, String rep) {
     List<PatternReplacements> patRepPairs;
     if (pat == null) {
       patRepPairs = null;
@@ -349,8 +349,7 @@ public class PluginTestUtil {
    * @return true, if all copies attempted succeeded, false otherwise
    */
   public static boolean copyCus(CachedUrlSet fromCus, ArchivalUnit toAu,
-                                String ifMatch, List<PatternReplacements> patRepPairs)
-      throws MalformedURLException {
+                                String ifMatch, List<PatternReplacements> patRepPairs) {
     boolean res = true;
     Pattern ifMatchPat = null;
     if (ifMatch != null) {
@@ -424,12 +423,20 @@ public class PluginTestUtil {
                                String fromUrl,
                                String toUrl
   ) throws IOException {
-    CIProperties props = cu.getProperties();
+    doCopyCu(cu.getUnfilteredInputStream(), cu.getProperties(), toAu, fromUrl, toUrl);
+  }
+
+  private static void doCopyCu(InputStream is,
+                               CIProperties props,
+                               ArchivalUnit toAu,
+                               String fromUrl,
+                               String toUrl
+  ) throws IOException {
     if (props == null) {
       log.debug3("in copyCus() props was null for url: " + fromUrl);
     }
     UrlCacher uc = toAu.makeUrlCacher(
-        new UrlData(cu.getUnfilteredInputStream(), props, toUrl));
+        new UrlData(is, props, toUrl));
     uc.storeContent();
     if (!toUrl.equals(fromUrl)) {
       log.info("Copied " + fromUrl + " to " + toUrl);
@@ -453,7 +460,7 @@ public class PluginTestUtil {
       throws IOException {
     boolean doCache = false;
     String zipUrl = cu.getUrl() + "!/";
-    String toUrl; String toFile; String zippedFile; String fromFile;
+    String toUrl; String zippedFile; String fromFile;
     ZipInputStream zis = null;
     ZipOutputStream zos;
     String outZip = null;
@@ -466,7 +473,6 @@ public class PluginTestUtil {
       zos.setMethod(ZipOutputStream.DEFLATED);
       zos.setLevel(Deflater.BEST_COMPRESSION);
       ZipEntry entry;
-
       while ((entry = zis.getNextEntry()) != null) {
         if (entry.isDirectory()) {
           continue;
@@ -478,7 +484,7 @@ public class PluginTestUtil {
         zippedFile = zipUrl + fromFile;
         if (patRepPairs == null) {
           doCache = true;
-          doCopyZip(zos, zis, zippedFile);
+          doCopyZipEntry(zos, zis, zippedFile);
           outZip = zippedFile.split("!/")[0];
         } else {
           for (PatternReplacements prp : patRepPairs) {
@@ -489,7 +495,7 @@ public class PluginTestUtil {
                 if (!toUrl.equals(zippedFile)) {
                   log.debug("Found a zipped file match: " + zippedFile + " -> " + toUrl);
                   doCache = true;
-                  doCopyZip(zos, zis, toUrl);
+                  doCopyZipEntry(zos, zis, toUrl);
                   outZip = toUrl.split("!/")[0];
                 }
               }
@@ -507,14 +513,7 @@ public class PluginTestUtil {
             cu.getArchivalUnit().getProperties().getString("root"),
             "temp.zip"));
         // save all the copied zip entries to a new zip on the toAu
-        CIProperties props = cu.getProperties();
-        if (props == null) {
-          log.debug3("in copyCus() props was null for url: " + cu.getUrl());
-        }
-        log.debug("Storing new cu: " + outZip);
-        UrlCacher uc = toAu.makeUrlCacher(
-            new UrlData(is, props, outZip));
-        uc.storeContent();
+        doCopyCu(is, cu.getProperties(), toAu, zipUrl, outZip);
         is.close();
       }
 
@@ -523,7 +522,7 @@ public class PluginTestUtil {
     }
   }
 
-  private static void doCopyZip(ZipOutputStream zos, ZipInputStream zis, String toUrl) throws IOException {
+  private static void doCopyZipEntry(ZipOutputStream zos, ZipInputStream zis, String toUrl) throws IOException {
     String toFile = toUrl.split("!/")[1];
     ZipEntry outEntry = new ZipEntry(toFile);
     zos.putNextEntry(outEntry);
