@@ -450,7 +450,7 @@ public class PluginTestUtil {
    * @throws IOException When I/O zip files encounter any number of problems.
    */
   private static void copyZip(CachedUrl cu, ArchivalUnit toAu, List<PatternReplacements> patRepPairs)
-    throws IOException {
+      throws IOException {
     boolean doCache = false;
     String zipUrl = cu.getUrl() + "!/";
     String toUrl; String toFile; String zippedFile; String fromFile;
@@ -476,28 +476,32 @@ public class PluginTestUtil {
         }
         fromFile = entry.getName();
         zippedFile = zipUrl + fromFile;
-        for (PatternReplacements prp : patRepPairs) {
-          Matcher mat = prp.pat.matcher(zippedFile);
-          if (mat.find()) {
-            for (String rep : prp.rep) {
-              toUrl = mat.replaceAll(rep);
-              if (!toUrl.equals(zippedFile)) {
-                log.debug("Found a zipped file match: " + zippedFile + " -> " + toUrl);
-                doCache = true;
-                outZip = toUrl.split("!/")[0];
-                toFile = toUrl.split("!/")[1];
-                ZipEntry outEntry = new ZipEntry(toFile);
-                zos.putNextEntry(outEntry);
-                StreamUtil.copy(zis, zos);
-                zos.closeEntry();
+        if (patRepPairs == null) {
+          doCache = true;
+          doCopyZip(zos, zis, zippedFile);
+          outZip = zippedFile.split("!/")[0];
+        } else {
+          for (PatternReplacements prp : patRepPairs) {
+            Matcher mat = prp.pat.matcher(zippedFile);
+            if (mat.find()) {
+              for (String rep : prp.rep) {
+                toUrl = mat.replaceAll(rep);
+                if (!toUrl.equals(zippedFile)) {
+                  log.debug("Found a zipped file match: " + zippedFile + " -> " + toUrl);
+                  doCache = true;
+                  doCopyZip(zos, zis, toUrl);
+                  outZip = toUrl.split("!/")[0];
+                }
               }
+              break;
             }
-            break;
           }
         }
       }
       zos.close();
       // any copied file triggers saving the new zip stream
+      // the output file name is parsed from the matched file
+      // it will be the last matched-replaced file.
       if (doCache) {
         FileInputStream is = new FileInputStream(new File(
             cu.getArchivalUnit().getProperties().getString("root"),
@@ -519,6 +523,13 @@ public class PluginTestUtil {
     }
   }
 
+  private static void doCopyZip(ZipOutputStream zos, ZipInputStream zis, String toUrl) throws IOException {
+    String toFile = toUrl.split("!/")[1];
+    ZipEntry outEntry = new ZipEntry(toFile);
+    zos.putNextEntry(outEntry);
+    StreamUtil.copy(zis, zos);
+    zos.closeEntry();
+  }
 
   public static List<String> urlsOf(final Iterable<CachedUrl> cus) {
     return new ArrayList<String>() {{
