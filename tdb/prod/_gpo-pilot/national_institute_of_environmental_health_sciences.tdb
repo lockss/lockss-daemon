@@ -18,7 +18,8 @@
 
     {
     # Ancient plugin name has an underscore in it
-    plugin = gov.gpo.access.permanent.plugin.environmentalhealthperspectives.EHP2022JournalPlugin #This is a suggested name.
+    plugin = gov.gpo.access.permanent.plugin.environmentalhealthperspectives.EHP2022JournalPlugin 
+    #This is a suggested name.
     param[base_url] = https://ehp.niehs.nih.gov/
     implicit < status ; year ; name ; param[volume_name] >
 

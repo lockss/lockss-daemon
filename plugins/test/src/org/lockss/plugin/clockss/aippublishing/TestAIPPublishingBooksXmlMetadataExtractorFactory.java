@@ -65,12 +65,11 @@ public class TestAIPPublishingBooksXmlMetadataExtractorFactory extends SourceXml
 
         ArticleMetadata md = mdlist.get(0);
         assertNotNull(md);
-
-        log.info("++" + md.get(MetadataField.FIELD_PUBLICATION_TITLE) + "++");
+        
         assertEquals("With You When You Fly: Aeronautics for Introductory Physics: ", md.get(MetadataField.FIELD_PUBLICATION_TITLE));
         assertEquals("2015", md.get(MetadataField.FIELD_DATE));
         assertEquals("AIP Publishing LLC", md.get(MetadataField.FIELD_PUBLISHER));
-        //assertEquals("10.33594/000000488", md.get(MetadataField.FIELD_DOI));
+        assertEquals("10.1063/9780735421547", md.get(MetadataField.FIELD_DOI));
         assertEquals("9780735421547", md.get(MetadataField.FIELD_ISBN));
         assertEquals("NASA", md.get(MetadataField.FIELD_AUTHOR));
     }

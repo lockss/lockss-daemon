@@ -70,7 +70,8 @@ public class AIPPublishingBooksXmlMetadataExtractorFactory extends SourceXmlMeta
       if ((cu.getUrl()).contains(SCHEMA_PATH)) {
         if (SchemaHelper == null) {
           log.debug3("AIP Publishing schema: " + cu.getUrl());
-          SchemaHelper = new Onix3BooksSchemaHelper();
+          //SchemaHelper = new Onix3BooksSchemaHelper();
+          SchemaHelper = new AIPPublishingOnix3BooksSchemaHelper();
         } else {
           log.debug3("AIP Publishing schema existing: " + cu.getUrl());
         }
@@ -104,6 +105,15 @@ public class AIPPublishingBooksXmlMetadataExtractorFactory extends SourceXmlMeta
         CachedUrl cu, ArticleMetadata thisAM) {
 
       log.debug3("in AIP Publishing postCookProcess");
+
+      String doi = thisAM.getRaw(AIPPublishingOnix3BooksSchemaHelper.ONIX_website_url);
+
+      log.debug3("in AIP Publishing postCookProcess, doi = " + doi);
+
+      if (doi != null) {
+        thisAM.put(MetadataField.FIELD_DOI,doi.replaceFirst("https://aip.scitation.org/doi/book/", ""));
+    }
+
       thisAM.put(MetadataField.FIELD_PUBLICATION_TYPE,MetadataField.PUBLICATION_TYPE_BOOK);
       thisAM.put(MetadataField.FIELD_ARTICLE_TYPE,MetadataField.ARTICLE_TYPE_BOOKVOLUME);
     }
