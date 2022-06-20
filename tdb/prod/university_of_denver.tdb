@@ -72,13 +72,13 @@
     au < manifest ; 2007-2008 ; Denver Law Review Volume 85 ; 85 >
     au < manifest ; 2008-2009 ; Denver Law Review Volume 86 ; 86 >
     au < manifest ; 2009-2010 ; Denver Law Review Volume 87 ; 87 >
-    au < manifest ; 2010-2011 ; Denver Law Review Volume 88 ; 88 >
-    au < manifest ; 2011-2012 ; Denver Law Review Volume 89 ; 89 >
-    au < manifest ; 2012-2013 ; Denver Law Review Volume 90 ; 90 >
-    au < manifest ; 2013-2014 ; Denver Law Review Volume 91 ; 91 >
-    au < manifest ; 2014-2015 ; Denver Law Review Volume 92 ; 92 >
-    au < manifest ; 2015-2016 ; Denver Law Review Volume 93 ; 93 >
-    au < manifest ; 2016-2017 ; Denver Law Review Volume 94 ; 94 >
+    au < ready ; 2010-2011 ; Denver Law Review Volume 88 ; 88 >
+    au < ready ; 2011-2012 ; Denver Law Review Volume 89 ; 89 >
+    au < ready ; 2012-2013 ; Denver Law Review Volume 90 ; 90 >
+    au < ready ; 2013-2014 ; Denver Law Review Volume 91 ; 91 >
+    au < ready ; 2014-2015 ; Denver Law Review Volume 92 ; 92 >
+    au < ready ; 2015-2016 ; Denver Law Review Volume 93 ; 93 >
+    au < ready ; 2016-2017 ; Denver Law Review Volume 94 ; 94 >
     au < ready ; 2017-2018 ; Denver Law Review Volume 95 ; 95 >
   }
   {
@@ -91,13 +91,13 @@
     
     param[journal_abbr] = dlrforum
 
-    au < manifest ; 2012 ; Denver Law Review Forum Volume 90 ; 90 >
-    au < manifest ; 2013 ; Denver Law Review Forum Volume 91 ; 91 >
-    au < manifest ; 2014 ; Denver Law Review Forum Volume 92 ; 92 >
-    au < manifest ; 2015 ; Denver Law Review Forum Volume 93 ; 93 >
-    au < manifest ; 2016 ; Denver Law Review Forum Volume 94 ; 94 >
-    au < manifest ; 2017 ; Denver Law Review Forum Volume 95 ; 95 >
-    au < manifest ; 2018 ; Denver Law Review Forum Volume 96 ; 96 >
+    au < ready ; 2012 ; Denver Law Review Forum Volume 90 ; 90 >
+    au < ready ; 2013 ; Denver Law Review Forum Volume 91 ; 91 >
+    au < ready ; 2014 ; Denver Law Review Forum Volume 92 ; 92 >
+    au < ready ; 2015 ; Denver Law Review Forum Volume 93 ; 93 >
+    au < ready ; 2016 ; Denver Law Review Forum Volume 94 ; 94 >
+    au < ready ; 2017 ; Denver Law Review Forum Volume 95 ; 95 >
+    au < ready ; 2018 ; Denver Law Review Forum Volume 96 ; 96 >
   }
   {
   
@@ -109,8 +109,8 @@
     param[journal_abbr] = duurj
     #Volume 1-2
 
-    au < manifest ; 2020 ; DU Undergraduate Research Journal Archive Volume 1 ; 1 >
-    au < manifest ; 2020 ; DU Undergraduate Research Journal Archive Volume 2 ; 2 >
+    au < ready ; 2020 ; DU Undergraduate Research Journal Archive Volume 1 ; 1 >
+    au < ready ; 2020 ; DU Undergraduate Research Journal Archive Volume 2 ; 2 >
   }
   {
   
@@ -165,12 +165,12 @@
     param[journal_abbr] = sbs
     #Volume 1-8
 
-    au < manifest ; 2015 ; Soundboard Scholar Volume 1 ; 1 >
-    au < manifest ; 2016 ; Soundboard Scholar Volume 2 ; 2 >
-    au < manifest ; 2017 ; Soundboard Scholar Volume 3 ; 3 >
-    au < manifest ; 2018 ; Soundboard Scholar Volume 4 ; 4 >
-    au < manifest ; 2019 ; Soundboard Scholar Volume 5 ; 5 >
-    au < manifest ; 2020 ; Soundboard Scholar Volume 6 ; 6 >
+    au < ready ; 2015 ; Soundboard Scholar Volume 1 ; 1 >
+    au < ready ; 2016 ; Soundboard Scholar Volume 2 ; 2 >
+    au < ready ; 2017 ; Soundboard Scholar Volume 3 ; 3 >
+    au < ready ; 2018 ; Soundboard Scholar Volume 4 ; 4 >
+    au < ready ; 2019 ; Soundboard Scholar Volume 5 ; 5 >
+    au < ready ; 2020 ; Soundboard Scholar Volume 6 ; 6 >
     au < manifest ; 2021 ; Soundboard Scholar Volume 7 ; 7 >
     au < manifest ; 2022 ; Soundboard Scholar Volume 8 ; 8 >
   }
@@ -184,7 +184,7 @@
     param[journal_abbr] = theliminal
     #Volume 1-present
 
-    au < manifest ; 2019 ; The Liminal: Interdisciplinary Journal of Technology in Education Volume 1 ; 1 >
+    au < ready ; 2019 ; The Liminal: Interdisciplinary Journal of Technology in Education Volume 1 ; 1 >
     au < expected ; 2023 ; The Liminal: Interdisciplinary Journal of Technology in Education Volume 2 ; 2 >
   }
   {
@@ -196,13 +196,13 @@
     param[journal_abbr] = crimlawrev
     #Volume 1-7
 
-    au < manifest ; 2011 ; University of Denver Criminal Law Review Volume 1 ; 1 >
-    au < manifest ; 2012 ; University of Denver Criminal Law Review Volume 2 ; 2 >
-    au < manifest ; 2013 ; University of Denver Criminal Law Review Volume 3 ; 3 >
-    au < manifest ; 2014 ; University of Denver Criminal Law Review Volume 4 ; 4 >
-    au < manifest ; 2015 ; University of Denver Criminal Law Review Volume 5 ; 5 >
-    au < manifest ; 2016 ; University of Denver Criminal Law Review Volume 6 ; 6 >
-    au < manifest ; 2017 ; University of Denver Criminal Law Review Volume 7 ; 7 >
+    au < ready ; 2011 ; University of Denver Criminal Law Review Volume 1 ; 1 >
+    au < ready ; 2012 ; University of Denver Criminal Law Review Volume 2 ; 2 >
+    au < ready ; 2013 ; University of Denver Criminal Law Review Volume 3 ; 3 >
+    au < ready ; 2014 ; University of Denver Criminal Law Review Volume 4 ; 4 >
+    au < ready ; 2015 ; University of Denver Criminal Law Review Volume 5 ; 5 >
+    au < ready ; 2016 ; University of Denver Criminal Law Review Volume 6 ; 6 >
+    au < ready ; 2017 ; University of Denver Criminal Law Review Volume 7 ; 7 >
   }
   {
   
@@ -214,9 +214,9 @@
     param[journal_abbr] = wlr
     #Volume 1-21
 
-    au < manifest ; 2015 ; Water Law Review Volume 18 ; 18 >
-    au < manifest ; 2016 ; Water Law Review Volume 19 ; 19 >
-    au < manifest ; 2017 ; Water Law Review Volume 20 ; 20 >
-    au < manifest ; 2018 ; Water Law Review Volume 21 ; 21 >
+    au < ready ; 2015 ; Water Law Review Volume 18 ; 18 >
+    au < ready ; 2016 ; Water Law Review Volume 19 ; 19 >
+    au < ready ; 2017 ; Water Law Review Volume 20 ; 20 >
+    au < ready ; 2018 ; Water Law Review Volume 21 ; 21 >
   }
 }
