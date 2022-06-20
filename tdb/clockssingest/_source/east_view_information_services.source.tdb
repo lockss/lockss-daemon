@@ -77,13 +77,21 @@
 
           {
 
-            #plugin = org.lockss.plugin.clockss.eastview.ClockssEastviewNewspaperDirSourcePlugin
-            #param[base_url] = https://clockss-test.lockss.org/sourcefiles/eastviewnewspapers-released/
+            plugin = org.lockss.plugin.clockss.eastview.ClockssEastviewNewspaperDirSourcePlugin
+            param[base_url] = https://clockss-test.lockss.org/sourcefiles/eastviewnewspapers-released/
             hidden[proxy] = DIRECT
             implicit < status ; status2 ; year ; name ; param[directory] >
 
-            #Waiting on production data delivery to do another round of testing
-            #au < expected ; exists ; 2021 ; East View Information Services Newspaper Source Content 2021_01 ; 2021_01 >
+            au < manifest ; exists ; 2022 ; East View Information Services Newspaper Source Content 2022_01 ; 2022_01 >
+            au < manifest ; exists ; 2022 ; East View Information Services Newspaper Source Content 2022_02 ; 2022_02 >
+            au < manifest ; exists ; 2022 ; East View Information Services Newspaper Source Content 2022_03 ; 2022_03 >
+            au < manifest ; exists ; 2022 ; East View Information Services Newspaper Source Content 2022_04 ; 2022_04 >
+            au < manifest ; exists ; 2022 ; East View Information Services Newspaper Source Content 2022_05 ; 2022_05 >
+            au < manifest ; exists ; 2022 ; East View Information Services Newspaper Source Content 2022_06 ; 2022_06 >
+            au < manifest ; exists ; 2022 ; East View Information Services Newspaper Source Content 2022_07 ; 2022_07 >
+            au < manifest ; exists ; 2022 ; East View Information Services Newspaper Source Content 2022_08 ; 2022_08 >
+            au < expected ; exists ; 2022 ; East View Information Services Newspaper Source Content 2022_09 ; 2022_09 >
+            au < expected ; exists ; 2022 ; East View Information Services Newspaper Source Content 2022_10 ; 2022_10 >
 
           }
 
