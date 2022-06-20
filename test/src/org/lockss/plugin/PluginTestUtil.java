@@ -39,6 +39,7 @@ import java.util.regex.*;
 import java.lang.reflect.*;
 import java.util.zip.*;
 
+import org.apache.commons.lang3.arch.Processor;
 import org.lockss.test.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.simulated.*;
@@ -356,7 +357,6 @@ public class PluginTestUtil {
       ifMatchPat = Pattern.compile(ifMatch);
     }
     ArchiveFileTypes aft = toAu.getArchiveFileTypes();
-    String isArchive = null;
     for (CachedUrl cu : fromCus.getCuIterable()) {
       try {
         String fromUrl = cu.getUrl();
@@ -368,6 +368,7 @@ public class PluginTestUtil {
             continue;
           }
         }
+        String isArchive = null;
         if (aft != null) {
           isArchive = aft.getFromCu(cu);
         }
@@ -459,17 +460,15 @@ public class PluginTestUtil {
   private static void copyZip(CachedUrl cu, ArchivalUnit toAu, List<PatternReplacements> patRepPairs)
       throws IOException {
     boolean doCache = false;
-    String zipUrl = cu.getUrl() + "!/";
-    String toUrl; String zippedFile; String fromFile;
-    ZipInputStream zis = null;
-    ZipOutputStream zos;
+    String tempZipName = "temp.zip";
+    ArchiveMemberSpec zipSpec = ArchiveMemberSpec.fromCu(cu, null);
     String outZip = null;
+    ZipInputStream zis = null;
     try {
       InputStream cuis = new ReaderInputStream(cu.openForReading());
       zis = new ZipInputStream(cuis);
-      zos = new ZipOutputStream(Files.newOutputStream(
-          Paths.get(cu.getArchivalUnit().getProperties().getString("root") +
-              "temp.zip")));
+      ZipOutputStream zos = new ZipOutputStream(Files.newOutputStream(
+          Paths.get(cu.getArchivalUnit().getProperties().getString("root") + tempZipName)));
       zos.setMethod(ZipOutputStream.DEFLATED);
       zos.setLevel(Deflater.BEST_COMPRESSION);
       ZipEntry entry;
@@ -480,23 +479,23 @@ public class PluginTestUtil {
           // TODO recurse through nested
           // zipCopy(cu, toAu, zipUrl + );
         }
-        fromFile = entry.getName();
-        zippedFile = zipUrl + fromFile;
+        ArchiveMemberSpec fromZipped = ArchiveMemberSpec.fromCu(cu, entry.getName());
         if (patRepPairs == null) {
           doCache = true;
-          doCopyZipEntry(zos, zis, zippedFile);
-          outZip = zippedFile.split("!/")[0];
+          doCopyZipEntry(zos, zis, fromZipped.toUrl());
+          outZip = fromZipped.getName();
         } else {
           for (PatternReplacements prp : patRepPairs) {
-            Matcher mat = prp.pat.matcher(zippedFile);
+            Matcher mat = prp.pat.matcher(fromZipped.toUrl());
             if (mat.find()) {
               for (String rep : prp.rep) {
-                toUrl = mat.replaceAll(rep);
-                if (!toUrl.equals(zippedFile)) {
-                  log.debug("Found a zipped file match: " + zippedFile + " -> " + toUrl);
+                ArchiveMemberSpec toZipped = ArchiveMemberSpec.fromUrl(toAu, mat.replaceAll(rep));
+                assert toZipped != null;
+                if (!toZipped.toUrl().equals(fromZipped.toUrl())) {
+                  log.debug("Found a zipped file match: " + fromZipped.toUrl() + " -> " + toZipped.toUrl());
                   doCache = true;
-                  doCopyZipEntry(zos, zis, toUrl);
-                  outZip = toUrl.split("!/")[0];
+                  doCopyZipEntry(zos, zis, toZipped.toUrl());
+                  outZip = toZipped.getUrl();
                 }
               }
               break;
@@ -509,11 +508,10 @@ public class PluginTestUtil {
       // the output file name is parsed from the matched file
       // it will be the last matched-replaced file.
       if (doCache) {
-        FileInputStream is = new FileInputStream(new File(
-            cu.getArchivalUnit().getProperties().getString("root"),
-            "temp.zip"));
+        FileInputStream is = new FileInputStream(
+            new File(cu.getArchivalUnit().getProperties().getString("root"), tempZipName));
         // save all the copied zip entries to a new zip on the toAu
-        doCopyCu(is, cu.getProperties(), toAu, zipUrl, outZip);
+        doCopyCu(is, cu.getProperties(), toAu, zipSpec.getUrl(), outZip);
         is.close();
       }
 
