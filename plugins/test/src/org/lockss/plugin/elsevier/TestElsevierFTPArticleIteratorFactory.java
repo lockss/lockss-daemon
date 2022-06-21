@@ -145,7 +145,7 @@ public class TestElsevierFTPArticleIteratorFactory extends ArticleIteratorTestCa
     assertNotNull(artIter);
   }
 
-  public void testSimCrawlArticleFiles() throws Exception {
+  public void testCopyTarArticleFiles() throws Exception {
     PluginTestUtil.crawlSimAu(sau);
     /*
      *  Go through the simulated content you just crawled and modify the results to emulate
@@ -163,18 +163,13 @@ public class TestElsevierFTPArticleIteratorFactory extends ArticleIteratorTestCa
             )
         )
     );
-    CachedUrlSet cus = au.getAuCachedUrlSet();
 
-    for (CachedUrl cu : cus.getCuIterable()) {
-      log.info(cu.getUrl());
-    }
     Iterator<ArticleFiles> it = au.getArticleIterator(MetadataTarget.Any());
-    SubTreeArticleIterator artIter = createSubTreeIter();
     int countAf = 0;
     int countFullTextPdf = 0;
-    while (artIter.hasNext()) {
-      ArticleFiles af = artIter.next();
-      log.info("Af: " + af.toString());
+    while (it.hasNext()) {
+      ArticleFiles af = it.next();
+      log.debug("Af: " + af.toString());
       countAf ++;
       CachedUrl cu = af.getFullTextCu();
       if ( cu != null) {
@@ -187,8 +182,8 @@ public class TestElsevierFTPArticleIteratorFactory extends ArticleIteratorTestCa
       }
     }
 
-    //assertEquals(20, countAf); // (5 x 4 branches)
-    //assertEquals(20, countFullTextPdf); // ensure there is a corresponding pdf fulltext
+    assertEquals(28, countAf); // (5 x 4 branches)
+    assertEquals(28, countFullTextPdf); // ensure there is a corresponding pdf fulltext
   }
 
 }
