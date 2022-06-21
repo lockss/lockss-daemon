@@ -42,12 +42,6 @@ import java.util.zip.*;
 import com.ice.tar.TarEntry;
 import com.ice.tar.TarInputStream;
 import com.ice.tar.TarOutputStream;
-import org.apache.commons.lang3.arch.Processor;
-import org.archive.util.ms.Entry;
-import org.lockss.extractor.FileMetadataExtractor;
-import org.lockss.extractor.MetadataTarget;
-import org.lockss.plugin.base.BaseCachedUrl;
-import org.lockss.rewriter.LinkRewriterFactory;
 import org.lockss.test.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.simulated.*;
@@ -376,11 +370,8 @@ public class PluginTestUtil {
             continue;
           }
         }
-        String isArchive = null;
-        if (aft != null) {
-          isArchive = aft.getFromCu(cu);
-        }
-        if (isArchive == null) {
+        String archiveType = (aft == null) ? null : aft.getFromCu(cu);
+        if (archiveType == null) {
           if (patRepPairs != null) {
             for (PatternReplacements prp : patRepPairs) {
               Matcher mat = prp.pat.matcher(fromUrl);
@@ -396,22 +387,17 @@ public class PluginTestUtil {
             doCopyCu(cu, toAu, fromUrl, toUrl);
           }
         } else {
-          switch (isArchive) {
+          switch (archiveType) {
             case ".zip":
               copyZip(cu, toAu, patRepPairs);
               break;
             case ".tar":
               copyTar(cu, toAu, patRepPairs);
               break;
-            case ".tar.gz":
+            case ".tar.gz": // needs to be supported by the simcrawler in order to be implemented here.
             case ".tgz":
-              //TODO
-              // double wrap - unwrap gzip, then TarInputStream
-              log.info("support for .tgz coming");
-              throw new Exception("support for .tgz coming");
-              //break;
             default:
-              throw new Exception("Unexpected Archive file type: '" + isArchive + "'");
+              throw new Exception("Unexpected Archive file type: '" + archiveType + "'");
           }
         }
       } catch (Exception e) {
@@ -680,5 +666,6 @@ public class PluginTestUtil {
     }
  */
   }
+
 
 }
