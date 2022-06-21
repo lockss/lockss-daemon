@@ -513,23 +513,19 @@ public class PluginTestUtil {
           }
         }
       }
-      zos.close();
-      // any copied file triggers saving the new zip stream
-      // the output file name is parsed from the matched file
-      // it will be the last matched-replaced file.
-      if (doCache) {
-        FileInputStream is = new FileInputStream(
-            new File(cu.getArchivalUnit().getProperties().getString("root"), tempZipName));
-        // save all the copied zip entries to a new zip on the toAu
-        doCopyCu(is, cu.getProperties(), toAu, zipSpec.getUrl(), outZip);
-        is.close();
-      }
-
+      closeAndCopyArchiveFile(zos, doCache, cu, toAu, zipSpec, outZip, tempZipName);
     } finally {
       IOUtil.safeClose(zis);
     }
   }
 
+  /**
+   * Copy a zipped archive member from a ZipInputStream to a ZipOutputStream
+   * @param zos The Zip file outputstream to copy the entry into
+   * @param zis The Zip file inputstream to copy the entry from
+   * @param toName the name of the new entry
+   * @throws IOException if zos or zis encounter errors
+   */
   private static void doCopyZipEntry(ZipOutputStream zos, ZipInputStream zis, String toName) throws IOException {
     ZipEntry outEntry = new ZipEntry(toName);
     zos.putNextEntry(outEntry);
@@ -537,16 +533,11 @@ public class PluginTestUtil {
     zos.closeEntry();
   }
 
-  private static void doCopyTarEntry(TarOutputStream tos, TarInputStream tis, String toName) throws IOException {
-    TarEntry outEntry = new TarEntry(toName);
-    tos.putNextEntry(outEntry);
-    StreamUtil.copy(tis, tos);
-    tos.closeEntry();
-  }
   private static void copyTar(CachedUrl cu, ArchivalUnit toAu, List<PatternReplacements> patRepPairs)
       throws IOException {
     copyTar(cu, toAu, patRepPairs, 0);
   }
+
   private static void copyTar(CachedUrl cu, ArchivalUnit toAu, List<PatternReplacements> patRepPairs, int tempFileId)
       throws IOException {
     String tempTarName = "temp" + tempFileId + ".tar";
@@ -570,7 +561,7 @@ public class PluginTestUtil {
         }
         if (patRepPairs == null) {
           doCache = true;
-          doCopyTarEntry(tos, tis, fromTarred.getName());
+          doCopyTarEntry(tos, tis, entry);
           outTar = fromTarred.getName();
         } else {
           for (PatternReplacements prp : patRepPairs) {
@@ -580,9 +571,11 @@ public class PluginTestUtil {
                 ArchiveMemberSpec toTarred = ArchiveMemberSpec.fromUrl(toAu, mat.replaceAll(rep));
                 assert toTarred != null;
                 if (!toTarred.toUrl().equals(fromTarred.toUrl())) {
-                  log.info("Found a tarred file match: " + fromTarred.toUrl() + " -> " + toTarred.toUrl());
+                  log.debug("Found a tarred file match: " + fromTarred.toUrl() + " -> " + toTarred.toUrl());
                   doCache = true;
-                  doCopyTarEntry(tos, tis, toTarred.getName());
+                  // rename the entry and copy it
+                  entry.setName(toTarred.getName());
+                  doCopyTarEntry(tos, tis, entry);
                   outTar = toTarred.getUrl();
                 }
               }
@@ -591,24 +584,46 @@ public class PluginTestUtil {
           }
         }
       }
-      tos.close();
-      // any copied file triggers saving the new tar stream
-      // the output file name is parsed from the matched file
-      // it will be the last matched-replaced file.
-      if (doCache) {
-        FileInputStream is = new FileInputStream(
-            new File(cu.getArchivalUnit().getProperties().getString("root"), tempTarName));
-        // save all the copied tar entries to a new tar on the toAu
-        doCopyCu(is, cu.getProperties(), toAu, tarSpec.getUrl(), outTar);
-        is.close();
-      }
-
+      closeAndCopyArchiveFile(tos, doCache, cu, toAu, tarSpec, outTar, tempTarName);
     } finally {
       IOUtil.safeClose(tis);
     }
   }
 
+  /**
+   * Copy a tarred archive member from a TarInputStream to a TarOutputStream
+   * @param tos The Tar file outputstream to copy the entry into
+   * @param tis The Tar file inputstream to copy the entry from
+   * @param entry the TarEntry to copy
+   * @throws IOException if tos or tis encounters an error
+   */
+  private static void doCopyTarEntry(TarOutputStream tos, TarInputStream tis, TarEntry entry)
+      throws IOException {
+    byte[] buf = new byte[1024];
+    tos.putNextEntry(entry);
+    int bytesRead;
+    long bytesWritten = 0;
+    while ((bytesRead = tis.read(buf)) != -1) {
+      log.info(String.valueOf(bytesWritten));
+      tos.write(buf, 0, bytesRead);
+      bytesWritten += bytesRead;
+    }
+    tos.closeEntry();
+  }
 
+  private static void closeAndCopyArchiveFile(OutputStream os, boolean doCopy, CachedUrl cu, ArchivalUnit toAu, ArchiveMemberSpec ams, String outName, String tempFileName) throws IOException {
+    os.close();
+    // any copied file triggers saving the new archive stream
+    // the output file name is parsed from the matched file
+    // it will be the last matched-replaced file.
+    if (doCopy) {
+      FileInputStream is = new FileInputStream(
+          new File(cu.getArchivalUnit().getProperties().getString("root"), tempFileName));
+      // save all the copied entries to a new archive on the toAu
+      doCopyCu(is, cu.getProperties(), toAu, ams.getUrl(), outName);
+      is.close();
+    }
+  }
   public static List<String> urlsOf(final Iterable<CachedUrl> cus) {
     return new ArrayList<String>() {{
         for (CachedUrl cu : cus) {
@@ -659,12 +674,11 @@ public class PluginTestUtil {
     public ArchivalUnit getArchivalUnit() {
       return au;
     }
-    /*
-    public Reader openForReading() {
-      zis.read();
-      return ;
+ /*
+    public Reader openForReading() throws IOException {
+      //return zis.read();
     }
-     */
+ */
   }
 
 }
