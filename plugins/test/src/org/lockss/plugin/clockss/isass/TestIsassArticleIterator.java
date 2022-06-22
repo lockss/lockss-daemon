@@ -94,7 +94,7 @@ public class TestIsassArticleIterator extends ArticleIteratorTestCase {
      *  what you would find in a "real" crawl with this plugin:
      * Note: using copyAuZip is different than copyAu
     */
-    PluginTestUtil.copyAu(sau, au, "\\.zip$",
+    PluginTestUtil.copyAu(sau, au, "\\.zip",
       Arrays.asList(
         PluginTestUtil.makePatRep(
           "content.zip!/branch(\\d+)/branch(\\d+)/(\\d+file)\\.xml",
@@ -134,7 +134,7 @@ public class TestIsassArticleIterator extends ArticleIteratorTestCase {
      *  Go through the simulated content you just crawled and modify the results to emulate
      *  what you would find in a "real" crawl with this plugin:
      */
-    PluginTestUtil.copyAu(sau, au, "\\.zip$",
+    PluginTestUtil.copyAu(sau, au, "\\.zip",
       Arrays.asList(
         PluginTestUtil.makePatRep(
           "content.zip!/branch(\\d+)/(\\d+file)\\.xml",

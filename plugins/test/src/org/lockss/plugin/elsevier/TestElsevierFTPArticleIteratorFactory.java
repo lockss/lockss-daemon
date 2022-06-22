@@ -151,7 +151,7 @@ public class TestElsevierFTPArticleIteratorFactory extends ArticleIteratorTestCa
      *  Go through the simulated content you just crawled and modify the results to emulate
      *  what you would find in a "real" crawl with this plugin:
      */
-    PluginTestUtil.copyAu(sau, au, "\\.tar$",
+    PluginTestUtil.copyAu(sau, au, "\\.tar",
         Arrays.asList(
             PluginTestUtil.makePatRep(
                 "content.tar!/branch(\\d+)/(\\d+)file\\.html",

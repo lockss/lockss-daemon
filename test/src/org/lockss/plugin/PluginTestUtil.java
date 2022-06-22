@@ -364,14 +364,18 @@ public class PluginTestUtil {
       try {
         String fromUrl = cu.getUrl();
         String toUrl = fromUrl;
+        String archiveType = (aft == null) ? null : aft.getFromCu(cu);
         if (ifMatchPat != null) {
           Matcher mat = ifMatchPat.matcher(fromUrl);
           if (!mat.find()) {
-            log.debug3("no match: " + fromUrl + ", " + ifMatchPat);
-            continue;
+            if (archiveType == null) {
+              // if we are dealing with an archive then it is best to just pass the pattern
+              // into the copyArchive() and let the matches happen in the contents.
+              log.debug3("no match: " + fromUrl + ", " + ifMatchPat);
+              continue;
+            }
           }
         }
-        String archiveType = (aft == null) ? null : aft.getFromCu(cu);
         if (archiveType == null) {
           if (patRepPairs != null) {
             for (PatternReplacements prp : patRepPairs) {
@@ -391,7 +395,7 @@ public class PluginTestUtil {
           switch (archiveType) {
             case ".zip":
             case ".tar":
-              copyArchive(cu, toAu, patRepPairs, archiveType);
+              copyArchive(cu, toAu, patRepPairs, archiveType, ifMatchPat);
               break;
             case ".tar.gz": // needs to be supported by the simcrawler in order to be implemented here.
             case ".tgz":
@@ -430,24 +434,28 @@ public class PluginTestUtil {
         new UrlData(is, props, toUrl));
     uc.storeContent();
     if (!toUrl.equals(fromUrl)) {
-      log.info("Copied " + fromUrl + " to " + toUrl);
+      log.debug2("Copied " + fromUrl + " to " + toUrl);
     } else {
       log.debug2("Copied " + fromUrl);
     }
   }
-  private static void copyArchive(CachedUrl cu, ArchivalUnit toAu, List<PatternReplacements> patRepPairs, String archiveType) {
+  private static void copyArchive(CachedUrl cu,
+                                  ArchivalUnit toAu,
+                                  List<PatternReplacements> patRepPairs,
+                                  String archiveType,
+                                  Pattern ifMatchPat) {
     ArchiveMemberSpec ams = ArchiveMemberSpec.fromCu(cu, null);
     InputStream is = null;
     try {
       switch (archiveType) {
         case ".zip":
           ZipInputStream zis = new ZipInputStream(new ReaderInputStream(cu.openForReading()));
-          copyZipIS(zis, cu, toAu, patRepPairs, archiveType, ams, 0);
+          copyZipIS(zis, cu, toAu, patRepPairs, archiveType, ifMatchPat, ams, 0);
           is = zis;
           break;
         case ".tar":
           TarInputStream tis = new TarInputStream(new ReaderInputStream(cu.openForReading()));
-          copyTarIS(tis, cu, toAu, patRepPairs, archiveType, ams, 0);
+          copyTarIS(tis, cu, toAu, patRepPairs, archiveType, ifMatchPat, ams, 0);
           is = tis;
           break;
         case ".tar.gz": // needs to be supported by the simcrawler in order to be implemented here.
@@ -473,6 +481,7 @@ public class PluginTestUtil {
                                 ArchivalUnit toAu,
                                 List<PatternReplacements> patRepPairs,
                                 String archiveType,
+                                Pattern ifMatchPat,
                                 ArchiveMemberSpec ams,
                                 int tempFileId)
       throws IOException {
@@ -485,12 +494,18 @@ public class PluginTestUtil {
     ZipEntry entry;
     while ((entry = zis.getNextEntry()) != null) {
       ArchiveMemberSpec fromZipped = ArchiveMemberSpec.fromCu(cu, entry.getName());
+      if (ifMatchPat != null) {
+        Matcher mat = ifMatchPat.matcher(fromZipped.toUrl());
+        if (!mat.find()) {
+          continue;
+        }
+      }
       if (entry.isDirectory()) {
         continue;
       } else if (entry.getName().endsWith(archiveType) ) {
         // TODO test recurse through nested
         ZipInputStream nestedZis = (ZipInputStream) IOUtils.toInputStream(String.valueOf(zis.read()));
-        copyZipIS(nestedZis, cu, toAu, patRepPairs, archiveType, fromZipped, tempFileId++);
+        copyZipIS(nestedZis, cu, toAu, patRepPairs, archiveType, ifMatchPat, fromZipped, tempFileId++);
       }
       if (patRepPairs == null) {
         doCopyZipEntry(zos, zis, fromZipped.getName());
@@ -534,6 +549,7 @@ public class PluginTestUtil {
                                 ArchivalUnit toAu,
                                 List<PatternReplacements> patRepPairs,
                                 String archiveType,
+                                Pattern ifMatchPat,
                                 ArchiveMemberSpec ams,
                                 int tempFileId) throws IOException {
     String tempFileName = "temp" + tempFileId + archiveType;
@@ -543,12 +559,18 @@ public class PluginTestUtil {
     TarEntry entry;
     while ((entry = tis.getNextEntry()) != null) {
       ArchiveMemberSpec fromTarred = ArchiveMemberSpec.fromCu(cu, entry.getName());
+      if (ifMatchPat != null) {
+        Matcher mat = ifMatchPat.matcher(fromTarred.toUrl());
+        if (!mat.find()) {
+          continue;
+        }
+      }
       if (entry.isDirectory()) {
         continue;
       } else if (entry.getName().endsWith(archiveType) ) {
         // TODO recurse through nested
         TarInputStream nestedTis = (TarInputStream) IOUtils.toInputStream(String.valueOf(tis.read()));
-        copyTarIS(nestedTis, cu, toAu, patRepPairs, archiveType, fromTarred, tempFileId++);
+        copyTarIS(nestedTis, cu, toAu, patRepPairs, archiveType, ifMatchPat, fromTarred, tempFileId++);
       }
       if (patRepPairs == null) {
         doCopyTarEntry(tos, tis, entry);
@@ -608,11 +630,8 @@ public class PluginTestUtil {
     byte[] buf = new byte[1024];
     tos.putNextEntry(entry);
     int bytesRead;
-    long bytesWritten = 0;
     while ((bytesRead = tis.read(buf)) != -1) {
-      log.info(String.valueOf(bytesWritten));
       tos.write(buf, 0, bytesRead);
-      bytesWritten += bytesRead;
     }
     tos.closeEntry();
   }
