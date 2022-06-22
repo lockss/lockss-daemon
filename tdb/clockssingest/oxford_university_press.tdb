@@ -2382,11 +2382,11 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Biology of Reproduction Volume 76-77 ; 76-77 ; >
     au < manifest ; exists ; 2008 ; 2008 ; Biology of Reproduction Volume 78-79 ; 78-79 ; >
     au < frozen ; exists ; 2009 ; 2009 ; Biology of Reproduction Volume 80-81 ; 80-81 ; >
-    au < testing ; exists ; 2010 ; 2010 ; Biology of Reproduction Volume 82-83 ; 82-83 ; >
-    au < testing ; exists ; 2011 ; 2011 ; Biology of Reproduction Volume 84-85 ; 84-85 ; >
+    au < ready ; exists ; 2010 ; 2010 ; Biology of Reproduction Volume 82-83 ; 82-83 ; >
+    au < ready ; exists ; 2011 ; 2011 ; Biology of Reproduction Volume 84-85 ; 84-85 ; >
     au < testing ; exists ; 2012 ; 2012 ; Biology of Reproduction Volume 86-87 ; 86-87 ; >
     au < ready ; exists ; 2013 ; 2013 ; Biology of Reproduction Volume 88-89 ; 88-89 ; >
-    au < testing ; exists ; 2014 ; 2014 ; Biology of Reproduction Volume 90-91 ; 90-91 ; >
+    au < ready ; exists ; 2014 ; 2014 ; Biology of Reproduction Volume 90-91 ; 90-91 ; >
     au < testing ; exists ; 2015 ; 2015 ; Biology of Reproduction Volume 92-93 ; 92-93 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Biology of Reproduction Volume 94-95 ; 94-95 ; >
     au < finished ; finished ; 2017 ; 2017 ; Biology of Reproduction Volume 96-97 ; 96-97 ; reingest3.clockss.org:8083 >
@@ -2533,12 +2533,12 @@
 
     au < manifest ; exists ; 2008 ; 2008 ; Bioscience Horizons: The International Journal of Student Research Volume 1 ; 1 ; >
     au < frozen ; exists ; 2009 ; 2009 ; Bioscience Horizons: The International Journal of Student Research Volume 2 ; 2 ; >
-    au < testing ; exists ; 2010 ; 2010 ; Bioscience Horizons: The International Journal of Student Research Volume 3 ; 3 ; >
-    au < testing ; exists ; 2011 ; 2011 ; Bioscience Horizons: The International Journal of Student Research Volume 4 ; 4 ; >
-    au < testing ; exists ; 2012 ; 2012 ; Bioscience Horizons: The International Journal of Student Research Volume 5 ; 5 ; > # different volume url: https://academic.oup.com/biohorizons/issue/volume/5
-    au < testing ; exists ; 2013 ; 2013 ; Bioscience Horizons: The International Journal of Student Research Volume 6 ; 6 ; >
-    au < testing ; exists ; 2014 ; 2014 ; Bioscience Horizons: The International Journal of Student Research Volume 7 ; 7 ; >
-    au < testing ; exists ; 2015 ; 2015 ; Bioscience Horizons: The International Journal of Student Research Volume 8 ; 8 ; >
+    au < ready ; exists ; 2010 ; 2010 ; Bioscience Horizons: The International Journal of Student Research Volume 3 ; 3 ; >
+    au < ready ; exists ; 2011 ; 2011 ; Bioscience Horizons: The International Journal of Student Research Volume 4 ; 4 ; >
+    au < ready ; exists ; 2012 ; 2012 ; Bioscience Horizons: The International Journal of Student Research Volume 5 ; 5 ; > # different volume url: https://academic.oup.com/biohorizons/issue/volume/5
+    au < ready ; exists ; 2013 ; 2013 ; Bioscience Horizons: The International Journal of Student Research Volume 6 ; 6 ; >
+    au < ready ; exists ; 2014 ; 2014 ; Bioscience Horizons: The International Journal of Student Research Volume 7 ; 7 ; >
+    au < ready ; exists ; 2015 ; 2015 ; Bioscience Horizons: The International Journal of Student Research Volume 8 ; 8 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Bioscience Horizons: The International Journal of Student Research Volume 9 ; 9 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Bioscience Horizons: The International Journal of Student Research Volume 10 ; 10 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Bioscience Horizons: The International Journal of Student Research Volume 11 ; 11 ; >
@@ -2883,16 +2883,16 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; British Journal of Surgery Volume 93 ; 93 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; British Journal of Surgery Volume 94 ; 94 ; >
     au < manifest ; exists ; 2008 ; 2008 ; British Journal of Surgery Volume 95 ; 95 ; >
-    au < testing ; exists ; 2009 ; 2009 ; British Journal of Surgery Volume 96 ; 96 ; >
-    au < testing ; exists ; 2010 ; 2010 ; British Journal of Surgery Volume 97 ; 97 ; >
-    au < testing ; exists ; 2011 ; 2011 ; British Journal of Surgery Volume 98 ; 98 ; >
-    au < testing ; exists ; 2012 ; 2012 ; British Journal of Surgery Volume 99 ; 99 ; >
-    au < testing ; exists ; 2013 ; 2013 ; British Journal of Surgery Volume 100 ; 100 ; >
+    au < ready ; exists ; 2009 ; 2009 ; British Journal of Surgery Volume 96 ; 96 ; >
+    au < ready ; exists ; 2010 ; 2010 ; British Journal of Surgery Volume 97 ; 97 ; >
+    au < ready ; exists ; 2011 ; 2011 ; British Journal of Surgery Volume 98 ; 98 ; >
+    au < ready ; exists ; 2012 ; 2012 ; British Journal of Surgery Volume 99 ; 99 ; >
+    au < ready ; exists ; 2013 ; 2013 ; British Journal of Surgery Volume 100 ; 100 ; >
     au < testing ; exists ; 2014 ; 2014 ; British Journal of Surgery Volume 101 ; 101 ; >
     au < testing ; exists ; 2015 ; 2015 ; British Journal of Surgery Volume 102 ; 102 ; >
     au < testing ; exists ; 2016 ; 2016 ; British Journal of Surgery Volume 103 ; 103 ; >
     au < testing ; exists ; 2017 ; 2017 ; British Journal of Surgery Volume 104 ; 104 ; >
-    au < testing ; exists ; 2018 ; 2018 ; British Journal of Surgery Volume 105 ; 105 ; >
+    au < ready ; exists ; 2018 ; 2018 ; British Journal of Surgery Volume 105 ; 105 ; >
     au < testing ; exists ; 2019 ; 2019 ; British Journal of Surgery Volume 106 ; 106 ; >
     au < frozen ; exists ; 2020 ; 2020 ; British Journal of Surgery Volume 107 ; 107 ; >
     au < crawling ; exists ; 2021 ; 2021 ; British Journal of Surgery Volume 108 ; 108 ; >
@@ -3707,11 +3707,11 @@
       au < doNotProcess ; exists ; 2007 ; 2007 ; Clinical Chemistry Volume 53 ; 53 ; >
       au < manifest ; exists ; 2008 ; 2008 ; Clinical Chemistry Volume 54 ; 54 ; >
       au < frozen ; exists ; 2009 ; 2009 ; Clinical Chemistry Volume 55 ; 55 ; >
-      au < testing ; exists ; 2010 ; 2010 ; Clinical Chemistry Volume 56 ; 56 ; >
-      au < testing ; exists ; 2011 ; 2011 ; Clinical Chemistry Volume 57 ; 57 ; >
-      au < testing ; exists ; 2012 ; 2012 ; Clinical Chemistry Volume 58 ; 58 ; >
+      au < ready ; exists ; 2010 ; 2010 ; Clinical Chemistry Volume 56 ; 56 ; >
+      au < ready ; exists ; 2011 ; 2011 ; Clinical Chemistry Volume 57 ; 57 ; >
+      au < ready ; exists ; 2012 ; 2012 ; Clinical Chemistry Volume 58 ; 58 ; >
       au < testing ; exists ; 2013 ; 2013 ; Clinical Chemistry Volume 59 ; 59 ; >
-      au < testing ; exists ; 2014 ; 2014 ; Clinical Chemistry Volume 60 ; 60 ; >
+      au < ready ; exists ; 2014 ; 2014 ; Clinical Chemistry Volume 60 ; 60 ; >
       au < frozen ; exists ; 2015 ; 2015 ; Clinical Chemistry Volume 61 ; 61 ; >
       au < frozen ; exists ; 2016 ; 2016 ; Clinical Chemistry Volume 62 ; 62 ; >
       au < frozen ; exists ; 2017 ; 2017 ; Clinical Chemistry Volume 63 ; 63 ; >
@@ -4902,8 +4902,8 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Economic Policy Volume 30 ; 30 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Economic Policy Volume 31 ; 31 ; >
     au < finished ; finished ; 2017 ; 2017 ; Economic Policy Volume 32 ; 32 ; reingest3.clockss.org:8083 >
-    au < testing ; exists ; 2018 ; 2018 ; Economic Policy Volume 33 ; 33 ; >
-    au < testing ; exists ; 2019 ; 2019 ; Economic Policy Volume 34 ; 34 ; >
+    au < ready ; exists ; 2018 ; 2018 ; Economic Policy Volume 33 ; 33 ; >
+    au < ready ; exists ; 2019 ; 2019 ; Economic Policy Volume 34 ; 34 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Economic Policy Volume 35 ; 35 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Economic Policy Volume 36 ; 36 ; >
     au < manifest ; exists ; 2022 ; 2022 ; Economic Policy Volume 37 ; 37 ; >
@@ -5035,8 +5035,8 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; English: Journal of the English Association Volume 64 ; 64 ; >
     au < frozen ; exists ; 2016 ; 2016 ; English: Journal of the English Association Volume 65 ; 65 ; >
     au < finished ; finished ; 2017 ; 2017 ; English: Journal of the English Association Volume 66 ; 66 ; reingest4.clockss.org:8082 >
-    au < testing ; exists ; 2018 ; 2018 ; English: Journal of the English Association Volume 67 ; 67 ; >
-    au < testing ; exists ; 2019 ; 2019 ; English: Journal of the English Association Volume 68 ; 68 ; >
+    au < ready ; exists ; 2018 ; 2018 ; English: Journal of the English Association Volume 67 ; 67 ; >
+    au < ready ; exists ; 2019 ; 2019 ; English: Journal of the English Association Volume 68 ; 68 ; >
     au < frozen ; exists ; 2020 ; 2020 ; English: Journal of the English Association Volume 69 ; 69 ; >
     au < crawling ; exists ; 2021 ; 2021 ; English: Journal of the English Association Volume 70 ; 70 ; >
     au < manifest ; exists ; 2022 ; 2022 ; English: Journal of the English Association Volume 71 ; 71 ; >
@@ -5120,8 +5120,8 @@
     au < frozen ; exists ; 2015 ; 2015 ; Environmental Epigenetics Volume 1 ; 1 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Environmental Epigenetics Volume 2 ; 2 ; >
     au < finished ; finished ; 2017 ; 2017 ; Environmental Epigenetics Volume 3 ; 3 ; reingest1.clockss.org:8082 >
-    au < testing ; exists ; 2018 ; 2018 ; Environmental Epigenetics Volume 4 ; 4 ; >
-    au < testing ; exists ; 2019 ; 2019 ; Environmental Epigenetics Volume 5 ; 5 ; >
+    au < ready ; exists ; 2018 ; 2018 ; Environmental Epigenetics Volume 4 ; 4 ; >
+    au < ready ; exists ; 2019 ; 2019 ; Environmental Epigenetics Volume 5 ; 5 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Environmental Epigenetics Volume 6 ; 6 ; >
     au < ready ; exists ; 2021 ; 2021 ; Environmental Epigenetics Volume 7 ; 7 ; >
     au < manifest ; exists ; 2022 ; 2022 ; Environmental Epigenetics Volume 8 ; 8 ; >
@@ -5251,8 +5251,8 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Epidemiologic Reviews Volume 37 ; 37 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Epidemiologic Reviews Volume 38 ; 38 ; >
     au < finished ; finished ; 2017 ; 2017 ; Epidemiologic Reviews Volume 39 ; 39 ; reingest2.clockss.org:8085 >
-    au < testing ; exists ; 2018 ; 2018 ; Epidemiologic Reviews Volume 40 ; 40 ; >
-    au < testing ; exists ; 2019 ; 2019 ; Epidemiologic Reviews Volume 41 ; 41 ; >
+    au < ready ; exists ; 2018 ; 2018 ; Epidemiologic Reviews Volume 40 ; 40 ; >
+    au < ready ; exists ; 2019 ; 2019 ; Epidemiologic Reviews Volume 41 ; 41 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Epidemiologic Reviews Volume 42 ; 42 ; >
     au < expected ; exists ; 2021 ; 2021 ; Epidemiologic Reviews Volume 43 ; 43 ; >
     au < manifest ; exists ; 2022 ; 2022 ; Epidemiologic Reviews Volume 44 ; 44 ; >
