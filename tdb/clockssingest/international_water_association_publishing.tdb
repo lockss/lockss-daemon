@@ -15,6 +15,23 @@
   {
   
     title <
+      name = Blue-Green Systems ;
+      eissn = 2617-4782 ;
+      issnl = 2617-4782
+    >
+
+    param[journal_id] = bgs
+
+    au < manifest ; exists ; 2019 ; 2019 ; Blue-Green Systems Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2020 ; 2020 ; Blue-Green Systems Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2021 ; 2021 ; Blue-Green Systems Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2022 ; 2022 ; Blue-Green Systems Volume 4 ; 4 ; >
+
+  }
+  
+  {
+  
+    title <
       name = H2Open Journal ;
       eissn = 2616-6518 ;
       issnl = 2616-6518
