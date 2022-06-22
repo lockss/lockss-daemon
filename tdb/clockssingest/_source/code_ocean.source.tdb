@@ -1,7 +1,7 @@
 {
 
   publisher <
-    name = Code Ocean ; #publisher will get set by plugin for metadata
+    name = Code Ocean ; #publisher is set by plugin for metadata
     info[contract] = 2018 ;
     info[tester] = S ;
     info[platform] = Source
