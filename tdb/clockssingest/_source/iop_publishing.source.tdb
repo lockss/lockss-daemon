@@ -6,6 +6,7 @@
     info[tester] = S ;
     info[platform] = Source
   >
+  provider = IOP Publishing
 
    {
      title <
@@ -104,5 +105,31 @@
       #no more AUs expected at this time
 
   }
+
+}
+
+{
+
+  publisher <
+    name = IOP Publishing ;
+    info[contract] = 2015 ;
+    info[tester] = S ;
+    info[platform] = Source
+  >
+  provider = IOP ECS Backfile
+
+   {
+     title <
+       name = IOP Publishing ECS Backfile Source Content
+     >
+
+     plugin = org.lockss.plugin.clockss.iop.ClockssIopDirZipSourcePlugin
+     param[base_url] = https://clockss-test.lockss.org/sourcefiles/iopecs2019-released/
+     hidden[proxy] = DIRECT
+     implicit < status ; status2 ; year ; name ; param[directory] >
+
+     au < manifest ; exists ; 2022 ; IOP Publishing ECS Backfile Source Content 2022_01 ; 2022_01 >
+
+   }
 
 }
