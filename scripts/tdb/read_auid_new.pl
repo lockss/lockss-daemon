@@ -3088,6 +3088,7 @@ while (my $line = <>) {
     }
   sleep(4);
     
+  #Silverchair GLN. Includes year/volume_name.
   } elsif ($plugin eq "GeoscienceWorldSilverchairPlugin") {
     $url = sprintf("%s%s/list-of-issues/%d",
         $param{base_url}, $param{journal_id}, $param{year});
@@ -3116,6 +3117,7 @@ while (my $line = <>) {
     }
   sleep(4);
     
+  #Silverchair CLOCKSS. Includes year/volume_name.
   } elsif ($plugin eq "ClockssGeoscienceWorldSilverchairPlugin") {
     $url = sprintf("%s%s/list-of-issues/%d",
         $param{base_url}, $param{journal_id}, $param{year});
