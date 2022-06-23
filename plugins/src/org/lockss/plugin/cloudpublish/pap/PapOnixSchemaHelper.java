@@ -4,6 +4,7 @@ import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.XmlDomMetadataExtractor;
 import org.lockss.plugin.clockss.onixbooks.Onix3LongSchemaHelper;
+import org.lockss.extractor.XmlDomMetadataExtractor.NodeValue;
 import org.lockss.util.Logger;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -14,6 +15,25 @@ import java.util.Map;
 public class PapOnixSchemaHelper extends Onix3LongSchemaHelper {
 
   static Logger log = Logger.getLogger(PapOnixSchemaHelper.class);
+  /**
+   * Converts YYYYMMDD to YYYY-MM-DD.
+   */
+  static public final NodeValue PAP_DATE_VALUE = new NodeValue() {
+    @Override
+    public String getValue(Node node) {
+      String YYYYMMDD = node.getTextContent();
+      if (YYYYMMDD.length()==8) {
+        // make it W3C format instead of YYYYMMDD
+        return YYYYMMDD.substring(0, 4) + //YYYY
+            "-" +
+            YYYYMMDD.substring(4, 6) + //MM
+            "-" +
+            YYYYMMDD.substring(6, 8);
+      } else {
+        return YYYYMMDD; //not sure what the format is, just return it as is
+      }
+    }
+  };
 
   /**
    * path to each metadata entry
@@ -22,26 +42,28 @@ public class PapOnixSchemaHelper extends Onix3LongSchemaHelper {
 
   /* Under an item node, the interesting bits live at these relative locations */
   static private final String Pap_recordId = "RecordReference";
-  private static String ONIX_product_id =  "ProductIdentifier";
+  private static final String ONIX_product_id =  "ProductIdentifier";
   static private final String Pap_Contributor = "Contributor";
   protected static String Pap_idtype_isbn13 =
       ONIX_product_id + "[ProductIDType = \"ISBN-13\"]";
-  private static String Pap_idtype_gtin=
+  private static final String Pap_idtype_gtin=
       ONIX_product_id + "[ProductIDType = \"GTIN-13\"]";
-  private static String Pap_idtype_doi =
+  private static final String Pap_idtype_doi =
       ONIX_product_id + "[ProductIDType = \"DOI\"]";
-  private static String Pap_series = "Series/TitleOfSeries";
+  private static final String Pap_series = "Series/TitleOfSeries";
 
-  private static String Pap_title = "Title";
-  private static String Pap_author = Pap_Contributor + "[ContributorRole = \"By (author)\"]";
-  private static String Pap_editor = Pap_Contributor + "[ContributorRole = \"Edited by\"]";
-  private static String Pap_pages = "NumberOfPages";
-  private static String Pap_keywords = "Subject[SubjectSchemeIdentifier = \"Keywords\"]";
-  private static String Pap_description = "OtherText[TextTypeCode = \"Main description\"]";
-  private static String Pap_anotation = "OtherText[TextTypeCode = \"Short description/annotation\"]";
+  private static final String Pap_title = "Title";
+  private static final String Pap_author = Pap_Contributor + "[ContributorRole = \"By (author)\"]";
+  private static final String Pap_editor = Pap_Contributor + "[ContributorRole = \"Edited by\"]";
+  private static final String Pap_pages = "NumberOfPages";
+  private static final String Pap_keywords = "Subject[SubjectSchemeIdentifier = \"Keywords\"]";
+  private static final String Pap_description = "OtherText[TextTypeCode = \"Main description\"]";
+  private static final String Pap_anotation = "OtherText[TextTypeCode = \"Short description/annotation\"]";
+
+  private static final String Pap_pubdate = "PublicationDate";
 
   private static final Map<String, XmlDomMetadataExtractor.XPathValue> PAP_MAP =
-      new HashMap<String, XmlDomMetadataExtractor.XPathValue>();
+      new HashMap<>();
   static {
     PAP_MAP.put(Pap_recordId, XmlDomMetadataExtractor.TEXT_VALUE);
     PAP_MAP.put(Pap_idtype_isbn13, ONIX_ID_VALUE);
@@ -55,6 +77,7 @@ public class PapOnixSchemaHelper extends Onix3LongSchemaHelper {
     PAP_MAP.put(Pap_keywords, GET_AND_TRIM_CHILD_NODE_VALUE("SubjectHeadingText"));
     PAP_MAP.put(Pap_description, GET_AND_TRIM_CHILD_NODE_VALUE("Text"));
     PAP_MAP.put(Pap_anotation, GET_AND_TRIM_CHILD_NODE_VALUE("Text"));
+    PAP_MAP.put(Pap_pubdate, PAP_DATE_VALUE);
   }
 
   private static final MultiValueMap cookMap = new MultiValueMap();
@@ -67,10 +90,16 @@ public class PapOnixSchemaHelper extends Onix3LongSchemaHelper {
     cookMap.put(Pap_author, MetadataField.FIELD_AUTHOR);
     cookMap.put(Pap_pages, MetadataField.FIELD_END_PAGE);
     cookMap.put(Pap_keywords, MetadataField.FIELD_KEYWORDS);
+    cookMap.put(Pap_pubdate, MetadataField.FIELD_DATE);
   }
 
-  public static final XmlDomMetadataExtractor.NodeValue GET_AND_TRIM_CHILD_NODE_VALUE(String childNodeName) {
-    return new XmlDomMetadataExtractor.NodeValue() {
+  /**
+   * Gets the specified child nodes text, and trims and deduplicates the white space.
+   * @param childNodeName the name of the xml node.
+   * @return the text of the child node, trimmed and deduplicated of white space.
+   */
+  public static NodeValue GET_AND_TRIM_CHILD_NODE_VALUE(String childNodeName) {
+    return new NodeValue() {
       @Override
       public String getValue(Node node) {
         if (node == null) {
@@ -83,7 +112,7 @@ public class PapOnixSchemaHelper extends Onix3LongSchemaHelper {
         for (int m = 0; m < childNodes.getLength(); m++) {
           Node infoNode = childNodes.item(m);
           if (infoNode.getNodeName().equals(childNodeName)) {
-            keywords = infoNode.getTextContent().replaceAll("\\s{2,}", " ").trim();;
+            keywords = infoNode.getTextContent().replaceAll("\\s{2,}", " ").trim();
             break;
           }
         }
@@ -122,5 +151,5 @@ public class PapOnixSchemaHelper extends Onix3LongSchemaHelper {
   }
 
   @Override
-  public String getFilenameXPathKey() { return Pap_recordId; };
+  public String getFilenameXPathKey() { return Pap_recordId; }
 }
