@@ -703,8 +703,8 @@
       param[journal_id] = mediterranean-quarterly
 
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Mediterranean Quarterly Volume 27 ; 27 ; > #no permission statement on manifest page
-      au < manifest ; exists ; 2017 ; 2017 ; Mediterranean Quarterly Volume 28 ; 28 ; > #no permission statement on manifest page
-      au < manifest ; exists ; 2018 ; 2018 ; Mediterranean Quarterly Volume 29 ; 29 ; > #no permission statement on manifest page
+      au < ready ; exists ; 2017 ; 2017 ; Mediterranean Quarterly Volume 28 ; 28 ; > #no permission statement on manifest page
+      au < ready ; exists ; 2018 ; 2018 ; Mediterranean Quarterly Volume 29 ; 29 ; > #no permission statement on manifest page
 
     }
 
@@ -939,7 +939,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; Publication of the American Dialect Society Volume 102 ; 102 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Publication of the American Dialect Society Volume 103 ; 103 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Publication of the American Dialect Society Volume 104 ; 104 ; >
-      au < manifest ; exists ; 2021 ; 2021 ; Publication of the American Dialect Society Volume 105 ; 105 ; >
+      au < ready ; exists ; 2021 ; 2021 ; Publication of the American Dialect Society Volume 105 ; 105 ; >
       au < expected ; exists ; 2022 ; 2022 ; Publication of the American Dialect Society Volume 106 ; 106 ; >
 
     }
@@ -1216,9 +1216,9 @@
 
       au < doNotProcess ; exists ; 2014 ; 2014 ; World Policy Journal Volume 31 ; 31 ; >
       au < doNotProcess ; exists ; 2015 ; 2015 ; World Policy Journal Volume 32 ; 32 ; >
-      au < manifest ; exists ; 2016 ; 2016 ; World Policy Journal Volume 33 ; 33 ; >
-      au < manifest ; exists ; 2017 ; 2017 ; World Policy Journal Volume 34 ; 34 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; World Policy Journal Volume 35 ; 35 ; >
+      au < ready ; exists ; 2016 ; 2016 ; World Policy Journal Volume 33 ; 33 ; >
+      au < ready ; exists ; 2017 ; 2017 ; World Policy Journal Volume 34 ; 34 ; >
+      au < ready ; exists ; 2018 ; 2018 ; World Policy Journal Volume 35 ; 35 ; >
 
   }
 }
