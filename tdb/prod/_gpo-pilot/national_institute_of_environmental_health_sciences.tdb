@@ -19,12 +19,72 @@
     {
     # Ancient plugin name has an underscore in it
     plugin = gov.gpo.access.permanent.plugin.environmentalhealthperspectives.EHP2022JournalPlugin 
-    #This is a suggested name.
     param[base_url] = https://ehp.niehs.nih.gov/
     implicit < status ; year ; name ; param[volume_name] >
+    #Published 1972-present
 
     param[journal_id] = ehp
 
+    au < manifest ; 1972 ; Environmental Health Perspectives Volume 1 ; 1 >
+    au < manifest ; 1972 ; Environmental Health Perspectives Volume 2 ; 2 >
+    au < manifest ; 1973 ; Environmental Health Perspectives Volume 3 ; 3 >
+    au < manifest ; 1973 ; Environmental Health Perspectives Volume 4 ; 4 >
+    au < manifest ; 1973 ; Environmental Health Perspectives Volume 5 ; 5 >
+    au < manifest ; 1973 ; Environmental Health Perspectives Volume 6 ; 6 >
+    au < manifest ; 1974 ; Environmental Health Perspectives Volume 7 ; 7 >
+    au < manifest ; 1974 ; Environmental Health Perspectives Volume 8 ; 8 >
+    au < manifest ; 1974 ; Environmental Health Perspectives Volume 9 ; 9 >
+    au < manifest ; 1975 ; Environmental Health Perspectives Volume 10 ; 10 >
+    au < manifest ; 1975 ; Environmental Health Perspectives Volume 11 ; 11 >
+    au < manifest ; 1975 ; Environmental Health Perspectives Volume 12 ; 12 >
+    au < manifest ; 1976 ; Environmental Health Perspectives Volume 13 ; 13 >
+    au < manifest ; 1976 ; Environmental Health Perspectives Volume 14 ; 14 >
+    au < manifest ; 1976 ; Environmental Health Perspectives Volume 15 ; 15 >
+    au < manifest ; 1976 ; Environmental Health Perspectives Volume 16 ; 16 >
+    au < manifest ; 1976 ; Environmental Health Perspectives Volume 17 ; 17 >
+    au < manifest ; 1976 ; Environmental Health Perspectives Volume 18 ; 18 >
+    au < manifest ; 1977 ; Environmental Health Perspectives Volume 19 ; 19 >
+    au < exists ; 1977 ; Environmental Health Perspectives Volume 20 ; 20 >
+    au < exists ; 1977 ; Environmental Health Perspectives Volume 21 ; 21 >
+    au < exists ; 1978 ; Environmental Health Perspectives Volume 22 ; 22 >
+    au < exists ; 1978 ; Environmental Health Perspectives Volume 23 ; 23 >
+    au < exists ; 1978 ; Environmental Health Perspectives Volume 24 ; 24 >
+    au < exists ; 1978 ; Environmental Health Perspectives Volume 25 ; 25 >
+    au < exists ; 1978 ; Environmental Health Perspectives Volume 26 ; 26 >
+    au < exists ; 1978 ; Environmental Health Perspectives Volume 27 ; 27 >
+
+
+    au < manifest ; 1989 ; Environmental Health Perspectives Volume 81 ; 81 >
+    au < manifest ; 1989 ; Environmental Health Perspectives Volume 82 ; 82 >
+    au < manifest ; 1989 ; Environmental Health Perspectives Volume 83 ; 83 >
+    au < manifest ; 1990 ; Environmental Health Perspectives Volume 84 ; 84 >
+    au < manifest ; 1990 ; Environmental Health Perspectives Volume 85 ; 85 >
+    au < manifest ; 1990 ; Environmental Health Perspectives Volume 86 ; 86 >
+    au < manifest ; 1990 ; Environmental Health Perspectives Volume 87 ; 87 >
+    au < manifest ; 1990 ; Environmental Health Perspectives Volume 88 ; 88 >
+    au < manifest ; 1990 ; Environmental Health Perspectives Volume 89 ; 89 >
+    au < manifest ; 1991 ; Environmental Health Perspectives Volume 90 ; 90 >
+    au < manifest ; 1991 ; Environmental Health Perspectives Volume 91 ; 91 >
+    au < manifest ; 1991 ; Environmental Health Perspectives Volume 92 ; 92 >
+    au < manifest ; 1991 ; Environmental Health Perspectives Volume 93 ; 93 >
+    au < manifest ; 1991 ; Environmental Health Perspectives Volume 94 ; 94 >
+    au < manifest ; 1991 ; Environmental Health Perspectives Volume 95 ; 95 >
+    au < manifest ; 1991 ; Environmental Health Perspectives Volume 96 ; 96 >
+    au < manifest ; 1992 ; Environmental Health Perspectives Volume 97 ; 97 >
+    au < manifest ; 1992 ; Environmental Health Perspectives Volume 98 ; 98 >
+    au < manifest ; 1993 ; Environmental Health Perspectives Volume 99 ; 99 >
+    au < manifest ; 1993 ; Environmental Health Perspectives Volume 100 ; 100 >
+    au < manifest ; 1993 ; Environmental Health Perspectives Volume 101 ; 101 >
+    au < manifest ; 1994 ; Environmental Health Perspectives Volume 102 ; 102 >
+    au < manifest ; 1995 ; Environmental Health Perspectives Volume 103 ; 103 >
+    au < manifest ; 1996 ; Environmental Health Perspectives Volume 104 ; 104 >
+    au < manifest ; 1997 ; Environmental Health Perspectives Volume 105 ; 105 >
+    au < manifest ; 1998 ; Environmental Health Perspectives Volume 106 ; 106 >
+    au < manifest ; 1999 ; Environmental Health Perspectives Volume 107 ; 107 >
+    au < manifest ; 2000 ; Environmental Health Perspectives Volume 108 ; 108 >
+    au < manifest ; 2001 ; Environmental Health Perspectives Volume 109 ; 109 >
+    au < manifest ; 2002 ; Environmental Health Perspectives Volume 110 ; 110 >
+    au < manifest ; 2003 ; Environmental Health Perspectives Volume 111 ; 111 >
     au < manifest ; 2004 ; Environmental Health Perspectives Volume 112 ; 112 >
     au < manifest ; 2005 ; Environmental Health Perspectives Volume 113 ; 113 >
     au < manifest ; 2006 ; Environmental Health Perspectives Volume 114 ; 114 >
