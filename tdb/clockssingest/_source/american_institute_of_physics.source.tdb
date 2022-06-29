@@ -10,19 +10,16 @@
   {
 
     title <
-      name = American Institute of Physics Source Content
+      name = American Institute of Physics Books Source Content
     >
 
-    plugin = org.lockss.plugin.americaninstituteofphysics.ClockssAmericanInstituteOfPhysicsSourcePlugin
-    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/aip-released/
+    plugin = org.lockss.plugin.clockss.aippublishing.ClockssAIPPublishingBooksSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/aipbooks-released/
     hidden[proxy] = DIRECT
-    implicit < status ; status2 ; year ; name ; param[year] >
+    implicit < status ; status2 ; year ; name ; param[directory] >
 
-    au < zapped ; finished ; 2010 ; American Institute of Physics Source Content 2010 ; 2010 >
-    au < zapped ; finished ; 2011 ; American Institute of Physics Source Content 2011 ; 2011 >
-    au < zapped ; finished ; 2012 ; American Institute of Physics Source Content 2012 ; 2012 >
-    au < zapped ; finished ; 2013 ; American Institute of Physics Source Content 2013 ; 2013 >
-    #no more AUs expected
+    au < expected ; exists ; 2022 ; American Institute of Physics Books Source Content 2022_01 ; 2022_01 >
+
   }
   {
 
@@ -45,5 +42,23 @@
     au < readySource ; crawling ; 2021 ; American Institute of Physics JATS Source Content 2021 ; 2021 >
     au < readySource ; crawling ; 2022 ; American Institute of Physics JATS Source Content 2022 ; 2022 >
 
+  }
+
+  {
+
+    title <
+      name = American Institute of Physics Source Content
+    >
+
+    plugin = org.lockss.plugin.americaninstituteofphysics.ClockssAmericanInstituteOfPhysicsSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/aip-released/
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[year] >
+
+    au < zapped ; finished ; 2010 ; American Institute of Physics Source Content 2010 ; 2010 >
+    au < zapped ; finished ; 2011 ; American Institute of Physics Source Content 2011 ; 2011 >
+    au < zapped ; finished ; 2012 ; American Institute of Physics Source Content 2012 ; 2012 >
+    au < zapped ; finished ; 2013 ; American Institute of Physics Source Content 2013 ; 2013 >
+    #no more AUs expected
   }
 }
