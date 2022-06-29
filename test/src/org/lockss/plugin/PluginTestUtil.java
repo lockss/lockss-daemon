@@ -42,7 +42,6 @@ import java.util.zip.*;
 import com.ice.tar.TarEntry;
 import com.ice.tar.TarInputStream;
 import com.ice.tar.TarOutputStream;
-import org.apache.commons.io.IOUtils;
 import org.lockss.test.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.simulated.*;
@@ -439,56 +438,70 @@ public class PluginTestUtil {
       log.debug2("Copied " + fromUrl);
     }
   }
+
+  /**
+   * a wrapper method that calls the proper copy archive methods, allowing recursion in the archive files.
+   * @param cu
+   * @param toAu
+   * @param patRepPairs
+   * @param archiveType
+   * @param ifMatchPat
+   * @throws IOException Any error just gets thrown to as IO to copyCUs
+   */
   private static void copyArchive(CachedUrl cu,
                                   ArchivalUnit toAu,
                                   List<PatternReplacements> patRepPairs,
                                   String archiveType,
-                                  Pattern ifMatchPat) {
+                                  Pattern ifMatchPat)
+      throws IOException {
     ArchiveMemberSpec ams = ArchiveMemberSpec.fromCu(cu, null);
-    InputStream is = null;
-    try {
+    TempArchiveFile taf;
+    try (InputStream is = cu.getUnfilteredInputStream()) {
       switch (archiveType) {
         case ".zip":
-          ZipInputStream zis = new ZipInputStream(new ReaderInputStream(cu.openForReading()));
-          copyZipIS(zis, cu, toAu, patRepPairs, archiveType, ifMatchPat, ams, 0);
-          is = zis;
+          try (ZipInputStream zis = new ZipInputStream(is)) {
+            taf = copyZipIS(zis, cu, toAu, patRepPairs, archiveType, ifMatchPat, ams, 0);
+          }
           break;
         case ".tar":
-          TarInputStream tis = new TarInputStream(new ReaderInputStream(cu.openForReading()));
-          copyTarIS(tis, cu, toAu, patRepPairs, archiveType, ifMatchPat, ams, 0);
-          is = tis;
+          try (TarInputStream tis = new TarInputStream(is)) {
+            taf = copyTarIS(tis, cu, toAu, patRepPairs, archiveType, ifMatchPat, ams, 0);
+          }
           break;
         case ".tar.gz": // needs to be supported by the simcrawler in order to be implemented here.
         case ".tgz":
         default:
-          throw new Exception("Unexpected Archive file type: '" + archiveType + "'");
+          throw new IOException("Unexpected Archive file type: '" + archiveType + "'");
       }
-    } catch (Exception e) {
-      throw new RuntimeException(e);
-    } finally {
-      IOUtil.safeClose(is);
+      // we copy the temp archive file here because it doesnt work for the recursive case
+      // only copy if there was a match found.
+      if (taf.url != null) {
+        copyArchiveFile(cu, toAu, ams, taf);
+      }
     }
   }
 
   /**
    * Iterates over the contents of a zip stream and copies the contents if they pass
    * given pattern(s) and replacements.
-   *
+   * <p>
    * Note: replacement(s) can rename the zip file, but all zip files should be the same in the replacement string(s)
+   *
+   * @return TempArchiveFile. if TempArchiveFile.url is null, the copy should not proceed.
    */
-  private static void copyZipIS(ZipInputStream zis,
-                                CachedUrl cu,
-                                ArchivalUnit toAu,
-                                List<PatternReplacements> patRepPairs,
-                                String archiveType,
-                                Pattern ifMatchPat,
-                                ArchiveMemberSpec ams,
-                                int tempFileId)
+  private static TempArchiveFile copyZipIS(ZipInputStream zis,
+                                           CachedUrl cu,
+                                           ArchivalUnit toAu,
+                                           List<PatternReplacements> patRepPairs,
+                                           String archiveType,
+                                           Pattern ifMatchPat,
+                                           ArchiveMemberSpec ams,
+                                           int tempFileId)
       throws IOException {
-    String tempFileName = "temp" + tempFileId + archiveType;
-    String outZip = null;
+
+    TempArchiveFile taf = new TempArchiveFile(null,  "temp" + tempFileId + archiveType);
     ZipOutputStream zos = new ZipOutputStream(Files.newOutputStream(
-        Paths.get(cu.getArchivalUnit().getProperties().getString("root") + tempFileName)));
+        Paths.get(cu.getArchivalUnit().getProperties().getString("root") + taf.tempFile)));
     zos.setMethod(ZipOutputStream.DEFLATED);
     zos.setLevel(Deflater.BEST_COMPRESSION);
     ZipEntry entry;
@@ -504,12 +517,13 @@ public class PluginTestUtil {
         continue;
       } else if (entry.getName().endsWith(archiveType) ) {
         // TODO test recurse through nested
-        ZipInputStream nestedZis = (ZipInputStream) IOUtils.toInputStream(String.valueOf(zis.read()));
-        copyZipIS(nestedZis, cu, toAu, patRepPairs, archiveType, ifMatchPat, fromZipped, tempFileId++);
-      }
+        taf = copyZipIS(zis, cu, toAu, patRepPairs, archiveType, ifMatchPat, fromZipped, tempFileId++);
+        // we need to write this temp file to the master temp zip file, not to the urlcacher
+        // write the file here to zos doCopyZipEntry()
+      } // TODO consider the case when a tar is inside a zip
       if (patRepPairs == null) {
         doCopyZipEntry(zos, zis, fromZipped.getName());
-        outZip = fromZipped.getName();
+        taf.url = fromZipped.getName();
       } else {
         for (PatternReplacements prp : patRepPairs) {
           Matcher mat = prp.pat.matcher(fromZipped.toUrl());
@@ -520,7 +534,7 @@ public class PluginTestUtil {
               if (!toZipped.toUrl().equals(fromZipped.toUrl())) {
                 log.debug("Found a zipped file match: " + fromZipped.toUrl() + " -> " + toZipped.toUrl());
                 doCopyZipEntry(zos, zis, toZipped.getName());
-                outZip = toZipped.getUrl();
+                taf.url = toZipped.getUrl();
               }
             }
             break;
@@ -529,33 +543,28 @@ public class PluginTestUtil {
       }
     }
     zos.close();
-    // any copied file triggers saving the new archive stream
-    // the output file name is parsed from the matched file
-    // it will be the last matched-replaced file.
-    if (outZip != null) {
-      copyArchiveFile(cu, toAu, ams, outZip, tempFileName);
-    }
+    return taf;
   }
 
   /**
-   *
    * Iterates over the contents of a tar stream and copies the contents if they pass
    * given pattern(s) and replacements.
-   *
+   * <p>
    * Note: replacement(s) can rename the tar file, but all tar files should be the same in the replacement string(s)
+   *
+   * @return TempArchiveFile. if TempArchiveFile.url is null, the copy should not proceed.
    */
-  private static void copyTarIS(TarInputStream tis,
-                                CachedUrl cu,
-                                ArchivalUnit toAu,
-                                List<PatternReplacements> patRepPairs,
-                                String archiveType,
-                                Pattern ifMatchPat,
-                                ArchiveMemberSpec ams,
-                                int tempFileId) throws IOException {
-    String tempFileName = "temp" + tempFileId + archiveType;
-    String outTar = null;
+  private static TempArchiveFile copyTarIS(TarInputStream tis,
+                                           CachedUrl cu,
+                                           ArchivalUnit toAu,
+                                           List<PatternReplacements> patRepPairs,
+                                           String archiveType,
+                                           Pattern ifMatchPat,
+                                           ArchiveMemberSpec ams,
+                                           int tempFileId) throws IOException {
+    TempArchiveFile taf = new TempArchiveFile(null,  "temp" + tempFileId + archiveType);
     TarOutputStream tos = new TarOutputStream(Files.newOutputStream(
-        Paths.get(cu.getArchivalUnit().getProperties().getString("root") + tempFileName)));
+        Paths.get(cu.getArchivalUnit().getProperties().getString("root") + taf.tempFile)));
     TarEntry entry;
     while ((entry = tis.getNextEntry()) != null) {
       ArchiveMemberSpec fromTarred = ArchiveMemberSpec.fromCu(cu, entry.getName());
@@ -569,12 +578,11 @@ public class PluginTestUtil {
         continue;
       } else if (entry.getName().endsWith(archiveType) ) {
         // TODO recurse through nested
-        TarInputStream nestedTis = (TarInputStream) IOUtils.toInputStream(String.valueOf(tis.read()));
-        copyTarIS(nestedTis, cu, toAu, patRepPairs, archiveType, ifMatchPat, fromTarred, tempFileId++);
+        copyTarIS(tis, cu, toAu, patRepPairs, archiveType, ifMatchPat, fromTarred, tempFileId++);
       }
       if (patRepPairs == null) {
         doCopyTarEntry(tos, tis, entry);
-        outTar = fromTarred.getName();
+        taf.url = fromTarred.getName();
       } else {
         for (PatternReplacements prp : patRepPairs) {
           Matcher mat = prp.pat.matcher(fromTarred.toUrl());
@@ -587,7 +595,7 @@ public class PluginTestUtil {
                 // rename the entry and copy it
                 entry.setName(toTarred.getName());
                 doCopyTarEntry(tos, tis, entry);
-                outTar = toTarred.getUrl();
+                taf.url = toTarred.getUrl();
               }
             }
             break;
@@ -596,12 +604,7 @@ public class PluginTestUtil {
       }
     }
     tos.close();
-    // any copied file triggers saving the new archive stream
-    // the output file name is parsed from the matched file
-    // note: it will be the last matched-replaced file.
-    if (outTar != null) {
-      copyArchiveFile(cu, toAu, ams, outTar, tempFileName);
-    }
+    return taf;
   }
 
   /**
@@ -636,12 +639,12 @@ public class PluginTestUtil {
     tos.closeEntry();
   }
 
-  private static void copyArchiveFile(CachedUrl cu, ArchivalUnit toAu, ArchiveMemberSpec ams, String outName, String tempFileName) throws IOException {
+  private static void copyArchiveFile(CachedUrl cu, ArchivalUnit toAu, ArchiveMemberSpec ams, TempArchiveFile taf) throws IOException {
     // open a temp file
     FileInputStream is = new FileInputStream(
-        new File(cu.getArchivalUnit().getProperties().getString("root"), tempFileName));
+        new File(cu.getArchivalUnit().getProperties().getString("root"), taf.tempFile));
     // save all the copied entries to a new archive on the toAu
-    doCopyCu(is, cu.getProperties(), toAu, ams.getUrl(), outName);
+    doCopyCu(is, cu.getProperties(), toAu, ams.getUrl(), taf.url);
     is.close();
   }
 
@@ -674,6 +677,16 @@ public class PluginTestUtil {
     PatternReplacements(String pat, String... rep) {
       this.pat = Pattern.compile(pat, Pattern.CASE_INSENSITIVE);
       this.rep = rep;
+    }
+  }
+
+  private static class TempArchiveFile {
+    public String url;
+    public String tempFile;
+
+    TempArchiveFile(String url, String tempFile) {
+      this.url = url;
+      this.tempFile = tempFile;
     }
   }
 
