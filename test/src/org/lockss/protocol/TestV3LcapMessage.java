@@ -168,7 +168,7 @@ public class TestV3LcapMessage extends LockssTestCase {
       "Key:key " +
       "PN:AQIDBAUGBwgJAAECAwQFBgcICQA= " +
       "VN:AQIDBAUGBwgJAAECAwQFBgcICQA= " +
-      "B:10 ver 3 rev 6]";
+      "B:10 ver 3 rev 5]";
     assertEquals(expectedResult, m_testMsg.toString());
   }
   
