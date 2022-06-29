@@ -28,10 +28,13 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.elsevier;
 
+import java.util.Arrays;
+import java.util.Iterator;
 import java.util.regex.Pattern;
 
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
+import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.SimulatedArchivalUnit;
 import org.lockss.plugin.simulated.SimulatedContentGenerator;
@@ -64,6 +67,9 @@ public class TestElsevierFTPArticleIteratorFactory extends ArticleIteratorTestCa
   }
   
   Configuration simAuConfig(String rootPath) {
+    ConfigurationUtil.addFromArgs(
+        SimulatedContentGenerator.CONFIG_PREFIX + "doTarFile",
+        "true");
 	    Configuration conf = ConfigManager.newConfiguration();
 	    conf.put("root", rootPath);
 	    conf.put("base_url", "http://www.example.com/");
@@ -137,9 +143,47 @@ public class TestElsevierFTPArticleIteratorFactory extends ArticleIteratorTestCa
     assertNotNull(cu);
     SubTreeArticleIterator artIter = createSubTreeIter();
     assertNotNull(artIter);
-    /*ArticleFiles af = createArticleFiles(artIter, cu);
-    assertNotNull(af);    
-    assertEquals(cu, af.getFullTextCu());*/    
-  }			
+  }
+
+  public void testCopyTarArticleFiles() throws Exception {
+    PluginTestUtil.crawlSimAu(sau);
+    /*
+     *  Go through the simulated content you just crawled and modify the results to emulate
+     *  what you would find in a "real" crawl with this plugin:
+     */
+    PluginTestUtil.copyAu(sau, au, "\\.tar",
+        Arrays.asList(
+            PluginTestUtil.makePatRep(
+                "content.tar!/branch(\\d+)/(\\d+)file\\.html",
+                "2012/XX00/000.tar!/0000$10/00$200/main.xml"
+            ),
+            PluginTestUtil.makePatRep(
+                "content.tar!/branch(\\d+)/(\\d+)file\\.pdf",
+                "2012/XX00/000.tar!/0000$10/00$200/main.pdf"
+            )
+        )
+    );
+
+    Iterator<ArticleFiles> it = au.getArticleIterator(MetadataTarget.Any());
+    int countAf = 0;
+    int countFullTextPdf = 0;
+    while (it.hasNext()) {
+      ArticleFiles af = it.next();
+      log.debug("Af: " + af.toString());
+      countAf ++;
+      CachedUrl cu = af.getFullTextCu();
+      if ( cu != null) {
+        String url = cu.getUrl();
+        String contentType = cu.getContentType();
+        log.debug("countFullText url " + url + " " + contentType);
+        if (url.endsWith(".pdf")) {
+          ++countFullTextPdf;
+        }
+      }
+    }
+
+    assertEquals(28, countAf); // (5 x 4 branches)
+    assertEquals(28, countFullTextPdf); // ensure there is a corresponding pdf fulltext
+  }
 
 }
