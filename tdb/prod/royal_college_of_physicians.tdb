@@ -21,10 +21,10 @@
     plugin = org.lockss.plugin.highwire.rcp.RcpOriginsPlugin
 
     au < released ; 2016 ; Clinical Medicine Volume 16 ; 16 >
-    au < releasing ; 2017 ; Clinical Medicine Volume 17 ; 17 >
-    au < releasing ; 2018 ; Clinical Medicine Volume 18 ; 18 >
+    au < released ; 2017 ; Clinical Medicine Volume 17 ; 17 >
+    au < released ; 2018 ; Clinical Medicine Volume 18 ; 18 >
     au < manifest ; 2019 ; Clinical Medicine Volume 19 ; 19 >
-    au < releasing ; 2020 ; Clinical Medicine Volume 20 ; 20 >
+    au < released ; 2020 ; Clinical Medicine Volume 20 ; 20 >
     au < manifest ; 2021 ; Clinical Medicine Volume 21 ; 21 >
     au < manifest ; 2022 ; Clinical Medicine Volume 22 ; 22 >
     }
@@ -64,8 +64,8 @@
     param[journal_id] = futurehosp
     plugin = org.lockss.plugin.highwire.rcp.RcpOriginsPlugin
 
-    au < releasing ; 2019 ; Future Hospital Journal Volume 6 ; 6 >
-    au < releasing ; 2020 ; Future Hospital Journal Volume 7 ; 7 >
+    au < released ; 2019 ; Future Hospital Journal Volume 6 ; 6 >
+    au < released ; 2020 ; Future Hospital Journal Volume 7 ; 7 >
     au < released ; 2021 ; Future Hospital Journal Volume 8 ; 8 >
     au < manifest ; 2022 ; Future Hospital Journal Volume 9 ; 9 >
     }

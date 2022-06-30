@@ -68,8 +68,8 @@
       plugin = org.lockss.plugin.ojs3.Ojs3Plugin
       attr[start_stem] = index.php/
 
-      au < releasing ; 2019 ; altrelettere Volume 2019 ; 2019 ; 2019 ; https://www.altrelettere.uzh.ch/ >
-      au < releasing ; 2020 ; altrelettere Volume 2020 ; 2020 ; 2020 ; https://www.altrelettere.uzh.ch/ >
+      au < released ; 2019 ; altrelettere Volume 2019 ; 2019 ; 2019 ; https://www.altrelettere.uzh.ch/ >
+      au < released ; 2020 ; altrelettere Volume 2020 ; 2020 ; 2020 ; https://www.altrelettere.uzh.ch/ >
       au < expected ; 2021 ; altrelettere Volume 2021 ; 2021 ; 2021 ; https://www.altrelettere.uzh.ch/ >
       au < expected ; 2022 ; altrelettere Volume 2022 ; 2022 ; 2022 ; https://www.altrelettere.uzh.ch/ >
       }
@@ -122,9 +122,9 @@
       plugin = org.lockss.plugin.ojs3.Ojs3Plugin
       attr[start_stem] = index.php/
 
-      au < releasing ; 2019 ; SComS: Studies in Communications Sciences Volume 19 ; 19 ; 2019 ; https://www.hope.uzh.ch/ >
-      au < releasing ; 2020 ; SComS: Studies in Communications Sciences Volume 20 ; 20 ; 2020 ; https://www.hope.uzh.ch/ >
-      au < releasing ; 2021 ; SComS: Studies in Communications Sciences Volume 21 ; 21 ; 2021 ; https://www.hope.uzh.ch/ >
+      au < released ; 2019 ; SComS: Studies in Communications Sciences Volume 19 ; 19 ; 2019 ; https://www.hope.uzh.ch/ >
+      au < released ; 2020 ; SComS: Studies in Communications Sciences Volume 20 ; 20 ; 2020 ; https://www.hope.uzh.ch/ >
+      au < released ; 2021 ; SComS: Studies in Communications Sciences Volume 21 ; 21 ; 2021 ; https://www.hope.uzh.ch/ >
       au < manifest ; 2022 ; SComS: Studies in Communications Sciences Volume 22 ; 22 ; 2022 ; https://www.hope.uzh.ch/ >
       }
     }

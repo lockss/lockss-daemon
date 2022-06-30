@@ -107,7 +107,7 @@
       au < exists ; 2017 ; 54 ; Estetika: The European Journal of Aesthetics Volume 2017 ; 2017 ; https://estetikajournal.org/ >
       au < exists ; 2018 ; 55 ; Estetika: The European Journal of Aesthetics Volume 2018 ; 2018 ; https://estetikajournal.org/ >
       au < exists ; 2019 ; 56 ; Estetika: The European Journal of Aesthetics Volume 2019 ; 2019 ; https://estetikajournal.org/ >
-      au < releasing ; 2020 ; 57 ; Estetika: The European Journal of Aesthetics Volume 2020 ; 2020 ; https://estetikajournal.org/ >
+      au < released ; 2020 ; 57 ; Estetika: The European Journal of Aesthetics Volume 2020 ; 2020 ; https://estetikajournal.org/ >
       au < released ; 2021 ; 58 ; Estetika: The European Journal of Aesthetics Volume 2021 ; 2021 ; https://estetikajournal.org/ >
       au < manifest ; 2022 ; 59 ; Estetika: The European Journal of Aesthetics Volume 2022 ; 2022 ; https://estetikajournal.org/ >
   }
@@ -902,7 +902,7 @@
       au < released ; 2018 ; 28 ; Bulletin of the History of Archaeology Volume 2018 ; 2018 ; https://www.archaeologybulletin.org/ >
       au < released ; 2019 ; 29 ; Bulletin of the History of Archaeology Volume 2019 ; 2019 ; https://www.archaeologybulletin.org/ >
       au < released ; 2020 ; 30 ; Bulletin of the History of Archaeology Volume 2020 ; 2020 ; https://www.archaeologybulletin.org/ >
-      au < releasing ; 2021 ; 31 ; Bulletin of the History of Archaeology Volume 2021 ; 2021 ; https://www.archaeologybulletin.org/ >
+      au < released ; 2021 ; 31 ; Bulletin of the History of Archaeology Volume 2021 ; 2021 ; https://www.archaeologybulletin.org/ >
       au < manifest ; 2022 ; 32 ; Bulletin of the History of Archaeology Volume 2022 ; 2022 ; https://www.archaeologybulletin.org/ >
 
   }
@@ -1135,7 +1135,7 @@
       au < released ; 2018 ; 16 ; Journal of Circadian Rhythms Volume 2018 ; 2018 ; https://www.jcircadianrhythms.com/ >
       au < released ; 2019 ; 17 ; Journal of Circadian Rhythms Volume 2019 ; 2019 ; https://www.jcircadianrhythms.com/ >
       au < released ; 2020 ; 18 ; Journal of Circadian Rhythms Volume 2020 ; 2020 ; https://www.jcircadianrhythms.com/ >
-      au < releasing ; 2021 ; 19 ; Journal of Circadian Rhythms Volume 2021 ; 2021 ; https://www.jcircadianrhythms.com/ >
+      au < released ; 2021 ; 19 ; Journal of Circadian Rhythms Volume 2021 ; 2021 ; https://www.jcircadianrhythms.com/ >
       au < expected ; 2022 ; 20 ; Journal of Circadian Rhythms Volume 2022 ; 2022 ; https://www.jcircadianrhythms.com/ >
 
   }
@@ -1276,7 +1276,7 @@
       au < released ; 2017 ; 12 ; Journal of Molecular Signaling Volume 2017 ; 2017 ; https://www.jmolecularsignaling.com/ >
       au < released ; 2018 ; 13 ; Journal of Molecular Signaling Volume 2018 ; 2018 ; https://www.jmolecularsignaling.com/ >
       au < released ; 2020 ; 14 ; Journal of Molecular Signaling Volume 2020 ; 2020 ; https://www.jmolecularsignaling.com/ >
-      au < releasing ; 2021 ; 15 ; Journal of Molecular Signaling Volume 2021 ; 2021 ; https://www.jmolecularsignaling.com/ >
+      au < released ; 2021 ; 15 ; Journal of Molecular Signaling Volume 2021 ; 2021 ; https://www.jmolecularsignaling.com/ >
       au < expected ; 2022 ; 16 ; Journal of Molecular Signaling Volume 2022 ; 2022 ; https://www.jmolecularsignaling.com/ >
 
   }
@@ -2299,7 +2299,7 @@
       comment[publisher] = University of East Anglia
 #      param[base_url] = https://newareastudies.com/
 
-      au < releasing ; 2020 ; 1 ; New Area Studies Volume 2020 ; 2020 ; https://newareastudies.com/ >
+      au < released ; 2020 ; 1 ; New Area Studies Volume 2020 ; 2020 ; https://newareastudies.com/ >
       au < manifest ; 2021 ; 2 ; New Area Studies Volume 2021 ; 2021 ; https://newareastudies.com/ >
       au < expected ; 2022 ; 3 ; New Area Studies Volume 2022 ; 2022 ; https://newareastudies.com/ >
 
@@ -2329,7 +2329,7 @@
       comment[publisher] = University of New South Wales
 #      param[base_url] = https://jglobalbiosecurity.com/
 
-      au < releasing ; 2019 ; 1 ; Global Biosecurity Volume 2019 ; 2019 ; https://jglobalbiosecurity.com/ >
+      au < released ; 2019 ; 1 ; Global Biosecurity Volume 2019 ; 2019 ; https://jglobalbiosecurity.com/ >
       au < released ; 2020 ; 2 ; Global Biosecurity Volume 2020 ; 2020 ; https://jglobalbiosecurity.com/ >
       au < expected ; 2021 ; 3 ; Global Biosecurity Volume 2021 ; 2021 ; https://jglobalbiosecurity.com/ >
       au < manifest ; 2022 ; 4 ; Global Biosecurity Volume 2022 ; 2022 ; https://jglobalbiosecurity.com/ >
@@ -3094,7 +3094,7 @@
 
       au < released ; 2019 ; 1 ; Journal of Modern Philosophy Volume 2019 ; 2019 ; https://jmphil.org/ >
       au < released ; 2020 ; 2 ; Journal of Modern Philosophy Volume 2020 ; 2020 ; https://jmphil.org/ >
-      au < releasing ; 2021 ; 3 ; Journal of Modern Philosophy Volume 2021 ; 2021 ; https://jmphil.org/ >
+      au < released ; 2021 ; 3 ; Journal of Modern Philosophy Volume 2021 ; 2021 ; https://jmphil.org/ >
       au < manifest ; 2022 ; 4 ; Journal of Modern Philosophy Volume 2022 ; 2022 ; https://jmphil.org/ >
 
   }
