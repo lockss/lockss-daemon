@@ -60,7 +60,7 @@
       plugin = org.lockss.plugin.ojs3.Ojs3Plugin
       attr[start_stem] = index.php/
     
-      au < ready ; 2021 ; JLIS.it Volume 12 ; 12 ; 2021 >
+      au < releasing ; 2021 ; JLIS.it Volume 12 ; 12 ; 2021 >
       au < manifest ; 2022 ; JLIS.it Volume 13 ; 13 ; 2022 >
 
     }

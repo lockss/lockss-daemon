@@ -59,7 +59,7 @@
       au < released ; 2018 ; 2018 ; Afterimage Volume 45 ; 45 >
       au < released ; 2019 ; 2019 ; Afterimage Volume 46 ; 46 >
       au < released ; 2020 ; 2020 ; Afterimage Volume 47 ; 47 >
-      au < ready ; 2021 ; 2021 ; Afterimage Volume 48 ; 48 >
+      au < releasing ; 2021 ; 2021 ; Afterimage Volume 48 ; 48 >
       au < manifest ; 2022 ; 2022 ; Afterimage Volume 49 ; 49 >
 
   }
@@ -166,7 +166,7 @@
       au < doNotProcess ; 2018 ; 2018 ; The American Biology Teacher Volume 80 ; 80 >
       au < doNotProcess ; 2019 ; 2019 ; The American Biology Teacher Volume 81 ; 81 >
       au < released ; 2020 ; 2020 ; The American Biology Teacher Volume 82 ; 82 >
-      au < ready ; 2021 ; 2021 ; The American Biology Teacher Volume 83 ; 83 >
+      au < releasing ; 2021 ; 2021 ; The American Biology Teacher Volume 83 ; 83 >
       au < manifest ; 2022 ; 2022 ; The American Biology Teacher Volume 84 ; 84 >
 
   }
@@ -244,7 +244,7 @@
       au < doNotProcess ; 2018 ; 2018 ; Asian Survey Volume 58 ; 58 >
       au < doNotProcess ; 2019 ; 2019 ; Asian Survey Volume 59 ; 59 >
       au < released ; 2020 ; 2020 ; Asian Survey Volume 60 ; 60 >
-      au < ready ; 2021 ; 2021 ; Asian Survey Volume 61 ; 61 >
+      au < releasing ; 2021 ; 2021 ; Asian Survey Volume 61 ; 61 >
       au < manifest ; 2022 ; 2022 ; Asian Survey Volume 62 ; 62 >
 
   }
@@ -334,7 +334,7 @@
       au < released ; 2018 ; 2018 ; Communist and Post-Communist Studies Volume 51 ; 51 >
       au < released ; 2019 ; 2019 ; Communist and Post-Communist Studies Volume 52 ; 52 >
       au < released ; 2020 ; 2020 ; Communist and Post-Communist Studies Volume 53 ; 53 >
-      au < ready ; 2021 ; 2021 ; Communist and Post-Communist Studies Volume 54 ; 54 >
+      au < releasing ; 2021 ; 2021 ; Communist and Post-Communist Studies Volume 54 ; 54 >
       au < manifest ; 2022 ; 2022 ; Communist and Post-Communist Studies Volume 55 ; 55 >
 
   }
@@ -354,7 +354,7 @@
       au < doNotProcess ; 2018 ; 2018 ; Collabra: Psychology Volume 4 ; 4 >
       au < doNotProcess ; 2019 ; 2019 ; Collabra: Psychology Volume 5 ; 5 >
       au < released ; 2020 ; 2020 ; Collabra: Psychology Volume 6 ; 6 >
-      au < ready ; 2021 ; 2021 ; Collabra: Psychology Volume 7 ; 7 >
+      au < releasing ; 2021 ; 2021 ; Collabra: Psychology Volume 7 ; 7 >
       au < manifest ; 2022 ; 2022 ; Collabra: Psychology Volume 8 ; 8 >
 
   }
@@ -378,11 +378,11 @@
       au < released ; 2014 ; 2014 ; Contemporary Arab Affairs Volume 7 ; 7 >
       au < released ; 2015 ; 2015 ; Contemporary Arab Affairs Volume 8 ; 8 >
       au < released ; 2016 ; 2016 ; Contemporary Arab Affairs Volume 9 ; 9 >
-      au < ready ; 2017 ; 2017 ; Contemporary Arab Affairs Volume 10 ; 10 >
-      au < ready ; 2018 ; 2018 ; Contemporary Arab Affairs Volume 11 ; 11 >
-      au < ready ; 2019 ; 2019 ; Contemporary Arab Affairs Volume 12 ; 12 >
-      au < ready ; 2020 ; 2020 ; Contemporary Arab Affairs Volume 13 ; 13 >
-      au < ready ; 2021 ; 2021 ; Contemporary Arab Affairs Volume 14 ; 14 >
+      au < releasing ; 2017 ; 2017 ; Contemporary Arab Affairs Volume 10 ; 10 >
+      au < releasing ; 2018 ; 2018 ; Contemporary Arab Affairs Volume 11 ; 11 >
+      au < releasing ; 2019 ; 2019 ; Contemporary Arab Affairs Volume 12 ; 12 >
+      au < releasing ; 2020 ; 2020 ; Contemporary Arab Affairs Volume 13 ; 13 >
+      au < releasing ; 2021 ; 2021 ; Contemporary Arab Affairs Volume 14 ; 14 >
       au < manifest ; 2022 ; 2022 ; Contemporary Arab Affairs Volume 15 ; 15 >
 
   }
@@ -436,8 +436,8 @@
       au < doNotProcess ; 2017 ; 2017 ; Classical Antiquity Volume 36 ; 36 >
       au < doNotProcess ; 2018 ; 2018 ; Classical Antiquity Volume 37 ; 37 >
       au < doNotProcess ; 2019 ; 2019 ; Classical Antiquity Volume 38 ; 38 >
-      au < ready ; 2020 ; 2020 ; Classical Antiquity Volume 39 ; 39 >
-      au < ready ; 2021 ; 2021 ; Classical Antiquity Volume 40 ; 40 >
+      au < releasing ; 2020 ; 2020 ; Classical Antiquity Volume 39 ; 39 >
+      au < releasing ; 2021 ; 2021 ; Classical Antiquity Volume 40 ; 40 >
       au < manifest ; 2022 ; 2022 ; Classical Antiquity Volume 41 ; 41 >
 
   }
@@ -560,8 +560,8 @@
       au < doNotProcess ; 2017 ; 2017 ; California History Volume 94 ; 94 >
       au < doNotProcess ; 2018 ; 2018 ; California History Volume 95 ; 95 >
       au < doNotProcess ; 2019 ; 2019 ; California History Volume 96 ; 96 >
-      au < ready ; 2020 ; 2020 ; California History Volume 97 ; 97 >
-      au < ready ; 2021 ; 2021 ; California History Volume 98 ; 98 >
+      au < releasing ; 2020 ; 2020 ; California History Volume 97 ; 97 >
+      au < releasing ; 2021 ; 2021 ; California History Volume 98 ; 98 >
       au < manifest ; 2022 ; 2022 ; California History Volume 99 ; 99 >
 
   }
@@ -575,18 +575,18 @@
     >
       param[journal_id] = currenthistory
 
-      au < ready ; 2010 ; 2010 ; Current History Volume 109 ; 109 >
-      au < ready ; 2011 ; 2011 ; Current History Volume 110 ; 110 >
+      au < releasing ; 2010 ; 2010 ; Current History Volume 109 ; 109 >
+      au < releasing ; 2011 ; 2011 ; Current History Volume 110 ; 110 >
       au < notReady ; 2012 ; 2012 ; Current History Volume 111 ; 111 > #Expires
-      au < ready ; 2013 ; 2013 ; Current History Volume 112 ; 112 >
-      au < ready ; 2014 ; 2014 ; Current History Volume 113 ; 113 >
-      au < ready ; 2015 ; 2015 ; Current History Volume 114 ; 114 >
-      au < ready ; 2016 ; 2016 ; Current History Volume 115 ; 115 >
+      au < releasing ; 2013 ; 2013 ; Current History Volume 112 ; 112 >
+      au < releasing ; 2014 ; 2014 ; Current History Volume 113 ; 113 >
+      au < releasing ; 2015 ; 2015 ; Current History Volume 114 ; 114 >
+      au < releasing ; 2016 ; 2016 ; Current History Volume 115 ; 115 >
       au < notReady ; 2017 ; 2017 ; Current History Volume 116 ; 116 > #500 error
-      au < ready ; 2018 ; 2018 ; Current History Volume 117 ; 117 >
+      au < releasing ; 2018 ; 2018 ; Current History Volume 117 ; 117 >
       au < notReady ; 2019 ; 2019 ; Current History Volume 118 ; 118 > #500 error
-      au < ready ; 2020 ; 2020 ; Current History Volume 119 ; 119 >
-      au < ready ; 2021 ; 2021 ; Current History Volume 120 ; 120 >
+      au < releasing ; 2020 ; 2020 ; Current History Volume 119 ; 119 >
+      au < releasing ; 2021 ; 2021 ; Current History Volume 120 ; 120 >
       au < manifest ; 2022 ; 2022 ; Current History Volume 121 ; 121 >
 
   }
@@ -609,8 +609,8 @@
       au < doNotProcess ; 2017 ; 2017 ; Departures in Critical Qualitative Research Volume 6 ; 6 >
       au < doNotProcess ; 2018 ; 2018 ; Departures in Critical Qualitative Research Volume 7 ; 7 >
       au < doNotProcess ; 2019 ; 2019 ; Departures in Critical Qualitative Research Volume 8 ; 8 >
-      au < ready ; 2020 ; 2020 ; Departures in Critical Qualitative Research Volume 9 ; 9 >
-      au < ready ; 2021 ; 2021 ; Departures in Critical Qualitative Research Volume 10 ; 10 >
+      au < releasing ; 2020 ; 2020 ; Departures in Critical Qualitative Research Volume 9 ; 9 >
+      au < releasing ; 2021 ; 2021 ; Departures in Critical Qualitative Research Volume 10 ; 10 >
       au < manifest ; 2022 ; 2022 ; Departures in Critical Qualitative Research Volume 11 ; 11 >
 
   }
@@ -632,8 +632,8 @@
       au < doNotProcess ; 2017 ; 2017 ; Elementa: Science of the Anthropocene Volume 5 ; 5 >
       au < doNotProcess ; 2018 ; 2018 ; Elementa: Science of the Anthropocene Volume 6 ; 6 >
       au < doNotProcess ; 2019 ; 2019 ; Elementa: Science of the Anthropocene Volume 7 ; 7 >
-      au < ready ; 2020 ; 2020 ; Elementa: Science of the Anthropocene Volume 8 ; 8 >
-      au < ready ; 2021 ; 2021 ; Elementa: Science of the Anthropocene Volume 9 ; 9 >
+      au < releasing ; 2020 ; 2020 ; Elementa: Science of the Anthropocene Volume 8 ; 8 >
+      au < releasing ; 2021 ; 2021 ; Elementa: Science of the Anthropocene Volume 9 ; 9 >
       au < manifest ; 2022 ; 2022 ; Elementa: Science of the Anthropocene Volume 10 ; 10 >
 
   }
@@ -692,18 +692,18 @@
       param[journal_id] = esr
       #Published 1978-present
 
-      au < ready ; 2010 ; 2010 ; Ethnic Studies Review Volume 33 ; 33 >
-      au < ready ; 2011 ; 2011 ; Ethnic Studies Review Volume 34 ; 34 >
-      au < ready ; 2012 ; 2012 ; Ethnic Studies Review Volume 35 ; 35 >
-      au < ready ; 2013 ; 2013 ; Ethnic Studies Review Volume 36 ; 36 >
+      au < releasing ; 2010 ; 2010 ; Ethnic Studies Review Volume 33 ; 33 >
+      au < releasing ; 2011 ; 2011 ; Ethnic Studies Review Volume 34 ; 34 >
+      au < releasing ; 2012 ; 2012 ; Ethnic Studies Review Volume 35 ; 35 >
+      au < releasing ; 2013 ; 2013 ; Ethnic Studies Review Volume 36 ; 36 >
       au < doesNotExist ; 2014 ; 2014 ; Ethnic Studies Review Volume 37 ; 37 >
       au < doesNotExist ; 2015 ; 2015 ; Ethnic Studies Review Volume 38 ; 38 >
       au < doesNotExist ; 2016 ; 2016 ; Ethnic Studies Review Volume 39 ; 39 >
-      au < ready ; 2017 ; 2017 ; Ethnic Studies Review Volume 37-38 ; 37-38 >
-      au < ready ; 2018 ; 2018 ; Ethnic Studies Review Volume 41 ; 41 >
-      au < ready ; 2019 ; 2019 ; Ethnic Studies Review Volume 42 ; 42 >
-      au < ready ; 2020 ; 2020 ; Ethnic Studies Review Volume 43 ; 43 >
-      au < ready ; 2021 ; 2021 ; Ethnic Studies Review Volume 44 ; 44 >
+      au < releasing ; 2017 ; 2017 ; Ethnic Studies Review Volume 37-38 ; 37-38 >
+      au < releasing ; 2018 ; 2018 ; Ethnic Studies Review Volume 41 ; 41 >
+      au < releasing ; 2019 ; 2019 ; Ethnic Studies Review Volume 42 ; 42 >
+      au < releasing ; 2020 ; 2020 ; Ethnic Studies Review Volume 43 ; 43 >
+      au < releasing ; 2021 ; 2021 ; Ethnic Studies Review Volume 44 ; 44 >
       au < manifest ; 2022 ; 2022 ; Ethnic Studies Review Volume 45 ; 45 >
 
   }
@@ -783,8 +783,8 @@
       au < doNotProcess ; 2019 ; 2019 ; Federal Sentencing Reporter Volume 31 [2019] ; 31 >
       au < doNotProcess ; 2019 ; 2019 ; Federal Sentencing Reporter Volume 32 [2019] ; 32 >
       au < doNotProcess ; 2020 ; 2020 ; Federal Sentencing Reporter Volume 32 [2020] ; 32 >
-      au < ready ; 2020 ; 2020 ; Federal Sentencing Reporter Volume 33 [2020] ; 33 >
-      au < ready ; 2021 ; 2021 ; Federal Sentencing Reporter Volume 33 [2021] ; 33 >
+      au < releasing ; 2020 ; 2020 ; Federal Sentencing Reporter Volume 33 [2020] ; 33 >
+      au < releasing ; 2021 ; 2021 ; Federal Sentencing Reporter Volume 33 [2021] ; 33 >
       au < manifest ; 2022 ; 2022 ; Federal Sentencing Reporter Volume 34 [2022] ; 34 >
 
   }
@@ -804,8 +804,8 @@
       au < doNotProcess ; 2017 ; 2017 ; Feminist Media Histories Volume 3 ; 3 >
       au < doNotProcess ; 2018 ; 2018 ; Feminist Media Histories Volume 4 ; 4 >
       au < doNotProcess ; 2019 ; 2019 ; Feminist Media Histories Volume 5 ; 5 >
-      au < ready ; 2020 ; 2020 ; Feminist Media Histories Volume 6 ; 6 >
-      au < ready ; 2021 ; 2021 ; Feminist Media Histories Volume 7 ; 7 >
+      au < releasing ; 2020 ; 2020 ; Feminist Media Histories Volume 6 ; 6 >
+      au < releasing ; 2021 ; 2021 ; Feminist Media Histories Volume 7 ; 7 >
       au < manifest ; 2022 ; 2022 ; Feminist Media Histories Volume 8 ; 8 >
 
   }
@@ -899,9 +899,9 @@
       au < doNotProcess ; 2019 ; 2019 ; Film Quarterly Volume 72 [2019] ; 72 >
       au < doNotProcess ; 2019 ; 2019 ; Film Quarterly Volume 73 [2019] ; 73 >
       au < doNotProcess ; 2020 ; 2020 ; Film Quarterly Volume 73 [2020] ; 73 >
-      au < ready ; 2020 ; 2020 ; Film Quarterly Volume 74 [2020] ; 74 >
-      au < ready ; 2021 ; 2021 ; Film Quarterly Volume 74 [2021] ; 74 >
-      au < ready ; 2021 ; 2021 ; Film Quarterly Volume 75 [2021] ; 75 >
+      au < releasing ; 2020 ; 2020 ; Film Quarterly Volume 74 [2020] ; 74 >
+      au < releasing ; 2021 ; 2021 ; Film Quarterly Volume 74 [2021] ; 74 >
+      au < releasing ; 2021 ; 2021 ; Film Quarterly Volume 75 [2021] ; 75 >
       au < expected ; 2022 ; 2022 ; Film Quarterly Volume 76 [2022] ; 76 >
       au < expected ; 2022 ; 2022 ; Film Quarterly Volume 77 [2022] ; 77 >
 
@@ -938,8 +938,8 @@
       au < doNotProcess ; 2018 ; 2018 ; Gastronomica: The Journal of Critical Food Studies Volume 18 ; 18 >
       au < doNotProcess ; 2019 ; 2019 ; Gastronomica: The Journal of Critical Food Studies Volume 19 ; 19 >
 
-      au < ready ; 2020 ; 2020 ; Gastronomica: The Journal of Critical Food Studies Volume 20 ; 20 >
-      au < ready ; 2021 ; 2021 ; Gastronomica: The Journal of Critical Food Studies Volume 21 ; 21 >
+      au < releasing ; 2020 ; 2020 ; Gastronomica: The Journal of Critical Food Studies Volume 20 ; 20 >
+      au < releasing ; 2021 ; 2021 ; Gastronomica: The Journal of Critical Food Studies Volume 21 ; 21 >
       au < manifest ; 2022 ; 2022 ; Gastronomica: The Journal of Critical Food Studies Volume 22 ; 22 >
 
   }
@@ -1060,8 +1060,8 @@
       au < doNotProcess ; 2018 ; 2018 ; Historical Studies in the Natural Sciences Volume 48 ; 48 >
       au < doNotProcess ; 2019 ; 2019 ; Historical Studies in the Natural Sciences Volume 49 ; 49 >
 
-      au < ready ; 2020 ; 2020 ; Historical Studies in the Natural Sciences Volume 50 ; 50 >
-      au < ready ; 2021 ; 2021 ; Historical Studies in the Natural Sciences Volume 51 ; 51 >
+      au < releasing ; 2020 ; 2020 ; Historical Studies in the Natural Sciences Volume 50 ; 50 >
+      au < releasing ; 2021 ; 2021 ; Historical Studies in the Natural Sciences Volume 51 ; 51 >
       au < manifest ; 2022 ; 2022 ; Historical Studies in the Natural Sciences Volume 52 ; 52 >
 
   }
@@ -1178,8 +1178,8 @@
       au < doNotProcess ; 2017 ; 2017 ; Journal of the American Musicological Society Volume 70 ; 70 >
       au < doNotProcess ; 2018 ; 2018 ; Journal of the American Musicological Society Volume 71 ; 71 >
       au < doNotProcess ; 2019 ; 2019 ; Journal of the American Musicological Society Volume 72 ; 72 >
-      au < ready ; 2020 ; 2020 ; Journal of the American Musicological Society Volume 73 ; 73 >
-      au < ready ; 2021 ; 2021 ; Journal of the American Musicological Society Volume 74 ; 74 >
+      au < releasing ; 2020 ; 2020 ; Journal of the American Musicological Society Volume 73 ; 73 >
+      au < releasing ; 2021 ; 2021 ; Journal of the American Musicological Society Volume 74 ; 74 >
       au < manifest ; 2022 ; 2022 ; Journal of the American Musicological Society Volume 75 ; 75 >
 
     }
@@ -1195,8 +1195,8 @@
 
       param[journal_id] = joae
 
-      au < ready ; 2020 ; 2020 ; The Journal of Autoethnography Volume 1 ; 1 >
-      au < ready ; 2021 ; 2021 ; The Journal of Autoethnography Volume 2 ; 2 >
+      au < releasing ; 2020 ; 2020 ; The Journal of Autoethnography Volume 1 ; 1 >
+      au < releasing ; 2021 ; 2021 ; The Journal of Autoethnography Volume 2 ; 2 >
       au < manifest ; 2022 ; 2022 ; The Journal of Autoethnography Volume 3 ; 3 >
 
   }
@@ -1210,8 +1210,8 @@
 
       param[journal_id] = jmw
 
-      au < ready ; 2019 ; 2019 ; The Journal of Medieval Worlds Volume 1 ; 1 >
-      au < ready ; 2020 ; 2020 ; The Journal of Medieval Worlds Volume 2 ; 2 >
+      au < releasing ; 2019 ; 2019 ; The Journal of Medieval Worlds Volume 1 ; 1 >
+      au < releasing ; 2020 ; 2020 ; The Journal of Medieval Worlds Volume 2 ; 2 >
       au < expected ; 2021 ; 2021 ; The Journal of Medieval Worlds Volume 3 ; 3 >
       au < expected ; 2022 ; 2022 ; The Journal of Medieval Worlds Volume 4 ; 4 >
 
@@ -1265,8 +1265,8 @@
       au < doNotProcess ; 2017 ; 2017 ; The Journal of Musicology Volume 34 ; 34 >
       au < doNotProcess ; 2018 ; 2018 ; The Journal of Musicology Volume 35 ; 35 >
       au < doNotProcess ; 2019 ; 2019 ; The Journal of Musicology Volume 36 ; 36 >
-      au < ready ; 2020 ; 2020 ; The Journal of Musicology Volume 37 ; 37 >
-      au < ready ; 2021 ; 2021 ; The Journal of Musicology Volume 38 ; 38 >
+      au < releasing ; 2020 ; 2020 ; The Journal of Musicology Volume 37 ; 37 >
+      au < releasing ; 2021 ; 2021 ; The Journal of Musicology Volume 38 ; 38 >
       au < manifest ; 2022 ; 2022 ; The Journal of Musicology Volume 39 ; 39 >
 
   }
@@ -1333,7 +1333,7 @@
       au < doNotProcess ; 2018 ; 2018 ; Journal of Palestine Studies Volume 48 [2018] ; 48 >
       au < doNotProcess ; 2019 ; 2019 ; Journal of Palestine Studies Volume 48 [2019] ; 48 >
       au < doNotProcess ; 2019 ; 2019 ; Journal of Palestine Studies Volume 49 [2019] ; 49 >
-      au < ready ; 2020 ; 2020 ; Journal of Palestine Studies Volume 49 [2020] ; 49 >
+      au < releasing ; 2020 ; 2020 ; Journal of Palestine Studies Volume 49 [2020] ; 49 >
       au < expected ; 2021 ; 2021 ; Journal of Palestine Studies Volume 50 [2021] ; 50 >
       au < expected ; 2022 ; 2022 ; Journal of Palestine Studies Volume 51 [2022] ; 51 >
 
@@ -1349,10 +1349,10 @@
 
       param[journal_id] = jpms
 
-      au < ready ; 2018 ; 2018 ; Journal of Popular Music Studies Volume 30 ; 30 >
-      au < ready ; 2019 ; 2019 ; Journal of Popular Music Studies Volume 31 ; 31 >
-      au < ready ; 2020 ; 2020 ; Journal of Popular Music Studies Volume 32 ; 32 >
-      au < ready ; 2021 ; 2021 ; Journal of Popular Music Studies Volume 33 ; 33 >
+      au < releasing ; 2018 ; 2018 ; Journal of Popular Music Studies Volume 30 ; 30 >
+      au < releasing ; 2019 ; 2019 ; Journal of Popular Music Studies Volume 31 ; 31 >
+      au < releasing ; 2020 ; 2020 ; Journal of Popular Music Studies Volume 32 ; 32 >
+      au < releasing ; 2021 ; 2021 ; Journal of Popular Music Studies Volume 33 ; 33 >
       au < manifest ; 2022 ; 2022 ; Journal of Popular Music Studies Volume 34 ; 34 >
 
   }
@@ -1366,8 +1366,8 @@
 
       param[journal_id] = jsmg
 
-      au < ready ; 2020 ; 2020 ; Journal of Sound and Music in Games Volume 1 ; 1 >
-      au < ready ; 2021 ; 2021 ; Journal of Sound and Music in Games Volume 2 ; 2 >
+      au < releasing ; 2020 ; 2020 ; Journal of Sound and Music in Games Volume 1 ; 1 >
+      au < releasing ; 2021 ; 2021 ; Journal of Sound and Music in Games Volume 2 ; 2 >
       au < manifest ; 2022 ; 2022 ; Journal of Sound and Music in Games Volume 3 ; 3 >
 
   }
@@ -1461,8 +1461,8 @@
       au < doNotProcess ; 2017 ; 2017 ; Journal of the Society of Architectural Historians Volume 76 ; 76 >
       au < doNotProcess ; 2018 ; 2018 ; Journal of the Society of Architectural Historians Volume 77 ; 77 >
       au < doNotProcess ; 2019 ; 2019 ; Journal of the Society of Architectural Historians Volume 78 ; 78 >
-      au < ready ; 2020 ; 2020 ; Journal of the Society of Architectural Historians Volume 79 ; 79 >
-      au < ready ; 2021 ; 2021 ; Journal of the Society of Architectural Historians Volume 80 ; 80 >
+      au < releasing ; 2020 ; 2020 ; Journal of the Society of Architectural Historians Volume 79 ; 79 >
+      au < releasing ; 2021 ; 2021 ; Journal of the Society of Architectural Historians Volume 80 ; 80 >
       au < manifest ; 2022 ; 2022 ; Journal of the Society of Architectural Historians Volume 81 ; 81 >
 
   }
@@ -1476,9 +1476,9 @@
 
       param[journal_id] = lalvc
 
-      au < ready ; 2019 ; 2019 ; Latin American and Latinx Visual Culture Volume 1 ; 1 >
-      au < ready ; 2020 ; 2020 ; Latin American and Latinx Visual Culture Volume 2 ; 2 >
-      au < ready ; 2021 ; 2021 ; Latin American and Latinx Visual Culture Volume 3 ; 3 >
+      au < releasing ; 2019 ; 2019 ; Latin American and Latinx Visual Culture Volume 1 ; 1 >
+      au < releasing ; 2020 ; 2020 ; Latin American and Latinx Visual Culture Volume 2 ; 2 >
+      au < releasing ; 2021 ; 2021 ; Latin American and Latinx Visual Culture Volume 3 ; 3 >
       au < manifest ; 2022 ; 2022 ; Latin American and Latinx Visual Culture Volume 4 ; 4 >
 
   }
@@ -1529,8 +1529,8 @@
       au < doNotProcess ; 2017 ; 2017 ; Mexican Studies/Estudios Mexicanos Volume 33 ; 33 >
       au < doNotProcess ; 2018 ; 2018 ; Mexican Studies/Estudios Mexicanos Volume 34 ; 34 >
       au < doNotProcess ; 2019 ; 2019 ; Mexican Studies/Estudios Mexicanos Volume 35 ; 35 >
-      au < ready ; 2020 ; 2020 ; Mexican Studies/Estudios Mexicanos Volume 36 ; 36 >
-      au < ready ; 2021 ; 2021 ; Mexican Studies/Estudios Mexicanos Volume 37 ; 37 >
+      au < releasing ; 2020 ; 2020 ; Mexican Studies/Estudios Mexicanos Volume 36 ; 36 >
+      au < releasing ; 2021 ; 2021 ; Mexican Studies/Estudios Mexicanos Volume 37 ; 37 >
       au < manifest ; 2022 ; 2022 ; Mexican Studies/Estudios Mexicanos Volume 38 ; 38 >
 
   }
@@ -1583,8 +1583,8 @@
       au < doNotProcess ; 2017 ; 2017 ; Music Perception: An Interdisciplinary Journal Volume 35 ; 35 >
       au < doNotProcess ; 2018 ; 2018 ; Music Perception: An Interdisciplinary Journal Volume 36 ; 36 >
       au < doNotProcess ; 2019 ; 2019 ; Music Perception: An Interdisciplinary Journal Volume 37 ; 37 >
-      au < ready ; 2020 ; 2020 ; Music Perception: An Interdisciplinary Journal Volume 38 ; 38 >
-      au < ready ; 2021 ; 2021 ; Music Perception: An Interdisciplinary Journal Volume 39 ; 39 >
+      au < releasing ; 2020 ; 2020 ; Music Perception: An Interdisciplinary Journal Volume 38 ; 38 >
+      au < releasing ; 2021 ; 2021 ; Music Perception: An Interdisciplinary Journal Volume 39 ; 39 >
       au < expected ; 2022 ; 2022 ; Music Perception: An Interdisciplinary Journal Volume 40 ; 40 >
 
   }
@@ -1599,8 +1599,8 @@
 
       param[journal_id] = nrbp
 
-      au < ready ; 2020 ; 2020 ; National Review of Black Politics Volume 1 ; 1 >
-      au < ready ; 2021 ; 2021 ; National Review of Black Politics Volume 2 ; 2 >
+      au < releasing ; 2020 ; 2020 ; National Review of Black Politics Volume 1 ; 1 >
+      au < releasing ; 2021 ; 2021 ; National Review of Black Politics Volume 2 ; 2 >
       au < manifest ; 2022 ; 2022 ; National Review of Black Politics Volume 3 ; 3 >
 
   }
@@ -1692,10 +1692,10 @@
       au < doNotProcess ; 2019 ; 2019 ; Nineteenth-Century Literature Volume 74 [2019] ; 74 >
       au < doNotProcess ; 2020 ; 2020 ; Nineteenth-Century Literature Volume 74 [2020] ; 74 >
 
-      au < ready ; 2020 ; 2020 ; Nineteenth-Century Literature Volume 75 [2020] ; 75 >
-      au < ready ; 2021 ; 2021 ; Nineteenth-Century Literature Volume 75 [2021] ; 75 >
+      au < releasing ; 2020 ; 2020 ; Nineteenth-Century Literature Volume 75 [2020] ; 75 >
+      au < releasing ; 2021 ; 2021 ; Nineteenth-Century Literature Volume 75 [2021] ; 75 >
 
-      au < ready ; 2021 ; 2021 ; Nineteenth-Century Literature Volume 76 [2021] ; 76 >
+      au < releasing ; 2021 ; 2021 ; Nineteenth-Century Literature Volume 76 [2021] ; 76 >
       au < manifest ; 2022 ; 2022 ; Nineteenth-Century Literature Volume 76 [2022] ; 76 >
       au < manifest ; 2022 ; 2022 ; Nineteenth-Century Literature Volume 77 [2022] ; 77 >
       au < expected ; 2022 ; 2022 ; Nineteenth-Century Literature Volume 78 [2022] ; 78 >
@@ -1737,8 +1737,8 @@
       au < doNotProcess ; 2017 ; 2017 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 20 ; 20 >
       au < doNotProcess ; 2018 ; 2018 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 21 ; 21 >
       au < doNotProcess ; 2019 ; 2019 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 22 ; 22 >
-      au < ready ; 2020 ; 2020 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 23 ; 23 >
-      au < ready ; 2021 ; 2021 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 24 ; 24 >
+      au < releasing ; 2020 ; 2020 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 23 ; 23 >
+      au < releasing ; 2021 ; 2021 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 24 ; 24 >
       au < expected ; 2022 ; 2022 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 25 ; 25 >
 
   }
@@ -1799,10 +1799,10 @@
       au < doNotProcess ; 2019 ; 2019 ; 19th-Century Music Volume 43 [2019] ; 43 >
       au < doNotProcess ; 2020 ; 2020 ; 19th-Century Music Volume 43 [2020] ; 43 >
 
-      au < ready ; 2020 ; 2020 ; 19th-Century Music Volume 44 [2020] ; 44 >
-      au < ready ; 2021 ; 2021 ; 19th-Century Music Volume 44 [2021] ; 44 >
+      au < releasing ; 2020 ; 2020 ; 19th-Century Music Volume 44 [2020] ; 44 >
+      au < releasing ; 2021 ; 2021 ; 19th-Century Music Volume 44 [2021] ; 44 >
 
-      au < ready ; 2021 ; 2021 ; 19th-Century Music Volume 45 [2021] ; 45 >
+      au < releasing ; 2021 ; 2021 ; 19th-Century Music Volume 45 [2021] ; 45 >
       au < expected ; 2022 ; 2022 ; 19th-Century Music Volume 46 [2022] ; 46 >
       au < expected ; 2022 ; 2022 ; 19th-Century Music Volume 47 [2022] ; 47 >
 
@@ -1843,8 +1843,8 @@
 #      au < doNotProcess ; 2019-2020 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 23 ; 23 >
 
 
-      au < ready ; 2020 ; 2020 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 24 [2020] ; 24 >
-      au < ready ; 2021 ; 2021 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 25 [2021] ; 25 >
+      au < releasing ; 2020 ; 2020 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 24 [2020] ; 24 >
+      au < releasing ; 2021 ; 2021 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 25 [2021] ; 25 >
       au < expected ; 2022 ; 2022 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 26 [2022] ; 26 >
 
   }
@@ -1948,8 +1948,8 @@
       au < doNotProcess ; 2017 ; 2017 ; Pacific Historical Review Volume 86 ; 86 >
       au < doNotProcess ; 2018 ; 2018 ; Pacific Historical Review Volume 87 ; 87 >
       au < doNotProcess ; 2019 ; 2019 ; Pacific Historical Review Volume 88 ; 88 >
-      au < ready ; 2020 ; 2020 ; Pacific Historical Review Volume 89 ; 89 >
-      au < ready ; 2021 ; 2021 ; Pacific Historical Review Volume 90 ; 90 >
+      au < releasing ; 2020 ; 2020 ; Pacific Historical Review Volume 89 ; 89 >
+      au < releasing ; 2021 ; 2021 ; Pacific Historical Review Volume 90 ; 90 >
       au < manifest ; 2022 ; 2022 ; Pacific Historical Review Volume 91 ; 91 >
 
   }
@@ -1975,8 +1975,8 @@
 
       param[journal_id] = res
 
-      au < ready ; 2020 ; 2020 ; Resonance: The Journal of Sound and Culture Volume 1 ; 1 >
-      au < ready ; 2021 ; 2021 ; Resonance: The Journal of Sound and Culture Volume 2 ; 2 >
+      au < releasing ; 2020 ; 2020 ; Resonance: The Journal of Sound and Culture Volume 1 ; 1 >
+      au < releasing ; 2021 ; 2021 ; Resonance: The Journal of Sound and Culture Volume 2 ; 2 >
       au < manifest ; 2022 ; 2022 ; Resonance: The Journal of Sound and Culture Volume 3 ; 3 >
 
   }
@@ -2143,15 +2143,15 @@
       au < doNotProcess ; 2019 ; 2019 ; Representations Volume 147 ; 147 >
       au < doNotProcess ; 2019 ; 2019 ; Representations Volume 148 ; 148 >
 
-      au < ready ; 2020 ; 2020 ; Representations Volume 149 ; 149 >
-      au < ready ; 2020 ; 2020 ; Representations Volume 150 ; 150 >
-      au < ready ; 2020 ; 2020 ; Representations Volume 151 ; 151 >
-      au < ready ; 2020 ; 2020 ; Representations Volume 152 ; 152 >
+      au < releasing ; 2020 ; 2020 ; Representations Volume 149 ; 149 >
+      au < releasing ; 2020 ; 2020 ; Representations Volume 150 ; 150 >
+      au < releasing ; 2020 ; 2020 ; Representations Volume 151 ; 151 >
+      au < releasing ; 2020 ; 2020 ; Representations Volume 152 ; 152 >
 
-      au < ready ; 2021 ; 2021 ; Representations Volume 153 ; 153 >
-      au < ready ; 2021 ; 2021 ; Representations Volume 154 ; 154 >
-      au < ready ; 2021 ; 2021 ; Representations Volume 155 ; 155 >
-      au < ready ; 2021 ; 2021 ; Representations Volume 156 ; 156 >
+      au < releasing ; 2021 ; 2021 ; Representations Volume 153 ; 153 >
+      au < releasing ; 2021 ; 2021 ; Representations Volume 154 ; 154 >
+      au < releasing ; 2021 ; 2021 ; Representations Volume 155 ; 155 >
+      au < releasing ; 2021 ; 2021 ; Representations Volume 156 ; 156 >
       au < manifest ; 2022 ; 2022 ; Representations Volume 157 ; 157 >
       au < manifest ; 2022 ; 2022 ; Representations Volume 158 ; 158 >
       au < expected ; 2022 ; 2022 ; Representations Volume 159 ; 159 >
@@ -2207,8 +2207,8 @@
       au < doNotProcess ; 2017 ; 2017 ; Rhetorica: A Journal of the History of Rhetoric Volume 35 ; 35 >
       au < doNotProcess ; 2018 ; 2018 ; Rhetorica: A Journal of the History of Rhetoric Volume 36 ; 36 >
       au < doNotProcess ; 2019 ; 2019 ; Rhetorica: A Journal of the History of Rhetoric Volume 37 ; 37 >
-      au < ready ; 2020 ; 2020 ; Rhetorica: A Journal of the History of Rhetoric Volume 38 ; 38 >
-      au < ready ; 2021 ; 2021 ; Rhetorica: A Journal of the History of Rhetoric Volume 39 ; 39 >
+      au < releasing ; 2020 ; 2020 ; Rhetorica: A Journal of the History of Rhetoric Volume 38 ; 38 >
+      au < releasing ; 2021 ; 2021 ; Rhetorica: A Journal of the History of Rhetoric Volume 39 ; 39 >
       au < manifest ; 2022 ; 2022 ; Rhetorica: A Journal of the History of Rhetoric Volume 40 ; 40 >
 
   }
@@ -2327,8 +2327,8 @@
       au < doNotProcess ; 2017 ; 2017 ; Southern California Quarterly Volume 99 ; 99 >
       au < doNotProcess ; 2018 ; 2018 ; Southern California Quarterly Volume 100 ; 100 >
       au < doNotProcess ; 2019 ; 2019 ; Southern California Quarterly Volume 101 ; 101 >
-      au < ready ; 2020 ; 2020 ; Southern California Quarterly Volume 102 ; 102 >
-      au < ready ; 2021 ; 2021 ; Southern California Quarterly Volume 103 ; 103 >
+      au < releasing ; 2020 ; 2020 ; Southern California Quarterly Volume 102 ; 102 >
+      au < releasing ; 2021 ; 2021 ; Southern California Quarterly Volume 103 ; 103 >
       au < expected ; 2022 ; 2022 ; Southern California Quarterly Volume 104 ; 104 >
 
   }
@@ -2347,8 +2347,8 @@
       au < doNotProcess ; 2017 ; 2017 ; Studies in Late Antiquity Volume 1 ; 1 >
       au < doNotProcess ; 2018 ; 2018 ; Studies in Late Antiquity Volume 2 ; 2 >
       au < doNotProcess ; 2019 ; 2019 ; Studies in Late Antiquity Volume 3 ; 3 >
-      au < ready ; 2020 ; 2020 ; Studies in Late Antiquity Volume 4 ; 4 >
-      au < ready ; 2021 ; 2021 ; Studies in Late Antiquity Volume 5 ; 5 >
+      au < releasing ; 2020 ; 2020 ; Studies in Late Antiquity Volume 4 ; 4 >
+      au < releasing ; 2021 ; 2021 ; Studies in Late Antiquity Volume 5 ; 5 >
       au < manifest ; 2022 ; 2022 ; Studies in Late Antiquity Volume 6 ; 6 >
 
   }
@@ -2368,8 +2368,8 @@
       au < doNotProcess ; 2017 ; 2017 ; Sociology of Development Volume 3 ; 3 >
       au < doNotProcess ; 2018 ; 2018 ; Sociology of Development Volume 4 ; 4 >
       au < doNotProcess ; 2019 ; 2019 ; Sociology of Development Volume 5 ; 5 >
-      au < ready ; 2020 ; 2020 ; Sociology of Development Volume 6 ; 6 >
-      au < ready ; 2021 ; 2021 ; Sociology of Development Volume 7 ; 7 >
+      au < releasing ; 2020 ; 2020 ; Sociology of Development Volume 6 ; 6 >
+      au < releasing ; 2021 ; 2021 ; Sociology of Development Volume 7 ; 7 >
       au < manifest ; 2022 ; 2022 ; Sociology of Development Volume 8 ; 8 >
 
   }
@@ -2428,8 +2428,8 @@
       au < doNotProcess ; 2017 ; 2017 ; The Public Historian Volume 39 ; 39 >
       au < doNotProcess ; 2018 ; 2018 ; The Public Historian Volume 40 ; 40 >
       au < doNotProcess ; 2019 ; 2019 ; The Public Historian Volume 41 ; 41 >
-      au < ready ; 2020 ; 2020 ; The Public Historian Volume 42 ; 42 >
-      au < ready ; 2021 ; 2021 ; The Public Historian Volume 43 ; 43 >
+      au < releasing ; 2020 ; 2020 ; The Public Historian Volume 42 ; 42 >
+      au < releasing ; 2021 ; 2021 ; The Public Historian Volume 43 ; 43 >
       au < manifest ; 2022 ; 2022 ; The Public Historian Volume 44 ; 44 >
 
   }
@@ -2459,8 +2459,8 @@
       au < doNotProcess ; 2017 ; 2017 ; Journal of Vietnamese Studies Volume 12 ; 12 >
       au < doNotProcess ; 2018 ; 2018 ; Journal of Vietnamese Studies Volume 13 ; 13 >
       au < doNotProcess ; 2019 ; 2019 ; Journal of Vietnamese Studies Volume 14 ; 14 >
-      au < ready ; 2020 ; 2020 ; Journal of Vietnamese Studies Volume 15 ; 15 >
-      au < ready ; 2021 ; 2021 ; Journal of Vietnamese Studies Volume 16 ; 16 >
+      au < releasing ; 2020 ; 2020 ; Journal of Vietnamese Studies Volume 15 ; 15 >
+      au < releasing ; 2021 ; 2021 ; Journal of Vietnamese Studies Volume 16 ; 16 >
       au < manifest ; 2022 ; 2022 ; Journal of Vietnamese Studies Volume 17 ; 17 >
 
   }

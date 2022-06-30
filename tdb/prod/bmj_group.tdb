@@ -350,7 +350,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2018 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 103 ; 103 ; https://fn.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 104 ; 104 ; https://fn.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2020 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 105 ; 105 ; https://fn.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; ready ; 2021 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 106 ; 106 ; https://fn.bmj.com/ > #login, https://fn.bmj.com/content/fetalneonatal/106/5/561.full.pdf
+    au < bmj.BMJDrupalPlugin ; releasing ; 2021 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 106 ; 106 ; https://fn.bmj.com/ > #login, https://fn.bmj.com/content/fetalneonatal/106/5/561.full.pdf
     au < bmj.BMJDrupalPlugin ; manifest ; 2022 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 107 ; 107 ; https://fn.bmj.com/ >
 
   }
@@ -731,7 +731,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2017 ; BMJ Supportive & Palliative Care Volume 7 ; 7 ; https://spcare.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2018 ; BMJ Supportive & Palliative Care Volume 8 ; 8 ; https://spcare.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; BMJ Supportive & Palliative Care Volume 9 ; 9 ; https://spcare.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; ready ; 2020 ; BMJ Supportive & Palliative Care Volume 10 ; 10 ; https://spcare.bmj.com/ > #Found a login page. https://spcare.bmj.com/content/10/3/e22
+    au < bmj.BMJDrupalPlugin ; releasing ; 2020 ; BMJ Supportive & Palliative Care Volume 10 ; 10 ; https://spcare.bmj.com/ > #Found a login page. https://spcare.bmj.com/content/10/3/e22
     au < bmj.BMJDrupalPlugin ; notReady ; 2021 ; BMJ Supportive & Palliative Care Volume 11 ; 11 ; https://spcare.bmj.com/ > #login, https://spcare.bmj.com/content/11/1/1
     au < bmj.BMJDrupalPlugin ; manifest ; 2022 ; BMJ Supportive & Palliative Care Volume 12 ; 12 ; https://spcare.bmj.com/ >
 
@@ -1520,7 +1520,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; down ; 2015 ; Heart Volume 101 ; 101 ; http://heart.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2016 ; Heart Volume 102 ; 102 ; https://heart.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2017 ; Heart Volume 103 ; 103 ; https://heart.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; ready ; 2018 ; Heart Volume 104 ; 104 ; https://heart.bmj.com/ > # File size (2418184395) differs from Content-Length header (2971933806): heartjnl-2014-307008supp_Oxford-Live-2011.mov
+    au < bmj.BMJDrupalPlugin ; releasing ; 2018 ; Heart Volume 104 ; 104 ; https://heart.bmj.com/ > # File size (2418184395) differs from Content-Length header (2971933806): heartjnl-2014-307008supp_Oxford-Live-2011.mov
     au < bmj.BMJDrupalPlugin ; notReady ; 2019 ; Heart Volume 105 ; 105 ; https://heart.bmj.com/ > #403 https://heart.bmj.com/content/105/8/596
     au < bmj.BMJDrupalPlugin ; released ; 2020 ; Heart Volume 106 ; 106 ; https://heart.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2021 ; Heart Volume 107 ; 107 ; https://heart.bmj.com/ >
@@ -1753,7 +1753,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2018 ; Journal of Epidemiology & Community Health Volume 72 ; 72 ; https://jech.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; Journal of Epidemiology & Community Health Volume 73 ; 73 ; https://jech.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2020 ; Journal of Epidemiology & Community Health Volume 74 ; 74 ; https://jech.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; ready ; 2021 ; Journal of Epidemiology & Community Health Volume 75 ; 75 ; https://jech.bmj.com/ > #403 Forbidden, https://jech.bmj.com/content/76/4/420
+    au < bmj.BMJDrupalPlugin ; releasing ; 2021 ; Journal of Epidemiology & Community Health Volume 75 ; 75 ; https://jech.bmj.com/ > #403 Forbidden, https://jech.bmj.com/content/76/4/420
     au < bmj.BMJDrupalPlugin ; manifest ; 2022 ; Journal of Epidemiology & Community Health Volume 76 ; 76 ; https://jech.bmj.com/ >
 
   }
@@ -1871,7 +1871,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2018 ; Journal of Medical Ethics Volume 44 ; 44 ; https://jme.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; Journal of Medical Ethics Volume 45 ; 45 ; https://jme.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2020 ; Journal of Medical Ethics Volume 46 ; 46 ; https://jme.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; ready ; 2021 ; Journal of Medical Ethics Volume 47 ; 47 ; https://jme.bmj.com/ > #login, https://jme.bmj.com/content/47/6/430
+    au < bmj.BMJDrupalPlugin ; releasing ; 2021 ; Journal of Medical Ethics Volume 47 ; 47 ; https://jme.bmj.com/ > #login, https://jme.bmj.com/content/47/6/430
     au < bmj.BMJDrupalPlugin ; manifest ; 2022 ; Journal of Medical Ethics Volume 48 ; 48 ; https://jme.bmj.com/ >
 
   }
@@ -2076,7 +2076,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2018 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 89 ; 89 ; https://jnnp.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 90 ; 90 ; https://jnnp.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2020 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 91 ; 91 ; https://jnnp.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; ready ; 2021 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 92 ; 92 ; https://jnnp.bmj.com/ > #login, https://jnnp.bmj.com/content/jnnp/92/6/622.full.pdf
+    au < bmj.BMJDrupalPlugin ; releasing ; 2021 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 92 ; 92 ; https://jnnp.bmj.com/ > #login, https://jnnp.bmj.com/content/jnnp/92/6/622.full.pdf
     au < bmj.BMJDrupalPlugin ; manifest ; 2022 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 93 ; 93 ; https://jnnp.bmj.com/ >
 
   }
@@ -2441,7 +2441,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2018 ; Occupational and Environmental Medicine Volume 75 ; 75 ; https://oem.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; Occupational and Environmental Medicine Volume 76 ; 76 ; https://oem.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2020 ; Occupational and Environmental Medicine Volume 77 ; 77 ; https://oem.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; ready ; 2021 ; Occupational and Environmental Medicine Volume 78 ; 78 ; https://oem.bmj.com/ > #login, https://oem.bmj.com/content/79/2/e2.full.pdf
+    au < bmj.BMJDrupalPlugin ; releasing ; 2021 ; Occupational and Environmental Medicine Volume 78 ; 78 ; https://oem.bmj.com/ > #login, https://oem.bmj.com/content/79/2/e2.full.pdf
     au < bmj.BMJDrupalPlugin ; manifest ; 2022 ; Occupational and Environmental Medicine Volume 79 ; 79 ; https://oem.bmj.com/ >
 
   }
@@ -2875,7 +2875,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2018 ; Thorax Volume 73 ; 73 ; https://thorax.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; Thorax Volume 74 ; 74 ; https://thorax.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2020 ; Thorax Volume 75 ; 75 ; https://thorax.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; ready ; 2021 ; Thorax Volume 76 ; 76 ; https://thorax.bmj.com/ > #login,https://thorax.bmj.com/content/76/4/350.full.pdf
+    au < bmj.BMJDrupalPlugin ; releasing ; 2021 ; Thorax Volume 76 ; 76 ; https://thorax.bmj.com/ > #login,https://thorax.bmj.com/content/76/4/350.full.pdf
     au < bmj.BMJDrupalPlugin ; manifest ; 2022 ; Thorax Volume 77 ; 77 ; https://thorax.bmj.com/ >
 
   }
