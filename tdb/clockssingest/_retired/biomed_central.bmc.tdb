@@ -735,7 +735,7 @@
       au < finished ; frozen ; 2011 ; BMC Genomics Volume 12 ; 12 ; >
       au < finished ; manifest ; 2012 ; BMC Genomics Volume 13 ; 13 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2013 ; BMC Genomics Volume 14 ; 14 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2014 ; BMC Genomics Volume 15 ; 15 ; >
+      au < finished ; manifest ; 2014 ; BMC Genomics Volume 15 ; 15 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; exists ; 2015 ; BMC Genomics Volume 16 ; 16 ; >
 
     }
@@ -1800,7 +1800,7 @@
       au < finished ; finished ; 2009 ; BMC Surgery Volume 9 ; 9 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2010 ; BMC Surgery Volume 10 ; 10 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2011 ; BMC Surgery Volume 11 ; 11 ; >
-      au < frozen ; exists ; 2012 ; BMC Surgery Volume 12 ; 12 ; >
+      au < finished ; manifest ; 2012 ; BMC Surgery Volume 12 ; 12 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2013 ; BMC Surgery Volume 13 ; 13 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2014 ; BMC Surgery Volume 14 ; 14 ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; BMC Surgery Volume 15 [superseded] ; 15 ; >
