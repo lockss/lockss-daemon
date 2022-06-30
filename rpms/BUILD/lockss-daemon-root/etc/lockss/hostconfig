@@ -209,10 +209,7 @@ check_writable() {
 # init_one_dir dir user
 init_one_dir() {
     local DIR="$1"
-    local MODE="$2"
-    if [ -z "${MODE}" ]; then
-        MODE="750"
-    fi
+    local MODE="${3:-750}"
     if [ ! -d "${DIR}" ]; then
         ask_for_input "${DIR} does not exist; shall I create it" Y
         if is_yes "${ANS}"; then
