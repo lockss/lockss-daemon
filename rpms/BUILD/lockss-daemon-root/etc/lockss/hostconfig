@@ -157,7 +157,7 @@ assign_first_element() {
     done
 }
 
-# init_cache_dirs dirs user
+# init_cache_dirs dirs user mode
 # NB dirs is a semi-colon-separated list
 init_cache_dirs() {
     local DIRS="$1"
