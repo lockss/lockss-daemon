@@ -1,4 +1,5 @@
 <!--
+
 Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
@@ -11,7 +12,7 @@ this list of conditions and the following disclaimer.
 this list of conditions and the following disclaimer in the documentation
 and/or other materials provided with the distribution.
 
-3. Neither the name of plugins/src/org/lockss/plugin/atypon/practicalactionthe copyright holder nor the names of its contributors
+3. Neither the name of the copyright holder nor the names of its contributors
 may be used to endorse or promote products derived from this software without
 specific prior written permission.
 
@@ -26,6 +27,7 @@ INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
 CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
+
 -->
 <map>
   <entry>
@@ -34,7 +36,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.clockss.pap.ClockssPapSourcePlugin</string>
+    <string>org.lockss.plugin.clockss.onixbooks.ClockssPapSourcePlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -64,18 +66,18 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.clockss.pap.PapOnix3SourceXmlArticleIteratorFactory</string>
+    <string>org.lockss.plugin.clockss.onixbooks.PapOnix3SourceXmlArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.clockss.pap.PapOnix3SourceXmlArticleIteratorFactory</string>
+    <string>org.lockss.plugin.clockss.onixbooks.PapOnix3SourceXmlArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>text/xml_metadata_extractor_factory_map</string>
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.clockss.pap.PapOnix3SourceXmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.clockss.onixbooks.PapOnix3SourceXmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>
@@ -84,7 +86,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.clockss.pap.PapOnix3SourceXmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.clockss.onixbooks.PapOnix3SourceXmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>

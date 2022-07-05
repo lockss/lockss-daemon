@@ -27,7 +27,7 @@ CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
  */
-package org.lockss.plugin.clockss.pap;
+package org.lockss.plugin.clockss.onixbooks;
 
 import org.apache.commons.io.FilenameUtils;
 import org.lockss.daemon.PluginException;
@@ -36,7 +36,6 @@ import org.lockss.extractor.FileMetadataExtractor;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
-import org.lockss.plugin.clockss.onixbooks.Onix3LongSourceXmlMetadataExtractorFactory;
 import org.lockss.util.Logger;
 
 import java.util.ArrayList;
