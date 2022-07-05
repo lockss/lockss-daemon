@@ -94,16 +94,16 @@
 
       param[journal_id] = dadasur
 
-      au < exists ; 1971 ; 1971 ; Dada/Surrealism Volume 1 ; 1 >
-      au < exists ; 1972 ; 1972 ; Dada/Surrealism Volume 2 ; 2 >
-      au < exists ; 1973 ; 1973 ; Dada/Surrealism Volume 3 ; 3 >
-      au < exists ; 1974 ; 1974 ; Dada/Surrealism Volume 4 ; 4 >
-      au < exists ; 1975 ; 1975 ; Dada/Surrealism Volume 5 ; 5 >
-      au < exists ; 1976 ; 1976 ; Dada/Surrealism Volume 6 ; 6 >
-      au < exists ; 1977 ; 1977 ; Dada/Surrealism Volume 7 ; 7 >
-      au < exists ; 1978 ; 1978 ; Dada/Surrealism Volume 8 ; 8 >
-      au < exists ; 1979 ; 1979 ; Dada/Surrealism Volume 9 ; 9 >
-      au < exists ; 1982 ; 1982 ; Dada/Surrealism Volume 10 ; 10 >
+      au < manifest ; 1971 ; 1971 ; Dada/Surrealism Volume 1 ; 1 >
+      au < manifest ; 1972 ; 1972 ; Dada/Surrealism Volume 2 ; 2 >
+      au < manifest ; 1973 ; 1973 ; Dada/Surrealism Volume 3 ; 3 >
+      au < manifest ; 1974 ; 1974 ; Dada/Surrealism Volume 4 ; 4 >
+      au < manifest ; 1975 ; 1975 ; Dada/Surrealism Volume 5 ; 5 >
+      au < manifest ; 1976 ; 1976 ; Dada/Surrealism Volume 6 ; 6 >
+      au < manifest ; 1977 ; 1977 ; Dada/Surrealism Volume 7 ; 7 >
+      au < manifest ; 1978 ; 1978 ; Dada/Surrealism Volume 8 ; 8 >
+      au < manifest ; 1979 ; 1979 ; Dada/Surrealism Volume 9 ; 9 >
+      au < manifest ; 1982 ; 1982 ; Dada/Surrealism Volume 10 ; 10 >
       au < doesNotExist ; 0 ; 0 ; Dada/Surrealism Volume 11 ; 11 >
       au < doNotProcess ; 1983 ; 1983 ; Dada/Surrealism Volume 12 ; 12 >
       au < doNotProcess ; 1984 ; 1984 ; Dada/Surrealism Volume 13 ; 13 >
@@ -116,7 +116,7 @@
       au < doNotProcess ; 2015 ; 2015 ; Dada/Surrealism Volume 20 ; 20 >
       au < doNotProcess ; 2017 ; 2017 ; Dada/Surrealism Volume 21 ; 21 >
       au < doNotProcess ; 2018 ; 2018 ; Dada/Surrealism Volume 22 ; 22 >
-      au < exists ; 2019 ; 2019 ; Dada/Surrealism Volume 23 ; 23 >
+      au < doesNotExist ; 2019 ; 2019 ; Dada/Surrealism Volume 23 ; 23 >
       au < manifest ; 2020 ; 2020 ; Dada/Surrealism Volume 24 ; 24 >
 
     }
@@ -157,40 +157,40 @@
 
       param[journal_id] = igsar
 
-      au < exists ; 1892 ; 1892 ; Iowa Geological Survey Annual Report Volume 1 ; 1 >
-      au < exists ; 1893 ; 1893 ; Iowa Geological Survey Annual Report Volume 2-3 ; 2-3 >
-      au < exists ; 1895 ; 1895 ; Iowa Geological Survey Annual Report Volume 4 ; 4 >
-      au < exists ; 1896 ; 1896 ; Iowa Geological Survey Annual Report Volume 5-6 ; 5-6 >
-      au < exists ; 1897 ; 1897 ; Iowa Geological Survey Annual Report Volume 7 ; 7 >
-      au < exists ; 1898 ; 1898 ; Iowa Geological Survey Annual Report Volume 8 ; 8 >
-      au < exists ; 1899 ; 1899 ; Iowa Geological Survey Annual Report Volume 9 ; 9 >
-      au < exists ; 1900 ; 1900 ; Iowa Geological Survey Annual Report Volume 10 ; 10 >
-      au < exists ; 1901 ; 1901 ; Iowa Geological Survey Annual Report Volume 11 ; 11 >
-      au < exists ; 1902 ; 1902 ; Iowa Geological Survey Annual Report Volume 12 ; 12 >
-      au < exists ; 1903 ; 1903 ; Iowa Geological Survey Annual Report Volume 13-14 ; 13-14 >
-      au < exists ; 1905 ; 1905 ; Iowa Geological Survey Annual Report Volume 15 ; 15 >
-      au < exists ; 1906 ; 1906 ; Iowa Geological Survey Annual Report Volume 16 ; 16 >
-      au < exists ; 1907 ; 1907 ; Iowa Geological Survey Annual Report Volume 17 ; 17 >
-      au < exists ; 1908 ; 1908 ; Iowa Geological Survey Annual Report Volume 18 ; 18 >
-      au < exists ; 1909 ; 1909 ; Iowa Geological Survey Annual Report Volume 19 ; 19 >
-      au < exists ; 1910 ; 1910 ; Iowa Geological Survey Annual Report Volume 20 ; 20 >
-      au < exists ; 1912 ; 1912 ; Iowa Geological Survey Annual Report Volume 21-22 ; 21-22 >
-      au < exists ; 1913 ; 1913 ; Iowa Geological Survey Annual Report Volume 23 ; 23 >
-      au < exists ; 1914 ; 1914 ; Iowa Geological Survey Annual Report Volume 24 ; 24 >
-      au < exists ; 1915 ; 1915 ; Iowa Geological Survey Annual Report Volume 25 ; 25 >
-      au < exists ; 1916 ; 1916 ; Iowa Geological Survey Annual Report Volume 26 ; 26 >
-      au < exists ; 1917 ; 1917 ; Iowa Geological Survey Annual Report Volume 27 ; 27 >
-      au < exists ; 1919 ; 1919 ; Iowa Geological Survey Annual Report Volume 28 ; 28 >
-      au < exists ; 1921 ; 1921 ; Iowa Geological Survey Annual Report Volume 29 ; 29 >
-      au < exists ; 1923 ; 1923 ; Iowa Geological Survey Annual Report Volume 30 ; 30 >
-      au < exists ; 1925 ; 1925 ; Iowa Geological Survey Annual Report Volume 31 ; 31 >
+      au < doesNotExist ; 1892 ; 1892 ; Iowa Geological Survey Annual Report Volume 1 ; 1 >
+      au < manifest ; 1893 ; 1893 ; Iowa Geological Survey Annual Report Volume 2-3 ; 2-3 >
+      au < manifest ; 1895 ; 1895 ; Iowa Geological Survey Annual Report Volume 4 ; 4 >
+      au < manifest ; 1896 ; 1896 ; Iowa Geological Survey Annual Report Volume 5-6 ; 5-6 >
+      au < manifest ; 1897 ; 1897 ; Iowa Geological Survey Annual Report Volume 7 ; 7 >
+      au < manifest ; 1898 ; 1898 ; Iowa Geological Survey Annual Report Volume 8 ; 8 >
+      au < manifest ; 1899 ; 1899 ; Iowa Geological Survey Annual Report Volume 9 ; 9 >
+      au < manifest ; 1900 ; 1900 ; Iowa Geological Survey Annual Report Volume 10 ; 10 >
+      au < manifest ; 1901 ; 1901 ; Iowa Geological Survey Annual Report Volume 11 ; 11 >
+      au < manifest ; 1902 ; 1902 ; Iowa Geological Survey Annual Report Volume 12 ; 12 >
+      au < manifest ; 1903 ; 1903 ; Iowa Geological Survey Annual Report Volume 13-14 ; 13-14 >
+      au < manifest ; 1905 ; 1905 ; Iowa Geological Survey Annual Report Volume 15 ; 15 >
+      au < manifest ; 1906 ; 1906 ; Iowa Geological Survey Annual Report Volume 16 ; 16 >
+      au < manifest ; 1907 ; 1907 ; Iowa Geological Survey Annual Report Volume 17 ; 17 >
+      au < manifest ; 1908 ; 1908 ; Iowa Geological Survey Annual Report Volume 18 ; 18 >
+      au < manifest ; 1909 ; 1909 ; Iowa Geological Survey Annual Report Volume 19 ; 19 >
+      au < manifest ; 1910 ; 1910 ; Iowa Geological Survey Annual Report Volume 20 ; 20 >
+      au < manifest ; 1912 ; 1912 ; Iowa Geological Survey Annual Report Volume 21-22 ; 21-22 >
+      au < manifest ; 1913 ; 1913 ; Iowa Geological Survey Annual Report Volume 23 ; 23 >
+      au < manifest ; 1914 ; 1914 ; Iowa Geological Survey Annual Report Volume 24 ; 24 >
+      au < doesNotExist ; 1915 ; 1915 ; Iowa Geological Survey Annual Report Volume 25 ; 25 >
+      au < manifest ; 1916 ; 1916 ; Iowa Geological Survey Annual Report Volume 26 ; 26 >
+      au < manifest ; 1917 ; 1917 ; Iowa Geological Survey Annual Report Volume 27 ; 27 >
+      au < manifest ; 1919 ; 1919 ; Iowa Geological Survey Annual Report Volume 28 ; 28 >
+      au < manifest ; 1921 ; 1921 ; Iowa Geological Survey Annual Report Volume 29 ; 29 >
+      au < manifest ; 1923 ; 1923 ; Iowa Geological Survey Annual Report Volume 30 ; 30 >
+      au < manifest ; 1925 ; 1925 ; Iowa Geological Survey Annual Report Volume 31 ; 31 >
       au < manifest ; 1927 ; 1927 ; Iowa Geological Survey Annual Report Volume 32 ; 32 >
       au < manifest ; 1928 ; 1928 ; Iowa Geological Survey Annual Report Volume 33 ; 33 >
       au < manifest ; 1929 ; 1929 ; Iowa Geological Survey Annual Report Volume 34 ; 34 >
-      au < exists ; 1930 ; 1930 ; Iowa Geological Survey Annual Report Volume 35 ; 35 >
-      au < exists ; 1934 ; 1934 ; Iowa Geological Survey Annual Report Volume 36 ; 36 >
-      au < exists ; 1940 ; 1940 ; Iowa Geological Survey Annual Report Volume 37 ; 37 >
-      au < exists ; 1942 ; 1942 ; Iowa Geological Survey Annual Report Volume 38 ; 38 >
+      au < exists ; 1931 ; 1931 ; Iowa Geological Survey Annual Report Volume 35 ; 35 >
+      au < exists ; 1935 ; 1935 ; Iowa Geological Survey Annual Report Volume 36 ; 36 >
+      au < exists ; 1941 ; 1941 ; Iowa Geological Survey Annual Report Volume 37 ; 37 >
+      au < exists ; 1943 ; 1943 ; Iowa Geological Survey Annual Report Volume 38 ; 38 >
 
     }
     
