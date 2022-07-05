@@ -216,26 +216,26 @@
       ### https://interstices.ac.nz/index.php/Interstices/gateway/lockss?year=2016
       ### all redirect to 1992.
 
-      au < exists ; exists ; 1990 ; Interstices Volume 1 ; 1 ; 1990 ; >
+      au < manifest ; exists ; 1990 ; Interstices Volume 1 ; 1 ; 1990 ; >
       au < manifest ; exists ; 1992 ; Interstices Volume 2 ; 2 ; 1992 ; >
       au < manifest ; exists ; 1995 ; Interstices Volume 3 ; 3 ; 1995 ; >
       au < manifest ; exists ; 1996 ; Interstices Volume 4 ; 4 ; 1996 ; >
       au < manifest ; exists ; 2000 ; Interstices Volume 5 ; 5 ; 2000 ; >
-      au < exists ; exists ; 2005 ; Interstices Volume 6 ; 6 ; 2005 ; >
-      au < exists ; exists ; 2006 ; Interstices Volume 7 ; 7 ; 2006 ; >
-      au < exists ; exists ; 2007 ; Interstices Volume 8 ; 8 ; 2007 ; >
-      au < exists ; exists ; 2008 ; Interstices Volume 9 ; 9 ; 2008 ; >
-      au < exists ; exists ; 2009 ; Interstices Volume 10 ; 10 ; 2009 ; >
-      au < exists ; exists ; 2010 ; Interstices Volume 11 ; 11 ; 2010 ; >
-      au < exists ; exists ; 2012 ; Interstices Volume 12-13 ; 12-13 ; 2012 ; >
-      au < exists ; exists ; 2013 ; Interstices Volume 14 ; 14 ; 2013 ; >
-      au < exists ; exists ; 2014 ; Interstices Volume 15 ; 15 ; 2014 ; >
-      au < exists ; exists ; 2015 ; Interstices Volume 16 ; 16 ; 2015 ; >
-      au < exists ; exists ; 2016 ; Interstices Volume 17 ; 17 ; 2016 ; >#
-      au < exists ; exists ; 2017 ; Interstices Volume 18 ; 18 ; 2017 ; >
-      au < exists ; exists ; 2018 ; Interstices Volume 2018 ; 2018 ; 2018 ; >
-      au < exists ; exists ; 2019 ; Interstices Volume 19 ; 19 ; 2019 ; >
-      au < exists ; exists ; 2020 ; Interstices Volume 20 ; 20 ; 2020 ; >
+      au < manifest ; exists ; 2005 ; Interstices Volume 6 ; 6 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; Interstices Volume 7 ; 7 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; Interstices Volume 8 ; 8 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; Interstices Volume 9 ; 9 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; Interstices Volume 10 ; 10 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; Interstices Volume 11 ; 11 ; 2010 ; >
+      au < manifest ; exists ; 2012 ; Interstices Volume 12-13 ; 12-13 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; Interstices Volume 14 ; 14 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; Interstices Volume 15 ; 15 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; Interstices Volume 16 ; 16 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; Interstices Volume 17 ; 17 ; 2016 ; >#
+      au < manifest ; exists ; 2017 ; Interstices Volume 18 ; 18 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; Interstices Volume 2018 ; 2018 ; 2018 ; >
+      au < manifest ; exists ; 2019 ; Interstices Volume 19 ; 19 ; 2019 ; >
+      au < manifest ; exists ; 2020 ; Interstices Volume 20 ; 20 ; 2020 ; >
       au < manifest ; exists ; 2021 ; Interstices Volume 21 ; 21 ; 2021 ; >
       au < expected ; exists ; 2022 ; Interstices Volume 22 ; 22 ; 2022 ; >
 

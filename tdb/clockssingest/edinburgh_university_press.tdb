@@ -82,7 +82,7 @@
     param[journal_id] = legal
 
     au < crawling ; exists ; 2021 ; Legalities: The Australian and New Zealand Journal of Law and Society Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
-    au < expected ; exists ; 2022 ; Legalities: The Australian and New Zealand Journal of Law and Society Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 2022 ; Legalities: The Australian and New Zealand Journal of Law and Society Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
   }
 
   {
@@ -360,7 +360,7 @@
     au < finished ; frozen ; 2019 ; Archives of Natural History Volume 46 ; 46 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Archives of Natural History Volume 47 ; 47 ; https://www.euppublishing.com/ ; >
     au < crawling ; exists ; 2021 ; Archives of Natural History Volume 48 ; 48 ; https://www.euppublishing.com/ ; >
-    au < expected ; exists ; 2022 ; Archives of Natural History Volume 49 ; 49 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 2022 ; Archives of Natural History Volume 49 ; 49 ; https://www.euppublishing.com/ ; >
 
   }
 
@@ -1103,7 +1103,7 @@
     au < finished ; frozen ; 2019 ; Journal of Beckett Studies Volume 28 ; 28 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Journal of Beckett Studies Volume 29 ; 29 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2021 ; Journal of Beckett Studies Volume 30 ; 30 ; https://www.euppublishing.com/ ; >
-    au < expected ; exists ; 2022 ; Journal of Beckett Studies Volume 31 ; 31 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 2022 ; Journal of Beckett Studies Volume 31 ; 31 ; https://www.euppublishing.com/ ; >
 
   }
 
