@@ -6,8 +6,8 @@
   >
   #Moved from BePress to Janeway
 
-    plugin = needs.plugin
-    #plugin = org.lockss.plugin.janeway.iowastatedp.IowaStateDPPlugin
+    #plugin = needs.plugin
+    plugin = org.lockss.plugin.janeway.iowastatedp.IowaStateDPPlugin
     param[base_url] = https://pubs.lib.uiowa.edu/
     implicit < status ; year ; param[year] ; name ; volume >
 
@@ -16,12 +16,6 @@
         name = Annals at Iowa ;
         issn = 0003-4827
       >
-
-      #plugin = org.lockss.plugin.bepress.BePressPlugin
-      #param[base_url] = http://ir.uiowa.edu/
-      #param[journal_abbr] = annals-of-iowa
-      #implicit < status ; year ; name ; param[volume] ; param[base_url] >
-      #Moved to Janeway https://pubs.lib.uiowa.edu/annals-of-iowa/
 
       param[journal_id] = annals-of-iowa
 
@@ -53,13 +47,7 @@
         eissn = 2378-4830
       >
 
-      #plugin = org.lockss.plugin.bepress.BePressPlugin
-      #param[base_url] = http://ir.uiowa.edu/
-      #param[journal_abbr] = bai
-      #implicit < status ; year ; name ; param[volume] >
-      #Moved to Janeway https://pubs.lib.uiowa.edu/bai/
-
-      #param[journal_id] = bai
+      param[journal_id] = bai
 
       au < doNotProcess ; 1989 ; 1989 ; Books at Iowa Volume 50 ; 50 >
       au < doNotProcess ; 1989 ; 1989 ; Books at Iowa Volume 51 ; 51 >
@@ -86,12 +74,6 @@
         issn = 2155-6687
       >
 
-      #plugin = org.lockss.plugin.bepress.BePressPlugin
-      #param[base_url] = https://ir.uiowa.edu/
-      #param[journal_abbr] = bsides
-      #implicit < status ; year ; name ; param[volume] >
-      #Moved to Janeway https://pubs.lib.uiowa.edu/bsides/
-
       param[journal_id] = bsides
 
       au < manifest ; 2010 ; 2010 ; B Sides Volume 2010 ; 2010 >
@@ -109,12 +91,6 @@
         issn = 0084-9537 ;
         eissn = 2372-6725
       >
-
-      #plugin = org.lockss.plugin.bepress.BePressPlugin
-      #param[base_url] = http://ir.uiowa.edu/
-      #param[journal_abbr] = dadasur
-      #implicit < status ; year ; name ; param[volume] ; param[base_url] >
-      #Moved to Janeway https://pubs.lib.uiowa.edu/dadasur/
 
       param[journal_id] = dadasur
 
@@ -151,12 +127,6 @@
         issn = 1092-9576
       >
 
-      #plugin = org.lockss.plugin.bepress.BePressPlugin
-      #param[base_url] = http://ir.uiowa.edu/
-      #param[journal_abbr] = ejab
-      #implicit < status ; year ; name ; param[volume] >
-      #Moved to OJS https://journals.library.columbia.edu/index.php/ejab
-
       param[journal_abbr] = ejab
 
       au < doNotProcess ; 1997 ; 1997 ; Electronic Journal of Africana Bibliography Volume 1 ; 1 >
@@ -184,12 +154,6 @@
         issn = 2160-5270 ;
         eissn = 2160-5300
       >
-
-      #plugin = org.lockss.plugin.bepress.BePressPlugin
-      #param[base_url] = https://ir.uiowa.edu/
-      #param[journal_abbr] = igsar
-      #implicit < status ; year ; name ; param[volume] >
-      #Moved to Janeway https://pubs.lib.uiowa.edu/igsar/
 
       param[journal_id] = igsar
 
@@ -236,12 +200,6 @@
         issn = 2373-1842
       >
 
-      #plugin = org.lockss.plugin.bepress.BePressPlugin
-      #param[base_url] = http://ir.uiowa.edu/
-      #param[journal_abbr] = iowa-historical-review
-      #implicit < status ; year ; name ; param[volume] ; param[base_url] >
-      #Moved to Janeway https://pubs.lib.uiowa.edu/iowa-historical-review/
-
       param[journal_id] = iowa-historical-review
 
       au < doNotProcess ; 2007 ; 2007 ; Iowa Historical Review Volume 1 ; 1 >
@@ -261,12 +219,6 @@
         issn = 2168-569X ;
         eissn = 2168-5738
       >
-
-      #plugin = org.lockss.plugin.bepress.BePressPlugin
-      #param[base_url] = http://ir.uiowa.edu/
-      #param[journal_abbr] = ijcs
-      #implicit < status ; year ; name ; param[volume] ; param[base_url] >
-      #Moved to Janeway https://pubs.lib.uiowa.edu/ijcs/
 
       param[journal_id] = ijcs
 
@@ -311,12 +263,6 @@
         eissn = 2325-8845
       >
 
-      #plugin = org.lockss.plugin.bepress.BePressPlugin
-      #param[base_url] = http://ir.uiowa.edu/
-      #param[journal_abbr] = ijls
-      #implicit < status ; year ; name ; param[volume] >
-      #Moved to Janeway https://pubs.lib.uiowa.edu/ijls/
-
       param[journal_id] = ijls
 
       au < doNotProcess ; 1977 ; 1977 ; Iowa Journal of Literary Studies Volume 1 ; 1 >
@@ -339,12 +285,6 @@
         issn = 2168-538X
       >
 
-      #plugin = org.lockss.plugin.bepress.BePressPlugin
-      #param[base_url] = http://ir.uiowa.edu/
-      #param[journal_abbr] = mathal
-      #implicit < status ; year ; name ; param[volume] ; param[base_url] >
-      #Moved to Janeway https://pubs.lib.uiowa.edu/mathal/
-
       param[journal_id] = mathal
 
       au < doNotProcess ; 2011 ; 2011 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 1 ; 1 >
@@ -362,12 +302,6 @@
         issn = 2326-7070 ;
         eissn = 2326-7062
       >
-
-      #plugin = org.lockss.plugin.bepress.BePressPlugin
-      #param[base_url] = http://ir.uiowa.edu/
-      #param[journal_abbr] = mzwp
-      #implicit < status ; year ; name ; param[volume] ; param[base_url] >
-      #Moved to Janeway https://pubs.lib.uiowa.edu/mzwp/
 
       param[journal_id] = mzwp
 
@@ -392,12 +326,6 @@
         name = Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention ;
         issn = 2151-2957
       >
-
-      #plugin = org.lockss.plugin.bepress.BePressPlugin
-      #param[base_url] = http://ir.uiowa.edu/
-      #param[journal_abbr] = poroi
-      #implicit < status ; year ; name ; param[volume] ; param[base_url] >
-      #Moved to Janeway https://pubs.lib.uiowa.edu/poroi/
 
       param[journal_id] = poroi
 
@@ -427,12 +355,6 @@
         issn = 2154-4751
       >
 
-      #plugin = org.lockss.plugin.bepress.BePressPlugin
-      #param[base_url] = http://ir.uiowa.edu/
-      #param[journal_abbr] = pog
-      #implicit < status ; year ; name ; param[volume] ; param[base_url] >
-      #Moved to Janeway https://pubs.lib.uiowa.edu/pog/
-
       param[journal_id] = pog
 
       au < doNotProcess ; 2010 ; 2010 ; Proceedings in Obstetrics and Gynecology Volume 1 ; 1 >
@@ -456,12 +378,6 @@
         issn = 0737-0679 ;
         eissn = 2153-3695
       >
-
-      #plugin = org.lockss.plugin.bepress.BePressPlugin
-      #param[base_url] = http://ir.uiowa.edu/
-      #param[journal_abbr] = wwqr
-      #implicit < status ; year ; name ; param[volume] ; param[base_url] >
-      #Moved to Janeway https://pubs.lib.uiowa.edu/wwqr/
 
       param[journal_id] = wwqr
 
