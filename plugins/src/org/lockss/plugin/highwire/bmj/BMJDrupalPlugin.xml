@@ -99,20 +99,20 @@ POSSIBILITY OF SUCH DAMAGE.
     <!-- CRAWL RULES COPIED DOWN FROM PARENT on 10/27/17 to allow for simplification of parent -->
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^https?://%s/c?lockss-manifest/[^/.]*vol_%s_manifest.html", url_host(base_url), volume_name</string>
+      <string>1,"^https?://%s/c?lockss-manifest/[^/]*vol_%s_manifest.html", url_host(base_url), volume_name</string>
       <string>1,"^https?://%s/content(/[^/]+)?/suppl/", url_host(base_url)</string>
       <!--exclude "base_url/content/early/recent", it will return a blocked login page-->
       <string>2,"^https?://%s/content/((early/recent)|(by/(year|volume)|current|.*/article-))", url_host(base_url)</string>
       <!-- after content is optional jcode, required vol, optional issue, optional .toc  -->
-      <string>1,"^https?://%s/content(/[^/.]+){1,3}(\.toc)?$", url_host(base_url)</string>
+      <string>1,"^https?://%s/content(/[^/]+){1,3}(\.toc)?$", url_host(base_url)</string>
       <!-- after content is required vol, optional issue, required page, then allowed extensions or EOL 
             page may also contain roman numerals, dot, & number (iii.2)  -->
-      <string>1,"^https?://%s/content(/[^/.]+){1,2}/(((?:(bmj|[ivx]+)\.)?[^/.]+?(\.\d+)?))(/related|/tab-figures-data|\.(?:long|supplemental|data|figures-only)|)$", url_host(base_url)</string>
+      <string>1,"^https?://%s/content(/[^/]+){1,2}/(((?:(bmj|[ivx]+)\.)?[^/]+?(\.\d+)?))(/related|/tab-figures-data|\.(?:long|supplemental|data|figures-only)|)$", url_host(base_url)</string>
       <!-- http://msphere.asm.org/content/1/1/masthead.1-1 was excluded -->
-      <string>1,"^https?://%s/content/([^/.]+)(/[^/.]+)?/((ENEURO|wpt|masthead)\.[0-9.-]+)(|/related|/tab-figures-data|\.(?:long|supplemental|data|figures-only))$", url_host(base_url)</string>
+      <string>1,"^https?://%s/content/([^/]+)(/[^/]+)?/((ENEURO|wpt|masthead)\.[0-9.-]+)(|/related|/tab-figures-data|\.(?:long|supplemental|data|figures-only))$", url_host(base_url)</string>
       <!-- after content is optional jcode, required vol, optional issue, required page, then allowed extensions -->
-      <string>1,"^https?://%s/content(/[^/.]+){1,3}/(((?:(bmj|[ivx]+)\.)?[^/.]+?(\.\d+)?))(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url)</string>
-      <string>1,"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?/((ENEURO|wpt|masthead)\.[0-9.-]+)(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url)</string>
+      <string>1,"^https?://%s/content(/[^/]+){1,3}/(((?:(bmj|[ivx]+)\.)?[^/]+?(\.\d+)?))(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url)</string>
+      <string>1,"^https?://%s/content(/[^/]+)?/([^/]+)(/[^/]+)?/((ENEURO|wpt|masthead)\.[0-9.-]+)(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url)</string>
       <string>1,"^https?://%s/highwire/filestream/", url_host(base_url)</string>
       <string>1,"^https?://%s/[^/]+/(download-(pdf|suppl|video))/", url_host(base_url)</string>
       <!-- allow content like http://msphere.asm.org/content/msph/1/1/e00001-15/DC2/embed/inline-supplementary-material-2.pdf?download=true -->

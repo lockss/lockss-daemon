@@ -55,7 +55,7 @@ public class BMJJCoreArticleIteratorFactory
   // Cannot use volume_name in vol/page pattern as the BMJ mixes articles
   //        (ie. /346/bmj.f4217 in vol 347, issue 7915)
   protected static final String PATTERN_TEMPLATE =
-    "\"^%scontent/([^/]{1,4}/bmj[.](?:[^./?&]+)|%s/[^/]+/(?![^/]+[.]full)[^/?]+)$\", base_url, volume_name";
+    "\"^%scontent/([^/]{1,4}/bmj[.](?:[^./?&]+)|%s/[^/]+/(?![^/]+[.](full|alerts|altmetrics|citation|info|responses|share))[^/?]+)$\", base_url, volume_name";
   
   // various aspects of an article
   // http://www.bmj.com/content/345/bmj.e7558
@@ -74,10 +74,14 @@ public class BMJJCoreArticleIteratorFactory
       "/content/([^/]+/(?!bmj[.])[^/]+)/(?!.*[.](full|abstract))([^/?]+)$", Pattern.CASE_INSENSITIVE);
   
   // how to change from one form (aspect) of article to another
-  protected static final String LANDING_PAGE_REPLACEMENT = "/content/$1/$2";
-  protected static final String PDF_REPLACEMENT = "/content/$1/$2.full.pdf";
-  protected static final String PDF_LANDING_REPLACEMENT = "/content/$1/$2.full.pdf+html";
-  protected static final String ABSTRACT_REPLACEMENT = "/content/$1/$2.abstract";
+  protected static final String LANDING_PAGE_VOL_PAGEID_REPLACEMENT = "/content/$1/$2";
+  protected static final String PDF_VOL_PAGEID_REPLACEMENT = "/content/$1/$2.full.pdf";
+  protected static final String PDF_LANDING_VOL_PAGEID_REPLACEMENT = "/content/$1/$2.full.pdf+html";
+  protected static final String ABSTRACT_VOL_PAGEID_REPLACEMENT = "/content/$1/$2.abstract";
+  protected static final String LANDING_PAGE_VIP_REPLACEMENT = "/content/$1/$3";
+  protected static final String PDF_VIP_REPLACEMENT = "/content/$1/$3.full.pdf";
+  protected static final String PDF_LANDING_VIP_REPLACEMENT = "/content/$1/$3.full.pdf+html";
+  protected static final String ABSTRACT_VIP_REPLACEMENT = "/content/$1/$3.abstract";
   
   
   @Override
@@ -96,20 +100,20 @@ public class BMJJCoreArticleIteratorFactory
     // until this is deprecated
     builder.addAspect(
         Arrays.asList(VOL_PAGEID_PATTERN, VIP_PATTERN),
-        LANDING_PAGE_REPLACEMENT,
+        Arrays.asList(LANDING_PAGE_VIP_REPLACEMENT, LANDING_PAGE_VOL_PAGEID_REPLACEMENT),
         ArticleFiles.ROLE_ARTICLE_METADATA,
         ArticleFiles.ROLE_FULL_TEXT_HTML_LANDING_PAGE);
     
     builder.addAspect(
-        PDF_LANDING_REPLACEMENT,
+        Arrays.asList(PDF_LANDING_VIP_REPLACEMENT, PDF_LANDING_VOL_PAGEID_REPLACEMENT),
         ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE);
     
     builder.addAspect(
-        PDF_REPLACEMENT,
+        Arrays.asList(PDF_VIP_REPLACEMENT, PDF_VOL_PAGEID_REPLACEMENT),
         ArticleFiles.ROLE_FULL_TEXT_PDF);
     
     builder.addAspect(
-        ABSTRACT_REPLACEMENT,
+        Arrays.asList(ABSTRACT_VIP_REPLACEMENT, ABSTRACT_VOL_PAGEID_REPLACEMENT),
         ArticleFiles.ROLE_ARTICLE_METADATA,
         ArticleFiles.ROLE_ABSTRACT);
     
