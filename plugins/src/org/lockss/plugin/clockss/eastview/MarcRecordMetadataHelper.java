@@ -117,9 +117,13 @@ public class MarcRecordMetadataHelper implements FileMetadataExtractor {
           String MARC_isbn = getMARCData(record, "020", 'a');
           // This is only used in 2016 mrc record
           String MARC_isbn_alt = getMARCData(record, "773", 'z');
+          // Some eastview books is using this one
+          String MARC_isbn_alt2 = getMARCData(record, "776", 'z');
           String MARC_issn = getMARCData(record, "022", 'a');
           // MARC_Title will be different for journal vs books
           String MARC_title = getMARCData(record, "245", 'a');
+          String MARC_title_alt = getMARCData(record, "245", 'b');
+          String MARC_title_alt2 = getMARCData(record, "245", 'c');
           String MARC_pub_date = getMARCData(record, "260", 'c');
           String MARC_pub_date_alt = getMARCData(record, "264", 'c');
           String MARC_publisher = getMARCData(record, "260", 'b');
@@ -149,6 +153,9 @@ public class MarcRecordMetadataHelper implements FileMetadataExtractor {
           } else if (MARC_isbn_alt != null) {
             log.debug3("MARC_isbn_alt:" + MARC_isbn_alt);
             am.put(MetadataField.FIELD_ISBN, MARC_isbn_alt);
+          }  else if (MARC_isbn_alt2 != null) {
+            log.debug3("MARC_isbn_alt2:" + MARC_isbn_alt2);
+            am.put(MetadataField.FIELD_ISBN, MARC_isbn_alt2);
           }
 
           // Set publiation date
@@ -214,7 +221,18 @@ public class MarcRecordMetadataHelper implements FileMetadataExtractor {
 
           // Set publication title
           if (MARC_title != null) {
-            String cleanedArticleTitle = MARC_title.replace(":", "").
+            // Since 245_a is not unique enough for reports, need to combine multiple
+            String combinedArticleTitle  = MARC_title;
+            if (MARC_title_alt != null ) {
+              combinedArticleTitle = combinedArticleTitle + " " + MARC_title_alt;
+            }
+            if (MARC_title_alt2 != null ) {
+              combinedArticleTitle = combinedArticleTitle + " " + MARC_title_alt2;
+            }
+
+            log.debug3(String.format("original MARC_title = %s, MARC_title_alt= %s, MARC_title_alt2 = %s", MARC_title,MARC_title_alt, MARC_title_alt2 ));
+
+            String cleanedArticleTitle = combinedArticleTitle.replace(":", "").
                     replace("/", "").
                     replace("=", "").
                     replace("\"", "").
