@@ -13,8 +13,8 @@
       name = Cell Physiol Biochem Press Source Content
     >
 
-    plugin = needs.SourcePlugin
-    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/NEEDS-PLUGIN-released/
+    plugin = org.lockss.plugin.clockss.cellphysiolbiochempress.ClockssCellPhysiolBiochemPressJournalSourcePlugin
+    #param[base_url] = https://clockss-test.lockss.org/sourcefiles/cpbp-released/2022_01, # this is a test url
     #See also: param[base_url] = https://clockss-test.lockss.org/sourcefiles/cpbp-released/
     hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[directory] >
