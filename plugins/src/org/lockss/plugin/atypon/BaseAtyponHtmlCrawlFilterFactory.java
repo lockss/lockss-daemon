@@ -91,14 +91,14 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
     // tocArticleEntry is necessary.
     // new for 2020? at least appears on https://ascopubs.org/doi/full/10.1200/JCO.2009.46.2473
     HtmlNodeFilters.tagWithAttributeRegex("div","class", "^(?!.*tocArticleEntry).*article-tools"),
-    HtmlNodeFilters.tagWithAttribute("div","id", "TrendMD Widget"),
+    HtmlNodeFilters.tagWithAttributeRegex("div","id", "TrendMD Widget"),
     // other trendmd id/classnames
-    HtmlNodeFilters.tagWithAttribute("div","id", "trendmd-suggestions"),
+    HtmlNodeFilters.tagWithAttributeRegex("div","id", "trendmd-suggestions"),
     
     // Since overcrawling is a constant problem for Atypon, put common
     // next article-previous article link for safety; 
     // AIAA, AMetSoc, ASCE, Ammons, APHA, SEG,Siam, 
-    HtmlNodeFilters.tagWithAttribute("a", "class", "articleToolsNav"),
+    HtmlNodeFilters.tagWithAttributeRegex("a", "class", "articleToolsNav"),
     // BIR, Maney, Endocrine - also handles next/prev issue - also for issues
     HtmlNodeFilters.tagWithAttributeRegex("td", "class", "journalNavRightTd"),
     HtmlNodeFilters.tagWithAttributeRegex("td", "class", "journalNavLeftTd"),
@@ -108,18 +108,18 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
 
     // breadcrumb or other link back to TOC from article page
     // AMetSoc, Ammons, APHA, NRC,
-    HtmlNodeFilters.tagWithAttribute("div", "id", "breadcrumbs"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "id", "breadcrumbs"),
     // ASCE, BiR, Maney, SEG, SIAM, Endocrine 
     HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "^(linkList )?breadcrumbs$"),
 
     // on TOC next-prev issue
     // AIAA, AMetSoc, Ammons, APHA, 
-    HtmlNodeFilters.tagWithAttribute("div", "id", "nextprev"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "id", "nextprev"),
     // ASCE, SEG, SIAM
-    HtmlNodeFilters.tagWithAttribute("div", "id", "prevNextNav"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "id", "prevNextNav"),
 
     //on TOC left column with listing of all volumes/issues
-    HtmlNodeFilters.tagWithAttribute("ul", "class", "volumeIssues"),
+    HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "volumeIssues"),
     
     //have started finding cases of direct in-publication links within references
     // there are a variety of ways these blocks are identified, but 
@@ -128,15 +128,19 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
     // widen match for MarkAllen
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "^references"),
     // ASCE
-    HtmlNodeFilters.tagWithAttribute("li", "class", "reference"),
+    HtmlNodeFilters.tagWithAttributeRegex("li", "class", "reference"),
     // T&F: <ul class=\"references numeric-ordered-list\" id=\"references-Section\">
     HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "^references"),
     HtmlNodeFilters.tagWithAttributeRegex("ol", "class", "^references"),
     //maney, future-science
-    HtmlNodeFilters.tagWithAttribute("table", "class", "references"),
+    HtmlNodeFilters.tagWithAttributeRegex("table", "class", "references"),
     // Article landing - ajax tabs
-    HtmlNodeFilters.tagWithAttribute("li", "id", "pane-pcw-references"),
-    HtmlNodeFilters.tagWithAttribute("li", "id", "pane-pcw-related"),
+    HtmlNodeFilters.tagWithAttributeRegex("li", "id", "pane-pcw-references"),
+          //https://www.acpjournals.org/doi/10.7326/L19-0549 leads to overcrawl: https://www.acpjournals.org/doi/10.7326/0003-4819-154-9-201105030-00002
+    HtmlNodeFilters.tagWithAttributeRegex("li", "id", "pane-pcw-related"),
+          //x-lockss-referrer: 	https://www.acpjournals.org/doi/10.7326/M19-1539 leads overcrawl: https://www.acpjournals.org/doi/10.7326/L19-0596
+    HtmlNodeFilters.tagWithAttributeRegex("div", "id", "pane-pcw-related"),
+          
     // References
     HtmlNodeFilters.tagWithAttributeRegex("li", "class", "references__item"),
     // more common tags
@@ -147,42 +151,43 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
     // Did an analysis and made it specific to the class
     // Publishers that need more will have to ask for it themselves
     HtmlNodeFilters.allExceptSubtree(
-        HtmlNodeFilters.tagWithAttribute("div", "class", "articleTools"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "articleTools"),
           HtmlNodeFilters.tagWithAttributeRegex(
                  "a", "href", "/action/showCitFormats\\?")),
     
     // related content from Related tab of Errata full text
     // http://press.endocrine.org/doi/full/10.1210/en.2013-1802
-    HtmlNodeFilters.tagWithAttribute("div", "id", "relatedContent"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "id", "relatedContent"),
     //http://www.tandfonline.com/doi/full/10.1080/02678373.2015.1004225
-    HtmlNodeFilters.tagWithAttribute("div", "id", "metrics-content"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "id", "metrics-content"),
     // toc - erratum section linking to Original Article - other flavor
     // related content near Erratum
     // http://press.endocrine.org/toc/endo/154/10       
-    HtmlNodeFilters.tagWithAttribute("div", "class", "relatedLayer"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "relatedLayer"),
 
     // ASM related section
-    HtmlNodeFilters.tagWithAttribute("section", "class", "related-articles"),
+    HtmlNodeFilters.tagWithAttributeRegex("section", "class", "related-articles"),
 
 
     // Links to "Prev" & "Next" at Atypon Seg on March/2021 at: https://library.seg.org/toc/leedff/21/9
     // Also the issues and other top navigation will go to other volumes
-    HtmlNodeFilters.tagWithAttribute("div", "class", "content-navigation"),
-    HtmlNodeFilters.tagWithAttribute("div", "class", "content-navigation__btn--pre"),
-    HtmlNodeFilters.tagWithAttribute("div", "class", "content-navigation__extra"),
-    HtmlNodeFilters.tagWithAttribute("div", "class", "content-navigation__btn--next"),
-    HtmlNodeFilters.tagWithAttribute("div", "class", "publication__menu"),
-    HtmlNodeFilters.tagWithAttribute("div", "class", "generic-menu"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "content-navigation"), 
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "content-navigation"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "content-navigation__btn--pre"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "content-navigation__extra"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "content-navigation__btn--next"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "publication__menu"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "generic-menu"),
 
     // Right menu for related articles, figure and other stuff
-    HtmlNodeFilters.tagWithAttribute("div", "id", "pane-pcw-figures"),
-    HtmlNodeFilters.tagWithAttribute("div", "id", "pane-pcw-references"),
-    HtmlNodeFilters.tagWithAttribute("div", "id", "pane-pcw-related"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "id", "pane-pcw-figures"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "id", "pane-pcw-references"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "id", "pane-pcw-related"),
     // Can not filter our all div#id="pane-pcw-details", since PDF links are in inside
-    HtmlNodeFilters.tagWithAttribute("div", "class", "cover-details"),
-    HtmlNodeFilters.tagWithAttribute("section", "class", "copywrites"),
-    HtmlNodeFilters.tagWithAttribute("section", "class", "publisher"),
-    HtmlNodeFilters.tagWithAttribute("section", "class", "article__history"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "cover-details"),
+    HtmlNodeFilters.tagWithAttributeRegex("section", "class", "copywrites"),
+    HtmlNodeFilters.tagWithAttributeRegex("section", "class", "publisher"),
+    HtmlNodeFilters.tagWithAttributeRegex("section", "class", "article__history"),
     
     // Not all Atypon plugins necessarily need this but MANY do and it is
     // an insidious source of over crawling
