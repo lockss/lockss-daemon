@@ -19,7 +19,7 @@
     #param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/entsoc-released/
     param[base_url] = https://clockss-test.lockss.org/sourcefiles/aes-released/ #This is testing bucket
 
-    au < manifest ; exists ; 2022 ; American Entomological Society Source Content 2022 ; 2022 >
+    au < testing ; exists ; 2022 ; American Entomological Society Source Content 2022 ; 2022 >
 
   }
 
