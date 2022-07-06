@@ -23,7 +23,7 @@
     param[journal_abbr] = jshss
     implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
 
-    au < manifest ; exists ; 2022 ; Journal of STEPS for Humanities and Social Sciences Volume 1 ; 1 ; >
+    au < testing ; exists ; 2022 ; Journal of STEPS for Humanities and Social Sciences Volume 1 ; 1 ; >
 
   }
 
