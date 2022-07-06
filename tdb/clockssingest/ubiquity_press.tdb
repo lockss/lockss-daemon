@@ -413,9 +413,9 @@
       comment[publisher] = London School of Economics and Politics
 #      param[base_url] = https://jied.lse.ac.uk/
 
-      au < manifest ; exists ; 2019 ; 1 ; London School of Economics and Politics Volume 2019 ; 2019 ; https://jied.lse.ac.uk/ ; >
-      au < manifest ; exists ; 2020 ; 2 ; London School of Economics and Politics Volume 2020 ; 2020 ; https://jied.lse.ac.uk/ ; >
-      au < manifest ; exists ; 2021 ; 3 ; London School of Economics and Politics Volume 2021 ; 2021 ; https://jied.lse.ac.uk/ ; >
+      au < ready ; exists ; 2019 ; 1 ; London School of Economics and Politics Volume 2019 ; 2019 ; https://jied.lse.ac.uk/ ; >
+      au < ready ; exists ; 2020 ; 2 ; London School of Economics and Politics Volume 2020 ; 2020 ; https://jied.lse.ac.uk/ ; >
+      au < ready ; exists ; 2021 ; 3 ; London School of Economics and Politics Volume 2021 ; 2021 ; https://jied.lse.ac.uk/ ; >
       au < expected ; exists ; 2022 ; 4 ; London School of Economics and Politics Volume 2022 ; 2022 ; https://jied.lse.ac.uk/ ; >
 
   }
@@ -430,10 +430,10 @@
       comment[publisher] = London School of Economics and Politics
 #      param[base_url] = https://journal.ilpnetwork.org/
 
-      au < manifest ; exists ; 2018 ; 2 ; Journal of Long-Term Care Volume 2018 ; 2018 ; https://journal.ilpnetwork.org/ ; > #problem with volume url?
-      au < manifest ; exists ; 2019 ; 5 ; Journal of Long-Term Care Volume 2019 ; 2019 ; https://journal.ilpnetwork.org/ ; >
-      au < manifest ; exists ; 2020 ; 6 ; Journal of Long-Term Care Volume 2020 ; 2020 ; https://journal.ilpnetwork.org/ ; >
-      au < manifest ; exists ; 2021 ; 8 ; Journal of Long-Term Care Volume 2021 ; 2021 ; https://journal.ilpnetwork.org/ ; >
+      au < ready ; exists ; 2018 ; 2 ; Journal of Long-Term Care Volume 2018 ; 2018 ; https://journal.ilpnetwork.org/ ; > #problem with volume url?
+      au < ready ; exists ; 2019 ; 5 ; Journal of Long-Term Care Volume 2019 ; 2019 ; https://journal.ilpnetwork.org/ ; >
+      au < ready ; exists ; 2020 ; 6 ; Journal of Long-Term Care Volume 2020 ; 2020 ; https://journal.ilpnetwork.org/ ; >
+      au < ready ; exists ; 2021 ; 8 ; Journal of Long-Term Care Volume 2021 ; 2021 ; https://journal.ilpnetwork.org/ ; >
       au < manifest ; exists ; 2022 ; 9 ; Journal of Long-Term Care Volume 2022 ; 2022 ; https://journal.ilpnetwork.org/ ; >
 
   }
@@ -448,8 +448,8 @@
       comment[publisher] = London School of Economics and Politics
 #      param[base_url] = https://ppr.lse.ac.uk/ 
 
-      au < manifest ; exists ; 2020 ; 1 ; LSE Public Policy Review Volume 2020 ; 2020 ; https://ppr.lse.ac.uk/ ; >
-      au < manifest ; exists ; 2021 ; 2 ; LSE Public Policy Review Volume 2021 ; 2021 ; https://ppr.lse.ac.uk/ ; >
+      au < ready ; exists ; 2020 ; 1 ; LSE Public Policy Review Volume 2020 ; 2020 ; https://ppr.lse.ac.uk/ ; >
+      au < ready ; exists ; 2021 ; 2 ; LSE Public Policy Review Volume 2021 ; 2021 ; https://ppr.lse.ac.uk/ ; >
       au < manifest ; exists ; 2022 ; 3 ; LSE Public Policy Review Volume 2022 ; 2022 ; https://ppr.lse.ac.uk/ ; >
 
   }

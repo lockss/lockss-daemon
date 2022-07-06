@@ -74,7 +74,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Advances in Geosciences Volume 45 ; 45 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Advances in Geosciences Volume 46 ; 46 ; >
       au < crawling ; exists ; 2021 ; 2021 ; Advances in Geosciences Volume 47 ; 47 ; >
-      au < testing ; exists ; 2022 ; 2022 ; Advances in Geosciences Volume 48 ; 48 ; >
+      au < ready ; exists ; 2022 ; 2022 ; Advances in Geosciences Volume 48 ; 48 ; >
 
   }
 
@@ -139,7 +139,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Advances in Science and Research Volume 16 ; 16 ; >
       au < finished ; crawling ; 2020 ; 2020 ; Advances in Science and Research Volume 17 ; 17 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; 2021 ; Advances in Science and Research Volume 18 ; 18 ; >
-      au < testing ; exists ; 2022 ; 2022 ; Advances in Science and Research Volume 19 ; 19 ; >
+      au < ready ; exists ; 2022 ; 2022 ; Advances in Science and Research Volume 19 ; 19 ; >
 
   }
 
@@ -162,7 +162,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 5 ; 5 ; >
       au < finished ; crawling ; 2020 ; 2020 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 6 ; 6 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; 2021 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 7 ; 7 ; >
-      au < testing ; exists ; 2022 ; 2022 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 8 ; 8 ; >
+      au < ready ; exists ; 2022 ; 2022 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 8 ; 8 ; >
 
   }
 
@@ -178,7 +178,7 @@
 
       au < finished ; crawling ; 2020 ; 2020 ; AGILE: GIScience Series Volume 1 ; 1 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; 2021 ; AGILE: GIScience Series Volume 2 ; 2 ; >
-      au < testing ; exists ; 2022 ; 2022 ; AGILE: GIScience Series Volume 3 ; 3 ; >
+      au < ready ; exists ; 2022 ; 2022 ; AGILE: GIScience Series Volume 3 ; 3 ; >
 
   }
 
@@ -263,7 +263,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Archives Animal Breeding Volume 62 ; 62 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Archives Animal Breeding Volume 63 ; 63 ; >
       au < crawling ; exists ; 2021 ; 2021 ; Archives Animal Breeding Volume 64 ; 64 ; >
-      au < testing ; exists ; 2022 ; 2022 ; Archives Animal Breeding Volume 65 ; 65 ; >
+      au < ready ; exists ; 2022 ; 2022 ; Archives Animal Breeding Volume 65 ; 65 ; >
 
   }
 
