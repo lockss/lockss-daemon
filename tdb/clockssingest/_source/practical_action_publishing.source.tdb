@@ -17,7 +17,7 @@
     hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[directory] >
 
-    au < testing ; testing ; 2022 ; Practical Action Publishing Source Content 2022 ; 2022_01 >
+    au < testing ; exists ; 2022 ; Practical Action Publishing Source Content 2022 ; 2022_01 >
 
   }
 
