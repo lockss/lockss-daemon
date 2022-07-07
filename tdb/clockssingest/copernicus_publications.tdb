@@ -225,7 +225,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Annales Geophysicae Volume 37 ; 37 ; >
       au < finished ; crawling ; 2020 ; 2020 ; Annales Geophysicae Volume 38 ; 38 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2021 ; 2021 ; Annales Geophysicae Volume 39 ; 39 ; >
-      au < testing ; exists ; 2022 ; 2022 ; Annales Geophysicae Volume 40 ; 40 ; >
+      au < ready ; exists ; 2022 ; 2022 ; Annales Geophysicae Volume 40 ; 40 ; >
 
   }
 
@@ -395,7 +395,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Climate of the Past Volume 15 ; 15 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Climate of the Past Volume 16 ; 16 ; >
       au < crawling ; exists ; 2021 ; 2021 ; Climate of the Past Volume 17 ; 17 ; >
-      au < testing ; exists ; 2022 ; 2022 ; Climate of the Past Volume 18 ; 18 ; >
+      au < ready ; exists ; 2022 ; 2022 ; Climate of the Past Volume 18 ; 18 ; >
 
   }
 
@@ -440,7 +440,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Drinking Water Engineering and Science Volume 12 ; 12 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Drinking Water Engineering and Science Volume 13 ; 13 ; >
       au < crawling ; exists ; 2021 ; 2021 ; Drinking Water Engineering and Science Volume 14 ; 14 ; >
-      au < testing ; exists ; 2022 ; 2022 ; Drinking Water Engineering and Science Volume 15 ; 15 ; >
+      au < ready ; exists ; 2022 ; 2022 ; Drinking Water Engineering and Science Volume 15 ; 15 ; >
 
   }
 
