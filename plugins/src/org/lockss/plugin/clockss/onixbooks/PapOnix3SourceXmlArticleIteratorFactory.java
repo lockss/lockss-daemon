@@ -34,16 +34,18 @@ import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.*;
+import org.lockss.plugin.clockss.SourceXmlArticleIteratorFactory;
 import org.lockss.util.Logger;
 
 import java.util.Iterator;
 import java.util.regex.Pattern;
 
-public class PapOnix3SourceXmlArticleIteratorFactory extends Onix3BooksXmlArticleIteratorFactory {
+public class PapOnix3SourceXmlArticleIteratorFactory extends SourceXmlArticleIteratorFactory {
+
   protected static Logger log = Logger.getLogger(PapOnix3SourceXmlArticleIteratorFactory.class);
 
   protected static final String ROOT_TEMPLATE = "\"%s\",base_url";
-  private static final String PATTERN_TEMPLATE = "\"%s%s/.*\\.xml$\",base_url,directory";
+  private static final String PATTERN_TEMPLATE = "\"%s%s/.*\\.xml$\",base_url, directory";
 
   protected static final Pattern XML_PATTERN = Pattern.compile("/(.*)\\.xml$", Pattern.CASE_INSENSITIVE);
 

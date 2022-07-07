@@ -36,7 +36,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.clockss.onixbooks.ClockssPapSourcePlugin</string>
+    <string>org.lockss.plugin.clockss.onixbooks.ClockssPapBooksSourcePlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -44,15 +44,15 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Practical Action Publishing Journals Source Plugin (CLOCKSS)</string>
+    <string>Practical Action Publishing Books Source Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Practical Action Publishing Journals Source Plugin (CLOCKSS), Base URL %s, Directory %s", base_url, directory</string>
+    <string>"Practical Action Publishing Books Source Plugin (CLOCKSS), Base URL %s, Directory %s", base_url, directory</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.clockss.ClockssDirSourcePlugin</string>
+    <string>org.lockss.plugin.clockss.onixbooks.ClockssPapSourcePlugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
@@ -63,33 +63,24 @@ POSSIBILITY OF SUCH DAMAGE.
     <list>
       <string>4,"^%s", base_url</string>
       <string>2,"^%s%s/.*;O=[AD]$", base_url, directory</string>
-      <string>1,"^%s%s/[^/]+\.zip", base_url, directory</string>
-    </list>
-  </entry>
-  <entry>
-    <string>plugin_archive_file_types</string>
-    <string>standard</string>
-  </entry>
-  <entry>
-    <string>au_substance_url_pattern</string>
-    <list>
-      <string>"^%s%s/.+\.(pdf|epub)$", base_url, directory</string>
+      <string>2,"^%s%s/[^/]+\.zip", base_url, directory</string>
+      <string>1,"^%s%s/", base_url, directory</string>
     </list>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.clockss.onixbooks.PapSourceZipXmlArticleIterator</string>
+    <string>org.lockss.plugin.clockss.onixbooks.PapOnix3SourceXmlArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.clockss.onixbooks.PapSourceZipXmlArticleIterator</string>
+    <string>org.lockss.plugin.clockss.onixbooks.PapOnix3SourceXmlArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>text/xml_metadata_extractor_factory_map</string>
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.clockss.onixbooks.PapJatsXmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.clockss.onixbooks.PapOnix3SourceXmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>
@@ -98,7 +89,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.clockss.onixbooks.PapJatsXmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.clockss.onixbooks.PapOnix3SourceXmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>
