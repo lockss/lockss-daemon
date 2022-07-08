@@ -2064,11 +2064,10 @@
     au < doNotProcess ; exists ; 2013 ; Canadian Respiratory Journal Volume 20 (2013) ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < finished ; finished ; 2014 ; Canadian Respiratory Journal Volume 21 (2014) ; 2014 ; 2014 ; http://www.hindawi.com/ ; >
     au < finished ; finished ; 2015 ; Canadian Respiratory Journal Volume 22 (2015) ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; Canadian Respiratory Journal Volume 2016 (2016) ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2017 ; Canadian Respiratory Journal Volume 2017 (2017) ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
-        
-    au < frozen ; exists ; 2018 ; Canadian Respiratory Journal Volume 2018 (2018) ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2019 ; Canadian Respiratory Journal Volume 2019 (2019) ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Canadian Respiratory Journal Volume 2016 (2016) ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2017 ; Canadian Respiratory Journal Volume 2017 (2017) ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2018 ; Canadian Respiratory Journal Volume 2018 (2018) ; 2018 ; 2018 ; https://www.hindawi.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2019 ; Canadian Respiratory Journal Volume 2019 (2019) ; 2019 ; 2019 ; https://www.hindawi.com/ ; reingest4.clockss.org:8082 >
   }
 
   {
@@ -2088,10 +2087,10 @@
     au < doNotProcess ; exists ; 2013 ; Cardiology Research and Practice Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < finished ; finished ; 2014 ; Cardiology Research and Practice Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Cardiology Research and Practice Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; Cardiology Research and Practice Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2017 ; Cardiology Research and Practice Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2018 ; Cardiology Research and Practice Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2019 ; Cardiology Research and Practice Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Cardiology Research and Practice Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2017 ; Cardiology Research and Practice Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2018 ; Cardiology Research and Practice Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2019 ; Cardiology Research and Practice Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; reingest1.clockss.org:8082 >
 
   }
 
@@ -2113,7 +2112,7 @@
     au < doNotProcess ; exists ; 2013 ; Cardiovascular Psychiatry and Neurology Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < finished ; finished ; 2014 ; Cardiovascular Psychiatry and Neurology Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Cardiovascular Psychiatry and Neurology Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; Cardiovascular Psychiatry and Neurology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Cardiovascular Psychiatry and Neurology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2017 ; Cardiovascular Psychiatry and Neurology Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
     
   }
@@ -2133,10 +2132,10 @@
     au < doNotProcess ; exists ; 2013 ; Case Reports in Anesthesiology Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < finished ; finished ; 2014 ; Case Reports in Anesthesiology Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Case Reports in Anesthesiology Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; Case Reports in Anesthesiology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Case Reports in Anesthesiology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Case Reports in Anesthesiology Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2018 ; Case Reports in Anesthesiology Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2019 ; Case Reports in Anesthesiology Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2018 ; Case Reports in Anesthesiology Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; Case Reports in Anesthesiology Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; reingest2.clockss.org:8085 >
 
   }
 
@@ -2155,10 +2154,10 @@
     au < doNotProcess ; exists ; 2013 ; Case Reports in Cardiology Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < finished ; finished ; 2014 ; Case Reports in Cardiology Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Case Reports in Cardiology Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2016 ; Case Reports in Cardiology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2017 ; Case Reports in Cardiology Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2018 ; Case Reports in Cardiology Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2019 ; Case Reports in Cardiology Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Case Reports in Cardiology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2017 ; Case Reports in Cardiology Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2018 ; Case Reports in Cardiology Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; Case Reports in Cardiology Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; reingest1.clockss.org:8082 >
 
   }
   
@@ -2177,10 +2176,10 @@
     au < doNotProcess ; exists ; 2013 ; Case Reports in Critical Care Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < finished ; finished ; 2014 ; Case Reports in Critical Care Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Case Reports in Critical Care Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2016 ; Case Reports in Critical Care Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Case Reports in Critical Care Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Case Reports in Critical Care Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2018 ; Case Reports in Critical Care Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2019 ; Case Reports in Critical Care Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2018 ; Case Reports in Critical Care Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2019 ; Case Reports in Critical Care Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; reingest3.clockss.org:8083 >
 
   }
 
@@ -2199,10 +2198,10 @@
     au < doNotProcess ; exists ; 2013 ; Case Reports in Dentistry Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < zapped ; finished ; 2014 ; Case Reports in Dentistry Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; >
     au < zapped ; finished ; 2015 ; Case Reports in Dentistry Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; Case Reports in Dentistry Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2017 ; Case Reports in Dentistry Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2018 ; Case Reports in Dentistry Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2019 ; Case Reports in Dentistry Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Case Reports in Dentistry Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2017 ; Case Reports in Dentistry Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2018 ; Case Reports in Dentistry Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2019 ; Case Reports in Dentistry Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; reingest5.clockss.org:8082 >
 
   }
   
@@ -2221,10 +2220,10 @@
     au < doNotProcess ; exists ; 2013 ; Case Reports in Dermatological Medicine Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < finished ; finished ; 2014 ; Case Reports in Dermatological Medicine Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Case Reports in Dermatological Medicine Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; Case Reports in Dermatological Medicine Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Case Reports in Dermatological Medicine Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Case Reports in Dermatological Medicine Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2018 ; Case Reports in Dermatological Medicine Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2019 ; Case Reports in Dermatological Medicine Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2018 ; Case Reports in Dermatological Medicine Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; Case Reports in Dermatological Medicine Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; reingest1.clockss.org:8082 >
 
   }
 
@@ -2243,10 +2242,10 @@
     au < doNotProcess ; exists ; 2013 ; Case Reports in Emergency Medicine Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < finished ; finished ; 2014 ; Case Reports in Emergency Medicine Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Case Reports in Emergency Medicine Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2016 ; Case Reports in Emergency Medicine Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Case Reports in Emergency Medicine Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2017 ; Case Reports in Emergency Medicine Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2018 ; Case Reports in Emergency Medicine Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2019 ; Case Reports in Emergency Medicine Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2018 ; Case Reports in Emergency Medicine Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; Case Reports in Emergency Medicine Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; reingest3.clockss.org:8083 >
 
   }
 
@@ -2265,10 +2264,10 @@
     au < doNotProcess ; exists ; 2013 ; Case Reports in Endocrinology Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < finished ; finished ; 2014 ; Case Reports in Endocrinology Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; >
     au < finished ; finished ; 2015 ; Case Reports in Endocrinology Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; Case Reports in Endocrinology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Case Reports in Endocrinology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2017 ; Case Reports in Endocrinology Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2018 ; Case Reports in Endocrinology Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2019 ; Case Reports in Endocrinology Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2018 ; Case Reports in Endocrinology Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2019 ; Case Reports in Endocrinology Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; reingest4.clockss.org:8082 >
 
   }
 
@@ -2285,12 +2284,12 @@
     au < doNotProcess ; exists ; 2011 ; Case Reports in Gastrointestinal Medicine Volume 2011 ; 2011 ; 2011 ; https://www.hindawi.com/ ; >
     au < doNotProcess ; exists ; 2012 ; Case Reports in Gastrointestinal Medicine Volume 2012 ; 2012 ; 2012 ; https://www.hindawi.com/ ; >
     au < doNotProcess ; exists ; 2013 ; Case Reports in Gastrointestinal Medicine Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2014 ; Case Reports in Gastrointestinal Medicine Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2014 ; Case Reports in Gastrointestinal Medicine Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Case Reports in Gastrointestinal Medicine Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; Case Reports in Gastrointestinal Medicine Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2017 ; Case Reports in Gastrointestinal Medicine Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2018 ; Case Reports in Gastrointestinal Medicine Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2019 ; Case Reports in Gastrointestinal Medicine Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Case Reports in Gastrointestinal Medicine Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2017 ; Case Reports in Gastrointestinal Medicine Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2018 ; Case Reports in Gastrointestinal Medicine Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; Case Reports in Gastrointestinal Medicine Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; reingest1.clockss.org:8082 >
 
   }
 
@@ -2309,10 +2308,10 @@
     au < doNotProcess ; exists ; 2013 ; Case Reports in Genetics Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < finished ; finished ; 2014 ; Case Reports in Genetics Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; Case Reports in Genetics Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2016 ; Case Reports in Genetics Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Case Reports in Genetics Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2017 ; Case Reports in Genetics Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2018 ; Case Reports in Genetics Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2019 ; Case Reports in Genetics Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2018 ; Case Reports in Genetics Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2019 ; Case Reports in Genetics Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; reingest4.clockss.org:8082 >
 
   }
 
@@ -2331,10 +2330,10 @@
     au < doNotProcess ; exists ; 2013 ; Case Reports in Hematology Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < finished ; finished ; 2014 ; Case Reports in Hematology Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; >
     au < finished ; finished ; 2015 ; Case Reports in Hematology Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2016 ; Case Reports in Hematology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2017 ; Case Reports in Hematology Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2018 ; Case Reports in Hematology Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2019 ; Case Reports in Hematology Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Case Reports in Hematology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2017 ; Case Reports in Hematology Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2018 ; Case Reports in Hematology Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; Case Reports in Hematology Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; reingest5.clockss.org:8082 >
 
   }
 
@@ -2355,8 +2354,8 @@
     au < finished ; finished ; 2015 ; Case Reports in Hepatology Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; Case Reports in Hepatology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2017 ; Case Reports in Hepatology Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2018 ; Case Reports in Hepatology Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2019 ; Case Reports in Hepatology Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2018 ; Case Reports in Hepatology Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; Case Reports in Hepatology Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; reingest1.clockss.org:8082 >
 
   }
 
@@ -2375,10 +2374,10 @@
     au < doNotProcess ; exists ; 2013 ; Case Reports in Immunology Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < finished ; finished ; 2014 ; Case Reports in Immunology Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Case Reports in Immunology Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; Case Reports in Immunology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Case Reports in Immunology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2017 ; Case Reports in Immunology Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2018 ; Case Reports in Immunology Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2019 ; Case Reports in Immunology Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2018 ; Case Reports in Immunology Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2019 ; Case Reports in Immunology Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; reingest4.clockss.org:8082 >
 
   }
 
@@ -2397,10 +2396,10 @@
     au < doNotProcess ; exists ; 2013 ; Case Reports in Infectious Diseases Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < finished ; finished ; 2014 ; Case Reports in Infectious Diseases Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Case Reports in Infectious Diseases Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; Case Reports in Infectious Diseases Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Case Reports in Infectious Diseases Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Case Reports in Infectious Diseases Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2018 ; Case Reports in Infectious Diseases Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2019 ; Case Reports in Infectious Diseases Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2018 ; Case Reports in Infectious Diseases Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; Case Reports in Infectious Diseases Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; reingest1.clockss.org:8082 >
 
   }
 
@@ -2421,10 +2420,10 @@
     au < doNotProcess ; exists ; 2013 ; Case Reports in Medicine Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < zapped ; finished ; 2014 ; Case Reports in Medicine Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < zapped ; finished ; 2015 ; Case Reports in Medicine Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; Case Reports in Medicine Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Case Reports in Medicine Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2017 ; Case Reports in Medicine Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2018 ; Case Reports in Medicine Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2019 ; Case Reports in Medicine Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2018 ; Case Reports in Medicine Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2019 ; Case Reports in Medicine Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; reingest4.clockss.org:8082 >
 
   }
 
@@ -2443,10 +2442,10 @@
     au < doNotProcess ; exists ; 2013 ; Case Reports in Nephrology Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < finished ; finished ; 2014 ; Case Reports in Nephrology Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; >
     au < finished ; finished ; 2015 ; Case Reports in Nephrology Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; Case Reports in Nephrology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Case Reports in Nephrology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2017 ; Case Reports in Nephrology Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2018 ; Case Reports in Nephrology Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2019 ; Case Reports in Nephrology Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2018 ; Case Reports in Nephrology Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2019 ; Case Reports in Nephrology Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; reingest5.clockss.org:8082 >
 
   }
 
@@ -2465,10 +2464,10 @@
     au < doNotProcess ; exists ; 2013 ; Case Reports in Neurological Medicine Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < finished ; finished ; 2014 ; Case Reports in Neurological Medicine Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; >
     au < finished ; finished ; 2015 ; Case Reports in Neurological Medicine Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2016 ; Case Reports in Neurological Medicine Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Case Reports in Neurological Medicine Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2017; Case Reports in Neurological Medicine Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2018; Case Reports in Neurological Medicine Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2019; Case Reports in Neurological Medicine Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2018; Case Reports in Neurological Medicine Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2019; Case Reports in Neurological Medicine Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; reingest5.clockss.org:8082 >
 
   }
 
@@ -2487,10 +2486,10 @@
     au < doNotProcess ; exists ; 2013 ; Case Reports in Obstetrics and Gynecology Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < finished ; finished ; 2014 ; Case Reports in Obstetrics and Gynecology Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
     au < zapped ; finished ; 2015 ; Case Reports in Obstetrics and Gynecology Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2016 ; Case Reports in Obstetrics and Gynecology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2017 ; Case Reports in Obstetrics and Gynecology Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2018 ; Case Reports in Obstetrics and Gynecology Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2019 ; Case Reports in Obstetrics and Gynecology Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Case Reports in Obstetrics and Gynecology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2017 ; Case Reports in Obstetrics and Gynecology Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2018 ; Case Reports in Obstetrics and Gynecology Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; Case Reports in Obstetrics and Gynecology Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; reingest4.clockss.org:8082 >
 
   }
 
@@ -2509,10 +2508,10 @@
     au < doNotProcess ; exists ; 2013 ; Case Reports in Oncological Medicine Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < finished ; finished ; 2014 ; Case Reports in Oncological Medicine Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Case Reports in Oncological Medicine Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; Case Reports in Oncological Medicine Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Case Reports in Oncological Medicine Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Case Reports in Oncological Medicine Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2018 ; Case Reports in Oncological Medicine Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2019 ; Case Reports in Oncological Medicine Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2018 ; Case Reports in Oncological Medicine Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2019 ; Case Reports in Oncological Medicine Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; reingest3.clockss.org:8083 >
 
   }
 
@@ -2531,10 +2530,10 @@
     au < doNotProcess ; exists ; 2013 ; Case Reports in Ophthalmological Medicine Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < finished ; finished ; 2014 ; Case Reports in Ophthalmological Medicine Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Case Reports in Ophthalmological Medicine Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; Case Reports in Ophthalmological Medicine Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2017 ; Case Reports in Ophthalmological Medicine Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2018 ; Case Reports in Ophthalmological Medicine Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2019 ; Case Reports in Ophthalmological Medicine Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Case Reports in Ophthalmological Medicine Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2017 ; Case Reports in Ophthalmological Medicine Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2018 ; Case Reports in Ophthalmological Medicine Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; Case Reports in Ophthalmological Medicine Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; reingest4.clockss.org:8082 >
 
   }
  
@@ -2553,10 +2552,10 @@
     au < doNotProcess ; exists ; 2013 ; Case Reports in Orthopedics Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < finished ; finished ; 2014 ; Case Reports in Orthopedics Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; >
     au < zapped ; finished ; 2015 ; Case Reports in Orthopedics Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2016 ; Case Reports in Orthopedics Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2017 ; Case Reports in Orthopedics Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2018 ; Case Reports in Orthopedics Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2019 ; Case Reports in Orthopedics Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Case Reports in Orthopedics Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2017 ; Case Reports in Orthopedics Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2018 ; Case Reports in Orthopedics Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2019 ; Case Reports in Orthopedics Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; reingest3.clockss.org:8083 >
 
   }
   
@@ -2575,10 +2574,10 @@
     au < doNotProcess ; exists ; 2013 ; Case Reports in Otolaryngology Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < finished ; finished ; 2014 ; Case Reports in Otolaryngology Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Case Reports in Otolaryngology Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; Case Reports in Otolaryngology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Case Reports in Otolaryngology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Case Reports in Otolaryngology Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2018 ; Case Reports in Otolaryngology Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2019 ; Case Reports in Otolaryngology Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2018 ; Case Reports in Otolaryngology Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; Case Reports in Otolaryngology Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; reingest5.clockss.org:8082 >
 
   }
 
@@ -2597,10 +2596,10 @@
     au < doNotProcess ; exists ; 2013 ; Case Reports in Pathology Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < finished ; finished ; 2014 ; Case Reports in Pathology Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Case Reports in Pathology Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; Case Reports in Pathology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2017 ; Case Reports in Pathology Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2018 ; Case Reports in Pathology Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2019 ; Case Reports in Pathology Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Case Reports in Pathology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2017 ; Case Reports in Pathology Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2018 ; Case Reports in Pathology Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2019 ; Case Reports in Pathology Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; reingest1.clockss.org:8082 >
 
   }
 
@@ -2619,10 +2618,10 @@
     au < doNotProcess ; exists ; 2013 ; Case Reports in Pediatrics Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < finished ; finished ; 2014 ; Case Reports in Pediatrics Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Case Reports in Pediatrics Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2016 ; Case Reports in Pediatrics Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Case Reports in Pediatrics Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2017 ; Case Reports in Pediatrics Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2018 ; Case Reports in Pediatrics Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2019 ; Case Reports in Pediatrics Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2018 ; Case Reports in Pediatrics Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2019 ; Case Reports in Pediatrics Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; reingest3.clockss.org:8083 >
 
   }
 
@@ -2641,10 +2640,10 @@
     au < doNotProcess ; exists ; 2013 ; Case Reports in Psychiatry Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < finished ; finished ; 2014 ; Case Reports in Psychiatry Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Case Reports in Psychiatry Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; Case Reports in Psychiatry Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Case Reports in Psychiatry Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Case Reports in Psychiatry Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2018 ; Case Reports in Psychiatry Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2019 ; Case Reports in Psychiatry Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2018 ; Case Reports in Psychiatry Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; Case Reports in Psychiatry Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; reingest5.clockss.org:8082 >
 
   }
 
@@ -2663,10 +2662,10 @@
     au < doNotProcess ; exists ; 2013 ; Case Reports in Pulmonology Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < finished ; finished ; 2014 ; Case Reports in Pulmonology Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Case Reports in Pulmonology Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; Case Reports in Pulmonology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2017 ; Case Reports in Pulmonology Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2018 ; Case Reports in Pulmonology Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2019 ; Case Reports in Pulmonology Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Case Reports in Pulmonology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2017 ; Case Reports in Pulmonology Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2018 ; Case Reports in Pulmonology Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2019 ; Case Reports in Pulmonology Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; reingest1.clockss.org:8082 >
 
   }
 
@@ -2685,10 +2684,10 @@
     au < doNotProcess ; exists ; 2013 ; Case Reports in Radiology Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < finished ; finished ; 2014 ; Case Reports in Radiology Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Case Reports in Radiology Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; Case Reports in Radiology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Case Reports in Radiology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2017 ; Case Reports in Radiology Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2018 ; Case Reports in Radiology Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2019 ; Case Reports in Radiology Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2018 ; Case Reports in Radiology Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; Case Reports in Radiology Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; reingest5.clockss.org:8082 >
 
   }
 
@@ -2707,10 +2706,10 @@
     au < doNotProcess ; exists ; 2013 ; Case Reports in Rheumatology Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < finished ; finished ; 2014 ; Case Reports in Rheumatology Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Case Reports in Rheumatology Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; Case Reports in Rheumatology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Case Reports in Rheumatology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Case Reports in Rheumatology Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2018 ; Case Reports in Rheumatology Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2019 ; Case Reports in Rheumatology Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2018 ; Case Reports in Rheumatology Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; Case Reports in Rheumatology Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; reingest2.clockss.org:8085 >
 
   }
 
@@ -2727,12 +2726,12 @@
     au < doNotProcess ; exists ; 2011 ; Case Reports in Surgery Volume 2011 ; 2011 ; 2011 ; https://www.hindawi.com/ ; >
     au < doNotProcess ; exists ; 2012 ; Case Reports in Surgery Volume 2012 ; 2012 ; 2012 ; https://www.hindawi.com/ ; >
     au < doNotProcess ; exists ; 2013 ; Case Reports in Surgery Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2014 ; Case Reports in Surgery Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2014 ; Case Reports in Surgery Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
     au < zapped ; finished ; 2015 ; Case Reports in Surgery Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2016 ; Case Reports in Surgery Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2017 ; Case Reports in Surgery Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2018 ; Case Reports in Surgery Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2019 ; Case Reports in Surgery Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Case Reports in Surgery Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2017 ; Case Reports in Surgery Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2018 ; Case Reports in Surgery Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; Case Reports in Surgery Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; reingest5.clockss.org:8082 >
 
   }
 
@@ -2751,10 +2750,10 @@
     au < doNotProcess ; exists ; 2013 ; Case Reports in Transplantation Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < finished ; finished ; 2014 ; Case Reports in Transplantation Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Case Reports in Transplantation Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2016 ; Case Reports in Transplantation Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2017 ; Case Reports in Transplantation Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2018 ; Case Reports in Transplantation Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2019 ; Case Reports in Transplantation Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Case Reports in Transplantation Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2017 ; Case Reports in Transplantation Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2018 ; Case Reports in Transplantation Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; Case Reports in Transplantation Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; reingest3.clockss.org:8083 >
 
   }
 
@@ -2773,10 +2772,10 @@
     au < doNotProcess ; exists ; 2013 ; Case Reports in Urology Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < finished ; finished ; 2014 ; Case Reports in Urology Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Case Reports in Urology Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; Case Reports in Urology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Case Reports in Urology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Case Reports in Urology Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2018 ; Case Reports in Urology Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2019 ; Case Reports in Urology Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2018 ; Case Reports in Urology Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2019 ; Case Reports in Urology Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; reingest4.clockss.org:8082 >
 
   }
 
@@ -2796,9 +2795,9 @@
     au < finished ; finished ; 2014 ; Case Reports in Vascular Medicine Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Case Reports in Vascular Medicine Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2016 ; Case Reports in Vascular Medicine Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; Case Reports in Vascular Medicine Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2018 ; Case Reports in Vascular Medicine Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2019 ; Case Reports in Vascular Medicine Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2017 ; Case Reports in Vascular Medicine Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2018 ; Case Reports in Vascular Medicine Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2019 ; Case Reports in Vascular Medicine Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; reingest2.clockss.org:8085 >
 
   }
 
@@ -2817,10 +2816,10 @@
     au < doNotProcess ; exists ; 2013 ; Case Reports in Veterinary Medicine Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < finished ; finished ; 2014 ; Case Reports in Veterinary Medicine Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Case Reports in Veterinary Medicine Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2016 ; Case Reports in Veterinary Medicine Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Case Reports in Veterinary Medicine Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2017 ; Case Reports in Veterinary Medicine Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2018 ; Case Reports in Veterinary Medicine Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2019 ; Case Reports in Veterinary Medicine Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2018 ; Case Reports in Veterinary Medicine Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; Case Reports in Veterinary Medicine Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; reingest1.clockss.org:8082 >
 
   }
 
@@ -2839,10 +2838,10 @@
     au < doNotProcess ; exists ; 2011 ; Chemotherapy Research and Practice Volume 2011 ; 2011 ; 2011 ; https://www.hindawi.com/ ; >
     au < doNotProcess ; exists ; 2012 ; Chemotherapy Research and Practice Volume 2012 ; 2012 ; 2012 ; https://www.hindawi.com/ ; >
     au < doNotProcess ; exists ; 2013 ; Chemotherapy Research and Practice Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2014 ; Chemotherapy Research and Practice Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2014 ; Chemotherapy Research and Practice Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Chemotherapy Research and Practice Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; Chemotherapy Research and Practice Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2017 ; Chemotherapy Research and Practice Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Chemotherapy Research and Practice Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2017 ; Chemotherapy Research and Practice Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
     
   }
   
@@ -2859,12 +2858,12 @@
     au < doNotProcess ; exists ; 2011 ; Child Development Research Volume 2011 ; 2011 ; 2011 ; https://www.hindawi.com/ ; >
     au < doNotProcess ; exists ; 2012 ; Child Development Research Volume 2012 ; 2012 ; 2012 ; https://www.hindawi.com/ ; >
     au < doNotProcess ; exists ; 2013 ; Child Development Reserach Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2014 ; Child Development Research Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2014 ; Child Development Research Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Child Development Research Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; Child Development Research Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Child Development Research Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Child Development Research Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2018 ; Child Development Research Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2019 ; Child Development Research Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2018 ; Child Development Research Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; Child Development Research Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; reingest1.clockss.org:8082 >
 
   }
   
@@ -2880,7 +2879,7 @@
 
     au < finished ; finished ; 2014 ; Chinese Journal of Biology Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Chinese Journal of Biology Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; Chinese Journal of Biology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Chinese Journal of Biology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
 
   }
 
@@ -2896,7 +2895,7 @@
 
     au < doNotProcess ; exists ; 2013 ; Chinese Journal of Engineering Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < finished ; finished ; 2014 ; Chinese Journal of Engineering Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; Chinese Journal of Engineering Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Chinese Journal of Engineering Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
 
   }
 
@@ -2913,8 +2912,8 @@
     au < doNotProcess ; exists ; 2013 ; Chinese Journal of Mathematics Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < finished ; finished ; 2014 ; Chinese Journal of Mathematics Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Chinese Journal of Mathematics Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2016 ; Chinese Journal of Mathematics Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2017 ; Chinese Journal of Mathematics Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Chinese Journal of Mathematics Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2017 ; Chinese Journal of Mathematics Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
     au < doNotProcess ; exists ; 2018 ; Chinese Journal of Mathematics Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
     au < doNotProcess ; exists ; 2019 ; Chinese Journal of Mathematics Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
 
@@ -2936,10 +2935,10 @@
     au < doNotProcess ; exists ; 2013 ; Cholesterol Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < finished ; finished ; 2014 ; Cholesterol Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; >
     au < finished ; finished ; 2015 ; Cholesterol Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2016 ; Cholesterol Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Cholesterol Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Cholesterol Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
     
-    au < frozen ; exists ; 2018 ; Cholesterol Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2018 ; Cholesterol Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; reingest1.clockss.org:8082 >
     au < doNotProcess ; exists ; 2019 ; Cholesterol Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
   }
 
