@@ -121,18 +121,18 @@
 
     param[journal_id] = aav
 
-    au < frozen ; exists ; 2008 ; Advances in Acoustics and Vibration Volume 2008 ; 2008 ; 2008 ; http://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2009 ; Advances in Acoustics and Vibration Volume 2009 ; 2009 ; 2009 ; http://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2010 ; Advances in Acoustics and Vibration Volume 2010 ; 2010 ; 2010 ; http://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2011 ; Advances in Acoustics and Vibration Volume 2011 ; 2011 ; 2011 ; http://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2012 ; Advances in Acoustics and Vibration Volume 2012 ; 2012 ; 2012 ; http://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2013 ; Advances in Acoustics and Vibration Volume 2013 ; 2013 ; 2013 ; http://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2008 ; Advances in Acoustics and Vibration Volume 2008 ; 2008 ; 2008 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2009 ; Advances in Acoustics and Vibration Volume 2009 ; 2009 ; 2009 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2010 ; Advances in Acoustics and Vibration Volume 2010 ; 2010 ; 2010 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2011 ; Advances in Acoustics and Vibration Volume 2011 ; 2011 ; 2011 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2012 ; Advances in Acoustics and Vibration Volume 2012 ; 2012 ; 2012 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2013 ; Advances in Acoustics and Vibration Volume 2013 ; 2013 ; 2013 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Advances in Acoustics and Vibration Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Advances in Acoustics and Vibration Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2016 ; Advances in Acoustics and Vibration Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Advances in Acoustics and Vibration Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2017 ; Advances in Acoustics and Vibration Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2018 ; Advances in Acoustics and Vibration Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2019 ; Advances in Acoustics and Vibration Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2018 ; Advances in Acoustics and Vibration Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2019 ; Advances in Acoustics and Vibration Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; reingest4.clockss.org:8082 >
 
   }
   
@@ -164,10 +164,10 @@
 
     au < finished ; finished ; 2014 ; Advances in Agriculture Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; >
     au < finished ; finished ; 2015 ; Advances in Agriculture Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2016 ; Advances in Agriculture Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Advances in Agriculture Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Advances in Agriculture Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2018 ; Advances in Agriculture Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2019 ; Advances in Agriculture Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2018 ; Advances in Agriculture Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; Advances in Agriculture Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; reingest2.clockss.org:8085 >
 
   }
 
@@ -216,7 +216,7 @@
 
     au < finished ; finished ; 2014 ; Advances in Anesthesiology Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Advances in Anesthesiology Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2016 ; Advances in Anesthesiology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Advances in Anesthesiology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
 
   }
 
@@ -231,15 +231,15 @@
     param[journal_id] = aai
     #ceased publication in 2018
 
-    au < frozen ; exists ; 2008 ; Advances in Artificial Intelligence Volume 2008 ; 2008 ; 2008 ; http://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2009 ; Advances in Artificial Intelligence Volume 2009 ; 2009 ; 2009 ; http://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2010 ; Advances in Artificial Intelligence Volume 2010 ; 2010 ; 2010 ; http://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2011 ; Advances in Artificial Intelligence Volume 2011 ; 2011 ; 2011 ; http://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2012 ; Advances in Artificial Intelligence Volume 2012 ; 2012 ; 2012 ; http://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2013 ; Advances in Artificial Intelligence Volume 2013 ; 2013 ; 2013 ; http://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2008 ; Advances in Artificial Intelligence Volume 2008 ; 2008 ; 2008 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2009 ; Advances in Artificial Intelligence Volume 2009 ; 2009 ; 2009 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2010 ; Advances in Artificial Intelligence Volume 2010 ; 2010 ; 2010 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2011 ; Advances in Artificial Intelligence Volume 2011 ; 2011 ; 2011 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2012 ; Advances in Artificial Intelligence Volume 2012 ; 2012 ; 2012 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2013 ; Advances in Artificial Intelligence Volume 2013 ; 2013 ; 2013 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Advances in Artificial Intelligence Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; >
     au < finished ; finished ; 2015 ; Advances in Artificial Intelligence Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; Advances in Artificial Intelligence Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Advances in Artificial Intelligence Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Advances in Artificial Intelligence Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
 
   }
@@ -277,18 +277,18 @@
 
     param[journal_id] = aa
 
-    au < frozen ; exists ; 2008 ; Advances in Astronomy Volume 2008 ; 2008 ; 2008 ; http://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2009 ; Advances in Astronomy Volume 2009 ; 2009 ; 2009 ; http://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2010 ; Advances in Astronomy Volume 2010 ; 2010 ; 2010 ; http://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2011 ; Advances in Astronomy Volume 2011 ; 2011 ; 2011 ; http://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2008 ; Advances in Astronomy Volume 2008 ; 2008 ; 2008 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2009 ; Advances in Astronomy Volume 2009 ; 2009 ; 2009 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2010 ; Advances in Astronomy Volume 2010 ; 2010 ; 2010 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2011 ; Advances in Astronomy Volume 2011 ; 2011 ; 2011 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
     au < doNotProcess ; exists ; 2012 ; Advances in Astronomy Volume 2012 ; 2012 ; 2012 ; https://www.hindawi.com/ ; > #502 upstream error on http://downloads.hindawi.com/journals/aa/2012/923578.fl.mov
-    au < frozen ; exists ; 2013 ; Advances in Astronomy Volume 2013 ; 2013 ; 2013 ; http://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2013 ; Advances in Astronomy Volume 2013 ; 2013 ; 2013 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Advances in Astronomy Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; >
     au < finished ; finished ; 2015 ; Advances in Astronomy Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; Advances in Astronomy Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2016 ; Advances in Astronomy Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Advances in Astronomy Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2018 ; Advances in Astronomy Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < frozen ; exists ; 2019 ; Advances in Astronomy Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < finished ; manifest ; 2018 ; Advances in Astronomy Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2019 ; Advances in Astronomy Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; reingest1.clockss.org:8082 >
 
   }
 
