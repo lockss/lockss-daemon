@@ -55,7 +55,7 @@
       au < finished ; crawling ; 2019 ; American Journal of Audiology Volume 28 ; 28 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; American Journal of Audiology Volume 29 ; 29 ; >
       au < crawling ; exists ; 2021 ; American Journal of Audiology Volume 30 ; 30 ; >
-      au < manifest ; exists ; 2022 ; American Journal of Audiology Volume 31 ; 31 ; >
+      au < ready ; exists ; 2022 ; American Journal of Audiology Volume 31 ; 31 ; >
 
   }
 
@@ -100,7 +100,7 @@
       au < finished ; crawling ; 2019 ; American Journal of Speech-Language Pathology Volume 28 ; 28 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; American Journal of Speech-Language Pathology Volume 29 ; 29 ; >
       au < crawling ; exists ; 2021 ; American Journal of Speech-Language Pathology Volume 30 ; 30 ; >
-      au < manifest ; exists ; 2022 ; American Journal of Speech-Language Pathology Volume 31 ; 31 ; >
+      au < ready ; exists ; 2022 ; American Journal of Speech-Language Pathology Volume 31 ; 31 ; >
 
   }
 
@@ -283,7 +283,7 @@
       au < finished ; crawling ; 2019 ; Journal of Speech, Language, and Hearing Research Volume 62 ; 62 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Journal of Speech, Language, and Hearing Research Volume 63 ; 63 ; >
       au < crawling ; exists ; 2021 ; Journal of Speech, Language, and Hearing Research Volume 64 ; 64 ; >
-      au < manifest ; exists ; 2022 ; Journal of Speech, Language, and Hearing Research Volume 65 ; 65 ; >
+      au < ready ; exists ; 2022 ; Journal of Speech, Language, and Hearing Research Volume 65 ; 65 ; >
 
   }
 
@@ -350,7 +350,7 @@
       au < finished ; crawling ; 2019 ; Language, Speech, and Hearing Services in Schools Volume 50 ; 50 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Language, Speech, and Hearing Services in Schools Volume 51 ; 51 ; >
       au < crawling ; exists ; 2021 ; Language, Speech, and Hearing Services in Schools Volume 52 ; 52 ; >
-      au < manifest ; exists ; 2022 ; Language, Speech, and Hearing Services in Schools Volume 53 ; 53 ; >
+      au < ready ; exists ; 2022 ; Language, Speech, and Hearing Services in Schools Volume 53 ; 53 ; >
 
   }
 
@@ -405,7 +405,7 @@
       au < finished ; crawling ; 2019 ; Perspectives of the ASHA Special Interest Groups Volume 4 ; 4 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Perspectives of the ASHA Special Interest Groups Volume 5 ; 5 ; >
       au < crawling ; exists ; 2021 ; Perspectives of the ASHA Special Interest Groups Volume 6 ; 6 ; >
-      au < manifest ; exists ; 2022 ; Perspectives of the ASHA Special Interest Groups Volume 7 ; 7 ; >
+      au < ready ; exists ; 2022 ; Perspectives of the ASHA Special Interest Groups Volume 7 ; 7 ; >
   }
 
 }
