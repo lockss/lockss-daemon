@@ -164,6 +164,12 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
         String MARC_doi =  getMARCData(record, "024", 'a');
         String MARC_doi_alt =  getMARCData(record, "856", 'u');
         String MARC_pdf = getMARCControlFieldData(record, "001");
+
+        //use 097_a as the unique identifier for the article for year 2019
+        String MARC_uniq_local_id = getMARCData(record, "097", 'a');
+        String MARC_uniq_local_id2 = getMARCData(record, "097", 'b');
+        String MARC_uniq_local_id3 = getMARCData(record, "097", 'c');
+
         // Add it to raw metadata
         am.putRaw("mrc_controlfield_001", MARC_pdf);
 
@@ -377,6 +383,32 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
         if (is_year_2016 == false) {
           emitter.emitMetadata(cu, am);
         }
+
+        ////////double check if the fix for 2019
+
+        if (cuBase.contains("2019")) {
+          log.debug3("Casalini-Metadata: Year 2019: cuBase = " + cuBase);
+          if (MARC_uniq_local_id != null) {
+            String local_id = MARC_uniq_local_id;
+            if (MARC_uniq_local_id2 != null) {
+              local_id = local_id + MARC_uniq_local_id2;
+            }
+            if (MARC_uniq_local_id3 != null) {
+              local_id = local_id + MARC_uniq_local_id3;
+            }
+
+            String cuBaseWithLocalId = cuBase.replace("/", "") + "?unique_record_id=" + local_id;
+            log.debug3("Casalini-Metadata: Year 2019: cuBaseWithLocalId  = " + cuBaseWithLocalId );
+
+            am.replace(MetadataField.FIELD_ACCESS_URL, cuBaseWithLocalId);
+          } else {
+            log.debug3("Casalini-Metadata: Year 2019: cuBaseWithLocalId NO CHANGE" );
+
+          }
+        }
+
+
+        /////////////
       }
       log.debug3(String.format("Casalini-Metadata: Metadata file source: %s, recordCount: %d", cu.getUrl(), recordCount));
     } catch (NullPointerException exception) {
