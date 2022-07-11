@@ -93,7 +93,7 @@
       au < finished ; finished ; 2016 ; Cold Spring Harbor Perspectives in Medicine Volume 6 ; 6 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2017 ; Cold Spring Harbor Perspectives in Medicine Volume 7 ; 7 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2018 ; Cold Spring Harbor Perspectives in Medicine Volume 8 ; 8 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2019 ; Cold Spring Harbor Perspectives in Medicine Volume 9 ; 9 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2019 ; Cold Spring Harbor Perspectives in Medicine Volume 9 ; 9 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; Cold Spring Harbor Perspectives in Medicine Volume 10 ; 10 ; >
       au < crawling ; exists ; 2021 ; Cold Spring Harbor Perspectives in Medicine Volume 11 ; 11 ; >
       au < ready ; exists ; 2022 ; Cold Spring Harbor Perspectives in Medicine Volume 12 ; 12 ; >
@@ -239,7 +239,7 @@
       au < finished ; finished ; 2016 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 81 ; 81 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2017 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 82 ; 82 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2018 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 83 ; 83 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2019 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 84 ; 84 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2019 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 84 ; 84 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -284,13 +284,13 @@
       au < finished ; crawling ; 2007 ; Genes & Development Volume 21 ; 21 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2008 ; Genes & Development Volume 22 ; 22 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2009 ; Genes & Development Volume 23 ; 23 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2010 ; Genes & Development Volume 24 ; 24 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2010 ; Genes & Development Volume 24 ; 24 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2011 ; Genes & Development Volume 25 ; 25 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2012 ; Genes & Development Volume 26 ; 26 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2013 ; Genes & Development Volume 27 ; 27 ; reingest4.clockss.org:8082 >
       au < zapped ; finished ; 2014 ; Genes & Development Volume 28 ; 28 ; >
       au < finished ; finished ; 2015 ; Genes & Development Volume 29 ; 29 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2016 ; Genes & Development Volume 30 ; 30 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2016 ; Genes & Development Volume 30 ; 30 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; Genes & Development Volume 31 ; 31 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2018 ; Genes & Development Volume 32 ; 32 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2019 ; Genes & Development Volume 33 ; 33 ; reingest4.clockss.org:8082 >
@@ -342,7 +342,7 @@
       au < finished ; crawling ; 2013 ; Genome Research Volume 23 ; 23 ; https://genome.cshlp.org/ ; reingest4.clockss.org:8082 >
       au < zapped ; finished ; 2014 ; Genome Research Volume 24 ; 24 ; http://genome.cshlp.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Genome Research Volume 25 ; 25 ; http://genome.cshlp.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2016 ; Genome Research Volume 26 ; 26 ; http://genome.cshlp.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2016 ; Genome Research Volume 26 ; 26 ; http://genome.cshlp.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2017 ; Genome Research Volume 27 ; 27 ; http://genome.cshlp.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2018 ; Genome Research Volume 28 ; 28 ; https://genome.cshlp.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; Genome Research Volume 29 ; 29 ; https://genome.cshlp.org/ ; reingest5.clockss.org:8082 >
