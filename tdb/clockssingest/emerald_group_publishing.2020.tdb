@@ -1828,9 +1828,9 @@
     au < notReady ; exists ; 1992 ; Competitiveness Review: An International Business Journal Volume 2 ; 2 ; > #500 error 
     au < frozen ; exists ; 1993 ; Competitiveness Review: An International Business Journal Volume 3 ; 3 ; > #500 error 
     au < frozen ; exists ; 1994 ; Competitiveness Review: An International Business Journal Volume 4 ; 4 ; > #500 error 
-    au < crawling ; exists ; 1995 ; Competitiveness Review: An International Business Journal Volume 5 ; 5 ; >
+    au < frozen ; exists ; 1995 ; Competitiveness Review: An International Business Journal Volume 5 ; 5 ; >
     au < notReady ; exists ; 1996 ; Competitiveness Review: An International Business Journal Volume 6 ; 6 ; >
-    au < crawling ; exists ; 1997 ; Competitiveness Review: An International Business Journal Volume 7 ; 7 ; >
+    au < frozen ; exists ; 1997 ; Competitiveness Review: An International Business Journal Volume 7 ; 7 ; >
     au < frozen ; exists ; 1998 ; Competitiveness Review: An International Business Journal Volume 8 ; 8 ; >
     au < notReady ; exists ; 1999 ; Competitiveness Review: An International Business Journal Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2000 ; Competitiveness Review: An International Business Journal Volume 10 ; 10 ; >
@@ -1951,8 +1951,8 @@
     au < frozen ; exists ; 2002 ; Corporate Governance Volume 2 ; 2 ; >
     au < frozen ; exists ; 2003 ; Corporate Governance Volume 3 ; 3 ; >
     au < frozen ; exists ; 2004 ; Corporate Governance Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2005 ; Corporate Governance Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2006 ; Corporate Governance Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2005 ; Corporate Governance Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2006 ; Corporate Governance Volume 6 ; 6 ; >
     au < frozen ; exists ; 2007 ; Corporate Governance Volume 7 ; 7 ; >
     au < frozen ; exists ; 2008 ; Corporate Governance Volume 8 ; 8 ; >
     au < frozen ; exists ; 2009 ; Corporate Governance Volume 9 ; 9 ; >
@@ -1983,7 +1983,7 @@
     param[journal_issn] = 1742-2043
     comment[journal_id] = cpoib
 
-    au < crawling ; exists ; 2005 ; critical perspectives on international business Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2005 ; critical perspectives on international business Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2006 ; critical perspectives on international business Volume 2 ; 2 ; >
     au < frozen ; exists ; 2007 ; critical perspectives on international business Volume 3 ; 3 ; >
     au < frozen ; exists ; 2008 ; critical perspectives on international business Volume 4 ; 4 ; >
@@ -2025,8 +2025,8 @@
     au < frozen ; exists ; 2000 ; Cross Cultural Management: An International Journal Volume 7 ; 7 ; >
     au < frozen ; exists ; 2001 ; Cross Cultural Management: An International Journal Volume 8 ; 8 ; >
     au < frozen ; exists ; 2002 ; Cross Cultural Management: An International Journal Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2003 ; Cross Cultural Management: An International Journal Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2004 ; Cross Cultural Management: An International Journal Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2003 ; Cross Cultural Management: An International Journal Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2004 ; Cross Cultural Management: An International Journal Volume 11 ; 11 ; >
     au < frozen ; exists ; 2005 ; Cross Cultural Management: An International Journal Volume 12 ; 12 ; >
     au < frozen ; exists ; 2006 ; Cross Cultural Management: An International Journal Volume 13 ; 13 ; >
     au < frozen ; exists ; 2007 ; Cross Cultural Management: An International Journal Volume 14 ; 14 ; >
@@ -2075,10 +2075,10 @@
     # online from 2003
 
     au < notReady ; exists ; 2003 ; Development and Learning in Organizations Volume 17 ; 17 ; > #no pdfs
-    au < crawling ; exists ; 2004 ; Development and Learning in Organizations Volume 18 ; 18 ; >
-    au < crawling ; exists ; 2005 ; Development and Learning in Organizations Volume 19 ; 19 ; >
+    au < frozen ; exists ; 2004 ; Development and Learning in Organizations Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2005 ; Development and Learning in Organizations Volume 19 ; 19 ; >
     au < frozen ; exists ; 2006 ; Development and Learning in Organizations Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2007 ; Development and Learning in Organizations Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2007 ; Development and Learning in Organizations Volume 21 ; 21 ; >
     au < frozen ; exists ; 2008 ; Development and Learning in Organizations Volume 22 ; 22 ; >
     au < frozen ; exists ; 2009 ; Development and Learning in Organizations Volume 23 ; 23 ; >
     au < frozen ; exists ; 2010 ; Development and Learning in Organizations Volume 24 ; 24 ; >
@@ -2109,7 +2109,7 @@
     comment[journal_id] = dmij
     comment[continued_by] = 2040-7122
 
-    au < crawling ; exists ; 2007 ; Direct Marketing: An International Journal Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2007 ; Direct Marketing: An International Journal Volume 1 ; 1 ; >
     au < frozen ; exists ; 2009 ; Direct Marketing: An International Journal Volume 2 ; 2 ; >
     au < frozen ; exists ; 2009 ; Direct Marketing: An International Journal Volume 3 ; 3 ; >
 
@@ -2138,12 +2138,12 @@
     au < doNotProcess ; doNotProcess ; 2001 ; Disaster Prevention and Management Volume 10 ; 10 ; >
     au < frozen ; exists ; 2002 ; Disaster Prevention and Management Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2003 ; Disaster Prevention and Management Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2004 ; Disaster Prevention and Management Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2004 ; Disaster Prevention and Management Volume 13 ; 13 ; >
     au < frozen ; exists ; 2005 ; Disaster Prevention and Management Volume 14 ; 14 ; >
     au < frozen ; exists ; 2006 ; Disaster Prevention and Management Volume 15 ; 15 ; >
     au < frozen ; exists ; 2007 ; Disaster Prevention and Management Volume 16 ; 16 ; >
     au < frozen ; exists ; 2008 ; Disaster Prevention and Management Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2009 ; Disaster Prevention and Management Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2009 ; Disaster Prevention and Management Volume 18 ; 18 ; >
     au < finished ; crawling ; 2010 ; Disaster Prevention and Management Volume 19 ; 19 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2011 ; Disaster Prevention and Management Volume 20 ; 20 ; >
     au < finished ; crawling ; 2012 ; Disaster Prevention and Management Volume 21 ; 21 ; reingest3.clockss.org:8083 >
@@ -2173,9 +2173,9 @@
 
     au < ready ; exists ; 2001 ; Drugs and Alcohol Today Volume 1 ; 1 ; >
     au < frozen ; exists ; 2002 ; Drugs and Alcohol Today Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2003 ; Drugs and Alcohol Today Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2004 ; Drugs and Alcohol Today Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2005 ; Drugs and Alcohol Today Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2003 ; Drugs and Alcohol Today Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2004 ; Drugs and Alcohol Today Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2005 ; Drugs and Alcohol Today Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2006 ; Drugs and Alcohol Today Volume 6 ; 6 ; >
     au < frozen ; exists ; 2007 ; Drugs and Alcohol Today Volume 7 ; 7 ; >
     au < frozen ; exists ; 2008 ; Drugs and Alcohol Today Volume 8 ; 8 ; >
@@ -2250,16 +2250,16 @@
     au < ready ; exists ; 1999 ; Education + Training Volume 41 ; 41 ; >
     au < frozen ; exists ; 2000 ; Education + Training Volume 42 ; 42 ; >
     au < ready ; exists ; 2001 ; Education + Training Volume 43 ; 43 ; >
-    au < crawling ; exists ; 2002 ; Education + Training Volume 44 ; 44 ; >
-    au < crawling ; exists ; 2003 ; Education + Training Volume 45 ; 45 ; >
-    au < crawling ; exists ; 2004 ; Education + Training Volume 46 ; 46 ; >
+    au < frozen ; exists ; 2002 ; Education + Training Volume 44 ; 44 ; >
+    au < frozen ; exists ; 2003 ; Education + Training Volume 45 ; 45 ; >
+    au < frozen ; exists ; 2004 ; Education + Training Volume 46 ; 46 ; >
     au < doNotProcess ; doNotProcess ; 2005 ; Education + Training Volume 47 ; 47 ; >
-    au < crawling ; exists ; 2006 ; Education + Training Volume 48 ; 48 ; >
+    au < frozen ; exists ; 2006 ; Education + Training Volume 48 ; 48 ; >
     au < doNotProcess ; doNotProcess ; 2007 ; Education + Training Volume 49 ; 49 ; >
-    au < crawling ; exists ; 2008 ; Education + Training Volume 50 ; 50 ; >
-    au < crawling ; exists ; 2009 ; Education + Training Volume 51 ; 51 ; >
+    au < frozen ; exists ; 2008 ; Education + Training Volume 50 ; 50 ; >
+    au < frozen ; exists ; 2009 ; Education + Training Volume 51 ; 51 ; >
     au < frozen ; exists ; 2010 ; Education + Training Volume 52 ; 52 ; >
-    au < crawling ; exists ; 2011 ; Education + Training Volume 53 ; 53 ; >
+    au < frozen ; exists ; 2011 ; Education + Training Volume 53 ; 53 ; >
     au < frozen ; exists ; 2012 ; Education + Training Volume 54 ; 54 ; >
     au < frozen ; exists ; 2013 ; Education + Training Volume 55 ; 55 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Education + Training Volume 56 ; 56 ; >
@@ -2285,7 +2285,7 @@
     param[journal_issn] = 1753-7983
     comment[journal_id] = ebs
 
-    au < crawling ; exists ; 2008 ; Education, Business and Society: Contemporary Middle Eastern Issues Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2008 ; Education, Business and Society: Contemporary Middle Eastern Issues Volume 1 ; 1 ; >
     au < frozen ; exists ; 2009 ; Education, Business and Society: Contemporary Middle Eastern Issues Volume 2 ; 2 ; >
     au < finished ; crawling ; 2010 ; Education, Business and Society: Contemporary Middle Eastern Issues Volume 3 ; 3 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2011 ; Education, Business and Society: Contemporary Middle Eastern Issues Volume 4 ; 4 ; reingest5.clockss.org:8082 >
@@ -2323,19 +2323,19 @@
     au < manifest ; exists ; 1997 ; The Electronic Library Volume 15 ; 15 ; >
     au < manifest ; exists ; 1998 ; The Electronic Library Volume 16 ; 16 ; >
     au < ready ; exists ; 1999 ; The Electronic Library Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2000 ; The Electronic Library Volume 18 ; 18 ; >
-    au < crawling ; exists ; 2001 ; The Electronic Library Volume 19 ; 19 ; >
+    au < frozen ; exists ; 2000 ; The Electronic Library Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2001 ; The Electronic Library Volume 19 ; 19 ; >
     au < ready ; exists ; 2002 ; The Electronic Library Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2003 ; The Electronic Library Volume 21 ; 21 ; >
-    au < crawling ; exists ; 2004 ; The Electronic Library Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2005 ; The Electronic Library Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2006 ; The Electronic Library Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2007 ; The Electronic Library Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2008 ; The Electronic Library Volume 26 ; 26 ; >
-    au < crawling ; exists ; 2009 ; The Electronic Library Volume 27 ; 27 ; >
+    au < frozen ; exists ; 2003 ; The Electronic Library Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2004 ; The Electronic Library Volume 22 ; 22 ; >
+    au < frozen ; exists ; 2005 ; The Electronic Library Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2006 ; The Electronic Library Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2007 ; The Electronic Library Volume 25 ; 25 ; >
+    au < frozen ; exists ; 2008 ; The Electronic Library Volume 26 ; 26 ; >
+    au < frozen ; exists ; 2009 ; The Electronic Library Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; The Electronic Library Volume 28 ; 28 ; >
-    au < crawling ; exists ; 2011 ; The Electronic Library Volume 29 ; 29 ; >
-    au < crawling ; exists ; 2012 ; The Electronic Library Volume 30 ; 30 ; >
+    au < frozen ; exists ; 2011 ; The Electronic Library Volume 29 ; 29 ; >
+    au < frozen ; exists ; 2012 ; The Electronic Library Volume 30 ; 30 ; >
     au < frozen ; exists ; 2013 ; The Electronic Library Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; The Electronic Library Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; The Electronic Library Volume 33 ; 33 ; >
@@ -2399,15 +2399,15 @@
     au < manifest ; exists ; 1997 ; Employee Relations: An International Journal Volume 19 ; 19 ; >
     au < manifest ; exists ; 1998 ; Employee Relations: An International Journal Volume 20 ; 20 ; >
     au < ready ; exists ; 1999 ; Employee Relations: An International Journal Volume 21 ; 21 ; >
-    au < crawling ; exists ; 2000 ; Employee Relations: An International Journal Volume 22 ; 22 ; >
+    au < frozen ; exists ; 2000 ; Employee Relations: An International Journal Volume 22 ; 22 ; >
     au < ready ; exists ; 2001 ; Employee Relations: An International Journal Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2002 ; Employee Relations: An International Journal Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2003 ; Employee Relations: An International Journal Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2004 ; Employee Relations: An International Journal Volume 26 ; 26 ; >
-    au < crawling ; exists ; 2005 ; Employee Relations: An International Journal Volume 27 ; 27 ; >
-    au < crawling ; exists ; 2006 ; Employee Relations: An International Journal Volume 28 ; 28 ; >
-    au < crawling ; exists ; 2007 ; Employee Relations: An International Journal Volume 29 ; 29 ; >
-    au < crawling ; exists ; 2008 ; Employee Relations: An International Journal Volume 30 ; 30 ; >
+    au < frozen ; exists ; 2002 ; Employee Relations: An International Journal Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2003 ; Employee Relations: An International Journal Volume 25 ; 25 ; >
+    au < frozen ; exists ; 2004 ; Employee Relations: An International Journal Volume 26 ; 26 ; >
+    au < frozen ; exists ; 2005 ; Employee Relations: An International Journal Volume 27 ; 27 ; >
+    au < frozen ; exists ; 2006 ; Employee Relations: An International Journal Volume 28 ; 28 ; >
+    au < frozen ; exists ; 2007 ; Employee Relations: An International Journal Volume 29 ; 29 ; >
+    au < frozen ; exists ; 2008 ; Employee Relations: An International Journal Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Employee Relations: An International Journal Volume 31 ; 31 ; >
     au < frozen ; exists ; 2010 ; Employee Relations: An International Journal Volume 32 ; 32 ; >
     au < frozen ; exists ; 2011 ; Employee Relations: An International Journal Volume 33 ; 33 ; >
@@ -2473,19 +2473,19 @@
     au < manifest ; exists ; 1997 ; Engineering Computations Volume 14 ; 14 ; >
     au < manifest ; exists ; 1998 ; Engineering Computations Volume 15 ; 15 ; >
     au < ready ; exists ; 1999 ; Engineering Computations Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2000 ; Engineering Computations Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2001 ; Engineering Computations Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2000 ; Engineering Computations Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2001 ; Engineering Computations Volume 18 ; 18 ; >
     au < ready ; exists ; 2002 ; Engineering Computations Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2003 ; Engineering Computations Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2004 ; Engineering Computations Volume 21 ; 21 ; >
-    au < crawling ; exists ; 2005 ; Engineering Computations Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2006 ; Engineering Computations Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2007 ; Engineering Computations Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2008 ; Engineering Computations Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2009 ; Engineering Computations Volume 26 ; 26 ; >
+    au < frozen ; exists ; 2004 ; Engineering Computations Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2005 ; Engineering Computations Volume 22 ; 22 ; >
+    au < frozen ; exists ; 2006 ; Engineering Computations Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2007 ; Engineering Computations Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2008 ; Engineering Computations Volume 25 ; 25 ; >
+    au < frozen ; exists ; 2009 ; Engineering Computations Volume 26 ; 26 ; >
     au < frozen ; exists ; 2010 ; Engineering Computations Volume 27 ; 27 ; >
     au < frozen ; exists ; 2011 ; Engineering Computations Volume 28 ; 28 ; >
-    au < crawling ; exists ; 2012 ; Engineering Computations Volume 29 ; 29 ; >
+    au < frozen ; exists ; 2012 ; Engineering Computations Volume 29 ; 29 ; >
     au < frozen ; exists ; 2013 ; Engineering Computations Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Engineering Computations Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Engineering Computations Volume 32 ; 32 ; >
