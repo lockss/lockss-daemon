@@ -9,8 +9,7 @@
   >
   #Moved from BePress to Janeway
 
-    #plugin = needs.plugin
-    plugin = org.lockss.plugin.janeway.iowastatedp.ClockssIowaStateDPPlugin
+    plugin = org.lockss.plugin.janeway.universityofiowa.ClockssUniversityofIowaPlugin
     param[base_url] = https://pubs.lib.uiowa.edu/
     implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
 
