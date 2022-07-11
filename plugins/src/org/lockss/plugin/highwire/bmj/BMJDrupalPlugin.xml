@@ -140,6 +140,10 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>org.lockss.plugin.highwire.HighWireParamFunctor</string>
   </entry>
   <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.highwire.bmj.BMJJCoreUrlConsumerFactory</string>
+  </entry>
+  <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.highwire.bmj.BMJJCoreUrlNormalizer</string>
   </entry>
