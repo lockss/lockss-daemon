@@ -99,24 +99,27 @@ POSSIBILITY OF SUCH DAMAGE.
     <!-- CRAWL RULES COPIED DOWN FROM PARENT on 10/27/17 to allow for simplification of parent -->
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^https?://%s/c?lockss-manifest/[^/]*vol_%s_manifest.html", url_host(base_url), volume_name</string>
-      <string>1,"^https?://%s/content(/[^/]+)?/suppl/", url_host(base_url)</string>
+      <string>1,"^https?://(www.)?%s/c?lockss-manifest/[^/]*vol_%s_manifest.html", del_www_and_scheme(base_url), volume_name</string>
+      <string>1,"^https?://(www.)?%s/.+[.](bmp|css|gif|ico|jpe?g|js|png|tif?f|eot|svg|ttf|woff.?)([?]v=.*)?$", del_www_and_scheme(base_url)</string>
+      <string>1,"^https?://(www.)?%s/content(/[^/]+)?/suppl/", del_www_and_scheme(base_url)</string>
       <!--exclude "base_url/content/early/recent", it will return a blocked login page-->
-      <string>2,"^https?://%s/content/((early/recent)|(by/(year|volume)|current|.*/article-))", url_host(base_url)</string>
+      <string>2,"^https?://(www.)?%s/content/((early/recent)|(by/(year|volume)|current|.*/article-))", del_www_and_scheme(base_url)</string>
+      <!-- exclude all this social/informational/ancillary etc content about articles/volumes -->
+      <string>2,"^https?://(www.)?%s/content/.*([/.]){1}(rr(-\d+)?|related|ppt|submit-a-rapid-response|alerts|altmetrics|share)$", del_www_and_scheme(base_url)</string>
       <!-- after content is optional jcode, required vol, optional issue, optional .toc  -->
-      <string>1,"^https?://%s/content(/[^/]+){1,3}(\.toc)?$", url_host(base_url)</string>
+      <string>1,"^https?://(www.)?%s/content(/[^/.]+){1,3}(\.toc)?$", del_www_and_scheme(base_url)</string>
       <!-- after content is required vol, optional issue, required page, then allowed extensions or EOL 
             page may also contain roman numerals, dot, & number (iii.2)  -->
-      <string>1,"^https?://%s/content(/[^/]+){1,2}/(((?:(bmj|[ivx]+)\.)?[^/]+?(\.\d+)?))(/related|/tab-figures-data|\.(?:long|supplemental|data|figures-only)|)$", url_host(base_url)</string>
+      <string>1,"^https?://(www.)?%s/content(/[^/]+){1,2}/(((?:(bmj|[ivx]+)\.)?[^/]+?(\.\d+)?))(/peer-review|/tab-figures-data|\.(?:long|supplemental|data|figures-only)|)$", del_www_and_scheme(base_url)</string>
       <!-- http://msphere.asm.org/content/1/1/masthead.1-1 was excluded -->
-      <string>1,"^https?://%s/content/([^/]+)(/[^/]+)?/((ENEURO|wpt|masthead)\.[0-9.-]+)(|/related|/tab-figures-data|\.(?:long|supplemental|data|figures-only))$", url_host(base_url)</string>
+      <string>1,"^https?://(www.)?%s/content/([^/]+)(/[^/]+)?/((ENEURO|wpt|masthead)\.[0-9.-]+)(|/peer-review|/tab-figures-data|\.(?:long|supplemental|data|figures-only))$", del_www_and_scheme(base_url)</string>
       <!-- after content is optional jcode, required vol, optional issue, required page, then allowed extensions -->
-      <string>1,"^https?://%s/content(/[^/]+){1,3}/(((?:(bmj|[ivx]+)\.)?[^/]+?(\.\d+)?))(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url)</string>
-      <string>1,"^https?://%s/content(/[^/]+)?/([^/]+)(/[^/]+)?/((ENEURO|wpt|masthead)\.[0-9.-]+)(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url)</string>
-      <string>1,"^https?://%s/highwire/filestream/", url_host(base_url)</string>
-      <string>1,"^https?://%s/[^/]+/(download-(pdf|suppl|video))/", url_host(base_url)</string>
+      <string>1,"^https?://(www.)?%s/content(/[^/]+){1,3}/(((?:(bmj|[ivx]+)\.)?[^/]+?(\.\d+)?))(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", del_www_and_scheme(base_url)</string>
+      <string>1,"^https?://(www.)?%s/content(/[^/]+)?/([^/]+)(/[^/]+)?/((ENEURO|wpt|masthead)\.[0-9.-]+)(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", del_www_and_scheme(base_url)</string>
+      <string>1,"^https?://(www.)?%s/highwire/filestream/", del_www_and_scheme(base_url)</string>
+      <string>1,"^https?://(www.)?%s/[^/]+/(download-(pdf|suppl|video))/", del_www_and_scheme(base_url)</string>
       <!-- allow content like http://msphere.asm.org/content/msph/1/1/e00001-15/DC2/embed/inline-supplementary-material-2.pdf?download=true -->
-      <string>1,"^https?://%s/[^?]+(/embed/inline-supplementary-)", url_host(base_url)</string>
+      <string>1,"^https?://(www.)?%s/[^?]+(/embed/inline-supplementary-)", del_www_and_scheme(base_url)</string>
       <!-- otherwise, all content from glencoesoftware CDN and non-(js|css) from static BMJ -->
       <string>1,"^https?://([^/]+\.glencoesoftware\.com/.|static\.www\.bmj\.com/.(?!.+\.(css|js)?))"</string>
     </list>
@@ -131,6 +134,10 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>"^%scontent/(bmj/)?[^/]+/bmj[.][^/]+([.]full([.]pdf([+]html)?)?)$", base_url</string>
       <string>"^%scontent/%s/(?!bmj.)[^/]+/(?!.*[.]abstract)[^/?]+([.]full([.]pdf([+]html)?)?)?$", base_url, volume_name</string>
     </list>
+  </entry>
+  <entry>
+    <string>au_param_functor</string>
+    <string>org.lockss.plugin.highwire.HighWireParamFunctor</string>
   </entry>
   <entry>
     <string>au_url_normalizer</string>
