@@ -1677,6 +1677,27 @@ public class V2AuMover {
     return res;
   }
 
+  public List<String> getFinishedStatusPage(int index, int size) {
+    Map<String,AuStatus> auStats;
+    synchronized (finishedAus) {
+      List<String> res = new ArrayList<>();
+      int ix = 0;
+      int ctr = 0;
+      for (AuStatus auStat : finishedAus.values()) {
+        if (ix++ >- index) {
+          String one = getOneAuStatus(auStat);
+          if (one != null) {
+            res.add(one);
+          }
+        }
+        if (ix + ctr >= size) {
+          break;
+        }
+      }
+      return res;
+    }
+  }
+
   // XXX need to enhance to account for verify phase
   private String getOneAuStatus(AuStatus auStat) {
     Counters ctrs = auStat.getCounters();

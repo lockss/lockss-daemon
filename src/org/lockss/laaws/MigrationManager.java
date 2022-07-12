@@ -48,6 +48,7 @@ public class MigrationManager extends BaseLockssManager
   static final String STATUS_RUNNING = "running";
   static final String STATUS_ACTIVE_LIST = "active_list";
   static final String STATUS_FINISHED_LIST = "finished_list";
+  static final String STATUS_FINISHED_PAGE = "finished_page";
   static final String STATUS_STATUS = "status_list";
   static final String STATUS_INSTRUMENTS = "instrument_list";
   static final String STATUS_ERRORS = "errors";
@@ -89,13 +90,21 @@ public class MigrationManager extends BaseLockssManager
       if (!mover.getActiveStatusList().isEmpty()) {
         stat.put(STATUS_ACTIVE_LIST, mover.getActiveStatusList());
       }
-      if (!mover.getFinishedStatusList().isEmpty()) {
-        stat.put(STATUS_FINISHED_LIST, mover.getFinishedStatusList());
-      }
+//       if (!mover.getFinishedStatusList().isEmpty()) {
+//         stat.put(STATUS_FINISHED_LIST, mover.getFinishedStatusList());
+//       }
       List<String> errs = mover.getErrors();
       if (errs != null && !errs.isEmpty()) {
         stat.put(STATUS_ERRORS, errs);
       }
+    }
+    return stat;
+  }
+
+  public Map getFinishedPage(int index, int size) {
+    Map stat = new HashMap();
+    if (runner != null && idleError != null) {
+      stat.put(STATUS_FINISHED_PAGE, mover.getFinishedStatusPage(index, size));
     }
     return stat;
   }

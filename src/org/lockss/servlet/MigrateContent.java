@@ -88,8 +88,11 @@ public class MigrateContent extends LockssServlet {
   public static final boolean DEFAULT_DEFAULT_COMPARE = false;
 
   // paramdoc only
-  static final String KEY_OUTPUT = "output";
+  static final String KEY_STATUS = "status";
   static final String KEY_ACTION = "action";
+  static final String KEY_OUTPUT = "output";
+  static final String KEY_INDEX = "index";
+  static final String KEY_SIZE = "size";
   static final String KEY_MSG = "msg";
   static final String KEY_AUID = "auid";
   static final String HOSTNAME="hostname";
@@ -156,8 +159,17 @@ public class MigrateContent extends LockssServlet {
 
     // Is this a status request?
     String output = getParameter(KEY_OUTPUT);
-    if (!StringUtil.isNullString(output)) {
-      sendCurrentStatus(output);
+    String status = getParameter(KEY_STATUS);
+    if (!StringUtil.isNullString(status)) {
+      switch (status) {
+      case "status":
+        sendCurrentStatus(output);
+        break;
+      case "finished":
+        sendFinishedChunk(output,
+                          getParameter(KEY_INDEX), getParameter(KEY_SIZE));
+        break;
+      }
       return;
     }
 
@@ -212,6 +224,39 @@ public class MigrateContent extends LockssServlet {
       resp.setContentType("application/json");
       String json = gson.toJson(statMap);
       log.debug3("json: " + json);
+      wrtr.println(json);
+    }
+  }
+    
+  private void sendFinishedChunk(String format, String indexStr, String sizeStr)
+      throws IOException {
+    // TODO: support format other than json?
+    try {
+	int index = Integer.parseInt(indexStr);
+	int size = Integer.parseInt(sizeStr);
+        Map statMap = migrationMgr.getFinishedPage(index, size);
+        switch (format) {
+        case "json":
+        default:
+          Gson gson = new GsonBuilder().create();
+          resp.setStatus(200);
+          PrintWriter wrtr = resp.getWriter();
+          resp.setContentType("application/json");
+          String json = gson.toJson(statMap);
+          log.debug3("json: " + json);
+          wrtr.println(json);
+        }
+    } catch (NumberFormatException e) {
+      String msg =
+        "Index (" + indexStr + ") or size (" + sizeStr + ") not an int";
+      log.error(msg);
+      Gson gson = new GsonBuilder().create();
+      Map errMap = new HashMap();
+      errMap.put("error", msg);
+      resp.setStatus(400);
+      PrintWriter wrtr = resp.getWriter();
+      resp.setContentType("application/json");
+      String json = gson.toJson(errMap);
       wrtr.println(json);
     }
   }
