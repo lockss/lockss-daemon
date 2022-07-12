@@ -33,7 +33,7 @@ import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.XmlDomMetadataExtractor;
 import org.lockss.extractor.XmlDomMetadataExtractor.NodeValue;
-import org.lockss.plugin.clockss.onixbooks.Onix3LongSchemaHelper;
+import org.lockss.plugin.clockss.Onix3BooksSchemaHelper;
 import org.lockss.util.Logger;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -41,7 +41,7 @@ import org.w3c.dom.NodeList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class PapOnixSchemaHelper extends Onix3LongSchemaHelper {
+public class PapOnixSchemaHelper extends Onix3BooksSchemaHelper {
 
   static Logger log = Logger.getLogger(PapOnixSchemaHelper.class);
   /**
