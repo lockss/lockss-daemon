@@ -27,12 +27,13 @@ CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
  */
-package org.lockss.plugin.clockss.onixbooks;
+package org.lockss.plugin.clockss.pap;
 
 import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.XmlDomMetadataExtractor;
 import org.lockss.extractor.XmlDomMetadataExtractor.NodeValue;
+import org.lockss.plugin.clockss.Onix3BooksSchemaHelper;
 import org.lockss.util.Logger;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -40,7 +41,7 @@ import org.w3c.dom.NodeList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class PapOnixSchemaHelper extends Onix3LongSchemaHelper {
+public class PapOnixSchemaHelper extends Onix3BooksSchemaHelper {
 
   static Logger log = Logger.getLogger(PapOnixSchemaHelper.class);
   /**
@@ -66,7 +67,7 @@ public class PapOnixSchemaHelper extends Onix3LongSchemaHelper {
   /**
    * path to each metadata entry
    */
-  static private final String Pap_article_node = "/ONIXData/ProductData/Product";
+  static private final String Pap_article_node = "//ProductData/Product";
 
   /* Under an item node, the interesting bits live at these relative locations */
   static private final String Pap_recordId = "RecordReference";

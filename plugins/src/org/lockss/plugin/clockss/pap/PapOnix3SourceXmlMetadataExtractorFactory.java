@@ -1,5 +1,4 @@
 /*
-
 Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
@@ -27,63 +26,55 @@ INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
 CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
+ */
+package org.lockss.plugin.clockss.pap;
 
-*/
-
-package org.lockss.plugin.clockss.onixbooks;
+import org.apache.commons.io.FilenameUtils;
+import org.lockss.daemon.PluginException;
+import org.lockss.extractor.ArticleMetadata;
+import org.lockss.extractor.FileMetadataExtractor;
+import org.lockss.extractor.MetadataTarget;
+import org.lockss.plugin.CachedUrl;
+import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
+import org.lockss.plugin.clockss.onixbooks.Onix3LongSourceXmlMetadataExtractorFactory;
+import org.lockss.util.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.commons.io.FilenameUtils;
-import org.lockss.util.*;
-import org.lockss.daemon.*;
-import org.lockss.extractor.*;
+public class PapOnix3SourceXmlMetadataExtractorFactory extends Onix3LongSourceXmlMetadataExtractorFactory {
 
-import org.lockss.plugin.CachedUrl;
-import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
-import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
+  private static Logger log = Logger.getLogger(PapOnix3SourceXmlMetadataExtractorFactory.class);
 
-
-public class Onix2LongSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
-  private static final Logger log = Logger.getLogger(Onix2LongSourceXmlMetadataExtractorFactory.class);
-
-  private static SourceXmlSchemaHelper Onix2Helper = null;
+  private static SourceXmlSchemaHelper PapOnix3Helper = null;
 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
-      String contentType)
-          throws PluginException {
-    return new Onix3LongSourceXmlMetadataExtractor();
+                                                           String contentType)
+      throws PluginException {
+    return new PapOnix3SourceXmlMetadataExtractor();
   }
+  public class PapOnix3SourceXmlMetadataExtractor extends Onix3LongSourceXmlMetadataExtractor {
 
-  public class Onix3LongSourceXmlMetadataExtractor extends SourceXmlMetadataExtractor {
-
-    
     @Override
-      protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
+    protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
       // Once you have it, just keep returning the same one. It won't change.
-      if (Onix2Helper != null) {
-        return Onix2Helper;
+      if (PapOnix3Helper == null) {
+        PapOnix3Helper = new PapOnixSchemaHelper();
       }
-      Onix2Helper = new Onix2LongSchemaHelper();
-      return Onix2Helper;
+      return PapOnix3Helper;
     }
 
-
-    /* In this case, build up the filename from just the isbn13 value of the AM 
-     * with suffix either .pdf or .epub
-     */
     @Override
     protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
-        ArticleMetadata oneAM) {
+                                                            ArticleMetadata oneAM) {
 
-      String filenameValue = oneAM.getRaw(helper.getFilenameXPathKey());
+      String fileName = oneAM.getRaw(helper.getFilenameXPathKey());
       String cuBase = FilenameUtils.getFullPath(cu.getUrl());
-      List<String> returnList = new ArrayList<String>();
-      returnList.add(cuBase + filenameValue + ".pdf");
-      returnList.add(cuBase + filenameValue + ".epub");
+      List<String> returnList = new ArrayList<>();
+      returnList.add(cuBase + fileName + ".pdf");
       return returnList;
     }
   }
+
 }

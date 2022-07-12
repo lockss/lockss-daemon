@@ -27,53 +27,52 @@ CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
  */
-package org.lockss.plugin.clockss.onixbooks;
+package org.lockss.plugin.clockss.pap;
 
-import org.apache.commons.io.FilenameUtils;
 import org.lockss.daemon.PluginException;
-import org.lockss.extractor.ArticleMetadata;
-import org.lockss.extractor.FileMetadataExtractor;
+import org.lockss.extractor.ArticleMetadataExtractor;
+import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.MetadataTarget;
-import org.lockss.plugin.CachedUrl;
-import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
+import org.lockss.plugin.*;
+import org.lockss.plugin.clockss.SourceXmlArticleIteratorFactory;
 import org.lockss.util.Logger;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Iterator;
+import java.util.regex.Pattern;
 
-public class PapOnix3SourceXmlMetadataExtractorFactory extends Onix3LongSourceXmlMetadataExtractorFactory {
+public class PapOnix3SourceXmlArticleIteratorFactory extends SourceXmlArticleIteratorFactory {
 
-  private static Logger log = Logger.getLogger(PapOnix3SourceXmlMetadataExtractorFactory.class);
+  protected static Logger log = Logger.getLogger(PapOnix3SourceXmlArticleIteratorFactory.class);
 
-  private static SourceXmlSchemaHelper PapOnix3Helper = null;
+  protected static final String ROOT_TEMPLATE = "\"%s\",base_url";
+  private static final String PATTERN_TEMPLATE = "\"%s%s/.*\\.xml$\",base_url, directory";
+
+  protected static final Pattern XML_PATTERN = Pattern.compile("/(.*)\\.xml$", Pattern.CASE_INSENSITIVE);
+
+  protected static final String XML_REPLACEMENT = "/$1.xml";
+
 
   @Override
-  public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
-                                                           String contentType)
+  public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
+                                                      MetadataTarget target)
       throws PluginException {
-    return new PapOnix3SourceXmlMetadataExtractor();
-  }
-  public class PapOnix3SourceXmlMetadataExtractor extends Onix3LongSourceXmlMetadataExtractor {
+    SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
 
-    @Override
-    protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
-      // Once you have it, just keep returning the same one. It won't change.
-      if (PapOnix3Helper == null) {
-        PapOnix3Helper = new PapOnixSchemaHelper();
-      }
-      return PapOnix3Helper;
-    }
+    builder.setSpec(target,
+        ROOT_TEMPLATE,
+        PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
 
-    @Override
-    protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
-                                                            ArticleMetadata oneAM) {
+    builder.addAspect(XML_PATTERN,
+        XML_REPLACEMENT,
+        ArticleFiles.ROLE_ARTICLE_METADATA);
 
-      String fileName = oneAM.getRaw(helper.getFilenameXPathKey());
-      String cuBase = FilenameUtils.getFullPath(cu.getUrl());
-      List<String> returnList = new ArrayList<>();
-      returnList.add(cuBase + fileName + ".pdf");
-      return returnList;
-    }
+    return builder.getSubTreeArticleIterator();
   }
 
+
+  @Override
+  public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
+      throws PluginException {
+    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
+  }
 }
