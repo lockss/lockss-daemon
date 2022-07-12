@@ -44,7 +44,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>1</string>
+        <string>2</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
@@ -141,10 +141,11 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>au_crawlrules</string>
         <list>
             <string>1,"^https?://%s/content/%s/%s", base_url_host, journal_id, volume_name</string>
-            <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff2?)(\?itok=[^/]*)?$", base_url_host</string>
+            <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff2?)(\?(v|itok)=[^/]*)?$", base_url_host</string>
             <string>1,"https://cdnjs.cloudflare.com/"</string>
             <string>1,"https://semantic-ui.com/"</string>
             <string>1,"https://code.jquery.com/"</string>
+            <string>1,"https://fonts.gstatic.com/"</string>
             <string>1,"https?://(fonts|ajax).googleapis.com/"</string>
             <string>1,"https://themes.googleusercontent.com/"</string>
             <!--
@@ -180,6 +181,27 @@ POSSIBILITY OF SUCH DAMAGE.
     <entry>
         <string>au_url_normalizer</string>
         <string>org.lockss.plugin.highwire.scolaris.HighWireScolarisUrlNormalizer</string>
+    </entry>
+    <entry>
+        <string>plugin_article_iterator_factory</string>
+        <string>org.lockss.plugin.highwire.scolaris.HighWireScolarisArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>plugin_article_metadata_extractor_factory</string>
+        <string>org.lockss.plugin.highwire.scolaris.HighWireScolarisArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>text/html_metadata_extractor_factory_map</string>
+        <map>
+            <entry>
+                <string>*;DublinCore</string>
+                <string>org.lockss.plugin.highwire.HighWireJCoreHtmlMetadataExtractorFactory</string>
+            </entry>
+        </map>
+    </entry>
+    <entry>
+        <string>text/html_filter_factory</string>
+        <string>org.lockss.plugin.highwire.scolaris.HighWireScolarisHtmlHashFilterFactory</string>
     </entry>
     <entry>
         <string>plugin_fetch_rate_limiter_source</string>
