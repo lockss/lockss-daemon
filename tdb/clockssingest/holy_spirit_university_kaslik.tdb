@@ -22,7 +22,7 @@
       param[journal_abbr] = aebj
       implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
 
-      au < manifest ; exists ; 2022 ; Arab Economic and Business Journal (AEBJ) Volume 14 ; 14 ; >
+      au < testing ; exists ; 2022 ; Arab Economic and Business Journal (AEBJ) Volume 14 ; 14 ; >
 
   }
 
