@@ -55,7 +55,7 @@ import org.apache.http.impl.io.HttpTransportMetricsImpl;
 import org.apache.http.impl.io.SessionOutputBufferImpl;
 import org.apache.http.message.BasicHttpResponse;
 import org.apache.http.message.BasicStatusLine;
-import org.lockss.laaws.V2AuMover.DigestCachedUrl;
+import org.lockss.laaws.DigestCachedUrl;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.util.CIProperties;
@@ -70,6 +70,7 @@ public class CachedUrlRequestBody extends RequestBody {
   private final MediaType contentType;
   private final CachedUrl artifactCu;
   private final DigestCachedUrl dcu;
+  private CountingInputStream cis;
 
   public CachedUrlRequestBody(DigestCachedUrl dcu, MediaType contentType) {
     if (dcu == null) {
@@ -170,8 +171,10 @@ public class CachedUrlRequestBody extends RequestBody {
     BasicHttpResponse response = new BasicHttpResponse(STATUS_LINE_OK);
     // Create an InputStreamEntity from artifact InputStream
     try {
-      DigestInputStream dis = new DigestInputStream(artifactCu.getUnfilteredInputStream(),
-          dcu.createMessageDigest()) ;
+      cis = new CountingInputStream(artifactCu.getUnfilteredInputStream());
+      dcu.setContentCountingInputStream(cis);
+      DigestInputStream dis = new DigestInputStream(cis,
+                                                    dcu.createMessageDigest());
       response.setEntity(new InputStreamEntity(dis));
       // Add artifact headers into HTTP response
       CIProperties props = artifactCu.getProperties();
@@ -207,13 +210,13 @@ public class CachedUrlRequestBody extends RequestBody {
                  artifactCu);
       if (inputStream != null) {
         CountingInputStream cis = new CountingInputStream(inputStream);
+        dcu.setTotalCountingInputStream(cis);
         source = Okio.source(cis);
         sink.writeAll(source);
         long avail = inputStream.available();
         if (avail > 0) {
           log.error("Still CU bytes available after sink.writeAll(): " + avail);
         }
-        dcu.setBytesMoved(cis.getByteCount());
       }
     } catch (Exception e) {
       log.error("Exception writing CU body to V2: " + artifactCu, e);

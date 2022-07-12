@@ -93,11 +93,11 @@ import okhttp3.logging.HttpLoggingInterceptor.Level;
 import okio.BufferedSink;
 import okio.Okio;
 import org.apache.commons.io.IOUtils;
-import org.lockss.laaws.model.rs.ArtifactData;
-import org.lockss.laaws.V2AuMover.DigestCachedUrl;
+import org.lockss.laaws.DigestCachedUrl;
 import org.lockss.laaws.client.auth.ApiKeyAuth;
 import org.lockss.laaws.client.auth.Authentication;
 import org.lockss.laaws.client.auth.HttpBasicAuth;
+import org.lockss.laaws.model.rs.ArtifactData;
 import org.lockss.util.Logger;
 
 public class V2RestClient {

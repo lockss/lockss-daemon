@@ -28,6 +28,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.laaws;
 import java.util.*;
+import org.apache.commons.collections4.*;
+import org.apache.commons.collections4.multimap.*;
 import org.lockss.util.*;
 import org.lockss.laaws.V2AuMover.Phase;
 
@@ -50,12 +52,16 @@ public class Counters {
     CONTENT_BYTES_VERIFIED,
     COPY_TIME,
     VERIFY_TIME,
+    INDEX_TIME,
     STATE_TIME
   }
 
   Map<CounterType,Counter> counters = new HashMap<>();
+  MultiValuedMap<CounterType,DigestCachedUrl> inProgressDcuMap =
+    new ArrayListValuedHashMap<>();
   private List<String> errors = new ArrayList<>();
   private Counters parent;
+
 
   public Counters() {
     for (CounterType type : CounterType.values()) {
@@ -73,7 +79,22 @@ public class Counters {
   }
 
   public long getVal(CounterType type) {
-    return counters.get(type).getVal();
+    return counters.get(type).getVal() + inProgressBytes(type);
+  }
+
+  public synchronized long inProgressBytes(CounterType type) {
+    long sum = 0;
+    for (DigestCachedUrl dcu : inProgressDcuMap.get(type)) {
+      switch (type) {
+      case BYTES_MOVED:
+        sum += dcu.getTotalBytesRead();
+        break;
+      case CONTENT_BYTES_MOVED:
+        sum += dcu.getContentBytesRead();
+        break;
+      }
+    }
+    return sum;
   }
 
   public boolean isNonZero(CounterType type) {
@@ -116,6 +137,26 @@ public class Counters {
     synchronized (errors) {
       errors.addAll(ctrs.errors);
     }
+  }
+
+  public synchronized void addInProgressDcu(CounterType type,
+                                            DigestCachedUrl dcu) {
+    inProgressDcuMap.put(type, dcu);
+    if (parent != null) {
+      parent.addInProgressDcu(type, dcu);
+    }
+  }
+
+  public synchronized void removeInProgressDcu(CounterType type,
+                                               DigestCachedUrl dcu) {
+    inProgressDcuMap.removeMapping(type, dcu);
+    if (parent != null) {
+      parent.removeInProgressDcu(type, dcu);
+    }
+  }
+
+  public synchronized void clearInProgressDcus(CounterType type) {
+    inProgressDcuMap.remove(type);
   }
 
   /** Individual counter */

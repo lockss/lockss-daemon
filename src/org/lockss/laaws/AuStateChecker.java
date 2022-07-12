@@ -228,15 +228,19 @@ public class AuStateChecker extends Worker {
         v1.keySet().stream().filter(key -> !key.equalsIgnoreCase("reserved.repository"))
             .forEach(key -> v1Config.putAuConfigItem(key, v1.get(key)));
         v2Config = cfgApiClient.getAuConfig(au.getAuId());
-        if (v2Config.equals(v1Config)) {
+        if (v2Config == null) {
+          if (!v1Config.getAuConfig().isEmpty()) {
+            err = auName + ": Not configured in V2.";
+            log.error(err);
+          }
+        } else if (v2Config.equals(v1Config)) {
           log.info("Au Config is the same");
-        }
-        else {
+        } else {
           if (log.isDebug()) {
             log.debug("AuConfiguration v1Bean: " + v1Config.toString());
             log.debug("AuConfiguration v2Bean: "+ v2Config.toString());
           }
-          err = auName + ": V2 Au Configuration does not match.";
+          err = auName + ": V2 AU Configuration does not match.";
           log.error(err);
         }
       }

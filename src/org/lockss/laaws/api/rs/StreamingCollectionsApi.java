@@ -49,10 +49,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.lockss.laaws.model.rs.ArtifactData;
-import org.lockss.laaws.V2AuMover.DigestCachedUrl;
+import org.lockss.laaws.DigestCachedUrl;
 import org.lockss.laaws.client.*;
 import org.lockss.laaws.model.rs.Artifact;
+import org.lockss.laaws.model.rs.ArtifactData;
 
 public class StreamingCollectionsApi extends CollectionsApi {
 

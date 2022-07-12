@@ -48,7 +48,7 @@ public class MigrationManager extends BaseLockssManager
   static final String STATUS_RUNNING = "running";
   static final String STATUS_ACTIVE_LIST = "active_list";
   static final String STATUS_FINISHED_LIST = "finished_list";
-  static final String STATUS_STATUS = "status";
+  static final String STATUS_STATUS = "status_list";
   static final String STATUS_INSTRUMENTS = "instrument_list";
   static final String STATUS_ERRORS = "errors";
   static final String STATUS_PROGRESS = "progress";
@@ -166,6 +166,14 @@ public class MigrationManager extends BaseLockssManager
 
     public boolean isVerify() {
       return (bits & VERIFY_BIT) != 0;
+    }
+
+    public boolean isCopyOnly() {
+      return (bits == COPY_BIT);
+    }
+
+    public boolean isVerifyOnly() {
+      return (bits == VERIFY_BIT);
     }
 
 

@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Queue;
-import org.lockss.laaws.V2AuMover.DigestCachedUrl;
 import org.lockss.laaws.api.rs.StreamingCollectionsApi;
 import org.lockss.laaws.api.cfg.AusApi;
 import org.lockss.laaws.client.ApiException;

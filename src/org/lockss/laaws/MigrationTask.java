@@ -71,6 +71,24 @@ public class MigrationTask {
   CountUpDownLatch waitLatch;
   BiConsumer completionAction;
 
+  public String toString() {
+    switch (type) {
+    case COPY_CU_VERSIONS:
+      return "Copy " + cu.getUrl();
+    case CHECK_CU_VERSIONS:
+      return "Verify " + cu.getUrl();
+    case COPY_AU_STATE:
+      return "Copy state " + au.getName();
+    case CHECK_AU_STATE:
+      return "Verify state " + au.getName();
+    case FINISH_AU_BULK:
+      return "Finish bulk " + au.getName();
+    case FINISH_ALL:
+      return "Finish";
+    }
+    return "Unknown task";
+  }
+
 
   public MigrationTask(V2AuMover mover, TaskType type) {
     this.auMover = mover;
@@ -202,7 +220,7 @@ public class MigrationTask {
   }
 
 
-  public void complete(Exception e) {
+  public void complete(Throwable e) {
     if (completionAction != null) {
       completionAction.accept(this, e);
     }

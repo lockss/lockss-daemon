@@ -33,7 +33,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Queue;
-import org.lockss.laaws.V2AuMover.DigestCachedUrl;
 import org.lockss.laaws.client.ApiException;
 import org.lockss.laaws.model.rs.Artifact;
 import org.lockss.laaws.model.rs.ArtifactPageInfo;
@@ -75,6 +74,7 @@ public class CuMover extends Worker {
         log.warning("Unable to determine which V2 Urls have already been moved, continuing.");
       }
       moveCuVersions(v2Url, cu, cuArtifacts);
+      ctrs.incr(CounterType.URLS_MOVED);
     } finally {
       AuUtil.safeRelease(cu);
     }
@@ -114,7 +114,6 @@ public class CuMover extends Worker {
       }
       while(!isAbort() && cuQueue.peek() != null) {
         moveNextCuVersion(auid, v2Url, cuQueue);
-        ctrs.incr(CounterType.URLS_MOVED);
       }
     }
   }
@@ -164,7 +163,7 @@ public class CuMover extends Worker {
   }
 
   /**
-   * Make an asynchronous rest call to the V2 repository to create a new artifact.
+   * Make a synchronous rest call to the V2 repository to create a new artifact.
    *
    * @param auid           au identifier for the CachedUrl we are moving.
    * @param v2Url          the uri  for the CachedUrl we are moving.
@@ -177,14 +176,21 @@ public class CuMover extends Worker {
       CachedUrl cu, String collectionId) throws ApiException {
     log.debug3("createArtifact("+v2Url+")");
     DigestCachedUrl dcu = new DigestCachedUrl(cu);
-    Artifact uncommitted = collectionsApi.createArtifact(collectionId, auid, v2Url, dcu,
-        collectionDate);
-    if (uncommitted != null) {
-      if (log.isDebug3()) {
-        log.debug3("createArtifact returned,  content bytes: " +
-                   cu.getContentSize() + ", total: " + dcu.getBytesMoved());
+    try {
+      ctrs.addInProgressDcu(CounterType.CONTENT_BYTES_MOVED, dcu);
+      ctrs.addInProgressDcu(CounterType.BYTES_MOVED, dcu);
+      Artifact uncommitted = collectionsApi.createArtifact(collectionId, auid, v2Url, dcu, collectionDate);
+      if (uncommitted != null) {
+        if (log.isDebug3()) {
+          log.debug3("createArtifact returned,  content bytes: " +
+                     cu.getContentSize() + ", total: " + dcu.getContentBytesRead());
+        }
+        commitArtifact(uncommitted, dcu);
       }
-      commitArtifact(uncommitted, dcu);
+    } finally {
+      // Ensure it's removed in case didn't happen in commitArtifact()
+       ctrs.removeInProgressDcu(CounterType.CONTENT_BYTES_MOVED, dcu);
+       ctrs.removeInProgressDcu(CounterType.BYTES_MOVED, dcu);
     }
   }
 
@@ -213,8 +219,10 @@ public class CuMover extends Worker {
       }
       log.debug3("Successfully committed artifact " + committed.getId());
       ctrs.incr(CounterType.ARTIFACTS_MOVED);
-      ctrs.add(CounterType.CONTENT_BYTES_MOVED, cu.getContentSize());
-      ctrs.add(CounterType.BYTES_MOVED, dcu.getBytesMoved());
+      ctrs.removeInProgressDcu(CounterType.CONTENT_BYTES_MOVED, dcu);
+      ctrs.removeInProgressDcu(CounterType.BYTES_MOVED, dcu);
+      ctrs.add(CounterType.CONTENT_BYTES_MOVED, dcu.getContentBytesMoved());
+      ctrs.add(CounterType.BYTES_MOVED, dcu.getTotalBytesMoved());
     }
   }
 

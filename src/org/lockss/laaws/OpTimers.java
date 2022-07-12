@@ -30,6 +30,7 @@ package org.lockss.laaws;
 import org.apache.commons.lang3.time.StopWatch;
 import java.util.*;
 import org.lockss.util.*;
+import org.lockss.laaws.MigrationManager.OpType;
 import org.lockss.laaws.V2AuMover.Phase;
 import static org.lockss.laaws.Counters.CounterType;
 
@@ -123,69 +124,130 @@ public class OpTimers {
 
 
 
-  public void addCounterStatus(StringBuilder sb, Phase phase) {
-    addCounterStatus(sb, phase, null);
-  }
-
-  public void addCounterStatus(StringBuilder sb, Phase phase,
-                               String separator) {
-    // No stats if not started yet
+  private void addPhaseCounterStatus(StringBuilder sb, OpType opType,
+                                     Phase phase) {
     if (!hasStarted(phase)) {
       return;
     }
+    sb.append(phase.pastPart());
+    sb.append(" ");
+    sb.append(StringUtil.bigNumberOfUnits(ctrs.getVal(urlCounter(phase)),
+                                          "URL"));
+    if (opType.isCopy() || (opType.isVerify() && auMover.isCompareBytes())) {
+      if (phase == Phase.COPY && ctrs.isNonZero(CounterType.URLS_SKIPPED)) {
+        sb.append(" (");
+        sb.append(StringUtil.bigNumberOfUnits(ctrs.getVal(CounterType.URLS_SKIPPED), "URL"));
+        sb.append(" skipped)");
+      }
+      sb.append(", ");
+      sb.append(StringUtil.bigNumberOfUnits(ctrs.getVal(versionCounter(phase)),
+                                            "version"));
+      if (phase == Phase.COPY && ctrs.isNonZero(CounterType.ARTIFACTS_SKIPPED)) {
+        sb.append(" (");
+        sb.append(StringUtil.bigNumberOfUnits(ctrs.getVal(CounterType.ARTIFACTS_SKIPPED), "version"));
+        sb.append(" skipped)");
+      }
+      sb.append(", ");
+      sb.append(StringUtil.bigNumberOfUnits(ctrs.getVal(byteCounter(phase)),
+                                            "byte"));
+      sb.append(", in ");
+      sb.append(StringUtil.timeIntervalToString(getElapsedTime(phase)));
+      if (ctrs.getVal(byteCounter(phase)) > 0) {
+        sb.append(", at ");
+        sb.append(StringUtil.byteRateToString(ctrs.getVal(byteCounter(phase)),
+                                              getElapsedTime(phase)));
+      }
+    } else {
+      sb.append(" in ");
+      sb.append(StringUtil.timeIntervalToString(getElapsedTime(phase)));
+    }
+  }
+
+  public void addCounterStatus(StringBuilder sb, OpType opType) {
+    addCounterStatus(sb, opType, null);
+  }
+
+  CounterType urlCounter(Phase phase) {
+    switch (phase) {
+    case COPY:
+      return CounterType.URLS_MOVED;
+    case VERIFY:
+      return CounterType.URLS_VERIFIED;
+    }
+    return CounterType.URLS_MOVED;
+  }
+
+  CounterType versionCounter(Phase phase) {
+    switch (phase) {
+    case COPY:
+      return CounterType.ARTIFACTS_MOVED;
+    case VERIFY:
+      return CounterType.ARTIFACTS_VERIFIED;
+    }
+    return CounterType.ARTIFACTS_MOVED;
+  }
+
+  CounterType byteCounter(Phase phase) {
+    switch (phase) {
+    case COPY:
+      return CounterType.CONTENT_BYTES_MOVED;
+    case VERIFY:
+      return CounterType.CONTENT_BYTES_VERIFIED;
+    }
+    return CounterType.CONTENT_BYTES_MOVED;
+  }
+
+  public void addCounterStatus(StringBuilder sb, OpType opType,
+                               String separator) {
     Counters ctrs = getCounters();
     if (separator != null) {
       sb.append(separator);
     }
-    sb.append(StringUtil.bigNumberOfUnits(ctrs.getVal(CounterType.URLS_MOVED),
-                                          "URL"));
-    if (ctrs.isNonZero(CounterType.URLS_SKIPPED)) {
-      sb.append(" (");
-      sb.append(StringUtil.bigNumberOfUnits(ctrs.getVal(CounterType.URLS_SKIPPED), "URL"));
-      sb.append(" skipped)");
+    boolean reportedCopy = false;
+    if (opType.isCopy() && hasStarted(Phase.COPY)) {
+      addPhaseCounterStatus(sb, opType, Phase.COPY);
+      reportedCopy = true;
     }
-    sb.append(", ");
-    sb.append(StringUtil.bigNumberOfUnits(ctrs.getVal(CounterType.ARTIFACTS_MOVED),
-                                          "version"));
-    if (ctrs.isNonZero(CounterType.ARTIFACTS_SKIPPED)) {
-      sb.append(" (");
-      sb.append(StringUtil.bigNumberOfUnits(ctrs.getVal(CounterType.ARTIFACTS_SKIPPED), "version"));
-      sb.append(" skipped)");
+    if (opType.isVerify() && hasStarted(Phase.VERIFY)) {
+      if (reportedCopy) {
+        sb.append(". ");
+      }
+      addPhaseCounterStatus(sb, opType, Phase.VERIFY);
     }
-    sb.append(", ");
-    sb.append(StringUtil.bigNumberOfUnits(ctrs.getVal(CounterType.BYTES_MOVED),
-                                          "byte"));
-    sb.append(", in ");
-    sb.append(StringUtil.timeIntervalToString(getElapsedTime(phase)));
-    if (ctrs.getVal(CounterType.BYTES_MOVED) > 0) {
-      sb.append(", at ");
-      sb.append(StringUtil.byteRateToString(ctrs.getVal(CounterType.BYTES_MOVED),
-                                            getElapsedTime(phase)));
 
-    }
     if (ctrs.getVal(CounterType.VERIFY_TIME) > 0 ||
         ctrs.getVal(CounterType.STATE_TIME) > 0) {
       double c = ctrs.getVal(CounterType.COPY_TIME);
       double v = ctrs.getVal(CounterType.VERIFY_TIME);
       double s = ctrs.getVal(CounterType.STATE_TIME);
-      double t = c + v + s;
+      double i = ctrs.getVal(CounterType.INDEX_TIME);
+      double t = c + v + s + i;
       double cp = Math.round(100*c/t);
       double vp = Math.round(100*v/t);
       double sp = Math.round(100*s/t);
+      double ip = Math.round(100*i/t);
       if (log.isDebug3()) {
         log.debug3("c: " + c + ", v: " + v + ", s: " + s + ", t: " + t +
-                   ", cp: " + cp + ", vp: " + vp + ", sp: " + sp);
+                   ", cp: " + cp + ", vp: " + vp +
+                   ", sp: " + sp + ", ip: " + ip);
       }
       sb.append(" (");
-      appendPhaseStats(sb, ctrs, phase, cp, CounterType.BYTES_MOVED, " copy");
+      appendPhaseStats(sb, ctrs, Phase.COPY, cp, CounterType.CONTENT_BYTES_MOVED, " copy");
       if (vp != 0.0) {
         if (cp != 0.0) {
           sb.append(", ");
         }
-        appendPhaseStats(sb, ctrs, phase, vp, CounterType.BYTES_VERIFIED, " verify");
+        appendPhaseStats(sb, ctrs, Phase.VERIFY, vp, CounterType.CONTENT_BYTES_VERIFIED, " verify");
+      }
+      if (ip != 0.0) {
+        if (cp + vp + sp != 0.0) {
+          sb.append(", ");
+        }
+        sb.append(V2AuMover.percentFormat(ip));
+        sb.append("% index");
       }
       if (sp != 0.0) {
-        if (cp + vp != 0.0) {
+        if (cp + vp + ip != 0.0) {
           sb.append(", ");
         }
         sb.append(V2AuMover.percentFormat(sp));

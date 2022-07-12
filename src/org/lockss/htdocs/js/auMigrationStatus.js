@@ -6,10 +6,19 @@ class AuMigrationStatus extends React.Component {
     this.state = {
       running: false,
       fetchError: true,
-      status: "Loading status",
+      statusList: [ "Loading status" ],
       delay: 1000,
     };
   }
+
+    StatusList() {
+        if (this.state.statusList === undefined) {
+            return null;
+        }
+        return (
+                <div>Status: {this.state.statusList.map((msg, index) => <div>{msg}<br /></div>)}</div>
+        )
+    }
 
     InstrumentList() {
         if (this.state.instrumentList === undefined) {
@@ -87,7 +96,7 @@ class AuMigrationStatus extends React.Component {
           this.setState({
             running: result.running,
             fetchError: false,
-            status: result.status,
+            statusList: result.status_list,
             instrumentList: result.instrument_list,
             activeList: result.active_list,
             finishedList: result.finished_list,
@@ -100,7 +109,7 @@ class AuMigrationStatus extends React.Component {
 
             this.setState({
               fetchError: true,
-              status: "Could not fetch status information",
+              statusList: [ "Could not fetch status information" ],
               delay: 5000,
             });
         }
@@ -110,8 +119,7 @@ class AuMigrationStatus extends React.Component {
   render() {
     return (
       <div>
-        <div>Running: {this.state.fetchError ? "Unknown" : this.state.running ? "Yes" : "No"}</div>
-        <div>Status: {this.state.status}</div>
+            {this.StatusList()}
             {this.InstrumentList()}
             {this.ActiveList()}
             {this.FinishedList()}
