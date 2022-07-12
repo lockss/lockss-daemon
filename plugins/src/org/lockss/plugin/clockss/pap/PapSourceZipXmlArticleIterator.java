@@ -1,4 +1,4 @@
-package org.lockss.plugin.clockss.onixbooks;
+package org.lockss.plugin.clockss.pap;
 
 import org.lockss.plugin.clockss.SourceZipXmlArticleIteratorFactory;
 
