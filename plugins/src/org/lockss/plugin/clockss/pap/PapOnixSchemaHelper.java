@@ -67,7 +67,7 @@ public class PapOnixSchemaHelper extends Onix3BooksSchemaHelper {
   /**
    * path to each metadata entry
    */
-  static private final String Pap_article_node = "/ONIXData/ProductData/Product";
+  static private final String Pap_article_node = "//ProductData/Product";
 
   /* Under an item node, the interesting bits live at these relative locations */
   static private final String Pap_recordId = "RecordReference";
