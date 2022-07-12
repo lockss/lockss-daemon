@@ -98,21 +98,27 @@ public class BioOneMetadataExtractorFactory extends SourceXmlMetadataExtractorFa
 				}
 			}
 
-			thisAM.put(MetadataField.FIELD_PUBLISHER, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_pubname));
+			// Bioone prefer different publisher name, for AES content it prefer one from tdb file.
+			// For others, it prefer from publisher
 
-			/*
-			Comment out these changes, since we like to get publisher name from the xml files
-			String publisherName = "BioOne";
+			if (cu.getUrl().contains("aes-released")) {
+				String publisherName = "BioOne";
+				String providerName = "BioOne";
 
-			TdbAu tdbau = cu.getArchivalUnit().getTdbAu();
-			if (tdbau != null) {
-				publisherName =  tdbau.getPublisherName();
+				TdbAu tdbau = cu.getArchivalUnit().getTdbAu();
+				if (tdbau != null) {
+					publisherName = tdbau.getPublisherName();
+					providerName = tdbau.getProviderName();
+				}
+				log.debug3("postCookProcess publisherName = " + publisherName);
+				log.debug3("postCookProcess providerName in tdbau = " + providerName);
+
+				thisAM.put(MetadataField.FIELD_PUBLISHER, publisherName);
+				thisAM.put(MetadataField.FIELD_PROVIDER, providerName);
+			} else {
+				thisAM.put(MetadataField.FIELD_PUBLISHER, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_pubname));
+				thisAM.put(MetadataField.FIELD_PROVIDER, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_pubname));
 			}
-			
-			thisAM.put(MetadataField.FIELD_PUBLISHER, publisherName);
-			 */
-
-			thisAM.put(MetadataField.FIELD_PROVIDER, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_pubname));
 		}
 
 	}
