@@ -2516,15 +2516,15 @@
     au < manifest ; exists ; 1997 ; Engineering, Construction and Architectural Management Volume 4 ; 4 ; >
     au < manifest ; exists ; 1998 ; Engineering, Construction and Architectural Management Volume 5 ; 5 ; >
     au < ready ; exists ; 1999 ; Engineering, Construction and Architectural Management Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2000 ; Engineering, Construction and Architectural Management Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2001 ; Engineering, Construction and Architectural Management Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2002 ; Engineering, Construction and Architectural Management Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2003 ; Engineering, Construction and Architectural Management Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2004 ; Engineering, Construction and Architectural Management Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2005 ; Engineering, Construction and Architectural Management Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2006 ; Engineering, Construction and Architectural Management Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2007 ; Engineering, Construction and Architectural Management Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2008 ; Engineering, Construction and Architectural Management Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2000 ; Engineering, Construction and Architectural Management Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2001 ; Engineering, Construction and Architectural Management Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2002 ; Engineering, Construction and Architectural Management Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2003 ; Engineering, Construction and Architectural Management Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2004 ; Engineering, Construction and Architectural Management Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2005 ; Engineering, Construction and Architectural Management Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2006 ; Engineering, Construction and Architectural Management Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2007 ; Engineering, Construction and Architectural Management Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2008 ; Engineering, Construction and Architectural Management Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Engineering, Construction and Architectural Management Volume 16 ; 16 ; >
     au < frozen ; exists ; 2010 ; Engineering, Construction and Architectural Management Volume 17 ; 17 ; >
     au < frozen ; exists ; 2011 ; Engineering, Construction and Architectural Management Volume 18 ; 18 ; >
@@ -2565,7 +2565,7 @@
     au < manifest ; exists ; 1998 ; Environmental Management and Health Volume 9 ; 9 ; >
     au < ready ; exists ; 1999 ; Environmental Management and Health Volume 10 ; 10 ; >
     au < finished ; crawling ; 2000 ; Environmental Management and Health Volume 11 ; 11 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2001 ; Environmental Management and Health Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2001 ; Environmental Management and Health Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2002 ; Environmental Management and Health Volume 13 ; 13 ; >
 
   }
@@ -2600,16 +2600,16 @@
     au < manifest ; exists ; 1997 ; Equal Opportunities International Volume 16 ; 16 ; >
     au < manifest ; exists ; 1998 ; Equal Opportunities International Volume 17 ; 17 ; >
     au < ready ; exists ; 1999 ; Equal Opportunities International Volume 18 ; 18 ; >
-    au < crawling ; exists ; 2000 ; Equal Opportunities International Volume 19 ; 19 ; >
+    au < frozen ; exists ; 2000 ; Equal Opportunities International Volume 19 ; 19 ; >
     au < ready ; exists ; 2001 ; Equal Opportunities International Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2002 ; Equal Opportunities International Volume 21 ; 21 ; >
-    au < crawling ; exists ; 2003 ; Equal Opportunities International Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2004 ; Equal Opportunities International Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2005 ; Equal Opportunities International Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2006 ; Equal Opportunities International Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2007 ; Equal Opportunities International Volume 26 ; 26 ; >
-    au < crawling ; exists ; 2008 ; Equal Opportunities International Volume 27 ; 27 ; >
-    au < crawling ; exists ; 2009 ; Equal Opportunities International Volume 28 ; 28 ; >
+    au < frozen ; exists ; 2002 ; Equal Opportunities International Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2003 ; Equal Opportunities International Volume 22 ; 22 ; >
+    au < frozen ; exists ; 2004 ; Equal Opportunities International Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2005 ; Equal Opportunities International Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2006 ; Equal Opportunities International Volume 25 ; 25 ; >
+    au < frozen ; exists ; 2007 ; Equal Opportunities International Volume 26 ; 26 ; >
+    au < frozen ; exists ; 2008 ; Equal Opportunities International Volume 27 ; 27 ; >
+    au < frozen ; exists ; 2009 ; Equal Opportunities International Volume 28 ; 28 ; >
 
   }
 
@@ -2652,8 +2652,8 @@
     param[journal_issn] = 1757-0980
     comment[journal_id] = eihsc
 
-    au < crawling ; exists ; 2008 ; Ethnicity and Inequalities in Health and Social Care Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2009 ; Ethnicity and Inequalities in Health and Social Care Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2008 ; Ethnicity and Inequalities in Health and Social Care Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2009 ; Ethnicity and Inequalities in Health and Social Care Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Ethnicity and Inequalities in Health and Social Care Volume 3 ; 3 ; >
     au < frozen ; exists ; 2011 ; Ethnicity and Inequalities in Health and Social Care Volume 4 ; 4 ; >
     au < finished ; crawling ; 2012 ; Ethnicity and Inequalities in Health and Social Care Volume 5 ; 5 ; reingest4.clockss.org:8082 >
@@ -2673,10 +2673,10 @@
     param[journal_issn] = 1450-2194
     comment[journal_id] = emjb
 
-    au < crawling ; exists ; 2006 ; EuroMed Journal of Business Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2007 ; EuroMed Journal of Business Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2008 ; EuroMed Journal of Business Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2009 ; EuroMed Journal of Business Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2006 ; EuroMed Journal of Business Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2007 ; EuroMed Journal of Business Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2008 ; EuroMed Journal of Business Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2009 ; EuroMed Journal of Business Volume 4 ; 4 ; >
     au < finished ; crawling ; 2010 ; EuroMed Journal of Business Volume 5 ; 5 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2011 ; EuroMed Journal of Business Volume 6 ; 6 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2012 ; EuroMed Journal of Business Volume 7 ; 7 ; reingest3.clockss.org:8083 >
@@ -2717,15 +2717,15 @@
     au < manifest ; exists ; 1998 ; European Business Review Volume 98 ; 98 ; >
     au < ready ; exists ; 1999 ; European Business Review Volume 99 ; 99 ; >
     au < frozen ; exists ; 2000 ; European Business Review Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2001 ; European Business Review Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2002 ; European Business Review Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2003 ; European Business Review Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2004 ; European Business Review Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2005 ; European Business Review Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2006 ; European Business Review Volume 18 ; 18 ; >
-    au < crawling ; exists ; 2007 ; European Business Review Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2008 ; European Business Review Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2009 ; European Business Review Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2001 ; European Business Review Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2002 ; European Business Review Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2003 ; European Business Review Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2004 ; European Business Review Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2005 ; European Business Review Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2006 ; European Business Review Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2007 ; European Business Review Volume 19 ; 19 ; >
+    au < frozen ; exists ; 2008 ; European Business Review Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2009 ; European Business Review Volume 21 ; 21 ; >
     au < frozen ; exists ; 2010 ; European Business Review Volume 22 ; 22 ; >
     au < frozen ; exists ; 2011 ; European Business Review Volume 23 ; 23 ; >
     au < frozen ; exists ; 2012 ; European Business Review Volume 24 ; 24 ; >
@@ -2755,15 +2755,15 @@
 
     au < manifest ; exists ; 1998 ; European Journal of Innovation Management Volume 1 ; 1 ; >
     au < ready ; exists ; 1999 ; European Journal of Innovation Management Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2000 ; European Journal of Innovation Management Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2001 ; European Journal of Innovation Management Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2002 ; European Journal of Innovation Management Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2003 ; European Journal of Innovation Management Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2004 ; European Journal of Innovation Management Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2005 ; European Journal of Innovation Management Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2006 ; European Journal of Innovation Management Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2007 ; European Journal of Innovation Management Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2008 ; European Journal of Innovation Management Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2000 ; European Journal of Innovation Management Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2001 ; European Journal of Innovation Management Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2002 ; European Journal of Innovation Management Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2003 ; European Journal of Innovation Management Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2004 ; European Journal of Innovation Management Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2005 ; European Journal of Innovation Management Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2006 ; European Journal of Innovation Management Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2007 ; European Journal of Innovation Management Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2008 ; European Journal of Innovation Management Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; European Journal of Innovation Management Volume 12 ; 12 ; >
     au < frozen ; exists ; 2010 ; European Journal of Innovation Management Volume 13 ; 13 ; >
     au < frozen ; exists ; 2011 ; European Journal of Innovation Management Volume 14 ; 14 ; >
@@ -2827,13 +2827,13 @@
     au < ready ; exists ; 1999 ; European Journal of Marketing Volume 33 ; 33 ; >
     au < frozen ; exists ; 2000 ; European Journal of Marketing Volume 34 ; 34 ; >
     au < frozen ; exists ; 2001 ; European Journal of Marketing Volume 35 ; 35 ; >
-    au < crawling ; exists ; 2002 ; European Journal of Marketing Volume 36 ; 36 ; >
-    au < crawling ; exists ; 2003 ; European Journal of Marketing Volume 37 ; 37 ; >
+    au < frozen ; exists ; 2002 ; European Journal of Marketing Volume 36 ; 36 ; >
+    au < frozen ; exists ; 2003 ; European Journal of Marketing Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 2004 ; European Journal of Marketing Volume 38 ; 38 ; >
-    au < crawling ; exists ; 2005 ; European Journal of Marketing Volume 39 ; 39 ; >
-    au < crawling ; exists ; 2006 ; European Journal of Marketing Volume 40 ; 40 ; >
-    au < crawling ; exists ; 2007 ; European Journal of Marketing Volume 41 ; 41 ; >
-    au < crawling ; exists ; 2008 ; European Journal of Marketing Volume 42 ; 42 ; >
+    au < frozen ; exists ; 2005 ; European Journal of Marketing Volume 39 ; 39 ; >
+    au < frozen ; exists ; 2006 ; European Journal of Marketing Volume 40 ; 40 ; >
+    au < frozen ; exists ; 2007 ; European Journal of Marketing Volume 41 ; 41 ; >
+    au < frozen ; exists ; 2008 ; European Journal of Marketing Volume 42 ; 42 ; >
     au < frozen ; exists ; 2009 ; European Journal of Marketing Volume 43 ; 43 ; >
     au < frozen ; exists ; 2010 ; European Journal of Marketing Volume 44 ; 44 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; European Journal of Marketing Volume 45 ; 45 ; >
@@ -2902,16 +2902,16 @@
     au < manifest ; exists ; 1997 ; Facilities Volume 15 ; 15 ; >
     au < manifest ; exists ; 1998 ; Facilities Volume 16 ; 16 ; >
     au < ready ; exists ; 1999 ; Facilities Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2000 ; Facilities Volume 18 ; 18 ; >
-    au < crawling ; exists ; 2001 ; Facilities Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2002 ; Facilities Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2003 ; Facilities Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2000 ; Facilities Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2001 ; Facilities Volume 19 ; 19 ; >
+    au < frozen ; exists ; 2002 ; Facilities Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2003 ; Facilities Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2004 ; Facilities Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2005 ; Facilities Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2005 ; Facilities Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2006 ; Facilities Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2007 ; Facilities Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2008 ; Facilities Volume 26 ; 26 ; >
-    au < crawling ; exists ; 2009 ; Facilities Volume 27 ; 27 ; >
+    au < frozen ; exists ; 2007 ; Facilities Volume 25 ; 25 ; >
+    au < frozen ; exists ; 2008 ; Facilities Volume 26 ; 26 ; >
+    au < frozen ; exists ; 2009 ; Facilities Volume 27 ; 27 ; >
     au < frozen ; exists ; 2010 ; Facilities Volume 28 ; 28 ; >
     au < frozen ; exists ; 2011 ; Facilities Volume 29 ; 29 ; >
     au < frozen ; exists ; 2012 ; Facilities Volume 30 ; 30 ; >
@@ -2940,17 +2940,17 @@
     comment[journal_id] = fs
 
     au < ready ; exists ; 1999 ; foresight Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2000 ; foresight Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2001 ; foresight Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2002 ; foresight Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2003 ; foresight Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2004 ; foresight Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2000 ; foresight Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2001 ; foresight Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2002 ; foresight Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2003 ; foresight Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2004 ; foresight Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2005 ; foresight Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2006 ; foresight Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2007 ; foresight Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2008 ; foresight Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2009 ; foresight Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2010 ; foresight Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2006 ; foresight Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2007 ; foresight Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2008 ; foresight Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2009 ; foresight Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2010 ; foresight Volume 12 ; 12 ; >
     au < frozen ; exists ; 2011 ; foresight Volume 13 ; 13 ; >
     au < frozen ; exists ; 2012 ; foresight Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; foresight Volume 15 ; 15 ; >
@@ -2978,8 +2978,8 @@
     comment[journal_id] = gm
     # online from 2008
 
-    au < crawling ; exists ; 2008 ; Gender in Management: An International Journal Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2009 ; Gender in Management: An International Journal Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2008 ; Gender in Management: An International Journal Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2009 ; Gender in Management: An International Journal Volume 24 ; 24 ; >
     au < frozen ; exists ; 2010 ; Gender in Management: An International Journal Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Gender in Management: An International Journal Volume 26 ; 26 ; >
     au < frozen ; exists ; 2012 ; Gender in Management: An International Journal Volume 27 ; 27 ; >
@@ -3032,13 +3032,13 @@
     comment[journal_id] = hbs
     comment[continued_by] = 1751-5637
 
-    au < crawling ; exists ; 2000 ; Handbook of Business Strategy Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2000 ; Handbook of Business Strategy Volume 1 ; 1 ; >
     au < doesNotExist ; doesNotExist ; 2001 ; Handbook of Business Strategy Volume 2 ; 2 ; >
     au < doesNotExist ; doesNotExist ; 2002 ; Handbook of Business Strategy Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2003 ; Handbook of Business Strategy Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2003 ; Handbook of Business Strategy Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2004 ; Handbook of Business Strategy Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2005 ; Handbook of Business Strategy Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2006 ; Handbook of Business Strategy Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2005 ; Handbook of Business Strategy Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2006 ; Handbook of Business Strategy Volume 7 ; 7 ; >
 
   }
 
@@ -3062,16 +3062,16 @@
     au < manifest ; exists ; 1997 ; Health Education Volume 97 ; 97 ; >
     au < manifest ; exists ; 1998 ; Health Education Volume 98 ; 98 ; >
     au < ready ; exists ; 1999 ; Health Education Volume 99 ; 99 ; >
-    au < crawling ; exists ; 2000 ; Health Education Volume 100 ; 100 ; >
-    au < crawling ; exists ; 2001 ; Health Education Volume 101 ; 101 ; >
-    au < crawling ; exists ; 2002 ; Health Education Volume 102 ; 102 ; >
-    au < crawling ; exists ; 2003 ; Health Education Volume 103 ; 103 ; >
-    au < crawling ; exists ; 2004 ; Health Education Volume 104 ; 104 ; >
-    au < crawling ; exists ; 2005 ; Health Education Volume 105 ; 105 ; >
-    au < crawling ; exists ; 2006 ; Health Education Volume 106 ; 106 ; >
-    au < crawling ; exists ; 2007 ; Health Education Volume 107 ; 107 ; >
-    au < crawling ; exists ; 2008 ; Health Education Volume 108 ; 108 ; >
-    au < crawling ; exists ; 2009 ; Health Education Volume 109 ; 109 ; >
+    au < frozen ; exists ; 2000 ; Health Education Volume 100 ; 100 ; >
+    au < frozen ; exists ; 2001 ; Health Education Volume 101 ; 101 ; >
+    au < frozen ; exists ; 2002 ; Health Education Volume 102 ; 102 ; >
+    au < frozen ; exists ; 2003 ; Health Education Volume 103 ; 103 ; >
+    au < frozen ; exists ; 2004 ; Health Education Volume 104 ; 104 ; >
+    au < frozen ; exists ; 2005 ; Health Education Volume 105 ; 105 ; >
+    au < frozen ; exists ; 2006 ; Health Education Volume 106 ; 106 ; >
+    au < frozen ; exists ; 2007 ; Health Education Volume 107 ; 107 ; >
+    au < frozen ; exists ; 2008 ; Health Education Volume 108 ; 108 ; >
+    au < frozen ; exists ; 2009 ; Health Education Volume 109 ; 109 ; >
     au < finished ; crawling ; 2010 ; Health Education Volume 110 ; 110 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2011 ; Health Education Volume 111 ; 111 ; >
     au < frozen ; exists ; 2012 ; Health Education Volume 112 ; 112 ; >
@@ -3147,12 +3147,12 @@
     param[journal_issn] = 0819-8691
     comment[journal_id] = her
 
-    au < crawling ; exists ; 2004 ; History of Education Review Volume 33 ; 33 ; >
-    au < crawling ; exists ; 2005 ; History of Education Review Volume 34 ; 34 ; >
-    au < crawling ; exists ; 2006 ; History of Education Review Volume 35 ; 35 ; >
-    au < crawling ; exists ; 2007 ; History of Education Review Volume 36 ; 36 ; >
-    au < crawling ; exists ; 2008 ; History of Education Review Volume 37 ; 37 ; >
-    au < crawling ; exists ; 2009 ; History of Education Review Volume 38 ; 38 ; >
+    au < frozen ; exists ; 2004 ; History of Education Review Volume 33 ; 33 ; >
+    au < frozen ; exists ; 2005 ; History of Education Review Volume 34 ; 34 ; >
+    au < frozen ; exists ; 2006 ; History of Education Review Volume 35 ; 35 ; >
+    au < frozen ; exists ; 2007 ; History of Education Review Volume 36 ; 36 ; >
+    au < frozen ; exists ; 2008 ; History of Education Review Volume 37 ; 37 ; >
+    au < frozen ; exists ; 2009 ; History of Education Review Volume 38 ; 38 ; >
     au < frozen ; exists ; 2010 ; History of Education Review Volume 39 ; 39 ; >
     au < frozen ; exists ; 2011 ; History of Education Review Volume 40 ; 40 ; >
     au < frozen ; exists ; 2012 ; History of Education Review Volume 41 ; 41 ; >
@@ -3182,7 +3182,7 @@
 
     au < manifest ; exists ; 1998 ; Housing, Care and Support: A journal on policy, research and practice Volume 1 ; 1 ; >
     au < ready ; exists ; 1999 ; Housing, Care and Support: A journal on policy, research and practice Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2000 ; Housing, Care and Support: A journal on policy, research and practice Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2000 ; Housing, Care and Support: A journal on policy, research and practice Volume 3 ; 3 ; >
     au < crawling ; exists ; 2001 ; Housing, Care and Support: A journal on policy, research and practice Volume 4 ; 4 ; >
     au < crawling ; exists ; 2002 ; Housing, Care and Support: A journal on policy, research and practice Volume 5 ; 5 ; >
     au < crawling ; exists ; 2003 ; Housing, Care and Support: A journal on policy, research and practice Volume 6 ; 6 ; >
