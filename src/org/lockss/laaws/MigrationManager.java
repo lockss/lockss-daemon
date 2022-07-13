@@ -50,6 +50,7 @@ public class MigrationManager extends BaseLockssManager
 //   static final String STATUS_FINISHED_LIST = "finished_list";
   static final String STATUS_FINISHED_PAGE = "finished_page";
   static final String STATUS_FINISHED_COUNT = "finished_count";
+  static final String STATUS_START_TIME = "start_time";
   static final String STATUS_STATUS = "status_list";
   static final String STATUS_INSTRUMENTS = "instrument_list";
   static final String STATUS_ERRORS = "errors";
@@ -58,6 +59,7 @@ public class MigrationManager extends BaseLockssManager
   private V2AuMover mover;
   private Runner runner;
   private String idleError;
+  private long startTime = 0;
 
   public void startService() {
     super.startService();
@@ -79,6 +81,7 @@ public class MigrationManager extends BaseLockssManager
 
   public Map getStatus() {
     Map stat = new HashMap();
+    stat.put(STATUS_START_TIME, startTime);
     if (runner == null) {
       stat.put(STATUS_RUNNING, false);
       stat.put(STATUS_FINISHED_COUNT, 0);
@@ -121,6 +124,7 @@ public class MigrationManager extends BaseLockssManager
     if (isRunning()) {
       throw new IOException("Migration is already running, can't start a new one");
     }
+    startTime = TimeBase.nowMs();
     mover = new V2AuMover();
     runner = new Runner(args);
     log.debug("Starting runner: " + args);
