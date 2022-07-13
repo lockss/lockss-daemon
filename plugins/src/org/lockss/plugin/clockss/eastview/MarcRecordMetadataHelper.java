@@ -238,7 +238,7 @@ public class MarcRecordMetadataHelper implements FileMetadataExtractor {
                     replace("\"", "").
                     replace("...", "");
             log.debug3(String.format("original artitle title = %s, cleaned title = %s", MARC_title, cleanedArticleTitle));
-            am.put(MetadataField.FIELD_PUBLICATION_TITLE, MARC_title);
+            am.put(MetadataField.FIELD_PUBLICATION_TITLE, cleanedArticleTitle);
           }
 
           emitter.emitMetadata(cu, am);
