@@ -23,7 +23,7 @@
     param[journal_abbr] = journal
     implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
 
-    au < testing ; exists ; 2022 ; Journal of Art, Design and Music Volume 1 ; 1 ; >
+    au < ready ; exists ; 2022 ; Journal of Art, Design and Music Volume 1 ; 1 ; >
 
   }
 
