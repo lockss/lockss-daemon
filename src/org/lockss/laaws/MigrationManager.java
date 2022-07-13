@@ -81,6 +81,7 @@ public class MigrationManager extends BaseLockssManager
     Map stat = new HashMap();
     if (runner == null) {
       stat.put(STATUS_RUNNING, false);
+      stat.put(STATUS_FINISHED_COUNT, 0);
       if (idleError != null) {
         stat.put(STATUS_ERRORS, ListUtil.list(idleError));
       }
