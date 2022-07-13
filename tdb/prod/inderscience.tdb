@@ -576,7 +576,7 @@
       au < doNotProcess ; 2010-2011 ; International Journal of Agent-Oriented Software Engineering Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
       au < released ; 2015-2017 ; International Journal of Agent-Oriented Software Engineering Volume 5 ; 5 ; http://www.inderscienceonline.com/ >
       au < released ; 2018 ; International Journal of Agent-Oriented Software Engineering Volume 6 ; 6 ; https://www.inderscienceonline.com/ >
-      au < released ; 2019 ; International Journal of Agent-Oriented Software Engineering Volume 7 [partial] ; 7 ; https://www.inderscienceonline.com/ > #issue 2, 3, 4 not online
+      au < released ; 2019-2022 ; International Journal of Agent-Oriented Software Engineering Volume 7 [partial] ; 7 ; https://www.inderscienceonline.com/ > #issue 3, 4 not online
 
     }
 
@@ -1981,7 +1981,7 @@
       au < released ; 2012-2013 ; International Journal of Collaborative Enterprise Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
       au < released ; 2014 ; International Journal of Collaborative Enterprise Volume 4 ; 4 ; http://www.inderscienceonline.com/ >
       au < released ; 2015-2016 ; International Journal of Collaborative Enterprise Volume 5 ; 5 ; http://www.inderscienceonline.com/ >
-      au < released ; 2018-2021 ; International Journal of Collaborative Enterprise Volume 6 [partial] ; 6 ; https://www.inderscienceonline.com/ > #issue 3, 4 not online
+      au < released ; 2018-2020 ; International Journal of Collaborative Enterprise Volume 6 [partial] ; 6 ; https://www.inderscienceonline.com/ > #issue 3, 4 not online
 
     }
 
@@ -2158,7 +2158,7 @@
       param[journal_id] = ijcibsb
 
       au < doNotProcess ; 2009-2010 ; International Journal of Computational Intelligence in Bioinformatics and Systems Biology Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
-      au < released ; 2020-2021 ; International Journal of Computational Intelligence in Bioinformatics and Systems Biology Volume 2 [partial] ; 2 ; https://www.inderscienceonline.com/ > #issue 2, 3, 4 not online
+      au < released ; 2020 ; International Journal of Computational Intelligence in Bioinformatics and Systems Biology Volume 2 [partial] ; 2 ; https://www.inderscienceonline.com/ > #issue 2, 3, 4 not online
 
     }
 
@@ -3704,7 +3704,7 @@
       au < released ; 2014-2015 ; International Journal of Environment and Health Volume 7 ; 7 ; http://www.inderscienceonline.com/ >
       au < released ; 2016-2017 ; International Journal of Environment and Health Volume 8 ; 8 ; http://www.inderscienceonline.com/ >
       au < released ; 2018-2019 ; International Journal of Environment and Health Volume 9 ; 9 ; https://www.inderscienceonline.com/ >
-      au < released ; 2020-2021 ; International Journal of Environment and Health Volume 10 [partial] ; 10 ; https://www.inderscienceonline.com/ > #issue 2, 3, 4 not online
+      au < released ; 2020-2021 ; International Journal of Environment and Health Volume 10 ; 10 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -4098,7 +4098,7 @@
       au < released ; 2016 ; International Journal of Financial Markets and Derivatives Volume 5 ; 5 ; http://www.inderscienceonline.com/ >
       au < released ; 2017-2018 ; International Journal of Financial Markets and Derivatives Volume 6 ; 6 ; https://www.inderscienceonline.com/ >
       au < released ; 2019-2020 ; International Journal of Financial Markets and Derivatives Volume 7 ; 7 ; https://www.inderscienceonline.com/ >
-      au < manifest ; 2021-2022 ; International Journal of Financial Markets and Derivatives Volume 8 [partial] ; 8 ; https://www.inderscienceonline.com/ > #issue 3, 4 not online
+      au < manifest ; 2021-2022 ; International Journal of Financial Markets and Derivatives Volume 8 [partial] ; 8 ; https://www.inderscienceonline.com/ > #issue 4 not online
 
     }
 
@@ -5105,7 +5105,7 @@
       au < released ; 2017 ; International Journal of Information Systems and Change Management Volume 9 ; 9 ; https://www.inderscienceonline.com/ >
       au < released ; 2018 ; International Journal of Information Systems and Change Management Volume 10 ; 10 ; https://www.inderscienceonline.com/ >
       au < released ; 2019 ; International Journal of Information Systems and Change Management Volume 11 ; 11 ; https://www.inderscienceonline.com/ >
-      au < released ; 2020-2022 ; International Journal of Information Systems and Change Management Volume 12 [partial] ; 12 ; https://www.inderscienceonline.com/ > #issue 4 not online
+      au < released ; 2020-2021 ; International Journal of Information Systems and Change Management Volume 12 ; 12 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -5339,7 +5339,8 @@
       param[journal_id] = ijit
 
       au < released ; 2011-2015 ; International Journal of Instrumentation Technology Volume 1 ; 1 ; http://www.inderscienceonline.com/ >
-      au < released ; 2018-2019 ; International Journal of Instrumentation Technology Volume 2 [partial] ; 2 ; https://www.inderscienceonline.com/ > #issue 3, 4 not online
+      au < released ; 2018-2019 ; International Journal of Instrumentation Technology Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
+      au < exists ; 2021-2022 ; International Journal of Instrumentation Technology Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -5850,7 +5851,7 @@
       param[journal_id] = ijkmth
 
       au < released ; 2017 ; International Journal of Knowledge Management in Tourism and Hospitality Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
-      au < released ; 2018-2021 ; International Journal of Knowledge Management in Tourism and Hospitality Volume 2 [partial] ; 2 ; https://www.inderscienceonline.com/ > #issue 4 not online
+      au < released ; 2018-2022 ; International Journal of Knowledge Management in Tourism and Hospitality Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -6354,7 +6355,7 @@
       param[journal_id] = ijmd
 
       au < released ; 2011-2016 ; International Journal of Management Development Volume 1 ; 1 ; http://www.inderscienceonline.com/ >
-      au < released ; 2018 ; International Journal of Management Development Volume 2 [partial] ; 2 ; https://www.inderscienceonline.com/ > #issue 2, 3, 4 not online
+      au < released ; 2018-2022 ; International Journal of Management Development Volume 2 [partial] ; 2 ; https://www.inderscienceonline.com/ > #issue 3, 4 not online
 
     }
 
@@ -9144,7 +9145,7 @@
       au < doNotProcess ; 2012 ; International Journal of Strategic Change Management Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
       au < released ; 2013-2014 ; International Journal of Strategic Change Management Volume 5 ; 5 ; http://www.inderscienceonline.com/ >
       au < released ; 2015 ; International Journal of Strategic Change Management Volume 6 ; 6 ; http://www.inderscienceonline.com/ >
-      au < released ; 2016-2021 ; International Journal of Strategic Change Management Volume 7 [partial] ; 7 ; http://www.inderscienceonline.com/ > #issue 3 & 4 not online yet
+      au < released ; 2016-2021 ; International Journal of Strategic Change Management Volume 7 ; 7 ; http://www.inderscienceonline.com/ >
 
     }
 
@@ -9930,7 +9931,7 @@
       au < released ; 2016 ; International Journal of Tourism Anthropology Volume 5 ; 5 ; http://www.inderscienceonline.com/ >
       au < released ; 2017-2018 ; International Journal of Tourism Anthropology Volume 6 ; 6 ; https://www.inderscienceonline.com/ >
       au < released ; 2019 ; International Journal of Tourism Anthropology Volume 7 ; 7 ; https://www.inderscienceonline.com/ >
-      au < released ; 2020-2023 ; International Journal of Tourism Anthropology Volume 8 [partial] ; 8 ; https://www.inderscienceonline.com/ > #issue 3, 4 not online
+      au < released ; 2020-2021 ; International Journal of Tourism Anthropology Volume 8 ; 8 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -10352,7 +10353,7 @@
       au < released ; 2017 ; International Journal of Water Volume 11 ; 11 ; https://www.inderscienceonline.com/ >
       au < released ; 2018 ; International Journal of Water Volume 12 ; 12 ; https://www.inderscienceonline.com/ >
       au < released ; 2019 ; International Journal of Water Volume 13 ; 13 ; https://www.inderscienceonline.com/ >
-      au < released ; 2020 ; International Journal of Water Volume 14 [partial] ; 14 ; https://www.inderscienceonline.com/ > #issue 2, 3, 4 not online
+      au < released ; 2020-2021 ; International Journal of Water Volume 14 [partial] ; 14 ; https://www.inderscienceonline.com/ > #issue 4 not online
 
     }
 
@@ -10464,7 +10465,7 @@
 
       au < doNotProcess ; 2011-2012 ; International Journal of Web Science Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
       au < released ; 2013-2014 ; International Journal of Web Science Volume 2 ; 2 ; http://www.inderscienceonline.com/ >
-      au < released ; 2017-2019 ; International Journal of Web Science Volume 3 [partial] ; 3 ; https://www.inderscienceonline.com/ > #issue 3, 4 not online
+      au < released ; 2017-2022 ; International Journal of Web Science Volume 3 [partial] ; 3 ; https://www.inderscienceonline.com/ > #issue 4 not online
 
     }
 
@@ -11186,7 +11187,7 @@
 
       au < released ; 2015-2016 ; International Journal of Telemedicine and Clinical Practices Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
       au < released ; 2017 ; International Journal of Telemedicine and Clinical Practices Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
-      au < released ; 2018-2021 ; International Journal of Telemedicine and Clinical Practices Volume 3 [partial] ; 3 ; https://www.inderscienceonline.com/ > #issue 4 not online
+      au < released ; 2018-2022 ; International Journal of Telemedicine and Clinical Practices Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
 
   }
 
@@ -11200,7 +11201,7 @@
 
       param[journal_id] = ijbise
 
-      au < released ; 2016-2019 ; International Journal of Business Intelligence and Systems Engineering Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ > # issue 4 not online
+      au < released ; 2016-2021 ; International Journal of Business Intelligence and Systems Engineering Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
 
   }
 
@@ -11394,7 +11395,8 @@
 
       param[journal_id] = ijbbm
 
-      au < released ; 2017-2019 ; International Journal of Bibliometrics in Business and Management Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ > #issue 4 not online
+      au < released ; 2017-2021 ; International Journal of Bibliometrics in Business and Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
+      au < exists ; 2022-2025 ; International Journal of Bibliometrics in Business and Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
 
   }
 
