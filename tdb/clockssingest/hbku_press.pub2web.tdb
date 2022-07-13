@@ -52,7 +52,7 @@
     au < doNotProcess ; exists ; 2019 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2019 ; 2019 ; > #no substance
     au < finished ; crawling ; 2020 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2020 ; 2020 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2021 ; 2021 ; >
-    au < testing ; exists ; 2022 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2022 ; 2022 ; >
+    au < ready ; exists ; 2022 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2022 ; 2022 ; >
 
   }
 
@@ -69,7 +69,7 @@
     au < doNotProcess ; doNotProcess ; 2019 ; Journal of Information Studies & Technology Volume 2019 ; 2019 ; >
     au < finished ; crawling ; 2020 ; Journal of Information Studies & Technology Volume 2020 ; 2020 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Journal of Information Studies & Technology Volume 2021 ; 2021 ; >
-    au < testing ; exists ; 2022 ; Journal of Information Studies & Technology Volume 2022 ; 2022 ; >
+    au < ready ; exists ; 2022 ; Journal of Information Studies & Technology Volume 2022 ; 2022 ; >
 
   }
   
@@ -106,7 +106,7 @@
     au < finished ; crawling ; 2019 ; Qatar Medical Journal Volume 2019 ; 2019 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Qatar Medical Journal Volume 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Qatar Medical Journal Volume 2021 ; 2021 ; >
-    au < testing ; exists ; 2022 ; Qatar Medical Journal Volume 2022 ; 2022 ; >
+    au < ready ; exists ; 2022 ; Qatar Medical Journal Volume 2022 ; 2022 ; >
 
   }
 
@@ -129,7 +129,7 @@
       au < finished ; crawling ; 2019 ; QScience Connect Volume 2019 ; 2019 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2020 ; QScience Connect Volume 2020 ; 2020 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; QScience Connect Volume 2021 ; 2021 ; >
-      au < testing ; exists ; 2022 ; QScience Connect Volume 2022 ; 2022 ; >
+      au < ready ; exists ; 2022 ; QScience Connect Volume 2022 ; 2022 ; >
 
     }
   }
@@ -147,7 +147,7 @@
     au < finished ; crawling ; 2019 ; Rule of Law and Anti-Corruption Center Journal Volume 2019 ; 2019 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2020 ; Rule of Law and Anti-Corruption Center Journal Volume 2020 ; 2020 ; reingest1.clockss.org:8082>
     au < frozen ; exists ; 2021 ; Rule of Law and Anti-Corruption Center Journal Volume 2021 ; 2021 ; >
-    au < testing ; exists ; 2022 ; Rule of Law and Anti-Corruption Center Journal Volume 2022 ; 2022 ; >
+    au < ready ; exists ; 2022 ; Rule of Law and Anti-Corruption Center Journal Volume 2022 ; 2022 ; >
 
   }
 ################# No longer publishing
