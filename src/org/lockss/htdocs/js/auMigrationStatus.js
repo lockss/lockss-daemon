@@ -11,6 +11,7 @@ class AuMigrationStatus extends React.Component {
       finishedPageSize: 1,
       finishedCount: 0,
       finishedData: [],
+      startTime: 0,
     };
   }
 
@@ -41,12 +42,14 @@ class AuMigrationStatus extends React.Component {
         )
     }
 
-    FinishedList() {
-      if (this.state.finishedData === undefined) {
-        return null;
-      }
+  FinishedList() {
       return (
-        <div style={{height: '50px', overflow: 'auto'}}>Finished: <ul>{this.state.finishedData.map((msg, index) =>  <li key={index}>{msg}</li>)}</ul></div>
+        <div>
+          Finished:
+          <div id="finishedList" style={{height: '40%', 'overflowY': 'scroll'}}>
+            <ul>{this.state.finishedData.map((msg, index) => <li key={index}>{msg}</li>)}</ul>
+          </div>
+        </div>
       )
     }
 
@@ -92,6 +95,8 @@ class AuMigrationStatus extends React.Component {
   }
 
   __loadStatus = () => {
+    var prevStartTime = this.state.startTime;
+
     fetch("/MigrateContent?reqfreq=high&output=json&status=status")
       .then(response => response.json())
       .then(
@@ -105,6 +110,7 @@ class AuMigrationStatus extends React.Component {
             finishedCount: result.finished_count,
             errors: result.errors,
             delay: result.running ? 1000 : 5000,
+            startTime: result.start_time,
           });
         },
         (error) => {
@@ -117,6 +123,13 @@ class AuMigrationStatus extends React.Component {
             });
         }
       );
+
+    if (prevStartTime != this.state.startTime) {
+      this.setState({
+        finishedCount: 0,
+        finishedData: [],
+      });
+    }
 
     if (this.state.finishedCount !== this.state.finishedData.length) {
       fetch("/MigrateContent?output=json&status=finished" +
