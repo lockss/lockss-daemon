@@ -43,10 +43,10 @@ class AuMigrationStatus extends React.Component {
     }
 
   FinishedList() {
-      return (
+    return (
         <div>
           Finished:
-          <div id="finishedList" style={{height: '40%', 'overflowY': 'scroll'}}>
+          <div id={"finishedList"} style={{height: '40%', 'overflowY': 'scroll'}}>
             <ul>{this.state.finishedData.map((msg, index) => <li key={index}>{msg}</li>)}</ul>
           </div>
         </div>
@@ -92,6 +92,14 @@ class AuMigrationStatus extends React.Component {
 
   componentWillUnmount() {
     clearInterval(this.interval);
+  }
+
+  __scrollBottom = () => {
+    const e = document.getElementById("finishedList");
+    e.scrollTo({
+      top: e.scrollHeight,
+      behavior: 'smooth',
+    })
   }
 
   __loadStatus = () => {
@@ -141,6 +149,8 @@ class AuMigrationStatus extends React.Component {
             this.setState({
               finishedData: this.state.finishedData.concat(result.finished_page),
             });
+
+            this.__scrollBottom();
           },
           (error) => {
             console.error("Could not fetch finished AU page: " + error);
