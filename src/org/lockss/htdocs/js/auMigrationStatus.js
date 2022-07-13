@@ -8,6 +8,9 @@ class AuMigrationStatus extends React.Component {
       fetchError: true,
       statusList: [ "Loading status" ],
       delay: 1000,
+      // finishedPageSize: 1,
+      // finishedPageCursor: 0,
+      // finishedData: [],
     };
   }
 
@@ -38,14 +41,57 @@ class AuMigrationStatus extends React.Component {
         )
     }
 
-    FinishedList() {
-        if (this.state.finishedList === undefined) {
-            return null;
-        }
-        return (
-                <div>Finished: <ul>{this.state.finishedList.map((msg, index) =>  <li key={index}>{msg}</li>)}</ul></div>
-        )
+  FinishedList() {
+    if (this.state.finishedList === undefined) {
+      return null;
     }
+    return (
+      <div>Finished: <ul>{this.state.finishedList.map((msg, index) =>  <li key={index}>{msg}</li>)}</ul></div>
+    )
+  }
+
+  // FinishedList() {
+  //     const getMoreData = () => {
+    //   fetch("/MigrateContent?output=json&status=finished" +
+    //                   "&index=" + this.state.finishedPageCursor +
+    //                   "&size=" + this.state.finishedPageSize)
+    //     .then(response => response.json())
+    //     .then(
+    //       (result) => {
+    //         this.setState({
+    //           finishedData: this.state.finishedData.concat(result.finished_page),
+    //           finishedPageCursor: this.state.finishedPageCursor + 1,
+    //         });
+    //       },
+    //       (error) => {
+    //         console.error("Could not fetch finished AU page: " + error);
+    //       }
+    //     );
+    // }
+    //
+    // const hasMore = () => {
+    //   return this.state.running;
+    // }
+    //
+    //   return (
+    //     <InfiniteScroll
+    //       dataLength={this.state.finishedData.length}
+    //       next={getMoreData}
+    //       hasMore={hasMore}
+    //       loader={<h4>Loading...</h4>}
+    //       height={400}
+    //     >
+    //       <div>
+    //         {this.state.finishedData && this.state.finishedData.map(((msg, index) => (
+    //           <div key={index} className="finishedPageRow">
+    //             {msg}
+    //           </div>
+    //         )))
+    //         }
+    //       </div>
+    //     </InfiniteScroll>
+    //   );
+    // }
 
     ErrorList() {
         if (this.state.errors === undefined) {
@@ -89,7 +135,7 @@ class AuMigrationStatus extends React.Component {
   }
 
   __loadStatus = () => {
-    fetch("/MigrateContent?reqfreq=high&output=json")
+    fetch("/MigrateContent?reqfreq=high&output=json&status=status")
       .then(response => response.json())
       .then(
         (result) => {
