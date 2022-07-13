@@ -334,7 +334,6 @@ public class MigrateContent extends LockssServlet {
     Page page = newPage();
     addCssLocations(page);
     addReactJSLocations(page);
-    addJSXLocation(page, "js/react-infinite-scroll-component.min.js");
     addJSXLocation(page, "js/auMigrationStatus.js");
     layoutErrorBlock(page);
     ServletUtil.layoutExplanationBlock(page, "");

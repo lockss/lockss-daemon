@@ -8,9 +8,9 @@ class AuMigrationStatus extends React.Component {
       fetchError: true,
       statusList: [ "Loading status" ],
       delay: 1000,
-      // finishedPageSize: 1,
-      // finishedPageCursor: 0,
-      // finishedData: [],
+      finishedPageSize: 1,
+      finishedCount: 0,
+      finishedData: [],
     };
   }
 
@@ -41,57 +41,14 @@ class AuMigrationStatus extends React.Component {
         )
     }
 
-  FinishedList() {
-    if (this.state.finishedList === undefined) {
-      return null;
+    FinishedList() {
+      if (this.state.finishedData === undefined) {
+        return null;
+      }
+      return (
+        <div style={{height: '50px', overflow: 'auto'}}>Finished: <ul>{this.state.finishedData.map((msg, index) =>  <li key={index}>{msg}</li>)}</ul></div>
+      )
     }
-    return (
-      <div>Finished: <ul>{this.state.finishedList.map((msg, index) =>  <li key={index}>{msg}</li>)}</ul></div>
-    )
-  }
-
-  // FinishedList() {
-  //     const getMoreData = () => {
-    //   fetch("/MigrateContent?output=json&status=finished" +
-    //                   "&index=" + this.state.finishedPageCursor +
-    //                   "&size=" + this.state.finishedPageSize)
-    //     .then(response => response.json())
-    //     .then(
-    //       (result) => {
-    //         this.setState({
-    //           finishedData: this.state.finishedData.concat(result.finished_page),
-    //           finishedPageCursor: this.state.finishedPageCursor + 1,
-    //         });
-    //       },
-    //       (error) => {
-    //         console.error("Could not fetch finished AU page: " + error);
-    //       }
-    //     );
-    // }
-    //
-    // const hasMore = () => {
-    //   return this.state.running;
-    // }
-    //
-    //   return (
-    //     <InfiniteScroll
-    //       dataLength={this.state.finishedData.length}
-    //       next={getMoreData}
-    //       hasMore={hasMore}
-    //       loader={<h4>Loading...</h4>}
-    //       height={400}
-    //     >
-    //       <div>
-    //         {this.state.finishedData && this.state.finishedData.map(((msg, index) => (
-    //           <div key={index} className="finishedPageRow">
-    //             {msg}
-    //           </div>
-    //         )))
-    //         }
-    //       </div>
-    //     </InfiniteScroll>
-    //   );
-    // }
 
     ErrorList() {
         if (this.state.errors === undefined) {
@@ -145,7 +102,7 @@ class AuMigrationStatus extends React.Component {
             statusList: result.status_list,
             instrumentList: result.instrument_list,
             activeList: result.active_list,
-            finishedList: result.finished_list,
+            finishedCount: result.finished_count,
             errors: result.errors,
             delay: result.running ? 1000 : 5000,
           });
@@ -160,6 +117,23 @@ class AuMigrationStatus extends React.Component {
             });
         }
       );
+
+    if (this.state.finishedCount !== this.state.finishedData.length) {
+      fetch("/MigrateContent?output=json&status=finished" +
+        "&index=" + this.state.finishedData.length +
+        "&size=" + (this.state.finishedCount - this.state.finishedData.length))
+        .then(response => response.json())
+        .then(
+          (result) => {
+            this.setState({
+              finishedData: this.state.finishedData.concat(result.finished_page),
+            });
+          },
+          (error) => {
+            console.error("Could not fetch finished AU page: " + error);
+          }
+        );
+    }
   }
 
   render() {
