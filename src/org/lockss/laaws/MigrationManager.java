@@ -47,8 +47,9 @@ public class MigrationManager extends BaseLockssManager
 
   static final String STATUS_RUNNING = "running";
   static final String STATUS_ACTIVE_LIST = "active_list";
-  static final String STATUS_FINISHED_LIST = "finished_list";
+//   static final String STATUS_FINISHED_LIST = "finished_list";
   static final String STATUS_FINISHED_PAGE = "finished_page";
+  static final String STATUS_FINISHED_COUNT = "finished_count";
   static final String STATUS_STATUS = "status_list";
   static final String STATUS_INSTRUMENTS = "instrument_list";
   static final String STATUS_ERRORS = "errors";
@@ -90,6 +91,8 @@ public class MigrationManager extends BaseLockssManager
       if (!mover.getActiveStatusList().isEmpty()) {
         stat.put(STATUS_ACTIVE_LIST, mover.getActiveStatusList());
       }
+      stat.put(STATUS_FINISHED_COUNT, mover.getFinishedStatusCount());
+
 //       if (!mover.getFinishedStatusList().isEmpty()) {
 //         stat.put(STATUS_FINISHED_LIST, mover.getFinishedStatusList());
 //       }

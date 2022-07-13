@@ -1677,6 +1677,12 @@ public class V2AuMover {
     return res;
   }
 
+  public int getFinishedStatusCount() {
+    synchronized (finishedAus) {
+      return finishedAus.size();
+    }
+  }
+
   public List<String> getFinishedStatusPage(int index, int size) {
     Map<String,AuStatus> auStats;
     synchronized (finishedAus) {
