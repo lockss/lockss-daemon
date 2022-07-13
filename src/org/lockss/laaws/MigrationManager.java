@@ -108,6 +108,7 @@ public class MigrationManager extends BaseLockssManager
     Map stat = new HashMap();
     if (runner != null && idleError == null) {
       stat.put(STATUS_FINISHED_PAGE, mover.getFinishedStatusPage(index, size));
+      stat.put(STATUS_FINISHED_COUNT, mover.getFinishedStatusCount());
     }
     return stat;
   }
