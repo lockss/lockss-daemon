@@ -1684,13 +1684,14 @@ public class V2AuMover {
       int ix = 0;
       int ctr = 0;
       for (AuStatus auStat : finishedAus.values()) {
-        if (ix++ >- index) {
+        if (ix++ >= index) {
           String one = getOneAuStatus(auStat);
           if (one != null) {
             res.add(one);
+            ctr++;
           }
         }
-        if (ix + ctr >= size) {
+        if (ctr >= size) {
           break;
         }
       }
