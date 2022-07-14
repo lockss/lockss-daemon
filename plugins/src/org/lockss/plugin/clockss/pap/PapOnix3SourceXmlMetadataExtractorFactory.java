@@ -33,18 +33,19 @@ import org.apache.commons.io.FilenameUtils;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.FileMetadataExtractor;
+import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.CachedUrl;
+import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
-import org.lockss.plugin.clockss.onixbooks.Onix3LongSourceXmlMetadataExtractorFactory;
 import org.lockss.util.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class PapOnix3SourceXmlMetadataExtractorFactory extends Onix3LongSourceXmlMetadataExtractorFactory {
+public class PapOnix3SourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
 
-  private static Logger log = Logger.getLogger(PapOnix3SourceXmlMetadataExtractorFactory.class);
+  private static final Logger log = Logger.getLogger(PapOnix3SourceXmlMetadataExtractorFactory.class);
 
   private static SourceXmlSchemaHelper PapOnix3Helper = null;
 
@@ -54,7 +55,7 @@ public class PapOnix3SourceXmlMetadataExtractorFactory extends Onix3LongSourceXm
       throws PluginException {
     return new PapOnix3SourceXmlMetadataExtractor();
   }
-  public class PapOnix3SourceXmlMetadataExtractor extends Onix3LongSourceXmlMetadataExtractor {
+  public class PapOnix3SourceXmlMetadataExtractor extends SourceXmlMetadataExtractor {
 
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
@@ -75,6 +76,15 @@ public class PapOnix3SourceXmlMetadataExtractorFactory extends Onix3LongSourceXm
       returnList.add(cuBase + fileName + ".pdf");
       return returnList;
     }
-  }
 
+    @Override
+    protected void postCookProcess(SourceXmlSchemaHelper schemaHelper,
+                                   CachedUrl cu, ArticleMetadata thisAM) {
+
+      log.debug3("setting publication type in postcook process");
+      // this is a book volume
+      thisAM.put(MetadataField.FIELD_PUBLICATION_TYPE,MetadataField.PUBLICATION_TYPE_BOOK);
+      thisAM.put(MetadataField.FIELD_ARTICLE_TYPE,MetadataField.ARTICLE_TYPE_BOOKVOLUME);
+    }
+  }
 }
