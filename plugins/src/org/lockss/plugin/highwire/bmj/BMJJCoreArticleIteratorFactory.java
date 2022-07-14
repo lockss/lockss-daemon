@@ -74,8 +74,6 @@ public class BMJJCoreArticleIteratorFactory
   // http://www.bmj.com/content/325/7373/1156.full-text.print (not preserved)
 
   // https://bmj.com/content/362/bmj.k4007
-  // https://bmj.com/content/362/bmj.k4007/peer-review
-  // https://bmj.com/content/362/bmj.k4007/rapid-responses
   // https://bmj.com/content/362/bmj.k4007.full.pdf
   // https://bmj.com/content/362/bmj.k4007.full.txt
 
@@ -85,15 +83,15 @@ public class BMJJCoreArticleIteratorFactory
 
   // Note: double wrap the secodn capture group to allow substitution to work for both pattern-replacements
   protected static final Pattern VOL_PAGEID_PATTERN = Pattern.compile(
-      "/content/([^/]{1,4})/((bmj[.][^./?&]+))$", Pattern.CASE_INSENSITIVE);
+      "/content/([^/]{1,4})/(bmj[.][^./?&]+)$", Pattern.CASE_INSENSITIVE);
   protected static final Pattern VIP_PATTERN = Pattern.compile(
-      "/content/([^/]+/(?!bmj[.])[^/]+)/(?!.*[.](full|abstract))([^/?]+)$", Pattern.CASE_INSENSITIVE);
+      "/content/([^/]+/(?!bmj[.])[^/]+)/(?!.*[.](?>full|abstract))([^/?]+)$", Pattern.CASE_INSENSITIVE);
   
   // how to change from one form (aspect) of article to another
-  protected static final String LANDING_PAGE_REPLACEMENT = "/content/$1/$3";
-  protected static final String PDF_REPLACEMENT = "/content/$1/$3.full.pdf";
-  protected static final String PDF_LANDING_REPLACEMENT = "/content/$1/$3.full.pdf+html";
-  protected static final String ABSTRACT_REPLACEMENT = "/content/$1/$3.abstract";
+  protected static final String LANDING_PAGE_REPLACEMENT = "/content/$1/$2";
+  protected static final String PDF_REPLACEMENT = "/content/$1/$2.full.pdf";
+  protected static final String PDF_LANDING_REPLACEMENT = "/content/$1/$2.full.pdf+html";
+  protected static final String ABSTRACT_REPLACEMENT = "/content/$1/$2.abstract";
   
   
   @Override
