@@ -33,19 +33,19 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>deprecated - gpo-pilot registry</string>
+    <string>development - gpo-pilot registry</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>gov.gpo.access.permanent.plugin.monthlylaborreview.MonthlyLaborReviewPlugin</string>
+    <string>gov.gpo.access.permanent.plugin.monthlylaborreview.MonthlyLaborReview2022Plugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>1</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Monthly Labor Review Plugin (Legacy)</string>
+    <string>Monthly Labor Review Plugin</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -72,17 +72,30 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Monthly Labor Review Plugin (Legacy), Base URL %s, Year %d", base_url, year</string>
+    <string>"Monthly Labor Review Plugin, Base URL %s, Year %d", base_url, year</string>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%s%d/index.html", base_url, year</string>
+    <string>"%sopub/mlr/%d", base_url, year</string>
+  </entry>
+  <entry>
+    <string>au_permission_url</string>
+    <string>"%sopub/mlr/about.htm", base_url</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
       <string>4,"^%s", base_url</string>
-      <string>1,"^%s%d/", base_url, year</string>
+      <string>1,"^%s.*\.(bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)$", base_url</string>
+      <string>1,"^%sopub/mlr/%d/", base_url, year</string>
     </list>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>gov.gpo.access.permanent.plugin.monthlylaborreview.MonthlyLaborReview2022HtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
   </entry>
 </map>
