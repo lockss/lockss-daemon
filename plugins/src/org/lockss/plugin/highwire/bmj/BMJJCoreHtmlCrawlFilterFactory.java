@@ -44,9 +44,7 @@ import org.lockss.plugin.highwire.HighWireJCoreHtmlCrawlFilterFactory;
 import org.lockss.util.Logger;
 
 public class BMJJCoreHtmlCrawlFilterFactory extends HighWireJCoreHtmlCrawlFilterFactory {
-  
-  private static final Logger log = Logger.getLogger(BMJJCoreHtmlCrawlFilterFactory.class);
-  
+
   protected static NodeFilter[] filters = new NodeFilter[] {
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pager"),
     HtmlNodeFilters.tagWithAttributeRegex("span", "class", "prev"),
@@ -71,9 +69,6 @@ public class BMJJCoreHtmlCrawlFilterFactory extends HighWireJCoreHtmlCrawlFilter
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-    
-    HtmlFilterInputStream filtered =
-        (HtmlFilterInputStream) super.createFilteredInputStream(au, in, encoding, filters);
-    return filtered;
+    return super.createFilteredInputStream(au, in, encoding, filters);
   }
 }
