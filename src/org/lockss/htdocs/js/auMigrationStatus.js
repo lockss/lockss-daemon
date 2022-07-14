@@ -103,7 +103,7 @@ class AuMigrationStatus extends React.Component {
   }
 
   __loadStatus = () => {
-    var prevStartTime = this.state.startTime;
+    const prevStartTime = this.state.startTime;
 
     fetch("/MigrateContent?reqfreq=high&output=json&status=status")
       .then(response => response.json())
@@ -140,6 +140,9 @@ class AuMigrationStatus extends React.Component {
     }
 
     if (this.state.finishedCount !== this.state.finishedData.length) {
+      const e = document.getElementById("finishedList");
+      const wasAtBottom = e.scrollHeight - e.clientHeight <= e.scrollTop + 5;
+
       fetch("/MigrateContent?output=json&status=finished" +
         "&index=" + this.state.finishedData.length +
         "&size=" + (this.state.finishedCount - this.state.finishedData.length))
@@ -150,7 +153,9 @@ class AuMigrationStatus extends React.Component {
               finishedData: this.state.finishedData.concat(result.finished_page),
             });
 
-            this.__scrollBottom();
+            if (wasAtBottom) {
+              this.__scrollBottom();
+            }
           },
           (error) => {
             console.error("Could not fetch finished AU page: " + error);
