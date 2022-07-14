@@ -160,7 +160,7 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * <p>
    * Key for the any-and-all option ({@value}).
    * </p>
-   * 
+   * LX Plugin in Development
    * @since 1.70
    */
   protected static final String KEY_ANY_AND_ALL = "any-and-all";
@@ -693,10 +693,12 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
                  "edu.yale.library.lockss.plugin.mitejmes.MITEJMESPlugin",
                  "gov.gpo.access.permanent.plugin.amberwaves.Amber_WavesPlugin", // gpo-pilot
                  "gov.gpo.access.permanent.plugin.environmentalhealthperspectives.Environmental_Health_PerspectivesPlugin", // gpo-pilot
+                 "gov.gpo.access.permanent.plugin.environmentalhealthperspectives.EHP2022AtyponJournalPlugin", // gpo-pilot
                  "gov.gpo.access.permanent.plugin.fbilawenforcementbulletin.FBI_Law_Enforcement_BulletinPlugin", // gpo-pilot
                  "gov.gpo.access.permanent.plugin.humanities.HumanitiesPlugin", // gpo-pilot
                  "gov.gpo.access.permanent.plugin.monthlyenergyreview.MonthlyEnergyReviewPlugin", // gpo-pilot
                  "gov.gpo.access.permanent.plugin.monthlylaborreview.MonthlyLaborReviewPlugin", // gpo-pilot
+                 "gov.gpo.access.permanent.plugin.monthlylaborreview.MonthlyLaborReview2022Plugin", // gpo-pilot
                  "gov.gpo.access.permanent.plugin.nistjournalofresearch.NISTJournalOfResearchPlugin", // gpo-pilot
                  "gov.gpo.access.permanent.plugin.socialsecuritybulletin.SocialSecurityBulletinPlugin", // gpo-pilot
                  "gov.gpo.access.permanent.plugin.surveyofcurrentbusiness.SurveyOfCurrentBusinessPlugin", // gpo-pilot
