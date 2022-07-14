@@ -58,7 +58,7 @@ import org.mortbay.html.Page;
 import org.mortbay.html.Script;
 import org.mortbay.html.Select;
 import org.mortbay.html.Table;
-
+import org.mortbay.html.StyleLink;
 /**
  */
 public class MigrateContent extends LockssServlet {
@@ -333,6 +333,7 @@ public class MigrateContent extends LockssServlet {
   private void displayPage() throws IOException {
     Page page = newPage();
     addCssLocations(page);
+    page.add(new StyleLink("/css/migrate.css"));
     addReactJSLocations(page);
     addJSXLocation(page, "js/auMigrationStatus.js");
     layoutErrorBlock(page);

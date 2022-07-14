@@ -11,7 +11,7 @@ class AuMigrationStatus extends React.Component {
       finishedPageSize: 1,
       finishedCount: 0,
       finishedData: [],
-      startTime: 0,
+      startTime: -1,
     };
   }
 
@@ -43,22 +43,25 @@ class AuMigrationStatus extends React.Component {
     }
 
   FinishedList() {
-    return (
-        <div>
-          Finished:
-          <div id={"finishedList"} style={{height: '40%', 'overflowY': 'scroll'}}>
+        if (this.state.finishedData === undefined ||
+            this.state.finishedData.length == 0) {
+            return null;
+        }
+        return (
+          <div className={"finished"} id={"finishedList"}>
+            Finished:
             <ul>{this.state.finishedData.map((msg, index) => <li key={index}>{msg}</li>)}</ul>
           </div>
-        </div>
       )
     }
 
     ErrorList() {
-        if (this.state.errors === undefined) {
+        if (this.state.errors === undefined ||
+            this.state.errors.length == 0) {
             return null;
         }
         return (
-                <div>Errors: <ul>{this.state.errors.map((msg, index) =>  <li key={index}>{msg}</li>)}</ul></div>
+                <div className={"errors"}>Errors: <ul>{this.state.errors.map((msg, index) =>  <li key={index}>{msg}</li>)}</ul></div>
         )
     }
 
@@ -68,6 +71,9 @@ class AuMigrationStatus extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
+    if (this.state.wasAtBottom) {
+      this.__scrollBottom();
+    }
     if (prevState.delay != this.state.delay) {
       clearInterval(this.interval);
       this.interval = setInterval(this.__loadStatus, this.state.delay);
@@ -96,10 +102,58 @@ class AuMigrationStatus extends React.Component {
 
   __scrollBottom = () => {
     const e = document.getElementById("finishedList");
-    e.scrollTo({
-      top: e.scrollHeight,
-      behavior: 'smooth',
-    })
+    if (e != null) {
+      e.scrollTo({
+        top: e.scrollHeight,
+        behavior: 'smooth',
+      })
+    }
+  }
+
+  updateStateAfterFetch = (result, prevStartTime) => {
+    const e = document.getElementById("finishedList");
+    const wasAtBottom =
+          (e == null) ||
+          ((e != null) &&
+           ((e.scrollTop == 0) ||
+            (e.scrollHeight - e.clientHeight) <= e.scrollTop + 5));
+
+    this.setState({
+      running: result.running,
+      fetchError: false,
+      statusList: result.status_list,
+      instrumentList: result.instrument_list,
+      activeList: result.active_list,
+      finishedCount: result.finished_count,
+      errors: result.errors,
+      delay: result.running ? 1000 : 5000,
+      startTime: result.start_time,
+      wasAtBottom: wasAtBottom,
+    });
+    if (prevStartTime != this.state.startTime) {
+      this.setState({
+        finishedData: [],
+      });
+    }
+
+    if (this.state.finishedCount != this.state.finishedData.length) {
+      fetch("/MigrateContent?output=json&status=finished" +
+            "&index=" + this.state.finishedData.length +
+            "&size=" + (this.state.finishedCount - this.state.finishedData.length))
+        .then(response => response.json())
+        .then(
+          (result) => {
+            this.setState({
+              finishedData: this.state.finishedData.concat(result.finished_page),
+            });
+
+          },
+          (error) => {
+            console.error("Could not fetch finished AU page: " + error);
+          }
+        );
+
+    }
   }
 
   __loadStatus = () => {
@@ -109,69 +163,31 @@ class AuMigrationStatus extends React.Component {
       .then(response => response.json())
       .then(
         (result) => {
-          this.setState({
-            running: result.running,
-            fetchError: false,
-            statusList: result.status_list,
-            instrumentList: result.instrument_list,
-            activeList: result.active_list,
-            finishedCount: result.finished_count,
-            errors: result.errors,
-            delay: result.running ? 1000 : 5000,
-            startTime: result.start_time,
-          });
+          this.updateStateAfterFetch(result, prevStartTime);
         },
         (error) => {
-            console.error("Could not fetch status information: " + error);
+          console.error("Could not fetch status information: " + error);
 
-            this.setState({
-              fetchError: true,
-              statusList: [ "Could not fetch status information" ],
-              delay: 5000,
-            });
+          this.setState({
+            fetchError: true,
+            statusList: [ "Could not fetch status information" ],
+            delay: 5000,
+          });
         }
       );
 
-    if (prevStartTime != this.state.startTime) {
-      this.setState({
-        finishedCount: 0,
-        finishedData: [],
-      });
-    }
-
-    if (this.state.finishedCount !== this.state.finishedData.length) {
-      const e = document.getElementById("finishedList");
-      const wasAtBottom = e.scrollHeight - e.clientHeight <= e.scrollTop + 5;
-
-      fetch("/MigrateContent?output=json&status=finished" +
-        "&index=" + this.state.finishedData.length +
-        "&size=" + (this.state.finishedCount - this.state.finishedData.length))
-        .then(response => response.json())
-        .then(
-          (result) => {
-            this.setState({
-              finishedData: this.state.finishedData.concat(result.finished_page),
-            });
-
-            if (wasAtBottom) {
-              this.__scrollBottom();
-            }
-          },
-          (error) => {
-            console.error("Could not fetch finished AU page: " + error);
-          }
-        );
-    }
   }
 
   render() {
     return (
-      <div>
-            {this.StatusList()}
-            {this.InstrumentList()}
-            {this.ActiveList()}
-            {this.FinishedList()}
-            {this.ErrorList()}
+        <div>
+         {this.StatusList()}
+         {this.InstrumentList()}
+         {this.ActiveList()}
+      <div className="full-screen left">
+         {this.FinishedList()}
+         {this.ErrorList()}
+      </div>
       </div>
     );
   }
