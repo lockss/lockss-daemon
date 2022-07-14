@@ -15,55 +15,55 @@ class AuMigrationStatus extends React.Component {
     };
   }
 
-    StatusList() {
-        if (this.state.statusList === undefined) {
-            return null;
-        }
-        return (
-                <div>Status: {this.state.statusList.map((msg, index) => <div>{msg}<br /></div>)}</div>
-        )
+  StatusList() {
+    if (this.state.statusList === undefined) {
+      return null;
     }
+    return (
+        <div>Status: {this.state.statusList.map((msg, index) => <div>{msg}<br /></div>)}</div>
+    )
+  }
 
-    InstrumentList() {
-        if (this.state.instrumentList === undefined) {
-            return null;
-        }
-        return (
-                <div><font size="2">{this.state.instrumentList.map((msg, index) => <div>{msg}<br /></div>)}</font></div>
-        )
+  InstrumentList() {
+    if (this.state.instrumentList === undefined) {
+      return null;
     }
+    return (
+        <div><font size="2">{this.state.instrumentList.map((msg, index) => <div>{msg}<br /></div>)}</font></div>
+    )
+  }
 
-    ActiveList() {
-        if (this.state.activeList === undefined) {
-            return null;
-        }
-        return (
-                <div>Active: <ul>{this.state.activeList.map((msg, index) =>  <li key={index}>{msg}</li>)}</ul></div>
-        )
+  ActiveList() {
+    if (this.state.activeList === undefined) {
+      return null;
     }
+    return (
+        <div>Active: <ul>{this.state.activeList.map((msg, index) =>  <li key={index}>{msg}</li>)}</ul></div>
+    )
+  }
 
   FinishedList() {
-        if (this.state.finishedData === undefined ||
-            this.state.finishedData.length == 0) {
-            return null;
-        }
-        return (
-          <div className={"finished"} id={"finishedList"}>
-            Finished:
-            <ul>{this.state.finishedData.map((msg, index) => <li key={index}>{msg}</li>)}</ul>
-          </div>
-      )
+    if (this.state.finishedData === undefined ||
+        this.state.finishedData.length == 0) {
+      return null;
     }
+    return (
+        <div className={"finished"} id={"finishedList"}>
+        Finished:
+        <ul>{this.state.finishedData.map((msg, index) => <li key={index}>{msg}</li>)}</ul>
+        </div>
+    )
+  }
 
-    ErrorList() {
-        if (this.state.errors === undefined ||
-            this.state.errors.length == 0) {
-            return null;
-        }
-        return (
-                <div className={"errors"}>Errors: <ul>{this.state.errors.map((msg, index) =>  <li key={index}>{msg}</li>)}</ul></div>
-        )
+  ErrorList() {
+    if (this.state.errors === undefined ||
+        this.state.errors.length == 0) {
+      return null;
     }
+    return (
+        <div className={"errors"}>Errors: <ul>{this.state.errors.map((msg, index) =>  <li key={index}>{msg}</li>)}</ul></div>
+    )
+  }
 
   componentDidMount() {
     this.__loadStatus();
@@ -82,11 +82,11 @@ class AuMigrationStatus extends React.Component {
     // FIXME: Replace with a jQuery solution?
     if (prevState.running != this.state.running) {
       for (const e of document.querySelectorAll("input[type='submit']")) {
-          if (e.value == "Abort") {
-            this.disableIfRunning = false;
-          } else {
-            this.disableIfRunning = true;
-          }
+        if (e.value == "Abort") {
+          this.disableIfRunning = false;
+        } else {
+          this.disableIfRunning = true;
+        }
         if (this.state.running == this.disableIfRunning) {
           e.setAttribute("disabled", "disabled");
         } else {
@@ -184,10 +184,10 @@ class AuMigrationStatus extends React.Component {
          {this.StatusList()}
          {this.InstrumentList()}
          {this.ActiveList()}
-      <div className="full-screen left">
-         {this.FinishedList()}
-         {this.ErrorList()}
-      </div>
+         <div className="full-screen left">
+           {this.FinishedList()}
+           {this.ErrorList()}
+         </div>
       </div>
     );
   }
