@@ -102,11 +102,13 @@ public class TestTFileCache extends LockssTestCase {
 
   void assertValid(int n) {
     assertTrue("Entry " + n + " should be valid", ent[n].isValid());
+    assertTrue(ent[n].fut.isDone());
     assertFile(n);
   }
 
   void assertInvalid(int n) {
     assertFalse("Entry " + n + " should not be valid", ent[n].isValid());
+    assertTrue(ent[n].fut.isDone());
     assertNoFile(n);
   }
 
