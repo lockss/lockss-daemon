@@ -134,18 +134,23 @@ if [ "X${ALREADY_LOCKED}" != Xyes ]; then
     rm -f ${TEMPFILE}
 fi
 
-# Stale processes may still exist the first time this version is installed,
-# because the previous versions don't use this lock.  We own the lock at
-# this point but haven't started anything, so there should be no processes
-# running as this user.
+# Stale process check disabled 7/22 because:
+# - If a v2 stack is installed on the machine, 'killall -u lockss' kills
+#   a bunch of its processes also, and
+# - This shouldn't be needed any more.
 
-if [ "`ps --no-headers -u $1`"X != X ]; then
-    echo "$$: Deleting stale ${KEEP_GOING}" >>${LOG_FILE}
-    rm -f ${KEEP_GOING}
-    echo "$$: killing stale $1 processes:" >>${LOG_FILE}
-    ps -u  -F >>${LOG_FILE}
-    killall -u $1 -s 9
-fi
+# # Stale processes may still exist the first time this version is installed,
+# # because the previous versions don't use this lock.  We own the lock at
+# # this point but haven't started anything, so there should be no processes
+# # running as this user.
+
+# if [ "`ps --no-headers -u $1`"X != X ]; then
+#     echo "$$: Deleting stale ${KEEP_GOING}" >>${LOG_FILE}
+#     rm -f ${KEEP_GOING}
+#     echo "$$: killing stale $1 processes:" >>${LOG_FILE}
+#     ps -u  -F >>${LOG_FILE}
+#     killall -u $1 -s 9
+# fi
 
 if [ -f /etc/cron.daily/mlocate.cron ]; then
     if grep '^#/' /etc/cron.daily/mlocate.cron >/dev/null 2>&1
