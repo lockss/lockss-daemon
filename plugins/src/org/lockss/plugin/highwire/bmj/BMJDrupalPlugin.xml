@@ -36,7 +36,6 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>ready</string>
     <!-- https transition enabled -->
   </entry>
-  <!-- compare to ClockssBmjDrupalPlugin, the added entries should be in synch -->
   <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.highwire.bmj.BMJDrupalPlugin</string>
