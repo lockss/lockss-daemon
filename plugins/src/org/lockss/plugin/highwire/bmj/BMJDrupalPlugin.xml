@@ -1,7 +1,6 @@
 <!--
 
-Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
-All rights reserved.
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -42,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>BMJ Plugin</string>
+    <string>BMJ Publishing Group Journals Plugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -75,7 +74,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"BMJ Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
+    <string>"BMJ Publishing Group Journals Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <!--  override start url from parent to support http to https conversion -->

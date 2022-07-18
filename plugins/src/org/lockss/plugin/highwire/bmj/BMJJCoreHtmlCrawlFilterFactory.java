@@ -1,7 +1,6 @@
 /*
 
-Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
-All rights reserved.
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -37,11 +36,9 @@ import java.io.InputStream;
 
 import org.htmlparser.NodeFilter;
 import org.lockss.daemon.PluginException;
-import org.lockss.filter.html.HtmlFilterInputStream;
 import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.highwire.HighWireJCoreHtmlCrawlFilterFactory;
-import org.lockss.util.Logger;
 
 public class BMJJCoreHtmlCrawlFilterFactory extends HighWireJCoreHtmlCrawlFilterFactory {
 
