@@ -56,10 +56,16 @@ public class TestBMJJCoreArticleIteratorFactory extends ArticleIteratorTestCase 
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String VOLUME_NAME_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
   private final String BASE_URL = "http://www.bmj.org/";
+  private final String BASE_URL_NO_WWW = "http://bmj.org/";
+  private final String BASE_URL_HTTPS = "https://www.bmj.org/";
+  private final String BASE_URL_HTTPS_NO_WWW = "https://bmj.org/";
   private final Configuration AU_CONFIG = ConfigurationUtil.fromArgs(
       BASE_URL_KEY, BASE_URL,
       VOLUME_NAME_KEY, "347");
   private String BASE_AU_URL = BASE_URL + "content/";
+  private final String BASE_AU_URL_NO_WWW =  BASE_URL_NO_WWW + "content/";
+  private final String BASE_AU_URL_HTTPS = BASE_URL_HTTPS + "content/";
+  private final String BASE_AU_URL_HTTPS_NO_WWW = BASE_URL_HTTPS_NO_WWW + "content/";
   private static final int DEFAULT_FILESIZE = 3000;
   private final String ARTICLE_FAIL_MSG = "Article files not created properly";
   
@@ -107,7 +113,7 @@ public class TestBMJJCoreArticleIteratorFactory extends ArticleIteratorTestCase 
   
   public void testRoots() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();
-    assertEquals(ListUtil.list(BASE_AU_URL), getRootUrls(artIter));
+    assertEquals(ListUtil.list(BASE_AU_URL_NO_WWW,  BASE_AU_URL_HTTPS_NO_WWW, BASE_AU_URL, BASE_AU_URL_HTTPS), getRootUrls(artIter));
   }
   
   

@@ -166,25 +166,25 @@ public class TestBMJJCorePlugin extends LockssTestCase {
     shouldCacheTest(ROOT_URL + "content/321/bmj.f6056.long", true, au);
     shouldCacheTest(ROOT_URL + "content/321/bmj.f4270", true, au);
     shouldCacheTest(ROOT_URL.replace("http:", "https:") + "content/321/bmj.f4270", true, au);
-    shouldCacheTest(ROOT_URL + "content/321/bmj.f4270.full", false, au);
+    shouldCacheTest(ROOT_URL + "content/321/bmj.f4270.full", true, au);
     shouldCacheTest(ROOT_URL + "content/321/bmj.f4270.full.pdf", true, au);
     shouldCacheTest(ROOT_URL + "content/321/bmj.f4270.full.pdf+html", true, au);
     // only for data supplements
-    shouldCacheTest(ROOT_URL + "content/347/bmj.f4547/related", true, au);
+    shouldCacheTest(ROOT_URL + "content/347/bmj.f4547/related", false, au);
     
 // XXX   shouldCacheTest(ROOT_URL + "content/suppl/2014/05/16/bmj.f6123.DC1", false, au);
     shouldCacheTest(ROOT_URL + "highwire/markup/185154/expansion", false, au);
     
-    shouldCacheTest(ROOT_URL + "sites/default/themes/bmj/the_bmj/css/fonts.css", false, au);
-    shouldCacheTest(ROOT_URL + "sites/default/files/cdn/css/http/css_nZpqy9LysFSwGKJ7v4z11U9YB9kpVSWL_JhlIW3O5FI.css", false, au);
+    shouldCacheTest(ROOT_URL + "sites/default/themes/bmj/the_bmj/css/fonts.css", true, au);
+    shouldCacheTest(ROOT_URL + "sites/default/files/cdn/css/http/css_nZpqy9LysFSwGKJ7v4z11U9YB9kpVSWL_JhlIW3O5FI.css", true, au);
     
     // should not get crawled - LOCKSS
     shouldCacheTest("http://lockss.stanford.edu", false, au);
     
     shouldCacheTest(ROOT_URL + "bmj/section-pdf/724572/0", false, au);
     shouldCacheTest(ROOT_URL + "content/347/bmj.f4547/article-info", false, au);
-    shouldCacheTest(ROOT_URL + "content/321/bmj.f4270/peer-review", false, au);
-    shouldCacheTest(ROOT_URL + "content/347/bmj.f4547/rapid-responses", false, au);
+    shouldCacheTest(ROOT_URL + "content/321/bmj.f4270/peer-review", true, au);
+    shouldCacheTest(ROOT_URL + "content/347/bmj.f4547/rapid-responses", true, au);
     shouldCacheTest(ROOT_URL + "content/347/bmj.f4547/submit-a-rapid-response", false, au);
     shouldCacheTest(ROOT_URL + "highwire/powerpoint/185149", false, au);
     shouldCacheTest(ROOT_URL + "lookup/doi/10.1136/bmj.6444", false, au);
@@ -227,10 +227,10 @@ public class TestBMJJCorePlugin extends LockssTestCase {
     // article files
     shouldCacheTest(ROOT_URL + "content/2015/1/2", true, au);
     shouldCacheTest(ROOT_URL.replace("http:", "https:") + "content/2015/1/2", true, au);
-    shouldCacheTest(ROOT_URL + "content/2015/1/2.abstract", false, au);
+    shouldCacheTest(ROOT_URL + "content/2015/1/2.abstract", true, au);
     shouldCacheTest(ROOT_URL + "content/2015/1/2.long", true, au);
-    shouldCacheTest(ROOT_URL + "content/2015/1/2.extract", false, au);
-    shouldCacheTest(ROOT_URL + "content/2015/1/2.full", false, au);
+    shouldCacheTest(ROOT_URL + "content/2015/1/2.extract", true, au);
+    shouldCacheTest(ROOT_URL + "content/2015/1/2.full", true, au);
     shouldCacheTest(ROOT_URL + "content/2015/1/2.full.pdf", true, au);
     shouldCacheTest(ROOT_URL + "content/2015/1/2.full.pdf+html", true, au);
     shouldCacheTest(ROOT_URL + "content/2015/1/2.full-text.pdf+html", true, au);
@@ -242,17 +242,17 @@ public class TestBMJJCorePlugin extends LockssTestCase {
     shouldCacheTest(ROOT_URL + "content/1/1/e123.2", true, au);
     shouldCacheTest(ROOT_URL + "content/1/1/e123.2.long", true, au);
     shouldCacheTest(ROOT_URL + "content/1/1/e123.2.data", true, au);
-    shouldCacheTest(ROOT_URL + "content/1/1/e123.2.full", false, au);
-    shouldCacheTest(ROOT_URL + "content/1/1/e123.2.full.txt", false, au);
+    shouldCacheTest(ROOT_URL + "content/1/1/e123.2.full", true, au);
+    shouldCacheTest(ROOT_URL + "content/1/1/e123.2.full.txt", true, au);
 //    shouldCacheTest(ROOT_URL + "content/1/1/e123.2.full.pdf", true, au);
 //    shouldCacheTest(ROOT_URL + "content/1/1/e123.2.full.pdf+html", true, au);
 //    shouldCacheTest(ROOT_URL + "content/1/1/e123.2.full-text.pdf+html", true, au);
 //    shouldCacheTest(ROOT_URL + "content/1/Supplement_2/1234S2.1.full.pdf", true, au);
     
-    shouldCacheTest(ROOT_URL + "content/os-86/1_suppl_2/2.abstract", false, au);
+    shouldCacheTest(ROOT_URL + "content/os-86/1_suppl_2/2.abstract", true, au);
     shouldCacheTest(ROOT_URL + "content/os-86/1_suppl_2/2.long", true, au);
-    shouldCacheTest(ROOT_URL + "content/os-86/1_suppl_2/2.extract", false, au);
-    shouldCacheTest(ROOT_URL + "content/os-86/1_suppl_2/2.full", false, au);
+    shouldCacheTest(ROOT_URL + "content/os-86/1_suppl_2/2.extract", true, au);
+    shouldCacheTest(ROOT_URL + "content/os-86/1_suppl_2/2.full", true, au);
     shouldCacheTest(ROOT_URL + "content/os-86/1_suppl_2/2.full.pdf", true, au);
     shouldCacheTest(ROOT_URL + "content/os-86/1_suppl_2/2.full.pdf+html", true, au);
     shouldCacheTest(ROOT_URL + "content/os-86/1_suppl_2/2.full-text.pdf+html", true, au);
@@ -280,10 +280,10 @@ public class TestBMJJCorePlugin extends LockssTestCase {
     shouldCacheTest(ROOT_URL + "highwire/citation/9/1/ris", false, au);
     shouldCacheTest(ROOT_URL + "highwire/markup/113/expansion", false, au);
     
-    shouldCacheTest(ROOT_URL + "sites/all/libraries/modernizr/modernizr.min.js", false, au);
-    shouldCacheTest(ROOT_URL + "sites/default/files/js/js_0j8_f76rvZ212f4rg.js", false, au);
-    shouldCacheTest(ROOT_URL + "sites/default/themes/hw/font/fontawesome-webfont.eot", false, au);
-    shouldCacheTest(ROOT_URL + "sites/default/themes/font/fontawesome-webfont.eot", false, au);
+    shouldCacheTest(ROOT_URL + "sites/all/libraries/modernizr/modernizr.min.js", true, au);
+    shouldCacheTest(ROOT_URL + "sites/default/files/js/js_0j8_f76rvZ212f4rg.js", true, au);
+    shouldCacheTest(ROOT_URL + "sites/default/themes/hw/font/fontawesome-webfont.eot", true, au);
+    shouldCacheTest(ROOT_URL + "sites/default/themes/font/fontawesome-webfont.eot", true, au);
     
     shouldCacheTest(ROOT_URL + "content/hw/suppl/2014/04/23/hw.02130.DC1/hw02130_Supplemental_files.zip", true, au);
     shouldCacheTest(ROOT_URL.replace("http:", "https:") + "content/hw/suppl/2014/04/23/hw.02130.DC1/hw02130_Supplemental_files.zip", true, au);

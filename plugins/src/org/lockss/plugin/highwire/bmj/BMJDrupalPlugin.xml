@@ -105,7 +105,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>2,"^https?://(www.)?%s/content/((early/recent)|(by/(year|volume)|current|.*/article-))", del_www_and_scheme(base_url)</string>
       <!-- exclude all this social/informational/ancillary etc content about articles/volumes
          note, if the rapid responses (rr) are desired, the htmlcrawlfilter needs to be modified as well as this rule. -->
-      <string>2,"^https?://(www.)?%s/content/.*([/.]){1}(rr(-\d+)?|related|ppt|submit-a-rapid-response|alerts|altmetrics|share)$", del_www_and_scheme(base_url)</string>
+      <string>2,"^https?://(www.)?%s/content/.*([/.]){1}(rr(-\d+)?|related|ppt|submit-a-rapid-response|alerts|altmetrics|share|print|explore)$", del_www_and_scheme(base_url)</string>
       <!-- after content is optional jcode, required vol, optional issue, optional .toc  -->
       <string>1,"^https?://(www.)?%s/content(/[^/.]+){1,3}(\.toc)?$", del_www_and_scheme(base_url)</string>
       <!-- after content is required vol, optional issue, required page, then allowed extensions or EOL 
