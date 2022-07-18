@@ -44,9 +44,7 @@ import org.lockss.plugin.highwire.HighWireJCoreHtmlCrawlFilterFactory;
 import org.lockss.util.Logger;
 
 public class BMJJCoreHtmlCrawlFilterFactory extends HighWireJCoreHtmlCrawlFilterFactory {
-  
-  private static final Logger log = Logger.getLogger(BMJJCoreHtmlCrawlFilterFactory.class);
-  
+
   protected static NodeFilter[] filters = new NodeFilter[] {
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pager"),
     HtmlNodeFilters.tagWithAttributeRegex("span", "class", "prev"),
@@ -55,6 +53,13 @@ public class BMJJCoreHtmlCrawlFilterFactory extends HighWireJCoreHtmlCrawlFilter
     HtmlNodeFilters.tagWithAttribute("div", "class", "section fn-group"),
     // leave data supplement links for pages like http://www.bmj.com/content/332/7532/11/related
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "related-articles"),
+    //  rapid response body, citations and anciallary links.
+    // just remove the entire rapid response div. as the responses are printed in full, no need to get them.
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(bmj-rapid-responses|bmj_related_rapid_responses)"),
+    // in case something changes in the above regex
+    HtmlNodeFilters.tagWithAttribute("div", "class", "response-body"),
+    HtmlNodeFilters.tagWithAttribute("div", "class", "rr-right-column"),
+    //
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "cited-by"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "additional-link"),
   };
@@ -64,9 +69,6 @@ public class BMJJCoreHtmlCrawlFilterFactory extends HighWireJCoreHtmlCrawlFilter
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-    
-    HtmlFilterInputStream filtered =
-        (HtmlFilterInputStream) super.createFilteredInputStream(au, in, encoding, filters);
-    return filtered;
+    return super.createFilteredInputStream(au, in, encoding, filters);
   }
 }

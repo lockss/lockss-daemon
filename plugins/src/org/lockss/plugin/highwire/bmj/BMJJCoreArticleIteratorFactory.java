@@ -47,15 +47,21 @@ public class BMJJCoreArticleIteratorFactory
                ArticleMetadataExtractorFactory {
   
   private static final Logger log = Logger.getLogger(BMJJCoreArticleIteratorFactory.class);
-  
-  protected static final String ROOT_TEMPLATE =
-    "\"%scontent/\", base_url";
+
+  protected static final String ROOT_TEMPLATE_HTTP_WWW =
+      "\"http://www.%s/content/\", del_www_and_scheme(base_url)";
+  protected static final String ROOT_TEMPLATE_HTTPS_WWW =
+      "\"https://www.%s/content/\", del_www_and_scheme(base_url)";
+  protected static final String ROOT_TEMPLATE_HTTP =
+      "\"http://%s/content/\", del_www_and_scheme(base_url)";
+  protected static final String ROOT_TEMPLATE_HTTPS =
+      "\"https://%s/content/\", del_www_and_scheme(base_url)";
   
   // pattern has vol/page as well as older style vip (vol/issue/page)
   // Cannot use volume_name in vol/page pattern as the BMJ mixes articles
   //        (ie. /346/bmj.f4217 in vol 347, issue 7915)
   protected static final String PATTERN_TEMPLATE =
-    "\"^%scontent/([^/]{1,4}/bmj[.](?:[^./?&]+)|%s/[^/]+/(?![^/]+[.]full)[^/?]+)$\", base_url, volume_name";
+    "\"^https?://(www.)?%s/content/([^/]{1,4}/bmj[.](?:[^./?&]+)|%s/[^/]+/(?![^/]+[.](full|alerts|altmetrics|citation|info|responses|share|download))[^/?]+)$\", del_www_and_scheme(base_url), volume_name";
   
   // various aspects of an article
   // http://www.bmj.com/content/345/bmj.e7558
@@ -66,12 +72,20 @@ public class BMJJCoreArticleIteratorFactory
   //
   // http://www.bmj.com/content/325/7373/1156.full.pdf+html
   // http://www.bmj.com/content/325/7373/1156.full-text.print (not preserved)
-  
-  
+
+  // https://bmj.com/content/362/bmj.k4007
+  // https://bmj.com/content/362/bmj.k4007.full.pdf
+  // https://bmj.com/content/362/bmj.k4007.full.txt
+
+  // https://www.bmj.com/content/362/bmj.k4007
+  // https://www.bmj.com/content/362/bmj.k4007/rapid-responses
+  // https://www.bmj.com/content/362/bmj.k4007.full.pdf
+
+  // Note: double wrap the secodn capture group to allow substitution to work for both pattern-replacements
   protected static final Pattern VOL_PAGEID_PATTERN = Pattern.compile(
       "/content/([^/]{1,4})/(bmj[.][^./?&]+)$", Pattern.CASE_INSENSITIVE);
   protected static final Pattern VIP_PATTERN = Pattern.compile(
-      "/content/([^/]+/(?!bmj[.])[^/]+)/(?!.*[.](full|abstract))([^/?]+)$", Pattern.CASE_INSENSITIVE);
+      "/content/([^/]+/(?!bmj[.])[^/]+)/(?!.*[.](?>full|abstract))([^/?]+)$", Pattern.CASE_INSENSITIVE);
   
   // how to change from one form (aspect) of article to another
   protected static final String LANDING_PAGE_REPLACEMENT = "/content/$1/$2";
@@ -87,7 +101,8 @@ public class BMJJCoreArticleIteratorFactory
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
     
     builder.setSpec(target,
-        ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
+        Arrays.asList(ROOT_TEMPLATE_HTTP, ROOT_TEMPLATE_HTTPS, ROOT_TEMPLATE_HTTP_WWW, ROOT_TEMPLATE_HTTPS_WWW),
+        PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
     
     // The order in which we want to define full_text_cu.
     // First one that exists will get the job
