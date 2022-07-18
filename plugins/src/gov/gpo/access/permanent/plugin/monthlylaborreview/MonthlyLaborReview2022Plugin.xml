@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -95,6 +95,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <list>
       <string>"^%sopub/mlr/%d/article/[^/]+\.html?$", base_url, year</string>
       <string>"^%sopub/mlr/%d/article/pdf/[^/]+\.pdf$", base_url, year</string>
+      <string>"^%sopub/mlr/%d/\d+/[^/]+\.pdf$", base_url, year</string>
     </list>
   </entry>
   <entry>
