@@ -899,6 +899,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	  startOneWait.expire();
 	}      
       }
+      cmStatus.removeCrawlerStatusIfPending(crawler.getCrawlerStatus());
     }
   }
 
@@ -949,6 +950,8 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	for (Crawler crawler : pc.getCrawlers()) {
 	  if (au == crawler.getAu()) {
 	    crawler.abortCrawl();
+            // If it hadn't actually started yet, ensure status removed
+            cmStatus.removeCrawlerStatusIfPending(crawler.getCrawlerStatus());
 	  }
 	}
       }
@@ -1109,6 +1112,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	deadLock.expire();
       }
       lock.expire();
+      cmStatus.removeCrawlerStatusIfPending(crawler.getCrawlerStatus());
       removeFromRunningCrawls(crawler);
       callCallback(cb, cookie, false, null);
       throw re;
@@ -1332,6 +1336,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 		   " crawl"  + " " + crawlerRunner, e);
       logger.debug2("Freeing crawl lock");
       lock.expire();
+      cmStatus.removeCrawlerStatusIfPending(crawler.getCrawlerStatus());
       removeFromRunningCrawls(crawler);
       callCallback(cb, cookie, false, null);
       return;

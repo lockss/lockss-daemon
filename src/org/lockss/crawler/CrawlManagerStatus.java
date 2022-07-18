@@ -109,6 +109,13 @@ public class CrawlManagerStatus {
     return (CrawlerStatus)statusMap.get(key);
   }
 
+  /** Remove the given CrawlerStatus iff it is in PENDING state */
+  public synchronized void removeCrawlerStatusIfPending(CrawlerStatus status) {
+    if (status.getCrawlStatus() == Crawler.STATUS_QUEUED) {
+      statusMap.remove(status.getKey());
+    }
+  }
+
   /** Move the CrawlerStatus to the least-recently-used position */
   public synchronized void touchCrawlStatus(String key) {
     statusMap.get(key);
