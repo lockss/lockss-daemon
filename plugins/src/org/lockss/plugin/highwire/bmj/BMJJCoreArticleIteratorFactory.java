@@ -61,7 +61,7 @@ public class BMJJCoreArticleIteratorFactory
   // Cannot use volume_name in vol/page pattern as the BMJ mixes articles
   //        (ie. /346/bmj.f4217 in vol 347, issue 7915)
   protected static final String PATTERN_TEMPLATE =
-    "\"^https?://(www.)?%s/content/([^/]{1,4}/bmj[.](?:[^./?&]+)|%s/[^/]+/(?![^/]+[.](full|alerts|altmetrics|citation|info|responses|share))[^/?]+)$\", del_www_and_scheme(base_url), volume_name";
+    "\"^https?://(www.)?%s/content/([^/]{1,4}/bmj[.](?:[^./?&]+)|%s/[^/]+/(?![^/]+[.](full|alerts|altmetrics|citation|info|responses|share|download))[^/?]+)$\", del_www_and_scheme(base_url), volume_name";
   
   // various aspects of an article
   // http://www.bmj.com/content/345/bmj.e7558
