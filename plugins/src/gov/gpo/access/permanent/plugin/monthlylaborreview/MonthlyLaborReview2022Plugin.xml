@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -88,6 +88,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>4,"^%s", base_url</string>
       <string>1,"^%s.*\.(bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)$", base_url</string>
       <string>1,"^%sopub/mlr/%d/", base_url, year</string>
+      <string>1,"^%serrata/home.htm\?", base_url, year</string>
     </list>
   </entry>
   <entry>
@@ -101,6 +102,14 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>text/html_filter_factory</string>
     <string>gov.gpo.access.permanent.plugin.monthlylaborreview.MonthlyLaborReview2022HtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>gov.gpo.access.permanent.plugin.monthlylaborreview.MonhtlyLaborReview2022ArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>gov.gpo.access.permanent.plugin.monthlylaborreview.MonhtlyLaborReview2022ArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
