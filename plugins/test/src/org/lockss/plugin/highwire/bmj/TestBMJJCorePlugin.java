@@ -1,7 +1,6 @@
 /*
 
-Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
-All rights reserved.
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -102,7 +101,7 @@ public class TestBMJJCorePlugin extends LockssTestCase {
         "https://www.example.com/lockss-manifest/vol_313_manifest.html", 
     };
     DefinableArchivalUnit au = makeAuFromProps(props);
-    assertEquals("BMJ Plugin, Base URL https://www.example.com/, Volume 313",
+    assertEquals("BMJ Publishing Group Journals Plugin, Base URL https://www.example.com/, Volume 313",
         au.getName());
     assertEquals(ListUtil.list(starturl), au.getStartUrls());
   }
