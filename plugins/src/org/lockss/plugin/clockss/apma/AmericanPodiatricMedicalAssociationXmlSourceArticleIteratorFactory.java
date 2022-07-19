@@ -29,8 +29,17 @@ public class AmericanPodiatricMedicalAssociationXmlSourceArticleIteratorFactory 
     //They also have issue.xml, and meta-data.xml which need to be excluded
     protected static Logger log = Logger.getLogger(AmericanPodiatricMedicalAssociationXmlSourceArticleIteratorFactory.class);
 
+    /*
     protected static final String ALL_ZIP_XML_PATTERN_TEMPLATE =
             "\"%s%s/.*\\.zip!/(.*)\\.(xml|pdf)$\", base_url, directory";
+    */
+
+    // Exclude cov.pdf & toc.pdf since it has no matching xml file
+    // http://clockss-ingest.lockss.org/sourcefiles/apma-released/2020/apms-110-2.zip!/Assets/i8750-7315-110-2-cov.pdf
+    //http://clockss-ingest.lockss.org/sourcefiles/apma-released/2020/apms-110-3.zip!/Assets/i8750-7315-110-3-toc.pdf
+    protected static final String ALL_ZIP_XML_PATTERN_TEMPLATE =
+            "\"%s%s/.*\\.zip!/[^/]+/(.*(?<!cov)(?<!toc))\\.(xml|pdf)$\", base_url, directory";
+
 
     // Be sure to exclude all nested archives in case supplemental data is provided this way
     protected static final Pattern SUB_NESTED_ARCHIVE_PATTERN =
