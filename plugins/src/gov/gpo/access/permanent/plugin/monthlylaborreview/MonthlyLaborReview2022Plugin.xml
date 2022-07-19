@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -87,8 +87,8 @@ POSSIBILITY OF SUCH DAMAGE.
     <list>
       <string>4,"^%s", base_url</string>
       <string>1,"^%s.*\.(bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)$", base_url</string>
-      <string>1,"^%sopub/mlr/%d/", base_url, year</string>
-      <string>1,"^%serrata/home.htm\?", base_url, year</string>
+      <string>2,"^%sopub/mlr/about\.htm$", base_url</string>
+      <string>1,"^%sopub/mlr/(%d|cwc)/", base_url, year</string>
     </list>
   </entry>
   <entry>
@@ -96,7 +96,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <list>
       <string>"^%sopub/mlr/%d/article/[^/]+\.html?$", base_url, year</string>
       <string>"^%sopub/mlr/%d/article/pdf/[^/]+\.pdf$", base_url, year</string>
-      <string>"^%sopub/mlr/%d/\d+/[^/]+\.pdf$", base_url, year</string>
+      <string>"^%sopub/mlr/(%d/\d+|cwc)/[^/]+\.pdf$", base_url, year</string>
     </list>
   </entry>
   <entry>

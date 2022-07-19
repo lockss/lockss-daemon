@@ -42,16 +42,19 @@ import org.lockss.plugin.*;
 public class MonhtlyLaborReview2022ArticleIteratorFactory
     implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
-  protected static final String ROOT_TEMPLATE = "\"%sopub/mlr/%d/\", base_url, year";
-  protected static final String PATTERN_TEMPLATE = "\"^%sopub/mlr/(article|\\d+)/.*\\.(htm|pdf)$\", base_url, year";
+  protected static final String ROOT_TEMPLATE_1 = "\"%sopub/mlr/%d/\", base_url, year";
+  protected static final String ROOT_TEMPLATE_2 = "\"%sopub/mlr/cwc/\", base_url, year";
+  protected static final String PATTERN_TEMPLATE = "\"^%sopub/mlr/(%d|cwc)/.*\\.(htm|pdf)$\", base_url, year";
 
-  protected static final Pattern HTML_PATTERN = Pattern.compile("/(article)/([^/]+)\\.htm$", Pattern.CASE_INSENSITIVE);
-  protected static final String HTML_REPLACEMENT = "/article/$2.htm";
+  protected static final Pattern HTML_PATTERN = Pattern.compile("/(\\d+/article)/([^/]+)\\.htm$", Pattern.CASE_INSENSITIVE);
+  protected static final String HTML_REPLACEMENT = "/$1/$2.htm";
   
-  protected static final Pattern PDF_PATTERN_1 = Pattern.compile("/(article/pdf)/([^/]+)\\.pdf$", Pattern.CASE_INSENSITIVE);
-  protected static final String PDF_REPLACEMENT_1 = "/article/pdf/$2.pdf";
-  protected static final Pattern PDF_PATTERN_2 = Pattern.compile("/(\\d+)/([^/]+)\\.pdf$", Pattern.CASE_INSENSITIVE);
+  protected static final Pattern PDF_PATTERN_1 = Pattern.compile("/(\\d+/article/pdf)/([^/]+)\\.pdf$", Pattern.CASE_INSENSITIVE);
+  protected static final String PDF_REPLACEMENT_1 = "/$1/$2.pdf";
+  protected static final Pattern PDF_PATTERN_2 = Pattern.compile("/(\\d+/\\d+)/([^/]+)\\.pdf$", Pattern.CASE_INSENSITIVE);
   protected static final String PDF_REPLACEMENT_2 = "/$1/$2.pdf";
+  protected static final Pattern PDF_PATTERN_3 = Pattern.compile("/(cwc)/([^/]+)\\.pdf$", Pattern.CASE_INSENSITIVE);
+  protected static final String PDF_REPLACEMENT_3 = "/cwc/$2.pdf";
 
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -61,15 +64,15 @@ public class MonhtlyLaborReview2022ArticleIteratorFactory
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
     
     builder.setSpec(target,
-                    ROOT_TEMPLATE,
+                    Arrays.asList(ROOT_TEMPLATE_1, ROOT_TEMPLATE_2),
                     PATTERN_TEMPLATE);
     
     builder.addAspect(HTML_PATTERN,
                       HTML_REPLACEMENT,
                       ArticleFiles.ROLE_FULL_TEXT_HTML);
     
-    builder.addAspect(Arrays.asList(PDF_PATTERN_1, PDF_PATTERN_2),
-                      Arrays.asList(PDF_REPLACEMENT_1, PDF_REPLACEMENT_2),
+    builder.addAspect(Arrays.asList(PDF_PATTERN_1, PDF_PATTERN_2, PDF_PATTERN_3),
+                      Arrays.asList(PDF_REPLACEMENT_1, PDF_REPLACEMENT_2, PDF_REPLACEMENT_3),
                       ArticleFiles.ROLE_FULL_TEXT_PDF);
 
     return builder.getSubTreeArticleIterator();
