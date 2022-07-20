@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -87,7 +87,6 @@ POSSIBILITY OF SUCH DAMAGE.
     <list>
       <string>4,"^%s", base_url</string>
       <string>1,"^%s.*\.(bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)$", base_url</string>
-      <string>2,"^%sopub/mlr/about\.htm$", base_url</string>
       <string>1,"^%sopub/mlr/(%d|cwc)/", base_url, year</string>
     </list>
   </entry>

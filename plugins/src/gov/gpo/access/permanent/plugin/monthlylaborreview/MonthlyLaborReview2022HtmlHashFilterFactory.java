@@ -50,6 +50,8 @@ public class MonthlyLaborReview2022HtmlHashFilterFactory implements FilterFactor
       HtmlNodeFilters.tagWithAttribute("div", "id", "cited-by"),
       HtmlNodeFilters.tagWithAttribute("div", "class", "social-media"),
       HtmlNodeFilters.tag("footer"),
+      // The <head> of pages starts with a comment like <!-- P3 --> or <!-- P1 --> that can change 
+      HtmlNodeFilters.comment(),
   };
   
   @Override
