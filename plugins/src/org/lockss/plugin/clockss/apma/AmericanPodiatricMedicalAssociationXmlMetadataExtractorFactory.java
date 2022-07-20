@@ -50,6 +50,7 @@ public class AmericanPodiatricMedicalAssociationXmlMetadataExtractorFactory exte
                                        CachedUrl cu, ArticleMetadata thisAM) {
 
             thisAM.put(MetadataField.FIELD_PUBLISHER, thisAM.getRaw(AmericanPodiatricMedicalAssociationSchemaHelper.JATS_pubname));
+            thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(AmericanPodiatricMedicalAssociationSchemaHelper.JATS_date));
 
             thisAM.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
             thisAM.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_JOURNAL);
