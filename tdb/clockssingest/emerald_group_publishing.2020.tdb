@@ -32,7 +32,7 @@
     au < finished ; crawling ; 2019 ; Academia Revista Latinoamericana de Administración Volume 32 ; 32 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Academia Revista Latinoamericana de Administración Volume 33 ; 33 ; >
     au < crawling ; exists ; 2021 ; Academia Revista Latinoamericana de Administración Volume 34 ; 34 ; >
-    au < manifest ; exists ; 2022 ; Academia Revista Latinoamericana de Administración Volume 35 ; 35 ; >
+    au < ready ; exists ; 2022 ; Academia Revista Latinoamericana de Administración Volume 35 ; 35 ; >
 
   }
 
@@ -79,7 +79,7 @@
     au < frozen ; exists ; 2019 ; Accounting Research Journal Volume 32 ; 32 ; >
     au < deepCrawl ; exists ; 2020 ; Accounting Research Journal Volume 33 ; 33 ; >
     au < crawling ; exists ; 2021 ; Accounting Research Journal Volume 34 ; 34 ; >
-    au < manifest ; exists ; 2022 ; Accounting Research Journal Volume 35 ; 35 ; >
+    au < ready ; exists ; 2022 ; Accounting Research Journal Volume 35 ; 35 ; >
 
   }
 
@@ -649,7 +649,7 @@
     au < frozen ; exists ; 2019 ; Asia Pacific Journal of Marketing and Logistics Volume 31 ; 31 ; >
     au < deepCrawl ; exists ; 2020 ; Asia Pacific Journal of Marketing and Logistics Volume 32 ; 32 ; >
     au < crawling ; exists ; 2021 ; Asia Pacific Journal of Marketing and Logistics Volume 33 ; 33 ; >
-    au < manifest ; exists ; 2022 ; Asia Pacific Journal of Marketing and Logistics Volume 34 ; 34 ; >
+    au < ready ; exists ; 2022 ; Asia Pacific Journal of Marketing and Logistics Volume 34 ; 34 ; >
 
   }
 
@@ -788,7 +788,7 @@
     au < frozen ; exists ; 2019 ; Asian Review of Accounting Volume 27 ; 27 ; >
     au < deepCrawl ; exists ; 2020 ; Asian Review of Accounting Volume 28 ; 28 ; >
     au < crawling ; exists ; 2021 ; Asian Review of Accounting Volume 29 ; 29 ; >
-    au < manifest ; exists ; 2022 ; Asian Review of Accounting Volume 30 ; 30 ; >
+    au < ready ; exists ; 2022 ; Asian Review of Accounting Volume 30 ; 30 ; >
 
   }
 
@@ -975,7 +975,7 @@
     au < frozen ; exists ; 2019 ; Baltic Journal of Management Volume 14 ; 14 ; >
     au < deepCrawl ; exists ; 2020 ; Baltic Journal of Management Volume 15 ; 15 ; >
     au < crawling ; exists ; 2021 ; Baltic Journal of Management Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2022 ; Baltic Journal of Management Volume 17 ; 17 ; >
+    au < ready ; exists ; 2022 ; Baltic Journal of Management Volume 17 ; 17 ; >
 
   }
 
@@ -1033,7 +1033,7 @@
     au < frozen ; exists ; 2019 ; Benchmarking: An International Journal Volume 26 ; 26 ; >
     au < deepCrawl ; exists ; 2020 ; Benchmarking: An International Journal Volume 27 ; 27 ; >
     au < crawling ; exists ; 2021 ; Benchmarking: An International Journal Volume 28 ; 28 ; >
-    au < manifest ; exists ; 2022 ; Benchmarking: An International Journal Volume 29 ; 29 ; >
+    au < ready ; exists ; 2022 ; Benchmarking: An International Journal Volume 29 ; 29 ; >
 
   }
 
@@ -1367,7 +1367,7 @@
     au < frozen ; exists ; 2019 ; Business Process Management Journal Volume 25 ; 25 ; >
     au < deepCrawl ; exists ; 2020 ; Business Process Management Journal Volume 26 ; 26 ; >
     au < crawling ; exists ; 2021 ; Business Process Management Journal Volume 27 ; 27 ; >
-    au < manifest ; exists ; 2022 ; Business Process Management Journal Volume 28 ; 28 ; >
+    au < ready ; exists ; 2022 ; Business Process Management Journal Volume 28 ; 28 ; >
 
   }
 
@@ -1474,7 +1474,7 @@
     au < frozen ; exists ; 2019 ; Career Development International Volume 24 ; 24 ; >
     au < deepCrawl ; exists ; 2020 ; Career Development International Volume 25 ; 25 ; >
     au < crawling ; exists ; 2021 ; Career Development International Volume 26 ; 26 ; >
-    au < manifest ; exists ; 2022 ; Career Development International Volume 27 ; 27 ; >
+    au < ready ; exists ; 2022 ; Career Development International Volume 27 ; 27 ; >
 
   }
 
@@ -1557,7 +1557,7 @@
     au < finished ; crawling ; 2019 ; Chinese Management Studies Volume 13 ; 13 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Chinese Management Studies Volume 14 ; 14 ; >
     au < crawling ; exists ; 2021 ; Chinese Management Studies Volume 15 ; 15 ; >
-    au < manifest ; exists ; 2022 ; Chinese Management Studies Volume 16 ; 16 ; >
+    au < ready ; exists ; 2022 ; Chinese Management Studies Volume 16 ; 16 ; >
 
   }
 
@@ -1855,7 +1855,7 @@
     au < ingNotReady ; exists ; 2019 ; Competitiveness Review: An International Business Journal Volume 29 ; 29 ; > #500 error 
     au < deepCrawl ; exists ; 2020 ; Competitiveness Review: An International Business Journal Volume 30 ; 30 ; >
     au < notReady ; exists ; 2021 ; Competitiveness Review: An International Business Journal Volume 31 ; 31 ; > #500 error on https://www.emerald.com/insight/content/doi/10.1108/CR-05-2020-0078/full/html
-    au < manifest ; exists ; 2022 ; Competitiveness Review: An International Business Journal Volume 32 ; 32 ; > #500 error on https://www.emerald.com/insight/content/doi/10.1108/CR-05-2020-0078/full/html
+    au < ready ; exists ; 2022 ; Competitiveness Review: An International Business Journal Volume 32 ; 32 ; > #500 error on https://www.emerald.com/insight/content/doi/10.1108/CR-05-2020-0078/full/html
 
   }
 
@@ -1891,7 +1891,7 @@
     au < frozen ; exists ; 2019 ; Construction Innovation: Information, Process, Management Volume 19 ; 19 ; >
     au < deepCrawl ; exists ; 2020 ; Construction Innovation: Information, Process, Management Volume 20 ; 20 ; >
     au < crawling ; exists ; 2021 ; Construction Innovation: Information, Process, Management Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2022 ; Construction Innovation: Information, Process, Management Volume 22 ; 22 ; >
+    au < ready ; exists ; 2022 ; Construction Innovation: Information, Process, Management Volume 22 ; 22 ; >
 
   }
 
@@ -1932,7 +1932,7 @@
     au < frozen ; exists ; 2019 ; Corporate Communications: An International Journal Volume 24 ; 24 ; >
     au < deepCrawl ; exists ; 2020 ; Corporate Communications: An International Journal Volume 25 ; 25 ; >
     au < crawling ; exists ; 2021 ; Corporate Communications: An International Journal Volume 26 ; 26 ; >
-    au < manifest ; exists ; 2022 ; Corporate Communications: An International Journal Volume 27 ; 27 ; >
+    au < ready ; exists ; 2022 ; Corporate Communications: An International Journal Volume 27 ; 27 ; >
 
   }
 
@@ -1968,7 +1968,7 @@
     au < frozen ; exists ; 2019 ; Corporate Governance Volume 19 ; 19 ; >
     au < deepCrawl ; exists ; 2020 ; Corporate Governance Volume 20 ; 20 ; >
     au < crawling ; exists ; 2021 ; Corporate Governance Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2022 ; Corporate Governance Volume 22 ; 22 ; >
+    au < ready ; exists ; 2022 ; Corporate Governance Volume 22 ; 22 ; >
 
   }
 
@@ -2000,7 +2000,7 @@
     au < frozen ; exists ; 2019 ; critical perspectives on international business Volume 15 ; 15 ; >
     au < deepCrawl ; exists ; 2020 ; critical perspectives on international business Volume 16 ; 16 ; >
     au < crawling ; exists ; 2021 ; critical perspectives on international business Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2022 ; critical perspectives on international business Volume 18 ; 18 ; >
+    au < ready ; exists ; 2022 ; critical perspectives on international business Volume 18 ; 18 ; >
 
   }
 
@@ -2093,7 +2093,7 @@
     au < frozen ; exists ; 2019 ; Development and Learning in Organizations Volume 33 ; 33 ; >
     au < deepCrawl ; exists ; 2020 ; Development and Learning in Organizations Volume 34 ; 34 ; >
     au < crawling ; exists ; 2021 ; Development and Learning in Organizations Volume 35 ; 35 ; >
-    au < manifest ; exists ; 2022 ; Development and Learning in Organizations Volume 36 ; 36 ; >
+    au < ready ; exists ; 2022 ; Development and Learning in Organizations Volume 36 ; 36 ; >
 
   }
 
@@ -2192,7 +2192,7 @@
     au < frozen ; exists ; 2019 ; Drugs and Alcohol Today Volume 19 ; 19 ; >
     au < deepCrawl ; exists ; 2020 ; Drugs and Alcohol Today Volume 20 ; 20 ; >
     au < crawling ; exists ; 2021 ; Drugs and Alcohol Today Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2022 ; Drugs and Alcohol Today Volume 22 ; 22 ; >
+    au < ready ; exists ; 2022 ; Drugs and Alcohol Today Volume 22 ; 22 ; >
 
   }
 
@@ -2689,7 +2689,7 @@
     au < finished ; crawling ; 2019 ; EuroMed Journal of Business Volume 14 ; 14 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; EuroMed Journal of Business Volume 15 ; 15 ; >
     au < crawling ; exists ; 2021 ; EuroMed Journal of Business Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2022 ; EuroMed Journal of Business Volume 17 ; 17 ; >
+    au < ready ; exists ; 2022 ; EuroMed Journal of Business Volume 17 ; 17 ; >
 
   }
 
@@ -2777,7 +2777,7 @@
     au < frozen ; exists ; 2019 ; European Journal of Innovation Management Volume 22 ; 22 ; >
     au < deepCrawl ; exists ; 2020 ; European Journal of Innovation Management Volume 23 ; 23 ; >
     au < crawling ; exists ; 2021 ; European Journal of Innovation Management Volume 24 ; 24 ; >
-    au < manifest ; exists ; 2022 ; European Journal of Innovation Management Volume 25 ; 25 ; >
+    au < ready ; exists ; 2022 ; European Journal of Innovation Management Volume 25 ; 25 ; >
 
   }
 
@@ -2962,7 +2962,7 @@
     au < frozen ; exists ; 2019 ; foresight Volume 21 ; 21 ; >
     au < deepCrawl ; exists ; 2020 ; foresight Volume 22 ; 22 ; >
     au < crawling ; exists ; 2021 ; foresight Volume 23 ; 23 ; >
-    au < manifest ; exists ; 2022 ; foresight Volume 24 ; 24 ; >
+    au < ready ; exists ; 2022 ; foresight Volume 24 ; 24 ; >
 
   }
 
@@ -3204,7 +3204,7 @@
     au < finished ; crawling ; 2019 ; Housing, Care and Support: A journal on policy, research and practice Volume 22 ; 22 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Housing, Care and Support: A journal on policy, research and practice Volume 23 ; 23 ; >
     au < crawling ; exists ; 2021 ; Housing, Care and Support: A journal on policy, research and practice Volume 24 ; 24 ; >
-    au < manifest ; exists ; 2022 ; Housing, Care and Support: A journal on policy, research and practice Volume 25 ; 25 ; >
+    au < ready ; exists ; 2022 ; Housing, Care and Support: A journal on policy, research and practice Volume 25 ; 25 ; >
 
   }
 
@@ -3835,7 +3835,7 @@
     au < frozen ; exists ; 2019 ; Interactive Technology and Smart Education Volume 16 ; 16 ; >
     au < deepCrawl ; exists ; 2020 ; Interactive Technology and Smart Education Volume 17 ; 17 ; >
     au < crawling ; exists ; 2021 ; Interactive Technology and Smart Education Volume 18 ; 18 ; >
-    au < manifest ; exists ; 2022 ; Interactive Technology and Smart Education Volume 19 ; 19 ; >
+    au < ready ; exists ; 2022 ; Interactive Technology and Smart Education Volume 19 ; 19 ; >
 
   }
 
@@ -4228,7 +4228,7 @@
     au < frozen ; exists ; 2019 ; International Journal of Conflict Management Volume 30 ; 30 ; >
     au < deepCrawl ; exists ; 2020 ; International Journal of Conflict Management Volume 31 ; 31 ; >
     au < crawling ; exists ; 2021 ; International Journal of Conflict Management Volume 32 ; 32 ; >
-    au < manifest ; exists ; 2022 ; International Journal of Conflict Management Volume 33 ; 33 ; >
+    au < ready ; exists ; 2022 ; International Journal of Conflict Management Volume 33 ; 33 ; >
 
   }
 
@@ -4341,7 +4341,7 @@
     au < frozen ; exists ; 2019 ; International Journal of Development Issues Volume 18 ; 18 ; >
     au < deepCrawl ; exists ; 2020 ; International Journal of Development Issues Volume 19 ; 19 ; >
     au < crawling ; exists ; 2021 ; International Journal of Development Issues Volume 20 ; 20 ; >
-    au < manifest ; exists ; 2022 ; International Journal of Development Issues Volume 21 ; 21 ; >
+    au < ready ; exists ; 2022 ; International Journal of Development Issues Volume 21 ; 21 ; >
 
   }
 
@@ -4472,7 +4472,7 @@
     au < frozen ; exists ; 2019 ; International Journal of Emerging Markets Volume 14 ; 14 ; >
     au < deepCrawl ; exists ; 2020 ; International Journal of Emerging Markets Volume 15 ; 15 ; >
     au < crawling ; exists ; 2021 ; International Journal of Emerging Markets Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2022 ; International Journal of Emerging Markets Volume 17 ; 17 ; >
+    au < ready ; exists ; 2022 ; International Journal of Emerging Markets Volume 17 ; 17 ; >
 
   }
 
@@ -4544,7 +4544,7 @@
     au < frozen ; exists ; 2019 ; International Journal of entrepreneurial Behaviour & Research Volume 25 ; 25 ; >
     au < deepCrawl ; exists ; 2020 ; International Journal of entrepreneurial Behaviour & Research Volume 26 ; 26 ; >
     au < crawling ; exists ; 2021 ; International Journal of entrepreneurial Behaviour & Research Volume 27 ; 27 ; >
-    au < manifest ; exists ; 2022 ; International Journal of entrepreneurial Behaviour & Research Volume 28 ; 28 ; >
+    au < ready ; exists ; 2022 ; International Journal of entrepreneurial Behaviour & Research Volume 28 ; 28 ; >
 
   }
 
@@ -4957,7 +4957,7 @@
     au < frozen ; exists ; 2019 ; International Journal of Managerial Finance Volume 15 ; 15 ; >
     au < deepCrawl ; exists ; 2020 ; International Journal of Managerial Finance Volume 16 ; 16 ; >
     au < crawling ; exists ; 2021 ; International Journal of Managerial Finance Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2022 ; International Journal of Managerial Finance Volume 18 ; 18 ; >
+    au < ready ; exists ; 2022 ; International Journal of Managerial Finance Volume 18 ; 18 ; >
 
   }
 
@@ -5098,7 +5098,7 @@
     au < frozen ; exists ; 2019 ; International Journal of Migration, Health and Social Care Volume 15 ; 15 ; >
     au < deepCrawl ; exists ; 2020 ; International Journal of Migration, Health and Social Care Volume 16 ; 16 ; >
     au < crawling ; exists ; 2021 ; International Journal of Migration, Health and Social Care Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2022 ; International Journal of Migration, Health and Social Care Volume 18 ; 18 ; >
+    au < ready ; exists ; 2022 ; International Journal of Migration, Health and Social Care Volume 18 ; 18 ; >
 
   }
 
@@ -5290,7 +5290,7 @@
     au < frozen ; exists ; 2019 ; International Journal of Pervasive Computing and Communications Volume 15 ; 15 ; >
     au < deepCrawl ; exists ; 2020 ; International Journal of Pervasive Computing and Communications Volume 16 ; 16 ; >
     au < crawling ; exists ; 2021 ; International Journal of Pervasive Computing and Communications Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2022 ; International Journal of Pervasive Computing and Communications Volume 18 ; 18 ; >
+    au < ready ; exists ; 2022 ; International Journal of Pervasive Computing and Communications Volume 18 ; 18 ; >
 
   }
 
@@ -5320,7 +5320,7 @@
     au < frozen ; exists ; 2019 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 13 ; 13 ; >
     au < deepCrawl ; exists ; 2020 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 14 ; 14 ; >
     au < crawling ; exists ; 2021 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 15 ; 15 ; >
-    au < manifest ; exists ; 2022 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 16 ; 16 ; >
+    au < ready ; exists ; 2022 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 16 ; 16 ; >
 
   }
 
@@ -5448,7 +5448,7 @@
     au < frozen ; exists ; 2019 ; International Journal of Prisoner Health Volume 15 ; 15 ; >
     au < deepCrawl ; exists ; 2020 ; International Journal of Prisoner Health Volume 16 ; 16 ; >
     au < crawling ; exists ; 2021 ; International Journal of Prisoner Health Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2022 ; International Journal of Prisoner Health Volume 18 ; 18 ; >
+    au < ready ; exists ; 2022 ; International Journal of Prisoner Health Volume 18 ; 18 ; >
 
   }
 
@@ -5482,7 +5482,7 @@
     au < crawling ; exists ; 2019 ; International Journal of Productivity and Performance Management Volume 68 ; 68 ; >
     au < deepCrawl ; exists ; 2020 ; International Journal of Productivity and Performance Management Volume 69 ; 69 ; >
     au < crawling ; exists ; 2021 ; International Journal of Productivity and Performance Management Volume 70 ; 70 ; >
-    au < manifest ; exists ; 2022 ; International Journal of Productivity and Performance Management Volume 71 ; 71 ; >
+    au < ready ; exists ; 2022 ; International Journal of Productivity and Performance Management Volume 71 ; 71 ; >
 
   }
 
@@ -5893,7 +5893,7 @@
     au < crawling ; exists ; 2019 ; International Journal of Sustainability in Higher Education Volume 20 ; 20 ; >
     au < deepCrawl ; exists ; 2020 ; International Journal of Sustainability in Higher Education Volume 21 ; 21 ; >
     au < crawling ; exists ; 2021 ; International Journal of Sustainability in Higher Education Volume 22 ; 22 ; >
-    au < manifest ; exists ; 2022 ; International Journal of Sustainability in Higher Education Volume 23 ; 23 ; >
+    au < ready ; exists ; 2022 ; International Journal of Sustainability in Higher Education Volume 23 ; 23 ; >
 
   }
 
@@ -5925,7 +5925,7 @@
     au < frozen ; exists ; 2019 ; International Journal of Web Information Systems Volume 15 ; 15 ; >
     au < deepCrawl ; exists ; 2020 ; International Journal of Web Information Systems Volume 16 ; 16 ; >
     au < crawling ; exists ; 2021 ; International Journal of Web Information Systems Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2022 ; International Journal of Web Information Systems Volume 18 ; 18 ; >
+    au < ready ; exists ; 2022 ; International Journal of Web Information Systems Volume 18 ; 18 ; >
 
   }
 
@@ -6131,7 +6131,7 @@
     au < crawling ; exists ; 2019 ; Internet Research Volume 29 ; 29 ; >
     au < deepCrawl ; exists ; 2020 ; Internet Research Volume 30 ; 30 ; >
     au < crawling ; exists ; 2021 ; Internet Research Volume 31 ; 31 ; >
-    au < manifest ; exists ; 2022 ; Internet Research Volume 32 ; 32 ; >
+    au < ready ; exists ; 2022 ; Internet Research Volume 32 ; 32 ; >
 
   }
 
@@ -6225,7 +6225,7 @@
     au < crawling ; exists ; 2019 ; Journal of Adult Protection: Evidence-based practice in relation to safeguarding adults Volume 21 ; 21 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Adult Protection: Evidence-based practice in relation to safeguarding adults Volume 22 ; 22 ; >
     au < crawling ; exists ; 2021 ; Journal of Adult Protection: Evidence-based practice in relation to safeguarding adults Volume 23 ; 23 ; >
-    au < manifest ; exists ; 2022 ; Journal of Adult Protection: Evidence-based practice in relation to safeguarding adults Volume 24 ; 24 ; >
+    au < ready ; exists ; 2022 ; Journal of Adult Protection: Evidence-based practice in relation to safeguarding adults Volume 24 ; 24 ; >
 
   }
 
@@ -6257,7 +6257,7 @@
     au < frozen ; exists ; 2019 ; Journal of Advances in management Research Volume 16 ; 16 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Advances in management Research Volume 17 ; 17 ; >
     au < crawling ; exists ; 2021 ; Journal of Advances in management Research Volume 18 ; 18 ; >
-    au < manifest ; exists ; 2022 ; Journal of Advances in management Research Volume 19 ; 19 ; >
+    au < ready ; exists ; 2022 ; Journal of Advances in management Research Volume 19 ; 19 ; >
 
   }
 
@@ -6403,7 +6403,7 @@
     au < crawling ; exists ; 2019 ; Journal of Aisa Business Studies Volume 13 ; 13 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Aisa Business Studies Volume 14 ; 14 ; >
     au < crawling ; exists ; 2021 ; Journal of Aisa Business Studies Volume 15 ; 15 ; >
-    au < manifest ; exists ; 2022 ; Journal of Aisa Business Studies Volume 16 ; 16 ; >
+    au < ready ; exists ; 2022 ; Journal of Aisa Business Studies Volume 16 ; 16 ; >
 
   }
 
@@ -6585,7 +6585,7 @@
     au < frozen ; exists ; 2019 ; Journal of Children's Services: Research informing policy and practice Volume 14 ; 14 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Children's Services: Research informing policy and practice Volume 15 ; 15 ; >
     au < crawling ; exists ; 2021 ; Journal of Children's Services: Research informing policy and practice Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2022 ; Journal of Children's Services: Research informing policy and practice Volume 17 ; 17 ; >
+    au < ready ; exists ; 2022 ; Journal of Children's Services: Research informing policy and practice Volume 17 ; 17 ; >
 
   }
 
@@ -6697,7 +6697,7 @@
     au < crawling ; exists ; 2019 ; Journal of Communication Management Volume 23 ; 23 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Communication Management Volume 24 ; 24 ; >
     au < crawling ; exists ; 2021 ; Journal of Communication Management Volume 25 ; 25 ; >
-    au < manifest ; exists ; 2022 ; Journal of Communication Management Volume 26 ; 26 ; >
+    au < ready ; exists ; 2022 ; Journal of Communication Management Volume 26 ; 26 ; >
 
   }
 
@@ -6787,7 +6787,7 @@
     au < crawling ; exists ; 2019 ; Journal of Corporate Real Estate Volume 21 ; 21 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Corporate Real Estate Volume 22 ; 22 ; >
     au < crawling ; exists ; 2021 ; Journal of Corporate Real Estate Volume 23 ; 23 ; >
-    au < manifest ; exists ; 2022 ; Journal of Corporate Real Estate Volume 24 ; 24 ; >
+    au < ready ; exists ; 2022 ; Journal of Corporate Real Estate Volume 24 ; 24 ; >
 
   }
 
@@ -6961,7 +6961,7 @@
     au < crawling ; exists ; 2019 ; Journal of Economic and Administrative Sciences Volume 35 ; 35 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Economic and Administrative Sciences Volume 36 ; 36 ; >
     au < crawling ; exists ; 2021 ; Journal of Economic and Administrative Sciences Volume 37 ; 37 ; >
-    au < manifest ; exists ; 2022 ; Journal of Economic and Administrative Sciences Volume 38 ; 38 ; >
+    au < ready ; exists ; 2022 ; Journal of Economic and Administrative Sciences Volume 38 ; 38 ; >
 
   }
 
@@ -7132,7 +7132,7 @@
     au < crawling ; exists ; 2019 ; Journal of Engineering, Design and Technology Volume 17 ; 17 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Engineering, Design and Technology Volume 18 ; 18 ; >
     au < crawling ; exists ; 2021 ; Journal of Engineering, Design and Technology Volume 19 ; 19 ; >
-    au < manifest ; exists ; 2022 ; Journal of Engineering, Design and Technology Volume 20 ; 20 ; >
+    au < ready ; exists ; 2022 ; Journal of Engineering, Design and Technology Volume 20 ; 20 ; >
 
   }
 
@@ -7166,7 +7166,7 @@
     au < crawling ; exists ; 2019 ; Journal of Enterprise Information Management Volume 32 ; 32 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Enterprise Information Management Volume 33 ; 33 ; >
     au < crawling ; exists ; 2021 ; Journal of Enterprise Information Management Volume 34 ; 34 ; >
-    au < manifest ; exists ; 2022 ; Journal of Enterprise Information Management Volume 35 ; 35 ; >
+    au < ready ; exists ; 2022 ; Journal of Enterprise Information Management Volume 35 ; 35 ; >
 
   }
 
@@ -7331,7 +7331,7 @@
     au < crawling ; exists ; 2019 ; Journal of Facilities Management Volume 17 ; 17 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Facilities Management Volume 18 ; 18 ; >
     au < crawling ; exists ; 2021 ; Journal of Facilities Management Volume 19 ; 19 ; >
-    au < manifest ; exists ; 2022 ; Journal of Facilities Management Volume 20 ; 20 ; >
+    au < ready ; exists ; 2022 ; Journal of Facilities Management Volume 20 ; 20 ; >
 
   }
 
@@ -7396,7 +7396,7 @@
     au < crawling ; exists ; 2019 ; Journal of Fashion Marketing and Management Volume 23 ; 23 ; >
     au < notReady ; exists ; 2020 ; Journal of Fashion Marketing and Management Volume 24 ; 24 ; > #500 error https://www.emerald.com/insight/content/doi/10.1108/JFMM-10-2018-0138/full/html
     au < crawling ; exists ; 2021 ; Journal of Fashion Marketing and Management Volume 25 ; 25 ; >
-    au < manifest ; exists ; 2022 ; Journal of Fashion Marketing and Management Volume 26 ; 26 ; >
+    au < ready ; exists ; 2022 ; Journal of Fashion Marketing and Management Volume 26 ; 26 ; >
 
   }
 
@@ -7439,7 +7439,7 @@
     au < frozen ; exists ; 2019 ; Journal of Financial Crime Volume 26 ; 26 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Financial Crime Volume 27 ; 27 ; >
     au < crawling ; exists ; 2021 ; Journal of Financial Crime Volume 28 ; 28 ; >
-    au < manifest ; exists ; 2022 ; Journal of Financial Crime Volume 29 ; 29 ; >
+    au < ready ; exists ; 2022 ; Journal of Financial Crime Volume 29 ; 29 ; >
 
   }
 
@@ -7500,7 +7500,7 @@
     au < crawling ; exists ; 2019 ; Journal of Financial Management of Property and Construction Volume 24 ; 24 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Financial Management of Property and Construction Volume 25 ; 25 ; >
     au < crawling ; exists ; 2021 ; Journal of Financial Management of Property and Construction Volume 26 ; 26 ; >
-    au < manifest ; exists ; 2022 ; Journal of Financial Management of Property and Construction Volume 27 ; 27 ; >
+    au < ready ; exists ; 2022 ; Journal of Financial Management of Property and Construction Volume 27 ; 27 ; >
 
   }
 
@@ -7544,7 +7544,7 @@
     au < crawling ; exists ; 2019 ; Journal of Financial Regulation and Compliance Volume 27 ; 27 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Financial Regulation and Compliance Volume 28 ; 28 ; >
     au < crawling ; exists ; 2021 ; Journal of Financial Regulation and Compliance Volume 29 ; 29 ; >
-    au < manifest ; exists ; 2022 ; Journal of Financial Regulation and Compliance Volume 30 ; 30 ; >
+    au < ready ; exists ; 2022 ; Journal of Financial Regulation and Compliance Volume 30 ; 30 ; >
 
   }
 
@@ -7640,7 +7640,7 @@
     au < crawling ; exists ; 2019 ; Journal of Health Organization and Management Volume 33 ; 33 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Health Organization and Management Volume 34 ; 34 ; >
     au < crawling ; exists ; 2021 ; Journal of Health Organization and Management Volume 35 ; 35 ; >
-    au < manifest ; exists ; 2022 ; Journal of Health Organization and Management Volume 36 ; 36 ; >
+    au < ready ; exists ; 2022 ; Journal of Health Organization and Management Volume 36 ; 36 ; >
 
   }
 
@@ -7811,7 +7811,7 @@
     au < frozen ; exists ; 2019 ; Journal of Information, Communication and Ethics in Society Volume 17 ; 17 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Information, Communication and Ethics in Society Volume 18 ; 18 ; >
     au < crawling ; exists ; 2021 ; Journal of Information, Communication and Ethics in Society Volume 19 ; 19 ; >
-    au < manifest ; exists ; 2022 ; Journal of Information, Communication and Ethics in Society Volume 20 ; 20 ; >
+    au < ready ; exists ; 2022 ; Journal of Information, Communication and Ethics in Society Volume 20 ; 20 ; >
 
   }
 
@@ -7852,7 +7852,7 @@
     au < crawling ; exists ; 2019 ; Journal of Integrated Care: Practical evidence for service improvement Volume 27 ; 27 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Integrated Care: Practical evidence for service improvement Volume 28 ; 28 ; >
     au < crawling ; exists ; 2021 ; Journal of Integrated Care: Practical evidence for service improvement Volume 29 ; 29 ; >
-    au < manifest ; exists ; 2022 ; Journal of Integrated Care: Practical evidence for service improvement Volume 30 ; 30 ; >
+    au < ready ; exists ; 2022 ; Journal of Integrated Care: Practical evidence for service improvement Volume 30 ; 30 ; >
 
   }
 
@@ -7889,7 +7889,7 @@
     au < crawling ; exists ; 2019 ; Journal of Intellectual Capital Volume 20 ; 20 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Intellectual Capital Volume 21 ; 21 ; >
     au < crawling ; exists ; 2021 ; Journal of Intellectual Capital Volume 22 ; 22 ; >
-    au < manifest ; exists ; 2022 ; Journal of Intellectual Capital Volume 23 ; 23 ; >
+    au < ready ; exists ; 2022 ; Journal of Intellectual Capital Volume 23 ; 23 ; >
 
   }
 
@@ -7952,7 +7952,7 @@
     au < crawling ; exists ; 2019 ; Journal of International Trade Law and Policy Volume 18 ; 18 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of International Trade Law and Policy Volume 19 ; 19 ; >
     au < crawling ; exists ; 2021 ; Journal of International Trade Law and Policy Volume 20 ; 20 ; >
-    au < manifest ; exists ; 2022 ; Journal of International Trade Law and Policy Volume 21 ; 21 ; >
+    au < ready ; exists ; 2022 ; Journal of International Trade Law and Policy Volume 21 ; 21 ; >
 
   }
 
@@ -8083,7 +8083,7 @@
     au < crawling ; exists ; 2019 ; Journal of Knowledge Management Volume 23 ; 23 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Knowledge Management Volume 24 ; 24 ; >
     au < crawling ; exists ; 2021 ; Journal of Knowledge Management Volume 25 ; 25 ; >
-    au < manifest ; exists ; 2022 ; Journal of Knowledge Management Volume 26 ; 26 ; >
+    au < ready ; exists ; 2022 ; Journal of Knowledge Management Volume 26 ; 26 ; >
 
   }
 
@@ -8343,7 +8343,7 @@
     au < crawling ; exists ; 2019 ; Journal of Manufacturing Technology Management Volume 30 ; 30 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Manufacturing Technology Management Volume 31 ; 31 ; >
     au < crawling ; exists ; 2021 ; Journal of Manufacturing Technology Management Volume 32 ; 32 ; >
-    au < manifest ; exists ; 2022 ; Journal of Manufacturing Technology Management Volume 33 ; 33 ; >
+    au < ready ; exists ; 2022 ; Journal of Manufacturing Technology Management Volume 33 ; 33 ; >
 
   }
 
@@ -8425,7 +8425,7 @@
     au < crawling ; exists ; 2019 ; Journal of Modelling in Management Volume 14 ; 14 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Modelling in Management Volume 15 ; 15 ; >
     au < crawling ; exists ; 2021 ; Journal of Modelling in Management Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2022 ; Journal of Modelling in Management Volume 17 ; 17 ; >
+    au < ready ; exists ; 2022 ; Journal of Modelling in Management Volume 17 ; 17 ; >
 
   }
 
@@ -8464,7 +8464,7 @@
     au < crawling ; exists ; 2019 ; Journal of Money Laundering Control Volume 22 ; 22 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Money Laundering Control Volume 23 ; 23 ; >
     au < crawling ; exists ; 2021 ; Journal of Money Laundering Control Volume 24 ; 24 ; >
-    au < manifest ; exists ; 2022 ; Journal of Money Laundering Control Volume 25 ; 25 ; >
+    au < ready ; exists ; 2022 ; Journal of Money Laundering Control Volume 25 ; 25 ; >
 
   }
 
@@ -8609,7 +8609,7 @@
     au < crawling ; exists ; 2019 ; Journal of Product & Brand Management Volume 28 ; 28 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Product & Brand Management Volume 29 ; 29 ; >
     au < crawling ; exists ; 2021 ; Journal of Product & Brand Management Volume 30 ; 30 ; >
-    au < manifest ; exists ; 2022 ; Journal of Product & Brand Management Volume 31 ; 31 ; >
+    au < ready ; exists ; 2022 ; Journal of Product & Brand Management Volume 31 ; 31 ; >
 
   }
 
@@ -8671,7 +8671,7 @@
     au < crawling ; exists ; 2019 ; Journal of Property Investment & Finance Volume 37 ; 37 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Property Investment & Finance Volume 38 ; 38 ; >
     au < crawling ; exists ; 2021 ; Journal of Property Investment & Finance Volume 39 ; 39 ; >
-    au < manifest ; exists ; 2022 ; Journal of Property Investment & Finance Volume 40 ; 40 ; >
+    au < ready ; exists ; 2022 ; Journal of Property Investment & Finance Volume 40 ; 40 ; >
 
   }
 
@@ -8751,7 +8751,7 @@
     au < crawling ; exists ; 2019 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 18 ; 18 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 19 ; 19 ; >
     au < crawling ; exists ; 2021 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 20 ; 20 ; >
-    au < manifest ; exists ; 2022 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 21 ; 21 ; >
+    au < ready ; exists ; 2022 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 21 ; 21 ; >
 
   }
 
@@ -8793,7 +8793,7 @@
     au < crawling ; exists ; 2019 ; Journal of Quality in Maintenance Engineering Volume 25 ; 25 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Quality in Maintenance Engineering Volume 26 ; 26 ; >
     au < crawling ; exists ; 2021 ; Journal of Quality in Maintenance Engineering Volume 27 ; 27 ; >
-    au < manifest ; exists ; 2022 ; Journal of Quality in Maintenance Engineering Volume 28 ; 28 ; >
+    au < ready ; exists ; 2022 ; Journal of Quality in Maintenance Engineering Volume 28 ; 28 ; >
 
   }
 
@@ -8859,7 +8859,7 @@
     au < crawling ; exists ; 2019 ; Journal of Research in Marketing and Entrepreneurship Volume 21 ; 21 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Research in Marketing and Entrepreneurship Volume 22 ; 22 ; >
     au < crawling ; exists ; 2021 ; Journal of Research in Marketing and Entrepreneurship Volume 23 ; 23 ; >
-    au < manifest ; exists ; 2022 ; Journal of Research in Marketing and Entrepreneurship Volume 24 ; 24 ; >
+    au < ready ; exists ; 2022 ; Journal of Research in Marketing and Entrepreneurship Volume 24 ; 24 ; >
 
   }
 
@@ -8895,7 +8895,7 @@
     au < frozen ; exists ; 2019 ; The Journal of Risk Finance Volume 20 ; 20 ; >
     au < deepCrawl ; exists ; 2020 ; The Journal of Risk Finance Volume 21 ; 21 ; >
     au < crawling ; exists ; 2021 ; The Journal of Risk Finance Volume 22 ; 22 ; >
-    au < manifest ; exists ; 2022 ; The Journal of Risk Finance Volume 23 ; 23 ; >
+    au < ready ; exists ; 2022 ; The Journal of Risk Finance Volume 23 ; 23 ; >
 
   }
 
@@ -9034,7 +9034,7 @@
     au < crawling ; exists ; 2019 ; Journal of Small Business and Enterprise Development Volume 26 ; 26 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Small Business and Enterprise Development Volume 27 ; 27 ; >
     au < crawling ; exists ; 2021 ; Journal of Small Business and Enterprise Development Volume 28 ; 28 ; >
-    au < manifest ; exists ; 2022 ; Journal of Small Business and Enterprise Development Volume 29 ; 29 ; >
+    au < ready ; exists ; 2022 ; Journal of Small Business and Enterprise Development Volume 29 ; 29 ; >
 
   }
 
@@ -9126,7 +9126,7 @@
     au < crawling ; exists ; 2019 ; Journal of Systems and Information Technology Volume 21 ; 21 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Systems and Information Technology Volume 22 ; 22 ; >
     au < crawling ; exists ; 2021 ; Journal of Systems and Information Technology Volume 23 ; 23 ; >
-    au < manifest ; exists ; 2022 ; Journal of Systems and Information Technology Volume 24 ; 24 ; >
+    au < ready ; exists ; 2022 ; Journal of Systems and Information Technology Volume 24 ; 24 ; >
 
   }
 
@@ -9212,7 +9212,7 @@
     au < crawling ; exists ; 2019 ; Journal of Workplace Learning Volume 31 ; 31 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Workplace Learning Volume 32 ; 32 ; >
     au < crawling ; exists ; 2021 ; Journal of Workplace Learning Volume 33 ; 33 ; >
-    au < manifest ; exists ; 2022 ; Journal of Workplace Learning Volume 34 ; 34 ; >
+    au < ready ; exists ; 2022 ; Journal of Workplace Learning Volume 34 ; 34 ; >
 
   }
 
@@ -9890,7 +9890,7 @@
     au < frozen ; exists ; 2019 ; Management of Environmental Quality: An International Journal Volume 30 ; 30 ; >
     au < deepCrawl ; exists ; 2020 ; Management of Environmental Quality: An International Journal Volume 31 ; 31 ; >
     au < crawling ; exists ; 2021 ; Management of Environmental Quality: An International Journal Volume 32 ; 32 ; >
-    au < manifest ; exists ; 2022 ; Management of Environmental Quality: An International Journal Volume 33 ; 33 ; >
+    au < ready ; exists ; 2022 ; Management of Environmental Quality: An International Journal Volume 33 ; 33 ; >
 
   }
 
@@ -9998,7 +9998,7 @@
     au < crawling ; exists ; 2019 ; Management Research: The journal of the Iberoamerican Academy of Management Volume 17 ; 17 ; >
     au < deepCrawl ; exists ; 2020 ; Management Research: The journal of the Iberoamerican Academy of Management Volume 18 ; 18 ; >
     au < crawling ; exists ; 2021 ; Management Research: The journal of the Iberoamerican Academy of Management Volume 19 ; 19 ; >
-    au < manifest ; exists ; 2022 ; Management Research: The journal of the Iberoamerican Academy of Management Volume 20 ; 20 ; >
+    au < ready ; exists ; 2022 ; Management Research: The journal of the Iberoamerican Academy of Management Volume 20 ; 20 ; >
 
   }
 
@@ -10307,7 +10307,7 @@
     au < crawling ; exists ; 2019 ; Measuring Business Excellence Volume 23 ; 23 ; >
     au < deepCrawl ; exists ; 2020 ; Measuring Business Excellence Volume 24 ; 24 ; >
     au < crawling ; exists ; 2021 ; Measuring Business Excellence Volume 25 ; 25 ; >
-    au < manifest ; exists ; 2022 ; Measuring Business Excellence Volume 26 ; 26 ; >
+    au < ready ; exists ; 2022 ; Measuring Business Excellence Volume 26 ; 26 ; >
 
   }
 
@@ -10448,7 +10448,7 @@
     au < crawling ; exists ; 2019 ; Mental Health Review Journal: Research, Policy and Practice Volume 24 ; 24 ; >
     au < deepCrawl ; exists ; 2020 ; Mental Health Review Journal: Research, Policy and Practice Volume 25 ; 25 ; >
     au < crawling ; exists ; 2021 ; Mental Health Review Journal: Research, Policy and Practice Volume 26 ; 26 ; >
-    au < manifest ; exists ; 2022 ; Mental Health Review Journal: Research, Policy and Practice Volume 27 ; 27 ; >
+    au < ready ; exists ; 2022 ; Mental Health Review Journal: Research, Policy and Practice Volume 27 ; 27 ; >
 
   }
 
@@ -10501,7 +10501,7 @@
     au < crawling ; exists ; 2019 ; Microelectronics International Volume 36 ; 36 ; >
     au < deepCrawl ; exists ; 2020 ; Microelectronics International Volume 37 ; 37 ; >
     au < crawling ; exists ; 2021 ; Microelectronics International Volume 38 ; 38 ; >
-    au < manifest ; exists ; 2022 ; Microelectronics International Volume 39 ; 39 ; >
+    au < ready ; exists ; 2022 ; Microelectronics International Volume 39 ; 39 ; >
 
   }
 
@@ -10555,7 +10555,7 @@
     au < crawling ; exists ; 2019 ; Multidiscipline Modeling in Materials and Structures Volume 15 ; 15 ; >
     au < deepCrawl ; exists ; 2020 ; Multidiscipline Modeling in Materials and Structures Volume 16 ; 16 ; >
     au < crawling ; exists ; 2021 ; Multidiscipline Modeling in Materials and Structures Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2022 ; Multidiscipline Modeling in Materials and Structures Volume 18 ; 18 ; >
+    au < ready ; exists ; 2022 ; Multidiscipline Modeling in Materials and Structures Volume 18 ; 18 ; >
 
   }
 
@@ -10585,7 +10585,7 @@
     au < crawling ; exists ; 2019 ; Multinational Business Review Volume 27 ; 27 ; >
     au < deepCrawl ; exists ; 2020 ; Multinational Business Review Volume 28 ; 28 ; >
     au < crawling ; exists ; 2021 ; Multinational Business Review Volume 29 ; 29 ; >
-    au < manifest ; exists ; 2022 ; Multinational Business Review Volume 30 ; 30 ; >
+    au < ready ; exists ; 2022 ; Multinational Business Review Volume 30 ; 30 ; >
 
   }
 
@@ -10951,7 +10951,7 @@
     au < crawling ; exists ; 2019 ; On The Horizon Volume 27 ; 27 ; >
     au < deepCrawl ; exists ; 2020 ; On The Horizon Volume 28 ; 28 ; >
     au < crawling ; exists ; 2021 ; On The Horizon Volume 29 ; 29 ; >
-    au < manifest ; exists ; 2022 ; On The Horizon Volume 30 ; 30 ; >
+    au < ready ; exists ; 2022 ; On The Horizon Volume 30 ; 30 ; >
 
   }
 
@@ -11041,7 +11041,7 @@
     au < crawling ; exists ; 2019 ; Online Information Review Volume 43 ; 43 ; >
     au < deepCrawl ; exists ; 2020 ; Online Information Review Volume 44 ; 44 ; >
     au < crawling ; exists ; 2021 ; Online Information Review Volume 45 ; 45 ; >
-    au < manifest ; exists ; 2022 ; Online Information Review Volume 46 ; 46 ; >
+    au < ready ; exists ; 2022 ; Online Information Review Volume 46 ; 46 ; >
 
   }
 
@@ -11133,7 +11133,7 @@
     au < crawling ; exists ; 2019 ; Performance Measurement and Metrics Volume 20 ; 20 ; >
     au < frozen ; exists ; 2020 ; Performance Measurement and Metrics Volume 21 ; 21 ; >
     au < notReady ; exists ; 2021 ; Performance Measurement and Metrics Volume 22 ; 22 ; > #500 https://www.emerald.com/insight/proxy/img?link=/resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_PMM-03-2020-0015/urn:emeraldgroup.com:asset:id:binary:PMM-03-2020-0015_suppl1.xlsx
-    au < manifest ; exists ; 2022 ; Performance Measurement and Metrics Volume 23 ; 23 ; > #500 https://www.emerald.com/insight/proxy/img?link=/resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_PMM-03-2020-0015/urn:emeraldgroup.com:asset:id:binary:PMM-03-2020-0015_suppl1.xlsx
+    au < ready ; exists ; 2022 ; Performance Measurement and Metrics Volume 23 ; 23 ; > #500 https://www.emerald.com/insight/proxy/img?link=/resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_PMM-03-2020-0015/urn:emeraldgroup.com:asset:id:binary:PMM-03-2020-0015_suppl1.xlsx
 
   }
 
@@ -11320,7 +11320,7 @@
     au < crawling ; exists ; 2019 ; Policing: An International Journal of Police Strategies & Management Volume 42 ; 42 ; >
     au < deepCrawl ; exists ; 2020 ; Policing: An International Journal of Police Strategies & Management Volume 43 ; 43 ; >
     au < crawling ; exists ; 2021 ; Policing: An International Journal of Police Strategies & Management Volume 44 ; 44 ; >
-    au < manifest ; exists ; 2022 ; Policing: An International Journal of Police Strategies & Management Volume 45 ; 45 ; >
+    au < ready ; exists ; 2022 ; Policing: An International Journal of Police Strategies & Management Volume 45 ; 45 ; >
 
   }
 
@@ -11514,7 +11514,7 @@
     au < crawling ; exists ; 2019 ; Qualitative Market Research: An International Journal Volume 22 ; 22 ; >
     au < deepCrawl ; exists ; 2020 ; Qualitative Market Research: An International Journal Volume 23 ; 23 ; >
     au < crawling ; exists ; 2021 ; Qualitative Market Research: An International Journal Volume 24 ; 24 ; >
-    au < manifest ; exists ; 2022 ; Qualitative Market Research: An International Journal Volume 25 ; 25 ; >
+    au < ready ; exists ; 2022 ; Qualitative Market Research: An International Journal Volume 25 ; 25 ; >
 
   }
 
@@ -11547,7 +11547,7 @@
     au < crawling ; exists ; 2019 ; Qualitative Research in Accounting & Management Volume 16 ; 16 ; >
     au < deepCrawl ; exists ; 2020 ; Qualitative Research in Accounting & Management Volume 17 ; 17 ; >
     au < crawling ; exists ; 2021 ; Qualitative Research in Accounting & Management Volume 18 ; 18 ; >
-    au < manifest ; exists ; 2022 ; Qualitative Research in Accounting & Management Volume 19 ; 19 ; >
+    au < ready ; exists ; 2022 ; Qualitative Research in Accounting & Management Volume 19 ; 19 ; >
 
   }
 
@@ -11604,7 +11604,7 @@
     au < crawling ; exists ; 2019 ; Qualitative Research in Organizations and Management: An International Journal Volume 14 ; 14 ; >
     au < deepCrawl ; exists ; 2020 ; Qualitative Research in Organizations and Management: An International Journal Volume 15 ; 15 ; >
     au < crawling ; exists ; 2021 ; Qualitative Research in Organizations and Management: An International Journal Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2022 ; Qualitative Research in Organizations and Management: An International Journal Volume 17 ; 17 ; >
+    au < ready ; exists ; 2022 ; Qualitative Research in Organizations and Management: An International Journal Volume 17 ; 17 ; >
 
   }
 
@@ -11634,7 +11634,7 @@
     au < crawling ; exists ; 2019 ; Qualitative Research Journal Volume 19 ; 19 ; >
     au < deepCrawl ; exists ; 2020 ; Qualitative Research Journal Volume 20 ; 20 ; >
     au < crawling ; exists ; 2021 ; Qualitative Research Journal Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2022 ; Qualitative Research Journal Volume 22 ; 22 ; >
+    au < ready ; exists ; 2022 ; Qualitative Research Journal Volume 22 ; 22 ; >
 
   }
 
@@ -11715,7 +11715,7 @@
     au < crawling ; exists ; 2019 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 20 ; 20 ; >
     au < deepCrawl ; exists ; 2020 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 21 ; 21 ; >
     au < crawling ; exists ; 2021 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 22 ; 22 ; >
-    au < manifest ; exists ; 2022 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 23 ; 23 ; >
+    au < ready ; exists ; 2022 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 23 ; 23 ; >
 
   }
 
@@ -11757,7 +11757,7 @@
     au < crawling ; exists ; 2019 ; Rapid Prototyping Journal Volume 25 ; 25 ; >
     au < frozen ; exists ; 2020 ; Rapid Prototyping Journal Volume 26 ; 26 ; >
     au < crawling ; exists ; 2021 ; Rapid Prototyping Journal Volume 27 ; 27 ; >
-    au < manifest ; exists ; 2022 ; Rapid Prototyping Journal Volume 28 ; 28 ; >
+    au < ready ; exists ; 2022 ; Rapid Prototyping Journal Volume 28 ; 28 ; >
 
   }
 
@@ -11938,7 +11938,7 @@
     au < crawling ; exists ; 2019 ; Review of Accounting and Finance Volume 18 ; 18 ; >
     au < deepCrawl ; exists ; 2020 ; Review of Accounting and Finance Volume 19 ; 19 ; >
     au < crawling ; exists ; 2021 ; Review of Accounting and Finance Volume 20 ; 20 ; >
-    au < manifest ; exists ; 2022 ; Review of Accounting and Finance Volume 21 ; 21 ; >
+    au < ready ; exists ; 2022 ; Review of Accounting and Finance Volume 21 ; 21 ; >
 
   }
 
@@ -12163,7 +12163,7 @@
     au < crawling ; exists ; 2019 ; Social Responsibility Journal Volume 15 ; 15 ; >
     au < deepCrawl ; exists ; 2020 ; Social Responsibility Journal Volume 16 ; 16 ; >
     au < crawling ; exists ; 2021 ; Social Responsibility Journal Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2022 ; Social Responsibility Journal Volume 18 ; 18 ; >
+    au < ready ; exists ; 2022 ; Social Responsibility Journal Volume 18 ; 18 ; >
 
   }
 
@@ -12194,7 +12194,7 @@
     au < crawling ; exists ; 2019 ; Society and Business Review Volume 14 ; 14 ; >
     au < deepCrawl ; exists ; 2020 ; Society and Business Review Volume 15 ; 15 ; >
     au < crawling ; exists ; 2021 ; Society and Business Review Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2022 ; Society and Business Review Volume 17 ; 17 ; >
+    au < ready ; exists ; 2022 ; Society and Business Review Volume 17 ; 17 ; >
 
   }
 
@@ -12374,7 +12374,7 @@
     au < crawling ; exists ; 2019 ; Strategic HR Review Volume 18 ; 18 ; >
     au < deepCrawl ; exists ; 2020 ; Strategic HR Review Volume 19 ; 19 ; >
     au < crawling ; exists ; 2021 ; Strategic HR Review Volume 20 ; 20 ; >
-    au < manifest ; exists ; 2022 ; Strategic HR Review Volume 21 ; 21 ; >
+    au < ready ; exists ; 2022 ; Strategic HR Review Volume 21 ; 21 ; >
 
   }
 
@@ -12496,7 +12496,7 @@
     au < crawling ; exists ; 2019 ; Strategy & Leadership Volume 47 ; 47 ; >
     au < crawling ; exists ; 2020 ; Strategy & Leadership Volume 48 ; 48 ; >
     au < crawling ; exists ; 2021 ; Strategy & Leadership Volume 49 ; 49 ; >
-    au < manifest ; exists ; 2022 ; Strategy & Leadership Volume 50 ; 50 ; >
+    au < ready ; exists ; 2022 ; Strategy & Leadership Volume 50 ; 50 ; >
 
   }
 
@@ -12618,7 +12618,7 @@
     au < crawling ; exists ; 2019 ; Studies in Economics and Finance Volume 36 ; 36 ; >
     au < deepCrawl ; exists ; 2020 ; Studies in Economics and Finance Volume 37 ; 37 ; >
     au < crawling ; exists ; 2021 ; Studies in Economics and Finance Volume 38 ; 38 ; >
-    au < manifest ; exists ; 2022 ; Studies in Economics and Finance Volume 39 ; 39 ; >
+    au < ready ; exists ; 2022 ; Studies in Economics and Finance Volume 39 ; 39 ; >
 
   }
 
@@ -12659,7 +12659,7 @@
     au < crawling ; exists ; 2019 ; Supply Chain Management: An International Journal Volume 24 ; 24 ; >
     au < deepCrawl ; exists ; 2020 ; Supply Chain Management: An International Journal Volume 25 ; 25 ; >
     au < crawling ; exists ; 2021 ; Supply Chain Management: An International Journal Volume 26 ; 26 ; >
-    au < manifest ; exists ; 2022 ; Supply Chain Management: An International Journal Volume 27 ; 27 ; >
+    au < ready ; exists ; 2022 ; Supply Chain Management: An International Journal Volume 27 ; 27 ; >
 
   }
 
@@ -12728,7 +12728,7 @@
     au < crawling ; exists ; 2019 ; Team Performance Management Volume 25 ; 25 ; >
     au < deepCrawl ; exists ; 2020 ; Team Performance Management Volume 26 ; 26 ; >
     au < crawling ; exists ; 2021 ; Team Performance Management Volume 27 ; 27 ; >
-    au < manifest ; exists ; 2022 ; Team Performance Management Volume 28 ; 28 ; >
+    au < ready ; exists ; 2022 ; Team Performance Management Volume 28 ; 28 ; >
 
   }
 
@@ -12769,7 +12769,7 @@
     au < crawling ; exists ; 2019 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 24 ; 24 ; >
     au < deepCrawl ; exists ; 2020 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 25 ; 25 ; >
     au < crawling ; exists ; 2021 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 26 ; 26 ; >
-    au < manifest ; exists ; 2022 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 27 ; 27 ; >
+    au < ready ; exists ; 2022 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 27 ; 27 ; >
 
   }
 
@@ -12886,7 +12886,7 @@
     au < crawling ; exists ; 2019 ; Tourism Review Volume 74 ; 74 ; >
     au < deepCrawl ; exists ; 2020 ; Tourism Review Volume 75 ; 75 ; >
     au < crawling ; exists ; 2021 ; Tourism Review Volume 76 ; 76 ; >
-    au < manifest ; exists ; 2022 ; Tourism Review Volume 77 ; 77 ; >
+    au < ready ; exists ; 2022 ; Tourism Review Volume 77 ; 77 ; >
 
   }
 
@@ -13217,7 +13217,7 @@
     au < crawling ; exists ; 2019 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 23 ; 23 ; >
     au < deepCrawl ; exists ; 2020 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 24 ; 24 ; >
     au < crawling ; exists ; 2021 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 25 ; 25 ; >
-    au < manifest ; exists ; 2022 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 26 ; 26 ; >
+    au < ready ; exists ; 2022 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 26 ; 26 ; >
 
   }
 
@@ -13366,7 +13366,7 @@
     au < finished ; crawling ; 2019 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 20 ; 20 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 21 ; 21 ; >
     au < crawling ; exists ; 2021 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 22 ; 22 ; >
-    au < manifest ; exists ; 2022 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 23 ; 23 ; >
+    au < ready ; exists ; 2022 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 23 ; 23 ; >
 
   }
 
@@ -13468,7 +13468,7 @@
     au < manifest ; exists ; 2019 ; English Teaching: Practice & Critique Volume 18 ; 18 ; >
     au < ready ; exists ; 2020 ; English Teaching: Practice & Critique Volume 19 ; 19 ; >
     au < ready ; exists ; 2021 ; English Teaching: Practice & Critique Volume 20 ; 20 ; >
-    au < manifest ; exists ; 2022 ; English Teaching: Practice & Critique Volume 21 ; 21 ; >
+    au < ready ; exists ; 2022 ; English Teaching: Practice & Critique Volume 21 ; 21 ; >
 
   }
 
@@ -13704,7 +13704,7 @@
     au < manifest ; exists ; 2019 ; International Journal of Organization Theory & Behavior Volume 22 ; 22 ; >
     au < ready ; exists ; 2020 ; International Journal of Organization Theory & Behavior Volume 23 ; 23 ; >
     au < ready ; exists ; 2021 ; International Journal of Organization Theory & Behavior Volume 24 ; 24 ; >
-    au < manifest ; exists ; 2022 ; International Journal of Organization Theory & Behavior Volume 25 ; 25 ; >
+    au < ready ; exists ; 2022 ; International Journal of Organization Theory & Behavior Volume 25 ; 25 ; >
 
   }
 
@@ -14011,7 +14011,7 @@
     au < manifest ; exists ; 2019 ; Journal of Public Budgeting, Accounting & Financial Management Volume 31 ; 31 ; >
     au < ready ; exists ; 2020 ; Journal of Public Budgeting, Accounting & Financial Management Volume 32 ; 32 ; >
     au < ready ; exists ; 2021 ; Journal of Public Budgeting, Accounting & Financial Management Volume 33 ; 33 ; >
-    au < manifest ; exists ; 2022 ; Journal of Public Budgeting, Accounting & Financial Management Volume 34 ; 34 ; >
+    au < ready ; exists ; 2022 ; Journal of Public Budgeting, Accounting & Financial Management Volume 34 ; 34 ; >
 
   }
 
@@ -14046,7 +14046,7 @@
     au < manifest ; exists ; 2019 ; Journal of Public Procurement Volume 19 ; 19 ; >
     au < ready ; exists ; 2020 ; Journal of Public Procurement Volume 20 ; 20 ; >
     au < ready ; exists ; 2021 ; Journal of Public Procurement Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2022 ; Journal of Public Procurement Volume 22 ; 22 ; >
+    au < ready ; exists ; 2022 ; Journal of Public Procurement Volume 22 ; 22 ; >
 
   }
 
@@ -14185,7 +14185,7 @@
     au < manifest ; exists ; 2019 ; Research Journal of Textile and Apparel Volume 23 ; 23 ; >
     au < ready ; exists ; 2020 ; Research Journal of Textile and Apparel Volume 24 ; 24 ; >
     au < ready ; exists ; 2021 ; Research Journal of Textile and Apparel Volume 25 ; 25 ; >
-    au < manifest ; exists ; 2022 ; Research Journal of Textile and Apparel Volume 26 ; 26 ; >
+    au < ready ; exists ; 2022 ; Research Journal of Textile and Apparel Volume 26 ; 26 ; >
 
   }
 
@@ -14303,7 +14303,7 @@
     au < manifest ; exists ; 2019 ; World Journal of Engineering Volume 16 ; 16 ; >
     au < ready ; exists ; 2020 ; World Journal of Engineering Volume 17 ; 17 ; >
     au < ready ; exists ; 2021 ; World Journal of Engineering Volume 18 ; 18 ; >
-    au < manifest ; exists ; 2022 ; World Journal of Engineering Volume 19 ; 19 ; >
+    au < ready ; exists ; 2022 ; World Journal of Engineering Volume 19 ; 19 ; >
 
   }
 

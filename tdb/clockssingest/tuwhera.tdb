@@ -41,7 +41,7 @@
       au < frozen ; exists ; 2019 ; Applied Finance Letters Volume 8 ; 8 ; 2019 ; >
       au < frozen ; exists ; 2020 ; Applied Finance Letters Volume 9 ; 9 ; 2020 ; >
       au < crawling ; exists ; 2021 ; Applied Finance Letters Volume 10 ; 10 ; 2021 ; >
-      au < manifest ; exists ; 2022 ; Applied Finance Letters Volume 11 ; 11 ; 2022 ; >
+      au < ready ; exists ; 2022 ; Applied Finance Letters Volume 11 ; 11 ; 2022 ; >
 
     }
 
@@ -98,7 +98,7 @@
       au < frozen ; exists ; 2019 ; Te Kaharoa Volume 12 ; 12 ; 2019 ; >
       au < deepCrawl ; exists ; 2020 ; Te Kaharoa Volume 13 ; 13 ; 2020 ; >
       au < crawling ; exists ; 2021 ; Te Kaharoa Volume 14 ; 14 ; 2021 ; >
-      au < manifest ; exists ; 2022 ; Te Kaharoa Volume 15 ; 15 ; 2022 ; >
+      au < ready ; exists ; 2022 ; Te Kaharoa Volume 15 ; 15 ; 2022 ; >
 
     }
 
@@ -114,7 +114,7 @@
       attr[start_stem] = 
 
       au < crawling ; exists ; 2021 ; Aotearoa New Zealand Journal of Social Issues Volume 1 ; 1 ; 2021 ; >
-      au < manifest ; exists ; 2022 ; Aotearoa New Zealand Journal of Social Issues Volume 2 ; 2 ; 2022 ; >
+      au < ready ; exists ; 2022 ; Aotearoa New Zealand Journal of Social Issues Volume 2 ; 2 ; 2022 ; >
 
   }
 
@@ -177,7 +177,7 @@
       au < frozen ; exists ; 2019 ; Decolonization of Criminology and Justice  Volume 1 ; 1 ; 2019 ; >
       au < frozen ; exists ; 2020 ; Decolonization of Criminology and Justice  Volume 2 ; 2 ; 2020 ; >
       au < crawling ; exists ; 2021 ; Decolonization of Criminology and Justice  Volume 3 ; 3 ; 2021 ; >
-      au < manifest ; exists ; 2022 ; Decolonization of Criminology and Justice  Volume 4 ; 4 ; 2022 ; >
+      au < ready ; exists ; 2022 ; Decolonization of Criminology and Justice  Volume 4 ; 4 ; 2022 ; >
 
   }
 
@@ -221,22 +221,22 @@
       au < manifest ; exists ; 1995 ; Interstices Volume 3 ; 3 ; 1995 ; >
       au < manifest ; exists ; 1996 ; Interstices Volume 4 ; 4 ; 1996 ; >
       au < manifest ; exists ; 2000 ; Interstices Volume 5 ; 5 ; 2000 ; >
-      au < manifest ; exists ; 2005 ; Interstices Volume 6 ; 6 ; 2005 ; >
-      au < manifest ; exists ; 2006 ; Interstices Volume 7 ; 7 ; 2006 ; >
-      au < manifest ; exists ; 2007 ; Interstices Volume 8 ; 8 ; 2007 ; >
-      au < manifest ; exists ; 2008 ; Interstices Volume 9 ; 9 ; 2008 ; >
-      au < manifest ; exists ; 2009 ; Interstices Volume 10 ; 10 ; 2009 ; >
-      au < manifest ; exists ; 2010 ; Interstices Volume 11 ; 11 ; 2010 ; >
-      au < manifest ; exists ; 2012 ; Interstices Volume 12-13 ; 12-13 ; 2012 ; >
-      au < manifest ; exists ; 2013 ; Interstices Volume 14 ; 14 ; 2013 ; >
-      au < manifest ; exists ; 2014 ; Interstices Volume 15 ; 15 ; 2014 ; >
-      au < manifest ; exists ; 2015 ; Interstices Volume 16 ; 16 ; 2015 ; >
-      au < manifest ; exists ; 2016 ; Interstices Volume 17 ; 17 ; 2016 ; >#
-      au < manifest ; exists ; 2017 ; Interstices Volume 18 ; 18 ; 2017 ; >
-      au < manifest ; exists ; 2018 ; Interstices Volume 2018 ; 2018 ; 2018 ; >
-      au < manifest ; exists ; 2019 ; Interstices Volume 19 ; 19 ; 2019 ; >
-      au < manifest ; exists ; 2020 ; Interstices Volume 20 ; 20 ; 2020 ; >
-      au < manifest ; exists ; 2021 ; Interstices Volume 21 ; 21 ; 2021 ; >
+      au < ready ; exists ; 2005 ; Interstices Volume 6 ; 6 ; 2005 ; >
+      au < ready ; exists ; 2006 ; Interstices Volume 7 ; 7 ; 2006 ; >
+      au < ready ; exists ; 2007 ; Interstices Volume 8 ; 8 ; 2007 ; >
+      au < ready ; exists ; 2008 ; Interstices Volume 9 ; 9 ; 2008 ; >
+      au < ready ; exists ; 2009 ; Interstices Volume 10 ; 10 ; 2009 ; >
+      au < ready ; exists ; 2010 ; Interstices Volume 11 ; 11 ; 2010 ; >
+      au < ready ; exists ; 2012 ; Interstices Volume 12-13 ; 12-13 ; 2012 ; >
+      au < ready ; exists ; 2013 ; Interstices Volume 14 ; 14 ; 2013 ; >
+      au < ready ; exists ; 2014 ; Interstices Volume 15 ; 15 ; 2014 ; >
+      au < ready ; exists ; 2015 ; Interstices Volume 16 ; 16 ; 2015 ; >
+      au < ready ; exists ; 2016 ; Interstices Volume 17 ; 17 ; 2016 ; >#
+      au < ready ; exists ; 2017 ; Interstices Volume 18 ; 18 ; 2017 ; >
+      au < ready ; exists ; 2018 ; Interstices Volume 2018 ; 2018 ; 2018 ; >
+      au < ready ; exists ; 2019 ; Interstices Volume 19 ; 19 ; 2019 ; >
+      au < ready ; exists ; 2020 ; Interstices Volume 20 ; 20 ; 2020 ; >
+      au < ready ; exists ; 2021 ; Interstices Volume 21 ; 21 ; 2021 ; >
       au < expected ; exists ; 2022 ; Interstices Volume 22 ; 22 ; 2022 ; >
 
   }
@@ -312,7 +312,7 @@
       au < frozen ; exists ; 2019 ; PJTEL: Pacific Journal of Technology Enhanced Learning  Volume 1 ; 1 ; 2019 ; >
       au < frozen ; exists ; 2020 ; PJTEL: Pacific Journal of Technology Enhanced Learning  Volume 2 ; 2 ; 2020 ; >
       au < crawling ; exists ; 2021 ; PJTEL: Pacific Journal of Technology Enhanced Learning  Volume 3 ; 3 ; 2021 ; >
-      au < manifest ; exists ; 2022 ; PJTEL: Pacific Journal of Technology Enhanced Learning  Volume 4 ; 4 ; 2022 ; >
+      au < ready ; exists ; 2022 ; PJTEL: Pacific Journal of Technology Enhanced Learning  Volume 4 ; 4 ; 2022 ; >
 
   }
 
@@ -354,7 +354,7 @@
       au < frozen ; exists ; 2019 ; Teachers Work Volume 16 ; 16 ; 2019 ; >
       au < frozen ; exists ; 2020 ; Teachers Work Volume 17 ; 17 ; 2020 ; >
       au < crawling ; exists ; 2021 ; Teachers Work Volume 18 ; 18 ; 2021 ; >
-      au < manifest ; exists ; 2022 ; Teachers Work Volume 19 ; 19 ; 2022 ; >
+      au < ready ; exists ; 2022 ; Teachers Work Volume 19 ; 19 ; 2022 ; >
 
   }
 
