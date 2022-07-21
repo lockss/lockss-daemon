@@ -1976,6 +1976,22 @@
   {
 
     title <
+      name = British Journal of Dermatology ;
+      issn = 0007-0963 ;
+      eissn = 1365-2133 ;
+      issnl = 0007-0963
+    >
+
+    param[journal_id] = bjd
+    #move from Wiley, 2023
+
+    au < expected ; 2022 ; 2022 ; British Journal of Dermatology Volume 186-187 ; 186-187 >
+
+  }
+
+  {
+
+    title <
       name = Behavioral Ecology ;
       issn = 1045-2249 ;
       eissn = 1465-7279 ;
@@ -3497,6 +3513,21 @@
     au < released ; 2020 ; 2020 ; Classical Receptions Journal Volume 12 ; 12 >
     au < released ; 2021 ; 2021 ; Classical Receptions Journal Volume 13 ; 13 >
     au < manifest ; 2022 ; 2022 ; Classical Receptions Journal Volume 14 ; 14 >
+
+  }
+
+  {
+
+    title <
+      name = Clinical and Experimental Dermatology ;
+      eissn = 1365-2230 ;
+      issnl = 1365-2230
+    >
+
+    param[journal_id] = ced
+    #move from Wiley, 2023
+
+    au < expected ; 2022 ; 2022 ; Clinical and Experimental Dermatology Volume 47 ; 47 >
 
   }
 
