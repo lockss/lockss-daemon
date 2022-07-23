@@ -21,14 +21,14 @@
       param[journal_id] = tpmd
       implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
-      au < exists ; exists ; 1979 ; The American Journal of Tropical Medicine and Hygiene Volume 28 ; 28 ; >
-      au < exists ; exists ; 1980 ; The American Journal of Tropical Medicine and Hygiene Volume 29 ; 29 ; >
-      au < exists ; exists ; 1981 ; The American Journal of Tropical Medicine and Hygiene Volume 30 ; 30 ; >
-      au < exists ; exists ; 1982 ; The American Journal of Tropical Medicine and Hygiene Volume 31 ; 31 ; >
-      au < exists ; exists ; 1983 ; The American Journal of Tropical Medicine and Hygiene Volume 32 ; 32 ; >
-      au < exists ; exists ; 1984 ; The American Journal of Tropical Medicine and Hygiene Volume 33 ; 33 ; >
-      au < exists ; exists ; 1985 ; The American Journal of Tropical Medicine and Hygiene Volume 34 ; 34 ; >
-      au < exists ; exists ; 1986 ; The American Journal of Tropical Medicine and Hygiene Volume 35 ; 35 ; >
+      au < manifest ; exists ; 1979 ; The American Journal of Tropical Medicine and Hygiene Volume 28 ; 28 ; >
+      au < manifest ; exists ; 1980 ; The American Journal of Tropical Medicine and Hygiene Volume 29 ; 29 ; >
+      au < manifest ; exists ; 1981 ; The American Journal of Tropical Medicine and Hygiene Volume 30 ; 30 ; >
+      au < manifest ; exists ; 1982 ; The American Journal of Tropical Medicine and Hygiene Volume 31 ; 31 ; >
+      au < manifest ; exists ; 1983 ; The American Journal of Tropical Medicine and Hygiene Volume 32 ; 32 ; >
+      au < manifest ; exists ; 1984 ; The American Journal of Tropical Medicine and Hygiene Volume 33 ; 33 ; >
+      au < manifest ; exists ; 1985 ; The American Journal of Tropical Medicine and Hygiene Volume 34 ; 34 ; >
+      au < manifest ; exists ; 1986 ; The American Journal of Tropical Medicine and Hygiene Volume 35 ; 35 ; >
 
       au < exists ; exists ; 1987 ; The American Journal of Tropical Medicine and Hygiene Volume 36 ; 36 ; >
       au < exists ; exists ; 1987 ; The American Journal of Tropical Medicine and Hygiene Volume 37 ; 37 ; >
