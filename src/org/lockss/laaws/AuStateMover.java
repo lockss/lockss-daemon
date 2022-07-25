@@ -68,14 +68,14 @@ public class AuStateMover extends Worker {
   public void run() {
     log.debug2("Starting Au State Mover: ");
     String auName = au.getName();
+    log.info(auName + ": Moving AU State...");
+    moveAuState(au);
     log.info(auName + ": Moving AU Agreements...");
     moveAuAgreements(au);
     log.info(auName + ": Moving AU Suspect Urls...");
     moveAuSuspectUrlVersions(au);
     log.info(auName + ": Moving No Au Peer Set...");
     moveNoAuPeerSet(au);
-    log.info(auName + ": Moving AU State...");
-    moveAuState(au);
     //This needs to be last
     log.info(auName + ": Moving AU Configuration...");
     moveAuConfig(au);
