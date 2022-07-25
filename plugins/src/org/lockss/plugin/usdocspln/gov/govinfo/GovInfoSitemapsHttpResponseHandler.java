@@ -86,6 +86,7 @@ public class GovInfoSitemapsHttpResponseHandler implements CacheResultHandler {
           }
           return new GovInfoRetryFailException(responseCode + " Gateway Timeout");
         case 520:
+        case 525:
           return new CacheException.RetrySameUrlException();
         default:
           logger.warning("Unexpected responseCode (" + responseCode + ") in handleResult(): AU " + au.getName() + "; URL " + url);

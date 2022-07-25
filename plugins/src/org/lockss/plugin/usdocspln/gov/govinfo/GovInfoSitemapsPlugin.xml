@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>14</string>
+    <string>15</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -184,9 +184,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
-    <string>"/pkg/(%s[^/]+)/(pdf|xml)/\1[^/]+\.\2$", collection_id</string>
-    <string>^https://maxcdn\.bootstrapcdn\.com/.*\.css$</string>
-    <string>/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)</string>
+    <list>
+      <string>"/pkg/(%s[^/]+)/(pdf|xml)/\1[^/]+\.\2$", collection_id</string>
+      <string>^https://maxcdn\.bootstrapcdn\.com/.*\.css$</string>
+      <string>/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)</string>
+    </list>
   </entry>
   <entry>
     <!-- these will not count towards poll results but will replicate from peer if above -->
@@ -212,8 +214,9 @@ POSSIBILITY OF SUCH DAMAGE.
     <list>
       <!-- 504s occur on certain image files, we want to collect these but if they 504 they shouldnt kill the crawl -->
       <string>504=org.lockss.plugin.usdocspln.gov.govinfo.GovInfoSitemapsHttpResponseHandler</string>
-      <!-- 520s currently don't retry by default like 500; make it retry -->
+      <!-- 520 and 525 don't retry by default like 500; but we believe this site would benefit from at least RetrySameUrlException -->
       <string>520=org.lockss.plugin.usdocspln.gov.govinfo.GovInfoSitemapsHttpResponseHandler</string>
+      <string>525=org.lockss.plugin.usdocspln.gov.govinfo.GovInfoSitemapsHttpResponseHandler</string>
       <!-- "chunked stream ended unexpectedly" is currently a plain IOException -->
       <string>java.io.IOException=org.lockss.plugin.usdocspln.gov.govinfo.GovInfoSitemapsHttpResponseHandler</string>
     </list>
