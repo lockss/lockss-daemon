@@ -1985,7 +1985,7 @@
     param[journal_id] = bjd
     #move from Wiley, 2023
 
-    au < expected ; 2022 ; 2022 ; British Journal of Dermatology Volume 186-187 ; 186-187 >
+    au < manifest ; 2022 ; 2022 ; British Journal of Dermatology Volume 186-187 ; 186-187 >
 
   }
 
@@ -3527,7 +3527,7 @@
     param[journal_id] = ced
     #move from Wiley, 2023
 
-    au < expected ; 2022 ; 2022 ; Clinical and Experimental Dermatology Volume 47 ; 47 >
+    au < manifest ; 2022 ; 2022 ; Clinical and Experimental Dermatology Volume 47 ; 47 >
 
   }
 
@@ -11206,7 +11206,7 @@
     au < released ; 2019 ; 2019 ; Journal of Language Evolution Volume 4 ; 4 >
     au < released ; 2020 ; 2020 ; Journal of Language Evolution Volume 5 ; 5 >
     au < manifest ; 2021 ; 2021 ; Journal of Language Evolution Volume 6 ; 6 >
-    au < expected ; 2022 ; 2022 ; Journal of Language Evolution Volume 7 ; 7 >
+    au < manifest ; 2022 ; 2022 ; Journal of Language Evolution Volume 7 ; 7 >
 
   }
 
