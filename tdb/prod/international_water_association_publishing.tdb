@@ -25,7 +25,7 @@
     au < released ; 2018 ; 2018 ; H2Open Journal Volume 1 ; 1 > # manifest page exists, but is missing permission statement
     au < released ; 2019 ; 2019 ; H2Open Journal Volume 2 ; 2 > 
     au < released ; 2020 ; 2020 ; H2Open Journal Volume 3 ; 3 > 
-    au < releasing ; 2021 ; 2021 ; H2Open Journal Volume 4 ; 4 >
+    au < released ; 2021 ; 2021 ; H2Open Journal Volume 4 ; 4 >
     au < manifest ; 2022 ; 2022 ; H2Open Journal Volume 5 ; 5 >
 
   }
@@ -95,7 +95,7 @@
     au < released ; 2018 ; 2018 ; Hydrology Research Volume 49 ; 49 >
     au < released ; 2019 ; 2019 ; Hydrology Research Volume 50 ; 50 >
     au < released ; 2020 ; 2020 ; Hydrology Research Volume 51 ; 51 >
-    au < releasing ; 2021 ; 2021 ; Hydrology Research Volume 52 ; 52 >
+    au < released ; 2021 ; 2021 ; Hydrology Research Volume 52 ; 52 >
     au < manifest ; 2022 ; 2022 ; Hydrology Research Volume 53 ; 53 >
 
   }
@@ -123,7 +123,7 @@
     au < released ; 2018 ; 2018 ; Journal of Water and Climate Change Volume 9 ; 9 >
     au < released ; 2019 ; 2019 ; Journal of Water and Climate Change Volume 10 ; 10 >
     au < released ; 2020 ; 2020 ; Journal of Water and Climate Change Volume 11 ; 11 >
-    au < releasing ; 2021 ; 2021 ; Journal of Water and Climate Change Volume 12 ; 12 >
+    au < released ; 2021 ; 2021 ; Journal of Water and Climate Change Volume 12 ; 12 >
     au < manifest ; 2022 ; 2022 ; Journal of Water and Climate Change Volume 13 ; 13 >
 
   }
@@ -158,7 +158,7 @@
     au < released ; 2018 ; 2018 ; Journal of Water and Health Volume 16 ; 16 >
     au < released ; 2019 ; 2019 ; Journal of Water and Health Volume 17 ; 17 >
     au < released ; 2020 ; 2020 ; Journal of Water and Health Volume 18 ; 18 >
-    au < releasing ; 2021 ; 2021 ; Journal of Water and Health Volume 19 ; 19 >
+    au < released ; 2021 ; 2021 ; Journal of Water and Health Volume 19 ; 19 >
     au < manifest ; 2022 ; 2022 ; Journal of Water and Health Volume 20 ; 20 >
 
   }
@@ -175,7 +175,7 @@
     param[journal_id] = jwrd
     #param[base_url] = http://jwrd.iwaponline.com/
 
-    au < releasing ; 2021 ; 2021 ; Water Reuse Volume 11 ; 11 >
+    au < released ; 2021 ; 2021 ; Water Reuse Volume 11 ; 11 >
     au < manifest ; 2022 ; 2022 ; Water Reuse Volume 12 ; 12 >
 
   }
@@ -224,9 +224,9 @@
     au < doNotProcess ; 2015 ; 2015 ; Journal of Water, Sanitation and Hygiene for Development Volume 5 ; 5 >
     au < doNotProcess ; 2016 ; 2016 ; Journal of Water, Sanitation and Hygiene for Development Volume 6 ; 6 >
     au < doNotProcess ; 2017 ; 2017 ; Journal of Water, Sanitation and Hygiene for Development Volume 7 ; 7 >
-    au < releasing ; 2018 ; 2018 ; Journal of Water, Sanitation and Hygiene for Development Volume 8 ; 8 >
-    au < releasing ; 2019 ; 2019 ; Journal of Water, Sanitation and Hygiene for Development Volume 9 ; 9 >
-    au < releasing ; 2020 ; 2020 ; Journal of Water, Sanitation and Hygiene for Development Volume 10 ; 10 >
+    au < released ; 2018 ; 2018 ; Journal of Water, Sanitation and Hygiene for Development Volume 8 ; 8 >
+    au < released ; 2019 ; 2019 ; Journal of Water, Sanitation and Hygiene for Development Volume 9 ; 9 >
+    au < released ; 2020 ; 2020 ; Journal of Water, Sanitation and Hygiene for Development Volume 10 ; 10 >
     au < manifest ; 2021 ; 2021 ; Journal of Water, Sanitation and Hygiene for Development Volume 11 ; 11 >
     au < manifest ; 2022 ; 2022 ; Journal of Water, Sanitation and Hygiene for Development Volume 12 ; 12 >
 
@@ -243,7 +243,7 @@
     param[journal_id] = aqua
     #Previously Journal of Water Supply: Research and Technology - Aqua
 
-    au < releasing ; 2021 ; 2021 ; AQUA: Water Infrastructure, Ecosystems and Society Volume 70 ; 70 >
+    au < released ; 2021 ; 2021 ; AQUA: Water Infrastructure, Ecosystems and Society Volume 70 ; 70 >
     au < manifest ; 2022 ; 2022 ; AQUA: Water Infrastructure, Ecosystems and Society Volume 71 ; 71 >
 
   }
@@ -320,7 +320,7 @@
     au < released ; 2018 ; 2018 ; Journal of Hydroinformatics Volume 20 ; 20 >
     au < released ; 2019 ; 2019 ; Journal of Hydroinformatics Volume 21 ; 21 >
     au < released ; 2020 ; 2020 ; Journal of Hydroinformatics Volume 22 ; 22 >
-    au < releasing ; 2021 ; 2021 ; Journal of Hydroinformatics Volume 23 ; 23 >
+    au < released ; 2021 ; 2021 ; Journal of Hydroinformatics Volume 23 ; 23 >
     au < manifest ; 2022 ; 2022 ; Journal of Hydroinformatics Volume 24 ; 24 >
 
   }
@@ -351,7 +351,7 @@
     au < released ; 2018 ; 2018 ; Water Practice and Technology Volume 13 ; 13 >
     au < released ; 2019 ; 2019 ; Water Practice and Technology Volume 14 ; 14 >
     au < released ; 2020 ; 2020 ; Water Practice and Technology Volume 15 ; 15 >
-    au < releasing ; 2021 ; 2021 ; Water Practice and Technology Volume 16 ; 16 >
+    au < released ; 2021 ; 2021 ; Water Practice and Technology Volume 16 ; 16 >
     au < manifest ; 2022 ; 2022 ; Water Practice and Technology Volume 17 ; 17 >
 
   }
@@ -386,7 +386,7 @@
     au < released ; 2018 ; 2018 ; Water Policy Volume 20 ; 20 >
     au < released ; 2019 ; 2019 ; Water Policy Volume 21 ; 21 >
     au < released ; 2020 ; 2020 ; Water Policy Volume 22 ; 22 >
-    au < releasing ; 2021 ; 2021 ; Water Policy Volume 23 ; 23 >
+    au < released ; 2021 ; 2021 ; Water Policy Volume 23 ; 23 >
     au < manifest ; 2022 ; 2022 ; Water Policy Volume 24 ; 24 >
 
   }
@@ -407,7 +407,7 @@
     au < released ; 2018 ; 2018 ; Water Quality Research Journal Volume 53 ; 53 >
     au < released ; 2019 ; 2019 ; Water Quality Research Journal Volume 54 ; 54 >
     au < released ; 2020 ; 2020 ; Water Quality Research Journal Volume 55 ; 55 >
-    au < releasing ; 2021 ; 2021 ; Water Quality Research Journal Volume 56 ; 56 >
+    au < released ; 2021 ; 2021 ; Water Quality Research Journal Volume 56 ; 56 >
     au < manifest ; 2022 ; 2022 ; Water Quality Research Journal Volume 57 ; 57 >
 
   }
@@ -487,7 +487,7 @@
     au < released ; 2018 ; 2018 ; Water Science and Technology Volume 77-78 ; 77-78 >
     au < released ; 2019 ; 2019 ; Water Science and Technology Volume 79-80 ; 79-80 >
     au < released ; 2020 ; 2020 ; Water Science and Technology Volume 81-82 ; 81-82 >
-    au < releasing ; 2021 ; 2021 ; Water Science and Technology Volume 83-84 ; 83-84 >
+    au < released ; 2021 ; 2021 ; Water Science and Technology Volume 83-84 ; 83-84 >
 
   }
  
@@ -523,7 +523,7 @@
     au < released ; 2018 ; 2018 ; Water Science and Technology: Water Supply Volume 18 ; 18 >
     au < released ; 2019 ; 2019 ; Water Science and Technology: Water Supply Volume 19 ; 19 >
     au < released ; 2020 ; 2020 ; Water Science and Technology: Water Supply Volume 20 ; 20 >
-    au < releasing ; 2021 ; 2021 ; Water Supply Volume 21 ; 21 >
+    au < released ; 2021 ; 2021 ; Water Supply Volume 21 ; 21 >
     au < manifest ; 2022 ; 2022 ; Water Supply Volume 22 ; 22 >
 
   }
