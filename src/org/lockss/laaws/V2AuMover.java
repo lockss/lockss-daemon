@@ -86,6 +86,13 @@ public class V2AuMover {
   public static final String DEBUG_REPO_REQUEST = PREFIX + "repo.debug";
   public static final boolean DEFAULT_DEBUG_REPO_REQUEST = false;
 
+  /**
+   * If true, lots of errors will be recorded (for testing UI)
+   */
+  public static final String PARAM_GENERATE_TEST_ERRORS = PREFIX +
+    "generate_test_errors";
+  public static final boolean DEFAULT_GENERATE_TEST_ERRORS = false;
+
   public static final String EXEC_PREFIX = PREFIX + "executor.";
 
   /**
@@ -1043,6 +1050,10 @@ public class V2AuMover {
           CuChecker checker = new CuChecker(v2Mover, task);
           checker.run();
           task.getCounters().add(CounterType.VERIFY_TIME, now() - startCh);
+          if (config.getBoolean(PARAM_GENERATE_TEST_ERRORS,
+                                DEFAULT_GENERATE_TEST_ERRORS)) {
+            task.addError("No error on " + task.getCu());
+          }
           log.debug2("Checked CU: " + task.getCu());
           break;
         case FINISH_AU_BULK:

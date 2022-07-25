@@ -1,12 +1,4 @@
 <style>
-.flex-container {
-  display: flex;
-  overflow: hidden;
-}
-.flex-container > * {
-  flex: 0 0 auto;
-  overflow: scroll;
-}
 .stretchy {
   flex: 1 1 auto;
 }
@@ -21,44 +13,50 @@ body,
 body {
   margin: 0;
 }
-.full-screen {
+.flex-container {
   display: flex;
   overflow: hidden;
   flex-direction: column;
 }
-.full-screen > * {
+/*
+.flex-container > * {
   flex: 0 0 auto;
   overflow: scroll;
 }
-.full-screen > .header,
-.full-screen > .footer {
+*/
+/*
+.flex-container > .header,
+.flex-container > .footer {
   height: 50px;
   background: #555;
   color: white;
 }
-.full-screen > .main {
+.flex-container > .main {
   flex: 1 1 auto;
   display: flex;
   overflow: hidden;
 }
-.full-screen > .main > * {
+.flex-container > .main > * {
   flex: 0 0 auto;
   overflow: scroll;
 }
-.full-screen > .main > .left,
-.full-screen > .main > .right {
+.flex-container > .main > .left,
+.flex-container > .main > .right {
   width: 100%;
   background: #eee;
 }
-.full-screen > .main > .middle {
+.flex-container > .main > .middle {
   flex: 1 1 auto;
 }
+*/
 
 .finished {
   min-height: 0;
   max-height: 10em;
+  overflow: auto;
 }
 .errors {
   max-height: 8em;
+  overflow: auto;
 }
 </style>

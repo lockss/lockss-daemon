@@ -48,9 +48,11 @@ class AuMigrationStatus extends React.Component {
       return null;
     }
     return (
-        <div className={"finished"} id={"finishedList"}>
+        <div>
         Finished:
+        <div className={"finished"} id={"finishedList"}>
         <ul>{this.state.finishedData.map((msg, index) => <li key={index}>{msg}</li>)}</ul>
+        </div>
         </div>
     )
   }
@@ -115,7 +117,7 @@ class AuMigrationStatus extends React.Component {
     const wasAtBottom =
           (e == null) ||
           ((e != null) &&
-           ((e.scrollTop == 0) ||
+           ((e.scrollHeight <= e.clientHeight) ||
             (e.scrollHeight - e.clientHeight) <= e.scrollTop + 5));
 
     this.setState({
@@ -184,7 +186,7 @@ class AuMigrationStatus extends React.Component {
          {this.StatusList()}
          {this.InstrumentList()}
          {this.ActiveList()}
-         <div className="full-screen left">
+         <div className="flex-container">
            {this.FinishedList()}
            {this.ErrorList()}
          </div>
