@@ -11,6 +11,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.xpath.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.io.*;
 
 public class TestGigaScienceAPIHelper extends LockssTestCase {
 
@@ -39,7 +40,7 @@ public class TestGigaScienceAPIHelper extends LockssTestCase {
 
         String fileName= System.getProperty("user.dir") +
                 "/plugins/test/src/org/lockss/plugin/gigascience/" + fname;
-        Document document = getDocument(fileName);
+        Document document = getDocumentFromResource(fname);
 
         String xpathTitleExpression = "/gigadb_entry/dataset/title";
         String xpathDoiExpression = "/gigadb_entry/dataset/links/manuscript_links/manuscript_link/manuscript_DOI";
@@ -139,12 +140,12 @@ public class TestGigaScienceAPIHelper extends LockssTestCase {
         }
     }
 
-    private Document getDocument(String fileName) throws Exception
+    private Document getDocumentFromResource(String resource) throws Exception
     {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         factory.setNamespaceAware(true);
         DocumentBuilder builder = factory.newDocumentBuilder();
-        Document doc = builder.parse(fileName);
+        Document doc = builder.parse(getResourceAsStream(resource));
         return doc;
     }
 

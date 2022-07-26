@@ -41,8 +41,9 @@ import org.lockss.test.MockCachedUrl;
 import org.lockss.util.CIProperties;
 import org.lockss.util.Constants;
 import org.lockss.util.Logger;
+import org.lockss.util.StringUtil;
 
-import java.io.File;
+import java.io.InputStream;
 import java.io.IOException;
 import java.util.List;
 
@@ -53,23 +54,10 @@ public class TestAIPPublishingBooksXmlMetadataExtractorFactory extends SourceXml
     private static String BaseUrl = "http://source.host.org/sourcefiles/aip-released/";
     private static String Directory = "2022_01";
 
-    private static String getXmlFileContent(String fname) {
-        String xmlContent = "";
-        try {
-            String currentDirectory = System.getProperty("user.dir");
-            String pathname = currentDirectory +
-                    "/plugins/test/src/org/lockss/plugin/clockss/aippublishing/" + fname;
-            xmlContent = FileUtils.readFileToString(new File(pathname), Constants.DEFAULT_ENCODING);
-        } catch (IOException e) {
-            log.error(e.getMessage(), e);
-        }
-        return xmlContent;
-    }
-
     public void testExtractArticleXmlSchema() throws Exception {
 
         String fname = "9780735421547.onix.xml";
-        String journalXml = getXmlFileContent(fname);
+        String journalXml = getResourceContent(fname);
 
         assertNotNull(journalXml);
 

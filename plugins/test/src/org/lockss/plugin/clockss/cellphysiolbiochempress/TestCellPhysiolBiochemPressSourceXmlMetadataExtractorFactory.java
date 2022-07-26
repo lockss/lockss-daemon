@@ -21,23 +21,10 @@ public class TestCellPhysiolBiochemPressSourceXmlMetadataExtractorFactory extend
     private static String BaseUrl = "http://source.host.org/sourcefiles/cpbp-released/";
     private static String Directory = "2022_01";
 
-    private static String getXmlFileContent(String fname) {
-        String xmlContent = "";
-        try {
-            String currentDirectory = System.getProperty("user.dir");
-            String pathname = currentDirectory +
-                    "/plugins/test/src/org/lockss/plugin/clockss/cellphysiolbiochempress/" + fname;
-            xmlContent = FileUtils.readFileToString(new File(pathname), Constants.DEFAULT_ENCODING);
-        } catch (IOException e) {
-            log.error(e.getMessage(), e);
-        }
-        return xmlContent;
-    }
-
     public void testExtractArticleXmlSchema() throws Exception {
 
         String fname = "article_sample.xml";
-        String journalXml = getXmlFileContent(fname);
+        String journalXml = getResourceContent(fname);
 
         assertNotNull(journalXml);
 

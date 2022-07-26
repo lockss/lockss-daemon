@@ -51,26 +51,10 @@ public class TestInternationalStructuralEngineeringConstructionSocietySourceXmlM
   private static String BaseUrl = "http://source.host.org/sourcefiles/isecs/";
   private static String Directory = "2019";
 
-  private String getXmlFileContent(String fname) {
-    String xmlContent = "";
-    InputStream file_input = null;
-
-    try {
-      file_input = getResourceAsStream(fname);
-      xmlContent = StringUtil.fromInputStream(file_input);
-      IOUtil.safeClose(file_input);
-    } catch (IOException e) {
-      log.error(e.getMessage(), e);
-    } finally {
-      IOUtil.safeClose(file_input);
-    }
-    return xmlContent;
-  }
-
   public void testExtractArticleXmlSchema() throws Exception {
 
     String fname = "sample.xml";
-    String journalXml = getXmlFileContent(fname);
+    String journalXml = getResourceContent(fname);
 
     assertNotNull(journalXml);
 

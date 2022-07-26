@@ -25,23 +25,10 @@ public class TestSpringerJatsXmlXPathMetadataExtractor extends SourceXmlMetadata
     private static String BaseUrl = "http://source.host.org/sourcefiles/springer/";
     private static String Directory = "2019_04";
 
-    private static String getXmlFileContent(String fname) {
-        String xmlContent = "";
-        try {
-            String currentDirectory = System.getProperty("user.dir");
-            String pathname = currentDirectory +
-                    "/plugins/test/src/org/lockss/plugin/springer/" + fname;
-            xmlContent = FileUtils.readFileToString(new File(pathname), Constants.DEFAULT_ENCODING);
-        } catch(IOException e) {
-            log.error(e.getMessage(), e);
-        }
-        return xmlContent;
-    }
-
     public void testExtractArticleXmlSchema() throws Exception {
 
         String fname = "springer_source_plugin_jats_journal_test_file.xml.Meta";
-        String journalXml = getXmlFileContent(fname);
+        String journalXml = getResourceContent(fname);
         String xml_url = BaseUrl + Directory + "/" + fname;
 
         FileMetadataExtractor me = new TestSpringerJatsXmlXPathMetadataExtractor.MyJatsPublishingSourceXmlMetadataExtractor();
@@ -62,7 +49,7 @@ public class TestSpringerJatsXmlXPathMetadataExtractor extends SourceXmlMetadata
     public void testExtractArticleXmlMetaSchema() throws Exception {
 
         String fname = "springer_source_plugin_jats_journal_test_file.xml";
-        String journalXml = getXmlFileContent(fname);
+        String journalXml = getResourceContent(fname);
         String xml_url = BaseUrl + Directory + "/" + fname;
 
         FileMetadataExtractor me = new TestSpringerJatsXmlXPathMetadataExtractor.MyJatsPublishingSourceXmlMetadataExtractor();
@@ -87,7 +74,7 @@ public class TestSpringerJatsXmlXPathMetadataExtractor extends SourceXmlMetadata
     public void testExtractBookXmlSchema() throws Exception {
 
         String fname = "springer_source_plugin_bits_book_test_file.xml";
-        String journalXml = getXmlFileContent(fname);
+        String journalXml = getResourceContent(fname);
         String xml_url = BaseUrl + Directory + "/" + fname;
 
         FileMetadataExtractor me = new TestSpringerJatsXmlXPathMetadataExtractor.MyJatsPublishingSourceXmlMetadataExtractor();
@@ -109,7 +96,7 @@ public class TestSpringerJatsXmlXPathMetadataExtractor extends SourceXmlMetadata
 
     public void testExtractBookSerieXmlSchema() throws Exception {
         String fname = "springer_source_plugin_bits_book_serie_test_file.xml";
-        String journalXml = getXmlFileContent(fname);
+        String journalXml = getResourceContent(fname);
 
         String xml_url = BaseUrl + Directory + "/" + fname;
         FileMetadataExtractor me = new TestSpringerJatsXmlXPathMetadataExtractor.MyJatsPublishingSourceXmlMetadataExtractor();

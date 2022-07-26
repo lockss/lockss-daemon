@@ -22,23 +22,10 @@ public class TestWileyBooksSourceXmlMetadataExtractorFactory extends SourceXmlMe
     private static String BaseUrl = "http://source.host.org/sourcefiles/wiley-books/";
     private static String Directory = "2019";
 
-    private static String getXmlFileContent(String fname) {
-        String xmlContent = "";
-        try {
-            String currentDirectory = System.getProperty("user.dir");
-            String pathname = currentDirectory +
-                    "/plugins/test/src/org/lockss/plugin/clockss/wiley/" + fname;
-            xmlContent = FileUtils.readFileToString(new File(pathname), Constants.DEFAULT_ENCODING);
-        } catch (IOException e) {
-            log.error(e.getMessage(), e);
-        }
-        return xmlContent;
-    }
-
     public void testExtractArticleXmlSchema() throws Exception {
 
         String fname = "wiley_fmatter1.xml";
-        String journalXml = getXmlFileContent(fname);
+        String journalXml = getResourceContent(fname);
 
         assertNotNull(journalXml);
 
@@ -78,7 +65,7 @@ public class TestWileyBooksSourceXmlMetadataExtractorFactory extends SourceXmlMe
     public void testExtractArticleXmlSchema2() throws Exception {
 
         String fname = "wiley_fmatter2.xml";
-        String journalXml = getXmlFileContent(fname);
+        String journalXml = getResourceContent(fname);
 
         assertNotNull(journalXml);
 

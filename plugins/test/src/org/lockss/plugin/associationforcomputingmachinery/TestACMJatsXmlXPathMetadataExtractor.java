@@ -28,26 +28,10 @@ public class TestACMJatsXmlXPathMetadataExtractor extends SourceXmlMetadataExtra
     private static String BaseUrl = "http://source.host.org/sourcefiles/springer/";
     private static String Directory = "2019_04";
 
-    private String getXmlFileContent(String fname) {
-        String xmlContent = "";
-        InputStream file_input = null;
-
-        try {
-            file_input = getResourceAsStream(fname);
-            xmlContent = StringUtil.fromInputStream(file_input);
-            IOUtil.safeClose(file_input);
-        } catch (IOException e) {
-            log.error(e.getMessage(), e);
-        } finally {
-            IOUtil.safeClose(file_input);
-        }
-        return xmlContent;
-    }
-
     public void testExtractArticleXmlSchema() throws Exception {
 
         String fname = "acm_source_plugin_journal_jats_test_file.xml";
-        String journalXml = getXmlFileContent(fname);
+        String journalXml = getResourceContent(fname);
 
         String xml_url = BaseUrl + Directory + "/" + fname;
 
@@ -74,7 +58,7 @@ public class TestACMJatsXmlXPathMetadataExtractor extends SourceXmlMetadataExtra
     public void testExtractConferenceXmlSchema() throws Exception {
 
         String fname = "acm_source_plugin_conferences_bits_test_file.xml";
-        String journalXml = getXmlFileContent(fname);
+        String journalXml = getResourceContent(fname);
 
         String xml_url = BaseUrl + Directory + "/" + fname;
 
