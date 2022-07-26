@@ -54,31 +54,7 @@ public class TestCasaliniLibriMetadataExtractorFactory extends SourceXmlMetadata
         PublisherNameShortcutMap.put("Giardini", "GIARDI");
         PublisherNameShortcutMap.put("Istituti editoriali e poligrafici internazionali", "IEPI");
     };
-
-    public void testGeneratedXmlFromMrcFormat() throws Exception {
-
-        String fname = "Sample.mrc";
-
-        String samplePath = "./plugins/test/src/org/lockss/plugin/clockss/casalini/" + fname;
-
-        /*
-        InputStream input = new FileInputStream(samplePath);
-        OutputStream out = new FileOutputStream(new File("./plugins/test/src/org/lockss/plugin/clockss/casalini/generated.xml"));
-
-
-        MarcReader reader = new MarcStreamReader(input);
-        MarcWriter writer = new MarcXmlWriter(out, true);
-
-        AnselToUnicode converter = new AnselToUnicode();
-        writer.setConverter(converter);
-
-        while (reader.hasNext()) {
-            Record record = reader.next();
-            writer.write(record);
-        }
-        writer.close();
-         */
-    }
+    
 
     public void testReadingMrcXmlByMrcBinary() throws Exception {
 
@@ -190,12 +166,6 @@ public class TestCasaliniLibriMetadataExtractorFactory extends SourceXmlMetadata
     }
 
     public void testExtractArticleXmlSchema() throws Exception {
-
-        /*
-        String fname = "monographs2016.xml";
-        String samplePath = "./plugins/test/src/org/lockss/plugin/clockss/casalini/" + fname;
-        InputStream input = new FileInputStream(samplePath);
-         */
 
         String fname = "Marc212016Sample.xml";
 
