@@ -37,9 +37,6 @@ public class TestGigaScienceAPIHelper extends LockssTestCase {
         log.info("apiStartUrl: " + apiStartUrl);
 
         String fname = "sample_single_doi.xml";
-
-        String fileName= System.getProperty("user.dir") +
-                "/plugins/test/src/org/lockss/plugin/gigascience/" + fname;
         Document document = getDocumentFromResource(fname);
 
         String xpathTitleExpression = "/gigadb_entry/dataset/title";
