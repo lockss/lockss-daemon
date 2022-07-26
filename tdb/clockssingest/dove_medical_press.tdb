@@ -358,7 +358,7 @@
     au < finished ; crawling ; 2019 ; Patient Preference and Adherence Volume 13 ; 13 ; 2019 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Patient Preference and Adherence Volume 14 ; 14 ; 2020 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2021 ; Patient Preference and Adherence Volume 15 ; 15 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Patient Preference and Adherence Volume 16 ; 16 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Patient Preference and Adherence Volume 16 ; 16 ; 2022 ; >
 
   }
 
@@ -412,7 +412,7 @@
     au < finished ; crawling ; 2019 ; Medical Devices: Evidence and Research Volume 12 ; 12 ; 2019 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2020 ; Medical Devices: Evidence and Research Volume 13 ; 13 ; 2020 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2021 ; Medical Devices: Evidence and Research Volume 14 ; 14 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Medical Devices: Evidence and Research Volume 15 ; 15 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Medical Devices: Evidence and Research Volume 15 ; 15 ; 2022 ; >
 
   }
 
@@ -698,7 +698,7 @@
     au < finished ; crawling ; 2019 ; Journal of Inflammation Research Volume 12 ; 12 ; 2019 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Journal of Inflammation Research Volume 13 ; 13 ; 2020 ; reingest4.clockss.org:8082 >
     au < testing ; exists ; 2021 ; Journal of Inflammation Research Volume 14 ; 14 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Journal of Inflammation Research Volume 15 ; 15 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Journal of Inflammation Research Volume 15 ; 15 ; 2022 ; >
 
   }
 
@@ -1018,7 +1018,7 @@
     au < finished ; crawling ; 2019 ; Open Access Emergency Medicine Volume 11 ; 11 ; 2019 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2020 ; Open Access Emergency Medicine Volume 12 ; 12 ; 2020 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2021 ; Open Access Emergency Medicine Volume 13 ; 13 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Open Access Emergency Medicine Volume 14 ; 14 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Open Access Emergency Medicine Volume 14 ; 14 ; 2022 ; >
 
   }
 
@@ -1489,7 +1489,7 @@
     au < finished ; crawling ; 2019 ; HIV/AIDS - Research and Palliative Care Volume 11 ; 11 ; 2019 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; HIV/AIDS - Research and Palliative Care Volume 12 ; 12 ; 2020 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2021 ; HIV/AIDS - Research and Palliative Care Volume 13 ; 13 ; 2021 ; >
-    au < ready ; exists ; 2022 ; HIV/AIDS - Research and Palliative Care Volume 14 ; 14 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; HIV/AIDS - Research and Palliative Care Volume 14 ; 14 ; 2022 ; >
 
   }
 
@@ -1515,7 +1515,7 @@
     au < finished ; crawling ; 2019 ; Breast Cancer: Targets and Therapy Volume 11 ; 11 ; 2019 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2020 ; Breast Cancer: Targets and Therapy Volume 12 ; 12 ; 2020 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2021 ; Breast Cancer: Targets and Therapy Volume 13 ; 13 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Breast Cancer: Targets and Therapy Volume 14 ; 14 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Breast Cancer: Targets and Therapy Volume 14 ; 14 ; 2022 ; >
 
   }
 
@@ -1788,7 +1788,7 @@
     au < finished ; crawling ; 2019 ; Lung Cancer: Targets and Therapy Volume 10 ; 10 ; 2019 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Lung Cancer: Targets and Therapy Volume 11 ; 11 ; 2020 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2021 ; Lung Cancer: Targets and Therapy Volume 12 ; 12 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Lung Cancer: Targets and Therapy Volume 13 ; 13 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Lung Cancer: Targets and Therapy Volume 13 ; 13 ; 2022 ; >
 
   }
 
@@ -2030,7 +2030,7 @@
     au < finished ; crawling ; 2019 ; Research and Reports in Tropical Medicine Volume 10 ; 10 ; 2019 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Research and Reports in Tropical Medicine Volume 11 ; 11 ; 2020 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2021 ; Research and Reports in Tropical Medicine Volume 12 ; 12 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Research and Reports in Tropical Medicine Volume 13 ; 13 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Research and Reports in Tropical Medicine Volume 13 ; 13 ; 2022 ; >
 
   }
 
@@ -2146,7 +2146,7 @@
     au < finished ; crawling ; 2019 ; Substance Abuse and Rehabilitation Volume 10 ; 10 ; 2019 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2020 ; Substance Abuse and Rehabilitation Volume 11 ; 11 ; 2020 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2021 ; Substance Abuse and Rehabilitation Volume 12 ; 12 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Substance Abuse and Rehabilitation Volume 13 ; 13 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Substance Abuse and Rehabilitation Volume 13 ; 13 ; 2022 ; >
 
   }
 
@@ -2822,7 +2822,7 @@
     au < finished ; crawling ; 2019 ; ImmunoTargets and Therapy Volume 8 ; 8 ; 2019 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; ImmunoTargets and Therapy Volume 9 ; 9 ; 2020 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2021 ; ImmunoTargets and Therapy Volume 10 ; 10 ; 2021 ; >
-    au < ready ; exists ; 2022 ; ImmunoTargets and Therapy Volume 11 ; 11 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; ImmunoTargets and Therapy Volume 11 ; 11 ; 2022 ; >
 
   }
 

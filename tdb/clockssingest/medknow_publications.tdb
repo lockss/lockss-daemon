@@ -199,7 +199,7 @@
     au < finished ; crawling ; 2019 ; Annals of Indian Academy of Neurology Volume 22 ; 2019 ; 22 ; https://www.annalsofian.org/ ; ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Annals of Indian Academy of Neurology Volume 23 ; 2020 ; 23 ; https://www.annalsofian.org/ ; ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2021 ; Annals of Indian Academy of Neurology Volume 24 ; 2021 ; 24 ; https://www.annalsofian.org/ ; ; >
-    au < ready ; exists ; 2022 ; Annals of Indian Academy of Neurology Volume 25 ; 2022 ; 25 ; https://www.annalsofian.org/ ; ; >
+    au < crawling ; exists ; 2022 ; Annals of Indian Academy of Neurology Volume 25 ; 2022 ; 25 ; https://www.annalsofian.org/ ; ; >
 
   }
 
@@ -1741,7 +1741,7 @@
     au < finished ; crawling ; 2019 ; Indian Journal of Pharmacology Volume 51 ; 2019 ; 51 ; https://www.ijp-online.com/ ; ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2020 ; Indian Journal of Pharmacology Volume 52 ; 2020 ; 52 ; https://www.ijp-online.com/ ; ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Indian Journal of Pharmacology Volume 53 ; 2021 ; 53 ; https://www.ijp-online.com/ ; ; >
-    au < ready ; exists ; 2022 ; Indian Journal of Pharmacology Volume 54 ; 2022 ; 54 ; https://www.ijp-online.com/ ; ; >
+    au < crawling ; exists ; 2022 ; Indian Journal of Pharmacology Volume 54 ; 2022 ; 54 ; https://www.ijp-online.com/ ; ; >
 
   }
 
@@ -2695,7 +2695,7 @@
     au < finished ; crawling ; 2019 ; Journal of Clinical Neonatology Volume 8 ; 2019 ; 8 ; https://www.jcnonweb.com/ ; ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2020 ; Journal of Clinical Neonatology Volume 9 ; 2020 ; 9 ; https://www.jcnonweb.com/ ; ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Journal of Clinical Neonatology Volume 10 ; 2021 ; 10 ; https://www.jcnonweb.com/ ; ; >
-    au < ready ; exists ; 2022 ; Journal of Clinical Neonatology Volume 11 ; 2022 ; 11 ; https://www.jcnonweb.com/ ; ; >
+    au < crawling ; exists ; 2022 ; Journal of Clinical Neonatology Volume 11 ; 2022 ; 11 ; https://www.jcnonweb.com/ ; ; >
 
   }
 #  {
@@ -4894,7 +4894,7 @@
       au < finished ; crawling ; 2019 ; Advanced Biomedical Research Volume 8 ; 2019 ; 8 ; https://www.advbiores.net/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2020 ; Advanced Biomedical Research Volume 9 ; 2020 ; 9 ; https://www.advbiores.net/ ; ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Advanced Biomedical Research Volume 10 ; 2021 ; 10 ; https://www.advbiores.net/ ; ; >
-      au < ready ; exists ; 2022 ; Advanced Biomedical Research Volume 11 ; 2022 ; 11 ; https://www.advbiores.net/ ; ; >
+      au < crawling ; exists ; 2022 ; Advanced Biomedical Research Volume 11 ; 2022 ; 11 ; https://www.advbiores.net/ ; ; >
 
   }
 
@@ -5535,7 +5535,7 @@
       au < finished ; crawling ; 2019 ; Dental Hypotheses Volume 10 ; 2019 ; 10 ; https://www.dentalhypotheses.com/ ; ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Dental Hypotheses Volume 11 ; 2020 ; 11 ; https://www.dentalhypotheses.com/ ; ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Dental Hypotheses Volume 12 ; 2021 ; 12 ; https://www.dentalhypotheses.com/ ; ; >
-      au < ready ; exists ; 2022 ; Dental Hypotheses Volume 13 ; 2022 ; 13 ; https://www.dentalhypotheses.com/ ; ; >
+      au < crawling ; exists ; 2022 ; Dental Hypotheses Volume 13 ; 2022 ; 13 ; https://www.dentalhypotheses.com/ ; ; >
 
   }
 
@@ -6652,7 +6652,7 @@
       au < finished ; crawling ; 2019 ; Journal of Applied Hematology Volume 10 ; 2019 ; 10 ; https://www.jahjournal.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2020 ; Journal of Applied Hematology Volume 11 ; 2020 ; 11 ; https://www.jahjournal.org/ ; ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Journal of Applied Hematology Volume 12 ; 2021 ; 12 ; https://www.jahjournal.org/ ; ; >
-      au < ready ; exists ; 2022 ; Journal of Applied Hematology Volume 13 ; 2022 ; 13 ; https://www.jahjournal.org/ ; ; >
+      au < crawling ; exists ; 2022 ; Journal of Applied Hematology Volume 13 ; 2022 ; 13 ; https://www.jahjournal.org/ ; ; >
 
   }
 
@@ -8803,7 +8803,7 @@
       au < finished ; crawling ; 2019 ; The Egyptian Orthopaedic Journal Volume 54 ; 2019 ; 54 ; https://www.eoj.eg.net/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; The Egyptian Orthopaedic Journal Volume 55 ; 2020 ; 55 ; https://www.eoj.eg.net/ ; ; reingest4.clockss.org:8082 >
       au < notReady ; exists ; 2021 ; The Egyptian Orthopaedic Journal Volume 56 ; 2021 ; 56 ; https://www.eoj.eg.net/ ; ; > #site cert failed
-      au < ready ; exists ; 2022 ; The Egyptian Orthopaedic Journal Volume 57 ; 2022 ; 57 ; https://www.eoj.eg.net/ ; ; > #site cert failed
+      au < crawling ; exists ; 2022 ; The Egyptian Orthopaedic Journal Volume 57 ; 2022 ; 57 ; https://www.eoj.eg.net/ ; ; > #site cert failed
 
   }
 
@@ -9668,7 +9668,7 @@
       au < finished ; crawling ; 2019 ; Formosan Journal of Surgery Volume 52 ; 2019 ; 52 ; https://www.e-fjs.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Formosan Journal of Surgery Volume 53 ; 2020 ; 53 ; https://www.e-fjs.org/ ; ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; Formosan Journal of Surgery Volume 54 ; 2021 ; 54 ; https://www.e-fjs.org/ ; ; >
-      au < ready ; exists ; 2022 ; Formosan Journal of Surgery Volume 55 ; 2022 ; 55 ; https://www.e-fjs.org/ ; ; >
+      au < crawling ; exists ; 2022 ; Formosan Journal of Surgery Volume 55 ; 2022 ; 55 ; https://www.e-fjs.org/ ; ; >
 
   }
 
@@ -9738,7 +9738,7 @@
       au < finished ; crawling ; 2019 ; Hamdan Medical Journal Volume 12 ; 2019 ; 12 ; https://www.hamdanjournal.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Hamdan Medical Journal Volume 13 ; 2020 ; 13 ; https://www.hamdanjournal.org/ ; ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Hamdan Medical Journal Volume 14 ; 2021 ; 14 ; https://www.hamdanjournal.org/ ; ; >
-      au < ready ; exists ; 2022 ; Hamdan Medical Journal Volume 15 ; 2022 ; 15 ; https://www.hamdanjournal.org/ ; ; >
+      au < crawling ; exists ; 2022 ; Hamdan Medical Journal Volume 15 ; 2022 ; 15 ; https://www.hamdanjournal.org/ ; ; >
 
   }
 
@@ -9903,7 +9903,7 @@
       au < finished ; crawling ; 2019 ; Indian Journal of Respiratory Care Volume 8 ; 2019 ; 8 ; https://www.ijrc.in/ ; ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2020 ; Indian Journal of Respiratory Care Volume 9 ; 2020 ; 9 ; https://www.ijrc.in/ ; ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Indian Journal of Respiratory Care Volume 10 ; 2021 ; 10 ; https://www.ijrc.in/ ; ; >
-      au < ready ; exists ; 2022 ; Indian Journal of Respiratory Care Volume 11 ; 2022 ; 11 ; https://www.ijrc.in/ ; ; >
+      au < crawling ; exists ; 2022 ; Indian Journal of Respiratory Care Volume 11 ; 2022 ; 11 ; https://www.ijrc.in/ ; ; >
 
   }
 
@@ -10085,7 +10085,7 @@
       au < finished ; crawling ; 2019 ; International Journal of Mycobacteriology Volume 8 ; 2019 ; 8 ; https://www.ijmyco.org/ ; ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2020 ; International Journal of Mycobacteriology Volume 9 ; 2020 ; 9 ; https://www.ijmyco.org/ ; ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2021 ; International Journal of Mycobacteriology Volume 10 ; 2021 ; 10 ; https://www.ijmyco.org/ ; ; >
-      au < ready ; exists ; 2022 ; International Journal of Mycobacteriology Volume 11 ; 2022 ; 11 ; https://www.ijmyco.org/ ; ; >
+      au < crawling ; exists ; 2022 ; International Journal of Mycobacteriology Volume 11 ; 2022 ; 11 ; https://www.ijmyco.org/ ; ; >
 
   }
 

@@ -289,7 +289,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; Aktuelle Rheumatologie Volume 46 ; 46 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Aktuelle Rheumatologie Volume 47 ; 47 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Aktuelle Rheumatologie Volume 48 ; 48 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Aktuelle Rheumatologie Volume 49 ; 49 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Aktuelle Rheumatologie Volume 49 ; 49 ; >
 
   }
 
@@ -705,7 +705,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; Drug Research Volume 69 ; 69 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Drug Research Volume 70 ; 70 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Drug Research Volume 71 ; 71 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Drug Research Volume 72 ; 72 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Drug Research Volume 72 ; 72 ; >
 
    }
 
@@ -864,7 +864,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; Clinics in Colon and Rectal Surgery Volume 32 ; 32 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Clinics in Colon and Rectal Surgery Volume 33 ; 33 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Clinics in Colon and Rectal Surgery Volume 34 ; 34 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Clinics in Colon and Rectal Surgery Volume 35 ; 35 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Clinics in Colon and Rectal Surgery Volume 35 ; 35 ; >
 
   }
 
@@ -1794,7 +1794,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; Experimental and Clinical Endocrinology & Diabetes Volume 127 ; 127 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Experimental and Clinical Endocrinology & Diabetes Volume 128 ; 128 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Experimental and Clinical Endocrinology & Diabetes Volume 129 ; 129 ; >
-   au < ready ; exists ; 2022 ; 2022 ; Experimental and Clinical Endocrinology & Diabetes Volume 130 ; 130 ; >
+   au < crawling ; exists ; 2022 ; 2022 ; Experimental and Clinical Endocrinology & Diabetes Volume 130 ; 130 ; >
 
   }
 
@@ -2130,7 +2130,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; Gesundheitsökonomie & Qualitätsmanagement Volume 24 ; 24 ; reingest2.clockss.org:8085 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Gesundheitsökonomie & Qualitätsmanagement Volume 25 ; 25 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Gesundheitsökonomie & Qualitätsmanagement Volume 26 ; 26 ; >
-   au < ready ; exists ; 2022 ; 2022 ; Gesundheitsökonomie & Qualitätsmanagement Volume 27 ; 27 ; >
+   au < crawling ; exists ; 2022 ; 2022 ; Gesundheitsökonomie & Qualitätsmanagement Volume 27 ; 27 ; >
 
   }
 
@@ -2252,7 +2252,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; Handchirurgie Scan Volume 8 ; 8 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Handchirurgie Scan Volume 9 ; 9 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Handchirurgie Scan Volume 10 ; 10 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Handchirurgie Scan Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Handchirurgie Scan Volume 11 ; 11 ; >
 
   }
 
@@ -2642,7 +2642,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; Intensivmedizin up2date Volume 15 ; 15 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Intensivmedizin up2date Volume 16 ; 16 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Intensivmedizin up2date Volume 17 ; 17 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Intensivmedizin up2date Volume 18 ; 18 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Intensivmedizin up2date Volume 18 ; 18 ; >
 
   }
 
@@ -2668,7 +2668,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; International Archives of Otorhinolaryngology Volume 23 ; 23 ; reingest1.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; International Archives of Otorhinolaryngology Volume 24 ; 24 ; >
    au < crawling ; exists ; 2021 ; 2021 ; International Archives of Otorhinolaryngology Volume 25 ; 25 ; >
-   au < ready ; exists ; 2022 ; 2022 ; International Archives of Otorhinolaryngology Volume 26 ; 26 ; >
+   au < crawling ; exists ; 2022 ; 2022 ; International Archives of Otorhinolaryngology Volume 26 ; 26 ; >
 
   }
 
@@ -2960,7 +2960,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; Journal of Clinical Interventional Radiology Volume 3 ; 3 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Clinical Interventional Radiology Volume 4 ; 4 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Journal of Clinical Interventional Radiology Volume 5 ; 5 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Journal of Clinical Interventional Radiology Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Journal of Clinical Interventional Radiology Volume 6 ; 6 ; >
 
   }
 
@@ -3439,7 +3439,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; Journal of Wrist Surgery Volume 8 ; 8 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Wrist Surgery Volume 9 ; 9 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Journal of Wrist Surgery Volume 10 ; 10 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Journal of Wrist Surgery Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Journal of Wrist Surgery Volume 11 ; 11 ; >
 
   }
 
@@ -3497,7 +3497,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; Kardiologie up2date Volume 15 ; 15 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Kardiologie up2date Volume 16 ; 16 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Kardiologie up2date Volume 17 ; 17 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Kardiologie up2date Volume 18 ; 18 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Kardiologie up2date Volume 18 ; 18 ; >
 
   }
 
@@ -4447,7 +4447,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; Orthopädie und Unfallchirurgie up2date Volume 14 ; 14 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Orthopädie und Unfallchirurgie up2date Volume 15 ; 15 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Orthopädie und Unfallchirurgie up2date Volume 16 ; 16 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Orthopädie und Unfallchirurgie up2date Volume 17 ; 17 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Orthopädie und Unfallchirurgie up2date Volume 17 ; 17 ; >
 
   }
 
@@ -4539,7 +4539,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; Pädiatrie up2date Volume 14 ; 14 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Pädiatrie up2date Volume 15 ; 15 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Pädiatrie up2date Volume 16 ; 16 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Pädiatrie up2date Volume 17 ; 17 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Pädiatrie up2date Volume 17 ; 17 ; >
 
   }
 
@@ -4659,7 +4659,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; Pharmacopsychiatry Volume 52 ; 52 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Pharmacopsychiatry Volume 53 ; 53 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Pharmacopsychiatry Volume 54 ; 54 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Pharmacopsychiatry Volume 55 ; 55 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Pharmacopsychiatry Volume 55 ; 55 ; >
 
   }
 
@@ -5247,7 +5247,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; Radiopraxis Volume 12 ; 12 ; reingest1.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Radiopraxis Volume 13 ; 13 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Radiopraxis Volume 14 ; 14 ; >
-   au < ready ; exists ; 2022 ; 2022 ; Radiopraxis Volume 15 ; 15 ; >
+   au < crawling ; exists ; 2022 ; 2022 ; Radiopraxis Volume 15 ; 15 ; >
 
   }
 
@@ -5332,7 +5332,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 41 ; 41 ; reingest1.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 42 ; 42 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 43 ; 43 ; >
-   au < ready ; exists ; 2022 ; 2022 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 44 ; 44 ; >
+   au < crawling ; exists ; 2022 ; 2022 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 44 ; 44 ; >
 
   }
 
@@ -5829,7 +5829,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; Seminars in Reproductive Medicine Volume 37 ; 37 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2020 ; 2020 ; Seminars in Reproductive Medicine Volume 38 ; 38 ; reingest1.clockss.org:8082 >
    au < crawling ; exists ; 2021 ; 2021 ; Seminars in Reproductive Medicine Volume 39 ; 39 ; >
-   au < ready ; exists ; 2022 ; 2022 ; Seminars in Reproductive Medicine Volume 40 ; 40 ; >
+   au < crawling ; exists ; 2022 ; 2022 ; Seminars in Reproductive Medicine Volume 40 ; 40 ; >
 
   }
 
@@ -6304,7 +6304,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; The Surgery Journal Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; The Surgery Journal Volume 6 ; 6 ; >
     au < crawling ; exists ; 2021 ; 2021 ; The Surgery Journal Volume 7 ; 7 ; >
-    au < ready ; exists ; 2022 ; 2022 ; The Surgery Journal Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; The Surgery Journal Volume 8 ; 8 ; >
 
   }
 
@@ -8654,7 +8654,7 @@
     au < crawling ; exists ; 2019 ; 2019 ; Journal of Gastrointestinal and Abdominal Radiology Volume 2 ; 2 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Journal of Gastrointestinal and Abdominal Radiology Volume 3 ; 3 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Journal of Gastrointestinal and Abdominal Radiology Volume 4 ; 4 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Journal of Gastrointestinal and Abdominal Radiology Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Journal of Gastrointestinal and Abdominal Radiology Volume 5 ; 5 ; >
 
   }
 
@@ -8897,7 +8897,7 @@
     au < crawling ; exists ; 2019 ; 2019 ; Organic Materials Volume 1 ; 1 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Organic Materials Volume 2 ; 2 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Organic Materials Volume 3 ; 3 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Organic Materials Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Organic Materials Volume 4 ; 4 ; >
 
   }
 
@@ -8953,7 +8953,7 @@
     au < crawling ; exists ; 2019 ; 2019 ; Revista Brasileira de Ortopedia Volume 54 ; 54 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Revista Brasileira de Ortopedia Volume 55 ; 55 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Revista Brasileira de Ortopedia Volume 56 ; 56 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Revista Brasileira de Ortopedia Volume 57 ; 57 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Revista Brasileira de Ortopedia Volume 57 ; 57 ; >
 
   }
 
