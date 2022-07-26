@@ -60,7 +60,7 @@ public class TestScienceOpenMetadataExtractor extends SourceXmlMetadataExtractor
     private static final Logger log = Logger.getLogger(TestScienceOpenMetadataExtractor.class);
 
     private static String BaseUrl = "http://source.host.org/sourcefiles/scienceopen/";
-    private static String Directory = "2020";
+    private static String Directory = "2021_01";
 
     private ArchivalUnit bau;
     static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
