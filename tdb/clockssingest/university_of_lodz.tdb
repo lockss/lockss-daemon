@@ -106,7 +106,7 @@
       au < finished ; crawling ; 2018 ; Convivium: Germanistisches Jahrbuch Polen Volume 2018 ; 2018 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; Convivium: Germanistisches Jahrbuch Polen Volume 2019 ; 2019 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2020 ; Convivium: Germanistisches Jahrbuch Polen Volume 2020 ; 2020 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2021 ; Convivium: Germanistisches Jahrbuch Polen Volume 2021 ; 2021 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2021 ; Convivium: Germanistisches Jahrbuch Polen Volume 2021 ; 2021 ; reingest2.clockss.org:8085 >
       au < expected ; exists ; 2022 ; Convivium: Germanistisches Jahrbuch Polen Volume 2022 ; 2022 ; >
 
   }
@@ -166,7 +166,7 @@
       au < finished ; crawling ; 2018 ; Logopaedica Lodziensia Volume 2 ; 2 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; Logopaedica Lodziensia Volume 3 ; 3 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Logopaedica Lodziensia Volume 4 ; 4 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2021 ; Logopaedica Lodziensia Volume 5 ; 5 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2021 ; Logopaedica Lodziensia Volume 5 ; 5 ; reingest3.clockss.org:8083 >
       au < expected ; exists ; 2022 ; Logopaedica Lodziensia Volume 6 ; 6 ; >
 
   }
@@ -209,7 +209,7 @@
       au < finished ; crawling ; 2018 ; Research in Language Volume 16 ; 16 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; Research in Language Volume 17 ; 17 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Research in Language Volume 18 ; 18 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2021 ; Research in Language Volume 19 ; 19 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2021 ; Research in Language Volume 19 ; 19 ; reingest4.clockss.org:8082 >
       au < expected ; exists ; 2022 ; Research in Language Volume 20 ; 20 ; >
 
   }
@@ -226,7 +226,7 @@
       #Publisher is using issues instead of volumes. All issues are part of volume 1.
       #In practical terms this means the AI will not close, instead a new issue will be added each year.
 
-      au < finished ; manifest ; 2011-2020 ; Text Matters: A Journal of Literature, Theory and Culture Volume 1 ; 1 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2011-2020 ; Text Matters: A Journal of Literature, Theory and Culture Volume 1 ; 1 ; reingest5.clockss.org:8082 >
       au < expected ; exists ; 2021-2030 ; Text Matters: A Journal of Literature, Theory and Culture Volume 2 ; 2 ; >
 
   }

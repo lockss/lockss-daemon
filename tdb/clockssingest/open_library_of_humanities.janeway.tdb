@@ -28,8 +28,8 @@
     au < doNotProcess ; exists ; 2016 ; 6 ; Comics Grid Volume 2016 ; 2016 ; >
     au < doNotProcess ; exists ; 2017 ; 7 ; Comics Grid Volume 2017 ; 2017 ; >
     au < doNotProcess ; exists ; 2018 ; 8 ; Comics Grid Volume 2018 ; 2018 ; >
-    au < finished ; manifest ; 2019 ; 9 ; Comics Grid Volume 2019 ; 2019 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2020 ; 10 ; Comics Grid Volume 2020 ; 2020 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2019 ; 9 ; Comics Grid Volume 2019 ; 2019 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2020 ; 10 ; Comics Grid Volume 2020 ; 2020 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2021 ; 11 ; Comics Grid Volume 2021 ; 2021 ; >
     au < manifest ; exists ; 2022 ; 12 ; Comics Grid Volume 2022 ; 2022 ; >
 
@@ -51,8 +51,8 @@
       au < manifest ; exists ; 2016 ; 5 ; Orbit: A Journal of American Literature Volume 2016 ; 2016 ; >
       au < manifest ; exists ; 2017 ; 6 ; Orbit: A Journal of American Literature Volume 2017 ; 2017 ; >
       au < manifest ; exists ; 2018 ; 7 ; Orbit: A Journal of American Literature Volume 2018 ; 2018 ; >
-      au < finished ; manifest ; 2019 ; 8 ; Orbit: A Journal of American Literature Volume 2019 ; 2019 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2020 ; 9 ; Orbit: A Journal of American Literature Volume 2020 ; 2020 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2019 ; 8 ; Orbit: A Journal of American Literature Volume 2019 ; 2019 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2020 ; 9 ; Orbit: A Journal of American Literature Volume 2020 ; 2020 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; 10 ; Orbit: A Journal of American Literature Volume 2021 ; 2021 ; >
       au < manifest ; exists ; 2022 ; 11 ; Orbit: A Journal of American Literature Volume 2022 ; 2022 ; >
 
@@ -158,7 +158,7 @@
       au < manifest ; exists ; 2015 ; 45 ; Ethnologia Europaea Volume 2015 ; 2015 ; >
       au < manifest ; exists ; 2016 ; 46 ; Ethnologia Europaea Volume 2016 ; 2016 ; >
       au < manifest ; exists ; 2017 ; 47 ; Ethnologia Europaea Volume 2017 ; 2017 ; >
-      au < finished ; manifest ; 2019 ; 49 ; Ethnologia Europaea Volume 2019 ; 2019 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2019 ; 49 ; Ethnologia Europaea Volume 2019 ; 2019 ; reingest5.clockss.org:8082 >
       au < manifest ; exists ; 2020 ; 50 ; Ethnologia Europaea Volume 2020 ; 2020 ; >
       au < manifest ; exists ; 2021 ; 51 ; Ethnologia Europaea Volume 2021 ; 2021 ; >
       au < manifest ; exists ; 2022 ; 52 ; Ethnologia Europaea Volume 2022 ; 2022 ; >
@@ -177,8 +177,8 @@
         au < doNotProcess ; exists ; 2016 ; 2 ; Journal of British and Irish Innovative Poetry Volume 2016 ; 2016 ; >
         au < manifest ; exists ; 2017 ; 3 ; Journal of British and Irish Innovative Poetry Volume 2017 ; 2017 ; >
         au < manifest ; exists ; 2018 ; 4 ; Journal of British and Irish Innovative Poetry Volume 2018 ; 2018 ; >
-        au < finished ; manifest ; 2019 ; 5 ; Journal of British and Irish Innovative Poetry Volume 2019 ; 2019 ; reingest1.clockss.org:8082 >
-        au < finished ; manifest ; 2020 ; 6 ; Journal of British and Irish Innovative Poetry Volume 2020 ; 2020 ; reingest2.clockss.org:8085 >
+        au < finished ; crawling ; 2019 ; 5 ; Journal of British and Irish Innovative Poetry Volume 2019 ; 2019 ; reingest1.clockss.org:8082 >
+        au < finished ; crawling ; 2020 ; 6 ; Journal of British and Irish Innovative Poetry Volume 2020 ; 2020 ; reingest2.clockss.org:8085 >
         au < crawling ; exists ; 2021 ; 7 ; Journal of British and Irish Innovative Poetry Volume 2021 ; 2021 ; >
         au < manifest ; exists ; 2022 ; 8 ; Journal of British and Irish Innovative Poetry Volume 2022 ; 2022 ; >
 
@@ -220,8 +220,8 @@
 
         au < manifest ; exists ; 2017 ; 4 ; International Journal of Welsh Writing in English Volume 2017 ; 2017 ; >
         au < manifest ; exists ; 2018 ; 5 ; International Journal of Welsh Writing in English Volume 2018 ; 2018 ; >
-        au < finished ; manifest ; 2019 ; 6 ; International Journal of Welsh Writing in English Volume 2019 ; 2019 ; reingest5.clockss.org:8082 >
-        au < finished ; manifest ; 2020 ; 7 ; International Journal of Welsh Writing in English Volume 2020 ; 2020 ; reingest1.clockss.org:8082 >
+        au < finished ; crawling ; 2019 ; 6 ; International Journal of Welsh Writing in English Volume 2019 ; 2019 ; reingest5.clockss.org:8082 >
+        au < finished ; crawling ; 2020 ; 7 ; International Journal of Welsh Writing in English Volume 2020 ; 2020 ; reingest1.clockss.org:8082 >
         au < crawling ; exists ; 2021 ; 8 ; International Journal of Welsh Writing in English Volume 2021 ; 2021 ; >
         au < expected ; exists ; 2022 ; 9 ; International Journal of Welsh Writing in English Volume 2022 ; 2022 ; >
 
@@ -240,7 +240,7 @@
       au < doNotProcess ; doNotProcess ; 2017 ; 2 ; Marvell Studies Volume 2017 ; 2017 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 3 ; Marvell Studies Volume 2018 ; 2018 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 4 ; Marvell Studies Volume 2019 ; 2019 ; >
-      au < finished ; manifest ; 2020 ; 5 ; Marvell Studies Volume 2020 ; 2020 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2020 ; 5 ; Marvell Studies Volume 2020 ; 2020 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2021 ; 6 ; Marvell Studies Volume 2021 ; 2021 ; >
       au < manifest ; exists ; 2022 ; 7 ; Marvell Studies Volume 2022 ; 2022 ; >
 
@@ -261,8 +261,8 @@
       au < doNotProcess ; doNotProcess ; 2016 ; 2 ; Open Library of Humanities Volume 2016 ; 2016 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 3 ; Open Library of Humanities Volume 2017 ; 2017 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 4 ; Open Library of Humanities Volume 2018 ; 2018 ; >
-      au < finished ; manifest ; 2019 ; 5 ; Open Library of Humanities Volume 2019 ; 2019 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2020 ; 6 ; Open Library of Humanities Volume 2020 ; 2020 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2019 ; 5 ; Open Library of Humanities Volume 2019 ; 2019 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2020 ; 6 ; Open Library of Humanities Volume 2020 ; 2020 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; 7 ; Open Library of Humanities Volume 2021 ; 2021 ; >
       au < manifest ; exists ; 2022 ; 8 ; Open Library of Humanities Volume 2022 ; 2022 ; >
 
@@ -335,8 +335,8 @@
       au < manifest ; exists ; 2016 ; 26 ; Theoretical Roman Archaeology Journal Volume 2016 ; 2016 ; >
       au < manifest ; exists ; 2017 ; 27 ; Theoretical Roman Archaeology Journal Volume 2017 ; 2017 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 28 ; Theoretical Roman Archaeology Journal Volume 2018 ; 2018 ; >
-      au < finished ; manifest ; 2019 ; 29 ; Theoretical Roman Archaeology Journal Volume 2019 ; 2019 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2020 ; 30 ; Theoretical Roman Archaeology Journal Volume 2020 ; 2020 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2019 ; 29 ; Theoretical Roman Archaeology Journal Volume 2019 ; 2019 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2020 ; 30 ; Theoretical Roman Archaeology Journal Volume 2020 ; 2020 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; 31 ; Theoretical Roman Archaeology Journal Volume 2021 ; 2021 ; >
       au < manifest ; exists ; 2022 ; 32 ; Theoretical Roman Archaeology Journal Volume 2022 ; 2022 ; >
 
@@ -352,8 +352,8 @@
       comment[publisher] = Open Library of Humanities
       param[base_url] = https://zff.openlibhums.org/
 
-      au < finished ; manifest ; 2019 ; 7 ; ZFF: Zeitschrift für Fantastikforschung Volume 2019 ; 2019 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2020 ; 8 ; ZFF: Zeitschrift für Fantastikforschung Volume 2020 ; 2020 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2019 ; 7 ; ZFF: Zeitschrift für Fantastikforschung Volume 2019 ; 2019 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2020 ; 8 ; ZFF: Zeitschrift für Fantastikforschung Volume 2020 ; 2020 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; 9 ; ZFF: Zeitschrift für Fantastikforschung Volume 2021 ; 2021 ; >
       au < manifest ; exists ; 2022 ; 10 ; ZFF: Zeitschrift für Fantastikforschung Volume 2022 ; 2022 ; >
 
@@ -375,7 +375,7 @@
       au < manifest ; exists ; 2015 ; 3 ; The Parish Review Volume 2015 ; 2015 ; >
       au < manifest ; exists ; 2016 ; 3 ; The Parish Review Volume 2016 ; 2016 ; >
       au < manifest ; exists ; 2018 ; 4 ; The Parish Review Volume 2018 ; 2018 ; >
-      au < finished ; manifest ; 2020 ; 4 ; The Parish Review Volume 2020 ; 2020 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2020 ; 4 ; The Parish Review Volume 2020 ; 2020 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; 5 ; The Parish Review Volume 2021 ; 2021 ; >
       au < manifest ; exists ; 2022 ; 6 ; The Parish Review Volume 2022 ; 2022 ; >
 

@@ -18,7 +18,7 @@
     >
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/aes-released/
 
-    au < manifest ; exists ; 2022 ; American Entomological Society Source Content 2022_01 ; 2022_01 >
+    au < readySource ; crawling ; 2022 ; American Entomological Society Source Content 2022_01 ; 2022_01 >
 
   }
 
