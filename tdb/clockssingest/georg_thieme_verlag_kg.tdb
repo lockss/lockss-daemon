@@ -119,7 +119,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; Aktuelle Dermatologie Volume 45 ; 45 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Aktuelle Dermatologie Volume 46 ; 46 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Aktuelle Dermatologie Volume 47 ; 47 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Aktuelle Dermatologie Volume 48 ; 48 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Aktuelle Dermatologie Volume 48 ; 48 ; >
 
   }
 
@@ -464,7 +464,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; Allgemein- und Viszeralchirurgie up2date Volume 13 ; 13 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Allgemein- und Viszeralchirurgie up2date Volume 14 ; 14 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Allgemein- und Viszeralchirurgie up2date Volume 15 ; 15 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Allgemein- und Viszeralchirurgie up2date Volume 16 ; 16 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Allgemein- und Viszeralchirurgie up2date Volume 16 ; 16 ; >
 
    }
 
@@ -731,7 +731,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; Augenheilkunde up2date Volume 9 ; 9 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Augenheilkunde up2date Volume 10 ; 10 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Augenheilkunde up2date Volume 11 ; 11 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Augenheilkunde up2date Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Augenheilkunde up2date Volume 12 ; 12 ; >
 
   }
 
@@ -1544,7 +1544,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; Erfahrungsheilkunde Volume 68 ; 68 ; reingest2.clockss.org:8085 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Erfahrungsheilkunde Volume 69 ; 69 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Erfahrungsheilkunde Volume 70 ; 70 ; >
-   au < ready ; exists ; 2022 ; 2022 ; Erfahrungsheilkunde Volume 71 ; 71 ; >
+   au < crawling ; exists ; 2022 ; 2022 ; Erfahrungsheilkunde Volume 71 ; 71 ; >
 
   }
 
@@ -1573,7 +1573,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; Ergopraxis Volume 12 ; 12 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Ergopraxis Volume 13 ; 13 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Ergopraxis Volume 14 ; 14 ; >
-   au < ready ; exists ; 2022 ; 2022 ; Ergopraxis Volume 15 ; 15 ; >
+   au < crawling ; exists ; 2022 ; 2022 ; Ergopraxis Volume 15 ; 15 ; >
 
   }
 
@@ -1677,7 +1677,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; European Journal of Pediatric Surgery Volume 29 ; 29 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; European Journal of Pediatric Surgery Volume 30 ; 30 ; >
    au < crawling ; exists ; 2021 ; 2021 ; European Journal of Pediatric Surgery Volume 31 ; 31 ; >
-   au < ready ; exists ; 2022 ; 2022 ; European Journal of Pediatric Surgery Volume 32 ; 32 ; >
+   au < crawling ; exists ; 2022 ; 2022 ; European Journal of Pediatric Surgery Volume 32 ; 32 ; >
 
   }
 
@@ -1865,7 +1865,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; Facial Plastic Surgery Volume 35 ; 35 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Facial Plastic Surgery Volume 36 ; 36 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Facial Plastic Surgery Volume 37 ; 37 ; >
-   au < ready ; exists ; 2022 ; 2022 ; Facial Plastic Surgery Volume 38 ; 38 ; >
+   au < crawling ; exists ; 2022 ; 2022 ; Facial Plastic Surgery Volume 38 ; 38 ; >
 
   }
 
@@ -2402,7 +2402,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; Hormone and Metabolic Research Volume 51 ; 51 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Hormone and Metabolic Research Volume 52 ; 52 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Hormone and Metabolic Research Volume 53 ; 53 ; >
-   au < ready ; exists ; 2022 ; 2022 ; Hormone and Metabolic Research Volume 54 ; 54 ; >
+   au < crawling ; exists ; 2022 ; 2022 ; Hormone and Metabolic Research Volume 54 ; 54 ; >
 
   }
 
@@ -3618,7 +3618,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; Klinische Monatsblätter für Augenheilkunde Volume 236 ; 236 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Klinische Monatsblätter für Augenheilkunde Volume 237 ; 237 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Klinische Monatsblätter für Augenheilkunde Volume 238 ; 238 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Klinische Monatsblätter für Augenheilkunde Volume 239 ; 239 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Klinische Monatsblätter für Augenheilkunde Volume 239 ; 239 ; >
 
   }
 
@@ -5309,7 +5309,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; retten! Volume 8 ; 8 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; retten! Volume 9 ; 9 ; >
    au < crawling ; exists ; 2021 ; 2021 ; retten! Volume 10 ; 10 ; >
-   au < ready ; exists ; 2022 ; 2022 ; retten! Volume 11 ; 11 ; >
+   au < crawling ; exists ; 2022 ; 2022 ; retten! Volume 11 ; 11 ; >
 
   }
 
@@ -6134,7 +6134,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; Sportphysio Volume 7 ; 7 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Sportphysio Volume 8 ; 8 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Sportphysio Volume 9 ; 9 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Sportphysio Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Sportphysio Volume 10 ; 10 ; >
 
   }
 
@@ -6154,7 +6154,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; Sports Medicine International Open Volume 3 ; 3 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Sports Medicine International Open Volume 4 ; 4 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Sports Medicine International Open Volume 5 ; 5 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Sports Medicine International Open Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Sports Medicine International Open Volume 6 ; 6 ; >
 
   }
 
@@ -6564,7 +6564,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; The Thoracic and Cardiovascular Surgeon Volume 67 ; 67 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; The Thoracic and Cardiovascular Surgeon Volume 68 ; 68 ; >
     au < crawling ; exists ; 2021 ; 2021 ; The Thoracic and Cardiovascular Surgeon Volume 69 ; 69 ; >
-    au < ready ; exists ; 2022 ; 2022 ; The Thoracic and Cardiovascular Surgeon Volume 70 ; 70 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; The Thoracic and Cardiovascular Surgeon Volume 70 ; 70 ; >
 
   }
 
@@ -7391,7 +7391,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Zeitschrift für Chirurgie Volume 144 ; 144 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Zeitschrift für Chirurgie Volume 145 ; 145 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Zeitschrift für Chirurgie Volume 146 ; 146 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Zeitschrift für Chirurgie Volume 147 ; 147 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Zeitschrift für Chirurgie Volume 147 ; 147 ; >
 
   }
 
@@ -7722,7 +7722,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; Journal of Cardiac Critical Care TSS Volume 3 ; 3 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Cardiac Critical Care TSS Volume 4 ; 4 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Journal of Cardiac Critical Care TSS Volume 5 ; 5 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Journal of Cardiac Critical Care TSS Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Journal of Cardiac Critical Care TSS Volume 6 ; 6 ; >
 
   }
 
@@ -7808,7 +7808,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; Methods of Information in Medicine Volume 58 ; 58 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Methods of Information in Medicine Volume 59 ; 59 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Methods of Information in Medicine Volume 60 ; 60 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Methods of Information in Medicine Volume 61 ; 61 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Methods of Information in Medicine Volume 61 ; 61 ; >
 
   }
 
@@ -8446,7 +8446,7 @@
     au < crawling ; exists ; 2019 ; 2019 ; Hands On - Manuelle und physikalische Therapien in der Tiermedizin Volume 1 ; 1 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Hands On - Manuelle und physikalische Therapien in der Tiermedizin Volume 2 ; 2 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Hands On - Manuelle und physikalische Therapien in der Tiermedizin Volume 3 ; 3 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Hands On - Manuelle und physikalische Therapien in der Tiermedizin Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Hands On - Manuelle und physikalische Therapien in der Tiermedizin Volume 4 ; 4 ; >
 
   }
 
@@ -8934,7 +8934,7 @@
 
     au < crawling ; exists ; 2020 ; 2020 ; Praxis Handreha Volume 1 ; 1 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Praxis Handreha Volume 2 ; 2 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Praxis Handreha Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Praxis Handreha Volume 3 ; 3 ; >
 
   }
 
@@ -9141,7 +9141,7 @@
     au < crawling ; exists ; 2019 ; 2019 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 32 ; 32 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 33 ; 33 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 34 ; 34 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 35 ; 35 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 35 ; 35 ; >
 
   }
 

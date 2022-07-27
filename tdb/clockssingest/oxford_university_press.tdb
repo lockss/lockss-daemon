@@ -293,7 +293,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; African Affairs Volume 118 ; 118 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; African Affairs Volume 119 ; 119 ; >
     au < crawling ; exists ; 2021 ; 2021 ; African Affairs Volume 120 ; 120 ; >
-    au < ready ; exists ; 2022 ; 2022 ; African Affairs Volume 121 ; 121 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; African Affairs Volume 121 ; 121 ; >
 
   }
 
@@ -754,7 +754,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; American Journal of Epidemiology Volume 189-190 ; 189-190 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; American Journal of Epidemiology Volume 191-192 ; 191-192 ; >
     au < crawling ; exists ; 2021 ; 2021 ; American Journal of Epidemiology Volume 193-194 ; 193-194 ; >
-    au < ready ; exists ; 2022 ; 2022 ; American Journal of Epidemiology Volume 195-196 ; 195-196 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; American Journal of Epidemiology Volume 195-196 ; 195-196 ; >
 
   }
 
@@ -1080,7 +1080,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Analysis Volume 79 ; 79 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Analysis Volume 80 ; 80 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Analysis Volume 81 ; 81 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Analysis Volume 82 ; 82 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Analysis Volume 82 ; 82 ; >
 
   }
 
@@ -1106,7 +1106,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Animal Frontiers Volume 9 ; 9 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Animal Frontiers Volume 10 ; 10 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Animal Frontiers Volume 11 ; 11 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Animal Frontiers Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Animal Frontiers Volume 12 ; 12 ; >
 
   }
 
@@ -4129,7 +4129,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Contributions to Political Economy Volume 38 ; 38 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Contributions to Political Economy Volume 39 ; 39 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Contributions to Political Economy Volume 40 ; 40 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Contributions to Political Economy Volume 41 ; 41 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Contributions to Political Economy Volume 41 ; 41 ; >
 
   }
 
@@ -5946,7 +5946,7 @@
     au < testing ; exists ; 2019 ; 2019 ; European Review of Economic History Volume 23 ; 23 ; >
     au < frozen ; exists ; 2020 ; 2020 ; European Review of Economic History Volume 24 ; 24 ; >
     au < ready ; exists ; 2021 ; 2021 ; European Review of Economic History Volume 25 ; 25 ; >
-    au < ready ; exists ; 2022 ; 2022 ; European Review of Economic History Volume 26 ; 26 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; European Review of Economic History Volume 26 ; 26 ; >
 
   }
 
@@ -6249,7 +6249,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; FEMS Yeast Research Volume 19 ; 19 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; FEMS Yeast Research Volume 20 ; 20 ; >
     au < ready ; exists ; 2021 ; 2021 ; FEMS Yeast Research Volume 21 ; 21 ; >
-    au < ready ; exists ; 2022 ; 2022 ; FEMS Yeast Research Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; FEMS Yeast Research Volume 22 ; 22 ; >
 
   }
 
@@ -7377,7 +7377,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Health Policy and Planning Volume 34 ; 34 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Health Policy and Planning Volume 35 ; 35 ; >
     au < ready ; exists ; 2021 ; 2021 ; Health Policy and Planning Volume 36 ; 36 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Health Policy and Planning Volume 37 ; 37 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Health Policy and Planning Volume 37 ; 37 ; >
 
   }
 
@@ -8026,7 +8026,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; IMA Journal of Applied Mathematics Volume 84 ; 84 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; IMA Journal of Applied Mathematics Volume 85 ; 85 ; >
     au < ready ; exists ; 2021 ; 2021 ; IMA Journal of Applied Mathematics Volume 86 ; 86 ; >
-    au < ready ; exists ; 2022 ; 2022 ; IMA Journal of Applied Mathematics Volume 87 ; 87 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; IMA Journal of Applied Mathematics Volume 87 ; 87 ; >
 
   }
 
@@ -8702,7 +8702,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; International Immunology Volume 31 ; 31 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; International Immunology Volume 32 ; 32 ; >
     au < ready ; exists ; 2021 ; 2021 ; International Immunology Volume 33 ; 33 ; >
-    au < ready ; exists ; 2022 ; 2022 ; International Immunology Volume 34 ; 34 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; International Immunology Volume 34 ; 34 ; >
 
   }
 
@@ -10209,7 +10209,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Communication Volume 2 ; 2 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Journal of Communication Volume 3 ; 3 ; >
     au < ready ; exists ; 2021 ; 2021 ; Journal of Communication Volume 4 ; 4 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Journal of Communication Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Journal of Communication Volume 5 ; 5 ; >
 
   }
 
@@ -11928,7 +11928,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; The Journal of Nutrition Volume 149 ; 149 ; >
     au < frozen ; exists ; 2020 ; 2020 ; The Journal of Nutrition Volume 150 ; 150 ; >
     au < ready ; exists ; 2021 ; 2021 ; The Journal of Nutrition Volume 151 ; 151 ; >
-    au < ready ; exists ; 2022 ; 2022 ; The Journal of Nutrition Volume 152 ; 152 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; The Journal of Nutrition Volume 152 ; 152 ; >
 
   }
 
@@ -12066,7 +12066,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Petrology Volume 60 ; 60 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Petrology Volume 61 ; 61 ; >
     au < ready ; exists ; 2021 ; 2021 ; Journal of Petrology Volume 62 ; 62 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Journal of Petrology Volume 63 ; 63 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Journal of Petrology Volume 63 ; 63 ; >
 
   }
 
@@ -12149,7 +12149,7 @@
     au < ready ; exists ; 2019 ; 2019 ; Journal of Pharmaceutical Health Services Research Volume 10 ; 10 ; >
     au < ready ; exists ; 2020 ; 2020 ; Journal of Pharmaceutical Health Services Research Volume 11 ; 11 ; >
     au < ready ; exists ; 2021 ; 2021 ; Journal of Pharmaceutical Health Services Research Volume 12 ; 12 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Journal of Pharmaceutical Health Services Research Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Journal of Pharmaceutical Health Services Research Volume 13 ; 13 ; >
 
   }
 
@@ -12479,7 +12479,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Refugee Studies Volume 32 ; 32 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Journal of Refugee Studies Volume 33 ; 33 ; >
     au < ready ; exists ; 2021 ; 2021 ; Journal of Refugee Studies Volume 34 ; 34 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Journal of Refugee Studies Volume 35 ; 35 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Journal of Refugee Studies Volume 35 ; 35 ; >
 
   }
 
@@ -12532,7 +12532,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Semantics Volume 36 ; 36 ; >
     au < notReady ; exists ; 2020 ; 2020 ; Journal of Semantics Volume 37 ; 37 ; >
     au < ready ; exists ; 2021 ; 2021 ; Journal of Semantics Volume 38 ; 38 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Journal of Semantics Volume 39 ; 39 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Journal of Semantics Volume 39 ; 39 ; >
 
   }
 
@@ -13442,7 +13442,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Literary Imagination Volume 21 ; 21 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Literary Imagination Volume 22 ; 22 ; >
     au < ready ; exists ; 2021 ; 2021 ; Literary Imagination Volume 23 ; 23 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Literary Imagination Volume 24 ; 24 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Literary Imagination Volume 24 ; 24 ; >
 
   }
 
@@ -13507,7 +13507,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Literature and Theology Volume 33 ; 33 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Literature and Theology Volume 34 ; 34 ; >
     au < ready ; exists ; 2021 ; 2021 ; Literature and Theology Volume 35 ; 35 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Literature and Theology Volume 36 ; 36 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Literature and Theology Volume 36 ; 36 ; >
 
   }
 
@@ -13925,7 +13925,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Microscopy Volume 68 ; 68 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Microscopy Volume 69 ; 69 ; >
     au < ready ; exists ; 2021 ; 2021 ; Microscopy Volume 70 ; 70 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Microscopy Volume 71 ; 71 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Microscopy Volume 71 ; 71 ; >
 
   }
 
