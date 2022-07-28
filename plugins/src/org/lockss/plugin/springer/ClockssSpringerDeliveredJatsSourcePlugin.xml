@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -24,7 +24,7 @@
     <map>
       <entry>
         <string>Substance</string>
-        <string>1</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -47,6 +47,12 @@
   <entry>
     <string>plugin_archive_file_types</string>
     <string>standard</string>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^%s%d/%s.+\.zip$", base_url, year, directory</string>
+    </list>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
