@@ -25,7 +25,7 @@
     au < zapped ; finished ; 2016 ; Advances in Pediatric Research WARC Content 2016 ; 2016 >
     # WARC content collected from https://www.longdom.org/advances-pediatric-research/archive.html
     au < zapped ; finished ; 2018 ; Advances in Pediatric Research WARC Content 2018 ; 2018 >
-    au < readySource ; crawling ; 2021 ; Advances in Pediatric Research WARC Content 2021 ; 2021 >
+    au < readySource ; frozen ; 2021 ; Advances in Pediatric Research WARC Content 2021 ; 2021 >
     #Contract has ended. No longer collecting.
 
   }
@@ -45,7 +45,7 @@
     au < zapped ; finished ; 2016 ; Advances in Medical Ethics WARC Content 2016 ; 2016 >
     # WARC content collected from https://www.longdom.org/advances-medical-ethics/archive.html
     au < zapped ; finished ; 2018 ; Advances in Medical Ethics WARC Content 2018 ; 2018 >
-    au < readySource ; crawling ; 2020 ; Advances in Medical Ethics WARC Content 2020 ; 2020 >
+    au < readySource ; frozen ; 2020 ; Advances in Medical Ethics WARC Content 2020 ; 2020 >
     #Contract has ended. No longer collecting.
 
 
@@ -83,7 +83,7 @@
 
     # WARC content collected from http://www.har-journal.com/
     au < zapped ; finished ; 2016 ; Healthy Aging Research WARC Content 2016 ; 2016 >
-    au < readySource ; crawling ; 2021 ; Healthy Aging Research WARC Content 2021 ; 2021 >
+    au < readySource ; frozen ; 2021 ; Healthy Aging Research WARC Content 2021 ; 2021 >
     #Contract has ended. No longer collecting.
 
   }
