@@ -20,8 +20,8 @@
     implicit < status ; status2 ; year ; name ; param[directory] >
 
     au < zapped ; finished ; 2019 ; European Publisher Source Content 2019 ; 2019 >
-    au < readySource ; crawling ; 2020 ; European Publisher Source Content 2020 ; 2020 >
-    au < readySource ; crawling ; 2021 ; European Publisher Source Content 2021 ; 2021 >
+    au < readySource ; frozen ; 2020 ; European Publisher Source Content 2020 ; 2020 >
+    au < readySource ; frozen ; 2021 ; European Publisher Source Content 2021 ; 2021 >
     au < readySource ; crawling ; 2022 ; European Publisher Source Content 2022 ; 2022 >
 
   }
