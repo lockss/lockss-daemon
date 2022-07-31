@@ -253,6 +253,17 @@ public class TestMetadataUtil extends LockssTestCase {
 	  null
   };
 
+  private String doiDecorations [] = {
+          "",
+          "doi:",
+          "doi.org:",
+          "DOI:",
+          "DOI.ORG:",
+          "http://dx.doi.org/",
+          "https://dx.doi.org/",
+          "HTTPS://dx.doi.org/",
+  };
+
   public void testISBN() {
     // valid with checksum calculations
     for(int i=0; i<validISBN10s.length;i++) {
@@ -362,13 +373,33 @@ public class TestMetadataUtil extends LockssTestCase {
     assertEquals("xyzzy", MetadataUtil.formatIssn("xyzzy"));
   }
 
-  public void testDOI() throws UnsupportedEncodingException {
-    for(int i=0; i<validDOIS.length;i++){
-      assertTrue(MetadataUtil.isDoi(URLDecoder.decode(validDOIS[i], Constants.ENCODING_UTF_8)));
+  public void testIsDoi() throws UnsupportedEncodingException {
+    for (String doi : validDOIS) {
+      assertTrue(MetadataUtil.isDoi(URLDecoder.decode(doi, Constants.ENCODING_UTF_8)));
     }
 
-    for(int j=0; j<invalidDOIS.length;j++){
-      assertFalse(MetadataUtil.isDoi(invalidDOIS[j]));
+    for (String invDoi : invalidDOIS) {
+      assertFalse(MetadataUtil.isDoi(invDoi));
+    }
+  }
+
+  public void testSanitizeDoi() throws UnsupportedEncodingException {
+    for (String doi : validDOIS) {
+      for (String decoration : doiDecorations) {
+        assertEquals(doi, MetadataUtil.sanitizeDoi(decoration + doi));
+      }
+    }
+
+    for (String invDoi : invalidDOIS) {
+      for (String decoration : doiDecorations) {
+        try {
+          String wrong = MetadataUtil.sanitizeDoi(decoration + invDoi);
+          fail("Invalid DOI " + invDoi + " sanitized to " + wrong +
+               ", but should have thrown");
+        } catch (IllegalArgumentException e) {
+          assertMatchesRE("Not recognized as", e.getMessage());
+        }
+      }
     }
   }
 }

@@ -429,7 +429,18 @@ public class MetadataUtil {
     return formatIsbn(validateIsbn(isbn));
   }
 
+  /* Matches a bare DOI */
   private static Pattern DOI_PAT = Pattern.compile("10[.][0-9a-z]{4,6}/.*");
+
+  /* Matches (and is used to sanitize) the various strings in which
+   * we observe DOI strings appearing in the wild. */
+  public static Pattern DECORATED_DOI_PAT =
+    Pattern.compile("^(" +
+                    "(?:doi:)|" +
+                    "(?:doi\\.org:)|" +
+                    "(?:https?://dx\\.doi\\.org/)" +
+                    ")?" + "(" + DOI_PAT.toString() + ")",
+                    Pattern.CASE_INSENSITIVE);
 
   /**
    * Check that DOI number is a valid DOI string. 
@@ -459,6 +470,26 @@ public class MetadataUtil {
     }
     return true;
   }  
+
+  /** Attempts to find a DOI string in one of the many ways in which
+   * DOIs are decorated in the wild; prefaced with (case insensitive):<ul>
+   * <li><tt>doi:</tt></li>
+   * <li><tt>doi.org:</tt></li>
+   * <li><tt>http://dx.doi.org/</tt></li>
+   * <li><tt>https://dx.doi.org/</tt></li>
+   * </ul>
+   *
+   * @param str the possibly-decorated DIO string
+   * @return the bare DIO string, if one is found
+   * @throws IllegalArgumentException if no DOI is found
+   */
+  public static String sanitizeDoi(String str) {
+    Matcher m1 = DECORATED_DOI_PAT.matcher(str);
+    if (m1.find()) {
+      return m1.group(2);
+    }
+    throw new IllegalArgumentException("Not recognized as a (possibly-decorated) DOI: " + str);
+  }
 
   /////////////////////////////////////////////////////////////////
   //
