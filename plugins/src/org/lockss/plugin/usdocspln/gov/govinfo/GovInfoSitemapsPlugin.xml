@@ -252,10 +252,14 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.usdocspln.gov.govinfo.GovInfoHtmlHashFilterFactory</string>
   </entry>
-  <!-- note: we are allowed to crawl 24/7 in testing only -->
+  <!-- note: we are allowed to crawl 24/7 in testing only; we don't want to completely redo partially successful crawls -->
   <entry>
     <string>content-testing_override</string>
     <map>
+      <entry>
+        <string>au_refetch_depth</string>
+        <int>1</int>
+      </entry>
       <entry>
         <string>au_rate_limiter_info</string>
         <org.lockss.util.Default />
