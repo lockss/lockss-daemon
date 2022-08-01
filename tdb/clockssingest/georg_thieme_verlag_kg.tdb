@@ -180,7 +180,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; Aktuelle Kardiologie Volume 8 ; 8 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Aktuelle Kardiologie Volume 9 ; 9 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Aktuelle Kardiologie Volume 10 ; 10 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Aktuelle Kardiologie Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Aktuelle Kardiologie Volume 11 ; 11 ; >
 
   }
 
@@ -585,7 +585,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; AORTA Volume 7 ; 7 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; AORTA Volume 8 ; 8 ; >
     au < crawling ; exists ; 2021 ; 2021 ; AORTA Volume 9 ; 9 ; >
-    au < ready ; exists ; 2022 ; 2022 ; AORTA Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; AORTA Volume 10 ; 10 ; >
 
    }
 
@@ -1952,7 +1952,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; Fortschritte der Neurologie - Psychiatrie Volume 87 ; 87 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Fortschritte der Neurologie - Psychiatrie Volume 88 ; 88 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Fortschritte der Neurologie - Psychiatrie Volume 89 ; 89 ; >
-   au < ready ; exists ; 2022 ; 2022 ; Fortschritte der Neurologie - Psychiatrie Volume 90 ; 90 ; >
+   au < crawling ; exists ; 2022 ; 2022 ; Fortschritte der Neurologie - Psychiatrie Volume 90 ; 90 ; >
 
   }
 
@@ -2014,7 +2014,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; Gastroenterologie up2dat Volume 15 ; 15 ; reingest1.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Gastroenterologie up2dat Volume 16 ; 16 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Gastroenterologie up2dat Volume 17 ; 17 ; >
-   au < ready ; exists ; 2022 ; 2022 ; Gastroenterologie up2dat Volume 18 ; 18 ; >
+   au < crawling ; exists ; 2022 ; 2022 ; Gastroenterologie up2dat Volume 18 ; 18 ; >
 
   }
 
@@ -2094,7 +2094,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; Gefäßmedizin Scan Volume 6 ; 6 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Gefäßmedizin Scan Volume 7 ; 7 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Gefäßmedizin Scan Volume 8 ; 8 ; >
-   au < ready ; exists ; 2022 ; 2022 ; Gefäßmedizin Scan Volume 9 ; 9 ; >
+   au < crawling ; exists ; 2022 ; 2022 ; Gefäßmedizin Scan Volume 9 ; 9 ; >
 
   }
 
@@ -2610,7 +2610,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; intensiv Volume 27 ; 27 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; intensiv Volume 28 ; 28 ; >
     au < crawling ; exists ; 2021 ; 2021 ; intensiv Volume 29 ; 29 ; >
-    au < ready ; exists ; 2022 ; 2022 ; intensiv Volume 30 ; 30 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; intensiv Volume 30 ; 30 ; >
 
   }
 
@@ -2772,7 +2772,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; International Journal of Sports Medicine Volume 40 ; 40 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; International Journal of Sports Medicine Volume 41 ; 41 ; >
     au < crawling ; exists ; 2021 ; 2021 ; International Journal of Sports Medicine Volume 42 ; 42 ; >
-    au < ready ; exists ; 2022 ; 2022 ; International Journal of Sports Medicine Volume 43 ; 43 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; International Journal of Sports Medicine Volume 43 ; 43 ; >
 
   }
 
@@ -2891,7 +2891,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; Journal of Academic Ophtalmology Volume 11 ; 11 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Academic Ophtalmology Volume 12 ; 12 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Journal of Academic Ophtalmology Volume 13 ; 13 ; >
-   au < ready ; exists ; 2022 ; 2022 ; Journal of Academic Ophtalmology Volume 14 ; 14 ; >
+   au < crawling ; exists ; 2022 ; 2022 ; Journal of Academic Ophtalmology Volume 14 ; 14 ; >
 
   }
 
@@ -2982,7 +2982,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; Journal of Hand and Microsurgery Volume 11 ; 11 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Hand and Microsurgery Volume 12 ; 12 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Journal of Hand and Microsurgery Volume 13 ; 13 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Journal of Hand and Microsurgery Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Journal of Hand and Microsurgery Volume 14 ; 14 ; >
 
   }
 
@@ -3002,7 +3002,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; The Journal of Hip Surgery Volume 3 ; 3 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; The Journal of Hip Surgery Volume 4 ; 4 ; >
     au < crawling ; exists ; 2021 ; 2021 ; The Journal of Hip Surgery Volume 5 ; 5 ; >
-    au < ready ; exists ; 2022 ; 2022 ; The Journal of Hip Surgery Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; The Journal of Hip Surgery Volume 6 ; 6 ; >
 
   }
 
@@ -3784,7 +3784,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; kma - Das Gesundheitswirtschaftsmagazin Volume 24 ; 24 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; kma - Das Gesundheitswirtschaftsmagazin Volume 25 ; 25 ; >
     au < crawling ; exists ; 2021 ; 2021 ; kma - Das Gesundheitswirtschaftsmagazin Volume 26 ; 26 ; >
-    au < ready ; exists ; 2022 ; 2022 ; kma - Das Gesundheitswirtschaftsmagazin Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; kma - Das Gesundheitswirtschaftsmagazin Volume 27 ; 27 ; >
 
   }
 
@@ -5028,7 +5028,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 69 ; 69 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 70 ; 70 ; >
    au < crawling ; exists ; 2021 ; 2021 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 71 ; 71 ; >
-   au < ready ; exists ; 2022 ; 2022 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 72 ; 72 ; >
+   au < crawling ; exists ; 2022 ; 2022 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 72 ; 72 ; >
 
   }
 
@@ -5146,7 +5146,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; Psychiatrische Praxis Volume 46 ; 46 ; reingest2.clockss.org:8085 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Psychiatrische Praxis Volume 47 ; 47 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Psychiatrische Praxis Volume 48 ; 48 ; >
-   au < ready ; exists ; 2022 ; 2022 ; Psychiatrische Praxis Volume 49 ; 49 ; >
+   au < crawling ; exists ; 2022 ; 2022 ; Psychiatrische Praxis Volume 49 ; 49 ; >
 
   }
 
@@ -5351,7 +5351,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; Revista Chilena de Ortopedia y Traumatología Volume 3 ; 3 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Revista Chilena de Ortopedia y Traumatología Volume 4 ; 4 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Revista Chilena de Ortopedia y Traumatología Volume 5 ; 5 ; >
-   au < ready ; exists ; 2022 ; 2022 ; Revista Chilena de Ortopedia y Traumatología Volume 6 ; 6 ; >
+   au < crawling ; exists ; 2022 ; 2022 ; Revista Chilena de Ortopedia y Traumatología Volume 6 ; 6 ; >
 
   }
 
@@ -5495,7 +5495,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; Seminars in Hearing Volume 40 ; 40 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Seminars in Hearing Volume 41 ; 41 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Seminars in Hearing Volume 42 ; 42 ; >
-   au < ready ; exists ; 2022 ; 2022 ; Seminars in Hearing Volume 43 ; 43 ; >
+   au < crawling ; exists ; 2022 ; 2022 ; Seminars in Hearing Volume 43 ; 43 ; >
 
   }
 
@@ -5549,7 +5549,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; Seminars in Interventional Radiology Volume 36 ; 36 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Seminars in Interventional Radiology Volume 37 ; 37 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Seminars in Interventional Radiology Volume 38 ; 38 ; >
-   au < ready ; exists ; 2022 ; 2022 ; Seminars in Interventional Radiology Volume 39 ; 39 ; >
+   au < crawling ; exists ; 2022 ; 2022 ; Seminars in Interventional Radiology Volume 39 ; 39 ; >
 
   }
 
@@ -6337,7 +6337,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; SYNFACTS Volume 15 ; 15 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; SYNFACTS Volume 16 ; 16 ; >
    au < crawling ; exists ; 2021 ; 2021 ; SYNFACTS Volume 17 ; 17 ; >
-   au < ready ; exists ; 2022 ; 2022 ; SYNFACTS Volume 18 ; 18 ; >
+   au < crawling ; exists ; 2022 ; 2022 ; SYNFACTS Volume 18 ; 18 ; >
 
   }
 
@@ -6386,7 +6386,7 @@
    au < deepCrawl ; exists ; 2019 ; 2019 ; SYNLETT Volume 30 ; 30 ; >
    au < crawling ; exists ; 2020 ; 2020 ; SYNLETT Volume 31 ; 31 ; >
    au < crawling ; exists ; 2021 ; 2021 ; SYNLETT Volume 32 ; 32 ; >
-   au < ready ; exists ; 2022 ; 2022 ; SYNLETT Volume 33 ; 33 ; >
+   au < crawling ; exists ; 2022 ; 2022 ; SYNLETT Volume 33 ; 33 ; >
 
   }
 
@@ -6591,7 +6591,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; The Thoracic and Cardiovascular Surgeon Reports Volume 8 ; 8 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; The Thoracic and Cardiovascular Surgeon Reports Volume 9 ; 9 ; >
     au < crawling ; exists ; 2021 ; 2021 ; The Thoracic and Cardiovascular Surgeon Reports Volume 10 ; 10 ; >
-    au < ready ; exists ; 2022 ; 2022 ; The Thoracic and Cardiovascular Surgeon Reports Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; The Thoracic and Cardiovascular Surgeon Reports Volume 11 ; 11 ; >
 
   }
 
@@ -6674,7 +6674,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; TumorDiagnostik & Therapie Volume 42 ; 42 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; TumorDiagnostik & Therapie Volume 43 ; 43 ; >
     au < crawling ; exists ; 2021 ; 2021 ; TumorDiagnostik & Therapie Volume 44 ; 44 ; >
-    au < ready ; exists ; 2022 ; 2022 ; TumorDiagnostik & Therapie Volume 45 ; 45 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; TumorDiagnostik & Therapie Volume 45 ; 45 ; >
 
   }
 
@@ -7593,7 +7593,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Applied Clinical Informatics Volume 10 ; 10 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Applied Clinical Informatics Volume 11 ; 11 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Applied Clinical Informatics Volume 12 ; 12 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Applied Clinical Informatics Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Applied Clinical Informatics Volume 13 ; 13 ; >
 
   }
 
@@ -8635,7 +8635,7 @@
     au < crawling ; exists ; 2019 ; 2019 ; Journal of Digestive Endoscopy Volume 10 ; 10 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Journal of Digestive Endoscopy Volume 11 ; 11 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Journal of Digestive Endoscopy Volume 12 ; 12 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Journal of Digestive Endoscopy Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Journal of Digestive Endoscopy Volume 13 ; 13 ; >
 
   }
 
@@ -8710,7 +8710,7 @@
     au < crawling ; exists ; 2019 ; 2019 ; Journal of Laboratory Physicians Volume 11 ; 11 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Journal of Laboratory Physicians Volume 12 ; 12 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Journal of Laboratory Physicians Volume 13 ; 13 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Journal of Laboratory Physicians Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Journal of Laboratory Physicians Volume 14 ; 14 ; >
 
   }
 

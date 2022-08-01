@@ -44,7 +44,7 @@
     au < finished ; crawling ; 2019 ; Therapeutics and Clinical Risk Management Volume 15 ; 15 ; 2019 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2020 ; Therapeutics and Clinical Risk Management Volume 16 ; 16 ; 2020 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2021 ; Therapeutics and Clinical Risk Management Volume 17 ; 17 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Therapeutics and Clinical Risk Management Volume 18 ; 18 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Therapeutics and Clinical Risk Management Volume 18 ; 18 ; 2022 ; >
 
   }
 
@@ -515,7 +515,7 @@
     au < finished ; crawling ; 2019 ; Infection and Drug Resistance Volume 12 ; 12 ; 2019 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Infection and Drug Resistance Volume 13 ; 13 ; 2020 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2021 ; Infection and Drug Resistance Volume 14 ; 14 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Infection and Drug Resistance Volume 15 ; 15 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Infection and Drug Resistance Volume 15 ; 15 ; 2022 ; >
 
   }
 
@@ -2259,7 +2259,7 @@
     au < finished ; crawling ; 2019 ; Pediatric Health, Medicine and Therapeutics Volume 10 ; 10 ; 2019 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2020 ; Pediatric Health, Medicine and Therapeutics Volume 11 ; 11 ; 2020 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2021 ; Pediatric Health, Medicine and Therapeutics Volume 12 ; 12 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Pediatric Health, Medicine and Therapeutics Volume 13 ; 13 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Pediatric Health, Medicine and Therapeutics Volume 13 ; 13 ; 2022 ; >
 
   }
 
