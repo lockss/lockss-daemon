@@ -682,8 +682,8 @@
 
       au < bmj.BMJDrupalPlugin ; notReady ; 2012 ; BMJ Quality Improvement Reports Volume 1 ; 1 ; https://bmjopenquality.bmj.com/ > #Probe url: https://bmjopenquality.bmj.com/content/1/1/u474.w148 outside of crawl spec
       au < HighWirePressH20Plugin ; down ; 2013-2014 ; BMJ Quality Improvement Reports Volume 2 ; 2 ; http://qir.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; notReady ; 2014 ; BMJ Quality Improvement Reports Volume 3 ; 3 ; https://bmjopenquality.bmj.com/ > #Probe url: https://bmjopenquality.bmj.com/content/3/1/u202053.w1990 outside of crawl spec
-      au < bmj.BMJDrupalPlugin ; notReady ; 2015 ; BMJ Quality Improvement Reports Volume 4 ; 4 ; https://bmjopenquality.bmj.com/ > #Probe url: https://bmjopenquality.bmj.com/content/4/1/u208052.w3253 outside of crawl spec
+      au < bmj.BMJDrupalPlugin ; ready ; 2014 ; BMJ Quality Improvement Reports Volume 3 ; 3 ; https://bmjopenquality.bmj.com/ > #Probe url: https://bmjopenquality.bmj.com/content/3/1/u202053.w1990 outside of crawl spec
+      au < bmj.BMJDrupalPlugin ; ready ; 2015 ; BMJ Quality Improvement Reports Volume 4 ; 4 ; https://bmjopenquality.bmj.com/ > #Probe url: https://bmjopenquality.bmj.com/content/4/1/u208052.w3253 outside of crawl spec
       au < HighWirePressH20Plugin ; down ; 2016 ; BMJ Quality Improvement Reports Volume 5 ; 5 ; http://qir.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2017 ; BMJ Quality Improvement Reports Volume 6 ; 6 ; https://bmjopenquality.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2018 ; BMJ Quality Improvement Reports Volume 7 ; 7 ; https://bmjopenquality.bmj.com/ >
@@ -1402,7 +1402,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2018 ; Gut Volume 67 ; 67 ; https://gut.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; Gut Volume 68 ; 68 ; https://gut.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2020 ; Gut Volume 69 ; 69 ; https://gut.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; notReady ; 2021 ; Gut Volume 70 ; 70 ; https://gut.bmj.com/ > #login, https://gut.bmj.com/content/70/11/2076
+    au < bmj.BMJDrupalPlugin ; ready ; 2021 ; Gut Volume 70 ; 70 ; https://gut.bmj.com/ > #login, https://gut.bmj.com/content/70/11/2076
     au < bmj.BMJDrupalPlugin ; manifest ; 2022 ; Gut Volume 71 ; 71 ; https://gut.bmj.com/ >
 
   }
@@ -2653,7 +2653,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < bmj.BMJDrupalPlugin ; released ; 2018 ; BMJ Quality & Safety Volume 27 ; 27 ; https://qualitysafety.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2019 ; BMJ Quality & Safety Volume 28 ; 28 ; https://qualitysafety.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2020 ; BMJ Quality & Safety Volume 29 ; 29 ; https://qualitysafety.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; notReady ; 2021 ; BMJ Quality & Safety Volume 30 ; 30 ; https://qualitysafety.bmj.com/ > #login,https://qualitysafety.bmj.com/content/30/10/837.full.pdf
+      au < bmj.BMJDrupalPlugin ; ready ; 2021 ; BMJ Quality & Safety Volume 30 ; 30 ; https://qualitysafety.bmj.com/ > #login,https://qualitysafety.bmj.com/content/30/10/837.full.pdf
       au < bmj.BMJDrupalPlugin ; manifest ; 2022 ; BMJ Quality & Safety Volume 31 ; 31 ; https://qualitysafety.bmj.com/ >
 
       }
