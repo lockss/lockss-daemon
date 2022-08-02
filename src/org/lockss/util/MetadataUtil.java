@@ -437,8 +437,11 @@ public class MetadataUtil {
   public static Pattern DECORATED_DOI_PAT =
     Pattern.compile("^(" +
                     "(?:doi:)|" +
+                    "(?:doi/)|" +
                     "(?:doi\\.org:)|" +
-                    "(?:https?://dx\\.doi\\.org/)" +
+                    "(?:doi\\.org/)|" +
+                    "(?:https?://dx\\.doi\\.org/)|" +
+                    "(?:https?://doi\\.org/)|" +
                     ")?" + "(" + DOI_PAT.toString() + ")",
                     Pattern.CASE_INSENSITIVE);
 
@@ -474,13 +477,17 @@ public class MetadataUtil {
   /** Attempts to find a DOI string in one of the many ways in which
    * DOIs are decorated in the wild; prefaced with (case insensitive):<ul>
    * <li><tt>doi:</tt></li>
+   * <li><tt>doi/</tt></li>
    * <li><tt>doi.org:</tt></li>
+   * <li><tt>doi.org/</tt></li>
    * <li><tt>http://dx.doi.org/</tt></li>
    * <li><tt>https://dx.doi.org/</tt></li>
+   * <li><tt>http://doi.org/</tt></li>
+   * <li><tt>https://doi.org/</tt></li>
    * </ul>
    *
-   * @param str the possibly-decorated DIO string
-   * @return the bare DIO string, if one is found
+   * @param str the possibly-decorated DOI string
+   * @return the bare DOI string, if one is found
    * @throws IllegalArgumentException if no DOI is found
    */
   public static String sanitizeDoi(String str) {

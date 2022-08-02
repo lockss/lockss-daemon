@@ -256,12 +256,16 @@ public class TestMetadataUtil extends LockssTestCase {
   private String doiDecorations [] = {
           "",
           "doi:",
+          "doi/",
           "doi.org:",
+          "doi.org/",
           "DOI:",
           "DOI.ORG:",
           "http://dx.doi.org/",
           "https://dx.doi.org/",
           "HTTPS://dx.doi.org/",
+          "http://doi.org/",
+          "https://doi.org/",
   };
 
   public void testISBN() {
