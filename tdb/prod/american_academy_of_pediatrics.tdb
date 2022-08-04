@@ -2,9 +2,8 @@
   publisher <
     name = American Academy of Pediatrics ;
     info[tester] = 5 ;
-    info[platform] = SC, BLOCKED, LXPLUG-2135, manifest page autologin
+    info[platform] = SC
   >
-  #plugin = needs.plugin
 
   plugin = org.lockss.plugin.silverchair.aap.ClockssAAPSilverchairPlugin
   implicit < status ; year ; param[year] ; name ; param[volume_name] >
@@ -64,7 +63,7 @@
       au < doNotProcess ; 2018 ; 2018 ; AAP Grand Rounds Volume 39 ; 39 >
       au < doNotProcess ; 2018 ; 2018 ; AAP Grand Rounds Volume 40 ; 40 >
       au < doNotProcess ; 2019 ; 2019 ; AAP Grand Rounds Volume 41 ; 41 >
-      au < manifest ; 2019 ; 2019 ; AAP Grand Rounds Volume 42 ; 42 > #manifest page redirects.
+      au < manifest ; 2019 ; 2019 ; AAP Grand Rounds Volume 42 ; 42 > 
       au < manifest ; 2020 ; 2020 ; AAP Grand Rounds Volume 43 ; 43 > 
       au < manifest ; 2020 ; 2020 ; AAP Grand Rounds Volume 44 ; 44 > 
       au < manifest ; 2021 ; 2021 ; AAP Grand Rounds Volume 45 ; 45 > 

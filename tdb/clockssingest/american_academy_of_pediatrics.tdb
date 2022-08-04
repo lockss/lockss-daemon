@@ -5,7 +5,7 @@
     info[contract] = 2009 ; 
     info[tester] = 5 ;
     info[poller] = 2 ;
-    info[platform] = SC, BLOCKED, LXPLUG-2135, manifest page autologin
+    info[platform] = SC
   >
   
   #plugin = needs.plugin
