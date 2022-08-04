@@ -32,7 +32,8 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
     <entry>
         <string>plugin_status</string>
-        <string>ready</string>
+        <!--need to filter wrong doi in reference-->
+        <string>down</string>
     </entry>
     <entry>
         <string>plugin_identifier</string>
@@ -58,9 +59,4 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>au_name</string>
         <string>"GeoScienceWorld Journals Plugin, Base URL %s, Journal ID %s,  Year %d, Volume %s", base_url, journal_id, year, volume_name</string>
     </entry>
-    <!--
-    https://pubs.geoscienceworld.org/gsabulletin/list-of-issues/2019
-    https://pubs.geoscienceworld.org/geology/list-of-issues/2019
-    https://pubs.geoscienceworld.org/geosphere/list-of-issues/2019
-    -->
 </map>
