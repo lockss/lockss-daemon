@@ -13,11 +13,11 @@
     implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
 
    {
-#    title < 
-#      name = European Journal of Business Science and Technology ;
-#      eissn = 2336-6494 
-#    >
-#    
+    title < 
+      name = European Journal of Business Science and Technology ;
+      eissn = 2336-6494 
+    >
+    
 #    {
 #      plugin = needs.plugin
 #      param[base_url] = https://www.ejobsat.cz/
