@@ -12,8 +12,7 @@
     # Moved to new platform -- Actavia 2022
     implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
 
-#  {
-#  
+   {
 #    title < 
 #      name = European Journal of Business Science and Technology ;
 #      eissn = 2336-6494 
@@ -26,7 +25,7 @@
 #      au < exists ; exists ; 2021 ; European Journal of Business Science and Technology Volume 7 ; 7 ; 2021 ; >
 #      au < expected ; exists ; 2022 ; European Journal of Business Science and Technology Volume 8 ; 8 ; 2022 ; >
 #    }
-#
+
     {
       plugin = org.lockss.plugin.ejobsat.ClockssEuropeanJournalBusinessScienceTechnologyPlugin
       param[base_url] = https://www.ejobsat.cz/
