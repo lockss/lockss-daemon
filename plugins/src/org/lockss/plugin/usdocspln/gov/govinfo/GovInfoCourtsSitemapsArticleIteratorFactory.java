@@ -42,15 +42,7 @@ import org.lockss.plugin.ArticleFiles;
 import org.lockss.plugin.ArticleIteratorFactory;
 import org.lockss.plugin.SubTreeArticleIteratorBuilder;
 import org.lockss.util.Logger;
-import org.lockss.daemon.PluginException;
-import org.lockss.extractor.ArticleMetadataExtractor;
-import org.lockss.extractor.ArticleMetadataExtractorFactory;
-import org.lockss.extractor.BaseArticleMetadataExtractor;
-import org.lockss.extractor.MetadataTarget;
-import org.lockss.plugin.*;
-import org.lockss.util.Logger;
 
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.regex.Pattern;
 
