@@ -74,7 +74,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Advances in Geosciences Volume 45 ; 45 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Advances in Geosciences Volume 46 ; 46 ; >
       au < crawling ; exists ; 2021 ; 2021 ; Advances in Geosciences Volume 47 ; 47 ; >
-      au < ready ; exists ; 2022 ; 2022 ; Advances in Geosciences Volume 48 ; 48 ; >
+      au < crawling ; exists ; 2022 ; 2022 ; Advances in Geosciences Volume 48 ; 48 ; >
 
   }
 
@@ -139,7 +139,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Advances in Science and Research Volume 16 ; 16 ; >
       au < finished ; crawling ; 2020 ; 2020 ; Advances in Science and Research Volume 17 ; 17 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; 2021 ; Advances in Science and Research Volume 18 ; 18 ; >
-      au < ready ; exists ; 2022 ; 2022 ; Advances in Science and Research Volume 19 ; 19 ; >
+      au < crawling ; exists ; 2022 ; 2022 ; Advances in Science and Research Volume 19 ; 19 ; >
 
   }
 
@@ -178,7 +178,7 @@
 
       au < finished ; crawling ; 2020 ; 2020 ; AGILE: GIScience Series Volume 1 ; 1 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; 2021 ; AGILE: GIScience Series Volume 2 ; 2 ; >
-      au < ready ; exists ; 2022 ; 2022 ; AGILE: GIScience Series Volume 3 ; 3 ; >
+      au < crawling ; exists ; 2022 ; 2022 ; AGILE: GIScience Series Volume 3 ; 3 ; >
 
   }
 
@@ -440,7 +440,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Drinking Water Engineering and Science Volume 12 ; 12 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Drinking Water Engineering and Science Volume 13 ; 13 ; >
       au < crawling ; exists ; 2021 ; 2021 ; Drinking Water Engineering and Science Volume 14 ; 14 ; >
-      au < ready ; exists ; 2022 ; 2022 ; Drinking Water Engineering and Science Volume 15 ; 15 ; >
+      au < crawling ; exists ; 2022 ; 2022 ; Drinking Water Engineering and Science Volume 15 ; 15 ; >
 
   }
 
@@ -756,7 +756,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Geographica Helvetica Volume 74 ; 74 ; >
       au < finished ; crawling ; 2020 ; 2020 ; Geographica Helvetica Volume 75 ; 75 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; 2021 ; Geographica Helvetica Volume 76 ; 76 ; >
-      au < ready ; exists ; 2022 ; 2022 ; Geographica Helvetica Volume 77 ; 77 ; >
+      au < crawling ; exists ; 2022 ; 2022 ; Geographica Helvetica Volume 77 ; 77 ; >
 
   }
 
@@ -899,7 +899,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Hydrology and Earth System Sciences Volume 23 ; 23 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Hydrology and Earth System Sciences Volume 24 ; 24 ; >
       au < crawling ; exists ; 2021 ; 2021 ; Hydrology and Earth System Sciences Volume 25 ; 25 ; >
-      au < ready ; exists ; 2022 ; 2022 ; Hydrology and Earth System Sciences Volume 26 ; 26 ; >
+      au < crawling ; exists ; 2022 ; 2022 ; Hydrology and Earth System Sciences Volume 26 ; 26 ; >
 
   }
 
@@ -919,7 +919,7 @@
       au < finished ; crawling ; 2019 ; 2019 ; Journal of Bone and Joint Infection Volume 4 ; 4 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Bone and Joint Infection Volume 5 ; 5 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Bone and Joint Infection Volume 6 ; 6 ; >
-      au < ready ; exists ; 2022 ; 2022 ; Journal of Bone and Joint Infection Volume 7 ; 7 ; >
+      au < crawling ; exists ; 2022 ; 2022 ; Journal of Bone and Joint Infection Volume 7 ; 7 ; >
       au < expected ; exists ; 2022 ; 2022 ; Journal of Bone and Joint Infection Volume 8 ; 8 ; >
 
   }

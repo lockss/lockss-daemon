@@ -440,7 +440,7 @@
     au < finished ; manifest ; 2019 ; European Comic Art Volume 12 ; 12 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; European Comic Art Volume 13 ; 13 ; >
     au < frozen ; exists ; 2021 ; European Comic Art Volume 14 ; 14 ; >
-    au < ready ; exists ; 2022 ; European Comic Art Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2022 ; European Comic Art Volume 15 ; 15 ; >
 
   }
 
@@ -834,7 +834,7 @@
     au < finished ; manifest ; 2019 ; Learning and Teaching (LATISS) Volume 12 ; 12 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Learning and Teaching (LATISS) Volume 13 ; 13 ; >
     au < frozen ; exists ; 2021 ; Learning and Teaching (LATISS) Volume 14 ; 14 ; >
-    au < ready ; exists ; 2022 ; Learning and Teaching (LATISS) Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2022 ; Learning and Teaching (LATISS) Volume 15 ; 15 ; >
 
   }
 
