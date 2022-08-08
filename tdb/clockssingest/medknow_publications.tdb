@@ -755,8 +755,9 @@
 #    param[base_url] = http://www.idoj.in/
 
     param[journal_issn] = 2229-5178
+    #Moved to LWW
 
-    au < manifest ; exists ; 2010 ; Indian Dermatology Online Journal Volume 1 ; 2010 ; 1 ; https://www.idoj.in/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Indian Dermatology Online Journal Volume 1 ; 2010 ; 1 ; https://www.idoj.in/ ; ; >
     au < finished ; frozen ; 2011 ; Indian Dermatology Online Journal Volume 2 ; 2011 ; 2 ; http://www.idoj.in/ ; ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2012 ; Indian Dermatology Online Journal Volume 3 ; 2012 ; 3 ; http://www.idoj.in/ ; ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2013 ; Indian Dermatology Online Journal Volume 4 ; 2013 ; 4 ; http://www.idoj.in/ ; ; reingest5.clockss.org:8082 >
@@ -766,9 +767,9 @@
     au < finished ; frozen ; 2017 ; Indian Dermatology Online Journal Volume 8 ; 2017 ; 8 ; http://www.idoj.in/ ; ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Indian Dermatology Online Journal Volume 9 ; 2018 ; 9 ; http://www.idoj.in/ ; ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; Indian Dermatology Online Journal Volume 10 ; 2019 ; 10 ; https://www.idoj.in/ ; ; reingest5.clockss.org:8082 >
-    au < notReady ; exists ; 2020 ; Indian Dermatology Online Journal Volume 11 ; 2020 ; 11 ; https://www.idoj.in/ ; ; > # 500 error https://www.idoj.in/article.asp?issn=2229-5178;year=2020;volume=11;issue=4;spage=479;epage=481;aulast=Singal;type=2
-    au < crawling ; exists ; 2021 ; Indian Dermatology Online Journal Volume 12 ; 2021 ; 12 ; https://www.idoj.in/ ; ; >
-    au < manifest ; exists ; 2022 ; Indian Dermatology Online Journal Volume 13 ; 2022 ; 13 ; https://www.idoj.in/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2020 ; Indian Dermatology Online Journal Volume 11 ; 2020 ; 11 ; https://www.idoj.in/ ; ; > # 500 error https://www.idoj.in/article.asp?issn=2229-5178;year=2020;volume=11;issue=4;spage=479;epage=481;aulast=Singal;type=2
+    au < frozen ; exists ; 2021 ; Indian Dermatology Online Journal Volume 12 ; 2021 ; 12 ; https://www.idoj.in/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2022 ; Indian Dermatology Online Journal Volume 13 ; 2022 ; 13 ; https://www.idoj.in/ ; ; >
 
   }
 
@@ -1324,7 +1325,7 @@
     au < finished ; crawling ; 2019 ; Indian Journal of Nuclear Medicine Volume 34 ; 2019 ; 34 ; https://www.ijnm.in/ ; ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Indian Journal of Nuclear Medicine Volume 35 ; 2020 ; 35 ; https://www.ijnm.in/ ; ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2021 ; Indian Journal of Nuclear Medicine Volume 36 ; 2021 ; 36 ; https://www.ijnm.in/ ; ; >
-    au < manifest ; exists ; 2022 ; Indian Journal of Nuclear Medicine Volume 37 ; 2022 ; 37 ; https://www.ijnm.in/ ; ; >
+    au < notReady ; exists ; 2022 ; Indian Journal of Nuclear Medicine Volume 37 ; 2022 ; 37 ; https://www.ijnm.in/ ; ; > #some materials from http, some from https.
 
   }
 
@@ -2055,7 +2056,7 @@
     au < finished ; crawling ; 2019 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 40 ; 2019 ; 40 ; https://www.ijstd.org/ ; ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2020 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 41 ; 2020 ; 41 ; https://www.ijstd.org/ ; ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 42 ; 2021 ; 42 ; https://www.ijstd.org/ ; ; >
-    au < manifest ; exists ; 2022 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 43 ; 2022 ; 43 ; https://www.ijstd.org/ ; ; >
+    au < notReady ; exists ; 2022 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 43 ; 2022 ; 43 ; https://www.ijstd.org/ ; ; > #some files http, some https
 
     }
 
@@ -2121,7 +2122,7 @@
     au < finished ; crawling ; 2019 ; Indian Journal of Urology Volume 35 ; 2019 ; 35 ; https://www.indianjurol.com/ ; ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Indian Journal of Urology Volume 36 ; 2020 ; 36 ; https://www.indianjurol.com/ ; ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2021 ; Indian Journal of Urology Volume 37 ; 2021 ; 37 ; https://www.indianjurol.com/ ; ; >
-    au < manifest ; exists ; 2022 ; Indian Journal of Urology Volume 38 ; 2022 ; 38 ; https://www.indianjurol.com/ ; ; >
+    au < notReady ; exists ; 2022 ; Indian Journal of Urology Volume 38 ; 2022 ; 38 ; https://www.indianjurol.com/ ; ; > #some http, some https
 
   }
 
@@ -2180,6 +2181,7 @@
 #    param[base_url] = http://www.ijabmr.org/
 
     param[journal_issn] = 2229-516X
+    #Moved to LWW
 
     au < finished ; frozen ; 2011 ; International Journal of Applied and Basic Medical Research Volume 1 ; 2011 ; 1 ; http://www.ijabmr.org/ ; ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2012 ; International Journal of Applied and Basic Medical Research Volume 2 ; 2012 ; 2 ; http://www.ijabmr.org/ ; ; reingest2.clockss.org:8085 >
@@ -2188,11 +2190,11 @@
     au < finished ; frozen ; 2015 ; International Journal of Applied and Basic Medical Research Volume 5 ; 2015 ; 5 ; http://www.ijabmr.org/ ; ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2016 ; International Journal of Applied and Basic Medical Research Volume 6 ; 2016 ; 6 ; http://www.ijabmr.org/ ; ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2017 ; International Journal of Applied and Basic Medical Research Volume 7 ; 2017 ; 7 ; http://www.ijabmr.org/ ; ; reingest3.clockss.org:8083 >
-    au < notReady ; exists ; 2018 ; International Journal of Applied and Basic Medical Research Volume 8 ; 2018 ; 8 ; https://www.ijabmr.org/ ; 500 Error ; > #500 https://www.ijabmr.org/article.asp?issn=2229-516X;year=2018;volume=8;issue=3;spage=155;epage=157;aulast=Sahbaz;type=2
+    au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Applied and Basic Medical Research Volume 8 ; 2018 ; 8 ; https://www.ijabmr.org/ ; 500 Error ; > #500 https://www.ijabmr.org/article.asp?issn=2229-516X;year=2018;volume=8;issue=3;spage=155;epage=157;aulast=Sahbaz;type=2
     au < finished ; crawling ; 2019 ; International Journal of Applied and Basic Medical Research Volume 9 ; 2019 ; 9 ; https://www.ijabmr.org/ ; ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; International Journal of Applied and Basic Medical Research Volume 10 ; 2020 ; 10 ; https://www.ijabmr.org/ ; ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2021 ; International Journal of Applied and Basic Medical Research Volume 11 ; 2021 ; 11 ; https://www.ijabmr.org/ ; ; >
-    au < manifest ; exists ; 2022 ; International Journal of Applied and Basic Medical Research Volume 12 ; 2022 ; 12 ; https://www.ijabmr.org/ ; ; >
+    au < frozen ; exists ; 2021 ; International Journal of Applied and Basic Medical Research Volume 11 ; 2021 ; 11 ; https://www.ijabmr.org/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2022 ; International Journal of Applied and Basic Medical Research Volume 12 ; 2022 ; 12 ; https://www.ijabmr.org/ ; ; >
 
   }
 #  {
