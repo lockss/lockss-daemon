@@ -268,4 +268,20 @@ public class IUCrOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
     return false;
   }
   
+  @Override
+  public Collection<String> doGetStartUrls()
+      throws ConfigurationException,
+             PluginException,
+             IOException {
+    Collection<String> ret = new ArrayList<>();
+    /*
+     * Permission URLs don't all get fetched. This causes problems in the
+     * CLOCKSS reingest proxy scenario, for instance. Include all the permission
+     * URLs as start URLs.
+     */
+    ret.addAll(doGetPermissionUrls());
+    ret.addAll(super.doGetStartUrls());
+    return ret;
+  }
+  
 }

@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>21</string>
+    <string>22</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -82,6 +82,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>au_name</string>
     <string>"International Union of Crystallography Plugin, Base URL %s, Script URL %s, OAI Set %s, OAI Date %s", base_url, script_url, au_oai_set, au_oai_date</string>
   </entry>
+  <!-- Permission URLs don't all get fetched which causes problems in the CLOCKSS reingest proxy; make crawl seed return permission URLs too -->
   <entry>
     <string>au_permission_url</string>
     <list>
