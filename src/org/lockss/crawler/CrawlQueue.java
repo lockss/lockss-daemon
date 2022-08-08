@@ -77,7 +77,7 @@ public class CrawlQueue {
   public void add(CrawlUrlData curl) {
     String url = curl.getUrl();
     if (map.containsKey(url)) {
-      throw new IllegalArgumentException("Illegal to replace entry");
+      throw new IllegalArgumentException("Illegal to replace entry: " + url);
     }
     map.put(url, curl);
     int size = sorted.size();
@@ -95,7 +95,7 @@ public class CrawlQueue {
   }
 
   /** For unit tests */
-  Collection asList() {
+  Collection<CrawlUrlData> asList() {
     return new ArrayList(sorted);
   }
 

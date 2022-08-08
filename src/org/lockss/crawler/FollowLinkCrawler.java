@@ -494,6 +494,12 @@ public class FollowLinkCrawler extends BaseCrawler {
     Collection<String> startUrls = getCrawlSeed().getStartUrls();
     crawlStatus.setStartUrls(startUrls);
     for (String url : startUrls) {
+      // CrawlQueue doesn't allow duplicate entries, but here we're
+      // feeding it a list obtained from a plugin, so ensure no dups.
+      if (fetchQueue.get(url) != null) {
+        log.debug2("Duplicate start URL: " + url);
+        continue;
+      }
       CrawlUrlData curl = newCrawlUrlData(url, 1);
       curl.setStartUrl(true);
       log.debug2("setStartUrl(" + curl + ")");
