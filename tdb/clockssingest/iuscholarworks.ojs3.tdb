@@ -320,9 +320,9 @@
       comment[continued_by] = 2374-3271
       # content available from 1970 volume 1 to 1999 volume 30
 
-      au < manifest ; exists ; 1970 ; 1970 ; Hindsight: newsletter of the Optometric Historical Society Volume 1 ; 1 ; >
-      au < manifest ; exists ; 1971 ; 1971 ; Hindsight: newsletter of the Optometric Historical Society Volume 2 ; 2 ; >
-      au < manifest ; exists ; 1972 ; 1972 ; Hindsight: newsletter of the Optometric Historical Society Volume 3 ; 3 ; >
+      au < ready ; exists ; 1970 ; 1970 ; Hindsight: newsletter of the Optometric Historical Society Volume 1 ; 1 ; >
+      au < ready ; exists ; 1971 ; 1971 ; Hindsight: newsletter of the Optometric Historical Society Volume 2 ; 2 ; >
+      au < ready ; exists ; 1972 ; 1972 ; Hindsight: newsletter of the Optometric Historical Society Volume 3 ; 3 ; >
       au < manifest ; exists ; 1973 ; 1973 ; Hindsight: newsletter of the Optometric Historical Society Volume 4 ; 4 ; >
       au < manifest ; exists ; 1974 ; 1974 ; Hindsight: newsletter of the Optometric Historical Society Volume 5 ; 5 ; >
       au < manifest ; exists ; 1975 ; 1975 ; Hindsight: newsletter of the Optometric Historical Society Volume 6 ; 6 ; >
@@ -531,12 +531,12 @@
     >
       param[journal_id] = jiuspa
 
-      au < manifest ; exists ; 1968 ; 1968 ; Journal of the Indiana University Student Personnel Association Volume 1968 ; 1968 ; >
-      au < manifest ; exists ; 1969 ; 1969 ; Journal of the Indiana University Student Personnel Association Volume 1969 ; 1969 ; >
+      au < ready ; exists ; 1968 ; 1968 ; Journal of the Indiana University Student Personnel Association Volume 1968 ; 1968 ; >
+      au < ready ; exists ; 1969 ; 1969 ; Journal of the Indiana University Student Personnel Association Volume 1969 ; 1969 ; >
       au < doesNotExist ; doesNotExist ; 1970 ; 1970 ; Journal of the Indiana University Student Personnel Association Volume 1970 ; 1970 ; >
-      au < manifest ; exists ; 1971 ; 1971 ; Journal of the Indiana University Student Personnel Association Volume 1971 ; 1971 ; >
-      au < manifest ; exists ; 1972 ; 1972 ; Journal of the Indiana University Student Personnel Association Volume 1972 ; 1972 ; >
-      au < manifest ; exists ; 1973 ; 1973 ; Journal of the Indiana University Student Personnel Association Volume 1973 ; 1973 ; >
+      au < ready ; exists ; 1971 ; 1971 ; Journal of the Indiana University Student Personnel Association Volume 1971 ; 1971 ; >
+      au < ready ; exists ; 1972 ; 1972 ; Journal of the Indiana University Student Personnel Association Volume 1972 ; 1972 ; >
+      au < ready ; exists ; 1973 ; 1973 ; Journal of the Indiana University Student Personnel Association Volume 1973 ; 1973 ; >
       au < doesNotExist ; doesNotExist ; 1974 ; 1974 ; Journal of the Indiana University Student Personnel Association Volume 1974 ; 1974 ; >
       au < manifest ; exists ; 1975 ; 1975 ; Journal of the Indiana University Student Personnel Association Volume 1975 ; 1975 ; >
       au < manifest ; exists ; 1976 ; 1976 ; Journal of the Indiana University Student Personnel Association Volume 1976 ; 1976 ; >
@@ -804,12 +804,12 @@
       au < manifest ; exists ; 1965 ; 1965 ; Indiana Magazine of History Volume 1965 ; 61 ; >
       au < manifest ; exists ; 1966 ; 1966 ; Indiana Magazine of History Volume 1966 ; 62 ; >
       au < manifest ; exists ; 1967 ; 1967 ; Indiana Magazine of History Volume 1967 ; 63 ; >
-      au < manifest ; exists ; 1968 ; 1968 ; Indiana Magazine of History Volume 1968 ; 64 ; >
-      au < manifest ; exists ; 1969 ; 1969 ; Indiana Magazine of History Volume 1969 ; 65 ; >
-      au < manifest ; exists ; 1970 ; 1970 ; Indiana Magazine of History Volume 1970 ; 66 ; >
-      au < manifest ; exists ; 1971 ; 1971 ; Indiana Magazine of History Volume 1971 ; 67 ; >
-      au < manifest ; exists ; 1972 ; 1972 ; Indiana Magazine of History Volume 1972 ; 68 ; >
-      au < manifest ; exists ; 1973 ; 1973 ; Indiana Magazine of History Volume 1973 ; 69 ; >
+      au < ready ; exists ; 1968 ; 1968 ; Indiana Magazine of History Volume 1968 ; 64 ; >
+      au < ready ; exists ; 1969 ; 1969 ; Indiana Magazine of History Volume 1969 ; 65 ; >
+      au < ready ; exists ; 1970 ; 1970 ; Indiana Magazine of History Volume 1970 ; 66 ; >
+      au < ready ; exists ; 1971 ; 1971 ; Indiana Magazine of History Volume 1971 ; 67 ; >
+      au < ready ; exists ; 1972 ; 1972 ; Indiana Magazine of History Volume 1972 ; 68 ; >
+      au < ready ; exists ; 1973 ; 1973 ; Indiana Magazine of History Volume 1973 ; 69 ; >
       au < manifest ; exists ; 1974 ; 1974 ; Indiana Magazine of History Volume 1974 ; 70 ; >
       au < manifest ; exists ; 1975 ; 1975 ; Indiana Magazine of History Volume 1975 ; 71 ; >
       au < manifest ; exists ; 1976 ; 1976 ; Indiana Magazine of History Volume 1976 ; 72 ; >
@@ -1362,7 +1362,7 @@
       au < manifest ; exists ; 1965 ; 1965 ; Folklore and Folk Music Archivist Volume 1965 ; 8 ; >
       au < manifest ; exists ; 1966 ; 1966 ; Folklore and Folk Music Archivist Volume 1966 ; 9 ; >
       au < manifest ; exists ; 1967 ; 1967 ; Folklore and Folk Music Archivist Volume 1967 ; 10 ; >
-      au < manifest ; exists ; 1968 ; 1968 ; Folklore and Folk Music Archivist Volume 1968 ; 11 ; >
+      au < ready ; exists ; 1968 ; 1968 ; Folklore and Folk Music Archivist Volume 1968 ; 11 ; >
       #no more published
 
   }
@@ -1403,8 +1403,8 @@
       au < manifest ; exists ; 1963 ; 1963 ; Indiana University Bookman Volume 6 ; 6 ; >
       au < manifest ; exists ; 1965 ; 1965 ; Indiana University Bookman Volume 7 ; 7 ; >
       au < manifest ; exists ; 1967 ; 1967 ; Indiana University Bookman Volume 8 ; 8 ; >
-      au < manifest ; exists ; 1968 ; 1968 ; Indiana University Bookman Volume 9 ; 9 ; >
-      au < manifest ; exists ; 1969 ; 1969 ; Indiana University Bookman Volume 10 ; 10 ; >
+      au < ready ; exists ; 1968 ; 1968 ; Indiana University Bookman Volume 9 ; 9 ; >
+      au < ready ; exists ; 1969 ; 1969 ; Indiana University Bookman Volume 10 ; 10 ; >
       au < manifest ; exists ; 1973 ; 1973 ; Indiana University Bookman Volume 11 ; 11 ; >
       au < manifest ; exists ; 1977 ; 1977 ; Indiana University Bookman Volume 12 ; 12 ; >
       au < manifest ; exists ; 1979 ; 1979 ; Indiana University Bookman Volume 13 ; 13 ; >
@@ -1444,9 +1444,9 @@
 
       param[journal_id] = lsj
 
-      au < manifest ; exists ; 1970 ; 1970 ; Liberian Studies Journal Volume 1 ; 1 ; >
-      au < manifest ; exists ; 1971 ; 1971 ; Liberian Studies Journal Volume 4 ; 4 ; >
-      au < manifest ; exists ; 1972 ; 1972 ; Liberian Studies Journal Volume 5 ; 5 ; >
+      au < ready ; exists ; 1970 ; 1970 ; Liberian Studies Journal Volume 1 ; 1 ; >
+      au < ready ; exists ; 1971 ; 1971 ; Liberian Studies Journal Volume 4 ; 4 ; >
+      au < ready ; exists ; 1972 ; 1972 ; Liberian Studies Journal Volume 5 ; 5 ; >
       au < manifest ; exists ; 1975 ; 1975 ; Liberian Studies Journal Volume 6 ; 6 ; >
       au < manifest ; exists ; 1976 ; 1976 ; Liberian Studies Journal Volume 7 ; 7 ; >
       au < manifest ; exists ; 1978 ; 1978 ; Liberian Studies Journal Volume 8 ; 8 ; >
@@ -1491,7 +1491,7 @@
 
       param[journal_id] = olifant
 
-      au < manifest ; exists ; 1973 ; 1973 ; Olifant Volume 1 ; 1 ; >
+      au < ready ; exists ; 1973 ; 1973 ; Olifant Volume 1 ; 1 ; >
       au < manifest ; exists ; 1974 ; 1974 ; Olifant Volume 1-2 ; 1-2 ; >
       au < manifest ; exists ; 1975 ; 1975 ; Olifant Volume 2-3 ; 2-3 ; >
       au < manifest ; exists ; 1976 ; 1976 ; Olifant Volume 3-4 ; 3-4 ; >
