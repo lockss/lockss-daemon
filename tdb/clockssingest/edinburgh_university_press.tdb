@@ -1110,6 +1110,7 @@
     
     param[journal_id] = ijhac
     comment[continues] = 0957-0144
+    #Previously History and Computing
     # current journal id is ijhac V1/2007 to present. Old journal_id = hac 1994-2002, V6-14
     comment[1] = future AUs added by accident.
 
@@ -1381,25 +1382,25 @@
     param[journal_id] = sesh
     comment[continued_by] = 1748-538X
 
-    au < doNotProcess ; exists ; 1981 ; Scottish Economic and Social History Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
-    au < doNotProcess ; exists ; 1982 ; Scottish Economic and Social History Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
-    au < doNotProcess ; exists ; 1983 ; Scottish Economic and Social History Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
-    au < doNotProcess ; exists ; 1984 ; Scottish Economic and Social History Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
-    au < doNotProcess ; exists ; 1985 ; Scottish Economic and Social History Volume 5 ; 5 ; https://www.euppublishing.com/ ; >
-    au < doNotProcess ; exists ; 1986 ; Scottish Economic and Social History Volume 6 ; 6 ; https://www.euppublishing.com/ ; >
-    au < doNotProcess ; exists ; 1987 ; Scottish Economic and Social History Volume 7 ; 7 ; https://www.euppublishing.com/ ; >
-    au < doNotProcess ; exists ; 1988 ; Scottish Economic and Social History Volume 8 ; 8 ; https://www.euppublishing.com/ ; >
-    au < doNotProcess ; exists ; 1989 ; Scottish Economic and Social History Volume 9 ; 9 ; https://www.euppublishing.com/ ; >
-    au < doNotProcess ; exists ; 1990 ; Scottish Economic and Social History Volume 10 ; 10 ; https://www.euppublishing.com/ ; >
-    au < doNotProcess ; exists ; 1991 ; Scottish Economic and Social History Volume 11 ; 11 ; https://www.euppublishing.com/ ; >
-    au < doNotProcess ; exists ; 1992 ; Scottish Economic and Social History Volume 12 ; 12 ; https://www.euppublishing.com/ ; >
-    au < doNotProcess ; exists ; 1993 ; Scottish Economic and Social History Volume 13 ; 13 ; https://www.euppublishing.com/ ; >
-    au < doNotProcess ; exists ; 1994 ; Scottish Economic and Social History Volume 14 ; 14 ; https://www.euppublishing.com/ ; >
-    au < doNotProcess ; exists ; 1995 ; Scottish Economic and Social History Volume 15 ; 15 ; https://www.euppublishing.com/ ; >
-    au < doNotProcess ; exists ; 1996 ; Scottish Economic and Social History Volume 16 ; 16 ; https://www.euppublishing.com/ ; >
-    au < doNotProcess ; exists ; 1997 ; Scottish Economic and Social History Volume 17 ; 17 ; https://www.euppublishing.com/ ; >
-    au < doNotProcess ; exists ; 1998 ; Scottish Economic and Social History Volume 18 ; 18 ; https://www.euppublishing.com/ ; >
-    au < doNotProcess ; exists ; 1999 ; Scottish Economic and Social History Volume 19 ; 19 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1981 ; Scottish Economic and Social History Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1982 ; Scottish Economic and Social History Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1983 ; Scottish Economic and Social History Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1984 ; Scottish Economic and Social History Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1985 ; Scottish Economic and Social History Volume 5 ; 5 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1986 ; Scottish Economic and Social History Volume 6 ; 6 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1987 ; Scottish Economic and Social History Volume 7 ; 7 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1988 ; Scottish Economic and Social History Volume 8 ; 8 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1989 ; Scottish Economic and Social History Volume 9 ; 9 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1990 ; Scottish Economic and Social History Volume 10 ; 10 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1991 ; Scottish Economic and Social History Volume 11 ; 11 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1992 ; Scottish Economic and Social History Volume 12 ; 12 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1993 ; Scottish Economic and Social History Volume 13 ; 13 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1994 ; Scottish Economic and Social History Volume 14 ; 14 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1995 ; Scottish Economic and Social History Volume 15 ; 15 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1996 ; Scottish Economic and Social History Volume 16 ; 16 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1997 ; Scottish Economic and Social History Volume 17 ; 17 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1998 ; Scottish Economic and Social History Volume 18 ; 18 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1999 ; Scottish Economic and Social History Volume 19 ; 19 ; https://www.euppublishing.com/ ; >
     au < finished ; finished ; 2000 ; Scottish Economic and Social History Volume 20 ; 20 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
     
   }
@@ -1626,7 +1627,21 @@
      >
 
     param[journal_id] = nor
+    #doNotProcess. Volume numbers have special characters 1972-2007.
 
+    au < doNotProcess ; exists ; 1995 ; Northern Scotland Volume 15 (First Series) ; 15+(First+Series) ; https://www.euppublishing.com/ ; >
+    au < doNotProcess ; exists ; 1996 ; Northern Scotland Volume 16 (First Series) ; 16+(First+Series) ; https://www.euppublishing.com/ ; >
+    au < doNotProcess ; exists ; 1997 ; Northern Scotland Volume 17 (First Series) ; 17+(First+Series) ; https://www.euppublishing.com/ ; >
+    au < doNotProcess ; exists ; 1998 ; Northern Scotland Volume 18 (First Series) ; 18+(First+Series) ; https://www.euppublishing.com/ ; >
+    au < doNotProcess ; exists ; 1999 ; Northern Scotland Volume 19 (First Series) ; 19+(First+Series) ; https://www.euppublishing.com/ ; >
+    au < doNotProcess ; exists ; 2000 ; Northern Scotland Volume 20 (First Series) ; 20+(First+Series) ; https://www.euppublishing.com/ ; >
+    au < doNotProcess ; exists ; 2001 ; Northern Scotland Volume 21 (First Series) ; 21+(First+Series) ; https://www.euppublishing.com/ ; >
+    au < doNotProcess ; exists ; 2002 ; Northern Scotland Volume 22 (First Series) ; 22+(First+Series) ; https://www.euppublishing.com/ ; >
+    au < doNotProcess ; exists ; 2003 ; Northern Scotland Volume 23 (First Series) ; 23+(First+Series) ; https://www.euppublishing.com/ ; >
+    au < doNotProcess ; exists ; 2004 ; Northern Scotland Volume 24 (First Series) ; 24+(First+Series) ; https://www.euppublishing.com/ ; >
+    au < doNotProcess ; exists ; 2005 ; Northern Scotland Volume 25 (First Series) ; 25+(First+Series) ; https://www.euppublishing.com/ ; >
+    au < doNotProcess ; exists ; 2006 ; Northern Scotland Volume 26 (First Series) ; 26+(First+Series) ; https://www.euppublishing.com/ ; >
+    au < doNotProcess ; exists ; 2007 ; Northern Scotland Volume 27 (First Series) ; 27+(First+Series) ; https://www.euppublishing.com/ ; >
     au < finished ; finished ; 2010 ; Northern Scotland Volume 1 ; 1 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2011 ; Northern Scotland Volume 2 ; 2 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2012 ; Northern Scotland Volume 3 ; 3 ; http://www.euppublishing.com/ ; >
@@ -1656,44 +1671,44 @@
 
       param[journal_id] = nfs
       
-      au < doNotProcess ; exists ; 1962 ; Nottingham French Studies Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
-      au < doNotProcess ; exists ; 1963 ; Nottingham French Studies Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
-      au < doNotProcess ; exists ; 1964 ; Nottingham French Studies Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
-      au < doNotProcess ; exists ; 1965 ; Nottingham French Studies Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
-      au < doNotProcess ; exists ; 1966 ; Nottingham French Studies Volume 5 ; 5 ; https://www.euppublishing.com/ ; >
-      au < doNotProcess ; exists ; 1967 ; Nottingham French Studies Volume 6 ; 6 ; https://www.euppublishing.com/ ; >
-      au < doNotProcess ; exists ; 1968 ; Nottingham French Studies Volume 7 ; 7 ; https://www.euppublishing.com/ ; >
-      au < doNotProcess ; exists ; 1969 ; Nottingham French Studies Volume 8 ; 8 ; https://www.euppublishing.com/ ; >
-      au < doNotProcess ; exists ; 1970 ; Nottingham French Studies Volume 9 ; 9 ; https://www.euppublishing.com/ ; >
-      au < doNotProcess ; exists ; 1971 ; Nottingham French Studies Volume 10 ; 10 ; https://www.euppublishing.com/ ; >
-      au < doNotProcess ; exists ; 1972 ; Nottingham French Studies Volume 11 ; 11 ; https://www.euppublishing.com/ ; >
-      au < doNotProcess ; exists ; 1973 ; Nottingham French Studies Volume 12 ; 12 ; https://www.euppublishing.com/ ; >
-      au < doNotProcess ; exists ; 1974 ; Nottingham French Studies Volume 13 ; 13 ; https://www.euppublishing.com/ ; >
-      au < doNotProcess ; exists ; 1975 ; Nottingham French Studies Volume 14 ; 14 ; https://www.euppublishing.com/ ; >
-      au < doNotProcess ; exists ; 1976 ; Nottingham French Studies Volume 15 ; 15 ; https://www.euppublishing.com/ ; >
-      au < doNotProcess ; exists ; 1977 ; Nottingham French Studies Volume 16 ; 16 ; https://www.euppublishing.com/ ; >
-      au < doNotProcess ; exists ; 1978 ; Nottingham French Studies Volume 17 ; 17 ; https://www.euppublishing.com/ ; >
-      au < doNotProcess ; exists ; 1979 ; Nottingham French Studies Volume 18 ; 18 ; https://www.euppublishing.com/ ; >
-      au < doNotProcess ; exists ; 1980 ; Nottingham French Studies Volume 19 ; 19 ; https://www.euppublishing.com/ ; >
-      au < doNotProcess ; exists ; 1981 ; Nottingham French Studies Volume 20 ; 20 ; https://www.euppublishing.com/ ; >
-      au < doNotProcess ; exists ; 1982 ; Nottingham French Studies Volume 21 ; 21 ; https://www.euppublishing.com/ ; >
-      au < doNotProcess ; exists ; 1983 ; Nottingham French Studies Volume 22 ; 22 ; https://www.euppublishing.com/ ; >
-      au < doNotProcess ; exists ; 1984 ; Nottingham French Studies Volume 23 ; 23 ; https://www.euppublishing.com/ ; >
-      au < doNotProcess ; exists ; 1985 ; Nottingham French Studies Volume 24 ; 24 ; https://www.euppublishing.com/ ; >
-      au < doNotProcess ; exists ; 1986 ; Nottingham French Studies Volume 25 ; 25 ; https://www.euppublishing.com/ ; >
-      au < doNotProcess ; exists ; 1987 ; Nottingham French Studies Volume 26 ; 26 ; https://www.euppublishing.com/ ; >
-      au < doNotProcess ; exists ; 1988 ; Nottingham French Studies Volume 27 ; 27 ; https://www.euppublishing.com/ ; >
-      au < doNotProcess ; exists ; 1989 ; Nottingham French Studies Volume 28 ; 28 ; https://www.euppublishing.com/ ; >
-      au < doNotProcess ; exists ; 1990 ; Nottingham French Studies Volume 29 ; 29 ; https://www.euppublishing.com/ ; >
-      au < doNotProcess ; exists ; 1991 ; Nottingham French Studies Volume 30 ; 30 ; https://www.euppublishing.com/ ; >
-      au < doNotProcess ; exists ; 1992 ; Nottingham French Studies Volume 31 ; 31 ; https://www.euppublishing.com/ ; >
-      au < doNotProcess ; exists ; 1993 ; Nottingham French Studies Volume 32 ; 32 ; https://www.euppublishing.com/ ; >
-      au < doNotProcess ; exists ; 1994 ; Nottingham French Studies Volume 33 ; 33 ; https://www.euppublishing.com/ ; >
-      au < doNotProcess ; exists ; 1995 ; Nottingham French Studies Volume 34 ; 34 ; https://www.euppublishing.com/ ; >
-      au < doNotProcess ; exists ; 1996 ; Nottingham French Studies Volume 35 ; 35 ; https://www.euppublishing.com/ ; >
-      au < doNotProcess ; exists ; 1997 ; Nottingham French Studies Volume 36 ; 36 ; https://www.euppublishing.com/ ; >
-      au < doNotProcess ; exists ; 1998 ; Nottingham French Studies Volume 37 ; 37 ; https://www.euppublishing.com/ ; >
-      au < doNotProcess ; exists ; 1999 ; Nottingham French Studies Volume 38 ; 38 ; https://www.euppublishing.com/ ; >
+      au < manifest ; exists ; 1962 ; Nottingham French Studies Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
+      au < manifest ; exists ; 1963 ; Nottingham French Studies Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
+      au < manifest ; exists ; 1964 ; Nottingham French Studies Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
+      au < manifest ; exists ; 1965 ; Nottingham French Studies Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
+      au < manifest ; exists ; 1966 ; Nottingham French Studies Volume 5 ; 5 ; https://www.euppublishing.com/ ; >
+      au < manifest ; exists ; 1967 ; Nottingham French Studies Volume 6 ; 6 ; https://www.euppublishing.com/ ; >
+      au < manifest ; exists ; 1968 ; Nottingham French Studies Volume 7 ; 7 ; https://www.euppublishing.com/ ; >
+      au < manifest ; exists ; 1969 ; Nottingham French Studies Volume 8 ; 8 ; https://www.euppublishing.com/ ; >
+      au < manifest ; exists ; 1970 ; Nottingham French Studies Volume 9 ; 9 ; https://www.euppublishing.com/ ; >
+      au < manifest ; exists ; 1971 ; Nottingham French Studies Volume 10 ; 10 ; https://www.euppublishing.com/ ; >
+      au < manifest ; exists ; 1972 ; Nottingham French Studies Volume 11 ; 11 ; https://www.euppublishing.com/ ; >
+      au < manifest ; exists ; 1973 ; Nottingham French Studies Volume 12 ; 12 ; https://www.euppublishing.com/ ; >
+      au < manifest ; exists ; 1974 ; Nottingham French Studies Volume 13 ; 13 ; https://www.euppublishing.com/ ; >
+      au < manifest ; exists ; 1975 ; Nottingham French Studies Volume 14 ; 14 ; https://www.euppublishing.com/ ; >
+      au < manifest ; exists ; 1976 ; Nottingham French Studies Volume 15 ; 15 ; https://www.euppublishing.com/ ; >
+      au < manifest ; exists ; 1977 ; Nottingham French Studies Volume 16 ; 16 ; https://www.euppublishing.com/ ; >
+      au < manifest ; exists ; 1978 ; Nottingham French Studies Volume 17 ; 17 ; https://www.euppublishing.com/ ; >
+      au < manifest ; exists ; 1979 ; Nottingham French Studies Volume 18 ; 18 ; https://www.euppublishing.com/ ; >
+      au < manifest ; exists ; 1980 ; Nottingham French Studies Volume 19 ; 19 ; https://www.euppublishing.com/ ; >
+      au < manifest ; exists ; 1981 ; Nottingham French Studies Volume 20 ; 20 ; https://www.euppublishing.com/ ; >
+      au < manifest ; exists ; 1982 ; Nottingham French Studies Volume 21 ; 21 ; https://www.euppublishing.com/ ; >
+      au < manifest ; exists ; 1983 ; Nottingham French Studies Volume 22 ; 22 ; https://www.euppublishing.com/ ; >
+      au < manifest ; exists ; 1984 ; Nottingham French Studies Volume 23 ; 23 ; https://www.euppublishing.com/ ; >
+      au < manifest ; exists ; 1985 ; Nottingham French Studies Volume 24 ; 24 ; https://www.euppublishing.com/ ; >
+      au < manifest ; exists ; 1986 ; Nottingham French Studies Volume 25 ; 25 ; https://www.euppublishing.com/ ; >
+      au < manifest ; exists ; 1987 ; Nottingham French Studies Volume 26 ; 26 ; https://www.euppublishing.com/ ; >
+      au < manifest ; exists ; 1988 ; Nottingham French Studies Volume 27 ; 27 ; https://www.euppublishing.com/ ; >
+      au < manifest ; exists ; 1989 ; Nottingham French Studies Volume 28 ; 28 ; https://www.euppublishing.com/ ; >
+      au < manifest ; exists ; 1990 ; Nottingham French Studies Volume 29 ; 29 ; https://www.euppublishing.com/ ; >
+      au < manifest ; exists ; 1991 ; Nottingham French Studies Volume 30 ; 30 ; https://www.euppublishing.com/ ; >
+      au < manifest ; exists ; 1992 ; Nottingham French Studies Volume 31 ; 31 ; https://www.euppublishing.com/ ; >
+      au < manifest ; exists ; 1993 ; Nottingham French Studies Volume 32 ; 32 ; https://www.euppublishing.com/ ; >
+      au < manifest ; exists ; 1994 ; Nottingham French Studies Volume 33 ; 33 ; https://www.euppublishing.com/ ; >
+      au < manifest ; exists ; 1995 ; Nottingham French Studies Volume 34 ; 34 ; https://www.euppublishing.com/ ; >
+      au < manifest ; exists ; 1996 ; Nottingham French Studies Volume 35 ; 35 ; https://www.euppublishing.com/ ; >
+      au < manifest ; exists ; 1997 ; Nottingham French Studies Volume 36 ; 36 ; https://www.euppublishing.com/ ; >
+      au < manifest ; exists ; 1998 ; Nottingham French Studies Volume 37 ; 37 ; https://www.euppublishing.com/ ; >
+      au < manifest ; exists ; 1999 ; Nottingham French Studies Volume 38 ; 38 ; https://www.euppublishing.com/ ; >
       au < finished ; finished ; 2000 ; Nottingham French Studies Volume 39 ; 39 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2001 ; Nottingham French Studies Volume 40 ; 40 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2002 ; Nottingham French Studies Volume 41 ; 41 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
@@ -1770,6 +1785,28 @@
 
     param[journal_id] = para
 
+    au < manifest ; exists ; 1983 ; Paragraph Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1983 ; Paragraph Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1984 ; Paragraph Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1984 ; Paragraph Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1985 ; Paragraph Volume 5 ; 5 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1985 ; Paragraph Volume 6 ; 6 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1986 ; Paragraph Volume 7 ; 7 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1986 ; Paragraph Volume 8 ; 8 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1987 ; Paragraph Volume 9 ; 9 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1987 ; Paragraph Volume 10 ; 10 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1988 ; Paragraph Volume 11 ; 11 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1989 ; Paragraph Volume 12 ; 12 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1990 ; Paragraph Volume 13 ; 13 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1991 ; Paragraph Volume 14 ; 14 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1992 ; Paragraph Volume 15 ; 15 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1993 ; Paragraph Volume 16 ; 16 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1994 ; Paragraph Volume 17 ; 17 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1995 ; Paragraph Volume 18 ; 18 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1996 ; Paragraph Volume 19 ; 19 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1997 ; Paragraph Volume 20 ; 20 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1998 ; Paragraph Volume 21 ; 21 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1999 ; Paragraph Volume 22 ; 22 ; https://www.euppublishing.com/ ; >
     au < finished ; finished ; 2000 ; Paragraph Volume 23 ; 23 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2001 ; Paragraph Volume 24 ; 24 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2002 ; Paragraph Volume 25 ; 25 ; http://www.euppublishing.com/ ; >
@@ -1886,6 +1923,7 @@
     >
 
       param[journal_id] = scot
+      #doNotProcess. Volume numbers have special characters.
 
       au < doNotProcess ; exists ; 1992 ; Scottish Affairs (First Series) Volume 1 ; 1+(First+Series) ; https://www.euppublishing.com/ ; >
       au < doNotProcess ; exists ; 1993 ; Scottish Affairs (First Series) Volume 2 ; 2+(First+Series) ; https://www.euppublishing.com/ ; >
@@ -2003,11 +2041,11 @@
     au < finished ; crawling ; 1979 ; Glasgow Archaeological Journal Volume 6 ; 6 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1980 ; Glasgow Archaeological Journal Volume 7 ; 7 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 1981 ; Glasgow Archaeological Journal Volume 8 ; 8 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 1982 ; Glasgow Archaeological Journal Volume 9 ; 9 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 1982 ; Glasgow Archaeological Journal Volume 9 ; 9 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1983 ; Glasgow Archaeological Journal Volume 10 ; 10 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 1984 ; Glasgow Archaeological Journal Volume 11 ; 11 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 1984 ; Glasgow Archaeological Journal Volume 11 ; 11 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 1985 ; Glasgow Archaeological Journal Volume 12 ; 12 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 1986 ; Glasgow Archaeological Journal Volume 13 ; 13 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 1986 ; Glasgow Archaeological Journal Volume 13 ; 13 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 1987 ; Glasgow Archaeological Journal Volume 14 ; 14 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 1988 ; Glasgow Archaeological Journal Volume 15 ; 15 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1989 ; Glasgow Archaeological Journal Volume 16 ; 16 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
@@ -2046,28 +2084,6 @@
     au < superseded ; down ; 1994 ; Scottish Archaeological Journal Volume 19 [to delete] ; 19 ; http://www.euppublishing.com/ ; >
     au < superseded ; down ; 1996 ; Scottish Archaeological Journal Volume 20 [to delete] ; 20 ; http://www.euppublishing.com/ ; >
     au < superseded ; down ; 1998 ; Scottish Archaeological Journal Volume 21 [to delete] ; 21 ; http://www.euppublishing.com/ ; >
-    #same as the section above, but base_url uses https.
-    #au < manifest ; exists ; 1969 ; Scottish Archaeological Journal Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
-    #au < manifest ; exists ; 1971 ; Scottish Archaeological Journal Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
-    #au < manifest ; exists ; 1974 ; Scottish Archaeological Journal Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
-    #au < manifest ; exists ; 1976 ; Scottish Archaeological Journal Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
-    #au < manifest ; exists ; 1978 ; Scottish Archaeological Journal Volume 5 ; 5 ; https://www.euppublishing.com/ ; >
-    #au < doNotProcess ; exists ; 1979 ; Scottish Archaeological Journal Volume 6 ; 6 ; https://www.euppublishing.com/ ; >
-    #au < doNotProcess ; exists ; 1980 ; Scottish Archaeological Journal Volume 7 ; 7 ; https://www.euppublishing.com/ ; >
-    #au < doNotProcess ; exists ; 1981 ; Scottish Archaeological Journal Volume 8 ; 8 ; https://www.euppublishing.com/ ; >
-    #au < doNotProcess ; exists ; 1982 ; Scottish Archaeological Journal Volume 9 ; 9 ; https://www.euppublishing.com/ ; >
-    #au < doNotProcess ; exists ; 1983 ; Scottish Archaeological Journal Volume 10 ; 10 ; https://www.euppublishing.com/ ; >
-    #au < doNotProcess ; exists ; 1984 ; Scottish Archaeological Journal Volume 11 ; 11 ; https://www.euppublishing.com/ ; >
-    #au < doNotProcess ; exists ; 1985 ; Scottish Archaeological Journal Volume 12 ; 12 ; https://www.euppublishing.com/ ; >
-    #au < doNotProcess ; exists ; 1986 ; Scottish Archaeological Journal Volume 13 ; 13 ; https://www.euppublishing.com/ ; >
-    #au < doNotProcess ; exists ; 1987 ; Scottish Archaeological Journal Volume 14 ; 14 ; https://www.euppublishing.com/ ; >
-    #au < doNotProcess ; exists ; 1988 ; Scottish Archaeological Journal Volume 15 ; 15 ; https://www.euppublishing.com/ ; >
-    #au < doNotProcess ; exists ; 1989 ; Scottish Archaeological Journal Volume 16 ; 16 ; https://www.euppublishing.com/ ; >
-    #au < doNotProcess ; exists ; 1991 ; Scottish Archaeological Journal Volume 17 ; 17 ; https://www.euppublishing.com/ ; >
-    #au < doNotProcess ; exists ; 1993 ; Scottish Archaeological Journal Volume 18 ; 18 ; https://www.euppublishing.com/ ; >
-    #au < doNotProcess ; exists ; 1994 ; Scottish Archaeological Journal Volume 19 ; 19 ; https://www.euppublishing.com/ ; >
-    #au < doNotProcess ; exists ; 1996 ; Scottish Archaeological Journal Volume 20 ; 20 ; https://www.euppublishing.com/ ; >
-    #au < doNotProcess ; exists ; 1998 ; Scottish Archaeological Journal Volume 21 ; 21 ; https://www.euppublishing.com/ ; >
 
     au < finished ; finished ; 2000 ; Scottish Archaeological Journal Volume 22 ; 22 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2001 ; Scottish Archaeological Journal Volume 23 ; 23 ; http://www.euppublishing.com/ ; >
@@ -2104,6 +2120,13 @@
 
     param[journal_id] = shr
 
+    au < manifest ; exists ; 1993 ; Scottish Historical Review Volume 72 ; 72 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1994 ; Scottish Historical Review Volume 73 ; 73 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1995 ; Scottish Historical Review Volume 74 ; 74 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1996 ; Scottish Historical Review Volume 75 ; 75 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1997 ; Scottish Historical Review Volume 76 ; 76 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1998 ; Scottish Historical Review Volume 77 ; 77 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 1999 ; Scottish Historical Review Volume 78 ; 78 ; https://www.euppublishing.com/ ; >
     au < finished ; finished ; 2000 ; Scottish Historical Review Volume 79 ; 79 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2001 ; Scottish Historical Review Volume 80 ; 80 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2002 ; Scottish Historical Review Volume 81 ; 81 ; http://www.euppublishing.com/ ; >
@@ -2141,6 +2164,11 @@
 
     param[journal_id] = swc
 
+    au < manifest ; exists ; 1995 ; Studies in World Christianity Volume 1 ; 1 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
+    au < manifest ; exists ; 1996 ; Studies in World Christianity Volume 2 ; 2 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
+    au < manifest ; exists ; 1997 ; Studies in World Christianity Volume 3 ; 3 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
+    au < manifest ; exists ; 1998 ; Studies in World Christianity Volume 4 ; 4 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
+    au < manifest ; exists ; 1999 ; Studies in World Christianity Volume 5 ; 5 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2000 ; Studies in World Christianity Volume 6 ; 6 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2001 ; Studies in World Christianity Volume 7 ; 7 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2002 ; Studies in World Christianity Volume 8 ; 8 ; http://www.euppublishing.com/ ; >
