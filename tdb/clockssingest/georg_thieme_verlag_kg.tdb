@@ -367,7 +367,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; Aktuelle Urologie Volume 50 ; 50 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Aktuelle Urologie Volume 51 ; 51 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Aktuelle Urologie Volume 52 ; 52 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Aktuelle Urologie Volume 53 ; 53 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Aktuelle Urologie Volume 53 ; 53 ; >
 
    }
 
@@ -1031,7 +1031,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; Die Wirbelsäule Volume 3 ; 3 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Die Wirbelsäule Volume 4 ; 4 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Die Wirbelsäule Volume 5 ; 5 ; >
-   au < ready ; exists ; 2022 ; 2022 ; Die Wirbelsäule Volume 6 ; 6 ; >
+   au < crawling ; exists ; 2022 ; 2022 ; Die Wirbelsäule Volume 6 ; 6 ; >
 
   }
 
@@ -1096,7 +1096,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; Diabetes aktuell Volume 17 ; 17 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Diabetes aktuell Volume 18 ; 18 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Diabetes aktuell Volume 19 ; 19 ; >
-   au < ready ; exists ; 2022 ; 2022 ; Diabetes aktuell Volume 20 ; 20 ; >
+   au < crawling ; exists ; 2022 ; 2022 ; Diabetes aktuell Volume 20 ; 20 ; >
 
   }
 
@@ -1354,7 +1354,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; Deutsche Zeitschrift für Osteopathie Volume 17 ; 17 ; reingest1.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Deutsche Zeitschrift für Osteopathie Volume 18 ; 18 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Deutsche Zeitschrift für Osteopathie Volume 19 ; 19 ; >
-   au < ready ; exists ; 2022 ; 2022 ; Deutsche Zeitschrift für Osteopathie Volume 20 ; 20 ; >
+   au < crawling ; exists ; 2022 ; 2022 ; Deutsche Zeitschrift für Osteopathie Volume 20 ; 20 ; >
 
   }
 
@@ -1385,7 +1385,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; Endo-Praxis Volume 35 ; 35 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Endo-Praxis Volume 36 ; 36 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Endo-Praxis Volume 37 ; 37 ; >
-   au < ready ; exists ; 2022 ; 2022 ; Endo-Praxis Volume 38 ; 38 ; >
+   au < crawling ; exists ; 2022 ; 2022 ; Endo-Praxis Volume 38 ; 38 ; >
 
   }
 
@@ -2333,7 +2333,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; Homoeopathic Links Volume 32 ; 32 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Homoeopathic Links Volume 33 ; 33 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Homoeopathic Links Volume 34 ; 34 ; >
-   au < ready ; exists ; 2022 ; 2022 ; Homoeopathic Links Volume 35 ; 35 ; >
+   au < crawling ; exists ; 2022 ; 2022 ; Homoeopathic Links Volume 35 ; 35 ; >
 
   }
 
@@ -2428,7 +2428,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; Im OP Volume 9 ; 9 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Im OP Volume 10 ; 10 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Im OP Volume 11 ; 11 ; >
-   au < ready ; exists ; 2022 ; 2022 ; Im OP Volume 12 ; 12 ; >
+   au < crawling ; exists ; 2022 ; 2022 ; Im OP Volume 12 ; 12 ; >
 
   }
 
@@ -2835,7 +2835,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; Journal Club AINS Volume 8 ; 8 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal Club AINS Volume 9 ; 9 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Journal Club AINS Volume 10 ; 10 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Journal Club AINS Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Journal Club AINS Volume 11 ; 11 ; >
 
   }
 
@@ -5218,7 +5218,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; Radiologie up2date Volume 19 ; 19 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Radiologie up2date Volume 20 ; 20 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Radiologie up2date Volume 21 ; 21 ; >
-   au < ready ; exists ; 2022 ; 2022 ; Radiologie up2date Volume 22 ; 22 ; >
+   au < crawling ; exists ; 2022 ; 2022 ; Radiologie up2date Volume 22 ; 22 ; >
 
   }
 
@@ -5704,7 +5704,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; Seminars in Neurology Volume 39 ; 39 ; reingest2.clockss.org:8085 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Seminars in Neurology Volume 40 ; 40 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Seminars in Neurology Volume 41 ; 41 ; >
-   au < ready ; exists ; 2022 ; 2022 ; Seminars in Neurology Volume 42 ; 42 ; >
+   au < crawling ; exists ; 2022 ; 2022 ; Seminars in Neurology Volume 42 ; 42 ; >
 
   }
 
@@ -5991,7 +5991,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; Seminars in Thrombosis and Hemostasis Volume 45 ; 45 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Seminars in Thrombosis and Hemostasis Volume 46 ; 46 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Seminars in Thrombosis and Hemostasis Volume 47 ; 47 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Seminars in Thrombosis and Hemostasis Volume 48 ; 48 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Seminars in Thrombosis and Hemostasis Volume 48 ; 48 ; >
 
   }
 
@@ -6205,7 +6205,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; Sportverletzung - Sportschaden Volume 33 ; 33 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Sportverletzung - Sportschaden Volume 34 ; 34 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Sportverletzung - Sportschaden Volume 35 ; 35 ; >
-   au < ready ; exists ; 2022 ; 2022 ; Sportverletzung - Sportschaden Volume 36 ; 36 ; >
+   au < crawling ; exists ; 2022 ; 2022 ; Sportverletzung - Sportschaden Volume 36 ; 36 ; >
 
    }
 
@@ -8227,7 +8227,7 @@
     au < crawling ; exists ; 2019 ; 2019 ; Asian Journal of Oncology Volume 5 ; 5 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Asian Journal of Oncology Volume 6 ; 6 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Asian Journal of Oncology Volume 7 ; 7 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Asian Journal of Oncology Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Asian Journal of Oncology Volume 8 ; 8 ; >
 
   }
 
@@ -8608,7 +8608,7 @@
     au < crawling ; exists ; 2019 ; 2019 ; International Journal of Recent Surgical and Medical Sciences Volume 5 ; 5 ; >
     au < crawling ; exists ; 2020 ; 2020 ; International Journal of Recent Surgical and Medical Sciences Volume 6 ; 6 ; >
     au < crawling ; exists ; 2021 ; 2021 ; International Journal of Recent Surgical and Medical Sciences Volume 7 ; 7 ; >
-    au < ready ; exists ; 2022 ; 2022 ; International Journal of Recent Surgical and Medical Sciences Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; International Journal of Recent Surgical and Medical Sciences Volume 8 ; 8 ; >
 
   }
 
@@ -9091,7 +9091,7 @@
     au < crawling ; exists ; 2019 ; 2019 ; VCOT Open Volume 2 ; 2 ; >
     au < crawling ; exists ; 2020 ; 2020 ; VCOT Open Volume 3 ; 3 ; >
     au < crawling ; exists ; 2021 ; 2021 ; VCOT Open Volume 4 ; 4 ; >
-    au < ready ; exists ; 2022 ; 2022 ; VCOT Open Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; VCOT Open Volume 5 ; 5 ; >
 
   }
 

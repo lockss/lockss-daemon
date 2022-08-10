@@ -74,7 +74,7 @@
     au < finished ; crawling ; 2019 ; Vascular Health and Risk Management Volume 15 ; 15 ; 2019 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2020 ; Vascular Health and Risk Management Volume 16 ; 16 ; 2020 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2021 ; Vascular Health and Risk Management Volume 17 ; 17 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Vascular Health and Risk Management Volume 18 ; 18 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Vascular Health and Risk Management Volume 18 ; 18 ; 2022 ; >
 
   }
 
@@ -104,7 +104,7 @@
     au < finished ; crawling ; 2019 ; Neuropsychiatric Disease and Treatment Volume 15 ; 15 ; 2019 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2020 ; Neuropsychiatric Disease and Treatment Volume 16 ; 16 ; 2020 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2021 ; Neuropsychiatric Disease and Treatment Volume 17 ; 17 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Neuropsychiatric Disease and Treatment Volume 18 ; 18 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Neuropsychiatric Disease and Treatment Volume 18 ; 18 ; 2022 ; >
 
   }
 
@@ -218,7 +218,7 @@
     au < finished ; crawling ; 2019 ; Journal of Multidisciplinary Healthcare Volume 12 ; 12 ; 2019 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Journal of Multidisciplinary Healthcare Volume 13 ; 13 ; 2020 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2021 ; Journal of Multidisciplinary Healthcare Volume 14 ; 14 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Journal of Multidisciplinary Healthcare Volume 15 ; 15 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Journal of Multidisciplinary Healthcare Volume 15 ; 15 ; 2022 ; >
 
   }
 
@@ -887,7 +887,7 @@
     au < finished ; crawling ; 2019 ; Integrated Blood Pressure Control Volume 12 ; 12 ; 2019 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Integrated Blood Pressure Control Volume 13 ; 13 ; 2020 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2021 ; Integrated Blood Pressure Control Volume 14 ; 14 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Integrated Blood Pressure Control Volume 15 ; 15 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Integrated Blood Pressure Control Volume 15 ; 15 ; 2022 ; >
 
   }
 
@@ -992,7 +992,7 @@
     au < finished ; crawling ; 2019 ; International Medical Case Reports Journal Volume 12 ; 12 ; 2019 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; International Medical Case Reports Journal Volume 13 ; 13 ; 2020 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2021 ; International Medical Case Reports Journal Volume 14 ; 14 ; 2021 ; >
-    au < ready ; exists ; 2022 ; International Medical Case Reports Journal Volume 15 ; 15 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; International Medical Case Reports Journal Volume 15 ; 15 ; 2022 ; >
 
   }
 
@@ -1323,7 +1323,7 @@
     au < finished ; crawling ; 2019 ; Open Access Rheumatology: Research and Reviews Volume 11 ; 11 ; 2019 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2020 ; Open Access Rheumatology: Research and Reviews Volume 12 ; 12 ; 2020 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2021 ; Open Access Rheumatology: Research and Reviews Volume 13 ; 13 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Open Access Rheumatology: Research and Reviews Volume 14 ; 14 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Open Access Rheumatology: Research and Reviews Volume 14 ; 14 ; 2022 ; >
 
   }
 
@@ -1618,7 +1618,7 @@
     au < finished ; crawling ; 2019 ; Open Access Journal of Contraception Volume 10 ; 10 ; 2019 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Open Access Journal of Contraception Volume 11 ; 11 ; 2020 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2021 ; Open Access Journal of Contraception Volume 12 ; 12 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Open Access Journal of Contraception Volume 13 ; 13 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Open Access Journal of Contraception Volume 13 ; 13 ; 2022 ; >
 
   }
 
@@ -1664,7 +1664,7 @@
     au < finished ; crawling ; 2019 ; Clinical Optometry Volume 11 ; 11 ; 2019 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Clinical Optometry Volume 12 ; 12 ; 2020 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2021 ; Clinical Optometry Volume 13 ; 13 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Clinical Optometry Volume 14 ; 14 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Clinical Optometry Volume 14 ; 14 ; 2022 ; >
 
   }
 
@@ -1813,7 +1813,7 @@
     au < finished ; crawling ; 2019 ; Patient Related Outcome Measures Volume 10 ; 10 ; 2019 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2020 ; Patient Related Outcome Measures Volume 11 ; 11 ; 2020 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2021 ; Patient Related Outcome Measures Volume 12 ; 12 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Patient Related Outcome Measures Volume 13 ; 13 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Patient Related Outcome Measures Volume 13 ; 13 ; 2022 ; >
 
   }
 
@@ -2005,7 +2005,7 @@
     au < finished ; crawling ; 2019 ; Advances in Medical Education and Practice Volume 10 ; 10 ; 2019 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Advances in Medical Education and Practice Volume 11 ; 11 ; 2020 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2021 ; Advances in Medical Education and Practice Volume 12 ; 12 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Advances in Medical Education and Practice Volume 13 ; 13 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Advances in Medical Education and Practice Volume 13 ; 13 ; 2022 ; >
 
   }
 
