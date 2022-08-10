@@ -68,9 +68,9 @@ echo "###Ready Misc Ingest5" >> $t/tmp_Misc
 ./scripts/tdb/tdbout -Y -a -Q 'au:hidden[proxy] is "reingest5.clockss.org:8082"' tdb/clockssingest/*.tdb | shuf >> $t/tmp_Misc
 
 head -n25 $t/tmp_HW | grep -v ClockssHWDrupalPlugin > $t/tmp_All
-head -n75 $t/tmp_Atypon >> $t/tmp_All
+head -n125 $t/tmp_Atypon >> $t/tmp_All
 #head -n25 $t/tmp_TnF >> $t/tmp_All
-head -n150 $t/tmp_Misc | grep -v ClockssHWDrupalPlugin >> $t/tmp_All
+head -n100 $t/tmp_Misc | grep -v ClockssHWDrupalPlugin >> $t/tmp_All
 
 exit 0
 
