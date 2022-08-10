@@ -162,7 +162,7 @@
     au < frozen ; exists ; 2017 ; Journal of Applied Farm Economics Volume 1 ; 1 ; https://docs.lib.purdue.edu/ ; >
     au < frozen ; exists ; 2018 ; Journal of Applied Farm Economics Volume 2 ; 2 ; https://docs.lib.purdue.edu/ ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Applied Farm Economics Volume 3 ; 3 ; https://docs.lib.purdue.edu/ ; >
-    au < crawling ; exists ; 2021 ; Journal of Applied Farm Economics Volume 4 ; 4 ; https://docs.lib.purdue.edu/ ; >
+    au < frozen ; exists ; 2021 ; Journal of Applied Farm Economics Volume 4 ; 4 ; https://docs.lib.purdue.edu/ ; >
     au < expected ; exists ; 2022 ; Journal of Applied Farm Economics Volume 5 ; 5 ; https://docs.lib.purdue.edu/ ; >
 
   }
@@ -189,7 +189,7 @@
     au < finished ; finished ; 2018 ; Journal of Aviation Technology and Engineering Volume 8 ; 8 ; https://docs.lib.purdue.edu/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2019 ; Journal of Aviation Technology and Engineering Volume 9 ; 9 ; https://docs.lib.purdue.edu/ ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2020 ; Journal of Aviation Technology and Engineering Volume 10 ; 10 ; https://docs.lib.purdue.edu/ ; >
-    au < crawling ; exists ; 2021 ; Journal of Aviation Technology and Engineering Volume 11 ; 11 ; https://docs.lib.purdue.edu/ ; >
+    au < frozen ; exists ; 2021 ; Journal of Aviation Technology and Engineering Volume 11 ; 11 ; https://docs.lib.purdue.edu/ ; >
     au < expected ; exists ; 2022 ; Journal of Aviation Technology and Engineering Volume 12 ; 12 ; https://docs.lib.purdue.edu/ ; >
 
   }
@@ -218,7 +218,7 @@
     au < finished ; finished ; 2018 ; Journal of Human Performance in Extreme Environments Volume 14 ; 14 ; https://docs.lib.purdue.edu/ ; reingest4.clockss.org:8082 > # Probe url error on previous test
     au < finished ; crawling ; 2019 ; Journal of Human Performance in Extreme Environments Volume 15 ; 15 ; https://docs.lib.purdue.edu/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2020 ; Journal of Human Performance in Extreme Environments Volume 16 ; 16 ; https://docs.lib.purdue.edu/ ; >
-    au < crawling ; exists ; 2021 ; Journal of Human Performance in Extreme Environments Volume 17 ; 17 ; https://docs.lib.purdue.edu/ ; >
+    au < frozen ; exists ; 2021 ; Journal of Human Performance in Extreme Environments Volume 17 ; 17 ; https://docs.lib.purdue.edu/ ; >
     au < expected ; exists ; 2022 ; Journal of Human Performance in Extreme Environments Volume 18 ; 18 ; https://docs.lib.purdue.edu/ ; >
 
   }
