@@ -153,7 +153,7 @@
     au < finished ; crawling ; 2018 ; Aspasia Volume 12 ; 12 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; Aspasia Volume 13 ; 13 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; Aspasia Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2021 ; Aspasia Volume 15 ; 15 ; >
+    au < deepCrawl ; exists ; 2021 ; Aspasia Volume 15 ; 15 ; >
     au < expected ; exists ; 2022 ; Aspasia Volume 16 ; 16 ; >
 
   }
@@ -232,7 +232,7 @@
     au < finished ; crawling ; 2018 ; Conflict and Society Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; Conflict and Society Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Conflict and Society Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2021 ; Conflict and Society Volume 7 ; 7 ; >
+    au < deepCrawl ; exists ; 2021 ; Conflict and Society Volume 7 ; 7 ; >
     au < expected ; exists ; 2022 ; Conflict and Society Volume 8 ; 8 ; >
 
   }
@@ -408,7 +408,7 @@
     au < finished ; crawling ; 2018 ; Environment and Society Volume 9 ; 9 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; Environment and Society Volume 10 ; 10 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; Environment and Society Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2021 ; Environment and Society Volume 12 ; 12 ; >
+    au < deepCrawl ; exists ; 2021 ; Environment and Society Volume 12 ; 12 ; >
     au < expected ; exists ; 2022 ; Environment and Society Volume 13 ; 13 ; >
 
   }
@@ -895,7 +895,7 @@
     au < finished ; crawling ; 2018 ; Museum Worlds: Advances in Research Volume 6 ; 6 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; Museum Worlds: Advances in Research Volume 7 ; 7 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; Museum Worlds: Advances in Research Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2021 ; Museum Worlds: Advances in Research Volume 9 ; 9 ; >
+    au < deepCrawl ; exists ; 2021 ; Museum Worlds: Advances in Research Volume 9 ; 9 ; >
     au < expected ; exists ; 2022 ; Museum Worlds: Advances in Research Volume 10 ; 10 ; >
 
   }
@@ -1241,7 +1241,7 @@
     au < finished ; crawling ; 2018 ; Transfers Volume 8 ; 8 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; Transfers Volume 9 ; 9 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2020 ; Transfers Volume 10 ; 10 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2021 ; Transfers Volume 11 ; 11 ; >
+    au < deepCrawl ; exists ; 2021 ; Transfers Volume 11 ; 11 ; >
     au < expected ; exists ; 2022 ; Transfers Volume 12 ; 12 ; >
 
   }

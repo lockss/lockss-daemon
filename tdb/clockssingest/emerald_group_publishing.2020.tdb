@@ -31,7 +31,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Academia Revista Latinoamericana de Administración Volume 31 ; 31 ; >
     au < finished ; crawling ; 2019 ; Academia Revista Latinoamericana de Administración Volume 32 ; 32 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Academia Revista Latinoamericana de Administración Volume 33 ; 33 ; >
-    au < crawling ; exists ; 2021 ; Academia Revista Latinoamericana de Administración Volume 34 ; 34 ; >
+    au < deepCrawl ; exists ; 2021 ; Academia Revista Latinoamericana de Administración Volume 34 ; 34 ; >
     au < ready ; exists ; 2022 ; Academia Revista Latinoamericana de Administración Volume 35 ; 35 ; >
 
   }
@@ -78,7 +78,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Accounting Research Journal Volume 31 ; 31 ; >
     au < frozen ; exists ; 2019 ; Accounting Research Journal Volume 32 ; 32 ; >
     au < deepCrawl ; exists ; 2020 ; Accounting Research Journal Volume 33 ; 33 ; >
-    au < crawling ; exists ; 2021 ; Accounting Research Journal Volume 34 ; 34 ; >
+    au < deepCrawl ; exists ; 2021 ; Accounting Research Journal Volume 34 ; 34 ; >
     au < crawling ; exists ; 2022 ; Accounting Research Journal Volume 35 ; 35 ; >
 
   }
@@ -127,7 +127,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Accounting, Auditing & Accountability Journal Volume 31 ; 31 ; >
     au < frozen ; exists ; 2019 ; Accounting, Auditing & Accountability Journal Volume 32 ; 32 ; >
     au < deepCrawl ; exists ; 2020 ; Accounting, Auditing & Accountability Journal Volume 33 ; 33 ; >
-    au < crawling ; exists ; 2021 ; Accounting, Auditing & Accountability Journal Volume 34 ; 34 ; >
+    au < deepCrawl ; exists ; 2021 ; Accounting, Auditing & Accountability Journal Volume 34 ; 34 ; >
     au < crawling ; exists ; 2022 ; Accounting, Auditing & Accountability Journal Volume 35 ; 35 ; >
 
   }
@@ -156,7 +156,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Dual Diagnosis Volume 11 ; 11 ; >
     au < frozen ; exists ; 2019 ; Advances in Dual Diagnosis Volume 12 ; 12 ; >
     au < deepCrawl ; exists ; 2020 ; Advances in Dual Diagnosis Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2021 ; Advances in Dual Diagnosis Volume 14 ; 14 ; >
+    au < deepCrawl ; exists ; 2021 ; Advances in Dual Diagnosis Volume 14 ; 14 ; >
     au < ready ; exists ; 2022 ; Advances in Dual Diagnosis Volume 15 ; 15 ; >
 
   }
@@ -201,7 +201,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Mental Health and Intellectual Disabilities Volume 12 ; 12 ; >
     au < frozen ; exists ; 2019 ; Advances in Mental Health and Intellectual Disabilities Volume 13 ; 13 ; >
     au < deepCrawl ; exists ; 2020 ; Advances in Mental Health and Intellectual Disabilities Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2021 ; Advances in Mental Health and Intellectual Disabilities Volume 15 ; 15 ; >
+    au < deepCrawl ; exists ; 2021 ; Advances in Mental Health and Intellectual Disabilities Volume 15 ; 15 ; >
     au < ready ; exists ; 2022 ; Advances in Mental Health and Intellectual Disabilities Volume 16 ; 16 ; >
 
   }
@@ -228,7 +228,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; African Journal of Economic and Management Studies Volume 9 ; 9 ; >
     au < frozen ; exists ; 2019 ; African Journal of Economic and Management Studies Volume 10 ; 10 ; >
     au < deepCrawl ; exists ; 2020 ; African Journal of Economic and Management Studies Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2021 ; African Journal of Economic and Management Studies Volume 12 ; 12 ; >
+    au < deepCrawl ; exists ; 2021 ; African Journal of Economic and Management Studies Volume 12 ; 12 ; >
     au < crawling ; exists ; 2022 ; African Journal of Economic and Management Studies Volume 13 ; 13 ; >
 
   }
@@ -266,7 +266,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Agricultural Finance Review Volume 78 ; 78 ; >
     au < frozen ; exists ; 2019 ; Agricultural Finance Review Volume 79 ; 79 ; >
     au < deepCrawl ; exists ; 2020 ; Agricultural Finance Review Volume 80 ; 80 ; >
-    au < crawling ; exists ; 2021 ; Agricultural Finance Review Volume 81 ; 81 ; >
+    au < deepCrawl ; exists ; 2021 ; Agricultural Finance Review Volume 81 ; 81 ; >
     au < crawling ; exists ; 2022 ; Agricultural Finance Review Volume 82 ; 82 ; >
 
   }
@@ -373,7 +373,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Aircraft Engineering and Aerospace Technology Volume 90 ; 90 ; >
     au < frozen ; exists ; 2019 ; Aircraft Engineering and Aerospace Technology Volume 91 ; 91 ; >
     au < deepCrawl ; exists ; 2020 ; Aircraft Engineering and Aerospace Technology Volume 92 ; 92 ; >
-    au < crawling ; exists ; 2021 ; Aircraft Engineering and Aerospace Technology Volume 93 ; 93 ; >
+    au < deepCrawl ; exists ; 2021 ; Aircraft Engineering and Aerospace Technology Volume 93 ; 93 ; >
     au < crawling ; exists ; 2022 ; Aircraft Engineering and Aerospace Technology Volume 94 ; 94 ; >
 
   }
@@ -423,7 +423,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; American Journal of Business Volume 33 ; 33 ; >
     au < frozen ; exists ; 2019 ; American Journal of Business Volume 34 ; 34 ; >
     au < deepCrawl ; exists ; 2020 ; American Journal of Business Volume 35 ; 35 ; >
-    au < crawling ; exists ; 2021 ; American Journal of Business Volume 36 ; 36 ; >
+    au < deepCrawl ; exists ; 2021 ; American Journal of Business Volume 36 ; 36 ; >
     au < crawling ; exists ; 2022 ; American Journal of Business Volume 37 ; 37 ; >
 
   }
@@ -523,7 +523,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Anti-Corrosion Methods and Materials Volume 65 ; 65 ; >
     au < frozen ; exists ; 2019 ; Anti-Corrosion Methods and Materials Volume 66 ; 66 ; >
     au < deepCrawl ; exists ; 2020 ; Anti-Corrosion Methods and Materials Volume 67 ; 67 ; >
-    au < crawling ; exists ; 2021 ; Anti-Corrosion Methods and Materials Volume 68 ; 68 ; >
+    au < deepCrawl ; exists ; 2021 ; Anti-Corrosion Methods and Materials Volume 68 ; 68 ; >
     au < crawling ; exists ; 2022 ; Anti-Corrosion Methods and Materials Volume 69 ; 69 ; >
 
   }
@@ -585,7 +585,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Arts and the Market Volume 8 ; 8 ; >
     au < frozen ; exists ; 2019 ; Arts and the Market Volume 9 ; 9 ; >
     au < deepCrawl ; exists ; 2020 ; Arts and the Market Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2021 ; Arts and the Market Volume 11 ; 11 ; >
+    au < deepCrawl ; exists ; 2021 ; Arts and the Market Volume 11 ; 11 ; >
     au < crawling ; exists ; 2022 ; Arts and the Market Volume 12 ; 12 ; >
 
   }
@@ -648,7 +648,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Asia Pacific Journal of Marketing and Logistics Volume 30 ; 30 ; >
     au < frozen ; exists ; 2019 ; Asia Pacific Journal of Marketing and Logistics Volume 31 ; 31 ; >
     au < deepCrawl ; exists ; 2020 ; Asia Pacific Journal of Marketing and Logistics Volume 32 ; 32 ; >
-    au < crawling ; exists ; 2021 ; Asia Pacific Journal of Marketing and Logistics Volume 33 ; 33 ; >
+    au < deepCrawl ; exists ; 2021 ; Asia Pacific Journal of Marketing and Logistics Volume 33 ; 33 ; >
     au < crawling ; exists ; 2022 ; Asia Pacific Journal of Marketing and Logistics Volume 34 ; 34 ; >
 
   }
@@ -676,7 +676,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Aisa-Pacific Journal of Business Administration Volume 10 ; 10 ; >
     au < frozen ; exists ; 2019 ; Aisa-Pacific Journal of Business Administration Volume 11 ; 11 ; >
     au < deepCrawl ; exists ; 2020 ; Aisa-Pacific Journal of Business Administration Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2021 ; Aisa-Pacific Journal of Business Administration Volume 13 ; 13 ; >
+    au < deepCrawl ; exists ; 2021 ; Aisa-Pacific Journal of Business Administration Volume 13 ; 13 ; >
     au < crawling ; exists ; 2022 ; Aisa-Pacific Journal of Business Administration Volume 14 ; 14 ; >
 
   }
@@ -699,7 +699,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Asian Education and Development Studies Volume 7 ; 7 ; >
     au < frozen ; exists ; 2019 ; Asian Education and Development Studies Volume 8 ; 8 ; >
     au < deepCrawl ; exists ; 2020 ; Asian Education and Development Studies Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2021 ; Asian Education and Development Studies Volume 10 ; 10 ; >
+    au < deepCrawl ; exists ; 2021 ; Asian Education and Development Studies Volume 10 ; 10 ; >
     au < crawling ; exists ; 2022 ; Asian Education and Development Studies Volume 11 ; 11 ; >
 
   }
@@ -787,7 +787,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Asian Review of Accounting Volume 26 ; 26 ; >
     au < frozen ; exists ; 2019 ; Asian Review of Accounting Volume 27 ; 27 ; >
     au < deepCrawl ; exists ; 2020 ; Asian Review of Accounting Volume 28 ; 28 ; >
-    au < crawling ; exists ; 2021 ; Asian Review of Accounting Volume 29 ; 29 ; >
+    au < deepCrawl ; exists ; 2021 ; Asian Review of Accounting Volume 29 ; 29 ; >
     au < crawling ; exists ; 2022 ; Asian Review of Accounting Volume 30 ; 30 ; >
 
   }
@@ -922,7 +922,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Assembly Automation Volume 38 ; 38 ; >
     au < frozen ; exists ; 2019 ; Assembly Automation Volume 39 ; 39 ; >
     au < deepCrawl ; exists ; 2020 ; Assembly Automation Volume 40 ; 40 ; >
-    au < crawling ; exists ; 2021 ; Assembly Automation Volume 41 ; 41 ; >
+    au < deepCrawl ; exists ; 2021 ; Assembly Automation Volume 41 ; 41 ; >
     au < crawling ; exists ; 2022 ; Assembly Automation Volume 42 ; 42 ; >
 
   }
@@ -974,7 +974,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Baltic Journal of Management Volume 13 ; 13 ; >
     au < frozen ; exists ; 2019 ; Baltic Journal of Management Volume 14 ; 14 ; >
     au < deepCrawl ; exists ; 2020 ; Baltic Journal of Management Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2021 ; Baltic Journal of Management Volume 16 ; 16 ; >
+    au < deepCrawl ; exists ; 2021 ; Baltic Journal of Management Volume 16 ; 16 ; >
     au < crawling ; exists ; 2022 ; Baltic Journal of Management Volume 17 ; 17 ; >
 
   }
@@ -1032,7 +1032,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Benchmarking: An International Journal Volume 25 ; 25 ; >
     au < frozen ; exists ; 2019 ; Benchmarking: An International Journal Volume 26 ; 26 ; >
     au < deepCrawl ; exists ; 2020 ; Benchmarking: An International Journal Volume 27 ; 27 ; >
-    au < crawling ; exists ; 2021 ; Benchmarking: An International Journal Volume 28 ; 28 ; >
+    au < deepCrawl ; exists ; 2021 ; Benchmarking: An International Journal Volume 28 ; 28 ; >
     au < ready ; exists ; 2022 ; Benchmarking: An International Journal Volume 29 ; 29 ; >
 
   }
@@ -1080,7 +1080,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; The Bottom Line: Managing Library Finances Volume 31 ; 31 ; >
     au < frozen ; exists ; 2019 ; The Bottom Line: Managing Library Finances Volume 32 ; 32 ; >
     au < deepCrawl ; exists ; 2020 ; The Bottom Line: Managing Library Finances Volume 33 ; 33 ; >
-    au < crawling ; exists ; 2021 ; The Bottom Line: Managing Library Finances Volume 34 ; 34 ; >
+    au < deepCrawl ; exists ; 2021 ; The Bottom Line: Managing Library Finances Volume 34 ; 34 ; >
     au < ready ; exists ; 2022 ; The Bottom Line: Managing Library Finances Volume 35 ; 35 ; >
 
   }
@@ -1218,7 +1218,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; British Food Journal Volume 120 ; 120 ; >
     au < frozen ; exists ; 2019 ; British Food Journal Volume 121 ; 121 ; >
     au < deepCrawl ; exists ; 2020 ; British Food Journal Volume 122 ; 122 ; >
-    au < crawling ; exists ; 2021 ; British Food Journal Volume 123 ; 123 ; >
+    au < deepCrawl ; exists ; 2021 ; British Food Journal Volume 123 ; 123 ; >
     au < crawling ; exists ; 2022 ; British Food Journal Volume 124 ; 124 ; >
 
   }
@@ -1309,7 +1309,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Built Environment Project and Asset Management Volume 8 ; 8 ; >
     au < frozen ; exists ; 2019 ; Built Environment Project and Asset Management Volume 9 ; 9 ; >
     au < deepCrawl ; exists ; 2020 ; Built Environment Project and Asset Management Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2021 ; Built Environment Project and Asset Management Volume 11 ; 11 ; >
+    au < deepCrawl ; exists ; 2021 ; Built Environment Project and Asset Management Volume 11 ; 11 ; >
     au < ready ; exists ; 2022 ; Built Environment Project and Asset Management Volume 12 ; 12 ; >
 
   }
@@ -1366,7 +1366,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Business Process Management Journal Volume 24 ; 24 ; >
     au < frozen ; exists ; 2019 ; Business Process Management Journal Volume 25 ; 25 ; >
     au < deepCrawl ; exists ; 2020 ; Business Process Management Journal Volume 26 ; 26 ; >
-    au < crawling ; exists ; 2021 ; Business Process Management Journal Volume 27 ; 27 ; >
+    au < deepCrawl ; exists ; 2021 ; Business Process Management Journal Volume 27 ; 27 ; >
     au < ready ; exists ; 2022 ; Business Process Management Journal Volume 28 ; 28 ; >
 
   }
@@ -1473,7 +1473,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Career Development International Volume 23 ; 23 ; >
     au < frozen ; exists ; 2019 ; Career Development International Volume 24 ; 24 ; >
     au < deepCrawl ; exists ; 2020 ; Career Development International Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2021 ; Career Development International Volume 26 ; 26 ; >
+    au < deepCrawl ; exists ; 2021 ; Career Development International Volume 26 ; 26 ; >
     au < crawling ; exists ; 2022 ; Career Development International Volume 27 ; 27 ; >
 
   }
@@ -1501,7 +1501,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; China Agricultural Economic Review Volume 10 ; 10 ; >
     au < frozen ; exists ; 2019 ; China Agricultural Economic Review Volume 11 ; 11 ; >
     au < deepCrawl ; exists ; 2020 ; China Agricultural Economic Review Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2021 ; China Agricultural Economic Review Volume 13 ; 13 ; >
+    au < deepCrawl ; exists ; 2021 ; China Agricultural Economic Review Volume 13 ; 13 ; >
     au < ready ; exists ; 2022 ; China Agricultural Economic Review Volume 14 ; 14 ; >
 
   }
@@ -1526,7 +1526,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; China Finance Review International Volume 8 ; 8 ; >
     au < frozen ; exists ; 2019 ; China Finance Review International Volume 9 ; 9 ; >
     au < deepCrawl ; exists ; 2020 ; China Finance Review International Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2021 ; China Finance Review International Volume 11 ; 11 ; >
+    au < deepCrawl ; exists ; 2021 ; China Finance Review International Volume 11 ; 11 ; >
     au < ready ; exists ; 2022 ; China Finance Review International Volume 12 ; 12 ; >
 
   }
@@ -1556,7 +1556,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Chinese Management Studies Volume 12 ; 12 ; >
     au < finished ; crawling ; 2019 ; Chinese Management Studies Volume 13 ; 13 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Chinese Management Studies Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2021 ; Chinese Management Studies Volume 15 ; 15 ; >
+    au < deepCrawl ; exists ; 2021 ; Chinese Management Studies Volume 15 ; 15 ; >
     au < crawling ; exists ; 2022 ; Chinese Management Studies Volume 16 ; 16 ; >
 
   }
@@ -1618,7 +1618,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Circuit World Volume 44 ; 44 ; >
     au < finished ; crawling ; 2019 ; Circuit World Volume 45 ; 45 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; Circuit World Volume 46 ; 46 ; >
-    au < crawling ; exists ; 2021 ; Circuit World Volume 47 ; 47 ; >
+    au < deepCrawl ; exists ; 2021 ; Circuit World Volume 47 ; 47 ; >
     au < crawling ; exists ; 2022 ; Circuit World Volume 48 ; 48 ; >
 
   }
@@ -1668,7 +1668,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Health Governance Volume 23 ; 23 ; >
     au < frozen ; exists ; 2019 ; International Journal of Health Governance Volume 24 ; 24 ; >
     au < deepCrawl ; exists ; 2020 ; International Journal of Health Governance Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2021 ; International Journal of Health Governance Volume 26 ; 26 ; >
+    au < deepCrawl ; exists ; 2021 ; International Journal of Health Governance Volume 26 ; 26 ; >
     au < ready ; exists ; 2022 ; International Journal of Health Governance Volume 27 ; 27 ; >
 
   }
@@ -1754,7 +1754,7 @@
     au < notReady ; exists ; 2018 ; Collection and Curation Volume 37 ; 37 ; > #500 error https://www.emerald.com/insight/content/doi/10.1108/CC-08-2017-0037/full/html
     au < frozen ; exists ; 2019 ; Collection and Curation Volume 38 ; 38 ; >
     au < deepCrawl ; exists ; 2020 ; Collection and Curation Volume 39 ; 39 ; >
-    au < crawling ; exists ; 2021 ; Collection and Curation Volume 40 ; 40 ; >
+    au < deepCrawl ; exists ; 2021 ; Collection and Curation Volume 40 ; 40 ; >
     au < ready ; exists ; 2022 ; Collection and Curation Volume 41 ; 41 ; >
 
   }
@@ -1808,7 +1808,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 37 ; 37 ; >
     au < finished ; crawling ; 2019 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 38 ; 38 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 39 ; 39 ; >
-    au < crawling ; exists ; 2021 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 40 ; 40 ; >
+    au < deepCrawl ; exists ; 2021 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 40 ; 40 ; >
     au < crawling ; exists ; 2022 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 41 ; 41 ; >
 
   }
@@ -1890,7 +1890,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Construction Innovation: Information, Process, Management Volume 18 ; 18 ; >
     au < frozen ; exists ; 2019 ; Construction Innovation: Information, Process, Management Volume 19 ; 19 ; >
     au < deepCrawl ; exists ; 2020 ; Construction Innovation: Information, Process, Management Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2021 ; Construction Innovation: Information, Process, Management Volume 21 ; 21 ; >
+    au < deepCrawl ; exists ; 2021 ; Construction Innovation: Information, Process, Management Volume 21 ; 21 ; >
     au < crawling ; exists ; 2022 ; Construction Innovation: Information, Process, Management Volume 22 ; 22 ; >
 
   }
@@ -1931,7 +1931,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Corporate Communications: An International Journal Volume 23 ; 23 ; >
     au < frozen ; exists ; 2019 ; Corporate Communications: An International Journal Volume 24 ; 24 ; >
     au < deepCrawl ; exists ; 2020 ; Corporate Communications: An International Journal Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2021 ; Corporate Communications: An International Journal Volume 26 ; 26 ; >
+    au < deepCrawl ; exists ; 2021 ; Corporate Communications: An International Journal Volume 26 ; 26 ; >
     au < crawling ; exists ; 2022 ; Corporate Communications: An International Journal Volume 27 ; 27 ; >
 
   }
@@ -1967,7 +1967,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Corporate Governance Volume 18 ; 18 ; >
     au < frozen ; exists ; 2019 ; Corporate Governance Volume 19 ; 19 ; >
     au < deepCrawl ; exists ; 2020 ; Corporate Governance Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2021 ; Corporate Governance Volume 21 ; 21 ; >
+    au < deepCrawl ; exists ; 2021 ; Corporate Governance Volume 21 ; 21 ; >
     au < ready ; exists ; 2022 ; Corporate Governance Volume 22 ; 22 ; >
 
   }
@@ -1999,7 +1999,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; critical perspectives on international business Volume 14 ; 14 ; >
     au < frozen ; exists ; 2019 ; critical perspectives on international business Volume 15 ; 15 ; >
     au < deepCrawl ; exists ; 2020 ; critical perspectives on international business Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2021 ; critical perspectives on international business Volume 17 ; 17 ; >
+    au < deepCrawl ; exists ; 2021 ; critical perspectives on international business Volume 17 ; 17 ; >
     au < ready ; exists ; 2022 ; critical perspectives on international business Volume 18 ; 18 ; >
 
   }
@@ -2057,7 +2057,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Cross Cultural & Strategic Management Volume 25 ; 25 ; >
     au < frozen ; exists ; 2019 ; Cross Cultural & Strategic Management Volume 26 ; 26 ; >
     au < deepCrawl ; exists ; 2020 ; Cross Cultural & Strategic Management Volume 27 ; 27 ; >
-    au < crawling ; exists ; 2021 ; Cross Cultural & Strategic Management Volume 28 ; 28 ; >
+    au < deepCrawl ; exists ; 2021 ; Cross Cultural & Strategic Management Volume 28 ; 28 ; >
     au < crawling ; exists ; 2022 ; Cross Cultural & Strategic Management Volume 29 ; 29 ; >
 
   }
@@ -2092,7 +2092,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Development and Learning in Organizations Volume 32 ; 32 ; >
     au < frozen ; exists ; 2019 ; Development and Learning in Organizations Volume 33 ; 33 ; >
     au < deepCrawl ; exists ; 2020 ; Development and Learning in Organizations Volume 34 ; 34 ; >
-    au < crawling ; exists ; 2021 ; Development and Learning in Organizations Volume 35 ; 35 ; >
+    au < deepCrawl ; exists ; 2021 ; Development and Learning in Organizations Volume 35 ; 35 ; >
     au < crawling ; exists ; 2022 ; Development and Learning in Organizations Volume 36 ; 36 ; >
 
   }
@@ -2155,7 +2155,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Disaster Prevention and Management Volume 27 ; 27 ; >
     au < frozen ; exists ; 2019 ; Disaster Prevention and Management Volume 28 ; 28 ; >
     au < deepCrawl ; exists ; 2020 ; Disaster Prevention and Management Volume 29 ; 29 ; >
-    au < crawling ; exists ; 2021 ; Disaster Prevention and Management Volume 30 ; 30 ; >
+    au < deepCrawl ; exists ; 2021 ; Disaster Prevention and Management Volume 30 ; 30 ; >
     au < crawling ; exists ; 2022 ; Disaster Prevention and Management Volume 31 ; 31 ; >
 
   }
@@ -2191,7 +2191,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Drugs and Alcohol Today Volume 18 ; 18 ; >
     au < frozen ; exists ; 2019 ; Drugs and Alcohol Today Volume 19 ; 19 ; >
     au < deepCrawl ; exists ; 2020 ; Drugs and Alcohol Today Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2021 ; Drugs and Alcohol Today Volume 21 ; 21 ; >
+    au < deepCrawl ; exists ; 2021 ; Drugs and Alcohol Today Volume 21 ; 21 ; >
     au < crawling ; exists ; 2022 ; Drugs and Alcohol Today Volume 22 ; 22 ; >
 
   }
@@ -2269,7 +2269,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Education + Training Volume 60 ; 60 ; >
     au < frozen ; exists ; 2019 ; Education + Training Volume 61 ; 61 ; >
     au < deepCrawl ; exists ; 2020 ; Education + Training Volume 62 ; 62 ; >
-    au < crawling ; exists ; 2021 ; Education + Training Volume 63 ; 63 ; >
+    au < deepCrawl ; exists ; 2021 ; Education + Training Volume 63 ; 63 ; >
     au < ready ; exists ; 2022 ; Education + Training Volume 64 ; 64 ; >
 
   }
@@ -2344,7 +2344,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; The Electronic Library Volume 36 ; 36 ; >
     au < finished ; crawling ; 2019 ; The Electronic Library Volume 37 ; 37 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; The Electronic Library Volume 38 ; 38 ; >
-    au < crawling ; exists ; 2021 ; The Electronic Library Volume 39 ; 39 ; >
+    au < deepCrawl ; exists ; 2021 ; The Electronic Library Volume 39 ; 39 ; >
     au < crawling ; exists ; 2022 ; The Electronic Library Volume 40 ; 40 ; >
 
   }
@@ -2420,7 +2420,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Employee Relations: An International Journal Volume 40 ; 40 ; >
     au < frozen ; exists ; 2019 ; Employee Relations: An International Journal Volume 41 ; 41 ; >
     au < deepCrawl ; exists ; 2020 ; Employee Relations: An International Journal Volume 42 ; 42 ; >
-    au < crawling ; exists ; 2021 ; Employee Relations: An International Journal Volume 43 ; 43 ; >
+    au < deepCrawl ; exists ; 2021 ; Employee Relations: An International Journal Volume 43 ; 43 ; >
     au < crawling ; exists ; 2022 ; Employee Relations: An International Journal Volume 44 ; 44 ; >
 
   }
@@ -2494,7 +2494,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Engineering Computations Volume 35 ; 35 ; >
     au < frozen ; exists ; 2019 ; Engineering Computations Volume 36 ; 36 ; >
     au < notReady ; exists ; 2020 ; Engineering Computations Volume 37 ; 37 ; > #500 Error
-    au < crawling ; exists ; 2021 ; Engineering Computations Volume 38 ; 38 ; >
+    au < deepCrawl ; exists ; 2021 ; Engineering Computations Volume 38 ; 38 ; >
     au < ready ; exists ; 2022 ; Engineering Computations Volume 39 ; 39 ; >
 
   }
@@ -2537,7 +2537,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Engineering, Construction and Architectural Management Volume 25 ; 25 ; >
     au < frozen ; exists ; 2019 ; Engineering, Construction and Architectural Management Volume 26 ; 26 ; >
     au < deepCrawl ; exists ; 2020 ; Engineering, Construction and Architectural Management Volume 27 ; 27 ; >
-    au < crawling ; exists ; 2021 ; Engineering, Construction and Architectural Management Volume 28 ; 28 ; >
+    au < deepCrawl ; exists ; 2021 ; Engineering, Construction and Architectural Management Volume 28 ; 28 ; >
     au < crawling ; exists ; 2022 ; Engineering, Construction and Architectural Management Volume 29 ; 29 ; >
 
   }
@@ -2636,7 +2636,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Equality, Diversity and Inclusion: An International Journal Volume 37 ; 37 ; >
     au < frozen ; exists ; 2019 ; Equality, Diversity and Inclusion: An International Journal Volume 38 ; 38 ; >
     au < deepCrawl ; exists ; 2020 ; Equality, Diversity and Inclusion: An International Journal Volume 39 ; 39 ; >
-    au < crawling ; exists ; 2021 ; Equality, Diversity and Inclusion: An International Journal Volume 40 ; 40 ; >
+    au < deepCrawl ; exists ; 2021 ; Equality, Diversity and Inclusion: An International Journal Volume 40 ; 40 ; >
     au < ready ; exists ; 2022 ; Equality, Diversity and Inclusion: An International Journal Volume 41 ; 41 ; >
 
   }
@@ -2688,7 +2688,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; EuroMed Journal of Business Volume 13 ; 13 ; >
     au < finished ; crawling ; 2019 ; EuroMed Journal of Business Volume 14 ; 14 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; EuroMed Journal of Business Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2021 ; EuroMed Journal of Business Volume 16 ; 16 ; >
+    au < deepCrawl ; exists ; 2021 ; EuroMed Journal of Business Volume 16 ; 16 ; >
     au < ready ; exists ; 2022 ; EuroMed Journal of Business Volume 17 ; 17 ; >
 
   }
@@ -2737,7 +2737,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; European Business Review Volume 30 ; 30 ; >
     au < frozen ; exists ; 2019 ; European Business Review Volume 31 ; 31 ; >
     au < deepCrawl ; exists ; 2020 ; European Business Review Volume 32 ; 32 ; >
-    au < crawling ; exists ; 2021 ; European Business Review Volume 33 ; 33 ; >
+    au < deepCrawl ; exists ; 2021 ; European Business Review Volume 33 ; 33 ; >
     au < crawling ; exists ; 2022 ; European Business Review Volume 34 ; 34 ; >
 
   }
@@ -2776,7 +2776,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; European Journal of Innovation Management Volume 21 ; 21 ; >
     au < frozen ; exists ; 2019 ; European Journal of Innovation Management Volume 22 ; 22 ; >
     au < deepCrawl ; exists ; 2020 ; European Journal of Innovation Management Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2021 ; European Journal of Innovation Management Volume 24 ; 24 ; >
+    au < deepCrawl ; exists ; 2021 ; European Journal of Innovation Management Volume 24 ; 24 ; >
     au < crawling ; exists ; 2022 ; European Journal of Innovation Management Volume 25 ; 25 ; >
 
   }
@@ -2846,7 +2846,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; European Journal of Marketing Volume 52 ; 52 ; >
     au < finished ; crawling ; 2019 ; European Journal of Marketing Volume 53 ; 53 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; European Journal of Marketing Volume 54 ; 54 ; >
-    au < crawling ; exists ; 2021 ; European Journal of Marketing Volume 55 ; 55 ; >
+    au < deepCrawl ; exists ; 2021 ; European Journal of Marketing Volume 55 ; 55 ; >
     au < crawling ; exists ; 2022 ; European Journal of Marketing Volume 56 ; 56 ; >
 
   }
@@ -2923,7 +2923,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Facilities Volume 36 ; 36 ; >
     au < notReady ; exists ; 2019 ; Facilities Volume 37 ; 37 ; > #500 error https://www.emerald.com/insight/content/doi/10.1108/F-09-2018-0107/full/html
     au < deepCrawl ; exists ; 2020 ; Facilities Volume 38 ; 38 ; >
-    au < crawling ; exists ; 2021 ; Facilities Volume 39 ; 39 ; >
+    au < deepCrawl ; exists ; 2021 ; Facilities Volume 39 ; 39 ; >
     au < crawling ; exists ; 2022 ; Facilities Volume 40 ; 40 ; >
 
   }
@@ -2961,7 +2961,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; foresight Volume 20 ; 20 ; >
     au < frozen ; exists ; 2019 ; foresight Volume 21 ; 21 ; >
     au < deepCrawl ; exists ; 2020 ; foresight Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2021 ; foresight Volume 23 ; 23 ; >
+    au < deepCrawl ; exists ; 2021 ; foresight Volume 23 ; 23 ; >
     au < crawling ; exists ; 2022 ; foresight Volume 24 ; 24 ; >
 
   }
@@ -2991,7 +2991,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Gender in Management: An International Journal Volume 33 ; 33 ; >
     au < frozen ; exists ; 2019 ; Gender in Management: An International Journal Volume 34 ; 34 ; >
     au < deepCrawl ; exists ; 2020 ; Gender in Management: An International Journal Volume 35 ; 35 ; >
-    au < crawling ; exists ; 2021 ; Gender in Management: An International Journal Volume 36 ; 36 ; >
+    au < deepCrawl ; exists ; 2021 ; Gender in Management: An International Journal Volume 36 ; 36 ; >
     au < ready ; exists ; 2022 ; Gender in Management: An International Journal Volume 37 ; 37 ; >
 
   }
@@ -3016,7 +3016,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Grey Systems: Theory and Application Volume 8 ; 8 ; >
     au < frozen ; exists ; 2019 ; Grey Systems: Theory and Application Volume 9 ; 9 ; >
     au < deepCrawl ; exists ; 2020 ; Grey Systems: Theory and Application Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2021 ; Grey Systems: Theory and Application Volume 11 ; 11 ; >
+    au < deepCrawl ; exists ; 2021 ; Grey Systems: Theory and Application Volume 11 ; 11 ; >
     au < ready ; exists ; 2022 ; Grey Systems: Theory and Application Volume 12 ; 12 ; >
 
   }
@@ -3083,7 +3083,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Health Education Volume 118 ; 118 ; >
     au < frozen ; exists ; 2019 ; Health Education Volume 119 ; 119 ; >
     au < deepCrawl ; exists ; 2020 ; Health Education Volume 120 ; 120 ; >
-    au < crawling ; exists ; 2021 ; Health Education Volume 121 ; 121 ; >
+    au < deepCrawl ; exists ; 2021 ; Health Education Volume 121 ; 121 ; >
     au < crawling ; exists ; 2022 ; Health Education Volume 122 ; 122 ; >
 
   }
@@ -3131,7 +3131,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Higher Education, Skills and Work-based Learning Volume 8 ; 8 ; >
     au < frozen ; exists ; 2019 ; Higher Education, Skills and Work-based Learning Volume 9 ; 9 ; >
     au < deepCrawl ; exists ; 2020 ; Higher Education, Skills and Work-based Learning Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2021 ; Higher Education, Skills and Work-based Learning Volume 11 ; 11 ; >
+    au < deepCrawl ; exists ; 2021 ; Higher Education, Skills and Work-based Learning Volume 11 ; 11 ; >
     au < crawling ; exists ; 2022 ; Higher Education, Skills and Work-based Learning Volume 12 ; 12 ; >
 
   }
@@ -3164,7 +3164,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; History of Education Review Volume 47 ; 47 ; >
     au < frozen ; exists ; 2019 ; History of Education Review Volume 48 ; 48 ; >
     au < deepCrawl ; exists ; 2020 ; History of Education Review Volume 49 ; 49 ; >
-    au < crawling ; exists ; 2021 ; History of Education Review Volume 50 ; 50 ; >
+    au < deepCrawl ; exists ; 2021 ; History of Education Review Volume 50 ; 50 ; >
     au < crawling ; exists ; 2022 ; History of Education Review Volume 51 ; 51 ; >
 
   }

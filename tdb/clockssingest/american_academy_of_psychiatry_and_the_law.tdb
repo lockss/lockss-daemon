@@ -26,7 +26,7 @@
     au < aapl.ClockssAAPLDrupalPlugin ; finished ; frozen ; 2018 ; Journal of the American Academy of Psychiatry and the Law Online Volume 46 ; 46 ; reingest1.clockss.org:8082 > #Probe url error
     au < aapl.ClockssAAPLDrupalPlugin ; deepCrawl ; exists ; 2019 ; Journal of the American Academy of Psychiatry and the Law Online Volume 47 ; 47 ; >
     au < aapl.ClockssAAPLDrupalPlugin ; deepCrawl ; exists ; 2020 ; Journal of the American Academy of Psychiatry and the Law Online Volume 48 ; 48 ; >
-    au < aapl.ClockssAAPLDrupalPlugin ; crawling ; exists ; 2021 ; Journal of the American Academy of Psychiatry and the Law Online Volume 49 ; 49 ; >
+    au < aapl.ClockssAAPLDrupalPlugin ; deepCrawl ; exists ; 2021 ; Journal of the American Academy of Psychiatry and the Law Online Volume 49 ; 49 ; >
     au < aapl.ClockssAAPLDrupalPlugin ; manifest ; exists ; 2022 ; Journal of the American Academy of Psychiatry and the Law Online Volume 50 ; 50 ; >
 
     }
