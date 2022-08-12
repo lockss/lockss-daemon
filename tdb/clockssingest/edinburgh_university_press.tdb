@@ -1471,7 +1471,7 @@
     au < finished ; frozen ; 2019 ; Journal of Scottish Philosophy Volume 17 ; 17 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Journal of Scottish Philosophy Volume 18 ; 18 ; https://www.euppublishing.com/ ; >
     au < crawling ; exists ; 2021 ; Journal of Scottish Philosophy Volume 19 ; 19 ; https://www.euppublishing.com/ ; >
-    au < ready ; exists ; 2022 ; Journal of Scottish Philosophy Volume 20 ; 20 ; https://www.euppublishing.com/ ; >
+    au < crawling ; exists ; 2022 ; Journal of Scottish Philosophy Volume 20 ; 20 ; https://www.euppublishing.com/ ; >
 
   }
 
@@ -2191,7 +2191,7 @@
     au < finished ; crawling ; 2019 ; Studies in World Christianity Volume 25 ; 25 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Studies in World Christianity Volume 26 ; 26 ; https://www.euppublishing.com/ ; >
     au < crawling ; exists ; 2021 ; Studies in World Christianity Volume 27 ; 27 ; https://www.euppublishing.com/ ; >
-    au < ready ; exists ; 2022 ; Studies in World Christianity Volume 28 ; 28 ; https://www.euppublishing.com/ ; >
+    au < crawling ; exists ; 2022 ; Studies in World Christianity Volume 28 ; 28 ; https://www.euppublishing.com/ ; >
 
   }
 
@@ -2366,7 +2366,7 @@
 
     param[journal_id] = jspp
 
-    au < ready ; exists ; 2022 ; Journal of Social and Political Philosophy Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
+    au < crawling ; exists ; 2022 ; Journal of Social and Political Philosophy Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
 
   }
 

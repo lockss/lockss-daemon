@@ -89,7 +89,7 @@
     implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
 
     au < crawling ; exists ; 2021 ; Spectra Undergraduate Research Journal Volume 1 ; 1 ; >
-    au < ready ; exists ; 2022 ; Spectra Undergraduate Research Journal Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2022 ; Spectra Undergraduate Research Journal Volume 2 ; 2 ; >
 
   }
 

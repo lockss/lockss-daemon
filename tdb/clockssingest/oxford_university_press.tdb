@@ -2038,7 +2038,7 @@
     param[journal_id] = bjd
     #move from Wiley, 2023
 
-    au < ready ; exists ; 2022 ; 2022 ; British Journal of Dermatology Volume 186-187 ; 186-187 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; British Journal of Dermatology Volume 186-187 ; 186-187 ; >
 
   }
 
@@ -2854,7 +2854,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Briefings in Functional Genomics Volume 18 ; 18 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Briefings in Functional Genomics Volume 19 ; 19 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Briefings in Functional Genomics Volume 20 ; 20 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Briefings in Functional Genomics Volume 21 ; 21 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Briefings in Functional Genomics Volume 21 ; 21 ; >
 
   }
 
@@ -3876,7 +3876,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Communication, Culture & Critique Volume 2 ; 2 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Communication, Culture & Critique Volume 3 ; 3 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Communication, Culture & Critique Volume 4 ; 4 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Communication, Culture & Critique Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Communication, Culture & Critique Volume 5 ; 5 ; >
 
   }
 
@@ -5665,7 +5665,7 @@
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; European Journal of Cardiovascular Nursing Volume 18 ; 18 ; >
     au < frozen ; exists ; 2020 ; 2020 ; European Journal of Cardiovascular Nursing Volume 19 ; 19 ; >
     au < ready ; exists ; 2021 ; 2021 ; European Journal of Cardiovascular Nursing Volume 20 ; 20 ; >
-    au < ready ; exists ; 2022 ; 2022 ; European Journal of Cardiovascular Nursing Volume 21 ; 21 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; European Journal of Cardiovascular Nursing Volume 21 ; 21 ; >
 
   }
 
@@ -6090,7 +6090,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; FEMS Microbiology Ecology Volume 95 ; 95 ; >
     au < frozen ; exists ; 2020 ; 2020 ; FEMS Microbiology Ecology Volume 96 ; 96 ; >
     au < ready ; exists ; 2021 ; 2021 ; FEMS Microbiology Ecology Volume 97 ; 97 ; >
-    au < ready ; exists ; 2022 ; 2022 ; FEMS Microbiology Ecology Volume 98 ; 98 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; FEMS Microbiology Ecology Volume 98 ; 98 ; >
 
   }
 
@@ -6164,7 +6164,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; FEMS Microbiology Letters Volume 366 ; 366 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; FEMS Microbiology Letters Volume 367 ; 367 ; >
     au < ready ; exists ; 2021 ; 2021 ; FEMS Microbiology Letters Volume 368 ; 368 ; >
-    au < ready ; exists ; 2022 ; 2022 ; FEMS Microbiology Letters Volume 369 ; 369 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; FEMS Microbiology Letters Volume 369 ; 369 ; >
 
   }
 
@@ -7715,7 +7715,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Human Communication Research Volume 2 ; 2 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Human Communication Research Volume 3 ; 3 ; >
     au < ready ; exists ; 2021 ; 2021 ; Human Communication Research Volume 4 ; 4 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Human Communication Research Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Human Communication Research Volume 5 ; 5 ; >
 
   }
 
@@ -8163,7 +8163,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Inflammatory Bowel Diseases Volume 2 ; 2 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Inflammatory Bowel Diseases Volume 3 ; 3 ; >
     au < ready ; exists ; 2021 ; 2021 ; Inflammatory Bowel Diseases Volume 4 ; 4 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Inflammatory Bowel Diseases Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Inflammatory Bowel Diseases Volume 5 ; 5 ; >
 
   }
   #Publisher and previous TDB differ on title - ISLE: Interdisciplinary Studies in Literature and Environment vs Interdisciplinary Studies in Literature and Environment
@@ -8654,7 +8654,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; International Health Volume 11 ; 11 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; International Health Volume 12 ; 12 ; >
     au < ready ; exists ; 2021 ; 2021 ; International Health Volume 13 ; 13 ; >
-    au < ready ; exists ; 2022 ; 2022 ; International Health Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; International Health Volume 14 ; 14 ; >
 
   }
 
@@ -9004,7 +9004,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; International Journal of Lexicography Volume 32 ; 32 ; >
     au < frozen ; exists ; 2020 ; 2020 ; International Journal of Lexicography Volume 33 ; 33 ; >
     au < ready ; exists ; 2021 ; 2021 ; International Journal of Lexicography Volume 34 ; 34 ; >
-    au < ready ; exists ; 2022 ; 2022 ; International Journal of Lexicography Volume 35 ; 35 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; International Journal of Lexicography Volume 35 ; 35 ; >
 
   }
 
@@ -9166,7 +9166,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; International Journal of Public Opinion Research Volume 31 ; 31 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; International Journal of Public Opinion Research Volume 32 ; 32 ; >
     au < ready ; exists ; 2021 ; 2021 ; International Journal of Public Opinion Research Volume 33 ; 33 ; >
-    au < ready ; exists ; 2022 ; 2022 ; International Journal of Public Opinion Research Volume 34 ; 34 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; International Journal of Public Opinion Research Volume 34 ; 34 ; >
 
   }
 
@@ -9391,7 +9391,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; International Relations of the Asia-Pacific Volume 19 ; 19 ; >
     au < frozen ; exists ; 2020 ; 2020 ; International Relations of the Asia-Pacific Volume 20 ; 20 ; >
     au < ready ; exists ; 2021 ; 2021 ; International Relations of the Asia-Pacific Volume 21 ; 21 ; >
-    au < ready ; exists ; 2022 ; 2022 ; International Relations of the Asia-Pacific Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; International Relations of the Asia-Pacific Volume 22 ; 22 ; >
 
   }
 
@@ -9547,7 +9547,7 @@
     au < ready ; exists ; 2019 ; 2019 ; JNCI Monographs Volume 2019 ; 2019 ; >
     au < frozen ; exists ; 2020 ; 2020 ; JNCI Monographs Volume 2020 ; 2020 ; >
     au < ready ; exists ; 2021 ; 2021 ; JNCI Monographs Volume 2021 ; 2021 ; >
-    au < ready ; exists ; 2022 ; 2022 ; JNCI Monographs Volume 2022 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; JNCI Monographs Volume 2022 ; 2022 ; >
 
   }
 
@@ -10190,7 +10190,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Church and State Volume 61 ; 61 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Church and State Volume 62 ; 62 ; >
     au < ready ; exists ; 2021 ; 2021 ; Journal of Church and State Volume 63 ; 63 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Journal of Church and State Volume 64 ; 64 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Journal of Church and State Volume 64 ; 64 ; >
 
   }
 
@@ -10500,7 +10500,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Cybersecurity Volume 5 ; 5 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Journal of Cybersecurity Volume 6 ; 6 ; >
     au < ready ; exists ; 2021 ; 2021 ; Journal of Cybersecurity Volume 7 ; 7 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Journal of Cybersecurity Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Journal of Cybersecurity Volume 8 ; 8 ; >
 
   }
 
@@ -11218,7 +11218,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Insect Science Volume 19 ; 19 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Journal of Insect Science Volume 20 ; 20 ; >
     au < ready ; exists ; 2021 ; 2021 ; Journal of Insect Science Volume 21 ; 21 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Journal of Insect Science Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Journal of Insect Science Volume 22 ; 22 ; >
 
   }
 
@@ -11560,7 +11560,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Logic and Computation Volume 29 ; 29 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Journal of Logic and Computation Volume 30 ; 30 ; >
     au < testing ; exists ; 2021 ; 2021 ; Journal of Logic and Computation Volume 31 ; 31 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Journal of Logic and Computation Volume 32 ; 32 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Journal of Logic and Computation Volume 32 ; 32 ; >
 
   }
 
@@ -11597,7 +11597,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Mammalogy Volume 100 ; 100 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Mammalogy Volume 101 ; 101 ; >
     au < testing ; exists ; 2021 ; 2021 ; Journal of Mammalogy Volume 102 ; 102 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Journal of Mammalogy Volume 103 ; 103 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Journal of Mammalogy Volume 103 ; 103 ; >
 
   }
   #Publisher and previous TDB differ on issn - 0022-2858 vs 0022-2585
@@ -11679,7 +11679,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Molecular Cell Biology Volume 11 ; 11 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Molecular Cell Biology Volume 12 ; 12 ; >
     au < ready ; exists ; 2021 ; 2021 ; Journal of Molecular Cell Biology Volume 13 ; 13 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Journal of Molecular Cell Biology Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Journal of Molecular Cell Biology Volume 14 ; 14 ; >
 
   }
 
@@ -14254,7 +14254,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Molecular Biology and Evolution Volume 36 ; 36 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Molecular Biology and Evolution Volume 37 ; 37 ; >
     au < ready ; exists ; 2021 ; 2021 ; Molecular Biology and Evolution Volume 38 ; 38 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Molecular Biology and Evolution Volume 39 ; 39 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Molecular Biology and Evolution Volume 39 ; 39 ; >
 
   }
 #  {
@@ -14706,7 +14706,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Mutagenesis Volume 34 ; 34 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Mutagenesis Volume 35 ; 35 ; >
     au < ready ; exists ; 2021 ; 2021 ; Mutagenesis Volume 36 ; 36 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Mutagenesis Volume 37 ; 37 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Mutagenesis Volume 37 ; 37 ; >
 
   }
 
@@ -16948,7 +16948,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Public Health Ethics Volume 12 ; 12 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Public Health Ethics Volume 13 ; 13 ; >
     au < testing ; exists ; 2021 ; 2021 ; Public Health Ethics Volume 14 ; 14 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Public Health Ethics Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Public Health Ethics Volume 15 ; 15 ; >
 
   }
 
@@ -17188,7 +17188,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Publius: The Journal of Federalism Volume 49 ; 49 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Publius: The Journal of Federalism Volume 50 ; 50 ; >
     au < testing ; exists ; 2021 ; 2021 ; Publius: The Journal of Federalism Volume 51 ; 51 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Publius: The Journal of Federalism Volume 52 ; 52 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Publius: The Journal of Federalism Volume 52 ; 52 ; >
 
   }
 
@@ -17427,7 +17427,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Regenerative Biomaterials Volume 6 ; 6 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Regenerative Biomaterials Volume 7 ; 7 ; >
     au < ready ; exists ; 2021 ; 2021 ; Regenerative Biomaterials Volume 8 ; 8 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Regenerative Biomaterials Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Regenerative Biomaterials Volume 9 ; 9 ; >
 
   }
 
@@ -18922,7 +18922,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Teaching Mathematics and its Applications: An International Journal of the IMA Volume 38 ; 38 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Teaching Mathematics and its Applications: An International Journal of the IMA Volume 39 ; 39 ; >
     au < ready ; exists ; 2021 ; 2021 ; Teaching Mathematics and its Applications: An International Journal of the IMA Volume 40 ; 40 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Teaching Mathematics and its Applications: An International Journal of the IMA Volume 41 ; 41 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Teaching Mathematics and its Applications: An International Journal of the IMA Volume 41 ; 41 ; >
 
   }
 
@@ -19693,7 +19693,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; The Computer Journal Volume 62 ; 62 ; >
     au < frozen ; exists ; 2020 ; 2020 ; The Computer Journal Volume 63 ; 63 ; >
     au < ready ; exists ; 2021 ; 2021 ; The Computer Journal Volume 64 ; 64 ; >
-    au < ready ; exists ; 2022 ; 2022 ; The Computer Journal Volume 65 ; 65 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; The Computer Journal Volume 65 ; 65 ; >
 
   }
 
@@ -20286,7 +20286,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; The Journal of Hindu Studies Volume 12 ; 12 ; >
     au < frozen ; exists ; 2020 ; 2020 ; The Journal of Hindu Studies Volume 13 ; 13 ; >
     au < ready ; exists ; 2021 ; 2021 ; The Journal of Hindu Studies Volume 14 ; 14 ; >
-    au < ready ; exists ; 2022 ; 2022 ; The Journal of Hindu Studies Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; The Journal of Hindu Studies Volume 15 ; 15 ; >
 
   }
 
@@ -20735,7 +20735,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; The Journal of World Energy Law & Business Volume 12 ; 12 ; >
     au < frozen ; exists ; 2020 ; 2020 ; The Journal of World Energy Law & Business Volume 13 ; 13 ; >
     au < ready ; exists ; 2021 ; 2021 ; The Journal of World Energy Law & Business Volume 14 ; 14 ; >
-    au < ready ; exists ; 2022 ; 2022 ; The Journal of World Energy Law & Business Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; The Journal of World Energy Law & Business Volume 15 ; 15 ; >
 
   }
 
@@ -21751,7 +21751,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 72 ; 72 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 73 ; 73 ; >
     au < ready ; exists ; 2021 ; 2021 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 74 ; 74 ; >
-    au < ready ; exists ; 2022 ; 2022 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 75 ; 75 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 75 ; 75 ; >
 
   }
 
@@ -22564,7 +22564,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Translational Behavioral Medicine Volume 9 ; 9 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Translational Behavioral Medicine Volume 10 ; 10 ; >
     au < ready ; exists ; 2021 ; 2021 ; Translational Behavioral Medicine Volume 11 ; 11 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Translational Behavioral Medicine Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Translational Behavioral Medicine Volume 12 ; 12 ; >
 
   }
 
@@ -22645,7 +22645,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Trusts & Trustees Volume 25 ; 25 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Trusts & Trustees Volume 26 ; 26 ; >
     au < ready ; exists ; 2021 ; 2021 ; Trusts & Trustees Volume 27 ; 27 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Trusts & Trustees Volume 28 ; 28 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Trusts & Trustees Volume 28 ; 28 ; >
 
   }
 
@@ -22774,7 +22774,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Virus Evolution Volume 5 ; 5 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Virus Evolution Volume 6 ; 6 ; >
     au < ready ; exists ; 2021 ; 2021 ; Virus Evolution Volume 7 ; 7 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Virus Evolution Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Virus Evolution Volume 8 ; 8 ; >
 
   }
 
@@ -22840,7 +22840,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Western Historical Quarterly Volume 50 ; 50 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Western Historical Quarterly Volume 51 ; 51 ; >
     au < ready ; exists ; 2021 ; 2021 ; Western Historical Quarterly Volume 52 ; 52 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Western Historical Quarterly Volume 53 ; 53 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Western Historical Quarterly Volume 53 ; 53 ; >
 
   }
 

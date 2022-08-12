@@ -328,7 +328,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Atmospheric Measurement Techniques Volume 12 ; 12 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Atmospheric Measurement Techniques Volume 13 ; 13 ; >
       au < crawling ; exists ; 2021 ; 2021 ; Atmospheric Measurement Techniques Volume 14 ; 14 ; >
-      au < ready ; exists ; 2022 ; 2022 ; Atmospheric Measurement Techniques Volume 15 ; 15 ; >
+      au < crawling ; exists ; 2022 ; 2022 ; Atmospheric Measurement Techniques Volume 15 ; 15 ; >
 
   }
 
@@ -800,7 +800,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Geoscientific Instrumentation, Methods and Data Systems Volume 8 ; 8 ; >
       au < finished ; crawling ; 2020 ; 2020 ; Geoscientific Instrumentation, Methods and Data Systems Volume 9 ; 9 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2021 ; 2021 ; Geoscientific Instrumentation, Methods and Data Systems Volume 10 ; 10 ; >
-      au < ready ; exists ; 2022 ; 2022 ; Geoscientific Instrumentation, Methods and Data Systems Volume 11 ; 11 ; >
+      au < crawling ; exists ; 2022 ; 2022 ; Geoscientific Instrumentation, Methods and Data Systems Volume 11 ; 11 ; >
 
   }
 
@@ -858,7 +858,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; History of Geo- and Space Sciences Volume 10 ; 10 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; History of Geo- and Space Sciences Volume 11 ; 11 ; >
       au < crawling ; exists ; 2021 ; 2021 ; History of Geo- and Space Sciences Volume 12 ; 12 ; >
-      au < ready ; exists ; 2022 ; 2022 ; History of Geo- and Space Sciences Volume 13 ; 13 ; >
+      au < crawling ; exists ; 2022 ; 2022 ; History of Geo- and Space Sciences Volume 13 ; 13 ; >
 
   }
 
@@ -1159,7 +1159,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Ocean Science Volume 15 ; 15 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Ocean Science Volume 16 ; 16 ; >
       au < crawling ; exists ; 2021 ; 2021 ; Ocean Science Volume 17 ; 17 ; >
-      au < ready ; exists ; 2022 ; 2022 ; Ocean Science Volume 18 ; 18 ; >
+      au < crawling ; exists ; 2022 ; 2022 ; Ocean Science Volume 18 ; 18 ; >
 
   }
 
@@ -1408,7 +1408,7 @@
 
       au < deepCrawl ; exists ; 2020 ; 2020 ; Weather and Climate Dynamics Volume 1 ; 1 ; >
       au < crawling ; exists ; 2021 ; 2021 ; Weather and Climate Dynamics Volume 2 ; 2 ; >
-      au < ready ; exists ; 2022 ; 2022 ; Weather and Climate Dynamics Volume 3 ; 3 ; >
+      au < crawling ; exists ; 2022 ; 2022 ; Weather and Climate Dynamics Volume 3 ; 3 ; >
 
   }
 
