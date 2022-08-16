@@ -94,7 +94,7 @@
             <!--
             Rockefeller: https://rupress.org/jem/article-pdf/215/1/1/1018472/jem_20172022.pdf
             -->
-            <string>1,"^https?://((fonts|ajax)\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|cdnjs\.cloudflare\.com|s7\.addthis\.com)/"</string>
+            <string>1,"^https?://((fonts|ajax)\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|cdnjs\.cloudflare\.com)/"</string>
             <!-- Excluded pattern should be listed ahead of included pattern, which is more general-->
             <!--
                Exclude the following, it looks like an image, actually, it is a PPT, it is a hidden div
@@ -229,7 +229,6 @@
             <string>.*\.brightcove\.net</string>
             <string>.*\.cloudfront\.net</string>
             <string>cdnjs\.cloudflare\.com</string>
-            <string>s7\.addthis\.com</string>
             <string>gsw\.silverchair-cdn\.com</string>
             <!--this is for california unviersity press-->
             <string>ucp\.silverchair-cdn\.com</string>
