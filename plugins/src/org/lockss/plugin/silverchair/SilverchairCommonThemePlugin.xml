@@ -10,7 +10,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>10</string>
+        <string>11</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -161,6 +161,7 @@
             <string>1,"^https?://(ucp\.silverchair-cdn\.com)/"</string>
             <string>1,"^https?://(watermark\.silverchair\.com)/"</string>
             <string>1,"^https?://(ajot2\.silverchair-cdn\.com)/"</string>
+            <string>2,"%s.*javascript;:", base_url</string>
         </list>
     </entry>
     <entry>
