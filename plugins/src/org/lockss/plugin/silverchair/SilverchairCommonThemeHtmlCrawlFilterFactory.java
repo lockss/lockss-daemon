@@ -18,7 +18,6 @@ public class SilverchairCommonThemeHtmlCrawlFilterFactory implements FilterFacto
                                                  String encoding)
             throws PluginException {
         NodeFilter[] filters = new NodeFilter[] {
-
                 /*
                     Need to filter out all the articles referenced in the article bottom part:
                     For example:
@@ -34,6 +33,7 @@ public class SilverchairCommonThemeHtmlCrawlFilterFactory implements FilterFacto
                     https://pubs.geoscienceworld.org/sepm/jsedres/article-standard/91/11/1133/609365/10.5327/s1519-874x2006000300002
                  */
                 HtmlNodeFilters.tagWithAttribute("div", "class", "comment"),
+                HtmlNodeFilters.tagWithAttributeRegex("div", "class", "ref-list"),
         };
         return new HtmlFilterInputStream(in,
                 encoding,

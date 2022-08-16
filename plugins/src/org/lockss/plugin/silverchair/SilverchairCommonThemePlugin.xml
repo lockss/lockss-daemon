@@ -10,7 +10,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>9</string>
+        <string>10</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -168,12 +168,10 @@
         <string>text/*_content_validator_factory</string>
         <string>org.lockss.plugin.silverchair.BaseScContentValidatorFactory</string>
     </entry>
-    <!--
     <entry>
         <string>text/html_crawl_filter_factory</string>
         <string>org.lockss.plugin.silverchair.SilverchairCommonThemeHtmlCrawlFilterFactory</string>
     </entry>
-    -->
     <entry>
         <string>text/html_filter_factory</string>
         <string>org.lockss.plugin.silverchair.SilverchairCommonThemeHtmlHashFilterFactory</string>
