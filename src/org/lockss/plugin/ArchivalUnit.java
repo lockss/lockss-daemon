@@ -41,6 +41,7 @@ import org.lockss.daemon.*;
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.state.*;
 import org.lockss.util.*;
+import org.lockss.util.urlconn.AuCacheResultMap;
 import org.lockss.plugin.base.*;
 import org.lockss.rewriter.*;
 
@@ -257,6 +258,13 @@ public interface ArchivalUnit {
    * should insist on.
    */
   public PatternStringMap makeUrlMimeValidationMap();
+
+  /**
+   * Construct a PatternObjectMap mapping redirect URLs to a
+   * CacheException or CacheResultHandler
+   */
+  public AuCacheResultMap makeAuCacheResultMap()
+      throws ArchivalUnit.ConfigurationException;
 
   /**
    * Construct a list of Patterns of URLs that should be excluded from

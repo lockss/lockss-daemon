@@ -34,7 +34,8 @@ import org.lockss.crawler.*;
 import org.lockss.daemon.Crawler;
 import org.lockss.plugin.*;
 import org.lockss.util.Deadline;
-import org.lockss.util.urlconn.CacheException;
+import org.lockss.util.PatternObjectMap;
+import org.lockss.util.urlconn.*;
 
 public class MockCrawler extends NullCrawler {
   ArchivalUnit au;
@@ -206,6 +207,11 @@ public class MockCrawler extends NullCrawler {
         cs = new MockCrawlStatus();
       }
       return cs;
+    }
+
+    @Override
+    public AuCacheResultMap getAuCacheResultMap() {
+      return AuHttpResultMap.DEFAULT;
     }
 
     @Override

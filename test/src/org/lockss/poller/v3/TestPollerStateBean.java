@@ -92,7 +92,7 @@ public class TestPollerStateBean extends LockssTestCase {
   }
 
   public void testWeights() {
-    PatternFloatMap pfm = new PatternFloatMap(".*half.*,0.5;quarter,0.25");
+    PatternFloatMap pfm = PatternFloatMap.fromSpec(".*half.*,0.5;quarter,0.25");
     mau.setUrlPsllResultMap(pfm);
     PollerStateBean.TallyStatus ts = pollerState.getTallyStatus();
     pollerState.setUrlResultWeightMap(pfm);

@@ -786,6 +786,7 @@ public class BaseUrlFetcher implements UrlFetcher {
           log.warning("Couldn't normalize redirect URL: " + newUrlString, e);
         }
       }
+      checkRedirectAction(newUrlString);
       // Check redirect to login page *before* crawl spec, else plugins
       // would have to include login page URLs in crawl spec
       if (au.isLoginPageUrl(newUrlString)) {
@@ -835,6 +836,14 @@ public class BaseUrlFetcher implements UrlFetcher {
     }
   }
   
+  protected void checkRedirectAction(String url) throws CacheException {
+    CacheException ex =
+      crawlFacade.getAuCacheResultMap().mapUrl(au, conn, url, "foomsg");
+    if (ex != null) {
+      throw ex;
+    }
+  }
+
   public CIProperties getUncachedProperties()
       throws UnsupportedOperationException {
     if (conn == null) {

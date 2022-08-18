@@ -1023,7 +1023,7 @@ public class TestV3Poller extends LockssTestCase {
 
   public void testTallyBlocksSucceedsOnExtraFileEdgeCase() throws Exception {
 
-    testau.setUrlPsllResultMap(new PatternFloatMap(".*foo2.*,0.5"));
+    testau.setUrlPsllResultMap(PatternFloatMap.fromSpec(".*foo2.*,0.5"));
     V3Poller v3Poller = makeV3Poller("testing poll key");
     
     PeerIdentity id1 = findPeerIdentity("TCP:[127.0.0.1]:8990");
@@ -1913,7 +1913,7 @@ public class TestV3Poller extends LockssTestCase {
     V3Poller v3Poller = makeV3Poller("testing poll key");
     PeerIdentity id1 = findPeerIdentity("TCP:[127.0.0.1]:8990");
 
-    PatternFloatMap pfm = new PatternFloatMap("url1.*,0.5;quarter,0.25");
+    PatternFloatMap pfm = PatternFloatMap.fromSpec("url1.*,0.5;quarter,0.25");
     testau.setUrlPsllResultMap(pfm);
     PollerStateBean pollerState = v3Poller.getPollerStateBean();
     pollerState.setUrlResultWeightMap(pfm);
@@ -1943,7 +1943,7 @@ public class TestV3Poller extends LockssTestCase {
     v3Poller.setRecordPeerUrlLists(true);
     PeerIdentity id1 = findPeerIdentity("TCP:[127.0.0.1]:8990");
 
-    PatternFloatMap pfm = new PatternFloatMap("url1.*,0.5;quarter,0.25");
+    PatternFloatMap pfm = PatternFloatMap.fromSpec("url1.*,0.5;quarter,0.25");
     testau.setUrlPsllResultMap(pfm);
     PollerStateBean pollerState = v3Poller.getPollerStateBean();
     pollerState.setUrlResultWeightMap(pfm);

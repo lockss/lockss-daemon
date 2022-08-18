@@ -544,6 +544,11 @@ public class NullPlugin {
       return PatternStringMap.EMPTY;
     }
 
+    public AuCacheResultMap makeAuCacheResultMap()
+        throws ArchivalUnit.ConfigurationException {
+      return AuHttpResultMap.DEFAULT;
+    }
+
     public PatternFloatMap makeUrlPollResultWeightMap() {
       return null;
     }

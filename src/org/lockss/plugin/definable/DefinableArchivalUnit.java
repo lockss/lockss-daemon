@@ -34,6 +34,7 @@ package org.lockss.plugin.definable;
 import java.net.*;
 import java.util.*;
 import java.io.IOException;
+import org.apache.commons.lang3.tuple.*;
 
 import org.apache.commons.collections.*;
 import org.apache.oro.text.regex.*;
@@ -45,6 +46,7 @@ import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 import org.lockss.util.*;
 import org.lockss.util.Constants.RegexpContext;
+import org.lockss.util.urlconn.*;
 import org.lockss.plugin.exploded.ExplodingUrlConsumerFactory;
 import org.lockss.state.AuState;
 
@@ -338,38 +340,12 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
     if (umsg != null) {
       paramMap.putString(KEY_AU_CONFIG_USER_MSG, makeConfigUserMsg(umsg));
     }
-    String urlPat =
-      (String)definitionMap.getMapElement(KEY_AU_REDIRECT_TO_LOGIN_URL_PATTERN);
-    if (urlPat != null) {
-      paramMap.setMapElement(KEY_AU_REDIRECT_TO_LOGIN_URL_PATTERN,
-			     makeLoginUrlPattern(urlPat));
-    }
   }
 
   protected String makeConfigUserMsg(String fmt) {
     String res = convertNameString(fmt);
     if (fmt.equals(res)) return fmt;
     return res;
-  }
-
-  protected Pattern makeLoginUrlPattern(String val)
-      throws ArchivalUnit.ConfigurationException {
-
-    String patStr =
-      convertVariableRegexpString(val, RegexpContext.Url).getRegexp();
-    if (patStr == null) {
-      String msg = "Missing regexp args: " + val;
-      log.error(msg);
-      throw new ConfigurationException(msg);
-    }
-    try {
-      return
-	RegexpUtil.getCompiler().compile(patStr, Perl5Compiler.READ_ONLY_MASK);
-    } catch (MalformedPatternException e) {
-      String msg = "Can't compile URL pattern: " + patStr;
-      log.error(msg + ": " + e.toString());
-      throw new ArchivalUnit.ConfigurationException(msg, e);
-    }
   }
 
   public List<Pattern> makeExcludeUrlsFromPollsPatterns()
@@ -391,7 +367,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
 	// Find the last occurrence of comma to avoid regexp quoting
 	int pos = pair.lastIndexOf(',');
 	if (pos < 0) {
-	  throw new IllegalArgumentException("Malformed pattern,flost pair; no comma: "
+	  throw new IllegalArgumentException("Malformed pattern,float pair; no comma: "
 					     + pair);
 	}
 	String printf = pair.substring(0, pos);
@@ -411,9 +387,49 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
 	  lst.add(mp.getRegexp() + "," + weight);
 	}
       }
-      return new PatternFloatMap(lst);
+      return PatternFloatMap.fromSpec(lst);
     } else {
       return null;
+    }
+  }
+
+  public AuCacheResultMap makeAuCacheResultMap()
+      throws ArchivalUnit.ConfigurationException {
+    // Union the entries in the plugin's plugin_cache_result_list with
+    // the au_redirect_to_login_url_pattern, if any
+    List<Pair<String,String>> redirList =
+      new ArrayList<>(getDefinablePlugin().getResultMapEntries());
+    // the list
+    String redirToLoginPat =
+      (String)definitionMap.getMapElement(KEY_AU_REDIRECT_TO_LOGIN_URL_PATTERN);
+    if (!StringUtil.isNullString(redirToLoginPat)) {
+      redirList.add(ImmutablePair.of("redir:" + redirToLoginPat,
+                                     "org.lockss.util.urlconn.CacheException$RedirectToLoginPageException"));
+    }
+
+    // Now process all the "redir:" entries into a PatternObjectMap
+    List<Pair<String,Object>> objPats = new ArrayList<>();
+    for (Pair<String,String> pair : redirList) {
+      // Process only redir: patterns
+      java.util.regex.Matcher m = DefinablePlugin.RESULT_MAP_REDIR_PAT.matcher(pair.getLeft());
+      if (m.matches()) {
+        Object val = getDefinablePlugin().parseResultMapRhs(pair.getRight());
+        String patStr =
+          convertVariableRegexpString(m.group(1),
+                                      RegexpContext.Url).getRegexp();
+        objPats.add(ImmutablePair.of(patStr, val));
+      }
+    }
+    // And make an AuHttpResultMap from that and the plugin's HttpResultMap.
+    return new AuHttpResultMap(plugin.getCacheResultMap(),
+                               PatternObjectMap.fromPairs(objPats));
+  }
+
+  private Object parseRedirPatRhs(String rhs) {
+    try {
+      return getDefinablePlugin().parseResultMapRhs(rhs);
+    } catch (PluginException.InvalidDefinition e) {
+      throw new IllegalArgumentException("Illegal redir action: " + rhs);
     }
   }
 
@@ -609,14 +625,15 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
     return res;
   }
 
+  @Deprecated
   public boolean isLoginPageUrl(String url) {
-    Pattern urlPat =
-      (Pattern)paramMap.getMapElement(KEY_AU_REDIRECT_TO_LOGIN_URL_PATTERN);
-    if (urlPat == null) {
+    try {
+      Object rhs = makeAuCacheResultMap().mapUrl(this, null, null, url);
+      return rhs instanceof CacheException.RedirectToLoginPageException;
+    } catch (ConfigurationException e) {
+      log.warning("Error checking login URL: " + url, e);
       return false;
     }
-    Perl5Matcher matcher = RegexpUtil.getMatcher();
-    return  matcher.contains(url, urlPat);
   }    
 
   protected String makeName() {

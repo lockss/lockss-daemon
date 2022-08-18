@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2021 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2022 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -25,6 +25,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
 */
+
 package org.lockss.util.urlconn;
 
 import java.util.*;
@@ -326,99 +327,6 @@ public class HttpResultMap implements CacheResultMap {
     return new Triggers(triggers);
   }
 
-  /** Abstracts the event we're determining how to handle.  Either an HTTP
-   * response or an Exception */
-  abstract static class Event {
-    String message;
-
-    Event(String message) {
-      this.message = message;
-    }
-
-    void storeCauseIn(Exception e) {
-    }
-
-    String getMessage() {
-      return message;
-    }
-
-    /** Return string for either response code or Exception */
-    abstract String getResultString();
-
-    /** Invoke the handler on the result (responseCode or Exception) */
-    @Deprecated
-    abstract CacheException invokeHandler(CacheResultHandler handler,
-					  ArchivalUnit au,
-					  LockssUrlConnection conn)
-	throws PluginException;
-    
-    /** Invoke the handler on the result (responseCode or Exception) */
-    abstract CacheException invokeHandler(CacheResultHandler handler,
-					  ArchivalUnit au,
-					  String url)
-	throws PluginException;
-  }
-
-  /**  HTTP response event */
-  static class ResponseEvent extends Event {
-    int responseCode;
-
-    ResponseEvent(int responseCode, String message) {
-      super(message);
-      this.responseCode = responseCode;
-    }
-
-    String getResultString() {
-      return Integer.toString(responseCode);
-    }
-    
-    @Deprecated
-    CacheException invokeHandler(CacheResultHandler handler,
-				 ArchivalUnit au,
-				 LockssUrlConnection conn)
-	throws PluginException {
-      return invokeHandler(handler, au, getConnUrl(conn));
-    }
-    
-    CacheException invokeHandler(CacheResultHandler handler,
-				 ArchivalUnit au,
-				 String url)
-	throws PluginException {
-      return handler.handleResult(au, url, responseCode);
-    }
-  }
-
-  /** Exception thrown attempting HTTP request or reading response */
-  static class ExceptionEvent extends Event {
-    Exception fetchException;
-
-    ExceptionEvent(Exception fetchException, String message) {
-      super(message);
-      this.fetchException = fetchException;
-    }
-
-    void storeCauseIn(Exception e) {
-      e.initCause(fetchException);
-    }
-
-    String getResultString() {
-      return fetchException.getMessage();
-    }
-    
-    @Deprecated
-    CacheException invokeHandler(CacheResultHandler handler, ArchivalUnit au,
-				 LockssUrlConnection conn)
-	throws PluginException {
-      return handler.handleResult(au, getConnUrl(conn), fetchException);
-    }
-    
-    CacheException invokeHandler(CacheResultHandler handler, ArchivalUnit au,
-				 String url)
-	throws PluginException {
-      return handler.handleResult(au, url, fetchException);
-    }
-  }
-
   static String getConnUrl(LockssUrlConnection conn) {
     return conn != null ? conn.getURL() : null;
   }
@@ -441,17 +349,29 @@ public class HttpResultMap implements CacheResultMap {
     public abstract Class getExceptionClass();
     public abstract CacheResultHandler getHandler();
 
+    public static ExceptionInfo fromActionSpec(Object spec)
+        throws IllegalArgumentException {
+      if (spec instanceof Class) {
+        if (CacheResultHandler.class.isAssignableFrom((Class)spec)) {
+          return new ExceptionInfo.Handler((CacheResultHandler)spec);
+        } else if (CacheException.class.isAssignableFrom((Class)spec)) {
+          return new ExceptionInfo.Cls((Class)spec);
+        }
+      }
+      throw new IllegalArgumentException("Action spec must be a CacheException class or a CacheResultHandler class: " + spec);
+    }      
+
     /** Return the CacheException appropriate for the event, either from
      * the specified class or CacheResultHandler */
     @Deprecated
     abstract CacheException makeException(ArchivalUnit au,
 					  LockssUrlConnection connection,
-					  Event evt)
+					  CacheEvent evt)
 	throws Exception;
     
     abstract CacheException makeException(ArchivalUnit au,
 					  String url,
-					  Event evt)
+					  CacheEvent evt)
 	throws Exception;
 
     String fmtMsg(String s, String msg) {
@@ -467,7 +387,7 @@ public class HttpResultMap implements CacheResultMap {
     @Deprecated
     CacheException getCacheException(ArchivalUnit au,
 				     LockssUrlConnection connection,
-				     Event evt) {
+				     CacheEvent evt) {
       return getCacheException(au, getConnUrl(connection), evt);
     }
 
@@ -475,7 +395,7 @@ public class HttpResultMap implements CacheResultMap {
      * UnknownCodeException if an error occurs trying to create it */
     CacheException getCacheException(ArchivalUnit au,
 				     String url,
-				     Event evt) {
+				     CacheEvent evt) {
       try {
 	CacheException cacheException = makeException(au, url, evt);
 	return cacheException;
@@ -487,6 +407,15 @@ public class HttpResultMap implements CacheResultMap {
 					      + ex.getMessage());
       }
     }
+
+//     public CacheException invokeHandler(CacheResultHandler handler,
+//                                         CacheEvent event,
+//                                         ArchivalUnit au,
+//                                         String url)
+// 	throws PluginException {
+//       return handler.handleResult(au, url, event);
+//     }
+
 
     /** Wraps a plugin-supplied CacheResultHandler */
     public static class Handler extends ExceptionInfo {
@@ -517,14 +446,14 @@ public class HttpResultMap implements CacheResultMap {
       @Deprecated
       CacheException makeException(ArchivalUnit au,
 				   LockssUrlConnection connection,
-				   Event evt)
+				   CacheEvent evt)
 	  throws PluginException {
 	return makeException(au, getConnUrl(connection), evt);
       }
       
       CacheException makeException(ArchivalUnit au,
 				   String url,
-				   Event evt)
+				   CacheEvent evt)
 	  throws PluginException {
 	return evt.invokeHandler(handler, au, url);
       }
@@ -571,14 +500,14 @@ public class HttpResultMap implements CacheResultMap {
       @Deprecated
       CacheException makeException(ArchivalUnit au,
 				   LockssUrlConnection connection,
-				   Event evt)
+				   CacheEvent evt)
 	  throws Exception {
         return makeException(au, getConnUrl(connection), evt);
       }
       
       CacheException makeException(ArchivalUnit au,
 				   String url,
-				   Event evt)
+				   CacheEvent evt)
 	  throws Exception {
 	CacheException exception = (CacheException)ex.newInstance();
         exception.initMessage(fmtMsg(evt.getResultString(),
@@ -774,7 +703,7 @@ public class HttpResultMap implements CacheResultMap {
 				     int responseCode,
 				     String message)  {
 
-    Event evt = new ResponseEvent(responseCode, message);
+    CacheEvent evt = new CacheEvent.ResponseEvent(responseCode, message);
     ExceptionInfo ei = exceptionTable.get(responseCode);
     if (ei == null) {
       if (message != null) {
@@ -810,7 +739,7 @@ public class HttpResultMap implements CacheResultMap {
     if (fetchException instanceof CacheException) {
       return (CacheException)fetchException;
     }
-    Event evt = new ExceptionEvent(fetchException, message);
+    CacheEvent evt = new CacheEvent.ExceptionEvent(fetchException, message);
     ExceptionInfo ei = findNearestException(fetchException);
     if (ei == null) {
       if (message != null) {
@@ -855,4 +784,5 @@ public class HttpResultMap implements CacheResultMap {
   public String toString() {
     return "[HRM: " + exceptionTable + "]";
   }
+
 }
