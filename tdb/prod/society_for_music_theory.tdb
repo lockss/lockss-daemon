@@ -37,7 +37,7 @@
     {
    
       plugin = edu.indiana.lib.plugin.mto.MTO2022Plugin
-      param[base_url] = https://mtosmt.org/
+      param[base_url] = https://www.mtosmt.org/
       implicit < status ; year ; volume ; name ; param[volume] >
   
       au < testing ; 1993-1994 ; 0 ; Music Theory Online Volume 0 ; 0 >
