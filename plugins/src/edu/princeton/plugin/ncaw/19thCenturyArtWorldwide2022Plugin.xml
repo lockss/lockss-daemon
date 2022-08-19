@@ -1,0 +1,128 @@
+<!--
+
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>development</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>edu.princeton.plugin.ncaw.19thCenturyArtWorldwide2022Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <!-- TODO update old plugin to include (Legacy) -->
+  <entry>
+    <string>plugin_name</string>
+    <string>19th Century Art Worldwide Plugin</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"19th Century Art Worldwide Plugin, Base URL %s, Volume %s, Year %d", base_url, volume_name, year</string>
+  </entry>
+  <!-- copied from old plugin; also may have changed; this is the default policy-->
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+    <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%sNCAW-Vol%s\.html$", base_url, volume_name</string>
+      <!-- MF - had to add .* to this to get the main article pages, was only getting the print pages without it -->
+      <string>1,"^%s(index\.php/)?(autumn|spring|winter|summer)%02d(index)?/.*", base_url, au_short_year</string> <!-- MF first change, adding index.php and removing _-->
+      <string>1,"^https?://(%s|code\.jquery\.com)/[^?]*\.(bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$", url_host(base_url)</string>
+      <string>1,"^https?://(www.)?19thc-artworldwide.org/.*\.pdf", url_host(base_url)</string> <!--temp hard code because there's possibly no www in link -->
+    </list>
+  </entry>
+  <entry>
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <string>code\.jquery\.com</string>
+    </list>
+  </entry>
+   <!-- DRAFT copied from old plugin - -->
+  <entry>
+    <string>au_start_url</string>
+    <string>"%spast-issues", base_url</string>
+  </entry>
+  <entry>
+    <string>au_permission_url</string>
+    <string>"%sNCAW-Vol%s.html", base_url, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume_name</key>
+        <displayName>Volume Name</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>edu.princeton.plugin.ncaw.Ncaw2022HtmlLinkExtractorFactory</string>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>edu.princeton.plugin.ncaw.Ncaw2022UrlNormalizer</string>
+  </entry>
+</map>
