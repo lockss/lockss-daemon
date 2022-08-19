@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2022 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -74,29 +70,32 @@ public class BaseAuParamFunctor implements AuParamFunctor {
 		      Object arg, AuParamType type)
       throws PluginException {
     try {
-      if (fn.equals("url_host")) {
+      switch (fn) {
+      case "url_host":
 	return UrlUtil.getHost((String)arg);
-      } else if (fn.equals("url_path")) {
+      case "url_path":
 	return UrlUtil.getPath((String)arg);
-      } else if (fn.equals("add_www")) {
+      case "short_year":                // added in 1.76
+	return ((Integer)arg).intValue() % 100;
+      case "add_www":
 	return UrlUtil.addSubDomain((String)arg, "www");
-      } else if (fn.equals("del_www")) {
+      case "del_www":
 	return UrlUtil.delSubDomain((String)arg, "www");
-      } else if (fn.equals("to_https")) {
+      case "to_https":
 	return UrlUtil.replaceScheme((String)arg, "http", "https");
-      } else if (fn.equals("to_http")) {
+      case "to_http":
 	return UrlUtil.replaceScheme((String)arg, "https", "http");
-      } else if (fn.equals("url_encode")) {
+      case "url_encode":
 	return URLEncoder.encode((String)arg, URL_ENCODE_CHARSET);
-      } else if (fn.equals("url_decode")) {
+      case "url_decode":
 	return URLDecoder.decode((String)arg, URL_ENCODE_CHARSET);
-      } else if (fn.equals("range_min")) { // added in 1.70
+      case "range_min":                 // added in 1.70
         return ((Vector)AuParamType.Range.parse((String)arg)).firstElement();
-      } else if (fn.equals("range_max")) { // added in 1.70
+      case "range_max":                 // added in 1.70
         return ((Vector)AuParamType.Range.parse((String)arg)).lastElement();
-      } else if (fn.equals("num_range_min")) { // added in 1.70
+      case "num_range_min":             // added in 1.70
         return ((Vector)AuParamType.NumRange.parse((String)arg)).firstElement();
-      } else if (fn.equals("num_range_max")) { // added in 1.70
+      case "num_range_max":             // added in 1.70
         return ((Vector)AuParamType.NumRange.parse((String)arg)).lastElement();
       }
       throw new PluginException.InvalidDefinition("Undefined function: " + fn);
