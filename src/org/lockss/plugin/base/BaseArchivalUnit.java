@@ -107,7 +107,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   protected static final long DEFAULT_AU_MAX_SIZE = 0;
   protected static final long DEFAULT_AU_MAX_FILE_SIZE = 0;
 
-  protected BasePlugin plugin;
+  protected final BasePlugin plugin;
   protected boolean shouldRefetchOnCookies;
   protected long defaultFetchDelay = DEFAULT_FETCH_DELAY;
   protected List<String> urlStems;

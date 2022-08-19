@@ -803,6 +803,55 @@ public class DefinablePlugin extends BasePlugin {
    * @return either a CacheException class, or a CacheResultHandler instance
    */
   Object parseResultMapRhs(String rhs) {
+    Object res = parseResultMapRhs0(rhs);
+    if (res != null) {
+      return res;
+    } else {
+      throw new PluginException.InvalidDefinition("Second arg not a " +
+                                                  "CacheException or " +
+                                                  "CacheResultHandler class: " +
+                                                  rhs + ", in " + mapName);
+    }
+  }
+
+  /** Parse the result map RHS, which should be the name of either a
+   * CacheException or CacheResultHandler class name.
+   * @return either a CacheException class, or a CacheResultHandler instance
+   */
+  Object parseResultMapRemappableRhs(String rhs) {
+    try {
+      Object res = parseResultMapRhs0(rhs);
+      if (res != null) {
+        return res;
+      }
+    } catch (Exception e) {
+    }
+    try {
+      int code = Integer.parseInt(rhs);
+      // If parseable as an integer, it's a result code.
+      return Integer.valueOf(code);
+    } catch (Exception e) {
+    }
+    
+    
+//     } else {
+      throw new PluginException.InvalidDefinition("Second arg not a " +
+                                                  "CacheException or " +
+                                                  "CacheResultHandler class: " +
+                                                  rhs + ", in " + mapName);
+//     }
+  }
+
+//     if (rhs instanceof Integer) {
+//       if (rhs instanceof Class &&
+//           Exception.class.isAssignableFrom((Class)rhs)) {
+
+
+  /** Parse the result map RHS, which should be the name of either a
+   * CacheException or CacheResultHandler class name.
+   * @return either a CacheException class, or a CacheResultHandler instance
+   */
+Object parseResultMapRhs0(String rhs) {
     PluginFetchEventResponse resp =
       (PluginFetchEventResponse)newAuxClass(rhs, PluginFetchEventResponse.class,
                                             null);
@@ -812,10 +861,7 @@ public class DefinablePlugin extends BasePlugin {
       return WrapperUtil.wrap((CacheResultHandler)resp,
                               CacheResultHandler.class);
     } else {
-      throw new PluginException.InvalidDefinition("Second arg not a " +
-                                                  "CacheException or " +
-                                                  "CacheResultHandler class: " +
-                                                  rhs + ", in " + mapName);
+      return null;
     }
   }
 

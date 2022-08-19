@@ -27,7 +27,6 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.util.urlconn;
 
-import java.lang.reflect.Constructor;
 import java.util.*;
 import java.net.*;
 
@@ -47,10 +46,11 @@ public class AuHttpResultMap implements AuCacheResultMap {
   public static final AuHttpResultMap DEFAULT =
     new AuHttpResultMap(new HttpResultMap(), PatternObjectMap.EMPTY);
 
-  PatternObjectMap urlMap;
+  PatternObjectMap<ResultAction> urlMap;
   CacheResultMap resultMap;
 
-  public AuHttpResultMap(CacheResultMap resultMap, PatternObjectMap urlMap) {
+  public AuHttpResultMap(CacheResultMap resultMap,
+                         PatternObjectMap<ResultAction> urlMap) {
     this.resultMap = resultMap;
     this.urlMap = urlMap;
   }
@@ -58,7 +58,7 @@ public class AuHttpResultMap implements AuCacheResultMap {
   // map url.  If result is
   //  int: map through HttpResultMap.mapException()
   //  class name of CacheException or HttpReaultHandler:
-  //    use ExceptionInfo.makeException() to instantiate or call handler
+  //    use ResultAction.makeException() to instantiate or call handler
   //  else: assume is name of exception to map through HttpReaultMap.
   //    instantiate and call mapException()
   
@@ -67,49 +67,48 @@ public class AuHttpResultMap implements AuCacheResultMap {
                                String url,
                                String message) {
     log.critical("mapping: " + url);
-    Object rhs = urlMap.getMatch(url);
+    ResultAction rhs = urlMap.getMatch(url);
     if (rhs == null) {
       return null;
     }
     log.critical("rhs: " + rhs);
-    CacheException c_ex = null;
-    if (rhs instanceof Integer) {
-      return resultMap.mapException(au, url, (int)rhs, message);
-    } else {
-      try {
-        // See if it's a legal rhs action
-        HttpResultMap.ExceptionInfo ei =
-          HttpResultMap.ExceptionInfo.fromActionSpec((Class)rhs);
-        // Yes, return its result (newInstance or run handler)
-        CacheEvent evt = new CacheEvent.RedirectEvent(url, message);
-        return ei.makeException(au, connection, evt);
-      } catch (Exception e) {
-        log.warning("Couldn't interpret rhs as an HttpResultMap action", e);
-      }
-      log.critical("Assuming urlMap rhs the name of a class meant to be mapped by HttpResultMap: " + rhs);
-      if (rhs instanceof Class &&
-          Exception.class.isAssignableFrom((Class)rhs)) {
-        try {
-          Exception ex = instantiateException(((Class)rhs), message);
-          return resultMap.mapException(au, url, ex, message);
-        } catch (Exception e) {
-          log.error("Couldn't instantiate urlMap rhs: " + rhs, e);
-          throw new IllegalArgumentException("Couldn't instantiate urlMap rhs: "
-                                             + rhs);
-        }
-      }
-    }    
-    throw new IllegalArgumentException("Unhandled urlMap rhs: "
-                                       + rhs);
+    return resultMap.mapTrigger(au, url, rhs, message);
+//     if (rhs instanceof Integer) {
+//       return resultMap.mapException(au, url, (int)rhs, message);
+//     } else {
+//       try {
+//         // See if it's a legal rhs action
+//         ResultAction ei = ResultAction.fromActionSpec((Class)rhs);
+//         // Yes, return its result (newInstance or run handler)
+//         CacheEvent evt = new CacheEvent.RedirectEvent(url, message);
+//         return ei.makeException(au, connection, evt);
+//       } catch (Exception e) {
+//         log.warning("Couldn't interpret rhs as an HttpResultMap action", e);
+//       }
+//       log.critical("Assuming urlMap rhs the name of a class meant to be mapped by HttpResultMap: " + rhs);
+//       if (rhs instanceof Class &&
+//           Exception.class.isAssignableFrom((Class)rhs)) {
+//         try {
+//           Exception ex = instantiateException(((Class)rhs), message);
+//           return resultMap.mapException(au, url, ex, message);
+//         } catch (Exception e) {
+//           log.error("Couldn't instantiate urlMap rhs: " + rhs, e);
+//           throw new IllegalArgumentException("Couldn't instantiate urlMap rhs: "
+//                                              + rhs);
+//         }
+//       }
+//     }    
+//     throw new IllegalArgumentException("Unhandled urlMap rhs: "
+//                                        + rhs);
   }
 
-  Exception instantiateException(Class exclass, String message)
-      throws Exception{
-    Class[] sig = { String.class };
-    Object[] args = {message};
-    Constructor cons = exclass .getConstructor(sig);
-    return (Exception)cons.newInstance(args);
-  }
+//   Exception instantiateException(Class exclass, String message)
+//       throws Exception{
+//     Class[] sig = { String.class };
+//     Object[] args = {message};
+//     Constructor cons = exclass .getConstructor(sig);
+//     return (Exception)cons.newInstance(args);
+//   }
 
   public String toString() {
     return "[AuHRM: " + urlMap + "]";

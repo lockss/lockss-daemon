@@ -92,7 +92,7 @@ public abstract class CacheEvent {
 
     @Override
     public String getResultString() {
-      return Integer.toString(responseCode);
+      return "Response status " + Integer.toString(responseCode);
     }
     
     @Override

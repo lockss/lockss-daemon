@@ -42,190 +42,271 @@ import org.lockss.plugin.ContentValidationException;
 public abstract class ResultAction {
   static Logger log = Logger.getLogger("ResultAction");
 
-    String fmt;
+  String fmt;
 
-    public enum Type {Class, Handler};
+  public enum Type {Class, Handler, ReMap};
 
-    ResultAction(String fmt) {
-      this.fmt = fmt;
-    }
+  ResultAction(String fmt) {
+    this.fmt = fmt;
+  }
 
-    ResultAction() {
-    }
+  ResultAction() {
+  }
 
-    public abstract Type getType();
-    public abstract Class getExceptionClass();
-    public abstract CacheResultHandler getHandler();
+  public abstract Type getType();
 
-    public static ResultAction fromActionSpec(Object spec)
-        throws IllegalArgumentException {
-      if (spec instanceof Class) {
-        if (CacheResultHandler.class.isAssignableFrom((Class)spec)) {
-          return new ResultAction.Handler((CacheResultHandler)spec);
-        } else if (CacheException.class.isAssignableFrom((Class)spec)) {
-          return new ResultAction.Cls((Class)spec);
-        }
+  public boolean isReMap() {
+    return false;
+  }
+
+  public static ResultAction fromActionSpec(Object spec)
+      throws IllegalArgumentException {
+    if (spec instanceof Class) {
+      if (CacheResultHandler.class.isAssignableFrom((Class)spec)) {
+        return new ResultAction.Handler((CacheResultHandler)spec);
+      } else if (CacheException.class.isAssignableFrom((Class)spec)) {
+        return new ResultAction.Cls((Class)spec);
       }
-      throw new IllegalArgumentException("Action spec must be a CacheException class or a CacheResultHandler class: " + spec);
-    }      
+    }
+    throw new IllegalArgumentException("Action spec must be a CacheException class or a CacheResultHandler class: " + spec);
+  }      
 
-    /** Return the CacheException appropriate for the event, either from
-     * the specified class or CacheResultHandler */
-    @Deprecated
-    abstract CacheException makeException(ArchivalUnit au,
-					  LockssUrlConnection connection,
-					  CacheEvent evt)
-	throws Exception;
+  /** Return the CacheException appropriate for the event, either from
+   * the specified class or CacheResultHandler */
+  @Deprecated
+  abstract CacheException makeException(ArchivalUnit au,
+                                        LockssUrlConnection connection,
+                                        CacheEvent evt)
+      throws Exception;
     
-    abstract CacheException makeException(ArchivalUnit au,
-					  String url,
-					  CacheEvent evt)
-	throws Exception;
+  abstract CacheException makeException(ArchivalUnit au,
+                                        String url,
+                                        CacheEvent evt)
+      throws Exception;
 
-    String fmtMsg(String s, String msg) {
-      if (fmt != null) {
-	return String.format(fmt, s);
-      }
-      if (msg != null) {
-	return s + " " + msg;
-      }
-      return s;
+  public Class getExceptionClass() {
+    throw new UnsupportedOperationException();
+  }
+
+  public CacheResultHandler getHandler() {
+    throw new UnsupportedOperationException();
+  }
+
+  String fmtMsg(String s, String msg) {
+    if (fmt != null) {
+      return String.format(fmt, s);
     }
+    if (msg != null) {
+      return s + " " + msg;
+    }
+    return s;
+  }
     
-    @Deprecated
-    CacheException getCacheException(ArchivalUnit au,
-				     LockssUrlConnection connection,
-				     CacheEvent evt) {
-      return getCacheException(au, HttpResultMap.getConnUrl(connection), evt);
-    }
+  @Deprecated
+  CacheException getCacheException(ArchivalUnit au,
+                                   LockssUrlConnection connection,
+                                   CacheEvent evt) {
+    return getCacheException(au, HttpResultMap.getConnUrl(connection), evt);
+  }
 
-    /** Return the exception to throw for this event, or an
-     * UnknownCodeException if an error occurs trying to create it */
-    CacheException getCacheException(ArchivalUnit au,
-				     String url,
-				     CacheEvent evt) {
-      try {
-	CacheException cacheException = makeException(au, url, evt);
-	return cacheException;
-      } catch (Exception ex) {
- 	log.error("Can't make CacheException for: " + evt.getResultString(),
-		  ex);
-	return new
-	  CacheException.UnknownCodeException("Unable to make exception:"
-					      + ex.getMessage());
-      }
-    }
-
-    /** Wraps a plugin-supplied CacheResultHandler */
-    public static class Handler extends ResultAction {
-      CacheResultHandler handler;
-      
-      Handler(CacheResultHandler handler) {
-	this.handler = handler;
-      }
-
-      Handler(CacheResultHandler handler, String fmt) {
-	super(fmt);
-	this.handler = handler;
-      }
-
-      @Override
-      public Type getType() {
-        return Type.Handler;
-      }
-      @Override
-      public Class getExceptionClass() {
-        throw new UnsupportedOperationException();
-      }
-      @Override
-      public CacheResultHandler getHandler() {
-        return handler;
-      }
-
-      @Deprecated
-      CacheException makeException(ArchivalUnit au,
-				   LockssUrlConnection connection,
-				   CacheEvent evt)
-	  throws PluginException {
-	return makeException(au, HttpResultMap.getConnUrl(connection), evt);
-      }
-      
-      CacheException makeException(ArchivalUnit au,
-				   String url,
-				   CacheEvent evt)
-	  throws PluginException {
-	return evt.invokeHandler(handler, au, url);
-      }
-
-      public boolean equals(Object o) {
-        if (o instanceof Handler) {
-          Handler oh = (Handler)o;
-          return handler.equals(oh.handler);
-        }
-        return false;
-      }
-
-      public String toString() {
-	return "[EIH: " + handler + "]";
-      }
-    }
-
-    /** Wraps a CacheException class */
-    public static class Cls extends ResultAction {
-      Class ex;
-      
-      Cls(Class ex) {
-	this.ex = ex;
-      }
-
-      Cls(Class ex, String fmt) {
-	super(fmt);
-	this.ex = ex;
-      }
-
-      @Override
-      public Type getType() {
-        return Type.Class;
-      }
-      @Override
-      public Class getExceptionClass() {
-        return ex;
-      }
-      @Override
-      public CacheResultHandler getHandler() {
-        throw new UnsupportedOperationException();
-      }
-
-      @Deprecated
-      CacheException makeException(ArchivalUnit au,
-				   LockssUrlConnection connection,
-				   CacheEvent evt)
-	  throws Exception {
-        return makeException(au, HttpResultMap.getConnUrl(connection), evt);
-      }
-      
-      CacheException makeException(ArchivalUnit au,
-				   String url,
-				   CacheEvent evt)
-	  throws Exception {
-	CacheException exception = (CacheException)ex.newInstance();
-        exception.initMessage(fmtMsg(evt.getResultString(),
-				     evt.getMessage()));
-	evt.storeCauseIn(exception);
-	return exception;
-      }
-
-      public boolean equals(Object o) {
-        if (o instanceof Cls) {
-          Cls oh = (Cls)o;
-          return ex.equals(oh.ex);
-        }
-        return false;
-      }
-
-      public String toString() {
-	return "[EIC: " + ex + "]";
-      }
+  /** Return the exception to throw for this event, or an
+   * UnknownCodeException if an error occurs trying to create it */
+  CacheException getCacheException(ArchivalUnit au,
+                                   String url,
+                                   CacheEvent evt) {
+    try {
+      CacheException cacheException = makeException(au, url, evt);
+      return cacheException;
+    } catch (Exception ex) {
+      log.error("Can't make CacheException for: " + evt.getResultString(),
+                ex);
+      return new
+        CacheException.UnknownCodeException("Unable to make exception:"
+                                            + ex.getMessage());
     }
   }
 
+  /** Return a ResultAction for the supplied Object, which may be:<ul>
+   * <li>CacheResultHandler instance</li>
+   * <li>CacheException instance</li>
+   * <li>CacheException class</li>
+   * <li>Other -> ReMap action</li>
+   * </ul>
+   */
+  public static ResultAction fromObject(Object response) {
+//     if (
+
+    if (response instanceof CacheResultHandler) {
+      return new Handler((CacheResultHandler)response);
+    } else if (response instanceof CacheException) {
+      return new Cls(response.getClass());
+    } else if (response instanceof Class &&
+               CacheException.class.isAssignableFrom((Class)response)) {
+      return new Cls((Class)response);
+//           
+    } else {
+      log.critical("isClass: " + (response instanceof Class));
+      log.critical("whatClass: " + response.getClass());
+      if (response instanceof Class) {
+        log.critical("isCacheException: " + CacheException.class.isAssignableFrom((Class)response));
+      }
+      return new ReMap(response);
+    }
+  }
+
+
+  /** Wraps a plugin-supplied CacheResultHandler */
+  public static class Handler extends ResultAction {
+    CacheResultHandler handler;
+      
+    Handler(CacheResultHandler handler) {
+      this.handler = handler;
+    }
+
+    Handler(CacheResultHandler handler, String fmt) {
+      super(fmt);
+      this.handler = handler;
+    }
+
+    @Override
+    public Type getType() {
+      return Type.Handler;
+    }
+
+    @Override
+    public CacheResultHandler getHandler() {
+      return handler;
+    }
+
+    @Deprecated
+    CacheException makeException(ArchivalUnit au,
+                                 LockssUrlConnection connection,
+                                 CacheEvent evt)
+        throws PluginException {
+      return makeException(au, HttpResultMap.getConnUrl(connection), evt);
+    }
+      
+    CacheException makeException(ArchivalUnit au,
+                                 String url,
+                                 CacheEvent evt)
+        throws PluginException {
+      return evt.invokeHandler(handler, au, url);
+    }
+
+    public boolean equals(Object o) {
+      if (o instanceof Handler) {
+        Handler oh = (Handler)o;
+        return handler.equals(oh.handler);
+      }
+      return false;
+    }
+
+    public String toString() {
+      return "[RAH: " + handler + "]";
+    }
+  }
+
+  /** Action that throws a CacheException */
+  public static class Cls extends ResultAction {
+    Class ex;
+      
+    Cls(Class ex) {
+      this.ex = ex;
+    }
+
+    Cls(Class ex, String fmt) {
+      super(fmt);
+      this.ex = ex;
+    }
+
+    @Override
+    public Type getType() {
+      return Type.Class;
+    }
+    @Override
+    public Class getExceptionClass() {
+      return ex;
+    }
+
+    @Deprecated
+    CacheException makeException(ArchivalUnit au,
+                                 LockssUrlConnection connection,
+                                 CacheEvent evt)
+        throws Exception {
+      return makeException(au, HttpResultMap.getConnUrl(connection), evt);
+    }
+      
+    CacheException makeException(ArchivalUnit au,
+                                 String url,
+                                 CacheEvent evt)
+        throws Exception {
+      CacheException exception = (CacheException)ex.newInstance();
+      exception.initMessage(fmtMsg(evt.getResultString(),
+                                   evt.getMessage()));
+      evt.storeCauseIn(exception);
+      return exception;
+    }
+
+    public boolean equals(Object o) {
+      if (o instanceof Cls) {
+        Cls oh = (Cls)o;
+        return ex.equals(oh.ex);
+      }
+      return false;
+    }
+
+    public String toString() {
+      return "[RAC: " + ex + "]";
+    }
+  }
+
+  /** Action that remaps the result */
+  public static class ReMap extends ResultAction {
+    Object remapVal;
+      
+    ReMap(Object remapVal) {
+      this.remapVal = remapVal;
+      log.critical("Construct ReMap: " + remapVal, new Throwable());
+    }
+
+    public boolean isReMap() {
+      return true;
+    }
+
+    public Object getRemapVal() {
+      return remapVal;
+    }
+
+    @Override
+    public Type getType() {
+      return Type.ReMap;
+    }
+
+    @Deprecated
+    CacheException makeException(ArchivalUnit au,
+                                 LockssUrlConnection connection,
+                                 CacheEvent evt)
+        throws Exception {
+      throw new UnsupportedOperationException("Can't makeException from ResultAction type ReMap: " + this);
+    }
+      
+    CacheException makeException(ArchivalUnit au,
+                                 String url,
+                                 CacheEvent evt)
+        throws Exception {
+      throw new UnsupportedOperationException("Can't makeException from ResultAction type ReMap: " + this);
+    }
+
+    public boolean equals(Object o) {
+      if (o instanceof ReMap) {
+        ReMap oh = (ReMap)o;
+        return remapVal.equals(oh.remapVal);
+      }
+      return false;
+    }
+
+    public String toString() {
+      return "[RAR: " + remapVal + "]";
+    }
+  }
+}

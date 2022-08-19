@@ -53,6 +53,7 @@ import org.lockss.extractor.*;
  */
 
 public class TestDefinableArchivalUnit extends LockssTestCase {
+  private static Logger log = Logger.getLogger("TestDefinableArchivalUnit");
   private DefinableArchivalUnit cau = null;
   private TypedEntryMap configMap;
   private TypedEntryMap additionalAuConfig = new TypedEntryMap();
@@ -1464,9 +1465,14 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   }
 
   MyDefinablePlugin loadLargePlugin() {
-    return (MyDefinablePlugin)
-      PluginTestUtil.findPlugin("org.lockss.plugin.definable.LargeTestPlugin");
+    log.critical("About to load LargeTestPlugin");
+//     return (MyDefinablePlugin)
+//       PluginTestUtil.findPlugin("org.lockss.plugin.definable.LargeTestPlugin");
     // return loadPlugin("org.lockss.plugin.definable.LargeTestPlugin");
+    log.critical("Loaded LargeTestPlugin");
+    Plugin p =
+      PluginTestUtil.findPlugin("org.lockss.plugin.definable.LargeTestPlugin");
+    return (MyDefinablePlugin)p;
   }
 
   public void testLargePlugin() throws Exception {
@@ -1675,6 +1681,10 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 		 urlMimeValidations.getMatch("http://base.foo/base_path/bar/pdf_url/xxx"));
     assertEquals(null,
 		 urlMimeValidations.getMatch("http://base.foo/bar/pdf_url/xxx"));
+
+    // Redirect patterns
+    assertTrue(au.isLoginPageUrl("sdfasdfasdfasdfasdfasdfasdf"));
+
   }
 
   public void testNoMimeMap() throws Exception {

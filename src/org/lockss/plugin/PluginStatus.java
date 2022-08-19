@@ -403,12 +403,11 @@ class HTTPResultMapping extends PluginStatus implements StatusAccessor {
   public List getRows(HttpResultMap hrMap, HttpResultMap defaultResMap)
       throws Exception {
     List rows = new ArrayList();
-    Map<Object,HttpResultMap.ExceptionInfo> defMap =
-      defaultResMap.getExceptionMap();
-    for (Map.Entry<Object,HttpResultMap.ExceptionInfo> ent
+    Map<Object,ResultAction> defMap = defaultResMap.getExceptionMap();
+    for (Map.Entry<Object,ResultAction> ent
            : hrMap.getExceptionMap().entrySet()) {
       Object lhs = ent.getKey();
-      HttpResultMap.ExceptionInfo ei = ent.getValue();
+      ResultAction ei = ent.getValue();
       Map row = new HashMap();
       StatusTable.DisplayedValue trigger =
         new StatusTable.DisplayedValue(shortName(lhs));
