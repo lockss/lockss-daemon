@@ -35,23 +35,22 @@ import org.apache.commons.lang3.tuple.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
 
-public class TestPatternObjectMap extends LockssTestCase {
+public class TestPatternMap extends LockssTestCase {
 
   static Function ID = Function.identity();
 
-  private PatternObjectMap makeMap() {
-    return
-      PatternObjectMap.fromPairs(ListUtil.list(ImmutablePair.of("a.*b", 2),
-                                               ImmutablePair.of("ccc", "foo")));
+  private PatternMap makeMap() {
+    return PatternMap.fromPairs(ListUtil.list(Pair.of("a.*b", 2),
+                                              Pair.of("ccc", "foo")));
   }
 
   public void testToString() {
-    PatternObjectMap ppm1 = makeMap();
+    PatternMap ppm1 = makeMap();
     assertEquals("[pm: [a.*b: 2], [ccc: foo]]", ppm1.toString());
   }
 
   public void testGetMatch() {
-    PatternObjectMap ppm1 = makeMap();
+    PatternMap ppm1 = makeMap();
     assertEquals(null, ppm1.getMatch("a123c"));
     assertEquals("df", ppm1.getMatch("a123c", "df"));
     assertEquals(2, ppm1.getMatch("a123b"));
@@ -61,22 +60,22 @@ public class TestPatternObjectMap extends LockssTestCase {
   }
 
   public void testEmpty() {
-    PatternObjectMap ppm = PatternObjectMap.EMPTY;
+    PatternMap ppm = PatternMap.EMPTY;
     assertEquals(null, ppm.getMatch("a"));
     assertEquals("42", ppm.getMatch("a", "42"));
     assertEquals("[pm: EMPTY]", ppm.toString());
   }
 
   public void testIsEmpty() {
-    assertTrue(PatternObjectMap.EMPTY.isEmpty());
-    assertTrue(PatternObjectMap.fromPairs(Collections.emptyList()).isEmpty());
+    assertTrue(PatternMap.EMPTY.isEmpty());
+    assertTrue(PatternMap.fromPairs(Collections.emptyList()).isEmpty());
     assertFalse(makeMap().isEmpty());
   }
 
   public void testIll() {
     try {
-      PatternObjectMap ppm1 =
-        PatternObjectMap.fromPairs(ListUtil.list(ImmutablePair.of("a[)2", "foo")));
+      PatternMap ppm1 =
+        PatternMap.fromPairs(ListUtil.list(Pair.of("a[)2", "foo")));
       fail("Should throw: Malformed");
     } catch (IllegalArgumentException e) {
       assertClass(PatternSyntaxException.class, e.getCause());
@@ -84,9 +83,9 @@ public class TestPatternObjectMap extends LockssTestCase {
   }
 
   public void testListMap() {
-    PatternObjectMap<List> plm =
-      PatternObjectMap.fromPairs(ListUtil.list(ImmutablePair.of("a.*b", ListUtil.list(1,2)),
-                                               ImmutablePair.of("ccc", ListUtil.list(3,3))));
+    PatternMap<List> plm =
+      PatternMap.fromPairs(ListUtil.list(Pair.of("a.*b", ListUtil.list(1,2)),
+                                               Pair.of("ccc", ListUtil.list(3,3))));
     assertEquals(ListUtil.list(1,2), plm.getMatch("a123cb"));
   }
 }

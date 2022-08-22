@@ -36,23 +36,23 @@ import org.apache.commons.lang3.tuple.*;
  * against which the strings are matched.  The patterns are ordered;
  * the value associated with the first one that matches is
  * returned.  */
-public class PatternObjectMap<T> extends AbstractPatternMap<T> {
+public class PatternMap<T> extends AbstractPatternMap<T> {
 
-  /** An empty PatternObjectMap, which always returns the default
+  /** An empty PatternMap, which always returns the default
    * value. */
-  public final static PatternObjectMap EMPTY =
-    (PatternObjectMap)new PatternObjectMap().compilePairs(Collections.emptyList());
+  public final static PatternMap EMPTY =
+    (PatternMap)new PatternMap().compilePairs(Collections.emptyList());
 
-  protected PatternObjectMap() {
+  protected PatternMap() {
     super();
   }
 
-  /** Create a PatternObjectMap from a list of strings of the form
+  /** Create a PatternMap from a list of strings of the form
    * <code><i>RE</i>,<i>string</i></code>
    */
-  public static <T> PatternObjectMap<T> fromPairs(List<Pair<String,T>> patternPairs)
+  public static <T> PatternMap<T> fromPairs(List<Pair<String,T>> patternPairs)
       throws IllegalArgumentException {
-    return (PatternObjectMap)new PatternObjectMap().compilePairs(patternPairs);
+    return (PatternMap)new PatternMap().compilePairs(patternPairs);
   }
 
   protected T parseRhs(String rhs) {

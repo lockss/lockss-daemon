@@ -162,7 +162,9 @@ public interface ArchivalUnit {
    * Return true if the URL is that of a login page.
    * @param url the url to test
    * @return true if login page URL
+   * @deprecated
    */
+  @Deprecated
   public boolean isLoginPageUrl(String url);
 
   /**
@@ -260,7 +262,7 @@ public interface ArchivalUnit {
   public PatternStringMap makeUrlMimeValidationMap();
 
   /**
-   * Construct a PatternObjectMap mapping redirect URLs to a
+   * Construct a PatternMap mapping redirect URLs to a
    * CacheException or CacheResultHandler
    */
   public AuCacheResultMap makeAuCacheResultMap()

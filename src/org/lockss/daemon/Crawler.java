@@ -28,7 +28,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.daemon;
 
-import org.lockss.util.PatternObjectMap;
+import org.lockss.util.PatternMap;
 import org.lockss.util.urlconn.*;
 import org.lockss.plugin.*;
 import org.lockss.crawler.*;

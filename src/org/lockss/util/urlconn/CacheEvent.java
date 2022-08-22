@@ -28,12 +28,16 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util.urlconn;
 
+import java.util.*;
+import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 
 /** Records type and details of an (usually anomalous) event that
  * occurs while attempting to cache (fetch and store) an artifact.  */
 public abstract class CacheEvent {
+  static Logger log = Logger.getLogger("CacheEvent");
+
   /** The type of event */
   public enum EventType {RESPONSE_CODE, EXCEPTION, REDIRECT_TO_URL};
 
@@ -50,6 +54,14 @@ public abstract class CacheEvent {
 
   /** Return the type of event */
   public abstract EventType getEventType();
+
+  public abstract Object getEventValue();
+
+  public abstract CacheException makeUnknownException(String message);
+
+  public ResultAction lookupIn(Map<Object,ResultAction> exceptionTable) {
+    return exceptionTable.get(getEventValue());
+  }
 
   /** Return a human readable explanation of the event */
   public String getMessage() {
@@ -84,15 +96,20 @@ public abstract class CacheEvent {
       super(message);
       this.responseCode = responseCode;
     }
-
     @Override
     public EventType getEventType() {
       return EventType.RESPONSE_CODE;
     }
 
     @Override
+    public Object getEventValue() {
+      return Integer.valueOf(responseCode);
+    }
+
+    @Override
     public String getResultString() {
-      return "Response status " + Integer.toString(responseCode);
+//       return "Response code " + Integer.toString(responseCode);
+      return Integer.toString(responseCode);
     }
     
     @Override
@@ -101,6 +118,18 @@ public abstract class CacheEvent {
 				 String url)
 	throws PluginException {
       return handler.handleResult(au, url, responseCode);
+    }
+
+    @Override
+    public CacheException makeUnknownException(String message) {
+      String msg = "Unknown result code: " + responseCode +
+        (message != null ? (": " + message) : "");
+      return new CacheException.UnknownCodeException(msg);
+    }
+
+    @Override
+    public String toString() {
+      return "[CECode: " + message + ": " + responseCode + "]";
     }
   }
 
@@ -136,19 +165,52 @@ public abstract class CacheEvent {
       return EventType.EXCEPTION;
     }
 
+    @Override
+    public Object getEventValue() {
+      return fetchException;
+    }
+
+
     public void storeCauseIn(Exception e) {
       e.initCause(fetchException);
     }
 
+    @Override
     public String getResultString() {
       return fetchException.getMessage();
     }
     
+    @Override
+    public ResultAction lookupIn(Map<Object,ResultAction> exceptionTable) {
+      Class exClass = fetchException.getClass();
+      ResultAction ra;
+      do {
+        ra = exceptionTable.get(exClass);
+      } while (ra == null
+               && ((exClass = exClass.getSuperclass()) != null
+                   && exClass != Exception.class));
+      log.debug3("nearest to: " + fetchException + " = " + exClass);
+      return ra;
+    }
+
+    @Override
     public CacheException invokeHandler(CacheResultHandler handler,
                                         ArchivalUnit au,
                                         String url)
 	throws PluginException {
       return handler.handleResult(au, url, fetchException);
+    }
+
+    @Override
+    public CacheException makeUnknownException(String message) {
+      String msg = "Unmapped exception: " + fetchException +
+        (message != null ? (": " + message) : "");
+      return new CacheException.UnknownExceptionException(msg,
+                                                          fetchException);
+    }
+
+    public String toString() {
+      return "[CEEx: " + message + ": " + fetchException + "]";
     }
   }
 
@@ -167,6 +229,11 @@ public abstract class CacheEvent {
       return EventType.REDIRECT_TO_URL;
     }
 
+    @Override
+    public Object getEventValue() {
+      return redirToUrl;
+    }
+
     public String getResultString() {
 //       return "Redirect to: " + redirToUrl;
       return redirToUrl;
@@ -179,5 +246,33 @@ public abstract class CacheEvent {
 	throws PluginException {
       return handler.handleRedirect(au, url, redirToUrl);
     }
+
+    @Override
+    public CacheException makeUnknownException(String message) {
+      String msg = "Unmapped remap value: " + redirToUrl +
+        (message != null ? (": " + message) : "");
+      return new CacheException.UnknownCodeException(msg);
+    }
+
+    public String toString() {
+      return "[CERedir: " + message + ": " + redirToUrl + "]";
+    }
   }
+
+  public static CacheEvent fromRemapResult(ResultAction ra, String message) {
+    if (!ra.isReMap()) {
+      throw new UnsupportedOperationException("Attempt to remap non-remap result: " + ra);
+    }
+    Object remapVal = ra.getRemapVal(message);
+    if (remapVal instanceof Integer) {
+      return new CacheEvent.ResponseEvent((Integer)remapVal, message);
+    } else if (remapVal instanceof Exception) {
+      return new CacheEvent.ExceptionEvent((Exception)remapVal, message);
+    } else {
+      throw new UnsupportedOperationException("Unknown remap value type: " + remapVal);
+    }
+  }
+
+
+
 }

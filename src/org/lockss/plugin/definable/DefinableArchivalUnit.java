@@ -404,29 +404,28 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
     String redirToLoginPat =
       (String)definitionMap.getMapElement(KEY_AU_REDIRECT_TO_LOGIN_URL_PATTERN);
     if (!StringUtil.isNullString(redirToLoginPat)) {
-      redirList.add(ImmutablePair.of("redir:" + redirToLoginPat,
+      redirList.add(Pair.of("redir:" + redirToLoginPat,
                                      "org.lockss.util.urlconn.CacheException$RedirectToLoginPageException"));
     }
 
-    // Now process all the "redir:" entries into a PatternObjectMap
+    // Now process all the "redir:" entries into a PatternMap
     List<Pair<String,ResultAction>> actionPats = new ArrayList<>();
     for (Pair<String,String> pair : redirList) {
       // Process only redir: patterns
       java.util.regex.Matcher m = DefinablePlugin.RESULT_MAP_REDIR_PAT.matcher(pair.getLeft());
       if (m.matches()) {
-        log.critical("redir spec: " + pair);
-        
-        ResultAction act = ResultAction.fromObject(pair.getRight());
-        log.critical("ResultAction: " + act);
+        ResultAction act =
+          getDefinablePlugin().parseResultAction(pair.getRight());
+
         String patStr =
           convertVariableRegexpString(m.group(1),
                                       RegexpContext.Url).getRegexp();
-        actionPats.add(ImmutablePair.of(patStr, act));
+        actionPats.add(Pair.of(patStr, act));
       }
     }
     // And make an AuHttpResultMap from that and the plugin's HttpResultMap.
     return new AuHttpResultMap(plugin.getCacheResultMap(),
-                               PatternObjectMap.fromPairs(actionPats));
+                               PatternMap.fromPairs(actionPats));
   }
 
   private Object parseRedirPatRhs(String rhs) {
@@ -629,10 +628,17 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
     return res;
   }
 
+  /** Return true if the URL matches the plugin's login page URL
+   * pattern.  (Actually, if it matches a pattern the plugin has
+   * mapped to RedirectToLoginPageException.
+   * @deprecated
+   */
   @Deprecated
   public boolean isLoginPageUrl(String url) {
     try {
-      Object rhs = makeAuCacheResultMap().mapUrl(this, null, url, "Login page");
+      Object rhs = makeAuCacheResultMap().mapUrl(this, null,
+                                                 "Unknown", url,
+                                                 "Login page");
       return rhs instanceof CacheException.RedirectToLoginPageException;
     } catch (ConfigurationException e) {
       log.warning("Error checking login URL: " + url, e);

@@ -30,15 +30,16 @@ package org.lockss.util.urlconn;
 
 import org.lockss.plugin.ArchivalUnit;
 
-
 /**
  * Adds per-AU data to the CacheResultMap
  */
 public interface AuCacheResultMap {
 
+  /** Match a URL against a set of patterns, return the corresponding
+   * action */
   public CacheException mapUrl(ArchivalUnit au,
                                LockssUrlConnection connection,
-                               String url,
+                               String origUrl,
+                               String toUrl,
                                String message);
-  
 }

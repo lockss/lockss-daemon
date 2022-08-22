@@ -508,6 +508,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     return shouldRefetchOnCookies;
   }
   
+  @Deprecated
   public boolean isLoginPageUrl(String url) {
     return false;
   }
@@ -658,7 +659,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   public AuCacheResultMap makeAuCacheResultMap()
       throws ArchivalUnit.ConfigurationException {
     return new AuHttpResultMap(plugin.getCacheResultMap(),
-                               PatternObjectMap.EMPTY);
+                               PatternMap.EMPTY);
   }
 
   public PatternStringMap makeUrlMimeTypeMap() {

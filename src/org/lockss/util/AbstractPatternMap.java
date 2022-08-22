@@ -82,7 +82,7 @@ public abstract class AbstractPatternMap<T> {
 	String rhsStr = pair.substring(pos + 1);
         try {
           T rhs = parseRhs(rhsStr);
-          pairList.add(ImmutablePair.of(regexp, rhs));
+          pairList.add(Pair.of(regexp, rhs));
 	} catch (Exception e) {
 	  throw new IllegalArgumentException("Illegal RHS: " + rhsStr +
                                              ": " + e.toString());

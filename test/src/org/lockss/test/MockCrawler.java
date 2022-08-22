@@ -34,7 +34,7 @@ import org.lockss.crawler.*;
 import org.lockss.daemon.Crawler;
 import org.lockss.plugin.*;
 import org.lockss.util.Deadline;
-import org.lockss.util.PatternObjectMap;
+import org.lockss.util.PatternMap;
 import org.lockss.util.urlconn.*;
 
 public class MockCrawler extends NullCrawler {
@@ -181,6 +181,7 @@ public class MockCrawler extends NullCrawler {
     private PermissionMap permissionMap;
     private List<String> globallyPermittedHosts = Collections.emptyList();
     private List<String> allowedPluginPermittedHost = Collections.emptyList();
+    private AuHttpResultMap auResMap;
 
     public MockCrawlerFacade() {
       au = new MockArchivalUnit();
@@ -211,7 +212,14 @@ public class MockCrawler extends NullCrawler {
 
     @Override
     public AuCacheResultMap getAuCacheResultMap() {
+      if (auResMap != null) {
+        return auResMap;
+      }
       return AuHttpResultMap.DEFAULT;
+    }
+
+    public void setAuCacheResultMap(AuHttpResultMap map) {
+      auResMap = map;
     }
 
     @Override

@@ -44,37 +44,34 @@ import static org.lockss.util.urlconn.CacheException.*;
 public class TestAuHttpResultMap extends LockssTestCase {
   private AuHttpResultMap resultMap = null;
   private MockArchivalUnit mau;
-  PatternObjectMap patMap;
+  PatternMap<ResultAction> patMap;
 
 
-  List<Pair<String,Object>> pairs =
-    ListUtil.list(ImmutablePair.of("http.*1", 200),
-                  ImmutablePair.of("http.*2", 403),
-                  ImmutablePair.of("http.*3", UnknownHostException.class),
-                  ImmutablePair.of("http.*4",
-                                   RedirectToLoginPageException.class),
-                  ImmutablePair.of("http.*5", MyHttpResultHandler.class));
+  List<Pair<String,ResultAction>> pairs =
+    ListUtil.list(Pair.of("http.*1", ResultAction.remap(200)),
+                  Pair.of("http.*2", ResultAction.remap(403)),
+                  Pair.of("http.*3", ResultAction.remap(UnknownHostException.class)),
+                  Pair.of("http.*4",
+                          ResultAction.exClass(RedirectToLoginPageException.class)),
+                  Pair.of("http.*5", ResultAction.handler(new MyHttpResultHandler())));
 
   protected void setUp() throws Exception {
     super.setUp();
     mau = new MockArchivalUnit();
-    patMap = PatternObjectMap.fromPairs(pairs);
+    patMap = PatternMap.fromPairs(pairs);
     resultMap = new AuHttpResultMap(new HttpResultMap(), patMap);
   }
 
-  protected void tearDown() throws Exception {
-    resultMap = null;
-    super.tearDown();
-  }
-
   public void testPatternMap() {
-    assertEquals(403, patMap.getMatch("http://foo2"));
+    assertEquals(ResultAction.remap(403), patMap.getMatch("http://foo2"));
   }
 
   public void testMapException() {
-    assertNull(resultMap.mapUrl(null, null, "orig", "notthere"));
-    assertNull(resultMap.mapUrl(null, null, "orig", "http://foo1"));
-    assertMapping(PermissionException.class, "403 redir from orig",
+    assertNull(resultMap.mapUrl(null, null, "orig111", "notthere", "nomsg"));
+    assertNull(resultMap.mapUrl(null, null, "orig222", "http://foo1",
+                                "200 from orig"));
+    assertMapping(PermissionException.class,
+                  "403 redir from orig",
                   "http://foo2", "redir from orig");
     assertMapping(RetryableNetworkException.class,
                   "Unknown host: redir from orig3",
@@ -83,8 +80,9 @@ public class TestAuHttpResultMap extends LockssTestCase {
                   "Redirect to login page: http://foo4 redir from orig4",
                   "http://foo4", "redir from orig4");
     assertMapping(RetryableNetworkException.class,
-                  "Unknown host: redir from orig3",
-                  "http://foo5", "redir from orig3");
+                  "Redirected from: http://orig.url47 to: http://foo5",
+//                   "Redirected from: " + http://foo5 to: http://foo5",
+                  "http://foo5", "redir from orig5");
   }
 
   /**
@@ -92,7 +90,9 @@ public class TestAuHttpResultMap extends LockssTestCase {
    * @Return the mapped exception in case the test wants to make
    * additional assertions about it */
   void assertMapping(Class expClass, String expMsg, String url, String msg) {
-    CacheException exception = resultMap.mapUrl(null, null, url, msg);
+    log.critical("Failfail");
+    CacheException exception =
+      resultMap.mapUrl(null, null, "http://orig.url47", url, msg);
     assertClass("Code " + url + " erroneously mapped to", expClass, exception);
     assertEquals(expMsg, exception.getMessage());
   }
@@ -368,7 +368,10 @@ public class TestAuHttpResultMap extends LockssTestCase {
     public CacheException handleRedirect(ArchivalUnit au,
                                          String url,
                                          String redirToUrl) {
-      return new ExploderException("orig: " + url + ", redir: " + redirToUrl);
+      if (url.equals(redirToUrl)) {
+        log.critical("oops: " + url, new Throwable());
+      }
+      return new RetryableNetworkException("Redirected from: " + url + " to: " + redirToUrl);
     }
 
   }

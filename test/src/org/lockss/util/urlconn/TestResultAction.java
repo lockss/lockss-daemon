@@ -64,6 +64,10 @@ public class TestResultAction extends LockssTestCase {
     assertClass(ResultAction.Cls.class, act);
     assertEquals(ResultAction.Type.Class, act.getType());
     assertFalse(act.isReMap());
+    try {
+      act.getRemapVal("msg");
+      fail("getRemapVal() should throw on non-remap ResultAction");
+    } catch (UnsupportedOperationException e) {}
 
     cex = act.makeException(mau, URL, codeEvent);
     assertClass(RetryableNetworkException.class, cex);
@@ -79,6 +83,10 @@ public class TestResultAction extends LockssTestCase {
     assertClass(ResultAction.Handler.class, act);
     assertEquals(ResultAction.Type.Handler, act.getType());
     assertFalse(act.isReMap());
+    try {
+      act.getRemapVal("msg");
+      fail("getRemapVal() should throw on non-remap ResultAction");
+    } catch (UnsupportedOperationException e) {}
 
     cex = act.makeException(mau, URL, codeEvent);
     assertClass(CE1.class, cex);
@@ -95,14 +103,15 @@ public class TestResultAction extends LockssTestCase {
     assertEquals(ResultAction.Type.ReMap, act.getType());
     assertTrue(act.isReMap());
     ResultAction.ReMap remapAct = (ResultAction.ReMap)act;
-    assertEquals(404, remapAct.getRemapVal());
+    assertEquals(404, remapAct.getRemapVal("tst msg"));
 
     act = ResultAction.fromObject(UnknownHostException.class);
     assertClass(ResultAction.ReMap.class, act);
     assertEquals(ResultAction.Type.ReMap, act.getType());
     assertTrue(act.isReMap());
     remapAct = (ResultAction.ReMap)act;
-    assertEquals(UnknownHostException.class, remapAct.getRemapVal());
+    assertClass(UnknownHostException.class, remapAct.getRemapVal("msg 2"));
+    assertEquals("msg 2", ((Exception)remapAct.getRemapVal("msg 2")).getMessage());
   }
 
   public static class MyHttpResultHandler implements CacheResultHandler {

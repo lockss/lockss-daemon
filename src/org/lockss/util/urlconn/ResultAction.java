@@ -29,12 +29,14 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util.urlconn;
 
 import java.util.*;
+import java.lang.reflect.Constructor;
 import java.net.*;
 
 import org.lockss.util.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ContentValidationException;
+import org.lockss.plugin.wrapper.*;
 
 /** Value in exceptionTable map, specified by plugin: either the class of
  * an exception to throw or a CacheResultHandler instance.
@@ -57,6 +59,30 @@ public abstract class ResultAction {
 
   public boolean isReMap() {
     return false;
+  }
+
+  public Object getRemapVal(String message) {
+    throw new UnsupportedOperationException("Attempt to get remapVal from non Remp action: " + this);
+  }
+
+  public static ResultAction handler(CacheResultHandler handler) {
+    return new ResultAction.Handler(handler);
+  }
+
+  public static ResultAction handler(CacheResultHandler handler, String fmt) {
+    return new ResultAction.Handler(handler, fmt);
+  }
+
+  public static ResultAction exClass(Class cls) {
+    return new ResultAction.Cls(cls);
+  }
+
+  public static ResultAction exClass(Class cls, String fmt) {
+    return new ResultAction.Cls(cls, fmt);
+  }
+
+  public static ResultAction remap(Object obj) {
+    return new ResultAction.ReMap(obj);
   }
 
   public static ResultAction fromActionSpec(Object spec)
@@ -121,8 +147,8 @@ public abstract class ResultAction {
       log.error("Can't make CacheException for: " + evt.getResultString(),
                 ex);
       return new
-        CacheException.UnknownCodeException("Unable to make exception:"
-                                            + ex.getMessage());
+        CacheException.UnknownExceptionException("Unable to make exception:"
+                                                 + ex.getMessage());
     }
   }
 
@@ -196,7 +222,9 @@ public abstract class ResultAction {
     public boolean equals(Object o) {
       if (o instanceof Handler) {
         Handler oh = (Handler)o;
-        return handler.equals(oh.handler);
+        log.critical("this.handler.class: " + this.handler.getClass());
+        log.critical("oh.handler.class: " + oh.handler.getClass());
+        return WrapperUtil.unwrap(handler).getClass().equals(WrapperUtil.unwrap(oh.handler).getClass());
       }
       return false;
     }
@@ -266,15 +294,29 @@ public abstract class ResultAction {
       
     ReMap(Object remapVal) {
       this.remapVal = remapVal;
-      log.critical("Construct ReMap: " + remapVal, new Throwable());
     }
 
     public boolean isReMap() {
       return true;
     }
 
-    public Object getRemapVal() {
-      return remapVal;
+    public Object getRemapVal(String message) {
+      if (remapVal instanceof Integer) {
+        return remapVal;
+      } else if (remapVal instanceof Class &&
+                 Exception.class.isAssignableFrom((Class)remapVal)) {
+        Class<Exception> exClass = (Class<Exception>)remapVal;
+        Class[] sig = { String.class };
+        Object[] args = {message};
+        try {
+          Constructor cons = exClass.getConstructor(sig);
+          return (Exception)cons.newInstance(args);
+        } catch (Exception e) {
+          throw new UnsupportedOperationException("Unexpeced failure instantiating remap class: " + exClass);
+        }
+      } else {
+        throw new IllegalArgumentException("Remap value neither Integer nor Exception class: " + remapVal);
+      }
     }
 
     @Override

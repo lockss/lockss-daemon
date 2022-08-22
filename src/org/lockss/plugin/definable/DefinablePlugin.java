@@ -777,6 +777,12 @@ public class DefinablePlugin extends BasePlugin {
         }
         Object val = parseResultMapRhs(pair.getRight());
         storeResultMapVal(hResultMap, pair.getLeft(), val);
+        // XXX should make ResultAction from LHS, store in map
+//         ResultAction act = parseResultAction(pair.getRight());
+//         if (false) {
+//           // throw if act not CacheException or CacheResultHandler
+//         }
+//         storeResultMapVal(hResultMap, pair.getLeft(), act);
       }
     }
     resultMap = hResultMap;
@@ -791,7 +797,7 @@ public class DefinablePlugin extends BasePlugin {
     try {
       return mappings.stream()
         .map(x -> StringUtil.breakAt(x, '=', 2, true, true))
-        .map(x -> ImmutablePair.of(x.get(0), x.get(1)))
+        .map(x -> Pair.of(x.get(0), x.get(1)))
         .collect(Collectors.toList());
     } catch (Exception ex) {
       throw new PluginException.InvalidDefinition("Invalid syntax in result map: " + mappings, ex);
@@ -803,55 +809,6 @@ public class DefinablePlugin extends BasePlugin {
    * @return either a CacheException class, or a CacheResultHandler instance
    */
   Object parseResultMapRhs(String rhs) {
-    Object res = parseResultMapRhs0(rhs);
-    if (res != null) {
-      return res;
-    } else {
-      throw new PluginException.InvalidDefinition("Second arg not a " +
-                                                  "CacheException or " +
-                                                  "CacheResultHandler class: " +
-                                                  rhs + ", in " + mapName);
-    }
-  }
-
-  /** Parse the result map RHS, which should be the name of either a
-   * CacheException or CacheResultHandler class name.
-   * @return either a CacheException class, or a CacheResultHandler instance
-   */
-  Object parseResultMapRemappableRhs(String rhs) {
-    try {
-      Object res = parseResultMapRhs0(rhs);
-      if (res != null) {
-        return res;
-      }
-    } catch (Exception e) {
-    }
-    try {
-      int code = Integer.parseInt(rhs);
-      // If parseable as an integer, it's a result code.
-      return Integer.valueOf(code);
-    } catch (Exception e) {
-    }
-    
-    
-//     } else {
-      throw new PluginException.InvalidDefinition("Second arg not a " +
-                                                  "CacheException or " +
-                                                  "CacheResultHandler class: " +
-                                                  rhs + ", in " + mapName);
-//     }
-  }
-
-//     if (rhs instanceof Integer) {
-//       if (rhs instanceof Class &&
-//           Exception.class.isAssignableFrom((Class)rhs)) {
-
-
-  /** Parse the result map RHS, which should be the name of either a
-   * CacheException or CacheResultHandler class name.
-   * @return either a CacheException class, or a CacheResultHandler instance
-   */
-Object parseResultMapRhs0(String rhs) {
     PluginFetchEventResponse resp =
       (PluginFetchEventResponse)newAuxClass(rhs, PluginFetchEventResponse.class,
                                             null);
@@ -861,8 +818,47 @@ Object parseResultMapRhs0(String rhs) {
       return WrapperUtil.wrap((CacheResultHandler)resp,
                               CacheResultHandler.class);
     } else {
-      return null;
+      throw new PluginException.InvalidDefinition("RHS not a " +
+                                                  "CacheException or " +
+                                                  "CacheResultHandler class: " +
+                                                  rhs + ", in " + mapName);
     }
+  }
+
+  /** Parse the  */
+  public ResultAction parseResultAction(String rhs) {
+    // If parseable as an integer, it's a result code.
+    try {
+      int code = Integer.parseInt(rhs);
+      return ResultAction.remap(Integer.valueOf(code));
+    } catch (Exception e) {
+      log.debug3("not an int: " + rhs);
+    }
+
+    // Try as legal RHS in CacheResultMap: CacheException
+    // CacheResultHandler
+    try {
+      PluginFetchEventResponse resp =
+        newAuxClass(rhs, PluginFetchEventResponse.class, null);
+      if (resp instanceof CacheException) {
+        return ResultAction.exClass(resp.getClass());
+      } else if (resp instanceof CacheResultHandler) {
+        return ResultAction.handler(WrapperUtil.wrap((CacheResultHandler)resp,
+                                                     CacheResultHandler.class));
+      }
+      log.debug3("not a CacheException or CacheResultHandler: " + resp);
+    } catch (Exception e) {
+      log.debug3("not a PluginFetchEventResponse: " + rhs);
+    }
+
+    // Try as an Exception to be remapped
+    try {
+      Exception resp = newAuxClass(rhs, Exception.class, null);
+      return ResultAction.remap(resp.getClass());
+    } catch (Exception e) {
+      log.debug3("not an Exception: " + rhs);
+    }
+    return null;
   }
 
   /** Determine the type of the result map LHS, and store the RHS
@@ -899,13 +895,13 @@ Object parseResultMapRhs0(String rhs) {
         throw new
           PluginException.InvalidDefinition("Lhs arg not an " +
                                             "Exception class: " +
-                                            val + ", in " + mapName);
+                                            lhs + ", in " + mapName);
       }
     } catch (Exception ex) {
       throw new
         PluginException.InvalidDefinition("Lhs arg not a number, " +
                                           "exception class nor category: " +
-                                          val + ", in " + mapName);
+                                          lhs + ", in " + mapName);
     } catch (LinkageError le) {
       throw new PluginException.InvalidDefinition("Can't load " +
                                                   lhs,

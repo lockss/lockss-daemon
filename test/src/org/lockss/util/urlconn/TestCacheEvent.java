@@ -48,39 +48,68 @@ public class TestCacheEvent extends LockssTestCase {
   static final String URL = "http://foo/";
 
   private MockArchivalUnit mau;
-  CacheEvent act;
 
-  CacheEvent codeEvent = new CacheEvent.ResponseEvent(404, "40404 message");
-  CacheEvent exEvent =
-    new CacheEvent.ExceptionEvent(new UnknownHostException("hostname"), "unhost");
   CacheException cex;
   MyHttpResultHandler handler;
-
+  Map<Object,ResultAction> resultMap;
 
   protected void setUp() throws Exception {
     super.setUp();
     mau = new MockArchivalUnit();
     handler = new MyHttpResultHandler();
+    resultMap = new HttpResultMap().exceptionTable;
   }
 
   public void testResponseCodeEvent() throws Exception {
     CacheEvent evt = new CacheEvent.ResponseEvent(401, "foobar");
     assertEquals(EventType.RESPONSE_CODE, evt.getEventType());
-    assertEquals("Response status 401", evt.getResultString());
+    assertEquals(401, evt.getEventValue());
+    assertEquals("401", evt.getResultString());
     cex = evt.invokeHandler(handler, mau, URL);
     assertClass(CE1.class, cex);
     assertEquals("CE message code", cex.getMessage());
+
+    Exception uex = evt.makeUnknownException("unk msg");
+    assertClass(CacheException.UnknownCodeException.class, uex);
+    assertEquals("Unknown result code: 401: unk msg", uex.getMessage());
+
+    assertEquals(ResultAction.exClass(PermissionException.class),
+                 evt.lookupIn(resultMap));
   }
 
-  public void testExceptionEvent() throws Exception {
-    CacheEvent evt =
-      new CacheEvent.ExceptionEvent(new UnknownHostException("unhost42"), 
-                                    "foobar");
+  public void testExceptionEventExactMatch() throws Exception {
+    testExceptionEvent(new UnknownHostException("unhost42"));
+  }
+
+  // Map contains only a superclass of the event Exception
+  public void testExceptionEventNoExactMatch() throws Exception {
+    testExceptionEvent(new UnkSubclass("unhost42"));
+  }
+
+  public void testExceptionEvent(Exception ex) throws Exception {
+    CacheEvent evt = new CacheEvent.ExceptionEvent(ex, "foobar");
+    String exMsg = ex.getMessage();
     assertEquals(EventType.EXCEPTION, evt.getEventType());
-    assertEquals("unhost42", evt.getResultString());
+    assertClass(UnknownHostException.class, evt.getEventValue());
+    assertEquals(exMsg, ((Exception)evt.getEventValue()).getMessage());
+    assertEquals(exMsg, evt.getResultString());
     cex = evt.invokeHandler(handler, mau, URL);
     assertClass(CE1.class, cex);
     assertEquals("CE message ex", cex.getMessage());
+
+    Exception uex = evt.makeUnknownException("unk msg");
+    assertClass(CacheException.UnknownExceptionException.class, uex);
+    assertEquals("Unmapped exception: " + ex.getClass().getName() + ": " +
+                 exMsg + ": unk msg", uex.getMessage());
+
+    assertEquals(ResultAction.exClass(RetryableNetworkException.class),
+                 evt.lookupIn(resultMap));
+  }
+
+  static class UnkSubclass extends UnknownHostException {
+    UnkSubclass(String message) {
+      super(message);
+    }
   }
 
   public void testRedirectEvent() throws Exception {
@@ -88,10 +117,13 @@ public class TestCacheEvent extends LockssTestCase {
       new CacheEvent.RedirectEvent("http://redir.to/",
                                    "redir message");
     assertEquals(EventType.REDIRECT_TO_URL, evt.getEventType());
+    assertEquals("http://redir.to/", evt.getEventValue());
     assertEquals("http://redir.to/", evt.getResultString());
     cex = evt.invokeHandler(handler, mau, URL);
     assertClass(CE1.class, cex);
     assertEquals("CE message redir", cex.getMessage());
+
+    // Can't lookup redirect event
   }
 
   public static class MyHttpResultHandler implements CacheResultHandler {

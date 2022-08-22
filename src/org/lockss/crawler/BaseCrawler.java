@@ -799,7 +799,7 @@ public abstract class BaseCrawler implements Crawler {
       } catch (ArchivalUnit.ConfigurationException e) {
         logger.error("Error making redirect response map", e);
         auResultMap =  new AuHttpResultMap(au.getPlugin().getCacheResultMap(),
-                                           PatternObjectMap.EMPTY);
+                                           PatternMap.EMPTY);
       }
     }
     return auResultMap;

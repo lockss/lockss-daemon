@@ -71,8 +71,9 @@ public interface CacheResultMap {
       int responseCode,
       String message);
 
-  public CacheException mapTrigger(ArchivalUnit au,
-                                   String url,
-                                   Object trigger,
-                                   String message);
+  public CacheException triggerAction(ArchivalUnit au,
+                                      String url,
+                                      CacheEvent evt,
+                                      ResultAction ra,
+                                      String message);
 }

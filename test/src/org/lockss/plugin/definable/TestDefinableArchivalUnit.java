@@ -1466,13 +1466,8 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 
   MyDefinablePlugin loadLargePlugin() {
     log.critical("About to load LargeTestPlugin");
-//     return (MyDefinablePlugin)
-//       PluginTestUtil.findPlugin("org.lockss.plugin.definable.LargeTestPlugin");
-    // return loadPlugin("org.lockss.plugin.definable.LargeTestPlugin");
-    log.critical("Loaded LargeTestPlugin");
-    Plugin p =
+    return (MyDefinablePlugin)
       PluginTestUtil.findPlugin("org.lockss.plugin.definable.LargeTestPlugin");
-    return (MyDefinablePlugin)p;
   }
 
   public void testLargePlugin() throws Exception {
@@ -1683,7 +1678,24 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 		 urlMimeValidations.getMatch("http://base.foo/bar/pdf_url/xxx"));
 
     // Redirect patterns
-    assertTrue(au.isLoginPageUrl("sdfasdfasdfasdfasdfasdfasdf"));
+
+    // Login page URL declared in plugin w/ old-style
+    // au_redirect_to_login_url_pattern
+    assertTrue(au.isLoginPageUrl("http://base.foo/base_path/denial/denial.cfm"));
+    // Login page URL declared with redir pat
+    assertTrue(au.isLoginPageUrl("http://base.foo/base_path/login_url1"));
+
+    //
+    AuCacheResultMap acrm = getAuCacheResultMap(au);
+    assertNull(acrm.mapUrl(null, null, "http://orig.url/",
+                           "http://base.foo/base_path/unmapped_url", "msg"));
+    assertClass(CacheException.RedirectToLoginPageException.class,
+		acrm.mapUrl(null, null, "http://orig.url/",
+                            "http://base.foo/base_path/login_url1", "msg"));
+    assertClass(CacheException.NoRetryDeadLinkException.class,
+		acrm.mapUrl(null, null, "http://orig.url/",
+                            "http://base.foo/base_path/404_url1", "msg"));
+
 
   }
 
@@ -1924,6 +1936,10 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 
   HttpResultMap getHttpResultMap(DefinablePlugin plugin) {
     return (HttpResultMap)plugin.getCacheResultMap();
+  }
+
+  AuCacheResultMap getAuCacheResultMap(ArchivalUnit au) throws Exception {
+    return au.makeAuCacheResultMap();
   }
 
   // Old name for au_url_mime_type_map
