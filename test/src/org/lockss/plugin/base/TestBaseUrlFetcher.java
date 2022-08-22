@@ -1010,7 +1010,6 @@ public class TestBaseUrlFetcher extends LockssTestCase {
     // Do NOT add redTo to crawl spec (mau.addUrlToBeCached(redTo)), to
     // ensure that login URL pattern is checked before crawl spec
     try {
-      log.critical("fail fail");
       InputStream is = muf.getUncachedInputStream();
       fail("Should have thrown PermissionException");
     } catch (CacheException.PermissionException e) {

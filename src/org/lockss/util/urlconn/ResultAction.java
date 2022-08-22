@@ -160,8 +160,6 @@ public abstract class ResultAction {
    * </ul>
    */
   public static ResultAction fromObject(Object response) {
-//     if (
-
     if (response instanceof CacheResultHandler) {
       return new Handler((CacheResultHandler)response);
     } else if (response instanceof CacheException) {
@@ -169,22 +167,15 @@ public abstract class ResultAction {
     } else if (response instanceof Class &&
                CacheException.class.isAssignableFrom((Class)response)) {
       return new Cls((Class)response);
-//           
     } else {
-      log.critical("isClass: " + (response instanceof Class));
-      log.critical("whatClass: " + response.getClass());
-      if (response instanceof Class) {
-        log.critical("isCacheException: " + CacheException.class.isAssignableFrom((Class)response));
-      }
       return new ReMap(response);
     }
   }
 
-
   /** Wraps a plugin-supplied CacheResultHandler */
   public static class Handler extends ResultAction {
     CacheResultHandler handler;
-      
+
     Handler(CacheResultHandler handler) {
       this.handler = handler;
     }
@@ -222,8 +213,6 @@ public abstract class ResultAction {
     public boolean equals(Object o) {
       if (o instanceof Handler) {
         Handler oh = (Handler)o;
-        log.critical("this.handler.class: " + this.handler.getClass());
-        log.critical("oh.handler.class: " + oh.handler.getClass());
         return WrapperUtil.unwrap(handler).getClass().equals(WrapperUtil.unwrap(oh.handler).getClass());
       }
       return false;

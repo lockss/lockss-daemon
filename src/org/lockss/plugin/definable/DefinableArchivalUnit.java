@@ -399,7 +399,6 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
     // the au_redirect_to_login_url_pattern, if any
     List<Pair<String,String>> redirList =
       new ArrayList<>(getDefinablePlugin().getResultMapEntries());
-    log.critical("redirList from plugin: " + redirList);
     // the list
     String redirToLoginPat =
       (String)definitionMap.getMapElement(KEY_AU_REDIRECT_TO_LOGIN_URL_PATTERN);

@@ -1465,7 +1465,6 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   }
 
   MyDefinablePlugin loadLargePlugin() {
-    log.critical("About to load LargeTestPlugin");
     return (MyDefinablePlugin)
       PluginTestUtil.findPlugin("org.lockss.plugin.definable.LargeTestPlugin");
   }

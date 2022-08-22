@@ -90,7 +90,6 @@ public class TestAuHttpResultMap extends LockssTestCase {
    * @Return the mapped exception in case the test wants to make
    * additional assertions about it */
   void assertMapping(Class expClass, String expMsg, String url, String msg) {
-    log.critical("Failfail");
     CacheException exception =
       resultMap.mapUrl(null, null, "http://orig.url47", url, msg);
     assertClass("Code " + url + " erroneously mapped to", expClass, exception);
@@ -368,9 +367,6 @@ public class TestAuHttpResultMap extends LockssTestCase {
     public CacheException handleRedirect(ArchivalUnit au,
                                          String url,
                                          String redirToUrl) {
-      if (url.equals(redirToUrl)) {
-        log.critical("oops: " + url, new Throwable());
-      }
       return new RetryableNetworkException("Redirected from: " + url + " to: " + redirToUrl);
     }
 
