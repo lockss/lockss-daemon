@@ -64,7 +64,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <!-- MF - had to add .* to this to get the main article pages, was only getting the print pages without it -->
       <string>1,"^%s(index\.php/)?(autumn|spring|winter|summer)%02d(index)?/.*", base_url, au_short_year</string> <!-- MF first change, adding index.php and removing _-->
       <string>1,"^https?://(%s|code\.jquery\.com)/[^?]*\.(bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$", url_host(base_url)</string>
-      <string>1,"^https?://(www.)?19thc-artworldwide.org/.*\.pdf", url_host(base_url)</string> <!--temp hard code because there's possibly no www in link -->
+      <string>1,"^%s.*\.pdf$", base_url</string>
     </list>
   </entry>
   <entry>
@@ -124,5 +124,22 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_url_normalizer</string>
     <string>edu.princeton.plugin.ncaw.Ncaw2022UrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>au_additional_url_stems</string>
+    <list>
+      <string>"%s", to_http(base_url)</string>
+      <!-- This is really not great: -->
+      <string>"http://19thc-artworldwide.org/"</string>
+      <string>"https://19thc-artworldwide.org/"</string>
+    </list>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>edu.princeton.plugin.ncaw.Ncaw2022HtmlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <string>"^%s.*\.pdf$", base_url</string>
   </entry>
 </map>
