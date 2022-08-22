@@ -61,7 +61,7 @@ public class AuHttpResultMap implements AuCacheResultMap {
   //    use ResultAction.makeException() to instantiate or call handler
   //  else: assume is name of exception to map through HttpReaultMap.
   //    instantiate and call mapException()
-  
+
   /** Match the URL against the patterns in urlMap returning the value
    * returned by the corresponding ResultAction */
   public CacheException mapUrl(ArchivalUnit au,

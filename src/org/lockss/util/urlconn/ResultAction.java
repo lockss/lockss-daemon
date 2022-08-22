@@ -95,7 +95,7 @@ public abstract class ResultAction {
       }
     }
     throw new IllegalArgumentException("Action spec must be a CacheException class or a CacheResultHandler class: " + spec);
-  }      
+  }
 
   /** Return the CacheException appropriate for the event, either from
    * the specified class or CacheResultHandler */
@@ -104,7 +104,7 @@ public abstract class ResultAction {
                                         LockssUrlConnection connection,
                                         CacheEvent evt)
       throws Exception;
-    
+
   abstract CacheException makeException(ArchivalUnit au,
                                         String url,
                                         CacheEvent evt)
@@ -127,7 +127,7 @@ public abstract class ResultAction {
     }
     return s;
   }
-    
+
   @Deprecated
   CacheException getCacheException(ArchivalUnit au,
                                    LockssUrlConnection connection,
@@ -226,7 +226,7 @@ public abstract class ResultAction {
   /** Action that throws a CacheException */
   public static class Cls extends ResultAction {
     Class ex;
-      
+
     Cls(Class ex) {
       this.ex = ex;
     }
@@ -252,7 +252,7 @@ public abstract class ResultAction {
         throws Exception {
       return makeException(au, HttpResultMap.getConnUrl(connection), evt);
     }
-      
+
     CacheException makeException(ArchivalUnit au,
                                  String url,
                                  CacheEvent evt)
@@ -280,7 +280,7 @@ public abstract class ResultAction {
   /** Action that remaps the result */
   public static class ReMap extends ResultAction {
     Object remapVal;
-      
+
     ReMap(Object remapVal) {
       this.remapVal = remapVal;
     }
@@ -320,7 +320,7 @@ public abstract class ResultAction {
         throws Exception {
       throw new UnsupportedOperationException("Can't makeException from ResultAction type ReMap: " + this);
     }
-      
+
     CacheException makeException(ArchivalUnit au,
                                  String url,
                                  CacheEvent evt)

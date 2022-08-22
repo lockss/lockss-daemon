@@ -79,7 +79,7 @@ public abstract class CacheEvent {
       throws PluginException {
     return invokeHandler(handler, au, (conn != null ? conn.getURL() : null));
   }
-    
+
   /** Invoke the handler on the result (responseCode or Exception) */
   public abstract CacheException invokeHandler(CacheResultHandler handler,
                                                ArchivalUnit au,
@@ -111,7 +111,7 @@ public abstract class CacheEvent {
 //       return "Response code " + Integer.toString(responseCode);
       return Integer.toString(responseCode);
     }
-    
+
     @Override
     public CacheException invokeHandler(CacheResultHandler handler,
 				 ArchivalUnit au,
@@ -179,7 +179,7 @@ public abstract class CacheEvent {
     public String getResultString() {
       return fetchException.getMessage();
     }
-    
+
     @Override
     public ResultAction lookupIn(Map<Object,ResultAction> exceptionTable) {
       Class exClass = fetchException.getClass();
