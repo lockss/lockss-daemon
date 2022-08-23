@@ -129,7 +129,9 @@ POSSIBILITY OF SUCH DAMAGE.
 <!-- https://www.govinfo.gov/content/pkg/DCPD-201800002.zip-->
       <string>2,"^%scontent/(granule|pkg)/[^/]+\.zip$", base_url</string>
       <string>1,"^%scontent/(granule|pkg)/%s-", base_url, collection_id</string>
+      <!-- This is a legitimate URL... -->
       <string>1,"^%sapp/dynamic/stylesheets/bootstrap/bootstrap\.min\.css", base_url</string>
+      <!-- ...with incorrect relative URLs to ancillary files and error pages are served as 200 ad infinitum -->
       <string>2,"^%sapp/(details/lib/bootstrap|dynamic/stylesheets)/", base_url</string>
       <string>1,"^%sapp/details/%s-", base_url, collection_id</string>
 <!--  https://www.govinfo.gov/app/frtoc/2018-01-02 -->
