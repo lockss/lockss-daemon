@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>15</string>
+    <string>16</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -127,16 +127,17 @@ POSSIBILITY OF SUCH DAMAGE.
     -->
     <list>
 <!-- https://www.govinfo.gov/content/pkg/DCPD-201800002.zip-->
-      <string>2,"^https://%s/content/(granule|pkg)/[^/]+\.zip$", url_host(base_url)</string>
-      <string>1,"^https://%s/content/(granule|pkg)/%s-", url_host(base_url), collection_id</string>
-      <string>1,"^https://%s/app/details/%s-", url_host(base_url), collection_id</string>
+      <string>2,"^%scontent/(granule|pkg)/[^/]+\.zip$", base_url</string>
+      <string>1,"^%scontent/(granule|pkg)/%s-", base_url, collection_id</string>
+      <string>1,"^%sapp/dynamic/stylesheets/bootstrap/bootstrap\.min\.css", base_url</string>
+      <string>2,"^%sapp/(details/lib/bootstrap|dynamic/stylesheets)/", base_url</string>
+      <string>1,"^%sapp/details/%s-", base_url, collection_id</string>
 <!--  https://www.govinfo.gov/app/frtoc/2018-01-02 -->
-	  <string>1,"^https://%s/app/frtoc/%d", url_host(base_url), year</string>
-      <string>1,"^https://maxcdn\.bootstrapcdn\.com/.*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)"</string>
+	  <string>1,"^%sapp/frtoc/%d", base_url, year</string>
       <!-- these file extensions are used in GovInfoSitemapsHttpResponseHandler for 504 Non-fatal exceptions
            if you add to them here, the pattern there should be updated as well
        -->
-      <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)", url_host(base_url)</string>
+      <string>1,"^https?://(%s|maxcdn\.bootstrapcdn\.com)/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)", url_host(base_url)</string>
     </list>
   </entry>
 <!-- for a long time this was shadowed by the other, simpler entry with the same key; 
