@@ -836,7 +836,7 @@ public class BaseUrlFetcher implements UrlFetcher {
     CacheException ex =
       crawlFacade.getAuCacheResultMap().mapUrl(au, conn, origUrl, url,
                                                "Redirect from " + origUrl);
-    if (ex != null) {
+    if (ex != null && !(ex instanceof CacheSuccess)) {
       throw ex;
     }
   }
