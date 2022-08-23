@@ -52,11 +52,11 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>Rockefeller University Press Plugin</string>
+        <string>Rockefeller University Press Journals Plugin</string>
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"Rockefeller University Press Plugin, Base URL %s, Journal ID %s,  Year %d, Volume %s", base_url, journal_id, year, volume_name</string>
+        <string>"Rockefeller University Press Journals Plugin, Base URL %s, Journal ID %s, Year %d, Volume %s", base_url, journal_id, year, volume_name</string>
     </entry>
     <!--https://rupress.org/jem/issue/browse-by-year/2019-->
     <entry>
