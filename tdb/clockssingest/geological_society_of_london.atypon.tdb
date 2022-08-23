@@ -9,7 +9,7 @@
     info[platform] = Atypon. Geological Society of London
   >
     #Moving HW to Atypon July 2022
-    plugin = org.lockss.plugin.atypon.ClockssGenericAtyponPlugin
+    plugin = org.lockss.plugin.atypon.geologicalsocietylondon.ClockssGeologicalSocietyLondonPlugin
     param[base_url] = https://www.lyellcollection.org/
   
     #implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
