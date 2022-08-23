@@ -63,7 +63,7 @@ public class TestResultAction extends LockssTestCase {
     act = ResultAction.fromObject(new RetryableNetworkException("act msg"));
     assertClass(ResultAction.Cls.class, act);
     assertEquals(ResultAction.Type.Class, act.getType());
-    assertFalse(act.isReMap());
+    assertFalse(act.isRemap());
     try {
       act.getRemapVal("msg");
       fail("getRemapVal() should throw on non-remap ResultAction");
@@ -82,7 +82,7 @@ public class TestResultAction extends LockssTestCase {
     act = ResultAction.fromObject(new MyHttpResultHandler());
     assertClass(ResultAction.Handler.class, act);
     assertEquals(ResultAction.Type.Handler, act.getType());
-    assertFalse(act.isReMap());
+    assertFalse(act.isRemap());
     try {
       act.getRemapVal("msg");
       fail("getRemapVal() should throw on non-remap ResultAction");
@@ -97,19 +97,19 @@ public class TestResultAction extends LockssTestCase {
     assertEquals("CE message 2", cex.getMessage());
   }
 
-  public void testReMapResult() throws Exception {
+  public void testRemapResult() throws Exception {
     act = ResultAction.fromObject(404);
-    assertClass(ResultAction.ReMap.class, act);
-    assertEquals(ResultAction.Type.ReMap, act.getType());
-    assertTrue(act.isReMap());
-    ResultAction.ReMap remapAct = (ResultAction.ReMap)act;
+    assertClass(ResultAction.Remap.class, act);
+    assertEquals(ResultAction.Type.Remap, act.getType());
+    assertTrue(act.isRemap());
+    ResultAction.Remap remapAct = (ResultAction.Remap)act;
     assertEquals(404, remapAct.getRemapVal("tst msg"));
 
     act = ResultAction.fromObject(UnknownHostException.class);
-    assertClass(ResultAction.ReMap.class, act);
-    assertEquals(ResultAction.Type.ReMap, act.getType());
-    assertTrue(act.isReMap());
-    remapAct = (ResultAction.ReMap)act;
+    assertClass(ResultAction.Remap.class, act);
+    assertEquals(ResultAction.Type.Remap, act.getType());
+    assertTrue(act.isRemap());
+    remapAct = (ResultAction.Remap)act;
     assertClass(UnknownHostException.class, remapAct.getRemapVal("msg 2"));
     assertEquals("msg 2", ((Exception)remapAct.getRemapVal("msg 2")).getMessage());
   }

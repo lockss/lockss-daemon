@@ -46,7 +46,7 @@ public abstract class ResultAction {
 
   String fmt;
 
-  public enum Type {Class, Handler, ReMap};
+  public enum Type {Class, Handler, Remap};
 
   ResultAction(String fmt) {
     this.fmt = fmt;
@@ -57,7 +57,7 @@ public abstract class ResultAction {
 
   public abstract Type getType();
 
-  public boolean isReMap() {
+  public boolean isRemap() {
     return false;
   }
 
@@ -82,7 +82,7 @@ public abstract class ResultAction {
   }
 
   public static ResultAction remap(Object obj) {
-    return new ResultAction.ReMap(obj);
+    return new ResultAction.Remap(obj);
   }
 
   public static ResultAction fromActionSpec(Object spec)
@@ -156,7 +156,7 @@ public abstract class ResultAction {
    * <li>CacheResultHandler instance</li>
    * <li>CacheException instance</li>
    * <li>CacheException class</li>
-   * <li>Other -> ReMap action</li>
+   * <li>Other -> Remap action</li>
    * </ul>
    */
   public static ResultAction fromObject(Object response) {
@@ -168,7 +168,7 @@ public abstract class ResultAction {
                CacheException.class.isAssignableFrom((Class)response)) {
       return new Cls((Class)response);
     } else {
-      return new ReMap(response);
+      return new Remap(response);
     }
   }
 
@@ -278,14 +278,14 @@ public abstract class ResultAction {
   }
 
   /** Action that remaps the result */
-  public static class ReMap extends ResultAction {
+  public static class Remap extends ResultAction {
     Object remapVal;
 
-    ReMap(Object remapVal) {
+    Remap(Object remapVal) {
       this.remapVal = remapVal;
     }
 
-    public boolean isReMap() {
+    public boolean isRemap() {
       return true;
     }
 
@@ -310,7 +310,7 @@ public abstract class ResultAction {
 
     @Override
     public Type getType() {
-      return Type.ReMap;
+      return Type.Remap;
     }
 
     @Deprecated
@@ -318,19 +318,19 @@ public abstract class ResultAction {
                                  LockssUrlConnection connection,
                                  CacheEvent evt)
         throws Exception {
-      throw new UnsupportedOperationException("Can't makeException from ResultAction type ReMap: " + this);
+      throw new UnsupportedOperationException("Can't makeException from ResultAction type Remap: " + this);
     }
 
     CacheException makeException(ArchivalUnit au,
                                  String url,
                                  CacheEvent evt)
         throws Exception {
-      throw new UnsupportedOperationException("Can't makeException from ResultAction type ReMap: " + this);
+      throw new UnsupportedOperationException("Can't makeException from ResultAction type Remap: " + this);
     }
 
     public boolean equals(Object o) {
-      if (o instanceof ReMap) {
-        ReMap oh = (ReMap)o;
+      if (o instanceof Remap) {
+        Remap oh = (Remap)o;
         return remapVal.equals(oh.remapVal);
       }
       return false;

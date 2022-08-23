@@ -500,7 +500,7 @@ public class HttpResultMap implements CacheResultMap {
                                       CacheEvent evt,
                                       ResultAction ra,
                                       String message)  {
-    if (ra.isReMap()) {
+    if (ra.isRemap()) {
       CacheEvent remapEvent = CacheEvent.fromRemapResult(ra, message);
       return checkSuccess(mapException(au, url, remapEvent, message));
     }

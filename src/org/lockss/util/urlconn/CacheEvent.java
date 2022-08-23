@@ -260,7 +260,7 @@ public abstract class CacheEvent {
   }
 
   public static CacheEvent fromRemapResult(ResultAction ra, String message) {
-    if (!ra.isReMap()) {
+    if (!ra.isRemap()) {
       throw new UnsupportedOperationException("Attempt to remap non-remap result: " + ra);
     }
     Object remapVal = ra.getRemapVal(message);
