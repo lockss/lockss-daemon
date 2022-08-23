@@ -118,6 +118,7 @@ def sign_plugin():
     if err:
         print "Signing failed."
         print output
+        exit(1)
     else:
         print "Plugin jar %s signed successfully." % args["jar"]
 
