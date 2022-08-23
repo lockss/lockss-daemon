@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>14</string>
+    <string>15</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -48,7 +48,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>16</string>
+    <string>17</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -139,11 +139,13 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"^%sapp/dynamic/stylesheets/bootstrap/bootstrap\.min\.css", base_url</string>
       <!-- ...with incorrect relative URLs to ancillary files and error pages are served as 200 ad infinitum -->
       <string>2,"^%sapp/(details/lib/bootstrap|dynamic/stylesheets)/", base_url</string>
-      <string>1,"%sapp/details/%s-%s", base_url, collection_id, court_id</string>
+      <string>1,"^%sapp/details/%s-%s", base_url, collection_id, court_id</string>
       <!-- these file extensions are used in GovInfoSitemapsHttpResponseHandler for 504 Non-fatal exceptions
            if you add to them here, the pattern there should be updated as well
        -->
       <string>1,"^https?://(%s|maxcdn\.bootstrapcdn\.com)/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)", url_host(base_url)</string>
+      <!-- https://fonts.googleapis.com/css?family=Lato:700%7CRoboto:400,700 -->
+      <string>1,"^https?://fonts\.googleapis\.com/css\?"</string>
     </list>
   </entry>
   <entry>

@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>16</string>
+    <string>17</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -139,7 +139,9 @@ POSSIBILITY OF SUCH DAMAGE.
       <!-- these file extensions are used in GovInfoSitemapsHttpResponseHandler for 504 Non-fatal exceptions
            if you add to them here, the pattern there should be updated as well
        -->
-      <string>1,"^https?://(%s|maxcdn\.bootstrapcdn\.com)/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)", url_host(base_url)</string>
+      <string>1,"^https?://(%s|[^.]+\.bootstrapcdn\.com)/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)", url_host(base_url)</string>
+      <!-- https://fonts.googleapis.com/css?family=Lato:700%7CRoboto:400,700 -->
+      <string>1,"^https?://fonts\.googleapis\.com/css\?"</string>
     </list>
   </entry>
 <!-- for a long time this was shadowed by the other, simpler entry with the same key; 
@@ -189,7 +191,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>au_repair_from_peer_if_missing_url_pattern</string>
     <list>
       <string>"/pkg/(%s[^/]+)/(pdf|xml)/\1[^/]+\.\2$", collection_id</string>
-      <string>^https://maxcdn\.bootstrapcdn\.com/.*\.css$</string>
+      <string>^https://[^.]+\.bootstrapcdn\.com/.*\.css$</string>
       <string>/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)</string>
     </list>
   </entry>
@@ -198,7 +200,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>au_url_poll_result_weight</string>
     <list>
       <string>"/pkg/(%s[^/]+)/(pdf|xml)/\1[^/]+\.\2$", collection_id, 0</string>
-      <string>^https://maxcdn\.bootstrapcdn\.com/.*\.css$, 0</string>
+      <string>^https://[^.]+\.bootstrapcdn\.com/.*\.css$, 0</string>
       <string>/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf), 0</string>
     </list>
   </entry>
@@ -208,8 +210,10 @@ POSSIBILITY OF SUCH DAMAGE.
       <!--
       https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css
       https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css
+      https://stackpath.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css
       -->
-      <string>"maxcdn\.bootstrapcdn\.com"</string>
+      <string>"[^.]+\.bootstrapcdn\.com"</string>
+      <string>"fonts\.googleapis\.com"</string>
     </list>
   </entry>
   <entry>
