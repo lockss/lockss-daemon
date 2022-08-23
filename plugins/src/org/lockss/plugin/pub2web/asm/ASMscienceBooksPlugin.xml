@@ -10,7 +10,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>16</string>
+    <string>17</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -43,6 +43,11 @@
   <entry>
     <string>text/html_link_rewriter_factory</string>
     <string>org.lockss.plugin.pub2web.asm.AsmHtmlLinkRewriterFactory</string>
+  </entry>
+  <!-- this is for the crawls on the produciton machines -->
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.pub2web.Pub2WebUrlNormalizer</string>
   </entry>
   <entry>
     <string>plugin_cache_result_list</string>
