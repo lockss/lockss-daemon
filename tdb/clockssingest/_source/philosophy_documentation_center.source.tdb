@@ -27,7 +27,7 @@
       au < zapped ; finished ; 2017 ; Philosophy Documentation Center Source Content 2017 ; 2017 >
       au < zapped ; finished ; 2018 ; Philosophy Documentation Center Source Content 2018 ; 2018 >
       au < zapped ; finished ; 2019 ; Philosophy Documentation Center Source Content 2019 ; 2019 >
-      au < readySource ; frozen ; 2020 ; Philosophy Documentation Center Source Content 2020 ; 2020 >
+      au < readySource ; finished ; 2020 ; Philosophy Documentation Center Source Content 2020 ; 2020 >
       #No more AUs here.
     }
 
@@ -38,8 +38,8 @@
       hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[directory] >
 
-      au < readySource ; frozen ; 2021 ; Philosophy Documentation Center Source Content (Back Content) 2021_01 ; 2021_01 >
-      au < readySource ; frozen ; 2021 ; Philosophy Documentation Center Source Content 2021_02 ; 2021_02 >
+      au < readySource ; finished ; 2021 ; Philosophy Documentation Center Source Content (Back Content) 2021_01 ; 2021_01 >
+      au < readySource ; finished ; 2021 ; Philosophy Documentation Center Source Content 2021_02 ; 2021_02 >
       au < readySource ; crawling ; 2022 ; Philosophy Documentation Center Source Content 2022_01 ; 2022_01 >
 
     }

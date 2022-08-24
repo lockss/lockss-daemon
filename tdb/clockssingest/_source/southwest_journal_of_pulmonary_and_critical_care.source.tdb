@@ -20,7 +20,7 @@
 
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/swjpcc-released/
 
-    au < readySource ; frozen ; 2021 ; Southwest Journal of Pulmonary and Critical Care Warc Content 2021 ; 2021 >
+    au < readySource ; finished ; 2021 ; Southwest Journal of Pulmonary and Critical Care Warc Content 2021 ; 2021 >
     au < expected ; exists ; 2022 ; Southwest Journal of Pulmonary and Critical Care Warc Content 2022 ; 2022 >
 
     }

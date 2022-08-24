@@ -20,7 +20,7 @@
     implicit < status ; status2 ; year ; name ; param[directory] >
 
     au < zapped ; finished ; 2019 ; Crossref Source Content 2019 ; 2019 >
-    au < readySource ; frozen ; 2020 ; Crossref Source Content 2020 ; 2020 >
+    au < readySource ; finished ; 2020 ; Crossref Source Content 2020 ; 2020 >
     au < readySource ; frozen ; 2021 ; Crossref Source Content 2021 ; 2021 >
 
   }

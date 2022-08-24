@@ -21,7 +21,7 @@
 
     au < zapped ; finished ; 2016 ; Memoirs of Museum Victoria WARC Content 2016 ; 2016 >
     au < zapped ; finished ; 2018 ; Memoirs of Museum Victoria WARC Content 2018 ; 2018 >
-    au < readySource ; frozen ; 2020 ; Memoirs of Museum Victoria WARC Content 2020 ; 2020 >
+    au < readySource ; finished ; 2020 ; Memoirs of Museum Victoria WARC Content 2020 ; 2020 >
     # check for new content before re-running
 
   }
@@ -38,7 +38,7 @@
 
     au < zapped ; finished ; 2016 ; Museum Victoria Science Reports WARC Content 2016 ; 2016 >
     au < zapped ; finished ; 2018 ; Museum Victoria Science Reports WARC Content 2018 ; 2018 >
-    au < readySource ; frozen ; 2020 ; Museum Victoria Science Reports WARC Content 2020 ; 2020 >
+    au < readySource ; finished ; 2020 ; Museum Victoria Science Reports WARC Content 2020 ; 2020 >
     # check for new content before re-running
 
   }

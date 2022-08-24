@@ -68,8 +68,8 @@
     >
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/bioone-released/
 
-    au < readySource ; frozen ; 2020 ; BioOne Source Content 2020 ; 2020 >
-    au < readySource ; frozen ; 2021 ; BioOne Source Content 2021 ; 2021 >
+    au < readySource ; finished ; 2020 ; BioOne Source Content 2020 ; 2020 >
+    au < readySource ; finished ; 2021 ; BioOne Source Content 2021 ; 2021 >
     #Do not add any more AUs.
   }
 }
