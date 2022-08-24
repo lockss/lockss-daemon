@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>39</string>
+    <string>40</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -65,7 +65,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>SpringerLink Books Plugin (retired Metapress site for CLOCKSS)</string>
+    <string>SpringerLink Books Plugin (Legacy, CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -92,7 +92,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"SpringerLink Books Plugin (retired Metapress site for CLOCKSS), Base URL %s, ISBN %s", base_url, book_isbn</string>
+    <string>"SpringerLink Books Plugin (Legacy, CLOCKSS), Base URL %s, ISBN %s", base_url, book_isbn</string>
   </entry>
   <entry>
     <string>au_start_url</string>
