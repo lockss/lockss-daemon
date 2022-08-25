@@ -35,8 +35,10 @@ package org.lockss.plugin.usdocspln.gov.gpo.fdsys;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.*;
+import org.lockss.plugin.base.*;
 
-public class GPOFDSysSitemapsUrlNormalizer extends HttpToHttpsUtil.BaseUrlHttpHttpsUrlNormalizer {
+public class GPOFDSysSitemapsUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
 
   @Override
   public String additionalNormalization(String url, ArchivalUnit au) throws PluginException {
