@@ -164,7 +164,8 @@ public abstract class BaseCrawler implements Crawler {
   protected boolean sendReferrer = DEFAULT_SEND_REFERRER;
   protected Set<String> origStems;
   protected Set<String> cdnStems;
-  
+  protected AuCacheResultMap auResultMap;
+
   public enum StorePermissionScheme {Legacy, StoreAllInSpec};
 
   /**  the crawl queues are sorted.  <code>CrawlDate</code>:
@@ -790,6 +791,20 @@ public abstract class BaseCrawler implements Crawler {
     return crawlSeed;
   }
   
+  /** Return the AU's redirect response map */
+  protected AuCacheResultMap getAuCacheResultMap() {
+    if (auResultMap == null) {
+      try {
+        auResultMap = au.makeAuCacheResultMap();
+      } catch (ArchivalUnit.ConfigurationException e) {
+        logger.error("Error making redirect response map", e);
+        auResultMap =  new AuHttpResultMap(au.getPlugin().getCacheResultMap(),
+                                           PatternMap.EMPTY);
+      }
+    }
+    return auResultMap;
+  }
+
   protected CrawlerFacade getCrawlerFacade() {
     if(facade == null) {
       facade = new BaseCrawlerFacade(this);
@@ -909,6 +924,10 @@ public abstract class BaseCrawler implements Crawler {
       return crawler.clientState.get(key);
     }
 
+    @Override
+    public AuCacheResultMap getAuCacheResultMap() {
+      return crawler.getAuCacheResultMap();
+    }
   }
 
 }

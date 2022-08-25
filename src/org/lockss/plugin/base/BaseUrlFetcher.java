@@ -788,10 +788,7 @@ public class BaseUrlFetcher implements UrlFetcher {
       }
       // Check redirect to login page *before* crawl spec, else plugins
       // would have to include login page URLs in crawl spec
-      if (au.isLoginPageUrl(newUrlString)) {
-        String msg = "Redirected to login page: " + newUrlString;
-        throw new CacheException.PermissionException(msg);
-      }
+      checkRedirectAction(newUrlString);
       if (redirectScheme.isRedirectOption(RedirectScheme.REDIRECT_OPTION_IF_CRAWL_SPEC)) {
         if (!au.shouldBeCached(newUrlString)) {
           String msg = "Redirected to excluded URL: " + newUrlString;
@@ -835,6 +832,15 @@ public class BaseUrlFetcher implements UrlFetcher {
     }
   }
   
+  protected void checkRedirectAction(String url) throws CacheException {
+    CacheException ex =
+      crawlFacade.getAuCacheResultMap().mapRedirUrl(au, conn, origUrl, url,
+                                                    "Redirect from " + origUrl);
+    if (ex != null && !(ex instanceof CacheSuccess)) {
+      throw ex;
+    }
+  }
+
   public CIProperties getUncachedProperties()
       throws UnsupportedOperationException {
     if (conn == null) {

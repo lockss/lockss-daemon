@@ -171,6 +171,7 @@ public final class PluginValidator {
     au.makePermittedHostPatterns();
     au.makeRepairFromPeerIfMissingUrlPatterns();
     au.getCrawlUrlComparator();
+    au.makeAuCacheResultMap();
     MockArchivalUnit mau = new MockArchivalUnit();
     MockCrawler.MockCrawlerFacade mcf = new MockCrawler().new MockCrawlerFacade(au);
     au.makeCrawlSeed(mcf);

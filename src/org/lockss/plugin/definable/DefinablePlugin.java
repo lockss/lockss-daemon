@@ -33,8 +33,12 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.definable;
 
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.stream.*;
 import java.io.*;
 import java.net.*;
+import org.apache.commons.lang3.tuple.*;
 
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
@@ -736,6 +740,8 @@ public class DefinablePlugin extends BasePlugin {
     factClassMap.put(mdType, fact);
   }
 
+  public static Pattern RESULT_MAP_REDIR_PAT = Pattern.compile("redirto:(.*)");
+
   protected void initResultMap() throws PluginException.InvalidDefinition {
     HttpResultMap hResultMap = new HttpResultMap();
 
@@ -762,54 +768,102 @@ public class DefinablePlugin extends BasePlugin {
     } else {
       // Expect a list of mappings from result code or Exception name
       // or name of result category, to CacheException name
-      Collection<String> mappings =
-	definitionMap.getCollection(KEY_EXCEPTION_LIST, null);
-      if (mappings != null) {
-        // add each entry
-        for (String entry : mappings) {
-	  if (log.isDebug2()) {
-	    log.debug2("initMap(" + entry + ")");
-	  }
-	  String first;
-	  String ceName;
-          try {
-            List<String> pair = StringUtil.breakAt(entry, '=', 2, true, true);
-            first = pair.get(0);
-            ceName = pair.get(1);
-          } catch (Exception ex) {
-            throw new PluginException.InvalidDefinition("Invalid syntax: " +
-						    entry + "in " + mapName);
-	  }
-	  Object val;
-
-	  // Value should be either a CacheException or CacheResultHandler
-	  // class name.
-	  PluginFetchEventResponse resp =
-	    (PluginFetchEventResponse)newAuxClass(ceName,
-						  PluginFetchEventResponse.class,
-						  null);
-	  if (resp instanceof CacheException) {
-	    val = resp.getClass();
-	  } else if (resp instanceof CacheResultHandler) {
-	    val = WrapperUtil.wrap((CacheResultHandler)resp,
-				   CacheResultHandler.class);
-	  } else {
-            throw new
-	      PluginException.InvalidDefinition("Second arg not a " +
-						"CacheException or " +
-						"CacheResultHandler class: " +
-						entry + ", in " + mapName);
-	  }
-          storeResultMapVal(hResultMap, entry, first, val);
-	}
+      for (Pair<String,String> pair : getResultMapEntries()) {
+        // If it's an action on a redirect pattern, ignore it here.
+        // (It will be processed by DefinableArchivalUnit.foo())
+        Matcher m = RESULT_MAP_REDIR_PAT.matcher(pair.getLeft());
+        if (m.matches()) {
+          continue;
+        }
+        Object val = parseResultMapRhs(pair.getRight());
+        storeResultMapVal(hResultMap, pair.getLeft(), val);
+        // XXX should make ResultAction from LHS, store in map
+//         ResultAction act = parseResultAction(pair.getRight());
+//         if (false) {
+//           // throw if act not CacheException or CacheResultHandler
+//         }
+//         storeResultMapVal(hResultMap, pair.getLeft(), act);
       }
     }
     resultMap = hResultMap;
   }
 
+  List<Pair<String,String>> getResultMapEntries() {
+    Collection<String> mappings =
+      definitionMap.getCollection(KEY_EXCEPTION_LIST, Collections.emptyList());
+    if (log.isDebug2()) {
+      log.debug2("resultMap: " + mappings);
+    }
+    try {
+      return mappings.stream()
+        .map(x -> StringUtil.breakAt(x, '=', 2, true, true))
+        .map(x -> Pair.of(x.get(0), x.get(1)))
+        .collect(Collectors.toList());
+    } catch (Exception ex) {
+      throw new PluginException.InvalidDefinition("Invalid syntax in result map: " + mappings, ex);
+    }
+  }
+
+  /** Parse the result map RHS, which should be the name of either a
+   * CacheException or CacheResultHandler class name.
+   * @return either a CacheException class, or a CacheResultHandler instance
+   */
+  Object parseResultMapRhs(String rhs) {
+    PluginFetchEventResponse resp =
+      (PluginFetchEventResponse)newAuxClass(rhs, PluginFetchEventResponse.class,
+                                            null);
+    if (resp instanceof CacheException) {
+      return resp.getClass();
+    } else if (resp instanceof CacheResultHandler) {
+      return WrapperUtil.wrap((CacheResultHandler)resp,
+                              CacheResultHandler.class);
+    } else {
+      throw new PluginException.InvalidDefinition("RHS not a " +
+                                                  "CacheException or " +
+                                                  "CacheResultHandler class: " +
+                                                  rhs + ", in " + mapName);
+    }
+  }
+
+  /** Parse the  */
+  public ResultAction parseResultAction(String rhs) {
+    // If parseable as an integer, it's a result code.
+    try {
+      int code = Integer.parseInt(rhs);
+      return ResultAction.remap(Integer.valueOf(code));
+    } catch (Exception e) {
+      log.debug3("not an int: " + rhs);
+    }
+
+    // Try as legal RHS in CacheResultMap: CacheException
+    // CacheResultHandler
+    try {
+      PluginFetchEventResponse resp =
+        newAuxClass(rhs, PluginFetchEventResponse.class, null);
+      if (resp instanceof CacheException) {
+        return ResultAction.exClass(resp.getClass());
+      } else if (resp instanceof CacheResultHandler) {
+        return ResultAction.handler(WrapperUtil.wrap((CacheResultHandler)resp,
+                                                     CacheResultHandler.class));
+      }
+      log.debug3("not a CacheException or CacheResultHandler: " + resp);
+    } catch (Exception e) {
+      log.debug3("not a PluginFetchEventResponse: " + rhs);
+    }
+
+    // Try as an Exception to be remapped
+    try {
+      Exception resp = newAuxClass(rhs, Exception.class, null);
+      return ResultAction.remap(resp.getClass());
+    } catch (Exception e) {
+      log.debug3("not an Exception: " + rhs);
+    }
+    return null;
+  }
+
   /** Determine the type of the result map LHS, and store the RHS
    * value accordingly */
-  private void storeResultMapVal(HttpResultMap hResultMap, String entry,
+  private void storeResultMapVal(HttpResultMap hResultMap,
                                  String lhs, Object val) {
     // Try it as an integer
     try {
@@ -841,13 +895,13 @@ public class DefinablePlugin extends BasePlugin {
         throw new
           PluginException.InvalidDefinition("Lhs arg not an " +
                                             "Exception class: " +
-                                            entry + ", in " + mapName);
+                                            lhs + ", in " + mapName);
       }
     } catch (Exception ex) {
       throw new
         PluginException.InvalidDefinition("Lhs arg not a number, " +
                                           "exception class nor category: " +
-                                          entry + ", in " + mapName);
+                                          lhs + ", in " + mapName);
     } catch (LinkageError le) {
       throw new PluginException.InvalidDefinition("Can't load " +
                                                   lhs,

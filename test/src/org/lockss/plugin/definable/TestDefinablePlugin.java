@@ -594,6 +594,17 @@ public class TestDefinablePlugin extends LockssTestCase {
     }
   }
 
+  public void testParseResultAction() {
+    assertEquals(ResultAction.remap(404),
+                 definablePlugin.parseResultAction("404"));
+    assertEquals(ResultAction.remap(UnknownHostException.class),
+                 definablePlugin.parseResultAction(UnknownHostException.class.getName()));
+    assertEquals(ResultAction.exClass(CacheException.PermissionException.class),
+                 definablePlugin.parseResultAction(CacheException.PermissionException.class.getName()));
+    assertEquals(ResultAction.handler(new MyHttpResultHandler()),
+                 definablePlugin.parseResultAction(MyHttpResultHandler.class.getName()));
+  }
+
   public void testSiteNormalizeUrlNull() {
     UrlNormalizer urlNormalizer = definablePlugin.getUrlNormalizer();
     assertSame(BasePlugin.NullUrlNormalizer.INSTANCE, urlNormalizer);

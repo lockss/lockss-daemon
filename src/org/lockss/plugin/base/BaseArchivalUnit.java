@@ -48,6 +48,7 @@ import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.rewriter.*;
 import org.lockss.state.AuState;
 import org.lockss.util.*;
+import org.lockss.util.urlconn.*;
 
 /**
  * Abstract base class for ArchivalUnits.
@@ -106,7 +107,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   protected static final long DEFAULT_AU_MAX_SIZE = 0;
   protected static final long DEFAULT_AU_MAX_FILE_SIZE = 0;
 
-  protected BasePlugin plugin;
+  protected final BasePlugin plugin;
   protected boolean shouldRefetchOnCookies;
   protected long defaultFetchDelay = DEFAULT_FETCH_DELAY;
   protected List<String> urlStems;
@@ -507,6 +508,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     return shouldRefetchOnCookies;
   }
   
+  @Deprecated
   public boolean isLoginPageUrl(String url) {
     return false;
   }
@@ -652,6 +654,12 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   public List<Pattern> makeExcludeUrlsFromPollsPatterns()
       throws ArchivalUnit.ConfigurationException {
     return null;
+  }
+
+  public AuCacheResultMap makeAuCacheResultMap()
+      throws ArchivalUnit.ConfigurationException {
+    return new AuHttpResultMap(plugin.getCacheResultMap(),
+                               PatternMap.EMPTY);
   }
 
   public PatternStringMap makeUrlMimeTypeMap() {

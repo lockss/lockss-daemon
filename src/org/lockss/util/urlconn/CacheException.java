@@ -650,6 +650,26 @@ public class CacheException
     }
   }
 
+  public static class RedirectToLoginPageException extends PermissionException {
+    public RedirectToLoginPageException() {
+      super();
+    }
+
+    public RedirectToLoginPageException(String message) {
+      super(message);
+    }
+
+    protected void setAttributes() {
+      super.setAttributes();
+      attributeBits.set(ATTRIBUTE_FATAL);
+    }
+
+    public String getMessage() {
+      return "Redirect to login page: " + message;
+    }
+
+  }
+
   /** An error esploding a archive file during a crawl */
   public static class ExploderException
       extends UnretryableException {

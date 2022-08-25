@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2022 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -57,6 +53,7 @@ import org.lockss.extractor.*;
  */
 
 public class TestDefinableArchivalUnit extends LockssTestCase {
+  private static Logger log = Logger.getLogger("TestDefinableArchivalUnit");
   private DefinableArchivalUnit cau = null;
   private TypedEntryMap configMap;
   private TypedEntryMap additionalAuConfig = new TypedEntryMap();
@@ -1470,7 +1467,6 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   MyDefinablePlugin loadLargePlugin() {
     return (MyDefinablePlugin)
       PluginTestUtil.findPlugin("org.lockss.plugin.definable.LargeTestPlugin");
-    // return loadPlugin("org.lockss.plugin.definable.LargeTestPlugin");
   }
 
   public void testLargePlugin() throws Exception {
@@ -1679,6 +1675,27 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 		 urlMimeValidations.getMatch("http://base.foo/base_path/bar/pdf_url/xxx"));
     assertEquals(null,
 		 urlMimeValidations.getMatch("http://base.foo/bar/pdf_url/xxx"));
+
+    // Redirect patterns
+
+    // Login page URL declared in plugin w/ old-style
+    // au_redirect_to_login_url_pattern
+    assertTrue(au.isLoginPageUrl("http://base.foo/base_path/denial/denial.cfm"));
+    // Login page URL declared with redir pat
+    assertTrue(au.isLoginPageUrl("http://base.foo/base_path/login_url1"));
+
+    //
+    AuCacheResultMap acrm = getAuCacheResultMap(au);
+    assertNull(acrm.mapRedirUrl(null, null, "http://orig.url/",
+                                "http://base.foo/base_path/unmapped_url", "msg"));
+    assertClass(CacheException.RedirectToLoginPageException.class,
+		acrm.mapRedirUrl(null, null, "http://orig.url/",
+                                 "http://base.foo/base_path/login_url1", "msg"));
+    assertClass(CacheException.NoRetryDeadLinkException.class,
+		acrm.mapRedirUrl(null, null, "http://orig.url/",
+                                 "http://base.foo/base_path/404_url1", "msg"));
+
+
   }
 
   public void testNoMimeMap() throws Exception {
@@ -1918,6 +1935,10 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 
   HttpResultMap getHttpResultMap(DefinablePlugin plugin) {
     return (HttpResultMap)plugin.getCacheResultMap();
+  }
+
+  AuCacheResultMap getAuCacheResultMap(ArchivalUnit au) throws Exception {
+    return au.makeAuCacheResultMap();
   }
 
   // Old name for au_url_mime_type_map

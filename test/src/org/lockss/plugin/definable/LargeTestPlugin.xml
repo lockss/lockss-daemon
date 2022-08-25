@@ -330,6 +330,8 @@
       <string>java.io.IOException=org.lockss.util.urlconn.CacheException$RetryableNetworkException_5_30S</string>
       <string>522=org.lockss.plugin.definable.LargeTestHttpResponseHandler</string>
       <string>EmptyFile=org.lockss.util.urlconn.CacheException$NoRetryHostException</string>
+      <string>redirto:"%s.*login_url1.*", base_url=org.lockss.util.urlconn.CacheException$RedirectToLoginPageException</string>
+      <string>redirto:"%s.*404_url1.*", base_url=404</string>
     </list>
   </entry>
   <entry>
