@@ -450,14 +450,14 @@ public class HttpResultMap implements CacheResultMap {
 
   /** Map the fetch exception (SocketException, IOException, etc.) to the
    * CacheResultHandler instance */
-  public void storeMapEntry(Class fetchExceptionClass, ResultAction ei) {
-    exceptionTable.put(fetchExceptionClass, ei);
+  public void storeMapEntry(Class fetchExceptionClass, ResultAction ra) {
+    exceptionTable.put(fetchExceptionClass, ra);
   }
 
   /** Map the fetch exception (SocketException, IOException, etc.) to the
    * CacheResultHandler instance */
-  public void storeMapEntry(int code, ResultAction ei) {
-    exceptionTable.put(code, ei);
+  public void storeMapEntry(int code, ResultAction ra) {
+    exceptionTable.put(code, ra);
   }
 
   @Deprecated
@@ -543,12 +543,12 @@ public class HttpResultMap implements CacheResultMap {
                                      CacheEvent evt,
 				     String message)  {
 
-    ResultAction ei = evt.lookupIn(exceptionTable);
+    ResultAction ra = evt.lookupIn(exceptionTable);
 
-    if (ei == null) {
+    if (ra == null) {
       return evt.makeUnknownException(message);
     }
-    return checkSuccess(ei.getCacheException(au, url, evt));
+    return checkSuccess(ra.getCacheException(au, url, evt));
   }
 
   private CacheException checkSuccess(CacheException ex) {

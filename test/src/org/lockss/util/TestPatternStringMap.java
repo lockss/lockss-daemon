@@ -29,6 +29,9 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import java.util.*;
+import java.util.regex.*;
+import java.util.stream.*;
+import org.apache.commons.lang3.tuple.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
 
@@ -69,6 +72,13 @@ public class TestPatternStringMap extends LockssTestCase {
     assertTrue(PatternStringMap.EMPTY.isEmpty());
     assertTrue(PatternStringMap.fromSpec("").isEmpty());
     assertFalse(PatternStringMap.fromSpec("a.*b,2;ccc,xxx").isEmpty());
+  }
+
+  public void testGetUrlMapPairs() {
+    assertEquals(ListUtil.list(Pair.of("foo.*", "bar")),
+                 PatternStringMap.fromSpec("foo.*,bar").getPairs().stream()
+                 .map(x -> Pair.of(x.getLeft().pattern(), x.getRight()))
+                 .collect(Collectors.toList()));
   }
 
   public void testIll() {

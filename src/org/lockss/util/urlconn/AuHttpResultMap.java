@@ -27,8 +27,10 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.util.urlconn;
 
-import java.util.*;
 import java.net.*;
+import java.util.*;
+import java.util.regex.*;
+import org.apache.commons.lang3.tuple.*;
 
 import org.lockss.util.*;
 import org.lockss.daemon.PluginException;
@@ -36,13 +38,17 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ContentValidationException;
 
 /**
- * Maps a URL pattern to HTTP result (response code or exception
- * thrown during processing) to an action represented as a
- * CacheException.
- */
+ * Maps a URL pattern to a CacheException, by first looking the URL up
+ * in the PatternMap, then either returning the action specified by
+ * the corresponding ResultAction or remapping that value through the
+ * plugin's CacheResultMap (HttpResultMap).  Currently used only to
+ * check redirect URLs - will need to be slightly generalized if/when
+ * another use arises. */
 public class AuHttpResultMap implements AuCacheResultMap {
   static Logger log = Logger.getLogger("AuHttpResultMap");
 
+  /** A default instance specifying just the normal HttpResultMap
+   * actions */
   public static final AuHttpResultMap DEFAULT =
     new AuHttpResultMap(new HttpResultMap(), PatternMap.EMPTY);
 
@@ -55,14 +61,7 @@ public class AuHttpResultMap implements AuCacheResultMap {
     this.urlMap = urlMap;
   }
 
-  // map url.  If result is
-  //  int: map through HttpResultMap.mapException()
-  //  class name of CacheException or HttpReaultHandler:
-  //    use ResultAction.makeException() to instantiate or call handler
-  //  else: assume is name of exception to map through HttpReaultMap.
-  //    instantiate and call mapException()
-
-  /** Match the URL against the patterns in urlMap returning the value
+  /** Match a URL against the patterns in urlMap returning the value
    * returned by the corresponding ResultAction */
   public CacheException mapUrl(ArchivalUnit au,
                                     LockssUrlConnection connection,
@@ -79,6 +78,12 @@ public class AuHttpResultMap implements AuCacheResultMap {
     } catch (Exception e) {
       return new CacheException.UnknownExceptionException(e);
     }
+  }
+
+  /** Return a copy of the list of pairs in the PatternMap (for status
+   * display) */
+  public List<Pair<Pattern,ResultAction>> getUrlMapPairs() {
+    return urlMap.getPairs();
   }
 
   public String toString() {

@@ -407,52 +407,60 @@ class HTTPResultMapping extends PluginStatus implements StatusAccessor {
     for (Map.Entry<Object,ResultAction> ent
            : hrMap.getExceptionMap().entrySet()) {
       Object lhs = ent.getKey();
-      ResultAction ei = ent.getValue();
+      ResultAction ra = ent.getValue();
       Map row = new HashMap();
       StatusTable.DisplayedValue trigger =
         new StatusTable.DisplayedValue(shortName(lhs));
-      if (ei == null) {
-      row.put("trigger", trigger);
-        row.put("action", "Missing");
-        continue;
-      }
-      if (!ei.equals(defMap.get(lhs))) {
-        trigger.setBold(true);
-      }
       if (!shortName(lhs).equals(lhs.toString())) {
         trigger.setHoverText(lhs.toString());
       }
-      row.put("trigger", trigger);
-      switch (ei.getType()) {
-      case Class:
-        Class ex = ei.getExceptionClass();
-	CacheException cex = (CacheException)ex.newInstance();
-        if (cex.isAttributeSet(CacheException.ATTRIBUTE_RETRY)) {
-          row.put("retries", cex.getRetryCount() + " @ " +
-                  StringUtil.timeIntervalToString(cex.getRetryDelay()));
-        }
-        if (cex.isAttributeSet(CacheException.ATTRIBUTE_FATAL)) {
-          row.put("action", "Abort");
-        } else if (cex.isAttributeSet(CacheException.ATTRIBUTE_FAIL)) {
-          row.put("action", "Fail");
-        }
-        break;
-      case Handler:
-        CacheResultHandler crh = ei.getHandler();
-        if (crh instanceof CacheResultHandlerWrapper) {
-          crh = (CacheResultHandler)((CacheResultHandlerWrapper)crh).getWrappedObj();
-        }
-        StatusTable.DisplayedValue action =
-          new StatusTable.DisplayedValue(shortName(crh.getClass()));
-        action.setHoverText(crh.getClass().toString());
-
-        row.put("action", action);
-        break;
+      if (ra == null) {
+        row.put("trigger", trigger);
+        row.put("action", "Missing");
+        continue;
       }
+      if (!ra.equals(defMap.get(lhs))) {
+        trigger.setBold(true);
+      }
+      row.put("trigger", trigger);
+      addRaToRow(row, ra);
       row.put(StatusTable.ROW_SEPARATOR, "");
       rows.add(row);
     }
     return rows;
+  }
+
+  void addRaToRow(Map row, ResultAction ra) throws Exception {
+    if (ra == null) {
+      row.put("action", "Missing");
+      return;
+    }
+    switch (ra.getType()) {
+    case Class:
+      Class ex = ra.getExceptionClass();
+      CacheException cex = (CacheException)ex.newInstance();
+      if (cex.isAttributeSet(CacheException.ATTRIBUTE_RETRY)) {
+        row.put("retries", cex.getRetryCount() + " @ " +
+                StringUtil.timeIntervalToString(cex.getRetryDelay()));
+      }
+      if (cex.isAttributeSet(CacheException.ATTRIBUTE_FATAL)) {
+        row.put("action", "Abort");
+      } else if (cex.isAttributeSet(CacheException.ATTRIBUTE_FAIL)) {
+        row.put("action", "Fail");
+      }
+      break;
+    case Handler:
+      CacheResultHandler crh = ra.getHandler();
+      if (crh instanceof CacheResultHandlerWrapper) {
+        crh = (CacheResultHandler)((CacheResultHandlerWrapper)crh).getWrappedObj();
+      }
+      StatusTable.DisplayedValue action =
+        new StatusTable.DisplayedValue(shortName(crh.getClass()));
+      action.setHoverText(crh.getClass().toString());
+
+      row.put("action", action);
+      break;
+    }
   }
 
   Object shortName(Object o) {

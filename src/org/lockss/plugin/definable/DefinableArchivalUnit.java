@@ -640,7 +640,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
                                                  "Login page");
       return rhs instanceof CacheException.RedirectToLoginPageException;
     } catch (ConfigurationException e) {
-      log.warning("Error checking login URL: " + url, e);
+      log.warning("Error checking for login URL: " + url, e);
       return false;
     }
   }    

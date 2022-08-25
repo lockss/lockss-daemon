@@ -31,7 +31,9 @@ package org.lockss.util.urlconn;
 import org.lockss.plugin.ArchivalUnit;
 
 /**
- * Adds per-AU data to the CacheResultMap
+ * Like {@CacheResultMap} but associated with an AU instead of a
+ * plugin; contains AU-specific values.  Currently supports mapping a
+ * URL to an action.
  */
 public interface AuCacheResultMap {
 

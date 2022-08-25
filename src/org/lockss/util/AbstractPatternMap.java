@@ -67,6 +67,16 @@ public abstract class AbstractPatternMap<T> {
     return (StringUtil.breakAt(spec, ";", -1, true, true));
   }
 
+  /** Return a copy of the Pattern,T pairs in the map.  Provides
+   * visibility into the map without allowing modification */
+  public List<Pair<Pattern,T>> getPairs() {
+    List<Pair<Pattern,T>> res = new ArrayList<>();
+    for (Map.Entry<Pattern,T> ent : patternMap.entrySet()) {
+      res.add(Pair.of(ent.getKey(), ent.getValue()));
+    }
+    return res;
+  }
+
   protected AbstractPatternMap parseSpec(List<String> patternPairs)
       throws IllegalArgumentException {
     List<Pair<String,T>> pairList = new ArrayList<>();
