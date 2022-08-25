@@ -620,7 +620,7 @@
 
       au < deepCrawl ; exists ; 2020 ; 2020 ; European Journal of Mineralogy Volume 32 ; 32 ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; European Journal of Mineralogy Volume 33 ; 33 ; >
-      au < ready ; exists ; 2022 ; 2022 ; European Journal of Mineralogy Volume 34 ; 34 ; >
+      au < crawling ; exists ; 2022 ; 2022 ; European Journal of Mineralogy Volume 34 ; 34 ; >
 
   }
 
@@ -774,7 +774,7 @@
       au < finished ; crawling ; 2019 ; 2019 ; Geoscience Communication Volume 2 ; 2 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; 2020 ; Geoscience Communication Volume 3 ; 3 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2021 ; 2021 ; Geoscience Communication Volume 4 ; 4 ; >
-      au < ready ; exists ; 2022 ; 2022 ; Geoscience Communication Volume 5 ; 5 ; >
+      au < crawling ; exists ; 2022 ; 2022 ; Geoscience Communication Volume 5 ; 5 ; >
 
   }
 
@@ -975,7 +975,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Journal of Micropalaeontology Volume 38 ; 38 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Micropalaeontology Volume 39 ; 39 ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; Journal of Micropalaeontology Volume 40 ; 40 ; >
-      au < ready ; exists ; 2022 ; 2022 ; Journal of Micropalaeontology Volume 41 ; 41 ; >
+      au < crawling ; exists ; 2022 ; 2022 ; Journal of Micropalaeontology Volume 41 ; 41 ; >
 
   }
 
@@ -1293,7 +1293,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Scientific Drilling Volume 23 ; 23 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Scientific Drilling Volume 24 ; 24 ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; Scientific Drilling Volume 25 ; 25 ; >
-      au < ready ; exists ; 2022 ; 2022 ; Scientific Drilling Volume 26 ; 26 ; >
+      au < crawling ; exists ; 2022 ; 2022 ; Scientific Drilling Volume 26 ; 26 ; >
 
   }
 

@@ -2276,7 +2276,7 @@
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Anesthesiology Volume 2019 ; 2019 ; 2019 ; >
     au < finished ; crawling ; 2020 ; Case Reports in Anesthesiology Volume 2020 ; 2020 ; 2020 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2021 ; Case Reports in Anesthesiology Volume 2021 ; 2021 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Case Reports in Anesthesiology Volume 2022 ; 2022 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Case Reports in Anesthesiology Volume 2022 ; 2022 ; 2022 ; >
 
   }
 
@@ -2426,7 +2426,7 @@
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Endocrinology Volume 2019 ; 2019 ; 2019 ; >
     au < finished ; crawling ; 2020 ; Case Reports in Endocrinology Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Case Reports in Endocrinology Volume 2021 ; 2021 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Case Reports in Endocrinology Volume 2022 ; 2022 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Case Reports in Endocrinology Volume 2022 ; 2022 ; 2022 ; >
 
   }
 
@@ -2701,7 +2701,7 @@
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Oncological Medicine Volume 2019 ; 2019 ; 2019 ; >
     au < finished ; crawling ; 2020 ; Case Reports in Oncological Medicine Volume 2020 ; 2020 ; 2020 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2021 ; Case Reports in Oncological Medicine Volume 2021 ; 2021 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Case Reports in Oncological Medicine Volume 2022 ; 2022 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Case Reports in Oncological Medicine Volume 2022 ; 2022 ; 2022 ; >
 
   }
 
@@ -2901,7 +2901,7 @@
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Radiology Volume 2019 ; 2019 ; 2019 ; >
     au < finished ; crawling ; 2020 ; Case Reports in Radiology Volume 2020 ; 2020 ; 2020 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2021 ; Case Reports in Radiology Volume 2021 ; 2021 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Case Reports in Radiology Volume 2022 ; 2022 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Case Reports in Radiology Volume 2022 ; 2022 ; 2022 ; >
 
   }
 
@@ -3051,7 +3051,7 @@
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Veterinary Medicine Volume 2019 ; 2019 ; 2019 ; >
     au < finished ; crawling ; 2020 ; Case Reports in Veterinary Medicine Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Case Reports in Veterinary Medicine Volume 2021 ; 2021 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Case Reports in Veterinary Medicine Volume 2022 ; 2022 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Case Reports in Veterinary Medicine Volume 2022 ; 2022 ; 2022 ; >
 
   }
 
@@ -4523,7 +4523,7 @@
     au < doNotProcess ; doNotProcess ; 2019 ; International Journal of Chronic Diseases Volume 2019 ; 2019 ; 2019 ; >
     au < finished ; crawling ; 2020 ; International Journal of Chronic Diseases Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; International Journal of Chronic Diseases Volume 2021 ; 2021 ; 2021 ; >
-    au < ready ; exists ; 2022 ; International Journal of Chronic Diseases Volume 2022 ; 2022 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; International Journal of Chronic Diseases Volume 2022 ; 2022 ; 2022 ; >
 
   }
 
@@ -5185,7 +5185,7 @@
     au < finished ; crawling ; 2019 ; International Journal of Mathematics and Mathematical Sciences Volume 2019 ; 2019 ; 2019 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; International Journal of Mathematics and Mathematical Sciences Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; International Journal of Mathematics and Mathematical Sciences Volume 2021 ; 2021 ; 2021 ; >
-    au < ready ; exists ; 2022 ; International Journal of Mathematics and Mathematical Sciences Volume 2022 ; 2022 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; International Journal of Mathematics and Mathematical Sciences Volume 2022 ; 2022 ; 2022 ; >
 
   }
 
@@ -5792,7 +5792,7 @@
     au < finished ; crawling ; 2019 ; International Journal of Rheumatology Volume 2019 ; 2019 ; 2019 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2020 ; International Journal of Rheumatology Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; International Journal of Rheumatology Volume 2021 ; 2021 ; 2021 ; >
-    au < ready ; exists ; 2022 ; International Journal of Rheumatology Volume 2022 ; 2022 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; International Journal of Rheumatology Volume 2022 ; 2022 ; 2022 ; >
 
   }
 
@@ -5833,7 +5833,7 @@
     au < finished ; crawling ; 2019 ; International Journal of Rotating Machinery Volume 2019 ; 2019 ; 2019 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; International Journal of Rotating Machinery Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; International Journal of Rotating Machinery Volume 2021 ; 2021 ; 2021 ; >
-    au < ready ; exists ; 2022 ; International Journal of Rotating Machinery Volume 2022 ; 2022 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; International Journal of Rotating Machinery Volume 2022 ; 2022 ; 2022 ; >
 
   }
 
@@ -6982,7 +6982,7 @@
     au < finished ; crawling ; 2019 ; Journal of Computer Networks and Communications Volume 2019 ; 2019 ; 2019 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Journal of Computer Networks and Communications Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Journal of Computer Networks and Communications Volume 2021 ; 2021 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Journal of Computer Networks and Communications Volume 2022 ; 2022 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Journal of Computer Networks and Communications Volume 2022 ; 2022 ; 2022 ; >
 
   }
 
@@ -7450,7 +7450,7 @@
     au < finished ; crawling ; 2019 ; Journal of Function Spaces Volume 2019 ; 2019 ; 2019 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Journal of Function Spaces Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Journal of Function Spaces Volume 2021 ; 2021 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Journal of Function Spaces Volume 2022 ; 2022 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Journal of Function Spaces Volume 2022 ; 2022 ; 2022 ; >
 
   }
 
@@ -8221,7 +8221,7 @@
     au < finished ; crawling ; 2019 ; Journal of Optimization Volume 2019 ; 2019 ; 2019 ; reingest4.clockss.org:8082 >
     au < exists ; exists ; 2020 ; Journal of Optimization Volume 2020 ; 2020 ; 2020 ; >
     au < manifest ; exists ; 2021 ; Journal of Optimization Volume 2021 ; 2021 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Journal of Optimization Volume 2022 ; 2022 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Journal of Optimization Volume 2022 ; 2022 ; 2022 ; >
 
   }
 
@@ -8350,7 +8350,7 @@
     au < finished ; crawling ; 2019 ; Journal of Pathogens Volume 2019 ; 2019 ; 2019 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Journal of Pathogens Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Journal of Pathogens Volume 2021 ; 2021 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Journal of Pathogens Volume 2022 ; 2022 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Journal of Pathogens Volume 2022 ; 2022 ; 2022 ; >
 
   }
 
@@ -8842,7 +8842,7 @@
     au < finished ; crawling ; 2019 ; Journal of Sports Medicine Volume 2019 ; 2019 ; 2019 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Journal of Sports Medicine Volume 2020 ; 2020 ; 2020 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2021 ; Journal of Sports Medicine Volume 2021 ; 2021 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Journal of Sports Medicine Volume 2022 ; 2022 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Journal of Sports Medicine Volume 2022 ; 2022 ; 2022 ; >
 
   }
 
@@ -8975,7 +8975,7 @@
     au < finished ; crawling ; 2019 ; Journal of Thyroid Research Volume 2019 ; 2019 ; 2019 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2020 ; Journal of Thyroid Research Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Journal of Thyroid Research Volume 2021 ; 2021 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Journal of Thyroid Research Volume 2022 ; 2022 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Journal of Thyroid Research Volume 2022 ; 2022 ; 2022 ; >
 
   }
   
@@ -9002,7 +9002,7 @@
     au < finished ; crawling ; 2019 ; Journal of Toxicology Volume 2019 ; 2019 ; 2019 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Journal of Toxicology Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Journal of Toxicology Volume 2021 ; 2021 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Journal of Toxicology Volume 2022 ; 2022 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Journal of Toxicology Volume 2022 ; 2022 ; 2022 ; >
 
   }
 
@@ -9073,7 +9073,7 @@
     au < finished ; crawling ; 2019 ; Journal of Tropical Medicine Volume 2019 ; 2019 ; 2019 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Journal of Tropical Medicine Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Journal of Tropical Medicine Volume 2021 ; 2021 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Journal of Tropical Medicine Volume 2022 ; 2022 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Journal of Tropical Medicine Volume 2022 ; 2022 ; 2022 ; >
 
   }
 
@@ -9293,7 +9293,7 @@
     au < finished ; crawling ; 2019 ; Mathematical Problems in Engineering Volume 2019 ; 2019 ; 2019 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2020 ; Mathematical Problems in Engineering Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Mathematical Problems in Engineering Volume 2021 ; 2021 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Mathematical Problems in Engineering Volume 2022 ; 2022 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Mathematical Problems in Engineering Volume 2022 ; 2022 ; 2022 ; >
 
   }
 
@@ -9337,7 +9337,7 @@
     au < finished ; crawling ; 2019 ; Mediators of Inflammation Volume 2019 ; 2019 ; 2019 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Mediators of Inflammation Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Mediators of Inflammation Volume 2021 ; 2021 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Mediators of Inflammation Volume 2022 ; 2022 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Mediators of Inflammation Volume 2022 ; 2022 ; 2022 ; >
 
   }
 
@@ -9458,7 +9458,7 @@
     au < finished ; crawling ; 2019 ; Multiple Sclerosis International Volume 2019 ; 2019 ; 2019 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Multiple Sclerosis International Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Multiple Sclerosis International Volume 2021 ; 2021 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Multiple Sclerosis International Volume 2022 ; 2022 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Multiple Sclerosis International Volume 2022 ; 2022 ; 2022 ; >
 
   }
 
@@ -9528,7 +9528,7 @@
     au < finished ; crawling ; 2019 ; Neurology Research International Volume 2019 ; 2019 ; 2019 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Neurology Research International Volume 2020 ; 2020 ; 2020 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2021 ; Neurology Research International Volume 2021 ; 2021 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Neurology Research International Volume 2022 ; 2022 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Neurology Research International Volume 2022 ; 2022 ; 2022 ; >
 
   }
 
@@ -9594,7 +9594,7 @@
     au < finished ; crawling ; 2019 ; Nursing Research and Practice Volume 2019 ; 2019 ; 2019 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Nursing Research and Practice Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Nursing Research and Practice Volume 2021 ; 2021 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Nursing Research and Practice Volume 2022 ; 2022 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Nursing Research and Practice Volume 2022 ; 2022 ; 2022 ; >
 
   }
 
@@ -9785,7 +9785,7 @@
     au < finished ; crawling ; 2019 ; Parkinson's Disease Volume 2019 ; 2019 ; 2019 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Parkinson's Disease Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Parkinson's Disease Volume 2021 ; 2021 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Parkinson's Disease Volume 2022 ; 2022 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Parkinson's Disease Volume 2022 ; 2022 ; 2022 ; >
 
   }
 
@@ -10268,7 +10268,7 @@
     au < finished ; crawling ; 2019 ; Schizophrenia Research and Treatment Volume 2019 ; 2019 ; 2019 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Schizophrenia Research and Treatment Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Schizophrenia Research and Treatment Volume 2021 ; 2021 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Schizophrenia Research and Treatment Volume 2022 ; 2022 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Schizophrenia Research and Treatment Volume 2022 ; 2022 ; 2022 ; >
 
   }
   
@@ -10342,7 +10342,7 @@
     au < finished ; crawling ; 2019 ; Scientifica Volume 2019 ; 2019 ; 2019 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Scientifica Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Scientifica Volume 2021 ; 2021 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Scientifica Volume 2022 ; 2022 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Scientifica Volume 2022 ; 2022 ; 2022 ; >
 
   }
   
@@ -10405,7 +10405,7 @@
     au < finished ; crawling ; 2019 ; Shock and Vibration Volume 2019 ; 2019 ; 2019 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2020 ; Shock and Vibration Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Shock and Vibration Volume 2021 ; 2021 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Shock and Vibration Volume 2022 ; 2022 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Shock and Vibration Volume 2022 ; 2022 ; 2022 ; >
 
   }
   
@@ -10576,7 +10576,7 @@
     au < finished ; crawling ; 2019 ; The Scientific World Journal Volume 2019 ; 2019 ; 2019 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; The Scientific World Journal Volume 2020 ; 2020 ; 2020 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2021 ; The Scientific World Journal Volume 2021 ; 2021 ; 2021 ; >
-    au < ready ; exists ; 2022 ; The Scientific World Journal Volume 2022 ; 2022 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; The Scientific World Journal Volume 2022 ; 2022 ; 2022 ; >
 
   }
 
@@ -10690,7 +10690,7 @@
     au < finished ; crawling ; 2019 ; Veterinary Medicine International Volume 2019 ; 2019 ; 2019 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Veterinary Medicine International Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Veterinary Medicine International Volume 2021 ; 2021 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Veterinary Medicine International Volume 2022 ; 2022 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Veterinary Medicine International Volume 2022 ; 2022 ; 2022 ; >
 
   }
 
