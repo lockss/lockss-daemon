@@ -40,6 +40,7 @@ import javax.xml.parsers.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.AuUtil;;
 import org.lockss.util.*;
 import org.xml.sax.*;
 
@@ -185,8 +186,8 @@ public class GPOFDSysSitemapsLinkExtractorFactory implements LinkExtractorFactor
           @Override
           public void foundLink(String url) {
             if (au != null) {
-              if (HttpToHttpsUtil.UrlUtil.isSameHost(srcUrl, url)) {
-                url = HttpToHttpsUtil.AuUtil.normalizeHttpHttpsFromBaseUrl(au, url);
+              if (UrlUtil.isSameHost(srcUrl, url)) {
+                url = AuUtil.normalizeHttpHttpsFromBaseUrl(au, url);
               }
             }
             cb.foundLink(url);
