@@ -5,15 +5,11 @@
     info[platform] = Silverchair.
   >
   
-   #plugin = needs.plugin
+   plugin = needs.plugin
    #Like this plugin ->
-   plugin = org.lockss.plugin.silverchair.ucpress.UCPressSilverchairPlugin
+   #plugin = org.lockss.plugin.silverchair.ucpress.UCPressSilverchairPlugin
    implicit < status ; year ; param[year] ; name ; param[volume_name] >
    param[base_url] = https://aacrjournals.org/
-   #move from HW to SilverChair
-
-   #pluginPrefix = org.lockss.plugin.highwire.
-   #implicit < pluginSuffix ; status ; year ; name ; param[volume_name] ; param[base_url] >
 
   {
 
