@@ -1016,7 +1016,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       crawlPriorityAuidMap = PatternIntMap.EMPTY;
     } else {
       try {
-	crawlPriorityAuidMap = new PatternIntMap(patternPairs);
+	crawlPriorityAuidMap = PatternIntMap.fromSpec(patternPairs);
 	logger.debug("Installing crawl priority map: " + crawlPriorityAuidMap);
       } catch (IllegalArgumentException e) {
 	logger.error("Illegal crawl priority map, ignoring", e);
