@@ -119,14 +119,27 @@
       eissn = 2689-0186 ;
       issnl = 2689-0186
     >
-
+    {
     param[resource_id] = 206
     param[journal_id] = health-forum
     
-    au < exists ; exists ; 2020 ; JAMA Health Forum Volume 1 ; 2020 ; https://jamanetwork.com/ ; >
-    au < exists ; exists ; 2021 ; JAMA Health Forum Volume 2 ; 2021 ; https://jamanetwork.com/ ; >
-    au < expected ; exists ; 2022 ; JAMA Health Forum Volume 3 ; 2022 ; https://jamanetwork.com/ ; >
-
+    au < manifest ; exists ; 2012 ; JAMA Health Forum Volume 2012 ; 2012 ; https://jamanetwork.com/ ; >
+    au < manifest ; exists ; 2013 ; JAMA Health Forum Volume 2013 ; 2013 ; https://jamanetwork.com/ ; >
+    au < manifest ; exists ; 2014 ; JAMA Health Forum Volume 2014 ; 2014 ; https://jamanetwork.com/ ; >
+    au < manifest ; exists ; 2015 ; JAMA Health Forum Volume 2015 ; 2015 ; https://jamanetwork.com/ ; >
+    au < manifest ; exists ; 2016 ; JAMA Health Forum Volume 2016 ; 2016 ; https://jamanetwork.com/ ; >
+    au < manifest ; exists ; 2017 ; JAMA Health Forum Volume 2017 ; 2017 ; https://jamanetwork.com/ ; >
+    au < manifest ; exists ; 2018 ; JAMA Health Forum Volume 2018 ; 2018 ; https://jamanetwork.com/ ; >
+    au < manifest ; exists ; 2019 ; JAMA Health Forum Volume 2019 ; 2019 ; https://jamanetwork.com/ ; >
+    }
+    {
+    param[resource_id] = 206
+    param[journal_id] = jama-health-forum
+    
+    au < exists ; exists ; 2020 ; JAMA Health Forum Volume 2020 ; 2020 ; https://jamanetwork.com/ ; >
+    au < exists ; exists ; 2021 ; JAMA Health Forum Volume 2021 ; 2021 ; https://jamanetwork.com/ ; >
+    au < exists ; exists ; 2022 ; JAMA Health Forum Volume 2022 ; 2022 ; https://jamanetwork.com/ ; >
+    }
   }
 
   {
