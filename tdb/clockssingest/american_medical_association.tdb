@@ -133,12 +133,12 @@
     au < manifest ; exists ; 2019 ; JAMA Health Forum Volume 2019 ; 2019 ; https://jamanetwork.com/ ; >
     }
     {
-    param[resource_id] = 206
+    param[resource_id] = 185
     param[journal_id] = jama-health-forum
     
-    au < exists ; exists ; 2020 ; JAMA Health Forum Volume 2020 ; 2020 ; https://jamanetwork.com/ ; >
-    au < exists ; exists ; 2021 ; JAMA Health Forum Volume 2021 ; 2021 ; https://jamanetwork.com/ ; >
-    au < exists ; exists ; 2022 ; JAMA Health Forum Volume 2022 ; 2022 ; https://jamanetwork.com/ ; >
+    au < manifest ; exists ; 2020 ; JAMA Health Forum Volume 2020 ; 2020 ; https://jamanetwork.com/ ; >
+    au < manifest ; exists ; 2021 ; JAMA Health Forum Volume 2021 ; 2021 ; https://jamanetwork.com/ ; >
+    au < manifest ; exists ; 2022 ; JAMA Health Forum Volume 2022 ; 2022 ; https://jamanetwork.com/ ; >
     }
   }
 

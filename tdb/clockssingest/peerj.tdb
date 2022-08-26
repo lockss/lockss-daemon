@@ -40,7 +40,7 @@
     au < finished ; crawling ; 2019 ; PeerJ Volume 2019 ; 2019 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; PeerJ Volume 2020 ; 2020 ; >
     au < deepCrawl ; exists ; 2021 ; PeerJ Volume 2021 ; 2021 ; >
-    au < manifest ; exists ; 2022 ; PeerJ Volume 2022 ; 2022 ; >
+    au < ready ; exists ; 2022 ; PeerJ Volume 2022 ; 2022 ; >
 
     }
   }
@@ -64,7 +64,7 @@
     au < finished ; crawling ; 2019 ; PeerJ Computer Science Volume 2019 ; 2019 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; PeerJ Computer Science Volume 2020 ; 2020 ; >
     au < deepCrawl ; exists ; 2021 ; PeerJ Computer Science Volume 2021 ; 2021 ; >
-    au < manifest ; exists ; 2022 ; PeerJ Computer Science Volume 2022 ; 2022 ; >
+    au < ready ; exists ; 2022 ; PeerJ Computer Science Volume 2022 ; 2022 ; >
 
     }
   }

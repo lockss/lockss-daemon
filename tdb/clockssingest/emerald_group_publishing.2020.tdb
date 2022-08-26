@@ -3896,10 +3896,10 @@
     #continued_by = 2398-4686
 
     au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal for Researcher Development Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2011 ; International Journal for Researcher Development Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2012 ; International Journal for Researcher Development Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2013 ; International Journal for Researcher Development Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2014 ; International Journal for Researcher Development Volume 5 ; 5 ; >
+    au < ready ; exists ; 2011 ; International Journal for Researcher Development Volume 2 ; 2 ; >
+    au < ready ; exists ; 2012 ; International Journal for Researcher Development Volume 3 ; 3 ; >
+    au < ready ; exists ; 2013 ; International Journal for Researcher Development Volume 4 ; 4 ; >
+    au < ready ; exists ; 2014 ; International Journal for Researcher Development Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal for Researcher Development Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal for Researcher Development Volume 7 ; 7 ; >
 
@@ -13380,7 +13380,7 @@
 
     param[journal_issn] = 2056-3868
 
-    au < manifest ; exists ; 2015 ; Advances in Autism Volume 1 ; 1 ; >
+    au < ready ; exists ; 2015 ; Advances in Autism Volume 1 ; 1 ; >
     au < ready ; exists ; 2016 ; Advances in Autism Volume 2 ; 2 ; >
     au < ready ; exists ; 2017 ; Advances in Autism Volume 3 ; 3 ; >
     au < ready ; exists ; 2018 ; Advances in Autism Volume 4 ; 4 ; >
@@ -13401,7 +13401,7 @@
 
     param[journal_issn] = 2056-3515
 
-    au < manifest ; exists ; 2015 ; Annals in Social Responsibility Volume 2 ; 2 ; >
+    au < ready ; exists ; 2015 ; Annals in Social Responsibility Volume 2 ; 2 ; >
     au < ready ; exists ; 2016 ; Annals in Social Responsibility Volume 3 ; 3 ; >
     au < ready ; exists ; 2017 ; Annals in Social Responsibility Volume 4 ; 4 ; >
     au < ready ; exists ; 2018 ; Annals in Social Responsibility Volume 5 ; 5 ; >
@@ -13422,8 +13422,8 @@
 
     param[journal_issn] = 2050-3806
 
-    au < manifest ; exists ; 2014 ; Aslib Journal of Information Management Volume 66 ; 66 ; >
-    au < manifest ; exists ; 2015 ; Aslib Journal of Information Management Volume 67 ; 67 ; >
+    au < ready ; exists ; 2014 ; Aslib Journal of Information Management Volume 66 ; 66 ; >
+    au < ready ; exists ; 2015 ; Aslib Journal of Information Management Volume 67 ; 67 ; >
     au < ready ; exists ; 2016 ; Aslib Journal of Information Management Volume 68 ; 68 ; >
     au < ready ; exists ; 2017 ; Aslib Journal of Information Management Volume 69 ; 69 ; >
     au < ready ; exists ; 2018 ; Aslib Journal of Information Management Volume 70 ; 70 ; >
@@ -13482,10 +13482,10 @@
 
     param[journal_issn] = 2046-9012
 
-    au < manifest ; exists ; 2012 ; European Journal of Training and Development Volume 36 ; 36 ; >
-    au < manifest ; exists ; 2013 ; European Journal of Training and Development Volume 37 ; 37 ; >
-    au < manifest ; exists ; 2014 ; European Journal of Training and Development Volume 38 ; 38 ; >
-    au < manifest ; exists ; 2015 ; European Journal of Training and Development Volume 39 ; 39 ; >
+    au < ready ; exists ; 2012 ; European Journal of Training and Development Volume 36 ; 36 ; >
+    au < ready ; exists ; 2013 ; European Journal of Training and Development Volume 37 ; 37 ; >
+    au < ready ; exists ; 2014 ; European Journal of Training and Development Volume 38 ; 38 ; >
+    au < ready ; exists ; 2015 ; European Journal of Training and Development Volume 39 ; 39 ; >
     au < ready ; exists ; 2016 ; European Journal of Training and Development Volume 40 ; 40 ; >
     au < ready ; exists ; 2017 ; European Journal of Training and Development Volume 41 ; 41 ; >
     au < manifest ; exists ; 2018 ; European Journal of Training and Development Volume 42 ; 42 ; >
@@ -13506,9 +13506,9 @@
 
     param[journal_issn] = 2049-3983
 
-    au < manifest ; exists ; 2013 ; Evidence-based HRM Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2014 ; Evidence-based HRM Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2015 ; Evidence-based HRM Volume 3 ; 3 ; >
+    au < ready ; exists ; 2013 ; Evidence-based HRM Volume 1 ; 1 ; >
+    au < ready ; exists ; 2014 ; Evidence-based HRM Volume 2 ; 2 ; >
+    au < ready ; exists ; 2015 ; Evidence-based HRM Volume 3 ; 3 ; >
     au < ready ; exists ; 2016 ; Evidence-based HRM Volume 4 ; 4 ; >
     au < ready ; exists ; 2017 ; Evidence-based HRM Volume 5 ; 5 ; >
     au < manifest ; exists ; 2018 ; Evidence-based HRM Volume 6 ; 6 ; >
@@ -13529,7 +13529,7 @@
 
     param[journal_issn] = 2056-4961
 
-    au < manifest ; exists ; 2015 ; Information and Computer Security Volume 23 ; 23 ; >
+    au < ready ; exists ; 2015 ; Information and Computer Security Volume 23 ; 23 ; >
     au < ready ; exists ; 2016 ; Information and Computer Security Volume 24 ; 24 ; >
     au < ready ; exists ; 2017 ; Information and Computer Security Volume 25 ; 25 ; >
     au < ready ; exists ; 2018 ; Information and Computer Security Volume 26 ; 26 ; >
@@ -13609,7 +13609,7 @@
 
     param[journal_issn] = 2056-4880
 
-    au < manifest ; exists ; 2015 ; International Journal of Information and Learning Technology Volume 32 ; 32 ; >
+    au < ready ; exists ; 2015 ; International Journal of Information and Learning Technology Volume 32 ; 32 ; >
     au < ready ; exists ; 2016 ; International Journal of Information and Learning Technology Volume 33 ; 33 ; >
     au < ready ; exists ; 2017 ; International Journal of Information and Learning Technology Volume 34 ; 34 ; >
     au < ready ; exists ; 2018 ; International Journal of Information and Learning Technology Volume 35 ; 35 ; >
@@ -13630,12 +13630,12 @@
 
     param[journal_issn] = 1757-2223
 
-    au < manifest ; exists ; 2009 ; International Journal of Innovation Science Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2010 ; International Journal of Innovation Science Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2011 ; International Journal of Innovation Science Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2012 ; International Journal of Innovation Science Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2013 ; International Journal of Innovation Science Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2014 ; International Journal of Innovation Science Volume 6 ; 6 ; >
+    au < ready ; exists ; 2009 ; International Journal of Innovation Science Volume 1 ; 1 ; >
+    au < ready ; exists ; 2010 ; International Journal of Innovation Science Volume 2 ; 2 ; >
+    au < ready ; exists ; 2011 ; International Journal of Innovation Science Volume 3 ; 3 ; >
+    au < ready ; exists ; 2012 ; International Journal of Innovation Science Volume 4 ; 4 ; >
+    au < ready ; exists ; 2013 ; International Journal of Innovation Science Volume 5 ; 5 ; >
+    au < ready ; exists ; 2014 ; International Journal of Innovation Science Volume 6 ; 6 ; >
     au < ready ; exists ; 2015 ; International Journal of Innovation Science Volume 7 ; 7 ; >
     au < ready ; exists ; 2016 ; International Journal of Innovation Science Volume 8 ; 8 ; >
     au < ready ; exists ; 2017 ; International Journal of Innovation Science Volume 9 ; 9 ; >
@@ -13657,12 +13657,12 @@
 
     param[journal_issn] = 2049-6427
 
-    au < manifest ; exists ; 2013 ; International Journal of Intelligent Unmanned Systems Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2014 ; International Journal of Intelligent Unmanned Systems Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2015 ; International Journal of Intelligent Unmanned Systems Volume 3 ; 3 ; >
+    au < ready ; exists ; 2013 ; International Journal of Intelligent Unmanned Systems Volume 1 ; 1 ; >
+    au < ready ; exists ; 2014 ; International Journal of Intelligent Unmanned Systems Volume 2 ; 2 ; >
+    au < ready ; exists ; 2015 ; International Journal of Intelligent Unmanned Systems Volume 3 ; 3 ; >
     au < ready ; exists ; 2016 ; International Journal of Intelligent Unmanned Systems Volume 4 ; 4 ; >
     au < ready ; exists ; 2017 ; International Journal of Intelligent Unmanned Systems Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2018 ; International Journal of Intelligent Unmanned Systems Volume 6 ; 6 ; >
+    au < ready ; exists ; 2018 ; International Journal of Intelligent Unmanned Systems Volume 6 ; 6 ; >
     au < ready ; exists ; 2019 ; International Journal of Intelligent Unmanned Systems Volume 7 ; 7 ; >
     au < ready ; exists ; 2020 ; International Journal of Intelligent Unmanned Systems Volume 8 ; 8 ; >
     au < ready ; exists ; 2021 ; International Journal of Intelligent Unmanned Systems Volume 9 ; 9 ; >
@@ -13691,12 +13691,12 @@
     au < manifest ; exists ; 2006 ; International Journal of Organization Theory & Behavior Volume 9 ; 9 ; >
     au < manifest ; exists ; 2007 ; International Journal of Organization Theory & Behavior Volume 10 ; 10 ; >
     au < manifest ; exists ; 2008 ; International Journal of Organization Theory & Behavior Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2009 ; International Journal of Organization Theory & Behavior Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2010 ; International Journal of Organization Theory & Behavior Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2011 ; International Journal of Organization Theory & Behavior Volume 14 ; 14 ; >
-    au < manifest ; exists ; 2012 ; International Journal of Organization Theory & Behavior Volume 15 ; 15 ; >
-    au < manifest ; exists ; 2013 ; International Journal of Organization Theory & Behavior Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2014 ; International Journal of Organization Theory & Behavior Volume 17 ; 17 ; >
+    au < ready ; exists ; 2009 ; International Journal of Organization Theory & Behavior Volume 12 ; 12 ; >
+    au < ready ; exists ; 2010 ; International Journal of Organization Theory & Behavior Volume 13 ; 13 ; >
+    au < ready ; exists ; 2011 ; International Journal of Organization Theory & Behavior Volume 14 ; 14 ; >
+    au < ready ; exists ; 2012 ; International Journal of Organization Theory & Behavior Volume 15 ; 15 ; >
+    au < ready ; exists ; 2013 ; International Journal of Organization Theory & Behavior Volume 16 ; 16 ; >
+    au < ready ; exists ; 2014 ; International Journal of Organization Theory & Behavior Volume 17 ; 17 ; >
     au < ready ; exists ; 2015 ; International Journal of Organization Theory & Behavior Volume 18 ; 18 ; >
     au < ready ; exists ; 2016 ; International Journal of Organization Theory & Behavior Volume 19 ; 19 ; >
     au < ready ; exists ; 2017 ; International Journal of Organization Theory & Behavior Volume 20 ; 20 ; >
@@ -13728,12 +13728,12 @@
     au < manifest ; exists ; 2006 ; International Journal of Sports Marketing and Sponsorship Volume 8 ; 8 ; >
     au < manifest ; exists ; 2007 ; International Journal of Sports Marketing and Sponsorship Volume 9 ; 9 ; >
     au < manifest ; exists ; 2008 ; International Journal of Sports Marketing and Sponsorship Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2009 ; International Journal of Sports Marketing and Sponsorship Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2010 ; International Journal of Sports Marketing and Sponsorship Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2011 ; International Journal of Sports Marketing and Sponsorship Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2012 ; International Journal of Sports Marketing and Sponsorship Volume 14 ; 14 ; >
-    au < manifest ; exists ; 2013 ; International Journal of Sports Marketing and Sponsorship Volume 15 ; 15 ; >
-    au < manifest ; exists ; 2014 ; International Journal of Sports Marketing and Sponsorship Volume 16 ; 16 ; >
+    au < ready ; exists ; 2009 ; International Journal of Sports Marketing and Sponsorship Volume 11 ; 11 ; >
+    au < ready ; exists ; 2010 ; International Journal of Sports Marketing and Sponsorship Volume 12 ; 12 ; >
+    au < ready ; exists ; 2011 ; International Journal of Sports Marketing and Sponsorship Volume 13 ; 13 ; >
+    au < ready ; exists ; 2012 ; International Journal of Sports Marketing and Sponsorship Volume 14 ; 14 ; >
+    au < ready ; exists ; 2013 ; International Journal of Sports Marketing and Sponsorship Volume 15 ; 15 ; >
+    au < ready ; exists ; 2014 ; International Journal of Sports Marketing and Sponsorship Volume 16 ; 16 ; >
     au < ready ; exists ; 2015 ; International Journal of Sports Marketing and Sponsorship Volume 17 ; 17 ; >
     au < ready ; exists ; 2016 ; International Journal of Sports Marketing and Sponsorship Volume 18 ; 18 ; >
     au < ready ; exists ; 2017 ; International Journal of Sports Marketing and Sponsorship Volume 19 ; 19 ; >
@@ -13755,7 +13755,7 @@
 
     param[journal_issn] = 2056-5607
 
-    au < manifest ; exists ; 2015 ; International Journal of Tourism Cities Volume 1 ; 1 ; >
+    au < ready ; exists ; 2015 ; International Journal of Tourism Cities Volume 1 ; 1 ; >
     au < ready ; exists ; 2016 ; International Journal of Tourism Cities Volume 2 ; 2 ; >
     au < ready ; exists ; 2017 ; International Journal of Tourism Cities Volume 3 ; 3 ; >
     au < ready ; exists ; 2018 ; International Journal of Tourism Cities Volume 4 ; 4 ; >
@@ -13776,8 +13776,8 @@
 
     param[journal_issn] = 2053-535X
 
-    au < manifest ; exists ; 2014 ; Journal for Multicultural Education Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2015 ; Journal for Multicultural Education Volume 9 ; 9 ; >
+    au < ready ; exists ; 2014 ; Journal for Multicultural Education Volume 8 ; 8 ; >
+    au < ready ; exists ; 2015 ; Journal for Multicultural Education Volume 9 ; 9 ; >
     au < ready ; exists ; 2016 ; Journal for Multicultural Education Volume 10 ; 10 ; >
     au < ready ; exists ; 2017 ; Journal for Multicultural Education Volume 11 ; 11 ; >
     au < ready ; exists ; 2018 ; Journal for Multicultural Education Volume 12 ; 12 ; >
@@ -13816,7 +13816,7 @@
 
     param[journal_issn] = 2056-3841
 
-    au < manifest ; exists ; 2015 ; Journal of Criminological Research, Policy and Practice Volume 1 ; 1 ; >
+    au < ready ; exists ; 2015 ; Journal of Criminological Research, Policy and Practice Volume 1 ; 1 ; >
     au < ready ; exists ; 2016 ; Journal of Criminological Research, Policy and Practice Volume 2 ; 2 ; >
     au < ready ; exists ; 2017 ; Journal of Criminological Research, Policy and Practice Volume 3 ; 3 ; >
     au < ready ; exists ; 2018 ; Journal of Criminological Research, Policy and Practice Volume 4 ; 4 ; >
@@ -13837,8 +13837,8 @@
 
     param[journal_issn] = 2053-4604
 
-    au < manifest ; exists ; 2014 ; Journal of Entrepreneurship in Emerging Economies Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2015 ; Journal of Entrepreneurship in Emerging Economies Volume 7 ; 7 ; >
+    au < ready ; exists ; 2014 ; Journal of Entrepreneurship in Emerging Economies Volume 6 ; 6 ; >
+    au < ready ; exists ; 2015 ; Journal of Entrepreneurship in Emerging Economies Volume 7 ; 7 ; >
     au < ready ; exists ; 2016 ; Journal of Entrepreneurship in Emerging Economies Volume 8 ; 8 ; >
     au < ready ; exists ; 2017 ; Journal of Entrepreneurship in Emerging Economies Volume 9 ; 9 ; >
     au < ready ; exists ; 2018 ; Journal of Entrepreneurship in Emerging Economies Volume 10 ; 10 ; >
@@ -13859,12 +13859,12 @@
 
     param[journal_issn] = 2049-8799
 
-    au < manifest ; exists ; 2013 ; Journal of Global Mobility Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2014 ; Journal of Global Mobility Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2015 ; Journal of Global Mobility Volume 3 ; 3 ; >
+    au < ready ; exists ; 2013 ; Journal of Global Mobility Volume 1 ; 1 ; >
+    au < ready ; exists ; 2014 ; Journal of Global Mobility Volume 2 ; 2 ; >
+    au < ready ; exists ; 2015 ; Journal of Global Mobility Volume 3 ; 3 ; >
     au < ready ; exists ; 2016 ; Journal of Global Mobility Volume 4 ; 4 ; >
     au < ready ; exists ; 2017 ; Journal of Global Mobility Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2018 ; Journal of Global Mobility Volume 6 ; 6 ; >
+    au < ready ; exists ; 2018 ; Journal of Global Mobility Volume 6 ; 6 ; >
     au < ready ; exists ; 2019 ; Journal of Global Mobility Volume 7 ; 7 ; >
     au < ready ; exists ; 2020 ; Journal of Global Mobility Volume 8 ; 8 ; >
     au < ready ; exists ; 2021 ; Journal of Global Mobility Volume 9 ; 9 ; >
@@ -13900,9 +13900,9 @@
 
     param[journal_issn] = 2050-8824
 
-    au < manifest ; exists ; 2013 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2014 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2015 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 6 ; 6 ; >
+    au < ready ; exists ; 2013 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 4 ; 4 ; >
+    au < ready ; exists ; 2014 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 5 ; 5 ; >
+    au < ready ; exists ; 2015 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 6 ; 6 ; >
     au < ready ; exists ; 2016 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 7 ; 7 ; >
     au < ready ; exists ; 2017 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 8 ; 8 ; >
     au < ready ; exists ; 2018 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 9 ; 9 ; >
@@ -13923,8 +13923,8 @@
 
     param[journal_issn] = 2051-6614
 
-    au < manifest ; exists ; 2014 ; Journal of Organizational Effectiveness: People and Performance Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2015 ; Journal of Organizational Effectiveness: People and Performance Volume 2 ; 2 ; >
+    au < ready ; exists ; 2014 ; Journal of Organizational Effectiveness: People and Performance Volume 1 ; 1 ; >
+    au < ready ; exists ; 2015 ; Journal of Organizational Effectiveness: People and Performance Volume 2 ; 2 ; >
     au < ready ; exists ; 2016 ; Journal of Organizational Effectiveness: People and Performance Volume 3 ; 3 ; >
     au < ready ; exists ; 2017 ; Journal of Organizational Effectiveness: People and Performance Volume 4 ; 4 ; >
     au < ready ; exists ; 2018 ; Journal of Organizational Effectiveness: People and Performance Volume 5 ; 5 ; >
@@ -13998,12 +13998,12 @@
     au < manifest ; exists ; 2006 ; Journal of Public Budgeting, Accounting & Financial Management Volume 18 ; 18 ; >
     au < manifest ; exists ; 2007 ; Journal of Public Budgeting, Accounting & Financial Management Volume 19 ; 19 ; >
     au < manifest ; exists ; 2008 ; Journal of Public Budgeting, Accounting & Financial Management Volume 20 ; 20 ; >
-    au < manifest ; exists ; 2009 ; Journal of Public Budgeting, Accounting & Financial Management Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2010 ; Journal of Public Budgeting, Accounting & Financial Management Volume 22 ; 22 ; >
-    au < manifest ; exists ; 2011 ; Journal of Public Budgeting, Accounting & Financial Management Volume 23 ; 23 ; >
-    au < manifest ; exists ; 2012 ; Journal of Public Budgeting, Accounting & Financial Management Volume 24 ; 24 ; >
-    au < manifest ; exists ; 2013 ; Journal of Public Budgeting, Accounting & Financial Management Volume 25 ; 25 ; >
-    au < manifest ; exists ; 2014 ; Journal of Public Budgeting, Accounting & Financial Management Volume 26 ; 26 ; >
+    au < ready ; exists ; 2009 ; Journal of Public Budgeting, Accounting & Financial Management Volume 21 ; 21 ; >
+    au < ready ; exists ; 2010 ; Journal of Public Budgeting, Accounting & Financial Management Volume 22 ; 22 ; >
+    au < ready ; exists ; 2011 ; Journal of Public Budgeting, Accounting & Financial Management Volume 23 ; 23 ; >
+    au < ready ; exists ; 2012 ; Journal of Public Budgeting, Accounting & Financial Management Volume 24 ; 24 ; >
+    au < ready ; exists ; 2013 ; Journal of Public Budgeting, Accounting & Financial Management Volume 25 ; 25 ; >
+    au < ready ; exists ; 2014 ; Journal of Public Budgeting, Accounting & Financial Management Volume 26 ; 26 ; >
     au < ready ; exists ; 2015 ; Journal of Public Budgeting, Accounting & Financial Management Volume 27 ; 27 ; >
     au < ready ; exists ; 2016 ; Journal of Public Budgeting, Accounting & Financial Management Volume 28 ; 28 ; >
     au < ready ; exists ; 2017 ; Journal of Public Budgeting, Accounting & Financial Management Volume 29 ; 29 ; >
@@ -14033,12 +14033,12 @@
     au < manifest ; exists ; 2006 ; Journal of Public Procurement Volume 6 ; 6 ; >
     au < manifest ; exists ; 2007 ; Journal of Public Procurement Volume 7 ; 7 ; >
     au < manifest ; exists ; 2008 ; Journal of Public Procurement Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2009 ; Journal of Public Procurement Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2010 ; Journal of Public Procurement Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2011 ; Journal of Public Procurement Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2012 ; Journal of Public Procurement Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2013 ; Journal of Public Procurement Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2014 ; Journal of Public Procurement Volume 14 ; 14 ; >
+    au < ready ; exists ; 2009 ; Journal of Public Procurement Volume 9 ; 9 ; >
+    au < ready ; exists ; 2010 ; Journal of Public Procurement Volume 10 ; 10 ; >
+    au < ready ; exists ; 2011 ; Journal of Public Procurement Volume 11 ; 11 ; >
+    au < ready ; exists ; 2012 ; Journal of Public Procurement Volume 12 ; 12 ; >
+    au < ready ; exists ; 2013 ; Journal of Public Procurement Volume 13 ; 13 ; >
+    au < ready ; exists ; 2014 ; Journal of Public Procurement Volume 14 ; 14 ; >
     au < ready ; exists ; 2015 ; Journal of Public Procurement Volume 15 ; 15 ; >
     au < ready ; exists ; 2016 ; Journal of Public Procurement Volume 16 ; 16 ; >
     au < ready ; exists ; 2017 ; Journal of Public Procurement Volume 17 ; 17 ; >
@@ -14060,8 +14060,8 @@
 
     param[journal_issn] = 2053-4620
 
-    au < manifest ; exists ; 2014 ; Journal of Science and Technology Policy Management Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2015 ; Journal of Science and Technology Policy Management Volume 6 ; 6 ; >
+    au < ready ; exists ; 2014 ; Journal of Science and Technology Policy Management Volume 5 ; 5 ; >
+    au < ready ; exists ; 2015 ; Journal of Science and Technology Policy Management Volume 6 ; 6 ; >
     au < ready ; exists ; 2016 ; Journal of Science and Technology Policy Management Volume 7 ; 7 ; >
     au < ready ; exists ; 2017 ; Journal of Science and Technology Policy Management Volume 8 ; 8 ; >
     au < ready ; exists ; 2018 ; Journal of Science and Technology Policy Management Volume 9 ; 9 ; >
@@ -14082,7 +14082,7 @@
 
     param[journal_issn] = 2055-6225
 
-    au < manifest ; exists ; 2015 ; Journal of Service Theory and Practice Volume 25 ; 25 ; >
+    au < ready ; exists ; 2015 ; Journal of Service Theory and Practice Volume 25 ; 25 ; >
     au < ready ; exists ; 2016 ; Journal of Service Theory and Practice Volume 26 ; 26 ; >
     au < ready ; exists ; 2017 ; Journal of Service Theory and Practice Volume 27 ; 27 ; >
     au < ready ; exists ; 2018 ; Journal of Service Theory and Practice Volume 28 ; 28 ; >
@@ -14103,12 +14103,12 @@
 
     param[journal_issn] = 2040-2317
 
-    au < manifest ; exists ; 2010 ; Journal of Structural Fire Engineering Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2011 ; Journal of Structural Fire Engineering Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2012 ; Journal of Structural Fire Engineering Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2013 ; Journal of Structural Fire Engineering Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2014 ; Journal of Structural Fire Engineering Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2015 ; Journal of Structural Fire Engineering Volume 6 ; 6 ; >
+    au < ready ; exists ; 2010 ; Journal of Structural Fire Engineering Volume 1 ; 1 ; >
+    au < ready ; exists ; 2011 ; Journal of Structural Fire Engineering Volume 2 ; 2 ; >
+    au < ready ; exists ; 2012 ; Journal of Structural Fire Engineering Volume 3 ; 3 ; >
+    au < ready ; exists ; 2013 ; Journal of Structural Fire Engineering Volume 4 ; 4 ; >
+    au < ready ; exists ; 2014 ; Journal of Structural Fire Engineering Volume 5 ; 5 ; >
+    au < ready ; exists ; 2015 ; Journal of Structural Fire Engineering Volume 6 ; 6 ; >
     au < ready ; exists ; 2016 ; Journal of Structural Fire Engineering Volume 7 ; 7 ; >
     au < ready ; exists ; 2017 ; Journal of Structural Fire Engineering Volume 8 ; 8 ; >
     au < manifest ; exists ; 2018 ; Journal of Structural Fire Engineering Volume 9 ; 9 ; >
@@ -14132,13 +14132,13 @@
     au < manifest ; exists ; 2005 ; Open House International Volume 30 ; 30 ; >
     au < manifest ; exists ; 2006 ; Open House International Volume 31 ; 31 ; >
     au < manifest ; exists ; 2007 ; Open House International Volume 32 ; 32 ; >
-    au < manifest ; exists ; 2008 ; Open House International Volume 33 ; 33 ; >
-    au < manifest ; exists ; 2009 ; Open House International Volume 34 ; 34 ; >
-    au < manifest ; exists ; 2010 ; Open House International Volume 35 ; 35 ; >
-    au < manifest ; exists ; 2011 ; Open House International Volume 36 ; 36 ; >
-    au < manifest ; exists ; 2012 ; Open House International Volume 37 ; 37 ; >
-    au < manifest ; exists ; 2013 ; Open House International Volume 38 ; 38 ; >
-    au < manifest ; exists ; 2014 ; Open House International Volume 39 ; 39 ; >
+    au < ready ; exists ; 2008 ; Open House International Volume 33 ; 33 ; >
+    au < ready ; exists ; 2009 ; Open House International Volume 34 ; 34 ; >
+    au < ready ; exists ; 2010 ; Open House International Volume 35 ; 35 ; >
+    au < ready ; exists ; 2011 ; Open House International Volume 36 ; 36 ; >
+    au < ready ; exists ; 2012 ; Open House International Volume 37 ; 37 ; >
+    au < ready ; exists ; 2013 ; Open House International Volume 38 ; 38 ; >
+    au < ready ; exists ; 2014 ; Open House International Volume 39 ; 39 ; >
     au < ready ; exists ; 2015 ; Open House International Volume 40 ; 40 ; >
     au < ready ; exists ; 2016 ; Open House International Volume 41 ; 41 ; >
     au < ready ; exists ; 2017 ; Open House International Volume 42 ; 42 ; >
@@ -14172,12 +14172,12 @@
     au < manifest ; exists ; 2006 ; Research Journal of Textile and Apparel Volume 10 ; 10 ; >
     au < manifest ; exists ; 2007 ; Research Journal of Textile and Apparel Volume 11 ; 11 ; >
     au < manifest ; exists ; 2008 ; Research Journal of Textile and Apparel Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2009 ; Research Journal of Textile and Apparel Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2010 ; Research Journal of Textile and Apparel Volume 14 ; 14 ; >
-    au < manifest ; exists ; 2011 ; Research Journal of Textile and Apparel Volume 15 ; 15 ; >
-    au < manifest ; exists ; 2012 ; Research Journal of Textile and Apparel Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2013 ; Research Journal of Textile and Apparel Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2014 ; Research Journal of Textile and Apparel Volume 18 ; 18 ; >
+    au < ready ; exists ; 2009 ; Research Journal of Textile and Apparel Volume 13 ; 13 ; >
+    au < ready ; exists ; 2010 ; Research Journal of Textile and Apparel Volume 14 ; 14 ; >
+    au < ready ; exists ; 2011 ; Research Journal of Textile and Apparel Volume 15 ; 15 ; >
+    au < ready ; exists ; 2012 ; Research Journal of Textile and Apparel Volume 16 ; 16 ; >
+    au < ready ; exists ; 2013 ; Research Journal of Textile and Apparel Volume 17 ; 17 ; >
+    au < ready ; exists ; 2014 ; Research Journal of Textile and Apparel Volume 18 ; 18 ; >
     au < ready ; exists ; 2015 ; Research Journal of Textile and Apparel Volume 19 ; 19 ; >
     au < ready ; exists ; 2016 ; Research Journal of Textile and Apparel Volume 20 ; 20 ; >
     au < ready ; exists ; 2017 ; Research Journal of Textile and Apparel Volume 21 ; 21 ; >
@@ -14202,12 +14202,12 @@
     au < manifest ; exists ; 2006 ; Social Studies Research and Practice Volume 1 ; 1 ; >
     au < manifest ; exists ; 2007 ; Social Studies Research and Practice Volume 2 ; 2 ; >
     au < manifest ; exists ; 2008 ; Social Studies Research and Practice Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2009 ; Social Studies Research and Practice Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2010 ; Social Studies Research and Practice Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2011 ; Social Studies Research and Practice Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2012 ; Social Studies Research and Practice Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2013 ; Social Studies Research and Practice Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2014 ; Social Studies Research and Practice Volume 9 ; 9 ; >
+    au < ready ; exists ; 2009 ; Social Studies Research and Practice Volume 4 ; 4 ; >
+    au < ready ; exists ; 2010 ; Social Studies Research and Practice Volume 5 ; 5 ; >
+    au < ready ; exists ; 2011 ; Social Studies Research and Practice Volume 6 ; 6 ; >
+    au < ready ; exists ; 2012 ; Social Studies Research and Practice Volume 7 ; 7 ; >
+    au < ready ; exists ; 2013 ; Social Studies Research and Practice Volume 8 ; 8 ; >
+    au < ready ; exists ; 2014 ; Social Studies Research and Practice Volume 9 ; 9 ; >
     au < ready ; exists ; 2015 ; Social Studies Research and Practice Volume 10 ; 10 ; >
     au < ready ; exists ; 2016 ; Social Studies Research and Practice Volume 11 ; 11 ; >
     au < ready ; exists ; 2017 ; Social Studies Research and Practice Volume 12 ; 12 ; >
@@ -14249,9 +14249,9 @@
 
     param[journal_issn] = 2050-8794
 
-    au < manifest ; exists ; 2013 ; The Journal of Forensic Practice Volume 15 ; 15 ; >
-    au < manifest ; exists ; 2014 ; The Journal of Forensic Practice Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2015 ; The Journal of Forensic Practice Volume 17 ; 17 ; >
+    au < ready ; exists ; 2013 ; The Journal of Forensic Practice Volume 15 ; 15 ; >
+    au < ready ; exists ; 2014 ; The Journal of Forensic Practice Volume 16 ; 16 ; >
+    au < ready ; exists ; 2015 ; The Journal of Forensic Practice Volume 17 ; 17 ; >
     au < ready ; exists ; 2016 ; The Journal of Forensic Practice Volume 18 ; 18 ; >
     au < ready ; exists ; 2017 ; The Journal of Forensic Practice Volume 19 ; 19 ; >
     au < ready ; exists ; 2018 ; The Journal of Forensic Practice Volume 20 ; 20 ; >
@@ -14292,10 +14292,10 @@
 
     param[journal_issn] = 1708-5284
 
-    au < manifest ; exists ; 2011 ; World Journal of Engineering Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2012 ; World Journal of Engineering Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2013 ; World Journal of Engineering Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2014 ; World Journal of Engineering Volume 11 ; 11 ; >
+    au < ready ; exists ; 2011 ; World Journal of Engineering Volume 8 ; 8 ; >
+    au < ready ; exists ; 2012 ; World Journal of Engineering Volume 9 ; 9 ; >
+    au < ready ; exists ; 2013 ; World Journal of Engineering Volume 10 ; 10 ; >
+    au < ready ; exists ; 2014 ; World Journal of Engineering Volume 11 ; 11 ; >
     au < ready ; exists ; 2015 ; World Journal of Engineering Volume 12 ; 12 ; >
     au < ready ; exists ; 2016 ; World Journal of Engineering Volume 13 ; 13 ; >
     au < ready ; exists ; 2017 ; World Journal of Engineering Volume 14 ; 14 ; >
