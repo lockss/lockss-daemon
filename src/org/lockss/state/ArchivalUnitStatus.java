@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2021 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2022 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -59,7 +59,7 @@ public class ArchivalUnitStatus
    */
   public static final String PARAM_MAX_NODES_TO_DISPLAY =
     PREFIX + "nodesPerPage";
-  static final int DEFAULT_MAX_NODES_TO_DISPLAY = 100;
+  static final int DEFAULT_MAX_NODES_TO_DISPLAY = 1000;
 
   /**
    * Node URLs are links to cached content page if true
