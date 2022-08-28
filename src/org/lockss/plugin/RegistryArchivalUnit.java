@@ -81,7 +81,7 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
   /** Limits fetch rate of registry crawls */
   static final String PARAM_REGISTRY_FETCH_RATE =
     RegistryPlugin.PREFIX + "fetchRate";
-  static final String DEFAULT_REGISTRY_FETCH_RATE = "20/10s";
+  static final String DEFAULT_REGISTRY_FETCH_RATE = "500/1s";
 
   /** Run polls on Plugin registry AUs */
   static final String PARAM_ENABLE_REGISTRY_POLLS =
