@@ -31,7 +31,8 @@ my $ua = LWP::UserAgent->new;
 
 #List of site map urls, except COURTS
 # Fetch list of site maps. Not https://www.govinfo.gov/sitemaps
-$url = sprintf("https://www.govinfo.gov/robots.txt");
+$url = sprintf("https://www.govinfo.gov/sitemaps");
+#$url = sprintf("https://www.govinfo.gov/robots.txt");
 my @collection_list=();
 #$man_url=uri_unescape($url);
 #printf("%s\n",$url);
