@@ -450,9 +450,7 @@ public class BaseUrlFetcher implements UrlFetcher {
       if (input == null) {
         log.warning("Got null input stream back from conn.getResponseInputStream");
       }
-      if (!input.markSupported()) {
-        input = new BufferedInputStream(input);
-      }
+      input = StreamUtil.getResettableInputStream(input);
     } finally {
       if (conn != null && input == null) {
         log.debug3("Releasing connection");
@@ -588,9 +586,7 @@ public class BaseUrlFetcher implements UrlFetcher {
     LoginPageChecker checker = au.getLoginPageChecker();
     if (checker != null) {
       log.debug3("Found a login page checker");
-      if (!input.markSupported()) {
-        input = new BufferedInputStream(input);
-      }
+      input = StreamUtil.getResettableInputStream(input);
       input.mark(CurrentConfig.getIntParam(PARAM_LOGIN_CHECKER_MARK_LIMIT,
 					   DEFAULT_LOGIN_CHECKER_MARK_LIMIT));
       String contentEncoding =

@@ -72,7 +72,7 @@ public class PermissionUrlConsumer extends SimpleUrlConsumer {
   public void consume() throws IOException {
     boolean permOk = false;
     // if we didn't find at least one required lockss permission - fail.
-    fudis = fud.getResettableInputStream();
+    fudis = StreamUtil.getResettableInputStream(fud.getInputStream());
     // allow us to reread contents if reasonable size
     fudis.mark(crawlFacade.permissonStreamResetMax());
 
@@ -126,7 +126,7 @@ public class PermissionUrlConsumer extends SimpleUrlConsumer {
 	} catch(IOException ex) {
 	  //unable to reset for some reason
 	  fud.resetInputStream();
-	  fudis = fud.getResettableInputStream();
+	  fudis = StreamUtil.getResettableInputStream(fud.getInputStream());
 	}
       } else {
 	strmNeedsReset = true;

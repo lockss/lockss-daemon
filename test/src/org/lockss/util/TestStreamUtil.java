@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2022 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -383,6 +379,16 @@ public class TestStreamUtil extends LockssTestCase {
 				   new StringInputStream(s1)));
     assertFalse(StreamUtil.compare(new StringInputStream("foo"),
 				   new StringInputStream("bar")));
+  }
+
+  public void testgetResettableInputStream() throws IOException {
+    InputStream ins = new StringInputStream("foo");
+    assertTrue(ins.markSupported());
+    assertSame(ins, StreamUtil.getResettableInputStream(ins));
+    File f = FileTestUtil.writeTempFile("foo", ".x", "these are the contents");
+    ins = new FileInputStream(f);
+    assertFalse(ins.markSupported());
+    assertTrue(StreamUtil.getResettableInputStream(ins).markSupported());
   }
 
   public void testGetUncompressedInputStreamGzip() throws IOException {

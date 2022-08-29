@@ -1289,9 +1289,7 @@ public class ServeContent extends LockssServlet {
     // create reader for input stream
 
     // guessCharsetFromStream() requires markable stream
-    if (!input.markSupported()) {
-      input = new BufferedInputStream(input);
-    }
+    input = StreamUtil.getResettableInputStream(input);
     String charset = CharsetUtil.guessCharsetFromStream(input,ctype);
 
     try {
