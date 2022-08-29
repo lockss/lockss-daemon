@@ -308,7 +308,7 @@ public class MockCrawler extends NullCrawler {
     }
 
     @Override
-    public int permissonStreamResetMax() {
+    public int permissionStreamResetMax() {
       return BaseCrawler.DEFAULT_PERMISSION_BUF_MAX;
     }
 

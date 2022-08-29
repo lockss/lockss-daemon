@@ -74,7 +74,7 @@ public class PermissionUrlConsumer extends SimpleUrlConsumer {
     // if we didn't find at least one required lockss permission - fail.
     fudis = StreamUtil.getResettableInputStream(fud.getInputStream());
     // allow us to reread contents if reasonable size
-    fudis.mark(crawlFacade.permissonStreamResetMax());
+    fudis.mark(crawlFacade.permissionStreamResetMax());
 
     if (!checkPermission(permMap.getDaemonPermissionCheckers(),
         PermissionLogic.OR_CHECKER)) {
