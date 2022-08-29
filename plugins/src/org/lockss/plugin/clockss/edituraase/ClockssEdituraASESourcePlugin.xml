@@ -87,11 +87,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.clockss.SourceXmlArticleIteratorFactory</string>
+    <string>org.lockss.plugin.clockss.edituraase.EdituraASEArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.clockss.SourceXmlArticleIteratorFactory</string>
+    <string>org.lockss.plugin.clockss.edituraase.EdituraASEArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>text/xml_metadata_extractor_factory_map</string>

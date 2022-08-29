@@ -86,48 +86,16 @@ public class EdituraASEXmlMetadataExtractorFactory extends SourceXmlMetadataExtr
       return SchemaHelper;
     }
 
-
-    /*
-    @Override
-    protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
-        ArticleMetadata oneAM) {
-
-      String cuBase = FilenameUtils.getFullPath(cu.getUrl());
-      String doiValue = oneAM.getRaw(helper.getFilenameXPathKey());
-      String doiSecond = StringUtils.substringAfter(doiValue, "/");
-      String doiFirst = StringUtils.substringBefore(doiValue, "/");
-      //2017 options
-      String pdfName = cuBase + doiValue + "/paper.pdf";
-      String altName = cuBase + doiSecond + ".pdf";
-      //2018 options
-      String pubJID = oneAM.getRaw(CrossRefSchemaHelper.pub_abbrev);
-      String pubYear = oneAM.getRaw(CrossRefSchemaHelper.pub_year);
-      String pubIssue = oneAM.getRaw(CrossRefSchemaHelper.pub_issue);
-      String artPage = oneAM.getRaw(CrossRefSchemaHelper.art_sp);
-      String name2018 = cuBase + doiFirst + "/" + pubJID + "." + pubYear + "." + pubIssue + "." + artPage + "/Paper.pdf";
-      log.debug3("looking for: " + pdfName + " or " + altName + " or " + name2018);
-      List<String> returnList = new ArrayList<String>();
-      returnList.add(pdfName);
-      returnList.add(altName);
-      returnList.add(name2018);
-      return returnList;
-    }
-
-     */
     
     @Override
     protected void postCookProcess(SourceXmlSchemaHelper schemaHelper, 
         CachedUrl cu, ArticleMetadata thisAM) {
-
-      log.debug3("in Editura_ASE postCookProcess");
-      /*
+      
       String pname = thisAM.get(MetadataField.FIELD_PUBLISHER);
       if (!(Editura_ASE_PUBLISHER.equals(pname))) {
-    	  	// the CrossRef schema helper cooks this so be sure
             thisAM.replace(MetadataField.FIELD_PUBLISHER,Editura_ASE_PUBLISHER);
         }
 
-       */
       thisAM.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
       thisAM.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_JOURNAL);
     }
