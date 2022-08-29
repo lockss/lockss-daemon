@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2022 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,35 +32,16 @@
 
 package org.lockss.plugin.clockss.edituraase;
 
-import org.apache.commons.io.FilenameUtils;
-import org.apache.commons.lang.StringUtils;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.FileMetadataExtractor;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.CachedUrl;
-import org.lockss.plugin.clockss.CrossRefSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.lockss.util.Logger;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import static org.lockss.plugin.clockss.CrossRefSchemaHelper.art_resource;
-
-
-
-/*
- * An extractor for an XML file using the schmea for delivering data to CrossRef
- * <doi_batch
- *   <head>...</head>
- *   <body>
- *     <journal>
- *        <journal_issue
- *           <journal_article
- */
 
 public class EdituraASEXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
   private static final Logger log = Logger.getLogger(EdituraASEXmlMetadataExtractorFactory.class);
@@ -79,7 +60,7 @@ public class EdituraASEXmlMetadataExtractorFactory extends SourceXmlMetadataExtr
 
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
-      // Once you have it, just keep returning the same one. It won't change.
+
       if (SchemaHelper== null) {
           SchemaHelper = new  EdituraASEPublishingHelper();
       }
