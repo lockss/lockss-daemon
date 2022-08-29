@@ -170,7 +170,7 @@
       au < finished ; frozen ; 2019 ; 22 ; Redescriptions Volume 2019 ; 2019 ; https://journal-redescriptions.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; 23 ; Redescriptions Volume 2020 ; 2020 ; https://journal-redescriptions.org/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; 24 ; Redescriptions Volume 2021 ; 2021 ; https://journal-redescriptions.org/ ; >
-      au < expected ; exists ; 2022 ; 25 ; Redescriptions Volume 2022 ; 2022 ; https://journal-redescriptions.org/ ; >
+      au < manifest ; exists ; 2022 ; 25 ; Redescriptions Volume 2022 ; 2022 ; https://journal-redescriptions.org/ ; >
 
   }
 }
@@ -2560,7 +2560,7 @@
       au < finished ; crawling ; 2019 ; 17 ; ERLACS Volume 2019 ; 2019 ; https://www.erlacs.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; 18 ; ERLACS Volume 2020 ; 2020 ; https://www.erlacs.org/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; 19 ; ERLACS Volume 2021 ; 2021 ; https://www.erlacs.org/ ; >
-      au < expected ; exists ; 2022 ; 20 ; ERLACS Volume 2022 ; 2022 ; https://www.erlacs.org/ ; >
+      au < manifest ; exists ; 2022 ; 20 ; ERLACS Volume 2022 ; 2022 ; https://www.erlacs.org/ ; >
 
   }
 
