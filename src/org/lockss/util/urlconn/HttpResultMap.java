@@ -131,8 +131,8 @@ public class HttpResultMap implements CacheResultMap {
     DeadLinkCodes(L(204, 404, 410, 451),
                   CacheException.NoRetryDeadLinkException.class),
     /** Result codes indicating the server is unable to full. */
-    PermenentServerCondiditionCodes(L(501, 505, 506, 520, 525, 530),
-                                    CacheException.UnexpectedNoRetryFailException.class),
+    PermanentServerConditionCodes(L(501, 505, 506, 520, 525, 530),
+                                  CacheException.UnexpectedNoRetryFailException.class),
     /** Result codes indicating a server condition that may be transient. */
     TransientServerConditionCodes(L(409, 413, 429,
                                     500, 502, 503, 504, 507, 521, 523),
@@ -174,9 +174,9 @@ public class HttpResultMap implements CacheResultMap {
                  "Malformed URL: %s"),
 
     /** Unknown host */
-    UnkownHost(L(UnknownHostException.class),
-               CacheException.RetryableNetworkException.class,
-               "Unknown host: %s"),
+    UnknownHost(L(UnknownHostException.class),
+                CacheException.RetryableNetworkException.class,
+                "Unknown host: %s"),
 
     // Network errors, timeouts, etc. default retryable
 
