@@ -37,7 +37,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_identifier</string>
-        <string>org.lockss.plugin.atypon.geologicalsocietylondon.ClockssGeologicalSocietyLondonPlugin</string>
+        <string>org.lockss.plugin.atypon.geologicalsocietylondon.GeologicalSocietyLondonPlugin</string>
     </entry>
     <entry>
         <string>plugin_version</string>
@@ -45,31 +45,39 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_parent</string>
-        <string>org.lockss.plugin.atypon.geologicalsocietylondon.GeologicalSocietyLondonPlugin</string>
+        <string>org.lockss.plugin.atypon.BaseAtyponPlugin</string>
     </entry>
     <entry>
         <string>plugin_parent_version</string>
-        <string>1</string>
+        <string>125</string>
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>Geological Society of London Plugin (CLOCKSS)</string>
+        <string>Geological Society of London Plugin</string>
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"Geological Society of London Plugin (CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+        <string>"Geological Society of London Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    </entry>
+    <entry>
+        <string>plugin_feature_version_map</string>
+        <map>
+            <entry>
+                <string>Metadata</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Poll</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Substance</string>
+                <string>1</string>
+            </entry>
+        </map>
     </entry>
     <entry>
         <string>au_start_url</string>
-        <string>"%sclockss/%s/%s/index.html", base_url, journal_id, volume_name</string>
-    </entry>
-    <entry>
-        <string>clockss_override</string>
-        <map>
-            <entry>
-                <string>au_def_pause_time</string>
-                <long>100</long>
-            </entry>
-        </map>
+        <string>"%slockss/%s/%s/index.html", base_url, journal_id, volume_name</string>
     </entry>
 </map>
