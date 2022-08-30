@@ -25,16 +25,16 @@
       au < manifest ; 2007 ; Sustain Magazine Volume 16-17 ; 2007 ; https://ir.library.louisville.edu/ >
       au < manifest ; 2008 ; Sustain Magazine Volume 18-19 ; 2008 ; https://ir.library.louisville.edu/ >
       au < manifest ; 2009 ; Sustain Magazine Volume 20-21 ; 2009 ; https://ir.library.louisville.edu/ >
-      au < ready ; 2010 ; Sustain Magazine Volume 22-23 ; 2010 ; https://ir.library.louisville.edu/ >
-      au < ready ; 2011 ; Sustain Magazine Volume 24-25 ; 2011 ; https://ir.library.louisville.edu/ >
-      au < ready ; 2012 ; Sustain Magazine Volume 26-27 ; 2012 ; https://ir.library.louisville.edu/ >
-      au < ready ; 2013 ; Sustain Magazine Volume 28-29 ; 2013 ; https://ir.library.louisville.edu/ >
-      au < ready ; 2014 ; Sustain Magazine Volume 30-31 ; 2014 ; https://ir.library.louisville.edu/ >
-      au < ready ; 2015 ; Sustain Magazine Volume 32-33 ; 2015 ; https://ir.library.louisville.edu/ >
-      au < ready ; 2016 ; Sustain Magazine Volume 34-35 ; 2016 ; https://ir.library.louisville.edu/ >
-      au < ready ; 2017 ; Sustain Magazine Volume 36-37 ; 2017 ; https://ir.library.louisville.edu/ >
-      au < ready ; 2018 ; Sustain Magazine Volume 38-39 ; 2018 ; https://ir.library.louisville.edu/ >
-      au < ready ; 2019 ; Sustain Magazine Volume 40-41 ; 2019 ; https://ir.library.louisville.edu/ >
+      au < releasing ; 2010 ; Sustain Magazine Volume 22-23 ; 2010 ; https://ir.library.louisville.edu/ >
+      au < releasing ; 2011 ; Sustain Magazine Volume 24-25 ; 2011 ; https://ir.library.louisville.edu/ >
+      au < releasing ; 2012 ; Sustain Magazine Volume 26-27 ; 2012 ; https://ir.library.louisville.edu/ >
+      au < releasing ; 2013 ; Sustain Magazine Volume 28-29 ; 2013 ; https://ir.library.louisville.edu/ >
+      au < releasing ; 2014 ; Sustain Magazine Volume 30-31 ; 2014 ; https://ir.library.louisville.edu/ >
+      au < releasing ; 2015 ; Sustain Magazine Volume 32-33 ; 2015 ; https://ir.library.louisville.edu/ >
+      au < releasing ; 2016 ; Sustain Magazine Volume 34-35 ; 2016 ; https://ir.library.louisville.edu/ >
+      au < releasing ; 2017 ; Sustain Magazine Volume 36-37 ; 2017 ; https://ir.library.louisville.edu/ >
+      au < releasing ; 2018 ; Sustain Magazine Volume 38-39 ; 2018 ; https://ir.library.louisville.edu/ >
+      au < releasing ; 2019 ; Sustain Magazine Volume 40-41 ; 2019 ; https://ir.library.louisville.edu/ >
 
   }
   {
@@ -49,8 +49,8 @@
       param[journal_abbr] = jwellness
       implicit < status ; year ; name ; param[volume] ; param[base_url] >
     
-      au < ready ; 2019 ; Journal of Wellness Volume 1 ; 1 ; https://ir.library.louisville.edu/ >
-      au < ready ; 2020 ; Journal of Wellness Volume 2 ; 2 ; https://ir.library.louisville.edu/ >
+      au < releasing ; 2019 ; Journal of Wellness Volume 1 ; 1 ; https://ir.library.louisville.edu/ >
+      au < releasing ; 2020 ; Journal of Wellness Volume 2 ; 2 ; https://ir.library.louisville.edu/ >
       au < manifest ; 2021 ; Journal of Wellness Volume 3 ; 3 ; https://ir.library.louisville.edu/ >
       au < manifest ; 2022 ; Journal of Wellness Volume 4 ; 4 ; https://ir.library.louisville.edu/ >
 
@@ -106,16 +106,16 @@
       au < manifest ; 2007 ; Journal of Student Financial Aid Volume 37 ; 37 ; https://ir.library.louisville.edu/ >
       au < manifest ; 2008 ; Journal of Student Financial Aid Volume 38 ; 38 ; https://ir.library.louisville.edu/ >
       au < manifest ; 2009 ; Journal of Student Financial Aid Volume 39 ; 39 ; https://ir.library.louisville.edu/ >
-      au < ready ; 2010 ; Journal of Student Financial Aid Volume 40 ; 40 ; https://ir.library.louisville.edu/ >
-      au < ready ; 2011 ; Journal of Student Financial Aid Volume 41 ; 41 ; https://ir.library.louisville.edu/ >
-      au < ready ; 2012 ; Journal of Student Financial Aid Volume 42 ; 42 ; https://ir.library.louisville.edu/ >
-      au < ready ; 2013 ; Journal of Student Financial Aid Volume 43 ; 43 ; https://ir.library.louisville.edu/ >
-      au < ready ; 2014 ; Journal of Student Financial Aid Volume 44 ; 44 ; https://ir.library.louisville.edu/ >
-      au < ready ; 2015 ; Journal of Student Financial Aid Volume 45 ; 45 ; https://ir.library.louisville.edu/ >
-      au < ready ; 2016 ; Journal of Student Financial Aid Volume 46 ; 46 ; https://ir.library.louisville.edu/ >
-      au < ready ; 2017 ; Journal of Student Financial Aid Volume 47 ; 47 ; https://ir.library.louisville.edu/ >
-      au < ready ; 2018 ; Journal of Student Financial Aid Volume 48 ; 48 ; https://ir.library.louisville.edu/ >
-      au < ready ; 2019 ; Journal of Student Financial Aid Volume 49 ; 49 ; https://ir.library.louisville.edu/ >
+      au < releasing ; 2010 ; Journal of Student Financial Aid Volume 40 ; 40 ; https://ir.library.louisville.edu/ >
+      au < releasing ; 2011 ; Journal of Student Financial Aid Volume 41 ; 41 ; https://ir.library.louisville.edu/ >
+      au < releasing ; 2012 ; Journal of Student Financial Aid Volume 42 ; 42 ; https://ir.library.louisville.edu/ >
+      au < releasing ; 2013 ; Journal of Student Financial Aid Volume 43 ; 43 ; https://ir.library.louisville.edu/ >
+      au < releasing ; 2014 ; Journal of Student Financial Aid Volume 44 ; 44 ; https://ir.library.louisville.edu/ >
+      au < releasing ; 2015 ; Journal of Student Financial Aid Volume 45 ; 45 ; https://ir.library.louisville.edu/ >
+      au < releasing ; 2016 ; Journal of Student Financial Aid Volume 46 ; 46 ; https://ir.library.louisville.edu/ >
+      au < releasing ; 2017 ; Journal of Student Financial Aid Volume 47 ; 47 ; https://ir.library.louisville.edu/ >
+      au < releasing ; 2018 ; Journal of Student Financial Aid Volume 48 ; 48 ; https://ir.library.louisville.edu/ >
+      au < releasing ; 2019 ; Journal of Student Financial Aid Volume 49 ; 49 ; https://ir.library.louisville.edu/ >
       au < manifest ; 2021 ; Journal of Student Financial Aid Volume 50 ; 50 ; https://ir.library.louisville.edu/ >
       au < manifest ; 2022 ; Journal of Student Financial Aid Volume 51 ; 51 ; https://ir.library.louisville.edu/ >
 
