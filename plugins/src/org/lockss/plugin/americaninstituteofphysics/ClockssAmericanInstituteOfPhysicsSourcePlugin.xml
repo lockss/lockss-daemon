@@ -65,11 +65,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>AIP Publishing Journals Source Plugin (Legacy Year, CLOCKSS)</string>
+    <string>AIP Publishing Journals Source Plugin (Legacy Format, CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"AIP Publishing Journals Source Plugin (Legacy Year, CLOCKSS), Base URL %s, Year %d", base_url, year</string>
+    <string>"AIP Publishing Journals Source Plugin (Legacy Format, CLOCKSS), Base URL %s, Year %d", base_url, year</string>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
