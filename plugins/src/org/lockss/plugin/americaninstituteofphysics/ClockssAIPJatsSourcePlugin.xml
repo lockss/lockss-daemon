@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>15</string>
+    <string>16</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -65,11 +65,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>  
   <entry>
     <string>plugin_name</string>
-    <string>AIP Publishing Source Plugin (CLOCKSS)</string>
+    <string>AIP Publishing Journals Source Plugin (Legacy Directory, CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"AIP Publishing Source Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
+    <string>"AIP Publishing Journals Source Plugin (Legacy Directory, CLOCKSS), Base URL %s, Year %d", base_url, year</string>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
