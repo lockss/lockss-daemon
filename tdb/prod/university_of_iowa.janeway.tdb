@@ -75,12 +75,12 @@
 
       param[journal_id] = bsides
 
-      au < releasing ; 2010 ; 2010 ; B Sides Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 2011 ; B Sides Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 2012 ; B Sides Volume 2012 ; 2012 >
-      au < releasing ; 2013 ; 2013 ; B Sides Volume 2013 ; 2013 >
-      au < releasing ; 2014 ; 2014 ; B Sides Volume 2014 ; 2014 >
-      au < releasing ; 2015 ; 2015 ; B Sides Volume 2015 ; 2015 >
+      au < released ; 2010 ; 2010 ; B Sides Volume 2010 ; 2010 >
+      au < released ; 2011 ; 2011 ; B Sides Volume 2011 ; 2011 >
+      au < released ; 2012 ; 2012 ; B Sides Volume 2012 ; 2012 >
+      au < released ; 2013 ; 2013 ; B Sides Volume 2013 ; 2013 >
+      au < released ; 2014 ; 2014 ; B Sides Volume 2014 ; 2014 >
+      au < released ; 2015 ; 2015 ; B Sides Volume 2015 ; 2015 >
 
     }
     
@@ -116,7 +116,7 @@
       au < doNotProcess ; 2017 ; 2017 ; Dada/Surrealism Volume 21 ; 21 >
       au < doNotProcess ; 2018 ; 2018 ; Dada/Surrealism Volume 22 ; 22 >
       au < doesNotExist ; 2019 ; 2019 ; Dada/Surrealism Volume 23 ; 23 >
-      au < releasing ; 2020 ; 2020 ; Dada/Surrealism Volume 24 ; 24 >
+      au < released ; 2020 ; 2020 ; Dada/Surrealism Volume 24 ; 24 >
 
     }
     
@@ -208,7 +208,7 @@
       au < doNotProcess ; 2015 ; 2015 ; Iowa Historical Review Volume 5 ; 5 >
       au < doNotProcess ; 2016 ; 2016 ; Iowa Historical Review Volume 6 ; 6 >
       au < doNotProcess ; 2017 ; 2017 ; Iowa Historical Review Volume 7 ; 7 >
-      au < releasing ; 2020 ; 2020 ; Iowa Historical Review Volume 8 ; 8 >
+      au < released ; 2020 ; 2020 ; Iowa Historical Review Volume 8 ; 8 >
 
     }
     
@@ -417,7 +417,7 @@
       au < doNotProcess ; 2017 ; 2017 ; Walt Whitman Quarterly Review Volume 35 ; 35 >
       au < doNotProcess ; 2018 ; 2018 ; Walt Whitman Quarterly Review Volume 36 ; 36 >
       au < doNotProcess ; 2019 ; 2019 ; Walt Whitman Quarterly Review Volume 37 ; 37 >
-      au < releasing ; 2020 ; 2020 ; Walt Whitman Quarterly Review Volume 38 ; 38 >
+      au < released ; 2020 ; 2020 ; Walt Whitman Quarterly Review Volume 38 ; 38 >
       au < manifest ; 2021 ; 2021 ; Walt Whitman Quarterly Review Volume 39 ; 39 >
       au < manifest ; 2022 ; 2022 ; Walt Whitman Quarterly Review Volume 40 ; 40 >
 
