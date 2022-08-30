@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = Geological Society of London
+    name = Geological Society of London ;
+    info[platform] = HW
   >
 
   {
@@ -1058,19 +1059,6 @@
       au < gsl.GSLDrupalPlugin ; down ; 2020 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 53 ; 53 ; https://qjegh.lyellcollection.org/ >
       au < gsl.GSLDrupalPlugin ; down ; 2021 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 54 ; 54 ; https://qjegh.lyellcollection.org/ >
       au < gsl.GSLDrupalPlugin ; doNotProcess ; 2022 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 55 ; 55 ; https://qjegh.lyellcollection.org/ >
-
-  }
-
-  {
-
-    title <
-      name = Scottish Journal of Geology ;
-      issn = 0036-9276 ; 
-      eissn = 2041-4951 ;
-      issnl = 0036-9276
-    >
-    
-    #preserved under Scottish Journal of Geology
 
   }
 
