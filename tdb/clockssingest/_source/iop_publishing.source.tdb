@@ -130,7 +130,7 @@
      {
      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/iopecs2019-released/
 
-     au < manifest ; exists ; 2022 ; IOP Publishing ECS Backfile Source Content 2022_01 ; 2022_01 >
+     au < readySource ; crawling ; 2022 ; IOP Publishing ECS Backfile Source Content 2022_01 ; 2022_01 >
      }
 
 #     #Deleted from production UI, but content exists.
