@@ -1,0 +1,71 @@
+{
+
+  publisher <
+    name = PeerJ ;
+    info[contract] = 2012 ;
+    info[tester] = 8 ;
+    info[poller] = 2
+  >
+
+  rights = openaccess
+
+    param[base_url] = https://peerj.com/
+    implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+  {
+  
+    title < 
+      name = PeerJ ;
+      eissn = 2167-8359
+    >
+    
+    {
+    
+    plugin = org.lockss.plugin.peerj.ClockssPeerJPlugin
+    # see PD-1266
+    
+    au < finished ; finished ; 2013 ; PeerJ Volume 2013 ; 2013 ; > 
+    }
+    {
+    
+    plugin = org.lockss.plugin.peerj.ClockssPeerJ2016Plugin
+    param[journal_id] = peerj 
+    
+    au < finished ; crawling ; 2013 ; PeerJ Volume 2013 ; 2013 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 2014 ; PeerJ Volume 2014 ; 2014 ; >
+    au < zapped ; finished ; 2015 ; PeerJ Volume 2015 ; 2015 ; >
+    au < finished ; crawling ; 2016 ; PeerJ Volume 2016 ; 2016 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2017 ; PeerJ Volume 2017 ; 2017 ; reingest4.clockss.org:8082 >
+    au < deepCrawl ; exists ; 2018 ; PeerJ Volume 2018 ; 2018 ; >
+    au < finished ; crawling ; 2019 ; PeerJ Volume 2019 ; 2019 ; reingest1.clockss.org:8082 >
+    au < deepCrawl ; exists ; 2020 ; PeerJ Volume 2020 ; 2020 ; >
+    au < deepCrawl ; exists ; 2021 ; PeerJ Volume 2021 ; 2021 ; >
+    au < ready ; exists ; 2022 ; PeerJ Volume 2022 ; 2022 ; >
+
+    }
+  }
+
+  {
+
+    title < 
+      name = PeerJ Computer Science ;
+      eissn = 2376-5992
+    >
+
+    {
+
+    plugin = org.lockss.plugin.peerj.ClockssPeerJ2016Plugin
+    param[journal_id] = cs 
+    
+    au < finished ; finished ; 2015 ; PeerJ Computer Science Volume 2015 ; 2015 ; >
+    au < finished ; crawling ; 2016 ; PeerJ Computer Science Volume 2016 ; 2016 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; PeerJ Computer Science Volume 2017 ; 2017 ; reingest5.clockss.org:8082 >
+    au < deepCrawl ; exists ; 2018 ; PeerJ Computer Science Volume 2018 ; 2018 ; >
+    au < finished ; crawling ; 2019 ; PeerJ Computer Science Volume 2019 ; 2019 ; reingest4.clockss.org:8082 >
+    au < deepCrawl ; exists ; 2020 ; PeerJ Computer Science Volume 2020 ; 2020 ; >
+    au < deepCrawl ; exists ; 2021 ; PeerJ Computer Science Volume 2021 ; 2021 ; >
+    au < ready ; exists ; 2022 ; PeerJ Computer Science Volume 2022 ; 2022 ; >
+
+    }
+  }
+}

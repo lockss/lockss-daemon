@@ -1,0 +1,1661 @@
+{
+
+  publisher <
+    name = Berkeley Electronic Press ;
+    info[contract] = 2008 ;
+    info[tester] = 5 ;
+    info[poller] = 8 ;
+    info[platform] = bepress. retired
+  >
+  provider = bepress
+  
+  # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
+
+  pluginPrefix = org.lockss.plugin.bepress.
+  implicit < status1 ; status ; year ; name ; param[volume] ; proxy >
+  
+  {
+
+    title <
+      name = Accounting, Economics, and Law - A Convivium ;
+      eissn = 2152-2820
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = ael
+
+    au < zapped ; finished ; 2011 ; Accounting, Economics, and Law - A Convivium Volume 1 ; 1 ; >
+
+  }
+
+  {
+
+    title <
+      name = Advances in Economic Analysis & Policy ;
+      eissn = 1538-0637
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressSectionPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = bejeap
+    param[journal_section] = advances
+    comment[merged] = with 1538-0629, 1538-0645 and 1538-0653 into 1555-0494 in 2007
+
+    au < finished ; finished ; 2001 ; Advances in Economic Analysis & Policy Volume 1 ; 1 ; >
+    au < finished ; finished ; 2002 ; Advances in Economic Analysis & Policy Volume 2 ; 2 ; >
+    au < zapped ; finished ; 2003 ; Advances in Economic Analysis & Policy Volume 3 ; 3 ; >
+    au < finished ; finished ; 2004 ; Advances in Economic Analysis & Policy Volume 4 ; 4 ; >
+    au < zapped ; finished ; 2005 ; Advances in Economic Analysis & Policy Volume 5 ; 5 ; >
+    au < zapped ; finished ; 2006 ; Advances in Economic Analysis & Policy Volume 6 ; 6 ; > 
+
+  }
+
+  {
+
+    title <
+      name = Advances in Macroeconomics ;
+      eissn = 1534-6013
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressSectionPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = bejm
+    param[journal_section] = advances
+    comment[merged] = with 1534-5998, 1534-6005 and 1534-0621 into 1555-0486 in 2007
+
+    au < finished ; finished ; 2001 ; Advances in Macroeconomics Volume 1 ; 1 ; >
+    au < finished ; down ; 2002 ; Advances in Macroeconomics Volume 2 ; 2 ; > #no substance on production machine.
+    au < zapped ; finished ; 2003 ; Advances in Macroeconomics Volume 3 ; 3 ; >
+    au < zapped ; finished ; 2004 ; Advances in Macroeconomics Volume 4 ; 4 ; >
+    au < zapped ; finished ; 2005 ; Advances in Macroeconomics Volume 5 ; 5 ; >
+    au < zapped ; finished ; 2006 ; Advances in Macroeconomics Volume 6 ; 6 ; >
+
+  }
+
+  {
+
+    title <
+      name = Advances in Theoretical Economics ;
+      eissn = 1534-5963
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressSectionPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = bejte
+    param[journal_section] = advances
+    comment[merged] = with 1534-5955, 1534-5971 and 1534-598X into 1555-0478 in 2007
+
+    au < zapped ; finished ; 2001 ; Advances in Theoretical Economics Volume 1 ; 1 ; >
+    au < finished ; finished ; 2002 ; Advances in Theoretical Economics Volume 2 ; 2 ; >
+    au < zapped ; finished ; 2003 ; Advances in Theoretical Economics Volume 3 ; 3 ; >
+    au < finished ; finished ; 2004 ; Advances in Theoretical Economics Volume 4 ; 4 ; >
+    au < zapped ; finished ; 2005 ; Advances in Theoretical Economics Volume 5 ; 5 ; >
+    au < zapped ; finished ; 2006 ; Advances in Theoretical Economics Volume 6 ; 6 ; > 
+
+  }
+
+  {
+
+    title <
+      name = Asia-Pacific Journal of Risk and Insurance ;
+      eissn = 2153-3792
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = apjri
+
+    au < zapped ; finished ; 2005-2006 ; Asia-Pacific Journal of Risk and Insurance Volume 1 ; 1 ; >
+    au < zapped ; finished ; 2007-2008 ; Asia-Pacific Journal of Risk and Insurance Volume 2 ; 2 ; >
+    au < zapped ; finished ; 2008-2009 ; Asia-Pacific Journal of Risk and Insurance Volume 3 ; 3 ; >
+    au < zapped ; finished ; 2009-2010 ; Asia-Pacific Journal of Risk and Insurance Volume 4 ; 4 ; >
+    au < zapped ; finished ; 2010 ; Asia-Pacific Journal of Risk and Insurance Volume 5 ; 5 ; >
+
+  }
+
+  {
+
+    title <
+      name = Asian Journal of Comparative Law ;
+      eissn = 1932-0205
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = asjcl
+
+    au < finished ; finished ; 2006 ; Asian Journal of Comparative Law Volume 1 ; 1 ; >
+    au < zapped ; finished ; 2007 ; Asian Journal of Comparative Law Volume 2 ; 2 ; >
+    au < zapped ; finished ; 2008 ; Asian Journal of Comparative Law Volume 3 ; 3 ; >
+    au < zapped ; finished ; 2009 ; Asian Journal of Comparative Law Volume 4 ; 4 ; >
+    au < zapped ; finished ; 2010 ; Asian Journal of Comparative Law Volume 5 ; 5 ; >
+    au < zapped ; finished ; 2011 ; Asian Journal of Comparative Law Volume 6 ; 6 ; >
+    
+  }
+
+  {
+
+    title <
+      name = Asian Journal of Law and Economics ;
+      eissn = 2154-4611
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = ajle
+
+    au < zapped ; finished ; 2010 ; Asian Journal of Law and Economics Volume 1 ; 1 ; >
+    au < zapped ; finished ; 2011 ; Asian Journal of Law and Economics Volume 2 ; 2 ; >
+    
+  }
+
+  {
+
+    title <
+      name = Basic Income Studies ;
+      eissn = 1932-0183
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = bis
+
+    au < finished ; finished ; 2006 ; Basic Income Studies Volume 1 ; 1 ; >
+    au < finished ; finished ; 2007 ; Basic Income Studies Volume 2 ; 2 ; >
+    au < zapped ; finished ; 2008 ; Basic Income Studies Volume 3 ; 3 ; >
+    au < zapped ; finished ; 2009 ; Basic Income Studies Volume 4 ; 4 ; >
+    au < zapped ; finished ; 2010 ; Basic Income Studies Volume 5 ; 5 ; >
+
+  }
+
+  {
+
+    title <
+      name = The B.E. Journal of Economic Analysis & Policy ;
+      issn = 1555-0494 ; 
+      eissn = 1935-1682 ;
+      issnl = 1555-0494       
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = bejeap
+    comment[continues] = 1538-0629, 1538-0637, 1538-0645 and 1538-0653
+    # volumes 1-6 really do not exist (manifest pages point to arbitrary preceding titles)
+    comment[bejeap1] = duplicate of 1538-0629 volume 1
+    comment[bejeap2] = manifest page has no links
+    comment[bejeap3] = duplicate of 1538-0645 volume 3
+    comment[bejeap4] = duplicate of 1538-0645 volume 4
+    comment[bejeap5] = duplicate of 1538-0645 volume 5
+    comment[bejeap6] = duplicate of 1538-0653 volume 6
+
+    au < doNotProcess ; doNotProcess ; 2005 ; The B.E. Journal of Economic Analysis & Policy Volume 1 ; 1 ; >
+    au < doNotProcess ; doNotProcess ; 2000 ; The B.E. Journal of Economic Analysis & Policy Volume 2 ; 2 ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; The B.E. Journal of Economic Analysis & Policy Volume 3 ; 3 ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; The B.E. Journal of Economic Analysis & Policy Volume 4 ; 4 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; The B.E. Journal of Economic Analysis & Policy Volume 5 ; 5 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; The B.E. Journal of Economic Analysis & Policy Volume 6 ; 6 ; >
+    au < finished ; finished ; 2007 ; The B.E. Journal of Economic Analysis & Policy Volume 7 ; 7 ; > 
+    au < zapped ; finished ; 2008 ; The B.E. Journal of Economic Analysis & Policy Volume 8 ; 8 ; >
+    au < zapped ; finished ; 2009 ; The B.E. Journal of Economic Analysis & Policy Volume 9 ; 9 ; >
+    au < zapped ; finished ; 2010 ; The B.E. Journal of Economic Analysis & Policy Volume 10 ; 10 ; >
+    au < zapped ; finished ; 2011 ; The B.E. Journal of Economic Analysis & Policy Volume 11 ; 11 ; >
+
+  }
+
+  {
+
+    title <
+      name = The B.E. Journal of Macroeconomics ;
+      issn = 1555-0486 ; 
+      eissn = 1935-1690 ;
+      issnl = 1555-0486  
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = bejm
+    comment[continues] = 1534-5998, 1534-6005, 1534-6013 and 1534-6021
+    # volumes 1-6 really do not exist (manifest pages point to arbitrary preceding titles)
+
+    au < doesNotExist ; doesNotExist ; 2004 ; The B.E. Journal of Macroeconomics Volume 1 ; 1 ; >
+    au < doesNotExist ; doesNotExist ; 2006 ; The B.E. Journal of Macroeconomics Volume 2 ; 2 ; >
+    au < doesNotExist ; doesNotExist ; 2003 ; The B.E. Journal of Macroeconomics Volume 3 ; 3 ; >
+    au < doesNotExist ; doesNotExist ; 2004 ; The B.E. Journal of Macroeconomics Volume 4 ; 4 ; >
+    au < doesNotExist ; doesNotExist ; 2005 ; The B.E. Journal of Macroeconomics Volume 5 ; 5 ; >
+    au < doesNotExist ; doesNotExist ; 2006 ; The B.E. Journal of Macroeconomics Volume 6 ; 6 ; >
+    au < zapped ; finished ; 2007 ; The B.E. Journal of Macroeconomics Volume 7 ; 7 ; > 
+    au < zapped ; finished ; 2008 ; The B.E. Journal of Macroeconomics Volume 8 ; 8 ; >
+    au < zapped ; finished ; 2009 ; The B.E. Journal of Macroeconomics Volume 9 ; 9 ; >
+    au < zapped ; finished ; 2010 ; The B.E. Journal of Macroeconomics Volume 10 ; 10 ; > 
+    au < zapped ; finished ; 2011 ; The B.E. Journal of Macroeconomics Volume 11 ; 11 ; >
+    
+  }
+
+  {
+
+    title <
+      name = The B.E. Journal of Theoretical Economics ;
+      issn = 1555-0478 ; 
+      eissn = 1935-1704 ;
+      issnl = 1555-0478  
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = bejte
+    comment[continues] = 1534-5955, 1534-5963, 1534-5971 and 1534-598X
+    # volumes 1-6 really do not exist (manifest pages point to arbitrary preceding titles)
+
+    au < doNotProcess ; doNotProcess ; 2002 ; The B.E. Journal of Theoretical Economics Volume 1 ; 1 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; The B.E. Journal of Theoretical Economics Volume 2 ; 2 ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; The B.E. Journal of Theoretical Economics Volume 3 ; 3 ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; The B.E. Journal of Theoretical Economics Volume 4 ; 4 ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; The B.E. Journal of Theoretical Economics Volume 5 ; 5 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; The B.E. Journal of Theoretical Economics Volume 6 ; 6 ; >
+    au < zapped ; finished ; 2007 ; The B.E. Journal of Theoretical Economics Volume 7 ; 7 ; >
+    au < zapped ; finished ; 2008 ; The B.E. Journal of Theoretical Economics Volume 8 ; 8 ; >
+    au < zapped ; finished ; 2009 ; The B.E. Journal of Theoretical Economics Volume 9 ; 9 ; >
+    au < zapped ; finished ; 2010 ; The B.E. Journal of Theoretical Economics Volume 10 ; 10 ; >
+    au < zapped ; finished ; 2011 ; The B.E. Journal of Theoretical Economics Volume 11 ; 11 ; >
+
+  }
+
+  {
+
+    title <
+      name = Business and Politics ;
+      issn = 1369-5258 ;
+      eissn = 1469-3569 ;
+      issnl = 1369-5258 
+
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = bap
+
+    au < doesNotExist ; doesNotExist ; 1999 ; Business and Politics Volume 1 ; 1 ; >
+    au < zapped ; finished ; 2000 ; Business and Politics Volume 2 ; 2 ; >
+    au < finished ; finished ; 2001 ; Business and Politics Volume 3 ; 3 ; >
+    au < finished ; finished ; 2002 ; Business and Politics Volume 4 ; 4 ; >
+    au < finished ; finished ; 2003 ; Business and Politics Volume 5 ; 5 ; >
+    au < zapped ; finished ; 2004 ; Business and Politics Volume 6 ; 6 ; >
+    au < zapped ; finished ; 2005 ; Business and Politics Volume 7 ; 7 ; >
+    au < finished ; finished ; 2006 ; Business and Politics Volume 8 ; 8 ; >
+    au < finished ; finished ; 2007 ; Business and Politics Volume 9 ; 9 ; >
+    au < zapped ; finished ; 2008 ; Business and Politics Volume 10 ; 10 ; >
+    au < zapped ; finished ; 2009 ; Business and Politics Volume 11 ; 11 ; >
+    au < zapped ; finished ; 2010 ; Business and Politics Volume 12 ; 12 ; >
+    au < zapped ; finished ; 2011 ; Business and Politics Volume 13 ; 13 ; >
+
+  }
+
+  {
+
+    title <
+      name = California Journal of Politics and Policy ; 
+      eissn = 1944-4370
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = cjpp
+
+    au < zapped ; finished ; 2009 ; California Journal of Politics and Policy Volume 1 ; 1 ; >
+    au < zapped ; finished ; 2010 ; California Journal of Politics and Policy Volume 2 ; 2 ; >
+    au < zapped ; finished ; 2011 ; California Journal of Politics and Policy Volume 3 ; 3 ; >
+
+  }
+
+  {
+
+    title <
+      name = Capitalism and Society ;
+      eissn = 1932-0213
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = cas
+
+    au < finished ; finished ; 2006 ; Capitalism and Society Volume 1 ; 1 ; >
+    au < zapped ; finished ; 2007 ; Capitalism and Society Volume 2 ; 2 ; >
+    au < zapped ; finished ; 2008 ; Capitalism and Society Volume 3 ; 3 ; >
+    au < zapped ; finished ; 2009 ; Capitalism and Society Volume 4 ; 4 ; >
+    au < zapped ; finished ; 2010 ; Capitalism and Society Volume 5 ; 5 ; >
+    au < zapped ; finished ; 2011 ; Capitalism and Society Volume 6 ; 6 ; >
+
+  }
+
+  {
+
+    title <
+      name = Chemical Product and Process Modeling ;
+      eissn = 1934-2659
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = cppm
+
+    au < finished ; finished ; 2006 ; Chemical Product and Process Modeling Volume 1 ; 1 ; >
+    au < finished ; finished ; 2007 ; Chemical Product and Process Modeling Volume 2 ; 2 ; >
+    au < zapped ; finished ; 2008 ; Chemical Product and Process Modeling Volume 3 ; 3 ; >
+    au < zapped ; finished ; 2009 ; Chemical Product and Process Modeling Volume 4 ; 4 ; >
+    au < finished ; finished ; 2010 ; Chemical Product and Process Modeling Volume 5 ; 5 ; >
+    au < zapped ; finished ; 2011 ; Chemical Product and Process Modeling Volume 6 ; 6 ; >
+
+  }
+
+  {
+
+    title <
+      name = Contributions to Economic Analysis & Policy ;
+      eissn = 1538-0645
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressSectionPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = bejeap
+    param[journal_section] = contributions
+    comment[merged] = with 1538-0629, 1538-0637 and 1538-0653 into 1555-0494 in 2007
+    comment[year] = vol 1 website label is 2001 but articles are dated 2002
+
+    au < zapped ; finished ; 2002 ; Contributions to Economic Analysis & Policy Volume 1 ; 1 ; >
+    au < finished ; finished ; 2003 ; Contributions to Economic Analysis & Policy Volume 2 ; 2 ; >
+    au < zapped ; finished ; 2004 ; Contributions to Economic Analysis & Policy Volume 3 ; 3 ; >
+    au < zapped ; finished ; 2005 ; Contributions to Economic Analysis & Policy Volume 4 ; 4 ; >
+    au < zapped ; finished ; 2006 ; Contributions to Economic Analysis & Policy Volume 5 ; 5 ; >
+
+  }
+
+  {
+
+    title <
+      name = Contributions to Macroeconomics ;
+      issn = 1534-6005       
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressSectionPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = bejm
+    param[journal_section] = contributions
+    comment[merged] = with 1534-5998, 1534-6013 and 1534-6021 into 1555-0486 in 2007
+
+    au < zapped ; finished ; 2001 ; Contributions to Macroeconomics Volume 1 ; 1 ; >
+    au < finished ; down ; 2002 ; Contributions to Macroeconomics Volume 2 ; 2 ; > #no substance on production machine
+    au < zapped ; finished ; 2003 ; Contributions to Macroeconomics Volume 3 ; 3 ; >
+    au < finished ; finished ; 2004 ; Contributions to Macroeconomics Volume 4 ; 4 ; >
+    au < zapped ; finished ; 2005 ; Contributions to Macroeconomics Volume 5 ; 5 ; >
+    au < zapped ; finished ; 2006 ; Contributions to Macroeconomics Volume 6 ; 6 ; >
+
+  }
+
+  {
+
+    title <
+      name = Contributions to Theoretical Economics ;
+      eissn = 1534-5971
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressSectionPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = bejte
+    param[journal_section] = contributions
+    comment[merged] = with 1534-5955, 1534-5963 and 1534-598X into 1555-0478 in 2007
+
+    au < zapped ; finished ; 2001 ; Contributions to Theoretical Economics Volume 1 ; 1 ; > 
+    au < finished ; finished ; 2002 ; Contributions to Theoretical Economics Volume 2 ; 2 ; >
+    au < zapped ; finished ; 2003 ; Contributions to Theoretical Economics Volume 3 ; 3 ; > 
+    au < zapped ; finished ; 2004 ; Contributions to Theoretical Economics Volume 4 ; 4 ; >
+    au < finished ; finished ; 2005 ; Contributions to Theoretical Economics Volume 5 ; 5 ; > 
+    au < zapped ; finished ; 2006 ; Contributions to Theoretical Economics Volume 6 ; 6 ; > 
+
+  }
+
+  {
+
+    title <
+      name = The Economists' Voice ;
+      eissn = 1553-3832
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = ev
+
+    au < zapped ; finished ; 2004 ; The Economists' Voice Volume 1 ; 1 ; >
+    au < zapped ; finished ; 2005 ; The Economists' Voice Volume 2 ; 2 ; >
+    au < finished ; finished ; 2006 ; The Economists' Voice Volume 3 ; 3 ; >
+    au < zapped ; finished ; 2007 ; The Economists' Voice Volume 4 ; 4 ; >
+    au < zapped ; finished ; 2008 ; The Economists' Voice Volume 5 ; 5 ; >
+    au < zapped ; finished ; 2009 ; The Economists' Voice Volume 6 ; 6 ; >
+    au < zapped ; finished ; 2010 ; The Economists' Voice Volume 7 ; 7 ; >
+    au < zapped ; finished ; 2011 ; The Economists' Voice Volume 8 ; 8 ; >
+
+  }
+  
+  {
+ 
+    title <
+      name = Entrepreneurship Research Journal ;
+      eissn = 2157-5665
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = erj
+
+    au < zapped ; finished ; 2011 ; Entrepreneurship Research Journal Volume 1 ; 1 ; >
+
+  }  
+  
+  {
+
+    title <
+      name = The Forum ;
+      eissn = 1540-8884
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = forum
+
+    au < zapped ; finished ; 2002-2003 ; The Forum Volume 1 ; 1 ; >
+    au < finished ; finished ; 2004 ; The Forum Volume 2 ; 2 ; >
+    au < finished ; finished ; 2005-2006 ; The Forum Volume 3 ; 3 ; >
+    au < finished ; finished ; 2006 ; The Forum Volume 4 ; 4 ; >
+    au < finished ; finished ; 2007-2008 ; The Forum Volume 5 ; 5 ; >
+    au < zapped ; finished ; 2008 ; The Forum Volume 6 ; 6 ; >
+    au < zapped ; finished ; 2009 ; The Forum Volume 7 ; 7 ; >
+    au < zapped ; finished ; 2010 ; The Forum Volume 8 ; 8 ; >
+    au < finished ; finished ; 2011 ; The Forum Volume 9 ; 9 ; >
+
+  }
+
+  {
+
+    title <
+      name = Forum for Health Economics & Policy ;
+      eissn = 1558-9544
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = fhep
+
+    au < finished ; finished ; 1998 ; Forum for Health Economics & Policy Volume 1 ; 1 ; >
+    au < doesNotExist ; doesNotExist ; 1999 ; Forum for Health Economics & Policy Volume 2 ; 2 ; >
+    au < finished ; finished ; 2000 ; Forum for Health Economics & Policy Volume 3 ; 3 ; >
+    au < zapped ; finished ; 2001 ; Forum for Health Economics & Policy Volume 4 ; 4 ; >
+    au < finished ; finished ; 2002 ; Forum for Health Economics & Policy Volume 5 ; 5 ; >
+    au < finished ; finished ; 2003 ; Forum for Health Economics & Policy Volume 6 ; 6 ; >
+    au < finished ; finished ; 2004 ; Forum for Health Economics & Policy Volume 7 ; 7 ; >
+    au < zapped ; finished ; 2005 ; Forum for Health Economics & Policy Volume 8 ; 8 ; >
+    au < finished ; finished ; 2006 ; Forum for Health Economics & Policy Volume 9 ; 9 ; >
+    au < zapped ; finished ; 2007 ; Forum for Health Economics & Policy Volume 10 ; 10 ; >
+    au < zapped ; finished ; 2008 ; Forum for Health Economics & Policy Volume 11 ; 11 ; >
+    au < zapped ; finished ; 2009 ; Forum for Health Economics & Policy Volume 12 ; 12 ; >
+    au < zapped ; finished ; 2010 ; Forum for Health Economics & Policy Volume 13 ; 13 ; >
+    au < finished ; finished ; 2011 ; Forum for Health Economics & Policy Volume 14 ; 14 ; >
+
+  }
+
+  {
+
+    title <
+      name = Frontiers of Economic Analysis & Policy ;
+      eissn = 1538-0629
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressSectionPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = bejeap
+    param[journal_section] = frontiers
+    comment[merged] = with 1538-0637, 1538-0645 and 1538-0653 into 1555-0494 in 2007
+
+    au < zapped ; finished ; 2005 ; Frontiers of Economic Analysis & Policy Volume 1 ; 1 ; >
+
+  }
+
+  {
+
+    title <
+      name = Frontiers of Macroeconomics ;
+      eissn = 1534-6021
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressSectionPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = bejm
+    param[journal_section] = frontiers
+    comment[merged] = with 1534-5998, 1534-6005 and 1534-6013 into 1555-0486 in 2007
+
+    au < zapped ; finished ; 2004 ; Frontiers of Macroeconomics Volume 1 ; 1 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; Frontiers of Macroeconomics Volume 2 ; 2 ; >
+
+  }
+
+  {
+
+    title <
+      name = Frontiers of Theoretical Economics ;
+      eissn = 1534-5955
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressSectionPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = bejte
+    param[journal_section] = frontiers
+    comment[merged] = with 1534-5963, 1534-5971 and 1534-598X into 1555-0478 in 2007
+    comment[year] = vol 1 website label is 2001 but article is dated 2002
+    
+    au < zapped ; finished ; 2002 ; Frontiers of Theoretical Economics Volume 1 ; 1 ; > 
+    au < zapped ; finished ; 2006 ; Frontiers of Theoretical Economics Volume 2 ; 2 ; >
+
+  }
+
+  {
+
+    title <
+      name = Global Economy Journal ;
+      eissn = 1524-5861
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = gej
+
+    au < finished ; finished ; 2000 ; Global Economy Journal Volume 1 ; 1 ; >
+    au < zapped ; finished ; 2001 ; Global Economy Journal Volume 2 ; 2 ; >
+    au < finished ; finished ; 2002 ; Global Economy Journal Volume 3 ; 3 ; >
+    au < finished ; finished ; 2004 ; Global Economy Journal Volume 4 ; 4 ; >
+    au < zapped ; finished ; 2005 ; Global Economy Journal Volume 5 ; 5 ; >
+    au < finished ; finished ; 2006 ; Global Economy Journal Volume 6 ; 6 ; >
+    au < finished ; finished ; 2007 ; Global Economy Journal Volume 7 ; 7 ; >
+    au < zapped ; finished ; 2008 ; Global Economy Journal Volume 8 ; 8 ; >
+    au < zapped ; finished ; 2009 ; Global Economy Journal Volume 9 ; 9 ; >
+    au < zapped ; finished ; 2010 ; Global Economy Journal Volume 10 ; 10 ; >
+    au < finished ; finished ; 2011 ; Global Economy Journal Volume 11 ; 11 ; >
+
+  }
+
+  {
+
+    title <
+      name = Global Jurist ;
+      eissn = 1934-2640
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = gj
+
+    au < zapped ; finished ; 2001 ; Global Jurist Volume 1 ; 1 ; >
+    au < zapped ; finished ; 2002 ; Global Jurist Volume 2 ; 2 ; >
+    au < zapped ; finished ; 2003 ; Global Jurist Volume 3 ; 3 ; >
+    au < zapped ; finished ; 2004 ; Global Jurist Volume 4 ; 4 ; >
+    au < finished ; finished ; 2005 ; Global Jurist Volume 5 ; 5 ; >
+    au < zapped ; finished ; 2006 ; Global Jurist Volume 6 ; 6 ; >
+    au < zapped ; finished ; 2007 ; Global Jurist Volume 7 ; 7 ; >
+    au < zapped ; finished ; 2008 ; Global Jurist Volume 8 ; 8 ; >
+    au < zapped ; finished ; 2009 ; Global Jurist Volume 9 ; 9 ; >
+    au < zapped ; finished ; 2010 ; Global Jurist Volume 10 ; 10 ; >
+    au < zapped ; finished ; 2011 ; Global Jurist Volume 11 ; 11 ; >
+
+  }
+
+  {
+
+    title <
+      name = International Commentary on Evidence ;
+      eissn = 1554-4567
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = ice
+
+    au < finished ; finished ; 2003 ; International Commentary on Evidence Volume 1 ; 1 ; >
+    au < zapped ; finished ; 2004 ; International Commentary on Evidence Volume 2 ; 2 ; >
+    au < zapped ; finished ; 2005 ; International Commentary on Evidence Volume 3 ; 3 ; >
+    au < finished ; finished ; 2006 ; International Commentary on Evidence Volume 4 ; 4 ; >
+    au < finished ; finished ; 2007 ; International Commentary on Evidence Volume 5 ; 5 ; >
+    au < zapped ; finished ; 2008 ; International Commentary on Evidence Volume 6 ; 6 ; >
+    au < zapped ; finished ; 2009 ; International Commentary on Evidence Volume 7 ; 7 ; >
+    au < zapped ; finished ; 2010 ; International Commentary on Evidence Volume 8 ; 8 ; >
+
+  }
+
+  {
+
+    title <
+      name = The International Journal of Biostatistics ;
+      eissn = 1557-4679
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = ijb
+
+    au < finished ; finished ; 2005 ; The International Journal of Biostatistics Volume 1 ; 1 ; >
+    au < zapped ; finished ; 2006 ; The International Journal of Biostatistics Volume 2 ; 2 ; >
+    au < zapped ; finished ; 2007 ; The International Journal of Biostatistics Volume 3 ; 3 ; >
+    au < zapped ; finished ; 2008 ; The International Journal of Biostatistics Volume 4 ; 4 ; >
+    au < zapped ; finished ; 2009 ; The International Journal of Biostatistics Volume 5 ; 5 ; >
+    au < zapped ; finished ; 2010 ; The International Journal of Biostatistics Volume 6 ; 6 ; >
+    au < zapped ; finished ; 2011 ; The International Journal of Biostatistics Volume 7 ; 7 ; >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Chemical Reactor Engineering ;
+      eissn = 1542-6580
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = ijcre
+
+    au < finished ; finished ; 2003 ; International Journal of Chemical Reactor Engineering Volume 1 ; 1 ; >
+    au < finished ; finished ; 2004 ; International Journal of Chemical Reactor Engineering Volume 2 ; 2 ; >
+    au < finished ; finished ; 2005 ; International Journal of Chemical Reactor Engineering Volume 3 ; 3 ; >
+    au < zapped ; finished ; 2006 ; International Journal of Chemical Reactor Engineering Volume 4 ; 4 ; >
+    au < zapped ; finished ; 2007 ; International Journal of Chemical Reactor Engineering Volume 5 ; 5 ; >
+    au < zapped ; finished ; 2008 ; International Journal of Chemical Reactor Engineering Volume 6 ; 6 ; >
+    au < zapped ; finished ; 2009 ; International Journal of Chemical Reactor Engineering Volume 7 ; 7 ; >
+    au < finished ; finished ; 2010 ; International Journal of Chemical Reactor Engineering Volume 8 ; 8 ; >
+    au < finished ; finished ; 2011 ; International Journal of Chemical Reactor Engineering Volume 9 ; 9 ; >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Emerging Electric Power Systems ;
+      eissn = 1553-779X
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = ijeeps
+
+    au < finished ; finished ; 2004 ; International Journal of Emerging Electric Power Systems Volume 1 ; 1 ; >
+    au < finished ; finished ; 2005 ; International Journal of Emerging Electric Power Systems Volume 2 ; 2 ; >
+    au < zapped ; finished ; 2005 ; International Journal of Emerging Electric Power Systems Volume 3 ; 3 ; >
+    au < finished ; finished ; 2005 ; International Journal of Emerging Electric Power Systems Volume 4 ; 4 ; >
+    au < finished ; finished ; 2006 ; International Journal of Emerging Electric Power Systems Volume 5 ; 5 ; >
+    au < zapped ; finished ; 2006 ; International Journal of Emerging Electric Power Systems Volume 6 ; 6 ; >
+    au < zapped ; finished ; 2006 ; International Journal of Emerging Electric Power Systems Volume 7 ; 7 ; >
+    au < zapped ; finished ; 2007 ; International Journal of Emerging Electric Power Systems Volume 8 ; 8 ; >
+    au < zapped ; finished ; 2008 ; International Journal of Emerging Electric Power Systems Volume 9 ; 9 ; >
+    au < zapped ; finished ; 2009 ; International Journal of Emerging Electric Power Systems Volume 10 ; 10 ; >
+    au < zapped ; finished ; 2010 ; International Journal of Emerging Electric Power Systems Volume 11 ; 11 ; >
+    au < finished ; finished ; 2011 ; International Journal of Emerging Electric Power Systems Volume 12 ; 12 ; >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Food Engineering ;
+      eissn = 1556-3758
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = ijfe
+
+    au < finished ; finished ; 2005 ; International Journal of Food Engineering Volume 1 ; 1 ; >
+    au < finished ; finished ; 2006 ; International Journal of Food Engineering Volume 2 ; 2 ; >
+    au < finished ; finished ; 2007 ; International Journal of Food Engineering Volume 3 ; 3 ; >
+    au < zapped ; finished ; 2008 ; International Journal of Food Engineering Volume 4 ; 4 ; >
+    au < zapped ; finished ; 2009 ; International Journal of Food Engineering Volume 5 ; 5 ; >
+    au < zapped ; finished ; 2010 ; International Journal of Food Engineering Volume 6 ; 6 ; >
+    au < finished ; finished ; 2011 ; International Journal of Food Engineering Volume 7 ; 7 ; >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Nursing Education Scholarship ;
+      eissn = 1548-923X
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = ijnes
+
+    au < finished ; finished ; 2004 ; International Journal of Nursing Education Scholarship Volume 1 ; 1 ; >
+    au < zapped ; finished ; 2005 ; International Journal of Nursing Education Scholarship Volume 2 ; 2 ; >
+    au < finished ; finished ; 2006 ; International Journal of Nursing Education Scholarship Volume 3 ; 3 ; >
+    au < zapped ; finished ; 2007 ; International Journal of Nursing Education Scholarship Volume 4 ; 4 ; >
+    au < zapped ; finished ; 2008 ; International Journal of Nursing Education Scholarship Volume 5 ; 5 ; >
+    au < zapped ; finished ; 2009 ; International Journal of Nursing Education Scholarship Volume 6 ; 6 ; >
+    au < zapped ; finished ; 2010 ; International Journal of Nursing Education Scholarship Volume 7 ; 7 ; >
+    au < finished ; finished ; 2011 ; International Journal of Nursing Education Scholarship Volume 8 ; 8 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal des Economistes et des Etudes Humaines ;
+      eissn = 1145-6396
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = jeeh
+
+    au < zapped ; finished ; 1996 ; Journal des Economistes et des Etudes Humaines Volume 6 ; 6 ; >
+    au < zapped ; finished ; 1997 ; Journal des Economistes et des Etudes Humaines Volume 7 ; 7 ; >
+    au < doesNotExist ; doesNotExist ; 1998 ; Journal des Economistes et des Etudes Humaines Volume 8 ; 8 ; >
+    au < zapped ; finished ; 1999 ; Journal des Economistes et des Etudes Humaines Volume 9 ; 9 ; >
+    au < zapped ; finished ; 2000 ; Journal des Economistes et des Etudes Humaines Volume 10 ; 10 ; >
+    au < zapped ; finished ; 2001 ; Journal des Economistes et des Etudes Humaines Volume 11 ; 11 ; >
+    au < zapped ; finished ; 2002 ; Journal des Economistes et des Etudes Humaines Volume 12 ; 12 ; >
+    au < zapped ; finished ; 2003 ; Journal des Economistes et des Etudes Humaines Volume 13 ; 13 ; > 
+    au < finished ; finished ; 2004 ; Journal des Economistes et des Etudes Humaines Volume 14 ; 14 ; >
+    au < zapped ; finished ; 2009 ; Journal des Economistes et des Etudes Humaines Volume 15 ; 15 ; > 
+    au < finished ; finished ; 2010 ; Journal des Economistes et des Etudes Humaines Volume 16 ; 16 ; >
+    au < zapped ; finished ; 2011 ; Journal des Economistes et des Etudes Humaines Volume 17 ; 17 ; >
+    
+  }
+
+  {
+
+    title <
+      name = Journal of Agricultural & Food Industrial Organization ;
+      eissn = 1542-0485
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = jafio
+
+    au < zapped ; finished ; 2003 ; Journal of Agricultural & Food Industrial Organization Volume 1 ; 1 ; >
+    au < zapped ; finished ; 2004 ; Journal of Agricultural & Food Industrial Organization Volume 2 ; 2 ; >
+    au < finished ; finished ; 2005 ; Journal of Agricultural & Food Industrial Organization Volume 3 ; 3 ; >
+    au < finished ; finished ; 2006 ; Journal of Agricultural & Food Industrial Organization Volume 4 ; 4 ; >
+    au < finished ; finished ; 2007 ; Journal of Agricultural & Food Industrial Organization Volume 5 ; 5 ; >
+    au < zapped ; finished ; 2008 ; Journal of Agricultural & Food Industrial Organization Volume 6 ; 6 ; >
+    au < zapped ; finished ; 2009 ; Journal of Agricultural & Food Industrial Organization Volume 7 ; 7 ; >
+    au < zapped ; finished ; 2010 ; Journal of Agricultural & Food Industrial Organization Volume 8 ; 8 ; >
+    au < finished ; finished ; 2011 ; Journal of Agricultural & Food Industrial Organization Volume 9 ; 9 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Benefit-Cost Analysis ;
+      eissn = 2152-2812
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = jbca
+
+    au < zapped ; finished ; 2010 ; Journal of Benefit-Cost Analysis Volume 1 ; 1 ; >
+    au < zapped ; finished ; 2011 ; Journal of Benefit-Cost Analysis Volume 2 ; 2 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Biosecurity, Biosafety and Biodefense Law ;
+      eissn = 2154-3186
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = jbbbl
+
+    au < zapped ; finished ; 2011 ; Journal of Biosecurity, Biosafety and Biodefense Law Volume 1 ; 1 ; >
+ 
+  }
+
+
+  {
+
+    title <
+      name = Journal of Business Valuation and Economic Loss Analysis ;
+      eissn = 1932-9156
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = jbvela
+
+    au < zapped ; finished ; 2006 ; Journal of Business Valuation and Economic Loss Analysis Volume 1 ; 1 ; >
+    au < zapped ; finished ; 2007 ; Journal of Business Valuation and Economic Loss Analysis Volume 2 ; 2 ; >
+    au < zapped ; finished ; 2008 ; Journal of Business Valuation and Economic Loss Analysis Volume 3 ; 3 ; >
+    au < zapped ; finished ; 2009 ; Journal of Business Valuation and Economic Loss Analysis Volume 4 ; 4 ; >
+    au < zapped ; finished ; 2010 ; Journal of Business Valuation and Economic Loss Analysis Volume 5 ; 5 ; >
+    au < finished ; finished ; 2011 ; Journal of Business Valuation and Economic Loss Analysis Volume 6 ; 6 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of College and Character ;
+      issn = 2194-587X ;
+      eissn = 1940-1639
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://journals.naspa.org/
+    param[journal_abbr] = jcc
+
+    au < finished ; finished ; 2000 ; Journal of College and Character Volume 1 ; 1 ; >
+    au < finished ; finished ; 2001 ; Journal of College and Character Volume 2 ; 2 ; >
+    au < finished ; finished ; 2002 ; Journal of College and Character Volume 3 ; 3 ; >
+    au < finished ; finished ; 2003 ; Journal of College and Character Volume 4 ; 4 ; >
+    au < finished ; finished ; 2004 ; Journal of College and Character Volume 5 ; 5 ; >
+    au < finished ; finished ; 2005 ; Journal of College and Character Volume 6 ; 6 ; >
+    au < finished ; finished ; 2006 ; Journal of College and Character Volume 7 ; 7 ; >
+    au < finished ; finished ; 2006-2007 ; Journal of College and Character Volume 8 ; 8 ; >
+    au < finished ; finished ; 2007-2008 ; Journal of College and Character Volume 9 [Dig Commons] ; 9 ; >
+    au < finished ; finished ; 2008-2009 ; Journal of College and Character Volume 10 [Dig Commons] ; 10 ; >
+    au < zapped ; finished ; 2010 ; Journal of College and Character Volume 11 [Dig Commons] ; 11 ; >
+    au < finished ; finished ; 2011 ; Journal of College and Character Volume 12 [Dig Commons] ; 12 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Complementary and Integrative Medicine ;
+      eissn = 1553-3840
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = jcim
+
+    au < finished ; finished ; 2004 ; Journal of Complementary and Integrative Medicine Volume 1 ; 1 ; >
+    au < finished ; finished ; 2005 ; Journal of Complementary and Integrative Medicine Volume 2 ; 2 ; >
+    au < finished ; finished ; 2006 ; Journal of Complementary and Integrative Medicine Volume 3 ; 3 ; >
+    au < zapped ; finished ; 2007 ; Journal of Complementary and Integrative Medicine Volume 4 ; 4 ; >
+    au < zapped ; finished ; 2008 ; Journal of Complementary and Integrative Medicine Volume 5 ; 5 ; >
+    au < zapped ; finished ; 2009 ; Journal of Complementary and Integrative Medicine Volume 6 ; 6 ; >
+    au < zapped ; finished ; 2010 ; Journal of Complementary and Integrative Medicine Volume 7 ; 7 ; >
+    au < zapped ; finished ; 2011 ; Journal of Complementary and Integrative Medicine Volume 8 ; 8 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Drug Policy Analysis ; 
+      eissn = 1941-2851
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = jdpa
+
+    au < zapped ; finished ; 2008 ; Journal of Drug Policy Analysis Volume 1 ; 1 ; >
+    au < zapped ; finished ; 2009 ; Journal of Drug Policy Analysis Volume 2 ; 2 ; >
+    au < zapped ; finished ; 2010 ; Journal of Drug Policy Analysis Volume 3 ; 3 ; >
+    au < finished ; finished ; 2011 ; Journal of Drug Policy Analysis Volume 4 ; 4 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Globalization and Development  ; 
+      eissn = 1948-1837
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = jgd
+
+    au < zapped ; finished ; 2010 ; Journal of Globalization and Development Volume 1 ; 1 ; >
+  
+  }  
+
+  {
+
+    title <
+      name = Journal of Homeland Security and Emergency Management ;
+      eissn = 1547-7355
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = jhsem
+
+    au < zapped ; finished ; 2004 ; Journal of Homeland Security and Emergency Management Volume 1 ; 1 ; >
+    au < zapped ; finished ; 2005 ; Journal of Homeland Security and Emergency Management Volume 2 ; 2 ; >
+    au < finished ; finished ; 2006 ; Journal of Homeland Security and Emergency Management Volume 3 ; 3 ; >
+    au < finished ; finished ; 2007 ; Journal of Homeland Security and Emergency Management Volume 4 ; 4 ; >
+    au < zapped ; finished ; 2008 ; Journal of Homeland Security and Emergency Management Volume 5 ; 5 ; >
+    au < zapped ; finished ; 2009 ; Journal of Homeland Security and Emergency Management Volume 6 ; 6 ; >
+    au < zapped ; finished ; 2010 ; Journal of Homeland Security and Emergency Management Volume 7 ; 7 ; >
+    au < zapped ; finished ; 2011 ; Journal of Homeland Security and Emergency Management Volume 8 ; 8 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Imagery Research in Sport and Physical Activity ;
+      eissn = 1932-0191
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = jirspa
+
+    au < zapped ; finished ; 2006 ; Journal of Imagery Research in Sport and Physical Activity Volume 1 ; 1 ; >
+    au < zapped ; finished ; 2007 ; Journal of Imagery Research in Sport and Physical Activity Volume 2 ; 2 ; >
+    au < zapped ; finished ; 2008 ; Journal of Imagery Research in Sport and Physical Activity Volume 3 ; 3 ; >
+    au < zapped ; finished ; 2009 ; Journal of Imagery Research in Sport and Physical Activity Volume 4 ; 4 ; >
+    au < zapped ; finished ; 2010 ; Journal of Imagery Research in Sport and Physical Activity Volume 5 ; 5 ; >
+    au < finished ; finished ; 2011 ; Journal of Imagery Research in Sport and Physical Activity Volume 6 ; 6 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Industrial Organization Education ;
+      eissn = 1935-5041
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = jioe
+
+    au < zapped ; finished ; 2006 ; Journal of Industrial Organization Education Volume 1 ; 1 ; >
+    au < zapped ; finished ; 2007 ; Journal of Industrial Organization Education Volume 2 ; 2 ; >
+    au < zapped ; finished ; 2008 ; Journal of Industrial Organization Education Volume 3 ; 3 ; >
+    au < zapped ; finished ; 2009 ; Journal of Industrial Organization Education Volume 4 ; 4 ; >
+    au < finished ; finished ; 2010 ; Journal of Industrial Organization Education Volume 5 ; 5 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Quantitative Analysis in Sports ;
+      eissn = 1559-0410
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = jqas
+
+    au < zapped ; finished ; 2005 ; Journal of Quantitative Analysis in Sports Volume 1 ; 1 ; >
+    au < zapped ; finished ; 2006 ; Journal of Quantitative Analysis in Sports Volume 2 ; 2 ; >
+    au < finished ; finished ; 2007 ; Journal of Quantitative Analysis in Sports Volume 3 ; 3 ; >
+    au < zapped ; finished ; 2008 ; Journal of Quantitative Analysis in Sports Volume 4 ; 4 ; >
+    au < zapped ; finished ; 2009 ; Journal of Quantitative Analysis in Sports Volume 5 ; 5 ; >
+    au < zapped ; finished ; 2010 ; Journal of Quantitative Analysis in Sports Volume 6 ; 6 ; >
+    au < zapped ; finished ; 2011 ; Journal of Quantitative Analysis in Sports Volume 7 ; 7 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Student Affairs Research and Practice ;
+      issn = 1949-6591 ;
+      eissn = 1949-6605 ;
+      issnl = 1949-6605
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://journals.naspa.org/
+    param[journal_abbr] = jsarp
+
+    au < finished ; finished ; 1997 ; Journal of Student Affairs Research and Practice Volume 34 ; 34 ; >
+    au < finished ; finished ; 1998 ; Journal of Student Affairs Research and Practice Volume 35 ; 35 ; >
+    au < finished ; finished ; 1999 ; Journal of Student Affairs Research and Practice Volume 36 ; 36 ; >
+    au < finished ; finished ; 2000 ; Journal of Student Affairs Research and Practice Volume 37 ; 37 ; >
+    au < finished ; finished ; 2001 ; Journal of Student Affairs Research and Practice Volume 38 ; 38 ; >
+    au < finished ; finished ; 2002 ; Journal of Student Affairs Research and Practice Volume 39 ; 39 ; >
+    au < finished ; finished ; 2003 ; Journal of Student Affairs Research and Practice Volume 40 ; 40 ; >
+    au < finished ; finished ; 2004 ; Journal of Student Affairs Research and Practice Volume 41 ; 41 ; >
+    au < finished ; finished ; 2005 ; Journal of Student Affairs Research and Practice Volume 42 ; 42 ; >
+    au < finished ; finished ; 2006 ; Journal of Student Affairs Research and Practice Volume 43 ; 43 ; >
+    au < finished ; finished ; 2007 ; Journal of Student Affairs Research and Practice Volume 44 ; 44 ; >
+    au < superseded ; finished ; 2008 ; Journal of Student Affairs Research and Practice Volume 45 [superseded] ; 45 ; >
+    au < superseded ; finished ; 2009 ; Journal of Student Affairs Research and Practice Volume 46 [superseded] ; 46 ; >
+    au < zapped ; finished ; 2010 ; Journal of Student Affairs Research and Practice Volume 47 ; 47 ; >
+    au < superseded ; finished ; 2011 ; Journal of Student Affairs Research and Practice Volume 48 [superseded] ; 48 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Time Series Econometrics ;
+      eissn = 1941-1928
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = jtse
+
+    au < zapped ; finished ; 2009 ; Journal of Time Series Econometrics Volume 1 ; 1 ; >
+    au < zapped ; finished ; 2010 ; Journal of Time Series Econometrics Volume 2 ; 2 ; >
+    au < zapped ; finished ; 2011 ; Journal of Time Series Econometrics Volume 3 ; 3 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Tort Law ;
+      eissn = 1932-9148
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = jtl
+
+    au < zapped ; finished ; 2006-2007 ; Journal of Tort Law Volume 1 ; 1 ; >
+    au < zapped ; finished ; 2008 ; Journal of Tort Law Volume 2 ; 2 ; >
+    au < zapped ; finished ; 2010 ; Journal of Tort Law Volume 3 ; 3 ; >
+    au < zapped ; finished ; 2011 ; Journal of Tort Law Volume 4 ; 4 ; >
+
+  }
+
+  {
+
+    title <
+      name = Law & Ethics of Human Rights ;
+      eissn = 1938-2545
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = lehr
+
+    au < finished ; finished ; 2007 ; Law & Ethics of Human Rights Volume 1 ; 1 ; >
+    au < zapped ; finished ; 2008 ; Law & Ethics of Human Rights Volume 2 ; 2 ; >
+    au < zapped ; finished ; 2009 ; Law & Ethics of Human Rights Volume 3 ; 3 ; >
+    au < zapped ; finished ; 2010 ; Law & Ethics of Human Rights Volume 4 ; 4 ; >
+    au < zapped ; finished ; 2011 ; Law & Ethics of Human Rights Volume 5 ; 5 ; >
+
+  }
+
+  {
+
+    title <
+      name = The Law and Development Review ;
+      eissn = 1943-3867
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = ldr
+
+    au < zapped ; finished ; 2008 ; The Law and Development Review Volume 1 ; 1 ; >
+    au < zapped ; finished ; 2009 ; The Law and Development Review Volume 2 ; 2 ; >
+    au < zapped ; finished ; 2010 ; The Law and Development Review Volume 3 ; 3 ; >
+    au < zapped ; finished ; 2011 ; The Law and Development Review Volume 4 ; 4 ; >
+    
+  }
+
+  {
+
+    title <
+      name = Multicultural Learning and Teaching ;
+      eissn = 2161-2412
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = mlt
+
+    au < zapped ; finished ; 2006 ; Multicultural Learning and Teaching Volume 1 ; 1 ; >
+    au < zapped ; finished ; 2007 ; Multicultural Learning and Teaching Volume 2 ; 2 ; >
+    au < zapped ; finished ; 2008 ; Multicultural Learning and Teaching Volume 3 ; 3 ; >
+    au < zapped ; finished ; 2009 ; Multicultural Learning and Teaching Volume 4 ; 4 ; >
+    au < zapped ; finished ; 2010 ; Multicultural Learning and Teaching Volume 5 ; 5 ; >
+
+  }
+
+  {
+
+    title <
+      name = Muslim World Journal of Human Rights ;
+      eissn = 1554-4419
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = mwjhr
+
+    au < finished ; finished ; 2004 ; Muslim World Journal of Human Rights Volume 1 ; 1 ; >
+    au < finished ; finished ; 2005 ; Muslim World Journal of Human Rights Volume 2 ; 2 ; >
+    au < finished ; finished ; 2006 ; Muslim World Journal of Human Rights Volume 3 ; 3 ; >
+    au < zapped ; finished ; 2007 ; Muslim World Journal of Human Rights Volume 4 ; 4 ; >
+    au < zapped ; finished ; 2008 ; Muslim World Journal of Human Rights Volume 5 ; 5 ; >
+    au < doesNotExist ; doesNotExist ; 2009 ; Muslim World Journal of Human Rights Volume 6 ; 6 ; >
+    au < finished ; finished ; 2010-2011 ; Muslim World Journal of Human Rights Volume 7 ; 7 ; > 
+
+  }
+  
+  {
+
+    title <
+      name = NASPA Journal About Women in Higher Education ;
+      issn = 1940-7882 ;
+      eissn = 1940-7890 ;
+      issnl = 1940-7882
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://journals.naspa.org/
+    param[journal_abbr] = njawhe
+
+    au < superseded ; finished ; 2008 ; NASPA Journal About Women in Higher Education Volume 1 [superseded] ; 1 ; >
+    au < superseded ; finished ; 2009 ; NASPA Journal About Women in Higher Education Volume 2 [superseded] ; 2 ; >
+    au < zapped ; finished ; 2010 ; NASPA Journal About Women in Higher Education Volume 3 [superseded] ; 3 ; >
+    au < superseded ; finished ; 2011 ; NASPA Journal About Women in Higher Education Volume 4 [superseded] ; 4 ; >
+
+  }
+
+  {
+
+    title <
+      name = New Global Studies ;
+      eissn = 1940-0004
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = ngs
+
+    au < finished ; finished ; 2007 ; New Global Studies Volume 1 ; 1 ; >
+    au < zapped ; finished ; 2008 ; New Global Studies Volume 2 ; 2 ; >
+    au < zapped ; finished ; 2009 ; New Global Studies Volume 3 ; 3 ; >
+    au < finished ; finished ; 2010 ; New Global Studies Volume 4 ; 4 ; >
+    au < finished ; finished ; 2011 ; New Global Studies Volume 5 ; 5 ; >
+
+  }
+
+  {
+
+    title <
+      name = Nonprofit Policy Forum ;
+      eissn = 2154-3348
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = npf
+
+    au < zapped ; finished ; 2010 ; Nonprofit Policy Forum Volume 1 ; 1 ; >
+    au < zapped ; finished ; 2011 ; Nonprofit Policy Forum Volume 2 ; 2 ; >
+
+  }
+
+  {
+
+    title <
+      name = Peace Economics, Peace Science and Public Policy ;
+      issn = 1079-2457 ; 
+      eissn = 1554-8597 ;
+      issnl = 1079-2457 
+      
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = peps
+
+    au < finished ; finished ; 1993 ; Peace Economics, Peace Science and Public Policy Volume 1 ; 1 ; >
+    au < zapped ; finished ; 1994 ; Peace Economics, Peace Science and Public Policy Volume 2 ; 2 ; >
+    au < finished ; finished ; 1995 ; Peace Economics, Peace Science and Public Policy Volume 3 ; 3 ; >
+    au < zapped ; finished ; 1996 ; Peace Economics, Peace Science and Public Policy Volume 4 ; 4 ; >
+    au < finished ; finished ; 1999 ; Peace Economics, Peace Science and Public Policy Volume 5 ; 5 ; >
+    au < zapped ; finished ; 2000 ; Peace Economics, Peace Science and Public Policy Volume 6 ; 6 ; >
+    au < finished ; finished ; 2001 ; Peace Economics, Peace Science and Public Policy Volume 7 ; 7 ; >
+    au < finished ; finished ; 2002 ; Peace Economics, Peace Science and Public Policy Volume 8 ; 8 ; >
+    au < zapped ; finished ; 2003 ; Peace Economics, Peace Science and Public Policy Volume 9 ; 9 ; >
+    au < finished ; finished ; 2004 ; Peace Economics, Peace Science and Public Policy Volume 10 ; 10 ; >
+    au < zapped ; finished ; 2005 ; Peace Economics, Peace Science and Public Policy Volume 11 ; 11 ; >
+    au < finished ; finished ; 2006 ; Peace Economics, Peace Science and Public Policy Volume 12 ; 12 ; >
+    au < finished ; finished ; 2007 ; Peace Economics, Peace Science and Public Policy Volume 13 ; 13 ; >
+    au < zapped ; finished ; 2008 ; Peace Economics, Peace Science and Public Policy Volume 14 ; 14 ; >
+    au < zapped ; finished ; 2009 ; Peace Economics, Peace Science and Public Policy Volume 15 ; 15 ; >
+    au < finished ; finished ; 2010 ; Peace Economics, Peace Science and Public Policy Volume 16 ; 16 ; >
+    au < zapped ; finished ; 2011 ; Peace Economics, Peace Science and Public Policy Volume 17 ; 17 ; >
+
+  }
+
+  {
+
+    title <
+      name = Policy & Internet ;
+      eissn = 1944-2866
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.psocommons.org/
+    param[journal_abbr] = policyandinternet
+
+    au < finished ; finished ; 2009 ; Policy & Internet Volume 1 ; 1 ; >
+    au < zapped ; finished ; 2010 ; Policy & Internet Volume 2 ; 2 ; >
+    au < finished ; finished ; 2011 ; Policy & Internet Volume 3 ; 3 ; >
+
+  }
+
+  {
+
+    title <
+      name = Poverty & Public Policy ;
+      eissn = 1944-2858
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+
+    {
+
+      param[base_url] = http://www.bepress.com/
+      param[journal_abbr] = pso_poverty
+
+      au < zapped ; finished ; 2009 ; Poverty & Public Policy Volume 1 [superseded] ; 1 ; >
+
+    }
+
+    {
+    
+      param[base_url] = http://www.psocommons.org/
+      param[journal_abbr] = ppp
+
+      au < finished ; finished ; 2009 ; Poverty & Public Policy Volume 1 ; 1 ; >
+      au < zapped ; finished ; 2010 ; Poverty & Public Policy Volume 2 ; 2 ; >
+      au < finished ; finished ; 2011 ; Poverty & Public Policy Volume 3 ; 3 ; >
+    
+    }
+
+  }
+
+  {
+
+    title <
+      name = Review of Law & Economics ;
+      eissn = 1555-5879
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = rle
+
+    au < finished ; finished ; 2005 ; Review of Law & Economics Volume 1 ; 1 ; >
+    au < zapped ; finished ; 2006 ; Review of Law & Economics Volume 2 ; 2 ; >
+    au < zapped ; finished ; 2007 ; Review of Law & Economics Volume 3 ; 3 ; >
+    au < zapped ; finished ; 2008 ; Review of Law & Economics Volume 4 ; 4 ; >
+    au < zapped ; finished ; 2009 ; Review of Law & Economics Volume 5 ; 5 ; >
+    au < zapped ; finished ; 2010 ; Review of Law & Economics Volume 6 ; 6 ; >
+    au < finished ; finished ; 2011 ; Review of Law & Economics Volume 7 ; 7 ; >
+
+  }
+
+  {
+
+    title <
+      name = Review of Marketing Science ;
+      eissn = 1546-5616
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = romsjournal
+
+    au < zapped ; finished ; 2003 ; Review of Marketing Science Volume 1 ; 1 ; >
+    au < finished ; finished ; 2004 ; Review of Marketing Science Volume 2 ; 2 ; >
+    au < finished ; finished ; 2005 ; Review of Marketing Science Volume 3 ; 3 ; >
+    au < finished ; finished ; 2006 ; Review of Marketing Science Volume 4 ; 4 ; >
+    au < zapped ; finished ; 2007 ; Review of Marketing Science Volume 5 ; 5 ; >
+    au < zapped ; finished ; 2008 ; Review of Marketing Science Volume 6 ; 6 ; >
+    au < zapped ; finished ; 2009 ; Review of Marketing Science Volume 7 ; 7 ; >
+    au < zapped ; finished ; 2010 ; Review of Marketing Science Volume 8 ; 8 ; >
+    au < zapped ; finished ; 2011 ; Review of Marketing Science Volume 9 ; 9 ; >
+
+  }
+
+  {
+
+    title <
+      name = Review of Middle East Economics and Finance ;
+      issn = 1475-3685 ;
+      eissn = 1475-3693 ;
+      issnl = 1475-3685
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = rmeef
+
+    au < finished ; finished ; 2003 ; Review of Middle East Economics and Finance Volume 1 [BePress] ; 1 ; >
+    au < finished ; finished ; 2004 ; Review of Middle East Economics and Finance Volume 2 [BePress] ; 2 ; >
+    au < finished ; finished ; 2005 ; Review of Middle East Economics and Finance Volume 3 [BePress] ; 3 ; >
+    au < zapped ; finished ; 2008 ; Review of Middle East Economics and Finance Volume 4 [BePress] ; 4 ; >
+    au < zapped ; finished ; 2009 ; Review of Middle East Economics and Finance Volume 5 [BePress] ; 5 ; >
+    au < zapped ; finished ; 2010 ; Review of Middle East Economics and Finance Volume 6 [BePress] ; 6 ; >
+    au < zapped ; finished ; 2011 ; Review of Middle East Economics and Finance Volume 7 [BePress] ; 7 ; >
+
+  }
+
+  {
+
+    title <
+      name = Review of Network Economics ;
+      eissn = 1446-9022
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = rne
+
+    au < zapped ; finished ; 2002 ; Review of Network Economics Volume 1 ; 1 ; >
+    au < zapped ; finished ; 2003 ; Review of Network Economics Volume 2 ; 2 ; >
+    au < zapped ; finished ; 2004 ; Review of Network Economics Volume 3 ; 3 ; >
+    au < zapped ; finished ; 2005 ; Review of Network Economics Volume 4 ; 4 ; >
+    au < zapped ; finished ; 2006 ; Review of Network Economics Volume 5 ; 5 ; >
+    au < zapped ; finished ; 2007 ; Review of Network Economics Volume 6 ; 6 ; >
+    au < zapped ; finished ; 2008 ; Review of Network Economics Volume 7 ; 7 ; >
+    au < zapped ; finished ; 2009 ; Review of Network Economics Volume 8 ; 8 ; >
+    au < zapped ; finished ; 2010 ; Review of Network Economics Volume 9 ; 9 ; >
+    au < zapped ; finished ; 2011 ; Review of Network Economics Volume 10 ; 10 ; >
+
+  }
+
+  {
+
+    title <
+      name = The Rhodes Cook Letter ;
+      issn = 1558-4291 ;
+      issnl = 1558-4291 
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = rhodescook
+
+    au < zapped ; finished ; 2000 ; The Rhodes Cook Letter Volume 1 ; 1 ; >
+    au < zapped ; finished ; 2001 ; The Rhodes Cook Letter Volume 2 ; 2 ; >
+    au < zapped ; finished ; 2002 ; The Rhodes Cook Letter Volume 3 ; 3 ; >
+    au < zapped ; finished ; 2003 ; The Rhodes Cook Letter Volume 4 ; 4 ; >
+    au < zapped ; finished ; 2004 ; The Rhodes Cook Letter Volume 5 ; 5 ; >
+    au < zapped ; finished ; 2005 ; The Rhodes Cook Letter Volume 6 ; 6 ; >
+    au < zapped ; finished ; 2006 ; The Rhodes Cook Letter Volume 7 ; 7 ; >
+    au < zapped ; finished ; 2007 ; The Rhodes Cook Letter Volume 8 ; 8 ; >
+    au < zapped ; finished ; 2008 ; The Rhodes Cook Letter Volume 9 ; 9 ; >
+    au < zapped ; finished ; 2009 ; The Rhodes Cook Letter Volume 10 ; 10 ; >
+    au < zapped ; finished ; 2010 ; The Rhodes Cook Letter Volume 11 ; 11 ; >
+    au < zapped ; finished ; 2011 ; The Rhodes Cook Letter Volume 12 ; 12 ; > 
+
+  }
+
+  {
+
+    title <
+      name = Risk, Hazards & Crisis in Public Policy ;
+      eissn = 1944-4079
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.psocommons.org/
+    param[journal_abbr] = rhcpp
+
+    au < zapped ; finished ; 2010 ; Risk, Hazards & Crisis in Public Policy Volume 1 ; 1 ; >
+    au < finished ; finished ; 2011 ; Risk, Hazards & Crisis in Public Policy Volume 2 ; 2 ; >
+
+  }
+  
+  {
+
+    title <
+      name = Statistical Applications in Genetics and Molecular Biology ;
+      eissn = 1544-6115
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = sagmb
+
+    au < finished ; finished ; 2002 ; Statistical Applications in Genetics and Molecular Biology Volume 1 ; 1 ; >
+    au < zapped ; finished ; 2003 ; Statistical Applications in Genetics and Molecular Biology Volume 2 ; 2 ; >
+    au < finished ; finished ; 2004 ; Statistical Applications in Genetics and Molecular Biology Volume 3 ; 3 ; >
+    au < finished ; finished ; 2005 ; Statistical Applications in Genetics and Molecular Biology Volume 4 ; 4 ; >
+    au < finished ; finished ; 2006 ; Statistical Applications in Genetics and Molecular Biology Volume 5 ; 5 ; >
+    au < zapped ; finished ; 2007 ; Statistical Applications in Genetics and Molecular Biology Volume 6 ; 6 ; >
+    au < zapped ; finished ; 2008 ; Statistical Applications in Genetics and Molecular Biology Volume 7 ; 7 ; >
+    au < zapped ; finished ; 2009 ; Statistical Applications in Genetics and Molecular Biology Volume 8 ; 8 ; >
+    au < zapped ; finished ; 2010 ; Statistical Applications in Genetics and Molecular Biology Volume 9 ; 9 ; >
+    au < finished ; finished ; 2011 ; Statistical Applications in Genetics and Molecular Biology Volume 10 ; 10 ; >
+
+  }
+
+  {
+
+    title <
+      name = Statistical Communications in Infectious Diseases ;
+      eissn = 1948-4690
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = scid
+
+    au < zapped ; finished ; 2009 ; Statistical Communications in Infectious Diseases Volume 1 ; 1 ; >
+    au < zapped ; finished ; 2010 ; Statistical Communications in Infectious Diseases Volume 2 ; 2 ; >
+    au < zapped ; finished ; 2011 ; Statistical Communications in Infectious Diseases Volume 3 ; 3 ; >
+
+  }
+
+  {
+
+    title <
+      name = Statistics, Politics, and Policy ;
+      eissn = 2151-7509
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = spp
+
+    au < zapped ; finished ; 2010 ; Statistics, Politics, and Policy Volume 1 ; 1 ; >
+    au < zapped ; finished ; 2011 ; Statistics, Politics, and Policy Volume 2 ; 2 ; >
+
+  }
+
+  {
+
+    title <
+      name = Studies in Ethics, Law, and Technology ;
+      eissn = 1941-6008
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = selt
+
+    au < finished ; finished ; 2007 ; Studies in Ethics, Law, and Technology Volume 1 ; 1 ; >
+    au < zapped ; finished ; 2008 ; Studies in Ethics, Law, and Technology Volume 2 ; 2 ; >
+    au < zapped ; finished ; 2009 ; Studies in Ethics, Law, and Technology Volume 3 ; 3 ; >
+    au < finished ; finished ; 2010 ; Studies in Ethics, Law, and Technology Volume 4 ; 4 ; >
+    au < zapped ; finished ; 2011 ; Studies in Ethics, Law, and Technology Volume 5 ; 5 ; >
+
+  }
+
+  {
+
+    title <
+      name = Studies in Nonlinear Dynamics & Econometrics ;
+      eissn = 1558-3708
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = snde
+
+    au < finished ; finished ; 1996 ; Studies in Nonlinear Dynamics & Econometrics Volume 1 ; 1 ; >
+    au < zapped ; finished ; 1997 ; Studies in Nonlinear Dynamics & Econometrics Volume 2 ; 2 ; >
+    au < zapped ; finished ; 1998 ; Studies in Nonlinear Dynamics & Econometrics Volume 3 ; 3 ; >
+    au < finished ; finished ; 2000 ; Studies in Nonlinear Dynamics & Econometrics Volume 4 ; 4 ; >
+    au < zapped ; finished ; 2001 ; Studies in Nonlinear Dynamics & Econometrics Volume 5 ; 5 ; >
+    au < finished ; finished ; 2002-2003 ; Studies in Nonlinear Dynamics & Econometrics Volume 6 ; 6 ; >
+    au < finished ; finished ; 2003 ; Studies in Nonlinear Dynamics & Econometrics Volume 7 ; 7 ; >
+    au < finished ; finished ; 2004 ; Studies in Nonlinear Dynamics & Econometrics Volume 8 ; 8 ; >
+    au < finished ; finished ; 2005 ; Studies in Nonlinear Dynamics & Econometrics Volume 9 ; 9 ; >
+    au < zapped ; finished ; 2006 ; Studies in Nonlinear Dynamics & Econometrics Volume 10 ; 10 ; >
+    au < zapped ; finished ; 2007 ; Studies in Nonlinear Dynamics & Econometrics Volume 11 ; 11 ; >
+    au < zapped ; finished ; 2008 ; Studies in Nonlinear Dynamics & Econometrics Volume 12 ; 12 ; >
+    au < zapped ; finished ; 2009 ; Studies in Nonlinear Dynamics & Econometrics Volume 13 ; 13 ; >
+    au < zapped ; finished ; 2010 ; Studies in Nonlinear Dynamics & Econometrics Volume 14 ; 14 ; >
+    au < zapped ; finished ; 2011 ; Studies in Nonlinear Dynamics & Econometrics Volume 15 ; 15 ; >
+
+  }
+
+  {
+
+    title <
+      name = Theoretical Inquiries in Law ;
+      issn = 1565-1509 ;
+      eissn = 1565-3404 ;
+      issnl = 1565-1509 
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = til
+
+    au < finished ; finished ; 2000 ; Theoretical Inquiries in Law Volume 1 ; 1 ; >
+    au < zapped ; finished ; 2001 ; Theoretical Inquiries in Law Volume 2 ; 2 ; >
+    au < finished ; finished ; 2002 ; Theoretical Inquiries in Law Volume 3 ; 3 ; >
+    au < zapped ; finished ; 2003 ; Theoretical Inquiries in Law Volume 4 ; 4 ; >
+    au < zapped ; finished ; 2004 ; Theoretical Inquiries in Law Volume 5 ; 5 ; >
+    au < zapped ; finished ; 2005 ; Theoretical Inquiries in Law Volume 6 ; 6 ; >
+    au < finished ; finished ; 2006 ; Theoretical Inquiries in Law Volume 7 ; 7 ; >
+    au < zapped ; finished ; 2007 ; Theoretical Inquiries in Law Volume 8 ; 8 ; >
+    au < zapped ; finished ; 2008 ; Theoretical Inquiries in Law Volume 9 ; 9 ; >
+    au < zapped ; finished ; 2009 ; Theoretical Inquiries in Law Volume 10 ; 10 ; >
+    au < zapped ; finished ; 2010 ; Theoretical Inquiries in Law Volume 11 ; 11 ; >
+    au < finished ; finished ; 2011 ; Theoretical Inquiries in Law Volume 12 ; 12 ; >
+
+  }
+
+  {
+
+    title <
+      name = Topics in Economic Analysis & Policy ;
+      eissn = 1538-0653
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressSectionPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = bejeap
+    param[journal_section] = topics
+    comment[merged] = with 1538-0629, 1538-0637 and 1538-0645 into 1555-0494 in 2007
+
+    au < zapped ; finished ; 2001 ; Topics in Economic Analysis & Policy Volume 1 ; 1 ; >
+    au < zapped ; finished ; 2002 ; Topics in Economic Analysis & Policy Volume 2 ; 2 ; >
+    au < zapped ; finished ; 2003 ; Topics in Economic Analysis & Policy Volume 3 ; 3 ; >
+    au < zapped ; finished ; 2004 ; Topics in Economic Analysis & Policy Volume 4 ; 4 ; >
+    au < zapped ; finished ; 2005 ; Topics in Economic Analysis & Policy Volume 5 ; 5 ; >
+    au < zapped ; finished ; 2006 ; Topics in Economic Analysis & Policy Volume 6 ; 6 ; >
+
+  }
+
+  {
+
+    title <
+      name = Topics in Macroeconomics ;
+      issn = 1534-5998
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressSectionPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = bejm
+    param[journal_section] = topics
+    comment[merged] = with 1534-6005, 1534-6013, 1534-6021 and into 1555-0486 in 2007
+
+    au < finished ; finished ; 2001 ; Topics in Macroeconomics Volume 1 ; 1 ; >
+    au < finished ; down ; 2002 ; Topics in Macroeconomics Volume 2 ; 2 ; > #no substance on production machine
+    au < zapped ; finished ; 2003 ; Topics in Macroeconomics Volume 3 ; 3 ; >
+    au < zapped ; finished ; 2004 ; Topics in Macroeconomics Volume 4 ; 4 ; >
+    au < zapped ; finished ; 2005 ; Topics in Macroeconomics Volume 5 ; 5 ; >
+    au < zapped ; finished ; 2006 ; Topics in Macroeconomics Volume 6 ; 6 ; >
+
+  }
+
+  {
+
+    title <
+      name = Topics in Theoretical Economics ;
+      eissn = 1534-598X
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressSectionPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = bejte
+    param[journal_section] = topics
+    comment[merged] = with 1534-5955, 1534-5963 and 1534-5971 into 1555-0478 in 2007
+
+    au < zapped ; finished ; 2001 ; Topics in Theoretical Economics Volume 1 ; 1 ; >
+    au < zapped ; finished ; 2002 ; Topics in Theoretical Economics Volume 2 ; 2 ; >
+    au < zapped ; finished ; 2003 ; Topics in Theoretical Economics Volume 3 ; 3 ; >
+    au < zapped ; finished ; 2004 ; Topics in Theoretical Economics Volume 4 ; 4 ; >
+    au < zapped ; finished ; 2005 ; Topics in Theoretical Economics Volume 5 ; 5 ; >
+    au < zapped ; finished ; 2006 ; Topics in Theoretical Economics Volume 6 ; 6 ; > 
+
+  }
+
+  {
+
+    title <
+      name = World Medical & Health Policy ;
+      eissn = 1948-4682
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.psocommons.org/
+    param[journal_abbr] = wmhp
+
+    au < finished ; finished ; 2009 ; World Medical & Health Policy Volume 1 ; 1 ; >
+    au < zapped ; finished ; 2010 ; World Medical & Health Policy Volume 2 ; 2 ; >
+    au < finished ; finished ; 2011 ; World Medical & Health Policy Volume 3 ; 3 ; >
+
+  }
+  
+  {
+
+    title <
+      name = World Political Science Review ;
+      eissn = 1935-6226
+    >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = wpsr
+
+    au < finished ; finished ; 2005 ; World Political Science Review Volume 1 ; 1 ; >
+    au < finished ; finished ; 2006 ; World Political Science Review Volume 2 ; 2 ; >
+    au < finished ; finished ; 2007 ; World Political Science Review Volume 3 ; 3 ; >
+    au < zapped ; finished ; 2008 ; World Political Science Review Volume 4 ; 4 ; >
+    au < zapped ; finished ; 2009 ; World Political Science Review Volume 5 ; 5 ; >
+    au < zapped ; finished ; 2010 ; World Political Science Review Volume 6 ; 6 ; >
+    au < finished ; finished ; 2011 ; World Political Science Review Volume 7 ; 7 ; >
+
+  }
+  
+}

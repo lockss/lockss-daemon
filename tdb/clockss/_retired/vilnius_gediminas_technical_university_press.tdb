@@ -1,0 +1,177 @@
+{
+
+  publisher <
+    name = Vilnius Gediminas Technical University Press ;
+    info[back] = 2006 ;
+    info[contract] = 2012 ;
+    info[tester] = 8 ;
+    info[poller] = 8
+  >
+  
+  #Moving platform 1/1/2018 ojs2 to ojs3
+  
+  # do not include Aviation technologies, eissn 2029-9974
+  # preserved as a warc in source.tdb file: Baltic Journal of Road and Bridge Engineering
+
+
+    # The following titles are preserves in TnF, content from 2017 and prior
+    # Aviation, Creativity Studies, Engineering Structures and Technologies, Geodesy and Cartography,
+    # International Journal of Strategic Property Management, Journal of Architecture and Urbanism,
+    # Journal of Business Economics and Management, Journal of Civil Engineering and Management,
+    # Journal of Environmental Engineering and Landscape Management, Mathematical Modelling and Analysis,
+    # Technological and Economic Development of Economy, Transport
+
+
+  {
+    title <
+      name = Business: Theory and Practice ;
+      issn = 1648-0627 ;
+      eissn = 1822-4202 ;
+      issnl = 1648-0627
+    >
+    # This journal is not open access
+    
+    plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
+    param[base_url] = http://www.btp.vgtu.lt/
+    param[journal_id] = btp
+    implicit < status1 ; status ; year ; param[year] ; name ; volume ; proxy >
+    #this journal no longer on OJS. 20171002. See RT 8827 for news on change of platform.
+    #move to Pensoft
+
+    au < doNotProcess ; exists ; 2006 ; 2006 ; Business: Theory and Practice Volume 7 ; 7 ; >
+    au < doNotProcess ; exists ; 2007 ; 2007 ; Business: Theory and Practice Volume 8 ; 8 ; >
+    au < doNotProcess ; exists ; 2008 ; 2008 ; Business: Theory and Practice Volume 9 ; 9 ; >
+    au < doNotProcess ; exists ; 2009 ; 2009 ; Business: Theory and Practice Volume 10 ; 10 ; >
+    au < doNotProcess ; exists ; 2010 ; 2010 ; Business: Theory and Practice Volume 11 ; 11 ; >
+    au < doNotProcess ; exists ; 2011 ; 2011 ; Business: Theory and Practice Volume 12 ; 12 ; >
+    au < finished ; finished ; 2012 ; 2012 ; Business: Theory and Practice Volume 13 ; 13 ; >
+    au < finished ; finished ; 2013 ; 2013 ; Business: Theory and Practice Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; 2014 ; Business: Theory and Practice Volume 15 ; 15 ; >
+    au < finished ; finished ; 2015 ; 2015 ; Business: Theory and Practice Volume 16 ; 16 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2016 ; 2016 ; Business: Theory and Practice Volume 17 ; 17 ; reingest4.clockss.org:8082 >
+    au < doNotProcess ; exists ; 2017 ; 2017 ; Business: Theory and Practice Volume 18 ; 18 ; >
+
+  }
+
+  {
+    title <
+      name = Coactivity: Philosophy, Communication ;
+      issn = 2029-6320 ;
+      eissn = 2029-6339
+    >
+    
+    plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
+    param[base_url] = http://www.cpc.vgtu.lt/
+    param[journal_id] = cpc
+    implicit < status1 ; status ; year ; param[year] ; name ; volume ; proxy >
+
+    au < finished ; finished ; 2006 ; 2006 ; Coactivity: Philosophy, Communication Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2007 ; 2007 ; Coactivity: Philosophy, Communication Volume 15 ; 15 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2008 ; 2008 ; Coactivity: Philosophy, Communication Volume 16 ; 16 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2009 ; 2009 ; Coactivity: Philosophy, Communication Volume 17 ; 17 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2010 ; 2010 ; Coactivity: Philosophy, Communication Volume 18 ; 18 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2011 ; 2011 ; Coactivity: Philosophy, Communication Volume 19 ; 19 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2012 ; 2012 ; Coactivity: Philosophy, Communication Volume 20 ; 20 ; >
+    au < finished ; finished ; 2013 ; 2013 ; Coactivity: Philosophy, Communication Volume 21 ; 21 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; 2014 ; Coactivity: Philosophy, Communication Volume 22 ; 22 ; >
+    au < finished ; finished ; 2015 ; 2015 ; Coactivity: Philosophy, Communication Volume 23 ; 23 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; 2016 ; Coactivity: Philosophy, Communication Volume 24 ; 24 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; 2017 ; Coactivity: Philosophy, Communication Volume 25 ; 25 ; reingest1.clockss.org:8082 >
+
+  }
+
+  {
+    title <
+      name = Coactivity: Philology, Educology ;
+      issn = 1822-430X ;
+      eissn = 1822-4318
+    >
+    
+    plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
+    param[base_url] = http://www.cpe.vgtu.lt/
+    param[journal_id] = cpe
+    implicit < status1 ; status ; year ; param[year] ; name ; volume ; proxy >
+
+    au < finished ; finished ; 2006 ; 2006 ; Coactivity: Philology, Educology Volume 14 ; 14 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2007 ; 2007 ; Coactivity: Philology, Educology Volume 15 ; 15 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2008 ; 2008 ; Coactivity: Philology, Educology Volume 16 ; 16 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2009 ; 2009 ; Coactivity: Philology, Educology Volume 17 ; 17 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2010 ; 2010 ; Coactivity: Philology, Educology Volume 18 ; 18 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2011 ; 2011 ; Coactivity: Philology, Educology Volume 19 ; 19 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2012 ; 2012 ; Coactivity: Philology, Educology Volume 20 ; 20 ; >
+    au < finished ; finished ; 2013 ; 2013 ; Coactivity: Philology, Educology Volume 21 ; 21 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; 2014 ; Coactivity: Philology, Educology Volume 22 ; 22 ; >
+    au < finished ; finished ; 2015 ; 2015 ; Coactivity: Philology, Educology Volume 23 ; 23 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2016 ; 2016 ; Coactivity: Philology, Educology Volume 24 ; 24 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; 2017 ; Coactivity: Philology, Educology Volume 25 ; 25 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+    title <
+      name = Science - Future of Lithuania ;
+      issn = 2029-2341 ;
+      eissn = 2029-2252
+    >
+    
+    plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
+    param[base_url] = http://www.mla.vgtu.lt/
+    param[journal_id] = mla
+    implicit < status1 ; status ; year ; param[year] ; name ; volume ; proxy >
+
+    au < finished ; finished ; 2009 ; 2009 ; Science - Future of Lithuania Volume 1 ; 1 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2010 ; 2010 ; Science - Future of Lithuania Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2011 ; 2011 ; Science - Future of Lithuania Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2012 ; 2012 ; Science - Future of Lithuania Volume 4 ; 4 ; >
+    au < finished ; finished ; 2013 ; 2013 ; Science - Future of Lithuania Volume 5 ; 5 ; >
+    au < finished ; finished ; 2014 ; 2014 ; Science - Future of Lithuania Volume 6 ; 6 ; >
+    au < finished ; finished ; 2015 ; 2015 ; Science - Future of Lithuania Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2016 ; 2016 ; Science - Future of Lithuania Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2017 ; 2017 ; Science - Future of Lithuania Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+
+  }
+  
+  {
+    title <
+      name = Evolution of Science and Technology ;
+      issn = 2029-2430 ;
+      eissn = 2029-2449
+    >
+    
+    plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
+    param[base_url] = http://www.est.vgtu.lt/
+    param[journal_id] = est
+    implicit < status1 ; status ; year ; param[year] ; name ; volume ; proxy >
+
+    au < finished ; finished ; 2009 ; 2009 ; Evolution of Science and Technology Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2010 ; 2010 ; Evolution of Science and Technology Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2011 ; 2011 ; Evolution of Science and Technology Volume 3 ; 3 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2012 ; 2012 ; Evolution of Science and Technology Volume 4 ; 4 ; >
+    au < finished ; finished ; 2013 ; 2013 ; Evolution of Science and Technology Volume 5 ; 5 ; >
+
+  }
+
+  {
+    title <
+      name = Business, Management and Education ;
+      issn = 2029-7491 ;
+      eissn = 2029-6169
+    >
+    
+    plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
+    param[base_url] = http://www.bme.vgtu.lt/
+    param[journal_id] = bme
+    implicit < status1 ; status ; year ; param[year] ; name ; volume ; proxy >
+
+    au < finished ; finished ; 2010 ; 2010 ; Business, Management and Education Volume 8 ; 8 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2011 ; 2011 ; Business, Management and Education Volume 9 ; 9 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2012 ; 2012 ; Business, Management and Education Volume 10 ; 10 ; >
+    au < finished ; finished ; 2013 ; 2013 ; Business, Management and Education Volume 11 ; 11 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; 2014 ; Business, Management and Education Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; 2015 ; Business, Management and Education Volume 13 ; 13 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2016 ; 2016 ; Business, Management and Education Volume 14 ; 14 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2017 ; 2017 ; Business, Management and Education Volume 15 ; 15 ; reingest5.clockss.org:8082 >
+
+  }
+
+}

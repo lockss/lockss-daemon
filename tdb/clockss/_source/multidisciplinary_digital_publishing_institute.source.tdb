@@ -1,0 +1,53 @@
+{
+
+  publisher <
+    name = Multidisciplinary Digital Publishing Institute ;
+    info[contract] = 2013 ;
+    info[tester] = S ;
+    info[platform] = Source
+  >
+
+  {
+
+    title <
+       name = Multidisciplinary Digital Publishing Institute Source Content
+    >
+
+    {
+
+      #publisher was converted to directory based
+      plugin = org.lockss.plugin.clockss.mdpi.ClockssMdpiDirSourcePlugin
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/mdpi-released/
+      proxy = DIRECT
+      implicit < status1 ; status ; year ; name ; param[directory] >
+
+      au < readySource ; frozen ; 2021 ; Multidisciplinary Digital Publishing Institute Source Content 2021_01 ; 2021_01 >
+      au < readySource ; finished ; 2021 ; Multidisciplinary Digital Publishing Institute Source Content 2021_02 ; 2021_02 >
+      au < readySource ; frozen ; 2021 ; Multidisciplinary Digital Publishing Institute Source Content 2021_03 ; 2021_03 >
+
+      au < readySource ; crawling ; 2022 ; Multidisciplinary Digital Publishing Institute Source Content 2022_01 ; 2022_01 >
+      au < readySource ; crawling ; 2022 ; Multidisciplinary Digital Publishing Institute Source Content 2022_02 ; 2022_02 >
+      au < readySource ; crawling ; 2022 ; Multidisciplinary Digital Publishing Institute Source Content 2022_03 ; 2022_03 >
+      au < expected ; exists ; 2022 ; Multidisciplinary Digital Publishing Institute Source Content 2022_04 ; 2022_04 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.clockss.mdpi.ClockssMdpiSourcePlugin
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/mdpi-released/
+      proxy = DIRECT
+      implicit < status1 ; status ; year ; name ; param[year] >
+
+      au < zapped ; finished ; 2016 ; Multidisciplinary Digital Publishing Institute Source Content 2016 ; 2016 >
+      #due to bug in their system, no deliveries in 2017 - catching up now
+      au < zapped ; finished ; 2018 ; Multidisciplinary Digital Publishing Institute Source Content 2018 ; 2018 >
+      au < zapped ; finished ; 2019 ; Multidisciplinary Digital Publishing Institute Source Content 2019 ; 2019 >
+      au < zapped ; finished ; 2020 ; Multidisciplinary Digital Publishing Institute Source Content 2020 ; 2020 >
+      au < readySource ; frozen ; 2021 ; Multidisciplinary Digital Publishing Institute Source Content 2021 ; 2021 >
+      #No more AUs here.
+    }
+
+  }
+
+}

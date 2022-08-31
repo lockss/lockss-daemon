@@ -1,0 +1,76 @@
+{
+
+  publisher <
+    name = Frontiers ;
+    info[contract] = 2016 ;
+    info[tester] = S ;
+    info[platform] = Source
+  >
+
+  {
+
+    title <
+       name = Frontiers Journals Source Content
+    >
+
+    {
+
+      #Converted plugin to directory based
+      plugin = org.lockss.plugin.clockss.frontiers.ClockssFrontiersDirSourcePlugin
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/frontiers-released/
+      proxy = DIRECT
+      implicit < status1 ; status ; year ; name ; param[directory] >
+
+      au < readySource ; frozen ; 2021 ; Frontiers Journals Source Content 2021_01 ; 2021_01 >
+      au < readySource ; finished ; 2021 ; Frontiers Journals Source Content 2021_02 ; 2021_02 >
+
+      au < readySource ; crawling ; 2022 ; Frontiers Journals Source Content 2022_01 ; 2022_01 >
+      au < readySource ; crawling ; 2022 ; Frontiers Journals Source Content 2022_02 ; 2022_02 >
+      au < readySource ; crawling ; 2022 ; Frontiers Journals Source Content 2022_03 ; 2022_03 >
+      au < expected ; exists ; 2022 ; Frontiers Journals Source Content 2022_04 ; 2022_04 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.clockss.frontiers.ClockssFrontiersSourcePlugin
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/frontiers-released/
+      proxy = DIRECT
+      implicit < status1 ; status ; year ; name ; param[year] >
+
+      au < zapped ; finished ; 2016 ; Frontiers Journals Source Content 2016 ; 2016 >
+      au < zapped ; finished ; 2017 ; Frontiers Journals Source Content 2017 ; 2017 >
+      au < zapped ; finished ; 2018 ; Frontiers Journals Source Content 2018 ; 2018 >
+      au < zapped ; finished ; 2019 ; Frontiers Journals Source Content 2019 ; 2019 >
+      au < readySource ; finished ; 2020 ; Frontiers Journals Source Content 2020 ; 2020 >
+      au < readySource ; finished ; 2021 ; Frontiers Journals Source Content 2021 ; 2021 >
+      #no more AUs for this plugin
+    }
+
+  }
+
+  {
+
+    title <
+       name = Frontiers Books Source Content
+    >
+
+    {
+
+      plugin = org.lockss.plugin.clockss.frontiers.ClockssFrontiersBooksSourcePlugin
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/frontiersbooks-released/
+      proxy = DIRECT
+      implicit < status1 ; status ; year ; name ; param[year] >
+
+      au < zapped ; finished ; 2016 ; Frontiers Books Source Content 2016 ; 2016 >
+      au < zapped ; finished ; 2017 ; Frontiers Books Source Content 2017 ; 2017 >
+      au < zapped ; finished ; 2018 ; Frontiers Books Source Content 2018 ; 2018 >
+      au < zapped ; finished ; 2019 ; Frontiers Books Source Content 2019 ; 2019 >
+      au < readySource ; finished ; 2020 ; Frontiers Books Source Content 2020 ; 2020 >
+      au < readySource ; finished ; 2021 ; Frontiers Books Source Content 2021 ; 2021 >
+      au < readySource ; crawling ; 2022 ; Frontiers Books Source Content 2022 ; 2022 >
+
+    }
+
+  }
+}

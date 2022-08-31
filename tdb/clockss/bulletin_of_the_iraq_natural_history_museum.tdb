@@ -1,0 +1,43 @@
+{
+
+  publisher <
+    name = Bulletin of the Iraq Natural History Museum ;
+    info[contract] = 2021 ;
+    info[back] = 2018 ;
+    info[tester] = 8 ;
+    info[poller] = 8
+  >
+
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    param[base_url] = https://jnhm.uobaghdad.edu.iq/
+    implicit < status1 ; status ; year ; name ; volume ; param[year] ; proxy >
+    #OJS3
+    attr[start_stem] = index.php/
+
+  {
+  
+    title < 
+      name = Bulletin of the Iraq Natural History Museum ;
+      issn = 1017-8678 ;
+      eissn = 2311-9799 
+    >
+
+      param[journal_id] = BINHM
+
+      au < testing ; exists ; 2010 ; Bulletin of the Iraq Natural History Museum Volume 2010 ; 11 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; Bulletin of the Iraq Natural History Museum Volume 2011 ; 11 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; Bulletin of the Iraq Natural History Museum Volume 2012 ; 12 ; 2012 ; >
+      au < testing ; exists ; 2013 ; Bulletin of the Iraq Natural History Museum Volume 2013 ; 12 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; Bulletin of the Iraq Natural History Museum Volume 2014 ; 13 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; Bulletin of the Iraq Natural History Museum Volume 2015 ; 13 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; Bulletin of the Iraq Natural History Museum Volume 2016 ; 14 ; 2016 ; >
+      au < testing ; exists ; 2017 ; Bulletin of the Iraq Natural History Museum Volume 2017 ; 14 ; 2017 ; >
+      au < frozen ; exists ; 2018 ; Bulletin of the Iraq Natural History Museum Volume 2018 ; 15 ; 2018 ; >
+      au < frozen ; exists ; 2019 ; Bulletin of the Iraq Natural History Museum Volume 2019 ; 15 ; 2019 ; >
+      au < frozen ; exists ; 2020 ; Bulletin of the Iraq Natural History Museum Volume 2020 ; 16 ; 2020 ; >
+      au < frozen ; exists ; 2021 ; Bulletin of the Iraq Natural History Museum Volume 2021 ; 16 ; 2021 ; >
+    
+      au < crawling ; exists ; 2022 ; Bulletin of the Iraq Natural History Museum Volume 2022 ; 17 ; 2022 ; >
+  }
+
+}

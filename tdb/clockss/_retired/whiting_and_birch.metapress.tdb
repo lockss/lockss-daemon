@@ -1,0 +1,125 @@
+{
+
+  publisher <
+    name = Whiting and Birch ;
+    info[back] = 2010 ;
+    info[contract] = 2012 ;
+    info[tester] = 8 ;
+    info[poller] = 8 ;
+    info[platform] = Metapress
+  >
+    #from metapress to OJS on February 25, 2015. To https 2016.
+    #still no access on ingest3. Moving to reingest on a single ingest machine. 20160609
+    
+  {
+  
+    title <
+      name = Groupwork: An Interdisciplinary Journal for Working with Groups ;
+      issn = 0951-824X ;
+      eissn = 1746-6091
+    >
+    
+    {
+    
+      #DEPRECATED
+      plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin
+      param[base_url] = http://essential.metapress.com/
+      implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+      param[journal_issn] = 1746-6091
+    
+      au < doNotProcess ; doNotProcess ; 2004 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 14 ; 14 ; >
+      au < doNotProcess ; doNotProcess ; 2005 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 15 ; 15 ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 16 ; 16 ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 17 ; 17 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 18 ; 18 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 19 ; 19 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 20 ; 20 ; >
+      au < finished ; crawling ; 2011 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 21 ; 21 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2012 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 22 ; 22 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2013 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 23 ; 23 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 2014 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 24 ; 24 ; >
+  
+    }
+    
+  }
+
+  {
+  
+    title <
+      name = The Journal of Practice Teaching and Learning ;
+      issn = 1759-5150
+    >
+    
+    {
+    
+      #DEPRECATED
+      plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin
+      param[base_url] = http://essential.metapress.com/
+      implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+      comment[continues] = 1460-6690 
+      param[journal_issn] = 1759-5150
+      
+      au < doNotProcess ; doNotProcess ; 2006 ; The Journal of Practice Teaching and Learning Volume 7 ; 7 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; The Journal of Practice Teaching and Learning Volume 8 ; 8 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; The Journal of Practice Teaching and Learning Volume 9 ; 9 ; >
+      au < finished ; crawling ; 2010-2011 ; The Journal of Practice Teaching and Learning Volume 10 ; 10 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2011-2013 ; The Journal of Practice Teaching and Learning Volume 11 ; 11 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2013-2014 ; The Journal of Practice Teaching and Learning Volume 12 ; 12 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2014-2015 ; The Journal of Practice Teaching and Learning Volume 13 ; 13 ; >
+    
+    }
+    
+  }
+  
+  {
+  
+    title <
+      name = Social Work and Social Sciences Review ;
+      issn = 0953-5225 ;
+      eissn = 1746-6105
+    >
+    
+    {
+      #DEPRECATED
+      plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin
+      param[base_url] = http://essential.metapress.com/
+      implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+      param[journal_issn] = 1746-6105
+    
+      au < doNotProcess ; doNotProcess ; 2004 ; Social Work and Social Sciences Review Volume 11 ; 11 ; >
+      au < doNotProcess ; doNotProcess ; 2005-2007 ; Social Work and Social Sciences Review Volume 12 ; 12 ; >
+      au < doNotProcess ; doNotProcess ; 2007-2008 ; Social Work and Social Sciences Review Volume 13 ; 13 ; >
+      au < finished ; crawling ; 2010-2011 ; Social Work and Social Sciences Review Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2011-2012 ; Social Work and Social Sciences Review Volume 15 ; 15 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2012-2013 ; Social Work and Social Sciences Review Volume 16 ; 16 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2013-2014 ; Social Work and Social Sciences Review Volume 17 ; 17 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 2014-2015 ; Social Work and Social Sciences Review Volume 18 ; 18 ; >
+    
+    }
+    
+  }
+
+  {
+  
+    title <
+      name = Journal of Social Policy and Social Work in Transition ;
+      issn = 1987-8710 
+    >
+    
+    #no longer publishing
+    {
+    
+      #DEPRECATED
+      plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin
+      param[base_url] = http://essential.metapress.com/
+      implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+      param[journal_issn] = 1987-8710
+
+      au < finished ; crawling ; 2012-2013 ; Journal of Social Policy and Social Work in Transition Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 2014 ; Journal of Social Policy and Social Work in Transition Volume 4 ; 4 ; >
+    
+    }
+    
+  }
+
+}

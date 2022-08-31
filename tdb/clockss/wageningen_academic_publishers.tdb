@@ -1,0 +1,186 @@
+{
+  publisher <
+    name = Wageningen Academic Publishers ;
+    info[contract] = 2013 ;
+    info[back] = 2012 ;
+    info[tester] = 5 ;
+    info[poller] = 3 #by EDINA for testing
+  >
+  {
+    plugin = org.lockss.plugin.atypon.wageningen.ClockssWageningenJournalsPlugin
+#    param[base_url] = http://www.wageningenacademic.com/
+    implicit < status1 ; status ; year ; name ; param[volume_name] ; param[base_url] ; proxy >
+
+    {
+
+      title <
+        name = Beneficial Microbes ;
+        issn = 1876-2883 ;
+        eissn = 1876-2891 
+      >
+
+      param[journal_id] = bm
+    
+      au < manifest ; exists ; 2010 ; Beneficial Microbes Volume 1 ; 1 ; https://www.wageningenacademic.com/ ; >
+      au < manifest ; exists ; 2011 ; Beneficial Microbes Volume 2 ; 2 ; https://www.wageningenacademic.com/ ; >
+      au < finished ; finished ; 2012 ; Beneficial Microbes Volume 3 ; 3 ; http://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2013 ; Beneficial Microbes Volume 4 ; 4 ; http://www.wageningenacademic.com/ ; >
+      au < finished ; finished ; 2014 ; Beneficial Microbes Volume 5 ; 5 ; http://www.wageningenacademic.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2015 ; Beneficial Microbes Volume 6 ; 6 ; http://www.wageningenacademic.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; Beneficial Microbes Volume 7 ; 7 ; http://www.wageningenacademic.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2017 ; Beneficial Microbes Volume 8 ; 8 ; http://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
+      au < deepCrawl ; exists ; 2018 ; Beneficial Microbes Volume 9 ; 9 ; https://www.wageningenacademic.com/ ; >
+      au < deepCrawl ; exists ; 2019 ; Beneficial Microbes Volume 10 ; 10 ; https://www.wageningenacademic.com/ ; >
+      au < deepCrawl ; exists ; 2020 ; Beneficial Microbes Volume 11 ; 11 ; https://www.wageningenacademic.com/ ; >
+      au < crawling ; exists ; 2021 ; Beneficial Microbes Volume 12 ; 12 ; https://www.wageningenacademic.com/ ; >
+      au < manifest ; exists ; 2022 ; Beneficial Microbes Volume 13 ; 13 ; https://www.wageningenacademic.com/ ; >
+
+    }
+
+    {
+
+      title <
+        name = Comparative Exercise Physiology ;
+        issn = 1755-2540 ;
+        eissn = 1755-2559 
+      >
+
+      param[journal_id] = cep
+
+      au < finished ; finished ; 2012 ; Comparative Exercise Physiology Volume 8 ; 8 ; http://www.wageningenacademic.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; Comparative Exercise Physiology Volume 9 ; 9 ; http://www.wageningenacademic.com/ ; >
+      au < finished ; finished ; 2014 ; Comparative Exercise Physiology Volume 10 ; 10 ; http://www.wageningenacademic.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; Comparative Exercise Physiology Volume 11 ; 11 ; http://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2016 ; Comparative Exercise Physiology Volume 12 ; 12 ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2017 ; Comparative Exercise Physiology Volume 13 ; 13 ; http://www.wageningenacademic.com/ ; >
+      au < finished ; crawling ; 2018 ; Comparative Exercise Physiology Volume 14 ; 14 ; https://www.wageningenacademic.com/ ; reingest4.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2019 ; Comparative Exercise Physiology Volume 15 ; 15 ; https://www.wageningenacademic.com/ ; >
+      au < deepCrawl ; exists ; 2020 ; Comparative Exercise Physiology Volume 16 ; 16 ; https://www.wageningenacademic.com/ ; >
+      au < crawling ; exists ; 2021 ; Comparative Exercise Physiology Volume 17 ; 17 ; https://www.wageningenacademic.com/ ; >
+      au < manifest ; exists ; 2022 ; Comparative Exercise Physiology Volume 18 ; 18 ; https://www.wageningenacademic.com/ ; >
+
+    }
+
+    {
+
+      title <
+        name =  Journal of Applied Animal Nutrition ;
+        eissn = 2049-257X
+      >
+
+      param[journal_id] = jaan
+
+      au < exists ; exists ; 2012 ; Journal of Applied Animal Nutrition Volume 1 ; 1 ; https://www.wageningenacademic.com/ ; >
+      au < exists ; exists ; 2013 ; Journal of Applied Animal Nutrition Volume 2 ; 2 ; https://www.wageningenacademic.com/ ; >
+      au < exists ; exists ; 2015 ; Journal of Applied Animal Nutrition Volume 3 ; 3 ; https://www.wageningenacademic.com/ ; >
+      au < exists ; exists ; 2016 ; Journal of Applied Animal Nutrition Volume 4 ; 4 ; https://www.wageningenacademic.com/ ; >
+      au < exists ; exists ; 2017 ; Journal of Applied Animal Nutrition Volume 5 ; 5 ; https://www.wageningenacademic.com/ ; >
+      au < exists ; exists ; 2018 ; Journal of Applied Animal Nutrition Volume 6 ; 6 ; https://www.wageningenacademic.com/ ; >
+      au < exists ; exists ; 2019 ; Journal of Applied Animal Nutrition Volume 7 ; 7 ; https://www.wageningenacademic.com/ ; >
+      au < frozen ; exists ; 2020 ; Journal of Applied Animal Nutrition Volume 8 ; 8 ; https://www.wageningenacademic.com/ ; >
+      au < crawling ; exists ; 2021 ; Journal of Applied Animal Nutrition Volume 9 ; 9 ; https://www.wageningenacademic.com/ ; >
+      au < manifest ; exists ; 2022 ; Journal of Applied Animal Nutrition Volume 10 ; 10 ; https://www.wageningenacademic.com/ ; >
+
+    }
+
+    {
+
+      title <
+        name =  Journal of Insects as Food and Feed ;
+        eissn = 2352-4588 
+      >
+
+      param[journal_id] = jiff
+
+      au < finished ; finished ; 2015 ; Journal of Insects as Food and Feed Volume 1 ; 1 ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; Journal of Insects as Food and Feed Volume 2 ; 2 ; http://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2017 ; Journal of Insects as Food and Feed Volume 3 ; 3 ; http://www.wageningenacademic.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2018 ; Journal of Insects as Food and Feed Volume 4 ; 4 ; https://www.wageningenacademic.com/ ; reingest5.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2019 ; Journal of Insects as Food and Feed Volume 5 ; 5 ; https://www.wageningenacademic.com/ ; >
+      au < deepCrawl ; exists ; 2020 ; Journal of Insects as Food and Feed Volume 6 ; 6 ; https://www.wageningenacademic.com/ ; >
+      au < crawling ; exists ; 2021 ; Journal of Insects as Food and Feed Volume 7 ; 7 ; https://www.wageningenacademic.com/ ; >
+      au < manifest ; exists ; 2022 ; Journal of Insects as Food and Feed Volume 8 ; 8 ; https://www.wageningenacademic.com/ ; >
+
+    }
+
+    {
+
+      title <
+        name = Journal on Chain and Network Science ;
+        issn = 1569-1829 ;
+        eissn = 1875-0931 
+      >
+
+      param[journal_id] = jcns
+
+      au < manifest ; exists ; 2001 ; Journal on Chain and Network Science Volume 1 ; 1 ; https://www.wageningenacademic.com/ ; >
+      au < manifest ; exists ; 2002 ; Journal on Chain and Network Science Volume 2 ; 2 ; https://www.wageningenacademic.com/ ; >
+      au < manifest ; exists ; 2003 ; Journal on Chain and Network Science Volume 3 ; 3 ; https://www.wageningenacademic.com/ ; >
+      au < manifest ; exists ; 2004 ; Journal on Chain and Network Science Volume 4 ; 4 ; https://www.wageningenacademic.com/ ; >
+      au < manifest ; exists ; 2005 ; Journal on Chain and Network Science Volume 5 ; 5 ; https://www.wageningenacademic.com/ ; >
+      au < manifest ; exists ; 2006 ; Journal on Chain and Network Science Volume 6 ; 6 ; https://www.wageningenacademic.com/ ; >
+      au < manifest ; exists ; 2007 ; Journal on Chain and Network Science Volume 7 ; 7 ; https://www.wageningenacademic.com/ ; >
+      au < manifest ; exists ; 2008 ; Journal on Chain and Network Science Volume 8 ; 8 ; https://www.wageningenacademic.com/ ; >
+      au < manifest ; exists ; 2009 ; Journal on Chain and Network Science Volume 9 ; 9 ; https://www.wageningenacademic.com/ ; >
+      au < manifest ; exists ; 2010 ; Journal on Chain and Network Science Volume 10 ; 10 ; https://www.wageningenacademic.com/ ; >
+      au < manifest ; exists ; 2011 ; Journal on Chain and Network Science Volume 11 ; 11 ; https://www.wageningenacademic.com/ ; >
+      au < finished ; finished ; 2012 ; Journal on Chain and Network Science Volume 12 ; 12 ; http://www.wageningenacademic.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2013 ; Journal on Chain and Network Science Volume 13 ; 13 ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; Journal on Chain and Network Science Volume 14 ; 14 ; http://www.wageningenacademic.com/ ; >
+      au < finished ; finished ; 2015 ; Journal on Chain and Network Science Volume 15 ; 15 ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; Journal on Chain and Network Science Volume 16 ; 16 ; http://www.wageningenacademic.com/ ; reingest4.clockss.org:8082 >
+
+    }
+
+    {
+
+      title <
+        name = Quality Assurance and Safety of Crops & Foods ;
+        issn = 1757-8361 ;
+        eissn = 1757-837X 
+      >
+
+      param[journal_id] = qas
+      #Starting 1-1-2020, QAS will be published by Codon Publishing
+
+      au < finished ; finished ; 2013 ; Quality Assurance and Safety of Crops & Foods Volume 5 ; 5 ; http://www.wageningenacademic.com/ ; >
+      au < finished ; finished ; 2014 ; Quality Assurance and Safety of Crops & Foods Volume 6 ; 6 ; http://www.wageningenacademic.com/ ; >
+      au < finished ; finished ; 2015 ; Quality Assurance and Safety of Crops & Foods Volume 7 ; 7 ; http://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2016 ; Quality Assurance and Safety of Crops & Foods Volume 8 ; 8 ; http://www.wageningenacademic.com/ ; reingest5.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2017 ; Quality Assurance and Safety of Crops & Foods Volume 9 ; 9 ; http://www.wageningenacademic.com/ ; >
+      au < finished ; crawling ; 2018 ; Quality Assurance and Safety of Crops & Foods Volume 10 ; 10 ; https://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2019 ; Quality Assurance and Safety of Crops & Foods Volume 11 ; 11 ; https://www.wageningenacademic.com/ ; >
+
+    }
+
+    {
+
+      title <
+        name = World Mycotoxin Journal ;
+        issn = 1875-0710 ;
+        eissn = 1875-0796 
+      >
+
+      param[journal_id] = wmj
+
+      au < manifest ; exists ; 2008 ; World Mycotoxin Journal Volume 1 ; 1 ; https://www.wageningenacademic.com/ ; >
+      au < manifest ; exists ; 2009 ; World Mycotoxin Journal Volume 2 ; 2 ; https://www.wageningenacademic.com/ ; >
+      au < manifest ; exists ; 2010 ; World Mycotoxin Journal Volume 3 ; 3 ; https://www.wageningenacademic.com/ ; >
+      au < finished ; finished ; 2011 ; World Mycotoxin Journal Volume 4 ; 4 ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2012 ; World Mycotoxin Journal Volume 5 ; 5 ; http://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2013 ; World Mycotoxin Journal Volume 6 ; 6 ; http://www.wageningenacademic.com/ ; >
+      au < finished ; finished ; 2014 ; World Mycotoxin Journal Volume 7 ; 7 ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; World Mycotoxin Journal Volume 8 ; 8 ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; World Mycotoxin Journal Volume 9 ; 9 ; http://www.wageningenacademic.com/ ; reingest3.clockss.org:8083 >
+      au < deepCrawl ; exists ; 2017 ; World Mycotoxin Journal Volume 10 ; 10 ; http://www.wageningenacademic.com/ ; >
+      au < finished ; frozen ; 2018 ; World Mycotoxin Journal Volume 11 ; 11 ; https://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
+      au < deepCrawl ; exists ; 2019 ; World Mycotoxin Journal Volume 12 ; 12 ; https://www.wageningenacademic.com/ ; >
+      au < deepCrawl ; exists ; 2020 ; World Mycotoxin Journal Volume 13 ; 13 ; https://www.wageningenacademic.com/ ; >
+      au < crawling ; exists ; 2021 ; World Mycotoxin Journal Volume 14 ; 14 ; https://www.wageningenacademic.com/ ; >
+      au < manifest ; exists ; 2022 ; World Mycotoxin Journal Volume 15 ; 15 ; https://www.wageningenacademic.com/ ; >
+
+    }
+
+  }
+
+}

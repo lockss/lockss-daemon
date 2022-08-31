@@ -1,0 +1,212 @@
+{
+
+  publisher <
+    name = University of Massachusetts Amherst ;
+    info[contract] = 2012 ;
+    info[tester] = 5 ;
+    info[poller] = 8
+  >
+  #provider = bepress
+  provider = Scholarworks@UMass Amherst
+  
+  # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
+
+  {
+  
+    title < 
+      name = Rasenna: Journal of the Center for Etruscan Studies ;
+      issn = 1940-073X
+    >
+    
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
+    #param[base_url] = http://scholarworks.umass.edu/
+    param[journal_abbr] = rasenna
+    implicit < status1 ; status ; year ; name ; param[volume] ; param[base_url] ; proxy >
+
+    au < manifest ; exists ; 2007 ; Rasenna: Journal of the Center for Etruscan Studies Volume 1 ; 1 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2009 ; Rasenna: Journal of the Center for Etruscan Studies volume 2 ; 2 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2011 ; Rasenna: Journal of the Center for Etruscan Studies Volume 3 ; 3 ; https://scholarworks.umass.edu/ ; >
+    au < finished ; finished ; 2014 ; Rasenna: Journal of the Center for Etruscan Studies Volume 4 ; 4 ; http://scholarworks.umass.edu/ ; >
+    au < finished ; finished ; 2016 ; Rasenna: Journal of the Center for Etruscan Studies Volume 5 ; 5 ; http://scholarworks.umass.edu/ ; reingest1.clockss.org:8082 >
+    #Archived. Nothing published since 2016 as of 2021-01
+  }
+
+{
+  
+    title < 
+      name = African Diaspora Archaeology Newsletter ;
+      issn = 1933-8651
+    >
+    
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
+    param[base_url] = http://scholarworks.umass.edu/
+    param[journal_abbr] = adan
+    implicit < status1 ; status ; year ; name ; param[volume] ; proxy >
+    
+    comment[title] = this journal has a malformed manifest page and is out of contract.
+
+    au < superseded ; exists ; 2006 ; African Diaspora Archaeology Newsletter Volume 1 [to delete] ; 1 ; >
+    #Archived. Nothing published since 2015 as of 2021-01
+  }
+  
+  {
+  
+    title < 
+      name = communication +1 
+    >
+    
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
+    #param[base_url] = http://scholarworks.umass.edu/
+    param[journal_abbr] = cpo
+    implicit < status1 ; status ; year ; name ; param[volume] ; param[base_url] ; proxy >
+
+    au < finished ; finished ; 2012 ; communication +1 Volume 1 ; 1 ; http://scholarworks.umass.edu/ ; >
+    au < finished ; finished ; 2013 ; communication +1 Volume 2 ; 2 ; http://scholarworks.umass.edu/ ; >
+    au < finished ; finished ; 2014 ; communication +1 Volume 3 ; 3 ; http://scholarworks.umass.edu/ ; >
+    au < finished ; finished ; 2015 ; communication +1 Volume 4 ; 4 ; http://scholarworks.umass.edu/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; communication +1 Volume 5 ; 5 ; http://scholarworks.umass.edu/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; communication +1 Volume 6 ; 6 ; http://scholarworks.umass.edu/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; communication +1 Volume 7 ; 7 ; https://scholarworks.umass.edu/ ; reingest5.clockss.org:8082 >
+    #Nothing published since 2018 as of 2021-01
+  }
+  
+  {
+  
+    title < 
+      name = Contributions in Black Studies (CIBS) ;
+      issn = 0196-9099
+    >
+    
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
+    param[base_url] = https://scholarworks.umass.edu/
+    param[journal_abbr] = cibs
+    implicit < status1 ; status ; year ; name ; param[volume] ; proxy >
+    
+    au < manifest ; exists ; 1977 ; Contributions in Black Studies (CIBS) Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1978 ; Contributions in Black Studies (CIBS) Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1979 ; Contributions in Black Studies (CIBS) Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1980 ; Contributions in Black Studies (CIBS) Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1981 ; Contributions in Black Studies (CIBS) Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1983 ; Contributions in Black Studies (CIBS) Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1985 ; Contributions in Black Studies (CIBS) Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1986 ; Contributions in Black Studies (CIBS) Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1992 ; Contributions in Black Studies (CIBS) Volume 9 ; 9 ; >
+    au < doesNotExist ; doesNotExist ; 0 ; Contributions in Black Studies (CIBS) Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1993 ; Contributions in Black Studies (CIBS) Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1994 ; Contributions in Black Studies (CIBS) Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1995 ; Contributions in Black Studies (CIBS) Volume 13 ; 13 ; >
+    au < doesNotExist ; doesNotExist ; 0 ; Contributions in Black Studies (CIBS) Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1997 ; Contributions in Black Studies (CIBS) Volume 15 ; 15 ; >
+    #Archived. Nothing published since 1997 as of 2021-01
+
+  }
+  
+  {
+  
+    title < 
+      name = EDGE - A Graduate Journal for German and Scandinavian Studies ;
+      issn = 1947-5098
+    >
+    
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
+    #param[base_url] = http://scholarworks.umass.edu/
+    param[journal_abbr] = edge
+    implicit < status1 ; status ; year ; name ; param[volume] ; param[base_url] ; proxy >
+
+    au < manifest ; exists ; 2009 ; EDGE - A Graduate Journal for German and Scandinavian Studies Volume 1 ; 1 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2011 ; EDGE - A Graduate Journal for German and Scandinavian Studies Volume 2 ; 2 ; https://scholarworks.umass.edu/ ; >
+    au < finished ; finished ; 2013 ; EDGE - A Graduate Journal for German and Scandinavian Studies Volume 3 ; 3 ; http://scholarworks.umass.edu/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; EDGE - A Graduate Journal for German and Scandinavian Studies Volume 4 ; 4 ; http://scholarworks.umass.edu/ ; >
+    au < finished ; finished ; 2015 ; EDGE - A Graduate Journal for German and Scandinavian Studies Volume 5 ; 5 ; http://scholarworks.umass.edu/ ; reingest2.clockss.org:8085 >
+    #Archived. Nothing published since 2015 as of 2021-01
+
+  }
+  
+  {
+  
+    title < 
+      name = Heliotropia ;
+      issn = 1542-3352
+    >
+    
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
+    param[base_url] = https://scholarworks.umass.edu/
+    param[journal_abbr] = heliotropia
+    implicit < status1 ; status ; year ; name ; param[volume] ; proxy >
+
+    au < manifest ; exists ; 2003 ; Heliotropia Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2004 ; Heliotropia Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2006 ; Heliotropia Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2007 ; Heliotropia Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2008 ; Heliotropia Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2009 ; Heliotropia Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2010 ; Heliotropia Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2011 ; Heliotropia Volume 8 ; 8 ; >
+    #Archived. Nothing published since 2014 as of 2021-01
+
+  }
+  
+  {
+  
+    title < 
+      name = International Journal of Soil, Sediment and Water ;
+      issn = 1940-3259
+
+    >
+    # this title is no longer being published according to bepress site
+    
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
+    param[base_url] = https://scholarworks.umass.edu/
+    param[journal_abbr] = intljssw
+    implicit < status1 ; status ; year ; name ; param[volume] ; proxy >
+
+    au < manifest ; exists ; 2008 ; International Journal of Soil, Sediment and Water Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2009 ; International Journal of Soil, Sediment and Water Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2010 ; International Journal of Soil, Sediment and Water Volume 3 ; 3 ; >
+    #Archived. Nothing published since 2010 as of 2021-01
+
+  }
+  
+  {
+  
+    title < 
+      name = The Journal of Hospitality Financial Management ;
+      issn = 1091-3211 ;
+      eissn = 2152-2790
+    >
+    
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
+    #param[base_url] = http://scholarworks.umass.edu/
+    param[journal_abbr] = jhfm
+    implicit < status1 ; status ; year ; name ; param[volume] ; param[base_url] ; proxy >
+
+    au < manifest ; exists ; 1997 ; The Journal of Hospitality Financial Management Volume 5 ; 5 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 1998 ; The Journal of Hospitality Financial Management Volume 6 ; 6 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 1999 ; The Journal of Hospitality Financial Management Volume 7 ; 7 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2000 ; The Journal of Hospitality Financial Management Volume 8 ; 8 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2001 ; The Journal of Hospitality Financial Management Volume 9 ; 9 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2002 ; The Journal of Hospitality Financial Management Volume 10 ; 10 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2003 ; The Journal of Hospitality Financial Management Volume 11 ; 11 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2004 ; The Journal of Hospitality Financial Management Volume 12 ; 12 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2005 ; The Journal of Hospitality Financial Management Volume 13 ; 13 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2006 ; The Journal of Hospitality Financial Management Volume 14 ; 14 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2007 ; The Journal of Hospitality Financial Management Volume 15 ; 15 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2008 ; The Journal of Hospitality Financial Management Volume 16 ; 16 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2009 ; The Journal of Hospitality Financial Management Volume 17 ; 17 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2010 ; The Journal of Hospitality Financial Management Volume 18 ; 18 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2011 ; The Journal of Hospitality Financial Management Volume 19 ; 19 ; https://scholarworks.umass.edu/ ; >
+    au < finished ; finished ; 2012 ; The Journal of Hospitality Financial Management Volume 20 ; 20 ; http://scholarworks.umass.edu/ ; >
+    au < frozen ; exists ; 2013 ; The Journal of Hospitality Financial Management Volume 21 ; 21 ; https://scholarworks.umass.edu/ ; >
+    au < frozen ; exists ; 2014 ; The Journal of Hospitality Financial Management Volume 22 ; 22 ; https://scholarworks.umass.edu/ ; >
+    au < frozen ; exists ; 2015 ; The Journal of Hospitality Financial Management Volume 23 ; 23 ; https://scholarworks.umass.edu/ ; >
+    au < frozen ; exists ; 2016 ; The Journal of Hospitality Financial Management Volume 24 ; 24 ; https://scholarworks.umass.edu/ ; >
+    au < frozen ; exists ; 2017 ; The Journal of Hospitality Financial Management Volume 25 ; 25 ; https://scholarworks.umass.edu/ ; >
+    au < frozen ; exists ; 2018 ; The Journal of Hospitality Financial Management Volume 26 ; 26 ; https://scholarworks.umass.edu/ ; >
+    au < frozen ; exists ; 2019 ; The Journal of Hospitality Financial Management Volume 27 ; 27 ; https://scholarworks.umass.edu/ ; >
+    au < frozen ; exists ; 2020 ; The Journal of Hospitality Financial Management Volume 28 ; 28 ; https://scholarworks.umass.edu/ ; >
+    au < crawling ; exists ; 2021 ; The Journal of Hospitality Financial Management Volume 29 ; 29 ; https://scholarworks.umass.edu/ ; >
+    
+    au < testing ; exists ; 2022 ; The Journal of Hospitality Financial Management Volume 30 ; 30 ; https://scholarworks.umass.edu/ ; >
+  }
+  
+}

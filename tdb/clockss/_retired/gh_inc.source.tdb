@@ -1,0 +1,29 @@
+{
+
+  publisher <
+    name = GH Inc. ;
+    info[contract] = 2013 ;
+    info[tester] = S
+  >
+    plugin = org.lockss.plugin.clockss.warc.ClockssWarcPlugin
+    proxy = DIRECT
+    implicit < status1 ; status ; year ; name ; param[year] >
+  {
+
+    title <
+      name =  Science Postprint WARC Content ;
+      issn = 2187-9834
+    >
+
+    # This content was collected using wget and provided for preservation as a
+    # set of WARC files
+    # Catalogued by the National Library of Medicine: https://www.ncbi.nlm.nih.gov/nlmcatalog/101637714
+    # WARC content collected from http://www.spp-j.com/ - unclear if there is more recent content
+
+    param[base_url] = http://clockss-ingest.lockss.org/warcfiles/science-postprint-released/
+
+    au < zapped ; finished ; 2016 ; Science Postprint WARC Content 2016 ; 2016 >
+    au < zapped ; finished ; 2018 ; Science Postprint WARC Content 2018 ; 2018 > #verified superset of previous
+    #Cancelled contract
+  }  
+}

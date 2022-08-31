@@ -1,0 +1,27 @@
+{
+
+  publisher <
+    name = International Structural Engineering and Construction Society ;
+    info[contract] = 2016 ;
+    info[tester] = S ;
+    info[platform] = Source
+  >
+
+  {
+
+    title <
+      name = International Structural Engineering and Construction Society Source Content
+    >
+
+    plugin = org.lockss.plugin.clockss.isecs.ClockssInternationalStructuralEngineeringConstructionSocietySourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/isec-released/
+    proxy = DIRECT
+    implicit < status1 ; status ; year ; name ; param[year] >
+
+    au < readySource ; crawling ; 2020 ; International Structural Engineering and Construction Society Source Content 2020 ; 2020 >
+    au < readySource ; finished ; 2021 ; International Structural Engineering and Construction Society Source Content 2021 ; 2021 >
+    au < readySource ; crawling ; 2022 ; International Structural Engineering and Construction Society Source Content 2022 ; 2022 >
+
+  }
+
+}

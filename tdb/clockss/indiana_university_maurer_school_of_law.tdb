@@ -1,0 +1,231 @@
+{
+
+  publisher <
+    name = Indiana University Maurer School of Law ;
+    info[contract] = 2012 ;
+    info[tester] = 5 ;
+    info[poller] = 8
+  >
+  provider = bepress
+  # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
+
+
+  plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+  implicit < status1 ; status ; year ; name ; param[volume] ; param[base_url] ; proxy >
+  #param[base_url] = http://www.repository.law.indiana.edu/
+
+  {
+
+    title <
+      name = Federal Communications Law Journal ;
+      issn = 0163-7606
+
+    >
+
+    param[journal_abbr] = fclj
+
+    au < manifest ; exists ; 1993 ; Federal Communications Law Journal Volume 46 ; 46 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1994 ; Federal Communications Law Journal Volume 47 ; 47 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1995 ; Federal Communications Law Journal Volume 48 ; 48 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1996 ; Federal Communications Law Journal Volume 49 ; 49 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1997 ; Federal Communications Law Journal Volume 50 ; 50 ; https://www.repository.law.indiana.edu/ ; >
+
+  }
+
+  {
+
+    title <
+      name = Indiana Journal of Global Legal Studies ;
+      issn = 1080-0727 ;
+      eissn = 1543-0367
+
+    >
+
+    param[journal_abbr] = ijgls
+    comment[notReady17] = under lockss-probe, embargo until February 01, 2015
+    comment[notReady18] = under lockss-probe, embargo until August 01, 2016
+    comment[notReady19] = under lockss-probe, embargo until October 15, 2013
+
+
+    au < manifest ; exists ; 1993-1994 ; Indiana Journal of Global Legal Studies Volume 1 ; 1 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1994-1995 ; Indiana Journal of Global Legal Studies Volume 2 ; 2 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1995-1996 ; Indiana Journal of Global Legal Studies Volume 3 ; 3 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1996-1997 ; Indiana Journal of Global Legal Studies Volume 4 ; 4 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1997-1998 ; Indiana Journal of Global Legal Studies Volume 5 ; 5 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1998-1999 ; Indiana Journal of Global Legal Studies Volume 6 ; 6 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1999-2000 ; Indiana Journal of Global Legal Studies Volume 7 ; 7 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 2000-2001 ; Indiana Journal of Global Legal Studies Volume 8 ; 8 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 2001-2002 ; Indiana Journal of Global Legal Studies Volume 9 ; 9 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 2003 ; Indiana Journal of Global Legal Studies Volume 10 ; 10 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 2004 ; Indiana Journal of Global Legal Studies Volume 11 ; 11 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 2005 ; Indiana Journal of Global Legal Studies Volume 12 ; 12 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 2006 ; Indiana Journal of Global Legal Studies Volume 13 ; 13 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 2007 ; Indiana Journal of Global Legal Studies Volume 14 ; 14 ; https://www.repository.law.indiana.edu/ ; >
+    au < finished ; finished ; 2008 ; Indiana Journal of Global Legal Studies Volume 15 ; 15 ; http://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 2009 ; Indiana Journal of Global Legal Studies Volume 16 ; 16 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 2010 ; Indiana Journal of Global Legal Studies Volume 17 ; 17 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 2011 ; Indiana Journal of Global Legal Studies Volume 18 ; 18 ; https://www.repository.law.indiana.edu/ ; >
+    au < finished ; finished ; 2012 ; Indiana Journal of Global Legal Studies Volume 19 ; 19 ; https://www.repository.law.indiana.edu/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; Indiana Journal of Global Legal Studies Volume 20 ; 20 ; https://www.repository.law.indiana.edu/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Indiana Journal of Global Legal Studies Volume 21 ; 21 ; https://www.repository.law.indiana.edu/ ; reingest3.clockss.org:8083 >
+
+  }
+
+  {
+
+    title <
+      name = Indiana Journal of Law and Social Equality ;
+      issn = 2330-9660
+    >
+
+    param[journal_abbr] = ijlse
+
+    au < finished ; finished ; 2013 ; Indiana Journal of Law and Social Equality Volume 1 ; 1 ; http://www.repository.law.indiana.edu/ ; >
+    au < finished ; finished ; 2014 ; Indiana Journal of Law and Social Equality Volume 2 ; 2 ; http://www.repository.law.indiana.edu/ ; >
+    au < finished ; finished ; 2015 ; Indiana Journal of Law and Social Equality Volume 3 ; 3 ; http://www.repository.law.indiana.edu/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2016 ; Indiana Journal of Law and Social Equality Volume 4 ; 4 ; http://www.repository.law.indiana.edu/ ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2017 ; Indiana Journal of Law and Social Equality Volume 5 ; 5 ; http://www.repository.law.indiana.edu/ ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2018 ; Indiana Journal of Law and Social Equality Volume 6 ; 6 ; https://www.repository.law.indiana.edu/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Indiana Journal of Law and Social Equality Volume 7 ; 7 ; https://www.repository.law.indiana.edu/ ; reingest4.clockss.org:8082 >
+    au < deepCrawl ; exists ; 2020 ; Indiana Journal of Law and Social Equality Volume 8 ; 8 ; https://www.repository.law.indiana.edu/ ; >
+    au < crawling ; exists ; 2021 ; Indiana Journal of Law and Social Equality Volume 9 ; 9 ; https://www.repository.law.indiana.edu/ ; >
+    au < ready ; exists ; 2022 ; Indiana Journal of Law and Social Equality Volume 10 ; 10 ; https://www.repository.law.indiana.edu/ ; >
+
+  }
+
+  {
+
+    title <
+      name = Indiana Law Journal ;
+      issn = 0019-6665
+    >
+
+    param[journal_abbr] = ilj
+    comment[missing_volumes] = missing vols 5-26, 41
+
+    au < manifest ; exists ; 1926 ; Indiana Law Journal Volume 1 ; 1 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1927 ; Indiana Law Journal Volume 2 ; 2 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1927-1928 ; Indiana Law Journal Volume 3 ; 3 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1928 ; Indiana Law Journal Volume 4 ; 4 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1929-1930 ; Indiana Law Journal Volume 5 ; 5 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1930-1931 ; Indiana Law Journal Volume 6 ; 6 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1931-1932 ; Indiana Law Journal Volume 7 ; 7 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1932-1933 ; Indiana Law Journal Volume 8 ; 8 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1933-1934 ; Indiana Law Journal Volume 9 ; 9 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1934-1935 ; Indiana Law Journal Volume 10 ; 10 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1935-1936 ; Indiana Law Journal Volume 11 ; 11 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1936-1937 ; Indiana Law Journal Volume 12 ; 12 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1937-1938 ; Indiana Law Journal Volume 13 ; 13 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1938-1939 ; Indiana Law Journal Volume 14 ; 14 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1939-1940 ; Indiana Law Journal Volume 15 ; 15 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1940-1941 ; Indiana Law Journal Volume 16 ; 16 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1941-1942 ; Indiana Law Journal Volume 17 ; 17 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1942-1943 ; Indiana Law Journal Volume 18 ; 18 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1943-1944 ; Indiana Law Journal Volume 19 ; 19 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1944-1945 ; Indiana Law Journal Volume 20 ; 20 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1945-1946 ; Indiana Law Journal Volume 21 ; 21 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1946-1947 ; Indiana Law Journal Volume 22 ; 22 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1947-1948 ; Indiana Law Journal Volume 23 ; 23 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1948-1949 ; Indiana Law Journal Volume 24 ; 24 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1949-1950 ; Indiana Law Journal Volume 25 ; 25 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1950-1951 ; Indiana Law Journal Volume 26 ; 26 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1951-1952 ; Indiana Law Journal Volume 27 ; 27 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1952-1953 ; Indiana Law Journal Volume 28 ; 28 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1953-1954 ; Indiana Law Journal Volume 29 ; 29 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1954-1955 ; Indiana Law Journal Volume 30 ; 30 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1955-1956 ; Indiana Law Journal Volume 31 ; 31 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1956-1957 ; Indiana Law Journal Volume 32 ; 32 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1957-1958 ; Indiana Law Journal Volume 33 ; 33 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1958-1959 ; Indiana Law Journal Volume 34 ; 34 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1959-1960 ; Indiana Law Journal Volume 35 ; 35 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1960-1961 ; Indiana Law Journal Volume 36 ; 36 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1961-1962 ; Indiana Law Journal Volume 37 ; 37 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1962-1963 ; Indiana Law Journal Volume 38 ; 38 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1963-1964 ; Indiana Law Journal Volume 39 ; 39 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1964-1965 ; Indiana Law Journal Volume 40 ; 40 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1965-1966 ; Indiana Law Journal Volume 41 ; 41 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1966-1967 ; Indiana Law Journal Volume 42 ; 42 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1967-1968 ; Indiana Law Journal Volume 43 ; 43 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1968-1968 ; Indiana Law Journal Volume 44 ; 44 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1969-1970 ; Indiana Law Journal Volume 45 ; 45 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1970-1971 ; Indiana Law Journal Volume 46 ; 46 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1971-1972 ; Indiana Law Journal Volume 47 ; 47 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1972-1973 ; Indiana Law Journal Volume 48 ; 48 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1973-1974 ; Indiana Law Journal Volume 49 ; 49 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1974-1975 ; Indiana Law Journal Volume 50 ; 50 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1975-1976 ; Indiana Law Journal Volume 51 ; 51 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1976-1977 ; Indiana Law Journal Volume 52 ; 52 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1977-1978 ; Indiana Law Journal Volume 53 ; 53 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1978-1979 ; Indiana Law Journal Volume 54 ; 54 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1979-1980 ; Indiana Law Journal Volume 55 ; 55 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1980-1981 ; Indiana Law Journal Volume 56 ; 56 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1981-1982 ; Indiana Law Journal Volume 57 ; 57 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1982-1983 ; Indiana Law Journal Volume 58 ; 58 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1983-1984 ; Indiana Law Journal Volume 59 ; 59 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1984-1985 ; Indiana Law Journal Volume 60 ; 60 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1985-1986 ; Indiana Law Journal Volume 61 ; 61 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1986-1987 ; Indiana Law Journal Volume 62 ; 62 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1987-1988 ; Indiana Law Journal Volume 63 ; 63 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1988-1989 ; Indiana Law Journal Volume 64 ; 64 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1989-1990 ; Indiana Law Journal Volume 65 ; 65 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1990-1991 ; Indiana Law Journal Volume 66 ; 66 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1991-1992 ; Indiana Law Journal Volume 67 ; 67 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1992-1993 ; Indiana Law Journal Volume 68 ; 68 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1993-1994 ; Indiana Law Journal Volume 69 ; 69 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1994-1995 ; Indiana Law Journal Volume 70 ; 70 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1995-1996 ; Indiana Law Journal Volume 71 ; 71 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1996-1997 ; Indiana Law Journal Volume 72 ; 72 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1997-1998 ; Indiana Law Journal Volume 73 ; 73 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1998-1999 ; Indiana Law Journal Volume 74 ; 74 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 1999-2000 ; Indiana Law Journal Volume 75 ; 75 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 2000-2001 ; Indiana Law Journal Volume 76 ; 76 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 2001-2002 ; Indiana Law Journal Volume 77 ; 77 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 2002-2003 ; Indiana Law Journal Volume 78 ; 78 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 2003-2004 ; Indiana Law Journal Volume 79 ; 79 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 2004-2005 ; Indiana Law Journal Volume 80 ; 80 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 2005-2006 ; Indiana Law Journal Volume 81 ; 81 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 2006-2007 ; Indiana Law Journal Volume 82 ; 82 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 2007-2008 ; Indiana Law Journal Volume 83 ; 83 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 2008-2009 ; Indiana Law Journal Volume 84 ; 84 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 2009-2010 ; Indiana Law Journal Volume 85 ; 85 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 2010-2011 ; Indiana Law Journal Volume 86 ; 86 ; https://www.repository.law.indiana.edu/ ; >
+    au < finished ; finished ; 2012 ; Indiana Law Journal Volume 87 ; 87 ; http://www.repository.law.indiana.edu/ ; >
+    au < finished ; finished ; 2013 ; Indiana Law Journal Volume 88 ; 88 ; http://www.repository.law.indiana.edu/ ; >
+    au < finished ; finished ; 2014 ; Indiana Law Journal Volume 89 ; 89 ; http://www.repository.law.indiana.edu/ ; >
+    au < finished ; finished ; 2015 ; Indiana Law Journal Volume 90 ; 90 ; http://www.repository.law.indiana.edu/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; Indiana Law Journal Volume 91 ; 91 ; http://www.repository.law.indiana.edu/ ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2017 ; Indiana Law Journal Volume 92 ; 92 ; http://www.repository.law.indiana.edu/ ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2018 ; Indiana Law Journal Volume 93 ; 93 ; https://www.repository.law.indiana.edu/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Indiana Law Journal Volume 94 ; 94 ; https://www.repository.law.indiana.edu/ ; reingest5.clockss.org:8082 >
+    au < deepCrawl ; exists ; 2020 ; Indiana Law Journal Volume 95 ; 95 ; https://www.repository.law.indiana.edu/ ; >
+    au < crawling ; exists ; 2021 ; Indiana Law Journal Volume 96 ; 96 ; https://www.repository.law.indiana.edu/ ; >
+    au < crawling ; exists ; 2022 ; Indiana Law Journal Volume 97 ; 97 ; https://www.repository.law.indiana.edu/ ; >
+
+  }
+
+  {
+
+    title <
+      name = IP Theory ;
+      issn = 2164-7410
+    >
+
+
+    param[journal_abbr] = ipt
+
+    au < manifest ; exists ; 2010 ; IP Theory Volume 1 ; 1 ; https://www.repository.law.indiana.edu/ ; >
+    au < finished ; finished ; 2011-2012 ; IP Theory Volume 2 ; 2 ; http://www.repository.law.indiana.edu/ ; >
+    au < finished ; finished ; 2012-2013 ; IP Theory Volume 3 ; 3 ; http://www.repository.law.indiana.edu/ ; >
+    au < finished ; finished ; 2013-2014 ; IP Theory Volume 4 ; 4 ; http://www.repository.law.indiana.edu/ ; >
+    au < finished ; finished ; 2014-2015 ; IP Theory Volume 5 ; 5 ; http://www.repository.law.indiana.edu/ ; >
+    au < exists ; exists ; 2016 ; IP Theory Volume 6 ; 6 ; https://www.repository.law.indiana.edu/ ; >
+    au < finished ; finished ; 2017 ; IP Theory Volume 7 ; 7 ; https://www.repository.law.indiana.edu/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2018 ; IP Theory Volume 8 ; 8 ; https://www.repository.law.indiana.edu/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2019 ; IP Theory Volume 9 ; 9 ; https://www.repository.law.indiana.edu/ ; reingest3.clockss.org:8083 >
+    au < notReady ; exists ; 2020 ; IP Theory Volume 10 ; 10 ; https://www.repository.law.indiana.edu/ ; > #no metadata found
+    au < crawling ; exists ; 2021 ; IP Theory Volume 11 ; 11 ; https://www.repository.law.indiana.edu/ ; >
+    au < expected ; exists ; 2022 ; IP Theory Volume 12 ; 12 ; https://www.repository.law.indiana.edu/ ; >
+
+  }
+
+}

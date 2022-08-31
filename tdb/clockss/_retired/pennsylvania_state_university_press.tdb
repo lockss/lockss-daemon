@@ -1,0 +1,671 @@
+{
+
+  publisher <
+    name = Penn State University Press ;
+    info[contract] = 2012 ;
+    info[tester] = 8 ;
+    info[poller] = 3
+  >
+
+  plugin = org.lockss.plugin.jstor.ClockssJstorPlugin
+  comment[platform] = process Jstor only for CLOCKSS
+
+  param[base_url] = http://www.jstor.org/
+  param[base_url2] = https://www.jstor.org/
+  implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+#  {
+#
+#    title <
+#      name = 14th Century English Mystics Newsletter ;
+#      issn = 0737-5840 ;
+#      issnl = 0737-5840
+#    >
+#
+#      param[journal_id] = 14centengmystnew
+#      comment[years] = 1974-1983. Outside of contract years.
+#      comment[continued_by] = Mystics Quarterly 0742-5503
+#      
+#  }
+
+  {
+
+    title <
+      name = The Chaucer Review ;
+      issn = 0009-2002 ;
+      eissn = 1528-4204 ;
+      issnl = 0009-2002
+    >
+
+      param[journal_id] = chaucerrev
+
+      au < superseded ; exists ; 2009-2010 ; The Chaucer Review Volume 44 ; 44 ; >
+      au < doNotProcess ; exists ; 2010-2011 ; The Chaucer Review Volume 45 ; 45 ; >
+      au < finished ; finished ; 2011-2012 ; The Chaucer Review Volume 46 ; 46 ; >
+      au < finished ; finished ; 2012-2013 ; The Chaucer Review Volume 47 ; 47 ; >
+      au < finished ; finished ; 2013-2014 ; The Chaucer Review Volume 48 ; 48 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2014-2015 ; The Chaucer Review Volume 49 ; 49 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; exists ; 2015-2016 ; The Chaucer Review Volume 50 ; 50 ; >
+      
+  }
+
+  {
+
+    title <
+      name = Comparative Literature Studies ;
+      issn = 0010-4132 ;
+      eissn = 1528-4212 ;
+      issnl = 0010-4132
+    >
+      param[journal_id] = complitstudies
+      
+      comment[v50] = malformed pdf file http://www.jstor.org/stable/pdfplus/10.5325/complitstudies.50.1.0001.pdf
+      comment[v51] = malformed pdf file http://www.jstor.org/stable/pdfplus/10.5325/complitstudies.51.3.e-3.pdf
+
+      au < doNotProcess ; exists ; 2010 ; Comparative Literature Studies Volume 47 ; 47 ; >
+      au < doNotProcess ; exists ; 2011 ; Comparative Literature Studies Volume 48 ; 48 ; >
+      au < finished ; finished ; 2012 ; Comparative Literature Studies Volume 49 ; 49 ; >
+      au < doNotProcess ; exists ; 2013 ; Comparative Literature Studies Volume 50 ; 50 ; >
+      au < doNotProcess ; exists ; 2014 ; Comparative Literature Studies Volume 51 ; 51 ; >
+      au < doNotProcess ; exists ; 2015 ; Comparative Literature Studies Volume 52 ; 52 ; >
+      
+  }
+
+  {
+  
+    title <
+      name = Critical Philosophy of Race ;
+      issn = 2165-8684 ;
+      eissn = 2165-8692 ;
+      issnl = 2165-8684
+    >
+    
+      param[journal_id] = critphilrace
+
+      au < superseded ; exists ; 2013 ; Critical Philosophy of Race Volume 1 [superseded] ; 1 ; >
+      au < superseded ; exists ; 2014 ; Critical Philosophy of Race Volume 2 [superseded] ; 2 ; >
+      au < doNotProcess ; exists ; 2015 ; Critical Philosophy of Race Volume 3 ; 3 ; >
+      
+  }
+
+  {
+
+    title <
+      name = The Edgar Allan Poe Review ;
+      issn = 2150-0428 ;
+      eissn = 2166-2932 ;
+      issnl = 2150-0428
+    >
+      param[journal_id] = edgallpoerev
+
+      au < doNotProcess ; exists ; 2010 ; The Edgar Allan Poe Review Volume 11 ; 11 ; >
+      au < doNotProcess ; exists ; 2011 ; The Edgar Allan Poe Review Volume 12 ; 12 ; >
+      au < finished ; finished ; 2012 ; The Edgar Allan Poe Review Volume 13 ; 13 ; >
+      au < superseded ; exists ; 2013 ; The Edgar Allan Poe Review Volume 14 [superseded] ; 14 ; >
+      au < superseded ; exists ; 2014 ; The Edgar Allan Poe Review Volume 15 [superseded] ; 15 ; >
+      au < doNotProcess ; exists ; 2015 ; The Edgar Allan Poe Review Volume 16 ; 16 ; >
+
+  }
+
+  {
+
+    title <
+      name = The Eugene O'Neill Review ;
+      issn = 1040-9483 ;
+      eissn = 2161-4318 ;
+      issnl = 1040-9483
+    >
+      param[journal_id] = eugeoneirevi
+
+      au < doNotProcess ; exists ; 2010 ; The Eugene O'Neill Review Volume 32 ; 32 ; >
+      au < superseded ; exists ; 2012 ; The Eugene O'Neill Review Volume 33 [superseded] ; 33 ; >
+      au < finished ; finished ; 2013 ; The Eugene O'Neill Review Volume 34 ; 34 ; >
+      au < superseded ; exists ; 2014 ; The Eugene O'Neill Review Volume 35 [superseded] ; 35 ; >
+      au < doNotProcess ; exists ; 2015 ; The Eugene O'Neill Review Volume 36 ; 36 ; >
+      
+  }
+
+  {
+
+    title <
+      name = The F. Scott Fitzgerald Review ;
+      issn = 1543-3951 ;
+      eissn = 1755-6333 ;
+      issnl = 1543-3951
+    >
+
+      param[journal_id] = fscotfitzrevi
+      comment[notReady] = V8-10, no substance. Url on manifest page is dead.
+
+      au < doNotProcess ; exists ; 2010 ; The F. Scott Fitzgerald Review Volume 8 ; 8 ; >
+      au < doNotProcess ; exists ; 2011 ; The F. Scott Fitzgerald Review Volume 9 ; 9 ; >
+      au < doNotProcess ; exists ; 2012 ; The F. Scott Fitzgerald Review Volume 10 ; 10 ; >
+      au < superseded ; exists ; 2013 ; The F. Scott Fitzgerald Review Volume 11 [superseded] ; 11 ; >
+      au < superseded ; exists ; 2014 ; The F. Scott Fitzgerald Review Volume 12 [superseded] ; 12 ; >
+      au < doNotProcess ; exists ; 2015 ; The F. Scott Fitzgerald Review Volume 13 ; 13 ; >
+      
+  }
+
+  {
+
+    title <
+      name = The Good Society ;
+      issn = 1089-0017 ;
+      eissn = 1538-9731 ;
+      issnl = 1089-0017
+    >
+
+      param[journal_id] = goodsociety
+      comment[continues] = 2157-2968
+
+      au < doNotProcess ; exists ; 2010 ; The Good Society Volume 19 ; 19 ; >
+      au < doNotProcess ; exists ; 2011 ; The Good Society Volume 20 ; 20 ; >
+      au < superseded ; exists ; 2012 ; The Good Society Volume 21 [superseded] ; 21 ; >
+      au < superseded ; exists ; 2013 ; The Good Society Volume 22 [superseded] ; 22 ; >
+      au < finished ; finished ; 2014 ; The Good Society Volume 23 ; 23 ; >
+      au < doNotProcess ; exists ; 2015 ; The Good Society Volume 24 ; 24 ; >
+      
+  }
+
+  {
+
+    title <
+      name = Interdisciplinary Literary Studies ;
+      issn = 1524-8429 ;
+      eissn = 2161-427X ;
+      issnl = 1524-8429
+    >
+
+      param[journal_id] = intelitestud
+
+      au < doNotProcess ; exists ; 2009-2010 ; Interdisciplinary Literary Studies Volume 11 ; 11 ; >
+      au < doNotProcess ; exists ; 2010-2011 ; Interdisciplinary Literary Studies Volume 12 ; 12 ; >
+      au < doNotProcess ; exists ; 2011 ; Interdisciplinary Literary Studies Volume 13 ; 13 ; >
+      au < finished ; finished ; 2012 ; Interdisciplinary Literary Studies Volume 14 ; 14 ; >
+      au < finished ; finished ; 2013 ; Interdisciplinary Literary Studies Volume 15 ; 15 ; >
+      au < finished ; finished ; 2014 ; Interdisciplinary Literary Studies Volume 16 ; 16 ; >
+      au < doNotProcess ; exists ; 2015 ; Interdisciplinary Literary Studies Volume 17 ; 17 ; >
+      
+  }
+
+  {
+
+    title <
+      name = Journal of Africana Religions ;
+      issn = 2165-5405 ;
+      eissn = 2165-5413 ;
+      issnl = 2165-5405
+    >
+
+      param[journal_id] = jafrireli
+
+      au < superseded ; exists ; 2013 ; Journal of Africana Religions Volume 1 [superseded] ; 1 ; >
+      au < superseded ; exists ; 2013 ; Journal of Africana Religions Volume 2 [superseded] ; 2 ; >
+      au < finished ; finished ; 2014 ; Journal of Africana Religions Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; exists ; 2015 ; Journal of Africana Religions Volume 4 ; 4 ; >
+      
+  }
+
+  {
+
+    title <
+      name = Journal of Assessment and Institutional Effectiveness ;
+      issn = 2160-6765 ;
+      eissn = 2160-6757 ;
+      issnl = 2160-6757
+    >
+
+      param[journal_id] = jasseinsteffe
+
+      au < doNotProcess ; exists ; 2010 ; Journal of Assessment and Institutional Effectiveness Volume 1 ; 1 ; >
+      au < superseded ; exists ; 2012 ; Journal of Assessment and Institutional Effectiveness Volume 2 [superseded] ; 2 ; >
+      au < superseded ; exists ; 2013 ; Journal of Assessment and Institutional Effectiveness Volume 3 [superseded] ; 3 ; >
+      au < finished ; finished ; 2014 ; Journal of Assessment and Institutional Effectiveness Volume 4 ; 4 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; exists ; 2015 ; Journal of Assessment and Institutional Effectiveness Volume 5 ; 5 ; >
+      
+  }
+
+  {
+
+    title <
+      name = The Journal of Ayn Rand Studies ;
+      issn = 1526-1018 ;
+      eissn = 2169-7132 ;
+      issnl = 1526-1018
+    >
+
+      param[journal_id] = jaynrandstud
+
+      au < superseded ; exists ; 2011 ; The Journal of Ayn Rand Studies Volume 11 [superseded] ; 11 ; >
+      au < superseded ; exists ; 2012 ; The Journal of Ayn Rand Studies Volume 12 [superseded] ; 12 ; >
+      au < superseded ; exists ; 2013 ; The Journal of Ayn Rand Studies Volume 13 [superseded] ; 13 ; >
+      au < finished ; finished ; 2014 ; The Journal of Ayn Rand Studies Volume 14 ; 14 ; >
+      au < doNotProcess ; exists ; 2015 ; The Journal of Ayn Rand Studies Volume 15 ; 15 ; >
+      
+  }
+
+  {
+
+    title <
+      name = Journal of Eastern Mediterranean Archaeology & Heritage Studies ;
+      issn = 2166-3548 ;
+      eissn = 2166-3556 ;
+      issnl = 2166-3548
+    >
+
+      param[journal_id] = jeasmedarcherstu
+
+      au < finished ; finished ; 2013 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 1 ; 1 ; >
+      au < superseded ; exists ; 2014 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 2 [superseded] ; 2 ; >
+      au < doNotProcess ; exists ; 2015 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 3 ; 3 ; >
+
+  }
+
+  {
+
+    title <
+      name = The Journal of General Education ;
+      issn = 0021-3667 ;
+      eissn = 1527-2060 ;
+      issnl = 0021-3667
+    >
+
+      param[journal_id] = jgeneeduc
+
+      au < doNotProcess ; exists ; 2010 ; The Journal of General Education Volume 59 ; 59 ; >
+      au < doNotProcess ; exists ; 2011 ; The Journal of General Education Volume 60 ; 60 ; >
+      au < finished ; finished ; 2012 ; The Journal of General Education Volume 61 ; 61 ; >
+      au < finished ; finished ; 2013 ; The Journal of General Education Volume 62 ; 62 ; >
+      au < finished ; finished ; 2014 ; The Journal of General Education Volume 63 ; 63 ; >
+      au < doNotProcess ; exists ; 2015 ; The Journal of General Education Volume 64 ; 64 ; >
+      
+  }
+
+  {
+
+    title <
+      name = Journal of Medieval Religious Cultures ;
+      issn = 1947-6566 ;
+      eissn = 2153-9650 ;
+      issnl = 1947-6566
+    >
+
+      param[journal_id] = jmedirelicult
+      comment[continues] = Mystics Quarterly 0742-5503
+
+      au < doNotProcess ; exists ; 2010 ; Journal of Medieval Religious Cultures Volume 36 ; 36 ; >
+      au < doNotProcess ; exists ; 2011 ; Journal of Medieval Religious Cultures Volume 37 ; 37 ; >
+      au < finished ; finished ; 2012 ; Journal of Medieval Religious Cultures Volume 38 ; 38 ; >
+      au < superseded ; exists ; 2013 ; Journal of Medieval Religious Cultures Volume 39 [superseded] ; 39 ; >
+      au < finished ; finished ; 2014 ; Journal of Medieval Religious Cultures Volume 40 ; 40 ; >
+      au < doNotProcess ; exists ; 2015 ; Journal of Medieval Religious Cultures Volume 41 ; 41 ; >
+      
+  }
+
+  {
+
+    title <
+      name = Journal of Modern Periodical Studies ;
+      issn = 1947-6574 ;
+      eissn = 2152-9272 ;
+      issnl = 1947-6574
+    >
+
+      param[journal_id] = jmodeperistud
+
+      au < doNotProcess ; exists ; 2010 ; Journal of Modern Periodical Studies Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2011 ; Journal of Modern Periodical Studies Volume 2 ; 2 ; >
+      au < finished ; finished ; 2012 ; Journal of Modern Periodical Studies Volume 3 ; 3 ; >
+      au < finished ; finished ; 2013-2014 ; Journal of Modern Periodical Studies Volume 4 ; 4 ; >
+      au < finished ; finished ; 2014-2015 ; Journal of Modern Periodical Studies Volume 5 ; 5 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; exists ; 2015-2016 ; Journal of Modern Periodical Studies Volume 6 ; 6 ; >
+      
+  }
+
+  {
+
+    title <
+      name = Journal of Moravian History ;
+      issn = 1933-6632 ;
+      eissn = 2161-6310 ;
+      issnl = 1933-6632
+    >
+      # volume 14 has urls for issues from an older, different journal. http://www.jstor.org/clockss/jmorahist/14/index.html
+      comment[1] = Publisher reports that they cannot fix this issue.
+      param[journal_id] = jmorahist
+
+      au < doNotProcess ; exists ; 2010 ; Journal of Moravian History Volume 8 ; 8 ; >
+      au < doNotProcess ; exists ; 2010 ; Journal of Moravian History Volume 9 ; 9 ; >
+      au < doNotProcess ; exists ; 2011 ; Journal of Moravian History Volume 10 ; 10 ; >
+      au < superseded ; exists ; 2011 ; Journal of Moravian History Volume 11 [superseded] ; 11 ; >
+      au < superseded ; exists ; 2012 ; Journal of Moravian History Volume 12 [superseded] ; 12 ; >
+      au < finished ; finished ; 2013 ; Journal of Moravian History Volume 13 ; 13 ; >
+      au < doNotProcess ; exists ; 2014 ; Journal of Moravian History Volume 14 ; 14 ; >
+      au < doNotProcess ; exists ; 2015 ; Journal of Moravian History Volume 15 ; 15 ; >
+      
+
+  }
+
+  {
+
+    title <
+      name = The Journal of Nietzsche Studies ;
+      issn = 1538-4594 ;
+      eissn = 0968-8005 ;
+      issnl = 0968-8005
+    >
+
+      param[journal_id] = jnietstud
+
+      au < doNotProcess ; exists ; 2011 ; The Journal of Nietzsche Studies Volume 41 ; 41 ; >
+      au < doNotProcess ; exists ; 2011 ; The Journal of Nietzsche Studies Volume 42 ; 42 ; >
+      au < superseded ; exists ; 2012 ; The Journal of Nietzsche Studies Volume 43 [superseded] ; 43 ; >
+      au < finished ; finished ; 2013 ; The Journal of Nietzsche Studies Volume 44 ; 44 ; >
+      au < finished ; finished ; 2014 ; The Journal of Nietzsche Studies Volume 45 ; 45 ; >
+      au < doNotProcess ; exists ; 2015 ; The Journal of Nietzsche Studies Volume 46 ; 46 ; >
+      
+  }
+
+  {
+
+    title <
+      name = The Journal of Speculative Philosophy ;
+      issn = 0891-625X ;
+      eissn = 1527-9383 ;
+      issnl = 0891-625X
+    >
+
+      param[journal_id] = jspecphil
+
+      au < doNotProcess ; exists ; 2010 ; The Journal of Speculative Philosophy Volume 24 ; 24 ; >
+      au < doNotProcess ; exists ; 2011 ; The Journal of Speculative Philosophy Volume 25 ; 25 ; >
+      au < finished ; finished ; 2012 ; The Journal of Speculative Philosophy Volume 26 ; 26 ; >
+      au < finished ; finished ; 2013 ; The Journal of Speculative Philosophy Volume 27 ; 27 ; >
+      au < superseded ; exists ; 2014 ; The Journal of Speculative Philosophy Volume 28 [superseded] ; 28 ; >
+      au < doNotProcess ; exists ; 2015 ; The Journal of Speculative Philosophy Volume 29 ; 29 ; >
+      
+  }
+
+  {
+
+    title <
+      name = The Mark Twain Annual ;
+      issn = 1553-0981 ;
+      eissn = 1756-2597 ;
+      issnl = 1553-0981
+    >
+
+      param[journal_id] = marktwaij
+      
+      comment[format] = AUs with no date in the title typically do not have manifest page. See http://www.jstor.org/action/showPublication?journalCode=marktwaij
+
+      au < doNotProcess ; exists ; 2010 ; The Mark Twain Annual Volume 8 ; 8 ; >
+      au < doNotProcess ; exists ; 2011 ; The Mark Twain Annual Volume 9 ; 9 ; >
+      au < doNotProcess ; exists ; 2012 ; The Mark Twain Annual Volume 10 ; 10 ; >
+      au < superseded ; exists ; 2013 ; The Mark Twain Annual Volume 11 [superseded] ; 11 ; >
+      au < finished ; finished ; 2014 ; The Mark Twain Annual Volume 12 ; 12 ; >
+      au < doNotProcess ; exists ; 2015 ; The Mark Twain Annual Volume 13 ; 13 ; >
+      
+  }
+
+  {
+
+    title <
+      name = Mediterranean Studies ;
+      issn = 1074-164X ;
+      eissn = 2161-4741 ;
+      issnl = 1074-164X
+    >
+
+    # This title moved from Manchester University Press to Pennsylvania State University Press
+    # See pennsylvania_state_university_press.ingenta.tdb for 2005-2010
+
+      param[journal_id] = mediterraneanstu
+
+      au < doNotProcess ; doNotProcess ; 2010 ; Mediterranean Studies Volume 19 ; 19 ; >
+      au < superseded ; exists ; 2012 ; Mediterranean Studies Volume 20 [superseded] ; 20 ; >
+      au < superseded ; exists ; 2013 ; Mediterranean Studies Volume 21 [superseded] ; 21 ; >
+      au < superseded ; exists ; 2014 ; Mediterranean Studies Volume 22 [superseded] ; 22 ; >
+      au < doNotProcess ; exists ; 2015 ; Mediterranean Studies Volume 23 ; 23 ; >
+      
+  }
+
+#  {
+#
+#    title <
+#      name = Mystics Quarterly ;
+#      issn = 0742-5503 ;
+#      issnl = 0742-5503
+#    >
+#
+#      param[journal_id] = mysticsquarterly
+#      comment[years] = 1984-2009. Outside of contract years.
+#      comment[continues] = 14th Century English Mystics Newsletter 0737-5840
+#      comment[continued_by] = Journal of Medieval Religious Cultures 1947-6566
+#      
+#  }
+
+  {
+    title <
+      name = Pacific Coast Philology ;
+      issn = 0078-7469 ;
+      eissn = 2326-067X ;
+      issnl = 0078-7469
+    >
+    
+      comment[v45] = no substance. Link on manifest page has errors. http://www.jstor.org/clockss/pacicoasphil/45/index.html
+      comment[v46] = only collected articles for the special issue 2. http://www.jstor.org/clockss/pacicoasphil/46/index.html
+      comment[v47] = no substance. Links on manifest page have errors.
+
+      param[journal_id] = pacicoasphil
+
+      au < doNotProcess ; exists ; 2010 ; Pacific Coast Philology Volume 45 ; 45 ; >
+      au < doNotProcess ; exists ; 2011 ; Pacific Coast Philology Volume 46 ; 46 ; >
+      au < doNotProcess ; exists ; 2012 ; Pacific Coast Philology Volume 47 ; 47 ; >
+      au < finished ; finished ; 2013 ; Pacific Coast Philology Volume 48 ; 48 ; >
+      au < finished ; finished ; 2014 ; Pacific Coast Philology Volume 49 ; 49 ; >
+      au < doNotProcess ; exists ; 2015 ; Pacific Coast Philology Volume 50 ; 50 ; >
+      
+  }
+
+  {
+    title <
+      name = Pennsylvania History: A Journal of Mid-Atlantic Studies ;
+      issn = 0031-4528 ;
+      eissn = 2153-2109 ;
+      issnl = 0031-4528
+    >
+
+      param[journal_id] = pennhistory
+
+      au < superseded ; exists ; 2010 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 77 [superseded] ; 77 ; >
+      au < finished ; finished ; 2011 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 78 ; 78 ; >
+      au < superseded ; exists ; 2012 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 79 [superseded] ; 79 ; >
+      au < finished ; finished ; 2013 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 80 ; 80 ; >
+      au < finished ; finished ; 2014 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 81 ; 81 ; >
+      au < doNotProcess ; exists ; 2015 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 82 ; 82 ; >
+      
+  }
+
+  {
+
+    title <
+      name = Philosophy and Rhetoric ;
+      issn = 1527-2079 ;
+      eissn = 0031-8213 ;
+      issnl = 0031-8213
+    >
+
+      param[journal_id] = philrhet
+
+      au < doNotProcess ; exists ; 2010 ; Philosophy and Rhetoric Volume 43 ; 43 ; >
+      au < doNotProcess ; exists ; 2011 ; Philosophy and Rhetoric Volume 44 ; 44 ; >
+      au < finished ; finished ; 2012 ; Philosophy and Rhetoric Volume 45 ; 45 ; >
+      au < finished ; finished ; 2013 ; Philosophy and Rhetoric Volume 46 ; 46 ; >
+      au < finished ; finished ; 2014 ; Philosophy and Rhetoric Volume 47 ; 47 ; >
+      au < doNotProcess ; exists ; 2015 ; Philosophy and Rhetoric Volume 48 ; 48 ; >
+      
+  }
+
+  {
+
+    title <
+      name = Preternature: Critical and Historical Studies on the Preternatural ;
+      issn = 2161-2196 ;
+      eissn = 2161-2188 ;
+      issnl = 2161-2188
+    >
+
+      param[journal_id] = preternature
+
+      au < superseded ; exists ; 2012 ; Preternature: Critical and Historical Studies on the Preternatural Volume 1 [superseded] ; 1 ; >
+      au < finished ; finished ; 2013 ; Preternature: Critical and Historical Studies on the Preternatural Volume 2 ; 2 ; >
+      au < superseded ; exists ; 2014 ; Preternature: Critical and Historical Studies on the Preternatural Volume 3 [superseded] ; 3 ; >
+      au < doNotProcess ; exists ; 2015 ; Preternature: Critical and Historical Studies on the Preternatural Volume 4 ; 4 ; >
+
+  }
+
+  {
+
+    title <
+      name = Reception: Texts, Readers, Audiences, History ;
+      issn = 2168-0604 ;
+      eissn = 2155-7888 ;
+      issnl = 2168-0604
+    >
+    
+      comment[notReady] = differently formed issue links, don't match what is on manifest pages.
+    
+      param[journal_id] = reception
+
+      au < doNotProcess ; exists ; 2010 ; Reception: Texts, Readers, Audiences, History Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2011 ; Reception: Texts, Readers, Audiences, History Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2012 ; Reception: Texts, Readers, Audiences, History Volume 4 ; 4 ; >
+      au < finished ; finished ; 2013 ; Reception: Texts, Readers, Audiences, History Volume 5 ; 5 ; >
+      au < finished ; finished ; 2014 ; Reception: Texts, Readers, Audiences, History Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2015 ; Reception: Texts, Readers, Audiences, History Volume 7 ; 7 ; >
+
+  }
+
+  {
+
+    title <
+      name = SHAW: The Journal of Bernard Shaw Studies ;
+      issn = 0741-5842 ;
+      eissn = 1529-1480 ;
+      issnl = 0741-5842
+    >
+
+      param[journal_id] = shaw
+      # Volume 30 has an error
+
+      au < doNotProcess ; exists ; 2010 ; SHAW The Annual of Bernard Shaw Studies Volume 30 ; 30 ; >
+      au < doNotProcess ; exists ; 2011 ; SHAW The Annual of Bernard Shaw Studies Volume 31 ; 31 ; >
+      au < superseded ; exists ; 2012 ; SHAW The Annual of Bernard Shaw Studies Volume 32 [superseded] ; 32 ; >
+      au < superseded ; exists ; 2013 ; SHAW The Annual of Bernard Shaw Studies Volume 33 [superseded] ; 33 ; >
+      au < finished ; finished ; 2014 ; SHAW The Annual of Bernard Shaw Studies Volume 34 ; 34 ; >
+      au < doNotProcess ; exists ; 2015 ; SHAW: The Journal of Bernard Shaw Studies Volume 35 ; 35 ; >
+      
+  }
+
+  {
+
+    title <
+      name = Soundings: An Interdisciplinary Journal ;
+      issn = 0038-1861 ;
+      eissn = 2161-6302 ;
+      issnl = 0038-1861
+    >
+
+      param[journal_id] = soundings
+
+      au < doNotProcess ; exists ; 2010 ; Soundings: An Interdisciplinary Journal Volume 93 ; 93 ; >
+      au < doNotProcess ; exists ; 2011 ; Soundings: An Interdisciplinary Journal Volume 94 ; 94 ; >
+      au < finished ; finished ; 2012 ; Soundings: An Interdisciplinary Journal Volume 95 ; 95 ; >
+      au < superseded ; exists ; 2013 ; Soundings: An Interdisciplinary Journal Volume 96 [superseded] ; 96 ; >
+      au < superseded ; exists ; 2014 ; Soundings: An Interdisciplinary Journal Volume 97 [superseded] ; 97 ; >
+      au < doNotProcess ; exists ; 2015 ; Soundings: An Interdisciplinary Journal Volume 98 ; 98 ; >
+      
+  }
+
+  {
+
+    title <
+      name = Steinbeck Review ;
+      issn = 1546-007X ;
+      eissn = 1754-6087 ;
+      issnl = 1546-007X
+    >
+
+      param[journal_id] = steinbeckreview
+
+      au < doNotProcess ; exists ; 2010 ; Steinbeck Review Volume 7 ; 7 ; >
+      au < doNotProcess ; exists ; 2011 ; Steinbeck Review Volume 8 ; 8 ; >
+      au < superseded ; exists ; 2012 ; Steinbeck Review Volume 9 [superseded] ; 9 ; >
+      au < superseded ; exists ; 2013 ; Steinbeck Review Volume 10 [superseded] ; 10 ; >
+      au < finished ; finished ; 2014 ; Steinbeck Review Volume 11 ; 11 ; >
+      au < doNotProcess ; exists ; 2015 ; Steinbeck Review Volume 12 ; 12 ; >
+      
+  }
+
+  {
+
+    title <
+      name = Studies in American Jewish Literature ;
+      issn = 0271-9274 ;
+      eissn = 1948-5077 ;
+      issnl = 0271-9274
+    >
+
+      param[journal_id] = studamerjewilite
+
+      au < doNotProcess ; exists ; 2010 ; Studies in American Jewish Literature Volume 29 ; 29 ; >
+      au < doNotProcess ; exists ; 2011 ; Studies in American Jewish Literature Volume 30 ; 30 ; >
+      au < superseded ; exists ; 2012 ; Studies in American Jewish Literature Volume 31 [superseded] ; 31 ; >
+      au < superseded ; exists ; 2013 ; Studies in American Jewish Literature Volume 32 [superseded] ; 32 ; >
+      au < superseded ; exists ; 2014 ; Studies in American Jewish Literature Volume 33 [superseded] ; 33 ; >
+      au < doNotProcess ; exists ; 2015 ; Studies in American Jewish Literature Volume 34 ; 34 ; >
+      
+  }
+
+  {
+
+    title <
+      name = Transportation Journal ;
+      issn = 0041-1612 ;
+      eissn = 2157-328X ;
+      issnl = 0041-1612
+    >
+
+      param[journal_id] = transportationj
+
+      au < doNotProcess ; exists ; 2010 ; Transportation Journal Volume 49 ; 49 ; >
+      au < doNotProcess ; exists ; 2011 ; Transportation Journal Volume 50 ; 50 ; >
+      au < superseded ; exists ; 2012 ; Transportation Journal Volume 51 [superseded] ; 51 ; >
+      au < superseded ; exists ; 2013 ; Transportation Journal Volume 52 [superseded] ; 52 ; >
+      au < superseded ; exists ; 2014 ; Transportation Journal Volume 53 [superseded] ; 53 ; >
+      au < doNotProcess ; exists ; 2015 ; Transportation Journal Volume 54 ; 54 ; >
+      
+  }
+
+  {
+
+    title <
+      name = Utopian Studies ;
+      issn = 1045-991X ;
+      eissn = 2154-9648 ;
+      issnl = 1045-991X
+    >
+
+      param[journal_id] = utopianstudies
+
+      au < doNotProcess ; exists ; 2010 ; Utopian Studies Volume 21 ; 21 ; >
+      au < doNotProcess ; exists ; 2011 ; Utopian Studies Volume 22 ; 22 ; >
+      au < superseded ; exists ; 2012 ; Utopian Studies Volume 23 [superseded] ; 23 ; >
+      au < superseded ; exists ; 2013 ; Utopian Studies Volume 24 [superseded] ; 24 ; >
+      au < finished ; finished ; 2014 ; Utopian Studies Volume 25 ; 25 ; >
+      au < doNotProcess ; exists ; 2015 ; Utopian Studies Volume 26 ; 26 ; >
+      
+  }
+
+}

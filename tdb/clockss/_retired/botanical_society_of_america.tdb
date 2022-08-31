@@ -1,0 +1,73 @@
+{
+
+  publisher <
+    name = Botanical Society of America ;
+    info[contract] = 2012 ; 
+    info[tester] = 8 ;
+    info[poller] = 6
+    
+  >
+  
+  {
+  
+    title <
+      name = American Journal of Botany (AJB) ;
+      issn = 0002-9122 ;
+      eissn = 1537-2197 ;
+      issnl = 0002-9122
+    >
+    
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+    param[base_url] = http://www.amjbot.org/
+    implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+    ####moved to Wiley
+
+    au < doNotProcess ; exists ; 1997 ; American Journal of Botany Volume 84 ; 84 ; >
+    au < doNotProcess ; exists ; 1998 ; American Journal of Botany Volume 85 ; 85 ; >
+    au < doNotProcess ; exists ; 1999 ; American Journal of Botany Volume 86 ; 86 ; >
+    au < doNotProcess ; exists ; 2000 ; American Journal of Botany Volume 87 ; 87 ; >
+    au < doNotProcess ; exists ; 2001 ; American Journal of Botany Volume 88 ; 88 ; >
+    au < doNotProcess ; exists ; 2002 ; American Journal of Botany Volume 89 ; 89 ; >
+    au < doNotProcess ; exists ; 2003 ; American Journal of Botany Volume 90 ; 90 ; >
+    au < doNotProcess ; exists ; 2004 ; American Journal of Botany Volume 91 ; 91 ; >
+    au < doNotProcess ; exists ; 2005 ; American Journal of Botany Volume 92 ; 92 ; >
+    au < doNotProcess ; exists ; 2006 ; American Journal of Botany Volume 93 ; 93 ; >
+    au < doNotProcess ; exists ; 2007 ; American Journal of Botany Volume 94 ; 94 ; >
+    au < doNotProcess ; exists ; 2008 ; American Journal of Botany Volume 95 ; 95 ; >
+    au < doNotProcess ; exists ; 2009 ; American Journal of Botany Volume 96 ; 96 ; >
+    au < finished ; crawling ; 2010 ; American Journal of Botany Volume 97 ; 97 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2011 ; American Journal of Botany Volume 98 ; 98 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2012 ; American Journal of Botany Volume 99 ; 99 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2013 ; American Journal of Botany Volume 100 ; 100 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; American Journal of Botany Volume 101 ; 101 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; American Journal of Botany Volume 102 ; 102 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2016 ; American Journal of Botany Volume 103 ; 103 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2017 ; American Journal of Botany Volume 104 ; 104 ; reingest4.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Applications in Plant Sciences (APPS) ;
+      eissn = 2168-0450
+    >
+
+    {
+    
+      plugin = org.lockss.plugin.bioone.ClockssBioOneAtyponPlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = apps
+      implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+      ####moved to Wiley
+
+      au < finished ; crawling ; 2013 ; Applications in Plant Sciences Volume 1 ; 1 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; Applications in Plant Sciences Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; Applications in Plant Sciences Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2016 ; Applications in Plant Sciences Volume 4 ; 4 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; Applications in Plant Sciences Volume 5 ; 5 ; reingest5.clockss.org:8082 >
+      #do not process any more. As of this date there is a v6 manifest page, but no v6 issues. http://www.bioone.org/lockss/apps/6/index.html
+    }
+  }
+
+}

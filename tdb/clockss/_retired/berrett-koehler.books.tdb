@@ -1,0 +1,281 @@
+{
+
+  publisher <
+    name = Berrett-Koehler ;
+    info[contract] = 2016 ;
+    info[back] = 1900 ;
+    info[tester] = 5 ;
+    info[poller] = 3
+  >
+  
+  attr[foo] = update the name.
+  plugin = org.lockss.plugin.ingenta.ClockssIngentaBooksPlugin
+  param[base_url] = http://www.ingentaconnect.com/
+  param[publisher_id] = bkpub
+  implicit < status1 ; status ; year ; isbn ; eisbn ; param[book_isbn] ; name ; proxy >
+ 
+  {
+  
+    title <
+      name = BK Books ;
+      type = bookSeries
+    >
+    #Berrett-Koehler Publishers are no longer hosted on Ingenta Connect
+    #Contract cancelled.
+
+    au < finished ; finished ; 1997 ; 9781605092690 ; ; 9781605092690 ; 301 Ways to Have Fun At Work ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1997 ; 9781605096230 ; ; 9781605096230 ; Expanding Our Now ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1997 ; 9781609941437 ; ; 9781609941437 ; Real Time Strategic Change ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1998 ; 9781609941444 ; ; 9781609941444 ; The New Management ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1998 ; 9781609941505 ; ; 9781609941505 ; Dance Lessons ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1999 ; 9781605092546 ; ; 9781605092546 ; A Simpler Way ; >
+    au < finished ; finished ; 1999 ; 9781605096247 ; ; 9781605096247 ; The Spirit of Leadership ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1999 ; 9781605096407 ; ; 9781605096407 ; Running Training Like a Business ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2000 ; 9781605093857 ; ; 9781605093857 ; The New Why Teams Don't Work ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2000 ; 9781605093963 ; ; 9781605093963 ; The Post-Corporate World ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2000 ; 9781605094632 ; ; 9781605094632 ; Profit Building ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2000 ; 9781605096193 ; ; 9781605096193 ; Identity Is Destiny ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2000 ; 9781605096254 ; ; 9781605096254 ; The Power of Spirit ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2001 ; 9781605092553 ; ; 9781605092553 ; The Influence Edge ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2001 ; 9781605092843 ; ; 9781605092843 ; Getting Things Done When You Are Not in Charge ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2001 ; 9781605093390 ; ; 9781605093390 ; Empowerment Takes More Than a Minute ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2001 ; 9781605094076 ; ; 9781605094076 ; Lean and Green ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2001 ; 9781605094106 ; ; 9781605094106 ; Teamwork Is an Individual Skill ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2001 ; 9781605097152 ; ; 9781605097152 ; The New SuperLeadership ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2001 ; 9781605098067 ; ; 9781605098067 ; Don't Kill the Bosses! ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2001 ; 9781605098494 ; ; 9781605098494 ; Attracting Perfect Customers ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2002 ; 9781605091495 ; ; 9781605091495 ; Why Decisions Fail ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2002 ; 9781605092850 ; ; 9781605092850 ; How to Make Collaboration Work ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2002 ; 9781605092980 ; ; 9781605092980 ; Working at Warp Speed ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2002 ; 9781605093680 ; ; 9781605093680 ; Change Is Everybody's Business ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2002 ; 9781605093895 ; ; 9781605093895 ; The Power of Failure ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2002 ; 9781605094274 ; ; 9781605094274 ; Inclusion Breakthrough ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2002 ; 9781605095677 ; ; 9781605095677 ; Responsible Restructuring ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2002 ; 9781605096100 ; ; 9781605096100 ; Accountability ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2002 ; 9781609941895 ; ; 9781609941895 ; Big Vision, Small Business ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2003 ; 9781576758755 ; ; 9781576758755 ; Love It, Don't Leave It ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2003 ; 9781576759622 ; ; 9781576759622 ; Emotional Discipline ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2003 ; 9781576759660 ; ; 9781576759660 ; Positive Organizational Scholarship ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2003 ; 9781605093888 ; ; 9781605093888 ; The Success Case Method ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2003 ; 9781605096124 ; ; 9781605096124 ; The Blind Men and the Elephant ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2003 ; 9781605096155 ; ; 9781605096155 ; Structured On-the-Job Training ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2003 ; 9781609941932 ; ; 9781609941932 ; Creating Leaderful Organizations ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2003 ; 9781605098364 ; ; 9781605098364 ; Be a Sales Superstar ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2004 ; 9781576758793 ; ; 9781576758793 ; You Don't Have to Do It Alone ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2004 ; 9781605092829 ; ; 9781605092829 ; Second Innocence ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2004 ; 9781605094083 ; ; 9781605094083 ; DEC Is Dead, Long Live DEC ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2004 ; 9781605097169 ; ; 9781605097169 ; Robert K. Greenleaf ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2004 ; 9781605098197 ; ; 9781605098197 ; Positively M. A. D. ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2004 ; 9781609942052 ; ; 9781609942052 ; The Serving Leader ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2004 ; 9781609942076 ; ; 9781609942076 ; Formula 2+2 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2005 ; 9781605092812 ; ; 9781605092812 ; Appreciative Inquiry ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2005 ; 9781605093345 ; ; 9781605093345 ; Organization Development ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2005 ; 9781576758014 ; ; 9781576758014 ; Strategic Business Partner ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2005 ; 9781576759615 ; ; 9781576759615 ; The Pebble and the Avalanche ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2005 ; 9781605090184 ; ; 9781605090184 ; One from Many ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2005 ; 9781605093338 ; ; 9781605093338 ; Research in Organizations ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2005 ; 9781605093901 ; ; 9781605093901 ; Stick Your Neck Out ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2005 ; 9781605096186 ; ; 9781605096186 ; Real Leadership ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2005 ; 9781609942045 ; ; 9781609942045 ; The Art of Business ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2006 ; 9781576757956 ; ; 9781576757956 ; Covert Processes at Work ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2006 ; 9781576758809 ; ; 9781576758809 ; Changing How the World Does Business ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2006 ; 9781576759356 ; ; 9781576759356 ; Consensus Through Conversations ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2006 ; 9781576759509 ; ; 9781576759509 ; True to Yourself ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2006 ; 9781605090177 ; ; 9781605090177 ; Ideas Are Free ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2006 ; 9781605092539 ; ; 9781605092539 ; Leading People Through Disasters ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2006 ; 9781605096421 ; ; 9781605096421 ; Magnetic Service ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2006 ; 9781605097077 ; ; 9781605097077 ; Making the Impossible Possible ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2006 ; 9781605098487 ; ; 9781605098487 ; Yes Lives in the Land of No ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2007 ; 9781576755099 ; ; 9781576755099 ; The Change Handbook ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2007 ; 9781576755150 ; ; 9781576755150 ; Don't Just Do Something, Stand There! ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2007 ; 9781576755181 ; ; 9781576755181 ; Fun Works ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2007 ; 9781576755235 ; ; 9781576755235 ; Show Me the Money ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2007 ; 9781576755310 ; ; 9781576755310 ; Get There Early ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2007 ; 9781576755358 ; ; 9781576755358 ; Seeing Systems ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2007 ; 9781576755396 ; ; 9781576755396 ; The Great Turning ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2007 ; 9781576755440 ; ; 9781576755440 ; Executive Coaching for Results ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2007 ; 9781576755518 ; ; 9781576755518 ; The Five Secrets You Must Discover Before You Die ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2007 ; 9781605093376 ; ; 9781605093376 ; Know Can Do! ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2007 ; 9781605093413 ; ; 9781605093413 ; Go Team! ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2008 ; 9781576755495 ; ; 9781576755495 ; Zenobia ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2008 ; 9781576755624 ; ; 9781576755624 ; The Appreciative Inquiry Handbook ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2008 ; 9781576757758 ; ; 9781576757758 ; Open Space Technology ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2008 ; 9781576757819 ; ; 9781576757819 ; Putting Our Differences to Work ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2008 ; 9781576757826 ; ; 9781576757826 ; The Change Cycle ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2008 ; 9781576757840 ; ; 9781576757840 ; Be BIG ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2008 ; 9781576759813 ; ; 9781576759813 ; Authentic Conversations ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2008 ; 9781576759820 ; ; 9781576759820 ; Courage Goes to Work ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2008 ; 9781576759875 ; ; 9781576759875 ; Wave Rider ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2009 ; 9781576756201 ; ; 9781576756201 ; Make Their Day! ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2009 ; 9781576757734 ; ; 9781576757734 ; Community ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2009 ; 9781576759004 ; ; 9781576759004 ; The Power of Collective Wisdom ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2009 ; 9781576759219 ; ; 9781576759219 ; The Four Conversations ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2009 ; 9781605092638 ; ; 9781605092638 ; Trauma Stewardship ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2009 ; 9781605092669 ; ; 9781605092669 ; The Art of Quantum Planning ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2009 ; 9781605092744 ; ; 9781605092744 ; The Courageous Follower ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2009 ; 9781605093055 ; ; 9781605093055 ; Power and Love ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2009 ; 9781605093505 ; ; 9781605093505 ; Whale Done Parenting ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2009 ; 9781605093833 ; ; 9781605093833 ; The Compromise Trap ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2010 ; 9781605090108 ; ; 9781605090108 ; Standing in the Fire ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2010 ; 9781605092584 ; ; 9781605092584 ; The Circle Way ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2010 ; 9781605093475 ; ; 9781605093475 ; Bootstrap Leadership ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2010 ; 9781605093536 ; ; 9781605093536 ; Wander Woman ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2010 ; 9781605093741 ; ; 9781605093741 ; Rebuilding Trust in the Workplace ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2010 ; 9781605093765 ; ; 9781605093765 ; Agenda for a New Economy ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2010 ; 9781605094298 ; ; 9781605094298 ; Future Search ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2010 ; 9781605094458 ; ; 9781605094458 ; Creative Community Organizing ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2010 ; 9781605094489 ; ; 9781605094489 ; Terms of Engagement ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2010 ; 9781605096049 ; ; 9781605096049 ; Engaging Emergence ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2010 ; 9781605096070 ; ; 9781605096070 ; Networking for People Who Hate Networking ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2010 ; 9781605096209 ; ; 9781605096209 ; The One Minute Negotiator ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2010 ; 9781605096308 ; ; 9781605096308 ; Your Leadership Legacy ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2011 ; 9781576758724 ; ; 9781576758724 ; Helping ; >
+    au < finished ; finished ; 2011 ; 9781605091365 ; ; 9781605091365 ; Women Lead the Way ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2011 ; 9781605094144 ; ; 9781605094144 ; Scenario Planning in Organizations ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2011 ; 9781605096018 ; ; 9781605096018 ; Useful Research ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2011 ; 9781605096599 ; ; 9781605096599 ; The Improvisation Edge ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2011 ; 9781605096698 ; ; 9781605096698 ; The Art of Convening ; >
+    au < finished ; finished ; 2011 ; 9781605097329 ; ; 9781605097329 ; Walk Out Walk On ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2011 ; 9781605098760 ; ; 9781605098760 ; Full Steam Ahead! ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2011 ; 9781605098838 ; ; 9781605098838 ; Collective Visioning ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2011 ; 9781605099323 ; ; 9781605099323 ; Make Talent Your Business ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2011 ; 9781605099521 ; ; 9781605099521 ; Mother Teresa, CEO ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2011 ; 9781605099767 ; ; 9781605099767 ; Wired and Dangerous ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2011 ; 9781609940058 ; ; 9781609940058 ; The Leadership Wisdom of Jesus ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2011 ; 9781609940089 ; ; 9781609940089 ; True North Groups ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2011 ; 9781609940331 ; ; 9781609940331 ; The New Entrepreneurial Leader ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2011 ; 9781609940584 ; ; 9781609940584 ; Stepping Up ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2011 ; 9781605095646 ; ; 9781605095646 ; Infinite Possibility ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2012 ; 9781605096957 ; ; 9781605096957 ; Great Leaders Grow ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2012 ; 9781609941215 ; ; 9781609941215 ; The Transforming Leader ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2012 ; 9781609942939 ; ; 9781609942939 ; Being Buddha at Work ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2012 ; 9781609944889 ; ; 9781609944889 ; Leaders Make the Future ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2012 ; 9781609945299 ; ; 9781609945299 ; Hungry Start-up Strategy ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2012 ; 9781609945404 ; ; 9781609945404 ; What To Do When There's Too Much To Do ; >
+    au < finished ; finished ; 2012 ; 9781609945671 ; ; 9781609945671 ; Positive Leadership ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2012 ; 9781609945749 ; ; 9781609945749 ; Managing for People Who Hate Managing ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2012 ; 9781609946333 ; ; 9781609946333 ; Help Them Grow or Watch Them Go ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 9781576755877 ; ; 9781576755877 ; The Introverted Leader ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 9781609940669 ; ; 9781609940669 ; I Moved Your Cheese ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 9781609942977 ; ; 9781609942977 ; Rethinking Money ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2013 ; 9781609945633 ; ; 9781609945633 ; Quiet Influence ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2013 ; 9781609946371 ; ; 9781609946371 ; The Empress Has No Clothes ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 9781609946456 ; ; 9781609946456 ; Leadership and the Art of Struggle ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 9781609947118 ; ; 9781609947118 ; Managers As Mentors ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 9781609947361 ; ; 9781609947361 ; Take Charge of Your Talent ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2013 ; 9781609947408 ; ; 9781609947408 ; I'm Sorry I Broke Your Company ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2013 ; 9781609947446 ; ; 9781609947446 ; It's the Way You Say It ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 9781609948016 ; ; 9781609948016 ; Yoga Wisdom at Work ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 9781609948023 ; ; 9781609948023 ; Opening Doors to Teamwork and Collaboration ; >
+    au < finished ; finished ; 2013 ; 9781609948108 ; ; 9781609948108 ; The Art of Insight ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 9781609948238 ; ; 9781609948238 ; Stewardship ; >
+    au < finished ; finished ; 2013 ; 9781609948269 ; ; 9781609948269 ; Embrace the Chaos ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 9781609948306 ; ; 9781609948306 ; How to Change Minds ; >
+    au < finished ; finished ; 2013 ; 9781609948382 ; ; 9781609948382 ; The Truth about Lies in the Workplace ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2013 ; 9781609948924 ; ; 9781609948924 ; Why Wait to Be Great? ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2013 ; 9781609949013 ; ; 9781609949013 ; Speaking Up ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 9781609949129 ; ; 9781609949129 ; Make an Ethical Difference ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 9781609949204 ; ; 9781609949204 ; The Seven Paths ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2013 ; 9781609949532 ; ; 9781609949532 ; Life Reimagined ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2013 ; 9781609949730 ; ; 9781609949730 ; Practicing Positive Leadership ; >
+    au < finished ; finished ; 2013 ; 9781609949822 ; ; 9781609949822 ; Humble Inquiry ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 9781609949907 ; ; 9781609949907 ; Learning from Leonardo ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; 9781626561465 ; ; 9781626561465 ; The Nonviolence Handbook ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; 9781609945541 ; ; 9781609945541 ; The Innovation Paradox ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; 9781609948146 ; ; 9781609948146 ; Ice Cream Social ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; 9781609948856 ; ; 9781609948856 ; Love 'Em or Lose 'Em ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; 9781609949280 ; ; 9781609949280 ; Affluenza ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; 9781609949693 ; ; 9781609949693 ; Execution IS the Strategy ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; 9781609949785 ; ; 9781609949785 ; Measuring and Improving Social Impacts ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; 9781609949945 ; ; 9781609949945 ; Making Sustainability Work ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; 9781626560291 ; ; 9781626560291 ; How to Be a Positive Leader ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; 9781626560482 ; ; 9781626560482 ; Be the Best Bad Presenter Ever ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; 9781626560611 ; ; 9781626560611 ; Fit at Last ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; 9781626560666 ; ; 9781626560666 ; The Discomfort Zone ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; 9781626560826 ; ; 9781626560826 ; Let's Stop Meeting Like This ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; 9781626560888 ; ; 9781626560888 ; Who Kidnapped Excellence? ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; 9781626560987 ; ; 9781626560987 ; Deepening Community ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; 9781626561076 ; ; 9781626561076 ; The Reciprocity Advantage ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; 9781626561205 ; ; 9781626561205 ; Employee Surveys That Work ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; 9781626561243 ; ; 9781626561243 ; The Idea-Driven Organization ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; 9781626561410 ; ; 9781626561410 ; Business Ethics ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; 9781626561595 ; ; 9781626561595 ; Power Through Partnership ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; 9781626561830 ; ; 9781626561830 ; Why Motivating People Doesn't Work . . . and What Does ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; 9781626561878 ; ; 9781626561878 ; Hello, My Name Is Awesome ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; 9781626561953 ; ; 9781626561953 ; The Rise of the American Corporate Security State ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; 9781626561991 ; ; 9781626561991 ; The Secret ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; 9781626562110 ; ; 9781626562110 ; Corporations Are Not People ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; 9781626562158 ; ; 9781626562158 ; With Liberty and Dividends for All ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; 9781626562196 ; ; 9781626562196 ; In Their Own Hands ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; 9781626562769 ; ; 9781626562769 ; The Intelligent Optimist's Guide to Life ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; 9781626560338 ; ; 9781626560338 ; How the Poor Can Save Capitalism ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2015 ; 9781626562035 ; ; 9781626562035 ; The Confidence Myth ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; 9781626562301 ; ; 9781626562301 ; Performance Consulting ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2015 ; 9781626562363 ; ; 9781626562363 ; Dare to Serve ; >
+    au < finished ; finished ; 2015 ; 9781626562448 ; ; 9781626562448 ; A Peacock in the Land of Penguins ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; 9781626562585 ; ; 9781626562585 ; Trust and Betrayal in the Workplace ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; 9781626562660 ; ; 9781626562660 ; Leadership for a Fractured World ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; 9781626562912 ; ; 9781626562912 ; Change the Story, Change the Future ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2015 ; 9781626562950 ; ; 9781626562950 ; Your Leadership Story ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; 9781626563025 ; ; 9781626563025 ; What's Your Future Worth? ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; 9781626563186 ; ; 9781626563186 ; Rebalancing Society ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; 9781626563308 ; ; 9781626563308 ; Sustainable Happiness ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; 9781626563346 ; ; 9781626563346 ; Refire! Don't Retire ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2015 ; 9781626563384 ; ; 9781626563384 ; The Resilient Investor ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; 9781626564022 ; ; 9781626564022 ; Lift ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; 9781626564053 ; ; 9781626564053 ; Dialogic Organization Development ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; 9781626564091 ; ; 9781626564091 ; A Crowdfunder's Strategy Guide ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; 9781609949570 ; ; 9781609949570 ; Bridging the Values Gap ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; 9781626563957 ; ; 9781626563957 ; Chess Not Checkers ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; 9781626566187 ; ; 9781626566187 ; Collaboration Begins with You ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; 9781626565739 ; ; 9781626565739 ; Find Your Balance Point ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; 9781626562516 ; ; 9781626562516 ; Got Your Attention? ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; 9781626563483 ; ; 9781626563483 ; Hello Stay Interviews, Goodbye Talent Loss ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; 9781626562844 ; ; 9781626562844 ; Hidden Strengths ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; 9781626564282 ; ; 9781626564282 ; Intelligent Disobedience ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; 9781626564138 ; ; 9781626564138 ; Lead More, Control Less ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; 9781626564428 ; ; 9781626564428 ; Leading Continuous Change ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; 9781626560567 ; ; 9781626560567 ; Strategic Analytics ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2015 ; 9781626565968 ; ; 9781626565968 ; The Daily Edge ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; 9781626563261 ; ; 9781626563261 ; The Disciplined Leader ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; 9781626563063 ; ; 9781626563063 ; The Genius of Opposites ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; 9781626566378 ; ; 9781626566378 ; The Power of Purpose ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; 9781626563520 ; ; 9781626563520 ; The Sisters Are Alright ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; 9781626565593 ; ; 9781626565593 ; Work Reimagined ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; 9781626563124 ; ; 9781626563124 ; You, Unstuck ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; 9781626566262 ; ; 9781626566262 ; Be the Boss Everyone Wants to Work For ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; 9781626566118 ; ; 9781626566118 ; Breaking the Trust Barrier ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2016 ; 9781626564206 ; ; 9781626564206 ; Building the Future ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2016 ; 9781626566347 ; ; 9781626566347 ; Change Your Questions, Change Your Life ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; 9781626565678 ; ; 9781626565678 ; Doing the Right Things Right ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; 9781626561670 ; ; 9781626561670 ; Entrepreneurs in Every Generation ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; 9781626568082 ; ; 9781626568082 ; Fiercely You ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2016 ; 9781626566781 ; ; 9781626566781 ; How Performance Management Is Killing Performance - and What to Do About It ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2016 ; 9781626567214 ; ; 9781626567214 ; Humble Consulting ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; 9781626566897 ; ; 9781626566897 ; Leadership Lessons from a UPS Driver ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; 9781626567740 ; ; 9781626567740 ; Leading with Character and Competence ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; 9781626565814 ; ; 9781626565814 ; Mastering the New Media Landscape ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2016 ; 9781626567412 ; ; 9781626567412 ; Mobilized ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2016 ; 9781626566989 ; ; 9781626566989 ; Negotiating the Impossible ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; 9781626567863 ; ; 9781626567863 ; Online Marketing for Busy Authors ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; 9781626567269 ; ; 9781626567269 ; Overcoming Bias ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; 9781626564664 ; ; 9781626564664 ; Shakti Leadership ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2016 ; 9781626566637 ; ; 9781626566637 ; The 3 Gaps ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2016 ; 9781626568426 ; ; 9781626568426 ; The Art of Community ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; 9781626565890 ; ; 9781626565890 ; The Gift of Anger ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; 9781626566460 ; ; 9781626566460 ; The Laws of Lifetime Growth ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; 9781626566941 ; ; 9781626566941 ; The Leadership Genius of Julius Caesar ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2016 ; 9781626561021 ; ; 9781626561021 ; The Multicultural Mind ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2016 ; 9781626566750 ; ; 9781626566750 ; The New Confessions of an Economic Hit Man ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; 9781626567160 ; ; 9781626567160 ; The Outward Mindset ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; 9781626568525 ; ; 9781626568525 ; The Referral of a Lifetime ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; 9781626566590 ; ; 9781626566590 ; The Reunited States of America ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2016 ; 9781626566156 ; ; 9781626566156 ; The Serving Leader, Second Edition ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2016 ; 9781626568464 ; ; 9781626568464 ; The Shareholder Action Guide ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; 9781626562806 ; ; 9781626562806 ; The Vanishing American Corporation ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2016 ; 9781626567993 ; ; 9781626567993 ; Theory U ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; 9781626566675 ; ; 9781626566675 ; You Are What You Believe ; reingest1.clockss.org:8082 >
+
+  }
+
+}

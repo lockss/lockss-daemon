@@ -1,0 +1,1451 @@
+{
+
+  publisher <
+    name = Libertas Academica ;
+    info[contract] = 2011 ;
+    info[tester] = 5 ;
+    info[poller] = 6
+  >
+
+  plugin = org.lockss.plugin.maffey.ClockssMaffeyPlugin
+  param[base_url] = http://www.la-press.com/
+  implicit < status1 ; status ; year ; name ; volume ; param[year] ; proxy >
+  #move to SAGE Publishing, but not yet to Atypon. Will move "later this year" with the
+  #possible exception of Analytical Chemistry Insights,,1177-3901 Autism Insights,,1179-5964 Cell Biology Insights,,1178-6272 
+  #Clinical Medicine Insights: Dermatology,,1179-5492 Immunotherapy Insights,,1179-1756 Integrative Medicine Insights,,1177-3936
+  #Particle Physics Insights,,1178-640X
+  #See RT8675
+
+  {
+
+    title <
+      name = Air, Soil & Water Research ;
+      eissn = 1178-6221
+
+    >
+
+    param[journal_id] = 99
+
+    au < doNotProcess ; exists ; 2008 ; Air, Soil & Water Research Volume 1 ; 1 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Air, Soil & Water Research Volume 2 ; 2 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Air, Soil & Water Research Volume 3 ; 3 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Air, Soil & Water Research Volume 4 ; 4 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Air, Soil & Water Research Volume 5 ; 5 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Air, Soil & Water Research Volume 6 ; 6 ; 2013 ; >
+    au < finished ; finished ; 2014 ; Air, Soil & Water Research Volume 7 ; 7 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Air, Soil & Water Research Volume 8 ; 8 ; 2015 ; reingest4.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Air, Soil & Water Research Volume 9 [superseded] ; 9 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Analytical Chemistry Insights ;
+      eissn = 1177-3901
+
+    >
+
+    param[journal_id] = 1
+
+    au < doNotProcess ; exists ; 2007 ; Analytical Chemistry Insights Volume 1-2 ; 1-2 ; 2007 ; >
+    au < doNotProcess ; exists ; 2008 ; Analytical Chemistry Insights Volume 3 ; 3 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Analytical Chemistry Insights Volume 4 ; 4 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Analytical Chemistry Insights Volume 5 ; 5 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Analytical Chemistry Insights Volume 6 ; 6 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Analytical Chemistry Insights Volume 7 ; 7 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Analytical Chemistry Insights Volume 8 ; 8 ; 2013 ; >
+    au < finished ; finished ; 2014 ; Analytical Chemistry Insights Volume 9 ; 9 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Analytical Chemistry Insights Volume 10 ; 10 ; 2015 ; reingest5.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Analytical Chemistry Insights Volume 11 [superseded] ; 11 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Autism Insights ;
+      eissn = 1179-5964
+
+    >
+
+
+    param[journal_id] = 155
+    # no longer published
+
+    au < finished ; finished ; 2009 ; Autism Insights Volume 1 ; 1 ; 2009 ; >
+    au < finished ; finished ; 2010 ; Autism Insights Volume 2 ; 2 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Autism Insights Volume 3 ; 3 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Autism Insights Volume 4 ; 4 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Autism Insights Volume 5 ; 5 ; 2013 ; >
+    au < finished ; finished ; 2014 ; Autism Insights Volume 6 ; 6 ; 2014 ; >
+  }
+
+  {
+
+    title <
+      name = Biochemistry Insights ;
+      eissn = 1178-6264
+
+    >
+
+    param[journal_id] = 95
+
+    au < doNotProcess ; exists ; 2008 ; Biochemistry Insights Volume 1 ; 1 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Biochemistry Insights Volume 2 ; 2 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Biochemistry Insights Volume 3 ; 3 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Biochemistry Insights Volume 4 ; 4 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Biochemistry Insights Volume 5 ; 5 ; 2012 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; Biochemistry Insights Volume 6 ; 6 ; 2013 ; >
+    au < finished ; finished ; 2014 ; Biochemistry Insights Volume 7 ; 7 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Biochemistry Insights Volume 8 ; 8 ; 2015 ; reingest5.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Biochemistry Insights Volume 9 [superseded] ; 9 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Bioinformatics and Biology Insights ;
+      eissn = 1177-9322
+
+    >
+
+    param[journal_id] = 39
+
+    au < doNotProcess ; exists ; 2007 ; Bioinformatics and Biology Insights Volume 1 ; 1 ; 2007 ; >
+    au < doNotProcess ; exists ; 2008 ; Bioinformatics and Biology Insights Volume 2 ; 2 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Bioinformatics and Biology Insights Volume 3 ; 3 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Bioinformatics and Biology Insights Volume 4 ; 4 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Bioinformatics and Biology Insights Volume 5 ; 5 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Bioinformatics and Biology Insights Volume 6 ; 6 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Bioinformatics and Biology Insights Volume 7 ; 7 ; 2013 ; >
+    au < finished ; finished ; 2014 ; Bioinformatics and Biology Insights Volume 8 ; 8 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Bioinformatics and Biology Insights Volume 9 ; 9 ; 2015 ; reingest3.clockss.org:8083 >
+    au < superseded ; exists ; 2016 ; Bioinformatics and Biology Insights Volume 10 [superseded] ; 10 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Biomarker Insights ;
+      eissn = 1177-2719
+
+    >
+
+    param[journal_id] = 4
+
+    au < doNotProcess ; exists ; 2006 ; Biomarker Insights Volume 1 ; 1 ; 2006 ; >
+    au < doNotProcess ; exists ; 2007 ; Biomarker Insights Volume 2 ; 2 ; 2007 ; >
+    au < doNotProcess ; exists ; 2008 ; Biomarker Insights Volume 3 ; 3 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Biomarker Insights Volume 4 ; 4 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Biomarker Insights Volume 5 ; 5 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Biomarker Insights Volume 6 ; 6 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Biomarker Insights Volume 7 ; 7 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Biomarker Insights Volume 8 ; 8 ; 2013 ; >
+    au < finished ; finished ; 2014 ; Biomarker Insights Volume 9 ; 9 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Biomarker Insights Volume 10 ; 10 ; 2015 ; reingest5.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Biomarker Insights Volume 11 [superseded] ; 11 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Biomarkers in Cancer ;
+      eissn = 1179-299X
+
+    >
+
+    param[journal_id] = 154
+
+    au < doNotProcess ; exists ; 2009 ; Biomarkers in Cancer Volume 1 ; 1 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Biomarkers in Cancer Volume 2 ; 2 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Biomarkers in Cancer Volume 3 ; 3 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Biomarkers in Cancer Volume 4 ; 4 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Biomarkers in Cancer Volume 5 ; 5 ; 2013 ; >
+    au < finished ; finished ; 2014 ; Biomarkers in Cancer Volume 6 ; 6 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Biomarkers in Cancer Volume 7 ; 7 ; 2015 ; reingest3.clockss.org:8083 >
+    au < superseded ; exists ; 2016 ; Biomarkers in Cancer Volume 8 [superseded] ; 8 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Biomedical Engineering and Computational Biology ;
+      eissn = 1179-5972
+
+    >
+
+    param[journal_id] = 170
+
+    au < doNotProcess ; exists ; 2009 ; Biomedical Engineering and Computational Biology Volume 1 ; 1 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Biomedical Engineering and Computational Biology Volume 2 ; 2 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Biomedical Engineering and Computational Biology Volume 3 ; 3 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Biomedical Engineering and Computational Biology Volume 4 ; 4 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Biomedical Engineering and Computational Biology Volume 5 ; 5 ; 2013 ; >
+    au < finished ; finished ; 2014 ; Biomedical Engineering and Computational Biology Volume 6 ; 6 ; 2014 ; >
+    au < superseded ; exists ; 2016 ; Biomedical Engineering and Computational Biology Volume 7 [superseded] ; 7 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Biomedical Informatics Insights ;
+      eissn = 1178-2226
+
+    >
+
+    param[journal_id] = 82
+
+    au < doNotProcess ; exists ; 2008 ; Biomedical Informatics Insights Volume 1 ; 1 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Biomedical Informatics Insights Volume 2 ; 2 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Biomedical Informatics Insights Volume 3 ; 3 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Biomedical Informatics Insights Volume 4 ; 4 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Biomedical Informatics Insights Volume 5 Suppl. 1 ; 5 ; 2012 ; reingest4.clockss.org:8082 > #disappeared from ingest5.
+    au < finished ; finished ; 2013 ; Biomedical Informatics Insights Volume 6 Suppl. 1 ; 6 ; 2013 ; reingest4.clockss.org:8082 > #disappeared from ingest5
+    au < finished ; finished ; 2015 ; Biomedical Informatics Insights Volume 7 ; 7 ; 2015 ; reingest4.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Biomedical Informatics Insights Volume 8 [superseded] ; 8 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Bone and Tissue Regeneration Insights ;
+      eissn = 1179-061X
+
+    >
+
+    param[journal_id] = 120
+
+    au < doNotProcess ; exists ; 2008 ; Bone and Tissue Regeneration Insights Volume 1 ; 1 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Bone and Tissue Regeneration Insights Volume 2 ; 2 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Bone and Tissue Regeneration Insights Volume 3 ; 3 ; 2010 ; >
+    au < finished ; finished ; 2013 ; Bone and Tissue Regeneration Insights Volume 4 ; 4 ; 2013 ; >
+    au < finished ; finished ; 2014 ; Bone and Tissue Regeneration Insights Volume 5 ; 5 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Bone and Tissue Regeneration Insights Volume 6 ; 6 ; 2015 ; reingest5.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Bone and Tissue Regeneration Insights Volume 7 [superseded] ; 7 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Breast Cancer: Basic and Clinical Research ;
+      eissn = 1178-2234
+
+    >
+
+    param[journal_id] = 84
+
+    au < doNotProcess ; exists ; 2008 ; Breast Cancer: Basic and Clinical Research Volume 1-2 ; 1-2 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Breast Cancer: Basic and Clinical Research Volume 3 ; 3 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Breast Cancer: Basic and Clinical Research Volume 4 ; 4 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Breast Cancer: Basic and Clinical Research Volume 5 ; 5 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Breast Cancer: Basic and Clinical Research Volume 6 ; 6 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Breast Cancer: Basic and Clinical Research Volume 7 ; 7 ; 2013 ; >
+    au < finished ; finished ; 2014 ; Breast Cancer: Basic and Clinical Research Volume 8 ; 8 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Breast Cancer: Basic and Clinical Research Volume 9 ; 9 ; 2015 ; reingest1.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Breast Cancer: Basic and Clinical Research Volume 10 [superseded] ; 10 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Cancer Growth and Metastasis ;
+      eissn = 1179-0644
+
+    >
+
+    param[journal_id] = 122
+
+    au < doNotProcess ; exists ; 2008 ; Cancer Growth and Metastasis Volume 1 ; 1 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Cancer Growth and Metastasis Volume 2 ; 2 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Cancer Growth and Metastasis Volume 3 ; 3 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Cancer Growth and Metastasis Volume 4 ; 4 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Cancer Growth and Metastasis Volume 5 ; 5 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Cancer Growth and Metastasis Volume 6 ; 6 ; 2013 ; >
+    au < finished ; finished ; 2014 ; Cancer Growth and Metastasis Volume 7 ; 7 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Cancer Growth and Metastasis Volume 8 ; 8 ; 2015 ; reingest5.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Cancer Growth and Metastasis Volume 9 [superseded] ; 9 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Cancer Informatics ;
+      eissn = 1176-9351
+
+    >
+
+    param[journal_id] = 10
+
+    au < doNotProcess ; exists ; 2005 ; Cancer Informatics Volume 1 ; 1 ; 2005 ; >
+    au < doNotProcess ; exists ; 2006 ; Cancer Informatics Volume 2 ; 2 ; 2006 ; >
+    au < doNotProcess ; exists ; 2007 ; Cancer Informatics Volume 3-5 ; 3-5 ; 2007 ; >
+    au < doNotProcess ; exists ; 2008 ; Cancer Informatics Volume 6 ; 6 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Cancer Informatics Volume 7-8 ; 7-8 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Cancer Informatics Volume 9 ; 9 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Cancer Informatics Volume 10 ; 10 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Cancer Informatics Volume 11 ; 11 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Cancer Informatics Volume 12 ; 12 ; 2013 ; >
+    au < finished ; finished ; 2014 ; Cancer Informatics Volume 13 ; 13 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Cancer Informatics Volume 14 ; 14 ; 2015 ; reingest5.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Cancer Informatics Volume 15 [superseded] ; 15 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Cell Biology Insights ;
+      eissn = 1178-6272
+
+    >
+
+    param[journal_id] = 96
+    # no years 2009-2014 as of 4/01/15
+
+    au < finished ; finished ; 2008 ; Cell Biology Insights Volume 1 ; 1 ; 2008 ; reingest3.clockss.org:8083 >
+
+  }
+
+  {
+
+    title <
+      name = Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders ;
+      eissn = 1179-5441
+
+    >
+
+    param[journal_id] = 46
+
+    au < finished ; finished ; 2008 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 1 ; 1 ; 2008 ; >
+    au < finished ; finished ; 2009 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 2 ; 2 ; 2009 ; >
+    au < finished ; finished ; 2010 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 3 ; 3 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 4 ; 4 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 5 ; 5 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 6 ; 6 ; 2013 ; >
+    au < finished ; finished ; 2014 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 7 ; 7 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 8 ; 8 ; 2015 ; reingest5.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 9 [superseded] ; 9 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Clinical Medicine Insights: Blood Disorders ;
+      eissn = 1179-545X
+
+    >
+
+    param[journal_id] = 63
+
+    au < doNotProcess ; exists ; 2008 ; Clinical Medicine Insights: Blood Disorders Volume 1 ; 1 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Clinical Medicine Insights: Blood Disorders Volume 2 ; 2 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Clinical Medicine Insights: Blood Disorders Volume 3 ; 3 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Clinical Medicine Insights: Blood Disorders Volume 4 ; 4 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Clinical Medicine Insights: Blood Disorders Volume 5 ; 5 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Clinical Medicine Insights: Blood Disorders Volume 6 ; 6 ; 2013 ; >
+    au < finished ; finished ; 2014 ; Clinical Medicine Insights: Blood Disorders Volume 7 ; 7 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Clinical Medicine Insights: Blood Disorders Volume 8 ; 8 ; 2015 ; reingest4.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Clinical Medicine Insights: Blood Disorders Volume 9 [superseded] ; 9 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Clinical Medicine Insights: Cardiology ;
+      eissn = 1179-5468
+
+    >
+
+    param[journal_id] = 48
+
+    au < doNotProcess ; exists ; 2007 ; Clinical Medicine Insights: Cardiology Volume 1 ; 1 ; 2007 ; >
+    au < doNotProcess ; exists ; 2008 ; Clinical Medicine Insights: Cardiology Volume 2 ; 2 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Clinical Medicine Insights: Cardiology Volume 3 ; 3 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Clinical Medicine Insights: Cardiology Volume 4 ; 4 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Clinical Medicine Insights: Cardiology Volume 5 ; 5 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Clinical Medicine Insights: Cardiology Volume 6 ; 6 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Clinical Medicine Insights: Cardiology Volume 7 ; 7 ; 2013 ; >
+    au < finished ; finished ; 2014 ; Clinical Medicine Insights: Cardiology Volume 8 ; 8 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Clinical Medicine Insights: Cardiology Volume 9 ; 9 ; 2015 ; reingest5.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Clinical Medicine Insights: Cardiology Volume 10 [superseded] ; 10 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Clinical Medicine Insights: Case Reports ;
+      eissn = 1179-5476
+
+    >
+
+    param[journal_id] = 91
+
+    au < doNotProcess ; exists ; 2008 ; Clinical Medicine Insights: Case Reports Volume 1 ; 1 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Clinical Medicine Insights: Case Reports Volume 2 ; 2 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Clinical Medicine Insights: Case Reports Volume 3 ; 3 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Clinical Medicine Insights: Case Reports Volume 4 ; 4 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Clinical Medicine Insights: Case Reports Volume 5 ; 5 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Clinical Medicine Insights: Case Reports Volume 6 ; 6 ; 2013 ; >
+    au < finished ; finished ; 2014 ; Clinical Medicine Insights: Case Reports Volume 7 ; 7 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Clinical Medicine Insights: Case Reports Volume 8 ; 8 ; 2015 ; reingest5.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Clinical Medicine Insights: Case Reports Volume 9 [superseded] ; 9 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine ;
+      eissn = 1179-5484
+
+    >
+
+    param[journal_id] = 44
+
+    au < doNotProcess ; exists ; 2007 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 1 ; 1 ; 2007 ; >
+    au < doNotProcess ; exists ; 2008 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 2 ; 2 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 3 ; 3 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 4 ; 4 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 5 ; 5 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 6 ; 6 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 7 ; 7 ; 2013 ; >
+    au < finished ; finished ; 2014 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 8 ; 8 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 9 ; 9 ; 2015 ; reingest5.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 10 [superseded] ; 10 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Clinical Medicine Insights: Dermatology ;
+      eissn = 1179-5492
+
+    >
+
+    param[journal_id] = 69
+    # no longer published
+
+    au < finished ; finished ; 2008 ; Clinical Medicine Insights: Dermatology Volume 1 ; 1 ; 2008 ; >
+    au < finished ; finished ; 2009 ; Clinical Medicine Insights: Dermatology Volume 2 ; 2 ; 2009 ; >
+    au < finished ; finished ; 2010 ; Clinical Medicine Insights: Dermatology Volume 3 ; 3 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Clinical Medicine Insights: Dermatology Volume 4 ; 4 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Clinical Medicine Insights: Dermatology Volume 5 ; 5 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Clinical Medicine Insights: Dermatology Volume 6 ; 6 ; 2013 ; >
+    au < finished ; finished ; 2014 ; Clinical Medicine Insights: Dermatology Volume 7 ; 7 ; 2014 ; >
+
+  }
+
+  {
+
+    title <
+      name = Clinical Medicine Insights: Ear, Nose and Throat ;
+      eissn = 1179-5506
+
+    >
+
+    param[journal_id] = 61
+
+    au < doNotProcess ; exists ; 2008 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 1 ; 1 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 2 ; 2 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 3 ; 3 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 4 ; 4 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 5 ; 5 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 6 ; 6 ; 2013 ; >
+    au < finished ; finished ; 2014 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 7 ; 7 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 8 ; 8 ; 2015 ; reingest4.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 9 [superseded] ; 9 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Clinical Medicine Insights: Endocrinology and Diabetes ;
+      eissn = 1179-5514
+
+    >
+
+    param[journal_id] = 65
+
+    au < doNotProcess ; exists ; 2008 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 1 ; 1 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 2 ; 2 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 3 ; 3 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 4 ; 4 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 5 ; 5 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 6 ; 6 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 7 ; 7 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 8 ; 8 ; 2015 ; reingest5.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 9 [superseded] ; 9 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Clinical Medicine Insights: Gastroenterology ;
+      eissn = 1179-5522
+
+    >
+
+    param[journal_id] = 56
+
+    au < doNotProcess ; exists ; 2008 ; Clinical Medicine Insights: Gastroenterology Volume 1 ; 1 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Clinical Medicine Insights: Gastroenterology Volume 2 ; 2 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Clinical Medicine Insights: Gastroenterology Volume 3 ; 3 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Clinical Medicine Insights: Gastroenterology Volume 4 ; 4 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Clinical Medicine Insights: Gastroenterology Volume 5 ; 5 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Clinical Medicine Insights: Gastroenterology Volume 6 ; 6 ; 2013 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Clinical Medicine Insights: Gastroenterology Volume 7 ; 7 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Clinical Medicine Insights: Gastroenterology Volume 8 ; 8 ; 2015 ; reingest5.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Clinical Medicine Insights: Gastroenterology Volume 9 [superseded] ; 9 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Clinical Medicine Insights: Oncology ;
+      eissn = 1179-5549
+
+    >
+
+    param[journal_id] = 42
+
+    au < doNotProcess ; exists ; 2007 ; Clinical Medicine Insights: Oncology Volume 1 ; 1 ; 2007 ; >
+    au < doNotProcess ; exists ; 2008 ; Clinical Medicine Insights: Oncology Volume 2 ; 2 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Clinical Medicine Insights: Oncology Volume 3 ; 3 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Clinical Medicine Insights: Oncology Volume 4 ; 4 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Clinical Medicine Insights: Oncology Volume 5 ; 5 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Clinical Medicine Insights: Oncology Volume 6 ; 6 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Clinical Medicine Insights: Oncology Volume 7 ; 7 ; 2013 ; >
+    au < finished ; finished ; 2014 ; Clinical Medicine Insights: Oncology Volume 8 ; 8 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Clinical Medicine Insights: Oncology Volume 9 ; 9 ; 2015 ; reingest4.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Clinical Medicine Insights: Oncology Volume 10 [superseded] ; 10 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Clinical Medicine Insights: Pathology ;
+      eissn = 1179-5557
+
+    >
+
+    param[journal_id] = 54
+
+    au < doNotProcess ; exists ; 2008 ; Clinical Medicine Insights: Pathology Volume 1 ; 1 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Clinical Medicine Insights: Pathology Volume 2 ; 2 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Clinical Medicine Insights: Pathology Volume 3 ; 3 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Clinical Medicine Insights: Pathology Volume 4 ; 4 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Clinical Medicine Insights: Pathology Volume 5 ; 5 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Clinical Medicine Insights: Pathology Volume 6 ; 6 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Clinical Medicine Insights: Pathology Volume 7 ; 7 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Clinical Medicine Insights: Pathology Volume 8 ; 8 ; 2015 ; reingest3.clockss.org:8083 >
+    au < superseded ; exists ; 2016 ; Clinical Medicine Insights: Pathology Volume 9 [superseded] ; 9 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Clinical Medicine Insights: Pediatrics ;
+      eissn = 1179-5565
+
+    >
+
+    param[journal_id] = 78
+
+    au < doNotProcess ; exists ; 2008 ; Clinical Medicine Insights: Pediatrics Volume 1-2 ; 1-2 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Clinical Medicine Insights: Pediatrics Volume 3 ; 3 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Clinical Medicine Insights: Pediatrics Volume 4 ; 4 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Clinical Medicine Insights: Pediatrics Volume 5 ; 5 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Clinical Medicine Insights: Pediatrics Volume 6 ; 6 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Clinical Medicine Insights: Pediatrics Volume 7 ; 7 ; 2013 ; >
+    au < finished ; finished ; 2014 ; Clinical Medicine Insights: Pediatrics Volume 8 ; 8 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Clinical Medicine Insights: Pediatrics Volume 9 ; 9 ; 2015 ; reingest5.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Clinical Medicine Insights: Pediatrics Volume 10 [superseded] ; 10 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Clinical Medicine Insights: Psychiatry ;
+      eissn = 1179-5573
+
+    >
+
+    param[journal_id] = 88
+    # no years 2010, 2013 as of 10/4/13
+
+    au < doNotProcess ; exists ; 2008 ; Clinical Medicine Insights: Psychiatry Volume 1 ; 1 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Clinical Medicine Insights: Psychiatry Volume 2 ; 2 ; 2009 ; >
+    au < finished ; finished ; 2011 ; Clinical Medicine Insights: Psychiatry Volume 3 ; 3 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Clinical Medicine Insights: Psychiatry Volume 4 ; 4 ; 2012 ; >
+    au < finished ; finished ; 2014 ; Clinical Medicine Insights: Psychiatry Volume 5 ; 5 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Clinical Medicine Insights: Psychiatry Volume 6 ; 6 ; 2015 ; reingest5.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Clinical Medicine Insights: Psychiatry Volume 7 [superseded] ; 7 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Clinical Medicine Insights: Reproductive Health ;
+      eissn = 1179-5581
+
+    >
+
+    param[journal_id] = 114
+
+    au < doNotProcess ; exists ; 2008 ; Clinical Medicine Insights: Reproductive Health Volume 1-2 ; 1-2 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Clinical Medicine Insights: Reproductive Health Volume 3 ; 3 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Clinical Medicine Insights: Reproductive Health Volume 4 ; 4 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Clinical Medicine Insights: Reproductive Health Volume 5 ; 5 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Clinical Medicine Insights: Reproductive Health Volume 6 ; 6 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Clinical Medicine Insights: Reproductive Health Volume 7 ; 7 ; 2013 ; >
+    au < finished ; finished ; 2014 ; Clinical Medicine Insights: Reproductive Health Volume 8 ; 8 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; Clinical Medicine Insights: Reproductive Health Volume 9 ; 9 ; 2015 ; reingest5.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Clinical Medicine Insights: Reproductive Health Volume 10 [superseded] ; 10 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Clinical Medicine Insights: Therapeutics ;
+      eissn = 1179-559X
+
+    >
+
+    param[journal_id] = 133
+
+    au < doNotProcess ; exists ; 2009 ; Clinical Medicine Insights: Therapeutics Volume 1 ; 1 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Clinical Medicine Insights: Therapeutics Volume 2 ; 2 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Clinical Medicine Insights: Therapeutics Volume 3 ; 3 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Clinical Medicine Insights: Therapeutics Volume 4 ; 4 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Clinical Medicine Insights: Therapeutics Volume 5 ; 5 ; 2013 ; >
+    au < finished ; finished ; 2014 ; Clinical Medicine Insights: Therapeutics Volume 6 ; 6 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Clinical Medicine Insights: Therapeutics Volume 7 ; 7 ; 2015 ; reingest5.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Clinical Medicine Insights: Therapeutics Volume 8 [superseded] ; 8 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Clinical Medicine Insights: Trauma and Intensive Medicine ;
+      eissn = 1179-5603
+
+    >
+
+    param[journal_id] = 71
+    # skips years 2011 and 2012
+
+    au < doNotProcess ; exists ; 2008 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 1 ; 1 ; 2008 ; >
+    au < finished ; finished ; 2009 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 2 ; 2 ; 2009 ; >
+    au < finished ; finished ; 2010 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 3 ; 3 ; 2010 ; >
+    au < finished ; finished ; 2013 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 4 ; 4 ; 2013 ; >
+    au < finished ; finished ; 2014 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 5 ; 5 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 6 ; 6 ; 2015 ; reingest4.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 7 [superseded] ; 7 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Clinical Medicine Insights: Urology ;
+      eissn = 1179-5611
+
+    >
+
+    param[journal_id] = 75
+
+    au < doNotProcess ; exists ; 2008 ; Clinical Medicine Insights: Urology Volume 1-2 ; 1-2 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Clinical Medicine Insights: Urology Volume 3 ; 3 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Clinical Medicine Insights: Urology Volume 4 ; 4 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Clinical Medicine Insights: Urology Volume 5 ; 5 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Clinical Medicine Insights: Urology Volume 6 ; 6 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Clinical Medicine Insights: Urology Volume 7 ; 7 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; Clinical Medicine Insights: Urology Volume 8 ; 8 ; 2015 ; reingest4.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Clinical Medicine Insights: Urology Volume 9 [superseded] ; 9 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Clinical Medicine Insights: Women's Health ;
+      eissn = 1179-562X
+
+    >
+
+    param[journal_id] = 77
+
+    au < doNotProcess ; exists ; 2008 ; Clinical Medicine Insights: Women's Health Volume 1 ; 1 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Clinical Medicine Insights: Women's Health Volume 2 ; 2 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Clinical Medicine Insights: Women's Health Volume 3 ; 3 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Clinical Medicine Insights: Women's Health Volume 4 ; 4 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Clinical Medicine Insights: Women's Health Volume 5 ; 5 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Clinical Medicine Insights: Women's Health Volume 6 ; 6 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Clinical Medicine Insights: Women's Health Volume 7 ; 7 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Clinical Medicine Insights: Women's Health Volume 8 ; 8 ; 2015 ; reingest5.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Clinical Medicine Insights: Women's Health Volume 9 [superseded] ; 9 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Drug Target Insights ;
+      eissn = 1177-3928
+
+    >
+
+    param[journal_id] = 23
+
+    au < doNotProcess ; exists ; 2006 ; Drug Target Insights Volume 1 ; 1 ; 2006 ; >
+    au < doNotProcess ; exists ; 2007 ; Drug Target Insights Volume 2 ; 2 ; 2007 ; >
+    au < doNotProcess ; exists ; 2008 ; Drug Target Insights Volume 3 ; 3 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Drug Target Insights Volume 4 ; 4 ; 2009 ; >
+    au < finished ; finished ; 2011 ; Drug Target Insights Volume 5 ; 5 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Drug Target Insights Volume 6 ; 6 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Drug Target Insights Volume 7 ; 7 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Drug Target Insights Volume 8 ; 8 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Drug Target Insights Volume 9 ; 9 ; 2015 ; reingest3.clockss.org:8083 >
+    au < superseded ; exists ; 2016 ; Drug Target Insights Volume 10 [superseded] ; 10 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Environmental Health Insights ;
+      eissn = 1178-6302
+
+    >
+
+    param[journal_id] = 110
+
+    au < doNotProcess ; exists ; 2008 ; Environmental Health Insights Volume 1-2 ; 1-2 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Environmental Health Insights Volume 3 ; 3 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Environmental Health Insights Volume 4 ; 4 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Environmental Health Insights Volume 5 ; 5 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Environmental Health Insights Volume 6 ; 6 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Environmental Health Insights Volume 7 ; 7 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; Environmental Health Insights Volume 8 ; 8 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; Environmental Health Insights Volume 9 ; 9 ; 2015 ; reingest5.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Environmental Health Insights Volume 10 [superseded] ; 10 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Evolutionary Bioinformatics ;
+      eissn = 1176-9343
+
+    >
+
+    param[journal_id] = 17
+
+    au < doNotProcess ; exists ; 2005 ; Evolutionary Bioinformatics Volume 1 ; 1 ; 2005 ; >
+    au < doNotProcess ; exists ; 2006 ; Evolutionary Bioinformatics Volume 2 ; 2 ; 2006 ; >
+    au < doNotProcess ; exists ; 2007 ; Evolutionary Bioinformatics Volume 3 ; 3 ; 2007 ; >
+    au < doNotProcess ; exists ; 2008 ; Evolutionary Bioinformatics Volume 4 ; 4 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Evolutionary Bioinformatics Volume 5 ; 5 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Evolutionary Bioinformatics Volume 6 ; 6 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Evolutionary Bioinformatics Volume 7 ; 7 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Evolutionary Bioinformatics Volume 8 ; 8 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Evolutionary Bioinformatics Volume 9 ; 9 ; 2013 ;  reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Evolutionary Bioinformatics Volume 10 ; 10 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Evolutionary Bioinformatics Volume 11 ; 11 ; 2015 ; reingest1.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Evolutionary Bioinformatics Volume 12 [superseded] ; 12 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Gene Regulation and Systems Biology ;
+      eissn = 1177-6250
+
+    >
+
+    param[journal_id] = 26
+
+    au < doNotProcess ; exists ; 2007 ; Gene Regulation and Systems Biology Volume 1 ; 1 ; 2007 ; >
+    au < doNotProcess ; exists ; 2008 ; Gene Regulation and Systems Biology Volume 2 ; 2 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Gene Regulation and Systems Biology Volume 3 ; 3 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Gene Regulation and Systems Biology Volume 4 ; 4 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Gene Regulation and Systems Biology Volume 5 ; 5 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Gene Regulation and Systems Biology Volume 6 ; 6 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Gene Regulation and Systems Biology Volume 7 ; 7 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Gene Regulation and Systems Biology Volume 8 ; 8 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Gene Regulation and Systems Biology Volume 9 ; 9 ; 2015 ; reingest3.clockss.org:8083 >
+    au < superseded ; exists ; 2016 ; Gene Regulation and Systems Biology Volume 10 [superseded] ; 10 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Genetics & Epigenetics ;
+      eissn = 1179-237X
+
+    >
+
+    param[journal_id] = 127
+
+    au < doNotProcess ; exists ; 2008 ; Genetics & Epigenetics Volume 1 ; 1 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Genetics & Epigenetics Volume 2 ; 2 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Genetics & Epigenetics Volume 3 ; 3 ; 2010 ; >
+    au < finished ; finished ; 2012 ; Genetics & Epigenetics Volume 4 ; 4 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Genetics & Epigenetics Volume 5 ; 5 ; 2013 ; >
+    au < finished ; finished ; 2014 ; Genetics & Epigenetics Volume 6 ; 6 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Genetics & Epigenetics Volume 7 ; 7 ; 2015 ; reingest2.clockss.org:8085 >
+    au < superseded ; exists ; 2016 ; Genetics & Epigenetics Volume 8 [superseded] ; 8 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Genomics Insights ;
+      eissn = 1178-6310
+
+    >
+
+    param[journal_id] = 103
+
+    au < doNotProcess ; exists ; 2008 ; Genomics Insights Volume 1 ; 1 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Genomics Insights Volume 2 ; 2 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Genomics Insights Volume 3 ; 3 ; 2010 ; >
+    au < finished ; crawling ; 2011 ; Genomics Insights Volume 4 ; 4 ; 2011 ; reingest4.clockss.org:8082 > #no subst on prod
+    au < finished ; finished ; 2012 ; Genomics Insights Volume 5 ; 5 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Genomics Insights Volume 6 ; 6 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Genomics Insights Volume 7 ; 7 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Genomics Insights Volume 8 ; 8 ; 2015 ; reingest3.clockss.org:8083 >
+    au < superseded ; exists ; 2016 ; Genomics Insights Volume 9 [superseded] ; 9 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Health Services Insights ;
+      eissn = 1178-6329
+
+    >
+
+    param[journal_id] = 117
+
+    au < doNotProcess ; exists ; 2008 ; Health Services Insights Volume 1 ; 1 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Health Services Insights Volume 2 ; 2 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Health Services Insights Volume 3 ; 3 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Health Services Insights Volume 4 ; 4 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Health Services Insights Volume 5 ; 5 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Health Services Insights Volume 6 ; 6 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Health Services Insights Volume 7 ; 7 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Health Services Insights Volume 8 ; 8 ; 2015 ; reingest5.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Health Services Insights Volume 9 [superseded] ; 9 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Immunology and Immunogenetics Insights ;
+      eissn = 1178-6345
+
+    >
+
+    param[journal_id] = 100
+
+    au < doNotProcess ; exists ; 2009 ; Immunology and Immunogenetics Insights Volume 1 ; 1 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Immunology and Immunogenetics Insights Volume 2 ; 2 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Immunology and Immunogenetics Insights Volume 3 ; 3 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Immunology and Immunogenetics Insights Volume 4 ; 4 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Immunology and Immunogenetics Insights Volume 5 ; 5 ; 2013 ; >
+    au < finished ; finished ; 2014 ; Immunology and Immunogenetics Insights Volume 6 ; 6 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Immunology and Immunogenetics Insights Volume 7 ; 7 ; 2015 ; reingest4.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Immunology and Immunogenetics Insights Volume 8 [superseded] ; 8 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Immunotherapy Insights ;
+      eissn = 1179-1756
+
+    >
+
+    param[journal_id] = 150
+    # no years 2010, 2013, 2014 as of 04/02/15. No longer published.
+    #small differences among production boxes - global files...okay for trigger
+
+    au < finished ; finished ; 2009 ; Immunotherapy Insights Volume 1 ; 1 ; 2009 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2011 ; Immunotherapy Insights Volume 2 ; 2 ; 2011 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2012 ; Immunotherapy Insights Volume 3 ; 3 ; 2012 ; reingest3.clockss.org:8083 >
+
+  }
+
+  {
+
+    title <
+      name = Indian Journal of Clinical Medicine ;
+      eissn = 1179-9161
+
+    >
+
+    param[journal_id] = 171
+
+    au < doNotProcess ; exists ; 2010 ; Indian Journal of Clinical Medicine Volume 1 ; 1 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Indian Journal of Clinical Medicine Volume 2 ; 2 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Indian Journal of Clinical Medicine Volume 3 ; 3 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Indian Journal of Clinical Medicine Volume 4 ; 4 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Indian Journal of Clinical Medicine Volume 5 ; 5 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Indian Journal of Clinical Medicine Volume 6 ; 6 ; 2015 ; reingest5.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Indian Journal of Clinical Medicine Volume 7 [superseded] ; 7 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Infectious Diseases: Research and Treatment ;
+      eissn = 1178-6337
+
+    >
+
+    param[journal_id] = 112
+
+    au < doNotProcess ; exists ; 2008 ; Infectious Diseases: Research and Treatment Volume 1 ; 1 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Infectious Diseases: Research and Treatment Volume 2 ; 2 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Infectious Diseases: Research and Treatment Volume 3 ; 3 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Infectious Diseases: Research and Treatment Volume 4 ; 4 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Infectious Diseases: Research and Treatment Volume 5 ; 5 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Infectious Diseases: Research and Treatment Volume 6 ; 6 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; Infectious Diseases: Research and Treatment Volume 7 ; 7 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Infectious Diseases: Research and Treatment Volume 8 ; 8 ; 2015 ; reingest5.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Infectious Diseases: Research and Treatment Volume 9 [superseded] ; 9 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Integrative Medicine Insights ;
+      eissn = 1177-3936
+
+    >
+
+    param[journal_id] = 21
+
+    au < doNotProcess ; exists ; 2006 ; Integrative Medicine Insights Volume 1 ; 1 ; 2006 ; >
+    au < doNotProcess ; exists ; 2007 ; Integrative Medicine Insights Volume 2 ; 2 ; 2007 ; >
+    au < doNotProcess ; exists ; 2008 ; Integrative Medicine Insights Volume 3 ; 3 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Integrative Medicine Insights Volume 4 ; 4 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Integrative Medicine Insights Volume 5 ; 5 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Integrative Medicine Insights Volume 6 ; 6 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Integrative Medicine Insights Volume 7 ; 7 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Integrative Medicine Insights Volume 8 ; 8 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Integrative Medicine Insights Volume 9 ; 9 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Integrative Medicine Insights Volume 10 ; 10 ; 2015 ; reingest2.clockss.org:8085 >
+    au < superseded ; exists ; 2016 ; Integrative Medicine Insights Volume 11 [superseded] ; 11 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Insect Science ;
+      eissn = 1179-5433
+
+    >
+
+    param[journal_id] = 129
+
+    au < doNotProcess ; exists ; 2009 ; International Journal of Insect Science Volume 1 ; 1 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; International Journal of Insect Science Volume 2 ; 2 ; 2010 ; >
+    au < finished ; finished ; 2011 ; International Journal of Insect Science Volume 3 ; 3 ; 2011 ; >
+    au < finished ; finished ; 2012 ; International Journal of Insect Science Volume 4 ; 4 ; 2012 ; >
+    au < finished ; finished ; 2013 ; International Journal of Insect Science Volume 5 ; 5 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; International Journal of Insect Science Volume 6 ; 6 ; 2014 ; >
+    au < finished ; finished ; 2015 ; International Journal of Insect Science Volume 7 ; 7 ; 2015 ; reingest5.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; International Journal of Insect Science Volume 8 [superseded] ; 8 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Tryptophan Research ;
+      eissn = 1178-6469
+
+    >
+
+    param[journal_id] = 97
+
+    au < doNotProcess ; exists ; 2008 ; International Journal of Tryptophan Research Volume 1 ; 1 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; International Journal of Tryptophan Research Volume 2 ; 2 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; International Journal of Tryptophan Research Volume 3 ; 3 ; 2010 ; >
+    au < finished ; finished ; 2011 ; International Journal of Tryptophan Research Volume 4 ; 4 ; 2011 ; >
+    au < finished ; finished ; 2012 ; International Journal of Tryptophan Research Volume 5 ; 5 ; 2012 ; >
+    au < finished ; finished ; 2013 ; International Journal of Tryptophan Research Volume 6 ; 6 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; International Journal of Tryptophan Research Volume 7 ; 7 ; 2014 ; >
+    au < finished ; finished ; 2015 ; International Journal of Tryptophan Research Volume 8 ; 8 ; 2015 ; reingest5.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; International Journal of Tryptophan Research Volume 9 [superseded] ; 9 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Japanese Clinical Medicine ;
+      eissn = 1179-6707
+
+    >
+
+    param[journal_id] = 172
+
+    au < doNotProcess ; exists ; 2010 ; Japanese Clinical Medicine Volume 1 ; 1 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Japanese Clinical Medicine Volume 2 ; 2 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Japanese Clinical Medicine Volume 3 ; 3 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Japanese Clinical Medicine Volume 4 ; 4 ; 2013 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Japanese Clinical Medicine Volume 5 ; 5 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Japanese Clinical Medicine Volume 6 ; 6 ; 2015 ; reingest4.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Japanese Clinical Medicine Volume 7 [superseded] ; 7 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Cell Death ;
+      eissn = 1179-0660
+
+    >
+
+    param[journal_id] = 124
+
+    au < doNotProcess ; exists ; 2008 ; Journal of Cell Death Volume 1 ; 1 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Journal of Cell Death Volume 2 ; 2 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Cell Death Volume 3 ; 3 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Journal of Cell Death Volume 4 ; 4 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Journal of Cell Death Volume 5 ; 5 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Journal of Cell Death Volume 6 ; 6 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Journal of Cell Death Volume 7 ; 7 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Journal of Cell Death Volume 8 ; 8 ; 2015 ; reingest5.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Journal of Cell Death Volume 9 [superseded] ; 9 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Central Nervous System Disease ;
+      eissn = 1179-5735
+
+    >
+
+    param[journal_id] = 121
+
+    au < doNotProcess ; exists ; 2009 ; Journal of Central Nervous System Disease Volume 1 ; 1 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Central Nervous System Disease Volume 2 ; 2 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Journal of Central Nervous System Disease Volume 3 ; 3 ; 2011 ; >
+    au < frozen ; down ; 2012 ; Journal of Central Nervous System Disease Volume 4 ; 4 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Journal of Central Nervous System Disease Volume 5 ; 5 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Journal of Central Nervous System Disease Volume 6 ; 6 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Journal of Central Nervous System Disease Volume 7 ; 7 ; 2015 ; reingest1.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Journal of Central Nervous System Disease Volume 8 [superseded] ; 8 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Experimental Neuroscience ;
+      eissn = 1179-0695
+
+    >
+
+    param[journal_id] = 131
+
+    au < doNotProcess ; exists ; 2008 ; Journal of Experimental Neuroscience Volume 1 ; 1 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Journal of Experimental Neuroscience Volume 2-3 ; 2-3 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Experimental Neuroscience Volume 4 ; 4 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Journal of Experimental Neuroscience Volume 5 ; 5 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Journal of Experimental Neuroscience Volume 6 ; 6 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Journal of Experimental Neuroscience Volume 7 ; 7 ; 2013 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Journal of Experimental Neuroscience Volume 8 ; 8 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Journal of Experimental Neuroscience Volume 9 ; 9 ; 2015 ; reingest5.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Journal of Experimental Neuroscience Volume 10 [superseded] ; 10 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Medical Education and Curricular Development ;
+      eissn = 2382-1205
+
+    >
+
+    param[journal_id] = 174
+
+    au < finished ; finished ; 2014 ; Journal of Medical Education and Curricular Development Volume 1 ; 1 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Journal of Medical Education and Curricular Development Volume 2 ; 2 ; 2015 ; reingest5.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Journal of Medical Education and Curricular Development Volume 3 [superseded] ; 3 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Lipid Insights ;
+      eissn = 1178-6353
+
+    >
+
+    param[journal_id] = 109
+
+    au < doNotProcess ; exists ; 2008 ; Lipid Insights Volume 1-2 ; 1-2 ; 2008 ; >
+    au < doNotProcess ; exists ; 2010 ; Lipid Insights Volume 3 ; 3 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Lipid Insights Volume 4 ; 4 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Lipid Insights Volume 5 ; 5 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Lipid Insights Volume 6 ; 6 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Lipid Insights Volume 7 ; 7 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Lipid Insights Volume 8 ; 8 ; 2015 ; reingest5.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Lipid Insights Volume 9 [superseded] ; 9 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Magnetic Resonance Insights ;
+      eissn = 1178-623X
+
+    >
+
+    param[journal_id] = 115
+
+    au < doNotProcess ; exists ; 2008 ; Magnetic Resonance Insights Volume 1-2 ; 1-2 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Magnetic Resonance Insights Volume 3 ; 3 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Magnetic Resonance Insights Volume 4 ; 4 ; 2010 ; >
+    au < finished ; finished ; 2012 ; Magnetic Resonance Insights Volume 5 ; 5 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Magnetic Resonance Insights Volume 6 ; 6 ; 2013 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Magnetic Resonance Insights Volume 7 ; 7 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Magnetic Resonance Insights Volume 8 ; 8 ; 2015 ; reingest5.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Magnetic Resonance Insights Volume 9 [superseded] ; 9 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Medical Equipment Insights ;
+      eissn = 1178-637X
+
+    >
+
+    param[journal_id] = 98
+
+    au < doNotProcess ; exists ; 2008 ; Medical Equipment Insights Volume 1 ; 1 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Medical Equipment Insights Volume 2 ; 2 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Medical Equipment Insights Volume 3 ; 3 ; 2010 ; >
+    au < finished ; finished ; 2012 ; Medical Equipment Insights Volume 4 ; 4 ; 2012 ; >
+    au < finished ; finished ; 2014 ; Medical Equipment Insights Volume 5 ; 5 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Medical Equipment Insights Volume 6 ; 6 ; 2015 ; reingest5.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Microbiology Insights ;
+      eissn = 1178-6361
+
+    >
+
+    param[journal_id] = 108
+
+    au < doNotProcess ; exists ; 2008 ; Microbiology Insights Volume 1 ; 1 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Microbiology Insights Volume 2 ; 2 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Microbiology Insights Volume 3 ; 3 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Microbiology Insights Volume 4 ; 4 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Microbiology Insights Volume 5 ; 5 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Microbiology Insights Volume 6 ; 6 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Microbiology Insights Volume 7 ; 7 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Microbiology Insights Volume 8 ; 8 ; 2015 ; reingest3.clockss.org:8083 >
+    au < superseded ; exists ; 2016 ; Microbiology Insights Volume 9 [superseded] ; 9 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Nutrition and Metabolic Insights ;
+      eissn = 1178-6388
+
+    >
+
+    param[journal_id] = 101
+
+    au < doNotProcess ; exists ; 2008 ; Nutrition and Metabolic Insights Volume 1 ; 1 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Nutrition and Metabolic Insights Volume 2 ; 2 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Nutrition and Metabolic Insights Volume 3 ; 3 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Nutrition and Metabolic Insights Volume 4 ; 4 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Nutrition and Metabolic Insights Volume 5 ; 5 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Nutrition and Metabolic Insights Volume 6 ; 6 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Nutrition and Metabolic Insights Volume 7 ; 7 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Nutrition and Metabolic Insights Volume 8 ; 8 ; 2015 ; reingest5.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Nutrition and Metabolic Insights Volume 9 [superseded] ; 9 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Open Journal of Cardiovascular Surgery ;
+      eissn = 1179-0652
+
+    >
+
+    param[journal_id] = 123
+
+    au < doNotProcess ; exists ; 2008 ; Open Journal of Cardiovascular Surgery Volume 1 ; 1 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Open Journal of Cardiovascular Surgery Volume 2 ; 2 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Open Journal of Cardiovascular Surgery Volume 3 ; 3 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Open Journal of Cardiovascular Surgery Volume 4 ; 4 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Open Journal of Cardiovascular Surgery Volume 5 ; 5 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Open Journal of Cardiovascular Surgery Volume 6 ; 6 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Open Journal of Cardiovascular Surgery Volume 7 ; 7 ; 2014 ; >
+    au < superseded ; exists ; 2016 ; Open Journal of Cardiovascular Surgery Volume 8 [superseded] ; 8 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Ophthalmology and Eye Diseases ;
+      eissn = 1179-1721
+
+    >
+
+    param[journal_id] = 146
+
+    au < doNotProcess ; exists ; 2009 ; Ophthalmology and Eye Diseases Volume 1 ; 1 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Ophthalmology and Eye Diseases Volume 2 ; 2 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Ophthalmology and Eye Diseases Volume 3 ; 3 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Ophthalmology and Eye Diseases Volume 4 ; 4 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Ophthalmology and Eye Diseases Volume 5 ; 5 ; 2013 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Ophthalmology and Eye Diseases Volume 6 ; 6 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Ophthalmology and Eye Diseases Volume 7 ; 7 ; 2015 ; reingest5.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Ophthalmology and Eye Diseases Volume 8 [superseded] ; 8 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Palliative Care: Research and Treatment ;
+      eissn = 1178-2242
+
+    >
+
+    param[journal_id] = 86
+
+    au < doNotProcess ; exists ; 2008 ; Palliative Care: Research and Treatment Volume 1-2 ; 1-2 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Palliative Care: Research and Treatment Volume 3 ; 3 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Palliative Care: Research and Treatment Volume 4 ; 4 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Palliative Care: Research and Treatment Volume 5 ; 5 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Palliative Care: Research and Treatment Volume 6 ; 6 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Palliative Care: Research and Treatment Volume 7 ; 7 ; 2013 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Palliative Care: Research and Treatment Volume 8 ; 8 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Palliative Care: Research and Treatment Volume 9 ; 9 ; 2015 ; reingest4.clockss.org:8082 >
+    au < doNotProcess ; exists ; 2016 ; Palliative Care: Research and Treatment Volume 10 ; 10 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Particle Physics Insights ;
+      eissn = 1178-640X
+
+    >
+
+    param[journal_id] = 105
+    #small differences among production boxes - global files; post-correction orphans - okay for trigger
+
+    au < finished ; finished ; 2008 ; Particle Physics Insights Volume 1 ; 1 ; 2008 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2009 ; Particle Physics Insights Volume 2 ; 2 ; 2009 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2010 ; Particle Physics Insights Volume 3 ; 3 ; 2010 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2011 ; Particle Physics Insights Volume 4 ; 4 ; 2011 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2012 ; Particle Physics Insights Volume 5 ; 5 ; 2012 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2013 ; Particle Physics Insights Volume 6 ; 6 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2015 ; Particle Physics Insights Volume 7 ; 7 ; 2015 ; reingest3.clockss.org:8083 >
+
+  }
+
+  {
+
+    title <
+      name = Perspectives in Medicinal Chemistry ;
+      eissn = 1177-391X
+
+    >
+
+    param[journal_id] = 25
+
+    au < doNotProcess ; exists ; 2007 ; Perspectives in Medicinal Chemistry Volume 1 ; 1 ; 2007 ; >
+    au < doNotProcess ; exists ; 2008 ; Perspectives in Medicinal Chemistry Volume 2 ; 2 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Perspectives in Medicinal Chemistry Volume 3 ; 3 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Perspectives in Medicinal Chemistry Volume 4 ; 4 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Perspectives in Medicinal Chemistry Volume 5 ; 5 ; 2011 ; >
+    au < finished ; finished ; 2014 ; Perspectives in Medicinal Chemistry Volume 6 ; 6 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Perspectives in Medicinal Chemistry Volume 7 ; 7 ; 2015 ; reingest4.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Perspectives in Medicinal Chemistry Volume 8 [superseded] ; 8 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Proteomics Insights ;
+      eissn = 1178-6418
+
+    >
+
+    param[journal_id] = 106
+
+    au < doNotProcess ; exists ; 2008 ; Proteomics Insights Volume 1 ; 1 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Proteomics Insights Volume 2 ; 2 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Proteomics Insights Volume 3 ; 3 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Proteomics Insights Volume 4 ; 4 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Proteomics Insights Volume 5 ; 5 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Proteomics Insights Volume 6 ; 6 ; 2013 ;  reingest3.clockss.org:8083 >
+    au < superseded ; exists ; 2016 ; Proteomics Insights Volume 7 [superseded] ; 7 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Rehabilitation Process and Outcome ;
+      eissn = 1179-5727
+
+    >
+
+    param[journal_id] = 134
+
+    au < doNotProcess ; exists ; 2008 ; Rehabilitation Process and Outcome Volume 1 ; 1 ; 2008 ; >
+    au < doNotProcess ; exists ; 2010 ; Rehabilitation Process and Outcome Volume 2 ; 2 ; 2010 ; >
+    au < finished ; finished ; 2014 ; Rehabilitation Process and Outcome Volume 3 ; 3 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Rehabilitation Process and Outcome Volume 4 ; 4 ; 2015 ; reingest5.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Rehabilitation Process and Outcome Volume 5 [superseded] ; 5 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Signal Transduction Insights ;
+      eissn = 1178-6434
+
+    >
+
+    param[journal_id] = 102
+
+    au < doNotProcess ; exists ; 2008 ; Signal Transduction Insights Volume 1 ; 1 ; 2008 ; >
+    au < doNotProcess ; exists ; 2010 ; Signal Transduction Insights Volume 2 ; 2 ; 2010 ; >
+    au < finished ; finished ; 2014 ; Signal Transduction Insights Volume 3 ; 3 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Signal Transduction Insights Volume 4 ; 4 ; 2015 ; reingest2.clockss.org:8085 >
+    au < superseded ; exists ; 2016 ; Signal Transduction Insights Volume 5 [superseded] ; 5 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Substance Abuse: Research and Treatment ;
+      eissn = 1178-2218
+
+    >
+
+    param[journal_id] = 80
+
+    au < doNotProcess ; exists ; 2008 ; Substance Abuse: Research and Treatment Volume 1-2 ; 1-2 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Substance Abuse: Research and Treatment Volume 3 ; 3 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Substance Abuse: Research and Treatment Volume 4 ; 4 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Substance Abuse: Research and Treatment Volume 5 ; 5 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Substance Abuse: Research and Treatment Volume 6 ; 6 ; 2012 ; >
+    au < superseded ; exists ; 2013 ; Substance Abuse: Research and Treatment Volume 7 [superseded] ; 7 ; 2013 ; >
+    au < finished ; finished ; 2014 ; Substance Abuse: Research and Treatment Volume 8 ; 8 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; Substance Abuse: Research and Treatment Volume 9 ; 9 ; 2015 ; reingest1.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Substance Abuse: Research and Treatment Volume 10 [superseded] ; 10 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Tobacco Use Insights ;
+      eissn = 1179-173X
+
+    >
+
+    param[journal_id] = 139
+
+    au < doNotProcess ; exists ; 2008 ; Tobacco Use Insights Volume 1 ; 1 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Tobacco Use Insights Volume 2 ; 2 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Tobacco Use Insights Volume 3 ; 3 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Tobacco Use Insights Volume 4 ; 4 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Tobacco Use Insights Volume 5 ; 5 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Tobacco Use Insights Volume 6 ; 6 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Tobacco Use Insights Volume 7 ; 7 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Tobacco Use Insights Volume 8 ; 8 ; 2015 ; reingest5.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Tobacco Use Insights Volume 9 [superseded] ; 9 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Virology: Research and Treatment ;
+      eissn = 1178-122X
+
+    >
+
+    param[journal_id] = 50
+    # skips 2009, 2011, 2012 and there is no volume 3
+
+    au < doNotProcess ; exists ; 2008 ; Virology: Research and Treatment Volume 1 ; 1 ; 2008 ; >
+    au < doNotProcess ; exists ; 2010 ; Virology: Research and Treatment Volume 2 ; 2 ; 2010 ; >
+    au < finished ; finished ; 2013 ; Virology: Research and Treatment Volume 4 ; 4 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Virology: Research and Treatment Volume 5 ; 5 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; Virology: Research and Treatment Volume 6 ; 6 ; 2015 ; reingest5.clockss.org:8082 >
+    au < superseded ; exists ; 2016 ; Virology: Research and Treatment Volume 7 [superseded] ; 7 ; 2016 ; >
+
+  }
+
+}

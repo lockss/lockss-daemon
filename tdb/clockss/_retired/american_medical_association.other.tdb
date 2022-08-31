@@ -1,0 +1,44 @@
+# This legacy American Medical Association file is for titles previously hosted by other platforms
+
+{
+
+  publisher <
+    name = American Medical Association ;
+    info[contract] = 2008 ;
+    info[tester] = 0
+  >
+
+  {
+
+    title <
+      name = Virtual Mentor ;
+      eissn = 1937-7010 ;
+      issnl = 1937-7010
+    >
+
+    # This publication is continued by AMA Journal of Ethics (eISSN 2376-6980) starting February 2015
+
+    plugin = org.lockss.plugin.amavirtualmentor.ClockssAMAVirtualMentorPlugin
+    param[base_url] = http://virtualmentor.ama-assn.org/
+    implicit < status1 ; status ; year ; volume ; name ; param[year] ; proxy >
+   
+    au < zapped ; finished ; 1999 ; 1 ; Virtual Mentor Volume 1 ; 1999 ; >
+    au < zapped ; finished ; 2000 ; 2 ; Virtual Mentor Volume 2 ; 2000 ; >
+    au < zapped ; finished ; 2001 ; 3 ; Virtual Mentor Volume 3 ; 2001 ; >
+    au < zapped ; finished ; 2002 ; 4 ; Virtual Mentor Volume 4 ; 2002 ; >
+    au < zapped ; finished ; 2003 ; 5 ; Virtual Mentor Volume 5 ; 2003 ; >
+    au < zapped ; finished ; 2004 ; 6 ; Virtual Mentor Volume 6 ; 2004 ; >
+    au < zapped ; finished ; 2005 ; 7 ; Virtual Mentor Volume 7 ; 2005 ; >
+    au < zapped ; finished ; 2006 ; 8 ; Virtual Mentor Volume 8 ; 2006 ; >
+    au < zapped ; finished ; 2007 ; 9 ; Virtual Mentor Volume 9 ; 2007 ; >
+    au < zapped ; finished ; 2008 ; 10 ; Virtual Mentor Volume 10 ; 2008 ; >
+    au < zapped ; finished ; 2009 ; 11 ; Virtual Mentor Volume 11 ; 2009 ; >
+    au < zapped ; finished ; 2010 ; 12 ; Virtual Mentor Volume 12 ; 2010 ; >
+    au < zapped ; finished ; 2011 ; 13 ; Virtual Mentor Volume 13 ; 2011 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; 14 ; Virtual Mentor Volume 14 ; 2012 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; 15 ; Virtual Mentor Volume 15 ; 2013 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; 16 ; Virtual Mentor Volume 16 ; 2014 ; >
+
+  }
+
+}

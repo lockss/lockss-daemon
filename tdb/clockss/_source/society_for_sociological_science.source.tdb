@@ -1,0 +1,30 @@
+{
+
+  publisher <
+    name = Society for Sociological Science ;
+    info[contract] = 2016 ;
+    info[tester] = S ;
+    info[platform] = WARC
+  >
+    plugin = org.lockss.plugin.clockss.warc.ClockssWarcPlugin
+    proxy = DIRECT
+    implicit < status1 ; status ; year ; name ; param[year] >
+  {
+
+    title <
+      name =  Sociological Science WARC Content ;
+      issn = 2330-6696
+    >
+
+    # This content was collected using wget and provided for preservation as a
+    # set of WARC files
+    # WARC content collected from https://www.sociologicalscience.com/
+
+    param[base_url] = http://clockss-ingest.lockss.org/warcfiles/sociological-science-released/
+
+    au < zapped ; finished ; 2016 ; Sociological Science WARC Content 2016 ; 2016 >
+    au < zapped ; finished ; 2018 ; Sociological Science WARC Content 2018 ; 2018 >
+    au < readySource ; finished ; 2021 ; Sociological Science WARC Content 2021 ; 2021 >
+
+  }
+}

@@ -1,0 +1,817 @@
+{
+
+  publisher <
+    name = American Meteorological Society ;
+    info[contract] = 2012 ;
+    info[tester] = 5 ;
+    info[poller] = 3 ;
+    info[platform] = PubFactory
+  >
+  
+  #moved to Silverchair
+  #moved to Pubfactory - 02 17 2020
+  plugin = org.lockss.plugin.pubfactory.ametsoc.ClockssAMetSoc2021Plugin
+  implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+  param[base_url] = https://journals.ametsoc.org/
+
+  {
+
+    title <
+      name = Bulletin of the American Meteorological Society ;
+      issn = 0003-0007 ;
+      eissn = 1520-0477 ;
+      issnl = 0003-0007
+    >
+    
+    param[journal_id] = bams
+  
+    au < doNotProcess ; exists ; 1970 ; Bulletin of the American Meteorological Society Volume 51 ; 51 ; >
+    au < doNotProcess ; exists ; 1971 ; Bulletin of the American Meteorological Society Volume 52 ; 52 ; >
+    au < doNotProcess ; exists ; 1972 ; Bulletin of the American Meteorological Society Volume 53 ; 53 ; >
+    au < doNotProcess ; exists ; 1973 ; Bulletin of the American Meteorological Society Volume 54 ; 54 ; >
+    au < doNotProcess ; exists ; 1974 ; Bulletin of the American Meteorological Society Volume 55 ; 55 ; >
+    au < doNotProcess ; exists ; 1975 ; Bulletin of the American Meteorological Society Volume 56 ; 56 ; >
+    au < doNotProcess ; exists ; 1976 ; Bulletin of the American Meteorological Society Volume 57 ; 57 ; >
+    au < doNotProcess ; exists ; 1977 ; Bulletin of the American Meteorological Society Volume 58 ; 58 ; >
+    au < doNotProcess ; exists ; 1978 ; Bulletin of the American Meteorological Society Volume 59 ; 59 ; >
+    au < doNotProcess ; exists ; 1979 ; Bulletin of the American Meteorological Society Volume 60 ; 60 ; >
+    au < doNotProcess ; exists ; 1980 ; Bulletin of the American Meteorological Society Volume 61 ; 61 ; >
+    au < doNotProcess ; exists ; 1981 ; Bulletin of the American Meteorological Society Volume 62 ; 62 ; >
+    au < doNotProcess ; exists ; 1982 ; Bulletin of the American Meteorological Society Volume 63 ; 63 ; >
+    au < doNotProcess ; exists ; 1983 ; Bulletin of the American Meteorological Society Volume 64 ; 64 ; >
+    au < doNotProcess ; exists ; 1984 ; Bulletin of the American Meteorological Society Volume 65 ; 65 ; >
+    au < doNotProcess ; exists ; 1985 ; Bulletin of the American Meteorological Society Volume 66 ; 66 ; >
+    au < doNotProcess ; exists ; 1986 ; Bulletin of the American Meteorological Society Volume 67 ; 67 ; >
+    au < doNotProcess ; exists ; 1987 ; Bulletin of the American Meteorological Society Volume 68 ; 68 ; >
+    au < doNotProcess ; exists ; 1988 ; Bulletin of the American Meteorological Society Volume 69 ; 69 ; >
+    au < doNotProcess ; exists ; 1989 ; Bulletin of the American Meteorological Society Volume 70 ; 70 ; >
+    au < doNotProcess ; exists ; 1990 ; Bulletin of the American Meteorological Society Volume 71 ; 71 ; >
+    au < doNotProcess ; exists ; 1991 ; Bulletin of the American Meteorological Society Volume 72 ; 72 ; >
+    au < doNotProcess ; exists ; 1992 ; Bulletin of the American Meteorological Society Volume 73 ; 73 ; >
+    au < doNotProcess ; exists ; 1993 ; Bulletin of the American Meteorological Society Volume 74 ; 74 ; >
+    au < doNotProcess ; exists ; 1994 ; Bulletin of the American Meteorological Society Volume 75 ; 75 ; >
+    au < doNotProcess ; exists ; 1995 ; Bulletin of the American Meteorological Society Volume 76 ; 76 ; >
+    au < doNotProcess ; exists ; 1996 ; Bulletin of the American Meteorological Society Volume 77 ; 77 ; >
+    au < doNotProcess ; exists ; 1997 ; Bulletin of the American Meteorological Society Volume 78 ; 78 ; >
+    au < doNotProcess ; exists ; 1998 ; Bulletin of the American Meteorological Society Volume 79 ; 79 ; >
+    au < doNotProcess ; exists ; 1999 ; Bulletin of the American Meteorological Society Volume 80 ; 80 ; >
+    au < doNotProcess ; exists ; 2000 ; Bulletin of the American Meteorological Society Volume 81 ; 81 ; >
+    au < doNotProcess ; exists ; 2001 ; Bulletin of the American Meteorological Society Volume 82 ; 82 ; >
+    au < doNotProcess ; exists ; 2002 ; Bulletin of the American Meteorological Society Volume 83 ; 83 ; >
+    au < doNotProcess ; exists ; 2003 ; Bulletin of the American Meteorological Society Volume 84 ; 84 ; >
+    au < doNotProcess ; exists ; 2004 ; Bulletin of the American Meteorological Society Volume 85 ; 85 ; >
+    au < doNotProcess ; exists ; 2005 ; Bulletin of the American Meteorological Society Volume 86 ; 86 ; >
+    au < doNotProcess ; exists ; 2006 ; Bulletin of the American Meteorological Society Volume 87 ; 87 ; >
+    au < doNotProcess ; exists ; 2007 ; Bulletin of the American Meteorological Society Volume 88 ; 88 ; >
+    au < doNotProcess ; exists ; 2008 ; Bulletin of the American Meteorological Society Volume 89 ; 89 ; >
+    au < doNotProcess ; exists ; 2009 ; Bulletin of the American Meteorological Society Volume 90 ; 90 ; >
+    au < doNotProcess ; exists ; 2010 ; Bulletin of the American Meteorological Society Volume 91 ; 91 ; >
+    au < doNotProcess ; exists ; 2011 ; Bulletin of the American Meteorological Society Volume 92 ; 92 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Bulletin of the American Meteorological Society Volume 93 ; 93 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Bulletin of the American Meteorological Society Volume 94 ; 94 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; Bulletin of the American Meteorological Society Volume 95 ; 95 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; Bulletin of the American Meteorological Society Volume 96 ; 96 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; Bulletin of the American Meteorological Society Volume 97 ; 97 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; Bulletin of the American Meteorological Society Volume 98 ; 98 ; >
+    au < doNotProcess ; doNotProcess ; 2018 ; Bulletin of the American Meteorological Society Volume 99 ; 99 ; >
+    au < doNotProcess ; doNotProcess ; 2019 ; Bulletin of the American Meteorological Society Volume 100 ; 100 ; >
+    au < frozen ; exists ; 2020 ; Bulletin of the American Meteorological Society Volume 101 ; 101 ; >
+    au < deepCrawl ; exists ; 2021 ; Bulletin of the American Meteorological Society Volume 102 ; 102 ; >
+    au < ready ; exists ; 2022 ; Bulletin of the American Meteorological Society Volume 103 ; 103 ; >
+
+  }
+
+  {
+
+    title <
+      name = Earth Interactions ;
+      eissn = 1087-3562 ;
+      issnl = 1087-3562
+    >
+    
+    param[journal_id] = eint
+  
+    au < doNotProcess ; exists ; 1997 ; Earth Interactions Volume 1 ; 1 ; >
+    au < doNotProcess ; exists ; 1998 ; Earth Interactions Volume 2 ; 2 ; >
+    au < doNotProcess ; exists ; 1999 ; Earth Interactions Volume 3 ; 3 ; >
+    au < doNotProcess ; exists ; 2000 ; Earth Interactions Volume 4 ; 4 ; >
+    au < doNotProcess ; exists ; 2001 ; Earth Interactions Volume 5 ; 5 ; >
+    au < doNotProcess ; exists ; 2002 ; Earth Interactions Volume 6 ; 6 ; >
+    au < doNotProcess ; exists ; 2003 ; Earth Interactions Volume 7 ; 7 ; >
+    au < doNotProcess ; exists ; 2004 ; Earth Interactions Volume 8 ; 8 ; >
+    au < doNotProcess ; exists ; 2005 ; Earth Interactions Volume 9 ; 9 ; >
+    au < doNotProcess ; exists ; 2006 ; Earth Interactions Volume 10 ; 10 ; >
+    au < doNotProcess ; exists ; 2007 ; Earth Interactions Volume 11 ; 11 ; >
+    au < doNotProcess ; exists ; 2008 ; Earth Interactions Volume 12 ; 12 ; >
+    au < doNotProcess ; exists ; 2009 ; Earth Interactions Volume 13 ; 13 ; >
+    au < doNotProcess ; exists ; 2010 ; Earth Interactions Volume 14 ; 14 ; >
+    au < doNotProcess ; exists ; 2011 ; Earth Interactions Volume 15 ; 15 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Earth Interactions Volume 16 ; 16 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Earth Interactions Volume 17 ; 17 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; Earth Interactions Volume 18 ; 18 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; Earth Interactions Volume 19 ; 19 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; Earth Interactions Volume 20 ; 20 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; Earth Interactions Volume 21 ; 21 ; >
+    au < doNotProcess ; doNotProcess ; 2018 ; Earth Interactions Volume 22 ; 22 ; >
+    au < doNotProcess ; doNotProcess ; 2019 ; Earth Interactions Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2020 ; Earth Interactions Volume 24 ; 24 ; >
+    au < deepCrawl ; exists ; 2021 ; Earth Interactions Volume 25 ; 25 ; >
+    au < crawling ; exists ; 2022 ; Earth Interactions Volume 26 ; 26 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Applied Meteorology ;
+      issn = 0021-8952 ;
+      issnl = 0021-8952
+    >
+
+    param[journal_id] = jam
+    comment[continued_by] = 0733-3021
+
+    au < doNotProcess ; exists ; 1962 ; Journal of Applied Meteorology Volume 1 ; 1 ; >
+    au < doNotProcess ; exists ; 1963 ; Journal of Applied Meteorology Volume 2 ; 2 ; >
+    au < doNotProcess ; exists ; 1964 ; Journal of Applied Meteorology Volume 3 ; 3 ; >
+    au < doNotProcess ; exists ; 1965 ; Journal of Applied Meteorology Volume 4 ; 4 ; >
+    au < doNotProcess ; exists ; 1966 ; Journal of Applied Meteorology Volume 5 ; 5 ; >
+    au < doNotProcess ; exists ; 1967 ; Journal of Applied Meteorology Volume 6 ; 6 ; >
+    au < doNotProcess ; exists ; 1968 ; Journal of Applied Meteorology Volume 7 ; 7 ; >
+    au < doNotProcess ; exists ; 1969 ; Journal of Applied Meteorology Volume 8 ; 8 ; >
+    au < doNotProcess ; exists ; 1970 ; Journal of Applied Meteorology Volume 9 ; 9 ; >
+    au < doNotProcess ; exists ; 1971 ; Journal of Applied Meteorology Volume 10 ; 10 ; >
+    au < doNotProcess ; exists ; 1972 ; Journal of Applied Meteorology Volume 11 ; 11 ; >
+    au < doNotProcess ; exists ; 1973 ; Journal of Applied Meteorology Volume 12 ; 12 ; >
+    au < doNotProcess ; exists ; 1974 ; Journal of Applied Meteorology Volume 13 ; 13 ; >
+    au < doNotProcess ; exists ; 1975 ; Journal of Applied Meteorology Volume 14 ; 14 ; >
+    au < doNotProcess ; exists ; 1976 ; Journal of Applied Meteorology Volume 15 ; 15 ; >
+    au < doNotProcess ; exists ; 1977 ; Journal of Applied Meteorology Volume 16 ; 16 ; >
+    au < doNotProcess ; exists ; 1978 ; Journal of Applied Meteorology Volume 17 ; 17 ; >
+    au < doNotProcess ; exists ; 1979 ; Journal of Applied Meteorology Volume 18 ; 18 ; >
+    au < doNotProcess ; exists ; 1980 ; Journal of Applied Meteorology Volume 19 ; 19 ; >
+    au < doNotProcess ; exists ; 1981 ; Journal of Applied Meteorology Volume 20 ; 20 ; >
+    au < doNotProcess ; exists ; 1982 ; Journal of Applied Meteorology Volume 21 ; 21 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Climate and Applied Meteorology ;
+      issn = 0733-3021 ;
+      issnl = 0733-3021
+    >
+
+    param[journal_id] = jcam
+    comment[continues] = 0021-8952
+    comment[continued_by] = 0894-8763
+
+    au < doNotProcess ; exists ; 1983 ; Journal of Climate and Applied Meteorology Volume 22 ; 22 ; >
+    au < doNotProcess ; exists ; 1984 ; Journal of Climate and Applied Meteorology Volume 23 ; 23 ; >
+    au < doNotProcess ; exists ; 1985 ; Journal of Climate and Applied Meteorology Volume 24 ; 24 ; >
+    au < doNotProcess ; exists ; 1986 ; Journal of Climate and Applied Meteorology Volume 25 ; 25 ; >
+    au < doNotProcess ; exists ; 1987 ; Journal of Climate and Applied Meteorology Volume 26 ; 26 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Applied Meteorology ;
+      issn = 0894-8763 ;
+      eissn = 1520-0450 ;
+      issnl = 0894-8763
+    >
+
+    param[journal_id] = apme1
+    comment[continues] = 0733-3021
+    comment[continued_by] = 1558-8424
+
+    au < doNotProcess ; exists ; 1988 ; Journal of Applied Meteorology Volume 27 ; 27 ; >
+    au < doNotProcess ; exists ; 1989 ; Journal of Applied Meteorology Volume 28 ; 28 ; >
+    au < doNotProcess ; exists ; 1990 ; Journal of Applied Meteorology Volume 29 ; 29 ; >
+    au < doNotProcess ; exists ; 1991 ; Journal of Applied Meteorology Volume 30 ; 30 ; >
+    au < doNotProcess ; exists ; 1992 ; Journal of Applied Meteorology Volume 31 ; 31 ; >
+    au < doNotProcess ; exists ; 1993 ; Journal of Applied Meteorology Volume 32 ; 32 ; >
+    au < doNotProcess ; exists ; 1994 ; Journal of Applied Meteorology Volume 33 ; 33 ; >
+    au < doNotProcess ; exists ; 1995 ; Journal of Applied Meteorology Volume 34 ; 34 ; >
+    au < doNotProcess ; exists ; 1996 ; Journal of Applied Meteorology Volume 35 ; 35 ; >
+    au < doNotProcess ; exists ; 1997 ; Journal of Applied Meteorology Volume 36 ; 36 ; >
+    au < doNotProcess ; exists ; 1998 ; Journal of Applied Meteorology Volume 37 ; 37 ; >
+    au < doNotProcess ; exists ; 1999 ; Journal of Applied Meteorology Volume 38 ; 38 ; >
+    au < doNotProcess ; exists ; 2000 ; Journal of Applied Meteorology Volume 39 ; 39 ; >
+    au < doNotProcess ; exists ; 2001 ; Journal of Applied Meteorology Volume 40 ; 40 ; >
+    au < doNotProcess ; exists ; 2002 ; Journal of Applied Meteorology Volume 41 ; 41 ; >
+    au < doNotProcess ; exists ; 2003 ; Journal of Applied Meteorology Volume 42 ; 42 ; >
+    au < doNotProcess ; exists ; 2004 ; Journal of Applied Meteorology Volume 43 ; 43 ; >
+    au < doNotProcess ; exists ; 2005 ; Journal of Applied Meteorology Volume 44 ; 44 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Applied Meteorology and Climatology ;
+      issn = 1558-8424 ;
+      eissn = 1558-8432 ;
+      issnl = 1558-8424
+    >
+
+    param[journal_id] = apme
+    comment[continues] = 0894-8763
+  
+    au < doNotProcess ; exists ; 2006 ; Journal of Applied Meteorology and Climatology Volume 45 ; 45 ; >
+    au < doNotProcess ; exists ; 2007 ; Journal of Applied Meteorology and Climatology Volume 46 ; 46 ; >
+    au < doNotProcess ; exists ; 2008 ; Journal of Applied Meteorology and Climatology Volume 47 ; 47 ; >
+    au < doNotProcess ; exists ; 2009 ; Journal of Applied Meteorology and Climatology Volume 48 ; 48 ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Applied Meteorology and Climatology Volume 49 ; 49 ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Applied Meteorology and Climatology Volume 50 ; 50 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Journal of Applied Meteorology and Climatology Volume 51 ; 51 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Journal of Applied Meteorology and Climatology Volume 52 ; 52 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; Journal of Applied Meteorology and Climatology Volume 53 ; 53 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; Journal of Applied Meteorology and Climatology Volume 54 ; 54 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; Journal of Applied Meteorology and Climatology Volume 55 ; 55 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; Journal of Applied Meteorology and Climatology Volume 56 ; 56 ; >
+    au < doNotProcess ; doNotProcess ; 2018 ; Journal of Applied Meteorology and Climatology Volume 57 ; 57 ; >
+    au < doNotProcess ; doNotProcess ; 2019 ; Journal of Applied Meteorology and Climatology Volume 58 ; 58 ; >
+    au < frozen ; exists ; 2020 ; Journal of Applied Meteorology and Climatology Volume 59 ; 59 ; >
+    au < deepCrawl ; exists ; 2021 ; Journal of Applied Meteorology and Climatology Volume 60 ; 60 ; >
+    au < crawling ; exists ; 2022 ; Journal of Applied Meteorology and Climatology Volume 61 ; 61 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Atmospheric and Oceanic Technology ;
+      issn = 0739-0572 ;
+      eissn = 1520-0426 ;
+      issnl = 0739-0572
+    >
+
+    param[journal_id] = atot
+
+    au < doNotProcess ; exists ; 1984 ; Journal of Atmospheric and Oceanic Technology Volume 1 ; 1 ; >
+    au < doNotProcess ; exists ; 1985 ; Journal of Atmospheric and Oceanic Technology Volume 2 ; 2 ; >
+    au < doNotProcess ; exists ; 1986 ; Journal of Atmospheric and Oceanic Technology Volume 3 ; 3 ; >
+    au < doNotProcess ; exists ; 1987 ; Journal of Atmospheric and Oceanic Technology Volume 4 ; 4 ; >
+    au < doNotProcess ; exists ; 1988 ; Journal of Atmospheric and Oceanic Technology Volume 5 ; 5 ; >
+    au < doNotProcess ; exists ; 1989 ; Journal of Atmospheric and Oceanic Technology Volume 6 ; 6 ; >
+    au < doNotProcess ; exists ; 1990 ; Journal of Atmospheric and Oceanic Technology Volume 7 ; 7 ; >
+    au < doNotProcess ; exists ; 1991 ; Journal of Atmospheric and Oceanic Technology Volume 8 ; 8 ; >
+    au < doNotProcess ; exists ; 1992 ; Journal of Atmospheric and Oceanic Technology Volume 9 ; 9 ; >
+    au < doNotProcess ; exists ; 1993 ; Journal of Atmospheric and Oceanic Technology Volume 10 ; 10 ; >
+    au < doNotProcess ; exists ; 1994 ; Journal of Atmospheric and Oceanic Technology Volume 11 ; 11 ; >
+    au < doNotProcess ; exists ; 1995 ; Journal of Atmospheric and Oceanic Technology Volume 12 ; 12 ; >
+    au < doNotProcess ; exists ; 1996 ; Journal of Atmospheric and Oceanic Technology Volume 13 ; 13 ; >
+    au < doNotProcess ; exists ; 1997 ; Journal of Atmospheric and Oceanic Technology Volume 14 ; 14 ; >
+    au < doNotProcess ; exists ; 1998 ; Journal of Atmospheric and Oceanic Technology Volume 15 ; 15 ; >
+    au < doNotProcess ; exists ; 1999 ; Journal of Atmospheric and Oceanic Technology Volume 16 ; 16 ; >
+    au < doNotProcess ; exists ; 2000 ; Journal of Atmospheric and Oceanic Technology Volume 17 ; 17 ; >
+    au < doNotProcess ; exists ; 2001 ; Journal of Atmospheric and Oceanic Technology Volume 18 ; 18 ; >
+    au < doNotProcess ; exists ; 2002 ; Journal of Atmospheric and Oceanic Technology Volume 19 ; 19 ; >
+    au < doNotProcess ; exists ; 2003 ; Journal of Atmospheric and Oceanic Technology Volume 20 ; 20 ; >
+    au < doNotProcess ; exists ; 2004 ; Journal of Atmospheric and Oceanic Technology Volume 21 ; 21 ; >
+    au < doNotProcess ; exists ; 2005 ; Journal of Atmospheric and Oceanic Technology Volume 22 ; 22 ; >
+    au < doNotProcess ; exists ; 2006 ; Journal of Atmospheric and Oceanic Technology Volume 23 ; 23 ; >
+    au < doNotProcess ; exists ; 2007 ; Journal of Atmospheric and Oceanic Technology Volume 24 ; 24 ; >
+    au < doNotProcess ; exists ; 2008 ; Journal of Atmospheric and Oceanic Technology Volume 25 ; 25 ; >
+    au < doNotProcess ; exists ; 2009 ; Journal of Atmospheric and Oceanic Technology Volume 26 ; 26 ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Atmospheric and Oceanic Technology Volume 27 ; 27 ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Atmospheric and Oceanic Technology Volume 28 ; 28 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Journal of Atmospheric and Oceanic Technology Volume 29 ; 29 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Journal of Atmospheric and Oceanic Technology Volume 30 ; 30 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; Journal of Atmospheric and Oceanic Technology Volume 31 ; 31 ; reingest3.clockss.org:8083 >
+    au < doNotProcess ; doNotProcess ; 2015 ; Journal of Atmospheric and Oceanic Technology Volume 32 ; 32 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; Journal of Atmospheric and Oceanic Technology Volume 33 ; 33 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; Journal of Atmospheric and Oceanic Technology Volume 34 ; 34 ; >
+    au < doNotProcess ; doNotProcess ; 2018 ; Journal of Atmospheric and Oceanic Technology Volume 35 ; 35 ; >
+    au < doNotProcess ; doNotProcess ; 2019 ; Journal of Atmospheric and Oceanic Technology Volume 36 ; 36 ; >
+    au < frozen ; exists ; 2020 ; Journal of Atmospheric and Oceanic Technology Volume 37 ; 37 ; >
+    au < deepCrawl ; exists ; 2021 ; Journal of Atmospheric and Oceanic Technology Volume 38 ; 38 ; >
+    au < crawling ; exists ; 2022 ; Journal of Atmospheric and Oceanic Technology Volume 39 ; 39 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Climate ;
+      issn = 0894-8755 ;
+      eissn = 1520-0442 ;
+      issnl = 0894-8755
+    >
+    
+    param[journal_id] = clim
+
+
+    au < doNotProcess ; exists ; 1988 ; Journal of Climate Volume 1 ; 1 ; >
+    au < doNotProcess ; exists ; 1989 ; Journal of Climate Volume 2 ; 2 ; >
+    au < doNotProcess ; exists ; 1990 ; Journal of Climate Volume 3 ; 3 ; >
+    au < doNotProcess ; exists ; 1991 ; Journal of Climate Volume 4 ; 4 ; >
+    au < doNotProcess ; exists ; 1992 ; Journal of Climate Volume 5 ; 5 ; >
+    au < doNotProcess ; exists ; 1993 ; Journal of Climate Volume 6 ; 6 ; >
+    au < doNotProcess ; exists ; 1994 ; Journal of Climate Volume 7 ; 7 ; >
+    au < doNotProcess ; exists ; 1995 ; Journal of Climate Volume 8 ; 8 ; >
+    au < doNotProcess ; exists ; 1996 ; Journal of Climate Volume 9 ; 9 ; >
+    au < doNotProcess ; exists ; 1997 ; Journal of Climate Volume 10 ; 10 ; >
+    au < doNotProcess ; exists ; 1998 ; Journal of Climate Volume 11 ; 11 ; >
+    au < doNotProcess ; exists ; 1999 ; Journal of Climate Volume 12 ; 12 ; >
+    au < doNotProcess ; exists ; 2000 ; Journal of Climate Volume 13 ; 13 ; >
+    au < doNotProcess ; exists ; 2001 ; Journal of Climate Volume 14 ; 14 ; >
+    au < doNotProcess ; exists ; 2002 ; Journal of Climate Volume 15 ; 15 ; >
+    au < doNotProcess ; exists ; 2003 ; Journal of Climate Volume 16 ; 16 ; >
+    au < doNotProcess ; exists ; 2004 ; Journal of Climate Volume 17 ; 17 ; >
+    au < doNotProcess ; exists ; 2005 ; Journal of Climate Volume 18 ; 18 ; >
+    au < doNotProcess ; exists ; 2006 ; Journal of Climate Volume 19 ; 19 ; >
+    au < doNotProcess ; exists ; 2007 ; Journal of Climate Volume 20 ; 20 ; >
+    au < doNotProcess ; exists ; 2008 ; Journal of Climate Volume 21 ; 21 ; >
+    au < doNotProcess ; exists ; 2009 ; Journal of Climate Volume 22 ; 22 ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Climate Volume 23 ; 23 ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Climate Volume 24 ; 24 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Journal of Climate Volume 25 ; 25 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Journal of Climate Volume 26 ; 26 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; Journal of Climate Volume 27 ; 27 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; Journal of Climate Volume 28 ; 28 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; Journal of Climate Volume 29 ; 29 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; Journal of Climate Volume 30 ; 30 ; >
+    au < doNotProcess ; doNotProcess ; 2018 ; Journal of Climate Volume 31 ; 31 ; >
+    au < doNotProcess ; doNotProcess ; 2019 ; Journal of Climate Volume 32 ; 32 ; >
+    au < frozen ; exists ; 2020 ; Journal of Climate Volume 33 ; 33 ; >
+    au < testing ; exists ; 2021 ; Journal of Climate Volume 34 ; 34 ; >
+    au < crawling ; exists ; 2022 ; Journal of Climate Volume 35 ; 35 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Hydrometeorology ;
+      issn = 1525-755X ;
+      eissn = 1525-7541 ;
+      issnl = 1525-7541
+    >
+    
+    param[journal_id] = hydr
+    comment[notReady] = keeps not picking up authors on some abstracts, no matter how hard I try.
+
+    au < doNotProcess ; exists ; 2000 ; Journal of Hydrometeorology Volume 1 ; 1 ; >
+    au < doNotProcess ; exists ; 2001 ; Journal of Hydrometeorology Volume 2 ; 2 ; >
+    au < doNotProcess ; exists ; 2002 ; Journal of Hydrometeorology Volume 3 ; 3 ; >
+    au < doNotProcess ; exists ; 2003 ; Journal of Hydrometeorology Volume 4 ; 4 ; >
+    au < doNotProcess ; exists ; 2004 ; Journal of Hydrometeorology Volume 5 ; 5 ; >
+    au < doNotProcess ; exists ; 2005 ; Journal of Hydrometeorology Volume 6 ; 6 ; >
+    au < doNotProcess ; exists ; 2006 ; Journal of Hydrometeorology Volume 7 ; 7 ; >
+    au < doNotProcess ; exists ; 2007 ; Journal of Hydrometeorology Volume 8 ; 8 ; >
+    au < doNotProcess ; exists ; 2008 ; Journal of Hydrometeorology Volume 9 ; 9 ; >
+    au < doNotProcess ; exists ; 2009 ; Journal of Hydrometeorology Volume 10 ; 10 ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Hydrometeorology Volume 11 ; 11 ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Hydrometeorology Volume 12 ; 12 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Journal of Hydrometeorology Volume 13 ; 13 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Journal of Hydrometeorology Volume 14 ; 14 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; Journal of Hydrometeorology Volume 15 ; 15 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; Journal of Hydrometeorology Volume 16 ; 16 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; Journal of Hydrometeorology Volume 17 ; 17 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; Journal of Hydrometeorology Volume 18 ; 18 ; >
+    au < doNotProcess ; doNotProcess ; 2018 ; Journal of Hydrometeorology Volume 19 ; 19 ; >
+    au < doNotProcess ; doNotProcess ; 2019 ; Journal of Hydrometeorology Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2020 ; Journal of Hydrometeorology Volume 21 ; 21 ; >
+    au < deepCrawl ; exists ; 2021 ; Journal of Hydrometeorology Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2022 ; Journal of Hydrometeorology Volume 23 ; 23 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Physical Oceanography ;
+      issn = 0022-3670 ;
+      eissn = 1520-0485 ;
+      issnl = 0022-3670
+    >
+    
+    param[journal_id] = phoc
+
+    au < doNotProcess ; exists ; 1971 ; Journal of Physical Oceanography Volume 1 ; 1 ; >  
+    au < doNotProcess ; exists ; 1972 ; Journal of Physical Oceanography Volume 2 ; 2 ; >  
+    au < doNotProcess ; exists ; 1973 ; Journal of Physical Oceanography Volume 3 ; 3 ; >  
+    au < doNotProcess ; exists ; 1974 ; Journal of Physical Oceanography Volume 4 ; 4 ; >  
+    au < doNotProcess ; exists ; 1975 ; Journal of Physical Oceanography Volume 5 ; 5 ; >  
+    au < doNotProcess ; exists ; 1976 ; Journal of Physical Oceanography Volume 6 ; 6 ; >  
+    au < doNotProcess ; exists ; 1977 ; Journal of Physical Oceanography Volume 7 ; 7 ; >  
+    au < doNotProcess ; exists ; 1978 ; Journal of Physical Oceanography Volume 8 ; 8 ; >  
+    au < doNotProcess ; exists ; 1979 ; Journal of Physical Oceanography Volume 9 ; 9 ; >
+    au < doNotProcess ; exists ; 1980 ; Journal of Physical Oceanography Volume 10 ; 10 ; >
+    au < doNotProcess ; exists ; 1981 ; Journal of Physical Oceanography Volume 11 ; 11 ; >
+    au < doNotProcess ; exists ; 1982 ; Journal of Physical Oceanography Volume 12 ; 12 ; >
+    au < doNotProcess ; exists ; 1983 ; Journal of Physical Oceanography Volume 13 ; 13 ; >
+    au < doNotProcess ; exists ; 1984 ; Journal of Physical Oceanography Volume 14 ; 14 ; >
+    au < doNotProcess ; exists ; 1985 ; Journal of Physical Oceanography Volume 15 ; 15 ; >
+    au < doNotProcess ; exists ; 1986 ; Journal of Physical Oceanography Volume 16 ; 16 ; >
+    au < doNotProcess ; exists ; 1987 ; Journal of Physical Oceanography Volume 17 ; 17 ; >
+    au < doNotProcess ; exists ; 1988 ; Journal of Physical Oceanography Volume 18 ; 18 ; >
+    au < doNotProcess ; exists ; 1989 ; Journal of Physical Oceanography Volume 19 ; 19 ; >
+    au < doNotProcess ; exists ; 1990 ; Journal of Physical Oceanography Volume 20 ; 20 ; >
+    au < doNotProcess ; exists ; 1991 ; Journal of Physical Oceanography Volume 21 ; 21 ; >
+    au < doNotProcess ; exists ; 1992 ; Journal of Physical Oceanography Volume 22 ; 22 ; >
+    au < doNotProcess ; exists ; 1993 ; Journal of Physical Oceanography Volume 23 ; 23 ; >
+    au < doNotProcess ; exists ; 1994 ; Journal of Physical Oceanography Volume 24 ; 24 ; >
+    au < doNotProcess ; exists ; 1995 ; Journal of Physical Oceanography Volume 25 ; 25 ; >
+    au < doNotProcess ; exists ; 1996 ; Journal of Physical Oceanography Volume 26 ; 26 ; >
+    au < doNotProcess ; exists ; 1997 ; Journal of Physical Oceanography Volume 27 ; 27 ; >
+    au < doNotProcess ; exists ; 1998 ; Journal of Physical Oceanography Volume 28 ; 28 ; >
+    au < doNotProcess ; exists ; 1999 ; Journal of Physical Oceanography Volume 29 ; 29 ; >
+    au < doNotProcess ; exists ; 2000 ; Journal of Physical Oceanography Volume 30 ; 30 ; >
+    au < doNotProcess ; exists ; 2001 ; Journal of Physical Oceanography Volume 31 ; 31 ; >
+    au < doNotProcess ; exists ; 2002 ; Journal of Physical Oceanography Volume 32 ; 32 ; >
+    au < doNotProcess ; exists ; 2003 ; Journal of Physical Oceanography Volume 33 ; 33 ; >
+    au < doNotProcess ; exists ; 2004 ; Journal of Physical Oceanography Volume 34 ; 34 ; >
+    au < doNotProcess ; exists ; 2005 ; Journal of Physical Oceanography Volume 35 ; 35 ; >
+    au < doNotProcess ; exists ; 2006 ; Journal of Physical Oceanography Volume 36 ; 36 ; >
+    au < doNotProcess ; exists ; 2007 ; Journal of Physical Oceanography Volume 37 ; 37 ; >
+    au < doNotProcess ; exists ; 2008 ; Journal of Physical Oceanography Volume 38 ; 38 ; >
+    au < doNotProcess ; exists ; 2009 ; Journal of Physical Oceanography Volume 39 ; 39 ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Physical Oceanography Volume 40 ; 40 ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Physical Oceanography Volume 41 ; 41 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Journal of Physical Oceanography Volume 42 ; 42 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Journal of Physical Oceanography Volume 43 ; 43 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; Journal of Physical Oceanography Volume 44 ; 44 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; Journal of Physical Oceanography Volume 45 ; 45 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; Journal of Physical Oceanography Volume 46 ; 46 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; Journal of Physical Oceanography Volume 47 ; 47 ; >
+    au < doNotProcess ; doNotProcess ; 2018 ; Journal of Physical Oceanography Volume 48 ; 48 ; >
+    au < doNotProcess ; doNotProcess ; 2019 ; Journal of Physical Oceanography Volume 49 ; 49 ; >
+    au < frozen ; exists ; 2020 ; Journal of Physical Oceanography Volume 50 ; 50 ; >
+    au < deepCrawl ; exists ; 2021 ; Journal of Physical Oceanography Volume 51 ; 51 ; >
+    au < crawling ; exists ; 2022 ; Journal of Physical Oceanography Volume 52 ; 52 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of the Atmospheric Sciences ;
+      issn = 0022-4928 ;
+      eissn = 1520-0469 ;
+      issnl = 0022-4928
+    >
+    
+    param[journal_id] = atsc
+
+    au < doNotProcess ; exists ; 1944 ; Journal of the Atmospheric Sciences Volume 1 ; 1 ; >  
+    au < doNotProcess ; exists ; 1945 ; Journal of the Atmospheric Sciences Volume 2 ; 2 ; >  
+    au < doNotProcess ; exists ; 1946 ; Journal of the Atmospheric Sciences Volume 3 ; 3 ; >  
+    au < doNotProcess ; exists ; 1947 ; Journal of the Atmospheric Sciences Volume 4 ; 4 ; >  
+    au < doNotProcess ; exists ; 1948 ; Journal of the Atmospheric Sciences Volume 5 ; 5 ; >  
+    au < doNotProcess ; exists ; 1949 ; Journal of the Atmospheric Sciences Volume 6 ; 6 ; >  
+    au < doNotProcess ; exists ; 1950 ; Journal of the Atmospheric Sciences Volume 7 ; 7 ; >  
+    au < doNotProcess ; exists ; 1951 ; Journal of the Atmospheric Sciences Volume 8 ; 8 ; >  
+    au < doNotProcess ; exists ; 1952 ; Journal of the Atmospheric Sciences Volume 9 ; 9 ; >
+    au < doNotProcess ; exists ; 1953 ; Journal of the Atmospheric Sciences Volume 10 ; 10 ; >
+    au < doNotProcess ; exists ; 1954 ; Journal of the Atmospheric Sciences Volume 11 ; 11 ; >
+    au < doNotProcess ; exists ; 1955 ; Journal of the Atmospheric Sciences Volume 12 ; 12 ; >
+    au < doNotProcess ; exists ; 1956 ; Journal of the Atmospheric Sciences Volume 13 ; 13 ; >
+    au < doNotProcess ; exists ; 1957 ; Journal of the Atmospheric Sciences Volume 14 ; 14 ; >
+    au < doNotProcess ; exists ; 1958 ; Journal of the Atmospheric Sciences Volume 15 ; 15 ; >
+    au < doNotProcess ; exists ; 1959 ; Journal of the Atmospheric Sciences Volume 16 ; 16 ; >
+    au < doNotProcess ; exists ; 1960 ; Journal of the Atmospheric Sciences Volume 17 ; 17 ; >
+    au < doNotProcess ; exists ; 1961 ; Journal of the Atmospheric Sciences Volume 18 ; 18 ; >
+    au < doNotProcess ; exists ; 1962 ; Journal of the Atmospheric Sciences Volume 19 ; 19 ; >
+    au < doNotProcess ; exists ; 1963 ; Journal of the Atmospheric Sciences Volume 20 ; 20 ; >
+    au < doNotProcess ; exists ; 1964 ; Journal of the Atmospheric Sciences Volume 21 ; 21 ; >
+    au < doNotProcess ; exists ; 1965 ; Journal of the Atmospheric Sciences Volume 22 ; 22 ; >
+    au < doNotProcess ; exists ; 1966 ; Journal of the Atmospheric Sciences Volume 23 ; 23 ; >
+    au < doNotProcess ; exists ; 1967 ; Journal of the Atmospheric Sciences Volume 24 ; 24 ; >
+    au < doNotProcess ; exists ; 1968 ; Journal of the Atmospheric Sciences Volume 25 ; 25 ; >
+    au < doNotProcess ; exists ; 1969 ; Journal of the Atmospheric Sciences Volume 26 ; 26 ; >
+    au < doNotProcess ; exists ; 1970 ; Journal of the Atmospheric Sciences Volume 27 ; 27 ; >
+    au < doNotProcess ; exists ; 1971 ; Journal of the Atmospheric Sciences Volume 28 ; 28 ; >
+    au < doNotProcess ; exists ; 1972 ; Journal of the Atmospheric Sciences Volume 29 ; 29 ; >
+    au < doNotProcess ; exists ; 1973 ; Journal of the Atmospheric Sciences Volume 30 ; 30 ; >
+    au < doNotProcess ; exists ; 1974 ; Journal of the Atmospheric Sciences Volume 31 ; 31 ; >
+    au < doNotProcess ; exists ; 1975 ; Journal of the Atmospheric Sciences Volume 32 ; 32 ; >
+    au < doNotProcess ; exists ; 1976 ; Journal of the Atmospheric Sciences Volume 33 ; 33 ; >
+    au < doNotProcess ; exists ; 1977 ; Journal of the Atmospheric Sciences Volume 34 ; 34 ; >
+    au < doNotProcess ; exists ; 1978 ; Journal of the Atmospheric Sciences Volume 35 ; 35 ; >
+    au < doNotProcess ; exists ; 1979 ; Journal of the Atmospheric Sciences Volume 36 ; 36 ; >
+    au < doNotProcess ; exists ; 1980 ; Journal of the Atmospheric Sciences Volume 37 ; 37 ; >
+    au < doNotProcess ; exists ; 1981 ; Journal of the Atmospheric Sciences Volume 38 ; 38 ; >
+    au < doNotProcess ; exists ; 1982 ; Journal of the Atmospheric Sciences Volume 39 ; 39 ; >
+    au < doNotProcess ; exists ; 1983 ; Journal of the Atmospheric Sciences Volume 40 ; 40 ; >
+    au < doNotProcess ; exists ; 1984 ; Journal of the Atmospheric Sciences Volume 41 ; 41 ; >
+    au < doNotProcess ; exists ; 1985 ; Journal of the Atmospheric Sciences Volume 42 ; 42 ; >
+    au < doNotProcess ; exists ; 1986 ; Journal of the Atmospheric Sciences Volume 43 ; 43 ; >
+    au < doNotProcess ; exists ; 1987 ; Journal of the Atmospheric Sciences Volume 44 ; 44 ; >
+    au < doNotProcess ; exists ; 1988 ; Journal of the Atmospheric Sciences Volume 45 ; 45 ; >
+    au < doNotProcess ; exists ; 1989 ; Journal of the Atmospheric Sciences Volume 46 ; 46 ; >
+    au < doNotProcess ; exists ; 1990 ; Journal of the Atmospheric Sciences Volume 47 ; 47 ; >
+    au < doNotProcess ; exists ; 1991 ; Journal of the Atmospheric Sciences Volume 48 ; 48 ; >
+    au < doNotProcess ; exists ; 1992 ; Journal of the Atmospheric Sciences Volume 49 ; 49 ; >
+    au < doNotProcess ; exists ; 1993 ; Journal of the Atmospheric Sciences Volume 50 ; 50 ; >
+    au < doNotProcess ; exists ; 1994 ; Journal of the Atmospheric Sciences Volume 51 ; 51 ; >
+    au < doNotProcess ; exists ; 1995 ; Journal of the Atmospheric Sciences Volume 52 ; 52 ; >
+    au < doNotProcess ; exists ; 1996 ; Journal of the Atmospheric Sciences Volume 53 ; 53 ; >
+    au < doNotProcess ; exists ; 1997 ; Journal of the Atmospheric Sciences Volume 54 ; 54 ; >
+    au < doNotProcess ; exists ; 1998 ; Journal of the Atmospheric Sciences Volume 55 ; 55 ; >
+    au < doNotProcess ; exists ; 1999 ; Journal of the Atmospheric Sciences Volume 56 ; 56 ; >
+    au < doNotProcess ; exists ; 2000 ; Journal of the Atmospheric Sciences Volume 57 ; 57 ; >
+    au < doNotProcess ; exists ; 2001 ; Journal of the Atmospheric Sciences Volume 58 ; 58 ; >
+    au < doNotProcess ; exists ; 2002 ; Journal of the Atmospheric Sciences Volume 59 ; 59 ; >
+    au < doNotProcess ; exists ; 2003 ; Journal of the Atmospheric Sciences Volume 60 ; 60 ; >
+    au < doNotProcess ; exists ; 2004 ; Journal of the Atmospheric Sciences Volume 61 ; 61 ; >
+    au < doNotProcess ; exists ; 2005 ; Journal of the Atmospheric Sciences Volume 62 ; 62 ; >
+    au < doNotProcess ; exists ; 2006 ; Journal of the Atmospheric Sciences Volume 63 ; 63 ; >
+    au < doNotProcess ; exists ; 2007 ; Journal of the Atmospheric Sciences Volume 64 ; 64 ; >
+    au < doNotProcess ; exists ; 2008 ; Journal of the Atmospheric Sciences Volume 65 ; 65 ; >
+    au < doNotProcess ; exists ; 2009 ; Journal of the Atmospheric Sciences Volume 66 ; 66 ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of the Atmospheric Sciences Volume 67 ; 67 ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of the Atmospheric Sciences Volume 68 ; 68 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Journal of the Atmospheric Sciences Volume 69 ; 69 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Journal of the Atmospheric Sciences Volume 70 ; 70 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; Journal of the Atmospheric Sciences Volume 71 ; 71 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; Journal of the Atmospheric Sciences Volume 72 ; 72 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; Journal of the Atmospheric Sciences Volume 73 ; 73 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; Journal of the Atmospheric Sciences Volume 74 ; 74 ; >
+    au < doNotProcess ; doNotProcess ; 2018 ; Journal of the Atmospheric Sciences Volume 75 ; 75 ; >
+    au < doNotProcess ; doNotProcess ; 2019 ; Journal of the Atmospheric Sciences Volume 76 ; 76 ; >
+    au < frozen ; exists ; 2020 ; Journal of the Atmospheric Sciences Volume 77 ; 77 ; >
+    au < deepCrawl ; exists ; 2021 ; Journal of the Atmospheric Sciences Volume 78 ; 78 ; >
+    au < ready ; exists ; 2022 ; Journal of the Atmospheric Sciences Volume 79 ; 79 ; >
+
+  }
+
+  {
+
+    title <
+      name = Meteorological Monographs ;
+      issn = 0065-9401 ;
+      eissn = 1943-3646 ;
+      issnl = 0065-9401
+    >
+    
+    param[journal_id] = amsm
+    
+    au < doNotProcess ; exists ; 1980 ; Meteorological Monographs Volume 39 [abstract only] ; 39 ; >
+    au < doNotProcess ; exists ; 1986 ; Meteorological Monographs Volume 43 [abstract only] ; 43 ; >
+    au < doNotProcess ; exists ; 1993 ; Meteorological Monographs Volume 46 [abstract only] ; 46 ; >
+    au < doNotProcess ; exists ; 1994 ; Meteorological Monographs Volume 47 [abstract only] ; 47 ; >
+    au < doNotProcess ; exists ; 1996 ; Meteorological Monographs Volume 48 [abstract only] ; 48 ; >
+    au < doNotProcess ; exists ; 1998 ; Meteorological Monographs Volume 49 [abstract only] ; 49 ; >
+    au < doNotProcess ; exists ; 2001 ; Meteorological Monographs Volume 50 [abstract only] ; 50 ; >
+    au < doNotProcess ; exists ; 2002 ; Meteorological Monographs Volume 51 [abstract only] ; 51 ; >
+    au < doNotProcess ; exists ; 2003 ; Meteorological Monographs Volume 52 [abstract only] ; 52-53 ; >
+    au < doNotProcess ; exists ; 2004 ; Meteorological Monographs Volume 54 [abstract only] ; 54 ; >
+    au < doNotProcess ; exists ; 2008 ; Meteorological Monographs Volume 55 [abstract only] ; 55 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; Meteorological Monographs Volume 56 ; 56 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; Meteorological Monographs Volume 57 ; 57 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; Meteorological Monographs Volume 58 ; 58 ; >
+    au < doNotProcess ; doNotProcess ; 2018 ; Meteorological Monographs Volume 59 ; 59 ; >
+
+  }
+
+  {
+
+    title <
+      name = Monthly Weather Review ;
+      issn = 0027-0644 ;
+      eissn = 1520-0493 ;
+      issnl = 0027-0644
+    >
+    
+    param[journal_id] = mwre
+    
+    au < doNotProcess ; exists ; 1872 ; Monthly Weather Review Volume 0 ; 0 ; >
+    au < doNotProcess ; exists ; 1873 ; Monthly Weather Review Volume 1 ; 1 ; >
+    au < doNotProcess ; exists ; 1874 ; Monthly Weather Review Volume 2 ; 2 ; >
+    au < doNotProcess ; exists ; 1875 ; Monthly Weather Review Volume 3 ; 3 ; >
+    au < doNotProcess ; exists ; 1876 ; Monthly Weather Review Volume 4 ; 4 ; >
+    au < doNotProcess ; exists ; 1877 ; Monthly Weather Review Volume 5 ; 5 ; >
+    au < doNotProcess ; exists ; 1878 ; Monthly Weather Review Volume 6 ; 6 ; >
+    au < doNotProcess ; exists ; 1879 ; Monthly Weather Review Volume 7 ; 7 ; >
+    au < doNotProcess ; exists ; 1880 ; Monthly Weather Review Volume 8 ; 8 ; >
+    au < doNotProcess ; exists ; 1881 ; Monthly Weather Review Volume 9 ; 9 ; >
+    au < doNotProcess ; exists ; 1882 ; Monthly Weather Review Volume 10 ; 10 ; >
+    au < doNotProcess ; exists ; 1883 ; Monthly Weather Review Volume 11 ; 11 ; >
+    au < doNotProcess ; exists ; 1884 ; Monthly Weather Review Volume 12 ; 12 ; >
+    au < doNotProcess ; exists ; 1885 ; Monthly Weather Review Volume 13 ; 13 ; >
+    au < doNotProcess ; exists ; 1886 ; Monthly Weather Review Volume 14 ; 14 ; >
+    au < doNotProcess ; exists ; 1887 ; Monthly Weather Review Volume 15 ; 15 ; >
+    au < doNotProcess ; exists ; 1888 ; Monthly Weather Review Volume 16 ; 16 ; >
+    au < doNotProcess ; exists ; 1889 ; Monthly Weather Review Volume 17 ; 17 ; >
+    au < doNotProcess ; exists ; 1890 ; Monthly Weather Review Volume 18 ; 18 ; >
+    au < doNotProcess ; exists ; 1891 ; Monthly Weather Review Volume 19 ; 19 ; >
+    au < doNotProcess ; exists ; 1892 ; Monthly Weather Review Volume 20 ; 20 ; >
+    au < doNotProcess ; exists ; 1893 ; Monthly Weather Review Volume 21 ; 21 ; >
+    au < doNotProcess ; exists ; 1894 ; Monthly Weather Review Volume 22 ; 22 ; >
+    au < doNotProcess ; exists ; 1895 ; Monthly Weather Review Volume 23 ; 23 ; >
+    au < doNotProcess ; exists ; 1896 ; Monthly Weather Review Volume 24 ; 24 ; >
+    au < doNotProcess ; exists ; 1897 ; Monthly Weather Review Volume 25 ; 25 ; >
+    au < doNotProcess ; exists ; 1898 ; Monthly Weather Review Volume 26 ; 26 ; >
+    au < doNotProcess ; exists ; 1899 ; Monthly Weather Review Volume 27 ; 27 ; >
+    au < doNotProcess ; exists ; 1900 ; Monthly Weather Review Volume 28 ; 28 ; >
+    au < doNotProcess ; exists ; 1901 ; Monthly Weather Review Volume 29 ; 29 ; >
+    au < doNotProcess ; exists ; 1902 ; Monthly Weather Review Volume 30 ; 30 ; >
+    au < doNotProcess ; exists ; 1903 ; Monthly Weather Review Volume 31 ; 31 ; >
+    au < doNotProcess ; exists ; 1904 ; Monthly Weather Review Volume 32 ; 32 ; >
+    au < doNotProcess ; exists ; 1905 ; Monthly Weather Review Volume 33 ; 33 ; >
+    au < doNotProcess ; exists ; 1906 ; Monthly Weather Review Volume 34 ; 34 ; >
+    au < doNotProcess ; exists ; 1907 ; Monthly Weather Review Volume 35 ; 35 ; >
+    au < doNotProcess ; exists ; 1908 ; Monthly Weather Review Volume 36 ; 36 ; >
+    au < doNotProcess ; exists ; 1909 ; Monthly Weather Review Volume 37 ; 37 ; >
+    au < doNotProcess ; exists ; 1910 ; Monthly Weather Review Volume 38 ; 38 ; >
+    au < doNotProcess ; exists ; 1911 ; Monthly Weather Review Volume 39 ; 39 ; >
+    au < doNotProcess ; exists ; 1912 ; Monthly Weather Review Volume 40 ; 40 ; >
+    au < doNotProcess ; exists ; 1913 ; Monthly Weather Review Volume 41 ; 41 ; >
+    au < doNotProcess ; exists ; 1914 ; Monthly Weather Review Volume 42 ; 42 ; >
+    au < doNotProcess ; exists ; 1915 ; Monthly Weather Review Volume 43 ; 43 ; >
+    au < doNotProcess ; exists ; 1916 ; Monthly Weather Review Volume 44 ; 44 ; >
+    au < doNotProcess ; exists ; 1917 ; Monthly Weather Review Volume 45 ; 45 ; >
+    au < doNotProcess ; exists ; 1918 ; Monthly Weather Review Volume 46 ; 46 ; >
+    au < doNotProcess ; exists ; 1919 ; Monthly Weather Review Volume 47 ; 47 ; >
+    au < doNotProcess ; exists ; 1920 ; Monthly Weather Review Volume 48 ; 48 ; >
+    au < doNotProcess ; exists ; 1921 ; Monthly Weather Review Volume 49 ; 49 ; >
+    au < doNotProcess ; exists ; 1922 ; Monthly Weather Review Volume 50 ; 50 ; >
+    au < doNotProcess ; exists ; 1923 ; Monthly Weather Review Volume 51 ; 51 ; >
+    au < doNotProcess ; exists ; 1924 ; Monthly Weather Review Volume 52 ; 52 ; >
+    au < doNotProcess ; exists ; 1925 ; Monthly Weather Review Volume 53 ; 53 ; >
+    au < doNotProcess ; exists ; 1926 ; Monthly Weather Review Volume 54 ; 54 ; >
+    au < doNotProcess ; exists ; 1927 ; Monthly Weather Review Volume 55 ; 55 ; >
+    au < doNotProcess ; exists ; 1928 ; Monthly Weather Review Volume 56 ; 56 ; >
+    au < doNotProcess ; exists ; 1929 ; Monthly Weather Review Volume 57 ; 57 ; >
+    au < doNotProcess ; exists ; 1930 ; Monthly Weather Review Volume 58 ; 58 ; >
+    au < doNotProcess ; exists ; 1931 ; Monthly Weather Review Volume 59 ; 59 ; >
+    au < doNotProcess ; exists ; 1932 ; Monthly Weather Review Volume 60 ; 60 ; >
+    au < doNotProcess ; exists ; 1933 ; Monthly Weather Review Volume 61 ; 61 ; >
+    au < doNotProcess ; exists ; 1934 ; Monthly Weather Review Volume 62 ; 62 ; >
+    au < doNotProcess ; exists ; 1935 ; Monthly Weather Review Volume 63 ; 63 ; >
+    au < doNotProcess ; exists ; 1936 ; Monthly Weather Review Volume 64 ; 64 ; >
+    au < doNotProcess ; exists ; 1937 ; Monthly Weather Review Volume 65 ; 65 ; >
+    au < doNotProcess ; exists ; 1938 ; Monthly Weather Review Volume 66 ; 66 ; >
+    au < doNotProcess ; exists ; 1939 ; Monthly Weather Review Volume 67 ; 67 ; >
+    au < doNotProcess ; exists ; 1940 ; Monthly Weather Review Volume 68 ; 68 ; >
+    au < doNotProcess ; exists ; 1941 ; Monthly Weather Review Volume 69 ; 69 ; >
+    au < doNotProcess ; exists ; 1942 ; Monthly Weather Review Volume 70 ; 70 ; >
+    au < doNotProcess ; exists ; 1943 ; Monthly Weather Review Volume 71 ; 71 ; >
+    au < doNotProcess ; exists ; 1944 ; Monthly Weather Review Volume 72 ; 72 ; >
+    au < doNotProcess ; exists ; 1945 ; Monthly Weather Review Volume 73 ; 73 ; >
+    au < doNotProcess ; exists ; 1946 ; Monthly Weather Review Volume 74 ; 74 ; >
+    au < doNotProcess ; exists ; 1947 ; Monthly Weather Review Volume 75 ; 75 ; >
+    au < doNotProcess ; exists ; 1948 ; Monthly Weather Review Volume 76 ; 76 ; >
+    au < doNotProcess ; exists ; 1949 ; Monthly Weather Review Volume 77 ; 77 ; >
+    au < doNotProcess ; exists ; 1950 ; Monthly Weather Review Volume 78 ; 78 ; >
+    au < doNotProcess ; exists ; 1951 ; Monthly Weather Review Volume 79 ; 79 ; >
+    au < doNotProcess ; exists ; 1952 ; Monthly Weather Review Volume 80 ; 80 ; >
+    au < doNotProcess ; exists ; 1953 ; Monthly Weather Review Volume 81 ; 81 ; >
+    au < doNotProcess ; exists ; 1954 ; Monthly Weather Review Volume 82 ; 82 ; >
+    au < doNotProcess ; exists ; 1955 ; Monthly Weather Review Volume 83 ; 83 ; >
+    au < doNotProcess ; exists ; 1956 ; Monthly Weather Review Volume 84 ; 84 ; >
+    au < doNotProcess ; exists ; 1957 ; Monthly Weather Review Volume 85 ; 85 ; >
+    au < doNotProcess ; exists ; 1958 ; Monthly Weather Review Volume 86 ; 86 ; >
+    au < doNotProcess ; exists ; 1959 ; Monthly Weather Review Volume 87 ; 87 ; >
+    au < doNotProcess ; exists ; 1960 ; Monthly Weather Review Volume 88 ; 88 ; >
+    au < doNotProcess ; exists ; 1961 ; Monthly Weather Review Volume 89 ; 89 ; >
+    au < doNotProcess ; exists ; 1962 ; Monthly Weather Review Volume 90 ; 90 ; >
+    au < doNotProcess ; exists ; 1963 ; Monthly Weather Review Volume 91 ; 91 ; >
+    au < doNotProcess ; exists ; 1964 ; Monthly Weather Review Volume 92 ; 92 ; >
+    au < doNotProcess ; exists ; 1965 ; Monthly Weather Review Volume 93 ; 93 ; >
+    au < doNotProcess ; exists ; 1966 ; Monthly Weather Review Volume 94 ; 94 ; >
+    au < doNotProcess ; exists ; 1967 ; Monthly Weather Review Volume 95 ; 95 ; >
+    au < doNotProcess ; exists ; 1968 ; Monthly Weather Review Volume 96 ; 96 ; >
+    au < doNotProcess ; exists ; 1969 ; Monthly Weather Review Volume 97 ; 97 ; >
+    au < doNotProcess ; exists ; 1970 ; Monthly Weather Review Volume 98 ; 98 ; >
+    au < doNotProcess ; exists ; 1971 ; Monthly Weather Review Volume 99 ; 99 ; >
+    au < doNotProcess ; exists ; 1972 ; Monthly Weather Review Volume 100 ; 100 ; >
+    au < doNotProcess ; exists ; 1973 ; Monthly Weather Review Volume 101 ; 101 ; >
+    au < doNotProcess ; exists ; 1974 ; Monthly Weather Review Volume 102 ; 102 ; >
+    au < doNotProcess ; exists ; 1975 ; Monthly Weather Review Volume 103 ; 103 ; >
+    au < doNotProcess ; exists ; 1976 ; Monthly Weather Review Volume 104 ; 104 ; >
+    au < doNotProcess ; exists ; 1977 ; Monthly Weather Review Volume 105 ; 105 ; >
+    au < doNotProcess ; exists ; 1978 ; Monthly Weather Review Volume 106 ; 106 ; >
+    au < doNotProcess ; exists ; 1979 ; Monthly Weather Review Volume 107 ; 107 ; >
+    au < doNotProcess ; exists ; 1980 ; Monthly Weather Review Volume 108 ; 108 ; >
+    au < doNotProcess ; exists ; 1981 ; Monthly Weather Review Volume 109 ; 109 ; >
+    au < doNotProcess ; exists ; 1982 ; Monthly Weather Review Volume 110 ; 110 ; >
+    au < doNotProcess ; exists ; 1983 ; Monthly Weather Review Volume 111 ; 111 ; >
+    au < doNotProcess ; exists ; 1984 ; Monthly Weather Review Volume 112 ; 112 ; >
+    au < doNotProcess ; exists ; 1985 ; Monthly Weather Review Volume 113 ; 113 ; >
+    au < doNotProcess ; exists ; 1986 ; Monthly Weather Review Volume 114 ; 114 ; >
+    au < doNotProcess ; exists ; 1987 ; Monthly Weather Review Volume 115 ; 115 ; >
+    au < doNotProcess ; exists ; 1988 ; Monthly Weather Review Volume 116 ; 116 ; >
+    au < doNotProcess ; exists ; 1989 ; Monthly Weather Review Volume 117 ; 117 ; >
+    au < doNotProcess ; exists ; 1990 ; Monthly Weather Review Volume 118 ; 118 ; >
+    au < doNotProcess ; exists ; 1991 ; Monthly Weather Review Volume 119 ; 119 ; >
+    au < doNotProcess ; exists ; 1992 ; Monthly Weather Review Volume 120 ; 120 ; >
+    au < doNotProcess ; exists ; 1993 ; Monthly Weather Review Volume 121 ; 121 ; >
+    au < doNotProcess ; exists ; 1994 ; Monthly Weather Review Volume 122 ; 122 ; >
+    au < doNotProcess ; exists ; 1995 ; Monthly Weather Review Volume 123 ; 123 ; >
+    au < doNotProcess ; exists ; 1996 ; Monthly Weather Review Volume 124 ; 124 ; >
+    au < doNotProcess ; exists ; 1997 ; Monthly Weather Review Volume 125 ; 125 ; >
+    au < doNotProcess ; exists ; 1998 ; Monthly Weather Review Volume 126 ; 126 ; >
+    au < doNotProcess ; exists ; 1999 ; Monthly Weather Review Volume 127 ; 127 ; >
+    au < doNotProcess ; exists ; 2000 ; Monthly Weather Review Volume 128 ; 128 ; >
+    au < doNotProcess ; exists ; 2001 ; Monthly Weather Review Volume 129 ; 129 ; >
+    au < doNotProcess ; exists ; 2002 ; Monthly Weather Review Volume 130 ; 130 ; >
+    au < doNotProcess ; exists ; 2003 ; Monthly Weather Review Volume 131 ; 131 ; >
+    au < doNotProcess ; exists ; 2004 ; Monthly Weather Review Volume 132 ; 132 ; >
+    au < doNotProcess ; exists ; 2005 ; Monthly Weather Review Volume 133 ; 133 ; >
+    au < doNotProcess ; exists ; 2006 ; Monthly Weather Review Volume 134 ; 134 ; >
+    au < doNotProcess ; exists ; 2007 ; Monthly Weather Review Volume 135 ; 135 ; >
+    au < doNotProcess ; exists ; 2008 ; Monthly Weather Review Volume 136 ; 136 ; >
+    au < doNotProcess ; exists ; 2009 ; Monthly Weather Review Volume 137 ; 137 ; >
+    au < doNotProcess ; exists ; 2010 ; Monthly Weather Review Volume 138 ; 138 ; >
+    au < doNotProcess ; exists ; 2011 ; Monthly Weather Review Volume 139 ; 139 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Monthly Weather Review Volume 140 ; 140 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Monthly Weather Review Volume 141 ; 141 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; Monthly Weather Review Volume 142 ; 142 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; Monthly Weather Review Volume 143 ; 143 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; Monthly Weather Review Volume 144 ; 144 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; Monthly Weather Review Volume 145 ; 145 ; >
+    au < doNotProcess ; doNotProcess ; 2018 ; Monthly Weather Review Volume 146 ; 146 ; >
+    au < doNotProcess ; doNotProcess ; 2019 ; Monthly Weather Review Volume 147 ; 147 ; >
+    au < frozen ; exists ; 2020 ; Monthly Weather Review Volume 148 ; 148 ; >
+    au < deepCrawl ; exists ; 2021 ; Monthly Weather Review Volume 149 ; 149 ; >
+    au < ready ; exists ; 2022 ; Monthly Weather Review Volume 150 ; 150 ; >
+
+  }
+
+  {
+
+    title <
+      name = Weather, Climate, and Society ;
+      issn = 1948-8327 ;
+      eissn = 1948-8335 ;
+      issnl = 1948-8327
+    >
+    
+    param[journal_id] = wcas
+    
+    au < doNotProcess ; exists ; 2009 ; Weather, Climate, and Society Volume 1 ; 1 ; >
+    au < doNotProcess ; exists ; 2010 ; Weather, Climate, and Society Volume 2 ; 2 ; >
+    au < doNotProcess ; exists ; 2011 ; Weather, Climate, and Society Volume 3 ; 3 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Weather, Climate, and Society Volume 4 ; 4 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Weather, Climate, and Society Volume 5 ; 5 ; reingest2.clockss.org:8085 >
+    au < doNotProcess ; doNotProcess ; 2014 ; Weather, Climate, and Society Volume 6 ; 6 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; Weather, Climate, and Society Volume 7 ; 7 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; Weather, Climate, and Society Volume 8 ; 8 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; Weather, Climate, and Society Volume 9 ; 9 ; >
+    au < doNotProcess ; doNotProcess ; 2018 ; Weather, Climate, and Society Volume 10 ; 10 ; >
+    au < doNotProcess ; doNotProcess ; 2019 ; Weather, Climate, and Society Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2020 ; Weather, Climate, and Society Volume 12 ; 12 ; >
+    au < deepCrawl ; exists ; 2021 ; Weather, Climate, and Society Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2022 ; Weather, Climate, and Society Volume 14 ; 14 ; >
+
+  }
+
+  {
+
+    title <
+      name = Weather and Forecasting ;
+      issn = 0882-8156 ;
+      eissn = 1520-0434 ;
+      issnl = 0882-8156
+    >
+    
+    param[journal_id] = wefo
+    
+    au < doNotProcess ; exists ; 1986 ; Weather and Forecasting Volume 1 ; 1 ; >
+    au < doNotProcess ; exists ; 1987 ; Weather and Forecasting Volume 2 ; 2 ; >
+    au < doNotProcess ; exists ; 1988 ; Weather and Forecasting Volume 3 ; 3 ; >
+    au < doNotProcess ; exists ; 1989 ; Weather and Forecasting Volume 4 ; 4 ; >
+    au < doNotProcess ; exists ; 1990 ; Weather and Forecasting Volume 5 ; 5 ; >
+    au < doNotProcess ; exists ; 1991 ; Weather and Forecasting Volume 6 ; 6 ; >
+    au < doNotProcess ; exists ; 1992 ; Weather and Forecasting Volume 7 ; 7 ; >
+    au < doNotProcess ; exists ; 1993 ; Weather and Forecasting Volume 8 ; 8 ; >
+    au < doNotProcess ; exists ; 1994 ; Weather and Forecasting Volume 9 ; 9 ; >
+    au < doNotProcess ; exists ; 1995 ; Weather and Forecasting Volume 10 ; 10 ; >
+    au < doNotProcess ; exists ; 1996 ; Weather and Forecasting Volume 11 ; 11 ; >
+    au < doNotProcess ; exists ; 1997 ; Weather and Forecasting Volume 12 ; 12 ; >
+    au < doNotProcess ; exists ; 1998 ; Weather and Forecasting Volume 13 ; 13 ; >
+    au < doNotProcess ; exists ; 1999 ; Weather and Forecasting Volume 14 ; 14 ; >
+    au < doNotProcess ; exists ; 2000 ; Weather and Forecasting Volume 15 ; 15 ; >
+    au < doNotProcess ; exists ; 2001 ; Weather and Forecasting Volume 16 ; 16 ; >
+    au < doNotProcess ; exists ; 2002 ; Weather and Forecasting Volume 17 ; 17 ; >
+    au < doNotProcess ; exists ; 2003 ; Weather and Forecasting Volume 18 ; 18 ; >
+    au < doNotProcess ; exists ; 2004 ; Weather and Forecasting Volume 19 ; 19 ; >
+    au < doNotProcess ; exists ; 2005 ; Weather and Forecasting Volume 20 ; 20 ; >
+    au < doNotProcess ; exists ; 2006 ; Weather and Forecasting Volume 21 ; 21 ; >
+    au < doNotProcess ; exists ; 2007 ; Weather and Forecasting Volume 22 ; 22 ; >
+    au < doNotProcess ; exists ; 2008 ; Weather and Forecasting Volume 23 ; 23 ; >
+    au < doNotProcess ; exists ; 2009 ; Weather and Forecasting Volume 24 ; 24 ; >
+    au < doNotProcess ; exists ; 2010 ; Weather and Forecasting Volume 25 ; 25 ; >
+    au < doNotProcess ; exists ; 2011 ; Weather and Forecasting Volume 26 ; 26 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Weather and Forecasting Volume 27 ; 27 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Weather and Forecasting Volume 28 ; 28 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; Weather and Forecasting Volume 29 ; 29 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; Weather and Forecasting Volume 30 ; 30 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; Weather and Forecasting Volume 31 ; 31 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; Weather and Forecasting Volume 32 ; 32 ; >
+    au < doNotProcess ; doNotProcess ; 2018 ; Weather and Forecasting Volume 33 ; 33 ; >
+    au < doNotProcess ; doNotProcess ; 2019 ; Weather and Forecasting Volume 34 ; 34 ; >
+    au < frozen ; exists ; 2020 ; Weather and Forecasting Volume 35 ; 35 ; >
+    au < deepCrawl ; exists ; 2021 ; Weather and Forecasting Volume 36 ; 36 ; >
+    au < crawling ; exists ; 2022 ; Weather and Forecasting Volume 37 ; 37 ; >
+
+  }
+
+}

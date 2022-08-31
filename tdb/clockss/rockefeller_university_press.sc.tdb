@@ -1,0 +1,650 @@
+{
+
+  publisher <
+    name = Rockefeller University Press ;
+    info[back] = 1850 ;
+    info[contract] = 2009 ;
+    info[tester] = 8 ;
+    info[poller] = 2
+  >
+
+  param[base_url] = https://rupress.org/
+  plugin = org.lockss.plugin.silverchair.rockefelleruniversitypress.ClockssRockefellerUniversityPressSilverchairPlugin
+  implicit < status1 ; status ; year ; param[year] ; name ; volume ; param[volume_name] ; proxy >
+  #moving to drupal 9/2016
+  #moving to Silverchair 11/2019
+
+  {
+
+    title <
+      name = The Journal of Cell Biology ;
+      issn = 0021-9525 ;
+      eissn = 1540-8140
+    >
+
+    param[journal_id] = jcb
+
+    au < doNotProcess ; doNotProcess ; 1955 ; 1955 ; The Journal of Biophysical and Biochemical Cytology Volume 1 ; 1 ; 1 ;  >
+    au < doNotProcess ; doNotProcess ; 1956 ; 1956 ; The Journal of Biophysical and Biochemical Cytology Volume 2 ; 2 ; 2 ;  >
+    au < doNotProcess ; doNotProcess ; 1957 ; 1957 ; The Journal of Biophysical and Biochemical Cytology Volume 3 ; 3 ; 3 ;  >
+    au < doNotProcess ; doNotProcess ; 1958 ; 1958 ; The Journal of Biophysical and Biochemical Cytology Volume 4 ; 4 ; 4 ;  >
+    au < doNotProcess ; doNotProcess ; 1959 ; 1959 ; The Journal of Biophysical and Biochemical Cytology Volume 5 ; 5 ; 5 ;  >
+    au < doNotProcess ; doNotProcess ; 1959 ; 1959 ; The Journal of Biophysical and Biochemical Cytology Volume 6 ; 6 ; 6 ;  >
+    au < doNotProcess ; doNotProcess ; 1960 ; 1960 ; The Journal of Biophysical and Biochemical Cytology Volume 7 ; 7 ; 7 ;  >
+    au < doNotProcess ; doNotProcess ; 1960 ; 1960 ; The Journal of Biophysical and Biochemical Cytology Volume 8 ; 8 ; 8 ;  >
+    au < doNotProcess ; doNotProcess ; 1961 ; 1961 ; The Journal of Biophysical and Biochemical Cytology Volume 9 ; 9 ; 9 ;  >
+    au < doNotProcess ; doNotProcess ; 1961 ; 1961 ; The Journal of Biophysical and Biochemical Cytology Volume 10 ; 10 ; 10 ;  >
+    au < doNotProcess ; doNotProcess ; 1961 ; 1961 ; The Journal of Biophysical and Biochemical Cytology Volume 11 ; 11 ; 11 ;  >
+    au < doNotProcess ; doNotProcess ; 1962 ; 1962 ; The Journal of Cell Biology Volume 12 ; 12 ; 12 ;  >
+    au < doNotProcess ; doNotProcess ; 1962 ; 1962 ; The Journal of Cell Biology Volume 13 ; 13 ; 13 ;  >
+    au < doNotProcess ; doNotProcess ; 1962 ; 1962 ; The Journal of Cell Biology Volume 14 ; 14 ; 14 ;  >
+    au < doNotProcess ; doNotProcess ; 1962 ; 1962 ; The Journal of Cell Biology Volume 15 ; 15 ; 15 ;  >
+    au < doNotProcess ; doNotProcess ; 1963 ; 1963 ; The Journal of Cell Biology Volume 16 ; 16 ; 16 ;  >
+    au < doNotProcess ; doNotProcess ; 1963 ; 1963 ; The Journal of Cell Biology Volume 17 ; 17 ; 17 ;  >
+    au < doNotProcess ; doNotProcess ; 1963 ; 1963 ; The Journal of Cell Biology Volume 18 ; 18 ; 18 ;  >
+    au < doNotProcess ; doNotProcess ; 1963 ; 1963 ; The Journal of Cell Biology Volume 19 ; 19 ; 19 ;  >
+    au < doNotProcess ; doNotProcess ; 1964 ; 1964 ; The Journal of Cell Biology Volume 20 ; 20 ; 20 ;  >
+    au < doNotProcess ; doNotProcess ; 1964 ; 1964 ; The Journal of Cell Biology Volume 21 ; 21 ; 21 ;  >
+    au < doNotProcess ; doNotProcess ; 1964 ; 1964 ; The Journal of Cell Biology Volume 22 ; 22 ; 22 ;  >
+    au < doNotProcess ; doNotProcess ; 1964 ; 1964 ; The Journal of Cell Biology Volume 23 ; 23 ; 23 ;  >
+    au < doNotProcess ; doNotProcess ; 1965 ; 1965 ; The Journal of Cell Biology Volume 24 ; 24 ; 24 ;  >
+    au < doNotProcess ; doNotProcess ; 1965 ; 1965 ; The Journal of Cell Biology Volume 25 ; 25 ; 25 ;  >
+    au < doNotProcess ; doNotProcess ; 1965 ; 1965 ; The Journal of Cell Biology Volume 26 ; 26 ; 26 ;  >
+    au < doNotProcess ; doNotProcess ; 1965 ; 1965 ; The Journal of Cell Biology Volume 27 ; 27 ; 27 ;  >
+    au < doNotProcess ; doNotProcess ; 1966 ; 1966 ; The Journal of Cell Biology Volume 28 ; 28 ; 28 ;  >
+    au < doNotProcess ; doNotProcess ; 1966 ; 1966 ; The Journal of Cell Biology Volume 29 ; 29 ; 29 ;  >
+    au < doNotProcess ; doNotProcess ; 1966 ; 1966 ; The Journal of Cell Biology Volume 30 ; 30 ; 30 ;  >
+    au < doNotProcess ; doNotProcess ; 1966 ; 1966 ; The Journal of Cell Biology Volume 31 ; 31 ; 31 ;  >
+    au < doNotProcess ; doNotProcess ; 1967 ; 1967 ; The Journal of Cell Biology Volume 32 ; 32 ; 32 ;  >
+    au < doNotProcess ; doNotProcess ; 1967 ; 1967 ; The Journal of Cell Biology Volume 33 ; 33 ; 33 ;  >
+    au < doNotProcess ; doNotProcess ; 1967 ; 1967 ; The Journal of Cell Biology Volume 34 ; 34 ; 34 ;  >
+    au < doNotProcess ; doNotProcess ; 1967 ; 1967 ; The Journal of Cell Biology Volume 35 ; 35 ; 35 ;  >
+    au < doNotProcess ; doNotProcess ; 1968 ; 1968 ; The Journal of Cell Biology Volume 36 ; 36 ; 36 ;  >
+    au < doNotProcess ; doNotProcess ; 1968 ; 1968 ; The Journal of Cell Biology Volume 37 ; 37 ; 37 ;  >
+    au < doNotProcess ; doNotProcess ; 1968 ; 1968 ; The Journal of Cell Biology Volume 38 ; 38 ; 38 ;  >
+    au < doNotProcess ; doNotProcess ; 1968 ; 1968 ; The Journal of Cell Biology Volume 39 ; 39 ; 39 ;  >
+    au < doNotProcess ; doNotProcess ; 1969 ; 1969 ; The Journal of Cell Biology Volume 40 ; 40 ; 40 ;  >
+    au < doNotProcess ; doNotProcess ; 1969 ; 1969 ; The Journal of Cell Biology Volume 41 ; 41 ; 41 ;  >
+    au < doNotProcess ; doNotProcess ; 1969 ; 1969 ; The Journal of Cell Biology Volume 42 ; 42 ; 42 ;  >
+    au < doNotProcess ; doNotProcess ; 1969 ; 1969 ; The Journal of Cell Biology Volume 43 ; 43 ; 43 ;  >
+    au < doNotProcess ; doNotProcess ; 1970 ; 1970 ; The Journal of Cell Biology Volume 44 ; 44 ; 44 ;  >
+    au < doNotProcess ; doNotProcess ; 1970 ; 1970 ; The Journal of Cell Biology Volume 45 ; 45 ; 45 ;  >
+    au < doNotProcess ; doNotProcess ; 1970 ; 1970 ; The Journal of Cell Biology Volume 46 ; 46 ; 46 ;  >
+    au < doNotProcess ; doNotProcess ; 1970 ; 1970 ; The Journal of Cell Biology Volume 47 ; 47 ; 47 ;  >
+    au < doNotProcess ; doNotProcess ; 1971 ; 1971 ; The Journal of Cell Biology Volume 48 ; 48 ; 48 ;  >
+    au < doNotProcess ; doNotProcess ; 1971 ; 1971 ; The Journal of Cell Biology Volume 49 ; 49 ; 49 ;  >
+    au < doNotProcess ; doNotProcess ; 1971 ; 1971 ; The Journal of Cell Biology Volume 50 ; 50 ; 50 ;  >
+    au < doNotProcess ; doNotProcess ; 1971 ; 1971 ; The Journal of Cell Biology Volume 51 ; 51 ; 51 ;  >
+    au < doNotProcess ; doNotProcess ; 1972 ; 1972 ; The Journal of Cell Biology Volume 52 ; 52 ; 52 ;  >
+    au < doNotProcess ; doNotProcess ; 1972 ; 1972 ; The Journal of Cell Biology Volume 53 ; 53 ; 53 ;  >
+    au < doNotProcess ; doNotProcess ; 1972 ; 1972 ; The Journal of Cell Biology Volume 54 ; 54 ; 54 ;  >
+    au < doNotProcess ; doNotProcess ; 1972 ; 1972 ; The Journal of Cell Biology Volume 55 ; 55 ; 55 ;  >
+    au < doNotProcess ; doNotProcess ; 1973 ; 1973 ; The Journal of Cell Biology Volume 56 ; 56 ; 56 ;  >
+    au < doNotProcess ; doNotProcess ; 1973 ; 1973 ; The Journal of Cell Biology Volume 57 ; 57 ; 57 ;  >
+    au < doNotProcess ; doNotProcess ; 1973 ; 1973 ; The Journal of Cell Biology Volume 58 ; 58 ; 58 ;  >
+    au < doNotProcess ; doNotProcess ; 1973 ; 1973 ; The Journal of Cell Biology Volume 59 ; 59 ; 59 ;  >
+    au < doNotProcess ; doNotProcess ; 1974 ; 1974 ; The Journal of Cell Biology Volume 60 ; 60 ; 60 ;  >
+    au < doNotProcess ; doNotProcess ; 1974 ; 1974 ; The Journal of Cell Biology Volume 61 ; 61 ; 61 ;  >
+    au < doNotProcess ; doNotProcess ; 1974 ; 1974 ; The Journal of Cell Biology Volume 62 ; 62 ; 62 ;  >
+    au < doNotProcess ; doNotProcess ; 1974 ; 1974 ; The Journal of Cell Biology Volume 63 ; 63 ; 63 ;  >
+    au < doNotProcess ; doNotProcess ; 1975 ; 1975 ; The Journal of Cell Biology Volume 64 ; 64 ; 64 ;  >
+    au < doNotProcess ; doNotProcess ; 1975 ; 1975 ; The Journal of Cell Biology Volume 65 ; 65 ; 65 ;  >
+    au < doNotProcess ; doNotProcess ; 1975 ; 1975 ; The Journal of Cell Biology Volume 66 ; 66 ; 66 ;  >
+    au < doNotProcess ; doNotProcess ; 1975 ; 1975 ; The Journal of Cell Biology Volume 67 ; 67 ; 67 ;  >
+    au < doNotProcess ; doNotProcess ; 1976 ; 1976 ; The Journal of Cell Biology Volume 68 ; 68 ; 68 ;  >
+    au < doNotProcess ; doNotProcess ; 1976 ; 1976 ; The Journal of Cell Biology Volume 69 ; 69 ; 69 ;  >
+    au < doNotProcess ; doNotProcess ; 1976 ; 1976 ; The Journal of Cell Biology Volume 70 ; 70 ; 70 ;  >
+    au < doNotProcess ; doNotProcess ; 1976 ; 1976 ; The Journal of Cell Biology Volume 71 ; 71 ; 71 ;  >
+    au < doNotProcess ; doNotProcess ; 1977 ; 1977 ; The Journal of Cell Biology Volume 72 ; 72 ; 72 ;  >
+    au < doNotProcess ; doNotProcess ; 1977 ; 1977 ; The Journal of Cell Biology Volume 73 ; 73 ; 73 ;  >
+    au < doNotProcess ; doNotProcess ; 1977 ; 1977 ; The Journal of Cell Biology Volume 74 ; 74 ; 74 ;  >
+    au < doNotProcess ; doNotProcess ; 1977 ; 1977 ; The Journal of Cell Biology Volume 75 ; 75 ; 75 ;  >
+    au < doNotProcess ; doNotProcess ; 1978 ; 1978 ; The Journal of Cell Biology Volume 76 ; 76 ; 76 ;  >
+    au < doNotProcess ; doNotProcess ; 1978 ; 1978 ; The Journal of Cell Biology Volume 77 ; 77 ; 77 ;  >
+    au < doNotProcess ; doNotProcess ; 1978 ; 1978 ; The Journal of Cell Biology Volume 78 ; 78 ; 78 ;  >
+    au < doNotProcess ; doNotProcess ; 1978 ; 1978 ; The Journal of Cell Biology Volume 79 ; 79 ; 79 ;  >
+    au < doNotProcess ; doNotProcess ; 1979 ; 1979 ; The Journal of Cell Biology Volume 80 ; 80 ; 80 ;  >
+    au < doNotProcess ; doNotProcess ; 1979 ; 1979 ; The Journal of Cell Biology Volume 81 ; 81 ; 81 ;  >
+    au < doNotProcess ; doNotProcess ; 1979 ; 1979 ; The Journal of Cell Biology Volume 82 ; 82 ; 82 ;  >
+    au < doNotProcess ; doNotProcess ; 1979 ; 1979 ; The Journal of Cell Biology Volume 83 ; 83 ; 83 ;  >
+    au < doNotProcess ; doNotProcess ; 1980 ; 1980 ; The Journal of Cell Biology Volume 84 ; 84 ; 84 ;  >
+    au < doNotProcess ; doNotProcess ; 1980 ; 1980 ; The Journal of Cell Biology Volume 85 ; 85 ; 85 ;  >
+    au < doNotProcess ; doNotProcess ; 1980 ; 1980 ; The Journal of Cell Biology Volume 86 ; 86 ; 86 ;  >
+    au < doNotProcess ; doNotProcess ; 1980 ; 1980 ; The Journal of Cell Biology Volume 87 ; 87 ; 87 ;  >
+    au < doNotProcess ; doNotProcess ; 1981 ; 1981 ; The Journal of Cell Biology Volume 88 ; 88 ; 88 ;  >
+    au < doNotProcess ; doNotProcess ; 1981 ; 1981 ; The Journal of Cell Biology Volume 89 ; 89 ; 89 ;  >
+    au < doNotProcess ; doNotProcess ; 1981 ; 1981 ; The Journal of Cell Biology Volume 90 ; 90 ; 90 ;  >
+    au < doNotProcess ; doNotProcess ; 1981 ; 1981 ; The Journal of Cell Biology Volume 91 ; 91 ; 91 ;  >
+    au < doNotProcess ; doNotProcess ; 1982 ; 1982 ; The Journal of Cell Biology Volume 92 ; 92 ; 92 ;  >
+    au < doNotProcess ; doNotProcess ; 1982 ; 1982 ; The Journal of Cell Biology Volume 93 ; 93 ; 93 ;  >
+    au < doNotProcess ; doNotProcess ; 1982 ; 1982 ; The Journal of Cell Biology Volume 94 ; 94 ; 94 ;  >
+    au < doNotProcess ; doNotProcess ; 1982 ; 1982 ; The Journal of Cell Biology Volume 95 ; 95 ; 95 ;  >
+    au < doNotProcess ; doNotProcess ; 1983 ; 1983 ; The Journal of Cell Biology Volume 96 ; 96 ; 96 ;  >
+    au < doNotProcess ; doNotProcess ; 1983 ; 1983 ; The Journal of Cell Biology Volume 97 ; 97 ; 97 ;  >
+    au < doNotProcess ; doNotProcess ; 1984 ; 1984 ; The Journal of Cell Biology Volume 98 ; 98 ; 98 ;  >
+    au < doNotProcess ; doNotProcess ; 1984 ; 1984 ; The Journal of Cell Biology Volume 99 ; 99 ; 99 ;  >
+    au < doNotProcess ; doNotProcess ; 1985 ; 1985 ; The Journal of Cell Biology Volume 100 ; 100 ; 100 ;  >
+    au < doNotProcess ; doNotProcess ; 1985 ; 1985 ; The Journal of Cell Biology Volume 101 ; 101 ; 101 ;  >
+    au < doNotProcess ; doNotProcess ; 1986 ; 1986 ; The Journal of Cell Biology Volume 102 ; 102 ; 102 ;  >
+    au < doNotProcess ; doNotProcess ; 1986 ; 1986 ; The Journal of Cell Biology Volume 103 ; 103 ; 103 ;  >
+    au < doNotProcess ; doNotProcess ; 1987 ; 1987 ; The Journal of Cell Biology Volume 104 ; 104 ; 104 ;  >
+    au < doNotProcess ; doNotProcess ; 1987 ; 1987 ; The Journal of Cell Biology Volume 105 ; 105 ; 105 ;  >
+    au < doNotProcess ; doNotProcess ; 1988 ; 1988 ; The Journal of Cell Biology Volume 106 ; 106 ; 106 ;  >
+    au < doNotProcess ; doNotProcess ; 1988 ; 1988 ; The Journal of Cell Biology Volume 107 ; 107 ; 107 ;  >
+    au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; The Journal of Cell Biology Volume 108 ; 108 ; 108 ;  >
+    au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; The Journal of Cell Biology Volume 109 ; 109 ; 109 ;  >
+    au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; The Journal of Cell Biology Volume 110 ; 110 ; 110 ;  >
+    au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; The Journal of Cell Biology Volume 111 ; 111 ; 111 ;  >
+    au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; The Journal of Cell Biology Volume 112 ; 112 ; 112 ;  >
+    au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; The Journal of Cell Biology Volume 113 ; 113 ; 113 ;  >
+    au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; The Journal of Cell Biology Volume 114 ; 114 ; 114 ;  >
+    au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; The Journal of Cell Biology Volume 115 ; 115 ; 115 ;  >
+    au < doNotProcess ; doNotProcess ; 1992 ; 1992 ; The Journal of Cell Biology Volume 116 ; 116 ; 116 ;  >
+    au < doNotProcess ; doNotProcess ; 1992 ; 1992 ; The Journal of Cell Biology Volume 117 ; 117 ; 117 ;  >
+    au < doNotProcess ; doNotProcess ; 1992 ; 1992 ; The Journal of Cell Biology Volume 118 ; 118 ; 118 ;  >
+    au < doNotProcess ; doNotProcess ; 1992 ; 1992 ; The Journal of Cell Biology Volume 119 ; 119 ; 119 ;  >
+    au < doNotProcess ; doNotProcess ; 1993 ; 1993 ; The Journal of Cell Biology Volume 120 ; 120 ; 120 ;  >
+    au < doNotProcess ; doNotProcess ; 1993 ; 1993 ; The Journal of Cell Biology Volume 121 ; 121 ; 121 ;  >
+    au < doNotProcess ; doNotProcess ; 1993 ; 1993 ; The Journal of Cell Biology Volume 122 ; 122 ; 122 ;  >
+    au < doNotProcess ; doNotProcess ; 1993 ; 1993 ; The Journal of Cell Biology Volume 123 ; 123 ; 123 ;  >
+    au < doNotProcess ; doNotProcess ; 1994 ; 1994 ; The Journal of Cell Biology Volume 124 ; 124 ; 124 ;  >
+    au < doNotProcess ; doNotProcess ; 1994 ; 1994 ; The Journal of Cell Biology Volume 125 ; 125 ; 125 ;  >
+    au < doNotProcess ; doNotProcess ; 1994 ; 1994 ; The Journal of Cell Biology Volume 126 ; 126 ; 126 ;  >
+    au < doNotProcess ; doNotProcess ; 1994 ; 1994 ; The Journal of Cell Biology Volume 127 ; 127 ; 127 ;  >
+    au < doNotProcess ; doNotProcess ; 1995 ; 1995 ; The Journal of Cell Biology Volume 128 ; 128 ; 128 ;  >
+    au < doNotProcess ; doNotProcess ; 1995 ; 1995 ; The Journal of Cell Biology Volume 129 ; 129 ; 129 ;  >
+    au < doNotProcess ; doNotProcess ; 1995 ; 1995 ; The Journal of Cell Biology Volume 130 ; 130 ; 130 ;  >
+    au < doNotProcess ; doNotProcess ; 1995 ; 1995 ; The Journal of Cell Biology Volume 131 ; 131 ; 131 ;  >
+    au < doNotProcess ; doNotProcess ; 1996 ; 1996 ; The Journal of Cell Biology Volume 132 ; 132 ; 132 ;  >
+    au < doNotProcess ; doNotProcess ; 1996 ; 1996 ; The Journal of Cell Biology Volume 133 ; 133 ; 133 ;  >
+    au < doNotProcess ; doNotProcess ; 1996 ; 1996 ; The Journal of Cell Biology Volume 134 ; 134 ; 134 ;  >
+    au < doNotProcess ; doNotProcess ; 1996 ; 1996 ; The Journal of Cell Biology Volume 135 ; 135 ; 135 ;  >
+    au < doNotProcess ; doNotProcess ; 1997 ; 1997 ; The Journal of Cell Biology Volume 136 ; 136 ; 136 ;  >
+    au < doNotProcess ; doNotProcess ; 1997 ; 1997 ; The Journal of Cell Biology Volume 137 ; 137 ; 137 ;  >
+    au < doNotProcess ; doNotProcess ; 1997 ; 1997 ; The Journal of Cell Biology Volume 138 ; 138 ; 138 ;  >
+    au < doNotProcess ; doNotProcess ; 1997 ; 1997 ; The Journal of Cell Biology Volume 139 ; 139 ; 139 ;  >
+    au < doNotProcess ; doNotProcess ; 1998 ; 1998 ; The Journal of Cell Biology Volume 140 ; 140 ; 140 ;  >
+    au < doNotProcess ; doNotProcess ; 1998 ; 1998 ; The Journal of Cell Biology Volume 141 ; 141 ; 141 ;  >
+    au < doNotProcess ; doNotProcess ; 1998 ; 1998 ; The Journal of Cell Biology Volume 142 ; 142 ; 142 ;  >
+    au < doNotProcess ; doNotProcess ; 1998 ; 1998 ; The Journal of Cell Biology Volume 143 ; 143 ; 143 ;  >
+    au < doNotProcess ; doNotProcess ; 1999 ; 1999 ; The Journal of Cell Biology Volume 144 ; 144 ; 144 ;  >
+    au < doNotProcess ; doNotProcess ; 1999 ; 1999 ; The Journal of Cell Biology Volume 145 ; 145 ; 145 ;  >
+    au < doNotProcess ; doNotProcess ; 1999 ; 1999 ; The Journal of Cell Biology Volume 146 ; 146 ; 146 ;  >
+    au < doNotProcess ; doNotProcess ; 1999 ; 1999 ; The Journal of Cell Biology Volume 147 ; 147 ; 147 ;  >
+    au < doNotProcess ; doNotProcess ; 2000 ; 2000 ; The Journal of Cell Biology Volume 148 ; 148 ; 148 ;  >
+    au < doNotProcess ; doNotProcess ; 2000 ; 2000 ; The Journal of Cell Biology Volume 149 ; 149 ; 149 ;  >
+    au < doNotProcess ; doNotProcess ; 2000 ; 2000 ; The Journal of Cell Biology Volume 150 ; 150 ; 150 ;  >
+    au < doNotProcess ; doNotProcess ; 2000 ; 2000 ; The Journal of Cell Biology Volume 151 ; 151 ; 151 ;  >
+    au < doNotProcess ; doNotProcess ; 2001 ; 2001 ; The Journal of Cell Biology Volume 152 ; 152 ; 152 ;  >
+    au < doNotProcess ; doNotProcess ; 2001 ; 2001 ; The Journal of Cell Biology Volume 153 ; 153 ; 153 ;  >
+    au < doNotProcess ; doNotProcess ; 2001 ; 2001 ; The Journal of Cell Biology Volume 154 ; 154 ; 154 ;  >
+    au < doNotProcess ; doNotProcess ; 2001 ; 2001 ; The Journal of Cell Biology Volume 155 ; 155 ; 155 ;  >
+    au < doNotProcess ; doNotProcess ; 2002 ; 2002 ; The Journal of Cell Biology Volume 156 ; 156 ; 156 ;  >
+    au < doNotProcess ; doNotProcess ; 2002 ; 2002 ; The Journal of Cell Biology Volume 157 ; 157 ; 157 ;  >
+    au < doNotProcess ; doNotProcess ; 2002 ; 2002 ; The Journal of Cell Biology Volume 158 ; 158 ; 158 ;  >
+    au < doNotProcess ; doNotProcess ; 2002 ; 2002 ; The Journal of Cell Biology Volume 159 ; 159 ; 159 ;  >
+    au < doNotProcess ; doNotProcess ; 2003 ; 2003 ; The Journal of Cell Biology Volume 160 ; 160 ; 160 ;  >
+    au < doNotProcess ; doNotProcess ; 2003 ; 2003 ; The Journal of Cell Biology Volume 161 ; 161 ; 161 ;  >
+    au < doNotProcess ; doNotProcess ; 2003 ; 2003 ; The Journal of Cell Biology Volume 162 ; 162 ; 162 ;  >
+    au < doNotProcess ; doNotProcess ; 2003 ; 2003 ; The Journal of Cell Biology Volume 163 ; 163 ; 163 ;  >
+    au < doNotProcess ; doNotProcess ; 2004 ; 2004 ; The Journal of Cell Biology Volume 164 ; 164 ; 164 ;  >
+    au < doNotProcess ; doNotProcess ; 2004 ; 2004 ; The Journal of Cell Biology Volume 165 ; 165 ; 165 ;  >
+    au < doNotProcess ; doNotProcess ; 2004 ; 2004 ; The Journal of Cell Biology Volume 166 ; 166 ; 166 ;  >
+    au < doNotProcess ; doNotProcess ; 2004 ; 2004 ; The Journal of Cell Biology Volume 167 ; 167 ; 167 ;  >
+    au < doNotProcess ; doNotProcess ; 2005 ; 2005 ; The Journal of Cell Biology Volume 168 ; 168 ; 168 ;  >
+    au < doNotProcess ; doNotProcess ; 2005 ; 2005 ; The Journal of Cell Biology Volume 169 ; 169 ; 169 ;  >
+    au < doNotProcess ; doNotProcess ; 2005 ; 2005 ; The Journal of Cell Biology Volume 170 ; 170 ; 170 ;  >
+    au < doNotProcess ; doNotProcess ; 2005 ; 2005 ; The Journal of Cell Biology Volume 171 ; 171 ; 171 ;  >
+    au < doNotProcess ; doNotProcess ; 2006 ; 2006 ; The Journal of Cell Biology Volume 172 ; 172 ; 172 ;  >
+    au < doNotProcess ; doNotProcess ; 2006 ; 2006 ; The Journal of Cell Biology Volume 173 ; 173 ; 173 ;  >
+    au < doNotProcess ; doNotProcess ; 2006 ; 2006 ; The Journal of Cell Biology Volume 174 ; 174 ; 174 ;  >
+    au < doNotProcess ; doNotProcess ; 2006 ; 2006 ; The Journal of Cell Biology Volume 175 ; 175 ; 175 ;  >
+    au < doNotProcess ; doNotProcess ; 2007 ; 2007 ; The Journal of Cell Biology Volume 176 ; 176 ; 176 ;  >
+    au < doNotProcess ; doNotProcess ; 2007 ; 2007 ; The Journal of Cell Biology Volume 177 ; 177 ; 177 ;  >
+    au < doNotProcess ; doNotProcess ; 2007 ; 2007 ; The Journal of Cell Biology Volume 178 ; 178 ; 178 ;  >
+    au < doNotProcess ; doNotProcess ; 2007 ; 2007 ; The Journal of Cell Biology Volume 179 ; 179 ; 179 ;  >
+    au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; The Journal of Cell Biology Volume 180 ; 180 ; 180 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; The Journal of Cell Biology Volume 181 ; 181 ; 181 ;  >
+    au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; The Journal of Cell Biology Volume 182 ; 182 ; 182 ;  >
+    au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; The Journal of Cell Biology Volume 183 ; 183 ; 183 ;  >
+    au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; The Journal of Cell Biology Volume 184 ; 184 ; 184 ;  >
+    au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; The Journal of Cell Biology Volume 185 ; 185 ; 185 ;  >
+    au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; The Journal of Cell Biology Volume 186 ; 186 ; 186 ;  >
+    au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; The Journal of Cell Biology Volume 187 ; 187 ; 187 ;  >
+    au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; The Journal of Cell Biology Volume 188 ; 188 ; 188 ;  >
+    au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; The Journal of Cell Biology Volume 189 ; 189 ; 189 ;  >
+    au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; The Journal of Cell Biology Volume 190 ; 190 ; 190 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; The Journal of Cell Biology Volume 191 ; 191 ; 191 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; The Journal of Cell Biology Volume 192 ; 192 ; 192 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; The Journal of Cell Biology Volume 193 ; 193 ; 193 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; The Journal of Cell Biology Volume 194 ; 194 ; 194 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; The Journal of Cell Biology Volume 195 ; 195 ; 195 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; The Journal of Cell Biology Volume 196 ; 196 ; 196 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; The Journal of Cell Biology Volume 197 ; 197 ; 197 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; The Journal of Cell Biology Volume 198 ; 198 ; 198 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; The Journal of Cell Biology Volume 199 ; 199 ; 199 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The Journal of Cell Biology Volume 200 ; 200 ; 200 ;  >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The Journal of Cell Biology Volume 201 ; 201 ; 201 ;  >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The Journal of Cell Biology Volume 202 ; 202 ; 202 ;  >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The Journal of Cell Biology Volume 203 ; 203 ; 203 ;  >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; The Journal of Cell Biology Volume 204 ; 204 ; 204 ;  >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; The Journal of Cell Biology Volume 205 ; 205 ; 205 ;  >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; The Journal of Cell Biology Volume 206 ; 206 ; 206 ;  >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; The Journal of Cell Biology Volume 207 ; 207 ; 207 ;  >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Journal of Cell Biology Volume 208 ; 208 ; 208 ;  >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Journal of Cell Biology Volume 209 ; 209 ; 209 ;  >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Journal of Cell Biology Volume 210 ; 210 ; 210 ;  >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Journal of Cell Biology Volume 211 ; 211 ; 211 ;  >
+    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; The Journal of Cell Biology Volume 212 ; 212 ; 212 ;  >
+    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; The Journal of Cell Biology Volume 213 ; 213 ; 213 ;  >
+    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; The Journal of Cell Biology Volume 214 ; 214 ; 214 ;  >
+    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; The Journal of Cell Biology Volume 215 ; 215 ; 215 ;  >
+    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; The Journal of Cell Biology Volume 216 ; 216 ; 216 ; > #frequency changes to 1 vol/yr.
+    au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; The Journal of Cell Biology Volume 217 ; 217 ; 217 ; >
+    au < frozen ; exists ; 2019 ; 2019 ; The Journal of Cell Biology Volume 218 ; 218 ; 218 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; The Journal of Cell Biology Volume 219 ; 219 ; 219 ; >
+    au < ready ; exists ; 2021 ; 2021 ; The Journal of Cell Biology Volume 220 ; 220 ; 220 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; The Journal of Cell Biology Volume 221 ; 221 ; 221 ; >
+  }
+
+ 
+  {
+
+    title <
+      name = The Journal of Experimental Medicine ;
+      issn = 0022-1007 ;
+      eissn = 1540-9538
+    >
+
+    param[journal_id] = jem
+
+    au < doNotProcess ; doNotProcess ; 1896 ; 1896 ; The Journal of Experimental Medicine Volume 1 ; 1 ; 1 ;  >
+    au < doNotProcess ; doNotProcess ; 1897 ; 1897 ; The Journal of Experimental Medicine Volume 2 ; 2 ; 2 ;  >
+    au < doNotProcess ; doNotProcess ; 1898 ; 1898 ; The Journal of Experimental Medicine Volume 3 ; 3 ; 3 ;  >
+    au < doNotProcess ; doNotProcess ; 1899 ; 1899 ; The Journal of Experimental Medicine Volume 4 ; 4 ; 4 ;  >
+    au < doNotProcess ; doNotProcess ; 1900 ; 1900 ; The Journal of Experimental Medicine Volume 5 ; 5 ; 5 ;  >
+    au < doNotProcess ; doNotProcess ; 1901 ; 1901 ; The Journal of Experimental Medicine Volume 6 ; 6 ; 6 ;  >
+    au < doNotProcess ; doNotProcess ; 1905 ; 1905 ; The Journal of Experimental Medicine Volume 7 ; 7 ; 7 ;  >
+    au < doNotProcess ; doNotProcess ; 1906 ; 1906 ; The Journal of Experimental Medicine Volume 8 ; 8 ; 8 ;  >
+    au < doNotProcess ; doNotProcess ; 1907 ; 1907 ; The Journal of Experimental Medicine Volume 9 ; 9 ; 9 ;  >
+    au < doNotProcess ; doNotProcess ; 1908 ; 1908 ; The Journal of Experimental Medicine Volume 10 ; 10 ; 10 ;  >
+    au < doNotProcess ; doNotProcess ; 1909 ; 1909 ; The Journal of Experimental Medicine Volume 11 ; 11 ; 11 ;  >
+    au < doNotProcess ; doNotProcess ; 1910 ; 1910 ; The Journal of Experimental Medicine Volume 12 ; 12 ; 12 ;  >
+    au < doNotProcess ; doNotProcess ; 1911 ; 1911 ; The Journal of Experimental Medicine Volume 13 ; 13 ; 13 ;  >
+    au < doNotProcess ; doNotProcess ; 1911 ; 1911 ; The Journal of Experimental Medicine Volume 14 ; 14 ; 14 ;  >
+    au < doNotProcess ; doNotProcess ; 1912 ; 1912 ; The Journal of Experimental Medicine Volume 15 ; 15 ; 15 ;  >
+    au < doNotProcess ; doNotProcess ; 1912 ; 1912 ; The Journal of Experimental Medicine Volume 16 ; 16 ; 16 ;  >
+    au < doNotProcess ; doNotProcess ; 1913 ; 1913 ; The Journal of Experimental Medicine Volume 17 ; 17 ; 17 ;  >
+    au < doNotProcess ; doNotProcess ; 1913 ; 1913 ; The Journal of Experimental Medicine Volume 18 ; 18 ; 18 ;  >
+    au < doNotProcess ; doNotProcess ; 1914 ; 1914 ; The Journal of Experimental Medicine Volume 19 ; 19 ; 19 ;  >
+    au < doNotProcess ; doNotProcess ; 1914 ; 1914 ; The Journal of Experimental Medicine Volume 20 ; 20 ; 20 ;  >
+    au < doNotProcess ; doNotProcess ; 1915 ; 1915 ; The Journal of Experimental Medicine Volume 21 ; 21 ; 21 ;  >
+    au < doNotProcess ; doNotProcess ; 1915 ; 1915 ; The Journal of Experimental Medicine Volume 22 ; 22 ; 22 ;  >
+    au < doNotProcess ; doNotProcess ; 1916 ; 1916 ; The Journal of Experimental Medicine Volume 23 ; 23 ; 23 ;  >
+    au < doNotProcess ; doNotProcess ; 1916 ; 1916 ; The Journal of Experimental Medicine Volume 24 ; 24 ; 24 ;  >
+    au < doNotProcess ; doNotProcess ; 1917 ; 1917 ; The Journal of Experimental Medicine Volume 25 ; 25 ; 25 ;  >
+    au < doNotProcess ; doNotProcess ; 1917 ; 1917 ; The Journal of Experimental Medicine Volume 26 ; 26 ; 26 ;  >
+    au < doNotProcess ; doNotProcess ; 1918 ; 1918 ; The Journal of Experimental Medicine Volume 27 ; 27 ; 27 ;  >
+    au < doNotProcess ; doNotProcess ; 1918 ; 1918 ; The Journal of Experimental Medicine Volume 28 ; 28 ; 28 ;  >
+    au < doNotProcess ; doNotProcess ; 1919 ; 1919 ; The Journal of Experimental Medicine Volume 29 ; 29 ; 29 ;  >
+    au < doNotProcess ; doNotProcess ; 1919 ; 1919 ; The Journal of Experimental Medicine Volume 30 ; 30 ; 30 ;  >
+    au < doNotProcess ; doNotProcess ; 1920 ; 1920 ; The Journal of Experimental Medicine Volume 31 ; 31 ; 31 ;  >
+    au < doNotProcess ; doNotProcess ; 1920 ; 1920 ; The Journal of Experimental Medicine Volume 32 ; 32 ; 32 ;  >
+    au < doNotProcess ; doNotProcess ; 1921 ; 1921 ; The Journal of Experimental Medicine Volume 33 ; 33 ; 33 ;  >
+    au < doNotProcess ; doNotProcess ; 1921 ; 1921 ; The Journal of Experimental Medicine Volume 34 ; 34 ; 34 ;  >
+    au < doNotProcess ; doNotProcess ; 1922 ; 1922 ; The Journal of Experimental Medicine Volume 35 ; 35 ; 35 ;  >
+    au < doNotProcess ; doNotProcess ; 1922 ; 1922 ; The Journal of Experimental Medicine Volume 36 ; 36 ; 36 ;  >
+    au < doNotProcess ; doNotProcess ; 1923 ; 1923 ; The Journal of Experimental Medicine Volume 37 ; 37 ; 37 ;  >
+    au < doNotProcess ; doNotProcess ; 1923 ; 1923 ; The Journal of Experimental Medicine Volume 38 ; 38 ; 38 ;  >
+    au < doNotProcess ; doNotProcess ; 1924 ; 1924 ; The Journal of Experimental Medicine Volume 39 ; 39 ; 39 ;  >
+    au < doNotProcess ; doNotProcess ; 1924 ; 1924 ; The Journal of Experimental Medicine Volume 40 ; 40 ; 40 ;  >
+    au < doNotProcess ; doNotProcess ; 1925 ; 1925 ; The Journal of Experimental Medicine Volume 41 ; 41 ; 41 ;  >
+    au < doNotProcess ; doNotProcess ; 1925 ; 1925 ; The Journal of Experimental Medicine Volume 42 ; 42 ; 42 ;  >
+    au < doNotProcess ; doNotProcess ; 1926 ; 1926 ; The Journal of Experimental Medicine Volume 43 ; 43 ; 43 ;  >
+    au < doNotProcess ; doNotProcess ; 1926 ; 1926 ; The Journal of Experimental Medicine Volume 44 ; 44 ; 44 ;  >
+    au < doNotProcess ; doNotProcess ; 1927 ; 1927 ; The Journal of Experimental Medicine Volume 45 ; 45 ; 45 ;  >
+    au < doNotProcess ; doNotProcess ; 1927 ; 1927 ; The Journal of Experimental Medicine Volume 46 ; 46 ; 46 ;  >
+    au < doNotProcess ; doNotProcess ; 1928 ; 1928 ; The Journal of Experimental Medicine Volume 47 ; 47 ; 47 ;  >
+    au < doNotProcess ; doNotProcess ; 1928 ; 1928 ; The Journal of Experimental Medicine Volume 48 ; 48 ; 48 ;  >
+    au < doNotProcess ; doNotProcess ; 1929 ; 1929 ; The Journal of Experimental Medicine Volume 49 ; 49 ; 49 ;  >
+    au < doNotProcess ; doNotProcess ; 1929 ; 1929 ; The Journal of Experimental Medicine Volume 50 ; 50 ; 50 ;  >
+    au < doNotProcess ; doNotProcess ; 1930 ; 1930 ; The Journal of Experimental Medicine Volume 51 ; 51 ; 51 ;  >
+    au < doNotProcess ; doNotProcess ; 1930 ; 1930 ; The Journal of Experimental Medicine Volume 52 ; 52 ; 52 ;  >
+    au < doNotProcess ; doNotProcess ; 1931 ; 1931 ; The Journal of Experimental Medicine Volume 53 ; 53 ; 53 ;  >
+    au < doNotProcess ; doNotProcess ; 1931 ; 1931 ; The Journal of Experimental Medicine Volume 54 ; 54 ; 54 ;  >
+    au < doNotProcess ; doNotProcess ; 1932 ; 1932 ; The Journal of Experimental Medicine Volume 55 ; 55 ; 55 ;  >
+    au < doNotProcess ; doNotProcess ; 1932 ; 1932 ; The Journal of Experimental Medicine Volume 56 ; 56 ; 56 ;  >
+    au < doNotProcess ; doNotProcess ; 1933 ; 1933 ; The Journal of Experimental Medicine Volume 57 ; 57 ; 57 ;  >
+    au < doNotProcess ; doNotProcess ; 1933 ; 1933 ; The Journal of Experimental Medicine Volume 58 ; 58 ; 58 ;  >
+    au < doNotProcess ; doNotProcess ; 1934 ; 1934 ; The Journal of Experimental Medicine Volume 59 ; 59 ; 59 ;  >
+    au < doNotProcess ; doNotProcess ; 1934 ; 1934 ; The Journal of Experimental Medicine Volume 60 ; 60 ; 60 ;  >
+    au < doNotProcess ; doNotProcess ; 1935 ; 1935 ; The Journal of Experimental Medicine Volume 61 ; 61 ; 61 ;  >
+    au < doNotProcess ; doNotProcess ; 1935 ; 1935 ; The Journal of Experimental Medicine Volume 62 ; 62 ; 62 ;  >
+    au < doNotProcess ; doNotProcess ; 1936 ; 1936 ; The Journal of Experimental Medicine Volume 63 ; 63 ; 63 ;  >
+    au < doNotProcess ; doNotProcess ; 1936 ; 1936 ; The Journal of Experimental Medicine Volume 64 ; 64 ; 64 ;  >
+    au < doNotProcess ; doNotProcess ; 1937 ; 1937 ; The Journal of Experimental Medicine Volume 65 ; 65 ; 65 ;  >
+    au < doNotProcess ; doNotProcess ; 1937 ; 1937 ; The Journal of Experimental Medicine Volume 66 ; 66 ; 66 ;  >
+    au < doNotProcess ; doNotProcess ; 1938 ; 1938 ; The Journal of Experimental Medicine Volume 67 ; 67 ; 67 ;  >
+    au < doNotProcess ; doNotProcess ; 1938 ; 1938 ; The Journal of Experimental Medicine Volume 68 ; 68 ; 68 ;  >
+    au < doNotProcess ; doNotProcess ; 1939 ; 1939 ; The Journal of Experimental Medicine Volume 69 ; 69 ; 69 ;  >
+    au < doNotProcess ; doNotProcess ; 1939 ; 1939 ; The Journal of Experimental Medicine Volume 70 ; 70 ; 70 ;  >
+    au < doNotProcess ; doNotProcess ; 1940 ; 1940 ; The Journal of Experimental Medicine Volume 71 ; 71 ; 71 ;  >
+    au < doNotProcess ; doNotProcess ; 1940 ; 1940 ; The Journal of Experimental Medicine Volume 72 ; 72 ; 72 ;  >
+    au < doNotProcess ; doNotProcess ; 1941 ; 1941 ; The Journal of Experimental Medicine Volume 73 ; 73 ; 73 ;  >
+    au < doNotProcess ; doNotProcess ; 1941 ; 1941 ; The Journal of Experimental Medicine Volume 74 ; 74 ; 74 ;  >
+    au < doNotProcess ; doNotProcess ; 1942 ; 1942 ; The Journal of Experimental Medicine Volume 75 ; 75 ; 75 ;  >
+    au < doNotProcess ; doNotProcess ; 1942 ; 1942 ; The Journal of Experimental Medicine Volume 76 ; 76 ; 76 ;  >
+    au < doNotProcess ; doNotProcess ; 1943 ; 1943 ; The Journal of Experimental Medicine Volume 77 ; 77 ; 77 ;  >
+    au < doNotProcess ; doNotProcess ; 1943 ; 1943 ; The Journal of Experimental Medicine Volume 78 ; 78 ; 78 ;  >
+    au < doNotProcess ; doNotProcess ; 1944 ; 1944 ; The Journal of Experimental Medicine Volume 79 ; 79 ; 79 ;  >
+    au < doNotProcess ; doNotProcess ; 1944 ; 1944 ; The Journal of Experimental Medicine Volume 80 ; 80 ; 80 ;  >
+    au < doNotProcess ; doNotProcess ; 1945 ; 1945 ; The Journal of Experimental Medicine Volume 81 ; 81 ; 81 ;  >
+    au < doNotProcess ; doNotProcess ; 1945 ; 1945 ; The Journal of Experimental Medicine Volume 82 ; 82 ; 82 ;  >
+    au < doNotProcess ; doNotProcess ; 1946 ; 1946 ; The Journal of Experimental Medicine Volume 83 ; 83 ; 83 ;  >
+    au < doNotProcess ; doNotProcess ; 1946 ; 1946 ; The Journal of Experimental Medicine Volume 84 ; 84 ; 84 ;  >
+    au < doNotProcess ; doNotProcess ; 1947 ; 1947 ; The Journal of Experimental Medicine Volume 85 ; 85 ; 85 ;  >
+    au < doNotProcess ; doNotProcess ; 1947 ; 1947 ; The Journal of Experimental Medicine Volume 86 ; 86 ; 86 ;  >
+    au < doNotProcess ; doNotProcess ; 1948 ; 1948 ; The Journal of Experimental Medicine Volume 87 ; 87 ; 87 ;  >
+    au < doNotProcess ; doNotProcess ; 1948 ; 1948 ; The Journal of Experimental Medicine Volume 88 ; 88 ; 88 ;  >
+    au < doNotProcess ; doNotProcess ; 1949 ; 1949 ; The Journal of Experimental Medicine Volume 89 ; 89 ; 89 ;  >
+    au < doNotProcess ; doNotProcess ; 1949 ; 1949 ; The Journal of Experimental Medicine Volume 90 ; 90 ; 90 ;  >
+    au < doNotProcess ; doNotProcess ; 1950 ; 1950 ; The Journal of Experimental Medicine Volume 91 ; 91 ; 91 ;  >
+    au < doNotProcess ; doNotProcess ; 1950 ; 1950 ; The Journal of Experimental Medicine Volume 92 ; 92 ; 92 ;  >
+    au < doNotProcess ; doNotProcess ; 1951 ; 1951 ; The Journal of Experimental Medicine Volume 93 ; 93 ; 93 ;  >
+    au < doNotProcess ; doNotProcess ; 1951 ; 1951 ; The Journal of Experimental Medicine Volume 94 ; 94 ; 94 ;  >
+    au < doNotProcess ; doNotProcess ; 1952 ; 1952 ; The Journal of Experimental Medicine Volume 95 ; 95 ; 95 ;  >
+    au < doNotProcess ; doNotProcess ; 1952 ; 1952 ; The Journal of Experimental Medicine Volume 96 ; 96 ; 96 ;  >
+    au < doNotProcess ; doNotProcess ; 1953 ; 1953 ; The Journal of Experimental Medicine Volume 97 ; 97 ; 97 ;  >
+    au < doNotProcess ; doNotProcess ; 1953 ; 1953 ; The Journal of Experimental Medicine Volume 98 ; 98 ; 98 ;  >
+    au < doNotProcess ; doNotProcess ; 1954 ; 1954 ; The Journal of Experimental Medicine Volume 99 ; 99 ; 99 ;  >
+    au < doNotProcess ; doNotProcess ; 1954 ; 1954 ; The Journal of Experimental Medicine Volume 100 ; 100 ; 100 ;  >
+    au < doNotProcess ; doNotProcess ; 1955 ; 1955 ; The Journal of Experimental Medicine Volume 101 ; 101 ; 101 ;  >
+    au < doNotProcess ; doNotProcess ; 1955 ; 1955 ; The Journal of Experimental Medicine Volume 102 ; 102 ; 102 ;  >
+    au < doNotProcess ; doNotProcess ; 1956 ; 1956 ; The Journal of Experimental Medicine Volume 103 ; 103 ; 103 ;  >
+    au < doNotProcess ; doNotProcess ; 1956 ; 1956 ; The Journal of Experimental Medicine Volume 104 ; 104 ; 104 ;  >
+    au < doNotProcess ; doNotProcess ; 1957 ; 1957 ; The Journal of Experimental Medicine Volume 105 ; 105 ; 105 ;  >
+    au < doNotProcess ; doNotProcess ; 1957 ; 1957 ; The Journal of Experimental Medicine Volume 106 ; 106 ; 106 ;  >
+    au < doNotProcess ; doNotProcess ; 1958 ; 1958 ; The Journal of Experimental Medicine Volume 107 ; 107 ; 107 ;  >
+    au < doNotProcess ; doNotProcess ; 1958 ; 1958 ; The Journal of Experimental Medicine Volume 108 ; 108 ; 108 ;  >
+    au < doNotProcess ; doNotProcess ; 1959 ; 1959 ; The Journal of Experimental Medicine Volume 109 ; 109 ; 109 ;  >
+    au < doNotProcess ; doNotProcess ; 1959 ; 1959 ; The Journal of Experimental Medicine Volume 110 ; 110 ; 110 ;  >
+    au < doNotProcess ; doNotProcess ; 1960 ; 1960 ; The Journal of Experimental Medicine Volume 111 ; 111 ; 111 ;  >
+    au < doNotProcess ; doNotProcess ; 1960 ; 1960 ; The Journal of Experimental Medicine Volume 112 ; 112 ; 112 ;  >
+    au < doNotProcess ; doNotProcess ; 1961 ; 1961 ; The Journal of Experimental Medicine Volume 113 ; 113 ; 113 ;  >
+    au < doNotProcess ; doNotProcess ; 1961 ; 1961 ; The Journal of Experimental Medicine Volume 114 ; 114 ; 114 ;  >
+    au < doNotProcess ; doNotProcess ; 1962 ; 1962 ; The Journal of Experimental Medicine Volume 115 ; 115 ; 115 ;  >
+    au < doNotProcess ; doNotProcess ; 1962 ; 1962 ; The Journal of Experimental Medicine Volume 116 ; 116 ; 116 ;  >
+    au < doNotProcess ; doNotProcess ; 1963 ; 1963 ; The Journal of Experimental Medicine Volume 117 ; 117 ; 117 ;  >
+    au < doNotProcess ; doNotProcess ; 1963 ; 1963 ; The Journal of Experimental Medicine Volume 118 ; 118 ; 118 ;  >
+    au < doNotProcess ; doNotProcess ; 1964 ; 1964 ; The Journal of Experimental Medicine Volume 119 ; 119 ; 119 ;  >
+    au < doNotProcess ; doNotProcess ; 1964 ; 1964 ; The Journal of Experimental Medicine Volume 120 ; 120 ; 120 ;  >
+    au < doNotProcess ; doNotProcess ; 1965 ; 1965 ; The Journal of Experimental Medicine Volume 121 ; 121 ; 121 ;  >
+    au < doNotProcess ; doNotProcess ; 1965 ; 1965 ; The Journal of Experimental Medicine Volume 122 ; 122 ; 122 ;  >
+    au < doNotProcess ; doNotProcess ; 1966 ; 1966 ; The Journal of Experimental Medicine Volume 123 ; 123 ; 123 ;  >
+    au < doNotProcess ; doNotProcess ; 1966 ; 1966 ; The Journal of Experimental Medicine Volume 124 ; 124 ; 124 ;  >
+    au < doNotProcess ; doNotProcess ; 1967 ; 1967 ; The Journal of Experimental Medicine Volume 125 ; 125 ; 125 ;  >
+    au < doNotProcess ; doNotProcess ; 1967 ; 1967 ; The Journal of Experimental Medicine Volume 126 ; 126 ; 126 ;  >
+    au < doNotProcess ; doNotProcess ; 1968 ; 1968 ; The Journal of Experimental Medicine Volume 127 ; 127 ; 127 ;  >
+    au < doNotProcess ; doNotProcess ; 1968 ; 1968 ; The Journal of Experimental Medicine Volume 128 ; 128 ; 128 ;  >
+    au < doNotProcess ; doNotProcess ; 1969 ; 1969 ; The Journal of Experimental Medicine Volume 129 ; 129 ; 129 ;  >
+    au < doNotProcess ; doNotProcess ; 1969 ; 1969 ; The Journal of Experimental Medicine Volume 130 ; 130 ; 130 ;  >
+    au < doNotProcess ; doNotProcess ; 1970 ; 1970 ; The Journal of Experimental Medicine Volume 131 ; 131 ; 131 ;  >
+    au < doNotProcess ; doNotProcess ; 1970 ; 1970 ; The Journal of Experimental Medicine Volume 132 ; 132 ; 132 ;  >
+    au < doNotProcess ; doNotProcess ; 1971 ; 1971 ; The Journal of Experimental Medicine Volume 133 ; 133 ; 133 ;  >
+    au < doNotProcess ; doNotProcess ; 1971 ; 1971 ; The Journal of Experimental Medicine Volume 134 ; 134 ; 134 ;  >
+    au < doNotProcess ; doNotProcess ; 1972 ; 1972 ; The Journal of Experimental Medicine Volume 135 ; 135 ; 135 ;  >
+    au < doNotProcess ; doNotProcess ; 1972 ; 1972 ; The Journal of Experimental Medicine Volume 136 ; 136 ; 136 ;  >
+    au < doNotProcess ; doNotProcess ; 1973 ; 1973 ; The Journal of Experimental Medicine Volume 137 ; 137 ; 137 ;  >
+    au < doNotProcess ; doNotProcess ; 1973 ; 1973 ; The Journal of Experimental Medicine Volume 138 ; 138 ; 138 ;  >
+    au < doNotProcess ; doNotProcess ; 1974 ; 1974 ; The Journal of Experimental Medicine Volume 139 ; 139 ; 139 ;  >
+    au < doNotProcess ; doNotProcess ; 1974 ; 1974 ; The Journal of Experimental Medicine Volume 140 ; 140 ; 140 ;  >
+    au < doNotProcess ; doNotProcess ; 1975 ; 1975 ; The Journal of Experimental Medicine Volume 141 ; 141 ; 141 ;  >
+    au < doNotProcess ; doNotProcess ; 1975 ; 1975 ; The Journal of Experimental Medicine Volume 142 ; 142 ; 142 ;  >
+    au < doNotProcess ; doNotProcess ; 1976 ; 1976 ; The Journal of Experimental Medicine Volume 143 ; 143 ; 143 ;  >
+    au < doNotProcess ; doNotProcess ; 1976 ; 1976 ; The Journal of Experimental Medicine Volume 144 ; 144 ; 144 ;  >
+    au < doNotProcess ; doNotProcess ; 1977 ; 1977 ; The Journal of Experimental Medicine Volume 145 ; 145 ; 145 ;  >
+    au < doNotProcess ; doNotProcess ; 1977 ; 1977 ; The Journal of Experimental Medicine Volume 146 ; 146 ; 146 ;  >
+    au < doNotProcess ; doNotProcess ; 1978 ; 1978 ; The Journal of Experimental Medicine Volume 147 ; 147 ; 147 ;  >
+    au < doNotProcess ; doNotProcess ; 1978 ; 1978 ; The Journal of Experimental Medicine Volume 148 ; 148 ; 148 ;  >
+    au < doNotProcess ; doNotProcess ; 1979 ; 1979 ; The Journal of Experimental Medicine Volume 149 ; 149 ; 149 ;  >
+    au < doNotProcess ; doNotProcess ; 1979 ; 1979 ; The Journal of Experimental Medicine Volume 150 ; 150 ; 150 ;  >
+    au < doNotProcess ; doNotProcess ; 1980 ; 1980 ; The Journal of Experimental Medicine Volume 151 ; 151 ; 151 ;  >
+    au < doNotProcess ; doNotProcess ; 1980 ; 1980 ; The Journal of Experimental Medicine Volume 152 ; 152 ; 152 ;  >
+    au < doNotProcess ; doNotProcess ; 1981 ; 1981 ; The Journal of Experimental Medicine Volume 153 ; 153 ; 153 ;  >
+    au < doNotProcess ; doNotProcess ; 1981 ; 1981 ; The Journal of Experimental Medicine Volume 154 ; 154 ; 154 ;  >
+    au < doNotProcess ; doNotProcess ; 1982 ; 1982 ; The Journal of Experimental Medicine Volume 155 ; 155 ; 155 ;  >
+    au < doNotProcess ; doNotProcess ; 1982 ; 1982 ; The Journal of Experimental Medicine Volume 156 ; 156 ; 156 ;  >
+    au < doNotProcess ; doNotProcess ; 1983 ; 1983 ; The Journal of Experimental Medicine Volume 157 ; 157 ; 157 ;  >
+    au < doNotProcess ; doNotProcess ; 1983 ; 1983 ; The Journal of Experimental Medicine Volume 158 ; 158 ; 158 ;  >
+    au < doNotProcess ; doNotProcess ; 1984 ; 1984 ; The Journal of Experimental Medicine Volume 159 ; 159 ; 159 ;  >
+    au < doNotProcess ; doNotProcess ; 1984 ; 1984 ; The Journal of Experimental Medicine Volume 160 ; 160 ; 160 ;  >
+    au < doNotProcess ; doNotProcess ; 1985 ; 1985 ; The Journal of Experimental Medicine Volume 161 ; 161 ; 161 ;  >
+    au < doNotProcess ; doNotProcess ; 1985 ; 1985 ; The Journal of Experimental Medicine Volume 162 ; 162 ; 162 ;  >
+    au < doNotProcess ; doNotProcess ; 1986 ; 1986 ; The Journal of Experimental Medicine Volume 163 ; 163 ; 163 ;  >
+    au < doNotProcess ; doNotProcess ; 1986 ; 1986 ; The Journal of Experimental Medicine Volume 164 ; 164 ; 164 ;  >
+    au < doNotProcess ; doNotProcess ; 1987 ; 1987 ; The Journal of Experimental Medicine Volume 165 ; 165 ; 165 ;  >
+    au < doNotProcess ; doNotProcess ; 1987 ; 1987 ; The Journal of Experimental Medicine Volume 166 ; 166 ; 166 ;  >
+    au < doNotProcess ; doNotProcess ; 1988 ; 1988 ; The Journal of Experimental Medicine Volume 167 ; 167 ; 167 ;  >
+    au < doNotProcess ; doNotProcess ; 1988 ; 1988 ; The Journal of Experimental Medicine Volume 168 ; 168 ; 168 ;  >
+    au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; The Journal of Experimental Medicine Volume 169 ; 169 ; 169 ;  >
+    au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; The Journal of Experimental Medicine Volume 170 ; 170 ; 170 ;  >
+    au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; The Journal of Experimental Medicine Volume 171 ; 171 ; 171 ;  >
+    au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; The Journal of Experimental Medicine Volume 172 ; 172 ; 172 ;  >
+    au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; The Journal of Experimental Medicine Volume 173 ; 173 ; 173 ;  >
+    au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; The Journal of Experimental Medicine Volume 174 ; 174 ; 174 ;  >
+    au < doNotProcess ; doNotProcess ; 1992 ; 1992 ; The Journal of Experimental Medicine Volume 175 ; 175 ; 175 ;  >
+    au < doNotProcess ; doNotProcess ; 1992 ; 1992 ; The Journal of Experimental Medicine Volume 176 ; 176 ; 176 ;  >
+    au < doNotProcess ; doNotProcess ; 1993 ; 1993 ; The Journal of Experimental Medicine Volume 177 ; 177 ; 177 ;  >
+    au < doNotProcess ; doNotProcess ; 1993 ; 1993 ; The Journal of Experimental Medicine Volume 178 ; 178 ; 178 ;  >
+    au < doNotProcess ; doNotProcess ; 1994 ; 1994 ; The Journal of Experimental Medicine Volume 179 ; 179 ; 179 ;  >
+    au < doNotProcess ; doNotProcess ; 1994 ; 1994 ; The Journal of Experimental Medicine Volume 180 ; 180 ; 180 ;  >
+    au < doNotProcess ; doNotProcess ; 1995 ; 1995 ; The Journal of Experimental Medicine Volume 181 ; 181 ; 181 ;  >
+    au < doNotProcess ; doNotProcess ; 1995 ; 1995 ; The Journal of Experimental Medicine Volume 182 ; 182 ; 182 ;  >
+    au < doNotProcess ; doNotProcess ; 1996 ; 1996 ; The Journal of Experimental Medicine Volume 183 ; 183 ; 183 ;  >
+    au < doNotProcess ; doNotProcess ; 1996 ; 1996 ; The Journal of Experimental Medicine Volume 184 ; 184 ; 184 ;  >
+    au < doNotProcess ; doNotProcess ; 1997 ; 1997 ; The Journal of Experimental Medicine Volume 185 ; 185 ; 185 ;  >
+    au < doNotProcess ; doNotProcess ; 1997 ; 1997 ; The Journal of Experimental Medicine Volume 186 ; 186 ; 186 ;  >
+    au < doNotProcess ; doNotProcess ; 1998 ; 1998 ; The Journal of Experimental Medicine Volume 187 ; 187 ; 187 ;  >
+    au < doNotProcess ; doNotProcess ; 1998 ; 1998 ; The Journal of Experimental Medicine Volume 188 ; 188 ; 188 ;  >
+    au < doNotProcess ; doNotProcess ; 1999 ; 1999 ; The Journal of Experimental Medicine Volume 189 ; 189 ; 189 ;  >
+    au < doNotProcess ; doNotProcess ; 1999 ; 1999 ; The Journal of Experimental Medicine Volume 190 ; 190 ; 190 ;  >
+    au < doNotProcess ; doNotProcess ; 2000 ; 2000 ; The Journal of Experimental Medicine Volume 191 ; 191 ; 191 ;  >
+    au < doNotProcess ; doNotProcess ; 2000 ; 2000 ; The Journal of Experimental Medicine Volume 192 ; 192 ; 192 ;  >
+    au < doNotProcess ; doNotProcess ; 2001 ; 2001 ; The Journal of Experimental Medicine Volume 193 ; 193 ; 193 ;  >
+    au < doNotProcess ; doNotProcess ; 2001 ; 2001 ; The Journal of Experimental Medicine Volume 194 ; 194 ; 194 ;  >
+    au < doNotProcess ; doNotProcess ; 2002 ; 2002 ; The Journal of Experimental Medicine Volume 195 ; 195 ; 195 ;  >
+    au < doNotProcess ; doNotProcess ; 2002 ; 2002 ; The Journal of Experimental Medicine Volume 196 ; 196 ; 196 ;  >
+    au < doNotProcess ; doNotProcess ; 2003 ; 2003 ; The Journal of Experimental Medicine Volume 197 ; 197 ; 197 ;  >
+    au < doNotProcess ; doNotProcess ; 2003 ; 2003 ; The Journal of Experimental Medicine Volume 198 ; 198 ; 198 ;  >
+    au < doNotProcess ; doNotProcess ; 2004 ; 2004 ; The Journal of Experimental Medicine Volume 199 ; 199 ; 199 ;  >
+    au < doNotProcess ; doNotProcess ; 2004 ; 2004 ; The Journal of Experimental Medicine Volume 200 ; 200 ; 200 ;  >
+    au < doNotProcess ; doNotProcess ; 2005 ; 2005 ; The Journal of Experimental Medicine Volume 201 ; 201 ; 201 ;  >
+    au < doNotProcess ; doNotProcess ; 2005 ; 2005 ; The Journal of Experimental Medicine Volume 202 ; 202 ; 202 ;  >
+    au < doNotProcess ; doNotProcess ; 2006 ; 2006 ; The Journal of Experimental Medicine Volume 203 ; 203 ; 203 ;  >
+    au < doNotProcess ; doNotProcess ; 2007 ; 2007 ; The Journal of Experimental Medicine Volume 204 ; 204 ; 204 ;  >
+    au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; The Journal of Experimental Medicine Volume 205 ; 205 ; 205 ;  >
+    au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; The Journal of Experimental Medicine Volume 206 ; 206 ; 206 ;  >
+    au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; The Journal of Experimental Medicine Volume 207 ; 207 ; 207 ;  >
+    au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; The Journal of Experimental Medicine Volume 208 ; 208 ; 208 ;  >
+    au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; The Journal of Experimental Medicine Volume 209 ; 209 ; 209 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The Journal of Experimental Medicine Volume 210 ; 210 ; 210 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; The Journal of Experimental Medicine Volume 211 ; 211 ; 211 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Journal of Experimental Medicine Volume 212 ; 212 ; 212 ;  >
+    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; The Journal of Experimental Medicine Volume 213 ; 213 ; 213 ;  > 
+    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; The Journal of Experimental Medicine Volume 214 ; 214 ; 214 ; > 
+    au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; The Journal of Experimental Medicine Volume 215 ; 215 ; 215 ; > 
+    au < frozen ; exists ; 2019 ; 2019 ; The Journal of Experimental Medicine Volume 216 ; 216 ; 216 ; > 
+    au < crawling ; exists ; 2020 ; 2020 ; The Journal of Experimental Medicine Volume 217 ; 217 ; 217 ; >
+    au < ready ; exists ; 2021 ; 2021 ; The Journal of Experimental Medicine Volume 218 ; 218 ; 218 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; The Journal of Experimental Medicine Volume 219 ; 219 ; 219 ; >
+
+  }
+
+  {
+
+    title <
+      name = The Journal of General Physiology ;
+      issn = 0022-1295 ;
+      eissn = 1540-7748
+    >
+
+    param[journal_id] = jgp
+
+    au < doNotProcess ; doNotProcess ; 1918-1919 ; 1918-1919 ; The Journal of General Physiology Volume 1 ; 1 ; 1 ;  >
+    au < doNotProcess ; doNotProcess ; 1919-1920 ; 1919-1920 ; The Journal of General Physiology Volume 2 ; 2 ; 2 ;  >
+    au < doNotProcess ; doNotProcess ; 1920-1921 ; 1920-1921 ; The Journal of General Physiology Volume 3 ; 3 ; 3 ;  >
+    au < doNotProcess ; doNotProcess ; 1921-1922 ; 1921-1922 ; The Journal of General Physiology Volume 4 ; 4 ; 4 ;  >
+    au < doNotProcess ; doNotProcess ; 1922-1923 ; 1922-1923 ; The Journal of General Physiology Volume 5 ; 5 ; 5 ;  >
+    au < doNotProcess ; doNotProcess ; 1923-1924 ; 1923-1924 ; The Journal of General Physiology Volume 6 ; 6 ; 6 ;  >
+    au < doNotProcess ; doNotProcess ; 1924-1925 ; 1924-1925 ; The Journal of General Physiology Volume 7 ; 7 ; 7 ;  >
+    au < doNotProcess ; doNotProcess ; 1925-1926 ; 1925-1926 ; The Journal of General Physiology Volume 8 ; 8 ; 8 ;  >
+    au < doNotProcess ; doNotProcess ; 1926 ; 1926 ; The Journal of General Physiology Volume 9 ; 9 ; 9 ;  >
+    au < doNotProcess ; doNotProcess ; 1926-1927 ; 1926-1927 ; The Journal of General Physiology Volume 10 ; 10 ; 10 ;  >
+    au < doNotProcess ; doNotProcess ; 1927-1928 ; 1927-1928 ; The Journal of General Physiology Volume 11 ; 11 ; 11 ;  >
+    au < doNotProcess ; doNotProcess ; 1928-1929 ; 1928-1929 ; The Journal of General Physiology Volume 12 ; 12 ; 12 ;  >
+    au < doNotProcess ; doNotProcess ; 1929-1930 ; 1929-1930 ; The Journal of General Physiology Volume 13 ; 13 ; 13 ;  >
+    au < doNotProcess ; doNotProcess ; 1930-1931 ; 1930-1931 ; The Journal of General Physiology Volume 14 ; 14 ; 14 ;  >
+    au < doNotProcess ; doNotProcess ; 1931-1932 ; 1931-1932 ; The Journal of General Physiology Volume 15 ; 15 ; 15 ;  >
+    au < doNotProcess ; doNotProcess ; 1932-1933 ; 1932-1933 ; The Journal of General Physiology Volume 16 ; 16 ; 16 ;  >
+    au < doNotProcess ; doNotProcess ; 1933-1934 ; 1933-1934 ; The Journal of General Physiology Volume 17 ; 17 ; 17 ;  >
+    au < doNotProcess ; doNotProcess ; 1934-1935 ; 1934-1935 ; The Journal of General Physiology Volume 18 ; 18 ; 18 ;  >
+    au < doNotProcess ; doNotProcess ; 1935-1936 ; 1935-1936 ; The Journal of General Physiology Volume 19 ; 19 ; 19 ;  >
+    au < doNotProcess ; doNotProcess ; 1936-1937 ; 1936-1937 ; The Journal of General Physiology Volume 20 ; 20 ; 20 ;  >
+    au < doNotProcess ; doNotProcess ; 1937-1938 ; 1937-1938 ; The Journal of General Physiology Volume 21 ; 21 ; 21 ;  >
+    au < doNotProcess ; doNotProcess ; 1938-1939 ; 1938-1939 ; The Journal of General Physiology Volume 22 ; 22 ; 22 ;  >
+    au < doNotProcess ; doNotProcess ; 1939-1940 ; 1939-1940 ; The Journal of General Physiology Volume 23 ; 23 ; 23 ;  >
+    au < doNotProcess ; doNotProcess ; 1940-1941 ; 1940-1941 ; The Journal of General Physiology Volume 24 ; 24 ; 24 ;  >
+    au < doNotProcess ; doNotProcess ; 1941-1942 ; 1941-1942 ; The Journal of General Physiology Volume 25 ; 25 ; 25 ;  >
+    au < doNotProcess ; doNotProcess ; 1942-1943 ; 1942-1943 ; The Journal of General Physiology Volume 26 ; 26 ; 26 ;  >
+    au < doNotProcess ; doNotProcess ; 1943-1944 ; 1943-1944 ; The Journal of General Physiology Volume 27 ; 27 ; 27 ;  >
+    au < doNotProcess ; doNotProcess ; 1944-1945 ; 1944-1945 ; The Journal of General Physiology Volume 28 ; 28 ; 28 ;  >
+    au < doNotProcess ; doNotProcess ; 1945-1946 ; 1945-1946 ; The Journal of General Physiology Volume 29 ; 29 ; 29 ;  >
+    au < doNotProcess ; doNotProcess ; 1946-1947 ; 1946-1947 ; The Journal of General Physiology Volume 30 ; 30 ; 30 ;  >
+    au < doNotProcess ; doNotProcess ; 1947-1948 ; 1947-1948 ; The Journal of General Physiology Volume 31 ; 31 ; 31 ;  >
+    au < doNotProcess ; doNotProcess ; 1948-1949 ; 1948-1949 ; The Journal of General Physiology Volume 32 ; 32 ; 32 ;  >
+    au < doNotProcess ; doNotProcess ; 1949-1950 ; 1949-1950 ; The Journal of General Physiology Volume 33 ; 33 ; 33 ;  >
+    au < doNotProcess ; doNotProcess ; 1950-1951 ; 1950-1951 ; The Journal of General Physiology Volume 34 ; 34 ; 34 ;  >
+    au < doNotProcess ; doNotProcess ; 1951-1952 ; 1951-1952 ; The Journal of General Physiology Volume 35 ; 35 ; 35 ;  >
+    au < doNotProcess ; doNotProcess ; 1952-1953 ; 1952-1953 ; The Journal of General Physiology Volume 36 ; 36 ; 36 ;  >
+    au < doNotProcess ; doNotProcess ; 1953-1954 ; 1953-1954 ; The Journal of General Physiology Volume 37 ; 37 ; 37 ;  >
+    au < doNotProcess ; doNotProcess ; 1954-1955 ; 1954-1955 ; The Journal of General Physiology Volume 38 ; 38 ; 38 ;  >
+    au < doNotProcess ; doNotProcess ; 1955-1956 ; 1955-1956 ; The Journal of General Physiology Volume 39 ; 39 ; 39 ;  >
+    au < doNotProcess ; doNotProcess ; 1956-1957 ; 1956-1957 ; The Journal of General Physiology Volume 40 ; 40 ; 40 ;  >
+    au < doNotProcess ; doNotProcess ; 1957-1958 ; 1957-1958 ; The Journal of General Physiology Volume 41 ; 41 ; 41 ;  >
+    au < doNotProcess ; doNotProcess ; 1958-1959 ; 1958-1959 ; The Journal of General Physiology Volume 42 ; 42 ; 42 ;  >
+    au < doNotProcess ; doNotProcess ; 1959-1960 ; 1959-1960 ; The Journal of General Physiology Volume 43 ; 43 ; 43 ;  >
+    au < doNotProcess ; doNotProcess ; 1960-1961 ; 1960-1961 ; The Journal of General Physiology Volume 44 ; 44 ; 44 ;  >
+    au < doNotProcess ; doNotProcess ; 1961-1962 ; 1961-1962 ; The Journal of General Physiology Volume 45 ; 45 ; 45 ;  >
+    au < doNotProcess ; doNotProcess ; 1962-1963 ; 1962-1963 ; The Journal of General Physiology Volume 46 ; 46 ; 46 ;  >
+    au < doNotProcess ; doNotProcess ; 1963-1964 ; 1963-1964 ; The Journal of General Physiology Volume 47 ; 47 ; 47 ;  >
+    au < doNotProcess ; doNotProcess ; 1964-1965 ; 1964-1965 ; The Journal of General Physiology Volume 48 ; 48 ; 48 ;  >
+    au < doNotProcess ; doNotProcess ; 1965-1966 ; 1965-1966 ; The Journal of General Physiology Volume 49 ; 49 ; 49 ;  >
+    au < doNotProcess ; doNotProcess ; 1966-1967 ; 1966-1967 ; The Journal of General Physiology Volume 50 ; 50 ; 50 ;  >
+    au < doNotProcess ; doNotProcess ; 1968 ; 1968 ; The Journal of General Physiology Volume 51 ; 51 ; 51 ;  >
+    au < doNotProcess ; doNotProcess ; 1968 ; 1968 ; The Journal of General Physiology Volume 52 ; 52 ; 52 ;  >
+    au < doNotProcess ; doNotProcess ; 1969 ; 1969 ; The Journal of General Physiology Volume 53 ; 53 ; 53 ;  >
+    au < doNotProcess ; doNotProcess ; 1969 ; 1969 ; The Journal of General Physiology Volume 54 ; 54 ; 54 ;  >
+    au < doNotProcess ; doNotProcess ; 1970 ; 1970 ; The Journal of General Physiology Volume 55 ; 55 ; 55 ;  >
+    au < doNotProcess ; doNotProcess ; 1970 ; 1970 ; The Journal of General Physiology Volume 56 ; 56 ; 56 ;  >
+    au < doNotProcess ; doNotProcess ; 1971 ; 1971 ; The Journal of General Physiology Volume 57 ; 57 ; 57 ;  >
+    au < doNotProcess ; doNotProcess ; 1971 ; 1971 ; The Journal of General Physiology Volume 58 ; 58 ; 58 ;  >
+    au < doNotProcess ; doNotProcess ; 1972 ; 1972 ; The Journal of General Physiology Volume 59 ; 59 ; 59 ;  >
+    au < doNotProcess ; doNotProcess ; 1972 ; 1972 ; The Journal of General Physiology Volume 60 ; 60 ; 60 ;  >
+    au < doNotProcess ; doNotProcess ; 1973 ; 1973 ; The Journal of General Physiology Volume 61 ; 61 ; 61 ;  >
+    au < doNotProcess ; doNotProcess ; 1973 ; 1973 ; The Journal of General Physiology Volume 62 ; 62 ; 62 ;  >
+    au < doNotProcess ; doNotProcess ; 1974 ; 1974 ; The Journal of General Physiology Volume 63 ; 63 ; 63 ;  >
+    au < doNotProcess ; doNotProcess ; 1974 ; 1974 ; The Journal of General Physiology Volume 64 ; 64 ; 64 ;  >
+    au < doNotProcess ; doNotProcess ; 1975 ; 1975 ; The Journal of General Physiology Volume 65 ; 65 ; 65 ;  >
+    au < doNotProcess ; doNotProcess ; 1975 ; 1975 ; The Journal of General Physiology Volume 66 ; 66 ; 66 ;  >
+    au < doNotProcess ; doNotProcess ; 1976 ; 1976 ; The Journal of General Physiology Volume 67 ; 67 ; 67 ;  >
+    au < doNotProcess ; doNotProcess ; 1976 ; 1976 ; The Journal of General Physiology Volume 68 ; 68 ; 68 ;  >
+    au < doNotProcess ; doNotProcess ; 1977 ; 1977 ; The Journal of General Physiology Volume 69 ; 69 ; 69 ;  >
+    au < doNotProcess ; doNotProcess ; 1977 ; 1977 ; The Journal of General Physiology Volume 70 ; 70 ; 70 ;  >
+    au < doNotProcess ; doNotProcess ; 1978 ; 1978 ; The Journal of General Physiology Volume 71 ; 71 ; 71 ;  >
+    au < doNotProcess ; doNotProcess ; 1978 ; 1978 ; The Journal of General Physiology Volume 72 ; 72 ; 72 ;  >
+    au < doNotProcess ; doNotProcess ; 1979 ; 1979 ; The Journal of General Physiology Volume 73 ; 73 ; 73 ;  >
+    au < doNotProcess ; doNotProcess ; 1979 ; 1979 ; The Journal of General Physiology Volume 74 ; 74 ; 74 ;  >
+    au < doNotProcess ; doNotProcess ; 1980 ; 1980 ; The Journal of General Physiology Volume 75 ; 75 ; 75 ;  >
+    au < doNotProcess ; doNotProcess ; 1980 ; 1980 ; The Journal of General Physiology Volume 76 ; 76 ; 76 ;  >
+    au < doNotProcess ; doNotProcess ; 1981 ; 1981 ; The Journal of General Physiology Volume 77 ; 77 ; 77 ;  >
+    au < doNotProcess ; doNotProcess ; 1981 ; 1981 ; The Journal of General Physiology Volume 78 ; 78 ; 78 ;  >
+    au < doNotProcess ; doNotProcess ; 1982 ; 1982 ; The Journal of General Physiology Volume 79 ; 79 ; 79 ;  >
+    au < doNotProcess ; doNotProcess ; 1982 ; 1982 ; The Journal of General Physiology Volume 80 ; 80 ; 80 ;  >
+    au < doNotProcess ; doNotProcess ; 1983 ; 1983 ; The Journal of General Physiology Volume 81 ; 81 ; 81 ;  >
+    au < doNotProcess ; doNotProcess ; 1983 ; 1983 ; The Journal of General Physiology Volume 82 ; 82 ; 82 ;  >
+    au < doNotProcess ; doNotProcess ; 1984 ; 1984 ; The Journal of General Physiology Volume 83 ; 83 ; 83 ;  >
+    au < doNotProcess ; doNotProcess ; 1984 ; 1984 ; The Journal of General Physiology Volume 84 ; 84 ; 84 ;  >
+    au < doNotProcess ; doNotProcess ; 1985 ; 1985 ; The Journal of General Physiology Volume 85 ; 85 ; 85 ;  >
+    au < doNotProcess ; doNotProcess ; 1985 ; 1985 ; The Journal of General Physiology Volume 86 ; 86 ; 86 ;  >
+    au < doNotProcess ; doNotProcess ; 1986 ; 1986 ; The Journal of General Physiology Volume 87 ; 87 ; 87 ;  >
+    au < doNotProcess ; doNotProcess ; 1986 ; 1986 ; The Journal of General Physiology Volume 88 ; 88 ; 88 ;  >
+    au < doNotProcess ; doNotProcess ; 1987 ; 1987 ; The Journal of General Physiology Volume 89 ; 89 ; 89 ;  >
+    au < doNotProcess ; doNotProcess ; 1987 ; 1987 ; The Journal of General Physiology Volume 90 ; 90 ; 90 ;  >
+    au < doNotProcess ; doNotProcess ; 1988 ; 1988 ; The Journal of General Physiology Volume 91 ; 91 ; 91 ;  >
+    au < doNotProcess ; doNotProcess ; 1988 ; 1988 ; The Journal of General Physiology Volume 92 ; 92 ; 92 ;  >
+    au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; The Journal of General Physiology Volume 93 ; 93 ; 93 ;  >
+    au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; The Journal of General Physiology Volume 94 ; 94 ; 94 ;  >
+    au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; The Journal of General Physiology Volume 95 ; 95 ; 95 ;  >
+    au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; The Journal of General Physiology Volume 96 ; 96 ; 96 ;  >
+    au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; The Journal of General Physiology Volume 97 ; 97 ; 97 ;  >
+    au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; The Journal of General Physiology Volume 98 ; 98 ; 98 ;  >
+    au < doNotProcess ; doNotProcess ; 1992 ; 1992 ; The Journal of General Physiology Volume 99 ; 99 ; 99 ;  >
+    au < doNotProcess ; doNotProcess ; 1992 ; 1992 ; The Journal of General Physiology Volume 100 ; 100 ; 100 ;  >
+    au < doNotProcess ; doNotProcess ; 1993 ; 1993 ; The Journal of General Physiology Volume 101 ; 101 ; 101 ;  >
+    au < doNotProcess ; doNotProcess ; 1993 ; 1993 ; The Journal of General Physiology Volume 102 ; 102 ; 102 ;  >
+    au < doNotProcess ; doNotProcess ; 1994 ; 1994 ; The Journal of General Physiology Volume 103 ; 103 ; 103 ;  >
+    au < doNotProcess ; doNotProcess ; 1994 ; 1994 ; The Journal of General Physiology Volume 104 ; 104 ; 104 ;  >
+    au < doNotProcess ; doNotProcess ; 1995 ; 1995 ; The Journal of General Physiology Volume 105 ; 105 ; 105 ;  >
+    au < doNotProcess ; doNotProcess ; 1995 ; 1995 ; The Journal of General Physiology Volume 106 ; 106 ; 106 ;  >
+    au < doNotProcess ; doNotProcess ; 1996 ; 1996 ; The Journal of General Physiology Volume 107 ; 107 ; 107 ;  >
+    au < doNotProcess ; doNotProcess ; 1996 ; 1996 ; The Journal of General Physiology Volume 108 ; 108 ; 108 ;  >
+    au < doNotProcess ; doNotProcess ; 1997 ; 1997 ; The Journal of General Physiology Volume 109 ; 109 ; 109 ;  >
+    au < doNotProcess ; doNotProcess ; 1997 ; 1997 ; The Journal of General Physiology Volume 110 ; 110 ; 110 ;  >
+    au < doNotProcess ; doNotProcess ; 1998 ; 1998 ; The Journal of General Physiology Volume 111 ; 111 ; 111 ;  >
+    au < doNotProcess ; doNotProcess ; 1998 ; 1998 ; The Journal of General Physiology Volume 112 ; 112 ; 112 ;  >
+    au < doNotProcess ; doNotProcess ; 1999 ; 1999 ; The Journal of General Physiology Volume 113 ; 113 ; 113 ;  >
+    au < doNotProcess ; doNotProcess ; 1999 ; 1999 ; The Journal of General Physiology Volume 114 ; 114 ; 114 ;  >
+    au < doNotProcess ; doNotProcess ; 2000 ; 2000 ; The Journal of General Physiology Volume 115 ; 115 ; 115 ;  >
+    au < doNotProcess ; doNotProcess ; 2000 ; 2000 ; The Journal of General Physiology Volume 116 ; 116 ; 116 ;  >
+    au < doNotProcess ; doNotProcess ; 2001 ; 2001 ; The Journal of General Physiology Volume 117 ; 117 ; 117 ;  >
+    au < doNotProcess ; doNotProcess ; 2001 ; 2001 ; The Journal of General Physiology Volume 118 ; 118 ; 118 ;  >
+    au < doNotProcess ; doNotProcess ; 2002 ; 2002 ; The Journal of General Physiology Volume 119 ; 119 ; 119 ;  >
+    au < doNotProcess ; doNotProcess ; 2002 ; 2002 ; The Journal of General Physiology Volume 120 ; 120 ; 120 ;  >
+    au < doNotProcess ; doNotProcess ; 2003 ; 2003 ; The Journal of General Physiology Volume 121 ; 121 ; 121 ;  >
+    au < doNotProcess ; doNotProcess ; 2003 ; 2003 ; The Journal of General Physiology Volume 122 ; 122 ; 122 ;  >
+    au < doNotProcess ; doNotProcess ; 2004 ; 2004 ; The Journal of General Physiology Volume 123 ; 123 ; 123 ;  >
+    au < doNotProcess ; doNotProcess ; 2004 ; 2004 ; The Journal of General Physiology Volume 124 ; 124 ; 124 ;  >
+    au < doNotProcess ; doNotProcess ; 2005 ; 2005 ; The Journal of General Physiology Volume 125 ; 125 ; 125 ;  >
+    au < doNotProcess ; doNotProcess ; 2005 ; 2005 ; The Journal of General Physiology Volume 126 ; 126 ; 126 ;  >
+    au < doNotProcess ; doNotProcess ; 2006 ; 2006 ; The Journal of General Physiology Volume 127 ; 127 ; 127 ;  >
+    au < doNotProcess ; doNotProcess ; 2006 ; 2006 ; The Journal of General Physiology Volume 128 ; 128 ; 128 ;  >
+    au < doNotProcess ; doNotProcess ; 2007 ; 2007 ; The Journal of General Physiology Volume 129 ; 129 ; 129 ;  >
+    au < doNotProcess ; doNotProcess ; 2007 ; 2007 ; The Journal of General Physiology Volume 130 ; 130 ; 130 ;  >
+    au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; The Journal of General Physiology Volume 131 ; 131 ; 131 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; The Journal of General Physiology Volume 132 ; 132 ; 132 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; The Journal of General Physiology Volume 133 ; 133 ; 133 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; The Journal of General Physiology Volume 134 ; 134 ; 134 ;  >
+    au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; The Journal of General Physiology Volume 135 ; 135 ; 135 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; The Journal of General Physiology Volume 136 ; 136 ; 136 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; The Journal of General Physiology Volume 137 ; 137 ; 137 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; The Journal of General Physiology Volume 138 ; 138 ; 138 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; The Journal of General Physiology Volume 139 ; 139 ; 139 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; The Journal of General Physiology Volume 140 ; 140 ; 140 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The Journal of General Physiology Volume 141 ; 141 ; 141 ;  >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The Journal of General Physiology Volume 142 ; 142 ; 142 ;  >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; The Journal of General Physiology Volume 143 ; 143 ; 143 ;  >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; The Journal of General Physiology Volume 144 ; 144 ; 144 ;  >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Journal of General Physiology Volume 145 ; 145 ; 145 ;  >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Journal of General Physiology Volume 146 ; 146 ; 146 ;  >
+    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; The Journal of General Physiology Volume 147 ; 147 ; 147 ;  >
+    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; The Journal of General Physiology Volume 148 ; 148 ; 148 ;  > # switch to Drupal 9/20/16
+    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; The Journal of General Physiology Volume 149 ; 149 ; 149 ; > # switch to Drupal 9/20/16
+    au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; The Journal of General Physiology Volume 150 ; 150 ; 150 ; >
+    au < frozen ; exists ; 2019 ; 2019 ; The Journal of General Physiology Volume 151 ; 151 ; 151 ; >
+    au < frozen ; exists ; 2020 ; 2020 ; The Journal of General Physiology Volume 152 ; 152 ; 152 ; >
+    au < ready ; exists ; 2021 ; 2021 ; The Journal of General Physiology Volume 153 ; 153 ; 153 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; The Journal of General Physiology Volume 154 ; 154 ; 154 ; >
+
+  }
+
+}

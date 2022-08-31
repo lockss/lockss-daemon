@@ -1,0 +1,62 @@
+{
+
+  publisher <
+    name = Foundation for Student Science and Technology ;
+    info[contract] = 2013 ;
+    info[tester] = 8 ;
+    info[poller] = 8
+  >
+  
+  #provider = Journal of Student Science and Technology
+  # Retire after 2020.
+
+  {
+ 
+    title < 
+      name = Journal of Student Science and Technology ;
+      eissn = 2291-6954
+    >
+    
+    #was Canadian Young Scientist Journal
+    
+    param[base_url] = http://journal.fsst.ca/jsst/
+    implicit < status1 ; status ; year ; name ; volume ; param[year] ; proxy >
+    plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
+    param[journal_id] = jsst
+    
+    au < doNotProcess ; exists ; 2008 ; Journal of Student Science and Technology Volume 1 ; 1 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Journal of Student Science and Technology Volume 2 ; 2 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Student Science and Technology Volume 3 ; 3 ; 2010 ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Student Science and Technology Volume 4 ; 4 ; 2011 ; >
+    au < doNotProcess ; exists ; 2012 ; Journal of Student Science and Technology Volume 5 ; 5 ; 2012 ; >
+    au < finished ; crawling ; 2013 ; Journal of Student Science and Technology Volume 6 ; 6 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2014 ; Journal of Student Science and Technology Volume 7 ; 7 ; 2014 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Journal of Student Science and Technology Volume 8 ; 8 ; 2015 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; Journal of Student Science and Technology Volume 9 ; 9 ; 2016 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; Journal of Student Science and Technology Volume 10 ; 10 ; 2017 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Journal of Student Science and Technology Volume 11 ; 11 ; 2019 ; reingest2.clockss.org:8085 >
+    au < doNotProcess ; doNotProcess ; 2020 ; Journal of Student Science and Technology Volume 12 ; 12 ; 2020 ; >
+    #do not collect after 2020. Nothing published in 2020
+
+  }
+
+  {
+    
+    title <
+      name = Canadian Young Scientist Journal ;
+      issn = 1913-1925
+    >
+    
+    #changed name to Journal of Student Science and Technology.
+
+    plugin = org.lockss.plugin.atypon.nrcresearchpress.ClockssNRCResearchPressPlugin
+    comment[plugin] = org.lockss.plugin.atypon.canadianyoungscientist.ClockssCanadianYoungScientistPlugin
+    param[base_url] = http://www.cysjournal.ca/
+    implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+    param[journal_id] = cysj
+
+    au < finished ; crawling ; 2013 ; Canadian Young Scientist Journal Volume 2013 ; 2013 ; reingest2.clockss.org:8085 >
+
+  }
+
+}

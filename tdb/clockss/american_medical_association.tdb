@@ -1,0 +1,391 @@
+{
+
+  publisher <
+    name = American Medical Association ;
+    info[contract] = 2008 ;
+    info[tester] = 5 ;
+    info[poller] = 2
+  >
+
+  plugin = org.lockss.plugin.silverchair.ama.ClockssAmaSilverchairPlugin
+  implicit < status1 ; status ; year ; name ; param[year] ; param[base_url] ; proxy >
+  #steps-forward J191
+  #
+  
+  #param[base_url] = http://jamanetwork.com/
+  
+  {
+
+    title <
+      name = JAMA Cardiology ;
+      issn = 2380-6583 ;
+      eissn = 2380-6591 ;
+      issnl = 2380-6583
+    >
+
+    param[resource_id] = 184
+    param[journal_id] = jamacardiology
+    
+    au < finished ; finished ; 2016 ; JAMA Cardiology Volume 1 ; 2016 ; http://jamanetwork.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2017 ; JAMA Cardiology Volume 2 ; 2017 ; http://jamanetwork.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2018 ; JAMA Cardiology Volume 3 ; 2018 ; https://jamanetwork.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2019 ; JAMA Cardiology Volume 4 ; 2019 ; https://jamanetwork.com/ ; reingest1.clockss.org:8082 >
+    au < deepCrawl ; exists ; 2020 ; JAMA Cardiology Volume 5 ; 2020 ; https://jamanetwork.com/ ; >
+    au < deepCrawl ; exists ; 2021 ; JAMA Cardiology Volume 6 ; 2021 ; https://jamanetwork.com/ ; >
+    au < manifest ; exists ; 2022 ; JAMA Cardiology Volume 7 ; 2022 ; https://jamanetwork.com/ ; >
+
+  }
+
+  {
+
+    title <
+      name = JAMA Dermatology ;
+      issn = 0003-987X ;
+      eissn = 0096-5359 ;
+      issnl = 0003-987X
+    >
+
+    param[resource_id] = 68
+    param[journal_id] = jamadermatology
+    
+    au < doNotProcess ; doNotProcess ; 2012 ; JAMA Dermatology Volume 148 ; 2012 ; https://jamanetwork.com/ ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; JAMA Dermatology Volume 149 ; 2013 ; https://jamanetwork.com/ ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; JAMA Dermatology Volume 150 ; 2014 ; https://jamanetwork.com/ ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; JAMA Dermatology Volume 151 ; 2015 ; https://jamanetwork.com/ ; >
+    au < finished ; finished ; 2016 ; JAMA Dermatology Volume 152 ; 2016 ; http://jamanetwork.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2017 ; JAMA Dermatology Volume 153 ; 2017 ; http://jamanetwork.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2018 ; JAMA Dermatology Volume 154 ; 2018 ; https://jamanetwork.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2019 ; JAMA Dermatology Volume 155 ; 2019 ; https://jamanetwork.com/ ; reingest3.clockss.org:8083 >
+    au < deepCrawl ; exists ; 2020 ; JAMA Dermatology Volume 156 ; 2020 ; https://jamanetwork.com/ ; >
+    au < deepCrawl ; exists ; 2021 ; JAMA Dermatology Volume 157 ; 2021 ; https://jamanetwork.com/ ; >
+    au < manifest ; exists ; 2022 ; JAMA Dermatology Volume 158 ; 2022 ; https://jamanetwork.com/ ; >
+
+  }
+
+  {
+
+    title <
+      name = JAMA Facial Plastic Surgery ;
+      issn = 1521-2491 ;
+      eissn = 1538-3660 ;
+      issnl = 1521-2491
+    >
+
+    param[resource_id] = 69
+    param[journal_id] = jamafacialplasticsurgery
+    #move to liebertpub
+
+    au < doNotProcess ; doNotProcess ; 2012 ; JAMA Facial Plastic Surgery Volume 14 ; 2012 ; https://jamanetwork.com/ ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; JAMA Facial Plastic Surgery Volume 15 ; 2013 ; https://jamanetwork.com/ ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; JAMA Facial Plastic Surgery Volume 16 ; 2014 ; https://jamanetwork.com/ ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; JAMA Facial Plastic Surgery Volume 17 ; 2015 ; https://jamanetwork.com/ ; >
+    au < finished ; finished ; 2016 ; JAMA Facial Plastic Surgery Volume 18 ; 2016 ; http://jamanetwork.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2017 ; JAMA Facial Plastic Surgery Volume 19 ; 2017 ; http://jamanetwork.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2018 ; JAMA Facial Plastic Surgery Volume 20 ; 2018 ; https://jamanetwork.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2019 ; JAMA Facial Plastic Surgery Volume 21 ; 2019 ; https://jamanetwork.com/ ; reingest1.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = JAMA Internal Medicine ;
+      issn = 0003-9926 ;
+      eissn = 1538-3679 ;
+      issnl = 0003-9926
+    >
+
+    param[resource_id] = 71
+    param[journal_id] = jamainternalmedicine
+    
+    au < doNotProcess ; doNotProcess ; 2012 ; JAMA Internal Medicine Volume 172 ; 2012 ; https://jamanetwork.com/ ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; JAMA Internal Medicine Volume 173 ; 2013 ; https://jamanetwork.com/ ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; JAMA Internal Medicine Volume 174 ; 2014 ; https://jamanetwork.com/ ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; JAMA Internal Medicine Volume 175 ; 2015 ; https://jamanetwork.com/ ; >
+    au < finished ; finished ; 2016 ; JAMA Internal Medicine Volume 176 ; 2016 ; http://jamanetwork.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2017 ; JAMA Internal Medicine Volume 177 ; 2017 ; http://jamanetwork.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2018 ; JAMA Internal Medicine Volume 178 ; 2018 ; https://jamanetwork.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2019 ; JAMA Internal Medicine Volume 179 ; 2019 ; https://jamanetwork.com/ ; reingest5.clockss.org:8082 >
+    au < deepCrawl ; exists ; 2020 ; JAMA Internal Medicine Volume 180 ; 2020 ; https://jamanetwork.com/ ; >
+    au < deepCrawl ; exists ; 2021 ; JAMA Internal Medicine Volume 181 ; 2021 ; https://jamanetwork.com/ ; >
+    au < manifest ; exists ; 2022 ; JAMA Internal Medicine Volume 182 ; 2022 ; https://jamanetwork.com/ ; >
+
+  }
+
+  {
+
+    title <
+      name = JAMA Health Forum ;
+      eissn = 2689-0186 ;
+      issnl = 2689-0186
+    >
+    param[resource_id] = 185
+    param[journal_id] = jama-health-forum
+    #See https://pubs.jamanetwork.com/data/sitemap/Site_193/sitemap_J185.xml
+    
+    au < ready ; exists ; 2020 ; JAMA Health Forum Volume 2020 ; 2020 ; https://jamanetwork.com/ ; >
+    au < ready ; exists ; 2021 ; JAMA Health Forum Volume 2021 ; 2021 ; https://jamanetwork.com/ ; >
+    au < ready ; exists ; 2022 ; JAMA Health Forum Volume 2022 ; 2022 ; https://jamanetwork.com/ ; >
+
+  }
+
+  {
+
+    title <
+      name = JAMA Network Open ;
+      issn = 2574-3805 ;
+      issnl = 2574-3805
+    >
+
+    param[resource_id] = 187
+    param[journal_id] = jamanetworkopen
+    
+    au < finished ; finished ; 2018 ; JAMA Network Open Volume 1 ; 2018 ; https://jamanetwork.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2019 ; JAMA Network Open Volume 2 ; 2019 ; https://jamanetwork.com/ ; reingest1.clockss.org:8082 >
+    au < deepCrawl ; exists ; 2020 ; JAMA Network Open Volume 3 ; 2020 ; https://jamanetwork.com/ ; >
+    au < deepCrawl ; exists ; 2021 ; JAMA Network Open Volume 4 ; 2021 ; https://jamanetwork.com/ ; >
+    au < manifest ; exists ; 2022 ; JAMA Network Open Volume 5 ; 2022 ; https://jamanetwork.com/ ; >
+
+  }
+
+  {
+
+    title <
+      name = JAMA Neurology ;
+      issn = 0003-9942 ;
+      eissn = 1538-3687 ;
+      issnl = 0003-9942
+    >
+
+    param[resource_id] = 72
+    param[journal_id] = jamaneurology
+    
+    au < doNotProcess ; doNotProcess ; 2012 ; JAMA Neurology Volume 69 ; 2012 ; https://jamanetwork.com/ ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; JAMA Neurology Volume 70 ; 2013 ; https://jamanetwork.com/ ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; JAMA Neurology Volume 71 ; 2014 ; https://jamanetwork.com/ ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; JAMA Neurology Volume 72 ; 2015 ; https://jamanetwork.com/ ; >
+    au < finished ; finished ; 2016 ; JAMA Neurology Volume 73 ; 2016 ; http://jamanetwork.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2017 ; JAMA Neurology Volume 74 ; 2017 ; http://jamanetwork.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2018 ; JAMA Neurology Volume 75 ; 2018 ; https://jamanetwork.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2019 ; JAMA Neurology Volume 76 ; 2019 ; https://jamanetwork.com/ ; reingest1.clockss.org:8082 >
+    au < deepCrawl ; exists ; 2020 ; JAMA Neurology Volume 77 ; 2020 ; https://jamanetwork.com/ ; >
+    au < deepCrawl ; exists ; 2021 ; JAMA Neurology Volume 78 ; 2021 ; https://jamanetwork.com/ ; >
+    au < manifest ; exists ; 2022 ; JAMA Neurology Volume 79 ; 2022 ; https://jamanetwork.com/ ; >
+
+  }
+
+  {
+
+    title <
+      name = JAMA Oncology ;
+      issn = 2374-2437 ;
+      eissn = 2374-2445
+    >
+    # Hypothetical resource_id: 174
+
+    param[resource_id] = 174
+    param[journal_id] = jamaoncology
+    
+    au < finished ; finished ; 2015 ; JAMA Oncology Volume 1 ; 2015 ; http://jamanetwork.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2016 ; JAMA Oncology Volume 2 ; 2016 ; http://jamanetwork.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2017 ; JAMA Oncology Volume 3 ; 2017 ; http://jamanetwork.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2018 ; JAMA Oncology Volume 4 ; 2018 ; https://jamanetwork.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2019 ; JAMA Oncology Volume 5 ; 2019 ; https://jamanetwork.com/ ; reingest1.clockss.org:8082 >
+    au < deepCrawl ; exists ; 2020 ; JAMA Oncology Volume 6 ; 2020 ; https://jamanetwork.com/ ; >
+    au < deepCrawl ; exists ; 2021 ; JAMA Oncology Volume 7 ; 2021 ; https://jamanetwork.com/ ; >
+    au < manifest ; exists ; 2022 ; JAMA Oncology Volume 8 ; 2022 ; https://jamanetwork.com/ ; >
+
+  }
+
+  {
+
+    title <
+      name = JAMA Ophthalmology ;
+      issn = 0003-9950 ;
+      eissn = 0096-6339 ;
+      issnl = 0003-9950
+    >
+
+    param[resource_id] = 73
+    param[journal_id] = jamaophthalmology
+    
+    au < doNotProcess ; doNotProcess ; 2012 ; JAMA Ophthalmology Volume 130 ; 2012 ; https://jamanetwork.com/ ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; JAMA Ophthalmology Volume 131 ; 2013 ; https://jamanetwork.com/ ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; JAMA Ophthalmology Volume 132 ; 2014 ; https://jamanetwork.com/ ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; JAMA Ophthalmology Volume 133 ; 2015 ; https://jamanetwork.com/ ; >
+    au < finished ; finished ; 2016 ; JAMA Ophthalmology Volume 134 ; 2016 ; http://jamanetwork.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2017 ; JAMA Ophthalmology Volume 135 ; 2017 ; http://jamanetwork.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2018 ; JAMA Ophthalmology Volume 136 ; 2018 ; https://jamanetwork.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; JAMA Ophthalmology Volume 137 ; 2019 ; https://jamanetwork.com/ ; reingest2.clockss.org:8085 >
+    au < deepCrawl ; exists ; 2020 ; JAMA Ophthalmology Volume 138 ; 2020 ; https://jamanetwork.com/ ; >
+    au < deepCrawl ; exists ; 2021 ; JAMA Ophthalmology Volume 139 ; 2021 ; https://jamanetwork.com/ ; >
+    au < manifest ; exists ; 2022 ; JAMA Ophthalmology Volume 140 ; 2022 ; https://jamanetwork.com/ ; >
+
+  }
+
+  {
+
+    title <
+      name = JAMA Otolaryngology - Head & Neck Surgery ;
+      issn = 0886-4470 ;
+      eissn = 1538-361X ;
+      issnl = 0886-4470
+    >
+
+    param[resource_id] = 74
+    param[journal_id] = jamaotolaryngology
+    
+    au < doNotProcess ; doNotProcess ; 2012 ; JAMA Otolaryngology - Head & Neck Surgery Volume 138 ; 2012 ; https://jamanetwork.com/ ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; JAMA Otolaryngology - Head & Neck Surgery Volume 139 ; 2013 ; https://jamanetwork.com/ ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; JAMA Otolaryngology - Head & Neck Surgery Volume 140 ; 2014 ; https://jamanetwork.com/ ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; JAMA Otolaryngology - Head & Neck Surgery Volume 141 ; 2015 ; https://jamanetwork.com/ ; >
+    au < finished ; finished ; 2016 ; JAMA Otolaryngology - Head & Neck Surgery Volume 142 ; 2016 ; http://jamanetwork.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; JAMA Otolaryngology - Head & Neck Surgery Volume 143 ; 2017 ; http://jamanetwork.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2018 ; JAMA Otolaryngology - Head & Neck Surgery Volume 144 ; 2018 ; https://jamanetwork.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2019 ; JAMA Otolaryngology - Head & Neck Surgery Volume 145 ; 2019 ; https://jamanetwork.com/ ; reingest3.clockss.org:8083 >
+    au < deepCrawl ; exists ; 2020 ; JAMA Otolaryngology - Head & Neck Surgery Volume 146 ; 2020 ; https://jamanetwork.com/ ; >
+    au < deepCrawl ; exists ; 2021 ; JAMA Otolaryngology - Head & Neck Surgery Volume 147 ; 2021 ; https://jamanetwork.com/ ; >
+    au < manifest ; exists ; 2022 ; JAMA Otolaryngology - Head & Neck Surgery Volume 148 ; 2022 ; https://jamanetwork.com/ ; >
+
+  }
+
+  {
+
+    title <
+      name = JAMA Pediatrics ;
+      issn = 1072-4710 ;
+      eissn = 1538-3628 ;
+      issnl = 1072-4710
+    >
+
+    param[resource_id] = 75
+    param[journal_id] = jamapediatrics
+    
+    au < doNotProcess ; doNotProcess ; 2012 ; JAMA Pediatrics Volume 166 ; 2012 ; https://jamanetwork.com/ ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; JAMA Pediatrics Volume 167 ; 2013 ; https://jamanetwork.com/ ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; JAMA Pediatrics Volume 168 ; 2014 ; https://jamanetwork.com/ ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; JAMA Pediatrics Volume 169 ; 2015 ; https://jamanetwork.com/ ; >
+    au < finished ; finished ; 2016 ; JAMA Pediatrics Volume 170 ; 2016 ; http://jamanetwork.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2017 ; JAMA Pediatrics Volume 171 ; 2017 ; http://jamanetwork.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2018 ; JAMA Pediatrics Volume 172 ; 2018 ; https://jamanetwork.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; JAMA Pediatrics Volume 173 ; 2019 ; https://jamanetwork.com/ ; reingest4.clockss.org:8082 >
+    au < deepCrawl ; exists ; 2020 ; JAMA Pediatrics Volume 174 ; 2020 ; https://jamanetwork.com/ ; >
+    au < deepCrawl ; exists ; 2021 ; JAMA Pediatrics Volume 175 ; 2021 ; https://jamanetwork.com/ ; >
+    au < manifest ; exists ; 2022 ; JAMA Pediatrics Volume 176 ; 2022 ; https://jamanetwork.com/ ; >
+
+  }
+
+  {
+
+    title <
+      name = JAMA Psychiatry ;
+      issn = 0003-990X ;
+      eissn = 1538-3636 ;
+      issnl = 0003-990X
+    >
+
+    param[resource_id] = 70
+    param[journal_id] = jamapsychiatry
+    
+    au < doNotProcess ; doNotProcess ; 2012 ; JAMA Psychiatry Volume 69 ; 2012 ; https://jamanetwork.com/ ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; JAMA Psychiatry Volume 70 ; 2013 ; https://jamanetwork.com/ ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; JAMA Psychiatry Volume 71 ; 2014 ; https://jamanetwork.com/ ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; JAMA Psychiatry Volume 72 ; 2015 ; https://jamanetwork.com/ ; >
+    au < finished ; finished ; 2016 ; JAMA Psychiatry Volume 73 ; 2016 ; http://jamanetwork.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2017 ; JAMA Psychiatry Volume 74 ; 2017 ; http://jamanetwork.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2018 ; JAMA Psychiatry Volume 75 ; 2018 ; https://jamanetwork.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2019 ; JAMA Psychiatry Volume 76 ; 2019 ; https://jamanetwork.com/ ; reingest2.clockss.org:8085 >
+    au < deepCrawl ; exists ; 2020 ; JAMA Psychiatry Volume 77 ; 2020 ; https://jamanetwork.com/ ; >
+    au < deepCrawl ; exists ; 2021 ; JAMA Psychiatry Volume 78 ; 2021 ; https://jamanetwork.com/ ; >
+    au < manifest ; exists ; 2022 ; JAMA Psychiatry Volume 79 ; 2022 ; https://jamanetwork.com/ ; >
+
+  }
+
+  {
+
+    title <
+      name = JAMA Surgery ;
+      issn =  2168-6254 ;
+      eissn = 2168-6262
+    >
+    #JAMA Surgery started 2013. Continues Archives of Surgery years 1960-2012 issn 1538-3644
+
+    param[resource_id] = 76
+    param[journal_id] = jamasurgery
+    
+    au < finished ; finished ; 2013 ; JAMA Surgery Volume 148 ; 2013 ; http://jamanetwork.com/ ; reingest2.clockss.org:8085 >
+    au < doNotProcess ; doNotProcess ; 2014 ; JAMA Surgery Volume 149 ; 2014 ; https://jamanetwork.com/ ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; JAMA Surgery Volume 150 ; 2015 ; https://jamanetwork.com/ ; >
+    au < finished ; finished ; 2016 ; JAMA Surgery Volume 151 ; 2016 ; http://jamanetwork.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; JAMA Surgery Volume 152 ; 2017 ; http://jamanetwork.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2018 ; JAMA Surgery Volume 153 ; 2018 ; https://jamanetwork.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2019 ; JAMA Surgery Volume 154 ; 2019 ; https://jamanetwork.com/ ; reingest2.clockss.org:8085 >
+    au < deepCrawl ; exists ; 2020 ; JAMA Surgery Volume 155 ; 2020 ; https://jamanetwork.com/ ; >
+    au < deepCrawl ; exists ; 2021 ; JAMA Surgery Volume 156 ; 2021 ; https://jamanetwork.com/ ; >
+    au < manifest ; exists ; 2022 ; JAMA Surgery Volume 157 ; 2022 ; https://jamanetwork.com/ ; >
+
+  }
+
+  {
+
+    title <
+      name = Archives of Surgery ;
+      issn = 0004-0010 ;
+      eissn = 1538-3644
+    >
+    #Archives of Surgery years 1960-2012 issn 1538-3644. After 2013: JAMA Surgery years 2013-present eissn 2168-6262. 
+
+    param[resource_id] = 76
+    param[journal_id] = jamasurgery
+    #content 1920 to 2011 had be processed on HW platform
+    
+    au < exists ; exists ; 2012 ; Archives of Surgery Volume 147 ; 2012 ; https://jamanetwork.com/ ; > #no manifest page
+
+  }
+
+  {
+
+    title <
+      name = JAMA: The Journal of the American Medical Association ;
+      issn = 0098-7484 ;
+      eissn = 1538-3598 ;
+      issnl = 0098-7484
+    >
+
+    param[resource_id] = 67
+    param[journal_id] = jama
+    
+    au < exists ; exists ; 1957 ; Journal of the American Medical Association Volume 163-165 ; 1957 ; https://jamanetwork.com/ ; > #never collection on HW platform.
+    au < doNotProcess ; doNotProcess ; 2011 ; JAMA: The Journal of the American Medical Association Volume 305-306 ; 2011 ; https://jamanetwork.com/ ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; JAMA: The Journal of the American Medical Association Volume 307-308 ; 2012 ; https://jamanetwork.com/ ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; JAMA: The Journal of the American Medical Association Volume 309-310 ; 2013 ; https://jamanetwork.com/ ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; JAMA: The Journal of the American Medical Association Volume 311-312 ; 2014 ; https://jamanetwork.com/ ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; JAMA: The Journal of the American Medical Association Volume 313-314 ; 2015 ; https://jamanetwork.com/ ; >
+    au < finished ; finished ; 2016 ; JAMA: The Journal of the American Medical Association Volume 315-316 ; 2016 ; http://jamanetwork.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2017 ; JAMA: The Journal of the American Medical Association Volume 317-318 ; 2017 ; http://jamanetwork.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2018 ; JAMA: The Journal of the American Medical Association Volume 319-320 ; 2018 ; https://jamanetwork.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; JAMA: The Journal of the American Medical Association Volume 321-322 ; 2019 ; https://jamanetwork.com/ ; reingest5.clockss.org:8082 >
+    au < deepCrawl ; exists ; 2020 ; JAMA: The Journal of the American Medical Association Volume 323-324 ; 2020 ; https://jamanetwork.com/ ; >
+    au < deepCrawl ; exists ; 2021 ; JAMA: The Journal of the American Medical Association Volume 325-326 ; 2021 ; https://jamanetwork.com/ ; >
+    au < manifest ; exists ; 2022 ; JAMA: The Journal of the American Medical Association Volume 327-328 ; 2022 ; https://jamanetwork.com/ ; >
+
+  }
+
+  {
+
+    title <
+      name = AMA Archives of Neurology and Psychiatry ;
+      issn = 0096-6886 ;
+      issnl = 0096-6886
+    >
+    # This publication ceased in 1959
+    # These AUs not available through highwire archive. Re-collected.
+
+
+    param[resource_id] = 91
+    param[journal_id] = archneurpsyc
+    #content from 1919 to 1959 had been processed on HW platform
+
+  }
+
+}

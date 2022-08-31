@@ -1,0 +1,68 @@
+{
+
+  publisher <
+    name = Cleveland State University ;
+    info[contract] = 2016 ;
+    info[tester] = 5 ;
+    info[poller] = 8
+  >
+  provider = bepress
+  
+  # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
+
+  {
+
+    title <
+      name = Journal of Law and Health ;
+      eissn = 1044-6419 ;
+      issnl = 1044-6419
+    >
+
+    {
+
+      plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+      implicit < status1 ; status ; year ; name ; param[volume] ; param[base_url] ; proxy >
+      #param[base_url] = http://engagedscholarship.csuohio.edu/
+      param[journal_abbr] = jlh
+
+      au < manifest ; exists ; 1987 ; Journal of Law and Health Volume 1 ; 1 ; https://engagedscholarship.csuohio.edu/ ; >
+      au < manifest ; exists ; 1988 ; Journal of Law and Health Volume 2 ; 2 ; https://engagedscholarship.csuohio.edu/ ; >
+      au < manifest ; exists ; 1989 ; Journal of Law and Health Volume 3 ; 3 ; https://engagedscholarship.csuohio.edu/ ; >
+      au < manifest ; exists ; 1989 ; Journal of Law and Health Volume 4 ; 4 ; https://engagedscholarship.csuohio.edu/ ; >
+      au < manifest ; exists ; 1990 ; Journal of Law and Health Volume 5 ; 5 ; https://engagedscholarship.csuohio.edu/ ; >
+      au < manifest ; exists ; 1991 ; Journal of Law and Health Volume 6 ; 6 ; https://engagedscholarship.csuohio.edu/ ; >
+      au < manifest ; exists ; 1992 ; Journal of Law and Health Volume 7 ; 7 ; https://engagedscholarship.csuohio.edu/ ; >
+      au < manifest ; exists ; 1993 ; Journal of Law and Health Volume 8 ; 8 ; https://engagedscholarship.csuohio.edu/ ; >
+      au < manifest ; exists ; 1994 ; Journal of Law and Health Volume 9 ; 9 ; https://engagedscholarship.csuohio.edu/ ; >
+      au < manifest ; exists ; 1995 ; Journal of Law and Health Volume 10 ; 10 ; https://engagedscholarship.csuohio.edu/ ; >
+      au < manifest ; exists ; 1996-1997 ; Journal of Law and Health Volume 11 ; 11 ; https://engagedscholarship.csuohio.edu/ ; >
+      au < manifest ; exists ; 1997 ; Journal of Law and Health Volume 12 ; 12 ; https://engagedscholarship.csuohio.edu/ ; >
+      au < manifest ; exists ; 1998 ; Journal of Law and Health Volume 13 ; 13 ; https://engagedscholarship.csuohio.edu/ ; >
+      au < manifest ; exists ; 1999 ; Journal of Law and Health Volume 14 ; 14 ; https://engagedscholarship.csuohio.edu/ ; >
+      au < manifest ; exists ; 2000 ; Journal of Law and Health Volume 15 ; 15 ; https://engagedscholarship.csuohio.edu/ ; >
+      au < manifest ; exists ; 2001 ; Journal of Law and Health Volume 16 ; 16 ; https://engagedscholarship.csuohio.edu/ ; >
+      au < manifest ; exists ; 2002 ; Journal of Law and Health Volume 17 ; 17 ; https://engagedscholarship.csuohio.edu/ ; >
+      au < manifest ; exists ; 2003 ; Journal of Law and Health Volume 18 ; 18 ; https://engagedscholarship.csuohio.edu/ ; >
+      au < manifest ; exists ; 2004 ; Journal of Law and Health Volume 19 ; 19 ; https://engagedscholarship.csuohio.edu/ ; >
+      au < manifest ; exists ; 2006 ; Journal of Law and Health Volume 20 ; 20 ; https://engagedscholarship.csuohio.edu/ ; >
+      au < manifest ; exists ; 2008 ; Journal of Law and Health Volume 21 ; 21 ; https://engagedscholarship.csuohio.edu/ ; >
+      au < manifest ; exists ; 2009 ; Journal of Law and Health Volume 22 ; 22 ; https://engagedscholarship.csuohio.edu/ ; >
+      au < finished ; finished ; 2010 ; Journal of Law and Health Volume 23 ; 23 ; http://engagedscholarship.csuohio.edu/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; Journal of Law and Health Volume 24 ; 24 ; http://engagedscholarship.csuohio.edu/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2012 ; Journal of Law and Health Volume 25 ; 25 ; http://engagedscholarship.csuohio.edu/ ; >
+      au < finished ; finished ; 2013 ; Journal of Law and Health Volume 26 ; 26 ; http://engagedscholarship.csuohio.edu/ ; >
+      au < finished ; finished ; 2014 ; Journal of Law and Health Volume 27 ; 27 ; http://engagedscholarship.csuohio.edu/ ; >
+      au < finished ; finished ; 2015 ; Journal of Law and Health Volume 28 ; 28 ; http://engagedscholarship.csuohio.edu/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2016 ; Journal of Law and Health Volume 29 ; 29 ; http://engagedscholarship.csuohio.edu/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2017 ; Journal of Law and Health Volume 30 ; 30 ; http://engagedscholarship.csuohio.edu/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; Journal of Law and Health Volume 31 ; 31 ; https://engagedscholarship.csuohio.edu/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2019 ; Journal of Law and Health Volume 32 ; 32 ; https://engagedscholarship.csuohio.edu/ ; reingest4.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2020 ; Journal of Law and Health Volume 33 ; 33 ; https://engagedscholarship.csuohio.edu/ ; >
+      au < deepCrawl ; exists ; 2021 ; Journal of Law and Health Volume 34 ; 34 ; https://engagedscholarship.csuohio.edu/ ; >
+      au < crawling ; exists ; 2022 ; Journal of Law and Health Volume 35 ; 35 ; https://engagedscholarship.csuohio.edu/ ; >
+
+    }
+
+  }
+
+}

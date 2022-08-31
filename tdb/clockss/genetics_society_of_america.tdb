@@ -1,0 +1,268 @@
+{
+
+  publisher <
+    name = Genetics Society of America ;
+    info[contract] = 2019 ; 
+    info[back] = 2009 ; 
+    info[tester] = 5 ;
+    info[poller] = 5
+  >
+
+    pluginPrefix = org.lockss.plugin.highwire.
+    implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+  {
+
+    title <
+      name = G3: Genes, Genomes, Genetics ;
+      eissn = 2160-1836 
+    >
+
+    param[base_url] = https://www.g3journal.org/
+    #moving to OUP end of 2020. Still present on HW platform.
+
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; crawling ; 2011 ; G3: Genes, Genomes, Genetics Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; frozen ; 2012 ; G3: Genes, Genomes, Genetics Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; frozen ; 2013 ; G3: Genes, Genomes, Genetics Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; frozen ; 2014 ; G3: Genes, Genomes, Genetics Volume 4 ; 4 ; reingest5.clockss.org:8082 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; crawling ; 2015 ; G3: Genes, Genomes, Genetics Volume 5 ; 5 ; reingest4.clockss.org:8082 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; crawling ; 2016 ; G3: Genes, Genomes, Genetics Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; frozen ; 2017 ; G3: Genes, Genomes, Genetics Volume 7 ; 7 ; reingest3.clockss.org:8083 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; frozen ; 2018 ; G3: Genes, Genomes, Genetics Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; frozen ; 2019 ; G3: Genes, Genomes, Genetics Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; frozen ; 2020 ; G3: Genes, Genomes, Genetics Volume 10 ; 10 ; reingest4.clockss.org:8082 >
+
+  }
+    
+  {
+
+    title <
+      name = Genetics ;
+      issn = 0016-6731 ;
+      eissn = 1943-2631 ;
+      issnl = 0016-6731
+     >
+
+    param[base_url] = https://www.genetics.org/
+    #moving to OUP end of 2020. Still present on HW platform.
+
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1916 ; Genetics Volume 1 ; 1 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1917 ; Genetics Volume 2 ; 2 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1918 ; Genetics Volume 3 ; 3 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1919 ; Genetics Volume 4 ; 4 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1920 ; Genetics Volume 5 ; 5 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1921 ; Genetics Volume 6 ; 6 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1922 ; Genetics Volume 7 ; 7 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1923 ; Genetics Volume 8 ; 8 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1924 ; Genetics Volume 9 ; 9 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1925 ; Genetics Volume 10 ; 10 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1926 ; Genetics Volume 11 ; 11 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1927 ; Genetics Volume 12 ; 12 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1928 ; Genetics Volume 13 ; 13 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1929 ; Genetics Volume 14 ; 14 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1930 ; Genetics Volume 15 ; 15 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1931 ; Genetics Volume 16 ; 16 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1932 ; Genetics Volume 17 ; 17 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1933 ; Genetics Volume 18 ; 18 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1934 ; Genetics Volume 19 ; 19 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1935 ; Genetics Volume 20 ; 20 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1936 ; Genetics Volume 21 ; 21 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1937 ; Genetics Volume 22 ; 22 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1938 ; Genetics Volume 23 ; 23 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1939 ; Genetics Volume 24 ; 24 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1940 ; Genetics Volume 25 ; 25 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1941 ; Genetics Volume 26 ; 26 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1942 ; Genetics Volume 27 ; 27 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1943 ; Genetics Volume 28 ; 28 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1944 ; Genetics Volume 29 ; 29 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1945 ; Genetics Volume 30 ; 30 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1946 ; Genetics Volume 31 ; 31 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1947 ; Genetics Volume 32 ; 32 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1948 ; Genetics Volume 33 ; 33 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1949 ; Genetics Volume 34 ; 34 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1950 ; Genetics Volume 35 ; 35 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1951 ; Genetics Volume 36 ; 36 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1952 ; Genetics Volume 37 ; 37 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1953 ; Genetics Volume 38 ; 38 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1954 ; Genetics Volume 39 ; 39 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1955 ; Genetics Volume 40 ; 40 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1956 ; Genetics Volume 41 ; 41 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1957 ; Genetics Volume 42 ; 42 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1958 ; Genetics Volume 43 ; 43 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1959 ; Genetics Volume 44 ; 44 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1960 ; Genetics Volume 45 ; 45 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1961 ; Genetics Volume 46 ; 46 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1962 ; Genetics Volume 47 ; 47 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1963 ; Genetics Volume 48 ; 48 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1964 ; Genetics Volume 49 ; 49 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1964 ; Genetics Volume 50 ; 50 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1965 ; Genetics Volume 51 ; 51 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1965 ; Genetics Volume 52 ; 52 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1966 ; Genetics Volume 53 ; 53 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1966 ; Genetics Volume 54 ; 54 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1967 ; Genetics Volume 55 ; 55 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1967 ; Genetics Volume 56 ; 56 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1967 ; Genetics Volume 57 ; 57 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1968 ; Genetics Volume 58 ; 58 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1968 ; Genetics Volume 59 ; 59 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1968 ; Genetics Volume 60 ; 60 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1969 ; Genetics Volume 61 ; 61 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1969 ; Genetics Volume 62 ; 62 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1969 ; Genetics Volume 63 ; 63 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1970 ; Genetics Volume 64 ; 64 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1970 ; Genetics Volume 65 ; 65 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1970 ; Genetics Volume 66 ; 66 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1971 ; Genetics Volume 67 ; 67 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1971 ; Genetics Volume 68 ; 68 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1971 ; Genetics Volume 69 ; 69 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1972 ; Genetics Volume 70 ; 70 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1972 ; Genetics Volume 71 ; 71 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1972 ; Genetics Volume 72 ; 72 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1973 ; Genetics Volume 73 ; 73 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1973 ; Genetics Volume 74 ; 74 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1973 ; Genetics Volume 75 ; 75 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1974 ; Genetics Volume 76 ; 76 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1974 ; Genetics Volume 77 ; 77 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1974 ; Genetics Volume 78 ; 78 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1975 ; Genetics Volume 79 ; 79 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1975 ; Genetics Volume 80 ; 80 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1975 ; Genetics Volume 81 ; 81 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1976 ; Genetics Volume 82 ; 82 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1976 ; Genetics Volume 83 ; 83 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1976 ; Genetics Volume 84 ; 84 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1977 ; Genetics Volume 85 ; 85 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1977 ; Genetics Volume 86 ; 86 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1977 ; Genetics Volume 87 ; 87 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1978 ; Genetics Volume 88 ; 88 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1978 ; Genetics Volume 89 ; 89 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1978 ; Genetics Volume 90 ; 90 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1979 ; Genetics Volume 91 ; 91 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1979 ; Genetics Volume 92 ; 92 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1979 ; Genetics Volume 93 ; 93 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1980 ; Genetics Volume 94 ; 94 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1980 ; Genetics Volume 95 ; 95 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1980 ; Genetics Volume 96 ; 96 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1981 ; Genetics Volume 97 ; 97 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1981 ; Genetics Volume 98 ; 98 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1981 ; Genetics Volume 99 ; 99 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1982 ; Genetics Volume 100 ; 100 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1982 ; Genetics Volume 101 ; 101 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1982 ; Genetics Volume 102 ; 102 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1983 ; Genetics Volume 103 ; 103 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1983 ; Genetics Volume 104 ; 104 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1983 ; Genetics Volume 105 ; 105 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1984 ; Genetics Volume 106 ; 106 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1984 ; Genetics Volume 107 ; 107 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1984 ; Genetics Volume 108 ; 108 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1985 ; Genetics Volume 109 ; 109 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1985 ; Genetics Volume 110 ; 110 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1985 ; Genetics Volume 111 ; 111 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1986 ; Genetics Volume 112 ; 112 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1986 ; Genetics Volume 113 ; 113 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1986 ; Genetics Volume 114 ; 114 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1987 ; Genetics Volume 115 ; 115 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1987 ; Genetics Volume 116 ; 116 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1987 ; Genetics Volume 117 ; 117 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1988 ; Genetics Volume 118 ; 118 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1988 ; Genetics Volume 119 ; 119 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1988 ; Genetics Volume 120 ; 120 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1989 ; Genetics Volume 121 ; 121 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1989 ; Genetics Volume 122 ; 122 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1989 ; Genetics Volume 123 ; 123 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1990 ; Genetics Volume 124 ; 124 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1990 ; Genetics Volume 125 ; 125 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1990 ; Genetics Volume 126 ; 126 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1991 ; Genetics Volume 127 ; 127 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1991 ; Genetics Volume 128 ; 128 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1991 ; Genetics Volume 129 ; 129 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1992 ; Genetics Volume 130 ; 130 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1992 ; Genetics Volume 131 ; 131 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1992 ; Genetics Volume 132 ; 132 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1993 ; Genetics Volume 133 ; 133 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1993 ; Genetics Volume 134 ; 134 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1993 ; Genetics Volume 135 ; 135 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1994 ; Genetics Volume 136 ; 136 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1994 ; Genetics Volume 137 ; 137 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1994 ; Genetics Volume 138 ; 138 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1995 ; Genetics Volume 139 ; 139 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1995 ; Genetics Volume 140 ; 140 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1995 ; Genetics Volume 141 ; 141 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1996 ; Genetics Volume 142 ; 142 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1996 ; Genetics Volume 143 ; 143 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1996 ; Genetics Volume 144 ; 144 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1997 ; Genetics Volume 145 ; 145 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1997 ; Genetics Volume 146 ; 146 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1997 ; Genetics Volume 147 ; 147 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1998 ; Genetics Volume 148 ; 148 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1998 ; Genetics Volume 149 ; 149 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1998 ; Genetics Volume 150 ; 150 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1999 ; Genetics Volume 151 ; 151 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1999 ; Genetics Volume 152 ; 152 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1999 ; Genetics Volume 153 ; 153 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 2000 ; Genetics Volume 154 ; 154 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 2000 ; Genetics Volume 155 ; 155 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 2000 ; Genetics Volume 156 ; 156 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 2001 ; Genetics Volume 157 ; 157 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 2001 ; Genetics Volume 158 ; 158 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 2001 ; Genetics Volume 159 ; 159 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 2002 ; Genetics Volume 160 ; 160 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 2002 ; Genetics Volume 161 ; 161 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 2002 ; Genetics Volume 162 ; 162 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 2003 ; Genetics Volume 163 ; 163 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 2003 ; Genetics Volume 164 ; 164 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 2003 ; Genetics Volume 165 ; 165 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 2004 ; Genetics Volume 166 ; 166 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 2004 ; Genetics Volume 167 ; 167 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 2004 ; Genetics Volume 168 ; 168 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 2005 ; Genetics Volume 169 ; 169 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 2005 ; Genetics Volume 170 ; 170 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 2005 ; Genetics Volume 171 ; 171 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 2006 ; Genetics Volume 172 ; 172 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 2006 ; Genetics Volume 173 ; 173 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 2006 ; Genetics Volume 174 ; 174 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 2007 ; Genetics Volume 175 ; 175 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 2007 ; Genetics Volume 176 ; 176 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 2007 ; Genetics Volume 177 ; 177 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 2008 ; Genetics Volume 178 ; 178 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 2008 ; Genetics Volume 179 ; 179 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 2008 ; Genetics Volume 180 ; 180 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; crawling ; exists ; 2009 ; Genetics Volume 181 ; 181 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; crawling ; exists ; 2009 ; Genetics Volume 182 ; 182 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; crawling ; exists ; 2009 ; Genetics Volume 183 ; 183 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; frozen ; 2010 ; Genetics Volume 184 ; 184 ; reingest1.clockss.org:8082 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; frozen ; 2010 ; Genetics Volume 185 ; 185 ; reingest2.clockss.org:8085 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; frozen ; 2010 ; Genetics Volume 186 ; 186 ; reingest3.clockss.org:8083 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; frozen ; 2011 ; Genetics Volume 187 ; 187 ; reingest3.clockss.org:8083 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; frozen ; 2011 ; Genetics Volume 188 ; 188 ; reingest4.clockss.org:8082 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; crawling ; 2011 ; Genetics Volume 189 ; 189 ; reingest5.clockss.org:8082 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; frozen ; 2012 ; Genetics Volume 190 ; 190 ; reingest1.clockss.org:8082 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; crawling ; 2012 ; Genetics Volume 191 ; 191 ; reingest2.clockss.org:8085 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; crawling ; 2012 ; Genetics Volume 192 ; 192 ; reingest3.clockss.org:8083 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; frozen ; 2013 ; Genetics Volume 193 ; 193 ; reingest4.clockss.org:8082 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; frozen ; 2013 ; Genetics Volume 194 ; 194 ; reingest5.clockss.org:8082 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; crawling ; 2013 ; Genetics Volume 195 ; 195 ; reingest1.clockss.org:8082 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; crawling ; 2014 ; Genetics Volume 196 ; 196 ; reingest2.clockss.org:8085 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; crawling ; 2014 ; Genetics Volume 197 ; 197 ; reingest3.clockss.org:8083 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; frozen ; 2014 ; Genetics Volume 198 ; 198 ; reingest4.clockss.org:8082 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; crawling ; 2015 ; Genetics Volume 199 ; 199 ; reingest5.clockss.org:8082 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; frozen ; 2015 ; Genetics Volume 200 ; 200 ; reingest1.clockss.org:8082 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; frozen ; 2015 ; Genetics Volume 201 ; 201 ; reingest2.clockss.org:8085 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; crawling ; 2016 ; Genetics Volume 202 ; 202 ; reingest3.clockss.org:8083 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; crawling ; 2016 ; Genetics Volume 203 ; 203 ; reingest4.clockss.org:8082 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; frozen ; 2016 ; Genetics Volume 204 ; 204 ; reingest2.clockss.org:8085 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; crawling ; 2017 ; Genetics Volume 205 ; 205 ; reingest5.clockss.org:8082 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; crawling ; 2017 ; Genetics Volume 206 ; 206 ; reingest1.clockss.org:8082 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; frozen ; 2017 ; Genetics Volume 207 ; 207 ; reingest2.clockss.org:8085 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; crawling ; 2018 ; Genetics Volume 208 ; 208 ; reingest2.clockss.org:8085 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; crawling ; 2018 ; Genetics Volume 209 ; 209 ; reingest3.clockss.org:8083 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; frozen ; 2018 ; Genetics Volume 210 ; 210 ; reingest4.clockss.org:8082 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; frozen ; 2019 ; Genetics Volume 211 ; 211 ; reingest5.clockss.org:8082 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; frozen ; 2019 ; Genetics Volume 212 ; 212 ; reingest1.clockss.org:8082 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; frozen ; 2019 ; Genetics Volume 213 ; 213 ; reingest2.clockss.org:8085 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; crawling ; 2020 ; Genetics Volume 214 ; 214 ; reingest5.clockss.org:8082 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; frozen ; 2020 ; Genetics Volume 215 ; 215 ; reingest1.clockss.org:8082 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; frozen ; 2020 ; Genetics Volume 216 ; 216 ; reingest3.clockss.org:8083 >
+
+  }
+
+}

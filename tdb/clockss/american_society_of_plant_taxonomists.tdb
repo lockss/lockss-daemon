@@ -1,0 +1,65 @@
+{
+
+  publisher <
+    name = American Society of Plant Taxonomists ;
+    info[contract] = 2013 ;
+    info[tester] = 5 ;
+    info[poller] = 6
+  >
+
+  {
+    title <
+      name = Systematic Botany ;
+      issn = 0363-6445 ;
+      eissn = 1548-2324 ;
+      issnl = 0363-6445
+    >
+
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
+    param[graphics_url] = http://graphics.ingentaconnect.com/ #no longer used but defined in plugin
+    param[publisher_id] = aspt
+    param[journal_id] = sb 
+    param[journal_issn] = 0363-6445
+    implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+    
+    {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+    
+  
+      au < manifest ; exists ; 2004 ; Systematic Botany Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2005 ; Systematic Botany Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2006 ; Systematic Botany Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2007 ; Systematic Botany Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2008 ; Systematic Botany Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2009 ; Systematic Botany Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2010 ; Systematic Botany Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2011 ; Systematic Botany Volume 36 ; 36 ; >
+      au < manifest ; exists ; 2012 ; Systematic Botany Volume 37 ; 37 ; >
+    }
+
+    {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+    
+      au < finished ; finished ; 2013 ; Systematic Botany Volume 38 ; 38 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2014 ; Systematic Botany Volume 39 ; 39 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2015 ; Systematic Botany Volume 40 ; 40 ; reingest1.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2016 ; Systematic Botany Volume 41 ; 41 ; >
+      au < deepCrawl ; exists ; 2017 ; Systematic Botany Volume 42 ; 42 ; >
+    }
+
+    {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
+      au < frozen ; exists ; 2018 ; Systematic Botany Volume 43 ; 43 ; >
+      au < frozen ; exists ; 2019 ; Systematic Botany Volume 44 ; 44 ; >
+      au < deepCrawl ; exists ; 2020 ; Systematic Botany Volume 45 ; 45 ; >
+      au < deepCrawl ; exists ; 2021 ; Systematic Botany Volume 46 ; 46 ; >
+      au < crawling ; exists ; 2022 ; Systematic Botany Volume 47 ; 47 ; >
+    }
+
+  }
+
+}

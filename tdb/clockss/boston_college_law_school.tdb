@@ -1,0 +1,265 @@
+{
+
+  publisher <
+    name = Boston College Law School ;
+    info[contract] = 2011 ;
+    info[tester] = 5 ;
+    info[poller] = 8
+  >
+  provider = bepress
+  
+  # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
+
+  plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+  implicit < status1 ; status ; year ; name ; param[volume] ; param[base_url] ; proxy >
+  #param[base_url] = http://lawdigitalcommons.bc.edu/
+  
+  {
+
+    title <
+      name = Boston College Environmental Affairs Law Review ;
+      issn = 0190-7034
+    >
+
+    param[journal_abbr] = ealr
+
+    au < finished ; finished ; 1971-1972 ; Boston College Environmental Affairs Law Review Volume 1 ; 1 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1972-1973 ; Boston College Environmental Affairs Law Review Volume 2 ; 2 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1974 ; Boston College Environmental Affairs Law Review Volume 3 ; 3 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1975 ; Boston College Environmental Affairs Law Review Volume 4 ; 4 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1976 ; Boston College Environmental Affairs Law Review Volume 5 ; 5 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1977-1978 ; Boston College Environmental Affairs Law Review Volume 6 ; 6 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1978-1979 ; Boston College Environmental Affairs Law Review Volume 7 ; 7 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1979-1980 ; Boston College Environmental Affairs Law Review Volume 8 ; 8 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1980-1982 ; Boston College Environmental Affairs Law Review Volume 9 ; 9 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1982-1983 ; Boston College Environmental Affairs Law Review Volume 10 ; 10 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1983-1984 ; Boston College Environmental Affairs Law Review Volume 11 ; 11 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1985 ; Boston College Environmental Affairs Law Review Volume 12 ; 12 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1985-1986 ; Boston College Environmental Affairs Law Review Volume 13 ; 13 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1986-1987 ; Boston College Environmental Affairs Law Review Volume 14 ; 14 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1987-1988 ; Boston College Environmental Affairs Law Review Volume 15 ; 15 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1988-1989 ; Boston College Environmental Affairs Law Review Volume 16 ; 16 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1989-1990 ; Boston College Environmental Affairs Law Review Volume 17 ; 17 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1990-1991 ; Boston College Environmental Affairs Law Review Volume 18 ; 18 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1991-1992 ; Boston College Environmental Affairs Law Review Volume 19 ; 19 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1993 ; Boston College Environmental Affairs Law Review Volume 20 ; 20 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1993-1994 ; Boston College Environmental Affairs Law Review Volume 21 ; 21 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1994-1995 ; Boston College Environmental Affairs Law Review Volume 22 ; 22 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1995-1996 ; Boston College Environmental Affairs Law Review Volume 23 ; 23 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1996-1997 ; Boston College Environmental Affairs Law Review Volume 24 ; 24 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1997-1998 ; Boston College Environmental Affairs Law Review Volume 25 ; 25 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1998-1999 ; Boston College Environmental Affairs Law Review Volume 26 ; 26 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1999-2000 ; Boston College Environmental Affairs Law Review Volume 27 ; 27 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2000-2001 ; Boston College Environmental Affairs Law Review Volume 28 ; 28 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < doesNotExist ; doesNotExist ; 2001-2002 ; Boston College Environmental Affairs Law Review Volume 29 ; 29 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2002-2003 ; Boston College Environmental Affairs Law Review Volume 30 ; 30 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2004 ; Boston College Environmental Affairs Law Review Volume 31 ; 31 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2005 ; Boston College Environmental Affairs Law Review Volume 32 ; 32 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2006 ; Boston College Environmental Affairs Law Review Volume 33 ; 33 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2007 ; Boston College Environmental Affairs Law Review Volume 34 ; 34 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2008 ; Boston College Environmental Affairs Law Review Volume 35 ; 35 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2009 ; Boston College Environmental Affairs Law Review Volume 36 ; 36 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2010 ; Boston College Environmental Affairs Law Review Volume 37 ; 37 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2011 ; Boston College Environmental Affairs Law Review Volume 38 ; 38 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2012 ; Boston College Environmental Affairs Law Review Volume 39 ; 39 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2013 ; Boston College Environmental Affairs Law Review Volume 40 ; 40 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2014 ; Boston College Environmental Affairs Law Review Volume 41 ; 41 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2015 ; Boston College Environmental Affairs Law Review Volume 42 ; 42 ; http://lawdigitalcommons.bc.edu/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; Boston College Environmental Affairs Law Review Volume 43 ; 43 ; http://lawdigitalcommons.bc.edu/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2017-2018 ; Boston College Environmental Affairs Law Review Volume 44 ; 44 ; http://lawdigitalcommons.bc.edu/ ; reingest1.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Boston College International and Comparative Law Review ;
+      issn = 0277-5778
+    >
+
+  
+    param[journal_abbr] = iclr
+
+    au < finished ; finished ; 1977 ; Boston College International and Comparative Law Review Volume 1 ; 1 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1978-1979 ; Boston College International and Comparative Law Review Volume 2 ; 2 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1979-1980 ; Boston College International and Comparative Law Review Volume 3 ; 3 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1981 ; Boston College International and Comparative Law Review Volume 4 ; 4 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1982 ; Boston College International and Comparative Law Review Volume 5 ; 5 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1983 ; Boston College International and Comparative Law Review Volume 6 ; 6 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1984 ; Boston College International and Comparative Law Review Volume 7 ; 7 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1985 ; Boston College International and Comparative Law Review Volume 8 ; 8 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1986 ; Boston College International and Comparative Law Review Volume 9 ; 9 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1987 ; Boston College International and Comparative Law Review Volume 10 ; 10 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1988 ; Boston College International and Comparative Law Review Volume 11 ; 11 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1989 ; Boston College International and Comparative Law Review Volume 12 ; 12 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1990 ; Boston College International and Comparative Law Review Volume 13 ; 13 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1991 ; Boston College International and Comparative Law Review Volume 14 ; 14 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1992 ; Boston College International and Comparative Law Review Volume 15 ; 15 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1993 ; Boston College International and Comparative Law Review Volume 16 ; 16 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1994 ; Boston College International and Comparative Law Review Volume 17 ; 17 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1995 ; Boston College International and Comparative Law Review Volume 18 ; 18 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1996 ; Boston College International and Comparative Law Review Volume 19 ; 19 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1997 ; Boston College International and Comparative Law Review Volume 20 ; 20 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1998 ; Boston College International and Comparative Law Review Volume 21 ; 21 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1999 ; Boston College International and Comparative Law Review Volume 22 ; 22 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2000 ; Boston College International and Comparative Law Review Volume 23 ; 23 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2001 ; Boston College International and Comparative Law Review Volume 24 ; 24 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2002 ; Boston College International and Comparative Law Review Volume 25 ; 25 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2003 ; Boston College International and Comparative Law Review Volume 26 ; 26 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2004 ; Boston College International and Comparative Law Review Volume 27 ; 27 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2005 ; Boston College International and Comparative Law Review Volume 28 ; 28 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2006 ; Boston College International and Comparative Law Review Volume 29 ; 29 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2007 ; Boston College International and Comparative Law Review Volume 30 ; 30 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2008 ; Boston College International and Comparative Law Review Volume 31 ; 31 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2009 ; Boston College International and Comparative Law Review Volume 32 ; 32 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2010 ; Boston College International and Comparative Law Review Volume 33 ; 33 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2011 ; Boston College International and Comparative Law Review Volume 34 ; 34 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2012 ; Boston College International and Comparative Law Review Volume 35 ; 35 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2013 ; Boston College International and Comparative Law Review Volume 36 ; 36 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2014 ; Boston College International and Comparative Law Review Volume 37 ; 37 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2015 ; Boston College International and Comparative Law Review Volume 38 ; 38 ; http://lawdigitalcommons.bc.edu/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2016 ; Boston College International and Comparative Law Review Volume 39 ; 39 ; http://lawdigitalcommons.bc.edu/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2017 ; Boston College International and Comparative Law Review Volume 40 ; 40 ; http://lawdigitalcommons.bc.edu/ ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = Boston College Law Review ;
+      issn = 0161-6587
+    >
+
+    param[journal_abbr] = bclr
+
+    au < finished ; finished ; 1959-1960 ; Boston College Law Review Volume 1 ; 1 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1960-1961 ; Boston College Law Review Volume 2 ; 2 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1961-1962 ; Boston College Law Review Volume 3 ; 3 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1962-1963 ; Boston College Law Review Volume 4 ; 4 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1963-1964 ; Boston College Law Review Volume 5 ; 5 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1964-1965 ; Boston College Law Review Volume 6 ; 6 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1965-1966 ; Boston College Law Review Volume 7 ; 7 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1966-1967 ; Boston College Law Review Volume 8 ; 8 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1967-1968 ; Boston College Law Review Volume 9 ; 9 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1968-1969 ; Boston College Law Review Volume 10 ; 10 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1969-1970 ; Boston College Law Review Volume 11 ; 11 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1970-1971 ; Boston College Law Review Volume 12 ; 12 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1971-1972 ; Boston College Law Review Volume 13 ; 13 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1972-1973 ; Boston College Law Review Volume 14 ; 14 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1973-1974 ; Boston College Law Review Volume 15 ; 15 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1974-1975 ; Boston College Law Review Volume 16 ; 16 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1975-1976 ; Boston College Law Review Volume 17 ; 17 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1976-1977 ; Boston College Law Review Volume 18 ; 18 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1977-1978 ; Boston College Law Review Volume 19 ; 19 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1978-1979 ; Boston College Law Review Volume 20 ; 20 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1979-1980 ; Boston College Law Review Volume 21 ; 21 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1980-1981 ; Boston College Law Review Volume 22 ; 22 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1981-1982 ; Boston College Law Review Volume 23 ; 23 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1982-1983 ; Boston College Law Review Volume 24 ; 24 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1983-1984 ; Boston College Law Review Volume 25 ; 25 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1984-1985 ; Boston College Law Review Volume 26 ; 26 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1985-1986 ; Boston College Law Review Volume 27 ; 27 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1986-1987 ; Boston College Law Review Volume 28 ; 28 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1987-1988 ; Boston College Law Review Volume 29 ; 29 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1988-1989 ; Boston College Law Review Volume 30 ; 30 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1989-1990 ; Boston College Law Review Volume 31 ; 31 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1990-1991 ; Boston College Law Review Volume 32 ; 32 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1991-1992 ; Boston College Law Review Volume 33 ; 33 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1992-1993 ; Boston College Law Review Volume 34 ; 34 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1993-1994 ; Boston College Law Review Volume 35 ; 35 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1994-1995 ; Boston College Law Review Volume 36 ; 36 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1995-1996 ; Boston College Law Review Volume 37 ; 37 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1996-1997 ; Boston College Law Review Volume 38 ; 38 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1997-1998 ; Boston College Law Review Volume 39 ; 39 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1998-1999 ; Boston College Law Review Volume 40 ; 40 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1999-2000 ; Boston College Law Review Volume 41 ; 41 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2000-2001 ; Boston College Law Review Volume 42 ; 42 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2001-2002 ; Boston College Law Review Volume 43 ; 43 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2002-2003 ; Boston College Law Review Volume 44 ; 44 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2003-2004 ; Boston College Law Review Volume 45 ; 45 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2004-2005 ; Boston College Law Review Volume 46 ; 46 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; frozen ; 2005-2006 ; Boston College Law Review Volume 47 ; 47 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2007 ; Boston College Law Review Volume 48 ; 48 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2008 ; Boston College Law Review Volume 49 ; 49 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2009 ; Boston College Law Review Volume 50 ; 50 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2010 ; Boston College Law Review Volume 51 ; 51 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2011 ; Boston College Law Review Volume 52 ; 52 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2012 ; Boston College Law Review Volume 53 ; 53 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2013 ; Boston College Law Review Volume 54 ; 54 ; http://lawdigitalcommons.bc.edu/ ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; Boston College Law Review Volume 55 ; 55 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2015 ; Boston College Law Review Volume 56 ; 56 ; http://lawdigitalcommons.bc.edu/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2016 ; Boston College Law Review Volume 57 ; 57 ; http://lawdigitalcommons.bc.edu/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2017 ; Boston College Law Review Volume 58 ; 58 ; http://lawdigitalcommons.bc.edu/ ; reingest3.clockss.org:8083 >
+    au < superseded ; exists ; 2018 ; Boston College Law Review Volume 59 [superseded] ; 59 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2018 ; Boston College Law Review Volume 59 ; 59 ; https://lawdigitalcommons.bc.edu/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2019 ; Boston College Law Review Volume 60 ; 60 ; https://lawdigitalcommons.bc.edu/ ; reingest5.clockss.org:8082 >
+    au < deepCrawl ; exists ; 2020 ; Boston College Law Review Volume 61 ; 61 ; https://lawdigitalcommons.bc.edu/ ; >
+    au < deepCrawl ; exists ; 2021 ; Boston College Law Review Volume 62 ; 62 ; https://lawdigitalcommons.bc.edu/ ; >
+    au < crawling ; exists ; 2022 ; Boston College Law Review Volume 63 ; 63 ; https://lawdigitalcommons.bc.edu/ ; >
+
+  }
+  
+  {
+  
+    title <
+      name = Boston College Journal of Law & Social Justice ;
+      issn = 2165-5235 
+    >
+    
+    comment[continues] = 0276-3583
+    param[journal_abbr] = jlsj
+    
+    au < finished ; finished ; 2012 ; Boston College Journal of Law & Social Justice Volume 32 ; 32 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2013 ; Boston College Journal of Law & Social Justice Volume 33 ; 33 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2014 ; Boston College Journal of Law & Social Justice Volume 34 ; 34 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2015 ; Boston College Journal of Law & Social Justice Volume 35 ; 35 ; http://lawdigitalcommons.bc.edu/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; Boston College Journal of Law & Social Justice Volume 36 ; 36 ; http://lawdigitalcommons.bc.edu/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2016-2017 ; Boston College Journal of Law & Social Justice Volume 37 ; 37 ; http://lawdigitalcommons.bc.edu/ ; reingest4.clockss.org:8082 >
+
+  }
+  
+  {
+
+    title <
+      name = Boston College Third World Law Journal ;
+      issn = 0276-3583
+    >
+	
+	comment[continued_by] = 2165-5235
+    param[journal_abbr] = twlj
+
+    au < finished ; finished ; 1981 ; Boston College Third World Law Journal Volume 1 ; 1 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1982 ; Boston College Third World Law Journal Volume 2 ; 2 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1983 ; Boston College Third World Law Journal Volume 3 ; 3 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1984 ; Boston College Third World Law Journal Volume 4 ; 4 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1985 ; Boston College Third World Law Journal Volume 5 ; 5 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1986 ; Boston College Third World Law Journal Volume 6 ; 6 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1987 ; Boston College Third World Law Journal Volume 7 ; 7 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1988 ; Boston College Third World Law Journal Volume 8 ; 8 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1989 ; Boston College Third World Law Journal Volume 9 ; 9 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1990 ; Boston College Third World Law Journal Volume 10 ; 10 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1991 ; Boston College Third World Law Journal Volume 11 ; 11 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1992 ; Boston College Third World Law Journal Volume 12 ; 12 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1993 ; Boston College Third World Law Journal Volume 13 ; 13 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1994 ; Boston College Third World Law Journal Volume 14 ; 14 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1995 ; Boston College Third World Law Journal Volume 15 ; 15 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1996 ; Boston College Third World Law Journal Volume 16 ; 16 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1997 ; Boston College Third World Law Journal Volume 17 ; 17 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1998 ; Boston College Third World Law Journal Volume 18 ; 18 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 1999 ; Boston College Third World Law Journal Volume 19 ; 19 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2000 ; Boston College Third World Law Journal Volume 20 ; 20 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2001 ; Boston College Third World Law Journal Volume 21 ; 21 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2002 ; Boston College Third World Law Journal Volume 22 ; 22 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2003 ; Boston College Third World Law Journal Volume 23 ; 23 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2004 ; Boston College Third World Law Journal Volume 24 ; 24 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2005 ; Boston College Third World Law Journal Volume 25 ; 25 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2006 ; Boston College Third World Law Journal Volume 26 ; 26 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2007 ; Boston College Third World Law Journal Volume 27 ; 27 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2008 ; Boston College Third World Law Journal Volume 28 ; 28 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2009 ; Boston College Third World Law Journal Volume 29 ; 29 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2010 ; Boston College Third World Law Journal Volume 30 ; 30 ; http://lawdigitalcommons.bc.edu/ ; >
+    au < finished ; finished ; 2011 ; Boston College Third World Law Journal Volume 31 ; 31 ; http://lawdigitalcommons.bc.edu/ ; >
+    
+  }
+
+}

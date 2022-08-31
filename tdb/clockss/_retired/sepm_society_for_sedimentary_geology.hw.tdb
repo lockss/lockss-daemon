@@ -1,0 +1,164 @@
+{
+  publisher <
+    name = SEPM Society for Sedimentary Geology ;
+    info[contract] = 2014 ;
+    info[back] = 2000 ;
+    info[tester] = 8 ;
+    info[poller] = 6
+  >
+  
+  #Moving to SC fall 2017 with GSW
+
+  plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+  implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+  {
+    title <
+      name = Journal of Sedimentary Research ;
+      issn = 1527-1404 ;
+      eissn = 1938-3681 ;
+      issnl = 1527-1404
+    >
+      param[base_url] = http://jsedres.sepmonline.org/
+      #moved to https://pubs.geoscienceworld.org/jsedres
+      #no subscription on ingest4
+
+      au < doNotProcess ; doNotProcess ; 1931 ; Journal of Sedimentary Research Volume 1 ; 1 ; >
+      au < doNotProcess ; doNotProcess ; 1932 ; Journal of Sedimentary Research Volume 2 ; 2 ; >
+      au < doNotProcess ; doNotProcess ; 1933 ; Journal of Sedimentary Research Volume 3 ; 3 ; >
+      au < doNotProcess ; doNotProcess ; 1934 ; Journal of Sedimentary Research Volume 4 ; 4 ; >
+      au < doNotProcess ; doNotProcess ; 1935 ; Journal of Sedimentary Research Volume 5 ; 5 ; >
+      au < doNotProcess ; doNotProcess ; 1936 ; Journal of Sedimentary Research Volume 6 ; 6 ; >
+      au < doNotProcess ; doNotProcess ; 1937 ; Journal of Sedimentary Research Volume 7 ; 7 ; >
+      au < doNotProcess ; doNotProcess ; 1938 ; Journal of Sedimentary Research Volume 8 ; 8 ; >
+      au < doNotProcess ; doNotProcess ; 1939 ; Journal of Sedimentary Research Volume 9 ; 9 ; >
+      au < doNotProcess ; doNotProcess ; 1940 ; Journal of Sedimentary Research Volume 10 ; 10 ; >
+      au < doNotProcess ; doNotProcess ; 1941 ; Journal of Sedimentary Research Volume 11 ; 11 ; >
+      au < doNotProcess ; doNotProcess ; 1942 ; Journal of Sedimentary Research Volume 12 ; 12 ; >
+      au < doNotProcess ; doNotProcess ; 1943 ; Journal of Sedimentary Research Volume 13 ; 13 ; >
+      au < doNotProcess ; doNotProcess ; 1944 ; Journal of Sedimentary Research Volume 14 ; 14 ; >
+      au < doNotProcess ; doNotProcess ; 1945 ; Journal of Sedimentary Research Volume 15 ; 15 ; >
+      au < doNotProcess ; doNotProcess ; 1946 ; Journal of Sedimentary Research Volume 16 ; 16 ; >
+      au < doNotProcess ; doNotProcess ; 1947 ; Journal of Sedimentary Research Volume 17 ; 17 ; >
+      au < doNotProcess ; doNotProcess ; 1948 ; Journal of Sedimentary Research Volume 18 ; 18 ; >
+      au < doNotProcess ; doNotProcess ; 1949 ; Journal of Sedimentary Research Volume 19 ; 19 ; >
+      au < doNotProcess ; doNotProcess ; 1950 ; Journal of Sedimentary Research Volume 20 ; 20 ; >
+      au < doNotProcess ; doNotProcess ; 1951 ; Journal of Sedimentary Research Volume 21 ; 21 ; >
+      au < doNotProcess ; doNotProcess ; 1952 ; Journal of Sedimentary Research Volume 22 ; 22 ; >
+      au < doNotProcess ; doNotProcess ; 1953 ; Journal of Sedimentary Research Volume 23 ; 23 ; >
+      au < doNotProcess ; doNotProcess ; 1954 ; Journal of Sedimentary Research Volume 24 ; 24 ; >
+      au < doNotProcess ; doNotProcess ; 1955 ; Journal of Sedimentary Research Volume 25 ; 25 ; >
+      au < doNotProcess ; doNotProcess ; 1956 ; Journal of Sedimentary Research Volume 26 ; 26 ; >
+      au < doNotProcess ; doNotProcess ; 1957 ; Journal of Sedimentary Research Volume 27 ; 27 ; >
+      au < doNotProcess ; doNotProcess ; 1958 ; Journal of Sedimentary Research Volume 28 ; 28 ; >
+      au < doNotProcess ; doNotProcess ; 1959 ; Journal of Sedimentary Research Volume 29 ; 29 ; >
+      au < doNotProcess ; doNotProcess ; 1960 ; Journal of Sedimentary Research Volume 30 ; 30 ; >
+      au < doNotProcess ; doNotProcess ; 1961 ; Journal of Sedimentary Research Volume 31 ; 31 ; >
+      au < doNotProcess ; doNotProcess ; 1962 ; Journal of Sedimentary Research Volume 32 ; 32 ; >
+      au < doNotProcess ; doNotProcess ; 1963 ; Journal of Sedimentary Research Volume 33 ; 33 ; >
+      au < doNotProcess ; doNotProcess ; 1964 ; Journal of Sedimentary Research Volume 34 ; 34 ; >
+      au < doNotProcess ; doNotProcess ; 1965 ; Journal of Sedimentary Research Volume 35 ; 35 ; >
+      au < doNotProcess ; doNotProcess ; 1966 ; Journal of Sedimentary Research Volume 36 ; 36 ; >
+      au < doNotProcess ; doNotProcess ; 1967 ; Journal of Sedimentary Research Volume 37 ; 37 ; >
+      au < doNotProcess ; doNotProcess ; 1968 ; Journal of Sedimentary Research Volume 38 ; 38 ; >
+      au < doNotProcess ; doNotProcess ; 1969 ; Journal of Sedimentary Research Volume 39 ; 39 ; >
+      au < doNotProcess ; doNotProcess ; 1970 ; Journal of Sedimentary Research Volume 40 ; 40 ; >
+      au < doNotProcess ; doNotProcess ; 1971 ; Journal of Sedimentary Research Volume 41 ; 41 ; >
+      au < doNotProcess ; doNotProcess ; 1972 ; Journal of Sedimentary Research Volume 42 ; 42 ; >
+      au < doNotProcess ; doNotProcess ; 1973 ; Journal of Sedimentary Research Volume 43 ; 43 ; >
+      au < doNotProcess ; doNotProcess ; 1974 ; Journal of Sedimentary Research Volume 44 ; 44 ; >
+      au < doNotProcess ; doNotProcess ; 1975 ; Journal of Sedimentary Research Volume 45 ; 45 ; >
+      au < doNotProcess ; doNotProcess ; 1976 ; Journal of Sedimentary Research Volume 46 ; 46 ; >
+      au < doNotProcess ; doNotProcess ; 1977 ; Journal of Sedimentary Research Volume 47 ; 47 ; >
+      au < doNotProcess ; doNotProcess ; 1978 ; Journal of Sedimentary Research Volume 48 ; 48 ; >
+      au < doNotProcess ; doNotProcess ; 1979 ; Journal of Sedimentary Research Volume 49 ; 49 ; >
+      au < doNotProcess ; doNotProcess ; 1980 ; Journal of Sedimentary Research Volume 50 ; 50 ; >
+      au < doNotProcess ; doNotProcess ; 1981 ; Journal of Sedimentary Research Volume 51 ; 51 ; >
+      au < doNotProcess ; doNotProcess ; 1982 ; Journal of Sedimentary Research Volume 52 ; 52 ; >
+      au < doNotProcess ; doNotProcess ; 1983 ; Journal of Sedimentary Research Volume 53 ; 53 ; >
+      au < doNotProcess ; doNotProcess ; 1984 ; Journal of Sedimentary Research Volume 54 ; 54 ; >
+      au < doNotProcess ; doNotProcess ; 1985 ; Journal of Sedimentary Research Volume 55 ; 55 ; >
+      au < doNotProcess ; doNotProcess ; 1986 ; Journal of Sedimentary Research Volume 56 ; 56 ; >
+      au < doNotProcess ; doNotProcess ; 1987 ; Journal of Sedimentary Research Volume 57 ; 57 ; >
+      au < doNotProcess ; doNotProcess ; 1988 ; Journal of Sedimentary Research Volume 58 ; 58 ; >
+      au < doNotProcess ; doNotProcess ; 1989 ; Journal of Sedimentary Research Volume 59 ; 59 ; >
+      au < doNotProcess ; doNotProcess ; 1990 ; Journal of Sedimentary Research Volume 60 ; 60 ; >
+      au < doNotProcess ; doNotProcess ; 1991 ; Journal of Sedimentary Research Volume 61 ; 61 ; >
+      au < doNotProcess ; doNotProcess ; 1992 ; Journal of Sedimentary Research Volume 62 ; 62 ; >
+      au < doNotProcess ; doNotProcess ; 1993 ; Journal of Sedimentary Research Volume 63 ; 63 ; >
+      au < doNotProcess ; doNotProcess ; 1994 ; Journal of Sedimentary Research Volume 64 ; 64 ; >
+      au < doNotProcess ; doNotProcess ; 1995 ; Journal of Sedimentary Research Volume 65 ; 65 ; >
+      au < doNotProcess ; doNotProcess ; 1996 ; Journal of Sedimentary Research Volume 66 ; 66 ; >
+      au < doNotProcess ; doNotProcess ; 1997 ; Journal of Sedimentary Research Volume 67 ; 67 ; >
+      au < doNotProcess ; doNotProcess ; 1998 ; Journal of Sedimentary Research Volume 68 ; 68 ; >
+      au < doNotProcess ; doNotProcess ; 1999 ; Journal of Sedimentary Research Volume 69 ; 69 ; >
+      au < finished ; crawling ; 2000 ; Journal of Sedimentary Research Volume 70 ; 70 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2001 ; Journal of Sedimentary Research Volume 71 ; 71 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2002 ; Journal of Sedimentary Research Volume 72 ; 72 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2003 ; Journal of Sedimentary Research Volume 73 ; 73 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2004 ; Journal of Sedimentary Research Volume 74 ; 74 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2005 ; Journal of Sedimentary Research Volume 75 ; 75 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2006 ; Journal of Sedimentary Research Volume 76 ; 76 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2007 ; Journal of Sedimentary Research Volume 77 ; 77 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2008 ; Journal of Sedimentary Research Volume 78 ; 78 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2009 ; Journal of Sedimentary Research Volume 79 ; 79 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2010 ; Journal of Sedimentary Research Volume 80 ; 80 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2011 ; Journal of Sedimentary Research Volume 81 ; 81 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2012 ; Journal of Sedimentary Research Volume 82 ; 82 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; Journal of Sedimentary Research Volume 83 ; 83 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; Journal of Sedimentary Research Volume 84 ; 84 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; Journal of Sedimentary Research Volume 85 ; 85 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; Journal of Sedimentary Research Volume 86 ; 86 ; reingest1.clockss.org:8082 >
+      au < superseded ; exists ; 2017 ; Journal of Sedimentary Research Volume 87 [superseded] ; 87 ; >
+      #Moved to SC fall 2017
+
+  }
+
+  {
+    title <
+      name = PALAIOS ;
+      issn = 0883-1351 ;
+      issnl = 0883-1351
+    >
+
+      param[base_url] = http://palaios.sepmonline.org/
+      #moved to https://pubs.geoscienceworld.org/palaios
+      # Moved to Silverchair as of ~ 1/1/2018
+
+      au < doNotProcess ; exists ; 1986 ; PALAIOS Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 1987 ; PALAIOS Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 1988 ; PALAIOS Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 1989 ; PALAIOS Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 1990 ; PALAIOS Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 1991 ; PALAIOS Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 1992 ; PALAIOS Volume 7 ; 7 ; >
+      au < doNotProcess ; exists ; 1993 ; PALAIOS Volume 8 ; 8 ; >
+      au < doNotProcess ; exists ; 1994 ; PALAIOS Volume 9 ; 9 ; >
+      au < doNotProcess ; exists ; 1995 ; PALAIOS Volume 10 ; 10 ; >
+      au < doNotProcess ; exists ; 1996 ; PALAIOS Volume 11 ; 11 ; >
+      au < doNotProcess ; exists ; 1997 ; PALAIOS Volume 12 ; 12 ; >
+      au < doNotProcess ; exists ; 1998 ; PALAIOS Volume 13 ; 13 ; >
+      au < doNotProcess ; exists ; 1999 ; PALAIOS Volume 14 ; 14 ; >
+      au < finished ; finished ; 2000 ; PALAIOS Volume 15 ; 15 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2001 ; PALAIOS Volume 16 ; 16 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2002 ; PALAIOS Volume 17 ; 17 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2003 ; PALAIOS Volume 18 ; 18 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2004 ; PALAIOS Volume 19 ; 19 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2005 ; PALAIOS Volume 20 ; 20 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2006 ; PALAIOS Volume 21 ; 21 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2007 ; PALAIOS Volume 22 ; 22 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2008 ; PALAIOS Volume 23 ; 23 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2009 ; PALAIOS Volume 24 ; 24 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; PALAIOS Volume 25 ; 25 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; PALAIOS Volume 26 ; 26 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2012 ; PALAIOS Volume 27 ; 27 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2013 ; PALAIOS Volume 28 ; 28 ; >
+      au < finished ; finished ; 2014 ; PALAIOS Volume 29 ; 29 ; >
+      au < finished ; crawling ; 2015 ; PALAIOS Volume 30 ; 30 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; PALAIOS Volume 31 ; 31 ; reingest4.clockss.org:8082 >
+      au < superseded ; exists ; 2017 ; PALAIOS Volume 32 [superseded] ; 32 ; >
+      #moved to Silverchair
+
+  }
+
+}

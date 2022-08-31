@@ -1,0 +1,130 @@
+{
+
+  publisher <
+    name = Endocrine Society ;
+    info[contract] = 2012 ;
+    info[tester] = 8 ;
+    info[poller] = 3
+  >
+  
+  #######**** When Endocrine Society moves to OUP, do not change publisher.
+
+  implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+  {
+
+    title <
+      name = Endocrine Reviews ;
+      issn = 0163-769X ;
+      eissn = 1945-7189 ;
+      issnl = 0163-769X
+    >
+    
+    {
+     
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      param[base_url] = http://edrv.endojournals.org/
+
+      au < doNotProcess ; doNotProcess ; 1980 ; Endocrine Reviews Volume 1 ; 1 ; >
+      au < doNotProcess ; doNotProcess ; 1981 ; Endocrine Reviews Volume 2 ; 2 ; >
+      au < doNotProcess ; doNotProcess ; 1982 ; Endocrine Reviews Volume 3 ; 3 ; >
+      au < doNotProcess ; doNotProcess ; 1983 ; Endocrine Reviews Volume 4 ; 4 ; >
+      au < doNotProcess ; doNotProcess ; 1984 ; Endocrine Reviews Volume 5 ; 5 ; >
+      au < doNotProcess ; doNotProcess ; 1985 ; Endocrine Reviews Volume 6 ; 6 ; >
+      au < doNotProcess ; doNotProcess ; 1986 ; Endocrine Reviews Volume 7 ; 7 ; >
+      au < doNotProcess ; doNotProcess ; 1987 ; Endocrine Reviews Volume 8 ; 8 ; >
+      au < doNotProcess ; doNotProcess ; 1988 ; Endocrine Reviews Volume 9 ; 9 ; >
+      au < doNotProcess ; doNotProcess ; 1989 ; Endocrine Reviews Volume 10 ; 10 ; >
+      au < doNotProcess ; doNotProcess ; 1990 ; Endocrine Reviews Volume 11 ; 11 ; >
+      au < doNotProcess ; doNotProcess ; 1991 ; Endocrine Reviews Volume 12 ; 12 ; >
+      au < doNotProcess ; doNotProcess ; 1992 ; Endocrine Reviews Volume 13 ; 13 ; >
+      au < doNotProcess ; doNotProcess ; 1993 ; Endocrine Reviews Volume 14 ; 14 ; >
+      au < doNotProcess ; doNotProcess ; 1994 ; Endocrine Reviews Volume 15 ; 15 ; >
+      au < doNotProcess ; doNotProcess ; 1995 ; Endocrine Reviews Volume 16 ; 16 ; >
+      au < doNotProcess ; doNotProcess ; 1996 ; Endocrine Reviews Volume 17 ; 17 ; >
+      au < doNotProcess ; doNotProcess ; 1997 ; Endocrine Reviews Volume 18 ; 18 ; >
+      au < doNotProcess ; doNotProcess ; 1998 ; Endocrine Reviews Volume 19 ; 19 ; >
+      au < doNotProcess ; doNotProcess ; 1999 ; Endocrine Reviews Volume 20 ; 20 ; >
+      au < doNotProcess ; doNotProcess ; 2000 ; Endocrine Reviews Volume 21 ; 21 ; >
+      au < doNotProcess ; doNotProcess ; 2001 ; Endocrine Reviews Volume 22 ; 22 ; >
+      au < doNotProcess ; doNotProcess ; 2002 ; Endocrine Reviews Volume 23 ; 23 ; >
+      au < doNotProcess ; doNotProcess ; 2003 ; Endocrine Reviews Volume 24 ; 24 ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; Endocrine Reviews Volume 25 ; 25 ; >
+      au < doNotProcess ; doNotProcess ; 2005 ; Endocrine Reviews Volume 26 ; 26 ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; Endocrine Reviews Volume 27 ; 27 ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; Endocrine Reviews Volume 28 ; 28 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; Endocrine Reviews Volume 29 ; 29 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; Endocrine Reviews Volume 30 ; 30 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; Endocrine Reviews Volume 31 ; 31 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; Endocrine Reviews Volume 32 ; 32 ; >
+      au < finished ; finished ; 2012 ; Endocrine Reviews Volume 33 ; 33 ; >
+      au < superseded ; exists ; 2013 ; Endocrine Reviews Volume 34 [superseded] ; 34 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Endocrinology ;
+      issn = 0013-7227 ;
+      eissn = 1945-7170 ;
+      issnl = 0013-7227
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      param[base_url] = http://endo.endojournals.org/
+
+      au < zapped ; finished ; 2012 ; Endocrinology Volume 153 ; 153 ; >
+      au < superseded ; exists ; 2013 ; Endocrinology Volume 154 [superseded] ; 154 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = The Journal of Clinical Endocrinology & Metabolism ;
+      issn = 0021-972X ;
+      eissn = 1945-7197 ;
+      issnl = 0021-972X
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      param[base_url] = http://jcem.endojournals.org/
+
+      au < finished ; finished ; 2012 ; The Journal of Clinical Endocrinology & Metabolism Volume 97 ; 97 ; >
+      au < superseded ; exists ; 2013 ; The Journal of Clinical Endocrinology & Metabolism Volume 98 [superseded] ; 98 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Molecular Endocrinology ;
+      issn = 0888-8809 ;
+      eissn = 1944-9917 ;
+      issnl = 0888-8809
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      param[base_url] = http://mend.endojournals.org/
+
+      au < superseded ; finished ; 2012 ; Molecular Endocrinology Volume 26 [superseded] ; 26 ; >
+      au < superseded ; exists ; 2013 ; Molecular Endocrinology Volume 27 [superseded] ; 27 ; >
+
+    }
+
+  }
+
+}

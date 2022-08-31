@@ -1,0 +1,35 @@
+{
+
+  publisher <
+    name = Association of Learned and Professional Society Publishers ;
+    info[contract] = 2012 ;
+    info[tester] = 5 ;
+    info[poller] = 6
+  >
+  plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
+  param[base_url] = http://www.ingentaconnect.com/
+  param[api_url] = http://api.ingentaconnect.com/
+  param[graphics_url] = http://graphics.ingentaconnect.com/
+  param[publisher_id] = alpsp
+  
+  implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+  
+  {
+  
+    title <
+      name = Learned Publishing ;
+      issn = 0953-1513 ;
+      eissn = 1741-4857
+    >
+
+    param[journal_id] = lp
+    param[journal_issn] = 0953-1513
+    ##### moved to Wiley
+    
+    au < finished ; finished ; 2012 ; Learned Publishing Volume 25 ; 25 ; >
+    au < finished ; crawling ; 2013 ; Learned Publishing Volume 26 ; 26 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; Learned Publishing Volume 27 ; 27 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; Learned Publishing Volume 28 ; 28 ; reingest1.clockss.org:8082 >
+
+  }
+}

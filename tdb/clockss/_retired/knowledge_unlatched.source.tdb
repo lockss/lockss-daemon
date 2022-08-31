@@ -1,0 +1,27 @@
+{
+
+  publisher <
+    name = Knowledge Unlatched ;
+    info[contract] = 2014 ;
+    info[tester] = S
+  >
+    
+  {
+  
+    title <
+      name = Knowledge Unlatched Source Content
+    >
+    
+    provider = Knowledge Unlatched
+    plugin = org.lockss.plugin.clockss.knowledge.ClockssKnowledgeUnlatchedBooksSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/knowledge-unlatched-released/
+    proxy = DIRECT
+    implicit < status1 ; status ; year ; name ; param[year] >
+    
+    au < zapped ; finished ; 2014 ; Knowledge Unlatched Source Content 2014 ; 2014 >
+    au < zapped ; finished ; 2016 ; Knowledge Unlatched Source Content 2016 ; 2016 >
+    #no content since 2017
+    #No longer participating
+  } 
+
+}

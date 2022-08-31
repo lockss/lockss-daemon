@@ -1,0 +1,57 @@
+{
+
+  publisher <
+    name = KwaZulu-Natal Museum ;
+    info[contract] = 2013 ;
+    info[tester] = 8 ;
+    info[poller] = 8
+  >
+  #It appears this journal has moved to Pensoft platform. https://africaninvertebrates.pensoft.net/
+
+  {
+ 
+    title < 
+      name = African Invertebrates ;
+      issn = 1681-5556 ;
+      eissn = 2305-2562
+    >
+
+    plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
+    implicit < status1 ; status ; year ; name ; volume ; param[year] ; proxy >
+
+    {
+      # Do not create any more AUs with this base URL
+
+    
+      param[base_url] = http://africaninvertebrates.org/ojs/
+      param[journal_id] = AI
+ 
+      au < doNotProcess ; doNotProcess ; 2011 ; African Invertebrates Volume 2011 ; 2011 ; 2011 ; >
+      au < superseded ; finished ; 2012 ; African Invertebrates Volume 2012 [superseded] ; 2012 ; 2012 ; >
+      au < superseded ; exists ; 2013 ; African Invertebrates Volume 2013 [superseded] ; 2013 ; 2013 ; >
+      au < superseded ; finished ; 2014 ; African Invertebrates Volume 2014 [superseded] ; 2014 ; 2014 ; >
+      au < superseded ; exists ; 2015 ; African Invertebrates Volume 2015 [superseded] ; 2015 ; 2015 ; >
+
+    }
+    
+    {
+      # Create any new AUs with this base URL
+
+    
+      param[base_url] = http://www.africaninvertebrates.org/ojs/
+      param[journal_id] = AI
+ 
+      au < finished ; crawling ; 2006 ; African Invertebrates Volume 2006 ; 47 ; 2006 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2007 ; African Invertebrates Volume 2007 ; 48 ; 2007 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2011 ; African Invertebrates Volume 2011 ; 52 ; 2011 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2012 ; African Invertebrates Volume 2012 ; 53 ; 2012 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; African Invertebrates Volume 2013 ; 54 ; 2013 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2014 ; African Invertebrates Volume 2014 ; 55 ; 2014 ; reingest5.clockss.org:8082 >
+      au < zapped ; finished ; 2015 ; African Invertebrates Volume 2015 ; 56 ; 2015 ; reingest2.clockss.org:8085 >
+      au < exists ; exists ; 2016 ; African Invertebrates Volume 2016 ; 57 ; 2016 ; >
+ 
+    }
+    
+  }
+
+}

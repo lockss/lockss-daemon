@@ -1,0 +1,31 @@
+{
+
+  publisher <
+    name = eLife Sciences Publications ;
+    info[contract] = 2020 ;
+    info[tester] = S ;
+    info[platform] = Source
+  >
+
+  {
+
+    title <
+       name = eLife Sciences Source Content
+    >
+
+    {
+
+      plugin = org.lockss.plugin.clockss.elifesciences.ClockssElifeSciencesSourcePlugin
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/elife-released/
+      proxy = DIRECT
+      implicit < status1 ; status ; year ; name ; param[year] >
+
+      au < readySource ; frozen ; 2020 ; eLife Sciences Source Content 2020 ; 2020 >
+      au < readySource ; frozen ; 2021 ; eLife Sciences Source Content 2021 ; 2021 >
+      au < readySource ; crawling ; 2022 ; eLife Sciences Source Content 2022 ; 2022 >
+
+    }
+
+  }
+
+}

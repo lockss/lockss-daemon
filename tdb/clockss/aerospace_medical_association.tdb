@@ -1,0 +1,94 @@
+{
+
+  publisher <
+    name = Aerospace Medical Association ;
+    info[contract] = 2012 ;
+    info[back] = 2000 ;
+    info[tester] = 5 ;
+    info[poller] = 6
+  >
+
+  plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
+  param[graphics_url] = http://graphics.ingentaconnect.com/ #no longer used but defined inplugin
+  param[publisher_id] = asma
+  implicit < status1 ; status ; year ; volume ; name ; param[volume_name] ; proxy >
+ 
+  {
+  
+    title <
+      name = Aviation, Space, and Environmental Medicine ;
+      issn = 0095-6562
+    >
+    
+    # Continued by 2375-6314
+
+    param[journal_id] = asem 
+    param[journal_issn] = 0095-6562
+    
+    # changed name and issn after first issue of 2015. http://www.ingentaconnect.com/content/asma/asem
+    
+    {
+    
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+  
+    au < finished ; frozen ; 2003 ; 74 ; Aviation, Space, and Environmental Medicine Volume 74 ; 74 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2004 ; 75 ; Aviation, Space, and Environmental Medicine Volume 75 ; 75 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2005 ; 76 ; Aviation, Space, and Environmental Medicine Volume 76 ; 76 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2006 ; 77 ; Aviation, Space, and Environmental Medicine Volume 77 ; 77 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2007 ; 78 ; Aviation, Space, and Environmental Medicine Volume 78 ; 78 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2008 ; 79 ; Aviation, Space, and Environmental Medicine Volume 79 ; 79 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2009 ; 80 ; Aviation, Space, and Environmental Medicine Volume 80 ; 80 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2010 ; 81 ; Aviation, Space, and Environmental Medicine Volume 81 ; 81 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2011 ; 82 ; Aviation, Space, and Environmental Medicine Volume 82 ; 82 ; reingest4.clockss.org:8082 >
+
+    }
+
+    {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+    
+    au < finished ; finished ; 2012 ; 83 ; Aviation, Space, and Environmental Medicine Volume 83 ; 83 ; >
+    au < deepCrawl ; exists ; 2013 ; 84 ; Aviation, Space, and Environmental Medicine Volume 84 ; 84 ; >
+    au < finished ; finished ; 2014 ; 85 ; Aviation, Space, and Environmental Medicine Volume 85 ; 85 ; reingest4.clockss.org:8082 >
+    #changed title after 2014
+    }
+  }
+
+  {
+  
+    title <
+      name = Aerospace Medicine and Human Performance ; 
+      issn = 2375-6314 ;
+      eissn = 2375-6322
+    >
+    
+    # Continues 0095-6562
+
+    param[journal_id] = amhp 
+    param[journal_issn] = 2375-6314
+    
+    {
+      param[base_url] = http://www.ingentaconnect.com/
+      param[api_url] = http://api.ingentaconnect.com/
+    
+    au < finished ; finished ; 2015 ; 86 ; Aerospace Medicine and Human Performance Volume 86 ; 86 ; >
+    au < deepCrawl ; exists ; 2016 ; 87 ; Aerospace Medicine and Human Performance Volume 87 ; 87 ; >
+    au < deepCrawl ; exists ; 2017 ; 88 ; Aerospace Medicine and Human Performance Volume 88 ; 88 ; >
+    }
+
+    {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
+    au < frozen ; exists ; 2018 ; 89 ; Aerospace Medicine and Human Performance Volume 89 ; 89 ; >
+    au < finished ; frozen ; 2019 ; 90 ; Aerospace Medicine and Human Performance Volume 90 ; 90 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; 91 ; Aerospace Medicine and Human Performance Volume 91 ; 91 ; reingest1.clockss.org:8082 >
+    au < frozen ; exists ; 2021 ; 92 ; Aerospace Medicine and Human Performance Volume 92 ; 92 ; >
+    au < manifest ; exists ; 2022 ; 93 ; Aerospace Medicine and Human Performance Volume 93 ; 93 ; >
+
+    }
+
+  }
+
+}

@@ -1,0 +1,187 @@
+{
+
+  publisher <
+    name = IP Publishing Ltd. ;
+    info[back] = 2011 ;
+    info[contract] = 2013 ;
+    info[tester] = 5 ;
+    info[poller] = 5 ;
+    info[platform] = Ingenta
+  >
+  # all titles moved to Sage April 2016.
+
+  plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
+  param[base_url] = http://www.ingentaconnect.com/
+  param[api_url] = http://api.ingentaconnect.com/
+  param[graphics_url] = http://graphics.ingentaconnect.com/
+  param[publisher_id] = ip
+  
+  implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+  
+  {
+
+    title <
+      name = Industry and Higher Education ;
+      issn = 0950-4222 ;
+      eissn = 2043-6858 ;
+      issnl = 0950-4222
+    >
+
+    param[journal_id] = ihe
+    param[journal_issn] = 0950-4222
+    # moved to Sage April 2016.
+
+    au < doNotProcess ; exists ; 1999 ; Industry and Higher Education Volume 13 ; 13 ; >
+    au < doNotProcess ; exists ; 2000 ; Industry and Higher Education Volume 14 ; 14 ; >
+    au < doNotProcess ; exists ; 2001 ; Industry and Higher Education Volume 15 ; 15 ; >
+    au < doNotProcess ; exists ; 2002 ; Industry and Higher Education Volume 16 ; 16 ; >
+    au < doNotProcess ; exists ; 2003 ; Industry and Higher Education Volume 17 ; 17 ; >
+    au < doNotProcess ; exists ; 2004 ; Industry and Higher Education Volume 18 ; 18 ; >
+    au < doNotProcess ; exists ; 2005 ; Industry and Higher Education Volume 19 ; 19 ; >
+    au < doNotProcess ; exists ; 2006 ; Industry and Higher Education Volume 20 ; 20 ; >
+    au < doNotProcess ; exists ; 2007 ; Industry and Higher Education Volume 21 ; 21 ; >
+    au < doNotProcess ; exists ; 2008 ; Industry and Higher Education Volume 22 ; 22 ; >
+    au < doNotProcess ; exists ; 2009 ; Industry and Higher Education Volume 23 ; 23 ; >
+    au < doNotProcess ; exists ; 2010 ; Industry and Higher Education Volume 24 ; 24 ; >
+    au < finished ; finished ; 2011 ; Industry and Higher Education Volume 25 ; 25 ; >
+    au < finished ; finished ; 2012 ; Industry and Higher Education Volume 26 ; 26 ; >
+    au < finished ; finished ; 2013 ; Industry and Higher Education Volume 27 ; 27 ; >
+    au < finished ; finished ; 2014 ; Industry and Higher Education Volume 28 ; 28 ; >
+    au < finished ; finished ; 2015 ; Industry and Higher Education Volume 29 ; 29 ; >
+    au < finished ; crawling ; 2016 ; Industry and Higher Education Volume 30 ; 30 ; reingest5.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Entrepreneurship and Innovation ;
+      issn = 1465-7503 ;
+      eissn = 2043-6882 ;
+      issnl = 1465-7503
+    >
+
+    param[journal_id] = ije
+    param[journal_issn] = 1465-7503
+    # moved to Sage April 2016.
+
+    au < doNotProcess ; exists ; 2000 ; International Journal of Entrepreneurship and Innovation Volume 1 ; 1 ; >
+    au < doNotProcess ; exists ; 2001 ; International Journal of Entrepreneurship and Innovation Volume 2 ; 2 ; >
+    au < doNotProcess ; exists ; 2002 ; International Journal of Entrepreneurship and Innovation Volume 3 ; 3 ; >
+    au < doNotProcess ; exists ; 2003 ; International Journal of Entrepreneurship and Innovation Volume 4 ; 4 ; >
+    au < doNotProcess ; exists ; 2004 ; International Journal of Entrepreneurship and Innovation Volume 5 ; 5 ; >
+    au < doNotProcess ; exists ; 2005 ; International Journal of Entrepreneurship and Innovation Volume 6 ; 6 ; >
+    au < doNotProcess ; exists ; 2006 ; International Journal of Entrepreneurship and Innovation Volume 7 ; 7 ; >
+    au < doNotProcess ; exists ; 2007 ; International Journal of Entrepreneurship and Innovation Volume 8 ; 8 ; >
+    au < doNotProcess ; exists ; 2008 ; International Journal of Entrepreneurship and Innovation Volume 9 ; 9 ; >
+    au < doNotProcess ; exists ; 2009 ; International Journal of Entrepreneurship and Innovation Volume 10 ; 10 ; >
+    au < doNotProcess ; exists ; 2010 ; International Journal of Entrepreneurship and Innovation Volume 11 ; 11 ; >
+    au < finished ; finished ; 2011 ; International Journal of Entrepreneurship and Innovation Volume 12 ; 12 ; >
+    au < finished ; finished ; 2012 ; International Journal of Entrepreneurship and Innovation Volume 13 ; 13 ; >
+    au < finished ; finished ; 2013 ; International Journal of Entrepreneurship and Innovation Volume 14 ; 14 ; >
+    au < finished ; finished ; 2014 ; International Journal of Entrepreneurship and Innovation Volume 15 ; 15 ; >
+    au < finished ; finished ; 2015 ; International Journal of Entrepreneurship and Innovation Volume 16 ; 16 ; >
+    au < finished ; crawling ; 2016 ; International Journal of Entrepreneurship and Innovation Volume 17 ; 17 ; reingest1.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Outlook on Agriculture ;
+      issn = 0030-7270 ;
+      eissn = 2043-6866 ;
+      issnl = 0030-7270
+    >
+
+    param[journal_id] = ooa
+    param[journal_issn] = 0030-7270
+    # moved to Sage April 2016.
+
+    au < doNotProcess ; exists ; 1999 ; Outlook on Agriculture Volume 28 ; 28 ; >
+    au < doNotProcess ; exists ; 2000 ; Outlook on Agriculture Volume 29 ; 29 ; >
+    au < doNotProcess ; exists ; 2001 ; Outlook on Agriculture Volume 30 ; 30 ; >
+    au < doNotProcess ; exists ; 2002 ; Outlook on Agriculture Volume 31 ; 31 ; >
+    au < doNotProcess ; exists ; 2003 ; Outlook on Agriculture Volume 32 ; 32 ; >
+    au < doNotProcess ; exists ; 2004 ; Outlook on Agriculture Volume 33 ; 33 ; >
+    au < doNotProcess ; exists ; 2005 ; Outlook on Agriculture Volume 34 ; 34 ; >
+    au < doNotProcess ; exists ; 2006 ; Outlook on Agriculture Volume 35 ; 35 ; >
+    au < doNotProcess ; exists ; 2007 ; Outlook on Agriculture Volume 36 ; 36 ; >
+    au < doNotProcess ; exists ; 2008 ; Outlook on Agriculture Volume 37 ; 37 ; >
+    au < doNotProcess ; exists ; 2009 ; Outlook on Agriculture Volume 38 ; 38 ; >
+    au < doNotProcess ; exists ; 2010 ; Outlook on Agriculture Volume 39 ; 39 ; >
+    au < finished ; finished ; 2011 ; Outlook on Agriculture Volume 40 ; 40 ; >
+    au < finished ; finished ; 2012 ; Outlook on Agriculture Volume 41 ; 41 ; >
+    au < finished ; finished ; 2013 ; Outlook on Agriculture Volume 42 ; 42 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; Outlook on Agriculture Volume 43 ; 43 ; reingest5.clockss.org:8082 >
+    au < superseded ; finished ; 2015 ; Outlook on Agriculture Volume 44 [superseded] ; 44 ; >
+    au < superseded ; exists ; 2016 ; Outlook on Agriculture Volume 45 [superseded] ; 45 ; >
+
+  }
+
+  {
+
+    title <
+      name = South East Asia Research ;
+      issn = 0967-828X ;
+      eissn = 2043-6874 ;
+      issnl = 0967-828X
+    >
+
+    param[journal_id] = sear
+    param[journal_issn] = 0967-828X
+    # moved to Sage April 2016.
+
+    au < doNotProcess ; exists ; 2000 ; South East Asia Research Volume 8 ; 8 ; >
+    au < doNotProcess ; exists ; 2001 ; South East Asia Research Volume 9 ; 9 ; >
+    au < doNotProcess ; exists ; 2002 ; South East Asia Research Volume 10 ; 10 ; >
+    au < doNotProcess ; exists ; 2003 ; South East Asia Research Volume 11 ; 11 ; >
+    au < doNotProcess ; exists ; 2004 ; South East Asia Research Volume 12 ; 12 ; >
+    au < doNotProcess ; exists ; 2005 ; South East Asia Research Volume 13 ; 13 ; >
+    au < doNotProcess ; exists ; 2006 ; South East Asia Research Volume 14 ; 14 ; >
+    au < doNotProcess ; exists ; 2007 ; South East Asia Research Volume 15 ; 15 ; >
+    au < doNotProcess ; exists ; 2008 ; South East Asia Research Volume 16 ; 16 ; >
+    au < doNotProcess ; exists ; 2009 ; South East Asia Research Volume 17 ; 17 ; >
+    au < doNotProcess ; exists ; 2010 ; South East Asia Research Volume 18 ; 18 ; >
+    au < finished ; finished ; 2011 ; South East Asia Research Volume 19 ; 19 ; >
+    au < finished ; finished ; 2012 ; South East Asia Research Volume 20 ; 20 ; >
+    au < finished ; finished ; 2013 ; South East Asia Research Volume 21 ; 21 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; South East Asia Research Volume 22 ; 22 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; South East Asia Research Volume 23 ; 23 ; >
+    au < finished ; crawling ; 2016 ; South East Asia Research Volume 24 ; 24 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = Tourism Economics ;
+      issn = 1354-8166 ;
+      eissn = 2044-0375 ;
+      issnl = 1354-8166
+    >
+
+    param[journal_id] = tec
+    param[journal_issn] = 1354-8166
+    # moved to Sage April 2016.
+
+    au < doNotProcess ; exists ; 2000 ; Tourism Economics Volume 6 ; 6 ; >
+    au < doNotProcess ; exists ; 2001 ; Tourism Economics Volume 7 ; 7 ; >
+    au < doNotProcess ; exists ; 2002 ; Tourism Economics Volume 8 ; 8 ; >
+    au < doNotProcess ; exists ; 2003 ; Tourism Economics Volume 9 ; 9 ; >
+    au < doNotProcess ; exists ; 2004 ; Tourism Economics Volume 10 ; 10 ; >
+    au < doNotProcess ; exists ; 2005 ; Tourism Economics Volume 11 ; 11 ; >
+    au < doNotProcess ; exists ; 2006 ; Tourism Economics Volume 12 ; 12 ; >
+    au < doNotProcess ; exists ; 2007 ; Tourism Economics Volume 13 ; 13 ; >
+    au < doNotProcess ; exists ; 2008 ; Tourism Economics Volume 14 ; 14 ; >
+    au < doNotProcess ; exists ; 2009 ; Tourism Economics Volume 15 ; 15 ; >
+    au < doNotProcess ; exists ; 2010 ; Tourism Economics Volume 16 ; 16 ; >
+    au < finished ; finished ; 2011 ; Tourism Economics Volume 17 ; 17 ; >
+    au < finished ; finished ; 2012 ; Tourism Economics Volume 18 ; 18 ; >
+    au < finished ; finished ; 2013 ; Tourism Economics Volume 19 ; 19 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Tourism Economics Volume 20 ; 20 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Tourism Economics Volume 21 ; 21 ; >
+    au < finished ; crawling ; 2016 ; Tourism Economics Volume 22 ; 22 ; reingest3.clockss.org:8083 >
+
+  }
+}

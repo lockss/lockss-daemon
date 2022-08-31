@@ -1,0 +1,33 @@
+{
+
+  publisher <
+    name = NDSAN Network ;
+    info[contract] = 2020 ;
+    info[back] = 2018 ;
+    info[tester] = 8 ;
+    info[poller] = 8 ;
+    info[platform] = OJS3
+  >
+
+    implicit < status1 ; status ; year ; name ; volume ; param[year] ; proxy >
+    attr[start_stem] = index.php/
+
+  {
+  
+    title < 
+      name = Mental Health: Global Challenges ;
+      eissn = 2612-2138
+    >
+
+      plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+      param[base_url] = https://www.mhgcj.org/
+      param[journal_id] = MHGCJ
+
+      au < deepCrawl ; exists ; 2018 ; Mental Health: Global Challenges Volume 1 ; 1 ; 2018 ; >
+      au < finished ; crawling ; 2019 ; Mental Health: Global Challenges Volume 2 ; 2 ; 2019 ; reingest4.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2020 ; Mental Health: Global Challenges Volume 3 ; 3 ; 2020 ; >
+      au < finished ; crawling ; 2021 ; Mental Health: Global Challenges Volume 4 ; 4 ; 2021 ; reingest5.clockss.org:8082 >
+      au < testing ; exists ; 2022 ; Mental Health: Global Challenges Volume 5 ; 5 ; 2022 ; >
+    }
+
+}

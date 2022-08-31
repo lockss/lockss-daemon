@@ -1,0 +1,1742 @@
+# This legacy American Medical Association file is for titles previously hosted by HighWire Press
+
+{
+
+  publisher <
+    name = American Medical Association ;
+    info[contract] = 2008 ;
+    info[tester] = 8 ;
+    info[poller] = 2
+  >
+
+  pluginPrefix = org.lockss.plugin.highwire.
+  implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+  {
+
+    title <
+      name = AMA Archives of Neurology and Psychiatry ;
+      issn = 0096-6886 ;
+      issnl = 0096-6886
+    >
+
+    # This publication ceased in 1959
+
+    pluginSuffix = ClockssHighWirePlugin
+    param[base_url] = http://archneurpsyc.ama-assn.org/
+
+    au < finished ; frozen ; 1919 ; AMA Archives of Neurology and Psychiatry Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1919 ; AMA Archives of Neurology and Psychiatry Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1920 ; AMA Archives of Neurology and Psychiatry Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1920 ; AMA Archives of Neurology and Psychiatry Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1921 ; AMA Archives of Neurology and Psychiatry Volume 5 ; 5 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1921 ; AMA Archives of Neurology and Psychiatry Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1922 ; AMA Archives of Neurology and Psychiatry Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1922 ; AMA Archives of Neurology and Psychiatry Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+    au < doNotProcess ; doNotProcess ; 1923 ; AMA Archives of Neurology and Psychiatry Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1923 ; AMA Archives of Neurology and Psychiatry Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1924 ; AMA Archives of Neurology and Psychiatry Volume 11 ; 11 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1924 ; AMA Archives of Neurology and Psychiatry Volume 12 ; 12 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1925 ; AMA Archives of Neurology and Psychiatry Volume 13 ; 13 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1925 ; AMA Archives of Neurology and Psychiatry Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1926 ; AMA Archives of Neurology and Psychiatry Volume 15 ; 15 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1926 ; AMA Archives of Neurology and Psychiatry Volume 16 ; 16 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1927 ; AMA Archives of Neurology and Psychiatry Volume 17 ; 17 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1927 ; AMA Archives of Neurology and Psychiatry Volume 18 ; 18 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1928 ; AMA Archives of Neurology and Psychiatry Volume 19 ; 19 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1928 ; AMA Archives of Neurology and Psychiatry Volume 20 ; 20 ; reingest3.clockss.org:8083 >
+    au < doNotProcess ; doNotProcess ; 1929 ; AMA Archives of Neurology and Psychiatry Volume 21 ; 21 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1929 ; AMA Archives of Neurology and Psychiatry Volume 22 ; 22 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1930 ; AMA Archives of Neurology and Psychiatry Volume 23 ; 23 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1930 ; AMA Archives of Neurology and Psychiatry Volume 24 ; 24 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1931 ; AMA Archives of Neurology and Psychiatry Volume 25 ; 25 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1931 ; AMA Archives of Neurology and Psychiatry Volume 26 ; 26 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1932 ; AMA Archives of Neurology and Psychiatry Volume 27 ; 27 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1932 ; AMA Archives of Neurology and Psychiatry Volume 28 ; 28 ; reingest3.clockss.org:8083 >
+    au < doNotProcess ; doNotProcess ; 1933 ; AMA Archives of Neurology and Psychiatry Volume 29 ; 29 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1933 ; AMA Archives of Neurology and Psychiatry Volume 30 ; 30 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1934 ; AMA Archives of Neurology and Psychiatry Volume 31 ; 31 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1934 ; AMA Archives of Neurology and Psychiatry Volume 32 ; 32 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1935 ; AMA Archives of Neurology and Psychiatry Volume 33 ; 33 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1935 ; AMA Archives of Neurology and Psychiatry Volume 34 ; 34 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1936 ; AMA Archives of Neurology and Psychiatry Volume 35 ; 35 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1936 ; AMA Archives of Neurology and Psychiatry Volume 36 ; 36 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1937 ; AMA Archives of Neurology and Psychiatry Volume 37 ; 37 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1937 ; AMA Archives of Neurology and Psychiatry Volume 38 ; 38 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1938 ; AMA Archives of Neurology and Psychiatry Volume 39 ; 39 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1938 ; AMA Archives of Neurology and Psychiatry Volume 40 ; 40 ; reingest3.clockss.org:8083 >
+    au < doNotProcess ; doNotProcess ; 1939 ; AMA Archives of Neurology and Psychiatry Volume 41 ; 41 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1939 ; AMA Archives of Neurology and Psychiatry Volume 42 ; 42 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1940 ; AMA Archives of Neurology and Psychiatry Volume 43 ; 43 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1940 ; AMA Archives of Neurology and Psychiatry Volume 44 ; 44 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1941 ; AMA Archives of Neurology and Psychiatry Volume 45 ; 45 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1941 ; AMA Archives of Neurology and Psychiatry Volume 46 ; 46 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1942 ; AMA Archives of Neurology and Psychiatry Volume 47 ; 47 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1942 ; AMA Archives of Neurology and Psychiatry Volume 48 ; 48 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1943 ; AMA Archives of Neurology and Psychiatry Volume 49 ; 49 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1943 ; AMA Archives of Neurology and Psychiatry Volume 50 ; 50 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1944 ; AMA Archives of Neurology and Psychiatry Volume 51 ; 51 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1944 ; AMA Archives of Neurology and Psychiatry Volume 52 ; 52 ; reingest3.clockss.org:8083 >
+    au < doNotProcess ; doNotProcess ; 1945 ; AMA Archives of Neurology and Psychiatry Volume 53 ; 53 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1945 ; AMA Archives of Neurology and Psychiatry Volume 54 ; 54 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1946 ; AMA Archives of Neurology and Psychiatry Volume 55 ; 55 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1946 ; AMA Archives of Neurology and Psychiatry Volume 56 ; 56 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1947 ; AMA Archives of Neurology and Psychiatry Volume 57 ; 57 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1947 ; AMA Archives of Neurology and Psychiatry Volume 58 ; 58 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1948 ; AMA Archives of Neurology and Psychiatry Volume 59 ; 59 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1948 ; AMA Archives of Neurology and Psychiatry Volume 60 ; 60 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1949 ; AMA Archives of Neurology and Psychiatry Volume 61 ; 61 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1949 ; AMA Archives of Neurology and Psychiatry Volume 62 ; 62 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1950 ; AMA Archives of Neurology and Psychiatry Volume 63 ; 63 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1950 ; AMA Archives of Neurology and Psychiatry Volume 64 ; 64 ; reingest3.clockss.org:8083 >
+    au < doNotProcess ; doNotProcess ; 1951 ; AMA Archives of Neurology and Psychiatry Volume 65 ; 65 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1951 ; AMA Archives of Neurology and Psychiatry Volume 66 ; 66 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1952 ; AMA Archives of Neurology and Psychiatry Volume 67 ; 67 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1952 ; AMA Archives of Neurology and Psychiatry Volume 68 ; 68 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1953 ; AMA Archives of Neurology and Psychiatry Volume 69 ; 69 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 1953 ; AMA Archives of Neurology and Psychiatry Volume 70 ; 70 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 1954 ; AMA Archives of Neurology and Psychiatry Volume 71 ; 71 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1954 ; AMA Archives of Neurology and Psychiatry Volume 72 ; 72 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 1955 ; AMA Archives of Neurology and Psychiatry Volume 73 ; 73 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 1955 ; AMA Archives of Neurology and Psychiatry Volume 74 ; 74 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 1956 ; AMA Archives of Neurology and Psychiatry Volume 75 ; 75 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1956 ; AMA Archives of Neurology and Psychiatry Volume 76 ; 76 ; reingest3.clockss.org:8083 >
+    au < doNotProcess ; doNotProcess ; 1957 ; AMA Archives of Neurology and Psychiatry Volume 77 ; 77 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 1957 ; AMA Archives of Neurology and Psychiatry Volume 78 ; 78 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 1958 ; AMA Archives of Neurology and Psychiatry Volume 79 ; 79 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1958 ; AMA Archives of Neurology and Psychiatry Volume 80 ; 80 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 1959 ; AMA Archives of Neurology and Psychiatry Volume 81 ; 81 ; reingest4.clockss.org:8082 >
+
+  }
+
+  {
+    
+    title <
+      name = Archives of Family Medicine ;
+      eissn = 1063-3987 ;
+      issnl = 1063-3987
+    >
+    
+    # This publication ceased in 2000
+    
+    pluginSuffix = ClockssHighWirePlugin
+    param[base_url] = http://archfami.ama-assn.org/
+    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified
+      
+    au < zapped ; finished ; 1992 ; Archives of Family Medicine Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1993 ; Archives of Family Medicine Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1994 ; Archives of Family Medicine Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1995 ; Archives of Family Medicine Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1996 ; Archives of Family Medicine Volume 5 ; 5 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1997 ; Archives of Family Medicine Volume 6 ; 6 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1998 ; Archives of Family Medicine Volume 7 ; 7 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1999 ; Archives of Family Medicine Volume 8 ; 8 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 2000 ; Archives of Family Medicine Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+  
+  }
+
+  {
+
+    title <
+      name = Disaster Medicine and Public Health Preparedness ;
+      issn = 1935-7893 ;
+      eissn = 1938-744X
+    >
+
+    # This publication has moved to Cambridge Journals
+    # See http://journals.cambridge.org/action/displayJournal?jid=DMP
+
+    param[base_url] = http://www.dmphp.org/
+    pluginSuffix = ClockssHighWirePlugin
+
+    au < zapped ; finished ; 2007 ; Disaster Medicine and Public Health Preparedness Volume 1 ; 1 ; >
+    au < zapped ; finished ; 2008 ; Disaster Medicine and Public Health Preparedness Volume 2 ; 2 ; >
+    au < zapped ; finished ; 2009 ; Disaster Medicine and Public Health Preparedness Volume 3 ; 3 ; >
+    au < zapped ; finished ; 2010 ; Disaster Medicine and Public Health Preparedness Volume 4 ; 4 ; >
+    au < finished ; finished ; 2011 ; Disaster Medicine and Public Health Preparedness Volume 5 ; 5 ; >
+
+  }
+
+  {
+
+    title <
+      name = JAMA Dermatology ;
+      issn = 0003-987X ;
+      eissn = 0096-5359 ;
+      issnl = 0003-987X
+    >
+
+    pluginSuffix = ClockssHighWirePlugin
+    param[base_url] = http://archderm.ama-assn.org/
+    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified
+
+    au < zapped ; finished ; 1920 ; Archives of Dermatology and Syphilology Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1920 ; Archives of Dermatology and Syphilology Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1921 ; Archives of Dermatology and Syphilology Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1921 ; Archives of Dermatology and Syphilology Volume 4 ; 4 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1922 ; Archives of Dermatology and Syphilology Volume 5 ; 5 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1922 ; Archives of Dermatology and Syphilology Volume 6 ; 6 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1923 ; Archives of Dermatology and Syphilology Volume 7 ; 7 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1923 ; Archives of Dermatology and Syphilology Volume 8 ; 8 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1924 ; Archives of Dermatology and Syphilology Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1924 ; Archives of Dermatology and Syphilology Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1925 ; Archives of Dermatology and Syphilology Volume 11 ; 11 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1925 ; Archives of Dermatology and Syphilology Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1926 ; Archives of Dermatology and Syphilology Volume 13 ; 13 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1926 ; Archives of Dermatology and Syphilology Volume 14 ; 14 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1927 ; Archives of Dermatology and Syphilology Volume 15 ; 15 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1927 ; Archives of Dermatology and Syphilology Volume 16 ; 16 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1928 ; Archives of Dermatology and Syphilology Volume 17 ; 17 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1928 ; Archives of Dermatology and Syphilology Volume 18 ; 18 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1929 ; Archives of Dermatology and Syphilology Volume 19 ; 19 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1929 ; Archives of Dermatology and Syphilology Volume 20 ; 20 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1930 ; Archives of Dermatology and Syphilology Volume 21 ; 21 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1930 ; Archives of Dermatology and Syphilology Volume 22 ; 22 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1931 ; Archives of Dermatology and Syphilology Volume 23 ; 23 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1931 ; Archives of Dermatology and Syphilology Volume 24 ; 24 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1932 ; Archives of Dermatology and Syphilology Volume 25 ; 25 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1932 ; Archives of Dermatology and Syphilology Volume 26 ; 26 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1933 ; Archives of Dermatology and Syphilology Volume 27 ; 27 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1933 ; Archives of Dermatology and Syphilology Volume 28 ; 28 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1934 ; Archives of Dermatology and Syphilology Volume 29 ; 29 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1934 ; Archives of Dermatology and Syphilology Volume 30 ; 30 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1935 ; Archives of Dermatology and Syphilology Volume 31 ; 31 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1935 ; Archives of Dermatology and Syphilology Volume 32 ; 32 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1936 ; Archives of Dermatology and Syphilology Volume 33 ; 33 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1936 ; Archives of Dermatology and Syphilology Volume 34 ; 34 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1937 ; Archives of Dermatology and Syphilology Volume 35 ; 35 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1937 ; Archives of Dermatology and Syphilology Volume 36 ; 36 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1938 ; Archives of Dermatology and Syphilology Volume 37 ; 37 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1938 ; Archives of Dermatology and Syphilology Volume 38 ; 38 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1939 ; Archives of Dermatology and Syphilology Volume 39 ; 39 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1939 ; Archives of Dermatology and Syphilology Volume 40 ; 40 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1940 ; Archives of Dermatology and Syphilology Volume 41 ; 41 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1940 ; Archives of Dermatology and Syphilology Volume 42 ; 42 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1941 ; Archives of Dermatology and Syphilology Volume 43 ; 43 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1941 ; Archives of Dermatology and Syphilology Volume 44 ; 44 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1942 ; Archives of Dermatology and Syphilology Volume 45 ; 45 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1942 ; Archives of Dermatology and Syphilology Volume 46 ; 46 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1943 ; Archives of Dermatology and Syphilology Volume 47 ; 47 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1943 ; Archives of Dermatology and Syphilology Volume 48 ; 48 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1944 ; Archives of Dermatology and Syphilology Volume 49 ; 49 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1944 ; Archives of Dermatology and Syphilology Volume 50 ; 50 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1945 ; Archives of Dermatology and Syphilology Volume 51 ; 51 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1945 ; Archives of Dermatology and Syphilology Volume 52 ; 52 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1946 ; Archives of Dermatology and Syphilology Volume 53 ; 53 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1946 ; Archives of Dermatology and Syphilology Volume 54 ; 54 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1947 ; Archives of Dermatology and Syphilology Volume 55 ; 55 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1947 ; Archives of Dermatology and Syphilology Volume 56 ; 56 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1948 ; Archives of Dermatology and Syphilology Volume 57 ; 57 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1948 ; Archives of Dermatology and Syphilology Volume 58 ; 58 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1949 ; Archives of Dermatology and Syphilology Volume 59 ; 59 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1949 ; Archives of Dermatology and Syphilology Volume 60 ; 60 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1950 ; Archives of Dermatology and Syphilology Volume 61 ; 61 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1950 ; Archives of Dermatology and Syphilology Volume 62 ; 62 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1951 ; AMA Archives of Dermatology and Syphilology Volume 63 ; 63 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1951 ; AMA Archives of Dermatology and Syphilology Volume 64 ; 64 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1952 ; AMA Archives of Dermatology and Syphilology Volume 65 ; 65 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1952 ; AMA Archives of Dermatology and Syphilology Volume 66 ; 66 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1953 ; AMA Archives of Dermatology and Syphilology Volume 67 ; 67 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1953 ; AMA Archives of Dermatology and Syphilology Volume 68 ; 68 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1954 ; AMA Archives of Dermatology and Syphilology Volume 69 ; 69 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1954 ; AMA Archives of Dermatology and Syphilology Volume 70 ; 70 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1955 ; AMA Archives of Dermatology Volume 71 ; 71 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1955 ; AMA Archives of Dermatology Volume 72 ; 72 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1956 ; AMA Archives of Dermatology Volume 73 ; 73 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1956 ; AMA Archives of Dermatology Volume 74 ; 74 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1957 ; AMA Archives of Dermatology Volume 75 ; 75 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1957 ; AMA Archives of Dermatology Volume 76 ; 76 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1958 ; AMA Archives of Dermatology Volume 77 ; 77 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1958 ; AMA Archives of Dermatology Volume 78 ; 78 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1959 ; AMA Archives of Dermatology Volume 79 ; 79 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1959 ; AMA Archives of Dermatology Volume 80 ; 80 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1960 ; AMA Archives of Dermatology Volume 81 ; 81 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1960 ; AMA Archives of Dermatology Volume 82 ; 82 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1961 ; Archives of Dermatology Volume 83 ; 83 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1961 ; Archives of Dermatology Volume 84 ; 84 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1962 ; Archives of Dermatology Volume 85 ; 85 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1962 ; Archives of Dermatology Volume 86 ; 86 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1963 ; Archives of Dermatology Volume 87 ; 87 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1963 ; Archives of Dermatology Volume 88 ; 88 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1964 ; Archives of Dermatology Volume 89 ; 89 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1964 ; Archives of Dermatology Volume 90 ; 90 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1965 ; Archives of Dermatology Volume 91 ; 91 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1965 ; Archives of Dermatology Volume 92 ; 92 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1966 ; Archives of Dermatology Volume 93 ; 93 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1966 ; Archives of Dermatology Volume 94 ; 94 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1967 ; Archives of Dermatology Volume 95 ; 95 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1967 ; Archives of Dermatology Volume 96 ; 96 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1968 ; Archives of Dermatology Volume 97 ; 97 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1968 ; Archives of Dermatology Volume 98 ; 98 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1969 ; Archives of Dermatology Volume 99 ; 99 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1969 ; Archives of Dermatology Volume 100 ; 100 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1970 ; Archives of Dermatology Volume 101 ; 101 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1970 ; Archives of Dermatology Volume 102 ; 102 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1971 ; Archives of Dermatology Volume 103 ; 103 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1971 ; Archives of Dermatology Volume 104 ; 104 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1972 ; Archives of Dermatology Volume 105 ; 105 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1972 ; Archives of Dermatology Volume 106 ; 106 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1973 ; Archives of Dermatology Volume 107 ; 107 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1973 ; Archives of Dermatology Volume 108 ; 108 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1974 ; Archives of Dermatology Volume 109 ; 109 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1974 ; Archives of Dermatology Volume 110 ; 110 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1975 ; Archives of Dermatology Volume 111 ; 111 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1976 ; Archives of Dermatology Volume 112 ; 112 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1977 ; Archives of Dermatology Volume 113 ; 113 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1978 ; Archives of Dermatology Volume 114 ; 114 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1979 ; Archives of Dermatology Volume 115 ; 115 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1980 ; Archives of Dermatology Volume 116 ; 116 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1981 ; Archives of Dermatology Volume 117 ; 117 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1982 ; Archives of Dermatology Volume 118 ; 118 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1983 ; Archives of Dermatology Volume 119 ; 119 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1984 ; Archives of Dermatology Volume 120 ; 120 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1985 ; Archives of Dermatology Volume 121 ; 121 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1986 ; Archives of Dermatology Volume 122 ; 122 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1987 ; Archives of Dermatology Volume 123 ; 123 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1988 ; Archives of Dermatology Volume 124 ; 124 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1989 ; Archives of Dermatology Volume 125 ; 125 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1990 ; Archives of Dermatology Volume 126 ; 126 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1991 ; Archives of Dermatology Volume 127 ; 127 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1992 ; Archives of Dermatology Volume 128 ; 128 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1993 ; Archives of Dermatology Volume 129 ; 129 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1994 ; Archives of Dermatology Volume 130 ; 130 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1995 ; Archives of Dermatology Volume 131 ; 131 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1996 ; Archives of Dermatology Volume 132 ; 132 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1997 ; Archives of Dermatology Volume 133 ; 133 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1998 ; Archives of Dermatology Volume 134 ; 134 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1999 ; Archives of Dermatology Volume 135 ; 135 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 2000 ; Archives of Dermatology Volume 136 ; 136 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 2001 ; Archives of Dermatology Volume 137 ; 137 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 2002 ; Archives of Dermatology Volume 138 ; 138 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 2003 ; Archives of Dermatology Volume 139 ; 139 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 2004 ; Archives of Dermatology Volume 140 ; 140 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 2005 ; Archives of Dermatology Volume 141 ; 141 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 2006 ; Archives of Dermatology Volume 142 ; 142 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 2007 ; Archives of Dermatology Volume 143 ; 143 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2008 ; Archives of Dermatology Volume 144 ; 144 ; >
+    au < finished ; finished ; 2009 ; Archives of Dermatology Volume 145 ; 145 ; >
+    au < finished ; finished ; 2010 ; Archives of Dermatology Volume 146 ; 146 ; >
+    au < finished ; finished ; 2011 ; Archives of Dermatology Volume 147 ; 147 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Archives of Dermatology Volume 148 ; 148 ; >
+
+  }
+
+  {
+
+    title <
+      name = JAMA Facial Plastic Surgery ;
+      issn = 1521-2491 ;
+      eissn = 1538-3660 ;
+      issnl = 1521-2491
+    >
+
+    param[base_url] = http://archfaci.ama-assn.org/
+
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+      attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified
+
+      au < zapped ; finished ; 1999 ; Archives of Facial Plastic Surgery Volume 1 [to delete] ; 1 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 2000 ; Archives of Facial Plastic Surgery Volume 2 [to delete] ; 2 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 2001 ; Archives of Facial Plastic Surgery Volume 3 [to delete] ; 3 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 2002 ; Archives of Facial Plastic Surgery Volume 4 [to delete] ; 4 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 2003 ; Archives of Facial Plastic Surgery Volume 5 [to delete] ; 5 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 2004 ; Archives of Facial Plastic Surgery Volume 6 [to delete] ; 6 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 2005 ; Archives of Facial Plastic Surgery Volume 7 [to delete] ; 7 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 2006 ; Archives of Facial Plastic Surgery Volume 8 [to delete] ; 8 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 2007 ; Archives of Facial Plastic Surgery Volume 9 [to delete] ; 9 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 2008 ; Archives of Facial Plastic Surgery Volume 10 [to delete] ; 10 ; >
+      au < zapped ; finished ; 2009 ; Archives of Facial Plastic Surgery Volume 11 [to delete] ; 11 ; >
+      au < zapped ; finished ; 2010 ; Archives of Facial Plastic Surgery Volume 12 [to delete] ; 12 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < zapped ; finished ; 1999 ; Archives of Facial Plastic Surgery Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 2000 ; Archives of Facial Plastic Surgery Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 2001 ; Archives of Facial Plastic Surgery Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 2002 ; Archives of Facial Plastic Surgery Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 2003 ; Archives of Facial Plastic Surgery Volume 5 ; 5 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 2004 ; Archives of Facial Plastic Surgery Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 2005 ; Archives of Facial Plastic Surgery Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 2006 ; Archives of Facial Plastic Surgery Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 2007 ; Archives of Facial Plastic Surgery Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 2008 ; Archives of Facial Plastic Surgery Volume 10 ; 10 ; >
+      au < finished ; finished ; 2009 ; Archives of Facial Plastic Surgery Volume 11 ; 11 ; >
+      au < finished ; finished ; 2010 ; Archives of Facial Plastic Surgery Volume 12 ; 12 ; >
+      au < finished ; finished ; 2011 ; Archives of Facial Plastic Surgery Volume 13 ; 13 ; >
+
+    }
+    
+  }
+
+  {
+    
+    title <
+      name = JAMA Français ;
+      eissn = 1930-4625 ;
+      issnl = 1930-4625
+    >
+      
+    pluginSuffix = ClockssHighWirePlugin
+    param[base_url] = http://jamafr.ama-assn.org/
+  
+    au < zapped ; finished ; 2003 ; JAMA Français Volume 289 ; 289 ; >
+    au < zapped ; finished ; 2003 ; JAMA Français Volume 290 ; 290 ; >
+    au < zapped ; finished ; 2004 ; JAMA Français Volume 291 ; 291 ; >
+    au < zapped ; finished ; 2004 ; JAMA Français Volume 292 ; 292 ; >
+    au < zapped ; finished ; 2005 ; JAMA Français Volume 293 ; 293 ; >
+    au < zapped ; finished ; 2005 ; JAMA Français Volume 294 ; 294 ; >
+    au < zapped ; finished ; 2006 ; JAMA Français Volume 295 ; 295 ; >
+    au < zapped ; finished ; 2006 ; JAMA Français Volume 296 ; 296 ; >
+    au < zapped ; finished ; 2007 ; JAMA Français Volume 297 ; 297 ; >
+    au < zapped ; finished ; 2007 ; JAMA Français Volume 298 ; 298 ; >
+    au < finished ; finished ; 2008 ; JAMA Français Volume 299 ; 299 ; >
+    au < zapped ; finished ; 2008 ; JAMA Français Volume 300 ; 300 ; >
+        
+  }
+
+  {
+
+    title <
+      name = JAMA Internal Medicine ;
+      issn = 0003-9926 ;
+      eissn = 1538-3679 ;
+      issnl = 0003-9926
+    >
+
+    pluginSuffix = ClockssHighWirePlugin
+    param[base_url] = http://archinte.ama-assn.org/
+    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified
+
+    au < zapped ; finished ; 1908 ; Archives of Internal Medicine Volume I ; I ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1908 ; Archives of Internal Medicine Volume II ; II ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1909 ; Archives of Internal Medicine Volume III ; III ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1909 ; Archives of Internal Medicine Volume IV ; IV ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1910 ; Archives of Internal Medicine Volume V ; V ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1910 ; Archives of Internal Medicine Volume VI ; VI ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1911 ; Archives of Internal Medicine Volume VII ; VII ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1911 ; Archives of Internal Medicine Volume VIII ; VIII ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1912 ; Archives of Internal Medicine Volume IX ; IX ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1912 ; Archives of Internal Medicine Volume X ; X ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1913 ; Archives of Internal Medicine Volume XI ; XI ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1913 ; Archives of Internal Medicine Volume XII ; XII ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1914 ; Archives of Internal Medicine Volume XIII ; XIII ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1914 ; Archives of Internal Medicine Volume XIV ; XIV ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1915 ; Archives of Internal Medicine Volume XV ; XV ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1915 ; Archives of Internal Medicine Volume XVI ; XVI ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1916 ; Archives of Internal Medicine Volume XVII ; XVII ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1916 ; Archives of Internal Medicine Volume XVIII ; XVIII ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1917 ; Archives of Internal Medicine Volume XIX ; XIX ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1917 ; Archives of Internal Medicine Volume XX ; XX ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1918 ; Archives of Internal Medicine Volume XXI ; XXI ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1918 ; Archives of Internal Medicine Volume XXII ; XXII ; reingest3.clockss.org:8083 >
+    au < superseded ; down ; 1919 ; Archives of Internal Medicine Volume 23 [never crawled] ; 23 ; reingest4.clockss.org:8082 >
+    au < superseded ; down ; 1919 ; Archives of Internal Medicine Volume 24 [never crawled] ; 24 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1920 ; Archives of Internal Medicine Volume 25 ; 25 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1920 ; Archives of Internal Medicine Volume 26 ; 26 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1921 ; Archives of Internal Medicine Volume 27 ; 27 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1921 ; Archives of Internal Medicine Volume 28 ; 28 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1922 ; Archives of Internal Medicine Volume 29 ; 29 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1922 ; Archives of Internal Medicine Volume 30 ; 30 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1923 ; Archives of Internal Medicine Volume 31 ; 31 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1923 ; Archives of Internal Medicine Volume 32 ; 32 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1924 ; Archives of Internal Medicine Volume 33 ; 33 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1924 ; Archives of Internal Medicine Volume 34 ; 34 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1925 ; Archives of Internal Medicine Volume 35 ; 35 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1925 ; Archives of Internal Medicine Volume 36 ; 36 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1926 ; Archives of Internal Medicine Volume 37 ; 37 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1926 ; Archives of Internal Medicine Volume 38 ; 38 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1927 ; Archives of Internal Medicine Volume 39 ; 39 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1927 ; Archives of Internal Medicine Volume 40 ; 40 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1928 ; Archives of Internal Medicine Volume 41 ; 41 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1928 ; Archives of Internal Medicine Volume 42 ; 42 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1929 ; Archives of Internal Medicine Volume 43 ; 43 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1929 ; Archives of Internal Medicine Volume 44 ; 44 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1930 ; Archives of Internal Medicine Volume 45 ; 45 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1930 ; Archives of Internal Medicine Volume 46 ; 46 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1931 ; Archives of Internal Medicine Volume 47 ; 47 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1931 ; Archives of Internal Medicine Volume 48 ; 48 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1932 ; Archives of Internal Medicine Volume 49 ; 49 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1932 ; Archives of Internal Medicine Volume 50 ; 50 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1933 ; Archives of Internal Medicine Volume 51 ; 51 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1933 ; Archives of Internal Medicine Volume 52 ; 52 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1934 ; Archives of Internal Medicine Volume 53 ; 53 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1934 ; Archives of Internal Medicine Volume 54 ; 54 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1935 ; Archives of Internal Medicine Volume 55 ; 55 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1935 ; Archives of Internal Medicine Volume 56 ; 56 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1936 ; Archives of Internal Medicine Volume 57 ; 57 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1936 ; Archives of Internal Medicine Volume 58 ; 58 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1937 ; Archives of Internal Medicine Volume 59 ; 59 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1937 ; Archives of Internal Medicine Volume 60 ; 60 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1938 ; Archives of Internal Medicine Volume 61 ; 61 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1938 ; Archives of Internal Medicine Volume 62 ; 62 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1939 ; Archives of Internal Medicine Volume 63 ; 63 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1939 ; Archives of Internal Medicine Volume 64 ; 64 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1940 ; Archives of Internal Medicine Volume 65 ; 65 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1940 ; Archives of Internal Medicine Volume 66 ; 66 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1941 ; Archives of Internal Medicine Volume 67 ; 67 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1941 ; Archives of Internal Medicine Volume 68 ; 68 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1942 ; Archives of Internal Medicine Volume 69 ; 69 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1942 ; Archives of Internal Medicine Volume 70 ; 70 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1943 ; Archives of Internal Medicine Volume 71 ; 71 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1943 ; Archives of Internal Medicine Volume 72 ; 72 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1944 ; Archives of Internal Medicine Volume 73 ; 73 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1944 ; Archives of Internal Medicine Volume 74 ; 74 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1945 ; Archives of Internal Medicine Volume 75 ; 75 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1945 ; Archives of Internal Medicine Volume 76 ; 76 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1946 ; Archives of Internal Medicine Volume 77 ; 77 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1946 ; Archives of Internal Medicine Volume 78 ; 78 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1947 ; Archives of Internal Medicine Volume 79 ; 79 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1947 ; Archives of Internal Medicine Volume 80 ; 80 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1948 ; Archives of Internal Medicine Volume 81 ; 81 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1948 ; Archives of Internal Medicine Volume 82 ; 82 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1949 ; Archives of Internal Medicine Volume 83 ; 83 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1949 ; Archives of Internal Medicine Volume 84 ; 84 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1950 ; Archives of Internal Medicine Volume 85 ; 85 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1950 ; Archives of Internal Medicine Volume 86 ; 86 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1951 ; AMA Archives of Internal Medicine Volume 87 ; 87 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1951 ; AMA Archives of Internal Medicine Volume 88 ; 88 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1952 ; AMA Archives of Internal Medicine Volume 89 ; 89 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1952 ; AMA Archives of Internal Medicine Volume 90 ; 90 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1953 ; AMA Archives of Internal Medicine Volume 91 ; 91 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1953 ; AMA Archives of Internal Medicine Volume 92 ; 92 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1954 ; AMA Archives of Internal Medicine Volume 93 ; 93 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1954 ; AMA Archives of Internal Medicine Volume 94 ; 94 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1955 ; AMA Archives of Internal Medicine Volume 95 ; 95 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1955 ; AMA Archives of Internal Medicine Volume 96 ; 96 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1956 ; AMA Archives of Internal Medicine Volume 97 ; 97 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1956 ; AMA Archives of Internal Medicine Volume 98 ; 98 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1957 ; AMA Archives of Internal Medicine Volume 99 ; 99 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1957 ; AMA Archives of Internal Medicine Volume 100 ; 100 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1958 ; AMA Archives of Internal Medicine Volume 101 ; 101 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1958 ; AMA Archives of Internal Medicine Volume 102 ; 102 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1959 ; AMA Archives of Internal Medicine Volume 103 ; 103 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1959 ; AMA Archives of Internal Medicine Volume 104 ; 104 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1960 ; AMA Archives of Internal Medicine Volume 105 ; 105 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1960 ; AMA Archives of Internal Medicine Volume 106 ; 106 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1961 ; Archives of Internal Medicine Volume 107 ; 107 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1961 ; Archives of Internal Medicine Volume 108 ; 108 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1962 ; Archives of Internal Medicine Volume 109 ; 109 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1962 ; Archives of Internal Medicine Volume 110 ; 110 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1963 ; Archives of Internal Medicine Volume 111 ; 111 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1963 ; Archives of Internal Medicine Volume 112 ; 112 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1964 ; Archives of Internal Medicine Volume 113 ; 113 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1964 ; Archives of Internal Medicine Volume 114 ; 114 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1965 ; Archives of Internal Medicine Volume 115 ; 115 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1965 ; Archives of Internal Medicine Volume 116 ; 116 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1966 ; Archives of Internal Medicine Volume 117 ; 117 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1966 ; Archives of Internal Medicine Volume 118 ; 118 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1967 ; Archives of Internal Medicine Volume 119 ; 119 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1967 ; Archives of Internal Medicine Volume 120 ; 120 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1968 ; Archives of Internal Medicine Volume 121 ; 121 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1968 ; Archives of Internal Medicine Volume 122 ; 122 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1969 ; Archives of Internal Medicine Volume 123 ; 123 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1969 ; Archives of Internal Medicine Volume 124 ; 124 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1970 ; Archives of Internal Medicine Volume 125 ; 125 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1970 ; Archives of Internal Medicine Volume 126 ; 126 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1971 ; Archives of Internal Medicine Volume 127 ; 127 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1971 ; Archives of Internal Medicine Volume 128 ; 128 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1972 ; Archives of Internal Medicine Volume 129 ; 129 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1972 ; Archives of Internal Medicine Volume 130 ; 130 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1973 ; Archives of Internal Medicine Volume 131 ; 131 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1973 ; Archives of Internal Medicine Volume 132 ; 132 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1974 ; Archives of Internal Medicine Volume 133 ; 133 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1974 ; Archives of Internal Medicine Volume 134 ; 134 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1975 ; Archives of Internal Medicine Volume 135 ; 135 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1976 ; Archives of Internal Medicine Volume 136 ; 136 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1977 ; Archives of Internal Medicine Volume 137 ; 137 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1978 ; Archives of Internal Medicine Volume 138 ; 138 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1979 ; Archives of Internal Medicine Volume 139 ; 139 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1980 ; Archives of Internal Medicine Volume 140 ; 140 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1981 ; Archives of Internal Medicine Volume 141 ; 141 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1982 ; Archives of Internal Medicine Volume 142 ; 142 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1983 ; Archives of Internal Medicine Volume 143 ; 143 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1984 ; Archives of Internal Medicine Volume 144 ; 144 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1985 ; Archives of Internal Medicine Volume 145 ; 145 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1986 ; Archives of Internal Medicine Volume 146 ; 146 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1987 ; Archives of Internal Medicine Volume 147 ; 147 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1988 ; Archives of Internal Medicine Volume 148 ; 148 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1989 ; Archives of Internal Medicine Volume 149 ; 149 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1990 ; Archives of Internal Medicine Volume 150 ; 150 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1991 ; Archives of Internal Medicine Volume 151 ; 151 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1992 ; Archives of Internal Medicine Volume 152 ; 152 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1993 ; Archives of Internal Medicine Volume 153 ; 153 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1994 ; Archives of Internal Medicine Volume 154 ; 154 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1995 ; Archives of Internal Medicine Volume 155 ; 155 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1996 ; Archives of Internal Medicine Volume 156 ; 156 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1997 ; Archives of Internal Medicine Volume 157 ; 157 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1998 ; Archives of Internal Medicine Volume 158 ; 158 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1999 ; Archives of Internal Medicine Volume 159 ; 159 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 2000 ; Archives of Internal Medicine Volume 160 ; 160 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 2001 ; Archives of Internal Medicine Volume 161 ; 161 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 2002 ; Archives of Internal Medicine Volume 162 ; 162 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 2003 ; Archives of Internal Medicine Volume 163 ; 163 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 2004 ; Archives of Internal Medicine Volume 164 ; 164 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 2005 ; Archives of Internal Medicine Volume 165 ; 165 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 2006 ; Archives of Internal Medicine Volume 166 ; 166 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 2007 ; Archives of Internal Medicine Volume 167 ; 167 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2008 ; Archives of Internal Medicine Volume 168 ; 168 ; >
+    au < finished ; frozen ; 2009 ; Archives of Internal Medicine Volume 169 ; 169 ; >
+    au < finished ; finished ; 2010 ; Archives of Internal Medicine Volume 170 ; 170 ; >
+    au < finished ; finished ; 2011 ; Archives of Internal Medicine Volume 171 ; 171 ; >
+
+  }
+
+  {
+
+    title <
+      name = JAMA Neurology ;
+      issn = 0003-9942 ;
+      eissn = 1538-3687 ;
+      issnl = 0003-9942
+    >
+
+    pluginSuffix = ClockssHighWirePlugin
+    param[base_url] = http://archneur.ama-assn.org/
+    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified
+
+    au < zapped ; finished ; 1959 ; AMA Archives of Neurology Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1960 ; AMA Archives of Neurology Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1960 ; AMA Archives of Neurology Volume 3 ; 3 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1961 ; Archives of Neurology Volume 4 ; 4 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1961 ; Archives of Neurology Volume 5 ; 5 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1962 ; Archives of Neurology Volume 6 ; 6 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1962 ; Archives of Neurology Volume 7 ; 7 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1963 ; Archives of Neurology Volume 8 ; 8 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1963 ; Archives of Neurology Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1964 ; Archives of Neurology Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1964 ; Archives of Neurology Volume 11 ; 11 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1965 ; Archives of Neurology Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1965 ; Archives of Neurology Volume 13 ; 13 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1966 ; Archives of Neurology Volume 14 ; 14 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1966 ; Archives of Neurology Volume 15 ; 15 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1967 ; Archives of Neurology Volume 16 ; 16 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1967 ; Archives of Neurology Volume 17 ; 17 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1968 ; Archives of Neurology Volume 18 ; 18 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1968 ; Archives of Neurology Volume 19 ; 19 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1969 ; Archives of Neurology Volume 20 ; 20 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1969 ; Archives of Neurology Volume 21 ; 21 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1970 ; Archives of Neurology Volume 22 ; 22 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1970 ; Archives of Neurology Volume 23 ; 23 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1971 ; Archives of Neurology Volume 24 ; 24 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1971 ; Archives of Neurology Volume 25 ; 25 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1972 ; Archives of Neurology Volume 26 ; 26 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1972 ; Archives of Neurology Volume 27 ; 27 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1973 ; Archives of Neurology Volume 28 ; 28 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1973 ; Archives of Neurology Volume 29 ; 29 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1974 ; Archives of Neurology Volume 30 ; 30 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1974 ; Archives of Neurology Volume 31 ; 31 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1975 ; Archives of Neurology Volume 32 ; 32 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1976 ; Archives of Neurology Volume 33 ; 33 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1977 ; Archives of Neurology Volume 34 ; 34 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1978 ; Archives of Neurology Volume 35 ; 35 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1979 ; Archives of Neurology Volume 36 ; 36 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1980 ; Archives of Neurology Volume 37 ; 37 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1981 ; Archives of Neurology Volume 38 ; 38 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1982 ; Archives of Neurology Volume 39 ; 39 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1983 ; Archives of Neurology Volume 40 ; 40 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1984 ; Archives of Neurology Volume 41 ; 41 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1985 ; Archives of Neurology Volume 42 ; 42 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1986 ; Archives of Neurology Volume 43 ; 43 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1987 ; Archives of Neurology Volume 44 ; 44 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1988 ; Archives of Neurology Volume 45 ; 45 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1989 ; Archives of Neurology Volume 46 ; 46 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1990 ; Archives of Neurology Volume 47 ; 47 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1991 ; Archives of Neurology Volume 48 ; 48 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1992 ; Archives of Neurology Volume 49 ; 49 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1993 ; Archives of Neurology Volume 50 ; 50 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1994 ; Archives of Neurology Volume 51 ; 51 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1995 ; Archives of Neurology Volume 52 ; 52 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1996 ; Archives of Neurology Volume 53 ; 53 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1997 ; Archives of Neurology Volume 54 ; 54 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1998 ; Archives of Neurology Volume 55 ; 55 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1999 ; Archives of Neurology Volume 56 ; 56 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 2000 ; Archives of Neurology Volume 57 ; 57 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 2001 ; Archives of Neurology Volume 58 ; 58 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 2002 ; Archives of Neurology Volume 59 ; 59 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 2003 ; Archives of Neurology Volume 60 ; 60 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 2004 ; Archives of Neurology Volume 61 ; 61 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 2005 ; Archives of Neurology Volume 62 ; 62 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 2006 ; Archives of Neurology Volume 63 ; 63 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 2007 ; Archives of Neurology Volume 64 ; 64 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2008 ; Archives of Neurology Volume 65 ; 65 ; >
+    au < finished ; finished ; 2009 ; Archives of Neurology Volume 66 ; 66 ; >
+    au < finished ; finished ; 2010 ; Archives of Neurology Volume 67 ; 67 ; >
+    au < finished ; frozen ; 2011 ; Archives of Neurology Volume 68 ; 68 ; >
+
+  }
+
+  {
+
+    title <
+      name = JAMA Ophthalmology ;
+      issn = 0003-9950 ;
+      eissn = 0096-6339 ;
+      issnl = 0003-9950
+    >
+
+    pluginSuffix = ClockssHighWirePlugin
+    param[base_url] = http://archopht.ama-assn.org/
+    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified
+
+    au < zapped ; finished ; 1929 ; Archives of Ophthalmology Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1929 ; Archives of Ophthalmology Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1930 ; Archives of Ophthalmology Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1930 ; Archives of Ophthalmology Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1931 ; Archives of Ophthalmology Volume 5 ; 5 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1931 ; Archives of Ophthalmology Volume 6 ; 6 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1932 ; Archives of Ophthalmology Volume 7 ; 7 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1932 ; Archives of Ophthalmology Volume 8 ; 8 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1933 ; Archives of Ophthalmology Volume 9 ; 9 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1933 ; Archives of Ophthalmology Volume 10 ; 10 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1934 ; Archives of Ophthalmology Volume 11 ; 11 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1934 ; Archives of Ophthalmology Volume 12 ; 12 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1935 ; Archives of Ophthalmology Volume 13 ; 13 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1935 ; Archives of Ophthalmology Volume 14 ; 14 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1936 ; Archives of Ophthalmology Volume 15 ; 15 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1936 ; Archives of Ophthalmology Volume 16 ; 16 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1937 ; Archives of Ophthalmology Volume 17 ; 17 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1937 ; Archives of Ophthalmology Volume 18 ; 18 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1938 ; Archives of Ophthalmology Volume 19 ; 19 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1938 ; Archives of Ophthalmology Volume 20 ; 20 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1939 ; Archives of Ophthalmology Volume 21 ; 21 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1939 ; Archives of Ophthalmology Volume 22 ; 22 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1940 ; Archives of Ophthalmology Volume 23 ; 23 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1940 ; Archives of Ophthalmology Volume 24 ; 24 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1941 ; Archives of Ophthalmology Volume 25 ; 25 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1941 ; Archives of Ophthalmology Volume 26 ; 26 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1942 ; Archives of Ophthalmology Volume 27 ; 27 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1942 ; Archives of Ophthalmology Volume 28 ; 28 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1943 ; Archives of Ophthalmology Volume 29 ; 29 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1943 ; Archives of Ophthalmology Volume 30 ; 30 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1944 ; Archives of Ophthalmology Volume 31 ; 31 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1944 ; Archives of Ophthalmology Volume 32 ; 32 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1945 ; Archives of Ophthalmology Volume 33 ; 33 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1945 ; Archives of Ophthalmology Volume 34 ; 34 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1946 ; Archives of Ophthalmology Volume 35 ; 35 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1946 ; Archives of Ophthalmology Volume 36 ; 36 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1947 ; Archives of Ophthalmology Volume 37 ; 37 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1947 ; Archives of Ophthalmology Volume 38 ; 38 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1948 ; Archives of Ophthalmology Volume 39 ; 39 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1948 ; Archives of Ophthalmology Volume 40 ; 40 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1949 ; Archives of Ophthalmology Volume 41 ; 41 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1949 ; Archives of Ophthalmology Volume 42 ; 42 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1950 ; Archives of Ophthalmology Volume 43 ; 43 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1950 ; Archives of Ophthalmology Volume 44 ; 44 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1951 ; AMA Archives of Ophthalmology Volume 45 ; 45 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1951 ; AMA Archives of Ophthalmology Volume 46 ; 46 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1952 ; AMA Archives of Ophthalmology Volume 47 ; 47 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1952 ; AMA Archives of Ophthalmology Volume 48 ; 48 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1953 ; AMA Archives of Ophthalmology Volume 49 ; 49 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1953 ; AMA Archives of Ophthalmology Volume 50 ; 50 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1954 ; AMA Archives of Ophthalmology Volume 51 ; 51 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1954 ; AMA Archives of Ophthalmology Volume 52 ; 52 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1955 ; AMA Archives of Ophthalmology Volume 53 ; 53 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1955 ; AMA Archives of Ophthalmology Volume 54 ; 54 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1956 ; AMA Archives of Ophthalmology Volume 55 ; 55 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1956 ; AMA Archives of Ophthalmology Volume 56 ; 56 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1957 ; AMA Archives of Ophthalmology Volume 57 ; 57 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1957 ; AMA Archives of Ophthalmology Volume 58 ; 58 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1958 ; AMA Archives of Ophthalmology Volume 59 ; 59 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1958 ; AMA Archives of Ophthalmology Volume 60 ; 60 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1959 ; AMA Archives of Ophthalmology Volume 61 ; 61 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1959 ; AMA Archives of Ophthalmology Volume 62 ; 62 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1960 ; AMA Archives of Ophthalmology Volume 63 ; 63 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1960 ; AMA Archives of Ophthalmology Volume 64 ; 64 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1961 ; Archives of Ophthalmology Volume 65 ; 65 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1961 ; Archives of Ophthalmology Volume 66 ; 66 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1962 ; Archives of Ophthalmology Volume 67 ; 67 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1962 ; Archives of Ophthalmology Volume 68 ; 68 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1963 ; Archives of Ophthalmology Volume 69 ; 69 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1963 ; Archives of Ophthalmology Volume 70 ; 70 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1964 ; Archives of Ophthalmology Volume 71 ; 71 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1964 ; Archives of Ophthalmology Volume 72 ; 72 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1965 ; Archives of Ophthalmology Volume 73 ; 73 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1965 ; Archives of Ophthalmology Volume 74 ; 74 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1966 ; Archives of Ophthalmology Volume 75 ; 75 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1966 ; Archives of Ophthalmology Volume 76 ; 76 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1967 ; Archives of Ophthalmology Volume 77 ; 77 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1967 ; Archives of Ophthalmology Volume 78 ; 78 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1968 ; Archives of Ophthalmology Volume 79 ; 79 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1968 ; Archives of Ophthalmology Volume 80 ; 80 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1969 ; Archives of Ophthalmology Volume 81 ; 81 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1969 ; Archives of Ophthalmology Volume 82 ; 82 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1970 ; Archives of Ophthalmology Volume 83 ; 83 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1970 ; Archives of Ophthalmology Volume 84 ; 84 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1971 ; Archives of Ophthalmology Volume 85 ; 85 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1971 ; Archives of Ophthalmology Volume 86 ; 86 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1972 ; Archives of Ophthalmology Volume 87 ; 87 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1972 ; Archives of Ophthalmology Volume 88 ; 88 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1973 ; Archives of Ophthalmology Volume 89 ; 89 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1973 ; Archives of Ophthalmology Volume 90 ; 90 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1974 ; Archives of Ophthalmology Volume 91 ; 91 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1974 ; Archives of Ophthalmology Volume 92 ; 92 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1975 ; Archives of Ophthalmology Volume 93 ; 93 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1976 ; Archives of Ophthalmology Volume 94 ; 94 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1977 ; Archives of Ophthalmology Volume 95 ; 95 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1978 ; Archives of Ophthalmology Volume 96 ; 96 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1979 ; Archives of Ophthalmology Volume 97 ; 97 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1980 ; Archives of Ophthalmology Volume 98 ; 98 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1981 ; Archives of Ophthalmology Volume 99 ; 99 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1982 ; Archives of Ophthalmology Volume 100 ; 100 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1983 ; Archives of Ophthalmology Volume 101 ; 101 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1984 ; Archives of Ophthalmology Volume 102 ; 102 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1985 ; Archives of Ophthalmology Volume 103 ; 103 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1986 ; Archives of Ophthalmology Volume 104 ; 104 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1987 ; Archives of Ophthalmology Volume 105 ; 105 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1988 ; Archives of Ophthalmology Volume 106 ; 106 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1989 ; Archives of Ophthalmology Volume 107 ; 107 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1990 ; Archives of Ophthalmology Volume 108 ; 108 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1991 ; Archives of Ophthalmology Volume 109 ; 109 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1992 ; Archives of Ophthalmology Volume 110 ; 110 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1993 ; Archives of Ophthalmology Volume 111 ; 111 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1994 ; Archives of Ophthalmology Volume 112 ; 112 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1995 ; Archives of Ophthalmology Volume 113 ; 113 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1996 ; Archives of Ophthalmology Volume 114 ; 114 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1997 ; Archives of Ophthalmology Volume 115 ; 115 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1998 ; Archives of Ophthalmology Volume 116 ; 116 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1999 ; Archives of Ophthalmology Volume 117 ; 117 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 2000 ; Archives of Ophthalmology Volume 118 ; 118 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 2001 ; Archives of Ophthalmology Volume 119 ; 119 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 2002 ; Archives of Ophthalmology Volume 120 ; 120 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 2003 ; Archives of Ophthalmology Volume 121 ; 121 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 2004 ; Archives of Ophthalmology Volume 122 ; 122 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 2005 ; Archives of Ophthalmology Volume 123 ; 123 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 2006 ; Archives of Ophthalmology Volume 124 ; 124 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 2007 ; Archives of Ophthalmology Volume 125 ; 125 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2008 ; Archives of Ophthalmology Volume 126 ; 126 ; >
+    au < finished ; finished ; 2009 ; Archives of Ophthalmology Volume 127 ; 127 ; >
+    au < finished ; frozen ; 2010 ; Archives of Ophthalmology Volume 128 ; 128 ; >
+    au < finished ; finished ; 2011 ; Archives of Ophthalmology Volume 129 ; 129 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Archives of Ophthalmology Volume 130 ; 130 ; >
+
+  }
+
+  {
+
+    title <
+      name = JAMA Otolaryngology - Head & Neck Surgery ;
+      issn = 0886-4470 ;
+      eissn = 1538-361X ;
+      issnl = 0886-4470
+    >
+
+    pluginSuffix = ClockssHighWirePlugin
+    param[base_url] = http://archotol.ama-assn.org/
+    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified
+
+    au < zapped ; finished ; 1925 ; Archives of Otolaryngology Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1925 ; Archives of Otolaryngology Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1926 ; Archives of Otolaryngology Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1926 ; Archives of Otolaryngology Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1927 ; Archives of Otolaryngology Volume 5 ; 5 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1927 ; Archives of Otolaryngology Volume 6 ; 6 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1928 ; Archives of Otolaryngology Volume 7 ; 7 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1928 ; Archives of Otolaryngology Volume 8 ; 8 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1929 ; Archives of Otolaryngology Volume 9 ; 9 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1929 ; Archives of Otolaryngology Volume 10 ; 10 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1930 ; Archives of Otolaryngology Volume 11 ; 11 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1930 ; Archives of Otolaryngology Volume 12 ; 12 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1931 ; Archives of Otolaryngology Volume 13 ; 13 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1931 ; Archives of Otolaryngology Volume 14 ; 14 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1932 ; Archives of Otolaryngology Volume 15 ; 15 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1932 ; Archives of Otolaryngology Volume 16 ; 16 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1933 ; Archives of Otolaryngology Volume 17 ; 17 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1933 ; Archives of Otolaryngology Volume 18 ; 18 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1934 ; Archives of Otolaryngology Volume 19 ; 19 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1934 ; Archives of Otolaryngology Volume 20 ; 20 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1935 ; Archives of Otolaryngology Volume 21 ; 21 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1935 ; Archives of Otolaryngology Volume 22 ; 22 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1936 ; Archives of Otolaryngology Volume 23 ; 23 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1936 ; Archives of Otolaryngology Volume 24 ; 24 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1937 ; Archives of Otolaryngology Volume 25 ; 25 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1937 ; Archives of Otolaryngology Volume 26 ; 26 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1938 ; Archives of Otolaryngology Volume 27 ; 27 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1938 ; Archives of Otolaryngology Volume 28 ; 28 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1939 ; Archives of Otolaryngology Volume 29 ; 29 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1939 ; Archives of Otolaryngology Volume 30 ; 30 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1940 ; Archives of Otolaryngology Volume 31 ; 31 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1940 ; Archives of Otolaryngology Volume 32 ; 32 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1941 ; Archives of Otolaryngology Volume 33 ; 33 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1941 ; Archives of Otolaryngology Volume 34 ; 34 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1942 ; Archives of Otolaryngology Volume 35 ; 35 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1942 ; Archives of Otolaryngology Volume 36 ; 36 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1943 ; Archives of Otolaryngology Volume 37 ; 37 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1943 ; Archives of Otolaryngology Volume 38 ; 38 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1944 ; Archives of Otolaryngology Volume 39 ; 39 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1944 ; Archives of Otolaryngology Volume 40 ; 40 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1945 ; Archives of Otolaryngology Volume 41 ; 41 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1945 ; Archives of Otolaryngology Volume 42 ; 42 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1946 ; Archives of Otolaryngology Volume 43 ; 43 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1946 ; Archives of Otolaryngology Volume 44 ; 44 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1947 ; Archives of Otolaryngology Volume 45 ; 45 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1947 ; Archives of Otolaryngology Volume 46 ; 46 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1948 ; Archives of Otolaryngology Volume 47 ; 47 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1948 ; Archives of Otolaryngology Volume 48 ; 48 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1949 ; Archives of Otolaryngology Volume 49 ; 49 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1949 ; Archives of Otolaryngology Volume 50 ; 50 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1950 ; Archives of Otolaryngology Volume 51 ; 51 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1950 ; Archives of Otolaryngology Volume 52 ; 52 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1951 ; AMA Archives of Otolaryngology Volume 53 ; 53 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1951 ; AMA Archives of Otolaryngology Volume 54 ; 54 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1952 ; AMA Archives of Otolaryngology Volume 55 ; 55 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1952 ; AMA Archives of Otolaryngology Volume 56 ; 56 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1953 ; AMA Archives of Otolaryngology Volume 57 ; 57 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1953 ; AMA Archives of Otolaryngology Volume 58 ; 58 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1954 ; AMA Archives of Otolaryngology Volume 59 ; 59 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1954 ; AMA Archives of Otolaryngology Volume 60 ; 60 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1955 ; AMA Archives of Otolaryngology Volume 61 ; 61 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1955 ; AMA Archives of Otolaryngology Volume 62 ; 62 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1956 ; AMA Archives of Otolaryngology Volume 63 ; 63 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1956 ; AMA Archives of Otolaryngology Volume 64 ; 64 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1957 ; AMA Archives of Otolaryngology Volume 65 ; 65 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1957 ; AMA Archives of Otolaryngology Volume 66 ; 66 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1958 ; AMA Archives of Otolaryngology Volume 67 ; 67 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1958 ; AMA Archives of Otolaryngology Volume 68 ; 68 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1959 ; AMA Archives of Otolaryngology Volume 69 ; 69 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1959 ; AMA Archives of Otolaryngology Volume 70 ; 70 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1960 ; AMA Archives of Otolaryngology Volume 71 ; 71 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1960 ; AMA Archives of Otolaryngology Volume 72 ; 72 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1961 ; Archives of Otolaryngology Volume 73 ; 73 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1961 ; Archives of Otolaryngology Volume 74 ; 74 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1962 ; Archives of Otolaryngology Volume 75 ; 75 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1962 ; Archives of Otolaryngology Volume 76 ; 76 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1963 ; Archives of Otolaryngology Volume 77 ; 77 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1963 ; Archives of Otolaryngology Volume 78 ; 78 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1964 ; Archives of Otolaryngology Volume 79 ; 79 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1964 ; Archives of Otolaryngology Volume 80 ; 80 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1965 ; Archives of Otolaryngology Volume 81 ; 81 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1965 ; Archives of Otolaryngology Volume 82 ; 82 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1966 ; Archives of Otolaryngology Volume 83 ; 83 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1966 ; Archives of Otolaryngology Volume 84 ; 84 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1967 ; Archives of Otolaryngology Volume 85 ; 85 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1967 ; Archives of Otolaryngology Volume 86 ; 86 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1968 ; Archives of Otolaryngology Volume 87 ; 87 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1968 ; Archives of Otolaryngology Volume 88 ; 88 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1969 ; Archives of Otolaryngology Volume 89 ; 89 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1969 ; Archives of Otolaryngology Volume 90 ; 90 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1970 ; Archives of Otolaryngology Volume 91 ; 91 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1970 ; Archives of Otolaryngology Volume 92 ; 92 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1971 ; Archives of Otolaryngology Volume 93 ; 93 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1971 ; Archives of Otolaryngology Volume 94 ; 94 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1972 ; Archives of Otolaryngology Volume 95 ; 95 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1972 ; Archives of Otolaryngology Volume 96 ; 96 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1973 ; Archives of Otolaryngology Volume 97 ; 97 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1973 ; Archives of Otolaryngology Volume 98 ; 98 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1974 ; Archives of Otolaryngology Volume 99 ; 99 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1974 ; Archives of Otolaryngology Volume 100 ; 100 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1975 ; Archives of Otolaryngology Volume 101 ; 101 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1976 ; Archives of Otolaryngology Volume 102 ; 102 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1977 ; Archives of Otolaryngology Volume 103 ; 103 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1978 ; Archives of Otolaryngology Volume 104 ; 104 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1979 ; Archives of Otolaryngology Volume 105 ; 105 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1980 ; Archives of Otolaryngology Volume 106 ; 106 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1981 ; Archives of Otolaryngology Volume 107 ; 107 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1982 ; Archives of Otolaryngology Volume 108 ; 108 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1983 ; Archives of Otolaryngology Volume 109 ; 109 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1984 ; Archives of Otolaryngology Volume 110 ; 110 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1985 ; Archives of Otolaryngology Volume 111 ; 111 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1986 ; Archives of Otolaryngology - Head & Neck Surgery Volume 112 ; 112 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1987 ; Archives of Otolaryngology - Head & Neck Surgery Volume 113 ; 113 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1988 ; Archives of Otolaryngology - Head & Neck Surgery Volume 114 ; 114 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1989 ; Archives of Otolaryngology - Head & Neck Surgery Volume 115 ; 115 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1990 ; Archives of Otolaryngology - Head & Neck Surgery Volume 116 ; 116 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1991 ; Archives of Otolaryngology - Head & Neck Surgery Volume 117 ; 117 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1992 ; Archives of Otolaryngology - Head & Neck Surgery Volume 118 ; 118 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1993 ; Archives of Otolaryngology - Head & Neck Surgery Volume 119 ; 119 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1994 ; Archives of Otolaryngology - Head & Neck Surgery Volume 120 ; 120 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1995 ; Archives of Otolaryngology - Head & Neck Surgery Volume 121 ; 121 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1996 ; Archives of Otolaryngology - Head & Neck Surgery Volume 122 ; 122 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1997 ; Archives of Otolaryngology - Head & Neck Surgery Volume 123 ; 123 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1998 ; Archives of Otolaryngology - Head & Neck Surgery Volume 124 ; 124 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1999 ; Archives of Otolaryngology - Head & Neck Surgery Volume 125 ; 125 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 2000 ; Archives of Otolaryngology - Head & Neck Surgery Volume 126 ; 126 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 2001 ; Archives of Otolaryngology - Head & Neck Surgery Volume 127 ; 127 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 2002 ; Archives of Otolaryngology - Head & Neck Surgery Volume 128 ; 128 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 2003 ; Archives of Otolaryngology - Head & Neck Surgery Volume 129 ; 129 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 2004 ; Archives of Otolaryngology - Head & Neck Surgery Volume 130 ; 130 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 2005 ; Archives of Otolaryngology - Head & Neck Surgery Volume 131 ; 131 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 2006 ; Archives of Otolaryngology - Head & Neck Surgery Volume 132 ; 132 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 2007 ; Archives of Otolaryngology - Head & Neck Surgery Volume 133 ; 133 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2008 ; Archives of Otolaryngology - Head & Neck Surgery Volume 134 ; 134 ; >
+    au < finished ; finished ; 2009 ; Archives of Otolaryngology - Head & Neck Surgery Volume 135 ; 135 ; >
+    au < finished ; finished ; 2010 ; Archives of Otolaryngology - Head & Neck Surgery Volume 136 ; 136 ; >
+    au < finished ; frozen ; 2011 ; Archives of Otolaryngology - Head & Neck Surgery Volume 137 ; 137 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Archives of Otolaryngology - Head & Neck Surgery Volume 138 ; 138 ; >
+
+  }
+
+  {
+
+    title <
+      name = JAMA Pediatrics ;
+      issn = 1072-4710 ;
+      eissn = 1538-3628 ;
+      issnl = 1072-4710
+    >
+
+    pluginSuffix = ClockssHighWirePlugin
+    param[base_url] = http://archpedi.ama-assn.org/
+    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified
+
+    au < zapped ; finished ; 1911 ; American Journal of Diseases of Children Volume I ; I ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1911 ; American Journal of Diseases of Children Volume II ; II ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1912 ; American Journal of Diseases of Children Volume III ; III ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1912 ; American Journal of Diseases of Children Volume IV ; IV ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1913 ; American Journal of Diseases of Children Volume V ; V ; reingest2.clockss.org:8085 >
+    au < superseded ; down ; 1913 ; American Journal of Diseases of Children Volume VI [never crawled] ; VI ; reingest2.clockss.org:8085 >
+    au < superseded ; down ; 1914 ; American Journal of Diseases of Children Volume VII [never crawled] ; VII ; reingest3.clockss.org:8083 >
+    au < superseded ; down ; 1914 ; American Journal of Diseases of Children Volume VIII [never crawled] ; VIII ; reingest3.clockss.org:8083 >
+    au < superseded ; down ; 1915 ; American Journal of Diseases of Children Volume IX [never crawled] ; IX ; reingest4.clockss.org:8082 >
+    au < superseded ; down ; 1915 ; American Journal of Diseases of Children Volume X [never crawled] ; X ; reingest4.clockss.org:8082 >
+    au < superseded ; down ; 1916 ; American Journal of Diseases of Children Volume XI [never crawled] ; XI ; reingest1.clockss.org:8082 >
+    au < superseded ; down ; 1916 ; American Journal of Diseases of Children Volume XII [never crawled] ; XII ; reingest1.clockss.org:8082 >
+    au < superseded ; down ; 1917 ; American Journal of Diseases of Children Volume 13 [never crawled] ; 13 ; reingest2.clockss.org:8085 >
+    au < superseded ; down ; 1917 ; American Journal of Diseases of Children Volume 14 [never crawled] ; 14 ; reingest2.clockss.org:8085 >
+    au < superseded ; down ; 1918 ; American Journal of Diseases of Children Volume 15 [never crawled] ; 15 ; reingest3.clockss.org:8083 >
+    au < superseded ; down ; 1918 ; American Journal of Diseases of Children Volume 16 [never crawled] ; 16 ; reingest3.clockss.org:8083 >
+    au < superseded ; down ; 1919 ; American Journal of Diseases of Children Volume 17 [never crawled] ; 17 ; reingest4.clockss.org:8082 >
+    au < superseded ; down ; 1919 ; American Journal of Diseases of Children Volume 18 [never crawled] ; 18 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1920 ; American Journal of Diseases of Children Volume 19 ; 19 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1920 ; American Journal of Diseases of Children Volume 20 ; 20 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1921 ; American Journal of Diseases of Children Volume 21 ; 21 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1921 ; American Journal of Diseases of Children Volume 22 ; 22 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1922 ; American Journal of Diseases of Children Volume 23 ; 23 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1922 ; American Journal of Diseases of Children Volume 24 ; 24 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1923 ; American Journal of Diseases of Children Volume 25 ; 25 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1923 ; American Journal of Diseases of Children Volume 26 ; 26 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1924 ; American Journal of Diseases of Children Volume 27 ; 27 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1924 ; American Journal of Diseases of Children Volume 28 ; 28 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1925 ; American Journal of Diseases of Children Volume 29 ; 29 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1925 ; American Journal of Diseases of Children Volume 30 ; 30 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1926 ; American Journal of Diseases of Children Volume 31 ; 31 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1926 ; American Journal of Diseases of Children Volume 32 ; 32 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1927 ; American Journal of Diseases of Children Volume 33 ; 33 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1927 ; American Journal of Diseases of Children Volume 34 ; 34 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1928 ; American Journal of Diseases of Children Volume 35 ; 35 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1928 ; American Journal of Diseases of Children Volume 36 ; 36 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1929 ; American Journal of Diseases of Children Volume 37 ; 37 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1929 ; American Journal of Diseases of Children Volume 38 ; 38 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1930 ; American Journal of Diseases of Children Volume 39 ; 39 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1930 ; American Journal of Diseases of Children Volume 40 ; 40 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1931 ; American Journal of Diseases of Children Volume 41 ; 41 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1931 ; American Journal of Diseases of Children Volume 42 ; 42 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1932 ; American Journal of Diseases of Children Volume 43 ; 43 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1932 ; American Journal of Diseases of Children Volume 44 ; 44 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1933 ; American Journal of Diseases of Children Volume 45 ; 45 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1933 ; American Journal of Diseases of Children Volume 46 ; 46 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1934 ; American Journal of Diseases of Children Volume 47 ; 47 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1934 ; American Journal of Diseases of Children Volume 48 ; 48 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1935 ; American Journal of Diseases of Children Volume 49 ; 49 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1935 ; American Journal of Diseases of Children Volume 50 ; 50 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1936 ; American Journal of Diseases of Children Volume 51 ; 51 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1936 ; American Journal of Diseases of Children Volume 52 ; 52 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1937 ; American Journal of Diseases of Children Volume 53 ; 53 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1937 ; American Journal of Diseases of Children Volume 54 ; 54 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1938 ; American Journal of Diseases of Children Volume 55 ; 55 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1938 ; American Journal of Diseases of Children Volume 56 ; 56 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1939 ; American Journal of Diseases of Children Volume 57 ; 57 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1939 ; American Journal of Diseases of Children Volume 58 ; 58 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1940 ; American Journal of Diseases of Children Volume 59 ; 59 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1940 ; American Journal of Diseases of Children Volume 60 ; 60 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1941 ; American Journal of Diseases of Children Volume 61 ; 61 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1941 ; American Journal of Diseases of Children Volume 62 ; 62 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1942 ; American Journal of Diseases of Children Volume 63 ; 63 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1942 ; American Journal of Diseases of Children Volume 64 ; 64 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1943 ; American Journal of Diseases of Children Volume 65 ; 65 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1943 ; American Journal of Diseases of Children Volume 66 ; 66 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1944 ; American Journal of Diseases of Children Volume 67 ; 67 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1944 ; American Journal of Diseases of Children Volume 68 ; 68 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1945 ; American Journal of Diseases of Children Volume 69 ; 69 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1945 ; American Journal of Diseases of Children Volume 70 ; 70 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1946 ; American Journal of Diseases of Children Volume 71 ; 71 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1946 ; American Journal of Diseases of Children Volume 72 ; 72 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1947 ; American Journal of Diseases of Children Volume 73 ; 73 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1947 ; American Journal of Diseases of Children Volume 74 ; 74 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1948 ; American Journal of Diseases of Children Volume 75 ; 75 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1948 ; American Journal of Diseases of Children Volume 76 ; 76 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1949 ; American Journal of Diseases of Children Volume 77 ; 77 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1949 ; American Journal of Diseases of Children Volume 78 ; 78 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1950 ; American Journal of Diseases of Children Volume 79 ; 79 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1950 ; American Journal of Diseases of Children Volume 80 ; 80 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1951 ; AMA American Journal of Diseases of Children Volume 81 ; 81 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1951 ; AMA American Journal of Diseases of Children Volume 82 ; 82 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1952 ; AMA American Journal of Diseases of Children Volume 83 ; 83 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1952 ; AMA American Journal of Diseases of Children Volume 84 ; 84 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1953 ; AMA American Journal of Diseases of Children Volume 85 ; 85 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1953 ; AMA American Journal of Diseases of Children Volume 86 ; 86 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1954 ; AMA American Journal of Diseases of Children Volume 87 ; 87 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1954 ; AMA American Journal of Diseases of Children Volume 88 ; 88 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1955 ; AMA American Journal of Diseases of Children Volume 89 ; 89 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1955 ; AMA American Journal of Diseases of Children Volume 90 ; 90 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1956 ; AMA Journal of Diseases of Children Volume 91 ; 91 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1956 ; AMA Journal of Diseases of Children Volume 92 ; 92 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1957 ; AMA Journal of Diseases of Children Volume 93 ; 93 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1957 ; AMA Journal of Diseases of Children Volume 94 ; 94 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1958 ; AMA Journal of Diseases of Children Volume 95 ; 95 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1958 ; AMA Journal of Diseases of Children Volume 96 ; 96 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1959 ; AMA Journal of Diseases of Children Volume 97 ; 97 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1959 ; AMA Journal of Diseases of Children Volume 98 ; 98 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1960 ; AMA Journal of Diseases of Children Volume 99 ; 99 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1960 ; AMA Journal of Diseases of Children Volume 100 ; 100 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1961 ; American Journal of Diseases of Children Volume 101 ; 101 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1961 ; American Journal of Diseases of Children Volume 102 ; 102 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1962 ; American Journal of Diseases of Children Volume 103 ; 103 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1962 ; American Journal of Diseases of Children Volume 104 ; 104 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1963 ; American Journal of Diseases of Children Volume 105 ; 105 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1963 ; American Journal of Diseases of Children Volume 106 ; 106 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1964 ; American Journal of Diseases of Children Volume 107 ; 107 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1964 ; American Journal of Diseases of Children Volume 108 ; 108 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1965 ; American Journal of Diseases of Children Volume 109 ; 109 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1965 ; American Journal of Diseases of Children Volume 110 ; 110 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1966 ; American Journal of Diseases of Children Volume 111 ; 111 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1966 ; American Journal of Diseases of Children Volume 112 ; 112 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1967 ; American Journal of Diseases of Children Volume 113 ; 113 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1967 ; American Journal of Diseases of Children Volume 114 ; 114 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1968 ; American Journal of Diseases of Children Volume 115 ; 115 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1968 ; American Journal of Diseases of Children Volume 116 ; 116 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1969 ; American Journal of Diseases of Children Volume 117 ; 117 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1969 ; American Journal of Diseases of Children Volume 118 ; 118 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1970 ; American Journal of Diseases of Children Volume 119 ; 119 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1970 ; American Journal of Diseases of Children Volume 120 ; 120 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1971 ; American Journal of Diseases of Children Volume 121 ; 121 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1971 ; American Journal of Diseases of Children Volume 122 ; 122 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1972 ; American Journal of Diseases of Children Volume 123 ; 123 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1972 ; American Journal of Diseases of Children Volume 124 ; 124 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1973 ; American Journal of Diseases of Children Volume 125 ; 125 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1973 ; American Journal of Diseases of Children Volume 126 ; 126 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1974 ; American Journal of Diseases of Children Volume 127 ; 127 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1974 ; American Journal of Diseases of Children Volume 128 ; 128 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1975 ; American Journal of Diseases of Children Volume 129 ; 129 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1976 ; American Journal of Diseases of Children Volume 130 ; 130 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1977 ; American Journal of Diseases of Children Volume 131 ; 131 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1978 ; American Journal of Diseases of Children Volume 132 ; 132 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1979 ; American Journal of Diseases of Children Volume 133 ; 133 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1980 ; American Journal of Diseases of Children Volume 134 ; 134 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1981 ; American Journal of Diseases of Children Volume 135 ; 135 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1982 ; American Journal of Diseases of Children Volume 136 ; 136 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1983 ; American Journal of Diseases of Children Volume 137 ; 137 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1984 ; American Journal of Diseases of Children Volume 138 ; 138 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1985 ; American Journal of Diseases of Children Volume 139 ; 139 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1986 ; American Journal of Diseases of Children Volume 140 ; 140 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1987 ; American Journal of Diseases of Children Volume 141 ; 141 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1988 ; American Journal of Diseases of Children Volume 142 ; 142 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1989 ; American Journal of Diseases of Children Volume 143 ; 143 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1990 ; American Journal of Diseases of Children Volume 144 ; 144 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1991 ; American Journal of Diseases of Children Volume 145 ; 145 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1992 ; American Journal of Diseases of Children Volume 146 ; 146 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1993 ; American Journal of Diseases of Children Volume 147 ; 147 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1994 ; Archives of Pediatrics & Adolescent Medicine Volume 148 ; 148 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1995 ; Archives of Pediatrics & Adolescent Medicine Volume 149 ; 149 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1996 ; Archives of Pediatrics & Adolescent Medicine Volume 150 ; 150 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1997 ; Archives of Pediatrics & Adolescent Medicine Volume 151 ; 151 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1998 ; Archives of Pediatrics & Adolescent Medicine Volume 152 ; 152 ; reingest3.clockss.org:8083 >
+    au < zapped ; down ; 1999 ; Archives of Pediatrics & Adolescent Medicine Volume 153 [to delete] ; 153 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 2000 ; Archives of Pediatrics & Adolescent Medicine Volume 154 ; 154 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 2001 ; Archives of Pediatrics & Adolescent Medicine Volume 155 ; 155 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 2002 ; Archives of Pediatrics & Adolescent Medicine Volume 156 ; 156 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 2003 ; Archives of Pediatrics & Adolescent Medicine Volume 157 ; 157 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 2004 ; Archives of Pediatrics & Adolescent Medicine Volume 158 ; 158 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 2005 ; Archives of Pediatrics & Adolescent Medicine Volume 159 ; 159 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 2006 ; Archives of Pediatrics & Adolescent Medicine Volume 160 ; 160 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 2007 ; Archives of Pediatrics & Adolescent Medicine Volume 161 ; 161 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2008 ; Archives of Pediatrics & Adolescent Medicine Volume 162 ; 162 ; >
+    au < finished ; finished ; 2009 ; Archives of Pediatrics & Adolescent Medicine Volume 163 ; 163 ; >
+    au < finished ; frozen ; 2010 ; Archives of Pediatrics & Adolescent Medicine Volume 164 ; 164 ; >
+    au < finished ; finished ; 2011 ; Archives of Pediatrics & Adolescent Medicine Volume 165 ; 165 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Archives of Pediatrics & Adolescent Medicine Volume 166 ; 166 ; >
+    
+  }
+
+  {
+
+    title <
+      name = JAMA Psychiatry ;
+      issn = 0003-990X ;
+      eissn = 1538-3636 ;
+      issnl = 0003-990X
+    >
+
+    pluginSuffix = ClockssHighWirePlugin
+    param[base_url] = http://archpsyc.ama-assn.org/
+    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified
+
+    au < zapped ; finished ; 1959 ; AMA Archives of General Psychiatry Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1960 ; AMA Archives of General Psychiatry Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1960 ; AMA Archives of General Psychiatry Volume 3 ; 3 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1961 ; Archives of General Psychiatry Volume 4 ; 4 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1961 ; Archives of General Psychiatry Volume 5 ; 5 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1962 ; Archives of General Psychiatry Volume 6 ; 6 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1962 ; Archives of General Psychiatry Volume 7 ; 7 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1963 ; Archives of General Psychiatry Volume 8 ; 8 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1963 ; Archives of General Psychiatry Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1964 ; Archives of General Psychiatry Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1964 ; Archives of General Psychiatry Volume 11 ; 11 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1965 ; Archives of General Psychiatry Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1965 ; Archives of General Psychiatry Volume 13 ; 13 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1966 ; Archives of General Psychiatry Volume 14 ; 14 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1966 ; Archives of General Psychiatry Volume 15 ; 15 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1967 ; Archives of General Psychiatry Volume 16 ; 16 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1967 ; Archives of General Psychiatry Volume 17 ; 17 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1968 ; Archives of General Psychiatry Volume 18 ; 18 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1968 ; Archives of General Psychiatry Volume 19 ; 19 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1969 ; Archives of General Psychiatry Volume 20 ; 20 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1969 ; Archives of General Psychiatry Volume 21 ; 21 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1970 ; Archives of General Psychiatry Volume 22 ; 22 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1970 ; Archives of General Psychiatry Volume 23 ; 23 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1971 ; Archives of General Psychiatry Volume 24 ; 24 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1971 ; Archives of General Psychiatry Volume 25 ; 25 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1972 ; Archives of General Psychiatry Volume 26 ; 26 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1972 ; Archives of General Psychiatry Volume 27 ; 27 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1973 ; Archives of General Psychiatry Volume 28 ; 28 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1973 ; Archives of General Psychiatry Volume 29 ; 29 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1974 ; Archives of General Psychiatry Volume 30 ; 30 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1974 ; Archives of General Psychiatry Volume 31 ; 31 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1975 ; Archives of General Psychiatry Volume 32 ; 32 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1976 ; Archives of General Psychiatry Volume 33 ; 33 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1977 ; Archives of General Psychiatry Volume 34 ; 34 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1978 ; Archives of General Psychiatry Volume 35 ; 35 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1979 ; Archives of General Psychiatry Volume 36 ; 36 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1980 ; Archives of General Psychiatry Volume 37 ; 37 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1981 ; Archives of General Psychiatry Volume 38 ; 38 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1982 ; Archives of General Psychiatry Volume 39 ; 39 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1983 ; Archives of General Psychiatry Volume 40 ; 40 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1984 ; Archives of General Psychiatry Volume 41 ; 41 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1985 ; Archives of General Psychiatry Volume 42 ; 42 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1986 ; Archives of General Psychiatry Volume 43 ; 43 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1987 ; Archives of General Psychiatry Volume 44 ; 44 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1988 ; Archives of General Psychiatry Volume 45 ; 45 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1989 ; Archives of General Psychiatry Volume 46 ; 46 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1990 ; Archives of General Psychiatry Volume 47 ; 47 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1991 ; Archives of General Psychiatry Volume 48 ; 48 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1992 ; Archives of General Psychiatry Volume 49 ; 49 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1993 ; Archives of General Psychiatry Volume 50 ; 50 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1994 ; Archives of General Psychiatry Volume 51 ; 51 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1995 ; Archives of General Psychiatry Volume 52 ; 52 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1996 ; Archives of General Psychiatry Volume 53 ; 53 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1997 ; Archives of General Psychiatry Volume 54 ; 54 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1998 ; Archives of General Psychiatry Volume 55 ; 55 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1999 ; Archives of General Psychiatry Volume 56 ; 56 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 2000 ; Archives of General Psychiatry Volume 57 ; 57 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 2001 ; Archives of General Psychiatry Volume 58 ; 58 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 2002 ; Archives of General Psychiatry Volume 59 ; 59 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 2003 ; Archives of General Psychiatry Volume 60 ; 60 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 2004 ; Archives of General Psychiatry Volume 61 ; 61 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 2005 ; Archives of General Psychiatry Volume 62 ; 62 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 2006 ; Archives of General Psychiatry Volume 63 ; 63 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 2007 ; Archives of General Psychiatry Volume 64 ; 64 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2008 ; Archives of General Psychiatry Volume 65 ; 65 ; >
+    au < finished ; finished ; 2009 ; Archives of General *Psychiatry Volume 66 ; 66 ; >
+    au < finished ; finished ; 2010 ; Archives of General Psychiatry Volume 67 ; 67 ; >
+    au < finished ; frozen ; 2011 ; Archives of General Psychiatry Volume 68 ; 68 ; >
+
+  }
+
+  {
+
+    title <
+      name = Archives of Surgery ;
+      issn = 0004-0010 ;
+      eissn = 1538-3644 ;
+      issnl = 0004-0010
+    >
+
+    pluginSuffix = ClockssHighWirePlugin
+    param[base_url] = http://archsurg.ama-assn.org/
+    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified
+
+    au < zapped ; finished ; 1920 ; Archives of Surgery Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1920 ; Archives of Surgery Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1921 ; Archives of Surgery Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1921 ; Archives of Surgery Volume 4 ; 4 ; reingest2.clockss.org:8085 >
+    au < zapped ; superseded ; 1922 ; Archives of Surgery Volume 5 ; 5 ; reingest3.clockss.org:8083 >
+    au < zapped ; superseded ; 1922 ; Archives of Surgery Volume 6 ; 6 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1923 ; Archives of Surgery Volume 7 ; 7 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1923 ; Archives of Surgery Volume 8 ; 8 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1924 ; Archives of Surgery Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1924 ; Archives of Surgery Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1925 ; Archives of Surgery Volume 11 ; 11 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1925 ; Archives of Surgery Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1926 ; Archives of Surgery Volume 13 ; 13 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1926 ; Archives of Surgery Volume 14 ; 14 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1927 ; Archives of Surgery Volume 15 ; 15 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1927 ; Archives of Surgery Volume 16 ; 16 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1928 ; Archives of Surgery Volume 17 ; 17 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1928 ; Archives of Surgery Volume 18 ; 18 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1929 ; Archives of Surgery Volume 19 ; 19 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1929 ; Archives of Surgery Volume 20 ; 20 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1930 ; Archives of Surgery Volume 21 ; 21 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1930 ; Archives of Surgery Volume 22 ; 22 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1931 ; Archives of Surgery Volume 23 ; 23 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1931 ; Archives of Surgery Volume 24 ; 24 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1932 ; Archives of Surgery Volume 25 ; 25 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1932 ; Archives of Surgery Volume 26 ; 26 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1933 ; Archives of Surgery Volume 27 ; 27 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1933 ; Archives of Surgery Volume 28 ; 28 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1934 ; Archives of Surgery Volume 29 ; 29 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1934 ; Archives of Surgery Volume 30 ; 30 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1935 ; Archives of Surgery Volume 31 ; 31 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1935 ; Archives of Surgery Volume 32 ; 32 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1936 ; Archives of Surgery Volume 33 ; 33 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1936 ; Archives of Surgery Volume 34 ; 34 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1937 ; Archives of Surgery Volume 35 ; 35 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1937 ; Archives of Surgery Volume 36 ; 36 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1938 ; Archives of Surgery Volume 37 ; 37 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1938 ; Archives of Surgery Volume 38 ; 38 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1939 ; Archives of Surgery Volume 39 ; 39 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1939 ; Archives of Surgery Volume 40 ; 40 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1940 ; Archives of Surgery Volume 41 ; 41 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1940 ; Archives of Surgery Volume 42 ; 42 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1941 ; Archives of Surgery Volume 43 ; 43 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1941 ; Archives of Surgery Volume 44 ; 44 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1942 ; Archives of Surgery Volume 45 ; 45 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1942 ; Archives of Surgery Volume 46 ; 46 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1943 ; Archives of Surgery Volume 47 ; 47 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1943 ; Archives of Surgery Volume 48 ; 48 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1944 ; Archives of Surgery Volume 49 ; 49 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1944 ; Archives of Surgery Volume 50 ; 50 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1945 ; Archives of Surgery Volume 51 ; 51 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1945 ; Archives of Surgery Volume 52 ; 52 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1946 ; Archives of Surgery Volume 53 ; 53 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1946 ; Archives of Surgery Volume 54 ; 54 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1947 ; Archives of Surgery Volume 55 ; 55 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1947 ; Archives of Surgery Volume 56 ; 56 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1948 ; Archives of Surgery Volume 57 ; 57 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1948 ; Archives of Surgery Volume 58 ; 58 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1949 ; Archives of Surgery Volume 59 ; 59 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1949 ; Archives of Surgery Volume 60 ; 60 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1950 ; Archives of Surgery Volume 61 ; 61 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1950 ; Archives of Surgery Volume 62 ; 62 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1951 ; AMA Archives of Surgery Volume 63 ; 63 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1951 ; AMA Archives of Surgery Volume 64 ; 64 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1952 ; AMA Archives of Surgery Volume 65 ; 65 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1952 ; AMA Archives of Surgery Volume 66 ; 66 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1953 ; AMA Archives of Surgery Volume 67 ; 67 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1953 ; AMA Archives of Surgery Volume 68 ; 68 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1954 ; AMA Archives of Surgery Volume 69 ; 69 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1954 ; AMA Archives of Surgery Volume 70 ; 70 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1955 ; AMA Archives of Surgery Volume 71 ; 71 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1955 ; AMA Archives of Surgery Volume 72 ; 72 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1956 ; AMA Archives of Surgery Volume 73 ; 73 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1956 ; AMA Archives of Surgery Volume 74 ; 74 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1957 ; AMA Archives of Surgery Volume 75 ; 75 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1957 ; AMA Archives of Surgery Volume 76 ; 76 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1958 ; AMA Archives of Surgery Volume 77 ; 77 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1958 ; AMA Archives of Surgery Volume 78 ; 78 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1959 ; AMA Archives of Surgery Volume 79 ; 79 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1959 ; AMA Archives of Surgery Volume 80 ; 80 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1960 ; AMA Archives of Surgery Volume 81 ; 81 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1960 ; AMA Archives of Surgery Volume 82 ; 82 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1961 ; AMA Archives of Surgery Volume 83 ; 83 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1961 ; AMA Archives of Surgery Volume 84 ; 84 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1962 ; AMA Archives of Surgery Volume 85 ; 85 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1962 ; AMA Archives of Surgery Volume 86 ; 86 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1963 ; AMA Archives of Surgery Volume 87 ; 87 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1963 ; AMA Archives of Surgery Volume 88 ; 88 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1964 ; AMA Archives of Surgery Volume 89 ; 89 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1964 ; AMA Archives of Surgery Volume 90 ; 90 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1965 ; AMA Archives of Surgery Volume 91 ; 91 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1965 ; AMA Archives of Surgery Volume 92 ; 92 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1966 ; AMA Archives of Surgery Volume 93 ; 93 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1966 ; AMA Archives of Surgery Volume 94 ; 94 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1967 ; AMA Archives of Surgery Volume 95 ; 95 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1967 ; AMA Archives of Surgery Volume 96 ; 96 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1968 ; AMA Archives of Surgery Volume 97 ; 97 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1968 ; AMA Archives of Surgery Volume 98 ; 98 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1969 ; AMA Archives of Surgery Volume 99 ; 99 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1969 ; AMA Archives of Surgery Volume 100 ; 100 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1970 ; AMA Archives of Surgery Volume 101 ; 101 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1970 ; AMA Archives of Surgery Volume 102 ; 102 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1971 ; AMA Archives of Surgery Volume 103 ; 103 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1971 ; AMA Archives of Surgery Volume 104 ; 104 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1972 ; AMA Archives of Surgery Volume 105 ; 105 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1973 ; AMA Archives of Surgery Volume 106 ; 106 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1973 ; AMA Archives of Surgery Volume 107 ; 107 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1974 ; AMA Archives of Surgery Volume 108 ; 108 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1974 ; AMA Archives of Surgery Volume 109 ; 109 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1975 ; Archives of Surgery Volume 110 ; 110 ; reingest4.clockss.org:8082 >
+    au < zapped ; superseded ; 1976 ; Archives of Surgery Volume 111 [to delete] ; 111 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1977 ; Archives of Surgery Volume 112 ; 112 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1978 ; Archives of Surgery Volume 113 ; 113 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1979 ; Archives of Surgery Volume 114 ; 114 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1980 ; Archives of Surgery Volume 115 ; 115 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1981 ; Archives of Surgery Volume 116 ; 116 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1982 ; Archives of Surgery Volume 117 ; 117 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1983 ; Archives of Surgery Volume 118 ; 118 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1984 ; Archives of Surgery Volume 119 ; 119 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1985 ; Archives of Surgery Volume 120 ; 120 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1986 ; Archives of Surgery Volume 121 ; 121 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1987 ; Archives of Surgery Volume 122 ; 122 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1988 ; Archives of Surgery Volume 123 ; 123 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1989 ; Archives of Surgery Volume 124 ; 124 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1990 ; Archives of Surgery Volume 125 ; 125 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1991 ; Archives of Surgery Volume 126 ; 126 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1992 ; Archives of Surgery Volume 127 ; 127 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1993 ; Archives of Surgery Volume 128 ; 128 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1994 ; Archives of Surgery Volume 129 ; 129 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 1995 ; Archives of Surgery Volume 130 ; 130 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 1996 ; Archives of Surgery Volume 131 ; 131 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 1997 ; Archives of Surgery Volume 132 ; 132 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1998 ; Archives of Surgery Volume 133 ; 133 ; reingest3.clockss.org:8083 >
+    au < zapped ; superseded ; 1999 ; Archives of Surgery Volume 134 [to delete] ; 134 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 2000 ; Archives of Surgery Volume 135 ; 135 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 2001 ; Archives of Surgery Volume 136 ; 136 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 2002 ; Archives of Surgery Volume 137 ; 137 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 2003 ; Archives of Surgery Volume 138 ; 138 ; reingest4.clockss.org:8082 >
+    au < zapped ; finished ; 2004 ; Archives of Surgery Volume 139 ; 139 ; reingest1.clockss.org:8082 >
+    au < zapped ; finished ; 2005 ; Archives of Surgery Volume 140 ; 140 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 2006 ; Archives of Surgery Volume 141 ; 141 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 2007 ; Archives of Surgery Volume 142 ; 142 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2008 ; Archives of Surgery Volume 143 ; 143 ; >
+    au < finished ; finished ; 2009 ; Archives of Surgery Volume 144 ; 144 ; >
+    au < finished ; finished ; 2010 ; Archives of Surgery Volume 145 ; 145 ; >
+    au < finished ; finished ; 2011 ; Archives of Surgery Volume 146 ; 146 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Archives of Surgery Volume 147 ; 147 ; >
+
+  }
+
+  {
+
+    title <
+      name = JAMA: The Journal of the American Medical Association ;
+      issn = 0098-7484 ;
+      eissn = 1538-3598 ;
+      issnl = 0098-7484
+    >
+
+    # volumes 183-202 are assigned differently to reingest[1234].clockss.org than other AUs
+    # 17-Mar-2010 Volumes LV LX and LXI have mismatch between (Roman number) journal name and URLs
+
+    param[base_url] = http://jama.ama-assn.org/
+
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < zapped ; finished ; 1883 ; Journal of the American Medical Association Volume I ; I ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1884 ; Journal of the American Medical Association Volume II ; II ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1884 ; Journal of the American Medical Association Volume III ; III ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1885 ; Journal of the American Medical Association Volume IV ; IV ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1885 ; Journal of the American Medical Association Volume V ; V ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1886 ; Journal of the American Medical Association Volume VI ; VI ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1886 ; Journal of the American Medical Association Volume VII ; VII ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1887 ; Journal of the American Medical Association Volume VIII ; VIII ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1887 ; Journal of the American Medical Association Volume IX ; IX ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1888 ; Journal of the American Medical Association Volume X ; X ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1888 ; Journal of the American Medical Association Volume XI ; XI ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1889 ; Journal of the American Medical Association Volume XII ; XII ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1889 ; Journal of the American Medical Association Volume XIII ; XIII ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1890 ; Journal of the American Medical Association Volume XIV ; XIV ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1890 ; Journal of the American Medical Association Volume XV ; XV ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1891 ; Journal of the American Medical Association Volume XVI ; XVI ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1891 ; Journal of the American Medical Association Volume XVII ; XVII ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1892 ; Journal of the American Medical Association Volume XVIII ; XVIII ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1892 ; Journal of the American Medical Association Volume XIX ; XIX ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1893 ; Journal of the American Medical Association Volume XX ; XX ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1893 ; Journal of the American Medical Association Volume XXI ; XXI ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1894 ; Journal of the American Medical Association Volume XXII ; XXII ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1894 ; Journal of the American Medical Association Volume XXIII ; XXIII ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1895 ; Journal of the American Medical Association Volume XXIV ; XXIV ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1895 ; Journal of the American Medical Association Volume XXV ; XXV ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1896 ; Journal of the American Medical Association Volume XXVI ; XXVI ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1896 ; Journal of the American Medical Association Volume XXVII ; XXVII ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1897 ; Journal of the American Medical Association Volume XXVIII ; XXVIII ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1897 ; Journal of the American Medical Association Volume XXIX ; XXIX ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1898 ; Journal of the American Medical Association Volume XXX ; XXX ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1898 ; Journal of the American Medical Association Volume XXXI ; XXXI ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1899 ; Journal of the American Medical Association Volume XXXII ; XXXII ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1899 ; Journal of the American Medical Association Volume XXXIII ; XXXIII ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1900 ; Journal of the American Medical Association Volume XXXIV ; XXXIV ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1900 ; Journal of the American Medical Association Volume XXXV ; XXXV ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1901 ; Journal of the American Medical Association Volume XXXVI ; XXXVI ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1901 ; Journal of the American Medical Association Volume XXXVII ; XXXVII ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1902 ; Journal of the American Medical Association Volume XXXVIII ; XXXVIII ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1902 ; Journal of the American Medical Association Volume XXXIX ; XXXIX ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1903 ; Journal of the American Medical Association Volume XL ; XL ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1903 ; Journal of the American Medical Association Volume XLI ; XLI ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1904 ; Journal of the American Medical Association Volume XLII ; XLII ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1904 ; Journal of the American Medical Association Volume XLIII ; XLIII ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1905 ; Journal of the American Medical Association Volume XLIV ; XLIV ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1905 ; Journal of the American Medical Association Volume XLV ; XLV ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1906 ; Journal of the American Medical Association Volume XLVI ; XLVI ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1906 ; Journal of the American Medical Association Volume XLVII ; XLVII ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1907 ; Journal of the American Medical Association Volume XLVIII ; XLVIII ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1907 ; Journal of the American Medical Association Volume XLIX ; XLIX ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1908 ; Journal of the American Medical Association Volume L ; L ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1908 ; Journal of the American Medical Association Volume LI ; LI ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1909 ; Journal of the American Medical Association Volume LII ; LII ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1909 ; Journal of the American Medical Association Volume LIII ; LIII ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1910 ; Journal of the American Medical Association Volume LIV ; LIV ; reingest3.clockss.org:8083 >
+      au < superseded ; down ; 1910 ; Journal of the American Medical Association Volume LV [superseded] ; LV ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1910 ; Journal of the American Medical Association Volume 55 ; 55 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1911 ; Journal of the American Medical Association Volume LVI ; LVI ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1911 ; Journal of the American Medical Association Volume LVII ; LVII ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1912 ; Journal of the American Medical Association Volume LVIII ; LVIII ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1912 ; Journal of the American Medical Association Volume LIX ; LIX ; reingest1.clockss.org:8082 >
+      au < superseded ; down ; 1913 ; Journal of the American Medical Association Volume LX [superseded] ; LX ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1913 ; Journal of the American Medical Association Volume 60 ; 60 ; reingest2.clockss.org:8085 >
+      au < superseded ; down ; 1913 ; Journal of the American Medical Association Volume LXI [superseded] ; LXI ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1913 ; Journal of the American Medical Association Volume 61 ; 61 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1914 ; Journal of the American Medical Association Volume LXII ; LXII ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1914 ; Journal of the American Medical Association Volume LXIII ; LXIII ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1915 ; Journal of the American Medical Association Volume LXIV ; LXIV ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1915 ; Journal of the American Medical Association Volume LXV ; LXV ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1916 ; Journal of the American Medical Association Volume LXVI ; LXVI ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1916 ; Journal of the American Medical Association Volume LXVII ; LXVII ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1917 ; Journal of the American Medical Association Volume LXVIII ; LXVIII ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1917 ; Journal of the American Medical Association Volume LXIX ; LXIX ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1918 ; Journal of the American Medical Association Volume 70 ; 70 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1918 ; Journal of the American Medical Association Volume 71 ; 71 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1919 ; Journal of the American Medical Association Volume 72 ; 72 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1919 ; Journal of the American Medical Association Volume 73 ; 73 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1920 ; Journal of the American Medical Association Volume 74 ; 74 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1920 ; Journal of the American Medical Association Volume 75 ; 75 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1921 ; Journal of the American Medical Association Volume 76 ; 76 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1921 ; Journal of the American Medical Association Volume 77 ; 77 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1922 ; Journal of the American Medical Association Volume 78 ; 78 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1922 ; Journal of the American Medical Association Volume 79 ; 79 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1923 ; Journal of the American Medical Association Volume 80 ; 80 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1923 ; Journal of the American Medical Association Volume 81 ; 81 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1924 ; Journal of the American Medical Association Volume 82 ; 82 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1924 ; Journal of the American Medical Association Volume 83 ; 83 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1925 ; Journal of the American Medical Association Volume 84 ; 84 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1925 ; Journal of the American Medical Association Volume 85 ; 85 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1926 ; Journal of the American Medical Association Volume 86 ; 86 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1926 ; Journal of the American Medical Association Volume 87 ; 87 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1927 ; Journal of the American Medical Association Volume 88 ; 88 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1927 ; Journal of the American Medical Association Volume 89 ; 89 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1928 ; Journal of the American Medical Association Volume 90 ; 90 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1928 ; Journal of the American Medical Association Volume 91 ; 91 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1929 ; Journal of the American Medical Association Volume 92 ; 92 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1929 ; Journal of the American Medical Association Volume 93 ; 93 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1930 ; Journal of the American Medical Association Volume 94 ; 94 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1930 ; Journal of the American Medical Association Volume 95 ; 95 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1931 ; Journal of the American Medical Association Volume 96 ; 96 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1931 ; Journal of the American Medical Association Volume 97 ; 97 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1932 ; Journal of the American Medical Association Volume 98 ; 98 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1932 ; Journal of the American Medical Association Volume 99 ; 99 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1933 ; Journal of the American Medical Association Volume 100 ; 100 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1933 ; Journal of the American Medical Association Volume 101 ; 101 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1934 ; Journal of the American Medical Association Volume 102 ; 102 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1934 ; Journal of the American Medical Association Volume 103 ; 103 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1935 ; Journal of the American Medical Association Volume 104 ; 104 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1935 ; Journal of the American Medical Association Volume 105 ; 105 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1936 ; Journal of the American Medical Association Volume 106 ; 106 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1936 ; Journal of the American Medical Association Volume 107 ; 107 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1937 ; Journal of the American Medical Association Volume 108 ; 108 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1937 ; Journal of the American Medical Association Volume 109 ; 109 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1938 ; Journal of the American Medical Association Volume 110 ; 110 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1938 ; Journal of the American Medical Association Volume 111 ; 111 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1939 ; Journal of the American Medical Association Volume 112 ; 112 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1939 ; Journal of the American Medical Association Volume 113 ; 113 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1940 ; Journal of the American Medical Association Volume 114 ; 114 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1940 ; Journal of the American Medical Association Volume 115 ; 115 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1941 ; Journal of the American Medical Association Volume 116 ; 116 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1941 ; Journal of the American Medical Association Volume 117 ; 117 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1942 ; Journal of the American Medical Association Volume 118 ; 118 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1942 ; Journal of the American Medical Association Volume 119 ; 119 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1942 ; Journal of the American Medical Association Volume 120 ; 120 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1943 ; Journal of the American Medical Association Volume 121 ; 121 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1943 ; Journal of the American Medical Association Volume 122 ; 122 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1943 ; Journal of the American Medical Association Volume 123 ; 123 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1944 ; Journal of the American Medical Association Volume 124 ; 124 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1944 ; Journal of the American Medical Association Volume 125 ; 125 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1944 ; Journal of the American Medical Association Volume 126 ; 126 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1945 ; Journal of the American Medical Association Volume 127 ; 127 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1945 ; Journal of the American Medical Association Volume 128 ; 128 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1945 ; Journal of the American Medical Association Volume 129 ; 129 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1946 ; Journal of the American Medical Association Volume 130 ; 130 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1946 ; Journal of the American Medical Association Volume 131 ; 131 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1946 ; Journal of the American Medical Association Volume 132 ; 132 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1947 ; Journal of the American Medical Association Volume 133 ; 133 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1947 ; Journal of the American Medical Association Volume 134 ; 134 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1947 ; Journal of the American Medical Association Volume 135 ; 135 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1948 ; Journal of the American Medical Association Volume 136 ; 136 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1948 ; Journal of the American Medical Association Volume 137 ; 137 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1948 ; Journal of the American Medical Association Volume 138 ; 138 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1949 ; Journal of the American Medical Association Volume 139 ; 139 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1949 ; Journal of the American Medical Association Volume 140 ; 140 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1949 ; Journal of the American Medical Association Volume 141 ; 141 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1950 ; Journal of the American Medical Association Volume 142 ; 142 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1950 ; Journal of the American Medical Association Volume 143 ; 143 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1950 ; Journal of the American Medical Association Volume 144 ; 144 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1951 ; Journal of the American Medical Association Volume 145 ; 145 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1951 ; Journal of the American Medical Association Volume 146 ; 146 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1951 ; Journal of the American Medical Association Volume 147 ; 147 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1952 ; Journal of the American Medical Association Volume 148 ; 148 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1952 ; Journal of the American Medical Association Volume 149 ; 149 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1952 ; Journal of the American Medical Association Volume 150 ; 150 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1953 ; Journal of the American Medical Association Volume 151 ; 151 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1953 ; Journal of the American Medical Association Volume 152 ; 152 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1953 ; Journal of the American Medical Association Volume 153 ; 153 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1954 ; Journal of the American Medical Association Volume 154 ; 154 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1954 ; Journal of the American Medical Association Volume 155 ; 155 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1954 ; Journal of the American Medical Association Volume 156 ; 156 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1955 ; Journal of the American Medical Association Volume 157 ; 157 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1955 ; Journal of the American Medical Association Volume 158 ; 158 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1955 ; Journal of the American Medical Association Volume 159 ; 159 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1956 ; Journal of the American Medical Association Volume 160 ; 160 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1956 ; Journal of the American Medical Association Volume 161 ; 161 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1956 ; Journal of the American Medical Association Volume 162 ; 162 ; reingest1.clockss.org:8082 >
+      au < superseded ; down ; 1957 ; Journal of the American Medical Association Volume 163 [superseded] ; 163 ; reingest2.clockss.org:8085 > #never collected.
+      au < zapped ; finished ; 1957 ; Journal of the American Medical Association Volume 164 ; 164 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1957 ; Journal of the American Medical Association Volume 165 ; 165 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1958 ; Journal of the American Medical Association Volume 166 ; 166 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1958 ; Journal of the American Medical Association Volume 167 ; 167 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1958 ; Journal of the American Medical Association Volume 168 ; 168 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1959 ; Journal of the American Medical Association Volume 169 ; 169 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1959 ; Journal of the American Medical Association Volume 170 ; 170 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1959 ; Journal of the American Medical Association Volume 171 ; 171 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1960 ; Journal of the American Medical Association Volume 172 ; 172 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1960 ; Journal of the American Medical Association Volume 173 ; 173 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1960 ; Journal of the American Medical Association Volume 174 ; 174 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1961 ; JAMA: The Journal of the American Medical Association Volume 175 ; 175 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1961 ; JAMA: The Journal of the American Medical Association Volume 176 ; 176 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1961 ; JAMA: The Journal of the American Medical Association Volume 177 ; 177 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1961 ; JAMA: The Journal of the American Medical Association Volume 178 ; 178 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1962 ; JAMA: The Journal of the American Medical Association Volume 179 ; 179 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1962 ; JAMA: The Journal of the American Medical Association Volume 180 ; 180 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1962 ; JAMA: The Journal of the American Medical Association Volume 181 ; 181 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1962 ; JAMA: The Journal of the American Medical Association Volume 182 ; 182 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1963 ; JAMA: The Journal of the American Medical Association Volume 183 ; 183 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1963 ; JAMA: The Journal of the American Medical Association Volume 184 ; 184 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1963 ; JAMA: The Journal of the American Medical Association Volume 185 ; 185 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1963 ; JAMA: The Journal of the American Medical Association Volume 186 ; 186 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1964 ; JAMA: The Journal of the American Medical Association Volume 187 ; 187 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1964 ; JAMA: The Journal of the American Medical Association Volume 188 ; 188 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1964 ; JAMA: The Journal of the American Medical Association Volume 189 ; 189 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1964 ; JAMA: The Journal of the American Medical Association Volume 190 ; 190 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1965 ; JAMA: The Journal of the American Medical Association Volume 191 ; 191 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1965 ; JAMA: The Journal of the American Medical Association Volume 192 ; 192 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1965 ; JAMA: The Journal of the American Medical Association Volume 193 ; 193 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1965 ; JAMA: The Journal of the American Medical Association Volume 194 ; 194 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1966 ; JAMA: The Journal of the American Medical Association Volume 195 ; 195 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1966 ; JAMA: The Journal of the American Medical Association Volume 196 ; 196 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1966 ; JAMA: The Journal of the American Medical Association Volume 197 ; 197 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1966 ; JAMA: The Journal of the American Medical Association Volume 198 ; 198 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 1967 ; JAMA: The Journal of the American Medical Association Volume 199 ; 199 ; >
+      au < finished ; finished ; 1967 ; JAMA: The Journal of the American Medical Association Volume 200 ; 200 ; >
+      au < finished ; finished ; 1967 ; JAMA: The Journal of the American Medical Association Volume 201 ; 201 ; >
+      au < finished ; finished ; 1967 ; JAMA: The Journal of the American Medical Association Volume 202 ; 202 ; >
+      au < zapped ; finished ; 1968 ; JAMA: The Journal of the American Medical Association Volume 203 ; 203 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1968 ; JAMA: The Journal of the American Medical Association Volume 204 ; 204 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1968 ; JAMA: The Journal of the American Medical Association Volume 205 ; 205 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1968 ; JAMA: The Journal of the American Medical Association Volume 206 ; 206 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1969 ; JAMA: The Journal of the American Medical Association Volume 207 ; 207 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1969 ; JAMA: The Journal of the American Medical Association Volume 208 ; 208 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1969 ; JAMA: The Journal of the American Medical Association Volume 209 ; 209 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1969 ; JAMA: The Journal of the American Medical Association Volume 210 ; 210 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1970 ; JAMA: The Journal of the American Medical Association Volume 211 ; 211 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1970 ; JAMA: The Journal of the American Medical Association Volume 212 ; 212 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1970 ; JAMA: The Journal of the American Medical Association Volume 213 ; 213 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1970 ; JAMA: The Journal of the American Medical Association Volume 214 ; 214 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1971 ; JAMA: The Journal of the American Medical Association Volume 215 ; 215 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1971 ; JAMA: The Journal of the American Medical Association Volume 216 ; 216 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1971 ; JAMA: The Journal of the American Medical Association Volume 217 ; 217 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1971 ; JAMA: The Journal of the American Medical Association Volume 218 ; 218 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1972 ; JAMA: The Journal of the American Medical Association Volume 219 ; 219 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1972 ; JAMA: The Journal of the American Medical Association Volume 220 ; 220 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1972 ; JAMA: The Journal of the American Medical Association Volume 221 ; 221 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1972 ; JAMA: The Journal of the American Medical Association Volume 222 ; 222 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1973 ; JAMA: The Journal of the American Medical Association Volume 223 ; 223 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1973 ; JAMA: The Journal of the American Medical Association Volume 224 ; 224 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1973 ; JAMA: The Journal of the American Medical Association Volume 225 ; 225 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1973 ; JAMA: The Journal of the American Medical Association Volume 226 ; 226 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1974 ; JAMA: The Journal of the American Medical Association Volume 227 ; 227 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1974 ; JAMA: The Journal of the American Medical Association Volume 228 ; 228 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1974 ; JAMA: The Journal of the American Medical Association Volume 229 ; 229 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1974 ; JAMA: The Journal of the American Medical Association Volume 230 ; 230 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1975 ; JAMA: The Journal of the American Medical Association Volume 231 ; 231 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1975 ; JAMA: The Journal of the American Medical Association Volume 232 ; 232 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1975 ; JAMA: The Journal of the American Medical Association Volume 233 ; 233 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1975 ; JAMA: The Journal of the American Medical Association Volume 234 ; 234 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1976 ; JAMA: The Journal of the American Medical Association Volume 235 ; 235 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1976 ; JAMA: The Journal of the American Medical Association Volume 236 ; 236 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1977 ; JAMA: The Journal of the American Medical Association Volume 237 ; 237 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1977 ; JAMA: The Journal of the American Medical Association Volume 238 ; 238 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1978 ; JAMA: The Journal of the American Medical Association Volume 239 ; 239 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1978 ; JAMA: The Journal of the American Medical Association Volume 240 ; 240 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1979 ; JAMA: The Journal of the American Medical Association Volume 241 ; 241 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1979 ; JAMA: The Journal of the American Medical Association Volume 242 ; 242 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1980 ; JAMA: The Journal of the American Medical Association Volume 243 ; 243 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1980 ; JAMA: The Journal of the American Medical Association Volume 244 ; 244 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1981 ; JAMA: The Journal of the American Medical Association Volume 245 ; 245 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1981 ; JAMA: The Journal of the American Medical Association Volume 246 ; 246 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1982 ; JAMA: The Journal of the American Medical Association Volume 247 ; 247 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1982 ; JAMA: The Journal of the American Medical Association Volume 248 ; 248 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1983 ; JAMA: The Journal of the American Medical Association Volume 249 ; 249 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1983 ; JAMA: The Journal of the American Medical Association Volume 250 ; 250 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1984 ; JAMA: The Journal of the American Medical Association Volume 251 ; 251 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1984 ; JAMA: The Journal of the American Medical Association Volume 252 ; 252 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1985 ; JAMA: The Journal of the American Medical Association Volume 253 ; 253 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1985 ; JAMA: The Journal of the American Medical Association Volume 254 ; 254 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1986 ; JAMA: The Journal of the American Medical Association Volume 255 ; 255 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1986 ; JAMA: The Journal of the American Medical Association Volume 256 ; 256 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1987 ; JAMA: The Journal of the American Medical Association Volume 257 ; 257 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1987 ; JAMA: The Journal of the American Medical Association Volume 258 ; 258 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1988 ; JAMA: The Journal of the American Medical Association Volume 259 ; 259 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1988 ; JAMA: The Journal of the American Medical Association Volume 260 ; 260 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1989 ; JAMA: The Journal of the American Medical Association Volume 261 ; 261 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1989 ; JAMA: The Journal of the American Medical Association Volume 262 ; 262 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1990 ; JAMA: The Journal of the American Medical Association Volume 263 ; 263 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1990 ; JAMA: The Journal of the American Medical Association Volume 264 ; 264 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1991 ; JAMA: The Journal of the American Medical Association Volume 265 ; 265 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1991 ; JAMA: The Journal of the American Medical Association Volume 266 ; 266 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1992 ; JAMA: The Journal of the American Medical Association Volume 267 ; 267 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1992 ; JAMA: The Journal of the American Medical Association Volume 268 ; 268 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1993 ; JAMA: The Journal of the American Medical Association Volume 269 ; 269 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1993 ; JAMA: The Journal of the American Medical Association Volume 270 ; 270 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1994 ; JAMA: The Journal of the American Medical Association Volume 271 ; 271 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1994 ; JAMA: The Journal of the American Medical Association Volume 272 ; 272 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 1995 ; JAMA: The Journal of the American Medical Association Volume 273 ; 273 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1995 ; JAMA: The Journal of the American Medical Association Volume 274 ; 274 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 1996 ; JAMA: The Journal of the American Medical Association Volume 275 ; 275 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1996 ; JAMA: The Journal of the American Medical Association Volume 276 ; 276 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 1997 ; JAMA: The Journal of the American Medical Association Volume 277 ; 277 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 1997 ; JAMA: The Journal of the American Medical Association Volume 278 ; 278 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1998 ; JAMA: The Journal of the American Medical Association Volume 279 ; 279 ; >
+      au < finished ; frozen ; 1998 ; JAMA: The Journal of the American Medical Association Volume 280 ; 280 ; >
+      au < finished ; finished ; 1999 ; JAMA: The Journal of the American Medical Association Volume 281 ; 281 ; >
+      au < finished ; finished ; 1999 ; JAMA: The Journal of the American Medical Association Volume 282 ; 282 ; >
+      au < finished ; finished ; 2000 ; JAMA: The Journal of the American Medical Association Volume 283 ; 283 ; >
+      au < finished ; finished ; 2000 ; JAMA: The Journal of the American Medical Association Volume 284 ; 284 ; >
+      au < finished ; finished ; 2001 ; JAMA: The Journal of the American Medical Association Volume 285 ; 285 ; >
+      au < finished ; finished ; 2001 ; JAMA: The Journal of the American Medical Association Volume 286 ; 286 ; >
+      au < finished ; frozen ; 2002 ; JAMA: The Journal of the American Medical Association Volume 287 ; 287 ; >
+      au < finished ; frozen ; 2002 ; JAMA: The Journal of the American Medical Association Volume 288 ; 288 ; >
+      au < finished ; finished ; 2003 ; JAMA: The Journal of the American Medical Association Volume 289 ; 289 ; >
+      au < finished ; finished ; 2003 ; JAMA: The Journal of the American Medical Association Volume 290 ; 290 ; >
+      au < finished ; finished ; 2004 ; JAMA: The Journal of the American Medical Association Volume 291 ; 291 ; >
+      au < finished ; frozen ; 2004 ; JAMA: The Journal of the American Medical Association Volume 292 ; 292 ; >
+      au < finished ; finished ; 2005 ; JAMA: The Journal of the American Medical Association Volume 293 ; 293 ; >
+      au < finished ; finished ; 2005 ; JAMA: The Journal of the American Medical Association Volume 294 ; 294 ; >
+      au < finished ; finished ; 2006 ; JAMA: The Journal of the American Medical Association Volume 295 ; 295 ; >
+      au < finished ; finished ; 2006 ; JAMA: The Journal of the American Medical Association Volume 296 ; 296 ; >
+      au < finished ; finished ; 2007 ; JAMA: The Journal of the American Medical Association Volume 297 ; 297 ; >
+      au < finished ; finished ; 2007 ; JAMA: The Journal of the American Medical Association Volume 298 ; 298 ; >
+      au < finished ; finished ; 2008 ; JAMA: The Journal of the American Medical Association Volume 299 ; 299 ; >
+      au < finished ; finished ; 2008 ; JAMA: The Journal of the American Medical Association Volume 300 ; 300 ; >
+      au < finished ; crawling ; 2009 ; JAMA: The Journal of the American Medical Association Volume 301 ; 301 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2009 ; JAMA: The Journal of the American Medical Association Volume 302 ; 302 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; JAMA: The Journal of the American Medical Association Volume 303 ; 303 ; >
+      au < finished ; finished ; 2010 ; JAMA: The Journal of the American Medical Association Volume 304 ; 304 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < finished ; finished ; 2011 ; JAMA: The Journal of the American Medical Association Volume 305 ; 305 ; >
+      au < finished ; frozen ; 2011 ; JAMA: The Journal of the American Medical Association Volume 306 ; 306 ; >
+
+    }
+    
+  }
+
+}

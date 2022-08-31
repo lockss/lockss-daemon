@@ -1,0 +1,78 @@
+{
+
+  publisher <
+    name = Cushman Foundation for Foraminiferal Research ;
+    info[contract] = 2013 ;
+    info[tester] = 5 ;
+    info[poller] = 2
+  >
+    
+    plugin = org.lockss.plugin.silverchair.geoscienceworld.ClockssGeoscienceWorldSilverchairPlugin
+    #implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+    implicit < status1 ; status ; year ; param[year] ; name ; param[volume_name] ; proxy >
+    param[base_url] = https://pubs.geoscienceworld.org/
+    
+  {
+ 
+    title < 
+      name = Journal of Foraminiferal Research ;
+      issn = 0096-1191 
+    >
+    param[journal_id] = jfr
+
+    au < doNotProcess ; doNotProcess ; 1971 ; 1971 ; Journal of Foraminiferal Research Volume 1 ; 1 ; >
+    au < doNotProcess ; doNotProcess ; 1972 ; 1972 ; Journal of Foraminiferal Research Volume 2 ; 2 ; >
+    au < doNotProcess ; doNotProcess ; 1973 ; 1973 ; Journal of Foraminiferal Research Volume 3 ; 3 ; >
+    au < doNotProcess ; doNotProcess ; 1974 ; 1974 ; Journal of Foraminiferal Research Volume 4 ; 4 ; >
+    au < doNotProcess ; doNotProcess ; 1975 ; 1975 ; Journal of Foraminiferal Research Volume 5 ; 5 ; >
+    au < doNotProcess ; doNotProcess ; 1976 ; 1976 ; Journal of Foraminiferal Research Volume 6 ; 6 ; >
+    au < doNotProcess ; doNotProcess ; 1977 ; 1977 ; Journal of Foraminiferal Research Volume 7 ; 7 ; >
+    au < doNotProcess ; doNotProcess ; 1978 ; 1978 ; Journal of Foraminiferal Research Volume 8 ; 8 ; >
+    au < doNotProcess ; doNotProcess ; 1979 ; 1979 ; Journal of Foraminiferal Research Volume 9 ; 9 ; >
+    au < doNotProcess ; doNotProcess ; 1980 ; 1980 ; Journal of Foraminiferal Research Volume 10 ; 10 ; >
+    au < doNotProcess ; doNotProcess ; 1981 ; 1981 ; Journal of Foraminiferal Research Volume 11 ; 11 ; >
+    au < doNotProcess ; doNotProcess ; 1982 ; 1982 ; Journal of Foraminiferal Research Volume 12 ; 12 ; >
+    au < doNotProcess ; doNotProcess ; 1983 ; 1983 ; Journal of Foraminiferal Research Volume 13 ; 13 ; >
+    au < doNotProcess ; doNotProcess ; 1984 ; 1984 ; Journal of Foraminiferal Research Volume 14 ; 14 ; >
+    au < doNotProcess ; doNotProcess ; 1985 ; 1985 ; Journal of Foraminiferal Research Volume 15 ; 15 ; >
+    au < doNotProcess ; doNotProcess ; 1986 ; 1986 ; Journal of Foraminiferal Research Volume 16 ; 16 ; >
+    au < doNotProcess ; doNotProcess ; 1987 ; 1987 ; Journal of Foraminiferal Research Volume 17 ; 17 ; >
+    au < doNotProcess ; doNotProcess ; 1988 ; 1988 ; Journal of Foraminiferal Research Volume 18 ; 18 ; >
+    au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Journal of Foraminiferal Research Volume 19 ; 19 ; >
+    au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; Journal of Foraminiferal Research Volume 20 ; 20 ; >
+    au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; Journal of Foraminiferal Research Volume 21 ; 21 ; >
+    au < doNotProcess ; doNotProcess ; 1992 ; 1992 ; Journal of Foraminiferal Research Volume 22 ; 22 ; >
+    au < doNotProcess ; doNotProcess ; 1993 ; 1993 ; Journal of Foraminiferal Research Volume 23 ; 23 ; >
+    au < doNotProcess ; doNotProcess ; 1994 ; 1994 ; Journal of Foraminiferal Research Volume 24 ; 24 ; >
+    au < doNotProcess ; doNotProcess ; 1995 ; 1995 ; Journal of Foraminiferal Research Volume 25 ; 25 ; >
+    au < doNotProcess ; doNotProcess ; 1996 ; 1996 ; Journal of Foraminiferal Research Volume 26 ; 26 ; >
+    au < doNotProcess ; doNotProcess ; 1997 ; 1997 ; Journal of Foraminiferal Research Volume 27 ; 27 ; >
+    au < doNotProcess ; doNotProcess ; 1998 ; 1998 ; Journal of Foraminiferal Research Volume 28 ; 28 ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; 1999 ; Journal of Foraminiferal Research Volume 29 ; 29 ; >
+    au < doNotProcess ; doNotProcess ; 2000 ; 2000 ; Journal of Foraminiferal Research Volume 30 ; 30 ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; 2001 ; Journal of Foraminiferal Research Volume 31 ; 31 ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; 2002 ; Journal of Foraminiferal Research Volume 32 ; 32 ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; 2003 ; Journal of Foraminiferal Research Volume 33 ; 33 ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; 2004 ; Journal of Foraminiferal Research Volume 34 ; 34 ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; 2005 ; Journal of Foraminiferal Research Volume 35 ; 35 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; 2006 ; Journal of Foraminiferal Research Volume 36 ; 36 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; 2007 ; Journal of Foraminiferal Research Volume 37 ; 37 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; Journal of Foraminiferal Research Volume 38 ; 38 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Journal of Foraminiferal Research Volume 39 ; 39 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Journal of Foraminiferal Research Volume 40 ; 40 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Journal of Foraminiferal Research Volume 41 ; 41 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Journal of Foraminiferal Research Volume 42 ; 42 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Journal of Foraminiferal Research Volume 43 ; 43 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Foraminiferal Research Volume 44 ; 44 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Foraminiferal Research Volume 45 ; 45 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Journal of Foraminiferal Research Volume 46 ; 46 ; >
+    au < frozen ; exists ; 2017 ; 2017 ; Journal of Foraminiferal Research Volume 47 ; 47 ; >
+    au < frozen ; exists ; 2018 ; 2018 ; Journal of Foraminiferal Research Volume 48 ; 48 ; >
+    au < frozen ; exists ; 2019 ; 2019 ; Journal of Foraminiferal Research Volume 49 ; 49 ; >
+    au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Foraminiferal Research Volume 50 ; 50 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Journal of Foraminiferal Research Volume 51 ; 51 ; >
+    au < ready ; exists ; 2022 ; 2022 ; Journal of Foraminiferal Research Volume 52 ; 52 ; >
+
+  } 
+
+}

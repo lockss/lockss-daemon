@@ -1,0 +1,36 @@
+{
+
+  publisher <
+    name = Australian College of Perioperative Nurses ;
+    info[contract] = 2013 ;
+    info[tester] = 5 ;
+    info[poller] = 8
+  >
+  provider = bepress
+  
+  # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
+
+  {
+  
+    title <
+      name = Journal of Perioperative Nursing ;
+      issn = 2209-1084 ;
+      eissn = 2209-1092 
+    >
+    
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
+    param[base_url] = https://www.journal.acorn.org.au/
+    param[journal_abbr] = jpn
+    implicit < status1 ; status ; year ; name ; param[volume] ; proxy >
+
+    au < frozen ; exists ; 2016 ; Judaica Librarianship Volume 29 ; 29 ; >
+    au < finished ; crawling ; 2017 ; Judaica Librarianship Volume 30 ; 30 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; Judaica Librarianship Volume 31 ; 31 ; reingest2.clockss.org:8085 >
+    au < frozen ; exists ; 2019 ; Judaica Librarianship Volume 32 ; 32 ; >
+    au < deepCrawl ; exists ; 2020 ; Judaica Librarianship Volume 33 ; 33 ; >
+    au < deepCrawl ; exists ; 2021 ; Judaica Librarianship Volume 34 ; 34 ; >
+    au < crawling ; exists ; 2022 ; Judaica Librarianship Volume 35 ; 35 ; >
+
+  }
+
+}

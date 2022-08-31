@@ -1,0 +1,28 @@
+{
+
+  publisher <
+    name = iScience Notes ;
+    info[contract] = 2019 ;
+    info[tester] = S ;
+    info[platform] = Source
+  >
+  
+  {
+  
+    title <
+       name = iScience Notes
+    >
+    
+    plugin = org.lockss.plugin.clockss.isciencenotes.ClockssIScienceNotesSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/isciencenotes-released/
+    
+    proxy = DIRECT
+    implicit < status1 ; status ; year ; name ; param[year] >
+
+    au < zapped ; finished ; 2020 ; iScience Notes Content 2020 ; 2020 >
+    au < readySource ; finished ; 2021 ; iScience Notes Content 2021 ; 2021 >
+    au < expected ; exists ; 2022 ; iScience Notes Content 2022 ; 2022 >
+
+  }
+
+}

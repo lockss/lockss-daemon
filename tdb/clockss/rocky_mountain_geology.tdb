@@ -1,0 +1,101 @@
+{
+
+    publisher <
+      name = Rocky Mountain Geology ;
+      info[contract] = 2012 ;
+      info[tester] = 5 ;
+      info[poller] = 2 ;
+      info[platform] = Silverchair
+    >
+    
+    plugin = org.lockss.plugin.silverchair.geoscienceworld.ClockssGeoscienceWorldSilverchairPlugin
+    implicit < status1 ; status ; year ; param[year] ; name ; param[volume_name] ; proxy >
+    param[base_url] = https://pubs.geoscienceworld.org/
+#    {
+#    
+#      title < 
+#        name = Contributions to Geology ;
+#        issn = 1436-3542
+#      >
+#      
+#      param[journal_id] = rmg
+#      #param[base_url] = http://rmg.geoscienceworld.org/
+#      comment[continued_by] = [1555-7340]
+#      
+#      au < doNotProcess ; doNotProcess ; 1962 ; Contributions to Geology Volume 1 ; 1 ; >
+#      au < doNotProcess ; doNotProcess ; 1963 ; Contributions to Geology Volume 2 ; 2 ; >
+#      au < doNotProcess ; doNotProcess ; 1964 ; Contributions to Geology Volume 3 ; 3 ; >
+#      au < doNotProcess ; doNotProcess ; 1965 ; Contributions to Geology Volume 4 ; 4 ; >
+#      au < doNotProcess ; doNotProcess ; 1966 ; Contributions to Geology Volume 5 ; 5 ; >
+#      au < doNotProcess ; doNotProcess ; 1967 ; Contributions to Geology Volume 6 ; 6 ; >
+#      au < doNotProcess ; doNotProcess ; 1968 ; Contributions to Geology Volume 7 ; 7 ; >
+#      au < doNotProcess ; doNotProcess ; 1969 ; Contributions to Geology Volume 8 ; 8 ; >
+#      au < doNotProcess ; doNotProcess ; 1970 ; Contributions to Geology Volume 9 ; 9 ; >
+#      au < doNotProcess ; doNotProcess ; 1971 ; Contributions to Geology Volume 10 ; 10 ; >
+#      au < doNotProcess ; doNotProcess ; 1972 ; Contributions to Geology Volume 11 ; 11 ; >
+#      au < doNotProcess ; doNotProcess ; 1973 ; Contributions to Geology Volume 12 ; 12 ; >
+#      au < doNotProcess ; doNotProcess ; 1974 ; Contributions to Geology Volume 13 ; 13 ; >
+#      au < doNotProcess ; doNotProcess ; 1975-1976 ; Contributions to Geology Volume 14 ; 14 ; >
+#      au < doNotProcess ; doNotProcess ; 1977 ; Contributions to Geology Volume 15 ; 15 ; >
+#      au < doNotProcess ; doNotProcess ; 1978 ; Contributions to Geology Volume 16 ; 16 ; >
+#      au < doNotProcess ; doNotProcess ; 1979 ; Contributions to Geology Volume 17 ; 17 ; >
+#      au < doNotProcess ; doNotProcess ; 1979-1980 ; Contributions to Geology Volume 18 ; 18 ; >
+#      au < doNotProcess ; doNotProcess ; 1980 ; Contributions to Geology Volume 19 ; 19 ; >
+#      au < doNotProcess ; doNotProcess ; 1981 ; Contributions to Geology Volume 20 ; 20 ; >
+#      au < doNotProcess ; doNotProcess ; 1982 ; Contributions to Geology Volume 21 ; 21 ; >
+#      au < doNotProcess ; doNotProcess ; 1983 ; Contributions to Geology Volume 22 ; 22 ; >
+#      au < doNotProcess ; doNotProcess ; 1984-1985 ; Contributions to Geology Volume 23 ; 23 ; >
+#      au < doNotProcess ; doNotProcess ; 1986 ; Contributions to Geology Volume 24 ; 24 ; >
+#      au < doNotProcess ; doNotProcess ; 1987 ; Contributions to Geology Volume 25 ; 25 ; >
+#      au < doNotProcess ; doNotProcess ; 1988 ; Contributions to Geology Volume 26 ; 26 ; >
+#      au < doNotProcess ; doNotProcess ; 1989 ; Contributions to Geology Volume 27 ; 27 ; >
+#      au < doNotProcess ; doNotProcess ; 1990 ; Contributions to Geology Volume 28 ; 28 ; >
+#      au < doNotProcess ; doNotProcess ; 1991-1992 ; Contributions to Geology Volume 29 ; 29 ; >
+#      au < doNotProcess ; doNotProcess ; 1994 ; Contributions to Geology Volume 30 ; 30 ; >
+#      au < doNotProcess ; doNotProcess ; 1996-1997 ; Contributions to Geology Volume 31 ; 31 ; >
+#      au < doNotProcess ; doNotProcess ; 1997-1998 ; Contributions to Geology Volume 32 ; 32 ; >
+#  
+#    }
+#  
+
+    {
+    
+      title < 
+        name = Rocky Mountain Geology ;
+        issn = 1555-7340 ;
+        eissn = 1555-7332
+      >
+
+      param[journal_id] = rmg
+      #param[base_url] = http://rmg.geoscienceworld.org/
+      comment[continues] = [1436-3542]
+         
+      au < doNotProcess ; doNotProcess ; 1998 ; 1998 ; Rocky Mountain Geology Volume 33 ; 33 ; >
+      au < doNotProcess ; doNotProcess ; 1999 ; 1999 ; Rocky Mountain Geology Volume 34 ; 34 ; >
+      au < doNotProcess ; doNotProcess ; 2000 ; 2000 ; Rocky Mountain Geology Volume 35 ; 35 ; >
+      au < doNotProcess ; doNotProcess ; 2001 ; 2001 ; Rocky Mountain Geology Volume 36 ; 36 ; >
+      au < doNotProcess ; doNotProcess ; 2002 ; 2002 ; Rocky Mountain Geology Volume 37 ; 37 ; >
+      au < doNotProcess ; doNotProcess ; 2003 ; 2003 ; Rocky Mountain Geology Volume 38 ; 38 ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; 2004 ; Rocky Mountain Geology Volume 39 ; 39 ; >
+      au < doNotProcess ; doNotProcess ; 2005 ; 2005 ; Rocky Mountain Geology Volume 40 ; 40 ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; 2006 ; Rocky Mountain Geology Volume 41 ; 41 ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; 2007 ; Rocky Mountain Geology Volume 42 ; 42 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; Rocky Mountain Geology Volume 43 ; 43 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Rocky Mountain Geology Volume 44 ; 44 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Rocky Mountain Geology Volume 45 ; 45 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Rocky Mountain Geology Volume 46 ; 46 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Rocky Mountain Geology Volume 47 ; 47 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Rocky Mountain Geology Volume 48 ; 48 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Rocky Mountain Geology Volume 49 ; 49 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Rocky Mountain Geology Volume 50 ; 50 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Rocky Mountain Geology Volume 51 ; 51 ; >
+      au < frozen ; exists ; 2017 ; 2017 ; Rocky Mountain Geology Volume 52 ; 52 ; >
+      au < frozen ; exists ; 2018 ; 2018 ; Rocky Mountain Geology Volume 53 ; 53 ; >
+      au < frozen ; exists ; 2019 ; 2019 ; Rocky Mountain Geology Volume 54 ; 54 ; >
+      au < notReady ; exists ; 2020 ; 2020 ; Rocky Mountain Geology Volume 55 ; 55 ; > #svg file, 403 Forbidden
+      au < notReady ; exists ; 2021 ; 2021 ; Rocky Mountain Geology Volume 56 ; 56 ; > #svg file, 403 Forbidden
+      
+      au < manifest ; exists ; 2022 ; 2022 ; Rocky Mountain Geology Volume 57 ; 57 ; > #svg file, 403 Forbidden
+    }
+  
+}

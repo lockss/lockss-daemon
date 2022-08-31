@@ -1,0 +1,1860 @@
+{
+
+  publisher <
+    name = Duke University Press ;
+    info[contract] = 2012 ;
+    info[back] = 2000 ;
+    info[tester] = 5 ;
+    info[poller] = 6
+  >
+  
+    #moving from HW to Silverchair 11/20/2017. Process 2017 and back to 2000. New URL: read.dukeupress.edu
+
+  {
+
+    title <
+      name = American Literary Scholarship ;
+      issn = 0065-9142 ;
+      eissn = 1527-2125 ;
+      issnl = 0065-9142
+    >
+
+    {
+
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://als.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      comment[years] = years in web addresses are two years behind the publishing year as of 20110912
+      comment[years1] = .long links still go to the year indicated (i.e. vol2009 manifest links to 2009, not 2011)
+
+
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2000 ; American Literary Scholarship 2000 ; 1998 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2001 ; American Literary Scholarship 2001 ; 1999 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2002 ; American Literary Scholarship 2002 ; 2000 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2003 ; American Literary Scholarship 2003 ; 2001 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2004 ; American Literary Scholarship 2004 ; 2002 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2005 ; American Literary Scholarship 2005 ; 2003 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; American Literary Scholarship 2006 ; 2004 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; American Literary Scholarship 2007 ; 2005 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; American Literary Scholarship 2008 ; 2006 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; American Literary Scholarship 2009 ; 2007 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; American Literary Scholarship 2010 ; 2008 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; American Literary Scholarship 2011 ; 2009 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; American Literary Scholarship 2012 ; 2010 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; American Literary Scholarship 2013 ; 2011 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; American Literary Scholarship 2014 ; 2012 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; American Literary Scholarship 2015 ; 2013 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2016 ; American Literary Scholarship 2016 ; 2014 ; >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; American Literary Scholarship 2017 ; 2015 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = American Literature ;
+      issn = 0002-9831 ;
+      eissn = 1527-2117 ;
+      issnl = 0002-9831
+    >
+
+    {
+
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://americanliterature.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2000 ; American Literature Volume 72 ; 72 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2001 ; American Literature Volume 73 ; 73 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2002 ; American Literature Volume 74 ; 74 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2003 ; American Literature Volume 75 ; 75 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2004 ; American Literature Volume 76 ; 76 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2005 ; American Literature Volume 77 ; 77 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; American Literature Volume 78 ; 78 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; American Literature Volume 79 ; 79 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; American Literature Volume 80 ; 80 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; American Literature Volume 81 ; 81 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; American Literature Volume 82 ; 82 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; American Literature Volume 83 ; 83 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; American Literature Volume 84 ; 84 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; American Literature Volume 85 ; 85 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; American Literature Volume 86 ; 86 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; American Literature Volume 87 ; 87 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; American Literature Volume 88 ; 88 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; American Literature Volume 89 ; 89 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = American Speech ;
+      issn = 0003-1283 ;
+      eissn = 1527-2133 ;
+      issnl = 0003-1283
+    >
+
+    {
+
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://americanspeech.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2000 ; American Speech Volume 75 ; 75 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2001 ; American Speech Volume 76 ; 76 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2002 ; American Speech Volume 77 ; 77 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2003 ; American Speech Volume 78 ; 78 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2004 ; American Speech Volume 79 ; 79 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2005 ; American Speech Volume 80 ; 80 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; American Speech Volume 81 ; 81 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; American Speech Volume 82 ; 82 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; American Speech Volume 83 ; 83 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; American Speech Volume 84 ; 84 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; American Speech Volume 85 ; 85 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; American Speech Volume 86 ; 86 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; American Speech Volume 87 ; 87 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; American Speech Volume 88 ; 88 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; American Speech Volume 89 ; 89 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; American Speech Volume 90 ; 90 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; American Speech Volume 91 ; 91 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; American Speech Volume 92 ; 92 ; >
+
+    }
+
+  }
+
+  {
+
+     title <
+      name = boundary 2 ;
+      issn = 0190-3659 ;
+      eissn = 1527-2141 ;
+      issnl = 0190-3659
+    >
+
+    {
+
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://boundary2.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2000 ; boundary 2 Volume 27 ; 27 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2001 ; boundary 2 Volume 28 ; 28 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2002 ; boundary 2 Volume 29 ; 29 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2003 ; boundary 2 Volume 30 ; 30 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2004 ; boundary 2 Volume 31 ; 31 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2005 ; boundary 2 Volume 32 ; 32 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; boundary 2 Volume 33 ; 33 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; boundary 2 Volume 34 ; 34 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; boundary 2 Volume 35 ; 35 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; boundary 2 Volume 36 ; 36 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; boundary 2 Volume 37 ; 37 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; boundary 2 Volume 38 ; 38 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; boundary 2 Volume 39 ; 39 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; boundary 2 Volume 40 ; 40 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; boundary 2 Volume 41 ; 41 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; boundary 2 Volume 42 ; 42 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; boundary 2 Volume 43 ; 43 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; boundary 2 Volume 44 ; 44 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Camera Obscura: Feminism, Culture, and Media Studies ;
+      issn = 0270-5346 ;
+      eissn = 1529-1510 ;
+      issnl = 0270-5346
+    >
+
+    {
+
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://cameraobscura.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1976-1977 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 1 ; 1 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1979 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 1-2 ; 1-2 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1980 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 2 ; 2 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1981 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 3 ; 3 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1982 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 3-4 ; 3-4 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1983-1984 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 4 ; 4 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1985-1986 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 5 ; 5 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1988 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 6 ; 6 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1989 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 7 ; 7 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1990 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 8 ; 8 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1991 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 9 ; 9 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1992 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 10 ; 10 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1993 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 11 ; 11 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1994 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 11-12 ; 11-12 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1995 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 12 ; 12 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1996 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 13 ; 13 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1997-1999 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 14 ; 14 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2000-2001 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 15 ; 15 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2001 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 16 ; 16 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2002 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 17 ; 17 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2003 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 18 ; 18 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2004 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 19 ; 19 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2005 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 20 ; 20 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 21 ; 21 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 22 ; 22 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 23 ; 23 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 24 ; 24 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 25 ; 25 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 26 ; 26 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 27 ; 27 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 28 ; 28 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 29 ; 29 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 30 ; 30 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 31 ; 31 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 32 ; 32 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = The Carlyle Letters Online ;
+      issn = 1532-0928 ;
+      eissn = 1940-1795 ;
+      issnl = 0002-9831
+    >
+
+    {
+
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://carlyleletters.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+      comment[plugin] = This journal is HighWire H10
+      comment[gvc] = This journal is not compared in the gln_v_clockss script
+
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1812-1821 ; The Carlyle Letters Online Volume 1 ; 1 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1822-1823 ; The Carlyle Letters Online Volume 2 ; 2 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1824-1825 ; The Carlyle Letters Online Volume 3 ; 3 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1826-1828 ; The Carlyle Letters Online Volume 4 ; 4 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1829-1831 ; The Carlyle Letters Online Volume 5 ; 5 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1831-1833 ; The Carlyle Letters Online Volume 6 ; 6 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1833-1834 ; The Carlyle Letters Online Volume 7 ; 7 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1835-1836 ; The Carlyle Letters Online Volume 8 ; 8 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1836-1837 ; The Carlyle Letters Online Volume 9 ; 9 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1838 ; The Carlyle Letters Online Volume 10 ; 10 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1839 ; The Carlyle Letters Online Volume 11 ; 11 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1840 ; The Carlyle Letters Online Volume 12 ; 12 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1841 ; The Carlyle Letters Online Volume 13 ; 13 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1842 ; The Carlyle Letters Online Volume 14 ; 14 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1842 ; The Carlyle Letters Online Volume 15 ; 15 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1843 ; The Carlyle Letters Online Volume 16 ; 16 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1843-1844 ; The Carlyle Letters Online Volume 17 ; 17 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1844 ; The Carlyle Letters Online Volume 18 ; 18 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1845 ; The Carlyle Letters Online Volume 19 ; 19 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1845-1846 ; The Carlyle Letters Online Volume 20 ; 20 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1846-1847 ; The Carlyle Letters Online Volume 21 ; 21 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1847-1848 ; The Carlyle Letters Online Volume 22 ; 22 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1848-1849 ; The Carlyle Letters Online Volume 23 ; 23 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1849 ; The Carlyle Letters Online Volume 24 ; 24 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1850 ; The Carlyle Letters Online Volume 25 ; 25 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1851 ; The Carlyle Letters Online Volume 26 ; 26 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1852 ; The Carlyle Letters Online Volume 27 ; 27 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1853 ; The Carlyle Letters Online Volume 28 ; 28 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1854-1855 ; The Carlyle Letters Online Volume 29 ; 29 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1855 ; The Carlyle Letters Online Volume 30 ; 30 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1856 ; The Carlyle Letters Online Volume 31 ; 31 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1856-1857 ; The Carlyle Letters Online Volume 32 ; 32 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1857-1858 ; The Carlyle Letters Online Volume 33 ; 33 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1858 ; The Carlyle Letters Online Volume 34 ; 34 ; >
+      au < ClockssHighWirePlugin ; doNotProcess ; exists ; 1859 ; The Carlyle Letters Online Volume 35 ; 35 ; >
+
+   }
+
+  }
+
+  {
+
+    title <
+      name = Common Knowledge ;
+      issn = 0961-754X ;
+      eissn = 1538-4578 ;
+      issnl = 0961-754X
+    >
+
+    {
+
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://commonknowledge.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2002 ; Common Knowledge Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2003 ; Common Knowledge Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2004 ; Common Knowledge Volume 10 ; 10 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2005 ; Common Knowledge Volume 11 ; 11 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; Common Knowledge Volume 12 ; 12 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; Common Knowledge Volume 13 ; 13 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; Common Knowledge Volume 14 ; 14 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; Common Knowledge Volume 15 ; 15 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; Common Knowledge Volume 16 ; 16 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Common Knowledge Volume 17 ; 17 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Common Knowledge Volume 18 ; 18 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Common Knowledge Volume 19 ; 19 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Common Knowledge Volume 20 ; 20 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Common Knowledge Volume 21 ; 21 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; Common Knowledge Volume 22 ; 22 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; Common Knowledge Volume 23 ; 23 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Comparative Literature ;
+      issn = 0010-4124 ;
+      eissn = 1945-8517 ;
+      issnl = 0010-4124
+    >
+
+    {
+
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://complit.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2000 ; Comparative Literature Volume 52 ; 52 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2001 ; Comparative Literature Volume 53 ; 53 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2002 ; Comparative Literature Volume 54 ; 54 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2003 ; Comparative Literature Volume 55 ; 55 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2004 ; Comparative Literature Volume 56 ; 56 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2005 ; Comparative Literature Volume 57 ; 57 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; Comparative Literature Volume 58 ; 58 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; Comparative Literature Volume 59 ; 59 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; Comparative Literature Volume 60 ; 60 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; Comparative Literature Volume 61 ; 61 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; Comparative Literature Volume 62 ; 62 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Comparative Literature Volume 63 ; 63 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Comparative Literature Volume 64 ; 64 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Comparative Literature Volume 65 ; 65 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Comparative Literature Volume 66 ; 66 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Comparative Literature Volume 67 ; 67 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; Comparative Literature Volume 68 ; 68 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; Comparative Literature Volume 69 ; 69 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Comparative Studies of South Asia, Africa and the Middle East ;
+      issn = 1089-201X ;
+      eissn = 1548-226X ;
+      issnl = 1089-201X
+    >
+
+    {
+
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://cssaame.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1981 ; Comparative Studies of South Asia, Africa and the Middle East Volume 1 ; 1 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1982 ; Comparative Studies of South Asia, Africa and the Middle East Volume 2 ; 2 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1983 ; Comparative Studies of South Asia, Africa and the Middle East Volume 3 ; 3 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1984 ; Comparative Studies of South Asia, Africa and the Middle East Volume 4 ; 4 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1985 ; Comparative Studies of South Asia, Africa and the Middle East Volume 5 ; 5 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1986 ; Comparative Studies of South Asia, Africa and the Middle East Volume 6 ; 6 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1987 ; Comparative Studies of South Asia, Africa and the Middle East Volume 7 ; 7 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1988 ; Comparative Studies of South Asia, Africa and the Middle East Volume 8 ; 8 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1989 ; Comparative Studies of South Asia, Africa and the Middle East Volume 9 ; 9 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1990 ; Comparative Studies of South Asia, Africa and the Middle East Volume 10 ; 10 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1991 ; Comparative Studies of South Asia, Africa and the Middle East Volume 11 ; 11 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1992 ; Comparative Studies of South Asia, Africa and the Middle East Volume 12 ; 12 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1993 ; Comparative Studies of South Asia, Africa and the Middle East Volume 13 ; 13 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1994 ; Comparative Studies of South Asia, Africa and the Middle East Volume 14 ; 14 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1995 ; Comparative Studies of South Asia, Africa and the Middle East Volume 15 ; 15 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1996 ; Comparative Studies of South Asia, Africa and the Middle East Volume 16 ; 16 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1997 ; Comparative Studies of South Asia, Africa and the Middle East Volume 17 ; 17 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1998 ; Comparative Studies of South Asia, Africa and the Middle East Volume 18 ; 18 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1999 ; Comparative Studies of South Asia, Africa and the Middle East Volume 19 ; 19 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2000 ; Comparative Studies of South Asia, Africa and the Middle East Volume 20 ; 20 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2001 ; Comparative Studies of South Asia, Africa and the Middle East Volume 21 ; 21 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2002 ; Comparative Studies of South Asia, Africa and the Middle East Volume 22 ; 22 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2003 ; Comparative Studies of South Asia, Africa and the Middle East Volume 23 ; 23 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2004 ; Comparative Studies of South Asia, Africa and the Middle East Volume 24 ; 24 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2005 ; Comparative Studies of South Asia, Africa and the Middle East Volume 25 ; 25 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; Comparative Studies of South Asia, Africa and the Middle East Volume 26 ; 26 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; Comparative Studies of South Asia, Africa and the Middle East Volume 27 ; 27 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; Comparative Studies of South Asia, Africa and the Middle East Volume 28 ; 28 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; Comparative Studies of South Asia, Africa and the Middle East Volume 29 ; 29 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; Comparative Studies of South Asia, Africa and the Middle East Volume 30 ; 30 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Comparative Studies of South Asia, Africa and the Middle East Volume 31 ; 31 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Comparative Studies of South Asia, Africa and the Middle East Volume 32 ; 32 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Comparative Studies of South Asia, Africa and the Middle East Volume 33 ; 33 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Comparative Studies of South Asia, Africa and the Middle East Volume 34 ; 34 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Comparative Studies of South Asia, Africa and the Middle East Volume 35 ; 35 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; Comparative Studies of South Asia, Africa and the Middle East Volume 36 ; 36 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; Comparative Studies of South Asia, Africa and the Middle East Volume 37 ; 37 ; >
+
+    }
+
+  }
+
+  {
+
+     title <
+      name = Cultural Politics ;
+      issn = 1743-2197 ;
+      eissn = 1751-7435 ;
+      issnl = 1743-2197
+    >
+
+    {
+
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://culturalpolitics.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2005 ; Cultural Politics Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; Cultural Politics Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; Cultural Politics Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; Cultural Politics Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; Cultural Politics Volume 5 ; 5 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; Cultural Politics Volume 6 ; 6 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Cultural Politics Volume 7 ; 7 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Cultural Politics Volume 8 ; 8 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Cultural Politics Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Cultural Politics Volume 10 ; 10 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Cultural Politics Volume 11 ; 11 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; Cultural Politics Volume 12 ; 12 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; Cultural Politics Volume 13 ; 13 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = differences: A Journal of Feminist Cultural Studies ;
+      issn = 1040-7391 ;
+      eissn = 1527-1986 ;
+      issnl = 1040-7391
+    >
+
+    {
+
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://differences.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1999-2000 ; differences: A Journal of Feminist Cultural Studies Volume 11 ; 11 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2001 ; differences: A Journal of Feminist Cultural Studies Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2002 ; differences: A Journal of Feminist Cultural Studies Volume 13 ; 13 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2003 ; differences: A Journal of Feminist Cultural Studies Volume 14 ; 14 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2004 ; differences: A Journal of Feminist Cultural Studies Volume 15 ; 15 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2005 ; differences: A Journal of Feminist Cultural Studies Volume 16 ; 16 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; differences: A Journal of Feminist Cultural Studies Volume 17 ; 17 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; differences: A Journal of Feminist Cultural Studies Volume 18 ; 18 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; differences: A Journal of Feminist Cultural Studies Volume 19 ; 19 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; differences: A Journal of Feminist Cultural Studies Volume 20 ; 20 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; differences: A Journal of Feminist Cultural Studies Volume 21 ; 21 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; differences: A Journal of Feminist Cultural Studies Volume 22 ; 22 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; differences: A Journal of Feminist Cultural Studies Volume 23 ; 23 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; differences: A Journal of Feminist Cultural Studies Volume 24 ; 24 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; differences: A Journal of Feminist Cultural Studies Volume 25 ; 25 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; differences: A Journal of Feminist Cultural Studies Volume 26 ; 26 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; differences: A Journal of Feminist Cultural Studies Volume 27 ; 27 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; differences: A Journal of Feminist Cultural Studies Volume 28 ; 28 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = East Asian Science, Technology and Society: An International Journal ;
+      issn = 1875-2160 ;
+      eissn = 1875-2152 ;
+      issnl = 1875-2160
+    >
+
+    {
+
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://easts.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; East Asian Science, Technology and Society: An International Journal Volume 1 [HighWire] ; 1 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; East Asian Science, Technology and Society: An International Journal Volume 2 [HighWire] ; 2 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; East Asian Science, Technology and Society: An International Journal Volume 3 [HighWire] ; 3 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; East Asian Science, Technology and Society: An International Journal Volume 4 [HighWire] ; 4 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; East Asian Science, Technology and Society: An International Journal Volume 5 ; 5 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; East Asian Science, Technology and Society: An International Journal Volume 6 ; 6 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; East Asian Science, Technology and Society: An International Journal Volume 7 ; 7 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; East Asian Science, Technology and Society: An International Journal Volume 8 ; 8 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; East Asian Science, Technology and Society: An International Journal Volume 9 ; 9 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; East Asian Science, Technology and Society: An International Journal Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; East Asian Science, Technology and Society: An International Journal Volume 11 ; 11 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Eighteenth-Century Life ;
+      issn =  0098-2601 ;
+      eissn = 1086-3192 ;
+      issnl = 0098-2601
+    >
+
+   {
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://ecl.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2000 ; Eighteenth-Century Life Volume 24 ; 24 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2001 ; Eighteenth-Century Life Volume 25 ; 25 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2002 ; Eighteenth-Century Life Volume 26 ; 26 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2003 ; Eighteenth-Century Life Volume 27 ; 27 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2004 ; Eighteenth-Century Life Volume 28 ; 28 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2005 ; Eighteenth-Century Life Volume 29 ; 29 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; Eighteenth-Century Life Volume 30 ; 30 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; Eighteenth-Century Life Volume 31 ; 31 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; Eighteenth-Century Life Volume 32 ; 32 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; Eighteenth-Century Life Volume 33 ; 33 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; Eighteenth-Century Life Volume 34 ; 34 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Eighteenth-Century Life Volume 35 ; 35 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Eighteenth-Century Life Volume 36 ; 36 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Eighteenth-Century Life Volume 37 ; 37 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Eighteenth-Century Life Volume 38 ; 38 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Eighteenth-Century Life Volume 39 ; 39 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; Eighteenth-Century Life Volume 40 ; 40 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; Eighteenth-Century Life Volume 41 ; 41 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Environmental Humanities ;
+      eissn = 2201-1919 ;
+      issnl = 2201-1919
+    >
+
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://environmentalhumanities.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Environmental Humanities Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Environmental Humanities Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Environmental Humanities Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Environmental Humanities Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Environmental Humanities Volume 5 ; 5 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Environmental Humanities Volume 6 ; 6 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Environmental Humanities Volume 7 ; 7 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; Environmental Humanities Volume 8 ; 8 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2017 ; Environmental Humanities Volume 9 ; 9 ; >
+
+  }
+
+  {
+
+    title <
+      name = Ethnohistory ;
+      issn = 0014-1801 ;
+      eissn = 1527-5477
+
+    >
+
+   {
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://ethnohistory.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2000 ; Ethnohistory Volume 47 ; 47 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2001 ; Ethnohistory Volume 48 ; 48 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2002 ; Ethnohistory Volume 49 ; 49 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2003 ; Ethnohistory Volume 50 ; 50 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2004 ; Ethnohistory Volume 51 ; 51 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2005 ; Ethnohistory Volume 52 ; 52 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; Ethnohistory Volume 53 ; 53 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; Ethnohistory Volume 54 ; 54 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; Ethnohistory Volume 55 ; 55 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; Ethnohistory Volume 56 ; 56 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; Ethnohistory Volume 57 ; 57 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Ethnohistory Volume 58 ; 58 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Ethnohistory Volume 59 ; 59 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Ethnohistory Volume 60 ; 60 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Ethnohistory Volume 61 ; 61 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2015 ; Ethnohistory Volume 62 ; 62 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; Ethnohistory Volume 63 ; 63 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; Ethnohistory Volume 64 ; 64 ; >
+
+    }
+
+  }
+
+
+  {
+
+    title <
+      name = French Historical Studies ;
+      issn = 0016-1071 ;
+      eissn =  1527-5493
+
+    >
+
+   {
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://fhs.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2000 ; French Historical Studies Volume 23 ; 23 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2001 ; French Historical Studies Volume 24 ; 24 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2002 ; French Historical Studies Volume 25 ; 25 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2003 ; French Historical Studies Volume 26 ; 26 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2004 ; French Historical Studies Volume 27 ; 27 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2005 ; French Historical Studies Volume 28 ; 28 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; French Historical Studies Volume 29 ; 29 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; French Historical Studies Volume 30 ; 30 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; French Historical Studies Volume 31 ; 31 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; French Historical Studies Volume 32 ; 32 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; French Historical Studies Volume 33 ; 33 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; French Historical Studies Volume 34 ; 34 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; French Historical Studies Volume 35 ; 35 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; French Historical Studies Volume 36 ; 36 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; French Historical Studies Volume 37 ; 37 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; French Historical Studies Volume 38 ; 38 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; French Historical Studies Volume 39 ; 39 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; French Historical Studies Volume 40 ; 40 ; >
+
+  }
+
+  }
+
+  {
+
+    title <
+      name = Genre: Forms of Discourse and Culture ;
+      issn = 0016-6928 ;
+      eissn =  2160-0228
+
+  >
+
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://genre.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2000 ; Genre: Forms of Discourse and Culture Volume 33 ; 33 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2001 ; Genre: Forms of Discourse and Culture Volume 34 ; 34 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2002 ; Genre: Forms of Discourse and Culture Volume 35 ; 35 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2003 ; Genre: Forms of Discourse and Culture Volume 36 ; 36 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2004 ; Genre: Forms of Discourse and Culture Volume 37 ; 37 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2005 ; Genre: Forms of Discourse and Culture Volume 38 ; 38 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; Genre: Forms of Discourse and Culture Volume 39 ; 39 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; Genre: Forms of Discourse and Culture Volume 40 ; 40 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; Genre: Forms of Discourse and Culture Volume 41 ; 41 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; Genre: Forms of Discourse and Culture Volume 42 ; 42 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; Genre: Forms of Discourse and Culture Volume 43 ; 43 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Genre: Forms of Discourse and Culture Volume 44 ; 44 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Genre: Forms of Discourse and Culture Volume 45 ; 45 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Genre: Forms of Discourse and Culture Volume 46 ; 46 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Genre: Forms of Discourse and Culture Volume 47 ; 47 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Genre: Forms of Discourse and Culture Volume 48 ; 48 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; Genre: Forms of Discourse and Culture Volume 49 ; 49 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; Genre: Forms of Discourse and Culture Volume 50 ; 50 ; >
+
+  }
+
+
+  {
+
+    title <
+      name = GLQ: A Journal of Lesbian and Gay Studies ;
+      issn = 1064-2684 ;
+      eissn = 1527-9375
+
+>
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://glq.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1993-1995 ; GLQ: A Journal of Lesbian and Gay Studies Volume 1 ; 1 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1995 ; GLQ: A Journal of Lesbian and Gay Studies Volume 2 ; 2 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1996-1997 ; GLQ: A Journal of Lesbian and Gay Studies Volume 3 ; 3 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1998 ; GLQ: A Journal of Lesbian and Gay Studies Volume 4 ; 4 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1999 ; GLQ: A Journal of Lesbian and Gay Studies Volume 5 ; 5 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2000 ; GLQ: A Journal of Lesbian and Gay Studies Volume 6 ; 6 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2001 ; GLQ: A Journal of Lesbian and Gay Studies Volume 7 ; 7 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2002 ; GLQ: A Journal of Lesbian and Gay Studies Volume 8 ; 8 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2003 ; GLQ: A Journal of Lesbian and Gay Studies Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2003-2004 ; GLQ: A Journal of Lesbian and Gay Studies Volume 10 ; 10 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2005 ; GLQ: A Journal of Lesbian and Gay Studies Volume 11 ; 11 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; GLQ: A Journal of Lesbian and Gay Studies Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; GLQ: A Journal of Lesbian and Gay Studies Volume 13 ; 13 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; GLQ: A Journal of Lesbian and Gay Studies Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; GLQ: A Journal of Lesbian and Gay Studies Volume 15 ; 15 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; GLQ: A Journal of Lesbian and Gay Studies Volume 16 ; 16 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; GLQ: A Journal of Lesbian and Gay Studies Volume 17 ; 17 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; GLQ: A Journal of Lesbian and Gay Studies Volume 18 ; 18 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; GLQ: A Journal of Lesbian and Gay Studies Volume 19 ; 19 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; GLQ: A Journal of Lesbian and Gay Studies Volume 20 ; 20 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; GLQ: A Journal of Lesbian and Gay Studies Volume 21 ; 21 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; GLQ: A Journal of Lesbian and Gay Studies Volume 22 ; 22 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; GLQ: A Journal of Lesbian and Gay Studies Volume 23 ; 23 ; >
+
+    }
+
+    {
+
+    title <
+      name = Hispanic American Historical Review ;
+      issn = 0018-2168 ;
+      eissn = 1527-1900
+
+>
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://hahr.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2000 ; Hispanic American Historical Review Volume 80 ; 80 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2001 ; Hispanic American Historical Review Volume 81 ; 81 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2002 ; Hispanic American Historical Review Volume 82 ; 82 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2003 ; Hispanic American Historical Review Volume 83 ; 83 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2004 ; Hispanic American Historical Review Volume 84 ; 84 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2005 ; Hispanic American Historical Review Volume 85 ; 85 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; Hispanic American Historical Review Volume 86 ; 86 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; Hispanic American Historical Review Volume 87 ; 87 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; Hispanic American Historical Review Volume 88 ; 88 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; Hispanic American Historical Review Volume 89 ; 89 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; Hispanic American Historical Review Volume 90 ; 90; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Hispanic American Historical Review Volume 91 ; 91 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Hispanic American Historical Review Volume 92 ; 92 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Hispanic American Historical Review Volume 93 ; 93 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Hispanic American Historical Review Volume 94 ; 94 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Hispanic American Historical Review Volume 95 ; 95 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; Hispanic American Historical Review Volume 96 ; 96 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; Hispanic American Historical Review Volume 97 ; 97 ; >
+
+    }
+
+    {
+
+    title <
+      name = History of Political Economy ;
+      issn = 0018-2702 ;
+      eissn = 1527-1919
+
+   >
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://hope.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1969 ; History of Political Economy Volume 1 ; 1 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1970 ; History of Political Economy Volume 2 ; 2 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1971 ; History of Political Economy Volume 3 ; 3 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1972 ; History of Political Economy Volume 4 ; 4 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1973 ; History of Political Economy Volume 5 ; 5 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1974 ; History of Political Economy Volume 6 ; 6 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1975 ; History of Political Economy Volume 7 ; 7 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1976 ; History of Political Economy Volume 8 ; 8 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1977 ; History of Political Economy Volume 9 ; 9 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1978 ; History of Political Economy Volume 10 ; 10 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1979 ; History of Political Economy Volume 11 ; 11 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1980 ; History of Political Economy Volume 12 ; 12 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1981 ; History of Political Economy Volume 13 ; 13 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1982 ; History of Political Economy Volume 14 ; 14 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1983 ; History of Political Economy Volume 15 ; 15 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1984 ; History of Political Economy Volume 16 ; 16 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1985 ; History of Political Economy Volume 17 ; 17 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1986 ; History of Political Economy Volume 18 ; 18 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1987 ; History of Political Economy Volume 19 ; 19 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1988 ; History of Political Economy Volume 20 ; 20 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1989 ; History of Political Economy Volume 21 ; 21 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1990 ; History of Political Economy Volume 22 ; 22 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1991 ; History of Political Economy Volume 23 ; 23 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1992 ; History of Political Economy Volume 24 ; 24 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1993 ; History of Political Economy Volume 25 ; 25 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1994 ; History of Political Economy Volume 26 ; 26 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1995 ; History of Political Economy Volume 27 ; 27 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1996 ; History of Political Economy Volume 28 ; 28 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1997 ; History of Political Economy Volume 29 ; 29 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1998 ; History of Political Economy Volume 30 ; 30 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1999 ; History of Political Economy Volume 31 ; 31 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2000 ; History of Political Economy Volume 32 ; 32 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2001 ; History of Political Economy Volume 33 ; 33 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2002 ; History of Political Economy Volume 34 ; 34 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2003 ; History of Political Economy Volume 35 ; 35 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2004 ; History of Political Economy Volume 36 ; 36 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2005 ; History of Political Economy Volume 37 ; 37 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; History of Political Economy Volume 38 ; 38 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; History of Political Economy Volume 39 ; 39 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; History of Political Economy Volume 40 ; 40 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; History of Political Economy Volume 41 ; 41 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; History of Political Economy Volume 42 ; 42 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; History of Political Economy Volume 43 ; 43 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; History of Political Economy Volume 44 ; 44 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; History of Political Economy Volume 45 ; 45 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; History of Political Economy Volume 46 ; 46 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; History of Political Economy Volume 47 ; 47 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; History of Political Economy Volume 48 ; 48 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; History of Political Economy Volume 49 ; 49 ; >
+
+    }
+
+  {
+    title <
+      name = Journal of Chinese Literature and Culture ;
+      issn = 2329-0048 ;
+      eissn = 2329-0056 
+    >
+
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://jclc.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Journal of Chinese Literature and Culture Volume 1 ; 1 ; >
+     au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2015 ; Journal of Chinese Literature and Culture Volume 2 ; 2 ; >
+     au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2016 ; Journal of Chinese Literature and Culture Volume 3 ; 3 ; >
+     au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2017 ; Journal of Chinese Literature and Culture Volume 4 ; 4 ; >
+
+  }
+
+    {
+
+    title <
+      name = Journal of Health Politics, Policy and Law ;
+      issn = 0361-6878 ;
+      eissn = 1527-1927
+
+>
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://jhppl.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1976 ; Journal of Health Politics, Policy and Law Volume 1; 1 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1977 ; Journal of Health Politics, Policy and Law Volume 2 ; 2 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1978 ; Journal of Health Politics, Policy and Law Volume 3 ; 3 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1979 ; Journal of Health Politics, Policy and Law Volume 4 ; 4 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1980 ; Journal of Health Politics, Policy and Law Volume 5 ; 5 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1981 ; Journal of Health Politics, Policy and Law Volume 6 ; 6 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1982 ; Journal of Health Politics, Policy and Law Volume 7 ; 7 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1983 ; Journal of Health Politics, Policy and Law Volume 8 ; 8 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1984 ; Journal of Health Politics, Policy and Law Volume 9 ; 9 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1985 ; Journal of Health Politics, Policy and Law Volume 10 ; 10 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1986 ; Journal of Health Politics, Policy and Law Volume 11 ; 11 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1987 ; Journal of Health Politics, Policy and Law Volume 12 ; 12 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1988 ; Journal of Health Politics, Policy and Law Volume 13 ; 13 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1989 ; Journal of Health Politics, Policy and Law Volume 14 ; 14 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1990 ; Journal of Health Politics, Policy and Law Volume 15 ; 15 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1991 ; Journal of Health Politics, Policy and Law Volume 16 ; 16 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1992 ; Journal of Health Politics, Policy and Law Volume 17 ; 17 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1993 ; Journal of Health Politics, Policy and Law Volume 18 ; 18 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1994 ; Journal of Health Politics, Policy and Law Volume 19 ; 19 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1995 ; Journal of Health Politics, Policy and Law Volume 20 ; 20 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1996 ; Journal of Health Politics, Policy and Law Volume 21 ; 21 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1997 ; Journal of Health Politics, Policy and Law Volume 22 ; 22 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1998 ; Journal of Health Politics, Policy and Law Volume 23 ; 23 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1999 ; Journal of Health Politics, Policy and Law Volume 24 ; 24 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2000 ; Journal of Health Politics, Policy and Law Volume 25 ; 25 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2001 ; Journal of Health Politics, Policy and Law Volume 26 ; 26 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2002 ; Journal of Health Politics, Policy and Law Volume 27 ; 27 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2003 ; Journal of Health Politics, Policy and Law Volume 28 ; 28 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2004 ; Journal of Health Politics, Policy and Law Volume 29 ; 29 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2005 ; Journal of Health Politics, Policy and Law Volume 30 ; 30 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; Journal of Health Politics, Policy and Law Volume 31 ; 31 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; Journal of Health Politics, Policy and Law Volume 32 ; 32 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; Journal of Health Politics, Policy and Law Volume 33 ; 33 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; Journal of Health Politics, Policy and Law Volume 34 ; 34 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; Journal of Health Politics, Policy and Law Volume 35 ; 35 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Journal of Health Politics, Policy and Law Volume 36 ; 36 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Journal of Health Politics, Policy and Law Volume 37 ; 37 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Journal of Health Politics, Policy and Law Volume 38 ; 38 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Journal of Health Politics, Policy and Law Volume 39 ; 39 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2015 ; Journal of Health Politics, Policy and Law Volume 40 ; 40 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; Journal of Health Politics, Policy and Law Volume 41 ; 41 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; Journal of Health Politics, Policy and Law Volume 42 ; 42 ; >
+
+    }
+
+    {
+
+    title <
+      name = Journal of Medieval and Early Modern Studies ;
+      issn = 1082-9636 ;
+      eissn = 1527-8263
+
+>
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://jmems.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2000 ; Journal of Medieval and Early Modern Studies Volume 30 ; 30 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2001 ; Journal of Medieval and Early Modern Studies Volume 31 ; 31 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2002 ; Journal of Medieval and Early Modern Studies Volume 32 ; 32 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2003 ; Journal of Medieval and Early Modern Studies Volume 33 ; 33 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2004 ; Journal of Medieval and Early Modern Studies Volume 34 ; 34 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2005 ; Journal of Medieval and Early Modern Studies Volume 35 ; 35 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; Journal of Medieval and Early Modern Studies Volume 36 ; 36 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; Journal of Medieval and Early Modern Studies Volume 37 ; 37 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; Journal of Medieval and Early Modern Studies Volume 38 ; 38 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; Journal of Medieval and Early Modern Studies Volume 39 ; 39 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; Journal of Medieval and Early Modern Studies Volume 40 ; 40 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Journal of Medieval and Early Modern Studies Volume 41 ; 41 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Journal of Medieval and Early Modern Studies Volume 42 ; 42 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Journal of Medieval and Early Modern Studies Volume 43 ; 43 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Journal of Medieval and Early Modern Studies Volume 44 ; 44 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Journal of Medieval and Early Modern Studies Volume 45 ; 45 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; Journal of Medieval and Early Modern Studies Volume 46 ; 46 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; Journal of Medieval and Early Modern Studies Volume 47 ; 47 ; >
+
+   }
+
+   {
+
+    title <
+      name = Journal of Middle East Women's Studies ;
+      issn = 1552-5864 ;
+      eissn = 1558-9579
+
+   >
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://jmews.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2015 ; Journal of Middle East Women's Studies Volume 11 ; 11 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2016 ; Journal of Middle East Women's Studies Volume 12 ; 12 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2017 ; Journal of Middle East Women's Studies Volume 13 ; 13 ; >
+
+   }
+
+   {
+
+    title <
+      name = Journal of Music Theory ;
+      issn = 0022-2909 ;
+      eissn = 1941-7497
+
+   >
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://jmt.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1999 ; Journal of Music Theory Volume 43 ; 43 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2000 ; Journal of Music Theory Volume 44 ; 44 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2001 ; Journal of Music Theory Volume 45 ; 45 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2002 ; Journal of Music Theory Volume 46 ; 46 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2003 ; Journal of Music Theory Volume 47 ; 47 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2004 ; Journal of Music Theory Volume 48 ; 48 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2005 ; Journal of Music Theory Volume 49 ; 49 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; Journal of Music Theory Volume 50 ; 50 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; Journal of Music Theory Volume 51 ; 51 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; Journal of Music Theory Volume 52 ; 52 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; Journal of Music Theory Volume 53 ; 53 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; Journal of Music Theory Volume 54 ; 54 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Journal of Music Theory Volume 55 ; 55 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Journal of Music Theory Volume 56 ; 56 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Journal of Music Theory Volume 57 ; 57 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Journal of Music Theory Volume 58 ; 58 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Journal of Music Theory Volume 59 ; 59 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; Journal of Music Theory Volume 60 ; 60 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; Journal of Music Theory Volume 61 ; 61 ; >
+
+    }
+
+    {
+
+    title <
+      name = Labor: Studies in Working-Class History of the Americas ;
+      issn = 1547-6715 ;
+      eissn = 1558-1454
+
+>
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://labor.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2004 ; Labor: Studies in Working-Class History of the Americas Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2005 ; Labor: Studies in Working-Class History of the Americas Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; Labor: Studies in Working-Class History of the Americas Volume 3 ; 3 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; Labor: Studies in Working-Class History of the Americas Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; Labor: Studies in Working-Class History of the Americas Volume 5 ; 5 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; Labor: Studies in Working-Class History of the Americas Volume 6 ; 6 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; Labor: Studies in Working-Class History of the Americas Volume 7 ; 7 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Labor: Studies in Working-Class History of the Americas Volume 8 ; 8 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Labor: Studies in Working-Class History of the Americas Volume 9 ; 9 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Labor: Studies in Working-Class History of the Americas Volume 10 ; 10 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Labor: Studies in Working-Class History of the Americas Volume 11 ; 11 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Labor: Studies in Working-Class History of the Americas Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; Labor: Studies in Working-Class History of the Americas Volume 13 ; 13 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; Labor: Studies in Working-Class History of the Americas Volume 14 ; 14 ; >
+
+    }
+
+    {
+
+    title <
+      name = Limnology and Oceanography: Fluids and Environments ;
+      eissn = 2157-3689
+
+    >
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://lofe.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      comment[moved] = moved to Wiley.
+
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2011 ; Limnology and Oceanography: Fluids and Environments Volume 1 ; 1 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Limnology and Oceanography: Fluids and Environments Volume 2 ; 2 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Limnology and Oceanography: Fluids and Environments Volume 3 ; 3 ; reingest1.clockss.org:8082 >
+
+    }
+
+    {
+
+    title <
+      name = Mediterranean Quarterly ;
+      issn = 1047-4552 ;
+      eissn = 1527-1935
+
+    >
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://mq.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+      #####last volume in 2019. Stopped publishing
+
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2000 ; Mediterranean Quarterly Volume 11 ; 11 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2001 ; Mediterranean Quarterly Volume 12 ; 12 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2002 ; Mediterranean Quarterly Volume 13 ; 13 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2003 ; Mediterranean Quarterly Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2004 ; Mediterranean Quarterly Volume 15 ; 15 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2005 ; Mediterranean Quarterly Volume 16 ; 16 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; Mediterranean Quarterly Volume 17 ; 17 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; Mediterranean Quarterly Volume 18 ; 18 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; Mediterranean Quarterly Volume 19 ; 19 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; Mediterranean Quarterly Volume 20 ; 20 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; Mediterranean Quarterly Volume 21 ; 21 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Mediterranean Quarterly Volume 22 ; 22 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Mediterranean Quarterly Volume 23 ; 23 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Mediterranean Quarterly Volume 24 ; 24 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Mediterranean Quarterly Volume 25 ; 25 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Mediterranean Quarterly Volume 26 ; 26 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; Mediterranean Quarterly Volume 27 ; 27 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; Mediterranean Quarterly Volume 28 ; 28 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2018 ; Mediterranean Quarterly Volume 29 ; 29 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2019 ; Mediterranean Quarterly Volume 30 ; 30 ; >
+      #stopped publishing after 2019.
+
+     }
+
+    {
+
+    title <
+      name = The Minnesota Review ;
+      issn = 0026-5667 ;
+      eissn = 2157-4189
+
+>
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://minnesotareview.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2005 ; The Minnesota Review Volume 2005 ; 2005 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; The Minnesota Review Volume 2006 ; 2006 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; The Minnesota Review Volume 2007 ; 2007 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; The Minnesota Review Volume 2008 ; 2008 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; The Minnesota Review Volume 2009 ; 2009 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; The Minnesota Review Volume 2010 ; 2010 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; The Minnesota Review Volume 2011 ; 2011 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; The Minnesota Review Volume 2012 ; 2012 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; The Minnesota Review Volume 2013 ; 2013 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; The Minnesota Review Volume 2014 ; 2014 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; The Minnesota Review Volume 2015 ; 2015 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; The Minnesota Review Volume 2016 ; 2016 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; The Minnesota Review Volume 2017 ; 2017 ; >
+
+    }
+
+    {
+
+    title <
+      name = MLQ: Modern Language Quarterly ;
+      issn = 0026-7929 ;
+      eissn = 1527-1943
+
+     >
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://mlq.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+
+
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1940 ; MLQ: Modern Language Quarterly Volume 1 ; 1 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1941 ; MLQ: Modern Language Quarterly Volume 2 ; 2 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1942 ; MLQ: Modern Language Quarterly Volume 3 ; 3 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1943 ; MLQ: Modern Language Quarterly Volume 4 ; 4 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1944 ; MLQ: Modern Language Quarterly Volume 5 ; 5 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1945 ; MLQ: Modern Language Quarterly Volume 6 ; 6 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1946 ; MLQ: Modern Language Quarterly Volume 7 ; 7 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1947 ; MLQ: Modern Language Quarterly Volume 8 ; 8 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1948 ; MLQ: Modern Language Quarterly Volume 9 ; 9 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1949 ; MLQ: Modern Language Quarterly Volume 10 ; 10 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1950 ; MLQ: Modern Language Quarterly Volume 11 ; 11 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1951 ; MLQ: Modern Language Quarterly Volume 12 ; 12 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1952 ; MLQ: Modern Language Quarterly Volume 13 ; 13 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1953 ; MLQ: Modern Language Quarterly Volume 14 ; 14 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1954 ; MLQ: Modern Language Quarterly Volume 15 ; 15 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1955 ; MLQ: Modern Language Quarterly Volume 16 ; 16 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1956 ; MLQ: Modern Language Quarterly Volume 17 ; 17 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1957 ; MLQ: Modern Language Quarterly Volume 18 ; 18 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1958 ; MLQ: Modern Language Quarterly Volume 19 ; 19 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1959 ; MLQ: Modern Language Quarterly Volume 20 ; 20 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1960 ; MLQ: Modern Language Quarterly Volume 21 ; 21 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1961 ; MLQ: Modern Language Quarterly Volume 22 ; 22 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1962 ; MLQ: Modern Language Quarterly Volume 23 ; 23 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1963 ; MLQ: Modern Language Quarterly Volume 24 ; 24 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1964 ; MLQ: Modern Language Quarterly Volume 25 ; 25 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1965 ; MLQ: Modern Language Quarterly Volume 26 ; 26 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1966 ; MLQ: Modern Language Quarterly Volume 27 ; 27 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1967 ; MLQ: Modern Language Quarterly Volume 28 ; 28 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1968 ; MLQ: Modern Language Quarterly Volume 29 ; 29 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1969 ; MLQ: Modern Language Quarterly Volume 30 ; 30 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1970 ; MLQ: Modern Language Quarterly Volume 31 ; 31 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1971 ; MLQ: Modern Language Quarterly Volume 32 ; 32 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1972 ; MLQ: Modern Language Quarterly Volume 33 ; 33 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1973 ; MLQ: Modern Language Quarterly Volume 34 ; 34 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1974 ; MLQ: Modern Language Quarterly Volume 35 ; 35 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1975 ; MLQ: Modern Language Quarterly Volume 36 ; 36 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1976 ; MLQ: Modern Language Quarterly Volume 37 ; 37 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1977 ; MLQ: Modern Language Quarterly Volume 38 ; 38 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1978 ; MLQ: Modern Language Quarterly Volume 39 ; 39 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1979 ; MLQ: Modern Language Quarterly Volume 40 ; 40 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1980 ; MLQ: Modern Language Quarterly Volume 41 ; 41 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1981 ; MLQ: Modern Language Quarterly Volume 42 ; 42 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1982 ; MLQ: Modern Language Quarterly Volume 43 ; 43 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1983 ; MLQ: Modern Language Quarterly Volume 44 ; 44 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1984 ; MLQ: Modern Language Quarterly Volume 45 ; 45 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1985 ; MLQ: Modern Language Quarterly Volume 46 ; 46 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1986 ; MLQ: Modern Language Quarterly Volume 47 ; 47 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1987 ; MLQ: Modern Language Quarterly Volume 48 ; 48 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1988 ; MLQ: Modern Language Quarterly Volume 49 ; 49 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1989 ; MLQ: Modern Language Quarterly Volume 50 ; 50 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1990 ; MLQ: Modern Language Quarterly Volume 51 ; 51 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1991 ; MLQ: Modern Language Quarterly Volume 52 ; 52 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1992 ; MLQ: Modern Language Quarterly Volume 53 ; 53 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1993 ; MLQ: Modern Language Quarterly Volume 54 ; 54 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1994 ; MLQ: Modern Language Quarterly Volume 55 ; 55 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1995 ; MLQ: Modern Language Quarterly Volume 56 ; 56 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1996 ; MLQ: Modern Language Quarterly Volume 57 ; 57 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1997 ; MLQ: Modern Language Quarterly Volume 58 ; 58 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1998 ; MLQ: Modern Language Quarterly Volume 59 ; 59 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1999 ; MLQ: Modern Language Quarterly Volume 60 ; 60 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2000 ; MLQ: Modern Language Quarterly Volume 61 ; 61 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2001 ; MLQ: Modern Language Quarterly Volume 62 ; 62 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2002 ; MLQ: Modern Language Quarterly Volume 63 ; 63 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2003 ; MLQ: Modern Language Quarterly Volume 64 ; 64 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2004 ; MLQ: Modern Language Quarterly Volume 65 ; 65 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2005 ; MLQ: Modern Language Quarterly Volume 66 ; 66 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; MLQ: Modern Language Quarterly Volume 67 ; 67 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; MLQ: Modern Language Quarterly Volume 68 ; 68 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; MLQ: Modern Language Quarterly Volume 69 ; 69 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; MLQ: Modern Language Quarterly Volume 70 ; 70 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; MLQ: Modern Language Quarterly Volume 71 ; 71 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; MLQ: Modern Language Quarterly Volume 72 ; 72 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; MLQ: Modern Language Quarterly Volume 73 ; 73 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; MLQ: Modern Language Quarterly Volume 74 ; 74 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; MLQ: Modern Language Quarterly Volume 75 ; 75 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; MLQ: Modern Language Quarterly Volume 76 ; 76 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; MLQ: Modern Language Quarterly Volume 77 ; 77 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; MLQ: Modern Language Quarterly Volume 78 ; 78 ; >
+
+    }
+
+    {
+
+    title <
+      name = New German Critique ;
+      issn = 0094-033X ;
+      eissn = 1558-1462
+
+     >
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://ngc.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; New German Critique Volume 33 ; 33 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; New German Critique Volume 34 ; 34 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; New German Critique Volume 35 ; 35 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; New German Critique Volume 36 ; 36 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; New German Critique Volume 37 ; 37 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; New German Critique Volume 38 ; 38 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; New German Critique Volume 39 ; 39 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; New German Critique Volume 40 ; 40 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; New German Critique Volume 41 ; 41 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; New German Critique Volume 42 ; 42 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; New German Critique Volume 43 ; 43 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; New German Critique Volume 44 ; 44 ; >
+
+     }
+
+    {
+
+    title <
+      name = Nka: Journal of Contemporary African Art ;
+      issn = 1075-7163 ;
+      eissn = 2152-7792
+
+     >
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://nka.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1994 ; Nka: Journal of Contemporary African Art Volume 1994 ; 1994 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1995 ; Nka: Journal of Contemporary African Art Volume 1995 ; 1995 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1996 ; Nka: Journal of Contemporary African Art Volume 1996 ; 1996 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1997 ; Nka: Journal of Contemporary African Art Volume 1997 ; 1997 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1998 ; Nka: Journal of Contemporary African Art Volume 1998 ; 1998 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1999 ; Nka: Journal of Contemporary African Art Volume 1999 ; 1999 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2000 ; Nka: Journal of Contemporary African Art Volume 2000 ; 2000 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2001 ; Nka: Journal of Contemporary African Art Volume 2001 ; 2001 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2002 ; Nka: Journal of Contemporary African Art Volume 2002 ; 2002 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2003 ; Nka: Journal of Contemporary African Art Volume 2003 ; 2003 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2004 ; Nka: Journal of Contemporary African Art Volume 2004 ; 2004 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; doesNotExist ; doesNotExist ; 2005 ; Nka: Journal of Contemporary African Art Volume 2005 ; 0 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; Nka: Journal of Contemporary African Art Volume 2006 ; 2006 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; Nka: Journal of Contemporary African Art Volume 2007 ; 2007 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; Nka: Journal of Contemporary African Art Volume 2008 ; 2008 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; Nka: Journal of Contemporary African Art Volume 2009 ; 2009 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; Nka: Journal of Contemporary African Art Volume 2010 ; 2010 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Nka: Journal of Contemporary African Art Volume 2011 ; 2011 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Nka: Journal of Contemporary African Art Volume 2012 ; 2012 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Nka: Journal of Contemporary African Art Volume 2013 ; 2013 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Nka: Journal of Contemporary African Art Volume 2014 ; 2014 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Nka: Journal of Contemporary African Art Volume 2015 ; 2015 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; Nka: Journal of Contemporary African Art Volume 2016 ; 2016 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; Nka: Journal of Contemporary African Art Volume 2017 ; 2017 ; >
+
+    }
+
+    {
+
+    title <
+      name = Novel: A Forum on Fiction ;
+      issn = 0029-5132 ;
+      eissn = 1945-8509
+
+     >
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://novel.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1999-2000 ; Novel: A Forum on Fiction Volume 33 ; 33 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2000-2001 ; Novel: A Forum on Fiction Volume 34 ; 34 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2001-2002 ; Novel: A Forum on Fiction Volume 35 ; 35 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2002-2003 ; Novel: A Forum on Fiction Volume 36 ; 36 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2003-2004 ; Novel: A Forum on Fiction Volume 37 ; 37 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2004-2005 ; Novel: A Forum on Fiction Volume 38 ; 38 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2005-2006 ; Novel: A Forum on Fiction Volume 39 ; 39 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006-2007 ; Novel: A Forum on Fiction Volume 40 ; 40 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007-2008 ; Novel: A Forum on Fiction Volume 41 ; 41 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; Novel: A Forum on Fiction Volume 42 ; 42 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; Novel: A Forum on Fiction Volume 43 ; 43 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Novel: A Forum on Fiction Volume 44 ; 44 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Novel: A Forum on Fiction Volume 45 ; 45 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Novel: A Forum on Fiction Volume 46 ; 46 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Novel: A Forum on Fiction Volume 47 ; 47 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Novel: A Forum on Fiction Volume 48 ; 48 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; Novel: A Forum on Fiction Volume 49 ; 49 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; Novel: A Forum on Fiction Volume 50 ; 50 ; >
+
+    }
+
+    {
+
+    title <
+      name = Pedagogy ;
+      issn = 1531-4200 ;
+      eissn =  1533-6255
+
+      >
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://pedagogy.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2001 ; Pedagogy Volume 1 ; 1  ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2002 ; Pedagogy Volume 2 ; 2  ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2003 ; Pedagogy Volume 3 ; 3  ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2004 ; Pedagogy Volume 4 ; 4  ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2005 ; Pedagogy Volume 5 ; 5  ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; Pedagogy Volume 6 ; 6  ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; Pedagogy Volume 7 ; 7  ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; Pedagogy Volume 8 ; 8  ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; Pedagogy Volume 9 ; 9  ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; Pedagogy Volume 10 ; 10 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Pedagogy Volume 11 ; 11 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Pedagogy Volume 12 ; 12 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Pedagogy Volume 13 ; 13 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Pedagogy Volume 14 ; 14 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Pedagogy Volume 15 ; 15 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; Pedagogy Volume 16 ; 16 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; Pedagogy Volume 17 ; 17 ; >
+
+    }
+
+    {
+
+    title <
+      name = Philosophical Review ;
+      issn = 0031-8108 ;
+      eissn = 1558-1470
+
+      >
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://philreview.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2000 ; Philosophical Review Volume 109 ; 109 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2001 ; Philosophical Review Volume 110 ; 110 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2002 ; Philosophical Review Volume 111 ; 111 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2003 ; Philosophical Review Volume 112 ; 112 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2004 ; Philosophical Review Volume 113 ; 113 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2005 ; Philosophical Review Volume 114 ; 114 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; Philosophical Review Volume 115 ; 115 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; Philosophical Review Volume 116 ; 116 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; Philosophical Review Volume 117 ; 117 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; Philosophical Review Volume 118 ; 118 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; Philosophical Review Volume 119 ; 119 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Philosophical Review Volume 120 ; 120 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Philosophical Review Volume 121 ; 121 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Philosophical Review Volume 122 ; 122 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Philosophical Review Volume 123 ; 123 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Philosophical Review Volume 124 ; 124 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; Philosophical Review Volume 125 ; 125 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; Philosophical Review Volume 126 ; 126 ; >
+
+  }
+
+
+      {
+
+    title <
+      name = Poetics Today ;
+      issn =  0333-5372 ;
+      eissn = 1527-5507
+
+     >
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://poeticstoday.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2000 ; Poetics Today Volume 21 ; 21 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2001 ; Poetics Today Volume 22 ; 22 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2002 ; Poetics Today Volume 23 ; 23 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2003 ; Poetics Today Volume 24 ; 24 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2004 ; Poetics Today Volume 25 ; 25 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2005 ; Poetics Today Volume 26 ; 26 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; Poetics Today Volume 27 ; 27 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; Poetics Today Volume 28 ; 28 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; Poetics Today Volume 29 ; 29 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; Poetics Today Volume 30 ; 30 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; Poetics Today Volume 31 ; 31 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Poetics Today Volume 32 ; 32 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Poetics Today Volume 33 ; 33 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Poetics Today Volume 34 ; 34 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Poetics Today Volume 35 ; 35 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Poetics Today Volume 36 ; 36 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; Poetics Today Volume 37 ; 37 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; Poetics Today Volume 38 ; 38 ; >
+
+     }
+
+
+         {
+
+    title <
+      name = positions: asia critique ;
+      issn = 1067-9847 ;
+      eissn = 1527-8271
+
+>
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://positions.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1993 ; positions: east asia cultures critique Volume 1 ; 1 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1994 ; positions: east asia cultures critique Volume 2 ; 2 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1995 ; positions: east asia cultures critique Volume 3 ; 3 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1996 ; positions: east asia cultures critique Volume 4 ; 4 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1997 ; positions: east asia cultures critique Volume 5 ; 5 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1998 ; positions: east asia cultures critique Volume 6 ; 6 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1999 ; positions: east asia cultures critique Volume 7 ; 7 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2000 ; positions: east asia cultures critique Volume 8 ; 8 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2001 ; positions: east asia cultures critique Volume 9 ; 9 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2002 ; positions: east asia cultures critique Volume 10 ; 10 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2003 ; positions: east asia cultures critique Volume 11 ; 11 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2004 ; positions: east asia cultures critique Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2005 ; positions: east asia cultures critique Volume 13 ; 13 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; positions: east asia cultures critique Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; positions: east asia cultures critique Volume 15 ; 15 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; positions: east asia cultures critique Volume 16 ; 16 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; positions: east asia cultures critique Volume 17 ; 17 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; positions: east asia cultures critique Volume 18 ; 18 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; positions: east asia cultures critique Volume 19 ; 19 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; positions: asia critique Volume 20 ; 20 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; positions: asia critique Volume 21 ; 21 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; positions: asia critique Volume 22 ; 22 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; positions: asia critique Volume 23 ; 23 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; positions: asia critique Volume 24 ; 24 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; positions: asia critique Volume 25 ; 25 ; >
+
+  }
+
+  {
+    title <
+      name = Publication of the American Dialect Society ;
+      issn = 2157-6114 ;
+      eissn = 0002-8207
+
+    >
+
+    {
+
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://pads.dukejournals.org/
+      # no content in 2012
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2000 ; Publication of the American Dialect Society Volume 84 ; 84 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2001 ; Publication of the American Dialect Society Volume 85 ; 85 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2002 ; Publication of the American Dialect Society Volume 86 ; 86 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2002 ; Publication of the American Dialect Society Volume 87 ; 87 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2003 ; Publication of the American Dialect Society Volume 88 ; 88 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2004 ; Publication of the American Dialect Society Volume 89 ; 89 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2005 ; Publication of the American Dialect Society Volume 90 ; 90 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; Publication of the American Dialect Society Volume 91 ; 91 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; Publication of the American Dialect Society Volume 92 ; 92 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; Publication of the American Dialect Society Volume 93 ; 93 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; Publication of the American Dialect Society Volume 94 ; 94 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; Publication of the American Dialect Society Volume 95 ; 95 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Publication of the American Dialect Society Volume 96 ; 96 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Publication of the American Dialect Society Volume 97 ; 97 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Publication of the American Dialect Society Volume 98 ; 98 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Publication of the American Dialect Society Volume 99 ; 99 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; Publication of the American Dialect Society Volume 100 ; 100 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; Publication of the American Dialect Society Volume 101 ; 101 ; >
+
+    }
+
+  }
+
+    {
+
+    title <
+      name = Public Culture ;
+      issn = 0899-2363 ;
+      eissn = 1527-8018
+
+      >
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://publicculture.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1988-1989 ; Public Culture Volume 1 ; 1 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1989-1990 ; Public Culture Volume 2 ; 2 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1990-1991 ; Public Culture Volume 3 ; 3 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1991-1992 ; Public Culture Volume 4 ; 4 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1992-1993 ; Public Culture Volume 5 ; 5 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1993-1994 ; Public Culture Volume 6 ; 6 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1994-1995 ; Public Culture Volume 7 ; 7 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1995-1996 ; Public Culture Volume 8 ; 8 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1996-1997 ; Public Culture Volume 9 ; 9 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1997-1998 ; Public Culture Volume 10 ; 10 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1999 ; Public Culture Volume 11 ; 11 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2000 ; Public Culture Volume 12 ; 12 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2001 ; Public Culture Volume 13 ; 13 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2002 ; Public Culture Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2003 ; Public Culture Volume 15 ; 15 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2004 ; Public Culture Volume 16 ; 16 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2005 ; Public Culture Volume 17 ; 17 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; Public Culture Volume 18 ; 18 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; Public Culture Volume 19 ; 19 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; Public Culture Volume 20 ; 20 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; Public Culture Volume 21 ; 21 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; Public Culture Volume 22 ; 22 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Public Culture Volume 23 ; 23 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Public Culture Volume 24 ; 24 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Public Culture Volume 25 ; 25 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Public Culture Volume 26 ; 26 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Public Culture Volume 27 ; 27 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; Public Culture Volume 28 ; 28 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; Public Culture Volume 29 ; 29 ; >
+
+    }
+
+    {
+
+    title <
+      name = Radical History Review ;
+      issn = 0163-6545 ;
+      eissn = 1534-1453
+
+>
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://rhr.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1975 ; Radical History Review Volume 1975 ; 1975 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1976 ; Radical History Review Volume 1976 ; 1976 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1977 ; Radical History Review Volume 1977 ; 1977 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1978 ; Radical History Review Volume 1978 ; 1978 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1979 ; Radical History Review Volume 1979 ; 1979 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1980 ; Radical History Review Volume 1980 ; 1980 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1981 ; Radical History Review Volume 1981 ; 1981 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1982 ; Radical History Review Volume 1982 ; 1982 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1983 ; Radical History Review Volume 1983 ; 1983 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1984 ; Radical History Review Volume 1984 ; 1984 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1985 ; Radical History Review Volume 1985 ; 1985 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1986 ; Radical History Review Volume 1986 ; 1986 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1987 ; Radical History Review Volume 1987 ; 1987 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1988 ; Radical History Review Volume 1988 ; 1988 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1989 ; Radical History Review Volume 1989 ; 1989 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1990 ; Radical History Review Volume 1990 ; 1990 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1991 ; Radical History Review Volume 1991 ; 1991 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1992 ; Radical History Review Volume 1992 ; 1992 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1993 ; Radical History Review Volume 1993 ; 1993 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1994 ; Radical History Review Volume 1994 ; 1994 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1995 ; Radical History Review Volume 1995 ; 1995 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1996 ; Radical History Review Volume 1996 ; 1996 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1997 ; Radical History Review Volume 1997 ; 1997 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1998 ; Radical History Review Volume 1998 ; 1998 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1999 ; Radical History Review Volume 1999 ; 1999 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2000 ; Radical History Review Volume 2000 ; 2000 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2001 ; Radical History Review Volume 2001 ; 2001 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2002 ; Radical History Review Volume 2002 ; 2002 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2003 ; Radical History Review Volume 2003 ; 2003 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2004 ; Radical History Review Volume 2004 ; 2004 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2005 ; Radical History Review Volume 2005 ; 2005 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; Radical History Review Volume 2006 ; 2006 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; Radical History Review Volume 2007 ; 2007 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; Radical History Review Volume 2008 ; 2008 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; Radical History Review Volume 2009 ; 2009 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; Radical History Review Volume 2010 ; 2010 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Radical History Review Volume 2011 ; 2011 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Radical History Review Volume 2012 ; 2012 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Radical History Review Volume 2013 ; 2013 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Radical History Review Volume 2014 ; 2014 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Radical History Review Volume 2015 ; 2015 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; Radical History Review Volume 2016 ; 2016 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; Radical History Review Volume 2017 ; 2017 ; >
+
+      }
+
+     {
+
+    title <
+      name = Small Axe ;
+      issn = 0799-0537 ;
+      eissn = 1534-6714
+
+      >
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://smallaxe.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2001 ; Small Axe Volume 5 ; 5 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2002 ; Small Axe Volume 6 ; 6 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2003 ; Small Axe Volume 7 ; 7 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2004 ; Small Axe Volume 8 ; 8 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2005 ; Small Axe Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; Small Axe Volume 10 ; 10 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; Small Axe Volume 11 ; 11 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; Small Axe Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; Small Axe Volume 13 ; 13 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; Small Axe Volume 14 ; 14 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Small Axe Volume 15 ; 15 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Small Axe Volume 16 ; 16 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Small Axe Volume 17 ; 17 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Small Axe Volume 18 ; 18 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Small Axe Volume 19 ; 19 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; Small Axe Volume 20 ; 20 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; Small Axe Volume 21 ; 21 ; >
+
+    }
+
+    {
+
+    title <
+      name = Social Science History ;
+      issn = 0145-5532 ;
+      eissn = 1527-8034
+      >
+
+      # see RT 6211, due to legal dispute, vol 2014 is unavailable indefinitely as of 4/11/14
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://ssh.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+      #move to Cambridge
+
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2000 ; Social Science History Volume 24 ; 24 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2001 ; Social Science History Volume 25 ; 25 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2002 ; Social Science History Volume 26 ; 26 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2003 ; Social Science History Volume 27 ; 27 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2004 ; Social Science History Volume 28 ; 28 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2005 ; Social Science History Volume 29 ; 29 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2006 ; Social Science History Volume 30 ; 30 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2007 ; Social Science History Volume 31 ; 31 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; Social Science History Volume 32 ; 32 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; Social Science History Volume 33 ; 33 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; Social Science History Volume 34 ; 34 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Social Science History Volume 35 ; 35 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Social Science History Volume 36 ; 36 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Social Science History Volume 37 ; 37 ; reingest1.clockss.org:8082 >
+
+     }
+
+     {
+
+    title <
+      name = Social Text ;
+      issn = 0164-2472 ;
+      eissn = 1527-1951
+
+      >
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://socialtext.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2000 ; Social Text Volume 18 ; 18 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2001 ; Social Text Volume 19 ; 19 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2002 ; Social Text Volume 20 ; 20 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2003 ; Social Text Volume 21 ; 21 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2004 ; Social Text Volume 22 ; 22 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2005 ; Social Text Volume 23 ; 23 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; Social Text Volume 24 ; 24 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; Social Text Volume 25 ; 25 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; Social Text Volume 26 ; 26 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; Social Text Volume 27 ; 27 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; Social Text Volume 28 ; 28 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Social Text Volume 29 ; 29 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Social Text Volume 30 ; 30 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Social Text Volume 31 ; 31 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Social Text Volume 32 ; 32 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Social Text Volume 33 ; 33 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; Social Text Volume 34 ; 34 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; Social Text Volume 35 ; 35 ; >
+
+     }
+
+     {
+
+    title <
+      name = The South Atlantic Quarterly ;
+      issn = 0038-2876 ;
+      eissn = 1527-8026
+
+      >
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://saq.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2000 ; The South Atlantic Quarterly Volume 99 ; 99 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2001 ; The South Atlantic Quarterly Volume 100 ; 100 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2002 ; The South Atlantic Quarterly Volume 101 ; 101 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2003 ; The South Atlantic Quarterly Volume 102 ; 102 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2004 ; The South Atlantic Quarterly Volume 103 ; 103 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2005 ; The South Atlantic Quarterly Volume 104 ; 104  ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; The South Atlantic Quarterly Volume 105 ; 105  ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; The South Atlantic Quarterly Volume 106 ; 106 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; The South Atlantic Quarterly Volume 107 ; 107 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; The South Atlantic Quarterly Volume 108 ; 108 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; The South Atlantic Quarterly Volume 109 ; 109 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; The South Atlantic Quarterly Volume 110 ; 110 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; The South Atlantic Quarterly Volume 111 ; 111 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; The South Atlantic Quarterly Volume 112 ; 112 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; The South Atlantic Quarterly Volume 113 ; 113 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; The South Atlantic Quarterly Volume 114 ; 114 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; The South Atlantic Quarterly Volume 115 ; 115 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; The South Atlantic Quarterly Volume 116 ; 116 ; >
+
+     }
+
+     {
+
+    title <
+      name = Theater ;
+      issn = 0161-0775 ;
+      eissn = 1527-196X
+
+      >
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://theater.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1968 ; Theater Volume 1 ; 1 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1969 ; Theater Volume 2 ; 2 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1970-1972 ; Theater Volume 3 ; 3 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1973 ; Theater Volume 4 ; 4 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1973-1974 ; Theater Volume 5 ; 5 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1974-1975 ; Theater Volume 6 ; 6 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1975-1976 ; Theater Volume 7 ; 7 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1976-1977 ; Theater Volume 8 ; 8 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1977-1978 ; Theater Volume 9 ; 9 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1978-1979 ; Theater Volume 10 ; 10 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1979-1980 ; Theater Volume 11 ; 11 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1980-1981 ; Theater Volume 12 ; 12 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1981-1982 ; Theater Volume 13 ; 13 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1982-1983 ; Theater Volume 14 ; 14 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1983-1984 ; Theater Volume 15 ; 15 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1984-1985 ; Theater Volume 16 ; 16 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1985-1986 ; Theater Volume 17 ; 17 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1986-1987 ; Theater Volume 18 ; 18 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1987-1988 ; Theater Volume 19 ; 19 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1988-1989 ; Theater Volume 20 ; 20 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1990 ; Theater Volume 21 ; 21 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1991 ; Theater Volume 22 ; 22 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1992 ; Theater Volume 23 ; 23 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1993 ; Theater Volume 24 ; 24 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1994 ; Theater Volume 25 ; 25 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1995-1996 ; Theater Volume 26 ; 26 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1996-1997 ; Theater Volume 27 ; 27 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1997-1998 ; Theater Volume 28 ; 28 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1999 ; Theater Volume 29 ; 29 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2000 ; Theater Volume 30 ; 30 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2001 ; Theater Volume 31 ; 31 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2002 ; Theater Volume 32 ; 32 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2003 ; Theater Volume 33 ; 33 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2004 ; Theater Volume 34 ; 34 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2005 ; Theater Volume 35 ; 35 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; Theater Volume 36 ; 36 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; Theater Volume 37 ; 37 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; Theater Volume 38 ; 38 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; Theater Volume 39 ; 39 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; Theater Volume 40 ; 40 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011-2012 ; Theater Volume 41 ; 41 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Theater Volume 42 ; 42 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Theater Volume 43 ; 43 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Theater Volume 44 ; 44 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Theater Volume 45 ; 45 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; Theater Volume 46 ; 46 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; Theater Volume 47 ; 47 ; >
+
+    }
+
+    {
+
+    title <
+      name = Tikkun ;
+      issn = 0887-9982 ;
+      eissn = 2164-0041
+
+>
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://tikkun.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+      ####stopped publishing after 2018
+
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Tikkun Volume 26 ; 26 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Tikkun Volume 27 ; 27 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Tikkun Volume 28 ; 28 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Tikkun Volume 29 ; 29 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Tikkun Volume 30 ; 30 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; Tikkun Volume 31 ; 31 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; Tikkun Volume 32 ; 32 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2018 ; Tikkun Volume 33 ; 33 ; >
+      #stopped publishing after 2018
+
+  }
+
+    {
+    title <
+      name = Transgender Studies Quarterly ;
+      issn = 2328-9252 ;
+      eissn = 2328-9260 ;
+      issnl = 2328-9252
+    >
+
+    {
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://tsq.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Transgender Studies Quarterly Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Transgender Studies Quarterly Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2016 ; Transgender Studies Quarterly Volume 3 ; 3 ; >
+
+     }
+
+    }
+
+    {
+    title <
+      name = Twentieth-Century Literature ;
+      issn = 0041-462X ;
+      eissn = 2325-8101 ;
+      issnl = 0041-462X
+    >
+
+    {
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://tcl.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2015 ; Twentieth-Century Literature Volume 61 ; 61 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2016 ; Twentieth-Century Literature Volume 62 ; 62 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2017 ; Twentieth-Century Literature Volume 63 ; 63 ; >
+
+     }
+
+    }
+
+  {
+
+    title <
+      name = World Policy Journal ;
+      issn = 0740-2775 ;
+      eissn = 1936-0924
+    >
+
+      param[base_url] = http://wpj.dukejournals.org/
+      pluginPrefix = org.lockss.plugin.highwire.
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+      #move from Oxford University Press 
+      #on hiatus after 2017.
+
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2000 ; World Policy Journal Volume 17 ; 17 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2001 ; World Policy Journal Volume 18 ; 18 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2002 ; World Policy Journal Volume 19 ; 19 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2003 ; World Policy Journal Volume 20 ; 20 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2004 ; World Policy Journal Volume 21 ; 21 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2005 ; World Policy Journal Volume 22 ; 22 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2006 ; World Policy Journal Volume 23 ; 23 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2007 ; World Policy Journal Volume 24 ; 24 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2008 ; World Policy Journal Volume 25 ; 25 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2009 ; World Policy Journal Volume 26 ; 26 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2010 ; World Policy Journal Volume 27 ; 27 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2011 ; World Policy Journal Volume 28 ; 28 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2012 ; World Policy Journal Volume 29 ; 29 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2013 ; World Policy Journal Volume 30 ; 30 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2014 ; World Policy Journal Volume 31 ; 31 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2015 ; World Policy Journal Volume 32 ; 32 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2016 ; World Policy Journal Volume 33 ; 33 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2017 ; World Policy Journal Volume 34 ; 34 ; >
+
+  }
+  
+}

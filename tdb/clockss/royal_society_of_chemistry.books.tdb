@@ -1,0 +1,81 @@
+{
+
+  publisher <
+    name = Royal Society of Chemistry ;
+    info[contract] = 2009 ;
+    info[back] = 1900 ;
+    info[tester] = 8 ;
+    info[poller] = 2
+  >
+
+  plugin = org.lockss.plugin.royalsocietyofchemistry.ClockssRSCBooksPlugin
+  implicit < status1 ; status ; year ; name ; param[year] ; param[base_url] ; proxy >
+
+  {
+
+    title <
+      name = Royal Society of Chemistry Books ;
+      type = bookSeries
+    >
+
+      #param[base_url] = http://pubs.rsc.org/
+      param[graphics_url] = http://sod-a.rsc-cdn.org/
+
+      au < finished ; finished ; 1968 ; Royal Society of Chemistry Books 1968 ; 1968 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 1969 ; Royal Society of Chemistry Books 1969 ; 1969 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1970 ; Royal Society of Chemistry Books 1970 ; 1970 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 1971 ; Royal Society of Chemistry Books 1971 ; 1971 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 1972 ; Royal Society of Chemistry Books 1972 ; 1972 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 1973 ; Royal Society of Chemistry Books 1973 ; 1973 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 1974 ; Royal Society of Chemistry Books 1974 ; 1974 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1975 ; Royal Society of Chemistry Books 1975 ; 1975 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 1976 ; Royal Society of Chemistry Books 1976 ; 1976 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 1977 ; Royal Society of Chemistry Books 1977 ; 1977 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 1978 ; Royal Society of Chemistry Books 1978 ; 1978 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 1979 ; Royal Society of Chemistry Books 1979 ; 1979 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1980 ; Royal Society of Chemistry Books 1980 ; 1980 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 1981 ; Royal Society of Chemistry Books 1981 ; 1981 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 1982 ; Royal Society of Chemistry Books 1982 ; 1982 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 1983 ; Royal Society of Chemistry Books 1983 ; 1983 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 1984 ; Royal Society of Chemistry Books 1984 ; 1984 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1985 ; Royal Society of Chemistry Books 1985 ; 1985 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 1986 ; Royal Society of Chemistry Books 1986 ; 1986 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 1987 ; Royal Society of Chemistry Books 1987 ; 1987 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 1988 ; Royal Society of Chemistry Books 1988 ; 1988 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 1989 ; Royal Society of Chemistry Books 1989 ; 1989 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1990 ; Royal Society of Chemistry Books 1990 ; 1990 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 1991 ; Royal Society of Chemistry Books 1991 ; 1991 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 > #not 5
+      au < finished ; finished ; 1992 ; Royal Society of Chemistry Books 1992 ; 1992 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 1993 ; Royal Society of Chemistry Books 1993 ; 1993 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 1994 ; Royal Society of Chemistry Books 1994 ; 1994 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 1995 ; Royal Society of Chemistry Books 1995 ; 1995 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1996 ; Royal Society of Chemistry Books 1996 ; 1996 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 1997 ; Royal Society of Chemistry Books 1997 ; 1997 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 1998 ; Royal Society of Chemistry Books 1998 ; 1998 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 1999 ; Royal Society of Chemistry Books 1999 ; 1999 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2000 ; Royal Society of Chemistry Books 2000 ; 2000 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2001 ; Royal Society of Chemistry Books 2001 ; 2001 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2002 ; Royal Society of Chemistry Books 2002 ; 2002 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2003 ; Royal Society of Chemistry Books 2003 ; 2003 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2004 ; Royal Society of Chemistry Books 2004 ; 2004 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2005 ; Royal Society of Chemistry Books 2005 ; 2005 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2006 ; Royal Society of Chemistry Books 2006 ; 2006 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2007 ; Royal Society of Chemistry Books 2007 ; 2007 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2008 ; Royal Society of Chemistry Books 2008 ; 2008 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; Royal Society of Chemistry Books 2009 ; 2009 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; Royal Society of Chemistry Books 2010 ; 2010 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2011 ; Royal Society of Chemistry Books 2011 ; 2011 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2012 ; Royal Society of Chemistry Books 2012 ; 2012 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; Royal Society of Chemistry Books 2013 ; 2013 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < ingNotReady ; crawling ; 2014 ; Royal Society of Chemistry Books 2014 ; 2014 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; Royal Society of Chemistry Books 2015 ; 2015 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 > #not 3, 4, 1.
+      au < finished ; finished ; 2016 ; Royal Society of Chemistry Books 2016 ; 2016 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 > #not 4. not 2.
+      au < finished ; finished ; 2017 ; Royal Society of Chemistry Books 2017 ; 2017 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2018 ; Royal Society of Chemistry Books 2018 ; 2018 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < frozen ; exists ; 2019 ; Royal Society of Chemistry Books 2019 ; 2019 ; https://pubs.rsc.org/ ; >
+      au < frozen ; exists ; 2020 ; Royal Society of Chemistry Books 2020 ; 2020 ; https://pubs.rsc.org/ ; >
+      au < deepCrawl ; exists ; 2021 ; Royal Society of Chemistry Books 2021 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2022 ; Royal Society of Chemistry Books 2022 ; 2022 ; https://pubs.rsc.org/ ; >
+
+  }
+}

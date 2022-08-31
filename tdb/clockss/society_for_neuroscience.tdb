@@ -1,0 +1,96 @@
+{
+  publisher <
+    name = Society for Neuroscience ;
+    info[contract] = 2019 ;
+    info[back] = 1980 ;
+    info[tester] = 5 ;
+    info[poller] = 5
+  >
+      pluginPrefix = org.lockss.plugin.highwire.
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+  {
+    title <
+      name = eNeuro ;
+      eissn = 2373-2822 ;
+      issnl = 2373-2822
+    >
+     {
+      param[base_url] = http://eneuro.org/
+
+      au < sfn.ClockssSFNDrupalPlugin ; doNotProcess ; doNotProcess ; 2014 ; eNeuro Volume 1 ; 1 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; doNotProcess ; doNotProcess ; 2015 ; eNeuro Volume 2 ; 2 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; doNotProcess ; doNotProcess ; 2016 ; eNeuro Volume 3 ; 3 ; >
+     }
+
+     {
+      param[base_url] = https://www.eneuro.org/
+
+      au < sfn.ClockssSFNDrupalPlugin ; finished ; crawling ; 2014 ; eNeuro Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+      au < sfn.ClockssSFNDrupalPlugin ; finished ; crawling ; 2015 ; eNeuro Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+      au < sfn.ClockssSFNDrupalPlugin ; finished ; crawling ; 2016 ; eNeuro Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+      au < sfn.ClockssSFNDrupalPlugin ; finished ; crawling ; 2017 ; eNeuro Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+      au < sfn.ClockssSFNDrupalPlugin ; finished ; crawling ; 2018 ; eNeuro Volume 5 ; 5 ; reingest5.clockss.org:8082 >
+      au < sfn.ClockssSFNDrupalPlugin ; finished ; crawling ; 2019 ; eNeuro Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+      au < sfn.ClockssSFNDrupalPlugin ; deepCrawl ; exists ; 2020 ; eNeuro Volume 7 ; 7 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; expected ; exists ; 2021 ; eNeuro Volume 8 ; 8 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; expected ; exists ; 2022 ; eNeuro Volume 9 ; 9 ; >
+      }
+  }
+  
+  {
+    title <
+      name = Journal of Neuroscience ;
+      issn = 0270-6474 ;
+      eissn = 1529-2401 ;
+      issnl = 0270-6474
+    >
+
+      param[base_url] = https://www.jneurosci.org/
+
+      au < sfn.ClockssSFNDrupalPlugin ; frozen ; exists ; 1981 ; Journal of Neuroscience Volume 1 ; 1 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; frozen ; exists ; 1982 ; Journal of Neuroscience Volume 2 ; 2 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; frozen ; exists ; 1983 ; Journal of Neuroscience Volume 3 ; 3 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; frozen ; exists ; 1984 ; Journal of Neuroscience Volume 4 ; 4 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; frozen ; exists ; 1985 ; Journal of Neuroscience Volume 5 ; 5 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; frozen ; exists ; 1986 ; Journal of Neuroscience Volume 6 ; 6 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; frozen ; exists ; 1987 ; Journal of Neuroscience Volume 7 ; 7 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; frozen ; exists ; 1988 ; Journal of Neuroscience Volume 8 ; 8 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; frozen ; exists ; 1989 ; Journal of Neuroscience Volume 9 ; 9 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; frozen ; exists ; 1990 ; Journal of Neuroscience Volume 10 ; 10 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; frozen ; exists ; 1991 ; Journal of Neuroscience Volume 11 ; 11 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; frozen ; exists ; 1992 ; Journal of Neuroscience Volume 12 ; 12 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; frozen ; exists ; 1993 ; Journal of Neuroscience Volume 13 ; 13 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; frozen ; exists ; 1994 ; Journal of Neuroscience Volume 14 ; 14 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; frozen ; exists ; 1995 ; Journal of Neuroscience Volume 15 ; 15 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; frozen ; exists ; 1996 ; Journal of Neuroscience Volume 16 ; 16 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; frozen ; exists ; 1997 ; Journal of Neuroscience Volume 17 ; 17 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; frozen ; exists ; 1998 ; Journal of Neuroscience Volume 18 ; 18 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; frozen ; exists ; 1999 ; Journal of Neuroscience Volume 19 ; 19 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; frozen ; exists ; 2000 ; Journal of Neuroscience Volume 20 ; 20 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; frozen ; exists ; 2001 ; Journal of Neuroscience Volume 21 ; 21 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; frozen ; exists ; 2002 ; Journal of Neuroscience Volume 22 ; 22 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; frozen ; exists ; 2003 ; Journal of Neuroscience Volume 23 ; 23 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; frozen ; exists ; 2004 ; Journal of Neuroscience Volume 24 ; 24 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; frozen ; exists ; 2005 ; Journal of Neuroscience Volume 25 ; 25 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; testing ; exists ; 2006 ; Journal of Neuroscience Volume 26 ; 26 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; frozen ; exists ; 2007 ; Journal of Neuroscience Volume 27 ; 27 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; frozen ; exists ; 2008 ; Journal of Neuroscience Volume 28 ; 28 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; frozen ; exists ; 2009 ; Journal of Neuroscience Volume 29 ; 29 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; finished ; crawling ; 2010 ; Journal of Neuroscience Volume 30 ; 30 ; reingest5.clockss.org:8082 >
+      au < sfn.ClockssSFNDrupalPlugin ; finished ; crawling ; 2011 ; Journal of Neuroscience Volume 31 ; 31 ; reingest1.clockss.org:8082 >
+      au < sfn.ClockssSFNDrupalPlugin ; finished ; crawling ; 2012 ; Journal of Neuroscience Volume 32 ; 32 ; reingest2.clockss.org:8085 >
+      au < sfn.ClockssSFNDrupalPlugin ; finished ; crawling ; 2013 ; Journal of Neuroscience Volume 33 ; 33 ; reingest3.clockss.org:8083 >
+      au < sfn.ClockssSFNDrupalPlugin ; finished ; crawling ; 2014 ; Journal of Neuroscience Volume 34 ; 34 ; reingest4.clockss.org:8082 >
+      au < sfn.ClockssSFNDrupalPlugin ; finished ; crawling ; 2015 ; Journal of Neuroscience Volume 35 ; 35 ; reingest5.clockss.org:8082 >
+      au < sfn.ClockssSFNDrupalPlugin ; finished ; crawling ; 2016 ; Journal of Neuroscience Volume 36 ; 36 ; reingest1.clockss.org:8082 >
+      au < sfn.ClockssSFNDrupalPlugin ; finished ; crawling ; 2017 ; Journal of Neuroscience Volume 37 ; 37 ; reingest2.clockss.org:8085 >
+      au < sfn.ClockssSFNDrupalPlugin ; finished ; crawling ; 2018 ; Journal of Neuroscience Volume 38 ; 38 ; reingest3.clockss.org:8083 >
+      au < sfn.ClockssSFNDrupalPlugin ; frozen ; exists ; 2019 ; Journal of Neuroscience Volume 39 ; 39 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; deepCrawl ; exists ; 2020 ; Journal of Neuroscience Volume 40 ; 40 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; expected ; exists ; 2021 ; Journal of Neuroscience Volume 41 ; 41 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; expected ; exists ; 2022 ; Journal of Neuroscience Volume 42 ; 42 ; >
+
+  }
+
+}

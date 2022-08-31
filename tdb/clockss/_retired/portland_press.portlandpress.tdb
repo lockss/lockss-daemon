@@ -1,0 +1,867 @@
+{
+
+  publisher <
+    name = Portland Press ;
+    info[contract] = 2012 ;
+    info[tester] = 8 ;
+    info[poller] = 2 ;
+    info[platform] = Custom. Deprecated.
+  >
+  # publisher uses three digit volume numbers in manifest URL
+  plugin = org.lockss.plugin.portlandpress.ClockssPortlandPressPlugin
+  implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+  
+  comment[platform] = moving to HighWire Open in mid-2015
+
+    {
+  
+    title <
+      name = Biochemical Journal ;
+      issn = 1815-9923 ;
+      eissn = 1815-9931 ;
+      issnl = 1815-9923
+    >
+
+    param[base_url] = http://www.biochemj.org/
+    param[journal_id] = bj
+
+    au < doNotProcess ; doNotProcess ; 1906 ; Biochemical Journal Volume 1 ; 001 ; >
+    au < doNotProcess ; doNotProcess ; 1907 ; Biochemical Journal Volume 2 ; 002 ; >
+    au < doNotProcess ; doNotProcess ; 1908 ; Biochemical Journal Volume 3 ; 003 ; >
+    au < doNotProcess ; doNotProcess ; 1909 ; Biochemical Journal Volume 4 ; 004 ; >
+    au < doNotProcess ; doNotProcess ; 1911 ; Biochemical Journal Volume 5 ; 005 ; >
+    au < doNotProcess ; doNotProcess ; 1912 ; Biochemical Journal Volume 6 ; 006 ; >
+    au < doNotProcess ; doNotProcess ; 1913 ; Biochemical Journal Volume 7 ; 007 ; >
+    au < doNotProcess ; doNotProcess ; 1914 ; Biochemical Journal Volume 8 ; 008 ; >
+    au < doNotProcess ; doNotProcess ; 1915 ; Biochemical Journal Volume 9 ; 009 ; >
+    au < doNotProcess ; doNotProcess ; 1916 ; Biochemical Journal Volume 10 ; 010 ; >
+    au < doNotProcess ; doNotProcess ; 1917 ; Biochemical Journal Volume 11 ; 011 ; >
+    au < doNotProcess ; doNotProcess ; 1918 ; Biochemical Journal Volume 12 ; 012 ; >
+    au < doNotProcess ; doNotProcess ; 1919 ; Biochemical Journal Volume 13 ; 013 ; >
+    au < doNotProcess ; doNotProcess ; 1920 ; Biochemical Journal Volume 14 ; 014 ; >
+    au < doNotProcess ; doNotProcess ; 1921 ; Biochemical Journal Volume 15 ; 015 ; >
+    au < doNotProcess ; doNotProcess ; 1922 ; Biochemical Journal Volume 16 ; 016 ; >
+    au < doNotProcess ; doNotProcess ; 1923 ; Biochemical Journal Volume 17 ; 017 ; >
+    au < doNotProcess ; doNotProcess ; 1924 ; Biochemical Journal Volume 18 ; 018 ; >
+    au < doNotProcess ; doNotProcess ; 1925 ; Biochemical Journal Volume 19 ; 019 ; >
+    au < doNotProcess ; doNotProcess ; 1926 ; Biochemical Journal Volume 20 ; 020 ; >
+    au < doNotProcess ; doNotProcess ; 1927 ; Biochemical Journal Volume 21 ; 021 ; >
+    au < doNotProcess ; doNotProcess ; 1928 ; Biochemical Journal Volume 22 ; 022 ; >
+    au < doNotProcess ; doNotProcess ; 1929 ; Biochemical Journal Volume 23 ; 023 ; >
+    au < doNotProcess ; doNotProcess ; 1930 ; Biochemical Journal Volume 24 ; 024 ; >
+    au < doNotProcess ; doNotProcess ; 1931 ; Biochemical Journal Volume 25 ; 025 ; >
+    au < doNotProcess ; doNotProcess ; 1932 ; Biochemical Journal Volume 26 ; 026 ; >
+    au < doNotProcess ; doNotProcess ; 1933 ; Biochemical Journal Volume 27 ; 027 ; >
+    au < doNotProcess ; doNotProcess ; 1934 ; Biochemical Journal Volume 28 ; 028 ; >
+    au < doNotProcess ; doNotProcess ; 1935 ; Biochemical Journal Volume 29 ; 029 ; >
+    au < doNotProcess ; doNotProcess ; 1936 ; Biochemical Journal Volume 30 ; 030 ; >
+    au < doNotProcess ; doNotProcess ; 1937 ; Biochemical Journal Volume 31 ; 031 ; >
+    au < doNotProcess ; doNotProcess ; 1938 ; Biochemical Journal Volume 32 ; 032 ; >
+    au < doNotProcess ; doNotProcess ; 1939 ; Biochemical Journal Volume 33 ; 033 ; >
+    au < doNotProcess ; doNotProcess ; 1940 ; Biochemical Journal Volume 34 ; 034 ; >
+    au < doNotProcess ; doNotProcess ; 1941 ; Biochemical Journal Volume 35 ; 035 ; >
+    au < doNotProcess ; doNotProcess ; 1942 ; Biochemical Journal Volume 36 ; 036 ; >
+    au < doNotProcess ; doNotProcess ; 1943 ; Biochemical Journal Volume 37 ; 037 ; >
+    au < doNotProcess ; doNotProcess ; 1944 ; Biochemical Journal Volume 38 ; 038 ; >
+    au < doNotProcess ; doNotProcess ; 1945 ; Biochemical Journal Volume 39 ; 039 ; >
+    au < doNotProcess ; doNotProcess ; 1946 ; Biochemical Journal Volume 40 ; 040 ; >
+    au < doNotProcess ; doNotProcess ; 1947 ; Biochemical Journal Volume 41 ; 041 ; >
+    au < doNotProcess ; doNotProcess ; 1948 ; Biochemical Journal Volume 42 ; 042 ; >
+    au < doNotProcess ; doNotProcess ; 1948 ; Biochemical Journal Volume 43 ; 043 ; >
+    au < doNotProcess ; doNotProcess ; 1949 ; Biochemical Journal Volume 44 ; 044 ; >
+    au < doNotProcess ; doNotProcess ; 1949 ; Biochemical Journal Volume 45 ; 045 ; >
+    au < doNotProcess ; doNotProcess ; 1950 ; Biochemical Journal Volume 46 ; 046 ; >
+    au < doNotProcess ; doNotProcess ; 1950 ; Biochemical Journal Volume 47 ; 047 ; >
+    au < doNotProcess ; doNotProcess ; 1951 ; Biochemical Journal Volume 48 ; 048 ; >
+    au < doNotProcess ; doNotProcess ; 1951 ; Biochemical Journal Volume 49 ; 049 ; >
+    au < doNotProcess ; doNotProcess ; 1952 ; Biochemical Journal Volume 50 ; 050 ; >
+    au < doNotProcess ; doNotProcess ; 1952 ; Biochemical Journal Volume 51 ; 051 ; >
+    au < doNotProcess ; doNotProcess ; 1952 ; Biochemical Journal Volume 52 ; 052 ; >
+    au < doNotProcess ; doNotProcess ; 1953 ; Biochemical Journal Volume 53 ; 053 ; >
+    au < doNotProcess ; doNotProcess ; 1953 ; Biochemical Journal Volume 54 ; 054 ; >
+    au < doNotProcess ; doNotProcess ; 1953 ; Biochemical Journal Volume 55 ; 055 ; >
+    au < doNotProcess ; doNotProcess ; 1954 ; Biochemical Journal Volume 56 ; 056 ; >
+    au < doNotProcess ; doNotProcess ; 1954 ; Biochemical Journal Volume 57 ; 057 ; >
+    au < doNotProcess ; doNotProcess ; 1954 ; Biochemical Journal Volume 58 ; 058 ; >
+    au < doNotProcess ; doNotProcess ; 1955 ; Biochemical Journal Volume 59 ; 059 ; >
+    au < doNotProcess ; doNotProcess ; 1955 ; Biochemical Journal Volume 60 ; 060 ; >
+    au < doNotProcess ; doNotProcess ; 1955 ; Biochemical Journal Volume 61 ; 061 ; >
+    au < doNotProcess ; doNotProcess ; 1956 ; Biochemical Journal Volume 62 ; 062 ; >
+    au < doNotProcess ; doNotProcess ; 1956 ; Biochemical Journal Volume 63 ; 063 ; >
+    au < doNotProcess ; doNotProcess ; 1956 ; Biochemical Journal Volume 64 ; 064 ; >
+    au < doNotProcess ; doNotProcess ; 1957 ; Biochemical Journal Volume 65 ; 065 ; >
+    au < doNotProcess ; doNotProcess ; 1957 ; Biochemical Journal Volume 66 ; 066 ; >
+    au < doNotProcess ; doNotProcess ; 1957 ; Biochemical Journal Volume 67 ; 067 ; >
+    au < doNotProcess ; doNotProcess ; 1958 ; Biochemical Journal Volume 68 ; 068 ; >
+    au < doNotProcess ; doNotProcess ; 1958 ; Biochemical Journal Volume 69 ; 069 ; >
+    au < doNotProcess ; doNotProcess ; 1958 ; Biochemical Journal Volume 70 ; 070 ; >
+    au < doNotProcess ; doNotProcess ; 1959 ; Biochemical Journal Volume 71 ; 071 ; >
+    au < doNotProcess ; doNotProcess ; 1959 ; Biochemical Journal Volume 72 ; 072 ; >
+    au < doNotProcess ; doNotProcess ; 1959 ; Biochemical Journal Volume 73 ; 073 ; >
+    au < doNotProcess ; doNotProcess ; 1960 ; Biochemical Journal Volume 74 ; 074 ; >
+    au < doNotProcess ; doNotProcess ; 1960 ; Biochemical Journal Volume 75 ; 075 ; >
+    au < doNotProcess ; doNotProcess ; 1960 ; Biochemical Journal Volume 76 ; 076 ; >
+    au < doNotProcess ; doNotProcess ; 1960 ; Biochemical Journal Volume 77 ; 077 ; >
+    au < doNotProcess ; doNotProcess ; 1961 ; Biochemical Journal Volume 78 ; 078 ; >
+    au < doNotProcess ; doNotProcess ; 1961 ; Biochemical Journal Volume 79 ; 079 ; >
+    au < doNotProcess ; doNotProcess ; 1961 ; Biochemical Journal Volume 80 ; 080 ; >
+    au < doNotProcess ; doNotProcess ; 1961 ; Biochemical Journal Volume 81 ; 081 ; >
+    au < doNotProcess ; doNotProcess ; 1962 ; Biochemical Journal Volume 82 ; 082 ; >
+    au < doNotProcess ; doNotProcess ; 1962 ; Biochemical Journal Volume 83 ; 083 ; >
+    au < doNotProcess ; doNotProcess ; 1962 ; Biochemical Journal Volume 84 ; 084 ; >
+    au < doNotProcess ; doNotProcess ; 1962 ; Biochemical Journal Volume 85 ; 085 ; >
+    au < doNotProcess ; doNotProcess ; 1963 ; Biochemical Journal Volume 86 ; 086 ; >
+    au < doNotProcess ; doNotProcess ; 1963 ; Biochemical Journal Volume 87 ; 087 ; >
+    au < doNotProcess ; doNotProcess ; 1963 ; Biochemical Journal Volume 88 ; 088 ; >
+    au < doNotProcess ; doNotProcess ; 1963 ; Biochemical Journal Volume 89 ; 089 ; >
+    au < doNotProcess ; doNotProcess ; 1964 ; Biochemical Journal Volume 90 ; 090 ; >
+    au < doNotProcess ; doNotProcess ; 1964 ; Biochemical Journal Volume 91 ; 091 ; >
+    au < doNotProcess ; doNotProcess ; 1964 ; Biochemical Journal Volume 92 ; 092 ; >
+    au < doNotProcess ; doNotProcess ; 1964 ; Biochemical Journal Volume 93 ; 093 ; >
+    au < doNotProcess ; doNotProcess ; 1965 ; Biochemical Journal Volume 94 ; 094 ; >
+    au < doNotProcess ; doNotProcess ; 1965 ; Biochemical Journal Volume 95 ; 095 ; >
+    au < doNotProcess ; doNotProcess ; 1965 ; Biochemical Journal Volume 96 ; 096 ; >
+    au < doNotProcess ; doNotProcess ; 1965 ; Biochemical Journal Volume 97 ; 097 ; >
+    au < doNotProcess ; doNotProcess ; 1966 ; Biochemical Journal Volume 98 ; 098 ; >
+    au < doNotProcess ; doNotProcess ; 1966 ; Biochemical Journal Volume 99 ; 099 ; >
+    au < doNotProcess ; doNotProcess ; 1966 ; Biochemical Journal Volume 100 ; 100 ; >
+    au < doNotProcess ; doNotProcess ; 1966 ; Biochemical Journal Volume 101 ; 101 ; >
+    au < doNotProcess ; doNotProcess ; 1967 ; Biochemical Journal Volume 102 ; 102 ; >
+    au < doNotProcess ; doNotProcess ; 1967 ; Biochemical Journal Volume 103 ; 103 ; >
+    au < doNotProcess ; doNotProcess ; 1967 ; Biochemical Journal Volume 104 ; 104 ; >
+    au < doNotProcess ; doNotProcess ; 1967 ; Biochemical Journal Volume 105 ; 105 ; >
+    au < doNotProcess ; doNotProcess ; 1968 ; Biochemical Journal Volume 106 ; 106 ; >
+    au < doNotProcess ; doNotProcess ; 1968 ; Biochemical Journal Volume 107 ; 107 ; >
+    au < doNotProcess ; doNotProcess ; 1968 ; Biochemical Journal Volume 108 ; 108 ; >
+    au < doNotProcess ; doNotProcess ; 1968 ; Biochemical Journal Volume 109 ; 109 ; >
+    au < doNotProcess ; doNotProcess ; 1968 ; Biochemical Journal Volume 110 ; 110 ; >
+    au < doNotProcess ; doNotProcess ; 1969 ; Biochemical Journal Volume 111 ; 111 ; >
+    au < doNotProcess ; doNotProcess ; 1969 ; Biochemical Journal Volume 112 ; 112 ; >
+    au < doNotProcess ; doNotProcess ; 1969 ; Biochemical Journal Volume 113 ; 113 ; >
+    au < doNotProcess ; doNotProcess ; 1969 ; Biochemical Journal Volume 114 ; 114 ; >
+    au < doNotProcess ; doNotProcess ; 1969 ; Biochemical Journal Volume 115 ; 115 ; >
+    au < doNotProcess ; doNotProcess ; 1970 ; Biochemical Journal Volume 116 ; 116 ; >
+    au < doNotProcess ; doNotProcess ; 1970 ; Biochemical Journal Volume 117 ; 117 ; >
+    au < doNotProcess ; doNotProcess ; 1970 ; Biochemical Journal Volume 118 ; 118 ; >
+    au < doNotProcess ; doNotProcess ; 1970 ; Biochemical Journal Volume 119 ; 119 ; >
+    au < doNotProcess ; doNotProcess ; 1970 ; Biochemical Journal Volume 120 ; 120 ; >
+    au < doNotProcess ; doNotProcess ; 1971 ; Biochemical Journal Volume 121 ; 121 ; >
+    au < doNotProcess ; doNotProcess ; 1971 ; Biochemical Journal Volume 122 ; 122 ; >
+    au < doNotProcess ; doNotProcess ; 1971 ; Biochemical Journal Volume 123 ; 123 ; >
+    au < doNotProcess ; doNotProcess ; 1971 ; Biochemical Journal Volume 124 ; 124 ; >
+    au < doNotProcess ; doNotProcess ; 1971 ; Biochemical Journal Volume 125 ; 125 ; >
+    au < doNotProcess ; doNotProcess ; 1972 ; Biochemical Journal Volume 126 ; 126 ; >
+    au < doNotProcess ; doNotProcess ; 1972 ; Biochemical Journal Volume 127 ; 127 ; >
+    au < doNotProcess ; doNotProcess ; 1972 ; Biochemical Journal Volume 128 ; 128 ; >
+    au < doNotProcess ; doNotProcess ; 1972 ; Biochemical Journal Volume 129 ; 129 ; >
+    au < doNotProcess ; doNotProcess ; 1972 ; Biochemical Journal Volume 130 ; 130 ; >
+    au < doNotProcess ; doNotProcess ; 1973 ; Biochemical Journal Volume 131 ; 131 ; >
+    au < doNotProcess ; doNotProcess ; 1973 ; Biochemical Journal Volume 132 ; 132 ; >
+    au < doNotProcess ; doNotProcess ; 1973 ; Biochemical Journal Volume 133 ; 133 ; >
+    au < doNotProcess ; doNotProcess ; 1973 ; Biochemical Journal Volume 134 ; 134 ; >
+    au < doNotProcess ; doNotProcess ; 1973 ; Biochemical Journal Volume 135 ; 135 ; >
+    au < doNotProcess ; doNotProcess ; 1973 ; Biochemical Journal Volume 136 ; 136 ; >
+    au < doNotProcess ; doNotProcess ; 1974 ; Biochemical Journal Volume 137 ; 137 ; >
+    au < doNotProcess ; doNotProcess ; 1974 ; Biochemical Journal Volume 138 ; 138 ; >
+    au < doNotProcess ; doNotProcess ; 1974 ; Biochemical Journal Volume 139 ; 139 ; >
+    au < doNotProcess ; doNotProcess ; 1974 ; Biochemical Journal Volume 140 ; 140 ; >
+    au < doNotProcess ; doNotProcess ; 1974 ; Biochemical Journal Volume 141 ; 141 ; >
+    au < doNotProcess ; doNotProcess ; 1974 ; Biochemical Journal Volume 142 ; 142 ; >
+    au < doNotProcess ; doNotProcess ; 1974 ; Biochemical Journal Volume 143 ; 143 ; >
+    au < doNotProcess ; doNotProcess ; 1974 ; Biochemical Journal Volume 144 ; 144 ; >
+    au < doNotProcess ; doNotProcess ; 1975 ; Biochemical Journal Volume 145 ; 145 ; >
+    au < doNotProcess ; doNotProcess ; 1975 ; Biochemical Journal Volume 146 ; 146 ; >
+    au < doNotProcess ; doNotProcess ; 1975 ; Biochemical Journal Volume 147 ; 147 ; >
+    au < doNotProcess ; doNotProcess ; 1975 ; Biochemical Journal Volume 148 ; 148 ; >
+    au < doNotProcess ; doNotProcess ; 1975 ; Biochemical Journal Volume 149 ; 149 ; >
+    au < doNotProcess ; doNotProcess ; 1975 ; Biochemical Journal Volume 150 ; 150 ; >
+    au < doNotProcess ; doNotProcess ; 1975 ; Biochemical Journal Volume 151 ; 151 ; >
+    au < doNotProcess ; doNotProcess ; 1975 ; Biochemical Journal Volume 152 ; 152 ; >
+    au < doNotProcess ; doNotProcess ; 1976 ; Biochemical Journal Volume 153 ; 153 ; >
+    au < doNotProcess ; doNotProcess ; 1976 ; Biochemical Journal Volume 154 ; 154 ; >
+    au < doNotProcess ; doNotProcess ; 1976 ; Biochemical Journal Volume 155 ; 155 ; >
+    au < doNotProcess ; doNotProcess ; 1976 ; Biochemical Journal Volume 156 ; 156 ; >
+    au < doNotProcess ; doNotProcess ; 1976 ; Biochemical Journal Volume 157 ; 157 ; >
+    au < doNotProcess ; doNotProcess ; 1976 ; Biochemical Journal Volume 158 ; 158 ; >
+    au < doNotProcess ; doNotProcess ; 1976 ; Biochemical Journal Volume 159 ; 159 ; >
+    au < doNotProcess ; doNotProcess ; 1976 ; Biochemical Journal Volume 160 ; 160 ; >
+    au < doNotProcess ; doNotProcess ; 1977 ; Biochemical Journal Volume 161 ; 161 ; >
+    au < doNotProcess ; doNotProcess ; 1977 ; Biochemical Journal Volume 162 ; 162 ; >
+    au < doNotProcess ; doNotProcess ; 1977 ; Biochemical Journal Volume 163 ; 163 ; >
+    au < doNotProcess ; doNotProcess ; 1977 ; Biochemical Journal Volume 164 ; 164 ; >
+    au < doNotProcess ; doNotProcess ; 1977 ; Biochemical Journal Volume 165 ; 165 ; >
+    au < doNotProcess ; doNotProcess ; 1977 ; Biochemical Journal Volume 166 ; 166 ; >
+    au < doNotProcess ; doNotProcess ; 1977 ; Biochemical Journal Volume 167 ; 167 ; >
+    au < doNotProcess ; doNotProcess ; 1977 ; Biochemical Journal Volume 168 ; 168 ; >
+    au < doNotProcess ; doNotProcess ; 1978 ; Biochemical Journal Volume 169 ; 169 ; >
+    au < doNotProcess ; doNotProcess ; 1978 ; Biochemical Journal Volume 170 ; 170 ; >
+    au < doNotProcess ; doNotProcess ; 1978 ; Biochemical Journal Volume 171 ; 171 ; >
+    au < doNotProcess ; doNotProcess ; 1978 ; Biochemical Journal Volume 172 ; 172 ; >
+    au < doNotProcess ; doNotProcess ; 1978 ; Biochemical Journal Volume 173 ; 173 ; >
+    au < doNotProcess ; doNotProcess ; 1978 ; Biochemical Journal Volume 174 ; 174 ; >
+    au < doNotProcess ; doNotProcess ; 1978 ; Biochemical Journal Volume 175 ; 175 ; >
+    au < doNotProcess ; doNotProcess ; 1978 ; Biochemical Journal Volume 176 ; 176 ; >
+    au < doNotProcess ; doNotProcess ; 1979 ; Biochemical Journal Volume 177 ; 177 ; >
+    au < doNotProcess ; doNotProcess ; 1979 ; Biochemical Journal Volume 178 ; 178 ; >
+    au < doNotProcess ; doNotProcess ; 1979 ; Biochemical Journal Volume 179 ; 179 ; >
+    au < doNotProcess ; doNotProcess ; 1979 ; Biochemical Journal Volume 180 ; 180 ; >
+    au < doNotProcess ; doNotProcess ; 1979 ; Biochemical Journal Volume 181 ; 181 ; >
+    au < doNotProcess ; doNotProcess ; 1979 ; Biochemical Journal Volume 182 ; 182 ; >
+    au < doNotProcess ; doNotProcess ; 1979 ; Biochemical Journal Volume 183 ; 183 ; >
+    au < doNotProcess ; doNotProcess ; 1979 ; Biochemical Journal Volume 184 ; 184 ; >
+    au < doNotProcess ; doNotProcess ; 1980 ; Biochemical Journal Volume 185 ; 185 ; >
+    au < doNotProcess ; doNotProcess ; 1980 ; Biochemical Journal Volume 186 ; 186 ; >
+    au < doNotProcess ; doNotProcess ; 1980 ; Biochemical Journal Volume 187 ; 187 ; >
+    au < doNotProcess ; doNotProcess ; 1980 ; Biochemical Journal Volume 188 ; 188 ; >
+    au < doNotProcess ; doNotProcess ; 1980 ; Biochemical Journal Volume 189 ; 189 ; >
+    au < doNotProcess ; doNotProcess ; 1980 ; Biochemical Journal Volume 190 ; 190 ; >
+    au < doNotProcess ; doNotProcess ; 1980 ; Biochemical Journal Volume 191 ; 191 ; >
+    au < doNotProcess ; doNotProcess ; 1980 ; Biochemical Journal Volume 192 ; 192 ; >
+    au < doNotProcess ; doNotProcess ; 1981 ; Biochemical Journal Volume 193 ; 193 ; >
+    au < doNotProcess ; doNotProcess ; 1981 ; Biochemical Journal Volume 194 ; 194 ; >
+    au < doNotProcess ; doNotProcess ; 1981 ; Biochemical Journal Volume 195 ; 195 ; >
+    au < doNotProcess ; doNotProcess ; 1981 ; Biochemical Journal Volume 196 ; 196 ; >
+    au < doNotProcess ; doNotProcess ; 1981 ; Biochemical Journal Volume 197 ; 197 ; >
+    au < doNotProcess ; doNotProcess ; 1981 ; Biochemical Journal Volume 198 ; 198 ; >
+    au < doNotProcess ; doNotProcess ; 1981 ; Biochemical Journal Volume 199 ; 199 ; >
+    au < doNotProcess ; doNotProcess ; 1981 ; Biochemical Journal Volume 200 ; 200 ; >
+    au < doNotProcess ; doNotProcess ; 1982 ; Biochemical Journal Volume 201 ; 201 ; >
+    au < doNotProcess ; doNotProcess ; 1982 ; Biochemical Journal Volume 202 ; 202 ; >
+    au < doNotProcess ; doNotProcess ; 1982 ; Biochemical Journal Volume 203 ; 203 ; >
+    au < doNotProcess ; doNotProcess ; 1982 ; Biochemical Journal Volume 204 ; 204 ; >
+    au < doNotProcess ; doNotProcess ; 1982 ; Biochemical Journal Volume 205 ; 205 ; >
+    au < doNotProcess ; doNotProcess ; 1982 ; Biochemical Journal Volume 206 ; 206 ; >
+    au < doNotProcess ; doNotProcess ; 1982 ; Biochemical Journal Volume 207 ; 207 ; >
+    au < doNotProcess ; doNotProcess ; 1982 ; Biochemical Journal Volume 208 ; 208 ; >
+    au < doNotProcess ; doNotProcess ; 1983 ; Biochemical Journal Volume 209 ; 209 ; >
+    au < doNotProcess ; doNotProcess ; 1983 ; Biochemical Journal Volume 210 ; 210 ; >
+    au < doNotProcess ; doNotProcess ; 1983 ; Biochemical Journal Volume 211 ; 211 ; >
+    au < doNotProcess ; doNotProcess ; 1983 ; Biochemical Journal Volume 212 ; 212 ; >
+    au < doNotProcess ; doNotProcess ; 1983 ; Biochemical Journal Volume 213 ; 213 ; >
+    au < doNotProcess ; doNotProcess ; 1983 ; Biochemical Journal Volume 214 ; 214 ; >
+    au < doNotProcess ; doNotProcess ; 1983 ; Biochemical Journal Volume 215 ; 215 ; >
+    au < doNotProcess ; doNotProcess ; 1983 ; Biochemical Journal Volume 216 ; 216 ; >
+    au < doNotProcess ; doNotProcess ; 1984 ; Biochemical Journal Volume 217 ; 217 ; >
+    au < doNotProcess ; doNotProcess ; 1984 ; Biochemical Journal Volume 218 ; 218 ; >
+    au < doNotProcess ; doNotProcess ; 1984 ; Biochemical Journal Volume 219 ; 219 ; >
+    au < doNotProcess ; doNotProcess ; 1984 ; Biochemical Journal Volume 220 ; 220 ; >
+    au < doNotProcess ; doNotProcess ; 1984 ; Biochemical Journal Volume 221 ; 221 ; >
+    au < doNotProcess ; doNotProcess ; 1984 ; Biochemical Journal Volume 222 ; 222 ; >
+    au < doNotProcess ; doNotProcess ; 1984 ; Biochemical Journal Volume 223 ; 223 ; >
+    au < doNotProcess ; doNotProcess ; 1984 ; Biochemical Journal Volume 224 ; 224 ; >
+    au < doNotProcess ; doNotProcess ; 1985 ; Biochemical Journal Volume 225 ; 225 ; >
+    au < doNotProcess ; doNotProcess ; 1985 ; Biochemical Journal Volume 226 ; 226 ; >
+    au < doNotProcess ; doNotProcess ; 1985 ; Biochemical Journal Volume 227 ; 227 ; >
+    au < doNotProcess ; doNotProcess ; 1985 ; Biochemical Journal Volume 228 ; 228 ; >
+    au < doNotProcess ; doNotProcess ; 1985 ; Biochemical Journal Volume 229 ; 229 ; >
+    au < doNotProcess ; doNotProcess ; 1985 ; Biochemical Journal Volume 230 ; 230 ; >
+    au < doNotProcess ; doNotProcess ; 1985 ; Biochemical Journal Volume 231 ; 231 ; >
+    au < doNotProcess ; doNotProcess ; 1985 ; Biochemical Journal Volume 232 ; 232 ; >
+    au < doNotProcess ; doNotProcess ; 1986 ; Biochemical Journal Volume 233 ; 233 ; >
+    au < doNotProcess ; doNotProcess ; 1986 ; Biochemical Journal Volume 234 ; 234 ; >
+    au < doNotProcess ; doNotProcess ; 1986 ; Biochemical Journal Volume 235 ; 235 ; >
+    au < doNotProcess ; doNotProcess ; 1986 ; Biochemical Journal Volume 236 ; 236 ; >
+    au < doNotProcess ; doNotProcess ; 1986 ; Biochemical Journal Volume 237 ; 237 ; >
+    au < doNotProcess ; doNotProcess ; 1986 ; Biochemical Journal Volume 238 ; 238 ; >
+    au < doNotProcess ; doNotProcess ; 1986 ; Biochemical Journal Volume 239 ; 239 ; >
+    au < doNotProcess ; doNotProcess ; 1986 ; Biochemical Journal Volume 240 ; 240 ; >
+    au < doNotProcess ; doNotProcess ; 1987 ; Biochemical Journal Volume 241 ; 241 ; >
+    au < doNotProcess ; doNotProcess ; 1987 ; Biochemical Journal Volume 242 ; 242 ; >
+    au < doNotProcess ; doNotProcess ; 1987 ; Biochemical Journal Volume 243 ; 243 ; >
+    au < doNotProcess ; doNotProcess ; 1987 ; Biochemical Journal Volume 244 ; 244 ; >
+    au < doNotProcess ; doNotProcess ; 1987 ; Biochemical Journal Volume 245 ; 245 ; >
+    au < doNotProcess ; doNotProcess ; 1987 ; Biochemical Journal Volume 246 ; 246 ; >
+    au < doNotProcess ; doNotProcess ; 1987 ; Biochemical Journal Volume 247 ; 247 ; >
+    au < doNotProcess ; doNotProcess ; 1987 ; Biochemical Journal Volume 248 ; 248 ; >
+    au < doNotProcess ; doNotProcess ; 1988 ; Biochemical Journal Volume 249 ; 249 ; >
+    au < doNotProcess ; doNotProcess ; 1988 ; Biochemical Journal Volume 250 ; 250 ; >
+    au < doNotProcess ; doNotProcess ; 1988 ; Biochemical Journal Volume 251 ; 251 ; >
+    au < doNotProcess ; doNotProcess ; 1988 ; Biochemical Journal Volume 252 ; 252 ; >
+    au < doNotProcess ; doNotProcess ; 1988 ; Biochemical Journal Volume 253 ; 253 ; >
+    au < doNotProcess ; doNotProcess ; 1988 ; Biochemical Journal Volume 254 ; 254 ; >
+    au < doNotProcess ; doNotProcess ; 1988 ; Biochemical Journal Volume 255 ; 255 ; >
+    au < doNotProcess ; doNotProcess ; 1988 ; Biochemical Journal Volume 256 ; 256 ; >
+    au < doNotProcess ; doNotProcess ; 1989 ; Biochemical Journal Volume 257 ; 257 ; >
+    au < doNotProcess ; doNotProcess ; 1989 ; Biochemical Journal Volume 258 ; 258 ; >
+    au < doNotProcess ; doNotProcess ; 1989 ; Biochemical Journal Volume 259 ; 259 ; >
+    au < doNotProcess ; doNotProcess ; 1989 ; Biochemical Journal Volume 260 ; 260 ; >
+    au < doNotProcess ; doNotProcess ; 1989 ; Biochemical Journal Volume 261 ; 261 ; >
+    au < doNotProcess ; doNotProcess ; 1989 ; Biochemical Journal Volume 262 ; 262 ; >
+    au < doNotProcess ; doNotProcess ; 1989 ; Biochemical Journal Volume 263 ; 263 ; >
+    au < doNotProcess ; doNotProcess ; 1989 ; Biochemical Journal Volume 264 ; 264 ; >
+    au < doNotProcess ; doNotProcess ; 1990 ; Biochemical Journal Volume 265 ; 265 ; >
+    au < doNotProcess ; doNotProcess ; 1990 ; Biochemical Journal Volume 266 ; 266 ; >
+    au < doNotProcess ; doNotProcess ; 1990 ; Biochemical Journal Volume 267 ; 267 ; >
+    au < doNotProcess ; doNotProcess ; 1990 ; Biochemical Journal Volume 268 ; 268 ; >
+    au < doNotProcess ; doNotProcess ; 1990 ; Biochemical Journal Volume 269 ; 269 ; >
+    au < doNotProcess ; doNotProcess ; 1990 ; Biochemical Journal Volume 270 ; 270 ; >
+    au < doNotProcess ; doNotProcess ; 1990 ; Biochemical Journal Volume 271 ; 271 ; >
+    au < doNotProcess ; doNotProcess ; 1990 ; Biochemical Journal Volume 272 ; 272 ; >
+    au < doNotProcess ; doNotProcess ; 1991 ; Biochemical Journal Volume 273 ; 273 ; >
+    au < doNotProcess ; doNotProcess ; 1991 ; Biochemical Journal Volume 274 ; 274 ; >
+    au < doNotProcess ; doNotProcess ; 1991 ; Biochemical Journal Volume 275 ; 275 ; >
+    au < doNotProcess ; doNotProcess ; 1991 ; Biochemical Journal Volume 276 ; 276 ; >
+    au < doNotProcess ; doNotProcess ; 1991 ; Biochemical Journal Volume 277 ; 277 ; >
+    au < doNotProcess ; doNotProcess ; 1991 ; Biochemical Journal Volume 278 ; 278 ; >
+    au < doNotProcess ; doNotProcess ; 1991 ; Biochemical Journal Volume 279 ; 279 ; >
+    au < doNotProcess ; doNotProcess ; 1991 ; Biochemical Journal Volume 280 ; 280 ; >
+    au < doNotProcess ; doNotProcess ; 1992 ; Biochemical Journal Volume 281 ; 281 ; >
+    au < doNotProcess ; doNotProcess ; 1992 ; Biochemical Journal Volume 282 ; 282 ; >
+    au < doNotProcess ; doNotProcess ; 1992 ; Biochemical Journal Volume 283 ; 283 ; >
+    au < doNotProcess ; doNotProcess ; 1992 ; Biochemical Journal Volume 284 ; 284 ; >
+    au < doNotProcess ; doNotProcess ; 1992 ; Biochemical Journal Volume 285 ; 285 ; >
+    au < doNotProcess ; doNotProcess ; 1992 ; Biochemical Journal Volume 286 ; 286 ; >
+    au < doNotProcess ; doNotProcess ; 1992 ; Biochemical Journal Volume 287 ; 287 ; >
+    au < doNotProcess ; doNotProcess ; 1992 ; Biochemical Journal Volume 288 ; 288 ; >
+    au < doNotProcess ; doNotProcess ; 1993 ; Biochemical Journal Volume 289 ; 289 ; >
+    au < doNotProcess ; doNotProcess ; 1993 ; Biochemical Journal Volume 290 ; 290 ; >
+    au < doNotProcess ; doNotProcess ; 1993 ; Biochemical Journal Volume 291 ; 291 ; >
+    au < doNotProcess ; doNotProcess ; 1993 ; Biochemical Journal Volume 292 ; 292 ; >
+    au < doNotProcess ; doNotProcess ; 1993 ; Biochemical Journal Volume 293 ; 293 ; >
+    au < doNotProcess ; doNotProcess ; 1993 ; Biochemical Journal Volume 294 ; 294 ; >
+    au < doNotProcess ; doNotProcess ; 1993 ; Biochemical Journal Volume 295 ; 295 ; >
+    au < doNotProcess ; doNotProcess ; 1993 ; Biochemical Journal Volume 296 ; 296 ; >
+    au < doNotProcess ; doNotProcess ; 1994 ; Biochemical Journal Volume 297 ; 297 ; >
+    au < doNotProcess ; doNotProcess ; 1994 ; Biochemical Journal Volume 298 ; 298 ; >
+    au < doNotProcess ; doNotProcess ; 1994 ; Biochemical Journal Volume 299 ; 299 ; >
+    au < doNotProcess ; doNotProcess ; 1994 ; Biochemical Journal Volume 300 ; 300 ; >
+    au < doNotProcess ; doNotProcess ; 1994 ; Biochemical Journal Volume 301 ; 301 ; >
+    au < doNotProcess ; doNotProcess ; 1994 ; Biochemical Journal Volume 302 ; 302 ; >
+    au < doNotProcess ; doNotProcess ; 1994 ; Biochemical Journal Volume 303 ; 303 ; >
+    au < doNotProcess ; doNotProcess ; 1994 ; Biochemical Journal Volume 304 ; 304 ; >
+    au < doNotProcess ; doNotProcess ; 1995 ; Biochemical Journal Volume 305 ; 305 ; >
+    au < doNotProcess ; doNotProcess ; 1995 ; Biochemical Journal Volume 306 ; 306 ; >
+    au < doNotProcess ; doNotProcess ; 1995 ; Biochemical Journal Volume 307 ; 307 ; >
+    au < doNotProcess ; doNotProcess ; 1995 ; Biochemical Journal Volume 308 ; 308 ; >
+    au < doNotProcess ; doNotProcess ; 1995 ; Biochemical Journal Volume 309 ; 309 ; >
+    au < doNotProcess ; doNotProcess ; 1995 ; Biochemical Journal Volume 310 ; 310 ; >
+    au < doNotProcess ; doNotProcess ; 1995 ; Biochemical Journal Volume 311 ; 311 ; >
+    au < doNotProcess ; doNotProcess ; 1995 ; Biochemical Journal Volume 312 ; 312 ; >
+    au < doNotProcess ; doNotProcess ; 1996 ; Biochemical Journal Volume 313 ; 313 ; >
+    au < doNotProcess ; doNotProcess ; 1996 ; Biochemical Journal Volume 314 ; 314 ; >
+    au < doNotProcess ; doNotProcess ; 1996 ; Biochemical Journal Volume 315 ; 315 ; >
+    au < doNotProcess ; doNotProcess ; 1996 ; Biochemical Journal Volume 316 ; 316 ; >
+    au < doNotProcess ; doNotProcess ; 1996 ; Biochemical Journal Volume 317 ; 317 ; >
+    au < doNotProcess ; doNotProcess ; 1996 ; Biochemical Journal Volume 318 ; 318 ; >
+    au < doNotProcess ; doNotProcess ; 1996 ; Biochemical Journal Volume 319 ; 319 ; >
+    au < doNotProcess ; doNotProcess ; 1996 ; Biochemical Journal Volume 320 ; 320 ; >
+    au < doNotProcess ; doNotProcess ; 1997 ; Biochemical Journal Volume 321 ; 321 ; >
+    au < doNotProcess ; doNotProcess ; 1997 ; Biochemical Journal Volume 322 ; 322 ; >
+    au < doNotProcess ; doNotProcess ; 1997 ; Biochemical Journal Volume 323 ; 323 ; >
+    au < doNotProcess ; doNotProcess ; 1997 ; Biochemical Journal Volume 324 ; 324 ; >
+    au < doNotProcess ; doNotProcess ; 1997 ; Biochemical Journal Volume 325 ; 325 ; >
+    au < doNotProcess ; doNotProcess ; 1997 ; Biochemical Journal Volume 326 ; 326 ; >
+    au < doNotProcess ; doNotProcess ; 1997 ; Biochemical Journal Volume 327 ; 327 ; >
+    au < doNotProcess ; doNotProcess ; 1997 ; Biochemical Journal Volume 328 ; 328 ; >
+    au < doNotProcess ; doNotProcess ; 1998 ; Biochemical Journal Volume 329 ; 329 ; >
+    au < doNotProcess ; doNotProcess ; 1998 ; Biochemical Journal Volume 330 ; 330 ; >
+    au < doNotProcess ; doNotProcess ; 1998 ; Biochemical Journal Volume 331 ; 331 ; >
+    au < doNotProcess ; doNotProcess ; 1998 ; Biochemical Journal Volume 332 ; 332 ; >
+    au < doNotProcess ; doNotProcess ; 1998 ; Biochemical Journal Volume 333 ; 333 ; >
+    au < doNotProcess ; doNotProcess ; 1998 ; Biochemical Journal Volume 334 ; 334 ; >
+    au < doNotProcess ; doNotProcess ; 1998 ; Biochemical Journal Volume 335 ; 335 ; >
+    au < doNotProcess ; doNotProcess ; 1998 ; Biochemical Journal Volume 336 ; 336 ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; Biochemical Journal Volume 337 ; 337 ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; Biochemical Journal Volume 338 ; 338 ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; Biochemical Journal Volume 339 ; 339 ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; Biochemical Journal Volume 340 ; 340 ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; Biochemical Journal Volume 341 ; 341 ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; Biochemical Journal Volume 342 ; 342 ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; Biochemical Journal Volume 343 ; 343 ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; Biochemical Journal Volume 344 ; 344 ; >
+    au < doNotProcess ; doNotProcess ; 2000 ; Biochemical Journal Volume 345 ; 345 ; >
+    au < doNotProcess ; doNotProcess ; 2000 ; Biochemical Journal Volume 346 ; 346 ; >
+    au < doNotProcess ; doNotProcess ; 2000 ; Biochemical Journal Volume 347 ; 347 ; >
+    au < doNotProcess ; doNotProcess ; 2000 ; Biochemical Journal Volume 348 ; 348 ; >
+    au < doNotProcess ; doNotProcess ; 2000 ; Biochemical Journal Volume 349 ; 349 ; >
+    au < doNotProcess ; doNotProcess ; 2000 ; Biochemical Journal Volume 350 ; 350 ; >
+    au < doNotProcess ; doNotProcess ; 2000 ; Biochemical Journal Volume 351 ; 351 ; >
+    au < doNotProcess ; doNotProcess ; 2000 ; Biochemical Journal Volume 352 ; 352 ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; Biochemical Journal Volume 353 ; 353 ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; Biochemical Journal Volume 354 ; 354 ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; Biochemical Journal Volume 355 ; 355 ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; Biochemical Journal Volume 356 ; 356 ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; Biochemical Journal Volume 357 ; 357 ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; Biochemical Journal Volume 358 ; 358 ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; Biochemical Journal Volume 359 ; 359 ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; Biochemical Journal Volume 360 ; 360 ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; Biochemical Journal Volume 361 ; 361 ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; Biochemical Journal Volume 362 ; 362 ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; Biochemical Journal Volume 363 ; 363 ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; Biochemical Journal Volume 364 ; 364 ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; Biochemical Journal Volume 365 ; 365 ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; Biochemical Journal Volume 366 ; 366 ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; Biochemical Journal Volume 367 ; 367 ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; Biochemical Journal Volume 368 ; 368 ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; Biochemical Journal Volume 369 ; 369 ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; Biochemical Journal Volume 370 ; 370 ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; Biochemical Journal Volume 371 ; 371 ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; Biochemical Journal Volume 372 ; 372 ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; Biochemical Journal Volume 373 ; 373 ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; Biochemical Journal Volume 374 ; 374 ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; Biochemical Journal Volume 375 ; 375 ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; Biochemical Journal Volume 376 ; 376 ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; Biochemical Journal Volume 377 ; 377 ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; Biochemical Journal Volume 378 ; 378 ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; Biochemical Journal Volume 379 ; 379 ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; Biochemical Journal Volume 380 ; 380 ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; Biochemical Journal Volume 381 ; 381 ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; Biochemical Journal Volume 382 ; 382 ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; Biochemical Journal Volume 383 ; 383 ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; Biochemical Journal Volume 384 ; 384 ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; Biochemical Journal Volume 385 ; 385 ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; Biochemical Journal Volume 386 ; 386 ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; Biochemical Journal Volume 387 ; 387 ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; Biochemical Journal Volume 388 ; 388 ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; Biochemical Journal Volume 389 ; 389 ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; Biochemical Journal Volume 390 ; 390 ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; Biochemical Journal Volume 391 ; 391 ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; Biochemical Journal Volume 392 ; 392 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; Biochemical Journal Volume 393 ; 393 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; Biochemical Journal Volume 394 ; 394 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; Biochemical Journal Volume 395 ; 395 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; Biochemical Journal Volume 396 ; 396 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; Biochemical Journal Volume 397 ; 397 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; Biochemical Journal Volume 398 ; 398 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; Biochemical Journal Volume 399 ; 399 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; Biochemical Journal Volume 400 ; 400 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Biochemical Journal Volume 401 ; 401 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Biochemical Journal Volume 402 ; 402 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Biochemical Journal Volume 403 ; 403 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Biochemical Journal Volume 404 ; 404 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Biochemical Journal Volume 405 ; 405 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Biochemical Journal Volume 406 ; 406 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Biochemical Journal Volume 407 ; 407 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Biochemical Journal Volume 408 ; 408 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Biochemical Journal Volume 409 ; 409 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Biochemical Journal Volume 410 ; 410 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Biochemical Journal Volume 411 ; 411 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Biochemical Journal Volume 412 ; 412 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Biochemical Journal Volume 413 ; 413 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Biochemical Journal Volume 414 ; 414 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Biochemical Journal Volume 415 ; 415 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Biochemical Journal Volume 416 ; 416 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Biochemical Journal Volume 417 ; 417 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Biochemical Journal Volume 418 ; 418 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Biochemical Journal Volume 419 ; 419 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Biochemical Journal Volume 420 ; 420 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Biochemical Journal Volume 421 ; 421 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Biochemical Journal Volume 422 ; 422 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Biochemical Journal Volume 423 ; 423 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Biochemical Journal Volume 424 ; 424 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Biochemical Journal Volume 425 ; 425 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Biochemical Journal Volume 426 ; 426 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Biochemical Journal Volume 427 ; 427 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Biochemical Journal Volume 428 ; 428 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Biochemical Journal Volume 429 ; 429 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Biochemical Journal Volume 430 ; 430 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Biochemical Journal Volume 431 ; 431 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Biochemical Journal Volume 432 ; 432 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Biochemical Journal Volume 433 ; 433 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Biochemical Journal Volume 434 ; 434 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Biochemical Journal Volume 435 ; 435 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Biochemical Journal Volume 436 ; 436 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Biochemical Journal Volume 437 ; 437 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Biochemical Journal Volume 438 ; 438 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Biochemical Journal Volume 439 ; 439 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Biochemical Journal Volume 440 ; 440 ; >
+    au < finished ; crawling ; 2012 ; Biochemical Journal Volume 441 ; 441 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; Biochemical Journal Volume 442 ; 442 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; Biochemical Journal Volume 443 ; 443 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; Biochemical Journal Volume 444 ; 444 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2012 ; Biochemical Journal Volume 445 ; 445 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2012 ; Biochemical Journal Volume 446 ; 446 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; Biochemical Journal Volume 447 ; 447 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; Biochemical Journal Volume 448 ; 448 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Biochemical Journal Volume 449 ; 449 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2013 ; Biochemical Journal Volume 450 ; 450 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2013 ; Biochemical Journal Volume 451 ; 451 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Biochemical Journal Volume 452 ; 452 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Biochemical Journal Volume 453 ; 453 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Biochemical Journal Volume 454 ; 454 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2013 ; Biochemical Journal Volume 455 ; 455 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2013 ; Biochemical Journal Volume 456 ; 456 ; reingest3.clockss.org:8083 >
+    au < doNotProcess ; doNotProcess ; 2014 ; Biochemical Journal Volume 457 ; 457 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; Biochemical Journal Volume 458 ; 458 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; Biochemical Journal Volume 459 ; 459 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; Biochemical Journal Volume 460 ; 460 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; Biochemical Journal Volume 461 ; 461 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; Biochemical Journal Volume 462 ; 462 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; Biochemical Journal Volume 463 ; 463 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; Biochemical Journal Volume 464 ; 464 ; >
+
+  }
+  
+  {
+  
+    title <
+      name = Biochemical Society Transactions ;
+      issn = 0300-5127 ;
+      eissn = 1470-8752 ;
+      issnl = 0300-5127
+    >
+
+    param[base_url] = http://www.biochemsoctrans.org/
+    param[journal_id] = bst
+	
+    au < doNotProcess ; doNotProcess ; 1973 ; Biochemical Society Transactions Volume 1 ; 001 ; >
+    au < doNotProcess ; doNotProcess ; 1974 ; Biochemical Society Transactions Volume 2 ; 002 ; >
+    au < doNotProcess ; doNotProcess ; 1975 ; Biochemical Society Transactions Volume 3 ; 003 ; >
+    au < doNotProcess ; doNotProcess ; 1976 ; Biochemical Society Transactions Volume 4 ; 004 ; >
+    au < doNotProcess ; doNotProcess ; 1977 ; Biochemical Society Transactions Volume 5 ; 005 ; >
+    au < doNotProcess ; doNotProcess ; 1978 ; Biochemical Society Transactions Volume 6 ; 006 ; >
+    au < doNotProcess ; doNotProcess ; 1979 ; Biochemical Society Transactions Volume 7 ; 007 ; >
+    au < doNotProcess ; doNotProcess ; 1980 ; Biochemical Society Transactions Volume 8 ; 008 ; >
+    au < doNotProcess ; doNotProcess ; 1981 ; Biochemical Society Transactions Volume 9 ; 009 ; >
+    au < doNotProcess ; doNotProcess ; 1982 ; Biochemical Society Transactions Volume 10 ; 010 ; >
+    au < doNotProcess ; doNotProcess ; 1983 ; Biochemical Society Transactions Volume 11 ; 011 ; >
+    au < doNotProcess ; doNotProcess ; 1984 ; Biochemical Society Transactions Volume 12 ; 012 ; >
+    au < doNotProcess ; doNotProcess ; 1985 ; Biochemical Society Transactions Volume 13 ; 013 ; >
+    au < doNotProcess ; doNotProcess ; 1986 ; Biochemical Society Transactions Volume 14 ; 014 ; >
+    au < doNotProcess ; doNotProcess ; 1987 ; Biochemical Society Transactions Volume 15 ; 015 ; >
+    au < doNotProcess ; doNotProcess ; 1988 ; Biochemical Society Transactions Volume 16 ; 016 ; >
+    au < doNotProcess ; doNotProcess ; 1989 ; Biochemical Society Transactions Volume 17 ; 017 ; >
+    au < doNotProcess ; doNotProcess ; 1990 ; Biochemical Society Transactions Volume 18 ; 018 ; >
+    au < doNotProcess ; doNotProcess ; 1991 ; Biochemical Society Transactions Volume 19 ; 019 ; >
+    au < doNotProcess ; doNotProcess ; 1992 ; Biochemical Society Transactions Volume 20 ; 020 ; >
+    au < doNotProcess ; doNotProcess ; 1993 ; Biochemical Society Transactions Volume 21 ; 021 ; >
+    au < doNotProcess ; doNotProcess ; 1994 ; Biochemical Society Transactions Volume 22 ; 022 ; >
+    au < doNotProcess ; doNotProcess ; 1995 ; Biochemical Society Transactions Volume 23 ; 023 ; >
+    au < doNotProcess ; doNotProcess ; 1996 ; Biochemical Society Transactions Volume 24 ; 024 ; >
+    au < doNotProcess ; doNotProcess ; 1997 ; Biochemical Society Transactions Volume 25 ; 025 ; >
+    au < doNotProcess ; doNotProcess ; 1998 ; Biochemical Society Transactions Volume 26 ; 026 ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; Biochemical Society Transactions Volume 27 ; 027 ; >
+    au < doNotProcess ; doNotProcess ; 2000 ; Biochemical Society Transactions Volume 28 ; 028 ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; Biochemical Society Transactions Volume 29 ; 029 ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; Biochemical Society Transactions Volume 30 ; 030 ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; Biochemical Society Transactions Volume 31 ; 031 ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; Biochemical Society Transactions Volume 32 ; 032 ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; Biochemical Society Transactions Volume 33 ; 033 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; Biochemical Society Transactions Volume 34 ; 034 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Biochemical Society Transactions Volume 35 ; 035 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Biochemical Society Transactions Volume 36 ; 036 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Biochemical Society Transactions Volume 37 ; 037 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Biochemical Society Transactions Volume 38 ; 038 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Biochemical Society Transactions Volume 39 ; 039 ; >
+    au < finished ; crawling ; 2012 ; Biochemical Society Transactions Volume 40 ; 040 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Biochemical Society Transactions Volume 41 ; 041 ; reingest3.clockss.org:8083 >
+    au < doNotProcess ; doNotProcess ; 2014 ; Biochemical Society Transactions Volume 42 ; 042 ; >
+    
+  }
+  
+  {
+ 
+    title <
+      name = Biology of the Cell ;
+      issn = 0248-4900 ;
+      eissn = 1768-322X ;
+      issnl = 0248-4900
+    >
+
+    param[base_url] = http://www.biolcell.org/
+    param[journal_id] = boc
+
+    comment[ownership] = moved to Wiley, but only after 2011
+
+    au < doNotProcess ; doNotProcess ; 1984 ; Biology of the Cell Volume 48 [abstracts only] ; 048 ; >
+    au < doNotProcess ; doNotProcess ; 1984 ; Biology of the Cell Volume 49 [abstracts only] ; 049 ; >
+    au < doNotProcess ; doNotProcess ; 1984 ; Biology of the Cell Volume 50 [abstracts only] ; 050 ; >
+    au < doNotProcess ; doNotProcess ; 1984 ; Biology of the Cell Volume 51 [abstracts only] ; 051 ; >
+    au < doNotProcess ; doNotProcess ; 1985 ; Biology of the Cell Volume 52 [abstracts only] ; 052 ; >
+    au < doNotProcess ; doNotProcess ; 1985 ; Biology of the Cell Volume 53 [abstracts only] ; 053 ; >
+    au < doNotProcess ; doNotProcess ; 1985 ; Biology of the Cell Volume 54 [abstracts only] ; 054 ; >
+    au < doNotProcess ; doNotProcess ; 1985 ; Biology of the Cell Volume 55 [abstracts only] ; 055 ; >
+    au < doNotProcess ; doNotProcess ; 1986 ; Biology of the Cell Volume 56 [abstracts only] ; 056 ; >
+    au < doNotProcess ; doNotProcess ; 1986 ; Biology of the Cell Volume 57 [abstracts only] ; 057 ; >
+    au < doNotProcess ; doNotProcess ; 1986 ; Biology of the Cell Volume 58 [abstracts only] ; 058 ; >
+    au < doNotProcess ; doNotProcess ; 1987 ; Biology of the Cell Volume 59 [abstracts only] ; 059 ; >
+    au < doNotProcess ; doNotProcess ; 1987 ; Biology of the Cell Volume 60 [abstracts only] ; 060 ; >
+    au < doNotProcess ; doNotProcess ; 1987 ; Biology of the Cell Volume 61 [abstracts only] ; 061 ; >
+    au < doNotProcess ; doNotProcess ; 1988 ; Biology of the Cell Volume 62 ; 062 ; >
+    au < doNotProcess ; doNotProcess ; 1988 ; Biology of the Cell Volume 63 ; 063 ; >
+    au < doNotProcess ; doNotProcess ; 1988 ; Biology of the Cell Volume 64 ; 064 ; >
+    au < doNotProcess ; doNotProcess ; 1989 ; Biology of the Cell Volume 65 ; 065 ; >
+    au < doNotProcess ; doNotProcess ; 1989 ; Biology of the Cell Volume 66 ; 066 ; >
+    au < doNotProcess ; doNotProcess ; 1989 ; Biology of the Cell Volume 67 ; 067 ; >
+    au < doNotProcess ; doNotProcess ; 1990 ; Biology of the Cell Volume 68 ; 068 ; >
+    au < doNotProcess ; doNotProcess ; 1990 ; Biology of the Cell Volume 69 ; 069 ; >
+    au < doNotProcess ; doNotProcess ; 1990 ; Biology of the Cell Volume 70 ; 070 ; >
+    au < doNotProcess ; doNotProcess ; 1991 ; Biology of the Cell Volume 71 ; 071 ; >
+    au < doNotProcess ; doNotProcess ; 1991 ; Biology of the Cell Volume 72 ; 072 ; >
+    au < doNotProcess ; doNotProcess ; 1991 ; Biology of the Cell Volume 73 ; 073 ; >
+    au < doNotProcess ; doNotProcess ; 1992 ; Biology of the Cell Volume 74 ; 074 ; >
+    au < doNotProcess ; doNotProcess ; 1992 ; Biology of the Cell Volume 75 ; 075 ; >
+    au < doNotProcess ; doNotProcess ; 1992 ; Biology of the Cell Volume 76 ; 076 ; >
+    au < doNotProcess ; doNotProcess ; 1993 ; Biology of the Cell Volume 77 ; 077 ; >
+    au < doNotProcess ; doNotProcess ; 1993 ; Biology of the Cell Volume 78 ; 078 ; >
+    au < doNotProcess ; doNotProcess ; 1993 ; Biology of the Cell Volume 79 ; 079 ; >
+    au < doNotProcess ; doNotProcess ; 1994 ; Biology of the Cell Volume 80 ; 080 ; >
+    au < doNotProcess ; doNotProcess ; 1994 ; Biology of the Cell Volume 81 ; 081 ; >
+    au < doNotProcess ; doNotProcess ; 1994 ; Biology of the Cell Volume 82 ; 082 ; >
+    au < doNotProcess ; doNotProcess ; 1995 ; Biology of the Cell Volume 83 ; 083 ; >
+    au < doNotProcess ; doNotProcess ; 1995 ; Biology of the Cell Volume 84 ; 084 ; >
+    au < doNotProcess ; doNotProcess ; 1995 ; Biology of the Cell Volume 85 ; 085 ; >
+    au < doNotProcess ; doNotProcess ; 1996 ; Biology of the Cell Volume 86 ; 086 ; >
+    au < doNotProcess ; doNotProcess ; 1996 ; Biology of the Cell Volume 87 ; 087 ; >
+    au < doNotProcess ; doNotProcess ; 1996 ; Biology of the Cell Volume 88 ; 088 ; >
+    au < doNotProcess ; doNotProcess ; 1997 ; Biology of the Cell Volume 89 ; 089 ; >
+    au < doNotProcess ; doNotProcess ; 1998 ; Biology of the Cell Volume 90 ; 090 ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; Biology of the Cell Volume 91 ; 091 ; >
+    au < doNotProcess ; doNotProcess ; 2000 ; Biology of the Cell Volume 92 ; 092 ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; Biology of the Cell Volume 93 ; 093 ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; Biology of the Cell Volume 94 ; 094 ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; Biology of the Cell Volume 95 ; 095 ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; Biology of the Cell Volume 96 ; 096 ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; Biology of the Cell Volume 97 ; 097 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; Biology of the Cell Volume 98 ; 098 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Biology of the Cell Volume 99 ; 099 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Biology of the Cell Volume 100 ; 100 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Biology of the Cell Volume 101 ; 101 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Biology of the Cell Volume 102 ; 102 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Biology of the Cell Volume 103 ; 103 ; >
+    
+  } 
+  
+  {
+  
+    title <
+      name = Bioscience Reports ;
+      issn = 0144-8463 ;
+      eissn = 1573-4935 ;
+      issnl = 0144-8463
+    >
+
+    param[base_url] = http://www.bioscirep.org/
+    param[journal_id] = bsr
+
+    au < doNotProcess ; doNotProcess ; 1981 ; Bioscience Reports Volume 1 ; 001 ; >
+    au < doNotProcess ; doNotProcess ; 1982 ; Bioscience Reports Volume 2 ; 002 ; >
+    au < doNotProcess ; doNotProcess ; 1983 ; Bioscience Reports Volume 3 ; 003 ; >
+    au < doNotProcess ; doNotProcess ; 1984 ; Bioscience Reports Volume 4 ; 004 ; >
+    au < doNotProcess ; doNotProcess ; 1985 ; Bioscience Reports Volume 5 ; 005 ; >
+    au < doNotProcess ; doNotProcess ; 1986 ; Bioscience Reports Volume 6 ; 006 ; >
+    au < doNotProcess ; doNotProcess ; 1987 ; Bioscience Reports Volume 7 ; 007 ; >
+    au < doNotProcess ; doNotProcess ; 1988 ; Bioscience Reports Volume 8 ; 008 ; >
+    au < doNotProcess ; doNotProcess ; 1989 ; Bioscience Reports Volume 9 ; 009 ; >
+    au < doNotProcess ; doNotProcess ; 1990 ; Bioscience Reports Volume 10 ; 010 ; >
+    au < doNotProcess ; doNotProcess ; 1991 ; Bioscience Reports Volume 11 ; 011 ; >
+    au < doNotProcess ; doNotProcess ; 1992 ; Bioscience Reports Volume 12 ; 012 ; >
+    au < doNotProcess ; doNotProcess ; 1993 ; Bioscience Reports Volume 13 ; 013 ; >
+    au < doNotProcess ; doNotProcess ; 1994 ; Bioscience Reports Volume 14 ; 014 ; >
+    au < doNotProcess ; doNotProcess ; 1995 ; Bioscience Reports Volume 15 ; 015 ; >
+    au < doNotProcess ; doNotProcess ; 1996 ; Bioscience Reports Volume 16 ; 016 ; >
+    au < doNotProcess ; doNotProcess ; 1997 ; Bioscience Reports Volume 17 ; 017 ; >
+    au < doNotProcess ; doNotProcess ; 1998 ; Bioscience Reports Volume 18 ; 018 ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; Bioscience Reports Volume 19 ; 019 ; >
+    au < doNotProcess ; doNotProcess ; 2000 ; Bioscience Reports Volume 20 ; 020 ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; Bioscience Reports Volume 21 ; 021 ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; Bioscience Reports Volume 22 ; 022 ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; Bioscience Reports Volume 23 ; 023 ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; Bioscience Reports Volume 24 ; 024 ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; Bioscience Reports Volume 25 ; 025 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; Bioscience Reports Volume 26 ; 026 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Bioscience Reports Volume 27 ; 027 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Bioscience Reports Volume 28 ; 028 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Bioscience Reports Volume 29 ; 029 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Bioscience Reports Volume 30 ; 030 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Bioscience Reports Volume 31 ; 031 ; >
+    au < finished ; crawling ; 2012 ; Bioscience Reports Volume 32 ; 032 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Bioscience Reports Volume 33 ; 033 ; reingest5.clockss.org:8082 >
+    au < doNotProcess ; doNotProcess ; 2014 ; Bioscience Reports Volume 34 ; 034 ; >
+
+  }
+
+  {
+  
+    title <
+      name = Biotechnology and Applied Biochemistry ;
+      issn = 0885-4513 ;
+      eissn = 1470-8744 ;
+      issnl = 0885-4513
+    >
+
+    comment[publisher] = After 2010 moved to Wiley Blackwell. Gone from Portland Press site.
+
+    param[base_url] = http://www.babonline.org/
+    param[journal_id] = bab
+
+    au < doNotProcess ; doNotProcess ; 1987 ; Biotechnology and Applied Biochemistry Volume 9 [abstracts only] ; 009 ; >
+    au < doNotProcess ; doNotProcess ; 1988 ; Biotechnology and Applied Biochemistry Volume 10 [abstracts only] ; 010 ; >
+    au < doNotProcess ; doNotProcess ; 1989 ; Biotechnology and Applied Biochemistry Volume 11 [abstracts only] ; 011 ; >
+    au < doNotProcess ; doNotProcess ; 1990 ; Biotechnology and Applied Biochemistry Volume 12 [abstracts only] ; 012 ; >
+    au < doNotProcess ; doNotProcess ; 1991 ; Biotechnology and Applied Biochemistry Volume 13 [abstracts only] ; 013 ; >
+    au < doNotProcess ; doNotProcess ; 1991 ; Biotechnology and Applied Biochemistry Volume 14 [abstracts only] ; 014 ; >
+    au < doNotProcess ; doNotProcess ; 1992 ; Biotechnology and Applied Biochemistry Volume 15 [abstracts only] ; 015 ; >
+    au < doNotProcess ; doNotProcess ; 1992 ; Biotechnology and Applied Biochemistry Volume 16 [abstracts only] ; 016 ; >
+    au < doNotProcess ; doNotProcess ; 1993 ; Biotechnology and Applied Biochemistry Volume 17 [abstracts only] ; 017 ; >
+    au < doNotProcess ; doNotProcess ; 1993 ; Biotechnology and Applied Biochemistry Volume 18 [abstracts only] ; 018 ; >
+    au < doNotProcess ; doNotProcess ; 1994 ; Biotechnology and Applied Biochemistry Volume 19 [abstracts only] ; 019 ; >
+    au < doNotProcess ; doNotProcess ; 1994 ; Biotechnology and Applied Biochemistry Volume 20 [abstracts only] ; 020 ; >
+    au < doNotProcess ; doNotProcess ; 1995 ; Biotechnology and Applied Biochemistry Volume 21 [abstracts only] ; 021 ; >
+    au < doNotProcess ; doNotProcess ; 1995 ; Biotechnology and Applied Biochemistry Volume 22 [abstracts only] ; 022 ; >
+    au < doNotProcess ; doNotProcess ; 1996 ; Biotechnology and Applied Biochemistry Volume 23 [abstracts only] ; 023 ; >
+    au < doNotProcess ; doNotProcess ; 1996 ; Biotechnology and Applied Biochemistry Volume 24 [abstracts only] ; 024 ; >
+    au < doNotProcess ; doNotProcess ; 1997 ; Biotechnology and Applied Biochemistry Volume 25 [abstracts only] ; 025 ; >
+    au < doNotProcess ; doNotProcess ; 1997 ; Biotechnology and Applied Biochemistry Volume 26 [abstracts only] ; 026 ; >
+    au < doNotProcess ; doNotProcess ; 1998 ; Biotechnology and Applied Biochemistry Volume 27 [abstracts only] ; 027 ; >
+    au < doNotProcess ; doNotProcess ; 1998 ; Biotechnology and Applied Biochemistry Volume 28 ; 028 ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; Biotechnology and Applied Biochemistry Volume 29 ; 029 ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; Biotechnology and Applied Biochemistry Volume 30 ; 030 ; >
+    au < doNotProcess ; doNotProcess ; 2000 ; Biotechnology and Applied Biochemistry Volume 31 ; 031 ; >
+    au < doNotProcess ; doNotProcess ; 2000 ; Biotechnology and Applied Biochemistry Volume 32 ; 032 ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; Biotechnology and Applied Biochemistry Volume 33 ; 033 ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; Biotechnology and Applied Biochemistry Volume 34 ; 034 ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; Biotechnology and Applied Biochemistry Volume 35 ; 035 ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; Biotechnology and Applied Biochemistry Volume 36 ; 036 ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; Biotechnology and Applied Biochemistry Volume 37 ; 037 ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; Biotechnology and Applied Biochemistry Volume 38 ; 038 ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; Biotechnology and Applied Biochemistry Volume 39 ; 039 ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; Biotechnology and Applied Biochemistry Volume 40 ; 040 ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; Biotechnology and Applied Biochemistry Volume 41 ; 041 ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; Biotechnology and Applied Biochemistry Volume 42 ; 042 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; Biotechnology and Applied Biochemistry Volume 43 ; 043 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; Biotechnology and Applied Biochemistry Volume 44 ; 044 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; Biotechnology and Applied Biochemistry Volume 45 ; 045 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Biotechnology and Applied Biochemistry Volume 46 ; 046 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Biotechnology and Applied Biochemistry Volume 47 ; 047 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Biotechnology and Applied Biochemistry Volume 48 ; 048 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Biotechnology and Applied Biochemistry Volume 49 ; 049 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Biotechnology and Applied Biochemistry Volume 50 ; 050 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Biotechnology and Applied Biochemistry Volume 51 ; 051 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Biotechnology and Applied Biochemistry Volume 52 ; 052 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Biotechnology and Applied Biochemistry Volume 53 ; 053 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Biotechnology and Applied Biochemistry Volume 54 ; 054 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Biotechnology and Applied Biochemistry Volume 55 ; 055 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Biotechnology and Applied Biochemistry Volume 56 ; 056 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Biotechnology and Applied Biochemistry Volume 57 ; 057 ; >
+    
+  }
+
+  {
+  
+    title <
+      name = Clinical Science ;
+      issn = 0143-5221 ;
+      eissn = 1470-8736 ;
+      issnl = 0143-5221
+    >
+
+    param[base_url] = http://www.clinsci.org/
+    param[journal_id] = cs
+
+    au < doNotProcess ; doNotProcess ; 1979 ; Clinical Science Volume 56 ; 056 ; >
+    au < doNotProcess ; doNotProcess ; 1979 ; Clinical Science Volume 57 ; 057 ; >
+    au < doNotProcess ; doNotProcess ; 1980 ; Clinical Science Volume 58 ; 058 ; >
+    au < doNotProcess ; doNotProcess ; 1980 ; Clinical Science Volume 59 ; 059 ; >
+    au < doNotProcess ; doNotProcess ; 1981 ; Clinical Science Volume 60 ; 060 ; >
+    au < doNotProcess ; doNotProcess ; 1981 ; Clinical Science Volume 61 ; 061 ; >
+    au < doNotProcess ; doNotProcess ; 1982 ; Clinical Science Volume 62 ; 062 ; >
+    au < doNotProcess ; doNotProcess ; 1982 ; Clinical Science Volume 63 ; 063 ; >
+    au < doNotProcess ; doNotProcess ; 1983 ; Clinical Science Volume 64 ; 064 ; >
+    au < doNotProcess ; doNotProcess ; 1983 ; Clinical Science Volume 65 ; 065 ; >
+    au < doNotProcess ; doNotProcess ; 1984 ; Clinical Science Volume 66 ; 066 ; >
+    au < doNotProcess ; doNotProcess ; 1984 ; Clinical Science Volume 67 ; 067 ; >
+    au < doNotProcess ; doNotProcess ; 1985 ; Clinical Science Volume 68 ; 068 ; >
+    au < doNotProcess ; doNotProcess ; 1985 ; Clinical Science Volume 69 ; 069 ; >
+    au < doNotProcess ; doNotProcess ; 1986 ; Clinical Science Volume 70 ; 070 ; >
+    au < doNotProcess ; doNotProcess ; 1986 ; Clinical Science Volume 71 ; 071 ; >
+    au < doNotProcess ; doNotProcess ; 1987 ; Clinical Science Volume 72 ; 072 ; >
+    au < doNotProcess ; doNotProcess ; 1987 ; Clinical Science Volume 73 ; 073 ; >
+    au < doNotProcess ; doNotProcess ; 1988 ; Clinical Science Volume 74 ; 074 ; >
+    au < doNotProcess ; doNotProcess ; 1988 ; Clinical Science Volume 75 ; 075 ; >
+    au < doNotProcess ; doNotProcess ; 1989 ; Clinical Science Volume 76 ; 076 ; >
+    au < doNotProcess ; doNotProcess ; 1989 ; Clinical Science Volume 77 ; 077 ; >
+    au < doNotProcess ; doNotProcess ; 1990 ; Clinical Science Volume 78 ; 078 ; >
+    au < doNotProcess ; doNotProcess ; 1990 ; Clinical Science Volume 79 ; 079 ; >
+    au < doNotProcess ; doNotProcess ; 1991 ; Clinical Science Volume 80 ; 080 ; >
+    au < doNotProcess ; doNotProcess ; 1991 ; Clinical Science Volume 81 ; 081 ; >
+    au < doNotProcess ; doNotProcess ; 1992 ; Clinical Science Volume 82 ; 082 ; >
+    au < doNotProcess ; doNotProcess ; 1992 ; Clinical Science Volume 83 ; 083 ; >
+    au < doNotProcess ; doNotProcess ; 1993 ; Clinical Science Volume 84 ; 084 ; >
+    au < doNotProcess ; doNotProcess ; 1993 ; Clinical Science Volume 85 ; 085 ; >
+    au < doNotProcess ; doNotProcess ; 1994 ; Clinical Science Volume 86 ; 086 ; >
+    au < doNotProcess ; doNotProcess ; 1994 ; Clinical Science Volume 87 ; 087 ; >
+    au < doNotProcess ; doNotProcess ; 1995 ; Clinical Science Volume 88 ; 088 ; >
+    au < doNotProcess ; doNotProcess ; 1995 ; Clinical Science Volume 89 ; 089 ; >
+    au < doNotProcess ; doNotProcess ; 1996 ; Clinical Science Volume 90 ; 090 ; >
+    au < doNotProcess ; doNotProcess ; 1996 ; Clinical Science Volume 91 ; 091 ; >
+    au < doNotProcess ; doNotProcess ; 1997 ; Clinical Science Volume 92 ; 092 ; >
+    au < doNotProcess ; doNotProcess ; 1997 ; Clinical Science Volume 93 ; 093 ; >
+    au < doNotProcess ; doNotProcess ; 1998 ; Clinical Science Volume 94 ; 094 ; >
+    au < doNotProcess ; doNotProcess ; 1998 ; Clinical Science Volume 95 ; 095 ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; Clinical Science Volume 96 ; 096 ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; Clinical Science Volume 97 ; 097 ; >
+    au < doNotProcess ; doNotProcess ; 2000 ; Clinical Science Volume 98 ; 098 ; >
+    au < doNotProcess ; doNotProcess ; 2000 ; Clinical Science Volume 99 ; 099 ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; Clinical Science Volume 100 ; 100 ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; Clinical Science Volume 101 ; 101 ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; Clinical Science Volume 102 ; 102 ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; Clinical Science Volume 103 ; 103 ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; Clinical Science Volume 104 ; 104 ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; Clinical Science Volume 105 ; 105 ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; Clinical Science Volume 106 ; 106 ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; Clinical Science Volume 107 ; 107 ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; Clinical Science Volume 108 ; 108 ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; Clinical Science Volume 109 ; 109 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; Clinical Science Volume 110 ; 110 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; Clinical Science Volume 111 ; 111 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Clinical Science Volume 112 ; 112 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Clinical Science Volume 113 ; 113 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Clinical Science Volume 114 ; 114 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Clinical Science Volume 115 ; 115 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Clinical Science Volume 116 ; 116 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Clinical Science Volume 117 ; 117 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Clinical Science Volume 118 ; 118 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Clinical Science Volume 119 ; 119 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Clinical Science Volume 120 ; 120 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Clinical Science Volume 121 ; 121 ; >
+    au < superseded ; exists ; 2012 ; Clinical Science Volume 122 [superseded] ; 122 ; >
+    au < superseded ; exists ; 2012 ; Clinical Science Volume 123 [superseded] ; 123 ; >
+    au < superseded ; exists ; 2013 ; Clinical Science Volume 124 [superseded] ; 124 ; >
+    au < superseded ; exists ; 2013 ; Clinical Science Volume 125 [superseded] ; 125 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; Clinical Science Volume 126 ; 126 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; Clinical Science Volume 127 ; 127 ; >
+        
+  }
+  
+  {
+  
+    title <
+      name = Essays in Biochemistry ;
+      issn = 0071-1365 ;
+      eissn = 1744-1358 ;
+      issnl = 0071-1365
+    >
+
+    param[base_url] = http://essays.biochemistry.org/
+    param[journal_id] = bsessays
+
+    au < doNotProcess ; doNotProcess ; 1998 ; Essays in Biochemistry Volume 33 ; 033 ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; Essays in Biochemistry Volume 34 ; 034 ; >
+    au < doNotProcess ; doNotProcess ; 2000 ; Essays in Biochemistry Volume 35 ; 035 ; >
+    au < doNotProcess ; doNotProcess ; 2000 ; Essays in Biochemistry Volume 36 ; 036 ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; Essays in Biochemistry Volume 37 ; 037 ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; Essays in Biochemistry Volume 38 ; 038 ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; Essays in Biochemistry Volume 39 ; 039 ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; Essays in Biochemistry Volume 40 ; 040 ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; Essays in Biochemistry Volume 41 ; 041 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; Essays in Biochemistry Volume 42 ; 042 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Essays in Biochemistry Volume 43 ; 043 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Essays in Biochemistry Volume 44 ; 044 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Essays in Biochemistry Volume 45 ; 045 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Essays in Biochemistry Volume 46 ; 046 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Essays in Biochemistry Volume 47 ; 047 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Essays in Biochemistry Volume 48 ; 048 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Essays in Biochemistry Volume 49 ; 049 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Essays in Biochemistry Volume 50 ; 050 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Essays in Biochemistry Volume 51 ; 051 ; >
+    au < finished ; crawling ; 2012 ; Essays in Biochemistry Volume 52 ; 052 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; Essays in Biochemistry Volume 53 ; 053 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2013 ; Essays in Biochemistry Volume 54 ; 054 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2013 ; Essays in Biochemistry Volume 55 ; 055 ; reingest4.clockss.org:8082 >
+    au < doNotProcess ; doNotProcess ; 2014 ; Essays in Biochemistry Volume 56 ; 056 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; Essays in Biochemistry Volume 57 ; 057 ; >
+
+  }
+  
+}

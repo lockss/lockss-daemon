@@ -1,0 +1,556 @@
+{
+
+  publisher <
+    name = Linen Hall Library ;
+    info[contract] = 2019 ;
+    info[tester] = S ;
+    info[poller] = 7
+  >
+  #Very little bibliographic information available - get the content preserved
+  {
+    title <
+       name = Divided Society Snapshot Content
+    >
+
+    plugin = org.lockss.plugin.dividedsociety.ClockssDividedSocietySnapshotPlugin
+    param[base_url] = https://www.dividedsociety.org/
+
+    implicit < status1 ; status ; year ; name ; param[journal_number] ; param[journal_id] ; proxy >
+
+    # Each AU represents one title but we collect the entire run of its contents in to the archive
+    # The year represents the year of ingest, not the year of publication - same as for SourcePlugin
+    au < finished ; finished ; 2019 ; 2020 Vision Youth Bulletin ; 136 ; 2020-vision-youth-bulletin ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; AGIY-INFO ; 221 ; agiy-info ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; AIDS Helpline N.I. Annual Report ; 764 ; aids-helpline-ni-annual-report ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; ATGWU Womens Newsletter: Region 11 Ireland ; 7740 ; atgwu-womens-newsletter-region-11-ireland ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Act-Lett (News from All Children Together) ; 2 ; act-lett-news-all-children-together ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Advocacy Letter ; 124 ; advocacy-letter ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Aids Inform ; 426 ; aids-inform ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Ainriail ; 497 ; ainriail ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Alert ; 771 ; alert ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Alliance News ; 803 ; alliance-news ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Alongside: The PACE Bereavement Visitors' Newsletter ; 901 ; alongside-pace-bereavement-visitors-newsletter ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Alternative Voice, The ; 1 ; alternative-voice ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; AlumNI ; 959 ; alumni ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Amandla ; 1000 ; amandla ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; American Irish Newsletter ; 1967 ; american-irish-newsletter ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; American Gael, The ; 1076 ; american-gael ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Amnesty ; 3113 ; amnesty ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Amnesty International Foyle Group Newsletter ; 2637 ; amnesty-international-foyle-group-newsletter ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Amnesty International Irish Section ; 2686 ; amnesty-international-irish-section ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Amnesty International Northern Ireland News ; 2641 ; amnesty-international-northern-ireland-news ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Amnesty International Reports ; 4923 ; amnesty-international-reports ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Anarchist Bulletin ; 6707 ; anarchist-bulletin ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Anarchist News ; 6716 ; anarchist-news ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Anchor, The ; 6 ; anchor ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Andersonstown Sinn Féin Bulletin ; 6754 ; andersonstown-sinn-fein-bulletin ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Animal Rights Movement ; 6779 ; animal-rights-movement ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Anti-Extradition News ; 6856 ; anti-extradition-news ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Anti-Poverty News ; 7038 ; anti-poverty-news ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Around the Shankill ; 7243 ; around-shankill ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Association of Irish Humanists Newsletter ; 7255 ; association-irish-humanists-newsletter ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; At Play ; 7673 ; play ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Australian Aid for Ireland Newsletter ; 7775 ; australian-aid-ireland-newsletter ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; B.W.I.G Newsletter ; 13035 ; bwig-newsletter ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Balkan Peace Team Newsletter ; 8367 ; balkan-peace-team-newsletter ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Ballymun Bulletin ; 8379 ; ballymun-bulletin ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Balmoral Focus ; 8703 ; balmoral-focus ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Band Notes ; 5 ; band-notes ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Band News ; 8731 ; band-news ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Battle Standard, The ; 8793 ; battle-standard ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Baywatch: newsletter of Duncairn Community Centre ; 8846 ; baywatch-newsletter-duncairn-community-centre ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Beag Inis ; 8965 ; beag-inis ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Big Issues, The ; 9021 ; big-issues ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Birmingham Six Bulletin ; 12446 ; birmingham-six-bulletin ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Blackie Area Information Bulletin ; 12454 ; blackie-area-information-bulletin ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Bloody Sunday Bulletin ; 2792 ; bloody-sunday-bulletin ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Blueprint ; 2823 ; blueprint ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Borderline ; 12547 ; borderline ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Bosnia Report ; 12644 ; bosnia-report ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Branch Lines ; 12698 ; branch-lines ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Breadline News ; 2905 ; breadline-news ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Breaking the Silence ; 12723 ; breaking-silence ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Bridge, The ; 12738 ; bridge ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Briefing Paper ; 12762 ; briefing-paper ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Britain and Ireland ; 12814 ; britain-and-ireland ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; British - Irish Exchange ; 12868 ; british-irish-exchange ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Bua ; 13001 ; bua ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Bulletin of Civil Liberties Cases ; 2938 ; bulletin-civil-liberties-cases ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Bulletin (Ethnic Studies Network) ; 24456 ; bulletin-ethnic-studies-network ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Bulletin, The (Greater East Belfast Partnership) ; 23001 ; bulletin-greater-east-belfast-partnership ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Bulletin, The (North Queen Street Community Police Liaison Committee) ; 2911 ; bulletin-north-queen-street-community-police-liaison-committee ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Bulletin: Labour Committee for peace and progress in Ireland ; 13021 ; bulletin-labour-committee-peace-and-progress-ireland ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Bulletin: Northern Ireland Committee - ICTU ; 11459 ; bulletin-northern-ireland-committee-ictu ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Bulletin: Irish in Greenwich Project ; 3510 ; bulletin-irish-greenwich-project ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Burning Bush, The ; 3526 ; burning-bush ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; CRA News ; 23215 ; cra-news ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; CRC News ; 39888 ; crc-news ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; CSCS News ; 23185 ; cscs-news ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Cairde Sinn Fein ; 13058 ; cairde-sinn-fein ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Camchéachta, An (Starry Plough, The - IRSP) ; 3171 ; camcheachta-starry-plough-irsp ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Camchéachta, An (Starry Plough, The - Sinn Féin) ; 3215 ; camcheachta-starry-plough-sinn-fein ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Caorthann, An (Rowan Tree, The) ; 3359 ; caorthann-rowan-tree ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Captive Voice, The ; 5299 ; captive-voice ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Carryduff Focus ; 7543 ; carryduff-focus ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Casement News ; 23103 ; casement-news ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Castlereagh News ; 7575 ; castlereagh-news ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Causeway (Cultural Traditions Journal) ; 7588 ; causeway-cultural-traditions-journal ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Cave Hill Campaigner ; 6450 ; cave-hill-campaigner ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Ceartas ; 15477 ; ceartas ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Cherryvalley/Knock Focus ; 18037 ; cherryvalleyknock-focus ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Chinese Welfare Association ; 8943 ; chinese-welfare-association ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Christian Renewal Centre Prayer Letter ; 38383 ; christian-renewal-centre-prayer-letter ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Cháisc 1916, An (Easter 1916) ; 3511 ; chaisc-1916-easter-1916 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2019 ; Citizen (The) - Newspaper of the Peace People ; 10767 ; citizen-newspaper-peace-people ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; City Lights ; 10640 ; city-lights ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; City West News ; 15523 ; city-west-news ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Civil Liberty Agenda ; 27118 ; civil-liberty-agenda ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Class War ; 33865 ; class-war ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Cliftonville Community News ; 7299 ; cliftonville-community-news ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Clondalkin News ; 21547 ; clondalkin-news ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Clones News ; 21562 ; clones-news ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Co-operation North News ; 23286 ; co-operation-north-news ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Combat ; 6508 ; combat ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Comhairle na Sé Condae ; 21721 ; comhairle-na-se-condae ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Committee for Truth on Collusion ; 33905 ; committee-truth-collusion ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Common Thread ; 37475 ; common-thread ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Common Ground ; 9108 ; common-ground ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Common thread : newsletter of the ICTU third world committee ; 9389 ; common-thread-newsletter-ictu-third-world-committee ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Communist Action ; 38640 ; communist-action ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Community View ; 23047 ; community-view ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Community Newsletter ; 27480 ; community-newsletter ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Community Relations ; 37328 ; community-relations ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Community Chronicle ; 37505 ; community-chronicle ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Community Newsheet ; 38703 ; community-newsheet ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Community Workers Co-op Newsletter ; 9617 ; community-workers-co-op-newsletter ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Community Relations Information Centre newsheet ; 39848 ; community-relations-information-centre-newsheet ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Community News North ; 9456 ; community-news-north ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Conference Report ; 10386 ; conference-report ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Congress ; 24371 ; congress ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Connections ; 23896 ; connections ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Cornerstone Contact ; 37642 ; cornerstone-contact ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Corrymeela News ; 10022 ; corrymeela-news ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Corrymeela Link Comment ; 9203 ; corrymeela-link-comment ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Corrymeela Summer Programme ; 11195 ; corrymeela-summer-programme ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Corymeela Connections ; 9126 ; corymeela-connections ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Council News ; 37812 ; council-news ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Counteraction: the bulletin of Counteract the anti-intimidation unit ; 11273 ; counteraction-bulletin-counteract-anti-intimidation-unit ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Crann, An (Tree, The) ; 5641 ; crann-tree ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Craobh Eolais (Irish American Unity Conference Central Jersey Chapter) ; 11734 ; craobh-eolais-irish-american-unity-conference-central-jersey-chapter ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Criminal Justice Matters ; 11769 ; criminal-justice-matters ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Crimson Banner ; 11873 ; crimson-banner ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Cutting Edge ; 27497 ; cutting-edge ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; D.T.E.D.G Euro Focus ; 25721 ; dtedg-euro-focus ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Dawn Train ; 25861 ; dawn-train ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Democracy ; 25767 ; democracy ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Democratic Left ; 25810 ; democratic-left ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Derry Development Education Centre Newsletter ; 25876 ; derry-development-education-centre-newsletter ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Dialogue ; 23151 ; dialogue ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Dimensions ; 11963 ; dimensions ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Direct ;  23269 ; direct ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Direct Action Against Apathy ; 11971 ; direct-action-against-apathy ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Discussion Bulletin ; 11997 ; discussion-bulletin ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Dissenter, The ; 12009 ; dissenter ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Doirse Dóchais ; 22501 ; doirse-dochais ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Donaghadee and Millisle Focus ; 22552 ; donaghadee-and-millisle-focus ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Drum, The ; 17049 ; drum ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Drumboe News ; 22556 ; drumboe-news ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Drumcree News ; 17060 ; drumcree-news ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Dublin Democrats ; 22469 ; dublin-democrats ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Dublin South East Democrat ; 22477 ; dublin-south-east-democrat ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Dublin South-East Election News ; 22481 ; dublin-south-east-election-news ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Dublin West Independent Labour ; 22486 ; dublin-west-independent-labour ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Dublin CND Newsletter ; 22459 ; dublin-cnd-newsletter ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Dublin North West Newsletter ; 22473 ; dublin-north-west-newsletter ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Dun Laoghaire Dart ; 22492 ; dun-laoghaire-dart ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Dun Laoghaire Greens Newsletter ; 22497 ; dun-laoghaire-greens-newsletter ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Dáir, An (Oak, The) ; 5650 ; dair-oak ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; EAPN Network News ; 12242 ; eapn-network-news ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; EMU Promoting School Project Annual Journal 1996 - 1997, The ; 23234 ; emu-promoting-school-project-annual-journal-1996-1997 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; East Belfast Community Council ; 24622 ; east-belfast-community-council ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; East Belfast Community Development Centre Annual Reports ; 26053 ; east-belfast-community-development-centre-annual-reports ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; East Belfast Community Directory ; 23193 ; east-belfast-community-directory ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; East Belfast Focus ; 15337 ; east-belfast-focus ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Eastender, The ; 12161 ; eastender ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Economics Bulletin ; 21607 ; economics-bulletin ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Education North ; 28207 ; education-north ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Enniskillen Together Newsletter ; 33931 ; enniskillen-together-newsletter ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Equal Writes ; 34075 ; equal-writes ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Equal Opportunities in the Northern Ireland Civil Service ; 23430 ; equal-opportunities-northern-ireland-civil-service ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Ethnic Conflict Research Digest, The ; 24447 ; ethnic-conflict-research-digest ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Euro Report ; 23564 ; euro-report ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Euro Green ; 28234 ; euro-green ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; European Update ; 12517 ; european-update ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; European Social Democrat, The ; 23574 ; european-social-democrat ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Expac News ;34015 ; expac-news ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; FG Bulletin ; 26780 ; fg-bulletin ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; FG News ; 26791 ; fg-news ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Fenian, The ; 21732 ; fenian ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Fermanagh Nationalist, The ; 34801 ; fermanagh-nationalist ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Fight Racism! Fight Imperialism! ; 12569 ; fight-racism-fight-imperialism ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Fightback ; 16850 ; fightback ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Fingerpost ; 12867 ; fingerpost ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Flying Horse Community Newsheet ; 12623 ; flying-horse-community-newsheet ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Focus ; 15999 ; focus ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Focus (The Workers' Party) ; 23592 ; focus-workers-party ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Focus: South Belfast ; 16032 ; focus-south-belfast ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Focus: Salisbury, Chichester, Cavehill edition ; 16021 ; focus-salisbury-chichester-cavehill-edition ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; For a Workers Republic ; 12642 ; workers-republic ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Fortnight ; 13147 ; fortnight ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Fortnight Educational Supplements ; 26266 ; fortnight-educational-supplements ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Free Press ; 22763 ; free-press ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Freedom Fighter East Belfast ; 12736 ; freedom-fighter-east-belfast ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Freedom Fighter Local ; 12817 ; freedom-fighter-local ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Friends of Ulster, The ; 38421 ; friends-ulster ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Frontline, The ; 37828 ; frontline ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Frontlines (Community Work) ; 33985 ; frontlines-community-work ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Fund News ; 22980 ; fund-news ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Futureline ; 26804 ; futureline ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Gael, An (Irish, The) ;  6368 ; gael-irish ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Gaelscoileanna ; 52817 ; gaelscoileanna ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Garvaghy Residents Coalition ; 38436 ; garvaghy-residents-coalition ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Gleann an Lagain ; 21757 ; gleann-lagain ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Graduate Update ; 23094 ; graduate-update ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Green Light ; 28452 ; green-light ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Green Newsletter ; 28985 ; green-newsletter ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Green Sheet ; 36319 ; green-sheet ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Green Party Newsletter ; 28708 ; green-party-newsletter ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Green Hackle, The ; 15440 ; green-hackle ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Green Voice, The ; 28800 ; green-voice ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Greenpeace Action ; 23116 ; greenpeace-action ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Grunt 2 ; 39013 ; grunt-2 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Grunt! ; 37987 ; grunt ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Guatemala News ; 39983 ; guatemala-news ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Habitat For Humanity ; 23389 ; habitat-humanity ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Hammer, The ; 16694 ; hammer ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Hate Trotskyism, Hate the Spartacists ; 30184 ; hate-trotskyism-hate-spartacists ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Hawthorn News Bulletin ; 33946 ; hawthorn-news-bulletin ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Hazelwood Integrated College Newsletter ; 16745 ; hazelwood-integrated-college-newsletter ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Hibernian News ; 27132 ; hibernian-news ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Holywood Focus ; 16724 ; holywood-focus ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Home-In ; 25103 ; home ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Homeland ; 34119 ; homeland ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Humanist, The ; 27370 ; humanist ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; ICCL News ; 21812 ; iccl-news ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; ICPC Bulletin ; 17662 ; icpc-bulletin ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; ILGO News ; 22115 ; ilgo-news ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; INCORE Annual Reports ; 17402 ; incore-annual-reports ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; In Europe ; 17370 ; europe ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; In Touch ; 18051 ; touch ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; In Touch (NI Conservatives) ; 18043 ; touch-ni-conservatives ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; In Yer Face ; 40649 ; yer-face ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; In Defence of the Nation ; 25750 ; defence-nation ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; In From the Edge ; 34090 ; edge ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Independent Labour News ; 38902 ; independent-labour-news ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Industrial Relations in Northern Ireland ; 26841 ; industrial-relations-northern-ireland ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Information Bulletin ; 22272 ; information-bulletin ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Information Service ; 22310 ; information-service ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Inside View ; 38952 ; inside-view ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Inside Left ; 38992 ; inside-left ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Integrated News ; 17468 ; integrated-news ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Internal Discussion Bulletin ; 17513 ; internal-discussion-bulletin ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; International Friendship Society News ; 33964 ; international-friendship-society-news ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; International Fund for Ireland Annual Report ; 24563 ; international-fund-ireland-annual-report ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; International Fund for Ireland News (IFI News)  ; 36496 ; international-fund-ireland-news-ifi-news ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Ireland Today ; 24341 ; ireland-today ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Ireland News Briefing ; 21662 ; ireland-news-briefing ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Ireland Information Fact File ; 24639 ; ireland-information-fact-file ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Ireland International News Briefing ; 24725 ; ireland-international-news-briefing ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Ireland's War ; 34281 ; irelands-war ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Iris Dhoire ; 24244 ; iris-dhoire ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Irish Democrat ; 16878 ; irish-democrat ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Irish Freedom ; 18580 ; irish-freedom ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Irish America ; 44863 ; irish-america ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Irish Voice ; 46826 ; irish-voice ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Irish Edition (US) ; 18472 ; irish-edition-us ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Irish Northern Aid Bulletin, The ; 18594 ; irish-northern-aid-bulletin ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Irish in Greenwich Newsletter ; 17594 ; irish-greenwich-newsletter ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Irish Republican Information Service ; 19754 ; irish-republican-information-service ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Irish Solidarity Network Bulletin ; 34071 ; irish-solidarity-network-bulletin ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Irish Ecumenical News ; 18365 ; irish-ecumenical-news ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Irish Women's News ; 38847 ; irish-womens-news ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Irish Lobby, The ; 18138 ; irish-lobby ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Irish People, The (20661) ; 20661 ; irish-people ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Irish People, The (41133) ; 41133 ; irish-people ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Irish People, The (Australia) ; 18625 ; irish-people-australia ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Irish Prisoner, The ; 34098 ; irish-prisoner ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Irish Worker, The ; 21096 ; irish-worker ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Irish World, The ; 34317 ; irish-world ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Issues ; 26818 ; issues ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Joe Doherty Newsletter ; 21069 ; joe-doherty-newsletter ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Journal ; 37431 ; journal ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Judith Ward News ; 21076 ; judith-ward-news ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Just Peace ; 21082 ; just-peace ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Just News ; 25203 ; just-news ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Justice For All  ; 34379 ; justice-all ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Keep Moving ; 38170 ; keep-moving ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Kildare North Bulletin ; 21092 ; kildare-north-bulletin ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Kingdom Tidings ; 21101 ; kingdom-tidings ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; LPN (Labour Party News) ; 22780 ; lpn-labour-party-news ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Labour Newsletter ; 39630 ; labour-newsletter ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Labour Relations Agency News Letter ; 36924 ; labour-relations-agency-news-letter ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Labour and Ireland ; 35705 ; labour-and-ireland ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Labour in Northern Ireland ; 39153 ; labour-northern-ireland ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Labour Market Statistics ; 22214 ; labour-market-statistics ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Labour Committee on Ireland Newsletter ; 37340 ; labour-committee-ireland-newsletter ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Lagan Valley News ; 22646 ; lagan-valley-news ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Lagan Valley Sinn Féin ; 21615 ; lagan-valley-sinn-fein ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Laganbank News ; 22637 ; laganbank-news ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Laganbank Focus ; 22685 ; laganbank-focus ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Laoch Óg, An (Young Hero, The) ; 6561 ; laoch-og-young-hero ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Lay Visitors Conference Report ; 37434 ; lay-visitors-conference-report ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Leading the Way ; 24090 ; leading-way ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Lean ar aghaidh ; 22696 ; lean-ar-aghaidh ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Leeside People, The ; 22710 ; leeside-people ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Liberty ; 28359 ; liberty ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Liberty (Vérus Justice) ; 34193 ; liberty-verus-justice ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Life in North Belfast ; 39646 ; life-north-belfast ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Link ; 22738 ; link ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Lion and Lamb ; 27954 ; lion-and-lamb ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Lobster ; 35802 ; lobster ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Lower Ormeau Concerned Community ; 34209 ; lower-ormeau-concerned-community ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Lower Falls News Sheet ; 21597 ; lower-falls-news-sheet ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Lower Ormeau News ; 39654 ; lower-ormeau-news ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Loyalist Gazette ; 34022 ; loyalist-gazette ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Loyalist, The ; 41449 ; loyalist ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Macha ; 32116 ; macha ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Mainlander ; 24856 ; mainlander ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Mainstreaming ; 25885 ; mainstreaming ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Making Sense ; 32320 ; making-sense ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Making Women Seen and Heard ; 25905 ; making-women-seen-and-heard ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Martyrs ; 32271 ; martyrs ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Meath Peace Group Newsletter ; 32168 ; meath-peace-group-newsletter ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Media Matters ; 37163 ; media-matters ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Meeting Point ; 32206 ; meeting-point ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Members' Bulletin ; 21591 ; members-bulletin ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Mic Léinn le Chéile ; 42780 ; mic-leinn-le-cheile ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Mozambique News ; 45976 ; mozambique-news ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; NIACRO Fortnightly File ; 26913 ; niacro-fortnightly-file ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; NIACRO Monthly File ; 26947 ; niacro-monthly-file ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; NICMA Update ; 23379 ; nicma-update ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; NIWEP News ; 34453 ; niwep-news ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; National Peace Council ; 42902 ; national-peace-council ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; National Peace Council Annual Reviews ; 26964 ; national-peace-council-annual-reviews ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; National Birmingham Six Campaign Newsletter ; 34519 ; national-birmingham-six-campaign-newsletter ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Navan News ; 22852 ; navan-news ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Navan and District News ; 21693 ; navan-and-district-news ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Neighbourhood News ; 42785 ; neighbourhood-news ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Network Magazine ; 42799 ; network-magazine ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Network ; 23644 ; network ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; New Agenda ; 26984 ; new-agenda ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; New Statesman ; 33039 ; new-statesman ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; New Labour, New Britain ; 24129 ; new-labour-new-britain ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; New Ulster Patriot ; 45869 ; new-ulster-patriot ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; New Lodge Sinn Fein ; 22901 ; new-lodge-sinn-fein ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; New Irelander, The ; 23718 ; new-irelander ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; New Worker, The ; 52646 ; new-worker ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Newington Sinn Féin ; 22913 ; newington-sinn-fein ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Newington: Sinn Fein Constituency Bulletin ; 22934 ; newington-sinn-fein-constituency-bulletin ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Newsletter ; 35563 ; newsletter ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Newsletter of the Irish National Coordinating Committee ; 34386 ; newsletter-irish-national-coordinating-committee ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Newspace ; 34441 ; newspace ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Next Left, The ; 37223 ; next-left ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Nica News ; 36909 ; nica-news ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Nonviolent daily news ; 43131 ; nonviolent-daily-news ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; North Belfast Focus ; 23407 ; north-belfast-focus ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; North Belfast Independent ; 23884 ; north-belfast-independent ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; North West Labour News ; 42807 ; north-west-labour-news ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Northern Ireland Council for Integrated Education ; 24675 ; northern-ireland-council-integrated-education ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Northern Ireland Monitor, The ; 43202 ; northern-ireland-monitor ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Northern Ireland Report ; 37342 ; northern-ireland-report ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Northern People, The ; 25757 ; northern-people ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Northern Ireland Women's Coalition (NIWC) ; 23390 ; northern-ireland-womens-coalition-niwc ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Northern Ireland and Labour Representation ; 43198 ; northern-ireland-and-labour-representation ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Noticeboard ; 23869 ; noticeboard ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Nuacht Dhoire ; 22946 ; nuacht-dhoire ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Nuacht Sheantalaimh ; 22953 ; nuacht-sheantalaimh ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Nuacht an Iúir (Newry News) ; 47582 ; nuacht-iuir-newry-news ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; ON - Newsletter for the Council for Ethnic Equality ; 37448 ; newsletter-council-ethnic-equality ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Obair, the Campaign for Employment in West Belfast ; 27924 ; obair-campaign-employment-west-belfast ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Ohio Irish Times, The ; 27940 ; ohio-irish-times ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Orange Banner, The ; 52166 ; orange-banner ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Orange Standard, The ; 29965 ; orange-standard ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Orange Torch, The ; 51434 ; orange-torch ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Organise! ; 36612 ; organise ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; PD News, The (Dublin West Edition) ; 25445 ; pd-news-dublin-west-edition ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Pacifist, The ; 42136 ; pacifist ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Peace Matters ; 43580 ; peace-matters ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Peace People News ; 25528 ; peace-people-news ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Peace People Newsletter ; 25590 ; peace-people-newsletter ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Peace and Reconciliation Group Newsletter ; 35615 ; peace-and-reconciliation-group-newsletter ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Peacelines ; 25460 ; peacelines ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Phoenix News ; 40826 ; phoenix-news ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Plough, The ; 43612 ; plough ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Pobal Éirithe, An (Risen People, The) ; 6591 ; pobal-eirithe-risen-people ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Pobal An Dúlra ; 34515 ; pobal-dulra ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Point, The; 43614 ; point ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Police Beat ; 38184 ; police-beat ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Police Authority for Northern Ireland Information News Update ; 28420 ; police-authority-northern-ireland-information-news-update ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Positive Ethos ; 25517 ; positive-ethos ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Pottinger Focus ; 25714 ; pottinger-focus ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Prism Review ; 25723 ; prism-review ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Progressive View (P.U.P) ; 37935 ; progressive-view-pup ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Progressive Democrats News ; 27897 ; progressive-democrats-news ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Rank and File: the voice of true British-Ulster Loyalists ; 36410 ; rank-and-file-voice-true-british-ulster-loyalists ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Ravenhill Reach ; 28173 ; ravenhill-reach ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Realms ; 27708 ; realms ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Rebel Worker ; 29378 ; rebel-worker ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Red Republican, The ; 36760 ; red-republican ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Repeal the PTA Campaign ; 34047 ; repeal-pta-campaign ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Reports from British Occupied Ireland ; 43616 ; reports-british-occupied-ireland ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Reprints for the Future ; 45260 ; reprints-future ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Republican, The ; 29323 ; republican ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Resistance ; 29495 ; resistance ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Right Now! ; 39967 ; right-now ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Rome Watch International ; 42504 ; rome-watch-international ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Routes ; 28398 ; routes ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Royal Ulster Constabulary Chief Constable's Annual Report ; 52835 ; royal-ulster-constabulary-chief-constables-annual-report ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; SDLP News ; 34768 ; sdlp-news ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; SDLP Bulletin ; 34839 ; sdlp-bulletin ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; SDLP Councillor ; 35513 ; sdlp-councillor ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; SDLP Balmoral Newsletter ; 28714 ; sdlp-balmoral-newsletter ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; SDLP 2000: North Antrim Edition ; 28663 ; sdlp-2000-north-antrim-edition ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; SDLP 2000: North Belfast Edition ; 28674 ; sdlp-2000-north-belfast-edition ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; SDLP 2000: North West Edition ; 28685 ; sdlp-2000-north-west-edition ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; SDLP News: South Down Edition ; 28728 ; sdlp-news-south-down-edition ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; SDLP 2000: West Belfast Edition ; 28700 ; sdlp-2000-west-belfast-edition ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Saoirse Newsletter: London ; 34542 ; saoirse-newsletter-london ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Saoirse Campaign USA ; 29406 ; saoirse-campaign-usa ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Saoirse na hÉireann ; 29116 ; saoirse-na-heireann ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Saoirse: Irish Freedom ; 29428 ; saoirse-irish-freedom ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Saoirse: Muirhevnamór Newsheet ; 28466 ; saoirse-muirhevnamor-newsheet ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Saoirse: Roinn an Chultúr Sinn Féin ; 52824 ; saoirse-roinn-chultur-sinn-fein ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Scope ; 48272 ; scope ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Scottish Protestant View ; 52973 ; scottish-protestant-view ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Scribbler, The ; 29593 ; scribbler ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Scéal Newsletter ; 34134 ; sceal-newsletter ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Scéal (34701) ; 34701 ; sceal ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Scéal (37672) ; 37672 ; sceal ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Scéal an Limistear ; 28477 ; sceal-limistear ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Scéala Arduaidh ; 52813 ; sceala-arduaidh ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Sheffield Troops Out Movement Newsletters ; 28752 ; sheffield-troops-out-movement-newsletters ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Shelter ; 29689 ; shelter ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Shining Path, The ; 33983 ; shining-path ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Sile na Gig: Nuacht Ceantar ; 22940 ; sile-na-gig-nuacht-ceantar ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Sinn Féin Bun na Bhfál ; 28769 ; sinn-fein-bun-na-bhfal ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Sinn Féin Derry City Bulletin ; 29730 ; sinn-fein-derry-city-bulletin ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Sinn Féin Nuacht ; 29752 ; sinn-fein-nuacht ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Sinn Féin West Belfast Bulletin ; 35869 ; sinn-fein-west-belfast-bulletin ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Sinn Féin West Belfast Information Bulletin ; 29762 ; sinn-fein-west-belfast-information-bulletin ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Sinn Féin West Wicklow Newsletter ; 29788 ; sinn-fein-west-wicklow-newsletter ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Sligo/Leitrim Sinn Féin News ; 30327 ; sligoleitrim-sinn-fein-news ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2019 ; Socialism Today; 34582 ; socialism-today ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Socialist Organiser ; 34529 ; socialist-organiser ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Socialist View ; 35627 ; socialist-view ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Socialist Voice ; 48694 ; socialist-voice ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Socialist Standard ; 50837 ; socialist-standard ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Socialist Party Newsletter ; 45643 ; socialist-party-newsletter ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Solidarity for the Union Briefing Paper ; 35437 ; solidarity-union-briefing-paper ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; South Belfast Labour News ; 45645 ; south-belfast-labour-news ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; South Belfast Sinn Féin Newsletter ; 30898 ; south-belfast-sinn-fein-newsletter ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; South Belfast Young Tory ; 29912 ; south-belfast-young-tory ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Sovereign Nation ; 30974 ; sovereign-nation ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Speak Out! ; 29876 ; speak-out ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Spirit of Enniskillen Bursaries ; 35865 ; spirit-enniskillen-bursaries ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Spirit of Freedom Dublin H-Block ; 34688 ; spirit-freedom-dublin-h-block ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Spirit of Freedom: Theoretical Journal of Irish Republican Youth ; 45648 ; spirit-freedom-theoretical-journal-irish-republican-youth ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Stand by the Republic ; 44808 ; stand-republic ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Stormont and Cherryvalley Focus ; 29864 ; stormont-and-cherryvalley-focus ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Strangford Ulster Unionist ; 29860 ; strangford-ulster-unionist ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Survivors of Trauma Newsletter ; 29801 ; survivors-trauma-newsletter ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Tallaght Republican ; 28788 ; tallaght-republican ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Tallaght Newsheet ; 30672 ; tallaght-newsheet ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; tAontaíocht, An (Unionist, The) ; 6690 ; taontaiocht-unionist ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Third World Now ; 49721 ; third-world-now ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Through the Keyhole ; 33974 ; through-keyhole ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Times Change ; 40951 ; times-change ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Tiocfaidh Ar La ; 34711 ; tiocfaidh-ar-la ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Tomorrow's People ; 36075 ; tomorrows-people ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Tracking ; 34916 ; tracking ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Traders News; 35956 ; traders-news ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Traveller Economy ; 36747 ; traveller-economy ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Treetops ; 34978 ; treetops ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Trim News ; 29583 ; trim-news ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Troops Out (of Ireland) ; 38317 ; troops-out-ireland ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Trust in Us ; 42655 ; trust-us ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Tuar Ceatha ; 30991 ; tuar-ceatha ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; TWN Outlook ; 38963 ; twn-outlook ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Ulster Dawn ; 34563 ; ulster-dawn ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Ulster Review ; 46293 ; ulster-review ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Ulster Nation ; 48536 ; ulster-nation ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Ulster Humanist Association Secretary's Newsletter ; 35776 ; ulster-humanist-association-secretarys-newsletter ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Ulster Unionist Information ; 43034 ; ulster-unionist-information ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Ulster Club News ; 34885 ; ulster-club-news ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Ulster Freedom Press ; 35685 ; ulster-freedom-press ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Ulster Bulwark, The ; 32840 ; ulster-bulwark ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Ulster Patriot, The ; 34947 ; ulster-patriot ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Undercurrent ; 36616 ; undercurrent ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Unemployment Brief ; 28994 ; unemployment-brief ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Unionist News ; 30014 ; unionist-news ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Unionist Update ; 30050 ; unionist-update ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Unionist Voice ; 35258 ; unionist-voice ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2019 ; Unionist ; 42209 ; unionist ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Unionist Labour Group News Letter ; 30919 ; unionist-labour-group-news-letter ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Unionist, The ; 35039 ; unionist ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; United Irishman ; 36735 ; united-irishman ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Unity ; 44100 ; unity ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; University Marxist;  34160 ; university-marxist ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Update (Workers Party) ; 30152 ; update-workers-party ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Update (Presbyterian Church in Ireland) ; 42025 ; update-presbyterian-church-ireland ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Update : MacBride Principles Campaign ; 30100 ; update-macbride-principles-campaign ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Update (Irish Northern Aid) ; 30127 ; update-irish-northern-aid ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Update (Community Workers Co-Operative) ; 30078 ; update-community-workers-co-operative ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Vast News ; 34828 ; vast-news ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; View, The ; 29016 ; view ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Voice ; 29092 ; voice ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Voice of Dublin ; 29055 ; voice-dublin ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Voice of East Belfast, The ; 29153 ; voice-east-belfast ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Voice of Youghal ; 29062 ; voice-youghal ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Voluntary Service International Newsletter ; 29069 ; voluntary-service-international-newsletter ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Volunteer, The ; 29198 ; volunteer ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Wake Up: A call to God's servant people  ; 30480 ; wake-call-gods-servant-people ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Warzine ; 42729 ; warzine ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Waterford People, The ; 35542 ; waterford-people ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Waterside Voices ; 35108 ; waterside-voices ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; West Belfast Briefing ; 30410 ; west-belfast-briefing ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Westminster Bulletin ; 36982 ; westminster-bulletin ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Who's Yer Man? ; 30423 ; whos-yer-man ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Womanspirit ; 44235 ; womanspirit ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2019 ; Women Together Update ; 30391 ; workers-briefing ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Women's Voice ; 34736 ; womens-voice ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Women's News ; 50750 ; womens-news ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Women's Political Association Annual Journal ; 35002 ; womens-political-association-annual-journal ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Women's Education Project Newsheet ; 30849 ; womens-education-project-newsheet ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Womenstruggle! ; 37105 ; womenstruggle ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Work in Progress ; 30595 ; work-progress ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2019 ; Workers Briefing ; 30371 ; sligoleitrim-sinn-fein-news ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Workers Hammer ; 44115 ; workers-hammer ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Workers Solidarity ; 49593 ; workers-solidarity ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Working For Peace ; 34832 ; working-peace ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Working with Women ; 30629 ; working-women ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Wright View, The ; 28278 ; wright-view ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Xpress, The ; 28257 ; xpress ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Youth against the war ; 45908 ; youth-against-war ; reingest5.clockss.org:8082 >
+    # This was a one-time collection. We will not process anything else
+  }
+
+  #Very little bibliographic information available - get the content preserved
+  {
+    title <
+       name = Divided Society Collections Snapshot Content
+    >
+
+    plugin = org.lockss.plugin.dividedsociety.ClockssDividedSocietyCollectionSnapshotPlugin
+    param[base_url] = https://www.dividedsociety.org/
+
+    implicit < status1 ; status ; year ; name ; param[collection_id] ; proxy >
+
+    # We are collecting each item one time and then locking down the content, it is not recurring
+    # The year represents the year of ingest, not the year of publication - same as for SourcePlugin
+    au < finished ; frozen ; 2019 ; Divided Society Posters Collection ; posters ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2019 ; Divided Society Essays Collection ; essays ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2019 ; Divided Society Outreach Collection ; outreach ; reingest2.clockss.org:8085 >
+    # This was a one-time collection. We will not process anything else
+   } 
+
+}

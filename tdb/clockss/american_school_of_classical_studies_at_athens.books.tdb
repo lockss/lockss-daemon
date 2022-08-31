@@ -1,0 +1,35 @@
+{
+
+  publisher <
+    name = American School of Classical Studies at Athens ;
+    info[contract] = 2014 ;
+    info[tester] = 8 ;
+    info[poller] = 3 ;
+    info[platform] = BLOCKED-Awaiting content. JSTOR Books. LXPIPE-69. LXPUB-29. GLN & CLOCKSS
+  >
+  
+  {
+  
+    title <
+      name = American School of Classical Studies at Athens Books
+    >
+   
+     plugin = needs.plugin
+     #plugin = org.lockss.plugin.jstor.ClockssJstorCurrentScholarshipPlugin
+     param[base_url] = https://www.jstor.org/
+     implicit < status1 ; status ; year ; param[isbn] ; name ; proxy >
+     
+     #See https://www.ascsa.edu.gr/publications/books/browse-by-series/corinth
+     #See https://www.ascsa.edu.gr/publications/book/?i=9780876611852
+     #See https://www.ascsa.edu.gr/publications/books/open-access-books
+     #See https://www.jstor.org/publisher/ascsa  <--
+     
+     au < exists ; exists ; 2010 ; 9781621390008 ; The Sanctuary of Demeter and Kore: The Terracotta Sculpture ; >
+     au < exists ; exists ; 2011 ; 9781621390015 ; Inscriptions: The Dedicatory Monuments ; >
+     au < exists ; exists ; 2011 ; 9781621390022 ; Land of Sikyou ; >
+     au < exists ; exists ; 2011 ; 9781621390039 ; STEGA: The Archaeology of Houses and Households in Ancient Crete ; >
+     au < exists ; exists ; 2010 ; 9781621390046 ; Crete in Transition: Pottery Styles and Island History in the Archaic and Classical ; >
+    
+  }
+
+}

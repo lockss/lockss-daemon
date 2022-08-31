@@ -1,0 +1,32 @@
+{
+  publisher <
+    name = Quebec Nursing Intervention Research Network ;
+    info[contract] = 2012 ;
+    info[tester] = 5 ;
+    info[poller] = 6
+  >
+  provider = bepress
+
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    implicit < status1 ; status ; year ; name ; param[volume] ; proxy >
+
+  {
+
+      title <
+        name = Science of Nursing and Health Practices-Science infirmière et pratiques en santé (SNAHP-SIPS) ;
+        eissn = 2561-7516
+      >
+
+      comment[publisher] = Quebec Nursing Intervention Research Network
+      param[base_url] = https://snahp-sips.ca/
+      param[journal_abbr] = journal
+
+      au < finished ; crawling ; 2018 ; Science of Nursing and Health Practices-Science infirmière et pratiques en santé (SNAHP-SIPS) Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2019 ; Science of Nursing and Health Practices-Science infirmière et pratiques en santé (SNAHP-SIPS) Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2020 ; Science of Nursing and Health Practices-Science infirmière et pratiques en santé (SNAHP-SIPS) Volume 3 ; 3 ; >
+      au < expected ; exists ; 2021 ; Science of Nursing and Health Practices-Science infirmière et pratiques en santé (SNAHP-SIPS) Volume 4 ; 4 ; >
+      au < expected ; exists ; 2022 ; Science of Nursing and Health Practices-Science infirmière et pratiques en santé (SNAHP-SIPS) Volume 5 ; 5 ; >
+
+  }
+
+}

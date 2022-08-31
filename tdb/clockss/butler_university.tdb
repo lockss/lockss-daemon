@@ -1,0 +1,64 @@
+{
+
+  publisher <
+    name = Butler University ;
+    info[contract] = 2012 ;
+    info[tester] = 5 ;
+    info[poller] = 8
+  >
+  provider = bepress
+  # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
+
+
+  {
+  
+    title < 
+      name = Journal of Hindu-Christian Studies ;
+      issn = 2164-6260 ;
+      eissn = 2164-6279 
+    >
+    
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    #param[base_url] = http://digitalcommons.butler.edu/
+    param[journal_abbr] = jhcs
+    implicit < status1 ; status ; year ; name ; param[volume] ; param[base_url] ; proxy >
+
+    au < manifest ; exists ; 1988 ; Journal of Hindu-Christian Studies Volume 1 ; 1 ; https://digitalcommons.butler.edu/ ; >
+    au < manifest ; exists ; 1989 ; Journal of Hindu-Christian Studies Volume 2 ; 2 ; https://digitalcommons.butler.edu/ ; >
+    au < manifest ; exists ; 1990 ; Journal of Hindu-Christian Studies Volume 3 ; 3 ; https://digitalcommons.butler.edu/ ; >
+    au < manifest ; exists ; 1991 ; Journal of Hindu-Christian Studies Volume 4 ; 4 ; https://digitalcommons.butler.edu/ ; >
+    au < manifest ; exists ; 1992 ; Journal of Hindu-Christian Studies Volume 5 ; 5 ; https://digitalcommons.butler.edu/ ; >
+    au < manifest ; exists ; 1993 ; Journal of Hindu-Christian Studies Volume 6 ; 6 ; https://digitalcommons.butler.edu/ ; >
+    au < manifest ; exists ; 1994 ; Journal of Hindu-Christian Studies Volume 7 ; 7 ; https://digitalcommons.butler.edu/ ; >
+    au < manifest ; exists ; 1995 ; Journal of Hindu-Christian Studies Volume 8 ; 8 ; https://digitalcommons.butler.edu/ ; >
+    au < manifest ; exists ; 1996 ; Journal of Hindu-Christian Studies Volume 9 ; 9 ; https://digitalcommons.butler.edu/ ; >
+    au < manifest ; exists ; 1997 ; Journal of Hindu-Christian Studies Volume 10 ; 10 ; https://digitalcommons.butler.edu/ ; >
+    au < manifest ; exists ; 1998 ; Journal of Hindu-Christian Studies Volume 11 ; 11 ; https://digitalcommons.butler.edu/ ; >
+    au < manifest ; exists ; 1999 ; Journal of Hindu-Christian Studies Volume 12 ; 12 ; https://digitalcommons.butler.edu/ ; >
+    au < manifest ; exists ; 2000 ; Journal of Hindu-Christian Studies Volume 13 ; 13 ; https://digitalcommons.butler.edu/ ; >
+    au < manifest ; exists ; 2001 ; Journal of Hindu-Christian Studies Volume 14 ; 14 ; https://digitalcommons.butler.edu/ ; >
+    au < manifest ; exists ; 2002 ; Journal of Hindu-Christian Studies Volume 15 ; 15 ; https://digitalcommons.butler.edu/ ; >
+    au < manifest ; exists ; 2003 ; Journal of Hindu-Christian Studies Volume 16 ; 16 ; https://digitalcommons.butler.edu/ ; >
+    au < manifest ; exists ; 2004 ; Journal of Hindu-Christian Studies Volume 17 ; 17 ; https://digitalcommons.butler.edu/ ; >
+    au < manifest ; exists ; 2005 ; Journal of Hindu-Christian Studies Volume 18 ; 18 ; https://digitalcommons.butler.edu/ ; >
+    au < manifest ; exists ; 2006 ; Journal of Hindu-Christian Studies Volume 19 ; 19 ; https://digitalcommons.butler.edu/ ; >
+    au < manifest ; exists ; 2007 ; Journal of Hindu-Christian Studies Volume 20 ; 20 ; https://digitalcommons.butler.edu/ ; >
+    au < manifest ; exists ; 2008 ; Journal of Hindu-Christian Studies Volume 21 ; 21 ; https://digitalcommons.butler.edu/ ; >
+    au < manifest ; exists ; 2009 ; Journal of Hindu-Christian Studies Volume 22 ; 22 ; https://digitalcommons.butler.edu/ ; >
+    au < manifest ; exists ; 2010 ; Journal of Hindu-Christian Studies Volume 23 ; 23 ; https://digitalcommons.butler.edu/ ; >
+    au < manifest ; exists ; 2011 ; Journal of Hindu-Christian Studies Volume 24 ; 24 ; https://digitalcommons.butler.edu/ ; >
+    au < finished ; finished ; 2012 ; Journal of Hindu-Christian Studies Volume 25 ; 25 ; http://digitalcommons.butler.edu/ ; >
+    au < finished ; finished ; 2013 ; Journal of Hindu-Christian Studies Volume 26 ; 26 ; http://digitalcommons.butler.edu/ ; >
+    au < finished ; finished ; 2014 ; Journal of Hindu-Christian Studies Volume 27 ; 27 ; http://digitalcommons.butler.edu/ ; >
+    au < finished ; finished ; 2015 ; Journal of Hindu-Christian Studies Volume 28 ; 28 ; http://digitalcommons.butler.edu/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2016 ; Journal of Hindu-Christian Studies Volume 29 ; 29 ; http://digitalcommons.butler.edu/ ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2017 ; Journal of Hindu-Christian Studies Volume 30 ; 30 ; https://digitalcommons.butler.edu/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2018 ; Journal of Hindu-Christian Studies Volume 31 ; 31 ; https://digitalcommons.butler.edu/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2019 ; Journal of Hindu-Christian Studies Volume 32 ; 32 ; https://digitalcommons.butler.edu/ ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2020 ; Journal of Hindu-Christian Studies Volume 33 ; 33 ; https://digitalcommons.butler.edu/ ; reingest1.clockss.org:8082 > #unable to fetch probe permission page on content3/ingest3 https://digitalcommons.butler.edu/cgi/viewcontent.cgi?article=1761&context=jhcs
+    au < notReady ; exists ; 2021 ; Journal of Hindu-Christian Studies Volume 34 ; 34 ; https://digitalcommons.butler.edu/ ; > #Unable to fetch probe permission page, https://digitalcommons.butler.edu/cgi/viewcontent.cgi?article=1791&context=jhcs
+    au < expected ; exists ; 2022 ; Journal of Hindu-Christian Studies Volume 35 ; 35 ; https://digitalcommons.butler.edu/ ; > 
+
+  }
+
+}

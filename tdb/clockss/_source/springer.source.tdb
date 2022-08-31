@@ -1,0 +1,185 @@
+{
+
+  publisher <
+    name = Springer ;
+    info[contract] = 2008 ;
+    info[tester] = S ;
+    info[platform] = Source
+  >
+
+  {
+
+    title <
+      name = Springer Source Content
+    >
+
+    {
+
+      plugin = org.lockss.plugin.springer.ClockssSpringerSourcePlugin
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/springer-released/
+      proxy = DIRECT
+      implicit < status1 ; status ; year ; name ; param[year] >
+
+      au < zapped ; finished ; 2009 ; Springer Source Content 2009 ; 2009 >
+      au < zapped ; finished ; 2010 ; Springer Source Content 2010 ; 2010 >
+      au < zapped ; finished ; 2011 ; Springer Source Content 2011 ; 2011 >
+      au < zapped ; finished ; 2012 ; Springer Source Content 2012 ; 2012 >
+      au < zapped ; finished ; 2013 ; Springer Source Content 2013 ; 2013 >
+      au < zapped ; finished ; 2014 ; Springer Source Content 2014 ; 2014 >
+      au < zapped ; finished ; 2015 ; Springer Source Content 2015 ; 2015 >
+      au < zapped ; finished ; 2016 ; Springer Source Content 2016 ; 2016 >
+      au < zapped ; finished ; 2017 ; Springer Source Content 2017 ; 2017 >
+      #no more AUs expected using this plugin
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.springer.ClockssSpringerDirSourcePlugin
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/springer-released/
+      proxy = DIRECT
+      implicit < status1 ; status ; year ; name ; param[directory] >
+
+      au < zapped ; finished ; 2018 ; Springer Source Content 2018_1 ; 2018_1 >
+      au < zapped ; finished ; 2018 ; Springer Source Content 2018_2 ; 2018_2 >
+      au < zapped ; finished ; 2018 ; Springer Source Content 2018_3 ; 2018_3 >
+      au < zapped ; finished ; 2018 ; Springer Source Content 2018_4 ; 2018_4 >
+      au < zapped ; finished ; 2018 ; Springer Source Content 2018_5 ; 2018_5 >
+      au < zapped ; finished ; 2018 ; Springer Source Content 2018_6 ; 2018_6 >
+
+      au < zapped ; finished ; 2019 ; Springer Source Content 2019_1 ; 2019_1 >
+      au < zapped ; finished ; 2019 ; Springer Source Content 2019_2 ; 2019_2 >
+      au < zapped ; finished ; 2019 ; Springer Source Content 2019_3 ; 2019_3 >
+      au < zapped ; finished ; 2019 ; Springer Source Content 2019_4 ; 2019_4 >
+      au < zapped ; finished ; 2019 ; Springer Source Content 2019_5 (Legacy) ; 2019_5 >
+      #no more AUs expected using this plugin
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.springer.ClockssSpringerJatsSourcePlugin
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/springerjats-released/
+      proxy = DIRECT
+      implicit < status1 ; status ; year ; name ; param[directory] >
+
+      au < zapped ; finished ; 2019 ; Springer Source Content 2019_5 (JATS) ; 2019_5 >
+      au < zapped ; finished ; 2019 ; Springer Source Content 2019_6 ; 2019_6 >
+      au < zapped ; finished ; 2020 ; Springer Source Content 2020_1 ; 2020_1 >
+      au < zapped ; finished ; 2020 ; Springer Source Content 2020_2 ; 2020_2 >
+      au < readySource ; finished ; 2020 ; Springer Source Content 2020_3 ; 2020_3 >
+      au < readySource ; finished ; 2020 ; Springer Source Content 2020_4 ; 2020_4 >
+      au < readySource ; finished ; 2020 ; Springer Source Content 2020_5 ; 2020_5 >
+      au < readySource ; finished ; 2020 ; Springer Source Content 2020_6 ; 2020_6 >
+      au < readySource ; finished ; 2020 ; Springer Source Content 2020_7 ; 2020_7 >
+      au < readySource ; finished ; 2020 ; Springer Source Content 2020_8 ; 2020_8 >
+      au < readySource ; finished ; 2020 ; Springer Source Content 2020_9 ; 2020_9 >
+      au < readySource ; finished ; 2020 ; Springer Source Content 2020_10 ; 2020_10 >
+      au < readySource ; finished ; 2020 ; Springer Source Content 2020_11 ; 2020_11 >
+      au < readySource ; finished ; 2020 ; Springer Source Content 2020_12 ; 2020_12 >
+
+      au < readySource ; frozen ; 2021 ; Springer Source Content 2021_01 ; 2021_01 >
+      au < readySource ; finished ; 2021 ; Springer Source Content 2021_02 ; 2021_02 >
+      au < readySource ; finished ; 2021 ; Springer Source Content 2021_03 ; 2021_03 >
+      au < readySource ; finished ; 2021 ; Springer Source Content 2021_04 ; 2021_04 >
+      au < readySource ; finished ; 2021 ; Springer Source Content 2021_05 ; 2021_05 >
+      au < readySource ; finished ; 2021 ; Springer Source Content 2021_06 ; 2021_06 >
+      au < readySource ; finished ; 2021 ; Springer Source Content 2021_07 ; 2021_07 >
+      au < readySource ; finished ; 2021 ; Springer Source Content 2021_08 ; 2021_08 >
+      au < readySource ; frozen ; 2021 ; Springer Source Content 2021_09 ; 2021_09 >
+      au < readySource ; finished ; 2021 ; Springer Source Content 2021_10 ; 2021_10 >
+      au < readySource ; finished ; 2021 ; Springer Source Content 2021_11 ; 2021_11 >
+      au < readySource ; finished ; 2021 ; Springer Source Content 2021_12 ; 2021_12 >
+
+      au < readySource ; crawling ; 2022 ; Springer Source Content 2022_01 ; 2022_01 >
+      au < readySource ; crawling ; 2022 ; Springer Source Content 2022_02 ; 2022_02 >
+      au < readySource ; crawling ; 2022 ; Springer Source Content 2022_03 ; 2022_03 >
+      au < readySource ; crawling ; 2022 ; Springer Source Content 2022_04 ; 2022_04 >
+      au < readySource ; crawling ; 2022 ; Springer Source Content 2022_05 ; 2022_05 >
+      au < readySource ; crawling ; 2022 ; Springer Source Content 2022_06 ; 2022_06 >
+      au < readySource ; crawling ; 2022 ; Springer Source Content 2022_07 ; 2022_07 >
+      au < readySource ; crawling ; 2022 ; Springer Source Content 2022_08 ; 2022_08 >
+      au < readySource ; crawling ; 2022 ; Springer Source Content 2022_09 ; 2022_09 >
+      au < readySource ; crawling ; 2022 ; Springer Source Content 2022_10 ; 2022_10 >
+      au < readySource ; crawling ; 2022 ; Springer Source Content 2022_11 ; 2022_11 >
+      au < expected ; exists ; 2022 ; Springer Source Content 2022_12 ; 2022_12 >
+      au < expected ; exists ; 2022 ; Springer Source Content 2022_13 ; 2022_13 >
+      au < expected ; exists ; 2022 ; Springer Source Content 2022_14 ; 2022_14 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Springer Delivered Source Content
+    >
+
+    param[base_url] = http://clockss-staged.clockss.org/sourcefiles/springer-delivered/
+    proxy = DIRECT
+
+    {
+
+      plugin = org.lockss.plugin.springer.ClockssSpringerDeliveredSourcePlugin
+      implicit < status1 ; status ; year ; name ; param[year] ; param[directory] >
+
+      au < zapped ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_1 ; 2018 ; HD1_1 >
+      au < zapped ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_2 ; 2018 ; HD1_2 >
+      au < zapped ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_3 ; 2018 ; HD1_3 >
+      au < zapped ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_4 ; 2018 ; HD1_4 >
+      au < zapped ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_5 ; 2018 ; HD1_5 >
+      au < zapped ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_6 ; 2018 ; HD1_6 >
+      au < zapped ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_7 ; 2018 ; HD1_7 >
+      au < zapped ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_8 ; 2018 ; HD1_8 >
+      au < zapped ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_9 ; 2018 ; HD1_9 >
+      #books came in 2019
+      au < zapped ; finished ; 2019 ; Springer Delivered Source Content 2019 HD1_1 ; 2019 ; HD1_1 >
+      au < zapped ; finished ; 2019 ; Springer Delivered Source Content 2019 HD1_2 ; 2019 ; HD1_2 >
+      au < zapped ; finished ; 2019 ; Springer Delivered Source Content 2019 HD1_3 ; 2019 ; HD1_3 >
+      au < zapped ; finished ; 2019 ; Springer Delivered Source Content 2019 HD1_4 ; 2019 ; HD1_4 >
+      au < zapped ; finished ; 2019 ; Springer Delivered Source Content 2019 HD1_5 ; 2019 ; HD1_5 >
+      au < zapped ; finished ; 2019 ; Springer Delivered Source Content 2019 HD1_6 ; 2019 ; HD1_6 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.springer.ClockssSpringerDeliveredJatsSourcePlugin
+      implicit < status1 ; status ; year ; name ; param[year] ; param[directory] >
+
+      #books came in 2020
+      au < readySource ; crawling ; 2020 ; Springer Delivered Source Content 2020 HD1_1 ; 2020 ; HD1_1 >
+      au < readySource ; crawling ; 2020 ; Springer Delivered Source Content 2020 HD1_2 ; 2020 ; HD1_2 >
+      au < readySource ; crawling ; 2020 ; Springer Delivered Source Content 2020 HD1_3 ; 2020 ; HD1_3 >
+      au < readySource ; crawling ; 2020 ; Springer Delivered Source Content 2020 HD1_4 ; 2020 ; HD1_4 >
+      au < readySource ; crawling ; 2020 ; Springer Delivered Source Content 2020 HD1_5 ; 2020 ; HD1_5 >
+      au < readySource ; crawling ; 2020 ; Springer Delivered Source Content 2020 HD1_6 ; 2020 ; HD1_6 >
+      au < readySource ; crawling ; 2020 ; Springer Delivered Source Content 2020 HD1_7 ; 2020 ; HD1_7 >
+      au < readySource ; crawling ; 2020 ; Springer Delivered Source Content 2020 HD1_8 ; 2020 ; HD1_8 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.springer.ClockssSpringerJatsSourcePlugin
+      implicit < status1 ; status ; year ; name ; param[directory] >
+
+      #books came in 2022
+      au < readySource ; crawling ; 2022 ; Springer Delivered Source Content 2022_01 ; 2022_01 >
+      au < readySource ; crawling ; 2022 ; Springer Delivered Source Content 2022_02 ; 2022_02 >
+      au < readySource ; crawling ; 2022 ; Springer Delivered Source Content 2022_03 ; 2022_03 >
+      au < readySource ; crawling ; 2022 ; Springer Delivered Source Content 2022_04 ; 2022_04 >
+      au < readySource ; crawling ; 2022 ; Springer Delivered Source Content 2022_05 ; 2022_05 >
+      au < readySource ; crawling ; 2022 ; Springer Delivered Source Content 2022_06 ; 2022_06 >
+      au < readySource ; crawling ; 2022 ; Springer Delivered Source Content 2022_07 ; 2022_07 >
+      au < readySource ; crawling ; 2022 ; Springer Delivered Source Content 2022_08 ; 2022_08 >
+      au < readySource ; crawling ; 2022 ; Springer Delivered Source Content 2022_09 ; 2022_09 >
+      au < readySource ; crawling ; 2022 ; Springer Delivered Source Content 2022_10 ; 2022_10 >
+      au < readySource ; crawling ; 2022 ; Springer Delivered Source Content 2022_11 ; 2022_11 >
+      au < readySource ; crawling ; 2022 ; Springer Delivered Source Content 2022_12 ; 2022_12 >
+
+    }
+  }
+
+}

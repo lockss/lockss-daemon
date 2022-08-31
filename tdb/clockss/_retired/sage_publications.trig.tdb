@@ -1,0 +1,233 @@
+#These are harvest AUs that were created from file-transfer content for triggering titles
+{
+
+  publisher <
+    name = SAGE Publications ;
+    info[contract] = 2015 ;
+    info[tester] = S
+  >
+  
+  {
+  
+    title <
+      name = International Journal of Self Help and Self Care ;
+      issn = 1091-2851 ;
+      eissn = 1541-4450
+    >
+
+    plugin = org.lockss.plugin.clockss.sagebaywood.ClockssSageBaywoodTriggeredContentPlugin
+    param[base_url] = http://baywood.stanford.clockss.org/
+    implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+    param[journal_id] = BWSH
+
+    au < finished ; finished ; 1999-2002 ; International Journal of Self Help and Self Care Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2003-2004 ; International Journal of Self Help and Self Care Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2005 ; International Journal of Self Help and Self Care Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2005-2006 ; International Journal of Self Help and Self Care Volume 4 ; 4 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2006-2007 ; International Journal of Self Help and Self Care Volume 5 ; 5 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2012 ; International Journal of Self Help and Self Care Volume 6 ; 6 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2013 ; International Journal of Self Help and Self Care Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; International Journal of Self Help and Self Care Volume 8 ; 8 ; reingest2.clockss.org:8085 >
+	#No more AUs expected
+  
+  }
+
+  {
+   
+    title <
+      name = Journal of Collective Negotiations ;
+      issn = 2167-7816 ;
+      eissn = 2167-7824
+    >
+    
+    plugin = org.lockss.plugin.clockss.sagebaywood.ClockssSageBaywoodTriggeredContentPlugin
+    param[base_url] = http://baywood.stanford.clockss.org/
+    implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+    param[journal_id] = BWCN
+
+    {
+    #there are one or two singleton pdfs in an issue but for all intents Vol1 to Vol27 are abstract only
+      attr[au_coverage_depth] = abstracts
+      au < finished ; finished ; 1972 ; Journal of Collective Negotiations Volume 1 [abstracts only] ; 1 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1973 ; Journal of Collective Negotiations Volume 2 [abstracts only] ; 2 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1974 ; Journal of Collective Negotiations Volume 3 [abstracts only] ; 3 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1975 ; Journal of Collective Negotiations Volume 4 [abstracts only] ; 4 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1976 ; Journal of Collective Negotiations Volume 5 [abstracts only] ; 5 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1977 ; Journal of Collective Negotiations Volume 6 [abstracts only] ; 6 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1978 ; Journal of Collective Negotiations Volume 7 [abstracts only] ; 7 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1979 ; Journal of Collective Negotiations Volume 8 [abstracts only] ; 8 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1980 ; Journal of Collective Negotiations Volume 9 [abstracts only] ; 9 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1981 ; Journal of Collective Negotiations Volume 10 [abstracts only] ; 10 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1982 ; Journal of Collective Negotiations Volume 11 [abstracts only] ; 11 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1983 ; Journal of Collective Negotiations Volume 12 [abstracts only] ; 12 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1984 ; Journal of Collective Negotiations Volume 13 [abstracts only] ; 13 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1985 ; Journal of Collective Negotiations Volume 14 [abstracts only] ; 14 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1986 ; Journal of Collective Negotiations Volume 15 [abstracts only] ; 15 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1987 ; Journal of Collective Negotiations Volume 16 [abstracts only] ; 16 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1988 ; Journal of Collective Negotiations Volume 17 [abstracts only] ; 17 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1989 ; Journal of Collective Negotiations Volume 18 [abstracts only] ; 18 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1990 ; Journal of Collective Negotiations Volume 19 [abstracts only] ; 19 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1991 ; Journal of Collective Negotiations Volume 20 [abstracts only] ; 20 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1992 ; Journal of Collective Negotiations Volume 21 [abstracts only] ; 21 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1993 ; Journal of Collective Negotiations Volume 22 [abstracts only] ; 22 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1994 ; Journal of Collective Negotiations Volume 23 [abstracts only] ; 23 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1995 ; Journal of Collective Negotiations Volume 24 [abstracts only] ; 24 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1996 ; Journal of Collective Negotiations Volume 25 [abstracts only] ; 25 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1997 ; Journal of Collective Negotiations Volume 26 [abstracts only] ; 26 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1998 ; Journal of Collective Negotiations Volume 27 [abstracts only] ; 27 ; reingest2.clockss.org:8085 >
+    }
+    au < finished ; finished ; 1999 ; Journal of Collective Negotiations Volume 28 ; 28 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2000 ; Journal of Collective Negotiations Volume 29 ; 29 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2003-2005 ; Journal of Collective Negotiations Volume 30 ; 30 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2006-2007 ; Journal of Collective Negotiations Volume 31 ; 31 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2008 ; Journal of Collective Negotiations Volume 32 ; 32 ; reingest2.clockss.org:8085 >
+	#No more AUs expected
+
+  }
+
+  {
+  
+    title <
+      name = Journal of Environmental Systems ;
+      issn = 0047-2433 ;
+      eissn = 1541-3802
+    >
+
+    plugin = org.lockss.plugin.clockss.sagebaywood.ClockssSageBaywoodTriggeredContentPlugin
+    param[base_url] = http://baywood.stanford.clockss.org/
+    implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+    param[journal_id] = BWES
+      
+    au < finished ; finished ; 1971 ; Journal of Environmental Systems Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1972 ; Journal of Environmental Systems Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1973 ; Journal of Environmental Systems Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1974 ; Journal of Environmental Systems Volume 4 ; 4 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1975 ; Journal of Environmental Systems Volume 5 ; 5 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1976-1977 ; Journal of Environmental Systems Volume 6 ; 6 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1977-1978 ; Journal of Environmental Systems Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1978-1979 ; Journal of Environmental Systems Volume 8 ; 8 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1979-1980 ; Journal of Environmental Systems Volume 9 ; 9 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1980-1981 ; Journal of Environmental Systems Volume 10 ; 10 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1981-1982 ; Journal of Environmental Systems Volume 11 ; 11 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1982-1983 ; Journal of Environmental Systems Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1983-1984 ; Journal of Environmental Systems Volume 13 ; 13 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1985-1986 ; Journal of Environmental Systems Volume 14 ; 14 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1986-1987 ; Journal of Environmental Systems Volume 15 ; 15 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1987-1988 ; Journal of Environmental Systems Volume 16 ; 16 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1988-1989 ; Journal of Environmental Systems Volume 17 ; 17 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1989-1990 ; Journal of Environmental Systems Volume 18 ; 18 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1990-1991 ; Journal of Environmental Systems Volume 19 ; 19 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1991-1992 ; Journal of Environmental Systems Volume 20 ; 20 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1992-1993 ; Journal of Environmental Systems Volume 21 ; 21 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1993-1994 ; Journal of Environmental Systems Volume 22 ; 22 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1994-1995 ; Journal of Environmental Systems Volume 23 ; 23 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1995-1996 ; Journal of Environmental Systems Volume 24 ; 24 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1996-1997 ; Journal of Environmental Systems Volume 25 ; 25 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1997-1998 ; Journal of Environmental Systems Volume 26 ; 26 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1999-2000 ; Journal of Environmental Systems Volume 27 ; 27 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2000-2001 ; Journal of Environmental Systems Volume 28 ; 28 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2002-2003 ; Journal of Environmental Systems Volume 29 ; 29 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2003-2004 ; Journal of Environmental Systems Volume 30 ; 30 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2004-2005 ; Journal of Environmental Systems Volume 31 ; 31 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2005-2006 ; Journal of Environmental Systems Volume 32 ; 32 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2011 ; Journal of Environmental Systems Volume 33 ; 33 ; reingest2.clockss.org:8085 >
+	#No more AUs expected
+    
+  }    
+  
+  {
+  
+    title <
+      name = Journal of Workplace Rights ;
+      issn = 1938-4998 ;
+      eissn = 1938-5005
+    >
+    
+    plugin = org.lockss.plugin.clockss.sagebaywood.ClockssSageBaywoodTriggeredContentPlugin
+    param[base_url] = http://baywood.stanford.clockss.org/
+    implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+    param[journal_id] = BWWR
+    
+    au < finished ; finished ; 2008 ; Journal of Workplace Rights Volume 13 ; 13 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2009 ; Journal of Workplace Rights Volume 14 ; 14 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2010 ; Journal of Workplace Rights Volume 15 ; 15 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2011 ; Journal of Workplace Rights Volume 16 ; 16 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2012 ; Journal of Workplace Rights Volume 17 ; 17 ; reingest3.clockss.org:8083 >
+    #OCLC is not available for crawling - must add later
+ 	#No more AUs expected
+    
+  }
+
+  {
+  
+    title <
+      name = Journal of Individual Employment Rights ;
+      issn = 1055-7512 ;
+      eissn = 1541-3799
+    >
+    
+    plugin = org.lockss.plugin.clockss.sagebaywood.ClockssSageBaywoodTriggeredContentPlugin
+    param[base_url] = http://baywood.stanford.clockss.org/
+    implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+    param[journal_id] = BWIE
+    
+    au < finished ; finished ; 1992-1993 ; Journal of Individual Employment Rights Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1993-1994 ; Journal of Individual Employment Rights Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1994-1995 ; Journal of Individual Employment Rights Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1995-1996 ; Journal of Individual Employment Rights Volume 4 ; 4 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1996-1997 ; Journal of Individual Employment Rights Volume 5 ; 5 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1997-1998 ; Journal of Individual Employment Rights Volume 6 ; 6 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1998-1999 ; Journal of Individual Employment Rights Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1999-2000 ; Journal of Individual Employment Rights Volume 8 ; 8 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1999-2000 ; Journal of Individual Employment Rights Volume 9 ; 9 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2001-2003 ; Journal of Individual Employment Rights Volume 10 ; 10 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2003-2005 ; Journal of Individual Employment Rights Volume 11 ; 11 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2005-2007 ; Journal of Individual Employment Rights Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+	#No more AUs expected
+
+    
+  }
+
+  {
+
+    title <
+      name = Auto/Biography ;
+      issn = 0967-5507 ;
+      eissn = 1479-9715 ;
+      issnl = 0967-5507
+    >
+
+    rights = openaccess
+    plugin = org.lockss.plugin.autobiography.ClockssAutoBiographyPlugin
+    param[base_url] = http://autobiography.stanford.clockss.org/
+    param[journal_id] = aub
+    implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+    au < finished ; finished ; 2004 ; Auto/Biography Volume 12 ; 12 ; >
+    au < finished ; finished ; 2005 ; Auto/Biography Volume 13 ; 13 ; >
+    au < finished ; finished ; 2006-2007 ; Auto/Biography Volume 14 ; 14 ; >
+	#No more AUs expected
+
+  }
+
+  {
+
+    title <
+      name = Graft: Organ and Cell Transplantation ;
+      issn = 1522-1628
+    >
+
+    comment[dcor] = This triggered title is being reingested, so there's no need for the PDF filter
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
+    param[base_url] = http://graft.stanford.clockss.org/
+    implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+    attr[au_feature_key] = pdf
+
+    au < finished ; finished ; 2001 ; Graft: Organ and Cell Transplantation Volume 4 ; 4 ; >
+    au < finished ; finished ; 2002 ; Graft: Organ and Cell Transplantation Volume 5 ; 5 ; >
+    au < finished ; finished ; 2003 ; Graft: Organ and Cell Transplantation Volume 6 ; 6 ; >
+	#No more AUs expected
+
+  }
+
+}

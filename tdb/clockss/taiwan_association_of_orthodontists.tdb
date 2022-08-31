@@ -1,0 +1,31 @@
+{
+
+  publisher <
+    name = Taiwan Food and Drug Administration ;
+    info[contract] = 2013 ;
+    info[tester] = 5 ;
+    info[poller] = 8
+  >
+  provider = bepress
+  
+  # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
+
+  {
+  
+    title <
+      name = Taiwanese Journal of Orthodontics ;
+      eissn = 1029-8231
+    >
+    
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
+    param[base_url] = https://www.tjo.org.tw/
+    param[journal_abbr] = tjo
+    implicit < status1 ; status ; year ; name ; param[volume] ; proxy >
+
+    au < frozen ; exists ; 2020 ; Taiwanese Journal of Orthodontic Volume 29 ; 29 ; >
+    au < crawling ; exists ; 2021 ; Taiwanese Journal of Orthodontic Volume 30 ; 30 ; >
+    au < crawling ; exists ; 2022 ; Taiwanese Journal of Orthodontic Volume 31 ; 31 ; >
+
+  }
+
+}

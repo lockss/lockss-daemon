@@ -1,0 +1,75 @@
+{
+
+  publisher <
+    name = Innovations Journals ;
+    info[contract] = 2021 ;
+    info[tester] = 8 ;
+    info[poller] = 2 ;
+    info[platform] = Silverchair
+  >
+
+  plugin = org.lockss.plugin.silverchair.allenpress.ClockssAllenPressSilverchairPlugin
+  implicit < status1 ; status ; year ; param[year] ; name ; param[volume_name] ; proxy >
+  param[base_url] = https://meridian.allenpress.com/
+
+  {
+
+    title <
+      name = Journal of Immunotherapy and Precision Oncology ;
+      issn = 2666-2345 ;
+      eissn = 2590-017X 
+    >
+
+    param[journal_id] = innovationsjournals-JIPO
+
+    au < manifest ; exists ; 2018 ; 2018 ; Journal of Immunotherapy and Precision Oncology Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Journal of Immunotherapy and Precision Oncology Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2020 ; 2020 ; Journal of Immunotherapy and Precision Oncology Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Journal of Immunotherapy and Precision Oncology Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2022 ; 2022 ; Journal of Immunotherapy and Precision Oncology Volume 5 ; 5 ; >
+
+  }
+  {
+
+    title <
+      name = Global Journal on Quality and Safety in Healthcare ;
+      issn = 2666-2353 ;
+      eissn = 2589-9449 
+    >
+
+    param[journal_id] = innovationsjournals-JQSH
+
+    au < manifest ; exists ; 2018 ; 2018 ; Global Journal on Quality and Safety in Healthcare Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Global Journal on Quality and Safety in Healthcare Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2020 ; 2020 ; Global Journal on Quality and Safety in Healthcare Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2021 ; 2021 ; Global Journal on Quality and Safety in Healthcare Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2022 ; 2022 ; Global Journal on Quality and Safety in Healthcare Volume 5 ; 5 ; >
+
+  }
+  {
+
+    title <
+      name = Innovations in Digital Health, Diagnostics, and Biomarkers ;
+      eissn = 2688-8130 
+    >
+
+    param[journal_id] = innovationsjournals-IDDB
+
+    au < manifest ; exists ; 2021 ; 2021 ; Innovations in Digital Health, Diagnostics, and Biomarkers Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2022 ; 2022 ; Innovations in Digital Health, Diagnostics, and Biomarkers Volume 2 ; 2 ; >
+
+  }
+  {
+
+    title <
+      name = Innovations in Surgery and Interventional Medicine ;
+      eissn = 2688-8122 
+    >
+
+    param[journal_id] = innovationsjournals-ISIM
+
+    au < manifest ; exists ; 2021 ; 2021 ; Innovations in Surgery and Interventional Medicine Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2022 ; 2022 ; Innovations in Surgery and Interventional Medicine Volume 2 ; 2 ; >
+
+  }
+}

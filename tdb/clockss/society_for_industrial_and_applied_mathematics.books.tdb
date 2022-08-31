@@ -1,0 +1,595 @@
+{
+  publisher <
+    name = Society for Industrial and Applied Mathematics ;
+    info[contract] = 2013 ;
+    info[back] = 1900 ;
+    info[tester] = 8 ;
+    info[poller] = 3 
+ >
+  plugin = org.lockss.plugin.atypon.siam.ClockssSiamBooksPlugin
+  #  param[base_url] = http://epubs.siam.org/
+  implicit < status1 ; status ; year ; isbn ; eisbn ; param[book_eisbn] ; name ; param[base_url] ; proxy >
+
+ {
+  title <
+   name = Society for Industrial and Applied Mathematics Books ;
+   type = bookSeries
+  >
+   au < finished ; finished ; 1971 ; 978-0-89871-003-8 ; 978-1-61197-064-7 ; 9781611970647 ; Functional Analysis and Approximation Theory in Numerical Analysis (978-1-61197-064-7) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1971 ; 978-0-89871-175-2 ; 978-1-61197-063-0 ; 9781611970630 ; Some Limit Theorems in Statistics (978-1-61197-063-0) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1971 ; 978-0-89871-176-9 ; 978-1-61197-062-3 ; 9781611970623 ; Weak Convergence of Measures (978-1-61197-062-3) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1972 ; 978-0-89871-001-4 ; 978-1-61197-066-1 ; 9781611970661 ; The Numerical Solution of Elliptic Equations (978-1-61197-066-1) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1972 ; 978-0-89871-002-1 ; 978-1-61197-065-4 ; 9781611970654 ; Bayesian Statistics (978-1-61197-065-4) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1972 ; 978-0-89871-004-5 ; 978-1-61197-061-6 ; 9781611970616 ; Some Aspects of the Optimal Control of Distributed Parameter Systems (978-1-61197-061-6) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1972 ; 978-0-89871-005-2 ; 978-1-61197-060-9 ; 9781611970609 ; Techniques in Differential Topology in Relativity (978-1-61197-060-9) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1972 ; 978-0-89871-006-9 ; 978-1-61197-059-3 ; 9781611970593 ; Sequential Analysis and Optimal Design (978-1-61197-059-3) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1973 ; 978-0-89871-007-6 ; 978-1-61197-058-6 ; 9781611970586 ; Distribution Theory for Tests Based on the Sample Distribution Function (978-1-61197-058-6) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1973 ; 978-0-89871-008-3 ; 978-1-61197-057-9 ; 9781611970579 ; Mathematical Problems in the Biological Sciences (978-1-61197-057-9) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1973 ; 978-0-89871-009-0 ; 978-1-61197-055-5 ; 9781611970555 ; Cardinal Spline Interpolation (978-1-61197-055-5) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1973 ; 978-0-89871-177-6 ; 978-1-61197-056-2 ; 9781611970562 ; Hyperbolic Systems of Conservation Laws and the Mathematical Theory of Shock Waves (978-1-61197-056-2) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1974 ; 978-0-89871-010-6 ; 978-1-61197-054-8 ; 9781611970548 ; The Theory of Best Approximation and Functional Analysis (978-1-61197-054-8) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1974 ; 978-0-89871-012-0 ; 978-1-61197-053-1 ; 9781611970531 ; Variational Methods for Eigenvalue Approximation (978-1-61197-053-1) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1974 ; 978-0-89871-013-7 ; 978-1-61197-052-4 ; 9781611970524 ; Conjugate Duality and Optimization (978-1-61197-052-4) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1975 ; 978-0-89871-014-4 ; 978-1-61197-051-7 ; 9781611970517 ; Mathematical Biofluiddynamics (978-1-61197-051-7) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1975 ; 978-0-89871-015-1 ; 978-1-61197-050-0 ; 9781611970500 ; A Theory of Indexing (978-1-61197-050-0) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1975 ; 978-0-89871-016-8 ; 978-1-61197-049-4 ; 9781611970494 ; Notes on Time Decay and Scattering for Some Hyperbolic Problems (978-1-61197-049-4) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1975 ; 978-0-89871-017-5 ; 978-1-61197-048-7 ; 9781611970487 ; Mathematical Theories of Populations (978-1-61197-048-7) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1975 ; 978-0-89871-018-2 ; 978-1-61197-047-0 ; 9781611970470 ; Orthogonal Polynomials and Special Functions (978-1-61197-047-0) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1975 ; 978-0-89871-019-9 ; 978-1-61197-046-3 ; 9781611970463 ; Improperly Posed Problems in Partial Differential Equations (978-1-61197-046-3) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1976 ; 978-0-89871-020-5 ; 978-1-61197-045-6 ; 9781611970456 ; Lectures on the Measurement and Evaluation of the Performance of Computing Systems (978-1-61197-045-6) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1976 ; 978-0-89871-021-2 ; 978-1-61197-044-9 ; 9781611970449 ; Numerical Solution of Two Point Boundary Value Problems (978-1-61197-044-9) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1976 ; 978-0-89871-022-9 ; 978-1-61197-043-2 ; 9781611970432 ; The Stability of Dynamical Systems (978-1-61197-043-2) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1977 ; 978-0-89871-023-6 ; 978-1-61197-042-5 ; 9781611970425 ; Numerical Analysis of Spectral Methods (978-1-61197-042-5) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1978 ; 978-0-89871-025-0 ; 978-1-61197-041-8 ; 9781611970418 ; Geometric Probability (978-1-61197-041-8) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1978 ; 978-0-89871-026-7 ; 978-1-61197-040-1 ; 9781611970401 ; Graph Theory and Its Applications to Problems of Society (978-1-61197-040-1) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1979 ; 978-0-89871-151-6 ; 978-1-61197-091-3 ; 9781611970913 ; Lie-Bäcklund Transformations in Applications (978-1-61197-091-3) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1979 ; 978-0-89871-161-5 ; 978-1-61197-090-6 ; 9781611970906 ; Methods and Applications of Interval Analysis (978-1-61197-090-6) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1979 ; 978-0-89871-172-1 ; 978-1-61197-181-1 ; 9781611971811 ; LINPACK Users' Guide (978-1-61197-181-1) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+
+   au < finished ; finished ; 1980 ; 978-0-89871-162-2 ; 978-1-61197-037-1 ; 9781611970371 ; Integer Programming (978-1-61197-037-1) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1980 ; 978-0-89871-163-9 ; 978-1-61197-036-4 ; 9781611970364 ; Arithmetic Complexity of Computations (978-1-61197-036-4) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1980 ; 978-0-89871-164-6 ; 978-1-61197-038-8 ; 9781611970388 ; Lectures on the Logic of Computer Programming (978-1-61197-038-8) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1980 ; 978-0-89871-166-0 ; 978-1-61197-035-7 ; 9781611970357 ; Mathematics of Genetic Diversity (978-1-61197-035-7) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1981 ; 978-0-89871-168-4 ; 978-1-61197-034-0 ; 9781611970340 ; Topics in Finite Elasticity (978-1-61197-034-0) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1981 ; 978-0-89871-169-1 ; 978-1-61197-033-3 ; 9781611970333 ; Approximation of Population Processes (978-1-61197-033-3) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1981 ; 978-0-89871-170-7 ; 978-1-61197-032-6 ; 9781611970326 ; Lectures on Geometric Models in Mathematical Physics (978-1-61197-032-6) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1981 ; 978-0-89871-171-4 ; 978-1-61197-089-0 ; 9781611970890 ; Ill-Posed Problems for Integrodifferential Equations in Mechanics and Electromagnetic Theory (978-1-61197-089-0) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1981 ; 978-0-89871-174-5 ; 978-1-61197-088-3 ; 9781611970883 ; Solitons and the Inverse Scattering Transform (978-1-61197-088-3) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1982 ; 978-0-89871-179-0 ; 978-1-61197-031-9 ; 9781611970319 ; The Jackknife, the Bootstrap and Other Resampling Plans (978-1-61197-031-9) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1982 ; 978-0-89871-180-6 ; 978-1-61197-030-2 ; 9781611970302 ; Nonlinear Renewal Theory in Sequential Analysis (978-1-61197-030-2) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1982 ; 978-0-89871-181-3 ; 978-1-61197-087-6 ; 9781611970876 ; Fourier Analysis of Numerical Approximations of Hyperbolic Equations (978-1-61197-087-6) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1983 ; 978-0-89871-182-0 ; 978-1-61197-029-6 ; 9781611970296 ; Branching in the Presence of Symmetry (978-1-61197-029-6) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1983 ; 978-0-89871-185-1 ; 978-1-61197-028-9 ; 9781611970289 ; Quantile Processes with Statistical Applications (978-1-61197-028-9) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1983 ; 978-0-89871-186-8 ; 978-1-61197-027-2 ; 9781611970272 ; Lectures on Mathematical Combustion (978-1-61197-027-2) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1983 ; 978-0-89871-187-5 ; 978-1-61197-026-5 ; 9781611970265 ; Data Structures and Network Algorithms (978-1-61197-026-5) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1983 ; 978-0-89871-188-2 ; 978-1-61197-025-8 ; 9781611970258 ; Competition Models in Population Biology (978-1-61197-025-8) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1983 ; 978-0-89871-662-7 ; 978-1-61197-107-1 ; 9781611971071 ; The Mathematics of Reservoir Simulation (978-1-61197-107-1) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1984 ; 978-0-89871-189-9 ; 978-1-61197-024-1 ; 9781611970241 ; Large Deviations and Applications (978-1-61197-024-1) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1984 ; 978-0-89871-193-6 ; 978-1-61197-023-4 ; 9781611970234 ; Foundations of Stochastic Differential Equations in Infinite Dimensional Spaces (978-1-61197-023-4) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1984 ; 978-0-89871-476-0 ; 978-1-61197-086-9 ; 9781611970869 ; Numerical Solution of Elliptic Problems (978-1-61197-086-9) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1985 ; 978-0-89871-051-9 ; 978-1-61197-021-0 ; 9781611970210 ; Theory and Applications of Sequential Nonparametrics (978-1-61197-021-0) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1985 ; 978-0-89871-053-3 ; 978-1-61197-106-4 ; 9781611971064 ; The Mathematics of Combustion (978-1-61197-106-4) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1985 ; 978-0-89871-055-7 ; 978-1-61197-177-4 ; 9781611971774 ; Solution of Partial Differential Equations on Vector and Parallel Computers (978-1-61197-177-4) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1985 ; 978-0-89871-196-7 ; 978-1-61197-022-7 ; 9781611970227 ; Solitons in Mathematics and Physics (978-1-61197-022-7) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1985 ; 978-0-89871-198-1 ; 978-1-61197-085-2 ; 9781611970852 ; Analytical and Numerical Methods for Volterra Equations (978-1-61197-085-2) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1986 ; 978-0-89871-203-2 ; 978-1-61197-020-3 ; 9781611970203 ; An Algorithmic Theory of Numbers, Graphs and Convexity (978-1-61197-020-3) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1986 ; 978-0-89871-207-0 ; 978-1-61197-019-7 ; 9781611970197 ; Multivariate Approximation Theory (978-1-61197-019-7) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1987 ; 978-0-89871-204-9 ; 978-1-61197-176-7 ; 9781611971767 ; Mathematical Modelling: Classroom Notes in Applied Mathematics (978-1-61197-176-7) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1987 ; 978-1-61197-188-0 ; 978-1-61197-105-7 ; 9781611971057 ; Multigrid Methods (978-1-61197-105-7) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+
+   au < finished ; finished ; 1988 ; 978-0-89871-225-4 ; 978-1-61197-018-0 ; 9781611970180 ; Dynamics of Internal Layers and Diffusive Interfaces (978-1-61197-018-0) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1988 ; 978-0-89871-226-1 ; 978-1-61197-017-3 ; 9781611970173 ; Multivariate Splines (978-1-61197-017-3) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1988 ; 978-0-89871-227-8 ; 978-1-61197-104-0 ; 9781611971040 ; Handbook for Matrix Computations (978-1-61197-104-0) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1988 ; 978-0-89871-229-2 ; 978-1-61197-134-7 ; 9781611971347 ; Mathematics Applied to Deterministic Problems in the Natural Sciences (978-1-61197-134-7) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1988 ; 978-0-89871-468-5 ; 978-1-61197-084-5 ; 9781611970845 ; Contact Problems in Elasticity (978-1-61197-084-5) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+
+   au < finished ; finished ; 1989 ; 978-0-89871-027-4 ; 978-1-61197-039-5 ; 9781611970395 ; Feasible Computations and Provable Complexity Properties (978-1-61197-039-5) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1989 ; 978-0-89871-230-8 ; 978-1-61197-083-8 ; 9781611970838 ; Augmented Lagrangian and Operator-Splitting Methods in Nonlinear Mechanics (978-1-61197-083-8) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1989 ; 978-0-89871-231-5 ; 978-1-61197-016-6 ; 9781611970166 ; Combinatorial Algorithms (978-1-61197-016-6) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1989 ; 978-0-89871-232-2 ; 978-1-61197-015-9 ; 9781611970159 ; Stochastic Processes in the Neurosciences (978-1-61197-015-9) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1989 ; 978-0-89871-237-7 ; 978-1-61197-082-1 ; 9781611970821 ; Boundary Stabilization of Thin Plates (978-1-61197-082-1) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1989 ; 978-0-89871-239-1 ; 978-1-61197-103-3 ; 9781611971033 ; Symbolic Computation (978-1-61197-103-3) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1989 ; 978-0-89871-240-7 ; 978-1-61197-013-5 ; 9781611970135 ; The Method of Equivalence and Its Applications (978-1-61197-013-5) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1989 ; 978-0-89871-241-4 ; 978-1-61197-014-2 ; 9781611970142 ; Method of Dynamic and Nonsmooth Optimization (978-1-61197-014-2) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1989 ; 978-0-89871-243-8 ; 978-1-61197-133-0 ; 9781611971330 ; A Survey of Lie Groups and Lie Algebras with Applications and Computational Methods (978-1-61197-133-0) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1989 ; 978-0-89871-247-6 ; 978-1-61197-102-6 ; 9781611971026 ; Multilevel Adaptive Methods for Partial Differential Equations (978-1-61197-102-6) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+
+   au < finished ; finished ; 1990 ; 978-0-89871-244-5 ; 978-1-61197-012-8 ; 9781611970128 ; Spline Models for Observational Data (978-1-61197-012-8) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1990 ; 978-0-89871-245-2 ; 978-1-61197-081-4 ; 9781611970814 ; Electro-Diffusion of Ions (978-1-61197-081-4) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1990 ; 978-0-89871-250-6 ; 978-1-61197-132-3 ; 9781611971323 ; Numerical Analysis (978-1-61197-132-3) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1990 ; 978-0-89871-254-4 ; 978-1-61197-131-6 ; 9781611971316 ; Nonlinear Programming (978-1-61197-131-6) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1990 ; 978-0-89871-256-8 ; 978-1-61197-130-9 ; 9781611971309 ; Optimization and Nonsmooth Analysis (978-1-61197-130-9) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1990 ; 978-0-89871-257-5 ; 978-1-61197-011-1 ; 9781611970111 ; Scientific Computation on Mathematical Problems and Conjectures (978-1-61197-011-1) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1990 ; 978-0-89871-259-9 ; 978-1-61197-172-9 ; 9781611971729 ; Problems in Applied Mathematics: Selections from (978-1-61197-172-9) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1990 ; 978-0-89871-260-5 ; 978-1-61197-170-5 ; 9781611971705 ; Parallel Algorithms for Matrix Computations (978-1-61197-170-5) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1990 ; 978-0-89871-261-2 ; 978-1-61197-171-2 ; 9781611971712 ; Nonparametric Function Estimation, Modeling, and Simulation (978-1-61197-171-2) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+
+   au < finished ; finished ; 1991 ; 978-0-89871-258-2 ; 978-1-61197-173-6 ; 9781611971736 ; Vortex Methods and Vortex Motion (978-1-61197-173-6) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1991 ; 978-0-89871-263-6 ; 978-1-61197-167-5 ; 9781611971675 ; A Primer on Integral Equations of the First Kind (978-1-61197-167-5) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1991 ; 978-0-89871-265-0 ; 978-1-61197-129-3 ; 9781611971293 ; Ordinary Differential Equations (978-1-61197-129-3) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1991 ; 978-0-89871-267-4 ; 978-1-61197-101-9 ; 9781611971019 ; Mathematical Aspects of Numerical Grid Generation (978-1-61197-101-9) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1991 ; 978-0-89871-275-9 ; 978-1-61197-100-2 ; 9781611971002 ; The Total Least Squares Problem (978-1-61197-100-2) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+
+   au < finished ; finished ; 1992 ; 978-0-89871-266-7 ; 978-1-61197-080-7 ; 9781611970807 ; Mathematical Problems in Linear Viscoelasticity (978-1-61197-080-7) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1992 ; 978-0-89871-274-2 ; 978-1-61197-010-4 ; 9781611970104 ; Ten Lectures on Wavelets (978-1-61197-010-4) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1992 ; 978-0-89871-280-3 ; 978-1-61197-166-8 ; 9781611971668 ; Geometry Processing for Design and Manufacturing (978-1-61197-166-8) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1992 ; 978-0-89871-281-0 ; 978-1-61197-165-1 ; 9781611971651 ; Curve and Surface Design (978-1-61197-165-1) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1992 ; 978-0-89871-282-7 ; 978-1-61197-164-4 ; 9781611971644 ; Topics in Surface Modeling (978-1-61197-164-4) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1992 ; 978-0-89871-285-8 ; 978-1-61197-099-9 ; 9781611970999 ; Computational Frameworks for the Fast Fourier Transform (978-1-61197-099-9) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1992 ; 978-0-89871-292-6 ; 978-1-61197-009-8 ; 9781611970098 ; Multilevel Projection Methods for Partial Differential Equations (978-1-61197-009-8) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1992 ; 978-0-89871-295-7 ; 978-1-61197-008-1 ; 9781611970081 ; Random Number Generation and Quasi-Monte Carlo Methods (978-1-61197-008-1) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1992 ; 978-0-89871-296-4 ; 978-1-61197-128-6 ; 9781611971286 ; Probability (978-1-61197-128-6) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1992 ; 978-0-89871-297-1 ; 978-1-61197-098-2 ; 9781611970982 ; Control and Estimation in Distributed Parameter Systems (978-1-61197-098-2) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1992 ; 978-0-89871-298-8 ; 978-1-61197-163-7 ; 9781611971637 ; Sinc Methods for Quadrature and Differential Equations (978-1-61197-163-7) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1992 ; 978-0-89871-304-6 ; 978-1-61197-127-9 ; 9781611971279 ; An Introduction to Invariant Imbedding (978-1-61197-127-9) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1992 ; 978-0-89871-306-0 ; 978-1-61197-158-3 ; 9781611971583 ; Knot Insertion and Deletion Algorithms for B-Spline Curves and Surfaces (978-1-61197-158-3) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+
+   au < finished ; finished ; 1993 ; 978-0-89871-308-4 ; 978-1-61197-157-6 ; 9781611971576 ; Pitman's Measure of Closeness (978-1-61197-157-6) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1993 ; 978-0-89871-310-7 ; 978-1-61197-097-5 ; 9781611970975 ; Transonic Aerodynamics: Problems in Asymptotic Theory (978-1-61197-097-5) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1993 ; 978-0-89871-320-6 ; 978-1-61197-096-8 ; 9781611970968 ; Mathematical and Computational Techniques for Multilevel Adaptive Methods (978-1-61197-096-8) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1993 ; 978-0-89871-322-0 ; 978-1-61197-095-1 ; 9781611970951 ; Optimization Software Guide (978-1-61197-095-1) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+
+   au < finished ; finished ; 1994 ; 978-0-89871-316-9 ; 978-1-61197-156-9 ; 9781611971569 ; Russian-English, English-Russian Dictionary on Proabability, Statistics, and Combinatorics (978-1-61197-156-9) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1994 ; 978-0-89871-319-0 ; 978-1-61197-079-1 ; 9781611970791 ; Interior-Point Polynomial Algorithms in Convex Programming (978-1-61197-079-1) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1994 ; 978-0-89871-321-3 ; 978-1-61197-126-2 ; 9781611971262 ; Nonnegative Matrices in the Mathematical Sciences (978-1-61197-126-2) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1994 ; 978-0-89871-323-7 ; 978-1-61197-155-2 ; 9781611971552 ; Contemporary Problems in Statistical Physics (978-1-61197-155-2) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1994 ; 978-0-89871-324-4 ; 978-1-61197-154-5 ; 9781611971545 ; Industrial Mathematics: A Course in Solving Real-World Problems (978-1-61197-154-5) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1994 ; 978-0-89871-325-1 ; 978-1-61197-007-4 ; 9781611970074 ; Ten Lectures on the Probabilistic Method (978-1-61197-007-4) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1994 ; 978-0-89871-328-2 ; 978-1-61197-153-8 ; 9781611971538 ; Templates for the Solution of Linear Systems: Building Blocks for Iterative Methods (978-1-61197-153-8) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1994 ; 978-0-89871-332-9 ; 978-1-61197-152-1 ; 9781611971521 ; Designing Fair Curves and Surfaces (978-1-61197-152-1) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1994 ; 978-0-89871-341-1 ; 978-1-61197-125-5 ; 9781611971255 ; Nonlinear Programming (978-1-61197-125-5) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1994 ; 978-0-89871-485-2 ; 978-1-61197-077-7 ; 9781611970777 ; Linear Matrix Inequalities in System and Control Theory (978-1-61197-077-7) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+
+   au < finished ; finished ; 1995 ; 978-0-89871-331-2 ; 978-1-61197-006-7 ; 9781611970067 ; Mathematical Aspects of Geometric Modeling (978-1-61197-006-7) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1995 ; 978-0-89871-333-6 ; 978-1-61197-078-4 ; 9781611970784 ; The Boundary Function Method for Singular Perturbation Problems (978-1-61197-078-4) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1995 ; 978-0-89871-340-4 ; 978-1-61197-005-0 ; 9781611970050 ; Navier–Stokes Equations and Nonlinear Functional Analysis (978-1-61197-005-0) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1995 ; 978-0-89871-342-8 ; 978-1-61197-151-4 ; 9781611971514 ; The DFT: An Owner's Manual for the Discrete Fourier Transform (978-1-61197-151-4) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1995 ; 978-0-89871-347-3 ; 978-1-61197-124-8 ; 9781611971248 ; Theory of the Combination of Observations Least Subject to Errors, Part One, Part Two, Supplement (978-1-61197-124-8) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1995 ; 978-0-89871-348-0 ; 978-1-61197-150-7 ; 9781611971507 ; Domain-Based Parallelism and Problem Decomposition Methods in Computational Science and Engineering (978-1-61197-150-7) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1995 ; 978-0-89871-352-7 ; 978-1-61197-094-4 ; 9781611970944 ; Iterative Methods for Linear and Nonlinear Equations (978-1-61197-094-4) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1995 ; 978-0-89871-353-4 ; 978-1-61197-122-4 ; 9781611971224 ; Numerical Solution of Initial-Value Problems in Differential-Algebraic Equations (978-1-61197-122-4) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1995 ; 978-0-89871-354-1 ; 978-1-61197-123-1 ; 9781611971231 ; Numerical Solution of Boundary Value Problems for Ordinary Differential Equations (978-1-61197-123-1) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1995 ; 978-0-89871-356-5 ; 978-1-61197-121-7 ; 9781611971217 ; Solving Least Squares Problems (978-1-61197-121-7) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+
+   au < finished ; finished ; 1996 ; 978-0-89871-358-9 ; 978-0-89871-967-3 ; 9780898719673 ; Lectures on Finite Precision Computations (978-0-89871-967-3) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1996 ; 978-0-89871-360-2 ; 978-1-61197-148-4 ; 9781611971484 ; Numerical Methods for Least Squares Problems (978-1-61197-148-4) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1996 ; 978-0-89871-362-6 ; 978-1-61197-149-1 ; 9781611971491 ; Afternotes on Numerical Analysis (978-1-61197-149-1) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1996 ; 978-0-89871-363-3 ; 978-0-89871-966-6 ; 9780898719666 ; The Science of Computer Benchmarking (978-0-89871-966-6) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1996 ; 978-0-89871-364-0 ; 978-1-61197-120-0 ; 9781611971200 ; Numerical Methods for Unconstrained Optimization and Nonlinear Equations (978-1-61197-120-0) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1996 ; 978-0-89871-367-1 ; 978-1-61197-147-7 ; 9781611971477 ; The Cauchy Problem in Kinetic Theory (978-1-61197-147-7) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1996 ; 978-0-89871-368-8 ; 978-0-89871-965-9 ; 9780898719659 ; Applications on Advanced Architecture Computers (978-0-89871-965-9) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1996 ; 978-0-89871-369-5 ; 978-1-61197-119-4 ; 9781611971194 ; Mathematical Theory of Reliability (978-1-61197-119-4) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1996 ; 978-0-89871-370-1 ; 978-1-61197-118-7 ; 9781611971187 ; Linear Differential Operators (978-1-61197-118-7) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1996 ; 978-0-89871-373-2 ; 978-1-61197-004-3 ; 9781611970043 ; Probabilistic Expert Systems (978-1-61197-004-3) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1996 ; 978-0-89871-379-4 ; 978-1-61197-003-6 ; 9781611970036 ; Robust Statistical Procedures (978-1-61197-003-6) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+
+   au < finished ; finished ; 1997 ; 978-0-89871-380-0 ; 978-1-61197-002-9 ; 9781611970029 ; Probability Theory and Combinatorial Optimization (978-1-61197-002-9) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1997 ; 978-0-89871-382-4 ; 978-1-61197-145-3 ; 9781611971453 ; Primal-Dual Interior-Point Methods (978-1-61197-145-3) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1997 ; 978-0-89871-383-1 ; 978-0-89871-956-7 ; 9780898719567 ; Learning LaTex (978-0-89871-956-7) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1997 ; 978-0-89871-384-8 ; 978-0-89871-972-7 ; 9780898719727 ; Wavelets (978-0-89871-972-7) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1997 ; 978-0-89871-387-9 ; 978-0-89871-971-0 ; 9780898719710 ; An Introduction to Inverse Scattering and Inverse Spectral Problems (978-0-89871-971-0) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1997 ; 978-0-89871-388-6 ; 978-1-61197-143-9 ; 9781611971439 ; Linear Ordinary Differential Equations (978-1-61197-143-9) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1997 ; 978-0-89871-389-3 ; 978-1-61197-144-6 ; 9781611971446 ; Applied Numerical Linear Algebra (978-1-61197-144-6) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1997 ; 978-0-89871-394-7 ; 978-0-89871-976-5 ; 9780898719765 ; Statistical Case Studies for Industrial Process Improvement (978-0-89871-976-5) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1997 ; 978-0-89871-396-1 ; 978-1-61197-093-7 ; 9781611970937 ; Iterative Methods for Solving Linear Systems (978-1-61197-093-7) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1997 ; 978-0-89871-399-2 ; 978-1-61197-117-0 ; 9781611971170 ; Introduction to Matrix Analysis, Second Edition (978-1-61197-117-0) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1997 ; 978-0-89871-400-5 ; 978-0-89871-964-2 ; 9780898719642 ; ScaLAPACK Users' Guide (978-0-89871-964-2) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+
+   au < finished ; finished ; 1998 ; 978-0-89871-374-9 ; 978-1-61197-146-0 ; 9781611971460 ; Computational Integration (978-1-61197-146-0) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1998 ; 978-0-89871-398-5 ; 978-0-89871-970-3 ; 9780898719703 ; Numerical Simulation in Fluid Dynamics (978-0-89871-970-3) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1998 ; 978-0-89871-402-9 ; 978-1-61197-116-3 ; 9781611971163 ; The Symmetric Eigenvalue Problem (978-1-61197-116-3) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1998 ; 978-0-89871-403-6 ; 978-0-89871-969-7 ; 9780898719697 ; Rank-Deficient and Discrete Ill-Posed Problems (978-0-89871-969-7) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1998 ; 978-0-89871-404-3 ; 978-1-61197-142-2 ; 9781611971422 ; Afternotes Goes to Graduates School (978-1-61197-142-2) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1998 ; 978-0-89871-405-0 ; 978-0-89871-975-8 ; 9780898719758 ; Engineering Reliability (978-0-89871-975-8) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1998 ; 978-0-89871-406-7 ; 978-1-61197-141-5 ; 9781611971415 ; Optimal Control of Viscous Flow (978-1-61197-141-5) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1998 ; 978-0-89871-407-4 ; 978-0-89871-962-8 ; 9780898719628 ; ARPACK Users' Guide (978-0-89871-962-8) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1998 ; 978-0-89871-408-1 ; 978-1-61197-115-6 ; 9781611971156 ; Mathematical Models: Mechanical Vibrations, Population Dynamics, and Traffic Flow (978-1-61197-115-6) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1998 ; 978-0-89871-409-8 ; 978-0-89871-963-5 ; 9780898719635 ; PLTMG: A Software Package for Solving Elliptic Partial Differential Equations (978-0-89871-963-5) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1998 ; 978-0-89871-414-2 ; 978-1-61197-140-8 ; 9781611971408 ; Matrix Algorithms (978-1-61197-140-8) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1998 ; 978-0-89871-415-9 ; 978-1-61197-001-2 ; 9781611970012 ; Methods for Solving Systems of Nonlinear Equations (978-1-61197-001-2) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1998 ; 978-0-89871-416-6 ; 978-1-61197-138-5 ; 9781611971385 ; Wavelets and Their Applications: Case Studies (978-1-61197-138-5) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1998 ; 978-0-89871-417-3 ; 978-1-61197-000-5 ; 9781611970005 ; An Introduction to Structured Population Dynamics (978-1-61197-000-5) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1998 ; 978-0-89871-419-7 ; 978-1-61197-136-1 ; 9781611971361 ; Classical Control Using H∞ Methods (978-1-61197-136-1) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1998 ; 978-0-89871-420-3 ; 978-0-89871-955-0 ; 9780898719550 ; Handbook of Writing for the Mathematical Sciences, Second Edition (978-0-89871-955-0) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1998 ; 978-0-89871-421-0 ; 978-0-89871-974-1 ; 9780898719741 ; Statistical Case Studies (978-0-89871-974-1) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1998 ; 978-0-89871-424-1 ; 978-1-61197-137-8 ; 9781611971378 ; Classical Control Using H-Infinity Methods (978-1-61197-137-8) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1998 ; 978-0-89871-427-2 ; 978-1-61197-114-9 ; 9781611971149 ; Statistical Design and Analysis of Experiments (978-1-61197-114-9) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1998 ; 978-0-89871-428-9 ; 978-0-89871-961-1 ; 9780898719611 ; Numerical Linear Algebra for High-Performance Computers (978-0-89871-961-1) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1998 ; 978-0-89871-429-6 ; 978-1-61197-113-2 ; 9781611971132 ; Dynamic Noncooperative Game Theory, 2nd Edition (978-1-61197-113-2) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+
+   au < finished ; finished ; 1999 ; 978-0-89871-411-1 ; 978-1-61197-076-0 ; 9781611970760 ; Indefinite-Quadratic Estimation and Control (978-1-61197-076-0) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1999 ; 978-0-89871-422-7 ; 978-0-89871-981-9 ; 9780898719819 ; Evaluation and Optimization of Electoral Systems (978-0-89871-981-9) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1999 ; 978-0-89871-425-8 ; 978-0-89871-973-4 ; 9780898719734 ; Introduction to Matrix Analytic Methods in Stochastic Modeling (978-0-89871-973-4) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1999 ; 978-0-89871-430-2 ; 978-0-89871-980-2 ; 9780898719802 ; Topics in Intersection Graph Theory (978-0-89871-980-2) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1999 ; 978-0-89871-431-9 ; 978-1-61197-135-4 ; 9781611971354 ; Fast Reliable Algorithms for Matrices with Structure (978-1-61197-135-4) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1999 ; 978-0-89871-432-6 ; 978-0-89871-979-6 ; 9780898719796 ; Graph Classes: A Survey (978-0-89871-979-6) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1999 ; 978-0-89871-433-3 ; 978-1-61197-092-0 ; 9781611970920 ; Iterative Methods for Optimization (978-1-61197-092-0) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1999 ; 978-0-89871-439-5 ; 978-1-61197-110-1 ; 9781611971101 ; Selecting and Ordering Populations: A New Statistical Methodology (978-1-61197-110-1) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; frozen ; 1999 ; 978-0-89871-440-1 ; 978-0-89871-984-0 ; 9780898719840 ; Extending H (978-0-89871-984-0) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1999 ; 978-0-89871-441-8 ; 978-1-61197-112-5 ; 9781611971125 ; Stochastic Processes (978-1-61197-112-5) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1999 ; 978-0-89871-443-2 ; 978-1-61197-109-5 ; 9781611971095 ; Perturbations: Theory and Methods (978-1-61197-109-5) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1999 ; 978-0-89871-444-9 ; 978-1-61197-111-8 ; 9781611971118 ; Singular Perturbation Methods in Control: Analysis and Design (978-1-61197-111-8) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1999 ; 978-0-89871-447-0 ; 978-0-89871-960-4 ; 9780898719604 ; LAPACK Users' Guide (978-0-89871-960-4) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1999 ; 978-0-89871-450-0 ; 978-1-61197-108-8 ; 9781611971088 ; Convex Analysis and Variational Problems (978-1-61197-108-8) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+
+   au < finished ; frozen ; 2000 ; 978-0-89871-436-4 ; 978-0-89871-942-0 ; 9780898719420 ; Hyperbolic and Viscous Conservation Laws (978-0-89871-942-0) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2000 ; 978-0-89871-438-8 ; 978-0-89871-983-3 ; 9780898719833 ; Advances in Linear Matrix Inequality Methods in Control (978-0-89871-983-3) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2000 ; 978-0-89871-442-5 ; 978-0-89871-954-3 ; 9780898719543 ; Numerical Methods for Bifurcations of Dynamical Equilibria (978-0-89871-954-3) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2000 ; 978-0-89871-446-3 ; 978-0-89871-953-6 ; 9780898719536 ; Nonholonomic Motion of Rigid Mechanical Systems from a DAE Viewpoint (978-0-89871-953-6) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2000 ; 978-0-89871-452-4 ; 978-0-89871-952-9 ; 9780898719529 ; Variational Methods in Nonlinear Elasticity (978-0-89871-952-9) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2000 ; 978-0-89871-455-5 ; 978-0-89871-986-4 ; 9780898719864 ; Strongly Stablizable Distributed Parameter Systems (978-0-89871-986-4) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2000 ; 978-0-89871-456-2 ; 978-0-89871-947-5 ; 9780898719475 ; Boundary Value Problems of Mathematical Physics: Volume 2 (978-0-89871-947-5) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2000 ; 978-0-89871-456-2 ; 978-0-89871-988-8 ; 9780898719888 ; Boundary Value Problems of Mathematical Physics: Volume 1 (978-0-89871-988-8) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2000 ; 978-0-89871-457-9 ; 978-0-89871-941-3 ; 9780898719413 ; Mathematical Analysis of Viscoelastic Flows (978-0-89871-941-3) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2000 ; 978-0-89871-458-6 ; 978-0-89871-978-9 ; 9780898719789 ; Branching Programs and Binary Decision Diagrams (978-0-89871-978-9) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2000 ; 978-0-89871-459-3 ; 978-0-89871-987-1 ; 9780898719871 ; Electromagnetic Material Interrogation Using Conductive Interfaces and Acoustic Wavefronts (978-0-89871-987-1) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2000 ; 978-0-89871-460-9 ; 978-0-89871-985-7 ; 9780898719857 ; Trust Region Methods (978-0-89871-985-7) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2000 ; 978-0-89871-461-6 ; 978-0-89871-946-8 ; 9780898719468 ; Iterative Solution of Nonlinear Equations in Several Variables (978-0-89871-946-8) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2000 ; 978-0-89871-462-3 ; 978-0-89871-950-5 ; 9780898719505 ; A Multigrid Tutorial, Second Edition (978-0-89871-950-5) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2000 ; 978-0-89871-464-7 ; 978-0-89871-977-2 ; 9780898719772 ; Distributed Computing: A Locality-Sensitive Approach (978-0-89871-977-2) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; frozen ; 2000 ; 978-0-89871-465-4 ; 978-0-89871-959-8 ; 9780898719598 ; Spectral Methods in MATLAB (978-0-89871-959-8) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2000 ; 978-0-89871-466-1 ; 978-0-89871-945-1 ; 9780898719451 ; An Introduction to Variational Inequalities and Their Applications (978-0-89871-945-1) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2000 ; 978-0-89871-471-5 ; 978-0-89871-958-1 ; 9780898719581 ; Templates for the Solution of Algebraic Eigenvalue Problems (978-0-89871-958-1) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+
+   au < finished ; finished ; 2001 ; 978-0-89871-448-7 ; 978-0-89871-811-9 ; 9780898718119 ; Wavelets (978-0-89871-811-9) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2001 ; 978-0-89871-463-0 ; 978-0-89871-810-2 ; 9780898718102 ; George Green: Mathematician and Physicist 1793–1841 (978-0-89871-810-2) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2001 ; 978-0-89871-473-9 ; 978-0-89871-847-8 ; 9780898718478 ; A Primer for Sampling Solids, Liquids, and Gases (978-0-89871-847-8) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2001 ; 978-0-89871-474-6 ; 978-0-89871-848-5 ; 9780898718485 ; Eliciting and Analyzing Expert Judgment (978-0-89871-848-5) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2001 ; 978-0-89871-475-3 ; 978-0-89871-759-4 ; 9780898717594 ; Mathematical Modeling in Optical Science (978-0-89871-759-4) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2001 ; 978-0-89871-478-4 ; 978-0-89871-855-3 ; 9780898718553 ; Combinatorial Data Analysis (978-0-89871-855-3) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2001 ; 978-0-89871-479-1 ; 978-0-89871-854-6 ; 9780898718546 ; Complexity Classifications of Boolean Constraint Satisfaction Problems (978-0-89871-854-6) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2001 ; 978-0-89871-480-7 ; 978-0-89871-853-9 ; 9780898718539 ; Discrete Mathematics of Neural Networks (978-0-89871-853-9) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2001 ; 978-0-89871-481-4 ; 978-0-89871-710-5 ; 9780898717105 ; Combinatorial Optimization (978-0-89871-710-5) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2001 ; 978-0-89871-482-1 ; 978-0-89871-807-2 ; 9780898718072 ; Numerical Computing with IEEE Floating Point Arithmetic (978-0-89871-807-2) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2001 ; 978-0-89871-484-5 ; 978-0-89871-821-8 ; 9780898718218 ; Performance Optimization of Numerically Intensive Codes (978-0-89871-821-8) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2001 ; 978-0-89871-491-3 ; 978-0-89871-882-9 ; 9780898718829 ; Lectures on Modern Convex Optimization (978-0-89871-882-9) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; frozen ; 2001 ; 978-0-89871-493-7 ; 978-0-89871-928-4 ; 9780898719284 ; The Mathematics of Computerized Tomography (978-0-89871-928-4) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; frozen ; 2001 ; 978-0-89871-494-4 ; 978-0-89871-927-7 ; 9780898719277 ; Principles of Computerized Tomographic Imaging (978-0-89871-927-7) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; frozen ; 2001 ; 978-0-89871-497-5 ; 978-0-89871-926-0 ; 9780898719260 ; Asymptotic Approximations of Integrals (978-0-89871-926-0) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2001 ; 978-0-89871-499-9 ; 978-0-89871-925-3 ; 9780898719253 ; Finite Element Solution of Boundary Value Problems (978-0-89871-925-3) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2001 ; 978-0-89871-501-9 ; 978-0-89871-924-6 ; 9780898719246 ; Time Series (978-0-89871-924-6) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2001 ; 978-0-89871-502-6 ; 978-0-89871-881-2 ; 9780898718812 ; A Mathematical View of Interior-Point Methods in Convex Optimization (978-0-89871-881-2) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2001 ; 978-0-89871-503-3 ; 978-0-89871-805-8 ; 9780898718058 ; Matrix Algorithms (978-0-89871-805-8) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2001 ; 978-0-89871-504-0 ; 978-0-89871-820-1 ; 9780898718201 ; LAPACK95 Users' Guide (978-0-89871-820-1) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2001 ; 978-0-89871-622-1 ; 978-0-89871-832-4 ; 9780898718324 ; Mathematical Methods in Image Reconstruction (978-0-89871-832-4) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+
+   au < finished ; finished ; 2002 ; 978-0-89871-483-8 ; 978-0-89871-831-7 ; 9780898718317 ; Credit Scoring and Its Applications (978-0-89871-831-7) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2002 ; 978-0-89871-486-9 ; 978-0-89871-709-9 ; 9780898717099 ; Mathematical Control Theory of Coupled PDEs (978-0-89871-709-9) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2002 ; 978-0-89871-496-8 ; 978-0-89871-846-1 ; 9780898718461 ; Multivariate Statistical Process Control with Industrial Applications (978-0-89871-846-1) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2002 ; 978-0-89871-498-2 ; 978-0-89871-851-5 ; 9780898718515 ; The Vehicle Routing Problem (978-0-89871-851-5) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2002 ; 978-0-89871-505-7 ; 978-0-89871-756-3 ; 9780898717563 ; Neuro-Fuzzy Control of Industrial Systems with Actuator Nonlinearities (978-0-89871-756-3) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2002 ; 978-0-89871-506-4 ; 978-0-89871-819-5 ; 9780898718195 ; Simulating, Analyzing, and Animating Dynamical Systems (978-0-89871-819-5) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2002 ; 978-0-89871-508-8 ; 978-0-89871-830-0 ; 9780898718300 ; Facts, Conjectures, and Improvements for Simulated Annealing (978-0-89871-830-0) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2002 ; 978-0-89871-509-5 ; 978-0-89871-923-9 ; 9780898719239 ; Methods of Mathematical Economics (978-0-89871-923-9) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2002 ; 978-0-89871-510-1 ; 978-0-89871-922-2 ; 9780898719222 ; Ordinary Differential Equations (978-0-89871-922-2) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; frozen ; 2002 ; 978-0-89871-511-8 ; 978-0-89871-921-5 ; 9780898719215 ; Mathematical Optimization and Economic Theory (978-0-89871-921-5) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2002 ; 978-0-89871-514-9 ; 978-0-89871-920-8 ; 9780898719208 ; The Finite Element Method for Elliptic Problems (978-0-89871-920-8) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2002 ; 978-0-89871-519-4 ; 978-0-89871-829-4 ; 9780898718294 ; Stochastic Modeling in Broadband Communications Systems (978-0-89871-829-4) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2002 ; 978-0-89871-521-7 ; 978-0-89871-802-7 ; 9780898718027 ; Accuracy and Stability of Numerical Algorithms (978-0-89871-802-7) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2002 ; 978-0-89871-523-1 ; 978-0-89871-919-2 ; 9780898719192 ; Lanczos Algorithms for Large Symmetric Eigenvalue Computations (978-0-89871-919-2) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2002 ; 978-0-89871-524-8 ; 978-0-89871-755-6 ; 9780898717556 ; Design Sensitivity Analysis (978-0-89871-755-6) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2002 ; 978-0-89871-525-5 ; 978-0-89871-844-7 ; 9780898718447 ; Fuzzy Logic and Probability Applications (978-0-89871-844-7) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; frozen ; 2002 ; 978-0-89871-526-2 ; 978-0-89871-918-5 ; 9780898719185 ; Nonlinear Systems Analysis (978-0-89871-918-5) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2002 ; 978-0-89871-527-9 ; 978-0-89871-872-0 ; 9780898718720 ; Perspectives in Flow Control and Optimization (978-0-89871-872-0) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2002 ; 978-0-89871-531-6 ; 978-0-89871-917-8 ; 9780898719178 ; Ordinary Differential Equations in Theory and Practice (978-0-89871-917-8) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2002 ; 978-0-89871-532-3 ; 978-0-89871-916-1 ; 9780898719161 ; Multiple Decision Procedures (978-0-89871-916-1) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2002 ; 978-0-89871-550-7 ; 978-0-89871-757-0 ; 9780898717570 ; Computational Methods for Inverse Problems (978-0-89871-757-0) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+
+   au < finished ; finished ; 2003 ; 978-0-89871-522-4 ; 978-0-89871-845-4 ; 9780898718454 ; Recurrent Events Data Analysis for Product Repairs, Disease Recurrences, and Other Applications (978-0-89871-845-4) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2003 ; 978-0-89871-528-6 ; 978-0-89871-801-0 ; 9780898718010 ; Control in an Information Rich World (978-0-89871-801-0) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2003 ; 978-0-89871-534-7 ; 978-0-89871-800-3 ; 9780898718003 ; Iterative Methods for Sparse Linear Systems (978-0-89871-800-3) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2003 ; 978-0-89871-536-1 ; 978-0-89871-869-0 ; 9780898718690 ; Introduction to Shape Optimization (978-0-89871-869-0) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2003 ; 978-0-89871-537-8 ; 978-0-89871-818-8 ; 9780898718188 ; The Lanczos Method (978-0-89871-818-8) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2003 ; 978-0-89871-540-8 ; 978-0-89871-850-8 ; 9780898718508 ; Discrete Convex Analysis (978-0-89871-850-8) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2003 ; 978-0-89871-541-5 ; 978-0-89871-817-1 ; 9780898718171 ; A Tutorial on Elliptic PDE Solvers and Their Parallelization (978-0-89871-817-1) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; frozen ; 2003 ; 978-0-89871-544-6 ; 978-0-89871-915-4 ; 9780898719154 ; Introduction to Numerical Continuation Methods (978-0-89871-915-4) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2003 ; 978-0-89871-546-0 ; 978-0-89871-889-8 ; 9780898718898 ; Solving Nonlinear Equations with Newton's Method (978-0-89871-889-8) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2003 ; 978-0-89871-548-4 ; 978-0-89871-752-5 ; 9780898717525 ; Research Directions in Distributed Parameter Systems (978-0-89871-752-5) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2003 ; 978-0-89871-549-1 ; 978-0-89871-751-8 ; 9780898717518 ; Bioterrorism: Mathematical Modeling Applications in Homeland Security (978-0-89871-751-8) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2003 ; 978-0-89871-551-4 ; 978-0-89871-750-1 ; 9780898717501 ; Axiomatic Consensus Theory in Group Choice and Biomathematics (978-0-89871-750-1) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2003 ; 978-0-89871-699-3 ; 978-0-89871-753-2 ; 9780898717532 ; Finite Element Methods with B-Splines (978-0-89871-753-2) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+
+   au < finished ; finished ; 2004 ; 978-0-89871-539-2 ; 978-0-89871-828-7 ; 9780898718287 ; Applied Mathematical Models in Human Physiology (978-0-89871-828-7) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2004 ; 978-0-89871-547-7 ; 978-0-89871-798-3 ; 9780898717983 ; Marine Acoustics (978-0-89871-798-3) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2004 ; 978-0-89871-552-1 ; 978-0-89871-880-5 ; 9780898718805 ; The Sharpest Cut (978-0-89871-880-5) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2004 ; 978-0-89871-553-8 ; 978-0-89871-843-0 ; 9780898718430 ; Applied Adaptive Statistical Methods (978-0-89871-843-0) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2004 ; 978-0-89871-556-9 ; 978-0-89871-708-2 ; 9780898717082 ; Mathematical Principles of Optical Fiber Communications (978-0-89871-708-2) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2004 ; 978-0-89871-557-6 ; 978-0-89871-797-6 ; 9780898717976 ; Numerical Polynomial Algebra (978-0-89871-797-6) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2004 ; 978-0-89871-561-3 ; 978-0-89871-796-9 ; 9780898717969 ; The SIAM 100-Digit Challenge (978-0-89871-796-9) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2004 ; 978-0-89871-562-0 ; 978-0-89871-868-3 ; 9780898718683 ; Nonlinear Output Regulation (978-0-89871-868-3) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2004 ; 978-0-89871-563-7 ; 978-0-89871-842-3 ; 9780898718423 ; Bayesian Nonparametrics via Neural Networks (978-0-89871-842-3) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; frozen ; 2004 ; 978-0-89871-565-1 ; 978-0-89871-913-0 ; 9780898719130 ; Initial-Boundary Value Problems and the Navier-Stokes Equations (978-0-89871-913-0) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2004 ; 978-0-89871-567-5 ; 978-0-89871-793-8 ; 9780898717938 ; Finite Difference Schemes and Partial Differential Equations, Second Edition (978-0-89871-793-8) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2004 ; 978-0-89871-660-3 ; 978-0-89871-795-2 ; 9780898717952 ; Numerical Computing with (978-0-89871-795-2) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+
+   au < finished ; finished ; 2005 ; 978-0-89871-529-3 ; 978-0-89871-871-3 ; 9780898718713 ; Approximation of Large-Scale Dynamical Systems (978-0-89871-871-3) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2005 ; 978-0-89871-535-4 ; 978-0-89871-799-0 ; 9780898717990 ; An Uneasy Alliance (978-0-89871-799-0) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2005 ; 978-0-89871-554-5 ; 978-0-89871-914-7 ; 9780898719147 ; Mathematical Models in Biology (978-0-89871-914-7) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2005 ; 978-0-89871-555-2 ; 978-0-89871-879-9 ; 9780898718799 ; Applications of Stochastic Programming (978-0-89871-879-9) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2005 ; 978-0-89871-566-8 ; 978-0-89871-841-6 ; 9780898718416 ; Mathematica Laboratories for Mathematical Statistics (978-0-89871-841-6) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2005 ; 978-0-89871-569-9 ; 978-0-89871-849-2 ; 9780898718492 ; Algebraic Theory of Automata Networks (978-0-89871-849-2) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2005 ; 978-0-89871-572-9 ; 978-0-89871-792-1 ; 9780898717921 ; Inverse Problem Theory and Methods for Model Parameter Estimation (978-0-89871-792-1) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2005 ; 978-0-89871-573-6 ; 978-0-89871-749-5 ; 9780898717495 ; Computational Methods for Option Pricing (978-0-89871-749-5) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2005 ; 978-0-89871-574-3 ; 978-0-89871-791-4 ; 9780898717914 ; Ants, Bikes, and Clocks (978-0-89871-791-4) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; frozen ; 2005 ; 978-0-89871-575-0 ; 978-0-89871-912-3 ; 9780898719123 ; Basic Concepts of Probability and Statistics (978-0-89871-912-3) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2005 ; 978-0-89871-577-4 ; 978-0-89871-748-8 ; 9780898717488 ; Gender-Structured Population Modeling (978-0-89871-748-8) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2005 ; 978-0-89871-578-1 ; 978-0-89871-789-1 ; 9780898717891 ; Matlab Guide (978-0-89871-789-1) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2005 ; 978-0-89871-580-4 ; 978-0-89871-839-3 ; 9780898718393 ; Experimental Design for Formulation (978-0-89871-839-3) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2005 ; 978-0-89871-581-1 ; 978-0-89871-816-4 ; 9780898718164 ; Understanding Search Engines (978-0-89871-816-4) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2005 ; 978-0-89871-582-8 ; 978-0-89871-788-4 ; 9780898717884 ; Mining Imperfect Data (978-0-89871-788-4) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2005 ; 978-0-89871-583-5 ; 978-0-89871-747-1 ; 9780898717471 ; Smart Material Systems (978-0-89871-747-1) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2005 ; 978-0-89871-584-2 ; 978-0-89871-815-7 ; 9780898718157 ; Accuracy and Reliability in Scientific Computing (978-0-89871-815-7) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2005 ; 978-0-89871-586-6 ; 978-0-89871-867-6 ; 9780898718676 ; Applied Dynamic Programming for Optimization of Dynamical Systems (978-0-89871-867-6) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2005 ; 978-0-89871-587-3 ; 978-0-89871-838-6 ; 9780898718386 ; Anthology of Statistics in Sports (978-0-89871-838-6) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2005 ; 978-0-89871-588-0 ; 978-0-89871-837-9 ; 9780898718379 ; Design and Analysis of Gauge R&R Studies (978-0-89871-837-9) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2005 ; 978-0-89871-589-7 ; 978-0-89871-787-7 ; 9780898717877 ; Image Processing and Analysis (978-0-89871-787-7) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2005 ; 978-0-89871-592-7 ; 978-0-89871-836-2 ; 9780898718362 ; The Analysis of Means (978-0-89871-836-2) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2005 ; 978-0-89871-594-1 ; 978-0-89871-827-0 ; 9780898718270 ; Partial Differential Equations (978-0-89871-827-0) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; frozen ; 2005 ; 978-0-89871-595-8 ; 978-0-89871-911-6 ; 9780898719116 ; Functions of a Complex Variable: Theory and Technique (978-0-89871-911-6) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2005 ; 978-0-89871-597-2 ; 978-0-89871-786-0 ; 9780898717860 ; Singular Perturbations and Hysteresis (978-0-89871-786-0) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2005 ; 978-0-89871-599-6 ; 978-0-89871-785-3 ; 9780898717853 ; Spectral Properties of Banded Toeplitz Matrices (978-0-89871-785-3) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+
+   au < frozen ; exists ; 2006 ; 978-0-89871-615-3 ; 978-0-89871-865-2 ; 9780898718652 ; Adaptive Control Tutorial (978-0-89871-865-2) ; https://epubs.siam.org/ ; >
+   au < frozen ; exists ; 2006 ; 978-0-89871-612-2 ; 978-0-89871-825-6 ; 9780898718256 ; A Course in Mathematical Biology: Quantitative Modeling with Mathematical and Computational Methods (978-0-89871-825-6) ; https://epubs.siam.org/ ; >
+   au < finished ; finished ; 2006 ; 978-0-89871-602-3 ; 978-0-89871-866-9 ; 9780898718669 ; Control Perspectives on Numerical Algorithms and Matrix Problems (978-0-89871-866-9) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2006 ; 978-0-89871-603-0 ; 978-0-89871-826-3 ; 9780898718263 ; Exact and Approximate Modeling of Linear Systems (978-0-89871-826-3) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; frozen ; 2006 ; 978-0-89871-604-7 ; 978-0-89871-910-9 ; 9780898719109 ; Optimal Design of Experiments (978-0-89871-910-9) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2006 ; 978-0-89871-606-1 ; 978-0-89871-894-2 ; 9780898718942 ; Computational Methods for Multiphase Flows in Porous Media (978-0-89871-894-2) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2006 ; 978-0-89871-607-8 ; 978-0-89871-835-5 ; 9780898718355 ; The Structural Representation of Proximity Matrices with MATLAB (978-0-89871-835-5) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; frozen ; 2006 ; 978-0-89871-608-5 ; 978-0-89871-909-3 ; 9780898719093 ; Invariant Subspaces of Matrices with Applications (978-0-89871-909-3) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2006 ; 978-0-89871-609-2 ; 978-0-89871-746-4 ; 9780898717464 ; The Immersed Interface Method (978-0-89871-746-4) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2006 ; 978-0-89871-613-9 ; 978-0-89871-888-1 ; 9780898718881 ; Direct Methods for Sparse Linear Systems (978-0-89871-888-1) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2006 ; 978-0-89871-616-0 ; 978-0-89871-814-0 ; 9780898718140 ; The Lanczos and Conjugate Gradient Algorithms (978-0-89871-814-0) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2006 ; 978-0-89871-618-4 ; 978-0-89871-887-4 ; 9780898718874 ; Deblurring Images (978-0-89871-887-4) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2006 ; 978-0-89871-619-1 ; 978-0-89871-813-3 ; 9780898718133 ; Parallel Processing for Scientific Computing (978-0-89871-813-3) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+
+   au < frozen ; exists ; 2007 ; 978-0-89871-633-7 ; 978-0-89871-863-8 ; 9780898718638 ; Applied Stochastic Processes and Control for Jump-Diffusions: Modeling, Analysis and Computation (978-0-89871-863-8) ; https://epubs.siam.org/ ; >
+   au < frozen ; exists ; 2007 ; 978-0-89871-625-2 ; 978-0-89871-824-9 ; 9780898718249 ; Continuum Modeling in the Physical Sciences (978-0-89871-824-9) ; https://epubs.siam.org/ ; >
+   au < finished ; finished ; 2007 ; 978-0-89871-617-7 ; 978-0-89871-745-7 ; 9780898717457 ; Cardiovascular and Respiratory Systems (978-0-89871-745-7) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2007 ; 978-0-89871-620-7 ; 978-0-89871-908-6 ; 9780898719086 ; Mathematics Applied to Continuum Mechanics (978-0-89871-908-6) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2007 ; 978-0-89871-621-4 ; 978-0-89871-893-5 ; 9780898718935 ; Real-Time PDE-Constrained Optimization (978-0-89871-893-5) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2007 ; 978-0-89871-623-8 ; 978-0-89871-834-8 ; 9780898718348 ; Data Clustering: Theory, Algorithms, and Applications (978-0-89871-834-8) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2007 ; 978-0-89871-626-9 ; 978-0-89871-886-7 ; 9780898718867 ; Matrix Methods in Data Mining and Pattern Recognition (978-0-89871-886-7) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2007 ; 978-0-89871-627-6 ; 978-0-89871-892-8 ; 9780898718928 ; An Introduction to Modeling and Simulation of Particulate Flows (978-0-89871-892-8) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2007 ; 978-0-89871-629-0 ; 978-0-89871-783-9 ; 9780898717839 ; Finite Difference Methods for Ordinary and Partial Differential Equations (978-0-89871-783-9) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2007 ; 978-0-89871-631-3 ; 978-0-89871-907-9 ; 9780898719079 ; Perturbation Bounds for Matrix Eigenvalues (978-0-89871-907-9) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2007 ; 978-0-89871-632-0 ; 978-0-89871-864-5 ; 9780898718645 ; Stability and Stabilization of Time-Delay Systems (978-0-89871-864-5) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2007 ; 978-0-89871-634-4 ; 978-0-89871-782-2 ; 9780898717822 ; Numerical Methods for Special Functions (978-0-89871-782-2) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2007 ; 978-0-89871-635-1 ; 978-0-89871-823-2 ; 9780898718232 ; Differential Dynamical Systems (978-0-89871-823-2) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2007 ; 978-0-89871-636-8 ; 978-0-89871-885-0 ; 9780898718850 ; An Introduction to Iterative Toeplitz Solvers (978-0-89871-885-0) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2007 ; 978-0-89871-637-5 ; 978-0-89871-781-5 ; 9780898717815 ; Numerical Computing with Simulink, Volume I (978-0-89871-781-5) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2007 ; 978-0-89871-638-2 ; 978-0-89871-862-1 ; 9780898718621 ; Linear Feedback Control (978-0-89871-862-1) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2007 ; 978-0-89871-640-5 ; 978-0-89871-707-5 ; 9780898717075 ; Reservoir Simulation (978-0-89871-707-5) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2007 ; 978-0-89871-641-2 ; 978-0-89871-780-8 ; 9780898717808 ; The Matrix Eigenvalue Problem (978-0-89871-780-8) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2007 ; 978-0-89871-642-9 ; 978-0-89871-779-2 ; 9780898717792 ; Introduction to the Mathematics of Medical Imaging (978-0-89871-779-2) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2007 ; 978-0-89871-643-6 ; 978-0-89871-877-5 ; 9780898718775 ; Linear Programming with MATLAB (978-0-89871-877-5) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+
+   au < frozen ; exists ; 2008 ; 978-0-89871-650-4 ; 978-0-89871-860-7 ; 978-0-89871-860-7 ; Boundary Control of PDEs: A Course on Backstepping Designs (978-0-89871-860-7) ; https://epubs.siam.org/ ; >
+   au < frozen ; exists ; 2008 ; 978-0-89871-657-3 ; 978-0-89871-890-4 ; 978-0-89871-890-4 ; Introduction to the Numerical Analysis of Incompressible Viscous Flows (978-0-89871-890-4) ; https://epubs.siam.org/ ; >
+   au < finished ; finished ; 2008 ; 978-0-89871-644-3 ; 978-0-89871-778-5 ; 9780898717785 ; Numerical Methods in Scientific Computing, Volume I (978-0-89871-778-5) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2008 ; 978-0-89871-646-7 ; 978-0-89871-777-8 ; 9780898717778 ; Functions of Matrices (978-0-89871-777-8) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; frozen ; 2008 ; 978-0-89871-648-1 ; 978-0-89871-906-2 ; 9780898719062 ; A First Course in Order Statistics (978-0-89871-906-2) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2008 ; 978-0-89871-649-8 ; 978-0-89871-861-4 ; 9780898718614 ; Lagrange Multiplier Approach to Variational Problems and Applications (978-0-89871-861-4) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2008 ; 978-0-89871-651-1 ; 978-0-89871-706-8 ; 9780898717068 ; A Unified Approach to Boundary Value Problems (978-0-89871-706-8) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2008 ; 978-0-89871-652-8 ; 978-0-89871-891-1 ; 9780898718911 ; Numerical Methods for Evolutionary Differential Equations (978-0-89871-891-1) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2008 ; 978-0-89871-655-9 ; 978-0-89871-859-1 ; 9780898718591 ; Stochastic Processes, Estimation, and Control (978-0-89871-859-1) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2008 ; 978-0-89871-656-6 ; 978-0-89871-744-0 ; 9780898717440 ; Discontinuous Galerkin Methods for Solving Elliptic and Parabolic Equations (978-0-89871-744-0) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2008 ; 978-0-89871-659-7 ; 978-0-89871-776-1 ; 9780898717761 ; Evaluating Derivatives (978-0-89871-776-1) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2008 ; 978-0-89871-665-8 ; 978-0-89871-774-7 ; 9780898717747 ; Hidden Markov Models and Dynamical Systems (978-0-89871-774-7) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+
+   au < finished ; finished ; 2009 ; 978-0-89871-664-1 ; 978-0-89871-858-4 ; 9780898718584 ; UAV Cooperative Decision and Control (978-0-89871-858-4) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2009 ; 978-0-89871-666-5 ; 978-0-89871-772-3 ; 9780898717723 ; Scientific Computing with Case Studies (978-0-89871-772-3) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2009 ; 978-0-89871-668-9 ; 978-0-89871-876-8 ; 9780898718768 ; Introduction to Derivative-Free Optimization (978-0-89871-876-8) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2009 ; 978-0-89871-669-6 ; 978-0-89871-771-6 ; 9780898717716 ; Introduction to Interval Analysis (978-0-89871-771-6) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; frozen ; 2009 ; 978-0-89871-670-2 ; 978-0-89871-905-5 ; 9780898719055 ; Feedback Systems (978-0-89871-905-5) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; frozen ; 2009 ; 978-0-89871-671-9 ; 978-0-89871-904-8 ; 9780898719048 ; Generalized Inverses of Linear Transformations (978-0-89871-904-8) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2009 ; 978-0-89871-672-6 ; 978-0-89871-770-9 ; 9780898717709 ; Symmetry in Chaos (978-0-89871-770-9) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2009 ; 978-0-89871-673-3 ; 978-0-89871-812-6 ; 9780898718126 ; Parallel MATLAB for Multicore and Multinode Computers (978-0-89871-812-6) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2009 ; 978-0-89871-675-7 ; 978-0-89871-769-3 ; 9780898717693 ; Scientific Data Mining (978-0-89871-769-3) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2009 ; 978-0-89871-676-4 ; 978-0-89871-768-6 ; 9780898717686 ; Numerical Matrix Analysis (978-0-89871-768-6) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2009 ; 978-0-89871-677-1 ; 978-0-89871-929-1 ; 9780898719291 ; Fundamentals of Radar Imaging (978-0-89871-929-1) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; frozen ; 2009 ; 978-0-89871-678-8 ; 978-0-89871-903-1 ; 9780898719031 ; Solving Polynomial Systems Using Continuation for Engineering and Scientific Problems (978-0-89871-903-1) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2009 ; 978-0-89871-679-5 ; 978-0-89871-767-9 ; 9780898717679 ; The Basics of Practical Optimization (978-0-89871-767-9) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2009 ; 978-0-89871-681-8 ; 978-0-89871-902-4 ; 9780898719024 ; Matrix Polynomials (978-0-89871-902-4) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2009 ; 978-0-89871-683-2 ; 978-0-89871-766-2 ; 9780898717662 ; Learning MATLAB (978-0-89871-766-2) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; frozen ; 2009 ; 978-0-89871-684-9 ; 978-0-89871-901-7 ; 9780898719017 ; Empirical Processes with Applications to Statistics (978-0-89871-901-7) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; frozen ; 2009 ; 978-0-89871-686-3 ; 978-0-89871-900-0 ; 9780898719000 ; The Linear Complementarity Problem (978-0-89871-900-0) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2009 ; 978-0-89871-687-0 ; 978-0-89871-875-1 ; 9780898718751 ; Lectures on Stochastic Programming (978-0-89871-875-1) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2009 ; 978-0-89871-689-4 ; 978-0-89871-899-7 ; 9780898718997 ; Stochastic Processes with Applications (978-0-89871-899-7) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2009 ; 978-0-89871-690-0 ; 978-0-89871-884-3 ; 9780898718843 ; FAIR: Flexible Algorithms for Image Registration (978-0-89871-884-3) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+
+   au < finished ; finished ; 2010 ; 978-0-89871-688-7 ; 978-0-89871-857-7 ; 9780898718577 ; Practical Methods for Optimal Control and Estimation Using Nonlinear Programming (978-0-89871-857-7) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2010 ; 978-0-89871-691-7 ; 978-0-89871-764-8 ; 9780898717648 ; Insight through Computing (978-0-89871-764-8) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2010 ; 978-0-89871-692-4 ; 978-0-89871-763-1 ; 9780898717631 ; Probabilistic Boolean Networks (978-0-89871-763-1) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; frozen ; 2010 ; 978-0-89871-693-1 ; 978-0-89871-898-0 ; 9780898718980 ; The Geometry of Random Fields (978-0-89871-898-0) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2010 ; 978-0-89871-694-8 ; 978-0-89871-856-0 ; 9780898718560 ; Primer on Optimal Control Theory (978-0-89871-856-0) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2010 ; 978-0-89871-695-5 ; 978-0-89871-762-4 ; 9780898717624 ; Mathematics of Social Choice (978-0-89871-762-4) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2010 ; 978-0-89871-696-2 ; 978-0-89871-883-6 ; 9780898718836 ; Discrete Inverse Problems (978-0-89871-883-6) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2010 ; 978-0-89871-697-9 ; 978-0-89871-761-7 ; 9780898717617 ; Introduction to the Mathematics of Subdivision Surfaces (978-0-89871-761-7) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2010 ; 978-0-89871-700-6 ; 978-0-89871-760-0 ; 9780898717600 ; Modeling, Simulation, and Optimization of Supply Chains (978-0-89871-760-0) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2010 ; 978-0-89871-702-0 ; 978-0-89871-938-3 ; 9780898719383 ; Nonlinear Programming (978-0-89871-938-3) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2010 ; 978-0-89871-704-4 ; 978-0-89871-937-6 ; 9780898719376 ; ℒ1 Adaptive Control Theory (978-0-89871-937-6) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2010 ; 978-0-89871-705-1 ; 978-0-89871-968-0 ; 9780898719680 ; Nonlinear Waves in Integrable and Nonintegrable Systems (978-0-89871-968-0) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2010 ; 978-0-89871-896-6 ; 978-0-89871-943-7 ; 9780898719437 ; Generalized Concavity (978-0-89871-943-7) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2010 ; 978-0-89871-897-3 ; 978-0-89871-989-5 ; 9780898719895 ; Normal Approximation and Asymptotic Expansions (978-0-89871-989-5) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+
+   au < finished ; finished ; 2011 ; 978-0-89871-936-9 ; 978-0-89871-982-6 ; 9780898719826 ; Shapes and Geometries (978-0-89871-982-6) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2011 ; 978-0-89871-939-0 ; 978-0-89871-940-6 ; 9780898719406 ; The Linear Sampling Method in Inverse Electromagnetic Scattering (978-0-89871-940-6) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2011 ; 978-0-89871-990-1 ; 978-0-89871-991-8 ; 9780898719918 ; Graph Algorithms in the Language of Linear Algebra (978-0-89871-991-8) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2011 ; 978-0-89871-997-0 ; 978-0-89871-998-7 ; 9780898719987 ; A First Course in Numerical Methods (978-0-89871-998-7) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2011 ; 978-0-89871-999-4 ; 978-1-61197-067-8 ; 9781611970678 ; Spectral Approximation of Linear Operators (978-1-61197-067-8) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2011 ; 978-1-61197-068-5 ; 978-1-61197-069-2 ; 9781611970692 ; Semismooth Newton Methods for Variational Inequalities and Constrained Optimization Problems in Function Spaces (978-1-61197-069-2) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2011 ; 978-1-61197-070-8 ; 978-1-61197-071-5 ; 9781611970715 ; Dynamics with Inequalities (978-1-61197-071-5) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2011 ; 978-1-61197-072-2 ; 978-1-61197-073-9 ; 9781611970739 ; Numerical Methods for Large Eigenvalue Problems (978-1-61197-073-9) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2011 ; 978-1-61197-074-6 ; 978-1-61197-075-3 ; 9781611970753 ; Multigrid Techniques (978-1-61197-075-3) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2011 ; 978-1-61197-186-6 ; 978-1-61197-187-3 ; 9781611971873 ; Nonlinear Water Waves with Applications to Wave-Current Interactions and Tsunamis (978-1-61197-187-3) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2011 ; 978-1-61197-189-7 ; 978-1-61197-190-3 ; 9781611971903 ; Implicit Filtering (978-1-61197-190-3) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2011 ; 978-1-61197-191-0 ; 978-1-61197-192-7 ; 9781611971927 ; Polynomial Based Iteration Methods for Symmetric Linear Systems (978-1-61197-192-7) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2011 ; 978-1-61197-193-4 ; 978-1-61197-194-1 ; 9781611971941 ; Alternating Projection Methods (978-1-61197-194-1) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2011 ; 978-1-61197-196-5 ; 978-1-61197-197-2 ; 9781611971972 ; The Mathematics of Diffusion (978-1-61197-197-2) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2011 ; 978-1-61197-198-9 ; 978-1-61197-199-6 ; 9781611971996 ; Spectral Numerical Weather Prediction Models (978-1-61197-199-6) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2011 ; 978-1-61197-200-9 ; 978-1-61197-201-6 ; 9781611972016 ; Taylor Approximations for Stochastic Partial Differential Equations (978-1-61197-201-6) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2011 ; 978-1-61197-202-3 ; 978-1-61197-203-0 ; 9781611972030 ; Elliptic Problems in Nonsmooth Domains (978-1-61197-203-0) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2011 ; 978-1-61197-204-7 ; 978-1-61197-205-4 ; 9781611972054 ; Computational Optimization of Systems Governed by Partial Differential Equations (978-1-61197-205-4) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2011 ; 978-1-61197-206-1 ; 978-1-61197-207-8 ; 9781611972078 ; The Art of Differentiating Computer Programs (978-1-61197-207-8) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2011 ; 978-1-61197-208-5 ; 978-1-61197-209-2 ; 9781611972092 ; Numerical Solution of Algebraic Riccati Equations (978-1-61197-209-2) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+
+   au < finished ; finished ; 2012 ; 978-1-61197-214-6 ; 978-1-61197-215-3 ; 9781611972153 ; Introduction to Optimization and Semidifferential Calculus (978-1-61197-215-3) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2012 ; 978-1-61197-218-4 ; 978-1-61197-219-1 ; 9781611972191 ; The Statistical Theory of Linear Systems (978-1-61197-219-1) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2012 ; 978-1-61197-222-1 ; 978-1-61197-223-8 ; 9781611972238 ; Assignment Problems (978-1-61197-223-8) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2012 ; 978-1-61197-224-5 ; 978-1-61197-225-2 ; 9781611972252 ; Control and Optimization with Differential-Algebraic Constraints (978-1-61197-225-2) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2012 ; 978-1-61197-228-3 ; 978-1-61197-229-0 ; 9781611972290 ; Semidefinite Optimization and Convex Algebraic Geometry (978-1-61197-229-0) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2012 ; 978-1-61197-230-6 ; 978-1-61197-231-3 ; 9781611972313 ; From Vector Spaces to Function Spaces (978-1-61197-231-3) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2012 ; 978-1-61197-233-7 ; 978-1-61197-234-4 ; 9781611972344 ; Linear and Nonlinear Inverse Problems with Practical Applications (978-1-61197-234-4) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2012 ; 978-1-61197-235-1 ; 978-1-61197-236-8 ; 9781611972368 ; Applications to Regular and Bang-Bang Control (978-1-61197-236-8) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2012 ; 978-1-61197-241-2 ; 978-1-61197-242-9 ; 9781611972429 ; Mathematical Models for Communicable Diseases (978-1-61197-242-9) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2012 ; 978-1-61197-243-6 ; 978-1-61197-244-3 ; 9781611972443 ; Algebraic and Geometric Ideas in the Theory of Discrete Optimization (978-1-61197-244-3) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2012 ; 978-1-61197-245-0 ; 978-1-61197-246-7 ; 9781611972467 ; Eigenvalues of Matrices (978-1-61197-246-7) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+
+   au < frozen ; exists ; 2013 ; 978-1-61197-294-8 ; 978-1-61197-295-5 ; 9781611972955 ; Approximation and Modeling with B-Splines (978-1-61197-295-5) ; https://epubs.siam.org/ ; >
+   au < frozen ; exists ; 2013 ; 978-1-61197-311-2 ; 978-1-61197-312-9 ; 9781611973129 ; Numerical Computing with Modern Fortran (978-1-61197-312-9) ; https://epubs.siam.org/ ; >
+   au < frozen ; exists ; 2013 ; 978-1-61197-269-6 ; 978-1-61197-270-2 ; 9781611972702 ; Numerically Solving Polynomial Systems with Bertini (978-1-61197-270-2) ; https://epubs.siam.org/ ; >
+   au < finished ; finished ; 2013 ; 978-1-61197-249-8 ; 978-1-61197-250-4 ; 9781611972504 ; A Primer on Mathematical Models in Biology (978-1-61197-250-4) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2013 ; 978-1-61197-256-6 ; 978-1-61197-257-3 ; 9781611972573 ; Recipes for Continuation (978-1-61197-257-3) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2013 ; 978-1-61197-260-3 ; 978-1-61197-261-0 ; 9781611972610 ; Mathematics and Climate (978-1-61197-261-0) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2013 ; 978-1-61197-263-4 ; 978-1-61197-264-1 ; 9781611972641 ; Applied and Computational Measurable Dynamics (978-1-61197-264-1) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2013 ; 978-1-61197-266-5 ; 978-1-61197-267-2 ; 9781611972672 ; Global Optimization (978-1-61197-267-2) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2013 ; 978-1-61197-304-4 ; 978-1-61197-305-1 ; 9781611973051 ; Semi-Lagrangian Approximation Schemes for Linear and Hamilton—Jacobi Equations (978-1-61197-305-1) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2013 ; 978-1-61197-313-6 ; 978-1-61197-314-3 ; 9781611973143 ; Analytic Perturbation Theory and Its Applications (978-1-61197-314-3) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2013 ; 978-1-61197-315-0 ; 978-1-61197-316-7 ; 9781611973167 ; Integral Equation Methods in Scattering Theory (978-1-61197-316-7) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2013 ; 978-1-61197-317-4 ; 978-1-61197-285-6 ; 9781611972856 ; Nonlinear Control Under Nonconstant Delays (978-1-61197-285-6) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2013 ; 978-1-61197-323-5 ; 978-1-61197-324-2 ; 9781611973242 ; The Method of Weighted Residuals and Variational Principles (978-1-61197-324-2) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2013 ; 978-1-61197-328-0 ; 978-1-61197-329-7 ; 9781611973297 ; The Radon Transform and Medical Imaging (978-1-61197-329-7) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2013 ; 978-1-61197-349-5 ; 978-1-61197-350-1 ; 9781611973501 ; Programming Projects in C for Students of Engineering, Science, and Mathematics (978-1-61197-350-1) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2013 ; 978-1-61197-366-2 ; 978-1-61197-367-9 ; 9781611973679 ; Arc Routing (978-1-61197-367-9) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+
+   au < frozen ; exists ; 2014 ; 978-1-61197-360-0 ; 978-1-61197-361-7 ; 9781611973617 ; Finite Element Methods for Computational Fluid Dynamics: A Practical Guide (978-1-61197-361-7) ; https://epubs.siam.org/ ; >
+   au < frozen ; exists ; 2014 ; 978-1-61197-342-6 ; 978-1-61197-343-3 ; 9781611973433 ; Lectures on Stochastic Programming: Modeling and Theory, Second Edition (978-1-61197-343-3) ; https://epubs.siam.org/ ; >
+   au < finished ; finished ; 2014 ; 978-1-61197-333-4 ; 978-1-61197-334-1 ; 9781611973341 ; Nonlinear Time Scale Systems in Standard and Nonstandard Forms (978-1-61197-334-1) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2014 ; 978-1-61197-335-8 ; 978-1-61197-336-5 ; 9781611973365 ; Practical Augmented Lagrangian Methods for Constrained Optimization (978-1-61197-336-5) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2014 ; 978-1-61197-345-7 ; 978-1-61197-346-4 ; 9781611973464 ; Iterative Methods for Linear Systems (978-1-61197-346-4) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2014 ; 978-1-61197-347-1 ; 978-1-61197-348-8 ; 9781611973488 ; Variational Analysis in Sobolev and BV Spaces (978-1-61197-348-8) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2014 ; 978-1-61197-351-8 ; 978-1-61197-352-5 ; 9781611973525 ; Solving Transcendental Equations (978-1-61197-352-5) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2014 ; 978-1-61197-353-2 ; 978-1-61197-354-9 ; 9781611973549 ; Climate Modeling for Scientists and Engineers (978-1-61197-354-9) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2014 ; 978-1-61197-358-7 ; 978-1-61197-359-4 ; 9781611973594 ; Vehicle Routing (978-1-61197-359-4) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2014 ; 978-1-61197-362-4 ; 978-1-61197-363-1 ; 9781611973631 ; Stability, Control, and Computation for Time-Delay Systems (978-1-61197-363-1) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2014 ; 978-1-61197-364-8 ; 978-1-61197-365-5 ; 9781611973655 ; Introduction to Nonlinear Optimization (978-1-61197-365-5) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2014 ; 978-1-61197-379-2 ; 978-1-61197-380-8 ; 9781611973808 ; Computational Methods in Geophysical Electromagnetics (978-1-61197-380-8) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2014 ; 978-1-61197-381-5 ; 978-1-61197-382-2 ; 9781611973822 ; Unified Transform for Boundary Value Problems (978-1-61197-382-2) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2014 ; 978-1-61197-383-9 ; 978-1-61197-384-6 ; 9781611973846 ; Preconditioning and the Conjugate Gradient Method in the Context of Solving PDEs (978-1-61197-384-6) ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+
+   au < finished ; finished ; 2015 ; 978-1-61197-368-6 ; 978-1-61197-369-3 ; 9781611973693 ; Evaluating Gas Network Capacities (978-1-61197-369-3) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2015 ; 978-1-61197-370-9 ; 978-1-61197-371-6 ; 9781611973716 ; Mathematics of Planet Earth (978-1-61197-371-6) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2015 ; 978-1-61197-377-8 ; 978-1-61197-378-5 ; 9781611973785 ; Variational Methods for the Numerical Solution of Nonlinear Elliptic Problems (978-1-61197-378-5) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2015 ; 978-1-61197-385-3 ; 978-1-61197-386-0 ; 9781611973860 ; Active Subspaces (978-1-61197-386-0) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2015 ; 978-1-61197-387-7 ; 978-1-61197-388-4 ; 9781611973884 ; Finite Dimensional Linear Systems (978-1-61197-388-4) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2015 ; 978-1-61197-389-1 ; 978-1-61197-390-7 ; 9781611973907 ; Spline Functions (978-1-61197-390-7) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2015 ; 978-1-61197-393-8 ; 978-1-61197-394-5 ; 9781611973945 ; The Defocusing Nonlinear Schrödinger Equation (978-1-61197-394-5) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2015 ; 978-1-61197-395-2 ; 978-1-61197-396-9 ; 9781611973969 ; The Shapes of Things (978-1-61197-396-9) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2015 ; 978-1-61197-402-7 ; 978-1-61197-404-1 ; 9781611974041 ; A Primer on Radial Basis Functions with Applications to the Geosciences (978-1-61197-404-1) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2015 ; 978-1-61197-405-8 ; 978-1-61197-406-5 ; 9781611974065 ; An Introduction to Domain Decomposition Methods (978-1-61197-406-5) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2015 ; 978-1-61197-408-9 ; 978-1-61197-409-6 ; 9781611974096 ; Ordinary Differential Equations and Linear Algebra (978-1-61197-409-6) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2015 ; 978-1-61197-415-7 ; 978-1-61197-416-4 ; 9781611974164 ; Electrical Transmission System Cascades and Vulnerability (978-1-61197-416-4) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2015 ; 978-1-61197-417-1 ; 978-1-61197-418-8 ; 9781611974188 ; Adaptive Treatment Strategies in Practice (978-1-61197-418-8) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2015 ; 978-1-61197-419-5 ; 978-1-61197-420-1 ; 9781611974201 ; Riemann–Hilbert Problems, Their Numerical Solution, and the Computation of Nonlinear Special Functions (978-1-61197-420-1) ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; crawling ; 2015 ; 978-1-61197-425-6 ; 978-1-61197-426-3 ; 9781611974263 ; Stochastic Systems (978-1-61197-426-3) ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+
+   au < frozen ; exists ; 2016 ; 978-1-61197-429-4 ; 978-1-61197-430-0 ; 9781611974300 ; Orthogonal Polynomials in MATLAB: Exercises and Solutions (978-1-61197-430-0) ; https://epubs.siam.org/ ; >
+   au < finished ; crawling ; 2016 ; 978-1-61197-421-8 ; 978-1-61197-422-5 ; 9781611974225 ; AIMD Dynamics and Distributed Resource Allocation (978-1-61197-422-5) ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; crawling ; 2016 ; 978-1-61197-435-5 ; 978-1-61197-436-2 ; 9781611974362 ; Automatic Differentiation in MATLAB Using ADMAT with Applications (978-1-61197-436-2) ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
+   au < finished ; crawling ; 2016 ; 978-1-61197-457-7 ; 978-1-61197-458-4 ; 9781611974584 ; Barriers and Transport in Unsteady Flows (978-1-61197-458-4) ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
+   au < finished ; crawling ; 2016 ; 978-1-61197-453-9 ; 978-1-61197-454-6 ; 9781611974546 ; Data Assimilation (978-1-61197-454-6) ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
+   au < finished ; crawling ; 2016 ; 978-1-61197-451-5 ; 978-1-61197-452-2 ; 9781611974522 ; Discourse on Fourier Series (978-1-61197-452-2) ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; crawling ; 2016 ; 978-1-61197-449-2 ; 978-1-61197-450-8 ; 9781611974508 ; Dynamic Mode Decomposition (978-1-61197-450-8) ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; crawling ; 2016 ; 978-1-61197-427-0 ; 978-1-61197-428-7 ; 9781611974287 ; Game Theory with Engineering Applications (978-1-61197-428-7) ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
+   au < finished ; crawling ; 2016 ; 978-1-61197-445-4 ; 978-1-61197-446-1 ; 9781611974461 ; Inverse Scattering Theory and Transmission Eigenvalues (978-1-61197-446-1) ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
+   au < finished ; crawling ; 2016 ; 978-1-61197-423-2 ; 978-1-61197-424-9 ; 9781611974249 ; Lectures on BSDEs, Stochastic Control, and Stochastic Differential Games with Financial Applications (978-1-61197-424-9) ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
+   au < finished ; crawling ; 2016 ; 978-1-61197-465-2 ; 978-1-61197-466-9 ; 9781611974669 ; MATLAB Guide, Third Edition (978-1-61197-466-9) ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; crawling ; 2016 ; 978-1-61197-437-9 ; 978-1-61197-438-6 ; 9781611974386 ; Minimum-Volume Ellipsoids (978-1-61197-438-6) ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; crawling ; 2016 ; 978-1-61197-439-3 ; 978-1-61197-440-9 ; 9781611974409 ; MM Optimization Algorithms (978-1-61197-440-9) ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
+   au < finished ; crawling ; 2016 ; 978-1-61197-447-8 ; 978-1-61197-448-5 ; 9781611974485 ; Phylogeny (978-1-61197-448-5) ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
+
+   au < finished ; crawling ; 2017 ; 978-1-61197-467-6 ; 978-1-61197-468-3 ; 9781611974683 ; Advances and Trends in Optimization with Engineering Applications (978-1-61197-468-3) ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
+   au < finished ; crawling ; 2017 ; 978-1-61197-479-9 ; 978-1-61197-480-5 ; 9781611974805 ; Analysis of Hydrodynamic Models (978-1-61197-480-5) ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; crawling ; 2017 ; 978-1-61197-511-6 ; 978-1-61197-512-3 ; 9781611975123 ; Computing Highly Oscillatory Integrals (978-1-61197-512-3) ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; crawling ; 2017 ; 978-1-61197-455-3 ; 978-1-61197-456-0 ; 9781611974560 ; Credit Scoring and Its Applications, Second Edition (978-1-61197-456-0) ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
+   au < finished ; crawling ; 2017 ; 978-1-61197-463-8 ; 978-1-61197-464-5 ; 9781611974645 ; Differential Dynamical Systems, Revised Edition (978-1-61197-464-5) ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
+   au < finished ; crawling ; 2017 ; 978-1-61197-519-2 ; 978-1-61197-520-8 ; 9781611975208 ; Elementary Numerical Analysis (978-1-61197-520-8) ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
+   au < finished ; crawling ; 2017 ; 978-1-61197-498-0 ; 978-1-61197-499-7 ; 9781611974997 ; First-Order Methods in Optimization (978-1-61197-499-7) ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; crawling ; 2017 ; 978-1-61197-483-6 ; 978-1-61197-484-3 ; 9781611974843 ; Formulation and Numerical Solution of Quantum Control Problems (978-1-61197-484-3) ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; crawling ; 2017 ; 978-1-61197-485-0 ; 978-1-61197-486-7 ; 9781611974867 ; High-Gain Observers in Nonlinear Feedback Control (978-1-61197-486-7) ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
+   au < finished ; crawling ; 2017 ; 978-1-61197-491-1 ; 978-1-61197-492-8 ; 9781611974928 ; An Introduction to Data Analysis and Uncertainty Quantification for Inverse Problems (978-1-61197-492-8) ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
+   au < finished ; crawling ; 2017 ; 978-1-61197-472-0 ; 978-1-61197-473-7 ; 9781611974737 ; Iterative Solution of Symmetric Quasi-Definite Linear Systems (978-1-61197-473-7) ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
+   au < finished ; crawling ; 2017 ; 978-1-61197-481-2 ; 978-1-61197-482-9 ; 9781611974829 ; Model Reduction and Approximation (978-1-61197-482-9) ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; crawling ; 2017 ; 978-1-61197-493-5 ; 978-1-61197-494-2 ; 9781611974942 ; A Taste of Inverse Problems (978-1-61197-494-2) ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
+   au < finished ; crawling ; 2017 ; 978-1-61197-474-4 ; 978-1-61197-475-1 ; 9781611974751 ; Tensor Analysis (978-1-61197-475-1) ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
+   au < finished ; crawling ; 2017 ; 978-1-61197-495-9 ; 978-1-61197-496-6 ; 9781611974966 ; Vector Extrapolation Methods with Applications (978-1-61197-496-6) ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
+
+   au < finished ; crawling ; 2018 ; 978-1-61197-545-1 ; 978-1-61197-546-8 ; 9781611975468 ; Computational Mathematics with SageMath (978-1-61197-546-8) ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; crawling ; 2018 ; 978-1-61197-533-8 ; 978-1-61197-534-5 ; 9781611975345 ; Core-Chasing Algorithms for the Eigenvalue Problem (978-1-61197-534-5) ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; crawling ; 2018 ; 978-1-61197-553-6 ; 978-1-61197-554-3 ; 9781611975543 ; Finite Element Exterior Calculus (978-1-61197-554-3) ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
+   au < finished ; crawling ; 2018 ; 978-1-61197-539-0 ; 978-1-61197-540-6 ; 9781611975406 ; Frequency domain techniques for H [infinity] control of distributed parameter systems (978-1-61197-540-6) ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
+   au < finished ; crawling ; 2018 ; 978-1-61197-543-7 ; 978-1-61197-544-4 ; 9781611975444 ; Introduction to the Scenario Approach (978-1-61197-544-4) ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
+   au < frozen ; exists ; 2018 ; 978-1-61197-513-0 ; 978-1-61197-514-7 ; 978-1-61197-514-7 ; Linear Algebra and Matrices (978-1-61197-514-7) ; https://epubs.siam.org/ ; >
+   au < finished ; crawling ; 2018 ; 978-1-61197-517-8 ; 978-1-61197-518-5 ; 9781611975185 ; Mathematics Motivated by the Social and Behavioral Sciences (978-1-61197-518-5) ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; crawling ; 2018 ; 978-1-61197-530-7 ; 978-1-61197-531-4 ; 9781611975314 ; Numerical Analysis of Partial Differential Equations Using Maple and MATLAB (978-1-61197-531-4) ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; crawling ; 2018 ; 978-1-61197-509-3 ; 978-1-61197-510-9 ; 9781611975109 ; Numerical Methods for Conservation Laws (978-1-61197-510-9) ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; crawling ; 2018 ; 978-1-61197-557-4 ; 978-1-61197-558-1 ; 9781611975581 ; Scientific Computing (978-1-61197-558-1) ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
+   au < finished ; crawling ; 2018 ; 978-1-61197-551-2 ; 978-1-61197-552-9 ; 9781611975529 ; Solitons in Two-Dimensional Shallow Water (9781611975529) ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
+   au < finished ; crawling ; 2018 ; 978-1-61197-535-2 ; 978-1-61197-536-9 ; 9781611975369 ; Structure-Preserving Doubling Algorithms for Nonlinear Matrix Equations (978-1-61197-536-9) ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
+   au < frozen ; exists ; 2018 ;  ; 978-1-61197-522-2 ; 9781611975222 ; A Software Repository for Orthogonal Polynomials (978-1-61197-522-2) ; https://epubs.siam.org/ ; >
+
+   au < frozen ; exists ; 2019 ; 978-1-61197-583-3 ; 978-1-61197-584-0 ; 978-1-61197-584-0 ; Advanced and Optimization Based Sliding Mode Control: Theory and Applications (978-1-61197-584-0) ; https://epubs.siam.org/ ; >
+   au < frozen ; exists ; 2019 ; 978-1-61197-593-2 ; 978-1-61197-594-9 ; 978-1-61197-594-9 ; Approximation Theory and Approximation Practice, Extended Edition (978-1-61197-594-9) ; https://epubs.siam.org/ ; >
+   au < frozen ; exists ; 2019 ; 978-1-61197-555-0 ; 978-1-61197-556-7 ; 978-1-61197-556-7 ; Bits and Bugs: A Scientific and Historical Review on Software Failures in Computational Science (978-1-61197-556-7) ; https://epubs.siam.org/ ; >
+   au < frozen ; exists ; 2019 ; 978-1-61197-591-8 ; 978-1-61197-592-5 ; 978-1-61197-592-5 ; The Cahn–Hilliard Equation: Recent Advances and Applications (978-1-61197-592-5) ; https://epubs.siam.org/ ; >
+   au < frozen ; exists ; 2019 ; 978-1-61197-597-0 ; 978-1-61197-598-7 ; 978-1-61197-598-7 ; Complex Variables and Analytic Functions: An Illustrated Introduction (978-1-61197-598-7) ; https://epubs.siam.org/ ; >
+   au < frozen ; exists ; 2019 ; 978-1-61197-603-8 ; 978-1-61197-604-5 ; 978-1-61197-604-5 ; Fast Direct Solvers for Elliptic PDEs (978-1-61197-604-5) ; https://epubs.siam.org/ ; >
+   au < frozen ; exists ; 2019 ; 978-1-61197-609-0 ; 978-1-61197-610-6 ; 978-1-61197-610-6 ; Handbook of Writing for the Mathematical Sciences, Third Edition (978-1-61197-610-6) ; https://epubs.siam.org/ ; >
+   au < frozen ; exists ; 2019 ; 978-1-61197-611-3 ; 978-1-61197-612-0 ; 978-1-61197-612-0 ; An Introduction to Compressed Sensing (978-1-61197-612-0) ; https://epubs.siam.org/ ; >
+   au < frozen ; exists ; 2019 ; 978-1-61197-595-6 ; 978-1-61197-596-3 ; 978-1-61197-596-3 ; Introduction to Optimization and Hadamard Semidifferential Calculus, Second Edition (978-1-61197-596-3) ; https://epubs.siam.org/ ; >
+   au < frozen ; exists ; 2019 ; 978-1-61197-579-6 ; 978-1-61197-580-2 ; 978-1-61197-580-2 ; A Mathematical Introduction to Electronic Structure Theory (978-1-61197-580-2) ; https://epubs.siam.org/ ; >
+   au < frozen ; exists ; 2019 ; 978-1-61197-561-1 ; 978-1-61197-562-8 ; 978-1-61197-562-8 ; Nonlocal Modeling, Analysis, and Computation (978-1-61197-562-8) ; https://epubs.siam.org/ ; >
+   au < frozen ; exists ; 2019 ; 978-1-61197-569-7 ; 978-1-61197-570-3 ; 978-1-61197-570-3 ; Numerical Analysis: Theory and Experiments (978-1-61197-570-3) ; https://epubs.siam.org/ ; >
+   au < frozen ; exists ; 2019 ; 978-1-61197-581-9 ; 978-1-61197-582-6 ; 978-1-61197-582-6 ; Passive Network Synthesis: An Approach to Classification (978-1-61197-582-6) ; https://epubs.siam.org/ ; >
+   au < frozen ; exists ; 2019 ; 978-1-61197-589-5 ; 978-1-61197-590-1 ; 978-1-61197-590-1 ; Piecewise Affine Control: Continuous Time, Sampled Data, and Networked Systems (978-1-61197-590-1) ; https://epubs.siam.org/ ; >
+   au < frozen ; exists ; 2019 ; 978-1-61197-559-8 ; 978-1-61197-560-4 ; 978-1-61197-560-4 ; Practical Optimization (978-1-61197-560-4) ; https://epubs.siam.org/ ; >
+   au < frozen ; exists ; 2019 ; 978-1-61197-587-1 ; 978-1-61197-588-8 ; 978-1-61197-588-8 ; Theory and Numerical Approximations of Fractional Integrals and Derivatives (978-1-61197-588-8) ; https://epubs.siam.org/ ; >
+
+   au < deepCrawl ; exists ; 2020 ; 978-1-61197-616-8 ; 978-1-61197-617-5 ; 978-1-61197-617-5 ; Algorithms from THE BOOK (978-1-61197-617-5) ; https://epubs.siam.org/ ; >
+   au < frozen ; exists ; 2020 ; 978-1-61197-638-0 ; 978-1-61197-639-7 ; 978-1-61197-639-7 ; The Classical Moment Problem and Some Related Questions in Analysis (978-1-61197-639-7) ; https://epubs.siam.org/ ; >
+   au < frozen ; exists ; 2020 ; 978-1-61197-632-8 ; 978-1-61197-633-5 ; 978-1-61197-633-5 ; Data Clustering: Theory, Algorithms, and Applications, Second Edition (978-1-61197-633-5) ; https://epubs.siam.org/ ; >
+   au < deepCrawl ; exists ; 2020 ; 978-1-61197-607-6 ; 978-1-61197-608-3 ; 978-1-61197-608-3 ; Interpolatory Methods for Model Reduction (978-1-61197-608-3) ; https://epubs.siam.org/ ; >
+   au < frozen ; exists ; 2020 ; 978-1-61197-628-1 ; 978-1-61197-629-8 ; 978-1-61197-629-8 ; Location Estimation from the Ground Up (978-1-61197-629-8) ; https://epubs.siam.org/ ; >
+   au < frozen ; exists ; 2020 ; 978-1-61197-626-7 ; 978-1-61197-627-4 ; 978-1-61197-627-4 ; Mining Imperfect Data: With Examples in R and Python, Second Edition (978-1-61197-627-4) ; https://epubs.siam.org/ ; >
+   au < frozen ; exists ; 2020 ; 978-1-61197-640-3 ; 978-1-61197-641-0 ; 978-1-61197-641-0 ; Nonnegative Matrix Factorization (978-1-61197-641-0) ; https://epubs.siam.org/ ; >
+   au < frozen ; exists ; 2020 ; 978-1-61197-644-1 ; 978-1-61197-645-8 ; 978-1-61197-645-8 ; Numerical Homogenization by Localized Orthogonal Decomposition (978-1-61197-645-8) ; https://epubs.siam.org/ ; >
+   au < frozen ; exists ; 2020 ; 978-1-61197-624-3 ; 978-1-61197-625-0 ; 978-1-61197-625-0 ; Observability: A New Theory Based on the Group of Invariance (978-1-61197-625-0) ; https://epubs.siam.org/ ; >
+   au < frozen ; exists ; 2020 ; 978-1-61197-630-4 ; 978-1-61197-631-1 ; 978-1-61197-631-1 ; PETSc for Partial Differential Equations: Numerical Solutions in C and Python (978-1-61197-631-1) ; https://epubs.siam.org/ ; >
+   au < frozen ; exists ; 2020 ; 978-1-61197-618-2 ; 978-1-61197-619-9 ; 978-1-61197-619-9 ; Practical Methods for Optimal Control Using Nonlinear Programing, Third Edition (978-1-61197-619-9) ; https://epubs.siam.org/ ; >
+   au < frozen ; exists ; 2020 ; 978-1-61197-620-5 ; 978-1-61197-621-2 ; 978-1-61197-621-2 ; Riemann Problems and Jupyter Solutions (978-1-61197-621-2) ; https://epubs.siam.org/ ; >
+   au < frozen ; exists ; 2020 ; 978-1-61197-634-2 ; 978-1-61197-635-9 ; 978-1-61197-635-9 ; A Software Repository for Gaussian Quadratures and Christoffel Functions (978-1-61197-635-9) ; https://epubs.siam.org/ ; >
+   au < deepCrawl ; exists ; 2020 ; 978-1-61197-614-4 ; 978-1-61197-615-1 ; 978-1-61197-615-1 ; Solving Problems in Multiply Connected Domains (978-1-61197-615-1) ; https://epubs.siam.org/ ; >
+
+   au < crawling ; exists ; 2021 ; 978-1-61197-658-8 ; 978-1-61197-659-5 ; 978-1-61197-659-5 ; Lectures on Stochastic Programming: Modeling and Theory, Third Edition (978-1-61197-659-5) ; https://epubs.siam.org/ ; >
+   au < crawling ; exists ; 2021 ; 978-1-61197-650-2 ; 978-1-61197-651-9 ; 978-1-61197-651-9 ; Sparse Solutions of Underdetermined Linear Systems and Their Applications (978-1-61197-651-9) ; https://epubs.siam.org/ ; >
+   au < crawling ; exists ; 2021 ; 978-1-61197-652-6 ; 978-1-61197-653-3 ; 978-1-61197-653-3 ; Metabolic Networks, Elementary Flux Modes, and Polyhedral Cones (978-1-61197-653-3) ; https://epubs.siam.org/ ; >
+   au < ready ; exists ; 2021 ; 978-1-61197-656-4 ; 978-1-61197-657-1 ; 978-1-61197-657-1 ; Numerical Linear Algebra and Optimization (978-1-61197-657-1) ; https://epubs.siam.org/ ; >
+   au < ready ; exists ; 2021 ; 978-1-61197-660-1 ; 978-1-61197-661-8 ; 978-1-61197-661-8 ; Numerical Continuation and Bifurcation in Nonlinear PDEs (978-1-61197-661-8) ; https://epubs.siam.org/ ; >
+   au < crawling ; exists ; 2021 ; 978-1-61197-662-5 ; 978-1-61197-663-2 ; 978-1-61197-663-2 ; Matrix Analysis and Computations (978-1-61197-663-2) ; https://epubs.siam.org/ ; >
+   au < ready ; exists ; 2021 ; 978-1-61197-664-9 ; 978-1-61197-665-6 ; 978-1-61197-665-6 ; Locally Convex Spaces and Harmonic Analysis: An Introduction (978-1-61197-665-6) ; https://epubs.siam.org/ ; >
+   au < ready ; exists ; 2021 ; 978-1-61197-666-3 ; 978-1-61197-667-0 ; 978-1-61197-667-0 ; Computed Tomography: Algorithms, Insight, and Just Enough Theory (978-1-61197-667-0) ; https://epubs.siam.org/ ; >
+   au < ready ; exists ; 2021 ; 978-1-61197-668-7 ; 978-1-61197-669-4 ; 978-1-61197-669-4 ; Basics and Trends in Sensitivity Analysis: Theory and Practice in R (978-1-61197-669-4) ; https://epubs.siam.org/ ; >
+   au < ready ; exists ; 2021 ; 978-1-61197-671-7 ; 978-1-61197-672-4 ; 978-1-61197-672-4 ; Methods in Computational Science (978-1-61197-672-4) ; https://epubs.siam.org/ ; >
+   au < ready ; exists ; 2021 ; 978-1-61197-673-1 ; 978-1-61197-674-8 ; 978-1-61197-674-8 ; Modern Nonconvex Nondifferentiable Optimization (978-1-61197-674-8) ; https://epubs.siam.org/ ; >
+   au < ready ; exists ; 2021 ; 978-1-61197-677-9 ; 978-1-61197-678-6 ; 978-1-61197-678-6 ; Mathematical Elasticity Volume I: Three-Dimentional Elasticity (978-1-61197-678-6) ; https://epubs.siam.org/ ; >
+   au < ready ; exists ; 2021 ; 978-1-61197-679-3 ; 978-1-61197-680-9 ; 978-1-61197-680-9 ; Mathematical Elasticity Volume II: Theory of Plates (978-1-61197-680-9) ; https://epubs.siam.org/ ; >
+   au < crawling ; exists ; 2021 ; 978-1-61197-681-6 ; 978-1-61197-682-3 ; 978-1-61197-682-3 ; Mathematical Elasticity Volume III: Theory of Shells (978-1-61197-682-3) ; https://epubs.siam.org/ ; >
+
+   au < manifest ; exists ; 2022 ; 978-1-61197-694-6 ; 978-1-61197-695-3 ; 978-1-61197-695-3 ; Transfinite Interpolations and Eulerian/Lagrangian Dynamics (978-1-61197-695-3) ; https://epubs.siam.org/ ; >
+   au < manifest ; exists ; 2022 ; 978-1-61197-689-2 ; 978-1-61197-690-8 ; 978-1-61197-690-8 ; Iterative Methods and Preconditioners for Systems of Linear Equations (978-1-61197-690-8) ; https://epubs.siam.org/ ; >
+   au < manifest ; exists ; 2022 ; 978-1-61197-687-8 ; 978-1-61197-688-5 ; 978-1-61197-688-5 ; Sparse Polynomial Approximation of High-Dimensional Functions (978-1-61197-688-5) ; https://epubs.siam.org/ ; >
+
+ }
+
+}

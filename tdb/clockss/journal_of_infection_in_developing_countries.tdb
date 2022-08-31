@@ -1,0 +1,47 @@
+{
+
+  publisher <
+    name = Journal of Infection in Developing Countries ;
+    info[contract] = 2018 ;
+    info[tester] = 5 ;
+    info[poller] = 5
+  >
+
+    param[base_url] = https://www.jidc.org/
+    implicit < status1 ; status ; year ; name ; volume ; param[year] ; proxy >
+    plugin = org.lockss.plugin.jidc.ClockssJidcOJS2Plugin
+    
+  {
+ 
+    title < 
+      name = Journal of Infection in Developing Countries ;
+      issn = 1972-2680 ;
+      issnl = 1972-2680
+    >
+
+    {
+    
+      param[journal_id] = journal
+
+      au < frozen ; exists ; 2007 ; Journal of Infection in Developing Countries Volume 1 ; 1 ; 2007 ; >
+      au < frozen ; exists ; 2008 ; Journal of Infection in Developing Countries Volume 2 ; 2 ; 2008 ; >
+      au < finished ; crawling ; 2009 ; Journal of Infection in Developing Countries Volume 3 ; 3 ; 2009 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2010 ; Journal of Infection in Developing Countries Volume 4 ; 4 ; 2010 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; Journal of Infection in Developing Countries Volume 5 ; 5 ; 2011 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2012 ; Journal of Infection in Developing Countries Volume 6 ; 6 ; 2012 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2013 ; Journal of Infection in Developing Countries Volume 7 ; 7 ; 2013 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; Journal of Infection in Developing Countries Volume 8 ; 8 ; 2014 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; Journal of Infection in Developing Countries Volume 9 ; 9 ; 2015 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; Journal of Infection in Developing Countries Volume 10 ; 10 ; 2016 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2017 ; Journal of Infection in Developing Countries Volume 11 ; 11 ; 2017 ; reingest3.clockss.org:8083 >
+      au < deepCrawl ; exists ; 2018 ; Journal of Infection in Developing Countries Volume 12 ; 12 ; 2018 ; >
+      au < deepCrawl ; exists ; 2019 ; Journal of Infection in Developing Countries Volume 13 ; 13 ; 2019 ; >
+      au < deepCrawl ; exists ; 2020 ; Journal of Infection in Developing Countries Volume 14 ; 14 ; 2020 ; >
+      au < crawling ; exists ; 2021 ; Journal of Infection in Developing Countries Volume 15 ; 15 ; 2021 ; >
+      au < crawling ; exists ; 2022 ; Journal of Infection in Developing Countries Volume 16 ; 16 ; 2022 ; >
+
+    }
+    
+  }
+
+}

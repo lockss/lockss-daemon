@@ -1,0 +1,1273 @@
+{
+
+  publisher <
+    name = Liverpool University Press ;
+    info[back] = 2008 ;
+    info[contract] = 2009 ;
+    info[tester] = 8 ;
+    info[poller] = 3
+  >
+  
+  comment[moving] = from MetaPress to Atypon to CloudPublish
+
+  plugin = org.lockss.plugin.atypon.liverpool.ClockssLiverpoolJournalsPlugin
+#  param[base_url] = http://online.liverpooluniversitypress.co.uk/
+  implicit < status1 ; status ; year ; name ; param[volume_name] ; param[base_url] ; proxy >
+
+  {
+
+    title <
+      name = Archives ;
+      issn = 0003-9535 ;
+      eissn = 2516-8975 ;
+      issnl = 0003-9535
+    >
+
+    param[journal_id] = archives
+
+    au < doNotProcess ; doNotProcess ; 2006 ; Archives Volume 31 ; 31 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Archives Volume 32 ; 32 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; crawling ; 2008 ; Archives Volume 33 ; 33 ; https://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2009 ; Archives Volume 34 ; 34 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2010 ; Archives Volume 35 ; 35 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2011 ; Archives Volume 36 ; 36 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; Archives Volume 37 ; 37 ; https://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Archives Volume 38 ; 38 ; https://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Archives Volume 39 ; 39 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2014 ; Archives Volume 40 ; 40 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2015 ; Archives Volume 50 ; 50 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; Archives Volume 51 ; 51 ; https://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; Archives Volume 52 ; 52 ; https://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; Archives Volume 53 ; 53 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Archives Volume 54 ; 54 ; https://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < doNotProcess ; doNotProcess ; 2020 ; Archives Volume 55 ; 55 ; https://online.liverpooluniversitypress.co.uk/ ; >
+
+  }
+
+  {
+
+    title <
+      name = Australian Journal of French Studies ;
+      issn = 0004-9468 ;
+      eissn = 2046-2913 ;
+      issnl = 0004-9468
+    >
+
+    param[journal_id] = ajfs
+
+    au < doNotProcess ; exists ; 2004 ; Australian Journal of French Studies Volume 41 ; 41 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2005 ; Australian Journal of French Studies Volume 42 ; 42 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2006 ; Australian Journal of French Studies Volume 43 ; 43 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2007 ; Australian Journal of French Studies Volume 44 ; 44 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Australian Journal of French Studies Volume 45 ; 45 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Australian Journal of French Studies Volume 46 ; 46 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Australian Journal of French Studies Volume 47 ; 47 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Australian Journal of French Studies Volume 48 ; 48 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Australian Journal of French Studies Volume 49 ; 49 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Australian Journal of French Studies Volume 50 ; 50 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2014 ; Australian Journal of French Studies Volume 51 ; 51 ; http://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Australian Journal of French Studies Volume 52 ; 52 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; Australian Journal of French Studies Volume 53 ; 53 ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2017 ; Australian Journal of French Studies Volume 54 ; 54 ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2018 ; Australian Journal of French Studies Volume 55 ; 55 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2019 ; Australian Journal of French Studies Volume 56 ; 56 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+    au < doNotProcess ; doNotProcess ; 2020 ; Australian Journal of French Studies Volume 57 ; 57 ; https://online.liverpooluniversitypress.co.uk/ ; >
+
+  }
+
+  {
+
+    title <
+      name = Before Farming ;
+      issn = 1476-4253 ;
+      eissn = 2056-3264 ;
+      issnl = 1476-4253
+    >
+
+    param[journal_id] = bfarm
+
+    comment[continued_by] = Hunter Gatherer Research
+
+    au < doNotProcess ; doNotProcess ; 2002 ; Before Farming Volume 2002 ; 2002 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; Before Farming Volume 2003 ; 2003 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; Before Farming Volume 2004 ; 2004 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; Before Farming Volume 2005 ; 2005 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; Before Farming Volume 2006 ; 2006 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Before Farming Volume 2007 ; 2007 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2008 ; Before Farming Volume 2008 ; 2008 ; http://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2009 ; Before Farming Volume 2009 ; 2009 ; http://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2010 ; Before Farming Volume 2010 ; 2010 ; http://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2011 ; Before Farming Volume 2011 ; 2011 ; http://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2012 ; Before Farming Volume 2012 ; 2012 ; http://online.liverpooluniversitypress.co.uk/ ; >
+
+  }
+
+  {
+
+    title <
+      name = British Journal of Canadian Studies ;
+      issn = 0269-9222 ;
+      eissn = 1757-8078 ;
+      issnl = 0269-9222
+    >
+
+    param[journal_id] = bjcs
+
+    au < doNotProcess ; exists ; 2003 ; British Journal of Canadian Studies Volume 16 ; 16 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2004 ; British Journal of Canadian Studies Volume 17 ; 17 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2005 ; British Journal of Canadian Studies Volume 18 ; 18 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2006 ; British Journal of Canadian Studies Volume 19 ; 19 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2007 ; British Journal of Canadian Studies Volume 20 ; 20 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; British Journal of Canadian Studies Volume 21 ; 21 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; British Journal of Canadian Studies Volume 22 ; 22 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; British Journal of Canadian Studies Volume 23 ; 23 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; British Journal of Canadian Studies Volume 24 ; 24 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; British Journal of Canadian Studies Volume 25 ; 25 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; British Journal of Canadian Studies Volume 26 ; 26 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; crawling ; 2014 ; British Journal of Canadian Studies Volume 27 ; 27 ; http://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2015 ; British Journal of Canadian Studies Volume 28 ; 28 ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2016 ; British Journal of Canadian Studies Volume 29 ; 29 ; http://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; British Journal of Canadian Studies Volume 30 ; 30 ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2018 ; British Journal of Canadian Studies Volume 31 ; 31 ; https://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Bulletin of Hispanic Studies ;
+      issn = 1475-3839 ;
+      eissn = 1478-3398 ;
+      issnl = 1475-3839
+    >
+
+    param[journal_id] = bhs
+
+    au < doNotProcess ; exists ; 1985 ; Bulletin of Hispanic Studies Volume 62 ; 62 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1986 ; Bulletin of Hispanic Studies Volume 63 ; 63 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1987 ; Bulletin of Hispanic Studies Volume 64 ; 64 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1988 ; Bulletin of Hispanic Studies Volume 65 ; 65 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1989 ; Bulletin of Hispanic Studies Volume 66 ; 66 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1990 ; Bulletin of Hispanic Studies Volume 67 ; 67 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1991 ; Bulletin of Hispanic Studies Volume 68 ; 68 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1992 ; Bulletin of Hispanic Studies Volume 69 ; 69 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1993 ; Bulletin of Hispanic Studies Volume 70 ; 70 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1994 ; Bulletin of Hispanic Studies Volume 71 ; 71 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1995 ; Bulletin of Hispanic Studies Volume 72 ; 72 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1996 ; Bulletin of Hispanic Studies Volume 73 ; 73 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1997 ; Bulletin of Hispanic Studies Volume 74 ; 74 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1998 ; Bulletin of Hispanic Studies Volume 75 ; 75 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1999 ; Bulletin of Hispanic Studies Volume 76 ; 76 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2000 ; Bulletin of Hispanic Studies Volume 77 ; 77 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2001 ; Bulletin of Hispanic Studies Volume 78 ; 78 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2002 ; Bulletin of Hispanic Studies Volume 79 ; 79 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2003 ; Bulletin of Hispanic Studies Volume 80 ; 80 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2004 ; Bulletin of Hispanic Studies Volume 81 ; 81 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2005 ; Bulletin of Hispanic Studies Volume 82 ; 82 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2006 ; Bulletin of Hispanic Studies Volume 83 ; 83 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2007 ; Bulletin of Hispanic Studies Volume 84 ; 84 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Bulletin of Hispanic Studies Volume 85 ; 85 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Bulletin of Hispanic Studies Volume 86 ; 86 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Bulletin of Hispanic Studies Volume 87 ; 87 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Bulletin of Hispanic Studies Volume 88 ; 88 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Bulletin of Hispanic Studies Volume 89 ; 89 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Bulletin of Hispanic Studies Volume 90 ; 90 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; crawling ; 2014 ; Bulletin of Hispanic Studies Volume 91 ; 91 ; http://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Bulletin of Hispanic Studies Volume 92 ; 92 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; Bulletin of Hispanic Studies Volume 93 ; 93 ; http://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; Bulletin of Hispanic Studies Volume 94 ; 94 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; Bulletin of Hispanic Studies Volume 95 ; 95 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2019 ; Bulletin of Hispanic Studies Volume 96 ; 96 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
+    au < doNotProcess ; doNotProcess ; 2020 ; Bulletin of Hispanic Studies Volume 97 ; 97 ; https://online.liverpooluniversitypress.co.uk/ ; >
+
+  }
+
+  {
+
+    title <
+      name = The Byron Journal ;
+      issn = 0301-7257 ;
+      eissn = 1757-0263 ;
+      issnl = 0301-7257
+    >
+
+    param[journal_id] = bj
+
+    au < doNotProcess ; exists ; 2004 ; The Byron Journal Volume 32 ; 32 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2005 ; The Byron Journal Volume 33 ; 33 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2006 ; The Byron Journal Volume 34 ; 34 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2007 ; The Byron Journal Volume 35 ; 35 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; The Byron Journal Volume 36 ; 36 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; The Byron Journal Volume 37 ; 37 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; The Byron Journal Volume 38 ; 38 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; The Byron Journal Volume 39 ; 39 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; The Byron Journal Volume 40 ; 40 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; The Byron Journal Volume 41 ; 41 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2014 ; The Byron Journal Volume 42 ; 42 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; The Byron Journal Volume 43 ; 43 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; The Byron Journal Volume 44 ; 44 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; The Byron Journal Volume 45 ; 45 ; http://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2018 ; The Byron Journal Volume 46 ; 46 ; https://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; The Byron Journal Volume 47 ; 47 ; https://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+    au < doNotProcess ; doNotProcess ; 2020 ; The Byron Journal Volume 48 ; 48 ; https://online.liverpooluniversitypress.co.uk/ ; >
+
+  }
+
+   {
+
+    title <
+      name = Comma ;
+      issn = 1680-1865 ;
+      eissn = 2049-3355 ;
+      issnl = 1680-1865
+    >
+
+    param[journal_id] = coma
+
+    au < doNotProcess ; exists ; 2004 ; Comma Volume 2004 ; 2004 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2005 ; Comma Volume 2005 ; 2005 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2006 ; Comma Volume 2006 ; 2006 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2007 ; Comma Volume 2007 ; 2007 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Comma Volume 2008 ; 2008 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Comma Volume 2009 ; 2009 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Comma Volume 2010 ; 2010 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Comma Volume 2011 ; 2011 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2012 ; Comma Volume 2012 ; 2012 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; Comma Volume 2013 ; 2013 ; http://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2014 ; Comma Volume 2014 ; 2014 ; http://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2015 ; Comma Volume 2015 ; 2015 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; Comma Volume 2016 ; 2016 ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2017 ; Comma Volume 2017 ; 2017 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+
+  }
+
+  {
+
+    title <
+      name = Catalan Review ;
+      issn = 0213-5949 ;
+      eissn = 2053-339X ;
+      issnl = 0213-5949
+    >
+
+    param[journal_id] = catr
+
+    au < finished ; crawling ; 2009 ; Catalan Review Volume 23 ; 23 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2010 ; Catalan Review Volume 24 ; 24 ; https://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2011 ; Catalan Review Volume 25 ; 25 ; https://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; Catalan Review Volume 26 ; 26 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2013 ; Catalan Review Volume 27 ; 27 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2014 ; Catalan Review Volume 28 ; 28 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Catalan Review Volume 29 ; 29 ; https://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; Catalan Review Volume 30 ; 30 ; https://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; Catalan Review Volume 31 ; 31 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2018 ; Catalan Review Volume 32 ; 32 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2019 ; Catalan Review Volume 33 ; 33 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+    au < doNotProcess ; doNotProcess ; 2020 ; Catalan Review Volume 34 ; 34 ; https://online.liverpooluniversitypress.co.uk/ ; >
+
+  }
+
+  {
+
+    title <
+      name = Contemporary French Civilization ;
+      issn = 0147-9156 ;
+      eissn = 2044-396X ;
+      issnl = 0147-9156
+    >
+
+    param[journal_id] = cfc
+
+    au < doNotProcess ; exists ; 2005 ; Contemporary French Civilization Volume 29 ; 29 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2006 ; Contemporary French Civilization Volume 30 ; 30 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2007 ; Contemporary French Civilization Volume 31 ; 31 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Contemporary French Civilization Volume 32 ; 32 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Contemporary French Civilization Volume 33 ; 33 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Contemporary French Civilization Volume 34 ; 34 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Contemporary French Civilization Volume 35 ; 35 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Contemporary French Civilization Volume 36 ; 36 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Contemporary French Civilization Volume 37 ; 37 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Contemporary French Civilization Volume 38 ; 38 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2014 ; Contemporary French Civilization Volume 39 ; 39 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2015 ; Contemporary French Civilization Volume 40 ; 40 ; http://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; crawling ; 2016 ; Contemporary French Civilization Volume 41 ; 41 ; http://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2017 ; Contemporary French Civilization Volume 42 ; 42 ; http://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; Contemporary French Civilization Volume 43 ; 43 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2019 ; Contemporary French Civilization Volume 44 ; 44 ; https://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < doNotProcess ; doNotProcess ; 2020 ; Contemporary French Civilization Volume 45 ; 45 ; https://online.liverpooluniversitypress.co.uk/ ; >
+
+  }
+
+  {
+
+    title <
+      name = Essays in Romanticism ;
+      issn = 2049-6699 ;
+      eissn = 2049-6702 ;
+      issnl = 2049-6699
+    >
+
+    param[journal_id] = eir
+
+    au < doNotProcess ; doNotProcess ; 1993 ; Essays in Romanticism Volume 1 ; 1 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1994 ; Essays in Romanticism Volume 2 ; 2 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1995 ; Essays in Romanticism Volume 3 ; 3 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1996 ; Essays in Romanticism Volume 4 ; 4 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1997 ; Essays in Romanticism Volume 5 ; 5 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1998 ; Essays in Romanticism Volume 6 ; 6 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; Essays in Romanticism Volume 7 ; 7 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2000 ; Essays in Romanticism Volume 8 ; 8 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; Essays in Romanticism Volume 9 ; 9 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; Essays in Romanticism Volume 10 ; 10 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; Essays in Romanticism Volume 11 ; 11 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; Essays in Romanticism Volume 12 ; 12 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; Essays in Romanticism Volume 13 ; 13 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; Essays in Romanticism Volume 14 ; 14 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Essays in Romanticism Volume 15 ; 15 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2008 ; Essays in Romanticism Volume 16 ; 16 ; http://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2009 ; Essays in Romanticism Volume 17 ; 17 ; http://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2010 ; Essays in Romanticism Volume 18 ; 18 ; http://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2012 ; Essays in Romanticism Volume 19 ; 19 ; http://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2013 ; Essays in Romanticism Volume 20 ; 20 ; http://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2014 ; Essays in Romanticism Volume 21 ; 21 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Essays in Romanticism Volume 22 ; 22 ; http://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; Essays in Romanticism Volume 23 ; 23 ; http://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; Essays in Romanticism Volume 24 ; 24 ; http://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; Essays in Romanticism Volume 25 ; 25 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Essays in Romanticism Volume 26 ; 26 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < doNotProcess ; doNotProcess ; 2020 ; Essays in Romanticism Volume 27 ; 27 ; https://online.liverpooluniversitypress.co.uk/ ; >
+
+  }
+
+  {
+
+    title <
+      name = European Journal of Language Policy / Revue européenne de politique linguistique ;
+      issn = 1757-6822 ;
+      eissn = 1757-6830 ;
+      issnl = 1757-6822
+    >
+
+    param[journal_id] = ejlp
+
+    au < doNotProcess ; doNotProcess ; 2009 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 1 ; 1 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 2 ; 2 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 3 ; 3 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 4 ; 4 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 5 ; 5 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2014 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 6 ; 6 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 7 ; 7 ; http://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2016 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 8 ; 8 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 9 ; 9 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 10 ; 10 ; https://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 11 ; 11 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
+    au < doNotProcess ; doNotProcess ; 2020 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 12 ; 12 ; https://online.liverpooluniversitypress.co.uk/ ; >
+
+  }
+
+  {
+
+    title <
+      name = Extrapolation ;
+      issn = 0014-5483 ;
+      eissn = 2047-7708 ;
+      issnl = 0014-5483
+    >
+
+      param[journal_id] = extr
+
+      au < finished ; finished ; 2008 ; Extrapolation Volume 49 ; 49 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; Extrapolation Volume 50 ; 50 ; http://online.liverpooluniversitypress.co.uk/ ; >
+      au < finished ; finished ; 2010 ; Extrapolation Volume 51 ; 51 ; http://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2011 ; Extrapolation Volume 52 ; 52 ; https://online.liverpooluniversitypress.co.uk/ ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; Extrapolation Volume 53 ; 53 ; https://online.liverpooluniversitypress.co.uk/ ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; Extrapolation Volume 54 ; 54 ; https://online.liverpooluniversitypress.co.uk/ ; >
+      au < finished ; crawling ; 2014 ; Extrapolation Volume 55 ; 55 ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2015 ; Extrapolation Volume 56 ; 56 ; http://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; Extrapolation Volume 57 ; 57 ; http://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2017 ; Extrapolation Volume 58 ; 58 ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2018 ; Extrapolation Volume 59 ; 59 ; https://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2019 ; Extrapolation Volume 60 ; 60 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 2020 ; Extrapolation Volume 61 ; 61 ; https://online.liverpooluniversitypress.co.uk/ ; >
+
+  }
+
+  {
+
+    title <
+      name = Francosphères ;
+      issn = 2046-3820 ;
+      eissn = 2046-3839 ;
+      issnl = 2046-3820
+    >
+
+    param[journal_id] = franc
+
+    au < finished ; finished ; 2012 ; Francosphères Volume 1 ; 1 ; http://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2013 ; Francosphères Volume 2 ; 2 ; http://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2014 ; Francosphères Volume 3 ; 3 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Francosphères Volume 4 ; 4 ; http://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; Francosphères Volume 5 ; 5 ; http://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; Francosphères Volume 6 ; 6 ; http://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2018 ; Francosphères Volume 7 ; 7 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2019 ; Francosphères Volume 8 ; 8 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
+    au < doNotProcess ; doNotProcess ; 2020 ; Francosphères Volume 9 ; 9 ; https://online.liverpooluniversitypress.co.uk/ ; >
+
+  }
+
+  {
+
+    title <
+      name = Historical Studies in Industrial Relations ;
+      issn = 1362-1572 ;
+      eissn = 2049-4459 ;
+      issnl = 1362-1572
+    >
+
+    param[journal_id] = hsir
+
+    au < doNotProcess ; doNotProcess ; 1996 ; Historical Studies in Industrial Relations Volume 1 ; 1 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1996 ; Historical Studies in Industrial Relations Volume 2 ; 2 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1997 ; Historical Studies in Industrial Relations Volume 3 ; 3 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1997 ; Historical Studies in Industrial Relations Volume 4 ; 4 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1998 ; Historical Studies in Industrial Relations Volume 5 ; 5 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1998 ; Historical Studies in Industrial Relations Volume 6 ; 6 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; Historical Studies in Industrial Relations Volume 7 ; 7 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; Historical Studies in Industrial Relations Volume 8 ; 8 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2000 ; Historical Studies in Industrial Relations Volume 9 ; 9 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2000 ; Historical Studies in Industrial Relations Volume 10 ; 10 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; Historical Studies in Industrial Relations Volume 11 ; 11 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; Historical Studies in Industrial Relations Volume 12 ; 12 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; Historical Studies in Industrial Relations Volume 13 ; 13 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; Historical Studies in Industrial Relations Volume 14 ; 14 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; Historical Studies in Industrial Relations Volume 15 ; 15 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; Historical Studies in Industrial Relations Volume 16 ; 16 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; Historical Studies in Industrial Relations Volume 17 ; 17 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; Historical Studies in Industrial Relations Volume 18 ; 18 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; Historical Studies in Industrial Relations Volume 19 ; 19 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; Historical Studies in Industrial Relations Volume 20 ; 20 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; Historical Studies in Industrial Relations Volume 21 ; 21 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; Historical Studies in Industrial Relations Volume 22 ; 22 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Historical Studies in Industrial Relations Volume 23-24 ; 23-24 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; crawling ; 2008 ; Historical Studies in Industrial Relations Volume 25-26 ; 25-26 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2009 ; Historical Studies in Industrial Relations Volume 27-28 ; 27-28 ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2010 ; Historical Studies in Industrial Relations Volume 29-30 ; 29-30 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2011 ; Historical Studies in Industrial Relations Volume 31-32 ; 31-32 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2012 ; Historical Studies in Industrial Relations Volume 33 ; 33 ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2013 ; Historical Studies in Industrial Relations Volume 34 ; 34 ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Historical Studies in Industrial Relations Volume 35 ; 35 ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; Historical Studies in Industrial Relations Volume 36 ; 36 ; http://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; crawling ; 2016 ; Historical Studies in Industrial Relations Volume 37 ; 37 ; http://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2017 ; Historical Studies in Industrial Relations Volume 38 ; 38 ; http://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; Historical Studies in Industrial Relations Volume 39 ; 39 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2019 ; Historical Studies in Industrial Relations Volume 40 ; 40 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+
+  }
+
+  {
+
+    title <
+      name = The Indexer: the international journal of indexing ;
+      issn = 0019-4131 ;
+      eissn = 1756-0632 ;
+      issnl = 0019-4131
+    >
+
+    param[journal_id] = index
+
+    au < doNotProcess ; doNotProcess ; 2006-2007 ; The Indexer: the international journal of indexing Volume 25 ; 25 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; crawling ; 2008 ; The Indexer: the international journal of indexing Volume 26 ; 26 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2009 ; The Indexer: the international journal of indexing Volume 27 ; 27 ; https://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2010 ; The Indexer: the international journal of indexing Volume 28 ; 28 ; https://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2011 ; The Indexer: the international journal of indexing Volume 29 ; 29 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2012 ; The Indexer: the international journal of indexing Volume 30 ; 30 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2013 ; The Indexer: the international journal of indexing Volume 31 ; 31 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; The Indexer: the international journal of indexing Volume 32 ; 32 ; https://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; The Indexer: the international journal of indexing Volume 33 ; 33 ; https://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; The Indexer: the international journal of indexing Volume 34 ; 34 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2017 ; The Indexer: the international journal of indexing Volume 35 ; 35 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2018 ; The Indexer: the international journal of indexing Volume 36 ; 36 ; https://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; The Indexer: the international journal of indexing Volume 37 ; 37 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
+    au < doNotProcess ; doNotProcess ; 2020 ; The Indexer: the international journal of indexing Volume 38 ; 38 ; https://online.liverpooluniversitypress.co.uk/ ; >
+
+  }
+  {
+
+    title <
+      name = International Development Planning Review ;
+      issn = 1474-6743 ;
+      eissn = 1478-3401 ;
+      issnl = 1474-6743
+    >
+
+    param[journal_id] = idpr
+    comment[continues] = 0142-7849
+
+    au < doNotProcess ; exists ; 2002 ; International Development Planning Review Volume 24 ; 24 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2003 ; International Development Planning Review Volume 25 ; 25 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2004 ; International Development Planning Review Volume 26 ; 26 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2005 ; International Development Planning Review Volume 27 ; 27 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2006 ; International Development Planning Review Volume 28 ; 28 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2007 ; International Development Planning Review Volume 29 ; 29 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; International Development Planning Review Volume 30 ; 30 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; International Development Planning Review Volume 31 ; 31 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; International Development Planning Review Volume 32 ; 32 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; International Development Planning Review Volume 33 ; 33 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; International Development Planning Review Volume 34 ; 34 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; International Development Planning Review Volume 35 ; 35 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; crawling ; 2014 ; International Development Planning Review Volume 36 ; 36 ; http://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; International Development Planning Review Volume 37 ; 37 ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2016 ; International Development Planning Review Volume 38 ; 38 ; http://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; International Development Planning Review Volume 39 ; 39 ; http://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; International Development Planning Review Volume 40 ; 40 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; International Development Planning Review Volume 41 ; 41 ; https://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+    au < doNotProcess ; doNotProcess ; 2020 ; International Development Planning Review Volume 42 ; 42 ; https://online.liverpooluniversitypress.co.uk/ ; >
+
+  }
+
+  {
+
+    title <
+      name = Hunter Gatherer Research ;
+      eissn = 1476-4261 ;
+      issnl = 1476-4261
+    >
+
+    param[journal_id] = hgr
+    #V2 I1=2016, I2=2016, I3=2016, I4=2017
+    #V3 I1=2017, I2=2018, I3=2019, I4=2019
+    #V4 I1=2019, I2=2019, I3=2020
+
+    au < finished ; finished ; 2015 ; Hunter Gatherer Research Volume 1 ; 1 ; http://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2016-2017 ; Hunter Gatherer Research Volume 2 ; 2 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2017-2019 ; Hunter Gatherer Research Volume 3 ; 3 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < doNotProcess ; doNotProcess ; 2019-2020 ; Hunter Gatherer Research Volume 4 ; 4 ; https://online.liverpooluniversitypress.co.uk/ ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Literary & Cultural Disability Studies ;
+      issn = 1757-6458 ;
+      eissn = 1757-6466 ;
+      issnl = 1757-6458
+    >
+
+    param[journal_id] = jlcds
+
+    au < doNotProcess ; exists ; 2007 ; Journal of Literary & Cultural Disability Studies Volume 1 ; 1 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Journal of Literary & Cultural Disability Studies Volume 2 ; 2 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Journal of Literary & Cultural Disability Studies Volume 3 ; 3 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Journal of Literary & Cultural Disability Studies Volume 4 ; 4 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Journal of Literary & Cultural Disability Studies Volume 5 ; 5 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Journal of Literary & Cultural Disability Studies Volume 6 ; 6 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Journal of Literary & Cultural Disability Studies Volume 7 ; 7 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2014 ; Journal of Literary & Cultural Disability Studies Volume 8 ; 8 ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; Journal of Literary & Cultural Disability Studies Volume 9 ; 9 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; Journal of Literary & Cultural Disability Studies Volume 10 ; 10 ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2017 ; Journal of Literary & Cultural Disability Studies Volume 11 ; 11 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; Journal of Literary & Cultural Disability Studies Volume 12 ; 12 ; https://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Journal of Literary & Cultural Disability Studies Volume 13 ; 13 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < doNotProcess ; doNotProcess ; 2020 ; Journal of Literary & Cultural Disability Studies Volume 14 ; 14 ; https://online.liverpooluniversitypress.co.uk/ ; >
+
+  }
+
+  {
+  
+    title <
+      name = Journal of Romance Studies ;
+      issn = 1473-3536 ;
+      eissn = 1752-2331 ;
+      issnl = 1473-3536
+      
+    > 
+    
+    param[journal_id] = jrs
+       
+    au < doNotProcess ; doNotProcess ; 2001 ; Journal of Romance Studies Volume 1 ; 1 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; Journal of Romance Studies Volume 2 ; 2 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; Journal of Romance Studies Volume 3 ; 3 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; Journal of Romance Studies Volume 4 ; 4 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; Journal of Romance Studies Volume 5 ; 5 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; Journal of Romance Studies Volume 6 ; 6 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Journal of Romance Studies Volume 7 ; 7 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; crawling ; 2008 ; Journal of Romance Studies Volume 8 ; 8 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2009 ; Journal of Romance Studies Volume 9 ; 9 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2010 ; Journal of Romance Studies Volume 10 ; 10 ; https://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Journal of Romance Studies Volume 11 ; 11 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Journal of Romance Studies Volume 12 ; 12 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Journal of Romance Studies Volume 13 ; 13 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; Journal of Romance Studies Volume 14 ; 14 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; Journal of Romance Studies Volume 15 ; 15 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; crawling ; 2016 ; Journal of Romance Studies Volume 16 ; 16 ; https://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; Journal of Romance Studies Volume 17 ; 17 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2018 ; Journal of Romance Studies Volume 18 ; 18 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2019 ; Journal of Romance Studies Volume 19 ; 19 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+    au < doNotProcess ; doNotProcess ; 2020 ; Journal of Romance Studies Volume 20 ; 20 ; https://online.liverpooluniversitypress.co.uk/ ; >
+
+  }
+
+  {
+
+    title <
+      name = Labour History: A Journal of Labour and Social History ;
+      issn = 0023-6942 ;
+      eissn = 1839-3039 ;
+      issnl = 0023-6942
+    >
+
+    param[journal_id] = labourhistory
+
+    au < doNotProcess ; doNotProcess ; 1963 ; Labour History: A Journal of Labour and Social History Volume 4 ; 4 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1963 ; Labour History: A Journal of Labour and Social History Volume 5 ; 5 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1964 ; Labour History: A Journal of Labour and Social History Volume 6 ; 6 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1964 ; Labour History: A Journal of Labour and Social History Volume 7 ; 7 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1965 ; Labour History: A Journal of Labour and Social History Volume 8 ; 8 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1965 ; Labour History: A Journal of Labour and Social History Volume 9 ; 9 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1966 ; Labour History: A Journal of Labour and Social History Volume 10 ; 10 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1966 ; Labour History: A Journal of Labour and Social History Volume 11 ; 11 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1967 ; Labour History: A Journal of Labour and Social History Volume 12 ; 12 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1967 ; Labour History: A Journal of Labour and Social History Volume 13 ; 13 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1968 ; Labour History: A Journal of Labour and Social History Volume 14 ; 14 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1968 ; Labour History: A Journal of Labour and Social History Volume 15 ; 15 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1969 ; Labour History: A Journal of Labour and Social History Volume 16 ; 16 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1969 ; Labour History: A Journal of Labour and Social History Volume 17 ; 17 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1970 ; Labour History: A Journal of Labour and Social History Volume 18 ; 18 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1970 ; Labour History: A Journal of Labour and Social History Volume 19 ; 19 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1971 ; Labour History: A Journal of Labour and Social History Volume 20 ; 20 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1971 ; Labour History: A Journal of Labour and Social History Volume 21 ; 21 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1972 ; Labour History: A Journal of Labour and Social History Volume 22 ; 22 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1972 ; Labour History: A Journal of Labour and Social History Volume 23 ; 23 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1973 ; Labour History: A Journal of Labour and Social History Volume 24 ; 24 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1973 ; Labour History: A Journal of Labour and Social History Volume 25 ; 25 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1974 ; Labour History: A Journal of Labour and Social History Volume 26 ; 26 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1974 ; Labour History: A Journal of Labour and Social History Volume 27 ; 27 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1975 ; Labour History: A Journal of Labour and Social History Volume 28 ; 28 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1975 ; Labour History: A Journal of Labour and Social History Volume 29 ; 29 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1976 ; Labour History: A Journal of Labour and Social History Volume 30 ; 30 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1976 ; Labour History: A Journal of Labour and Social History Volume 31 ; 31 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1977 ; Labour History: A Journal of Labour and Social History Volume 32 ; 32 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1977 ; Labour History: A Journal of Labour and Social History Volume 33 ; 33 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1978 ; Labour History: A Journal of Labour and Social History Volume 34 ; 34 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1978 ; Labour History: A Journal of Labour and Social History Volume 35 ; 35 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1979 ; Labour History: A Journal of Labour and Social History Volume 36 ; 36 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1979 ; Labour History: A Journal of Labour and Social History Volume 37 ; 37 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1980 ; Labour History: A Journal of Labour and Social History Volume 38 ; 38 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1980 ; Labour History: A Journal of Labour and Social History Volume 39 ; 39 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1981 ; Labour History: A Journal of Labour and Social History Volume 40 ; 40 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1981 ; Labour History: A Journal of Labour and Social History Volume 41 ; 41 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1982 ; Labour History: A Journal of Labour and Social History Volume 42 ; 42 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1982 ; Labour History: A Journal of Labour and Social History Volume 43 ; 43 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1983 ; Labour History: A Journal of Labour and Social History Volume 44 ; 44 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1983 ; Labour History: A Journal of Labour and Social History Volume 45 ; 45 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1984 ; Labour History: A Journal of Labour and Social History Volume 46 ; 46 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1984 ; Labour History: A Journal of Labour and Social History Volume 47 ; 47 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1985 ; Labour History: A Journal of Labour and Social History Volume 48 ; 48 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1985 ; Labour History: A Journal of Labour and Social History Volume 49 ; 49 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1986 ; Labour History: A Journal of Labour and Social History Volume 50 ; 50 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1986 ; Labour History: A Journal of Labour and Social History Volume 51 ; 51 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1987 ; Labour History: A Journal of Labour and Social History Volume 52 ; 52 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1987 ; Labour History: A Journal of Labour and Social History Volume 53 ; 53 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1988 ; Labour History: A Journal of Labour and Social History Volume 54 ; 54 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1988 ; Labour History: A Journal of Labour and Social History Volume 55 ; 55 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1989 ; Labour History: A Journal of Labour and Social History Volume 56 ; 56 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1989 ; Labour History: A Journal of Labour and Social History Volume 57 ; 57 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1990 ; Labour History: A Journal of Labour and Social History Volume 58 ; 58 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1990 ; Labour History: A Journal of Labour and Social History Volume 59 ; 59 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1991 ; Labour History: A Journal of Labour and Social History Volume 60 ; 60 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1991 ; Labour History: A Journal of Labour and Social History Volume 61 ; 61 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1992 ; Labour History: A Journal of Labour and Social History Volume 62 ; 62 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1992 ; Labour History: A Journal of Labour and Social History Volume 63 ; 63 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1993 ; Labour History: A Journal of Labour and Social History Volume 64 ; 64 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1993 ; Labour History: A Journal of Labour and Social History Volume 65 ; 65 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1994 ; Labour History: A Journal of Labour and Social History Volume 66 ; 66 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1994 ; Labour History: A Journal of Labour and Social History Volume 67 ; 67 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1995 ; Labour History: A Journal of Labour and Social History Volume 68 ; 68 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1995 ; Labour History: A Journal of Labour and Social History Volume 69 ; 69 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1996 ; Labour History: A Journal of Labour and Social History Volume 70 ; 70 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1996 ; Labour History: A Journal of Labour and Social History Volume 71 ; 71 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1997 ; Labour History: A Journal of Labour and Social History Volume 72 ; 72 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1997 ; Labour History: A Journal of Labour and Social History Volume 73 ; 73 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1998 ; Labour History: A Journal of Labour and Social History Volume 74 ; 74 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1998 ; Labour History: A Journal of Labour and Social History Volume 75 ; 75 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; Labour History: A Journal of Labour and Social History Volume 76 ; 76 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; Labour History: A Journal of Labour and Social History Volume 77 ; 77 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2000 ; Labour History: A Journal of Labour and Social History Volume 78 ; 78 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2000 ; Labour History: A Journal of Labour and Social History Volume 79 ; 79 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; Labour History: A Journal of Labour and Social History Volume 80 ; 80 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; Labour History: A Journal of Labour and Social History Volume 81 ; 81 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; Labour History: A Journal of Labour and Social History Volume 82 ; 82 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; Labour History: A Journal of Labour and Social History Volume 83 ; 83 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; Labour History: A Journal of Labour and Social History Volume 84 ; 84 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; Labour History: A Journal of Labour and Social History Volume 85 ; 85 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; Labour History: A Journal of Labour and Social History Volume 86 ; 86 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; Labour History: A Journal of Labour and Social History Volume 87 ; 87 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; Labour History: A Journal of Labour and Social History Volume 88 ; 88 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; Labour History: A Journal of Labour and Social History Volume 89 ; 89 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; Labour History: A Journal of Labour and Social History Volume 90 ; 90 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; Labour History: A Journal of Labour and Social History Volume 91 ; 91 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Labour History: A Journal of Labour and Social History Volume 92 ; 92 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Labour History: A Journal of Labour and Social History Volume 93 ; 93 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; crawling ; 2008 ; Labour History: A Journal of Labour and Social History Volume 94 ; 94 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2008 ; Labour History: A Journal of Labour and Social History Volume 95 ; 95 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2009 ; Labour History: A Journal of Labour and Social History Volume 96 ; 96 ; https://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2009 ; Labour History: A Journal of Labour and Social History Volume 97 ; 97 ; https://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2010 ; Labour History: A Journal of Labour and Social History Volume 98 ; 98 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2010 ; Labour History: A Journal of Labour and Social History Volume 99 ; 99 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2011 ; Labour History: A Journal of Labour and Social History Volume 100 ; 100 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2011 ; Labour History: A Journal of Labour and Social History Volume 101 ; 101 ; https://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; Labour History: A Journal of Labour and Social History Volume 102 ; 102 ; https://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; Labour History: A Journal of Labour and Social History Volume 103 ; 103 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2013 ; Labour History: A Journal of Labour and Social History Volume 104 ; 104 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2013 ; Labour History: A Journal of Labour and Social History Volume 105 ; 105 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; Labour History: A Journal of Labour and Social History Volume 106 ; 106 ; https://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; Labour History: A Journal of Labour and Social History Volume 107 ; 107 ; https://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Labour History: A Journal of Labour and Social History Volume 108 ; 108 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2015 ; Labour History: A Journal of Labour and Social History Volume 109 ; 109 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2016 ; Labour History: A Journal of Labour and Social History Volume 110 ; 110 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; Labour History: A Journal of Labour and Social History Volume 111 ; 111 ; https://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; Labour History: A Journal of Labour and Social History Volume 112 ; 112 ; https://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; Labour History: A Journal of Labour and Social History Volume 113 ; 113 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2018 ; Labour History: A Journal of Labour and Social History Volume 114 ; 114 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2018 ; Labour History: A Journal of Labour and Social History Volume 115 ; 115 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Labour History: A Journal of Labour and Social History Volume 116 ; 116 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = Labour History Review ;
+      issn = 0961-5652 ;
+      eissn = 1745-8188 ;
+      issnl = 0961-5652
+    >
+
+    param[journal_id] = lhr
+
+    au < doNotProcess ; exists ; 2005 ; Labour History Review Volume 70 [Atypon] ; 70 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2006 ; Labour History Review Volume 71 [Atypon] ; 71 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2007 ; Labour History Review Volume 72 [Atypon] ; 72 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Labour History Review Volume 73 [Atypon]; 73 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Labour History Review Volume 74 [Atypon]; 74 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Labour History Review Volume 75 [Atypon]; 75 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Labour History Review Volume 76 [Atypon]; 76 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Labour History Review Volume 77 [Atypon]; 77 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Labour History Review Volume 78 [Atypon]; 78 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2014 ; Labour History Review Volume 79 [Atypon] ; 79 ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; Labour History Review Volume 80 [Atypon] ; 80 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; Labour History Review Volume 81 [Atypon] ; 81 ; http://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; Labour History Review Volume 82 [Atypon] ; 82 ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2018 ; Labour History Review Volume 83 [Atypon] ; 83 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2019 ; Labour History Review Volume 84 [Atypon] ; 84 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+    au < doNotProcess ; doNotProcess ; 2020 ; Labour History Review Volume 85 [Atypon] ; 85 ; https://online.liverpooluniversitypress.co.uk/ ; >
+
+  }
+
+  {
+
+    title <
+      name = Modern Believing ;
+      issn = 1353-1425 ;
+      eissn = 2053-633X ;
+      issnl = 1353-1425
+    >
+
+    param[journal_id] = mb
+
+    au < finished ; finished ; 2008 ; Modern Believing Volume 49 ; 49 ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2009 ; Modern Believing Volume 50 ; 50 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2010 ; Modern Believing Volume 51 ; 51 ; http://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2011 ; Modern Believing Volume 52 ; 52 ; http://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2012 ; Modern Believing Volume 53 ; 53 ; http://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2013 ; Modern Believing Volume 54 ; 54 ; http://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2014 ; Modern Believing Volume 55 ; 55 ; http://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2015 ; Modern Believing Volume 56 ; 56 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; Modern Believing Volume 57 ; 57 ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2017 ; Modern Believing Volume 58 ; 58 ; http://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2018 ; Modern Believing Volume 59 ; 59 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Modern Believing Volume 60 ; 60 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
+    au < doNotProcess ; doNotProcess ; 2020 ; Modern Believing Volume 61 ; 61 ; https://online.liverpooluniversitypress.co.uk/ ; >
+
+  }
+
+  {
+
+    title <
+      name = The Modern Churchman ;
+      issn = 0026-7597 ;
+      issnl = 0026-7597
+    >
+
+    param[journal_id] = mc
+
+    comment[continued_by] = Modern Believing
+
+    au < doNotProcess ; doNotProcess ; 1957-1958 ; The Modern Churchman Volume 1 ; 1 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1958-1959 ; The Modern Churchman Volume 2 ; 2 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1959-1960 ; The Modern Churchman Volume 3 ; 3 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1960-1961 ; The Modern Churchman Volume 4 ; 4 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1961-1962 ; The Modern Churchman Volume 5 ; 5 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1962-1963 ; The Modern Churchman Volume 6 ; 6 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1963-1964 ; The Modern Churchman Volume 7 ; 7 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1964-1965 ; The Modern Churchman Volume 8 ; 8 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1965-1966 ; The Modern Churchman Volume 9 ; 9 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1966-1967 ; The Modern Churchman Volume 10 ; 10 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1967-1968 ; The Modern Churchman Volume 11 ; 11 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1968-1969 ; The Modern Churchman Volume 12 ; 12 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1969-1970 ; The Modern Churchman Volume 13 ; 13 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1970-1971 ; The Modern Churchman Volume 14 ; 14 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1971-1972 ; The Modern Churchman Volume 15 ; 15 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1972-1973 ; The Modern Churchman Volume 16 ; 16 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1973-1974 ; The Modern Churchman Volume 17 ; 17 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1974-1975 ; The Modern Churchman Volume 18 ; 18 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1975-1976 ; The Modern Churchman Volume 19 ; 19 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1977 ; The Modern Churchman Volume 20 ; 20 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1977-1978 ; The Modern Churchman Volume 21 ; 21 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1978-1979 ; The Modern Churchman Volume 22 ; 22 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1980 ; The Modern Churchman Volume 23 ; 23 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1981 ; The Modern Churchman Volume 24 ; 24 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1982-1983 ; The Modern Churchman Volume 25 ; 25 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1983-1984 ; The Modern Churchman Volume 26 ; 26 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1984-1985 ; The Modern Churchman Volume 27 ; 27 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1985-1986 ; The Modern Churchman Volume 28 ; 28 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1986-1987 ; The Modern Churchman Volume 29 ; 29 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1988-1989 ; The Modern Churchman Volume 30 ; 30 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1989-1990 ; The Modern Churchman Volume 31 ; 31 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1990-1991 ; The Modern Churchman Volume 32 ; 32 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1991-1992 ; The Modern Churchman Volume 33 ; 33 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 1992-1993 ; The Modern Churchman Volume 34 ; 34 ; https://online.liverpooluniversitypress.co.uk/ ; >
+
+  }
+
+  {
+
+    title <
+      name = Music, Sound, and the Moving Image ;
+      issn = 1753-0768 ;
+      eissn = 1753-0776 ;
+      issnl = 1753-0768
+    >
+
+    param[journal_id] = msmi
+
+    au < doNotProcess ; exists ; 2007 ; Music, Sound, and the Moving Image Volume 1 ; 1 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Music, Sound, and the Moving Image Volume 2 ; 2 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Music, Sound, and the Moving Image Volume 3 ; 3 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Music, Sound, and the Moving Image Volume 4 ; 4 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Music, Sound, and the Moving Image Volume 5 ; 5 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Music, Sound, and the Moving Image Volume 6 ; 6 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Music, Sound, and the Moving Image Volume 7 ; 7 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2014 ; Music, Sound, and the Moving Image Volume 8 ; 8 ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; Music, Sound, and the Moving Image Volume 9 ; 9 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; Music, Sound, and the Moving Image Volume 10 ; 10 ; http://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2017 ; Music, Sound, and the Moving Image Volume 11 ; 11 ; http://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; Music, Sound, and the Moving Image Volume 12 ; 12 ; https://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Music, Sound, and the Moving Image Volume 13 ; 13 ; https://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+    au < expected ; exists ; 2020 ; Music, Sound, and the Moving Image Volume 14 ; 14 ; https://online.liverpooluniversitypress.co.uk/ ; >
+
+  }
+
+  {
+
+    title <
+      name = Newsletter of the Gypsy Lore Society ;
+      issn = 1070-4604 ;
+      issnl = 1070-4604
+    >
+
+    param[journal_id] = newsletter
+
+    au < finished ; finished ; 2012 ; Newsletter of the Gypsy Lore Society Volume 35 ; 35 ; http://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2013 ; Newsletter of the Gypsy Lore Society Volume 36 ; 36 ; http://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2014 ; Newsletter of the Gypsy Lore Society Volume 37 ; 37 ; http://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Newsletter of the Gypsy Lore Society Volume 38 ; 38 ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2016 ; Newsletter of the Gypsy Lore Society Volume 39 ; 39 ; http://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; Newsletter of the Gypsy Lore Society Volume 40 ; 40 ; http://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Quaker Studies ;
+      issn = 1363-013X ;
+      issnl = 1363-013X
+    >
+
+    param[journal_id] = quaker
+
+    au < finished ; crawling ; 2007-2008 ; Quaker Studies Volume 12 ; 12 ; http://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2008-2009 ; Quaker Studies Volume 13 ; 13 ; http://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2009-2010 ; Quaker Studies Volume 14 ; 14 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2010-2011 ; Quaker Studies Volume 15 ; 15 ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2011-2012 ; Quaker Studies Volume 16 ; 16 ; http://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2012-2013 ; Quaker Studies Volume 17 ; 17 ; http://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2013-2014 ; Quaker Studies Volume 18 ; 18 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014-2015 ; Quaker Studies Volume 19 ; 19 ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015-2016 ; Quaker Studies Volume 20 ; 20 ; http://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2016-2017 ; Quaker Studies Volume 21 ; 21 ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2017-2018 ; Quaker Studies Volume 22 ; 22 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2018-2019 ; Quaker Studies Volume 23 ; 23 ; https://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < doNotProcess ; doNotProcess ; 2019-2020 ; Quaker Studies Volume 24 ; 24 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2020-2021 ; Quaker Studies Volume 25 ; 25 ; https://online.liverpooluniversitypress.co.uk/ ; >
+
+  }
+
+  {
+
+    title <
+      name = Romani Studies ;
+      issn = 1528-0748 ;
+      eissn = 1757-2274 ;
+      issnl = 1528-0748
+    >
+
+    param[journal_id] = rost
+
+    au < doNotProcess ; exists ; 2000 ; Romani Studies Volume 10 ; 10 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2001 ; Romani Studies Volume 11 ; 11 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2002 ; Romani Studies Volume 12 ; 12 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2003 ; Romani Studies Volume 13 ; 13 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2004 ; Romani Studies Volume 14 ; 14 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2005 ; Romani Studies Volume 15 ; 15 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2006 ; Romani Studies Volume 16 ; 16 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2007 ; Romani Studies Volume 17 ; 17 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Romani Studies Volume 18 ; 18 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Romani Studies Volume 19 ; 19 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Romani Studies Volume 20 ; 20 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Romani Studies Volume 21 ; 21 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Romani Studies Volume 22 ; 22 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Romani Studies Volume 23 ; 23 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2014 ; Romani Studies Volume 24 ; 24 ; http://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2015 ; Romani Studies Volume 25 ; 25 ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2016 ; Romani Studies Volume 26 ; 26 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; Romani Studies Volume 27 ; 27 ; http://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2018 ; Romani Studies Volume 28 ; 28 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Romani Studies Volume 29 ; 29 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < doNotProcess ; doNotProcess ; 2020 ; Romani Studies Volume 30 ; 30 ; https://online.liverpooluniversitypress.co.uk/ ; >
+
+  }
+
+  {
+
+    title <
+      name = Quebec Studies ;
+      issn = 0737-3759 ;
+      eissn = 2052-1731 ;
+      issnl = 0737-3759
+    >
+
+    param[journal_id] = qs
+
+    au < finished ; finished ; 2008 ; Quebec Studies Volume 45 ; 45 ; http://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2008 ; Quebec Studies Volume 46 ; 46 ; http://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2009 ; Quebec Studies Volume 47 ; 47 ; http://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2009 ; Quebec Studies Volume 48 ; 48 ; http://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2010 ; Quebec Studies Volume 49 ; 49 ; http://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; crawling ; 2010 ; Quebec Studies Volume 50 ; 50 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2011 ; Quebec Studies Volume 51 ; 51 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2011 ; Quebec Studies Volume 52 ; 52 ; http://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2012 ; Quebec Studies Volume 53 ; 53 ; http://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2012 ; Quebec Studies Volume 54 ; 54 ; http://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2012 ; Quebec Studies Volume Special_Issue ; Special_Issue ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2013 ; Quebec Studies Volume 55 ; 55 ; http://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2013 ; Quebec Studies Volume 56 ; 56 ; http://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2014 ; Quebec Studies Volume 57 ; 57 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+
+    au < finished ; finished ; 2014 ; Quebec Studies Volume 58 ; 58 ; http://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2015 ; Quebec Studies Volume 59 ; 59 ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; Quebec Studies Volume 60 ; 60 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; Quebec Studies Volume 61 ; 61 ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2016 ; Quebec Studies Volume 62 ; 62 ; http://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2017 ; Quebec Studies Volume 63 ; 63 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; Quebec Studies Volume 64 ; 64 ; http://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; Quebec Studies Volume 65 ; 65 ; https://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; Quebec Studies Volume 66 ; 66 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2019 ; Quebec Studies Volume 67 ; 67 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+    au < doNotProcess ; doNotProcess ; 2019 ; Quebec Studies Volume 68 ; 68 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2020 ; Quebec Studies Volume 69 ; 69 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < expected ; exists ; 2020 ; Quebec Studies Volume 70 ; 70 ; https://online.liverpooluniversitypress.co.uk/ ; >
+
+  }
+
+  {
+
+    title <
+      name = Science Fiction Film and Television ;
+      issn = 1754-3770 ;
+      eissn = 1754-3789 ;
+      issnl = 1754-3770
+    >
+
+    param[journal_id] = sfftv
+
+    au < doNotProcess ; doNotProcess ; 2008 ; Science Fiction Film and Television Volume 1 ; 1 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Science Fiction Film and Television Volume 2 ; 2 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Science Fiction Film and Television Volume 3 ; 3 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Science Fiction Film and Television Volume 4 ; 4 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Science Fiction Film and Television Volume 5 ; 5 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Science Fiction Film and Television Volume 6 ; 6 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2014 ; Science Fiction Film and Television Volume 7 ; 7 ; http://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Science Fiction Film and Television Volume 8 ; 8 ; http://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; Science Fiction Film and Television Volume 9 ; 9 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; Science Fiction Film and Television Volume 10 ; 10 ; http://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; Science Fiction Film and Television Volume 11 ; 11 ; https://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Science Fiction Film and Television Volume 12 ; 12 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
+    au < doNotProcess ; doNotProcess ; 2020 ; Science Fiction Film and Television Volume 13 ; 13 ; https://online.liverpooluniversitypress.co.uk/ ; >
+
+  }
+
+  {
+
+    title <
+      name = Sculpture Journal ;
+      issn = 1366-2724 ;
+      eissn = 1756-9923 ;
+      issnl = 1366-2724
+    >
+
+    param[journal_id] = sj
+
+    au < doNotProcess ; exists ; 2005 ; Sculpture Journal Volume 13 ; 13 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2005 ; Sculpture Journal Volume 14 ; 14 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2006 ; Sculpture Journal Volume 15 ; 15 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2007 ; Sculpture Journal Volume 16 ; 16 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Sculpture Journal Volume 17 ; 17 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Sculpture Journal Volume 18 ; 18 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Sculpture Journal Volume 19 ; 19 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Sculpture Journal Volume 20 ; 20 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Sculpture Journal Volume 21 ; 21 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Sculpture Journal Volume 22 ; 22 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; crawling ; 2014 ; Sculpture Journal Volume 23 ; 23 ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2015 ; Sculpture Journal Volume 24 ; 24 ; http://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2016 ; Sculpture Journal Volume 25 ; 25 ; http://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; Sculpture Journal Volume 26 ; 26 ; http://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; Sculpture Journal Volume 27 ; 27 ; https://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Sculpture Journal Volume 28 ; 28 ; https://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+    au < doNotProcess ; doNotProcess ; 2020 ; Sculpture Journal Volume 29 ; 29 ; https://online.liverpooluniversitypress.co.uk/ ; >
+
+  }
+
+     {
+
+    title <
+      name = Studia Hibernica ;
+      issn = 0081-6477 ;
+      eissn = 2397-4532 ;
+      issnl = 0081-6477
+    >
+
+    param[journal_id] = studia
+
+    au < finished ; finished ; 2011 ; Studia Hibernica Volume 37 ; 37 ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2012 ; Studia Hibernica Volume 38 ; 38 ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2013 ; Studia Hibernica Volume 39 ; 39 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Studia Hibernica Volume 40 ; 40 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Studia Hibernica Volume 41 ; 41 ; http://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; crawling ; 2016 ; Studia Hibernica Volume 42 ; 42 ; http://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; Studia Hibernica Volume 43 ; 43 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; Studia Hibernica Volume 44 ; 44 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2019 ; Studia Hibernica Volume 45 ; 45 ; https://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < expected ; exists ; 2020 ; Studia Hibernica Volume 46 ; 46 ; https://online.liverpooluniversitypress.co.uk/ ; >
+
+  }
+  
+  #this title is here because it is now Theory & Struggle
+  {
+
+    title <
+      name = Praxis ;
+      issn = 0969-1154
+    >
+
+    param[journal_id] = theory
+    
+    #no earlier volumes available at Liverpool 
+    au < doNotProcess ; doNotProcess ; 2011 ; Praxis Volume 154 ; 154 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Praxis Volume 155 ; 155 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    #title is now continued as Theory & Struggle - different ISBN, same journal_id
+
+  }
+  
+  {
+
+    title <
+      name = Theory & Struggle ;
+      issn = 2057-0988 ; 
+      eissn = 2514-264X
+    >
+
+    param[journal_id] = theory
+    #title was Praxis - different ISBN, same journal_id
+    au < finished ; crawling ; 2014 ; Theory & Struggle Volume 115 ; 115 ; https://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Theory & Struggle Volume 116 ; 116 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2016 ; Theory & Struggle Volume 117 ; 117 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2017 ; Theory & Struggle Volume 118 ; 118 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; Theory & Struggle Volume 119 ; 119 ; https://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+    au < doNotProcess ; doNotProcess ; 2019 ; Theory & Struggle Volume 120 ; 120 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2020 ; Theory & Struggle Volume 121 ; 121 ; https://online.liverpooluniversitypress.co.uk/ ; >
+
+
+  }
+  
+  
+  {
+
+    title <
+      name = Third World Planning Review ;
+      issn = 0142-7849 ;
+      issnl = 0142-7849
+    >
+
+    param[journal_id] = twpr
+    comment[continued_by] = 1474-6743
+
+    au < doNotProcess ; exists ; 1993 ; Third World Planning Review Volume 15 ; 15 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1994 ; Third World Planning Review Volume 16 ; 16 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1995 ; Third World Planning Review Volume 17 ; 17 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1996 ; Third World Planning Review Volume 18 ; 18 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1997 ; Third World Planning Review Volume 19 ; 19 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1998 ; Third World Planning Review Volume 20 ; 20 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1999 ; Third World Planning Review Volume 21 ; 21 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2000 ; Third World Planning Review Volume 22 ; 22 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; Third World Planning Review Volume 23 ; 23 ; https://online.liverpooluniversitypress.co.uk/ ; >
+
+  }
+
+  {
+
+    title <
+      name = Town Planning Review ;
+      issn = 0041-0020 ;
+      eissn = 1478-341X ;
+      issnl = 0041-0020
+    >
+
+    param[journal_id] = tpr
+
+    au < doNotProcess ; exists ; 1910-1911 ; Town Planning Review Volume 1 ; 1 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1911-1912 ; Town Planning Review Volume 2 ; 2 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1912-1913 ; Town Planning Review Volume 3 ; 3 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1913-1914 ; Town Planning Review Volume 4 ; 4 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1914-1915 ; Town Planning Review Volume 5 ; 5 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1915-1916 ; Town Planning Review Volume 6 ; 6 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1916-1918 ; Town Planning Review Volume 7 ; 7 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1919-1920 ; Town Planning Review Volume 8 ; 8 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1921-1922 ; Town Planning Review Volume 9 ; 9 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1923-1924 ; Town Planning Review Volume 10 ; 10 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1924-1926 ; Town Planning Review Volume 11 ; 11 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1926-1927 ; Town Planning Review Volume 12 ; 12 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1928-1929 ; Town Planning Review Volume 13 ; 13 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1930-1931 ; Town Planning Review Volume 14 ; 14 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1932-1933 ; Town Planning Review Volume 15 ; 15 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1934-1935 ; Town Planning Review Volume 16 ; 16 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1936-1937 ; Town Planning Review Volume 17 ; 17 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1938-1942 ; Town Planning Review Volume 18 ; 18 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1943-1947 ; Town Planning Review Volume 19 ; 19 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1949-1950 ; Town Planning Review Volume 20 ; 20 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1950-1951 ; Town Planning Review Volume 21 ; 21 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1951-1952 ; Town Planning Review Volume 22 ; 22 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1952-1953 ; Town Planning Review Volume 23 ; 23 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1953-1954 ; Town Planning Review Volume 24 ; 24 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1954-1955 ; Town Planning Review Volume 25 ; 25 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1955-1956 ; Town Planning Review Volume 26 ; 26 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1956-1957 ; Town Planning Review Volume 27 ; 27 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1957-1958 ; Town Planning Review Volume 28 ; 28 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1958-1959 ; Town Planning Review Volume 29 ; 29 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1959-1960 ; Town Planning Review Volume 30 ; 30 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1960-1961 ; Town Planning Review Volume 31 ; 31 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1961-1962 ; Town Planning Review Volume 32 ; 32 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1962-1963 ; Town Planning Review Volume 33 ; 33 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1963-1964 ; Town Planning Review Volume 34 ; 34 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1964-1965 ; Town Planning Review Volume 35 ; 35 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1965-1966 ; Town Planning Review Volume 36 ; 36 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1966-1967 ; Town Planning Review Volume 37 ; 37 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1967-1968 ; Town Planning Review Volume 38 ; 38 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1968-1969 ; Town Planning Review Volume 39 ; 39 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1969 ; Town Planning Review Volume 40 ; 40 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1970 ; Town Planning Review Volume 41 ; 41 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1971 ; Town Planning Review Volume 42 ; 42 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1972 ; Town Planning Review Volume 43 ; 43 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1973 ; Town Planning Review Volume 44 ; 44 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1974 ; Town Planning Review Volume 45 ; 45 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1975 ; Town Planning Review Volume 46 ; 46 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1976 ; Town Planning Review Volume 47 ; 47 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1977 ; Town Planning Review Volume 48 ; 48 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1978 ; Town Planning Review Volume 49 ; 49 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1979 ; Town Planning Review Volume 50 ; 50 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1980 ; Town Planning Review Volume 51 ; 51 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1981 ; Town Planning Review Volume 52 ; 52 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1982 ; Town Planning Review Volume 53 ; 53 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1983 ; Town Planning Review Volume 54 ; 54 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1984 ; Town Planning Review Volume 55 ; 55 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1985 ; Town Planning Review Volume 56 ; 56 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1986 ; Town Planning Review Volume 57 ; 57 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1987 ; Town Planning Review Volume 58 ; 58 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1988 ; Town Planning Review Volume 59 ; 59 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1989 ; Town Planning Review Volume 60 ; 60 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1990 ; Town Planning Review Volume 61 ; 61 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1991 ; Town Planning Review Volume 62 ; 62 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1992 ; Town Planning Review Volume 63 ; 63 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1993 ; Town Planning Review Volume 64 ; 64 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1994 ; Town Planning Review Volume 65 ; 65 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1995 ; Town Planning Review Volume 66 ; 66 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1996 ; Town Planning Review Volume 67 ; 67 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1997 ; Town Planning Review Volume 68 ; 68 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1998 ; Town Planning Review Volume 69 ; 69 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1999 ; Town Planning Review Volume 70 ; 70 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2000 ; Town Planning Review Volume 71 ; 71 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 0 ; Town Planning Review Volume 72 ; 72 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2002 ; Town Planning Review Volume 73 ; 73 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2003 ; Town Planning Review Volume 74 ; 74 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2004 ; Town Planning Review Volume 75 ; 75 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2005 ; Town Planning Review Volume 76 ; 76 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2006 ; Town Planning Review Volume 77 ; 77 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2007 ; Town Planning Review Volume 78 ; 78 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Town Planning Review Volume 79 ; 79 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Town Planning Review Volume 80 ; 80 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Town Planning Review Volume 81 ; 81 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Town Planning Review Volume 82 ; 82 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Town Planning Review Volume 83 ; 83 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Town Planning Review Volume 84 ; 84 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; finished ; 2014 ; Town Planning Review Volume 85 ; 85 ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2015 ; Town Planning Review Volume 86 ; 86 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; Town Planning Review Volume 87 ; 87 ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2017 ; Town Planning Review Volume 88 ; 88 ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2018 ; Town Planning Review Volume 89 ; 89 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2019 ; Town Planning Review Volume 90 ; 90 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
+    au < doNotProcess ; doNotProcess ; 2020 ; Town Planning Review Volume 91 ; 91 ; https://online.liverpooluniversitypress.co.uk/ ; >
+
+
+  }
+
+  {
+
+    title <
+      name = Transactions of the Historic Society of Lancashire and Cheshire ;
+      issn = 0140-332X ;
+      eissn = 2398-1601 ;
+      issnl = 0140-332X
+    >
+
+    param[journal_id] = transactions
+
+    au < doNotProcess ; doNotProcess ; 2007 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 156 ; 156 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; crawling ; 2008 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 157 ; 157 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2009 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 158 ; 158 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2010 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 159 ; 159 ; https://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2011 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 160 ; 160 ; https://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 161 ; 161 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2013 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 162 ; 162 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2014 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 163 ; 163 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 164 ; 164 ; https://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 165 ; 165 ; https://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 166 ; 166 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2018 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 167 ; 167 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 168 ; 168 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
+    au < expected ; exists ; 2020 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 169 ; 169 ; https://online.liverpooluniversitypress.co.uk/ ; >
+
+  }
+
+}

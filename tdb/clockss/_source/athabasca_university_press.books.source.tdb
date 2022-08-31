@@ -1,0 +1,33 @@
+{
+
+  publisher <
+    name = Athabasca University Press ;
+    info[contract] = 2014 ;
+    info[tester] = S ;
+    info[platform] = Source
+  >
+
+  {
+
+    title <
+      name = Athabasca University Press Books Source Content
+    >
+
+    plugin = org.lockss.plugin.clockss.onixbooks.ClockssAthabascaUniversityOnix3SourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/athabascau-released/
+    proxy = DIRECT
+    implicit < status1 ; status ; year ; name ; param[year] >
+
+    au < zapped ; finished ; 2015 ; Athabasca University Press Books Source Content 2015 ; 2015 >
+    #no content was delivered in 2016 - this was created/added in error
+    au < zapped ; down ; 2016 ; Athabasca University Press Books Source Content 2016 ; 2016 >
+    #no content delivered in 2017
+    au < zapped ; finished ; 2018 ; Athabasca University Press Books Source Content 2018 ; 2018 >
+    au < zapped ; finished ; 2019 ; Athabasca University Press Books Source Content 2019 ; 2019 >
+    au < readySource ; finished ; 2020 ; Athabasca University Press Books Source Content 2020 ; 2020 >
+    au < readySource ; finished ; 2021 ; Athabasca University Press Books Source Content 2021 ; 2021 >
+    au < readySource ; crawling ; 2022 ; Athabasca University Press Books Source Content 2022 ; 2022 >
+
+ }
+
+}

@@ -1,0 +1,287 @@
+{
+
+  publisher <
+    name = Herpetological Society of Japan ;
+    info[contract] = 2013 ;
+    info[tester] = 8 ;
+    info[poller] = 3
+    
+  >
+  ###### Access inconsistant on ingest3 and ingest4. 20170803.
+
+  {
+    title <
+      name = Current Herpetology ;
+      issn = 1881-1019 ;
+      eissn = 1345-5834 ;
+      issnl = 1345-5834
+    >
+
+    {
+
+      provider = Unibio Press
+      plugin = org.lockss.plugin.bioone.ClockssBioOneAtyponPlugin  
+      implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = jche
+      
+      au < finished ; finished ; 2005 ; Current Herpetology Volume 24 ; 24 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2006 ; Current Herpetology Volume 25 ; 25 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2007 ; Current Herpetology Volume 26 ; 26 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2008 ; Current Herpetology Volume 27 ; 27 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2009 ; Current Herpetology Volume 28 ; 28 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; Current Herpetology Volume 29 ; 29 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; Current Herpetology Volume 30 ; 30 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2012 ; Current Herpetology Volume 31 ; 31 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; Current Herpetology Volume 32 ; 32 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; Current Herpetology Volume 33 ; 33 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2015 ; Current Herpetology Volume 34 ; 34 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; Current Herpetology Volume 35 ; 35 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2017 ; Current Herpetology Volume 36 ; 36 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; Current Herpetology Volume 37 ; 37 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; exists ; 2019 ; Current Herpetology Volume 38 ; 38 ; >
+
+    }
+
+  }
+}
+
+{
+
+  publisher <
+    name = Japan Society of Mammalian Ova Research ;
+    info[contract] = 2013 ;
+    info[tester] = 8 ;
+    info[poller] = 3
+
+  >
+
+  {
+    title <
+      name = Journal of Mammalian Ova Research ;
+      issn = 1341-7738 ;
+      eissn = 1347-5878 ;
+      issnl = 1341-7738
+    >
+
+    {
+      provider = Unibio Press
+      implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+      plugin = org.lockss.plugin.bioone.ClockssBioOneAtyponPlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = jmor
+  
+      au < finished ; finished ; 2005 ; Journal of Mammalian Ova Research Volume 22 ; 22 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2006 ; Journal of Mammalian Ova Research Volume 23 ; 23 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2007 ; Journal of Mammalian Ova Research Volume 24 ; 24 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2008 ; Journal of Mammalian Ova Research Volume 25 ; 25 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; Journal of Mammalian Ova Research Volume 26 ; 26 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2010 ; Journal of Mammalian Ova Research Volume 27 ; 27 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; Journal of Mammalian Ova Research Volume 28 ; 28 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2012 ; Journal of Mammalian Ova Research Volume 29 ; 29 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2013 ; Journal of Mammalian Ova Research Volume 30 ; 30 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; Journal of Mammalian Ova Research Volume 31 ; 31 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; Journal of Mammalian Ova Research Volume 32 ; 32 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2016 ; Journal of Mammalian Ova Research Volume 33 ; 33 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2017 ; Journal of Mammalian Ova Research Volume 34 ; 34 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; Journal of Mammalian Ova Research Volume 35 ; 35 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; exists ; 2019 ; Journal of Mammalian Ova Research Volume 36 ; 36 ; >
+
+    }
+
+  }
+}
+
+{
+
+  publisher <
+    name = Mammal Society of Japan ;
+    info[contract] = 2013 ;
+    info[tester] = 8 ;
+    info[poller] = 3
+
+  >
+
+  {
+    title <
+      name = Mammal Study ;
+      issn = 1343-4152 ;
+      eissn = 1348-6160 ;
+      issnl = 1343-4152
+    >
+
+    {
+      provider = Unibio Press
+      implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+      plugin = org.lockss.plugin.bioone.ClockssBioOneAtyponPlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = jmam
+  
+      au < finished ; finished ; 2005 ; Mammal Study Volume 30 ; 30 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2006 ; Mammal Study Volume 31 ; 31 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2007 ; Mammal Study Volume 32 ; 32 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2008 ; Mammal Study Volume 33 ; 33 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2009 ; Mammal Study Volume 34 ; 34 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2010 ; Mammal Study Volume 35 ; 35 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; Mammal Study Volume 36 ; 36 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2012 ; Mammal Study Volume 37 ; 37 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; Mammal Study Volume 38 ; 38 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; Mammal Study Volume 39 ; 39 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2015 ; Mammal Study Volume 40 ; 40 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; Mammal Study Volume 41 ; 41 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2017 ; Mammal Study Volume 42 ; 42 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; Mammal Study Volume 43 ; 43 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; exists ; 2019 ; Mammal Study Volume 44 ; 44 ; >
+
+    }
+
+  }
+}
+{
+
+  publisher <
+    name = Ornithological Society of Japan ;
+    info[contract] = 2013 ;
+    info[tester] = 8 ;
+    info[poller] = 3
+
+  >
+
+  {
+    title <
+      name = Ornithological Science ;
+      issn = 1347-0558 ;
+      issnl = 1347-0558
+    >
+
+    {
+      provider = Unibio Press
+      implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+      plugin = org.lockss.plugin.bioone.ClockssBioOneAtyponPlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = jorn
+  
+      au < finished ; finished ; 2005 ; Ornithological Science Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2006 ; Ornithological Science Volume 5 ; 5 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2007 ; Ornithological Science Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2008 ; Ornithological Science Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2009 ; Ornithological Science Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2010 ; Ornithological Science Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; Ornithological Science Volume 10 ; 10 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2012 ; Ornithological Science Volume 11 ; 11 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2013 ; Ornithological Science Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; Ornithological Science Volume 13 ; 13 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; Ornithological Science Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; Ornithological Science Volume 15 ; 15 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2017 ; Ornithological Science Volume 16 ; 16 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; Ornithological Science Volume 17 ; 17 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; exists ; 2019 ; Ornithological Science Volume 18 ; 18 ; >
+
+    }
+    
+  }
+}
+
+{
+
+  publisher <
+    name = Palaeontological Society of Japan ;
+    info[contract] = 2013 ;
+    info[tester] = 8 ;
+    info[poller] = 3
+
+  >
+
+  {
+    title <
+      name = Paleontological Research ;
+      issn = 1342-8144 ;
+      eissn = 1880-0068 ;
+      issnl = 1342-8144
+    >
+
+    {
+      provider = Unibio Press
+      implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+      plugin = org.lockss.plugin.bioone.ClockssBioOneAtyponPlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = jpal
+  
+      au < finished ; finished ; 2003 ; Paleontological Research Volume 7 ; 7 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2004 ; Paleontological Research Volume 8 ; 8 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2005 ; Paleontological Research Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2006 ; Paleontological Research Volume 10 ; 10 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2007 ; Paleontological Research Volume 11 ; 11 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2008 ; Paleontological Research Volume 12 ; 12 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; Paleontological Research Volume 13 ; 13 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; Paleontological Research Volume 14 ; 14 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2011 ; Paleontological Research Volume 15 ; 15 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2012 ; Paleontological Research Volume 16 ; 16 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; Paleontological Research Volume 17 ; 17 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; Paleontological Research Volume 18 ; 18 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; Paleontological Research Volume 19 ; 19 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; Paleontological Research Volume 20 ; 20 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2017 ; Paleontological Research Volume 21 ; 21 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; Paleontological Research Volume 22 ; 22 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; exists ; 2019 ; Paleontological Research Volume 23 ; 23 ; >
+
+    }
+
+  }
+}
+
+{
+
+  publisher <
+    name = Zoological Society of Japan ;
+    info[contract] = 2013 ;
+    info[tester] = 8 ;
+    info[poller] = 3
+
+  >
+
+  {
+    title <
+      name = Zoological Science ;
+      issn = 0289-0003 ;
+      issnl = 0289-0003
+    >
+
+    {
+      provider = Unibio Press
+      plugin = org.lockss.plugin.bioone.ClockssBioOneAtyponPlugin  
+      implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = jzoo
+      
+      au < doNotProcess ; exists ; 1995 ; Zoological Science Volume 12 ; 12 ; >
+      au < doNotProcess ; exists ; 1996 ; Zoological Science Volume 13 ; 13 ; >
+      au < doNotProcess ; exists ; 1997 ; Zoological Science Volume 14 ; 14 ; >
+      au < doNotProcess ; exists ; 1998 ; Zoological Science Volume 15 ; 15 ; >
+      au < doNotProcess ; exists ; 1999 ; Zoological Science Volume 16 ; 16 ; >
+      au < finished ; finished ; 2000 ; Zoological Science Volume 17 ; 17 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2001 ; Zoological Science Volume 18 ; 18 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2002 ; Zoological Science Volume 19 ; 19 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2003 ; Zoological Science Volume 20 ; 20 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2004 ; Zoological Science Volume 21 ; 21 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2005 ; Zoological Science Volume 22 ; 22 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2006 ; Zoological Science Volume 23 ; 23 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2007 ; Zoological Science Volume 24 ; 24 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2008 ; Zoological Science Volume 25 ; 25 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; Zoological Science Volume 26 ; 26 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; Zoological Science Volume 27 ; 27 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; Zoological Science Volume 28 ; 28 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2012 ; Zoological Science Volume 29 ; 29 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2013 ; Zoological Science Volume 30 ; 30 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; Zoological Science Volume 31 ; 31 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2015 ; Zoological Science Volume 32 ; 32 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; Zoological Science Volume 33 ; 33 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2017 ; Zoological Science Volume 34 ; 34 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; Zoological Science Volume 35 ; 35 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; exists ; 2019 ; Zoological Science Volume 36 ; 36 ; >
+
+    }
+
+  }
+
+}

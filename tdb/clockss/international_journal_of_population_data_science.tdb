@@ -1,0 +1,34 @@
+{
+
+  publisher <
+    name = International Journal of Population Data Science ;
+    info[contract] = 2018 ;
+    info[back] = 2017 ;
+    info[tester] = 8 ;
+    info[poller] = 8
+  >
+
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    param[base_url] = https://ijpds.org/
+    implicit < status1 ; status ; year ; name ; volume ; param[year] ; proxy >
+
+    {
+
+      title < 
+        name = International Journal of Population Data Science ;
+        eissn = 2399-4908
+
+      >
+        param[journal_id] = ijpds
+        attr[start_stem] = index.php/
+
+        au < frozen ; exists ; 2017 ; International Journal of Population Data Science Volume 1-2 ; 1-2 ; 2017 ; > 
+        au < frozen ; exists ; 2018 ; International Journal of Population Data Science Volume 3 ; 3 ; 2018 ; >
+        au < frozen ; exists ; 2019 ; International Journal of Population Data Science Volume 4 ; 4 ; 2019 ; >
+        au < frozen ; exists ; 2020 ; International Journal of Population Data Science Volume 5 ; 5 ; 2020 ; >
+        au < crawling ; exists ; 2021 ; International Journal of Population Data Science Volume 6 ; 6 ; 2021 ; >
+        au < crawling ; exists ; 2022 ; International Journal of Population Data Science Volume 7 ; 7 ; 2022 ; >
+
+    }
+
+}

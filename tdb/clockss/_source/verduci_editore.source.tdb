@@ -1,0 +1,31 @@
+{
+
+  publisher <
+    name = Verduci Editore ;
+    info[contract] = 2017 ;
+    info[tester] = S ;
+    info[platform] = Source
+  >
+
+  {
+
+    title <
+       name = Verduci Editore Source Content
+    >
+
+    plugin = org.lockss.plugin.clockss.verduci.ClockssVerduciEditoreSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/verduci-released/
+
+    proxy = DIRECT
+    implicit < status1 ; status ; year ; name ; param[directory] >
+
+    #2018 not on Humbodlt
+    au < zapped ; finished ; 2018 ; Verduci Editore Source Content 2018 ; 2018 >
+    au < zapped ; finished ; 2019 ; Verduci Editore Source Content 2019 ; 2019 >
+    au < readySource ; finished ; 2020 ; Verduci Editore Source Content 2020 ; 2020 >
+    au < readySource ; finished ; 2021 ; Verduci Editore Source Content 2021 ; 2021 >
+    au < readySource ; crawling ; 2022 ; Verduci Editore Source Content 2022 ; 2022 >
+
+  }
+
+}

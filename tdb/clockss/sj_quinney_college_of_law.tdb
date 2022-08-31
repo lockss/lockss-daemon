@@ -1,0 +1,55 @@
+{
+  publisher <
+    name = S.J. Quinney College of Law ;
+    info[contract] = 2012 ;
+    info[tester] = 5 ;
+    info[poller] = 6
+  >
+  provider = bepress
+
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    implicit < status1 ; status ; year ; name ; param[volume] ; proxy >
+
+  {
+
+      title <
+        name = Utah Law Review ;
+        eissn = 0042-1448
+      >
+
+      comment[publisher] = S.J. Quinney College of Law
+      param[base_url] = https://dc.law.utah.edu/
+      param[journal_abbr] = ulr
+
+      au < finished ; finished ; 2014 ; Utah Law Review Volume 2014 ; 2014 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; Utah Law Review Volume 2015 ; 2015 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2016 ; Utah Law Review Volume 2016 ; 2016 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2017 ; Utah Law Review Volume 2017 ; 2017 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; Utah Law Review Volume 2018 ; 2018 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; Utah Law Review Volume 2019 ; 2019 ; reingest3.clockss.org:8083 >
+      au < deepCrawl ; exists ; 2020 ; Utah Law Review Volume 2020 ; 2020 ; >
+      au < crawling ; exists ; 2021 ; Utah Law Review Volume 2021 ; 2021 ; >
+      au < crawling ; exists ; 2022 ; Utah Law Review Volume 2022 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Utah Law Review ;
+        eissn = 0042-1448
+      >
+      #Supplement. Utah Law Review (title). Utah Law Review OnLaw (AU name)
+
+      comment[publisher] = S.J. Quinney College of Law
+      param[base_url] = https://dc.law.utah.edu/
+      param[journal_abbr] = onlaw
+
+      au < finished ; finished ; 2014 ; Utah Law Review OnLaw Volume 2014 ; 2014 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; Utah Law Review OnLaw Volume 2015 ; 2015 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2016 ; Utah Law Review OnLaw Volume 2016 ; 2016 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2017 ; Utah Law Review OnLaw Volume 2017 ; 2017 ; reingest4.clockss.org:8082 >
+      #nothing after 2017 as of 20201209
+  }
+
+}

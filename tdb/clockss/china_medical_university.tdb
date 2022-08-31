@@ -1,0 +1,31 @@
+{
+
+  publisher <
+    name = China Medical University ;
+    info[contract] = 2013 ;
+    info[tester] = 5 ;
+    info[poller] = 8
+  >
+  provider = bepress
+  
+  # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
+
+  {
+  
+    title <
+      name = BioMedicine ;
+      eissn = 2211-8039
+    >
+    
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
+    param[base_url] = https://www.biomedicinej.com/
+    param[journal_abbr] = biomedicine
+    implicit < status1 ; status ; year ; name ; param[volume] ; proxy >
+
+    au < deepCrawl ; exists ; 2020 ; BioMedicine Volume 10 ; 10 ; >
+    au < deepCrawl ; exists ; 2021 ; BioMedicine Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2022 ; BioMedicine Volume 12 ; 12 ; >
+
+  }
+
+}

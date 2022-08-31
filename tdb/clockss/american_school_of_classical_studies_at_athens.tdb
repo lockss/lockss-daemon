@@ -1,0 +1,148 @@
+{
+
+  publisher <
+    name = American School of Classical Studies at Athens ;
+    info[contract] = 2014 ;
+    info[tester] = 8 ;
+    info[poller] = 3 ;
+    info[platform] = JSTOR
+  >
+  
+  {
+  
+    title <
+      name = Hesperia ;
+      issn = 0018-098X ;
+      eissn = 1553-5622
+    >
+    
+    {
+      plugin = org.lockss.plugin.jstor.ClockssJstorPlugin
+      param[base_url] = http://www.jstor.org/
+      param[base_url2] = https://www.jstor.org/
+      implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+      param[journal_id] = hesperia
+
+       au < doNotProcess ; exists ; 1932 ; Hesperia Volume 1 ; 1 ; >
+       au < doNotProcess ; exists ; 1933 ; Hesperia Volume 2 ; 2 ; >
+       au < doNotProcess ; exists ; 1934 ; Hesperia Volume 3 ; 3 ; >
+       au < doNotProcess ; exists ; 1935 ; Hesperia Volume 4 ; 4 ; >
+       au < doNotProcess ; exists ; 1936 ; Hesperia Volume 5 ; 5 ; >
+       au < doNotProcess ; exists ; 1937 ; Hesperia Volume 6 ; 6 ; >
+       au < doNotProcess ; exists ; 1938 ; Hesperia Volume 7 ; 7 ; >
+       au < doNotProcess ; exists ; 1939 ; Hesperia Volume 8 ; 8 ; >
+       au < doNotProcess ; exists ; 1940 ; Hesperia Volume 9 ; 9 ; >
+       au < doNotProcess ; exists ; 1941 ; Hesperia Volume 10 ; 10 ; >
+       au < doNotProcess ; exists ; 1942 ; Hesperia Volume 11 ; 11 ; >
+       au < doNotProcess ; exists ; 1943 ; Hesperia Volume 12 ; 12 ; >
+       au < doNotProcess ; exists ; 1944 ; Hesperia Volume 13 ; 13 ; >
+       au < doNotProcess ; exists ; 1945 ; Hesperia Volume 14 ; 14 ; >
+       au < doNotProcess ; exists ; 1946 ; Hesperia Volume 15 ; 15 ; >
+       au < doNotProcess ; exists ; 1947 ; Hesperia Volume 16 ; 16 ; >
+       au < doNotProcess ; exists ; 1948 ; Hesperia Volume 17 ; 17 ; >
+       au < doNotProcess ; exists ; 1949 ; Hesperia Volume 18 ; 18 ; >
+       au < doNotProcess ; exists ; 1950 ; Hesperia Volume 19 ; 19 ; >
+       au < doNotProcess ; exists ; 1951 ; Hesperia Volume 20 ; 20 ; >
+       au < doNotProcess ; exists ; 1952 ; Hesperia Volume 21 ; 21 ; >
+       au < doNotProcess ; exists ; 1953 ; Hesperia Volume 22 ; 22 ; >
+       au < doNotProcess ; exists ; 1954 ; Hesperia Volume 23 ; 23 ; >
+       au < doNotProcess ; exists ; 1955 ; Hesperia Volume 24 ; 24 ; >
+       au < doNotProcess ; exists ; 1956 ; Hesperia Volume 25 ; 25 ; >
+       au < doNotProcess ; exists ; 1957 ; Hesperia Volume 26 ; 26 ; >
+       au < doNotProcess ; exists ; 1958 ; Hesperia Volume 27 ; 27 ; >
+       au < doNotProcess ; exists ; 1959 ; Hesperia Volume 28 ; 28 ; >
+       au < doNotProcess ; exists ; 1960 ; Hesperia Volume 29 ; 29 ; >
+       au < doNotProcess ; exists ; 1961 ; Hesperia Volume 30 ; 30 ; >
+       au < doNotProcess ; exists ; 1962 ; Hesperia Volume 31 ; 31 ; >
+       au < doNotProcess ; exists ; 1963 ; Hesperia Volume 32 ; 32 ; >
+       au < doNotProcess ; exists ; 1964 ; Hesperia Volume 33 ; 33 ; >
+       au < doNotProcess ; exists ; 1965 ; Hesperia Volume 34 ; 34 ; >
+       au < doNotProcess ; exists ; 1966 ; Hesperia Volume 35 ; 35 ; >
+       au < doNotProcess ; exists ; 1967 ; Hesperia Volume 36 ; 36 ; >
+       au < doNotProcess ; exists ; 1968 ; Hesperia Volume 37 ; 37 ; >
+       au < doNotProcess ; exists ; 1969 ; Hesperia Volume 38 ; 38 ; >
+       au < doNotProcess ; exists ; 1970 ; Hesperia Volume 39 ; 39 ; >
+       au < doNotProcess ; exists ; 1971 ; Hesperia Volume 40 ; 40 ; >
+       au < doNotProcess ; exists ; 1972 ; Hesperia Volume 41 ; 41 ; >
+       au < doNotProcess ; exists ; 1973 ; Hesperia Volume 42 ; 42 ; >
+       au < doNotProcess ; exists ; 1974 ; Hesperia Volume 43 ; 43 ; >
+       au < doNotProcess ; exists ; 1975 ; Hesperia Volume 44 ; 44 ; >
+       au < doNotProcess ; exists ; 1976 ; Hesperia Volume 45 ; 45 ; >
+       au < doNotProcess ; exists ; 1977 ; Hesperia Volume 46 ; 46 ; >
+       au < doNotProcess ; exists ; 1978 ; Hesperia Volume 47 ; 47 ; >
+       au < doNotProcess ; exists ; 1979 ; Hesperia Volume 48 ; 48 ; >
+       au < doNotProcess ; exists ; 1980 ; Hesperia Volume 49 ; 49 ; >
+       au < doNotProcess ; exists ; 1981 ; Hesperia Volume 50 ; 50 ; >
+       au < doNotProcess ; exists ; 1982 ; Hesperia Volume 51 ; 51 ; >
+       au < doNotProcess ; exists ; 1983 ; Hesperia Volume 52 ; 52 ; >
+       au < doNotProcess ; exists ; 1984 ; Hesperia Volume 53 ; 53 ; >
+       au < doNotProcess ; exists ; 1985 ; Hesperia Volume 54 ; 54 ; >
+       au < doNotProcess ; exists ; 1986 ; Hesperia Volume 55 ; 55 ; >
+       au < doNotProcess ; exists ; 1987 ; Hesperia Volume 56 ; 56 ; >
+       au < doNotProcess ; exists ; 1988 ; Hesperia Volume 57 ; 57 ; >
+       au < doNotProcess ; exists ; 1989 ; Hesperia Volume 58 ; 58 ; >
+       au < doNotProcess ; exists ; 1990 ; Hesperia Volume 59 ; 59 ; >
+       au < doNotProcess ; exists ; 1991 ; Hesperia Volume 60 ; 60 ; >
+       au < doNotProcess ; exists ; 1992 ; Hesperia Volume 61 ; 61 ; >
+       au < doNotProcess ; exists ; 1993 ; Hesperia Volume 62 ; 62 ; >
+       au < doNotProcess ; exists ; 1994 ; Hesperia Volume 63 ; 63 ; >
+       au < doNotProcess ; exists ; 1995 ; Hesperia Volume 64 ; 64 ; >
+       au < doNotProcess ; exists ; 1996 ; Hesperia Volume 65 ; 65 ; >
+       au < doNotProcess ; exists ; 1997 ; Hesperia Volume 66 ; 66 ; >
+       au < doNotProcess ; exists ; 1998 ; Hesperia Volume 67 ; 67 ; >
+       au < doNotProcess ; exists ; 1999 ; Hesperia Volume 68 ; 68 ; >
+       au < doNotProcess ; exists ; 2000 ; Hesperia Volume 69 ; 69 ; >
+       au < doNotProcess ; exists ; 2001 ; Hesperia Volume 70 ; 70 ; >
+       au < doNotProcess ; exists ; 2002 ; Hesperia Volume 71 ; 71 ; >
+       au < doNotProcess ; exists ; 2003 ; Hesperia Volume 72 ; 72 ; >
+       au < doNotProcess ; exists ; 2004 ; Hesperia Volume 73 ; 73 ; >
+       au < doNotProcess ; exists ; 2005 ; Hesperia Volume 74 ; 74 ; >
+       au < doNotProcess ; exists ; 2006 ; Hesperia Volume 75 ; 75 ; >
+       au < doNotProcess ; exists ; 2007 ; Hesperia Volume 76 ; 76 ; >
+       au < doNotProcess ; exists ; 2008 ; Hesperia Volume 77 ; 77 ; >
+       au < doNotProcess ; exists ; 2009 ; Hesperia Volume 78 ; 78 ; >
+       au < doNotProcess ; exists ; 2010 ; Hesperia Volume 79 ; 79 ; >
+       au < doNotProcess ; exists ; 2011 ; Hesperia Volume 80 ; 80 ; >
+       au < doNotProcess ; exists ; 2012 ; Hesperia Volume 81 ; 81 ; >
+       au < finished ; finished ; 2013 ; Hesperia Volume 82 ; 82 ; >
+       au < superseded ; exists ; 2014 ; Hesperia Volume 83 [superseded] ; 83 ; >
+       au < doNotProcess ; exists ; 2015 ; Hesperia Volume 84 ; 84 ; >
+
+   }
+  
+   {
+   
+     plugin = org.lockss.plugin.jstor.ClockssJstorCurrentScholarshipPlugin
+     # param[base_url] = http://www.jstor.org/
+     implicit < status1 ; status ; year ; name ; param[year] ; param[base_url] ; proxy >
+     param[journal_id] = hesperia
+     # on this platform, manifest pages only enabled from 2002 forward - ok
+     # 2014 & 2016 have 2 pdf files that fail filtering - check manually
+     
+      au < frozen ; exists ; 2002 ; Hesperia Volume 71 ; 2002 ; http://www.jstor.org/ ; >
+      au < frozen ; exists ; 2003 ; Hesperia Volume 72 ; 2003 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2004 ; Hesperia Volume 73 ; 2004 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2005 ; Hesperia Volume 74 ; 2005 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2006 ; Hesperia Volume 75 ; 2006 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2007 ; Hesperia Volume 76 ; 2007 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2008 ; Hesperia Volume 77 ; 2008 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2009 ; Hesperia Volume 78 ; 2009 ; http://www.jstor.org/ ; >
+      au < frozen ; exists ; 2010 ; Hesperia Volume 79 ; 2010 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2011 ; Hesperia Volume 80 ; 2011 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2012 ; Hesperia Volume 81 ; 2012 ; https://www.jstor.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; Hesperia Volume 82 ; 2013 ; http://www.jstor.org/ ; >
+      au < frozen ; exists ; 2014 ; Hesperia Volume 83 ; 2014 ; http://www.jstor.org/ ; >
+      au < frozen ; exists ; 2015 ; Hesperia Volume 84 ; 2015 ; http://www.jstor.org/ ; >
+      au < frozen ; exists ; 2016 ; Hesperia Volume 85 ; 2016 ; http://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2017 ; Hesperia Volume 86 ; 2017 ; http://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2018 ; Hesperia Volume 87 ; 2018 ; https://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; Hesperia Volume 88 ; 2019 ; https://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2020 ; Hesperia Volume 89 ; 2020 ; https://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2021 ; Hesperia Volume 90 ; 2021 ; https://www.jstor.org/ ; >
+      au < expected ; exists ; 2022 ; Hesperia Volume 91 ; 2022 ; https://www.jstor.org/ ; >
+
+    }
+    
+  }
+
+}

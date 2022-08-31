@@ -1,0 +1,96 @@
+{
+
+  publisher <
+    name = University of Nevada, Las Vegas ;
+    info[contract] = 2012 ;
+    info[tester] = 5 ;
+    info[poller] = 8
+  >
+  provider = bepress
+  
+  # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
+
+  {
+    title <
+      name = Asian/Pacific Island Nursing Journal ;
+      eissn = 2373-6658 ;
+      issnl = 2373-6658
+    >
+
+      plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+      param[base_url] = https://digitalscholarship.unlv.edu/
+      param[journal_abbr] = apin
+      implicit < status1 ; status ; year ; name ; param[volume] ; proxy >
+      #move to University of Hawai'i Press, 2018
+
+      au < doNotProcess ; doNotProcess ; 2016 ; Asian/Pacific Island Nursing Journal Volume 1 ; 1 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; Asian/Pacific Island Nursing Journal Volume 2 ; 2 ; >
+      au < finished ; crawling ; 2018 ; Asian/Pacific Island Nursing Journal Volume 3 ; 3 ; reingest1.clockss.org:8082 >
+
+  }
+
+  {
+  
+    title < 
+      name = Journal of Praxis in Multicultural Education ;
+      issn = 1931-0242 ;
+      eissn = 2161-2978
+    >
+    
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
+    #param[base_url] = http://digitalscholarship.unlv.edu/
+    param[journal_abbr] = jpme
+    implicit < status1 ; status ; year ; name ; param[volume] ; param[base_url] ; proxy >
+    #bepress stop processing. See LXPUB-46
+
+    au < doNotProcess ; exists ; 2006 ; Journal of Praxis in Multicultural Education Volume 1 ; 1 ; https://digitalscholarship.unlv.edu/ ; >
+    au < doNotProcess ; exists ; 2007 ; Journal of Praxis in Multicultural Education volume 2 ; 2 ; https://digitalscholarship.unlv.edu/ ; >
+    au < doNotProcess ; exists ; 2008 ; Journal of Praxis in Multicultural Education Volume 3 ; 3 ; https://digitalscholarship.unlv.edu/ ; >
+    au < doNotProcess ; exists ; 2009 ; Journal of Praxis in Multicultural Education Volume 4 ; 4 ; https://digitalscholarship.unlv.edu/ ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Praxis in Multicultural Education Volume 5 ; 5 ; https://digitalscholarship.unlv.edu/ ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Praxis in Multicultural Education Volume 6 ; 6 ; https://digitalscholarship.unlv.edu/ ; >
+    au < finished ; finished ; 2012 ; Journal of Praxis in Multicultural Education Volume 7 ; 7 ; http://digitalscholarship.unlv.edu/ ; >
+    au < finished ; finished ; 2013-2014 ; Journal of Praxis in Multicultural Education Volume 8 ; 8 ; http://digitalscholarship.unlv.edu/ ; >
+    au < finished ; finished ; 2014 ; Journal of Praxis in Multicultural Education Volume 9 ; 9 ; http://digitalscholarship.unlv.edu/ ; >
+
+  }
+
+  {
+  
+    title < 
+      name = Journal of Research in Technical Careers ;
+      eissn = 2578-2118
+    >
+    
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
+    param[base_url] = https://digitalscholarship.unlv.edu/
+    param[journal_abbr] = jrtc
+    implicit < status1 ; status ; year ; name ; param[volume] ; proxy >
+
+    au < finished ; finished ; 2017 ; Journal of Research in Technical Careers Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2018 ; Journal of Research in Technical Careers Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2019 ; Journal of Research in Technical Careers Volume 3 ; 3 ; reingest5.clockss.org:8082 >
+    au < deepCrawl ; exists ; 2020 ; Journal of Research in Technical Careers Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2021 ; Journal of Research in Technical Careers Volume 5 ; 5 ; >
+    au < ready ; exists ; 2022 ; Journal of Research in Technical Careers Volume 6 ; 6 ; >
+
+  }
+
+  {
+  
+    title < 
+      name = Spectra Undergraduate Research Journal ;
+      eissn = 2766-7227
+    >
+    
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
+    param[base_url] = https://digitalscholarship.unlv.edu/
+    param[journal_abbr] = spectra
+    implicit < status1 ; status ; year ; name ; param[volume] ; proxy >
+
+    au < crawling ; exists ; 2021 ; Spectra Undergraduate Research Journal Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2022 ; Spectra Undergraduate Research Journal Volume 2 ; 2 ; >
+
+  }
+
+}

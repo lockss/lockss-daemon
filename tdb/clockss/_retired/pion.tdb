@@ -1,0 +1,355 @@
+{
+  
+  publisher <
+    name = Pion ;
+    info[contract] = 2010 ;
+    info[tester] = 8 ;
+    info[poller] = 2
+  >
+  
+  # Moved to Sage.
+  
+  {
+    
+    plugin = org.lockss.plugin.pion.ClockssPionPlugin
+    implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+  
+    {
+    
+      title <
+        name = Environment and Planning A ;
+        issn = 0308-518X ;
+        eissn = 1472-3409 ;
+        issnl = 0308-518X
+      >
+      
+      param[base_url] = http://www.envplan.com/
+      param[journal_code] = epa
+      param[short_journal_code] = A
+      
+      au < finished ; finished ; 1969 ; Environment and Planning A Volume 1 ; 1 ; >
+      au < finished ; finished ; 1970 ; Environment and Planning A Volume 2 ; 2 ; >
+      au < finished ; finished ; 1971 ; Environment and Planning A Volume 3 ; 3 ; >
+      au < finished ; finished ; 1972 ; Environment and Planning A Volume 4 ; 4 ; >
+      au < finished ; finished ; 1973 ; Environment and Planning A Volume 5 ; 5 ; >
+      au < finished ; finished ; 1974 ; Environment and Planning A Volume 6 ; 6 ; >
+      au < finished ; finished ; 1975 ; Environment and Planning A Volume 7 ; 7 ; >
+      au < finished ; finished ; 1976 ; Environment and Planning A Volume 8 ; 8 ; >
+      au < finished ; finished ; 1977 ; Environment and Planning A Volume 9 ; 9 ; >
+      au < finished ; finished ; 1978 ; Environment and Planning A Volume 10 ; 10 ; >
+      au < zapped ; finished ; 1979 ; Environment and Planning A Volume 11 ; 11 ; >
+      au < zapped ; finished ; 1980 ; Environment and Planning A Volume 12 ; 12 ; >
+      au < finished ; finished ; 1981 ; Environment and Planning A Volume 13 ; 13 ; >
+      au < zapped ; finished ; 1982 ; Environment and Planning A Volume 14 ; 14 ; >
+      au < finished ; finished ; 1983 ; Environment and Planning A Volume 15 ; 15 ; >
+      au < zapped ; finished ; 1984 ; Environment and Planning A Volume 16 ; 16 ; >
+      au < zapped ; finished ; 1985 ; Environment and Planning A Volume 17 ; 17 ; >
+      au < zapped ; finished ; 1986 ; Environment and Planning A Volume 18 ; 18 ; >
+      au < zapped ; finished ; 1987 ; Environment and Planning A Volume 19 ; 19 ; >
+      au < zapped ; finished ; 1988 ; Environment and Planning A Volume 20 ; 20 ; >
+      au < zapped ; finished ; 1989 ; Environment and Planning A Volume 21 ; 21 ; >
+      au < zapped ; finished ; 1990 ; Environment and Planning A Volume 22 ; 22 ; >
+      au < finished ; finished ; 1991 ; Environment and Planning A Volume 23 ; 23 ; >
+      au < zapped ; finished ; 1992 ; Environment and Planning A Volume 24 ; 24 ; >
+      au < finished ; finished ; 1993 ; Environment and Planning A Volume 25 ; 25 ; >
+      au < zapped ; finished ; 1994 ; Environment and Planning A Volume 26 ; 26 ; >
+      au < zapped ; finished ; 1995 ; Environment and Planning A Volume 27 ; 27 ; >
+      au < zapped ; finished ; 1996 ; Environment and Planning A Volume 28 ; 28 ; >
+      au < zapped ; finished ; 1997 ; Environment and Planning A Volume 29 ; 29 ; >
+      au < zapped ; finished ; 1998 ; Environment and Planning A Volume 30 ; 30 ; >
+      au < zapped ; finished ; 1999 ; Environment and Planning A Volume 31 ; 31 ; >
+      au < finished ; finished ; 2000 ; Environment and Planning A Volume 32 ; 32 ; >
+      au < finished ; finished ; 2001 ; Environment and Planning A Volume 33 ; 33 ; >
+      au < finished ; finished ; 2002 ; Environment and Planning A Volume 34 ; 34 ; >
+      au < finished ; finished ; 2003 ; Environment and Planning A Volume 35 ; 35 ; >
+      au < finished ; finished ; 2004 ; Environment and Planning A Volume 36 ; 36 ; >
+      au < finished ; finished ; 2005 ; Environment and Planning A Volume 37 ; 37 ; >
+      au < finished ; finished ; 2006 ; Environment and Planning A Volume 38 ; 38 ; >
+      au < finished ; finished ; 2007 ; Environment and Planning A Volume 39 ; 39 ; >
+      au < zapped ; finished ; 2008 ; Environment and Planning A Volume 40 ; 40 ; >
+      au < superseded ; down ; 2009 ; Environment and Planning A Volume 41 [superseded] ; 41 ; >
+      au < superseded ; down ; 2010 ; Environment and Planning A Volume 42 [superseded] ; 42 ; >
+      au < superseded ; finished ; 2011 ; Environment and Planning A Volume 43 [superseded] ; 43 ; >
+      au < superseded ; finished ; 2012 ; Environment and Planning A Volume 44 [superseded] ; 44 ; >
+      au < superseded ; exists ; 2013 ; Environment and Planning A Volume 45 [superseded] ; 45 ; >
+      au < doNotProcess ; exists ; 2014 ; Environment and Planning A Volume 46 ; 46 ; >
+    
+    }
+  
+    {
+    
+      title <
+        name = Environment and Planning B: Planning and Design ;
+        issn = 0265-8135 ;
+        eissn = 1472-3417 ;
+        issnl = 0265-8135
+      >
+      
+      param[base_url] = http://www.envplan.com/
+      param[journal_code] = epb
+      param[short_journal_code] = B
+      
+      au < zapped ; finished ; 1974 ; Environment and Planning B: Planning and Design Volume 1 ; 1 ; >
+      au < finished ; finished ; 1975 ; Environment and Planning B: Planning and Design Volume 2 ; 2 ; >
+      au < finished ; finished ; 1976 ; Environment and Planning B: Planning and Design Volume 3 ; 3 ; >
+      au < finished ; finished ; 1977 ; Environment and Planning B: Planning and Design Volume 4 ; 4 ; >
+      au < finished ; finished ; 1978 ; Environment and Planning B: Planning and Design Volume 5 ; 5 ; >
+      au < finished ; finished ; 1979 ; Environment and Planning B: Planning and Design Volume 6 ; 6 ; >
+      au < finished ; finished ; 1980 ; Environment and Planning B: Planning and Design Volume 7 ; 7 ; >
+      au < finished ; finished ; 1981 ; Environment and Planning B: Planning and Design Volume 8 ; 8 ; >
+      au < finished ; finished ; 1982 ; Environment and Planning B: Planning and Design Volume 9 ; 9 ; >
+      au < finished ; finished ; 1983 ; Environment and Planning B: Planning and Design Volume 10 ; 10 ; >
+      au < finished ; finished ; 1984 ; Environment and Planning B: Planning and Design Volume 11 ; 11 ; >
+      au < finished ; finished ; 1985 ; Environment and Planning B: Planning and Design Volume 12 ; 12 ; >
+      au < finished ; finished ; 1986 ; Environment and Planning B: Planning and Design Volume 13 ; 13 ; >
+      au < finished ; finished ; 1987 ; Environment and Planning B: Planning and Design Volume 14 ; 14 ; >
+      au < finished ; finished ; 1988 ; Environment and Planning B: Planning and Design Volume 15 ; 15 ; >
+      au < finished ; finished ; 1989 ; Environment and Planning B: Planning and Design Volume 16 ; 16 ; >
+      au < finished ; finished ; 1990 ; Environment and Planning B: Planning and Design Volume 17 ; 17 ; >
+      au < finished ; finished ; 1991 ; Environment and Planning B: Planning and Design Volume 18 ; 18 ; >
+      au < finished ; finished ; 1992 ; Environment and Planning B: Planning and Design Volume 19 ; 19 ; >
+      au < finished ; finished ; 1993 ; Environment and Planning B: Planning and Design Volume 20 ; 20 ; >
+      au < finished ; finished ; 1994 ; Environment and Planning B: Planning and Design Volume 21 ; 21 ; >
+      au < finished ; finished ; 1995 ; Environment and Planning B: Planning and Design Volume 22 ; 22 ; >
+      au < finished ; finished ; 1996 ; Environment and Planning B: Planning and Design Volume 23 ; 23 ; >
+      au < finished ; finished ; 1997 ; Environment and Planning B: Planning and Design Volume 24 ; 24 ; >
+      au < finished ; finished ; 1998 ; Environment and Planning B: Planning and Design Volume 25 ; 25 ; >
+      au < finished ; finished ; 1999 ; Environment and Planning B: Planning and Design Volume 26 ; 26 ; >
+      au < finished ; finished ; 2000 ; Environment and Planning B: Planning and Design Volume 27 ; 27 ; >
+      au < finished ; finished ; 2001 ; Environment and Planning B: Planning and Design Volume 28 ; 28 ; >
+      au < finished ; finished ; 2002 ; Environment and Planning B: Planning and Design Volume 29 ; 29 ; >
+      au < finished ; finished ; 2003 ; Environment and Planning B: Planning and Design Volume 30 ; 30 ; >
+      au < finished ; finished ; 2004 ; Environment and Planning B: Planning and Design Volume 31 ; 31 ; >
+      au < finished ; finished ; 2005 ; Environment and Planning B: Planning and Design Volume 32 ; 32 ; >
+      au < finished ; finished ; 2006 ; Environment and Planning B: Planning and Design Volume 33 ; 33 ; >
+      au < finished ; finished ; 2007 ; Environment and Planning B: Planning and Design Volume 34 ; 34 ; >
+      au < superseded ; finished ; 2008 ; Environment and Planning B: Planning and Design Volume 35 [superseded] ; 35 ; >
+      au < superseded ; finished ; 2009 ; Environment and Planning B: Planning and Design Volume 36 [superseded] ; 36 ; >
+      au < zapped ; superseded ; 2010 ; Environment and Planning B: Planning and Design Volume 37 [superseded] ; 37 ; >
+      au < superseded ; finished ; 2011 ; Environment and Planning B: Planning and Design Volume 38 [superseded] ; 38 ; >
+      au < superseded ; finished ; 2012 ; Environment and Planning B: Planning and Design Volume 39 [superseded] ; 39 ; >
+      au < superseded ; exists ; 2013 ; Environment and Planning B: Planning and Design Volume 40 [superseded] ; 40 ; >
+      au < doNotProcess ; exists ; 2014 ; Environment and Planning B: Planning and Design Volume 41 ; 41 ; >
+  
+    }
+  
+    {
+    
+      title <
+        name = Environment and Planning C: Government and Policy ;
+        issn = 0263-774X ;
+        eissn = 1472-3425 ;
+        issnl = 0263-774X
+      >
+      
+      param[base_url] = http://www.envplan.com/
+      param[journal_code] = epc
+      param[short_journal_code] = C
+      
+      au < finished ; finished ; 1983 ; Environment and Planning C: Government and Policy Volume 1 ; 1 ; >
+      au < finished ; finished ; 1984 ; Environment and Planning C: Government and Policy Volume 2 ; 2 ; >
+      au < finished ; finished ; 1985 ; Environment and Planning C: Government and Policy Volume 3 ; 3 ; >
+      au < finished ; finished ; 1986 ; Environment and Planning C: Government and Policy Volume 4 ; 4 ; >
+      au < finished ; finished ; 1987 ; Environment and Planning C: Government and Policy Volume 5 ; 5 ; >
+      au < finished ; finished ; 1988 ; Environment and Planning C: Government and Policy Volume 6 ; 6 ; >
+      au < finished ; finished ; 1989 ; Environment and Planning C: Government and Policy Volume 7 ; 7 ; >
+      au < finished ; finished ; 1990 ; Environment and Planning C: Government and Policy Volume 8 ; 8 ; >
+      au < finished ; finished ; 1991 ; Environment and Planning C: Government and Policy Volume 9 ; 9 ; >
+      au < finished ; finished ; 1992 ; Environment and Planning C: Government and Policy Volume 10 ; 10 ; >
+      au < finished ; finished ; 1993 ; Environment and Planning C: Government and Policy Volume 11 ; 11 ; >
+      au < finished ; finished ; 1994 ; Environment and Planning C: Government and Policy Volume 12 ; 12 ; >
+      au < finished ; finished ; 1995 ; Environment and Planning C: Government and Policy Volume 13 ; 13 ; >
+      au < finished ; finished ; 1996 ; Environment and Planning C: Government and Policy Volume 14 ; 14 ; >
+      au < finished ; finished ; 1997 ; Environment and Planning C: Government and Policy Volume 15 ; 15 ; >
+      au < finished ; finished ; 1998 ; Environment and Planning C: Government and Policy Volume 16 ; 16 ; >
+      au < finished ; finished ; 1999 ; Environment and Planning C: Government and Policy Volume 17 ; 17 ; >
+      au < finished ; finished ; 2000 ; Environment and Planning C: Government and Policy Volume 18 ; 18 ; >
+      au < finished ; finished ; 2001 ; Environment and Planning C: Government and Policy Volume 19 ; 19 ; >
+      au < finished ; finished ; 2002 ; Environment and Planning C: Government and Policy Volume 20 ; 20 ; >
+      au < finished ; finished ; 2003 ; Environment and Planning C: Government and Policy Volume 21 ; 21 ; >
+      au < finished ; finished ; 2004 ; Environment and Planning C: Government and Policy Volume 22 ; 22 ; >
+      au < finished ; finished ; 2005 ; Environment and Planning C: Government and Policy Volume 23 ; 23 ; >
+      au < finished ; finished ; 2006 ; Environment and Planning C: Government and Policy Volume 24 ; 24 ; >
+      au < finished ; finished ; 2007 ; Environment and Planning C: Government and Policy Volume 25 ; 25 ; >
+      au < superseded ; finished ; 2008 ; Environment and Planning C: Government and Policy Volume 26 [superseded] ; 26 ; >
+      au < superseded ; finished ; 2009 ; Environment and Planning C: Government and Policy Volume 27 [superseded] ; 27 ; >
+      au < zapped ; superseded ; 2010 ; Environment and Planning C: Government and Policy Volume 28 [superseded] ; 28 ; >
+      au < superseded ; finished ; 2011 ; Environment and Planning C: Government and Policy Volume 29 [superseded] ; 29 ; >
+      au < superseded ; finished ; 2012 ; Environment and Planning C: Government and Policy Volume 30 [superseded] ; 30 ; >
+      au < superseded ; exists ; 2013 ; Environment and Planning C: Government and Policy Volume 31 [superseded] ; 31 ; >
+      au < doNotProcess ; exists ; 2014 ; Environment and Planning C: Government and Policy Volume 32 ; 32 ; >
+  
+    }
+  
+    {
+    
+      title <
+        name = Environment and Planning D: Society and Space ;
+        issn = 0263-7758 ;
+        eissn = 1472-3433 ;
+        issnl = 0263-7758
+      >
+      
+      param[base_url] = http://www.envplan.com/
+      param[journal_code] = epd
+      param[short_journal_code] = D
+      
+      # Waiting for Pion to fix no substance errors for V27-31, and no permission statement error or ingest3 and 4.      
+      
+      au < finished ; finished ; 1983 ; Environment and Planning D: Society and Space Volume 1 ; 1 ; >
+      au < finished ; finished ; 1984 ; Environment and Planning D: Society and Space Volume 2 ; 2 ; >
+      au < finished ; finished ; 1985 ; Environment and Planning D: Society and Space Volume 3 ; 3 ; >
+      au < finished ; finished ; 1986 ; Environment and Planning D: Society and Space Volume 4 ; 4 ; >
+      au < finished ; finished ; 1987 ; Environment and Planning D: Society and Space Volume 5 ; 5 ; >
+      au < finished ; finished ; 1988 ; Environment and Planning D: Society and Space Volume 6 ; 6 ; >
+      au < finished ; finished ; 1989 ; Environment and Planning D: Society and Space Volume 7 ; 7 ; >
+      au < finished ; finished ; 1990 ; Environment and Planning D: Society and Space Volume 8 ; 8 ; >
+      au < finished ; finished ; 1991 ; Environment and Planning D: Society and Space Volume 9 ; 9 ; >
+      au < finished ; finished ; 1992 ; Environment and Planning D: Society and Space Volume 10 ; 10 ; >
+      au < finished ; finished ; 1993 ; Environment and Planning D: Society and Space Volume 11 ; 11 ; >
+      au < finished ; finished ; 1994 ; Environment and Planning D: Society and Space Volume 12 ; 12 ; >
+      au < finished ; finished ; 1995 ; Environment and Planning D: Society and Space Volume 13 ; 13 ; >
+      au < finished ; finished ; 1996 ; Environment and Planning D: Society and Space Volume 14 ; 14 ; >
+      au < finished ; finished ; 1997 ; Environment and Planning D: Society and Space Volume 15 ; 15 ; >
+      au < finished ; finished ; 1998 ; Environment and Planning D: Society and Space Volume 16 ; 16 ; >
+      au < finished ; finished ; 1999 ; Environment and Planning D: Society and Space Volume 17 ; 17 ; >
+      au < finished ; finished ; 2000 ; Environment and Planning D: Society and Space Volume 18 ; 18 ; >
+      au < finished ; finished ; 2001 ; Environment and Planning D: Society and Space Volume 19 ; 19 ; >
+      au < finished ; finished ; 2002 ; Environment and Planning D: Society and Space Volume 20 ; 20 ; >
+      au < finished ; finished ; 2003 ; Environment and Planning D: Society and Space Volume 21 ; 21 ; >
+      au < finished ; finished ; 2004 ; Environment and Planning D: Society and Space Volume 22 ; 22 ; >
+      au < finished ; finished ; 2005 ; Environment and Planning D: Society and Space Volume 23 ; 23 ; >
+      au < finished ; finished ; 2006 ; Environment and Planning D: Society and Space Volume 24 ; 24 ; >
+      au < finished ; finished ; 2007 ; Environment and Planning D: Society and Space Volume 25 ; 25 ; reingest2.clockss.org:8085 >
+      au < superseded ; exists ; 2008 ; Environment and Planning D: Society and Space Volume 26 [superseded] ; 26 ; >
+      au < superseded ; finished ; 2009 ; Environment and Planning D: Society and Space Volume 27 [superseded] ; 27 ; >
+      au < superseded ; finished ; 2010 ; Environment and Planning D: Society and Space Volume 28 [superseded] ; 28 ; >
+      au < superseded ; finished ; 2011 ; Environment and Planning D: Society and Space Volume 29 [superseded] ; 29 ; >
+      au < superseded ; finished ; 2012 ; Environment and Planning D: Society and Space Volume 30 [superseded] ; 30 ; >
+      au < superseded ; exists ; 2013 ; Environment and Planning D: Society and Space Volume 31 [superseded] ; 31 ; >
+      au < doNotProcess ; exists ; 2014 ; Environment and Planning D: Society and Space Volume 32 ; 32 ; >
+  
+    }
+  
+    {
+    
+      title <
+        name = High Temperatures - High Pressures ;
+        issn = 0018-1544 ;
+        eissn = 1472-3441 ;
+        issnl = 0018-1544
+      >
+      
+      param[base_url] = http://www.hthpweb.com/
+      param[journal_code] = hthp
+      param[short_journal_code] = H
+      #implicit < status1 ; status ; year ; name ; volume ; param[volume_name] ; proxy >
+      #journal at this url 1995-2007, vols 27-36.
+      #moved: newer content at http://www.oldcitypublishing.com/index.html, 2008-present, vols. 37-?
+      
+      #Waiting for Pion to fix no substance errors for V27-31, and no permission statement error or ingest3 and 4.      
+
+      au < superseded ; exists ; 1995-1996 ; High Temperatures - High Pressures Volume 27/28 [superseded] ; 27 ; >
+      au < superseded ; exists ; 1997 ; High Temperatures - High Pressures Volume 29 [superseded] ; 29 ; >
+      au < superseded ; exists ; 1998 ; High Temperatures - High Pressures Volume 30 [superseded] ; 30 ; >
+      au < superseded ; exists ; 1999 ; High Temperatures - High Pressures Volume 31 [superseded] ; 31 ; >
+      au < finished ; crawling ; 2000 ; High Temperatures - High Pressures Volume 32 ; 32 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2001 ; High Temperatures - High Pressures Volume 33 ; 33 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2002 ; High Temperatures - High Pressures Volume 34 ; 34 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2003-2007 ; High Temperatures - High Pressures Volume 35/36 ; 35 ; reingest1.clockss.org:8082 >
+
+      au < superseded ; exists ; 2010 ; High Temperatures - High Pressures Volume 37 [to delete] ; 37 ; >
+      au < superseded ; exists ; 2010 ; High Temperatures - High Pressures Volume 38 [to delete] ; 38 ; >
+      au < zapped ; superseded ; 2010 ; High Temperatures - High Pressures Volume 39 [to delete] ; 39 ; >
+      au < zapped ; superseded ; 2011 ; High Temperatures - High Pressures Volume 40 [to delete] ; 40 ; >
+      au < superseded ; exists ; 2011 ; High Temperatures - High Pressures Volume 41 [to delete] ; 41 ; >
+  
+    }
+  
+    {
+    
+      title <
+        name = Perception ;
+        issn = 0301-0066 ;
+        eissn = 1468-4233 ;
+        issnl = 0301-0066
+      >
+      
+      param[base_url] = http://www.perceptionweb.com/
+      param[journal_code] = perception
+      param[short_journal_code] = P
+  
+      au < finished ; finished ; 1972 ; Perception Volume 1 ; 1 ; >
+      au < finished ; finished ; 1973 ; Perception Volume 2 ; 2 ; >
+      au < finished ; finished ; 1974 ; Perception Volume 3 ; 3 ; >
+      au < finished ; finished ; 1975 ; Perception Volume 4 ; 4 ; >
+      au < finished ; finished ; 1976 ; Perception Volume 5 ; 5 ; >
+      au < finished ; finished ; 1977 ; Perception Volume 6 ; 6 ; >
+      au < finished ; finished ; 1978 ; Perception Volume 7 ; 7 ; >
+      au < finished ; finished ; 1979 ; Perception Volume 8 ; 8 ; >
+      au < finished ; finished ; 1980 ; Perception Volume 9 ; 9 ; >
+      au < finished ; finished ; 1981 ; Perception Volume 10 ; 10 ; >
+      au < finished ; finished ; 1982 ; Perception Volume 11 ; 11 ; >
+      au < finished ; finished ; 1983 ; Perception Volume 12 ; 12 ; >
+      au < finished ; finished ; 1984 ; Perception Volume 13 ; 13 ; >
+      au < finished ; finished ; 1985 ; Perception Volume 14 ; 14 ; >
+      au < finished ; finished ; 1986 ; Perception Volume 15 ; 15 ; >
+      au < finished ; finished ; 1987 ; Perception Volume 16 ; 16 ; >
+      au < finished ; finished ; 1988 ; Perception Volume 17 ; 17 ; >
+      au < finished ; finished ; 1989 ; Perception Volume 18 ; 18 ; >
+      au < finished ; finished ; 1990 ; Perception Volume 19 ; 19 ; >
+      au < finished ; finished ; 1991 ; Perception Volume 20 ; 20 ; >
+      au < finished ; finished ; 1992 ; Perception Volume 21 ; 21 ; >
+      au < finished ; finished ; 1993 ; Perception Volume 22 ; 22 ; >
+      au < finished ; finished ; 1994 ; Perception Volume 23 ; 23 ; >
+      au < finished ; finished ; 1995 ; Perception Volume 24 ; 24 ; >
+      au < finished ; finished ; 1996 ; Perception Volume 25 ; 25 ; >
+      au < finished ; finished ; 1997 ; Perception Volume 26 ; 26 ; >
+      au < finished ; finished ; 1998 ; Perception Volume 27 ; 27 ; >
+      au < finished ; frozen ; 1999 ; Perception Volume 28 ; 28 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2000 ; Perception Volume 29 ; 29 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2001 ; Perception Volume 30 ; 30 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2002 ; Perception Volume 31 ; 31 ; >
+      au < finished ; finished ; 2003 ; Perception Volume 32 ; 32 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2004 ; Perception Volume 33 ; 33 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2005 ; Perception Volume 34 ; 34 ; >
+      au < finished ; crawling ; 2006 ; Perception Volume 35 ; 35 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2007 ; Perception Volume 36 ; 36 ; reingest1.clockss.org:8082 >
+      au < superseded ; exists ; 2008 ; Perception Volume 37 [superseded] ; 37 ; >
+      au < superseded ; exists ; 2009 ; Perception Volume 38 [superseded] ; 38 ; >
+      au < zapped ; superseded ; 2010 ; Perception Volume 39 [superseded] ; 39 ; >
+      au < superseded ; finished ; 2011 ; Perception Volume 40 [superseded] ; 40 ; >
+      au < superseded ; finished ; 2012 ; Perception Volume 41 [superseded] ; 41 ; >
+      au < superseded ; exists ; 2013 ; Perception Volume 42 [superseded] ; 42 ; >
+      au < doNotProcess ; exists ; 2014 ; Perception Volume 43 ; 43 ; >
+    
+    }
+  
+  }
+
+  {
+  
+    title <
+    name = i-Perception ;
+    eissn = 2041-6695 
+    >
+    
+    plugin = org.lockss.plugin.pion.ClockssPionIPerceptionPlugin
+    
+    param[base_url] = http://i-perception.perceptionweb.com/
+    param[base_url2] = http://www.perceptionweb.com/
+    param[journal_code] = I
+    
+    implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+    
+    au < finished ; finished ; 2010 ; i-Perception Volume 1 ; 1 ; >
+    au < finished ; finished ; 2011 ; i-Perception Volume 2 ; 2 ; >
+    au < finished ; finished ; 2012 ; i-Perception Volume 3 ; 3 ; >
+    au < finished ; finished ; 2013 ; i-Perception Volume 4 ; 4 ; reingest1.clockss.org:8082 >
+    au < doNotProcess ; exists ; 2014 ; i-Perception Volume 5 ; 5 ; >
+    au < doNotProcess ; exists ; 2015 ; i-Perception Volume 6 ; 6 ; >
+  
+  }
+        
+}
+  

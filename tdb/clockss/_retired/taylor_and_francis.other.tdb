@@ -1,0 +1,64 @@
+
+{
+
+  publisher <
+    name = Taylor & Francis ;
+    info[contract] = 2008 ;
+    info[tester] = 5 ;
+    info[poller] = 1
+  >
+
+  plugin = org.lockss.plugin.taylorandfrancis.ClockssTaylorAndFrancisPlugin
+  param[base_url] = http://tandfonline.stanford.clockss.org/
+  implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+
+  {
+
+    title <
+      name = Annals of Clinical Psychiatry ;
+      issn = 1040-1237 ;
+      eissn = 1547-3325
+
+    >
+
+    param[journal_id] = uacp
+
+    au < finished ; finished ; 2004 ; Annals of Clinical Psychiatry Volume 16 ; 16 ; >
+    au < finished ; finished ; 2005 ; Annals of Clinical Psychiatry Volume 17 ; 17 ; >
+    au < finished ; finished ; 2006 ; Annals of Clinical Psychiatry Volume 18 ; 18 ; >
+    au < finished ; finished ; 2007 ; Annals of Clinical Psychiatry Volume 19 ; 19 ; >
+    au < finished ; finished ; 2008 ; Annals of Clinical Psychiatry Volume 20 ; 20 ; >
+
+
+  }
+
+  {
+
+    title <
+      name = Journal of Pharmacy Teaching ;
+      issn = 1044-0054 ;
+      eissn = 1540-7365
+
+    >
+
+    param[journal_id] = wjpt
+
+    au < finished ; finished ; 1990-1991 ; Journal of Pharmacy Teaching Volume 1 ; 1 ; >
+    au < finished ; finished ; 1991 ; Journal of Pharmacy Teaching Volume 2 ; 2 ; >
+    au < finished ; finished ; 1992-1993 ; Journal of Pharmacy Teaching Volume 3 ; 3 ; >
+    au < finished ; finished ; 1993-1995 ; Journal of Pharmacy Teaching Volume 4 ; 4 ; >
+    au < finished ; finished ; 1996 ; Journal of Pharmacy Teaching Volume 5 ; 5 ; >
+    au < finished ; finished ; 1997-1998 ; Journal of Pharmacy Teaching Volume 6 ; 6 ; >
+    au < finished ; finished ; 1999-2000 ; Journal of Pharmacy Teaching Volume 7 ; 7 ; >
+    au < finished ; finished ; 2000-2001 ; Journal of Pharmacy Teaching Volume 8 ; 8 ; >
+    au < finished ; finished ; 2002 ; Journal of Pharmacy Teaching Volume 9 ; 9 ; >
+    au < finished ; finished ; 2002 ; Journal of Pharmacy Teaching Volume 10 ; 10 ; >
+    au < finished ; finished ; 2003-2004 ; Journal of Pharmacy Teaching Volume 11 ; 11 ; >
+    au < finished ; finished ; 2005 ; Journal of Pharmacy Teaching Volume 12 ; 12 ; >
+    au < finished ; finished ; 2006 ; Journal of Pharmacy Teaching Volume 13 ; 13 ; >
+    au < finished ; finished ; 2007 ; Journal of Pharmacy Teaching Volume 14 ; 14 ; >
+
+  }
+
+}

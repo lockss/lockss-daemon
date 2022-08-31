@@ -1,0 +1,27 @@
+{
+
+  publisher <
+    name = Airiti ;
+    info[contract] = 2020 ;
+    info[tester] = S ;
+    info[platform] = Source
+  >
+
+  {
+
+    title <
+      name = Airiti Source Content
+    >
+
+    plugin = org.lockss.plugin.clockss.airiti.ClockssAiritiSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/airiti-released/
+    proxy = DIRECT
+    implicit < status1 ; status ; year ; name ; param[directory] >
+
+    au < readySource ; finished ; 2020 ; Airiti Source Content 2020 ; 2020 >
+    au < readySource ; finished ; 2021 ; Airiti Source Content 2021 ; 2021 >
+    au < readySource ; crawling ; 2022 ; Airiti Source Content 2022 ; 2022 >
+
+  }
+
+}

@@ -1,0 +1,130 @@
+{
+
+  publisher <
+    name = Japan Institute of Heterocyclic Chemistry ;
+    info[contract] = 2011 ;
+    info[tester] = 5 ;
+    info[poller] = 6
+  >
+
+  plugin = org.lockss.plugin.heterocycles.ClockssHeterocyclesPlugin
+  param[base_url] = http://www.heterocycles.jp/ 
+  implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+  #Example manifest page: https://www.heterocycles.jp/clockss/manifest/vol/100
+  {
+  
+    title < 
+      name = An International Journal for Reviews and Communications in Heterocyclic Chemistry ;
+      issn = 0385-5414;
+      eissn = 1881-0942
+    >
+    
+    au < manifest ; exists ; 1973 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1974 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1975 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1976 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1976 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1977 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1977 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1977 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1978 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1978 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1978 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1979 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1979 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1980 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1981 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1981 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1982 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 17 ; 17 ; >
+    au < manifest ; exists ; 1982 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1982 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 19 ; 19 ; >
+    au < manifest ; exists ; 1983 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 20 ; 20 ; >
+    au < manifest ; exists ; 1984 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 21 ; 21 ; >
+    au < manifest ; exists ; 1984 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 22 ; 22 ; >
+    au < manifest ; exists ; 1985 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 23 ; 23 ; >
+    au < manifest ; exists ; 1986 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 24 ; 24 ; >
+    au < manifest ; exists ; 1987 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 25 ; 25 ; >
+    au < manifest ; exists ; 1987 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 26 ; 26 ; >
+    au < manifest ; exists ; 1988 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 27 ; 27 ; >
+    au < manifest ; exists ; 1989 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 28 ; 28 ; >
+    au < manifest ; exists ; 1989 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 29 ; 29 ; >
+    au < manifest ; exists ; 1990 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 30 ; 30 ; >
+    au < manifest ; exists ; 1990 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 31 ; 31 ; >
+    au < manifest ; exists ; 1991 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 32 ; 32 ; >
+    au < manifest ; exists ; 1992 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 33 ; 33 ; >
+    au < manifest ; exists ; 1992 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 34 ; 34 ; >
+    au < manifest ; exists ; 1993 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 35 ; 35 ; >
+    au < manifest ; exists ; 1993 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 36 ; 36 ; >
+    au < manifest ; exists ; 1994 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 37 ; 37 ; >
+    au < manifest ; exists ; 1994 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 38 ; 38 ; >
+    au < manifest ; exists ; 1994 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 39 ; 39 ; >
+    au < manifest ; exists ; 1995 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 40 ; 40 ; >
+    au < manifest ; exists ; 1995 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 41 ; 41 ; >
+    au < manifest ; exists ; 1996 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 42 ; 42 ; >
+    au < manifest ; exists ; 1996 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 43 ; 43 ; >
+    au < manifest ; exists ; 1997 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 44 ; 44 ; >
+    au < manifest ; exists ; 1997 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 45 ; 45 ; >
+    au < manifest ; exists ; 1997 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 46 ; 46 ; >
+    au < manifest ; exists ; 1998 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 47 ; 47 ; >
+    au < manifest ; exists ; 1998 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 48 ; 48 ; >
+    au < manifest ; exists ; 1999 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 49 ; 49 ; >
+    au < manifest ; exists ; 1999 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 50 ; 50 ; >
+    au < manifest ; exists ; 2000 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 51 ; 51 ; >
+    au < manifest ; exists ; 2000 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 52 ; 52 ; >
+    au < manifest ; exists ; 2001 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 53 ; 53 ; >
+    au < manifest ; exists ; 2001 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 54 ; 54 ; >
+    au < manifest ; exists ; 2002 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 55 ; 55 ; >
+    au < manifest ; exists ; 2002 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 56 ; 56 ; >
+    au < manifest ; exists ; 2002 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 57 ; 57 ; >
+    au < manifest ; exists ; 2003 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 58 ; 58 ; >
+    au < manifest ; exists ; 2003 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 59 ; 59 ; >
+    au < manifest ; exists ; 2003 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 60 ; 60 ; >
+    au < manifest ; exists ; 2004 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 61 ; 61 ; >
+    au < manifest ; exists ; 2004 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 62 ; 62 ; >
+    au < manifest ; exists ; 2004 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 63 ; 63 ; >
+    au < manifest ; exists ; 2005 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 64 ; 64 ; >
+    au < manifest ; exists ; 2005 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 65 ; 65 ; >
+    au < manifest ; exists ; 2006 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 66 ; 66 ; >
+    au < manifest ; exists ; 2006 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 67 ; 67 ; >
+    au < manifest ; exists ; 2006 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 68 ; 68 ; >
+    au < manifest ; exists ; 2006 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 69 ; 69 ; >
+    au < manifest ; exists ; 2007 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 70 ; 70 ; >
+    au < manifest ; exists ; 2007 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 71 ; 71 ; >
+    au < manifest ; exists ; 2007 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 72 ; 72 ; >
+    au < manifest ; exists ; 2007 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 73 ; 73 ; >
+    au < manifest ; exists ; 2008 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 74 ; 74 ; >
+    au < manifest ; exists ; 2008 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 75 ; 75 ; >
+    au < manifest ; exists ; 2009 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 76 ; 76 ; >
+    au < manifest ; exists ; 2009 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 77 ; 77 ; >
+    au < finished ; crawling ; 2009 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 78 ; 78 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2010 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 79 ; 79 ; >
+    au < finished ; finished ; 2010 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 80 ; 80 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2010 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 81 ; 81 ; >
+    au < finished ; finished ; 2011 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 82 ; 82 ; >
+    au < finished ; crawling ; 2011 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 83 ; 83 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2012 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 84 ; 84 ; >
+    au < finished ; finished ; 2012 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 85 ; 85 ; >
+    au < finished ; finished ; 2012 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 86 ; 86 ; >
+    au < finished ; finished ; 2013 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 87 ; 87 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 88 ; 88 ; >
+    au < finished ; finished ; 2014 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 89 ; 89 ; >
+    au < finished ; finished ; 2015 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 90 ; 90 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 91 ; 91 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 92 ; 92 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2016 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 93 ; 93 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2017 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 94 ; 94 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2017 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 95 ; 95 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 96 ; 96 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 97 ; 97 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 98 ; 98 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2019 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 99 ; 99 ; reingest3.clockss.org:8083 >
+    au < deepCrawl ; exists ; 2020 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 100 ; 100 ; >
+    au < deepCrawl ; exists ; 2020 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 101 ; 101 ; >
+    au < crawling ; exists ; 2021 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 102 ; 102 ; >
+    au < exists ; exists ; 2021 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 103 ; 103 ; >
+    au < expected ; exists ; 2022 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 104 ; 104 ; >
+    au < expected ; exists ; 2022 ; An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 105 ; 105 ; >
+
+  }
+
+}

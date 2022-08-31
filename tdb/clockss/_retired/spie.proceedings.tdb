@@ -1,0 +1,79 @@
+{
+
+  publisher <
+    name = SPIE ;
+    info[contract] = 2012 ;
+    info[back] = 1900 ;
+    info[tester] = 5 ;
+    info[poller] = 3
+  >
+
+  {
+  
+    title <
+      name = SPIE Proceedings ;
+      type = proceedings
+    >
+    
+    plugin = org.lockss.plugin.silverchair.ClockssSilverchairProceedingsPlugin
+    implicit < status1 ; status ; year ; name ; param[year] ; proxy >
+    param[base_url] = http://proceedings.spiedigitallibrary.org/
+
+    au < finished ; finished ; 1963 ; SPIE Proceedings 1963 ; 1963 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1964 ; SPIE Proceedings 1964 ; 1964 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1965 ; SPIE Proceedings 1965 ; 1965 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1966 ; SPIE Proceedings 1966 ; 1966 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1967 ; SPIE Proceedings 1967 ; 1967 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1968 ; SPIE Proceedings 1968 ; 1968 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1969 ; SPIE Proceedings 1969 ; 1969 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1970 ; SPIE Proceedings 1970 ; 1970 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1971 ; SPIE Proceedings 1971 ; 1971 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1972 ; SPIE Proceedings 1972 ; 1972 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1973 ; SPIE Proceedings 1973 ; 1973 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1974 ; SPIE Proceedings 1974 ; 1974 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1975 ; SPIE Proceedings 1975 ; 1975 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1976 ; SPIE Proceedings 1976 ; 1976 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1977 ; SPIE Proceedings 1977 ; 1977 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1978 ; SPIE Proceedings 1978 ; 1978 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1979 ; SPIE Proceedings 1979 ; 1979 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1980 ; SPIE Proceedings 1980 ; 1980 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1981 ; SPIE Proceedings 1981 ; 1981 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1982 ; SPIE Proceedings 1982 ; 1982 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1983 ; SPIE Proceedings 1983 ; 1983 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1984 ; SPIE Proceedings 1984 ; 1984 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1985 ; SPIE Proceedings 1985 ; 1985 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1986 ; SPIE Proceedings 1986 ; 1986 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1987 ; SPIE Proceedings 1987 ; 1987 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1988 ; SPIE Proceedings 1988 ; 1988 ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1989 ; SPIE Proceedings 1989 ; 1989 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1990 ; SPIE Proceedings 1990 ; 1990 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1991 ; SPIE Proceedings 1991 ; 1991 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1992 ; SPIE Proceedings 1992 ; 1992 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1993 ; SPIE Proceedings 1993 ; 1993 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1994 ; SPIE Proceedings 1994 ; 1994 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1995 ; SPIE Proceedings 1995 ; 1995 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1996 ; SPIE Proceedings 1996 ; 1996 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1997 ; SPIE Proceedings 1997 ; 1997 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1998 ; SPIE Proceedings 1998 ; 1998 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1999 ; SPIE Proceedings 1999 ; 1999 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2000 ; SPIE Proceedings 2000 ; 2000 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2001 ; SPIE Proceedings 2001 ; 2001 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2002 ; SPIE Proceedings 2002 ; 2002 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2003 ; SPIE Proceedings 2003 ; 2003 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2004 ; SPIE Proceedings 2004 ; 2004 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2005 ; SPIE Proceedings 2005 ; 2005 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2006 ; SPIE Proceedings 2006 ; 2006 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2007 ; SPIE Proceedings 2007 ; 2007 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2008 ; SPIE Proceedings 2008 ; 2008 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2009 ; SPIE Proceedings 2009 ; 2009 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2010 ; SPIE Proceedings 2010 ; 2010 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2011 ; SPIE Proceedings 2011 ; 2011 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2012 ; SPIE Proceedings 2012 ; 2012 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2013 ; SPIE Proceedings 2013 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; SPIE Proceedings 2014 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2015 ; SPIE Proceedings 2015 ; 2015 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; SPIE Proceedings 2016 ; 2016 ; reingest1.clockss.org:8082 >
+  #SPIE is no longer participating. Do not process any content after 2016
+  }
+ 
+}

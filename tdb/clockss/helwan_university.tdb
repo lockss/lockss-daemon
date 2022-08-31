@@ -1,0 +1,30 @@
+{
+
+  publisher <
+    name = Helwan University ;
+    info[contract] = 2015 ;
+    info[tester] = 5 ;
+    info[poller] = 8
+  >
+  provider = bepress
+  
+  # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
+
+  {
+  
+    title <
+      name = Journal of Art, Design and Music ;
+      eissn = 2790-4237 ;
+      issnl = 2790-4237
+    >
+    
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
+    param[base_url] = https://www.jadm.eg.net/
+    param[journal_abbr] = journal
+    implicit < status1 ; status ; year ; name ; param[volume] ; proxy >
+
+    au < crawling ; exists ; 2022 ; Journal of Art, Design and Music Volume 1 ; 1 ; >
+
+  }
+
+}

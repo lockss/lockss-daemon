@@ -1,0 +1,88 @@
+# This is a legacy Maney Publishing file for titles previously hosted by HighWire Press
+
+{
+
+  publisher <
+    name = Maney Publishing ;
+    info[contract] = 2010 ;
+    info[tester] = 0 ;
+    info[poller] = 0
+  >
+
+  {
+
+    title <
+      name = Journal of Orthodontics ;
+      issn = 1465-3125 ;
+      eissn = 1465-3133
+    >
+
+    # This publication moved to Atypon Systems
+    
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+    param[base_url] = http://jorthod.maneyjournals.org/
+    implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+    { 
+      
+      attr[au_coverage_depth] = tablesofcontents
+
+      au < doNotProcess ; exists ; 1973-1974 ; Journal of Orthodontics Volume 1 [tables of contents only] ; 1 ; >
+      au < doNotProcess ; exists ; 1975 ; Journal of Orthodontics Volume 2 [tables of contents only] ; 2 ; >
+      au < doNotProcess ; exists ; 1976 ; Journal of Orthodontics Volume 3 [tables of contents only] ; 3 ; >
+      au < doNotProcess ; exists ; 1977 ; Journal of Orthodontics Volume 4 [tables of contents only] ; 4 ; >
+      au < doNotProcess ; exists ; 1978 ; Journal of Orthodontics Volume 5 [tables of contents only] ; 5 ; >
+      au < doNotProcess ; exists ; 1979 ; Journal of Orthodontics Volume 6 [tables of contents only] ; 6 ; >
+      au < doNotProcess ; exists ; 1980 ; Journal of Orthodontics Volume 7 [tables of contents only] ; 7 ; >
+      
+    }
+
+    {
+
+      attr[au_coverage_depth] = abstracts
+
+      au < doNotProcess ; exists ; 1981 ; Journal of Orthodontics Volume 8 [abstracts only] ; 8 ; >
+      au < doNotProcess ; exists ; 1982 ; Journal of Orthodontics Volume 9 [abstracts only] ; 9 ; >
+      au < doNotProcess ; exists ; 1983 ; Journal of Orthodontics Volume 10 [abstracts only] ; 10 ; >
+      au < doNotProcess ; exists ; 1984 ; Journal of Orthodontics Volume 11 [abstracts only] ; 11 ; >
+      au < doNotProcess ; exists ; 1985 ; Journal of Orthodontics Volume 12 [abstracts only] ; 12 ; >
+      au < doNotProcess ; exists ; 1986 ; Journal of Orthodontics Volume 13 [abstracts only] ; 13 ; >
+      au < doNotProcess ; exists ; 1987 ; Journal of Orthodontics Volume 14 [abstracts only] ; 14 ; >
+      au < doNotProcess ; exists ; 1988 ; Journal of Orthodontics Volume 15 [abstracts only] ; 15 ; >
+      au < doNotProcess ; exists ; 1989 ; Journal of Orthodontics Volume 16 [abstracts only] ; 16 ; >
+      au < doNotProcess ; exists ; 1990 ; Journal of Orthodontics Volume 17 [abstracts only] ; 17 ; >
+      au < doNotProcess ; exists ; 1991 ; Journal of Orthodontics Volume 18 [abstracts only] ; 18 ; >
+      au < doNotProcess ; exists ; 1992 ; Journal of Orthodontics Volume 19 [abstracts only] ; 19 ; >
+      au < doNotProcess ; exists ; 1993 ; Journal of Orthodontics Volume 20 [abstracts only] ; 20 ; >
+      au < doNotProcess ; exists ; 1994 ; Journal of Orthodontics Volume 21 [abstracts only] ; 21 ; >
+      au < doNotProcess ; exists ; 1995 ; Journal of Orthodontics Volume 22 [abstracts only] ; 22 ; >
+      au < doNotProcess ; exists ; 1996 ; Journal of Orthodontics Volume 23 [abstracts only] ; 23 ; >
+
+    }
+      
+    {
+
+      attr[au_coverage_depth] = fulltext
+
+      au < doNotProcess ; exists ; 1997 ; Journal of Orthodontics Volume 24 ; 24 ; >
+      au < doNotProcess ; exists ; 1998 ; Journal of Orthodontics Volume 25 ; 25 ; >
+      au < doNotProcess ; exists ; 1999 ; Journal of Orthodontics Volume 26 ; 26 ; >
+      au < doNotProcess ; exists ; 2000 ; Journal of Orthodontics Volume 27 ; 27 ; >
+      au < doNotProcess ; exists ; 2001 ; Journal of Orthodontics Volume 28 ; 28 ; >
+      au < doNotProcess ; exists ; 2002 ; Journal of Orthodontics Volume 29 ; 29 ; >
+      au < doNotProcess ; exists ; 2003 ; Journal of Orthodontics Volume 30 ; 30 ; >
+      au < doNotProcess ; exists ; 2004 ; Journal of Orthodontics Volume 31 ; 31 ; >
+      au < doNotProcess ; exists ; 2005 ; Journal of Orthodontics Volume 32 ; 32 ; >
+      au < doNotProcess ; exists ; 2006 ; Journal of Orthodontics Volume 33 ; 33 ; >
+      au < doNotProcess ; exists ; 2007 ; Journal of Orthodontics Volume 34 ; 34 ; >
+      au < doNotProcess ; exists ; 2008 ; Journal of Orthodontics Volume 35 ; 35 ; >
+      au < doNotProcess ; exists ; 2009 ; Journal of Orthodontics Volume 36 ; 36 ; >
+      au < finished ; finished ; 2010 ; Journal of Orthodontics Volume 37 ; 37 ; >
+      au < finished ; finished ; 2011 ; Journal of Orthodontics Volume 38 ; 38 ; >
+      au < finished ; finished ; 2012 ; Journal of Orthodontics Volume 39 ; 39 ; >
+
+    }
+
+  }
+
+}

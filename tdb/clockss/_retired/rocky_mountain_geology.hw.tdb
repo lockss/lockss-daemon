@@ -1,0 +1,93 @@
+{
+
+    publisher <
+      name = Rocky Mountain Geology ;
+      info[contract] = 2012 ;
+      info[tester] = 5 ;
+    info[poller] = 2
+    >
+    
+    pluginPrefix = org.lockss.plugin.highwire.
+    implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+        
+    {
+    
+      title < 
+        name = Contributions to Geology ;
+        issn = 1436-3542
+      >
+      
+      param[base_url] = http://rmg.geoscienceworld.org/
+      comment[continued_by] = [1555-7340]
+      
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1962 ; Contributions to Geology Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1963 ; Contributions to Geology Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1964 ; Contributions to Geology Volume 3 ; 3 ; reingest4.clockss.org:8082 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1965 ; Contributions to Geology Volume 4 ; 4 ; reingest5.clockss.org:8082 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1966 ; Contributions to Geology Volume 5 ; 5 ; reingest1.clockss.org:8082 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1967 ; Contributions to Geology Volume 6 ; 6 ; reingest2.clockss.org:8085 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1968 ; Contributions to Geology Volume 7 ; 7 ; reingest3.clockss.org:8083 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1969 ; Contributions to Geology Volume 8 ; 8 ; reingest4.clockss.org:8082 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1970 ; Contributions to Geology Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1971 ; Contributions to Geology Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1972 ; Contributions to Geology Volume 11 ; 11 ; reingest2.clockss.org:8085 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1973 ; Contributions to Geology Volume 12 ; 12 ; reingest3.clockss.org:8083 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1974 ; Contributions to Geology Volume 13 ; 13 ; reingest4.clockss.org:8082 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1975-1976 ; Contributions to Geology Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1977 ; Contributions to Geology Volume 15 ; 15 ; reingest1.clockss.org:8082 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1978 ; Contributions to Geology Volume 16 ; 16 ; reingest2.clockss.org:8085 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1979 ; Contributions to Geology Volume 17 ; 17 ; reingest3.clockss.org:8083 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1979-1980 ; Contributions to Geology Volume 18 ; 18 ; reingest4.clockss.org:8082 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1980 ; Contributions to Geology Volume 19 ; 19 ; reingest5.clockss.org:8082 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1981 ; Contributions to Geology Volume 20 ; 20 ; reingest1.clockss.org:8082 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1982 ; Contributions to Geology Volume 21 ; 21 ; reingest2.clockss.org:8085 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1983 ; Contributions to Geology Volume 22 ; 22 ; reingest3.clockss.org:8083 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1984-1985 ; Contributions to Geology Volume 23 ; 23 ; reingest4.clockss.org:8082 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1986 ; Contributions to Geology Volume 24 ; 24 ; reingest5.clockss.org:8082 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1987 ; Contributions to Geology Volume 25 ; 25 ; reingest1.clockss.org:8082 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1988 ; Contributions to Geology Volume 26 ; 26 ; reingest2.clockss.org:8085 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1989 ; Contributions to Geology Volume 27 ; 27 ; reingest3.clockss.org:8083 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1990 ; Contributions to Geology Volume 28 ; 28 ; reingest4.clockss.org:8082 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1991-1992 ; Contributions to Geology Volume 29 ; 29 ; reingest5.clockss.org:8082 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1994 ; Contributions to Geology Volume 30 ; 30 ; reingest1.clockss.org:8082 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1996-1997 ; Contributions to Geology Volume 31 ; 31 ; reingest2.clockss.org:8085 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1997-1998 ; Contributions to Geology Volume 32 ; 32 ; reingest3.clockss.org:8083 >
+  
+    }
+  
+    {
+    
+      title < 
+        name = Rocky Mountain Geology ;
+        issn = 1555-7340 ;
+        eissn = 1555-7332
+      >
+
+      param[base_url] = http://rmg.geoscienceworld.org/
+      comment[continues] = [1436-3542]
+         
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1998 ; Rocky Mountain Geology Volume 33 ; 33 ; reingest4.clockss.org:8082 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1999 ; Rocky Mountain Geology Volume 34 ; 34 ; reingest5.clockss.org:8082 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 2000 ; Rocky Mountain Geology Volume 35 ; 35 ; reingest1.clockss.org:8082 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 2001 ; Rocky Mountain Geology Volume 36 ; 36 ; reingest2.clockss.org:8085 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 2002 ; Rocky Mountain Geology Volume 37 ; 37 ; reingest3.clockss.org:8083 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 2003 ; Rocky Mountain Geology Volume 38 ; 38 ; reingest4.clockss.org:8082 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; finished ; 2004 ; Rocky Mountain Geology Volume 39 ; 39 ; reingest4.clockss.org:8082 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 2005 ; Rocky Mountain Geology Volume 40 ; 40 ; reingest5.clockss.org:8082 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 2006 ; Rocky Mountain Geology Volume 41 ; 41 ; reingest1.clockss.org:8082 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 2007 ; Rocky Mountain Geology Volume 42 ; 42 ; reingest2.clockss.org:8085 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 2008 ; Rocky Mountain Geology Volume 43 ; 43 ; reingest3.clockss.org:8083 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 2009 ; Rocky Mountain Geology Volume 44 ; 44 ; reingest4.clockss.org:8082 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 2010 ; Rocky Mountain Geology Volume 45 ; 45 ; reingest5.clockss.org:8082 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 2011 ; Rocky Mountain Geology Volume 46 ; 46 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Rocky Mountain Geology Volume 47 ; 47 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Rocky Mountain Geology Volume 48 ; 48 ; >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2014 ; Rocky Mountain Geology Volume 49 [superseded] ; 49 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; finished ; 2014 ; Rocky Mountain Geology Volume 49 ; 49 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Rocky Mountain Geology Volume 50 ; 50 ; reingest5.clockss.org:8082 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; finished ; 2016 ; Rocky Mountain Geology Volume 51 ; 51 ; reingest5.clockss.org:8082 >
+      au < gsw.ClockssGSWDrupalPlugin ; superseded ; exists ; 2017 ; Rocky Mountain Geology Volume 52 [superseded] ; 52 ; >
+      
+    }
+  
+}

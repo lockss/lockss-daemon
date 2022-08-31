@@ -1,0 +1,24 @@
+{
+
+  publisher <
+    name = Practical Action Publishing ;
+    info[contract] = 2013 ;
+    info[tester] = S ;
+    info[platform] = Source LXPLUG-2032
+  >
+
+  {
+    title <
+      name = Practical Action Publishing Source Content
+    >
+
+    plugin = org.lockss.plugin.clockss.pap.PapSourcePlugin
+    param[base_url] = https://clockss-test.lockss.org/sourcefiles/practicalaction-released/
+    proxy = DIRECT
+    implicit < status1 ; status ; year ; name ; param[directory] >
+
+    au < testing ; exists ; 2022 ; Practical Action Publishing Source Content 2022 ; 2022_01 >
+
+  }
+
+}

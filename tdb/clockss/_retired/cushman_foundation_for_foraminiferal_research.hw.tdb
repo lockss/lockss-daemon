@@ -1,0 +1,73 @@
+{
+
+  publisher <
+    name = Cushman Foundation for Foraminiferal Research ;
+    info[contract] = 2013 ;
+    info[tester] = 5 ;
+    info[poller] = 2
+  >
+    
+    pluginPrefix = org.lockss.plugin.highwire.
+    implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+    
+  {
+ 
+    title < 
+      name = Journal of Foraminiferal Research ;
+      issn = 0096-1191 
+    >
+    param[base_url] = http://jfr.geoscienceworld.org/
+    
+    au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1971 ; Journal of Foraminiferal Research Volume 1 ; 1 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1972 ; Journal of Foraminiferal Research Volume 2 ; 2 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1973 ; Journal of Foraminiferal Research Volume 3 ; 3 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1974 ; Journal of Foraminiferal Research Volume 4 ; 4 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1975 ; Journal of Foraminiferal Research Volume 5 ; 5 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1976 ; Journal of Foraminiferal Research Volume 6 ; 6 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1977 ; Journal of Foraminiferal Research Volume 7 ; 7 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1978 ; Journal of Foraminiferal Research Volume 8 ; 8 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1979 ; Journal of Foraminiferal Research Volume 9 ; 9 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1980 ; Journal of Foraminiferal Research Volume 10 ; 10 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1981 ; Journal of Foraminiferal Research Volume 11 ; 11 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1982 ; Journal of Foraminiferal Research Volume 12 ; 12 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1983 ; Journal of Foraminiferal Research Volume 13 ; 13 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1984 ; Journal of Foraminiferal Research Volume 14 ; 14 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1985 ; Journal of Foraminiferal Research Volume 15 ; 15 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1986 ; Journal of Foraminiferal Research Volume 16 ; 16 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1987 ; Journal of Foraminiferal Research Volume 17 ; 17 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1988 ; Journal of Foraminiferal Research Volume 18 ; 18 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1989 ; Journal of Foraminiferal Research Volume 19 ; 19 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1990 ; Journal of Foraminiferal Research Volume 20 ; 20 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1991 ; Journal of Foraminiferal Research Volume 21 ; 21 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1992 ; Journal of Foraminiferal Research Volume 22 ; 22 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1993 ; Journal of Foraminiferal Research Volume 23 ; 23 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1994 ; Journal of Foraminiferal Research Volume 24 ; 24 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1995 ; Journal of Foraminiferal Research Volume 25 ; 25 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1996 ; Journal of Foraminiferal Research Volume 26 ; 26 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1997 ; Journal of Foraminiferal Research Volume 27 ; 27 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1998 ; Journal of Foraminiferal Research Volume 28 ; 28 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1999 ; Journal of Foraminiferal Research Volume 29 ; 29 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 2000 ; Journal of Foraminiferal Research Volume 30 ; 30 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 2001 ; Journal of Foraminiferal Research Volume 31 ; 31 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 2002 ; Journal of Foraminiferal Research Volume 32 ; 32 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 2003 ; Journal of Foraminiferal Research Volume 33 ; 33 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 2004 ; Journal of Foraminiferal Research Volume 34 ; 34 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 2005 ; Journal of Foraminiferal Research Volume 35 ; 35 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 2006 ; Journal of Foraminiferal Research Volume 36 ; 36 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 2007 ; Journal of Foraminiferal Research Volume 37 ; 37 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 2008 ; Journal of Foraminiferal Research Volume 38 ; 38 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 2009 ; Journal of Foraminiferal Research Volume 39 ; 39 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 2010 ; Journal of Foraminiferal Research Volume 40 ; 40 ; reingest1.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 2011 ; Journal of Foraminiferal Research Volume 41 ; 41 ; reingest2.clockss.org:8085 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 2012 ; Journal of Foraminiferal Research Volume 42 ; 42 ; reingest3.clockss.org:8083 >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Journal of Foraminiferal Research Volume 43 ; 43 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Journal of Foraminiferal Research Volume 44 ; 44 ; >
+    au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2015 ; Journal of Foraminiferal Research Volume 45 [superseded] ; 45 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; finished ; 2015 ; Journal of Foraminiferal Research Volume 45 ; 45 ; reingest1.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; finished ; 2016 ; Journal of Foraminiferal Research Volume 46 ; 46 ; reingest2.clockss.org:8085 >
+    au < gsw.ClockssGSWDrupalPlugin ; superseded ; exists ; 2017 ; Journal of Foraminiferal Research Volume 47 [superseded] ; 47 ; >
+    #moving to SC Fall 2017
+
+  } 
+
+}

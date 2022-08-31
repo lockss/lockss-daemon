@@ -1,0 +1,32 @@
+{
+
+  publisher <
+    name = Maine Medical Center ;
+    info[contract] = 2013 ;
+    info[tester] = 5 ;
+    info[poller] = 8
+  >
+  provider = bepress
+  
+  # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
+
+  {
+  
+    title <
+      name = Journal of Maine Medical Center ;
+      eissn = 2641-2225
+    >
+    
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
+    param[base_url] = https://knowledgeconnection.mainehealth.org/
+    param[journal_abbr] = jmmc
+    implicit < status1 ; status ; year ; name ; param[volume] ; proxy >
+
+    au < finished ; frozen ; 2019 ; Journal of Maine Medical Center Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+    au < deepCrawl ; exists ; 2020 ; Journal of Maine Medical Center Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2021 ; Journal of Maine Medical Center Volume 3 ; 3 ; >
+    au < testing ; exists ; 2022 ; Journal of Maine Medical Center Volume 4 ; 4 ; >
+
+  }
+
+}

@@ -1,0 +1,479 @@
+{
+
+  publisher <
+    name = Australian National University Press ;
+    info[contract] = 2014 ;
+    info[tester] = 8
+  >
+
+    plugin = org.lockss.plugin.anu.ClockssAnuPlugin 
+    param[base_url] = https://press.anu.edu.au/
+    implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+    #RT 7563
+    #April 2019 - 2 journal ids changed as did location of start url
+    #4/24/19 - froze completed content on production; modified plugin to handle content going forward
+    #6/14/19 - release new version of plugin to handle updated site
+    
+
+  {
+  
+    title <
+      name = Aboriginal History Journal ;
+      issn = 0314-8769 ;
+      eissn = 1837-9389
+    >
+    
+    param[journal_id] = aboriginal-history-journal
+
+    au < crawling ; down ; 1977 ; Aboriginal History Journal Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+    au < crawling ; down ; 1978 ; Aboriginal History Journal Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+    au < crawling ; down ; 1979 ; Aboriginal History Journal Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+    au < crawling ; down ; 1980 ; Aboriginal History Journal Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+    au < crawling ; down ; 1981 ; Aboriginal History Journal Volume 5 ; 5 ; reingest5.clockss.org:8082 >
+    au < crawling ; down ; 1982 ; Aboriginal History Journal Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+    au < crawling ; down ; 1983 ; Aboriginal History Journal Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+    au < crawling ; down ; 1984 ; Aboriginal History Journal Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+    au < crawling ; down ; 1985 ; Aboriginal History Journal Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+    au < crawling ; down ; 1986 ; Aboriginal History Journal Volume 10 ; 10 ; reingest5.clockss.org:8082 >
+    au < crawling ; down ; 1987 ; Aboriginal History Journal Volume 11 ; 11 ; reingest1.clockss.org:8082 >
+    au < crawling ; down ; 1988 ; Aboriginal History Journal Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+    au < crawling ; down ; 1989 ; Aboriginal History Journal Volume 13 ; 13 ; reingest3.clockss.org:8083 >
+    au < crawling ; down ; 1990 ; Aboriginal History Journal Volume 14 ; 14 ; reingest4.clockss.org:8082 >
+    au < crawling ; down ; 1991 ; Aboriginal History Journal Volume 15 ; 15 ; reingest5.clockss.org:8082 >
+    au < crawling ; down ; 1992 ; Aboriginal History Journal Volume 16 ; 16 ; reingest1.clockss.org:8082 >
+    au < crawling ; down ; 1993 ; Aboriginal History Journal Volume 17 ; 17 ; reingest2.clockss.org:8085 >
+    au < crawling ; down ; 1994 ; Aboriginal History Journal Volume 18 ; 18 ; reingest3.clockss.org:8083 >
+    au < crawling ; down ; 1995 ; Aboriginal History Journal Volume 19 ; 19 ; reingest4.clockss.org:8082 >
+    au < crawling ; down ; 1996 ; Aboriginal History Journal Volume 20 ; 20 ; reingest5.clockss.org:8082 >
+    au < crawling ; down ; 1997 ; Aboriginal History Journal Volume 21 ; 21 ; reingest1.clockss.org:8082 >
+    au < crawling ; down ; 1998 ; Aboriginal History Journal Volume 22 ; 22 ; reingest2.clockss.org:8085 >
+    au < crawling ; down ; 1999 ; Aboriginal History Journal Volume 23 ; 23 ; reingest3.clockss.org:8083 >
+    au < crawling ; down ; 2000 ; Aboriginal History Journal Volume 24 ; 24 ; reingest4.clockss.org:8082 >
+    au < crawling ; down ; 2001 ; Aboriginal History Journal Volume 25 ; 25 ; reingest5.clockss.org:8082 >
+    au < crawling ; down ; 2002 ; Aboriginal History Journal Volume 26 ; 26 ; reingest1.clockss.org:8082 >
+    au < crawling ; down ; 2003 ; Aboriginal History Journal Volume 27 ; 27 ; reingest2.clockss.org:8085 >
+    au < crawling ; down ; 2004 ; Aboriginal History Journal Volume 28 ; 28 ; reingest3.clockss.org:8083 >
+    au < crawling ; down ; 2005 ; Aboriginal History Journal Volume 29 ; 29 ; reingest4.clockss.org:8082 >
+    au < crawling ; down ; 2006 ; Aboriginal History Journal Volume 30 ; 30 ; reingest5.clockss.org:8082 >
+    au < crawling ; down ; 2007 ; Aboriginal History Journal Volume 31 ; 31 ; reingest1.clockss.org:8082 >
+    au < crawling ; down ; 2008 ; Aboriginal History Journal Volume 32 ; 32 ; reingest2.clockss.org:8085 >
+    au < crawling ; down ; 2010 ; Aboriginal History Journal Volume 33 ; 33 ; reingest3.clockss.org:8083 >
+    au < crawling ; down ; 2011 ; Aboriginal History Journal Volume 34 ; 34 ; reingest4.clockss.org:8082 >
+    au < crawling ; down ; 2011 ; Aboriginal History Journal Volume 35 ; 35 ; reingest5.clockss.org:8082 >
+    au < crawling ; down ; 2013 ; Aboriginal History Journal Volume 36 ; 36 ; reingest1.clockss.org:8082 >
+    au < crawling ; down ; 2013 ; Aboriginal History Journal Volume 37 ; 37 ; reingest2.clockss.org:8085 >
+    au < crawling ; down ; 2015 ; Aboriginal History Journal Volume 38 ; 38 ; reingest3.clockss.org:8083 >
+    au < crawling ; down ; 2016 ; Aboriginal History Journal Volume 39 ; 39 ; reingest4.clockss.org:8082 >
+    au < crawling ; down ; 2017 ; Aboriginal History Journal Volume 40 ; 40 ; reingest1.clockss.org:8082 >
+    au < crawling ; down ; 2018 ; Aboriginal History Journal Volume 41 ; 41 ; reingest1.clockss.org:8082 >
+    au < crawling ; down ; 2018 ; Aboriginal History Journal Volume 42 ; 42 ; reingest3.clockss.org:8083 >
+    au < crawling ; exists ; 2019 ; Aboriginal History Journal Volume 43 ; 43 ; >
+    au < crawling ; exists ; 2020 ; Aboriginal History Journal Volume 44 ; 44 ; >
+    au < crawling ; exists ; 2021 ; Aboriginal History Journal Volume 45 ; 45 ; >
+    au < expected ; exists ; 2022 ; Aboriginal History Journal Volume 46 ; 46 ; >
+
+  }
+
+  {
+  
+    title <
+      name = Agenda - A Journal of Policy Analysis and Reform ;
+      issn = 1322-1833 ;
+      eissn = 1447-4735
+    >
+    
+    {
+    
+    param[journal_id] = agenda-journal-policy-analysis-and-reform
+
+    au < frozen ; down ; 1994 ; Agenda - A Journal of Policy Analysis and Reform Volume 1 ; 1 ; reingest5.clockss.org:8082 >
+    au < frozen ; down ; 1995 ; Agenda - A Journal of Policy Analysis and Reform Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+    au < frozen ; down ; 1996 ; Agenda - A Journal of Policy Analysis and Reform Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+    au < frozen ; down ; 1997 ; Agenda - A Journal of Policy Analysis and Reform Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+    au < frozen ; down ; 1998 ; Agenda - A Journal of Policy Analysis and Reform Volume 5 ; 5 ; reingest4.clockss.org:8082 >
+    au < frozen ; down ; 1999 ; Agenda - A Journal of Policy Analysis and Reform Volume 6 ; 6 ; reingest5.clockss.org:8082 >
+    au < frozen ; down ; 2000 ; Agenda - A Journal of Policy Analysis and Reform Volume 7 ; 7 ; reingest1.clockss.org:8082 >
+    au < frozen ; down ; 2001 ; Agenda - A Journal of Policy Analysis and Reform Volume 8 ; 8 ; reingest2.clockss.org:8085 >
+    au < frozen ; down ; 2002 ; Agenda - A Journal of Policy Analysis and Reform Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+    au < frozen ; down ; 2003 ; Agenda - A Journal of Policy Analysis and Reform Volume 10 ; 10 ; reingest4.clockss.org:8082 >
+    au < frozen ; down ; 2004 ; Agenda - A Journal of Policy Analysis and Reform Volume 11 ; 11 ; reingest5.clockss.org:8082 >
+    au < frozen ; down ; 2005 ; Agenda - A Journal of Policy Analysis and Reform Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+    #mark as superseded once a clean copy is possible using updated plugin
+    au < superseded ; exists ; 2006 ; Agenda - A Journal of Policy Analysis and Reform Volume 13 [superseded] ; 13 ; > #one PDF is bad on all ingest machines - may not be collectible with journal id change
+    au < frozen ; down ; 2007 ; Agenda - A Journal of Policy Analysis and Reform Volume 14 ; 14 ; reingest2.clockss.org:8085 >
+    au < frozen ; down ; 2008 ; Agenda - A Journal of Policy Analysis and Reform Volume 15 ; 15 ; reingest3.clockss.org:8083 >
+    au < frozen ; down ; 2009 ; Agenda - A Journal of Policy Analysis and Reform Volume 16 ; 16 ; reingest4.clockss.org:8082 >
+    au < frozen ; down ; 2010 ; Agenda - A Journal of Policy Analysis and Reform Volume 17 ; 17 ; reingest5.clockss.org:8082 >
+    au < frozen ; down ; 2011 ; Agenda - A Journal of Policy Analysis and Reform Volume 18 ; 18 ; reingest1.clockss.org:8082 >
+    au < frozen ; down ; 2012 ; Agenda - A Journal of Policy Analysis and Reform Volume 19 ; 19 ; reingest2.clockss.org:8085 >
+    au < frozen ; down ; 2013 ; Agenda - A Journal of Policy Analysis and Reform Volume 20 ; 20 ; reingest3.clockss.org:8083 >
+    au < frozen ; down ; 2014 ; Agenda - A Journal of Policy Analysis and Reform Volume 21 ; 21 ; reingest4.clockss.org:8082 >
+    au < frozen ; down ; 2015 ; Agenda - A Journal of Policy Analysis and Reform Volume 22 ; 22 ; reingest5.clockss.org:8082 >
+    au < frozen ; down ; 2016 ; Agenda - A Journal of Policy Analysis and Reform Volume 23 ; 23 ; reingest1.clockss.org:8082 >
+    au < frozen ; down ; 2017 ; Agenda - A Journal of Policy Analysis and Reform Volume 24 ; 24 ; reingest2.clockss.org:8085 >
+    au < frozen ; down ; 2018 ; Agenda - A Journal of Policy Analysis and Reform Volume 25 ; 25 ; reingest2.clockss.org:8085 >
+    #this version of the journal_id has ceased; see below for continuation
+    }
+     
+    { 
+    
+    #April 2019 - journal id changed as did location of start url
+    #6/14/19 change to layout - plugin has been modified to handle backwards incompatible with finished content
+
+    
+    param[journal_id] = agenda
+    
+      #2006 needed recollection in new layout
+      au < crawling ; down ; 2006 ; Agenda - A Journal of Policy Analysis and Reform Volume 13 ; 13 ; reingest3.clockss.org:8083 >
+      au < crawling ; exists ; 2019 ; Agenda - A Journal of Policy Analysis and Reform Volume 26 ; 26 ; >
+      au < crawling ; exists ; 2020 ; Agenda - A Journal of Policy Analysis and Reform Volume 27 ; 27 ; >
+      au < crawling ; exists ; 2021 ; Agenda - A Journal of Policy Analysis and Reform Volume 28 ; 28 ; >
+      au < expected ; exists ; 2022 ; Agenda - A Journal of Policy Analysis and Reform Volume 29 ; 29 ; >
+
+    }
+  }
+  
+  {
+  
+    title <
+      name = ANU Historical Journal II ;
+      issn = 2652-015X ;
+      eissn = 2652-0281
+    >
+    
+    param[journal_id] = anu-historical-journal
+
+    au < crawling ; exists ; 2019 ; ANU Historical Journal II: Number 1 ; 1 ; >
+    au < crawling ; exists ; 2020 ; ANU Historical Journal II: Number 2 ; 2 ; >
+    au < ready ; exists ; 2021 ; ANU Historical Journal II: Number 3 ; 3 ; >
+    au < expected ; exists ; 2022 ; ANU Historical Journal II: Number 4 ; 4 ; >
+
+  }
+  
+    {
+  
+    title <
+      name = Australian Journal of Biography and History ;
+      issn = 2209-9522 ;
+      eissn = 2209-9573
+    >
+    
+    param[journal_id] = australian-journal-biography-and-history
+    #6/14/19 change to layout - plugin has been modified to handle backwards incompatible with finished content
+
+    au < crawling ; down ; 2018 ; Australian Journal of Biography and History: Number 1 ; 1 ; reingest4.clockss.org:8082 >
+    au < crawling ; exists ; 2019 ; Australian Journal of Biography and History: Number 2 ; 2 ; >
+    au < crawling ; exists ; 2020 ; Australian Journal of Biography and History: Number 3 ; 3 ; >
+    au < crawling ; exists ; 2020 ; Australian Journal of Biography and History: Number 4 ; 4 ; >
+    au < crawling ; exists ; 2021 ; Australian Journal of Biography and History: Number 5 ; 5 ; >
+    au < crawling ; exists ; 2022 ; Australian Journal of Biography and History: Number 6 ; 6 ; >
+
+  }  
+
+  {
+  
+    title <
+      name = East Asia Forum Quarterly ;
+      issn = 1837-5081 ;
+      eissn = 1837-509X
+    >
+    
+    param[journal_id] = east-asia-forum-quarterly
+    
+    au < crawling ; down ; 2009 ; East Asia Forum Quarterly Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+    au < crawling ; down ; 2010 ; East Asia Forum Quarterly Volume 2 ; 2 ; reingest4.clockss.org:8082 >
+    au < crawling ; down ; 2011 ; East Asia Forum Quarterly Volume 3 ; 3 ; reingest5.clockss.org:8082 >
+    au < crawling ; down ; 2012 ; East Asia Forum Quarterly Volume 4 ; 4 ; reingest1.clockss.org:8082 >
+    au < crawling ; down ; 2013 ; East Asia Forum Quarterly Volume 5 ; 5 ; reingest2.clockss.org:8085 >
+    au < crawling ; down ; 2014 ; East Asia Forum Quarterly Volume 6 ; 6 ; reingest3.clockss.org:8083 >
+    au < crawling ; down ; 2015 ; East Asia Forum Quarterly Volume 7 ; 7 ; reingest4.clockss.org:8082 >
+    au < crawling ; down ; 2016 ; East Asia Forum Quarterly Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+    au < crawling ; down ; 2017 ; East Asia Forum Quarterly Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+    au < crawling ; down ; 2018 ; East Asia Forum Quarterly Volume 10 ; 10 ; reingest3.clockss.org:8083 >
+    au < crawling ; exists ; 2019 ; East Asia Forum Quarterly Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2020 ; East Asia Forum Quarterly Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2021 ; East Asia Forum Quarterly Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2022 ; East Asia Forum Quarterly Volume 14 ; 14 ; >
+
+  }
+
+  {
+  
+    title <
+      name = Human Ecology Review ;
+      issn = 1074-4827 ;
+      eissn = 2204-0919
+    >
+    
+    param[journal_id] = human-ecology-review
+    #no 2021 volume
+
+    au < crawling ; down ; 2014 ; Human Ecology Review: Volume 20 ; 20 ; reingest5.clockss.org:8082 >
+    au < crawling ; down ; 2015 ; Human Ecology Review: Volume 21 ; 21 ; reingest1.clockss.org:8082 >
+    au < crawling ; down ; 2016 ; Human Ecology Review: Volume 22 ; 22 ; reingest2.clockss.org:8085 >
+    au < crawling ; down ; 2017 ; Human Ecology Review: Volume 23 ; 23 ; reingest3.clockss.org:8083 >
+    au < crawling ; down ; 2018 ; Human Ecology Review: Volume 24 ; 24 ; reingest4.clockss.org:8082 >
+    au < crawling ; exists ; 2019 ; Human Ecology Review: Volume 25 ; 25 ;  >
+    au < crawling ; exists ; 2021 ; Human Ecology Review: Volume 26 ; 26 ;  >
+    au < crawling ; exists ; 2022 ; Human Ecology Review: Volume 27 ; 27 ;  >
+
+  }
+
+  {
+  
+    title <
+      name = International Review of Environmental History ;
+      issn = 2205-3204 ;
+      eissn = 2205-3212
+    >
+    
+    param[journal_id] = international-review-environmental-history
+
+    au < crawling ; down ; 2015 ; International Review of Environmental History: Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+    au < crawling ; down ; 2016 ; International Review of Environmental History: Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+    au < crawling ; down ; 2017 ; International Review of Environmental History: Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+    au < crawling ; down ; 2018 ; International Review of Environmental History: Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+    #6/14/19 change to layout - plugin has been modified to handle backwards incompatible with finished content
+    au < crawling ; exists ; 2019 ; International Review of Environmental History: Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2020 ; International Review of Environmental History: Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2021 ; International Review of Environmental History: Volume 7 ; 7 ; >
+    au < ready ; exists ; 2022 ; International Review of Environmental History: Volume 8 ; 8 ; >
+
+  }
+
+  {
+  
+    title <
+      name = Lilith: A Feminist History Journal ;
+      eissn = 0813-8990
+    >
+    
+    param[journal_id] = lilith
+
+    au < crawling ; exists ; 2020 ; Lilith: A Feminist History Journal Volume 26 ; 26 ; >
+    au < crawling ; exists ; 2021 ; Lilith: A Feminist History Journal Volume 27 ; 27 ; >
+    au < expected ; exists ; 2022 ; Lilith: A Feminist History Journal Volume 28 ; 28 ; >
+
+  }
+
+  {
+  
+    title <
+      name = Made in China ;
+      issn = 2652-6352 ;
+      eissn = 2206-9119
+    >
+    
+    param[journal_id] = made-china-journal
+
+    au < crawling ; exists ; 2016 ; Made in China Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2017 ; Made in China Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2018 ; Made in China Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2019 ; Made in China Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2020 ; Made in China Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2021 ; Made in China Volume 6 ; 6 ; >
+    au < notReady ; exists ; 2022 ; Made in China Volume 7 ; 7 ; > #manifest page checker finds a volume that does not exist.
+
+  }
+  
+################################
+## CEASED ######################
+################################
+
+  {
+  
+    title <
+      name = Australian Humanities Review ;
+      issn = 1835-8063 ;
+      eissn = 1325-8338
+    >
+    
+    param[journal_id] = australian-humanities-review
+
+    au < crawling ; down ; 2008 ; Australian Humanities Review Issue 44 ; 44 ; reingest5.clockss.org:8082 >
+    au < crawling ; down ; 2008 ; Australian Humanities Review Issue 45 ; 45 ; reingest1.clockss.org:8082 >
+    au < crawling ; down ; 2009 ; Australian Humanities Review Issue 46 ; 46 ; reingest2.clockss.org:8085 >
+    au < crawling ; down ; 2009 ; Australian Humanities Review Issue 47 ; 47 ; reingest3.clockss.org:8083 >
+    au < crawling ; down ; 2010 ; Australian Humanities Review Issue 48 ; 48 ; reingest4.clockss.org:8082 >
+    au < crawling ; down ; 2010 ; Australian Humanities Review Issue 49 ; 49 ; reingest5.clockss.org:8082 >
+    au < crawling ; down ; 2011 ; Australian Humanities Review Issue 50 ; 50 ; reingest1.clockss.org:8082 >
+    au < crawling ; down ; 2011 ; Australian Humanities Review Issue 51 ; 51 ; reingest2.clockss.org:8085 >
+    au < crawling ; down ; 2012 ; Australian Humanities Review Issue 52 ; 52 ; reingest3.clockss.org:8083 >
+    #ceased
+
+  }
+
+  {
+  
+    title <
+      name = craft + design enquiry ;
+      issn = 2200-6931 ;
+      eissn = 1837-445X
+    >
+    
+    param[journal_id] = craft-design-enquiry
+
+    au < crawling ; down ; 2009 ; craft + design enquiry issue 1 ; 1 ; reingest4.clockss.org:8082 >
+    au < crawling ; down ; 2010 ; craft + design enquiry issue 2 ; 2 ; reingest5.clockss.org:8082 >
+    au < crawling ; down ; 2011 ; craft + design enquiry issue 3 ; 3 ; reingest1.clockss.org:8082 >
+    au < crawling ; down ; 2012 ; craft + design enquiry issue 4 ; 4 ; reingest2.clockss.org:8085 >
+    au < crawling ; down ; 2013 ; craft + design enquiry issue 5 ; 5 ; reingest3.clockss.org:8083 >
+    au < crawling ; down ; 2014 ; craft + design enquiry issue 6 ; 6 ; reingest4.clockss.org:8082 >
+    au < crawling ; down ; 2015 ; craft + design enquiry issue 7 ; 7 ; reingest5.clockss.org:8082 >
+    #ceased
+
+  }
+
+  {
+  
+    title <
+      name = Humanities Research ;
+      issn = 1440-0669 ;
+      eissn = 1834-8491
+    >
+    
+    param[journal_id] = humanities-research-journal-series
+    
+    au < crawling ; down ; 1997 ; Humanities Research Journal Series: 1997 ; 1997 ; reingest3.clockss.org:8083 >
+    au < crawling ; down ; 1998 ; Humanities Research Journal Series: 1998 ; 1998 ; reingest4.clockss.org:8082 >
+    au < crawling ; down ; 1999 ; Humanities Research Journal Series: 1999 ; 1999 ; reingest5.clockss.org:8082 >
+    au < crawling ; down ; 2000 ; Humanities Research Journal Series: 2000 ; 2000 ; reingest1.clockss.org:8082 >
+    au < crawling ; down ; 2001 ; Humanities Research Journal Series: Volume VIII ; viii ; reingest2.clockss.org:8085 >
+    au < crawling ; down ; 2002 ; Humanities Research Journal Series: Volume IX ; ix ; reingest3.clockss.org:8083 >
+    au < crawling ; down ; 2003 ; Humanities Research Journal Series: Volume X ; x ; reingest4.clockss.org:8082 >
+    au < crawling ; down ; 2004 ; Humanities Research Journal Series: Volume XI ; xi ; reingest5.clockss.org:8082 >
+    au < crawling ; down ; 2005 ; Humanities Research Journal Series: Volume XII ; xii ; reingest1.clockss.org:8082 >
+    au < crawling ; down ; 2006 ; Humanities Research Journal Series: Volume XIII ; xiii ; reingest2.clockss.org:8085 >
+    au < crawling ; down ; 2007 ; Humanities Research Journal Series: Volume XIV ; xiv ; reingest3.clockss.org:8083 >
+    au < crawling ; down ; 2009 ; Humanities Research Journal Series: Volume XV ; xv ; reingest4.clockss.org:8082 >
+    au < crawling ; down ; 2010 ; Humanities Research Journal Series: Volume XVI ; xvi ; reingest5.clockss.org:8082 >
+    au < crawling ; down ; 2011 ; Humanities Research Journal Series: Volume XVII ; xvii ; reingest1.clockss.org:8082 >
+    au < crawling ; down ; 2012 ; Humanities Research Journal Series: Volume XVIII ; xviii ; reingest2.clockss.org:8085 >
+    au < crawling ; down ; 2013 ; Humanities Research Journal Series: Volume XIX ; xix ; reingest3.clockss.org:8083 >
+    #ceased
+
+  }
+################################
+## Student Journals ############
+################################
+
+
+  {
+  
+    title <
+      name = ANU Undergraduate Research Journal ;
+      issn = 1836-5531 ;
+      eissn = 1837-2872
+    >
+    
+    param[journal_id] = anu-undergraduate-research-journal
+
+    au < crawling ; down ; 2009 ; ANU Undergraduate Research Journal: Volume One ; one ; reingest2.clockss.org:8085 >
+    au < crawling ; down ; 2010 ; ANU Undergraduate Research Journal: Volume Two ; two ; reingest3.clockss.org:8083 >
+    au < crawling ; down ; 2011 ; ANU Undergraduate Research Journal: Volume Three ; three ; reingest4.clockss.org:8082 >
+    au < crawling ; down ; 2012 ; ANU Undergraduate Research Journal: Volume Four ; four ; reingest5.clockss.org:8082 >
+    au < crawling ; down ; 2013 ; ANU Undergraduate Research Journal: Volume Five ; five ; reingest1.clockss.org:8082 >
+    au < crawling ; down ; 2014 ; ANU Undergraduate Research Journal: Volume Six ; six ; reingest2.clockss.org:8085 >
+    au < crawling ; down ; 2015 ; ANU Undergraduate Research Journal: Volume Seven ; seven ; reingest3.clockss.org:8083 >
+    au < crawling ; down ; 2016 ; ANU Undergraduate Research Journal: Volume Eight ; eight ; reingest4.clockss.org:8082 >
+    #after 2016 moved to http://studentjournals.anu.edu.au/index.php/aurj (OJS3)
+
+  }
+
+  {
+  
+    title <
+      name = Burgmann Journal - Research Debate Opinion ;
+      issn = 2201-3881 ;
+      eissn = 2201-3903
+    >
+    
+    param[journal_id] = burgmann-journal-research-debate-opinion
+
+    au < crawling ; down ; 2012 ; Burgmann Journal - Research Debate Opinion Issue 1 ; 1 ; reingest4.clockss.org:8082 >
+    au < crawling ; down ; 2013 ; Burgmann Journal - Research Debate Opinion Issue 2 ; 2 ; reingest5.clockss.org:8082 >
+    au < crawling ; down ; 2014 ; Burgmann Journal - Research Debate Opinion Issue 3 ; 3 ; reingest1.clockss.org:8082 >
+    au < crawling ; down ; 2015 ; Burgmann Journal - Research Debate Opinion Issue 4 ; 4 ; reingest2.clockss.org:8085 >
+    au < crawling ; down ; 2016 ; Burgmann Journal - Research Debate Opinion Issue 5 ; 5 ; reingest3.clockss.org:8083 >
+    #after 2016 moved to http://studentjournals.anu.edu.au/index.php/burgmann (OJS3)
+
+  }
+
+  {
+  
+    title <
+      name = Cross-sections, The Bruce Hall Academic Journal ;
+      issn = 1832-9578 ;
+      eissn = 1834-7983
+    >
+    
+    param[journal_id] = cross-sections-bruce-hall-academic-journal
+
+    au < crawling ; down ; 2005 ; Cross-sections, The Bruce Hall Academic Journal: Volume I ; i ; reingest1.clockss.org:8082 >
+    au < crawling ; down ; 2006 ; Cross-sections, The Bruce Hall Academic Journal: Volume II ; ii ; reingest2.clockss.org:8085 >
+    au < crawling ; down ; 2007 ; Cross-sections, The Bruce Hall Academic Journal: Volume III ; iii ; reingest3.clockss.org:8083 >
+    au < crawling ; down ; 2008 ; Cross-sections, The Bruce Hall Academic Journal: Volume IV ; iv ; reingest4.clockss.org:8082 >
+    au < crawling ; down ; 2009 ; Cross-sections, The Bruce Hall Academic Journal: Volume V ; v ; reingest1.clockss.org:8082 >
+    au < crawling ; down ; 2010 ; Cross-sections, The Bruce Hall Academic Journal: Volume VI ; vi ; reingest2.clockss.org:8085 >
+    au < crawling ; down ; 2011 ; Cross-sections, The Bruce Hall Academic Journal: Volume VII ; vii ; reingest3.clockss.org:8083 >
+    au < crawling ; down ; 2012 ; Cross-sections, The Bruce Hall Academic Journal: Volume VIII ; viii ; reingest4.clockss.org:8082 >
+    au < crawling ; down ; 2013 ; Cross-sections, The Bruce Hall Academic Journal: Volume IX ; ix ; reingest5.clockss.org:8082 >
+    au < crawling ; down ; 2014 ; Cross-sections, The Bruce Hall Academic Journal: Volume X ; x ; reingest5.clockss.org:8082 >
+    au < crawling ; down ; 2015 ; Cross-sections, The Bruce Hall Academic Journal: Volume XI ; xi ; reingest1.clockss.org:8082 >
+    au < crawling ; down ; 2016 ; Cross-sections, The Bruce Hall Academic Journal: Volume XII ; xii ; reingest2.clockss.org:8085 >
+    #after 2016 published under http://studentjournals.anu.edu.au/index.php/cs (OJS3)
+
+  }
+
+  {
+  
+    title <
+      name = Medical Student Journal of Australia ;
+      issn = 1837-350X ;
+      eissn = 1837-4956
+    >
+    
+    param[journal_id] = medical-student-journal-australia
+
+    au < crawling ; down ; 2009 ; Medical Student Journal of Australia: Volume One ; one ; reingest1.clockss.org:8082 >
+    au < crawling ; down ; 2010-2011 ; Medical Student Journal of Australia: Volume Two ; two ; reingest2.clockss.org:8085 >
+    au < crawling ; down ; 2011 ; Medical Student Journal of Australia: Volume Three ; three ; reingest3.clockss.org:8083 >
+    au < crawling ; down ; 2012-2013 ; Medical Student Journal of Australia: Volume Four ; four ; reingest4.clockss.org:8082 >
+    au < crawling ; down ; 2014-2015 ; Medical Student Journal of Australia: Volume Five ; five ; reingest5.clockss.org:8082 >
+    #ceased publication
+
+  }
+
+  {
+  
+    title <
+      name = Merici - Ursula Hall Academic Journal ;
+      issn = 2206-0855  ;
+      eissn = 2206-0863
+    >
+    
+    param[journal_id] = merici-ursula-hall-academic-journal
+
+    au < crawling ; down ; 2015 ; Merici - Ursula Hall Academic Journal: Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+    au < crawling ; down ; 2016 ; Merici - Ursula Hall Academic Journal: Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+    #ceased publication
+
+  }
+
+  {
+  
+    title <
+      name = The Human Voyage: Undergraduate Research in Biological Anthropology ;
+      issn = 2208-1984 ;
+      eissn = 2208-1992
+    >
+    
+    param[journal_id] = human-voyage-undergraduate-research-biological-anthropology
+
+    au < crawling ; down ; 2017 ; The Human Voyage: Undergraduate Research in Biological Anthropology Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+    #after 2017 published at http://studentjournals.anu.edu.au/index.php/hv (OJS3)
+
+  }
+
+
+}

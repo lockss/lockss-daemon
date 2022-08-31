@@ -1,0 +1,35 @@
+{
+
+  publisher <
+    name = IntechOpen ;
+    info[contract] = 2020 ;
+    info[tester] = S ;
+    info[platform] = Source
+  >
+
+  {
+    title <
+       name = IntechOpen Books
+    >
+
+    plugin = org.lockss.plugin.clockss.intechopen.ClockssIntechOpenBooksSourcePlugin
+
+
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/intechopen-released/
+    proxy = DIRECT
+    implicit < status1 ; status ; year ; name ; param[year] >
+
+    au < readySource ; finished ; 2020 ; Intech Open Books Content 2020 ; 2020 >
+    au < readySource ; crawling ; 2022 ; Intech Open Books Content 2022 ; 2022 >
+
+  }
+
+  {
+
+      # starting from year 2021, we should use this plugin to handle directory rather than year
+      #plugin = org.lockss.plugin.clockss.intechopen.ClockssIntechOpenBooksDirSourcePlugin
+
+
+    }
+
+}

@@ -1,0 +1,65 @@
+{
+
+  publisher <
+    name = Illiesia ;
+    info[contract] = 2013 ;
+    info[back] = 2005 ;
+    info[tester] = 8 ;
+    info[poller] = 6
+  >
+
+  plugin = org.lockss.plugin.illiesia.ClockssIlliesiaPlugin
+  implicit < status1 ; status ; year ; name ; volume ; param[year] ; proxy >
+  
+  {
+  
+    title < 
+      name = Illiesia International Journal of Stonefly Research ;
+      issn = 1855-5810 ;
+      eissn = 1854-0392
+    >
+    
+    {
+    param[base_url] = http://illiesia.speciesfile.org/
+    #manifest page: http://illiesia.speciesfile.org/html/2019.html
+    #No 2020 content as of 2020/2/01
+
+    au < finished ; finished ; 2005 ; Illiesia International Journal of Stonefly Research Volume 1 ; 1 ; 2005 ; reingest1.clockss.org:8082 > 
+    au < finished ; finished ; 2006 ; Illiesia International Journal of Stonefly Research Volume 2 ; 2 ; 2006 ; reingest2.clockss.org:8085 > 
+    au < finished ; finished ; 2007 ; Illiesia International Journal of Stonefly Research Volume 3 ; 3 ; 2007 ; reingest3.clockss.org:8083 > 
+    au < finished ; crawling ; 2008 ; Illiesia International Journal of Stonefly Research Volume 4 ; 4 ; 2008 ; reingest4.clockss.org:8082 > 
+    au < doNotProcess ; exists ; 2009 ; Illiesia International Journal of Stonefly Research Volume 5 ; 5 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Illiesia International Journal of Stonefly Research Volume 6 ; 6 ; 2010 ; >
+    au < doNotProcess ; exists ; 2011 ; Illiesia International Journal of Stonefly Research Volume 7 ; 7 ; 2011 ; >
+    au < doNotProcess ; exists ; 2012 ; Illiesia International Journal of Stonefly Research Volume 8 ; 8 ; 2012 ; >
+    au < doNotProcess ; exists ; 2013 ; Illiesia International Journal of Stonefly Research Volume 9 ; 9 ; 2013 ; >
+    au < doNotProcess ; exists ; 2014 ; Illiesia International Journal of Stonefly Research Volume 10 ; 10 ; 2014 ; >
+    au < doNotProcess ; exists ; 2015 ; Illiesia International Journal of Stonefly Research Volume 11 ; 11 ; 2015 ; >
+    au < finished ; finished ; 2016 ; Illiesia International Journal of Stonefly Research Volume 12 ; 12 ; 2016 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2017 ; Illiesia International Journal of Stonefly Research Volume 13 ; 13 ; 2017 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2018 ; Illiesia International Journal of Stonefly Research Volume 14 ; 14 ; 2018 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Illiesia International Journal of Stonefly Research Volume 15 ; 15 ; 2019 ; reingest1.clockss.org:8082 >
+
+    }
+
+    {
+    param[base_url] = http://www2.pms-lj.si/illiesia/
+
+    au < doNotProcess ; exists ; 2005 ; Illiesia International Journal of Stonefly Research Volume 1 ; 1 ; 2005 ; >
+    au < doNotProcess ; exists ; 2006 ; Illiesia International Journal of Stonefly Research Volume 2 ; 2 ; 2006 ; >
+    au < doNotProcess ; exists ; 2007 ; Illiesia International Journal of Stonefly Research Volume 3 ; 3 ; 2007 ; >
+    au < doNotProcess ; exists ; 2008 ; Illiesia International Journal of Stonefly Research Volume 4 ; 4 ; 2008 ; >
+    au < finished ; finished ; 2009 ; Illiesia International Journal of Stonefly Research Volume 5 ; 5 ; 2009 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2010 ; Illiesia International Journal of Stonefly Research Volume 6 ; 6 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Illiesia International Journal of Stonefly Research Volume 7 ; 7 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Illiesia International Journal of Stonefly Research Volume 8 ; 8 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Illiesia International Journal of Stonefly Research Volume 9 ; 9 ; 2013 ; >
+    au < finished ; finished ; 2014 ; Illiesia International Journal of Stonefly Research Volume 10 ; 10 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Illiesia International Journal of Stonefly Research Volume 11 ; 11 ; 2015 ; reingest1.clockss.org:8082 >
+    au < doNotProcess ; exists ; 2016 ; Illiesia International Journal of Stonefly Research Volume 12 ; 12 ; 2016 ; >
+    au < doNotProcess ; exists ; 2017 ; Illiesia International Journal of Stonefly Research Volume 13 ; 13 ; 2017 ; >
+    au < doNotProcess ; exists ; 2018 ; Illiesia International Journal of Stonefly Research Volume 14 ; 14 ; 2018 ; >
+    }
+  }
+    
+}

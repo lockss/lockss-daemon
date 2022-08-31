@@ -1,0 +1,1914 @@
+{
+  publisher <
+    name = BioMed Central ;
+    info[contract] = 2008 ;
+    info[tester] = 8 ;
+    info[poller] = 2
+  >
+  
+  rights = openaccess
+  implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+  {
+
+    #BMC plugin used
+    plugin = org.lockss.plugin.bmc.ClockssBMCPlugin
+    param[base_url] = http://www.biomedcentral.com/
+
+    {
+      title <
+        name = BMC Anesthesiology ;
+        eissn = 1471-2253 ;
+        issnl = 1471-2253
+      >
+
+      param[journal_issn] = 1471-2253
+      comment[journal_code] = bmcanesthesiol
+
+      au < doNotProcess ; exists ; 2001 ; BMC Anesthesiology Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Anesthesiology Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Anesthesiology Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Anesthesiology Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Anesthesiology Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Anesthesiology Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Anesthesiology Volume 7 ; 7 ; >
+      au < finished ; finished ; 2008 ; BMC Anesthesiology Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2009 ; BMC Anesthesiology Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; BMC Anesthesiology Volume 10 ; 10 ; >
+      au < finished ; finished ; 2011 ; BMC Anesthesiology Volume 11 ; 11 ; >
+      au < finished ; finished ; 2012 ; BMC Anesthesiology Volume 12 ; 12 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2013 ; BMC Anesthesiology Volume 13 ; 13 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; BMC Anesthesiology Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; BMC Anesthesiology Volume 15 [superseded] ; 15 ; >
+      
+    }
+
+    {
+      title <
+        name = BMC Biochemistry ;
+        eissn = 1471-2091 ;
+        issnl = 1471-2091
+      >
+
+      param[journal_issn] = 1471-2091
+      comment[journal_code] = bmcbiochem
+
+      au < doNotProcess ; exists ; 2000 ; BMC Biochemistry Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2001 ; BMC Biochemistry Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Biochemistry Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Biochemistry Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Biochemistry Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Biochemistry Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Biochemistry Volume 7 ; 7 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Biochemistry Volume 8 ; 8 ; >
+      au < finished ; finished ; 2008 ; BMC Biochemistry Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; BMC Biochemistry Volume 10 ; 10 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; BMC Biochemistry Volume 11 ; 11 ; >
+      au < finished ; finished ; 2011 ; BMC Biochemistry Volume 12 ; 12 ; >
+      au < finished ; crawling ; 2012 ; BMC Biochemistry Volume 13 ; 13 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; BMC Biochemistry Volume 14 ; 14 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; BMC Biochemistry Volume 15 ; 15 ; reingest2.clockss.org:8085 >
+      au < superseded ; exists ; 2015 ; BMC Biochemistry Volume 16 [superseded] ; 16 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Bioinformatics ;
+        eissn = 1471-2105 ;
+        issnl = 1471-2105
+      >
+
+      param[journal_issn] = 1471-2105
+      comment[journal_code] = bmcbioinformatics
+
+      au < doNotProcess ; exists ; 2000 ; BMC Bioinformatics Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2001 ; BMC Bioinformatics Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Bioinformatics Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Bioinformatics Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Bioinformatics Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Bioinformatics Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Bioinformatics Volume 7 ; 7 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Bioinformatics Volume 8 ; 8 ; >
+      au < finished ; crawling ; 2008 ; BMC Bioinformatics Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2009 ; BMC Bioinformatics Volume 10 ; 10 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2010 ; BMC Bioinformatics Volume 11 ; 11 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2011 ; BMC Bioinformatics Volume 12 ; 12 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2012 ; BMC Bioinformatics Volume 13 ; 13 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; BMC Bioinformatics Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; BMC Bioinformatics Volume 15 ; 15 ; reingest1.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; BMC Bioinformatics Volume 16 [superseded] ; 16 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Biology ;
+        eissn = 1741-7007 ;
+        issnl = 1741-7007
+      >
+
+      param[journal_issn] = 1741-7007
+      comment[journal_code] = bmcbiol
+
+      au < doNotProcess ; exists ; 2003 ; BMC Biology Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Biology Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Biology Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Biology Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Biology Volume 5 ; 5 ; >
+      au < finished ; crawling ; 2008 ; BMC Biology Volume 6 ; 6 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2009 ; BMC Biology Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2010 ; BMC Biology Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2011 ; BMC Biology Volume 9 ; 9 ; >
+      au < finished ; crawling ; 2012 ; BMC Biology Volume 10 ; 10 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; BMC Biology Volume 11 ; 11 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; BMC Biology Volume 12 ; 12 ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; BMC Biology Volume 13 [superseded] ; 13 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Biophysics ;
+        eissn = 2046-1682 ;
+        issnl = 2046-1682
+      >
+      
+      comment[bmc_biophysics] = Volume 2, 2009 has articles with both issns
+      
+      {
+      
+        param[journal_issn] = 2046-1682
+        comment[journal_code] = bmcbiophys
+        
+        comment[volume1] = Volume 1 uses issn 1757-5036.
+        comment[volume2] = Volume 2 uses both, but doesn't pick up the two articles with the 2046-1682 issn.
+        comment[volume3] = Volume 3 uses issn 1757-5036.
+        comment[manifest] = manifest page only uses issn 2046-1682
+
+        au < doNotProcess ; exists ; 2008 ; BMC Biophysics Volume 1 ; 1 ; >
+        au < superseded ; exists ; 2009 ; BMC Biophysics Volume 2 [superseded] ; 2 ; >
+        au < doNotProcess ; exists ; 2010 ; BMC Biophysics Volume 3 ; 3 ; >
+        au < finished ; finished ; 2011 ; BMC Biophysics Volume 4 ; 4 ; reingest1.clockss.org:8082 >
+        au < finished ; finished ; 2012 ; BMC Biophysics Volume 5 ; 5 ; reingest1.clockss.org:8082 >
+        au < finished ; finished ; 2013 ; BMC Biophysics Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+        au < finished ; finished ; 2014 ; BMC Biophysics Volume 7 ; 7 ; reingest3.clockss.org:8083 >
+        au < superseded ; exists ; 2015 ; BMC Biophysics Volume 8 [superseded] ; 8 ; >
+      
+      }
+
+    }
+
+    {
+      title <
+        name = BMC Biotechnology ;
+        eissn = 1472-6750 ;
+        issnl = 1472-6750
+      >
+
+      param[journal_issn] = 1472-6750
+      comment[journal_code] = bmcbiotechnol
+
+      au < doNotProcess ; exists ; 2001 ; BMC Biotechnology Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Biotechnology Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Biotechnology Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Biotechnology Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Biotechnology Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Biotechnology Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Biotechnology Volume 7 ; 7 ; >
+      au < zapped ; finished ; 2008 ; BMC Biotechnology Volume 8 ; 8 ; reingest5.clockss.org:8082 >
+      au < zapped ; finished ; 2009 ; BMC Biotechnology Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2010 ; BMC Biotechnology Volume 10 ; 10 ; >
+      au < zapped ; finished ; 2011 ; BMC Biotechnology Volume 11 ; 11 ; >
+      au < finished ; finished ; 2012 ; BMC Biotechnology Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2013 ; BMC Biotechnology Volume 13 ; 13 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; BMC Biotechnology Volume 14 ; 14 ; reingest2.clockss.org:8085 >
+      au < superseded ; exists ; 2015 ; BMC Biotechnology Volume 15 [superseded] ; 15 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Blood Disorders ;
+        eissn = 1471-2326 ;
+        issnl = 1471-2326
+      >
+
+      param[journal_issn] = 1471-2326
+      comment[journal_code] = bmcblooddisord
+      
+      au < doNotProcess ; exists ; 2001 ; BMC Blood Disorders Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Blood Disorders Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Blood Disorders Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Blood Disorders Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Blood Disorders Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Blood Disorders Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Blood Disorders Volume 7 ; 7 ; >
+      au < finished ; finished ; 2008 ; BMC Blood Disorders Volume 8 ; 8 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2009 ; BMC Blood Disorders Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2010 ; BMC Blood Disorders Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; BMC Blood Disorders Volume 11 ; 11 ; >
+      au < finished ; finished ; 2012 ; BMC Blood Disorders Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+      au < superseded ; exists ; 2013 ; BMC Hematology Volume 13 [to delete] ; 13 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Hematology ;
+        eissn = 2052-1839 ;
+        issnl = 2052-1839
+      >
+
+      param[journal_issn] = 2052-1839
+      comment[journal_code] = bmchematol
+      comment[continues] = 1471-2326
+
+      au < finished ; finished ; 2013 ; BMC Hematology Volume 13 ; 13 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; BMC Hematology Volume 14 ; 14 ; >
+      au < superseded ; exists ; 2015 ; BMC Hematology Volume 15 [superseded] ; 15 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Cancer ;
+        eissn = 1471-2407 ;
+        issnl = 1471-2407
+      >
+
+      param[journal_issn] = 1471-2407
+      comment[journal_code] = bmccancer
+
+      au < doNotProcess ; exists ; 2001 ; BMC Cancer Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Cancer Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Cancer Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Cancer Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Cancer Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Cancer Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Cancer Volume 7 ; 7 ; >
+      au < zapped ; finished ; 2008 ; BMC Cancer Volume 8 ; 8 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2009 ; BMC Cancer Volume 9 ; 9 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2010 ; BMC Cancer Volume 10 ; 10 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2011 ; BMC Cancer Volume 11 ; 11 ; >
+      au < finished ; crawling ; 2012 ; BMC Cancer Volume 12 ; 12 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; BMC Cancer Volume 13 ; 13 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; BMC Cancer Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; BMC Cancer Volume 15 [superseded] ; 15 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Cardiovascular Disorders ;
+        eissn = 1471-2261 ;
+        issnl = 1471-2261
+      >
+
+      param[journal_issn] = 1471-2261
+      comment[journal_code] = bmccardiovascdisord
+      
+
+      au < doNotProcess ; exists ; 2001 ; BMC Cardiovascular Disorders Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Cardiovascular Disorders Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Cardiovascular Disorders Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Cardiovascular Disorders Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Cardiovascular Disorders Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Cardiovascular Disorders Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Cardiovascular Disorders Volume 7 ; 7 ; >
+      au < finished ; crawling ; 2008 ; BMC Cardiovascular Disorders Volume 8 ; 8 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2009 ; BMC Cardiovascular Disorders Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; BMC Cardiovascular Disorders Volume 10 ; 10 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2011 ; BMC Cardiovascular Disorders Volume 11 ; 11 ; >
+      au < finished ; finished ; 2012 ; BMC Cardiovascular Disorders Volume 12 ; 12 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; BMC Cardiovascular Disorders Volume 13 ; 13 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 2014 ; BMC Cardiovascular Disorders Volume 14 ; 14 ; reingest2.clockss.org:8085 >
+      au < superseded ; exists ; 2015 ; BMC Cardiovascular Disorders Volume 15 [superseded] ; 15 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Cell Biology ;
+        eissn = 1471-2121 ;
+        issnl = 1471-2121
+      >
+
+      param[journal_issn] = 1471-2121
+      comment[journal_code] = bmccellbiol
+
+      au < doNotProcess ; exists ; 2000 ; BMC Cell Biology Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2001 ; BMC Cell Biology Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Cell Biology Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Cell Biology Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Cell Biology Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Cell Biology Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Cell Biology Volume 7 ; 7 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Cell Biology Volume 8 ; 8 ; >
+      au < finished ; finished ; 2008 ; BMC Cell Biology Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+      au < zapped ; finished ; 2009 ; BMC Cell Biology Volume 10 ; 10 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2010 ; BMC Cell Biology Volume 11 ; 11 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; BMC Cell Biology Volume 12 ; 12 ; >
+      au < finished ; crawling ; 2012 ; BMC Cell Biology Volume 13 ; 13 ; reingest5.clockss.org:8082 >
+      au < zapped ; finished ; 2013 ; BMC Cell Biology Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; BMC Cell Biology Volume 15 ; 15 ; reingest1.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; BMC Cell Biology Volume 16 [superseded] ; 16 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Chemical Biology ;
+        eissn = 1472-6769 ;
+        issnl = 1472-6769
+      >
+
+      param[journal_issn] = 1472-6769
+      comment[journal_code] = bmcchembiol
+      # BMC Chemical Biology has now been fused with BMC Biochemistry, no publication after 2012
+      comment[1] = no longer any table of contents. no substance ever collected on ingest1.
+      
+      au < doNotProcess ; doNotProcess ; 2001 ; BMC Chemical Biology Volume 1 ; 1 ; >
+      au < doNotProcess ; doNotProcess ; 2002 ; BMC Chemical Biology Volume 2 ; 2 ; >
+      au < doNotProcess ; doNotProcess ; 2003 ; BMC Chemical Biology Volume 3 ; 3 ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; BMC Chemical Biology Volume 4 ; 4 ; >
+      au < doNotProcess ; doNotProcess ; 2005 ; BMC Chemical Biology Volume 5 ; 5 ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; BMC Chemical Biology Volume 6 ; 6 ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; BMC Chemical Biology Volume 7 ; 7 ; >
+      au < superseded ; exists ; 2008 ; BMC Chemical Biology Volume 8 [superseded] ; 8 ; >
+      au < superseded ; exists ; 2009 ; BMC Chemical Biology Volume 9 [superseded] ; 9 ; >
+      au < superseded ; exists ; 2010 ; BMC Chemical Biology Volume 10 [superseded] ; 10 ; >
+      au < superseded ; down ; 2011 ; BMC Chemical Biology Volume 11 [superseded] ; 11 ; >
+      au < superseded ; exists ; 2012 ; BMC Chemical Biology Volume 12 [superseded] ; 12 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Clinical Pathology ;
+        eissn = 1472-6890 ;
+        issnl = 1472-6890
+      >
+
+      param[journal_issn] = 1472-6890 
+      comment[journal_code] = bmcclinpathol
+
+      au < doNotProcess ; exists ; 2001 ; BMC Clinical Pathology Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Clinical Pathology Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Clinical Pathology Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Clinical Pathology Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Clinical Pathology Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Clinical Pathology Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Clinical Pathology Volume 7 ; 7 ; >
+      au < finished ; finished ; 2008 ; BMC Clinical Pathology Volume 8 ; 8 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; BMC Clinical Pathology Volume 9 ; 9 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2010 ; BMC Clinical Pathology Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; BMC Clinical Pathology Volume 11 ; 11 ; >
+      au < finished ; finished ; 2012 ; BMC Clinical Pathology Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; BMC Clinical Pathology Volume 13 ; 13 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; BMC Clinical Pathology Volume 14 ; 14 ; reingest2.clockss.org:8085 >
+      au < superseded ; exists ; 2015 ; BMC Clinical Pathology Volume 15 [superseded] ; 15 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Clinical Pharmacology ;
+        eissn = 1472-6904 ;
+        issnl = 1472-6904
+      >
+
+      param[journal_issn] = 1472-6904
+      comment[continued_by] = 2050-6511
+      
+      comment[journal_code] = was bmcclinpharmacol. bmcpharmacoltoxicol after vol 12 in 2012
+      # This journal stopped publishing after Vol 12 in 2012. 
+      comment[1] = This journal merged with another and is available through this journal_code and issn.
+
+      au < doNotProcess ; exists ; 2001 ; BMC Clinical Pharmacology Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Clinical Pharmacology Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Clinical Pharmacology Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Clinical Pharmacology Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Clinical Pharmacology Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Clinical Pharmacology Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Clinical Pharmacology Volume 7 ; 7 ; >
+      au < finished ; finished ; 2008 ; BMC Clinical Pharmacology Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2009 ; BMC Clinical Pharmacology Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; BMC Clinical Pharmacology Volume 10 ; 10 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; BMC Clinical Pharmacology Volume 11 ; 11 ; >
+      au < finished ; finished ; 2012 ; BMC Clinical Pharmacology Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+
+    }
+
+    {
+      title <
+        name = BMC Complementary and Alternative Medicine ;
+        eissn = 1472-6882 ;
+        issnl = 1472-6882
+      >
+
+      param[journal_issn] = 1472-6882
+      comment[journal_code] = bmccomplementalternmed
+      comment[notReady] = V14 Unknown result code: 429: Too many requests http://www.biomedcentral.com/1472-6882/14/www.acupuncturetoday.com/mpacms/at/article.php?id=31625
+
+      au < doNotProcess ; exists ; 2001 ; BMC Complementary and Alternative Medicine Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Complementary and Alternative Medicine Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Complementary and Alternative Medicine Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Complementary and Alternative Medicine Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Complementary and Alternative Medicine Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Complementary and Alternative Medicine Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Complementary and Alternative Medicine Volume 7 ; 7 ; >
+      au < finished ; finished ; 2008 ; BMC Complementary and Alternative Medicine Volume 8 ; 8 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; BMC Complementary and Alternative Medicine Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; BMC Complementary and Alternative Medicine Volume 10 ; 10 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2011 ; BMC Complementary and Alternative Medicine Volume 11 ; 11 ; >
+      au < finished ; crawling ; 2012 ; BMC Complementary and Alternative Medicine Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2013 ; BMC Complementary and Alternative Medicine Volume 13 ; 13 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; exists ; 2014 ; BMC Complementary and Alternative Medicine Volume 14 ; 14 ; >
+      au < superseded ; exists ; 2015 ; BMC Complementary and Alternative Medicine Volume 15 [superseded] ; 15 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Dermatology ;
+        eissn = 1471-5945 ;
+        issnl = 1471-5945
+      >
+
+      param[journal_issn] = 1471-5945
+      comment[journal_code] = bmcdermatol
+
+      au < doNotProcess ; exists ; 2001 ; BMC Dermatology Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Dermatology Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Dermatology Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Dermatology Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Dermatology Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Dermatology Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Dermatology Volume 7 ; 7 ; >
+      au < finished ; crawling ; 2008 ; BMC Dermatology Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2009 ; BMC Dermatology Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2010 ; BMC Dermatology Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; BMC Dermatology Volume 11 ; 11 ; >
+      au < finished ; finished ; 2012 ; BMC Dermatology Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; BMC Dermatology Volume 13 ; 13 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2014 ; BMC Dermatology Volume 14 ; 14 ; >
+      au < superseded ; exists ; 2015 ; BMC Dermatology Volume 15 [superseded] ; 15 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Developmental Biology ;
+        eissn = 1471-213X ;
+        issnl = 1471-213X
+      >
+
+      param[journal_issn] = 1471-213X
+      comment[journal_code] = bmcdevbiol
+
+      au < doNotProcess ; exists ; 2001 ; BMC Developmental Biology Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Developmental Biology Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Developmental Biology Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Developmental Biology Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Developmental Biology Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Developmental Biology Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Developmental Biology Volume 7 ; 7 ; >
+      au < finished ; crawling ; 2008 ; BMC Developmental Biology Volume 8 ; 8 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 2009 ; BMC Developmental Biology Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2010 ; BMC Developmental Biology Volume 10 ; 10 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; BMC Developmental Biology Volume 11 ; 11 ; >
+      au < zapped ; finished ; 2012 ; BMC Developmental Biology Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; BMC Developmental Biology Volume 13 ; 13 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; BMC Developmental Biology Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; BMC Developmental Biology Volume 15 [superseded] ; 15 ; >
+     
+    }
+
+    {
+      title <
+        name = BMC Ear, Nose and Throat Disorders ;
+        eissn = 1472-6815 ;
+        issnl = 1472-6815
+      >
+
+      param[journal_issn] = 1472-6815
+      comment[journal_code] = bmcearnosethroatdisord
+
+      au < doNotProcess ; exists ; 2001 ; BMC Ear, Nose and Throat Disorders Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Ear, Nose and Throat Disorders Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Ear, Nose and Throat Disorders Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Ear, Nose and Throat Disorders Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Ear, Nose and Throat Disorders Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Ear, Nose and Throat Disorders Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Ear, Nose and Throat Disorders Volume 7 ; 7 ; >
+      au < finished ; finished ; 2008 ; BMC Ear, Nose and Throat Disorders Volume 8 ; 8 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; BMC Ear, Nose and Throat Disorders Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; BMC Ear, Nose and Throat Disorders Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; BMC Ear, Nose and Throat Disorders Volume 11 ; 11 ; >
+      au < finished ; finished ; 2012 ; BMC Ear, Nose and Throat Disorders Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2013 ; BMC Ear, Nose and Throat Disorders Volume 13 ; 13 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2014 ; BMC Ear, Nose and Throat Disorders Volume 14 ; 14 ; reingest4.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; BMC Ear, Nose and Throat Disorders Volume 15 [superseded] ; 15 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Ecology ;
+        eissn = 1472-6785 ;
+        issnl = 1472-6785
+      >
+
+      param[journal_issn] = 1472-6785
+      comment[journal_code] = bmcecol
+
+      au < doNotProcess ; exists ; 2001 ; BMC Ecology Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Ecology Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Ecology Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Ecology Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Ecology Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Ecology Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Ecology Volume 7 ; 7 ; >
+      au < finished ; finished ; 2008 ; BMC Ecology Volume 8 ; 8 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; BMC Ecology Volume 9 ; 9 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2010 ; BMC Ecology Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; BMC Ecology Volume 11 ; 11 ; >
+      au < finished ; crawling ; 2012 ; BMC Ecology Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2013 ; BMC Ecology Volume 13 ; 13 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; BMC Ecology Volume 14 ; 14 ; reingest3.clockss.org:8083 >
+      au < superseded ; exists ; 2015 ; BMC Ecology Volume 15 [superseded] ; 15 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Emergency Medicine ;
+        eissn = 1471-227X ;
+        issnl = 1471-227X
+      >
+
+      param[journal_issn] = 1471-227X
+      comment[journal_code] = bmcemergmed
+
+      au < doNotProcess ; exists ; 2001 ; BMC Emergency Medicine Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Emergency Medicine Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Emergency Medicine Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Emergency Medicine Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Emergency Medicine Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Emergency Medicine Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Emergency Medicine Volume 7 ; 7 ; >
+      au < finished ; finished ; 2008 ; BMC Emergency Medicine Volume 8 ; 8 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; BMC Emergency Medicine Volume 9 ; 9 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2010 ; BMC Emergency Medicine Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; BMC Emergency Medicine Volume 11 ; 11 ; >
+      au < finished ; finished ; 2012 ; BMC Emergency Medicine Volume 12 ; 12 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; BMC Emergency Medicine Volume 13 ; 13 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2014 ; BMC Emergency Medicine Volume 14 ; 14 ; reingest4.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; BMC Emergency Medicine Volume 15 [superseded] ; 15 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Endocrine Disorders ;
+        eissn = 1472-6823 ;
+        issnl = 1472-6823
+      >
+
+      param[journal_issn] = 1472-6823
+      comment[journal_code] = bmcendocrdisord
+
+      au < doNotProcess ; exists ; 2001 ; BMC Endocrine Disorders Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Endocrine Disorders Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Endocrine Disorders Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Endocrine Disorders Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Endocrine Disorders Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Endocrine Disorders Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Endocrine Disorders Volume 7 ; 7 ; >
+      au < finished ; finished ; 2008 ; BMC Endocrine Disorders Volume 8 ; 8 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; BMC Endocrine Disorders Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; BMC Endocrine Disorders Volume 10 ; 10 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2011 ; BMC Endocrine Disorders Volume 11 ; 11 ; >
+      au < finished ; finished ; 2012 ; BMC Endocrine Disorders Volume 12 ; 12 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; BMC Endocrine Disorders Volume 13 ; 13 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2014 ; BMC Endocrine Disorders Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; BMC Endocrine Disorders Volume 15 [superseded] ; 15 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Evolutionary Biology ;
+        eissn = 1471-2148 ;
+        issnl = 1471-2148
+      >
+
+      param[journal_issn] = 1471-2148
+      comment[journal_code] = bmcevolbiol
+
+      au < doNotProcess ; exists ; 2001 ; BMC Evolutionary Biology Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Evolutionary Biology Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Evolutionary Biology Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Evolutionary Biology Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Evolutionary Biology Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Evolutionary Biology Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Evolutionary Biology Volume 7 ; 7 ; >
+      au < finished ; crawling ; 2008 ; BMC Evolutionary Biology Volume 8 ; 8 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2009 ; BMC Evolutionary Biology Volume 9 ; 9 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 2010 ; BMC Evolutionary Biology Volume 10 ; 10 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; BMC Evolutionary Biology Volume 11 ; 11 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 2012 ; BMC Evolutionary Biology Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; BMC Evolutionary Biology Volume 13 ; 13 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2014 ; BMC Evolutionary Biology Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; BMC Evolutionary Biology Volume 15 [superseded] ; 15 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Family Practice ;
+        eissn = 1471-2296 ;
+        issnl = 1471-2296
+      >
+
+      param[journal_issn] = 1471-2296
+      comment[journal_code] = bmcfampract
+
+      au < doNotProcess ; exists ; 2000 ; BMC Family Practice Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2001 ; BMC Family Practice Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Family Practice Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Family Practice Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Family Practice Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Family Practice Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Family Practice Volume 7 ; 7 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Family Practice Volume 8 ; 8 ; >
+      au < finished ; finished ; 2008 ; BMC Family Practice Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; BMC Family Practice Volume 10 ; 10 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2010 ; BMC Family Practice Volume 11 ; 11 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2011 ; BMC Family Practice Volume 12 ; 12 ; >
+      au < finished ; crawling ; 2012 ; BMC Family Practice Volume 13 ; 13 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2013 ; BMC Family Practice Volume 14 ; 14 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; BMC Family Practice Volume 15 ; 15 ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; BMC Family Practice Volume 16 [superseded] ; 16 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Gastroenterology ;
+        eissn = 1471-230X ;
+        issnl = 1471-230X
+      >
+
+      param[journal_issn] = 1471-230X
+      comment[journal_code] = bmcgastroenterol
+
+      au < doNotProcess ; exists ; 2001 ; BMC Gastroenterology Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Gastroenterology Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Gastroenterology Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Gastroenterology Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Gastroenterology Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Gastroenterology Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Gastroenterology Volume 7 ; 7 ; >
+      au < finished ; finished ; 2008 ; BMC Gastroenterology Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2009 ; BMC Gastroenterology Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; BMC Gastroenterology Volume 10 ; 10 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; BMC Gastroenterology Volume 11 ; 11 ; >
+      au < zapped ; finished ; 2012 ; BMC Gastroenterology Volume 12 ; 12 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; BMC Gastroenterology Volume 13 ; 13 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; BMC Gastroenterology Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; BMC Gastroenterology Volume 15 [superseded] ; 15 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Genetics ;
+        eissn = 1471-2156 ;
+        issnl = 1471-2156
+      >
+
+      param[journal_issn] = 1471-2156
+      comment[journal_code] = bmcgenet
+
+      au < doNotProcess ; exists ; 2000 ; BMC Genetics Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2001 ; BMC Genetics Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Genetics Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Genetics Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Genetics Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Genetics Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Genetics Volume 7 ; 7 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Genetics Volume 8 ; 8 ; >
+      au < finished ; finished ; 2008 ; BMC Genetics Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; BMC Genetics Volume 10 ; 10 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2010 ; BMC Genetics Volume 11 ; 11 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; BMC Genetics Volume 12 ; 12 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2012 ; BMC Genetics Volume 13 ; 13 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; BMC Genetics Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 2014 ; BMC Genetics Volume 15 ; 15 ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; BMC Genetics Volume 16 [superseded] ; 16 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Genomics ;
+        eissn = 1471-2164 ;
+        issnl = 1471-2164
+      >
+
+      param[journal_issn] = 1471-2164
+      comment[journal_code] = bmcgenomics
+
+      au < doNotProcess ; exists ; 2000 ; BMC Genomics Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2001 ; BMC Genomics Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Genomics Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Genomics Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Genomics Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Genomics Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Genomics Volume 7 ; 7 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Genomics Volume 8 ; 8 ; >
+      au < finished ; crawling ; 2008 ; BMC Genomics Volume 9 ; 9 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2009 ; BMC Genomics Volume 10 ; 10 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2010 ; BMC Genomics Volume 11 ; 11 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2011 ; BMC Genomics Volume 12 ; 12 ; >
+      au < finished ; crawling ; 2012 ; BMC Genomics Volume 13 ; 13 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; BMC Genomics Volume 14 ; 14 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; BMC Genomics Volume 15 ; 15 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; exists ; 2015 ; BMC Genomics Volume 16 ; 16 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Geriatrics ;
+        eissn = 1471-2318 ;
+        issnl = 1471-2318
+      >
+
+      param[journal_issn] = 1471-2318
+      comment[journal_code] = bmcgeriatr
+
+      au < doNotProcess ; exists ; 2001 ; BMC Geriatrics Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Geriatrics Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Geriatrics Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Geriatrics Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Geriatrics Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Geriatrics Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Geriatrics Volume 7 ; 7 ; >
+      au < finished ; finished ; 2008 ; BMC Geriatrics Volume 8 ; 8 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; BMC Geriatrics Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; BMC Geriatrics Volume 10 ; 10 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2011 ; BMC Geriatrics Volume 11 ; 11 ; >
+      au < finished ; finished ; 2012 ; BMC Geriatrics Volume 12 ; 12 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; BMC Geriatrics Volume 13 ; 13 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; BMC Geriatrics Volume 14 ; 14 ; reingest4.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; BMC Geriatrics Volume 15 [superseded] ; 15 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Health Services Research ;
+        eissn = 1472-6963 ;
+        issnl = 1472-6963
+      >
+
+      param[journal_issn] = 1472-6963
+      comment[journal_code] = bmchealthservres
+
+      au < doNotProcess ; exists ; 2001 ; BMC Health Services Research Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Health Services Research Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Health Services Research Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Health Services Research Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Health Services Research Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Health Services Research Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Health Services Research Volume 7 ; 7 ; >
+      au < finished ; crawling ; 2008 ; BMC Health Services Research Volume 8 ; 8 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2009 ; BMC Health Services Research Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2010 ; BMC Health Services Research Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2011 ; BMC Health Services Research Volume 11 ; 11 ; >
+      au < finished ; crawling ; 2012 ; BMC Health Services Research Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2013 ; BMC Health Services Research Volume 13 ; 13 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2014 ; BMC Health Services Research Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; BMC Health Services Research Volume 15 [superseded] ; 15 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Immunology ;
+        eissn = 1471-2172 ;
+        issnl = 1471-2172
+      >
+
+      param[journal_issn] = 1471-2172
+      comment[journal_code] = bmcimmunol
+
+      au < doNotProcess ; exists ; 2000 ; BMC Immunology Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2001 ; BMC Immunology Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Immunology Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Immunology Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Immunology Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Immunology Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Immunology Volume 7 ; 7 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Immunology Volume 8 ; 8 ; >
+      au < finished ; crawling ; 2008 ; BMC Immunology Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2009 ; BMC Immunology Volume 10 ; 10 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2010 ; BMC Immunology Volume 11 ; 11 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2011 ; BMC Immunology Volume 12 ; 12 ; >
+      au < finished ; finished ; 2012 ; BMC Immunology Volume 13 ; 13 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; BMC Immunology Volume 14 ; 14 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; BMC Immunology Volume 15 ; 15 ; reingest2.clockss.org:8085 >
+      au < superseded ; exists ; 2015 ; BMC Immunology Volume 16 [superseded] ; 16 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Infectious Diseases ;
+        eissn = 1471-2334 ;
+        issnl = 1471-2334
+      >
+
+      param[journal_issn] = 1471-2334
+      comment[journal_code] = bmcinfectdis
+
+      au < doNotProcess ; exists ; 2001 ; BMC Infectious Diseases Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Infectious Diseases Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Infectious Diseases Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Infectious Diseases Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Infectious Diseases Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Infectious Diseases Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Infectious Diseases Volume 7 ; 7 ; >
+      au < finished ; finished ; 2008 ; BMC Infectious Diseases Volume 8 ; 8 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2009 ; BMC Infectious Diseases Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2010 ; BMC Infectious Diseases Volume 10 ; 10 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; BMC Infectious Diseases Volume 11 ; 11 ; >
+      au < finished ; crawling ; 2012 ; BMC Infectious Diseases Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; BMC Infectious Diseases Volume 13 ; 13 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2014 ; BMC Infectious Diseases Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; BMC Infectious Diseases Volume 15 [superseded] ; 15 ; >
+
+    }
+    
+    {
+      title <
+        name = BMC International Health and Human Rights ;
+        eissn = 1472-698X ;
+        issnl = 1472-698X
+      >
+
+      param[journal_issn] = 1472-698X
+      comment[journal_code] = bmcinthealthhumrights
+
+      au < doNotProcess ; exists ; 2001 ; BMC International Health and Human Rights Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC International Health and Human Rights Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC International Health and Human Rights Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC International Health and Human Rights Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC International Health and Human Rights Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC International Health and Human Rights Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC International Health and Human Rights Volume 7 ; 7 ; >
+      au < finished ; finished ; 2008 ; BMC International Health and Human Rights Volume 8 ; 8 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; BMC International Health and Human Rights Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; BMC International Health and Human Rights Volume 10 ; 10 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2011 ; BMC International Health and Human Rights Volume 11 ; 11 ; >
+      au < finished ; finished ; 2012 ; BMC International Health and Human Rights Volume 12 ; 12 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2013 ; BMC International Health and Human Rights Volume 13 ; 13 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; BMC International Health and Human Rights Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; BMC International Health and Human Rights Volume 15 [superseded] ; 15 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Medical Education ;
+        eissn = 1472-6920 ;
+        issnl = 1472-6920
+      >
+
+      param[journal_issn] = 1472-6920
+      comment[journal_code] = bmcmededuc
+
+      au < doNotProcess ; exists ; 2001 ; BMC Medical Education Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Medical Education Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Medical Education Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Medical Education Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Medical Education Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Medical Education Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Medical Education Volume 7 ; 7 ; >
+      au < finished ; crawling ; 2008 ; BMC Medical Education Volume 8 ; 8 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2009 ; BMC Medical Education Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2010 ; BMC Medical Education Volume 10 ; 10 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2011 ; BMC Medical Education Volume 11 ; 11 ; >
+      au < finished ; finished ; 2012 ; BMC Medical Education Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2013 ; BMC Medical Education Volume 13 ; 13 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2014 ; BMC Medical Education Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; BMC Medical Education Volume 15 [superseded] ; 15 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Medical Ethics ;
+        eissn = 1472-6939 ;
+        issnl = 1472-6939
+      >
+
+      param[journal_issn] = 1472-6939
+      comment[journal_code] = bmcmedethics
+
+      au < doNotProcess ; exists ; 2000 ; BMC Medical Ethics Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2001 ; BMC Medical Ethics Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Medical Ethics Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Medical Ethics Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Medical Ethics Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Medical Ethics Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Medical Ethics Volume 7 ; 7 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Medical Ethics Volume 8 ; 8 ; >
+      au < finished ; finished ; 2008 ; BMC Medical Ethics Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; BMC Medical Ethics Volume 10 ; 10 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; BMC Medical Ethics Volume 11 ; 11 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; BMC Medical Ethics Volume 12 ; 12 ; >
+      au < finished ; finished ; 2012 ; BMC Medical Ethics Volume 13 ; 13 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; BMC Medical Ethics Volume 14 ; 14 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2014 ; BMC Medical Ethics Volume 15 ; 15 ; >
+      au < superseded ; exists ; 2015 ; BMC Medical Ethics Volume 16 [superseded] ; 16 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Medical Genetics ;
+        eissn = 1471-2350 ;
+        issnl = 1471-2350
+      >
+
+      param[journal_issn] = 1471-2350
+      comment[journal_code] = bmcmedgenet
+
+      au < doNotProcess ; exists ; 2000 ; BMC Medical Genetics Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2001 ; BMC Medical Genetics Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Medical Genetics Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Medical Genetics Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Medical Genetics Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Medical Genetics Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Medical Genetics Volume 7 ; 7 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Medical Genetics Volume 8 ; 8 ; >
+      au < finished ; finished ; 2008 ; BMC Medical Genetics Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; BMC Medical Genetics Volume 10 ; 10 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2010 ; BMC Medical Genetics Volume 11 ; 11 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2011 ; BMC Medical Genetics Volume 12 ; 12 ; >
+      au < finished ; finished ; 2012 ; BMC Medical Genetics Volume 13 ; 13 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2013 ; BMC Medical Genetics Volume 14 ; 14 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; BMC Medical Genetics Volume 15 ; 15 ; reingest3.clockss.org:8083 >
+      au < superseded ; exists ; 2015 ; BMC Medical Genetics Volume 16 [superseded] ; 16 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Medical Genomics ;
+        eissn = 1755-8794 ;
+        issnl = 1755-8794
+      >
+
+      param[journal_issn] = 1755-8794
+      comment[journal_code] = bmcmedgenomics
+
+      au < finished ; finished ; 2008 ; BMC Medical Genomics Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 2009 ; BMC Medical Genomics Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; BMC Medical Genomics Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+      au < zapped ; finished ; 2011 ; BMC Medical Genomics Volume 4 ; 4 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2012 ; BMC Medical Genomics Volume 5 ; 5 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; BMC Medical Genomics Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; BMC Medical Genomics Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+      au < superseded ; exists ; 2015 ; BMC Medical Genomics Volume 8 [superseded] ; 8 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Medical Imaging ;
+        eissn = 1471-2342 ;
+        issnl = 1471-2342
+      >
+
+      param[journal_issn] = 1471-2342
+      comment[journal_code] = bmcmedimaging
+
+      au < doNotProcess ; exists ; 2001 ; BMC Medical Imaging Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Medical Imaging Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Medical Imaging Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Medical Imaging Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Medical Imaging Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Medical Imaging Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Medical Imaging Volume 7 ; 7 ; >
+      au < finished ; finished ; 2008 ; BMC Medical Imaging Volume 8 ; 8 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; BMC Medical Imaging Volume 9 ; 9 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2010 ; BMC Medical Imaging Volume 10 ; 10 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; BMC Medical Imaging Volume 11 ; 11 ; >
+      au < finished ; finished ; 2012 ; BMC Medical Imaging Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2013 ; BMC Medical Imaging Volume 13 ; 13 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2014 ; BMC Medical Imaging Volume 14 ; 14 ; reingest2.clockss.org:8085 >
+      au < superseded ; exists ; 2015 ; BMC Medical Imaging Volume 15 [superseded] ; 15 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Medical Informatics and Decision Making ;
+        eissn = 1472-6947 ;
+        issnl = 1472-6947
+      >
+
+      param[journal_issn] = 1472-6947
+      comment[journal_code] = bmcmedinformdecismak
+
+      au < doNotProcess ; exists ; 2001 ; BMC Medical Informatics and Decision Making Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Medical Informatics and Decision Making Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Medical Informatics and Decision Making Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Medical Informatics and Decision Making Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Medical Informatics and Decision Making Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Medical Informatics and Decision Making Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Medical Informatics and Decision Making Volume 7 ; 7 ; >
+      au < finished ; finished ; 2008 ; BMC Medical Informatics and Decision Making Volume 8 ; 8 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2009 ; BMC Medical Informatics and Decision Making Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; BMC Medical Informatics and Decision Making Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; BMC Medical Informatics and Decision Making Volume 11 ; 11 ; >
+      au < finished ; crawling ; 2012 ; BMC Medical Informatics and Decision Making Volume 12 ; 12 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; BMC Medical Informatics and Decision Making Volume 13 ; 13 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; BMC Medical Informatics and Decision Making Volume 14 ; 14 ; reingest3.clockss.org:8083 >
+      au < superseded ; exists ; 2015 ; BMC Medical Informatics and Decision Making Volume 15 [superseded] ; 15 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Medical Research Methodology ;
+        eissn = 1471-2288 ;
+        issnl = 1471-2288
+      >
+
+      param[journal_issn] = 1471-2288
+      comment[journal_code] = bmcmedresmethodol
+
+      au < doNotProcess ; exists ; 2001 ; BMC Medical Research Methodology Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Medical Research Methodology Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Medical Research Methodology Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Medical Research Methodology Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Medical Research Methodology Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Medical Research Methodology Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Medical Research Methodology Volume 7 ; 7 ; >
+      au < finished ; finished ; 2008 ; BMC Medical Research Methodology Volume 8 ; 8 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; BMC Medical Research Methodology Volume 9 ; 9 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2010 ; BMC Medical Research Methodology Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2011 ; BMC Medical Research Methodology Volume 11 ; 11 ; >
+      au < finished ; finished ; 2012 ; BMC Medical Research Methodology Volume 12 ; 12 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2013 ; BMC Medical Research Methodology Volume 13 ; 13 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2014 ; BMC Medical Research Methodology Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; BMC Medical Research Methodology Volume 15 [superseded] ; 15 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Medical Physics ;
+        eissn = 1756-6649 ;
+        issnl = 1756-6649
+      >
+
+      param[journal_issn] = 1756-6649
+      comment[journal_code] = bmcmedphys
+      # This journal started at start of 2008. Continuation of BMC Nuclear Medicine
+      comment[1] = This journal archived.
+
+      au < superseded ; exists ; 2008 ; BMC Medical Physics Volume 8 [superseded] ; 8 ; >
+      au < finished ; finished ; 2009 ; BMC Medical Physics Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; BMC Medical Physics Volume 10 ; 10 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; BMC Medical Physics Volume 11 ; 11 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2012 ; BMC Medical Physics Volume 12 ; 12 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; BMC Medical Physics Volume 13 ; 13 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; exists ; 2014 ; BMC Medical Physics Volume 14 ; 14 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Medicine ;
+        eissn = 1741-7015 ;
+        issnl = 1741-7015
+      >
+
+      param[journal_issn] = 1741-7015
+      comment[journal_code] = bmcmed
+
+      au < doNotProcess ; exists ; 2003 ; BMC Medicine Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Medicine Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Medicine Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Medicine Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Medicine Volume 5 ; 5 ; >
+      au < finished ; crawling ; 2008 ; BMC Medicine Volume 6 ; 6 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; BMC Medicine Volume 7 ; 7 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2010 ; BMC Medicine Volume 8 ; 8 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2011 ; BMC Medicine Volume 9 ; 9 ; >
+      au < finished ; crawling ; 2012 ; BMC Medicine Volume 10 ; 10 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; BMC Medicine Volume 11 ; 11 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; BMC Medicine Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; BMC Medicine Volume 13 [superseded] ; 13 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Microbiology ;
+        eissn = 1471-2180 ;
+        issnl = 1471-2180
+      >
+
+      param[journal_issn] = 1471-2180
+      comment[journal_code] = bmcmicrobiol
+
+      au < doNotProcess ; exists ; 2001 ; BMC Microbiology Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Microbiology Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Microbiology Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Microbiology Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Microbiology Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Microbiology Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Microbiology Volume 7 ; 7 ; >
+      au < finished ; crawling ; 2008 ; BMC Microbiology Volume 8 ; 8 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2009 ; BMC Microbiology Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2010 ; BMC Microbiology Volume 10 ; 10 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2011 ; BMC Microbiology Volume 11 ; 11 ; >
+      au < finished ; crawling ; 2012 ; BMC Microbiology Volume 12 ; 12 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; BMC Microbiology Volume 13 ; 13 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2014 ; BMC Microbiology Volume 14 ; 14 ; reingest2.clockss.org:8085 >
+      au < superseded ; exists ; 2015 ; BMC Microbiology Volume 15 [superseded] ; 15 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Molecular Biology ;
+        eissn = 1471-2199 ;
+        issnl = 1471-2199
+      >
+
+      param[journal_issn] = 1471-2199
+      comment[journal_code] = bmcmolbiol
+
+      au < doNotProcess ; exists ; 2000 ; BMC Molecular Biology Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2001 ; BMC Molecular Biology Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Molecular Biology Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Molecular Biology Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Molecular Biology Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Molecular Biology Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Molecular Biology Volume 7 ; 7 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Molecular Biology Volume 8 ; 8 ; >
+      au < zapped ; finished ; 2008 ; BMC Molecular Biology Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+      au < zapped ; finished ; 2009 ; BMC Molecular Biology Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 2010 ; BMC Molecular Biology Volume 11 ; 11 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; BMC Molecular Biology Volume 12 ; 12 ; >
+      au < finished ; finished ; 2012 ; BMC Molecular Biology Volume 13 ; 13 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2013 ; BMC Molecular Biology Volume 14 ; 14 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2014 ; BMC Molecular Biology Volume 15 ; 15 ; reingest3.clockss.org:8083 >
+      au < superseded ; exists ; 2015 ; BMC Molecular Biology Volume 16 [superseded] ; 16 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Musculoskeletal Disorders ;
+        eissn = 1471-2474 ;
+        issnl = 1471-2474
+      >
+
+      param[journal_issn] = 1471-2474
+      comment[journal_code] = bmcmusculoskeletdisord
+
+      au < doNotProcess ; exists ; 2000 ; BMC Musculoskeletal Disorders Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2001 ; BMC Musculoskeletal Disorders Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Musculoskeletal Disorders Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Musculoskeletal Disorders Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Musculoskeletal Disorders Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Musculoskeletal Disorders Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Musculoskeletal Disorders Volume 7 ; 7 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Musculoskeletal Disorders Volume 8 ; 8 ; >
+      au < finished ; finished ; 2008 ; BMC Musculoskeletal Disorders Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2009 ; BMC Musculoskeletal Disorders Volume 10 ; 10 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2010 ; BMC Musculoskeletal Disorders Volume 11 ; 11 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2011 ; BMC Musculoskeletal Disorders Volume 12 ; 12 ; >
+      au < zapped ; finished ; 2012 ; BMC Musculoskeletal Disorders Volume 13 ; 13 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; BMC Musculoskeletal Disorders Volume 14 ; 14 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2014 ; BMC Musculoskeletal Disorders Volume 15 ; 15 ; reingest1.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; BMC Musculoskeletal Disorders Volume 16 [superseded] ; 16 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Nephrology ;
+        eissn = 1471-2369 ;
+        issnl = 1471-2369
+      >
+
+      param[journal_issn] = 1471-2369
+      comment[journal_code] = bmcnephrol
+
+      au < doNotProcess ; exists ; 2000 ; BMC Nephrology Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2001 ; BMC Nephrology Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Nephrology Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Nephrology Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Nephrology Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Nephrology Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Nephrology Volume 7 ; 7 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Nephrology Volume 8 ; 8 ; >
+      au < finished ; crawling ; 2008 ; BMC Nephrology Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; BMC Nephrology Volume 10 ; 10 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; BMC Nephrology Volume 11 ; 11 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; BMC Nephrology Volume 12 ; 12 ; >
+      au < finished ; finished ; 2012 ; BMC Nephrology Volume 13 ; 13 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; BMC Nephrology Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; BMC Nephrology Volume 15 ; 15 ; reingest4.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; BMC Nephrology Volume 16 [superseded] ; 16 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Neurology ;
+        eissn = 1471-2377 ;
+        issnl = 1471-2377
+      >
+
+      param[journal_issn] = 1471-2377
+      comment[journal_code] = bmcneurol
+
+      au < doNotProcess ; exists ; 2001 ; BMC Neurology Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Neurology Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Neurology Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Neurology Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Neurology Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Neurology Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Neurology Volume 7 ; 7 ; >
+      au < finished ; finished ; 2008 ; BMC Neurology Volume 8 ; 8 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; BMC Neurology Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; BMC Neurology Volume 10 ; 10 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2011 ; BMC Neurology Volume 11 ; 11 ; >
+      au < finished ; crawling ; 2012 ; BMC Neurology Volume 12 ; 12 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; BMC Neurology Volume 13 ; 13 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; BMC Neurology Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; BMC Neurology Volume 15 [superseded] ; 15 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Neuroscience ;
+        eissn = 1471-2202 ;
+        issnl = 1471-2202
+      >
+
+      param[journal_issn] = 1471-2202
+      comment[journal_code] = bmcneurosci
+
+      au < doNotProcess ; exists ; 2000 ; BMC Neuroscience Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2001 ; BMC Neuroscience Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Neuroscience Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Neuroscience Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Neuroscience Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Neuroscience Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Neuroscience Volume 7 ; 7 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Neuroscience Volume 8 ; 8 ; >
+      au < finished ; finished ; 2008 ; BMC Neuroscience Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2009 ; BMC Neuroscience Volume 10 ; 10 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; BMC Neuroscience Volume 11 ; 11 ; reingest5.clockss.org:8082 >
+      au < zapped ; finished ; 2011 ; BMC Neuroscience Volume 12 ; 12 ; >
+      au < finished ; finished ; 2012 ; BMC Neuroscience Volume 13 ; 13 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; BMC Neuroscience Volume 14 ; 14 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; BMC Neuroscience Volume 15 ; 15 ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; BMC Neuroscience Volume 16 [superseded] ; 16 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Nuclear Medicine ;
+        eissn = 1471-2385 ;
+        issnl = 1471-2385
+      >
+
+      param[journal_issn] = 1471-2385
+      comment[journal_code] = bmcmedphys
+      # This journal terminated at the end of 2007. Continued by BMC Medical Physics
+
+      au < doNotProcess ; exists ; 2001 ; BMC Nuclear Medicine Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Nuclear Medicine Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Nuclear Medicine Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Nuclear Medicine Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Nuclear Medicine Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Nuclear Medicine Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Nuclear Medicine Volume 7 ; 7 ; >
+      au < superseded ; exists ; 2008 ; BMC Nuclear Medicine Volume 8 [superseded] ; 8 ; >
+      au < superseded ; exists ; 2009 ; BMC Nuclear Medicine Volume 9 [superseded] ; 9 ; >
+      au < superseded ; exists ; 2010 ; BMC Nuclear Medicine Volume 10 [superseded] ; 10 ; >
+      au < superseded ; down ; 2011 ; BMC Nuclear Medicine Volume 11 [superseded] ; 11 ; >
+      au < superseded ; exists ; 2012 ; BMC Nuclear Medicine Volume 12 [superseded] ; 12 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Nursing ;
+        eissn = 1472-6955 ;
+        issnl = 1472-6955
+      >
+
+      param[journal_issn] = 1472-6955
+      comment[journal_code] = bmcnurs
+
+      au < doNotProcess ; exists ; 2002 ; BMC Nursing Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Nursing Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Nursing Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Nursing Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Nursing Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Nursing Volume 6 ; 6 ; >
+      au < finished ; finished ; 2008 ; BMC Nursing Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2009 ; BMC Nursing Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2010 ; BMC Nursing Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; BMC Nursing Volume 10 ; 10 ; >
+      au < finished ; finished ; 2012 ; BMC Nursing Volume 11 ; 11 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2013 ; BMC Nursing Volume 12 ; 12 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; BMC Nursing Volume 13 ; 13 ; reingest4.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; BMC Nursing Volume 14 [superseded] ; 14 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Obesity ;
+        eissn = 2052-9538 ;
+        issnl = 2052-9538
+      >
+
+      param[journal_issn] = 2052-9538
+      comment[journal_code] = bmcobes
+
+      au < finished ; finished ; 2014 ; BMC Obesity Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+      au < superseded ; exists ; 2015 ; BMC Obesity Volume 2 [superseded] ; 2 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Ophthalmology ;
+        eissn = 1471-2415 ;
+        issnl = 1471-2415
+      >
+
+      param[journal_issn] = 1471-2415
+      comment[journal_code] = bmcophthalmol
+
+      au < doNotProcess ; exists ; 2001 ; BMC Ophthalmology Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Ophthalmology Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Ophthalmology Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Ophthalmology Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Ophthalmology Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Ophthalmology Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Ophthalmology Volume 7 ; 7 ; >
+      au < finished ; finished ; 2008 ; BMC Ophthalmology Volume 8 ; 8 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; BMC Ophthalmology Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2010 ; BMC Ophthalmology Volume 10 ; 10 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; BMC Ophthalmology Volume 11 ; 11 ; >
+      au < finished ; finished ; 2012 ; BMC Ophthalmology Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2013 ; BMC Ophthalmology Volume 13 ; 13 ; reingest5.clockss.org:8082 >
+      au < zapped ; finished ; 2014 ; BMC Ophthalmology Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; BMC Ophthalmology Volume 15 [superseded] ; 15 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Oral Health ;
+        eissn = 1472-6831 ;
+        issnl = 1472-6831
+      >
+
+      param[journal_issn] = 1472-6831
+      comment[journal_code] = bmcoralhealth
+
+      au < doNotProcess ; exists ; 2001 ; BMC Oral Health Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Oral Health Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Oral Health Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Oral Health Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Oral Health Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Oral Health Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Oral Health Volume 7 ; 7 ; >
+      au < finished ; finished ; 2008 ; BMC Oral Health Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2009 ; BMC Oral Health Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; BMC Oral Health Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; BMC Oral Health Volume 11 ; 11 ; >
+      au < finished ; finished ; 2012 ; BMC Oral Health Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2013 ; BMC Oral Health Volume 13 ; 13 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2014 ; BMC Oral Health Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; BMC Oral Health Volume 15 [superseded] ; 15 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Palliative Care ;
+        eissn = 1472-684X ;
+        issnl = 1472-684X
+      >
+      param[journal_issn] = 1472-684X
+      comment[journal_code] = bmcpalliatcare
+
+      au < doNotProcess ; exists ; 2002 ; BMC Palliative Care Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Palliative Care Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Palliative Care Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Palliative Care Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Palliative Care Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Palliative Care Volume 6 ; 6 ; >
+      au < finished ; finished ; 2008 ; BMC Palliative Care Volume 7 ; 7 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; BMC Palliative Care Volume 8 ; 8 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2010 ; BMC Palliative Care Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; BMC Palliative Care Volume 10 ; 10 ; >
+      au < finished ; finished ; 2012 ; BMC Palliative Care Volume 11 ; 11 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; BMC Palliative Care Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; BMC Palliative Care Volume 13 ; 13 ; reingest1.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; BMC Palliative Care Volume 14 [superseded] ; 14 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Pediatrics ;
+        eissn = 1471-2431 ;
+        issnl = 1471-2431
+      >
+
+      param[journal_issn] = 1471-2431
+      comment[journal_code] = bmcpediatr
+
+      au < doNotProcess ; exists ; 2001 ; BMC Pediatrics Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Pediatrics Volume 2 ; 2 ; > 
+      au < doNotProcess ; exists ; 2003 ; BMC Pediatrics Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Pediatrics Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Pediatrics Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Pediatrics Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Pediatrics Volume 7 ; 7 ; >
+      au < finished ; finished ; 2008 ; BMC Pediatrics Volume 8 ; 8 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2009 ; BMC Pediatrics Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; BMC Pediatrics Volume 10 ; 10 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; BMC Pediatrics Volume 11 ; 11 ; >
+      au < finished ; crawling ; 2012 ; BMC Pediatrics Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2013 ; BMC Pediatrics Volume 13 ; 13 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; BMC Pediatrics Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; BMC Pediatrics Volume 15 [superseded] ; 15 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Pharmacology ;
+        eissn = 1471-2210 ;
+        issnl = 1471-2210
+      >
+
+      param[journal_issn] = 1471-2210
+      comment[journal_code] = bmcpharmacol
+      # Journal stopped at the end of 2012, merged with BMC Clinical Parmacology, and became BMC Pharmacology & Toxicology
+      comment[1] = Volume 10 & 11 have no content on ingest machines or production machines.
+
+      au < doNotProcess ; doNotProcess ; 2001 ; BMC Pharmacology Volume 1 ; 1 ; >
+      au < doNotProcess ; doNotProcess ; 2002 ; BMC Pharmacology Volume 2 ; 2 ; >
+      au < doNotProcess ; doNotProcess ; 2003 ; BMC Pharmacology Volume 3 ; 3 ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; BMC Pharmacology Volume 4 ; 4 ; >
+      au < doNotProcess ; doNotProcess ; 2005 ; BMC Pharmacology Volume 5 ; 5 ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; BMC Pharmacology Volume 6 ; 6 ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; BMC Pharmacology Volume 7 ; 7 ; >
+      au < finished ; crawling ; 2008 ; BMC Pharmacology Volume 8 ; 8 ; reingest1.clockss.org:8082 >
+      au < superseded ; down ; 2009 ; BMC Pharmacology Volume 9 [superseded] ; 9 ; reingest5.clockss.org:8082 > #no substance on production
+      au < superseded ; down ; 2010 ; BMC Pharmacology Volume 10 [superseded] ; 10 ; >
+      au < superseded ; down ; 2011 ; BMC Pharmacology Volume 11 [superseded] ; 11 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Pharmacology and Toxicology ;
+        eissn = 2050-6511 ;
+        issnl = 2050-6511
+      >
+
+      param[journal_issn] = 2050-6511
+      comment[journal_code] = bmcpharmacoltoxicol
+      # This journal and issn start at Volume 13 in 2012, other volumes use another issn
+
+      au < superseded ; exists ; 2007 ; BMC Pharmacology and Toxicology Volume 8 [to delete] ; 8 ; >
+      au < superseded ; exists ; 2008 ; BMC Pharmacology and Toxicology Volume 9 [to delete] ; 9 ; >
+      au < superseded ; exists ; 2009 ; BMC Pharmacology and Toxicology Volume 10 [to delete] ; 10 ; >
+      au < superseded ; exists ; 2010 ; BMC Pharmacology and Toxicology Volume 11 [to delete] ; 11 ; >
+      au < superseded ; exists ; 2011 ; BMC Pharmacology and Toxicology Volume 12 [to delete] ; 12 ; >
+      au < finished ; crawling ; 2012 ; BMC Pharmacology and Toxicology Volume 13 ; 13 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2013 ; BMC Pharmacology and Toxicology Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; BMC Pharmacology and Toxicology Volume 15 ; 15 ; reingest4.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; BMC Pharmacology and Toxicology Volume 16 [superseded] ; 16 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Physiology ;
+        eissn = 1472-6793 ;
+        issnl = 1472-6793
+      >
+
+      param[journal_issn] = 1472-6793
+      comment[journal_code] = bmcphysiol
+
+      au < doNotProcess ; exists ; 2001 ; BMC Physiology Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Physiology Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Physiology Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Physiology Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Physiology Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Physiology Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Physiology Volume 7 ; 7 ; >
+      au < finished ; finished ; 2008 ; BMC Physiology Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2009 ; BMC Physiology Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; BMC Physiology Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; BMC Physiology Volume 11 ; 11 ; >
+      au < finished ; finished ; 2012 ; BMC Physiology Volume 12 ; 12 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; BMC Physiology Volume 13 ; 13 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; BMC Physiology Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; BMC Physiology Volume 15 [superseded] ; 15 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Plant Biology ;
+        eissn = 1471-2229 ;
+        issnl = 1471-2229
+      >
+
+      param[journal_issn] = 1471-2229
+      comment[journal_code] = bmcplantbiol
+
+      au < doNotProcess ; exists ; 2001 ; BMC Plant Biology Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Plant Biology Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Plant Biology Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Plant Biology Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Plant Biology Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Plant Biology Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Plant Biology Volume 7 ; 7 ; >
+      au < finished ; crawling ; 2008 ; BMC Plant Biology Volume 8 ; 8 ; reingest1.clockss.org:8082 >
+      au < zapped ; finished ; 2009 ; BMC Plant Biology Volume 9 ; 9 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2010 ; BMC Plant Biology Volume 10 ; 10 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2011 ; BMC Plant Biology Volume 11 ; 11 ; >
+      au < finished ; crawling ; 2012 ; BMC Plant Biology Volume 12 ; 12 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2013 ; BMC Plant Biology Volume 13 ; 13 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2014 ; BMC Plant Biology Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; BMC Plant Biology Volume 15 [superseded] ; 15 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Pregnancy and Childbirth ;
+        eissn = 1471-2393 ;
+        issnl = 1471-2393
+      >
+
+      param[journal_issn] = 1471-2393
+      comment[journal_code] = bmcpregnancychildbirth
+
+      au < doNotProcess ; exists ; 2001 ; BMC Pregnancy and Childbirth Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Pregnancy and Childbirth Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Pregnancy and Childbirth Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Pregnancy and Childbirth Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Pregnancy and Childbirth Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Pregnancy and Childbirth Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Pregnancy and Childbirth Volume 7 ; 7 ; >
+      au < finished ; finished ; 2008 ; BMC Pregnancy and Childbirth Volume 8 ; 8 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; BMC Pregnancy and Childbirth Volume 9 ; 9 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2010 ; BMC Pregnancy and Childbirth Volume 10 ; 10 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2011 ; BMC Pregnancy and Childbirth Volume 11 ; 11 ; >
+      au < finished ; crawling ; 2012 ; BMC Pregnancy and Childbirth Volume 12 ; 12 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; BMC Pregnancy and Childbirth Volume 13 ; 13 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; BMC Pregnancy and Childbirth Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; BMC Pregnancy and Childbirth Volume 15 [superseded] ; 15 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Psychiatry ;
+        eissn = 1471-244X ;
+        issnl = 1471-244X
+      >
+
+      param[journal_issn] = 1471-244X
+      comment[journal_code] = bmcpsychiatry
+
+      au < doNotProcess ; exists ; 2001 ; BMC Psychiatry Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Psychiatry Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Psychiatry Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Psychiatry Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Psychiatry Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Psychiatry Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Psychiatry Volume 7 ; 7 ; >
+      au < finished ; finished ; 2008 ; BMC Psychiatry Volume 8 ; 8 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; BMC Psychiatry Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2010 ; BMC Psychiatry Volume 10 ; 10 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; BMC Psychiatry Volume 11 ; 11 ; >
+      au < finished ; finished ; 2012 ; BMC Psychiatry Volume 12 ; 12 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; BMC Psychiatry Volume 13 ; 13 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2014 ; BMC Psychiatry Volume 14 ; 14 ; reingest2.clockss.org:8085 >
+      au < superseded ; exists ; 2015 ; BMC Psychiatry Volume 15 [superseded] ; 15 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Psychology ;
+        eissn = 2050-7283 ;
+        issnl = 2050-7283
+      >
+
+      param[journal_issn] = 2050-7283
+      comment[journal_code] = bmcpsychology
+
+      au < finished ; finished ; 2013 ; BMC Psychology Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; BMC Psychology Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; BMC Psychology Volume 3 [superseded] ; 3 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Public Health ;
+        eissn = 1471-2458 ;
+        issnl = 1471-2458
+      >
+
+      param[journal_issn] = 1471-2458
+      comment[journal_code] = bmcpublichealth
+
+      au < doNotProcess ; exists ; 2001 ; BMC Public Health Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Public Health Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Public Health Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Public Health Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Public Health Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Public Health Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Public Health Volume 7 ; 7 ; >
+      au < finished ; crawling ; 2008 ; BMC Public Health Volume 8 ; 8 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2009 ; BMC Public Health Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2010 ; BMC Public Health Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2011 ; BMC Public Health Volume 11 ; 11 ; >
+      au < finished ; crawling ; 2012 ; BMC Public Health Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2013 ; BMC Public Health Volume 13 ; 13 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2014 ; BMC Public Health Volume 14 ; 14 ; reingest3.clockss.org:8083 >
+      au < superseded ; exists ; 2015 ; BMC Public Health Volume 15 [superseded] ; 15 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Pulmonary Medicine ;
+        eissn = 1471-2466 ;
+        issnl = 1471-2466
+      >
+
+      param[journal_issn] = 1471-2466
+      comment[journal_code] = bmcpulmmed
+
+      au < doNotProcess ; exists ; 2001 ; BMC Pulmonary Medicine Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Pulmonary Medicine Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Pulmonary Medicine Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Pulmonary Medicine Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Pulmonary Medicine Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Pulmonary Medicine Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Pulmonary Medicine Volume 7 ; 7 ; >
+      au < finished ; finished ; 2008 ; BMC Pulmonary Medicine Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2009 ; BMC Pulmonary Medicine Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; BMC Pulmonary Medicine Volume 10 ; 10 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; BMC Pulmonary Medicine Volume 11 ; 11 ; >
+      au < finished ; finished ; 2012 ; BMC Pulmonary Medicine Volume 12 ; 12 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; BMC Pulmonary Medicine Volume 13 ; 13 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; BMC Pulmonary Medicine Volume 14 ; 14 ; reingest4.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; BMC Pulmonary Medicine Volume 15 [superseded] ; 15 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Research Notes ;
+        eissn = 1756-0500 ;
+        issnl = 1756-0500
+      >
+
+      param[journal_issn] = 1756-0500
+      comment[journal_code] = bmcresnotes
+
+      au < finished ; finished ; 2008 ; BMC Research Notes Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2009 ; BMC Research Notes Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 2010 ; BMC Research Notes Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2011 ; BMC Research Notes Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2012 ; BMC Research Notes Volume 5 ; 5 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; BMC Research Notes Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; BMC Research Notes Volume 7 ; 7 ; reingest1.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; BMC Research Notes Volume 8 [superseded] ; 8 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Sports Science, Medicine and Rehabilitation  ;
+        eissn = 2052-1847 ;
+        issnl = 2052-1847
+      >
+
+      comment[journal_code] = bmcsportsscimedrehabil
+      {
+        param[journal_issn] = 1758-2555
+
+        au < finished ; finished ; 2009 ; BMC Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+        au < finished ; finished ; 2010 ; BMC Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 2 ; 2 ; >
+        au < finished ; finished ; 2011 ; BMC Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 3 ; 3 ; reingest1.clockss.org:8082 >
+        au < finished ; finished ; 2012 ; BMC Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+      }
+      
+      {
+        param[journal_issn] = 2052-1847 
+        
+        au < finished ; finished ; 2013 ; BMC Sports Science, Medicine and Rehabilitation Volume 5 ; 5 ; >
+        au < finished ; finished ; 2014 ; BMC Sports Science, Medicine and Rehabilitation Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+        au < superseded ; exists ; 2015 ; BMC Sports Science, Medicine and Rehabilitation Volume 7 [superseded] ; 7 ; >
+
+      }
+    }
+
+    {
+      title <
+        name = BMC Structural Biology ;
+        eissn = 1472-6807 ;
+        issnl = 1472-6807
+      >
+
+      param[journal_issn] = 1472-6807
+      comment[journal_code] = bmcstructbiol
+
+      au < doNotProcess ; exists ; 2001 ; BMC Structural Biology Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Structural Biology Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Structural Biology Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Structural Biology Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Structural Biology Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Structural Biology Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Structural Biology Volume 7 ; 7 ; >
+      au < finished ; crawling ; 2008 ; BMC Structural Biology Volume 8 ; 8 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2009 ; BMC Structural Biology Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2010 ; BMC Structural Biology Volume 10 ; 10 ; reingest4.clockss.org:8082 >
+      au < zapped ; finished ; 2011 ; BMC Structural Biology Volume 11 ; 11 ; >
+      au < finished ; finished ; 2012 ; BMC Structural Biology Volume 12 ; 12 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; BMC Structural Biology Volume 13 ; 13 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; BMC Structural Biology Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; BMC Structural Biology Volume 15 [superseded] ; 15 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Surgery ;
+        eissn = 1471-2482 ;
+        issnl = 1471-2482
+      >
+
+      param[journal_issn] = 1471-2482
+      comment[journal_code] = bmcsurg
+
+      au < doNotProcess ; exists ; 2001 ; BMC Surgery Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Surgery Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Surgery Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Surgery Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Surgery Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Surgery Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Surgery Volume 7 ; 7 ; >
+      au < finished ; crawling ; 2008 ; BMC Surgery Volume 8 ; 8 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; BMC Surgery Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; BMC Surgery Volume 10 ; 10 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2011 ; BMC Surgery Volume 11 ; 11 ; >
+      au < finished ; crawling ; 2012 ; BMC Surgery Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2013 ; BMC Surgery Volume 13 ; 13 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; BMC Surgery Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; BMC Surgery Volume 15 [superseded] ; 15 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Systems Biology ;
+        eissn = 1752-0509 ;
+        issnl = 1752-0509
+      >
+
+      param[journal_issn] = 1752-0509
+      comment[journal_code] = bmcsystbiol
+
+      au < doNotProcess ; exists ; 2007 ; BMC Systems Biology Volume 1 ; 1 ; >
+      au < finished ; crawling ; 2008 ; BMC Systems Biology Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2009 ; BMC Systems Biology Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2010 ; BMC Systems Biology Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; BMC Systems Biology Volume 5 ; 5 ; >
+      au < finished ; crawling ; 2012 ; BMC Systems Biology Volume 6 ; 6 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2013 ; BMC Systems Biology Volume 7 ; 7 ; reingest1.clockss.org:8082 >
+      au < superseded ; exists ; 2014 ; BMC Systems Biology Volume 8 [superseded] ; 8 ; reingest3.clockss.org:8083 >
+      au < superseded ; exists ; 2015 ; BMC Systems Biology Volume 9 [superseded] ; 9 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Urology ;
+        eissn = 1471-2490 ;
+        issnl = 1471-2490
+      >
+
+      param[journal_issn] = 1471-2490
+      comment[journal_code] = bmcurol
+
+      au < doNotProcess ; exists ; 2001 ; BMC Urology Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Urology Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Urology Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Urology Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Urology Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Urology Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Urology Volume 7 ; 7 ; >
+      au < finished ; finished ; 2008 ; BMC Urology Volume 8 ; 8 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2009 ; BMC Urology Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; BMC Urology Volume 10 ; 10 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; BMC Urology Volume 11 ; 11 ; >
+      au < finished ; finished ; 2012 ; BMC Urology Volume 12 ; 12 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2013 ; BMC Urology Volume 13 ; 13 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2014 ; BMC Urology Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; BMC Urology Volume 15 [superseded] ; 15 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Veterinary Research ;
+        eissn = 1746-6148 ;
+        issnl = 1746-6148
+      >
+
+      param[journal_issn] = 1746-6148
+      comment[journal_code] = bmcvetres
+
+      au < doNotProcess ; exists ; 2005 ; BMC Veterinary Research Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Veterinary Research Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Veterinary Research Volume 3 ; 3 ; >
+      au < finished ; finished ; 2008 ; BMC Veterinary Research Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2009 ; BMC Veterinary Research Volume 5 ; 5 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; BMC Veterinary Research Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; BMC Veterinary Research Volume 7 ; 7 ; >
+      au < finished ; crawling ; 2012 ; BMC Veterinary Research Volume 8 ; 8 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; BMC Veterinary Research Volume 9 ; 9 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2014 ; BMC Veterinary Research Volume 10 ; 10 ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; BMC Veterinary Research Volume 11 [superseded] ; 11 ; >
+
+    }
+
+    {
+      title <
+        name = BMC Women's Health ;
+        eissn = 1472-6874 ;
+        issnl = 1472-6874
+      >
+
+      param[journal_issn] = 1472-6874
+      comment[journal_code] = bmcwomenshealth
+
+      au < doNotProcess ; exists ; 2001 ; BMC Women's Health Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; BMC Women's Health Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2003 ; BMC Women's Health Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; BMC Women's Health Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; BMC Women's Health Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; BMC Women's Health Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; BMC Women's Health Volume 7 ; 7 ; >
+      au < finished ; finished ; 2008 ; BMC Women's Health Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2009 ; BMC Women's Health Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2010 ; BMC Women's Health Volume 10 ; 10 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2011 ; BMC Women's Health Volume 11 ; 11 ; >
+      au < finished ; crawling ; 2012 ; BMC Women's Health Volume 12 ; 12 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2013 ; BMC Women's Health Volume 13 ; 13 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2014 ; BMC Women's Health Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; BMC Women's Health Volume 15 [superseded] ; 15 ; >
+
+    }
+    
+  }
+  
+}

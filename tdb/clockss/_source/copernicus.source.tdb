@@ -1,0 +1,26 @@
+{
+
+  publisher <
+    name = Copernicus Publications ;
+    info[contract] = 2012 ;
+    info[tester] = S ;
+    info[platform] = BLOCKED. ISPRS Archives, Annals, see LXPUB-544
+  >
+
+  {
+
+    title <
+      name = Copernicus Publications Source Content
+    >
+
+    plugin = needs.SourcePlugin
+    #plugin = org.lockss.plugin.clockss.airiti.ClockssAiritiSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/NEEDS-PLUGIN-released/
+    proxy = DIRECT
+    implicit < status1 ; status ; year ; name ; param[directory] >
+
+    au < exists ; exists ; 2022 ; Copernicus Publications Source Content 2022 ; 2022 >
+
+  }
+
+}

@@ -1,0 +1,26 @@
+{
+
+  publisher <
+    name = Peer Community In ;
+    info[contract] = 2020 ;
+    info[tester] = S ;
+    info[platform] = Source
+  >
+
+  {
+
+    title <
+      name = Peer Community In
+    >
+
+    plugin = org.lockss.plugin.clockss.peercommunityin.ClockssPeerCommunityInSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/pci-released/
+    proxy = DIRECT
+    implicit < status1 ; status ; year ; name ; param[directory] >
+
+    au < readySource ; finished ; 2020 ; Peer Community In Source Content 2020 ; 2020 >
+    au < readySource ; finished ; 2021 ; Peer Community In Source Content 2021 ; 2021 >
+    au < readySource ; crawling ; 2022 ; Peer Community In Source Content 2022 ; 2022 >
+
+  }
+}

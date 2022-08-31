@@ -1,0 +1,47 @@
+{
+
+  publisher <
+    name = American Dental Hygienists Association ;
+    info[contract] = 2018 ;
+    info[tester] = 8 ;
+    info[poller] = 2
+  >
+
+  plugin = org.lockss.plugin.highwire.adha.ClockssADHADrupalPlugin
+  implicit < status1 ; status ; year ; name ; param[volume_name] ; param[base_url] ; proxy >
+    
+  {
+
+    title <
+      name = Journal of Dental Hygiene ;
+      issn =  1043-254X ;
+      eissn =  1553-0205
+    >
+    
+      #param[base_url] = http://jdh.adha.org/
+
+      au < finished ; frozen ; 2004 ; Journal of Dental Hygiene Volume 78 ; 78 ; http://jdh.adha.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2005 ; Journal of Dental Hygiene Volume 79 ; 79 ; http://jdh.adha.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2006 ; Journal of Dental Hygiene Volume 80 ; 80 ; http://jdh.adha.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2007 ; Journal of Dental Hygiene Volume 81 ; 81 ; http://jdh.adha.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2008 ; Journal of Dental Hygiene Volume 82 ; 82 ; http://jdh.adha.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2009 ; Journal of Dental Hygiene Volume 83 ; 83 ; http://jdh.adha.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2010 ; Journal of Dental Hygiene Volume 84 ; 84 ; http://jdh.adha.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2011 ; Journal of Dental Hygiene Volume 85 ; 85 ; http://jdh.adha.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2012 ; Journal of Dental Hygiene Volume 86 ; 86 ; http://jdh.adha.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2013 ; Journal of Dental Hygiene Volume 87 ; 87 ; http://jdh.adha.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Journal of Dental Hygiene Volume 88 ; 88 ; http://jdh.adha.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2015 ; Journal of Dental Hygiene Volume 89 ; 89 ; http://jdh.adha.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2016 ; Journal of Dental Hygiene Volume 90 ; 90 ; http://jdh.adha.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2017 ; Journal of Dental Hygiene Volume 91 ; 91 ; http://jdh.adha.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; Journal of Dental Hygiene Volume 92 ; 92 ; http://jdh.adha.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2019 ; Journal of Dental Hygiene Volume 93 ; 93 ; http://jdh.adha.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2020 ; Journal of Dental Hygiene Volume 94 ; 94 ; https://jdh.adha.org/ ; reingest5.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2021 ; Journal of Dental Hygiene Volume 95 ; 95 ; https://jdh.adha.org/ ; >
+      au < manifest ; exists ; 2022 ; Journal of Dental Hygiene Volume 96 ; 96 ; https://jdh.adha.org/ ; >
+
+
+  }
+
+
+}

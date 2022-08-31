@@ -1,0 +1,539 @@
+{
+
+  publisher <
+    name = International Water Association Publishing ;
+    info[contract] = 2013 ;
+    info[tester] = 5 ;
+    info[poller] = 2
+  >
+  
+    plugin = org.lockss.plugin.silverchair.iwap.ClockssIwapSilverchairPlugin
+    implicit < status1 ; status ; year ; param[year] ; name ; volume ; proxy >
+    param[base_url] = https://iwaponline.com/
+    
+
+  {
+  
+    title <
+      name = Blue-Green Systems ;
+      eissn = 2617-4782 ;
+      issnl = 2617-4782
+    >
+
+    param[journal_id] = bgs
+
+    au < manifest ; exists ; 2019 ; 2019 ; Blue-Green Systems Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2020 ; 2020 ; Blue-Green Systems Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2021 ; 2021 ; Blue-Green Systems Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2022 ; 2022 ; Blue-Green Systems Volume 4 ; 4 ; >
+
+  }
+  
+  {
+  
+    title <
+      name = H2Open Journal ;
+      eissn = 2616-6518 ;
+      issnl = 2616-6518
+    >
+
+    param[journal_id] = h2open
+
+    au < crawling ; exists ; 2018 ; 2018 ; H2Open Journal Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; H2Open Journal Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; H2Open Journal Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; H2Open Journal Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2022 ; 2022 ; H2Open Journal Volume 5 ; 5 ; >
+
+  }
+  
+  
+  {
+  
+    title <
+      name = Hydrology Research ;
+      issn = 0029-1277 ;
+      eissn = 2224-7955 ;
+      issnl = 0029-1277
+    >
+
+    param[journal_id] = hr
+    comment[001to038] = formerly Nordic Hydrology
+
+    au < manifest ; exists ; 1970 ; 1970 ; Nordic Hydrology Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1971 ; 1971 ; Nordic Hydrology Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1972 ; 1972 ; Nordic Hydrology Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1973 ; 1973 ; Nordic Hydrology Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1974 ; 1974 ; Nordic Hydrology Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1975 ; 1975 ; Nordic Hydrology Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1976 ; 1976 ; Nordic Hydrology Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1977 ; 1977 ; Nordic Hydrology Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1978 ; 1978 ; Nordic Hydrology Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1979 ; 1979 ; Nordic Hydrology Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1980 ; 1980 ; Nordic Hydrology Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1981 ; 1981 ; Nordic Hydrology Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1982 ; 1982 ; Nordic Hydrology Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1983 ; 1983 ; Nordic Hydrology Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1984 ; 1984 ; Nordic Hydrology Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1985 ; 1985 ; Nordic Hydrology Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1986 ; 1986 ; Nordic Hydrology Volume 17 ; 17 ; >
+    au < manifest ; exists ; 1987 ; 1987 ; Nordic Hydrology Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1988 ; 1988 ; Nordic Hydrology Volume 19 ; 19 ; >
+    au < manifest ; exists ; 1989 ; 1989 ; Nordic Hydrology Volume 20 ; 20 ; >
+    au < manifest ; exists ; 1990 ; 1990 ; Nordic Hydrology Volume 21 ; 21 ; >
+    au < manifest ; exists ; 1991 ; 1991 ; Nordic Hydrology Volume 22 ; 22 ; >
+    au < manifest ; exists ; 1992 ; 1992 ; Nordic Hydrology Volume 23 ; 23 ; >
+    au < manifest ; exists ; 1993 ; 1993 ; Nordic Hydrology Volume 24 ; 24 ; >
+    au < manifest ; exists ; 1994 ; 1994 ; Nordic Hydrology Volume 25 ; 25 ; >
+    au < manifest ; exists ; 1995 ; 1995 ; Nordic Hydrology Volume 26 ; 26 ; >
+    au < manifest ; exists ; 1996 ; 1996 ; Nordic Hydrology Volume 27 ; 27 ; >
+    au < manifest ; exists ; 1997 ; 1997 ; Nordic Hydrology Volume 28 ; 28 ; >
+    au < manifest ; exists ; 1998 ; 1998 ; Nordic Hydrology Volume 29 ; 29 ; >
+    au < manifest ; exists ; 1999 ; 1999 ; Nordic Hydrology Volume 30 ; 30 ; >
+    au < manifest ; exists ; 2000 ; 2000 ; Nordic Hydrology Volume 31 ; 31 ; >
+    au < manifest ; exists ; 2001 ; 2001 ; Nordic Hydrology Volume 32 ; 32 ; >
+    au < manifest ; exists ; 2002 ; 2002 ; Nordic Hydrology Volume 33 ; 33 ; >
+    au < manifest ; exists ; 2003 ; 2003 ; Nordic Hydrology Volume 34 ; 34 ; >
+    au < manifest ; exists ; 2004 ; 2004 ; Nordic Hydrology Volume 35 ; 35 ; >
+    au < manifest ; exists ; 2005 ; 2005 ; Nordic Hydrology Volume 36 ; 36 ; >
+    au < manifest ; exists ; 2006 ; 2006 ; Nordic Hydrology Volume 37 ; 37 ; >
+    au < manifest ; exists ; 2007 ; 2007 ; Nordic Hydrology Volume 38 ; 38 ; >
+    au < manifest ; exists ; 2008 ; 2008 ; Hydrology Research Volume 39 ; 39 ; >
+    au < manifest ; exists ; 2009 ; 2009 ; Hydrology Research Volume 40 ; 40 ; >
+    au < manifest ; exists ; 2010 ; 2010 ; Hydrology Research Volume 41 ; 41 ; >
+    au < manifest ; exists ; 2011 ; 2011 ; Hydrology Research Volume 42 ; 42 ; >
+    au < manifest ; exists ; 2012 ; 2012 ; Hydrology Research Volume 43 ; 43 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Hydrology Research Volume 44 ; 44 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Hydrology Research Volume 45 ; 45 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Hydrology Research Volume 46 ; 46 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Hydrology Research Volume 47 ; 47 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Hydrology Research Volume 48 ; 48 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Hydrology Research Volume 49 ; 49 ; > 
+    au < frozen ; exists ; 2019 ; 2019 ; Hydrology Research Volume 50 ; 50 ; > 
+    au < crawling ; exists ; 2020 ; 2020 ; Hydrology Research Volume 51 ; 51 ; > 
+    au < crawling ; exists ; 2021 ; 2021 ; Hydrology Research Volume 52 ; 52 ; > 
+    au < manifest ; exists ; 2022 ; 2022 ; Hydrology Research Volume 53 ; 53 ; > 
+
+  }
+
+  {
+  
+    title <
+      name = Journal of Water and Climate Change ;
+      issn = 2040-2244 ;
+      eissn = 2408-9354 ;
+      issnl = 2040-2244
+    >
+
+    param[journal_id] = jwcc
+
+    au < manifest ; exists ; 2010 ; 2010 ; Journal of Water and Climate Change Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2011 ; 2011 ; Journal of Water and Climate Change Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2012 ; 2012 ; Journal of Water and Climate Change Volume 3 ; 3 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Journal of Water and Climate Change Volume 4 ; 4 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Water and Climate Change Volume 5 ; 5 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Water and Climate Change Volume 6 ; 6 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Journal of Water and Climate Change Volume 7 ; 7 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Water and Climate Change Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Journal of Water and Climate Change Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2019 ; 2019 ; Journal of Water and Climate Change Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; Journal of Water and Climate Change Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Journal of Water and Climate Change Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2022 ; 2022 ; Journal of Water and Climate Change Volume 13 ; 13 ; >
+
+  }
+
+  {
+  
+    title <
+      name = Journal of Water and Health ;
+      issn = 1477-8920 ;
+      eissn = 1996-7829 ;
+      issnl = 1477-8920
+    >
+
+    param[journal_id] = jwh
+
+    au < manifest ; exists ; 2003 ; 2003 ; Journal of Water and Health Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2004 ; 2004 ; Journal of Water and Health Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2005 ; 2005 ; Journal of Water and Health Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2006 ; 2006 ; Journal of Water and Health Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2007 ; 2007 ; Journal of Water and Health Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2008 ; 2008 ; Journal of Water and Health Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2009 ; 2009 ; Journal of Water and Health Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2010 ; 2010 ; Journal of Water and Health Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2011 ; 2011 ; Journal of Water and Health Volume 9 ; 9 ; >
+    au < manifest ; exists ; 2012 ; 2012 ; Journal of Water and Health Volume 10 ; 10 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Journal of Water and Health Volume 11 ; 11 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Water and Health Volume 12 ; 12 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Water and Health Volume 13 ; 13 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Journal of Water and Health Volume 14 ; 14 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Water and Health Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Journal of Water and Health Volume 16 ; 16 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Journal of Water and Health Volume 17 ; 17 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; Journal of Water and Health Volume 18 ; 18 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Journal of Water and Health Volume 19 ; 19 ; >
+    au < manifest ; exists ; 2022 ; 2022 ; Journal of Water and Health Volume 20 ; 20 ; >
+
+  }
+
+  {
+  
+    title <
+      name = Water Reuse ;
+      issn = 2709-6092 ;
+      eissn = 2709-6106 ;
+      issnl = 2709-6092
+    >
+
+    param[journal_id] = jwrd
+    #name changed from Journal of Water Reuse and Desalination
+
+    au < crawling ; exists ; 2021 ; 2021 ; Water Reuse Volume 11 ; 11 ; >
+    au < manifest ; exists ; 2022 ; 2022 ; Water Reuse Volume 12 ; 12 ; >
+
+  }
+
+  {
+  
+    title <
+      name = Journal of Water Reuse and Desalination ;
+      issn = 2220-1319 ;
+      eissn = 2408-9370 ;
+      issnl = 2220-1319
+    >
+
+    param[journal_id] = jwrd
+
+    au < manifest ; exists ; 2011 ; 2011 ; Journal of Water Reuse and Desalination Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2012 ; 2012 ; Journal of Water Reuse and Desalination Volume 2 ; 2 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Journal of Water Reuse and Desalination Volume 3 ; 3 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Water Reuse and Desalination Volume 4 ; 4 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Water Reuse and Desalination Volume 5 ; 5 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Journal of Water Reuse and Desalination Volume 6 ; 6 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Water Reuse and Desalination Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Journal of Water Reuse and Desalination Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Journal of Water Reuse and Desalination Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; Journal of Water Reuse and Desalination Volume 10 ; 10 ; >
+    #name and issn changed to Water Reuse
+  }
+
+  {
+  
+    title <
+      name = Journal of Water, Sanitation and Hygiene for Development ;
+      issn = 2043-9083 ;
+      eissn = 2408-9362 ;
+      issnl = 2043-9083
+    >
+
+    param[journal_id] = washdev
+    #manifest pages missing 20211213
+
+    au < manifest ; exists ; 2011 ; 2011 ; Journal of Water, Sanitation and Hygiene for Development Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2012 ; 2012 ; Journal of Water, Sanitation and Hygiene for Development Volume 2 ; 2 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Journal of Water, Sanitation and Hygiene for Development Volume 3 ; 3 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Water, Sanitation and Hygiene for Development Volume 4 ; 4 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Water, Sanitation and Hygiene for Development Volume 5 ; 5 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Journal of Water, Sanitation and Hygiene for Development Volume 6 ; 6 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Water, Sanitation and Hygiene for Development Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Journal of Water, Sanitation and Hygiene for Development Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Journal of Water, Sanitation and Hygiene for Development Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; Journal of Water, Sanitation and Hygiene for Development Volume 10 ; 10 ; >
+    au < notReady ; exists ; 2021 ; 2021 ; Journal of Water, Sanitation and Hygiene for Development Volume 11 ; 11 ; > #403 forbidden, https://iwa.silverchair-cdn.com/cassette.axd/file/Themes/Client/app/img/split-view_figures-tables-53a6d02348118354786b056ee1d24882350dc90b.svg
+    au < manifest ; exists ; 2022 ; 2022 ; Journal of Water, Sanitation and Hygiene for Development Volume 12 ; 12 ; >
+
+  }
+
+  {
+    title <
+      name = AQUA: Water Infrastructure, Ecosystems and Society ;
+      issn = 2709-8028 ;
+      eissn = 2709-8036 ;
+      issnl = 2709-8028
+    >
+
+    param[journal_id] = aqua
+    #Previously Journal of Water Supply: Research and Technology - Aqua
+
+    au < crawling ; exists ; 2021 ; 2021 ; AQUA: Water Infrastructure, Ecosystems and Society Volume 70 ; 70 ; >
+    au < manifest ; exists ; 2022 ; 2022 ; AQUA: Water Infrastructure, Ecosystems and Society Volume 71 ; 71 ; >
+
+  }
+  
+  {
+  
+    title <
+      name = Journal of Water Supply: Research and Technology - Aqua ;
+      issn = 0003-7214 ;
+      eissn = 1605-3974 ;
+      issnl = 0003-7214
+    >
+
+    param[journal_id] = aqua
+
+    au < manifest ; exists ; 1998 ; 1998 ; Journal of Water Supply: Research and Technology - Aqua Volume 47 ; 47 ; >
+    au < manifest ; exists ; 1999 ; 1999 ; Journal of Water Supply: Research and Technology - Aqua Volume 48 ; 48 ; >
+    au < manifest ; exists ; 2000 ; 2000 ; Journal of Water Supply: Research and Technology - Aqua Volume 49 ; 49 ; >
+    au < manifest ; exists ; 2001 ; 2001 ; Journal of Water Supply: Research and Technology - Aqua Volume 50 ; 50 ; >
+    au < manifest ; exists ; 2002 ; 2002 ; Journal of Water Supply: Research and Technology - Aqua Volume 51 ; 51 ; >
+    au < manifest ; exists ; 2003 ; 2003 ; Journal of Water Supply: Research and Technology - Aqua Volume 52 ; 52 ; >
+    au < manifest ; exists ; 2004 ; 2004 ; Journal of Water Supply: Research and Technology - Aqua Volume 53 ; 53 ; >
+    au < manifest ; exists ; 2005 ; 2005 ; Journal of Water Supply: Research and Technology - Aqua Volume 54 ; 54 ; >
+    au < manifest ; exists ; 2006 ; 2006 ; Journal of Water Supply: Research and Technology - Aqua Volume 55 ; 55 ; >
+    au < manifest ; exists ; 2007 ; 2007 ; Journal of Water Supply: Research and Technology - Aqua Volume 56 ; 56 ; >
+    au < manifest ; exists ; 2008 ; 2008 ; Journal of Water Supply: Research and Technology - Aqua Volume 57 ; 57 ; >
+    au < manifest ; exists ; 2009 ; 2009 ; Journal of Water Supply: Research and Technology - Aqua Volume 58 ; 58 ; >
+    au < manifest ; exists ; 2010 ; 2010 ; Journal of Water Supply: Research and Technology - Aqua Volume 59 ; 59 ; >
+    au < manifest ; exists ; 2011 ; 2011 ; Journal of Water Supply: Research and Technology - Aqua Volume 60 ; 60 ; >
+    au < manifest ; exists ; 2012 ; 2012 ; Journal of Water Supply: Research and Technology - Aqua Volume 61 ; 61 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Journal of Water Supply: Research and Technology - Aqua Volume 62 ; 62 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Water Supply: Research and Technology - Aqua Volume 63 ; 63 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Water Supply: Research and Technology - Aqua Volume 64 ; 64 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Journal of Water Supply: Research and Technology - Aqua Volume 65 ; 65 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Water Supply: Research and Technology - Aqua Volume 66 ; 66 ; >
+    au < frozen ; exists ; 2018 ; 2018 ; Journal of Water Supply: Research and Technology - Aqua Volume 67 ; 67 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Journal of Water Supply: Research and Technology - Aqua Volume 68 ; 68 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; Journal of Water Supply: Research and Technology - Aqua Volume 69 ; 69 ; >
+    #publisher changed name, issn AQUA: Water Infrastructure, Ecosystems and Society
+  }
+  
+  {
+  
+    title <
+      name = Journal of Hydroinformatics ;
+      issn = 1464-7141 ;
+      eissn = 1465-1734 ;
+      issnl = 1464-7141
+    >
+
+    param[journal_id] = jh
+
+    au < manifest ; exists ; 1999 ; 1999 ; Journal of Hydroinformatics Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2000 ; 2000 ; Journal of Hydroinformatics Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2001 ; 2001 ; Journal of Hydroinformatics Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2002 ; 2002 ; Journal of Hydroinformatics Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2003 ; 2003 ; Journal of Hydroinformatics Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2004 ; 2004 ; Journal of Hydroinformatics Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2005 ; 2005 ; Journal of Hydroinformatics Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2006 ; 2006 ; Journal of Hydroinformatics Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2007 ; 2007 ; Journal of Hydroinformatics Volume 9 ; 9 ; >
+    au < manifest ; exists ; 2008 ; 2008 ; Journal of Hydroinformatics Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2009 ; 2009 ; Journal of Hydroinformatics Volume 11 ; 11 ; >
+    au < manifest ; exists ; 2010 ; 2010 ; Journal of Hydroinformatics Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2011 ; 2011 ; Journal of Hydroinformatics Volume 13 ; 13 ; >
+    au < manifest ; exists ; 2012 ; 2012 ; Journal of Hydroinformatics Volume 14 ; 14 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Journal of Hydroinformatics Volume 15 ; 15 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Hydroinformatics Volume 16 ; 16 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Hydroinformatics Volume 17 ; 17 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Journal of Hydroinformatics Volume 18 ; 18 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Hydroinformatics Volume 19 ; 19 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Journal of Hydroinformatics Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Journal of Hydroinformatics Volume 21 ; 21 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; Journal of Hydroinformatics Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Journal of Hydroinformatics Volume 23 ; 23 ; >
+    au < manifest ; exists ; 2022 ; 2022 ; Journal of Hydroinformatics Volume 24 ; 24 ; >
+
+  }
+  
+  {
+  
+    title <
+      name = Water Practice and Technology ;
+      eissn = 1751-231X ;
+      issnl = 1751-231X
+    >
+
+    param[journal_id] = wpt
+
+    au < manifest ; exists ; 2006 ; 2006 ; Water Practice and Technology Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2007 ; 2007 ; Water Practice and Technology Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2008 ; 2008 ; Water Practice and Technology Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2009 ; 2009 ; Water Practice and Technology Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2010 ; 2010 ; Water Practice and Technology Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2011 ; 2011 ; Water Practice and Technology Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2012 ; 2012 ; Water Practice and Technology Volume 7 ; 7 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Water Practice and Technology Volume 8 ; 8 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Water Practice and Technology Volume 9 ; 9 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Water Practice and Technology Volume 10 ; 10 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Water Practice and Technology Volume 11 ; 11 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Water Practice and Technology Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2018 ; 2018 ; Water Practice and Technology Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Water Practice and Technology Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; Water Practice and Technology Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Water Practice and Technology Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2022 ; 2022 ; Water Practice and Technology Volume 17 ; 17 ; >
+
+  }
+  
+  {
+  
+    title <
+      name = Water Policy ;
+      issn = 1366-7017 ;
+      eissn = 1996-9759 ;
+      issnl = 1366-7017
+    >
+
+    param[journal_id] = wp
+
+    au < manifest ; exists ; 2003 ; 2003 ; Water Policy Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2004 ; 2004 ; Water Policy Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2005 ; 2005 ; Water Policy Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2006 ; 2006 ; Water Policy Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2007 ; 2007 ; Water Policy Volume 9 ; 9 ; >
+    au < manifest ; exists ; 2008 ; 2008 ; Water Policy Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2009 ; 2009 ; Water Policy Volume 11 ; 11 ; >
+    au < manifest ; exists ; 2010 ; 2010 ; Water Policy Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2011 ; 2011 ; Water Policy Volume 13 ; 13 ; >
+    au < manifest ; exists ; 2012 ; 2012 ; Water Policy Volume 14 ; 14 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Water Policy Volume 15 ; 15 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Water Policy Volume 16 ; 16 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Water Policy Volume 17 ; 17 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Water Policy Volume 18 ; 18 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Water Policy Volume 19 ; 19 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Water Policy Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Water Policy Volume 21 ; 21 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; Water Policy Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Water Policy Volume 23 ; 23 ; >
+    au < manifest ; exists ; 2022 ; 2022 ; Water Policy Volume 24 ; 24 ; >
+
+  }
+  
+  {
+  
+    title <
+      name = Water Quality Research Journal ; 
+      issn = 2709-8044 ;
+      eissn = 2709-8052 ;
+      issnl = 2709-8044
+    >
+
+    param[journal_id] = wqrj
+    #param[base_url] = http://wqrjc.iwaponline.com/
+    #name = Water Quality Research Journal of Canada ; title removed the of Canada in 2018
+
+    au < crawling ; exists ; 2018 ; 2018 ; Water Quality Research Journal Volume 53 ; 53 ; >
+    au < frozen ; exists ; 2019 ; 2019 ; Water Quality Research Journal Volume 54 ; 54 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; Water Quality Research Journal Volume 55 ; 55 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Water Quality Research Journal Volume 56 ; 56 ; >
+    au < manifest ; exists ; 2022 ; 2022 ; Water Quality Research Journal Volume 57 ; 57 ; >
+
+  }
+  
+  {
+  
+    title <
+      name = Water Quality Research Journal of Canada ; 
+      issn = 1201-3080 ;
+      eissn = 2408-9443 ;
+      issnl = 1201-3080
+    >
+
+    param[journal_id] = wqrj
+    #param[base_url] = http://wqrjc.iwaponline.com/
+    #name = Water Quality Research Journal of Canada ; title removed the of Canada in 2018
+
+    au < manifest ; exists ; 2011 ; 2011 ; Water Quality Research Journal of Canada Volume 46 ; 46 ; >
+    au < manifest ; exists ; 2012 ; 2012 ; Water Quality Research Journal of Canada Volume 47 ; 47 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Water Quality Research Journal of Canada Volume 48 ; 48 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Water Quality Research Journal of Canada Volume 49 ; 49 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Water Quality Research Journal of Canada Volume 50 ; 50 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Water Quality Research Journal of Canada Volume 51 ; 51 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Water Quality Research Journal of Canada Volume 52 ; 52 ; >
+    #name and issn changed to Water Quality Research Journal
+  }
+  
+  {
+  
+    title <
+      name = Water Science and Technology ;
+      issn = 0273-1223 ;
+      eissn = 1996-9732 ;
+      issnl = 0273-1223
+    >
+
+    param[journal_id] = wst
+
+    au < manifest ; exists ; 1982 ; 1982 ; Water Science and Technology Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1983 ; 1983 ; Water Science and Technology Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1984 ; 1984 ; Water Science and Technology Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1985 ; 1985 ; Water Science and Technology Volume 17 ; 17 ; >
+    au < manifest ; exists ; 1986 ; 1986 ; Water Science and Technology Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1987 ; 1987 ; Water Science and Technology Volume 19 ; 19 ; >
+    au < manifest ; exists ; 1988 ; 1988 ; Water Science and Technology Volume 20 ; 20 ; >
+    au < manifest ; exists ; 1989 ; 1989 ; Water Science and Technology Volume 21 ; 21 ; >
+    au < manifest ; exists ; 1990 ; 1990 ; Water Science and Technology Volume 22 ; 22 ; >
+    au < manifest ; exists ; 1991 ; 1991 ; Water Science and Technology Volume 23-24 ; 23-24 ; >
+    au < manifest ; exists ; 1992 ; 1992 ; Water Science and Technology Volume 25-26 ; 25-26 ; >
+    au < manifest ; exists ; 1993 ; 1993 ; Water Science and Technology Volume 27-28 ; 27-28 ; >
+    au < manifest ; exists ; 1994 ; 1994 ; Water Science and Technology Volume 29-30 ; 29-30 ; >
+    au < manifest ; exists ; 1995 ; 1995 ; Water Science and Technology Volume 31-32 ; 31-32 ; >
+    au < manifest ; exists ; 1996 ; 1996 ; Water Science and Technology Volume 33-34 ; 33-34 ; >
+    au < manifest ; exists ; 1997 ; 1997 ; Water Science and Technology Volume 35-36 ; 35-36 ; >
+    au < manifest ; exists ; 1998 ; 1998 ; Water Science and Technology Volume 37-38 ; 37-38 ; >
+    au < manifest ; exists ; 1999 ; 1999 ; Water Science and Technology Volume 39-40 ; 39-40 ; >
+    au < manifest ; exists ; 2000 ; 2000 ; Water Science and Technology Volume 41-42 ; 41-42 ; >
+    au < manifest ; exists ; 2001 ; 2001 ; Water Science and Technology Volume 43-44 ; 43-44 ; >
+    au < manifest ; exists ; 2002 ; 2002 ; Water Science and Technology Volume 45-46 ; 45-46 ; >
+    au < manifest ; exists ; 2003 ; 2003 ; Water Science and Technology Volume 47-48 ; 47-48 ; >
+    au < manifest ; exists ; 2004 ; 2004 ; Water Science and Technology Volume 49-50 ; 49-50 ; >
+    au < manifest ; exists ; 2005 ; 2005 ; Water Science and Technology Volume 51-52 ; 51-52 ; >
+    au < manifest ; exists ; 2006 ; 2006 ; Water Science and Technology Volume 53-54 ; 53-54 ; >
+    au < manifest ; exists ; 2007 ; 2007 ; Water Science and Technology Volume 55-56 ; 55-56 ; >
+    au < manifest ; exists ; 2008 ; 2008 ; Water Science and Technology Volume 57-58 ; 57-58 ; >
+    au < manifest ; exists ; 2009 ; 2009 ; Water Science and Technology Volume 59-60 ; 59-60 ; >
+    au < manifest ; exists ; 2010 ; 2010 ; Water Science and Technology Volume 61-62 ; 61-62 ; >
+    au < manifest ; exists ; 2011 ; 2011 ; Water Science and Technology Volume 63-64 ; 63-64 ; >
+    au < manifest ; exists ; 2012 ; 2012 ; Water Science and Technology Volume 65-66 ; 65-66 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Water Science and Technology Volume 67-68 ; 67-68 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Water Science and Technology Volume 69-70 ; 69-70 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Water Science and Technology Volume 71-72 ; 71-72 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Water Science and Technology Volume 73-74 ; 73-74 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Water Science and Technology Volume 75-76 ; 75-76 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Water Science and Technology Volume 77-78 ; 77-78 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Water Science and Technology Volume 79-80 ; 79-80 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; Water Science and Technology Volume 81-82 ; 81-82 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Water Science and Technology Volume 83-84 ; 83-84 ; >
+    au < manifest ; exists ; 2022 ; 2022 ; Water Science and Technology Volume 85-86 ; 85-86 ; >
+
+  }
+  
+  {
+  
+    title <
+      name = Water Supply ;
+      issn = 1606-9749 ;
+      eissn = 1607-0798 ;
+      issnl = 1606-9749
+    >
+
+    param[journal_id] = ws
+    #Publisher reported that name changed to Water Supply with no change in issn.
+
+    au < manifest ; exists ; 2001 ; 2001 ; Water Science and Technology: Water Supply Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2002 ; 2002 ; Water Science and Technology: Water Supply Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2003 ; 2003 ; Water Science and Technology: Water Supply Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2004 ; 2004 ; Water Science and Technology: Water Supply Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2005 ; 2005 ; Water Science and Technology: Water Supply Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2006 ; 2006 ; Water Science and Technology: Water Supply Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2007 ; 2007 ; Water Science and Technology: Water Supply Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2008 ; 2008 ; Water Science and Technology: Water Supply Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2009 ; 2009 ; Water Science and Technology: Water Supply Volume 9 ; 9 ; >
+    au < manifest ; exists ; 2010 ; 2010 ; Water Science and Technology: Water Supply Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2011 ; 2011 ; Water Science and Technology: Water Supply Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2012 ; 2012 ; Water Science and Technology: Water Supply Volume 12 ; 12 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Water Science and Technology: Water Supply Volume 13 ; 13 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Water Science and Technology: Water Supply Volume 14 ; 14 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Water Science and Technology: Water Supply Volume 15 ; 15 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Water Science and Technology: Water Supply Volume 16 ; 16 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Water Science and Technology: Water Supply Volume 17 ; 17 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Water Science and Technology: Water Supply Volume 18 ; 18 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Water Science and Technology: Water Supply Volume 19 ; 19 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; Water Science and Technology: Water Supply Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Water Supply Volume 21 ; 21 ; >
+    au < manifest ; exists ; 2022 ; 2022 ; Water Supply Volume 22 ; 22 ; >
+
+  }
+  
+}

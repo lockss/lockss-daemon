@@ -1,0 +1,548 @@
+{
+
+  publisher <
+    name = Liverpool University Press ;
+    info[back] = 2008 ;
+    info[contract] = 2009 ;
+    info[tester] = 8 ;
+    info[poller] = 3
+  >
+  
+  comment[moving] = from MetaPress to Atypon
+
+  plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin
+  param[base_url] = http://liverpool.metapress.com/
+  implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+  comment[param_journal_issn] = the param journal_issn is set to the journal's eISSN, not print ISSN
+
+  {
+
+    title <
+      name = Australian Journal of French Studies ;
+      issn = 0004-9468 ;
+      eissn = 2046-2913 ;
+      issnl = 0004-9468
+    >
+
+    param[journal_issn] = 2046-2913
+
+    au < doNotProcess ; exists ; 2004 ; Australian Journal of French Studies Volume 41 ; 41 ; >
+    au < doNotProcess ; exists ; 2005 ; Australian Journal of French Studies Volume 42 ; 42 ; >
+    au < doNotProcess ; exists ; 2006 ; Australian Journal of French Studies Volume 43 ; 43 ; >
+    au < doNotProcess ; exists ; 2007 ; Australian Journal of French Studies Volume 44 ; 44 ; >
+    au < finished ; finished ; 2008 ; Australian Journal of French Studies Volume 45 ; 45 ; >
+    au < finished ; finished ; 2009 ; Australian Journal of French Studies Volume 46 ; 46 ; >
+    au < finished ; finished ; 2010 ; Australian Journal of French Studies Volume 47 ; 47 ; >
+    au < finished ; finished ; 2011 ; Australian Journal of French Studies Volume 48 ; 48 ; >
+    au < finished ; finished ; 2012 ; Australian Journal of French Studies Volume 49 ; 49 ; >
+    au < finished ; crawling ; 2013 ; Australian Journal of French Studies Volume 50 ; 50 ; reingest1.clockss.org:8082 >
+    au < doNotProcess ; exists ; 2014 ; Australian Journal of French Studies Volume 51 ; 51 ; >
+
+  }
+
+  {
+
+    title <
+      name = British Journal of Canadian Studies ;
+      issn = 0269-9222 ;
+      eissn = 1757-8078 ;
+      issnl = 0269-9222
+    >
+
+    param[journal_issn] = 1757-8078
+
+    au < doNotProcess ; exists ; 2003 ; British Journal of Canadian Studies Volume 16 ; 16 ; >
+    au < doNotProcess ; exists ; 2004 ; British Journal of Canadian Studies Volume 17 ; 17 ; >
+    au < doNotProcess ; exists ; 2005 ; British Journal of Canadian Studies Volume 18 ; 18 ; >
+    au < doNotProcess ; exists ; 2006 ; British Journal of Canadian Studies Volume 19 ; 19 ; >
+    au < doNotProcess ; exists ; 2007 ; British Journal of Canadian Studies Volume 20 ; 20 ; >
+    au < finished ; finished ; 2008 ; British Journal of Canadian Studies Volume 21 ; 21 ; >
+    au < finished ; finished ; 2009 ; British Journal of Canadian Studies Volume 22 ; 22 ; >
+    au < finished ; finished ; 2010 ; British Journal of Canadian Studies Volume 23 ; 23 ; >
+    au < finished ; finished ; 2011 ; British Journal of Canadian Studies Volume 24 ; 24 ; >
+    au < finished ; finished ; 2012 ; British Journal of Canadian Studies Volume 25 ; 25 ; >
+    au < finished ; crawling ; 2013 ; British Journal of Canadian Studies Volume 26 ; 26 ; reingest2.clockss.org:8085 >
+    au < doNotProcess ; exists ; 2014 ; British Journal of Canadian Studies Volume 27 ; 27 ; >
+
+  }
+
+  {
+
+    title <
+      name = Bulletin of Hispanic Studies ;
+      issn = 1475-3839 ;
+      eissn = 1478-3398 ;
+      issnl = 1475-3839
+    >
+
+    param[journal_issn] = 1478-3398
+
+    au < doNotProcess ; exists ; 1985 ; Bulletin of Hispanic Studies Volume 62 ; 62 ; >
+    au < doNotProcess ; exists ; 1986 ; Bulletin of Hispanic Studies Volume 63 ; 63 ; >
+    au < doNotProcess ; exists ; 1987 ; Bulletin of Hispanic Studies Volume 64 ; 64 ; >
+    au < doNotProcess ; exists ; 1988 ; Bulletin of Hispanic Studies Volume 65 ; 65 ; >
+    au < doNotProcess ; exists ; 1989 ; Bulletin of Hispanic Studies Volume 66 ; 66 ; >
+    au < doNotProcess ; exists ; 1990 ; Bulletin of Hispanic Studies Volume 67 ; 67 ; >
+    au < doNotProcess ; exists ; 1991 ; Bulletin of Hispanic Studies Volume 68 ; 68 ; >
+    au < doNotProcess ; exists ; 1992 ; Bulletin of Hispanic Studies Volume 69 ; 69 ; >
+    au < doNotProcess ; exists ; 1993 ; Bulletin of Hispanic Studies Volume 70 ; 70 ; >
+    au < doNotProcess ; exists ; 1994 ; Bulletin of Hispanic Studies Volume 71 ; 71 ; >
+    au < doNotProcess ; exists ; 1995 ; Bulletin of Hispanic Studies Volume 72 ; 72 ; >
+    au < doNotProcess ; exists ; 1996 ; Bulletin of Hispanic Studies Volume 73 ; 73 ; >
+    au < doNotProcess ; exists ; 1997 ; Bulletin of Hispanic Studies Volume 74 ; 74 ; >
+    au < doNotProcess ; exists ; 1998 ; Bulletin of Hispanic Studies Volume 75 ; 75 ; >
+    au < doNotProcess ; exists ; 1999 ; Bulletin of Hispanic Studies Volume 76 ; 76 ; >
+    au < doNotProcess ; exists ; 2000 ; Bulletin of Hispanic Studies Volume 77 ; 77 ; >
+    au < doNotProcess ; exists ; 2001 ; Bulletin of Hispanic Studies Volume 78 ; 78 ; >
+    au < doNotProcess ; exists ; 2002 ; Bulletin of Hispanic Studies Volume 79 ; 79 ; >
+    au < doNotProcess ; exists ; 2003 ; Bulletin of Hispanic Studies Volume 80 ; 80 ; >
+    au < doNotProcess ; exists ; 2004 ; Bulletin of Hispanic Studies Volume 81 ; 81 ; >
+    au < doNotProcess ; exists ; 2005 ; Bulletin of Hispanic Studies Volume 82 ; 82 ; >
+    au < doNotProcess ; exists ; 2006 ; Bulletin of Hispanic Studies Volume 83 ; 83 ; >
+    au < doNotProcess ; exists ; 2007 ; Bulletin of Hispanic Studies Volume 84 ; 84 ; >
+    au < finished ; finished ; 2008 ; Bulletin of Hispanic Studies Volume 85 ; 85 ; >
+    au < finished ; finished ; 2009 ; Bulletin of Hispanic Studies Volume 86 ; 86 ; >
+    au < finished ; finished ; 2010 ; Bulletin of Hispanic Studies Volume 87 ; 87 ; >
+    au < finished ; finished ; 2011 ; Bulletin of Hispanic Studies Volume 88 ; 88 ; >
+    au < finished ; finished ; 2012 ; Bulletin of Hispanic Studies Volume 89 ; 89 ; >
+    au < finished ; crawling ; 2013 ; Bulletin of Hispanic Studies Volume 90 ; 90 ; reingest3.clockss.org:8083 >
+    au < doNotProcess ; exists ; 2014 ; Bulletin of Hispanic Studies Volume 91 ; 91 ; >
+
+  }
+
+  {
+
+    title <
+      name = The Byron Journal ;
+      issn = 0301-7257 ;
+      eissn = 1757-0263 ;
+      issnl = 0301-7257
+    >
+
+    param[journal_issn] = 1757-0263
+
+    au < doNotProcess ; exists ; 2004 ; The Byron Journal Volume 32 ; 32 ; >
+    au < doNotProcess ; exists ; 2005 ; The Byron Journal Volume 33 ; 33 ; >
+    au < doNotProcess ; exists ; 2006 ; The Byron Journal Volume 34 ; 34 ; >
+    au < doNotProcess ; exists ; 2007 ; The Byron Journal Volume 35 ; 35 ; >
+    au < finished ; finished ; 2008 ; The Byron Journal Volume 36 ; 36 ; >
+    au < finished ; finished ; 2009 ; The Byron Journal Volume 37 ; 37 ; >
+    au < finished ; finished ; 2010 ; The Byron Journal Volume 38 ; 38 ; >
+    au < finished ; finished ; 2011 ; The Byron Journal Volume 39 ; 39 ; >
+    au < finished ; finished ; 2012 ; The Byron Journal Volume 40 ; 40 ; >
+    au < finished ; crawling ; 2013 ; The Byron Journal Volume 41 ; 41 ; reingest4.clockss.org:8082 >
+    au < doNotProcess ; exists ; 2014 ; The Byron Journal Volume 42 ; 42 ; >
+
+  }
+
+   {
+
+    title <
+      name = Comma ;
+      issn = 1680-1865 ;
+      eissn = 2049-3355 ;
+      issnl = 1680-1865
+    >
+
+    param[journal_issn] = 2049-3355
+
+    au < doNotProcess ; exists ; 2004 ; Comma Volume 2004 ; 2004 ; >
+    au < doNotProcess ; exists ; 2005 ; Comma Volume 2005 ; 2005 ; >
+    au < doNotProcess ; exists ; 2006 ; Comma Volume 2006 ; 2006 ; >
+    au < doNotProcess ; exists ; 2007 ; Comma Volume 2007 ; 2007 ; >
+    au < finished ; finished ; 2008 ; Comma Volume 2008 ; 2008 ; >
+    au < finished ; finished ; 2009 ; Comma Volume 2009 ; 2009 ; >
+    au < finished ; finished ; 2010 ; Comma Volume 2010 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Comma Volume 2011 ; 2011 ; >
+
+  }
+
+  {
+
+    title <
+      name = Contemporary French Civilization ;
+      issn = 0147-9156 ;
+      eissn = 2044-396X ;
+      issnl = 0147-9156
+    >
+
+    param[journal_issn] = 0147-9156
+
+    au < doNotProcess ; exists ; 2005 ; Contemporary French Civilization Volume 29 ; 29 ; >
+    au < doNotProcess ; exists ; 2006 ; Contemporary French Civilization Volume 30 ; 30 ; >
+    au < doNotProcess ; exists ; 2007 ; Contemporary French Civilization Volume 31 ; 31 ; >
+    au < finished ; finished ; 2008 ; Contemporary French Civilization Volume 32 ; 32 ; >
+    au < finished ; finished ; 2009 ; Contemporary French Civilization Volume 33 ; 33 ; >
+    au < finished ; finished ; 2010 ; Contemporary French Civilization Volume 34 ; 34 ; >
+    au < finished ; finished ; 2011 ; Contemporary French Civilization Volume 35 ; 35 ; >
+    au < finished ; finished ; 2011 ; Contemporary French Civilization Volume 36 ; 36 ; >
+    au < finished ; finished ; 2012 ; Contemporary French Civilization Volume 37 ; 37 ; >
+    au < finished ; crawling ; 2013 ; Contemporary French Civilization Volume 38 ; 38 ; reingest5.clockss.org:8082 >
+    au < doNotProcess ; exists ; 2013 ; Contemporary French Civilization Volume 39 ; 39 ; >
+
+  }
+
+#  {
+#
+#    title <
+#      name = European Comic Art ;
+#      issn = 1754-3797 ;
+#      eissn = 1754-3800 ;
+#      issnl = 1754-3797
+#    >
+#
+#    # This title moved from Liverpool University Press to Berghahn Journals
+#
+#  }
+
+  {
+
+    title <
+      name = European Journal of Language Policy / Revue européenne de politique linguistique ;
+      issn = 1757-6822 ;
+      eissn = 1757-6830 ;
+      issnl = 1757-6822
+    >
+
+    param[journal_issn] = 1757-6830
+
+    au < finished ; finished ; 2009 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 1 ; 1 ; >
+    au < finished ; finished ; 2010 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 2 ; 2 ; >
+    au < finished ; finished ; 2011 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 3 ; 3 ; >
+    au < finished ; finished ; 2012 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 4 ; 4 ; >
+    au < finished ; crawling ; 2013 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 5 ; 5 ; reingest1.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Extrapolation ;
+      issn = 0014-5483 ;
+      eissn = 2047-7708 ;
+      issnl = 0014-5483
+    >
+    {
+      comment[upcoming] = this journal is upcoming in projectmuse
+      param[journal_issn] = 2047-7708
+
+      au < finished ; finished ; 2011 ; Extrapolation Volume 52 ; 52 ; >
+      au < finished ; finished ; 2012 ; Extrapolation Volume 53 ; 53 ; >
+      au < finished ; crawling ; 2013 ; Extrapolation Volume 54 ; 54 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; exists ; 2014 ; Extrapolation Volume 55 ; 55 ; >
+    }
+    {
+      param[journal_issn] = 0014-5483
+
+      au < superseded ; exists ; 2011 ; Extrapolation Volume 52 [superseded] ; 52 ; >
+    }
+  }
+
+  {
+
+    title <
+      name = International Development Planning Review ;
+      issn = 1474-6743 ;
+      eissn = 1478-3401 ;
+      issnl = 1474-6743
+    >
+
+    param[journal_issn] = 1478-3401
+
+    au < doNotProcess ; exists ; 2002 ; International Development Planning Review Volume 24 ; 24 ; >
+    au < doNotProcess ; exists ; 2003 ; International Development Planning Review Volume 25 ; 25 ; >
+    au < doNotProcess ; exists ; 2004 ; International Development Planning Review Volume 26 ; 26 ; >
+    au < doNotProcess ; exists ; 2005 ; International Development Planning Review Volume 27 ; 27 ; >
+    au < doNotProcess ; exists ; 2006 ; International Development Planning Review Volume 28 ; 28 ; >
+    au < doNotProcess ; exists ; 2007 ; International Development Planning Review Volume 29 ; 29 ; >
+    au < finished ; finished ; 2008 ; International Development Planning Review Volume 30 ; 30 ; >
+    au < finished ; finished ; 2009 ; International Development Planning Review Volume 31 ; 31 ; >
+    au < finished ; finished ; 2010 ; International Development Planning Review Volume 32 ; 32 ; >
+    au < finished ; finished ; 2011 ; International Development Planning Review Volume 33 ; 33 ; >
+    au < finished ; finished ; 2012 ; International Development Planning Review Volume 34 ; 34 ; >
+    au < finished ; crawling ; 2013 ; International Development Planning Review Volume 35 ; 35 ; reingest3.clockss.org:8083 >
+    au < doNotProcess ; exists ; 2014 ; International Development Planning Review Volume 36 ; 36 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Literary & Cultural Disability Studies ;
+      issn = 1757-6458 ;
+      eissn = 1757-6466 ;
+      issnl = 1757-6458
+    >
+
+    param[journal_issn] = 1757-6466
+
+    au < doNotProcess ; exists ; 2007 ; Journal of Literary & Cultural Disability Studies Volume 1 ; 1 ; >
+    au < finished ; finished ; 2008 ; Journal of Literary & Cultural Disability Studies Volume 2 ; 2 ; >
+    au < finished ; finished ; 2009 ; Journal of Literary & Cultural Disability Studies Volume 3 ; 3 ; >
+    au < finished ; finished ; 2010 ; Journal of Literary & Cultural Disability Studies Volume 4 ; 4 ; >
+    au < finished ; finished ; 2011 ; Journal of Literary & Cultural Disability Studies Volume 5 ; 5 ; >
+    au < finished ; finished ; 2012 ; Journal of Literary & Cultural Disability Studies Volume 6 ; 6 ; >
+    au < finished ; crawling ; 2013 ; Journal of Literary & Cultural Disability Studies Volume 7 ; 7 ; reingest4.clockss.org:8082 >
+    au < doNotProcess ; exists ; 2014 ; Journal of Literary & Cultural Disability Studies Volume 8 ; 8 ; >
+
+  }
+
+  {
+
+    title <
+      name = Labour History Review ;
+      issn = 0961-5652 ;
+      eissn = 1745-8188 ;
+      issnl = 0961-5652
+    >
+
+    param[journal_issn] = 1745-8188
+    comment[platform] = This journal also published with Maney on Ingenta previously, and now Maney on Atypon.
+
+    au < doNotProcess ; exists ; 2005 ; Labour History Review Volume 70 [Metapress] ; 70 ; >
+    au < doNotProcess ; exists ; 2006 ; Labour History Review Volume 71 [Metapress] ; 71 ; >
+    au < doNotProcess ; exists ; 2007 ; Labour History Review Volume 72 [Metapress] ; 72 ; >
+    au < finished ; finished ; 2008 ; Labour History Review Volume 73 [Metapress]; 73 ; >
+    au < finished ; finished ; 2009 ; Labour History Review Volume 74 [Metapress]; 74 ; >
+    au < finished ; finished ; 2010 ; Labour History Review Volume 75 [Metapress]; 75 ; >
+    au < finished ; finished ; 2011 ; Labour History Review Volume 76 [Metapress]; 76 ; >
+    au < finished ; finished ; 2012 ; Labour History Review Volume 77 [Metapress]; 77 ; >
+    au < finished ; crawling ; 2013 ; Labour History Review Volume 78 [Metapress]; 78 ; reingest5.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Music, Sound, and the Moving Image ;
+      issn = 1753-0768 ;
+      eissn = 1753-0776 ;
+      issnl = 1753-0768
+    >
+
+    param[journal_issn] = 1753-0776
+
+    au < doNotProcess ; exists ; 2007 ; Music, Sound, and the Moving Image Volume 1 ; 1 ; >
+    au < finished ; finished ; 2008 ; Music, Sound, and the Moving Image Volume 2 ; 2 ; >
+    au < finished ; finished ; 2009 ; Music, Sound, and the Moving Image Volume 3 ; 3 ; >
+    au < finished ; finished ; 2010 ; Music, Sound, and the Moving Image Volume 4 ; 4 ; >
+    au < finished ; finished ; 2011 ; Music, Sound, and the Moving Image Volume 5 ; 5 ; >
+    au < finished ; finished ; 2012 ; Music, Sound, and the Moving Image Volume 6 ; 6 ; >
+    au < finished ; crawling ; 2013 ; Music, Sound, and the Moving Image Volume 7 ; 7 ; reingest1.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Popular Narrative Media ;
+      issn = 1754-3819 ;
+      eissn = 1754-3827 ;
+      issnl = 1754-3819
+    >
+
+    param[journal_issn] = 1754-3827
+
+    comment[ceased_publication]=after 2009
+
+    au < finished ; finished ; 2008 ; Popular Narrative Media Volume 1 ; 1 ; >
+    au < finished ; finished ; 2009 ; Popular Narrative Media Volume 2 ; 2 ; >
+
+  }
+
+  {
+
+    title <
+      name = Romani Studies ;
+      issn = 1528-0748 ;
+      eissn = 1757-2274 ;
+      issnl = 1528-0748
+    >
+
+    param[journal_issn] = 1757-2274
+
+    au < doNotProcess ; exists ; 2000 ; Romani Studies Volume 10 ; 10 ; >
+    au < doNotProcess ; exists ; 2001 ; Romani Studies Volume 11 ; 11 ; >
+    au < doNotProcess ; exists ; 2002 ; Romani Studies Volume 12 ; 12 ; >
+    au < doNotProcess ; exists ; 2003 ; Romani Studies Volume 13 ; 13 ; >
+    au < doNotProcess ; exists ; 2004 ; Romani Studies Volume 14 ; 14 ; >
+    au < doNotProcess ; exists ; 2005 ; Romani Studies Volume 15 ; 15 ; >
+    au < doNotProcess ; exists ; 2006 ; Romani Studies Volume 16 ; 16 ; >
+    au < doNotProcess ; exists ; 2007 ; Romani Studies Volume 17 ; 17 ; >
+    au < finished ; finished ; 2008 ; Romani Studies Volume 18 ; 18 ; >
+    au < finished ; finished ; 2009 ; Romani Studies Volume 19 ; 19 ; >
+    au < finished ; finished ; 2010 ; Romani Studies Volume 20 ; 20 ; >
+    au < finished ; finished ; 2011 ; Romani Studies Volume 21 ; 21 ; >
+    au < finished ; finished ; 2012 ; Romani Studies Volume 22 ; 22 ; >
+    au < finished ; crawling ; 2013 ; Romani Studies Volume 23 ; 23 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = Science Fiction Film and Television ;
+      issn = 1754-3770 ;
+      eissn = 1754-3789 ;
+      issnl = 1754-3770
+    >
+
+    param[journal_issn] = 1754-3789
+
+    au < finished ; finished ; 2008 ; Science Fiction Film and Television Volume 1 ; 1 ; >
+    au < finished ; finished ; 2009 ; Science Fiction Film and Television Volume 2 ; 2 ; >
+    au < finished ; finished ; 2010 ; Science Fiction Film and Television Volume 3 ; 3 ; >
+    au < finished ; finished ; 2011 ; Science Fiction Film and Television Volume 4 ; 4 ; >
+    au < finished ; finished ; 2012 ; Science Fiction Film and Television Volume 5 ; 5 ; >
+    au < finished ; crawling ; 2013 ; Science Fiction Film and Television Volume 6 ; 6 ; reingest3.clockss.org:8083 >
+    au < doNotProcess ; exists ; 2014 ; Science Fiction Film and Television Volume 7 ; 7 ; >
+
+  }
+
+  {
+
+    title <
+      name = Sculpture Journal ;
+      issn = 1366-2724 ;
+      eissn = 1756-9923 ;
+      issnl = 1366-2724
+    >
+
+    param[journal_issn] = 1756-9923
+
+    au < doNotProcess ; exists ; 2005 ; Sculpture Journal Volume 13 ; 13 ; >
+    au < doNotProcess ; exists ; 2005 ; Sculpture Journal Volume 14 ; 14 ; >
+    au < doNotProcess ; exists ; 2006 ; Sculpture Journal Volume 15 ; 15 ; >
+    au < doNotProcess ; exists ; 2007 ; Sculpture Journal Volume 16 ; 16 ; >
+    au < finished ; finished ; 2008 ; Sculpture Journal Volume 17 ; 17 ; >
+    au < finished ; finished ; 2009 ; Sculpture Journal Volume 18 ; 18 ; >
+    au < finished ; finished ; 2010 ; Sculpture Journal Volume 19 ; 19 ; >
+    au < finished ; finished ; 2011 ; Sculpture Journal Volume 20 ; 20 ; >
+    au < finished ; finished ; 2012 ; Sculpture Journal Volume 21 ; 21 ; >
+    au < finished ; crawling ; 2013 ; Sculpture Journal Volume 22 ; 22 ; reingest4.clockss.org:8082 >
+    au < doNotProcess ; exists ; 2014 ; Sculpture Journal Volume 23 ; 23 ; >
+
+  }
+
+     {
+
+    title <
+      name = Third World Planning Review ;
+      issn = 0142-7849 ;
+      issnl = 0142-7849
+    >
+
+    param[journal_issn] = 0142-7849
+    comment[ceased_publication]=after 2000
+
+    au < doNotProcess ; exists ; 1993 ; Third World Planning Review Volume 15 ; 15 ; >
+    au < doNotProcess ; exists ; 1994 ; Third World Planning Review Volume 16 ; 16 ; >
+    au < doNotProcess ; exists ; 1995 ; Third World Planning Review Volume 17 ; 17 ; >
+    au < doNotProcess ; exists ; 1996 ; Third World Planning Review Volume 18 ; 18 ; >
+    au < doNotProcess ; exists ; 1997 ; Third World Planning Review Volume 19 ; 19 ; >
+    au < doNotProcess ; exists ; 1998 ; Third World Planning Review Volume 20 ; 20 ; >
+    au < doNotProcess ; exists ; 1999 ; Third World Planning Review Volume 21 ; 21 ; >
+    au < finished ; finished ; 2000 ; Third World Planning Review Volume 22 ; 22 ; >
+
+  }
+
+  {
+
+    title <
+      name = Town Planning Review ;
+      issn = 0041-0020 ;
+      eissn = 1478-341X ;
+      issnl = 0041-0020
+    >
+
+    param[journal_issn] = 1478-341X
+
+    au < doNotProcess ; exists ; 1910-1911 ; Town Planning Review Volume 1 ; 1 ; >
+    au < doNotProcess ; exists ; 1911-1912 ; Town Planning Review Volume 2 ; 2 ; >
+    au < doNotProcess ; exists ; 1912-1913 ; Town Planning Review Volume 3 ; 3 ; >
+    au < doNotProcess ; exists ; 1913-1914 ; Town Planning Review Volume 4 ; 4 ; >
+    au < doNotProcess ; exists ; 1914-1915 ; Town Planning Review Volume 5 ; 5 ; >
+    au < doNotProcess ; exists ; 1915-1916 ; Town Planning Review Volume 6 ; 6 ; >
+    au < doNotProcess ; exists ; 1916-1918 ; Town Planning Review Volume 7 ; 7 ; >
+    au < doNotProcess ; exists ; 1919-1920 ; Town Planning Review Volume 8 ; 8 ; >
+    au < doNotProcess ; exists ; 1921-1922 ; Town Planning Review Volume 9 ; 9 ; >
+    au < doNotProcess ; exists ; 1923-1924 ; Town Planning Review Volume 10 ; 10 ; >
+    au < doNotProcess ; exists ; 1924-1926 ; Town Planning Review Volume 11 ; 11 ; >
+    au < doNotProcess ; exists ; 1926-1927 ; Town Planning Review Volume 12 ; 12 ; >
+    au < doNotProcess ; exists ; 1928-1929 ; Town Planning Review Volume 13 ; 13 ; >
+    au < doNotProcess ; exists ; 1930-1931 ; Town Planning Review Volume 14 ; 14 ; >
+    au < doNotProcess ; exists ; 1932-1933 ; Town Planning Review Volume 15 ; 15 ; >
+    au < doNotProcess ; exists ; 1934-1935 ; Town Planning Review Volume 16 ; 16 ; >
+    au < doNotProcess ; exists ; 1936-1937 ; Town Planning Review Volume 17 ; 17 ; >
+    au < doNotProcess ; exists ; 1938-1942 ; Town Planning Review Volume 18 ; 18 ; >
+    au < doNotProcess ; exists ; 1943-1947 ; Town Planning Review Volume 19 ; 19 ; >
+    au < doNotProcess ; exists ; 1949-1950 ; Town Planning Review Volume 20 ; 20 ; >
+    au < doNotProcess ; exists ; 1950-1951 ; Town Planning Review Volume 21 ; 21 ; >
+    au < doNotProcess ; exists ; 1951-1952 ; Town Planning Review Volume 22 ; 22 ; >
+    au < doNotProcess ; exists ; 1952-1953 ; Town Planning Review Volume 23 ; 23 ; >
+    au < doNotProcess ; exists ; 1953-1954 ; Town Planning Review Volume 24 ; 24 ; >
+    au < doNotProcess ; exists ; 1954-1955 ; Town Planning Review Volume 25 ; 25 ; >
+    au < doNotProcess ; exists ; 1955-1956 ; Town Planning Review Volume 26 ; 26 ; >
+    au < doNotProcess ; exists ; 1956-1957 ; Town Planning Review Volume 27 ; 27 ; >
+    au < doNotProcess ; exists ; 1957-1958 ; Town Planning Review Volume 28 ; 28 ; >
+    au < doNotProcess ; exists ; 1958-1959 ; Town Planning Review Volume 29 ; 29 ; >
+    au < doNotProcess ; exists ; 1959-1960 ; Town Planning Review Volume 30 ; 30 ; >
+    au < doNotProcess ; exists ; 1960-1961 ; Town Planning Review Volume 31 ; 31 ; >
+    au < doNotProcess ; exists ; 1961-1962 ; Town Planning Review Volume 32 ; 32 ; >
+    au < doNotProcess ; exists ; 1962-1963 ; Town Planning Review Volume 33 ; 33 ; >
+    au < doNotProcess ; exists ; 1963-1964 ; Town Planning Review Volume 34 ; 34 ; >
+    au < doNotProcess ; exists ; 1964-1965 ; Town Planning Review Volume 35 ; 35 ; >
+    au < doNotProcess ; exists ; 1965-1966 ; Town Planning Review Volume 36 ; 36 ; >
+    au < doNotProcess ; exists ; 1966-1967 ; Town Planning Review Volume 37 ; 37 ; >
+    au < doNotProcess ; exists ; 1967-1968 ; Town Planning Review Volume 38 ; 38 ; >
+    au < doNotProcess ; exists ; 1968-1969 ; Town Planning Review Volume 39 ; 39 ; >
+    au < doNotProcess ; exists ; 1969 ; Town Planning Review Volume 40 ; 40 ; >
+    au < doNotProcess ; exists ; 1970 ; Town Planning Review Volume 41 ; 41 ; >
+    au < doNotProcess ; exists ; 1971 ; Town Planning Review Volume 42 ; 42 ; >
+    au < doNotProcess ; exists ; 1972 ; Town Planning Review Volume 43 ; 43 ; >
+    au < doNotProcess ; exists ; 1973 ; Town Planning Review Volume 44 ; 44 ; >
+    au < doNotProcess ; exists ; 1974 ; Town Planning Review Volume 45 ; 45 ; >
+    au < doNotProcess ; exists ; 1975 ; Town Planning Review Volume 46 ; 46 ; >
+    au < doNotProcess ; exists ; 1976 ; Town Planning Review Volume 47 ; 47 ; >
+    au < doNotProcess ; exists ; 1977 ; Town Planning Review Volume 48 ; 48 ; >
+    au < doNotProcess ; exists ; 1978 ; Town Planning Review Volume 49 ; 49 ; >
+    au < doNotProcess ; exists ; 1979 ; Town Planning Review Volume 50 ; 50 ; >
+    au < doNotProcess ; exists ; 1980 ; Town Planning Review Volume 51 ; 51 ; >
+    au < doNotProcess ; exists ; 1981 ; Town Planning Review Volume 52 ; 52 ; >
+    au < doNotProcess ; exists ; 1982 ; Town Planning Review Volume 53 ; 53 ; >
+    au < doNotProcess ; exists ; 1983 ; Town Planning Review Volume 54 ; 54 ; >
+    au < doNotProcess ; exists ; 1984 ; Town Planning Review Volume 55 ; 55 ; >
+    au < doNotProcess ; exists ; 1985 ; Town Planning Review Volume 56 ; 56 ; >
+    au < doNotProcess ; exists ; 1986 ; Town Planning Review Volume 57 ; 57 ; >
+    au < doNotProcess ; exists ; 1987 ; Town Planning Review Volume 58 ; 58 ; >
+    au < doNotProcess ; exists ; 1988 ; Town Planning Review Volume 59 ; 59 ; >
+    au < doNotProcess ; exists ; 1989 ; Town Planning Review Volume 60 ; 60 ; >
+    au < doNotProcess ; exists ; 1990 ; Town Planning Review Volume 61 ; 61 ; >
+    au < doNotProcess ; exists ; 1991 ; Town Planning Review Volume 62 ; 62 ; >
+    au < doNotProcess ; exists ; 1992 ; Town Planning Review Volume 63 ; 63 ; >
+    au < doNotProcess ; exists ; 1993 ; Town Planning Review Volume 64 ; 64 ; >
+    au < doNotProcess ; exists ; 1994 ; Town Planning Review Volume 65 ; 65 ; >
+    au < doNotProcess ; exists ; 1995 ; Town Planning Review Volume 66 ; 66 ; >
+    au < doNotProcess ; exists ; 1996 ; Town Planning Review Volume 67 ; 67 ; >
+    au < doNotProcess ; exists ; 1997 ; Town Planning Review Volume 68 ; 68 ; >
+    au < doNotProcess ; exists ; 1998 ; Town Planning Review Volume 69 ; 69 ; >
+    au < doNotProcess ; exists ; 1999 ; Town Planning Review Volume 70 ; 70 ; >
+    au < doNotProcess ; exists ; 2000 ; Town Planning Review Volume 71 ; 71 ; >
+    au < doesNotExist ; doesNotExist ; 0 ; Town Planning Review Volume 72 ; 72 ; >
+    au < doNotProcess ; exists ; 2002 ; Town Planning Review Volume 73 ; 73 ; >
+    au < doNotProcess ; exists ; 2003 ; Town Planning Review Volume 74 ; 74 ; >
+    au < doNotProcess ; exists ; 2004 ; Town Planning Review Volume 75 ; 75 ; >
+    au < doNotProcess ; exists ; 2005 ; Town Planning Review Volume 76 ; 76 ; >
+    au < doNotProcess ; exists ; 2006 ; Town Planning Review Volume 77 ; 77 ; >
+    au < doNotProcess ; exists ; 2007 ; Town Planning Review Volume 78 ; 78 ; >
+    au < finished ; finished ; 2008 ; Town Planning Review Volume 79 ; 79 ; >
+    au < finished ; finished ; 2009 ; Town Planning Review Volume 80 ; 80 ; >
+    au < finished ; finished ; 2010 ; Town Planning Review Volume 81 ; 81 ; >
+    au < finished ; finished ; 2011 ; Town Planning Review Volume 82 ; 82 ; >
+    au < finished ; finished ; 2012 ; Town Planning Review Volume 83 ; 83 ; >
+    au < finished ; crawling ; 2013 ; Town Planning Review Volume 84 ; 84 ; reingest5.clockss.org:8082 >
+    au < doNotProcess ; exists ; 2014 ; Town Planning Review Volume 85 ; 85 ; >
+
+  }
+
+}

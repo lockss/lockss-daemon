@@ -1,0 +1,756 @@
+{
+
+  publisher <
+    name = Multi-Science ;
+    info[back] = 1999 ;
+    info[contract] = 2012 ;
+    info[tester] = 8 ;
+    info[poller] = 3
+  >
+
+  plugin = org.lockss.plugin.atypon.multiscience.ClockssMultiSciencePlugin
+  param[base_url] = http://multi-science.atypon.com/
+  implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+  {
+
+    title <
+      name = Adsorption Science & Technology ;
+      issn = 0263-6174 ;
+      eissn = 2048-4038
+    >
+
+    param[journal_id] = ast
+    # purchased by Sage 11/15 (moved to H20)
+
+    au < finished ; crawling ; 2000 ; Adsorption Science & Technology Volume 18 ; 18 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2001 ; Adsorption Science & Technology Volume 19 ; 19 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2002 ; Adsorption Science & Technology Volume 20 ; 20 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2003 ; Adsorption Science & Technology Volume 21 ; 21 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2004 ; Adsorption Science & Technology Volume 22 ; 22 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2005 ; Adsorption Science & Technology Volume 23 ; 23 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2006 ; Adsorption Science & Technology Volume 24 ; 24 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2007 ; Adsorption Science & Technology Volume 25 ; 25 ; reingest3.clockss.org:8083 >
+    au < superseded ; exists ; 2008 ; Adsorption Science & Technology Volume 26 [superseded] ; 26 ; >
+    au < superseded ; exists ; 2009 ; Adsorption Science & Technology Volume 27 [superseded] ; 27 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Adsorption Science & Technology Volume 28 ; 28 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Adsorption Science & Technology Volume 29 ; 29 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Adsorption Science & Technology Volume 30 ; 30 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Adsorption Science & Technology Volume 31 ; 31 ; >
+    au < superseded ; finished ; 2014 ; Adsorption Science & Technology Volume 32 [superseded] ; 32 ; >
+    au < superseded ; exists ; 2015 ; Adsorption Science & Technology Volume 33 [superseded] ; 33 ; >
+
+  }
+
+  {
+
+    title <
+      name = Advances in Structural Engineering ;
+      issn = 1369-4332 ;
+      eissn = 2048-4011
+    >
+
+    param[journal_id] = ase
+    # purchased by Sage 11/15
+
+    au < finished ; crawling ; 2000 ; Advances in Structural Engineering Volume 3 ; 3 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2001 ; Advances in Structural Engineering Volume 4 ; 4 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2002 ; Advances in Structural Engineering Volume 5 ; 5 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2003 ; Advances in Structural Engineering Volume 6 ; 6 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2004 ; Advances in Structural Engineering Volume 7 ; 7 ; reingest4.clockss.org:8082 >
+    au < frozen ; exists ; 2005 ; Advances in Structural Engineering Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2006 ; Advances in Structural Engineering Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2007 ; Advances in Structural Engineering Volume 10 ; 10 ; >
+    au < superseded ; exists ; 2008 ; Advances in Structural Engineering Volume 11 [superseded] ; 11 ; >
+    au < superseded ; exists ; 2009 ; Advances in Structural Engineering Volume 12 [superseded] ; 12 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Advances in Structural Engineering Volume 13 ; 13 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Advances in Structural Engineering Volume 14 ; 14 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Advances in Structural Engineering Volume 15 ; 15 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Advances in Structural Engineering Volume 16 ; 16 ; >
+    au < superseded ; finished ; 2014 ; Advances in Structural Engineering Volume 17 [superseded] ; 17 ; >
+    au < superseded ; exists ; 2015 ; Advances in Structural Engineering Volume 18 [superseded] ; 18 ; >
+
+  }
+
+  {
+
+    title <
+      name = Building Acoustics ;
+      issn = 1351-010X ;
+      eissn = 2059-8025
+    >
+
+    param[journal_id] = ba
+    # purchased by Sage 11/15
+
+    au < frozen ; exists ; 1999 ; Building Acoustics Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2000 ; Building Acoustics Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2001 ; Building Acoustics Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2002 ; Building Acoustics Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2003 ; Building Acoustics Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2004 ; Building Acoustics Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2005 ; Building Acoustics Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2006 ; Building Acoustics Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2007 ; Building Acoustics Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2008 ; Building Acoustics Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2009 ; Building Acoustics Volume 16 ; 16 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Building Acoustics Volume 17 ; 17 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Building Acoustics Volume 18 ; 18 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Building Acoustics Volume 19 ; 19 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Building Acoustics Volume 20 ; 20 ; >
+    au < finished ; finished ; 2014 ; Building Acoustics Volume 21 [Multi-Science] ; 21 ; >
+    au < frozen ; exists ; 2015 ; Building Acoustics Volume 22 [Multi-Science] ; 22 ; >
+    #no volumes after 2015.
+
+  }
+
+  {
+
+    title <
+      name = Energy & Environment ;
+      issn = 0958-305X ;
+      eissn = 2048-4070
+    >
+
+    param[journal_id] = ee
+    # purchased by Sage 11/15
+
+    au < frozen ; exists ; 1999 ; Energy & Environment Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2000 ; Energy & Environment Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2001 ; Energy & Environment Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2002 ; Energy & Environment Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2003 ; Energy & Environment Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2004 ; Energy & Environment Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2005 ; Energy & Environment Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2006 ; Energy & Environment Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2007 ; Energy & Environment Volume 18 ; 18 ; >
+    au < superseded ; exists ; 2008 ; Energy & Environment Volume 19 [superseded] ; 19 ; >
+    au < superseded ; exists ; 2009 ; Energy & Environment Volume 20 [superseded] ; 20 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Energy & Environment Volume 21 ; 21 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Energy & Environment Volume 22 ; 22 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Energy & Environment Volume 23 ; 23 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Energy & Environment Volume 24 ; 24 ; >
+    au < superseded ; finished ; 2014 ; Energy & Environment Volume 25 [superseded] ; 25 ; >
+    au < superseded ; exists ; 2015 ; Energy & Environment Volume 26 [superseded] ; 26 ; >
+
+  }
+
+  {
+
+    title <
+      name = Energy Exploration & Exploitation ;
+      issn = 0144-5987 ;
+      eissn = 2048-4054
+    >
+
+    param[journal_id] = eee
+    # purchased by Sage 11/15
+
+    au < frozen ; exists ; 2000 ; Energy Exploration & Exploitation Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2001 ; Energy Exploration & Exploitation Volume 19 ; 19 ; >
+    au < frozen ; exists ; 2002 ; Energy Exploration & Exploitation Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2003 ; Energy Exploration & Exploitation Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2004 ; Energy Exploration & Exploitation Volume 22 ; 22 ; >
+    au < frozen ; exists ; 2005 ; Energy Exploration & Exploitation Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2006 ; Energy Exploration & Exploitation Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2007 ; Energy Exploration & Exploitation Volume 25 ; 25 ; >
+    au < frozen ; exists ; 2008 ; Energy Exploration & Exploitation Volume 26 ; 26 ; >
+    au < frozen ; exists ; 2009 ; Energy Exploration & Exploitation Volume 27 ; 27 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Energy Exploration & Exploitation Volume 28 ; 28 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Energy Exploration & Exploitation Volume 29 ; 29 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Energy Exploration & Exploitation Volume 30 ; 30 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Energy Exploration & Exploitation Volume 31 ; 31 ; >
+    au < frozen ; exists ; 2014 ; Energy Exploration & Exploitation Volume 32 ; 32 ; >
+    au < superseded ; exists ; 2015 ; Energy Exploration & Exploitation Volume 33 [superseded] ; 33 ; >
+    au < doNotProcess ; exists ; 2016 ; Energy Exploration & Exploitation Volume 34 ; 34 ; >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Aeroacoustics ;
+      issn = 1475-472X ;
+      eissn = 2048-4003
+    >
+
+    param[journal_id] = ija
+    # purchased by Sage 11/15
+
+    au < frozen ; exists ; 2002 ; International Journal of Aeroacoustics Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2003 ; International Journal of Aeroacoustics Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2004 ; International Journal of Aeroacoustics Volume 3 ; 3 ; >
+    au < finished ; finished ; 2005 ; International Journal of Aeroacoustics Volume 4 ; 4 ; reingest2.clockss.org:8085 >
+    au < frozen ; exists ; 2006 ; International Journal of Aeroacoustics Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2007 ; International Journal of Aeroacoustics Volume 6 ; 6 ; >
+    au < finished ; finished ; 2008 ; International Journal of Aeroacoustics Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+    au < frozen ; exists ; 2009 ; International Journal of Aeroacoustics Volume 8 ; 8 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Aeroacoustics Volume 9 ; 9 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Aeroacoustics Volume 10 ; 10 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Aeroacoustics Volume 11 ; 11 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Aeroacoustics Volume 12 ; 12 ; >
+    au < finished ; finished ; 2014 ; International Journal of Aeroacoustics Volume 13 [Multi-Science] ; 13 ; >
+    au < frozen ; exists ; 2015 ; International Journal of Aeroacoustics Volume 14 [Multi-Science] ; 14 ; >
+
+  }
+
+
+  {
+
+    title <
+      name = International Journal of Aerospace Innovations ;
+      issn = 1757-2258
+    >
+
+    param[journal_id] = ijai
+    # triggering
+
+    au < finished ; finished ; 2009 ; International Journal of Aerospace Innovations Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2010 ; International Journal of Aerospace Innovations Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2011 ; International Journal of Aerospace Innovations Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2012 ; International Journal of Aerospace Innovations Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2013 ; International Journal of Aerospace Innovations Volume 5 ; 5 ; reingest3.clockss.org:8083 >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Architectural Computing ;
+      issn = 1478-0771 ;
+      eissn = 2048-3988 
+    >
+
+    param[journal_id] = ijac
+    # purchased by Sage 11/15
+
+    au < frozen ; exists ; 2003 ; International Journal of Architectural Computing Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2004 ; International Journal of Architectural Computing Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2005 ; International Journal of Architectural Computing Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2006 ; International Journal of Architectural Computing Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2007 ; International Journal of Architectural Computing Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2008 ; International Journal of Architectural Computing Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2009 ; International Journal of Architectural Computing Volume 7 ; 7 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Architectural Computing Volume 8 ; 8 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Architectural Computing Volume 9 ; 9 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Architectural Computing Volume 10 ; 10 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Architectural Computing Volume 11 ; 11 ; >
+    au < finished ; finished ; 2014 ; International Journal of Architectural Computing Volume 12 ; 12 ; >
+    au < superseded ; exists ; 2015 ; International Journal of Architectural Computing Volume 13 [superseded] ; 13 ; >
+    au < doNotProcess ; exists ; 2016 ; International Journal of Architectural Computing Volume 14 ; 14 ; >
+
+  }
+
+
+  {
+
+    title <
+      name = International Journal of Emerging Multidisciplinary Fluid Sciences ;
+      issn = 1756-8315
+    >
+
+    param[journal_id] = ijemf
+    # triggering
+
+    au < finished ; finished ; 2009 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2010 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2011-2012 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+
+  }
+
+
+  {
+
+    title <
+      name = International Journal of Flow Control ;
+      issn = 1756-8250
+    >
+
+    param[journal_id] = ijfc
+    # triggering
+
+    au < finished ; frozen ; 2009 ; International Journal of Flow Control Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2010 ; International Journal of Flow Control Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2011 ; International Journal of Flow Control Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2012 ; International Journal of Flow Control Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; International Journal of Flow Control Volume 5 ; 5 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; International Journal of Flow Control Volume 6 ; 6 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2015 ; International Journal of Flow Control Volume 7 ; 7 ; reingest3.clockss.org:8083 >
+    #OCLC is not up for crawling - must add later
+
+  }
+
+
+  {
+
+    title <
+      name = International Journal of Heritage in the Digital Era ;
+      issn = 2047-4970 ;
+      eissn = 2047-4989
+    >
+
+    param[journal_id] = ijhde
+    # purchased by Sage 11/15
+
+    au < finished ; finished ; 2012 ; International Journal of Heritage in the Digital Era Volume 1 ; 1 ; >
+    au < finished ; finished ; 2013 ; International Journal of Heritage in the Digital Era Volume 2 ; 2 ; >
+    au < finished ; finished ; 2014 ; International Journal of Heritage in the Digital Era Volume 3 [Multi-Science] ; 3 ; >
+    au < finished ; finished ; 2015 ; International Journal of Heritage in the Digital Era Volume 4 [Multi-Science] ; 4 ; reingest2.clockss.org:8085 >
+
+  }
+
+
+  {
+
+    title <
+      name = International Journal of Hypersonics ;
+      issn = 1759-3107
+    >
+
+    param[journal_id] = ijh
+    # triggering
+
+    au < finished ; frozen ; 2010 ; International Journal of Hypersonics Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2011 ; International Journal of Hypersonics Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+
+  }
+
+
+  {
+
+    title <
+      name = International Journal of Innovation Science ;
+      issn = 1757-2223
+    >
+
+    param[journal_id] = ijis
+    # transfering to Emerald Publishing
+
+    au < frozen ; exists ; 2009 ; International Journal of Innovation Science Volume 1 ; 1 ; >
+    au < finished ; finished ; 2010 ; International Journal of Innovation Science Volume 2 ; 2 ; >
+    au < finished ; finished ; 2011 ; International Journal of Innovation Science Volume 3 ; 3 ; >
+    au < finished ; finished ; 2012 ; International Journal of Innovation Science Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2013 ; International Journal of Innovation Science Volume 5 ; 5 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; International Journal of Innovation Science Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2015 ; International Journal of Innovation Science Volume 7 ; 7 ; >
+    au < doNotProcess ; exists ; 2016 ; International Journal of Innovation Science Volume 8 ; 8 ; >
+
+  }
+
+
+  {
+
+    title <
+      name = International Journal of Micro Air Vehicles ;
+      issn = 1756-8293 ;
+      eissn = 1756-8307
+    >
+
+    param[journal_id] = ijmav
+    # purchased by Sage 11/15
+
+    au < frozen ; exists ; 2009 ; International Journal of Micro Air Vehicles Volume 1 ; 1 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Micro Air Vehicles Volume 2 ; 2 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Micro Air Vehicles Volume 3 ; 3 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Micro Air Vehicles Volume 4 ; 4 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Micro Air Vehicles Volume 5 ; 5 ; >
+    au < finished ; finished ; 2014 ; International Journal of Micro Air Vehicles Volume 6 ; 6 ; >
+    au < superseded ; exists ; 2015 ; International Journal of Micro Air Vehicles Volume 7 [superseded] ; 7 ; >
+
+  }
+
+
+  {
+
+    title <
+      name = International Journal of Micro-Nano Scale Transport ;
+      issn = 1759-3093
+    >
+
+    param[journal_id] = ijmnst
+    # triggering
+
+    au < finished ; finished ; 2010 ; International Journal of Micro-Nano Scale Transport Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2011 ; International Journal of Micro-Nano Scale Transport Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2012 ; International Journal of Micro-Nano Scale Transport Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2013 ; International Journal of Micro-Nano Scale Transport Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; International Journal of Micro-Nano Scale Transport Volume 5 ; 5 ; reingest3.clockss.org:8083 >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Protective Structures ;
+      issn = 2041-4196 ;
+      eissn = 2041-420X
+    >
+
+    param[journal_id] = ijps
+    # purchased by Sage 11/15
+
+    au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Protective Structures Volume 1 ; 1 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Protective Structures Volume 2 ; 2 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Protective Structures Volume 3 ; 3 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Protective Structures Volume 4 ; 4 ; >
+    au < finished ; finished ; 2014 ; International Journal of Protective Structures Volume 5 [Multi-Science] ; 5 ; >
+    au < frozen ; exists ; 2015 ; International Journal of Protective Structures Volume 6 [Multi-Science] ; 6 ; >
+
+  }
+
+
+  {
+
+    title <
+      name = International Journal of Space Structures ;
+      issn = 0266-3511 ;
+      eissn = 2059-8033
+    >
+
+    param[journal_id] = ijss
+    # purchased by Sage 11/15
+
+    au < frozen ; exists ; 1999 ; International Journal of Space Structures Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2000 ; International Journal of Space Structures Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2001 ; International Journal of Space Structures Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2002 ; International Journal of Space Structures Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2003 ; International Journal of Space Structures Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2004 ; International Journal of Space Structures Volume 19 ; 19 ; >
+    au < finished ; finished ; 2005 ; International Journal of Space Structures Volume 20 ; 20 ; reingest3.clockss.org:8083 >
+    au < frozen ; exists ; 2006 ; International Journal of Space Structures Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2007 ; International Journal of Space Structures Volume 22 ; 22 ; >
+    au < frozen ; exists ; 2008 ; International Journal of Space Structures Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2009 ; International Journal of Space Structures Volume 24 ; 24 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Space Structures Volume 25 ; 25 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Space Structures Volume 26 ; 26 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Space Structures Volume 27 ; 27 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Space Structures Volume 28 ; 28 ; >
+    au < finished ; finished ; 2014 ; International Journal of Space Structures Volume 29 [Multi-Science] ; 29 ; >
+    au < frozen ; exists ; 2015 ; International Journal of Space Structures Volume 30 [Multi-Science] ; 30 ; >
+
+  }
+
+
+  {
+
+    title <
+      name = International Journal of Sports Science and Coaching ;
+      issn = 1747-9541 ;
+      eissn = 2048-397X
+    >
+
+    param[journal_id] = ijssc
+    # purchased by Sage 11/15
+
+    au < frozen ; exists ; 2006 ; International Journal of Sports Science and Coaching Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2007 ; International Journal of Sports Science and Coaching Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2008 ; International Journal of Sports Science and Coaching Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2009 ; International Journal of Sports Science and Coaching Volume 4 ; 4 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Sports Science and Coaching Volume 5 ; 5 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Sports Science and Coaching Volume 6 ; 6 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Sports Science and Coaching Volume 7 ; 7 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Sports Science and Coaching Volume 8 ; 8 ; >
+    au < finished ; finished ; 2014 ; International Journal of Sports Science and Coaching Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2015 ; International Journal of Sports Science and Coaching Volume 10 ; 10 ; >
+
+  }
+
+
+  {
+
+    title <
+      name = International Journal of Spray and Combustion Dynamics ;
+      issn = 1756-8277;
+      eissn = 1756-8285
+    >
+
+    param[journal_id] = ijscd
+    # purchased by Sage 11/15
+
+    au < frozen ; exists ; 2009 ; International Journal of Spray and Combustion Dynamics Volume 1 ; 1 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Spray and Combustion Dynamics Volume 2 ; 2 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Spray and Combustion Dynamics Volume 3 ; 3 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Spray and Combustion Dynamics Volume 4 ; 4 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Spray and Combustion Dynamics Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2014 ; International Journal of Spray and Combustion Dynamics Volume 6 [Multi-Science] ; 6 ; >
+    au < frozen ; exists ; 2015 ; International Journal of Spray and Combustion Dynamics Volume 7 [Multi-Science] ; 7 ; >
+
+  }
+
+
+  {
+
+    title <
+      name = International Journal of Transportation Science and Technology ;
+      issn = 2046-0430
+    >
+
+    param[journal_id] = ijtst
+    # transfering to Emerald Publishing
+
+    au < frozen ; exists ; 2012 ; International Journal of Transportation Science and Technology Volume 1 ; 1 ; >
+    au < finished ; finished ; 2013 ; International Journal of Transportation Science and Technology Volume 2 ; 2 ; >
+    au < finished ; finished ; 2014 ; International Journal of Transportation Science and Technology Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2015 ; International Journal of Transportation Science and Technology Volume 4 ; 4 ; >
+
+  }
+
+
+  {
+
+    title <
+      name = Journal of Algorithms & Computational Technology ;
+      issn = 1748-3018 ;
+      eissn = 1748-3026
+    >
+
+    param[journal_id] = jact
+    # purchased by Sage 11/15
+
+    au < frozen ; exists ; 2007 ; Journal of Algorithms & Computational Technology Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2008 ; Journal of Algorithms & Computational Technology Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2009 ; Journal of Algorithms & Computational Technology Volume 3 ; 3 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Journal of Algorithms & Computational Technology Volume 4 ; 4 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Journal of Algorithms & Computational Technology Volume 5 ; 5 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Journal of Algorithms & Computational Technology Volume 6 ; 6 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Journal of Algorithms & Computational Technology Volume 7 ; 7 ; >
+    au < finished ; finished ; 2014 ; Journal of Algorithms & Computational Technology Volume 8 ; 8 ; >
+    au < superseded ; exists ; 2015 ; Journal of Algorithms & Computational Technology Volume 9 [superseded] ; 9 ; >
+
+  }
+
+
+  {
+
+    title <
+      name = Journal of Healthcare Engineering ;
+      issn = 2040-2295 ;
+      eissn = 2040-2309
+    >
+
+    param[journal_id] = jhe
+    # transfering to Hindawi Publishing
+
+    au < finished ; finished ; 2010 ; Journal of Healthcare Engineering Volume 1 ; 1 ; >
+    au < finished ; finished ; 2011 ; Journal of Healthcare Engineering Volume 2 ; 2 ; >
+    au < finished ; finished ; 2012 ; Journal of Healthcare Engineering Volume 3 ; 3 ; >
+    au < finished ; finished ; 2013 ; Journal of Healthcare Engineering Volume 4 ; 4 ; >
+    au < finished ; finished ; 2014 ; Journal of Healthcare Engineering Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2015 ; Journal of Healthcare Engineering Volume 6 ; 6 ; >
+
+  }
+
+
+  {
+
+    title <
+      name = Journal of Structural Fire Engineering ;
+      issn = 2040-2317
+    >
+
+    param[journal_id] = jsfe
+    # transfering to Emerald Publishing
+
+    au < finished ; finished ; 2010 ; Journal of Structural Fire Engineering Volume 1 ; 1 ; >
+    au < finished ; finished ; 2011 ; Journal of Structural Fire Engineering Volume 2 ; 2 ; >
+    au < finished ; finished ; 2012 ; Journal of Structural Fire Engineering Volume 3 ; 3 ; >
+    au < finished ; finished ; 2013 ; Journal of Structural Fire Engineering Volume 4 ; 4 ; >
+    au < finished ; finished ; 2014 ; Journal of Structural Fire Engineering Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2015 ; Journal of Structural Fire Engineering Volume 6 ; 6 ; >
+
+  }
+
+
+  {
+
+    title <
+      name = Journal of Low Frequency Noise, Vibration and Active Control ;
+      issn = 0263-0923 ;
+      eissn = 2048-4046
+    >
+
+    param[journal_id] = jlfnvac
+    # purchased by Sage 11/15
+
+    au < finished ; finished ; 2000 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 19 ; 19 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2001 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 20 ; 20 ; >
+    au < finished ; finished ; 2002 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 21 ; 21 ; >
+    au < finished ; finished ; 2003 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 22 ; 22 ; >
+    au < finished ; finished ; 2004 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 23 ; 23 ; >
+    au < finished ; finished ; 2005 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 24 ; 24 ; >
+    au < finished ; finished ; 2006 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 25 ; 25 ; >
+    au < finished ; finished ; 2007 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 26 ; 26 ; >
+    au < finished ; finished ; 2008 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 27 ; 27 ; >
+    au < finished ; finished ; 2009 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 28 ; 28 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 29 ; 29 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 30 ; 30 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 31 ; 31 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 32 ; 32 ; >
+    au < finished ; finished ; 2014 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 33 ; 33 ; reingest1.clockss.org:8082 >
+    au < superseded ; exists ; 2015 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 34 [superseded] ; 34 ; >
+
+  }
+
+
+  {
+
+    title <
+      name = Noise & Vibration Worldwide ;
+      issn = 0957-4565 ;
+      eissn = 2048-4062
+    >
+
+    param[journal_id] = nvww
+    # purchased by Sage 11/15
+
+    au < doNotProcess ; doNotProcess ; 2008 ; Noise & Vibration Worldwide Volume 39 ; 39 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Noise & Vibration Worldwide Volume 40 ; 40 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Noise & Vibration Worldwide Volume 41 ; 41 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Noise & Vibration Worldwide Volume 42 ; 42 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Noise & Vibration Worldwide Volume 43 ; 43 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Noise & Vibration Worldwide Volume 44 ; 44 ; >
+    au < superseded ; finished ; 2014 ; Noise & Vibration Worldwide Volume 45 [superseded] ; 45 ; >
+    au < superseded ; exists ; 2015 ; Noise & Vibration Worldwide Volume 46 [superseded] ; 46 ; >
+
+  }
+
+
+  {
+
+    title <
+      name = Noise Notes ;
+      issn = 1475-4738
+    >
+
+    param[journal_id] = nn
+    # triggering
+
+    au < finished ; finished ; 2002 ; Noise Notes Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2003 ; Noise Notes Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2004 ; Noise Notes Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2005 ; Noise Notes Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2006 ; Noise Notes Volume 5 ; 5 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2007 ; Noise Notes Volume 6 ; 6 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2008 ; Noise Notes Volume 7 ; 7 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2009 ; Noise Notes Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2010 ; Noise Notes Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2011 ; Noise Notes Volume 10 ; 10 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2012 ; Noise Notes Volume 11 ; 11 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2013 ; Noise Notes Volume 12 ; 12 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; Noise Notes Volume 13 ; 13 ; reingest3.clockss.org:8083 >
+
+  }
+
+  {
+
+    title <
+      name = The International Journal of Multiphysics ;
+      issn = 1750-9548
+    >
+
+    param[journal_id] = ijm
+    # transfering to Institute of Multiphysics
+
+    au < finished ; finished ; 2007 ; The International Journal of Multiphysics Volume 1 ; 1 ; >
+    au < finished ; finished ; 2008 ; The International Journal of Multiphysics Volume 2 ; 2 ; >
+    au < finished ; finished ; 2009 ; The International Journal of Multiphysics Volume 3 ; 3 ; >
+    au < finished ; finished ; 2010 ; The International Journal of Multiphysics Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2011 ; The International Journal of Multiphysics Volume 5 ; 5 ; >
+    au < finished ; finished ; 2012 ; The International Journal of Multiphysics Volume 6 ; 6 ; >
+    au < finished ; finished ; 2013 ; The International Journal of Multiphysics Volume 7 ; 7 ; >
+    au < finished ; finished ; 2014 ; The International Journal of Multiphysics Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2015 ; The International Journal of Multiphysics Volume 9 ; 9 ; >
+
+  }
+
+
+  {
+
+    title <
+      name = The International Journal of Ocean and Climate Systems ;
+      issn = 1759-3131 ;
+      eissn = 1759-314X
+    >
+
+    param[journal_id] = ijocs
+    # purchased by Sage 11/15
+
+    au < doNotProcess ; doNotProcess ; 2010 ; The International Journal of Ocean and Climate Systems Volume 1 ; 1 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; The International Journal of Ocean and Climate Systems Volume 2 ; 2 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; The International Journal of Ocean and Climate Systems Volume 3 ; 3 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; The International Journal of Ocean and Climate Systems Volume 4 ; 4 ; >
+    au < finished ; finished ; 2014 ; The International Journal of Ocean and Climate Systems Volume 5 [Multi-Science] ; 5 ; >
+    au < frozen ; exists ; 2015 ; The International Journal of Ocean and Climate Systems Volume 6 [Multi-Science] ; 6 ; >
+
+  }
+
+  {
+
+    title <
+      name = The Journal of Computational Multiphase Flows ;
+      issn = 1757-482X ;
+      eissn = 1757-4838 
+    >
+
+    param[journal_id] = jcmf
+    # purchased by Sage 11/15
+
+    au < finished ; finished ; 2009 ; The Journal of Computational Multiphase Flows Volume 1 ; 1 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; The Journal of Computational Multiphase Flows Volume 2 ; 2 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; The Journal of Computational Multiphase Flows Volume 3 ; 3 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; The Journal of Computational Multiphase Flows Volume 4 ; 4 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; The Journal of Computational Multiphase Flows Volume 5 ; 5 ; >
+    au < finished ; finished ; 2014 ; The Journal of Computational Multiphase Flows Volume 6 ; 6 ; >
+    au < superseded ; exists ; 2015 ; The Journal of Computational Multiphase Flows Volume 7 [superseded] ; 7 ; >
+
+  }
+
+  {
+
+    title <
+      name = Wind Engineering ;
+      issn = 0309-524X ;
+      eissn = 2048-402X
+    >
+
+    param[journal_id] = we
+    # purchased by Sage 11/15
+
+    au < finished ; finished ; 2000 ; Wind Engineering Volume 24 ; 24 ; >
+    au < finished ; finished ; 2001 ; Wind Engineering Volume 25 ; 25 ; >
+    au < finished ; finished ; 2002 ; Wind Engineering Volume 26 ; 26 ; >
+    au < finished ; finished ; 2003 ; Wind Engineering Volume 27 ; 27 ; >
+    au < finished ; finished ; 2004 ; Wind Engineering Volume 28 ; 28 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2005 ; Wind Engineering Volume 29 ; 29 ; >
+    au < finished ; finished ; 2006 ; Wind Engineering Volume 30 ; 30 ; >
+    au < finished ; finished ; 2007 ; Wind Engineering Volume 31 ; 31 ; >
+    au < finished ; finished ; 2008 ; Wind Engineering Volume 32 ; 32 ; >
+    au < finished ; finished ; 2009 ; Wind Engineering Volume 33 ; 33 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Wind Engineering Volume 34 ; 34 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Wind Engineering Volume 35 ; 35 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Wind Engineering Volume 36 ; 36 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Wind Engineering Volume 37 ; 37 ; >
+    au < superseded ; finished ; 2014 ; Wind Engineering Volume 38 [superseded] ; 38 ; >
+    au < superseded ; exists ; 2015 ; Wind Engineering Volume 39 [superseded] ; 39 ; >
+
+  }
+
+  {
+
+    title <
+      name = World Journal of Engineering ;
+      issn = 1708-5284
+    >
+
+    param[journal_id] = wjoe
+    # transfering to Emerald Publishing
+
+    au < frozen ; exists ; 2011 ; World Journal of Engineering Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2012 ; World Journal of Engineering Volume 9 ; 9 ; >
+    au < finished ; finished ; 2013 ; World Journal of Engineering Volume 10 ; 10 ; >
+    au < finished ; finished ; 2014 ; World Journal of Engineering Volume 11 ; 11 ; >
+    au < finished ; finished ; 2015 ; World Journal of Engineering Volume 12 ; 12 ; reingest5.clockss.org:8082 >
+
+  }
+
+}

@@ -1,0 +1,177 @@
+
+{
+
+  publisher <
+    name = European Respiratory Society ;
+    info[contract] = 2011 ;
+    info[tester] = 8 ;
+    info[poller] = 2
+  >
+
+    pluginPrefix = org.lockss.plugin.highwire.
+    implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; param[base_url] ; proxy >
+
+  {
+    title <
+      name = Breathe ;
+      issn = 1810-6838 ;
+      eissn = 2073-4735 ;
+      issnl = 1810-6838
+    >
+
+    #param[base_url] = http://breathe.ersjournals.com/
+
+    au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2004-2005 ; Breathe Volume 1 ; 1 ; https://breathe.ersjournals.com/ ; >
+    au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2005-2006 ; Breathe Volume 2 ; 2 ; https://breathe.ersjournals.com/ ; >
+    au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2006-2007 ; Breathe Volume 3 ; 3 ; https://breathe.ersjournals.com/ ; >
+    au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2007-2008 ; Breathe Volume 4 ; 4 ; https://breathe.ersjournals.com/ ; >
+    au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2008-2009 ; Breathe Volume 5 ; 5 ; https://breathe.ersjournals.com/ ; >
+    au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2009-2010 ; Breathe Volume 6 ; 6 ; https://breathe.ersjournals.com/ ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010-2011 ; Breathe Volume 7 ; 7 ; http://breathe.ersjournals.com/ ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011-2012 ; Breathe Volume 8 ; 8 ; http://breathe.ersjournals.com/ ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012-2013 ; Breathe Volume 9 ; 9 ; http://breathe.ersjournals.com/ ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Breathe Volume 10 ; 10 ; http://breathe.ersjournals.com/ ; reingest4.clockss.org:8082 >
+    au < ers.ClockssERSDrupalPlugin ; finished ; finished ; 2015 ; Breathe Volume 11 ; 11 ; http://breathe.ersjournals.com/ ; reingest2.clockss.org:8085 >
+    au < ers.ClockssERSDrupalPlugin ; finished ; finished ; 2016 ; Breathe Volume 12 ; 12 ; http://breathe.ersjournals.com/ ; reingest4.clockss.org:8082 >
+    au < ers.ClockssERSDrupalPlugin ; finished ; crawling ; 2017 ; Breathe Volume 13 ; 13 ; http://breathe.ersjournals.com/ ; reingest1.clockss.org:8082 >
+    au < ers.ClockssERSDrupalPlugin ; finished ; crawling ; 2018 ; Breathe Volume 14 ; 14 ; http://breathe.ersjournals.com/ ; reingest2.clockss.org:8085 >
+    au < ers.ClockssERSDrupalPlugin ; finished ; crawling ; 2019 ; Breathe Volume 15 ; 15 ; https://breathe.ersjournals.com/ ; reingest4.clockss.org:8082 >
+    au < ers.ClockssERSDrupalPlugin ; crawling ; exists ; 2020 ; Breathe Volume 16 ; 16 ; https://breathe.ersjournals.com/ ; >
+    au < ers.ClockssERSDrupalPlugin ; crawling ; exists ; 2021 ; Breathe Volume 17 ; 17 ; https://breathe.ersjournals.com/ ; >
+    au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2022 ; Breathe Volume 18 ; 18 ; https://breathe.ersjournals.com/ ; >
+
+  }
+
+  {
+    title <
+      name = ERJ Open Research ;
+      eissn = 2312-0541 ;
+      issnl = 2312-0541
+    >
+    #param[base_url] = http://openres.ersjournals.com/
+
+
+    au < ers.ClockssERSDrupalPlugin ; finished ; finished ; 2015 ; ERJ Open Research Volume 1 ; 1 ; http://openres.ersjournals.com/ ; reingest2.clockss.org:8085 >
+    au < ers.ClockssERSDrupalPlugin ; finished ; crawling ; 2016 ; ERJ Open Research Volume 2 ; 2 ; http://openres.ersjournals.com/ ; reingest1.clockss.org:8082 >
+    au < ers.ClockssERSDrupalPlugin ; finished ; crawling ; 2017 ; ERJ Open Research Volume 3 ; 3 ; http://openres.ersjournals.com/ ; reingest2.clockss.org:8085 >
+    au < ers.ClockssERSDrupalPlugin ; finished ; crawling ; 2018 ; ERJ Open Research Volume 4 ; 4 ; http://openres.ersjournals.com/ ; reingest3.clockss.org:8083 >
+    au < ers.ClockssERSDrupalPlugin ; finished ; crawling ; 2019 ; ERJ Open Research Volume 5 ; 5 ; https://openres.ersjournals.com/ ; reingest3.clockss.org:8083 >
+    au < ers.ClockssERSDrupalPlugin ; crawling ; exists ; 2020 ; ERJ Open Research Volume 6 ; 6 ; https://openres.ersjournals.com/ ; >
+    au < ers.ClockssERSDrupalPlugin ; crawling ; exists ; 2021 ; ERJ Open Research Volume 7 ; 7 ; https://openres.ersjournals.com/ ; >
+    au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2022 ; ERJ Open Research Volume 8 ; 8 ; https://openres.ersjournals.com/ ; >
+
+  }
+
+  {
+    title <
+      name = European Respiratory Journal ;
+      issn = 0903-1936 ;
+      eissn = 1399-3003 ;
+      issnl = 0903-1936
+
+    >
+    #param[base_url] = http://erj.ersjournals.com/
+
+    {
+
+      attr[au_coverage_depth] = abstracts
+
+      au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 1988 ; European Respiratory Journal Volume 1 [abstracts only] ; 1 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 1989 ; European Respiratory Journal Volume 2 [abstracts only] ; 2 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 1990 ; European Respiratory Journal Volume 3 [abstracts only] ; 3 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 1991 ; European Respiratory Journal Volume 4 [abstracts only] ; 4 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 1992 ; European Respiratory Journal Volume 5 [abstracts only] ; 5 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 1993 ; European Respiratory Journal Volume 6 [abstracts only] ; 6 ; https://erj.ersjournals.com/ ; >
+    }
+    {
+      au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 1994 ; European Respiratory Journal Volume 7 ; 7 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 1995 ; European Respiratory Journal Volume 8 ; 8 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 1996 ; European Respiratory Journal Volume 9 ; 9 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 1997 ; European Respiratory Journal Volume 10 ; 10 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 1998 ; European Respiratory Journal Volume 11 ; 11 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 1998 ; European Respiratory Journal Volume 12 ; 12 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 1999 ; European Respiratory Journal Volume 13 ; 13 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 1999 ; European Respiratory Journal Volume 14 ; 14 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2000 ; European Respiratory Journal Volume 15 ; 15 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2000 ; European Respiratory Journal Volume 16 ; 16 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2001 ; European Respiratory Journal Volume 17 ; 17 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2001 ; European Respiratory Journal Volume 18 ; 18 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2002 ; European Respiratory Journal Volume 19 ; 19 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2002 ; European Respiratory Journal Volume 20 ; 20 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2003 ; European Respiratory Journal Volume 21 ; 21 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2003 ; European Respiratory Journal Volume 22 ; 22 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2004 ; European Respiratory Journal Volume 23 ; 23 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2004 ; European Respiratory Journal Volume 24 ; 24 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2005 ; European Respiratory Journal Volume 25 ; 25 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2005 ; European Respiratory Journal Volume 26 ; 26 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2006 ; European Respiratory Journal Volume 27 ; 27 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2006 ; European Respiratory Journal Volume 28 ; 28 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2007 ; European Respiratory Journal Volume 29 ; 29 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2007 ; European Respiratory Journal Volume 30 ; 30 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2008 ; European Respiratory Journal Volume 31 ; 31 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2008 ; European Respiratory Journal Volume 32 ; 32 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2009 ; European Respiratory Journal Volume 33 ; 33 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2009 ; European Respiratory Journal Volume 34 ; 34 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2010 ; European Respiratory Journal Volume 35 ; 35 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2010 ; European Respiratory Journal Volume 36 ; 36 ; https://erj.ersjournals.com/ ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; European Respiratory Journal Volume 37 ; 37 ; http://erj.ersjournals.com/ ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; European Respiratory Journal Volume 38 ; 38 ; http://erj.ersjournals.com/ ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; European Respiratory Journal Volume 39 ; 39 ; http://erj.ersjournals.com/ ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; European Respiratory Journal Volume 40 ; 40 ; http://erj.ersjournals.com/ ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2013 ; European Respiratory Journal Volume 41 ; 41 ; http://erj.ersjournals.com/ ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2013 ; European Respiratory Journal Volume 42 ; 42 ; http://erj.ersjournals.com/ ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; European Respiratory Journal Volume 43 ; 43 ; http://erj.ersjournals.com/ ; >
+      au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2014 ; European Respiratory Journal Volume 44 ; 44 ; http://erj.ersjournals.com/ ; reingest2.clockss.org:8085 >
+      au < ers.ClockssERSDrupalPlugin ; zapped ; finished ; 2015 ; European Respiratory Journal Volume 45 ; 45 ; http://erj.ersjournals.com/ ; reingest2.clockss.org:8085 >
+      au < ers.ClockssERSDrupalPlugin ; zapped ; finished ; 2015 ; European Respiratory Journal Volume 46 ; 46 ; http://erj.ersjournals.com/ ; reingest2.clockss.org:8085 >
+      au < ers.ClockssERSDrupalPlugin ; finished ; finished ; 2016 ; European Respiratory Journal Volume 47 ; 47 ; http://erj.ersjournals.com/ ; reingest1.clockss.org:8082 >
+      au < ers.ClockssERSDrupalPlugin ; finished ; crawling ; 2016 ; European Respiratory Journal Volume 48 ; 48 ; http://erj.ersjournals.com/ ; reingest5.clockss.org:8082 >
+      au < ers.ClockssERSDrupalPlugin ; finished ; crawling ; 2017 ; European Respiratory Journal Volume 49 ; 49 ; http://erj.ersjournals.com/ ; reingest4.clockss.org:8082 >
+      au < ers.ClockssERSDrupalPlugin ; finished ; crawling ; 2017 ; European Respiratory Journal Volume 50 ; 50 ; http://erj.ersjournals.com/ ; reingest5.clockss.org:8082 >
+      au < ers.ClockssERSDrupalPlugin ; finished ; crawling ; 2018 ; European Respiratory Journal Volume 51 ; 51 ; http://erj.ersjournals.com/ ; reingest1.clockss.org:8082 >
+      au < ers.ClockssERSDrupalPlugin ; finished ; crawling ; 2018 ; European Respiratory Journal Volume 52 ; 52 ; https://erj.ersjournals.com/ ; reingest2.clockss.org:8085 >
+      au < ers.ClockssERSDrupalPlugin ; finished ; crawling ; 2019 ; European Respiratory Journal Volume 53 ; 53 ; https://erj.ersjournals.com/ ; reingest2.clockss.org:8085 >
+      au < ers.ClockssERSDrupalPlugin ; finished ; crawling ; 2019 ; European Respiratory Journal Volume 54 ; 54 ; https://erj.ersjournals.com/ ; reingest5.clockss.org:8082 >
+      au < ers.ClockssERSDrupalPlugin ; crawling ; exists ; 2020 ; European Respiratory Journal Volume 55 ; 55 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; crawling ; exists ; 2020 ; European Respiratory Journal Volume 56 ; 56 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; crawling ; exists ; 2021 ; European Respiratory Journal Volume 57 ; 57 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; crawling ; exists ; 2021 ; European Respiratory Journal Volume 58 ; 58 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2022 ; European Respiratory Journal Volume 59 ; 59 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2022 ; European Respiratory Journal Volume 60 ; 60 ; https://erj.ersjournals.com/ ; >
+
+    }
+
+  }
+
+  {
+    title <
+      name = European Respiratory Review ;
+      issn = 0905-9180 ;
+      eissn = 1600-0617 ;
+      issnl = 0905-9180
+    >
+    #param[base_url] = http://err.ersjournals.com/
+
+
+    au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2005 ; European Respiratory Review Volume 14 ; 14 ; https://err.ersjournals.com/ ; >
+    au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2006 ; European Respiratory Review Volume 15 ; 15 ; https://err.ersjournals.com/ ; >
+    au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2007 ; European Respiratory Review Volume 16 ; 16 ; https://err.ersjournals.com/ ; >
+    au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2008 ; European Respiratory Review Volume 17 ; 17 ; https://err.ersjournals.com/ ; >
+    au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2009 ; European Respiratory Review Volume 18 ; 18 ; https://err.ersjournals.com/ ; >
+    au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2010 ; European Respiratory Review Volume 19 ; 19 ; https://err.ersjournals.com/ ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; European Respiratory Review Volume 20 ; 20 ; http://err.ersjournals.com/ ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; European Respiratory Review Volume 21 ; 21 ; http://err.ersjournals.com/ ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2013 ; European Respiratory Review Volume 22 ; 22 ; http://err.ersjournals.com/ ; reingest3.clockss.org:8083 >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; European Respiratory Review Volume 23 ; 23 ; http://err.ersjournals.com/ ; reingest4.clockss.org:8082 >
+    au < ers.ClockssERSDrupalPlugin ; finished ; finished ; 2015 ; European Respiratory Review Volume 24 ; 24 ; http://err.ersjournals.com/ ; reingest2.clockss.org:8085 >
+    au < ers.ClockssERSDrupalPlugin ; finished ; finished ; 2016 ; European Respiratory Review Volume 25 ; 25 ; http://err.ersjournals.com/ ; reingest2.clockss.org:8085 >
+    au < ers.ClockssERSDrupalPlugin ; finished ; crawling ; 2017 ; European Respiratory Review Volume 26 ; 26 ; http://err.ersjournals.com/ ; reingest3.clockss.org:8083 >
+    au < ers.ClockssERSDrupalPlugin ; finished ; crawling ; 2018 ; European Respiratory Review Volume 27 ; 27 ; http://err.ersjournals.com/ ; reingest3.clockss.org:8083 >
+    au < ers.ClockssERSDrupalPlugin ; finished ; crawling ; 2019 ; European Respiratory Review Volume 28 ; 28 ; https://err.ersjournals.com/ ; reingest4.clockss.org:8082 >
+    au < ers.ClockssERSDrupalPlugin ; crawling ; exists ; 2020 ; European Respiratory Review Volume 29 ; 29 ; https://err.ersjournals.com/ ; >
+    au < ers.ClockssERSDrupalPlugin ; crawling ; exists ; 2021 ; European Respiratory Review Volume 30 ; 30 ; https://err.ersjournals.com/ ; >
+    au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2022 ; European Respiratory Review Volume 31 ; 31 ; https://err.ersjournals.com/ ; >
+
+  }
+
+}

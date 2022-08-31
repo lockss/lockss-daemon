@@ -1,0 +1,29 @@
+# This Sage Publications file is for titles previously hosted by other platforms 
+{
+
+  publisher <
+    name = SAGE Publications ;
+    info[contract] = 2015 ;
+    info[tester] = S
+  >
+  
+    {
+
+      title <
+        name = Handbook of Practice Management ;
+        type = bookSeries ;
+        issn = 0962-144X ;
+        eissn = 2047-718X
+      >
+
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      param[base_url] = http://hpm.sagepub.com/
+      implicit < status1 ; status ; year ; isbn ; name ; param[volume_name] ; proxy >
+
+      au < exists ; exists ; 2009 ; 0-443-04576-3 ; Handbook of Practice Management Volume 71 ; 71 ; >
+	#No more AUs expected
+
+    }
+    
+
+}

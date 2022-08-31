@@ -1,0 +1,31 @@
+{
+
+  publisher <
+    name = Hellenic Psychiatric Association ;
+    info[contract] = 2016 ;
+    info[tester] = S ;
+    info[platform] = Source
+  >
+
+  {
+
+    title <
+       name = Hellenic Psychiatric Association Source Content
+    >
+
+    plugin = org.lockss.plugin.clockss.hellenic.ClockssHellenicPsychiatricAssociationSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/hpa-released/
+    proxy = DIRECT
+    implicit < status1 ; status ; year ; name ; param[year] >
+
+    au < zapped ; finished ; 2016 ; Hellenic Psychiatric Association Source Content 2016 ; 2016 >
+    au < zapped ; finished ; 2017 ; Hellenic Psychiatric Association Source Content 2017 ; 2017 >
+    au < zapped ; finished ; 2018 ; Hellenic Psychiatric Association Source Content 2018 ; 2018 >
+    au < zapped ; finished ; 2019 ; Hellenic Psychiatric Association Source Content 2019 ; 2019 >
+    au < readySource ; finished ; 2020 ; Hellenic Psychiatric Association Source Content 2020 ; 2020 >
+    au < readySource ; finished ; 2021 ; Hellenic Psychiatric Association Source Content 2021 ; 2021 >
+    au < readySource ; crawling ; 2022 ; Hellenic Psychiatric Association Source Content 2022 ; 2022 >
+
+  }
+
+}

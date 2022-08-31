@@ -1,0 +1,67 @@
+{
+
+  publisher <
+    name = Open Library of Humanities ;
+    info[contract] = 2012 ;
+    info[tester] = S ;
+    info[platform] = WARC
+  >
+
+    comment[publisherName] = The publisher requested we list the following publications under the new publisher name Martin Paul Eve.
+    #And October 2017 the publisher name is changing to Open Library of Humanities and adding 2 titles 
+
+    plugin = org.lockss.plugin.clockss.warc.ClockssWarcPlugin
+    proxy = DIRECT
+    implicit < status1 ; status ; year ; name ; param[year] ; comment[date_collected] >
+
+  {
+    title <
+       name = Alluvium WARC Content ;
+       issn = 2050-1560
+     >
+    # This content was collected using wget and provided for preservation as a
+    # set of WARC files
+    # WARC content collected from https://www.alluvium-journal.org/
+
+    param[base_url] = http://clockss-ingest.lockss.org/warcfiles/alluvium-released/
+
+    au < zapped ; finished ; 2016 ; Alluvium WARC Content 2016 ; 2016 ; 2016-09-15 >
+    au < zapped ; finished ; 2018 ; Alluvium WARC Content 2018 ; 2018 ; 2018-06-25 >
+    
+  }
+  
+    {
+    title <
+       name = Dandelion: Postgraduate Arts Journal and Research Network ;
+       eissn = 2048-1322
+     >
+     #Leave title same as harvest entry in tdb file. Do not add "WARC Content to title."
+    # This content was collected using wget and provided for preservation as a
+    # set of WARC files
+    # WARC content collected from https://dandelionjournal.org/
+
+    param[base_url] = http://clockss-ingest.lockss.org/warcfiles/dandelion-released/
+
+    au < zapped ; finished ; 2018 ; Dandelion WARC Content 2018 ; 2018 ; 2018-06-25 >
+    #MOVED TO HARVEST
+
+  }
+  
+    {
+    title <
+       name = International Journal of Welsh Writing in English ;
+       eissn = 2053-1915
+     >
+     #Leave title same as harvest entry in tdb file. Do not add "WARC Content to title."
+    # This content was collected using wget and provided for preservation as a
+    # set of WARC files
+    # WARC content collected from https://ijwwe.uwp.co.uk/
+
+    param[base_url] = http://clockss-ingest.lockss.org/warcfiles/journal-of-welsh-writing-in-english-released/
+
+    au < zapped ; finished ; 2018 ; International Journal of Welsh Writing in English WARC Content 2018 ; 2018 ; 2018-06-25 >
+    #MOVED TO HARVEST
+
+  }
+  
+}

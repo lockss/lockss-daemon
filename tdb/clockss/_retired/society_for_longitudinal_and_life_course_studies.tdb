@@ -1,0 +1,33 @@
+{
+
+  publisher <
+    name = Society for Longitudinal and Life Course Studies ;
+    info[contract] = 2013 ;
+    info[tester] = 8 ;
+    info[poller] = 8
+  >
+  
+  {
+  
+    title < 
+      name = Longitudinal and Life Course Studies ;
+      issn = 1757-9597 
+    >
+      
+    plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
+    param[base_url] = http://www.llcsjournal.org/
+    param[journal_id] = llcs
+    implicit < status1 ; status ; year ; name ; volume ; param[year] ; proxy >
+      
+    au < finished ; finished ; 2009 ; Longitudinal and Life Course Studies Volume 1 (2009) ; 1 ; 2009 ; >
+    au < finished ; finished ; 2010 ; Longitudinal and Life Course Studies Volume 1 (2010) ; 1 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Longitudinal and Life Course Studies Volume 2 ; 2 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Longitudinal and Life Course Studies Volume 3 ; 3 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Longitudinal and Life Course Studies Volume 4 ; 4 ; 2013 ; >
+    au < finished ; finished ; 2014 ; Longitudinal and Life Course Studies Volume 5 ; 5 ; 2014 ; >
+    au < finished ; finished ; 2015 ; Longitudinal and Life Course Studies Volume 6 ; 6 ; 2015 ; >
+    au < finished ; finished ; 2016 ; Longitudinal and Life Course Studies Volume 7 ; 7 ; 2016 ; reingest2.clockss.org:8085 >
+    #cancelled contract after 2016. See RT 8476.
+  }
+
+}

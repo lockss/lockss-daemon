@@ -1,0 +1,32 @@
+{
+  publisher <
+    name = Central Council for Research in Homoeopathy ;
+    info[contract] = 2015 ;
+    info[back] = 2014 ;
+    info[tester] = 5 ;
+    info[poller] = 8
+  >
+  provider = bepress
+  # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
+
+
+  plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+  implicit < status1 ; status ; year ; name ; param[volume] ; proxy >
+  param[base_url] = https://ijrh.researchcommons.org/
+
+  {
+
+    title <
+      name = Indian Journal of Research in Homoeopathy ;
+      issn = 0974-7168 ;
+      eissn = 2320-7094
+    >
+
+    param[journal_abbr] = journal
+
+    au < frozen ; exists ; 2021 ; Indian Journal of Research in Homoeopathy Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2022 ; Indian Journal of Research in Homoeopathy Volume 16 ; 16 ; >
+
+  }
+
+}

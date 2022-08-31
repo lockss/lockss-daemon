@@ -1,0 +1,29 @@
+{
+
+  publisher <
+    name = IP Innovative Publication ;
+    info[contract] = 2019 ;
+    info[tester] = S ;
+    info[platform] = Source
+  >
+
+  {
+
+    title <
+       name = IP Innovative Publication
+    >
+
+
+    plugin = org.lockss.plugin.clockss.innovativepublication.ClockssInnovativePublicationSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/innovativepublication-released/
+
+    proxy = DIRECT
+    implicit < status1 ; status ; year ; name ; param[year] >
+
+    au < readySource ; finished ; 2020 ; IP Innovative Publication Content 2020 ; 2020 >
+    au < readySource ; finished ; 2021 ; IP Innovative Publication Content 2021 ; 2021 >
+    au < readySource ; crawling ; 2022 ; IP Innovative Publication Content 2022 ; 2022 >
+
+  }
+
+}

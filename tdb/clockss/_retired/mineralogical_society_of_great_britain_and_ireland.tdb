@@ -1,0 +1,132 @@
+{
+
+  publisher <
+    name = Mineralogical Society of Great Britain and Ireland ;
+    info[back] = 2000 ;
+    info[contract] = 2011 ;
+    info[tester] = 5 ;
+    info[poller] = 2
+  >
+
+    pluginPrefix = org.lockss.plugin.highwire.
+    implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+ 
+  {
+  
+    title <
+      name = Clay Minerals ;
+      issn = 0009-8558 ;
+      eissn = 1471-8030 ;
+      issnl = 0009-8558
+    >
+    
+    param[base_url] = http://claymin.geoscienceworld.org/
+    #move to Cambridge University Press in 2018 
+
+    {
+
+      attr[au_coverage_depth] = abstracts
+
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1975 ; Clay Minerals Volume 10 [abstracts only] ; 10 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1976 ; Clay Minerals Volume 11 [abstracts only] ; 11 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1977 ; Clay Minerals Volume 12 [abstracts only] ; 12 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1978 ; Clay Minerals Volume 13 [abstracts only] ; 13 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1979 ; Clay Minerals Volume 14 [abstracts only] ; 14 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1980 ; Clay Minerals Volume 15 [abstracts only] ; 15 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1981 ; Clay Minerals Volume 16 [abstracts only] ; 16 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1982 ; Clay Minerals Volume 17 [abstracts only] ; 17 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1983 ; Clay Minerals Volume 18 [abstracts only] ; 18 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1984 ; Clay Minerals Volume 19 [abstracts only] ; 19 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1985 ; Clay Minerals Volume 20 [abstracts only] ; 20 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1986 ; Clay Minerals Volume 21 [abstracts only] ; 21 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1987 ; Clay Minerals Volume 22 [abstracts only] ; 22 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1988 ; Clay Minerals Volume 23 [abstracts only] ; 23 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1989 ; Clay Minerals Volume 24 [abstracts only] ; 24 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1990 ; Clay Minerals Volume 25 [abstracts only] ; 25 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1991 ; Clay Minerals Volume 26 [abstracts only] ; 26 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1992 ; Clay Minerals Volume 27 [abstracts only] ; 27 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1993 ; Clay Minerals Volume 28 [abstracts only] ; 28 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1994 ; Clay Minerals Volume 29 [abstracts only] ; 29 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1995 ; Clay Minerals Volume 30 [abstracts only] ; 30 ; >
+    }
+    {
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1996 ; Clay Minerals Volume 31 ; 31 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1997 ; Clay Minerals Volume 32 ; 32 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1998 ; Clay Minerals Volume 33 ; 33 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1999 ; Clay Minerals Volume 34 ; 34 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 2000 ; Clay Minerals Volume 35 ; 35 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 2001 ; Clay Minerals Volume 36 ; 36 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 2002 ; Clay Minerals Volume 37 ; 37 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 2003 ; Clay Minerals Volume 38 ; 38 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 2004 ; Clay Minerals Volume 39 ; 39 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 2005 ; Clay Minerals Volume 40 ; 40 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 2006 ; Clay Minerals Volume 41 ; 41 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 2007 ; Clay Minerals Volume 42 ; 42 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 2008 ; Clay Minerals Volume 43 ; 43 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 2009 ; Clay Minerals Volume 44 ; 44 ; >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2010 ; Clay Minerals Volume 45 [superseded] ; 45 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 2010 ; Clay Minerals Volume 45 ; 45 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Clay Minerals Volume 46 ; 46 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Clay Minerals Volume 47 ; 47 ; >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2013 ; Clay Minerals Volume 48 [superseded] ; 48 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 2013 ; Clay Minerals Volume 48 ; 48 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Clay Minerals Volume 49 ; 49 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Clay Minerals Volume 50 ; 50 ; reingest5.clockss.org:8082 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; finished ; 2016 ; Clay Minerals Volume 51 ; 51 ; reingest1.clockss.org:8082 >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; exists ; 2017 ; Clay Minerals Volume 52 ; 52 ; >
+
+    }
+   
+  }
+
+  {
+  
+    title <
+      name = Mineralogical Magazine ;
+      issn = 0026-461X ;
+      eissn = 1471-8022 ;
+      issnl = 0026-461X
+    >
+    param[base_url] = http://minmag.geoscienceworld.org/
+    #move to Cambridge University Press in 2018 
+    
+    comment[vol60] = Vol 60 has irregular contents. A few pdfs, some just tables of contents.
+
+    {
+
+      attr[au_coverage_depth] = abstracts
+
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1994 ; Mineralogical Magazine Volume 58 [abstracts only] ; 58 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1995 ; Mineralogical Magazine Volume 59 [abstracts only] ; 59 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1996 ; Mineralogical Magazine Volume 60 [abstracts only] ; 60 ; >
+    }
+    {
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1997 ; Mineralogical Magazine Volume 61 ; 61 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1998 ; Mineralogical Magazine Volume 62 ; 62 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 1999 ; Mineralogical Magazine Volume 63 ; 63 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 2000 ; Mineralogical Magazine Volume 64 ; 64 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 2001 ; Mineralogical Magazine Volume 65 ; 65 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 2002 ; Mineralogical Magazine Volume 66 ; 66 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 2003 ; Mineralogical Magazine Volume 67 ; 67 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 2004 ; Mineralogical Magazine Volume 68 ; 68 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 2005 ; Mineralogical Magazine Volume 69 ; 69 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 2006 ; Mineralogical Magazine Volume 70 ; 70 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 2007 ; Mineralogical Magazine Volume 71 ; 71 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 2008 ; Mineralogical Magazine Volume 72 ; 72 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; doNotProcess ; 2009 ; Mineralogical Magazine Volume 73 ; 73 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 2010 ; Mineralogical Magazine Volume 74 ; 74 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Mineralogical Magazine Volume 75 ; 75 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Mineralogical Magazine Volume 76 ; 76 ; >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2013 ; Mineralogical Magazine Volume 77 [superseded] ; 77 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 2013 ; Mineralogical Magazine Volume 77 ; 77 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Mineralogical Magazine Volume 78 ; 78 ; >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2015 ; Mineralogical Magazine Volume 79 [superseded] ; 79 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; finished ; 2015 ; Mineralogical Magazine Volume 79 ; 79 ; reingest1.clockss.org:8082 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; finished ; 2016 ; Mineralogical Magazine Volume 80 ; 80 ; reingest1.clockss.org:8082 >
+      au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; exists ; 2017 ; Mineralogical Magazine Volume 81 ; 81 ; >
+
+    }
+    
+  }
+
+}

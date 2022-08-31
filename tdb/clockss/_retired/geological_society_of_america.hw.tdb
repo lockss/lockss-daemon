@@ -1,0 +1,249 @@
+{
+
+  publisher <
+    name = Geological Society of America ;
+    info[contract] = 2011 ;
+    info[tester] = 8 ;
+    info[poller] = 6
+    #moved to Silverchair
+  >
+
+  {
+
+    title <
+      name = Geological Society of America Bulletin ;
+      issn = 0016-7606 ;
+      eissn = 1943-2674 ;
+      issnl = 0016-7606
+    >
+
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+    param[base_url] = http://gsabulletin.gsapubs.org/
+    implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+    {
+
+      attr[au_coverage_depth] = abstracts
+
+      au < doNotProcess ; exists ; 1918 ; Geological Society of America Bulletin Volume 29 [abstracts only] ; 29 ; >
+      au < doNotProcess ; exists ; 1919 ; Geological Society of America Bulletin Volume 30 [abstracts only] ; 30 ; >
+      au < doNotProcess ; exists ; 1920 ; Geological Society of America Bulletin Volume 31 [abstracts only] ; 31 ; >
+      au < doNotProcess ; exists ; 1921 ; Geological Society of America Bulletin Volume 32 [abstracts only] ; 32 ; >
+      au < doNotProcess ; exists ; 1922 ; Geological Society of America Bulletin Volume 33 [abstracts only] ; 33 ; >
+    }
+    {
+      au < doNotProcess ; exists ; 1923 ; Geological Society of America Bulletin Volume 34 ; 34 ; >
+      au < doNotProcess ; exists ; 1924 ; Geological Society of America Bulletin Volume 35 ; 35 ; >
+      au < doNotProcess ; exists ; 1925 ; Geological Society of America Bulletin Volume 36 ; 36 ; >
+      au < doNotProcess ; exists ; 1926 ; Geological Society of America Bulletin Volume 37 ; 37 ; >
+      au < doNotProcess ; exists ; 1927 ; Geological Society of America Bulletin Volume 38 ; 38 ; >
+      au < doNotProcess ; exists ; 1928 ; Geological Society of America Bulletin Volume 39 ; 39 ; >
+      au < doNotProcess ; exists ; 1929 ; Geological Society of America Bulletin Volume 40 ; 40 ; >
+      au < doNotProcess ; exists ; 1930 ; Geological Society of America Bulletin Volume 41 ; 41 ; >
+      au < doNotProcess ; exists ; 1931 ; Geological Society of America Bulletin Volume 42 ; 42 ; >
+      au < doNotProcess ; exists ; 1932 ; Geological Society of America Bulletin Volume 43 ; 43 ; >
+      au < doNotProcess ; exists ; 1933 ; Geological Society of America Bulletin Volume 44 ; 44 ; >
+      au < doNotProcess ; exists ; 1934 ; Geological Society of America Bulletin Volume 45 ; 45 ; >
+      au < doNotProcess ; exists ; 1935 ; Geological Society of America Bulletin Volume 46 ; 46 ; >
+      au < doNotProcess ; exists ; 1936 ; Geological Society of America Bulletin Volume 47 ; 47 ; >
+      au < doNotProcess ; exists ; 1937 ; Geological Society of America Bulletin Volume 48 ; 48 ; >
+      au < doNotProcess ; exists ; 1938 ; Geological Society of America Bulletin Volume 49 ; 49 ; >
+      au < doNotProcess ; exists ; 1939 ; Geological Society of America Bulletin Volume 50 ; 50 ; >
+      au < doNotProcess ; exists ; 1940 ; Geological Society of America Bulletin Volume 51 ; 51 ; >
+      au < doNotProcess ; exists ; 1941 ; Geological Society of America Bulletin Volume 52 ; 52 ; >
+      au < doNotProcess ; exists ; 1942 ; Geological Society of America Bulletin Volume 53 ; 53 ; >
+      au < doNotProcess ; exists ; 1943 ; Geological Society of America Bulletin Volume 54 ; 54 ; >
+      au < doNotProcess ; exists ; 1944 ; Geological Society of America Bulletin Volume 55 ; 55 ; >
+      au < doNotProcess ; exists ; 1945 ; Geological Society of America Bulletin Volume 56 ; 56 ; >
+      au < doNotProcess ; exists ; 1946 ; Geological Society of America Bulletin Volume 57 ; 57 ; >
+      au < doNotProcess ; exists ; 1947 ; Geological Society of America Bulletin Volume 58 ; 58 ; >
+      au < doNotProcess ; exists ; 1948 ; Geological Society of America Bulletin Volume 59 ; 59 ; >
+      au < doNotProcess ; exists ; 1949 ; Geological Society of America Bulletin Volume 60 ; 60 ; >
+      au < doNotProcess ; exists ; 1950 ; Geological Society of America Bulletin Volume 61 ; 61 ; >
+      au < doNotProcess ; exists ; 1951 ; Geological Society of America Bulletin Volume 62 ; 62 ; >
+      au < doNotProcess ; exists ; 1952 ; Geological Society of America Bulletin Volume 63 ; 63 ; >
+      au < doNotProcess ; exists ; 1953 ; Geological Society of America Bulletin Volume 64 ; 64 ; >
+      au < doNotProcess ; exists ; 1954 ; Geological Society of America Bulletin Volume 65 ; 65 ; >
+      au < doNotProcess ; exists ; 1955 ; Geological Society of America Bulletin Volume 66 ; 66 ; >
+      au < doNotProcess ; exists ; 1956 ; Geological Society of America Bulletin Volume 67 ; 67 ; >
+      au < doNotProcess ; exists ; 1957 ; Geological Society of America Bulletin Volume 68 ; 68 ; >
+      au < doNotProcess ; exists ; 1958 ; Geological Society of America Bulletin Volume 69 ; 69 ; >
+      au < doNotProcess ; exists ; 1959 ; Geological Society of America Bulletin Volume 70 ; 70 ; >
+      au < doNotProcess ; exists ; 1960 ; Geological Society of America Bulletin Volume 71 ; 71 ; >
+      au < doNotProcess ; exists ; 1961 ; Geological Society of America Bulletin Volume 72 ; 72 ; >
+      au < doNotProcess ; exists ; 1962 ; Geological Society of America Bulletin Volume 73 ; 73 ; >
+      au < doNotProcess ; exists ; 1963 ; Geological Society of America Bulletin Volume 74 ; 74 ; >
+      au < doNotProcess ; exists ; 1964 ; Geological Society of America Bulletin Volume 75 ; 75 ; >
+      au < doNotProcess ; exists ; 1965 ; Geological Society of America Bulletin Volume 76 ; 76 ; >
+      au < doNotProcess ; exists ; 1966 ; Geological Society of America Bulletin Volume 77 ; 77 ; >
+      au < doNotProcess ; exists ; 1967 ; Geological Society of America Bulletin Volume 78 ; 78 ; >
+      au < doNotProcess ; exists ; 1968 ; Geological Society of America Bulletin Volume 79 ; 79 ; >
+      au < doNotProcess ; exists ; 1969 ; Geological Society of America Bulletin Volume 80 ; 80 ; >
+      au < doNotProcess ; exists ; 1970 ; Geological Society of America Bulletin Volume 81 ; 81 ; >
+      au < doNotProcess ; exists ; 1971 ; Geological Society of America Bulletin Volume 82 ; 82 ; >
+      au < doNotProcess ; exists ; 1972 ; Geological Society of America Bulletin Volume 83 ; 83 ; >
+      au < doNotProcess ; exists ; 1973 ; Geological Society of America Bulletin Volume 84 ; 84 ; >
+      au < doNotProcess ; exists ; 1974 ; Geological Society of America Bulletin Volume 85 ; 85 ; >
+      au < doNotProcess ; exists ; 1975 ; Geological Society of America Bulletin Volume 86 ; 86 ; >
+      au < doNotProcess ; exists ; 1976 ; Geological Society of America Bulletin Volume 87 ; 87 ; >
+      au < doNotProcess ; exists ; 1977 ; Geological Society of America Bulletin Volume 88 ; 88 ; >
+      au < doNotProcess ; exists ; 1978 ; Geological Society of America Bulletin Volume 89 ; 89 ; >
+      au < doNotProcess ; exists ; 1979 ; Geological Society of America Bulletin Volume 90 ; 90 ; >
+      au < doNotProcess ; exists ; 1980 ; Geological Society of America Bulletin Volume 91 ; 91 ; >
+      au < doNotProcess ; exists ; 1981 ; Geological Society of America Bulletin Volume 92 ; 92 ; >
+      au < doNotProcess ; exists ; 1982 ; Geological Society of America Bulletin Volume 93 ; 93 ; >
+      au < doNotProcess ; exists ; 1983 ; Geological Society of America Bulletin Volume 94 ; 94 ; >
+      au < doNotProcess ; exists ; 1984 ; Geological Society of America Bulletin Volume 95 ; 95 ; >
+      au < doNotProcess ; exists ; 1985 ; Geological Society of America Bulletin Volume 96 ; 96 ; >
+      au < doNotProcess ; exists ; 1986 ; Geological Society of America Bulletin Volume 97 ; 97 ; >
+      au < doNotProcess ; exists ; 1987 ; Geological Society of America Bulletin Volume 98 ; 98 ; >
+      au < doNotProcess ; exists ; 1987 ; Geological Society of America Bulletin Volume 99 ; 99 ; >
+      au < doNotProcess ; exists ; 1988 ; Geological Society of America Bulletin Volume 100 ; 100 ; >
+      au < doNotProcess ; exists ; 1989 ; Geological Society of America Bulletin Volume 101 ; 101 ; >
+      au < doNotProcess ; exists ; 1990 ; Geological Society of America Bulletin Volume 102 ; 102 ; >
+      au < doNotProcess ; exists ; 1991 ; Geological Society of America Bulletin Volume 103 ; 103 ; >
+      au < doNotProcess ; exists ; 1992 ; Geological Society of America Bulletin Volume 104 ; 104 ; >
+      au < doNotProcess ; exists ; 1993 ; Geological Society of America Bulletin Volume 105 ; 105 ; >
+      au < doNotProcess ; exists ; 1994 ; Geological Society of America Bulletin Volume 106 ; 106 ; >
+      au < doNotProcess ; exists ; 1995 ; Geological Society of America Bulletin Volume 107 ; 107 ; >
+      au < doNotProcess ; exists ; 1996 ; Geological Society of America Bulletin Volume 108 ; 108 ; >
+      au < doNotProcess ; exists ; 1997 ; Geological Society of America Bulletin Volume 109 ; 109 ; >
+      au < doNotProcess ; exists ; 1998 ; Geological Society of America Bulletin Volume 110 ; 110 ; >
+      au < doNotProcess ; exists ; 1999 ; Geological Society of America Bulletin Volume 111 ; 111 ; >
+      au < doNotProcess ; exists ; 2000 ; Geological Society of America Bulletin Volume 112 ; 112 ; >
+      au < doNotProcess ; exists ; 2001 ; Geological Society of America Bulletin Volume 113 ; 113 ; >
+      au < doNotProcess ; exists ; 2002 ; Geological Society of America Bulletin Volume 114 ; 114 ; >
+      au < doNotProcess ; exists ; 2003 ; Geological Society of America Bulletin Volume 115 ; 115 ; >
+      au < doNotProcess ; exists ; 2004 ; Geological Society of America Bulletin Volume 116 ; 116 ; >
+      au < doNotProcess ; exists ; 2005 ; Geological Society of America Bulletin Volume 117 ; 117 ; >
+      au < doNotProcess ; exists ; 2006 ; Geological Society of America Bulletin Volume 118 ; 118 ; >
+      au < doNotProcess ; exists ; 2007 ; Geological Society of America Bulletin Volume 119 ; 119 ; >
+      au < doNotProcess ; exists ; 2008 ; Geological Society of America Bulletin Volume 120 ; 120 ; >
+      au < doNotProcess ; exists ; 2009 ; Geological Society of America Bulletin Volume 121 ; 121 ; >
+      au < doNotProcess ; exists ; 2010 ; Geological Society of America Bulletin Volume 122 ; 122 ; >
+      au < zapped ; finished ; 2011 ; Geological Society of America Bulletin Volume 123 ; 123 ; >
+      au < zapped ; finished ; 2012 ; Geological Society of America Bulletin Volume 124 ; 124 ; >
+      au < zapped ; finished ; 2013 ; Geological Society of America Bulletin Volume 125 ; 125 ; >
+      au < finished ; finished ; 2014 ; Geological Society of America Bulletin Volume 126 ; 126 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 2015 ; Geological Society of America Bulletin Volume 127 ; 127 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; Geological Society of America Bulletin Volume 128 ; 128 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; exists ; 2017 ; Geological Society of America Bulletin Volume 129 ; 129 ; >
+
+    } 
+
+  }
+
+  {
+
+    title <
+      name = Geology ;
+      issn = 0091-7613 ;
+      eissn = 1943-2682 ;
+      issnl = 0091-7613
+    >
+
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+    param[base_url] = http://geology.gsapubs.org/
+    implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+    au < doNotProcess ; exists ; 1973 ; Geology Volume 1 ; 1 ; >
+    au < doNotProcess ; exists ; 1974 ; Geology Volume 2 ; 2 ; >
+    au < doNotProcess ; exists ; 1975 ; Geology Volume 3 ; 3 ; >
+    au < doNotProcess ; exists ; 1976 ; Geology Volume 4 ; 4 ; >
+    au < doNotProcess ; exists ; 1977 ; Geology Volume 5 ; 5 ; >
+    au < doNotProcess ; exists ; 1978 ; Geology Volume 6 ; 6 ; >
+    au < doNotProcess ; exists ; 1979 ; Geology Volume 7 ; 7 ; >
+    au < doNotProcess ; exists ; 1980 ; Geology Volume 8 ; 8 ; >
+    au < doNotProcess ; exists ; 1981 ; Geology Volume 9 ; 9 ; >
+    au < doNotProcess ; exists ; 1982 ; Geology Volume 10 ; 10 ; >
+    au < doNotProcess ; exists ; 1983 ; Geology Volume 11 ; 11 ; >
+    au < doNotProcess ; exists ; 1984 ; Geology Volume 12 ; 12 ; >
+    au < doNotProcess ; exists ; 1985 ; Geology Volume 13 ; 13 ; >
+    au < doNotProcess ; exists ; 1986 ; Geology Volume 14 ; 14 ; >
+    au < doNotProcess ; exists ; 1987 ; Geology Volume 15 ; 15 ; >
+    au < doNotProcess ; exists ; 1988 ; Geology Volume 16 ; 16 ; >
+    au < doNotProcess ; exists ; 1989 ; Geology Volume 17 ; 17 ; >
+    au < doNotProcess ; exists ; 1990 ; Geology Volume 18 ; 18 ; >
+    au < doNotProcess ; exists ; 1991 ; Geology Volume 19 ; 19 ; >
+    au < doNotProcess ; exists ; 1992 ; Geology Volume 20 ; 20 ; >
+    au < doNotProcess ; exists ; 1993 ; Geology Volume 21 ; 21 ; >
+    au < doNotProcess ; exists ; 1994 ; Geology Volume 22 ; 22 ; >
+    au < doNotProcess ; exists ; 1995 ; Geology Volume 23 ; 23 ; >
+    au < doNotProcess ; exists ; 1996 ; Geology Volume 24 ; 24 ; >
+    au < doNotProcess ; exists ; 1997 ; Geology Volume 25 ; 25 ; >
+    au < doNotProcess ; exists ; 1998 ; Geology Volume 26 ; 26 ; >
+    au < doNotProcess ; exists ; 1999 ; Geology Volume 27 ; 27 ; >
+    au < doNotProcess ; exists ; 2000 ; Geology Volume 28 ; 28 ; >
+    au < doNotProcess ; exists ; 2001 ; Geology Volume 29 ; 29 ; >
+    au < doNotProcess ; exists ; 2002 ; Geology Volume 30 ; 30 ; >
+    au < doNotProcess ; exists ; 2003 ; Geology Volume 31 ; 31 ; >
+    au < doNotProcess ; exists ; 2004 ; Geology Volume 32 ; 32 ; >
+    au < doNotProcess ; exists ; 2005 ; Geology Volume 33 ; 33 ; >
+    au < doNotProcess ; exists ; 2006 ; Geology Volume 34 ; 34 ; >
+    au < doNotProcess ; exists ; 2007 ; Geology Volume 35 ; 35 ; >
+    au < doNotProcess ; exists ; 2008 ; Geology Volume 36 ; 36 ; >
+    au < doNotProcess ; exists ; 2009 ; Geology Volume 37 ; 37 ; >
+    au < doNotProcess ; exists ; 2010 ; Geology Volume 38 ; 38 ; >
+    au < finished ; finished ; 2011 ; Geology Volume 39 ; 39 ; >
+    au < finished ; finished ; 2012 ; Geology Volume 40 ; 40 ; >
+    au < finished ; finished ; 2013 ; Geology Volume 41 ; 41 ; >
+    au < finished ; finished ; 2014 ; Geology Volume 42 ; 42 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; Geology Volume 43 ; 43 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; Geology Volume 44 ; 44 ; reingest4.clockss.org:8082 >
+    au < doNotProcess ; exists ; 2017 ; Geology Volume 45 ; 45 ; >
+
+  }
+
+  {
+
+    title <
+      name = Geosphere ;
+      eissn = 1553-040X
+    >
+
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+    param[base_url] = http://geosphere.gsapubs.org/
+    implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+    au < doNotProcess ; exists ; 2005 ; Geosphere Volume 1 ; 1 ; >
+    au < doNotProcess ; exists ; 2006 ; Geosphere Volume 2 ; 2 ; >
+    au < doNotProcess ; exists ; 2007 ; Geosphere Volume 3 ; 3 ; >
+    au < doNotProcess ; exists ; 2008 ; Geosphere Volume 4 ; 4 ; >
+    au < doNotProcess ; exists ; 2009 ; Geosphere Volume 5 ; 5 ; >
+    au < doNotProcess ; exists ; 2010 ; Geosphere Volume 6 ; 6 ; >
+    au < zapped ; finished ; 2011 ; Geosphere Volume 7 ; 7 ; >
+    au < zapped ; finished ; 2012 ; Geosphere Volume 8 ; 8 ; >
+    au < zapped ; finished ; 2013 ; Geosphere Volume 9 ; 9 ; >
+    au < zapped ; finished ; 2014 ; Geosphere Volume 10 ; 10 ; reingest3.clockss.org:8083 >
+    au < zapped ; finished ; 2015 ; Geosphere Volume 11 ; 11 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; Geosphere Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+    au < doNotProcess ; exists ; 2017 ; Geosphere Volume 13 ; 13 ; >
+
+  }
+
+  {
+
+    title <
+      name = Lithosphere ;
+      issn = 1941-8264 ;
+      eissn = 1947-4253 ;
+      issnl = 1947-4253
+    >
+
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+    param[base_url] = http://lithosphere.gsapubs.org/
+    implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+    au < doNotProcess ; exists ; 2009 ; Lithosphere Volume 1 ; 1 ; >
+    au < doNotProcess ; exists ; 2010 ; Lithosphere Volume 2 ; 2 ; >
+    au < finished ; finished ; 2011 ; Lithosphere Volume 3 ; 3 ; >
+    au < finished ; finished ; 2012 ; Lithosphere Volume 4 ; 4 ; >
+    au < finished ; finished ; 2013 ; Lithosphere Volume 5 ; 5 ; >
+    au < finished ; finished ; 2014 ; Lithosphere Volume 6 ; 6 ; >
+    au < finished ; finished ; 2015 ; Lithosphere Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2016 ; Lithosphere Volume 8 ; 8 ; reingest4.clockss.org:8082 >
+    au < doNotProcess ; exists ; 2017 ; Lithosphere Volume 9 ; 9 ; >
+
+  }
+
+}

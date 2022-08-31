@@ -1,0 +1,100 @@
+{
+
+  publisher <
+    name = University of Iowa ;
+    info[contract] = 2013 ;
+    info[tester] = 5 ;
+    info[poller] = 8 ;
+    info[platform] = Janeway. LXPLUG-2222 BLOCKED.
+  >
+  #Moved from BePress to Janeway
+
+    plugin = org.lockss.plugin.janeway.universityofiowa.ClockssUniversityofIowaPlugin
+    param[base_url] = https://pubs.lib.uiowa.edu/
+    implicit < status1 ; status ; year ; param[year] ; name ; volume ; proxy >
+
+    {
+      title <
+        name = Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention ;
+        issn = 2151-2957
+      >
+
+      #Moved to Janeway https://pubs.lib.uiowa.edu/poroi/
+
+      param[journal_id] = poroi
+
+      au < doNotProcess ; doNotProcess ; 2001 ; 2001 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 1 ; 1 ; >
+      au < doNotProcess ; doNotProcess ; 2003 ; 2003 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 2 ; 2 ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; 2004 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 3 ; 3 ; >
+      au < doNotProcess ; doNotProcess ; 2005 ; 2005 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 4 ; 4 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 5 ; 5 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 6 ; 6 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 7 ; 7 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 8 ; 8 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 9 ; 9 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 10 ; 10 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 11 ; 11 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 12 ; 12 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 13 ; 13 ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 14 ; 14 ; >
+      au < notReady ; exists ; 2020 ; 2020 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 15 ; 15 ; >
+      au < notReady ; exists ; 2021 ; 2021 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 16 ; 16 ; >
+      au < notReady ; exists ; 2022 ; 2022 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 17 ; 17 ; >
+
+    }
+    
+    {
+      title <
+        name = Walt Whitman Quarterly Review ;
+        issn = 0737-0679 ;
+        eissn = 2153-3695
+      >
+
+      #Moved to Janeway https://pubs.lib.uiowa.edu/wwqr/
+
+      param[journal_id] = wwqr
+
+      au < doNotProcess ; doNotProcess ; 1983 ; 1983 ; Walt Whitman Quarterly Review Volume 1 ; 1 ; >
+      au < doNotProcess ; doNotProcess ; 1984 ; 1984 ; Walt Whitman Quarterly Review Volume 2 ; 2 ; >
+      au < doNotProcess ; doNotProcess ; 1985 ; 1985 ; Walt Whitman Quarterly Review Volume 3 ; 3 ; >
+      au < doNotProcess ; doNotProcess ; 1986 ; 1986 ; Walt Whitman Quarterly Review Volume 4 ; 4 ; >
+      au < doNotProcess ; doNotProcess ; 1987 ; 1987 ; Walt Whitman Quarterly Review Volume 5 ; 5 ; >
+      au < doNotProcess ; doNotProcess ; 1988 ; 1988 ; Walt Whitman Quarterly Review Volume 6 ; 6 ; >
+      au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Walt Whitman Quarterly Review Volume 7 ; 7 ; >
+      au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; Walt Whitman Quarterly Review Volume 8 ; 8 ; >
+      au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; Walt Whitman Quarterly Review Volume 9 ; 9 ; >
+      au < doNotProcess ; doNotProcess ; 1992 ; 1992 ; Walt Whitman Quarterly Review Volume 10 ; 10 ; >
+      au < doNotProcess ; doNotProcess ; 1993 ; 1993 ; Walt Whitman Quarterly Review Volume 11 ; 11 ; >
+      au < doNotProcess ; doNotProcess ; 1994 ; 1994 ; Walt Whitman Quarterly Review Volume 12 ; 12 ; >
+      au < doNotProcess ; doNotProcess ; 1995 ; 1995 ; Walt Whitman Quarterly Review Volume 13 ; 13 ; >
+      au < doNotProcess ; doNotProcess ; 1996 ; 1996 ; Walt Whitman Quarterly Review Volume 14 ; 14 ; >
+      au < doNotProcess ; doNotProcess ; 1997 ; 1997 ; Walt Whitman Quarterly Review Volume 15 ; 15 ; >
+      au < doNotProcess ; doNotProcess ; 1998 ; 1998 ; Walt Whitman Quarterly Review Volume 16 ; 16 ; >
+      au < doNotProcess ; doNotProcess ; 1999 ; 1999 ; Walt Whitman Quarterly Review Volume 17 ; 17 ; >
+      au < doNotProcess ; doNotProcess ; 2000 ; 2000 ; Walt Whitman Quarterly Review Volume 18 ; 18 ; >
+      au < doNotProcess ; doNotProcess ; 2001 ; 2001 ; Walt Whitman Quarterly Review Volume 19 ; 19 ; >
+      au < doNotProcess ; doNotProcess ; 2002 ; 2002 ; Walt Whitman Quarterly Review Volume 20 ; 20 ; >
+      au < doNotProcess ; doNotProcess ; 2003 ; 2003 ; Walt Whitman Quarterly Review Volume 21 ; 21 ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; 2004 ; Walt Whitman Quarterly Review Volume 22 ; 22 ; >
+      au < doNotProcess ; doNotProcess ; 2005 ; 2005 ; Walt Whitman Quarterly Review Volume 23 ; 23 ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; 2006 ; Walt Whitman Quarterly Review Volume 24 ; 24 ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; 2007 ; Walt Whitman Quarterly Review Volume 25 ; 25 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; Walt Whitman Quarterly Review Volume 26 ; 26 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Walt Whitman Quarterly Review Volume 27 ; 27 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Walt Whitman Quarterly Review Volume 28 ; 28 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Walt Whitman Quarterly Review Volume 29 ; 29 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Walt Whitman Quarterly Review Volume 30 ; 30 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Walt Whitman Quarterly Review Volume 31 ; 31 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Walt Whitman Quarterly Review Volume 32 ; 32 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Walt Whitman Quarterly Review Volume 33 ; 33 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Walt Whitman Quarterly Review Volume 34 ; 34 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Walt Whitman Quarterly Review Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; Walt Whitman Quarterly Review Volume 36 [Janeway] ; 36 ; >
+      au < notReady ; exists ; 2019 ; 2019 ; Walt Whitman Quarterly Review Volume 37 ; 37 ; >
+      au < notReady ; exists ; 2020 ; 2020 ; Walt Whitman Quarterly Review Volume 38 ; 38 ; >
+      au < notReady ; exists ; 2021 ; 2021 ; Walt Whitman Quarterly Review Volume 39 ; 39 ; >
+      au < notReady ; exists ; 2022 ; 2022 ; Walt Whitman Quarterly Review Volume 40 ; 40 ; >
+      #If 2018 is successful, test the others.
+    }
+    
+}

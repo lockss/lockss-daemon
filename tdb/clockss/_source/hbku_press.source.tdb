@@ -1,0 +1,33 @@
+{
+
+  publisher <
+    name = HBKU Press ;
+    info[contract] = 2011 ;
+    info[tester] = S ;
+    info[platform] = WARC
+  >
+  
+  rights = openaccess
+  {
+
+  title <
+    name = HBKU Books WARC Content
+    >
+      
+    plugin = org.lockss.plugin.clockss.warc.ClockssWarcPlugin
+    proxy = DIRECT
+    implicit < status1 ; status ; year ; name ; param[year] >
+    
+    # This content was collected using wget and provided for preservation as a
+    # set of WARC files
+    
+    param[base_url] = http://clockss-ingest.lockss.org/warcfiles/hbku-press-books-released/
+
+    # WARC content collected from http://www.qscience.com/
+    au < zapped ; finished ; 2018 ; HBKU Press Books WARC Content 2018 ; 2018 >
+    #changing platforms at end of 2018 - unlikely to need recollection
+    #One of the seven books had a dead link to the PDF so not collected
+
+  }
+
+}

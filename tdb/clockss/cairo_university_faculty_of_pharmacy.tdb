@@ -1,0 +1,34 @@
+{
+  publisher <
+    name = Cairo University Faculty of Pharmacy ;
+    info[contract] = 2015 ;
+    info[back] = 2014 ;
+    info[tester] = 5 ;
+    info[poller] = 8
+  >
+  provider = bepress
+  # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
+
+
+  plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+  implicit < status1 ; status ; year ; name ; param[volume] ; proxy >
+  param[base_url] = https://www.bfopcu.eg.net/
+
+  {
+
+    title <
+      name = Bulletin of the Faculty of Pharmacy Cairo University ;
+      issn = 1110-0931 ;
+      eissn = 2090-9101
+    >
+
+    param[journal_abbr] = journal
+
+    au < frozen ; exists ; 2019 ; Bulletin of the Faculty of Pharmacy Cairo University Volume 57 ; 57 ; >
+    au < frozen ; exists ; 2020 ; Bulletin of the Faculty of Pharmacy Cairo University Volume 58 ; 58 ; >
+    au < frozen ; exists ; 2021 ; Bulletin of the Faculty of Pharmacy Cairo University Volume 59 ; 59 ; >
+    au < manifest ; exists ; 2022 ; Bulletin of the Faculty of Pharmacy Cairo University Volume 60 ; 60 ; >
+
+  }
+
+}

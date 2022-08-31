@@ -1,0 +1,445 @@
+{
+
+  publisher <
+    name = Alliance of Crop, Soil, and Environmental Science Societies ;
+    info[contract] = 2013 ;
+    info[back] = 1900 ;
+    info[tester] = 5 ;
+    info[poller] = 6
+  >
+  
+  plugin = org.lockss.plugin.acsess.ClockssACSESSBooksPlugin
+  param[base_url] = https://dl.sciencesocieties.org/
+  implicit < status1 ; status ; year ; isbn ; name ; param[book_id] ; proxy >
+  # move to Wiley in 2020
+  
+  type = bookSeries
+
+  {
+
+    title <
+      name = Advances in Agricultural Systems Modeling ;
+      eissn = 2163-2790 
+    >
+    
+    param[series_id] = advancesinagric
+
+    au < finished ; finished ; 2008 ; 978-0-89118-188-0 ; Response of Crops to Limited Water: Understanding and Modeling Water Stress Effects on Plant Growth Processes ; responseofcrops ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2011 ; 978-0-89118-196-5 ; Methods of Introducing System Models into Agricultural Research ; methodsofintrod ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 978-0-89118-339-6 ; Enhancing Understanding and Quantification of Soil–Root Growth Interactions ; enhancingunder ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2013 ; 978-0-89118-957-2 ; Quantifying and Modeling Soil Structure Dynamics ; quantifyingandm ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; 978-0-89118-344-0 ; Practical Applications of Agricultural System Models to Optimize the Use of Limited Water ; practicalapplic ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; 978-0-89118-352-5 ; Improving Modeling Tools to Assess Climate Change Effects on Crop Response ; advagricsystmodel7 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2016 ; 978-0-89118-346-4 ; Synthesis and Modeling of Greenhouse Gas Emissions and Carbon Storage in Agricultural and Forest Systems to Guide Mitigation and Adaptation ; advagricsystmodel6 ; reingest2.clockss.org:8085 >
+
+  }
+  
+  {
+
+    title <
+      name = Agronomy Monograph ;
+      eissn = 2156-3276 
+    >
+    
+    param[series_id] = agronomymonogra
+    
+    au < finished ; finished ; 1957 ; 978-0-89118-200-9 ; Drainage of Agricultural Lands ; drainageofagric ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1961 ; 978-0-89118-201-6 ; Oats and Oat Improvement ; oatsandoatimpro ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1965 ; 978-0-89118-205-4 ; Soil Nitrogen ; soilnitrogen ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1965 ; 978-0-89118-202-3 ; Methods of Soil Analysis. Part 1. Physical and Mineralogical Properties, Including Statistics of Measurement and Sampling ; methodsofsoilana ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1965 ; 978-0-89118-204-7 ; Methods of Soil Analysis. Part 2. Chemical and Microbiological Properties ; methodsofsoilanb ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1967 ; 978-0-89118-206-1 ; Irrigation of Agricultural Lands ; irrigationofagr ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1969 ; 978-0-89118-209-2 ; Turfgrass Science ; turfgrassscienc ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1972 ; 978-0-89118-210-8 ; Alfalfa Science and Technology ; alfalfasciencet ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1974 ; 978-0-89118-211-5 ; Drainage for Agriculture ; drainageforagri ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1978 ; 978-0-89118-213-9 ; Sunflower Science and Technology ; sunflowerscienc ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1979 ; 978-0-89118-215-3 ; Planning the Uses and Management of Land ; planningtheuses ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1979 ; 978-0-89118-214-6 ; Tall Fescue ; tallfescue ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1982 ; 978-0-89118-865-0 ; Methods of Soil Analysis. Part 2. Microbiological and Biochemical Properties ; methodsofsoilan2 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1982 ; 978-0-89118-216-0 ; Nitrogen in Agricultural Soils ; nitrogeninagrics ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1984 ; 978-0-89118-217-7 ; Cotton ; cotton ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1984 ; 978-0-89118-207-8 ; Soil Acidity and Liming ; soilacidityandl ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1985 ; 978-0-89118-219-1 ; Barley ; barley ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1985 ; 978-0-89118-218-4 ; Clover Science and Technology ; cloversciencean ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1986 ; 978-0-89118-220-7 ; Sulfur in Agriculture ; sulfurinagricul ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1987 ; 978-0-89118-208-5 ; Wheat and Wheat Improvement ; wheatandwheatim ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1987 ; 978-0-89118-221-4 ; Nutritional Quality of Cereal Grains: Genetic and Agronomic Improvement ; nutritionalqual ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1988 ; 978-0-89118-222-1 ; Alfalfa and Alfalfa Improvement ; alfalfaandalfal ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1988 ; 978-0-89118-212-2 ; Corn and Corn Improvement ; cornandcornimpr ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1991 ; 978-0-89118-223-8 ; Modeling Plant and Soil Systems ; modelingplantan ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1992 ; 978-0-89118-225-2 ; Oat Science and Technology ; oatscienceandte ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1992 ; 978-0-89118-224-5 ; Turfgrass ; turfgrass ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1996 ; 978-0-89118-226-9 ; Cool-Season Forage Grasses ; coolseasonforag ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1997 ; 978-0-89118-227-6 ; Sunflower Technology and Production ; sunflowertechno ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1998 ; 978-0-89118-228-3 ; Plant and Nematode Interactions ; plantandnematod ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1999 ; 978-0-89118-229-0 ; Bioremediation of Contaminated Soils ; bioremediationo ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1999 ; 978-0-89118-230-6 ; Agricultural Drainage ; agriculturaldra ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2000 ; 978-0-89118-232-0 ; Designing Crops for Added Value ; designingcropsf ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2000 ; 978-0-89118-231-3 ; Managing Soils in an Urban Environment ; managingsoilsin ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2000 ; 978-0-89118-233-7 ; Reclamation of Drastically Disturbed Lands ; reclamationofdr ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2003 ; 978-0-89118-234-4 ; Silage Science and Technology ; silagesciencean ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2004 ; 978-0-89118-235-1 ; Agroecosystems Analysis ; agroecosystemsa ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2004 ; 978-0-89118-236-8 ; Near-Infrared Spectroscopy in Agriculture ; nearinfraredspe ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2005 ; 978-0-89118-268-9 ; Micrometeorology in Agricultural Systems ; micrometeorolog ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2005 ; 978-0-89118-267-2 ; Roots and Soil Management: Interactions between Roots and the Soil ; rootsandsoilman ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2005 ; 978-0-89118-269-6 ; Phosphorus: Agriculture and the Environment ; phosphorusagric ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2004 ; 978-0-89118-266-5 ; Soybeans: Improvement, Production, and Uses ; soybeansimprove ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2004 ; 978-0-89118-237-5 ; Warm-Season (C4) Grasses ; warmseasonc4gra ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2006 ; 978-0-89118-265-8 ; Dryland Agriculture ; drylandagricult ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2007 ; 978-0-89118-264-1 ; Irrigation of Agricultural Crops ; irrigationofagr2 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2008 ; 978-0-89118-191-0 ; Nitrogen in Agricultural Systems ; nitrogeninagric ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2008 ; 978-0-89118-186-6 ; Sulfur: A Missing Link between Soils, Crops, and Nutrition ; sulfuramissingl ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2009 ; 978-0-89118-189-7 ; Organic Farming: The Ecological System ; organicfarmingt ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2009 ; 978-0-89118-185-9 ; Tall Fescue for the Twenty-first Century ; tallfescueforth ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2009 ; 978-0-89118-187-3 ; Modification of Seed Composition to Promote Health and Nutrition ; modificationofs ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2009 ; 978-0-89118-192-7 ; Nitrogen Fixation in Crop Production ; nitrogenfixatio ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2010 ; 978-0-89118-181-1 ; Urban Ecosystem Ecology ; urbanecosysteme ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2013 ; 978-0-89118-614-4 ; Turfgrass: Biology, Use, and Management ; turfgrassbiolog ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; 978-0-89118-626-7 ; Cotton, 2nd edition ; agronmonogr57 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; 978-0-89118-628-1 ; Sorghum: State of the Art and Future Perspectives ; agronmonogr58 ; reingest4.clockss.org:8082 >
+    au < exists ; exists ; 2017 ; 978-0-89118-356-3 ; Precision Conservation: Geospatial Techniques for Agricultural and Natural Resources Conservation ; agronmonogr59 ; >
+    au < exists ; exists ; 2017 ; 978-0-89118-358-7 ; Agroclimatology: Linking Agriculture to Climate ; agronmonogr60 ; >
+
+    
+  }
+  
+  {
+
+    title <
+      name = ASA Special Publication ;
+      eissn = 2165-9710 
+    >
+    
+    param[series_id] = asaspecialpubli
+    
+    au < finished ; finished ; 1974 ; 978-0-89118-288-7 ; A New Look at Energy Sources ; anewlookatenerg ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2000 ; 978-0-89118-328-0 ; A Spectrum of Achievements in Agronomy: Women Fellows of the Tri-Societies ; aspectrumofachi ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1970 ; 978-0-89118-284-9 ; Aerospace Science and Agricultural Development ; aerospacescienc ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1993 ; 978-0-89118-321-1 ; Agricultural Ecosystem Effects on Trace Gases and Global Climate Change ; agriculturaleco ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1994 ; 978-0-89118-323-5 ; Agricultural Ethics: Issues for the 21st Century ; agriculturaleth ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1995 ; 978-0-89118-324-2 ; Agricultural Utilization of Urban and Industrial By-Products ; agriculturaluti ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1995 ; 978-0-89118-326-6 ; Agriculture and Environment: Bridging Food Production and Environmental Protection in Developing Countries ; agricultureande ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1976 ; 978-0-89118-292-4 ; Agronomic Research for Food ; agronomicresear ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1977 ; 978-0-89118-296-2 ; Agronomists and Food: Contributions and Challenges ; agronomistsandf ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1970 ; 978-0-89118-283-2 ; Agronomy & Health ; agronomyandheal ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1971 ; 978-0-89118-285-6 ; Agronomy in a Changing World and Research Needs For The Seventies ; agronomyinachan ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1964 ; 978-0-89118-337-2 ; Agronomy in the Americas ; agronomyintheam ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1978 ; 978-0-89118-299-3 ; Agronomy in Today's Society ; agronomyintoday ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1979 ; 978-0-89118-303-7 ; Agronomy—Solving Problems, Serving People ; agronomysolving ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1978 ; 978-0-89118-302-0 ; Agronomy: Science in Action ; agronomyscience ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1975 ; 978-0-89118-289-4 ; All-Out Food Production: Strategy and Resource Implications ; alloutfoodprodu ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1976 ; 978-0-89118-294-8 ; Biological N Fixation in Forage-Livestock Systems ; biologicalnfixa ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1967 ; 978-0-89118-277-1 ; Challenge to Agronomy for the Future ; challengetoagro ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1981 ; 978-0-89118-306-8 ; Chemistry in the Soil Environment ; chemistryinthes ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1995 ; 978-0-89118-325-9 ; Climate Change and Agriculture: Analysis of Potential International Impacts ; climatechangean ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1978 ; 978-0-89118-297-9 ; Crop Residue Management Systems ; cropresiduemana ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1978 ; 978-0-89118-298-6 ; Crop Tolerance to Suboptimal Land Conditions ; croptoleranceto ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1988 ; 978-0-89118-317-4 ; Cropping Strategies for Efficient Use of Water and Nitrogen ; croppingstrateg ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1984 ; 978-0-89118-314-3 ; Crops as Sources of Nutrients for Humans ; cropsassourceso ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1968 ; 978-0-89118-279-5 ; Current Concepts For Agronomic Education ; currentconcepts ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1982 ; 978-0-89118-311-2 ; Determinants of Soil Loss Tolerance ; determinantsofs ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2003 ; 978-0-89118-332-7 ; Digital Imaging and Spectral Techniques: Applications to Precision Agriculture and Crop Physiology ; digitalimaginga ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1978 ; 978-0-89118-300-6 ; Diversity of Soils in the Tropics ; diversityofsoil ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1968 ; 978-0-89118-278-8 ; Food for Billions ; foodforbillions ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1963 ; 978-0-89118-336-5 ; Food for Peace ; foodforpeace ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1968 ; 978-0-89118-280-1 ; Forage Economics-Quality ; forageeconomics ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1964 ; 978-0-89118-272-6 ; Forage Plant Physiology and Soil-Range Relationships ; forageplantphys ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1979 ; 978-0-89118-301-3 ; Grass Tetany ; grasstetany ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1990 ; 978-0-89118-319-8 ; Impact of Carbon Dioxide, Trace Gases, and Climate Change on Global Agriculture ; impactofcarbond ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2001 ; 978-0-89118-329-7 ; Impacts of El Niño and Climate Variability on Agriculture ; impactsofelnino ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2003 ; 978-0-89118-331-0 ; Improving the Productivity and Sustainability of Rice–Wheat Systems: Issues and Impacts ; improvingthepro ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1989 ; 978-0-89118-318-1 ; Intellectual Property Rights Associated with Plants ; intellectualpro ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1969 ; 978-0-89118-282-5 ; International Agronomy Training and Education ; internationalag ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1975 ; 978-0-89118-291-7 ; International and National Outlook—The Necessity for Efficient Nutrient Utilization ; internationalan ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1967 ; 978-0-89118-276-4 ; Maximum Crop Yields--The Challenge ; maximumcropyiel ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1984 ; 978-0-89118-313-6 ; Microbial-Plant Interactions ; microbialplanti ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1987 ; 978-0-89118-316-7 ; Minirhizotron Observation Tubes: Methods and Applications for Measuring Rhizosphere Dynamics ; minirhizotronob ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1971 ; 978-0-89118-286-3 ; Moving Off The Yield Plateau ; movingofftheyie ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1980 ; 978-0-89118-305-1 ; Moving Up the Yield Curve: Advances and Obstacles ; movinguptheyiel ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1976 ; 978-0-89118-293-1 ; Multiple Cropping ; multiplecroppin ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1992 ; 978-0-89118-320-4 ; Mycorrhizae in Sustainable Agriculture ; mycorrhizaeinsu ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1980 ; 978-0-89118-304-4 ; Nitrification Inhibitors—Potentials and Limitations ; nitrificationin ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1984 ; 978-0-89118-312-9 ; Organic Farming: Current Technology and its Role in a Sustainable Agriculture ; organicfarmingc ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1966 ; 978-0-89118-274-0 ; Our Heritage of Land and Water Resources ; ourheritageofla ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1966 ; 978-0-89118-275-7 ; Pesticides and Their Effects on Soils and Water ; pesticidesandth ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1981 ; 978-0-89118-308-2 ; Planning Future Land Uses ; planningfuturel ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1964 ; 978-0-89118-270-2 ; Plant Breeders' Rights ; plantbreedersri ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1982 ; 978-0-89118-310-5 ; Predicting Tillage Effects on Soil Physical Properties and Processes ; predictingtilla ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1973 ; 978-0-89118-287-0 ; Range Resources of the Southeastern United States ; rangeresourceso ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1964 ; 978-0-89118-271-9 ; Research on Water ; researchonwater ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1969 ; 978-0-89118-281-8 ; Research With A Mission ; researchwithami ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1984 ; 978-0-89118-315-0 ; Roots, Nutrient and Water Influx, and Plant Growth ; rootsnutrientan ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1977 ; 978-0-89118-295-5 ; Soil Testing: Correlating and Interpreting the Analytical Results ; soiltestingcorr ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2001 ; 978-0-89118-330-3 ; Sustainability of Agricultural Systems in Transition ; sustainabilityo ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1993 ; 978-0-89118-322-8 ; Technologies for Sustainable Agriculture in the Tropics ; technologiesfor ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1981 ; 978-0-89118-307-5 ; Transferring Technology for Small-Scale Farming ; transferringtec ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1975 ; 978-0-89118-290-0 ; Tropical Forages in Livestock Production Systems ; tropicalforages ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1965 ; 978-0-89118-273-3 ; World Population and Food Supplies, 1980 ; worldpopulation ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1997 ; 978-0-89118-327-3 ; Advances in Carbon Dioxide Effects Research ; advancesincarbo ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1982 ; 978-0-89118-251-1 ; Soil Erosion and Crop Productivity ; soilerosionandc ; reingest4.clockss.org:8082 >
+
+  }
+  
+  {
+
+    title <
+      name = CSSA Special Publication ;
+      eissn = 2165-9745 
+    >
+    
+    param[series_id] = cssaspecialpubl
+    
+    au < finished ; finished ; 1993 ; 978-0-89118-600-7 ; Intellectual Property Rights: Protection of Plant Materials ; intellectualpro ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1973 ; 978-0-89118-583-3 ; Anti-Quality Components of Forages ; antiqualitycomp ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2004 ; 978-0-89118-611-3 ; Challenges and Strategies of Dryland Agriculture ; challengesandst ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1998 ; 978-0-89118-604-5 ; Concepts and Breeding of Heterosis in Crop Plants ; conceptsandbree ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1984 ; 978-0-89118-587-1 ; Conservation of Crop Germplasm—An International Perspective ; conservationofc ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1989 ; 978-0-89118-594-9 ; Contributions from Breeding Forage and Turf Grasses ; contributionsfr ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1971 ; 978-0-89118-581-9 ; Drought Injury and Resistance in Crops ; droughtinjuryan ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1997 ; 978-0-89118-603-8 ; Ecology, Production, and Management of Lolium for Forage in the USA ; ecologyproducti ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1984 ; 978-0-89118-586-4 ; Genetic Contributions to Yield Gains of Five Major Crop Plants ; geneticcontribu ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1986 ; 978-0-89118-592-5 ; Genetic Improvement in Yield of Wheat ; geneticimprovem ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2000 ; 978-0-89118-610-6 ; Genetic Improvement of Seed Quality ; geneticimprovems ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1989 ; 978-0-89118-595-6 ; Grazing Research: Design, Methodology, and Analysis ; grazingresearch ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1995 ; 978-0-89118-602-1 ; International Germplasm Transfer: Past and Present ; internationalge ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1999 ; 978-0-89118-606-9 ; Linking Genetic Resources and Geography: Emerging Strategies for Conserving and Using Crop Biodiversity ; linkinggeneticr ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1991 ; 978-0-89118-598-7 ; Modeling Crop Photosynthesis—from Biochemistry to Canopy ; modelingcroppho ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1998 ; 978-0-89118-605-2 ; Molecular and Cellular Technologies for Forage Improvement ; molecularandcel ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2000 ; 978-0-89118-609-0 ; Native Warm-Season Grasses: Research Trends and Issues ; nativewarmseaso ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1986 ; 978-0-89118-591-8 ; Physiological-Pathological Interactions Affecting Seed Deterioration ; physiologicalpa ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2000 ; 978-0-89118-608-3 ; Physiology and Modeling Kernel Set in Maize ; physiologyandmo ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1986 ; 978-0-89118-590-1 ; Physiology of Seed Deterioration ; physiologyofsee ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1991 ; 978-0-89118-597-0 ; Plant Breeding and Sustainable Agriculture: Considerations for Objectives and Methods ; plantbreedingan ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1995 ; 978-0-89118-601-4 ; Post-Harvest Physiology and Preservation of Forages ; postharvestphys ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1973 ; 978-0-89118-582-6 ; Range Research and Range Problems ; rangeresearchan ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1989 ; 978-0-89118-593-2 ; Seed Moisture ; seedmoisture ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1974 ; 978-0-89118-585-7 ; Systems Analysis in Forage Crops Production and Utilization ; systemsanalysis ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1974 ; 978-0-89118-584-0 ; The Effect of FDA Regulations (GRAS) on Plant Breeding and Processing ; theeffectoffdar ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1985 ; 978-0-89118-589-5 ; The Role of Seed Certification in the Seed Industry ; theroleofseedce ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1999 ; 978-0-89118-607-6 ; Trefoil: The Science and Technology of Lotus ; trefoilthescien ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1985 ; 978-0-89118-588-8 ; Triticale ; triticale ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1991 ; 978-0-89118-596-3 ; Use of Plant Introductions in Cultivar Development Part 1 ; useofplantintro1 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1992 ; 978-0-89118-599-4 ; Use of Plant Introductions in Cultivar Development Part 2 ; useofplantintro2 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1969 ; 978-0-89118-580-2 ; Variety Protection ; varietyprotecti ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; 978-0-89118-620-5 ; Yield Gains in Major U.S. Field Crops ; yieldgainsinmaj ; reingest2.clockss.org:8085 >
+
+  }
+  
+  {
+
+    title <
+      name = SSSA Book Series ;
+      eissn = 2163-2804
+    >
+    
+    param[series_id] = sssabookseries
+    
+    au < finished ; finished ; 1994 ; 978-0-89118-204-7 ; Methods of Soil Analysis. Part 2. Chemical and Microbiological Properties, 2nd edition ; methodsofsoilan2 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2000 ; 978-0-89118-867-4 ; Land Application of Agricultural, Industrial, and Municipal By-Products ; landapplication ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 978-0-89118-961-9 ; Methods in Biogeochemistry of Wetlands ; methodsinbiogeo ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1996 ; 978-0-89118-866-7 ; Methods of Soil Analysis Part 3—Chemical Methods ; methodsofsoilan3 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2008 ; 978-0-89118-857-5 ; Methods of Soil Analysis Part 5—Mineralogical Methods ; methodsofsoilan5 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1986 ; 978-0-89118-864-3 ; Methods of Soil Analysis: Part 1—Physical and Mineralogical Methods ; methodsofsoilan1 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2002 ; 978-0-89118-893-3 ; Methods of Soil Analysis: Part 4 Physical Methods ; methodsofsoilan4 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2011 ; 978-0-89118-858-2 ; Methods of Soil Enzymology ; methodsofsoilen ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1991 ; 978-0-89118-863-6 ; Micronutrients in Agriculture ; micronutrientsi2 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1989 ; 978-0-89118-860-5 ; Minerals in Soil Environments ; mineralsinsoile ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1990 ; 978-0-89118-861-2 ; Pesticides in the Soil Environment: Processes, Impacts and Modeling ; pesticidesinthe ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2002 ; 978-0-89118-891-9 ; Soil Mineralogy with Environmental Applications ; soilmineralogyw ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1990 ; 978-0-89118-862-9 ; Soil Testing and Plant Analysis ; soiltestingandp ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2005 ; 978-0-89118-892-6 ; Chemical Processes in Soils ; chemicalprocess ; reingest5.clockss.org:8082 >
+
+  }
+  
+  {
+
+    title <
+      name = SSSA Special Publications ;
+      eissn = 2165-9826
+    >
+    
+    param[series_id] = sssaspecialpubl
+    
+    au < finished ; finished ; 1982 ; 978-0-89118-905-3 ; Acid Sulfate Weathering ; acidsulfateweat ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1992 ; 978-0-89118-925-1 ; Advances in Measurement of Soil Physical Properties: Bringing Theory into Practice ; advancesinmeasu ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; 978-0-89118-967-1 ; Agricultural and Environmental Applications of Biochar: Advances and Barriers ; sssaspecpub63 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1996 ; 978-0-89118-943-5 ; Applications of GIS to the Modeling of Non-Point Source Pollutants in the Vadose Zone ; applicationsofg ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1997 ; 978-0-89118-945-9 ; Aquic Conditions and Hydric Soils: The Problem Soils ; aquicconditions ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1995 ; 978-0-89118-938-1 ; Bioremediation: Science and Applications ; bioremediation ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1995 ; 978-0-89118-937-4 ; Chemical Equilibrium and Reaction Models ; chemicalequilib ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1983 ; 978-0-89118-906-0 ; Chemical Mobility and Reactivity in Soil Systems ; chemicalmobilit ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1996 ; 978-0-89118-942-8 ; Data Reliability and Risk Assessment in Soil Interpretations ; datareliability ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1994 ; 978-0-89118-930-5 ; Defining Soil Quality for a Sustainable Environment ; definingsoilqua ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1984 ; 978-0-89118-908-4 ; Erosion and Productivity of Soils Containing Rock Fragments ; erosionandprodu ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1994 ; 978-0-89118-928-2 ; Factors of Soil Formation: A Fiftieth Anniversary Retrospective ; factorsofsoilfo ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1986 ; 978-0-89118-913-8 ; Field Measurement of Dinitrogen Fixation and Denitrification ; fieldmeasureme ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1973 ; 978-0-89118-900-8 ; Field Soil Water Regime ; fieldsoilwaterr ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1989 ; 978-0-89118-919-0 ; Fragipans: Their Occurrence, Classification, and Genesis ; fragipanstheiro ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1998 ; 978-0-89118-950-3 ; Future Prospects for Soil Chemistry ; futureprospects ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2002 ; 978-0-89118-953-4 ; Geochemistry of Soil Radionuclides ; geochemistryofs ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1974 ; 978-0-89118-901-5 ; Histosols: Their Characteristics, Classification, and Use ; histosolstheirc ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1986 ; 978-0-89118-912-1 ; Interactions of Soil Minerals with Natural Organics and Microbes ; interactionsofs ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; 978-0-89118-963-3 ; Labile Organic Matter—Chemical Compositions, Function, and Significance in Soil and the Environment ; sssaspecpub62 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1984 ; 978-0-89118-907-7 ; Land Use Planning Techniques and Policies ; landuseplanning ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1996 ; 978-0-89118-944-2 ; Methods for Assessing Soil Quality ; methodsforasses ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1985 ; 978-0-89118-911-4 ; Mineral Classification of Soils ; mineralclassifi ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1968 ; 978-0-89118-898-8 ; Mineralogy in Soil Science & Engineering ; mineralogyinsoi ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1992 ; 978-0-89118-924-4 ; Myths and Science of Soils of the Tropics ; mythsandscience ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1970 ; 978-0-89118-899-5 ; Nutrient Mobility in Soils: Accumulation & Losses ; nutrientmobilit ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1991 ; 978-0-89118-921-3 ; Occurrence, Characteristics, and Genesis of Carbonate, Gypsum, and Silica Accumulations in Soils ; occurrencechara ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1995 ; 978-0-89118-939-8 ; Pedological Perspectives in Archaeological Research ; pedologicalpers ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2001 ; 978-0-89118-951-0 ; Physical and Chemical Processes of Water and Solute Transport/Retention in Soils ; physicalandchem ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1998 ; 978-0-89118-949-7 ; Quantifying Soil Hydromorphology ; quantifyingsoil ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1994 ; 978-0-89118-934-3 ; Quantitative Modeling of Soil Forming Processes ; quantitativemod ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1991 ; 978-0-89118-922-0 ; Rates of Soil Chemical Processes ; ratesofsoilchem ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1989 ; 978-0-89118-917-6 ; Reactions and Movement of Organic Chemicals in Soils ; reactionsandmov ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1997 ; 978-0-89118-946-6 ; Replenishing Soil Fertility in Africa ; replenishingsoi ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1990 ; 978-0-89118-920-6 ; Scaling in Soil Physics: Principles and Applications ; scalinginsoilph ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1967 ; 978-0-89118-896-4 ; Selected Papers in Soil Formation & Classification ; selectedpapersi ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1989 ; 978-0-89118-918-3 ; Selenium in Agriculture and the Environment ; seleniuminagric ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2010 ; 978-0-89118-852-0 ; Soil and Water Conservation Advances in the United States ; soilandwatercon ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1994 ; 978-0-89118-936-7 ; Soil and Water Science: Key to Understanding Our Global Environment ; soilandwatersci ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1998 ; 978-0-89118-947-3 ; Soil Chemistry and Ecosystem Health ; soilchemistryan ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1993 ; 978-0-89118-926-8 ; Soil Color ; soilcolor ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1975 ; 978-0-89118-902-2 ; Soil Conditioners ; soilconditioner ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1987 ; 978-0-89118-914-5 ; Soil Fertility and Organic Matter as Critical Components of Production Systems ; soilfertilityan ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1985 ; 978-0-89118-910-7 ; Soil Micromorphology and Soil Classification ; soilmicromorpho ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1996 ; 978-0-89118-941-1 ; Soil Organic Matter: Analysis and Interpretation ; soilorganicmatt ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1994 ; 978-0-89118-932-9 ; Soil Science Education: Philosophy and Perspectives ; soilscienceeduc ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1987 ; 978-0-89118-915-2 ; Soil Survey Techniques ; soilsurveytechn ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1984 ; 978-0-89118-909-1 ; Soil Taxonomy—Achievements and Challenges ; soiltaxonomyach ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1967 ; 978-0-89118-897-1 ; Soil Testing and Plant Analysis Part I Soil Testing ; soiltestingandp_part1 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1967 ; 978-0-89118-897-1 ; Soil Testing and Plant Analysis Part II Plant Analysis ; soiltestingandp_part2 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1994 ; 978-0-89118-935-0 ; Soil Testing: Prospects for Improving Nutrient Recommendations ; soiltestingpros ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1987 ; 978-0-89118-916-9 ; Soil Testing: Sampling, Correlation, Calibration, and Interpretation ; soiltestingsamp ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 978-0-89118-959-6 ; Soil–Water–Root Processes: Advances in Tomography and Imaging ; soilwaterrootpr ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1993 ; 978-0-89118-927-5 ; Sorption and Degradation of Pesticides and Organic Chemicals in Soil ; sorptionanddegr ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1991 ; 978-0-89118-923-7 ; Spatial Variabilities of Soils and Landforms ; spatialvariabil ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2001 ; 978-0-89118-952-7 ; Sustaining Soil Fertility in West Africa ; sustainingsoilf ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1998 ; 978-0-89118-948-0 ; The Contribution of Soil Science to the Development of and Implementation of Criteria and Indicators of Sustainable Forest Management ; thecontribution ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1996 ; 978-0-89118-940-4 ; The Role of Soil Science in Interdisciplinary Research ; theroleofsoilsc ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1994 ; 978-0-89118-931-2 ; Tomography of Soil-Water-Root Processes ; tomographyofsoi ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1979 ; 978-0-89118-903-9 ; Universal Soil Loss Equation: Past, Present, and Future ; universalsoillo ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1994 ; 978-0-89118-933-6 ; Variability in Rangeland Water Erosion Processes ; variabilityinra ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1981 ; 978-0-89118-904-6 ; Water Potential Relations in Soil Microbiology ; waterpotentialr ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1994 ; 978-0-89118-929-9 ; Whole Regolith Pedology ; wholeregolithpe ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2009 ; 978-0-89118-859-9 ; Soil Carbon Sequestration and the Greenhouse Effect ; soilcarbonseque ; reingest4.clockss.org:8082 >
+    
+  }
+  
+  {
+
+    title <
+      name = Guides
+    >
+    
+    param[series_id] = guides
+    
+    au < finished ; finished ; 2010 ; 978-0-89118-184-2 ; Fescue Toxicosis and Management ; fescuetoxicosis ; reingest3.clockss.org:8083 >
+    
+  }
+  
+  {
+
+    title <
+      name = Individual Books
+    >
+    
+    param[series_id] = acsesspublicati
+    
+    au < finished ; finished ; 2014 ; 978-0-89118-342-6 ; Aflatoxin Control: Safeguarding Animal Feed with Calcium Smectite ; aflatoxincontro ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1966 ; 978-0-89118-887-2 ; Agricultural Anhydrous Ammonia Technology and Use ; agriculturalanh ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1975 ; 978-0-89118-868-1 ; Agricultural Development Soil, Food, People, Work ; agriculturaldev ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1993 ; 978-0-89118-254-2 ; Agricultural Research in the Northeastern United States: Critical Review and Future Perspectives ; agriculturalres ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; 978-0-89118-965-7 ; Agronomy—Grow with It! ; agronomygrowwithit ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2011 ; 978-0-89118-199-6 ; Alfalfa Management Guide ; alfalfamanageme ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2012 ; 978-0-89118-183-5 ; Analysis of Generalized Linear Mixed Models in the Agricultural and Natural Resources Sciences ; analysisofgener ; reingest2.clockss.org:8085 >
+    au < doNotProcess ; exists ; 2017 ; 978-0-89118-358-7 ; Applied Statistics in Agricultural, Biological, and Environmental Sciences ; appliedstatistics ; >
+    au < finished ; finished ; 1995 ; 978-0-89118-869-8 ; Carbon Forms and Functions in Forest Soils ; carbonformsandf ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; 978-0-89118-363-1 ; A Collection of Case Studies ; casestudies ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1968 ; 978-0-89118-870-4 ; Changing Patterns in Fertilizer Use ; changingpattern ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1993 ; 978-0-89118-575-8 ; Compilation of North American Maize Breeding Germplasm ; compilationofno ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1995 ; 978-0-89118-612-0 ; Corn silage production, management, and feeding ; cornsilageprodu ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; 978-0-89118-622-9 ; Cowpea: The Food Legume of the 21st Century ; cowpeathefoodle ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1983 ; 978-0-89118-563-5 ; Crop Breeding ; cropbreeding ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1980 ; 978-0-89118-564-2 ; Crop Quality, Storage, and Utilization ; cropqualitystor ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1992 ; 978-0-89118-565-9 ; Crops & Man ; cropsandman ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1990 ; 978-0-89118-576-5 ; Experiments in Crop Science ; experimentsincr ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1995 ; 978-0-89118-263-4 ; Exploring the Role of Diversity in Sustainable Agriculture ; exploringtherol ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1985 ; 978-0-89118-871-1 ; Fertilizer Technology and Use ; fertilizertechn ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1993 ; 978-0-89118-238-2 ; Forage Cell Wall Structure and Digestibility ; foragecellwalls ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1974 ; 978-0-89118-239-9 ; Forage Fertilization ; foragefertiliza ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1994 ; 978-0-89118-579-6 ; Forage Quality, Evaluation, and Utilization ; foragequalityev ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1987 ; 978-0-89118-872-8 ; Future Developments in Soil Science Research ; futuredevelopme ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2009 ; 978-0-89118-562-8 ; Genetics A Laboratory Manual ; geneticsalabora ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1992 ; 978-0-89118-577-2 ; Glossary of Crop Science Terms ; glossaryofcrops ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2008 ; 978-0-89118-895-7 ; Glossary of Soil Science Terms 2008 ; glossaryofsoils ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2009 ; 978-0-89118-194-1 ; Grassland Quietness and Strength for a New American Agriculture ; grasslandquietn ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2003 ; 978-0-89118-873-5 ; Guidelines for Analysis and Description of Soil and Regolith Thin Sections ; guidelinesforan ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1984 ; 978-0-89118-882-7 ; Guy D. Smith Discusses Soil Taxonomy ; guydsmithdiscus ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1987 ; 978-0-89118-883-4 ; Historical Aspects of Soil Survey and Soil Classification ; historicalaspec ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2001 ; 978-0-89118-875-9 ; Humic Substances and Chemical Contaminants ; humicsubstancesa ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1990 ; 978-0-89118-874-2 ; Humic Substances in Soil and Crop Sciences: Selected Readings ; humicsubstances ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1980 ; 978-0-89118-566-6 ; Hybridization of Crop Plants ; hybridizationof ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1971 ; 978-0-89118-876-6 ; Instrumental Methods for Analysis of Soils and Plant Tissue ; instrumentalmet ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1998 ; 978-0-89118-567-3 ; Intellectual Property Rights III Global Genetic Resources: Access and Property Rights ; intellectualpro3 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1993 ; 978-0-89118-568-0 ; International Crop Science I ; internationalcr ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1979 ; 978-0-89118-569-7 ; Introduction to Crop Protection ; introductiontoc ; reingest2.clockss.org:8085 >
+    au < doNotProcess ; exists ; 2014 ;  ; Irrigating Turfgrasses with Recycled Water ; irrigatingturfg ; > #no pdf, only full text
+    au < finished ; finished ; 2012 ; 978-0-89118-955-8 ; Know Soil Know Life ; knowsoilknowlif ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1983 ; 978-0-89118-241-2 ; Limitations to Efficient Water Use in Crop Production ; limitationstoef ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1989 ; 978-0-89118-242-9 ; Lunar Base Agriculture: Soils for Plant Growth ; lunarbaseagricu ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1991 ; 978-0-89118-877-3 ; Managing Nitrogen for Groundwater Quality and Farm Profitability ; managingnitroge ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; 978-0-89118-624-3 ; Managing Nitrogen in Crop Production ; managingnitroge2 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1984 ; 978-0-89118-243-6 ; Nitrogen in Crop Production ; nitrogenincropp ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1990 ; 978-0-89118-244-3 ; Nitrogen Nutrition of Cotton: Practical Issues ; nitrogennutriti ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2009 ; 978-0-89118-190-3 ; North American Agroforestry: An Integrated Science and Practice 2nd edition ; northamericanag ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1992 ; 978-0-89118-885-8 ; Opportunities in Basic Soil Science Research ; opportunitiesin ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1996 ; 978-0-89118-256-6 ; Pasture and Forage Crop Pathology ; pastureandforag ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1989 ; 978-0-89118-245-0 ; Persistence of Forage Legumes ; persistenceoffo ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1974 ; 978-0-89118-880-3 ; Pesticides in Soil and Water ; pesticidesinsoi ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1969 ; 978-0-89118-571-0 ; Physiological Aspects of Crop Yield ; physiologicalas ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1984 ; 978-0-89118-572-7 ; Physiological Basis of Crop Growth and Development ; physiologicalba ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1994 ; 978-0-89118-246-7 ; Physiology and Determination of Crop Yield ; physiologyandde ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1966 ; 978-0-89118-888-9 ; Plant Environment and Efficient Water Use ; plantenvironmen ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1985 ; 978-0-89118-247-4 ; Potassium in Agriculture ; potassiuminagri ; reingest3.clockss.org:8083 >
+    au < doNotProcess ; exists ; 2017 ; 978-0-89118-362-4 ; Practical Mathematics for Precision Farming ; practicalmath ; >
+    au < finished ; finished ; 2010 ; 978-0-89118-198-9 ; Practical Perspectives on Science Education ; practicalperspe ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1996 ; 978-0-89118-257-3 ; Precision Agriculture: Proceedings of the Third International Conference ; precisionagricu3 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1999 ; 978-0-89118-258-0 ; Precision Agriculture: Proceedings of the Fourth International Conference, Part A ; precisionagric4a ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1999 ; 978-0-89118-258-0 ; Precision Agriculture: Proceedings of the Fourth International Conference, Part B ; precisionagric4b ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1993 ; 978-0-89118-261-0 ; Proceedings of Soil Specific Crop Management ; proceedingsofso ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1974 ; 978-0-89118-573-4 ; Proceedings of the Second International Turfgrass Research Conference ; proceedingsofth2 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1980 ; 978-0-89118-248-1 ; Proceedings of the Third International Turfgrass Research Conference ; proceedingsofth3 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1994 ; 978-0-89118-884-1 ; Quantitative Methods in Soil Mineralogy ; quantitativemet ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1992 ; 978-0-89118-259-7 ; Research Ethics, Manuscript Review, and Journal Quality ; researchethicsm ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1974 ; 978-0-89118-574-1 ; Seventy Generations of Selection for Oil and Protein in Maize ; seventygenerati ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1994 ; 978-0-89118-333-4 ; Sewage Sludge: Land Utilization and the Environment ; sewagesludgelan ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1995 ; 978-0-89118-260-3 ; Site-Specific Management for Agricultural Systems ; sitespecificman ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1981 ; 978-0-89118-881-0 ; Soil and Water Resources: Research Priorities for the Nation ; soilandwaterres ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; 978-0-89118-965-7 ; Soil Ecosystems Services ; soilecosystemsservices ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1985 ; 978-0-89118-309-9 ; Soil Erosion and Conservation in the Tropics ; soilerosionandc ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2016 ; 978-0-89118-354-9 ; Soil Fertility Management in Agroecosystems ; soilfertility ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2011 ; 978-0-89118-195-8 ; Soil Management: Building a Stable Base for Agriculture ; soilmanagementb ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2008 ; 978-0-89118-856-8 ; Soil Science Step-by-Step Field Analysis ; soilsciencestep ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1977 ; 978-0-89118-252-8 ; Soils for Management of Organic Wastes and Waste Waters ; soilsformanagem ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2008 ; 978-0-89118-340-2 ; Soils of Florida ; soilsofflorida ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1966 ; 978-0-89118-889-6 ; Soil Surveys and Land Use Planning ; soilsurveysandl ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1972 ; 978-0-89118-890-2 ; Soil Water ; soilwater ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1996 ; 978-0-89118-253-5 ; Stubble Over the Soil. The Vital Role of Plant Residue in Soil Management to Improve Soil Quality ; stubbleoverthes ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2007 ; 978-0-89118-197-2 ; The American Society of Agronomy: 100 Years of History ; theamericansoci ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1999 ; 978-0-89118-255-9 ; The Genetics and Exploitation of Heterosis in Crops ; thegeneticsande ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2012 ; 978-0-89118-335-8 ; The Graduate Student's Backpack It's What You Need on the Research Path ; thegraduatestud ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2010 ; 978-0-89118-193-4 ; The International Dimension of the American Society of Agronomy: Past and Future ; theinternationa ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1968 ; 978-0-89118-570-3 ; The Mutants of Maize ; themutantsofmai ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1980 ; 978-0-89118-249-8 ; The Role of Phosphorus in Agriculture ; theroleofphosph ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1968 ; 978-0-89118-250-4 ; The Role of Potassium in Agriculture ; theroleofpotass ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1997 ; 978-0-89118-262-7 ; The State of Site-Specific Management for Agriculture ; thestateofsites ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1994 ; 978-0-89118-578-9 ; Turf Weeds and Their Control ; turfweedsandthe ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1986 ; 978-0-89118-886-5 ; Utilization, Treatment, and Disposal of Waste on Land ; utilizationtrea ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2012 ; 978-0-089118-616-8 ; Urban–Rural Interfaces: Linking People and Nature ; urbanruralinter ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; 978-0-89118-366-2 ; Precision Agriculture Basics ; precisionagbasics ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; 978-0-89118-968-8 ; Soil-based Wastewater Treatment, Soil-based Wastewater Treatment ; sbwtreatment ; reingest2.clockss.org:8085 >
+  }
+  
+}

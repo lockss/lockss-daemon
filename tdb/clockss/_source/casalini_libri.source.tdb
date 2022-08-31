@@ -1,0 +1,111 @@
+{
+  publisher <
+    name = Casalini Libri ;
+    info[contract] = 2019 ;
+    info[tester] = S ;
+    info[platform] = Source
+  >
+
+  {
+
+      title <
+         name = Casalini Libri Source Content
+      >
+
+      plugin = org.lockss.plugin.clockss.casalini.ClockssCasaliniLibriMarcDirSourcePlugin
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/casalini-released/
+
+      proxy = DIRECT
+      implicit < status1 ; status ; year ; name ; param[directory] >
+
+      au < readySource ; finished ; 2021 ; Casalini Libri Source Content 2021 ; 2021_01 >
+      au < readySource ; crawling ; 2022 ; Casalini Libri Source Content 2022 ; 2022_01 >
+
+
+  }
+
+  {
+
+    title <
+       name = Casalini Books Source Content
+    >
+
+    proxy = DIRECT
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/casalinibooks-released/
+    implicit < status1 ; status ; year ; name ; param[directory] >
+    
+    {
+    plugin = org.lockss.plugin.clockss.casalini.ClockssCasaliniLibriBooksPlugin
+    ###########This plugin needs "Source" in the name.###############
+
+    au < readySource ; finished ; 2020 ; Casalini Books Source Content 2020 ; 2020 >
+    au < readySource ; finished ; 2021 ; Casalini Books Source Content 2021 ; 2021 >
+    }
+    {
+    plugin = org.lockss.plugin.clockss.casalini.ClockssCasaliniLibriBooksSourcePlugin
+
+    au < readySource ; crawling ; 2022 ; Casalini Books Source Content 2022 ; 2022 >
+    }
+  }
+
+  {
+
+    title <
+       name = Casalini Libri Source Content
+    >
+
+    plugin = org.lockss.plugin.clockss.casalini.ClockssCasaliniLibriMarcSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/casalini-released/
+
+    proxy = DIRECT
+    implicit < status1 ; status ; year ; name ; param[year] >
+
+    au < readySource ; finished ; 2019 ; Casalini Libri Source Content 2019 ; 2019 >
+    #no more content expected for this plugin
+
+  }
+
+  {
+  
+    title <
+       name = Casalini Libri Books Source Content
+    >
+    
+    {
+    
+      plugin = org.lockss.plugin.clockss.casalini.ClockssCasaliniLibriMarcSourcePlugin
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/casalini2012-released/
+      proxy = DIRECT
+      implicit < status1 ; status ; year ; name ; param[year] >
+    
+      # an unexpected 2012 deposit, now processed in 2016 bucket - one time plugin
+      au < zapped ; finished ; 2016 ; Casalini Libri Books Source Content 2016 ; 2016 >
+      #one time ingest in 10/2012. No more content expected.
+    }
+  }
+}
+
+{
+  publisher <
+    name = Casa Editrice Clueb ;
+    info[contract] = 2011 ;
+    info[tester] = S
+  >
+  provider = Casalini Libri
+
+  {
+  
+    title <
+      name = Casa Editrice Clueb Books Source Content
+    >
+    
+    plugin = org.lockss.plugin.casaeditriceclueb.ClockssCasaEditriceCluebSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/clueb-released/
+    proxy = DIRECT
+    implicit < status1 ; status ; year ; name ; param[year] >
+
+    au < zapped ; finished ; 2010 ; Casa Editrice Clueb Books Source Content 2010 ; 2010 >
+    #no more AUs expected
+  }
+
+}

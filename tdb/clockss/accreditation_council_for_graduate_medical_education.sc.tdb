@@ -1,0 +1,48 @@
+{
+
+  publisher <
+    name = Accreditation Council for Graduate Medical Education ;
+    info[contract] = 2013 ;
+    info[tester] = 8 ;
+    info[poller] = 2 ;
+    info[platform] = Silverchair
+  >
+
+  plugin = org.lockss.plugin.silverchair.allenpress.ClockssAllenPressSilverchairPlugin
+  implicit < status1 ; status ; year ; param[year] ; name ; param[volume_name] ; proxy >
+
+  {
+
+    title <
+      name = Journal of Graduate Medical Education ;
+      issn = 1949-8349 ;
+      eissn = 1949-8357 
+    >
+
+    param[journal_id] = jgme
+    {
+    param[base_url] = https://meridian.allenpress.com/
+
+    au < doNotProcess ; exists ; 2009 ; 2009 ; Journal of Graduate Medical Education Volume 1 ; 1 ; >
+    au < doNotProcess ; exists ; 2010 ; 2010 ; Journal of Graduate Medical Education Volume 2 ; 2 ; >
+    au < doNotProcess ; exists ; 2011 ; 2011 ; Journal of Graduate Medical Education Volume 3 ; 3 ; >
+    au < doNotProcess ; exists ; 2012 ; 2012 ; Journal of Graduate Medical Education Volume 4 ; 4 ; >
+    au < doNotProcess ; exists ; 2013 ; 2013 ; Journal of Graduate Medical Education Volume 5 ; 5 ; >
+    au < doNotProcess ; exists ; 2014 ; 2014 ; Journal of Graduate Medical Education Volume 6 ; 6 ; >
+    au < doNotProcess ; exists ; 2015 ; 2015 ; Journal of Graduate Medical Education Volume 7 ; 7 ; >
+    au < doNotProcess ; exists ; 2016 ; 2016 ; Journal of Graduate Medical Education Volume 8 ; 8 ; >
+    au < doNotProcess ; exists ; 2017 ; 2017 ; Journal of Graduate Medical Education Volume 9 ; 9 ; >
+    au < doNotProcess ; exists ; 2018 ; 2018 ; Journal of Graduate Medical Education Volume 10 ; 10 ; >
+    au < doNotProcess ; exists ; 2019 ; 2019 ; Journal of Graduate Medical Education Volume 11 ; 11 ; >
+    au < notReady ; exists ; 2020 ; 2020 ; Journal of Graduate Medical Education Volume 12 ; 12 ; >
+    au < notReady ; exists ; 2021 ; 2021 ; Journal of Graduate Medical Education Volume 13 ; 13 ; >
+    au < notReady ; exists ; 2022 ; 2022 ; Journal of Graduate Medical Education Volume 14 ; 14 ; >
+
+    }
+
+    {
+    param[base_url] = https://allenpress.com/
+    au < superseded ; exists ; 2020 ; 2020 ; Journal of Graduate Medical Education 12 [superseded] ; 12 ; >
+    }
+  }
+}

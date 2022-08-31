@@ -1,0 +1,87 @@
+{
+
+  publisher <
+    name = American Academy of Psychiatry and the Law ;
+    info[contract] = 2011 ;
+    info[tester] = 5 ;
+    info[poller] = 6
+  >
+    pluginPrefix = org.lockss.plugin.highwire.
+    implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] ; proxy >
+
+  {
+
+    title <
+      name = Journal of the American Academy of Psychiatry and the Law Online ;
+      issn = 1093-6793 ;
+      eissn = 1943-3662 ;
+      issnl = 1093-6793
+    >
+    {
+    #base_url changed upon move to Drupal.
+    param[base_url] = http://jaapl.org/
+
+    au < aapl.ClockssAAPLDrupalPlugin ; finished ; frozen ; 2016 ; Journal of the American Academy of Psychiatry and the Law Online Volume 44 ; 44 ; reingest4.clockss.org:8082 >
+    au < aapl.ClockssAAPLDrupalPlugin ; finished ; frozen ; 2017 ; Journal of the American Academy of Psychiatry and the Law Online Volume 45 ; 45 ; reingest5.clockss.org:8082 > #Probe url error
+    au < aapl.ClockssAAPLDrupalPlugin ; finished ; frozen ; 2018 ; Journal of the American Academy of Psychiatry and the Law Online Volume 46 ; 46 ; reingest1.clockss.org:8082 > #Probe url error
+    au < aapl.ClockssAAPLDrupalPlugin ; deepCrawl ; exists ; 2019 ; Journal of the American Academy of Psychiatry and the Law Online Volume 47 ; 47 ; >
+    au < aapl.ClockssAAPLDrupalPlugin ; deepCrawl ; exists ; 2020 ; Journal of the American Academy of Psychiatry and the Law Online Volume 48 ; 48 ; >
+    au < aapl.ClockssAAPLDrupalPlugin ; deepCrawl ; exists ; 2021 ; Journal of the American Academy of Psychiatry and the Law Online Volume 49 ; 49 ; >
+    au < aapl.ClockssAAPLDrupalPlugin ; manifest ; exists ; 2022 ; Journal of the American Academy of Psychiatry and the Law Online Volume 50 ; 50 ; >
+
+    }
+
+    {
+    param[base_url] = http://www.jaapl.org/
+
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1973 ; Journal of the American Academy of Psychiatry and the Law Online Volume 1 ; 1 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1974 ; Journal of the American Academy of Psychiatry and the Law Online Volume 2 ; 2 ; >
+    au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 1975 ; Journal of the American Academy of Psychiatry and the Law Online Volume 3 ; 3 ; >
+    au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 1976 ; Journal of the American Academy of Psychiatry and the Law Online Volume 4 ; 4 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1977 ; Journal of the American Academy of Psychiatry and the Law Online Volume 5 ; 5 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1978 ; Journal of the American Academy of Psychiatry and the Law Online Volume 6 ; 6 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1979 ; Journal of the American Academy of Psychiatry and the Law Online Volume 7 ; 7 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1980 ; Journal of the American Academy of Psychiatry and the Law Online Volume 8 ; 8 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1981 ; Journal of the American Academy of Psychiatry and the Law Online Volume 9 ; 9 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1982 ; Journal of the American Academy of Psychiatry and the Law Online Volume 10 ; 10 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1983 ; Journal of the American Academy of Psychiatry and the Law Online Volume 11 ; 11 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1984 ; Journal of the American Academy of Psychiatry and the Law Online Volume 12 ; 12 ; >
+    au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 1985 ; Journal of the American Academy of Psychiatry and the Law Online Volume 13 ; 13 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1986 ; Journal of the American Academy of Psychiatry and the Law Online Volume 14 ; 14 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1987 ; Journal of the American Academy of Psychiatry and the Law Online Volume 15 ; 15 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1988 ; Journal of the American Academy of Psychiatry and the Law Online Volume 16 ; 16 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1989 ; Journal of the American Academy of Psychiatry and the Law Online Volume 17 ; 17 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1990 ; Journal of the American Academy of Psychiatry and the Law Online Volume 18 ; 18 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1991 ; Journal of the American Academy of Psychiatry and the Law Online Volume 19 ; 19 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1992 ; Journal of the American Academy of Psychiatry and the Law Online Volume 20 ; 20 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1993 ; Journal of the American Academy of Psychiatry and the Law Online Volume 21 ; 21 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1994 ; Journal of the American Academy of Psychiatry and the Law Online Volume 22 ; 22 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1995 ; Journal of the American Academy of Psychiatry and the Law Online Volume 23 ; 23 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1996 ; Journal of the American Academy of Psychiatry and the Law Online Volume 24 ; 24 ; >
+    
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1997 ; Journal of the American Academy of Psychiatry and the Law Online Volume 25 [limited pdfs] ; 25 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1998 ; Journal of the American Academy of Psychiatry and the Law Online Volume 26 [limited pdfs] ; 26 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1999 ; Journal of the American Academy of Psychiatry and the Law Online Volume 27 [limited pdfs] ; 27 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2000 ; Journal of the American Academy of Psychiatry and the Law Online Volume 28 [limited pdfs] ; 28 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2001 ; Journal of the American Academy of Psychiatry and the Law Online Volume 29 [limited pdfs] ; 29 ; >
+
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2002 ; Journal of the American Academy of Psychiatry and the Law Online Volume 30 ; 30 ; >
+    au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2003 ; Journal of the American Academy of Psychiatry and the Law Online Volume 31 ; 31 ; >
+    au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2004 ; Journal of the American Academy of Psychiatry and the Law Online Volume 32 ; 32 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2005 ; Journal of the American Academy of Psychiatry and the Law Online Volume 33 ; 33 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; Journal of the American Academy of Psychiatry and the Law Online Volume 34 ; 34 ; >
+    au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2007 ; Journal of the American Academy of Psychiatry and the Law Online Volume 35 ; 35 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; Journal of the American Academy of Psychiatry and the Law Online Volume 36 ; 36 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; Journal of the American Academy of Psychiatry and the Law Online Volume 37 ; 37 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; Journal of the American Academy of Psychiatry and the Law Online Volume 38 ; 38 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Journal of the American Academy of Psychiatry and the Law Online Volume 39 ; 39 ; >
+    au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2012 ; Journal of the American Academy of Psychiatry and the Law Online Volume 40 ; 40 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Journal of the American Academy of Psychiatry and the Law Online Volume 41 ; 41 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Journal of the American Academy of Psychiatry and the Law Online Volume 42 ; 42 ; reingest2.clockss.org:8085 >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Journal of the American Academy of Psychiatry and the Law Online Volume 43 ; 43 ; >
+    au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2016 ; Journal of the American Academy of Psychiatry and the Law Online Volume 44 [superseded] ; 44 ; >
+
+    }
+  }
+
+}

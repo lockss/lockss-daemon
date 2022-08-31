@@ -1,0 +1,34 @@
+{
+
+  publisher <
+    name = University of Kerbala ;
+    info[contract] = 2015 ;
+    info[tester] = 5 ;
+    info[poller] = 8
+  >
+  provider = bepress
+  
+  # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
+
+  {
+  
+    title <
+      name = Karbala International Journal of Modern Science ;
+      eissn = 2405-6103 ;
+      issnl = 2405-6103
+    >
+    
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
+    param[base_url] = https://kijoms.uokerbala.edu.iq/
+    param[journal_abbr] = home
+    implicit < status1 ; status ; year ; name ; param[volume] ; proxy >
+    #volume 1 to 4 available on https://www.sciencedirect.com/journal/karbala-international-journal-of-modern-science/issues
+
+    au < finished ; crawling ; 2019 ; Karbala International Journal of Modern Science Volume 5 ; 5 ; reingest4.clockss.org:8082 >
+    au < deepCrawl ; exists ; 2020 ; Karbala International Journal of Modern Science Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2021 ; Karbala International Journal of Modern Science Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2022 ; Karbala International Journal of Modern Science Volume 8 ; 8 ; >
+
+  }
+
+}

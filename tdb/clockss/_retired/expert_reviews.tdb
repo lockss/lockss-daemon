@@ -1,0 +1,268 @@
+{
+
+  publisher <
+    name = Expert Reviews ;
+    info[contract] = 2012 ;
+    info[tester] = 8 ;
+    info[poller] = 3
+  >
+
+  plugin = org.lockss.plugin.atypon.futurescience.ClockssFutureSciencePlugin
+  param[base_url] = http://www.expert-reviews.com/
+  implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+  
+  comment[no_substance] = all these AUs have no substance on ingest4.
+
+  {
+  
+    title <
+      name = Expert Review of Anti-infective Therapy ;
+      issn = 1478-7210 ;
+      eissn = 1744-8336 
+    >
+    
+    param[journal_id] = eri
+
+    au < superseded ; exists ; 2013 ; Expert Review of Anti-infective Therapy Volume 11 [superseded] ; 11 ; >
+    
+  }
+
+  {
+  
+    title < 
+      name = Expert Review of Anticancer Therapy ;
+      issn = 1473-7140 ;
+      eissn = 1744-8328
+    >
+    
+    param[journal_id] = era
+
+    au < superseded ; exists ; 2013 ; Expert Review of Anticancer Therapy Volume 13 [superseded] ; 13 ; >
+   
+  }
+
+  {
+  
+    title < 
+      name = Expert Review of Cardiovascular Therapy ;
+      issn = 1477-9072 ;
+      eissn = 1744-8344
+    >
+    
+    param[journal_id] = erc
+
+    au < superseded ; exists ; 2013 ; Expert Review of Cardiovascular Therapy Volume 11 [superseded] ; 11 ; >
+  
+  }
+
+  {
+  
+    title < 
+      name = Expert Review of Clinical Immunology ;
+      issn = 1744-666X ;
+      eissn = 1744-8409
+    >
+    
+    param[journal_id] = eci
+
+    au < superseded ; exists ; 2013 ; Expert Review of Clinical Immunology Volume 9 [superseded] ; 9 ; >
+    
+  }
+
+  {
+  
+    title < 
+      name = Expert Review of Clinical Pharmacology ;
+      issn = 1751-2433 ;
+      eissn = 1751-2441
+    >
+    
+    param[journal_id] = ecp
+
+    au < superseded ; exists ; 2013 ; Expert Review of Clinical Pharmacology Volume 6 [superseded] ; 6 ; >
+    
+  }
+
+  {
+  
+    title < 
+      name = Expert Review of Dermatology ;
+      issn = 1746-9872 ;
+      eissn = 1746-9880
+    >
+    
+    param[journal_id] = edm
+
+    au < superseded ; exists ; 2013 ; Expert Review of Dermatology Volume 8 [superseded] ; 8 ; >
+    
+  }
+
+  {
+  
+    title < 
+      name = Expert Review of Endocrinology & Metabolism ;
+      issn = 1744-6651 ; 
+      eissn = 1744-8417
+    >
+    
+    param[journal_id] = eem
+
+    au < superseded ; exists ; 2013 ; Expert Review of Endocrinology & Metabolism Volume 8 [superseded] ; 8 ; >
+    
+  }
+
+  {
+  
+    title < 
+      name = Expert Review of Gastroenterology & Hepatology ;
+      issn = 1747-4124 ;
+      eissn = 1747-4132
+    >
+    
+    param[journal_id] = egh
+
+    au < superseded ; exists ; 2013 ; Expert Review of Gastroenterology & Hepatology Volume 7 [superseded] ; 7 ; >
+    
+  }
+
+  {
+  
+    title < 
+      name = Expert Review of Hematology ;
+      issn = 1747-4086 ;
+      eissn = 1747-4094
+    >
+    
+    param[journal_id] = ehm
+
+    au < superseded ; exists ; 2013 ; Expert Review of Hematology Volume 6 [superseded] ; 6 ; >
+    
+  }
+
+  {
+  
+    title < 
+      name = Expert Review of Medical Devices ;
+      issn = 1743-4440 ;
+      eissn = 1745-2422
+    >
+    
+    param[journal_id] = erd
+
+    au < superseded ; exists ; 2013 ; Expert Review of Medical Devices Volume 10 [superseded] ; 10 ; >
+    
+  }
+
+  {
+  
+    title < 
+      name = Expert Review of Molecular Diagnostics ;
+      issn = 1473-7159 ;
+      eissn = 1744-8352
+    >
+    
+    param[journal_id] = erm
+
+    au < superseded ; exists ; 2013 ; Expert Review of Molecular Diagnostics Volume 13 [superseded] ; 13 ; >
+   
+  }
+
+  {
+  
+    title < 
+      name = Expert Review of Neurotherapeutics ;
+      issn = 1473-7175 ;
+      eissn = 1744-8360
+    >
+    
+    param[journal_id] = ern
+
+    au < superseded ; exists ; 2013 ; Expert Review of Neurotherapeutics Volume 13 [superseded] ; 13 ; >
+   
+  }
+
+  {
+  
+    title < 
+      name = Expert Review of Obstetrics & Gynecology ;
+      issn = 1747-4108 ;
+      eissn = 1747-4116
+    >
+    
+    param[journal_id] = eog
+
+    au < superseded ; exists ; 2013 ; Expert Review of Obstetrics & Gynecology Volume 8 [superseded] ; 8 ; >
+    
+  }
+
+  {
+  
+    title < 
+      name = Expert Review of Ophthalmology ;
+      issn = 1746-9899 ;
+      eissn = 1746-9902
+    >
+    
+    param[journal_id] = eop
+
+    au < superseded ; exists ; 2013 ; Expert Review of Ophthalmology Volume 8 [superseded] ; 8 ; >
+    
+  }
+
+  {
+  
+    title < 
+      name = Expert Review of Pharmacoeconomics & Outcomes Research ;
+      issn = 1473-7167 ;
+      eissn = 1744-8379
+    >
+    
+    param[journal_id] = erp
+
+    au < superseded ; exists ; 2013 ; Expert Review of Pharmacoeconomics & Outcomes Research Volume 13 [superseded] ; 13 ; >
+  
+  }
+
+  {
+  
+    title < 
+      name = Expert Review of Proteomics ;
+      issn = 1478-9450 ;
+      eissn = 1744-8387
+    >
+    
+    param[journal_id] = epr
+
+    au < superseded ; exists ; 2013 ; Expert Review of Proteomics Volume 10 [superseded] ; 10 ; >
+     
+  }
+
+  {
+  
+    title < 
+      name = Expert Review of Respiratory Medicine ;
+      issn = 1747-6348 ;
+      eissn = 1747-6356
+    >
+    
+    param[journal_id] = ers
+
+    au < superseded ; exists ; 2013 ; Expert Review of Respiratory Medicine Volume 7 [superseded] ; 7 ; >
+    
+  }
+
+  {
+  
+    title < 
+      name = Expert Review of Vaccines ;
+      issn = 1476-0584 ;
+      eissn = 1744-8395
+    >
+    
+    param[journal_id] = erv
+
+    au < superseded ; exists ; 2013 ; Expert Review of Vaccines Volume 12 [superseded] ; 12 ; >
+   
+  }
+
+}

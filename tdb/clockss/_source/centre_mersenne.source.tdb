@@ -1,0 +1,33 @@
+{
+
+  publisher <
+    name = Centre Mersenne for Open Scientific Publishing ;
+    info[contract] = 2017 ;
+    info[tester] = S ;
+    info[platform] = Source
+  >
+
+  {
+
+    title <
+       name = Centre Mersenne Source Content
+    >
+
+    plugin = org.lockss.plugin.clockss.mersenne.ClockssMersenneSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/mersenne-released/
+
+    proxy = DIRECT
+    implicit < status1 ; status ; year ; name ; param[directory] >
+
+    au < zapped ; finished ; 2018 ; Centre Mersenne Source Content 2018 ; 2018 >
+    au < zapped ; finished ; 2019 ; Centre Mersenne Source Content 2019 ; 2019 >
+    au < readySource ; finished ; 2020 ; Centre Mersenne Source Content 2020 ; 2020 >
+    au < readySource ; finished ; 2021 ; Centre Mersenne Source Content 2021 ; 2021 >
+    #Plugin update to ignore content - JIRA LXPLUG-2080
+    au < readySource ; finished ; 2021 ; Centre Mersenne Source Content 2021_01 ; 2021_01 >
+    au < readySource ; crawling ; 2022 ; Centre Mersenne Source Content 2022_01 ; 2022_01 >
+
+
+  }
+
+}

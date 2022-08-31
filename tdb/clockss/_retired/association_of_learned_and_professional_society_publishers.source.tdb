@@ -1,0 +1,24 @@
+{
+
+  publisher <
+    name = Association of Learned and Professional Society Publishers ;
+    info[contract] = 2012 ;
+    info[tester] = S
+  >
+  
+  {
+  
+    title <
+      name = Association of Learned and Professional Society Publishers Books Source Content
+    >
+      
+    plugin = org.lockss.plugin.clockss.alpsp.ClockssAlpspSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/alpsp-released/
+    proxy = DIRECT
+    implicit < status1 ; status ; year ; name ; param[year] >
+    ##### moved to Wiley
+
+    au < zapped ; finished ; 2016 ; Association of Learned and Professional Society Publishers Books Source Content 2016 ; 2016 >
+        
+  }
+}

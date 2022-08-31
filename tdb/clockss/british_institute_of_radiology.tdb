@@ -1,0 +1,334 @@
+{
+
+  publisher <
+    name = British Institute of Radiology ;
+    info[contract] = 2011 ;
+    info[tester] = 5 ;
+    info[poller] = 6
+  >
+
+  comment[moving] = From HW to Atypon 1/1/2014
+    
+  {
+
+    title <
+      name = The British Journal of Radiology ;
+      issn = 0007-1285 ;
+      eissn = 1748-880X ;
+      issnl = 0007-1285
+    >
+    
+    {
+    
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin 
+      implicit < status1 ; status ; year ; name ; param[volume_name] ; param[base_url] ; proxy >
+    
+      au < doNotProcess ; doNotProcess ; 1928 ; British Journal of Radiology Volume 1 ; 1 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1929 ; British Journal of Radiology Volume 2 ; 2 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1930 ; British Journal of Radiology Volume 3 ; 3 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1931 ; British Journal of Radiology Volume 4 ; 4 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1932 ; British Journal of Radiology Volume 5 ; 5 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1933 ; British Journal of Radiology Volume 6 ; 6 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1934 ; British Journal of Radiology Volume 7 ; 7 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1935 ; British Journal of Radiology Volume 8 ; 8 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1936 ; British Journal of Radiology Volume 9 ; 9 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1937 ; British Journal of Radiology Volume 10 ; 10 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1938 ; British Journal of Radiology Volume 11 ; 11 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1939 ; British Journal of Radiology Volume 12 ; 12 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1940 ; British Journal of Radiology Volume 13 ; 13 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1941 ; British Journal of Radiology Volume 14 ; 14 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1942 ; British Journal of Radiology Volume 15 ; 15 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1943 ; British Journal of Radiology Volume 16 ; 16 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1944 ; British Journal of Radiology Volume 17 ; 17 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1945 ; British Journal of Radiology Volume 18 ; 18 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1946 ; British Journal of Radiology Volume 19 ; 19 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1947 ; British Journal of Radiology Volume 20 ; 20 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1948 ; British Journal of Radiology Volume 21 ; 21 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1949 ; British Journal of Radiology Volume 22 ; 22 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1950 ; British Journal of Radiology Volume 23 ; 23 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1951 ; British Journal of Radiology Volume 24 ; 24 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1952 ; British Journal of Radiology Volume 25 ; 25 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1953 ; British Journal of Radiology Volume 26 ; 26 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1954 ; British Journal of Radiology Volume 27 ; 27 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1955 ; British Journal of Radiology Volume 28 ; 28 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1956 ; British Journal of Radiology Volume 29 ; 29 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1957 ; British Journal of Radiology Volume 30 ; 30 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1958 ; British Journal of Radiology Volume 31 ; 31 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1959 ; British Journal of Radiology Volume 32 ; 32 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1960 ; British Journal of Radiology Volume 33 ; 33 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1961 ; British Journal of Radiology Volume 34 ; 34 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1962 ; British Journal of Radiology Volume 35 ; 35 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1963 ; British Journal of Radiology Volume 36 ; 36 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1964 ; British Journal of Radiology Volume 37 ; 37 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1965 ; British Journal of Radiology Volume 38 ; 38 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1966 ; British Journal of Radiology Volume 39 ; 39 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1967 ; British Journal of Radiology Volume 40 ; 40 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1968 ; British Journal of Radiology Volume 41 ; 41 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1969 ; British Journal of Radiology Volume 42 ; 42 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1970 ; British Journal of Radiology Volume 43 ; 43 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1971 ; British Journal of Radiology Volume 44 ; 44 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1972 ; British Journal of Radiology Volume 45 ; 45 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1973 ; British Journal of Radiology Volume 46 ; 46 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1974 ; British Journal of Radiology Volume 47 ; 47 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1975 ; British Journal of Radiology Volume 48 ; 48 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1976 ; British Journal of Radiology Volume 49 ; 49 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1977 ; British Journal of Radiology Volume 50 ; 50 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1978 ; British Journal of Radiology Volume 51 ; 51 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1979 ; British Journal of Radiology Volume 52 ; 52 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1980 ; British Journal of Radiology Volume 53 ; 53 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1981 ; British Journal of Radiology Volume 54 ; 54 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1982 ; British Journal of Radiology Volume 55 ; 55 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1983 ; British Journal of Radiology Volume 56 ; 56 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1984 ; British Journal of Radiology Volume 57 ; 57 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1985 ; British Journal of Radiology Volume 58 ; 58 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1986 ; British Journal of Radiology Volume 59 ; 59 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1987 ; British Journal of Radiology Volume 60 ; 60 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1988 ; British Journal of Radiology Volume 61 ; 61 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1989 ; British Journal of Radiology Volume 62 ; 62 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1990 ; British Journal of Radiology Volume 63 ; 63 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1991 ; British Journal of Radiology Volume 64 ; 64 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1992 ; British Journal of Radiology Volume 65 ; 65 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1993 ; British Journal of Radiology Volume 66 ; 66 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1994 ; British Journal of Radiology Volume 67 ; 67 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1995 ; British Journal of Radiology Volume 68 ; 68 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1996 ; British Journal of Radiology Volume 69 ; 69 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1997 ; British Journal of Radiology Volume 70 ; 70 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1998 ; British Journal of Radiology Volume 71 ; 71 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1999 ; British Journal of Radiology Volume 72 ; 72 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2000 ; British Journal of Radiology Volume 73 ; 73 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2001 ; British Journal of Radiology Volume 74 ; 74 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2002 ; British Journal of Radiology Volume 75 ; 75 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2003 ; British Journal of Radiology Volume 76 ; 76 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; British Journal of Radiology Volume 77 ; 77 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2005 ; British Journal of Radiology Volume 78 ; 78 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; British Journal of Radiology Volume 79 ; 79 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; British Journal of Radiology Volume 80 ; 80 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; British Journal of Radiology Volume 81 ; 81 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; British Journal of Radiology Volume 82 ; 82 ; https://bjr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; British Journal of Radiology Volume 83 ; 83 ; https://bjr.birjournals.org/ ; >
+      au < finished ; finished ; 2011 ; British Journal of Radiology Volume 84 ; 84 ; http://bjr.birjournals.org/ ; >
+      au < zapped ; finished ; 2012 ; British Journal of Radiology Volume 85 ; 85 ; http://bjr.birjournals.org/ ; >
+      au < finished ; frozen ; 2013 ; British Journal of Radiology Volume 86 ; 86 ; http://bjr.birjournals.org/ ; reingest3.clockss.org:8083 >
+      
+    }
+    
+    {
+    
+      plugin = org.lockss.plugin.atypon.bir.ClockssBIRAtyponPlugin
+      comment[platform] = Atypon
+      implicit < status1 ; status ; year ; name ; param[volume_name] ; param[base_url] ; proxy >
+      param[journal_id] = bjr
+      attr[EncodingMatchRange]=200
+    
+      au < manifest ; exists ; 2000 ; British Journal of Radiology Volume 73 ; 73 ; https://www.birpublications.org/ ; >
+      au < manifest ; exists ; 2001 ; British Journal of Radiology Volume 74 ; 74 ; https://www.birpublications.org/ ; >
+      au < manifest ; exists ; 2002 ; British Journal of Radiology Volume 75 ; 75 ; https://www.birpublications.org/ ; >
+      au < manifest ; exists ; 2003 ; British Journal of Radiology Volume 76 ; 76 ; https://www.birpublications.org/ ; >
+      au < manifest ; exists ; 2004 ; British Journal of Radiology Volume 77 ; 77 ; https://www.birpublications.org/ ; >
+      au < manifest ; exists ; 2005 ; British Journal of Radiology Volume 78 ; 78 ; https://www.birpublications.org/ ; >
+      au < manifest ; exists ; 2006 ; British Journal of Radiology Volume 79 ; 79 ; https://www.birpublications.org/ ; >
+      au < manifest ; exists ; 2007 ; British Journal of Radiology Volume 80 ; 80 ; https://www.birpublications.org/ ; >
+      au < manifest ; exists ; 2008 ; British Journal of Radiology Volume 81 ; 81 ; https://www.birpublications.org/ ; >
+      au < manifest ; exists ; 2009 ; British Journal of Radiology Volume 82 ; 82 ; https://www.birpublications.org/ ; >
+      au < manifest ; exists ; 2010 ; British Journal of Radiology Volume 83 ; 83 ; https://www.birpublications.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; British Journal of Radiology Volume 84 ; 84 ; https://www.birpublications.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; British Journal of Radiology Volume 85 ; 85 ; https://www.birpublications.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; British Journal of Radiology Volume 86 ; 86 ; https://www.birpublications.org/ ; >
+      au < finished ; finished ; 2014 ; British Journal of Radiology Volume 87 ; 87 ; http://www.birpublications.org/ ; >
+      au < finished ; frozen ; 2015 ; British Journal of Radiology Volume 88 ; 88 ; http://www.birpublications.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; British Journal of Radiology Volume 89 ; 89 ; http://www.birpublications.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2017 ; British Journal of Radiology Volume 90 ; 90 ; http://www.birpublications.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2018 ; British Journal of Radiology Volume 91 ; 91 ; https://www.birpublications.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2019 ; British Journal of Radiology Volume 92 ; 92 ; https://www.birpublications.org/ ; reingest4.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2020 ; British Journal of Radiology Volume 93 ; 93 ; https://www.birpublications.org/ ; >
+      au < deepCrawl ; exists ; 2021 ; British Journal of Radiology Volume 94 ; 94 ; https://www.birpublications.org/ ; >
+      au < crawling ; exists ; 2022 ; British Journal of Radiology Volume 95 ; 95 ; https://www.birpublications.org/ ; >
+
+    }
+    
+  }
+  
+  {
+
+    title <
+      name = BJR|case reports ;
+      eissn = 2055-7159 ;
+      issnl = 2055-7159
+    >
+    
+      plugin = org.lockss.plugin.atypon.bir.ClockssBIRAtyponPlugin
+      comment[platform] = Atypon
+      implicit < status1 ; status ; year ; name ; param[volume_name] ; param[base_url] ; proxy >
+      param[journal_id] = bjrcr
+
+      au < finished ; finished ; 2015 ; BJR|case reports Volume 1 ; 1 ; http://www.birpublications.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; BJR|case reports Volume 2 ; 2 ; http://www.birpublications.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2017 ; BJR|case reports Volume 3 ; 3 ; http://www.birpublications.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2018 ; BJR|case reports Volume 4 ; 4 ; https://www.birpublications.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2019 ; BJR|case reports Volume 5 ; 5 ; https://www.birpublications.org/ ; reingest2.clockss.org:8085 >
+      au < deepCrawl ; exists ; 2020 ; BJR|case reports Volume 6 ; 6 ; https://www.birpublications.org/ ; >
+      au < notReady ; exists ; 2021 ; BJR|case reports Volume 7 ; 7 ; https://www.birpublications.org/ ; > #524 https://www.birpublications.org/specs/ux3/releasedAssets/images/widgets/ad-placeholder/placeholder.png
+      au < crawling ; exists ; 2022 ; BJR|case reports Volume 8 ; 8 ; https://www.birpublications.org/ ; > #524 https://www.birpublications.org/specs/ux3/releasedAssets/images/widgets/ad-placeholder/placeholder.png
+
+  }
+
+  {
+
+    title <
+      name = BJR|Open ;
+      eissn = 2513-9878 ;
+      issnl = 2513-9878
+    >
+    
+      plugin = org.lockss.plugin.atypon.bir.ClockssBIRAtyponPlugin
+      comment[platform] = Atypon
+      implicit < status1 ; status ; year ; name ; param[volume_name] ; param[base_url] ; proxy >
+      param[journal_id] = bjro
+
+      au < finished ; frozen ; 2019 ; BJR|Open Volume 1 ; 1 ; https://www.birpublications.org/ ; reingest2.clockss.org:8085 >
+      au < deepCrawl ; exists ; 2020 ; BJR|Open Volume 2 ; 2 ; https://www.birpublications.org/ ; >
+      au < deepCrawl ; exists ; 2021 ; BJR|Open Volume 3 ; 3 ; https://www.birpublications.org/ ; >
+      au < crawling ; exists ; 2022 ; BJR|Open Volume 4 ; 4 ; https://www.birpublications.org/ ; >
+
+  }
+
+  {
+
+    title <
+      name = Dentomaxillofacial Radiology ;
+      issn = 0250-832X ;
+      eissn = 1476-542X ;
+      issnl = 0250-832X 
+    >
+
+    {
+    
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin 
+      implicit < status1 ; status ; year ; name ; param[volume_name] ; param[base_url] ; proxy >
+
+      {
+      
+        attr[au_coverage_depth] = abstracts
+      
+        au < doNotProcess ; doNotProcess ; 1989 ; Dentomaxillofacial Radiology Volume 18 [abstracts only] ; 18 ; https://dmfr.birjournals.org/ ; >
+        au < doNotProcess ; doNotProcess ; 1990 ; Dentomaxillofacial Radiology Volume 19 [abstracts only] ; 19 ; https://dmfr.birjournals.org/ ; >
+        au < doNotProcess ; doNotProcess ; 1991 ; Dentomaxillofacial Radiology Volume 20 [abstracts only] ; 20 ; https://dmfr.birjournals.org/ ; >
+        au < doNotProcess ; doNotProcess ; 1992 ; Dentomaxillofacial Radiology Volume 21 [abstracts only] ; 21 ; https://dmfr.birjournals.org/ ; >
+        au < doNotProcess ; doNotProcess ; 1993 ; Dentomaxillofacial Radiology Volume 22 [abstracts only] ; 22 ; https://dmfr.birjournals.org/ ; >
+        au < doNotProcess ; doNotProcess ; 1994 ; Dentomaxillofacial Radiology Volume 23 [abstracts only] ; 23 ; https://dmfr.birjournals.org/ ; >
+        au < doNotProcess ; doNotProcess ; 1995 ; Dentomaxillofacial Radiology Volume 24 [abstracts only] ; 24 ; https://dmfr.birjournals.org/ ; >
+        au < doNotProcess ; doNotProcess ; 1996 ; Dentomaxillofacial Radiology Volume 25 [abstracts only] ; 25 ; https://dmfr.birjournals.org/ ; >
+        au < doNotProcess ; doNotProcess ; 1997 ; Dentomaxillofacial Radiology Volume 26 [abstracts only] ; 26 ; https://dmfr.birjournals.org/ ; >
+      }
+      au < doNotProcess ; doNotProcess ; 1998 ; Dentomaxillofacial Radiology Volume 27 ; 27 ; https://dmfr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1999 ; Dentomaxillofacial Radiology Volume 28 ; 28 ; https://dmfr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2000 ; Dentomaxillofacial Radiology Volume 29 ; 29 ; https://dmfr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2001 ; Dentomaxillofacial Radiology Volume 30 ; 30 ; https://dmfr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2002 ; Dentomaxillofacial Radiology Volume 31 ; 31 ; https://dmfr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2003 ; Dentomaxillofacial Radiology Volume 32 ; 32 ; https://dmfr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; Dentomaxillofacial Radiology Volume 33 ; 33 ; https://dmfr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2005 ; Dentomaxillofacial Radiology Volume 34 ; 34 ; https://dmfr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; Dentomaxillofacial Radiology Volume 35 ; 35 ; https://dmfr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; Dentomaxillofacial Radiology Volume 36 ; 36 ; https://dmfr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; Dentomaxillofacial Radiology Volume 37 ; 37 ; https://dmfr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; Dentomaxillofacial Radiology Volume 38 ; 38 ; https://dmfr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; Dentomaxillofacial Radiology Volume 39 ; 39 ; https://dmfr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; Dentomaxillofacial Radiology Volume 40 ; 40 ; https://dmfr.birjournals.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; Dentomaxillofacial Radiology Volume 41 ; 41 ; https://dmfr.birjournals.org/ ; >
+      au < finished ; finished ; 2011 ; Dentomaxillofacial Radiology Volume 40 ; 40 ; http://dmfr.birjournals.org/ ; > 
+      au < finished ; finished ; 2012 ; Dentomaxillofacial Radiology Volume 41 ; 41 ; http://dmfr.birjournals.org/ ; >
+      au < finished ; crawling ; 2013 ; Dentomaxillofacial Radiology Volume 42 ; 42 ; http://dmfr.birjournals.org/ ; reingest3.clockss.org:8083 >
+
+    }
+
+    {
+    
+      plugin = org.lockss.plugin.atypon.bir.ClockssBIRAtyponPlugin
+      comment[platform] = Atypon
+      implicit < status1 ; status ; year ; name ; param[volume_name] ; param[base_url] ; proxy >
+      param[journal_id] = dmfr
+
+      au < manifest ; exists ; 2000 ; Dentomaxillofacial Radiology Volume 29 ; 29 ; https://www.birpublications.org/ ; >
+      au < manifest ; exists ; 2001 ; Dentomaxillofacial Radiology Volume 30 ; 30 ; https://www.birpublications.org/ ; >
+      au < manifest ; exists ; 2002 ; Dentomaxillofacial Radiology Volume 31 ; 31 ; https://www.birpublications.org/ ; >
+      au < manifest ; exists ; 2003 ; Dentomaxillofacial Radiology Volume 32 ; 32 ; https://www.birpublications.org/ ; >
+      au < manifest ; exists ; 2004 ; Dentomaxillofacial Radiology Volume 33 ; 33 ; https://www.birpublications.org/ ; >
+      au < manifest ; exists ; 2005 ; Dentomaxillofacial Radiology Volume 34 ; 34 ; https://www.birpublications.org/ ; >
+      au < manifest ; exists ; 2006 ; Dentomaxillofacial Radiology Volume 35 ; 35 ; https://www.birpublications.org/ ; >
+      au < manifest ; exists ; 2007 ; Dentomaxillofacial Radiology Volume 36 ; 36 ; https://www.birpublications.org/ ; >
+      au < manifest ; exists ; 2008 ; Dentomaxillofacial Radiology Volume 37 ; 37 ; https://www.birpublications.org/ ; >
+      au < manifest ; exists ; 2009 ; Dentomaxillofacial Radiology Volume 38 ; 38 ; https://www.birpublications.org/ ; >
+      au < manifest ; exists ; 2010 ; Dentomaxillofacial Radiology Volume 39 ; 39 ; https://www.birpublications.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; Dentomaxillofacial Radiology Volume 40 ; 40 ; https://www.birpublications.org/ ; > 
+      au < doNotProcess ; doNotProcess ; 2012 ; Dentomaxillofacial Radiology Volume 41 ; 41 ; https://www.birpublications.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; Dentomaxillofacial Radiology Volume 42 ; 42 ; https://www.birpublications.org/ ; >
+      au < finished ; crawling ; 2014 ; Dentomaxillofacial Radiology Volume 43 ; 43 ; http://www.birpublications.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; Dentomaxillofacial Radiology Volume 44 ; 44 ; http://www.birpublications.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; Dentomaxillofacial Radiology Volume 45 ; 45 ; http://www.birpublications.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2017 ; Dentomaxillofacial Radiology Volume 46 ; 46 ; http://www.birpublications.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2018 ; Dentomaxillofacial Radiology Volume 47 ; 47 ; https://www.birpublications.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2019 ; Dentomaxillofacial Radiology Volume 48 ; 48 ; https://www.birpublications.org/ ; reingest2.clockss.org:8085 >
+      au < deepCrawl ; exists ; 2020 ; Dentomaxillofacial Radiology Volume 49 ; 49 ; https://www.birpublications.org/ ; >
+      au < deepCrawl ; exists ; 2021 ; Dentomaxillofacial Radiology Volume 50 ; 50 ; https://www.birpublications.org/ ; >
+      au < crawling ; exists ; 2022 ; Dentomaxillofacial Radiology Volume 51 ; 51 ; https://www.birpublications.org/ ; >
+
+    }
+
+  }
+  
+  {
+
+    title <
+      name = Imaging ;
+      issn = 0965-6812 ;
+      eissn = 1748-8818 ;
+      issnl = 0965-6812
+    >
+    
+    {
+    
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin 
+      implicit < status1 ; status ; year ; name ; param[volume_name] ; param[base_url] ; proxy >
+      # last published volume in 2009  
+    
+      au < superseded ; finished ; 1999 ; Imaging Volume 11 [superseded] ; 11 ; http://imaging.birjournals.org/ ; >
+      au < superseded ; finished ; 2000 ; Imaging Volume 12 [superseded] ; 12 ; http://imaging.birjournals.org/ ; >
+      au < superseded ; finished ; 2001 ; Imaging Volume 13 [superseded] ; 13 ; http://imaging.birjournals.org/ ; >
+      au < superseded ; finished ; 2002 ; Imaging Volume 14 [superseded] ; 14 ; http://imaging.birjournals.org/ ; > #not complete
+      au < superseded ; finished ; 2003 ; Imaging Volume 15 [superseded] ; 15 ; http://imaging.birjournals.org/ ; >
+      au < superseded ; finished ; 2004 ; Imaging Volume 16 [superseded] ; 16 ; http://imaging.birjournals.org/ ; >
+      au < superseded ; finished ; 2005 ; Imaging Volume 17 [superseded] ; 17 ; http://imaging.birjournals.org/ ; >
+      au < superseded ; finished ; 2006 ; Imaging Volume 18 [superseded] ; 18 ; http://imaging.birjournals.org/ ; >
+      au < superseded ; finished ; 2007 ; Imaging Volume 19 [superseded] ; 19 ; http://imaging.birjournals.org/ ; >
+      au < superseded ; finished ; 2008 ; Imaging Volume 20 [superseded] ; 20 ; http://imaging.birjournals.org/ ; >
+      au < superseded ; finished ; 2009 ; Imaging Volume 21 [superseded] ; 21 ; http://imaging.birjournals.org/ ; >
+    
+    }
+
+    {
+    
+      plugin = org.lockss.plugin.atypon.bir.ClockssBIRAtyponPlugin
+      comment[platform] = Atypon
+      implicit < status1 ; status ; year ; name ; param[volume_name] ; param[base_url] ; proxy >
+      param[journal_id] = img
+      # no issue in 2010-2012
+
+      au < finished ; frozen ; 1999 ; Imaging Volume 11 ; 11 ; http://www.birpublications.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2000 ; Imaging Volume 12 ; 12 ; http://www.birpublications.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2001 ; Imaging Volume 13 ; 13 ; http://www.birpublications.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2002 ; Imaging Volume 14 ; 14 ; http://www.birpublications.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2003 ; Imaging Volume 15 ; 15 ; http://www.birpublications.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2004 ; Imaging Volume 16 ; 16 ; http://www.birpublications.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2005 ; Imaging Volume 17 ; 17 ; http://www.birpublications.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2006 ; Imaging Volume 18 ; 18 ; http://www.birpublications.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2007 ; Imaging Volume 19 ; 19 ; http://www.birpublications.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2008 ; Imaging Volume 20 ; 20 ; http://www.birpublications.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2009 ; Imaging Volume 21 ; 21 ; http://www.birpublications.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2013 ; Imaging Volume 22 ; 22 ; http://www.birpublications.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2014 ; Imaging Volume 23 ; 23 ; http://www.birpublications.org/ ; reingest1.clockss.org:8082 >
+    
+    }
+
+  }
+
+}

@@ -1,0 +1,68 @@
+{
+
+  publisher <
+    name = Southeastern Surgical Congress ;
+    info[contract] = 2013 ;
+    info[back] = 2005 ;
+    info[tester] = 8 ;
+    info[poller] = 6
+  >
+
+  plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
+#  param[base_url] = http://www.ingentaconnect.com/
+#  param[api_url] = http://api.ingentaconnect.com/
+  param[graphics_url] = http://graphics.ingentaconnect.com/
+  param[publisher_id] = sesc
+  #publisher content not available from ingenta
+  
+  implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+  
+  {
+
+    title <
+      name = The American Surgeon ;
+      issn = 0003-1348 ;
+      eissn = 1555-9823
+    >
+
+    param[journal_id] = tas
+    param[journal_issn] = 0003-1348
+
+    {
+    param[base_url] = https://www.ingentaconnect.com/
+    param[api_url] = https://api.ingentaconnect.com/
+
+    au < doNotProcess ; doNotProcess ; 2005 ; The American Surgeon Volume 71 ; 71 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; The American Surgeon Volume 72 ; 72 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; The American Surgeon Volume 73 ; 73 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; The American Surgeon Volume 74 ; 74 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; The American Surgeon Volume 75 ; 75 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; The American Surgeon Volume 76 ; 76 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; The American Surgeon Volume 77 ; 77 ; >
+
+    }
+
+    {
+    param[base_url] = http://www.ingentaconnect.com/
+    param[api_url] = http://api.ingentaconnect.com/
+
+
+    au < finished ; crawling ; 2012 ; The American Surgeon Volume 78 ; 78 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; The American Surgeon Volume 79 ; 79 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; The American Surgeon Volume 80 ; 80 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; The American Surgeon Volume 81 ; 81 ; reingest3.clockss.org:8083 >
+    au < frozen ; exists ; 2016 ; The American Surgeon Volume 82 ; 82 ; >
+    }
+
+    {
+    param[base_url] = https://www.ingentaconnect.com/
+    param[api_url] = https://api.ingentaconnect.com/
+
+    au < doNotProcess ; doNotProcess ; 2017 ; The American Surgeon Volume 83 ; 83 ; >
+    au < doNotProcess ; doNotProcess ; 2018 ; The American Surgeon Volume 84 ; 84 ; >
+    au < doNotProcess ; doNotProcess ; 2019 ; The American Surgeon Volume 85 ; 85 ; >
+    au < doNotProcess ; doNotProcess ; 2020 ; The American Surgeon Volume 86 ; 86 ; >
+    }
+
+  }
+}

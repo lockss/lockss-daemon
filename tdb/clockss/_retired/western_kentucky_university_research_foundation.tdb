@@ -1,0 +1,37 @@
+{
+
+  publisher <
+    name = Western Kentucky University Research Foundation ;
+    info[contract] = 2012 ;
+    info[tester] = 5 ;
+    info[poller] = 8 ;
+    info[platform] = bepress. retired. Moved to Sagamore.
+  >
+  provider = bepress
+  
+  # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
+
+  {
+  
+    title < 
+      name = Journal of Outdoor Recreation, Education, and Leadership ;
+      eissn = 1948-5123 
+    >
+    
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
+    param[base_url] = http://digitalcommons.wku.edu/
+    param[journal_abbr] = jorel
+    implicit < status1 ; status ; year ; name ; param[volume] ; proxy >
+    # move to Sagamore Publishing in 2015
+
+    au < doNotProcess ; exists ; 2009 ; Journal of Outdoor Recreation, Education, and Leadership Volume 1 ; 1 ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Outdoor Recreation, Education, and Leadership volume 2 ; 2 ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Outdoor Recreation, Education, and Leadership Volume 3 ; 3 ; >
+    au < finished ; finished ; 2012 ; Journal of Outdoor Recreation, Education, and Leadership Volume 4 ; 4 ; >
+    au < finished ; finished ; 2013 ; Journal of Outdoor Recreation, Education, and Leadership Volume 5 ; 5 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Journal of Outdoor Recreation, Education, and Leadership Volume 6 ; 6 ; >
+    au < finished ; finished ; 2015 ; Journal of Outdoor Recreation, Education, and Leadership Volume 7 ; 7 ; reingest1.clockss.org:8082 >
+    
+  }
+
+}

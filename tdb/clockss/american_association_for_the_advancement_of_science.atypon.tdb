@@ -1,0 +1,570 @@
+{
+
+  publisher <
+    name = American Association for the Advancement of Science ;
+    info[back] = 1880 ;
+    info[contract] = 2015 ;
+    info[tester] = 8 ;
+    info[poller] = 2 ;
+    info[platform] = Atypon.
+  >
+
+  plugin = org.lockss.plugin.atypon.aaas.ClockssAaasPlugin
+  implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+  # Moved to Drupal July 15 2015
+  # Moved to Atypon Summer 2021
+    
+  {
+
+    title <
+      name = Science ;
+      issn =  0036-8075 ;
+      eissn =  1095-9203
+    >
+    
+      param[base_url] = https://www.science.org/
+      param[journal_id] = science
+      #content available from 1880 volume os-1 to 2009 volume 326. 4 volumes/year starting 1962. 2 volumes/year starting 1895 volume 1.
+      #volume 344 File size (346438) differs from Content-Length header (461302): https://www.science.org/content/sci/suppl/2014/04/23/344.6182.380.DC1/1249656s-tables.zip
+
+
+      au < doNotProcess ; doNotProcess ; 1880 ; Science Volume os-1 ; os-1 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1881 ; Science Volume os-2 ; os-2 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1882 ; Science Volume os-3 ; os-3 ; reingest1.clockss.org:8082 >
+
+      au < doNotProcess ; doNotProcess ; 1883 ; Science Volume ns-1 ; ns-1 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1883 ; Science Volume ns-2 ; ns-2 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1884 ; Science Volume ns-3 ; ns-3 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1884 ; Science Volume ns-4 ; ns-4 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1885 ; Science Volume ns-5 ; ns-5 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1885 ; Science Volume ns-6 ; ns-6 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1886 ; Science Volume ns-7 ; ns-7 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1886 ; Science Volume ns-8 ; ns-8 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1887 ; Science Volume ns-9 ; ns-9 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1887 ; Science Volume ns-10 ; ns-10 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1888 ; Science Volume ns-11 ; ns-11 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1888 ; Science Volume ns-12 ; ns-12 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1889 ; Science Volume ns-13 ; ns-13 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1889 ; Science Volume ns-14 ; ns-14 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1890 ; Science Volume ns-15 ; ns-15 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1890 ; Science Volume ns-16 ; ns-16 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1891 ; Science Volume ns-17 ; ns-17 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1891 ; Science Volume ns-18 ; ns-18 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1892 ; Science Volume ns-19 ; ns-19 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1892 ; Science Volume ns-20 ; ns-20 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1893 ; Science Volume ns-21 ; ns-21 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1893 ; Science Volume ns-22 ; ns-22 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1894 ; Science Volume ns-23 ; ns-23 ; reingest2.clockss.org:8085 >
+
+      au < doNotProcess ; doNotProcess ; 1895 ; Science Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1895 ; Science Volume 2 ; 2 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1896 ; Science Volume 3 ; 3 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1896 ; Science Volume 4 ; 4 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1897 ; Science Volume 5 ; 5 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1897 ; Science Volume 6 ; 6 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1898 ; Science Volume 7 ; 7 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1898 ; Science Volume 8 ; 8 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1899 ; Science Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1899 ; Science Volume 10 ; 10 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1900 ; Science Volume 11 ; 11 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1900 ; Science Volume 12 ; 12 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1901 ; Science Volume 13 ; 13 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1901 ; Science Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+
+      au < doNotProcess ; doNotProcess ; 1902 ; Science Volume 15 ; 15 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1902 ; Science Volume 16 ; 16 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1903 ; Science Volume 17 ; 17 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1903 ; Science Volume 18 ; 18 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1904 ; Science Volume 19 ; 19 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1904 ; Science Volume 20 ; 20 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1905 ; Science Volume 21 ; 21 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1905 ; Science Volume 22 ; 22 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1906 ; Science Volume 23 ; 23 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1906 ; Science Volume 24 ; 24 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1907 ; Science Volume 25 ; 25 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1907 ; Science Volume 26 ; 26 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1908 ; Science Volume 27 ; 27 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1908 ; Science Volume 28 ; 28 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1909 ; Science Volume 29 ; 29 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1909 ; Science Volume 30 ; 30 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1910 ; Science Volume 31 ; 31 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1910 ; Science Volume 32 ; 32 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1911 ; Science Volume 33 ; 33 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1911 ; Science Volume 34 ; 34 ; reingest1.clockss.org:8082 >
+
+      au < doNotProcess ; doNotProcess ; 1912 ; Science Volume 35 ; 35 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1912 ; Science Volume 36 ; 36 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1913 ; Science Volume 37 ; 37 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1913 ; Science Volume 38 ; 38 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1914 ; Science Volume 39 ; 39 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1914 ; Science Volume 40 ; 40 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1915 ; Science Volume 41 ; 41 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1915 ; Science Volume 42 ; 42 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1916 ; Science Volume 43 ; 43 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1916 ; Science Volume 44 ; 44 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1917 ; Science Volume 45 ; 45 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1917 ; Science Volume 46 ; 46 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1918 ; Science Volume 47 ; 47 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1918 ; Science Volume 48 ; 48 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1919 ; Science Volume 49 ; 49 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1919 ; Science Volume 50 ; 50 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1920 ; Science Volume 51 ; 51 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1920 ; Science Volume 52 ; 52 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1921 ; Science Volume 53 ; 53 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1921 ; Science Volume 54 ; 54 ; reingest1.clockss.org:8082 >
+
+      au < doNotProcess ; doNotProcess ; 1922 ; Science Volume 55 ; 55 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1922 ; Science Volume 56 ; 56 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1923 ; Science Volume 57 ; 57 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1923 ; Science Volume 58 ; 58 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1924 ; Science Volume 59 ; 59 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1924 ; Science Volume 60 ; 60 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1925 ; Science Volume 61 ; 61 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1925 ; Science Volume 62 ; 62 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1926 ; Science Volume 63 ; 63 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1926 ; Science Volume 64 ; 64 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1927 ; Science Volume 65 ; 65 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1927 ; Science Volume 66 ; 66 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1928 ; Science Volume 67 ; 67 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1928 ; Science Volume 68 ; 68 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1929 ; Science Volume 69 ; 69 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1929 ; Science Volume 70 ; 70 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1930 ; Science Volume 71 ; 71 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1930 ; Science Volume 72 ; 72 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1931 ; Science Volume 73 ; 73 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1931 ; Science Volume 74 ; 74 ; reingest1.clockss.org:8082 >
+
+      au < doNotProcess ; doNotProcess ; 1932 ; Science Volume 75 ; 75 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1932 ; Science Volume 76 ; 76 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1933 ; Science Volume 77 ; 77 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1933 ; Science Volume 78 ; 78 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1934 ; Science Volume 79 ; 79 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1934 ; Science Volume 80 ; 80 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1935 ; Science Volume 81 ; 81 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1935 ; Science Volume 82 ; 82 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1936 ; Science Volume 83 ; 83 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1936 ; Science Volume 84 ; 84 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1937 ; Science Volume 85 ; 85 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1937 ; Science Volume 86 ; 86 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1938 ; Science Volume 87 ; 87 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1938 ; Science Volume 88 ; 88 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1939 ; Science Volume 89 ; 89 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1939 ; Science Volume 90 ; 90 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1940 ; Science Volume 91 ; 91 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1940 ; Science Volume 92 ; 92 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1941 ; Science Volume 93 ; 93 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1941 ; Science Volume 94 ; 94 ; reingest1.clockss.org:8082 >
+
+      au < doNotProcess ; doNotProcess ; 1942 ; Science Volume 95 ; 95 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1942 ; Science Volume 96 ; 96 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1943 ; Science Volume 97 ; 97 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1943 ; Science Volume 98 ; 98 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1944 ; Science Volume 99 ; 99 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1944 ; Science Volume 100 ; 100 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1945 ; Science Volume 101 ; 101 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1945 ; Science Volume 102 ; 102 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1946 ; Science Volume 103 ; 103 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1946 ; Science Volume 104 ; 104 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1947 ; Science Volume 105 ; 105 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1947 ; Science Volume 106 ; 106 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1948 ; Science Volume 107 ; 107 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1948 ; Science Volume 108 ; 108 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1949 ; Science Volume 109 ; 109 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1949 ; Science Volume 110 ; 110 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1950 ; Science Volume 111 ; 111 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1950 ; Science Volume 112 ; 112 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1951 ; Science Volume 113 ; 113 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1951 ; Science Volume 114 ; 114 ; reingest4.clockss.org:8082 >
+
+      au < doNotProcess ; doNotProcess ; 1952 ; Science Volume 115 ; 115 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1952 ; Science Volume 116 ; 116 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1953 ; Science Volume 117 ; 117 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1953 ; Science Volume 118 ; 118 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1954 ; Science Volume 119 ; 119 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1954 ; Science Volume 120 ; 120 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1955 ; Science Volume 121 ; 121 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1955 ; Science Volume 122 ; 122 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1956 ; Science Volume 123 ; 123 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1956 ; Science Volume 124 ; 124 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1957 ; Science Volume 125 ; 125 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1957 ; Science Volume 126 ; 126 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1958 ; Science Volume 127 ; 127 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1958 ; Science Volume 128 ; 128 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1959 ; Science Volume 129 ; 129 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1959 ; Science Volume 130 ; 130 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1960 ; Science Volume 131 ; 131 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1960 ; Science Volume 132 ; 132 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1961 ; Science Volume 133 ; 133 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1961 ; Science Volume 134 ; 134 ; reingest4.clockss.org:8082 >
+
+      au < doNotProcess ; doNotProcess ; 1962 ; Science Volume 135 ; 135 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1962 ; Science Volume 136 ; 136 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1962 ; Science Volume 137 ; 137 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1962 ; Science Volume 138 ; 138 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1963 ; Science Volume 139 ; 139 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1963 ; Science Volume 140 ; 140 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1963 ; Science Volume 141 ; 141 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1963 ; Science Volume 142 ; 142 ; reingest2.clockss.org:8085 >
+
+      au < doNotProcess ; doNotProcess ; 1964 ; Science Volume 143 ; 143 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1964 ; Science Volume 144 ; 144 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1964 ; Science Volume 145 ; 145 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1964 ; Science Volume 146 ; 146 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1965 ; Science Volume 147 ; 147 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1965 ; Science Volume 148 ; 148 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1965 ; Science Volume 149 ; 149 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1965 ; Science Volume 150 ; 150 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1966 ; Science Volume 151 ; 151 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1966 ; Science Volume 152 ; 152 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1966 ; Science Volume 153 ; 153 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1966 ; Science Volume 154 ; 154 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1967 ; Science Volume 155 ; 155 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1967 ; Science Volume 156 ; 156 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1967 ; Science Volume 157 ; 157 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1967 ; Science Volume 158 ; 158 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1968 ; Science Volume 159 ; 159 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1968 ; Science Volume 160 ; 160 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1968 ; Science Volume 161 ; 161 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1968 ; Science Volume 162 ; 162 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1969 ; Science Volume 163 ; 163 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1969 ; Science Volume 164 ; 164 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1969 ; Science Volume 165 ; 165 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1969 ; Science Volume 166 ; 166 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1970 ; Science Volume 167 ; 167 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1970 ; Science Volume 168 ; 168 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1970 ; Science Volume 169 ; 169 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1970 ; Science Volume 170 ; 170 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1971 ; Science Volume 171 ; 171 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1971 ; Science Volume 172 ; 172 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1971 ; Science Volume 173 ; 173 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1971 ; Science Volume 174 ; 174 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1972 ; Science Volume 175 ; 175 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1972 ; Science Volume 176 ; 176 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1972 ; Science Volume 177 ; 177 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1972 ; Science Volume 178 ; 178 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1973 ; Science Volume 179 ; 179 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1973 ; Science Volume 180 ; 180 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1973 ; Science Volume 181 ; 181 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1973 ; Science Volume 182 ; 182 ; reingest5.clockss.org:8082 >
+
+      au < doNotProcess ; doNotProcess ; 1974 ; Science Volume 183 ; 183 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1974 ; Science Volume 184 ; 184 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1974 ; Science Volume 185 ; 185 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1974 ; Science Volume 186 ; 186 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1975 ; Science Volume 187 ; 187 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1975 ; Science Volume 188 ; 188 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1975 ; Science Volume 189 ; 189 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1975 ; Science Volume 190 ; 190 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1976 ; Science Volume 191 ; 191 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1976 ; Science Volume 192 ; 192 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1976 ; Science Volume 193 ; 193 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1976 ; Science Volume 194 ; 194 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1977 ; Science Volume 195 ; 195 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1977 ; Science Volume 196 ; 196 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1977 ; Science Volume 197 ; 197 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1977 ; Science Volume 198 ; 198 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1978 ; Science Volume 199 ; 199 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1978 ; Science Volume 200 ; 200 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1978 ; Science Volume 201 ; 201 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1978 ; Science Volume 202 ; 202 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1979 ; Science Volume 203 ; 203 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1979 ; Science Volume 204 ; 204 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1979 ; Science Volume 205 ; 205 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1979 ; Science Volume 206 ; 206 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1980 ; Science Volume 207 ; 207 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1980 ; Science Volume 208 ; 208 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1980 ; Science Volume 209 ; 209 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1980 ; Science Volume 210 ; 210 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1981 ; Science Volume 211 ; 211 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1981 ; Science Volume 212 ; 212 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1981 ; Science Volume 213 ; 213 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1981 ; Science Volume 214 ; 214 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1982 ; Science Volume 215 ; 215 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1982 ; Science Volume 216 ; 216 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1982 ; Science Volume 217 ; 217 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1982 ; Science Volume 218 ; 218 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1983 ; Science Volume 219 ; 219 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1983 ; Science Volume 220 ; 220 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1983 ; Science Volume 221 ; 221 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1983 ; Science Volume 222 ; 222 ; reingest4.clockss.org:8082 >
+
+      au < doNotProcess ; doNotProcess ; 1984 ; Science Volume 223 ; 223 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1984 ; Science Volume 224 ; 224 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1984 ; Science Volume 225 ; 225 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1984 ; Science Volume 226 ; 226 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1985 ; Science Volume 227 ; 227 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1985 ; Science Volume 228 ; 228 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1985 ; Science Volume 229 ; 229 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1985 ; Science Volume 230 ; 230 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1986 ; Science Volume 231 ; 231 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1986 ; Science Volume 232 ; 232 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1986 ; Science Volume 233 ; 233 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1986 ; Science Volume 234 ; 234 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1987 ; Science Volume 235 ; 235 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1987 ; Science Volume 236 ; 236 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1987 ; Science Volume 237 ; 237 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1987 ; Science Volume 238 ; 238 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1988 ; Science Volume 239 ; 239 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1988 ; Science Volume 240 ; 240 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1988 ; Science Volume 241 ; 241 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1988 ; Science Volume 242 ; 242 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1989 ; Science Volume 243 ; 243 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1989 ; Science Volume 244 ; 244 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1989 ; Science Volume 245 ; 245 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1989 ; Science Volume 246 ; 246 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1990 ; Science Volume 247 ; 247 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1990 ; Science Volume 248 ; 248 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1990 ; Science Volume 249 ; 249 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1990 ; Science Volume 250 ; 250 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1991 ; Science Volume 251 ; 251 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1991 ; Science Volume 252 ; 252 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1991 ; Science Volume 253 ; 253 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1991 ; Science Volume 254 ; 254 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1992 ; Science Volume 255 ; 255 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1992 ; Science Volume 256 ; 256 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1992 ; Science Volume 257 ; 257 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1992 ; Science Volume 258 ; 258 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1993 ; Science Volume 259 ; 259 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1993 ; Science Volume 260 ; 260 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1993 ; Science Volume 261 ; 261 ; reingest5.clockss.org:8082>
+      au < doNotProcess ; doNotProcess ; 1993 ; Science Volume 262 ; 262 ; reingest2.clockss.org:8085 >
+
+      au < doNotProcess ; doNotProcess ; 1994 ; Science Volume 263 ; 263 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1994 ; Science Volume 264 ; 264 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1994 ; Science Volume 265 ; 265 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1994 ; Science Volume 266 ; 266 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1995 ; Science Volume 267 ; 267 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1995 ; Science Volume 268 ; 268 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1995 ; Science Volume 269 ; 269 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1995 ; Science Volume 270 ; 270 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1996 ; Science Volume 271 ; 271 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1996 ; Science Volume 272 ; 272 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1996 ; Science Volume 273 ; 273 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1996 ; Science Volume 274 ; 274 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1997 ; Science Volume 275 ; 275 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1997 ; Science Volume 276 ; 276 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1997 ; Science Volume 277 ; 277 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1997 ; Science Volume 278 ; 278 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1998 ; Science Volume 279 ; 279 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1998 ; Science Volume 280 ; 280 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1998 ; Science Volume 281 ; 281 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1998 ; Science Volume 282 ; 282 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1999 ; Science Volume 283 ; 283 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 1999 ; Science Volume 284 ; 284 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 1999 ; Science Volume 285 ; 285 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 1999 ; Science Volume 286 ; 286 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2000 ; Science Volume 287 ; 287 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2000 ; Science Volume 288 ; 288 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2000 ; Science Volume 289 ; 289 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 2000 ; Science Volume 290 ; 290 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 2001 ; Science Volume 291 ; 291 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2001 ; Science Volume 292 ; 292 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2001 ; Science Volume 293 ; 293 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2001 ; Science Volume 294 ; 294 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 2002 ; Science Volume 295 ; 295 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 2002 ; Science Volume 296 ; 296 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2002 ; Science Volume 297 ; 297 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2002 ; Science Volume 298 ; 298 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2003 ; Science Volume 299 ; 299 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 2003 ; Science Volume 300 ; 300 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 2003 ; Science Volume 301 ; 301 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2003 ; Science Volume 302 ; 302 ; reingest5.clockss.org:8082 >
+
+      au < doNotProcess ; doNotProcess ; 2004 ; Science Volume 303 ; 303 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2004 ; Science Volume 304 ; 304 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 2004 ; Science Volume 305 ; 305 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 2004 ; Science Volume 306 ; 306 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2005 ; Science Volume 307 ; 307 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2005 ; Science Volume 308 ; 308 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2005 ; Science Volume 309 ; 309 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 2005 ; Science Volume 310 ; 310 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 2006 ; Science Volume 311 ; 311 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2006 ; Science Volume 312 ; 312 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2006 ; Science Volume 313 ; 313 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2006 ; Science Volume 314 ; 314 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 2007 ; Science Volume 315 ; 315 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 2007 ; Science Volume 316 ; 316 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2007 ; Science Volume 317 ; 317 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2007 ; Science Volume 318 ; 318 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2008 ; Science Volume 319 ; 319 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 2008 ; Science Volume 320 ; 320 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 2008 ; Science Volume 321 ; 321 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2008 ; Science Volume 322 ; 322 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2009 ; Science Volume 323 ; 323 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2009 ; Science Volume 324 ; 324 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 2009 ; Science Volume 325 ; 325 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 2009 ; Science Volume 326 ; 326 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2010 ; Science Volume 327 ; 327 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2010 ; Science Volume 328 ; 328 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2010 ; Science Volume 329 ; 329 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 2010 ; Science Volume 330 ; 330 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 2011 ; Science Volume 331 ; 331 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2011 ; Science Volume 332 ; 332 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2011 ; Science Volume 333 ; 333 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2011 ; Science Volume 334 ; 334 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 2012 ; Science Volume 335 ; 335 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 2012 ; Science Volume 336 ; 336 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2012 ; Science Volume 337 ; 337 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2012 ; Science Volume 338 ; 338 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2013 ; Science Volume 339 ; 339 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 2013 ; Science Volume 340 ; 340 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 2013 ; Science Volume 341 ; 341 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2013 ; Science Volume 342 ; 342 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2014 ; Science Volume 343 ; 343 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2014 ; Science Volume 344 ; 344 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2014 ; Science Volume 345 ; 345 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2014 ; Science Volume 346 ; 346 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2015 ; Science Volume 347 ; 347 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2015 ; Science Volume 348 ; 348 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2015 ; Science Volume 349 ; 349 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2015 ; Science Volume 350 ; 350 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2016 ; Science Volume 351 ; 351 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 2016 ; Science Volume 352 ; 352 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2016 ; Science Volume 353 ; 353 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2016 ; Science Volume 354 ; 354 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 2017 ; Science Volume 355 ; 355 ; > #no permission on deepCrawl
+      au < doNotProcess ; doNotProcess ; 2017 ; Science Volume 356 ; 356 ; > #no permission on deepCrawl
+      au < doNotProcess ; doNotProcess ; 2017 ; Science Volume 357 ; 357 ; > #no permission on deepCrawl
+      au < doNotProcess ; doNotProcess ; 2017 ; Science Volume 358 ; 358 ; > #no permission on deepCrawl
+      au < doNotProcess ; doNotProcess ; 2018 ; Science Volume 359 ; 359 ; > #no permission on deepCrawl
+      au < doNotProcess ; doNotProcess ; 2018 ; Science Volume 360 ; 360 ; > #no permission on deepCrawl
+      au < doNotProcess ; doNotProcess ; 2018 ; Science Volume 361 ; 361 ; > #no permission on deepCrawl
+      au < doNotProcess ; doNotProcess ; 2018 ; Science Volume 362 ; 362 ; > #no permission on deepCrawl
+      au < doNotProcess ; doNotProcess ; 2019 ; Science Volume 363 ; 363 ; > #no permission
+      au < doNotProcess ; doNotProcess ; 2019 ; Science Volume 364 ; 364 ; > #no permission
+      au < doNotProcess ; doNotProcess ; 2019 ; Science Volume 365 ; 365 ; > #no permission
+      au < doNotProcess ; doNotProcess ; 2019 ; Science Volume 366 ; 366 ; > #no permission
+      au < doNotProcess ; doNotProcess ; 2020 ; Science Volume 367 ; 367 ; >
+      au < doNotProcess ; doNotProcess ; 2020 ; Science Volume 368 ; 368 ; >
+      au < doNotProcess ; doNotProcess ; 2020 ; Science Volume 369 ; 369 ; >
+      au < doNotProcess ; doNotProcess ; 2020 ; Science Volume 370 ; 370 ; >
+      au < deepCrawl ; exists ; 2021 ; Science Volume 371 ; 371 ; >
+      au < deepCrawl ; exists ; 2021 ; Science Volume 372 ; 372 ; >
+      au < deepCrawl ; exists ; 2021 ; Science Volume 373 ; 373 ; >
+      au < frozen ; exists ; 2021 ; Science Volume 374 ; 374 ; >
+      au < crawling ; exists ; 2022 ; Science Volume 375 ; 375 ; >
+      au < crawling ; exists ; 2022 ; Science Volume 376 ; 376 ; >
+      au < manifest ; exists ; 2022 ; Science Volume 377 ; 377 ; >
+      au < expected ; exists ; 2022 ; Science Volume 378 ; 378 ; >
+
+  }
+
+  {
+
+    title <
+      name = Science Signaling ;
+      issn =  1945-0877 ;
+      eissn =  1937-9145
+    >
+    
+      param[base_url] = https://www.science.org/
+      param[journal_id] = signaling
+
+      au < doNotProcess ; doNotProcess ; 2008 ; Science Signaling Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2009 ; Science Signaling Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 2010 ; Science Signaling Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 2011 ; Science Signaling Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2012 ; Science Signaling Volume 5 ; 5 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2013 ; Science Signaling Volume 6 ; 6 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 2014 ; Science Signaling Volume 7 ; 7 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2015 ; Science Signaling Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 2016 ; Science Signaling Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2017 ; Science Signaling Volume 10 ; 10 ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; Science Signaling Volume 11 ; 11 ; >
+      au < doNotProcess ; doNotProcess ; 2019 ; Science Signaling Volume 12 ; 12 ; >
+      au < doNotProcess ; doNotProcess ; 2020 ; Science Signaling Volume 13 ; 13 ; >
+      au < deepCrawl ; exists ; 2021 ; Science Signaling Volume 14 ; 14 ; >
+      au < crawling ; exists ; 2022 ; Science Signaling Volume 15 ; 15 ; >
+
+  }
+
+  {
+
+    title <
+      name = Science Translational Medicine ;
+      issn = 1946-6234 ;
+      eissn = 1946-6242
+    >
+    
+      param[base_url] = https://www.science.org/
+      param[journal_id] = stm
+
+      au < doNotProcess ; doNotProcess ; 2009 ; Science Translational Medicine Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2010 ; Science Translational Medicine Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 2011 ; Science Translational Medicine Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 2012 ; Science Translational Medicine Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2013 ; Science Translational Medicine Volume 5 ; 5 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2014 ; Science Translational Medicine Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2015 ; Science Translational Medicine Volume 7 ; 7 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2016 ; Science Translational Medicine Volume 8 ; 8 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2017 ; Science Translational Medicine Volume 9 ; 9 ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; Science Translational Medicine Volume 10 ; 10 ; >
+      au < doNotProcess ; doNotProcess ; 2019 ; Science Translational Medicine Volume 11 ; 11 ; >
+      au < doNotProcess ; doNotProcess ; 2020 ; Science Translational Medicine Volume 12 ; 12 ; >
+      au < deepCrawl ; exists ; 2021 ; Science Translational Medicine Volume 13 ; 13 ; >
+      au < crawling ; exists ; 2022 ; Science Translational Medicine Volume 14 ; 14 ; >
+
+  }
+
+  {
+
+    title <
+      name = Science Advances ;
+      eissn = 2375-2548
+    >
+    
+      param[base_url] = https://www.science.org/
+      param[journal_id] = sciadv
+
+      au < doNotProcess ; doNotProcess ; 2015 ; Science Advances Volume 1 ; 1 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2016 ; Science Advances Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2017 ; Science Advances Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 2018 ; Science Advances Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 2019 ; Science Advances Volume 5 ; 5 ; >
+      au < doNotProcess ; doNotProcess ; 2020 ; Science Advances Volume 6 ; 6 ; >
+      au < deepCrawl ; exists ; 2021 ; Science Advances Volume 7 ; 7 ; >
+      au < crawling ; exists ; 2022 ; Science Advances Volume 8 ; 8 ; >
+
+  }
+
+  {
+
+    title <
+      name = Science Robotics ;
+      eissn = 2470-9476
+    >
+    
+      param[base_url] = https://www.science.org/
+      param[journal_id] = scirobotics
+
+      au < doNotProcess ; doNotProcess ; 2016 ; Science Robotics Volume 1 ; 1 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; Science Robotics Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2018 ; Science Robotics Volume 3 ; 3 ; >
+      au < doNotProcess ; doNotProcess ; 2019 ; Science Robotics Volume 4 ; 4 ; >
+      au < doNotProcess ; doNotProcess ; 2020 ; Science Robotics Volume 5 ; 5 ; >
+      au < deepCrawl ; exists ; 2021 ; Science Robotics Volume 6 ; 6 ; >
+      au < crawling ; exists ; 2022 ; Science Robotics Volume 7 ; 7 ; >
+
+  }
+
+  {
+
+    title <
+      name = Science Immunology ;
+      eissn = 2470-9468
+    >
+    
+      param[base_url] = https://www.science.org/
+      param[journal_id] = sciimmunol
+
+      au < doNotProcess ; doNotProcess ; 2016 ; Science Immunology Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 2017 ; Science Immunology Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 2018 ; Science Immunology Volume 3 ; 3 ; >
+      au < doNotProcess ; doNotProcess ; 2019 ; Science Immunology Volume 4 ; 4 ; >
+      au < doNotProcess ; doNotProcess ; 2020 ; Science Immunology Volume 5 ; 5 ; >
+      au < deepCrawl ; exists ; 2021 ; Science Immunology Volume 6 ; 6 ; >
+      au < crawling ; exists ; 2022 ; Science Immunology Volume 7 ; 7 ; >
+
+  }
+
+}

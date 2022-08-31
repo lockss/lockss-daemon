@@ -1,0 +1,414 @@
+{
+
+  publisher <
+    name = American Academy of Pediatrics ;
+    info[contract] = 2009 ; 
+    info[tester] = 5 ;
+    info[poller] = 2 ;
+    info[platform] = SC
+  >
+  
+  plugin = org.lockss.plugin.silverchair.aap.ClockssAAPSilverchairPlugin
+  implicit < status1 ; status ; year ; param[year] ; name ; param[volume_name] ; proxy >
+  param[base_url] = https://publications.aap.org/
+
+  {
+  
+    title <
+      name = AAP Grand Rounds ;
+      issn = 1099-6605 ;
+      eissn = 1556-326X
+    >
+    
+      #param[base_url] = http://aapgrandrounds.aappublications.org/
+      param[journal_id] = aapgrandrounds
+    
+      au < manifest ; exists ; 1999 ; 1999 ; AAP Grand Rounds Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1999 ; 1999 ; AAP Grand Rounds Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2000 ; 2000 ; AAP Grand Rounds Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2000 ; 2000 ; AAP Grand Rounds Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2001 ; 2001 ; AAP Grand Rounds Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2001 ; 2001 ; AAP Grand Rounds Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2002 ; 2002 ; AAP Grand Rounds Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2002 ; 2002 ; AAP Grand Rounds Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2003 ; 2003 ; AAP Grand Rounds Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2003 ; 2003 ; AAP Grand Rounds Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2004 ; 2004 ; AAP Grand Rounds Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2004 ; 2004 ; AAP Grand Rounds Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; AAP Grand Rounds Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; AAP Grand Rounds Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; AAP Grand Rounds Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; AAP Grand Rounds Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; AAP Grand Rounds Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; AAP Grand Rounds Volume 18 ; 18 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; AAP Grand Rounds Volume 19 ; 19 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; AAP Grand Rounds Volume 20 ; 20 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; AAP Grand Rounds Volume 21 ; 21 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; AAP Grand Rounds Volume 22 ; 22 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; AAP Grand Rounds Volume 23 ; 23 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; AAP Grand Rounds Volume 24 ; 24 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; AAP Grand Rounds Volume 25 ; 25 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; AAP Grand Rounds Volume 26 ; 26 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; AAP Grand Rounds Volume 27 ; 27 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; AAP Grand Rounds Volume 28 ; 28 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; AAP Grand Rounds Volume 29 ; 29 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; AAP Grand Rounds Volume 30 ; 30 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; AAP Grand Rounds Volume 31 ; 31 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; AAP Grand Rounds Volume 32 ; 32 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; AAP Grand Rounds Volume 33 ; 33 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; AAP Grand Rounds Volume 34 ; 34 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; AAP Grand Rounds Volume 35 ; 35 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; AAP Grand Rounds Volume 36 ; 36 ; >
+      au < doNotProcess ; exists ; 2017 ; 2017 ; AAP Grand Rounds Volume 37 ; 37 ; >
+      au < doNotProcess ; exists ; 2017 ; 2017 ; AAP Grand Rounds Volume 38 ; 38 ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; AAP Grand Rounds Volume 39 ; 39 ; >
+      au < doNotProcess ; exists ; 2018 ; 2018 ; AAP Grand Rounds Volume 40 ; 40 ; >
+      au < doNotProcess ; exists ; 2019 ; 2019 ; AAP Grand Rounds Volume 41 ; 41 ; >
+      au < manifest ; exists ; 2019 ; 2019 ; AAP Grand Rounds Volume 42 ; 42 ; >
+      au < doNotProcess ; exists ; 2020 ; 2020 ; AAP Grand Rounds Volume 43 ; 43 ; >
+      au < doNotProcess ; exists ; 2020 ; 2020 ; AAP Grand Rounds Volume 44 ; 44 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; AAP Grand Rounds Volume 45 ; 45 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; AAP Grand Rounds Volume 46 ; 46 ; >
+      au < manifest ; exists ; 2022 ; 2022 ; AAP Grand Rounds Volume 47 ; 47 ; >
+      au < manifest ; exists ; 2022 ; 2022 ; AAP Grand Rounds Volume 48 ; 48 ; >
+
+  }
+
+  {
+  
+    title <
+      name = AAP News ;
+      issn = 1073-0397 ;
+      eissn = 1556-3332
+    >
+    
+      #See http://www.aappublications.org/news
+      #See https://www.aappublications.org/content
+      #RT 9102 asked for clarification.
+
+      param[journal_id] = news
+
+      au < doNotProcess ; exists ; 1985 ; 1985 ; AAP News Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 1986 ; 1986 ; AAP News Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 1987 ; 1987 ; AAP News Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 1988 ; 1988 ; AAP News Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 1989 ; 1989 ; AAP News Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 1990 ; 1990 ; AAP News Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 1991 ; 1991 ; AAP News Volume 7 ; 7 ; >
+      au < doNotProcess ; exists ; 1992 ; 1992 ; AAP News Volume 8 ; 8 ; >
+      au < doNotProcess ; exists ; 1993 ; 1993 ; AAP News Volume 9 ; 9 ; >
+      au < doNotProcess ; exists ; 1994 ; 1994 ; AAP News Volume 10 ; 10 ; >
+      au < doNotProcess ; exists ; 1995 ; 1995 ; AAP News Volume 11 ; 11 ; >
+      au < doNotProcess ; exists ; 1996 ; 1996 ; AAP News Volume 12 ; 12 ; >
+      au < doNotProcess ; exists ; 1997 ; 1997 ; AAP News Volume 13 ; 13 ; >
+      au < doNotProcess ; exists ; 1998 ; 1998 ; AAP News Volume 14 ; 14 ; >
+      au < doNotProcess ; exists ; 1999 ; 1999 ; AAP News Volume 15 ; 15 ; >
+      au < doNotProcess ; exists ; 2000 ; 2000 ; AAP News Volume 16 ; 16 ; >
+      au < doNotProcess ; exists ; 2000 ; 2000 ; AAP News Volume 17 ; 17 ; >
+      au < doNotProcess ; exists ; 2001 ; 2001 ; AAP News Volume 18 ; 18 ; >
+      au < doNotProcess ; exists ; 2001 ; 2001 ; AAP News Volume 19 ; 19 ; >
+      au < doNotProcess ; exists ; 2002 ; 2002 ; AAP News Volume 20 ; 20 ; >
+      au < doNotProcess ; exists ; 2002 ; 2002 ; AAP News Volume 21 ; 21 ; >
+      au < doNotProcess ; exists ; 2003 ; 2003 ; AAP News Volume 22 ; 22 ; >
+      au < doNotProcess ; exists ; 2003 ; 2003 ; AAP News Volume 23 ; 23 ; >
+      au < doNotProcess ; exists ; 2004 ; 2004 ; AAP News Volume 24 ; 24 ; >
+      au < doNotProcess ; exists ; 2004 ; 2004 ; AAP News Volume 25 ; 25 ; >
+      au < doNotProcess ; exists ; 2005 ; 2005 ; AAP News Volume 26 ; 26 ; >
+      au < doNotProcess ; exists ; 2006 ; 2006 ; AAP News Volume 27 ; 27 ; >
+      au < doNotProcess ; exists ; 2007 ; 2007 ; AAP News Volume 28 ; 28 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; AAP News Volume 29 ; 29 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; AAP News Volume 30 ; 30 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; AAP News Volume 31 ; 31 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; AAP News Volume 32 ; 32 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; AAP News Volume 33 ; 33 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; AAP News Volume 34 ; 34 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; AAP News Volume 35 ; 35 ; >
+      au < exists ; exists ; 2015 ; 2015 ; AAP News Volume 36 ; 36 ; >
+      au < exists ; exists ; 2016 ; 2016 ; AAP News Volume 37 ; 37 ; >
+      #new platform.
+  
+  }
+  
+  {
+    title <
+      name = Hospital Pediatrics ;
+      issn = 2154-1663 ;
+      eissn = 2154-1671
+    >
+    
+      #param[base_url] = http://hosppeds.aappublications.org/
+      param[journal_id] = hospitalpediatrics
+
+      au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Hospital Pediatrics Volume 1 ; 1 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Hospital Pediatrics Volume 2 ; 2 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Hospital Pediatrics Volume 3 ; 3 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Hospital Pediatrics Volume 4 ; 4 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Hospital Pediatrics Volume 5 ; 5 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Hospital Pediatrics Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2017 ; 2017 ; Hospital Pediatrics Volume 7 ; 7 ; >
+      au < doNotProcess ; exists ; 2018 ; 2018 ; Hospital Pediatrics Volume 8 ; 8 ; >
+      au < doNotProcess ; exists ; 2019 ; 2019 ; Hospital Pediatrics Volume 9 ; 9 ; >
+      au < doNotProcess ; exists ; 2020 ; 2020 ; Hospital Pediatrics Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Hospital Pediatrics Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2022 ; 2022 ; Hospital Pediatrics Volume 12 ; 12 ; >
+
+  }
+  
+  {
+  
+    title <
+      name = NeoReviews ;
+      eissn = 1526-9906 ;
+      issnl = 1526-9906
+    >
+    
+      #plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      param[journal_id] = neoreviews
+    
+      au < manifest ; exists ; 2000 ; 2000 ; NeoReviews Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2001 ; 2001 ; NeoReviews Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2002 ; 2002 ; NeoReviews Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2003 ; 2003 ; NeoReviews Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2004 ; 2004 ; NeoReviews Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; NeoReviews Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; NeoReviews Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; NeoReviews Volume 8 ; 8 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; NeoReviews Volume 9 ; 9 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; NeoReviews Volume 10 ; 10 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; NeoReviews Volume 11 ; 11 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; NeoReviews Volume 12 ; 12 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; NeoReviews Volume 13 ; 13 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; NeoReviews Volume 14 ; 14 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; NeoReviews Volume 15 ; 15 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; NeoReviews Volume 16 ; 16 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; NeoReviews Volume 17 ; 17 ; >
+      au < doNotProcess ; exists ; 2017 ; 2017 ; NeoReviews Volume 18 ; 18 ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; NeoReviews Volume 19 ; 19 ; >
+      au < doNotProcess ; exists ; 2019 ; 2019 ; NeoReviews Volume 20 ; 20 ; >
+      au < doNotProcess ; exists ; 2020 ; 2020 ; NeoReviews Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; NeoReviews Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2022 ; 2022 ; NeoReviews Volume 23 ; 23 ; >
+
+  }
+
+  {
+  
+    title <
+      name = Pediatrics ;
+      issn = 0031-4005 ;
+      eissn = 1098-4275
+    >
+      #param[base_url] = http://pediatrics.aappublications.org/
+
+      param[journal_id] = pediatrics
+
+      au < manifest ; exists ; 1948 ; 1948 ; Pediatrics Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1948 ; 1948 ; Pediatrics Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1949 ; 1949 ; Pediatrics Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1949 ; 1949 ; Pediatrics Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1950 ; 1950 ; Pediatrics Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1950 ; 1950 ; Pediatrics Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1951 ; 1951 ; Pediatrics Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1951 ; 1951 ; Pediatrics Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1952 ; 1952 ; Pediatrics Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1952 ; 1952 ; Pediatrics Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1953 ; 1953 ; Pediatrics Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1953 ; 1953 ; Pediatrics Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1954 ; 1954 ; Pediatrics Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1954 ; 1954 ; Pediatrics Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1955 ; 1955 ; Pediatrics Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1955 ; 1955 ; Pediatrics Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1956 ; 1956 ; Pediatrics Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1956 ; 1956 ; Pediatrics Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1957 ; 1957 ; Pediatrics Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1957 ; 1957 ; Pediatrics Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1958 ; 1958 ; Pediatrics Volume 21 ; 21 ; >
+      au < manifest ; exists ; 1958 ; 1958 ; Pediatrics Volume 22 ; 22 ; >
+      au < manifest ; exists ; 1959 ; 1959 ; Pediatrics Volume 23 ; 23 ; >
+      au < manifest ; exists ; 1959 ; 1959 ; Pediatrics Volume 24 ; 24 ; >
+      au < manifest ; exists ; 1960 ; 1960 ; Pediatrics Volume 25 ; 25 ; >
+      au < manifest ; exists ; 1960 ; 1960 ; Pediatrics Volume 26 ; 26 ; >
+      au < manifest ; exists ; 1961 ; 1961 ; Pediatrics Volume 27 ; 27 ; >
+      au < manifest ; exists ; 1961 ; 1961 ; Pediatrics Volume 28 ; 28 ; >
+      au < manifest ; exists ; 1962 ; 1962 ; Pediatrics Volume 29 ; 29 ; >
+      au < manifest ; exists ; 1962 ; 1962 ; Pediatrics Volume 30 ; 30 ; >
+      au < manifest ; exists ; 1963 ; 1963 ; Pediatrics Volume 31 ; 31 ; >
+      au < manifest ; exists ; 1963 ; 1963 ; Pediatrics Volume 32 ; 32 ; >
+      au < manifest ; exists ; 1964 ; 1964 ; Pediatrics Volume 33 ; 33 ; >
+      au < manifest ; exists ; 1964 ; 1964 ; Pediatrics Volume 34 ; 34 ; >
+      au < manifest ; exists ; 1965 ; 1965 ; Pediatrics Volume 35 ; 35 ; >
+      au < manifest ; exists ; 1965 ; 1965 ; Pediatrics Volume 36 ; 36 ; >
+      au < manifest ; exists ; 1966 ; 1966 ; Pediatrics Volume 37 ; 37 ; >
+      au < manifest ; exists ; 1966 ; 1966 ; Pediatrics Volume 38 ; 38 ; >
+      au < manifest ; exists ; 1967 ; 1967 ; Pediatrics Volume 39 ; 39 ; >
+      au < manifest ; exists ; 1967 ; 1967 ; Pediatrics Volume 40 ; 40 ; >
+      au < manifest ; exists ; 1968 ; 1968 ; Pediatrics Volume 41 ; 41 ; >
+      au < manifest ; exists ; 1968 ; 1968 ; Pediatrics Volume 42 ; 42 ; >
+      au < manifest ; exists ; 1969 ; 1969 ; Pediatrics Volume 43 ; 43 ; >
+      au < manifest ; exists ; 1969 ; 1969 ; Pediatrics Volume 44 ; 44 ; >
+      au < manifest ; exists ; 1970 ; 1970 ; Pediatrics Volume 45 ; 45 ; >
+      au < manifest ; exists ; 1970 ; 1970 ; Pediatrics Volume 46 ; 46 ; >
+      au < manifest ; exists ; 1971 ; 1971 ; Pediatrics Volume 47 ; 47 ; >
+      au < manifest ; exists ; 1971 ; 1971 ; Pediatrics Volume 48 ; 48 ; >
+      au < manifest ; exists ; 1972 ; 1972 ; Pediatrics Volume 49 ; 49 ; >
+      au < manifest ; exists ; 1972 ; 1972 ; Pediatrics Volume 50 ; 50 ; >
+      au < manifest ; exists ; 1973 ; 1973 ; Pediatrics Volume 51 ; 51 ; >
+      au < manifest ; exists ; 1973 ; 1973 ; Pediatrics Volume 52 ; 52 ; >
+      au < manifest ; exists ; 1974 ; 1974 ; Pediatrics Volume 53 ; 53 ; >
+      au < manifest ; exists ; 1974 ; 1974 ; Pediatrics Volume 54 ; 54 ; >
+      au < manifest ; exists ; 1975 ; 1975 ; Pediatrics Volume 55 ; 55 ; >
+      au < manifest ; exists ; 1975 ; 1975 ; Pediatrics Volume 56 ; 56 ; >
+      au < manifest ; exists ; 1976 ; 1976 ; Pediatrics Volume 57 ; 57 ; >
+      au < manifest ; exists ; 1976 ; 1976 ; Pediatrics Volume 58 ; 58 ; >
+      au < manifest ; exists ; 1977 ; 1977 ; Pediatrics Volume 59 ; 59 ; >
+      au < manifest ; exists ; 1977 ; 1977 ; Pediatrics Volume 60 ; 60 ; >
+      au < manifest ; exists ; 1978 ; 1978 ; Pediatrics Volume 61 ; 61 ; >
+      au < manifest ; exists ; 1978 ; 1978 ; Pediatrics Volume 62 ; 62 ; >
+      au < manifest ; exists ; 1979 ; 1979 ; Pediatrics Volume 63 ; 63 ; >
+      au < manifest ; exists ; 1979 ; 1979 ; Pediatrics Volume 64 ; 64 ; >
+      au < manifest ; exists ; 1980 ; 1980 ; Pediatrics Volume 65 ; 65 ; >
+      au < manifest ; exists ; 1980 ; 1980 ; Pediatrics Volume 66 ; 66 ; >
+      au < manifest ; exists ; 1981 ; 1981 ; Pediatrics Volume 67 ; 67 ; >
+      au < manifest ; exists ; 1981 ; 1981 ; Pediatrics Volume 68 ; 68 ; >
+      au < manifest ; exists ; 1982 ; 1982 ; Pediatrics Volume 69 ; 69 ; >
+      au < manifest ; exists ; 1982 ; 1982 ; Pediatrics Volume 70 ; 70 ; >
+      au < manifest ; exists ; 1983 ; 1983 ; Pediatrics Volume 71 ; 71 ; >
+      au < manifest ; exists ; 1983 ; 1983 ; Pediatrics Volume 72 ; 72 ; >
+      au < manifest ; exists ; 1984 ; 1984 ; Pediatrics Volume 73 ; 73 ; >
+      au < manifest ; exists ; 1984 ; 1984 ; Pediatrics Volume 74 ; 74 ; >
+      au < manifest ; exists ; 1985 ; 1985 ; Pediatrics Volume 75 ; 75 ; >
+      au < manifest ; exists ; 1985 ; 1985 ; Pediatrics Volume 76 ; 76 ; >
+      au < manifest ; exists ; 1986 ; 1986 ; Pediatrics Volume 77 ; 77 ; >
+      au < manifest ; exists ; 1986 ; 1986 ; Pediatrics Volume 78 ; 78 ; >
+      au < manifest ; exists ; 1987 ; 1987 ; Pediatrics Volume 79 ; 79 ; >
+      au < manifest ; exists ; 1987 ; 1987 ; Pediatrics Volume 80 ; 80 ; >
+      au < manifest ; exists ; 1988 ; 1988 ; Pediatrics Volume 81 ; 81 ; >
+      au < manifest ; exists ; 1988 ; 1988 ; Pediatrics Volume 82 ; 82 ; >
+      au < manifest ; exists ; 1989 ; 1989 ; Pediatrics Volume 83 ; 83 ; >
+      au < manifest ; exists ; 1989 ; 1989 ; Pediatrics Volume 84 ; 84 ; >
+      au < manifest ; exists ; 1990 ; 1990 ; Pediatrics Volume 85 ; 85 ; >
+      au < manifest ; exists ; 1990 ; 1990 ; Pediatrics Volume 86 ; 86 ; >
+      au < manifest ; exists ; 1991 ; 1991 ; Pediatrics Volume 87 ; 87 ; >
+      au < manifest ; exists ; 1991 ; 1991 ; Pediatrics Volume 88 ; 88 ; >
+      au < manifest ; exists ; 1992 ; 1992 ; Pediatrics Volume 89 ; 89 ; >
+      au < manifest ; exists ; 1992 ; 1992 ; Pediatrics Volume 90 ; 90 ; >
+      au < manifest ; exists ; 1993 ; 1993 ; Pediatrics Volume 91 ; 91 ; >
+      au < manifest ; exists ; 1993 ; 1993 ; Pediatrics Volume 92 ; 92 ; >
+      au < manifest ; exists ; 1994 ; 1994 ; Pediatrics Volume 93 ; 93 ; >
+      au < manifest ; exists ; 1994 ; 1994 ; Pediatrics Volume 94 ; 94 ; >
+      au < manifest ; exists ; 1995 ; 1995 ; Pediatrics Volume 95 ; 95 ; >
+      au < manifest ; exists ; 1995 ; 1995 ; Pediatrics Volume 96 ; 96 ; >
+      au < manifest ; exists ; 1996 ; 1996 ; Pediatrics Volume 97 ; 97 ; >
+      au < manifest ; exists ; 1996 ; 1996 ; Pediatrics Volume 98 ; 98 ; >
+      au < manifest ; exists ; 1997 ; 1997 ; Pediatrics Volume 99 ; 99 ; >
+      au < manifest ; exists ; 1997 ; 1997 ; Pediatrics Volume 100 ; 100 ; >
+      au < manifest ; exists ; 1998 ; 1998 ; Pediatrics Volume 101 ; 101 ; >
+      au < manifest ; exists ; 1998 ; 1998 ; Pediatrics Volume 102 ; 102 ; >
+      au < manifest ; exists ; 1999 ; 1999 ; Pediatrics Volume 103 ; 103 ; >
+      au < manifest ; exists ; 1999 ; 1999 ; Pediatrics Volume 104 ; 104 ; >
+      au < manifest ; exists ; 2000 ; 2000 ; Pediatrics Volume 105 ; 105 ; >
+      au < manifest ; exists ; 2000 ; 2000 ; Pediatrics Volume 106 ; 106 ; >
+      au < manifest ; exists ; 2001 ; 2001 ; Pediatrics Volume 107 ; 107 ; >
+      au < manifest ; exists ; 2001 ; 2001 ; Pediatrics Volume 108 ; 108 ; >
+      au < manifest ; exists ; 2002 ; 2002 ; Pediatrics Volume 109 ; 109 ; >
+      au < manifest ; exists ; 2002 ; 2002 ; Pediatrics Volume 110 ; 110 ; >
+      au < manifest ; exists ; 2003 ; 2003 ; Pediatrics Volume 111 ; 111 ; >
+      au < manifest ; exists ; 2003 ; 2003 ; Pediatrics Volume 112 ; 112 ; >
+      au < manifest ; exists ; 2004 ; 2004 ; Pediatrics Volume 113 ; 113 ; >
+      au < manifest ; exists ; 2004 ; 2004 ; Pediatrics Volume 114 ; 114 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; Pediatrics Volume 115 ; 115 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; Pediatrics Volume 116 ; 116 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; Pediatrics Volume 117 ; 117 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; Pediatrics Volume 118 ; 118 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Pediatrics Volume 119 ; 119 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Pediatrics Volume 120 ; 120 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; Pediatrics Volume 121 ; 121 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; Pediatrics Volume 122 ; 122 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Pediatrics Volume 123 ; 123 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Pediatrics Volume 124 ; 124 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Pediatrics Volume 125 ; 125 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Pediatrics Volume 126 ; 126 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Pediatrics Volume 127 ; 127 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Pediatrics Volume 128 ; 128 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Pediatrics Volume 129 ; 129 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Pediatrics Volume 130 ; 130 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Pediatrics Volume 131 ; 131 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Pediatrics Volume 132 ; 132 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Pediatrics Volume 133 ; 133 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Pediatrics Volume 134 ; 134 ; > 
+      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Pediatrics Volume 135 ; 135 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Pediatrics Volume 136 ; 136 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Pediatrics Volume 137 ; 137 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Pediatrics Volume 138 ; 138 ; >
+      au < doNotProcess ; exists ; 2017 ; 2017 ; Pediatrics Volume 139 ; 139 ; >
+      au < doNotProcess ; exists ; 2017 ; 2017 ; Pediatrics Volume 140 ; 140 ; >
+      au < doNotProcess ; exists ; 2018 ; 2018 ; Pediatrics Volume 141 ; 141 ; >
+      au < doNotProcess ; exists ; 2018 ; 2018 ; Pediatrics Volume 142 ; 142 ; >
+      au < doNotProcess ; exists ; 2019 ; 2019 ; Pediatrics Volume 143 ; 143 ; >
+      au < manifest ; exists ; 2019 ; 2019 ; Pediatrics Volume 144 ; 144 ; >
+      au < doNotProcess ; exists ; 2020 ; 2020 ; Pediatrics Volume 145 ; 145 ; >
+      au < doNotProcess ; exists ; 2020 ; 2020 ; Pediatrics Volume 146 ; 146 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Pediatrics Volume 147 ; 147 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Pediatrics Volume 148 ; 148 ; >
+      au < manifest ; exists ; 2022 ; 2022 ; Pediatrics Volume 149 ; 149 ; >
+
+  }
+
+  {
+  
+    title <
+      name = Pediatrics in Review ;
+      issn = 0191-9601 ;
+      eissn = 1526-3347
+    >
+    
+      #param[base_url] = http://pedsinreview.aappublications.org/
+      param[journal_id] = pediatricsinreview
+    
+      au < manifest ; exists ; 1980 ; 1980 ; Pediatrics in Review Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1981 ; 1981 ; Pediatrics in Review Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1982 ; 1982 ; Pediatrics in Review Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1983 ; 1983 ; Pediatrics in Review Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1984 ; 1984 ; Pediatrics in Review Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1985 ; 1985 ; Pediatrics in Review Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1986 ; 1986 ; Pediatrics in Review Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1987 ; 1987 ; Pediatrics in Review Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1988 ; 1988 ; Pediatrics in Review Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1989 ; 1989 ; Pediatrics in Review Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1990 ; 1990 ; Pediatrics in Review Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1991 ; 1991 ; Pediatrics in Review Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1992 ; 1992 ; Pediatrics in Review Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1993 ; 1993 ; Pediatrics in Review Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1994 ; 1994 ; Pediatrics in Review Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1995 ; 1995 ; Pediatrics in Review Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1996 ; 1996 ; Pediatrics in Review Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1997 ; 1997 ; Pediatrics in Review Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1998 ; 1998 ; Pediatrics in Review Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1999 ; 1999 ; Pediatrics in Review Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2000 ; 2000 ; Pediatrics in Review Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2001 ; 2001 ; Pediatrics in Review Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2002 ; 2002 ; Pediatrics in Review Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2003 ; 2003 ; Pediatrics in Review Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2004 ; 2004 ; Pediatrics in Review Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; Pediatrics in Review Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; Pediatrics in Review Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Pediatrics in Review Volume 28 ; 28 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; Pediatrics in Review Volume 29 ; 29 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Pediatrics in Review Volume 30 ; 30 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Pediatrics in Review Volume 31 ; 31 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Pediatrics in Review Volume 32 ; 32 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Pediatrics in Review Volume 33 ; 33 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Pediatrics in Review Volume 34 ; 34 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Pediatrics in Review Volume 35 ; 35 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Pediatrics in Review Volume 36 ; 36 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Pediatrics in Review Volume 37 ; 37 ; >
+      au < doNotProcess ; exists ; 2017 ; 2017 ; Pediatrics in Review Volume 38 ; 38 ; >
+      au < doNotProcess ; exists ; 2018 ; 2018 ; Pediatrics in Review Volume 39 ; 39 ; >
+      au < doNotProcess ; exists ; 2019 ; 2019 ; Pediatrics in Review Volume 40 ; 40 ; >
+      au < doNotProcess ; exists ; 2020 ; 2020 ; Pediatrics in Review Volume 41 ; 41 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Pediatrics in Review Volume 42 ; 42 ; >
+      au < manifest ; exists ; 2022 ; 2022 ; Pediatrics in Review Volume 43 ; 43 ; >
+
+  }
+
+}

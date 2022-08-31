@@ -1,0 +1,1187 @@
+{
+
+  publisher <
+    name = American Physiological Society ;
+    info[contract] = 2008 ;
+    info[tester] = 5 ;
+    info[poller] = 2
+  >
+
+  plugin = org.lockss.plugin.atypon.aps.ClockssAmPhysSocAtyponPlugin
+  implicit < status1 ; status ; year ; name ; param[volume_name] ; param[base_url] ; proxy >
+  #param[base_url] = http://www.physiology.org/
+  # moved to https://journals.physiology.org/
+  
+  comment[titles0] = Moved to Atypon 2017
+
+  {
+
+    title <
+      name = Advances in Physiology Education ;
+      issn = 1043-4046 ;
+      eissn = 1522-1229 
+    >
+
+    param[journal_id] = advances
+    #content available from 1989 V257 to 2016 V30, preserved with HW
+
+    {
+
+      au < doNotProcess ; doNotProcess ; 2017 ; Advances in Physiology Education Volume 41 ; 41 ; https://journals.physiology.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; Advances in Physiology Education Volume 41 ; 41 ; http://www.physiology.org/ ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2018 ; Advances in Physiology Education Volume 42 ; 42 ; https://journals.physiology.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2018 ; Advances in Physiology Education Volume 42 ; 42 ; https://www.physiology.org/ ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2019 ; Advances in Physiology Education Volume 43 [superseded] ; 43 ; https://www.physiology.org/ ; >
+      au < finished ; frozen ; 2019 ; Advances in Physiology Education Volume 43 ; 43 ; https://journals.physiology.org/ ; reingest1.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2020 ; Advances in Physiology Education Volume 44 ; 44 ; https://journals.physiology.org/ ; >
+      au < deepCrawl ; exists ; 2021 ; Advances in Physiology Education Volume 45 ; 45 ; https://journals.physiology.org/ ; >
+      au < crawling ; exists ; 2022 ; Advances in Physiology Education Volume 46 ; 46 ; https://journals.physiology.org/ ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = American Journal of Physiology - Legacy Content ;
+      issn = 0002-9513 ;
+      issnl = 0002-9513
+    >
+#    param[base_url] = http://ajplegacy.physiology.org/
+
+    param[journal_id] = ajplegacy
+    
+    #au < doNotProcess ; exists ; 1898 ; American Journal of Physiology Volume 1 ; 1 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1898-1899 ; American Journal of Physiology Volume 2 ; 2 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1899-1900 ; American Journal of Physiology Volume 3 ; 3 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1900-1901 ; American Journal of Physiology Volume 4 ; 4 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1901 ; American Journal of Physiology Volume 5 ; 5 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1901-1902 ; American Journal of Physiology Volume 6 ; 6 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1902 ; American Journal of Physiology Volume 7 ; 7 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1902-1903 ; American Journal of Physiology Volume 8 ; 8 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1903 ; American Journal of Physiology Volume 9 ; 9 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1903-1904 ; American Journal of Physiology Volume 10 ; 10 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1904 ; American Journal of Physiology Volume 11 ; 11 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1904-1905 ; American Journal of Physiology Volume 12 ; 12 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1905 ; American Journal of Physiology Volume 13 ; 13 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1905 ; American Journal of Physiology Volume 14 ; 14 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1905-1906 ; American Journal of Physiology Volume 15 ; 15 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1906 ; American Journal of Physiology Volume 16 ; 16 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1906-1907 ; American Journal of Physiology Volume 17 ; 17 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1907 ; American Journal of Physiology Volume 18 ; 18 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1907 ; American Journal of Physiology Volume 19 ; 19 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1907-1908 ; American Journal of Physiology Volume 20 ; 20 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1908 ; American Journal of Physiology Volume 21 ; 21 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1908 ; American Journal of Physiology Volume 22 ; 22 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1908-1909 ; American Journal of Physiology Volume 23 ; 23 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1909 ; American Journal of Physiology Volume 24 ; 24 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1909-1910 ; American Journal of Physiology Volume 25 ; 25 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1910 ; American Journal of Physiology Volume 26 ; 26 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1910-1911 ; American Journal of Physiology Volume 27 ; 27 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1911 ; American Journal of Physiology Volume 28 ; 28 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1911-1912 ; American Journal of Physiology Volume 29 ; 29 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1912 ; American Journal of Physiology Volume 30 ; 30 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1912-1913 ; American Journal of Physiology Volume 31 ; 31 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1913 ; American Journal of Physiology Volume 32 ; 32 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1914 ; American Journal of Physiology Volume 33 ; 33 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1914 ; American Journal of Physiology Volume 34 ; 34 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1914 ; American Journal of Physiology Volume 35 ; 35 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1914-1915 ; American Journal of Physiology Volume 36 ; 36 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1915 ; American Journal of Physiology Volume 37 ; 37 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1915 ; American Journal of Physiology Volume 38 ; 38 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1915-1916 ; American Journal of Physiology Volume 39 ; 39 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1916 ; American Journal of Physiology Volume 40 ; 40 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1916 ; American Journal of Physiology Volume 41 ; 41 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1916-1917 ; American Journal of Physiology Volume 42 ; 42 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1917 ; American Journal of Physiology Volume 43 ; 43 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1917 ; American Journal of Physiology Volume 44 ; 44 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1917-1918 ; American Journal of Physiology Volume 45 ; 45 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1918 ; American Journal of Physiology Volume 46 ; 46 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1918-1919 ; American Journal of Physiology Volume 47 ; 47 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1919 ; American Journal of Physiology Volume 48 ; 48 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1919 ; American Journal of Physiology Volume 49 ; 49 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1919-1920 ; American Journal of Physiology Volume 50 ; 50 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1920 ; American Journal of Physiology Volume 51 ; 51 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1920 ; American Journal of Physiology Volume 52 ; 52 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1920 ; American Journal of Physiology Volume 53 ; 53 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1920-1921 ; American Journal of Physiology Volume 54 ; 54 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1921 ; American Journal of Physiology Volume 55 ; 55 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1921 ; American Journal of Physiology Volume 56 ; 56 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1921 ; American Journal of Physiology Volume 57 ; 57 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1921-1922 ; American Journal of Physiology Volume 58 ; 58 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1922 ; American Journal of Physiology Volume 59 ; 59 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1922 ; American Journal of Physiology Volume 60 ; 60 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1922 ; American Journal of Physiology Volume 61 ; 61 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1922 ; American Journal of Physiology Volume 62 ; 62 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1922-1923 ; American Journal of Physiology Volume 63 ; 63 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1923 ; American Journal of Physiology Volume 64 ; 64 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1923 ; American Journal of Physiology Volume 65 ; 65 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1923 ; American Journal of Physiology Volume 66 ; 66 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1923-1924 ; American Journal of Physiology Volume 67 ; 67 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1924 ; American Journal of Physiology Volume 68 ; 68 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1924 ; American Journal of Physiology Volume 69 ; 69 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1924 ; American Journal of Physiology Volume 70 ; 70 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1924-1925 ; American Journal of Physiology Volume 71 ; 71 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1925 ; American Journal of Physiology Volume 72 ; 72 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1925 ; American Journal of Physiology Volume 73 ; 73 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1925 ; American Journal of Physiology Volume 74 ; 74 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1925-1926 ; American Journal of Physiology Volume 75 ; 75 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1926 ; American Journal of Physiology Volume 76 ; 76 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1926 ; American Journal of Physiology Volume 77 ; 77 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1926 ; American Journal of Physiology Volume 78 ; 78 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1926-1927 ; American Journal of Physiology Volume 79 ; 79 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1927 ; American Journal of Physiology Volume 80 ; 80 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1927 ; American Journal of Physiology Volume 81 ; 81 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1927 ; American Journal of Physiology Volume 82 ; 82 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1927-1928 ; American Journal of Physiology Volume 83 ; 83 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1928 ; American Journal of Physiology Volume 84 ; 84 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1928 ; American Journal of Physiology Volume 85 ; 85 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1928 ; American Journal of Physiology Volume 86 ; 86 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1928-1929 ; American Journal of Physiology Volume 87 ; 87 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1929 ; American Journal of Physiology Volume 88 ; 88 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1929 ; American Journal of Physiology Volume 89 ; 89 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1929 ; American Journal of Physiology Volume 90 ; 90 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1929-1930 ; American Journal of Physiology Volume 91 ; 91 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1930 ; American Journal of Physiology Volume 92 ; 92 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1930 ; American Journal of Physiology Volume 93 ; 93 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1930 ; American Journal of Physiology Volume 94 ; 94 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1930 ; American Journal of Physiology Volume 95 ; 95 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1931 ; American Journal of Physiology Volume 96 ; 96 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1931 ; American Journal of Physiology Volume 97 ; 97 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1931 ; American Journal of Physiology Volume 98 ; 98 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1931-1932 ; American Journal of Physiology Volume 99 ; 99 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1932 ; American Journal of Physiology Volume 100 ; 100 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1932 ; American Journal of Physiology Volume 101 ; 101 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1932 ; American Journal of Physiology Volume 102 ; 102 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1932-1933 ; American Journal of Physiology Volume 103 ; 103 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1933 ; American Journal of Physiology Volume 104 ; 104 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1933 ; American Journal of Physiology Volume 105 ; 105 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1933 ; American Journal of Physiology Volume 106 ; 106 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1933-1934 ; American Journal of Physiology Volume 107 ; 107 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1934 ; American Journal of Physiology Volume 108 ; 108 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1934 ; American Journal of Physiology Volume 109 ; 109 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1934 ; American Journal of Physiology Volume 110 ; 110 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1935 ; American Journal of Physiology Volume 111 ; 111 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1935 ; American Journal of Physiology Volume 112 ; 112 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1935 ; American Journal of Physiology Volume 113 ; 113 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1935-1936 ; American Journal of Physiology Volume 114 ; 114 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1936 ; American Journal of Physiology Volume 115 ; 115 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1936 ; American Journal of Physiology Volume 116 ; 116 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1936 ; American Journal of Physiology Volume 117 ; 117 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1936-1937 ; American Journal of Physiology Volume 118 ; 118 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1937 ; American Journal of Physiology Volume 119 ; 119 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1937 ; American Journal of Physiology Volume 120 ; 120 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1937-1938 ; American Journal of Physiology Volume 121 ; 121 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1938 ; American Journal of Physiology Volume 122 ; 122 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1938 ; American Journal of Physiology Volume 123 ; 123 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1938 ; American Journal of Physiology Volume 124 ; 124 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1938-1939 ; American Journal of Physiology Volume 125 ; 125 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1939 ; American Journal of Physiology Volume 126 ; 126 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1939 ; American Journal of Physiology Volume 127 ; 127 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1939-1940 ; American Journal of Physiology Volume 128 ; 128 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1940 ; American Journal of Physiology Volume 129 ; 129 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1940 ; American Journal of Physiology Volume 130 ; 130 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1940 ; American Journal of Physiology Volume 131 ; 131 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1941 ; American Journal of Physiology Volume 132 ; 132 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1941 ; American Journal of Physiology Volume 133 ; 133 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1941 ; American Journal of Physiology Volume 134 ; 134 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1941-1942 ; American Journal of Physiology Volume 135 ; 135 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1942 ; American Journal of Physiology Volume 136 ; 136 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1942 ; American Journal of Physiology Volume 137 ; 137 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1942-1943 ; American Journal of Physiology Volume 138 ; 138 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1943 ; American Journal of Physiology Volume 139 ; 139 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1943-1944 ; American Journal of Physiology Volume 140 ; 140 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1944 ; American Journal of Physiology Volume 141 ; 141 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1944 ; American Journal of Physiology Volume 142 ; 142 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1945 ; American Journal of Physiology Volume 143 ; 143 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1945 ; American Journal of Physiology Volume 144 ; 144 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1945-1946 ; American Journal of Physiology Volume 145 ; 145 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1946 ; American Journal of Physiology Volume 146 ; 146 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1946 ; American Journal of Physiology Volume 147 ; 147 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1947 ; American Journal of Physiology Volume 148 ; 148 ; https://www.physiology.org/ ; >
+    #au < doNotProcess ; exists ; 1947 ; American Journal of Physiology Volume 149 ; 149 ; https://www.physiology.org/ ; >
+    au < manifest ; exists ; 1947 ; American Journal of Physiology Volume 150 ; 150 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1947 ; American Journal of Physiology Volume 151 ; 151 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1947-1948 ; American Journal of Physiology Volume 152 ; 152 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1948 ; American Journal of Physiology Volume 153 ; 153 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1948 ; American Journal of Physiology Volume 154 ; 154 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1948 ; American Journal of Physiology Volume 155 ; 155 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1949 ; American Journal of Physiology Volume 156 ; 156 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1949 ; American Journal of Physiology Volume 157 ; 157 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1949 ; American Journal of Physiology Volume 158 ; 158 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1949 ; American Journal of Physiology Volume 159 ; 159 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1949-1950 ; American Journal of Physiology Volume 160 ; 160 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1950 ; American Journal of Physiology Volume 161 ; 161 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1950 ; American Journal of Physiology Volume 162 ; 162 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1950 ; American Journal of Physiology Volume 163 ; 163 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1950-1951 ; American Journal of Physiology Volume 164 ; 164 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1951 ; American Journal of Physiology Volume 165 ; 165 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1951 ; American Journal of Physiology Volume 166 ; 166 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1951 ; American Journal of Physiology Volume 167 ; 167 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1951-1952 ; American Journal of Physiology Volume 168 ; 168 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1952 ; American Journal of Physiology Volume 169 ; 169 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1952 ; American Journal of Physiology Volume 170 ; 170 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1952 ; American Journal of Physiology Volume 171 ; 171 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1952-1953 ; American Journal of Physiology Volume 172 ; 172 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1953 ; American Journal of Physiology Volume 173 ; 173 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1953 ; American Journal of Physiology Volume 174 ; 174 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1953 ; American Journal of Physiology Volume 175 ; 175 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1953-1954 ; American Journal of Physiology Volume 176 ; 176 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1954 ; American Journal of Physiology Volume 177 ; 177 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1954 ; American Journal of Physiology Volume 178 ; 178 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1954 ; American Journal of Physiology Volume 179 ; 179 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1954-1955 ; American Journal of Physiology Volume 180 ; 180 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1955 ; American Journal of Physiology Volume 181 ; 181 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1955 ; American Journal of Physiology Volume 182 ; 182 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1955 ; American Journal of Physiology Volume 183 ; 183 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1955-1956 ; American Journal of Physiology Volume 184 ; 184 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1956 ; American Journal of Physiology Volume 185 ; 185 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1956 ; American Journal of Physiology Volume 186 ; 186 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1956 ; American Journal of Physiology Volume 187 ; 187 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1956-1957 ; American Journal of Physiology Volume 188 ; 188 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1957 ; American Journal of Physiology Volume 189 ; 189 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1957 ; American Journal of Physiology Volume 190 ; 190 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1957 ; American Journal of Physiology Volume 191 ; 191 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1957-1958 ; American Journal of Physiology Volume 192 ; 192 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1958 ; American Journal of Physiology Volume 193 ; 193 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1958 ; American Journal of Physiology Volume 194 ; 194 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1958 ; American Journal of Physiology Volume 195 ; 195 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1958-1959 ; American Journal of Physiology Volume 196 ; 196 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1959 ; American Journal of Physiology Volume 197 ; 197 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1960 ; American Journal of Physiology Volume 198 ; 198 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1960 ; American Journal of Physiology Volume 199 ; 199 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1961 ; American Journal of Physiology Volume 200 ; 200 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1961 ; American Journal of Physiology Volume 201 ; 201 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1962 ; American Journal of Physiology Volume 202 ; 202 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1962 ; American Journal of Physiology Volume 203 ; 203 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1963 ; American Journal of Physiology Volume 204 ; 204 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1963 ; American Journal of Physiology Volume 205 ; 205 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1964 ; American Journal of Physiology Volume 206 ; 206 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1964 ; American Journal of Physiology Volume 207 ; 207 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1965 ; American Journal of Physiology Volume 208 ; 208 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1965 ; American Journal of Physiology Volume 209 ; 209 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1966 ; American Journal of Physiology Volume 210 ; 210 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1966 ; American Journal of Physiology Volume 211 ; 211 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1967 ; American Journal of Physiology Volume 212 ; 212 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1967 ; American Journal of Physiology Volume 213 ; 213 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1968 ; American Journal of Physiology Volume 214 ; 214 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1968 ; American Journal of Physiology Volume 215 ; 215 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1969 ; American Journal of Physiology Volume 216 ; 216 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1969 ; American Journal of Physiology Volume 217 ; 217 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1970 ; American Journal of Physiology Volume 218 ; 218 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1970 ; American Journal of Physiology Volume 219 ; 219 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1971 ; American Journal of Physiology Volume 220 ; 220 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1971 ; American Journal of Physiology Volume 221 ; 221 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1972 ; American Journal of Physiology Volume 222 ; 222 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1972 ; American Journal of Physiology Volume 223 ; 223 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1973 ; American Journal of Physiology Volume 224 ; 224 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1973 ; American Journal of Physiology Volume 225 ; 225 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1974 ; American Journal of Physiology Volume 226 ; 226 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1974 ; American Journal of Physiology Volume 227 ; 227 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1975 ; American Journal of Physiology Volume 228 ; 228 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1975 ; American Journal of Physiology Volume 229 ; 229 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1976 ; American Journal of Physiology Volume 230 ; 230 ; https://journals.physiology.org/ ; >
+    au < manifest ; exists ; 1976 ; American Journal of Physiology Volume 231 ; 231 ; https://journals.physiology.org/ ; >
+
+  }
+
+  {
+
+    title <
+      name = American Journal of Physiology - Cell Physiology ;
+      issn = 0363-6143 ;
+      eissn = 1522-1563 
+    >
+
+    param[journal_id] = ajpcell
+    #content available from 1977 volume 233 to 2016 volume 311, preserved with HW
+
+    {
+
+      au < doNotProcess ; doNotProcess ; 2017 ; American Journal of Physiology - Cell Physiology Volume 312 ; 312 ; https://journals.physiology.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; American Journal of Physiology - Cell Physiology Volume 312 ; 312 ; http://www.physiology.org/ ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 2017 ; American Journal of Physiology - Cell Physiology Volume 313 ; 313 ; https://journals.physiology.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; American Journal of Physiology - Cell Physiology Volume 313 ; 313 ; http://www.physiology.org/ ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 2018 ; American Journal of Physiology - Cell Physiology Volume 314 ; 314 ; https://journals.physiology.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2018 ; American Journal of Physiology - Cell Physiology Volume 314 ; 314 ; https://www.physiology.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2018 ; American Journal of Physiology - Cell Physiology Volume 315 ; 315 ; https://www.physiology.org/ ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2018 ; American Journal of Physiology - Cell Physiology Volume 315 ; 315 ; https://journals.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Cell Physiology Volume 316 [superseded] ; 316 ; https://www.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Cell Physiology Volume 317 [superseded] ; 317 ; https://www.physiology.org/ ; >
+
+      au < doNotProcess ; doNotProcess ; 2018 ; American Journal of Physiology - Cell Physiology Volume 315 ; 315 ; https://journals.physiology.org/ ; >
+      au < finished ; frozen ; 2019 ; American Journal of Physiology - Cell Physiology Volume 316 ; 316 ; https://journals.physiology.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2019 ; American Journal of Physiology - Cell Physiology Volume 317 ; 317 ; https://journals.physiology.org/ ; reingest2.clockss.org:8085 >
+      au < deepCrawl ; exists ; 2020 ; American Journal of Physiology - Cell Physiology Volume 318 ; 318 ; https://journals.physiology.org/ ; >
+      au < deepCrawl ; exists ; 2020 ; American Journal of Physiology - Cell Physiology Volume 319 ; 319 ; https://journals.physiology.org/ ; >
+      au < deepCrawl ; exists ; 2021 ; American Journal of Physiology - Cell Physiology Volume 320 ; 320 ; https://journals.physiology.org/ ; >
+      au < deepCrawl ; exists ; 2021 ; American Journal of Physiology - Cell Physiology Volume 321 ; 321 ; https://journals.physiology.org/ ; >
+      au < testing ; exists ; 2022 ; American Journal of Physiology - Cell Physiology Volume 322 ; 322 ; https://journals.physiology.org/ ; >
+      au < manifest ; exists ; 2022 ; American Journal of Physiology - Cell Physiology Volume 323 ; 323 ; https://journals.physiology.org/ ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = American Journal of Physiology - Endocrinology and Metabolism ;
+      issn = 0193-1849 ;
+      eissn = 1522-1555 
+    >
+
+    param[journal_id] = ajpendo
+    #content available from 1977 volume 233 to 2016 volume 311, preserved with HW
+
+    {
+
+      au < doNotProcess ; doNotProcess ; 1977 ; American Journal of Physiology - Endocrinology and Metabolism Volume 232 ; 232 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1977 ; American Journal of Physiology - Endocrinology and Metabolism Volume 233 ; 233 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1978 ; American Journal of Physiology - Endocrinology and Metabolism Volume 234 ; 234 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1978 ; American Journal of Physiology - Endocrinology and Metabolism Volume 235 ; 235 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1979 ; American Journal of Physiology - Endocrinology and Metabolism Volume 236 ; 236 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1979 ; American Journal of Physiology - Endocrinology and Metabolism Volume 237 ; 237 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1980 ; American Journal of Physiology - Endocrinology and Metabolism Volume 238 ; 238 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1980 ; American Journal of Physiology - Endocrinology and Metabolism Volume 239 ; 239 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1981 ; American Journal of Physiology - Endocrinology and Metabolism Volume 240 ; 240 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1981 ; American Journal of Physiology - Endocrinology and Metabolism Volume 241 ; 241 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1982 ; American Journal of Physiology - Endocrinology and Metabolism Volume 242 ; 242 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1982 ; American Journal of Physiology - Endocrinology and Metabolism Volume 243 ; 243 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1983 ; American Journal of Physiology - Endocrinology and Metabolism Volume 244 ; 244 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1983 ; American Journal of Physiology - Endocrinology and Metabolism Volume 245 ; 245 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1984 ; American Journal of Physiology - Endocrinology and Metabolism Volume 246 ; 246 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1984 ; American Journal of Physiology - Endocrinology and Metabolism Volume 247 ; 247 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1985 ; American Journal of Physiology - Endocrinology and Metabolism Volume 248 ; 248 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1985 ; American Journal of Physiology - Endocrinology and Metabolism Volume 249 ; 249 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1986 ; American Journal of Physiology - Endocrinology and Metabolism Volume 250 ; 250 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1986 ; American Journal of Physiology - Endocrinology and Metabolism Volume 251 ; 251 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1987 ; American Journal of Physiology - Endocrinology and Metabolism Volume 252 ; 252 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1987 ; American Journal of Physiology - Endocrinology and Metabolism Volume 253 ; 253 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1988 ; American Journal of Physiology - Endocrinology and Metabolism Volume 254 ; 254 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1988 ; American Journal of Physiology - Endocrinology and Metabolism Volume 255 ; 255 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1989 ; American Journal of Physiology - Endocrinology and Metabolism Volume 256 ; 256 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1989 ; American Journal of Physiology - Endocrinology and Metabolism Volume 257 ; 257 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1990 ; American Journal of Physiology - Endocrinology and Metabolism Volume 258 ; 258 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1990 ; American Journal of Physiology - Endocrinology and Metabolism Volume 259 ; 259 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1991 ; American Journal of Physiology - Endocrinology and Metabolism Volume 260 ; 260 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1991 ; American Journal of Physiology - Endocrinology and Metabolism Volume 261 ; 261 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1992 ; American Journal of Physiology - Endocrinology and Metabolism Volume 262 ; 262 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1992 ; American Journal of Physiology - Endocrinology and Metabolism Volume 263 ; 263 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1993 ; American Journal of Physiology - Endocrinology and Metabolism Volume 264 ; 264 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1993 ; American Journal of Physiology - Endocrinology and Metabolism Volume 265 ; 265 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1994 ; American Journal of Physiology - Endocrinology and Metabolism Volume 266 ; 266 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1994 ; American Journal of Physiology - Endocrinology and Metabolism Volume 267 ; 267 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1995 ; American Journal of Physiology - Endocrinology and Metabolism Volume 268 ; 268 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1995 ; American Journal of Physiology - Endocrinology and Metabolism Volume 269 ; 269 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1996 ; American Journal of Physiology - Endocrinology and Metabolism Volume 270 ; 270 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1996 ; American Journal of Physiology - Endocrinology and Metabolism Volume 271 ; 271 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1997 ; American Journal of Physiology - Endocrinology and Metabolism Volume 272 ; 272 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1997 ; American Journal of Physiology - Endocrinology and Metabolism Volume 273 ; 273 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1998 ; American Journal of Physiology - Endocrinology and Metabolism Volume 274 ; 274 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1998 ; American Journal of Physiology - Endocrinology and Metabolism Volume 275 ; 275 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1999 ; American Journal of Physiology - Endocrinology and Metabolism Volume 276 ; 276 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1999 ; American Journal of Physiology - Endocrinology and Metabolism Volume 277 ; 277 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2000 ; American Journal of Physiology - Endocrinology and Metabolism Volume 278 ; 278 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2000 ; American Journal of Physiology - Endocrinology and Metabolism Volume 279 ; 279 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2001 ; American Journal of Physiology - Endocrinology and Metabolism Volume 280 ; 280 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2001 ; American Journal of Physiology - Endocrinology and Metabolism Volume 281 ; 281 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2002 ; American Journal of Physiology - Endocrinology and Metabolism Volume 282 ; 282 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2002 ; American Journal of Physiology - Endocrinology and Metabolism Volume 283 ; 283 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2003 ; American Journal of Physiology - Endocrinology and Metabolism Volume 284 ; 284 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2003 ; American Journal of Physiology - Endocrinology and Metabolism Volume 285 ; 285 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; American Journal of Physiology - Endocrinology and Metabolism Volume 286 ; 286 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; American Journal of Physiology - Endocrinology and Metabolism Volume 287 ; 287 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; American Journal of Physiology - Endocrinology and Metabolism Volume 312 ; 312 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; American Journal of Physiology - Endocrinology and Metabolism Volume 313 ; 313 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; American Journal of Physiology - Endocrinology and Metabolism Volume 314 ; 314 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; American Journal of Physiology - Endocrinology and Metabolism Volume 315 ; 315 ; https://journals.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Endocrinology and Metabolism Volume 316 [superseded] ; 316 ; https://www.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Endocrinology and Metabolism Volume 317 [superseded] ; 317 ; https://www.physiology.org/ ; >
+
+      au < finished ; finished ; 2017 ; American Journal of Physiology - Endocrinology and Metabolism Volume 312 ; 312 ; http://www.physiology.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; American Journal of Physiology - Endocrinology and Metabolism Volume 313 ; 313 ; http://www.physiology.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2018 ; American Journal of Physiology - Endocrinology and Metabolism Volume 314 ; 314 ; https://www.physiology.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2018 ; American Journal of Physiology - Endocrinology and Metabolism Volume 315 ; 315 ; https://www.physiology.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2019 ; American Journal of Physiology - Endocrinology and Metabolism Volume 316 ; 316 ; https://journals.physiology.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2019 ; American Journal of Physiology - Endocrinology and Metabolism Volume 317 ; 317 ; https://journals.physiology.org/ ; reingest2.clockss.org:8085 >
+      au < deepCrawl ; exists ; 2020 ; American Journal of Physiology - Endocrinology and Metabolism Volume 318 ; 318 ; https://journals.physiology.org/ ; >
+      au < deepCrawl ; exists ; 2020 ; American Journal of Physiology - Endocrinology and Metabolism Volume 319 ; 319 ; https://journals.physiology.org/ ; >
+      au < frozen ; exists ; 2021 ; American Journal of Physiology - Endocrinology and Metabolism Volume 320 ; 320 ; https://journals.physiology.org/ ; >
+      au < deepCrawl ; exists ; 2021 ; American Journal of Physiology - Endocrinology and Metabolism Volume 321 ; 321 ; https://journals.physiology.org/ ; >
+      au < crawling ; exists ; 2022 ; American Journal of Physiology - Endocrinology and Metabolism Volume 322 ; 322 ; https://journals.physiology.org/ ; >
+      au < crawling ; exists ; 2022 ; American Journal of Physiology - Endocrinology and Metabolism Volume 323 ; 323 ; https://journals.physiology.org/ ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = American Journal of Physiology - Gastrointestinal and Liver Physiology ;
+      issn = 0193-1857 ;
+      eissn = 1522-1547 
+    >
+
+    param[journal_id] = ajpgi
+    #content available from 1980 volume 238 to 2016 volume 311, preserved with HW
+
+    {
+
+      au < doNotProcess ; doNotProcess ; 1980 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 238 ; 238 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 1980 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 239 ; 239 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 1981 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 240 ; 240 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 1981 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 241 ; 241 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 1982 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 242 ; 242 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 1982 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 243 ; 243 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 1983 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 244 ; 244 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 1983 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 245 ; 245 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 1984 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 246 ; 246 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 1984 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 247 ; 247 ; https://journals.physiology.org/ ;>
+      #au < doNotProcess ; doNotProcess ; 1985 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 248 ; 248 ; https://journals.physiology.org/ ;>
+      #au < doNotProcess ; doNotProcess ; 1985 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 249 ; 249 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 1986 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 250 ; 250 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 1986 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 251 ; 251 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 1987 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 252 ; 252 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 1987 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 253 ; 253 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 1988 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 254 ; 254 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 1988 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 255 ; 255 ; https://journals.physiology.org/ ;>
+      #au < doNotProcess ; doNotProcess ; 1989 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 256 ; 256 ; https://journals.physiology.org/ ;>
+      #au < doNotProcess ; doNotProcess ; 1989 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 257 ; 257 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 1990 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 258 ; 258 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 1990 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 259 ; 259 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 1991 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 260 ; 260 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 1991 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 261 ; 261 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 1992 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 262 ; 262 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 1992 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 263 ; 263 ; https://journals.physiology.org/ ;>
+      #au < doNotProcess ; doNotProcess ; 1993 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 264 ; 264 ; https://journals.physiology.org/ ;>
+      #au < doNotProcess ; doNotProcess ; 1993 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 265 ; 265 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 1994 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 266 ; 266 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 1994 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 267 ; 267 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 1995 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 268 ; 268 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 1995 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 269 ; 269 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 1996 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 270 ; 270 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 1996 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 271 ; 271 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 1997 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 272 ; 272 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 1997 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 273 ; 273 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 1998 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 274 ; 274 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 1998 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 275 ; 275 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 1999 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 276 ; 276 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 1999 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 277 ; 277 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 2000 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 278 ; 278 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 2000 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 279 ; 279 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 2001 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 280 ; 280 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 2001 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 281 ; 281 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 2002 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 282 ; 282 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 2002 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 283 ; 283 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 2003 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 284 ; 284 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 2003 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 285 ; 285 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 2004 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 286 ; 286 ; https://journals.physiology.org/ ;>
+      au < doNotProcess ; doNotProcess ; 2004 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 287 ; 287 ; https://journals.physiology.org/ ;>
+
+      au < doNotProcess ; doNotProcess ; 2017 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 312 ; 312 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 313 ; 313 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 314 ; 314 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 315 ; 315 ; https://journals.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 316 [superseded] ; 316 ; https://www.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 317 [superseded] ; 317 ; https://www.physiology.org/ ; >
+
+      au < finished ; finished ; 2017 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 312 ; 312 ; http://www.physiology.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 313 ; 313 ; http://www.physiology.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2018 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 314 ; 314 ; https://www.physiology.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2018 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 315 ; 315 ; https://www.physiology.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2019 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 316 ; 316 ; https://journals.physiology.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2019 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 317 ; 317 ; https://journals.physiology.org/ ; reingest2.clockss.org:8085 >
+      au < deepCrawl ; exists ; 2020 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 318 ; 318 ; https://journals.physiology.org/ ; >
+      au < deepCrawl ; exists ; 2020 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 319 ; 319 ; https://journals.physiology.org/ ; >
+      au < frozen ; exists ; 2021 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 320 ; 320 ; https://journals.physiology.org/ ; >
+      au < deepCrawl ; exists ; 2021 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 321 ; 321 ; https://journals.physiology.org/ ; >
+      au < crawling ; exists ; 2022 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 322 ; 322 ; https://journals.physiology.org/ ; >
+      au < crawling ; exists ; 2022 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 323 ; 323 ; https://journals.physiology.org/ ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = American Journal of Physiology - Heart and Circulatory Physiology ;
+      issn = 0363-6135 ;
+      eissn = 1522-1539 
+    >
+
+    param[journal_id] = ajpheart
+    #content available from 1977 volume 233 to 2016 volume 311, preserved with HW
+
+    {
+
+      au < doNotProcess ; doNotProcess ; 2017 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 312 ; 312 ; https://journals.physiology.org/ ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 2017 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 313 ; 313 ; https://journals.physiology.org/ ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 2018 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 314 ; 314 ; https://journals.physiology.org/ ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2018 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 315 ; 315 ; https://journals.physiology.org/ ; reingest5.clockss.org:8082 >
+
+      au < finished ; finished ; 2017 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 312 ; 312 ; http://www.physiology.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2017 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 313 ; 313 ; http://www.physiology.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2018 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 314 ; 314 ; https://www.physiology.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2018 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 315 ; 315 ; https://www.physiology.org/ ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 316 [superseded] ; 316 ; https://www.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 317 [superseded] ; 317 ; https://www.physiology.org/ ; >
+      au < finished ; frozen ; 2019 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 316 ; 316 ; https://journals.physiology.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2019 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 317 ; 317 ; https://journals.physiology.org/ ; reingest2.clockss.org:8085 >
+      au < deepCrawl ; exists ; 2020 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 318 ; 318 ; https://journals.physiology.org/ ; >
+      au < deepCrawl ; exists ; 2020 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 319 ; 319 ; https://journals.physiology.org/ ; >
+      au < frozen ; exists ; 2021 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 320 ; 320 ; https://journals.physiology.org/ ; >
+      au < deepCrawl ; exists ; 2021 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 321 ; 321 ; https://journals.physiology.org/ ; >
+      au < crawling ; exists ; 2022 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 322 ; 322 ; https://journals.physiology.org/ ; >
+      au < crawling ; exists ; 2022 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 323 ; 323 ; https://journals.physiology.org/ ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = American Journal of Physiology - Lung Cellular and Molecular Physiology ;
+      issn = 1040-0605 ;
+      eissn = 1522-1504 
+    >
+
+    param[journal_id] = ajplung
+    #content available from 1989 volume 257 to 2016 volume 311, preserved with HW
+
+    {
+
+      au < doNotProcess ; doNotProcess ; 1989 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 257 ; 257 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1990 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 258 ; 258 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1990 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 259 ; 259 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1991 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 260 ; 260 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1991 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 261 ; 261 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1992 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 262 ; 262 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1992 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 263 ; 263 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1993 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 264 ; 264 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1993 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 265 ; 265 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1994 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 266 ; 266 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1994 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 267 ; 267 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1995 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 268 ; 268 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1995 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 269 ; 269 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1996 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 270 ; 270 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1996 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 271 ; 271 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1997 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 272 ; 272 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1997 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 273 ; 273 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1998 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 274 ; 274 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1998 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 275 ; 275 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1999 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 276 ; 276 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1999 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 277 ; 277 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2000 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 278 ; 278 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2000 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 279 ; 279 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2001 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 280 ; 280 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2001 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 281 ; 281 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2002 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 282 ; 282 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2002 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 283 ; 283 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2003 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 284 ; 284 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2003 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 285 ; 285 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 286 ; 286 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 287 ; 287 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2005 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 288 ; 288 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2005 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 289 ; 289 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 290 ; 290 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 291 ; 291 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 292 ; 292 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 293 ; 293 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 294 ; 294 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 295 ; 295 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 296 ; 296 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 297 ; 297 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 298 ; 298 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 299 ; 299 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 300 ; 300 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 301 ; 301 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 302 ; 302 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 303 ; 303 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 304 ; 304 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 305 ; 305 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 306 ; 306 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 307 ; 307 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 308 ; 308 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 309 ; 309 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 310 ; 310 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 311 ; 311 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 312 ; 312 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 313 ; 313 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 314 ; 314 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 315 ; 315 ; https://journals.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 316 [superseded] ; 316 ; https://www.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 317 [superseded] ; 317 ; https://www.physiology.org/ ; >
+
+      au < finished ; finished ; 2017 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 312 ; 312 ; http://www.physiology.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 313 ; 313 ; http://www.physiology.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2018 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 314 ; 314 ; https://www.physiology.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 315 ; 315 ; https://www.physiology.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2019 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 316 ; 316 ; https://journals.physiology.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2019 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 317 ; 317 ; https://journals.physiology.org/ ; reingest5.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2020 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 318 ; 318 ; https://journals.physiology.org/ ; >
+      au < deepCrawl ; exists ; 2020 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 319 ; 319 ; https://journals.physiology.org/ ; >
+      au < frozen ; exists ; 2021 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 320 ; 320 ; https://journals.physiology.org/ ; >
+      au < deepCrawl ; exists ; 2021 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 321 ; 321 ; https://journals.physiology.org/ ; >
+      au < crawling ; exists ; 2022 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 322 ; 322 ; https://journals.physiology.org/ ; >
+      au < crawling ; exists ; 2022 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 323 ; 323 ; https://journals.physiology.org/ ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = American Journal of Physiology - Regulatory, Integrative and Comparative Physiology ;
+      issn = 0363-6119 ;
+      eissn = 1522-1490 
+    >
+
+    param[journal_id] = ajpregu
+    #content available from 1977 volume 233 to 2016 volume 311, preserved with HW
+
+    {
+
+      au < doNotProcess ; doNotProcess ; 1977 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 232 ; 232 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1977 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 233 ; 233 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1978 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 234 ; 234 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1978 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 235 ; 235 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1979 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 236 ; 236 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1979 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 237 ; 237 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1980 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 238 ; 238 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1980 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 239 ; 239 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1981 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 240 ; 240 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1981 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 241 ; 241 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1982 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 242 ; 242 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1982 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 243 ; 243 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1983 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 244 ; 244 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1983 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 245 ; 245 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1984 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 246 ; 246 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1984 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 247 ; 247 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1985 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 248 ; 248 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1985 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 249 ; 249 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1986 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 250 ; 250 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1986 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 251 ; 251 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1987 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 252 ; 252 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1987 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 253 ; 253 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1988 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 254 ; 254 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1988 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 255 ; 255 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1989 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 256 ; 256 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1989 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 257 ; 257 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1990 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 258 ; 258 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1990 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 259 ; 259 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1991 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 260 ; 260 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1991 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 261 ; 261 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1992 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 262 ; 262 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1992 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 263 ; 263 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1993 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 264 ; 264 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1993 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 265 ; 265 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1994 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 266 ; 266 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1994 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 267 ; 267 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1995 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 268 ; 268 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1995 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 269 ; 269 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1996 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 270 ; 270 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1996 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 271 ; 271 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1997 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 272 ; 272 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1997 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 273 ; 273 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1998 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 274 ; 274 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1998 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 275 ; 275 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1999 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 276 ; 276 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1999 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 277 ; 277 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2000 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 278 ; 278 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2000 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 279 ; 279 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2001 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 280 ; 280 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2001 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 281 ; 281 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2002 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 282 ; 282 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2002 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 283 ; 283 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2003 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 284 ; 284 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2003 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 285 ; 285 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 286 ; 286 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 287 ; 287 ; https://journals.physiology.org/ ; >
+
+      au < doNotProcess ; doNotProcess ; 2007 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 293 ; 293 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 294 ; 294 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 295 ; 295 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 296 ; 296 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 297 ; 297 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 298 ; 298 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 299 ; 299 ; https://journals.physiology.org/ ; >
+      #au < doNotProcess ; doNotProcess ; 2011 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 300 ; 300 ; https://journals.physiology.org/ ; >
+      #au < doNotProcess ; doNotProcess ; 2011 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 301 ; 301 ; https://journals.physiology.org/ ; >
+      #au < doNotProcess ; doNotProcess ; 2012 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 302 ; 302 ; https://journals.physiology.org/ ; >
+      #au < doNotProcess ; doNotProcess ; 2012 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 303 ; 303 ; https://journals.physiology.org/ ; >
+      #au < doNotProcess ; doNotProcess ; 2013 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 304 ; 304 ; https://journals.physiology.org/ ; >
+      #au < doNotProcess ; doNotProcess ; 2013 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 305 ; 305 ; https://journals.physiology.org/ ; >
+      #au < doNotProcess ; doNotProcess ; 2014 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 306 ; 306 ; https://journals.physiology.org/ ; >
+      #au < doNotProcess ; doNotProcess ; 2014 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 307 ; 307 ; https://journals.physiology.org/ ; >
+      #au < doNotProcess ; doNotProcess ; 2015 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 308 ; 308 ; https://journals.physiology.org/ ; >
+      #au < doNotProcess ; doNotProcess ; 2015 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 309 ; 309 ; https://journals.physiology.org/ ; >
+      #au < doNotProcess ; doNotProcess ; 2016 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 310 ; 310 ; https://journals.physiology.org/ ; >
+      #au < doNotProcess ; doNotProcess ; 2016 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 311 ; 311 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 312 ; 312 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 313 ; 313 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 314 ; 314 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 315 ; 315 ; https://journals.physiology.org/ ; >
+
+      au < finished ; finished ; 2017 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 312 ; 312 ; http://www.physiology.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2017 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 313 ; 313 ; http://www.physiology.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2018 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 314 ; 314 ; https://www.physiology.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2018 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 315 ; 315 ; https://www.physiology.org/ ; reingest4.clockss.org:8082 >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 316 [superseded] ; 316 ; https://www.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 317 [superseded] ; 317 ; https://www.physiology.org/ ; >
+      au < finished ; frozen ; 2019 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 316 ; 316 ; https://journals.physiology.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2019 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 317 ; 317 ; https://journals.physiology.org/ ; reingest4.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2020 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 318 ; 318 ; https://journals.physiology.org/ ; >
+      au < deepCrawl ; exists ; 2020 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 319 ; 319 ; https://journals.physiology.org/ ; >
+      au < frozen ; exists ; 2021 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 320 ; 320 ; https://journals.physiology.org/ ; >
+      au < deepCrawl ; exists ; 2021 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 321 ; 321 ; https://journals.physiology.org/ ; >
+      au < crawling ; exists ; 2022 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 322 ; 322 ; https://journals.physiology.org/ ; >
+      au < crawling ; exists ; 2022 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 323 ; 323 ; https://journals.physiology.org/ ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = American Journal of Physiology - Renal Physiology ;
+      issn = 1931-857X ;
+      eissn = 1522-1466 
+    >
+
+    param[journal_id] = ajprenal
+    # other possible issn 0363-6127
+    #content available from 1977 volume 233 to 2016 volume 311, preserved with HW
+
+    {
+
+      au < doNotProcess ; doNotProcess ; 1977 ; American Journal of Physiology - Renal Physiology Volume 232 ; 232 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1977 ; American Journal of Physiology - Renal Physiology Volume 233 ; 233 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1978 ; American Journal of Physiology - Renal Physiology Volume 234 ; 234 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1978 ; American Journal of Physiology - Renal Physiology Volume 235 ; 235 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1979 ; American Journal of Physiology - Renal Physiology Volume 236 ; 236 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1979 ; American Journal of Physiology - Renal Physiology Volume 237 ; 237 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1980 ; American Journal of Physiology - Renal Physiology Volume 238 ; 238 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1980 ; American Journal of Physiology - Renal Physiology Volume 239 ; 239 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1981 ; American Journal of Physiology - Renal Physiology Volume 240 ; 240 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1981 ; American Journal of Physiology - Renal Physiology Volume 241 ; 241 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1982 ; American Journal of Physiology - Renal Physiology Volume 242 ; 242 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1982 ; American Journal of Physiology - Renal Physiology Volume 243 ; 243 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1983 ; American Journal of Physiology - Renal Physiology Volume 244 ; 244 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1983 ; American Journal of Physiology - Renal Physiology Volume 245 ; 245 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1984 ; American Journal of Physiology - Renal Physiology Volume 246 ; 246 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1984 ; American Journal of Physiology - Renal Physiology Volume 247 ; 247 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1985 ; American Journal of Physiology - Renal Physiology Volume 248 ; 248 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1985 ; American Journal of Physiology - Renal Physiology Volume 249 ; 249 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1986 ; American Journal of Physiology - Renal Physiology Volume 250 ; 250 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1986 ; American Journal of Physiology - Renal Physiology Volume 251 ; 251 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1987 ; American Journal of Physiology - Renal Physiology Volume 252 ; 252 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1987 ; American Journal of Physiology - Renal Physiology Volume 253 ; 253 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1988 ; American Journal of Physiology - Renal Physiology Volume 254 ; 254 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1988 ; American Journal of Physiology - Renal Physiology Volume 255 ; 255 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1989 ; American Journal of Physiology - Renal Physiology Volume 256 ; 256 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1989 ; American Journal of Physiology - Renal Physiology Volume 257 ; 257 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1990 ; American Journal of Physiology - Renal Physiology Volume 258 ; 258 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1990 ; American Journal of Physiology - Renal Physiology Volume 259 ; 259 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1991 ; American Journal of Physiology - Renal Physiology Volume 260 ; 260 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1991 ; American Journal of Physiology - Renal Physiology Volume 261 ; 261 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1992 ; American Journal of Physiology - Renal Physiology Volume 262 ; 262 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1992 ; American Journal of Physiology - Renal Physiology Volume 263 ; 263 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1993 ; American Journal of Physiology - Renal Physiology Volume 264 ; 264 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1993 ; American Journal of Physiology - Renal Physiology Volume 265 ; 265 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1994 ; American Journal of Physiology - Renal Physiology Volume 266 ; 266 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1994 ; American Journal of Physiology - Renal Physiology Volume 267 ; 267 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1995 ; American Journal of Physiology - Renal Physiology Volume 268 ; 268 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1995 ; American Journal of Physiology - Renal Physiology Volume 269 ; 269 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1996 ; American Journal of Physiology - Renal Physiology Volume 270 ; 270 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1996 ; American Journal of Physiology - Renal Physiology Volume 271 ; 271 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1997 ; American Journal of Physiology - Renal Physiology Volume 272 ; 272 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1997 ; American Journal of Physiology - Renal Physiology Volume 273 ; 273 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1998 ; American Journal of Physiology - Renal Physiology Volume 274 ; 274 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1998 ; American Journal of Physiology - Renal Physiology Volume 275 ; 275 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1999 ; American Journal of Physiology - Renal Physiology Volume 276 ; 276 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1999 ; American Journal of Physiology - Renal Physiology Volume 277 ; 277 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2000 ; American Journal of Physiology - Renal Physiology Volume 278 ; 278 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2000 ; American Journal of Physiology - Renal Physiology Volume 279 ; 279 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2001 ; American Journal of Physiology - Renal Physiology Volume 280 ; 280 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2001 ; American Journal of Physiology - Renal Physiology Volume 281 ; 281 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2002 ; American Journal of Physiology - Renal Physiology Volume 282 ; 282 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2002 ; American Journal of Physiology - Renal Physiology Volume 283 ; 283 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2003 ; American Journal of Physiology - Renal Physiology Volume 284 ; 284 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2003 ; American Journal of Physiology - Renal Physiology Volume 285 ; 285 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; American Journal of Physiology - Renal Physiology Volume 286 ; 286 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; American Journal of Physiology - Renal Physiology Volume 287 ; 287 ; https://journals.physiology.org/ ; >
+
+      au < doNotProcess ; doNotProcess ; 2007 ; American Journal of Physiology - Renal Physiology Volume 293 ; 293 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; American Journal of Physiology - Renal Physiology Volume 294 ; 294 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; American Journal of Physiology - Renal Physiology Volume 295 ; 295 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; American Journal of Physiology - Renal Physiology Volume 296 ; 296 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; American Journal of Physiology - Renal Physiology Volume 297 ; 297 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; American Journal of Physiology - Renal Physiology Volume 298 ; 298 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; American Journal of Physiology - Renal Physiology Volume 299 ; 299 ; https://journals.physiology.org/ ; >
+
+      au < doNotProcess ; doNotProcess ; 2017 ; American Journal of Physiology - Renal Physiology Volume 312 ; 312 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; American Journal of Physiology - Renal Physiology Volume 313 ; 313 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; American Journal of Physiology - Renal Physiology Volume 314 ; 314 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; American Journal of Physiology - Renal Physiology Volume 315 ; 315 ; https://journals.physiology.org/ ; >
+
+      au < finished ; frozen ; 2017 ; American Journal of Physiology - Renal Physiology Volume 312 ; 312 ; http://www.physiology.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2017 ; American Journal of Physiology - Renal Physiology Volume 313 ; 313 ; http://www.physiology.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2018 ; American Journal of Physiology - Renal Physiology Volume 314 ; 314 ; https://www.physiology.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2018 ; American Journal of Physiology - Renal Physiology Volume 315 ; 315 ; https://www.physiology.org/ ; reingest3.clockss.org:8083 >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Renal Physiology Volume 316 [superseded] ; 316 ; https://www.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Renal Physiology Volume 317 [superseded] ; 317 ; https://www.physiology.org/ ; >
+      au < finished ; frozen ; 2019 ; American Journal of Physiology - Renal Physiology Volume 316 ; 316 ; https://journals.physiology.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2019 ; American Journal of Physiology - Renal Physiology Volume 317 ; 317 ; https://journals.physiology.org/ ; reingest1.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2020 ; American Journal of Physiology - Renal Physiology Volume 318 ; 318 ; https://journals.physiology.org/ ; >
+      au < deepCrawl ; exists ; 2020 ; American Journal of Physiology - Renal Physiology Volume 319 ; 319 ; https://journals.physiology.org/ ; >
+      au < frozen ; exists ; 2021 ; American Journal of Physiology - Renal Physiology Volume 320 ; 320 ; https://journals.physiology.org/ ; >
+      au < deepCrawl ; exists ; 2021 ; American Journal of Physiology - Renal Physiology Volume 321 ; 321 ; https://journals.physiology.org/ ; >
+      au < crawling ; exists ; 2022 ; American Journal of Physiology - Renal Physiology Volume 322 ; 322 ; https://journals.physiology.org/ ; >
+      au < crawling ; exists ; 2022 ; American Journal of Physiology - Renal Physiology Volume 323 ; 323 ; https://journals.physiology.org/ ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Journal of Applied Physiology ;
+      issn = 8750-7587 ;
+      eissn = 1522-1601 
+    >
+
+    param[journal_id] = jappl
+    #content available from 1948 volume 1 to 2007 volume 103
+    #content available from 2008 volume 104 to 2016 volume 121, preserved in HW, doNotProcess content
+
+    {
+
+      au < doNotProcess ; doNotProcess ; 2017 ; Journal of Applied Physiology Volume 122 ; 122 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; Journal of Applied Physiology Volume 123 ; 123 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; Journal of Applied Physiology Volume 124 ; 124 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; Journal of Applied Physiology Volume 125 ; 125 ; https://journals.physiology.org/ ; >
+
+      au < finished ; crawling ; 2017 ; Journal of Applied Physiology Volume 122 ; 122 ; http://www.physiology.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2017 ; Journal of Applied Physiology Volume 123 ; 123 ; http://www.physiology.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2018 ; Journal of Applied Physiology Volume 124 ; 124 ; https://www.physiology.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2018 ; Journal of Applied Physiology Volume 125 ; 125 ; https://www.physiology.org/ ; reingest2.clockss.org:8085 >
+      au < superseded ; exists ; 2019 ; Journal of Applied Physiology Volume 126 [superseded] ; 126 ; https://www.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; Journal of Applied Physiology Volume 127 [superseded] ; 127 ; https://www.physiology.org/ ; >
+      au < finished ; frozen ; 2019 ; Journal of Applied Physiology Volume 126 ; 126 ; https://journals.physiology.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2019 ; Journal of Applied Physiology Volume 127 ; 127 ; https://journals.physiology.org/ ; reingest1.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2020 ; Journal of Applied Physiology Volume 128 ; 128 ; https://journals.physiology.org/ ; >
+      au < deepCrawl ; exists ; 2020 ; Journal of Applied Physiology Volume 129 ; 129 ; https://journals.physiology.org/ ; >
+      au < frozen ; exists ; 2021 ; Journal of Applied Physiology Volume 130 ; 130 ; https://journals.physiology.org/ ; >
+      au < deepCrawl ; exists ; 2021 ; Journal of Applied Physiology Volume 131 ; 131 ; https://journals.physiology.org/ ; >
+      au < crawling ; exists ; 2022 ; Journal of Applied Physiology Volume 132 ; 132 ; https://journals.physiology.org/ ; >
+      au < crawling ; exists ; 2022 ; Journal of Applied Physiology Volume 133 ; 133 ; https://journals.physiology.org/ ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Journal of Neurophysiology ;
+      issn = 0022-3077 ;
+      eissn = 1522-1598 
+    >
+
+    param[journal_id] = jn
+    #content available from 1938 volume 1 to 2007 volume 98
+    #content available from 2008 volume 99 to 2016 volume 116, preserved in HW, doNotProcess content
+
+    {
+
+      au < doNotProcess ; doNotProcess ; 1938 ; Journal of Neurophysiology Volume 1 ; 1 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1939 ; Journal of Neurophysiology Volume 2 ; 2 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1940 ; Journal of Neurophysiology Volume 3 ; 3 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1941 ; Journal of Neurophysiology Volume 4 ; 4 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1942 ; Journal of Neurophysiology Volume 5 ; 5 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1943 ; Journal of Neurophysiology Volume 6 ; 6 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1944 ; Journal of Neurophysiology Volume 7 ; 7 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1945 ; Journal of Neurophysiology Volume 8 ; 8 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1946 ; Journal of Neurophysiology Volume 9 ; 9 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1947 ; Journal of Neurophysiology Volume 10 ; 10 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1948 ; Journal of Neurophysiology Volume 11 ; 11 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1949 ; Journal of Neurophysiology Volume 12 ; 12 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1950 ; Journal of Neurophysiology Volume 13 ; 13 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1951 ; Journal of Neurophysiology Volume 14 ; 14 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1952 ; Journal of Neurophysiology Volume 15 ; 15 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1953 ; Journal of Neurophysiology Volume 16 ; 16 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1954 ; Journal of Neurophysiology Volume 17 ; 17 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1955 ; Journal of Neurophysiology Volume 18 ; 18 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1956 ; Journal of Neurophysiology Volume 19 ; 19 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1957 ; Journal of Neurophysiology Volume 20 ; 20 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1958 ; Journal of Neurophysiology Volume 21 ; 21 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1959 ; Journal of Neurophysiology Volume 22 ; 22 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1960 ; Journal of Neurophysiology Volume 23 ; 23 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1961 ; Journal of Neurophysiology Volume 24 ; 24 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1962 ; Journal of Neurophysiology Volume 25 ; 25 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1963 ; Journal of Neurophysiology Volume 26 ; 26 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1964 ; Journal of Neurophysiology Volume 27 ; 27 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1965 ; Journal of Neurophysiology Volume 28 ; 28 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1966 ; Journal of Neurophysiology Volume 29 ; 29 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1967 ; Journal of Neurophysiology Volume 30 ; 30 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1968 ; Journal of Neurophysiology Volume 31 ; 31 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1969 ; Journal of Neurophysiology Volume 32 ; 32 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1970 ; Journal of Neurophysiology Volume 33 ; 33 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1971 ; Journal of Neurophysiology Volume 34 ; 34 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1972 ; Journal of Neurophysiology Volume 35 ; 35 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1973 ; Journal of Neurophysiology Volume 36 ; 36 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1974 ; Journal of Neurophysiology Volume 37 ; 37 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1975 ; Journal of Neurophysiology Volume 38 ; 38 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1976 ; Journal of Neurophysiology Volume 39 ; 39 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1977 ; Journal of Neurophysiology Volume 40 ; 40 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1978 ; Journal of Neurophysiology Volume 41 ; 41 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1979 ; Journal of Neurophysiology Volume 42 ; 42 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1980 ; Journal of Neurophysiology Volume 43 ; 43 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1980 ; Journal of Neurophysiology Volume 44 ; 44 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1981 ; Journal of Neurophysiology Volume 45 ; 45 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1981 ; Journal of Neurophysiology Volume 46 ; 46 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1982 ; Journal of Neurophysiology Volume 47 ; 47 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1982 ; Journal of Neurophysiology Volume 48 ; 48 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1983 ; Journal of Neurophysiology Volume 49 ; 49 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1983 ; Journal of Neurophysiology Volume 50 ; 50 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1984 ; Journal of Neurophysiology Volume 51 ; 51 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1984 ; Journal of Neurophysiology Volume 52 ; 52 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1985 ; Journal of Neurophysiology Volume 53 ; 53 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1985 ; Journal of Neurophysiology Volume 54 ; 54 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1986 ; Journal of Neurophysiology Volume 55 ; 55 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1986 ; Journal of Neurophysiology Volume 56 ; 56 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1987 ; Journal of Neurophysiology Volume 57 ; 57 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1987 ; Journal of Neurophysiology Volume 58 ; 58 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1988 ; Journal of Neurophysiology Volume 59 ; 59 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1988 ; Journal of Neurophysiology Volume 60 ; 60 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1989 ; Journal of Neurophysiology Volume 61 ; 61 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1989 ; Journal of Neurophysiology Volume 62 ; 62 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1990 ; Journal of Neurophysiology Volume 63 ; 63 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1990 ; Journal of Neurophysiology Volume 64 ; 64 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1991 ; Journal of Neurophysiology Volume 65 ; 65 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1991 ; Journal of Neurophysiology Volume 66 ; 66 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1992 ; Journal of Neurophysiology Volume 67 ; 67 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1992 ; Journal of Neurophysiology Volume 68 ; 68 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1993 ; Journal of Neurophysiology Volume 69 ; 69 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1993 ; Journal of Neurophysiology Volume 70 ; 70 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1994 ; Journal of Neurophysiology Volume 71 ; 71 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1994 ; Journal of Neurophysiology Volume 72 ; 72 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1995 ; Journal of Neurophysiology Volume 73 ; 73 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1995 ; Journal of Neurophysiology Volume 74 ; 74 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1996 ; Journal of Neurophysiology Volume 75 ; 75 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1996 ; Journal of Neurophysiology Volume 76 ; 76 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1997 ; Journal of Neurophysiology Volume 77 ; 77 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1997 ; Journal of Neurophysiology Volume 78 ; 78 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1998 ; Journal of Neurophysiology Volume 79 ; 79 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1998 ; Journal of Neurophysiology Volume 80 ; 80 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1999 ; Journal of Neurophysiology Volume 81 ; 81 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1999 ; Journal of Neurophysiology Volume 82 ; 82 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2000 ; Journal of Neurophysiology Volume 83 ; 83 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2000 ; Journal of Neurophysiology Volume 84 ; 84 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2001 ; Journal of Neurophysiology Volume 85 ; 85 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2001 ; Journal of Neurophysiology Volume 86 ; 86 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2002 ; Journal of Neurophysiology Volume 87 ; 87 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2002 ; Journal of Neurophysiology Volume 88 ; 88 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2003 ; Journal of Neurophysiology Volume 89 ; 89 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2003 ; Journal of Neurophysiology Volume 90 ; 90 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; Journal of Neurophysiology Volume 91 ; 91 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; Journal of Neurophysiology Volume 92 ; 92 ; https://journals.physiology.org/ ; >
+
+      au < doNotProcess ; doNotProcess ; 2007 ; Journal of Neurophysiology Volume 98 ; 98 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; Journal of Neurophysiology Volume 99 ; 99 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; Journal of Neurophysiology Volume 100 ; 100 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; Journal of Neurophysiology Volume 101 ; 101 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; Journal of Neurophysiology Volume 102 ; 102 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; Journal of Neurophysiology Volume 103 ; 103 ; https://journals.physiology.org/ ; >
+
+      au < doNotProcess ; doNotProcess ; 2013 ; Journal of Neurophysiology Volume 110 ; 110 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; Journal of Neurophysiology Volume 117 ; 117 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; Journal of Neurophysiology Volume 118 ; 118 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; Journal of Neurophysiology Volume 119 ; 119 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; Journal of Neurophysiology Volume 120 ; 120 ; https://journals.physiology.org/ ; >
+
+      au < finished ; crawling ; 2017 ; Journal of Neurophysiology Volume 117 ; 117 ; http://www.physiology.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2017 ; Journal of Neurophysiology Volume 118 ; 118 ; http://www.physiology.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2018 ; Journal of Neurophysiology Volume 119 ; 119 ; https://www.physiology.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2018 ; Journal of Neurophysiology Volume 120 ; 120 ; https://www.physiology.org/ ; reingest1.clockss.org:8082 >
+      au < superseded ; exists ; 2019 ; Journal of Neurophysiology Volume 121 [superseded] ; 121 ; https://www.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; Journal of Neurophysiology Volume 122 [superseded] ; 122 ; https://www.physiology.org/ ; >
+      au < frozen ; exists ; 2019 ; Journal of Neurophysiology Volume 121 ; 121 ; https://journals.physiology.org/ ; >
+      au < frozen ; exists ; 2019 ; Journal of Neurophysiology Volume 122 ; 122 ; https://journals.physiology.org/ ; >
+      au < deepCrawl ; exists ; 2020 ; Journal of Neurophysiology Volume 123 ; 123 ; https://journals.physiology.org/ ; >
+      au < deepCrawl ; exists ; 2020 ; Journal of Neurophysiology Volume 124 ; 124 ; https://journals.physiology.org/ ; >
+      au < frozen ; exists ; 2021 ; Journal of Neurophysiology Volume 125 ; 125 ; https://journals.physiology.org/ ; >
+      au < deepCrawl ; exists ; 2021 ; Journal of Neurophysiology Volume 126 ; 126 ; https://journals.physiology.org/ ; >
+      au < crawling ; exists ; 2022 ; Journal of Neurophysiology Volume 127 ; 127 ; https://journals.physiology.org/ ; >
+      au < manifest ; exists ; 2022 ; Journal of Neurophysiology Volume 128 ; 128 ; https://journals.physiology.org/ ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Physiological Genomics ;
+      issn = 1094-8341 ;
+      eissn = 1531-2267 
+    >
+
+    param[journal_id] = physiolgenomics
+    #content available from 1999 volume 1 to 2016 volume 48, preserved with HW
+
+    {
+
+      au < doNotProcess ; doNotProcess ; 1999 ; Physiological Genomics Volume 1 ; 1 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2000 ; Physiological Genomics Volume 2 ; 2 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2000 ; Physiological Genomics Volume 3 ; 3 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2000-2001 ; Physiological Genomics Volume 4 ; 4 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2001 ; Physiological Genomics Volume 5 ; 5 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2001 ; Physiological Genomics Volume 6 ; 6 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2001 ; Physiological Genomics Volume 7 ; 7 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2002 ; Physiological Genomics Volume 8 ; 8 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2002 ; Physiological Genomics Volume 9 ; 9 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2002 ; Physiological Genomics Volume 10 ; 10 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2002 ; Physiological Genomics Volume 11 ; 11 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2002-2003 ; Physiological Genomics Volume 12 ; 12 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2003 ; Physiological Genomics Volume 13 ; 13 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2003 ; Physiological Genomics Volume 14 ; 14 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2003 ; Physiological Genomics Volume 15 ; 15 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2003-2004 ; Physiological Genomics Volume 16 ; 16 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; Physiological Genomics Volume 17 ; 17 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; Physiological Genomics Volume 18 ; 18 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; Physiological Genomics Volume 19 ; 19 ; https://journals.physiology.org/ ; >
+
+      au < doNotProcess ; doNotProcess ; 2007 ; Physiological Genomics Volume 30 ; 30 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; Physiological Genomics Volume 31 ; 31 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2007-2008 ; Physiological Genomics Volume 32 ; 32 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; Physiological Genomics Volume 33 ; 33 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; Physiological Genomics Volume 34 ; 34 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; Physiological Genomics Volume 35 ; 35 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2008-2009 ; Physiological Genomics Volume 36 ; 36 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; Physiological Genomics Volume 37 ; 37 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; Physiological Genomics Volume 38 ; 38 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; Physiological Genomics Volume 39 ; 39 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2009-2010 ; Physiological Genomics Volume 40 ; 40 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; Physiological Genomics Volume 41 ; 41 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; Physiological Genomics Volume 42 ; 42 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; Physiological Genomics Volume 42A ; 42A ; https://journals.physiology.org/ ; >
+
+      au < doNotProcess ; doNotProcess ; 2017 ; Physiological Genomics Volume 49 ; 49 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; Physiological Genomics Volume 50 ; 50 ; https://journals.physiology.org/ ; >
+
+      au < finished ; frozen ; 2017 ; Physiological Genomics Volume 49 ; 49 ; http://www.physiology.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2018 ; Physiological Genomics Volume 50 ; 50 ; https://www.physiology.org/ ; reingest4.clockss.org:8082 >
+      au < superseded ; exists ; 2019 ; Physiological Genomics Volume 51 [superseded] ; 51 ; https://www.physiology.org/ ; >
+      au < frozen ; exists ; 2019 ; Physiological Genomics Volume 51 ; 51 ; https://journals.physiology.org/ ; >
+      au < deepCrawl ; exists ; 2020 ; Physiological Genomics Volume 52 ; 52 ; https://journals.physiology.org/ ; >
+      au < deepCrawl ; exists ; 2021 ; Physiological Genomics Volume 53 ; 53 ; https://journals.physiology.org/ ; >
+      au < crawling ; exists ; 2022 ; Physiological Genomics Volume 54 ; 54 ; https://journals.physiology.org/ ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Physiological Reviews ;
+      issn = 0031-9333 ;
+      eissn = 1522-1210 
+    >
+
+    param[journal_id] = physrev
+    #content available from 1921 volume 1 to 2016 volume 96, preserved with HW
+
+    {
+
+      au < doNotProcess ; doNotProcess ; 1921 ; Physiological Reviews Volume 1 ; 1 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1922 ; Physiological Reviews Volume 2 ; 2 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1923 ; Physiological Reviews Volume 3 ; 3 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1924 ; Physiological Reviews Volume 4 ; 4 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1925 ; Physiological Reviews Volume 5 ; 5 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1926 ; Physiological Reviews Volume 6 ; 6 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1927 ; Physiological Reviews Volume 7 ; 7 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1928 ; Physiological Reviews Volume 8 ; 8 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1929 ; Physiological Reviews Volume 9 ; 9 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1930 ; Physiological Reviews Volume 10 ; 10 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1931 ; Physiological Reviews Volume 11 ; 11 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1932 ; Physiological Reviews Volume 12 ; 12 ; https://journals.physiology.org/ ; >
+
+      au < doNotProcess ; doNotProcess ; 1965 ; Physiological Reviews Volume 45 ; 45 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; Physiological Reviews Volume 97 ; 97 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; Physiological Reviews Volume 98 ; 98 ; https://journals.physiology.org/ ; >
+
+      au < finished ; frozen ; 2017 ; Physiological Reviews Volume 97 ; 97 ; http://www.physiology.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2018 ; Physiological Reviews Volume 98 ; 98 ; https://www.physiology.org/ ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2019 ; Physiological Reviews Volume 99 [superseded] ; 99 ; https://www.physiology.org/ ; >
+      au < frozen ; exists ; 2019 ; Physiological Reviews Volume 99 ; 99 ; https://journals.physiology.org/ ; >
+      au < deepCrawl ; exists ; 2020 ; Physiological Reviews Volume 100 ; 100 ; https://journals.physiology.org/ ; >
+      au < deepCrawl ; exists ; 2021 ; Physiological Reviews Volume 101 ; 101 ; https://journals.physiology.org/ ; >
+      au < crawling ; exists ; 2022 ; Physiological Reviews Volume 102 ; 102 ; https://journals.physiology.org/ ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Physiology ;
+      issn = 1548-9213 ;
+      eissn = 1548-9221 
+    >
+
+    param[journal_id] = physiologyonline
+    #content available from 1986 volume 1 to 2016 volume 31, preserved with HW
+
+    {
+
+      au < doNotProcess ; doNotProcess ; 1986 ; Physiology Volume 1 ; 1 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1987 ; Physiology Volume 2 ; 2 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1988 ; Physiology Volume 3 ; 3 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1989 ; Physiology Volume 4 ; 4 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1990 ; Physiology Volume 5 ; 5 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1991 ; Physiology Volume 6 ; 6 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1992 ; Physiology Volume 7 ; 7 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1993 ; Physiology Volume 8 ; 8 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1994 ; Physiology Volume 9 ; 9 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1995 ; Physiology Volume 10 ; 10 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1996 ; Physiology Volume 11 ; 11 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1997 ; Physiology Volume 12 ; 12 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1998 ; Physiology Volume 13 ; 13 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1999 ; Physiology Volume 14 ; 14 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2000 ; Physiology Volume 15 ; 15 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2001 ; Physiology Volume 16 ; 16 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2002 ; Physiology Volume 17 ; 17 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2003 ; Physiology Volume 18 ; 18 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; Physiology Volume 19 ; 19 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2005 ; Physiology Volume 20 ; 20 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; Physiology Volume 21 ; 21 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; Physiology Volume 22 ; 22 ; https://journals.physiology.org/ ; >
+
+      au < doNotProcess ; doNotProcess ; 2010 ; Physiology Volume 25 ; 25 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; Physiology Volume 32 ; 32 ; https://journals.physiology.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; Physiology Volume 33 ; 33 ; https://journals.physiology.org/ ; >
+
+      au < finished ; frozen ; 2017 ; Physiology Volume 32 ; 32 ; http://www.physiology.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2018 ; Physiology Volume 33 ; 33 ; https://www.physiology.org/ ; reingest3.clockss.org:8083 >
+      au < superseded ; exists ; 2019 ; Physiology Volume 34 [superseded] ; 34 ; https://www.physiology.org/ ; >
+      au < frozen ; exists ; 2019 ; Physiology Volume 34 ; 34 ; https://journals.physiology.org/ ; >
+      au < deepCrawl ; exists ; 2020 ; Physiology Volume 35 ; 35 ; https://journals.physiology.org/ ; >
+      au < deepCrawl ; exists ; 2021 ; Physiology Volume 36 ; 36 ; https://journals.physiology.org/ ; >
+      au < crawling ; exists ; 2022 ; Physiology Volume 37 ; 37 ; https://journals.physiology.org/ ; >
+
+    }
+
+  }
+
+}
