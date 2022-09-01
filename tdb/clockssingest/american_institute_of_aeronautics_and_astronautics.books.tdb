@@ -640,12 +640,12 @@
     au < finished ; finished ; 1974 ; 9781563473128 ; 9781600868672 ; 9781600868672 ; Lockheed C-5 Case Study in Aircraft Design (9781600868672) ; http://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 1978 ; 9781563473067 ; 9781600868634 ; 9781600868634 ; The British Aerospace Harrier Case Study in Aircraft Design (9781600868634) ; http://arc.aiaa.org/ ; >
     au < finished ; finished ; 1978 ; 9781563473098 ; 9781600868696 ; 9781600868696 ; Northrop F-5 Case Study in Aircraft Design (9781600868696) ; http://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
-    au < manifest ; exists ; 1978 ; 9781563472770 ; ; 9781563472770 ; A Case Study in Aircraft Design: The Boeing 727 ; https://arc.aiaa.org/ ; >
+    au < ready ; exists ; 1978 ; 9781563472770 ; ; 9781563472770 ; A Case Study in Aircraft Design: The Boeing 727 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1978 ; 9780915928279 ; ; 9780915928279 ; Space Transportation Systems ; https://arc.aiaa.org/ ; >
     au < finished ; finished ; 1979 ; 9781563473142 ; 9781600868009 ; 9781600868009 ; The International Ultraviolet Explorer Case Study in Spacecraft Design (9781600868009) ; http://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 1979 ; 9781563473135 ; 9781600868108 ; 9781600868108 ; Pioneer Venus Case Study in Spacecraft Design (9781600868108) ; http://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 1979 ; ; 9781600868566 ; 9781600868566 ; Case Study in Spacecraft Design (9781600868566) ; http://arc.aiaa.org/ ; >
-    au < manifest ; exists ; 1979 ; 9780915928316 ; ; 9780915928316 ; Utilization of Alternative Fuels for Transportation ; https://arc.aiaa.org/ ; >
+    au < ready ; exists ; 1979 ; 9780915928316 ; ; 9780915928316 ; Utilization of Alternative Fuels for Transportation ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1979 ; 9780915928347 ; ; 9780915928347 ; Potential Applications of Aerospace Technology in the Marine Transport Industry ; https://arc.aiaa.org/ ; >
     au < finished ; finished ; 1980 ; 9781563473050 ; 9781600867897 ; 9781600867897 ; Gossamer Condor and Albatross: A Case Study in Aircraft Design (9781600867897) ; http://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 1980 ; 9781563473111 ; 9781600868061 ; 9781600868061 ; The Grumman Aerospace and Gulf Stream: American Gulfstream III (9781600868061) ; http://arc.aiaa.org/ ; >
@@ -748,9 +748,9 @@
     au < finished ; finished ; 2018 ; 9781624104022 ; 9781624104039 ; 9781624104022 ; AeroDynamic: Inside the High-Stakes Global Jetliner Ecosystem ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < doesNotExist ; doesNotExist ; 2019 ; 9781624105098 ; ; 9781624105098 ; Management of Defense Acquisition Projects, Second Edition ; https://arc.aiaa.org/ ; >
     au < deepCrawl ; exists ; 2021 ; 9781624103995 ; 9781624104770 ; 9781624104770 ; Human Spaceflight Operations: Lessons Learned from 60 Years in Space ; https://arc.aiaa.org/ ; >
-    au < manifest ; exists ; 2021 ;  ; 9781624106156 ; 9781624106156 ; The Business of Aerospace: Industry Dynamics, Corporate Strategies, Innovation Models, and the Big(ger) Picture ; https://arc.aiaa.org/ ; >
-    au < manifest ; exists ; 2021 ;  ; 9781624106217 ; 9781624106217 ; Gamera: A Human Powered Helicopter – In Pursuit of an Aviation Milestone ; https://arc.aiaa.org/ ; >
-    au < manifest ; exists ; 2021 ;  ; 9781624106255 ; 9781624106255 ; The RAH-66 Comanche Helicopter ; https://arc.aiaa.org/ ; >
+    au < ready ; exists ; 2021 ;  ; 9781624106156 ; 9781624106156 ; The Business of Aerospace: Industry Dynamics, Corporate Strategies, Innovation Models, and the Big(ger) Picture ; https://arc.aiaa.org/ ; >
+    au < ready ; exists ; 2021 ;  ; 9781624106217 ; 9781624106217 ; Gamera: A Human Powered Helicopter – In Pursuit of an Aviation Milestone ; https://arc.aiaa.org/ ; >
+    au < ready ; exists ; 2021 ;  ; 9781624106255 ; 9781624106255 ; The RAH-66 Comanche Helicopter ; https://arc.aiaa.org/ ; >
 
  }
 
@@ -1007,7 +1007,7 @@
     au < doesNotExist ; doesNotExist ; 2019 ; 9781624105371 ; ; 9781624105371 ; Tactical and Strategic Missile Guidance: An Introduction, Seventh Edition, Volume 1 ; https://arc.aiaa.org/ ; >
     au < doesNotExist ; doesNotExist ; 2019 ; 9781624105388 ; ; 9781624105388 ; Advanced Tactical and Strategic Missile Guidance, Seventh Edition, Volume 2 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2020 ; 9781624105807 ; 9781624105814 ; 9781624105814 ; High-Pressure Flows for Propulsion Applications ; https://arc.aiaa.org/ ; >
-    au < manifest ; exists ; 2021 ; ; 9781624106040 ; 9781624106040 ; Fuel Effects in Operability of Aircraft Gas Turbine Combustors ; https://arc.aiaa.org/ ; >
+    au < ready ; exists ; 2021 ; ; 9781624106040 ; 9781624106040 ; Fuel Effects in Operability of Aircraft Gas Turbine Combustors ; https://arc.aiaa.org/ ; >
 
  }
 
