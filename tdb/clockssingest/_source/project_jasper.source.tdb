@@ -4,77 +4,78 @@
     name = Project JASPER ;
     info[contract] = 2022 ;
     info[tester] = S ;
-    info[platform] = Source. Archive It # https://doaj.org/preservation/
+    info[platform] = Internet Archive JASPER # https://doaj.org/preservation/
   >
 
-  param[base_url] = https://archive.org/
   plugin = org.lockss.plugin.jasper.ClockssJasperPlugin
+  param[base_url] = https://archive.org/
+  nondefparam[user_pass] = clockss_jasper_U_P
   implicit < status ; status2 ; year ; name ; param[collection] >
   hidden[proxy] = DIRECT
 
-    {
+  {
 
-      title <
-        name = Alphaville: Journal of Film and Screen Media ;
-        eissn = 2009-4078
-      >
+    title <
+      name = Alphaville: Journal of Film and Screen Media ;
+      eissn = 2009-4078
+    >
 
-      au < manifest ; exists ; 2022 ; Alphaville: Journal of Film and Screen Media ; Alphaville_2009-4078 >
+    au < testing ; exists ; 2022 ; Alphaville: Journal of Film and Screen Media ; Alphaville_2009-4078 >
 
-    }
+  }
 
-    {
+  {
 
-      title <
-        name = Annales Scientia Politica ;
-        issn = 1339-0732
-      >
+    title <
+      name = Annales Scientia Politica ;
+      issn = 1339-0732
+    >
 
-      au < expected ; exists ; 2022 ; Annales Scientia Politica ; A >
+    au < expected ; exists ; 2022 ; Annales Scientia Politica ; UNKNOWN >
 
-    }
+  }
 
-    {
+  {
 
-      title <
-        name = Colombo Business Journal ;
-        eissn = 2579-2210
-      >
+    title <
+      name = Colombo Business Journal ;
+      eissn = 2579-2210
+    >
 
-      au < expected ; exists ; 2022 ; Colombo Business Journal ; B >
+    au < expected ; exists ; 2022 ; Colombo Business Journal ; UNKNOWN >
 
-    }
+  }
 
-    {
+  {
 
-      title <
-        name = Daysona. Life Science   ;
-        eissn = 2708-6291
-      >
+    title <
+      name = Daysona. Life Science   ;
+      eissn = 2708-6291
+    >
 
-      au < manifest ; exists ; 2022 ; Daysona. Life Science ; Daysona_Life_Science_2708-6291 >
+    au < testing ; exists ; 2022 ; Daysona. Life Science ; Daysona_Life_Science_2708-6291 >
 
-    }
+  }
 
-    {
+  {
 
-      title <
-        name = Educational Journal of Living Theories ;
-        eissn = 2009-1788
-      >
+    title <
+      name = Educational Journal of Living Theories ;
+      eissn = 2009-1788
+    >
 
-      au < manifest ; exists ; 2022 ; Educational Journal of Living Theories ; Educational_Journal_of_Living_Theories__ISSN_2009-1788 >
-    }
+    au < testing ; exists ; 2022 ; Educational Journal of Living Theories ; Educational_Journal_of_Living_Theories__ISSN_2009-1788 >
+  }
 
-    {
+  {
 
-      title <
-        name = Finnish Society for Science Fiction and Fantasy Research ;
-        eissn = 2342-2009
-      >
+    title <
+      name = Finnish Society for Science Fiction and Fantasy Research ;
+      eissn = 2342-2009
+    >
 
-      au < manifest ; exists ; 2022 ; Finnish Society for Science Fiction and Fantasy Research  ; Fafnir_2342-2009 >
+    au < testing ; exists ; 2022 ; Finnish Society for Science Fiction and Fantasy Research ; Fafnir_2342-2009 >
 
-    }
+  }
 
 }
