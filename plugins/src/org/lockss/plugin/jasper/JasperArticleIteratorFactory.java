@@ -48,8 +48,8 @@ public class JasperArticleIteratorFactory implements ArticleIteratorFactory, Art
 
   protected static Logger log = Logger.getLogger(JasperArticleIteratorFactory.class);
 
-  protected static final String TAR_GZ_JSON_PATTERN_TEMPLATE =
-      "\"%sdownload/%s/.*\\.tar\\.gz!/.*/data/metadata/metadata.json$\", base_url, collection";
+  protected static final String TARED_GZED_FILES_PATTERN_TEMPLATE =
+      "\"%sdownload/%s/.*\\.tar\\.gz!/.*\\.(pdf|html)$\", base_url, collection";
 
   // Be sure to exclude all nested archives in case supplemental data is provided this way
   protected static final Pattern NESTED_ARCHIVE_PATTERN =
@@ -57,12 +57,14 @@ public class JasperArticleIteratorFactory implements ArticleIteratorFactory, Art
           Pattern.CASE_INSENSITIVE);
 
   // ... 2051-5960/00003741594643f4996e2555a01e03c7/data/s40478-018-0619-9.pdf
+  // ... 2051-5960/00003741594643f4996e2555a01e03c7/data/s40478-018-0619-9.html
   // ... 2051-5960/00003741594643f4996e2555a01e03c7/data/metadata/metadata.json
   public static final Pattern PDF_PATTERN = Pattern.compile("/(.*)/data/(.*)\\.pdf$", Pattern.CASE_INSENSITIVE);
   private static final String PDF_REPLACEMENT = "/$1/data/$2.pdf";
-  // metadata
-  public static final Pattern JSON_PATTERN = Pattern.compile("/data/metadata/metadata\\.json$", Pattern.CASE_INSENSITIVE);
-  public static final String JSON_REPLACEMENT = "/data/metadata/metadata.json";
+
+  public static final Pattern HTML_PATTERN = Pattern.compile("/(.*)/data/(.*)\\.html$", Pattern.CASE_INSENSITIVE);
+  private static final String HTML_REPLACEMENT = "/$1/data/$2.html";
+  public static final String JSON_REPLACEMENT = "/$1/data/metadata/metadata.json";
 
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -73,17 +75,24 @@ public class JasperArticleIteratorFactory implements ArticleIteratorFactory, Art
     // no need to limit to ROOT_TEMPLATE
     builder.setSpec(builder.newSpec()
         .setTarget(target)
-        .setPatternTemplate(TAR_GZ_JSON_PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE)
+        .setPatternTemplate(TARED_GZED_FILES_PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE)
         .setExcludeSubTreePattern(NESTED_ARCHIVE_PATTERN)
         .setVisitArchiveMembers(true));
 
     // NOTE - full_text_cu is set automatically to the url used for the articlefiles
     // ultimately the metadata extractor needs to set the entire facet map
 
-    // set up XML to be an aspect that will trigger an ArticleFiles to feed the metadata extractor
-    builder.addAspect(JSON_PATTERN,
-                      JSON_REPLACEMENT,
-                      ArticleFiles.ROLE_ARTICLE_METADATA);
+    // set up pdf to be an aspect that will trigger an ArticleFiles to feed the metadata extractor
+    builder.addAspect(PDF_PATTERN,
+        PDF_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_PDF);
+
+    builder.addAspect(HTML_PATTERN,
+        HTML_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_HTML);
+
+    builder.addAspect(JSON_REPLACEMENT,
+        ArticleFiles.ROLE_ARTICLE_METADATA);
 
     return builder.getSubTreeArticleIterator();
   }
