@@ -3,6 +3,7 @@
   publisher <
     name = University of Massachusetts Amherst ;
     info[contract] = 2012 ;
+    info[back] = 2008 ;
     info[tester] = 5 ;
     info[poller] = 8
   >
@@ -11,6 +12,50 @@
   
   # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
 
+  {
+  
+    title < 
+      name = The Journal of Hospitality Financial Management ;
+      issn = 1091-3211 ;
+      eissn = 2152-2790
+    >
+    
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
+    #param[base_url] = http://scholarworks.umass.edu/
+    param[journal_abbr] = jhfm
+    implicit < status ; status2 ; year ; name ; param[volume] ; param[base_url] ; hidden[proxy] >
+
+    au < manifest ; exists ; 1997 ; The Journal of Hospitality Financial Management Volume 5 ; 5 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 1998 ; The Journal of Hospitality Financial Management Volume 6 ; 6 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 1999 ; The Journal of Hospitality Financial Management Volume 7 ; 7 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2000 ; The Journal of Hospitality Financial Management Volume 8 ; 8 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2001 ; The Journal of Hospitality Financial Management Volume 9 ; 9 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2002 ; The Journal of Hospitality Financial Management Volume 10 ; 10 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2003 ; The Journal of Hospitality Financial Management Volume 11 ; 11 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2004 ; The Journal of Hospitality Financial Management Volume 12 ; 12 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2005 ; The Journal of Hospitality Financial Management Volume 13 ; 13 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2006 ; The Journal of Hospitality Financial Management Volume 14 ; 14 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2007 ; The Journal of Hospitality Financial Management Volume 15 ; 15 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2008 ; The Journal of Hospitality Financial Management Volume 16 ; 16 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2009 ; The Journal of Hospitality Financial Management Volume 17 ; 17 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2010 ; The Journal of Hospitality Financial Management Volume 18 ; 18 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2011 ; The Journal of Hospitality Financial Management Volume 19 ; 19 ; https://scholarworks.umass.edu/ ; >
+    au < finished ; finished ; 2012 ; The Journal of Hospitality Financial Management Volume 20 ; 20 ; http://scholarworks.umass.edu/ ; >
+    au < frozen ; exists ; 2013 ; The Journal of Hospitality Financial Management Volume 21 ; 21 ; https://scholarworks.umass.edu/ ; >
+    au < frozen ; exists ; 2014 ; The Journal of Hospitality Financial Management Volume 22 ; 22 ; https://scholarworks.umass.edu/ ; >
+    au < frozen ; exists ; 2015 ; The Journal of Hospitality Financial Management Volume 23 ; 23 ; https://scholarworks.umass.edu/ ; >
+    au < frozen ; exists ; 2016 ; The Journal of Hospitality Financial Management Volume 24 ; 24 ; https://scholarworks.umass.edu/ ; >
+    au < frozen ; exists ; 2017 ; The Journal of Hospitality Financial Management Volume 25 ; 25 ; https://scholarworks.umass.edu/ ; >
+    au < frozen ; exists ; 2018 ; The Journal of Hospitality Financial Management Volume 26 ; 26 ; https://scholarworks.umass.edu/ ; >
+    au < frozen ; exists ; 2019 ; The Journal of Hospitality Financial Management Volume 27 ; 27 ; https://scholarworks.umass.edu/ ; >
+    au < frozen ; exists ; 2020 ; The Journal of Hospitality Financial Management Volume 28 ; 28 ; https://scholarworks.umass.edu/ ; >
+    au < crawling ; exists ; 2021 ; The Journal of Hospitality Financial Management Volume 29 ; 29 ; https://scholarworks.umass.edu/ ; >
+    au < testing ; exists ; 2022 ; The Journal of Hospitality Financial Management Volume 30 ; 30 ; https://scholarworks.umass.edu/ ; >
+  }
+
+####################################
+##### No longer published below here
+####################################
   {
   
     title < 
@@ -165,48 +210,6 @@
     au < manifest ; exists ; 2010 ; International Journal of Soil, Sediment and Water Volume 3 ; 3 ; >
     #Archived. Nothing published since 2010 as of 2021-01
 
-  }
-  
-  {
-  
-    title < 
-      name = The Journal of Hospitality Financial Management ;
-      issn = 1091-3211 ;
-      eissn = 2152-2790
-    >
-    
-    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
-    #param[base_url] = http://scholarworks.umass.edu/
-    param[journal_abbr] = jhfm
-    implicit < status ; status2 ; year ; name ; param[volume] ; param[base_url] ; hidden[proxy] >
-
-    au < manifest ; exists ; 1997 ; The Journal of Hospitality Financial Management Volume 5 ; 5 ; https://scholarworks.umass.edu/ ; >
-    au < manifest ; exists ; 1998 ; The Journal of Hospitality Financial Management Volume 6 ; 6 ; https://scholarworks.umass.edu/ ; >
-    au < manifest ; exists ; 1999 ; The Journal of Hospitality Financial Management Volume 7 ; 7 ; https://scholarworks.umass.edu/ ; >
-    au < manifest ; exists ; 2000 ; The Journal of Hospitality Financial Management Volume 8 ; 8 ; https://scholarworks.umass.edu/ ; >
-    au < manifest ; exists ; 2001 ; The Journal of Hospitality Financial Management Volume 9 ; 9 ; https://scholarworks.umass.edu/ ; >
-    au < manifest ; exists ; 2002 ; The Journal of Hospitality Financial Management Volume 10 ; 10 ; https://scholarworks.umass.edu/ ; >
-    au < manifest ; exists ; 2003 ; The Journal of Hospitality Financial Management Volume 11 ; 11 ; https://scholarworks.umass.edu/ ; >
-    au < manifest ; exists ; 2004 ; The Journal of Hospitality Financial Management Volume 12 ; 12 ; https://scholarworks.umass.edu/ ; >
-    au < manifest ; exists ; 2005 ; The Journal of Hospitality Financial Management Volume 13 ; 13 ; https://scholarworks.umass.edu/ ; >
-    au < manifest ; exists ; 2006 ; The Journal of Hospitality Financial Management Volume 14 ; 14 ; https://scholarworks.umass.edu/ ; >
-    au < manifest ; exists ; 2007 ; The Journal of Hospitality Financial Management Volume 15 ; 15 ; https://scholarworks.umass.edu/ ; >
-    au < manifest ; exists ; 2008 ; The Journal of Hospitality Financial Management Volume 16 ; 16 ; https://scholarworks.umass.edu/ ; >
-    au < manifest ; exists ; 2009 ; The Journal of Hospitality Financial Management Volume 17 ; 17 ; https://scholarworks.umass.edu/ ; >
-    au < manifest ; exists ; 2010 ; The Journal of Hospitality Financial Management Volume 18 ; 18 ; https://scholarworks.umass.edu/ ; >
-    au < manifest ; exists ; 2011 ; The Journal of Hospitality Financial Management Volume 19 ; 19 ; https://scholarworks.umass.edu/ ; >
-    au < finished ; finished ; 2012 ; The Journal of Hospitality Financial Management Volume 20 ; 20 ; http://scholarworks.umass.edu/ ; >
-    au < frozen ; exists ; 2013 ; The Journal of Hospitality Financial Management Volume 21 ; 21 ; https://scholarworks.umass.edu/ ; >
-    au < frozen ; exists ; 2014 ; The Journal of Hospitality Financial Management Volume 22 ; 22 ; https://scholarworks.umass.edu/ ; >
-    au < frozen ; exists ; 2015 ; The Journal of Hospitality Financial Management Volume 23 ; 23 ; https://scholarworks.umass.edu/ ; >
-    au < frozen ; exists ; 2016 ; The Journal of Hospitality Financial Management Volume 24 ; 24 ; https://scholarworks.umass.edu/ ; >
-    au < frozen ; exists ; 2017 ; The Journal of Hospitality Financial Management Volume 25 ; 25 ; https://scholarworks.umass.edu/ ; >
-    au < frozen ; exists ; 2018 ; The Journal of Hospitality Financial Management Volume 26 ; 26 ; https://scholarworks.umass.edu/ ; >
-    au < frozen ; exists ; 2019 ; The Journal of Hospitality Financial Management Volume 27 ; 27 ; https://scholarworks.umass.edu/ ; >
-    au < frozen ; exists ; 2020 ; The Journal of Hospitality Financial Management Volume 28 ; 28 ; https://scholarworks.umass.edu/ ; >
-    au < crawling ; exists ; 2021 ; The Journal of Hospitality Financial Management Volume 29 ; 29 ; https://scholarworks.umass.edu/ ; >
-    
-    au < testing ; exists ; 2022 ; The Journal of Hospitality Financial Management Volume 30 ; 30 ; https://scholarworks.umass.edu/ ; >
   }
   
 }
