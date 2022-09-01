@@ -764,7 +764,7 @@
       au < finished ; crawling ; 2019 ; 2019 ; B&G Bewegungstherapie und Gesundheitssport Volume 35 ; 35 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; B&G Bewegungstherapie und Gesundheitssport Volume 36 ; 36 ; >
       au < crawling ; exists ; 2021 ; 2021 ; B&G Bewegungstherapie und Gesundheitssport Volume 37 ; 37 ; >
-      au < ready ; exists ; 2022 ; 2022 ; B&G Bewegungstherapie und Gesundheitssport Volume 38 ; 38 ; >
+      au < crawling ; exists ; 2022 ; 2022 ; B&G Bewegungstherapie und Gesundheitssport Volume 38 ; 38 ; >
 
   }
 
@@ -1629,7 +1629,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; Ernährung & Medizin Volume 34 ; 34 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Ernährung & Medizin Volume 35 ; 35 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Ernährung & Medizin Volume 36 ; 36 ; >
-   au < ready ; exists ; 2022 ; 2022 ; Ernährung & Medizin Volume 37 ; 37 ; >
+   au < crawling ; exists ; 2022 ; 2022 ; Ernährung & Medizin Volume 37 ; 37 ; >
 
   }
 
@@ -1895,7 +1895,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 26 ; 26 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 27 ; 27 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 28 ; 28 ; >
-   au < ready ; exists ; 2022 ; 2022 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 29 ; 29 ; >
+   au < crawling ; exists ; 2022 ; 2022 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 29 ; 29 ; >
 
   }
 
@@ -2520,7 +2520,7 @@
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Indian Journal of Radiology and Imaging Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Indian Journal of Radiology and Imaging Volume 30 ; 30 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Indian Journal of Radiology and Imaging Volume 31 ; 31 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Indian Journal of Radiology and Imaging Volume 32 ; 32 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Indian Journal of Radiology and Imaging Volume 32 ; 32 ; >
 
   }
 
@@ -2714,7 +2714,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; International Journal of Angiology Volume 28 ; 28 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; International Journal of Angiology Volume 29 ; 29 ; >
     au < crawling ; exists ; 2021 ; 2021 ; International Journal of Angiology Volume 30 ; 30 ; >
-    au < ready ; exists ; 2022 ; 2022 ; International Journal of Angiology Volume 31 ; 31 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; International Journal of Angiology Volume 31 ; 31 ; >
 
   }
 
@@ -3230,7 +3230,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; Journal of Pediatric Infectious Diseases Volume 14 ; 14 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Pediatric Infectious Diseases Volume 15 ; 15 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Journal of Pediatric Infectious Diseases Volume 16 ; 16 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Journal of Pediatric Infectious Diseases Volume 17 ; 17 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Journal of Pediatric Infectious Diseases Volume 17 ; 17 ; >
 
   }
 
@@ -3815,7 +3815,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; Krankenhaushygiene up2date Volume 14 ; 14 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Krankenhaushygiene up2date Volume 15 ; 15 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Krankenhaushygiene up2date Volume 16 ; 16 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Krankenhaushygiene up2date Volume 17 ; 17 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Krankenhaushygiene up2date Volume 17 ; 17 ; >
 
   }
 
@@ -5927,7 +5927,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; Seminars in Speech and Language Volume 40 ; 40 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Seminars in Speech and Language Volume 41 ; 41 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Seminars in Speech and Language Volume 42 ; 42 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Seminars in Speech and Language Volume 43 ; 43 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Seminars in Speech and Language Volume 43 ; 43 ; >
 
   }
 
@@ -6455,7 +6455,7 @@
    au < deepCrawl ; exists ; 2019 ; 2019 ; SYNTHESIS Volume 51 ; 51 ; >
    au < crawling ; exists ; 2020 ; 2020 ; SYNTHESIS Volume 52 ; 52 ; >
    au < crawling ; exists ; 2021 ; 2021 ; SYNTHESIS Volume 53 ; 53 ; >
-   au < ready ; exists ; 2022 ; 2022 ; SYNTHESIS Volume 54 ; 54 ; >
+   au < crawling ; exists ; 2022 ; 2022 ; SYNTHESIS Volume 54 ; 54 ; >
 
   }
 
@@ -6505,7 +6505,7 @@
    au < deepCrawl ; exists ; 2019 ; 2019 ; team-konkret Volume 15 ; 15 ; >
    au < deepCrawl ; exists ; 2020 ; 2020 ; team-konkret Volume 16 ; 16 ; >
    au < crawling ; exists ; 2021 ; 2021 ; team-konkret Volume 17 ; 17 ; >
-   au < ready ; exists ; 2022 ; 2022 ; team-konkret Volume 18 ; 18 ; >
+   au < crawling ; exists ; 2022 ; 2022 ; team-konkret Volume 18 ; 18 ; >
 
   }
 
@@ -7627,7 +7627,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Arthritis und Rheuma Volume 39 ; 39 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Arthritis und Rheuma Volume 40 ; 40 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Arthritis und Rheuma Volume 41 ; 41 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Arthritis und Rheuma Volume 42 ; 42 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Arthritis und Rheuma Volume 42 ; 42 ; >
 
   }
 
@@ -7682,7 +7682,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Hämostaseologie Volume 39 ; 39 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Hämostaseologie Volume 40 ; 40 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Hämostaseologie Volume 41 ; 41 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Hämostaseologie Volume 42 ; 42 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Hämostaseologie Volume 42 ; 42 ; >
 
   }
 
@@ -7777,7 +7777,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Kinder- und Jugendmedizin Volume 19 ; 19 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Kinder- und Jugendmedizin Volume 20 ; 20 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Kinder- und Jugendmedizin Volume 21 ; 21 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Kinder- und Jugendmedizin Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Kinder- und Jugendmedizin Volume 22 ; 22 ; >
 
   }
 
@@ -7939,7 +7939,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Osteologie Volume 28 ; 28 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Osteologie Volume 29 ; 29 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Osteologie Volume 30 ; 30 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Osteologie Volume 31 ; 31 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Osteologie Volume 31 ; 31 ; >
 
   }
 
