@@ -35,11 +35,22 @@
     {
 
       title <
-        name = Columbo Business Journal ;
+        name = Colombo Business Journal ;
         eissn = 2579-2210
       >
 
-      au < expected ; exists ; Columbo Business Journal ; B >
+      au < expected ; exists ; Colombo Business Journal ; B >
+
+    }
+
+    {
+
+      title <
+        name = Daysona. Life Science   ;
+        eissn = 2708-6291
+      >
+
+      au < expected ; exists ; Daysona. Life Science ; Daysona_Life_Science_2708-6291 >
 
     }
 
