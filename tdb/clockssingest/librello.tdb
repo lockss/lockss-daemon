@@ -5,7 +5,7 @@
     info[contract] = 2013 ;
     info[tester] = 8 ;
     info[poller] = 8 ;
-    info[platform] = Moving from OJS2 to OJS3 by the end of 2021.
+    info[platform] = Moving from OJS2 to OJS3 by the end of 2021. See RT10508
   >
 
       plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
