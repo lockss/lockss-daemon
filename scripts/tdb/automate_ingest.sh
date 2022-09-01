@@ -7,12 +7,18 @@ year=`date +%Y`
 echo "###Ready highwire" > $t/tmp_HW  #clear out file.
 ./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "highwire" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | grep -v oxfordjournals | shuf >> $t/tmp_HW
 
-#Atypon (not T&F), in order by year
+#Atypon (Sage), in order by year
+#Ready
+echo "###Ready Sage $year" > $t/tmp_Sage  #clear out file
+./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "SageAtyponJournals" and year is "'$year'" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | shuf >> $t/tmp_Sage
+echo "###Ready Sage not $year" >> $t/tmp_Sage
+./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "SageAtyponJournals" and year is not "'$year'" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | shuf >> $t/tmp_Sage
+#Atypon (not Sage), in order by year
 #Ready
 echo "###Ready Atypon $year" > $t/tmp_Atypon  #clear out file
-./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "typon" and year is "'$year'" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | shuf >> $t/tmp_Atypon
+./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "typon" and plugin !~ "SageAtyponJournals" and year is "'$year'" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | shuf >> $t/tmp_Atypon
 echo "###Ready Atypon not $year" >> $t/tmp_Atypon
-./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "typon" and year is not "'$year'" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | shuf >> $t/tmp_Atypon
+./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "typon" and plugin !~ "SageAtyponJournals" and year is not "'$year'" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | shuf >> $t/tmp_Atypon
 #Manifest
 #Don't include this year or last year so that new titles get tested for at least two years.
 #echo "###Manifest Sage 2020" >> $t/tmp_Atypon
@@ -67,9 +73,10 @@ echo "*********************" >> $t/tmp_Misc
 echo "###Ready Misc Ingest5" >> $t/tmp_Misc
 ./scripts/tdb/tdbout -Y -a -Q 'au:hidden[proxy] is "reingest5.clockss.org:8082"' tdb/clockssingest/*.tdb | shuf >> $t/tmp_Misc
 
-head -n25 $t/tmp_HW | grep -v ClockssHWDrupalPlugin > $t/tmp_All
-head -n125 $t/tmp_Atypon >> $t/tmp_All
-head -n200 $t/tmp_Misc | grep -v ClockssHWDrupalPlugin >> $t/tmp_All
+head -n20 $t/tmp_HW | grep -v ClockssHWDrupalPlugin > $t/tmp_All
+head -n20 $t/tmp_Sage >> $t/tmp_All
+head -n60 $t/tmp_Atypon >> $t/tmp_All
+head -n200 $t/tmp_Misc | grep -v HWDrupalPlugin >> $t/tmp_All
 
 exit 0
 
