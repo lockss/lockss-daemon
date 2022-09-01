@@ -27,9 +27,10 @@
       name = American Institute of Physics Source Content (JATS)
     >
 
-    plugin = org.lockss.plugin.americaninstituteofphysics.ClockssAIPJatsSourcePlugin
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/aipjats-released/
     hidden[proxy] = DIRECT
+    {
+    plugin = org.lockss.plugin.americaninstituteofphysics.ClockssAIPJatsSourcePlugin
     implicit < status ; status2 ; year ; name ; param[year] >
 
     au < zapped ; finished ; 2014 ; American Institute of Physics JATS Source Content 2014 ; 2014 >
@@ -41,7 +42,14 @@
     au < zapped ; finished ; 2020 ; American Institute of Physics JATS Source Content 2020 ; 2020 >
     au < readySource ; frozen ; 2021 ; American Institute of Physics JATS Source Content 2021 ; 2021 >
     au < readySource ; crawling ; 2022 ; American Institute of Physics JATS Source Content 2022 ; 2022 >
+    #Change to directory base plugin
+    }
+    {
+    plugin = needs.plugin
+    implicit < status ; status2 ; year ; name ; param[directory] >
 
+    au < expected ; exists ; 2023 ; American Institute of Physics JATS Source Content 2023_01 ; 2023_01 >
+    }
   }
 
   {
