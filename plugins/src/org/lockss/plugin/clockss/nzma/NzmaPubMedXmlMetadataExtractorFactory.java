@@ -52,6 +52,7 @@ import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 
 public class NzmaPubMedXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
   private static final Logger log = Logger.getLogger(NzmaPubMedXmlMetadataExtractorFactory.class);
+  private static final String Preferred_PUBLISHER = "Pasifika Medical Association Group";
 
   private static SourceXmlSchemaHelper PubMedHelper = null;
 
@@ -98,7 +99,10 @@ public class NzmaPubMedXmlMetadataExtractorFactory extends SourceXmlMetadataExtr
     protected void postCookProcess(SourceXmlSchemaHelper schemaHelper, 
         CachedUrl cu, ArticleMetadata thisAM) {
 
-      log.debug3("in NZMA postCookProcess");
+        String pname = thisAM.get(MetadataField.FIELD_PUBLISHER);
+        if (!(Preferred_PUBLISHER.equals(pname))) {
+          thisAM.replace(MetadataField.FIELD_PUBLISHER,Preferred_PUBLISHER);
+        }
 
     }
     
