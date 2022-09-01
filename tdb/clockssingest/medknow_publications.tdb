@@ -277,7 +277,7 @@
     au < finished ; crawling ; 2019 ; Annals of Pediatric Cardiology Volume 12 ; 2019 ; 12 ; https://www.annalspc.com/ ; ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Annals of Pediatric Cardiology Volume 13 ; 2020 ; 13 ; https://www.annalspc.com/ ; ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Annals of Pediatric Cardiology Volume 14 ; 2021 ; 14 ; https://www.annalspc.com/ ; ; >
-    au < ready ; exists ; 2022 ; Annals of Pediatric Cardiology Volume 15 ; 2022 ; 15 ; https://www.annalspc.com/ ; ; >
+    au < crawling ; exists ; 2022 ; Annals of Pediatric Cardiology Volume 15 ; 2022 ; 15 ; https://www.annalspc.com/ ; ; >
 
   }
 #  {
@@ -324,7 +324,7 @@
     au < finished ; crawling ; 2019 ; Annals of Thoracic Medicine Volume 14 ; 2019 ; 14 ; https://www.thoracicmedicine.org/ ; ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2020 ; Annals of Thoracic Medicine Volume 15 ; 2020 ; 15 ; https://www.thoracicmedicine.org/ ; ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Annals of Thoracic Medicine Volume 16 ; 2021 ; 16 ; https://www.thoracicmedicine.org/ ; ; >
-    au < ready ; exists ; 2022 ; Annals of Thoracic Medicine Volume 17 ; 2022 ; 17 ; https://www.thoracicmedicine.org/ ; ; >
+    au < crawling ; exists ; 2022 ; Annals of Thoracic Medicine Volume 17 ; 2022 ; 17 ; https://www.thoracicmedicine.org/ ; ; >
 
   }
 
@@ -683,7 +683,7 @@
     au < finished ; crawling ; 2019 ; Dental Research Journal Volume 16 ; 2019 ; 16 ; https://www.drjjournal.net/ ; ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Dental Research Journal Volume 17 ; 2020 ; 17 ; https://www.drjjournal.net/ ; ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Dental Research Journal Volume 18 ; 2021 ; 18 ; https://www.drjjournal.net/ ; ; >
-    au < ready ; exists ; 2022 ; Dental Research Journal Volume 19 ; 2022 ; 19 ; https://www.drjjournal.net/ ; ; >
+    au < crawling ; exists ; 2022 ; Dental Research Journal Volume 19 ; 2022 ; 19 ; https://www.drjjournal.net/ ; ; >
 
   }
 
@@ -1554,7 +1554,7 @@
     au < finished ; crawling ; 2019 ; Indian Journal of Otology Volume 25 ; 2019 ; 25 ; https://www.indianjotol.org/ ; ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Indian Journal of Otology Volume 26 ; 2020 ; 26 ; https://www.indianjotol.org/ ; ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2021 ; Indian Journal of Otology Volume 27 ; 2021 ; 27 ; https://www.indianjotol.org/ ; ; >
-    au < ready ; exists ; 2022 ; Indian Journal of Otology Volume 28 ; 2022 ; 28 ; https://www.indianjotol.org/ ; ; >
+    au < crawling ; exists ; 2022 ; Indian Journal of Otology Volume 28 ; 2022 ; 28 ; https://www.indianjotol.org/ ; ; >
 
   }
 
@@ -1654,7 +1654,7 @@
     au < notReady ; exists ; 2019 ; Indian Journal of Pathology and Microbiology Volume 62 ; 2019 ; 62 ; https://www.ijpmonline.org/ ; ; > #500 https://www.ijpmonline.org/article.asp?issn=0377-4929;year=2019;volume=62;issue=3;spage=517;epage=518;aulast=;type=2
     au < finished ; crawling ; 2020 ; Indian Journal of Pathology and Microbiology Volume 63 ; 2020 ; 63 ; https://www.ijpmonline.org/ ; ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Indian Journal of Pathology and Microbiology Volume 64 ; 2021 ; 64 ; https://www.ijpmonline.org/ ; ; >
-    au < ready ; exists ; 2022 ; Indian Journal of Pathology and Microbiology Volume 65 ; 2022 ; 65 ; https://www.ijpmonline.org/ ; ; >
+    au < crawling ; exists ; 2022 ; Indian Journal of Pathology and Microbiology Volume 65 ; 2022 ; 65 ; https://www.ijpmonline.org/ ; ; >
 
   }
 
@@ -2138,7 +2138,7 @@
     param[journal_issn] = 2772-5170
 
     au < crawling ; exists ; 2021 ; Indian Pediatrics Case Reports Volume 1 ; 2021 ; 1 ; https://www.ipcares.org/ ; ; >
-    au < ready ; exists ; 2022 ; Indian Pediatrics Case Reports Volume 2 ; 2022 ; 2 ; https://www.ipcares.org/ ; ; >
+    au < crawling ; exists ; 2022 ; Indian Pediatrics Case Reports Volume 2 ; 2022 ; 2 ; https://www.ipcares.org/ ; ; >
 
   }
 
@@ -2306,7 +2306,7 @@
     au < finished ; crawling ; 2019 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 9 ; 2019 ; 9 ; https://www.ijnpnd.com/ ; ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2020 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 10 ; 2020 ; 10 ; https://www.ijnpnd.com/ ; ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2021 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 11 ; 2021 ; 11 ; https://www.ijnpnd.com/ ; ; >
-    au < ready ; exists ; 2022 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 12 ; 2022 ; 12 ; https://www.ijnpnd.com/ ; ; >
+    au < crawling ; exists ; 2022 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 12 ; 2022 ; 12 ; https://www.ijnpnd.com/ ; ; >
 
   }
 
@@ -2781,7 +2781,7 @@
     au < finished ; crawling ; 2019 ; Journal of Craniovertebral Junction and Spine Volume 10 ; 2019 ; 10 ; https://www.jcvjs.com/ ; ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Journal of Craniovertebral Junction and Spine Volume 11 ; 2020 ; 11 ; https://www.jcvjs.com/ ; ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2021 ; Journal of Craniovertebral Junction and Spine Volume 12 ; 2021 ; 12 ; https://www.jcvjs.com/ ; ; >
-    au < ready ; exists ; 2022 ; Journal of Craniovertebral Junction and Spine Volume 13 ; 2022 ; 13 ; https://www.jcvjs.com/ ; ; >
+    au < crawling ; exists ; 2022 ; Journal of Craniovertebral Junction and Spine Volume 13 ; 2022 ; 13 ; https://www.jcvjs.com/ ; ; >
 
   }
 
@@ -2914,7 +2914,7 @@
     au < finished ; crawling ; 2019 ; Journal of Emergencies, Trauma, and Shock Volume 12 ; 2019 ; 12 ; https://www.onlinejets.org/ ; ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2020 ; Journal of Emergencies, Trauma, and Shock Volume 13 ; 2020 ; 13 ; https://www.onlinejets.org/ ; ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2021 ; Journal of Emergencies, Trauma, and Shock Volume 14 ; 2021 ; 14 ; https://www.onlinejets.org/ ; ; >
-    au < ready ; exists ; 2022 ; Journal of Emergencies, Trauma, and Shock Volume 15 ; 2022 ; 15 ; https://www.onlinejets.org/ ; ; >
+    au < crawling ; exists ; 2022 ; Journal of Emergencies, Trauma, and Shock Volume 15 ; 2022 ; 15 ; https://www.onlinejets.org/ ; ; >
 
   }
 
@@ -3448,7 +3448,7 @@
     au < finished ; crawling ; 2019 ; Journal of Minimal Access Surgery Volume 15 ; 2019 ; 15 ; https://www.journalofmas.com/ ; ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Journal of Minimal Access Surgery Volume 16 ; 2020 ; 16 ; https://www.journalofmas.com/ ; ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Journal of Minimal Access Surgery Volume 17 ; 2021 ; 17 ; https://www.journalofmas.com/ ; ; >
-    au < ready ; exists ; 2022 ; Journal of Minimal Access Surgery Volume 18 ; 2022 ; 18 ; https://www.journalofmas.com/ ; ; >
+    au < crawling ; exists ; 2022 ; Journal of Minimal Access Surgery Volume 18 ; 2022 ; 18 ; https://www.journalofmas.com/ ; ; >
 
   }
 #  {
@@ -3577,7 +3577,7 @@
     au < finished ; crawling ; 2019 ; Journal of Oral and Maxillofacial Pathology Volume 23 ; 2019 ; 23 ; https://www.jomfp.in/ ; ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2020 ; Journal of Oral and Maxillofacial Pathology Volume 24 ; 2020 ; 24 ; https://www.jomfp.in/ ; ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Journal of Oral and Maxillofacial Pathology Volume 25 ; 2021 ; 25 ; https://www.jomfp.in/ ; ; >
-    au < ready ; exists ; 2022 ; Journal of Oral and Maxillofacial Pathology Volume 26 ; 2022 ; 26 ; https://www.jomfp.in/ ; ; >
+    au < crawling ; exists ; 2022 ; Journal of Oral and Maxillofacial Pathology Volume 26 ; 2022 ; 26 ; https://www.jomfp.in/ ; ; >
 
   }
 
@@ -4062,7 +4062,7 @@
     au < finished ; crawling ; 2019 ; National Journal of Maxillofacial Surgery Volume 10 ; 2019 ; 10 ; https://www.njms.in/ ; ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2020 ; National Journal of Maxillofacial Surgery Volume 11 ; 2020 ; 11 ; https://www.njms.in/ ; ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2021 ; National Journal of Maxillofacial Surgery Volume 12 ; 2021 ; 12 ; https://www.njms.in/ ; ; >
-    au < ready ; exists ; 2022 ; National Journal of Maxillofacial Surgery Volume 13 ; 2022 ; 13 ; https://www.njms.in/ ; ; >
+    au < crawling ; exists ; 2022 ; National Journal of Maxillofacial Surgery Volume 13 ; 2022 ; 13 ; https://www.njms.in/ ; ; >
 
   }
 
@@ -4106,7 +4106,7 @@
     au < finished ; crawling ; 2019 ; Neurology India Volume 67 ; 2019 ; 67 ; https://www.neurologyindia.com/ ; ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Neurology India Volume 68 ; 2020 ; 68 ; https://www.neurologyindia.com/ ; ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2021 ; Neurology India Volume 69 ; 2021 ; 69 ; https://www.neurologyindia.com/ ; ; >
-    au < ready ; exists ; 2022 ; Neurology India Volume 70 ; 2022 ; 70 ; https://www.neurologyindia.com/ ; ; >
+    au < crawling ; exists ; 2022 ; Neurology India Volume 70 ; 2022 ; 70 ; https://www.neurologyindia.com/ ; ; >
 
   }
 
@@ -4138,7 +4138,7 @@
     au < finished ; crawling ; 2019 ; Nigerian Journal of Clinical Practice Volume 22 ; 2019 ; 22 ; https://www.njcponline.com/ ; ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Nigerian Journal of Clinical Practice Volume 23 ; 2020 ; 23 ; https://www.njcponline.com/ ; ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Nigerian Journal of Clinical Practice Volume 24 ; 2021 ; 24 ; https://www.njcponline.com/ ; ; >
-    au < ready ; exists ; 2022 ; Nigerian Journal of Clinical Practice Volume 25 ; 2022 ; 25 ; https://www.njcponline.com/ ; ; >
+    au < crawling ; exists ; 2022 ; Nigerian Journal of Clinical Practice Volume 25 ; 2022 ; 25 ; https://www.njcponline.com/ ; ; >
 
   }
 
@@ -4482,7 +4482,7 @@
     au < finished ; crawling ; 2019 ; Radiation Protection and Environment Volume 42 ; 2019 ; 42 ; https://www.rpe.org.in/ ; ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2020 ; Radiation Protection and Environment Volume 43 ; 2020 ; 43 ; https://www.rpe.org.in/ ; ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Radiation Protection and Environment Volume 44 ; 2021 ; 44 ; https://www.rpe.org.in/ ; ; >
-    au < ready ; exists ; 2022 ; Radiation Protection and Environment Volume 45 ; 2022 ; 45 ; https://www.rpe.org.in/ ; ; >
+    au < crawling ; exists ; 2022 ; Radiation Protection and Environment Volume 45 ; 2022 ; 45 ; https://www.rpe.org.in/ ; ; >
 
   }
 #  {
@@ -4552,7 +4552,7 @@
     au < finished ; crawling ; 2019 ; Saudi Journal of Anaesthesia Volume 13 ; 2019 ; 13 ; https://www.saudija.org/ ; ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2020 ; Saudi Journal of Anaesthesia Volume 14 ; 2020 ; 14 ; https://www.saudija.org/ ; ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Saudi Journal of Anaesthesia Volume 15 ; 2021 ; 15 ; https://www.saudija.org/ ; ; >
-    au < ready ; exists ; 2022 ; Saudi Journal of Anaesthesia Volume 16 ; 2022 ; 16 ; https://www.saudija.org/ ; ; >
+    au < crawling ; exists ; 2022 ; Saudi Journal of Anaesthesia Volume 16 ; 2022 ; 16 ; https://www.saudija.org/ ; ; >
 
   }
 
@@ -7077,7 +7077,7 @@
       au < finished ; crawling ; 2019 ; Journal of Head & Neck Physicians And Surgeons Volume 7 ; 2019 ; 7 ; https://www.jhnps.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2020 ; Journal of Head & Neck Physicians And Surgeons Volume 8 ; 2020 ; 8 ; https://www.jhnps.org/ ; ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; Journal of Head & Neck Physicians And Surgeons Volume 9 ; 2021 ; 9 ; https://www.jhnps.org/ ; ; >
-      au < ready ; exists ; 2022 ; Journal of Head & Neck Physicians And Surgeons Volume 10 ; 2022 ; 10 ; https://www.jhnps.org/ ; ; >
+      au < crawling ; exists ; 2022 ; Journal of Head & Neck Physicians And Surgeons Volume 10 ; 2022 ; 10 ; https://www.jhnps.org/ ; ; >
 
   }
 
@@ -7232,7 +7232,7 @@
       au < finished ; crawling ; 2019 ; Journal of Indian Speech Language & Hearing Association Volume 33 ; 2019 ; 33 ; https://www.jisha.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2020 ; Journal of Indian Speech Language & Hearing Association Volume 34 ; 2020 ; 34 ; https://www.jisha.org/ ; ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Journal of Indian Speech Language & Hearing Association Volume 35 ; 2021 ; 35 ; https://www.jisha.org/ ; ; >
-      au < ready ; exists ; 2022 ; Journal of Indian Speech Language & Hearing Association Volume 36 ; 2022 ; 36 ; https://www.jisha.org/ ; ; >
+      au < crawling ; exists ; 2022 ; Journal of Indian Speech Language & Hearing Association Volume 36 ; 2022 ; 36 ; https://www.jisha.org/ ; ; >
 
   }
 
@@ -8377,7 +8377,7 @@
       au < finished ; crawling ; 2019 ; Sahel Medical Journal Volume 22 ; 2019 ; 22 ; https://www.smjonline.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Sahel Medical Journal Volume 23 ; 2020 ; 23 ; https://www.smjonline.org/ ; ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Sahel Medical Journal Volume 24 ; 2021 ; 24 ; https://www.smjonline.org/ ; ; >
-      au < ready ; exists ; 2022 ; Sahel Medical Journal Volume 25 ; 2022 ; 25 ; https://www.smjonline.org/ ; ; >
+      au < crawling ; exists ; 2022 ; Sahel Medical Journal Volume 25 ; 2022 ; 25 ; https://www.smjonline.org/ ; ; >
 
   }
 
@@ -8428,7 +8428,7 @@
       au < finished ; crawling ; 2019 ; Saudi Journal for Health Sciences Volume 8 ; 2019 ; 8 ; https://www.saudijhealthsci.org/ ; ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2020 ; Saudi Journal for Health Sciences Volume 9 ; 2020 ; 9 ; https://www.saudijhealthsci.org/ ; ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Saudi Journal for Health Sciences Volume 10 ; 2021 ; 10 ; https://www.saudijhealthsci.org/ ; ; >
-      au < ready ; exists ; 2022 ; Saudi Journal for Health Sciences Volume 11 ; 2022 ; 11 ; https://www.saudijhealthsci.org/ ; ; >
+      au < crawling ; exists ; 2022 ; Saudi Journal for Health Sciences Volume 11 ; 2022 ; 11 ; https://www.saudijhealthsci.org/ ; ; >
 
   }
 
@@ -8539,7 +8539,7 @@
       au < finished ; crawling ; 2019 ; Saudi Journal of Sports Medicine Volume 19 ; 2019 ; 19 ; https://www.sjosm.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Saudi Journal of Sports Medicine Volume 20 ; 2020 ; 20 ; https://www.sjosm.org/ ; ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Saudi Journal of Sports Medicine Volume 21 ; 2021 ; 21 ; https://www.sjosm.org/ ; ; >
-      au < ready ; exists ; 2022 ; Saudi Journal of Sports Medicine Volume 22 ; 2022 ; 22 ; https://www.sjosm.org/ ; ; >
+      au < crawling ; exists ; 2022 ; Saudi Journal of Sports Medicine Volume 22 ; 2022 ; 22 ; https://www.sjosm.org/ ; ; >
 
   }
 
@@ -8607,7 +8607,7 @@
       au < finished ; crawling ; 2019 ; SRM Journal of Research in Dental Sciences Volume 10 ; 2019 ; 10 ; https://www.srmjrds.in/ ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; SRM Journal of Research in Dental Sciences Volume 11 ; 2020 ; 11 ; https://www.srmjrds.in/ ; ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; SRM Journal of Research in Dental Sciences Volume 12 ; 2021 ; 12 ; https://www.srmjrds.in/ ; ; >
-      au < ready ; exists ; 2022 ; SRM Journal of Research in Dental Sciences Volume 13 ; 2022 ; 13 ; https://www.srmjrds.in/ ; ; >
+      au < crawling ; exists ; 2022 ; SRM Journal of Research in Dental Sciences Volume 13 ; 2022 ; 13 ; https://www.srmjrds.in/ ; ; >
 
   }
 
@@ -9107,7 +9107,7 @@
       au < finished ; crawling ; 2019 ; Yoga Mimamsa Volume 51 ; 2019 ; 51 ; https://www.ym-kdham.in/ ; ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Yoga Mimamsa Volume 52 ; 2020 ; 52 ; https://www.ym-kdham.in/ ; ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2021 ; Yoga Mimamsa Volume 53 ; 2021 ; 53 ; https://www.ym-kdham.in/ ; ; >
-      au < ready ; exists ; 2022 ; Yoga Mimamsa Volume 54 ; 2022 ; 54 ; https://www.ym-kdham.in/ ; ; >
+      au < crawling ; exists ; 2022 ; Yoga Mimamsa Volume 54 ; 2022 ; 54 ; https://www.ym-kdham.in/ ; ; >
 
   }
 
@@ -9855,7 +9855,7 @@
       au < finished ; crawling ; 2019 ; Indian Anaesthetists' Forum Volume 20 ; 2019 ; 20 ; https://www.theiaforum.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Indian Anaesthetists' Forum Volume 21 ; 2020 ; 21 ; https://www.theiaforum.org/ ; ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; Indian Anaesthetists' Forum Volume 22 ; 2021 ; 22 ; https://www.theiaforum.org/ ; ; >
-      au < ready ; exists ; 2022 ; Indian Anaesthetists' Forum Volume 23 ; 2022 ; 23 ; https://www.theiaforum.org/ ; ; >
+      au < crawling ; exists ; 2022 ; Indian Anaesthetists' Forum Volume 23 ; 2022 ; 23 ; https://www.theiaforum.org/ ; ; >
 
   }
 
@@ -9936,7 +9936,7 @@
       au < finished ; crawling ; 2019 ; Indian Journal of Transplantation Volume 13 ; 2019 ; 13 ; https://www.ijtonline.in/ ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Indian Journal of Transplantation Volume 14 ; 2020 ; 14 ; https://www.ijtonline.in/ ; ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2021 ; Indian Journal of Transplantation Volume 15 ; 2021 ; 15 ; https://www.ijtonline.in/ ; ; >
-      au < ready ; exists ; 2022 ; Indian Journal of Transplantation Volume 16 ; 2022 ; 16 ; https://www.ijtonline.in/ ; ; >
+      au < crawling ; exists ; 2022 ; Indian Journal of Transplantation Volume 16 ; 2022 ; 16 ; https://www.ijtonline.in/ ; ; >
 
   }
 
@@ -10331,7 +10331,7 @@
       au < finished ; crawling ; 2019 ; Journal of Dermatology and Dermatologic Surgery Volume 23 ; 2019 ; 23 ; https://www.jddsjournal.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Journal of Dermatology and Dermatologic Surgery Volume 24 ; 2020 ; 24 ; https://www.jddsjournal.org/ ; ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; Journal of Dermatology and Dermatologic Surgery Volume 25 ; 2021 ; 25 ; https://www.jddsjournal.org/ ; ; >
-      au < ready ; exists ; 2022 ; Journal of Dermatology and Dermatologic Surgery Volume 26 ; 2022 ; 26 ; https://www.jddsjournal.org/ ; ; >
+      au < crawling ; exists ; 2022 ; Journal of Dermatology and Dermatologic Surgery Volume 26 ; 2022 ; 26 ; https://www.jddsjournal.org/ ; ; >
 
   }
 
@@ -10571,7 +10571,7 @@
       au < finished ; crawling ; 2019 ; Journal of Microscopy and Ultrastructure Volume 7 ; 2019 ; 7 ; https://www.jmau.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Journal of Microscopy and Ultrastructure Volume 8 ; 2020 ; 8 ; https://www.jmau.org/ ; ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; Journal of Microscopy and Ultrastructure Volume 9 ; 2021 ; 9 ; https://www.jmau.org/ ; ; >
-      au < ready ; exists ; 2022 ; Journal of Microscopy and Ultrastructure Volume 10 ; 2022 ; 10 ; https://www.jmau.org/ ; ; >
+      au < crawling ; exists ; 2022 ; Journal of Microscopy and Ultrastructure Volume 10 ; 2022 ; 10 ; https://www.jmau.org/ ; ; >
 
   }
 
@@ -10722,7 +10722,7 @@
       au < finished ; crawling ; 2019 ; Journal of The Arab Society for Medical Research Volume 14 ; 2019 ; 14 ; https://www.new.asmr.eg.net/ ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Journal of The Arab Society for Medical Research Volume 15 ; 2020 ; 15 ; https://www.new.asmr.eg.net/ ; ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Journal of The Arab Society for Medical Research Volume 16 ; 2021 ; 16 ; https://www.new.asmr.eg.net/ ; ; >
-      au < ready ; exists ; 2022 ; Journal of The Arab Society for Medical Research Volume 17 ; 2022 ; 17 ; https://www.new.asmr.eg.net/ ; ; >
+      au < crawling ; exists ; 2022 ; Journal of The Arab Society for Medical Research Volume 17 ; 2022 ; 17 ; https://www.new.asmr.eg.net/ ; ; >
 
   }
 
@@ -10787,7 +10787,7 @@
       au < finished ; crawling ; 2019 ; Kerala Journal of Ophthalmology Volume 31 ; 2019 ; 31 ; https://www.kjophthal.com/ ; ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2020 ; Kerala Journal of Ophthalmology Volume 32 ; 2020 ; 32 ; https://www.kjophthal.com/ ; ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2021 ; Kerala Journal of Ophthalmology Volume 33 ; 2021 ; 33 ; https://www.kjophthal.com/ ; ; >
-      au < ready ; exists ; 2022 ; Kerala Journal of Ophthalmology Volume 34 ; 2022 ; 34 ; https://www.kjophthal.com/ ; ; >
+      au < crawling ; exists ; 2022 ; Kerala Journal of Ophthalmology Volume 34 ; 2022 ; 34 ; https://www.kjophthal.com/ ; ; >
 
   }
 
@@ -10888,7 +10888,7 @@
       au < finished ; crawling ; 2019 ; Mustansiriya Medical Journal Volume 18 ; 2019 ; 18 ; https://www.mmjonweb.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Mustansiriya Medical Journal Volume 19 ; 2020 ; 19 ; https://www.mmjonweb.org/ ; ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Mustansiriya Medical Journal Volume 20 ; 2021 ; 20 ; https://www.mmjonweb.org/ ; ; >
-      au < ready ; exists ; 2022 ; Mustansiriya Medical Journal Volume 21 ; 2022 ; 21 ; https://www.mmjonweb.org/ ; ; >
+      au < crawling ; exists ; 2022 ; Mustansiriya Medical Journal Volume 21 ; 2022 ; 21 ; https://www.mmjonweb.org/ ; ; >
 
   }
 
@@ -11102,7 +11102,7 @@
       au < finished ; crawling ; 2019 ; Scientific Journal of Al-Azhar Medical Faculty, Girls Volume 3 ; 2019 ; 3 ; https://www.sjamf.eg.net/ ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Scientific Journal of Al-Azhar Medical Faculty, Girls Volume 4 ; 2020 ; 4 ; https://www.sjamf.eg.net/ ; ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Scientific Journal of Al-Azhar Medical Faculty, Girls Volume 5 ; 2021 ; 5 ; https://www.sjamf.eg.net/ ; ; >
-      au < ready ; exists ; 2022 ; Scientific Journal of Al-Azhar Medical Faculty, Girls Volume 6 ; 2022 ; 6 ; https://www.sjamf.eg.net/ ; ; >
+      au < crawling ; exists ; 2022 ; Scientific Journal of Al-Azhar Medical Faculty, Girls Volume 6 ; 2022 ; 6 ; https://www.sjamf.eg.net/ ; ; >
 
   }
 
@@ -11167,7 +11167,7 @@
       au < finished ; crawling ; 2019 ; TNOA Journal of Ophthalmic Science and Research Volume 57 ; 2019 ; 57 ; https://www.tnoajosr.com/ ; ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2020 ; TNOA Journal of Ophthalmic Science and Research Volume 58 ; 2020 ; 58 ; https://www.tnoajosr.com/ ; ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2021 ; TNOA Journal of Ophthalmic Science and Research Volume 59 ; 2021 ; 59 ; https://www.tnoajosr.com/ ; ; >
-      au < ready ; exists ; 2022 ; TNOA Journal of Ophthalmic Science and Research Volume 60 ; 2022 ; 60 ; https://www.tnoajosr.com/ ; ; >
+      au < crawling ; exists ; 2022 ; TNOA Journal of Ophthalmic Science and Research Volume 60 ; 2022 ; 60 ; https://www.tnoajosr.com/ ; ; >
 
   }
 
