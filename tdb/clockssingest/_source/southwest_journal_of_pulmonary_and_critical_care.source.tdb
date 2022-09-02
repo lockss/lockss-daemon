@@ -18,10 +18,14 @@
       eissn = 2160-6773
     >
 
+    # This content was collected using wget and provided for preservation as a
+    # set of WARC files
+    # WARC content collected from https://www.swjpcc.com/
+
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/swjpcc-released/
 
     au < readySource ; finished ; 2021 ; Southwest Journal of Pulmonary and Critical Care Warc Content 2021 ; 2021 >
-    au < expected ; exists ; 2022 ; Southwest Journal of Pulmonary and Critical Care Warc Content 2022 ; 2022 >
+    au < expected ; exists ; 2023 ; Southwest Journal of Pulmonary and Critical Care Warc Content 2023 ; 2023 >
 
     }
 
