@@ -27,41 +27,8 @@
 
     au < zapped ; finished ; 2016 ; Alluvium WARC Content 2016 ; 2016 ; 2016-09-15 >
     au < zapped ; finished ; 2018 ; Alluvium WARC Content 2018 ; 2018 ; 2018-06-25 >
+    au < expected ; exists ; 2022 ; Alluvium WARC Content 2022 ; 2022 ; >
     
-  }
-  
-    {
-    title <
-       name = Dandelion: Postgraduate Arts Journal and Research Network ;
-       eissn = 2048-1322
-     >
-     #Leave title same as harvest entry in tdb file. Do not add "WARC Content to title."
-    # This content was collected using wget and provided for preservation as a
-    # set of WARC files
-    # WARC content collected from https://dandelionjournal.org/
-
-    param[base_url] = http://clockss-ingest.lockss.org/warcfiles/dandelion-released/
-
-    au < zapped ; finished ; 2018 ; Dandelion WARC Content 2018 ; 2018 ; 2018-06-25 >
-    #MOVED TO HARVEST
-
-  }
-  
-    {
-    title <
-       name = International Journal of Welsh Writing in English ;
-       eissn = 2053-1915
-     >
-     #Leave title same as harvest entry in tdb file. Do not add "WARC Content to title."
-    # This content was collected using wget and provided for preservation as a
-    # set of WARC files
-    # WARC content collected from https://ijwwe.uwp.co.uk/
-
-    param[base_url] = http://clockss-ingest.lockss.org/warcfiles/journal-of-welsh-writing-in-english-released/
-
-    au < zapped ; finished ; 2018 ; International Journal of Welsh Writing in English WARC Content 2018 ; 2018 ; 2018-06-25 >
-    #MOVED TO HARVEST
-
   }
   
 }
