@@ -10,26 +10,6 @@
   {
 
     title <
-      name = SAGE Publications Baywood Publishing Company Source Content
-    >
-
-    # This file-transfer content was originally owned by Baywood Publishing Company
-    # and hosted by Metapress.
-
-    plugin = org.lockss.plugin.clockss.sagebaywood.ClockssSageBaywoodSourcePlugin
-    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/sage-baywood-released/
-    hidden[proxy] = DIRECT
-    implicit < status ; status2 ; year ; name ; param[year] >
-
-    au < zapped ; finished ; 2015 ; SAGE Publications Baywood Publishing Company Source Content 2015 ; 2015 >
-    au < zapped ; finished ; 2016 ; SAGE Publications Baywood Publishing Company Source Content 2016 ; 2016 >
-    #CLOCKSS-OCLC does not yet have 2016 was not crawling
-    #no more AUs expected
-  }
-
-  {
-
-    title <
       name = SAGE Publications Books Source Content
     >
 
@@ -44,49 +24,6 @@
     au < readySource ; finished ; 2020 ; SAGE Publications Books Source Content 2020 ; 2020 >
     au < readySource ; frozen ; 2021 ; SAGE Publications Books Source Content 2021 ; 2021 >
     au < readySource ; crawling ; 2022 ; SAGE Publications Books Source Content 2022 ; 2022 >
-
-  }
-  
-  {
-
-    title <
-      name =  MD Conference Express WARC Content
-    >
-
-    # This content was collected using wget and provided for preservation as a
-    # set of WARC files
-    # This is a one-time WARC; the title has triggered
-
-    plugin = org.lockss.plugin.clockss.warc.ClockssWarcPlugin
-    param[base_url] = http://clockss-ingest.lockss.org/warcfiles/md-conference-express-released/
-    hidden[proxy] = DIRECT
-    implicit < status ; status2 ; year ; name ; param[year] >
-
-    #once oclc is back we need to reverse temporarily to add/crawl the AU on oclc
-    au < zapped ; finished ; 2016 ; MD Conference Express WARC Content 2016 ; 2016 >
-    # NO MORE CONTENT
-
-  }
-
-  {
-
-    title <
-      name = Canadian Journal of Nursing Research ;
-      issn = 0844-5621 ;
-      eissn = 1705-7051
-    >
-
-
-    # This file-transfer content is for (only) volumes 45-47 of this journal
-    # later volumes are hosted on Atypon and are being harvested
-
-    plugin = org.lockss.plugin.clockss.sage.ClockssSageJatsSourcePlugin
-    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/sage-cjnr-released/
-    hidden[proxy] = DIRECT
-    implicit < status ; status2 ; year ; name ; param[year] >
-
-    au < zapped ; finished ; 2017 ; Canadian Journal of Nursing Research Volumes 45-47 Source Content 2017 ; 2017 >
-    #No more AUs expected
 
   }
 
