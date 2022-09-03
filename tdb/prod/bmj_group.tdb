@@ -1574,7 +1574,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < bmj.BMJDrupalPlugin ; released ; 2018 ; Injury Prevention Volume 24 ; 24 ; https://injuryprevention.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2019 ; Injury Prevention Volume 25 ; 25 ; https://injuryprevention.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2020 ; Injury Prevention Volume 26 ; 26 ; https://injuryprevention.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; notReady ; 2021 ; Injury Prevention Volume 27 ; 27 ; https://injuryprevention.bmj.com/ > #login, https://injuryprevention.bmj.com/content/27/2/111.full.pdf
+      au < bmj.BMJDrupalPlugin ; ready ; 2021 ; Injury Prevention Volume 27 ; 27 ; https://injuryprevention.bmj.com/ > #login, https://injuryprevention.bmj.com/content/27/2/111.full.pdf
       au < bmj.BMJDrupalPlugin ; manifest ; 2022 ; Injury Prevention Volume 28 ; 28 ; https://injuryprevention.bmj.com/ >
 
     }
