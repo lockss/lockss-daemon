@@ -800,7 +800,7 @@
       au < finished ; crawling ; 2019 ; 2019 ; Balint Journal Volume 20 ; 20 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Balint Journal Volume 21 ; 21 ; >
       au < crawling ; exists ; 2021 ; 2021 ; Balint Journal Volume 22 ; 22 ; >
-      au < ready ; exists ; 2022 ; 2022 ; Balint Journal Volume 23 ; 23 ; >
+      au < crawling ; exists ; 2022 ; 2022 ; Balint Journal Volume 23 ; 23 ; >
 
   }
 
@@ -2167,7 +2167,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; Gesundheitswesen Das Volume 83 ; 83 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Gesundheitswesen Das Volume 84 ; 84 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Gesundheitswesen Das Volume 85 ; 85 ; >
-   au < ready ; exists ; 2022 ; 2022 ; Gesundheitswesen Das Volume 86 ; 86 ; >
+   au < crawling ; exists ; 2022 ; 2022 ; Gesundheitswesen Das Volume 86 ; 86 ; >
 
   }
 
@@ -2557,7 +2557,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; Informationen aus Orthodontie & Kieferorthopädie Volume 51 ; 51 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Informationen aus Orthodontie & Kieferorthopädie Volume 52 ; 52 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Informationen aus Orthodontie & Kieferorthopädie Volume 53 ; 53 ; >
-   au < ready ; exists ; 2022 ; 2022 ; Informationen aus Orthodontie & Kieferorthopädie Volume 54 ; 54 ; >
+   au < crawling ; exists ; 2022 ; 2022 ; Informationen aus Orthodontie & Kieferorthopädie Volume 54 ; 54 ; >
 
   }
 
@@ -3291,7 +3291,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; Journal of Pediatric Neurology Volume 17 ; 17 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Pediatric Neurology Volume 18 ; 18 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Journal of Pediatric Neurology Volume 19 ; 19 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Journal of Pediatric Neurology Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Journal of Pediatric Neurology Volume 20 ; 20 ; >
 
   }
 
@@ -3527,7 +3527,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; kleintier konkret Volume 22 ; 22 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; kleintier konkret Volume 23 ; 23 ; >
     au < crawling ; exists ; 2021 ; 2021 ; kleintier konkret Volume 24 ; 24 ; >
-    au < ready ; exists ; 2022 ; 2022 ; kleintier konkret Volume 25 ; 25 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; kleintier konkret Volume 25 ; 25 ; >
 
   }
 
@@ -3694,7 +3694,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; Klinische Neurophysiologie Volume 50 ; 50 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Klinische Neurophysiologie Volume 51 ; 51 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Klinische Neurophysiologie Volume 52 ; 52 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Klinische Neurophysiologie Volume 53 ; 53 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Klinische Neurophysiologie Volume 53 ; 53 ; >
 
   }
 
@@ -4057,7 +4057,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; Neonatologie Scan Volume 7 ; 7 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Neonatologie Scan Volume 8 ; 8 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Neonatologie Scan Volume 9 ; 9 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Neonatologie Scan Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Neonatologie Scan Volume 10 ; 10 ; >
 
   }
 
@@ -4739,7 +4739,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; physiopraxis Volume 17 ; 17 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; physiopraxis Volume 18 ; 18 ; >
     au < crawling ; exists ; 2021 ; 2021 ; physiopraxis Volume 19 ; 19 ; >
-    au < ready ; exists ; 2022 ; 2022 ; physiopraxis Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; physiopraxis Volume 20 ; 20 ; >
 
   }
 
@@ -5053,7 +5053,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; PSYCH up2date Volume 13 ; 13 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; PSYCH up2date Volume 14 ; 14 ; >
     au < crawling ; exists ; 2021 ; 2021 ; PSYCH up2date Volume 15 ; 15 ; >
-    au < ready ; exists ; 2022 ; 2022 ; PSYCH up2date Volume 16 ; 16 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; PSYCH up2date Volume 16 ; 16 ; >
 
   }
 
@@ -5606,7 +5606,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; Seminars in Liver Disease Volume 39 ; 39 ; reingest1.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Seminars in Liver Disease Volume 40 ; 40 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Seminars in Liver Disease Volume 41 ; 41 ; >
-   au < ready ; exists ; 2022 ; 2022 ; Seminars in Liver Disease Volume 42 ; 42 ; >
+   au < crawling ; exists ; 2022 ; 2022 ; Seminars in Liver Disease Volume 42 ; 42 ; >
 
   }
 
@@ -5873,7 +5873,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; Seminars in Respiratory and Critical Care Medicine Volume 40 ; 40 ; reingest1.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Seminars in Respiratory and Critical Care Medicine Volume 41 ; 41 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Seminars in Respiratory and Critical Care Medicine Volume 42 ; 42 ; >
-   au < ready ; exists ; 2022 ; 2022 ; Seminars in Respiratory and Critical Care Medicine Volume 43 ; 43 ; >
+   au < crawling ; exists ; 2022 ; 2022 ; Seminars in Respiratory and Critical Care Medicine Volume 43 ; 43 ; >
 
   }
 
@@ -6406,7 +6406,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; SynOpen Volume 3 ; 3 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; SynOpen Volume 4 ; 4 ; >
     au < crawling ; exists ; 2021 ; 2021 ; SynOpen Volume 5 ; 5 ; >
-    au < ready ; exists ; 2022 ; 2022 ; SynOpen Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; SynOpen Volume 6 ; 6 ; >
 
   }
 
@@ -6636,7 +6636,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 9 ; 9 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 10 ; 10 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 11 ; 11 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 12 ; 12 ; >
 
   }
 
@@ -7032,7 +7032,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 223 ; 223 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 224 ; 224 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 225 ; 225 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 226 ; 226 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 226 ; 226 ; >
 
   }
 
@@ -7283,7 +7283,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Zeitschrift für Palliativmedizin Volume 20 ; 20 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Zeitschrift für Palliativmedizin Volume 21 ; 21 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Zeitschrift für Palliativmedizin Volume 22 ; 22 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Zeitschrift für Palliativmedizin Volume 23 ; 23 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Zeitschrift für Palliativmedizin Volume 23 ; 23 ; >
 
   }
 
@@ -8131,7 +8131,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 17 ; 17 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 18 ; 18 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 19 ; 19 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 20 ; 20 ; >
 
   }
 
@@ -8427,7 +8427,7 @@
     au < crawling ; exists ; 2019 ; 2019 ; Geriatrie up2date Volume 1 ; 1 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Geriatrie up2date Volume 2 ; 2 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Geriatrie up2date Volume 3 ; 3 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Geriatrie up2date Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Geriatrie up2date Volume 4 ; 4 ; >
 
   }
 
