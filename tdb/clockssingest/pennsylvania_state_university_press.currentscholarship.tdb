@@ -10,7 +10,8 @@
   # years and volumes don't line up - use volume year (not volume number)
   # manifest pages on this platform from 2005 onward only, sometimes less than that.
   # Moving AUs with malformed manifest pages (no links to content) to doNotProcess-exists
-  # Volumes move to jstor at the end of the year? Current volumes: https://scholarlypublishingcollective.org/psup
+
+  # Volumes move to jstor at the end of the year. Current volumes: https://scholarlypublishingcollective.org/psup
 
 
   plugin = org.lockss.plugin.jstor.ClockssJstorCurrentScholarshipPlugin
