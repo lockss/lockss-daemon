@@ -1,0 +1,45 @@
+{
+
+  publisher <
+    name = Universidad Católica de Temuco ;
+    info[contract] = 2022 ;
+    info[back] = 2018 ;
+    info[tester] = 5 ;
+    info[poller] = 5
+  >
+
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    param[base_url] = https://portalrevistas.uct.cl/
+    implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
+    #OJS3
+    attr[start_stem] = index.php/
+    attr[primary_locale] = es_ES
+
+  {
+  
+    title < 
+      name = Revista Chilena de Derecho y Ciencia Política ;
+      issn = 0718-9389 ;
+      eissn = 0719-2150 
+    >
+
+      param[journal_id] = RDCP
+      #published 2010 to present
+
+      au < manifest ; exists ; 2010 ; Revista Chilena de Derecho y Ciencia Política Volume 2010 ; 1 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; Revista Chilena de Derecho y Ciencia Política Volume 2011 ; 2 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; Revista Chilena de Derecho y Ciencia Política Volume 2012 ; 3 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; Revista Chilena de Derecho y Ciencia Política Volume 2013 ; 4 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; Revista Chilena de Derecho y Ciencia Política Volume 2014 ; 5 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; Revista Chilena de Derecho y Ciencia Política Volume 2015 ; 6 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; Revista Chilena de Derecho y Ciencia Política Volume 2016 ; 7 ; 2016 ; >
+      au < manifest ; exists ; 2017 ; Revista Chilena de Derecho y Ciencia Política Volume 2017 ; 8 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; Revista Chilena de Derecho y Ciencia Política Volume 2018 ; 9 ; 2018 ; >
+      au < manifest ; exists ; 2019 ; Revista Chilena de Derecho y Ciencia Política Volume 2019 ; 10 ; 2019 ; >
+      au < manifest ; exists ; 2020 ; Revista Chilena de Derecho y Ciencia Política Volume 2020 ; 11 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; Revista Chilena de Derecho y Ciencia Política Volume 2021 ; 12 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; Revista Chilena de Derecho y Ciencia Política Volume 2022 ; 13 ; 2022 ; >
+
+  }
+
+}
