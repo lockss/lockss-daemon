@@ -1611,6 +1611,14 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertClass(CacheException.RetryDeadLinkException.class, ex);
     assertEquals("522 from handler", ex.getMessage());
 
+    // From mapping of Timeout category
+    CacheException ex2 =
+      getHttpResultMap(defplug).mapException(null, "", 524, null);
+    assertClass(CacheException.RetryableNetworkException_2_10S.class, ex2);
+    assertEquals("524", ex2.getMessage());
+
+
+
     ArchiveFileTypes aft = defplug.getArchiveFileTypes();
     assertNotNull(aft);
     assertEquals(MapUtil.map(".zip", ".zip", "application/x-tar", ".tar"),
