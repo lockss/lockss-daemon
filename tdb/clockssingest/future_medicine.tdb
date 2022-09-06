@@ -194,7 +194,7 @@
     au < finished ; crawling ; 2018 ; Colorectal Cancer Volume 7 ; 7 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; Colorectal Cancer Volume 8 ; 8 ; https://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Colorectal Cancer Volume 9 ; 9 ; https://www.futuremedicine.com/ ; >
-    au < expected ; exists ; 2021 ; Colorectal Cancer Volume 10 ; 10 ; https://www.futuremedicine.com/ ; >
+    au < manifest ; exists ; 2021 ; Colorectal Cancer Volume 10 ; 10 ; https://www.futuremedicine.com/ ; >
     au < expected ; exists ; 2022 ; Colorectal Cancer Volume 11 ; 11 ; https://www.futuremedicine.com/ ; >
 
   }
