@@ -149,14 +149,14 @@
       implicit < status ; status2 ; year ; name ; param[year] ; param[directory] >
 
       #books came in 2020
-      au < readySource ; crawling ; 2020 ; Springer Delivered Source Content 2020 HD1_1 ; 2020 ; HD1_1 >
-      au < readySource ; crawling ; 2020 ; Springer Delivered Source Content 2020 HD1_2 ; 2020 ; HD1_2 >
-      au < readySource ; crawling ; 2020 ; Springer Delivered Source Content 2020 HD1_3 ; 2020 ; HD1_3 >
-      au < readySource ; crawling ; 2020 ; Springer Delivered Source Content 2020 HD1_4 ; 2020 ; HD1_4 >
-      au < readySource ; crawling ; 2020 ; Springer Delivered Source Content 2020 HD1_5 ; 2020 ; HD1_5 >
-      au < readySource ; crawling ; 2020 ; Springer Delivered Source Content 2020 HD1_6 ; 2020 ; HD1_6 >
-      au < readySource ; crawling ; 2020 ; Springer Delivered Source Content 2020 HD1_7 ; 2020 ; HD1_7 >
-      au < readySource ; crawling ; 2020 ; Springer Delivered Source Content 2020 HD1_8 ; 2020 ; HD1_8 >
+      au < readySource ; frozen ; 2020 ; Springer Delivered Source Content 2020 HD1_1 ; 2020 ; HD1_1 >
+      au < readySource ; frozen ; 2020 ; Springer Delivered Source Content 2020 HD1_2 ; 2020 ; HD1_2 >
+      au < readySource ; frozen ; 2020 ; Springer Delivered Source Content 2020 HD1_3 ; 2020 ; HD1_3 >
+      au < readySource ; frozen ; 2020 ; Springer Delivered Source Content 2020 HD1_4 ; 2020 ; HD1_4 >
+      au < readySource ; frozen ; 2020 ; Springer Delivered Source Content 2020 HD1_5 ; 2020 ; HD1_5 >
+      au < readySource ; frozen ; 2020 ; Springer Delivered Source Content 2020 HD1_6 ; 2020 ; HD1_6 >
+      au < readySource ; frozen ; 2020 ; Springer Delivered Source Content 2020 HD1_7 ; 2020 ; HD1_7 >
+      au < readySource ; frozen ; 2020 ; Springer Delivered Source Content 2020 HD1_8 ; 2020 ; HD1_8 >
 
     }
 
