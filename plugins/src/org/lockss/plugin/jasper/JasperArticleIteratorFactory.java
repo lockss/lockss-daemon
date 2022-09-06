@@ -59,12 +59,12 @@ public class JasperArticleIteratorFactory implements ArticleIteratorFactory, Art
   // ... 2051-5960/00003741594643f4996e2555a01e03c7/data/s40478-018-0619-9.pdf
   // ... 2051-5960/00003741594643f4996e2555a01e03c7/data/s40478-018-0619-9.html
   // ... 2051-5960/00003741594643f4996e2555a01e03c7/data/metadata/metadata.json
-  public static final Pattern PDF_PATTERN = Pattern.compile("/(.*)/data/(.*)\\.pdf$", Pattern.CASE_INSENSITIVE);
-  private static final String PDF_REPLACEMENT = "/$1/data/$2.pdf";
+  public static final Pattern PDF_PATTERN = Pattern.compile("/data/(.*)\\.pdf$", Pattern.CASE_INSENSITIVE);
+  private static final String PDF_REPLACEMENT = "/data/$1.pdf";
 
-  public static final Pattern HTML_PATTERN = Pattern.compile("/(.*)/data/(.*)\\.html$", Pattern.CASE_INSENSITIVE);
-  private static final String HTML_REPLACEMENT = "/$1/data/$2.html";
-  public static final String JSON_REPLACEMENT = "/$1/data/metadata/metadata.json";
+  public static final Pattern HTML_PATTERN = Pattern.compile("/data/(.*)\\.html$", Pattern.CASE_INSENSITIVE);
+  private static final String HTML_REPLACEMENT = "/data/$1.html";
+  public static final String JSON_REPLACEMENT = "/data/metadata/metadata.json";
 
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
