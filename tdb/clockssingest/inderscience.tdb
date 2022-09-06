@@ -1880,7 +1880,7 @@
       au < finished ; finished ; 2014-2015 ; International Journal of Business Process Integration and Management Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2017 ; International Journal of Business Process Integration and Management Volume 8 ; 8 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2018-2019 ; International Journal of Business Process Integration and Management Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < ready ; exists ; 2020-2022 ; International Journal of Business Process Integration and Management Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2020-2022 ; International Journal of Business Process Integration and Management Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -8171,7 +8171,7 @@
       au < finished ; finished ; 2014 ; International Journal of Public Law and Policy Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2015-2016 ; International Journal of Public Law and Policy Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2017-2020 ; International Journal of Public Law and Policy Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < ready ; exists ; 2021 ; International Journal of Public Law and Policy Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2021 ; International Journal of Public Law and Policy Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2022 ; International Journal of Public Law and Policy Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -9278,7 +9278,7 @@
       au < doNotProcess ; doNotProcess ; 2008-2011 ; International Journal of Sustainable Design Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2012-2014 ; International Journal of Sustainable Design Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; >
       au < finished ; crawling ; 2016-2020 ; International Journal of Sustainable Design Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < ready ; exists ; 2021-2022 ; International Journal of Sustainable Design Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2021-2022 ; International Journal of Sustainable Design Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2022 ; International Journal of Sustainable Design Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -11323,7 +11323,7 @@
       param[journal_id] = ijsggc
 
       au < finished ; finished ; 2016-2018 ; International Journal of Smart Grid and Green Communications Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < ready ; exists ; 2020-2022 ; International Journal of Smart Grid and Green Communications Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2020-2022 ; International Journal of Smart Grid and Green Communications Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
 
   }
 
