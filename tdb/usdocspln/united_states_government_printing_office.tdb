@@ -269,7 +269,7 @@
     au < released ; 2021 ; Congressional Documents 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < manifest ; 2022 ; Congressional Documents 2022 ; 2022 ; https://www.govinfo.gov/ >
     au < exists ; 2027 ; Congressional Documents 2027 ; 2027 ; https://www.govinfo.gov/ > #bad date
-    au < exists ; 2047 ; Congressional Documents 2047 ; 2047 ; https://www.govinfo.gov/ > #bad date
+    au < manifest ; 2047 ; Congressional Documents 2047 ; 2047 ; https://www.govinfo.gov/ > #bad date
 
   }
 
@@ -818,7 +818,7 @@
     comment[0] = published from 1991 to 2013
     param[collection_id] = PPP
 
-    au < exists ; 1929 ; Public Papers of the Presidents of the United States 1929 ; 1929 ; https://www.govinfo.gov/ >
+    au < manifest ; 1929 ; Public Papers of the Presidents of the United States 1929 ; 1929 ; https://www.govinfo.gov/ >
     au < released ; 1930 ; Public Papers of the Presidents of the United States 1930 ; 1930 ; https://www.govinfo.gov/ >
     au < released ; 1931 ; Public Papers of the Presidents of the United States 1931 ; 1931 ; https://www.govinfo.gov/ >
     au < released ; 1932 ; Public Papers of the Presidents of the United States 1932 ; 1932 ; https://www.govinfo.gov/ >
