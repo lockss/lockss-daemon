@@ -75,12 +75,13 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"https://bam\.eu01\.nr-data\.net"</string>
       <!-- exclude these general type pages -->
       <string>2,"^%sjournals/?$", base_url</string>
-      <string>2,"^%sjournals/id/", base_url</string>
+      <string>2,"^%sjournals/id/[^/]+$", base_url</string>
       <string>2,"^%spages/", base_url</string>
       <string>2,"^%scontributors/", base_url</string>
-      <!-- https://www.liverpooluniversitypress.co.uk/journals/article/21290/
+      <!-- https://www.liverpooluniversitypress.co.uk/journals/article/67983/
+           https://www.liverpooluniversitypress.co.uk/journals/id/71/volume/63/issue/2/article/67983/
            https://www.liverpooluniversitypress.co.uk/journals/issue/3426 -->
-      <string>1,"^%sjournals/(article|issue)/", base_url</string>
+      <string>1,"^%sjournals/.*(article|issue)/", base_url</string>
       <!-- https://www.liverpooluniversitypress.co.uk/read/?item_type=journal_article&item_id=51935
            https://www.liverpooluniversitypress.co.uk/read/?item_type=journal_article&item_id=51935&mode=download
            redirects to this:
