@@ -3,24 +3,151 @@
   publisher <
     name = Lidsen Publishing ;
     info[contract] = 2019 ;
-    info[tester] = S ;
-    info[platform] = Source/FTP
+    info[tester] = 5 ;
+    info[poller] = 3 ;
+    info[platform] = Custom
   >
+
+  plugin = needs.plugin
+  implicit < status ; status2 ; year ; name ; param[year] ; hidden[proxy] >
+  param[base_url] = https://www.lidsen.com/
+  #See https://www.lidsen.com/journals
 
   {
 
     title <
-      name = Lidsen Publishing Source Content
+      name = OBM Genetics ;
+      eissn = 2577-5790
     >
+    param[journal_id] = genetics
 
-    plugin = needs.SourcePlugin
-    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/NEEDS-PLUGIN-released/
-    #See also: param[base_url] = https://clockss-test.lockss.org/sourcefiles/lidsen-released/
-    hidden[proxy] = DIRECT
-    implicit < status ; status2 ; year ; name ; param[directory] >
-
-    au < expected ; exists ; 2022 ; Lidsen Publishing Source Content 2022 ; 2022_01 >
+    #published 2017-present
+    au < exists ; exists ; 2017 ; OBM Genetics Volume 2017 ; 2017 ; >
+    au < exists ; exists ; 2018 ; OBM Genetics Volume 2018 ; 2018 ; >
+    au < exists ; exists ; 2019 ; OBM Genetics Volume 2019 ; 2019 ; >
+    au < exists ; exists ; 2020 ; OBM Genetics Volume 2020 ; 2020 ; >
+    au < exists ; exists ; 2021 ; OBM Genetics Volume 2021 ; 2021 ; >
+    au < exists ; exists ; 2022 ; OBM Genetics Volume 2022 ; 2022 ; >
 
   }
 
+  {
+
+    title <
+      name = OBM Geriatrics ;
+      eissn = 2638-1311
+    >
+    param[journal_id] = geriatrics
+
+    #published 2017-present
+    au < exists ; exists ; 2017 ; OBM Geriatrics Volume 2017 ; 2017 ; >
+    au < exists ; exists ; 2018 ; OBM Geriatrics Volume 2018 ; 2018 ; >
+    au < exists ; exists ; 2019 ; OBM Geriatrics Volume 2019 ; 2019 ; >
+    au < exists ; exists ; 2020 ; OBM Geriatrics Volume 2020 ; 2020 ; >
+    au < exists ; exists ; 2021 ; OBM Geriatrics Volume 2021 ; 2021 ; >
+    au < exists ; exists ; 2022 ; OBM Geriatrics Volume 2022 ; 2022 ; >
+
+  }
+
+  {
+
+    title <
+      name = OBM Integrative and Complementary Medicine ;
+      eissn = 2573-4393
+    >
+    param[journal_id] = icm
+
+    #published 2016-present
+    au < exists ; exists ; 2016 ; OBM Integrative and Complementary Medicine Volume 2016 ; 2016 ; >
+    au < exists ; exists ; 2017 ; OBM Integrative and Complementary Medicine Volume 2017 ; 2017 ; >
+    au < exists ; exists ; 2018 ; OBM Integrative and Complementary Medicine Volume 2018 ; 2018 ; >
+    au < exists ; exists ; 2019 ; OBM Integrative and Complementary Medicine Volume 2019 ; 2019 ; >
+    au < exists ; exists ; 2020 ; OBM Integrative and Complementary Medicine Volume 2020 ; 2020 ; >
+    au < exists ; exists ; 2021 ; OBM Integrative and Complementary Medicine Volume 2021 ; 2021 ; >
+    au < exists ; exists ; 2022 ; OBM Integrative and Complementary Medicine Volume 2022 ; 2022 ; >
+
+  }
+
+  {
+
+    title <
+      name = OBM Neurobiology ;
+      eissn = 2573-4407
+    >
+    param[journal_id] = neurobiology
+
+    #published 2017-present
+    au < exists ; exists ; 2017 ; OBM Neurobiology Volume 2017 ; 2017 ; >
+    au < exists ; exists ; 2018 ; OBM Neurobiology Volume 2018 ; 2018 ; >
+    au < exists ; exists ; 2019 ; OBM Neurobiology Volume 2019 ; 2019 ; >
+    au < exists ; exists ; 2020 ; OBM Neurobiology Volume 2020 ; 2020 ; >
+    au < exists ; exists ; 2021 ; OBM Neurobiology Volume 2021 ; 2021 ; >
+    au < exists ; exists ; 2022 ; OBM Neurobiology Volume 2022 ; 2022 ; >
+
+  }
+
+  {
+
+    title <
+      name = OBM Transplantation ;
+      eissn = 2577-5820
+    >
+    param[journal_id] = transplantation
+
+    #published 2017-present
+    au < exists ; exists ; 2017 ; OBM Transplantation Volume 2017 ; 2017 ; >
+    au < exists ; exists ; 2018 ; OBM Transplantation Volume 2018 ; 2018 ; >
+    au < exists ; exists ; 2019 ; OBM Transplantation Volume 2019 ; 2019 ; >
+    au < exists ; exists ; 2020 ; OBM Transplantation Volume 2020 ; 2020 ; >
+    au < exists ; exists ; 2021 ; OBM Transplantation Volume 2021 ; 2021 ; >
+    au < exists ; exists ; 2022 ; OBM Transplantation Volume 2022 ; 2022 ; >
+
+  }
+
+#Not in contract
+#  {
+#
+#    title <
+#      name = Advances in Environmental and Engineering Research ;
+#      eissn = 2766-6190
+#    >
+#    param[journal_id] = aeer
+#
+#    #published 2020-present
+#    au < exists ; exists ; 2020 ; Advances in Environmental and Engineering Research Volume 2020 ; 2020 ; >
+#    au < exists ; exists ; 2021 ; Advances in Environmental and Engineering Research Volume 2021 ; 2021 ; >
+#    au < exists ; exists ; 2022 ; Advances in Environmental and Engineering Research Volume 2022 ; 2022 ; >
+#
+#  }
+#
+#  {
+#
+#    title <
+#      name = Catalysis Research ;
+#      eissn = 2771-490X
+#    >
+#    param[journal_id] = cr
+#
+#    #published 2021-present
+#    au < exists ; exists ; 2021 ; Catalysis Research Volume 2021 ; 2021 ; >
+#    au < exists ; exists ; 2022 ; Catalysis Research Volume 2022 ; 2022 ; >
+#
+#  }
+#
+#  {
+#
+#    title <
+#      name = Journal of Energy and Power Technology ;
+#      eissn = 2690-1692
+#    >
+#    param[journal_id] = jept
+#
+#    #published 2019-present
+#    au < exists ; exists ; 2019 ; Journal of Energy and Power Technology Volume 2019 ; 2019 ; >
+#    au < exists ; exists ; 2020 ; Journal of Energy and Power Technology Volume 2020 ; 2020 ; >
+#    au < exists ; exists ; 2021 ; Journal of Energy and Power Technology Volume 2021 ; 2021 ; >
+#    au < exists ; exists ; 2022 ; Journal of Energy and Power Technology Volume 2022 ; 2022 ; >
+#
+#  }
+#
 }
