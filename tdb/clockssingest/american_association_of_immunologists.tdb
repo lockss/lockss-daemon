@@ -5,9 +5,10 @@
     info[back] = 2000 ;
     info[contract] = 2016 ;
     info[tester] = 8 ;
-    info[poller] = 6
+    info[poller] = 6 ;
+    info[platform] = HW
   >
-    #Moving SC in 2022
+    #Moving HW->SC November 2022
 
   {
   
