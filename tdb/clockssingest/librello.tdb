@@ -26,10 +26,10 @@
       au < finished ; crawling ; 2016 ; Challenges in Sustainability Volume 4 ; 4 ; 2016 ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2017 ; Challenges in Sustainability Volume 5 ; 5 ; 2017 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2018 ; Challenges in Sustainability Volume 6 ; 6 ; 2018 ; reingest4.clockss.org:8082 >
-      au < testing ; exists ; 2019 ; Challenges in Sustainability Volume 7 ; 7 ; 2019 ; >
-      au < testing ; exists ; 2020 ; Challenges in Sustainability Volume 8 ; 8 ; 2020 ; >
-      au < testing ; exists ; 2021 ; Challenges in Sustainability Volume 9 ; 9 ; 2021 ; >
-      au < testing ; exists ; 2022 ; Challenges in Sustainability Volume 10 ; 10 ; 2022 ; >
+      au < exists ; exists ; 2019 ; Challenges in Sustainability Volume 7 ; 7 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Challenges in Sustainability Volume 8 ; 8 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Challenges in Sustainability Volume 9 ; 9 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Challenges in Sustainability Volume 10 ; 10 ; 2022 ; >
   }
 
   {
@@ -46,10 +46,10 @@
       au < finished ; frozen ; 2016 ; Journal of Human Security Volume 12 ; 12 ; 2016 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2017 ; Journal of Human Security Volume 13 ; 13 ; 2017 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2018 ; Journal of Human Security Volume 14 ; 14 ; 2018 ; reingest4.clockss.org:8082 >
-      au < testing ; exists ; 2019 ; Journal of Human Security Volume 15 ; 15 ; 2019 ; >
-      au < testing ; exists ; 2020 ; Journal of Human Security Volume 16 ; 16 ; 2020 ; >
-      au < testing ; exists ; 2021 ; Journal of Human Security Volume 17 ; 17 ; 2021 ; >
-      au < testing ; exists ; 2022 ; Journal of Human Security Volume 18 ; 18 ; 2022 ; >
+      au < exists ; exists ; 2019 ; Journal of Human Security Volume 15 ; 15 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Journal of Human Security Volume 16 ; 16 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Journal of Human Security Volume 17 ; 17 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Journal of Human Security Volume 18 ; 18 ; 2022 ; >
 
   }
 
@@ -67,10 +67,10 @@
       au < finished ; frozen ; 2016 ; Organic Farming Volume 2 ; 2 ; 2016 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2017 ; Organic Farming Volume 3 ; 3 ; 2017 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2018 ; Organic Farming Volume 4 ; 4 ; 2018 ; reingest4.clockss.org:8082 >
-      au < testing ; exists ; 2019 ; Organic Farming Volume 5 ; 5 ; 2019 ; >
-      au < testing ; exists ; 2020 ; Organic Farming Volume 6 ; 6 ; 2020 ; >
-      au < testing ; exists ; 2021 ; Organic Farming Volume 7 ; 7 ; 2021 ; >
-      au < testing ; exists ; 2022 ; Organic Farming Volume 8 ; 8 ; 2022 ; >
+      au < exists ; exists ; 2019 ; Organic Farming Volume 5 ; 5 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Organic Farming Volume 6 ; 6 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Organic Farming Volume 7 ; 7 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Organic Farming Volume 8 ; 8 ; 2022 ; >
 
   }
 
@@ -101,7 +101,6 @@
       # Has moved to Cogitatio Press, ISSN 2183-2463
 
       au < finished ; frozen ; 2013 ; Politics and Governance Volume 1 ; 1 ; 2013 ; reingest4.clockss.org:8082 >
-      au < doNotProcess ; exists ; 2014 ; Politics and Governance Volume 2 ; 2 ; 2014 ; >
 
   }
 
