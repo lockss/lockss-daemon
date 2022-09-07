@@ -347,6 +347,14 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
                   af.setFullTextCu(cu);
                 }
                 af.setRoleCu(role, cu);
+              } else {
+                log.debug3("No CachedUrl exists for that url. Searching all CUs for a match." );
+                // sometimes this url is not the one that we crawled.
+                // sometimes the one we crawl as an extra number appended. e.g.
+                // crawled  https://jkmc.uobaghdad.edu.iq/index.php/MEDICAL/article/download/624/624/1989
+                // metadata https://jkmc.uobaghdad.edu.iq/index.php/MEDICAL/article/download/624/624
+                // so we can search for this url...
+                searchCachedUrlSetForMatch(urlStr, af, role, setToFullTextCu);
               }
               // Now try for the PDF landing page which is the same as the PDF
               // but with "download" turned to "view"
@@ -389,10 +397,41 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
       CachedUrl cu = au.makeCachedUrl(risUrl);
       if (cu != null && cu.hasContent()) {
         af.setRoleCu(ArticleFiles.ROLE_CITATION_RIS, cu);
+      } else {
+        // sometimes the PUB_ID is different for each/some citation files. so searching for a match is the best fix
+        searchCachedUrlSetForMatch(risUrl.replace(PUB_ID, ""), af, ArticleFiles.ROLE_CITATION_RIS);
       }
       cu = au.makeCachedUrl(bibtexUrl);
       if (cu != null && cu.hasContent()) {
         af.setRoleCu(ArticleFiles.ROLE_CITATION_BIBTEX, cu);
+      } else {
+        searchCachedUrlSetForMatch(bibtexUrl.replace(PUB_ID, ""), af, ArticleFiles.ROLE_CITATION_BIBTEX);
+      }
+    }
+
+    /*
+    Overloaded
+     */
+    protected final void searchCachedUrlSetForMatch(String urlToFind, ArticleFiles af, String role) {
+      searchCachedUrlSetForMatch(urlToFind, af, role, false);
+    }
+
+    /*
+    Searches the Archival Units cached url set for url that begins with the url to find.
+     */
+    protected final void searchCachedUrlSetForMatch(String urlToFind,
+                                                    ArticleFiles af,
+                                                    String role,
+                                                    boolean setToFullTextCu) {
+      for (CachedUrl cu : au.getAuCachedUrlSet().getCuIterable()) {
+        String cuUrl = cu.getUrl();
+        if (cuUrl.contains(urlToFind)) {
+          log.debug3("Found a cached url that contains the url: " + cuUrl + " setting to role.");
+          if (setToFullTextCu) {
+            af.setFullTextCu(cu);
+          }
+          af.setRoleCu(role, cu);
+        }
       }
     }
   }
