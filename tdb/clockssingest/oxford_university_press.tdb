@@ -2402,7 +2402,7 @@
     au < ready ; exists ; 2010 ; 2010 ; Biology of Reproduction Volume 82-83 ; 82-83 ; >
     au < ready ; exists ; 2011 ; 2011 ; Biology of Reproduction Volume 84-85 ; 84-85 ; >
     au < ready ; exists ; 2012 ; 2012 ; Biology of Reproduction Volume 86-87 ; 86-87 ; >
-    au < ready ; exists ; 2013 ; 2013 ; Biology of Reproduction Volume 88-89 ; 88-89 ; >
+    au < crawling ; exists ; 2013 ; 2013 ; Biology of Reproduction Volume 88-89 ; 88-89 ; >
     au < ready ; exists ; 2014 ; 2014 ; Biology of Reproduction Volume 90-91 ; 90-91 ; >
     au < ready ; exists ; 2015 ; 2015 ; Biology of Reproduction Volume 92-93 ; 92-93 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Biology of Reproduction Volume 94-95 ; 94-95 ; >
@@ -2905,7 +2905,7 @@
     au < ready ; exists ; 2011 ; 2011 ; British Journal of Surgery Volume 98 ; 98 ; >
     au < ready ; exists ; 2012 ; 2012 ; British Journal of Surgery Volume 99 ; 99 ; >
     au < ready ; exists ; 2013 ; 2013 ; British Journal of Surgery Volume 100 ; 100 ; >
-    au < ready ; exists ; 2014 ; 2014 ; British Journal of Surgery Volume 101 ; 101 ; >
+    au < crawling ; exists ; 2014 ; 2014 ; British Journal of Surgery Volume 101 ; 101 ; >
     au < ready ; exists ; 2015 ; 2015 ; British Journal of Surgery Volume 102 ; 102 ; >
     au < ready ; exists ; 2016 ; 2016 ; British Journal of Surgery Volume 103 ; 103 ; >
     au < ready ; exists ; 2017 ; 2017 ; British Journal of Surgery Volume 104 ; 104 ; >
@@ -4313,7 +4313,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; Database Volume 2018 ; 2018 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Database Volume 2019 ; 2019 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Database Volume 2020 ; 2020 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Database Volume 2021 ; 2021 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Database Volume 2021 ; 2021 ; >
     au < testing ; exists ; 2022 ; 2022 ; Database Volume 2022 ; 2022 ; >
 
   }
@@ -5283,7 +5283,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Epidemiologic Reviews Volume 37 ; 37 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Epidemiologic Reviews Volume 38 ; 38 ; >
     au < finished ; finished ; 2017 ; 2017 ; Epidemiologic Reviews Volume 39 ; 39 ; reingest2.clockss.org:8085 >
-    au < ready ; exists ; 2018 ; 2018 ; Epidemiologic Reviews Volume 40 ; 40 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Epidemiologic Reviews Volume 40 ; 40 ; >
     au < ready ; exists ; 2019 ; 2019 ; Epidemiologic Reviews Volume 41 ; 41 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Epidemiologic Reviews Volume 42 ; 42 ; >
     au < expected ; exists ; 2021 ; 2021 ; Epidemiologic Reviews Volume 43 ; 43 ; >
@@ -5479,7 +5479,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 1 ; 1 ; >
     au < frozen ; exists ; 2016 ; 2016 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 2 ; 2 ; >
     au < finished ; finished ; 2017 ; 2017 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 3 ; 3 ; reingest4.clockss.org:8082 >
-    au < ready ; exists ; 2018 ; 2018 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 4 ; 4 ; >
     au < ready ; exists ; 2019 ; 2019 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 5 ; 5 ; >
     au < frozen ; exists ; 2020 ; 2020 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 6 ; 6 ; >
     au < ready ; exists ; 2021 ; 2021 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 7 ; 7 ; >
@@ -5710,7 +5710,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; European Journal of International Law Volume 27 ; 27 ; >
     au < finished ; finished ; 2017 ; 2017 ; European Journal of International Law Volume 28 ; 28 ; reingest3.clockss.org:8083 >
     au < ready ; exists ; 2018 ; 2018 ; European Journal of International Law Volume 29 ; 29 ; >
-    au < ready ; exists ; 2019 ; 2019 ; European Journal of International Law Volume 30 ; 30 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; European Journal of International Law Volume 30 ; 30 ; >
     au < frozen ; exists ; 2020 ; 2020 ; European Journal of International Law Volume 31 ; 31 ; >
     au < ready ; exists ; 2021 ; 2021 ; European Journal of International Law Volume 32 ; 32 ; >
     au < manifest ; exists ; 2022 ; 2022 ; European Journal of International Law Volume 33 ; 33 ; >
@@ -5770,7 +5770,7 @@
     au < ready ; exists ; 2018 ; 2018 ; European Journal of Orthodontics Volume 40 ; 40 ; >
     au < ready ; exists ; 2019 ; 2019 ; European Journal of Orthodontics Volume 41 ; 41 ; >
     au < frozen ; exists ; 2020 ; 2020 ; European Journal of Orthodontics Volume 42 ; 42 ; >
-    au < ready ; exists ; 2021 ; 2021 ; European Journal of Orthodontics Volume 43 ; 43 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; European Journal of Orthodontics Volume 43 ; 43 ; >
     au < crawling ; exists ; 2022 ; 2022 ; European Journal of Orthodontics Volume 44 ; 44 ; >
 
   }
@@ -7026,7 +7026,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; Geophysical Journal International Volume 212-215 ; 212-215 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Geophysical Journal International Volume 216-219 ; 216-219 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Geophysical Journal International Volume 220-223 ; 220-223 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Geophysical Journal International Volume 224-227 ; 224-227 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Geophysical Journal International Volume 224-227 ; 224-227 ; >
     au < testing ; exists ; 2022 ; 2022 ; Geophysical Journal International Volume 228-231 ; 228-231 ; >
 
   }
@@ -7275,7 +7275,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; Health & Social Work Volume 43 ; 43 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Health & Social Work Volume 44 ; 44 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Health & Social Work Volume 45 ; 45 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Health & Social Work Volume 46 ; 46 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Health & Social Work Volume 46 ; 46 ; >
     au < testing ; exists ; 2022 ; 2022 ; Health & Social Work Volume 47 ; 47 ; >
 
   }
@@ -7696,7 +7696,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; Human Reproduction Update Volume 24 ; 24 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Human Reproduction Update Volume 25 ; 25 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Human Reproduction Update Volume 26 ; 26 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Human Reproduction Update Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Human Reproduction Update Volume 27 ; 27 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Human Reproduction Update Volume 28 ; 28 ; >
 
   }
@@ -8073,7 +8073,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; IMA Journal of Management Mathematics Volume 29 ; 29 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; IMA Journal of Management Mathematics Volume 30 ; 30 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; IMA Journal of Management Mathematics Volume 31 ; 31 ; >
-    au < ready ; exists ; 2021 ; 2021 ; IMA Journal of Management Mathematics Volume 32 ; 32 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; IMA Journal of Management Mathematics Volume 32 ; 32 ; >
     au < crawling ; exists ; 2022 ; 2022 ; IMA Journal of Management Mathematics Volume 33 ; 33 ; >
 
   }
@@ -8383,7 +8383,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; Information and Inference: A Journal of the IMA Volume 7 ; 7 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Information and Inference: A Journal of the IMA Volume 8 ; 8 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Information and Inference: A Journal of the IMA Volume 9 ; 9 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Information and Inference: A Journal of the IMA Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Information and Inference: A Journal of the IMA Volume 10 ; 10 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Information and Inference: A Journal of the IMA Volume 11 ; 11 ; >
 
   }
@@ -9004,7 +9004,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; International Journal of Lexicography Volume 31 ; 31 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; International Journal of Lexicography Volume 32 ; 32 ; >
     au < frozen ; exists ; 2020 ; 2020 ; International Journal of Lexicography Volume 33 ; 33 ; >
-    au < ready ; exists ; 2021 ; 2021 ; International Journal of Lexicography Volume 34 ; 34 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; International Journal of Lexicography Volume 34 ; 34 ; >
     au < crawling ; exists ; 2022 ; 2022 ; International Journal of Lexicography Volume 35 ; 35 ; >
 
   }
@@ -9113,7 +9113,7 @@
     au < ready ; exists ; 2013 ; 2013 ; International Journal of Pharmacy Practice Volume 21 ; 21 ; >
     au < ready ; exists ; 2014 ; 2014 ; International Journal of Pharmacy Practice Volume 22 ; 22 ; >
     au < ready ; exists ; 2015 ; 2015 ; International Journal of Pharmacy Practice Volume 23 ; 23 ; >
-    au < ready ; exists ; 2016 ; 2016 ; International Journal of Pharmacy Practice Volume 24 ; 24 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; International Journal of Pharmacy Practice Volume 24 ; 24 ; >
     au < ready ; exists ; 2017 ; 2017 ; International Journal of Pharmacy Practice Volume 25 ; 25 ; >
     au < ready ; exists ; 2018 ; 2018 ; International Journal of Pharmacy Practice Volume 26 ; 26 ; >
     au < ready ; exists ; 2019 ; 2019 ; International Journal of Pharmacy Practice Volume 27 ; 27 ; >
@@ -9713,7 +9713,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; Journal of African Economies Volume 27 ; 27 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of African Economies Volume 28 ; 28 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of African Economies Volume 29 ; 29 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Journal of African Economies Volume 30 ; 30 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Journal of African Economies Volume 30 ; 30 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Journal of African Economies Volume 31 ; 31 ; >
 
   }
@@ -10265,7 +10265,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Complex Networks Volume 6 ; 6 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Complex Networks Volume 7 ; 7 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Complex Networks Volume 8 ; 8 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Journal of Complex Networks Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Journal of Complex Networks Volume 9 ; 9 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Journal of Complex Networks Volume 10 ; 10 ; >
 
   }
@@ -10500,7 +10500,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Cybersecurity Volume 4 ; 4 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Cybersecurity Volume 5 ; 5 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Journal of Cybersecurity Volume 6 ; 6 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Journal of Cybersecurity Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Journal of Cybersecurity Volume 7 ; 7 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Journal of Cybersecurity Volume 8 ; 8 ; >
 
   }
@@ -11781,7 +11781,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Molluscan Studies Volume 84 ; 84 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Molluscan Studies Volume 85 ; 85 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Journal of Molluscan Studies Volume 86 ; 86 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Journal of Molluscan Studies Volume 87 ; 87 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Journal of Molluscan Studies Volume 87 ; 87 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Journal of Molluscan Studies Volume 88 ; 88 ; >
 
   }
@@ -12226,9 +12226,9 @@
     au < exists ; exists ; 2009 ; 2009 ; Journal of Pharmacy and Pharmacology Volume 61 ; 61 ; >
     au < ready ; exists ; 2010 ; 2010 ; Journal of Pharmacy and Pharmacology Volume 62 ; 62 ; >
     au < testing ; exists ; 2011 ; 2011 ; Journal of Pharmacy and Pharmacology Volume 63 ; 63 ; >
-    au < ready ; exists ; 2012 ; 2012 ; Journal of Pharmacy and Pharmacology Volume 64 ; 64 ; >
+    au < crawling ; exists ; 2012 ; 2012 ; Journal of Pharmacy and Pharmacology Volume 64 ; 64 ; >
     au < ready ; exists ; 2013 ; 2013 ; Journal of Pharmacy and Pharmacology Volume 65 ; 65 ; >
-    au < ready ; exists ; 2014 ; 2014 ; Journal of Pharmacy and Pharmacology Volume 66 ; 66 ; >
+    au < crawling ; exists ; 2014 ; 2014 ; Journal of Pharmacy and Pharmacology Volume 66 ; 66 ; >
     au < ready ; exists ; 2015 ; 2015 ; Journal of Pharmacy and Pharmacology Volume 67 ; 67 ; >
     au < ready ; exists ; 2016 ; 2016 ; Journal of Pharmacy and Pharmacology Volume 68 ; 68 ; >
     au < ready ; exists ; 2017 ; 2017 ; Journal of Pharmacy and Pharmacology Volume 69 ; 69 ; >
@@ -12289,7 +12289,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Professions and Organization Volume 5 ; 5 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Professions and Organization Volume 6 ; 6 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Journal of Professions and Organization Volume 7 ; 7 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Journal of Professions and Organization Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Journal of Professions and Organization Volume 8 ; 8 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Journal of Professions and Organization Volume 9 ; 9 ; >
 
   }
@@ -12532,7 +12532,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Semantics Volume 35 ; 35 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Semantics Volume 36 ; 36 ; >
     au < notReady ; exists ; 2020 ; 2020 ; Journal of Semantics Volume 37 ; 37 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Journal of Semantics Volume 38 ; 38 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Journal of Semantics Volume 38 ; 38 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Journal of Semantics Volume 39 ; 39 ; >
 
   }
@@ -12613,7 +12613,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Semitic Studies Volume 63 ; 63 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Semitic Studies Volume 64 ; 64 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Journal of Semitic Studies Volume 65 ; 65 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Journal of Semitic Studies Volume 66 ; 66 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Journal of Semitic Studies Volume 66 ; 66 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Journal of Semitic Studies Volume 67 ; 67 ; >
 
   }
@@ -13574,7 +13574,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; London Review of International Law Volume 6 ; 6 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; London Review of International Law Volume 7 ; 7 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; London Review of International Law Volume 8 ; 8 ; >
-    au < ready ; exists ; 2021 ; 2021 ; London Review of International Law Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; London Review of International Law Volume 9 ; 9 ; >
     au < crawling ; exists ; 2022 ; 2022 ; London Review of International Law Volume 10 ; 10 ; >
 
   }
@@ -13968,7 +13968,7 @@
     au < finished ; finished ; 2018 ; 2018 ; Military Medicine Volume 2 ; 2 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Military Medicine Volume 3 ; 3 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Military Medicine Volume 4 ; 4 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Military Medicine Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Military Medicine Volume 5 ; 5 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Military Medicine Volume 6 ; 6 ; >
 
   }
@@ -17427,7 +17427,7 @@
     au < finished ; finished ; 2018 ; 2018 ; Regenerative Biomaterials Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Regenerative Biomaterials Volume 6 ; 6 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Regenerative Biomaterials Volume 7 ; 7 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Regenerative Biomaterials Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Regenerative Biomaterials Volume 8 ; 8 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Regenerative Biomaterials Volume 9 ; 9 ; >
 
   }
@@ -18731,8 +18731,8 @@
     au < ready ; exists ; 2012 ; 2012 ; Stem Cells Volume 30 ; 30 ; >
     au < ready ; exists ; 2013 ; 2013 ; Stem Cells Volume 31 ; 31 ; >
     au < ready ; exists ; 2014 ; 2014 ; Stem Cells Volume 32 ; 32 ; >
-    au < ready ; exists ; 2015 ; 2015 ; Stem Cells Volume 33 ; 33 ; >
-    au < ready ; exists ; 2016 ; 2016 ; Stem Cells Volume 34 ; 34 ; >
+    au < crawling ; exists ; 2015 ; 2015 ; Stem Cells Volume 33 ; 33 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; Stem Cells Volume 34 ; 34 ; >
     au < ready ; exists ; 2017 ; 2017 ; Stem Cells Volume 35 ; 35 ; >
     au < ready ; exists ; 2018 ; 2018 ; Stem Cells Volume 36 ; 36 ; >
     au < ready ; exists ; 2019 ; 2019 ; Stem Cells Volume 37 ; 37 ; >
@@ -18753,7 +18753,7 @@
 
     param[journal_id] = stcltm
 
-    au < ready ; exists ; 2012 ; 2012 ; Stem Cells Translational Medicine Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2012 ; 2012 ; Stem Cells Translational Medicine Volume 1 ; 1 ; >
     au < ready ; exists ; 2013 ; 2013 ; Stem Cells Translational Medicine Volume 2 ; 2 ; >
     au < ready ; exists ; 2014 ; 2014 ; Stem Cells Translational Medicine Volume 3 ; 3 ; >
     au < ready ; exists ; 2015 ; 2015 ; Stem Cells Translational Medicine Volume 4 ; 4 ; >
@@ -19171,7 +19171,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; The American Journal of Jurisprudence Volume 63 ; 63 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The American Journal of Jurisprudence Volume 64 ; 64 ; >
     au < frozen ; exists ; 2020 ; 2020 ; The American Journal of Jurisprudence Volume 65 ; 65 ; >
-    au < ready ; exists ; 2021 ; 2021 ; The American Journal of Jurisprudence Volume 66 ; 66 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; The American Journal of Jurisprudence Volume 66 ; 66 ; >
     au < crawling ; exists ; 2022 ; 2022 ; The American Journal of Jurisprudence Volume 67 ; 67 ; >
 
   }
@@ -20004,14 +20004,14 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; The Journal of Aesthetics & Art Criticism Volume 64 ; 64 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; The Journal of Aesthetics & Art Criticism Volume 65 ; 65 ; >
     au < manifest ; exists ; 2008 ; 2008 ; The Journal of Aesthetics & Art Criticism Volume 66 ; 66 ; >
-    au < ready ; exists ; 2009 ; 2009 ; The Journal of Aesthetics & Art Criticism Volume 67 ; 67 ; >
+    au < crawling ; exists ; 2009 ; 2009 ; The Journal of Aesthetics & Art Criticism Volume 67 ; 67 ; >
     au < ready ; exists ; 2010 ; 2010 ; The Journal of Aesthetics & Art Criticism Volume 68 ; 68 ; >
     au < ready ; exists ; 2011 ; 2011 ; The Journal of Aesthetics & Art Criticism Volume 69 ; 69 ; >
     au < ready ; exists ; 2012 ; 2012 ; The Journal of Aesthetics & Art Criticism Volume 70 ; 70 ; >
-    au < ready ; exists ; 2013 ; 2013 ; The Journal of Aesthetics & Art Criticism Volume 71 ; 71 ; >
+    au < crawling ; exists ; 2013 ; 2013 ; The Journal of Aesthetics & Art Criticism Volume 71 ; 71 ; >
     au < ready ; exists ; 2014 ; 2014 ; The Journal of Aesthetics & Art Criticism Volume 72 ; 72 ; >
     au < ready ; exists ; 2015 ; 2015 ; The Journal of Aesthetics & Art Criticism Volume 73 ; 73 ; >
-    au < ready ; exists ; 2016 ; 2016 ; The Journal of Aesthetics & Art Criticism Volume 74 ; 74 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; The Journal of Aesthetics & Art Criticism Volume 74 ; 74 ; >
     au < ready ; exists ; 2017 ; 2017 ; The Journal of Aesthetics & Art Criticism Volume 75 ; 75 ; >
     au < ready ; exists ; 2018 ; 2018 ; The Journal of Aesthetics & Art Criticism Volume 76 ; 76 ; >
     au < ready ; exists ; 2019 ; 2019 ; The Journal of Aesthetics & Art Criticism Volume 77 ; 77 ; >
@@ -20193,7 +20193,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; The Journal of Biochemistry Volume 163-164 ; 163-164 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The Journal of Biochemistry Volume 165-166 ; 165-166 ; >
     au < frozen ; exists ; 2020 ; 2020 ; The Journal of Biochemistry Volume 167-168 ; 167-168 ; >
-    au < ready ; exists ; 2021 ; 2021 ; The Journal of Biochemistry Volume 169-170 ; 169-170 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; The Journal of Biochemistry Volume 169-170 ; 169-170 ; >
     au < crawling ; exists ; 2022 ; 2022 ; The Journal of Biochemistry Volume 171-172 ; 171-172 ; >
 
   }
@@ -20286,7 +20286,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; The Journal of Hindu Studies Volume 11 ; 11 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The Journal of Hindu Studies Volume 12 ; 12 ; >
     au < frozen ; exists ; 2020 ; 2020 ; The Journal of Hindu Studies Volume 13 ; 13 ; >
-    au < ready ; exists ; 2021 ; 2021 ; The Journal of Hindu Studies Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; The Journal of Hindu Studies Volume 14 ; 14 ; >
     au < crawling ; exists ; 2022 ; 2022 ; The Journal of Hindu Studies Volume 15 ; 15 ; >
 
   }
@@ -22016,7 +22016,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; The Review of English Studies Volume 69 ; 69 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The Review of English Studies Volume 70 ; 70 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; The Review of English Studies Volume 71 ; 71 ; >
-    au < ready ; exists ; 2021 ; 2021 ; The Review of English Studies Volume 72 ; 72 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; The Review of English Studies Volume 72 ; 72 ; >
     au < crawling ; exists ; 2022 ; 2022 ; The Review of English Studies Volume 73 ; 73 ; >
 
   }
@@ -22774,7 +22774,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; Virus Evolution Volume 4 ; 4 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Virus Evolution Volume 5 ; 5 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Virus Evolution Volume 6 ; 6 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Virus Evolution Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Virus Evolution Volume 7 ; 7 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Virus Evolution Volume 8 ; 8 ; >
 
   }
@@ -22840,7 +22840,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; Western Historical Quarterly Volume 49 ; 49 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Western Historical Quarterly Volume 50 ; 50 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Western Historical Quarterly Volume 51 ; 51 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Western Historical Quarterly Volume 52 ; 52 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Western Historical Quarterly Volume 52 ; 52 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Western Historical Quarterly Volume 53 ; 53 ; >
 
   }
