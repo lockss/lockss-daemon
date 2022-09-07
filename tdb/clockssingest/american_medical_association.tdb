@@ -4,7 +4,8 @@
     name = American Medical Association ;
     info[contract] = 2008 ;
     info[tester] = 5 ;
-    info[poller] = 2
+    info[poller] = 2 ;
+    info[platform] = SC
   >
 
   plugin = org.lockss.plugin.silverchair.ama.ClockssAmaSilverchairPlugin
@@ -48,7 +49,6 @@
     param[resource_id] = 68
     param[journal_id] = jamadermatology
     
-    au < doNotProcess ; doNotProcess ; 2012 ; JAMA Dermatology Volume 148 ; 2012 ; https://jamanetwork.com/ ; >
     au < doNotProcess ; doNotProcess ; 2013 ; JAMA Dermatology Volume 149 ; 2013 ; https://jamanetwork.com/ ; >
     au < doNotProcess ; doNotProcess ; 2014 ; JAMA Dermatology Volume 150 ; 2014 ; https://jamanetwork.com/ ; >
     au < doNotProcess ; doNotProcess ; 2015 ; JAMA Dermatology Volume 151 ; 2015 ; https://jamanetwork.com/ ; >
@@ -75,7 +75,6 @@
     param[journal_id] = jamafacialplasticsurgery
     #move to liebertpub
 
-    au < doNotProcess ; doNotProcess ; 2012 ; JAMA Facial Plastic Surgery Volume 14 ; 2012 ; https://jamanetwork.com/ ; >
     au < doNotProcess ; doNotProcess ; 2013 ; JAMA Facial Plastic Surgery Volume 15 ; 2013 ; https://jamanetwork.com/ ; >
     au < doNotProcess ; doNotProcess ; 2014 ; JAMA Facial Plastic Surgery Volume 16 ; 2014 ; https://jamanetwork.com/ ; >
     au < doNotProcess ; doNotProcess ; 2015 ; JAMA Facial Plastic Surgery Volume 17 ; 2015 ; https://jamanetwork.com/ ; >
@@ -90,15 +89,14 @@
 
     title <
       name = JAMA Internal Medicine ;
-      issn = 0003-9926 ;
-      eissn = 1538-3679 ;
-      issnl = 0003-9926
+      issn = 2168-6106 ;
+      eissn = 2168-6114 ;
+      issnl = 2168-6106
     >
 
     param[resource_id] = 71
     param[journal_id] = jamainternalmedicine
     
-    au < doNotProcess ; doNotProcess ; 2012 ; JAMA Internal Medicine Volume 172 ; 2012 ; https://jamanetwork.com/ ; >
     au < doNotProcess ; doNotProcess ; 2013 ; JAMA Internal Medicine Volume 173 ; 2013 ; https://jamanetwork.com/ ; >
     au < doNotProcess ; doNotProcess ; 2014 ; JAMA Internal Medicine Volume 174 ; 2014 ; https://jamanetwork.com/ ; >
     au < doNotProcess ; doNotProcess ; 2015 ; JAMA Internal Medicine Volume 175 ; 2015 ; https://jamanetwork.com/ ; >
@@ -151,7 +149,7 @@
   {
 
     title <
-      name = JAMA Neurology ;
+      name = Archives of Neurology ;
       issn = 0003-9942 ;
       eissn = 1538-3687 ;
       issnl = 0003-9942
@@ -160,7 +158,22 @@
     param[resource_id] = 72
     param[journal_id] = jamaneurology
     
-    au < doNotProcess ; doNotProcess ; 2012 ; JAMA Neurology Volume 69 ; 2012 ; https://jamanetwork.com/ ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Archives of Neurology Volume 69 ; 2012 ; https://jamanetwork.com/ ; >
+    #Changed to JAMA Neurology
+  }
+
+  {
+
+    title <
+      name = JAMA Neurology ;
+      issn = 2168-6149 ;
+      eissn = 2168-6157 ;
+      issnl = 2168-6149
+    >
+
+    param[resource_id] = 72
+    param[journal_id] = jamaneurology
+    
     au < doNotProcess ; doNotProcess ; 2013 ; JAMA Neurology Volume 70 ; 2013 ; https://jamanetwork.com/ ; >
     au < doNotProcess ; doNotProcess ; 2014 ; JAMA Neurology Volume 71 ; 2014 ; https://jamanetwork.com/ ; >
     au < doNotProcess ; doNotProcess ; 2015 ; JAMA Neurology Volume 72 ; 2015 ; https://jamanetwork.com/ ; >
@@ -201,15 +214,14 @@
 
     title <
       name = JAMA Ophthalmology ;
-      issn = 0003-9950 ;
-      eissn = 0096-6339 ;
-      issnl = 0003-9950
+      issn = 2168-6165 ;
+      eissn = 2168-6173 ;
+      issnl = 2168-6165
     >
 
     param[resource_id] = 73
     param[journal_id] = jamaophthalmology
     
-    au < doNotProcess ; doNotProcess ; 2012 ; JAMA Ophthalmology Volume 130 ; 2012 ; https://jamanetwork.com/ ; >
     au < doNotProcess ; doNotProcess ; 2013 ; JAMA Ophthalmology Volume 131 ; 2013 ; https://jamanetwork.com/ ; >
     au < doNotProcess ; doNotProcess ; 2014 ; JAMA Ophthalmology Volume 132 ; 2014 ; https://jamanetwork.com/ ; >
     au < doNotProcess ; doNotProcess ; 2015 ; JAMA Ophthalmology Volume 133 ; 2015 ; https://jamanetwork.com/ ; >
@@ -235,7 +247,6 @@
     param[resource_id] = 74
     param[journal_id] = jamaotolaryngology
     
-    au < doNotProcess ; doNotProcess ; 2012 ; JAMA Otolaryngology - Head & Neck Surgery Volume 138 ; 2012 ; https://jamanetwork.com/ ; >
     au < doNotProcess ; doNotProcess ; 2013 ; JAMA Otolaryngology - Head & Neck Surgery Volume 139 ; 2013 ; https://jamanetwork.com/ ; >
     au < doNotProcess ; doNotProcess ; 2014 ; JAMA Otolaryngology - Head & Neck Surgery Volume 140 ; 2014 ; https://jamanetwork.com/ ; >
     au < doNotProcess ; doNotProcess ; 2015 ; JAMA Otolaryngology - Head & Neck Surgery Volume 141 ; 2015 ; https://jamanetwork.com/ ; >
@@ -253,15 +264,14 @@
 
     title <
       name = JAMA Pediatrics ;
-      issn = 1072-4710 ;
-      eissn = 1538-3628 ;
-      issnl = 1072-4710
+      issn = 2168-6203 ;
+      eissn = 2168-6211 ;
+      issnl = 2168-6203
     >
 
     param[resource_id] = 75
     param[journal_id] = jamapediatrics
     
-    au < doNotProcess ; doNotProcess ; 2012 ; JAMA Pediatrics Volume 166 ; 2012 ; https://jamanetwork.com/ ; >
     au < doNotProcess ; doNotProcess ; 2013 ; JAMA Pediatrics Volume 167 ; 2013 ; https://jamanetwork.com/ ; >
     au < doNotProcess ; doNotProcess ; 2014 ; JAMA Pediatrics Volume 168 ; 2014 ; https://jamanetwork.com/ ; >
     au < doNotProcess ; doNotProcess ; 2015 ; JAMA Pediatrics Volume 169 ; 2015 ; https://jamanetwork.com/ ; >
@@ -287,7 +297,6 @@
     param[resource_id] = 70
     param[journal_id] = jamapsychiatry
     
-    au < doNotProcess ; doNotProcess ; 2012 ; JAMA Psychiatry Volume 69 ; 2012 ; https://jamanetwork.com/ ; >
     au < doNotProcess ; doNotProcess ; 2013 ; JAMA Psychiatry Volume 70 ; 2013 ; https://jamanetwork.com/ ; >
     au < doNotProcess ; doNotProcess ; 2014 ; JAMA Psychiatry Volume 71 ; 2014 ; https://jamanetwork.com/ ; >
     au < doNotProcess ; doNotProcess ; 2015 ; JAMA Psychiatry Volume 72 ; 2015 ; https://jamanetwork.com/ ; >
@@ -329,23 +338,6 @@
   {
 
     title <
-      name = Archives of Surgery ;
-      issn = 0004-0010 ;
-      eissn = 1538-3644
-    >
-    #Archives of Surgery years 1960-2012 issn 1538-3644. After 2013: JAMA Surgery years 2013-present eissn 2168-6262. 
-
-    param[resource_id] = 76
-    param[journal_id] = jamasurgery
-    #content 1920 to 2011 had be processed on HW platform
-    
-    au < exists ; exists ; 2012 ; Archives of Surgery Volume 147 ; 2012 ; https://jamanetwork.com/ ; > #no manifest page
-
-  }
-
-  {
-
-    title <
       name = JAMA: The Journal of the American Medical Association ;
       issn = 0098-7484 ;
       eissn = 1538-3598 ;
@@ -355,9 +347,6 @@
     param[resource_id] = 67
     param[journal_id] = jama
     
-    au < exists ; exists ; 1957 ; Journal of the American Medical Association Volume 163-165 ; 1957 ; https://jamanetwork.com/ ; > #never collection on HW platform.
-    au < doNotProcess ; doNotProcess ; 2011 ; JAMA: The Journal of the American Medical Association Volume 305-306 ; 2011 ; https://jamanetwork.com/ ; >
-    au < doNotProcess ; doNotProcess ; 2012 ; JAMA: The Journal of the American Medical Association Volume 307-308 ; 2012 ; https://jamanetwork.com/ ; >
     au < doNotProcess ; doNotProcess ; 2013 ; JAMA: The Journal of the American Medical Association Volume 309-310 ; 2013 ; https://jamanetwork.com/ ; >
     au < doNotProcess ; doNotProcess ; 2014 ; JAMA: The Journal of the American Medical Association Volume 311-312 ; 2014 ; https://jamanetwork.com/ ; >
     au < doNotProcess ; doNotProcess ; 2015 ; JAMA: The Journal of the American Medical Association Volume 313-314 ; 2015 ; https://jamanetwork.com/ ; >
@@ -368,23 +357,6 @@
     au < deepCrawl ; exists ; 2020 ; JAMA: The Journal of the American Medical Association Volume 323-324 ; 2020 ; https://jamanetwork.com/ ; >
     au < deepCrawl ; exists ; 2021 ; JAMA: The Journal of the American Medical Association Volume 325-326 ; 2021 ; https://jamanetwork.com/ ; >
     au < manifest ; exists ; 2022 ; JAMA: The Journal of the American Medical Association Volume 327-328 ; 2022 ; https://jamanetwork.com/ ; >
-
-  }
-
-  {
-
-    title <
-      name = AMA Archives of Neurology and Psychiatry ;
-      issn = 0096-6886 ;
-      issnl = 0096-6886
-    >
-    # This publication ceased in 1959
-    # These AUs not available through highwire archive. Re-collected.
-
-
-    param[resource_id] = 91
-    param[journal_id] = archneurpsyc
-    #content from 1919 to 1959 had been processed on HW platform
 
   }
 
