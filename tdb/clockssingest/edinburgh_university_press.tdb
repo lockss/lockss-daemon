@@ -348,7 +348,7 @@
     {
     param[journal_id] = anh
 
-    au < ready ; exists ; 1983 ; Archives of Natural History Volume 10 ; 10 ; https://www.euppublishing.com/ ; >
+    au < crawling ; exists ; 1983 ; Archives of Natural History Volume 10 ; 10 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1984 ; Archives of Natural History Volume 11 ; 11 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1985 ; Archives of Natural History Volume 12 ; 12 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1986 ; Archives of Natural History Volume 13 ; 13 ; https://www.euppublishing.com/ ; >
@@ -404,7 +404,7 @@
 
     au < ready ; exists ; 1994 ; Ben Jonson Journal Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
     au < crawling ; exists ; 1995 ; Ben Jonson Journal Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
-    au < ready ; exists ; 1996 ; Ben Jonson Journal Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
+    au < crawling ; exists ; 1996 ; Ben Jonson Journal Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1997 ; Ben Jonson Journal Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1998 ; Ben Jonson Journal Volume 5 ; 5 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1999 ; Ben Jonson Journal Volume 6 ; 6 ; https://www.euppublishing.com/ ; >
@@ -594,7 +594,7 @@
 
     au < doesNotExist ; doesNotExist ; 1985 ; Library History Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1986 ; Library History Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
-    au < ready ; exists ; 1987 ; Library History Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
+    au < crawling ; exists ; 1987 ; Library History Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1988 ; Library History Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1989 ; Library History Volume 5 ; 5 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1990 ; Library History Volume 6 ; 6 ; https://www.euppublishing.com/ ; >
@@ -688,18 +688,18 @@
     au < ready ; exists ; 1983 ; Dance Research Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1984 ; Dance Research Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1985 ; Dance Research Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
-    au < ready ; exists ; 1986 ; Dance Research Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
+    au < crawling ; exists ; 1986 ; Dance Research Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1987 ; Dance Research Volume 5 ; 5 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1988 ; Dance Research Volume 6 ; 6 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1989 ; Dance Research Volume 7 ; 7 ; https://www.euppublishing.com/ ; >
     au < crawling ; exists ; 1990 ; Dance Research Volume 8 ; 8 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1991 ; Dance Research Volume 9 ; 9 ; https://www.euppublishing.com/ ; >
-    au < ready ; exists ; 1992 ; Dance Research Volume 10 ; 10 ; https://www.euppublishing.com/ ; >
+    au < crawling ; exists ; 1992 ; Dance Research Volume 10 ; 10 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1993 ; Dance Research Volume 11 ; 11 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1994 ; Dance Research Volume 12 ; 12 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1995 ; Dance Research Volume 13 ; 13 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1996 ; Dance Research Volume 14 ; 14 ; https://www.euppublishing.com/ ; >
-    au < ready ; exists ; 1997 ; Dance Research Volume 15 ; 15 ; https://www.euppublishing.com/ ; >
+    au < crawling ; exists ; 1997 ; Dance Research Volume 15 ; 15 ; https://www.euppublishing.com/ ; >
     au < crawling ; exists ; 1998 ; Dance Research Volume 16 ; 16 ; https://www.euppublishing.com/ ; >
     au < crawling ; exists ; 1999 ; Dance Research Volume 17 ; 17 ; https://www.euppublishing.com/ ; >
     au < finished ; finished ; 2000 ; Dance Research Volume 18 ; 18 ; http://www.euppublishing.com/ ; >
@@ -1007,7 +1007,7 @@
     au < ready ; exists ; 1962 ; The Innes Review Volume 13 ; 13 ; https://www.euppublishing.com/ ; >
     au < crawling ; exists ; 1963 ; The Innes Review Volume 14 ; 14 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1964 ; The Innes Review Volume 15 ; 15 ; https://www.euppublishing.com/ ; >
-    au < ready ; exists ; 1965 ; The Innes Review Volume 16 ; 16 ; https://www.euppublishing.com/ ; >
+    au < crawling ; exists ; 1965 ; The Innes Review Volume 16 ; 16 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1966 ; The Innes Review Volume 17 ; 17 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1967 ; The Innes Review Volume 18 ; 18 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1968 ; The Innes Review Volume 19 ; 19 ; https://www.euppublishing.com/ ; >
@@ -1036,7 +1036,7 @@
     au < ready ; exists ; 1991 ; The Innes Review Volume 42 ; 42 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1992 ; The Innes Review Volume 43 ; 43 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1993 ; The Innes Review Volume 44 ; 44 ; https://www.euppublishing.com/ ; >
-    au < ready ; exists ; 1994 ; The Innes Review Volume 45 ; 45 ; https://www.euppublishing.com/ ; >
+    au < crawling ; exists ; 1994 ; The Innes Review Volume 45 ; 45 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1995 ; The Innes Review Volume 46 ; 46 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1996 ; The Innes Review Volume 47 ; 47 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1997 ; The Innes Review Volume 48 ; 48 ; https://www.euppublishing.com/ ; >
@@ -1210,7 +1210,7 @@
     au < ready ; exists ; 1995 ; Journal of Beckett Studies Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1996 ; Journal of Beckett Studies Volume 5 ; 5 ; https://www.euppublishing.com/ ; >
     au < crawling ; exists ; 1997 ; Journal of Beckett Studies Volume 6 ; 6 ; https://www.euppublishing.com/ ; >
-    au < ready ; exists ; 1998 ; Journal of Beckett Studies Volume 7 ; 7 ; https://www.euppublishing.com/ ; >
+    au < crawling ; exists ; 1998 ; Journal of Beckett Studies Volume 7 ; 7 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1999 ; Journal of Beckett Studies Volume 8 ; 8 ; https://www.euppublishing.com/ ; >
     au < finished ; finished ; 2000 ; Journal of Beckett Studies Volume 9 ; 9 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2001 ; Journal of Beckett Studies Volume 10 ; 10 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
@@ -1399,7 +1399,7 @@
     au < ready ; exists ; 1995 ; Scottish Economic and Social History Volume 15 ; 15 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1996 ; Scottish Economic and Social History Volume 16 ; 16 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1997 ; Scottish Economic and Social History Volume 17 ; 17 ; https://www.euppublishing.com/ ; >
-    au < ready ; exists ; 1998 ; Scottish Economic and Social History Volume 18 ; 18 ; https://www.euppublishing.com/ ; >
+    au < crawling ; exists ; 1998 ; Scottish Economic and Social History Volume 18 ; 18 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1999 ; Scottish Economic and Social History Volume 19 ; 19 ; https://www.euppublishing.com/ ; >
     au < finished ; finished ; 2000 ; Scottish Economic and Social History Volume 20 ; 20 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
     
@@ -1676,7 +1676,7 @@
       au < ready ; exists ; 1964 ; Nottingham French Studies Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
       au < ready ; exists ; 1965 ; Nottingham French Studies Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
       au < ready ; exists ; 1966 ; Nottingham French Studies Volume 5 ; 5 ; https://www.euppublishing.com/ ; >
-      au < ready ; exists ; 1967 ; Nottingham French Studies Volume 6 ; 6 ; https://www.euppublishing.com/ ; >
+      au < crawling ; exists ; 1967 ; Nottingham French Studies Volume 6 ; 6 ; https://www.euppublishing.com/ ; >
       au < ready ; exists ; 1968 ; Nottingham French Studies Volume 7 ; 7 ; https://www.euppublishing.com/ ; >
       au < ready ; exists ; 1969 ; Nottingham French Studies Volume 8 ; 8 ; https://www.euppublishing.com/ ; >
       au < ready ; exists ; 1970 ; Nottingham French Studies Volume 9 ; 9 ; https://www.euppublishing.com/ ; >
@@ -1699,14 +1699,14 @@
       au < ready ; exists ; 1987 ; Nottingham French Studies Volume 26 ; 26 ; https://www.euppublishing.com/ ; >
       au < ready ; exists ; 1988 ; Nottingham French Studies Volume 27 ; 27 ; https://www.euppublishing.com/ ; >
       au < ready ; exists ; 1989 ; Nottingham French Studies Volume 28 ; 28 ; https://www.euppublishing.com/ ; >
-      au < ready ; exists ; 1990 ; Nottingham French Studies Volume 29 ; 29 ; https://www.euppublishing.com/ ; >
+      au < crawling ; exists ; 1990 ; Nottingham French Studies Volume 29 ; 29 ; https://www.euppublishing.com/ ; >
       au < ready ; exists ; 1991 ; Nottingham French Studies Volume 30 ; 30 ; https://www.euppublishing.com/ ; >
-      au < ready ; exists ; 1992 ; Nottingham French Studies Volume 31 ; 31 ; https://www.euppublishing.com/ ; >
+      au < crawling ; exists ; 1992 ; Nottingham French Studies Volume 31 ; 31 ; https://www.euppublishing.com/ ; >
       au < ready ; exists ; 1993 ; Nottingham French Studies Volume 32 ; 32 ; https://www.euppublishing.com/ ; >
       au < ready ; exists ; 1994 ; Nottingham French Studies Volume 33 ; 33 ; https://www.euppublishing.com/ ; >
       au < ready ; exists ; 1995 ; Nottingham French Studies Volume 34 ; 34 ; https://www.euppublishing.com/ ; >
       au < ready ; exists ; 1996 ; Nottingham French Studies Volume 35 ; 35 ; https://www.euppublishing.com/ ; >
-      au < ready ; exists ; 1997 ; Nottingham French Studies Volume 36 ; 36 ; https://www.euppublishing.com/ ; >
+      au < crawling ; exists ; 1997 ; Nottingham French Studies Volume 36 ; 36 ; https://www.euppublishing.com/ ; >
       au < ready ; exists ; 1998 ; Nottingham French Studies Volume 37 ; 37 ; https://www.euppublishing.com/ ; >
       au < ready ; exists ; 1999 ; Nottingham French Studies Volume 38 ; 38 ; https://www.euppublishing.com/ ; >
       au < finished ; finished ; 2000 ; Nottingham French Studies Volume 39 ; 39 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
@@ -1796,7 +1796,7 @@
     au < ready ; exists ; 1987 ; Paragraph Volume 9 ; 9 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1987 ; Paragraph Volume 10 ; 10 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1988 ; Paragraph Volume 11 ; 11 ; https://www.euppublishing.com/ ; >
-    au < ready ; exists ; 1989 ; Paragraph Volume 12 ; 12 ; https://www.euppublishing.com/ ; >
+    au < crawling ; exists ; 1989 ; Paragraph Volume 12 ; 12 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1990 ; Paragraph Volume 13 ; 13 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1991 ; Paragraph Volume 14 ; 14 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1992 ; Paragraph Volume 15 ; 15 ; https://www.euppublishing.com/ ; >
@@ -1804,7 +1804,7 @@
     au < ready ; exists ; 1994 ; Paragraph Volume 17 ; 17 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1995 ; Paragraph Volume 18 ; 18 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1996 ; Paragraph Volume 19 ; 19 ; https://www.euppublishing.com/ ; >
-    au < ready ; exists ; 1997 ; Paragraph Volume 20 ; 20 ; https://www.euppublishing.com/ ; >
+    au < crawling ; exists ; 1997 ; Paragraph Volume 20 ; 20 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1998 ; Paragraph Volume 21 ; 21 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1999 ; Paragraph Volume 22 ; 22 ; https://www.euppublishing.com/ ; >
     au < finished ; finished ; 2000 ; Paragraph Volume 23 ; 23 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
@@ -1883,10 +1883,10 @@
     param[journal_id] = rom
 
     au < ready ; exists ; 1995 ; Romanticism Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
-    au < ready ; exists ; 1996 ; Romanticism Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
+    au < crawling ; exists ; 1996 ; Romanticism Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1997 ; Romanticism Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
     au < crawling ; exists ; 1998 ; Romanticism Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
-    au < ready ; exists ; 1999 ; Romanticism Volume 5 ; 5 ; https://www.euppublishing.com/ ; >
+    au < crawling ; exists ; 1999 ; Romanticism Volume 5 ; 5 ; https://www.euppublishing.com/ ; >
     au < finished ; finished ; 2000 ; Romanticism Volume 6 ; 6 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2001 ; Romanticism Volume 7 ; 7 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2002 ; Romanticism Volume 8 ; 8 ; http://www.euppublishing.com/ ; >
@@ -2206,7 +2206,7 @@
 
     param[journal_id] = tal
 
-    au < ready ; exists ; 1992 ; Translation and Literature Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
+    au < crawling ; exists ; 1992 ; Translation and Literature Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1993 ; Translation and Literature Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1994 ; Translation and Literature Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 1995 ; Translation and Literature Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
