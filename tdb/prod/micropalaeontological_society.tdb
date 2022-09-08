@@ -12,7 +12,50 @@
       eissn = 2041-4978 ;
       issnl = 0262-821X
     >  
-    
+    {
+    plugin = org.lockss.plugin.atypon.geologicalsocietylondon.ClockssGeologicalSocietyLondonPlugin
+    implicit < status ; year ; name ; param[volume_name] >
+    param[base_url] = https://www.lyellcollection.org/
+    param[journal_id] = jm
+  
+    au < doNotProcess ; 1982 ; Journal of Micropalaeontology Volume 1 ; 1 >
+    au < doNotProcess ; 1983 ; Journal of Micropalaeontology Volume 2 ; 2 >
+    au < doNotProcess ; 1984 ; Journal of Micropalaeontology Volume 3 ; 3 >
+    au < doNotProcess ; 1985 ; Journal of Micropalaeontology Volume 4 ; 4 >
+    au < doNotProcess ; 1986 ; Journal of Micropalaeontology Volume 5 ; 5 >
+    au < doNotProcess ; 1987 ; Journal of Micropalaeontology Volume 6 ; 6 >
+    au < doNotProcess ; 1988 ; Journal of Micropalaeontology Volume 7 ; 7 >
+    au < doNotProcess ; 1989 ; Journal of Micropalaeontology Volume 8 ; 8 >
+    au < doNotProcess ; 1990 ; Journal of Micropalaeontology Volume 9 ; 9 >
+    au < doNotProcess ; 1991 ; Journal of Micropalaeontology Volume 10 ; 10 >
+    au < doNotProcess ; 1992 ; Journal of Micropalaeontology Volume 11 ; 11 >
+    au < doNotProcess ; 1993 ; Journal of Micropalaeontology Volume 12 ; 12 >
+    au < doNotProcess ; 1994 ; Journal of Micropalaeontology Volume 13 ; 13 >
+    au < doNotProcess ; 1995 ; Journal of Micropalaeontology Volume 14 ; 14 >
+    au < doNotProcess ; 1996 ; Journal of Micropalaeontology Volume 15 ; 15 >
+    au < doNotProcess ; 1997 ; Journal of Micropalaeontology Volume 16 ; 16 >
+    au < doNotProcess ; 1998 ; Journal of Micropalaeontology Volume 17 ; 17 >
+    au < doNotProcess ; 1999 ; Journal of Micropalaeontology Volume 18 ; 18 >
+    au < doNotProcess ; 2000 ; Journal of Micropalaeontology Volume 19 ; 19 >
+    au < doNotProcess ; 2001 ; Journal of Micropalaeontology Volume 20 ; 20 >
+    au < doNotProcess ; 2002 ; Journal of Micropalaeontology Volume 21 ; 21 >
+    au < doNotProcess ; 2003 ; Journal of Micropalaeontology Volume 22 ; 22 >
+    au < doNotProcess ; 2004 ; Journal of Micropalaeontology Volume 23 ; 23 >
+    au < doNotProcess ; 2005 ; Journal of Micropalaeontology Volume 24 ; 24 >
+    au < doNotProcess ; 2006 ; Journal of Micropalaeontology Volume 25 ; 25 >
+    au < doNotProcess ; 2007 ; Journal of Micropalaeontology Volume 26 ; 26 >
+    au < doNotProcess ; 2008 ; Journal of Micropalaeontology Volume 27 ; 27 >
+    au < doNotProcess ; 2009 ; Journal of Micropalaeontology Volume 28 ; 28 >
+    au < exists ; 2010 ; Journal of Micropalaeontology Volume 29 ; 29 >
+    au < exists ; 2011 ; Journal of Micropalaeontology Volume 30 ; 30 >
+    au < exists ; 2012 ; Journal of Micropalaeontology Volume 31 ; 31 >
+    au < exists ; 2013 ; Journal of Micropalaeontology Volume 32 ; 32 >
+    au < exists ; 2014 ; Journal of Micropalaeontology Volume 33 ; 33 >
+    au < exists ; 2015 ; Journal of Micropalaeontology Volume 34 ; 34 >
+    au < exists ; 2016 ; Journal of Micropalaeontology Volume 35 ; 35 >
+    au < exists ; 2017 ; Journal of Micropalaeontology Volume 36 ; 36 >
+    }
+    {
     pluginPrefix = org.lockss.plugin.highwire.
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] ; param[base_url] >
     #param[base_url] = http://jm.lyellcollection.org/
@@ -45,15 +88,15 @@
     au < HighWirePressH20Plugin ; down ; 2007 ; Journal of Micropalaeontology Volume 26 ; 26 ; http://jm.lyellcollection.org/ >
     au < HighWirePressH20Plugin ; down ; 2008 ; Journal of Micropalaeontology Volume 27 ; 27 ; http://jm.lyellcollection.org/ >
     au < HighWirePressH20Plugin ; down ; 2009 ; Journal of Micropalaeontology Volume 28 ; 28 ; http://jm.lyellcollection.org/ >
-    au < HighWirePressH20Plugin ; down ; 2010 ; Journal of Micropalaeontology Volume 29 ; 29 ; http://jm.lyellcollection.org/ >
-    au < HighWirePressH20Plugin ; down ; 2011 ; Journal of Micropalaeontology Volume 30 ; 30 ; http://jm.lyellcollection.org/ >
-    au < HighWirePressH20Plugin ; down ; 2012 ; Journal of Micropalaeontology Volume 31 ; 31 ; http://jm.lyellcollection.org/ >
-    au < HighWirePressH20Plugin ; down ; 2013 ; Journal of Micropalaeontology Volume 32 ; 32 ; http://jm.lyellcollection.org/ >
-    au < HighWirePressH20Plugin ; down ; 2014 ; Journal of Micropalaeontology Volume 33 ; 33 ; http://jm.lyellcollection.org/ >
-    au < HighWirePressH20Plugin ; down ; 2015 ; Journal of Micropalaeontology Volume 34 ; 34 ; http://jm.lyellcollection.org/ >
-    au < HighWirePressH20Plugin ; down ; 2016 ; Journal of Micropalaeontology Volume 35 ; 35 ; http://jm.lyellcollection.org/ >
-    au < gsl.GSLDrupalPlugin ; released ; 2017 ; Journal of Micropalaeontology Volume 36 ; 36 ; http://jm.lyellcollection.org/ >
-
+    au < HighWirePressH20Plugin ; superseded ; 2010 ; Journal of Micropalaeontology Volume 29 [superseded] ; 29 ; http://jm.lyellcollection.org/ >
+    au < HighWirePressH20Plugin ; superseded ; 2011 ; Journal of Micropalaeontology Volume 30 [superseded] ; 30 ; http://jm.lyellcollection.org/ >
+    au < HighWirePressH20Plugin ; superseded ; 2012 ; Journal of Micropalaeontology Volume 31 [superseded] ; 31 ; http://jm.lyellcollection.org/ >
+    au < HighWirePressH20Plugin ; superseded ; 2013 ; Journal of Micropalaeontology Volume 32 [superseded] ; 32 ; http://jm.lyellcollection.org/ >
+    au < HighWirePressH20Plugin ; superseded ; 2014 ; Journal of Micropalaeontology Volume 33 [superseded] ; 33 ; http://jm.lyellcollection.org/ >
+    au < HighWirePressH20Plugin ; superseded ; 2015 ; Journal of Micropalaeontology Volume 34 [superseded] ; 34 ; http://jm.lyellcollection.org/ >
+    au < HighWirePressH20Plugin ; superseded ; 2016 ; Journal of Micropalaeontology Volume 35 [superseded] ; 35 ; http://jm.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; superseded ; 2017 ; Journal of Micropalaeontology Volume 36 [superseded] ; 36 ; http://jm.lyellcollection.org/ >
+    }
   }
   
 }

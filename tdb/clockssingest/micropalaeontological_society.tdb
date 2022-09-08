@@ -57,12 +57,48 @@
     au < manifest ; exists ; 2010 ; Journal of Micropalaeontology Volume 29 ; 29 ; >
     au < manifest ; exists ; 2011 ; Journal of Micropalaeontology Volume 30 ; 30 ; >
     au < manifest ; exists ; 2012 ; Journal of Micropalaeontology Volume 31 ; 31 ; >
+    au < doNotProcess ; exists ; 2013 ; Journal of Micropalaeontology Volume 32 ; 32 ; >
+    au < doNotProcess ; exists ; 2014 ; Journal of Micropalaeontology Volume 33 ; 33 ; >
+    au < doNotProcess ; exists ; 2015 ; Journal of Micropalaeontology Volume 34 ; 34 ; >
+    au < doNotProcess ; exists ; 2016 ; Journal of Micropalaeontology Volume 35 ; 35 ; >
+    au < doNotProcess ; exists ; 2017 ; Journal of Micropalaeontology Volume 36 ; 36 ; >
     }
     {
     pluginPrefix = org.lockss.plugin.highwire.
     implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
     param[base_url] = http://jm.lyellcollection.org/
   
+    au < gsl.ClockssGSLDrupalPlugin ; doNotProcess ; exists ; 1982 ; Journal of Micropalaeontology Volume 1 ; 1 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; doNotProcess ; exists ; 1983 ; Journal of Micropalaeontology Volume 2 ; 2 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; doNotProcess ; exists ; 1984 ; Journal of Micropalaeontology Volume 3 ; 3 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; doNotProcess ; exists ; 1985 ; Journal of Micropalaeontology Volume 4 ; 4 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; doNotProcess ; exists ; 1986 ; Journal of Micropalaeontology Volume 5 ; 5 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; doNotProcess ; exists ; 1987 ; Journal of Micropalaeontology Volume 6 ; 6 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; doNotProcess ; exists ; 1988 ; Journal of Micropalaeontology Volume 7 ; 7 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; doNotProcess ; exists ; 1989 ; Journal of Micropalaeontology Volume 8 ; 8 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; doNotProcess ; exists ; 1990 ; Journal of Micropalaeontology Volume 9 ; 9 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; doNotProcess ; exists ; 1991 ; Journal of Micropalaeontology Volume 10 ; 10 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; doNotProcess ; exists ; 1992 ; Journal of Micropalaeontology Volume 11 ; 11 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; doNotProcess ; exists ; 1993 ; Journal of Micropalaeontology Volume 12 ; 12 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; doNotProcess ; exists ; 1994 ; Journal of Micropalaeontology Volume 13 ; 13 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; doNotProcess ; exists ; 1995 ; Journal of Micropalaeontology Volume 14 ; 14 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; doNotProcess ; exists ; 1996 ; Journal of Micropalaeontology Volume 15 ; 15 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; doNotProcess ; exists ; 1997 ; Journal of Micropalaeontology Volume 16 ; 16 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; doNotProcess ; exists ; 1998 ; Journal of Micropalaeontology Volume 17 ; 17 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; doNotProcess ; exists ; 1999 ; Journal of Micropalaeontology Volume 18 ; 18 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; doNotProcess ; exists ; 2000 ; Journal of Micropalaeontology Volume 19 ; 19 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; doNotProcess ; exists ; 2001 ; Journal of Micropalaeontology Volume 20 ; 20 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; doNotProcess ; exists ; 2002 ; Journal of Micropalaeontology Volume 21 ; 21 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; doNotProcess ; exists ; 2003 ; Journal of Micropalaeontology Volume 22 ; 22 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; doNotProcess ; exists ; 2004 ; Journal of Micropalaeontology Volume 23 ; 23 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; doNotProcess ; exists ; 2005 ; Journal of Micropalaeontology Volume 24 ; 24 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; doNotProcess ; exists ; 2006 ; Journal of Micropalaeontology Volume 25 ; 25 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; doNotProcess ; exists ; 2007 ; Journal of Micropalaeontology Volume 26 ; 26 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; doNotProcess ; exists ; 2008 ; Journal of Micropalaeontology Volume 27 ; 27 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; doNotProcess ; exists ; 2009 ; Journal of Micropalaeontology Volume 28 ; 28 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; doNotProcess ; exists ; 2010 ; Journal of Micropalaeontology Volume 29 ; 29 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; doNotProcess ; exists ; 2011 ; Journal of Micropalaeontology Volume 30 ; 30 ; >
+    au < gsl.ClockssGSLDrupalPlugin ; doNotProcess ; exists ; 2012 ; Journal of Micropalaeontology Volume 31 ; 31 ; >
     au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2013 ; Journal of Micropalaeontology Volume 32 ; 32 ; reingest5.clockss.org:8082 >
     au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2014 ; Journal of Micropalaeontology Volume 33 ; 33 ; reingest1.clockss.org:8082 >
     au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2015 ; Journal of Micropalaeontology Volume 34 ; 34 ; reingest2.clockss.org:8085 >
