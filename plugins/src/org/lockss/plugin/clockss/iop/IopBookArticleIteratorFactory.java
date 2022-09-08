@@ -78,7 +78,13 @@ public class IopBookArticleIteratorFactory implements ArticleIteratorFactory, Ar
     @Override
     public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
             throws PluginException {
-        return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
+        //Do this on purpose, since it has one-xml-many-PDFs
+        return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA) {
+            @Override
+            protected boolean isCheckAccessUrl() {
+                return false;
+            }
+        };
     }
 
 }

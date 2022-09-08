@@ -268,7 +268,12 @@ public class IopOnixXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
         if (!(fullDOI.equals(clean_doi))) {
             oneAM.putIfBetter(MetadataField.FIELD_DOI,clean_doi);
         }
-      }      
+      }
+
+      String customAccessUrl = oneAM.get(MetadataField.FIELD_ACCESS_URL) + "?unique_record_id=" + oneAM.get(MetadataField.FIELD_ISBN);
+      log.debug3("IOP 2017 Books: customAccessUrl  = " + customAccessUrl );
+
+      oneAM.replace(MetadataField.FIELD_ACCESS_URL, customAccessUrl);
     }    
 
     
