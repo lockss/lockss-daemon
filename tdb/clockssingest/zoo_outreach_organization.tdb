@@ -4,7 +4,7 @@
     name = Zoo Outreach Organization ;
     info[contract] = 2013 ;
     info[tester] = 8 ;
-    info[platform] = OJS2
+    info[platform] = OJS3
   >
 
   implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
@@ -17,10 +17,10 @@
       issnl = 0973-2535
     >
     
+    param[base_url] = https://zoosprint.zooreach.org/
     param[journal_id] = zp
 
     {
-    param[base_url] = https://zoosprint.zooreach.org/
     plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
 
     au < frozen ; exists ; 2016 ; 2016 ; Zoo's Print Volume 8 ; 8 ; >
@@ -28,8 +28,20 @@
     au < frozen ; exists ; 2018 ; 2018 ; Zoo's Print Volume 10 ; 10 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Zoo's Print Volume 11 ; 11 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Zoo's Print Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Zoo's Print Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2022 ; 2022 ; Zoo's Print Volume 14 ; 14 ; >
+    au < superseded ; exists ; 2021 ; 2021 ; Zoo's Print Volume 13 [superseded] ; 13 ; >
+
+    }
+    {
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    attr[start_stem] = index.php/
+
+    au < doNotProcess ; exists ; 2016 ; 2016 ; Zoo's Print Volume 8 ; 8 ; >
+    au < doNotProcess ; exists ; 2017 ; 2017 ; Zoo's Print Volume 9 ; 9 ; >
+    au < doNotProcess ; exists ; 2018 ; 2018 ; Zoo's Print Volume 10 ; 10 ; >
+    au < doNotProcess ; exists ; 2019 ; 2019 ; Zoo's Print Volume 11 ; 11 ; >
+    au < doNotProcess ; exists ; 2020 ; 2020 ; Zoo's Print Volume 12 ; 12 ; >
+    au < exists ; exists ; 2021 ; 2021 ; Zoo's Print Volume 13 ; 13 ; >
+    au < exists ; exists ; 2022 ; 2022 ; Zoo's Print Volume 14 ; 14 ; >
 
     }
   }
