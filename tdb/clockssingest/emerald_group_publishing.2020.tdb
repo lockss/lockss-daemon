@@ -2325,7 +2325,7 @@
     au < ready ; exists ; 1999 ; The Electronic Library Volume 17 ; 17 ; >
     au < frozen ; exists ; 2000 ; The Electronic Library Volume 18 ; 18 ; >
     au < frozen ; exists ; 2001 ; The Electronic Library Volume 19 ; 19 ; >
-    au < ready ; exists ; 2002 ; The Electronic Library Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2002 ; The Electronic Library Volume 20 ; 20 ; >
     au < frozen ; exists ; 2003 ; The Electronic Library Volume 21 ; 21 ; >
     au < frozen ; exists ; 2004 ; The Electronic Library Volume 22 ; 22 ; >
     au < frozen ; exists ; 2005 ; The Electronic Library Volume 23 ; 23 ; >
@@ -2599,7 +2599,7 @@
     au < manifest ; exists ; 1996 ; Equal Opportunities International Volume 15 ; 15 ; >
     au < manifest ; exists ; 1997 ; Equal Opportunities International Volume 16 ; 16 ; >
     au < manifest ; exists ; 1998 ; Equal Opportunities International Volume 17 ; 17 ; >
-    au < ready ; exists ; 1999 ; Equal Opportunities International Volume 18 ; 18 ; >
+    au < crawling ; exists ; 1999 ; Equal Opportunities International Volume 18 ; 18 ; >
     au < frozen ; exists ; 2000 ; Equal Opportunities International Volume 19 ; 19 ; >
     au < ready ; exists ; 2001 ; Equal Opportunities International Volume 20 ; 20 ; >
     au < frozen ; exists ; 2002 ; Equal Opportunities International Volume 21 ; 21 ; >
@@ -2754,7 +2754,7 @@
     comment[journal_id] = ejim
 
     au < manifest ; exists ; 1998 ; European Journal of Innovation Management Volume 1 ; 1 ; >
-    au < ready ; exists ; 1999 ; European Journal of Innovation Management Volume 2 ; 2 ; >
+    au < crawling ; exists ; 1999 ; European Journal of Innovation Management Volume 2 ; 2 ; >
     au < frozen ; exists ; 2000 ; European Journal of Innovation Management Volume 3 ; 3 ; >
     au < frozen ; exists ; 2001 ; European Journal of Innovation Management Volume 4 ; 4 ; >
     au < frozen ; exists ; 2002 ; European Journal of Innovation Management Volume 5 ; 5 ; >
@@ -3466,7 +3466,7 @@
     au < manifest ; exists ; 1996 ; Industrial Lubrication and Tribology Volume 48 ; 48 ; >
     au < manifest ; exists ; 1997 ; Industrial Lubrication and Tribology Volume 49 ; 49 ; >
     au < manifest ; exists ; 1998 ; Industrial Lubrication and Tribology Volume 50 ; 50 ; >
-    au < ready ; exists ; 1999 ; Industrial Lubrication and Tribology Volume 51 ; 51 ; >
+    au < crawling ; exists ; 1999 ; Industrial Lubrication and Tribology Volume 51 ; 51 ; >
     au < frozen ; exists ; 2000 ; Industrial Lubrication and Tribology Volume 52 ; 52 ; >
     au < frozen ; exists ; 2001 ; Industrial Lubrication and Tribology Volume 53 ; 53 ; >
     au < frozen ; exists ; 2002 ; Industrial Lubrication and Tribology Volume 54 ; 54 ; >
@@ -4144,7 +4144,7 @@
     au < manifest ; exists ; 1996 ; International Journal of Commerce and Management Volume 6 ; 6 ; >
     au < manifest ; exists ; 1997 ; International Journal of Commerce and Management Volume 7 ; 7 ; >
     au < manifest ; exists ; 1998 ; International Journal of Commerce and Management Volume 8 ; 8 ; >
-    au < ready ; exists ; 1999 ; International Journal of Commerce and Management Volume 9 ; 9 ; >
+    au < crawling ; exists ; 1999 ; International Journal of Commerce and Management Volume 9 ; 9 ; >
     au < frozen ; exists ; 2000 ; International Journal of Commerce and Management Volume 10 ; 10 ; >
     au < frozen ; exists ; 2001 ; International Journal of Commerce and Management Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2002 ; International Journal of Commerce and Management Volume 12 ; 12 ; >
@@ -4205,7 +4205,7 @@
     au < manifest ; exists ; 1996 ; International Journal of Conflict Management Volume 7 ; 7 ; >
     au < manifest ; exists ; 1997 ; International Journal of Conflict Management Volume 8 ; 8 ; >
     au < manifest ; exists ; 1998 ; International Journal of Conflict Management Volume 9 ; 9 ; >
-    au < ready ; exists ; 1999 ; International Journal of Conflict Management Volume 10 ; 10 ; >
+    au < crawling ; exists ; 1999 ; International Journal of Conflict Management Volume 10 ; 10 ; >
     au < frozen ; exists ; 2000 ; International Journal of Conflict Management Volume 11 ; 11 ; >
     au < frozen ; exists ; 2001 ; International Journal of Conflict Management Volume 12 ; 12 ; >
     au < frozen ; exists ; 2002 ; International Journal of Conflict Management Volume 13 ; 13 ; >
@@ -5177,7 +5177,7 @@
     au < manifest ; exists ; 1996 ; International Journal of Operations & Production Management Volume 16 ; 16 ; >
     au < manifest ; exists ; 1997 ; International Journal of Operations & Production Management Volume 17 ; 17 ; >
     au < manifest ; exists ; 1998 ; International Journal of Operations & Production Management Volume 18 ; 18 ; >
-    au < ready ; exists ; 1999 ; International Journal of Operations & Production Management Volume 19 ; 19 ; >
+    au < crawling ; exists ; 1999 ; International Journal of Operations & Production Management Volume 19 ; 19 ; >
     au < crawling ; exists ; 2000 ; International Journal of Operations & Production Management Volume 20 ; 20 ; >
     au < ready ; exists ; 2001 ; International Journal of Operations & Production Management Volume 21 ; 21 ; >
     au < ready ; exists ; 2002 ; International Journal of Operations & Production Management Volume 22 ; 22 ; >
@@ -5809,7 +5809,7 @@
     au < ready ; exists ; 1999 ; International Journal of Sociology and Social Policy Volume 19 ; 19 ; >
     au < crawling ; exists ; 2000 ; International Journal of Sociology and Social Policy Volume 20 ; 20 ; >
     au < ready ; exists ; 2001 ; International Journal of Sociology and Social Policy Volume 21 ; 21 ; >
-    au < ready ; exists ; 2002 ; International Journal of Sociology and Social Policy Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2002 ; International Journal of Sociology and Social Policy Volume 22 ; 22 ; >
     au < crawling ; exists ; 2003 ; International Journal of Sociology and Social Policy Volume 23 ; 23 ; >
     au < crawling ; exists ; 2004 ; International Journal of Sociology and Social Policy Volume 24 ; 24 ; >
     au < crawling ; exists ; 2005 ; International Journal of Sociology and Social Policy Volume 25 ; 25 ; >
@@ -6066,7 +6066,7 @@
     au < ready ; exists ; 1999 ; International Marketing Review Volume 16 ; 16 ; >
     au < crawling ; exists ; 2000 ; International Marketing Review Volume 17 ; 17 ; >
     au < crawling ; exists ; 2001 ; International Marketing Review Volume 18 ; 18 ; >
-    au < ready ; exists ; 2002 ; International Marketing Review Volume 19 ; 19 ; >
+    au < crawling ; exists ; 2002 ; International Marketing Review Volume 19 ; 19 ; >
     au < crawling ; exists ; 2003 ; International Marketing Review Volume 20 ; 20 ; >
     au < crawling ; exists ; 2004 ; International Marketing Review Volume 21 ; 21 ; >
     au < crawling ; exists ; 2005 ; International Marketing Review Volume 22 ; 22 ; >
@@ -6764,7 +6764,7 @@
     param[journal_issn] = 1463-001X
     comment[journal_id] = jcre
 
-    au < ready ; exists ; 1999 ; Journal of Corporate Real Estate Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1999 ; Journal of Corporate Real Estate Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2000 ; Journal of Corporate Real Estate Volume 2 ; 2 ; >
     au < crawling ; exists ; 2001 ; Journal of Corporate Real Estate Volume 3 ; 3 ; >
     au < crawling ; exists ; 2002 ; Journal of Corporate Real Estate Volume 4 ; 4 ; >
@@ -7003,7 +7003,7 @@
     au < manifest ; exists ; 1998 ; Journal of Economic Studies Volume 25 ; 25 ; >
     au < ready ; exists ; 1999 ; Journal of Economic Studies Volume 26 ; 26 ; >
     au < crawling ; exists ; 2000 ; Journal of Economic Studies Volume 27 ; 27 ; >
-    au < ready ; exists ; 2001 ; Journal of Economic Studies Volume 28 ; 28 ; >
+    au < crawling ; exists ; 2001 ; Journal of Economic Studies Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2002 ; Journal of Economic Studies Volume 29 ; 29 ; >
     au < crawling ; exists ; 2003 ; Journal of Economic Studies Volume 30 ; 30 ; >
     au < crawling ; exists ; 2004 ; Journal of Economic Studies Volume 31 ; 31 ; >
@@ -7713,7 +7713,7 @@
     au < manifest ; exists ; 1996 ; Journal of Human Resource Costing & Accounting Volume 1 ; 1 ; >
     au < manifest ; exists ; 1997 ; Journal of Human Resource Costing & Accounting Volume 2 ; 2 ; >
     au < manifest ; exists ; 1998 ; Journal of Human Resource Costing & Accounting Volume 3 ; 3 ; >
-    au < ready ; exists ; 1999 ; Journal of Human Resource Costing & Accounting Volume 4 ; 4 ; >
+    au < crawling ; exists ; 1999 ; Journal of Human Resource Costing & Accounting Volume 4 ; 4 ; >
     au < crawling ; exists ; 2000 ; Journal of Human Resource Costing & Accounting Volume 5 ; 5 ; >
     au < crawling ; exists ; 2001 ; Journal of Human Resource Costing & Accounting Volume 6 ; 6 ; >
     au < crawling ; exists ; 2003 ; Journal of Human Resource Costing & Accounting Volume 7 ; 7 ; >
@@ -8154,7 +8154,7 @@
     au < ready ; exists ; 1999 ; Journal of Management Development Volume 18 ; 18 ; >
     au < crawling ; exists ; 2000 ; Journal of Management Development Volume 19 ; 19 ; >
     au < ready ; exists ; 2001 ; Journal of Management Development Volume 20 ; 20 ; >
-    au < ready ; exists ; 2002 ; Journal of Management Development Volume 21 ; 21 ; >
+    au < crawling ; exists ; 2002 ; Journal of Management Development Volume 21 ; 21 ; >
     au < crawling ; exists ; 2003 ; Journal of Management Development Volume 22 ; 22 ; >
     au < crawling ; exists ; 2004 ; Journal of Management Development Volume 23 ; 23 ; >
     au < crawling ; exists ; 2005 ; Journal of Management Development Volume 24 ; 24 ; >
@@ -8836,7 +8836,7 @@
     param[journal_issn] = 1471-5201
     comment[journal_id] = jrme
 
-    au < ready ; exists ; 1999 ; Journal of Research in Marketing and Entrepreneurship Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1999 ; Journal of Research in Marketing and Entrepreneurship Volume 1 ; 1 ; >
     au < crawling ; exists ; 2000 ; Journal of Research in Marketing and Entrepreneurship Volume 2 ; 2 ; >
     au < crawling ; exists ; 2001 ; Journal of Research in Marketing and Entrepreneurship Volume 3 ; 3 ; >
     au < crawling ; exists ; 2002 ; Journal of Research in Marketing and Entrepreneurship Volume 4 ; 4 ; >
@@ -9311,7 +9311,7 @@
     au < manifest ; exists ; 1996 ; Leadership & Organization Development Journal Volume 17 ; 17 ; >
     au < manifest ; exists ; 1997 ; Leadership & Organization Development Journal Volume 18 ; 18 ; >
     au < manifest ; exists ; 1998 ; Leadership & Organization Development Journal Volume 19 ; 19 ; >
-    au < ready ; exists ; 1999 ; Leadership & Organization Development Journal Volume 20 ; 20 ; >
+    au < crawling ; exists ; 1999 ; Leadership & Organization Development Journal Volume 20 ; 20 ; >
     au < crawling ; exists ; 2000 ; Leadership & Organization Development Journal Volume 21 ; 21 ; >
     au < ready ; exists ; 2001 ; Leadership & Organization Development Journal Volume 22 ; 22 ; >
     au < crawling ; exists ; 2002 ; Leadership & Organization Development Journal Volume 23 ; 23 ; >
@@ -10167,7 +10167,7 @@
     au < manifest ; exists ; 1996 ; Managerial Law Volume 38 ; 38 ; >
     au < manifest ; exists ; 1997 ; Managerial Law Volume 39 ; 39 ; >
     au < manifest ; exists ; 1998 ; Managerial Law Volume 40 ; 40 ; >
-    au < ready ; exists ; 1999 ; Managerial Law Volume 41 ; 41 ; >
+    au < crawling ; exists ; 1999 ; Managerial Law Volume 41 ; 41 ; >
     au < frozen ; exists ; 2000 ; Managerial Law Volume 42 ; 42 ; >
     au < crawling ; exists ; 2001 ; Managerial Law Volume 43 ; 43 ; >
     au < crawling ; exists ; 2002 ; Managerial Law Volume 44 ; 44 ; >
@@ -11096,7 +11096,7 @@
     comment[journal_id] = pe
     # online from 1999
 
-    au < ready ; exists ; 1999 ; Participation and Empowerment: An International Journal Volume 7 ; 7 ; >
+    au < crawling ; exists ; 1999 ; Participation and Empowerment: An International Journal Volume 7 ; 7 ; >
 
   }
 
@@ -11882,7 +11882,7 @@
     au < manifest ; exists ; 1998 ; Reference Services Review Volume 26 ; 26 ; >
     au < ready ; exists ; 1999 ; Reference Services Review Volume 27 ; 27 ; >
     au < crawling ; exists ; 2000 ; Reference Services Review Volume 28 ; 28 ; >
-    au < ready ; exists ; 2001 ; Reference Services Review Volume 29 ; 29 ; >
+    au < crawling ; exists ; 2001 ; Reference Services Review Volume 29 ; 29 ; >
     au < crawling ; exists ; 2002 ; Reference Services Review Volume 30 ; 30 ; >
     au < crawling ; exists ; 2003 ; Reference Services Review Volume 31 ; 31 ; >
     au < crawling ; exists ; 2004 ; Reference Services Review Volume 32 ; 32 ; >
@@ -12219,7 +12219,7 @@
     au < manifest ; exists ; 1996 ; Soldering & Surface Mount Technology Volume 8 ; 8 ; >
     au < manifest ; exists ; 1997 ; Soldering & Surface Mount Technology Volume 9 ; 9 ; >
     au < manifest ; exists ; 1998 ; Soldering & Surface Mount Technology Volume 10 ; 10 ; >
-    au < ready ; exists ; 1999 ; Soldering & Surface Mount Technology Volume 11 ; 11 ; >
+    au < crawling ; exists ; 1999 ; Soldering & Surface Mount Technology Volume 11 ; 11 ; >
     au < frozen ; exists ; 2000 ; Soldering & Surface Mount Technology Volume 12 ; 12 ; >
     au < crawling ; exists ; 2001 ; Soldering & Surface Mount Technology Volume 13 ; 13 ; >
     au < crawling ; exists ; 2002 ; Soldering & Surface Mount Technology Volume 14 ; 14 ; >
@@ -12528,7 +12528,7 @@
     au < manifest ; exists ; 1996 ; Structural Survey Volume 14 ; 14 ; >
     au < manifest ; exists ; 1997 ; Structural Survey Volume 15 ; 15 ; >
     au < manifest ; exists ; 1998 ; Structural Survey Volume 16 ; 16 ; >
-    au < ready ; exists ; 1999 ; Structural Survey Volume 17 ; 17 ; >
+    au < crawling ; exists ; 1999 ; Structural Survey Volume 17 ; 17 ; >
     au < crawling ; exists ; 2000 ; Structural Survey Volume 18 ; 18 ; >
     au < crawling ; exists ; 2001 ; Structural Survey Volume 19 ; 19 ; >
     au < ready ; exists ; 2002 ; Structural Survey Volume 20 ; 20 ; >
@@ -12746,7 +12746,7 @@
     au < manifest ; exists ; 1996 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 1 ; 1 ; >
     au < manifest ; exists ; 1997 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 2 ; 2 ; >
     au < manifest ; exists ; 1998 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 3 ; 3 ; >
-    au < ready ; exists ; 1999 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 4 ; 4 ; >
+    au < crawling ; exists ; 1999 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 4 ; 4 ; >
     au < crawling ; exists ; 2000 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 5 ; 5 ; >
     au < crawling ; exists ; 2001 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2002 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 7 ; 7 ; >
@@ -13177,9 +13177,9 @@
     au < manifest ; exists ; 1996 ; Work Study Volume 45 ; 45 ; >
     au < manifest ; exists ; 1997 ; Work Study Volume 46 ; 46 ; >
     au < manifest ; exists ; 1998 ; Work Study Volume 47 ; 47 ; >
-    au < ready ; exists ; 1999 ; Work Study Volume 48 ; 48 ; >
+    au < crawling ; exists ; 1999 ; Work Study Volume 48 ; 48 ; >
     au < crawling ; exists ; 2000 ; Work Study Volume 49 ; 49 ; >
-    au < ready ; exists ; 2001 ; Work Study Volume 50 ; 50 ; >
+    au < crawling ; exists ; 2001 ; Work Study Volume 50 ; 50 ; >
     au < doNotProcess ; doNotProcess ; 2002 ; Work Study Volume 51 ; 51 ; >
     au < crawling ; exists ; 2003 ; Work Study Volume 52 ; 52 ; >
 
@@ -13404,7 +13404,7 @@
     au < crawling ; exists ; 2015 ; Annals in Social Responsibility Volume 2 ; 2 ; >
     au < ready ; exists ; 2016 ; Annals in Social Responsibility Volume 3 ; 3 ; >
     au < ready ; exists ; 2017 ; Annals in Social Responsibility Volume 4 ; 4 ; >
-    au < ready ; exists ; 2018 ; Annals in Social Responsibility Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2018 ; Annals in Social Responsibility Volume 5 ; 5 ; >
     au < ready ; exists ; 2019 ; Annals in Social Responsibility Volume 6 ; 6 ; >
     au < ready ; exists ; 2020 ; Annals in Social Responsibility Volume 7 ; 7 ; >
     au < ready ; exists ; 2021 ; Annals in Social Responsibility Volume 8 ; 8 ; >
@@ -13507,7 +13507,7 @@
     param[journal_issn] = 2049-3983
 
     au < ready ; exists ; 2013 ; Evidence-based HRM Volume 1 ; 1 ; >
-    au < ready ; exists ; 2014 ; Evidence-based HRM Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2014 ; Evidence-based HRM Volume 2 ; 2 ; >
     au < ready ; exists ; 2015 ; Evidence-based HRM Volume 3 ; 3 ; >
     au < ready ; exists ; 2016 ; Evidence-based HRM Volume 4 ; 4 ; >
     au < ready ; exists ; 2017 ; Evidence-based HRM Volume 5 ; 5 ; >
@@ -13529,13 +13529,13 @@
 
     param[journal_issn] = 2056-4961
 
-    au < ready ; exists ; 2015 ; Information and Computer Security Volume 23 ; 23 ; >
+    au < crawling ; exists ; 2015 ; Information and Computer Security Volume 23 ; 23 ; >
     au < ready ; exists ; 2016 ; Information and Computer Security Volume 24 ; 24 ; >
     au < ready ; exists ; 2017 ; Information and Computer Security Volume 25 ; 25 ; >
     au < ready ; exists ; 2018 ; Information and Computer Security Volume 26 ; 26 ; >
     au < ready ; exists ; 2019 ; Information and Computer Security Volume 27 ; 27 ; >
     au < crawling ; exists ; 2020 ; Information and Computer Security Volume 28 ; 28 ; >
-    au < ready ; exists ; 2021 ; Information and Computer Security Volume 29 ; 29 ; >
+    au < crawling ; exists ; 2021 ; Information and Computer Security Volume 29 ; 29 ; >
     au < crawling ; exists ; 2022 ; Information and Computer Security Volume 30 ; 30 ; >
 
   }
@@ -13590,9 +13590,9 @@
     param[journal_issn] = 2056-4902
 
     au < ready ; exists ; 2016 ; International Journal of Human Rights in Healthcare Volume 8 ; 8 ; >
-    au < ready ; exists ; 2017 ; International Journal of Human Rights in Healthcare Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2017 ; International Journal of Human Rights in Healthcare Volume 9 ; 9 ; >
     au < ready ; exists ; 2018 ; International Journal of Human Rights in Healthcare Volume 10 ; 10 ; >
-    au < ready ; exists ; 2019 ; International Journal of Human Rights in Healthcare Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2019 ; International Journal of Human Rights in Healthcare Volume 11 ; 11 ; >
     au < ready ; exists ; 2020 ; International Journal of Human Rights in Healthcare Volume 12 ; 12 ; >
     au < ready ; exists ; 2021 ; International Journal of Human Rights in Healthcare Volume 13 ; 13 ; >
     au < crawling ; exists ; 2022 ; International Journal of Human Rights in Healthcare Volume 14 ; 14 ; >
@@ -13609,12 +13609,12 @@
 
     param[journal_issn] = 2056-4880
 
-    au < ready ; exists ; 2015 ; International Journal of Information and Learning Technology Volume 32 ; 32 ; >
+    au < crawling ; exists ; 2015 ; International Journal of Information and Learning Technology Volume 32 ; 32 ; >
     au < crawling ; exists ; 2016 ; International Journal of Information and Learning Technology Volume 33 ; 33 ; >
     au < ready ; exists ; 2017 ; International Journal of Information and Learning Technology Volume 34 ; 34 ; >
     au < ready ; exists ; 2018 ; International Journal of Information and Learning Technology Volume 35 ; 35 ; >
     au < ready ; exists ; 2019 ; International Journal of Information and Learning Technology Volume 36 ; 36 ; >
-    au < ready ; exists ; 2020 ; International Journal of Information and Learning Technology Volume 37 ; 37 ; >
+    au < crawling ; exists ; 2020 ; International Journal of Information and Learning Technology Volume 37 ; 37 ; >
     au < ready ; exists ; 2021 ; International Journal of Information and Learning Technology Volume 38 ; 38 ; >
     au < crawling ; exists ; 2022 ; International Journal of Information and Learning Technology Volume 39 ; 39 ; >
 
@@ -13637,7 +13637,7 @@
     au < ready ; exists ; 2013 ; International Journal of Innovation Science Volume 5 ; 5 ; >
     au < ready ; exists ; 2014 ; International Journal of Innovation Science Volume 6 ; 6 ; >
     au < ready ; exists ; 2015 ; International Journal of Innovation Science Volume 7 ; 7 ; >
-    au < ready ; exists ; 2016 ; International Journal of Innovation Science Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2016 ; International Journal of Innovation Science Volume 8 ; 8 ; >
     au < ready ; exists ; 2017 ; International Journal of Innovation Science Volume 9 ; 9 ; >
     au < ready ; exists ; 2018 ; International Journal of Innovation Science Volume 10 ; 10 ; >
     au < ready ; exists ; 2019 ; International Journal of Innovation Science Volume 11 ; 11 ; >
@@ -13700,7 +13700,7 @@
     au < ready ; exists ; 2015 ; International Journal of Organization Theory & Behavior Volume 18 ; 18 ; >
     au < ready ; exists ; 2016 ; International Journal of Organization Theory & Behavior Volume 19 ; 19 ; >
     au < ready ; exists ; 2017 ; International Journal of Organization Theory & Behavior Volume 20 ; 20 ; >
-    au < ready ; exists ; 2018 ; International Journal of Organization Theory & Behavior Volume 21 ; 21 ; >
+    au < crawling ; exists ; 2018 ; International Journal of Organization Theory & Behavior Volume 21 ; 21 ; >
     au < ready ; exists ; 2019 ; International Journal of Organization Theory & Behavior Volume 22 ; 22 ; >
     au < ready ; exists ; 2020 ; International Journal of Organization Theory & Behavior Volume 23 ; 23 ; >
     au < ready ; exists ; 2021 ; International Journal of Organization Theory & Behavior Volume 24 ; 24 ; >
@@ -13839,7 +13839,7 @@
 
     au < ready ; exists ; 2014 ; Journal of Entrepreneurship in Emerging Economies Volume 6 ; 6 ; >
     au < crawling ; exists ; 2015 ; Journal of Entrepreneurship in Emerging Economies Volume 7 ; 7 ; >
-    au < ready ; exists ; 2016 ; Journal of Entrepreneurship in Emerging Economies Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2016 ; Journal of Entrepreneurship in Emerging Economies Volume 8 ; 8 ; >
     au < ready ; exists ; 2017 ; Journal of Entrepreneurship in Emerging Economies Volume 9 ; 9 ; >
     au < ready ; exists ; 2018 ; Journal of Entrepreneurship in Emerging Economies Volume 10 ; 10 ; >
     au < manifest ; exists ; 2019 ; Journal of Entrepreneurship in Emerging Economies Volume 11 ; 11 ; >
@@ -13946,8 +13946,8 @@
     param[journal_issn] = 2514-7641
 
     au < ready ; exists ; 2018 ; Journal of Participation and Employee Ownership Volume 1 ; 1 ; >
-    au < ready ; exists ; 2019 ; Journal of Participation and Employee Ownership Volume 2 ; 2 ; >
-    au < ready ; exists ; 2020 ; Journal of Participation and Employee Ownership Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2019 ; Journal of Participation and Employee Ownership Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2020 ; Journal of Participation and Employee Ownership Volume 3 ; 3 ; >
     au < crawling ; exists ; 2021 ; Journal of Participation and Employee Ownership Volume 4 ; 4 ; >
     au < crawling ; exists ; 2022 ; Journal of Participation and Employee Ownership Volume 5 ; 5 ; >
 
@@ -13965,8 +13965,8 @@
 
     au < ready ; exists ; 2016 ; Journal of Professional Capital and Community Volume 1 ; 1 ; >
     au < ready ; exists ; 2017 ; Journal of Professional Capital and Community Volume 2 ; 2 ; >
-    au < ready ; exists ; 2018 ; Journal of Professional Capital and Community Volume 3 ; 3 ; >
-    au < ready ; exists ; 2019 ; Journal of Professional Capital and Community Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2018 ; Journal of Professional Capital and Community Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2019 ; Journal of Professional Capital and Community Volume 4 ; 4 ; >
     au < crawling ; exists ; 2020 ; Journal of Professional Capital and Community Volume 5 ; 5 ; >
     au < ready ; exists ; 2021 ; Journal of Professional Capital and Community Volume 6 ; 6 ; >
     au < crawling ; exists ; 2022 ; Journal of Professional Capital and Community Volume 7 ; 7 ; >
@@ -13996,13 +13996,13 @@
     au < ready ; exists ; 2004 ; Journal of Public Budgeting, Accounting & Financial Management Volume 16 ; 16 ; >
     au < ready ; exists ; 2005 ; Journal of Public Budgeting, Accounting & Financial Management Volume 17 ; 17 ; >
     au < ready ; exists ; 2006 ; Journal of Public Budgeting, Accounting & Financial Management Volume 18 ; 18 ; >
-    au < ready ; exists ; 2007 ; Journal of Public Budgeting, Accounting & Financial Management Volume 19 ; 19 ; >
+    au < crawling ; exists ; 2007 ; Journal of Public Budgeting, Accounting & Financial Management Volume 19 ; 19 ; >
     au < ready ; exists ; 2008 ; Journal of Public Budgeting, Accounting & Financial Management Volume 20 ; 20 ; >
     au < ready ; exists ; 2009 ; Journal of Public Budgeting, Accounting & Financial Management Volume 21 ; 21 ; >
     au < ready ; exists ; 2010 ; Journal of Public Budgeting, Accounting & Financial Management Volume 22 ; 22 ; >
     au < ready ; exists ; 2011 ; Journal of Public Budgeting, Accounting & Financial Management Volume 23 ; 23 ; >
     au < ready ; exists ; 2012 ; Journal of Public Budgeting, Accounting & Financial Management Volume 24 ; 24 ; >
-    au < ready ; exists ; 2013 ; Journal of Public Budgeting, Accounting & Financial Management Volume 25 ; 25 ; >
+    au < crawling ; exists ; 2013 ; Journal of Public Budgeting, Accounting & Financial Management Volume 25 ; 25 ; >
     au < crawling ; exists ; 2014 ; Journal of Public Budgeting, Accounting & Financial Management Volume 26 ; 26 ; >
     au < ready ; exists ; 2015 ; Journal of Public Budgeting, Accounting & Financial Management Volume 27 ; 27 ; >
     au < ready ; exists ; 2016 ; Journal of Public Budgeting, Accounting & Financial Management Volume 28 ; 28 ; >
@@ -14042,7 +14042,7 @@
     au < crawling ; exists ; 2015 ; Journal of Public Procurement Volume 15 ; 15 ; >
     au < ready ; exists ; 2016 ; Journal of Public Procurement Volume 16 ; 16 ; >
     au < ready ; exists ; 2017 ; Journal of Public Procurement Volume 17 ; 17 ; >
-    au < ready ; exists ; 2018 ; Journal of Public Procurement Volume 18 ; 18 ; >
+    au < crawling ; exists ; 2018 ; Journal of Public Procurement Volume 18 ; 18 ; >
     au < crawling ; exists ; 2019 ; Journal of Public Procurement Volume 19 ; 19 ; >
     au < crawling ; exists ; 2020 ; Journal of Public Procurement Volume 20 ; 20 ; >
     au < ready ; exists ; 2021 ; Journal of Public Procurement Volume 21 ; 21 ; >
@@ -14105,9 +14105,9 @@
 
     au < ready ; exists ; 2010 ; Journal of Structural Fire Engineering Volume 1 ; 1 ; >
     au < ready ; exists ; 2011 ; Journal of Structural Fire Engineering Volume 2 ; 2 ; >
-    au < ready ; exists ; 2012 ; Journal of Structural Fire Engineering Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2012 ; Journal of Structural Fire Engineering Volume 3 ; 3 ; >
     au < crawling ; exists ; 2013 ; Journal of Structural Fire Engineering Volume 4 ; 4 ; >
-    au < ready ; exists ; 2014 ; Journal of Structural Fire Engineering Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2014 ; Journal of Structural Fire Engineering Volume 5 ; 5 ; >
     au < crawling ; exists ; 2015 ; Journal of Structural Fire Engineering Volume 6 ; 6 ; >
     au < ready ; exists ; 2016 ; Journal of Structural Fire Engineering Volume 7 ; 7 ; >
     au < ready ; exists ; 2017 ; Journal of Structural Fire Engineering Volume 8 ; 8 ; >
@@ -14130,8 +14130,8 @@
     param[journal_issn] = 0168-2601
 
     au < ready ; exists ; 2005 ; Open House International Volume 30 ; 30 ; >
-    au < ready ; exists ; 2006 ; Open House International Volume 31 ; 31 ; >
-    au < ready ; exists ; 2007 ; Open House International Volume 32 ; 32 ; >
+    au < crawling ; exists ; 2006 ; Open House International Volume 31 ; 31 ; >
+    au < crawling ; exists ; 2007 ; Open House International Volume 32 ; 32 ; >
     au < crawling ; exists ; 2008 ; Open House International Volume 33 ; 33 ; >
     au < ready ; exists ; 2009 ; Open House International Volume 34 ; 34 ; >
     au < ready ; exists ; 2010 ; Open House International Volume 35 ; 35 ; >
@@ -14142,7 +14142,7 @@
     au < ready ; exists ; 2015 ; Open House International Volume 40 ; 40 ; >
     au < ready ; exists ; 2016 ; Open House International Volume 41 ; 41 ; >
     au < ready ; exists ; 2017 ; Open House International Volume 42 ; 42 ; >
-    au < ready ; exists ; 2018 ; Open House International Volume 43 ; 43 ; >
+    au < crawling ; exists ; 2018 ; Open House International Volume 43 ; 43 ; >
     au < ready ; exists ; 2019 ; Open House International Volume 44 ; 44 ; >
     au < ready ; exists ; 2020 ; Open House International Volume 45 ; 45 ; >
     au < ready ; exists ; 2021 ; Open House International Volume 46 ; 46 ; >
@@ -14163,8 +14163,8 @@
     au < manifest ; exists ; 1997 ; Research Journal of Textile and Apparel Volume 1 ; 1 ; >
     au < manifest ; exists ; 1998 ; Research Journal of Textile and Apparel Volume 2 ; 2 ; >
     au < crawling ; exists ; 1999 ; Research Journal of Textile and Apparel Volume 3 ; 3 ; >
-    au < ready ; exists ; 2000 ; Research Journal of Textile and Apparel Volume 4 ; 4 ; >
-    au < ready ; exists ; 2001 ; Research Journal of Textile and Apparel Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2000 ; Research Journal of Textile and Apparel Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2001 ; Research Journal of Textile and Apparel Volume 5 ; 5 ; >
     au < ready ; exists ; 2002 ; Research Journal of Textile and Apparel Volume 6 ; 6 ; >
     au < ready ; exists ; 2003 ; Research Journal of Textile and Apparel Volume 7 ; 7 ; >
     au < ready ; exists ; 2004 ; Research Journal of Textile and Apparel Volume 8 ; 8 ; >
@@ -14177,7 +14177,7 @@
     au < ready ; exists ; 2011 ; Research Journal of Textile and Apparel Volume 15 ; 15 ; >
     au < ready ; exists ; 2012 ; Research Journal of Textile and Apparel Volume 16 ; 16 ; >
     au < ready ; exists ; 2013 ; Research Journal of Textile and Apparel Volume 17 ; 17 ; >
-    au < ready ; exists ; 2014 ; Research Journal of Textile and Apparel Volume 18 ; 18 ; >
+    au < crawling ; exists ; 2014 ; Research Journal of Textile and Apparel Volume 18 ; 18 ; >
     au < ready ; exists ; 2015 ; Research Journal of Textile and Apparel Volume 19 ; 19 ; >
     au < ready ; exists ; 2016 ; Research Journal of Textile and Apparel Volume 20 ; 20 ; >
     au < crawling ; exists ; 2017 ; Research Journal of Textile and Apparel Volume 21 ; 21 ; >
@@ -14203,7 +14203,7 @@
     au < ready ; exists ; 2007 ; Social Studies Research and Practice Volume 2 ; 2 ; >
     au < ready ; exists ; 2008 ; Social Studies Research and Practice Volume 3 ; 3 ; >
     au < ready ; exists ; 2009 ; Social Studies Research and Practice Volume 4 ; 4 ; >
-    au < ready ; exists ; 2010 ; Social Studies Research and Practice Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2010 ; Social Studies Research and Practice Volume 5 ; 5 ; >
     au < ready ; exists ; 2011 ; Social Studies Research and Practice Volume 6 ; 6 ; >
     au < ready ; exists ; 2012 ; Social Studies Research and Practice Volume 7 ; 7 ; >
     au < ready ; exists ; 2013 ; Social Studies Research and Practice Volume 8 ; 8 ; >
@@ -14211,7 +14211,7 @@
     au < crawling ; exists ; 2015 ; Social Studies Research and Practice Volume 10 ; 10 ; >
     au < ready ; exists ; 2016 ; Social Studies Research and Practice Volume 11 ; 11 ; >
     au < ready ; exists ; 2017 ; Social Studies Research and Practice Volume 12 ; 12 ; >
-    au < ready ; exists ; 2018 ; Social Studies Research and Practice Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2018 ; Social Studies Research and Practice Volume 13 ; 13 ; >
     au < ready ; exists ; 2019 ; Social Studies Research and Practice Volume 14 ; 14 ; >
     au < ready ; exists ; 2020 ; Social Studies Research and Practice Volume 15 ; 15 ; >
     au < ready ; exists ; 2021 ; Social Studies Research and Practice Volume 16 ; 16 ; >
@@ -14249,12 +14249,12 @@
 
     param[journal_issn] = 2050-8794
 
-    au < ready ; exists ; 2013 ; The Journal of Forensic Practice Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2013 ; The Journal of Forensic Practice Volume 15 ; 15 ; >
     au < ready ; exists ; 2014 ; The Journal of Forensic Practice Volume 16 ; 16 ; >
     au < ready ; exists ; 2015 ; The Journal of Forensic Practice Volume 17 ; 17 ; >
     au < ready ; exists ; 2016 ; The Journal of Forensic Practice Volume 18 ; 18 ; >
     au < ready ; exists ; 2017 ; The Journal of Forensic Practice Volume 19 ; 19 ; >
-    au < ready ; exists ; 2018 ; The Journal of Forensic Practice Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2018 ; The Journal of Forensic Practice Volume 20 ; 20 ; >
     au < ready ; exists ; 2019 ; The Journal of Forensic Practice Volume 21 ; 21 ; >
     au < crawling ; exists ; 2020 ; The Journal of Forensic Practice Volume 22 ; 22 ; >
     au < ready ; exists ; 2021 ; The Journal of Forensic Practice Volume 23 ; 23 ; >
