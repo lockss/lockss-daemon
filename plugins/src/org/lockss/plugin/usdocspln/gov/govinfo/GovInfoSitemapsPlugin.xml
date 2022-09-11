@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>17</string>
+    <string>18</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -219,11 +219,15 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
   <string>plugin_cache_result_list</string>
     <list>
-      <!-- 504s occur on certain image files, we want to collect these but if they 504 they shouldnt kill the crawl -->
-      <string>504=org.lockss.plugin.usdocspln.gov.govinfo.GovInfoSitemapsHttpResponseHandler</string>
-      <!-- 520 and 525 don't retry by default like 500; but we believe this site would benefit from at least RetrySameUrlException -->
-      <string>520=org.lockss.plugin.usdocspln.gov.govinfo.GovInfoSitemapsHttpResponseHandler</string>
-      <string>525=org.lockss.plugin.usdocspln.gov.govinfo.GovInfoSitemapsHttpResponseHandler</string>
+      <!-- 409,413,429,500,502,503,504,507,521,523; normally RetrySameUrlException -->
+      <string>TransientServerConditionCodes=org.lockss.plugin.usdocspln.gov.govinfo.GovInfoRetrySameUrlException</string>
+      <!-- 408,440,522,524,527,598; normally RetrySameUrlException -->
+      <string>ServerTimeoutCodes=org.lockss.plugin.usdocspln.gov.govinfo.GovInfoRetrySameUrlException</string>
+      <!-- 509,529; normally RetrySameUrlException -->
+      <string>ServerLimitCodes=org.lockss.plugin.usdocspln.gov.govinfo.GovInfoRetrySameUrlException</string>
+      <!-- 520 and 525 don't retry by default; but we believe this site benefits from retrying them -->
+      <string>520=org.lockss.plugin.usdocspln.gov.govinfo.GovInfoRetrySameUrlException</string>
+      <string>525=org.lockss.plugin.usdocspln.gov.govinfo.GovInfoRetrySameUrlException</string>
       <!-- "chunked stream ended unexpectedly" is currently a plain IOException -->
       <string>java.io.IOException=org.lockss.plugin.usdocspln.gov.govinfo.GovInfoSitemapsHttpResponseHandler</string>
     </list>

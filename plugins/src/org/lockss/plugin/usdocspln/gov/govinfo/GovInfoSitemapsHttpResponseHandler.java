@@ -48,24 +48,24 @@ public class GovInfoSitemapsHttpResponseHandler implements CacheResultHandler {
 
   private static final Logger logger = Logger.getLogger(GovInfoSitemapsHttpResponseHandler.class);
 
-  /*examples:
-    app/details/lib/bootstrap/ico/apple-touch-icon-167.png
-    app/details/lib/bootstrap/ico/apple-touch-icon-76.png
-    apple-touch-icon-72.png
-    sites/all/apple-touch-icon-152.png
-    sites/all/apple-touch-icon-72.png
-    sites/all/themes/custom/misc/menu-collapsed.png
-    sites/all/themes/custom/misc/menu-expanded.png
-    sites/all/themes/custom/misc/menu-leaf.png
-    app/dynamic/stylesheets/fonts/glyphicons-halflings-regular.svg
-    sites/all/themes/custom/bootstrap-fdsys/bootstrap/fonts/glyphicons-halflings-regular.eot
-    sites/all/themes/custom/bootstrap-fdsys/bootstrap/fonts/glyphicons-halflings-regular.woff2
-    sites/all/themes/custom/bootstrap-fdsys/font-awesome/fonts/fontawesome-webfont.eot
-    sites/all/themes/custom/bootstrap-fdsys/font-awesome/fonts/fontawesome-webfont.eot%3Fv=4.3.0
-    sites/all/themes/custom/bootstrap-fdsys/font-awesome/fonts/fontawesome-webfont.svg%3Fv=4.3.0
-   */
-  protected static final Pattern NON_FATAL_GRAPHICS_PATTERN =
-      Pattern.compile("\\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)");
+//  /*examples:
+//    app/details/lib/bootstrap/ico/apple-touch-icon-167.png
+//    app/details/lib/bootstrap/ico/apple-touch-icon-76.png
+//    apple-touch-icon-72.png
+//    sites/all/apple-touch-icon-152.png
+//    sites/all/apple-touch-icon-72.png
+//    sites/all/themes/custom/misc/menu-collapsed.png
+//    sites/all/themes/custom/misc/menu-expanded.png
+//    sites/all/themes/custom/misc/menu-leaf.png
+//    app/dynamic/stylesheets/fonts/glyphicons-halflings-regular.svg
+//    sites/all/themes/custom/bootstrap-fdsys/bootstrap/fonts/glyphicons-halflings-regular.eot
+//    sites/all/themes/custom/bootstrap-fdsys/bootstrap/fonts/glyphicons-halflings-regular.woff2
+//    sites/all/themes/custom/bootstrap-fdsys/font-awesome/fonts/fontawesome-webfont.eot
+//    sites/all/themes/custom/bootstrap-fdsys/font-awesome/fonts/fontawesome-webfont.eot%3Fv=4.3.0
+//    sites/all/themes/custom/bootstrap-fdsys/font-awesome/fonts/fontawesome-webfont.svg%3Fv=4.3.0
+//   */
+//  protected static final Pattern NON_FATAL_GRAPHICS_PATTERN =
+//      Pattern.compile("\\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)");
 
   @Override
   public void init(CacheResultMap crmap) {
@@ -77,22 +77,8 @@ public class GovInfoSitemapsHttpResponseHandler implements CacheResultHandler {
   public CacheException handleResult(ArchivalUnit au,
                                      String url,
                                      int responseCode) {
-      logger.debug2(String.format("URL: %s, response code: %d", url, responseCode));
-      switch (responseCode) {
-        case 504:
-          Matcher fmat = NON_FATAL_GRAPHICS_PATTERN.matcher(url);
-          if (fmat.find()) {
-            return new GovInfoRetryNoFailException(responseCode + " Gateway Timeout (non-fatal)");
-          }
-          return new GovInfoRetryFailException(responseCode + " Gateway Timeout");
-        case 520:
-        case 525:
-          return new CacheException.RetrySameUrlException();
-        default:
-          logger.warning("Unexpected responseCode (" + responseCode + ") in handleResult(): AU " + au.getName() + "; URL " + url);
-          throw new UnsupportedOperationException("Unexpected response code: " + responseCode);
-      }
-    }
+    throw new UnsupportedOperationException(String.format("Unexpected response code %d for URL %s", responseCode, url));
+  }
 
   @Override
   public CacheException handleResult(ArchivalUnit au,
@@ -108,70 +94,6 @@ public class GovInfoSitemapsHttpResponseHandler implements CacheResultHandler {
       return new CacheException.UnknownExceptionException("Unmapped exception: " + exc, exc);
     }
     throw new UnsupportedOperationException("Unexpected exception: " + exc);
-  }
-  
-  public static class GovInfoRetryableException extends RetryableException {
-    
-    public GovInfoRetryableException() {
-      super();
-    }
-    
-    public GovInfoRetryableException(String msg) {
-      super(msg);
-    }
-
-    @Override
-    protected void setAttributes() {
-      super.setAttributes();
-      attributeBits.set(ATTRIBUTE_RETRY);
-    }
-    
-    @Override
-    public int getRetryCount() {
-      return 60;
-    }
-
-    @Override
-    public long getRetryDelay() {
-      return 60 * Constants.SECOND;
-    }
-    
-  }
-  
-  public static class GovInfoRetryFailException extends GovInfoRetryableException {
-    
-    public GovInfoRetryFailException() {
-      super();
-    }
-    
-    public GovInfoRetryFailException(String msg) {
-      super(msg);
-    }
-    
-    @Override
-    protected void setAttributes() {
-      super.setAttributes();
-      attributeBits.set(ATTRIBUTE_FAIL);
-    }
-    
-  }
-  
-  public static class GovInfoRetryNoFailException extends GovInfoRetryableException {
-    
-    public GovInfoRetryNoFailException() {
-      super();
-    }
-    
-    public GovInfoRetryNoFailException(String msg) {
-      super(msg);
-    }
-    
-    @Override
-    protected void setAttributes() {
-      super.setAttributes();
-      attributeBits.clear(ATTRIBUTE_FAIL);
-    }
-    
   }
   
 }
