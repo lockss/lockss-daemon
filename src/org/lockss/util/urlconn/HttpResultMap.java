@@ -152,7 +152,7 @@ public class HttpResultMap implements CacheResultMap {
     ServerLimitCodes(L(509, 529),
                      CacheException.RetrySameUrlException.class),
     /** Result codes indicating a server timeout. */
-    ServerTimeoutCodes(L(440, 408, 598, 522, 524, 527),
+    ServerTimeoutCodes(L(408, 440, 522, 524, 527, 598),
                        CacheException.RetrySameUrlException.class),
     /** Result codes that should not be received (mostly because we
      * don't issue any request thatr would cause them). */
