@@ -66,9 +66,9 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Foraminiferal Research Volume 44 ; 44 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Foraminiferal Research Volume 45 ; 45 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Journal of Foraminiferal Research Volume 46 ; 46 ; >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Foraminiferal Research Volume 47 ; 47 ; >
-    au < frozen ; exists ; 2018 ; 2018 ; Journal of Foraminiferal Research Volume 48 ; 48 ; >
-    au < frozen ; exists ; 2019 ; 2019 ; Journal of Foraminiferal Research Volume 49 ; 49 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Foraminiferal Research Volume 47 ; 47 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2018 ; 2018 ; Journal of Foraminiferal Research Volume 48 ; 48 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2019 ; 2019 ; Journal of Foraminiferal Research Volume 49 ; 49 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Foraminiferal Research Volume 50 ; 50 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Journal of Foraminiferal Research Volume 51 ; 51 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Journal of Foraminiferal Research Volume 52 ; 52 ; >
