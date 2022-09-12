@@ -290,7 +290,7 @@
       #param[base_url] = http://newprairiepress.org/
       param[journal_abbr] = burgonsociety
 
-      au < ready ; exists ; 2001 ; Transactions of the Burgon Society Volume 1 ; 1 ; https://newprairiepress.org/ ; >
+      au < crawling ; exists ; 2001 ; Transactions of the Burgon Society Volume 1 ; 1 ; https://newprairiepress.org/ ; >
       au < ready ; exists ; 2002 ; Transactions of the Burgon Society Volume 2 ; 2 ; https://newprairiepress.org/ ; >
       au < ready ; exists ; 2003 ; Transactions of the Burgon Society Volume 3 ; 3 ; https://newprairiepress.org/ ; >
       au < ready ; exists ; 2004 ; Transactions of the Burgon Society Volume 4 ; 4 ; https://newprairiepress.org/ ; >
@@ -396,8 +396,8 @@
       au < ready ; exists ; 1991-1992 ; Educational Considerations Volume 19 ; 19 ; >
       au < ready ; exists ; 1992-1993 ; Educational Considerations Volume 20 ; 20 ; >
       au < ready ; exists ; 1993-1994 ; Educational Considerations Volume 21 ; 21 ; >
-      au < ready ; exists ; 1994-1995 ; Educational Considerations Volume 22 ; 22 ; >
-      au < ready ; exists ; 1995-1996 ; Educational Considerations Volume 23 ; 23 ; >
+      au < crawling ; exists ; 1994-1995 ; Educational Considerations Volume 22 ; 22 ; >
+      au < crawling ; exists ; 1995-1996 ; Educational Considerations Volume 23 ; 23 ; >
       au < ready ; exists ; 1996-1997 ; Educational Considerations Volume 24 ; 24 ; >
       au < ready ; exists ; 1997-1998 ; Educational Considerations Volume 25 ; 25 ; >
       au < ready ; exists ; 1998-1999 ; Educational Considerations Volume 26 ; 26 ; >
@@ -530,9 +530,9 @@
       au < manifest ; exists ; 1987 ; Fungal Genetics Newsletter Volume 34 ; 34 ; >
       au < manifest ; exists ; 1988 ; Fungal Genetics Newsletter Volume 35 ; 35 ; >
       au < manifest ; exists ; 1989 ; Fungal Genetics Newsletter Volume 36 ; 36 ; >
-      au < ready ; exists ; 1990 ; Fungal Genetics Newsletter Volume 37 ; 37 ; >
+      au < crawling ; exists ; 1990 ; Fungal Genetics Newsletter Volume 37 ; 37 ; >
       au < ready ; exists ; 1991 ; Fungal Genetics Newsletter Volume 38 ; 38 ; >
-      au < ready ; exists ; 1992 ; Fungal Genetics Newsletter Volume 39 ; 39 ; >
+      au < crawling ; exists ; 1992 ; Fungal Genetics Newsletter Volume 39 ; 39 ; >
       au < ready ; exists ; 1993 ; Fungal Genetics Newsletter Volume 40 ; 40 ; >
       au < ready ; exists ; 1994 ; Fungal Genetics Newsletter Volume 41 ; 41 ; >
       au < ready ; exists ; 1995 ; Fungal Genetics Newsletter Volume 42 ; 42 ; >
@@ -670,8 +670,8 @@
       au < ready ; exists ; 1997 ; Journal of Applied Communications Volume 81 ; 81 ; >
       au < ready ; exists ; 1998 ; Journal of Applied Communications Volume 82 ; 82 ; >
       au < ready ; exists ; 1999 ; Journal of Applied Communications Volume 83 ; 83 ; >
-      au < ready ; exists ; 2000 ; Journal of Applied Communications Volume 84 ; 84 ; >
-      au < ready ; exists ; 2001 ; Journal of Applied Communications Volume 85 ; 85 ; >
+      au < crawling ; exists ; 2000 ; Journal of Applied Communications Volume 84 ; 84 ; >
+      au < crawling ; exists ; 2001 ; Journal of Applied Communications Volume 85 ; 85 ; >
       au < ready ; exists ; 2002 ; Journal of Applied Communications Volume 86 ; 86 ; >
       au < crawling ; exists ; 2003 ; Journal of Applied Communications Volume 87 ; 87 ; >
       au < finished ; finished ; 2004 ; Journal of Applied Communications Volume 88 ; 88 ; reingest3.clockss.org:8083 >
@@ -839,7 +839,7 @@
       au < crawling ; exists ; 1993 ; Oz Volume 15 ; 15 ; >
       au < crawling ; exists ; 1994 ; Oz Volume 16 ; 16 ; >
       au < ready ; exists ; 1995 ; Oz Volume 17 ; 17 ; >
-      au < ready ; exists ; 1996 ; Oz Volume 18 ; 18 ; >
+      au < crawling ; exists ; 1996 ; Oz Volume 18 ; 18 ; >
       au < ready ; exists ; 1997 ; Oz Volume 19 ; 19 ; >
       au < ready ; exists ; 1998 ; Oz Volume 20 ; 20 ; >
       au < ready ; exists ; 1999 ; Oz Volume 21 ; 21 ; >

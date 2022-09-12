@@ -744,7 +744,7 @@
 
     au < manifest ; exists ; 1997 ; Asian Libraries Volume 6 ; 6 ; >
     au < manifest ; exists ; 1998 ; Asian Libraries Volume 7 ; 7 ; >
-    au < ready ; exists ; 1999 ; Asian Libraries Volume 8 ; 8 ; >
+    au < crawling ; exists ; 1999 ; Asian Libraries Volume 8 ; 8 ; >
 
   }
 
@@ -1195,7 +1195,7 @@
     au < manifest ; exists ; 1995 ; British Food Journal Volume 97 ; 97 ; >
     au < manifest ; exists ; 1996 ; British Food Journal Volume 98 ; 98 ; >
     au < manifest ; exists ; 1997 ; British Food Journal Volume 99 ; 99 ; >
-    au < ready ; exists ; 1998 ; British Food Journal Volume 100 ; 100 ; >
+    au < crawling ; exists ; 1998 ; British Food Journal Volume 100 ; 100 ; >
     au < ready ; exists ; 1999 ; British Food Journal Volume 101 ; 101 ; >
     au < frozen ; exists ; 2000 ; British Food Journal Volume 102 ; 102 ; >
     au < frozen ; exists ; 2001 ; British Food Journal Volume 103 ; 103 ; >
@@ -1718,7 +1718,7 @@
     au < manifest ; exists ; 1996 ; Collection Building Volume 15 ; 15 ; >
     au < manifest ; exists ; 1997 ; Collection Building Volume 16 ; 16 ; >
     au < ready ; exists ; 1998 ; Collection Building Volume 17 ; 17 ; >
-    au < ready ; exists ; 1999 ; Collection Building Volume 18 ; 18 ; >
+    au < crawling ; exists ; 1999 ; Collection Building Volume 18 ; 18 ; >
     au < frozen ; exists ; 2000 ; Collection Building Volume 19 ; 19 ; >
     au < finished ; crawling ; 2001 ; Collection Building Volume 20 ; 20 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2002 ; Collection Building Volume 21 ; 21 ; >
@@ -2900,7 +2900,7 @@
     au < manifest ; exists ; 1995 ; Facilities Volume 13 ; 13 ; >
     au < manifest ; exists ; 1996 ; Facilities Volume 14 ; 14 ; >
     au < manifest ; exists ; 1997 ; Facilities Volume 15 ; 15 ; >
-    au < ready ; exists ; 1998 ; Facilities Volume 16 ; 16 ; >
+    au < crawling ; exists ; 1998 ; Facilities Volume 16 ; 16 ; >
     au < ready ; exists ; 1999 ; Facilities Volume 17 ; 17 ; >
     au < frozen ; exists ; 2000 ; Facilities Volume 18 ; 18 ; >
     au < frozen ; exists ; 2001 ; Facilities Volume 19 ; 19 ; >
@@ -3377,7 +3377,7 @@
     au < manifest ; exists ; 1996 ; Industrial and Commercial Training Volume 28 ; 28 ; >
     au < manifest ; exists ; 1997 ; Industrial and Commercial Training Volume 29 ; 29 ; >
     au < ready ; exists ; 1998 ; Industrial and Commercial Training Volume 30 ; 30 ; >
-    au < ready ; exists ; 1999 ; Industrial and Commercial Training Volume 31 ; 31 ; >
+    au < crawling ; exists ; 1999 ; Industrial and Commercial Training Volume 31 ; 31 ; >
     au < frozen ; exists ; 2000 ; Industrial and Commercial Training Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2001 ; Industrial and Commercial Training Volume 33 ; 33 ; >
     au < frozen ; exists ; 2002 ; Industrial and Commercial Training Volume 34 ; 34 ; >
@@ -3896,7 +3896,7 @@
     #continued_by = 2398-4686
 
     au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal for Researcher Development Volume 1 ; 1 ; >
-    au < ready ; exists ; 2011 ; International Journal for Researcher Development Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2011 ; International Journal for Researcher Development Volume 2 ; 2 ; >
     au < ready ; exists ; 2012 ; International Journal for Researcher Development Volume 3 ; 3 ; >
     au < ready ; exists ; 2013 ; International Journal for Researcher Development Volume 4 ; 4 ; >
     au < ready ; exists ; 2014 ; International Journal for Researcher Development Volume 5 ; 5 ; >
@@ -9680,7 +9680,7 @@
     au < manifest ; exists ; 1995 ; Library Review Volume 44 ; 44 ; >
     au < manifest ; exists ; 1996 ; Library Review Volume 45 ; 45 ; >
     au < manifest ; exists ; 1997 ; Library Review Volume 46 ; 46 ; >
-    au < ready ; exists ; 1998 ; Library Review Volume 47 ; 47 ; >
+    au < crawling ; exists ; 1998 ; Library Review Volume 47 ; 47 ; >
     au < ready ; exists ; 1999 ; Library Review Volume 48 ; 48 ; >
     au < doNotProcess ; doNotProcess ; 2000 ; Library Review Volume 49 ; 49 ; >
     au < ready ; exists ; 2001 ; Library Review Volume 50 ; 50 ; >
@@ -9760,7 +9760,7 @@
     au < manifest ; exists ; 1996 ; Logistics Information Management Volume 9 ; 9 ; >
     au < manifest ; exists ; 1997 ; Logistics Information Management Volume 10 ; 10 ; >
     au < manifest ; exists ; 1998 ; Logistics Information Management Volume 11 ; 11 ; >
-    au < ready ; exists ; 1999 ; Logistics Information Management Volume 12 ; 12 ; >
+    au < crawling ; exists ; 1999 ; Logistics Information Management Volume 12 ; 12 ; >
     au < frozen ; exists ; 2000 ; Logistics Information Management Volume 13 ; 13 ; >
     au < crawling ; exists ; 2001 ; Logistics Information Management Volume 14 ; 14 ; >
     au < crawling ; exists ; 2002 ; Logistics Information Management Volume 15 ; 15 ; >
@@ -13384,7 +13384,7 @@
     au < ready ; exists ; 2016 ; Advances in Autism Volume 2 ; 2 ; >
     au < ready ; exists ; 2017 ; Advances in Autism Volume 3 ; 3 ; >
     au < ready ; exists ; 2018 ; Advances in Autism Volume 4 ; 4 ; >
-    au < ready ; exists ; 2019 ; Advances in Autism Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2019 ; Advances in Autism Volume 5 ; 5 ; >
     au < ready ; exists ; 2020 ; Advances in Autism Volume 6 ; 6 ; >
     au < ready ; exists ; 2021 ; Advances in Autism Volume 7 ; 7 ; >
     au < crawling ; exists ; 2022 ; Advances in Autism Volume 8 ; 8 ; >
@@ -13428,7 +13428,7 @@
     au < ready ; exists ; 2017 ; Aslib Journal of Information Management Volume 69 ; 69 ; >
     au < ready ; exists ; 2018 ; Aslib Journal of Information Management Volume 70 ; 70 ; >
     au < ready ; exists ; 2019 ; Aslib Journal of Information Management Volume 71 ; 71 ; >
-    au < ready ; exists ; 2020 ; Aslib Journal of Information Management Volume 72 ; 72 ; >
+    au < crawling ; exists ; 2020 ; Aslib Journal of Information Management Volume 72 ; 72 ; >
     au < crawling ; exists ; 2021 ; Aslib Journal of Information Management Volume 73 ; 73 ; >
     au < crawling ; exists ; 2022 ; Aslib Journal of Information Management Volume 74 ; 74 ; >
 
@@ -13446,7 +13446,7 @@
 
     au < crawling ; exists ; 2019 ; Continuity and Resilience Review Volume 1 ; 1 ; >
     au < ready ; exists ; 2020 ; Continuity and Resilience Review Volume 2 ; 2 ; >
-    au < ready ; exists ; 2021 ; Continuity and Resilience Review Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2021 ; Continuity and Resilience Review Volume 3 ; 3 ; >
     au < crawling ; exists ; 2022 ; Continuity and Resilience Review Volume 4 ; 4 ; >
 
   }
@@ -13510,7 +13510,7 @@
     au < crawling ; exists ; 2014 ; Evidence-based HRM Volume 2 ; 2 ; >
     au < ready ; exists ; 2015 ; Evidence-based HRM Volume 3 ; 3 ; >
     au < ready ; exists ; 2016 ; Evidence-based HRM Volume 4 ; 4 ; >
-    au < ready ; exists ; 2017 ; Evidence-based HRM Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2017 ; Evidence-based HRM Volume 5 ; 5 ; >
     au < ready ; exists ; 2018 ; Evidence-based HRM Volume 6 ; 6 ; >
     au < ready ; exists ; 2019 ; Evidence-based HRM Volume 7 ; 7 ; >
     au < crawling ; exists ; 2020 ; Evidence-based HRM Volume 8 ; 8 ; >
@@ -13689,7 +13689,7 @@
     au < ready ; exists ; 2004 ; International Journal of Organization Theory & Behavior Volume 7 ; 7 ; >
     au < ready ; exists ; 2005 ; International Journal of Organization Theory & Behavior Volume 8 ; 8 ; >
     au < ready ; exists ; 2006 ; International Journal of Organization Theory & Behavior Volume 9 ; 9 ; >
-    au < ready ; exists ; 2007 ; International Journal of Organization Theory & Behavior Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2007 ; International Journal of Organization Theory & Behavior Volume 10 ; 10 ; >
     au < ready ; exists ; 2008 ; International Journal of Organization Theory & Behavior Volume 11 ; 11 ; >
     au < ready ; exists ; 2009 ; International Journal of Organization Theory & Behavior Volume 12 ; 12 ; >
     au < ready ; exists ; 2010 ; International Journal of Organization Theory & Behavior Volume 13 ; 13 ; >
@@ -13725,7 +13725,7 @@
     au < ready ; exists ; 2003 ; International Journal of Sports Marketing and Sponsorship Volume 5 ; 5 ; >
     au < ready ; exists ; 2004 ; International Journal of Sports Marketing and Sponsorship Volume 6 ; 6 ; >
     au < ready ; exists ; 2005 ; International Journal of Sports Marketing and Sponsorship Volume 7 ; 7 ; >
-    au < ready ; exists ; 2006 ; International Journal of Sports Marketing and Sponsorship Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2006 ; International Journal of Sports Marketing and Sponsorship Volume 8 ; 8 ; >
     au < ready ; exists ; 2007 ; International Journal of Sports Marketing and Sponsorship Volume 9 ; 9 ; >
     au < ready ; exists ; 2008 ; International Journal of Sports Marketing and Sponsorship Volume 10 ; 10 ; >
     au < ready ; exists ; 2009 ; International Journal of Sports Marketing and Sponsorship Volume 11 ; 11 ; >
@@ -13734,7 +13734,7 @@
     au < ready ; exists ; 2012 ; International Journal of Sports Marketing and Sponsorship Volume 14 ; 14 ; >
     au < ready ; exists ; 2013 ; International Journal of Sports Marketing and Sponsorship Volume 15 ; 15 ; >
     au < ready ; exists ; 2014 ; International Journal of Sports Marketing and Sponsorship Volume 16 ; 16 ; >
-    au < ready ; exists ; 2015 ; International Journal of Sports Marketing and Sponsorship Volume 17 ; 17 ; >
+    au < crawling ; exists ; 2015 ; International Journal of Sports Marketing and Sponsorship Volume 17 ; 17 ; >
     au < ready ; exists ; 2016 ; International Journal of Sports Marketing and Sponsorship Volume 18 ; 18 ; >
     au < ready ; exists ; 2017 ; International Journal of Sports Marketing and Sponsorship Volume 19 ; 19 ; >
     au < ready ; exists ; 2018 ; International Journal of Sports Marketing and Sponsorship Volume 20 ; 20 ; >
@@ -14006,7 +14006,7 @@
     au < crawling ; exists ; 2014 ; Journal of Public Budgeting, Accounting & Financial Management Volume 26 ; 26 ; >
     au < ready ; exists ; 2015 ; Journal of Public Budgeting, Accounting & Financial Management Volume 27 ; 27 ; >
     au < ready ; exists ; 2016 ; Journal of Public Budgeting, Accounting & Financial Management Volume 28 ; 28 ; >
-    au < ready ; exists ; 2017 ; Journal of Public Budgeting, Accounting & Financial Management Volume 29 ; 29 ; >
+    au < crawling ; exists ; 2017 ; Journal of Public Budgeting, Accounting & Financial Management Volume 29 ; 29 ; >
     au < ready ; exists ; 2018 ; Journal of Public Budgeting, Accounting & Financial Management Volume 30 ; 30 ; >
     au < ready ; exists ; 2019 ; Journal of Public Budgeting, Accounting & Financial Management Volume 31 ; 31 ; >
     au < ready ; exists ; 2020 ; Journal of Public Budgeting, Accounting & Financial Management Volume 32 ; 32 ; >
@@ -14141,7 +14141,7 @@
     au < ready ; exists ; 2014 ; Open House International Volume 39 ; 39 ; >
     au < ready ; exists ; 2015 ; Open House International Volume 40 ; 40 ; >
     au < ready ; exists ; 2016 ; Open House International Volume 41 ; 41 ; >
-    au < ready ; exists ; 2017 ; Open House International Volume 42 ; 42 ; >
+    au < crawling ; exists ; 2017 ; Open House International Volume 42 ; 42 ; >
     au < crawling ; exists ; 2018 ; Open House International Volume 43 ; 43 ; >
     au < ready ; exists ; 2019 ; Open House International Volume 44 ; 44 ; >
     au < ready ; exists ; 2020 ; Open House International Volume 45 ; 45 ; >
@@ -14174,7 +14174,7 @@
     au < ready ; exists ; 2008 ; Research Journal of Textile and Apparel Volume 12 ; 12 ; >
     au < crawling ; exists ; 2009 ; Research Journal of Textile and Apparel Volume 13 ; 13 ; >
     au < ready ; exists ; 2010 ; Research Journal of Textile and Apparel Volume 14 ; 14 ; >
-    au < ready ; exists ; 2011 ; Research Journal of Textile and Apparel Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2011 ; Research Journal of Textile and Apparel Volume 15 ; 15 ; >
     au < ready ; exists ; 2012 ; Research Journal of Textile and Apparel Volume 16 ; 16 ; >
     au < ready ; exists ; 2013 ; Research Journal of Textile and Apparel Volume 17 ; 17 ; >
     au < crawling ; exists ; 2014 ; Research Journal of Textile and Apparel Volume 18 ; 18 ; >
