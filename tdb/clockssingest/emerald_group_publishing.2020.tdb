@@ -1010,7 +1010,7 @@
     comment[journal_id] = bij
     #continues = 1351-3036
 
-    au < crawling ; exists ; 1999 ; Benchmarking: An International Journal Volume 6 ; 6 ; >
+    au < frozen ; exists ; 1999 ; Benchmarking: An International Journal Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2000 ; Benchmarking: An International Journal Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2001 ; Benchmarking: An International Journal Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2002 ; Benchmarking: An International Journal Volume 9 ; 9 ; >
@@ -1253,7 +1253,7 @@
     #continues = 1361-5874
     comment[continued_by] = 1477-7274
 
-    au < crawling ; exists ; 1999 ; British Journal of Clinical Governance Volume 4 ; 4 ; >
+    au < frozen ; exists ; 1999 ; British Journal of Clinical Governance Volume 4 ; 4 ; >
     au < finished ; crawling ; 2000 ; British Journal of Clinical Governance Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2001 ; British Journal of Clinical Governance Volume 6 ; 6 ; >
     au < finished ; crawling ; 2002 ; British Journal of Clinical Governance Volume 7 ; 7 ; reingest1.clockss.org:8082 >
@@ -2325,7 +2325,7 @@
     au < ready ; exists ; 1999 ; The Electronic Library Volume 17 ; 17 ; >
     au < frozen ; exists ; 2000 ; The Electronic Library Volume 18 ; 18 ; >
     au < frozen ; exists ; 2001 ; The Electronic Library Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2002 ; The Electronic Library Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2002 ; The Electronic Library Volume 20 ; 20 ; >
     au < frozen ; exists ; 2003 ; The Electronic Library Volume 21 ; 21 ; >
     au < frozen ; exists ; 2004 ; The Electronic Library Volume 22 ; 22 ; >
     au < frozen ; exists ; 2005 ; The Electronic Library Volume 23 ; 23 ; >
@@ -2599,7 +2599,7 @@
     au < manifest ; exists ; 1996 ; Equal Opportunities International Volume 15 ; 15 ; >
     au < manifest ; exists ; 1997 ; Equal Opportunities International Volume 16 ; 16 ; >
     au < ready ; exists ; 1998 ; Equal Opportunities International Volume 17 ; 17 ; >
-    au < crawling ; exists ; 1999 ; Equal Opportunities International Volume 18 ; 18 ; >
+    au < frozen ; exists ; 1999 ; Equal Opportunities International Volume 18 ; 18 ; >
     au < frozen ; exists ; 2000 ; Equal Opportunities International Volume 19 ; 19 ; >
     au < ready ; exists ; 2001 ; Equal Opportunities International Volume 20 ; 20 ; >
     au < frozen ; exists ; 2002 ; Equal Opportunities International Volume 21 ; 21 ; >
@@ -3466,7 +3466,7 @@
     au < manifest ; exists ; 1996 ; Industrial Lubrication and Tribology Volume 48 ; 48 ; >
     au < manifest ; exists ; 1997 ; Industrial Lubrication and Tribology Volume 49 ; 49 ; >
     au < ready ; exists ; 1998 ; Industrial Lubrication and Tribology Volume 50 ; 50 ; >
-    au < crawling ; exists ; 1999 ; Industrial Lubrication and Tribology Volume 51 ; 51 ; >
+    au < frozen ; exists ; 1999 ; Industrial Lubrication and Tribology Volume 51 ; 51 ; >
     au < frozen ; exists ; 2000 ; Industrial Lubrication and Tribology Volume 52 ; 52 ; >
     au < frozen ; exists ; 2001 ; Industrial Lubrication and Tribology Volume 53 ; 53 ; >
     au < frozen ; exists ; 2002 ; Industrial Lubrication and Tribology Volume 54 ; 54 ; >
@@ -3750,7 +3750,7 @@
     au < manifest ; exists ; 1996 ; Information Technology & People Volume 9 ; 9 ; >
     au < manifest ; exists ; 1997 ; Information Technology & People Volume 10 ; 10 ; >
     au < manifest ; exists ; 1998 ; Information Technology & People Volume 11 ; 11 ; >
-    au < crawling ; exists ; 1999 ; Information Technology & People Volume 12 ; 12 ; >
+    au < frozen ; exists ; 1999 ; Information Technology & People Volume 12 ; 12 ; >
     au < frozen ; exists ; 2000 ; Information Technology & People Volume 13 ; 13 ; >
     au < frozen ; exists ; 2001 ; Information Technology & People Volume 14 ; 14 ; >
     au < frozen ; exists ; 2002 ; Information Technology & People Volume 15 ; 15 ; >
@@ -4205,7 +4205,7 @@
     au < manifest ; exists ; 1996 ; International Journal of Conflict Management Volume 7 ; 7 ; >
     au < manifest ; exists ; 1997 ; International Journal of Conflict Management Volume 8 ; 8 ; >
     au < manifest ; exists ; 1998 ; International Journal of Conflict Management Volume 9 ; 9 ; >
-    au < crawling ; exists ; 1999 ; International Journal of Conflict Management Volume 10 ; 10 ; >
+    au < frozen ; exists ; 1999 ; International Journal of Conflict Management Volume 10 ; 10 ; >
     au < frozen ; exists ; 2000 ; International Journal of Conflict Management Volume 11 ; 11 ; >
     au < frozen ; exists ; 2001 ; International Journal of Conflict Management Volume 12 ; 12 ; >
     au < frozen ; exists ; 2002 ; International Journal of Conflict Management Volume 13 ; 13 ; >
@@ -4487,9 +4487,9 @@
     param[journal_issn] = 1750-6220
     comment[journal_id] = ijesm
 
-    au < crawling ; exists ; 2007 ; International Journal of Energy Sector Management Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2007 ; International Journal of Energy Sector Management Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; International Journal of Energy Sector Management Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2009 ; International Journal of Energy Sector Management Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2009 ; International Journal of Energy Sector Management Volume 3 ; 3 ; >
     au < frozen ; exists ; 2010 ; International Journal of Energy Sector Management Volume 4 ; 4 ; >
     au < frozen ; exists ; 2011 ; International Journal of Energy Sector Management Volume 5 ; 5 ; >
     au < finished ; crawling ; 2012 ; International Journal of Energy Sector Management Volume 6 ; 6 ; reingest2.clockss.org:8085 >
@@ -4522,16 +4522,16 @@
     au < manifest ; exists ; 1997 ; International Journal of Entrepreneurial Behaviour & Research Volume 3 ; 3 ; >
     au < manifest ; exists ; 1998 ; International Journal of Entrepreneurial Behaviour & Research Volume 4 ; 4 ; >
     au < ready ; exists ; 1999 ; International Journal of Entrepreneurial Behaviour & Research Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2000 ; International Journal of Entrepreneurial Behaviour & Research Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2001 ; International Journal of Entrepreneurial Behaviour & Research Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2002 ; International Journal of Entrepreneurial Behaviour & Research Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2003 ; International Journal of Entrepreneurial Behaviour & Research Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2004 ; International Journal of Entrepreneurial Behaviour & Research Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2005 ; International Journal of Entrepreneurial Behaviour & Research Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2006 ; International Journal of Entrepreneurial Behaviour & Research Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2007 ; International Journal of Entrepreneurial Behaviour & Research Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2008 ; International Journal of Entrepreneurial Behaviour & Research Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2009 ; International Journal of Entrepreneurial Behaviour & Research Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2000 ; International Journal of Entrepreneurial Behaviour & Research Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2001 ; International Journal of Entrepreneurial Behaviour & Research Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2002 ; International Journal of Entrepreneurial Behaviour & Research Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2003 ; International Journal of Entrepreneurial Behaviour & Research Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2004 ; International Journal of Entrepreneurial Behaviour & Research Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2005 ; International Journal of Entrepreneurial Behaviour & Research Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2006 ; International Journal of Entrepreneurial Behaviour & Research Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2007 ; International Journal of Entrepreneurial Behaviour & Research Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2008 ; International Journal of Entrepreneurial Behaviour & Research Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2009 ; International Journal of Entrepreneurial Behaviour & Research Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Entrepreneurial Behaviour & Research Volume 16 ; 16 ; >
     au < frozen ; exists ; 2011 ; International Journal of Entrepreneurial Behaviour & Research Volume 17 ; 17 ; >
     au < frozen ; exists ; 2012 ; International Journal of Entrepreneurial Behaviour & Research Volume 18 ; 18 ; >
@@ -4584,7 +4584,7 @@
     param[journal_issn] = 1756-6266
     comment[journal_id] = ijge
 
-    au < crawling ; exists ; 2009 ; International Journal of Gender and Entrepreneurship Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2009 ; International Journal of Gender and Entrepreneurship Volume 1 ; 1 ; >
     au < frozen ; exists ; 2010 ; International Journal of Gender and Entrepreneurship Volume 2 ; 2 ; >
     au < frozen ; exists ; 2011 ; International Journal of Gender and Entrepreneurship Volume 3 ; 3 ; >
     au < frozen ; exists ; 2012 ; International Journal of Gender and Entrepreneurship Volume 4 ; 4 ; >
@@ -4625,19 +4625,19 @@
     au < manifest ; exists ; 1998 ; International Journal of Health Care Quality Assurance Volume 11 ; 11 ; >
     au < ready ; exists ; 1999 ; International Journal of Health Care Quality Assurance Volume 12 ; 12 ; >
     au < frozen ; exists ; 2000 ; International Journal of Health Care Quality Assurance Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2001 ; International Journal of Health Care Quality Assurance Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2002 ; International Journal of Health Care Quality Assurance Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2003 ; International Journal of Health Care Quality Assurance Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2004 ; International Journal of Health Care Quality Assurance Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2005 ; International Journal of Health Care Quality Assurance Volume 18 ; 18 ; >
-    au < crawling ; exists ; 2006 ; International Journal of Health Care Quality Assurance Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2007 ; International Journal of Health Care Quality Assurance Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2008 ; International Journal of Health Care Quality Assurance Volume 21 ; 21 ; >
-    au < crawling ; exists ; 2009 ; International Journal of Health Care Quality Assurance Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2010 ; International Journal of Health Care Quality Assurance Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2011 ; International Journal of Health Care Quality Assurance Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2012 ; International Journal of Health Care Quality Assurance Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2013 ; International Journal of Health Care Quality Assurance Volume 26 ; 26 ; >
+    au < frozen ; exists ; 2001 ; International Journal of Health Care Quality Assurance Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2002 ; International Journal of Health Care Quality Assurance Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2003 ; International Journal of Health Care Quality Assurance Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2004 ; International Journal of Health Care Quality Assurance Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2005 ; International Journal of Health Care Quality Assurance Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2006 ; International Journal of Health Care Quality Assurance Volume 19 ; 19 ; >
+    au < frozen ; exists ; 2007 ; International Journal of Health Care Quality Assurance Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2008 ; International Journal of Health Care Quality Assurance Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2009 ; International Journal of Health Care Quality Assurance Volume 22 ; 22 ; >
+    au < frozen ; exists ; 2010 ; International Journal of Health Care Quality Assurance Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2011 ; International Journal of Health Care Quality Assurance Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2012 ; International Journal of Health Care Quality Assurance Volume 25 ; 25 ; >
+    au < frozen ; exists ; 2013 ; International Journal of Health Care Quality Assurance Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Health Care Quality Assurance Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Health Care Quality Assurance Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Health Care Quality Assurance Volume 29 ; 29 ; >
@@ -4661,8 +4661,8 @@
     param[journal_issn] = 1753-8270
     comment[journal_id] = ijhma
 
-    au < crawling ; exists ; 2008 ; International Journal of Housing Markets and Analysis Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2009 ; International Journal of Housing Markets and Analysis Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2008 ; International Journal of Housing Markets and Analysis Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2009 ; International Journal of Housing Markets and Analysis Volume 2 ; 2 ; >
     au < frozen ; exists ; 2010 ; International Journal of Housing Markets and Analysis Volume 3 ; 3 ; >
     au < frozen ; exists ; 2011 ; International Journal of Housing Markets and Analysis Volume 4 ; 4 ; >
     au < frozen ; exists ; 2012 ; International Journal of Housing Markets and Analysis Volume 5 ; 5 ; >
@@ -4689,8 +4689,8 @@
     param[journal_issn] = 1756-378X
     comment[journal_id] = ijicc
 
-    au < crawling ; exists ; 2008 ; International Journal of Intelligent Computing and Cybernetics Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2009 ; International Journal of Intelligent Computing and Cybernetics Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2008 ; International Journal of Intelligent Computing and Cybernetics Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2009 ; International Journal of Intelligent Computing and Cybernetics Volume 2 ; 2 ; >
     au < frozen ; exists ; 2010 ; International Journal of Intelligent Computing and Cybernetics Volume 3 ; 3 ; >
     au < frozen ; exists ; 2011 ; International Journal of Intelligent Computing and Cybernetics Volume 4 ; 4 ; >
     au < frozen ; exists ; 2012 ; International Journal of Intelligent Computing and Cybernetics Volume 5 ; 5 ; >
@@ -4718,11 +4718,11 @@
     param[journal_issn] = 1753-8394
     comment[journal_id] = imefm
 
-    au < crawling ; exists ; 2008 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2009 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2008 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2009 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 2 ; 2 ; >
     au < frozen ; exists ; 2010 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2011 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2012 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2011 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2012 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 5 ; 5 ; >
     au < frozen ; exists ; 2013 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 8 ; 8 ; >
@@ -4748,8 +4748,8 @@
     comment[journal_id] = ijlma
     # online from 2008
 
-    au < crawling ; exists ; 2008 ; International Journal of Law and Management Volume 50 ; 50 ; >
-    au < crawling ; exists ; 2009 ; International Journal of Law and Management Volume 51 ; 51 ; >
+    au < frozen ; exists ; 2008 ; International Journal of Law and Management Volume 50 ; 50 ; >
+    au < frozen ; exists ; 2009 ; International Journal of Law and Management Volume 51 ; 51 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Law and Management Volume 52 ; 52 ; >
     au < frozen ; exists ; 2011 ; International Journal of Law and Management Volume 53 ; 53 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Law and Management Volume 54 ; 54 ; >
@@ -4778,11 +4778,11 @@
     comment[journal_id] = ijlbe
     #continued_by = 2514-9407
 
-    au < crawling ; exists ; 2009 ; International Journal of Law in the Built Environment Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2010 ; International Journal of Law in the Built Environment Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2009 ; International Journal of Law in the Built Environment Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2010 ; International Journal of Law in the Built Environment Volume 2 ; 2 ; >
     au < frozen ; exists ; 2011 ; International Journal of Law in the Built Environment Volume 3 ; 3 ; >
     au < frozen ; exists ; 2012 ; International Journal of Law in the Built Environment Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2013 ; International Journal of Law in the Built Environment Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2013 ; International Journal of Law in the Built Environment Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Law in the Built Environment Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Law in the Built Environment Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Law in the Built Environment Volume 8 ; 8 ; >
@@ -4820,14 +4820,14 @@
     comment[journal_id] = ijlps
     #continued_by = 2056-4929
 
-    au < crawling ; exists ; 2005 ; The International Journal of Leadership in Public Services Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2006 ; The International Journal of Leadership in Public Services Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2007 ; The International Journal of Leadership in Public Services Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2008 ; The International Journal of Leadership in Public Services Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2009 ; The International Journal of Leadership in Public Services Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2010 ; The International Journal of Leadership in Public Services Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2005 ; The International Journal of Leadership in Public Services Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2006 ; The International Journal of Leadership in Public Services Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2007 ; The International Journal of Leadership in Public Services Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2008 ; The International Journal of Leadership in Public Services Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2009 ; The International Journal of Leadership in Public Services Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2010 ; The International Journal of Leadership in Public Services Volume 6 ; 6 ; >
     au < frozen ; exists ; 2011 ; The International Journal of Leadership in Public Services Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2012 ; The International Journal of Leadership in Public Services Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2012 ; The International Journal of Leadership in Public Services Volume 8 ; 8 ; >
     au < frozen ; exists ; 2013 ; The International Journal of Leadership in Public Services Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; The International Journal of Leadership in Public Services Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; The International Journal of Leadership in Public Services Volume 11 ; 11 ; > #no substance, change journal_id ijpl
@@ -4866,10 +4866,10 @@
     param[journal_issn] = 2040-4166
     comment[journal_id] = ijlss
 
-    au < crawling ; exists ; 2010 ; International Journal of Lean Six Sigma Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2011 ; International Journal of Lean Six Sigma Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2010 ; International Journal of Lean Six Sigma Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2011 ; International Journal of Lean Six Sigma Volume 2 ; 2 ; >
     au < frozen ; exists ; 2012 ; International Journal of Lean Six Sigma Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2013 ; International Journal of Lean Six Sigma Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2013 ; International Journal of Lean Six Sigma Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Lean Six Sigma Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Lean Six Sigma Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Lean Six Sigma Volume 7 ; 7 ; >
@@ -4904,19 +4904,19 @@
     au < manifest ; exists ; 1998 ; The International Journal of Logistics Management Volume 9 ; 9 ; >
     au < ready ; exists ; 1999 ; The International Journal of Logistics Management Volume 10 ; 10 ; >
     au < frozen ; exists ; 2000 ; The International Journal of Logistics Management Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2001 ; The International Journal of Logistics Management Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2002 ; The International Journal of Logistics Management Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2003 ; The International Journal of Logistics Management Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2004 ; The International Journal of Logistics Management Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2005 ; The International Journal of Logistics Management Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2006 ; The International Journal of Logistics Management Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2007 ; The International Journal of Logistics Management Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2001 ; The International Journal of Logistics Management Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2002 ; The International Journal of Logistics Management Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2003 ; The International Journal of Logistics Management Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2004 ; The International Journal of Logistics Management Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2005 ; The International Journal of Logistics Management Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2006 ; The International Journal of Logistics Management Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2007 ; The International Journal of Logistics Management Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; The International Journal of Logistics Management Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2009 ; The International Journal of Logistics Management Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2010 ; The International Journal of Logistics Management Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2009 ; The International Journal of Logistics Management Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2010 ; The International Journal of Logistics Management Volume 21 ; 21 ; >
     au < frozen ; exists ; 2011 ; The International Journal of Logistics Management Volume 22 ; 22 ; >
     au < frozen ; exists ; 2012 ; The International Journal of Logistics Management Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2013 ; The International Journal of Logistics Management Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2013 ; The International Journal of Logistics Management Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; The International Journal of Logistics Management Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; The International Journal of Logistics Management Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; The International Journal of Logistics Management Volume 27 ; 27 ; >
@@ -4942,10 +4942,10 @@
 
     au < doNotProcess ; doNotProcess ; 2005 ; International Journal of Managerial Finance Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2006 ; International Journal of Managerial Finance Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2007 ; International Journal of Managerial Finance Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2008 ; International Journal of Managerial Finance Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2009 ; International Journal of Managerial Finance Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2010 ; International Journal of Managerial Finance Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2007 ; International Journal of Managerial Finance Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2008 ; International Journal of Managerial Finance Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2009 ; International Journal of Managerial Finance Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2010 ; International Journal of Managerial Finance Volume 6 ; 6 ; >
     au < frozen ; exists ; 2011 ; International Journal of Managerial Finance Volume 7 ; 7 ; >
     au < frozen ; exists ; 2012 ; International Journal of Managerial Finance Volume 8 ; 8 ; >
     au < frozen ; exists ; 2013 ; International Journal of Managerial Finance Volume 9 ; 9 ; >
@@ -4972,11 +4972,11 @@
     param[journal_issn] = 1753-8378
     comment[journal_id] = ijmpb
 
-    au < crawling ; exists ; 2008 ; International Journal of Managing Projects in Business Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2009 ; International Journal of Managing Projects in Business Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2010 ; International Journal of Managing Projects in Business Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2011 ; International Journal of Managing Projects in Business Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2012 ; International Journal of Managing Projects in Business Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2008 ; International Journal of Managing Projects in Business Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2009 ; International Journal of Managing Projects in Business Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2010 ; International Journal of Managing Projects in Business Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2011 ; International Journal of Managing Projects in Business Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2012 ; International Journal of Managing Projects in Business Volume 5 ; 5 ; >
     au < frozen ; exists ; 2013 ; International Journal of Managing Projects in Business Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Managing Projects in Business Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Managing Projects in Business Volume 8 ; 8 ; >
@@ -5021,17 +5021,17 @@
     au < manifest ; exists ; 1997 ; International Journal of Manpower Volume 18 ; 18 ; >
     au < ready ; exists ; 1998 ; International Journal of Manpower Volume 19 ; 19 ; >
     au < ready ; exists ; 1999 ; International Journal of Manpower Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2000 ; International Journal of Manpower Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2000 ; International Journal of Manpower Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2001 ; International Journal of Manpower Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2002 ; International Journal of Manpower Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2003 ; International Journal of Manpower Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2004 ; International Journal of Manpower Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2005 ; International Journal of Manpower Volume 26 ; 26 ; >
+    au < frozen ; exists ; 2002 ; International Journal of Manpower Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2003 ; International Journal of Manpower Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2004 ; International Journal of Manpower Volume 25 ; 25 ; >
+    au < frozen ; exists ; 2005 ; International Journal of Manpower Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2006 ; International Journal of Manpower Volume 27 ; 27 ; >
-    au < crawling ; exists ; 2007 ; International Journal of Manpower Volume 28 ; 28 ; >
-    au < crawling ; exists ; 2008 ; International Journal of Manpower Volume 29 ; 29 ; >
-    au < crawling ; exists ; 2009 ; International Journal of Manpower Volume 30 ; 30 ; >
-    au < crawling ; exists ; 2010 ; International Journal of Manpower Volume 31 ; 31 ; >
+    au < frozen ; exists ; 2007 ; International Journal of Manpower Volume 28 ; 28 ; >
+    au < frozen ; exists ; 2008 ; International Journal of Manpower Volume 29 ; 29 ; >
+    au < frozen ; exists ; 2009 ; International Journal of Manpower Volume 30 ; 30 ; >
+    au < frozen ; exists ; 2010 ; International Journal of Manpower Volume 31 ; 31 ; >
     au < frozen ; exists ; 2011 ; International Journal of Manpower Volume 32 ; 32 ; >
     au < frozen ; exists ; 2012 ; International Journal of Manpower Volume 33 ; 33 ; >
     au < frozen ; exists ; 2013 ; International Journal of Manpower Volume 34 ; 34 ; >
@@ -5081,12 +5081,12 @@
     param[journal_issn] = 1747-9894
     comment[journal_id] = ijmhsc
 
-    au < crawling ; exists ; 2005 ; International Journal of Migration, Health and Social Care Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2006 ; International Journal of Migration, Health and Social Care Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2007 ; International Journal of Migration, Health and Social Care Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2008 ; International Journal of Migration, Health and Social Care Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2009 ; International Journal of Migration, Health and Social Care Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2010 ; International Journal of Migration, Health and Social Care Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2005 ; International Journal of Migration, Health and Social Care Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2006 ; International Journal of Migration, Health and Social Care Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2007 ; International Journal of Migration, Health and Social Care Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2008 ; International Journal of Migration, Health and Social Care Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2009 ; International Journal of Migration, Health and Social Care Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2010 ; International Journal of Migration, Health and Social Care Volume 6 ; 6 ; >
     au < frozen ; exists ; 2011 ; International Journal of Migration, Health and Social Care Volume 7 ; 7 ; >
     au < frozen ; exists ; 2012 ; International Journal of Migration, Health and Social Care Volume 8 ; 8 ; >
     au < frozen ; exists ; 2013 ; International Journal of Migration, Health and Social Care Volume 9 ; 9 ; >
@@ -5123,19 +5123,19 @@
     au < manifest ; exists ; 1998 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 8 ; 8 ; >
     au < ready ; exists ; 1999 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 9 ; 9 ; >
     au < frozen ; exists ; 2000 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2001 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2002 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2003 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2004 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2005 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2006 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2007 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2008 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 18 ; 18 ; >
-    au < crawling ; exists ; 2009 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2010 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2001 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2002 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2003 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2004 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2005 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2006 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2007 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2008 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2009 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 19 ; 19 ; >
+    au < frozen ; exists ; 2010 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 20 ; 20 ; >
     au < frozen ; exists ; 2011 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 21 ; 21 ; >
     au < frozen ; exists ; 2012 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2013 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2013 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 26 ; 26 ; >
@@ -5177,18 +5177,18 @@
     au < manifest ; exists ; 1996 ; International Journal of Operations & Production Management Volume 16 ; 16 ; >
     au < manifest ; exists ; 1997 ; International Journal of Operations & Production Management Volume 17 ; 17 ; >
     au < ready ; exists ; 1998 ; International Journal of Operations & Production Management Volume 18 ; 18 ; >
-    au < crawling ; exists ; 1999 ; International Journal of Operations & Production Management Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2000 ; International Journal of Operations & Production Management Volume 20 ; 20 ; >
+    au < frozen ; exists ; 1999 ; International Journal of Operations & Production Management Volume 19 ; 19 ; >
+    au < frozen ; exists ; 2000 ; International Journal of Operations & Production Management Volume 20 ; 20 ; >
     au < ready ; exists ; 2001 ; International Journal of Operations & Production Management Volume 21 ; 21 ; >
     au < ready ; exists ; 2002 ; International Journal of Operations & Production Management Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2003 ; International Journal of Operations & Production Management Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2004 ; International Journal of Operations & Production Management Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2003 ; International Journal of Operations & Production Management Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2004 ; International Journal of Operations & Production Management Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2005 ; International Journal of Operations & Production Management Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2006 ; International Journal of Operations & Production Management Volume 26 ; 26 ; >
+    au < frozen ; exists ; 2006 ; International Journal of Operations & Production Management Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2007 ; International Journal of Operations & Production Management Volume 27 ; 27 ; >
-    au < crawling ; exists ; 2008 ; International Journal of Operations & Production Management Volume 28 ; 28 ; >
-    au < crawling ; exists ; 2009 ; International Journal of Operations & Production Management Volume 29 ; 29 ; >
-    au < crawling ; exists ; 2010 ; International Journal of Operations & Production Management Volume 30 ; 30 ; >
+    au < frozen ; exists ; 2008 ; International Journal of Operations & Production Management Volume 28 ; 28 ; >
+    au < frozen ; exists ; 2009 ; International Journal of Operations & Production Management Volume 29 ; 29 ; >
+    au < frozen ; exists ; 2010 ; International Journal of Operations & Production Management Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Operations & Production Management Volume 31 ; 31 ; >
     au < frozen ; exists ; 2012 ; International Journal of Operations & Production Management Volume 32 ; 32 ; >
     au < frozen ; exists ; 2013 ; International Journal of Operations & Production Management Volume 33 ; 33 ; >
@@ -5222,10 +5222,10 @@
     au < manifest ; exists ; 1997 ; International Journal of Organizational Analysis Volume 5 ; 5 ; >
     au < manifest ; exists ; 1998 ; International Journal of Organizational Analysis Volume 6 ; 6 ; >
     au < ready ; exists ; 1999 ; International Journal of Organizational Analysis Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2000 ; International Journal of Organizational Analysis Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2001 ; International Journal of Organizational Analysis Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2002 ; International Journal of Organizational Analysis Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2003 ; International Journal of Organizational Analysis Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2000 ; International Journal of Organizational Analysis Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2001 ; International Journal of Organizational Analysis Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2002 ; International Journal of Organizational Analysis Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2003 ; International Journal of Organizational Analysis Volume 11 ; 11 ; >
 
   }
 
@@ -5241,14 +5241,14 @@
     comment[journal_id] = ijoa
     #continues = 1055-3185
 
-    au < crawling ; exists ; 2005 ; International Journal of Organizational Analysis Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2006 ; International Journal of Organizational Analysis Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2007 ; International Journal of Organizational Analysis Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2008 ; International Journal of Organizational Analysis Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2009 ; International Journal of Organizational Analysis Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2005 ; International Journal of Organizational Analysis Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2006 ; International Journal of Organizational Analysis Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2007 ; International Journal of Organizational Analysis Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2008 ; International Journal of Organizational Analysis Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2009 ; International Journal of Organizational Analysis Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Organizational Analysis Volume 18 ; 18 ; >
-    au < crawling ; exists ; 2011 ; International Journal of Organizational Analysis Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2012 ; International Journal of Organizational Analysis Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2011 ; International Journal of Organizational Analysis Volume 19 ; 19 ; >
+    au < frozen ; exists ; 2012 ; International Journal of Organizational Analysis Volume 20 ; 20 ; >
     au < frozen ; exists ; 2013 ; International Journal of Organizational Analysis Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Organizational Analysis Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Organizational Analysis Volume 23 ; 23 ; >
@@ -5273,15 +5273,15 @@
     param[journal_issn] = 1742-7371
     comment[journal_id] = ijpcc
 
-    au < crawling ; exists ; 2005 ; International Journal of Pervasive Computing and Communications Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2006 ; International Journal of Pervasive Computing and Communications Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2007 ; International Journal of Pervasive Computing and Communications Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2008 ; International Journal of Pervasive Computing and Communications Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2009 ; International Journal of Pervasive Computing and Communications Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2010 ; International Journal of Pervasive Computing and Communications Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2005 ; International Journal of Pervasive Computing and Communications Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2006 ; International Journal of Pervasive Computing and Communications Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2007 ; International Journal of Pervasive Computing and Communications Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2008 ; International Journal of Pervasive Computing and Communications Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2009 ; International Journal of Pervasive Computing and Communications Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2010 ; International Journal of Pervasive Computing and Communications Volume 6 ; 6 ; >
     au < frozen ; exists ; 2011 ; International Journal of Pervasive Computing and Communications Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2012 ; International Journal of Pervasive Computing and Communications Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2013 ; International Journal of Pervasive Computing and Communications Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2012 ; International Journal of Pervasive Computing and Communications Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2013 ; International Journal of Pervasive Computing and Communications Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Pervasive Computing and Communications Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Pervasive Computing and Communications Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Pervasive Computing and Communications Volume 12 ; 12 ; >
@@ -5305,10 +5305,10 @@
     param[journal_issn] = 1750-6123
     comment[journal_id] = ijphm
 
-    au < crawling ; exists ; 2007 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2008 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2009 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2010 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2007 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2008 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2009 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2010 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 4 ; 4 ; >
     au < frozen ; exists ; 2011 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 5 ; 5 ; >
     au < frozen ; exists ; 2012 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 6 ; 6 ; >
     au < frozen ; exists ; 2013 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 7 ; 7 ; >
@@ -5394,19 +5394,19 @@
     au < manifest ; exists ; 1998 ; International Journal of Physical Distribution & Logistics Management Volume 28 ; 28 ; >
     au < ready ; exists ; 1999 ; International Journal of Physical Distribution & Logistics Management Volume 29 ; 29 ; >
     au < frozen ; exists ; 2000 ; International Journal of Physical Distribution & Logistics Management Volume 30 ; 30 ; >
-    au < crawling ; exists ; 2001 ; International Journal of Physical Distribution & Logistics Management Volume 31 ; 31 ; >
+    au < frozen ; exists ; 2001 ; International Journal of Physical Distribution & Logistics Management Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2002 ; International Journal of Physical Distribution & Logistics Management Volume 32 ; 32 ; >
-    au < crawling ; exists ; 2003 ; International Journal of Physical Distribution & Logistics Management Volume 33 ; 33 ; >
-    au < crawling ; exists ; 2004 ; International Journal of Physical Distribution & Logistics Management Volume 34 ; 34 ; >
-    au < crawling ; exists ; 2005 ; International Journal of Physical Distribution & Logistics Management Volume 35 ; 35 ; >
-    au < crawling ; exists ; 2006 ; International Journal of Physical Distribution & Logistics Management Volume 36 ; 36 ; >
-    au < crawling ; exists ; 2007 ; International Journal of Physical Distribution & Logistics Management Volume 37 ; 37 ; >
-    au < crawling ; exists ; 2008 ; International Journal of Physical Distribution & Logistics Management Volume 38 ; 38 ; >
-    au < crawling ; exists ; 2009 ; International Journal of Physical Distribution & Logistics Management Volume 39 ; 39 ; >
-    au < crawling ; exists ; 2010 ; International Journal of Physical Distribution & Logistics Management Volume 40 ; 40 ; >
+    au < frozen ; exists ; 2003 ; International Journal of Physical Distribution & Logistics Management Volume 33 ; 33 ; >
+    au < frozen ; exists ; 2004 ; International Journal of Physical Distribution & Logistics Management Volume 34 ; 34 ; >
+    au < frozen ; exists ; 2005 ; International Journal of Physical Distribution & Logistics Management Volume 35 ; 35 ; >
+    au < frozen ; exists ; 2006 ; International Journal of Physical Distribution & Logistics Management Volume 36 ; 36 ; >
+    au < frozen ; exists ; 2007 ; International Journal of Physical Distribution & Logistics Management Volume 37 ; 37 ; >
+    au < frozen ; exists ; 2008 ; International Journal of Physical Distribution & Logistics Management Volume 38 ; 38 ; >
+    au < frozen ; exists ; 2009 ; International Journal of Physical Distribution & Logistics Management Volume 39 ; 39 ; >
+    au < frozen ; exists ; 2010 ; International Journal of Physical Distribution & Logistics Management Volume 40 ; 40 ; >
     au < frozen ; exists ; 2011 ; International Journal of Physical Distribution & Logistics Management Volume 41 ; 41 ; >
-    au < crawling ; exists ; 2012 ; International Journal of Physical Distribution & Logistics Management Volume 42 ; 42 ; >
-    au < crawling ; exists ; 2013 ; International Journal of Physical Distribution & Logistics Management Volume 43 ; 43 ; >
+    au < frozen ; exists ; 2012 ; International Journal of Physical Distribution & Logistics Management Volume 42 ; 42 ; >
+    au < frozen ; exists ; 2013 ; International Journal of Physical Distribution & Logistics Management Volume 43 ; 43 ; >
     au < frozen ; exists ; 2014 ; International Journal of Physical Distribution & Logistics Management Volume 44 ; 44 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Physical Distribution & Logistics Management Volume 45 ; 45 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Physical Distribution & Logistics Management Volume 46 ; 46 ; >
@@ -5431,11 +5431,11 @@
     comment[journal_id] = ijph
     # online from 2005
 
-    au < crawling ; exists ; 2005 ; International Journal of Prisoner Health Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2005 ; International Journal of Prisoner Health Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2006 ; International Journal of Prisoner Health Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2007 ; International Journal of Prisoner Health Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2008 ; International Journal of Prisoner Health Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2009 ; International Journal of Prisoner Health Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2007 ; International Journal of Prisoner Health Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2008 ; International Journal of Prisoner Health Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2009 ; International Journal of Prisoner Health Volume 5 ; 5 ; >
     au < doesNotExist ; doesNotExist ; 0 ; International Journal of Prisoner Health Volume 6 ; 6 ; >
     au < frozen ; exists ; 2011 ; International Journal of Prisoner Health Volume 7 ; 7 ; >
     au < frozen ; exists ; 2012 ; International Journal of Prisoner Health Volume 8 ; 8 ; >
@@ -5464,22 +5464,22 @@
     comment[journal_id] = ijppm
     # online from 2004
 
-    au < crawling ; exists ; 2004 ; International Journal of Productivity and Performance Management Volume 53 ; 53 ; >
-    au < crawling ; exists ; 2005 ; International Journal of Productivity and Performance Management Volume 54 ; 54 ; >
-    au < crawling ; exists ; 2006 ; International Journal of Productivity and Performance Management Volume 55 ; 55 ; >
-    au < crawling ; exists ; 2007 ; International Journal of Productivity and Performance Management Volume 56 ; 56 ; >
-    au < crawling ; exists ; 2008 ; International Journal of Productivity and Performance Management Volume 57 ; 57 ; >
-    au < crawling ; exists ; 2009 ; International Journal of Productivity and Performance Management Volume 58 ; 58 ; >
-    au < crawling ; exists ; 2010 ; International Journal of Productivity and Performance Management Volume 59 ; 59 ; >
+    au < frozen ; exists ; 2004 ; International Journal of Productivity and Performance Management Volume 53 ; 53 ; >
+    au < frozen ; exists ; 2005 ; International Journal of Productivity and Performance Management Volume 54 ; 54 ; >
+    au < frozen ; exists ; 2006 ; International Journal of Productivity and Performance Management Volume 55 ; 55 ; >
+    au < frozen ; exists ; 2007 ; International Journal of Productivity and Performance Management Volume 56 ; 56 ; >
+    au < frozen ; exists ; 2008 ; International Journal of Productivity and Performance Management Volume 57 ; 57 ; >
+    au < frozen ; exists ; 2009 ; International Journal of Productivity and Performance Management Volume 58 ; 58 ; >
+    au < frozen ; exists ; 2010 ; International Journal of Productivity and Performance Management Volume 59 ; 59 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Productivity and Performance Management Volume 60 ; 60 ; >
-    au < crawling ; exists ; 2012 ; International Journal of Productivity and Performance Management Volume 61 ; 61 ; >
-    au < crawling ; exists ; 2013 ; International Journal of Productivity and Performance Management Volume 62 ; 62 ; >
+    au < frozen ; exists ; 2012 ; International Journal of Productivity and Performance Management Volume 61 ; 61 ; >
+    au < frozen ; exists ; 2013 ; International Journal of Productivity and Performance Management Volume 62 ; 62 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Productivity and Performance Management Volume 63 ; 63 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Productivity and Performance Management Volume 64 ; 64 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Productivity and Performance Management Volume 65 ; 65 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Productivity and Performance Management Volume 66 ; 66 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Productivity and Performance Management Volume 67 ; 67 ; >
-    au < crawling ; exists ; 2019 ; International Journal of Productivity and Performance Management Volume 68 ; 68 ; >
+    au < frozen ; exists ; 2019 ; International Journal of Productivity and Performance Management Volume 68 ; 68 ; >
     au < deepCrawl ; exists ; 2020 ; International Journal of Productivity and Performance Management Volume 69 ; 69 ; >
     au < crawling ; exists ; 2021 ; International Journal of Productivity and Performance Management Volume 70 ; 70 ; >
     au < crawling ; exists ; 2022 ; International Journal of Productivity and Performance Management Volume 71 ; 71 ; >
@@ -5510,15 +5510,15 @@
     au < manifest ; exists ; 1998 ; International Journal of Public Sector Management Volume 11 ; 11 ; >
     au < ready ; exists ; 1999 ; International Journal of Public Sector Management Volume 12 ; 12 ; >
     au < frozen ; exists ; 2000 ; International Journal of Public Sector Management Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2001 ; International Journal of Public Sector Management Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2002 ; International Journal of Public Sector Management Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2003 ; International Journal of Public Sector Management Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2004 ; International Journal of Public Sector Management Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2005 ; International Journal of Public Sector Management Volume 18 ; 18 ; >
-    au < crawling ; exists ; 2006 ; International Journal of Public Sector Management Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2007 ; International Journal of Public Sector Management Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2008 ; International Journal of Public Sector Management Volume 21 ; 21 ; >
-    au < crawling ; exists ; 2009 ; International Journal of Public Sector Management Volume 22 ; 22 ; >
+    au < frozen ; exists ; 2001 ; International Journal of Public Sector Management Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2002 ; International Journal of Public Sector Management Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2003 ; International Journal of Public Sector Management Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2004 ; International Journal of Public Sector Management Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2005 ; International Journal of Public Sector Management Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2006 ; International Journal of Public Sector Management Volume 19 ; 19 ; >
+    au < frozen ; exists ; 2007 ; International Journal of Public Sector Management Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2008 ; International Journal of Public Sector Management Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2009 ; International Journal of Public Sector Management Volume 22 ; 22 ; >
     au < crawling ; exists ; 2010 ; International Journal of Public Sector Management Volume 23 ; 23 ; >
     au < frozen ; exists ; 2011 ; International Journal of Public Sector Management Volume 24 ; 24 ; >
     au < frozen ; exists ; 2012 ; International Journal of Public Sector Management Volume 25 ; 25 ; >
