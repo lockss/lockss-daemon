@@ -152,7 +152,7 @@ public class HttpResultMap implements CacheResultMap {
     ServerLimitCodes(L(509, 529),
                      CacheException.RetrySameUrlException.class),
     /** Result codes indicating a server timeout. */
-    ServerTimeoutCodes(L(440, 408, 522, 524, 527, 598),
+    ServerTimeoutCodes(L(440, 408, 598, 522, 524, 527),
                        CacheException.RetrySameUrlException.class),
     /** Result codes that should not be received (mostly because we
      * don't issue any request thatr would cause them). */
@@ -160,7 +160,7 @@ public class HttpResultMap implements CacheResultMap {
                     CacheException.UnexpectedNoRetryFailException.class),
     /** Result codes that servers might send in unusual circumstances,
      * which we don't handle. */
-    UnHandledCodes(L(202, 205, 218, 226, 300, 305, 306,
+    UnhandledCodes(L(202, 205, 218, 226, 300, 305, 306,
                      419, 420, 426, 428, 430, 450),
                    CacheException.UnexpectedNoRetryFailException.class),
     /** WebDAV result codes. */
