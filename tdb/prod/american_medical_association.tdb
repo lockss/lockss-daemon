@@ -116,9 +116,9 @@
     param[journal_id] = jama-health-forum
     #See https://pubs.jamanetwork.com/data/sitemap/Site_193/sitemap_J185.xml
     
-    au < exists ; 2020 ; JAMA Health Forum Volume 2020 ; 2020 >
-    au < exists ; 2021 ; JAMA Health Forum Volume 2021 ; 2021 >
-    au < exists ; 2022 ; JAMA Health Forum Volume 2022 ; 2022 >
+    au < manifest ; 2020 ; JAMA Health Forum Volume 2020 ; 2020 >
+    au < manifest ; 2021 ; JAMA Health Forum Volume 2021 ; 2021 >
+    au < manifest ; 2022 ; JAMA Health Forum Volume 2022 ; 2022 >
 
   }
 

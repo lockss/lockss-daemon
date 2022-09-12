@@ -17,12 +17,12 @@
       param[journal_id] = tpmd
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2008 ; The American Journal of Tropical Medicine and Hygiene Volume 78 ; 78 >
-      au < exists ; 2008 ; The American Journal of Tropical Medicine and Hygiene Volume 79 ; 79 >
-      au < exists ; 2009 ; The American Journal of Tropical Medicine and Hygiene Volume 80 ; 80 >
-      au < exists ; 2009 ; The American Journal of Tropical Medicine and Hygiene Volume 81 ; 81 >
-      au < exists ; 2010 ; The American Journal of Tropical Medicine and Hygiene Volume 82 ; 82 >
-      au < exists ; 2010 ; The American Journal of Tropical Medicine and Hygiene Volume 83 ; 83 >
+      au < manifest ; 2008 ; The American Journal of Tropical Medicine and Hygiene Volume 78 ; 78 >
+      au < manifest ; 2008 ; The American Journal of Tropical Medicine and Hygiene Volume 79 ; 79 >
+      au < manifest ; 2009 ; The American Journal of Tropical Medicine and Hygiene Volume 80 ; 80 >
+      au < manifest ; 2009 ; The American Journal of Tropical Medicine and Hygiene Volume 81 ; 81 >
+      au < manifest ; 2010 ; The American Journal of Tropical Medicine and Hygiene Volume 82 ; 82 >
+      au < manifest ; 2010 ; The American Journal of Tropical Medicine and Hygiene Volume 83 ; 83 >
 
       au < released ; 2011 ; The American Journal of Tropical Medicine and Hygiene Volume 84 ; 84 >
       au < released ; 2011 ; The American Journal of Tropical Medicine and Hygiene Volume 85 ; 85 >
