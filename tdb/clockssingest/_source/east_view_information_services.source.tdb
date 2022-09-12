@@ -60,8 +60,8 @@
         implicit < status ; status2 ; year ; name ; param[directory] >
 
         au < readySource ; finished ; 2021 ; East View Information Services Journal Source Content 2021_01 ; 2021_01 >
-        au < readySource ; frozen ; 2021 ; East View Information Services Journal Source Content 2021_02 ; 2021_02 >
-        au < readySource ; frozen ; 2021 ; East View Information Services Journal Source Content 2021_03 ; 2021_03 >
+        au < readySource ; finished ; 2021 ; East View Information Services Journal Source Content 2021_02 ; 2021_02 >
+        au < readySource ; finished ; 2021 ; East View Information Services Journal Source Content 2021_03 ; 2021_03 >
         au < readySource ; finished ; 2021 ; East View Information Services Journal Source Content 2021_04 ; 2021_04 >
         au < expected ; exists ; 2022 ; East View Information Services Journal Source Content 2022_01 ; 2022_01 >
 
