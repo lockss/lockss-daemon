@@ -78,6 +78,11 @@ POSSIBILITY OF SUCH DAMAGE.
          https://www.aijournals.com/index.php/ajmr/citationstylelanguage/download/ris?submissionId=2230
          -->
       <string>1,"^(%s|%s)(ojs/)?(journals/)?(index\.php/)?(%s/)?(index\.php/)?(%s/)?citationstylelanguage/(get|download)/", to_http(base_url),to_https(base_url), journal_id, journal_id</string>
+        <!-- full text html
+         https://revistacta.agrosavia.co/index.php/revista/article/view/1050/765
+         https://revistacta.agrosavia.co/html/1050/index.htm
+        -->
+      <string>1,"^(%s|%s)html/", to_http(base_url),to_https(base_url)</string>
       <string>2,"^(%s|%s).*plugins/generic/pdfJsViewer/pdf\.js/web/viewer\.html\?file=https?[%%]25", to_http(base_url), to_https(base_url)</string>
       <string>1,"^(%s|%s).*plugins/generic/pdfJsViewer/pdf\.js/web/", to_http(base_url), to_https(base_url)</string>
     </list>
