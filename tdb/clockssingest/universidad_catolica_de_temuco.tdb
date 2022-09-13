@@ -42,4 +42,68 @@
 
   }
 
+  {
+  
+    title < 
+      name = Sustainability, Agri, Food and Environmental Research ;
+      eissn = 0719-3726 
+    >
+
+      param[journal_id] = safer
+      #published 2013 to present
+
+      au < manifest ; exists ; 2013 ; Sustainability, Agri, Food and Environmental Research Volume 2013 ; 1 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; Sustainability, Agri, Food and Environmental Research Volume 2014 ; 2 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; Sustainability, Agri, Food and Environmental Research Volume 2015 ; 3 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; Sustainability, Agri, Food and Environmental Research Volume 2016 ; 4 ; 2016 ; >
+      au < manifest ; exists ; 2017 ; Sustainability, Agri, Food and Environmental Research Volume 2017 ; 5 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; Sustainability, Agri, Food and Environmental Research Volume 2018 ; 6 ; 2018 ; >
+      au < manifest ; exists ; 2019 ; Sustainability, Agri, Food and Environmental Research Volume 2019 ; 7 ; 2019 ; >
+      au < manifest ; exists ; 2020 ; Sustainability, Agri, Food and Environmental Research Volume 2020 ; 8 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; Sustainability, Agri, Food and Environmental Research Volume 2021 ; 9 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; Sustainability, Agri, Food and Environmental Research Volume 2022 ; 10 ; 2022 ; >
+
+  }
+
+  {
+  
+    title < 
+      name = Revista CUHSO ;
+      issn = 0716-1557 ;
+      eissn = 2452-610X 
+    >
+
+      param[journal_id] = cuhso
+      #published 1984 to present
+      #There are special volumes in 1991 and 1999
+
+      au < manifest ; exists ; 1984 ; Revista CUHSO Volume 1984 ; 1 ; 1984 ; >
+      au < manifest ; exists ; 1985 ; Revista CUHSO Volume 1985 ; 2 ; 1985 ; >
+      au < manifest ; exists ; 1986 ; Revista CUHSO Volume 1986 ; 3 ; 1986 ; >
+      au < manifest ; exists ; 1998 ; Revista CUHSO Volume 1998 ; 4 ; 1998 ; >
+      au < manifest ; exists ; 2000 ; Revista CUHSO Volume 2000 ; 5 ; 2000 ; >
+      au < manifest ; exists ; 2002 ; Revista CUHSO Volume 2002 ; 6 ; 2002 ; >
+      au < manifest ; exists ; 2003 ; Revista CUHSO Volume 2003 ; 7 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; Revista CUHSO Volume 2004 ; 8 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; Revista CUHSO Volume 2005 ; 9-10 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; Revista CUHSO Volume 2006 ; 11-12 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; Revista CUHSO Volume 2007 ; 13-14 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; Revista CUHSO Volume 2008 ; 15-16 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; Revista CUHSO Volume 2009 ; 17-18 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; Revista CUHSO Volume 2010 ; 19-20 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; Revista CUHSO Volume 2011 ; 21 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; Revista CUHSO Volume 2012 ; 22 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; Revista CUHSO Volume 2013 ; 23 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; Revista CUHSO Volume 2014 ; 24 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; Revista CUHSO Volume 2015 ; 25 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; Revista CUHSO Volume 2016 ; 26 ; 2016 ; >
+      au < manifest ; exists ; 2017 ; Revista CUHSO Volume 2017 ; 27 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; Revista CUHSO Volume 2018 ; 28 ; 2018 ; >
+      au < manifest ; exists ; 2019 ; Revista CUHSO Volume 2019 ; 29 ; 2019 ; >
+      au < manifest ; exists ; 2020 ; Revista CUHSO Volume 2020 ; 30 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; Revista CUHSO Volume 2021 ; 31 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; Revista CUHSO Volume 2022 ; 32 ; 2022 ; >
+
+  }
+
 }
