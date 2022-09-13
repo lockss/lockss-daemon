@@ -1,0 +1,30 @@
+{
+
+  publisher <
+    name = Ukrainian Dental Association ;
+    info[contract] = 2022 ;
+    info[tester] = S ;
+    info[platform] = WARC. LXPUB-608
+  >
+
+    plugin = org.lockss.plugin.clockss.warc.ClockssWarcPlugin
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[year] >
+
+    {
+
+    title <
+      name = Ukrainian Dental Association Warc Content
+    >
+
+    # This content collected using wget and provided for preservation as a
+    # set of WARC files
+    # WARC content from http://emed.library.gov.ua/jspui/handle/123456789/168
+
+    param[base_url] = http://clockss-ingest.lockss.org/warcfiles/NEEDS-PLUGIN-released/
+
+    au < expected ; exists ; 2022 ; Ukrainian Dental Association Warc Content 2022 ; 2022 >
+
+    }
+
+}
