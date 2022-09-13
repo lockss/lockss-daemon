@@ -7857,7 +7857,7 @@
       au < finished ; crawling ; 2018 ; Kasr Al Ainy Medical Journal Volume 24 ; 2018 ; 24 ; http://www.kamj.eg.net/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; Kasr Al Ainy Medical Journal Volume 25 ; 2019 ; 25 ; https://www.kamj.eg.net/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Kasr Al Ainy Medical Journal Volume 26 ; 2020 ; 26 ; https://www.kamj.eg.net/ ; ; reingest2.clockss.org:8085 >
-      au < ready ; exists ; 2021 ; Kasr Al Ainy Medical Journal Volume 27 ; 2021 ; 27 ; https://www.kamj.eg.net/ ; ; >
+      au < crawling ; exists ; 2021 ; Kasr Al Ainy Medical Journal Volume 27 ; 2021 ; 27 ; https://www.kamj.eg.net/ ; ; >
       au < expected ; exists ; 2022 ; Kasr Al Ainy Medical Journal Volume 28 ; 2022 ; 28 ; https://www.kamj.eg.net/ ; ; >
 
   }

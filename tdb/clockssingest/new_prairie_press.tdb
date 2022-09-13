@@ -101,7 +101,7 @@
       au < crawling ; exists ; 1996 ; GDR Bulletin Volume 23 ; 23 ; >
       au < crawling ; exists ; 1997 ; GDR Bulletin Volume 24 ; 24 ; >
       au < ready ; exists ; 1998 ; GDR Bulletin Volume 25 ; 25 ; >
-      au < ready ; exists ; 1999 ; GDR Bulletin Volume 26 ; 26 ; >
+      au < crawling ; exists ; 1999 ; GDR Bulletin Volume 26 ; 26 ; >
 
     }
   }
@@ -293,7 +293,7 @@
       au < crawling ; exists ; 2001 ; Transactions of the Burgon Society Volume 1 ; 1 ; https://newprairiepress.org/ ; >
       au < ready ; exists ; 2002 ; Transactions of the Burgon Society Volume 2 ; 2 ; https://newprairiepress.org/ ; >
       au < ready ; exists ; 2003 ; Transactions of the Burgon Society Volume 3 ; 3 ; https://newprairiepress.org/ ; >
-      au < ready ; exists ; 2004 ; Transactions of the Burgon Society Volume 4 ; 4 ; https://newprairiepress.org/ ; >
+      au < crawling ; exists ; 2004 ; Transactions of the Burgon Society Volume 4 ; 4 ; https://newprairiepress.org/ ; >
       au < finished ; finished ; 2005 ; Transactions of the Burgon Society Volume 5 ; 5 ; https://newprairiepress.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2006 ; Transactions of the Burgon Society Volume 6 ; 6 ; https://newprairiepress.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2007 ; Transactions of the Burgon Society Volume 7 ; 7 ; https://newprairiepress.org/ ; reingest3.clockss.org:8083 >
@@ -392,9 +392,9 @@
       au < manifest ; exists ; 1987-1988 ; Educational Considerations Volume 15 ; 15 ; >
       au < manifest ; exists ; 1988-1989 ; Educational Considerations Volume 16 ; 16 ; >
       au < ready ; exists ; 1989-1990 ; Educational Considerations Volume 17 ; 17 ; >
-      au < ready ; exists ; 1990-1991 ; Educational Considerations Volume 18 ; 18 ; >
+      au < crawling ; exists ; 1990-1991 ; Educational Considerations Volume 18 ; 18 ; >
       au < ready ; exists ; 1991-1992 ; Educational Considerations Volume 19 ; 19 ; >
-      au < ready ; exists ; 1992-1993 ; Educational Considerations Volume 20 ; 20 ; >
+      au < crawling ; exists ; 1992-1993 ; Educational Considerations Volume 20 ; 20 ; >
       au < ready ; exists ; 1993-1994 ; Educational Considerations Volume 21 ; 21 ; >
       au < crawling ; exists ; 1994-1995 ; Educational Considerations Volume 22 ; 22 ; >
       au < crawling ; exists ; 1995-1996 ; Educational Considerations Volume 23 ; 23 ; >
@@ -664,7 +664,7 @@
       au < ready ; exists ; 1991 ; Journal of Applied Communications Volume 75 ; 75 ; >
       au < ready ; exists ; 1992 ; Journal of Applied Communications Volume 76 ; 76 ; >
       au < ready ; exists ; 1993 ; Journal of Applied Communications Volume 77 ; 77 ; >
-      au < ready ; exists ; 1994 ; Journal of Applied Communications Volume 78 ; 78 ; >
+      au < crawling ; exists ; 1994 ; Journal of Applied Communications Volume 78 ; 78 ; >
       au < ready ; exists ; 1995 ; Journal of Applied Communications Volume 79 ; 79 ; >
       au < ready ; exists ; 1996 ; Journal of Applied Communications Volume 80 ; 80 ; >
       au < ready ; exists ; 1997 ; Journal of Applied Communications Volume 81 ; 81 ; >
@@ -672,7 +672,7 @@
       au < ready ; exists ; 1999 ; Journal of Applied Communications Volume 83 ; 83 ; >
       au < crawling ; exists ; 2000 ; Journal of Applied Communications Volume 84 ; 84 ; >
       au < crawling ; exists ; 2001 ; Journal of Applied Communications Volume 85 ; 85 ; >
-      au < ready ; exists ; 2002 ; Journal of Applied Communications Volume 86 ; 86 ; >
+      au < crawling ; exists ; 2002 ; Journal of Applied Communications Volume 86 ; 86 ; >
       au < crawling ; exists ; 2003 ; Journal of Applied Communications Volume 87 ; 87 ; >
       au < finished ; finished ; 2004 ; Journal of Applied Communications Volume 88 ; 88 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2005 ; Journal of Applied Communications Volume 89 ; 89 ; reingest4.clockss.org:8082 >
@@ -709,10 +709,10 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = jhsr
 
-      au < ready ; exists ; 1998 ; Journal of Hazardous Substance Research Volume 1 ; 1 ; >
+      au < crawling ; exists ; 1998 ; Journal of Hazardous Substance Research Volume 1 ; 1 ; >
       au < crawling ; exists ; 1999-2000 ; Journal of Hazardous Substance Research Volume 2 ; 2 ; >
       au < crawling ; exists ; 2001-2002 ; Journal of Hazardous Substance Research Volume 3 ; 3 ; >
-      au < ready ; exists ; 2003 ; Journal of Hazardous Substance Research Volume 4 ; 4 ; >
+      au < crawling ; exists ; 2003 ; Journal of Hazardous Substance Research Volume 4 ; 4 ; >
       au < finished ; finished ; 2006 ; Journal of Hazardous Substance Research Volume 5 ; 5 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2007 ; Journal of Hazardous Substance Research Volume 6 ; 6 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2007 ; Journal of Hazardous Substance Research Volume 7 ; 7 ; reingest4.clockss.org:8082 >
@@ -784,11 +784,11 @@
 
       au < ready ; exists ; 1998 ; Networks: An Online Journal for Teacher Research Volume 1 ; 1 ; >
       au < ready ; exists ; 1999 ; Networks: An Online Journal for Teacher Research Volume 2 ; 2 ; >
-      au < ready ; exists ; 2000 ; Networks: An Online Journal for Teacher Research Volume 3 ; 3 ; >
+      au < crawling ; exists ; 2000 ; Networks: An Online Journal for Teacher Research Volume 3 ; 3 ; >
       au < ready ; exists ; 2001 ; Networks: An Online Journal for Teacher Research Volume 4 ; 4 ; >
-      au < ready ; exists ; 2002 ; Networks: An Online Journal for Teacher Research Volume 5 ; 5 ; >
+      au < crawling ; exists ; 2002 ; Networks: An Online Journal for Teacher Research Volume 5 ; 5 ; >
       au < crawling ; exists ; 2003 ; Networks: An Online Journal for Teacher Research Volume 6 ; 6 ; >
-      au < ready ; exists ; 2004 ; Networks: An Online Journal for Teacher Research Volume 7 ; 7 ; >
+      au < crawling ; exists ; 2004 ; Networks: An Online Journal for Teacher Research Volume 7 ; 7 ; >
       au < finished ; finished ; 2005 ; Networks: An Online Journal for Teacher Research Volume 8 ; 8 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2006 ; Networks: An Online Journal for Teacher Research Volume 9 ; 9 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2008 ; Networks: An Online Journal for Teacher Research Volume 10 ; 10 ; reingest3.clockss.org:8083 >
@@ -834,15 +834,15 @@
       au < manifest ; exists ; 1988 ; Oz Volume 10 ; 10 ; >
       au < manifest ; exists ; 1989 ; Oz Volume 11 ; 11 ; >
       au < ready ; exists ; 1990 ; Oz Volume 12 ; 12 ; >
-      au < ready ; exists ; 1991 ; Oz Volume 13 ; 13 ; >
-      au < ready ; exists ; 1992 ; Oz Volume 14 ; 14 ; >
+      au < crawling ; exists ; 1991 ; Oz Volume 13 ; 13 ; >
+      au < crawling ; exists ; 1992 ; Oz Volume 14 ; 14 ; >
       au < crawling ; exists ; 1993 ; Oz Volume 15 ; 15 ; >
       au < crawling ; exists ; 1994 ; Oz Volume 16 ; 16 ; >
       au < ready ; exists ; 1995 ; Oz Volume 17 ; 17 ; >
       au < crawling ; exists ; 1996 ; Oz Volume 18 ; 18 ; >
       au < ready ; exists ; 1997 ; Oz Volume 19 ; 19 ; >
       au < ready ; exists ; 1998 ; Oz Volume 20 ; 20 ; >
-      au < ready ; exists ; 1999 ; Oz Volume 21 ; 21 ; >
+      au < crawling ; exists ; 1999 ; Oz Volume 21 ; 21 ; >
       au < ready ; exists ; 2000 ; Oz Volume 22 ; 22 ; >
       au < ready ; exists ; 2001 ; Oz Volume 23 ; 23 ; >
       au < ready ; exists ; 2002 ; Oz Volume 24 ; 24 ; >
@@ -958,17 +958,17 @@
       au < ready ; exists ; 1990 ; Studies in 20th & 21st Century Literature Volume 14 ; 14 ; >
       au < crawling ; exists ; 1991 ; Studies in 20th & 21st Century Literature Volume 15 ; 15 ; >
       au < ready ; exists ; 1992 ; Studies in 20th & 21st Century Literature Volume 16 ; 16 ; >
-      au < ready ; exists ; 1993 ; Studies in 20th & 21st Century Literature Volume 17 ; 17 ; >
+      au < crawling ; exists ; 1993 ; Studies in 20th & 21st Century Literature Volume 17 ; 17 ; >
       au < crawling ; exists ; 1994 ; Studies in 20th & 21st Century Literature Volume 18 ; 18 ; >
-      au < ready ; exists ; 1995 ; Studies in 20th & 21st Century Literature Volume 19 ; 19 ; >
+      au < crawling ; exists ; 1995 ; Studies in 20th & 21st Century Literature Volume 19 ; 19 ; >
       au < ready ; exists ; 1996 ; Studies in 20th & 21st Century Literature Volume 20 ; 20 ; >
       au < ready ; exists ; 1997 ; Studies in 20th & 21st Century Literature Volume 21 ; 21 ; >
       au < ready ; exists ; 1998 ; Studies in 20th & 21st Century Literature Volume 22 ; 22 ; >
       au < ready ; exists ; 1999 ; Studies in 20th & 21st Century Literature Volume 23 ; 23 ; >
       au < crawling ; exists ; 2000 ; Studies in 20th & 21st Century Literature Volume 24 ; 24 ; >
-      au < ready ; exists ; 2001 ; Studies in 20th & 21st Century Literature Volume 25 ; 25 ; >
+      au < crawling ; exists ; 2001 ; Studies in 20th & 21st Century Literature Volume 25 ; 25 ; >
       au < ready ; exists ; 2002 ; Studies in 20th & 21st Century Literature Volume 26 ; 26 ; >
-      au < ready ; exists ; 2003 ; Studies in 20th & 21st Century Literature Volume 27 ; 27 ; >
+      au < crawling ; exists ; 2003 ; Studies in 20th & 21st Century Literature Volume 27 ; 27 ; >
       au < ready ; exists ; 2004 ; Studies in 20th & 21st Century Literature Volume 28 ; 28 ; >
       au < finished ; crawling ; 2005 ; Studies in 20th & 21st Century Literature Volume 29 ; 29 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2006 ; Studies in 20th & 21st Century Literature Volume 30 ; 30 ; reingest4.clockss.org:8082 >
