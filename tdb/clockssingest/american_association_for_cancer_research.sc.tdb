@@ -16,12 +16,27 @@
   {
 
     title <
+      name = Blood Cancer Discovery ;
+      issn = 2643-3230 ;
+      eissn = 2643-3249
+
+    >
+      param[journal_id] = bloodcancerdiscov
+    
+      au < exists ; exists ; 2020 ; 2020 ; Blood Cancer Discovery Volume 1 ; 1 ; >
+      au < exists ; exists ; 2021 ; 2021 ; Blood Cancer Discovery Volume 2 ; 2 ; >
+      au < exists ; exists ; 2022 ; 2022 ; Blood Cancer Discovery Volume 3 ; 3 ; >
+
+  }
+
+  {
+
+    title <
       name = Cancer Discovery ;
       issn = 2159-8274 ;
       eissn = 2159-8290 
 
     >
-      #param[base_url] = http://cancerdiscovery.aacrjournals.org/
       param[journal_id] = cancerdiscovery
     
       au < exists ; exists ; 2011 ; 2011 ; Cancer Discovery Volume 1 ; 1 ; >
@@ -48,7 +63,6 @@
       issnl = 1055-9965
     >
 
-      #param[base_url] = http://cebp.aacrjournals.org/
       param[journal_id] = cebp
 
       au < exists ; exists ; 1991 ; 1991 ; Cancer Epidemiology Biomarkers & Prevention Volume 1 (1991) ; 1 ; >
@@ -95,7 +109,6 @@
       issnl = 2326-6066
     >
 
-      #param[base_url] = http://cancerimmunolres.aacrjournals.org/
       param[journal_id] = cancerimmunolres
 
       au < exists ; exists ; 2013 ; 2013 ; Cancer Immunology Research Volume 1 ; 1 ; >
@@ -120,7 +133,6 @@
       issnl = 1940-6215
     >
 
-      #param[base_url] = http://cancerpreventionresearch.aacrjournals.org/
       param[journal_id] = cancerpreventionresearch
 
       au < exists ; exists ; 2008 ; 2008 ; Cancer Prevention Research Volume 1 ; 1 ; >
@@ -150,7 +162,6 @@
       issnl = 0008-5472
     >
 
-      #param[base_url] = http://cancerres.aacrjournals.org/
       param[journal_id] = cancerres
 
       au < exists ; exists ; 1941 ; 1941 ; Cancer Research Volume 1 ; 1 ; >
@@ -239,6 +250,20 @@
   }
 
   {
+
+    title <
+      name = Cancer Research Communications ;
+      eissn = 2767-9764
+
+    >
+      param[journal_id] = cancerrescommun
+    
+      au < exists ; exists ; 2021 ; 2021 ; Cancer Research Communications Volume 1 ; 1 ; >
+      au < exists ; exists ; 2022 ; 2022 ; Cancer Research Communications Volume 2 ; 2 ; >
+
+  }
+
+  {
   
     title <
       name = Clinical Cancer Research ;
@@ -247,7 +272,6 @@
       issnl = 1078-0432
     >
 
-      #param[base_url] = http://clincancerres.aacrjournals.org/
       param[journal_id] = clincancerres
 
       au < exists ; exists ; 1995 ; 1995 ; Clinical Cancer Research Volume 1 ; 1 ; >
@@ -290,7 +314,6 @@
       issnl = 1541-7786
     >
 
-      #param[base_url] = http://mcr.aacrjournals.org/
       param[journal_id] = mcr
 
       au < exists ; exists ; 2002 ; 2002 ; Molecular Cancer Research Volume 1 (2002) ; 1 ; >
@@ -326,7 +349,6 @@
       issnl = 1535-7163
     >
 
-      #param[base_url] = http://mct.aacrjournals.org/
       param[journal_id] = mct
 
       au < exists ; exists ; 2001 ; 2001 ; Molecular Cancer Therapeutics Volume 1 (2001) ; 1 ; >
