@@ -1,0 +1,25 @@
+{
+
+  publisher <
+    name = Editura ASE ;
+    info[contract] = 2022 ;
+    info[tester] = S ;
+    info[platform] = Source/FTP
+  >
+
+  {
+
+    title <
+      name = Editura ASE Source Content 
+    >
+
+    plugin = org.lockss.plugin.clockss.edituraase.ClockssEdituraASESourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/ease-released/
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[directory] >
+
+    au < expected ; exists ; 2022 ; Editura ASE Source Content 2022_01 ; 2022_01 >
+
+  }
+
+}
