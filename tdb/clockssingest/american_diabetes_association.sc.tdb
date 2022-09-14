@@ -42,7 +42,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Clinical Diabetes Volume 36 ; 36 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Clinical Diabetes Volume 37 ; 37 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Clinical Diabetes Volume 38 ; 38 ; >
-      au < ready ; exists ; 2021 ; 2021 ; Clinical Diabetes Volume 39 ; 39 ; >
+      au < crawling ; exists ; 2021 ; 2021 ; Clinical Diabetes Volume 39 ; 39 ; >
       au < crawling ; exists ; 2022 ; 2022 ; Clinical Diabetes Volume 40 ; 40 ; >
 
     }
@@ -189,7 +189,7 @@
         au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Diabetes Care Volume 41 ; 41 ; >
         au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Diabetes Care Volume 42 ; 42 ; >
         au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Diabetes Care Volume 43 ; 43 ; >
-        au < ready ; exists ; 2021 ; 2021 ; Diabetes Care Volume 44 ; 44 ; >
+        au < crawling ; exists ; 2021 ; 2021 ; Diabetes Care Volume 44 ; 44 ; >
         au < crawling ; exists ; 2022 ; 2022 ; Diabetes Care Volume 45 ; 45 ; >
 
     }

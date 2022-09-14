@@ -292,7 +292,7 @@
 
       au < crawling ; exists ; 2001 ; Transactions of the Burgon Society Volume 1 ; 1 ; https://newprairiepress.org/ ; >
       au < ready ; exists ; 2002 ; Transactions of the Burgon Society Volume 2 ; 2 ; https://newprairiepress.org/ ; >
-      au < ready ; exists ; 2003 ; Transactions of the Burgon Society Volume 3 ; 3 ; https://newprairiepress.org/ ; >
+      au < crawling ; exists ; 2003 ; Transactions of the Burgon Society Volume 3 ; 3 ; https://newprairiepress.org/ ; >
       au < crawling ; exists ; 2004 ; Transactions of the Burgon Society Volume 4 ; 4 ; https://newprairiepress.org/ ; >
       au < finished ; finished ; 2005 ; Transactions of the Burgon Society Volume 5 ; 5 ; https://newprairiepress.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2006 ; Transactions of the Burgon Society Volume 6 ; 6 ; https://newprairiepress.org/ ; reingest2.clockss.org:8085 >
@@ -405,7 +405,7 @@
       au < crawling ; exists ; 2000-2001 ; Educational Considerations Volume 28 ; 28 ; >
       au < ready ; exists ; 2001-2002 ; Educational Considerations Volume 29 ; 29 ; >
       au < ready ; exists ; 2002-2003 ; Educational Considerations Volume 30 ; 30 ; >
-      au < ready ; exists ; 2003-2004 ; Educational Considerations Volume 31 ; 31 ; >
+      au < crawling ; exists ; 2003-2004 ; Educational Considerations Volume 31 ; 31 ; >
       au < finished ; finished ; 2004-2005 ; Educational Considerations Volume 32 ; 32 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2005-2006 ; Educational Considerations Volume 33 ; 33 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2006-2007 ; Educational Considerations Volume 34 ; 34 ; reingest2.clockss.org:8085 >
@@ -534,7 +534,7 @@
       au < ready ; exists ; 1991 ; Fungal Genetics Newsletter Volume 38 ; 38 ; >
       au < crawling ; exists ; 1992 ; Fungal Genetics Newsletter Volume 39 ; 39 ; >
       au < ready ; exists ; 1993 ; Fungal Genetics Newsletter Volume 40 ; 40 ; >
-      au < ready ; exists ; 1994 ; Fungal Genetics Newsletter Volume 41 ; 41 ; >
+      au < crawling ; exists ; 1994 ; Fungal Genetics Newsletter Volume 41 ; 41 ; >
       au < ready ; exists ; 1995 ; Fungal Genetics Newsletter Volume 42 ; 42 ; >
       au < crawling ; exists ; 1996 ; Fungal Genetics Newsletter Volume 43 ; 43 ; >
       au < ready ; exists ; 1997 ; Fungal Genetics Newsletter Volume 44 ; 44 ; >
@@ -661,7 +661,7 @@
       au < manifest ; exists ; 1989 ; Journal of Applied Communications Volume 72 ; 72 ; >
       au < manifest ; exists ; 1989 ; Journal of Applied Communications Volume 73 ; 73 ; >
       au < ready ; exists ; 1990 ; Journal of Applied Communications Volume 74 ; 74 ; >
-      au < ready ; exists ; 1991 ; Journal of Applied Communications Volume 75 ; 75 ; >
+      au < crawling ; exists ; 1991 ; Journal of Applied Communications Volume 75 ; 75 ; >
       au < ready ; exists ; 1992 ; Journal of Applied Communications Volume 76 ; 76 ; >
       au < ready ; exists ; 1993 ; Journal of Applied Communications Volume 77 ; 77 ; >
       au < crawling ; exists ; 1994 ; Journal of Applied Communications Volume 78 ; 78 ; >
@@ -783,7 +783,7 @@
       param[journal_abbr] = networks
 
       au < ready ; exists ; 1998 ; Networks: An Online Journal for Teacher Research Volume 1 ; 1 ; >
-      au < ready ; exists ; 1999 ; Networks: An Online Journal for Teacher Research Volume 2 ; 2 ; >
+      au < crawling ; exists ; 1999 ; Networks: An Online Journal for Teacher Research Volume 2 ; 2 ; >
       au < crawling ; exists ; 2000 ; Networks: An Online Journal for Teacher Research Volume 3 ; 3 ; >
       au < ready ; exists ; 2001 ; Networks: An Online Journal for Teacher Research Volume 4 ; 4 ; >
       au < crawling ; exists ; 2002 ; Networks: An Online Journal for Teacher Research Volume 5 ; 5 ; >
@@ -833,7 +833,7 @@
       au < manifest ; exists ; 1987 ; Oz Volume 9 ; 9 ; >
       au < manifest ; exists ; 1988 ; Oz Volume 10 ; 10 ; >
       au < manifest ; exists ; 1989 ; Oz Volume 11 ; 11 ; >
-      au < ready ; exists ; 1990 ; Oz Volume 12 ; 12 ; >
+      au < crawling ; exists ; 1990 ; Oz Volume 12 ; 12 ; >
       au < crawling ; exists ; 1991 ; Oz Volume 13 ; 13 ; >
       au < crawling ; exists ; 1992 ; Oz Volume 14 ; 14 ; >
       au < crawling ; exists ; 1993 ; Oz Volume 15 ; 15 ; >
@@ -961,10 +961,10 @@
       au < crawling ; exists ; 1993 ; Studies in 20th & 21st Century Literature Volume 17 ; 17 ; >
       au < crawling ; exists ; 1994 ; Studies in 20th & 21st Century Literature Volume 18 ; 18 ; >
       au < crawling ; exists ; 1995 ; Studies in 20th & 21st Century Literature Volume 19 ; 19 ; >
-      au < ready ; exists ; 1996 ; Studies in 20th & 21st Century Literature Volume 20 ; 20 ; >
-      au < ready ; exists ; 1997 ; Studies in 20th & 21st Century Literature Volume 21 ; 21 ; >
+      au < crawling ; exists ; 1996 ; Studies in 20th & 21st Century Literature Volume 20 ; 20 ; >
+      au < crawling ; exists ; 1997 ; Studies in 20th & 21st Century Literature Volume 21 ; 21 ; >
       au < ready ; exists ; 1998 ; Studies in 20th & 21st Century Literature Volume 22 ; 22 ; >
-      au < ready ; exists ; 1999 ; Studies in 20th & 21st Century Literature Volume 23 ; 23 ; >
+      au < crawling ; exists ; 1999 ; Studies in 20th & 21st Century Literature Volume 23 ; 23 ; >
       au < crawling ; exists ; 2000 ; Studies in 20th & 21st Century Literature Volume 24 ; 24 ; >
       au < crawling ; exists ; 2001 ; Studies in 20th & 21st Century Literature Volume 25 ; 25 ; >
       au < ready ; exists ; 2002 ; Studies in 20th & 21st Century Literature Volume 26 ; 26 ; >

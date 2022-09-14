@@ -29,7 +29,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; American Literary Scholarship 2018 ; 2016 ; >
       au < frozen ; exists ; 2019 ; 2019 ; American Literary Scholarship 2019 ; 2017 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; American Literary Scholarship 2020 ; 2018 ; >
-      au < ready ; exists ; 2021 ; 2021 ; American Literary Scholarship 2021 ; 2019 ; > #403 Forbidden on https://dup.silverchair-cdn.com/cassette.axd/file/Themes/Client/app/img/split-view_figures-tables-53a6d02348118354786b056ee1d24882350dc90b.svg
+      au < crawling ; exists ; 2021 ; 2021 ; American Literary Scholarship 2021 ; 2019 ; > #403 Forbidden on https://dup.silverchair-cdn.com/cassette.axd/file/Themes/Client/app/img/split-view_figures-tables-53a6d02348118354786b056ee1d24882350dc90b.svg
       au < expected ; exists ; 2022 ; 2022 ; American Literary Scholarship 2022 ; 2020 ; > #403 Forbidden on https://dup.silverchair-cdn.com/cassette.axd/file/Themes/Client/app/img/split-view_figures-tables-53a6d02348118354786b056ee1d24882350dc90b.svg
 
   }
@@ -69,7 +69,7 @@
       au < finished ; crawling ; 2018 ; 2018 ; American Speech Volume 93 ; 93 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2019 ; 2019 ; American Speech Volume 94 ; 94 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; American Speech Volume 95 ; 95 ; >
-      au < ready ; exists ; 2021 ; 2021 ; American Speech Volume 96 ; 96 ; >
+      au < crawling ; exists ; 2021 ; 2021 ; American Speech Volume 96 ; 96 ; >
       au < manifest ; exists ; 2022 ; 2022 ; American Speech Volume 97 ; 97 ; >
 
   }
@@ -703,8 +703,8 @@
       param[journal_id] = mediterranean-quarterly
 
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Mediterranean Quarterly Volume 27 ; 27 ; > #no permission statement on manifest page
-      au < ready ; exists ; 2017 ; 2017 ; Mediterranean Quarterly Volume 28 ; 28 ; > #no permission statement on manifest page
-      au < ready ; exists ; 2018 ; 2018 ; Mediterranean Quarterly Volume 29 ; 29 ; > #no permission statement on manifest page
+      au < crawling ; exists ; 2017 ; 2017 ; Mediterranean Quarterly Volume 28 ; 28 ; > #no permission statement on manifest page
+      au < crawling ; exists ; 2018 ; 2018 ; Mediterranean Quarterly Volume 29 ; 29 ; > #no permission statement on manifest page
 
     }
 
@@ -1216,7 +1216,7 @@
 
       au < doNotProcess ; exists ; 2014 ; 2014 ; World Policy Journal Volume 31 ; 31 ; >
       au < doNotProcess ; exists ; 2015 ; 2015 ; World Policy Journal Volume 32 ; 32 ; >
-      au < ready ; exists ; 2016 ; 2016 ; World Policy Journal Volume 33 ; 33 ; >
+      au < crawling ; exists ; 2016 ; 2016 ; World Policy Journal Volume 33 ; 33 ; >
       au < crawling ; exists ; 2017 ; 2017 ; World Policy Journal Volume 34 ; 34 ; >
       au < crawling ; exists ; 2018 ; 2018 ; World Policy Journal Volume 35 ; 35 ; >
 

@@ -765,7 +765,7 @@
     au < manifest ; exists ; 1996 ; Asian Review of Accounting Volume 4 ; 4 ; >
     au < manifest ; exists ; 1997 ; Asian Review of Accounting Volume 5 ; 5 ; >
     au < manifest ; exists ; 1998 ; Asian Review of Accounting Volume 6 ; 6 ; >
-    au < ready ; exists ; 1999 ; Asian Review of Accounting Volume 7 ; 7 ; >
+    au < crawling ; exists ; 1999 ; Asian Review of Accounting Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2000 ; Asian Review of Accounting Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2001 ; Asian Review of Accounting Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2002 ; Asian Review of Accounting Volume 10 ; 10 ; >
@@ -900,7 +900,7 @@
     au < manifest ; exists ; 1996 ; Assembly Automation Volume 16 ; 16 ; >
     au < manifest ; exists ; 1997 ; Assembly Automation Volume 17 ; 17 ; >
     au < ready ; exists ; 1998 ; Assembly Automation Volume 18 ; 18 ; >
-    au < ready ; exists ; 1999 ; Assembly Automation Volume 19 ; 19 ; >
+    au < crawling ; exists ; 1999 ; Assembly Automation Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2000 ; Assembly Automation Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2001 ; Assembly Automation Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2002 ; Assembly Automation Volume 22 ; 22 ; >
@@ -2246,7 +2246,7 @@
     au < manifest ; exists ; 1995 ; Education + Training Volume 37 ; 37 ; >
     au < manifest ; exists ; 1996 ; Education + Training Volume 38 ; 38 ; >
     au < manifest ; exists ; 1997 ; Education + Training Volume 39 ; 39 ; >
-    au < ready ; exists ; 1998 ; Education + Training Volume 40 ; 40 ; >
+    au < crawling ; exists ; 1998 ; Education + Training Volume 40 ; 40 ; >
     au < ready ; exists ; 1999 ; Education + Training Volume 41 ; 41 ; >
     au < frozen ; exists ; 2000 ; Education + Training Volume 42 ; 42 ; >
     au < ready ; exists ; 2001 ; Education + Training Volume 43 ; 43 ; >
@@ -5019,8 +5019,8 @@
     au < manifest ; exists ; 1995 ; International Journal of Manpower Volume 16 ; 16 ; >
     au < manifest ; exists ; 1996 ; International Journal of Manpower Volume 17 ; 17 ; >
     au < manifest ; exists ; 1997 ; International Journal of Manpower Volume 18 ; 18 ; >
-    au < ready ; exists ; 1998 ; International Journal of Manpower Volume 19 ; 19 ; >
-    au < ready ; exists ; 1999 ; International Journal of Manpower Volume 20 ; 20 ; >
+    au < crawling ; exists ; 1998 ; International Journal of Manpower Volume 19 ; 19 ; >
+    au < crawling ; exists ; 1999 ; International Journal of Manpower Volume 20 ; 20 ; >
     au < frozen ; exists ; 2000 ; International Journal of Manpower Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2001 ; International Journal of Manpower Volume 22 ; 22 ; >
     au < frozen ; exists ; 2002 ; International Journal of Manpower Volume 23 ; 23 ; >
@@ -5982,7 +5982,7 @@
     au < manifest ; exists ; 1996 ; International Journal of Wine Marketing Volume 8 ; 8 ; >
     au < manifest ; exists ; 1997 ; International Journal of Wine Marketing Volume 9 ; 9 ; >
     au < manifest ; exists ; 1998 ; International Journal of Wine Marketing Volume 10 ; 10 ; >
-    au < ready ; exists ; 1999 ; International Journal of Wine Marketing Volume 11 ; 11 ; >
+    au < crawling ; exists ; 1999 ; International Journal of Wine Marketing Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2000 ; International Journal of Wine Marketing Volume 12 ; 12 ; >
     au < crawling ; exists ; 2001 ; International Journal of Wine Marketing Volume 13 ; 13 ; >
     au < crawling ; exists ; 2002 ; International Journal of Wine Marketing Volume 14 ; 14 ; >
@@ -10808,7 +10808,7 @@
     au < manifest ; exists ; 1995 ; Nutrition & Food Science Volume 95 ; 95 ; >
     au < manifest ; exists ; 1996 ; Nutrition & Food Science Volume 96 ; 96 ; >
     au < manifest ; exists ; 1997 ; Nutrition & Food Science Volume 97 ; 97 ; >
-    au < ready ; exists ; 1998 ; Nutrition & Food Science Volume 98 ; 98 ; >
+    au < crawling ; exists ; 1998 ; Nutrition & Food Science Volume 98 ; 98 ; >
     au < ready ; exists ; 1999 ; Nutrition & Food Science Volume 99 ; 99 ; >
     au < crawling ; exists ; 2000 ; Nutrition & Food Science Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2001 ; Nutrition & Food Science Volume 31 ; 31 ; >
@@ -11385,7 +11385,7 @@
     au < manifest ; exists ; 1996 ; Program: Electronic Library and Information Systems Volume 30 ; 30 ; >
     au < manifest ; exists ; 1997 ; Program: Electronic Library and Information Systems Volume 31 ; 31 ; >
     au < ready ; exists ; 1998 ; Program: Electronic Library and Information Systems Volume 32 ; 32 ; >
-    au < ready ; exists ; 1999 ; Program: Electronic Library and Information Systems Volume 33 ; 33 ; >
+    au < crawling ; exists ; 1999 ; Program: Electronic Library and Information Systems Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2000 ; Program: Electronic Library and Information Systems Volume 34 ; 34 ; >
     au < ready ; exists ; 2001 ; Program: Electronic Library and Information Systems Volume 35 ; 35 ; >
     au < crawling ; exists ; 2002 ; Program: Electronic Library and Information Systems Volume 36 ; 36 ; >
@@ -13488,7 +13488,7 @@
     au < ready ; exists ; 2015 ; European Journal of Training and Development Volume 39 ; 39 ; >
     au < ready ; exists ; 2016 ; European Journal of Training and Development Volume 40 ; 40 ; >
     au < ready ; exists ; 2017 ; European Journal of Training and Development Volume 41 ; 41 ; >
-    au < ready ; exists ; 2018 ; European Journal of Training and Development Volume 42 ; 42 ; >
+    au < crawling ; exists ; 2018 ; European Journal of Training and Development Volume 42 ; 42 ; >
     au < ready ; exists ; 2019 ; European Journal of Training and Development Volume 43 ; 43 ; >
     au < ready ; exists ; 2020 ; European Journal of Training and Development Volume 44 ; 44 ; >
     au < ready ; exists ; 2021 ; European Journal of Training and Development Volume 45 ; 45 ; >
@@ -13640,7 +13640,7 @@
     au < crawling ; exists ; 2016 ; International Journal of Innovation Science Volume 8 ; 8 ; >
     au < ready ; exists ; 2017 ; International Journal of Innovation Science Volume 9 ; 9 ; >
     au < ready ; exists ; 2018 ; International Journal of Innovation Science Volume 10 ; 10 ; >
-    au < ready ; exists ; 2019 ; International Journal of Innovation Science Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2019 ; International Journal of Innovation Science Volume 11 ; 11 ; >
     au < ready ; exists ; 2020 ; International Journal of Innovation Science Volume 12 ; 12 ; >
     au < ready ; exists ; 2021 ; International Journal of Innovation Science Volume 13 ; 13 ; >
     au < crawling ; exists ; 2022 ; International Journal of Innovation Science Volume 14 ; 14 ; >
@@ -13718,7 +13718,7 @@
 
     param[journal_issn] = 1464-6668
 
-    au < ready ; exists ; 1999 ; International Journal of Sports Marketing and Sponsorship Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1999 ; International Journal of Sports Marketing and Sponsorship Volume 1 ; 1 ; >
     au < ready ; exists ; 2000 ; International Journal of Sports Marketing and Sponsorship Volume 2 ; 2 ; >
     au < ready ; exists ; 2001 ; International Journal of Sports Marketing and Sponsorship Volume 3 ; 3 ; >
     au < crawling ; exists ; 2002 ; International Journal of Sports Marketing and Sponsorship Volume 4 ; 4 ; >
@@ -13735,12 +13735,12 @@
     au < ready ; exists ; 2013 ; International Journal of Sports Marketing and Sponsorship Volume 15 ; 15 ; >
     au < ready ; exists ; 2014 ; International Journal of Sports Marketing and Sponsorship Volume 16 ; 16 ; >
     au < crawling ; exists ; 2015 ; International Journal of Sports Marketing and Sponsorship Volume 17 ; 17 ; >
-    au < ready ; exists ; 2016 ; International Journal of Sports Marketing and Sponsorship Volume 18 ; 18 ; >
+    au < crawling ; exists ; 2016 ; International Journal of Sports Marketing and Sponsorship Volume 18 ; 18 ; >
     au < ready ; exists ; 2017 ; International Journal of Sports Marketing and Sponsorship Volume 19 ; 19 ; >
     au < ready ; exists ; 2018 ; International Journal of Sports Marketing and Sponsorship Volume 20 ; 20 ; >
     au < ready ; exists ; 2019 ; International Journal of Sports Marketing and Sponsorship Volume 21 ; 21 ; >
     au < ready ; exists ; 2020 ; International Journal of Sports Marketing and Sponsorship Volume 22 ; 22 ; >
-    au < ready ; exists ; 2021 ; International Journal of Sports Marketing and Sponsorship Volume 23 ; 23 ; >
+    au < crawling ; exists ; 2021 ; International Journal of Sports Marketing and Sponsorship Volume 23 ; 23 ; >
     au < expected ; exists ; 2022 ; International Journal of Sports Marketing and Sponsorship Volume 24 ; 24 ; >
 
   }
@@ -13759,7 +13759,7 @@
     au < crawling ; exists ; 2016 ; International Journal of Tourism Cities Volume 2 ; 2 ; >
     au < ready ; exists ; 2017 ; International Journal of Tourism Cities Volume 3 ; 3 ; >
     au < ready ; exists ; 2018 ; International Journal of Tourism Cities Volume 4 ; 4 ; >
-    au < ready ; exists ; 2019 ; International Journal of Tourism Cities Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2019 ; International Journal of Tourism Cities Volume 5 ; 5 ; >
     au < ready ; exists ; 2020 ; International Journal of Tourism Cities Volume 6 ; 6 ; >
     au < ready ; exists ; 2021 ; International Journal of Tourism Cities Volume 7 ; 7 ; >
     au < crawling ; exists ; 2022 ; International Journal of Tourism Cities Volume 8 ; 8 ; >
@@ -13822,7 +13822,7 @@
     au < ready ; exists ; 2018 ; Journal of Criminological Research, Policy and Practice Volume 4 ; 4 ; >
     au < ready ; exists ; 2019 ; Journal of Criminological Research, Policy and Practice Volume 5 ; 5 ; >
     au < ready ; exists ; 2020 ; Journal of Criminological Research, Policy and Practice Volume 6 ; 6 ; >
-    au < ready ; exists ; 2021 ; Journal of Criminological Research, Policy and Practice Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2021 ; Journal of Criminological Research, Policy and Practice Volume 7 ; 7 ; >
     au < crawling ; exists ; 2022 ; Journal of Criminological Research, Policy and Practice Volume 8 ; 8 ; >
 
   }
@@ -14168,7 +14168,7 @@
     au < ready ; exists ; 2002 ; Research Journal of Textile and Apparel Volume 6 ; 6 ; >
     au < ready ; exists ; 2003 ; Research Journal of Textile and Apparel Volume 7 ; 7 ; >
     au < ready ; exists ; 2004 ; Research Journal of Textile and Apparel Volume 8 ; 8 ; >
-    au < ready ; exists ; 2005 ; Research Journal of Textile and Apparel Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2005 ; Research Journal of Textile and Apparel Volume 9 ; 9 ; >
     au < ready ; exists ; 2006 ; Research Journal of Textile and Apparel Volume 10 ; 10 ; >
     au < crawling ; exists ; 2007 ; Research Journal of Textile and Apparel Volume 11 ; 11 ; >
     au < crawling ; exists ; 2008 ; Research Journal of Textile and Apparel Volume 12 ; 12 ; >
@@ -14253,7 +14253,7 @@
     au < ready ; exists ; 2014 ; The Journal of Forensic Practice Volume 16 ; 16 ; >
     au < ready ; exists ; 2015 ; The Journal of Forensic Practice Volume 17 ; 17 ; >
     au < ready ; exists ; 2016 ; The Journal of Forensic Practice Volume 18 ; 18 ; >
-    au < ready ; exists ; 2017 ; The Journal of Forensic Practice Volume 19 ; 19 ; >
+    au < crawling ; exists ; 2017 ; The Journal of Forensic Practice Volume 19 ; 19 ; >
     au < crawling ; exists ; 2018 ; The Journal of Forensic Practice Volume 20 ; 20 ; >
     au < ready ; exists ; 2019 ; The Journal of Forensic Practice Volume 21 ; 21 ; >
     au < crawling ; exists ; 2020 ; The Journal of Forensic Practice Volume 22 ; 22 ; >
@@ -14273,7 +14273,7 @@
     param[journal_issn] = 2059-5891
 
     au < crawling ; exists ; 2016 ; VINE Journal of Information and Knowledge Management Systems Volume 46 ; 46 ; >
-    au < ready ; exists ; 2017 ; VINE Journal of Information and Knowledge Management Systems Volume 47 ; 47 ; >
+    au < crawling ; exists ; 2017 ; VINE Journal of Information and Knowledge Management Systems Volume 47 ; 47 ; >
     au < ready ; exists ; 2018 ; VINE Journal of Information and Knowledge Management Systems Volume 48 ; 48 ; >
     au < ready ; exists ; 2019 ; VINE Journal of Information and Knowledge Management Systems Volume 49 ; 49 ; >
     au < ready ; exists ; 2020 ; VINE Journal of Information and Knowledge Management Systems Volume 50 ; 50 ; >
