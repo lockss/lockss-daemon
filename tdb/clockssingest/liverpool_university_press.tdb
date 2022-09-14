@@ -1784,4 +1784,51 @@
 
   }
 
+  {
+
+    title <
+      name = Global Nineteenth-Century Studies ;
+      issn = 2752-6623 ; 
+      eissn = 2752-6631
+    >
+
+    param[journal_id] = gncs
+
+    au < manifest ; exists ; 2022 ; Global Nineteenth-Century Studies Volume 1 ; 1 ; >
+
+  }
+  
+  {
+
+    title <
+      name = Journal of Romanian Studies ;
+      issn = 2627-5325 ; 
+      eissn = 2754-415X
+    >
+
+    param[journal_id] = romanian
+
+    au < expected ; exists ; 2022 ; Journal of Romanian Studies Volume 4 ; 4 ; >
+
+  }
+  
+  {
+
+    title <
+      name = TS Eliot Studies Annual ;
+      issn = 2689-4181 ; 
+      eissn = 2771-1625
+    >
+
+    param[journal_id] = tsesa
+
+    au < manifest ; exists ; 2017 ; TS Eliot Studies Annual Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2018 ; TS Eliot Studies Annual Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2019 ; TS Eliot Studies Annual Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2020 ; TS Eliot Studies Annual Volume 4 ; 4 ; >
+    au < expected ; exists ; 2021 ; TS Eliot Studies Annual Volume 5 ; 5 ; >
+    au < expected ; exists ; 2022 ; TS Eliot Studies Annual Volume 6 ; 6 ; >
+
+  }
+  
 }
