@@ -5,7 +5,7 @@
     info[platform] = Silverchair.
   >
   
-   plugin = org.lockss.plugin.silverchair.aacr.ClockssAACRSilverchairPlugin
+   plugin = org.lockss.plugin.silverchair.aacr.AACRSilverchairPlugin
    implicit < status ; year ; param[year] ; name ; param[volume_name] >
    param[base_url] = https://aacrjournals.org/
 
