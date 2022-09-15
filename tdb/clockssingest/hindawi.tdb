@@ -2,6 +2,7 @@
   publisher <
     name = Hindawi ;
     info[contract] = 2013 ;
+    info[back] = 2010 ;
     info[tester] = 8 ;
     info[poller] = 5 ;
     info[platform] = Custom
@@ -3301,7 +3302,7 @@
     au < doNotProcess ; doNotProcess ; 2019 ; Computational Intelligence and Neuroscience Volume 2019 ; 2019 ; 2019 ; >
     au < finished ; crawling ; 2020 ; Computational Intelligence and Neuroscience Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Computational Intelligence and Neuroscience Volume 2021 ; 2021 ; 2021 ; >
-    au < manifest ; exists ; 2022 ; Computational Intelligence and Neuroscience Volume 2022 ; 2022 ; 2022 ; >
+    au < notReady ; exists ; 2022 ; Computational Intelligence and Neuroscience Volume 2022 ; 2022 ; 2022 ; > #500 error
 
   }
 
@@ -3555,7 +3556,7 @@
     au < doNotProcess ; doNotProcess ; 2019 ; Discrete Dynamics in Nature and Society Volume 2019 ; 2019 ; 2019 ; >
     au < finished ; crawling ; 2020 ; Discrete Dynamics in Nature and Society Volume 2020 ; 2020 ; 2020 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2021 ; Discrete Dynamics in Nature and Society Volume 2021 ; 2021 ; 2021 ; >
-    au < manifest ; exists ; 2022 ; Discrete Dynamics in Nature and Society Volume 2022 ; 2022 ; 2022 ; >
+    au < notReady ; exists ; 2022 ; Discrete Dynamics in Nature and Society Volume 2022 ; 2022 ; 2022 ; > #500 error email
 
   }
 
@@ -3778,7 +3779,7 @@
     au < doNotProcess ; doNotProcess ; 2019 ; Evidence-based Complementary and Alternative Medicine Volume 2019 ; 2019 ; 2019 ; >
     au < finished ; crawling ; 2020 ; Evidence-based Complementary and Alternative Medicine Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Evidence-based Complementary and Alternative Medicine Volume 2021 ; 2021 ; 2021 ; >
-    au < manifest ; exists ; 2022 ; Evidence-based Complementary and Alternative Medicine Volume 2022 ; 2022 ; 2022 ; >
+    au < notReady ; exists ; 2022 ; Evidence-based Complementary and Alternative Medicine Volume 2022 ; 2022 ; 2022 ; > #500 error
 
   }
 
@@ -3868,7 +3869,7 @@
     au < doNotProcess ; doNotProcess ; 2019 ; Geofluids Volume 2019 ; 2019 ; 2019 ; >
     au < finished ; crawling ; 2020 ; Geofluids Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Geofluids Volume 2021 ; 2021 ; 2021 ; >
-    au < manifest ; exists ; 2022 ; Geofluids Volume 2022 ; 2022 ; 2022 ; >
+    au < notReady ; exists ; 2022 ; Geofluids Volume 2022 ; 2022 ; 2022 ; > #500 error. malformed email
 
   }
 
@@ -4232,7 +4233,7 @@
     au < doNotProcess ; doNotProcess ; 2019 ; International Journal of Antennas and Propagation Volume 2019 ; 2019 ; 2019 ; >
     au < finished ; crawling ; 2020 ; International Journal of Antennas and Propagation Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; International Journal of Antennas and Propagation Volume 2021 ; 2021 ; 2021 ; >
-    au < manifest ; exists ; 2022 ; International Journal of Antennas and Propagation Volume 2022 ; 2022 ; 2022 ; >
+    au < notReady ; exists ; 2022 ; International Journal of Antennas and Propagation Volume 2022 ; 2022 ; 2022 ; > #500 error. malformed ftp url
 
   }
 

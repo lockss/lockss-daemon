@@ -213,6 +213,7 @@
 #    param[base_url] = http://www.amsjournal.com/
 
     param[journal_issn] = 2231-0746
+    #Moved to LWW
 
     au < finished ; finished ; 2011 ; Annals of Maxillofacial Surgery Volume 1 ; 2011 ; 1 ; http://www.amsjournal.com/ ; ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2012 ; Annals of Maxillofacial Surgery Volume 2 ; 2012 ; 2 ; http://www.amsjournal.com/ ; ; reingest3.clockss.org:8083 >
@@ -225,7 +226,7 @@
     au < finished ; crawling ; 2019 ; Annals of Maxillofacial Surgery Volume 9 ; 2019 ; 9 ; https://www.amsjournal.com/ ; ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Annals of Maxillofacial Surgery Volume 10 ; 2020 ; 10 ; https://www.amsjournal.com/ ; ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2021 ; Annals of Maxillofacial Surgery Volume 11 ; 2021 ; 11 ; https://www.amsjournal.com/ ; ; >
-    au < expected ; exists ; 2022 ; Annals of Maxillofacial Surgery Volume 12 ; 2022 ; 12 ; https://www.amsjournal.com/ ; ; >
+    au < doNotProcess ; exists ; 2022 ; Annals of Maxillofacial Surgery Volume 12 ; 2022 ; 12 ; https://www.amsjournal.com/ ; ; >
 
   }
 
@@ -2167,7 +2168,7 @@
     au < finished ; crawling ; 2019 ; Industrial Psychiatry Journal Volume 28 ; 2019 ; 28 ; https://www.industrialpsychiatry.org/ ; ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Industrial Psychiatry Journal Volume 29 ; 2020 ; 29 ; https://www.industrialpsychiatry.org/ ; ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Industrial Psychiatry Journal Volume 30 ; 2021 ; 30 ; https://www.industrialpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 2022 ; Industrial Psychiatry Journal Volume 31 ; 2022 ; 31 ; https://www.industrialpsychiatry.org/ ; ; >
+    au < notReady ; exists ; 2022 ; Industrial Psychiatry Journal Volume 31 ; 2022 ; 31 ; https://www.industrialpsychiatry.org/ ; ; > #524 Error https://www.industrialpsychiatry.org/citation.asp?issn=0972-6748;year=2022;volume=31;issue=1;spage=113;epage=119;aulast=Yadav
 
   }
 
@@ -2840,7 +2841,7 @@
     au < finished ; crawling ; 2019 ; Journal of Cytology Volume 36 ; 2019 ; 36 ; https://www.jcytol.org/ ; ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2020 ; Journal of Cytology Volume 37 ; 2020 ; 37 ; https://www.jcytol.org/ ; ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Journal of Cytology Volume 38 ; 2021 ; 38 ; https://www.jcytol.org/ ; ; >
-    au < manifest ; exists ; 2022 ; Journal of Cytology Volume 39 ; 2022 ; 39 ; https://www.jcytol.org/ ; ; >
+    au < notReady ; exists ; 2022 ; Journal of Cytology Volume 39 ; 2022 ; 39 ; https://www.jcytol.org/ ; ; > #Image urls at base_url http://jcytol.org/
 
   }
 
@@ -2866,7 +2867,7 @@
     au < finished ; crawling ; 2019 ; Journal of Dental Implants Volume 9 ; 2019 ; 9 ; https://www.jdionline.org/ ; ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2020 ; Journal of Dental Implants Volume 10 ; 2020 ; 10 ; https://www.jdionline.org/ ; ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2021 ; Journal of Dental Implants Volume 11 ; 2021 ; 11 ; https://www.jdionline.org/ ; ; >
-    au < manifest ; exists ; 2022 ; Journal of Dental Implants Volume 12 ; 2022 ; 12 ; https://www.jdionline.org/ ; ; >
+    au < notReady ; exists ; 2022 ; Journal of Dental Implants Volume 12 ; 2022 ; 12 ; https://www.jdionline.org/ ; ; > #Images at bad base_url http://jdionline.org/
 
   }
 
@@ -2945,6 +2946,7 @@
       issnl = 2230-8229
     >
 #    param[base_url] = http://www.jfcmonline.com/
+    #Moved to LWW
 
     param[journal_issn] = 2230-8229
 
@@ -2976,7 +2978,7 @@
     au < finished ; crawling ; 2019 ; Journal of Family and Community Medicine Volume 26 ; 2019 ; 26 ; https://www.jfcmonline.com/ ; ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Journal of Family and Community Medicine Volume 27 ; 2020 ; 27 ; https://www.jfcmonline.com/ ; ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2021 ; Journal of Family and Community Medicine Volume 28 ; 2021 ; 28 ; https://www.jfcmonline.com/ ; ; >
-    au < manifest ; exists ; 2022 ; Journal of Family and Community Medicine Volume 29 ; 2022 ; 29 ; https://www.jfcmonline.com/ ; ; >
+    au < doNotProcess ; exists ; 2022 ; Journal of Family and Community Medicine Volume 29 ; 2022 ; 29 ; https://www.jfcmonline.com/ ; ; >
 
   }
 
@@ -2988,6 +2990,7 @@
       issnl = 2249-4863
     >
 #    param[base_url] = http://www.jfmpc.com/
+    #Moved to LWW
 
     param[journal_issn] = 2249-4863
 
@@ -3001,7 +3004,7 @@
     au < finished ; crawling ; 2019 ; Journal of Family Medicine and Primary Care Volume 8 ; 2019 ; 8 ; https://www.jfmpc.com/ ; ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Journal of Family Medicine and Primary Care Volume 9 ; 2020 ; 9 ; https://www.jfmpc.com/ ; ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Journal of Family Medicine and Primary Care Volume 10 ; 2021 ; 10 ; https://www.jfmpc.com/ ; ; >
-    au < expected ; exists ; 2022 ; Journal of Family Medicine and Primary Care Volume 11 ; 2022 ; 11 ; https://www.jfmpc.com/ ; ; >
+    au < doNotProcess ; exists ; 2022 ; Journal of Family Medicine and Primary Care Volume 11 ; 2022 ; 11 ; https://www.jfmpc.com/ ; ; >
 
   }
 
@@ -3193,6 +3196,7 @@
       issnl = 0972-124X
     >
 #    param[base_url] = http://www.jisponline.com/
+    #Moved to LWW
 
     param[journal_issn] = 0972-124X
 
@@ -3210,7 +3214,7 @@
     au < finished ; crawling ; 2019 ; Journal of Indian Society of Periodontology Volume 23 ; 2019 ; 23 ; https://www.jisponline.com/ ; ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2020 ; Journal of Indian Society of Periodontology Volume 24 ; 2020 ; 24 ; https://www.jisponline.com/ ; ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2021 ; Journal of Indian Society of Periodontology Volume 25 ; 2021 ; 25 ; https://www.jisponline.com/ ; ; >
-    au < manifest ; exists ; 2022 ; Journal of Indian Society of Periodontology Volume 26 ; 2022 ; 26 ; https://www.jisponline.com/ ; ; >
+    au < doNotProcess ; exists ; 2022 ; Journal of Indian Society of Periodontology Volume 26 ; 2022 ; 26 ; https://www.jisponline.com/ ; ; >
 
   }
 
@@ -4620,7 +4624,7 @@
     au < finished ; crawling ; 2019 ; Saudi Journal of Gastroenterology Volume 25 ; 2019 ; 25 ; https://www.saudijgastro.com/ ; ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Saudi Journal of Gastroenterology Volume 26 ; 2020 ; 26 ; https://www.saudijgastro.com/ ; ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Saudi Journal of Gastroenterology Volume 27 ; 2021 ; 27 ; https://www.saudijgastro.com/ ; ; >
-    au < manifest ; exists ; 2022 ; Saudi Journal of Gastroenterology Volume 28 ; 2022 ; 28 ; https://www.saudijgastro.com/ ; ; >
+    au < notReady ; exists ; 2022 ; Saudi Journal of Gastroenterology Volume 28 ; 2022 ; 28 ; https://www.saudijgastro.com/ ; ; > #Images at malformed base_url http://saudijgastro.com
 
   }
 #  {
@@ -4754,6 +4758,7 @@
       issnl = 0974-7796
    >
 #    param[base_url] = http://www.urologyannals.com/
+    #Moved to LWW
 
     param[journal_issn] = 0974-7796
 
@@ -4770,7 +4775,7 @@
     au < finished ; crawling ; 2019 ; Urology Annals Volume 11 ; 2019 ; 11 ; https://www.urologyannals.com/ ; ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Urology Annals Volume 12 ; 2020 ; 12 ; https://www.urologyannals.com/ ; ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2021 ; Urology Annals Volume 13 ; 2021 ; 13 ; https://www.urologyannals.com/ ; ; >
-    au < manifest ; exists ; 2022 ; Urology Annals Volume 14 ; 2022 ; 14 ; https://www.urologyannals.com/ ; ; >
+    au < doNotProcess ; exists ; 2022 ; Urology Annals Volume 14 ; 2022 ; 14 ; https://www.urologyannals.com/ ; ; >
 
   }
 
@@ -5456,6 +5461,7 @@
 
       param[journal_issn] = 2278-0513
 #      param[base_url] = http://www.ccij-online.org/
+      #Moved to Polaris Publication
 
       au < finished ; finished ; 2012 ; Clinical Cancer Investigation Journal Volume 1 ; 2012 ; 1 ; http://www.ccij-online.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2013 ; Clinical Cancer Investigation Journal Volume 2 ; 2013 ; 2 ; http://www.ccij-online.org/ ; ; reingest5.clockss.org:8082 >
@@ -5467,7 +5473,7 @@
       au < finished ; crawling ; 2019 ; Clinical Cancer Investigation Journal Volume 8 ; 2019 ; 8 ; https://www.ccij-online.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Clinical Cancer Investigation Journal Volume 9 ; 2020 ; 9 ; https://www.ccij-online.org/ ; ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; Clinical Cancer Investigation Journal Volume 10 ; 2021 ; 10 ; https://www.ccij-online.org/ ; ; >
-      au < expected ; exists ; 2022 ; Clinical Cancer Investigation Journal Volume 11 ; 2022 ; 11 ; https://www.ccij-online.org/ ; ; >
+      au < doNotProcess ; exists ; 2022 ; Clinical Cancer Investigation Journal Volume 11 ; 2022 ; 11 ; https://www.ccij-online.org/ ; ; >
 
   }
 
@@ -5573,6 +5579,7 @@
 
       param[journal_issn] = 2226-8561
 #      param[base_url] = http://www.digitmedicine.com/
+      #https://www.digitmedicine.com/backissues.asp redirects to https://www.digitmedicine.com/browse.asp
 
       au < finished ; finished ; 2015 ; Digital Medicine Volume 1 ; 2015 ; 1 ; http://www.digitmedicine.com/ ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; Digital Medicine Volume 2 ; 2016 ; 2 ; http://www.digitmedicine.com/ ; ; reingest5.clockss.org:8082 >
@@ -5581,7 +5588,7 @@
       au < finished ; crawling ; 2019 ; Digital Medicine Volume 5 ; 2019 ; 5 ; https://www.digitmedicine.com/ ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Digital Medicine Volume 6 ; 2020 ; 6 ; https://www.digitmedicine.com/ ; ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2021 ; Digital Medicine Volume 7 ; 2021 ; 7 ; https://www.digitmedicine.com/ ; ; >
-      au < manifest ; exists ; 2022 ; Digital Medicine Volume 8 ; 2022 ; 8 ; https://www.digitmedicine.com/ ; ; >
+      au < notReady ; exists ; 2022 ; Digital Medicine Volume 8 ; 2022 ; 8 ; https://www.digitmedicine.com/ ; ; > #browse instead of backissues
 
   }
 
@@ -5733,7 +5740,7 @@
       au < finished ; crawling ; 2019 ; Egyptian Pharmaceutical Journal Volume 18 ; 2019 ; 18 ; https://www.epj.eg.net/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Egyptian Pharmaceutical Journal Volume 19 ; 2020 ; 19 ; https://www.epj.eg.net/ ; ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; Egyptian Pharmaceutical Journal Volume 20 ; 2021 ; 20 ; https://www.epj.eg.net/ ; ; >
-      au < manifest ; exists ; 2022 ; Egyptian Pharmaceutical Journal Volume 21 ; 2022 ; 21 ; https://www.epj.eg.net/ ; ; >
+      au < notReady ; exists ; 2022 ; Egyptian Pharmaceutical Journal Volume 21 ; 2022 ; 21 ; https://www.epj.eg.net/ ; ; > #524 error https://www.epj.eg.net/article.asp?issn=1687-4315;year=2022;volume=21;issue=1;spage=108;epage=108;aulast=;type=0
 
   }
 
@@ -5962,7 +5969,7 @@
       au < notReady ; exists ; 2019 ; Genome Integrity Volume 10 ; 2019 ; 10 ; https://www.genome-integrity.org/ ; ; > #500 Error
       au < notReady ; exists ; 2020 ; Genome Integrity Volume 11 ; 2020 ; 11 ; https://www.genome-integrity.org/ ; ; > #500 Error
       au < notReady ; exists ; 2021 ; Genome Integrity Volume 12 ; 2021 ; 12 ; https://www.genome-integrity.org/ ; ; > #500 Error
-      au < manifest ; exists ; 2022 ; Genome Integrity Volume 13 ; 2022 ; 13 ; https://www.genome-integrity.org/ ; ; >
+      au < notReady ; exists ; 2022 ; Genome Integrity Volume 13 ; 2022 ; 13 ; https://www.genome-integrity.org/ ; ; > #500 Error https://www.genome-integrity.org/showbackIssue.asp?issn=2041-9414;year=2022;volume=13;issue=1
 
   }
 
@@ -5983,7 +5990,7 @@
       au < finished ; crawling ; 2019 ; Global Journal of Transfusion Medicine Volume 4 ; 2019 ; 4 ; https://www.gjtmonline.com/ ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Global Journal of Transfusion Medicine Volume 5 ; 2020 ; 5 ; https://www.gjtmonline.com/ ; ; reingest5.clockss.org:8082 >
       au < notReady ; exists ; 2021 ; Global Journal of Transfusion Medicine Volume 6 ; 2021 ; 6 ; https://www.gjtmonline.com/ ; ; > #500 error
-      au < manifest ; exists ; 2022 ; Global Journal of Transfusion Medicine Volume 7 ; 2022 ; 7 ; https://www.gjtmonline.com/ ; ; > #500 error
+      au < notReady ; exists ; 2022 ; Global Journal of Transfusion Medicine Volume 7 ; 2022 ; 7 ; https://www.gjtmonline.com/ ; ; > #500 error https://www.gjtmonline.com/viewimage.asp?img=GlobJTransfusMed_2022_7_1_82_344338_f5.jpg
 
   }
 
@@ -6190,7 +6197,7 @@
 
       param[journal_issn] = 0971-5916
 #      param[base_url] = http://www.ijmr.org.in/
-      #Moved to lww
+      #Moved to LWW
 
       au < finished ; frozen ; 2011 ; Indian Journal of Medical Research Volume 133 ; 2011 ; 133 ; http://www.ijmr.org.in/ ; ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2011 ; Indian Journal of Medical Research Volume 134 ; 2011 ; 134 ; http://www.ijmr.org.in/ ; ; reingest1.clockss.org:8082 >
@@ -6213,7 +6220,7 @@
       au < finished ; crawling ; 2020 ; Indian Journal of Medical Research Volume 151 ; 2020 ; 151 ; https://www.ijmr.org.in/ ; ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2020 ; Indian Journal of Medical Research Volume 152 ; 2020 ; 152 ; https://www.ijmr.org.in/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2021 ; Indian Journal of Medical Research Volume 153 ; 2021 ; 153 ; https://www.ijmr.org.in/ ; ; reingest5.clockss.org:8082 >
-      au < expected ; exists ; 2022 ; Indian Journal of Medical Research Volume 154 ; 2022 ; 154 ; https://www.ijmr.org.in/ ; ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; exists ; 2022 ; Indian Journal of Medical Research Volume 154 ; 2022 ; 154 ; https://www.ijmr.org.in/ ; ; reingest5.clockss.org:8082 >
 
   }
 
@@ -6857,7 +6864,7 @@
       au < finished ; crawling ; 2019 ; Journal of Current Research in Scientific Medicine Volume 5 ; 2019 ; 5 ; https://www.jcrsmed.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Journal of Current Research in Scientific Medicine Volume 6 ; 2020 ; 6 ; https://www.jcrsmed.org/ ; ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Journal of Current Research in Scientific Medicine Volume 7 ; 2021 ; 7 ; https://www.jcrsmed.org/ ; ; >
-      au < manifest ; exists ; 2022 ; Journal of Current Research in Scientific Medicine Volume 8 ; 2022 ; 8 ; https://www.jcrsmed.org/ ; ; >
+      au < notReady ; exists ; 2022 ; Journal of Current Research in Scientific Medicine Volume 8 ; 2022 ; 8 ; https://www.jcrsmed.org/ ; ; > #500 Error https://www.jcrsmed.org/article.asp?issn=2455-3069;year=2022;volume=8;issue=1;spage=89;epage=90;aulast=Chandar;type=2
 
   }
 
@@ -7486,7 +7493,7 @@
       au < finished ; crawling ; 2019 ; Journal of Oral and Maxillofacial Radiology Volume 7 ; 2019 ; 7 ; https://www.joomr.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Journal of Oral and Maxillofacial Radiology Volume 8 ; 2020 ; 8 ; https://www.joomr.org/ ; ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Journal of Oral and Maxillofacial Radiology Volume 9 ; 2021 ; 9 ; https://www.joomr.org/ ; ; >
-      au < manifest ; exists ; 2022 ; Journal of Oral and Maxillofacial Radiology Volume 10 ; 2022 ; 10 ; https://www.joomr.org/ ; ; >
+      au < notReady ; exists ; 2022 ; Journal of Oral and Maxillofacial Radiology Volume 10 ; 2022 ; 10 ; https://www.joomr.org/ ; ; > #524 Error https://www.joomr.org/viewimage.asp?img=JOralMaxillofacRadiol_2022_10_1_19_343695_f1.jpg
 
   }
 
@@ -8000,6 +8007,7 @@
 
       param[journal_issn] = 1673-5374
 #      param[base_url] = http://www.nrronline.org/
+      #Moved to LWW
 
       au < finished ; crawling ; 2011 ; Neural Regeneration Research Volume 6 ; 2011 ; 6 ; http://www.nrronline.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2012 ; Neural Regeneration Research Volume 7 ; 2012 ; 7 ; http://www.nrronline.org/ ; ; reingest1.clockss.org:8082 >
@@ -8012,7 +8020,7 @@
       au < finished ; crawling ; 2019 ; Neural Regeneration Research Volume 14 ; 2019 ; 14 ; https://www.nrronline.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Neural Regeneration Research Volume 15 ; 2020 ; 15 ; https://www.nrronline.org/ ; ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; Neural Regeneration Research Volume 16 ; 2021 ; 16 ; https://www.nrronline.org/ ; ; >
-      au < manifest ; exists ; 2022 ; Neural Regeneration Research Volume 17 ; 2022 ; 17 ; https://www.nrronline.org/ ; ; >
+      au < doNotProcess ; exists ; 2022 ; Neural Regeneration Research Volume 17 ; 2022 ; 17 ; https://www.nrronline.org/ ; ; >
 
   }
 
@@ -9618,6 +9626,7 @@
 
       param[journal_issn] = 1110-1121
 #      param[base_url] = http://www.ejs.eg.net/
+      #Moved to LWW
 
       au < finished ; crawling ; 2014 ; Egyptian Journal of Surgery Volume 33 ; 2014 ; 33 ; http://www.ejs.eg.net/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; Egyptian Journal of Surgery Volume 34 ; 2015 ; 34 ; http://www.ejs.eg.net/ ; ; reingest2.clockss.org:8085 >
@@ -9627,7 +9636,7 @@
       au < finished ; crawling ; 2019 ; Egyptian Journal of Surgery Volume 38 ; 2019 ; 38 ; https://www.ejs.eg.net/ ; ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Egyptian Journal of Surgery Volume 39 ; 2020 ; 39 ; https://www.ejs.eg.net/ ; ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Egyptian Journal of Surgery Volume 40 ; 2021 ; 40 ; https://www.ejs.eg.net/ ; ; >
-      au < expected ; exists ; 2022 ; Egyptian Journal of Surgery Volume 41 ; 2022 ; 41 ; https://www.ejs.eg.net/ ; ; >
+      au < doNotProcess ; exists ; 2022 ; Egyptian Journal of Surgery Volume 41 ; 2022 ; 41 ; https://www.ejs.eg.net/ ; ; >
 
   }
 
@@ -10456,7 +10465,7 @@
       au < finished ; crawling ; 2019 ; Journal of International Oral Health Volume 11 ; 2019 ; 11 ; https://www.jioh.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2020 ; Journal of International Oral Health Volume 12 ; 2020 ; 12 ; https://www.jioh.org/ ; ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Journal of International Oral Health Volume 13 ; 2021 ; 13 ; https://www.jioh.org/ ; ; >
-      au < manifest ; exists ; 2022 ; Journal of International Oral Health Volume 14 ; 2022 ; 14 ; https://www.jioh.org/ ; ; >
+      au < notReady ; exists ; 2022 ; Journal of International Oral Health Volume 14 ; 2022 ; 14 ; https://www.jioh.org/ ; ; > #500 error https://www.jioh.org/article.asp?issn=0976-7428;year=2022;volume=14;issue=2;spage=151;epage=157;aulast=Saxena;type=2
 
   }
 
