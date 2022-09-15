@@ -3215,6 +3215,7 @@ while (my $line = <>) {
     
   #Silverchair GLN. Includes year/volume_name. Common Theme
   } elsif (($plugin eq "AAPSilverchairPlugin") || 
+           ($plugin eq "AACRSilverchairPlugin") || 
            ($plugin eq "AmericanDiabetesAssociationSilverchairPlugin") || 
            ($plugin eq "CompanyBiologistsSilverchairPlugin") || 
            ($plugin eq "PortlandPressSilverchairPlugin") || 
@@ -3248,10 +3249,11 @@ while (my $line = <>) {
     sleep(4);
 
   #Silverchair CLOCKSS. Includes year/volume_name. Common Theme
-  } elsif (($plugin eq "ClockssRockefellerUniversityPressSilverchairPlugin") || 
-           ($plugin eq "ClockssCompanyBiologistsSilverchairPlugin") || 
-           ($plugin eq "ClockssAAPSilverchairPlugin") || 
+  } elsif (($plugin eq "ClockssAAPSilverchairPlugin") || 
+           ($plugin eq "ClockssAACRSilverchairPlugin") || 
            ($plugin eq "ClockssAmericanDiabetesAssociationSilverchairPlugin") || 
+           ($plugin eq "ClockssCompanyBiologistsSilverchairPlugin") || 
+           ($plugin eq "ClockssRockefellerUniversityPressSilverchairPlugin") || 
            ($plugin eq "ClockssPortlandPressSilverchairPlugin")) { 
     $url = sprintf("%s%s/issue/browse-by-year/%d",
       $param{base_url}, $param{journal_id}, $param{year});

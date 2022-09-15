@@ -23,9 +23,9 @@
     >
       param[journal_id] = bloodcancerdiscov
     
-      au < exists ; exists ; 2020 ; 2020 ; Blood Cancer Discovery Volume 1 ; 1 ; >
-      au < exists ; exists ; 2021 ; 2021 ; Blood Cancer Discovery Volume 2 ; 2 ; >
-      au < exists ; exists ; 2022 ; 2022 ; Blood Cancer Discovery Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2020 ; 2020 ; Blood Cancer Discovery Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Blood Cancer Discovery Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2022 ; 2022 ; Blood Cancer Discovery Volume 3 ; 3 ; >
 
   }
 
@@ -39,18 +39,18 @@
     >
       param[journal_id] = cancerdiscovery
     
-      au < exists ; exists ; 2011 ; 2011 ; Cancer Discovery Volume 1 ; 1 ; >
-      au < exists ; exists ; 2012 ; 2012 ; Cancer Discovery Volume 2 ; 2 ; >
-      au < exists ; exists ; 2013 ; 2013 ; Cancer Discovery Volume 3 ; 3 ; >
-      au < exists ; exists ; 2014 ; 2014 ; Cancer Discovery Volume 4 ; 4 ; >
-      au < exists ; exists ; 2015 ; 2015 ; Cancer Discovery Volume 5 ; 5 ; >
-      au < exists ; exists ; 2016 ; 2016 ; Cancer Discovery Volume 6 ; 6 ; >
-      au < exists ; exists ; 2017 ; 2017 ; Cancer Discovery Volume 7 ; 7 ; >
-      au < exists ; exists ; 2018 ; 2018 ; Cancer Discovery Volume 8 ; 8 ; >
-      au < exists ; exists ; 2019 ; 2019 ; Cancer Discovery Volume 9 ; 9 ; >
-      au < exists ; exists ; 2020 ; 2020 ; Cancer Discovery Volume 10 ; 10 ; >
-      au < testing ; exists ; 2021 ; 2021 ; Cancer Discovery Volume 11 ; 11 ; >
-      au < exists ; exists ; 2022 ; 2022 ; Cancer Discovery Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Cancer Discovery Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2012 ; 2012 ; Cancer Discovery Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2013 ; 2013 ; Cancer Discovery Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2014 ; 2014 ; Cancer Discovery Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2015 ; 2015 ; Cancer Discovery Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2016 ; 2016 ; Cancer Discovery Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2017 ; 2017 ; Cancer Discovery Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; Cancer Discovery Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2019 ; 2019 ; Cancer Discovery Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2020 ; 2020 ; Cancer Discovery Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Cancer Discovery Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2022 ; 2022 ; Cancer Discovery Volume 12 ; 12 ; >
 
   }
 
@@ -65,38 +65,38 @@
 
       param[journal_id] = cebp
 
-      au < exists ; exists ; 1991 ; 1991 ; Cancer Epidemiology Biomarkers & Prevention Volume 1 (1991) ; 1 ; >
-      au < exists ; exists ; 1992 ; 1992 ; Cancer Epidemiology Biomarkers & Prevention Volume 1 (1992) ; 1 ; >
-      au < exists ; exists ; 1993 ; 1993 ; Cancer Epidemiology Biomarkers & Prevention Volume 2 ; 2 ; >
-      au < exists ; exists ; 1994 ; 1994 ; Cancer Epidemiology Biomarkers & Prevention Volume 3 ; 3 ; >
-      au < exists ; exists ; 1995 ; 1995 ; Cancer Epidemiology Biomarkers & Prevention Volume 4 ; 4 ; >
-      au < exists ; exists ; 1996 ; 1996 ; Cancer Epidemiology Biomarkers & Prevention Volume 5 ; 5 ; >
-      au < exists ; exists ; 1997 ; 1997 ; Cancer Epidemiology Biomarkers & Prevention Volume 6 ; 6 ; >
-      au < exists ; exists ; 1998 ; 1998 ; Cancer Epidemiology Biomarkers & Prevention Volume 7 ; 7 ; >
-      au < exists ; exists ; 1999 ; 1999 ; Cancer Epidemiology Biomarkers & Prevention Volume 8 ; 8 ; >
-      au < exists ; exists ; 2000 ; 2000 ; Cancer Epidemiology Biomarkers & Prevention Volume 9 ; 9 ; >
-      au < exists ; exists ; 2001 ; 2001 ; Cancer Epidemiology Biomarkers & Prevention Volume 10 ; 10 ; >
-      au < exists ; exists ; 2002 ; 2002 ; Cancer Epidemiology Biomarkers & Prevention Volume 11 ; 11 ; >
-      au < exists ; exists ; 2003 ; 2003 ; Cancer Epidemiology Biomarkers & Prevention Volume 12 ; 12 ; >
-      au < exists ; exists ; 2004 ; 2004 ; Cancer Epidemiology Biomarkers & Prevention Volume 13 ; 13 ; >
-      au < exists ; exists ; 2005 ; 2005 ; Cancer Epidemiology Biomarkers & Prevention Volume 14 ; 14 ; >
-      au < exists ; exists ; 2006 ; 2006 ; Cancer Epidemiology Biomarkers & Prevention Volume 15 ; 15 ; >
-      au < exists ; exists ; 2007 ; 2007 ; Cancer Epidemiology Biomarkers & Prevention Volume 16 ; 16 ; >
-      au < exists ; exists ; 2008 ; 2008 ; Cancer Epidemiology Biomarkers & Prevention Volume 17 ; 17 ; >
-      au < exists ; exists ; 2009 ; 2009 ; Cancer Epidemiology Biomarkers & Prevention Volume 18 ; 18 ; >
-      au < exists ; exists ; 2010 ; 2010 ; Cancer Epidemiology Biomarkers & Prevention Volume 19 ; 19 ; >
-      au < exists ; exists ; 2011 ; 2011 ; Cancer Epidemiology Biomarkers & Prevention Volume 20 ; 20 ; >
-      au < exists ; exists ; 2012 ; 2012 ; Cancer Epidemiology Biomarkers & Prevention Volume 21 ; 21 ; >
-      au < exists ; exists ; 2013 ; 2013 ; Cancer Epidemiology Biomarkers & Prevention Volume 22 ; 22 ; >
-      au < exists ; exists ; 2014 ; 2014 ; Cancer Epidemiology Biomarkers & Prevention Volume 23 ; 23 ; >
-      au < exists ; exists ; 2015 ; 2015 ; Cancer Epidemiology Biomarkers & Prevention Volume 24 ; 24 ; >
-      au < exists ; exists ; 2016 ; 2016 ; Cancer Epidemiology Biomarkers & Prevention Volume 25 ; 25 ; >
-      au < exists ; exists ; 2017 ; 2017 ; Cancer Epidemiology Biomarkers & Prevention Volume 26 ; 26 ; >
-      au < exists ; exists ; 2018 ; 2018 ; Cancer Epidemiology Biomarkers & Prevention Volume 27 ; 27 ; >
-      au < exists ; exists ; 2019 ; 2019 ; Cancer Epidemiology Biomarkers & Prevention Volume 28 ; 28 ; >
-      au < exists ; exists ; 2020 ; 2020 ; Cancer Epidemiology Biomarkers & Prevention Volume 29 ; 29 ; >
-      au < exists ; exists ; 2021 ; 2021 ; Cancer Epidemiology Biomarkers & Prevention Volume 30 ; 30 ; >
-      au < exists ; exists ; 2022 ; 2022 ; Cancer Epidemiology Biomarkers & Prevention Volume 31 ; 31 ; >
+      au < manifest ; exists ; 1991 ; 1991 ; Cancer Epidemiology Biomarkers & Prevention Volume 1 (1991) ; 1 ; >
+      au < manifest ; exists ; 1992 ; 1992 ; Cancer Epidemiology Biomarkers & Prevention Volume 1 (1992) ; 1 ; >
+      au < manifest ; exists ; 1993 ; 1993 ; Cancer Epidemiology Biomarkers & Prevention Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1994 ; 1994 ; Cancer Epidemiology Biomarkers & Prevention Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1995 ; 1995 ; Cancer Epidemiology Biomarkers & Prevention Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1996 ; 1996 ; Cancer Epidemiology Biomarkers & Prevention Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1997 ; 1997 ; Cancer Epidemiology Biomarkers & Prevention Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1998 ; 1998 ; Cancer Epidemiology Biomarkers & Prevention Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1999 ; 1999 ; Cancer Epidemiology Biomarkers & Prevention Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2000 ; 2000 ; Cancer Epidemiology Biomarkers & Prevention Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2001 ; 2001 ; Cancer Epidemiology Biomarkers & Prevention Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2002 ; 2002 ; Cancer Epidemiology Biomarkers & Prevention Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2003 ; 2003 ; Cancer Epidemiology Biomarkers & Prevention Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2004 ; 2004 ; Cancer Epidemiology Biomarkers & Prevention Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; Cancer Epidemiology Biomarkers & Prevention Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; Cancer Epidemiology Biomarkers & Prevention Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Cancer Epidemiology Biomarkers & Prevention Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Cancer Epidemiology Biomarkers & Prevention Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Cancer Epidemiology Biomarkers & Prevention Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Cancer Epidemiology Biomarkers & Prevention Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Cancer Epidemiology Biomarkers & Prevention Volume 20 ; 20 ; >
+      au < doesNotExist ; exists ; 2012 ; 2012 ; Cancer Epidemiology Biomarkers & Prevention Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2013 ; 2013 ; Cancer Epidemiology Biomarkers & Prevention Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2014 ; 2014 ; Cancer Epidemiology Biomarkers & Prevention Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2015 ; 2015 ; Cancer Epidemiology Biomarkers & Prevention Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2016 ; 2016 ; Cancer Epidemiology Biomarkers & Prevention Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2017 ; 2017 ; Cancer Epidemiology Biomarkers & Prevention Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; Cancer Epidemiology Biomarkers & Prevention Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2019 ; 2019 ; Cancer Epidemiology Biomarkers & Prevention Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2020 ; 2020 ; Cancer Epidemiology Biomarkers & Prevention Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Cancer Epidemiology Biomarkers & Prevention Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2022 ; 2022 ; Cancer Epidemiology Biomarkers & Prevention Volume 31 ; 31 ; >
 
   }
 
@@ -111,16 +111,16 @@
 
       param[journal_id] = cancerimmunolres
 
-      au < exists ; exists ; 2013 ; 2013 ; Cancer Immunology Research Volume 1 ; 1 ; >
-      au < exists ; exists ; 2014 ; 2014 ; Cancer Immunology Research Volume 2 ; 2 ; >
-      au < exists ; exists ; 2015 ; 2015 ; Cancer Immunology Research Volume 3 ; 3 ; >
-      au < exists ; exists ; 2016 ; 2016 ; Cancer Immunology Research Volume 4 ; 4 ; >
-      au < exists ; exists ; 2017 ; 2017 ; Cancer Immunology Research Volume 5 ; 5 ; >
-      au < exists ; exists ; 2018 ; 2018 ; Cancer Immunology Research Volume 6 ; 6 ; >
-      au < exists ; exists ; 2019 ; 2019 ; Cancer Immunology Research Volume 7 ; 7 ; >
-      au < exists ; exists ; 2020 ; 2020 ; Cancer Immunology Research Volume 8 ; 8 ; >
-      au < testing ; exists ; 2021 ; 2021 ; Cancer Immunology Research Volume 9 ; 9 ; >
-      au < exists ; exists ; 2022 ; 2022 ; Cancer Immunology Research Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2013 ; 2013 ; Cancer Immunology Research Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2014 ; 2014 ; Cancer Immunology Research Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2015 ; 2015 ; Cancer Immunology Research Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2016 ; 2016 ; Cancer Immunology Research Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2017 ; 2017 ; Cancer Immunology Research Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; Cancer Immunology Research Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2019 ; 2019 ; Cancer Immunology Research Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2020 ; 2020 ; Cancer Immunology Research Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Cancer Immunology Research Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2022 ; 2022 ; Cancer Immunology Research Volume 10 ; 10 ; >
 
   }
 
@@ -135,21 +135,21 @@
 
       param[journal_id] = cancerpreventionresearch
 
-      au < exists ; exists ; 2008 ; 2008 ; Cancer Prevention Research Volume 1 ; 1 ; >
-      au < exists ; exists ; 2009 ; 2009 ; Cancer Prevention Research Volume 2 ; 2 ; >
-      au < exists ; exists ; 2010 ; 2010 ; Cancer Prevention Research Volume 3 ; 3 ; >
-      au < exists ; exists ; 2011 ; 2011 ; Cancer Prevention Research Volume 4 ; 4 ; >
-      au < exists ; exists ; 2012 ; 2012 ; Cancer Prevention Research Volume 5 ; 5 ; >
-      au < exists ; exists ; 2013 ; 2013 ; Cancer Prevention Research Volume 6 ; 6 ; >
-      au < exists ; exists ; 2014 ; 2014 ; Cancer Prevention Research Volume 7 ; 7 ; >
-      au < exists ; exists ; 2015 ; 2015 ; Cancer Prevention Research Volume 8 ; 8 ; >
-      au < exists ; exists ; 2016 ; 2016 ; Cancer Prevention Research Volume 9 ; 9 ; >
-      au < exists ; exists ; 2017 ; 2017 ; Cancer Prevention Research Volume 10 ; 10 ; >
-      au < exists ; exists ; 2018 ; 2018 ; Cancer Prevention Research Volume 11 ; 11 ; >
-      au < exists ; exists ; 2019 ; 2019 ; Cancer Prevention Research Volume 12 ; 12 ; >
-      au < exists ; exists ; 2020 ; 2020 ; Cancer Prevention Research Volume 13 ; 13 ; >
-      au < exists ; exists ; 2021 ; 2021 ; Cancer Prevention Research Volume 14 ; 14 ; >
-      au < exists ; exists ; 2022 ; 2022 ; Cancer Prevention Research Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Cancer Prevention Research Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Cancer Prevention Research Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Cancer Prevention Research Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Cancer Prevention Research Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2012 ; 2012 ; Cancer Prevention Research Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2013 ; 2013 ; Cancer Prevention Research Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2014 ; 2014 ; Cancer Prevention Research Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2015 ; 2015 ; Cancer Prevention Research Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2016 ; 2016 ; Cancer Prevention Research Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2017 ; 2017 ; Cancer Prevention Research Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; Cancer Prevention Research Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2019 ; 2019 ; Cancer Prevention Research Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2020 ; 2020 ; Cancer Prevention Research Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Cancer Prevention Research Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2022 ; 2022 ; Cancer Prevention Research Volume 15 ; 15 ; >
 
   }
 
@@ -164,33 +164,33 @@
 
       param[journal_id] = cancerres
 
-      au < exists ; exists ; 1941 ; 1941 ; Cancer Research Volume 1 ; 1 ; >
-      au < exists ; exists ; 1942 ; 1942 ; Cancer Research Volume 2 ; 2 ; >
-      au < exists ; exists ; 1943 ; 1943 ; Cancer Research Volume 3 ; 3 ; >
-      au < exists ; exists ; 1944 ; 1944 ; Cancer Research Volume 4 ; 4 ; >
-      au < exists ; exists ; 1945 ; 1945 ; Cancer Research Volume 5 ; 5 ; >
-      au < exists ; exists ; 1946 ; 1946 ; Cancer Research Volume 6 ; 6 ; >
-      au < exists ; exists ; 1947 ; 1947 ; Cancer Research Volume 7 ; 7 ; >
-      au < exists ; exists ; 1948 ; 1948 ; Cancer Research Volume 8 ; 8 ; >
-      au < exists ; exists ; 1949 ; 1949 ; Cancer Research Volume 9 ; 9 ; >
-      au < exists ; exists ; 1950 ; 1950 ; Cancer Research Volume 10 ; 10 ; >
-      au < exists ; exists ; 1951 ; 1951 ; Cancer Research Volume 11 ; 11 ; >
-      au < exists ; exists ; 1952 ; 1952 ; Cancer Research Volume 12 ; 12 ; >
-      au < exists ; exists ; 1953 ; 1953 ; Cancer Research Volume 13 ; 13 ; >
-      au < exists ; exists ; 1954 ; 1954 ; Cancer Research Volume 14 ; 14 ; >
-      au < exists ; exists ; 1955 ; 1955 ; Cancer Research Volume 15 ; 15 ; >
-      au < exists ; exists ; 1956 ; 1956 ; Cancer Research Volume 16 ; 16 ; >
-      au < exists ; exists ; 1957 ; 1957 ; Cancer Research Volume 17 ; 17 ; >
-      au < exists ; exists ; 1958 ; 1958 ; Cancer Research Volume 18 ; 18 ; >
-      au < exists ; exists ; 1959 ; 1959 ; Cancer Research Volume 19 ; 19 ; >
-      au < exists ; exists ; 1960 ; 1960 ; Cancer Research Volume 20 ; 20 ; >
-      au < exists ; exists ; 1961 ; 1961 ; Cancer Research Volume 21 ; 21 ; >
-      au < exists ; exists ; 1962 ; 1962 ; Cancer Research Volume 22 ; 22 ; >
-      au < exists ; exists ; 1963 ; 1963 ; Cancer Research Volume 23 ; 23 ; >
-      au < exists ; exists ; 1964 ; 1964 ; Cancer Research Volume 24 ; 24 ; >
-      au < exists ; exists ; 1965 ; 1965 ; Cancer Research Volume 25 ; 25 ; >
-      au < exists ; exists ; 1966 ; 1966 ; Cancer Research Volume 26 ; 26 ; >
-      au < exists ; exists ; 1967 ; 1967 ; Cancer Research Volume 27 ; 27 ; >
+      au < manifest ; exists ; 1941 ; 1941 ; Cancer Research Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1942 ; 1942 ; Cancer Research Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1943 ; 1943 ; Cancer Research Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1944 ; 1944 ; Cancer Research Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1945 ; 1945 ; Cancer Research Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1946 ; 1946 ; Cancer Research Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1947 ; 1947 ; Cancer Research Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1948 ; 1948 ; Cancer Research Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1949 ; 1949 ; Cancer Research Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1950 ; 1950 ; Cancer Research Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1951 ; 1951 ; Cancer Research Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1952 ; 1952 ; Cancer Research Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1953 ; 1953 ; Cancer Research Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1954 ; 1954 ; Cancer Research Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1955 ; 1955 ; Cancer Research Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1956 ; 1956 ; Cancer Research Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1957 ; 1957 ; Cancer Research Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1958 ; 1958 ; Cancer Research Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1959 ; 1959 ; Cancer Research Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1960 ; 1960 ; Cancer Research Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1961 ; 1961 ; Cancer Research Volume 21 ; 21 ; >
+      au < manifest ; exists ; 1962 ; 1962 ; Cancer Research Volume 22 ; 22 ; >
+      au < manifest ; exists ; 1963 ; 1963 ; Cancer Research Volume 23 ; 23 ; >
+      au < manifest ; exists ; 1964 ; 1964 ; Cancer Research Volume 24 ; 24 ; >
+      au < manifest ; exists ; 1965 ; 1965 ; Cancer Research Volume 25 ; 25 ; >
+      au < manifest ; exists ; 1966 ; 1966 ; Cancer Research Volume 26 ; 26 ; >
+      au < manifest ; exists ; 1967 ; 1967 ; Cancer Research Volume 27 ; 27 ; >
       au < exists ; exists ; 1968 ; 1968 ; Cancer Research Volume 28 ; 28 ; >
       au < exists ; exists ; 1969 ; 1969 ; Cancer Research Volume 29 ; 29 ; >
       au < exists ; exists ; 1970 ; 1970 ; Cancer Research Volume 30 ; 30 ; >
