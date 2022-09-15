@@ -391,19 +391,19 @@
       au < manifest ; exists ; 1986-1987 ; Educational Considerations Volume 14 ; 14 ; >
       au < manifest ; exists ; 1987-1988 ; Educational Considerations Volume 15 ; 15 ; >
       au < manifest ; exists ; 1988-1989 ; Educational Considerations Volume 16 ; 16 ; >
-      au < ready ; exists ; 1989-1990 ; Educational Considerations Volume 17 ; 17 ; >
+      au < crawling ; exists ; 1989-1990 ; Educational Considerations Volume 17 ; 17 ; >
       au < crawling ; exists ; 1990-1991 ; Educational Considerations Volume 18 ; 18 ; >
       au < ready ; exists ; 1991-1992 ; Educational Considerations Volume 19 ; 19 ; >
       au < crawling ; exists ; 1992-1993 ; Educational Considerations Volume 20 ; 20 ; >
       au < ready ; exists ; 1993-1994 ; Educational Considerations Volume 21 ; 21 ; >
       au < crawling ; exists ; 1994-1995 ; Educational Considerations Volume 22 ; 22 ; >
       au < crawling ; exists ; 1995-1996 ; Educational Considerations Volume 23 ; 23 ; >
-      au < ready ; exists ; 1996-1997 ; Educational Considerations Volume 24 ; 24 ; >
+      au < crawling ; exists ; 1996-1997 ; Educational Considerations Volume 24 ; 24 ; >
       au < ready ; exists ; 1997-1998 ; Educational Considerations Volume 25 ; 25 ; >
       au < ready ; exists ; 1998-1999 ; Educational Considerations Volume 26 ; 26 ; >
-      au < ready ; exists ; 1999-2000 ; Educational Considerations Volume 27 ; 27 ; >
+      au < crawling ; exists ; 1999-2000 ; Educational Considerations Volume 27 ; 27 ; >
       au < crawling ; exists ; 2000-2001 ; Educational Considerations Volume 28 ; 28 ; >
-      au < ready ; exists ; 2001-2002 ; Educational Considerations Volume 29 ; 29 ; >
+      au < crawling ; exists ; 2001-2002 ; Educational Considerations Volume 29 ; 29 ; >
       au < ready ; exists ; 2002-2003 ; Educational Considerations Volume 30 ; 30 ; >
       au < crawling ; exists ; 2003-2004 ; Educational Considerations Volume 31 ; 31 ; >
       au < finished ; finished ; 2004-2005 ; Educational Considerations Volume 32 ; 32 ; reingest5.clockss.org:8082 >
@@ -533,9 +533,9 @@
       au < crawling ; exists ; 1990 ; Fungal Genetics Newsletter Volume 37 ; 37 ; >
       au < ready ; exists ; 1991 ; Fungal Genetics Newsletter Volume 38 ; 38 ; >
       au < crawling ; exists ; 1992 ; Fungal Genetics Newsletter Volume 39 ; 39 ; >
-      au < ready ; exists ; 1993 ; Fungal Genetics Newsletter Volume 40 ; 40 ; >
+      au < crawling ; exists ; 1993 ; Fungal Genetics Newsletter Volume 40 ; 40 ; >
       au < crawling ; exists ; 1994 ; Fungal Genetics Newsletter Volume 41 ; 41 ; >
-      au < ready ; exists ; 1995 ; Fungal Genetics Newsletter Volume 42 ; 42 ; >
+      au < crawling ; exists ; 1995 ; Fungal Genetics Newsletter Volume 42 ; 42 ; >
       au < crawling ; exists ; 1996 ; Fungal Genetics Newsletter Volume 43 ; 43 ; >
       au < ready ; exists ; 1997 ; Fungal Genetics Newsletter Volume 44 ; 44 ; >
       au < crawling ; exists ; 1998 ; Fungal Genetics Newsletter Volume 45 ; 45 ; >
@@ -620,7 +620,7 @@
       au < finished ; finished ; 2018 ; International Journal of School Social Work Volume 3 ; 3 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2019 ; International Journal of School Social Work Volume 4 ; 4 ; >
       au < deepCrawl ; exists ; 2020 ; International Journal of School Social Work Volume 5 ; 5 ; >
-      au < ready ; exists ; 2021-2022 ; International Journal of School Social Work Volume 6 ; 6 ; >
+      au < crawling ; exists ; 2021-2022 ; International Journal of School Social Work Volume 6 ; 6 ; >
 
   }
 
@@ -662,14 +662,14 @@
       au < manifest ; exists ; 1989 ; Journal of Applied Communications Volume 73 ; 73 ; >
       au < ready ; exists ; 1990 ; Journal of Applied Communications Volume 74 ; 74 ; >
       au < crawling ; exists ; 1991 ; Journal of Applied Communications Volume 75 ; 75 ; >
-      au < ready ; exists ; 1992 ; Journal of Applied Communications Volume 76 ; 76 ; >
+      au < crawling ; exists ; 1992 ; Journal of Applied Communications Volume 76 ; 76 ; >
       au < ready ; exists ; 1993 ; Journal of Applied Communications Volume 77 ; 77 ; >
       au < crawling ; exists ; 1994 ; Journal of Applied Communications Volume 78 ; 78 ; >
-      au < ready ; exists ; 1995 ; Journal of Applied Communications Volume 79 ; 79 ; >
+      au < crawling ; exists ; 1995 ; Journal of Applied Communications Volume 79 ; 79 ; >
       au < ready ; exists ; 1996 ; Journal of Applied Communications Volume 80 ; 80 ; >
       au < ready ; exists ; 1997 ; Journal of Applied Communications Volume 81 ; 81 ; >
       au < ready ; exists ; 1998 ; Journal of Applied Communications Volume 82 ; 82 ; >
-      au < ready ; exists ; 1999 ; Journal of Applied Communications Volume 83 ; 83 ; >
+      au < crawling ; exists ; 1999 ; Journal of Applied Communications Volume 83 ; 83 ; >
       au < crawling ; exists ; 2000 ; Journal of Applied Communications Volume 84 ; 84 ; >
       au < crawling ; exists ; 2001 ; Journal of Applied Communications Volume 85 ; 85 ; >
       au < crawling ; exists ; 2002 ; Journal of Applied Communications Volume 86 ; 86 ; >
@@ -841,7 +841,7 @@
       au < ready ; exists ; 1995 ; Oz Volume 17 ; 17 ; >
       au < crawling ; exists ; 1996 ; Oz Volume 18 ; 18 ; >
       au < ready ; exists ; 1997 ; Oz Volume 19 ; 19 ; >
-      au < ready ; exists ; 1998 ; Oz Volume 20 ; 20 ; >
+      au < crawling ; exists ; 1998 ; Oz Volume 20 ; 20 ; >
       au < crawling ; exists ; 1999 ; Oz Volume 21 ; 21 ; >
       au < ready ; exists ; 2000 ; Oz Volume 22 ; 22 ; >
       au < ready ; exists ; 2001 ; Oz Volume 23 ; 23 ; >
@@ -955,15 +955,15 @@
       au < manifest ; exists ; 1986-1987 ; Studies in 20th & 21st Century Literature Volume 11 ; 11 ; >
       au < manifest ; exists ; 1987-1988 ; Studies in 20th & 21st Century Literature Volume 12 ; 12 ; >
       au < manifest ; exists ; 1989 ; Studies in 20th & 21st Century Literature Volume 13 ; 13 ; >
-      au < ready ; exists ; 1990 ; Studies in 20th & 21st Century Literature Volume 14 ; 14 ; >
+      au < crawling ; exists ; 1990 ; Studies in 20th & 21st Century Literature Volume 14 ; 14 ; >
       au < crawling ; exists ; 1991 ; Studies in 20th & 21st Century Literature Volume 15 ; 15 ; >
-      au < ready ; exists ; 1992 ; Studies in 20th & 21st Century Literature Volume 16 ; 16 ; >
+      au < crawling ; exists ; 1992 ; Studies in 20th & 21st Century Literature Volume 16 ; 16 ; >
       au < crawling ; exists ; 1993 ; Studies in 20th & 21st Century Literature Volume 17 ; 17 ; >
       au < crawling ; exists ; 1994 ; Studies in 20th & 21st Century Literature Volume 18 ; 18 ; >
       au < crawling ; exists ; 1995 ; Studies in 20th & 21st Century Literature Volume 19 ; 19 ; >
       au < crawling ; exists ; 1996 ; Studies in 20th & 21st Century Literature Volume 20 ; 20 ; >
       au < crawling ; exists ; 1997 ; Studies in 20th & 21st Century Literature Volume 21 ; 21 ; >
-      au < ready ; exists ; 1998 ; Studies in 20th & 21st Century Literature Volume 22 ; 22 ; >
+      au < crawling ; exists ; 1998 ; Studies in 20th & 21st Century Literature Volume 22 ; 22 ; >
       au < crawling ; exists ; 1999 ; Studies in 20th & 21st Century Literature Volume 23 ; 23 ; >
       au < crawling ; exists ; 2000 ; Studies in 20th & 21st Century Literature Volume 24 ; 24 ; >
       au < crawling ; exists ; 2001 ; Studies in 20th & 21st Century Literature Volume 25 ; 25 ; >

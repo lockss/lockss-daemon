@@ -1058,7 +1058,7 @@
     au < manifest ; exists ; 1996 ; The Bottom Line: Managing Library Finances Volume 9 ; 9 ; >
     au < manifest ; exists ; 1997 ; The Bottom Line: Managing Library Finances Volume 10 ; 10 ; >
     au < manifest ; exists ; 1998 ; The Bottom Line: Managing Library Finances Volume 11 ; 11 ; >
-    au < ready ; exists ; 1999 ; The Bottom Line: Managing Library Finances Volume 12 ; 12 ; >
+    au < crawling ; exists ; 1999 ; The Bottom Line: Managing Library Finances Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2000 ; The Bottom Line: Managing Library Finances Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2001 ; The Bottom Line: Managing Library Finances Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2002 ; The Bottom Line: Managing Library Finances Volume 15 ; 15 ; >
@@ -3899,7 +3899,7 @@
     au < crawling ; exists ; 2011 ; International Journal for Researcher Development Volume 2 ; 2 ; >
     au < ready ; exists ; 2012 ; International Journal for Researcher Development Volume 3 ; 3 ; >
     au < ready ; exists ; 2013 ; International Journal for Researcher Development Volume 4 ; 4 ; >
-    au < ready ; exists ; 2014 ; International Journal for Researcher Development Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2014 ; International Journal for Researcher Development Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal for Researcher Development Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal for Researcher Development Volume 7 ; 7 ; >
 
@@ -6726,7 +6726,7 @@
     au < manifest ; exists ; 1996 ; Journal of Consumer Marketing Volume 13 ; 13 ; >
     au < manifest ; exists ; 1997 ; Journal of Consumer Marketing Volume 14 ; 14 ; >
     au < ready ; exists ; 1998 ; Journal of Consumer Marketing Volume 15 ; 15 ; >
-    au < ready ; exists ; 1999 ; Journal of Consumer Marketing Volume 16 ; 16 ; >
+    au < crawling ; exists ; 1999 ; Journal of Consumer Marketing Volume 16 ; 16 ; >
     au < crawling ; exists ; 2000 ; Journal of Consumer Marketing Volume 17 ; 17 ; >
     au < crawling ; exists ; 2001 ; Journal of Consumer Marketing Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2002 ; Journal of Consumer Marketing Volume 19 ; 19 ; >
@@ -7373,7 +7373,7 @@
 
     au < manifest ; exists ; 1997 ; Journal of Fashion Marketing and Management Volume 1 ; 1 ; >
     au < manifest ; exists ; 1998 ; Journal of Fashion Marketing and Management Volume 2 ; 2 ; >
-    au < ready ; exists ; 1999 ; Journal of Fashion Marketing and Management Volume 3 ; 3 ; >
+    au < crawling ; exists ; 1999 ; Journal of Fashion Marketing and Management Volume 3 ; 3 ; >
     au < crawling ; exists ; 2000 ; Journal of Fashion Marketing and Management Volume 4 ; 4 ; >
     au < crawling ; exists ; 2001 ; Journal of Fashion Marketing and Management Volume 5 ; 5 ; >
     au < crawling ; exists ; 2002 ; Journal of Fashion Marketing and Management Volume 6 ; 6 ; >
@@ -9253,7 +9253,7 @@
     au < manifest ; exists ; 1995 ; Kybernetes Volume 24 ; 24 ; >
     au < manifest ; exists ; 1996 ; Kybernetes Volume 25 ; 25 ; >
     au < manifest ; exists ; 1997 ; Kybernetes Volume 26 ; 26 ; >
-    au < ready ; exists ; 1998 ; Kybernetes Volume 27 ; 27 ; >
+    au < crawling ; exists ; 1998 ; Kybernetes Volume 27 ; 27 ; >
     au < ready ; exists ; 1999 ; Kybernetes Volume 28 ; 28 ; >
     au < frozen ; exists ; 2000 ; Kybernetes Volume 29 ; 29 ; >
     au < crawling ; exists ; 2001 ; Kybernetes Volume 30 ; 30 ; >
@@ -9597,7 +9597,7 @@
     au < ready ; exists ; 1998 ; Library Management Volume 19 ; 19 ; >
     au < ready ; exists ; 1999 ; Library Management Volume 20 ; 20 ; >
     au < crawling ; exists ; 2000 ; Library Management Volume 21 ; 21 ; >
-    au < ready ; exists ; 2001 ; Library Management Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2001 ; Library Management Volume 22 ; 22 ; >
     au < crawling ; exists ; 2002 ; Library Management Volume 23 ; 23 ; >
     au < crawling ; exists ; 2003 ; Library Management Volume 24 ; 24 ; >
     au < crawling ; exists ; 2004 ; Library Management Volume 25 ; 25 ; >
@@ -10247,7 +10247,7 @@
     au < ready ; exists ; 1999 ; Marketing Intelligence & Planning Volume 17 ; 17 ; >
     au < crawling ; exists ; 2000 ; Marketing Intelligence & Planning Volume 18 ; 18 ; >
     au < crawling ; exists ; 2001 ; Marketing Intelligence & Planning Volume 19 ; 19 ; >
-    au < ready ; exists ; 2002 ; Marketing Intelligence & Planning Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2002 ; Marketing Intelligence & Planning Volume 20 ; 20 ; >
     au < crawling ; exists ; 2003 ; Marketing Intelligence & Planning Volume 21 ; 21 ; >
     au < crawling ; exists ; 2004 ; Marketing Intelligence & Planning Volume 22 ; 22 ; >
     au < crawling ; exists ; 2005 ; Marketing Intelligence & Planning Volume 23 ; 23 ; >
@@ -13554,7 +13554,7 @@
     au < ready ; exists ; 2018 ; Information Discovery and Delivery Volume 46 ; 46 ; >
     au < ready ; exists ; 2019 ; Information Discovery and Delivery Volume 47 ; 47 ; >
     au < ready ; exists ; 2020 ; Information Discovery and Delivery Volume 48 ; 48 ; >
-    au < ready ; exists ; 2021 ; Information Discovery and Delivery Volume 49 ; 49 ; >
+    au < crawling ; exists ; 2021 ; Information Discovery and Delivery Volume 49 ; 49 ; >
     au < crawling ; exists ; 2022 ; Information Discovery and Delivery Volume 50 ; 50 ; >
 
   }
@@ -13687,11 +13687,11 @@
     au < exists ; exists ; 2002 ; International Journal of Organization Theory & Behavior Volume 5 ; 5 ; >
     au < ready ; exists ; 2003 ; International Journal of Organization Theory & Behavior Volume 6 ; 6 ; >
     au < ready ; exists ; 2004 ; International Journal of Organization Theory & Behavior Volume 7 ; 7 ; >
-    au < ready ; exists ; 2005 ; International Journal of Organization Theory & Behavior Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2005 ; International Journal of Organization Theory & Behavior Volume 8 ; 8 ; >
     au < ready ; exists ; 2006 ; International Journal of Organization Theory & Behavior Volume 9 ; 9 ; >
     au < crawling ; exists ; 2007 ; International Journal of Organization Theory & Behavior Volume 10 ; 10 ; >
     au < ready ; exists ; 2008 ; International Journal of Organization Theory & Behavior Volume 11 ; 11 ; >
-    au < ready ; exists ; 2009 ; International Journal of Organization Theory & Behavior Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2009 ; International Journal of Organization Theory & Behavior Volume 12 ; 12 ; >
     au < ready ; exists ; 2010 ; International Journal of Organization Theory & Behavior Volume 13 ; 13 ; >
     au < ready ; exists ; 2011 ; International Journal of Organization Theory & Behavior Volume 14 ; 14 ; >
     au < ready ; exists ; 2012 ; International Journal of Organization Theory & Behavior Volume 15 ; 15 ; >
@@ -13719,7 +13719,7 @@
     param[journal_issn] = 1464-6668
 
     au < crawling ; exists ; 1999 ; International Journal of Sports Marketing and Sponsorship Volume 1 ; 1 ; >
-    au < ready ; exists ; 2000 ; International Journal of Sports Marketing and Sponsorship Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2000 ; International Journal of Sports Marketing and Sponsorship Volume 2 ; 2 ; >
     au < ready ; exists ; 2001 ; International Journal of Sports Marketing and Sponsorship Volume 3 ; 3 ; >
     au < crawling ; exists ; 2002 ; International Journal of Sports Marketing and Sponsorship Volume 4 ; 4 ; >
     au < ready ; exists ; 2003 ; International Journal of Sports Marketing and Sponsorship Volume 5 ; 5 ; >
@@ -13738,7 +13738,7 @@
     au < crawling ; exists ; 2016 ; International Journal of Sports Marketing and Sponsorship Volume 18 ; 18 ; >
     au < ready ; exists ; 2017 ; International Journal of Sports Marketing and Sponsorship Volume 19 ; 19 ; >
     au < ready ; exists ; 2018 ; International Journal of Sports Marketing and Sponsorship Volume 20 ; 20 ; >
-    au < ready ; exists ; 2019 ; International Journal of Sports Marketing and Sponsorship Volume 21 ; 21 ; >
+    au < crawling ; exists ; 2019 ; International Journal of Sports Marketing and Sponsorship Volume 21 ; 21 ; >
     au < ready ; exists ; 2020 ; International Journal of Sports Marketing and Sponsorship Volume 22 ; 22 ; >
     au < crawling ; exists ; 2021 ; International Journal of Sports Marketing and Sponsorship Volume 23 ; 23 ; >
     au < expected ; exists ; 2022 ; International Journal of Sports Marketing and Sponsorship Volume 24 ; 24 ; >
@@ -13820,7 +13820,7 @@
     au < ready ; exists ; 2016 ; Journal of Criminological Research, Policy and Practice Volume 2 ; 2 ; >
     au < ready ; exists ; 2017 ; Journal of Criminological Research, Policy and Practice Volume 3 ; 3 ; >
     au < ready ; exists ; 2018 ; Journal of Criminological Research, Policy and Practice Volume 4 ; 4 ; >
-    au < ready ; exists ; 2019 ; Journal of Criminological Research, Policy and Practice Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2019 ; Journal of Criminological Research, Policy and Practice Volume 5 ; 5 ; >
     au < ready ; exists ; 2020 ; Journal of Criminological Research, Policy and Practice Volume 6 ; 6 ; >
     au < crawling ; exists ; 2021 ; Journal of Criminological Research, Policy and Practice Volume 7 ; 7 ; >
     au < crawling ; exists ; 2022 ; Journal of Criminological Research, Policy and Practice Volume 8 ; 8 ; >
@@ -14005,7 +14005,7 @@
     au < crawling ; exists ; 2013 ; Journal of Public Budgeting, Accounting & Financial Management Volume 25 ; 25 ; >
     au < crawling ; exists ; 2014 ; Journal of Public Budgeting, Accounting & Financial Management Volume 26 ; 26 ; >
     au < ready ; exists ; 2015 ; Journal of Public Budgeting, Accounting & Financial Management Volume 27 ; 27 ; >
-    au < ready ; exists ; 2016 ; Journal of Public Budgeting, Accounting & Financial Management Volume 28 ; 28 ; >
+    au < crawling ; exists ; 2016 ; Journal of Public Budgeting, Accounting & Financial Management Volume 28 ; 28 ; >
     au < crawling ; exists ; 2017 ; Journal of Public Budgeting, Accounting & Financial Management Volume 29 ; 29 ; >
     au < ready ; exists ; 2018 ; Journal of Public Budgeting, Accounting & Financial Management Volume 30 ; 30 ; >
     au < ready ; exists ; 2019 ; Journal of Public Budgeting, Accounting & Financial Management Volume 31 ; 31 ; >
@@ -14138,13 +14138,13 @@
     au < ready ; exists ; 2011 ; Open House International Volume 36 ; 36 ; >
     au < ready ; exists ; 2012 ; Open House International Volume 37 ; 37 ; >
     au < crawling ; exists ; 2013 ; Open House International Volume 38 ; 38 ; >
-    au < ready ; exists ; 2014 ; Open House International Volume 39 ; 39 ; >
+    au < crawling ; exists ; 2014 ; Open House International Volume 39 ; 39 ; >
     au < ready ; exists ; 2015 ; Open House International Volume 40 ; 40 ; >
     au < ready ; exists ; 2016 ; Open House International Volume 41 ; 41 ; >
     au < crawling ; exists ; 2017 ; Open House International Volume 42 ; 42 ; >
     au < crawling ; exists ; 2018 ; Open House International Volume 43 ; 43 ; >
     au < ready ; exists ; 2019 ; Open House International Volume 44 ; 44 ; >
-    au < ready ; exists ; 2020 ; Open House International Volume 45 ; 45 ; >
+    au < crawling ; exists ; 2020 ; Open House International Volume 45 ; 45 ; >
     au < ready ; exists ; 2021 ; Open House International Volume 46 ; 46 ; >
     au < crawling ; exists ; 2022 ; Open House International Volume 47 ; 47 ; >
 
@@ -14184,7 +14184,7 @@
     au < manifest ; exists ; 2018 ; Research Journal of Textile and Apparel Volume 22 ; 22 ; >
     au < ready ; exists ; 2019 ; Research Journal of Textile and Apparel Volume 23 ; 23 ; >
     au < ready ; exists ; 2020 ; Research Journal of Textile and Apparel Volume 24 ; 24 ; >
-    au < ready ; exists ; 2021 ; Research Journal of Textile and Apparel Volume 25 ; 25 ; >
+    au < crawling ; exists ; 2021 ; Research Journal of Textile and Apparel Volume 25 ; 25 ; >
     au < crawling ; exists ; 2022 ; Research Journal of Textile and Apparel Volume 26 ; 26 ; >
 
   }
@@ -14199,7 +14199,7 @@
 
     param[journal_issn] = 1933-5415
 
-    au < ready ; exists ; 2006 ; Social Studies Research and Practice Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2006 ; Social Studies Research and Practice Volume 1 ; 1 ; >
     au < ready ; exists ; 2007 ; Social Studies Research and Practice Volume 2 ; 2 ; >
     au < ready ; exists ; 2008 ; Social Studies Research and Practice Volume 3 ; 3 ; >
     au < ready ; exists ; 2009 ; Social Studies Research and Practice Volume 4 ; 4 ; >

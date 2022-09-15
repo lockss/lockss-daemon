@@ -3853,10 +3853,10 @@
     # this journal subsumed Laryngologie, Rhinologie, Otologie und ihre Grenzgebiete
 
     au < frozen ; exists ; 1980 ; 1980 ; Laryngo-Rhino-Otologie Volume 58 ; 58 ; >
-    au < ready ; exists ; 1981 ; 1981 ; Laryngo-Rhino-Otologie Volume 59 ; 59 ; >
+    au < crawling ; exists ; 1981 ; 1981 ; Laryngo-Rhino-Otologie Volume 59 ; 59 ; >
     au < ready ; exists ; 1982 ; 1982 ; Laryngo-Rhino-Otologie Volume 60 ; 60 ; >
     au < crawling ; exists ; 1983 ; 1983 ; Laryngo-Rhino-Otologie Volume 61 ; 61 ; >
-    au < ready ; exists ; 1984 ; 1984 ; Laryngo-Rhino-Otologie Volume 62 ; 62 ; >
+    au < crawling ; exists ; 1984 ; 1984 ; Laryngo-Rhino-Otologie Volume 62 ; 62 ; >
     au < frozen ; exists ; 1985 ; 1985 ; Laryngo-Rhino-Otologie Volume 63 ; 63 ; >
     au < crawling ; exists ; 1986 ; 1986 ; Laryngo-Rhino-Otologie Volume 64 ; 64 ; >
     au < crawling ; exists ; 1987 ; 1987 ; Laryngo-Rhino-Otologie Volume 65 ; 65 ; >
@@ -4007,7 +4007,7 @@
     au < frozen ; exists ; 1983 ; 1983 ; min - Minimally Invasive Neurosurgery Volume 26 ; 26 ; >
     au < ready ; exists ; 1984 ; 1984 ; min - Minimally Invasive Neurosurgery Volume 27 ; 27 ; >
     au < ready ; exists ; 1985 ; 1985 ; min - Minimally Invasive Neurosurgery Volume 28 ; 28 ; >
-    au < ready ; exists ; 1986 ; 1986 ; min - Minimally Invasive Neurosurgery Volume 29 ; 29 ; >
+    au < crawling ; exists ; 1986 ; 1986 ; min - Minimally Invasive Neurosurgery Volume 29 ; 29 ; >
     au < crawling ; exists ; 1987 ; 1987 ; min - Minimally Invasive Neurosurgery Volume 30 ; 30 ; >
     au < crawling ; exists ; 1988 ; 1988 ; min - Minimally Invasive Neurosurgery Volume 31 ; 31 ; >
     au < crawling ; exists ; 1989 ; 1989 ; min - Minimally Invasive Neurosurgery Volume 32 ; 32 ; >
@@ -4115,7 +4115,7 @@
     au < ready ; exists ; 1984 ; 1984 ; Neuropediatrics Volume 15 ; 15 ; >
     au < ready ; exists ; 1985 ; 1985 ; Neuropediatrics Volume 16 ; 16 ; >
     au < ready ; exists ; 1986 ; 1986 ; Neuropediatrics Volume 17 ; 17 ; >
-    au < ready ; exists ; 1987 ; 1987 ; Neuropediatrics Volume 18 ; 18 ; >
+    au < crawling ; exists ; 1987 ; 1987 ; Neuropediatrics Volume 18 ; 18 ; >
     au < ready ; exists ; 1988 ; 1988 ; Neuropediatrics Volume 19 ; 19 ; >
     au < crawling ; exists ; 1989 ; 1989 ; Neuropediatrics Volume 20 ; 20 ; >
     au < finished ; crawling ; 1990 ; 1990 ; Neuropediatrics Volume 21 ; 21 ; reingest1.clockss.org:8082 >
@@ -4618,11 +4618,11 @@
     au < manifest ; exists ; 1978 ; 1978 ; Pharmacopsychiatry Volume 11 ; 11 ; >
     au < manifest ; exists ; 1979 ; 1979 ; Pharmacopsychiatry Volume 12 ; 12 ; >
     au < crawling ; exists ; 1980 ; 1980 ; Pharmacopsychiatry Volume 13 ; 13 ; >
-    au < ready ; exists ; 1981 ; 1981 ; Pharmacopsychiatry Volume 14 ; 14 ; >
+    au < crawling ; exists ; 1981 ; 1981 ; Pharmacopsychiatry Volume 14 ; 14 ; >
     au < ready ; exists ; 1982 ; 1982 ; Pharmacopsychiatry Volume 15 ; 15 ; >
-    au < ready ; exists ; 1983 ; 1983 ; Pharmacopsychiatry Volume 16 ; 16 ; >
+    au < crawling ; exists ; 1983 ; 1983 ; Pharmacopsychiatry Volume 16 ; 16 ; >
     au < crawling ; exists ; 1984 ; 1984 ; Pharmacopsychiatry Volume 17 ; 17 ; >
-    au < ready ; exists ; 1985 ; 1985 ; Pharmacopsychiatry Volume 18 ; 18 ; >
+    au < crawling ; exists ; 1985 ; 1985 ; Pharmacopsychiatry Volume 18 ; 18 ; >
     au < ready ; exists ; 1986 ; 1986 ; Pharmacopsychiatry Volume 19 ; 19 ; >
     au < ready ; exists ; 1987 ; 1987 ; Pharmacopsychiatry Volume 20 ; 20 ; >
     au < crawling ; exists ; 1988 ; 1988 ; Pharmacopsychiatry Volume 21 ; 21 ; >
@@ -4878,7 +4878,7 @@
    au < ready ; exists ; 1980 ; 1980 ; Planta Medica Volume 46 ; 46 ; >
    au < crawling ; exists ; 1981 ; 1981 ; Planta Medica Volume 47 ; 47 ; >
    au < ready ; exists ; 1982 ; 1982 ; Planta Medica Volume 48 ; 48 ; >
-   au < ready ; exists ; 1983 ; 1983 ; Planta Medica Volume 49 ; 49 ; >
+   au < crawling ; exists ; 1983 ; 1983 ; Planta Medica Volume 49 ; 49 ; >
    au < crawling ; exists ; 1984 ; 1984 ; Planta Medica Volume 50 ; 50 ; >
    au < ready ; exists ; 1985 ; 1985 ; Planta Medica Volume 51 ; 51 ; >
    au < ready ; exists ; 1986 ; 1986 ; Planta Medica Volume 52 ; 52 ; >
@@ -5456,7 +5456,7 @@
     param[journal_id] = 10.1055/s-00000067
     comment[years] = 1983-current
 
-   au < ready ; exists ; 1983 ; 1983 ; Seminars in Hearing Volume 4 ; 4 ; >
+   au < crawling ; exists ; 1983 ; 1983 ; Seminars in Hearing Volume 4 ; 4 ; >
    au < crawling ; exists ; 1984 ; 1984 ; Seminars in Hearing Volume 5 ; 5 ; >
    au < crawling ; exists ; 1985 ; 1985 ; Seminars in Hearing Volume 6 ; 6 ; >
    au < ready ; exists ; 1986 ; 1986 ; Seminars in Hearing Volume 7 ; 7 ; >
@@ -5513,10 +5513,10 @@
 
    au < crawling ; exists ; 1984 ; 1984 ; Seminars in Interventional Radiology Volume 1 ; 1 ; >
    au < crawling ; exists ; 1985 ; 1985 ; Seminars in Interventional Radiology Volume 2 ; 2 ; >
-   au < ready ; exists ; 1986 ; 1986 ; Seminars in Interventional Radiology Volume 3 ; 3 ; >
+   au < crawling ; exists ; 1986 ; 1986 ; Seminars in Interventional Radiology Volume 3 ; 3 ; >
    au < crawling ; exists ; 1987 ; 1987 ; Seminars in Interventional Radiology Volume 4 ; 4 ; >
    au < ready ; exists ; 1988 ; 1988 ; Seminars in Interventional Radiology Volume 5 ; 5 ; >
-   au < ready ; exists ; 1989 ; 1989 ; Seminars in Interventional Radiology Volume 6 ; 6 ; >
+   au < crawling ; exists ; 1989 ; 1989 ; Seminars in Interventional Radiology Volume 6 ; 6 ; >
    au < finished ; crawling ; 1990 ; 1990 ; Seminars in Interventional Radiology Volume 7 ; 7 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 1991 ; 1991 ; Seminars in Interventional Radiology Volume 8 ; 8 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 1992 ; 1992 ; Seminars in Interventional Radiology Volume 9 ; 9 ; reingest3.clockss.org:8083 >
@@ -5573,7 +5573,7 @@
    au < ready ; exists ; 1986 ; 1986 ; Seminars in Liver Disease Volume 6 ; 6 ; >
    au < crawling ; exists ; 1987 ; 1987 ; Seminars in Liver Disease Volume 7 ; 7 ; >
    au < crawling ; exists ; 1988 ; 1988 ; Seminars in Liver Disease Volume 8 ; 8 ; >
-   au < ready ; exists ; 1989 ; 1989 ; Seminars in Liver Disease Volume 9 ; 9 ; >
+   au < crawling ; exists ; 1989 ; 1989 ; Seminars in Liver Disease Volume 9 ; 9 ; >
    au < finished ; crawling ; 1990 ; 1990 ; Seminars in Liver Disease Volume 10 ; 10 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 1991 ; 1991 ; Seminars in Liver Disease Volume 11 ; 11 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 1992 ; 1992 ; Seminars in Liver Disease Volume 12 ; 12 ; reingest1.clockss.org:8082 >
@@ -5663,12 +5663,12 @@
     param[journal_id] = 10.1055/s-00000071
     comment[years] = 1981-current
 
-   au < ready ; exists ; 1981 ; 1981 ; Seminars in Neurology Volume 1 ; 1 ; >
+   au < crawling ; exists ; 1981 ; 1981 ; Seminars in Neurology Volume 1 ; 1 ; >
    au < crawling ; exists ; 1982 ; 1982 ; Seminars in Neurology Volume 2 ; 2 ; >
    au < crawling ; exists ; 1983 ; 1983 ; Seminars in Neurology Volume 3 ; 3 ; >
-   au < ready ; exists ; 1984 ; 1984 ; Seminars in Neurology Volume 4 ; 4 ; >
+   au < crawling ; exists ; 1984 ; 1984 ; Seminars in Neurology Volume 4 ; 4 ; >
    au < crawling ; exists ; 1985 ; 1985 ; Seminars in Neurology Volume 5 ; 5 ; >
-   au < ready ; exists ; 1986 ; 1986 ; Seminars in Neurology Volume 6 ; 6 ; >
+   au < crawling ; exists ; 1986 ; 1986 ; Seminars in Neurology Volume 6 ; 6 ; >
    au < ready ; exists ; 1987 ; 1987 ; Seminars in Neurology Volume 7 ; 7 ; >
    au < ready ; exists ; 1988 ; 1988 ; Seminars in Neurology Volume 8 ; 8 ; >
    au < crawling ; exists ; 1989 ; 1989 ; Seminars in Neurology Volume 9 ; 9 ; >
@@ -5890,8 +5890,8 @@
     comment[years] = 1984-current
 
     au < crawling ; exists ; 1984 ; 1984 ; Seminars in Speech and Language Volume 5 ; 5 ; >
-    au < ready ; exists ; 1985 ; 1985 ; Seminars in Speech and Language Volume 6 ; 6 ; >
-    au < ready ; exists ; 1986 ; 1986 ; Seminars in Speech and Language Volume 7 ; 7 ; >
+    au < crawling ; exists ; 1985 ; 1985 ; Seminars in Speech and Language Volume 6 ; 6 ; >
+    au < crawling ; exists ; 1986 ; 1986 ; Seminars in Speech and Language Volume 7 ; 7 ; >
     au < crawling ; exists ; 1987 ; 1987 ; Seminars in Speech and Language Volume 8 ; 8 ; >
     au < crawling ; exists ; 1988 ; 1988 ; Seminars in Speech and Language Volume 9 ; 9 ; >
     au < crawling ; exists ; 1989 ; 1989 ; Seminars in Speech and Language Volume 10 ; 10 ; >
@@ -5954,7 +5954,7 @@
     au < crawling ; exists ; 1982 ; 1982 ; Seminars in Thrombosis and Hemostasis Volume 8 ; 8 ; >
     au < ready ; exists ; 1983 ; 1983 ; Seminars in Thrombosis and Hemostasis Volume 9 ; 9 ; >
     au < crawling ; exists ; 1984 ; 1984 ; Seminars in Thrombosis and Hemostasis Volume 10 ; 10 ; >
-    au < ready ; exists ; 1985 ; 1985 ; Seminars in Thrombosis and Hemostasis Volume 11 ; 11 ; >
+    au < crawling ; exists ; 1985 ; 1985 ; Seminars in Thrombosis and Hemostasis Volume 11 ; 11 ; >
     au < crawling ; exists ; 1986 ; 1986 ; Seminars in Thrombosis and Hemostasis Volume 12 ; 12 ; >
     au < crawling ; exists ; 1987 ; 1987 ; Seminars in Thrombosis and Hemostasis Volume 13 ; 13 ; >
     au < crawling ; exists ; 1988 ; 1988 ; Seminars in Thrombosis and Hemostasis Volume 14 ; 14 ; >
@@ -6522,12 +6522,12 @@
    comment[years] = 1979-current
 
     au < manifest ; exists ; 1979 ; 1979 ; The Thoracic and Cardiovascular Surgeon Volume 27 ; 27 ; >
-    au < ready ; exists ; 1980 ; 1980 ; The Thoracic and Cardiovascular Surgeon Volume 28 ; 28 ; >
+    au < crawling ; exists ; 1980 ; 1980 ; The Thoracic and Cardiovascular Surgeon Volume 28 ; 28 ; >
     au < crawling ; exists ; 1981 ; 1981 ; The Thoracic and Cardiovascular Surgeon Volume 29 ; 29 ; >
-    au < ready ; exists ; 1982 ; 1982 ; The Thoracic and Cardiovascular Surgeon Volume 30 ; 30 ; >
+    au < crawling ; exists ; 1982 ; 1982 ; The Thoracic and Cardiovascular Surgeon Volume 30 ; 30 ; >
     au < ready ; exists ; 1983 ; 1983 ; The Thoracic and Cardiovascular Surgeon Volume 31 ; 31 ; >
     au < ready ; exists ; 1984 ; 1984 ; The Thoracic and Cardiovascular Surgeon Volume 32 ; 32 ; >
-    au < ready ; exists ; 1985 ; 1985 ; The Thoracic and Cardiovascular Surgeon Volume 33 ; 33 ; >
+    au < crawling ; exists ; 1985 ; 1985 ; The Thoracic and Cardiovascular Surgeon Volume 33 ; 33 ; >
     au < crawling ; exists ; 1986 ; 1986 ; The Thoracic and Cardiovascular Surgeon Volume 34 ; 34 ; >
     au < crawling ; exists ; 1987 ; 1987 ; The Thoracic and Cardiovascular Surgeon Volume 35 ; 35 ; >
     au < crawling ; exists ; 1988 ; 1988 ; The Thoracic and Cardiovascular Surgeon Volume 36 ; 36 ; >
@@ -6693,7 +6693,7 @@
     au < crawling ; exists ; 1980 ; 1980 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 1 ; 1 ; >
     au < crawling ; exists ; 1981 ; 1981 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 2 ; 2 ; >
     au < crawling ; exists ; 1982 ; 1982 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 3 ; 3 ; >
-    au < ready ; exists ; 1983 ; 1983 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 4 ; 4 ; >
+    au < crawling ; exists ; 1983 ; 1983 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 4 ; 4 ; >
     au < crawling ; exists ; 1984 ; 1984 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 5 ; 5 ; >
     au < crawling ; exists ; 1985 ; 1985 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 6 ; 6 ; >
     au < crawling ; exists ; 1986 ; 1986 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 7 ; 7 ; >
@@ -7079,7 +7079,7 @@
     au < crawling ; exists ; 1984 ; 1984 ; Zeitschrift für Klassische Homöopathie Volume 28 ; 28 ; >
     au < crawling ; exists ; 1985 ; 1985 ; Zeitschrift für Klassische Homöopathie Volume 29 ; 29 ; >
     au < ready ; exists ; 1986 ; 1986 ; Zeitschrift für Klassische Homöopathie Volume 30 ; 30 ; >
-    au < ready ; exists ; 1987 ; 1987 ; Zeitschrift für Klassische Homöopathie Volume 31 ; 31 ; >
+    au < crawling ; exists ; 1987 ; 1987 ; Zeitschrift für Klassische Homöopathie Volume 31 ; 31 ; >
     au < testing ; exists ; 1988 ; 1988 ; Zeitschrift für Klassische Homöopathie Volume 32 ; 32 ; >
     au < testing ; exists ; 1989 ; 1989 ; Zeitschrift für Klassische Homöopathie Volume 33 ; 33 ; >
     au < finished ; crawling ; 1990 ; 1990 ; Zeitschrift für Klassische Homöopathie Volume 34 ; 34 ; reingest3.clockss.org:8083 >
@@ -7220,10 +7220,10 @@
 
     au < testing ; exists ; 1980 ; 1980 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1980 ; 118 ; >
     au < testing ; exists ; 1981 ; 1981 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1981 ; 119 ; >
-    au < ready ; exists ; 1982 ; 1982 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1982 ; 120 ; >
-    au < ready ; exists ; 1983 ; 1983 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1983 ; 0 ; >
+    au < crawling ; exists ; 1982 ; 1982 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1982 ; 120 ; >
+    au < crawling ; exists ; 1983 ; 1983 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1983 ; 0 ; >
     au < crawling ; exists ; 1984 ; 1984 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1984 ; 0 ; >
-    au < ready ; exists ; 1985 ; 1985 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1985 ; 0 ; >
+    au < crawling ; exists ; 1985 ; 1985 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1985 ; 0 ; >
     au < crawling ; exists ; 1986 ; 1986 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1986 ; 0 ; >
     au < crawling ; exists ; 1987 ; 1987 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1987 ; 0 ; >
     au < ready ; exists ; 1988 ; 1988 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1988 ; 0 ; >
@@ -8285,7 +8285,7 @@
     au < crawling ; exists ; 1984 ; 1984 ; British Homeopathic Journal Volume 74 ; 74 ; >
     au < crawling ; exists ; 1985 ; 1985 ; British Homeopathic Journal Volume 75 ; 75 ; >
     au < ready ; exists ; 1986 ; 1986 ; British Homeopathic Journal Volume 76 ; 76 ; >
-    au < ready ; exists ; 1987 ; 1987 ; British Homeopathic Journal Volume 77 ; 77 ; >
+    au < crawling ; exists ; 1987 ; 1987 ; British Homeopathic Journal Volume 77 ; 77 ; >
     au < crawling ; exists ; 1988 ; 1988 ; British Homeopathic Journal Volume 78 ; 78 ; >
     au < ready ; exists ; 1989 ; 1989 ; British Homeopathic Journal Volume 79 ; 79 ; >
     au < crawling ; exists ; 1990 ; 1990 ; British Homeopathic Journal Volume 80 ; 80 ; >
@@ -9035,10 +9035,10 @@
     au < crawling ; exists ; 1982 ; 1982 ; Thrombosis and Haemostasis Volume 26 ; 26 ; >
     au < crawling ; exists ; 1983 ; 1983 ; Thrombosis and Haemostasis Volume 27 ; 27 ; >
     au < ready ; exists ; 1984 ; 1984 ; Thrombosis and Haemostasis Volume 28 ; 28 ; >
-    au < ready ; exists ; 1985 ; 1985 ; Thrombosis and Haemostasis Volume 29 ; 29 ; >
+    au < crawling ; exists ; 1985 ; 1985 ; Thrombosis and Haemostasis Volume 29 ; 29 ; >
     au < crawling ; exists ; 1986 ; 1986 ; Thrombosis and Haemostasis Volume 30 ; 30 ; >
     au < ready ; exists ; 1987 ; 1987 ; Thrombosis and Haemostasis Volume 31 ; 31 ; >
-    au < ready ; exists ; 1988 ; 1988 ; Thrombosis and Haemostasis Volume 32 ; 32 ; >
+    au < crawling ; exists ; 1988 ; 1988 ; Thrombosis and Haemostasis Volume 32 ; 32 ; >
     au < crawling ; exists ; 1989 ; 1989 ; Thrombosis and Haemostasis Volume 33 ; 33 ; >
     au < crawling ; exists ; 1990 ; 1990 ; Thrombosis and Haemostasis Volume 34 ; 34 ; >
     au < crawling ; exists ; 1991 ; 1991 ; Thrombosis and Haemostasis Volume 35 ; 35 ; >
@@ -9107,7 +9107,7 @@
     param[journal_id] = 10.1055/s-00035023
     comment[years] = 1988-current
 
-    au < ready ; exists ; 1988 ; 1988 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1988 ; 1988 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 1 ; 1 ; >
     au < crawling ; exists ; 1989 ; 1989 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 2 ; 2 ; >
     au < crawling ; exists ; 1990 ; 1990 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 3 ; 3 ; >
     au < crawling ; exists ; 1991 ; 1991 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 4 ; 4 ; >
