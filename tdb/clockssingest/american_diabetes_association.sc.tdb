@@ -129,7 +129,7 @@
         au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Diabetes Volume 67 ; 67 ; >
         au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Diabetes Volume 68 ; 68 ; >
         au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Diabetes Volume 69 ; 69 ; >
-        au < ready ; exists ; 2021 ; 2021 ; Diabetes Volume 70 ; 70 ; >
+        au < crawling ; exists ; 2021 ; 2021 ; Diabetes Volume 70 ; 70 ; >
         au < crawling ; exists ; 2022 ; 2022 ; Diabetes Volume 71 ; 71 ; >
 
     }
@@ -225,7 +225,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Diabetes Spectrum Volume 31 ; 31 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Diabetes Spectrum Volume 32 ; 32 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Diabetes Spectrum Volume 33 ; 33 ; >
-      au < ready ; exists ; 2021 ; 2021 ; Diabetes Spectrum Volume 34 ; 34 ; >
+      au < crawling ; exists ; 2021 ; 2021 ; Diabetes Spectrum Volume 34 ; 34 ; >
       au < crawling ; exists ; 2022 ; 2022 ; Diabetes Spectrum Volume 35 ; 35 ; >
 
     }
