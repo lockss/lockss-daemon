@@ -112,7 +112,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Active and Passive Electronic Components Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Active and Passive Electronic Components Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Active and Passive Electronic Components Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Active and Passive Electronic Components Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Active and Passive Electronic Components Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Active and Passive Electronic Components Volume 2021 ; 2021 ; 2021 ; >
     au < expected ; exists ; 2022 ; Active and Passive Electronic Components Volume 2022 ; 2022 ; 2022 ; >
 
@@ -140,7 +140,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Advances in Acoustics and Vibration Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Acoustics and Vibration Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Acoustics and Vibration Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Advances in Acoustics and Vibration Volume 2020 ; 2020 ; 2020 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2020 ; Advances in Acoustics and Vibration Volume 2020 ; 2020 ; 2020 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2021 ; Advances in Acoustics and Vibration Volume 2021 ; 2021 ; 2021 ; >
     au < expected ; exists ; 2022 ; Advances in Acoustics and Vibration Volume 2022 ; 2022 ; 2022 ; >
 
@@ -178,7 +178,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Advances in Agriculture Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Agriculture Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Agriculture Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Advances in Agriculture Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Advances in Agriculture Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Advances in Agriculture Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Advances in Agriculture Volume 2022 ; 2022 ; 2022 ; >
 
@@ -272,7 +272,7 @@
     au < manifest ; exists ; 2010 ; Advances in Artificial Neural Systems Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Advances in Artificial Neural Systems Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Artificial Neural Systems Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Advances in Artificial Neural Systems Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; Advances in Artificial Neural Systems Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Artificial Neural Systems Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Artificial Neural Systems Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Artificial Neural Systems Volume 2016 ; 2016 ; 2016 ; >
@@ -330,7 +330,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Advances in Bioinformatics Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Bioinformatics Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Bioinformatics Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Advances in Bioinformatics Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Advances in Bioinformatics Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < expected ; exists ; 2021 ; Advances in Bioinformatics Volume 2021 ; 2021 ; 2021 ; >
     au < expected ; exists ; 2022 ; Advances in Bioinformatics Volume 2022 ; 2022 ; 2022 ; >
 
@@ -429,7 +429,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Advances in Civil Engineering Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Civil Engineering Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Civil Engineering Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Advances in Civil Engineering Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Advances in Civil Engineering Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Advances in Civil Engineering Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Advances in Civil Engineering Volume 2022 ; 2022 ; 2022 ; >
 
@@ -474,7 +474,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Advances in Condensed Matter Physics Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Condensed Matter Physics Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Condensed Matter Physics Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Advances in Condensed Matter Physics Volume 2020 ; 2020 ; 2020 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2020 ; Advances in Condensed Matter Physics Volume 2020 ; 2020 ; 2020 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2021 ; Advances in Condensed Matter Physics Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Advances in Condensed Matter Physics Volume 2022 ; 2022 ; 2022 ; >
 
@@ -524,7 +524,7 @@
     au < manifest ; exists ; 2010 ; Advances in Decision Sciences Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Advances in Decision Sciences Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Decision Sciences Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Advances in Decision Sciences Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; Advances in Decision Sciences Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Decision Sciences Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Decision Sciences Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Decision Sciences Volume 2016 ; 2016 ; 2016 ; >
@@ -682,14 +682,14 @@
     au < manifest ; exists ; 2010 ; Advances in Fuzzy Systems Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Advances in Fuzzy Systems Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Fuzzy Systems Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Advances in Fuzzy Systems Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Advances in Fuzzy Systems Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Fuzzy Systems Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Fuzzy Systems Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Fuzzy Systems Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Advances in Fuzzy Systems Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Fuzzy Systems Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Fuzzy Systems Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Advances in Fuzzy Systems Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Advances in Fuzzy Systems Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Advances in Fuzzy Systems Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Advances in Fuzzy Systems Volume 2022 ; 2022 ; 2022 ; >
 
@@ -741,14 +741,14 @@
     au < manifest ; exists ; 2010 ; Advances in Hematology Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Advances in Hematology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Hematology Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Advances in Hematology Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; Advances in Hematology Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Hematology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Hematology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Hematology Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Advances in Hematology Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Hematology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Hematology Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Advances in Hematology Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Advances in Hematology Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Advances in Hematology Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Advances in Hematology Volume 2022 ; 2022 ; 2022 ; >
 
@@ -786,14 +786,14 @@
     au < manifest ; exists ; 2010 ; Advances in High Energy Physics Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Advances in High Energy Physics Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in High Energy Physics Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Advances in High Energy Physics Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; Advances in High Energy Physics Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in High Energy Physics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in High Energy Physics Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in High Energy Physics Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Advances in High Energy Physics Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in High Energy Physics Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in High Energy Physics Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Advances in High Energy Physics Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Advances in High Energy Physics Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Advances in High Energy Physics Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Advances in High Energy Physics Volume 2022 ; 2022 ; 2022 ; >
 
@@ -814,14 +814,14 @@
     au < manifest ; exists ; 2010 ; Advances in Human-Computer Interaction Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Advances in Human-Computer Interaction Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Human-Computer Interaction Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Advances in Human-Computer Interaction Volume 2013 ; 2013 ; 2013 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Advances in Human-Computer Interaction Volume 2013 ; 2013 ; 2013 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Human-Computer Interaction Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Human-Computer Interaction Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Human-Computer Interaction Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Advances in Human-Computer Interaction Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Human-Computer Interaction Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Human-Computer Interaction Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Advances in Human-Computer Interaction Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Advances in Human-Computer Interaction Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Advances in Human-Computer Interaction Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Advances in Human-Computer Interaction Volume 2022 ; 2022 ; 2022 ; >
 
@@ -843,14 +843,14 @@
     au < manifest ; exists ; 2010 ; Advances in Materials Science and Engineering Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Advances in Materials Science and Engineering Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Materials Science and Engineering Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Advances in Materials Science and Engineering Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; Advances in Materials Science and Engineering Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Materials Science and Engineering Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Materials Science and Engineering Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Materials Science and Engineering Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Advances in Materials Science and Engineering Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Materials Science and Engineering Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Materials Science and Engineering Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Advances in Materials Science and Engineering Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Advances in Materials Science and Engineering Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Advances in Materials Science and Engineering Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Advances in Materials Science and Engineering Volume 2022 ; 2022 ; 2022 ; >
 
@@ -870,14 +870,14 @@
     au < manifest ; exists ; 2010 ; Advances in Mathematical Physics Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Advances in Mathematical Physics Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Mathematical Physics Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Advances in Mathematical Physics Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; Advances in Mathematical Physics Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Mathematical Physics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Mathematical Physics Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Mathematical Physics Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Advances in Mathematical Physics Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Mathematical Physics Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Mathematical Physics Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Advances in Mathematical Physics Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Advances in Mathematical Physics Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Advances in Mathematical Physics Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Advances in Mathematical Physics Volume 2022 ; 2022 ; 2022 ; >
 
@@ -938,14 +938,14 @@
     au < manifest ; exists ; 2010 ; Advances in Meteorology Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Advances in Meteorology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Meteorology Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Advances in Meteorology Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Advances in Meteorology Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Meteorology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Meteorology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Meteorology Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Advances in Meteorology Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Meteorology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Meteorology Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Advances in Meteorology Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Advances in Meteorology Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Advances in Meteorology Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Advances in Meteorology Volume 2022 ; 2022 ; 2022 ; >
 
@@ -983,7 +983,7 @@
     au < manifest ; exists ; 2010 ; Advances in Multimedia Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Advances in Multimedia Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Multimedia Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Advances in Multimedia Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; Advances in Multimedia Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Multimedia Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Multimedia Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Multimedia Volume 2016 ; 2016 ; 2016 ; >
@@ -1043,7 +1043,7 @@
     au < manifest ; exists ; 2010 ; Advances in Numerical Analysis Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Advances in Numerical Analysis Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Numerical Analysis Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Advances in Numerical Analysis Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; Advances in Numerical Analysis Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Numerical Analysis Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Numerical Analysis Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Numerical Analysis Volume 2016 ; 2016 ; 2016 ; >
@@ -1097,14 +1097,14 @@
     au < manifest ; exists ; 2010 ; Advances in Operations Research Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Advances in Operations Research Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Operations Research Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Advances in Operations Research Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Advances in Operations Research Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Operations Research Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Operations Research Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Operations Research Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Advances in Operations Research Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Operations Research Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Operations Research Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Advances in Operations Research Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Advances in Operations Research Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Advances in Operations Research Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Advances in Operations Research Volume 2022 ; 2022 ; 2022 ; >
 
@@ -1126,7 +1126,7 @@
     au < manifest ; exists ; 2010 ; Advances in Optical Technologies Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Advances in Optical Technologies Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Optical Technologies Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Advances in Optical Technologies Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Advances in Optical Technologies Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Optical Technologies Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Optical Technologies Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Optical Technologies Volume 2016 ; 2016 ; 2016 ; >
@@ -1209,14 +1209,14 @@
 
     au < manifest ; exists ; 2011 ; Advances in Orthopedics Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Orthopedics Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Advances in Orthopedics Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Advances in Orthopedics Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Orthopedics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Orthopedics Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Orthopedics Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Advances in Orthopedics Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Orthopedics Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Orthopedics Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Advances in Orthopedics Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Advances in Orthopedics Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Advances in Orthopedics Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Advances in Orthopedics Volume 2022 ; 2022 ; 2022 ; >
 
@@ -1270,14 +1270,14 @@
     au < manifest ; exists ; 2010 ; Advances in Pharmacological Sciences Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Advances in Pharmacological Sciences Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Pharmacological Sciences Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Advances in Pharmacological Sciences Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; Advances in Pharmacological Sciences Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Pharmacological Sciences Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Pharmacological Sciences Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Pharmacological Sciences Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Advances in Pharmacological Sciences Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Pharmacological Sciences Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Pharmacological Sciences Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Advances in Pharmacological Sciences Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Advances in Pharmacological Sciences Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Advances in Pharmacological Sciences Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Advances in Pharmacological Sciences Volume 2022 ; 2022 ; 2022 ; >
 
@@ -1299,7 +1299,7 @@
     au < manifest ; exists ; 2010 ; Advances in Physical Chemistry Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Advances in Physical Chemistry Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Physical Chemistry Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Advances in Physical Chemistry Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; Advances in Physical Chemistry Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Physical Chemistry Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Physical Chemistry Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Physical Chemistry Volume 2016 ; 2016 ; 2016 ; >
@@ -1328,12 +1328,12 @@
     au < manifest ; exists ; 2010 ; Advances in Power Electronics Volume 2010 (2010) ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Advances in Power Electronics Volume 2011 (2011) ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Power Electronics Volume 2012 (2012) ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Advances in Power Electronics Volume 2013 (2013) ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; Advances in Power Electronics Volume 2013 (2013) ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Power Electronics Volume 2014 (2014) ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Power Electronics Volume 2015 (2015) ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Power Electronics Volume 2016 (2016) ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Advances in Power Electronics Volume 2017 (2017) ; 2017 ; 2017 ; >
-    au < finished ; crawling ; 2018 ; Advances in Power Electronics Volume 2018 (2018) ; 2018 ; 2018 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2018 ; Advances in Power Electronics Volume 2018 (2018) ; 2018 ; 2018 ; reingest3.clockss.org:8083 >
     au < exists ; exists ; 2019 ; Advances in Power Electronics Volume 2019 (2019) ; 2019 ; 2019 ; >
     au < exists ; exists ; 2020 ; Advances in Power Electronics Volume 2020 ; 2020 ; 2020 ; >
     au < expected ; exists ; 2021 ; Advances in Power Electronics Volume 2021 ; 2021 ; 2021 ; >
@@ -1353,14 +1353,14 @@
 
     au < manifest ; exists ; 2011 ; Advances in Preventive Medicine Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Preventive Medicine Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Advances in Preventive Medicine Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Advances in Preventive Medicine Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Preventive Medicine Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Preventive Medicine Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Preventive Medicine Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Advances in Preventive Medicine Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Preventive Medicine Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Preventive Medicine Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Advances in Preventive Medicine Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Advances in Preventive Medicine Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Advances in Preventive Medicine Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Advances in Preventive Medicine Volume 2022 ; 2022 ; 2022 ; >
 
@@ -1398,7 +1398,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Advances in Public Health Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Public Health Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Public Health Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Advances in Public Health Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Advances in Public Health Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Advances in Public Health Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Advances in Public Health Volume 2022 ; 2022 ; 2022 ; >
 
@@ -1450,7 +1450,7 @@
     au < manifest ; exists ; 2010 ; Advances in Software Engineering Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Advances in Software Engineering Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Software Engineering Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Advances in Software Engineering Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Advances in Software Engineering Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Software Engineering Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Software Engineering Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Software Engineering Volume 2016 ; 2016 ; 2016 ; >
@@ -1505,14 +1505,14 @@
     au < manifest ; exists ; 2010 ; Advances in Tribology Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Advances in Tribology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Tribology Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Advances in Tribology Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; Advances in Tribology Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Tribology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Tribology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Tribology Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Advances in Tribology Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Tribology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Tribology Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Advances in Tribology Volume 2020 ; 2020 ; 2020 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2020 ; Advances in Tribology Volume 2020 ; 2020 ; 2020 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2021 ; Advances in Tribology Volume 2021 ; 2021 ; 2021 ; >
     au < expected ; exists ; 2022 ; Advances in Tribology Volume 2022 ; 2022 ; 2022 ; >
 
@@ -1532,14 +1532,14 @@
     au < manifest ; exists ; 2010 ; Advances in Urology Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Advances in Urology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Urology Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Advances in Urology Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Advances in Urology Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Urology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Urology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Urology Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Advances in Urology Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Urology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Urology Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Advances in Urology Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Advances in Urology Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Advances in Urology Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Advances in Urology Volume 2022 ; 2022 ; 2022 ; >
 
@@ -1575,14 +1575,14 @@
     au < manifest ; exists ; 2010 ; Advances in Virology Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Advances in Virology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Virology Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Advances in Virology Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Advances in Virology Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Virology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Virology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Virology Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Advances in Virology Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Virology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Virology Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Advances in Virology Volume 2020 ; 2020 ; 2020 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2020 ; Advances in Virology Volume 2020 ; 2020 ; 2020 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2021 ; Advances in Virology Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Advances in Virology Volume 2022 ; 2022 ; 2022 ; >
 
@@ -1617,7 +1617,7 @@
     au < manifest ; exists ; 2010 ; AIDS Research and Treatment Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; AIDS Research and Treatment Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; AIDS Research and Treatment Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; AIDS Research and Treatment Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; AIDS Research and Treatment Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; AIDS Research and Treatment Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; AIDS Research and Treatment Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; AIDS Research and Treatment Volume 2016 ; 2016 ; 2016 ; >
@@ -1642,7 +1642,7 @@
     param[journal_id] = algebra
     #Moved to archive
 
-    au < finished ; crawling ; 2013 ; Algebra Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Algebra Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Algebra Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Algebra Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Algebra Volume 2016 ; 2016 ; 2016 ; >
@@ -1665,7 +1665,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Analytical Cellular Pathology Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Analytical Cellular Pathology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Analytical Cellular Pathology Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Analytical Cellular Pathology Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Analytical Cellular Pathology Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Analytical Cellular Pathology Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Analytical Cellular Pathology Volume 2022 ; 2022 ; 2022 ; >
 
@@ -1683,7 +1683,7 @@
 
     au < manifest ; exists ; 2011 ; Anatomy Research International Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Anatomy Research International Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Anatomy Research International Volume 2013 ; 2013 ; 2013 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Anatomy Research International Volume 2013 ; 2013 ; 2013 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Anatomy Research International Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Anatomy Research International Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Anatomy Research International Volume 2016 ; 2016 ; 2016 ; >
@@ -1706,7 +1706,7 @@
     au < manifest ; exists ; 2010 ; Anemia Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Anemia Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Anemia Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Anemia Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Anemia Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Anemia Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Anemia Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Anemia Volume 2016 ; 2016 ; 2016 ; >
@@ -1735,7 +1735,7 @@
     au < manifest ; exists ; 2010 ; Anesthesiology Research and Practice Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Anesthesiology Research and Practice Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Anesthesiology Research and Practice Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Anesthesiology Research and Practice Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; Anesthesiology Research and Practice Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Anesthesiology Research and Practice Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Anesthesiology Research and Practice Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Anesthesiology Research and Practice Volume 2016 ; 2016 ; 2016 ; >
@@ -1769,7 +1769,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Applied and Environmental Soil Science Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Applied and Environmental Soil Science Volume 2018 ; 2018 ; 2018 ; >
     au < manifest ; exists ; 2019 ; Applied and Environmental Soil Science Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Applied and Environmental Soil Science Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Applied and Environmental Soil Science Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Applied and Environmental Soil Science Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Applied and Environmental Soil Science Volume 2022 ; 2022 ; 2022 ; >
 
@@ -1792,7 +1792,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Applied Bionics and Biomechanics Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Applied Bionics and Biomechanics Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Applied Bionics and Biomechanics Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Applied Bionics and Biomechanics Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Applied Bionics and Biomechanics Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Applied Bionics and Biomechanics Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Applied Bionics and Biomechanics Volume 2022 ; 2022 ; 2022 ; >
 
@@ -1812,14 +1812,14 @@
     au < manifest ; exists ; 2010 ; Applied Computational Intelligence and Soft Computing Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Applied Computational Intelligence and Soft Computing Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Applied Computational Intelligence and Soft Computing Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Applied Computational Intelligence and Soft Computing Volume 2013 ; 2013 ; 2013 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Applied Computational Intelligence and Soft Computing Volume 2013 ; 2013 ; 2013 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Applied Computational Intelligence and Soft Computing Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Applied Computational Intelligence and Soft Computing Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Applied Computational Intelligence and Soft Computing Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Applied Computational Intelligence and Soft Computing Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Applied Computational Intelligence and Soft Computing Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Applied Computational Intelligence and Soft Computing Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Applied Computational Intelligence and Soft Computing Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Applied Computational Intelligence and Soft Computing Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Applied Computational Intelligence and Soft Computing Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Applied Computational Intelligence and Soft Computing Volume 2022 ; 2022 ; 2022 ; >
 
@@ -1846,7 +1846,7 @@
     au < manifest ; exists ; 2010 ; Archaea Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Archaea Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Archaea Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Archaea Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; Archaea Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Archaea Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Archaea Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Archaea Volume 2016 ; 2016 ; 2016 ; >
@@ -1872,7 +1872,7 @@
     au < manifest ; exists ; 2010 ; Arthritis Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Arthritis Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Arthritis Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Arthritis Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; Arthritis Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Arthritis Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Arthritis Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Arthritis Volume 2016 ; 2016 ; 2016 ; >
@@ -1910,14 +1910,14 @@
     au < manifest ; exists ; 2010 ; Autism Research and Treatment Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Autism Research and Treatment Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Autism Research and Treatment Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Autism Research and Treatment Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Autism Research and Treatment Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Autism Research and Treatment Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Autism Research and Treatment Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Autism Research and Treatment Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Autism Research and Treatment Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Autism Research and Treatment Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Autism Research and Treatment Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Autism Research and Treatment Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Autism Research and Treatment Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Autism Research and Treatment Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Autism Research and Treatment Volume 2022 ; 2022 ; 2022 ; >
 
@@ -1936,14 +1936,14 @@
     au < manifest ; exists ; 2010 ; Autoimmune Diseases Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Autoimmune Diseases Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Autoimmune Diseases Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Autoimmune Diseases Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Autoimmune Diseases Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Autoimmune Diseases Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Autoimmune Diseases Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Autoimmune Diseases Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Autoimmune Diseases Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Autoimmune Diseases Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Autoimmune Diseases Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Autoimmune Diseases Volume 2020 ; 2020 ; 2020 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2020 ; Autoimmune Diseases Volume 2020 ; 2020 ; 2020 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2021 ; Autoimmune Diseases Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Autoimmune Diseases Volume 2022 ; 2022 ; 2022 ; >
 
@@ -1983,7 +1983,7 @@
     au < manifest ; exists ; 2010 ; Behavioural Neurology Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Behavioural Neurology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Behavioural Neurology Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Behavioural Neurology Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; Behavioural Neurology Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Behavioural Neurology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Behavioural Neurology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Behavioural Neurology Volume 2016 ; 2016 ; 2016 ; >
@@ -2011,14 +2011,14 @@
     au < manifest ; exists ; 2010 ; Biochemistry Research International Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Biochemistry Research International Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Biochemistry Research International Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Biochemistry Research International Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Biochemistry Research International Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Biochemistry Research International Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Biochemistry Research International Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Biochemistry Research International Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Biochemistry Research International Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Biochemistry Research International Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Biochemistry Research International Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Biochemistry Research International Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Biochemistry Research International Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Biochemistry Research International Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Biochemistry Research International Volume 2022 ; 2022 ; 2022 ; >
 
@@ -2044,14 +2044,14 @@
     au < manifest ; exists ; 2010 ; Bioinorganic Chemistry and Applications Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Bioinorganic Chemistry and Applications Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Bioinorganic Chemistry and Applications Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Bioinorganic Chemistry and Applications Volume 2013 ; 2013 ; 2013 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Bioinorganic Chemistry and Applications Volume 2013 ; 2013 ; 2013 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Bioinorganic Chemistry and Applications Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Bioinorganic Chemistry and Applications Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Bioinorganic Chemistry and Applications Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Bioinorganic Chemistry and Applications Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Bioinorganic Chemistry and Applications Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Bioinorganic Chemistry and Applications Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Bioinorganic Chemistry and Applications Volume 2020 ; 2020 ; 2020 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2020 ; Bioinorganic Chemistry and Applications Volume 2020 ; 2020 ; 2020 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2021 ; Bioinorganic Chemistry and Applications Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Bioinorganic Chemistry and Applications Volume 2022 ; 2022 ; 2022 ; >
 
@@ -2079,7 +2079,7 @@
     au < manifest ; exists ; 2010 ; BioMed Research International Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; BioMed Research International Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; BioMed Research International Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; BioMed Research International Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; BioMed Research International Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; BioMed Research International Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; BioMed Research International Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; BioMed Research International Volume 2016 ; 2016 ; 2016 ; >
@@ -2105,12 +2105,12 @@
 
     au < manifest ; exists ; 2011 ; Biotechnology Research International Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Biotechnology Research International Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Biotechnology Research International Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; Biotechnology Research International Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Biotechnology Research International Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Biotechnology Research International Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Biotechnology Research International Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Biotechnology Research International Volume 2017 ; 2017 ; 2017 ; >
-    au < finished ; crawling ; 2018 ; Biotechnology Research International Volume 2018 ; 2018 ; 2018 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2018 ; Biotechnology Research International Volume 2018 ; 2018 ; 2018 ; reingest5.clockss.org:8082 >
     au < exists ; exists ; 2019 ; Biotechnology Research International Volume 2019 ; 2019 ; 2019 ; >
 
   }
@@ -2127,7 +2127,7 @@
 
     au < manifest ; exists ; 2011 ; Bone Marrow Research Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Bone Marrow Research Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Bone Marrow Research Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Bone Marrow Research Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Bone Marrow Research Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Bone Marrow Research Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Bone Marrow Research Volume 2016 ; 2016 ; 2016 ; >
@@ -2149,7 +2149,7 @@
 
     au < manifest ; exists ; 2011 ; Canadian Journal of Gastroenterology and Hepatology Volume 25 (2011) ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Canadian Journal of Gastroenterology and Hepatology Volume 26 (2012) ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Canadian Journal of Gastroenterology and Hepatology Volume 27 (2013) ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; Canadian Journal of Gastroenterology and Hepatology Volume 27 (2013) ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Canadian Journal of Gastroenterology and Hepatology Volume 28 (2014) ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Canadian Journal of Gastroenterology and Hepatology Volume 29 (2015) ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Canadian Journal of Gastroenterology and Hepatology Volume 2016 (2016) ; 2016 ; 2016 ; >
@@ -2172,7 +2172,7 @@
 
     au < manifest ; exists ; 2011 ; Canadian Journal of Infectious Diseases and Medical Microbiology Volume 22 (2011) ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Canadian Journal of Infectious Diseases and Medical Microbiology Volume 23 (2012) ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Canadian Journal of Infectious Diseases and Medical Microbiology Volume 24 (2013) ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; Canadian Journal of Infectious Diseases and Medical Microbiology Volume 24 (2013) ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Canadian Journal of Infectious Diseases and Medical Microbiology Volume 25 (2014) ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Canadian Journal of Infectious Diseases and Medical Microbiology Volume 26 (2015) ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Canadian Journal of Infectious Diseases and Medical Microbiology Volume 2016 (2016) ; 2016 ; 2016 ; >
@@ -2195,7 +2195,7 @@
 
     au < manifest ; exists ; 2011 ; Canadian Respiratory Journal Volume 18 (2011) ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Canadian Respiratory Journal Volume 19 (2012) ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Canadian Respiratory Journal Volume 20 (2013) ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Canadian Respiratory Journal Volume 20 (2013) ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Canadian Respiratory Journal Volume 21 (2014) ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Canadian Respiratory Journal Volume 22 (2015) ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Canadian Respiratory Journal Volume 2016 (2016) ; 2016 ; 2016 ; >
@@ -2248,7 +2248,7 @@
     au < manifest ; exists ; 2010 ; Cardiovascular Psychiatry and Neurology Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Cardiovascular Psychiatry and Neurology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Cardiovascular Psychiatry and Neurology Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Cardiovascular Psychiatry and Neurology Volume 2013 ; 2013 ; 2013 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Cardiovascular Psychiatry and Neurology Volume 2013 ; 2013 ; 2013 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Cardiovascular Psychiatry and Neurology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Cardiovascular Psychiatry and Neurology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Cardiovascular Psychiatry and Neurology Volume 2016 ; 2016 ; 2016 ; >
@@ -2268,7 +2268,7 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Anesthesiology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Anesthesiology Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Case Reports in Anesthesiology Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Case Reports in Anesthesiology Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Anesthesiology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Anesthesiology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Anesthesiology Volume 2016 ; 2016 ; 2016 ; >
@@ -2293,7 +2293,7 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Cardiology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Cardiology Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Case Reports in Cardiology Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; Case Reports in Cardiology Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Cardiology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Cardiology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Cardiology Volume 2016 ; 2016 ; 2016 ; >
@@ -2318,14 +2318,14 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Critical Care Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Critical Care Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Case Reports in Critical Care Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Case Reports in Critical Care Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Critical Care Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Critical Care Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Critical Care Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Case Reports in Critical Care Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Critical Care Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Critical Care Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Case Reports in Critical Care Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Case Reports in Critical Care Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Case Reports in Critical Care Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Case Reports in Critical Care Volume 2022 ; 2022 ; 2022 ; >
 
@@ -2343,14 +2343,14 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Dentistry Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Dentistry Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Case Reports in Dentistry Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Case Reports in Dentistry Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Dentistry Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Dentistry Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Dentistry Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Case Reports in Dentistry Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Dentistry Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Dentistry Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Case Reports in Dentistry Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Case Reports in Dentistry Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Case Reports in Dentistry Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Case Reports in Dentistry Volume 2022 ; 2022 ; 2022 ; >
 
@@ -2368,7 +2368,7 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Dermatological Medicine Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Dermatological Medicine Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Case Reports in Dermatological Medicine Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; Case Reports in Dermatological Medicine Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Dermatological Medicine Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Dermatological Medicine Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Dermatological Medicine Volume 2016 ; 2016 ; 2016 ; >
@@ -2393,14 +2393,14 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Emergency Medicine Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Emergency Medicine Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Case Reports in Emergency Medicine Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Case Reports in Emergency Medicine Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Emergency Medicine Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Emergency Medicine Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Emergency Medicine Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Case Reports in Emergency Medicine Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Emergency Medicine Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Emergency Medicine Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Case Reports in Emergency Medicine Volume 2020 ; 2020 ; 2020 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2020 ; Case Reports in Emergency Medicine Volume 2020 ; 2020 ; 2020 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2021 ; Case Reports in Emergency Medicine Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Case Reports in Emergency Medicine Volume 2022 ; 2022 ; 2022 ; >
 
@@ -2418,14 +2418,14 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Endocrinology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Endocrinology Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Case Reports in Endocrinology Volume 2013 ; 2013 ; 2013 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Case Reports in Endocrinology Volume 2013 ; 2013 ; 2013 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Endocrinology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Endocrinology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Endocrinology Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Case Reports in Endocrinology Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Endocrinology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Endocrinology Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Case Reports in Endocrinology Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Case Reports in Endocrinology Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Case Reports in Endocrinology Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Case Reports in Endocrinology Volume 2022 ; 2022 ; 2022 ; >
 
@@ -2443,14 +2443,14 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Gastrointestinal Medicine Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Gastrointestinal Medicine Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Case Reports in Gastrointestinal Medicine Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Case Reports in Gastrointestinal Medicine Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Gastrointestinal Medicine Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Gastrointestinal Medicine Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Gastrointestinal Medicine Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Case Reports in Gastrointestinal Medicine Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Gastrointestinal Medicine Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Gastrointestinal Medicine Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Case Reports in Gastrointestinal Medicine Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Case Reports in Gastrointestinal Medicine Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Case Reports in Gastrointestinal Medicine Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Case Reports in Gastrointestinal Medicine Volume 2022 ; 2022 ; 2022 ; >
 
@@ -2468,14 +2468,14 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Genetics Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Genetics Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Case Reports in Genetics Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; Case Reports in Genetics Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Genetics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Genetics Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Genetics Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Case Reports in Genetics Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Genetics Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Genetics Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Case Reports in Genetics Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Case Reports in Genetics Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Case Reports in Genetics Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Case Reports in Genetics Volume 2022 ; 2022 ; 2022 ; >
 
@@ -2493,14 +2493,14 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Hematology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Hematology Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Case Reports in Hematology Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; Case Reports in Hematology Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Hematology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Hematology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Hematology Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Case Reports in Hematology Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Hematology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Hematology Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Case Reports in Hematology Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Case Reports in Hematology Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Case Reports in Hematology Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Case Reports in Hematology Volume 2022 ; 2022 ; 2022 ; >
 
@@ -2518,14 +2518,14 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Hepatology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Hepatology Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Case Reports in Hepatology Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Case Reports in Hepatology Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Hepatology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Hepatology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Hepatology Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Case Reports in Hepatology Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Hepatology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Hepatology Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Case Reports in Hepatology Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Case Reports in Hepatology Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Case Reports in Hepatology Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Case Reports in Hepatology Volume 2022 ; 2022 ; 2022 ; >
 
@@ -2543,14 +2543,14 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Immunology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Immunology Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Case Reports in Immunology Volume 2013 ; 2013 ; 2013 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Case Reports in Immunology Volume 2013 ; 2013 ; 2013 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Immunology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Immunology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Immunology Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Case Reports in Immunology Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Immunology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Immunology Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Case Reports in Immunology Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Case Reports in Immunology Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Case Reports in Immunology Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Case Reports in Immunology Volume 2022 ; 2022 ; 2022 ; >
 
@@ -2568,14 +2568,14 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Infectious Diseases Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Infectious Diseases Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Case Reports in Infectious Diseases Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Case Reports in Infectious Diseases Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Infectious Diseases Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Infectious Diseases Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Infectious Diseases Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Case Reports in Infectious Diseases Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Infectious Diseases Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Infectious Diseases Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Case Reports in Infectious Diseases Volume 2020 ; 2020 ; 2020 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2020 ; Case Reports in Infectious Diseases Volume 2020 ; 2020 ; 2020 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2021 ; Case Reports in Infectious Diseases Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Case Reports in Infectious Diseases Volume 2022 ; 2022 ; 2022 ; >
 
@@ -2595,14 +2595,14 @@
     au < manifest ; exists ; 2010 ; Case Reports in Medicine Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Case Reports in Medicine Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Medicine Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Case Reports in Medicine Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; Case Reports in Medicine Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Medicine Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Medicine Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Medicine Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Case Reports in Medicine Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Medicine Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Medicine Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Case Reports in Medicine Volume 2020 ; 2020 ; 2020 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2020 ; Case Reports in Medicine Volume 2020 ; 2020 ; 2020 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2021 ; Case Reports in Medicine Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Case Reports in Medicine Volume 2022 ; 2022 ; 2022 ; >
 
@@ -2621,14 +2621,14 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Nephrology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Nephrology Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Case Reports in Nephrology Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Case Reports in Nephrology Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Nephrology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Nephrology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Nephrology Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Case Reports in Nephrology Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Nephrology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Nephrology Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Case Reports in Nephrology Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Case Reports in Nephrology Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Case Reports in Nephrology Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Case Reports in Nephrology Volume 2022 ; 2022 ; 2022 ; >
 
@@ -2646,7 +2646,7 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Neurological Medicine Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Neurological Medicine Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Case Reports in Neurological Medicine Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Case Reports in Neurological Medicine Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Neurological Medicine Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Neurological Medicine Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Neurological Medicine Volume 2016 ; 2016 ; 2016 ; >
@@ -2668,14 +2668,14 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Obstetrics and Gynecology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Obstetrics and Gynecology Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Case Reports in Obstetrics and Gynecology Volume 2013 ; 2013 ; 2013 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Case Reports in Obstetrics and Gynecology Volume 2013 ; 2013 ; 2013 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Obstetrics and Gynecology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Obstetrics and Gynecology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Obstetrics and Gynecology Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Case Reports in Obstetrics and Gynecology Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Obstetrics and Gynecology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Obstetrics and Gynecology Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Case Reports in Obstetrics and Gynecology Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Case Reports in Obstetrics and Gynecology Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Case Reports in Obstetrics and Gynecology Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Case Reports in Obstetrics and Gynecology Volume 2022 ; 2022 ; 2022 ; >
 
@@ -2693,7 +2693,7 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Oncological Medicine Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Oncological Medicine Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Case Reports in Oncological Medicine Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; Case Reports in Oncological Medicine Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Oncological Medicine Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Oncological Medicine Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Oncological Medicine Volume 2016 ; 2016 ; 2016 ; >
@@ -2718,7 +2718,7 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Ophthalmological Medicine Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Ophthalmological Medicine Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Case Reports in Ophthalmological Medicine Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Case Reports in Ophthalmological Medicine Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Ophthalmological Medicine Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Ophthalmological Medicine Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Ophthalmological Medicine Volume 2016 ; 2016 ; 2016 ; >
@@ -2743,14 +2743,14 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Orthopedics Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Orthopedics Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Case Reports in Orthopedics Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Case Reports in Orthopedics Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Orthopedics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Orthopedics Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Orthopedics Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Case Reports in Orthopedics Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Orthopedics Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Orthopedics Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Case Reports in Orthopedics Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Case Reports in Orthopedics Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Case Reports in Orthopedics Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Case Reports in Orthopedics Volume 2022 ; 2022 ; 2022 ; >
 
@@ -2768,14 +2768,14 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Otolaryngology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Otolaryngology Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Case Reports in Otolaryngology Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; Case Reports in Otolaryngology Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Otolaryngology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Otolaryngology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Otolaryngology Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Case Reports in Otolaryngology Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Otolaryngology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Otolaryngology Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Case Reports in Otolaryngology Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Case Reports in Otolaryngology Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Case Reports in Otolaryngology Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Case Reports in Otolaryngology Volume 2022 ; 2022 ; 2022 ; >
 
@@ -2800,7 +2800,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Case Reports in Pathology Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Pathology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Pathology Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Case Reports in Pathology Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Case Reports in Pathology Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Case Reports in Pathology Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Case Reports in Pathology Volume 2022 ; 2022 ; 2022 ; >
 
@@ -2818,14 +2818,14 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Pediatrics Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Pediatrics Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Case Reports in Pediatrics Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Case Reports in Pediatrics Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Pediatrics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Pediatrics Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Pediatrics Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Case Reports in Pediatrics Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Pediatrics Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Pediatrics Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Case Reports in Pediatrics Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Case Reports in Pediatrics Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Case Reports in Pediatrics Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Case Reports in Pediatrics Volume 2022 ; 2022 ; 2022 ; >
 
@@ -2843,14 +2843,14 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Psychiatry Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Psychiatry Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Case Reports in Psychiatry Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; Case Reports in Psychiatry Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Psychiatry Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Psychiatry Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Psychiatry Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Case Reports in Psychiatry Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Psychiatry Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Psychiatry Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Case Reports in Psychiatry Volume 2020 ; 2020 ; 2020 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2020 ; Case Reports in Psychiatry Volume 2020 ; 2020 ; 2020 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2021 ; Case Reports in Psychiatry Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Case Reports in Psychiatry Volume 2022 ; 2022 ; 2022 ; >
 
@@ -2868,14 +2868,14 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Pulmonology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Pulmonology Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Case Reports in Pulmonology Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Case Reports in Pulmonology Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Pulmonology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Pulmonology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Pulmonology Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Case Reports in Pulmonology Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Pulmonology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Pulmonology Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Case Reports in Pulmonology Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Case Reports in Pulmonology Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Case Reports in Pulmonology Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Case Reports in Pulmonology Volume 2022 ; 2022 ; 2022 ; >
 
@@ -2893,14 +2893,14 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Radiology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Radiology Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Case Reports in Radiology Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Case Reports in Radiology Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Radiology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Radiology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Radiology Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Case Reports in Radiology Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Radiology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Radiology Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Case Reports in Radiology Volume 2020 ; 2020 ; 2020 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2020 ; Case Reports in Radiology Volume 2020 ; 2020 ; 2020 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2021 ; Case Reports in Radiology Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Case Reports in Radiology Volume 2022 ; 2022 ; 2022 ; >
 
@@ -2918,14 +2918,14 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Rheumatology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Rheumatology Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Case Reports in Rheumatology Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; Case Reports in Rheumatology Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Rheumatology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Rheumatology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Rheumatology Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Case Reports in Rheumatology Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Rheumatology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Rheumatology Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Case Reports in Rheumatology Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Case Reports in Rheumatology Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Case Reports in Rheumatology Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Case Reports in Rheumatology Volume 2022 ; 2022 ; 2022 ; >
 
@@ -2943,14 +2943,14 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Surgery Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Surgery Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Case Reports in Surgery Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Case Reports in Surgery Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Surgery Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Surgery Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Surgery Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Case Reports in Surgery Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Surgery Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Surgery Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Case Reports in Surgery Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Case Reports in Surgery Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Case Reports in Surgery Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Case Reports in Surgery Volume 2022 ; 2022 ; 2022 ; >
 
@@ -2968,7 +2968,7 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Transplantation Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Transplantation Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Case Reports in Transplantation Volume 2013 ; 2013 ; 2013 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Case Reports in Transplantation Volume 2013 ; 2013 ; 2013 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Transplantation Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Transplantation Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Transplantation Volume 2016 ; 2016 ; 2016 ; >
@@ -2993,14 +2993,14 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Urology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Urology Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Case Reports in Urology Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; Case Reports in Urology Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Urology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Urology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Urology Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Case Reports in Urology Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Urology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Urology Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Case Reports in Urology Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Case Reports in Urology Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Case Reports in Urology Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Case Reports in Urology Volume 2022 ; 2022 ; 2022 ; >
 
@@ -3018,14 +3018,14 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Vascular Medicine Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Vascular Medicine Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Case Reports in Vascular Medicine Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Case Reports in Vascular Medicine Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Vascular Medicine Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Vascular Medicine Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Vascular Medicine Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Case Reports in Vascular Medicine Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Vascular Medicine Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Vascular Medicine Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Case Reports in Vascular Medicine Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Case Reports in Vascular Medicine Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Case Reports in Vascular Medicine Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Case Reports in Vascular Medicine Volume 2022 ; 2022 ; 2022 ; >
 
@@ -3043,14 +3043,14 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Veterinary Medicine Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Veterinary Medicine Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Case Reports in Veterinary Medicine Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Case Reports in Veterinary Medicine Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Veterinary Medicine Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Veterinary Medicine Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Veterinary Medicine Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Case Reports in Veterinary Medicine Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Veterinary Medicine Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Veterinary Medicine Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Case Reports in Veterinary Medicine Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Case Reports in Veterinary Medicine Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Case Reports in Veterinary Medicine Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Case Reports in Veterinary Medicine Volume 2022 ; 2022 ; 2022 ; >
 
@@ -3070,7 +3070,7 @@
     au < manifest ; exists ; 2010 ; Chemotherapy Research and Practice Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Chemotherapy Research and Practice Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Chemotherapy Research and Practice Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Chemotherapy Research and Practice Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; Chemotherapy Research and Practice Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Chemotherapy Research and Practice Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Chemotherapy Research and Practice Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Chemotherapy Research and Practice Volume 2016 ; 2016 ; 2016 ; >
@@ -3090,7 +3090,7 @@
 
     au < manifest ; exists ; 2011 ; Child Development Research Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Child Development Research Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Child Development Reserach Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; Child Development Reserach Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Child Development Research Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Child Development Research Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Child Development Research Volume 2016 ; 2016 ; 2016 ; >
@@ -3129,7 +3129,7 @@
     param[journal_id] = cje
     #stopped publishing.
 
-    au < finished ; crawling ; 2013 ; Chinese Journal of Engineering Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Chinese Journal of Engineering Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Chinese Journal of Engineering Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Chinese Journal of Engineering Volume 2016 ; 2016 ; 2016 ; >
 
@@ -3145,12 +3145,12 @@
     param[journal_id] = cjm
     #moved to archive
 
-    au < finished ; crawling ; 2013 ; Chinese Journal of Mathematics Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Chinese Journal of Mathematics Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Chinese Journal of Mathematics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Chinese Journal of Mathematics Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Chinese Journal of Mathematics Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Chinese Journal of Mathematics Volume 2017 ; 2017 ; 2017 ; >
-    au < finished ; crawling ; 2018 ; Chinese Journal of Mathematics Volume 2018 ; 2018 ; 2018 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2018 ; Chinese Journal of Mathematics Volume 2018 ; 2018 ; 2018 ; reingest2.clockss.org:8085 >
     au < exists ; exists ; 2019 ; Chinese Journal of Mathematics Volume 2019 ; 2019 ; 2019 ; >
 
   }
@@ -3168,7 +3168,7 @@
     au < manifest ; exists ; 2010 ; Cholesterol Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Cholesterol Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Cholesterol Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Cholesterol Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; Cholesterol Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Cholesterol Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Cholesterol Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Cholesterol Volume 2016 ; 2016 ; 2016 ; >
@@ -3191,7 +3191,7 @@
 
     au < manifest ; exists ; 2011 ; Chromatography Research International Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Chromatography Research International Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Chromatography Research International Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Chromatography Research International Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Chromatography Research International Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Chromatography Research International Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Chromatography Research International Volume 2016 ; 2016 ; 2016 ; >
@@ -3213,7 +3213,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Complexity Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Complexity Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Complexity Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Complexity Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Complexity Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Complexity Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Complexity Volume 2022 ; 2022 ; 2022 ; >
 
@@ -3246,14 +3246,14 @@
     au < manifest ; exists ; 2010 ; Computational and Mathematical Methods in Medicine Volume 11 (2010) ; 2010 ; 11 ; >
     au < manifest ; exists ; 2011 ; Computational and Mathematical Methods in Medicine Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Computational and Mathematical Methods in Medicine Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Computational and Mathematical Methods in Medicine Volume 2013 ; 2013 ; 2013 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Computational and Mathematical Methods in Medicine Volume 2013 ; 2013 ; 2013 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Computational and Mathematical Methods in Medicine Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Computational and Mathematical Methods in Medicine Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Computational and Mathematical Methods in Medicine Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Computational and Mathematical Methods in Medicine Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Computational and Mathematical Methods in Medicine Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Computational and Mathematical Methods in Medicine Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Computational and Mathematical Methods in Medicine Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Computational and Mathematical Methods in Medicine Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Computational and Mathematical Methods in Medicine Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Computational and Mathematical Methods in Medicine Volume 2022 ; 2022 ; 2022 ; >
 
@@ -3270,7 +3270,7 @@
     param[journal_id] = cbj
     #Moved to archive
 
-    au < finished ; crawling ; 2013 ; Computational Biology Journal Volume 2013 ; 2013 ; 2013 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Computational Biology Journal Volume 2013 ; 2013 ; 2013 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Computational Biology Journal Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Computational Biology Journal Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Computational Biology Journal Volume 2016 ; 2016 ; 2016 ; >
@@ -3293,7 +3293,7 @@
     au < manifest ; exists ; 2010 ; Computational Intelligence and Neuroscience Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Computational Intelligence and Neuroscience Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Computational Intelligence and Neuroscience Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Computational Intelligence and Neuroscience Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Computational Intelligence and Neuroscience Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Computational Intelligence and Neuroscience Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Computational Intelligence and Neuroscience Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Computational Intelligence and Neuroscience Volume 2016 ; 2016 ; 2016 ; >
@@ -3317,7 +3317,7 @@
     param[journal_id] = cpis
     #Moved to archive
 
-    au < finished ; crawling ; 2013 ; Conference Papers in Science Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; Conference Papers in Science Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Conference Papers in Science Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Conference Papers in Science Volume 2015 ; 2015 ; 2015 ; >
 
@@ -3337,7 +3337,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Contrast Media & Molecular Imaging Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Contrast Media & Molecular Imaging Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Contrast Media & Molecular Imaging Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Contrast Media & Molecular Imaging Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Contrast Media & Molecular Imaging Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Contrast Media & Molecular Imaging Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Contrast Media & Molecular Imaging Volume 2022 ; 2022 ; 2022 ; >
 
@@ -3356,14 +3356,14 @@
     au < manifest ; exists ; 2010 ; Critical Care Research and Practice Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Critical Care Research and Practice Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Critical Care Research and Practice Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Critical Care Research and Practice Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; Critical Care Research and Practice Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Critical Care Research and Practice Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Critical Care Research and Practice Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Critical Care Research and Practice Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Critical Care Research and Practice Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Critical Care Research and Practice Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Critical Care Research and Practice Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Critical Care Research and Practice Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Critical Care Research and Practice Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Critical Care Research and Practice Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Critical Care Research and Practice Volume 2022 ; 2022 ; 2022 ; >
 
@@ -3385,14 +3385,14 @@
     au < manifest ; exists ; 2010 ; Current Gerontology and Geriatrics Research Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Current Gerontology and Geriatrics Research Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Current Gerontology and Geriatrics Research Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Current Gerontology and Geriatrics Research Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Current Gerontology and Geriatrics Research Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Current Gerontology and Geriatrics Research Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Current Gerontology and Geriatrics Research Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Current Gerontology and Geriatrics Research Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Current Gerontology and Geriatrics Research Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Current Gerontology and Geriatrics Research Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Current Gerontology and Geriatrics Research Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Current Gerontology and Geriatrics Research Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Current Gerontology and Geriatrics Research Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Current Gerontology and Geriatrics Research Volume 2021 ; 2021 ; 2021 ; >
     au < expected ; exists ; 2022 ; Current Gerontology and Geriatrics Research Volume 2022 ; 2022 ; 2022 ; >
 
@@ -3408,11 +3408,11 @@
     param[journal_id] = dpis
     #Moved to archive
 
-    au < finished ; crawling ; 2013 ; Dataset Papers in Science Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Dataset Papers in Science Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Dataset Papers in Science Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Dataset Papers in Science Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Dataset Papers in Science Volume 2016 ; 2016 ; 2016 ; >
-    au < finished ; crawling ; 2017 ; Dataset Papers in Science Volume 2017 ; 2017 ; 2017 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2017 ; Dataset Papers in Science Volume 2017 ; 2017 ; 2017 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -3429,14 +3429,14 @@
     au < manifest ; exists ; 2010 ; Depression Research and Treatment Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Depression Research and Treatment Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Depression Research and Treatment Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Depression Research and Treatment Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; Depression Research and Treatment Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Depression Research and Treatment Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Depression Research and Treatment Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Depression Research and Treatment Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Depression Research and Treatment Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Depression Research and Treatment Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Depression Research and Treatment Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Depression Research and Treatment Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Depression Research and Treatment Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Depression Research and Treatment Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Depression Research and Treatment Volume 2022 ; 2022 ; 2022 ; >
 
@@ -3456,14 +3456,14 @@
     au < manifest ; exists ; 2010 ; Dermatology Research and Practice Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Dermatology Research and Practice Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Dermatology Research and Practice Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Dermatology Research and Practice Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Dermatology Research and Practice Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Dermatology Research and Practice Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Dermatology Research and Practice Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Dermatology Research and Practice Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Dermatology Research and Practice Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Dermatology Research and Practice Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Dermatology Research and Practice Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Dermatology Research and Practice Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Dermatology Research and Practice Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Dermatology Research and Practice Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Dermatology Research and Practice Volume 2022 ; 2022 ; 2022 ; >
 
@@ -3481,7 +3481,7 @@
     param[journal_id] = dbj
     #Moved to archive
 
-    au < finished ; crawling ; 2013 ; Developmental Biology Journal Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Developmental Biology Journal Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Developmental Biology Journal Volume 2014 ; 2014 ; 2014 ; >
 
   }
@@ -3511,7 +3511,7 @@
     au < manifest ; exists ; 2010 ; Diagnostic and Therapeutic Endoscopy Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Diagnostic and Therapeutic Endoscopy Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Diagnostic and Therapeutic Endoscopy Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Diagnostic and Therapeutic Endoscopy Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; Diagnostic and Therapeutic Endoscopy Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Diagnostic and Therapeutic Endoscopy Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Diagnostic and Therapeutic Endoscopy Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Diagnostic and Therapeutic Endoscopy Volume 2016 ; 2016 ; 2016 ; >
@@ -3547,7 +3547,7 @@
     au < manifest ; exists ; 2010 ; Discrete Dynamics in Nature and Society Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Discrete Dynamics in Nature and Society Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Discrete Dynamics in Nature and Society Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Discrete Dynamics in Nature and Society Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; Discrete Dynamics in Nature and Society Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Discrete Dynamics in Nature and Society Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Discrete Dynamics in Nature and Society Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Discrete Dynamics in Nature and Society Volume 2016 ; 2016 ; 2016 ; >
@@ -3589,14 +3589,14 @@
     au < manifest ; exists ; 2010 ; Disease Markers Volume 28-29 (2010) ; 2010 ; 28-29 ; >
     au < manifest ; exists ; 2011 ; Disease Markers Volume 30-31 (2011) ; 2011 ; 30-31 ; >
     au < manifest ; exists ; 2012 ; Disease Markers Volume 32-33 (2012) ; 2012 ; 32-33 ; >
-    au < finished ; crawling ; 2013 ; Disease Markers Volume 35 (2013) ; 2013 ; 35 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Disease Markers Volume 35 (2013) ; 2013 ; 35 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Disease Markers Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Disease Markers Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Disease Markers Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Disease Markers Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Disease Markers Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Disease Markers Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Disease Markers Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Disease Markers Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Disease Markers Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Disease Markers Volume 2022 ; 2022 ; 2022 ; >
 
@@ -3617,7 +3617,7 @@
     au < manifest ; exists ; 2010 ; Economics Research International Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Economics Research International Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Economics Research International Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Economics Research International Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; Economics Research International Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Economics Research International Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Economics Research International Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Economics Research International Volume 2016 ; 2016 ; 2016 ; >
@@ -3640,14 +3640,14 @@
 
     au < manifest ; exists ; 2011 ; Education Research International Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Education Research International Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Education Research International Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; Education Research International Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Education Research International Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Education Research International Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Education Research International Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Education Research International Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Education Research International Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Education Research International Volume 2019 ; 2019 ; 2019 ; >
-    au < finished ; crawling ; 2020 ; Education Research International Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Education Research International Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Education Research International Volume 2021 ; 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Education Research International Volume 2022 ; 2022 ; 2022 ; >
 
@@ -3668,7 +3668,7 @@
     au < manifest ; exists ; 2010 ; Emergency Medicine International Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Emergency Medicine International Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Emergency Medicine International Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Emergency Medicine International Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Emergency Medicine International Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Emergency Medicine International Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Emergency Medicine International Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Emergency Medicine International Volume 2016 ; 2016 ; 2016 ; >
@@ -3695,7 +3695,7 @@
     au < manifest ; exists ; 2010 ; Enzyme Research Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Enzyme Research Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Enzyme Research Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Enzyme Research Volume 2013 ; 2013 ; 2013 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Enzyme Research Volume 2013 ; 2013 ; 2013 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Enzyme Research Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Enzyme Research Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Enzyme Research Volume 2016 ; 2016 ; 2016 ; >
@@ -3722,7 +3722,7 @@
 
     au < manifest ; exists ; 2011 ; Epidemiology Research International Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Epidemiology Research International Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Epidemiology Research International Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Epidemiology Research International Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Epidemiology Research International Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Epidemiology Research International Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Epidemiology Research International Volume 2016 ; 2016 ; 2016 ; >
@@ -3743,7 +3743,7 @@
     au < manifest ; exists ; 2010 ; Epilepsy Research and Treatment Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Epilepsy Research and Treatment Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Epilepsy Research and Treatment Volume 2012 ; 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Epilepsy Research and Treatment Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; Epilepsy Research and Treatment Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Epilepsy Research and Treatment Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Epilepsy Research and Treatment Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Epilepsy Research and Treatment Volume 2016 ; 2016 ; 2016 ; >

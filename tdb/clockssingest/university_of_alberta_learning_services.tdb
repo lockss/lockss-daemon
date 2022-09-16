@@ -27,7 +27,7 @@
         {
         plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin 
 
-        au < finished ; crawling ; 2018 ; Journal of Pharmacy and Pharmaceutical Science Volume 21 ; 2018 ; 21 ; reingest1.clockss.org:8082 >
+        au < finished ; frozen ; 2018 ; Journal of Pharmacy and Pharmaceutical Science Volume 21 ; 2018 ; 21 ; reingest1.clockss.org:8082 >
         au < finished ; crawling ; 2019 ; Journal of Pharmacy and Pharmaceutical Science Volume 22 ; 2019 ; 22 ; reingest2.clockss.org:8085 >
         au < deepCrawl ; exists ; 2020 ; Journal of Pharmacy and Pharmaceutical Science Volume 23 ; 2020 ; 23 ; >
         au < crawling ; exists ; 2021 ; Journal of Pharmacy and Pharmaceutical Science Volume 24 ; 2021 ; 24 ; >
@@ -76,10 +76,10 @@
         au < doNotProcess ; doNotProcess ; 2014 ; Evidence Based Library and Information Practice Volume 9 ; 2014 ; 9 ; >
         au < doNotProcess ; doNotProcess ; 2015 ; Evidence Based Library and Information Practice Volume 10 ; 2015 ; 10 ; >
         au < doNotProcess ; doNotProcess ; 2016 ; Evidence Based Library and Information Practice Volume 11 ; 2016 ; 11 ; >
-        au < finished ; crawling ; 2017 ; Evidence Based Library and Information Practice Volume 12 ; 2017 ; 12 ; reingest3.clockss.org:8083 >
-        au < finished ; crawling ; 2018 ; Evidence Based Library and Information Practice Volume 13 ; 2018 ; 13 ; reingest4.clockss.org:8082 >
-        au < finished ; crawling ; 2019 ; Evidence Based Library and Information Practice Volume 14 ; 2019 ; 14 ; reingest5.clockss.org:8082 >
-        au < finished ; crawling ; 2020 ; Evidence Based Library and Information Practice Volume 15 ; 2020 ; 15 ; reingest1.clockss.org:8082 >
+        au < finished ; frozen ; 2017 ; Evidence Based Library and Information Practice Volume 12 ; 2017 ; 12 ; reingest3.clockss.org:8083 >
+        au < finished ; frozen ; 2018 ; Evidence Based Library and Information Practice Volume 13 ; 2018 ; 13 ; reingest4.clockss.org:8082 >
+        au < finished ; frozen ; 2019 ; Evidence Based Library and Information Practice Volume 14 ; 2019 ; 14 ; reingest5.clockss.org:8082 >
+        au < finished ; frozen ; 2020 ; Evidence Based Library and Information Practice Volume 15 ; 2020 ; 15 ; reingest1.clockss.org:8082 >
         au < crawling ; exists ; 2021 ; Evidence Based Library and Information Practice Volume 16 ; 2021 ; 16 ; >
         au < crawling ; exists ; 2022 ; Evidence Based Library and Information Practice Volume 17 ; 2022 ; 17 ; >
 

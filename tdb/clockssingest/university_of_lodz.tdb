@@ -24,13 +24,13 @@
     param[journal_abbr] = turyzm
 
     au < manifest ; exists ; 2012 ; Tourism / Turyzm Volume 22 ; 22 ; >
-    au < finished ; crawling ; 2013 ; Tourism / Turyzm Volume 23 ; 23 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2014 ; Tourism / Turyzm Volume 24 ; 24 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; Tourism / Turyzm Volume 23 ; 23 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2014 ; Tourism / Turyzm Volume 24 ; 24 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; Tourism / Turyzm Volume 25 ; 25 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2016 ; Tourism / Turyzm Volume 26 ; 26 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2017 ; Tourism / Turyzm Volume 27 ; 27 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2016 ; Tourism / Turyzm Volume 26 ; 26 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2017 ; Tourism / Turyzm Volume 27 ; 27 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2018 ; Tourism / Turyzm Volume 28 ; 28 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2019 ; Tourism / Turyzm Volume 29 ; 29 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2019 ; Tourism / Turyzm Volume 29 ; 29 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Tourism / Turyzm Volume 30 ; 30 ; >
     au < crawling ; exists ; 2021 ; Tourism / Turyzm Volume 31 ; 31 ; >
     au < expected ; exists ; 2022 ; Tourism / Turyzm Volume 32 ; 32 ; >
@@ -56,8 +56,8 @@
       au < finished ; crawling ; 2014 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 10 ; 10 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 11 ; 11 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 12 ; 12 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2017 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 13 ; 13 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2018 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 14 ; 14 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2017 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 13 ; 13 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2018 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 14 ; 14 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 15 ; 15 ; reingest5.clockss.org:8082 >
 
   }

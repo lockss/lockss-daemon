@@ -24,8 +24,8 @@
 
  
       au < finished ; crawling ; 2017 ; Journal of Advanced Engineering and Computation Volume 1 ; 1 ; 2017 ; reingest1.clockss.org:8082 > 
-      au < finished ; crawling ; 2018 ; Journal of Advanced Engineering and Computation Volume 2 ; 2 ; 2018 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2019 ; Journal of Advanced Engineering and Computation Volume 3 ; 3 ; 2019 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2018 ; Journal of Advanced Engineering and Computation Volume 2 ; 2 ; 2018 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2019 ; Journal of Advanced Engineering and Computation Volume 3 ; 3 ; 2019 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2020 ; Journal of Advanced Engineering and Computation Volume 4 ; 4 ; 2020 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2021 ; Journal of Advanced Engineering and Computation Volume 5 ; 5 ; 2021 ; >
       au < expected ; exists ; 2022 ; Journal of Advanced Engineering and Computation Volume 6 ; 6 ; 2022 ; >

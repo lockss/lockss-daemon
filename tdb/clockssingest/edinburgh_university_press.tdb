@@ -28,18 +28,18 @@
     param[journal_id] = sch
     #sch - Scottish Church History coming in 2019
 
-    au < finished ; crawling ; 2000 ; Scottish Church History Volume 30 ; 30 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2002 ; Scottish Church History Volume 31 ; 31 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2000 ; Scottish Church History Volume 30 ; 30 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2002 ; Scottish Church History Volume 31 ; 31 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2002 ; Scottish Church History Volume 32 ; 32 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2003 ; Scottish Church History Volume 33 ; 33 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2004 ; Scottish Church History Volume 34 ; 34 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2004 ; Scottish Church History Volume 34 ; 34 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2005 ; Scottish Church History Volume 35 ; 35 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2006 ; Scottish Church History Volume 36 ; 36 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2007 ; Scottish Church History Volume 37 ; 37 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2008 ; Scottish Church History Volume 38 ; 38 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2009 ; Scottish Church History Volume 39 ; 39 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2010 ; Scottish Church History Volume 40 ; 40 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2012 ; Scottish Church History Volume 41 ; 41 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2008 ; Scottish Church History Volume 38 ; 38 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2009 ; Scottish Church History Volume 39 ; 39 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2010 ; Scottish Church History Volume 40 ; 40 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; Scottish Church History Volume 41 ; 41 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; Scottish Church History Volume 42 ; 42 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Scottish Church History Volume 43 ; 43 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Scottish Church History Volume 44 ; 44 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
@@ -575,8 +575,8 @@
 
     param[journal_id] = gels
 
-    au < finished ; crawling ; 2020 ; Global Energy Law and Sustainability Volume 1 ; 1 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2021 ; Global Energy Law and Sustainability Volume 2 ; 2 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2020 ; Global Energy Law and Sustainability Volume 1 ; 1 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2021 ; Global Energy Law and Sustainability Volume 2 ; 2 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < expected ; exists ; 2022 ; Global Energy Law and Sustainability Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
 
   }
@@ -2033,25 +2033,25 @@
     # Journal changes to Scottish Archaeological Journal at Volume 22 with new journal id saj
     #journal-id = gas. Issue links contain gas. But issue links redirect to saj, and is rejected by crawler.
     
-    au < finished ; crawling ; 1969 ; Glasgow Archaeological Journal Volume 1 ; 1 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1969 ; Glasgow Archaeological Journal Volume 1 ; 1 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1971 ; Glasgow Archaeological Journal Volume 2 ; 2 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1974 ; Glasgow Archaeological Journal Volume 3 ; 3 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 1974 ; Glasgow Archaeological Journal Volume 3 ; 3 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 1976 ; Glasgow Archaeological Journal Volume 4 ; 4 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1978 ; Glasgow Archaeological Journal Volume 5 ; 5 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1979 ; Glasgow Archaeological Journal Volume 6 ; 6 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 1980 ; Glasgow Archaeological Journal Volume 7 ; 7 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1981 ; Glasgow Archaeological Journal Volume 8 ; 8 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 1980 ; Glasgow Archaeological Journal Volume 7 ; 7 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1981 ; Glasgow Archaeological Journal Volume 8 ; 8 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 1982 ; Glasgow Archaeological Journal Volume 9 ; 9 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1983 ; Glasgow Archaeological Journal Volume 10 ; 10 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1984 ; Glasgow Archaeological Journal Volume 11 ; 11 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1984 ; Glasgow Archaeological Journal Volume 11 ; 11 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 1985 ; Glasgow Archaeological Journal Volume 12 ; 12 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1986 ; Glasgow Archaeological Journal Volume 13 ; 13 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 1986 ; Glasgow Archaeological Journal Volume 13 ; 13 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 1987 ; Glasgow Archaeological Journal Volume 14 ; 14 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 1988 ; Glasgow Archaeological Journal Volume 15 ; 15 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1989 ; Glasgow Archaeological Journal Volume 16 ; 16 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1989 ; Glasgow Archaeological Journal Volume 16 ; 16 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1991 ; Glasgow Archaeological Journal Volume 17 ; 17 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 1993 ; Glasgow Archaeological Journal Volume 18 ; 18 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 1994 ; Glasgow Archaeological Journal Volume 19 ; 19 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1994 ; Glasgow Archaeological Journal Volume 19 ; 19 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 1996 ; Glasgow Archaeological Journal Volume 20 ; 20 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 1998 ; Glasgow Archaeological Journal Volume 21 ; 21 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
   
@@ -2097,7 +2097,7 @@
     au < finished ; finished ; 2009 ; Scottish Archaeological Journal Volume 31 ; 31 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2010 ; Scottish Archaeological Journal Volume 32 ; 32 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2011 ; Scottish Archaeological Journal Volume 33 ; 33 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2012 ; Scottish Archaeological Journal Volume 34-35 ; 34-35 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; Scottish Archaeological Journal Volume 34-35 ; 34-35 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2014 ; Scottish Archaeological Journal Volume 36-37 ; 36-37 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2016 ; Scottish Archaeological Journal Volume 38 ; 38 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Scottish Archaeological Journal Volume 39 ; 39 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
@@ -2140,13 +2140,13 @@
     au < finished ; finished ; 2010 ; Scottish Historical Review Volume 89 ; 89 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2011 ; Scottish Historical Review Volume 90 ; 90 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2012 ; Scottish Historical Review Volume 91 ; 91 ; http://www.euppublishing.com/ ; >
-    au < finished ; crawling ; 2013 ; Scottish Historical Review Volume 92 ; 92 ; http://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Scottish Historical Review Volume 92 ; 92 ; http://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Scottish Historical Review Volume 93 ; 93 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2015 ; Scottish Historical Review Volume 94 ; 94 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2016 ; Scottish Historical Review Volume 95 ; 95 ; http://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2017 ; Scottish Historical Review Volume 96 ; 96 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2018 ; Scottish Historical Review Volume 97 ; 97 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2019 ; Scottish Historical Review Volume 98 ; 98 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2019 ; Scottish Historical Review Volume 98 ; 98 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Scottish Historical Review Volume 99 ; 99 ; https://www.euppublishing.com/ ; >
     au < deepCrawl ; exists ; 2021 ; Scottish Historical Review Volume 100 ; 100 ; https://www.euppublishing.com/ ; >
     au < crawling ; exists ; 2022 ; Scottish Historical Review Volume 101 ; 101 ; https://www.euppublishing.com/ ; >
@@ -2262,7 +2262,7 @@
     au < finished ; finished ; 2016 ; Word Structure Volume 9 ; 9 ; http://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Word Structure Volume 10 ; 10 ; http://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2018 ; Word Structure Volume 11 ; 11 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2019 ; Word Structure Volume 12 ; 12 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2019 ; Word Structure Volume 12 ; 12 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Word Structure Volume 13 ; 13 ; https://www.euppublishing.com/ ; >
     au < deepCrawl ; exists ; 2021 ; Word Structure Volume 14 ; 14 ; https://www.euppublishing.com/ ; >
     au < crawling ; exists ; 2022 ; Word Structure Volume 15 ; 15 ; https://www.euppublishing.com/ ; >
@@ -2281,15 +2281,15 @@
        param[journal_id] = cost
        #move to Edinburgh University Press (EUP) in 2017
    
-       au < finished ; crawling ; 1965-1967 ; Costume Volume 1 ; 1 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
-       au < finished ; crawling ; 1968 ; Costume Volume 2 ; 2 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
+       au < finished ; frozen ; 1965-1967 ; Costume Volume 1 ; 1 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
+       au < finished ; frozen ; 1968 ; Costume Volume 2 ; 2 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
        au < finished ; crawling ; 1969 ; Costume Volume 3 ; 3 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
-       au < finished ; crawling ; 1970 ; Costume Volume 4 ; 4 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
+       au < finished ; frozen ; 1970 ; Costume Volume 4 ; 4 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
        au < finished ; crawling ; 1971 ; Costume Volume 5 ; 5 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
        au < finished ; crawling ; 1972 ; Costume Volume 6 ; 6 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
-       au < finished ; crawling ; 1973 ; Costume Volume 7 ; 7 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
-       au < finished ; crawling ; 1974 ; Costume Volume 8 ; 8 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
-       au < finished ; crawling ; 1975 ; Costume Volume 9 ; 9 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
+       au < finished ; frozen ; 1973 ; Costume Volume 7 ; 7 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
+       au < finished ; frozen ; 1974 ; Costume Volume 8 ; 8 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
+       au < finished ; frozen ; 1975 ; Costume Volume 9 ; 9 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
        au < finished ; crawling ; 1976 ; Costume Volume 10 ; 10 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
        au < finished ; crawling ; 1977 ; Costume Volume 11 ; 11 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
        au < finished ; crawling ; 1978 ; Costume Volume 12 ; 12 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
@@ -2298,20 +2298,20 @@
        au < finished ; crawling ; 1981 ; Costume Volume 15 ; 15 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
        au < finished ; crawling ; 1982 ; Costume Volume 16 ; 16 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
        au < finished ; crawling ; 1983 ; Costume Volume 17 ; 17 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
-       au < finished ; crawling ; 1984 ; Costume Volume 18 ; 18 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
+       au < finished ; frozen ; 1984 ; Costume Volume 18 ; 18 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
        au < finished ; crawling ; 1985 ; Costume Volume 19 ; 19 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
        au < finished ; crawling ; 1986 ; Costume Volume 20 ; 20 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
        au < finished ; crawling ; 1987 ; Costume Volume 21 ; 21 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
-       au < finished ; crawling ; 1988 ; Costume Volume 22 ; 22 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
-       au < finished ; crawling ; 1989 ; Costume Volume 23 ; 23 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
-       au < finished ; crawling ; 1990 ; Costume Volume 24 ; 24 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
+       au < finished ; frozen ; 1988 ; Costume Volume 22 ; 22 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
+       au < finished ; frozen ; 1989 ; Costume Volume 23 ; 23 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
+       au < finished ; frozen ; 1990 ; Costume Volume 24 ; 24 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
        au < finished ; crawling ; 1991 ; Costume Volume 25 ; 25 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
        au < finished ; crawling ; 1992 ; Costume Volume 26 ; 26 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
        au < finished ; crawling ; 1993 ; Costume Volume 27 ; 27 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
        au < finished ; crawling ; 1994 ; Costume Volume 28 ; 28 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
-       au < finished ; crawling ; 1995 ; Costume Volume 29 ; 29 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
-       au < finished ; crawling ; 1996 ; Costume Volume 30 ; 30 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
-       au < finished ; crawling ; 1997 ; Costume Volume 31 ; 31 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
+       au < finished ; frozen ; 1995 ; Costume Volume 29 ; 29 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
+       au < finished ; frozen ; 1996 ; Costume Volume 30 ; 30 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
+       au < finished ; frozen ; 1997 ; Costume Volume 31 ; 31 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
        au < finished ; crawling ; 1998 ; Costume Volume 32 ; 32 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
        au < finished ; crawling ; 1999 ; Costume Volume 33 ; 33 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
        au < finished ; finished ; 2000 ; Costume Volume 34 ; 34 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
@@ -2333,7 +2333,7 @@
        au < doNotProcess ; doNotProcess ; 2016 ; Costume Volume 50 ; 50 ; https://www.euppublishing.com/ ; >
        au < finished ; finished ; 2017 ; Costume Volume 51 ; 51 ; http://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
        au < finished ; finished ; 2018 ; Costume Volume 52 ; 52 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
-       au < finished ; crawling ; 2019 ; Costume Volume 53 ; 53 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
+       au < finished ; frozen ; 2019 ; Costume Volume 53 ; 53 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
        au < deepCrawl ; exists ; 2020 ; Costume Volume 54 ; 54 ; https://www.euppublishing.com/ ; >
        au < deepCrawl ; exists ; 2021 ; Costume Volume 55 ; 55 ; https://www.euppublishing.com/ ; >
        au < crawling ; exists ; 2022 ; Costume Volume 56 ; 56 ; https://www.euppublishing.com/ ; >

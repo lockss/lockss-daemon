@@ -240,8 +240,8 @@
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; The Journal of Cell Biology Volume 213 ; 213 ; reingest3.clockss.org:8083 >
     au < rup.ClockssRUPDrupalPlugin ; finished ; finished ; 2016 ; The Journal of Cell Biology Volume 214 ; 214 ; reingest1.clockss.org:8082 >
     au < rup.ClockssRUPDrupalPlugin ; finished ; finished ; 2016 ; The Journal of Cell Biology Volume 215 ; 215 ; reingest4.clockss.org:8082 >
-    au < rup.ClockssRUPDrupalPlugin ; finished ; crawling ; 2017 ; The Journal of Cell Biology Volume 216 ; 216 ; reingest2.clockss.org:8085 >
-    au < rup.ClockssRUPDrupalPlugin ; finished ; crawling ; 2018 ; The Journal of Cell Biology Volume 217 ; 217 ; reingest2.clockss.org:8085 >
+    au < rup.ClockssRUPDrupalPlugin ; finished ; frozen ; 2017 ; The Journal of Cell Biology Volume 216 ; 216 ; reingest2.clockss.org:8085 >
+    au < rup.ClockssRUPDrupalPlugin ; finished ; frozen ; 2018 ; The Journal of Cell Biology Volume 217 ; 217 ; reingest2.clockss.org:8085 >
     au < rup.ClockssRUPDrupalPlugin ; doNotProcess ; exists ; 2019 ; The Journal of Cell Biology Volume 218 ; 218 ; >
   }
 
@@ -470,8 +470,8 @@
     au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2015 ; The Journal of Experimental Medicine Volume 212 ; 212 ; reingest5.clockss.org:8082 >
     au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2016 ; The Journal of Experimental Medicine Volume 213 [superseded] ; 213 ; > # will never finish, switch to Drupal 9/20/16
     au < rup.ClockssRUPDrupalPlugin ; finished ; finished ; 2016 ; The Journal of Experimental Medicine Volume 213 ; 213 ; reingest1.clockss.org:8082 > 
-    au < rup.ClockssRUPDrupalPlugin ; finished ; crawling ; 2017 ; The Journal of Experimental Medicine Volume 214 ; 214 ; reingest3.clockss.org:8083 > 
-    au < rup.ClockssRUPDrupalPlugin ; finished ; crawling ; 2018 ; The Journal of Experimental Medicine Volume 215 ; 215 ; reingest4.clockss.org:8082 > 
+    au < rup.ClockssRUPDrupalPlugin ; finished ; frozen ; 2017 ; The Journal of Experimental Medicine Volume 214 ; 214 ; reingest3.clockss.org:8083 > 
+    au < rup.ClockssRUPDrupalPlugin ; finished ; frozen ; 2018 ; The Journal of Experimental Medicine Volume 215 ; 215 ; reingest4.clockss.org:8082 > 
     au < rup.ClockssRUPDrupalPlugin ; doNotProcess ; exists ; 2019 ; The Journal of Experimental Medicine Volume 216 ; 216 ; > 
 
   }
@@ -634,8 +634,8 @@
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; The Journal of General Physiology Volume 146 ; 146 ; reingest5.clockss.org:8082 >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; The Journal of General Physiology Volume 147 ; 147 ; reingest5.clockss.org:8082 >
     au < rup.ClockssRUPDrupalPlugin ; finished ; finished ; 2016 ; The Journal of General Physiology Volume 148 ; 148 ; reingest5.clockss.org:8082 > # switch to Drupal 9/20/16
-    au < rup.ClockssRUPDrupalPlugin ; finished ; crawling ; 2017 ; The Journal of General Physiology Volume 149 ; 149 ; reingest5.clockss.org:8082 > # switch to Drupal 9/20/16
-    au < rup.ClockssRUPDrupalPlugin ; finished ; crawling ; 2018 ; The Journal of General Physiology Volume 150 ; 150 ; reingest1.clockss.org:8082 >
+    au < rup.ClockssRUPDrupalPlugin ; finished ; frozen ; 2017 ; The Journal of General Physiology Volume 149 ; 149 ; reingest5.clockss.org:8082 > # switch to Drupal 9/20/16
+    au < rup.ClockssRUPDrupalPlugin ; finished ; frozen ; 2018 ; The Journal of General Physiology Volume 150 ; 150 ; reingest1.clockss.org:8082 >
     au < rup.ClockssRUPDrupalPlugin ; doNotProcess ; exists ; 2019 ; The Journal of General Physiology Volume 151 ; 151 ; >
 
   }

@@ -45,7 +45,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Acta Biochimica et Biophysica Sinica Volume 37 ; 37 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Acta Biochimica et Biophysica Sinica Volume 38 ; 38 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Acta Biochimica et Biophysica Sinica Volume 39 ; 39 ; >
-    au < finished ; crawling ; 2008 ; 2008 ; Acta Biochimica et Biophysica Sinica Volume 40 ; 40 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2008 ; 2008 ; Acta Biochimica et Biophysica Sinica Volume 40 ; 40 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Acta Biochimica et Biophysica Sinica Volume 41 ; 41 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Acta Biochimica et Biophysica Sinica Volume 42 ; 42 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Acta Biochimica et Biophysica Sinica Volume 43 ; 43 ; >
@@ -112,7 +112,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Advances in Nutrition Volume 7 ; 7 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Advances in Nutrition Volume 8 ; 8 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Advances in Nutrition Volume 9 ; 9 ; >
-    au < finished ; crawling ; 2019 ; 2019 ; Advances in Nutrition Volume 10 ; 10 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2019 ; 2019 ; Advances in Nutrition Volume 10 ; 10 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Advances in Nutrition Volume 11 ; 11 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Advances in Nutrition Volume 12 ; 12 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Advances in Nutrition Volume 13 ; 13 ; >
@@ -291,7 +291,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; African Affairs Volume 115 ; 115 ; >
     au < frozen ; exists ; 2017 ; 2017 ; African Affairs Volume 116 ; 116 ; >
     au < frozen ; exists ; 2018 ; 2018 ; African Affairs Volume 117 ; 117 ; >
-    au < finished ; crawling ; 2019 ; 2019 ; African Affairs Volume 118 ; 118 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2019 ; 2019 ; African Affairs Volume 118 ; 118 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; African Affairs Volume 119 ; 119 ; >
     au < crawling ; exists ; 2021 ; 2021 ; African Affairs Volume 120 ; 120 ; >
     au < crawling ; exists ; 2022 ; 2022 ; African Affairs Volume 121 ; 121 ; >
@@ -1355,7 +1355,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Annals of Oncology Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Annals of Oncology Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Annals of Oncology Volume 26 ; 26 ; >
-    au < finished ; crawling ; 2016 ; 2016 ; Annals of Oncology Volume 27 ; 27 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; 2016 ; Annals of Oncology Volume 27 ; 27 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; 2017 ; Annals of Oncology Volume 28 ; 28 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2018 ; 2018 ; Annals of Oncology Volume 29 ; 29 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; Annals of Oncology Volume 30 ; 30 ; reingest5.clockss.org:8082 >
@@ -3366,7 +3366,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Cardiovascular Research Volume 109-112 ; 109-112 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Cardiovascular Research Volume 113 ; 113 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Cardiovascular Research Volume 114 ; 114 ; >
-    au < finished ; crawling ; 2019 ; 2019 ; Cardiovascular Research Volume 115 ; 115 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2019 ; 2019 ; Cardiovascular Research Volume 115 ; 115 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Cardiovascular Research Volume 116 ; 116 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Cardiovascular Research Volume 117 ; 117 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Cardiovascular Research Volume 118 ; 118 ; >
@@ -3747,7 +3747,7 @@
       au < frozen ; exists ; 2015 ; 2015 ; Clinical Chemistry Volume 61 ; 61 ; >
       au < frozen ; exists ; 2016 ; 2016 ; Clinical Chemistry Volume 62 ; 62 ; >
       au < frozen ; exists ; 2017 ; 2017 ; Clinical Chemistry Volume 63 ; 63 ; >
-      au < finished ; crawling ; 2018 ; 2018 ; Clinical Chemistry Volume 64 ; 64 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2018 ; 2018 ; Clinical Chemistry Volume 64 ; 64 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2019 ; 2019 ; Clinical Chemistry Volume 65 ; 65 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Clinical Chemistry Volume 66 ; 66 ; >
       au < crawling ; exists ; 2021 ; 2021 ; Clinical Chemistry Volume 67 ; 67 ; >
@@ -4307,7 +4307,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Database Volume 2012 ; 2012 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Database Volume 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Database Volume 2014 ; 2014 ; >
-    au < finished ; crawling ; 2015 ; 2015 ; Database Volume 2015 ; 2015 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2015 ; 2015 ; Database Volume 2015 ; 2015 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2016 ; 2016 ; Database Volume 2016 ; 2016 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Database Volume 2017 ; 2017 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Database Volume 2018 ; 2018 ; >
@@ -16632,9 +16632,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Poultry Science Volume 92 ; 92 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Poultry Science Volume 93 ; 93 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Poultry Science Volume 94 ; 94 ; >
-    au < finished ; crawling ; 2016 ; 2016 ; Poultry Science Volume 95 ; 95 ; reingest2.clockss.org:8085>
-    au < finished ; crawling ; 2017 ; 2017 ; Poultry Science Volume 96 ; 96 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2018 ; 2018 ; Poultry Science Volume 97 ; 97 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; 2016 ; Poultry Science Volume 95 ; 95 ; reingest2.clockss.org:8085>
+    au < finished ; frozen ; 2017 ; 2017 ; Poultry Science Volume 96 ; 96 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2018 ; 2018 ; Poultry Science Volume 97 ; 97 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -20078,9 +20078,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The Journal of Applied Poultry Research Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; The Journal of Applied Poultry Research Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Journal of Applied Poultry Research Volume 24 ; 24 ; >
-    au < finished ; crawling ; 2016 ; 2016 ; The Journal of Applied Poultry Research Volume 25 ; 25 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2016 ; 2016 ; The Journal of Applied Poultry Research Volume 25 ; 25 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2017 ; 2017 ; The Journal of Applied Poultry Research Volume 26 ; 26 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2018 ; 2018 ; The Journal of Applied Poultry Research Volume 27 ; 27 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2018 ; 2018 ; The Journal of Applied Poultry Research Volume 27 ; 27 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2019 ; 2019 ; The Journal of Applied Poultry Research Volume 28 ; 28 ; reingest2.clockss.org:8085 >
 
   }
@@ -21318,8 +21318,8 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; The Oral History Review Volume 41 ; 41 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Oral History Review Volume 42 ; 42 ; >
     au < finished ; crawling ; 2016 ; 2016 ; The Oral History Review Volume 43 ; 43 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2017 ; 2017 ; The Oral History Review Volume 44 ; 44 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2018 ; 2018 ; The Oral History Review Volume 45 ; 45 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2017 ; 2017 ; The Oral History Review Volume 44 ; 44 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2018 ; 2018 ; The Oral History Review Volume 45 ; 45 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2019 ; 2019 ; The Oral History Review Volume 46 ; 46 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; The Oral History Review Volume 47 ; 47 ; >
 
