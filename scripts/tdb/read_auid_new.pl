@@ -1169,6 +1169,8 @@ while (my $line = <>) {
   #Janeway. With journal_id
   } elsif (($plugin eq "ClockssIowaStateDPPlugin") ||
            ($plugin eq "IowaStateDPPlugin") ||
+           ($plugin eq "ClockssUniversityofIowaPlugin") ||
+           ($plugin eq "UniversityofIowaPlugin") ||
            ($plugin eq "ClockssGhentUniversityLibraryPlugin") ||
            ($plugin eq "GhentUniversityLibraryPlugin")) {
     #permission is different from start
