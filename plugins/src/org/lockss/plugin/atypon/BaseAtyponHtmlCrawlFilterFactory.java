@@ -188,6 +188,13 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttributeRegex("section", "class", "copywrites"),
     HtmlNodeFilters.tagWithAttributeRegex("section", "class", "publisher"),
     HtmlNodeFilters.tagWithAttributeRegex("section", "class", "article__history"),
+
+    // in Sep/2022, found "Similar articles:" need to be excluded, https://journals.sagepub.com/doi/abs/10.1177/1461445604046585
+    // Like these: https://journals.sagepub.com/doi/10.1177/1461445699001002001?icid=int.sj-abstract.similar-articles.1
+    // Like these: https://journals.sagepub.com/doi/10.1177/0957926512441111?icid=int.sj-abstract.citing-articles.45
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "special-collections"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "temis-related"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "citing-articles"),
     
     // Not all Atypon plugins necessarily need this but MANY do and it is
     // an insidious source of over crawling

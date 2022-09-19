@@ -50,7 +50,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>125</string>
+    <string>126</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -183,6 +183,11 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>2,"^https?://%s/doi/suppl/.*/suppl_file/\.", url_host(base_url)</string>
       <string>1,"^https?://%s/doi/((e?pdf|e?pdfplus|full|abs|ref(erences)?|suppl|figure|video[^/]+|reader)/)?[0-9.]+/", url_host(base_url)</string>
       <string>2,"^https?://%s/action/showFullPopup\?doi=.*&amp;id=$", url_host(base_url)</string>
+      <!--in Sep/2022, found "Similar articles:" need to be excluded, https://journals.sagepub.com/doi/abs/10.1177/1461445604046585
+      Like these: https://journals.sagepub.com/doi/10.1177/1461445699001002001?icid=int.sj-abstract.similar-articles.1
+      Like these: https://journals.sagepub.com/doi/10.1177/0957926512441111?icid=int.sj-abstract.citing-articles.45
+      -->
+      <string>2,"^https?://%s/doi/.*\?icid=.*\.*articles", url_host(base_url)</string>
       <string>1,"^https?://%s/action/downloadCitation\?doi=.*&amp;format=ris&amp;include=(cit|abs)$", url_host(base_url)</string>
       <string>1,"^https?://%s/action/downloadTable\?(doi=.+&amp;id=[^&amp;]+|id=.+&amp;doi=[^&amp;]+)(&amp;downloadType=[^&amp;]+)?$", url_host(base_url)</string>
       <!-- note downloadFigures should *not* be added in to this as we do not want the ppt download associated -->
