@@ -543,7 +543,7 @@
     au < manifest ; exists ; 1996 ; The Antidote Volume 1 ; 1 ; >
     au < manifest ; exists ; 1997 ; The Antidote Volume 2 ; 2 ; >
     au < manifest ; exists ; 1998 ; The Antidote Volume 3 ; 3 ; >
-    au < ready ; exists ; 1999 ; The Antidote Volume 4 ; 4 ; >
+    au < crawling ; exists ; 1999 ; The Antidote Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2000 ; The Antidote Volume 5 ; 5 ; >
 
   }
@@ -3465,7 +3465,7 @@
     au < manifest ; exists ; 1995 ; Industrial Lubrication and Tribology Volume 47 ; 47 ; >
     au < manifest ; exists ; 1996 ; Industrial Lubrication and Tribology Volume 48 ; 48 ; >
     au < manifest ; exists ; 1997 ; Industrial Lubrication and Tribology Volume 49 ; 49 ; >
-    au < ready ; exists ; 1998 ; Industrial Lubrication and Tribology Volume 50 ; 50 ; >
+    au < crawling ; exists ; 1998 ; Industrial Lubrication and Tribology Volume 50 ; 50 ; >
     au < frozen ; exists ; 1999 ; Industrial Lubrication and Tribology Volume 51 ; 51 ; >
     au < frozen ; exists ; 2000 ; Industrial Lubrication and Tribology Volume 52 ; 52 ; >
     au < frozen ; exists ; 2001 ; Industrial Lubrication and Tribology Volume 53 ; 53 ; >
@@ -4395,7 +4395,7 @@
     au < manifest ; exists ; 1996 ; International Journal of Educational Management Volume 10 ; 10 ; >
     au < manifest ; exists ; 1997 ; International Journal of Educational Management Volume 11 ; 11 ; >
     au < manifest ; exists ; 1998 ; International Journal of Educational Management Volume 12 ; 12 ; >
-    au < ready ; exists ; 1999 ; International Journal of Educational Management Volume 13 ; 13 ; >
+    au < crawling ; exists ; 1999 ; International Journal of Educational Management Volume 13 ; 13 ; >
     au < frozen ; exists ; 2000 ; International Journal of Educational Management Volume 14 ; 14 ; >
     au < frozen ; exists ; 2001 ; International Journal of Educational Management Volume 15 ; 15 ; >
     au < frozen ; exists ; 2002 ; International Journal of Educational Management Volume 16 ; 16 ; >
@@ -6475,7 +6475,7 @@
     au < manifest ; exists ; 1996 ; Journal of Business & Industrial Marketing Volume 11 ; 11 ; >
     au < manifest ; exists ; 1997 ; Journal of Business & Industrial Marketing Volume 12 ; 12 ; >
     au < manifest ; exists ; 1998 ; Journal of Business & Industrial Marketing Volume 13 ; 13 ; >
-    au < ready ; exists ; 1999 ; Journal of Business & Industrial Marketing Volume 14 ; 14 ; >
+    au < crawling ; exists ; 1999 ; Journal of Business & Industrial Marketing Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2000 ; Journal of Business & Industrial Marketing Volume 15 ; 15 ; >
     au < crawling ; exists ; 2001 ; Journal of Business & Industrial Marketing Volume 16 ; 16 ; >
     au < crawling ; exists ; 2002 ; Journal of Business & Industrial Marketing Volume 17 ; 17 ; >
@@ -10243,7 +10243,7 @@
     au < manifest ; exists ; 1995 ; Marketing Intelligence & Planning Volume 13 ; 13 ; >
     au < manifest ; exists ; 1996 ; Marketing Intelligence & Planning Volume 14 ; 14 ; >
     au < manifest ; exists ; 1997 ; Marketing Intelligence & Planning Volume 15 ; 15 ; >
-    au < ready ; exists ; 1998 ; Marketing Intelligence & Planning Volume 16 ; 16 ; >
+    au < crawling ; exists ; 1998 ; Marketing Intelligence & Planning Volume 16 ; 16 ; >
     au < crawling ; exists ; 1999 ; Marketing Intelligence & Planning Volume 17 ; 17 ; >
     au < crawling ; exists ; 2000 ; Marketing Intelligence & Planning Volume 18 ; 18 ; >
     au < crawling ; exists ; 2001 ; Marketing Intelligence & Planning Volume 19 ; 19 ; >
@@ -10372,7 +10372,7 @@
     au < crawling ; exists ; 2000 ; A Life in the Day Volume 4 ; 4 ; >
     au < crawling ; exists ; 2001 ; A Life in the Day Volume 5 ; 5 ; >
     au < crawling ; exists ; 2002 ; A Life in the Day Volume 6 ; 6 ; >
-    au < ready ; exists ; 2003 ; A Life in the Day Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2003 ; A Life in the Day Volume 7 ; 7 ; >
     au < crawling ; exists ; 2004 ; A Life in the Day Volume 8 ; 8 ; >
     au < crawling ; exists ; 2005 ; A Life in the Day Volume 9 ; 9 ; >
     au < crawling ; exists ; 2006 ; A Life in the Day Volume 10 ; 10 ; >
@@ -10727,7 +10727,7 @@
     au < manifest ; exists ; 1996 ; New Library World Volume 97 ; 97 ; >
     au < manifest ; exists ; 1997 ; New Library World Volume 98 ; 98 ; >
     au < ready ; exists ; 1998 ; New Library World Volume 99 ; 99 ; >
-    au < ready ; exists ; 1999 ; New Library World Volume 100 ; 100 ; >
+    au < crawling ; exists ; 1999 ; New Library World Volume 100 ; 100 ; >
     au < frozen ; exists ; 2000 ; New Library World Volume 101 ; 101 ; >
     au < crawling ; exists ; 2001 ; New Library World Volume 102 ; 102 ; >
     au < doNotProcess ; doNotProcess ; 2002 ; New Library World Volume 103 ; 103 ; >
@@ -12036,7 +12036,7 @@
     au < ready ; exists ; 1998 ; Sensor Review Volume 18 ; 18 ; >
     au < ready ; exists ; 1999 ; Sensor Review Volume 19 ; 19 ; >
     au < crawling ; exists ; 2000 ; Sensor Review Volume 20 ; 20 ; >
-    au < ready ; exists ; 2001 ; Sensor Review Volume 21 ; 21 ; >
+    au < crawling ; exists ; 2001 ; Sensor Review Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2002 ; Sensor Review Volume 22 ; 22 ; >
     au < crawling ; exists ; 2003 ; Sensor Review Volume 23 ; 23 ; >
     au < crawling ; exists ; 2004 ; Sensor Review Volume 24 ; 24 ; >
@@ -13426,8 +13426,8 @@
     au < ready ; exists ; 2015 ; Aslib Journal of Information Management Volume 67 ; 67 ; >
     au < crawling ; exists ; 2016 ; Aslib Journal of Information Management Volume 68 ; 68 ; >
     au < ready ; exists ; 2017 ; Aslib Journal of Information Management Volume 69 ; 69 ; >
-    au < ready ; exists ; 2018 ; Aslib Journal of Information Management Volume 70 ; 70 ; >
-    au < ready ; exists ; 2019 ; Aslib Journal of Information Management Volume 71 ; 71 ; >
+    au < crawling ; exists ; 2018 ; Aslib Journal of Information Management Volume 70 ; 70 ; >
+    au < crawling ; exists ; 2019 ; Aslib Journal of Information Management Volume 71 ; 71 ; >
     au < crawling ; exists ; 2020 ; Aslib Journal of Information Management Volume 72 ; 72 ; >
     au < crawling ; exists ; 2021 ; Aslib Journal of Information Management Volume 73 ; 73 ; >
     au < crawling ; exists ; 2022 ; Aslib Journal of Information Management Volume 74 ; 74 ; >
@@ -13466,7 +13466,7 @@
     au < ready ; exists ; 2017 ; English Teaching: Practice & Critique Volume 16 ; 16 ; >
     au < ready ; exists ; 2018 ; English Teaching: Practice & Critique Volume 17 ; 17 ; >
     au < ready ; exists ; 2019 ; English Teaching: Practice & Critique Volume 18 ; 18 ; >
-    au < ready ; exists ; 2020 ; English Teaching: Practice & Critique Volume 19 ; 19 ; >
+    au < crawling ; exists ; 2020 ; English Teaching: Practice & Critique Volume 19 ; 19 ; >
     au < crawling ; exists ; 2021 ; English Teaching: Practice & Critique Volume 20 ; 20 ; >
     au < crawling ; exists ; 2022 ; English Teaching: Practice & Critique Volume 21 ; 21 ; >
 
@@ -13615,7 +13615,7 @@
     au < ready ; exists ; 2018 ; International Journal of Information and Learning Technology Volume 35 ; 35 ; >
     au < ready ; exists ; 2019 ; International Journal of Information and Learning Technology Volume 36 ; 36 ; >
     au < crawling ; exists ; 2020 ; International Journal of Information and Learning Technology Volume 37 ; 37 ; >
-    au < ready ; exists ; 2021 ; International Journal of Information and Learning Technology Volume 38 ; 38 ; >
+    au < crawling ; exists ; 2021 ; International Journal of Information and Learning Technology Volume 38 ; 38 ; >
     au < crawling ; exists ; 2022 ; International Journal of Information and Learning Technology Volume 39 ; 39 ; >
 
   }
@@ -13703,7 +13703,7 @@
     au < crawling ; exists ; 2018 ; International Journal of Organization Theory & Behavior Volume 21 ; 21 ; >
     au < ready ; exists ; 2019 ; International Journal of Organization Theory & Behavior Volume 22 ; 22 ; >
     au < ready ; exists ; 2020 ; International Journal of Organization Theory & Behavior Volume 23 ; 23 ; >
-    au < ready ; exists ; 2021 ; International Journal of Organization Theory & Behavior Volume 24 ; 24 ; >
+    au < crawling ; exists ; 2021 ; International Journal of Organization Theory & Behavior Volume 24 ; 24 ; >
     au < crawling ; exists ; 2022 ; International Journal of Organization Theory & Behavior Volume 25 ; 25 ; >
 
   }
@@ -13728,7 +13728,7 @@
     au < crawling ; exists ; 2006 ; International Journal of Sports Marketing and Sponsorship Volume 8 ; 8 ; >
     au < ready ; exists ; 2007 ; International Journal of Sports Marketing and Sponsorship Volume 9 ; 9 ; >
     au < ready ; exists ; 2008 ; International Journal of Sports Marketing and Sponsorship Volume 10 ; 10 ; >
-    au < ready ; exists ; 2009 ; International Journal of Sports Marketing and Sponsorship Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2009 ; International Journal of Sports Marketing and Sponsorship Volume 11 ; 11 ; >
     au < ready ; exists ; 2010 ; International Journal of Sports Marketing and Sponsorship Volume 12 ; 12 ; >
     au < crawling ; exists ; 2011 ; International Journal of Sports Marketing and Sponsorship Volume 13 ; 13 ; >
     au < ready ; exists ; 2012 ; International Journal of Sports Marketing and Sponsorship Volume 14 ; 14 ; >
@@ -13739,7 +13739,7 @@
     au < ready ; exists ; 2017 ; International Journal of Sports Marketing and Sponsorship Volume 19 ; 19 ; >
     au < ready ; exists ; 2018 ; International Journal of Sports Marketing and Sponsorship Volume 20 ; 20 ; >
     au < crawling ; exists ; 2019 ; International Journal of Sports Marketing and Sponsorship Volume 21 ; 21 ; >
-    au < ready ; exists ; 2020 ; International Journal of Sports Marketing and Sponsorship Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2020 ; International Journal of Sports Marketing and Sponsorship Volume 22 ; 22 ; >
     au < crawling ; exists ; 2021 ; International Journal of Sports Marketing and Sponsorship Volume 23 ; 23 ; >
     au < expected ; exists ; 2022 ; International Journal of Sports Marketing and Sponsorship Volume 24 ; 24 ; >
 
@@ -13865,7 +13865,7 @@
     au < ready ; exists ; 2016 ; Journal of Global Mobility Volume 4 ; 4 ; >
     au < ready ; exists ; 2017 ; Journal of Global Mobility Volume 5 ; 5 ; >
     au < ready ; exists ; 2018 ; Journal of Global Mobility Volume 6 ; 6 ; >
-    au < ready ; exists ; 2019 ; Journal of Global Mobility Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2019 ; Journal of Global Mobility Volume 7 ; 7 ; >
     au < ready ; exists ; 2020 ; Journal of Global Mobility Volume 8 ; 8 ; >
     au < ready ; exists ; 2021 ; Journal of Global Mobility Volume 9 ; 9 ; >
     au < crawling ; exists ; 2022 ; Journal of Global Mobility Volume 10 ; 10 ; >
@@ -13902,7 +13902,7 @@
 
     au < ready ; exists ; 2013 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 4 ; 4 ; >
     au < crawling ; exists ; 2014 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 5 ; 5 ; >
-    au < ready ; exists ; 2015 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2015 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 6 ; 6 ; >
     au < ready ; exists ; 2016 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 7 ; 7 ; >
     au < crawling ; exists ; 2017 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 8 ; 8 ; >
     au < ready ; exists ; 2018 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 9 ; 9 ; >
@@ -14129,7 +14129,7 @@
 
     param[journal_issn] = 0168-2601
 
-    au < ready ; exists ; 2005 ; Open House International Volume 30 ; 30 ; >
+    au < crawling ; exists ; 2005 ; Open House International Volume 30 ; 30 ; >
     au < crawling ; exists ; 2006 ; Open House International Volume 31 ; 31 ; >
     au < crawling ; exists ; 2007 ; Open House International Volume 32 ; 32 ; >
     au < crawling ; exists ; 2008 ; Open House International Volume 33 ; 33 ; >
