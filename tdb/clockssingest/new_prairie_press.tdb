@@ -92,9 +92,9 @@
       au < manifest ; exists ; 1987 ; GDR Bulletin Volume 13 ; 13 ; >
       au < manifest ; exists ; 1988 ; GDR Bulletin Volume 14 ; 14 ; >
       au < manifest ; exists ; 1989 ; GDR Bulletin Volume 15 ; 15 ; >
-      au < ready ; exists ; 1990 ; GDR Bulletin Volume 16 ; 16 ; >
+      au < crawling ; exists ; 1990 ; GDR Bulletin Volume 16 ; 16 ; >
       au < crawling ; exists ; 1991 ; GDR Bulletin Volume 17 ; 17 ; >
-      au < ready ; exists ; 1992 ; GDR Bulletin Volume 18 ; 18 ; >
+      au < crawling ; exists ; 1992 ; GDR Bulletin Volume 18 ; 18 ; >
       au < crawling ; exists ; 1993 ; GDR Bulletin Volume 19 ; 19 ; >
       au < testing ; exists ; 1994 ; GDR Bulletin Volume 20-21 ; 20-21 ; >
       au < crawling ; exists ; 1995 ; GDR Bulletin Volume 22 ; 22 ; >
@@ -291,7 +291,7 @@
       param[journal_abbr] = burgonsociety
 
       au < crawling ; exists ; 2001 ; Transactions of the Burgon Society Volume 1 ; 1 ; https://newprairiepress.org/ ; >
-      au < ready ; exists ; 2002 ; Transactions of the Burgon Society Volume 2 ; 2 ; https://newprairiepress.org/ ; >
+      au < crawling ; exists ; 2002 ; Transactions of the Burgon Society Volume 2 ; 2 ; https://newprairiepress.org/ ; >
       au < crawling ; exists ; 2003 ; Transactions of the Burgon Society Volume 3 ; 3 ; https://newprairiepress.org/ ; >
       au < crawling ; exists ; 2004 ; Transactions of the Burgon Society Volume 4 ; 4 ; https://newprairiepress.org/ ; >
       au < finished ; finished ; 2005 ; Transactions of the Burgon Society Volume 5 ; 5 ; https://newprairiepress.org/ ; reingest1.clockss.org:8082 >
@@ -395,12 +395,12 @@
       au < crawling ; exists ; 1990-1991 ; Educational Considerations Volume 18 ; 18 ; >
       au < crawling ; exists ; 1991-1992 ; Educational Considerations Volume 19 ; 19 ; >
       au < crawling ; exists ; 1992-1993 ; Educational Considerations Volume 20 ; 20 ; >
-      au < ready ; exists ; 1993-1994 ; Educational Considerations Volume 21 ; 21 ; >
+      au < crawling ; exists ; 1993-1994 ; Educational Considerations Volume 21 ; 21 ; >
       au < crawling ; exists ; 1994-1995 ; Educational Considerations Volume 22 ; 22 ; >
       au < crawling ; exists ; 1995-1996 ; Educational Considerations Volume 23 ; 23 ; >
       au < crawling ; exists ; 1996-1997 ; Educational Considerations Volume 24 ; 24 ; >
       au < crawling ; exists ; 1997-1998 ; Educational Considerations Volume 25 ; 25 ; >
-      au < ready ; exists ; 1998-1999 ; Educational Considerations Volume 26 ; 26 ; >
+      au < crawling ; exists ; 1998-1999 ; Educational Considerations Volume 26 ; 26 ; >
       au < crawling ; exists ; 1999-2000 ; Educational Considerations Volume 27 ; 27 ; >
       au < crawling ; exists ; 2000-2001 ; Educational Considerations Volume 28 ; 28 ; >
       au < crawling ; exists ; 2001-2002 ; Educational Considerations Volume 29 ; 29 ; >
@@ -531,7 +531,7 @@
       au < manifest ; exists ; 1988 ; Fungal Genetics Newsletter Volume 35 ; 35 ; >
       au < manifest ; exists ; 1989 ; Fungal Genetics Newsletter Volume 36 ; 36 ; >
       au < crawling ; exists ; 1990 ; Fungal Genetics Newsletter Volume 37 ; 37 ; >
-      au < ready ; exists ; 1991 ; Fungal Genetics Newsletter Volume 38 ; 38 ; >
+      au < crawling ; exists ; 1991 ; Fungal Genetics Newsletter Volume 38 ; 38 ; >
       au < crawling ; exists ; 1992 ; Fungal Genetics Newsletter Volume 39 ; 39 ; >
       au < crawling ; exists ; 1993 ; Fungal Genetics Newsletter Volume 40 ; 40 ; >
       au < crawling ; exists ; 1994 ; Fungal Genetics Newsletter Volume 41 ; 41 ; >
@@ -540,10 +540,10 @@
       au < crawling ; exists ; 1997 ; Fungal Genetics Newsletter Volume 44 ; 44 ; >
       au < crawling ; exists ; 1998 ; Fungal Genetics Newsletter Volume 45 ; 45 ; >
       au < crawling ; exists ; 1999 ; Fungal Genetics Newsletter Volume 46 ; 46 ; >
-      au < ready ; exists ; 2000 ; Fungal Genetics Newsletter Volume 47 ; 47 ; >
+      au < crawling ; exists ; 2000 ; Fungal Genetics Newsletter Volume 47 ; 47 ; >
       au < crawling ; exists ; 2001 ; Fungal Genetics Newsletter Volume 48 ; 48 ; >
       au < crawling ; exists ; 2002 ; Fungal Genetics Newsletter Volume 49 ; 49 ; >
-      au < ready ; exists ; 2003 ; Fungal Genetics Newsletter Volume 50 ; 50 ; >
+      au < crawling ; exists ; 2003 ; Fungal Genetics Newsletter Volume 50 ; 50 ; >
       au < crawling ; exists ; 2004 ; Fungal Genetics Newsletter Volume 51 ; 51 ; >
       au < finished ; finished ; 2005 ; Fungal Genetics Newsletter Volume 52 ; 52 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2006 ; Fungal Genetics Newsletter Volume 53 ; 53 ; reingest3.clockss.org:8083 >
@@ -660,10 +660,10 @@
       au < manifest ; exists ; 1988 ; Journal of Applied Communications Volume 71 ; 71 ; >
       au < manifest ; exists ; 1989 ; Journal of Applied Communications Volume 72 ; 72 ; >
       au < manifest ; exists ; 1989 ; Journal of Applied Communications Volume 73 ; 73 ; >
-      au < ready ; exists ; 1990 ; Journal of Applied Communications Volume 74 ; 74 ; >
+      au < crawling ; exists ; 1990 ; Journal of Applied Communications Volume 74 ; 74 ; >
       au < crawling ; exists ; 1991 ; Journal of Applied Communications Volume 75 ; 75 ; >
       au < crawling ; exists ; 1992 ; Journal of Applied Communications Volume 76 ; 76 ; >
-      au < ready ; exists ; 1993 ; Journal of Applied Communications Volume 77 ; 77 ; >
+      au < crawling ; exists ; 1993 ; Journal of Applied Communications Volume 77 ; 77 ; >
       au < crawling ; exists ; 1994 ; Journal of Applied Communications Volume 78 ; 78 ; >
       au < crawling ; exists ; 1995 ; Journal of Applied Communications Volume 79 ; 79 ; >
       au < crawling ; exists ; 1996 ; Journal of Applied Communications Volume 80 ; 80 ; >
@@ -838,9 +838,9 @@
       au < crawling ; exists ; 1992 ; Oz Volume 14 ; 14 ; >
       au < crawling ; exists ; 1993 ; Oz Volume 15 ; 15 ; >
       au < crawling ; exists ; 1994 ; Oz Volume 16 ; 16 ; >
-      au < ready ; exists ; 1995 ; Oz Volume 17 ; 17 ; >
+      au < crawling ; exists ; 1995 ; Oz Volume 17 ; 17 ; >
       au < crawling ; exists ; 1996 ; Oz Volume 18 ; 18 ; >
-      au < ready ; exists ; 1997 ; Oz Volume 19 ; 19 ; >
+      au < crawling ; exists ; 1997 ; Oz Volume 19 ; 19 ; >
       au < crawling ; exists ; 1998 ; Oz Volume 20 ; 20 ; >
       au < crawling ; exists ; 1999 ; Oz Volume 21 ; 21 ; >
       au < crawling ; exists ; 2000 ; Oz Volume 22 ; 22 ; >

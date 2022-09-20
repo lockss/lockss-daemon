@@ -430,7 +430,7 @@
       comment[publisher] = London School of Economics and Politics
 #      param[base_url] = https://journal.ilpnetwork.org/
 
-      au < ready ; exists ; 2018 ; 2 ; Journal of Long-Term Care Volume 2018 ; 2018 ; https://journal.ilpnetwork.org/ ; > #problem with volume url?
+      au < crawling ; exists ; 2018 ; 2 ; Journal of Long-Term Care Volume 2018 ; 2018 ; https://journal.ilpnetwork.org/ ; > #problem with volume url?
       au < crawling ; exists ; 2019 ; 5 ; Journal of Long-Term Care Volume 2019 ; 2019 ; https://journal.ilpnetwork.org/ ; >
       au < crawling ; exists ; 2020 ; 6 ; Journal of Long-Term Care Volume 2020 ; 2020 ; https://journal.ilpnetwork.org/ ; >
       au < crawling ; exists ; 2021 ; 8 ; Journal of Long-Term Care Volume 2021 ; 2021 ; https://journal.ilpnetwork.org/ ; >
