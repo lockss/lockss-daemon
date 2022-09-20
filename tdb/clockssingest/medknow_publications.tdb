@@ -2135,6 +2135,7 @@
       issnl = 2772-5170
     >
 #    param[base_url] = https://www.ipcares.org/
+    #Non-active per Medknow
 
     param[journal_issn] = 2772-5170
 
@@ -3485,7 +3486,7 @@
     >
 #    param[base_url] = http://www.jnsbm.org/
     param[journal_issn] = 0976-9668
-    #Moved
+    #Moved. Archive at Medknow.
 
     au < doNotProcess ; exists ; 2010 ; Journal of Natural Science, Biology and Medicine Volume 1 ; 2010 ; 1 ; https://www.jnsbm.org/ ; ; >
     au < finished ; frozen ; 2011 ; Journal of Natural Science, Biology and Medicine Volume 2 ; 2011 ; 2 ; http://www.jnsbm.org/ ; ; reingest4.clockss.org:8082 >
@@ -3498,7 +3499,7 @@
     au < finished ; crawling ; 2018 ; Journal of Natural Science, Biology and Medicine Volume 9 ; 2018 ; 9 ; http://www.jnsbm.org/ ; ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; Journal of Natural Science, Biology and Medicine Volume 10 ; 2019 ; 10 ; https://www.jnsbm.org/ ; ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2020 ; Journal of Natural Science, Biology and Medicine Volume 11 ; 2020 ; 11 ; https://www.jnsbm.org/ ; ; reingest3.clockss.org:8083 >
-    au < superseded ; exists ; 2021 ; Journal of Natural Science, Biology and Medicine Volume 12 [superseded] ; 2021 ; 12 ; https://www.jnsbm.org/ ; ; >
+    au < crawling ; exists ; 2021 ; Journal of Natural Science, Biology and Medicine Volume 12 ; 2021 ; 12 ; https://www.jnsbm.org/ ; ; >
 
   }
 
@@ -4375,7 +4376,7 @@
     >
 #    param[base_url] = http://www.phcogres.com/
     param[journal_issn] = 0974-8490
-    #moved to new publisher, using same base_url
+    #moved to new publisher, using same base_url.
 
     au < doNotProcess ; doNotProcess ; 2009 ; Pharmacognosy Research Volume 1 ; 2009 ; 1 ; https://www.phcogres.com/ ; ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Pharmacognosy Research Volume 2 ; 2010 ; 2 ; https://www.phcogres.com/ ; ; >
@@ -5163,18 +5164,31 @@
         eissn = 2455-7765
       >
       #issns. journal changed name from Asia Pacific Clinical and Translational Nervous System Diseases
-      #issns. journal also changed issns, but is on the same website, same journal_issn, and same base_url.
       #see http://www.sherpa.ac.uk/romeo/journals.php?la=en/&fIDnum=%7C&mode=advanced&id=89&letter=A
       param[journal_issn] = 2542-3932
-#      param[base_url] = http://www.actnjournal.com/
+#      param[base_url] = https://www.actnjournal.com/backissues.asp. 2016-2020
+      #Moved to https://www.bnmjournal.com/
 
       au < finished ; finished ; 2016 ; Asia Pacific Journal of Clinical Trials: Nervous System Diseases Volume 1 ; 2016 ; 1 ; http://www.actnjournal.com/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2017 ; Asia Pacific Journal of Clinical Trials: Nervous System Diseases Volume 2 ; 2017 ; 2 ; http://www.actnjournal.com/ ; ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; Asia Pacific Journal of Clinical Trials: Nervous System Diseases Volume 3 ; 2018 ; 3 ; http://www.actnjournal.com/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; Asia Pacific Journal of Clinical Trials: Nervous System Diseases Volume 4 ; 2019 ; 4 ; https://www.actnjournal.com/ ; ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Asia Pacific Journal of Clinical Trials: Nervous System Diseases Volume 5 ; 2020 ; 5 ; https://www.actnjournal.com/ ; ; reingest4.clockss.org:8082 >
-      au < expected ; exists ; 2021 ; Asia Pacific Journal of Clinical Trials: Nervous System Diseases Volume 6 ; 2021 ; 6 ; https://www.actnjournal.com/ ; ; >
-      au < expected ; exists ; 2022 ; Asia Pacific Journal of Clinical Trials: Nervous System Diseases Volume 7 ; 2022 ; 7 ; https://www.actnjournal.com/ ; ; >
+
+  }
+
+  {
+
+      title <
+        name = Brain Network and Modulation ;
+        issn = 2773-2398 ;
+        eissn = 2773-2401
+      >
+      param[journal_issn] = 2773-2398
+      #Moved from http://www.actnjournal.com/
+      #Moved to https://www.bnmjournal.com/
+
+      au < exists ; exists ; 2022 ; Brain Network and Modulation Volume 1 ; 2022 ; 1 ; https://www.bnmjournal.com/ ; ; >
 
   }
 
@@ -6323,6 +6337,7 @@
       param[journal_issn] = 0974-7168
 #      param[base_url] = http://www.ijrh.org/
       #On bepress https://www.bfopcu.eg.net/journal
+      #Moved to Elsevier. Archive at Medknow 2007-2021.
 
       au < manifest ; exists ; 2007 ; Indian Journal of Research in Homoeopathy Volume 1 ; 2007 ; 1 ; https://www.ijrh.org/ ; ; >
       au < manifest ; exists ; 2008 ; Indian Journal of Research in Homoeopathy Volume 2 ; 2008 ; 2 ; https://www.ijrh.org/ ; ; >
@@ -6339,7 +6354,6 @@
       au < finished ; crawling ; 2019 ; Indian Journal of Research in Homoeopathy Volume 13 ; 2019 ; 13 ; https://www.ijrh.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Indian Journal of Research in Homoeopathy Volume 14 ; 2020 ; 14 ; https://www.ijrh.org/ ; ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Indian Journal of Research in Homoeopathy Volume 15 ; 2021 ; 15 ; https://www.ijrh.org/ ; ; >
-      au < expected ; exists ; 2022 ; Indian Journal of Research in Homoeopathy Volume 16 ; 2022 ; 16 ; https://www.ijrh.org/ ; ; >
 
   }
 
@@ -6618,6 +6632,12 @@
       au < finished ; frozen ; 2013 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 1 ; 2013 ; 1 ; http://www.ijoyppp.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 2 ; 2014 ; 2 ; http://www.ijoyppp.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 3 ; 2015 ; 3 ; http://www.ijoyppp.org/ ; ; reingest1.clockss.org:8082 >
+      au < exists ; exists ; 2016 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 4 ; 2016 ; 4 ; https://www.ijoyppp.org/ ; ; >
+      au < exists ; exists ; 2017 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 5 ; 2017 ; 5 ; https://www.ijoyppp.org/ ; ; >
+      au < exists ; exists ; 2018 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 6 ; 2018 ; 6 ; https://www.ijoyppp.org/ ; ; >
+      au < exists ; exists ; 2019 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 7 ; 2019 ; 7 ; https://www.ijoyppp.org/ ; ; >
+      au < exists ; exists ; 2020 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 8 ; 2020 ; 8 ; https://www.ijoyppp.org/ ; ; >
+      au < exists ; exists ; 2021 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 9 ; 2021 ; 9 ; https://www.ijoyppp.org/ ; ; >
 
   }
 
@@ -10269,6 +10289,7 @@
 
       param[journal_issn] = 2542-6281
 #      param[base_url] = http://www.jctt.org/
+      #Dormant per Medknow
 
       au < finished ; crawling ; 2016 ; Journal of Cardiothoracic Trauma Volume 1 ; 2016 ; 1 ; https://www.jctt.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; Journal of Cardiothoracic Trauma Volume 2 ; 2017 ; 2 ; https://www.jctt.org/ ; ; reingest2.clockss.org:8085 >
