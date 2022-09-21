@@ -5427,7 +5427,7 @@
         eissn = 2468-5666
       >
       #changed names from Clinical and Translational Degenerative Diseases. Changed issns, but not url.
-      #see http://www.sherpa.ac.uk/romeo/journals.php?id=89&fIDnum=|&mode=advanced&la=en/&letter=C
+      #see https://v2.sherpa.ac.uk/id/publication/32465
 
       param[journal_issn] = 2542-3975
 #      param[base_url] = http://www.clinicaltdd.com/
@@ -5446,22 +5446,21 @@
 
       title <
         name = Clinical Trials in Orthopedic Disorders ;
-        issn = 2468-5674 ;
-        eissn = 2468-564X
+        issn = 2542-4157 ;
+        eissn = 2542-4165
       >
       #changed name from Clinical and Translational Orthopedics and changed issn, but not url.
-      #see http://www.sherpa.ac.uk/romeo/journals.php?id=89&fIDnum=|&mode=advanced&la=en/&letter=C
       #Changed name to BoneMaterials
-      #Moved to Wolters Kluwer
 
       param[journal_issn] = 2542-4157
 #      param[base_url] = http://www.clinicalto.com/
+      #archived at Medknow
 
       au < finished ; frozen ; 2016 ; Clinical Trials in Orthopedic Disorders Volume 1 ; 2016 ; 1 ; http://www.clinicalto.com/ ; ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2017 ; Clinical Trials in Orthopedic Disorders Volume 2 ; 2017 ; 2 ; http://www.clinicalto.com/ ; ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2018 ; Clinical Trials in Orthopedic Disorders Volume 3 ; 2018 ; 3 ; http://www.clinicalto.com/ ; ; reingest3.clockss.org:8083 >
-      au < doNotProcess ; exists ; 2019 ; Clinical Trials in Orthopedic Disorders Volume 4 ; 2019 ; 4 ; https://www.clinicalto.com/ ; ; >
-      au < superseded ; exists ; 2020 ; Clinical Trials in Orthopedic Disorders Volume 5 [superseded] ; 2020 ; 5 ; https://www.clinicalto.com/ ; ; >
+      au < exists ; exists ; 2019 ; Clinical Trials in Orthopedic Disorders Volume 4 ; 2019 ; 4 ; https://www.clinicalto.com/ ; ; >
+      au < exists ; exists ; 2020 ; Clinical Trials in Orthopedic Disorders Volume 5 [superseded] ; 2020 ; 5 ; https://www.clinicalto.com/ ; ; >
 
   }
 
@@ -8687,7 +8686,8 @@
 
       title <
         name = Tanta Dental Journal ;
-        eissn = 1687-8574
+        issn = 1687-8574 ;
+        eissn = 2536-9644
       >
 
       param[journal_issn] = 1687-8574
@@ -10223,8 +10223,8 @@
 
       title <
         name = International Journal of the Cardiovascular Academy ;
-        issn = 2618-6012 ;
-        eissn = 2405-8181
+        issn = 2405-8181 ;
+        eissn = 2405-819X
       >
 
       param[journal_issn] = 2405-8181
