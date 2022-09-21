@@ -108,8 +108,8 @@
       au < manifest ; exists ; 2016 ; 2016 ; 2016 ; Agora Magazine Volume 2016 ; >
       au < manifest ; exists ; 2017 ; 2017 ; 2017 ; Agora Magazine Volume 2017 ; >
       au < manifest ; exists ; 2018 ; 2018 ; 2018 ; Agora Magazine Volume 2018 ; >
-      au < manifest ; exists ; 2019 ; 2019 ; 2019 ; Agora Magazine Volume 2019 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; 2020 ; Agora Magazine Volume 2020 ; >
+      au < testing ; exists ; 2019 ; 2019 ; 2019 ; Agora Magazine Volume 2019 ; >
+      au < testing ; exists ; 2020 ; 2020 ; 2020 ; Agora Magazine Volume 2020 ; >
 
   }
 
@@ -158,9 +158,9 @@
       au < manifest ; exists ; 2016 ; 2016 ; 2016 ; Authorship Volume 2016 ; >
       au < manifest ; exists ; 2017 ; 2017 ; 2017 ; Authorship Volume 2017 ; >
       au < manifest ; exists ; 2018 ; 2018 ; 2018 ; Authorship Volume 2018 ; >
-      au < manifest ; exists ; 2019 ; 2019 ; 2019 ; Authorship Volume 2019 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; 2020 ; Authorship Volume 2020 ; >
-      au < manifest ; exists ; 2021 ; 2021 ; 2021 ; Authorship Volume 2021 ; >
+      au < testing ; exists ; 2019 ; 2019 ; 2019 ; Authorship Volume 2019 ; >
+      au < testing ; exists ; 2020 ; 2020 ; 2020 ; Authorship Volume 2020 ; >
+      au < testing ; exists ; 2021 ; 2021 ; 2021 ; Authorship Volume 2021 ; >
       au < exists ; exists ; 2022 ; 2022 ; 2022 ; Authorship Volume 2022 ; >
 
   }
@@ -246,7 +246,7 @@
       au < manifest ; exists ; 2016 ; 2016 ; 2016 ; De Uil van Minerva Volume 2016 ; >
       au < exists ; exists ; 2017 ; 2017 ; 2017 ; De Uil van Minerva Volume 2017 ; >
       au < manifest ; exists ; 2018 ; 2018 ; 2018 ; De Uil van Minerva Volume 2018 ; >
-      au < manifest ; exists ; 2019 ; 2019 ; 2019 ; De Uil van Minerva Volume 2019 ; >
+      au < testing ; exists ; 2019 ; 2019 ; 2019 ; De Uil van Minerva Volume 2019 ; >
 
   }
 
@@ -261,7 +261,7 @@
       #published 2020-present
       param[journal_id] = digest
 
-      au < manifest ; exists ; 2020 ; 2020 ; 2020 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2020 ; >
+      au < testing ; exists ; 2020 ; 2020 ; 2020 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2020 ; >
       au < manifest ; exists ; 2021 ; 2021 ; 2021 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2021 ; >
       au < manifest ; exists ; 2022 ; 2022 ; 2022 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2022 ; >
 
