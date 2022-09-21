@@ -2164,11 +2164,11 @@
 
     param[journal_id] = swc
 
-    au < ready ; exists ; 1995 ; Studies in World Christianity Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
-    au < ready ; exists ; 1996 ; Studies in World Christianity Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
-    au < ready ; exists ; 1997 ; Studies in World Christianity Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
-    au < ready ; exists ; 1998 ; Studies in World Christianity Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
-    au < ready ; exists ; 1999 ; Studies in World Christianity Volume 5 ; 5 ; https://www.euppublishing.com/ ; >
+    au < crawling ; exists ; 1995 ; Studies in World Christianity Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
+    au < crawling ; exists ; 1996 ; Studies in World Christianity Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
+    au < crawling ; exists ; 1997 ; Studies in World Christianity Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
+    au < crawling ; exists ; 1998 ; Studies in World Christianity Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
+    au < crawling ; exists ; 1999 ; Studies in World Christianity Volume 5 ; 5 ; https://www.euppublishing.com/ ; >
     au < finished ; finished ; 2000 ; Studies in World Christianity Volume 6 ; 6 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2001 ; Studies in World Christianity Volume 7 ; 7 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2002 ; Studies in World Christianity Volume 8 ; 8 ; http://www.euppublishing.com/ ; >
