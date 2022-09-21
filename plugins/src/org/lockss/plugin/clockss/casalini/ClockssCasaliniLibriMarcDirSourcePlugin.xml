@@ -107,4 +107,14 @@ POSSIBILITY OF SUCH DAMAGE.
       </entry>
     </map>
   </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1, "http://clockss-ingest.lockss.org/sourcefiles/casalini-released/2021_01/?$"</string>
+      <string>1, "http://clockss-ingest.lockss.org/sourcefiles/casalini-released/2021_01/Casalini_ejournals_202108/?$"</string>
+      <string>1, "http://clockss-ingest.lockss.org/sourcefiles/casalini-released/2021_01/Casalini_ejournals_202108/497074.*"</string>
+      <string>1, "http://clockss-ingest.lockss.org/sourcefiles/casalini-released/2021_01/Casalini_ejournals_202108/Casalini_ejournal_issues_20210827_1.mrc.*"</string>
+      <string>1, "http://clockss-ingest.lockss.org/sourcefiles/casalini-released/2021_01/Casalini_ejournals_202108/Casalini_ejournal_issues_20210827_2.mrc.*"</string>
+    </list>
+  </entry>
 </map>

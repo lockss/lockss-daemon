@@ -82,6 +82,10 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>standard</string>
   </entry>
   <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.clockss.casalini.CasaliniJournalUrlNormalizer</string>
+  </entry>
+  <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.clockss.casalini.CasaliniLibriMarcXmlSourceArticleIteratorFactory</string>
   </entry>

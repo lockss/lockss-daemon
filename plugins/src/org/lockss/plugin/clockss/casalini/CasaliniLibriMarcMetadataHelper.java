@@ -364,7 +364,10 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
           }
 
           if (MARC_publication_title != null) {
+            log.debug3("publication_title = " + MARC_publication_title);
             am.put(MetadataField.FIELD_PUBLICATION_TITLE, MARC_publication_title);
+          } else {
+            log.debug3("publication_title IS NULL = " + MARC_publication_title);
           }
 
           // Set ISSN
