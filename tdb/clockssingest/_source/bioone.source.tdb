@@ -44,7 +44,7 @@
 
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/bioone-released/
 
-    au < doNotProcess ; exists ; 2022 ; UniBio Press Source Content 2022 ; 2022 >
+    au < manifest ; exists ; 2022 ; UniBio Press Source Content 2022 ; 2022 >
 
   }
 
