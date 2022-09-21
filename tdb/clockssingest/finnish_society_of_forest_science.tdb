@@ -26,13 +26,13 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
     #back content collected as a warc.
 
-    au < finished ; finished ; 2016 ; Silva Fennica vol. 50 ; 50 ; reingest5.clockss.org:8082 >
-    au < finished ; finished ; 2017 ; Silva Fennica vol. 51 ; 51 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2018 ; Silva Fennica vol. 52 ; 52 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2019 ; Silva Fennica vol. 53 ; 53 ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2020 ; Silva Fennica vol. 54 ; 54 ; >
-    au < crawling ; exists ; 2021 ; Silva Fennica vol. 55 ; 55 ; >
-    au < exists ; exists ; 2022 ; Silva Fennica vol. 56 ; 56 ; >
+    au < finished ; finished ; 2016 ; Silva Fennica Volume 50 ; 50 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2017 ; Silva Fennica Volume 51 ; 51 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2018 ; Silva Fennica Volume 52 ; 52 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2019 ; Silva Fennica Volume 53 ; 53 ; reingest3.clockss.org:8083 >
+    au < deepCrawl ; exists ; 2020 ; Silva Fennica Volume 54 ; 54 ; >
+    au < crawling ; exists ; 2021 ; Silva Fennica Volume 55 ; 55 ; >
+    au < exists ; exists ; 2022 ; Silva Fennica Volume 56 ; 56 ; >
 
   }
 
@@ -50,24 +50,24 @@
     param[base_url] = https://www.dissertationesforestales.fi/
     implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
-    au < finished ; frozen ; 2005 ; Dissertationes Forestales 2005 ; 2005 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2006 ; Dissertationes Forestales 2006 ; 2006 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2007 ; Dissertationes Forestales 2007 ; 2007 ; reingest3.clockss.org:8083 >
-    au < finished ; finished ; 2008 ; Dissertationes Forestales 2008 ; 2008 ; reingest4.clockss.org:8082 >
-    au < finished ; finished ; 2009 ; Dissertationes Forestales 2009 ; 2009 ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2010 ; Dissertationes Forestales 2010 ; 2010 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2011 ; Dissertationes Forestales 2011 ; 2011 ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2012 ; Dissertationes Forestales 2012 ; 2012 ; reingest3.clockss.org:8083 >
-    au < finished ; finished ; 2013 ; Dissertationes Forestales 2013 ; 2013 ; reingest4.clockss.org:8082 >
-    au < finished ; finished ; 2014 ; Dissertationes Forestales 2014 ; 2014 ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2015 ; Dissertationes Forestales 2015 ; 2015 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2016 ; Dissertationes Forestales 2016 ; 2016 ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2017 ; Dissertationes Forestales 2017 ; 2017 ; reingest3.clockss.org:8083 >
-    au < finished ; finished ; 2018 ; Dissertationes Forestales 2018 ; 2018 ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2019 ; Dissertationes Forestales 2019 ; 2019 ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2020 ; Dissertationes Forestales 2020 ; 2020 ; >
-    au < crawling ; exists ; 2021 ; Dissertationes Forestales 2021 ; 2021 ; >
-    au < exists ; exists ; 2022 ; Dissertationes Forestales 2022 ; 2022 ; >
+    au < finished ; frozen ; 2005 ; Dissertationes Forestales Volume 2005 ; 2005 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2006 ; Dissertationes Forestales Volume 2006 ; 2006 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2007 ; Dissertationes Forestales Volume 2007 ; 2007 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2008 ; Dissertationes Forestales Volume 2008 ; 2008 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2009 ; Dissertationes Forestales Volume 2009 ; 2009 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2010 ; Dissertationes Forestales Volume 2010 ; 2010 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2011 ; Dissertationes Forestales Volume 2011 ; 2011 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2012 ; Dissertationes Forestales Volume 2012 ; 2012 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2013 ; Dissertationes Forestales Volume 2013 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Dissertationes Forestales Volume 2014 ; 2014 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Dissertationes Forestales Volume 2015 ; 2015 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; Dissertationes Forestales Volume 2016 ; 2016 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2017 ; Dissertationes Forestales Volume 2017 ; 2017 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2018 ; Dissertationes Forestales Volume 2018 ; 2018 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2019 ; Dissertationes Forestales Volume 2019 ; 2019 ; reingest5.clockss.org:8082 >
+    au < deepCrawl ; exists ; 2020 ; Dissertationes Forestales Volume 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Dissertationes Forestales Volume 2021 ; 2021 ; >
+    au < exists ; exists ; 2022 ; Dissertationes Forestales Volume 2022 ; 2022 ; >
 
   }
   
