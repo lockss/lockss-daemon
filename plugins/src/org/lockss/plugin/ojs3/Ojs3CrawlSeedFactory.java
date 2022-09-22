@@ -64,6 +64,10 @@ public class Ojs3CrawlSeedFactory implements CrawlSeedFactory {
 
   public static class AddStemCrawlSeed extends BaseCrawlSeed {
 
+    /* with so many publishers using this plugin, we can't expect them all to serve http and https start urls */
+    @Override
+    public boolean isFailOnStartUrlError() { return false; }
+
     private String jid;
     private String baseUrl;
     private String primaryLocale;

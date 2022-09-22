@@ -332,9 +332,17 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
           if (nl.size() > 0) {
             String urlStr = null;
             if (nl.elementAt(0) instanceof MetaTag) {
+              // if we have a metatag, then it is likely the actual pdf file.
               urlStr = ((MetaTag) nl.elementAt(0)).getMetaContent();
             } else if (nl.elementAt(0) instanceof LinkTag) {
+              // if this is a linktag, then we likely have the landing, lets convert to download if so
               urlStr = ((LinkTag) nl.elementAt(0)).getLink();
+              if (urlStr.contains("/view/")) {
+                CachedUrl downloadCu = au.makeCachedUrl(urlStr.replace("/view/", "/download/"));
+                if (downloadCu != null && downloadCu.hasContent()) {
+                  urlStr = urlStr.replace("/view/", "/download/");
+                }
+              }
             } else {
               log.debug3("node was an unexpected type.");
             }
@@ -361,7 +369,8 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
               if (convertToLandingPage) {
                 String landingStr = urlStr.replace("download/", "view/");
                 cu = au.makeCachedUrl(landingStr);
-                if (cu != null && cu.hasContent()) {
+                // make sure teh replace happened. sometimes urlStr is just the view/
+                if (!landingStr.equals(urlStr) && cu != null && cu.hasContent()) {
                   // replace absCU with landCu if exists and has content
                   af.setRoleCu(landingRole, cu);
                 }

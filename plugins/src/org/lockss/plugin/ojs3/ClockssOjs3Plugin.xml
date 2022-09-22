@@ -62,7 +62,10 @@ POSSIBILITY OF SUCH DAMAGE.
 <!--  The default. The start_stem attribute is inserted as needed by the crawl seed -->  
   <entry>
     <string>au_start_url</string>
-    <string>"%s%s/gateway/clockss?year=%d", base_url, journal_id, year</string>
+    <list>
+      <string>"%s%s/gateway/clockss?year=%d", to_https(base_url), journal_id, year</string>
+      <string>"%s%s/gateway/clockss?year=%d", to_http(base_url), journal_id, year</string>
+    </list>
   </entry>
   <!--  must be defined here again because we redefine the start_url -->
  <entry>

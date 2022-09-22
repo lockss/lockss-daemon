@@ -202,8 +202,24 @@ POSSIBILITY OF SUCH DAMAGE.
    <entry>
        <!-- https://mapress.com/jib/login?source=%2Fjib%2Farticle%2Fview%2F2018.07.1.1%2F15013&loginMessage=payment.loginRequired.forArticle -->
     <string>au_redirect_to_login_url_pattern</string>
-    <string>"%s(index\.php/)?(%s/)?login\?", base_url, journal_id</string>
+    <string>"https?://%s/(index\.php/)?(%s/)?login\?", base_url_host, journal_id</string>
   </entry>
+  <!--  also for https conversion -->
+  <!--  See also the urlnormalizer -->
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.ojs3.Ojs3HttpHttpsUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>plugin_url_fetcher_factory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>
+  </entry>
+    <!-- should already be done -->
+    <entry>
+        <string>plugin_url_consumer_factory</string>
+        <string>org.lockss.plugin.ojs3.OJS3UrlConsumerFactory</string>
+    </entry>
+  <!-- end https -->
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.ojs3.Ojs3HtmlHashFilterFactory</string>
@@ -225,10 +241,6 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>text/html_link_extractor_factory</string>
     <string>org.lockss.plugin.ojs3.Ojs3HtmlLinkExtractorFactory</string>
   </entry>
-    <entry>
-        <string>plugin_url_consumer_factory</string>
-        <string>org.lockss.plugin.ojs3.OJS3UrlConsumerFactory</string>
-    </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.ojs3.Ojs3ArticleIteratorFactory</string>
