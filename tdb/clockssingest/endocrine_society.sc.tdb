@@ -31,7 +31,7 @@
     au < finished ; crawling ; 2019 ; 3 ; Journal of the Endocrine Society Volume 3 ; 2019 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; 4 ; Journal of the Endocrine Society Volume 4 ; 2020 ; >
     au < crawling ; exists ; 2021 ; 5 ; Journal of the Endocrine Society Volume 5 ; 2021 ; >
-    au < manifest ; exists ; 2022 ; 6 ; Journal of the Endocrine Society Volume 6 ; 2022 ; >
+    au < ready ; exists ; 2022 ; 6 ; Journal of the Endocrine Society Volume 6 ; 2022 ; >
 
   }
 
@@ -78,8 +78,8 @@
       au < doNotProcess ; exists ; 2007 ; 28 ; Endocrine Reviews Volume 28 ; 2007 ; >
       au < crawling ; exists ; 2008 ; 29 ; Endocrine Reviews Volume 29 ; 2008 ; >
       au < crawling ; exists ; 2009 ; 30 ; Endocrine Reviews Volume 30 ; 2009 ; >
-      au < manifest ; exists ; 2010 ; 31 ; Endocrine Reviews Volume 31 ; 2010 ; >
-      au < manifest ; exists ; 2011 ; 32 ; Endocrine Reviews Volume 32 ; 2011 ; >
+      au < ready ; exists ; 2010 ; 31 ; Endocrine Reviews Volume 31 ; 2010 ; >
+      au < ready ; exists ; 2011 ; 32 ; Endocrine Reviews Volume 32 ; 2011 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; 33 ; Endocrine Reviews Volume 33 ; 2012 ; >
       au < finished ; crawling ; 2013 ; 34 ; Endocrine Reviews Volume 34 ; 2013 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2014 ; 35 ; Endocrine Reviews Volume 35 ; 2014 ; >
@@ -90,7 +90,7 @@
       au < finished ; crawling ; 2019 ; 40 ; Endocrine Reviews Volume 40 ; 2019 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 41 ; Endocrine Reviews Volume 41 ; 2020 ; >
       au < crawling ; exists ; 2021 ; 42 ; Endocrine Reviews Volume 42 ; 2021 ; >
-      au < manifest ; exists ; 2022 ; 43 ; Endocrine Reviews Volume 43 ; 2022 ; >
+      au < ready ; exists ; 2022 ; 43 ; Endocrine Reviews Volume 43 ; 2022 ; >
 
     }
 
@@ -200,9 +200,9 @@
       au < doNotProcess ; exists ; 2005 ; 146 ; Endocrinology Volume 146 ; 2005 ; >
       au < doNotProcess ; exists ; 2006 ; 147 ; Endocrinology Volume 147 ; 2006 ; >
       au < doNotProcess ; exists ; 2007 ; 148 ; Endocrinology Volume 148 ; 2007 ; >
-      au < manifest ; exists ; 2008 ; 149 ; Endocrinology Volume 149 ; 2008 ; >
-      au < manifest ; exists ; 2009 ; 150 ; Endocrinology Volume 150 ; 2009 ; >
-      au < manifest ; exists ; 2010 ; 151 ; Endocrinology Volume 151 ; 2010 ; >
+      au < ready ; exists ; 2008 ; 149 ; Endocrinology Volume 149 ; 2008 ; >
+      au < ready ; exists ; 2009 ; 150 ; Endocrinology Volume 150 ; 2009 ; >
+      au < ready ; exists ; 2010 ; 151 ; Endocrinology Volume 151 ; 2010 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; 152 ; Endocrinology Volume 152 ; 2011 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; 153 ; Endocrinology Volume 153 ; 2012 ; >
       au < finished ; crawling ; 2013 ; 154 ; Endocrinology Volume 154 ; 2013 ; reingest3.clockss.org:8083 >
@@ -214,7 +214,7 @@
       au < finished ; crawling ; 2019 ; 160 ; Endocrinology Volume 160 ; 2019 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 161 ; Endocrinology Volume 161 ; 2020 ; >
       au < crawling ; exists ; 2021 ; 162 ; Endocrinology Volume 162 ; 2021 ; >
-      au < manifest ; exists ; 2022 ; 163 ; Endocrinology Volume 163 ; 2022 ; >
+      au < ready ; exists ; 2022 ; 163 ; Endocrinology Volume 163 ; 2022 ; >
 
     }
 
@@ -300,12 +300,12 @@
       au < doNotProcess ; exists ; 2005 ; 90 ; The Journal of Clinical Endocrinology & Metabolism Volume 90 ; 2005 ; >
       au < doNotProcess ; exists ; 2006 ; 91 ; The Journal of Clinical Endocrinology & Metabolism Volume 91 ; 2006 ; >
       au < doNotProcess ; exists ; 2007 ; 92 ; The Journal of Clinical Endocrinology & Metabolism Volume 92 ; 2007 ; >
-      au < manifest ; exists ; 2008 ; 93 ; The Journal of Clinical Endocrinology & Metabolism Volume 93 ; 2008 ; >
-      au < manifest ; exists ; 2009 ; 94 ; The Journal of Clinical Endocrinology & Metabolism Volume 94 ; 2009 ; >
-      au < manifest ; exists ; 2010 ; 95 ; The Journal of Clinical Endocrinology & Metabolism Volume 95 ; 2010 ; >
+      au < ready ; exists ; 2008 ; 93 ; The Journal of Clinical Endocrinology & Metabolism Volume 93 ; 2008 ; >
+      au < ready ; exists ; 2009 ; 94 ; The Journal of Clinical Endocrinology & Metabolism Volume 94 ; 2009 ; >
+      au < ready ; exists ; 2010 ; 95 ; The Journal of Clinical Endocrinology & Metabolism Volume 95 ; 2010 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; 96 ; The Journal of Clinical Endocrinology & Metabolism Volume 96 ; 2011 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; 97 ; The Journal of Clinical Endocrinology & Metabolism Volume 97 ; 2012 ; >
-      au < manifest ; exists ; 2013 ; 98 ; The Journal of Clinical Endocrinology & Metabolism Volume 98 ; 2013 ; >
+      au < ready ; exists ; 2013 ; 98 ; The Journal of Clinical Endocrinology & Metabolism Volume 98 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 99 ; The Journal of Clinical Endocrinology & Metabolism Volume 99 ; 2014 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 100 ; The Journal of Clinical Endocrinology & Metabolism Volume 100 ; 2015 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 101 ; The Journal of Clinical Endocrinology & Metabolism Volume 101 ; 2016 ; >
@@ -314,7 +314,7 @@
       au < finished ; crawling ; 2019 ; 104 ; The Journal of Clinical Endocrinology & Metabolism Volume 104 ; 2019 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2020 ; 105 ; The Journal of Clinical Endocrinology & Metabolism Volume 105 ; 2020 ; >
       au < crawling ; exists ; 2021 ; 106 ; The Journal of Clinical Endocrinology & Metabolism Volume 106 ; 2021 ; >
-      au < manifest ; exists ; 2022 ; 107 ; The Journal of Clinical Endocrinology & Metabolism Volume 107 ; 2022 ; >
+      au < ready ; exists ; 2022 ; 107 ; The Journal of Clinical Endocrinology & Metabolism Volume 107 ; 2022 ; >
 
     }
 

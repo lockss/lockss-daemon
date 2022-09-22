@@ -29,7 +29,7 @@
     au < frozen ; exists ; 2019 ; 10 ; African Invertebrates Volume 2019 ; 2019 ; https://africaninvertebrates.pensoft.net/ ; >
     au < frozen ; exists ; 2020 ; 11 ; African Invertebrates Volume 2020 ; 2020 ; https://africaninvertebrates.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2021 ; 12 ; African Invertebrates Volume 2021 ; 2021 ; https://africaninvertebrates.pensoft.net/ ; >
-    au < manifest ; exists ; 2022 ; 13 ; African Invertebrates Volume 2022 ; 2022 ; https://africaninvertebrates.pensoft.net/ ; >
+    au < ready ; exists ; 2022 ; 13 ; African Invertebrates Volume 2022 ; 2022 ; https://africaninvertebrates.pensoft.net/ ; >
 
   }
 
@@ -413,7 +413,7 @@
       au < deepCrawl ; exists ; 2019 ; 2019 ; Alpine Entomology Volume 2019 ; 2019 ; https://alpineentomology.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Alpine Entomology Volume 2020 ; 2020 ; https://alpineentomology.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; Alpine Entomology Volume 2021 ; 2021 ; https://alpineentomology.pensoft.net/ ; >
-      au < manifest ; exists ; 2022 ; 2022 ; Alpine Entomology Volume 2022 ; 2022 ; https://alpineentomology.pensoft.net/ ; >
+      au < ready ; exists ; 2022 ; 2022 ; Alpine Entomology Volume 2022 ; 2022 ; https://alpineentomology.pensoft.net/ ; >
 
   }
 
@@ -1117,7 +1117,7 @@
       param[au_oai_set] = aiep
 
       au < deepCrawl ; exists ; 2021 ; 2021 ; Acta Ichthyologica et Piscatoria Volume 2021 ; 2021 ; https://aiep.pensoft.net/ ; >
-      au < manifest ; exists ; 2022 ; 2022 ; Acta Ichthyologica et Piscatoria Volume 2022 ; 2022 ; https://aiep.pensoft.net/ ; >
+      au < ready ; exists ; 2022 ; 2022 ; Acta Ichthyologica et Piscatoria Volume 2022 ; 2022 ; https://aiep.pensoft.net/ ; >
 
   }
 
