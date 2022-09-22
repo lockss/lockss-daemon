@@ -59,12 +59,8 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>1</string>
   </entry>
   <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>4,"^%s", base_url</string>
-      <string>2,"^%s%s/.*;O=[AD]$", base_url, directory</string>
-      <string>1,"^%s%s/[^/]+\.zip", base_url, directory</string>
-    </list>
+    <string>au_start_url</string>
+    <string>"%s%s/Journals", base_url, directory</string>
   </entry>
   <entry>
     <string>plugin_archive_file_types</string>
