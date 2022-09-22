@@ -12,7 +12,7 @@
       name = Practical Action Publishing Source Content
     >
 
-    plugin = org.lockss.plugin.clockss.pap.PapSourcePlugin
+    plugin = org.lockss.plugin.clockss.pap.ClockssPapSourcePlugin
     param[base_url] = https://clockss-test.lockss.org/sourcefiles/practicalaction-released/
     hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[directory] >
