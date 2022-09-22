@@ -5562,7 +5562,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; European Heart Journal Supplements Volume 17 ; 17 ; >
     au < frozen ; exists ; 2016 ; 2016 ; European Heart Journal Supplements Volume 18 ; 18 ; >
     au < finished ; finished ; 2017 ; 2017 ; European Heart Journal Supplements Volume 19 ; 19 ; reingest1.clockss.org:8082 >
-    au < testing ; exists ; 2018 ; 2018 ; European Heart Journal Supplements Volume 20 ; 20 ; >
+    au < ready ; exists ; 2018 ; 2018 ; European Heart Journal Supplements Volume 20 ; 20 ; >
     au < crawling ; exists ; 2019 ; 2019 ; European Heart Journal Supplements Volume 21 ; 21 ; >
     au < crawling ; exists ; 2020 ; 2020 ; European Heart Journal Supplements Volume 22 ; 22 ; >
     au < crawling ; exists ; 2021 ; 2021 ; European Heart Journal Supplements Volume 23 ; 23 ; >
@@ -5944,7 +5944,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; European Review of Economic History Volume 20 ; 20 ; >
     au < finished ; finished ; 2017 ; 2017 ; European Review of Economic History Volume 21 ; 21 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2018 ; 2018 ; European Review of Economic History Volume 22 ; 22 ; >
-    au < testing ; exists ; 2019 ; 2019 ; European Review of Economic History Volume 23 ; 23 ; >
+    au < ready ; exists ; 2019 ; 2019 ; European Review of Economic History Volume 23 ; 23 ; >
     au < frozen ; exists ; 2020 ; 2020 ; European Review of Economic History Volume 24 ; 24 ; >
     au < crawling ; exists ; 2021 ; 2021 ; European Review of Economic History Volume 25 ; 25 ; >
     au < crawling ; exists ; 2022 ; 2022 ; European Review of Economic History Volume 26 ; 26 ; >
@@ -5995,7 +5995,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; European Sociological Review Volume 31 ; 31 ; >
     au < frozen ; exists ; 2016 ; 2016 ; European Sociological Review Volume 32 ; 32 ; >
     au < finished ; finished ; 2017 ; 2017 ; European Sociological Review Volume 33 ; 33 ; reingest1.clockss.org:8082 >
-    au < testing ; exists ; 2018 ; 2018 ; European Sociological Review Volume 34 ; 34 ; >
+    au < ready ; exists ; 2018 ; 2018 ; European Sociological Review Volume 34 ; 34 ; >
     au < crawling ; exists ; 2019 ; 2019 ; European Sociological Review Volume 35 ; 35 ; >
     au < frozen ; exists ; 2020 ; 2020 ; European Sociological Review Volume 36 ; 36 ; >
     au < crawling ; exists ; 2021 ; 2021 ; European Sociological Review Volume 37 ; 37 ; >
@@ -6921,7 +6921,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; Gastroenterology Report Volume 6 ; 6 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Gastroenterology Report Volume 7 ; 7 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Gastroenterology Report Volume 8 ; 8 ; >
-    au < testing ; exists ; 2021 ; 2021 ; Gastroenterology Report Volume 9 ; 9 ; >
+    au < ready ; exists ; 2021 ; 2021 ; Gastroenterology Report Volume 9 ; 9 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Gastroenterology Report Volume 10 ; 10 ; >
 
   }
@@ -9117,7 +9117,7 @@
     au < crawling ; exists ; 2017 ; 2017 ; International Journal of Pharmacy Practice Volume 25 ; 25 ; >
     au < crawling ; exists ; 2018 ; 2018 ; International Journal of Pharmacy Practice Volume 26 ; 26 ; >
     au < crawling ; exists ; 2019 ; 2019 ; International Journal of Pharmacy Practice Volume 27 ; 27 ; >
-    au < testing ; exists ; 2020 ; 2020 ; International Journal of Pharmacy Practice Volume 28 ; 28 ; >
+    au < ready ; exists ; 2020 ; 2020 ; International Journal of Pharmacy Practice Volume 28 ; 28 ; >
     au < crawling ; exists ; 2021 ; 2021 ; International Journal of Pharmacy Practice Volume 29 ; 29 ; >
     au < crawling ; exists ; 2022 ; 2022 ; International Journal of Pharmacy Practice Volume 30 ; 30 ; >
 
@@ -10279,10 +10279,10 @@
 
     param[journal_id] = jcde
 
-    au < testing ; exists ; 2014 ; 2014 ; Journal of Computational Design and Engineering Volume 1 ; 1 ; >
-    au < testing ; exists ; 2015 ; 2015 ; Journal of Computational Design and Engineering Volume 2 ; 2 ; >
+    au < ready ; exists ; 2014 ; 2014 ; Journal of Computational Design and Engineering Volume 1 ; 1 ; >
+    au < ready ; exists ; 2015 ; 2015 ; Journal of Computational Design and Engineering Volume 2 ; 2 ; >
     au < testing ; exists ; 2016 ; 2016 ; Journal of Computational Design and Engineering Volume 3 ; 3 ; >
-    au < testing ; exists ; 2017 ; 2017 ; Journal of Computational Design and Engineering Volume 4 ; 4 ; >
+    au < ready ; exists ; 2017 ; 2017 ; Journal of Computational Design and Engineering Volume 4 ; 4 ; >
     au < testing ; exists ; 2018 ; 2018 ; Journal of Computational Design and Engineering Volume 5 ; 5 ; >
     au < testing ; exists ; 2019 ; 2019 ; Journal of Computational Design and Engineering Volume 6 ; 6 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Journal of Computational Design and Engineering Volume 7 ; 7 ; >
