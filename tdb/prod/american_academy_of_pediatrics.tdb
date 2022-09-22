@@ -5,7 +5,7 @@
     info[platform] = SC
   >
 
-  plugin = org.lockss.plugin.silverchair.aap.ClockssAAPSilverchairPlugin
+  plugin = org.lockss.plugin.silverchair.aap.AAPSilverchairPlugin
   implicit < status ; year ; param[year] ; name ; param[volume_name] >
   param[base_url] = https://publications.aap.org/
 

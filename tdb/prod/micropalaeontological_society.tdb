@@ -13,7 +13,7 @@
       issnl = 0262-821X
     >  
     {
-    plugin = org.lockss.plugin.atypon.geologicalsocietylondon.ClockssGeologicalSocietyLondonPlugin
+    plugin = org.lockss.plugin.atypon.geologicalsocietylondon.GeologicalSocietyLondonPlugin
     implicit < status ; year ; name ; param[volume_name] >
     param[base_url] = https://www.lyellcollection.org/
     param[journal_id] = jm
