@@ -76,6 +76,11 @@ echo "----------------------"
 ./scripts/tdb/tdbout -Y -t status tdb/prod/ | sort | uniq -c
 echo " "
 #
+# Find plugin names with "Clockss" in the prod title database
+echo "----------------------"
+./scripts/tdb/tdbout -t publisher,name,plugin -Q 'plugin ~ "Clockss" and plugin !~ "needs"' tdb/prod/{,*/}*.tdb
+echo " "
+#
 # Find duplicate auids in the clockss title database
 echo "---------------------"
 echo "---------------------"
@@ -112,11 +117,11 @@ echo "Clockss. Duplicate Released Names. Commented out."
 echo "----------------------"
 ./scripts/tdb/tdbout -Y -t status tdb/clockssingest/ | sort | uniq -c
 echo " "
-# Find number of AUs ready for release in the ibictpln title database
-#echo "----------------------"
-#./scripts/tdb/tdbout -Y -t status tdb/ibictpln/ | sort | uniq -c
-#echo " "
 #
+# Find plugin names with "Clockss" in the prod title database
+echo "----------------------"
+./scripts/tdb/tdbout -t publisher,name,plugin -Q 'plugin !~ "Clockss" and plugin !~ "needs"' tdb/clockssingest/{,*/}*.tdb
+echo " "
 # Find duplicate auids in the whole database. Not exists or expected
 #echo "---------------------"
 #echo "---------------------"
@@ -152,7 +157,7 @@ echo " "
 #echo "expect 89"
 #echo " "
 #
-# Find AUs possibly ready to be moved to retirement.
+# Find tdb files possibly ready to be moved to retirement.
 echo "---------------------"
 echo "---------------------"
 echo "GLN. tdb files ready to retire?"
@@ -176,45 +181,6 @@ echo "CLOCKSS. ISSN issues"
 scripts/tdb/tdbout -t publisher,title,issn,eissn tdb/clockssingest/ | sed 's/\t\(.*\) & /\t\1 and /' | sed 's/\tThe /\t/' | sort -u > $tpath/issn
 scripts/tdb/scrub_table.pl $tpath/issn
 #
-# Find issn problems in ibictpln title database
-#echo "---------------------"
-#echo "---------------------"
-#echo "IBICT. ISSN issues"
-#scripts/tdb/tdbout -t publisher,title,issn,eissn tdb/ibictpln/ | sort -u > $tpath/issn
-#scripts/tdb/scrub_table.pl $tpath/issn
-#
-# Find Muse titles that don't have attr[journal_id]
-#echo "---------------------"
-#echo "---------------------"
-#echo "GLN. Muse. Titles missing journal_id"
-#scripts/tdb/tdbout -MTNYP -t publisher,param[journal_dir] -Q '(plugin ~ "ProjectMusePlugin" and (attr[journal_id] is not set or attr[journal_id] is ""))' tdb/prod/ | sort -u
-#
-#### Find Titles that don't have AUs
-###echo "---------------------"
-###echo "---------------------"
-###echo "GLN. Titles with no AUs"
-###scripts/tdb/tdbout -j tdb/prod/ | sort -u > $tpath/AllTitles.txt
-###scripts/tdb/tdbout --any-and-all -c publisher,title,issn,eissn tdb/prod/ | sort -u > $tpath/TitlesWAUs.txt
-###echo "Total Num Titles with no AUs"
-###diff $tpath/AllTitles.txt $tpath/TitlesWAUs.txt | grep "< " | wc -l
-###echo "All titles"
-###diff $tpath/AllTitles.txt $tpath/TitlesWAUs.txt | grep "< " | head -n20
-###   #echo "Not incl Springer SBM, AIAA, Annual Reviews, or Medknow"
-###   #diff $tpath/AllTitles.txt $tpath/TitlesWAUs.txt | grep "< " | grep -v "Springer Science+Business Media" | grep -v "American Institute of Aeronautics and Astronautics" | grep -v "Annual Reviews," | grep -v "Medknow Publications" | wc -l
-###   #diff $tpath/AllTitles.txt $tpath/TitlesWAUs.txt | grep "< " | grep -v "Springer Science+Business Media" | grep -v "American Institute of Aeronautics and Astronautics" | grep -v "Annual Reviews," | grep -v "Medknow Publications" | head -n20
-###echo "---------------------"
-###echo "---------------------"
-###echo "CLOCKSS. Titles with no AUs"
-###scripts/tdb/tdbout -j tdb/clockssingest/ | sort -u > $tpath/AllTitlesC.txt
-###scripts/tdb/tdbout --any-and-all -c publisher,title,issn,eissn tdb/clockssingest/ | sort -u > $tpath/TitlesWAUsC.txt
-###echo "Total Num Titles with no AUs"
-###   #diff $tpath/AllTitlesC.txt $tpath/TitlesWAUsC.txt | grep "< " | wc -l
-###   #echo "Not incl Springer SBM, AIAA, Annual Reviews, or Medknow"
-###   #diff $tpath/AllTitlesC.txt $tpath/TitlesWAUsC.txt | grep "< " | grep -v "Springer Science+Business Media" | grep -v "American Institute of Aeronautics and Astronautics" | grep -v "Annual Reviews," | grep -v "Medknow Publications" | wc -l
-###   #diff $tpath/AllTitlesC.txt $tpath/TitlesWAUsC.txt | grep "< " | grep -v "Springer Science+Business Media" | grep -v "American Institute of Aeronautics and Astronautics" | grep -v "Annual Reviews," | grep -v "Medknow Publications" | head -n20
-###diff $tpath/AllTitlesC.txt $tpath/TitlesWAUsC.txt | grep "< " | wc -l
-###diff $tpath/AllTitlesC.txt $tpath/TitlesWAUsC.txt | grep "< " | head -n20
-###echo "---------------------"
 echo "---------------------"
 echo "Missing Slashes"
 grep "param\[base_url\]" tdb/*/*.tdb tdb/*/*/*.tdb | grep "http.*://" | grep -v "/\s*$" | grep -v ":\s*#" | grep -v "\/\s*#"
