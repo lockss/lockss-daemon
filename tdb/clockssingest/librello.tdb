@@ -5,11 +5,10 @@
     info[contract] = 2013 ;
     info[tester] = 8 ;
     info[poller] = 8 ;
-    info[platform] = Moving from OJS2 to OJS3 by the end of 2021. See RT10508
+    info[platform] = OJS2 custom. See RT10508
   >
 
       plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
-      param[base_url] = http://www.librelloph.com/
       implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
 
   {
@@ -19,6 +18,16 @@
     >
 
       param[journal_id] = challengesinsustainability
+      {
+      param[base_url] = http://www.librelloph.com/ojs/
+    
+      au < testing ; exists ; 2019 ; Challenges in Sustainability Volume 7 ; 7 ; 2019 ; >
+      au < testing ; exists ; 2020 ; Challenges in Sustainability Volume 8 ; 8 ; 2020 ; >
+      au < testing ; exists ; 2021 ; Challenges in Sustainability Volume 9 ; 9 ; 2021 ; >
+      au < testing ; exists ; 2022 ; Challenges in Sustainability Volume 10 ; 10 ; 2022 ; >
+      }
+      {
+      param[base_url] = http://www.librelloph.com/
     
       au < finished ; finished ; 2013 ; Challenges in Sustainability Volume 1 ; 1 ; 2013 ; >
       au < finished ; frozen ; 2014 ; Challenges in Sustainability Volume 2 ; 2 ; 2014 ; reingest1.clockss.org:8082 >
@@ -26,10 +35,7 @@
       au < finished ; frozen ; 2016 ; Challenges in Sustainability Volume 4 ; 4 ; 2016 ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2017 ; Challenges in Sustainability Volume 5 ; 5 ; 2017 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2018 ; Challenges in Sustainability Volume 6 ; 6 ; 2018 ; reingest4.clockss.org:8082 >
-      au < testing ; exists ; 2019 ; Challenges in Sustainability Volume 7 ; 7 ; 2019 ; >
-      au < testing ; exists ; 2020 ; Challenges in Sustainability Volume 8 ; 8 ; 2020 ; >
-      au < testing ; exists ; 2021 ; Challenges in Sustainability Volume 9 ; 9 ; 2021 ; >
-      au < testing ; exists ; 2022 ; Challenges in Sustainability Volume 10 ; 10 ; 2022 ; >
+      }
   }
 
   {
@@ -39,6 +45,16 @@
     >
 
       param[journal_id] = journalofhumansecurity
+      {
+      param[base_url] = http://www.librelloph.com/ojs/
+
+      au < testing ; exists ; 2019 ; Journal of Human Security Volume 15 ; 15 ; 2019 ; >
+      au < testing ; exists ; 2020 ; Journal of Human Security Volume 16 ; 16 ; 2020 ; >
+      au < testing ; exists ; 2021 ; Journal of Human Security Volume 17 ; 17 ; 2021 ; >
+      au < testing ; exists ; 2022 ; Journal of Human Security Volume 18 ; 18 ; 2022 ; >
+      }
+      {
+      param[base_url] = http://www.librelloph.com/
 
       au < finished ; finished ; 2013 ; Journal of Human Security Volume 9 ; 9 ; 2013 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Journal of Human Security Volume 10 ; 10 ; 2014 ; reingest2.clockss.org:8085 >
@@ -46,11 +62,7 @@
       au < finished ; frozen ; 2016 ; Journal of Human Security Volume 12 ; 12 ; 2016 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2017 ; Journal of Human Security Volume 13 ; 13 ; 2017 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2018 ; Journal of Human Security Volume 14 ; 14 ; 2018 ; reingest4.clockss.org:8082 >
-      au < testing ; exists ; 2019 ; Journal of Human Security Volume 15 ; 15 ; 2019 ; >
-      au < testing ; exists ; 2020 ; Journal of Human Security Volume 16 ; 16 ; 2020 ; >
-      au < testing ; exists ; 2021 ; Journal of Human Security Volume 17 ; 17 ; 2021 ; >
-      au < testing ; exists ; 2022 ; Journal of Human Security Volume 18 ; 18 ; 2022 ; >
-
+      }
   }
 
   {
@@ -59,19 +71,25 @@
       eissn = 2297-6485
     >
 
-      param[journal_id] = organicfarming
       # content for 2014 moved to 2015.
+      param[journal_id] = organicfarming
+      {
+      param[base_url] = http://www.librelloph.com/ojs/
+
+      au < testing ; exists ; 2019 ; Organic Farming Volume 5 ; 5 ; 2019 ; >
+      au < testing ; exists ; 2020 ; Organic Farming Volume 6 ; 6 ; 2020 ; >
+      au < testing ; exists ; 2021 ; Organic Farming Volume 7 ; 7 ; 2021 ; >
+      au < testing ; exists ; 2022 ; Organic Farming Volume 8 ; 8 ; 2022 ; >
+      }
+      {
+      param[base_url] = http://www.librelloph.com/
 
       au < superseded ; exists ; 2014 ; Organic Farming Volume 1 [superseded] ; 1 ; 2014 ; >
       au < finished ; finished ; 2015 ; Organic Farming Volume 1 ; 1 ; 2015 ; >
       au < finished ; frozen ; 2016 ; Organic Farming Volume 2 ; 2 ; 2016 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2017 ; Organic Farming Volume 3 ; 3 ; 2017 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2018 ; Organic Farming Volume 4 ; 4 ; 2018 ; reingest4.clockss.org:8082 >
-      au < testing ; exists ; 2019 ; Organic Farming Volume 5 ; 5 ; 2019 ; >
-      au < testing ; exists ; 2020 ; Organic Farming Volume 6 ; 6 ; 2020 ; >
-      au < testing ; exists ; 2021 ; Organic Farming Volume 7 ; 7 ; 2021 ; >
-      au < testing ; exists ; 2022 ; Organic Farming Volume 8 ; 8 ; 2022 ; >
-
+      }
   }
 
   {
@@ -79,6 +97,7 @@
       name = Media and Communication
     >
     
+      param[base_url] = http://www.librelloph.com/
       param[journal_id] = mediaandcommunication
       comment[issn] = missing
       comment[publisher] = as of 2014 moved to another publisher
@@ -94,6 +113,7 @@
       name = Politics and Governance
     >
 
+      param[base_url] = http://www.librelloph.com/
       param[journal_id] = politicsandgovernance
       comment[issn] = missing
       comment[publisher] = as of 2014 moved to another publisher? http://www.librelloph.com/politicsandgovernance/issue/view/14
@@ -109,6 +129,7 @@
       name = Social Inclusion
     >
 
+      param[base_url] = http://www.librelloph.com/
       param[journal_id] = socialinclusion
       comment[issn] = missing
       comment[publisher] = as of 2014 moved to another publisher
