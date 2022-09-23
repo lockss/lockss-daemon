@@ -173,7 +173,7 @@
     au < finished ; crawling ; 2019 ; Journal of Aerospace Computing, Information, and Communication Volume 16 ; 16 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Journal of Aerospace Computing, Information, and Communication Volume 17 ; 17 ; https://arc.aiaa.org/ ; >
     au < deepCrawl ; exists ; 2021 ; Journal of Aerospace Computing, Information, and Communication Volume 18 ; 18 ; https://arc.aiaa.org/ ; >
-    au < ready ; exists ; 2022 ; Journal of Aerospace Computing, Information, and Communication Volume 19 ; 19 ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 2022 ; Journal of Aerospace Computing, Information, and Communication Volume 19 ; 19 ; https://arc.aiaa.org/ ; >
 
   }
 
@@ -193,7 +193,7 @@
     au < finished ; frozen ; 2019 ; Journal of Air Transportation Volume 27 ; 27 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Journal of Air Transportation Volume 28 ; 28 ; https://arc.aiaa.org/ ; >
     au < deepCrawl ; exists ; 2021 ; Journal of Air Transportation Volume 29 ; 29 ; https://arc.aiaa.org/ ; >
-    au < ready ; exists ; 2022 ; Journal of Air Transportation Volume 30 ; 30 ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 2022 ; Journal of Air Transportation Volume 30 ; 30 ; https://arc.aiaa.org/ ; >
 
   }
 
@@ -439,7 +439,7 @@
     au < frozen ; exists ; 2019 ; Journal of Propulsion and Power Volume 35 ; 35 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2020 ; Journal of Propulsion and Power Volume 36 ; 36 ; https://arc.aiaa.org/ ; >
     au < deepCrawl ; exists ; 2021 ; Journal of Propulsion and Power Volume 37 ; 37 ; https://arc.aiaa.org/ ; >
-    au < ready ; exists ; 2022 ; Journal of Propulsion and Power Volume 38 ; 38 ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 2022 ; Journal of Propulsion and Power Volume 38 ; 38 ; https://arc.aiaa.org/ ; >
 
   }
 

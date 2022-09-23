@@ -50,7 +50,7 @@
       au < finished ; crawling ; 2019 ; 2019 ; American Literature Volume 91 ; 91 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; American Literature Volume 92 ; 92 ; >
       au < frozen ; exists ; 2021 ; 2021 ; American Literature Volume 93 ; 93 ; >
-      au < ready ; exists ; 2022 ; 2022 ; American Literature Volume 94 ; 94 ; > #403 forbidden on 	https://dup.silverchair-cdn.com/cassette.axd/file/Themes/Client/app/img/split-view_figures-tables-53a6d02348118354786b056ee1d24882350dc90b.svg	        
+      au < crawling ; exists ; 2022 ; 2022 ; American Literature Volume 94 ; 94 ; > #403 forbidden on 	https://dup.silverchair-cdn.com/cassette.axd/file/Themes/Client/app/img/split-view_figures-tables-53a6d02348118354786b056ee1d24882350dc90b.svg	        
 
   }
 
@@ -70,7 +70,7 @@
       au < crawling ; exists ; 2019 ; 2019 ; American Speech Volume 94 ; 94 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; American Speech Volume 95 ; 95 ; >
       au < crawling ; exists ; 2021 ; 2021 ; American Speech Volume 96 ; 96 ; >
-      au < ready ; exists ; 2022 ; 2022 ; American Speech Volume 97 ; 97 ; >
+      au < crawling ; exists ; 2022 ; 2022 ; American Speech Volume 97 ; 97 ; >
 
   }
 
@@ -90,7 +90,7 @@
       au < frozen ; exists ; 2019 ; 2019 ; boundary 2 Volume 46 ; 46 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; boundary 2 Volume 47 ; 47 ; >
       au < crawling ; exists ; 2021 ; 2021 ; boundary 2 Volume 48 ; 48 ; >
-      au < ready ; exists ; 2022 ; 2022 ; boundary 2 Volume 49 ; 49 ; >
+      au < crawling ; exists ; 2022 ; 2022 ; boundary 2 Volume 49 ; 49 ; >
 
   }
 
@@ -125,7 +125,7 @@
       au < finished ; crawling ; 2019 ; 2019 ; Archives of Asian Art Volume 69 ; 69 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Archives of Asian Art Volume 70 ; 70 ; >
       au < crawling ; exists ; 2021 ; 2021 ; Archives of Asian Art Volume 71 ; 71 ; >
-      au < ready ; exists ; 2022 ; 2022 ; Archives of Asian Art Volume 72 ; 72 ; >
+      au < crawling ; exists ; 2022 ; 2022 ; Archives of Asian Art Volume 72 ; 72 ; >
 
   }
 
@@ -168,7 +168,7 @@
       au < finished ; crawling ; 2019 ; 2019 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 34 ; 34 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 35 ; 35 ; >
       au < crawling ; exists ; 2021 ; 2021 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 36 ; 36 ; >
-      au < ready ; exists ; 2022 ; 2022 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 37 ; 37 ; >
+      au < crawling ; exists ; 2022 ; 2022 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 37 ; 37 ; >
 
   }
 
