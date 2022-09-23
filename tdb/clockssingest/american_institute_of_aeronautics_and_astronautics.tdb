@@ -265,7 +265,7 @@
     au < deepCrawl ; exists ; 2019 ; Journal of Aircraft Volume 56 ; 56 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2020 ; Journal of Aircraft Volume 57 ; 57 ; https://arc.aiaa.org/ ; >
     au < deepCrawl ; exists ; 2021 ; Journal of Aircraft Volume 58 ; 58 ; https://arc.aiaa.org/ ; >
-    au < testing ; exists ; 2022 ; Journal of Aircraft Volume 59 ; 59 ; https://arc.aiaa.org/ ; >
+    au < ready ; exists ; 2022 ; Journal of Aircraft Volume 59 ; 59 ; https://arc.aiaa.org/ ; >
 
   }
 
@@ -360,7 +360,7 @@
     au < deepCrawl ; exists ; 2019 ; Journal of Guidance, Control, and Dynamics Volume 42 ; 42 ; https://arc.aiaa.org/ ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Guidance, Control, and Dynamics Volume 43 ; 43 ; https://arc.aiaa.org/ ; > #https://arc.aiaa.org/cms/10.2514/1.G002808/asset/images/medium/figure11.gif,"500 Internal Server Error"
     au < deepCrawl ; exists ; 2021 ; Journal of Guidance, Control, and Dynamics Volume 44 ; 44 ; https://arc.aiaa.org/ ; >
-    au < testing ; exists ; 2022 ; Journal of Guidance, Control, and Dynamics Volume 45 ; 45 ; https://arc.aiaa.org/ ; >
+    au < ready ; exists ; 2022 ; Journal of Guidance, Control, and Dynamics Volume 45 ; 45 ; https://arc.aiaa.org/ ; >
 
   }
 
@@ -511,7 +511,7 @@
     au < finished ; frozen ; 2019 ; Journal of Spacecraft and Rockets Volume 56 ; 56 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2020 ; Journal of Spacecraft and Rockets Volume 57 ; 57 ; https://arc.aiaa.org/ ; >
     au < crawling ; exists ; 2021 ; Journal of Spacecraft and Rockets Volume 58 ; 58 ; https://arc.aiaa.org/ ; >
-    au < testing ; exists ; 2022 ; Journal of Spacecraft and Rockets Volume 59 ; 59 ; https://arc.aiaa.org/ ; >
+    au < ready ; exists ; 2022 ; Journal of Spacecraft and Rockets Volume 59 ; 59 ; https://arc.aiaa.org/ ; >
 
   }
 
