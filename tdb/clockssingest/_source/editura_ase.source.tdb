@@ -18,7 +18,7 @@
     hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[directory] >
 
-    au < expected ; exists ; 2022 ; Editura ASE Source Content 2022_01 ; 2022_01 >
+    au < manifest ; exists ; 2022 ; Editura ASE Source Content 2022_01 ; 2022_01 >
 
   }
 
