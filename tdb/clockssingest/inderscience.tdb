@@ -2900,7 +2900,7 @@
       param[journal_id] = ijdet
 
       au < finished ; crawling ; 2018-2019 ; International Journal of Digital Enterprise Technology Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < ready ; exists ; 2020-2021 ; International Journal of Digital Enterprise Technology Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2020-2021 ; International Journal of Digital Enterprise Technology Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2022 ; International Journal of Digital Enterprise Technology Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
 
     }
