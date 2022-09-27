@@ -17,39 +17,35 @@
       param[base_url] = http://www.annclinlabsci.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 1973 ; Annals of Clinical & Laboratory Science Volume 3 [tables of contents only] ; 3 >
-      au < manifest ; 1974 ; Annals of Clinical & Laboratory Science Volume 4 [tables of contents only] ; 4 >
-      {
+      au < manifest ; 1973 ; Annals of Clinical & Laboratory Science Volume 3 ; 3 >
+      au < manifest ; 1974 ; Annals of Clinical & Laboratory Science Volume 4 ; 4 >
 
-        attr[au_coverage_depth] = abstracts
-
-        au < manifest ; 1975 ; Annals of Clinical & Laboratory Science Volume 5 [abstracts only] ; 5 >
-        au < manifest ; 1976 ; Annals of Clinical & Laboratory Science Volume 6 [abstracts only] ; 6 >
-        au < manifest ; 1977 ; Annals of Clinical & Laboratory Science Volume 7 [abstracts only] ; 7 >
-        au < manifest ; 1978 ; Annals of Clinical & Laboratory Science Volume 8 [abstracts only] ; 8 >
-        au < manifest ; 1979 ; Annals of Clinical & Laboratory Science Volume 9 [abstracts only] ; 9 >
-        au < manifest ; 1980 ; Annals of Clinical & Laboratory Science Volume 10 [abstracts only] ; 10 >
-        au < manifest ; 1981 ; Annals of Clinical & Laboratory Science Volume 11 [abstracts only] ; 11 >
-        au < manifest ; 1982 ; Annals of Clinical & Laboratory Science Volume 12 [abstracts only] ; 12 >
-        au < manifest ; 1983 ; Annals of Clinical & Laboratory Science Volume 13 [abstracts only] ; 13 >
-        au < manifest ; 1984 ; Annals of Clinical & Laboratory Science Volume 14 [abstracts only] ; 14 >
-        au < manifest ; 1985 ; Annals of Clinical & Laboratory Science Volume 15 [abstracts only] ; 15 >
-        au < manifest ; 1986 ; Annals of Clinical & Laboratory Science Volume 16 [abstracts only] ; 16 >
-        au < manifest ; 1987 ; Annals of Clinical & Laboratory Science Volume 17 [abstracts only] ; 17 >
-        au < manifest ; 1988 ; Annals of Clinical & Laboratory Science Volume 18 [abstracts only] ; 18 >
-        au < manifest ; 1989 ; Annals of Clinical & Laboratory Science Volume 19 [abstracts only] ; 19 >
-        au < manifest ; 1990 ; Annals of Clinical & Laboratory Science Volume 20 [abstracts only] ; 20 >
-        au < manifest ; 1991 ; Annals of Clinical & Laboratory Science Volume 21 [abstracts only] ; 21 >
-        au < manifest ; 1992 ; Annals of Clinical & Laboratory Science Volume 22 [abstracts only] ; 22 >
-        au < manifest ; 1993 ; Annals of Clinical & Laboratory Science Volume 23 [abstracts only] ; 23 >
-        au < manifest ; 1994 ; Annals of Clinical & Laboratory Science Volume 24 [abstracts only] ; 24 >
-        au < manifest ; 1995 ; Annals of Clinical & Laboratory Science Volume 25 [abstracts only] ; 25 >
-        au < manifest ; 1996 ; Annals of Clinical & Laboratory Science Volume 26 [abstracts only] ; 26 >
-        au < manifest ; 1997 ; Annals of Clinical & Laboratory Science Volume 27 [abstracts only] ; 27 >
-        au < manifest ; 1998 ; Annals of Clinical & Laboratory Science Volume 28 [abstracts only] ; 28 >
-        au < manifest ; 1999 ; Annals of Clinical & Laboratory Science Volume 29 [abstracts only] ; 29 >
-        au < manifest ; 2000 ; Annals of Clinical & Laboratory Science Volume 30 [abstracts only] ; 30 >
-      }
+      au < manifest ; 1975 ; Annals of Clinical & Laboratory Science Volume 5 ; 5 >
+      au < manifest ; 1976 ; Annals of Clinical & Laboratory Science Volume 6 ; 6 >
+      au < manifest ; 1977 ; Annals of Clinical & Laboratory Science Volume 7 ; 7 >
+      au < manifest ; 1978 ; Annals of Clinical & Laboratory Science Volume 8 ; 8 >
+      au < manifest ; 1979 ; Annals of Clinical & Laboratory Science Volume 9 ; 9 >
+      au < manifest ; 1980 ; Annals of Clinical & Laboratory Science Volume 10 ; 10 >
+      au < manifest ; 1981 ; Annals of Clinical & Laboratory Science Volume 11 ; 11 >
+      au < manifest ; 1982 ; Annals of Clinical & Laboratory Science Volume 12 ; 12 >
+      au < manifest ; 1983 ; Annals of Clinical & Laboratory Science Volume 13 ; 13 >
+      au < manifest ; 1984 ; Annals of Clinical & Laboratory Science Volume 14 ; 14 >
+      au < manifest ; 1985 ; Annals of Clinical & Laboratory Science Volume 15 ; 15 >
+      au < manifest ; 1986 ; Annals of Clinical & Laboratory Science Volume 16 ; 16 >
+      au < manifest ; 1987 ; Annals of Clinical & Laboratory Science Volume 17 ; 17 >
+      au < manifest ; 1988 ; Annals of Clinical & Laboratory Science Volume 18 ; 18 >
+      au < manifest ; 1989 ; Annals of Clinical & Laboratory Science Volume 19 ; 19 >
+      au < exists ; 1990 ; Annals of Clinical & Laboratory Science Volume 20 ; 20 >
+      au < manifest ; 1991 ; Annals of Clinical & Laboratory Science Volume 21 ; 21 >
+      au < manifest ; 1992 ; Annals of Clinical & Laboratory Science Volume 22 ; 22 >
+      au < manifest ; 1993 ; Annals of Clinical & Laboratory Science Volume 23 ; 23 >
+      au < manifest ; 1994 ; Annals of Clinical & Laboratory Science Volume 24 ; 24 >
+      au < manifest ; 1995 ; Annals of Clinical & Laboratory Science Volume 25 ; 25 >
+      au < manifest ; 1996 ; Annals of Clinical & Laboratory Science Volume 26 ; 26 >
+      au < manifest ; 1997 ; Annals of Clinical & Laboratory Science Volume 27 ; 27 >
+      au < manifest ; 1998 ; Annals of Clinical & Laboratory Science Volume 28 ; 28 >
+      au < manifest ; 1999 ; Annals of Clinical & Laboratory Science Volume 29 ; 29 >
+      au < manifest ; 2000 ; Annals of Clinical & Laboratory Science Volume 30 ; 30 >
       au < released ; 2001 ; Annals of Clinical & Laboratory Science Volume 31 ; 31 >
       au < released ; 2002 ; Annals of Clinical & Laboratory Science Volume 32 ; 32 >
       au < released ; 2003 ; Annals of Clinical & Laboratory Science Volume 33 ; 33 >
@@ -62,14 +58,16 @@
       au < released ; 2010 ; Annals of Clinical & Laboratory Science Volume 40 ; 40 >
       au < released ; 2011 ; Annals of Clinical & Laboratory Science Volume 41 ; 41 >
       au < released ; 2012 ; Annals of Clinical & Laboratory Science Volume 42 ; 42 >
-      au < exists ; 2013 ; Annals of Clinical & Laboratory Science Volume 43 ; 43 >
-      au < exists ; 2014 ; Annals of Clinical & Laboratory Science Volume 44 ; 44 >
-      au < exists ; 2015 ; Annals of Clinical & Laboratory Science Volume 45 ; 45 >
-      au < exists ; 2016 ; Annals of Clinical & Laboratory Science Volume 46 ; 46 >
-      au < exists ; 2017 ; Annals of Clinical & Laboratory Science Volume 47 ; 47 >
-      au < exists ; 2018 ; Annals of Clinical & Laboratory Science Volume 48 ; 48 >
-      au < exists ; 2019 ; Annals of Clinical & Laboratory Science Volume 49 ; 49 >
-      au < exists ; 2020 ; Annals of Clinical & Laboratory Science Volume 50 ; 50 >
+      au < manifest ; 2013 ; Annals of Clinical & Laboratory Science Volume 43 ; 43 >
+      au < manifest ; 2014 ; Annals of Clinical & Laboratory Science Volume 44 ; 44 >
+      au < manifest ; 2015 ; Annals of Clinical & Laboratory Science Volume 45 ; 45 >
+      au < manifest ; 2016 ; Annals of Clinical & Laboratory Science Volume 46 ; 46 >
+      au < manifest ; 2017 ; Annals of Clinical & Laboratory Science Volume 47 ; 47 >
+      au < manifest ; 2018 ; Annals of Clinical & Laboratory Science Volume 48 ; 48 >
+      au < manifest ; 2019 ; Annals of Clinical & Laboratory Science Volume 49 ; 49 >
+      au < manifest ; 2020 ; Annals of Clinical & Laboratory Science Volume 50 ; 50 >
+      au < manifest ; 2021 ; Annals of Clinical & Laboratory Science Volume 51 ; 51 >
+      au < manifest ; 2022 ; Annals of Clinical & Laboratory Science Volume 52 ; 52 >
 
     }
 
