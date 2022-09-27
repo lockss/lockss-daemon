@@ -351,7 +351,7 @@
     au < manifest ; exists ; 1996 ; Aircraft Engineering and Aerospace Technology Volume 68 ; 68 ; >
     au < manifest ; exists ; 1997 ; Aircraft Engineering and Aerospace Technology Volume 69 ; 69 ; >
     au < crawling ; exists ; 1998 ; Aircraft Engineering and Aerospace Technology Volume 70 ; 70 ; >
-    au < ready ; exists ; 1999 ; Aircraft Engineering and Aerospace Technology Volume 71 ; 71 ; >
+    au < crawling ; exists ; 1999 ; Aircraft Engineering and Aerospace Technology Volume 71 ; 71 ; >
     au < doNotProcess ; doNotProcess ; 2000 ; Aircraft Engineering and Aerospace Technology Volume 72 ; 72 ; >
     au < doNotProcess ; doNotProcess ; 2001 ; Aircraft Engineering and Aerospace Technology Volume 73 ; 73 ; >
     au < doNotProcess ; doNotProcess ; 2002 ; Aircraft Engineering and Aerospace Technology Volume 74 ; 74 ; >
@@ -2133,7 +2133,7 @@
     au < manifest ; exists ; 1996 ; Disaster Prevention and Management Volume 5 ; 5 ; >
     au < manifest ; exists ; 1997 ; Disaster Prevention and Management Volume 6 ; 6 ; >
     au < ready ; exists ; 1998 ; Disaster Prevention and Management Volume 7 ; 7 ; >
-    au < ready ; exists ; 1999 ; Disaster Prevention and Management Volume 8 ; 8 ; >
+    au < crawling ; exists ; 1999 ; Disaster Prevention and Management Volume 8 ; 8 ; >
     au < frozen ; exists ; 2000 ; Disaster Prevention and Management Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2001 ; Disaster Prevention and Management Volume 10 ; 10 ; >
     au < frozen ; exists ; 2002 ; Disaster Prevention and Management Volume 11 ; 11 ; >
@@ -4902,7 +4902,7 @@
     au < manifest ; exists ; 1996 ; The International Journal of Logistics Management Volume 7 ; 7 ; >
     au < manifest ; exists ; 1997 ; The International Journal of Logistics Management Volume 8 ; 8 ; >
     au < ready ; exists ; 1998 ; The International Journal of Logistics Management Volume 9 ; 9 ; >
-    au < ready ; exists ; 1999 ; The International Journal of Logistics Management Volume 10 ; 10 ; >
+    au < crawling ; exists ; 1999 ; The International Journal of Logistics Management Volume 10 ; 10 ; >
     au < frozen ; exists ; 2000 ; The International Journal of Logistics Management Volume 11 ; 11 ; >
     au < frozen ; exists ; 2001 ; The International Journal of Logistics Management Volume 12 ; 12 ; >
     au < frozen ; exists ; 2002 ; The International Journal of Logistics Management Volume 13 ; 13 ; >
@@ -11880,7 +11880,7 @@
     au < manifest ; exists ; 1996 ; Reference Services Review Volume 24 ; 24 ; >
     au < manifest ; exists ; 1997 ; Reference Services Review Volume 25 ; 25 ; >
     au < ready ; exists ; 1998 ; Reference Services Review Volume 26 ; 26 ; >
-    au < ready ; exists ; 1999 ; Reference Services Review Volume 27 ; 27 ; >
+    au < crawling ; exists ; 1999 ; Reference Services Review Volume 27 ; 27 ; >
     au < crawling ; exists ; 2000 ; Reference Services Review Volume 28 ; 28 ; >
     au < crawling ; exists ; 2001 ; Reference Services Review Volume 29 ; 29 ; >
     au < crawling ; exists ; 2002 ; Reference Services Review Volume 30 ; 30 ; >
@@ -12473,7 +12473,7 @@
     au < manifest ; exists ; 1996 ; Strategy & Leadership Volume 24 ; 24 ; >
     au < manifest ; exists ; 1997 ; Strategy & Leadership Volume 25 ; 25 ; >
     au < manifest ; exists ; 1998 ; Strategy & Leadership Volume 26 ; 26 ; >
-    au < ready ; exists ; 1999 ; Strategy & Leadership Volume 27 ; 27 ; >
+    au < crawling ; exists ; 1999 ; Strategy & Leadership Volume 27 ; 27 ; >
     au < crawling ; exists ; 2000 ; Strategy & Leadership Volume 28 ; 28 ; >
     au < crawling ; exists ; 2001 ; Strategy & Leadership Volume 29 ; 29 ; >
     au < crawling ; exists ; 2002 ; Strategy & Leadership Volume 30 ; 30 ; >
@@ -13386,7 +13386,7 @@
     au < ready ; exists ; 2018 ; Advances in Autism Volume 4 ; 4 ; >
     au < crawling ; exists ; 2019 ; Advances in Autism Volume 5 ; 5 ; >
     au < ready ; exists ; 2020 ; Advances in Autism Volume 6 ; 6 ; >
-    au < ready ; exists ; 2021 ; Advances in Autism Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2021 ; Advances in Autism Volume 7 ; 7 ; >
     au < crawling ; exists ; 2022 ; Advances in Autism Volume 8 ; 8 ; >
 
   }
@@ -13487,7 +13487,7 @@
     au < ready ; exists ; 2014 ; European Journal of Training and Development Volume 38 ; 38 ; >
     au < ready ; exists ; 2015 ; European Journal of Training and Development Volume 39 ; 39 ; >
     au < ready ; exists ; 2016 ; European Journal of Training and Development Volume 40 ; 40 ; >
-    au < ready ; exists ; 2017 ; European Journal of Training and Development Volume 41 ; 41 ; >
+    au < crawling ; exists ; 2017 ; European Journal of Training and Development Volume 41 ; 41 ; >
     au < crawling ; exists ; 2018 ; European Journal of Training and Development Volume 42 ; 42 ; >
     au < ready ; exists ; 2019 ; European Journal of Training and Development Volume 43 ; 43 ; >
     au < ready ; exists ; 2020 ; European Journal of Training and Development Volume 44 ; 44 ; >
@@ -13508,7 +13508,7 @@
 
     au < ready ; exists ; 2013 ; Evidence-based HRM Volume 1 ; 1 ; >
     au < crawling ; exists ; 2014 ; Evidence-based HRM Volume 2 ; 2 ; >
-    au < ready ; exists ; 2015 ; Evidence-based HRM Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2015 ; Evidence-based HRM Volume 3 ; 3 ; >
     au < ready ; exists ; 2016 ; Evidence-based HRM Volume 4 ; 4 ; >
     au < crawling ; exists ; 2017 ; Evidence-based HRM Volume 5 ; 5 ; >
     au < ready ; exists ; 2018 ; Evidence-based HRM Volume 6 ; 6 ; >
@@ -13642,7 +13642,7 @@
     au < crawling ; exists ; 2018 ; International Journal of Innovation Science Volume 10 ; 10 ; >
     au < crawling ; exists ; 2019 ; International Journal of Innovation Science Volume 11 ; 11 ; >
     au < crawling ; exists ; 2020 ; International Journal of Innovation Science Volume 12 ; 12 ; >
-    au < ready ; exists ; 2021 ; International Journal of Innovation Science Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2021 ; International Journal of Innovation Science Volume 13 ; 13 ; >
     au < crawling ; exists ; 2022 ; International Journal of Innovation Science Volume 14 ; 14 ; >
 
   }
@@ -13686,7 +13686,7 @@
     au < crawling ; exists ; 2001 ; International Journal of Organization Theory & Behavior Volume 4 ; 4 ; >
     au < exists ; exists ; 2002 ; International Journal of Organization Theory & Behavior Volume 5 ; 5 ; >
     au < crawling ; exists ; 2003 ; International Journal of Organization Theory & Behavior Volume 6 ; 6 ; >
-    au < ready ; exists ; 2004 ; International Journal of Organization Theory & Behavior Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2004 ; International Journal of Organization Theory & Behavior Volume 7 ; 7 ; >
     au < crawling ; exists ; 2005 ; International Journal of Organization Theory & Behavior Volume 8 ; 8 ; >
     au < crawling ; exists ; 2006 ; International Journal of Organization Theory & Behavior Volume 9 ; 9 ; >
     au < crawling ; exists ; 2007 ; International Journal of Organization Theory & Behavior Volume 10 ; 10 ; >
@@ -13699,7 +13699,7 @@
     au < crawling ; exists ; 2014 ; International Journal of Organization Theory & Behavior Volume 17 ; 17 ; >
     au < ready ; exists ; 2015 ; International Journal of Organization Theory & Behavior Volume 18 ; 18 ; >
     au < ready ; exists ; 2016 ; International Journal of Organization Theory & Behavior Volume 19 ; 19 ; >
-    au < ready ; exists ; 2017 ; International Journal of Organization Theory & Behavior Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2017 ; International Journal of Organization Theory & Behavior Volume 20 ; 20 ; >
     au < crawling ; exists ; 2018 ; International Journal of Organization Theory & Behavior Volume 21 ; 21 ; >
     au < ready ; exists ; 2019 ; International Journal of Organization Theory & Behavior Volume 22 ; 22 ; >
     au < crawling ; exists ; 2020 ; International Journal of Organization Theory & Behavior Volume 23 ; 23 ; >
@@ -13723,13 +13723,13 @@
     au < ready ; exists ; 2001 ; International Journal of Sports Marketing and Sponsorship Volume 3 ; 3 ; >
     au < crawling ; exists ; 2002 ; International Journal of Sports Marketing and Sponsorship Volume 4 ; 4 ; >
     au < crawling ; exists ; 2003 ; International Journal of Sports Marketing and Sponsorship Volume 5 ; 5 ; >
-    au < ready ; exists ; 2004 ; International Journal of Sports Marketing and Sponsorship Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2004 ; International Journal of Sports Marketing and Sponsorship Volume 6 ; 6 ; >
     au < ready ; exists ; 2005 ; International Journal of Sports Marketing and Sponsorship Volume 7 ; 7 ; >
     au < crawling ; exists ; 2006 ; International Journal of Sports Marketing and Sponsorship Volume 8 ; 8 ; >
     au < ready ; exists ; 2007 ; International Journal of Sports Marketing and Sponsorship Volume 9 ; 9 ; >
     au < ready ; exists ; 2008 ; International Journal of Sports Marketing and Sponsorship Volume 10 ; 10 ; >
     au < crawling ; exists ; 2009 ; International Journal of Sports Marketing and Sponsorship Volume 11 ; 11 ; >
-    au < ready ; exists ; 2010 ; International Journal of Sports Marketing and Sponsorship Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2010 ; International Journal of Sports Marketing and Sponsorship Volume 12 ; 12 ; >
     au < crawling ; exists ; 2011 ; International Journal of Sports Marketing and Sponsorship Volume 13 ; 13 ; >
     au < crawling ; exists ; 2012 ; International Journal of Sports Marketing and Sponsorship Volume 14 ; 14 ; >
     au < crawling ; exists ; 2013 ; International Journal of Sports Marketing and Sponsorship Volume 15 ; 15 ; >
@@ -13781,7 +13781,7 @@
     au < ready ; exists ; 2016 ; Journal for Multicultural Education Volume 10 ; 10 ; >
     au < crawling ; exists ; 2017 ; Journal for Multicultural Education Volume 11 ; 11 ; >
     au < crawling ; exists ; 2018 ; Journal for Multicultural Education Volume 12 ; 12 ; >
-    au < ready ; exists ; 2019 ; Journal for Multicultural Education Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2019 ; Journal for Multicultural Education Volume 13 ; 13 ; >
     au < ready ; exists ; 2020 ; Journal for Multicultural Education Volume 14 ; 14 ; >
     au < crawling ; exists ; 2021 ; Journal for Multicultural Education Volume 15 ; 15 ; >
     au < crawling ; exists ; 2022 ; Journal for Multicultural Education Volume 16 ; 16 ; >
@@ -13903,7 +13903,7 @@
     au < crawling ; exists ; 2013 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 4 ; 4 ; >
     au < crawling ; exists ; 2014 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 5 ; 5 ; >
     au < crawling ; exists ; 2015 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 6 ; 6 ; >
-    au < ready ; exists ; 2016 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2016 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 7 ; 7 ; >
     au < crawling ; exists ; 2017 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 8 ; 8 ; >
     au < ready ; exists ; 2018 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 9 ; 9 ; >
     au < ready ; exists ; 2019 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 10 ; 10 ; >
@@ -13924,7 +13924,7 @@
     param[journal_issn] = 2051-6614
 
     au < ready ; exists ; 2014 ; Journal of Organizational Effectiveness: People and Performance Volume 1 ; 1 ; >
-    au < ready ; exists ; 2015 ; Journal of Organizational Effectiveness: People and Performance Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2015 ; Journal of Organizational Effectiveness: People and Performance Volume 2 ; 2 ; >
     au < crawling ; exists ; 2016 ; Journal of Organizational Effectiveness: People and Performance Volume 3 ; 3 ; >
     au < crawling ; exists ; 2017 ; Journal of Organizational Effectiveness: People and Performance Volume 4 ; 4 ; >
     au < ready ; exists ; 2018 ; Journal of Organizational Effectiveness: People and Performance Volume 5 ; 5 ; >
@@ -14062,7 +14062,7 @@
 
     au < ready ; exists ; 2014 ; Journal of Science and Technology Policy Management Volume 5 ; 5 ; >
     au < crawling ; exists ; 2015 ; Journal of Science and Technology Policy Management Volume 6 ; 6 ; >
-    au < ready ; exists ; 2016 ; Journal of Science and Technology Policy Management Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2016 ; Journal of Science and Technology Policy Management Volume 7 ; 7 ; >
     au < ready ; exists ; 2017 ; Journal of Science and Technology Policy Management Volume 8 ; 8 ; >
     au < ready ; exists ; 2018 ; Journal of Science and Technology Policy Management Volume 9 ; 9 ; >
     au < ready ; exists ; 2019 ; Journal of Science and Technology Policy Management Volume 10 ; 10 ; >
@@ -14251,7 +14251,7 @@
 
     au < crawling ; exists ; 2013 ; The Journal of Forensic Practice Volume 15 ; 15 ; >
     au < ready ; exists ; 2014 ; The Journal of Forensic Practice Volume 16 ; 16 ; >
-    au < ready ; exists ; 2015 ; The Journal of Forensic Practice Volume 17 ; 17 ; >
+    au < crawling ; exists ; 2015 ; The Journal of Forensic Practice Volume 17 ; 17 ; >
     au < crawling ; exists ; 2016 ; The Journal of Forensic Practice Volume 18 ; 18 ; >
     au < crawling ; exists ; 2017 ; The Journal of Forensic Practice Volume 19 ; 19 ; >
     au < crawling ; exists ; 2018 ; The Journal of Forensic Practice Volume 20 ; 20 ; >
