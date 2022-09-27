@@ -10,7 +10,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>11</string>
+        <string>12</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -91,6 +91,14 @@
             https://ash.silverchair-cdn.com/cassette.axd/file/Themes/Client/app/img/split-view_figures-tables-53a6d02348118354786b056ee1d24882350dc90b.svg
             -->
             <string>2,"^https?://([^/]+\.silverchair-cdn\.com)/cassette\.axd/.*"</string>
+            <!--Found the link in:
+            https://ashpublications.org/blood/article/140/1/1/485736/Safety-of-genetically-modified-T-cells
+            <ul id="ShareDrop" class="addthis_toolbox addthis_default_style addthis_20x20_style f-dropdown" data-dropdown-content>
+                    <li><a class="addthis_button_twitter" href="https://api.addthis.com/oexchange/0.8/forward/twitter/offer?url=https://ashpublications.org/blood/article-abstract/140/1/1/485736/Safety-of-genetically-modified-T-cells%2F&amp;pubid=xa-5265518246c10183&amp;title=Safety of genetically modified T cells" target="_blank"><span>Twitter</span></a></li>
+                    <li><a class="addthis_button_linkedin" href="https://api.addthis.com/oexchange/0.8/forward/linkedin/offer?url=https://ashpublications.org/blood/article-abstract/140/1/1/485736/Safety-of-genetically-modified-T-cells%2F&amp;pubid=xa-5265518246c10183&amp;title=Safety of genetically modified T cells" target="_blank"><span>LinkedIn</span></a></li>
+                    </ul>
+            -->
+            <string>2, "^https://api\.addthis\.com/oexchange/.*"</string>
             <!--
             Rockefeller: https://rupress.org/jem/article-pdf/215/1/1/1018472/jem_20172022.pdf
             -->
