@@ -24,7 +24,7 @@
     au < finished ; crawling ; 2019 ; Life Science Alliance Volume 2 ; 2 ; http://www.life-science-alliance.org/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; Life Science Alliance Volume 3 ; 3 ; https://www.life-science-alliance.org/ ; >
     au < crawling ; exists ; 2021 ; Life Science Alliance Volume 4 ; 4 ; https://www.life-science-alliance.org/ ; >
-    au < manifest ; exists ; 2022 ; Life Science Alliance Volume 5 ; 5 ; https://www.life-science-alliance.org/ ; >
+    au < ready ; exists ; 2022 ; Life Science Alliance Volume 5 ; 5 ; https://www.life-science-alliance.org/ ; >
 
   }
 

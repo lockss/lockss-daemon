@@ -94,7 +94,7 @@
     au < finished ; crawling ; 2019 ; Anesthesia: Essays and Researches Volume 13 ; 2019 ; 13 ; https://www.aeronline.org/ ; ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2020 ; Anesthesia: Essays and Researches Volume 14 ; 2020 ; 14 ; https://www.aeronline.org/ ; ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2021 ; Anesthesia: Essays and Researches Volume 15 ; 2021 ; 15 ; https://www.aeronline.org/ ; ; >
-    au < manifest ; exists ; 2022 ; Anesthesia: Essays and Researches Volume 16 ; 2022 ; 16 ; https://www.aeronline.org/ ; ; >
+    au < ready ; exists ; 2022 ; Anesthesia: Essays and Researches Volume 16 ; 2022 ; 16 ; https://www.aeronline.org/ ; ; >
 
   }
 
@@ -526,7 +526,7 @@
     au < crawling ; exists ; 2019 ; AYUHOM Volume 6 ; 2019 ; 6 ; https://www.ayuhom.com/ ; ; >
     au < crawling ; exists ; 2020 ; AYUHOM Volume 7 ; 2020 ; 7 ; https://www.ayuhom.com/ ; ; >
     au < crawling ; exists ; 2021 ; AYUHOM Volume 8 ; 2021 ; 8 ; https://www.ayuhom.com/ ; ; >
-    au < manifest ; exists ; 2022 ; AYUHOM Volume 9 ; 2022 ; 9 ; https://www.ayuhom.com/ ; ; >
+    au < ready ; exists ; 2022 ; AYUHOM Volume 9 ; 2022 ; 9 ; https://www.ayuhom.com/ ; ; >
 
   }
 
@@ -953,7 +953,7 @@
     au < finished ; crawling ; 2019 ; Indian Journal of Dental Research Volume 30 ; 2019 ; 30 ; https://www.ijdr.in/ ; ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Indian Journal of Dental Research Volume 31 ; 2020 ; 31 ; https://www.ijdr.in/ ; ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Indian Journal of Dental Research Volume 32 ; 2021 ; 32 ; https://www.ijdr.in/ ; ; >
-    au < manifest ; exists ; 2022 ; Indian Journal of Dental Research Volume 33 ; 2022 ; 33 ; https://www.ijdr.in/ ; ; >
+    au < ready ; exists ; 2022 ; Indian Journal of Dental Research Volume 33 ; 2022 ; 33 ; https://www.ijdr.in/ ; ; >
 
   }
 
@@ -7083,7 +7083,7 @@
       au < finished ; crawling ; 2019 ; Journal of Geriatric Mental Health Volume 6 ; 2019 ; 6 ; https://www.jgmh.org/ ; ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2020 ; Journal of Geriatric Mental Health Volume 7 ; 2020 ; 7 ; https://www.jgmh.org/ ; ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Journal of Geriatric Mental Health Volume 8 ; 2021 ; 8 ; https://www.jgmh.org/ ; ; >
-      au < manifest ; exists ; 2022 ; Journal of Geriatric Mental Health Volume 9 ; 2022 ; 9 ; https://www.jgmh.org/ ; ; >
+      au < ready ; exists ; 2022 ; Journal of Geriatric Mental Health Volume 9 ; 2022 ; 9 ; https://www.jgmh.org/ ; ; >
 
   }
 
@@ -7371,7 +7371,7 @@
       au < finished ; crawling ; 2019 ; Journal of Medical Society Volume 33 ; 2019 ; 33 ; https://www.jmedsoc.org/ ; ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2020 ; Journal of Medical Society Volume 34 ; 2020 ; 34 ; https://www.jmedsoc.org/ ; ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Journal of Medical Society Volume 35 ; 2021 ; 35 ; https://www.jmedsoc.org/ ; ; >
-      au < manifest ; exists ; 2022 ; Journal of Medical Society Volume 36 ; 2022 ; 36 ; https://www.jmedsoc.org/ ; ; >
+      au < ready ; exists ; 2022 ; Journal of Medical Society Volume 36 ; 2022 ; 36 ; https://www.jmedsoc.org/ ; ; >
 
   }
 
@@ -7417,7 +7417,7 @@
       au < finished ; crawling ; 2019 ; Journal of Mental Health and Human Behaviour Volume 24 ; 2019 ; 24 ; https://www.jmhhb.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Journal of Mental Health and Human Behaviour Volume 25 ; 2020 ; 25 ; https://www.jmhhb.org/ ; ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Journal of Mental Health and Human Behaviour Volume 26 ; 2021 ; 26 ; https://www.jmhhb.org/ ; ; >
-      au < manifest ; exists ; 2022 ; Journal of Mental Health and Human Behaviour Volume 27 ; 2022 ; 27 ; https://www.jmhhb.org/ ; ; >
+      au < ready ; exists ; 2022 ; Journal of Mental Health and Human Behaviour Volume 27 ; 2022 ; 27 ; https://www.jmhhb.org/ ; ; >
 
   }
 
@@ -7563,7 +7563,7 @@
       au < finished ; crawling ; 2019 ; Journal of Orofacial Sciences Volume 11 ; 2019 ; 11 ; https://www.jofs.in/ ; ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2020 ; Journal of Orofacial Sciences Volume 12 ; 2020 ; 12 ; https://www.jofs.in/ ; ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2021 ; Journal of Orofacial Sciences Volume 13 ; 2021 ; 13 ; https://www.jofs.in/ ; ; >
-      au < manifest ; exists ; 2022 ; Journal of Orofacial Sciences Volume 14 ; 2022 ; 14 ; https://www.jofs.in/ ; ; >
+      au < ready ; exists ; 2022 ; Journal of Orofacial Sciences Volume 14 ; 2022 ; 14 ; https://www.jofs.in/ ; ; >
 
   }
 
@@ -8012,7 +8012,7 @@
       au < finished ; crawling ; 2019 ; Muller Journal of Medical Sciences and Research Volume 10 ; 2019 ; 10 ; https://www.mjmsr.net/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Muller Journal of Medical Sciences and Research Volume 11 ; 2020 ; 11 ; https://www.mjmsr.net/ ; ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; Muller Journal of Medical Sciences and Research Volume 12 ; 2021 ; 12 ; https://www.mjmsr.net/ ; ; >
-      au < manifest ; exists ; 2022 ; Muller Journal of Medical Sciences and Research Volume 13 ; 2022 ; 13 ; https://www.mjmsr.net/ ; ; >
+      au < ready ; exists ; 2022 ; Muller Journal of Medical Sciences and Research Volume 13 ; 2022 ; 13 ; https://www.mjmsr.net/ ; ; >
 
   }
 
@@ -9329,7 +9329,7 @@
       au < finished ; crawling ; 2019 ; Annals of Tropical Pathology Volume 10 ; 2019 ; 10 ; https://www.atpjournal.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Annals of Tropical Pathology Volume 11 ; 2020 ; 11 ; https://www.atpjournal.org/ ; ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; Annals of Tropical Pathology Volume 12 ; 2021 ; 12 ; https://www.atpjournal.org/ ; ; >
-      au < manifest ; exists ; 2022 ; Annals of Tropical Pathology Volume 13 ; 2022 ; 13 ; https://www.atpjournal.org/ ; ; >
+      au < ready ; exists ; 2022 ; Annals of Tropical Pathology Volume 13 ; 2022 ; 13 ; https://www.atpjournal.org/ ; ; >
 
   }
 
@@ -9430,7 +9430,7 @@
       au < finished ; crawling ; 2019 ; Archives of Trauma Research Volume 8 ; 2019 ; 8 ; https://www.archtrauma.com/ ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Archives of Trauma Research Volume 9 ; 2020 ; 9 ; https://www.archtrauma.com/ ; ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; Archives of Trauma Research Volume 10 ; 2021 ; 10 ; https://www.archtrauma.com/ ; ; >
-      au < manifest ; exists ; 2022 ; Archives of Trauma Research Volume 11 ; 2022 ; 11 ; https://www.archtrauma.com/ ; ; >
+      au < ready ; exists ; 2022 ; Archives of Trauma Research Volume 11 ; 2022 ; 11 ; https://www.archtrauma.com/ ; ; >
 
   }
 
@@ -10858,7 +10858,7 @@
       au < finished ; crawling ; 2019 ; Libyan Journal of Medical Sciences Volume 3 ; 2019 ; 3 ; https://www.ljmsonline.com/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Libyan Journal of Medical Sciences Volume 4 ; 2020 ; 4 ; https://www.ljmsonline.com/ ; ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Libyan Journal of Medical Sciences Volume 5 ; 2021 ; 5 ; https://www.ljmsonline.com/ ; ; >
-      au < manifest ; exists ; 2022 ; Libyan Journal of Medical Sciences Volume 6 ; 2022 ; 6 ; https://www.ljmsonline.com/ ; ; >
+      au < ready ; exists ; 2022 ; Libyan Journal of Medical Sciences Volume 6 ; 2022 ; 6 ; https://www.ljmsonline.com/ ; ; >
 
   }
 
