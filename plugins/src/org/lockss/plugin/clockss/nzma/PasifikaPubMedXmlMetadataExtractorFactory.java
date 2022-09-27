@@ -104,7 +104,29 @@ public class PasifikaPubMedXmlMetadataExtractorFactory extends SourceXmlMetadata
           thisAM.replace(MetadataField.FIELD_PUBLISHER,Preferred_PUBLISHER);
         }
 
+        // The following code change is need to create custom uniq access.url for reporting purpose
+        String pageRange = "0";
+
+        if (thisAM.get(MetadataField.FIELD_START_PAGE) != null) {
+          pageRange = thisAM.get(MetadataField.FIELD_START_PAGE);
+        } else {
+           pageRange = "0";
+        }
+
+        pageRange = pageRange + "_";
+
+        if (thisAM.get(MetadataField.FIELD_END_PAGE) != null) {
+          pageRange = pageRange + thisAM.get(MetadataField.FIELD_END_PAGE);
+        } else {
+          pageRange = "9999";
+        }
+
+
+        String customAccessUrl = thisAM.get(MetadataField.FIELD_ACCESS_URL) + "?unique_record_id=" + pageRange;
+        log.debug3("customAccessUrl  = " + customAccessUrl );
+
+        thisAM.replace(MetadataField.FIELD_ACCESS_URL, customAccessUrl);
     }
-    
+
   }
 }
