@@ -4,7 +4,9 @@
   publisher <
     name = SAGE Publications ;
     info[contract] = 2015 ;
-    info[tester] = S
+    info[tester] = 5 ;
+    info[poller] = 2 ;
+    info[platform] = Unknown. 
   >
   
     {
@@ -16,12 +18,13 @@
         eissn = 2047-718X
       >
 
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      plugin = needs.plugin
+      #plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
       param[base_url] = http://hpm.sagepub.com/
       implicit < status ; status2 ; year ; isbn ; name ; param[volume_name] ; hidden[proxy] >
 
       au < exists ; exists ; 2009 ; 0-443-04576-3 ; Handbook of Practice Management Volume 71 ; 71 ; >
-	#No more AUs expected
+      #No more AUs expected
 
     }
     
