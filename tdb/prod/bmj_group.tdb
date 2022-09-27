@@ -476,8 +476,8 @@
     {
       #param[base_url] = https://www.bmj.com/
 
-      au < bmj.BMJDrupalPlugin ; exists ; 1980 ; BMJ Volume 280 ; 280 ; https://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; exists ; 1980 ; BMJ Volume 281 ; 281 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; manifest ; 1980 ; BMJ Volume 280 ; 280 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; manifest ; 1980 ; BMJ Volume 281 ; 281 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; exists ; 1981 ; BMJ Volume 282 ; 282 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; exists ; 1981 ; BMJ Volume 283 ; 283 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; exists ; 1982 ; BMJ Volume 284 ; 284 ; https://www.bmj.com/ >
