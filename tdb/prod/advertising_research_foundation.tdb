@@ -15,7 +15,7 @@
       eissn = 1740-1909 ;
       issnl = 0021-8499
     >
-
+    {
     param[base_url] = http://www.journalofadvertisingresearch.com/
 
     au < released ; 2000 ; Journal of Advertising Research Volume 40 ; 40 >
@@ -40,8 +40,12 @@
     au < released ; 2019 ; Journal of Advertising Research Volume 59 ; 59 >
     au < released ; 2020 ; Journal of Advertising Research Volume 60 ; 60 >
     au < released ; 2021 ; Journal of Advertising Research Volume 61 ; 61 >
-    au < expected ; 2022 ; Journal of Advertising Research Volume 62 ; 62 >
+    }
+    {
+    param[base_url] = https://www.journalofadvertisingresearch.com/
 
+    au < expected ; 2022 ; Journal of Advertising Research Volume 62 ; 62 >
+    }
   }
 
 }
