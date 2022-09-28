@@ -178,7 +178,8 @@ while (my $line = <>) {
         sleep(4);
 
 #GLN HighWire HW Drupal
-  } elsif ($plugin =~ m/^(?!Clockss).+DrupalPlugin/) {
+  } elsif (($plugin =~ m/^(?!Clockss).+DrupalPlugin/) ||
+           ($plugin eq AsnJournalsPlugin)) {
     $url = sprintf("%slockss-manifest/vol_%s_manifest.html",
         $param{base_url}, $param{volume_name});
         #printf("********************\n");  #debug
@@ -202,6 +203,9 @@ while (my $line = <>) {
     } elsif (($man_contents !~ m/body.*="$base_url_short[^"]*"/s) || ($man_contents !~ m/body.*="https?:\/\/.*"/s)) { #"
         #manifest page issue urls (after "body") must contain urls which start with the same characters as the manifest url
         #or must be a relative url, in which case, the link would not start with https://.
+        if ($man_contents =~ m/<a\s*href="([^"]*)">/si) { #"
+              $vol_title = $1;
+        }
         $result = "--BAD_ISS_URL--";
     } elsif (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/$base_url_short" lockss-probe/)) { #"
         $result = "CGI_probe_link";
@@ -278,13 +282,9 @@ while (my $line = <>) {
     } elsif (($man_contents !~ m/body.*="$base_url_short[^"]*"/s) || ($man_contents !~ m/body.*="https?:\/\/.*"/s)) { #"
         #manifest page issue urls (after "body") must contain urls which start with the same characters as the manifest url
         #or must be a relative url, in which case, the link would not start with https://.
-#        if ($man_contents =~ m/href=([^>]*)>/si) {
-#              $vol_title = $1;
-#        }
-#        if ($man_contents =~ m/<a href="([^"]*)"/si) { #"
-#            $vol_title = $1;
-#            $vol_title = "XXXXX";
-#        }
+        if ($man_contents =~ m/<a\s*href="([^"]*)">/si) { #"
+              $vol_title = $1;
+        }
         $result = "--BAD_ISS_URL--";
     } elsif (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/$base_url_short" lockss-probe/)) { #"
         $result = "CGI_probe_link";
@@ -337,7 +337,8 @@ while (my $line = <>) {
     sleep(4);
 
 #GLN Highwire HW Origins
-  } elsif (($plugin =~ m/^(?!Clockss).+OriginsPlugin/) || ($plugin =~ m/^(?!Clockss).+ScolarisPlugin/)) {
+  } elsif (($plugin =~ m/^(?!Clockss).+OriginsPlugin/) || 
+           ($plugin =~ m/^(?!Clockss).+ScolarisPlugin/)) {
     $url = sprintf("%scontent/%s/lockss-manifest/vol_%s_manifest.html",
         $param{base_url}, $param{journal_id}, $param{volume_name});
         #printf("********************\n");  #debug
