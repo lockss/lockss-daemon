@@ -74,7 +74,6 @@ echo "GLN. Duplicate Released Names. Commented out."
 # Find number of AUs ready for release in the prod title database
 echo "----------------------"
 ./scripts/tdb/tdbout -Y -t status tdb/prod/ | sort | uniq -c
-echo " "
 #
 # Find plugin names with "Clockss" in the prod title database
 echo "----------------------"
@@ -116,12 +115,12 @@ echo "Clockss. Duplicate Released Names. Commented out."
 # Find number of AUs ready for release in the clockssingest title database
 echo "----------------------"
 ./scripts/tdb/tdbout -Y -t status tdb/clockssingest/ | sort | uniq -c
-echo " "
 #
-# Find plugin names with "Clockss" in the prod title database
+# Find plugin names without "Clockss" in the clockss title database
 echo "----------------------"
 ./scripts/tdb/tdbout -t publisher,name,plugin -Q 'plugin !~ "Clockss" and plugin !~ "needs"' tdb/clockssingest/{,*/}*.tdb
 echo " "
+
 # Find duplicate auids in the whole database. Not exists or expected
 #echo "---------------------"
 #echo "---------------------"
@@ -166,6 +165,11 @@ echo "---------------------"
 echo "---------------------"
 echo "CLOCKSS. tdb files ready to retire?"
 grep -L -e exists -e crawling -e manifest -e testing -e expected tdb/clockssingest/*.tdb
+echo "---------------------"
+echo "---------------------"
+echo "CLOCKSS. tdb files not assigned to content testing"
+scripts/tdb/tdbout -t publisher:info[tester],publisher -Q 'publisher:info[tester] is not "8" and publisher:info[tester] is not "5"' tdb/clockssingest/*.tdb | sort | uniq -c
+
 # Find issn problems in gln title database
 echo "---------------------"
 echo "---------------------"
