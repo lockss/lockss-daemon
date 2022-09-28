@@ -2,6 +2,9 @@
 
   publisher <
     name = American Mosquito Control Association ;
+    info[contract] = 9999 ;
+    info[tester] = 3 ;
+    info[poller] = 3 ;
     info[platform] = Silverchair
   >
 
