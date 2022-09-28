@@ -158,9 +158,9 @@
       au < manifest ; exists ; 2016 ; 2016 ; 2016 ; Authorship Volume 2016 ; >
       au < manifest ; exists ; 2017 ; 2017 ; 2017 ; Authorship Volume 2017 ; >
       au < manifest ; exists ; 2018 ; 2018 ; 2018 ; Authorship Volume 2018 ; >
-      au < testing ; exists ; 2019 ; 2019 ; 2019 ; Authorship Volume 2019 ; >
-      au < testing ; exists ; 2020 ; 2020 ; 2020 ; Authorship Volume 2020 ; >
-      au < testing ; exists ; 2021 ; 2021 ; 2021 ; Authorship Volume 2021 ; >
+      au < notReady ; exists ; 2019 ; 2019 ; 2019 ; Authorship Volume 2019 ; >
+      au < notReady ; exists ; 2020 ; 2020 ; 2020 ; Authorship Volume 2020 ; >
+      au < notReady ; exists ; 2021 ; 2021 ; 2021 ; Authorship Volume 2021 ; >
       au < exists ; exists ; 2022 ; 2022 ; 2022 ; Authorship Volume 2022 ; >
 
   }
@@ -261,9 +261,9 @@
       #published 2020-present
       param[journal_id] = digest
 
-      au < testing ; exists ; 2020 ; 2020 ; 2020 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2020 ; >
-      au < testing ; exists ; 2021 ; 2021 ; 2021 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2021 ; >
-      au < testing ; exists ; 2022 ; 2022 ; 2022 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2022 ; >
+      au < notReady ; exists ; 2020 ; 2020 ; 2020 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2020 ; >
+      au < notReady ; exists ; 2021 ; 2021 ; 2021 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2021 ; >
+      au < notReady ; exists ; 2022 ; 2022 ; 2022 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2022 ; >
 
   }
 
@@ -313,7 +313,7 @@
       au < manifest ; exists ; 2016 ; 2016 ; 2016 ; Documenta Volume 2016 ; >
       au < manifest ; exists ; 2017 ; 2017 ; 2017 ; Documenta Volume 2017 ; >
       au < manifest ; exists ; 2018 ; 2018 ; 2018 ; Documenta Volume 2018 ; >
-      au < testing ; exists ; 2019 ; 2019 ; 2019 ; Documenta Volume 2019 ; >
+      au < notReady ; exists ; 2019 ; 2019 ; 2019 ; Documenta Volume 2019 ; >
 
   }
 
@@ -375,7 +375,7 @@
       au < manifest ; exists ; 2016 ; 2016 ; 2016 ; Ghendtsche Tydinghen Volume 2016 ; >
       au < manifest ; exists ; 2017 ; 2017 ; 2017 ; Ghendtsche Tydinghen Volume 2017 ; >
       au < manifest ; exists ; 2018 ; 2018 ; 2018 ; Ghendtsche Tydinghen Volume 2018 ; >
-      au < testing ; exists ; 2019 ; 2019 ; 2019 ; Ghendtsche Tydinghen Volume 2019 ; >
+      au < notReady ; exists ; 2019 ; 2019 ; 2019 ; Ghendtsche Tydinghen Volume 2019 ; >
 
   }
 
@@ -640,7 +640,7 @@
       au < manifest ; exists ; 2016 ; 2016 ; 2016 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2016 ; >
       au < manifest ; exists ; 2017 ; 2017 ; 2017 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2017 ; >
       au < manifest ; exists ; 2018 ; 2018 ; 2018 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2018 ; >
-      au < testing ; exists ; 2019 ; 2019 ; 2019 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2019 ; >
+      au < notReady ; exists ; 2019 ; 2019 ; 2019 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2019 ; >
 
   }
 
@@ -783,8 +783,8 @@
       au < manifest ; exists ; 2016 ; 2016 ; 2016 ; Journal for the History of Environment and Society Volume 2016 ; >
       au < manifest ; exists ; 2017 ; 2017 ; 2017 ; Journal for the History of Environment and Society Volume 2017 ; >
       au < manifest ; exists ; 2018 ; 2018 ; 2018 ; Journal for the History of Environment and Society Volume 2018 ; >
-      au < testing ; exists ; 2019 ; 2019 ; 2019 ; Journal for the History of Environment and Society Volume 2019 ; >
-      au < testing ; exists ; 2020 ; 2020 ; 2020 ; Journal for the History of Environment and Society Volume 2020 ; >
+      au < notReady ; exists ; 2019 ; 2019 ; 2019 ; Journal for the History of Environment and Society Volume 2019 ; >
+      au < notReady ; exists ; 2020 ; 2020 ; 2020 ; Journal for the History of Environment and Society Volume 2020 ; >
 
   }
 
@@ -801,10 +801,10 @@
       au < manifest ; exists ; 2016 ; 2016 ; 2016 ; Journal of European Periodical Studies Volume 2016 ; >
       au < manifest ; exists ; 2017 ; 2017 ; 2017 ; Journal of European Periodical Studies Volume 2017 ; >
       au < manifest ; exists ; 2018 ; 2018 ; 2018 ; Journal of European Periodical Studies Volume 2018 ; >
-      au < testing ; exists ; 2019 ; 2019 ; 2019 ; Journal of European Periodical Studies Volume 2019 ; >
-      au < testing ; exists ; 2020 ; 2020 ; 2020 ; Journal of European Periodical Studies Volume 2020 ; >
-      au < testing ; exists ; 2021 ; 2021 ; 2021 ; Journal of European Periodical Studies Volume 2021 ; >
-      au < testing ; exists ; 2022 ; 2022 ; 2022 ; Journal of European Periodical Studies Volume 2022 ; >
+      au < notReady ; exists ; 2019 ; 2019 ; 2019 ; Journal of European Periodical Studies Volume 2019 ; >
+      au < notReady ; exists ; 2020 ; 2020 ; 2020 ; Journal of European Periodical Studies Volume 2020 ; >
+      au < notReady ; exists ; 2021 ; 2021 ; 2021 ; Journal of European Periodical Studies Volume 2021 ; >
+      au < notReady ; exists ; 2022 ; 2022 ; 2022 ; Journal of European Periodical Studies Volume 2022 ; >
 
   }
 
@@ -818,10 +818,10 @@
       #published 2019-present
       param[journal_id] = jolcel
 
-      au < testing ; exists ; 2019 ; 2019 ; 2019 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2019 ; >
-      au < testing ; exists ; 2020 ; 2020 ; 2020 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2020 ; >
-      au < testing ; exists ; 2021 ; 2021 ; 2021 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2021 ; >
-      au < testing ; exists ; 2022 ; 2022 ; 2022 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2022 ; >
+      au < notReady ; exists ; 2019 ; 2019 ; 2019 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2019 ; >
+      au < notReady ; exists ; 2020 ; 2020 ; 2020 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2020 ; >
+      au < notReady ; exists ; 2021 ; 2021 ; 2021 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2021 ; >
+      au < notReady ; exists ; 2022 ; 2022 ; 2022 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2022 ; >
 
   }
 
@@ -954,7 +954,7 @@
       au < exists ; exists ; 2017 ; 2017 ; 2017 ; Relaties en Nieuwe Gezinnen Volume 2017 ; >
       au < manifest ; exists ; 2018 ; 2018 ; 2018 ; Relaties en Nieuwe Gezinnen Volume 2018 ; >
       au < exists ; exists ; 2019 ; 2019 ; 2019 ; Relaties en Nieuwe Gezinnen Volume 2019 ; >
-      au < testing ; exists ; 2020 ; 2020 ; 2020 ; Relaties en Nieuwe Gezinnen Volume 2020 ; >
+      au < notReady ; exists ; 2020 ; 2020 ; 2020 ; Relaties en Nieuwe Gezinnen Volume 2020 ; >
 
   }
 
@@ -1195,10 +1195,10 @@
       au < manifest ; exists ; 2016 ; 2016 ; 2016 ; Vlaams Diergeneeskundig Tijdschrift Volume 2016 ; >
       au < manifest ; exists ; 2017 ; 2017 ; 2017 ; Vlaams Diergeneeskundig Tijdschrift Volume 2017 ; >
       au < manifest ; exists ; 2018 ; 2018 ; 2018 ; Vlaams Diergeneeskundig Tijdschrift Volume 2018 ; >
-      au < testing ; exists ; 2019 ; 2019 ; 2019 ; Vlaams Diergeneeskundig Tijdschrift Volume 2019 ; >
-      au < testing ; exists ; 2020 ; 2020 ; 2020 ; Vlaams Diergeneeskundig Tijdschrift Volume 2020 ; >
-      au < testing ; exists ; 2021 ; 2021 ; 2021 ; Vlaams Diergeneeskundig Tijdschrift Volume 2021 ; >
-      au < testing ; exists ; 2022 ; 2022 ; 2022 ; Vlaams Diergeneeskundig Tijdschrift Volume 2022 ; >
+      au < notReady ; exists ; 2019 ; 2019 ; 2019 ; Vlaams Diergeneeskundig Tijdschrift Volume 2019 ; >
+      au < notReady ; exists ; 2020 ; 2020 ; 2020 ; Vlaams Diergeneeskundig Tijdschrift Volume 2020 ; >
+      au < notReady ; exists ; 2021 ; 2021 ; 2021 ; Vlaams Diergeneeskundig Tijdschrift Volume 2021 ; >
+      au < notReady ; exists ; 2022 ; 2022 ; 2022 ; Vlaams Diergeneeskundig Tijdschrift Volume 2022 ; >
 
   }
 
@@ -1222,10 +1222,10 @@
       au < manifest ; exists ; 2016 ; 2016 ; 2016 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2016 ; >
       au < manifest ; exists ; 2017 ; 2017 ; 2017 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2017 ; >
       au < manifest ; exists ; 2018 ; 2018 ; 2018 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2018 ; >
-      au < testing ; exists ; 2019 ; 2019 ; 2019 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2019 ; >
-      au < testing ; exists ; 2020 ; 2020 ; 2020 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2020 ; >
-      au < testing ; exists ; 2021 ; 2021 ; 2021 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2021 ; >
-      au < testing ; exists ; 2022 ; 2022 ; 2022 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2022 ; >
+      au < notReady ; exists ; 2019 ; 2019 ; 2019 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2019 ; >
+      au < notReady ; exists ; 2020 ; 2020 ; 2020 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2020 ; >
+      au < notReady ; exists ; 2021 ; 2021 ; 2021 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2021 ; >
+      au < notReady ; exists ; 2022 ; 2022 ; 2022 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2022 ; >
 
   }
 
@@ -1251,7 +1251,7 @@
       #published 2019-2019
       param[journal_id] = autex
 
-      au < testing ; exists ; 2019 ; 2019 ; 2019 ; Proceedings Autex 2019 Volume 2019 ; >
+      au < notReady ; exists ; 2019 ; 2019 ; 2019 ; Proceedings Autex 2019 Volume 2019 ; >
 
   }
 
