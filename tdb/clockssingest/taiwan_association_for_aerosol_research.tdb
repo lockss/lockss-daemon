@@ -1,0 +1,52 @@
+{
+
+  publisher <
+    name = Taiwan Association for Aerosol Research ;
+    info[contract] = 2022 ;
+    info[back] = 2015 ;
+    info[tester] = 5 ;
+    info[poller] = 5 ;
+    info[platform] = Custom
+  >
+
+    plugin = needs.plugin
+    param[base_url] = https://aaqr.org/
+    implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+
+  {
+  
+    title < 
+      name = Aerosol and Air Quality Research ;
+      issn = 1680-8584 ;
+      eissn = 2071-1409
+    >
+
+      param[journal_id] = revista
+      #published 2001 to present
+
+      au < exists ; exists ; 2001 ; Aerosol and Air Quality Research Volume 1 ; 1 ; >
+      au < exists ; exists ; 2002 ; Aerosol and Air Quality Research Volume 2 ; 2 ; >
+      au < exists ; exists ; 2003 ; Aerosol and Air Quality Research Volume 3 ; 3 ; >
+      au < exists ; exists ; 2004 ; Aerosol and Air Quality Research Volume 4 ; 4 ; >
+      au < exists ; exists ; 2005 ; Aerosol and Air Quality Research Volume 5 ; 5 ; >
+      au < exists ; exists ; 2006 ; Aerosol and Air Quality Research Volume 6 ; 6 ; >
+      au < exists ; exists ; 2007 ; Aerosol and Air Quality Research Volume 7 ; 7 ; >
+      au < exists ; exists ; 2008 ; Aerosol and Air Quality Research Volume 8 ; 8 ; >
+      au < exists ; exists ; 2009 ; Aerosol and Air Quality Research Volume 9 ; 9 ; >
+      au < exists ; exists ; 2010 ; Aerosol and Air Quality Research Volume 10 ; 10 ; >
+      au < exists ; exists ; 2011 ; Aerosol and Air Quality Research Volume 11 ; 11 ; >
+      au < exists ; exists ; 2012 ; Aerosol and Air Quality Research Volume 12 ; 12 ; >
+      au < exists ; exists ; 2013 ; Aerosol and Air Quality Research Volume 13 ; 13 ; >
+      au < exists ; exists ; 2014 ; Aerosol and Air Quality Research Volume 14 ; 14 ; >
+      au < exists ; exists ; 2015 ; Aerosol and Air Quality Research Volume 15 ; 15 ; >
+      au < exists ; exists ; 2016 ; Aerosol and Air Quality Research Volume 16 ; 16 ; >
+      au < exists ; exists ; 2017 ; Aerosol and Air Quality Research Volume 17 ; 17 ; >
+      au < exists ; exists ; 2018 ; Aerosol and Air Quality Research Volume 18 ; 18 ; >
+      au < exists ; exists ; 2019 ; Aerosol and Air Quality Research Volume 19 ; 19 ; >
+      au < exists ; exists ; 2020 ; Aerosol and Air Quality Research Volume 20 ; 20 ; >
+      au < exists ; exists ; 2021 ; Aerosol and Air Quality Research Volume 21 ; 21 ; >
+      au < exists ; exists ; 2022 ; Aerosol and Air Quality Research Volume 22 ; 22 ; >
+
+  }
+
+}
