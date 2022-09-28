@@ -3,7 +3,10 @@
   publisher <
     name = GigaScience ;
     info[contract] = 2019 ;
-    info[tester] = S
+    info[back] = 2018 ;
+    info[tester] = 7 ;
+    info[poller] = 3 ;
+    info[platform] = Custom
   >
   
   plugin = org.lockss.plugin.gigascience.ClockssGigaSciencePlugin
