@@ -9,9 +9,9 @@
     info[platform] = Custom
   >
 
-    plugin = needs.plugin
+    plugin = org.lockss.plugin.taar.ClockssTaarPlugin
     param[base_url] = https://aaqr.org/
-    implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
 
   {
   
@@ -21,7 +21,7 @@
       eissn = 2071-1409
     >
 
-      param[journal_id] = revista
+      param[journal_id] = aaqr
       #published 2001 to present
 
       au < exists ; exists ; 2001 ; Aerosol and Air Quality Research Volume 1 ; 1 ; >
