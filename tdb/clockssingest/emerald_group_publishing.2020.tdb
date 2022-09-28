@@ -742,7 +742,7 @@
     # online from 1997
     comment[merged_into] = 0307-4803
 
-    au < manifest ; exists ; 1997 ; Asian Libraries Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1997 ; Asian Libraries Volume 6 ; 6 ; > #host did not respond
     au < ready ; exists ; 1998 ; Asian Libraries Volume 7 ; 7 ; >
     au < crawling ; exists ; 1999 ; Asian Libraries Volume 8 ; 8 ; >
 
@@ -2360,8 +2360,8 @@
     comment[journal_id] = err
     comment[merged_into] = 0950-4125
 
-    au < manifest ; exists ; 1997 ; Electronic Resources Review Volume 1 ; 1 ; >
-    au < manifest ; exists ; 1998 ; Electronic Resources Review Volume 2 ; 2 ; >
+    au < notReady ; exists ; 1997 ; Electronic Resources Review Volume 1 ; 1 ; > #no substance
+    au < notReady ; exists ; 1998 ; Electronic Resources Review Volume 2 ; 2 ; > #no substance
     au < notReady ; exists ; 1999 ; Electronic Resources Review Volume 3 ; 3 ; > #no substance
     au < doNotProcess ; doNotProcess ; 2000 ; Electronic Resources Review Volume 4 ; 4 ; >
 
@@ -4203,7 +4203,7 @@
     au < manifest ; exists ; 1994 ; International Journal of Conflict Management Volume 5 ; 5 ; >
     au < manifest ; exists ; 1995 ; International Journal of Conflict Management Volume 6 ; 6 ; >
     au < manifest ; exists ; 1996 ; International Journal of Conflict Management Volume 7 ; 7 ; >
-    au < manifest ; exists ; 1997 ; International Journal of Conflict Management Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1997 ; International Journal of Conflict Management Volume 8 ; 8 ; > #unable to fetch permission page
     au < ready ; exists ; 1998 ; International Journal of Conflict Management Volume 9 ; 9 ; >
     au < frozen ; exists ; 1999 ; International Journal of Conflict Management Volume 10 ; 10 ; >
     au < frozen ; exists ; 2000 ; International Journal of Conflict Management Volume 11 ; 11 ; >
@@ -10476,7 +10476,7 @@
     au < manifest ; exists ; 1994 ; Microelectronics International Volume 11 ; 11 ; >
     au < manifest ; exists ; 1995 ; Microelectronics International Volume 12 ; 12 ; >
     au < manifest ; exists ; 1996 ; Microelectronics International Volume 13 ; 13 ; >
-    au < manifest ; exists ; 1997 ; Microelectronics International Volume 14 ; 14 ; >
+    au < notReady ; exists ; 1997 ; Microelectronics International Volume 14 ; 14 ; > #no substance
     au < ready ; exists ; 1998 ; Microelectronics International Volume 15 ; 15 ; >
     au < ready ; exists ; 1999 ; Microelectronics International Volume 16 ; 16 ; >
     au < crawling ; exists ; 2000 ; Microelectronics International Volume 17 ; 17 ; >
@@ -12217,7 +12217,7 @@
     au < manifest ; exists ; 1994 ; Soldering & Surface Mount Technology Volume 6 ; 6 ; >
     au < manifest ; exists ; 1995 ; Soldering & Surface Mount Technology Volume 7 ; 7 ; >
     au < manifest ; exists ; 1996 ; Soldering & Surface Mount Technology Volume 8 ; 8 ; >
-    au < manifest ; exists ; 1997 ; Soldering & Surface Mount Technology Volume 9 ; 9 ; >
+    au < notReady ; exists ; 1997 ; Soldering & Surface Mount Technology Volume 9 ; 9 ; > #no substance
     au < ready ; exists ; 1998 ; Soldering & Surface Mount Technology Volume 10 ; 10 ; >
     au < crawling ; exists ; 1999 ; Soldering & Surface Mount Technology Volume 11 ; 11 ; >
     au < frozen ; exists ; 2000 ; Soldering & Surface Mount Technology Volume 12 ; 12 ; >
