@@ -9,7 +9,6 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArticleFiles;
 import org.lockss.plugin.ArticleIteratorFactory;
 import org.lockss.plugin.SubTreeArticleIteratorBuilder;
-import org.lockss.plugin.clockss.iop.IopBookArticleIteratorFactory;
 import org.lockss.util.Logger;
 
 import java.util.Iterator;
@@ -17,7 +16,7 @@ import java.util.regex.Pattern;
 
 public class PasifikaPubMedXmlArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
-    protected static Logger log = Logger.getLogger(IopBookArticleIteratorFactory.class);
+    protected static Logger log = Logger.getLogger(PasifikaPubMedXmlArticleIteratorFactory.class);
 
     protected static final String ROOT_TEMPLATE = "\"%s%d\",base_url,year";
     private static final String PATTERN_TEMPLATE = "\"%s%d/.+\",base_url,year";
