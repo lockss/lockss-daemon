@@ -1,7 +1,6 @@
 /*
 
-Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
-All rights reserved.
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -46,7 +45,7 @@ import org.lockss.util.ListUtil;
 import org.lockss.util.urlconn.CacheException;
 import org.lockss.util.urlconn.HttpResultMap;
 
-public class TestClockssELifeJCorePlugin extends LockssTestCase {
+public class TestClockssELifeDrupalPlugin extends LockssTestCase {
   
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String VOL_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
@@ -54,7 +53,7 @@ public class TestClockssELifeJCorePlugin extends LockssTestCase {
   private MockLockssDaemon theDaemon;
   private DefinablePlugin plugin;
   
-  public TestClockssELifeJCorePlugin(String msg) {
+  public TestClockssELifeDrupalPlugin(String msg) {
     super(msg);
   }
   
@@ -103,7 +102,7 @@ public class TestClockssELifeJCorePlugin extends LockssTestCase {
     };
     
     DefinableArchivalUnit au = makeAuFromProps(props);
-    assertEquals("eLife Sciences Plugin (retired site for CLOCKSS), Base URL http://www.example.com/, Volume 2013",
+    assertEquals("eLife Sciences Journals Plugin (Legacy 2014, CLOCKSS), Base URL http://www.example.com/, Volume 2013",
         au.getName());
     assertEquals(ListUtil.fromArray(starturl), au.getStartUrls());
   }
