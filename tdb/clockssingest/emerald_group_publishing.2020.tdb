@@ -7183,19 +7183,19 @@
 
     au < frozen ; exists ; 2007 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 1 ; 1 ; >
     au < frozen ; exists ; 2008 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2009 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2010 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2011 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2012 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2013 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2009 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2010 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2011 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2012 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2013 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2019 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2019 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 13 ; 13 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2021 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 15 ; 15 ; >
+    au < deepCrawl ; exists ; 2021 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 15 ; 15 ; >
     au < crawling ; exists ; 2022 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 16 ; 16 ; >
 
   }
@@ -7209,8 +7209,8 @@
     param[journal_issn] = 2045-2101
     comment[journal_id] = jepp
 
-    au < crawling ; exists ; 2012 ; Journal of Entrepreneurship and Public Policy Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2013 ; Journal of Entrepreneurship and Public Policy Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2012 ; Journal of Entrepreneurship and Public Policy Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2013 ; Journal of Entrepreneurship and Public Policy Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Entrepreneurship and Public Policy Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Entrepreneurship and Public Policy Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Entrepreneurship and Public Policy Volume 5 ; 5 ; >
@@ -7218,7 +7218,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Entrepreneurship and Public Policy Volume 7 ; 7 ; >
     au < frozen ; exists ; 2019 ; Journal of Entrepreneurship and Public Policy Volume 8 ; 8 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Entrepreneurship and Public Policy Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2021 ; Journal of Entrepreneurship and Public Policy Volume 10 ; 10 ; >
+    au < deepCrawl ; exists ; 2021 ; Journal of Entrepreneurship and Public Policy Volume 10 ; 10 ; >
     au < crawling ; exists ; 2022 ; Journal of Entrepreneurship and Public Policy Volume 11 ; 11 ; >
 
   }
@@ -7255,19 +7255,19 @@
     au < manifest ; exists ; 1995 ; Journal of European Industrial Training Volume 19 ; 19 ; >
     au < manifest ; exists ; 1996 ; Journal of European Industrial Training Volume 20 ; 20 ; >
     au < manifest ; exists ; 1997 ; Journal of European Industrial Training Volume 21 ; 21 ; >
-    au < crawling ; exists ; 1998 ; Journal of European Industrial Training Volume 22 ; 22 ; >
+    au < frozen ; exists ; 1998 ; Journal of European Industrial Training Volume 22 ; 22 ; >
     au < ready ; exists ; 1999 ; Journal of European Industrial Training Volume 23 ; 23 ; >
     au < frozen ; exists ; 2000 ; Journal of European Industrial Training Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2001 ; Journal of European Industrial Training Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2002 ; Journal of European Industrial Training Volume 26 ; 26 ; >
-    au < crawling ; exists ; 2003 ; Journal of European Industrial Training Volume 27 ; 27 ; >
-    au < crawling ; exists ; 2004 ; Journal of European Industrial Training Volume 28 ; 28 ; >
-    au < crawling ; exists ; 2005 ; Journal of European Industrial Training Volume 29 ; 29 ; >
-    au < crawling ; exists ; 2006 ; Journal of European Industrial Training Volume 30 ; 30 ; >
-    au < crawling ; exists ; 2007 ; Journal of European Industrial Training Volume 31 ; 31 ; >
-    au < crawling ; exists ; 2008 ; Journal of European Industrial Training Volume 32 ; 32 ; >
-    au < crawling ; exists ; 2009 ; Journal of European Industrial Training Volume 33 ; 33 ; >
-    au < crawling ; exists ; 2010 ; Journal of European Industrial Training Volume 34 ; 34 ; >
+    au < frozen ; exists ; 2001 ; Journal of European Industrial Training Volume 25 ; 25 ; >
+    au < frozen ; exists ; 2002 ; Journal of European Industrial Training Volume 26 ; 26 ; >
+    au < frozen ; exists ; 2003 ; Journal of European Industrial Training Volume 27 ; 27 ; >
+    au < frozen ; exists ; 2004 ; Journal of European Industrial Training Volume 28 ; 28 ; >
+    au < frozen ; exists ; 2005 ; Journal of European Industrial Training Volume 29 ; 29 ; >
+    au < frozen ; exists ; 2006 ; Journal of European Industrial Training Volume 30 ; 30 ; >
+    au < frozen ; exists ; 2007 ; Journal of European Industrial Training Volume 31 ; 31 ; >
+    au < frozen ; exists ; 2008 ; Journal of European Industrial Training Volume 32 ; 32 ; >
+    au < frozen ; exists ; 2009 ; Journal of European Industrial Training Volume 33 ; 33 ; >
+    au < frozen ; exists ; 2010 ; Journal of European Industrial Training Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Journal of European Industrial Training Volume 35 ; 35 ; >
 
   }
@@ -7283,20 +7283,20 @@
     param[journal_issn] = 1753-9269
     comment[journal_id] = jerer
 
-    au < crawling ; exists ; 2008 ; Journal of European Real Estate Research Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2009 ; Journal of European Real Estate Research Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2010 ; Journal of European Real Estate Research Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2011 ; Journal of European Real Estate Research Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2012 ; Journal of European Real Estate Research Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2013 ; Journal of European Real Estate Research Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2008 ; Journal of European Real Estate Research Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2009 ; Journal of European Real Estate Research Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2010 ; Journal of European Real Estate Research Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2011 ; Journal of European Real Estate Research Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2012 ; Journal of European Real Estate Research Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2013 ; Journal of European Real Estate Research Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of European Real Estate Research Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of European Real Estate Research Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of European Real Estate Research Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of European Real Estate Research Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of European Real Estate Research Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2019 ; Journal of European Real Estate Research Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2019 ; Journal of European Real Estate Research Volume 12 ; 12 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of European Real Estate Research Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2021 ; Journal of European Real Estate Research Volume 14 ; 14 ; >
+    au < deepCrawl ; exists ; 2021 ; Journal of European Real Estate Research Volume 14 ; 14 ; >
     au < crawling ; exists ; 2022 ; Journal of European Real Estate Research Volume 15 ; 15 ; >
 
   }
@@ -7312,25 +7312,25 @@
     param[journal_issn] = 1472-5967
     comment[journal_id] = jfm
 
-    au < crawling ; exists ; 2003 ; Journal of Facilities Management Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2003 ; Journal of Facilities Management Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2004 ; Journal of Facilities Management Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2005 ; Journal of Facilities Management Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2006 ; Journal of Facilities Management Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2007 ; Journal of Facilities Management Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2008 ; Journal of Facilities Management Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2009 ; Journal of Facilities Management Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2010 ; Journal of Facilities Management Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2011 ; Journal of Facilities Management Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2006 ; Journal of Facilities Management Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2007 ; Journal of Facilities Management Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2008 ; Journal of Facilities Management Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2009 ; Journal of Facilities Management Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2010 ; Journal of Facilities Management Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2011 ; Journal of Facilities Management Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Facilities Management Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2013 ; Journal of Facilities Management Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2013 ; Journal of Facilities Management Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Facilities Management Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Facilities Management Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Facilities Management Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Facilities Management Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Facilities Management Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2019 ; Journal of Facilities Management Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2019 ; Journal of Facilities Management Volume 17 ; 17 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Facilities Management Volume 18 ; 18 ; >
-    au < crawling ; exists ; 2021 ; Journal of Facilities Management Volume 19 ; 19 ; >
+    au < deepCrawl ; exists ; 2021 ; Journal of Facilities Management Volume 19 ; 19 ; >
     au < crawling ; exists ; 2022 ; Journal of Facilities Management Volume 20 ; 20 ; >
 
   }
@@ -7345,9 +7345,9 @@
     param[journal_issn] = 2043-6238
     comment[journal_id] = jfbm
 
-    au < crawling ; exists ; 2011 ; Journal of Family Business Management Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2012 ; Journal of Family Business Management Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2013 ; Journal of Family Business Management Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2011 ; Journal of Family Business Management Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2012 ; Journal of Family Business Management Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2013 ; Journal of Family Business Management Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Family Business Management Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Family Business Management Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Family Business Management Volume 6 ; 6 ; >
@@ -7355,7 +7355,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Family Business Management Volume 8 ; 8 ; >
     au < frozen ; exists ; 2019 ; Journal of Family Business Management Volume 9 ; 9 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Family Business Management Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2021 ; Journal of Family Business Management Volume 11 ; 11 ; >
+    au < deepCrawl ; exists ; 2021 ; Journal of Family Business Management Volume 11 ; 11 ; >
     au < crawling ; exists ; 2022 ; Journal of Family Business Management Volume 12 ; 12 ; >
 
   }
@@ -7373,29 +7373,29 @@
 
     au < manifest ; exists ; 1997 ; Journal of Fashion Marketing and Management Volume 1 ; 1 ; >
     au < ready ; exists ; 1998 ; Journal of Fashion Marketing and Management Volume 2 ; 2 ; >
-    au < crawling ; exists ; 1999 ; Journal of Fashion Marketing and Management Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2000 ; Journal of Fashion Marketing and Management Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2001 ; Journal of Fashion Marketing and Management Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2002 ; Journal of Fashion Marketing and Management Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2003 ; Journal of Fashion Marketing and Management Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2004 ; Journal of Fashion Marketing and Management Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2005 ; Journal of Fashion Marketing and Management Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2006 ; Journal of Fashion Marketing and Management Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2007 ; Journal of Fashion Marketing and Management Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2008 ; Journal of Fashion Marketing and Management Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2009 ; Journal of Fashion Marketing and Management Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2010 ; Journal of Fashion Marketing and Management Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2011 ; Journal of Fashion Marketing and Management Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2012 ; Journal of Fashion Marketing and Management Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2013 ; Journal of Fashion Marketing and Management Volume 17 ; 17 ; >
+    au < frozen ; exists ; 1999 ; Journal of Fashion Marketing and Management Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2000 ; Journal of Fashion Marketing and Management Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2001 ; Journal of Fashion Marketing and Management Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2002 ; Journal of Fashion Marketing and Management Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2003 ; Journal of Fashion Marketing and Management Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2004 ; Journal of Fashion Marketing and Management Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2005 ; Journal of Fashion Marketing and Management Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2006 ; Journal of Fashion Marketing and Management Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2007 ; Journal of Fashion Marketing and Management Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2008 ; Journal of Fashion Marketing and Management Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2009 ; Journal of Fashion Marketing and Management Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2010 ; Journal of Fashion Marketing and Management Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2011 ; Journal of Fashion Marketing and Management Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2012 ; Journal of Fashion Marketing and Management Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2013 ; Journal of Fashion Marketing and Management Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Fashion Marketing and Management Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Fashion Marketing and Management Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Fashion Marketing and Management Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Fashion Marketing and Management Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Fashion Marketing and Management Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2019 ; Journal of Fashion Marketing and Management Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2019 ; Journal of Fashion Marketing and Management Volume 23 ; 23 ; >
     au < notReady ; exists ; 2020 ; Journal of Fashion Marketing and Management Volume 24 ; 24 ; > #500 error https://www.emerald.com/insight/content/doi/10.1108/JFMM-10-2018-0138/full/html
-    au < crawling ; exists ; 2021 ; Journal of Fashion Marketing and Management Volume 25 ; 25 ; >
+    au < deepCrawl ; exists ; 2021 ; Journal of Fashion Marketing and Management Volume 25 ; 25 ; >
     au < crawling ; exists ; 2022 ; Journal of Fashion Marketing and Management Volume 26 ; 26 ; >
 
   }
@@ -7417,20 +7417,20 @@
     au < manifest ; exists ; 1997 ; Journal of Financial Crime Volume 4 ; 4 ; >
     au < ready ; exists ; 1998 ; Journal of Financial Crime Volume 5 ; 5 ; >
     au < ready ; exists ; 1999 ; Journal of Financial Crime Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2000 ; Journal of Financial Crime Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2001 ; Journal of Financial Crime Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2002 ; Journal of Financial Crime Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2003 ; Journal of Financial Crime Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2004 ; Journal of Financial Crime Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2000 ; Journal of Financial Crime Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2001 ; Journal of Financial Crime Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2002 ; Journal of Financial Crime Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2003 ; Journal of Financial Crime Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2004 ; Journal of Financial Crime Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2005 ; Journal of Financial Crime Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2006 ; Journal of Financial Crime Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2007 ; Journal of Financial Crime Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2008 ; Journal of Financial Crime Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2009 ; Journal of Financial Crime Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2010 ; Journal of Financial Crime Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2011 ; Journal of Financial Crime Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2006 ; Journal of Financial Crime Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2007 ; Journal of Financial Crime Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2008 ; Journal of Financial Crime Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2009 ; Journal of Financial Crime Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2010 ; Journal of Financial Crime Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2011 ; Journal of Financial Crime Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Financial Crime Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2013 ; Journal of Financial Crime Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2013 ; Journal of Financial Crime Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Financial Crime Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Financial Crime Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Financial Crime Volume 23 ; 23 ; >
@@ -7438,7 +7438,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Financial Crime Volume 25 ; 25 ; >
     au < frozen ; exists ; 2019 ; Journal of Financial Crime Volume 26 ; 26 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Financial Crime Volume 27 ; 27 ; >
-    au < crawling ; exists ; 2021 ; Journal of Financial Crime Volume 28 ; 28 ; >
+    au < deepCrawl ; exists ; 2021 ; Journal of Financial Crime Volume 28 ; 28 ; >
     au < crawling ; exists ; 2022 ; Journal of Financial Crime Volume 29 ; 29 ; >
 
   }
@@ -7454,11 +7454,11 @@
     param[journal_issn] = 1757-6385
     comment[journal_id] = jfep
 
-    au < crawling ; exists ; 2009 ; Journal of Financial Economic Policy Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2010 ; Journal of Financial Economic Policy Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2011 ; Journal of Financial Economic Policy Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2012 ; Journal of Financial Economic Policy Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2013 ; Journal of Financial Economic Policy Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2009 ; Journal of Financial Economic Policy Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2010 ; Journal of Financial Economic Policy Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2011 ; Journal of Financial Economic Policy Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2012 ; Journal of Financial Economic Policy Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2013 ; Journal of Financial Economic Policy Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Financial Economic Policy Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Financial Economic Policy Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Financial Economic Policy Volume 8 ; 8 ; >
@@ -7466,7 +7466,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Financial Economic Policy Volume 10 ; 10 ; >
     au < frozen ; exists ; 2019 ; Journal of Financial Economic Policy Volume 11 ; 11 ; >
     au < notReady ; exists ; 2020 ; Journal of Financial Economic Policy Volume 12 ; 12 ; > #500 error https://www.emerald.com/insight/content/doi/10.1108/JFEP-02-2019-0036/full/html
-    au < crawling ; exists ; 2021 ; Journal of Financial Economic Policy Volume 13 ; 13 ; >
+    au < deepCrawl ; exists ; 2021 ; Journal of Financial Economic Policy Volume 13 ; 13 ; >
     au < crawling ; exists ; 2022 ; Journal of Financial Economic Policy Volume 14 ; 14 ; >
 
   }
@@ -7484,22 +7484,22 @@
     # online from 2005
 
     au < doNotProcess ; doNotProcess ; 2005 ; Journal of Financial Management of Property and Construction Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2006 ; Journal of Financial Management of Property and Construction Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2007 ; Journal of Financial Management of Property and Construction Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2008 ; Journal of Financial Management of Property and Construction Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2006 ; Journal of Financial Management of Property and Construction Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2007 ; Journal of Financial Management of Property and Construction Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2008 ; Journal of Financial Management of Property and Construction Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Financial Management of Property and Construction Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2010 ; Journal of Financial Management of Property and Construction Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2011 ; Journal of Financial Management of Property and Construction Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2012 ; Journal of Financial Management of Property and Construction Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2013 ; Journal of Financial Management of Property and Construction Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2010 ; Journal of Financial Management of Property and Construction Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2011 ; Journal of Financial Management of Property and Construction Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2012 ; Journal of Financial Management of Property and Construction Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2013 ; Journal of Financial Management of Property and Construction Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Financial Management of Property and Construction Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Financial Management of Property and Construction Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Financial Management of Property and Construction Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Financial Management of Property and Construction Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Financial Management of Property and Construction Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2019 ; Journal of Financial Management of Property and Construction Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2019 ; Journal of Financial Management of Property and Construction Volume 24 ; 24 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Financial Management of Property and Construction Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2021 ; Journal of Financial Management of Property and Construction Volume 26 ; 26 ; >
+    au < deepCrawl ; exists ; 2021 ; Journal of Financial Management of Property and Construction Volume 26 ; 26 ; >
     au < crawling ; exists ; 2022 ; Journal of Financial Management of Property and Construction Volume 27 ; 27 ; >
 
   }
@@ -7522,28 +7522,28 @@
     au < manifest ; exists ; 1997 ; Journal of Financial Regulation and Compliance Volume 5 ; 5 ; >
     au < ready ; exists ; 1998 ; Journal of Financial Regulation and Compliance Volume 6 ; 6 ; >
     au < ready ; exists ; 1999 ; Journal of Financial Regulation and Compliance Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2000 ; Journal of Financial Regulation and Compliance Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2001 ; Journal of Financial Regulation and Compliance Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2002 ; Journal of Financial Regulation and Compliance Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2003 ; Journal of Financial Regulation and Compliance Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2004 ; Journal of Financial Regulation and Compliance Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2005 ; Journal of Financial Regulation and Compliance Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2006 ; Journal of Financial Regulation and Compliance Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2007 ; Journal of Financial Regulation and Compliance Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2008 ; Journal of Financial Regulation and Compliance Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2009 ; Journal of Financial Regulation and Compliance Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2010 ; Journal of Financial Regulation and Compliance Volume 18 ; 18 ; >
-    au < crawling ; exists ; 2011 ; Journal of Financial Regulation and Compliance Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2012 ; Journal of Financial Regulation and Compliance Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2013 ; Journal of Financial Regulation and Compliance Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2000 ; Journal of Financial Regulation and Compliance Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2001 ; Journal of Financial Regulation and Compliance Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2002 ; Journal of Financial Regulation and Compliance Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2003 ; Journal of Financial Regulation and Compliance Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2004 ; Journal of Financial Regulation and Compliance Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2005 ; Journal of Financial Regulation and Compliance Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2006 ; Journal of Financial Regulation and Compliance Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2007 ; Journal of Financial Regulation and Compliance Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2008 ; Journal of Financial Regulation and Compliance Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2009 ; Journal of Financial Regulation and Compliance Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2010 ; Journal of Financial Regulation and Compliance Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2011 ; Journal of Financial Regulation and Compliance Volume 19 ; 19 ; >
+    au < frozen ; exists ; 2012 ; Journal of Financial Regulation and Compliance Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2013 ; Journal of Financial Regulation and Compliance Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Financial Regulation and Compliance Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Financial Regulation and Compliance Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Financial Regulation and Compliance Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Financial Regulation and Compliance Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Financial Regulation and Compliance Volume 26 ; 26 ; >
-    au < crawling ; exists ; 2019 ; Journal of Financial Regulation and Compliance Volume 27 ; 27 ; >
+    au < frozen ; exists ; 2019 ; Journal of Financial Regulation and Compliance Volume 27 ; 27 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Financial Regulation and Compliance Volume 28 ; 28 ; >
-    au < crawling ; exists ; 2021 ; Journal of Financial Regulation and Compliance Volume 29 ; 29 ; >
+    au < deepCrawl ; exists ; 2021 ; Journal of Financial Regulation and Compliance Volume 29 ; 29 ; >
     au < crawling ; exists ; 2022 ; Journal of Financial Regulation and Compliance Volume 30 ; 30 ; >
 
   }
@@ -7559,25 +7559,25 @@
     param[journal_issn] = 1985-2517
     comment[journal_id] = jfra
 
-    au < crawling ; exists ; 2003 ; Journal of Financial Reporting & Accounting Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2004 ; Journal of Financial Reporting & Accounting Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2005 ; Journal of Financial Reporting & Accounting Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2006 ; Journal of Financial Reporting & Accounting Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2007 ; Journal of Financial Reporting & Accounting Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2008 ; Journal of Financial Reporting & Accounting Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2009 ; Journal of Financial Reporting & Accounting Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2010 ; Journal of Financial Reporting & Accounting Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2011 ; Journal of Financial Reporting & Accounting Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2012 ; Journal of Financial Reporting & Accounting Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2013 ; Journal of Financial Reporting & Accounting Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2003 ; Journal of Financial Reporting & Accounting Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2004 ; Journal of Financial Reporting & Accounting Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2005 ; Journal of Financial Reporting & Accounting Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2006 ; Journal of Financial Reporting & Accounting Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2007 ; Journal of Financial Reporting & Accounting Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2008 ; Journal of Financial Reporting & Accounting Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2009 ; Journal of Financial Reporting & Accounting Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2010 ; Journal of Financial Reporting & Accounting Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2011 ; Journal of Financial Reporting & Accounting Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2012 ; Journal of Financial Reporting & Accounting Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2013 ; Journal of Financial Reporting & Accounting Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Financial Reporting & Accounting Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Financial Reporting & Accounting Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Financial Reporting & Accounting Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Financial Reporting & Accounting Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Financial Reporting & Accounting Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2019 ; Journal of Financial Reporting & Accounting Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2019 ; Journal of Financial Reporting & Accounting Volume 17 ; 17 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Financial Reporting & Accounting Volume 18 ; 18 ; >
-    au < crawling ; exists ; 2021 ; Journal of Financial Reporting & Accounting Volume 19 ; 19 ; >
+    au < deepCrawl ; exists ; 2021 ; Journal of Financial Reporting & Accounting Volume 19 ; 19 ; >
     au < crawling ; exists ; 2022 ; Journal of Financial Reporting & Accounting Volume 20 ; 20 ; >
 
   }
@@ -7593,10 +7593,10 @@
     param[journal_issn] = 2041-2568
     comment[journal_id] = jgr
 
-    au < crawling ; exists ; 2010 ; Journal of Global Responsibility Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2011 ; Journal of Global Responsibility Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2012 ; Journal of Global Responsibility Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2013 ; Journal of Global Responsibility Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2010 ; Journal of Global Responsibility Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2011 ; Journal of Global Responsibility Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2012 ; Journal of Global Responsibility Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2013 ; Journal of Global Responsibility Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Global Responsibility Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Global Responsibility Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Global Responsibility Volume 7 ; 7 ; >
@@ -7604,7 +7604,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Global Responsibility Volume 9 ; 9 ; >
     au < frozen ; exists ; 2019 ; Journal of Global Responsibility Volume 10 ; 10 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Global Responsibility Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2021 ; Journal of Global Responsibility Volume 12 ; 12 ; >
+    au < deepCrawl ; exists ; 2021 ; Journal of Global Responsibility Volume 12 ; 12 ; >
     au < crawling ; exists ; 2022 ; Journal of Global Responsibility Volume 13 ; 13 ; >
 
   }
@@ -7621,25 +7621,25 @@
     comment[journal_id] = jhom
     #  online from 2003
 
-    au < crawling ; exists ; 2003 ; Journal of Health Organization and Management Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2004 ; Journal of Health Organization and Management Volume 18 ; 18 ; >
-    au < crawling ; exists ; 2005 ; Journal of Health Organization and Management Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2006 ; Journal of Health Organization and Management Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2007 ; Journal of Health Organization and Management Volume 21 ; 21 ; >
-    au < crawling ; exists ; 2008 ; Journal of Health Organization and Management Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2009 ; Journal of Health Organization and Management Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2010 ; Journal of Health Organization and Management Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2011 ; Journal of Health Organization and Management Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2012 ; Journal of Health Organization and Management Volume 26 ; 26 ; >
-    au < crawling ; exists ; 2013 ; Journal of Health Organization and Management Volume 27 ; 27 ; >
+    au < frozen ; exists ; 2003 ; Journal of Health Organization and Management Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2004 ; Journal of Health Organization and Management Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2005 ; Journal of Health Organization and Management Volume 19 ; 19 ; >
+    au < frozen ; exists ; 2006 ; Journal of Health Organization and Management Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2007 ; Journal of Health Organization and Management Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2008 ; Journal of Health Organization and Management Volume 22 ; 22 ; >
+    au < frozen ; exists ; 2009 ; Journal of Health Organization and Management Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2010 ; Journal of Health Organization and Management Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2011 ; Journal of Health Organization and Management Volume 25 ; 25 ; >
+    au < frozen ; exists ; 2012 ; Journal of Health Organization and Management Volume 26 ; 26 ; >
+    au < frozen ; exists ; 2013 ; Journal of Health Organization and Management Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Health Organization and Management Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Health Organization and Management Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Health Organization and Management Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Health Organization and Management Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Health Organization and Management Volume 32 ; 32 ; >
-    au < crawling ; exists ; 2019 ; Journal of Health Organization and Management Volume 33 ; 33 ; >
+    au < frozen ; exists ; 2019 ; Journal of Health Organization and Management Volume 33 ; 33 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Health Organization and Management Volume 34 ; 34 ; >
-    au < crawling ; exists ; 2021 ; Journal of Health Organization and Management Volume 35 ; 35 ; >
+    au < deepCrawl ; exists ; 2021 ; Journal of Health Organization and Management Volume 35 ; 35 ; >
     au < crawling ; exists ; 2022 ; Journal of Health Organization and Management Volume 36 ; 36 ; >
 
   }
@@ -7655,11 +7655,11 @@
     param[journal_issn] = 1755-750X
     comment[journal_id] = jhrm
 
-    au < crawling ; exists ; 2009 ; Journal of Historical Research in Marketing Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2010 ; Journal of Historical Research in Marketing Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2011 ; Journal of Historical Research in Marketing Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2012 ; Journal of Historical Research in Marketing Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2013 ; Journal of Historical Research in Marketing Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2009 ; Journal of Historical Research in Marketing Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2010 ; Journal of Historical Research in Marketing Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2011 ; Journal of Historical Research in Marketing Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2012 ; Journal of Historical Research in Marketing Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2013 ; Journal of Historical Research in Marketing Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Historical Research in Marketing Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Historical Research in Marketing Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Historical Research in Marketing Volume 8 ; 8 ; >
@@ -7667,7 +7667,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Historical Research in Marketing Volume 10 ; 10 ; >
     au < frozen ; exists ; 2019 ; Journal of Historical Research in Marketing Volume 11 ; 11 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Historical Research in Marketing Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2021 ; Journal of Historical Research in Marketing Volume 13 ; 13 ; >
+    au < deepCrawl ; exists ; 2021 ; Journal of Historical Research in Marketing Volume 13 ; 13 ; >
     au < crawling ; exists ; 2022 ; Journal of Historical Research in Marketing Volume 14 ; 14 ; >
 
   }
@@ -7683,10 +7683,10 @@
     param[journal_issn] = 1757-9880
     comment[journal_id] = jhtt
 
-    au < crawling ; exists ; 2010 ; Journal of Hospitality and Tourism Technology Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2011 ; Journal of Hospitality and Tourism Technology Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2012 ; Journal of Hospitality and Tourism Technology Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2013 ; Journal of Hospitality and Tourism Technology Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2010 ; Journal of Hospitality and Tourism Technology Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2011 ; Journal of Hospitality and Tourism Technology Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2012 ; Journal of Hospitality and Tourism Technology Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2013 ; Journal of Hospitality and Tourism Technology Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Hospitality and Tourism Technology Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Hospitality and Tourism Technology Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Hospitality and Tourism Technology Volume 7 ; 7 ; >
@@ -7694,7 +7694,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Hospitality and Tourism Technology Volume 9 ; 9 ; >
     au < frozen ; exists ; 2019 ; Journal of Hospitality and Tourism Technology Volume 10 ; 10 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Hospitality and Tourism Technology Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2021 ; Journal of Hospitality and Tourism Technology Volume 12 ; 12 ; >
+    au < deepCrawl ; exists ; 2021 ; Journal of Hospitality and Tourism Technology Volume 12 ; 12 ; >
     au < crawling ; exists ; 2022 ; Journal of Hospitality and Tourism Technology Volume 13 ; 13 ; >
 
   }
@@ -7713,19 +7713,19 @@
     au < manifest ; exists ; 1996 ; Journal of Human Resource Costing & Accounting Volume 1 ; 1 ; >
     au < manifest ; exists ; 1997 ; Journal of Human Resource Costing & Accounting Volume 2 ; 2 ; >
     au < manifest ; exists ; 1998 ; Journal of Human Resource Costing & Accounting Volume 3 ; 3 ; >
-    au < crawling ; exists ; 1999 ; Journal of Human Resource Costing & Accounting Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2000 ; Journal of Human Resource Costing & Accounting Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2001 ; Journal of Human Resource Costing & Accounting Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2003 ; Journal of Human Resource Costing & Accounting Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2004 ; Journal of Human Resource Costing & Accounting Volume 8 ; 8 ; >
+    au < frozen ; exists ; 1999 ; Journal of Human Resource Costing & Accounting Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2000 ; Journal of Human Resource Costing & Accounting Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2001 ; Journal of Human Resource Costing & Accounting Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2003 ; Journal of Human Resource Costing & Accounting Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2004 ; Journal of Human Resource Costing & Accounting Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2005 ; Journal of Human Resource Costing & Accounting Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2006 ; Journal of Human Resource Costing & Accounting Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2007 ; Journal of Human Resource Costing & Accounting Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2006 ; Journal of Human Resource Costing & Accounting Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2007 ; Journal of Human Resource Costing & Accounting Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Human Resource Costing & Accounting Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2009 ; Journal of Human Resource Costing & Accounting Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2010 ; Journal of Human Resource Costing & Accounting Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2011 ; Journal of Human Resource Costing & Accounting Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2012 ; Journal of Human Resource Costing & Accounting Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2009 ; Journal of Human Resource Costing & Accounting Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2010 ; Journal of Human Resource Costing & Accounting Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2011 ; Journal of Human Resource Costing & Accounting Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2012 ; Journal of Human Resource Costing & Accounting Volume 16 ; 16 ; >
 
   }
 
@@ -7738,9 +7738,9 @@
     param[journal_issn] = 2042-6747
     comment[journal_id] = jhlscm
 
-    au < crawling ; exists ; 2011 ; Journal of Humanitarian Logistics and Supply Chain Management Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2012 ; Journal of Humanitarian Logistics and Supply Chain Management Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2013 ; Journal of Humanitarian Logistics and Supply Chain Management Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2011 ; Journal of Humanitarian Logistics and Supply Chain Management Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2012 ; Journal of Humanitarian Logistics and Supply Chain Management Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2013 ; Journal of Humanitarian Logistics and Supply Chain Management Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Humanitarian Logistics and Supply Chain Management Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Humanitarian Logistics and Supply Chain Management Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Humanitarian Logistics and Supply Chain Management Volume 6 ; 6 ; >
@@ -7748,7 +7748,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Humanitarian Logistics and Supply Chain Management Volume 8 ; 8 ; >
     au < frozen ; exists ; 2019 ; Journal of Humanitarian Logistics and Supply Chain Management Volume 9 ; 9 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Humanitarian Logistics and Supply Chain Management Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2021 ; Journal of Humanitarian Logistics and Supply Chain Management Volume 11 ; 11 ; >
+    au < deepCrawl ; exists ; 2021 ; Journal of Humanitarian Logistics and Supply Chain Management Volume 11 ; 11 ; >
     au < crawling ; exists ; 2022 ; Journal of Humanitarian Logistics and Supply Chain Management Volume 12 ; 12 ; >
 
   }
@@ -7764,11 +7764,11 @@
     param[journal_issn] = 1755-4195
     comment[journal_id] = jibr
 
-    au < crawling ; exists ; 2009 ; Journal of Indian Business Research Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2010 ; Journal of Indian Business Research Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2011 ; Journal of Indian Business Research Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2012 ; Journal of Indian Business Research Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2013 ; Journal of Indian Business Research Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2009 ; Journal of Indian Business Research Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2010 ; Journal of Indian Business Research Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2011 ; Journal of Indian Business Research Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2012 ; Journal of Indian Business Research Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2013 ; Journal of Indian Business Research Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Indian Business Research Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Indian Business Research Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Indian Business Research Volume 8 ; 8 ; >
@@ -7776,7 +7776,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Indian Business Research Volume 10 ; 10 ; >
     au < frozen ; exists ; 2019 ; Journal of Indian Business Research Volume 11 ; 11 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Indian Business Research Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2021 ; Journal of Indian Business Research Volume 13 ; 13 ; >
+    au < deepCrawl ; exists ; 2021 ; Journal of Indian Business Research Volume 13 ; 13 ; >
     au < crawling ; exists ; 2022 ; Journal of Indian Business Research Volume 14 ; 14 ; >
 
   }
@@ -7792,17 +7792,17 @@
     param[journal_issn] = 1477-996X
     comment[journal_id] = jices
 
-    au < crawling ; exists ; 2003 ; Journal of Information, Communication and Ethics in Society Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2004 ; Journal of Information, Communication and Ethics in Society Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2005 ; Journal of Information, Communication and Ethics in Society Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2006 ; Journal of Information, Communication and Ethics in Society Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2007 ; Journal of Information, Communication and Ethics in Society Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2008 ; Journal of Information, Communication and Ethics in Society Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2009 ; Journal of Information, Communication and Ethics in Society Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2010 ; Journal of Information, Communication and Ethics in Society Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2011 ; Journal of Information, Communication and Ethics in Society Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2003 ; Journal of Information, Communication and Ethics in Society Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2004 ; Journal of Information, Communication and Ethics in Society Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2005 ; Journal of Information, Communication and Ethics in Society Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2006 ; Journal of Information, Communication and Ethics in Society Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2007 ; Journal of Information, Communication and Ethics in Society Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2008 ; Journal of Information, Communication and Ethics in Society Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2009 ; Journal of Information, Communication and Ethics in Society Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2010 ; Journal of Information, Communication and Ethics in Society Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2011 ; Journal of Information, Communication and Ethics in Society Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Information, Communication and Ethics in Society Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2013 ; Journal of Information, Communication and Ethics in Society Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2013 ; Journal of Information, Communication and Ethics in Society Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Information, Communication and Ethics in Society Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Information, Communication and Ethics in Society Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Information, Communication and Ethics in Society Volume 14 ; 14 ; >
@@ -7810,7 +7810,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Information, Communication and Ethics in Society Volume 16 ; 16 ; >
     au < frozen ; exists ; 2019 ; Journal of Information, Communication and Ethics in Society Volume 17 ; 17 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Information, Communication and Ethics in Society Volume 18 ; 18 ; >
-    au < crawling ; exists ; 2021 ; Journal of Information, Communication and Ethics in Society Volume 19 ; 19 ; >
+    au < deepCrawl ; exists ; 2021 ; Journal of Information, Communication and Ethics in Society Volume 19 ; 19 ; >
     au < crawling ; exists ; 2022 ; Journal of Information, Communication and Ethics in Society Volume 20 ; 20 ; >
 
   }
@@ -7829,29 +7829,29 @@
     au < manifest ; exists ; 1996 ; Journal of Integrated Care: Practical evidence for service improvement Volume 4 ; 4 ; >
     au < manifest ; exists ; 1997 ; Journal of Integrated Care: Practical evidence for service improvement Volume 5 ; 5 ; >
     au < manifest ; exists ; 1998 ; Journal of Integrated Care: Practical evidence for service improvement Volume 6 ; 6 ; >
-    au < crawling ; exists ; 1999 ; Journal of Integrated Care: Practical evidence for service improvement Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2000 ; Journal of Integrated Care: Practical evidence for service improvement Volume 8 ; 8 ; >
+    au < frozen ; exists ; 1999 ; Journal of Integrated Care: Practical evidence for service improvement Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2000 ; Journal of Integrated Care: Practical evidence for service improvement Volume 8 ; 8 ; >
     au < ready ; exists ; 2001 ; Journal of Integrated Care: Practical evidence for service improvement Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2002 ; Journal of Integrated Care: Practical evidence for service improvement Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2003 ; Journal of Integrated Care: Practical evidence for service improvement Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2004 ; Journal of Integrated Care: Practical evidence for service improvement Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2005 ; Journal of Integrated Care: Practical evidence for service improvement Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2006 ; Journal of Integrated Care: Practical evidence for service improvement Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2007 ; Journal of Integrated Care: Practical evidence for service improvement Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2002 ; Journal of Integrated Care: Practical evidence for service improvement Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2003 ; Journal of Integrated Care: Practical evidence for service improvement Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2004 ; Journal of Integrated Care: Practical evidence for service improvement Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2005 ; Journal of Integrated Care: Practical evidence for service improvement Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2006 ; Journal of Integrated Care: Practical evidence for service improvement Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2007 ; Journal of Integrated Care: Practical evidence for service improvement Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Integrated Care: Practical evidence for service improvement Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2009 ; Journal of Integrated Care: Practical evidence for service improvement Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2010 ; Journal of Integrated Care: Practical evidence for service improvement Volume 18 ; 18 ; >
-    au < crawling ; exists ; 2011 ; Journal of Integrated Care: Practical evidence for service improvement Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2012 ; Journal of Integrated Care: Practical evidence for service improvement Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2013 ; Journal of Integrated Care: Practical evidence for service improvement Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2009 ; Journal of Integrated Care: Practical evidence for service improvement Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2010 ; Journal of Integrated Care: Practical evidence for service improvement Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2011 ; Journal of Integrated Care: Practical evidence for service improvement Volume 19 ; 19 ; >
+    au < frozen ; exists ; 2012 ; Journal of Integrated Care: Practical evidence for service improvement Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2013 ; Journal of Integrated Care: Practical evidence for service improvement Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Integrated Care: Practical evidence for service improvement Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Integrated Care: Practical evidence for service improvement Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Integrated Care: Practical evidence for service improvement Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Integrated Care: Practical evidence for service improvement Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Integrated Care: Practical evidence for service improvement Volume 26 ; 26 ; >
-    au < crawling ; exists ; 2019 ; Journal of Integrated Care: Practical evidence for service improvement Volume 27 ; 27 ; >
+    au < frozen ; exists ; 2019 ; Journal of Integrated Care: Practical evidence for service improvement Volume 27 ; 27 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Integrated Care: Practical evidence for service improvement Volume 28 ; 28 ; >
-    au < crawling ; exists ; 2021 ; Journal of Integrated Care: Practical evidence for service improvement Volume 29 ; 29 ; >
+    au < deepCrawl ; exists ; 2021 ; Journal of Integrated Care: Practical evidence for service improvement Volume 29 ; 29 ; >
     au < crawling ; exists ; 2022 ; Journal of Integrated Care: Practical evidence for service improvement Volume 30 ; 30 ; >
 
   }
@@ -7867,28 +7867,28 @@
     param[journal_issn] = 1469-1930
     comment[journal_id] = jic
 
-    au < crawling ; exists ; 2000 ; Journal of Intellectual Capital Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2001 ; Journal of Intellectual Capital Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2002 ; Journal of Intellectual Capital Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2003 ; Journal of Intellectual Capital Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2004 ; Journal of Intellectual Capital Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2005 ; Journal of Intellectual Capital Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2006 ; Journal of Intellectual Capital Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2007 ; Journal of Intellectual Capital Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2008 ; Journal of Intellectual Capital Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2009 ; Journal of Intellectual Capital Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2010 ; Journal of Intellectual Capital Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2011 ; Journal of Intellectual Capital Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2012 ; Journal of Intellectual Capital Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2013 ; Journal of Intellectual Capital Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2000 ; Journal of Intellectual Capital Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2001 ; Journal of Intellectual Capital Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2002 ; Journal of Intellectual Capital Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2003 ; Journal of Intellectual Capital Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2004 ; Journal of Intellectual Capital Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2005 ; Journal of Intellectual Capital Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2006 ; Journal of Intellectual Capital Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2007 ; Journal of Intellectual Capital Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2008 ; Journal of Intellectual Capital Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2009 ; Journal of Intellectual Capital Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2010 ; Journal of Intellectual Capital Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2011 ; Journal of Intellectual Capital Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2012 ; Journal of Intellectual Capital Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2013 ; Journal of Intellectual Capital Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Intellectual Capital Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Intellectual Capital Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Intellectual Capital Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Intellectual Capital Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Intellectual Capital Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2019 ; Journal of Intellectual Capital Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2019 ; Journal of Intellectual Capital Volume 20 ; 20 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Intellectual Capital Volume 21 ; 21 ; >
-    au < crawling ; exists ; 2021 ; Journal of Intellectual Capital Volume 22 ; 22 ; >
+    au < deepCrawl ; exists ; 2021 ; Journal of Intellectual Capital Volume 22 ; 22 ; >
     au < crawling ; exists ; 2022 ; Journal of Intellectual Capital Volume 23 ; 23 ; >
 
   }
@@ -7903,12 +7903,12 @@
     param[journal_issn] = 2046-469X
     comment[journal_id] = jieb
 
-    au < crawling ; exists ; 2008 ; Journal of International Education in Business Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2008 ; Journal of International Education in Business Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of International Education in Business Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2010 ; Journal of International Education in Business Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2011 ; Journal of International Education in Business Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2012 ; Journal of International Education in Business Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2013 ; Journal of International Education in Business Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2010 ; Journal of International Education in Business Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2011 ; Journal of International Education in Business Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2012 ; Journal of International Education in Business Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2013 ; Journal of International Education in Business Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of International Education in Business Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of International Education in Business Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of International Education in Business Volume 9 ; 9 ; >
@@ -7916,7 +7916,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of International Education in Business Volume 11 ; 11 ; >
     au < frozen ; exists ; 2019 ; Journal of International Education in Business Volume 12 ; 12 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of International Education in Business Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2021 ; Journal of International Education in Business Volume 14 ; 14 ; >
+    au < deepCrawl ; exists ; 2021 ; Journal of International Education in Business Volume 14 ; 14 ; >
     au < crawling ; exists ; 2022 ; Journal of International Education in Business Volume 15 ; 15 ; >
 
   }
@@ -7932,26 +7932,26 @@
     param[journal_issn] = 1477-0024
     comment[journal_id] = jitlp
 
-    au < crawling ; exists ; 2002 ; Journal of International Trade Law and Policy Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2003 ; Journal of International Trade Law and Policy Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2004 ; Journal of International Trade Law and Policy Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2005 ; Journal of International Trade Law and Policy Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2006 ; Journal of International Trade Law and Policy Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2007 ; Journal of International Trade Law and Policy Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2008 ; Journal of International Trade Law and Policy Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2009 ; Journal of International Trade Law and Policy Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2010 ; Journal of International Trade Law and Policy Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2011 ; Journal of International Trade Law and Policy Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2012 ; Journal of International Trade Law and Policy Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2013 ; Journal of International Trade Law and Policy Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2002 ; Journal of International Trade Law and Policy Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2003 ; Journal of International Trade Law and Policy Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2004 ; Journal of International Trade Law and Policy Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2005 ; Journal of International Trade Law and Policy Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2006 ; Journal of International Trade Law and Policy Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2007 ; Journal of International Trade Law and Policy Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2008 ; Journal of International Trade Law and Policy Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2009 ; Journal of International Trade Law and Policy Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2010 ; Journal of International Trade Law and Policy Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2011 ; Journal of International Trade Law and Policy Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2012 ; Journal of International Trade Law and Policy Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2013 ; Journal of International Trade Law and Policy Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of International Trade Law and Policy Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of International Trade Law and Policy Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of International Trade Law and Policy Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of International Trade Law and Policy Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of International Trade Law and Policy Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2019 ; Journal of International Trade Law and Policy Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2019 ; Journal of International Trade Law and Policy Volume 18 ; 18 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of International Trade Law and Policy Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2021 ; Journal of International Trade Law and Policy Volume 20 ; 20 ; >
+    au < deepCrawl ; exists ; 2021 ; Journal of International Trade Law and Policy Volume 20 ; 20 ; >
     au < crawling ; exists ; 2022 ; Journal of International Trade Law and Policy Volume 21 ; 21 ; >
 
   }
@@ -7968,27 +7968,27 @@
     comment[journal_id] = joic
 
     au < ready ; exists ; 2001 ; Journal of Investment Compliance Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2002 ; Journal of Investment Compliance Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2003 ; Journal of Investment Compliance Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2004 ; Journal of Investment Compliance Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2002 ; Journal of Investment Compliance Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2003 ; Journal of Investment Compliance Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2004 ; Journal of Investment Compliance Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2005 ; Journal of Investment Compliance Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2005 ; Journal of Investment Compliance Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2006 ; Journal of Investment Compliance Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2007 ; Journal of Investment Compliance Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2005 ; Journal of Investment Compliance Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2006 ; Journal of Investment Compliance Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2007 ; Journal of Investment Compliance Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Investment Compliance Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2009 ; Journal of Investment Compliance Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2010 ; Journal of Investment Compliance Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2011 ; Journal of Investment Compliance Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2009 ; Journal of Investment Compliance Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2010 ; Journal of Investment Compliance Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2011 ; Journal of Investment Compliance Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Investment Compliance Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2013 ; Journal of Investment Compliance Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2013 ; Journal of Investment Compliance Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Investment Compliance Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Investment Compliance Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Investment Compliance Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Investment Compliance Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Investment Compliance Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2019 ; Journal of Investment Compliance Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2019 ; Journal of Investment Compliance Volume 20 ; 20 ; >
     au < frozen ; exists ; 2020 ; Journal of Investment Compliance Volume 21 ; 21 ; >
-    au < crawling ; exists ; 2021 ; Journal of Investment Compliance Volume 22 ; 22 ; >
+    au < deepCrawl ; exists ; 2021 ; Journal of Investment Compliance Volume 22 ; 22 ; >
     au < expected ; exists ; 2022 ; Journal of Investment Compliance Volume 23 ; 23 ; >
 
   }
@@ -8004,10 +8004,10 @@
     param[journal_issn] = 1759-0817
     comment[journal_id] = jiabr
 
-    au < crawling ; exists ; 2010 ; Journal of Islamic Accounting and Business Research Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2011 ; Journal of Islamic Accounting and Business Research Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2012 ; Journal of Islamic Accounting and Business Research Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2013 ; Journal of Islamic Accounting and Business Research Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2010 ; Journal of Islamic Accounting and Business Research Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2011 ; Journal of Islamic Accounting and Business Research Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2012 ; Journal of Islamic Accounting and Business Research Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2013 ; Journal of Islamic Accounting and Business Research Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Islamic Accounting and Business Research Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Islamic Accounting and Business Research Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Islamic Accounting and Business Research Volume 7 ; 7 ; >
@@ -8015,7 +8015,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Islamic Accounting and Business Research Volume 9 ; 9 ; >
     au < frozen ; exists ; 2019 ; Journal of Islamic Accounting and Business Research Volume 10 ; 10 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Islamic Accounting and Business Research Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2021 ; Journal of Islamic Accounting and Business Research Volume 12 ; 12 ; >
+    au < deepCrawl ; exists ; 2021 ; Journal of Islamic Accounting and Business Research Volume 12 ; 12 ; >
     au < crawling ; exists ; 2022 ; Journal of Islamic Accounting and Business Research Volume 13 ; 13 ; >
 
   }
@@ -8032,7 +8032,7 @@
     comment[journal_id] = jima
 
     au < doNotProcess ; doNotProcess ; 2010 ; Journal of Islamic Marketing Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2011 ; Journal of Islamic Marketing Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2011 ; Journal of Islamic Marketing Volume 2 ; 2 ; >
     au < crawling ; exists ; 2012 ; Journal of Islamic Marketing Volume 3 ; 3 ; >
     au < crawling ; exists ; 2013 ; Journal of Islamic Marketing Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Islamic Marketing Volume 5 ; 5 ; >
