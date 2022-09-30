@@ -338,32 +338,32 @@
     {
     param[journal_id] = jsbnh
 
-    au < crawling ; exists ; 1977 ; Archives of Natural History Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1978 ; Archives of Natural History Volume 5 ; 5 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1979 ; Archives of Natural History Volume 6 ; 6 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1980 ; Archives of Natural History Volume 7 ; 7 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1981 ; Archives of Natural History Volume 8 ; 8 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1982 ; Archives of Natural History Volume 9 ; 9 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1977 ; Archives of Natural History Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1978 ; Archives of Natural History Volume 5 ; 5 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1979 ; Archives of Natural History Volume 6 ; 6 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1980 ; Archives of Natural History Volume 7 ; 7 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1981 ; Archives of Natural History Volume 8 ; 8 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1982 ; Archives of Natural History Volume 9 ; 9 ; https://www.euppublishing.com/ ; >
     }
     {
     param[journal_id] = anh
 
-    au < crawling ; exists ; 1983 ; Archives of Natural History Volume 10 ; 10 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1984 ; Archives of Natural History Volume 11 ; 11 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1985 ; Archives of Natural History Volume 12 ; 12 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1986 ; Archives of Natural History Volume 13 ; 13 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1987 ; Archives of Natural History Volume 14 ; 14 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1988 ; Archives of Natural History Volume 15 ; 15 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1989 ; Archives of Natural History Volume 16 ; 16 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1990 ; Archives of Natural History Volume 17 ; 17 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1991 ; Archives of Natural History Volume 18 ; 18 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1992 ; Archives of Natural History Volume 19 ; 19 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1993 ; Archives of Natural History Volume 20 ; 20 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1983 ; Archives of Natural History Volume 10 ; 10 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1984 ; Archives of Natural History Volume 11 ; 11 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1985 ; Archives of Natural History Volume 12 ; 12 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1986 ; Archives of Natural History Volume 13 ; 13 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1987 ; Archives of Natural History Volume 14 ; 14 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1988 ; Archives of Natural History Volume 15 ; 15 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1989 ; Archives of Natural History Volume 16 ; 16 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1990 ; Archives of Natural History Volume 17 ; 17 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1991 ; Archives of Natural History Volume 18 ; 18 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1992 ; Archives of Natural History Volume 19 ; 19 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1993 ; Archives of Natural History Volume 20 ; 20 ; https://www.euppublishing.com/ ; >
     au < frozen ; exists ; 1994 ; Archives of Natural History Volume 21 ; 21 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1995 ; Archives of Natural History Volume 22 ; 22 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1996 ; Archives of Natural History Volume 23 ; 23 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1997 ; Archives of Natural History Volume 24 ; 24 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1998 ; Archives of Natural History Volume 25 ; 25 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1995 ; Archives of Natural History Volume 22 ; 22 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1996 ; Archives of Natural History Volume 23 ; 23 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1997 ; Archives of Natural History Volume 24 ; 24 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1998 ; Archives of Natural History Volume 25 ; 25 ; https://www.euppublishing.com/ ; >
     au < frozen ; exists ; 1999 ; Archives of Natural History Volume 26 ; 26 ; https://www.euppublishing.com/ ; >
     au < finished ; finished ; 2000 ; Archives of Natural History Volume 27 ; 27 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2001 ; Archives of Natural History Volume 28 ; 28 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
@@ -402,12 +402,12 @@
 
     param[journal_id] = bjj
 
-    au < crawling ; exists ; 1994 ; Ben Jonson Journal Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1994 ; Ben Jonson Journal Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
     au < frozen ; exists ; 1995 ; Ben Jonson Journal Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
     au < frozen ; exists ; 1996 ; Ben Jonson Journal Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1997 ; Ben Jonson Journal Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1998 ; Ben Jonson Journal Volume 5 ; 5 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1999 ; Ben Jonson Journal Volume 6 ; 6 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1997 ; Ben Jonson Journal Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1998 ; Ben Jonson Journal Volume 5 ; 5 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1999 ; Ben Jonson Journal Volume 6 ; 6 ; https://www.euppublishing.com/ ; >
     au < finished ; finished ; 2000 ; Ben Jonson Journal Volume 7 ; 7 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2001 ; Ben Jonson Journal Volume 8 ; 8 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2002 ; Ben Jonson Journal Volume 9 ; 9 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
@@ -593,29 +593,29 @@
     #continued_by = 1758-3489
 
     au < doesNotExist ; doesNotExist ; 1985 ; Library History Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1986 ; Library History Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1987 ; Library History Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1988 ; Library History Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1989 ; Library History Volume 5 ; 5 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1990 ; Library History Volume 6 ; 6 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1991 ; Library History Volume 7 ; 7 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1986 ; Library History Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1987 ; Library History Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1988 ; Library History Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1989 ; Library History Volume 5 ; 5 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1990 ; Library History Volume 6 ; 6 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1991 ; Library History Volume 7 ; 7 ; https://www.euppublishing.com/ ; >
     au < frozen ; exists ; 1992 ; Library History Volume 8 ; 8 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1993 ; Library History Volume 9 ; 9 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1994 ; Library History Volume 10 ; 10 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1995 ; Library History Volume 11 ; 11 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1993 ; Library History Volume 9 ; 9 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1994 ; Library History Volume 10 ; 10 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1995 ; Library History Volume 11 ; 11 ; https://www.euppublishing.com/ ; >
     au < doesNotExist ; doesNotExist ; 1996 ; Library History Volume 12 ; 12 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1997 ; Library History Volume 13 ; 13 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1998 ; Library History Volume 14 ; 14 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1999 ; Library History Volume 15 ; 15 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2000 ; Library History Volume 16 ; 16 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1997 ; Library History Volume 13 ; 13 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1998 ; Library History Volume 14 ; 14 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1999 ; Library History Volume 15 ; 15 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 2000 ; Library History Volume 16 ; 16 ; https://www.euppublishing.com/ ; >
     au < frozen ; exists ; 2001 ; Library History Volume 17 ; 17 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2002 ; Library History Volume 18 ; 18 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2003 ; Library History Volume 19 ; 19 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2004 ; Library History Volume 20 ; 20 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2005 ; Library History Volume 21 ; 21 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2006 ; Library History Volume 22 ; 22 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2007 ; Library History Volume 23 ; 23 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2008 ; Library History Volume 24 ; 24 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 2002 ; Library History Volume 18 ; 18 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 2003 ; Library History Volume 19 ; 19 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 2004 ; Library History Volume 20 ; 20 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 2005 ; Library History Volume 21 ; 21 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 2006 ; Library History Volume 22 ; 22 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 2007 ; Library History Volume 23 ; 23 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 2008 ; Library History Volume 24 ; 24 ; https://www.euppublishing.com/ ; >
 
   }
   
@@ -632,7 +632,7 @@
     #continues = 0024-2306
     #doNotProcess = had been processed under Maney.Ingenta
 
-    au < crawling ; exists ; 2009 ; Library and Information History Volume 25 ; 25 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 2009 ; Library and Information History Volume 25 ; 25 ; https://www.euppublishing.com/ ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Library and Information History Volume 26 ; 26 ; https://www.euppublishing.com/ ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Library and Information History Volume 27 ; 27 ; https://www.euppublishing.com/ ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Library and Information History Volume 28 ; 28 ; https://www.euppublishing.com/ ; >
@@ -685,20 +685,20 @@
 
     param[journal_id] = drs
 
-    au < crawling ; exists ; 1983 ; Dance Research Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1984 ; Dance Research Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1985 ; Dance Research Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1986 ; Dance Research Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1987 ; Dance Research Volume 5 ; 5 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1988 ; Dance Research Volume 6 ; 6 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1989 ; Dance Research Volume 7 ; 7 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1983 ; Dance Research Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1984 ; Dance Research Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1985 ; Dance Research Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1986 ; Dance Research Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1987 ; Dance Research Volume 5 ; 5 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1988 ; Dance Research Volume 6 ; 6 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1989 ; Dance Research Volume 7 ; 7 ; https://www.euppublishing.com/ ; >
     au < frozen ; exists ; 1990 ; Dance Research Volume 8 ; 8 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1991 ; Dance Research Volume 9 ; 9 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1991 ; Dance Research Volume 9 ; 9 ; https://www.euppublishing.com/ ; >
     au < frozen ; exists ; 1992 ; Dance Research Volume 10 ; 10 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1993 ; Dance Research Volume 11 ; 11 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1994 ; Dance Research Volume 12 ; 12 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1995 ; Dance Research Volume 13 ; 13 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1996 ; Dance Research Volume 14 ; 14 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1993 ; Dance Research Volume 11 ; 11 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1994 ; Dance Research Volume 12 ; 12 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1995 ; Dance Research Volume 13 ; 13 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1996 ; Dance Research Volume 14 ; 14 ; https://www.euppublishing.com/ ; >
     au < frozen ; exists ; 1997 ; Dance Research Volume 15 ; 15 ; https://www.euppublishing.com/ ; >
     au < frozen ; exists ; 1998 ; Dance Research Volume 16 ; 16 ; https://www.euppublishing.com/ ; >
     au < frozen ; exists ; 1999 ; Dance Research Volume 17 ; 17 ; https://www.euppublishing.com/ ; >
@@ -794,9 +794,9 @@
 
     param[journal_id] = elr
 
-    au < crawling ; exists ; 1997 ; Edinburgh Law Review Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1997 ; Edinburgh Law Review Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
     au < frozen ; exists ; 1998 ; Edinburgh Law Review Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1999 ; Edinburgh Law Review Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1999 ; Edinburgh Law Review Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
     au < finished ; finished ; 2000 ; Edinburgh Law Review Volume 4 ; 4 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2001 ; Edinburgh Law Review Volume 5 ; 5 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2002 ; Edinburgh Law Review Volume 6 ; 6 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
@@ -992,18 +992,18 @@
 
     param[journal_id] = inr
 
-    au < crawling ; exists ; 1950 ; The Innes Review Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1951 ; The Innes Review Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1952 ; The Innes Review Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1953 ; The Innes Review Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1954 ; The Innes Review Volume 5 ; 5 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1955 ; The Innes Review Volume 6 ; 6 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1956 ; The Innes Review Volume 7 ; 7 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1957 ; The Innes Review Volume 8 ; 8 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1958 ; The Innes Review Volume 9 ; 9 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1950 ; The Innes Review Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1951 ; The Innes Review Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1952 ; The Innes Review Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1953 ; The Innes Review Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1954 ; The Innes Review Volume 5 ; 5 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1955 ; The Innes Review Volume 6 ; 6 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1956 ; The Innes Review Volume 7 ; 7 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1957 ; The Innes Review Volume 8 ; 8 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1958 ; The Innes Review Volume 9 ; 9 ; https://www.euppublishing.com/ ; >
     au < frozen ; exists ; 1959 ; The Innes Review Volume 10 ; 10 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1960 ; The Innes Review Volume 11 ; 11 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 1961 ; The Innes Review Volume 12 ; 12 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1960 ; The Innes Review Volume 11 ; 11 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 1961 ; The Innes Review Volume 12 ; 12 ; https://www.euppublishing.com/ ; >
     au < crawling ; exists ; 1962 ; The Innes Review Volume 13 ; 13 ; https://www.euppublishing.com/ ; >
     au < crawling ; exists ; 1963 ; The Innes Review Volume 14 ; 14 ; https://www.euppublishing.com/ ; >
     au < crawling ; exists ; 1964 ; The Innes Review Volume 15 ; 15 ; https://www.euppublishing.com/ ; >
