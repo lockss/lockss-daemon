@@ -67,9 +67,9 @@
     au < crawling ; down ; 2017 ; Aboriginal History Journal Volume 40 ; 40 ; reingest1.clockss.org:8082 >
     au < crawling ; down ; 2018 ; Aboriginal History Journal Volume 41 ; 41 ; reingest1.clockss.org:8082 >
     au < crawling ; down ; 2018 ; Aboriginal History Journal Volume 42 ; 42 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2019 ; Aboriginal History Journal Volume 43 ; 43 ; >
-    au < crawling ; exists ; 2020 ; Aboriginal History Journal Volume 44 ; 44 ; >
-    au < crawling ; exists ; 2021 ; Aboriginal History Journal Volume 45 ; 45 ; >
+    au < frozen ; exists ; 2019 ; Aboriginal History Journal Volume 43 ; 43 ; >
+    au < frozen ; exists ; 2020 ; Aboriginal History Journal Volume 44 ; 44 ; >
+    au < frozen ; exists ; 2021 ; Aboriginal History Journal Volume 45 ; 45 ; >
     au < expected ; exists ; 2022 ; Aboriginal History Journal Volume 46 ; 46 ; >
 
   }
@@ -126,8 +126,8 @@
       #2006 needed recollection in new layout
       au < crawling ; down ; 2006 ; Agenda - A Journal of Policy Analysis and Reform Volume 13 ; 13 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2019 ; Agenda - A Journal of Policy Analysis and Reform Volume 26 ; 26 ; >
-      au < crawling ; exists ; 2020 ; Agenda - A Journal of Policy Analysis and Reform Volume 27 ; 27 ; >
-      au < crawling ; exists ; 2021 ; Agenda - A Journal of Policy Analysis and Reform Volume 28 ; 28 ; >
+      au < frozen ; exists ; 2020 ; Agenda - A Journal of Policy Analysis and Reform Volume 27 ; 27 ; >
+      au < frozen ; exists ; 2021 ; Agenda - A Journal of Policy Analysis and Reform Volume 28 ; 28 ; >
       au < expected ; exists ; 2022 ; Agenda - A Journal of Policy Analysis and Reform Volume 29 ; 29 ; >
 
     }
@@ -145,7 +145,7 @@
 
     au < crawling ; exists ; 2019 ; ANU Historical Journal II: Number 1 ; 1 ; >
     au < crawling ; exists ; 2020 ; ANU Historical Journal II: Number 2 ; 2 ; >
-    au < crawling ; exists ; 2021 ; ANU Historical Journal II: Number 3 ; 3 ; >
+    au < frozen ; exists ; 2021 ; ANU Historical Journal II: Number 3 ; 3 ; >
     au < expected ; exists ; 2022 ; ANU Historical Journal II: Number 4 ; 4 ; >
 
   }
@@ -162,9 +162,9 @@
     #6/14/19 change to layout - plugin has been modified to handle backwards incompatible with finished content
 
     au < crawling ; down ; 2018 ; Australian Journal of Biography and History: Number 1 ; 1 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2019 ; Australian Journal of Biography and History: Number 2 ; 2 ; >
-    au < crawling ; exists ; 2020 ; Australian Journal of Biography and History: Number 3 ; 3 ; >
-    au < crawling ; exists ; 2020 ; Australian Journal of Biography and History: Number 4 ; 4 ; >
+    au < frozen ; exists ; 2019 ; Australian Journal of Biography and History: Number 2 ; 2 ; >
+    au < frozen ; exists ; 2020 ; Australian Journal of Biography and History: Number 3 ; 3 ; >
+    au < frozen ; exists ; 2020 ; Australian Journal of Biography and History: Number 4 ; 4 ; >
     au < crawling ; exists ; 2021 ; Australian Journal of Biography and History: Number 5 ; 5 ; >
     au < crawling ; exists ; 2022 ; Australian Journal of Biography and History: Number 6 ; 6 ; >
 
@@ -191,7 +191,7 @@
     au < crawling ; down ; 2017 ; East Asia Forum Quarterly Volume 9 ; 9 ; reingest4.clockss.org:8082 >
     au < crawling ; down ; 2018 ; East Asia Forum Quarterly Volume 10 ; 10 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2019 ; East Asia Forum Quarterly Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2020 ; East Asia Forum Quarterly Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2020 ; East Asia Forum Quarterly Volume 12 ; 12 ; >
     au < crawling ; exists ; 2021 ; East Asia Forum Quarterly Volume 13 ; 13 ; >
     au < crawling ; exists ; 2022 ; East Asia Forum Quarterly Volume 14 ; 14 ; >
 
@@ -213,7 +213,7 @@
     au < crawling ; down ; 2016 ; Human Ecology Review: Volume 22 ; 22 ; reingest2.clockss.org:8085 >
     au < crawling ; down ; 2017 ; Human Ecology Review: Volume 23 ; 23 ; reingest3.clockss.org:8083 >
     au < crawling ; down ; 2018 ; Human Ecology Review: Volume 24 ; 24 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2019 ; Human Ecology Review: Volume 25 ; 25 ;  >
+    au < frozen ; exists ; 2019 ; Human Ecology Review: Volume 25 ; 25 ;  >
     au < crawling ; exists ; 2021 ; Human Ecology Review: Volume 26 ; 26 ;  >
     au < crawling ; exists ; 2022 ; Human Ecology Review: Volume 27 ; 27 ;  >
 
@@ -235,7 +235,7 @@
     au < crawling ; down ; 2018 ; International Review of Environmental History: Volume 4 ; 4 ; reingest4.clockss.org:8082 >
     #6/14/19 change to layout - plugin has been modified to handle backwards incompatible with finished content
     au < crawling ; exists ; 2019 ; International Review of Environmental History: Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2020 ; International Review of Environmental History: Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2020 ; International Review of Environmental History: Volume 6 ; 6 ; >
     au < crawling ; exists ; 2021 ; International Review of Environmental History: Volume 7 ; 7 ; >
     au < crawling ; exists ; 2022 ; International Review of Environmental History: Volume 8 ; 8 ; >
 
@@ -250,8 +250,8 @@
     
     param[journal_id] = lilith
 
-    au < crawling ; exists ; 2020 ; Lilith: A Feminist History Journal Volume 26 ; 26 ; >
-    au < crawling ; exists ; 2021 ; Lilith: A Feminist History Journal Volume 27 ; 27 ; >
+    au < frozen ; exists ; 2020 ; Lilith: A Feminist History Journal Volume 26 ; 26 ; >
+    au < frozen ; exists ; 2021 ; Lilith: A Feminist History Journal Volume 27 ; 27 ; >
     au < manifest ; exists ; 2022 ; Lilith: A Feminist History Journal Volume 28 ; 28 ; >
 
   }
@@ -266,11 +266,11 @@
     
     param[journal_id] = made-china-journal
 
-    au < crawling ; exists ; 2016 ; Made in China Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2017 ; Made in China Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2018 ; Made in China Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2019 ; Made in China Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2020 ; Made in China Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2016 ; Made in China Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2017 ; Made in China Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2018 ; Made in China Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2019 ; Made in China Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2020 ; Made in China Volume 5 ; 5 ; >
     au < crawling ; exists ; 2021 ; Made in China Volume 6 ; 6 ; >
     au < notReady ; exists ; 2022 ; Made in China Volume 7 ; 7 ; > #manifest page checker finds a volume that does not exist.
 
