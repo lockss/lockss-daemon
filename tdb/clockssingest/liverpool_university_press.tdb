@@ -441,7 +441,7 @@
     au < crawling ; exists ; 2019 ; Eighteenth-Century Ireland Volume 34 ; 34 ; >
     au < crawling ; exists ; 2020 ; Eighteenth-Century Ireland Volume 35 ; 35 ; >
     au < crawling ; exists ; 2021 ; Eighteenth-Century Ireland Volume 36 ; 36 ; >
-    au < expected ; exists ; 2022 ; Eighteenth-Century Ireland Volume 37 ; 37 ; >
+    au < manifest ; exists ; 2022 ; Eighteenth-Century Ireland Volume 37 ; 37 ; >
 
   }
 
@@ -1806,9 +1806,9 @@
       eissn = 2754-415X
     >
 
-    param[journal_id] = romanian
+    param[journal_id] = jrns
 
-    au < expected ; exists ; 2022 ; Journal of Romanian Studies Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2022 ; Journal of Romanian Studies Volume 4 ; 4 ; >
 
   }
   
