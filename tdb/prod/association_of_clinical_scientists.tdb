@@ -17,9 +17,10 @@
       param[base_url] = http://www.annclinlabsci.org/
       implicit < status ; year ; name ; param[volume_name] >
 
+      au < exists ; 1971 ; Annals of Clinical & Laboratory Science Volume 1 ; 1 >
+      au < exists ; 1972 ; Annals of Clinical & Laboratory Science Volume 2 ; 2 >
       au < manifest ; 1973 ; Annals of Clinical & Laboratory Science Volume 3 ; 3 >
       au < manifest ; 1974 ; Annals of Clinical & Laboratory Science Volume 4 ; 4 >
-
       au < manifest ; 1975 ; Annals of Clinical & Laboratory Science Volume 5 ; 5 >
       au < manifest ; 1976 ; Annals of Clinical & Laboratory Science Volume 6 ; 6 >
       au < manifest ; 1977 ; Annals of Clinical & Laboratory Science Volume 7 ; 7 >
