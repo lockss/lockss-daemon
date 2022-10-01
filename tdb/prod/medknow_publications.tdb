@@ -549,12 +549,12 @@
 
       param[journal_issn] = 2589-9627
 #      param[base_url] = https://www.cmaconweb.org/
+      #Moved to Wolters Kluwer LWW
 
-    au < released ; 2018 ; Chinese Medicine and Culture Volume 1 ; 2018 ; 1 ; https://www.cmaconweb.org/ >
-    au < released ; 2019 ; Chinese Medicine and Culture Volume 2 ; 2019 ; 2 ; https://www.cmaconweb.org/ >
-    au < released ; 2020 ; Chinese Medicine and Culture Volume 3 ; 2020 ; 3 ; https://www.cmaconweb.org/ >
-    au < manifest ; 2021 ; Chinese Medicine and Culture Volume 4 ; 2021 ; 4 ; https://www.cmaconweb.org/ >
-    au < expected ; 2022 ; Chinese Medicine and Culture Volume 5 ; 2022 ; 5 ; https://www.cmaconweb.org/ >
+    au < down ; 2018 ; Chinese Medicine and Culture Volume 1 ; 2018 ; 1 ; https://www.cmaconweb.org/ >
+    au < down ; 2019 ; Chinese Medicine and Culture Volume 2 ; 2019 ; 2 ; https://www.cmaconweb.org/ >
+    au < down ; 2020 ; Chinese Medicine and Culture Volume 3 ; 2020 ; 3 ; https://www.cmaconweb.org/ >
+    au < doNotProcess ; 2021 ; Chinese Medicine and Culture Volume 4 ; 2021 ; 4 ; https://www.cmaconweb.org/ >
 
   }
 
@@ -748,20 +748,20 @@
 #    param[base_url] = http://www.idoj.in/
 
     param[journal_issn] = 2229-5178
+    #Moved to LWW
 
-    au < released ; 2010 ; Indian Dermatology Online Journal Volume 1 ; 2010 ; 1 ; https://www.idoj.in/ >
-    au < released ; 2011 ; Indian Dermatology Online Journal Volume 2 ; 2011 ; 2 ; http://www.idoj.in/ >
-    au < released ; 2012 ; Indian Dermatology Online Journal Volume 3 ; 2012 ; 3 ; http://www.idoj.in/ >
-    au < released ; 2013 ; Indian Dermatology Online Journal Volume 4 ; 2013 ; 4 ; http://www.idoj.in/ >
-    au < released ; 2014 ; Indian Dermatology Online Journal Volume 5 ; 2014 ; 5 ; http://www.idoj.in/ >
-    au < released ; 2015 ; Indian Dermatology Online Journal Volume 6 ; 2015 ; 6 ; http://www.idoj.in/ >
-    au < released ; 2016 ; Indian Dermatology Online Journal Volume 7 ; 2016 ; 7 ; http://www.idoj.in/ >
-    au < released ; 2017 ; Indian Dermatology Online Journal Volume 8 ; 2017 ; 8 ; http://www.idoj.in/ >
-    au < released ; 2018 ; Indian Dermatology Online Journal Volume 9 ; 2018 ; 9 ; http://www.idoj.in/ >
-    au < released ; 2019 ; Indian Dermatology Online Journal Volume 10 ; 2019 ; 10 ; https://www.idoj.in/ >
-    au < notReady ; 2020 ; Indian Dermatology Online Journal Volume 11 ; 2020 ; 11 ; https://www.idoj.in/ > #500 error
-    au < manifest ; 2021 ; Indian Dermatology Online Journal Volume 12 ; 2021 ; 12 ; https://www.idoj.in/ >
-    au < manifest ; 2022 ; Indian Dermatology Online Journal Volume 13 ; 2022 ; 13 ; https://www.idoj.in/ >
+    au < down ; 2010 ; Indian Dermatology Online Journal Volume 1 ; 2010 ; 1 ; https://www.idoj.in/ >
+    au < down ; 2011 ; Indian Dermatology Online Journal Volume 2 ; 2011 ; 2 ; http://www.idoj.in/ >
+    au < down ; 2012 ; Indian Dermatology Online Journal Volume 3 ; 2012 ; 3 ; http://www.idoj.in/ >
+    au < down ; 2013 ; Indian Dermatology Online Journal Volume 4 ; 2013 ; 4 ; http://www.idoj.in/ >
+    au < down ; 2014 ; Indian Dermatology Online Journal Volume 5 ; 2014 ; 5 ; http://www.idoj.in/ >
+    au < down ; 2015 ; Indian Dermatology Online Journal Volume 6 ; 2015 ; 6 ; http://www.idoj.in/ >
+    au < down ; 2016 ; Indian Dermatology Online Journal Volume 7 ; 2016 ; 7 ; http://www.idoj.in/ >
+    au < down ; 2017 ; Indian Dermatology Online Journal Volume 8 ; 2017 ; 8 ; http://www.idoj.in/ >
+    au < down ; 2018 ; Indian Dermatology Online Journal Volume 9 ; 2018 ; 9 ; http://www.idoj.in/ >
+    au < down ; 2019 ; Indian Dermatology Online Journal Volume 10 ; 2019 ; 10 ; https://www.idoj.in/ >
+    au < doNotProcess ; 2020 ; Indian Dermatology Online Journal Volume 11 ; 2020 ; 11 ; https://www.idoj.in/ > #500 error
+    au < doNotProcess ; 2021 ; Indian Dermatology Online Journal Volume 12 ; 2021 ; 12 ; https://www.idoj.in/ >
 
   }
 
@@ -2160,6 +2160,7 @@
 #    param[base_url] = http://www.ijabmr.org/
 
     param[journal_issn] = 2229-516X
+    #Moved to LWW
 
     au < released ; 2011 ; International Journal of Applied and Basic Medical Research Volume 1 ; 2011 ; 1 ; http://www.ijabmr.org/ >
     au < released ; 2012 ; International Journal of Applied and Basic Medical Research Volume 2 ; 2012 ; 2 ; http://www.ijabmr.org/ >
@@ -2171,8 +2172,7 @@
     au < notReady ; 2018 ; International Journal of Applied and Basic Medical Research Volume 8 ; 2018 ; 8 ; https://www.ijabmr.org/ > #500
     au < released ; 2019 ; International Journal of Applied and Basic Medical Research Volume 9 ; 2019 ; 9 ; https://www.ijabmr.org/ >
     au < released ; 2020 ; International Journal of Applied and Basic Medical Research Volume 10 ; 2020 ; 10 ; https://www.ijabmr.org/ >
-    au < manifest ; 2021 ; International Journal of Applied and Basic Medical Research Volume 11 ; 2021 ; 11 ; https://www.ijabmr.org/ >
-    au < manifest ; 2022 ; International Journal of Applied and Basic Medical Research Volume 12 ; 2022 ; 12 ; https://www.ijabmr.org/ >
+    au < doNotProcess ; 2021 ; International Journal of Applied and Basic Medical Research Volume 11 ; 2021 ; 11 ; https://www.ijabmr.org/ >
 
   }
     
@@ -4712,10 +4712,10 @@
       issnl = 0974-7796
    >
 #    param[base_url] = http://www.urologyannals.com/
-
     param[journal_issn] = 0974-7796
+    #Moved to LWW
 
-    au < manifest ; 2009 ; Urology Annals Volume 1 ; 2009 ; 1 ; https://www.urologyannals.com/ >
+    au < doNotProcess ; 2009 ; Urology Annals Volume 1 ; 2009 ; 1 ; https://www.urologyannals.com/ >
     au < released ; 2010 ; Urology Annals Volume 2 ; 2010 ; 2 ; https://www.urologyannals.com/ >
     au < released ; 2011 ; Urology Annals Volume 3 ; 2011 ; 3 ; http://www.urologyannals.com/ >
     au < released ; 2012 ; Urology Annals Volume 4 ; 2012 ; 4 ; http://www.urologyannals.com/ >
@@ -4727,8 +4727,7 @@
     au < released ; 2018 ; Urology Annals Volume 10 ; 2018 ; 10 ; http://www.urologyannals.com/ >
     au < released ; 2019 ; Urology Annals Volume 11 ; 2019 ; 11 ; https://www.urologyannals.com/ >
     au < released ; 2020 ; Urology Annals Volume 12 ; 2020 ; 12 ; https://www.urologyannals.com/ >
-    au < manifest ; 2021 ; Urology Annals Volume 13 ; 2021 ; 13 ; https://www.urologyannals.com/ >
-    au < manifest ; 2022 ; Urology Annals Volume 14 ; 2022 ; 14 ; https://www.urologyannals.com/ >
+    au < doNotProcess ; 2021 ; Urology Annals Volume 13 ; 2021 ; 13 ; https://www.urologyannals.com/ >
 
   }
 
@@ -5937,7 +5936,7 @@
       au < released ; 2018 ; Global Journal of Transfusion Medicine Volume 3 ; 2018 ; 3 ; http://www.gjtmonline.com/ >
       au < released ; 2019 ; Global Journal of Transfusion Medicine Volume 4 ; 2019 ; 4 ; https://www.gjtmonline.com/ >
       au < released ; 2020 ; Global Journal of Transfusion Medicine Volume 5 ; 2020 ; 5 ; https://www.gjtmonline.com/ >
-      au < manifest ; 2021 ; Global Journal of Transfusion Medicine Volume 6 ; 2021 ; 6 ; https://www.gjtmonline.com/ >
+      au < notReady ; 2021 ; Global Journal of Transfusion Medicine Volume 6 ; 2021 ; 6 ; https://www.gjtmonline.com/ > #500 error
       au < manifest ; 2022 ; Global Journal of Transfusion Medicine Volume 7 ; 2022 ; 7 ; https://www.gjtmonline.com/ >
 
   }
@@ -8845,14 +8844,14 @@
 
       param[journal_issn] = 0970-258X
 #      param[base_url] = http://www.nmji.in/
+      #Moved to new platform
 
-      au < released ; 2016 ; The National Medical Journal of India Volume 29 ; 2016 ; 29 ; http://www.nmji.in/ >
-      au < released ; 2017 ; The National Medical Journal of India Volume 30 ; 2017 ; 30 ; http://www.nmji.in/ >
-      au < released ; 2018 ; The National Medical Journal of India Volume 31 ; 2018 ; 31 ; http://www.nmji.in/ >
-      au < released ; 2019 ; The National Medical Journal of India Volume 32 ; 2019 ; 32 ; https://www.nmji.in/ >
-      au < released ; 2020 ; The National Medical Journal of India Volume 33 ; 2020 ; 33 ; https://www.nmji.in/ >
-      au < manifest ; 2021 ; The National Medical Journal of India Volume 34 ; 2021 ; 34 ; https://www.nmji.in/ >
-      au < expected ; 2022 ; The National Medical Journal of India Volume 35 ; 2022 ; 35 ; https://www.nmji.in/ >
+      au < down ; 2016 ; The National Medical Journal of India Volume 29 ; 2016 ; 29 ; http://www.nmji.in/ >
+      au < down ; 2017 ; The National Medical Journal of India Volume 30 ; 2017 ; 30 ; http://www.nmji.in/ >
+      au < down ; 2018 ; The National Medical Journal of India Volume 31 ; 2018 ; 31 ; http://www.nmji.in/ >
+      au < down ; 2019 ; The National Medical Journal of India Volume 32 ; 2019 ; 32 ; https://www.nmji.in/ >
+      au < down ; 2020 ; The National Medical Journal of India Volume 33 ; 2020 ; 33 ; https://www.nmji.in/ >
+      au < doNotProcess ; 2021 ; The National Medical Journal of India Volume 34 ; 2021 ; 34 ; https://www.nmji.in/ >
 
   }
 
@@ -10981,13 +10980,13 @@
 
       param[journal_issn] = 2096-2924
 #      param[base_url] = http://www.repdevmed.org/
+      #Moved to Wolters Kluwer LWW
 
       au < released ; 2017 ; Reproductive and Developmental Medicine Volume 1 ; 2017 ; 1 ; http://www.repdevmed.org/ >
       au < released ; 2018 ; Reproductive and Developmental Medicine Volume 2 ; 2018 ; 2 ; https://www.repdevmed.org/ >
       au < released ; 2019 ; Reproductive and Developmental Medicine Volume 3 ; 2019 ; 3 ; https://www.repdevmed.org/ >
       au < released ; 2020 ; Reproductive and Developmental Medicine Volume 4 ; 2020 ; 4 ; https://www.repdevmed.org/ >
-      au < manifest ; 2021 ; Reproductive and Developmental Medicine Volume 5 ; 2021 ; 5 ; https://www.repdevmed.org/ >
-      au < expected ; 2022 ; Reproductive and Developmental Medicine Volume 6 ; 2022 ; 6 ; https://www.repdevmed.org/ >
+      au < doNotProcess ; 2021 ; Reproductive and Developmental Medicine Volume 5 ; 2021 ; 5 ; https://www.repdevmed.org/ >
 
   }
 
