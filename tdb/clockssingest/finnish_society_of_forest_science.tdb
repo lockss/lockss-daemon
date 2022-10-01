@@ -31,7 +31,7 @@
     au < finished ; frozen ; 2018 ; Silva Fennica Volume 52 ; 52 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; Silva Fennica Volume 53 ; 53 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; Silva Fennica Volume 54 ; 54 ; >
-    au < crawling ; exists ; 2021 ; Silva Fennica Volume 55 ; 55 ; >
+    au < deepCrawl ; exists ; 2021 ; Silva Fennica Volume 55 ; 55 ; >
     au < exists ; exists ; 2022 ; Silva Fennica Volume 56 ; 56 ; >
 
   }
@@ -66,7 +66,7 @@
     au < finished ; finished ; 2018 ; Dissertationes Forestales Volume 2018 ; 2018 ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2019 ; Dissertationes Forestales Volume 2019 ; 2019 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Dissertationes Forestales Volume 2020 ; 2020 ; >
-    au < crawling ; exists ; 2021 ; Dissertationes Forestales Volume 2021 ; 2021 ; >
+    au < deepCrawl ; exists ; 2021 ; Dissertationes Forestales Volume 2021 ; 2021 ; >
     au < exists ; exists ; 2022 ; Dissertationes Forestales Volume 2022 ; 2022 ; >
 
   }
