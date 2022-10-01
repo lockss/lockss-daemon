@@ -9013,27 +9013,27 @@
     au < manifest ; exists ; 1998 ; Journal of Small Business and Enterprise Development Volume 5 ; 5 ; >
     au < ready ; exists ; 1999 ; Journal of Small Business and Enterprise Development Volume 6 ; 6 ; >
     au < frozen ; exists ; 2000 ; Journal of Small Business and Enterprise Development Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2001 ; Journal of Small Business and Enterprise Development Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2002 ; Journal of Small Business and Enterprise Development Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2003 ; Journal of Small Business and Enterprise Development Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2004 ; Journal of Small Business and Enterprise Development Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2005 ; Journal of Small Business and Enterprise Development Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2006 ; Journal of Small Business and Enterprise Development Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2007 ; Journal of Small Business and Enterprise Development Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2008 ; Journal of Small Business and Enterprise Development Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2009 ; Journal of Small Business and Enterprise Development Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2010 ; Journal of Small Business and Enterprise Development Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2011 ; Journal of Small Business and Enterprise Development Volume 18 ; 18 ; >
-    au < crawling ; exists ; 2012 ; Journal of Small Business and Enterprise Development Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2013 ; Journal of Small Business and Enterprise Development Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2001 ; Journal of Small Business and Enterprise Development Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2002 ; Journal of Small Business and Enterprise Development Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2003 ; Journal of Small Business and Enterprise Development Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2004 ; Journal of Small Business and Enterprise Development Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2005 ; Journal of Small Business and Enterprise Development Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2006 ; Journal of Small Business and Enterprise Development Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2007 ; Journal of Small Business and Enterprise Development Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2008 ; Journal of Small Business and Enterprise Development Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2009 ; Journal of Small Business and Enterprise Development Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2010 ; Journal of Small Business and Enterprise Development Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2011 ; Journal of Small Business and Enterprise Development Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2012 ; Journal of Small Business and Enterprise Development Volume 19 ; 19 ; >
+    au < frozen ; exists ; 2013 ; Journal of Small Business and Enterprise Development Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Small Business and Enterprise Development Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Small Business and Enterprise Development Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Small Business and Enterprise Development Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Small Business and Enterprise Development Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Small Business and Enterprise Development Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2019 ; Journal of Small Business and Enterprise Development Volume 26 ; 26 ; >
+    au < frozen ; exists ; 2019 ; Journal of Small Business and Enterprise Development Volume 26 ; 26 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Small Business and Enterprise Development Volume 27 ; 27 ; >
-    au < crawling ; exists ; 2021 ; Journal of Small Business and Enterprise Development Volume 28 ; 28 ; >
+    au < deepCrawl ; exists ; 2021 ; Journal of Small Business and Enterprise Development Volume 28 ; 28 ; >
     au < crawling ; exists ; 2022 ; Journal of Small Business and Enterprise Development Volume 29 ; 29 ; >
 
   }
@@ -9048,17 +9048,17 @@
     param[journal_issn] = 2042-6763
     comment[journal_id] = jsocm
 
-    au < crawling ; exists ; 2011 ; Journal of Social Marketing Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2012 ; Journal of Social Marketing Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2013 ; Journal of Social Marketing Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2011 ; Journal of Social Marketing Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2012 ; Journal of Social Marketing Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2013 ; Journal of Social Marketing Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Social Marketing Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Social Marketing Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Social Marketing Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2017 ; Journal of Social Marketing Volume 7 ; 7 ; > #no access to permission page.
+    au < frozen ; exists ; 2017 ; Journal of Social Marketing Volume 7 ; 7 ; > #no access to permission page.
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Social Marketing Volume 8 ; 8 ; >
     au < frozen ; exists ; 2019 ; Journal of Social Marketing Volume 9 ; 9 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Social Marketing Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2021 ; Journal of Social Marketing Volume 11 ; 11 ; >
+    au < deepCrawl ; exists ; 2021 ; Journal of Social Marketing Volume 11 ; 11 ; >
     au < crawling ; exists ; 2022 ; Journal of Social Marketing Volume 12 ; 12 ; >
 
   }
@@ -9074,11 +9074,11 @@
     param[journal_issn] = 1755-425X
     comment[journal_id] = jsma
 
-    au < crawling ; exists ; 2008 ; Journal of Strategy and Management Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2009 ; Journal of Strategy and Management Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2010 ; Journal of Strategy and Management Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2011 ; Journal of Strategy and Management Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2012 ; Journal of Strategy and Management Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2008 ; Journal of Strategy and Management Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2009 ; Journal of Strategy and Management Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2010 ; Journal of Strategy and Management Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2011 ; Journal of Strategy and Management Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2012 ; Journal of Strategy and Management Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Strategy and Management Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Strategy and Management Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Strategy and Management Volume 8 ; 8 ; >
@@ -9087,7 +9087,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Strategy and Management Volume 11 ; 11 ; >
     au < frozen ; exists ; 2019 ; Journal of Strategy and Management Volume 12 ; 12 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Strategy and Management Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2021 ; Journal of Strategy and Management Volume 14 ; 14 ; >
+    au < deepCrawl ; exists ; 2021 ; Journal of Strategy and Management Volume 14 ; 14 ; >
     au < crawling ; exists ; 2022 ; Journal of Strategy and Management Volume 15 ; 15 ; >
 
   }
@@ -9105,27 +9105,27 @@
 
     au < ready ; exists ; 1997 ; Journal of Systems and Information Technology Volume 1 ; 1 ; >
     au < crawling ; exists ; 1998 ; Journal of Systems and Information Technology Volume 2 ; 2 ; >
-    au < crawling ; exists ; 1999 ; Journal of Systems and Information Technology Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2000 ; Journal of Systems and Information Technology Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2001 ; Journal of Systems and Information Technology Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2002 ; Journal of Systems and Information Technology Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2003 ; Journal of Systems and Information Technology Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2004 ; Journal of Systems and Information Technology Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2007 ; Journal of Systems and Information Technology Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2008 ; Journal of Systems and Information Technology Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2009 ; Journal of Systems and Information Technology Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2010 ; Journal of Systems and Information Technology Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2011 ; Journal of Systems and Information Technology Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2012 ; Journal of Systems and Information Technology Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2013 ; Journal of Systems and Information Technology Volume 15 ; 15 ; >
+    au < frozen ; exists ; 1999 ; Journal of Systems and Information Technology Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2000 ; Journal of Systems and Information Technology Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2001 ; Journal of Systems and Information Technology Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2002 ; Journal of Systems and Information Technology Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2003 ; Journal of Systems and Information Technology Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2004 ; Journal of Systems and Information Technology Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2007 ; Journal of Systems and Information Technology Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2008 ; Journal of Systems and Information Technology Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2009 ; Journal of Systems and Information Technology Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2010 ; Journal of Systems and Information Technology Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2011 ; Journal of Systems and Information Technology Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2012 ; Journal of Systems and Information Technology Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2013 ; Journal of Systems and Information Technology Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Systems and Information Technology Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Systems and Information Technology Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Systems and Information Technology Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Systems and Information Technology Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Systems and Information Technology Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2019 ; Journal of Systems and Information Technology Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2019 ; Journal of Systems and Information Technology Volume 21 ; 21 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Systems and Information Technology Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2021 ; Journal of Systems and Information Technology Volume 23 ; 23 ; >
+    au < deepCrawl ; exists ; 2021 ; Journal of Systems and Information Technology Volume 23 ; 23 ; >
     au < crawling ; exists ; 2022 ; Journal of Systems and Information Technology Volume 24 ; 24 ; >
 
   }
@@ -9141,14 +9141,14 @@
     param[journal_issn] = 1746-8779
     comment[journal_id] = jtmc
 
-    au < crawling ; exists ; 2006 ; Journal of Technology Management in China Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2007 ; Journal of Technology Management in China Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2008 ; Journal of Technology Management in China Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2009 ; Journal of Technology Management in China Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2010 ; Journal of Technology Management in China Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2011 ; Journal of Technology Management in China Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2012 ; Journal of Technology Management in China Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2013 ; Journal of Technology Management in China Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2006 ; Journal of Technology Management in China Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2007 ; Journal of Technology Management in China Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2008 ; Journal of Technology Management in China Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2009 ; Journal of Technology Management in China Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2010 ; Journal of Technology Management in China Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2011 ; Journal of Technology Management in China Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2012 ; Journal of Technology Management in China Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2013 ; Journal of Technology Management in China Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Technology Management in China Volume 9 ; 9 ; >
 
   }
@@ -9188,30 +9188,30 @@
     #continues = 0955-8217
 
     au < ready ; exists ; 1997 ; Journal of Workplace Learning Volume 9 ; 9 ; >
-    au < crawling ; exists ; 1998 ; Journal of Workplace Learning Volume 10 ; 10 ; >
+    au < frozen ; exists ; 1998 ; Journal of Workplace Learning Volume 10 ; 10 ; >
     au < ready ; exists ; 1999 ; Journal of Workplace Learning Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2000 ; Journal of Workplace Learning Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2001 ; Journal of Workplace Learning Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2002 ; Journal of Workplace Learning Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2001 ; Journal of Workplace Learning Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2002 ; Journal of Workplace Learning Volume 14 ; 14 ; >
     au < ready ; exists ; 2003 ; Journal of Workplace Learning Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2004 ; Journal of Workplace Learning Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2005 ; Journal of Workplace Learning Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2006 ; Journal of Workplace Learning Volume 18 ; 18 ; >
-    au < crawling ; exists ; 2007 ; Journal of Workplace Learning Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2008 ; Journal of Workplace Learning Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2009 ; Journal of Workplace Learning Volume 21 ; 21 ; >
-    au < crawling ; exists ; 2010 ; Journal of Workplace Learning Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2011 ; Journal of Workplace Learning Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2012 ; Journal of Workplace Learning Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2013 ; Journal of Workplace Learning Volume 25 ; 25 ; >
+    au < frozen ; exists ; 2004 ; Journal of Workplace Learning Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2005 ; Journal of Workplace Learning Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2006 ; Journal of Workplace Learning Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2007 ; Journal of Workplace Learning Volume 19 ; 19 ; >
+    au < frozen ; exists ; 2008 ; Journal of Workplace Learning Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2009 ; Journal of Workplace Learning Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2010 ; Journal of Workplace Learning Volume 22 ; 22 ; >
+    au < frozen ; exists ; 2011 ; Journal of Workplace Learning Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2012 ; Journal of Workplace Learning Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2013 ; Journal of Workplace Learning Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Workplace Learning Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Workplace Learning Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Workplace Learning Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Workplace Learning Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Workplace Learning Volume 30 ; 30 ; >
-    au < crawling ; exists ; 2019 ; Journal of Workplace Learning Volume 31 ; 31 ; >
+    au < frozen ; exists ; 2019 ; Journal of Workplace Learning Volume 31 ; 31 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Workplace Learning Volume 32 ; 32 ; >
-    au < crawling ; exists ; 2021 ; Journal of Workplace Learning Volume 33 ; 33 ; >
+    au < deepCrawl ; exists ; 2021 ; Journal of Workplace Learning Volume 33 ; 33 ; >
     au < crawling ; exists ; 2022 ; Journal of Workplace Learning Volume 34 ; 34 ; >
 
   }
@@ -9253,22 +9253,22 @@
     au < manifest ; exists ; 1995 ; Kybernetes Volume 24 ; 24 ; >
     au < manifest ; exists ; 1996 ; Kybernetes Volume 25 ; 25 ; >
     au < manifest ; exists ; 1997 ; Kybernetes Volume 26 ; 26 ; >
-    au < crawling ; exists ; 1998 ; Kybernetes Volume 27 ; 27 ; >
-    au < crawling ; exists ; 1999 ; Kybernetes Volume 28 ; 28 ; >
+    au < frozen ; exists ; 1998 ; Kybernetes Volume 27 ; 27 ; >
+    au < frozen ; exists ; 1999 ; Kybernetes Volume 28 ; 28 ; >
     au < frozen ; exists ; 2000 ; Kybernetes Volume 29 ; 29 ; >
-    au < crawling ; exists ; 2001 ; Kybernetes Volume 30 ; 30 ; >
-    au < crawling ; exists ; 2002 ; Kybernetes Volume 31 ; 31 ; >
-    au < crawling ; exists ; 2003 ; Kybernetes Volume 32 ; 32 ; >
-    au < crawling ; exists ; 2004 ; Kybernetes Volume 33 ; 33 ; >
-    au < crawling ; exists ; 2005 ; Kybernetes Volume 34 ; 34 ; >
-    au < crawling ; exists ; 2006 ; Kybernetes Volume 35 ; 35 ; >
-    au < crawling ; exists ; 2007 ; Kybernetes Volume 36 ; 36 ; >
-    au < crawling ; exists ; 2008 ; Kybernetes Volume 37 ; 37 ; >
+    au < frozen ; exists ; 2001 ; Kybernetes Volume 30 ; 30 ; >
+    au < frozen ; exists ; 2002 ; Kybernetes Volume 31 ; 31 ; >
+    au < frozen ; exists ; 2003 ; Kybernetes Volume 32 ; 32 ; >
+    au < frozen ; exists ; 2004 ; Kybernetes Volume 33 ; 33 ; >
+    au < frozen ; exists ; 2005 ; Kybernetes Volume 34 ; 34 ; >
+    au < frozen ; exists ; 2006 ; Kybernetes Volume 35 ; 35 ; >
+    au < frozen ; exists ; 2007 ; Kybernetes Volume 36 ; 36 ; >
+    au < frozen ; exists ; 2008 ; Kybernetes Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Kybernetes Volume 38 ; 38 ; >
-    au < crawling ; exists ; 2010 ; Kybernetes Volume 39 ; 39 ; >
-    au < crawling ; exists ; 2011 ; Kybernetes Volume 40 ; 40 ; >
-    au < crawling ; exists ; 2012 ; Kybernetes Volume 41 ; 41 ; >
-    au < crawling ; exists ; 2013 ; Kybernetes Volume 42 ; 42 ; >
+    au < frozen ; exists ; 2010 ; Kybernetes Volume 39 ; 39 ; >
+    au < frozen ; exists ; 2011 ; Kybernetes Volume 40 ; 40 ; >
+    au < frozen ; exists ; 2012 ; Kybernetes Volume 41 ; 41 ; >
+    au < frozen ; exists ; 2013 ; Kybernetes Volume 42 ; 42 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Kybernetes Volume 43 ; 43 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Kybernetes Volume 44 ; 44 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Kybernetes Volume 45 ; 45 ; >
@@ -9276,7 +9276,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Kybernetes Volume 47 ; 47 ; >
     au < notReady ; exists ; 2019 ; Kybernetes Volume 48 ; 48 ; > #500 error https://www.emerald.com/insight/content/doi/10.1108/K-05-2018-0267/full/html
     au < deepCrawl ; exists ; 2020 ; Kybernetes Volume 49 ; 49 ; >
-    au < crawling ; exists ; 2021 ; Kybernetes Volume 50 ; 50 ; >
+    au < deepCrawl ; exists ; 2021 ; Kybernetes Volume 50 ; 50 ; >
     au < crawling ; exists ; 2022 ; Kybernetes Volume 51 ; 51 ; >
 
   }
@@ -9311,21 +9311,21 @@
     au < manifest ; exists ; 1996 ; Leadership & Organization Development Journal Volume 17 ; 17 ; >
     au < manifest ; exists ; 1997 ; Leadership & Organization Development Journal Volume 18 ; 18 ; >
     au < ready ; exists ; 1998 ; Leadership & Organization Development Journal Volume 19 ; 19 ; >
-    au < crawling ; exists ; 1999 ; Leadership & Organization Development Journal Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2000 ; Leadership & Organization Development Journal Volume 21 ; 21 ; >
+    au < frozen ; exists ; 1999 ; Leadership & Organization Development Journal Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2000 ; Leadership & Organization Development Journal Volume 21 ; 21 ; >
     au < ready ; exists ; 2001 ; Leadership & Organization Development Journal Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2002 ; Leadership & Organization Development Journal Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2003 ; Leadership & Organization Development Journal Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2004 ; Leadership & Organization Development Journal Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2005 ; Leadership & Organization Development Journal Volume 26 ; 26 ; >
-    au < crawling ; exists ; 2006 ; Leadership & Organization Development Journal Volume 27 ; 27 ; >
-    au < crawling ; exists ; 2007 ; Leadership & Organization Development Journal Volume 28 ; 28 ; >
-    au < crawling ; exists ; 2008 ; Leadership & Organization Development Journal Volume 29 ; 29 ; >
-    au < crawling ; exists ; 2009 ; Leadership & Organization Development Journal Volume 30 ; 30 ; >
-    au < crawling ; exists ; 2010 ; Leadership & Organization Development Journal Volume 31 ; 31 ; >
-    au < crawling ; exists ; 2011 ; Leadership & Organization Development Journal Volume 32 ; 32 ; >
-    au < crawling ; exists ; 2012 ; Leadership & Organization Development Journal Volume 33 ; 33 ; >
-    au < crawling ; exists ; 2013 ; Leadership & Organization Development Journal Volume 34 ; 34 ; >
+    au < frozen ; exists ; 2002 ; Leadership & Organization Development Journal Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2003 ; Leadership & Organization Development Journal Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2004 ; Leadership & Organization Development Journal Volume 25 ; 25 ; >
+    au < frozen ; exists ; 2005 ; Leadership & Organization Development Journal Volume 26 ; 26 ; >
+    au < frozen ; exists ; 2006 ; Leadership & Organization Development Journal Volume 27 ; 27 ; >
+    au < frozen ; exists ; 2007 ; Leadership & Organization Development Journal Volume 28 ; 28 ; >
+    au < frozen ; exists ; 2008 ; Leadership & Organization Development Journal Volume 29 ; 29 ; >
+    au < frozen ; exists ; 2009 ; Leadership & Organization Development Journal Volume 30 ; 30 ; >
+    au < frozen ; exists ; 2010 ; Leadership & Organization Development Journal Volume 31 ; 31 ; >
+    au < frozen ; exists ; 2011 ; Leadership & Organization Development Journal Volume 32 ; 32 ; >
+    au < frozen ; exists ; 2012 ; Leadership & Organization Development Journal Volume 33 ; 33 ; >
+    au < frozen ; exists ; 2013 ; Leadership & Organization Development Journal Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Leadership & Organization Development Journal Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Leadership & Organization Development Journal Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Leadership & Organization Development Journal Volume 37 ; 37 ; >
@@ -9333,7 +9333,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Leadership & Organization Development Journal Volume 39 ; 39 ; >
     au < frozen ; exists ; 2019 ; Leadership & Organization Development Journal Volume 40 ; 40 ; >
     au < deepCrawl ; exists ; 2020 ; Leadership & Organization Development Journal Volume 41 ; 41 ; >
-    au < crawling ; exists ; 2021 ; Leadership & Organization Development Journal Volume 42 ; 42 ; >
+    au < deepCrawl ; exists ; 2021 ; Leadership & Organization Development Journal Volume 42 ; 42 ; >
     au < crawling ; exists ; 2022 ; Leadership & Organization Development Journal Volume 43 ; 43 ; >
 
   }
@@ -9351,13 +9351,13 @@
 
     au < ready ; exists ; 1997 ; Leadership in Health Services Volume 10 ; 10 ; >
     au < ready ; exists ; 1998 ; Leadership in Health Services Volume 11 ; 11 ; >
-    au < crawling ; exists ; 1999 ; Leadership in Health Services Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2000 ; Leadership in Health Services Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2001 ; Leadership in Health Services Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2002 ; Leadership in Health Services Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2003 ; Leadership in Health Services Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2004 ; Leadership in Health Services Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2005 ; Leadership in Health Services Volume 18 ; 18 ; >
+    au < frozen ; exists ; 1999 ; Leadership in Health Services Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2000 ; Leadership in Health Services Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2001 ; Leadership in Health Services Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2002 ; Leadership in Health Services Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2003 ; Leadership in Health Services Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2004 ; Leadership in Health Services Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2005 ; Leadership in Health Services Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2006 ; Leadership in Health Services Volume 19 ; 19 ; >
 
   }
@@ -9375,21 +9375,21 @@
     # online from 1997
     #continued = 1366-0756
 
-    au < crawling ; exists ; 2007 ; Leadership in Health Services Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2008 ; Leadership in Health Services Volume 21 ; 21 ; >
-    au < crawling ; exists ; 2009 ; Leadership in Health Services Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2010 ; Leadership in Health Services Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2007 ; Leadership in Health Services Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2008 ; Leadership in Health Services Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2009 ; Leadership in Health Services Volume 22 ; 22 ; >
+    au < frozen ; exists ; 2010 ; Leadership in Health Services Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Leadership in Health Services Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2012 ; Leadership in Health Services Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2013 ; Leadership in Health Services Volume 26 ; 26 ; >
+    au < frozen ; exists ; 2012 ; Leadership in Health Services Volume 25 ; 25 ; >
+    au < frozen ; exists ; 2013 ; Leadership in Health Services Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Leadership in Health Services Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Leadership in Health Services Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Leadership in Health Services Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Leadership in Health Services Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Leadership in Health Services Volume 31 ; 31 ; >
-    au < crawling ; exists ; 2019 ; Leadership in Health Services Volume 32 ; 32 ; >
+    au < frozen ; exists ; 2019 ; Leadership in Health Services Volume 32 ; 32 ; >
     au < deepCrawl ; exists ; 2020 ; Leadership in Health Services Volume 33 ; 33 ; >
-    au < crawling ; exists ; 2021 ; Leadership in Health Services Volume 34 ; 34 ; >
+    au < deepCrawl ; exists ; 2021 ; Leadership in Health Services Volume 34 ; 34 ; >
     au < crawling ; exists ; 2022 ; Leadership in Health Services Volume 35 ; 35 ; >
 
   }
@@ -9409,30 +9409,30 @@
     au < manifest ; exists ; 1995 ; The Learning Organization Volume 2 ; 2 ; >
     au < manifest ; exists ; 1996 ; The Learning Organization Volume 3 ; 3 ; >
     au < ready ; exists ; 1997 ; The Learning Organization Volume 4 ; 4 ; >
-    au < crawling ; exists ; 1998 ; The Learning Organization Volume 5 ; 5 ; >
+    au < frozen ; exists ; 1998 ; The Learning Organization Volume 5 ; 5 ; >
     au < ready ; exists ; 1999 ; The Learning Organization Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2000 ; The Learning Organization Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2001 ; The Learning Organization Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2002 ; The Learning Organization Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2003 ; The Learning Organization Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2004 ; The Learning Organization Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2005 ; The Learning Organization Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2006 ; The Learning Organization Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2007 ; The Learning Organization Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2008 ; The Learning Organization Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2009 ; The Learning Organization Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2010 ; The Learning Organization Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2011 ; The Learning Organization Volume 18 ; 18 ; >
-    au < crawling ; exists ; 2012 ; The Learning Organization Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2013 ; The Learning Organization Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2000 ; The Learning Organization Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2001 ; The Learning Organization Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2002 ; The Learning Organization Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2003 ; The Learning Organization Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2004 ; The Learning Organization Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2005 ; The Learning Organization Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2006 ; The Learning Organization Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2007 ; The Learning Organization Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2008 ; The Learning Organization Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2009 ; The Learning Organization Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2010 ; The Learning Organization Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2011 ; The Learning Organization Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2012 ; The Learning Organization Volume 19 ; 19 ; >
+    au < frozen ; exists ; 2013 ; The Learning Organization Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; The Learning Organization Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; The Learning Organization Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; The Learning Organization Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2017 ; The Learning Organization Volume 24 ; 24 ; > #no access to permission page
+    au < frozen ; exists ; 2017 ; The Learning Organization Volume 24 ; 24 ; > #no access to permission page
     au < doNotProcess ; doNotProcess ; 2018 ; The Learning Organization Volume 25 ; 25 ; >
     au < frozen ; exists ; 2019 ; The Learning Organization Volume 26 ; 26 ; >
     au < deepCrawl ; exists ; 2020 ; The Learning Organization Volume 27 ; 27 ; >
-    au < crawling ; exists ; 2021 ; The Learning Organization Volume 28 ; 28 ; >
+    au < deepCrawl ; exists ; 2021 ; The Learning Organization Volume 28 ; 28 ; >
     au < crawling ; exists ; 2022 ; The Learning Organization Volume 29 ; 29 ; >
 
   }
@@ -9455,7 +9455,7 @@
     au < manifest ; exists ; 1996 ; Librarian Career Development Volume 4 ; 4 ; >
     au < ready ; exists ; 1997 ; Librarian Career Development Volume 5 ; 5 ; >
     au < ready ; exists ; 1998 ; Librarian Career Development Volume 6 ; 6 ; >
-    au < crawling ; exists ; 1999 ; Librarian Career Development Volume 7 ; 7 ; >
+    au < frozen ; exists ; 1999 ; Librarian Career Development Volume 7 ; 7 ; >
 
   }
 
@@ -9471,7 +9471,7 @@
     comment[journal_id] = lcmij
 
     au < ready ; exists ; 1999 ; Library Consortium Management: An International Journal Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2000 ; Library Consortium Management: An International Journal Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2000 ; Library Consortium Management: An International Journal Volume 2 ; 2 ; >
 
   }
 
@@ -9503,18 +9503,18 @@
     au < ready ; exists ; 1998 ; Library Hi Tech Volume 16 ; 16 ; >
     au < ready ; exists ; 1999 ; Library Hi Tech Volume 17 ; 17 ; >
     au < frozen ; exists ; 2000 ; Library Hi Tech Volume 18 ; 18 ; >
-    au < crawling ; exists ; 2001 ; Library Hi Tech Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2002 ; Library Hi Tech Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2003 ; Library Hi Tech Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2001 ; Library Hi Tech Volume 19 ; 19 ; >
+    au < frozen ; exists ; 2002 ; Library Hi Tech Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2003 ; Library Hi Tech Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2004 ; Library Hi Tech Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2005 ; Library Hi Tech Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2006 ; Library Hi Tech Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2007 ; Library Hi Tech Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2008 ; Library Hi Tech Volume 26 ; 26 ; >
-    au < crawling ; exists ; 2009 ; Library Hi Tech Volume 27 ; 27 ; >
-    au < crawling ; exists ; 2010 ; Library Hi Tech Volume 28 ; 28 ; >
-    au < crawling ; exists ; 2011 ; Library Hi Tech Volume 29 ; 29 ; >
-    au < crawling ; exists ; 2012 ; Library Hi Tech Volume 30 ; 30 ; >
+    au < frozen ; exists ; 2005 ; Library Hi Tech Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2006 ; Library Hi Tech Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2007 ; Library Hi Tech Volume 25 ; 25 ; >
+    au < frozen ; exists ; 2008 ; Library Hi Tech Volume 26 ; 26 ; >
+    au < frozen ; exists ; 2009 ; Library Hi Tech Volume 27 ; 27 ; >
+    au < frozen ; exists ; 2010 ; Library Hi Tech Volume 28 ; 28 ; >
+    au < frozen ; exists ; 2011 ; Library Hi Tech Volume 29 ; 29 ; >
+    au < frozen ; exists ; 2012 ; Library Hi Tech Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Library Hi Tech Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Library Hi Tech Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Library Hi Tech Volume 33 ; 33 ; >
@@ -9523,7 +9523,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Library Hi Tech Volume 36 ; 36 ; >
     au < frozen ; exists ; 2019 ; Library Hi Tech Volume 37 ; 37 ; >
     au < deepCrawl ; exists ; 2020 ; Library Hi Tech Volume 38 ; 38 ; >
-    au < crawling ; exists ; 2021 ; Library Hi Tech Volume 39 ; 39 ; >
+    au < deepCrawl ; exists ; 2021 ; Library Hi Tech Volume 39 ; 39 ; >
     au < crawling ; exists ; 2022 ; Library Hi Tech Volume 40 ; 40 ; >
 
   }
@@ -9544,15 +9544,15 @@
     au < crawling ; exists ; 2002 ; Library Hi Tech News Volume 19 ; 19 ; >
     au < notReady ; exists ; 2003 ; Library Hi Tech News Volume 20 ; 20 ; > #No pdfs
     au < doNotProcess ; doNotProcess ; 2004 ; Library Hi Tech News Volume 21 ; 21 ; >
-    au < crawling ; exists ; 2005 ; Library Hi Tech News Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2006 ; Library Hi Tech News Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2007 ; Library Hi Tech News Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2008 ; Library Hi Tech News Volume 25 ; 25 ; >
+    au < frozen ; exists ; 2005 ; Library Hi Tech News Volume 22 ; 22 ; >
+    au < frozen ; exists ; 2006 ; Library Hi Tech News Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2007 ; Library Hi Tech News Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2008 ; Library Hi Tech News Volume 25 ; 25 ; >
     au < notReady ; exists ; 2009 ; Library Hi Tech News Volume 26 ; 26 ; > #403 Forbidden
-    au < crawling ; exists ; 2010 ; Library Hi Tech News Volume 27 ; 27 ; >
-    au < crawling ; exists ; 2011 ; Library Hi Tech News Volume 28 ; 28 ; >
-    au < crawling ; exists ; 2012 ; Library Hi Tech News Volume 29 ; 29 ; >
-    au < crawling ; exists ; 2013 ; Library Hi Tech News Volume 30 ; 30 ; >
+    au < frozen ; exists ; 2010 ; Library Hi Tech News Volume 27 ; 27 ; >
+    au < frozen ; exists ; 2011 ; Library Hi Tech News Volume 28 ; 28 ; >
+    au < frozen ; exists ; 2012 ; Library Hi Tech News Volume 29 ; 29 ; >
+    au < frozen ; exists ; 2013 ; Library Hi Tech News Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Library Hi Tech News Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Library Hi Tech News Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Library Hi Tech News Volume 33 ; 33 ; >
@@ -9596,20 +9596,20 @@
     au < manifest ; exists ; 1997 ; Library Management Volume 18 ; 18 ; >
     au < ready ; exists ; 1998 ; Library Management Volume 19 ; 19 ; >
     au < ready ; exists ; 1999 ; Library Management Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2000 ; Library Management Volume 21 ; 21 ; >
-    au < crawling ; exists ; 2001 ; Library Management Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2002 ; Library Management Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2003 ; Library Management Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2004 ; Library Management Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2005 ; Library Management Volume 26 ; 26 ; >
-    au < crawling ; exists ; 2006 ; Library Management Volume 27 ; 27 ; >
-    au < crawling ; exists ; 2007 ; Library Management Volume 28 ; 28 ; >
-    au < crawling ; exists ; 2008 ; Library Management Volume 29 ; 29 ; >
+    au < frozen ; exists ; 2000 ; Library Management Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2001 ; Library Management Volume 22 ; 22 ; >
+    au < frozen ; exists ; 2002 ; Library Management Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2003 ; Library Management Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2004 ; Library Management Volume 25 ; 25 ; >
+    au < frozen ; exists ; 2005 ; Library Management Volume 26 ; 26 ; >
+    au < frozen ; exists ; 2006 ; Library Management Volume 27 ; 27 ; >
+    au < frozen ; exists ; 2007 ; Library Management Volume 28 ; 28 ; >
+    au < frozen ; exists ; 2008 ; Library Management Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Library Management Volume 30 ; 30 ; >
-    au < crawling ; exists ; 2010 ; Library Management Volume 31 ; 31 ; >
-    au < crawling ; exists ; 2011 ; Library Management Volume 32 ; 32 ; >
-    au < crawling ; exists ; 2012 ; Library Management Volume 33 ; 33 ; >
-    au < crawling ; exists ; 2013 ; Library Management Volume 34 ; 34 ; >
+    au < frozen ; exists ; 2010 ; Library Management Volume 31 ; 31 ; >
+    au < frozen ; exists ; 2011 ; Library Management Volume 32 ; 32 ; >
+    au < frozen ; exists ; 2012 ; Library Management Volume 33 ; 33 ; >
+    au < frozen ; exists ; 2013 ; Library Management Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Library Management Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Library Management Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Library Management Volume 37 ; 37 ; >
@@ -9617,7 +9617,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Library Management Volume 39 ; 39 ; >
     au < frozen ; exists ; 2019 ; Library Management Volume 40 ; 40 ; >
     au < notReady ; exists ; 2020 ; Library Management Volume 41 ; 41 ; > #500 error https://www.emerald.com/insight/content/doi/10.1108/LM-02-2017%200022/full/pdf?title=libraries-and-technology-canadian-and-malaysian-copyright-exceptions
-    au < crawling ; exists ; 2021 ; Library Management Volume 42 ; 42 ; >
+    au < deepCrawl ; exists ; 2021 ; Library Management Volume 42 ; 42 ; >
     au < crawling ; exists ; 2022 ; Library Management Volume 43 ; 43 ; >
 
   }
@@ -9680,22 +9680,22 @@
     au < manifest ; exists ; 1995 ; Library Review Volume 44 ; 44 ; >
     au < ready ; exists ; 1996 ; Library Review Volume 45 ; 45 ; >
     au < manifest ; exists ; 1997 ; Library Review Volume 46 ; 46 ; >
-    au < crawling ; exists ; 1998 ; Library Review Volume 47 ; 47 ; >
-    au < crawling ; exists ; 1999 ; Library Review Volume 48 ; 48 ; >
+    au < frozen ; exists ; 1998 ; Library Review Volume 47 ; 47 ; >
+    au < frozen ; exists ; 1999 ; Library Review Volume 48 ; 48 ; >
     au < doNotProcess ; doNotProcess ; 2000 ; Library Review Volume 49 ; 49 ; >
-    au < crawling ; exists ; 2001 ; Library Review Volume 50 ; 50 ; >
-    au < crawling ; exists ; 2002 ; Library Review Volume 51 ; 51 ; >
-    au < crawling ; exists ; 2003 ; Library Review Volume 52 ; 52 ; >
+    au < frozen ; exists ; 2001 ; Library Review Volume 50 ; 50 ; >
+    au < frozen ; exists ; 2002 ; Library Review Volume 51 ; 51 ; >
+    au < frozen ; exists ; 2003 ; Library Review Volume 52 ; 52 ; >
     au < ready ; exists ; 2004 ; Library Review Volume 53 ; 53 ; >
-    au < crawling ; exists ; 2005 ; Library Review Volume 54 ; 54 ; >
+    au < frozen ; exists ; 2005 ; Library Review Volume 54 ; 54 ; >
     au < doNotProcess ; doNotProcess ; 2006 ; Library Review Volume 55 ; 55 ; >
-    au < crawling ; exists ; 2007 ; Library Review Volume 56 ; 56 ; >
-    au < crawling ; exists ; 2008 ; Library Review Volume 57 ; 57 ; >
-    au < crawling ; exists ; 2009 ; Library Review Volume 58 ; 58 ; >
-    au < crawling ; exists ; 2010 ; Library Review Volume 59 ; 59 ; >
-    au < crawling ; exists ; 2011 ; Library Review Volume 60 ; 60 ; >
-    au < crawling ; exists ; 2012 ; Library Review Volume 61 ; 61 ; >
-    au < crawling ; exists ; 2013 ; Library Review Volume 62 ; 62 ; >
+    au < frozen ; exists ; 2007 ; Library Review Volume 56 ; 56 ; >
+    au < frozen ; exists ; 2008 ; Library Review Volume 57 ; 57 ; >
+    au < frozen ; exists ; 2009 ; Library Review Volume 58 ; 58 ; >
+    au < frozen ; exists ; 2010 ; Library Review Volume 59 ; 59 ; >
+    au < frozen ; exists ; 2011 ; Library Review Volume 60 ; 60 ; >
+    au < frozen ; exists ; 2012 ; Library Review Volume 61 ; 61 ; >
+    au < frozen ; exists ; 2013 ; Library Review Volume 62 ; 62 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Library Review Volume 63 ; 63 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Library Review Volume 64 ; 64 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Library Review Volume 65 ; 65 ; >
@@ -9713,10 +9713,10 @@
     comment[journal_id] = gkmc
     #continues = 0024-2535
 
-    au < crawling ; exists ; 2018 ; Global Knowledge, Memory and Communication Volume 67 ; 67 ; >
+    au < frozen ; exists ; 2018 ; Global Knowledge, Memory and Communication Volume 67 ; 67 ; >
     au < frozen ; exists ; 2019 ; Global Knowledge, Memory and Communication Volume 68 ; 68 ; >
     au < deepCrawl ; exists ; 2020 ; Global Knowledge, Memory and Communication Volume 69 ; 69 ; >
-    au < crawling ; exists ; 2021 ; Global Knowledge, Memory and Communication Volume 70 ; 70 ; >
+    au < deepCrawl ; exists ; 2021 ; Global Knowledge, Memory and Communication Volume 70 ; 70 ; >
     au < crawling ; exists ; 2022 ; Global Knowledge, Memory and Communication Volume 71 ; 71 ; >
 
   }
@@ -9759,12 +9759,12 @@
     au < manifest ; exists ; 1995 ; Logistics Information Management Volume 8 ; 8 ; >
     au < manifest ; exists ; 1996 ; Logistics Information Management Volume 9 ; 9 ; >
     au < ready ; exists ; 1997 ; Logistics Information Management Volume 10 ; 10 ; >
-    au < crawling ; exists ; 1998 ; Logistics Information Management Volume 11 ; 11 ; >
-    au < crawling ; exists ; 1999 ; Logistics Information Management Volume 12 ; 12 ; >
+    au < frozen ; exists ; 1998 ; Logistics Information Management Volume 11 ; 11 ; >
+    au < frozen ; exists ; 1999 ; Logistics Information Management Volume 12 ; 12 ; >
     au < frozen ; exists ; 2000 ; Logistics Information Management Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2001 ; Logistics Information Management Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2002 ; Logistics Information Management Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2003 ; Logistics Information Management Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2001 ; Logistics Information Management Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2002 ; Logistics Information Management Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2003 ; Logistics Information Management Volume 16 ; 16 ; >
 
   }
 
@@ -9810,22 +9810,22 @@
     au < manifest ; exists ; 1995 ; Management Decision Volume 33 ; 33 ; >
     au < manifest ; exists ; 1996 ; Management Decision Volume 34 ; 34 ; >
     au < manifest ; exists ; 1997 ; Management Decision Volume 35 ; 35 ; >
-    au < crawling ; exists ; 1998 ; Management Decision Volume 36 ; 36 ; >
+    au < frozen ; exists ; 1998 ; Management Decision Volume 36 ; 36 ; >
     au < ready ; exists ; 1999 ; Management Decision Volume 37 ; 37 ; >
-    au < crawling ; exists ; 2000 ; Management Decision Volume 38 ; 38 ; >
+    au < frozen ; exists ; 2000 ; Management Decision Volume 38 ; 38 ; >
     au < ready ; exists ; 2001 ; Management Decision Volume 39 ; 39 ; >
-    au < crawling ; exists ; 2002 ; Management Decision Volume 40 ; 40 ; >
-    au < crawling ; exists ; 2003 ; Management Decision Volume 41 ; 41 ; >
+    au < frozen ; exists ; 2002 ; Management Decision Volume 40 ; 40 ; >
+    au < frozen ; exists ; 2003 ; Management Decision Volume 41 ; 41 ; >
     au < doNotProcess ; doNotProcess ; 2004 ; Management Decision Volume 42 ; 42 ; >
-    au < crawling ; exists ; 2005 ; Management Decision Volume 43 ; 43 ; >
-    au < crawling ; exists ; 2006 ; Management Decision Volume 44 ; 44 ; >
-    au < crawling ; exists ; 2007 ; Management Decision Volume 45 ; 45 ; >
-    au < crawling ; exists ; 2008 ; Management Decision Volume 46 ; 46 ; >
+    au < frozen ; exists ; 2005 ; Management Decision Volume 43 ; 43 ; >
+    au < frozen ; exists ; 2006 ; Management Decision Volume 44 ; 44 ; >
+    au < frozen ; exists ; 2007 ; Management Decision Volume 45 ; 45 ; >
+    au < frozen ; exists ; 2008 ; Management Decision Volume 46 ; 46 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Management Decision Volume 47 ; 47 ; >
-    au < crawling ; exists ; 2010 ; Management Decision Volume 48 ; 48 ; >
-    au < crawling ; exists ; 2011 ; Management Decision Volume 49 ; 49 ; >
-    au < crawling ; exists ; 2012 ; Management Decision Volume 50 ; 50 ; >
-    au < crawling ; exists ; 2013 ; Management Decision Volume 51 ; 51 ; >
+    au < frozen ; exists ; 2010 ; Management Decision Volume 48 ; 48 ; >
+    au < frozen ; exists ; 2011 ; Management Decision Volume 49 ; 49 ; >
+    au < frozen ; exists ; 2012 ; Management Decision Volume 50 ; 50 ; >
+    au < frozen ; exists ; 2013 ; Management Decision Volume 51 ; 51 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Management Decision Volume 52 ; 52 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Management Decision Volume 53 ; 53 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Management Decision Volume 54 ; 54 ; >
@@ -9833,7 +9833,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Management Decision Volume 56 ; 56 ; >
     au < frozen ; exists ; 2019 ; Management Decision Volume 57 ; 57 ; >
     au < deepCrawl ; exists ; 2020 ; Management Decision Volume 58 ; 58 ; >
-    au < crawling ; exists ; 2021 ; Management Decision Volume 59 ; 59 ; >
+    au < deepCrawl ; exists ; 2021 ; Management Decision Volume 59 ; 59 ; >
     au < crawling ; exists ; 2022 ; Management Decision Volume 60 ; 60 ; >
 
   }
@@ -9871,17 +9871,17 @@
     comment[journal_id] = meq
     # online from 2003
 
-    au < crawling ; exists ; 2003 ; Management of Environmental Quality: An International Journal Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2004 ; Management of Environmental Quality: An International Journal Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2003 ; Management of Environmental Quality: An International Journal Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2004 ; Management of Environmental Quality: An International Journal Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2005 ; Management of Environmental Quality: An International Journal Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2006 ; Management of Environmental Quality: An International Journal Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2007 ; Management of Environmental Quality: An International Journal Volume 18 ; 18 ; >
-    au < crawling ; exists ; 2008 ; Management of Environmental Quality: An International Journal Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2009 ; Management of Environmental Quality: An International Journal Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2010 ; Management of Environmental Quality: An International Journal Volume 21 ; 21 ; >
-    au < crawling ; exists ; 2011 ; Management of Environmental Quality: An International Journal Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2012 ; Management of Environmental Quality: An International Journal Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2013 ; Management of Environmental Quality: An International Journal Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2006 ; Management of Environmental Quality: An International Journal Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2007 ; Management of Environmental Quality: An International Journal Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2008 ; Management of Environmental Quality: An International Journal Volume 19 ; 19 ; >
+    au < frozen ; exists ; 2009 ; Management of Environmental Quality: An International Journal Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2010 ; Management of Environmental Quality: An International Journal Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2011 ; Management of Environmental Quality: An International Journal Volume 22 ; 22 ; >
+    au < frozen ; exists ; 2012 ; Management of Environmental Quality: An International Journal Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2013 ; Management of Environmental Quality: An International Journal Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Management of Environmental Quality: An International Journal Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Management of Environmental Quality: An International Journal Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Management of Environmental Quality: An International Journal Volume 27 ; 27 ; >
@@ -9889,7 +9889,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Management of Environmental Quality: An International Journal Volume 29 ; 29 ; >
     au < frozen ; exists ; 2019 ; Management of Environmental Quality: An International Journal Volume 30 ; 30 ; >
     au < deepCrawl ; exists ; 2020 ; Management of Environmental Quality: An International Journal Volume 31 ; 31 ; >
-    au < crawling ; exists ; 2021 ; Management of Environmental Quality: An International Journal Volume 32 ; 32 ; >
+    au < deepCrawl ; exists ; 2021 ; Management of Environmental Quality: An International Journal Volume 32 ; 32 ; >
     au < crawling ; exists ; 2022 ; Management of Environmental Quality: An International Journal Volume 33 ; 33 ; >
 
   }
@@ -9927,17 +9927,17 @@
     au < manifest ; exists ; 1996 ; Management Research News Volume 19 ; 19 ; >
     au < manifest ; exists ; 1997 ; Management Research News Volume 20 ; 20 ; >
     au < ready ; exists ; 1998 ; Management Research News Volume 21 ; 21 ; >
-    au < crawling ; exists ; 1999 ; Management Research News Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2000 ; Management Research News Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2001 ; Management Research News Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2002 ; Management Research News Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2003 ; Management Research News Volume 26 ; 26 ; >
-    au < crawling ; exists ; 2004 ; Management Research News Volume 27 ; 27 ; >
-    au < crawling ; exists ; 2005 ; Management Research News Volume 28 ; 28 ; >
-    au < crawling ; exists ; 2006 ; Management Research News Volume 29 ; 29 ; >
+    au < frozen ; exists ; 1999 ; Management Research News Volume 22 ; 22 ; >
+    au < frozen ; exists ; 2000 ; Management Research News Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2001 ; Management Research News Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2002 ; Management Research News Volume 25 ; 25 ; >
+    au < frozen ; exists ; 2003 ; Management Research News Volume 26 ; 26 ; >
+    au < frozen ; exists ; 2004 ; Management Research News Volume 27 ; 27 ; >
+    au < frozen ; exists ; 2005 ; Management Research News Volume 28 ; 28 ; >
+    au < frozen ; exists ; 2006 ; Management Research News Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2007 ; Management Research News Volume 30 ; 30 ; >
-    au < crawling ; exists ; 2008 ; Management Research News Volume 31 ; 31 ; >
-    au < crawling ; exists ; 2009 ; Management Research News Volume 32 ; 32 ; >
+    au < frozen ; exists ; 2008 ; Management Research News Volume 31 ; 31 ; >
+    au < frozen ; exists ; 2009 ; Management Research News Volume 32 ; 32 ; >
 
   }
 
@@ -9952,10 +9952,10 @@
     comment[journal_id] = mrr
     # online from 2010
 
-    au < crawling ; exists ; 2010 ; Management Research Review Volume 33 ; 33 ; >
-    au < crawling ; exists ; 2011 ; Management Research Review Volume 34 ; 34 ; >
-    au < crawling ; exists ; 2012 ; Management Research Review Volume 35 ; 35 ; >
-    au < crawling ; exists ; 2013 ; Management Research Review Volume 36 ; 36 ; >
+    au < frozen ; exists ; 2010 ; Management Research Review Volume 33 ; 33 ; >
+    au < frozen ; exists ; 2011 ; Management Research Review Volume 34 ; 34 ; >
+    au < frozen ; exists ; 2012 ; Management Research Review Volume 35 ; 35 ; >
+    au < frozen ; exists ; 2013 ; Management Research Review Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Management Research Review Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Management Research Review Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Management Research Review Volume 39 ; 39 ; >
@@ -9963,7 +9963,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Management Research Review Volume 41 ; 41 ; >
     au < frozen ; exists ; 2019 ; Management Research Review Volume 42 ; 42 ; >
     au < deepCrawl ; exists ; 2020 ; Management Research Review Volume 43 ; 43 ; >
-    au < crawling ; exists ; 2021 ; Management Research Review Volume 44 ; 44 ; >
+    au < deepCrawl ; exists ; 2021 ; Management Research Review Volume 44 ; 44 ; >
     au < crawling ; exists ; 2022 ; Management Research Review Volume 45 ; 45 ; >
 
   }
@@ -9979,25 +9979,25 @@
     param[journal_issn] = 1536-5433
     comment[journal_id] = mrjiam
 
-    au < crawling ; exists ; 2003 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2004 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2003 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2004 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2005 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2006 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2006 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2007 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2008 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2009 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2010 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2011 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2008 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2009 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2010 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2011 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2013 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2013 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Management Research: The journal of the Iberoamerican Academy of Management Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Management Research: The journal of the Iberoamerican Academy of Management Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Management Research: The journal of the Iberoamerican Academy of Management Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Management Research: The journal of the Iberoamerican Academy of Management Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Management Research: The journal of the Iberoamerican Academy of Management Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2019 ; Management Research: The journal of the Iberoamerican Academy of Management Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2019 ; Management Research: The journal of the Iberoamerican Academy of Management Volume 17 ; 17 ; >
     au < deepCrawl ; exists ; 2020 ; Management Research: The journal of the Iberoamerican Academy of Management Volume 18 ; 18 ; >
-    au < crawling ; exists ; 2021 ; Management Research: The journal of the Iberoamerican Academy of Management Volume 19 ; 19 ; >
+    au < deepCrawl ; exists ; 2021 ; Management Research: The journal of the Iberoamerican Academy of Management Volume 19 ; 19 ; >
     au < crawling ; exists ; 2022 ; Management Research: The journal of the Iberoamerican Academy of Management Volume 20 ; 20 ; >
 
   }
@@ -10025,22 +10025,22 @@
     au < manifest ; exists ; 1995 ; Managerial Auditing Journal Volume 10 ; 10 ; >
     au < manifest ; exists ; 1996 ; Managerial Auditing Journal Volume 11 ; 11 ; >
     au < manifest ; exists ; 1997 ; Managerial Auditing Journal Volume 12 ; 12 ; >
-    au < crawling ; exists ; 1998 ; Managerial Auditing Journal Volume 13 ; 13 ; >
-    au < crawling ; exists ; 1999 ; Managerial Auditing Journal Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2000 ; Managerial Auditing Journal Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2001 ; Managerial Auditing Journal Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2002 ; Managerial Auditing Journal Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2003 ; Managerial Auditing Journal Volume 18 ; 18 ; >
-    au < crawling ; exists ; 2004 ; Managerial Auditing Journal Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2005 ; Managerial Auditing Journal Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2006 ; Managerial Auditing Journal Volume 21 ; 21 ; >
+    au < frozen ; exists ; 1998 ; Managerial Auditing Journal Volume 13 ; 13 ; >
+    au < frozen ; exists ; 1999 ; Managerial Auditing Journal Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2000 ; Managerial Auditing Journal Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2001 ; Managerial Auditing Journal Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2002 ; Managerial Auditing Journal Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2003 ; Managerial Auditing Journal Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2004 ; Managerial Auditing Journal Volume 19 ; 19 ; >
+    au < frozen ; exists ; 2005 ; Managerial Auditing Journal Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2006 ; Managerial Auditing Journal Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2007 ; Managerial Auditing Journal Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2008 ; Managerial Auditing Journal Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2009 ; Managerial Auditing Journal Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2010 ; Managerial Auditing Journal Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2011 ; Managerial Auditing Journal Volume 26 ; 26 ; >
-    au < crawling ; exists ; 2012 ; Managerial Auditing Journal Volume 27 ; 27 ; >
-    au < crawling ; exists ; 2013 ; Managerial Auditing Journal Volume 28 ; 28 ; >
+    au < frozen ; exists ; 2008 ; Managerial Auditing Journal Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2009 ; Managerial Auditing Journal Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2010 ; Managerial Auditing Journal Volume 25 ; 25 ; >
+    au < frozen ; exists ; 2011 ; Managerial Auditing Journal Volume 26 ; 26 ; >
+    au < frozen ; exists ; 2012 ; Managerial Auditing Journal Volume 27 ; 27 ; >
+    au < frozen ; exists ; 2013 ; Managerial Auditing Journal Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Managerial Auditing Journal Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Managerial Auditing Journal Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Managerial Auditing Journal Volume 31 ; 31 ; >
@@ -10048,7 +10048,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Managerial Auditing Journal Volume 33 ; 33 ; >
     au < frozen ; exists ; 2019 ; Managerial Auditing Journal Volume 34 ; 34 ; >
     au < deepCrawl ; exists ; 2020 ; Managerial Auditing Journal Volume 35 ; 35 ; >
-    au < crawling ; exists ; 2021 ; Managerial Auditing Journal Volume 36 ; 36 ; >
+    au < deepCrawl ; exists ; 2021 ; Managerial Auditing Journal Volume 36 ; 36 ; >
     au < crawling ; exists ; 2022 ; Managerial Auditing Journal Volume 37 ; 37 ; >
 
   }
@@ -10087,22 +10087,22 @@
     au < manifest ; exists ; 1995 ; Managerial Finance Volume 21 ; 21 ; >
     au < manifest ; exists ; 1996 ; Managerial Finance Volume 22 ; 22 ; >
     au < manifest ; exists ; 1997 ; Managerial Finance Volume 23 ; 23 ; >
-    au < crawling ; exists ; 1998 ; Managerial Finance Volume 24 ; 24 ; >
+    au < frozen ; exists ; 1998 ; Managerial Finance Volume 24 ; 24 ; >
     au < ready ; exists ; 1999 ; Managerial Finance Volume 25 ; 25 ; >
     au < frozen ; exists ; 2000 ; Managerial Finance Volume 26 ; 26 ; >
-    au < crawling ; exists ; 2001 ; Managerial Finance Volume 27 ; 27 ; >
-    au < crawling ; exists ; 2002 ; Managerial Finance Volume 28 ; 28 ; >
-    au < crawling ; exists ; 2003 ; Managerial Finance Volume 29 ; 29 ; >
-    au < crawling ; exists ; 2004 ; Managerial Finance Volume 30 ; 30 ; >
-    au < crawling ; exists ; 2005 ; Managerial Finance Volume 31 ; 31 ; >
-    au < crawling ; exists ; 2006 ; Managerial Finance Volume 32 ; 32 ; >
+    au < frozen ; exists ; 2001 ; Managerial Finance Volume 27 ; 27 ; >
+    au < frozen ; exists ; 2002 ; Managerial Finance Volume 28 ; 28 ; >
+    au < frozen ; exists ; 2003 ; Managerial Finance Volume 29 ; 29 ; >
+    au < frozen ; exists ; 2004 ; Managerial Finance Volume 30 ; 30 ; >
+    au < frozen ; exists ; 2005 ; Managerial Finance Volume 31 ; 31 ; >
+    au < frozen ; exists ; 2006 ; Managerial Finance Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2007 ; Managerial Finance Volume 33 ; 33 ; >
-    au < crawling ; exists ; 2008 ; Managerial Finance Volume 34 ; 34 ; >
-    au < crawling ; exists ; 2010 ; Managerial Finance Volume 35 ; 35 ; >
-    au < crawling ; exists ; 2010 ; Managerial Finance Volume 36 ; 36 ; >
-    au < crawling ; exists ; 2011 ; Managerial Finance Volume 37 ; 37 ; >
-    au < crawling ; exists ; 2012 ; Managerial Finance Volume 38 ; 38 ; >
-    au < crawling ; exists ; 2013 ; Managerial Finance Volume 39 ; 39 ; >
+    au < frozen ; exists ; 2008 ; Managerial Finance Volume 34 ; 34 ; >
+    au < frozen ; exists ; 2010 ; Managerial Finance Volume 35 ; 35 ; >
+    au < frozen ; exists ; 2010 ; Managerial Finance Volume 36 ; 36 ; >
+    au < frozen ; exists ; 2011 ; Managerial Finance Volume 37 ; 37 ; >
+    au < frozen ; exists ; 2012 ; Managerial Finance Volume 38 ; 38 ; >
+    au < frozen ; exists ; 2013 ; Managerial Finance Volume 39 ; 39 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Managerial Finance Volume 40 ; 40 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Managerial Finance Volume 41 ; 41 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Managerial Finance Volume 42 ; 42 ; >
@@ -10110,7 +10110,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Managerial Finance Volume 44 ; 44 ; >
     au < frozen ; exists ; 2019 ; Managerial Finance Volume 45 ; 45 ; >
     au < deepCrawl ; exists ; 2020 ; Managerial Finance Volume 46 ; 46 ; >
-    au < crawling ; exists ; 2021 ; Managerial Finance Volume 47 ; 47 ; >
+    au < deepCrawl ; exists ; 2021 ; Managerial Finance Volume 47 ; 47 ; >
     au < crawling ; exists ; 2022 ; Managerial Finance Volume 48 ; 48 ; >
 
   }
@@ -10167,15 +10167,15 @@
     au < manifest ; exists ; 1996 ; Managerial Law Volume 38 ; 38 ; >
     au < manifest ; exists ; 1997 ; Managerial Law Volume 39 ; 39 ; >
     au < ready ; exists ; 1998 ; Managerial Law Volume 40 ; 40 ; >
-    au < crawling ; exists ; 1999 ; Managerial Law Volume 41 ; 41 ; >
+    au < frozen ; exists ; 1999 ; Managerial Law Volume 41 ; 41 ; >
     au < frozen ; exists ; 2000 ; Managerial Law Volume 42 ; 42 ; >
-    au < crawling ; exists ; 2001 ; Managerial Law Volume 43 ; 43 ; >
-    au < crawling ; exists ; 2002 ; Managerial Law Volume 44 ; 44 ; >
-    au < crawling ; exists ; 2003 ; Managerial Law Volume 45 ; 45 ; >
-    au < crawling ; exists ; 2004 ; Managerial Law Volume 46 ; 46 ; >
-    au < crawling ; exists ; 2005 ; Managerial Law Volume 47 ; 47 ; >
-    au < crawling ; exists ; 2006 ; Managerial Law Volume 48 ; 48 ; >
-    au < crawling ; exists ; 2007 ; Managerial Law Volume 49 ; 49 ; >
+    au < frozen ; exists ; 2001 ; Managerial Law Volume 43 ; 43 ; >
+    au < frozen ; exists ; 2002 ; Managerial Law Volume 44 ; 44 ; >
+    au < frozen ; exists ; 2003 ; Managerial Law Volume 45 ; 45 ; >
+    au < frozen ; exists ; 2004 ; Managerial Law Volume 46 ; 46 ; >
+    au < frozen ; exists ; 2005 ; Managerial Law Volume 47 ; 47 ; >
+    au < frozen ; exists ; 2006 ; Managerial Law Volume 48 ; 48 ; >
+    au < frozen ; exists ; 2007 ; Managerial Law Volume 49 ; 49 ; >
 
   }
 
@@ -10198,21 +10198,21 @@
     au < manifest ; exists ; 1996 ; Managing Service Quality Volume 6 ; 6 ; >
     au < ready ; exists ; 1997 ; Managing Service Quality Volume 7 ; 7 ; >
     au < ready ; exists ; 1998 ; Managing Service Quality Volume 8 ; 8 ; >
-    au < crawling ; exists ; 1999 ; Managing Service Quality Volume 9 ; 9 ; >
+    au < frozen ; exists ; 1999 ; Managing Service Quality Volume 9 ; 9 ; >
     au < frozen ; exists ; 2000 ; Managing Service Quality Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2001 ; Managing Service Quality Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2002 ; Managing Service Quality Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2003 ; Managing Service Quality Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2004 ; Managing Service Quality Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2005 ; Managing Service Quality Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2006 ; Managing Service Quality Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2007 ; Managing Service Quality Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2008 ; Managing Service Quality Volume 18 ; 18 ; >
-    au < crawling ; exists ; 2009 ; Managing Service Quality Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2010 ; Managing Service Quality Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2011 ; Managing Service Quality Volume 21 ; 21 ; >
-    au < crawling ; exists ; 2012 ; Managing Service Quality Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2013 ; Managing Service Quality Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2001 ; Managing Service Quality Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2002 ; Managing Service Quality Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2003 ; Managing Service Quality Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2004 ; Managing Service Quality Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2005 ; Managing Service Quality Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2006 ; Managing Service Quality Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2007 ; Managing Service Quality Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2008 ; Managing Service Quality Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2009 ; Managing Service Quality Volume 19 ; 19 ; >
+    au < frozen ; exists ; 2010 ; Managing Service Quality Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2011 ; Managing Service Quality Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2012 ; Managing Service Quality Volume 22 ; 22 ; >
+    au < frozen ; exists ; 2013 ; Managing Service Quality Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Managing Service Quality Volume 24 ; 24 ; >
 
   }
@@ -10243,30 +10243,30 @@
     au < manifest ; exists ; 1995 ; Marketing Intelligence & Planning Volume 13 ; 13 ; >
     au < manifest ; exists ; 1996 ; Marketing Intelligence & Planning Volume 14 ; 14 ; >
     au < manifest ; exists ; 1997 ; Marketing Intelligence & Planning Volume 15 ; 15 ; >
-    au < crawling ; exists ; 1998 ; Marketing Intelligence & Planning Volume 16 ; 16 ; >
-    au < crawling ; exists ; 1999 ; Marketing Intelligence & Planning Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2000 ; Marketing Intelligence & Planning Volume 18 ; 18 ; >
-    au < crawling ; exists ; 2001 ; Marketing Intelligence & Planning Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2002 ; Marketing Intelligence & Planning Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2003 ; Marketing Intelligence & Planning Volume 21 ; 21 ; >
-    au < crawling ; exists ; 2004 ; Marketing Intelligence & Planning Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2005 ; Marketing Intelligence & Planning Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2006 ; Marketing Intelligence & Planning Volume 24 ; 24 ; >
+    au < frozen ; exists ; 1998 ; Marketing Intelligence & Planning Volume 16 ; 16 ; >
+    au < frozen ; exists ; 1999 ; Marketing Intelligence & Planning Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2000 ; Marketing Intelligence & Planning Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2001 ; Marketing Intelligence & Planning Volume 19 ; 19 ; >
+    au < frozen ; exists ; 2002 ; Marketing Intelligence & Planning Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2003 ; Marketing Intelligence & Planning Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2004 ; Marketing Intelligence & Planning Volume 22 ; 22 ; >
+    au < frozen ; exists ; 2005 ; Marketing Intelligence & Planning Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2006 ; Marketing Intelligence & Planning Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2007 ; Marketing Intelligence & Planning Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2008 ; Marketing Intelligence & Planning Volume 26 ; 26 ; >
-    au < crawling ; exists ; 2009 ; Marketing Intelligence & Planning Volume 27 ; 27 ; >
-    au < crawling ; exists ; 2010 ; Marketing Intelligence & Planning Volume 28 ; 28 ; >
-    au < crawling ; exists ; 2011 ; Marketing Intelligence & Planning Volume 29 ; 29 ; >
-    au < crawling ; exists ; 2012 ; Marketing Intelligence & Planning Volume 30 ; 30 ; >
-    au < crawling ; exists ; 2013 ; Marketing Intelligence & Planning Volume 31 ; 31 ; >
+    au < frozen ; exists ; 2008 ; Marketing Intelligence & Planning Volume 26 ; 26 ; >
+    au < frozen ; exists ; 2009 ; Marketing Intelligence & Planning Volume 27 ; 27 ; >
+    au < frozen ; exists ; 2010 ; Marketing Intelligence & Planning Volume 28 ; 28 ; >
+    au < frozen ; exists ; 2011 ; Marketing Intelligence & Planning Volume 29 ; 29 ; >
+    au < frozen ; exists ; 2012 ; Marketing Intelligence & Planning Volume 30 ; 30 ; >
+    au < frozen ; exists ; 2013 ; Marketing Intelligence & Planning Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Marketing Intelligence & Planning Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Marketing Intelligence & Planning Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Marketing Intelligence & Planning Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Marketing Intelligence & Planning Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Marketing Intelligence & Planning Volume 36 ; 36 ; >
-    au < crawling ; exists ; 2019 ; Marketing Intelligence & Planning Volume 37 ; 37 ; >
+    au < frozen ; exists ; 2019 ; Marketing Intelligence & Planning Volume 37 ; 37 ; >
     au < deepCrawl ; exists ; 2020 ; Marketing Intelligence & Planning Volume 38 ; 38 ; >
-    au < crawling ; exists ; 2021 ; Marketing Intelligence & Planning Volume 39 ; 39 ; >
+    au < deepCrawl ; exists ; 2021 ; Marketing Intelligence & Planning Volume 39 ; 39 ; >
     au < crawling ; exists ; 2022 ; Marketing Intelligence & Planning Volume 40 ; 40 ; >
 
   }
@@ -10286,27 +10286,27 @@
     au < ready ; exists ; 1998 ; Measuring Business Excellence Volume 2 ; 2 ; >
     au < ready ; exists ; 1999 ; Measuring Business Excellence Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2000 ; Measuring Business Excellence Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2001 ; Measuring Business Excellence Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2002 ; Measuring Business Excellence Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2003 ; Measuring Business Excellence Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2004 ; Measuring Business Excellence Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2001 ; Measuring Business Excellence Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2002 ; Measuring Business Excellence Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2003 ; Measuring Business Excellence Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2004 ; Measuring Business Excellence Volume 8 ; 8 ; >
     au < ready ; exists ; 2005 ; Measuring Business Excellence Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2006 ; Measuring Business Excellence Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2007 ; Measuring Business Excellence Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2008 ; Measuring Business Excellence Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2009 ; Measuring Business Excellence Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2010 ; Measuring Business Excellence Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2011 ; Measuring Business Excellence Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2012 ; Measuring Business Excellence Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2013 ; Measuring Business Excellence Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2006 ; Measuring Business Excellence Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2007 ; Measuring Business Excellence Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2008 ; Measuring Business Excellence Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2009 ; Measuring Business Excellence Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2010 ; Measuring Business Excellence Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2011 ; Measuring Business Excellence Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2012 ; Measuring Business Excellence Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2013 ; Measuring Business Excellence Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Measuring Business Excellence Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Measuring Business Excellence Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Measuring Business Excellence Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Measuring Business Excellence Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Measuring Business Excellence Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2019 ; Measuring Business Excellence Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2019 ; Measuring Business Excellence Volume 23 ; 23 ; >
     au < deepCrawl ; exists ; 2020 ; Measuring Business Excellence Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2021 ; Measuring Business Excellence Volume 25 ; 25 ; >
+    au < deepCrawl ; exists ; 2021 ; Measuring Business Excellence Volume 25 ; 25 ; >
     au < crawling ; exists ; 2022 ; Measuring Business Excellence Volume 26 ; 26 ; >
 
   }
@@ -10321,16 +10321,16 @@
     param[journal_issn] = 1022-2529
     comment[journal_id] = mar
 
-    au < crawling ; exists ; 2000 ; Meditari Accountancy Research Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2000 ; Meditari Accountancy Research Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2001 ; Meditari Accountancy Research Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2002 ; Meditari Accountancy Research Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2003 ; Meditari Accountancy Research Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2004 ; Meditari Accountancy Research Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2005 ; Meditari Accountancy Research Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2006 ; Meditari Accountancy Research Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2007 ; Meditari Accountancy Research Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2008 ; Meditari Accountancy Research Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2009 ; Meditari Accountancy Research Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2002 ; Meditari Accountancy Research Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2003 ; Meditari Accountancy Research Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2004 ; Meditari Accountancy Research Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2005 ; Meditari Accountancy Research Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2006 ; Meditari Accountancy Research Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2007 ; Meditari Accountancy Research Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2008 ; Meditari Accountancy Research Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2009 ; Meditari Accountancy Research Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Meditari Accountancy Research Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Meditari Accountancy Research Volume 19 ; 19 ; >
     }
@@ -10339,8 +10339,8 @@
     param[journal_issn] = 2049-372X
     comment[journal_id] = medar
 
-    au < crawling ; exists ; 2012 ; Meditari Accountancy Research Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2013 ; Meditari Accountancy Research Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2012 ; Meditari Accountancy Research Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2013 ; Meditari Accountancy Research Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Meditari Accountancy Research Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Meditari Accountancy Research Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Meditari Accountancy Research Volume 24 ; 24 ; >
@@ -10348,7 +10348,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Meditari Accountancy Research Volume 26 ; 26 ; >
     au < notReady ; exists ; 2019 ; Meditari Accountancy Research Volume 27 ; 27 ; > #500 error 
     au < frozen ; exists ; 2020 ; Meditari Accountancy Research Volume 28 ; 28 ; >
-    au < crawling ; exists ; 2021 ; Meditari Accountancy Research Volume 29 ; 29 ; >
+    au < deepCrawl ; exists ; 2021 ; Meditari Accountancy Research Volume 29 ; 29 ; >
     au < crawling ; exists ; 2022 ; Meditari Accountancy Research Volume 30 ; 30 ; >
 
     }
@@ -10368,17 +10368,17 @@
 
     au < ready ; exists ; 1997 ; A Life in the Day Volume 1 ; 1 ; >
     au < ready ; exists ; 1998 ; A Life in the Day Volume 2 ; 2 ; >
-    au < crawling ; exists ; 1999 ; A Life in the Day Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2000 ; A Life in the Day Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2001 ; A Life in the Day Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2002 ; A Life in the Day Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2003 ; A Life in the Day Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2004 ; A Life in the Day Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2005 ; A Life in the Day Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2006 ; A Life in the Day Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2007 ; A Life in the Day Volume 11 ; 11 ; >
+    au < frozen ; exists ; 1999 ; A Life in the Day Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2000 ; A Life in the Day Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2001 ; A Life in the Day Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2002 ; A Life in the Day Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2003 ; A Life in the Day Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2004 ; A Life in the Day Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2005 ; A Life in the Day Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2006 ; A Life in the Day Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2007 ; A Life in the Day Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; A Life in the Day Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2009 ; A Life in the Day Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2009 ; A Life in the Day Volume 13 ; 13 ; >
 
   }
 
@@ -10396,9 +10396,9 @@
     #continues = 1366-6282
 
     au < doNotProcess ; doNotProcess ; 2010 ; Mental Health and Social Inclusion Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2011 ; Mental Health and Social Inclusion Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2012 ; Mental Health and Social Inclusion Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2013 ; Mental Health and Social Inclusion Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2011 ; Mental Health and Social Inclusion Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2012 ; Mental Health and Social Inclusion Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2013 ; Mental Health and Social Inclusion Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Mental Health and Social Inclusion Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Mental Health and Social Inclusion Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Mental Health and Social Inclusion Volume 20 ; 20 ; >
@@ -10406,7 +10406,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Mental Health and Social Inclusion Volume 22 ; 22 ; >
     au < frozen ; exists ; 2019 ; Mental Health and Social Inclusion Volume 23 ; 23 ; >
     au < deepCrawl ; exists ; 2020 ; Mental Health and Social Inclusion Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2021 ; Mental Health and Social Inclusion Volume 25 ; 25 ; >
+    au < deepCrawl ; exists ; 2021 ; Mental Health and Social Inclusion Volume 25 ; 25 ; >
     au < crawling ; exists ; 2022 ; Mental Health and Social Inclusion Volume 26 ; 26 ; >
 
   }
@@ -10425,29 +10425,29 @@
     au < manifest ; exists ; 1996 ; Mental Health Review Journal: Research, Policy and Practice Volume 1 ; 1 ; >
     au < ready ; exists ; 1997 ; Mental Health Review Journal: Research, Policy and Practice Volume 2 ; 2 ; >
     au < ready ; exists ; 1998 ; Mental Health Review Journal: Research, Policy and Practice Volume 3 ; 3 ; >
-    au < crawling ; exists ; 1999 ; Mental Health Review Journal: Research, Policy and Practice Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2000 ; Mental Health Review Journal: Research, Policy and Practice Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2001 ; Mental Health Review Journal: Research, Policy and Practice Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2002 ; Mental Health Review Journal: Research, Policy and Practice Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2003 ; Mental Health Review Journal: Research, Policy and Practice Volume 8 ; 8 ; >
+    au < frozen ; exists ; 1999 ; Mental Health Review Journal: Research, Policy and Practice Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2000 ; Mental Health Review Journal: Research, Policy and Practice Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2001 ; Mental Health Review Journal: Research, Policy and Practice Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2002 ; Mental Health Review Journal: Research, Policy and Practice Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2003 ; Mental Health Review Journal: Research, Policy and Practice Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2004 ; Mental Health Review Journal: Research, Policy and Practice Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2005 ; Mental Health Review Journal: Research, Policy and Practice Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2006 ; Mental Health Review Journal: Research, Policy and Practice Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2007 ; Mental Health Review Journal: Research, Policy and Practice Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2008 ; Mental Health Review Journal: Research, Policy and Practice Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2009 ; Mental Health Review Journal: Research, Policy and Practice Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2005 ; Mental Health Review Journal: Research, Policy and Practice Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2006 ; Mental Health Review Journal: Research, Policy and Practice Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2007 ; Mental Health Review Journal: Research, Policy and Practice Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2008 ; Mental Health Review Journal: Research, Policy and Practice Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2009 ; Mental Health Review Journal: Research, Policy and Practice Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Mental Health Review Journal: Research, Policy and Practice Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2011 ; Mental Health Review Journal: Research, Policy and Practice Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2011 ; Mental Health Review Journal: Research, Policy and Practice Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Mental Health Review Journal: Research, Policy and Practice Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2013 ; Mental Health Review Journal: Research, Policy and Practice Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2013 ; Mental Health Review Journal: Research, Policy and Practice Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Mental Health Review Journal: Research, Policy and Practice Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Mental Health Review Journal: Research, Policy and Practice Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Mental Health Review Journal: Research, Policy and Practice Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Mental Health Review Journal: Research, Policy and Practice Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Mental Health Review Journal: Research, Policy and Practice Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2019 ; Mental Health Review Journal: Research, Policy and Practice Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2019 ; Mental Health Review Journal: Research, Policy and Practice Volume 24 ; 24 ; >
     au < deepCrawl ; exists ; 2020 ; Mental Health Review Journal: Research, Policy and Practice Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2021 ; Mental Health Review Journal: Research, Policy and Practice Volume 26 ; 26 ; >
+    au < deepCrawl ; exists ; 2021 ; Mental Health Review Journal: Research, Policy and Practice Volume 26 ; 26 ; >
     au < crawling ; exists ; 2022 ; Mental Health Review Journal: Research, Policy and Practice Volume 27 ; 27 ; >
 
   }
@@ -10479,28 +10479,28 @@
     au < notReady ; exists ; 1997 ; Microelectronics International Volume 14 ; 14 ; > #no substance
     au < ready ; exists ; 1998 ; Microelectronics International Volume 15 ; 15 ; >
     au < ready ; exists ; 1999 ; Microelectronics International Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2000 ; Microelectronics International Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2001 ; Microelectronics International Volume 18 ; 18 ; >
-    au < crawling ; exists ; 2002 ; Microelectronics International Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2003 ; Microelectronics International Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2004 ; Microelectronics International Volume 21 ; 21 ; >
-    au < crawling ; exists ; 2005 ; Microelectronics International Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2006 ; Microelectronics International Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2007 ; Microelectronics International Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2008 ; Microelectronics International Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2009 ; Microelectronics International Volume 26 ; 26 ; >
-    au < crawling ; exists ; 2010 ; Microelectronics International Volume 27 ; 27 ; >
-    au < crawling ; exists ; 2011 ; Microelectronics International Volume 28 ; 28 ; >
+    au < frozen ; exists ; 2000 ; Microelectronics International Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2001 ; Microelectronics International Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2002 ; Microelectronics International Volume 19 ; 19 ; >
+    au < frozen ; exists ; 2003 ; Microelectronics International Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2004 ; Microelectronics International Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2005 ; Microelectronics International Volume 22 ; 22 ; >
+    au < frozen ; exists ; 2006 ; Microelectronics International Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2007 ; Microelectronics International Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2008 ; Microelectronics International Volume 25 ; 25 ; >
+    au < frozen ; exists ; 2009 ; Microelectronics International Volume 26 ; 26 ; >
+    au < frozen ; exists ; 2010 ; Microelectronics International Volume 27 ; 27 ; >
+    au < frozen ; exists ; 2011 ; Microelectronics International Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Microelectronics International Volume 29 ; 29 ; >
-    au < crawling ; exists ; 2013 ; Microelectronics International Volume 30 ; 30 ; >
+    au < frozen ; exists ; 2013 ; Microelectronics International Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Microelectronics International Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Microelectronics International Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Microelectronics International Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Microelectronics International Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Microelectronics International Volume 35 ; 35 ; >
-    au < crawling ; exists ; 2019 ; Microelectronics International Volume 36 ; 36 ; >
+    au < frozen ; exists ; 2019 ; Microelectronics International Volume 36 ; 36 ; >
     au < deepCrawl ; exists ; 2020 ; Microelectronics International Volume 37 ; 37 ; >
-    au < crawling ; exists ; 2021 ; Microelectronics International Volume 38 ; 38 ; >
+    au < deepCrawl ; exists ; 2021 ; Microelectronics International Volume 38 ; 38 ; >
     au < crawling ; exists ; 2022 ; Microelectronics International Volume 39 ; 39 ; >
 
   }
@@ -10517,12 +10517,12 @@
     comment[journal_id] = metj
 
     au < doNotProcess ; doNotProcess ; 2007 ; Multicultural Education & Technology Journal Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2008 ; Multicultural Education & Technology Journal Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2009 ; Multicultural Education & Technology Journal Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2010 ; Multicultural Education & Technology Journal Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2011 ; Multicultural Education & Technology Journal Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2012 ; Multicultural Education & Technology Journal Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2013 ; Multicultural Education & Technology Journal Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2008 ; Multicultural Education & Technology Journal Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2009 ; Multicultural Education & Technology Journal Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2010 ; Multicultural Education & Technology Journal Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2011 ; Multicultural Education & Technology Journal Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2012 ; Multicultural Education & Technology Journal Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2013 ; Multicultural Education & Technology Journal Volume 7 ; 7 ; >
 
   }
 
@@ -10538,23 +10538,23 @@
     comment[journal_id] = mmms
     # online from 2005
 
-    au < crawling ; exists ; 2005 ; Multidiscipline Modeling in Materials and Structures Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2006 ; Multidiscipline Modeling in Materials and Structures Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2007 ; Multidiscipline Modeling in Materials and Structures Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2005 ; Multidiscipline Modeling in Materials and Structures Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2006 ; Multidiscipline Modeling in Materials and Structures Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2007 ; Multidiscipline Modeling in Materials and Structures Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Multidiscipline Modeling in Materials and Structures Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2009 ; Multidiscipline Modeling in Materials and Structures Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2010 ; Multidiscipline Modeling in Materials and Structures Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2011 ; Multidiscipline Modeling in Materials and Structures Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2012 ; Multidiscipline Modeling in Materials and Structures Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2009 ; Multidiscipline Modeling in Materials and Structures Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2010 ; Multidiscipline Modeling in Materials and Structures Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2011 ; Multidiscipline Modeling in Materials and Structures Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2012 ; Multidiscipline Modeling in Materials and Structures Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Multidiscipline Modeling in Materials and Structures Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Multidiscipline Modeling in Materials and Structures Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Multidiscipline Modeling in Materials and Structures Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Multidiscipline Modeling in Materials and Structures Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Multidiscipline Modeling in Materials and Structures Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Multidiscipline Modeling in Materials and Structures Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2019 ; Multidiscipline Modeling in Materials and Structures Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2019 ; Multidiscipline Modeling in Materials and Structures Volume 15 ; 15 ; >
     au < deepCrawl ; exists ; 2020 ; Multidiscipline Modeling in Materials and Structures Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2021 ; Multidiscipline Modeling in Materials and Structures Volume 17 ; 17 ; >
+    au < deepCrawl ; exists ; 2021 ; Multidiscipline Modeling in Materials and Structures Volume 17 ; 17 ; >
     au < crawling ; exists ; 2022 ; Multidiscipline Modeling in Materials and Structures Volume 18 ; 18 ; >
 
   }
@@ -10570,11 +10570,11 @@
     comment[journal_id] = mbr
     # online from 2007
 
-    au < crawling ; exists ; 2007 ; Multinational Business Review Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2008 ; Multinational Business Review Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2009 ; Multinational Business Review Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2010 ; Multinational Business Review Volume 18 ; 18 ; >
-    au < crawling ; exists ; 2011 ; Multinational Business Review Volume 19 ; 19 ; >
+    au < frozen ; exists ; 2007 ; Multinational Business Review Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2008 ; Multinational Business Review Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2009 ; Multinational Business Review Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2010 ; Multinational Business Review Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2011 ; Multinational Business Review Volume 19 ; 19 ; >
     au < crawling ; exists ; 2012 ; Multinational Business Review Volume 20 ; 20 ; >
     au < crawling ; exists ; 2013 ; Multinational Business Review Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Multinational Business Review Volume 22 ; 22 ; >
