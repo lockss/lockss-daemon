@@ -2267,7 +2267,7 @@
     param[journal_id] = cria
 
     au < manifest ; exists ; 2011 ; Case Reports in Anesthesiology Volume 2011 ; 2011 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; Case Reports in Anesthesiology Volume 2012 ; 2012 ; 2012 ; >
+    au < ready ; exists ; 2012 ; Case Reports in Anesthesiology Volume 2012 ; 2012 ; 2012 ; >
     au < finished ; frozen ; 2013 ; Case Reports in Anesthesiology Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Anesthesiology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Anesthesiology Volume 2015 ; 2015 ; 2015 ; >
@@ -2317,7 +2317,7 @@
     param[journal_id] = cricc
 
     au < manifest ; exists ; 2011 ; Case Reports in Critical Care Volume 2011 ; 2011 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; Case Reports in Critical Care Volume 2012 ; 2012 ; 2012 ; >
+    au < ready ; exists ; 2012 ; Case Reports in Critical Care Volume 2012 ; 2012 ; 2012 ; >
     au < finished ; frozen ; 2013 ; Case Reports in Critical Care Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Critical Care Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Critical Care Volume 2015 ; 2015 ; 2015 ; >
@@ -2392,7 +2392,7 @@
     param[journal_id] = criem
 
     au < manifest ; exists ; 2011 ; Case Reports in Emergency Medicine Volume 2011 ; 2011 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; Case Reports in Emergency Medicine Volume 2012 ; 2012 ; 2012 ; >
+    au < ready ; exists ; 2012 ; Case Reports in Emergency Medicine Volume 2012 ; 2012 ; 2012 ; >
     au < finished ; frozen ; 2013 ; Case Reports in Emergency Medicine Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Emergency Medicine Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Emergency Medicine Volume 2015 ; 2015 ; 2015 ; >
@@ -2417,7 +2417,7 @@
     param[journal_id] = crie
 
     au < manifest ; exists ; 2011 ; Case Reports in Endocrinology Volume 2011 ; 2011 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; Case Reports in Endocrinology Volume 2012 ; 2012 ; 2012 ; >
+    au < ready ; exists ; 2012 ; Case Reports in Endocrinology Volume 2012 ; 2012 ; 2012 ; >
     au < finished ; frozen ; 2013 ; Case Reports in Endocrinology Volume 2013 ; 2013 ; 2013 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Endocrinology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Endocrinology Volume 2015 ; 2015 ; 2015 ; >
@@ -2492,7 +2492,7 @@
     param[journal_id] = crihem
 
     au < manifest ; exists ; 2011 ; Case Reports in Hematology Volume 2011 ; 2011 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; Case Reports in Hematology Volume 2012 ; 2012 ; 2012 ; >
+    au < ready ; exists ; 2012 ; Case Reports in Hematology Volume 2012 ; 2012 ; 2012 ; >
     au < finished ; frozen ; 2013 ; Case Reports in Hematology Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Hematology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Hematology Volume 2015 ; 2015 ; 2015 ; >
@@ -2517,7 +2517,7 @@
     param[journal_id] = crihep
 
     au < manifest ; exists ; 2011 ; Case Reports in Hepatology Volume 2011 ; 2011 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; Case Reports in Hepatology Volume 2012 ; 2012 ; 2012 ; >
+    au < ready ; exists ; 2012 ; Case Reports in Hepatology Volume 2012 ; 2012 ; 2012 ; >
     au < finished ; frozen ; 2013 ; Case Reports in Hepatology Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Hepatology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Hepatology Volume 2015 ; 2015 ; 2015 ; >
@@ -2542,7 +2542,7 @@
     param[journal_id] = crii
 
     au < manifest ; exists ; 2011 ; Case Reports in Immunology Volume 2011 ; 2011 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; Case Reports in Immunology Volume 2012 ; 2012 ; 2012 ; >
+    au < ready ; exists ; 2012 ; Case Reports in Immunology Volume 2012 ; 2012 ; 2012 ; >
     au < finished ; frozen ; 2013 ; Case Reports in Immunology Volume 2013 ; 2013 ; 2013 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Immunology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Immunology Volume 2015 ; 2015 ; 2015 ; >
@@ -2567,7 +2567,7 @@
     param[journal_id] = criid
 
     au < manifest ; exists ; 2011 ; Case Reports in Infectious Diseases Volume 2011 ; 2011 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; Case Reports in Infectious Diseases Volume 2012 ; 2012 ; 2012 ; >
+    au < ready ; exists ; 2012 ; Case Reports in Infectious Diseases Volume 2012 ; 2012 ; 2012 ; >
     au < finished ; frozen ; 2013 ; Case Reports in Infectious Diseases Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Infectious Diseases Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Infectious Diseases Volume 2015 ; 2015 ; 2015 ; >
@@ -2667,7 +2667,7 @@
     param[journal_id] = criog
 
     au < manifest ; exists ; 2011 ; Case Reports in Obstetrics and Gynecology Volume 2011 ; 2011 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; Case Reports in Obstetrics and Gynecology Volume 2012 ; 2012 ; 2012 ; >
+    au < ready ; exists ; 2012 ; Case Reports in Obstetrics and Gynecology Volume 2012 ; 2012 ; 2012 ; >
     au < finished ; frozen ; 2013 ; Case Reports in Obstetrics and Gynecology Volume 2013 ; 2013 ; 2013 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Obstetrics and Gynecology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Obstetrics and Gynecology Volume 2015 ; 2015 ; 2015 ; >
@@ -2692,7 +2692,7 @@
     param[journal_id] = crionm
 
     au < manifest ; exists ; 2011 ; Case Reports in Oncological Medicine Volume 2011 ; 2011 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; Case Reports in Oncological Medicine Volume 2012 ; 2012 ; 2012 ; >
+    au < ready ; exists ; 2012 ; Case Reports in Oncological Medicine Volume 2012 ; 2012 ; 2012 ; >
     au < finished ; frozen ; 2013 ; Case Reports in Oncological Medicine Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Oncological Medicine Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Oncological Medicine Volume 2015 ; 2015 ; 2015 ; >
@@ -2742,7 +2742,7 @@
     param[journal_id] = crior
 
     au < manifest ; exists ; 2011 ; Case Reports in Orthopedics Volume 2011 ; 2011 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; Case Reports in Orthopedics Volume 2012 ; 2012 ; 2012 ; >
+    au < ready ; exists ; 2012 ; Case Reports in Orthopedics Volume 2012 ; 2012 ; 2012 ; >
     au < finished ; frozen ; 2013 ; Case Reports in Orthopedics Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Orthopedics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Orthopedics Volume 2015 ; 2015 ; 2015 ; >
@@ -2767,7 +2767,7 @@
     param[journal_id] = criot
 
     au < manifest ; exists ; 2011 ; Case Reports in Otolaryngology Volume 2011 ; 2011 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; Case Reports in Otolaryngology Volume 2012 ; 2012 ; 2012 ; >
+    au < ready ; exists ; 2012 ; Case Reports in Otolaryngology Volume 2012 ; 2012 ; 2012 ; >
     au < finished ; frozen ; 2013 ; Case Reports in Otolaryngology Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Otolaryngology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Otolaryngology Volume 2015 ; 2015 ; 2015 ; >
@@ -2792,7 +2792,7 @@
     param[journal_id] = cripa
 
     au < manifest ; exists ; 2011 ; Case Reports in Pathology Volume 2011 ; 2011 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; Case Reports in Pathology Volume 2012 ; 2012 ; 2012 ; >
+    au < ready ; exists ; 2012 ; Case Reports in Pathology Volume 2012 ; 2012 ; 2012 ; >
     au < finished ; crawling ; 2013 ; Case Reports in Pathology Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Pathology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Pathology Volume 2015 ; 2015 ; 2015 ; >
@@ -2817,7 +2817,7 @@
     param[journal_id] = cripe
 
     au < manifest ; exists ; 2011 ; Case Reports in Pediatrics Volume 2011 ; 2011 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; Case Reports in Pediatrics Volume 2012 ; 2012 ; 2012 ; >
+    au < ready ; exists ; 2012 ; Case Reports in Pediatrics Volume 2012 ; 2012 ; 2012 ; >
     au < finished ; frozen ; 2013 ; Case Reports in Pediatrics Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Pediatrics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Pediatrics Volume 2015 ; 2015 ; 2015 ; >
@@ -2842,7 +2842,7 @@
     param[journal_id] = crips
 
     au < manifest ; exists ; 2011 ; Case Reports in Psychiatry Volume 2011 ; 2011 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; Case Reports in Psychiatry Volume 2012 ; 2012 ; 2012 ; >
+    au < ready ; exists ; 2012 ; Case Reports in Psychiatry Volume 2012 ; 2012 ; 2012 ; >
     au < finished ; frozen ; 2013 ; Case Reports in Psychiatry Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Psychiatry Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Psychiatry Volume 2015 ; 2015 ; 2015 ; >
@@ -2867,7 +2867,7 @@
     param[journal_id] = cripu
 
     au < manifest ; exists ; 2011 ; Case Reports in Pulmonology Volume 2011 ; 2011 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; Case Reports in Pulmonology Volume 2012 ; 2012 ; 2012 ; >
+    au < ready ; exists ; 2012 ; Case Reports in Pulmonology Volume 2012 ; 2012 ; 2012 ; >
     au < finished ; frozen ; 2013 ; Case Reports in Pulmonology Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Pulmonology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Pulmonology Volume 2015 ; 2015 ; 2015 ; >
@@ -2917,7 +2917,7 @@
     param[journal_id] = crirh
 
     au < manifest ; exists ; 2011 ; Case Reports in Rheumatology Volume 2011 ; 2011 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; Case Reports in Rheumatology Volume 2012 ; 2012 ; 2012 ; >
+    au < ready ; exists ; 2012 ; Case Reports in Rheumatology Volume 2012 ; 2012 ; 2012 ; >
     au < finished ; frozen ; 2013 ; Case Reports in Rheumatology Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Rheumatology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Rheumatology Volume 2015 ; 2015 ; 2015 ; >
@@ -2992,7 +2992,7 @@
     param[journal_id] = criu
 
     au < manifest ; exists ; 2011 ; Case Reports in Urology Volume 2011 ; 2011 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; Case Reports in Urology Volume 2012 ; 2012 ; 2012 ; >
+    au < ready ; exists ; 2012 ; Case Reports in Urology Volume 2012 ; 2012 ; 2012 ; >
     au < finished ; frozen ; 2013 ; Case Reports in Urology Volume 2013 ; 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Urology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Urology Volume 2015 ; 2015 ; 2015 ; >
@@ -3017,7 +3017,7 @@
     param[journal_id] = crivam
 
     au < manifest ; exists ; 2011 ; Case Reports in Vascular Medicine Volume 2011 ; 2011 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; Case Reports in Vascular Medicine Volume 2012 ; 2012 ; 2012 ; >
+    au < ready ; exists ; 2012 ; Case Reports in Vascular Medicine Volume 2012 ; 2012 ; 2012 ; >
     au < finished ; frozen ; 2013 ; Case Reports in Vascular Medicine Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Vascular Medicine Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Vascular Medicine Volume 2015 ; 2015 ; 2015 ; >
@@ -3042,7 +3042,7 @@
     param[journal_id] = crivem
 
     au < manifest ; exists ; 2011 ; Case Reports in Veterinary Medicine Volume 2011 ; 2011 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; Case Reports in Veterinary Medicine Volume 2012 ; 2012 ; 2012 ; >
+    au < ready ; exists ; 2012 ; Case Reports in Veterinary Medicine Volume 2012 ; 2012 ; 2012 ; >
     au < finished ; frozen ; 2013 ; Case Reports in Veterinary Medicine Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Veterinary Medicine Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Veterinary Medicine Volume 2015 ; 2015 ; 2015 ; >
