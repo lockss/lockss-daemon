@@ -57,7 +57,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 53 ; 53 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; 2019 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 54 ; 54 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 55 ; 55 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 56 ; 56 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 56 ; 56 ; >
     au < crawling ; exists ; 2022 ; 2022 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 57 ; 57 ; >
 
   }
@@ -118,7 +118,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Aktuelle Dermatologie Volume 44 ; 44 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; 2019 ; Aktuelle Dermatologie Volume 45 ; 45 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Aktuelle Dermatologie Volume 46 ; 46 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Aktuelle Dermatologie Volume 47 ; 47 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Aktuelle Dermatologie Volume 47 ; 47 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Aktuelle Dermatologie Volume 48 ; 48 ; >
 
   }
@@ -154,7 +154,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Aktuelle Ernährungsmedizin Volume 43 ; 43 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; 2019 ; Aktuelle Ernährungsmedizin Volume 44 ; 44 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Aktuelle Ernährungsmedizin Volume 45 ; 45 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Aktuelle Ernährungsmedizin Volume 46 ; 46 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Aktuelle Ernährungsmedizin Volume 46 ; 46 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Aktuelle Ernährungsmedizin Volume 47 ; 47 ; >
 
   }
@@ -179,7 +179,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Aktuelle Kardiologie Volume 7 ; 7 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; Aktuelle Kardiologie Volume 8 ; 8 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Aktuelle Kardiologie Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Aktuelle Kardiologie Volume 10 ; 10 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Aktuelle Kardiologie Volume 10 ; 10 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Aktuelle Kardiologie Volume 11 ; 11 ; >
 
   }
@@ -288,7 +288,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Aktuelle Rheumatologie Volume 45 ; 45 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; 2019 ; Aktuelle Rheumatologie Volume 46 ; 46 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Aktuelle Rheumatologie Volume 47 ; 47 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Aktuelle Rheumatologie Volume 48 ; 48 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Aktuelle Rheumatologie Volume 48 ; 48 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Aktuelle Rheumatologie Volume 49 ; 49 ; >
 
   }
@@ -366,7 +366,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Aktuelle Urologie Volume 49 ; 49 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; Aktuelle Urologie Volume 50 ; 50 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Aktuelle Urologie Volume 51 ; 51 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Aktuelle Urologie Volume 52 ; 52 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Aktuelle Urologie Volume 52 ; 52 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Aktuelle Urologie Volume 53 ; 53 ; >
 
    }
@@ -433,7 +433,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Allgemeine Homöopathische Zeitung Volume 263 ; 263 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; Allgemeine Homöopathische Zeitung Volume 264 ; 264 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Allgemeine Homöopathische Zeitung Volume 265 ; 265 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Allgemeine Homöopathische Zeitung Volume 266 ; 266 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Allgemeine Homöopathische Zeitung Volume 266 ; 266 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Allgemeine Homöopathische Zeitung Volume 267 ; 267 ; >
 
     }
@@ -463,7 +463,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Allgemein- und Viszeralchirurgie up2date Volume 12 ; 12 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; 2019 ; Allgemein- und Viszeralchirurgie up2date Volume 13 ; 13 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Allgemein- und Viszeralchirurgie up2date Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Allgemein- und Viszeralchirurgie up2date Volume 15 ; 15 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Allgemein- und Viszeralchirurgie up2date Volume 15 ; 15 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Allgemein- und Viszeralchirurgie up2date Volume 16 ; 16 ; >
 
    }
@@ -485,7 +485,7 @@
     au < finished ; crawling ; 1986 ; 1986 ; American Journal of Perinatology Volume 3 ; 3 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1987 ; 1987 ; American Journal of Perinatology Volume 4 ; 4 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1988 ; 1988 ; American Journal of Perinatology Volume 5 ; 5 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 1989 ; 1989 ; American Journal of Perinatology Volume 6 ; 6 ; >
+    au < frozen ; exists ; 1989 ; 1989 ; American Journal of Perinatology Volume 6 ; 6 ; >
     au < finished ; crawling ; 1990 ; 1990 ; American Journal of Perinatology Volume 7 ; 7 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 1991 ; 1991 ; American Journal of Perinatology Volume 8 ; 8 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 1992 ; 1992 ; American Journal of Perinatology Volume 9 ; 9 ; reingest1.clockss.org:8082 >
@@ -517,7 +517,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; American Journal of Perinatology Volume 35 ; 35 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; 2019 ; American Journal of Perinatology Volume 36 ; 36 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; American Journal of Perinatology Volume 37 ; 37 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; American Journal of Perinatology Volume 38 ; 38 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; American Journal of Perinatology Volume 38 ; 38 ; >
     au < crawling ; exists ; 2022 ; 2022 ; American Journal of Perinatology Volume 39 ; 39 ; >
 
    }
@@ -543,7 +543,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; American Journal of Perinatology Reports Volume 8 ; 8 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; American Journal of Perinatology Reports Volume 9 ; 9 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; American Journal of Perinatology Reports Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; American Journal of Perinatology Reports Volume 11 ; 11 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; American Journal of Perinatology Reports Volume 11 ; 11 ; >
     au < crawling ; exists ; 2022 ; 2022 ; American Journal of Perinatology Reports Volume 12 ; 12 ; >
 
    }
@@ -584,7 +584,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; AORTA Volume 6 ; 6 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; AORTA Volume 7 ; 7 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; AORTA Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; AORTA Volume 9 ; 9 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; AORTA Volume 9 ; 9 ; >
     au < crawling ; exists ; 2022 ; 2022 ; AORTA Volume 10 ; 10 ; >
 
    }
@@ -606,7 +606,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 37 ; 37 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2019 ; 2019 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 38 ; 38 ; reingest2.clockss.org:8085 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 39 ; 39 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 40 ; 40 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 40 ; 40 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 41 ; 41 ; >
 
    }
@@ -679,7 +679,7 @@
      au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Avicenna Journal of Medicine Volume 8 ; 8 ; >
      au < finished ; crawling ; 2019 ; 2019 ; Avicenna Journal of Medicine Volume 9 ; 9 ; reingest4.clockss.org:8082 >
      au < finished ; crawling ; 2020 ; 2020 ; Avicenna Journal of Medicine Volume 10 ; 10 ; reingest5.clockss.org:8082 >
-     au < crawling ; exists ; 2021 ; 2021 ; Avicenna Journal of Medicine Volume 11 ; 11 ; >
+     au < deepCrawl ; exists ; 2021 ; 2021 ; Avicenna Journal of Medicine Volume 11 ; 11 ; >
      au < testing ; exists ; 2022 ; 2022 ; Avicenna Journal of Medicine Volume 12 ; 12 ; >
 
    }
@@ -704,7 +704,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Drug Research Volume 68 ; 68 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; 2019 ; Drug Research Volume 69 ; 69 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Drug Research Volume 70 ; 70 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Drug Research Volume 71 ; 71 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Drug Research Volume 71 ; 71 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Drug Research Volume 72 ; 72 ; >
 
    }
@@ -730,7 +730,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Augenheilkunde up2date Volume 8 ; 8 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; 2019 ; Augenheilkunde up2date Volume 9 ; 9 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Augenheilkunde up2date Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Augenheilkunde up2date Volume 11 ; 11 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Augenheilkunde up2date Volume 11 ; 11 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Augenheilkunde up2date Volume 12 ; 12 ; >
 
   }
@@ -763,7 +763,7 @@
       au < finished ; crawling ; 2018 ; 2018 ; B&G Bewegungstherapie und Gesundheitssport Volume 34 ; 34 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; 2019 ; B&G Bewegungstherapie und Gesundheitssport Volume 35 ; 35 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; B&G Bewegungstherapie und Gesundheitssport Volume 36 ; 36 ; >
-      au < crawling ; exists ; 2021 ; 2021 ; B&G Bewegungstherapie und Gesundheitssport Volume 37 ; 37 ; >
+      au < deepCrawl ; exists ; 2021 ; 2021 ; B&G Bewegungstherapie und Gesundheitssport Volume 37 ; 37 ; >
       au < crawling ; exists ; 2022 ; 2022 ; B&G Bewegungstherapie und Gesundheitssport Volume 38 ; 38 ; >
 
   }
@@ -799,7 +799,7 @@
       au < finished ; crawling ; 2018 ; 2018 ; Balint Journal Volume 19 ; 19 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; 2019 ; Balint Journal Volume 20 ; 20 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Balint Journal Volume 21 ; 21 ; >
-      au < crawling ; exists ; 2021 ; 2021 ; Balint Journal Volume 22 ; 22 ; >
+      au < deepCrawl ; exists ; 2021 ; 2021 ; Balint Journal Volume 22 ; 22 ; >
       au < crawling ; exists ; 2022 ; 2022 ; Balint Journal Volume 23 ; 23 ; >
 
   }
@@ -863,7 +863,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Clinics in Colon and Rectal Surgery Volume 31 ; 31 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; 2019 ; Clinics in Colon and Rectal Surgery Volume 32 ; 32 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Clinics in Colon and Rectal Surgery Volume 33 ; 33 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Clinics in Colon and Rectal Surgery Volume 34 ; 34 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Clinics in Colon and Rectal Surgery Volume 34 ; 34 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Clinics in Colon and Rectal Surgery Volume 35 ; 35 ; >
 
   }
@@ -956,7 +956,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Deutsche Heilpraktiker-Zeitschrift Volume 13 ; 13 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2019 ; 2019 ; Deutsche Heilpraktiker-Zeitschrift Volume 14 ; 14 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Deutsche Heilpraktiker-Zeitschrift Volume 15 ; 15 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Deutsche Heilpraktiker-Zeitschrift Volume 16 ; 16 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Deutsche Heilpraktiker-Zeitschrift Volume 16 ; 16 ; >
    au < testing ; exists ; 2022 ; 2022 ; Deutsche Heilpraktiker-Zeitschrift Volume 17 ; 17 ; >
 
   }
@@ -1010,7 +1010,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Deutsche Zeitschrift für Onkologie Volume 50 ; 50 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2019 ; 2019 ; Deutsche Zeitschrift für Onkologie Volume 51 ; 51 ; reingest2.clockss.org:8085 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Deutsche Zeitschrift für Onkologie Volume 52 ; 52 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Deutsche Zeitschrift für Onkologie Volume 53 ; 53 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Deutsche Zeitschrift für Onkologie Volume 53 ; 53 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Deutsche Zeitschrift für Onkologie Volume 54 ; 54 ; >
 
   }
@@ -1030,7 +1030,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Die Wirbelsäule Volume 2 ; 2 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2019 ; 2019 ; Die Wirbelsäule Volume 3 ; 3 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Die Wirbelsäule Volume 4 ; 4 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Die Wirbelsäule Volume 5 ; 5 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Die Wirbelsäule Volume 5 ; 5 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Die Wirbelsäule Volume 6 ; 6 ; >
 
   }
@@ -1050,7 +1050,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Digestive Disease Interventions Volume 2 ; 2 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2019 ; 2019 ; Digestive Disease Interventions Volume 3 ; 3 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Digestive Disease Interventions Volume 4 ; 4 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Digestive Disease Interventions Volume 5 ; 5 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Digestive Disease Interventions Volume 5 ; 5 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Digestive Disease Interventions Volume 6 ; 6 ; >
 
   }
@@ -1095,7 +1095,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Diabetes aktuell Volume 16 ; 16 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2019 ; 2019 ; Diabetes aktuell Volume 17 ; 17 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Diabetes aktuell Volume 18 ; 18 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Diabetes aktuell Volume 19 ; 19 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Diabetes aktuell Volume 19 ; 19 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Diabetes aktuell Volume 20 ; 20 ; >
 
   }
@@ -1126,7 +1126,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Diabetologie und Stoffwechsel Volume 13 ; 13 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2019 ; 2019 ; Diabetologie und Stoffwechsel Volume 14 ; 14 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Diabetologie und Stoffwechsel Volume 15 ; 15 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Diabetologie und Stoffwechsel Volume 16 ; 16 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Diabetologie und Stoffwechsel Volume 16 ; 16 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Diabetologie und Stoffwechsel Volume 17 ; 17 ; >
 
   }
@@ -1156,7 +1156,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Dialyse aktuell Volume 13 ; 13 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2019 ; 2019 ; Dialyse aktuell Volume 14 ; 14 ; reingest2.clockss.org:8085 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Dialyse aktuell Volume 15 ; 15 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Dialyse aktuell Volume 16 ; 16 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Dialyse aktuell Volume 16 ; 16 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Dialyse aktuell Volume 17 ; 17 ; >
 
   }
@@ -1318,7 +1318,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; DMW - Deutsche Medizinische Wochenschrift Volume 144 ; 144 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2019 ; 2019 ; DMW - Deutsche Medizinische Wochenschrift Volume 145 ; 145 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; DMW - Deutsche Medizinische Wochenschrift Volume 146 ; 146 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; DMW - Deutsche Medizinische Wochenschrift Volume 147 ; 147 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; DMW - Deutsche Medizinische Wochenschrift Volume 147 ; 147 ; >
    au < crawling ; exists ; 2022 ; 2022 ; DMW - Deutsche Medizinische Wochenschrift Volume 148 ; 148 ; >
 
   }
@@ -1353,7 +1353,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Deutsche Zeitschrift für Osteopathie Volume 16 ; 16 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2019 ; 2019 ; Deutsche Zeitschrift für Osteopathie Volume 17 ; 17 ; reingest1.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Deutsche Zeitschrift für Osteopathie Volume 18 ; 18 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Deutsche Zeitschrift für Osteopathie Volume 19 ; 19 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Deutsche Zeitschrift für Osteopathie Volume 19 ; 19 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Deutsche Zeitschrift für Osteopathie Volume 20 ; 20 ; >
 
   }
@@ -1384,7 +1384,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Endo-Praxis Volume 34 ; 34 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2019 ; 2019 ; Endo-Praxis Volume 35 ; 35 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Endo-Praxis Volume 36 ; 36 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Endo-Praxis Volume 37 ; 37 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Endo-Praxis Volume 37 ; 37 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Endo-Praxis Volume 38 ; 38 ; >
 
   }
@@ -1454,7 +1454,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Endoscopy Volume 50 ; 50 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2019 ; 2019 ; Endoscopy Volume 51 ; 51 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Endoscopy Volume 52 ; 52 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Endoscopy Volume 53 ; 53 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Endoscopy Volume 53 ; 53 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Endoscopy Volume 54 ; 54 ; >
 
   }
@@ -1478,7 +1478,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Endoscopy international open Volume 6 ; 6 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; 2019 ; Endoscopy international open Volume 7 ; 7 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Endoscopy international open Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Endoscopy international open Volume 9 ; 9 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Endoscopy international open Volume 9 ; 9 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Endoscopy international open Volume 10 ; 10 ; >
 
   }
@@ -1543,7 +1543,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Erfahrungsheilkunde Volume 67 ; 67 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2019 ; 2019 ; Erfahrungsheilkunde Volume 68 ; 68 ; reingest2.clockss.org:8085 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Erfahrungsheilkunde Volume 69 ; 69 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Erfahrungsheilkunde Volume 70 ; 70 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Erfahrungsheilkunde Volume 70 ; 70 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Erfahrungsheilkunde Volume 71 ; 71 ; >
 
   }
@@ -1572,7 +1572,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Ergopraxis Volume 11 ; 11 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2019 ; 2019 ; Ergopraxis Volume 12 ; 12 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Ergopraxis Volume 13 ; 13 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Ergopraxis Volume 14 ; 14 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Ergopraxis Volume 14 ; 14 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Ergopraxis Volume 15 ; 15 ; >
 
   }
@@ -1628,7 +1628,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Ernährung & Medizin Volume 33 ; 33 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2019 ; 2019 ; Ernährung & Medizin Volume 34 ; 34 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Ernährung & Medizin Volume 35 ; 35 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Ernährung & Medizin Volume 36 ; 36 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Ernährung & Medizin Volume 36 ; 36 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Ernährung & Medizin Volume 37 ; 37 ; >
 
   }
@@ -1676,7 +1676,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; European Journal of Pediatric Surgery Volume 28 ; 28 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2019 ; 2019 ; European Journal of Pediatric Surgery Volume 29 ; 29 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; European Journal of Pediatric Surgery Volume 30 ; 30 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; European Journal of Pediatric Surgery Volume 31 ; 31 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; European Journal of Pediatric Surgery Volume 31 ; 31 ; >
    au < crawling ; exists ; 2022 ; 2022 ; European Journal of Pediatric Surgery Volume 32 ; 32 ; >
 
   }
@@ -1701,7 +1701,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; European Journal of Pediatric Surgery Reports Volume 6 ; 6 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; European Journal of Pediatric Surgery Reports Volume 7 ; 7 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; European Journal of Pediatric Surgery Reports Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; European Journal of Pediatric Surgery Reports Volume 9 ; 9 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; European Journal of Pediatric Surgery Reports Volume 9 ; 9 ; >
     au < crawling ; exists ; 2022 ; 2022 ; European Journal of Pediatric Surgery Reports Volume 10 ; 10 ; >
 
   }
@@ -1793,7 +1793,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Experimental and Clinical Endocrinology & Diabetes Volume 126 ; 126 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2019 ; 2019 ; Experimental and Clinical Endocrinology & Diabetes Volume 127 ; 127 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Experimental and Clinical Endocrinology & Diabetes Volume 128 ; 128 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Experimental and Clinical Endocrinology & Diabetes Volume 129 ; 129 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Experimental and Clinical Endocrinology & Diabetes Volume 129 ; 129 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Experimental and Clinical Endocrinology & Diabetes Volume 130 ; 130 ; >
 
   }
@@ -1864,7 +1864,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Facial Plastic Surgery Volume 34 ; 34 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2019 ; 2019 ; Facial Plastic Surgery Volume 35 ; 35 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Facial Plastic Surgery Volume 36 ; 36 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Facial Plastic Surgery Volume 37 ; 37 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Facial Plastic Surgery Volume 37 ; 37 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Facial Plastic Surgery Volume 38 ; 38 ; >
 
   }
@@ -1894,7 +1894,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 25 ; 25 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2019 ; 2019 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 26 ; 26 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 27 ; 27 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 28 ; 28 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 28 ; 28 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 29 ; 29 ; >
 
   }
@@ -1951,7 +1951,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Fortschritte der Neurologie - Psychiatrie Volume 86 ; 86 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2019 ; 2019 ; Fortschritte der Neurologie - Psychiatrie Volume 87 ; 87 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Fortschritte der Neurologie - Psychiatrie Volume 88 ; 88 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Fortschritte der Neurologie - Psychiatrie Volume 89 ; 89 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Fortschritte der Neurologie - Psychiatrie Volume 89 ; 89 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Fortschritte der Neurologie - Psychiatrie Volume 90 ; 90 ; >
 
   }
@@ -1981,7 +1981,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Frauenheilkunde up2date Volume 12 ; 12 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2019 ; 2019 ; Frauenheilkunde up2date Volume 13 ; 13 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Frauenheilkunde up2date Volume 14 ; 14 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Frauenheilkunde up2date Volume 15 ; 15 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Frauenheilkunde up2date Volume 15 ; 15 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Frauenheilkunde up2date Volume 16 ; 16 ; >
 
    }
@@ -2013,7 +2013,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Gastroenterologie up2dat Volume 14 ; 14 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2019 ; 2019 ; Gastroenterologie up2dat Volume 15 ; 15 ; reingest1.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Gastroenterologie up2dat Volume 16 ; 16 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Gastroenterologie up2dat Volume 17 ; 17 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Gastroenterologie up2dat Volume 17 ; 17 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Gastroenterologie up2dat Volume 18 ; 18 ; >
 
   }
@@ -2071,7 +2071,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Geburtshilfe und Frauenheilkunde Volume 78 ; 78 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2019 ; 2019 ; Geburtshilfe und Frauenheilkunde Volume 79 ; 79 ; reingest1.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Geburtshilfe und Frauenheilkunde Volume 80 ; 80 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Geburtshilfe und Frauenheilkunde Volume 81 ; 81 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Geburtshilfe und Frauenheilkunde Volume 81 ; 81 ; >
    au < testing ; exists ; 2022 ; 2022 ; Geburtshilfe und Frauenheilkunde Volume 82 ; 82 ; >
 
   }
@@ -2093,7 +2093,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Gefäßmedizin Scan Volume 5 ; 5 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2019 ; 2019 ; Gefäßmedizin Scan Volume 6 ; 6 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Gefäßmedizin Scan Volume 7 ; 7 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Gefäßmedizin Scan Volume 8 ; 8 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Gefäßmedizin Scan Volume 8 ; 8 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Gefäßmedizin Scan Volume 9 ; 9 ; >
 
   }
@@ -2129,7 +2129,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Gesundheitsökonomie & Qualitätsmanagement Volume 23 ; 23 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2019 ; 2019 ; Gesundheitsökonomie & Qualitätsmanagement Volume 24 ; 24 ; reingest2.clockss.org:8085 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Gesundheitsökonomie & Qualitätsmanagement Volume 25 ; 25 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Gesundheitsökonomie & Qualitätsmanagement Volume 26 ; 26 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Gesundheitsökonomie & Qualitätsmanagement Volume 26 ; 26 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Gesundheitsökonomie & Qualitätsmanagement Volume 27 ; 27 ; >
 
   }
@@ -2166,7 +2166,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Gesundheitswesen Das Volume 82 ; 82 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2019 ; 2019 ; Gesundheitswesen Das Volume 83 ; 83 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Gesundheitswesen Das Volume 84 ; 84 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Gesundheitswesen Das Volume 85 ; 85 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Gesundheitswesen Das Volume 85 ; 85 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Gesundheitswesen Das Volume 86 ; 86 ; >
 
   }
@@ -2226,7 +2226,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 50 ; 50 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2019 ; 2019 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 51 ; 51 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 52 ; 52 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 53 ; 53 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 53 ; 53 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 54 ; 54 ; >
 
   }
@@ -2251,7 +2251,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Handchirurgie Scan Volume 7 ; 7 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; Handchirurgie Scan Volume 8 ; 8 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Handchirurgie Scan Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Handchirurgie Scan Volume 10 ; 10 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Handchirurgie Scan Volume 10 ; 10 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Handchirurgie Scan Volume 11 ; 11 ; >
 
   }
@@ -2284,7 +2284,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Hebamme Die Volume 31 ; 31 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2019 ; 2019 ; Hebamme Die Volume 32 ; 32 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Hebamme Die Volume 33 ; 33 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Hebamme Die Volume 34 ; 34 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Hebamme Die Volume 34 ; 34 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Hebamme Die Volume 35 ; 35 ; >
 
   }
@@ -2332,7 +2332,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Homoeopathic Links Volume 31 ; 31 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2019 ; 2019 ; Homoeopathic Links Volume 32 ; 32 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Homoeopathic Links Volume 33 ; 33 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Homoeopathic Links Volume 34 ; 34 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Homoeopathic Links Volume 34 ; 34 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Homoeopathic Links Volume 35 ; 35 ; >
 
   }
@@ -2401,7 +2401,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Hormone and Metabolic Research Volume 50 ; 50 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2019 ; 2019 ; Hormone and Metabolic Research Volume 51 ; 51 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Hormone and Metabolic Research Volume 52 ; 52 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Hormone and Metabolic Research Volume 53 ; 53 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Hormone and Metabolic Research Volume 53 ; 53 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Hormone and Metabolic Research Volume 54 ; 54 ; >
 
   }
@@ -2427,7 +2427,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Im OP Volume 8 ; 8 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2019 ; 2019 ; Im OP Volume 9 ; 9 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Im OP Volume 10 ; 10 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Im OP Volume 11 ; 11 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Im OP Volume 11 ; 11 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Im OP Volume 12 ; 12 ; >
 
   }
@@ -2452,7 +2452,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Indian Journal of Neurosurgery Volume 7 ; 7 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2019 ; 2019 ; Indian Journal of Neurosurgery Volume 8 ; 8 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Indian Journal of Neurosurgery Volume 9 ; 9 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Indian Journal of Neurosurgery Volume 10 ; 10 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Indian Journal of Neurosurgery Volume 10 ; 10 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Indian Journal of Neurosurgery Volume 11 ; 11 ; >
 
   }
@@ -2485,7 +2485,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Indian Journal of Neurotrauma Volume 15 ; 15 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2019 ; 2019 ; Indian Journal of Neurotrauma Volume 16 ; 16 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Indian Journal of Neurotrauma Volume 17 ; 17 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Indian Journal of Neurotrauma Volume 18 ; 18 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Indian Journal of Neurotrauma Volume 18 ; 18 ; >
    au < expected ; exists ; 2022 ; 2022 ; Indian Journal of Neurotrauma Volume 19 ; 19 ; >
 
   }
@@ -2519,7 +2519,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Indian Journal of Radiology and Imaging Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Indian Journal of Radiology and Imaging Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Indian Journal of Radiology and Imaging Volume 30 ; 30 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Indian Journal of Radiology and Imaging Volume 31 ; 31 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Indian Journal of Radiology and Imaging Volume 31 ; 31 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Indian Journal of Radiology and Imaging Volume 32 ; 32 ; >
 
   }
@@ -2556,7 +2556,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Informationen aus Orthodontie & Kieferorthopädie Volume 50 ; 50 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2019 ; 2019 ; Informationen aus Orthodontie & Kieferorthopädie Volume 51 ; 51 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Informationen aus Orthodontie & Kieferorthopädie Volume 52 ; 52 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Informationen aus Orthodontie & Kieferorthopädie Volume 53 ; 53 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Informationen aus Orthodontie & Kieferorthopädie Volume 53 ; 53 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Informationen aus Orthodontie & Kieferorthopädie Volume 54 ; 54 ; >
 
   }
@@ -2609,7 +2609,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; intensiv Volume 26 ; 26 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; 2019 ; intensiv Volume 27 ; 27 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; intensiv Volume 28 ; 28 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; intensiv Volume 29 ; 29 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; intensiv Volume 29 ; 29 ; >
     au < crawling ; exists ; 2022 ; 2022 ; intensiv Volume 30 ; 30 ; >
 
   }
@@ -2641,7 +2641,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Intensivmedizin up2date Volume 14 ; 14 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; 2019 ; Intensivmedizin up2date Volume 15 ; 15 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Intensivmedizin up2date Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Intensivmedizin up2date Volume 17 ; 17 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Intensivmedizin up2date Volume 17 ; 17 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Intensivmedizin up2date Volume 18 ; 18 ; >
 
   }
@@ -2667,7 +2667,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; International Archives of Otorhinolaryngology Volume 22 ; 22 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2019 ; 2019 ; International Archives of Otorhinolaryngology Volume 23 ; 23 ; reingest1.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; International Archives of Otorhinolaryngology Volume 24 ; 24 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; International Archives of Otorhinolaryngology Volume 25 ; 25 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; International Archives of Otorhinolaryngology Volume 25 ; 25 ; >
    au < crawling ; exists ; 2022 ; 2022 ; International Archives of Otorhinolaryngology Volume 26 ; 26 ; >
 
   }
@@ -2713,7 +2713,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; International Journal of Angiology Volume 27 ; 27 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; International Journal of Angiology Volume 28 ; 28 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; International Journal of Angiology Volume 29 ; 29 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; International Journal of Angiology Volume 30 ; 30 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; International Journal of Angiology Volume 30 ; 30 ; >
     au < crawling ; exists ; 2022 ; 2022 ; International Journal of Angiology Volume 31 ; 31 ; >
 
   }
@@ -2771,7 +2771,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; International Journal of Sports Medicine Volume 39 ; 39 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; 2019 ; International Journal of Sports Medicine Volume 40 ; 40 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; International Journal of Sports Medicine Volume 41 ; 41 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; International Journal of Sports Medicine Volume 42 ; 42 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; International Journal of Sports Medicine Volume 42 ; 42 ; >
     au < crawling ; exists ; 2022 ; 2022 ; International Journal of Sports Medicine Volume 43 ; 43 ; >
 
   }
@@ -2834,7 +2834,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Journal Club AINS Volume 7 ; 7 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; 2019 ; Journal Club AINS Volume 8 ; 8 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal Club AINS Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Journal Club AINS Volume 10 ; 10 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Journal Club AINS Volume 10 ; 10 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Journal Club AINS Volume 11 ; 11 ; >
 
   }
@@ -2890,7 +2890,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Journal of Academic Ophtalmology Volume 10 ; 10 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2019 ; 2019 ; Journal of Academic Ophtalmology Volume 11 ; 11 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Academic Ophtalmology Volume 12 ; 12 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Journal of Academic Ophtalmology Volume 13 ; 13 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Journal of Academic Ophtalmology Volume 13 ; 13 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Journal of Academic Ophtalmology Volume 14 ; 14 ; >
 
   }
@@ -2923,7 +2923,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 13 ; 13 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2019 ; 2019 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 14 ; 14 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 15 ; 15 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 16 ; 16 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 16 ; 16 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 17 ; 17 ; >
 
   }
@@ -2959,7 +2959,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Journal of Clinical Interventional Radiology Volume 2 ; 2 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; 2019 ; Journal of Clinical Interventional Radiology Volume 3 ; 3 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Clinical Interventional Radiology Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Journal of Clinical Interventional Radiology Volume 5 ; 5 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Journal of Clinical Interventional Radiology Volume 5 ; 5 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Journal of Clinical Interventional Radiology Volume 6 ; 6 ; >
 
   }
@@ -2981,7 +2981,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Journal of Hand and Microsurgery Volume 10 ; 10 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; 2019 ; Journal of Hand and Microsurgery Volume 11 ; 11 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Hand and Microsurgery Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Journal of Hand and Microsurgery Volume 13 ; 13 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Journal of Hand and Microsurgery Volume 13 ; 13 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Journal of Hand and Microsurgery Volume 14 ; 14 ; >
 
   }
@@ -3001,7 +3001,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; The Journal of Hip Surgery Volume 2 ; 2 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; The Journal of Hip Surgery Volume 3 ; 3 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; The Journal of Hip Surgery Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; The Journal of Hip Surgery Volume 5 ; 5 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; The Journal of Hip Surgery Volume 5 ; 5 ; >
     au < crawling ; exists ; 2022 ; 2022 ; The Journal of Hip Surgery Volume 6 ; 6 ; >
 
   }
@@ -3035,7 +3035,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Journal of Knee Surgery Volume 31 ; 31 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; Journal of Knee Surgery Volume 32 ; 32 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Knee Surgery Volume 33 ; 33 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Journal of Knee Surgery Volume 34 ; 34 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Journal of Knee Surgery Volume 34 ; 34 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Journal of Knee Surgery Volume 35 ; 35 ; >
 
   }
@@ -3098,7 +3098,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Journal of Neurological Surgery Part B : Skull Base Volume 79 ; 79 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; Journal of Neurological Surgery Part B : Skull Base Volume 80 ; 80 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Neurological Surgery Part B : Skull Base Volume 81 ; 81 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Journal of Neurological Surgery Part B : Skull Base Volume 82 ; 82 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Journal of Neurological Surgery Part B : Skull Base Volume 82 ; 82 ; >
     au < testing ; exists ; 2022 ; 2022 ; Journal of Neurological Surgery Part B : Skull Base Volume 83 ; 83 ; >
 
   }
@@ -3124,7 +3124,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Journal of Neurological Surgery Reports Volume 79 ; 79 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; 2019 ; Journal of Neurological Surgery Reports Volume 80 ; 80 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Neurological Surgery Reports Volume 81 ; 81 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Journal of Neurological Surgery Reports Volume 82 ; 82 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Journal of Neurological Surgery Reports Volume 82 ; 82 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Journal of Neurological Surgery Reports Volume 83 ; 83 ; >
 
   }
@@ -3171,7 +3171,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Journal of Pediatric Epilepsy Volume 7 ; 7 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; 2019 ; Journal of Pediatric Epilepsy Volume 8 ; 8 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Pediatric Epilepsy Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Journal of Pediatric Epilepsy Volume 10 ; 10 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Journal of Pediatric Epilepsy Volume 10 ; 10 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Journal of Pediatric Epilepsy Volume 11 ; 11 ; >
 
   }
@@ -3197,7 +3197,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Journal of Pediatric Genetics Volume 7 ; 7 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; Journal of Pediatric Genetics Volume 8 ; 8 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Pediatric Genetics Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Journal of Pediatric Genetics Volume 10 ; 10 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Journal of Pediatric Genetics Volume 10 ; 10 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Journal of Pediatric Genetics Volume 11 ; 11 ; >
 
   }
@@ -3229,7 +3229,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Journal of Pediatric Infectious Diseases Volume 13 ; 13 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; 2019 ; Journal of Pediatric Infectious Diseases Volume 14 ; 14 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Pediatric Infectious Diseases Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Journal of Pediatric Infectious Diseases Volume 16 ; 16 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Journal of Pediatric Infectious Diseases Volume 16 ; 16 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Journal of Pediatric Infectious Diseases Volume 17 ; 17 ; >
 
   }
@@ -3255,7 +3255,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Journal of Pediatric Intensive Care Volume 7 ; 7 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; Journal of Pediatric Intensive Care Volume 8 ; 8 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Pediatric Intensive Care Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Journal of Pediatric Intensive Care Volume 10 ; 10 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Journal of Pediatric Intensive Care Volume 10 ; 10 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Journal of Pediatric Intensive Care Volume 11 ; 11 ; >
 
   }
@@ -3290,7 +3290,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Journal of Pediatric Neurology Volume 16 ; 16 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; 2019 ; Journal of Pediatric Neurology Volume 17 ; 17 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Pediatric Neurology Volume 18 ; 18 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Journal of Pediatric Neurology Volume 19 ; 19 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Journal of Pediatric Neurology Volume 19 ; 19 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Journal of Pediatric Neurology Volume 20 ; 20 ; >
 
   }
@@ -3364,7 +3364,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Journal of Reconstructive Microsurgery Volume 34 ; 34 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; Journal of Reconstructive Microsurgery Volume 35 ; 35 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2020 ; 2020 ; Journal of Reconstructive Microsurgery Volume 36 ; 36 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2021 ; 2021 ; Journal of Reconstructive Microsurgery Volume 37 ; 37 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Journal of Reconstructive Microsurgery Volume 37 ; 37 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Journal of Reconstructive Microsurgery Volume 38 ; 38 ; >
 
   }
@@ -3387,7 +3387,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Journal of Reconstructive Microsurgery Open Volume 3 ; 3 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; Journal of Reconstructive Microsurgery Open Volume 4 ; 4 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Reconstructive Microsurgery Open Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Journal of Reconstructive Microsurgery Open Volume 6 ; 6 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Journal of Reconstructive Microsurgery Open Volume 6 ; 6 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Journal of Reconstructive Microsurgery Open Volume 7 ; 7 ; >
 
   }
@@ -3438,7 +3438,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Journal of Wrist Surgery Volume 7 ; 7 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; 2019 ; Journal of Wrist Surgery Volume 8 ; 8 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Wrist Surgery Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Journal of Wrist Surgery Volume 10 ; 10 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Journal of Wrist Surgery Volume 10 ; 10 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Journal of Wrist Surgery Volume 11 ; 11 ; >
 
   }
@@ -3464,7 +3464,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 7 ; 7 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; 2019 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 8 ; 8 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 10 ; 10 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 10 ; 10 ; >
     au < crawling ; exists ; 2022 ; 2022 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 11 ; 11 ; >
 
   }
@@ -3496,7 +3496,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Kardiologie up2date Volume 14 ; 14 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; Kardiologie up2date Volume 15 ; 15 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Kardiologie up2date Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Kardiologie up2date Volume 17 ; 17 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Kardiologie up2date Volume 17 ; 17 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Kardiologie up2date Volume 18 ; 18 ; >
 
   }
@@ -3526,7 +3526,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; kleintier konkret Volume 21 ; 21 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; kleintier konkret Volume 22 ; 22 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; kleintier konkret Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; kleintier konkret Volume 24 ; 24 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; kleintier konkret Volume 24 ; 24 ; >
     au < crawling ; exists ; 2022 ; 2022 ; kleintier konkret Volume 25 ; 25 ; >
 
   }
@@ -3617,7 +3617,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Klinische Monatsblätter für Augenheilkunde Volume 235 ; 235 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; 2019 ; Klinische Monatsblätter für Augenheilkunde Volume 236 ; 236 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Klinische Monatsblätter für Augenheilkunde Volume 237 ; 237 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Klinische Monatsblätter für Augenheilkunde Volume 238 ; 238 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Klinische Monatsblätter für Augenheilkunde Volume 238 ; 238 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Klinische Monatsblätter für Augenheilkunde Volume 239 ; 239 ; >
 
   }
@@ -3693,7 +3693,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Klinische Neurophysiologie Volume 49 ; 49 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; Klinische Neurophysiologie Volume 50 ; 50 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Klinische Neurophysiologie Volume 51 ; 51 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Klinische Neurophysiologie Volume 52 ; 52 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Klinische Neurophysiologie Volume 52 ; 52 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Klinische Neurophysiologie Volume 53 ; 53 ; >
 
   }
@@ -3750,7 +3750,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Klinische Pädiatrie Volume 230 ; 230 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; Klinische Pädiatrie Volume 231 ; 231 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Klinische Pädiatrie Volume 232 ; 232 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Klinische Pädiatrie Volume 233 ; 233 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Klinische Pädiatrie Volume 233 ; 233 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Klinische Pädiatrie Volume 234 ; 234 ; >
 
   }
@@ -3783,7 +3783,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; kma - Das Gesundheitswirtschaftsmagazin Volume 23 ; 23 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; 2019 ; kma - Das Gesundheitswirtschaftsmagazin Volume 24 ; 24 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; kma - Das Gesundheitswirtschaftsmagazin Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; kma - Das Gesundheitswirtschaftsmagazin Volume 26 ; 26 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; kma - Das Gesundheitswirtschaftsmagazin Volume 26 ; 26 ; >
     au < crawling ; exists ; 2022 ; 2022 ; kma - Das Gesundheitswirtschaftsmagazin Volume 27 ; 27 ; >
 
   }
@@ -3814,7 +3814,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Krankenhaushygiene up2date Volume 13 ; 13 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; 2019 ; Krankenhaushygiene up2date Volume 14 ; 14 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Krankenhaushygiene up2date Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Krankenhaushygiene up2date Volume 16 ; 16 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Krankenhaushygiene up2date Volume 16 ; 16 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Krankenhaushygiene up2date Volume 17 ; 17 ; >
 
   }
@@ -3853,15 +3853,15 @@
     # this journal subsumed Laryngologie, Rhinologie, Otologie und ihre Grenzgebiete
 
     au < frozen ; exists ; 1980 ; 1980 ; Laryngo-Rhino-Otologie Volume 58 ; 58 ; >
-    au < crawling ; exists ; 1981 ; 1981 ; Laryngo-Rhino-Otologie Volume 59 ; 59 ; >
-    au < crawling ; exists ; 1982 ; 1982 ; Laryngo-Rhino-Otologie Volume 60 ; 60 ; >
-    au < crawling ; exists ; 1983 ; 1983 ; Laryngo-Rhino-Otologie Volume 61 ; 61 ; >
-    au < crawling ; exists ; 1984 ; 1984 ; Laryngo-Rhino-Otologie Volume 62 ; 62 ; >
+    au < frozen ; exists ; 1981 ; 1981 ; Laryngo-Rhino-Otologie Volume 59 ; 59 ; >
+    au < frozen ; exists ; 1982 ; 1982 ; Laryngo-Rhino-Otologie Volume 60 ; 60 ; >
+    au < frozen ; exists ; 1983 ; 1983 ; Laryngo-Rhino-Otologie Volume 61 ; 61 ; >
+    au < frozen ; exists ; 1984 ; 1984 ; Laryngo-Rhino-Otologie Volume 62 ; 62 ; >
     au < frozen ; exists ; 1985 ; 1985 ; Laryngo-Rhino-Otologie Volume 63 ; 63 ; >
-    au < crawling ; exists ; 1986 ; 1986 ; Laryngo-Rhino-Otologie Volume 64 ; 64 ; >
-    au < crawling ; exists ; 1987 ; 1987 ; Laryngo-Rhino-Otologie Volume 65 ; 65 ; >
-    au < crawling ; exists ; 1988 ; 1988 ; Laryngo-Rhino-Otologie Volume 66 ; 66 ; >
-    au < crawling ; exists ; 1989 ; 1989 ; Laryngo-Rhino-Otologie Volume 67 ; 67 ; >
+    au < frozen ; exists ; 1986 ; 1986 ; Laryngo-Rhino-Otologie Volume 64 ; 64 ; >
+    au < frozen ; exists ; 1987 ; 1987 ; Laryngo-Rhino-Otologie Volume 65 ; 65 ; >
+    au < frozen ; exists ; 1988 ; 1988 ; Laryngo-Rhino-Otologie Volume 66 ; 66 ; >
+    au < frozen ; exists ; 1989 ; 1989 ; Laryngo-Rhino-Otologie Volume 67 ; 67 ; >
     au < finished ; crawling ; 1990 ; 1990 ; Laryngo-Rhino-Otologie Volume 68 ; 68 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1991 ; 1991 ; Laryngo-Rhino-Otologie Volume 69 ; 69 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 1992 ; 1992 ; Laryngo-Rhino-Otologie Volume 70 ; 70 ; reingest2.clockss.org:8085 >
@@ -3893,7 +3893,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Laryngo-Rhino-Otologie Volume 97 ; 97 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; Laryngo-Rhino-Otologie Volume 98 ; 98 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Laryngo-Rhino-Otologie Volume 99 ; 99 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Laryngo-Rhino-Otologie Volume 100 ; 100 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Laryngo-Rhino-Otologie Volume 100 ; 100 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Laryngo-Rhino-Otologie Volume 101 ; 101 ; >
 
   }
@@ -4001,16 +4001,16 @@
     au < manifest ; exists ; 1977 ; 1977 ; min - Minimally Invasive Neurosurgery Volume 20 ; 20 ; >
     au < manifest ; exists ; 1978 ; 1978 ; min - Minimally Invasive Neurosurgery Volume 21 ; 21 ; >
     au < manifest ; exists ; 1979 ; 1979 ; min - Minimally Invasive Neurosurgery Volume 22 ; 22 ; >
-    au < crawling ; exists ; 1980 ; 1980 ; min - Minimally Invasive Neurosurgery Volume 23 ; 23 ; >
-    au < crawling ; exists ; 1981 ; 1981 ; min - Minimally Invasive Neurosurgery Volume 24 ; 24 ; >
-    au < crawling ; exists ; 1982 ; 1982 ; min - Minimally Invasive Neurosurgery Volume 25 ; 25 ; >
+    au < frozen ; exists ; 1980 ; 1980 ; min - Minimally Invasive Neurosurgery Volume 23 ; 23 ; >
+    au < frozen ; exists ; 1981 ; 1981 ; min - Minimally Invasive Neurosurgery Volume 24 ; 24 ; >
+    au < frozen ; exists ; 1982 ; 1982 ; min - Minimally Invasive Neurosurgery Volume 25 ; 25 ; >
     au < frozen ; exists ; 1983 ; 1983 ; min - Minimally Invasive Neurosurgery Volume 26 ; 26 ; >
-    au < crawling ; exists ; 1984 ; 1984 ; min - Minimally Invasive Neurosurgery Volume 27 ; 27 ; >
-    au < crawling ; exists ; 1985 ; 1985 ; min - Minimally Invasive Neurosurgery Volume 28 ; 28 ; >
-    au < crawling ; exists ; 1986 ; 1986 ; min - Minimally Invasive Neurosurgery Volume 29 ; 29 ; >
-    au < crawling ; exists ; 1987 ; 1987 ; min - Minimally Invasive Neurosurgery Volume 30 ; 30 ; >
-    au < crawling ; exists ; 1988 ; 1988 ; min - Minimally Invasive Neurosurgery Volume 31 ; 31 ; >
-    au < crawling ; exists ; 1989 ; 1989 ; min - Minimally Invasive Neurosurgery Volume 32 ; 32 ; >
+    au < frozen ; exists ; 1984 ; 1984 ; min - Minimally Invasive Neurosurgery Volume 27 ; 27 ; >
+    au < frozen ; exists ; 1985 ; 1985 ; min - Minimally Invasive Neurosurgery Volume 28 ; 28 ; >
+    au < frozen ; exists ; 1986 ; 1986 ; min - Minimally Invasive Neurosurgery Volume 29 ; 29 ; >
+    au < frozen ; exists ; 1987 ; 1987 ; min - Minimally Invasive Neurosurgery Volume 30 ; 30 ; >
+    au < frozen ; exists ; 1988 ; 1988 ; min - Minimally Invasive Neurosurgery Volume 31 ; 31 ; >
+    au < frozen ; exists ; 1989 ; 1989 ; min - Minimally Invasive Neurosurgery Volume 32 ; 32 ; >
     au < finished ; crawling ; 1990 ; 1990 ; min - Minimally Invasive Neurosurgery Volume 33 ; 33 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1991 ; 1991 ; min - Minimally Invasive Neurosurgery Volume 34 ; 34 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1992 ; 1992 ; min - Minimally Invasive Neurosurgery Volume 35 ; 35 ; reingest3.clockss.org:8083 >
@@ -4056,7 +4056,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Neonatologie Scan Volume 6 ; 6 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; Neonatologie Scan Volume 7 ; 7 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Neonatologie Scan Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Neonatologie Scan Volume 9 ; 9 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Neonatologie Scan Volume 9 ; 9 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Neonatologie Scan Volume 10 ; 10 ; >
 
   }
@@ -4108,16 +4108,16 @@
     param[journal_id] = 10.1055/s-00000041
     comment[years] = 1980-current
 
-    au < crawling ; exists ; 1980 ; 1980 ; Neuropediatrics Volume 11 ; 11 ; >
-    au < crawling ; exists ; 1981 ; 1981 ; Neuropediatrics Volume 12 ; 12 ; >
-    au < crawling ; exists ; 1982 ; 1982 ; Neuropediatrics Volume 13 ; 13 ; >
-    au < crawling ; exists ; 1983 ; 1983 ; Neuropediatrics Volume 14 ; 14 ; >
-    au < crawling ; exists ; 1984 ; 1984 ; Neuropediatrics Volume 15 ; 15 ; >
-    au < crawling ; exists ; 1985 ; 1985 ; Neuropediatrics Volume 16 ; 16 ; >
-    au < crawling ; exists ; 1986 ; 1986 ; Neuropediatrics Volume 17 ; 17 ; >
-    au < crawling ; exists ; 1987 ; 1987 ; Neuropediatrics Volume 18 ; 18 ; >
-    au < crawling ; exists ; 1988 ; 1988 ; Neuropediatrics Volume 19 ; 19 ; >
-    au < crawling ; exists ; 1989 ; 1989 ; Neuropediatrics Volume 20 ; 20 ; >
+    au < frozen ; exists ; 1980 ; 1980 ; Neuropediatrics Volume 11 ; 11 ; >
+    au < frozen ; exists ; 1981 ; 1981 ; Neuropediatrics Volume 12 ; 12 ; >
+    au < frozen ; exists ; 1982 ; 1982 ; Neuropediatrics Volume 13 ; 13 ; >
+    au < frozen ; exists ; 1983 ; 1983 ; Neuropediatrics Volume 14 ; 14 ; >
+    au < frozen ; exists ; 1984 ; 1984 ; Neuropediatrics Volume 15 ; 15 ; >
+    au < frozen ; exists ; 1985 ; 1985 ; Neuropediatrics Volume 16 ; 16 ; >
+    au < frozen ; exists ; 1986 ; 1986 ; Neuropediatrics Volume 17 ; 17 ; >
+    au < frozen ; exists ; 1987 ; 1987 ; Neuropediatrics Volume 18 ; 18 ; >
+    au < frozen ; exists ; 1988 ; 1988 ; Neuropediatrics Volume 19 ; 19 ; >
+    au < frozen ; exists ; 1989 ; 1989 ; Neuropediatrics Volume 20 ; 20 ; >
     au < finished ; crawling ; 1990 ; 1990 ; Neuropediatrics Volume 21 ; 21 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1991 ; 1991 ; Neuropediatrics Volume 22 ; 22 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1992 ; 1992 ; Neuropediatrics Volume 23 ; 23 ; reingest3.clockss.org:8083 >
@@ -4149,7 +4149,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Neuropediatrics Volume 49 ; 49 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; Neuropediatrics Volume 50 ; 50 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Neuropediatrics Volume 51 ; 51 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Neuropediatrics Volume 52 ; 52 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Neuropediatrics Volume 52 ; 52 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Neuropediatrics Volume 53 ; 53 ; >
 
   }
@@ -4176,7 +4176,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Neuroradiologie Scan Volume 8 ; 8 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; 2019 ; Neuroradiologie Scan Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Neuroradiologie Scan Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Neuroradiologie Scan Volume 11 ; 11 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Neuroradiologie Scan Volume 11 ; 11 ; >
     au < testing ; exists ; 2022 ; 2022 ; Neuroradiologie Scan Volume 12 ; 12 ; >
 
   }
@@ -4204,7 +4204,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; neuroreha Volume 10 ; 10 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; 2019 ; neuroreha Volume 11 ; 11 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; neuroreha Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; neuroreha Volume 13 ; 13 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; neuroreha Volume 13 ; 13 ; >
     au < crawling ; exists ; 2022 ; 2022 ; neuroreha Volume 14 ; 14 ; >
 
   }
@@ -4242,7 +4242,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Notarzt Der Volume 34 ; 34 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; 2019 ; Notarzt Der Volume 35 ; 35 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Notarzt Der Volume 36 ; 36 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Notarzt Der Volume 37 ; 37 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Notarzt Der Volume 37 ; 37 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Notarzt Der Volume 38 ; 38 ; >
 
   }
@@ -4324,7 +4324,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Notfallmedizin up2date Volume 13 ; 13 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; Notfallmedizin up2date Volume 14 ; 14 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Notfallmedizin up2date Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Notfallmedizin up2date Volume 16 ; 16 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Notfallmedizin up2date Volume 16 ; 16 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Notfallmedizin up2date Volume 17 ; 17 ; >
 
   }
@@ -4359,7 +4359,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Der Nuklearmediziner Volume 41 ; 41 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; Der Nuklearmediziner Volume 42 ; 42 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Der Nuklearmediziner Volume 43 ; 43 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Der Nuklearmediziner Volume 44 ; 44 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Der Nuklearmediziner Volume 44 ; 44 ; >
     au < expected ; exists ; 2022 ; 2022 ; Der Nuklearmediziner Volume 45 ; 45 ; >
 
   }
@@ -4396,7 +4396,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; OP-Journal Volume 34 ; 34 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; 2019 ; OP-Journal Volume 35 ; 35 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; OP-Journal Volume 36 ; 36 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; OP-Journal Volume 37 ; 37 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; OP-Journal Volume 37 ; 37 ; >
     au < crawling ; exists ; 2022 ; 2022 ; OP-Journal Volume 38 ; 38 ; >
 
   }
@@ -4446,7 +4446,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Orthopädie und Unfallchirurgie up2date Volume 13 ; 13 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; Orthopädie und Unfallchirurgie up2date Volume 14 ; 14 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Orthopädie und Unfallchirurgie up2date Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Orthopädie und Unfallchirurgie up2date Volume 16 ; 16 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Orthopädie und Unfallchirurgie up2date Volume 16 ; 16 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Orthopädie und Unfallchirurgie up2date Volume 17 ; 17 ; >
 
   }
@@ -4538,7 +4538,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Pädiatrie up2date Volume 13 ; 13 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; Pädiatrie up2date Volume 14 ; 14 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Pädiatrie up2date Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Pädiatrie up2date Volume 16 ; 16 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Pädiatrie up2date Volume 16 ; 16 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Pädiatrie up2date Volume 17 ; 17 ; >
 
   }
@@ -4588,7 +4588,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; pferde spiegel Volume 21 ; 21 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; 2019 ; pferde spiegel Volume 22 ; 22 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; pferde spiegel Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; pferde spiegel Volume 24 ; 24 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; pferde spiegel Volume 24 ; 24 ; >
     au < crawling ; exists ; 2022 ; 2022 ; pferde spiegel Volume 25 ; 25 ; >
 
   }
@@ -4617,16 +4617,16 @@
     au < manifest ; exists ; 1977 ; 1977 ; Pharmacopsychiatry Volume 10 ; 10 ; >
     au < manifest ; exists ; 1978 ; 1978 ; Pharmacopsychiatry Volume 11 ; 11 ; >
     au < manifest ; exists ; 1979 ; 1979 ; Pharmacopsychiatry Volume 12 ; 12 ; >
-    au < crawling ; exists ; 1980 ; 1980 ; Pharmacopsychiatry Volume 13 ; 13 ; >
-    au < crawling ; exists ; 1981 ; 1981 ; Pharmacopsychiatry Volume 14 ; 14 ; >
-    au < crawling ; exists ; 1982 ; 1982 ; Pharmacopsychiatry Volume 15 ; 15 ; >
-    au < crawling ; exists ; 1983 ; 1983 ; Pharmacopsychiatry Volume 16 ; 16 ; >
-    au < crawling ; exists ; 1984 ; 1984 ; Pharmacopsychiatry Volume 17 ; 17 ; >
-    au < crawling ; exists ; 1985 ; 1985 ; Pharmacopsychiatry Volume 18 ; 18 ; >
-    au < crawling ; exists ; 1986 ; 1986 ; Pharmacopsychiatry Volume 19 ; 19 ; >
-    au < crawling ; exists ; 1987 ; 1987 ; Pharmacopsychiatry Volume 20 ; 20 ; >
-    au < crawling ; exists ; 1988 ; 1988 ; Pharmacopsychiatry Volume 21 ; 21 ; >
-    au < crawling ; exists ; 1989 ; 1989 ; Pharmacopsychiatry Volume 22 ; 22 ; >
+    au < frozen ; exists ; 1980 ; 1980 ; Pharmacopsychiatry Volume 13 ; 13 ; >
+    au < frozen ; exists ; 1981 ; 1981 ; Pharmacopsychiatry Volume 14 ; 14 ; >
+    au < frozen ; exists ; 1982 ; 1982 ; Pharmacopsychiatry Volume 15 ; 15 ; >
+    au < frozen ; exists ; 1983 ; 1983 ; Pharmacopsychiatry Volume 16 ; 16 ; >
+    au < frozen ; exists ; 1984 ; 1984 ; Pharmacopsychiatry Volume 17 ; 17 ; >
+    au < frozen ; exists ; 1985 ; 1985 ; Pharmacopsychiatry Volume 18 ; 18 ; >
+    au < frozen ; exists ; 1986 ; 1986 ; Pharmacopsychiatry Volume 19 ; 19 ; >
+    au < frozen ; exists ; 1987 ; 1987 ; Pharmacopsychiatry Volume 20 ; 20 ; >
+    au < frozen ; exists ; 1988 ; 1988 ; Pharmacopsychiatry Volume 21 ; 21 ; >
+    au < frozen ; exists ; 1989 ; 1989 ; Pharmacopsychiatry Volume 22 ; 22 ; >
     au < finished ; crawling ; 1990 ; 1990 ; Pharmacopsychiatry Volume 23 ; 23 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 1991 ; 1991 ; Pharmacopsychiatry Volume 24 ; 24 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 1992 ; 1992 ; Pharmacopsychiatry Volume 25 ; 25 ; reingest1.clockss.org:8082 >
@@ -4658,7 +4658,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Pharmacopsychiatry Volume 51 ; 51 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; 2019 ; Pharmacopsychiatry Volume 52 ; 52 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Pharmacopsychiatry Volume 53 ; 53 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Pharmacopsychiatry Volume 54 ; 54 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Pharmacopsychiatry Volume 54 ; 54 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Pharmacopsychiatry Volume 55 ; 55 ; >
 
   }
@@ -4674,15 +4674,15 @@
     param[journal_id] = 10.1055/s-00000056
     comment[years] = 1991-current
 
-    au < crawling ; exists ; 1991 ; 1991 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 1 ; 1 ; >
-    au < crawling ; exists ; 1992 ; 1992 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 2 ; 2 ; >
-    au < crawling ; exists ; 1993 ; 1993 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 3 ; 3 ; >
-    au < crawling ; exists ; 1994 ; 1994 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 4 ; 4 ; >
-    au < crawling ; exists ; 1995 ; 1995 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 5 ; 5 ; >
-    au < crawling ; exists ; 1996 ; 1996 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 6 ; 6 ; >
-    au < crawling ; exists ; 1997 ; 1997 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 7 ; 7 ; >
-    au < crawling ; exists ; 1998 ; 1998 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 8 ; 8 ; >
-    au < crawling ; exists ; 1999 ; 1999 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 9 ; 9 ; >
+    au < frozen ; exists ; 1991 ; 1991 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 1 ; 1 ; >
+    au < frozen ; exists ; 1992 ; 1992 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 2 ; 2 ; >
+    au < frozen ; exists ; 1993 ; 1993 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 3 ; 3 ; >
+    au < frozen ; exists ; 1994 ; 1994 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 4 ; 4 ; >
+    au < frozen ; exists ; 1995 ; 1995 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 5 ; 5 ; >
+    au < frozen ; exists ; 1996 ; 1996 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 6 ; 6 ; >
+    au < frozen ; exists ; 1997 ; 1997 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 7 ; 7 ; >
+    au < frozen ; exists ; 1998 ; 1998 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 8 ; 8 ; >
+    au < frozen ; exists ; 1999 ; 1999 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 9 ; 9 ; >
     au < finished ; crawling ; 2000 ; 2000 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 10 ; 10 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2001 ; 2001 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 11 ; 11 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2002 ; 2002 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 12 ; 12 ; reingest1.clockss.org:8082 >
@@ -4704,7 +4704,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 28 ; 28 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; 2019 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 29 ; 29 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 30 ; 30 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 31 ; 31 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 31 ; 31 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 32 ; 32 ; >
 
   }
@@ -4738,7 +4738,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; physiopraxis Volume 16 ; 16 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; physiopraxis Volume 17 ; 17 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; physiopraxis Volume 18 ; 18 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; physiopraxis Volume 19 ; 19 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; physiopraxis Volume 19 ; 19 ; >
     au < crawling ; exists ; 2022 ; 2022 ; physiopraxis Volume 20 ; 20 ; >
 
   }
@@ -4770,7 +4770,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; physioscience Volume 14 ; 14 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; physioscience Volume 15 ; 15 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; physioscience Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; physioscience Volume 17 ; 17 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; physioscience Volume 17 ; 17 ; >
     au < crawling ; exists ; 2022 ; 2022 ; physioscience Volume 18 ; 18 ; >
 
   }
@@ -4807,7 +4807,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; PiD - Psychotherapie im Dialog Volume 19 ; 19 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; 2019 ; PiD - Psychotherapie im Dialog Volume 20 ; 20 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; PiD - Psychotherapie im Dialog Volume 21 ; 21 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; PiD - Psychotherapie im Dialog Volume 22 ; 22 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; PiD - Psychotherapie im Dialog Volume 22 ; 22 ; >
     au < crawling ; exists ; 2022 ; 2022 ; PiD - Psychotherapie im Dialog Volume 23 ; 23 ; >
 
   }
@@ -4824,7 +4824,7 @@
     param[journal_id] = 10.1055/s-00000057
     comment[years] = 1999-2007
 
-   au < crawling ; exists ; 1999 ; 1999 ; Plant Biology Volume 1 ; 1 ; >
+   au < frozen ; exists ; 1999 ; 1999 ; Plant Biology Volume 1 ; 1 ; >
    au < finished ; crawling ; 2000 ; 2000 ; Plant Biology Volume 2 ; 2 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2001 ; 2001 ; Plant Biology Volume 3 ; 3 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2002 ; 2002 ; Plant Biology Volume 4 ; 4 ; reingest2.clockss.org:8085 >
@@ -4875,16 +4875,16 @@
    au < manifest ; exists ; 1977 ; 1977 ; Planta Medica Volume 43 ; 43 ; >
    au < manifest ; exists ; 1978 ; 1978 ; Planta Medica Volume 44 ; 44 ; >
    au < manifest ; exists ; 1979 ; 1979 ; Planta Medica Volume 45 ; 45 ; >
-   au < crawling ; exists ; 1980 ; 1980 ; Planta Medica Volume 46 ; 46 ; >
-   au < crawling ; exists ; 1981 ; 1981 ; Planta Medica Volume 47 ; 47 ; >
-   au < crawling ; exists ; 1982 ; 1982 ; Planta Medica Volume 48 ; 48 ; >
-   au < crawling ; exists ; 1983 ; 1983 ; Planta Medica Volume 49 ; 49 ; >
-   au < crawling ; exists ; 1984 ; 1984 ; Planta Medica Volume 50 ; 50 ; >
-   au < crawling ; exists ; 1985 ; 1985 ; Planta Medica Volume 51 ; 51 ; >
-   au < crawling ; exists ; 1986 ; 1986 ; Planta Medica Volume 52 ; 52 ; >
-   au < crawling ; exists ; 1987 ; 1987 ; Planta Medica Volume 53 ; 53 ; >
-   au < crawling ; exists ; 1988 ; 1988 ; Planta Medica Volume 54 ; 54 ; >
-   au < crawling ; exists ; 1989 ; 1989 ; Planta Medica Volume 55 ; 55 ; >
+   au < frozen ; exists ; 1980 ; 1980 ; Planta Medica Volume 46 ; 46 ; >
+   au < frozen ; exists ; 1981 ; 1981 ; Planta Medica Volume 47 ; 47 ; >
+   au < frozen ; exists ; 1982 ; 1982 ; Planta Medica Volume 48 ; 48 ; >
+   au < frozen ; exists ; 1983 ; 1983 ; Planta Medica Volume 49 ; 49 ; >
+   au < frozen ; exists ; 1984 ; 1984 ; Planta Medica Volume 50 ; 50 ; >
+   au < frozen ; exists ; 1985 ; 1985 ; Planta Medica Volume 51 ; 51 ; >
+   au < frozen ; exists ; 1986 ; 1986 ; Planta Medica Volume 52 ; 52 ; >
+   au < frozen ; exists ; 1987 ; 1987 ; Planta Medica Volume 53 ; 53 ; >
+   au < frozen ; exists ; 1988 ; 1988 ; Planta Medica Volume 54 ; 54 ; >
+   au < frozen ; exists ; 1989 ; 1989 ; Planta Medica Volume 55 ; 55 ; >
    au < finished ; crawling ; 1990 ; 1990 ; Planta Medica Volume 56 ; 56 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 1991 ; 1991 ; Planta Medica Volume 57 ; 57 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 1992 ; 1992 ; Planta Medica Volume 58 ; 58 ; reingest4.clockss.org:8082 >
@@ -4916,7 +4916,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Planta Medica Volume 84 ; 84 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2019 ; 2019 ; Planta Medica Volume 85 ; 85 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Planta Medica Volume 86 ; 86 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Planta Medica Volume 87 ; 87 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Planta Medica Volume 87 ; 87 ; >
    au < testing ; exists ; 2022 ; 2022 ; Planta Medica Volume 88 ; 88 ; >
 
   }
@@ -4936,7 +4936,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Planta Medica International Open Volume 3 ; 3 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2019 ; 2019 ; Planta Medica International Open Volume 4 ; 4 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Planta Medica International Open Volume 5 ; 5 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Planta Medica International Open Volume 6 ; 6 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Planta Medica International Open Volume 6 ; 6 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Planta Medica International Open Volume 7 ; 7 ; >
 
   }
@@ -4968,7 +4968,7 @@
     param[journal_id] = 10.1055/s-00000059
     comment[years] = 1999-current
 
-   au < crawling ; exists ; 1999 ; 1999 ; Pneumologie Volume 53 ; 53 ; >
+   au < frozen ; exists ; 1999 ; 1999 ; Pneumologie Volume 53 ; 53 ; >
    au < finished ; crawling ; 2000 ; 2000 ; Pneumologie Volume 54 ; 54 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2001 ; 2001 ; Pneumologie Volume 55 ; 55 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2002 ; 2002 ; Pneumologie Volume 56 ; 56 ; reingest2.clockss.org:8085 >
@@ -4990,7 +4990,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Pneumologie Volume 72 ; 72 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2019 ; 2019 ; Pneumologie Volume 73 ; 73 ; reingest1.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Pneumologie Volume 74 ; 74 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Pneumologie Volume 75 ; 75 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Pneumologie Volume 75 ; 75 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Pneumologie Volume 76 ; 76 ; >
 
   }
@@ -5027,7 +5027,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 68 ; 68 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2019 ; 2019 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 69 ; 69 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 70 ; 70 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 71 ; 71 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 71 ; 71 ; >
    au < crawling ; exists ; 2022 ; 2022 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 72 ; 72 ; >
 
   }
@@ -5052,7 +5052,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; PSYCH up2date Volume 12 ; 12 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; 2019 ; PSYCH up2date Volume 13 ; 13 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; PSYCH up2date Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; PSYCH up2date Volume 15 ; 15 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; PSYCH up2date Volume 15 ; 15 ; >
     au < crawling ; exists ; 2022 ; 2022 ; PSYCH up2date Volume 16 ; 16 ; >
 
   }
@@ -5088,7 +5088,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Psych Pflege Heute Volume 24 ; 24 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2019 ; 2019 ; Psych Pflege Heute Volume 25 ; 25 ; reingest1.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Psych Pflege Heute Volume 26 ; 26 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Psych Pflege Heute Volume 27 ; 27 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Psych Pflege Heute Volume 27 ; 27 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Psych Pflege Heute Volume 28 ; 28 ; >
 
   }
@@ -5145,7 +5145,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Psychiatrische Praxis Volume 45 ; 45 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2019 ; 2019 ; Psychiatrische Praxis Volume 46 ; 46 ; reingest2.clockss.org:8085 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Psychiatrische Praxis Volume 47 ; 47 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Psychiatrische Praxis Volume 48 ; 48 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Psychiatrische Praxis Volume 48 ; 48 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Psychiatrische Praxis Volume 49 ; 49 ; >
 
   }
@@ -5217,7 +5217,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Radiologie up2date Volume 18 ; 18 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2019 ; 2019 ; Radiologie up2date Volume 19 ; 19 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Radiologie up2date Volume 20 ; 20 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Radiologie up2date Volume 21 ; 21 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Radiologie up2date Volume 21 ; 21 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Radiologie up2date Volume 22 ; 22 ; >
 
   }
@@ -5246,7 +5246,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Radiopraxis Volume 11 ; 11 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2019 ; 2019 ; Radiopraxis Volume 12 ; 12 ; reingest1.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Radiopraxis Volume 13 ; 13 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Radiopraxis Volume 14 ; 14 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Radiopraxis Volume 14 ; 14 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Radiopraxis Volume 15 ; 15 ; >
 
   }
@@ -5283,7 +5283,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Rehabilitation Die Volume 57 ; 57 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2019 ; 2019 ; Rehabilitation Die Volume 58 ; 58 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Rehabilitation Die Volume 59 ; 59 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Rehabilitation Die Volume 60 ; 60 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Rehabilitation Die Volume 60 ; 60 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Rehabilitation Die Volume 61 ; 61 ; >
 
   }
@@ -5308,7 +5308,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; retten! Volume 7 ; 7 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2019 ; 2019 ; retten! Volume 8 ; 8 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; retten! Volume 9 ; 9 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; retten! Volume 10 ; 10 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; retten! Volume 10 ; 10 ; >
    au < crawling ; exists ; 2022 ; 2022 ; retten! Volume 11 ; 11 ; >
 
   }
@@ -5331,7 +5331,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 40 ; 40 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2019 ; 2019 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 41 ; 41 ; reingest1.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 42 ; 42 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 43 ; 43 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 43 ; 43 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 44 ; 44 ; >
 
   }
@@ -5350,7 +5350,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Revista Chilena de Ortopedia y Traumatología Volume 2 ; 2 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2019 ; 2019 ; Revista Chilena de Ortopedia y Traumatología Volume 3 ; 3 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Revista Chilena de Ortopedia y Traumatología Volume 4 ; 4 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Revista Chilena de Ortopedia y Traumatología Volume 5 ; 5 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Revista Chilena de Ortopedia y Traumatología Volume 5 ; 5 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Revista Chilena de Ortopedia y Traumatología Volume 6 ; 6 ; >
 
   }
@@ -5398,15 +5398,15 @@
     au < manifest ; exists ; 1977 ; 1977 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 149 ; 149 ; >
     au < manifest ; exists ; 1978 ; 1978 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 150 ; 150 ; >
     au < manifest ; exists ; 1979 ; 1979 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 151 ; 151 ; >
-    au < crawling ; exists ; 1980 ; 1980 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 152 ; 152 ; >
-    au < crawling ; exists ; 1981 ; 1981 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 153 ; 153 ; >
-    au < crawling ; exists ; 1982 ; 1982 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 154 ; 154 ; >
-    au < crawling ; exists ; 1983 ; 1983 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 155 ; 155 ; >
-    au < crawling ; exists ; 1984 ; 1984 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 156 ; 156 ; >
-    au < crawling ; exists ; 1985 ; 1985 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 157 ; 157 ; >
-    au < crawling ; exists ; 1986 ; 1986 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 158 ; 158 ; >
-    au < crawling ; exists ; 1987 ; 1987 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 159 ; 159 ; >
-    au < crawling ; exists ; 1988 ; 1988 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 160 ; 160 ; >
+    au < frozen ; exists ; 1980 ; 1980 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 152 ; 152 ; >
+    au < frozen ; exists ; 1981 ; 1981 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 153 ; 153 ; >
+    au < frozen ; exists ; 1982 ; 1982 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 154 ; 154 ; >
+    au < frozen ; exists ; 1983 ; 1983 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 155 ; 155 ; >
+    au < frozen ; exists ; 1984 ; 1984 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 156 ; 156 ; >
+    au < frozen ; exists ; 1985 ; 1985 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 157 ; 157 ; >
+    au < frozen ; exists ; 1986 ; 1986 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 158 ; 158 ; >
+    au < frozen ; exists ; 1987 ; 1987 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 159 ; 159 ; >
+    au < frozen ; exists ; 1988 ; 1988 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 160 ; 160 ; >
     au < crawling ; exists ; 1989 ; 1989 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 161 ; 161 ; >
     au < finished ; crawling ; 1990 ; 1990 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 162 ; 162 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1991 ; 1991 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 163 ; 163 ; reingest2.clockss.org:8085 >
@@ -5439,7 +5439,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 190 ; 190 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 191 ; 191 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 192 ; 192 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 193 ; 193 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 193 ; 193 ; >
     au < crawling ; exists ; 2022 ; 2022 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 194 ; 194 ; >
 
   }
@@ -5456,13 +5456,13 @@
     param[journal_id] = 10.1055/s-00000067
     comment[years] = 1983-current
 
-   au < crawling ; exists ; 1983 ; 1983 ; Seminars in Hearing Volume 4 ; 4 ; >
-   au < crawling ; exists ; 1984 ; 1984 ; Seminars in Hearing Volume 5 ; 5 ; >
-   au < crawling ; exists ; 1985 ; 1985 ; Seminars in Hearing Volume 6 ; 6 ; >
-   au < crawling ; exists ; 1986 ; 1986 ; Seminars in Hearing Volume 7 ; 7 ; >
-   au < crawling ; exists ; 1987 ; 1987 ; Seminars in Hearing Volume 8 ; 8 ; >
-   au < crawling ; exists ; 1988 ; 1988 ; Seminars in Hearing Volume 9 ; 9 ; >
-   au < crawling ; exists ; 1989 ; 1989 ; Seminars in Hearing Volume 10 ; 10 ; >
+   au < frozen ; exists ; 1983 ; 1983 ; Seminars in Hearing Volume 4 ; 4 ; >
+   au < frozen ; exists ; 1984 ; 1984 ; Seminars in Hearing Volume 5 ; 5 ; >
+   au < frozen ; exists ; 1985 ; 1985 ; Seminars in Hearing Volume 6 ; 6 ; >
+   au < frozen ; exists ; 1986 ; 1986 ; Seminars in Hearing Volume 7 ; 7 ; >
+   au < frozen ; exists ; 1987 ; 1987 ; Seminars in Hearing Volume 8 ; 8 ; >
+   au < frozen ; exists ; 1988 ; 1988 ; Seminars in Hearing Volume 9 ; 9 ; >
+   au < frozen ; exists ; 1989 ; 1989 ; Seminars in Hearing Volume 10 ; 10 ; >
    au < finished ; crawling ; 1990 ; 1990 ; Seminars in Hearing Volume 11 ; 11 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 1991 ; 1991 ; Seminars in Hearing Volume 12 ; 12 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 1992 ; 1992 ; Seminars in Hearing Volume 13 ; 13 ; reingest5.clockss.org:8082 >
@@ -5494,7 +5494,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Seminars in Hearing Volume 39 ; 39 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2019 ; 2019 ; Seminars in Hearing Volume 40 ; 40 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Seminars in Hearing Volume 41 ; 41 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Seminars in Hearing Volume 42 ; 42 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Seminars in Hearing Volume 42 ; 42 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Seminars in Hearing Volume 43 ; 43 ; >
 
   }
@@ -5511,12 +5511,12 @@
     param[journal_id] = 10.1055/s-00000068
     comment[years] = 1984-current
 
-   au < crawling ; exists ; 1984 ; 1984 ; Seminars in Interventional Radiology Volume 1 ; 1 ; >
-   au < crawling ; exists ; 1985 ; 1985 ; Seminars in Interventional Radiology Volume 2 ; 2 ; >
-   au < crawling ; exists ; 1986 ; 1986 ; Seminars in Interventional Radiology Volume 3 ; 3 ; >
-   au < crawling ; exists ; 1987 ; 1987 ; Seminars in Interventional Radiology Volume 4 ; 4 ; >
-   au < crawling ; exists ; 1988 ; 1988 ; Seminars in Interventional Radiology Volume 5 ; 5 ; >
-   au < crawling ; exists ; 1989 ; 1989 ; Seminars in Interventional Radiology Volume 6 ; 6 ; >
+   au < frozen ; exists ; 1984 ; 1984 ; Seminars in Interventional Radiology Volume 1 ; 1 ; >
+   au < frozen ; exists ; 1985 ; 1985 ; Seminars in Interventional Radiology Volume 2 ; 2 ; >
+   au < frozen ; exists ; 1986 ; 1986 ; Seminars in Interventional Radiology Volume 3 ; 3 ; >
+   au < frozen ; exists ; 1987 ; 1987 ; Seminars in Interventional Radiology Volume 4 ; 4 ; >
+   au < frozen ; exists ; 1988 ; 1988 ; Seminars in Interventional Radiology Volume 5 ; 5 ; >
+   au < frozen ; exists ; 1989 ; 1989 ; Seminars in Interventional Radiology Volume 6 ; 6 ; >
    au < finished ; crawling ; 1990 ; 1990 ; Seminars in Interventional Radiology Volume 7 ; 7 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 1991 ; 1991 ; Seminars in Interventional Radiology Volume 8 ; 8 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 1992 ; 1992 ; Seminars in Interventional Radiology Volume 9 ; 9 ; reingest3.clockss.org:8083 >
@@ -5548,7 +5548,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Seminars in Interventional Radiology Volume 35 ; 35 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2019 ; 2019 ; Seminars in Interventional Radiology Volume 36 ; 36 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Seminars in Interventional Radiology Volume 37 ; 37 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Seminars in Interventional Radiology Volume 38 ; 38 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Seminars in Interventional Radiology Volume 38 ; 38 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Seminars in Interventional Radiology Volume 39 ; 39 ; >
 
   }
@@ -5565,15 +5565,15 @@
     param[journal_id] = 10.1055/s-00000069
     comment[years] = 1981-current
 
-   au < crawling ; exists ; 1981 ; 1981 ; Seminars in Liver Disease Volume 1 ; 1 ; >
-   au < crawling ; exists ; 1982 ; 1982 ; Seminars in Liver Disease Volume 2 ; 2 ; >
-   au < crawling ; exists ; 1983 ; 1983 ; Seminars in Liver Disease Volume 3 ; 3 ; >
-   au < crawling ; exists ; 1984 ; 1984 ; Seminars in Liver Disease Volume 4 ; 4 ; >
-   au < crawling ; exists ; 1985 ; 1985 ; Seminars in Liver Disease Volume 5 ; 5 ; >
-   au < crawling ; exists ; 1986 ; 1986 ; Seminars in Liver Disease Volume 6 ; 6 ; >
-   au < crawling ; exists ; 1987 ; 1987 ; Seminars in Liver Disease Volume 7 ; 7 ; >
-   au < crawling ; exists ; 1988 ; 1988 ; Seminars in Liver Disease Volume 8 ; 8 ; >
-   au < crawling ; exists ; 1989 ; 1989 ; Seminars in Liver Disease Volume 9 ; 9 ; >
+   au < frozen ; exists ; 1981 ; 1981 ; Seminars in Liver Disease Volume 1 ; 1 ; >
+   au < frozen ; exists ; 1982 ; 1982 ; Seminars in Liver Disease Volume 2 ; 2 ; >
+   au < frozen ; exists ; 1983 ; 1983 ; Seminars in Liver Disease Volume 3 ; 3 ; >
+   au < frozen ; exists ; 1984 ; 1984 ; Seminars in Liver Disease Volume 4 ; 4 ; >
+   au < frozen ; exists ; 1985 ; 1985 ; Seminars in Liver Disease Volume 5 ; 5 ; >
+   au < frozen ; exists ; 1986 ; 1986 ; Seminars in Liver Disease Volume 6 ; 6 ; >
+   au < frozen ; exists ; 1987 ; 1987 ; Seminars in Liver Disease Volume 7 ; 7 ; >
+   au < frozen ; exists ; 1988 ; 1988 ; Seminars in Liver Disease Volume 8 ; 8 ; >
+   au < frozen ; exists ; 1989 ; 1989 ; Seminars in Liver Disease Volume 9 ; 9 ; >
    au < finished ; crawling ; 1990 ; 1990 ; Seminars in Liver Disease Volume 10 ; 10 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 1991 ; 1991 ; Seminars in Liver Disease Volume 11 ; 11 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 1992 ; 1992 ; Seminars in Liver Disease Volume 12 ; 12 ; reingest1.clockss.org:8082 >
@@ -5605,7 +5605,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Seminars in Liver Disease Volume 38 ; 38 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2019 ; 2019 ; Seminars in Liver Disease Volume 39 ; 39 ; reingest1.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Seminars in Liver Disease Volume 40 ; 40 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Seminars in Liver Disease Volume 41 ; 41 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Seminars in Liver Disease Volume 41 ; 41 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Seminars in Liver Disease Volume 42 ; 42 ; >
 
   }
@@ -5622,9 +5622,9 @@
     param[journal_id] = 10.1055/s-00000070
     comment[years] = 1997-current
 
-   au < crawling ; exists ; 1997 ; 1997 ; Seminars in Musculoskeletal Radiology Volume 1 ; 1 ; >
-   au < crawling ; exists ; 1998 ; 1998 ; Seminars in Musculoskeletal Radiology Volume 2 ; 2 ; >
-   au < crawling ; exists ; 1999 ; 1999 ; Seminars in Musculoskeletal Radiology Volume 3 ; 3 ; >
+   au < frozen ; exists ; 1997 ; 1997 ; Seminars in Musculoskeletal Radiology Volume 1 ; 1 ; >
+   au < frozen ; exists ; 1998 ; 1998 ; Seminars in Musculoskeletal Radiology Volume 2 ; 2 ; >
+   au < frozen ; exists ; 1999 ; 1999 ; Seminars in Musculoskeletal Radiology Volume 3 ; 3 ; >
    au < finished ; crawling ; 2000 ; 2000 ; Seminars in Musculoskeletal Radiology Volume 4 ; 4 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2001 ; 2001 ; Seminars in Musculoskeletal Radiology Volume 5 ; 5 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2002 ; 2002 ; Seminars in Musculoskeletal Radiology Volume 6 ; 6 ; reingest3.clockss.org:8083 >
@@ -5646,7 +5646,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Seminars in Musculoskeletal Radiology Volume 22 ; 22 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2019 ; 2019 ; Seminars in Musculoskeletal Radiology Volume 23 ; 23 ; reingest1.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Seminars in Musculoskeletal Radiology Volume 24 ; 24 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Seminars in Musculoskeletal Radiology Volume 25 ; 25 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Seminars in Musculoskeletal Radiology Volume 25 ; 25 ; >
    au < testing ; exists ; 2022 ; 2022 ; Seminars in Musculoskeletal Radiology Volume 26 ; 26 ; >
 
   }
@@ -5663,15 +5663,15 @@
     param[journal_id] = 10.1055/s-00000071
     comment[years] = 1981-current
 
-   au < crawling ; exists ; 1981 ; 1981 ; Seminars in Neurology Volume 1 ; 1 ; >
-   au < crawling ; exists ; 1982 ; 1982 ; Seminars in Neurology Volume 2 ; 2 ; >
-   au < crawling ; exists ; 1983 ; 1983 ; Seminars in Neurology Volume 3 ; 3 ; >
-   au < crawling ; exists ; 1984 ; 1984 ; Seminars in Neurology Volume 4 ; 4 ; >
-   au < crawling ; exists ; 1985 ; 1985 ; Seminars in Neurology Volume 5 ; 5 ; >
-   au < crawling ; exists ; 1986 ; 1986 ; Seminars in Neurology Volume 6 ; 6 ; >
-   au < crawling ; exists ; 1987 ; 1987 ; Seminars in Neurology Volume 7 ; 7 ; >
-   au < crawling ; exists ; 1988 ; 1988 ; Seminars in Neurology Volume 8 ; 8 ; >
-   au < crawling ; exists ; 1989 ; 1989 ; Seminars in Neurology Volume 9 ; 9 ; >
+   au < frozen ; exists ; 1981 ; 1981 ; Seminars in Neurology Volume 1 ; 1 ; >
+   au < frozen ; exists ; 1982 ; 1982 ; Seminars in Neurology Volume 2 ; 2 ; >
+   au < frozen ; exists ; 1983 ; 1983 ; Seminars in Neurology Volume 3 ; 3 ; >
+   au < frozen ; exists ; 1984 ; 1984 ; Seminars in Neurology Volume 4 ; 4 ; >
+   au < frozen ; exists ; 1985 ; 1985 ; Seminars in Neurology Volume 5 ; 5 ; >
+   au < frozen ; exists ; 1986 ; 1986 ; Seminars in Neurology Volume 6 ; 6 ; >
+   au < frozen ; exists ; 1987 ; 1987 ; Seminars in Neurology Volume 7 ; 7 ; >
+   au < frozen ; exists ; 1988 ; 1988 ; Seminars in Neurology Volume 8 ; 8 ; >
+   au < frozen ; exists ; 1989 ; 1989 ; Seminars in Neurology Volume 9 ; 9 ; >
    au < finished ; crawling ; 1990 ; 1990 ; Seminars in Neurology Volume 10 ; 10 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 1991 ; 1991 ; Seminars in Neurology Volume 11 ; 11 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 1992 ; 1992 ; Seminars in Neurology Volume 12 ; 12 ; reingest5.clockss.org:8082 >
@@ -5703,7 +5703,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Seminars in Neurology Volume 38 ; 38 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2019 ; 2019 ; Seminars in Neurology Volume 39 ; 39 ; reingest2.clockss.org:8085 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Seminars in Neurology Volume 40 ; 40 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Seminars in Neurology Volume 41 ; 41 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Seminars in Neurology Volume 41 ; 41 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Seminars in Neurology Volume 42 ; 42 ; >
 
   }
@@ -5759,7 +5759,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Seminars in Plastic Surgery Volume 32 ; 32 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2019 ; 2019 ; Seminars in Plastic Surgery Volume 33 ; 33 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Seminars in Plastic Surgery Volume 34 ; 34 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Seminars in Plastic Surgery Volume 35 ; 35 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Seminars in Plastic Surgery Volume 35 ; 35 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Seminars in Plastic Surgery Volume 36 ; 36 ; >
 
   }
@@ -5828,7 +5828,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Seminars in Reproductive Medicine Volume 36 ; 36 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2019 ; 2019 ; Seminars in Reproductive Medicine Volume 37 ; 37 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2020 ; 2020 ; Seminars in Reproductive Medicine Volume 38 ; 38 ; reingest1.clockss.org:8082 >
-   au < crawling ; exists ; 2021 ; 2021 ; Seminars in Reproductive Medicine Volume 39 ; 39 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Seminars in Reproductive Medicine Volume 39 ; 39 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Seminars in Reproductive Medicine Volume 40 ; 40 ; >
 
   }
@@ -5845,12 +5845,12 @@
     param[journal_id] = 10.1055/s-00000075
     comment[years] = 1994-current
 
-   au < crawling ; exists ; 1994 ; 1994 ; Seminars in Respiratory and Critical Care Medicine Volume 15 ; 15 ; >
-   au < crawling ; exists ; 1995 ; 1995 ; Seminars in Respiratory and Critical Care Medicine Volume 16 ; 16 ; >
-   au < crawling ; exists ; 1996 ; 1996 ; Seminars in Respiratory and Critical Care Medicine Volume 17 ; 17 ; >
-   au < crawling ; exists ; 1997 ; 1997 ; Seminars in Respiratory and Critical Care Medicine Volume 18 ; 18 ; >
-   au < crawling ; exists ; 1998 ; 1998 ; Seminars in Respiratory and Critical Care Medicine Volume 19 ; 19 ; >
-   au < crawling ; exists ; 1999 ; 1999 ; Seminars in Respiratory and Critical Care Medicine Volume 20 ; 20 ; >
+   au < frozen ; exists ; 1994 ; 1994 ; Seminars in Respiratory and Critical Care Medicine Volume 15 ; 15 ; >
+   au < frozen ; exists ; 1995 ; 1995 ; Seminars in Respiratory and Critical Care Medicine Volume 16 ; 16 ; >
+   au < frozen ; exists ; 1996 ; 1996 ; Seminars in Respiratory and Critical Care Medicine Volume 17 ; 17 ; >
+   au < frozen ; exists ; 1997 ; 1997 ; Seminars in Respiratory and Critical Care Medicine Volume 18 ; 18 ; >
+   au < frozen ; exists ; 1998 ; 1998 ; Seminars in Respiratory and Critical Care Medicine Volume 19 ; 19 ; >
+   au < frozen ; exists ; 1999 ; 1999 ; Seminars in Respiratory and Critical Care Medicine Volume 20 ; 20 ; >
    au < finished ; crawling ; 2000 ; 2000 ; Seminars in Respiratory and Critical Care Medicine Volume 21 ; 21 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2001 ; 2001 ; Seminars in Respiratory and Critical Care Medicine Volume 22 ; 22 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2002 ; 2002 ; Seminars in Respiratory and Critical Care Medicine Volume 23 ; 23 ; reingest4.clockss.org:8082 >
@@ -5872,7 +5872,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Seminars in Respiratory and Critical Care Medicine Volume 39 ; 39 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2019 ; 2019 ; Seminars in Respiratory and Critical Care Medicine Volume 40 ; 40 ; reingest1.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Seminars in Respiratory and Critical Care Medicine Volume 41 ; 41 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Seminars in Respiratory and Critical Care Medicine Volume 42 ; 42 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Seminars in Respiratory and Critical Care Medicine Volume 42 ; 42 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Seminars in Respiratory and Critical Care Medicine Volume 43 ; 43 ; >
 
   }
@@ -5889,12 +5889,12 @@
     param[journal_id] = 10.1055/s-00000076
     comment[years] = 1984-current
 
-    au < crawling ; exists ; 1984 ; 1984 ; Seminars in Speech and Language Volume 5 ; 5 ; >
-    au < crawling ; exists ; 1985 ; 1985 ; Seminars in Speech and Language Volume 6 ; 6 ; >
-    au < crawling ; exists ; 1986 ; 1986 ; Seminars in Speech and Language Volume 7 ; 7 ; >
-    au < crawling ; exists ; 1987 ; 1987 ; Seminars in Speech and Language Volume 8 ; 8 ; >
-    au < crawling ; exists ; 1988 ; 1988 ; Seminars in Speech and Language Volume 9 ; 9 ; >
-    au < crawling ; exists ; 1989 ; 1989 ; Seminars in Speech and Language Volume 10 ; 10 ; >
+    au < frozen ; exists ; 1984 ; 1984 ; Seminars in Speech and Language Volume 5 ; 5 ; >
+    au < frozen ; exists ; 1985 ; 1985 ; Seminars in Speech and Language Volume 6 ; 6 ; >
+    au < frozen ; exists ; 1986 ; 1986 ; Seminars in Speech and Language Volume 7 ; 7 ; >
+    au < frozen ; exists ; 1987 ; 1987 ; Seminars in Speech and Language Volume 8 ; 8 ; >
+    au < frozen ; exists ; 1988 ; 1988 ; Seminars in Speech and Language Volume 9 ; 9 ; >
+    au < frozen ; exists ; 1989 ; 1989 ; Seminars in Speech and Language Volume 10 ; 10 ; >
     au < finished ; crawling ; 1990 ; 1990 ; Seminars in Speech and Language Volume 11 ; 11 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1991 ; 1991 ; Seminars in Speech and Language Volume 12 ; 12 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 1992 ; 1992 ; Seminars in Speech and Language Volume 13 ; 13 ; reingest5.clockss.org:8082 >
@@ -5926,7 +5926,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Seminars in Speech and Language Volume 39 ; 39 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; Seminars in Speech and Language Volume 40 ; 40 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Seminars in Speech and Language Volume 41 ; 41 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Seminars in Speech and Language Volume 42 ; 42 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Seminars in Speech and Language Volume 42 ; 42 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Seminars in Speech and Language Volume 43 ; 43 ; >
 
   }
@@ -5949,16 +5949,16 @@
     au < manifest ; exists ; 1977 ; 1977 ; Seminars in Thrombosis and Hemostasis Volume 3 ; 3 ; >
     au < manifest ; exists ; 1978 ; 1978 ; Seminars in Thrombosis and Hemostasis Volume 4 ; 4 ; >
     au < manifest ; exists ; 1979 ; 1979 ; Seminars in Thrombosis and Hemostasis Volume 5 ; 5 ; >
-    au < crawling ; exists ; 1980 ; 1980 ; Seminars in Thrombosis and Hemostasis Volume 6 ; 6 ; >
-    au < crawling ; exists ; 1981 ; 1981 ; Seminars in Thrombosis and Hemostasis Volume 7 ; 7 ; >
-    au < crawling ; exists ; 1982 ; 1982 ; Seminars in Thrombosis and Hemostasis Volume 8 ; 8 ; >
-    au < crawling ; exists ; 1983 ; 1983 ; Seminars in Thrombosis and Hemostasis Volume 9 ; 9 ; >
-    au < crawling ; exists ; 1984 ; 1984 ; Seminars in Thrombosis and Hemostasis Volume 10 ; 10 ; >
-    au < crawling ; exists ; 1985 ; 1985 ; Seminars in Thrombosis and Hemostasis Volume 11 ; 11 ; >
-    au < crawling ; exists ; 1986 ; 1986 ; Seminars in Thrombosis and Hemostasis Volume 12 ; 12 ; >
-    au < crawling ; exists ; 1987 ; 1987 ; Seminars in Thrombosis and Hemostasis Volume 13 ; 13 ; >
-    au < crawling ; exists ; 1988 ; 1988 ; Seminars in Thrombosis and Hemostasis Volume 14 ; 14 ; >
-    au < crawling ; exists ; 1989 ; 1989 ; Seminars in Thrombosis and Hemostasis Volume 15 ; 15 ; >
+    au < frozen ; exists ; 1980 ; 1980 ; Seminars in Thrombosis and Hemostasis Volume 6 ; 6 ; >
+    au < frozen ; exists ; 1981 ; 1981 ; Seminars in Thrombosis and Hemostasis Volume 7 ; 7 ; >
+    au < frozen ; exists ; 1982 ; 1982 ; Seminars in Thrombosis and Hemostasis Volume 8 ; 8 ; >
+    au < frozen ; exists ; 1983 ; 1983 ; Seminars in Thrombosis and Hemostasis Volume 9 ; 9 ; >
+    au < frozen ; exists ; 1984 ; 1984 ; Seminars in Thrombosis and Hemostasis Volume 10 ; 10 ; >
+    au < frozen ; exists ; 1985 ; 1985 ; Seminars in Thrombosis and Hemostasis Volume 11 ; 11 ; >
+    au < frozen ; exists ; 1986 ; 1986 ; Seminars in Thrombosis and Hemostasis Volume 12 ; 12 ; >
+    au < frozen ; exists ; 1987 ; 1987 ; Seminars in Thrombosis and Hemostasis Volume 13 ; 13 ; >
+    au < frozen ; exists ; 1988 ; 1988 ; Seminars in Thrombosis and Hemostasis Volume 14 ; 14 ; >
+    au < frozen ; exists ; 1989 ; 1989 ; Seminars in Thrombosis and Hemostasis Volume 15 ; 15 ; >
     au < finished ; crawling ; 1990 ; 1990 ; Seminars in Thrombosis and Hemostasis Volume 16 ; 16 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1991 ; 1991 ; Seminars in Thrombosis and Hemostasis Volume 17 ; 17 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1992 ; 1992 ; Seminars in Thrombosis and Hemostasis Volume 18 ; 18 ; reingest4.clockss.org:8082 >
@@ -5990,7 +5990,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Seminars in Thrombosis and Hemostasis Volume 44 ; 44 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; 2019 ; Seminars in Thrombosis and Hemostasis Volume 45 ; 45 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Seminars in Thrombosis and Hemostasis Volume 46 ; 46 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Seminars in Thrombosis and Hemostasis Volume 47 ; 47 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Seminars in Thrombosis and Hemostasis Volume 47 ; 47 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Seminars in Thrombosis and Hemostasis Volume 48 ; 48 ; >
 
   }
@@ -6044,7 +6044,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 15 ; 15 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; 2019 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 16 ; 16 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 18 ; 18 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 18 ; 18 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 19 ; 19 ; >
 
   }
@@ -6104,7 +6104,7 @@
     param[journal_id] = 10.1055/s-00000080
     comment[years] = 1999-2004
 
-    au < crawling ; exists ; 1999 ; 1999 ; Sleep and Breathing Volume 3 ; 3 ; >
+    au < frozen ; exists ; 1999 ; 1999 ; Sleep and Breathing Volume 3 ; 3 ; >
     au < finished ; crawling ; 2000 ; 2000 ; Sleep and Breathing Volume 4 ; 4 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2001 ; 2001 ; Sleep and Breathing Volume 5 ; 5 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2002 ; 2002 ; Sleep and Breathing Volume 6 ; 6 ; reingest4.clockss.org:8082 >
@@ -6133,7 +6133,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Sportphysio Volume 6 ; 6 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; Sportphysio Volume 7 ; 7 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Sportphysio Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Sportphysio Volume 9 ; 9 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Sportphysio Volume 9 ; 9 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Sportphysio Volume 10 ; 10 ; >
 
   }
@@ -6153,7 +6153,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Sports Medicine International Open Volume 2 ; 2 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; Sports Medicine International Open Volume 3 ; 3 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Sports Medicine International Open Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Sports Medicine International Open Volume 5 ; 5 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Sports Medicine International Open Volume 5 ; 5 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Sports Medicine International Open Volume 6 ; 6 ; >
 
   }
@@ -6170,9 +6170,9 @@
     param[journal_id] = 10.1055/s-00000081
     comment[years] = 1987-current
 
-   au < crawling ; exists ; 1987 ; 1987 ; Sportverletzung - Sportschaden Volume 1 ; 1 ; >
-   au < crawling ; exists ; 1988 ; 1988 ; Sportverletzung - Sportschaden Volume 2 ; 2 ; >
-   au < crawling ; exists ; 1989 ; 1989 ; Sportverletzung - Sportschaden Volume 3 ; 3 ; >
+   au < frozen ; exists ; 1987 ; 1987 ; Sportverletzung - Sportschaden Volume 1 ; 1 ; >
+   au < frozen ; exists ; 1988 ; 1988 ; Sportverletzung - Sportschaden Volume 2 ; 2 ; >
+   au < frozen ; exists ; 1989 ; 1989 ; Sportverletzung - Sportschaden Volume 3 ; 3 ; >
    au < finished ; crawling ; 1990 ; 1990 ; Sportverletzung - Sportschaden Volume 4 ; 4 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 1991 ; 1991 ; Sportverletzung - Sportschaden Volume 5 ; 5 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 1992 ; 1992 ; Sportverletzung - Sportschaden Volume 6 ; 6 ; reingest3.clockss.org:8083 >
@@ -6204,7 +6204,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Sportverletzung - Sportschaden Volume 32 ; 32 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2019 ; 2019 ; Sportverletzung - Sportschaden Volume 33 ; 33 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Sportverletzung - Sportschaden Volume 34 ; 34 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Sportverletzung - Sportschaden Volume 35 ; 35 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Sportverletzung - Sportschaden Volume 35 ; 35 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Sportverletzung - Sportschaden Volume 36 ; 36 ; >
 
    }
@@ -6242,7 +6242,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Sprache Stimme Gehör Volume 42 ; 42 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2019 ; 2019 ; Sprache Stimme Gehör Volume 43 ; 43 ; reingest1.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Sprache Stimme Gehör Volume 44 ; 44 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Sprache Stimme Gehör Volume 45 ; 45 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Sprache Stimme Gehör Volume 45 ; 45 ; >
    au < testing ; exists ; 2022 ; 2022 ; Sprache Stimme Gehör Volume 46 ; 46 ; >
 
   }
@@ -6280,7 +6280,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Suchttherapie Volume 19 ; 19 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2019 ; 2019 ; Suchttherapie Volume 20 ; 20 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Suchttherapie Volume 21 ; 21 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Suchttherapie Volume 22 ; 22 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Suchttherapie Volume 22 ; 22 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Suchttherapie Volume 23 ; 23 ; >
 
   }
@@ -6303,7 +6303,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; The Surgery Journal Volume 4 ; 4 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; The Surgery Journal Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; The Surgery Journal Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; The Surgery Journal Volume 7 ; 7 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; The Surgery Journal Volume 7 ; 7 ; >
     au < crawling ; exists ; 2022 ; 2022 ; The Surgery Journal Volume 8 ; 8 ; >
 
   }
@@ -6336,7 +6336,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; SYNFACTS Volume 14 ; 14 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2019 ; 2019 ; SYNFACTS Volume 15 ; 15 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; SYNFACTS Volume 16 ; 16 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; SYNFACTS Volume 17 ; 17 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; SYNFACTS Volume 17 ; 17 ; >
    au < crawling ; exists ; 2022 ; 2022 ; SYNFACTS Volume 18 ; 18 ; >
 
   }
@@ -6353,7 +6353,7 @@
     param[journal_id] = 10.1055/s-00000083
     comment[years] = 1989-current
 
-   au < crawling ; exists ; 1989 ; 1989 ; SYNLETT Volume 1 (1989) ; 1 ; >
+   au < frozen ; exists ; 1989 ; 1989 ; SYNLETT Volume 1 (1989) ; 1 ; >
    au < finished ; crawling ; 1990 ; 1990 ; SYNLETT Volume 1 (1990) ; 1 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 1991 ; 1991 ; SYNLETT Volume 2 ; 2 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 1992 ; 1992 ; SYNLETT Volume 3 ; 3 ; reingest3.clockss.org:8083 >
@@ -6385,7 +6385,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; SYNLETT Volume 29 ; 29 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2019 ; 2019 ; SYNLETT Volume 30 ; 30 ; >
    au < crawling ; exists ; 2020 ; 2020 ; SYNLETT Volume 31 ; 31 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; SYNLETT Volume 32 ; 32 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; SYNLETT Volume 32 ; 32 ; >
    au < crawling ; exists ; 2022 ; 2022 ; SYNLETT Volume 33 ; 33 ; >
 
   }
@@ -6405,7 +6405,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; SynOpen Volume 2 ; 2 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; SynOpen Volume 3 ; 3 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; SynOpen Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; SynOpen Volume 5 ; 5 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; SynOpen Volume 5 ; 5 ; >
     au < crawling ; exists ; 2022 ; 2022 ; SynOpen Volume 6 ; 6 ; >
 
   }
@@ -6422,7 +6422,7 @@
     param[journal_id] = 10.1055/s-00000084
     comment[years] = 1989-current
 
-   au < crawling ; exists ; 1989 ; 1989 ; SYNTHESIS Volume 21 ; 21 ; >
+   au < frozen ; exists ; 1989 ; 1989 ; SYNTHESIS Volume 21 ; 21 ; >
    au < finished ; crawling ; 1990 ; 1990 ; SYNTHESIS Volume 22 ; 22 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 1991 ; 1991 ; SYNTHESIS Volume 23 ; 23 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 1992 ; 1992 ; SYNTHESIS Volume 24 ; 24 ; reingest2.clockss.org:8085 >
@@ -6454,7 +6454,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; SYNTHESIS Volume 50 ; 50 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2019 ; 2019 ; SYNTHESIS Volume 51 ; 51 ; >
    au < crawling ; exists ; 2020 ; 2020 ; SYNTHESIS Volume 52 ; 52 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; SYNTHESIS Volume 53 ; 53 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; SYNTHESIS Volume 53 ; 53 ; >
    au < crawling ; exists ; 2022 ; 2022 ; SYNTHESIS Volume 54 ; 54 ; >
 
   }
@@ -6504,7 +6504,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; team-konkret Volume 14 ; 14 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2019 ; 2019 ; team-konkret Volume 15 ; 15 ; >
    au < deepCrawl ; exists ; 2020 ; 2020 ; team-konkret Volume 16 ; 16 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; team-konkret Volume 17 ; 17 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; team-konkret Volume 17 ; 17 ; >
    au < crawling ; exists ; 2022 ; 2022 ; team-konkret Volume 18 ; 18 ; >
 
   }
@@ -6522,16 +6522,16 @@
    comment[years] = 1979-current
 
     au < manifest ; exists ; 1979 ; 1979 ; The Thoracic and Cardiovascular Surgeon Volume 27 ; 27 ; >
-    au < crawling ; exists ; 1980 ; 1980 ; The Thoracic and Cardiovascular Surgeon Volume 28 ; 28 ; >
-    au < crawling ; exists ; 1981 ; 1981 ; The Thoracic and Cardiovascular Surgeon Volume 29 ; 29 ; >
-    au < crawling ; exists ; 1982 ; 1982 ; The Thoracic and Cardiovascular Surgeon Volume 30 ; 30 ; >
-    au < crawling ; exists ; 1983 ; 1983 ; The Thoracic and Cardiovascular Surgeon Volume 31 ; 31 ; >
-    au < crawling ; exists ; 1984 ; 1984 ; The Thoracic and Cardiovascular Surgeon Volume 32 ; 32 ; >
-    au < crawling ; exists ; 1985 ; 1985 ; The Thoracic and Cardiovascular Surgeon Volume 33 ; 33 ; >
-    au < crawling ; exists ; 1986 ; 1986 ; The Thoracic and Cardiovascular Surgeon Volume 34 ; 34 ; >
-    au < crawling ; exists ; 1987 ; 1987 ; The Thoracic and Cardiovascular Surgeon Volume 35 ; 35 ; >
-    au < crawling ; exists ; 1988 ; 1988 ; The Thoracic and Cardiovascular Surgeon Volume 36 ; 36 ; >
-    au < crawling ; exists ; 1989 ; 1989 ; The Thoracic and Cardiovascular Surgeon Volume 37 ; 37 ; >
+    au < frozen ; exists ; 1980 ; 1980 ; The Thoracic and Cardiovascular Surgeon Volume 28 ; 28 ; >
+    au < frozen ; exists ; 1981 ; 1981 ; The Thoracic and Cardiovascular Surgeon Volume 29 ; 29 ; >
+    au < frozen ; exists ; 1982 ; 1982 ; The Thoracic and Cardiovascular Surgeon Volume 30 ; 30 ; >
+    au < frozen ; exists ; 1983 ; 1983 ; The Thoracic and Cardiovascular Surgeon Volume 31 ; 31 ; >
+    au < frozen ; exists ; 1984 ; 1984 ; The Thoracic and Cardiovascular Surgeon Volume 32 ; 32 ; >
+    au < frozen ; exists ; 1985 ; 1985 ; The Thoracic and Cardiovascular Surgeon Volume 33 ; 33 ; >
+    au < frozen ; exists ; 1986 ; 1986 ; The Thoracic and Cardiovascular Surgeon Volume 34 ; 34 ; >
+    au < frozen ; exists ; 1987 ; 1987 ; The Thoracic and Cardiovascular Surgeon Volume 35 ; 35 ; >
+    au < frozen ; exists ; 1988 ; 1988 ; The Thoracic and Cardiovascular Surgeon Volume 36 ; 36 ; >
+    au < frozen ; exists ; 1989 ; 1989 ; The Thoracic and Cardiovascular Surgeon Volume 37 ; 37 ; >
     au < finished ; crawling ; 1990 ; 1990 ; The Thoracic and Cardiovascular Surgeon Volume 38 ; 38 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1991 ; 1991 ; The Thoracic and Cardiovascular Surgeon Volume 39 ; 39 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1992 ; 1992 ; The Thoracic and Cardiovascular Surgeon Volume 40 ; 40 ; reingest5.clockss.org:8082 >
@@ -6563,7 +6563,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; The Thoracic and Cardiovascular Surgeon Volume 66 ; 66 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The Thoracic and Cardiovascular Surgeon Volume 67 ; 67 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; The Thoracic and Cardiovascular Surgeon Volume 68 ; 68 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; The Thoracic and Cardiovascular Surgeon Volume 69 ; 69 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; The Thoracic and Cardiovascular Surgeon Volume 69 ; 69 ; >
     au < crawling ; exists ; 2022 ; 2022 ; The Thoracic and Cardiovascular Surgeon Volume 70 ; 70 ; >
 
   }
@@ -6590,7 +6590,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; The Thoracic and Cardiovascular Surgeon Reports Volume 7 ; 7 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The Thoracic and Cardiovascular Surgeon Reports Volume 8 ; 8 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; The Thoracic and Cardiovascular Surgeon Reports Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; The Thoracic and Cardiovascular Surgeon Reports Volume 10 ; 10 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; The Thoracic and Cardiovascular Surgeon Reports Volume 10 ; 10 ; >
     au < crawling ; exists ; 2022 ; 2022 ; The Thoracic and Cardiovascular Surgeon Reports Volume 11 ; 11 ; >
 
   }
@@ -6635,7 +6635,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 8 ; 8 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 9 ; 9 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 11 ; 11 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 11 ; 11 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 12 ; 12 ; >
 
   }
@@ -6673,7 +6673,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; TumorDiagnostik & Therapie Volume 41 ; 41 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; TumorDiagnostik & Therapie Volume 42 ; 42 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; TumorDiagnostik & Therapie Volume 43 ; 43 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; TumorDiagnostik & Therapie Volume 44 ; 44 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; TumorDiagnostik & Therapie Volume 44 ; 44 ; >
     au < crawling ; exists ; 2022 ; 2022 ; TumorDiagnostik & Therapie Volume 45 ; 45 ; >
 
   }
@@ -6690,16 +6690,16 @@
     param[journal_id] = 10.1055/s-00000089
     comment[years] = 1980-current
 
-    au < crawling ; exists ; 1980 ; 1980 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 1 ; 1 ; >
-    au < crawling ; exists ; 1981 ; 1981 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 2 ; 2 ; >
-    au < crawling ; exists ; 1982 ; 1982 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 3 ; 3 ; >
-    au < crawling ; exists ; 1983 ; 1983 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 4 ; 4 ; >
-    au < crawling ; exists ; 1984 ; 1984 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 5 ; 5 ; >
-    au < crawling ; exists ; 1985 ; 1985 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 6 ; 6 ; >
-    au < crawling ; exists ; 1986 ; 1986 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 7 ; 7 ; >
-    au < crawling ; exists ; 1987 ; 1987 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 8 ; 8 ; >
-    au < crawling ; exists ; 1988 ; 1988 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 9 ; 9 ; >
-    au < crawling ; exists ; 1989 ; 1989 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 10 ; 10 ; >
+    au < frozen ; exists ; 1980 ; 1980 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 1 ; 1 ; >
+    au < frozen ; exists ; 1981 ; 1981 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 2 ; 2 ; >
+    au < frozen ; exists ; 1982 ; 1982 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 3 ; 3 ; >
+    au < frozen ; exists ; 1983 ; 1983 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 4 ; 4 ; >
+    au < frozen ; exists ; 1984 ; 1984 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 5 ; 5 ; >
+    au < frozen ; exists ; 1985 ; 1985 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 6 ; 6 ; >
+    au < frozen ; exists ; 1986 ; 1986 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 7 ; 7 ; >
+    au < frozen ; exists ; 1987 ; 1987 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 8 ; 8 ; >
+    au < frozen ; exists ; 1988 ; 1988 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 9 ; 9 ; >
+    au < frozen ; exists ; 1989 ; 1989 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 10 ; 10 ; >
     au < finished ; crawling ; 1990 ; 1990 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 11 ; 11 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1991 ; 1991 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 12 ; 12 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1992 ; 1992 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 13 ; 13 ; reingest3.clockss.org:8083 >
@@ -6731,7 +6731,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 39 ; 39 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 40 ; 40 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 41 ; 41 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 42 ; 42 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 42 ; 42 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 43 ; 43 ; >
 
   }
@@ -6753,7 +6753,7 @@
    au < finished ; crawling ; 2018 ; 2018 ; Ultrasound International Open Volume 4 ; 4 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2019 ; 2019 ; Ultrasound International Open Volume 5 ; 5 ; >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Ultrasound International Open Volume 6 ; 6 ; >
-   au < crawling ; exists ; 2021 ; 2021 ; Ultrasound International Open Volume 7 ; 7 ; >
+   au < deepCrawl ; exists ; 2021 ; 2021 ; Ultrasound International Open Volume 7 ; 7 ; >
    au < crawling ; exists ; 2022 ; 2022 ; Ultrasound International Open Volume 8 ; 8 ; >
 
   }
@@ -6806,7 +6806,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; veterinär spiegel Volume 28 ; 28 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; veterinär spiegel Volume 29 ; 29 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; veterinär spiegel Volume 30 ; 30 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; veterinär spiegel Volume 31 ; 31 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; veterinär spiegel Volume 31 ; 31 ; >
     au < crawling ; exists ; 2022 ; 2022 ; veterinär spiegel Volume 32 ; 32 ; >
 
   }
@@ -6875,7 +6875,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; VPT Magazin Volume 4 ; 4 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; VPT Magazin Volume 5 ; 5 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; VPT Magazin Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; VPT Magazin Volume 7 ; 7 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; VPT Magazin Volume 7 ; 7 ; >
     au < crawling ; exists ; 2022 ; 2022 ; VPT Magazin Volume 8 ; 8 ; >
 
   }
@@ -6924,7 +6924,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Zahnmedizin up2date Volume 12 ; 12 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Zahnmedizin up2date Volume 13 ; 13 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Zahnmedizin up2date Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Zahnmedizin up2date Volume 15 ; 15 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Zahnmedizin up2date Volume 15 ; 15 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Zahnmedizin up2date Volume 16 ; 16 ; >
 
   }
@@ -6955,7 +6955,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 32 ; 32 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 33 ; 33 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 34 ; 34 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 35 ; 35 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 35 ; 35 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 36 ; 36 ; >
 
   }
@@ -6993,7 +6993,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Zeitschrift für Gastroenterologie Volume 56 ; 56 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Zeitschrift für Gastroenterologie Volume 57 ; 57 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Zeitschrift für Gastroenterologie Volume 58 ; 58 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Zeitschrift für Gastroenterologie Volume 59 ; 59 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Zeitschrift für Gastroenterologie Volume 59 ; 59 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Zeitschrift für Gastroenterologie Volume 60 ; 60 ; >
 
   }
@@ -7031,7 +7031,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 222 ; 222 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 223 ; 223 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 224 ; 224 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 225 ; 225 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 225 ; 225 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 226 ; 226 ; >
 
   }
@@ -7072,14 +7072,14 @@
     au < manifest ; exists ; 1977 ; 1977 ; Zeitschrift für Klassische Homöopathie Volume 21 ; 21 ; >
     au < manifest ; exists ; 1978 ; 1978 ; Zeitschrift für Klassische Homöopathie Volume 22 ; 22 ; >
     au < manifest ; exists ; 1979 ; 1979 ; Zeitschrift für Klassische Homöopathie Volume 23 ; 23 ; >
-    au < crawling ; exists ; 1980 ; 1980 ; Zeitschrift für Klassische Homöopathie Volume 24 ; 24 ; >
-    au < crawling ; exists ; 1981 ; 1981 ; Zeitschrift für Klassische Homöopathie Volume 25 ; 25 ; >
-    au < crawling ; exists ; 1982 ; 1982 ; Zeitschrift für Klassische Homöopathie Volume 26 ; 26 ; >
-    au < crawling ; exists ; 1983 ; 1983 ; Zeitschrift für Klassische Homöopathie Volume 27 ; 27 ; >
-    au < crawling ; exists ; 1984 ; 1984 ; Zeitschrift für Klassische Homöopathie Volume 28 ; 28 ; >
-    au < crawling ; exists ; 1985 ; 1985 ; Zeitschrift für Klassische Homöopathie Volume 29 ; 29 ; >
-    au < crawling ; exists ; 1986 ; 1986 ; Zeitschrift für Klassische Homöopathie Volume 30 ; 30 ; >
-    au < crawling ; exists ; 1987 ; 1987 ; Zeitschrift für Klassische Homöopathie Volume 31 ; 31 ; >
+    au < frozen ; exists ; 1980 ; 1980 ; Zeitschrift für Klassische Homöopathie Volume 24 ; 24 ; >
+    au < frozen ; exists ; 1981 ; 1981 ; Zeitschrift für Klassische Homöopathie Volume 25 ; 25 ; >
+    au < frozen ; exists ; 1982 ; 1982 ; Zeitschrift für Klassische Homöopathie Volume 26 ; 26 ; >
+    au < frozen ; exists ; 1983 ; 1983 ; Zeitschrift für Klassische Homöopathie Volume 27 ; 27 ; >
+    au < frozen ; exists ; 1984 ; 1984 ; Zeitschrift für Klassische Homöopathie Volume 28 ; 28 ; >
+    au < frozen ; exists ; 1985 ; 1985 ; Zeitschrift für Klassische Homöopathie Volume 29 ; 29 ; >
+    au < frozen ; exists ; 1986 ; 1986 ; Zeitschrift für Klassische Homöopathie Volume 30 ; 30 ; >
+    au < frozen ; exists ; 1987 ; 1987 ; Zeitschrift für Klassische Homöopathie Volume 31 ; 31 ; >
     au < testing ; exists ; 1988 ; 1988 ; Zeitschrift für Klassische Homöopathie Volume 32 ; 32 ; >
     au < testing ; exists ; 1989 ; 1989 ; Zeitschrift für Klassische Homöopathie Volume 33 ; 33 ; >
     au < finished ; crawling ; 1990 ; 1990 ; Zeitschrift für Klassische Homöopathie Volume 34 ; 34 ; reingest3.clockss.org:8083 >
@@ -7138,7 +7138,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Zeitschrift für Komplementärmedizin Volume 10 ; 10 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Zeitschrift für Komplementärmedizin Volume 11 ; 11 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Zeitschrift für Komplementärmedizin Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Zeitschrift für Komplementärmedizin Volume 13 ; 13 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Zeitschrift für Komplementärmedizin Volume 13 ; 13 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Zeitschrift für Komplementärmedizin Volume 14 ; 14 ; >
 
   }
@@ -7169,7 +7169,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Zeitschrift für Orthomolekulare Medizin Volume 16 ; 16 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Zeitschrift für Orthomolekulare Medizin Volume 17 ; 17 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Zeitschrift für Orthomolekulare Medizin Volume 18 ; 18 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Zeitschrift für Orthomolekulare Medizin Volume 19 ; 19 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Zeitschrift für Orthomolekulare Medizin Volume 19 ; 19 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Zeitschrift für Orthomolekulare Medizin Volume 20 ; 20 ; >
 
   }
@@ -7200,7 +7200,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 156 ; 156 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 157 ; 157 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 158 ; 158 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 159 ; 159 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 159 ; 159 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 160 ; 160 ; >
 
   }
@@ -7220,14 +7220,14 @@
 
     au < testing ; exists ; 1980 ; 1980 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1980 ; 118 ; >
     au < testing ; exists ; 1981 ; 1981 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1981 ; 119 ; >
-    au < crawling ; exists ; 1982 ; 1982 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1982 ; 120 ; >
-    au < crawling ; exists ; 1983 ; 1983 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1983 ; 0 ; >
-    au < crawling ; exists ; 1984 ; 1984 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1984 ; 0 ; >
-    au < crawling ; exists ; 1985 ; 1985 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1985 ; 0 ; >
-    au < crawling ; exists ; 1986 ; 1986 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1986 ; 0 ; >
-    au < crawling ; exists ; 1987 ; 1987 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1987 ; 0 ; >
-    au < crawling ; exists ; 1988 ; 1988 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1988 ; 0 ; >
-    au < crawling ; exists ; 1989 ; 1989 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1989 ; 0 ; >
+    au < frozen ; exists ; 1982 ; 1982 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1982 ; 120 ; >
+    au < frozen ; exists ; 1983 ; 1983 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1983 ; 0 ; >
+    au < frozen ; exists ; 1984 ; 1984 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1984 ; 0 ; >
+    au < frozen ; exists ; 1985 ; 1985 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1985 ; 0 ; >
+    au < frozen ; exists ; 1986 ; 1986 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1986 ; 0 ; >
+    au < frozen ; exists ; 1987 ; 1987 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1987 ; 0 ; >
+    au < frozen ; exists ; 1988 ; 1988 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1988 ; 0 ; >
+    au < frozen ; exists ; 1989 ; 1989 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1989 ; 0 ; >
     au < finished ; crawling ; 1990 ; 1990 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1990 ; 0 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 1991 ; 1991 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1991 ; 0 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 1992 ; 1992 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1992 ; 0 ; reingest1.clockss.org:8082 >
@@ -7282,7 +7282,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Zeitschrift für Palliativmedizin Volume 19 ; 19 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Zeitschrift für Palliativmedizin Volume 20 ; 20 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Zeitschrift für Palliativmedizin Volume 21 ; 21 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Zeitschrift für Palliativmedizin Volume 22 ; 22 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Zeitschrift für Palliativmedizin Volume 22 ; 22 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Zeitschrift für Palliativmedizin Volume 23 ; 23 ; >
 
   }
@@ -7315,7 +7315,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Zeitschrift für Phytotherapie Volume 39 ; 39 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Zeitschrift für Phytotherapie Volume 40 ; 40 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Zeitschrift für Phytotherapie Volume 41 ; 41 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Zeitschrift für Phytotherapie Volume 42 ; 42 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Zeitschrift für Phytotherapie Volume 42 ; 42 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Zeitschrift für Phytotherapie Volume 43 ; 43 ; >
 
   }
@@ -7352,7 +7352,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Zeitschrift für Sexualforschung Volume 31 ; 31 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Zeitschrift für Sexualforschung Volume 32 ; 32 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Zeitschrift für Sexualforschung Volume 33 ; 33 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Zeitschrift für Sexualforschung Volume 34 ; 34 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Zeitschrift für Sexualforschung Volume 34 ; 34 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Zeitschrift für Sexualforschung Volume 35 ; 35 ; >
 
   }
@@ -7390,7 +7390,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Zeitschrift für Chirurgie Volume 143 ; 143 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Zeitschrift für Chirurgie Volume 144 ; 144 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Zeitschrift für Chirurgie Volume 145 ; 145 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Zeitschrift für Chirurgie Volume 146 ; 146 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Zeitschrift für Chirurgie Volume 146 ; 146 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Zeitschrift für Chirurgie Volume 147 ; 147 ; >
 
   }
@@ -7513,7 +7513,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; ZWR - Das Deutsche Zahnärzteblatt Volume 127 ; 127 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; ZWR - Das Deutsche Zahnärzteblatt Volume 128 ; 128 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; ZWR - Das Deutsche Zahnärzteblatt Volume 129 ; 129 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; ZWR - Das Deutsche Zahnärzteblatt Volume 130 ; 130 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; ZWR - Das Deutsche Zahnärzteblatt Volume 130 ; 130 ; >
     au < expected ; exists ; 2022 ; 2022 ; ZWR - Das Deutsche Zahnärzteblatt Volume 131 ; 131 ; >
 
   }
@@ -7533,7 +7533,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; ACI Open Volume 2 ; 2 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; ACI Open Volume 3 ; 3 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; ACI Open Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; ACI Open Volume 5 ; 5 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; ACI Open Volume 5 ; 5 ; >
     au < crawling ; exists ; 2022 ; 2022 ; ACI Open Volume 6 ; 6 ; >
 
   }
@@ -7564,7 +7564,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 12 ; 12 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 13 ; 13 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 15 ; 15 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 15 ; 15 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 16 ; 16 ; >
 
   }
@@ -7592,7 +7592,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Applied Clinical Informatics Volume 9 ; 9 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Applied Clinical Informatics Volume 10 ; 10 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Applied Clinical Informatics Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Applied Clinical Informatics Volume 12 ; 12 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Applied Clinical Informatics Volume 12 ; 12 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Applied Clinical Informatics Volume 13 ; 13 ; >
 
   }
@@ -7626,7 +7626,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Arthritis und Rheuma Volume 38 ; 38 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Arthritis und Rheuma Volume 39 ; 39 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Arthritis und Rheuma Volume 40 ; 40 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Arthritis und Rheuma Volume 41 ; 41 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Arthritis und Rheuma Volume 41 ; 41 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Arthritis und Rheuma Volume 42 ; 42 ; >
 
   }
@@ -7681,7 +7681,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Hämostaseologie Volume 38 ; 38 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Hämostaseologie Volume 39 ; 39 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Hämostaseologie Volume 40 ; 40 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Hämostaseologie Volume 41 ; 41 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Hämostaseologie Volume 41 ; 41 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Hämostaseologie Volume 42 ; 42 ; >
 
   }
@@ -7701,7 +7701,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 2 ; 2 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 3 ; 3 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 5 ; 5 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 5 ; 5 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 6 ; 6 ; >
 
   }
@@ -7721,7 +7721,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Journal of Cardiac Critical Care TSS Volume 2 ; 2 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; Journal of Cardiac Critical Care TSS Volume 3 ; 3 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Cardiac Critical Care TSS Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Journal of Cardiac Critical Care TSS Volume 5 ; 5 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Journal of Cardiac Critical Care TSS Volume 5 ; 5 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Journal of Cardiac Critical Care TSS Volume 6 ; 6 ; >
 
   }
@@ -7741,7 +7741,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Journal of Child Science Volume 8 ; 8 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Child Science Volume 9 ; 9 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Child Science Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Journal of Child Science Volume 11 ; 11 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Journal of Child Science Volume 11 ; 11 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Journal of Child Science Volume 12 ; 12 ; >
 
   }
@@ -7776,7 +7776,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Kinder- und Jugendmedizin Volume 18 ; 18 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Kinder- und Jugendmedizin Volume 19 ; 19 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Kinder- und Jugendmedizin Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Kinder- und Jugendmedizin Volume 21 ; 21 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Kinder- und Jugendmedizin Volume 21 ; 21 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Kinder- und Jugendmedizin Volume 22 ; 22 ; >
 
   }
@@ -7807,7 +7807,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Methods of Information in Medicine Volume 57 ; 57 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; 2019 ; Methods of Information in Medicine Volume 58 ; 58 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Methods of Information in Medicine Volume 59 ; 59 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Methods of Information in Medicine Volume 60 ; 60 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Methods of Information in Medicine Volume 60 ; 60 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Methods of Information in Medicine Volume 61 ; 61 ; >
 
   }
@@ -7829,7 +7829,7 @@
     au < finished ; crawling ; 2005 ; 2005 ; Nervenheilkunde Volume 24 ; 24 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2006 ; 2006 ; Nervenheilkunde Volume 25 ; 25 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2007 ; 2007 ; Nervenheilkunde Volume 26 ; 26 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2008 ; 2008 ; Nervenheilkunde Volume 27 ; 27 ; >
+    au < frozen ; exists ; 2008 ; 2008 ; Nervenheilkunde Volume 27 ; 27 ; >
     au < finished ; crawling ; 2009 ; 2009 ; Nervenheilkunde Volume 28 ; 28 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2010 ; 2010 ; Nervenheilkunde Volume 29 ; 29 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2011 ; 2011 ; Nervenheilkunde Volume 30 ; 30 ; reingest2.clockss.org:8085 >
@@ -7842,7 +7842,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Nervenheilkunde Volume 37 ; 37 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; 2019 ; Nervenheilkunde Volume 38 ; 38 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Nervenheilkunde Volume 39 ; 39 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Nervenheilkunde Volume 40 ; 40 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Nervenheilkunde Volume 40 ; 40 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Nervenheilkunde Volume 41 ; 41 ; >
 
   }
@@ -7859,15 +7859,15 @@
     param[journal_id] = 10.1055/s-00034924
     comment[years] = 1961-current
 
-    au < crawling ; exists ; 2000 ; 2000 ; Nuklearmedizin Volume 39 ; 39 ; >
-    au < crawling ; exists ; 2001 ; 2001 ; Nuklearmedizin Volume 40 ; 40 ; >
-    au < crawling ; exists ; 2002 ; 2002 ; Nuklearmedizin Volume 41 ; 41 ; >
-    au < crawling ; exists ; 2003 ; 2003 ; Nuklearmedizin Volume 42 ; 42 ; >
-    au < crawling ; exists ; 2004 ; 2004 ; Nuklearmedizin Volume 43 ; 43 ; >
-    au < crawling ; exists ; 2005 ; 2005 ; Nuklearmedizin Volume 44 ; 44 ; >
-    au < crawling ; exists ; 2006 ; 2006 ; Nuklearmedizin Volume 45 ; 45 ; >
+    au < frozen ; exists ; 2000 ; 2000 ; Nuklearmedizin Volume 39 ; 39 ; >
+    au < frozen ; exists ; 2001 ; 2001 ; Nuklearmedizin Volume 40 ; 40 ; >
+    au < frozen ; exists ; 2002 ; 2002 ; Nuklearmedizin Volume 41 ; 41 ; >
+    au < frozen ; exists ; 2003 ; 2003 ; Nuklearmedizin Volume 42 ; 42 ; >
+    au < frozen ; exists ; 2004 ; 2004 ; Nuklearmedizin Volume 43 ; 43 ; >
+    au < frozen ; exists ; 2005 ; 2005 ; Nuklearmedizin Volume 44 ; 44 ; >
+    au < frozen ; exists ; 2006 ; 2006 ; Nuklearmedizin Volume 45 ; 45 ; >
     au < finished ; crawling ; 2007 ; 2007 ; Nuklearmedizin Volume 46 ; 46 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2008 ; 2008 ; Nuklearmedizin Volume 47 ; 47 ; >
+    au < frozen ; exists ; 2008 ; 2008 ; Nuklearmedizin Volume 47 ; 47 ; >
     au < finished ; crawling ; 2009 ; 2009 ; Nuklearmedizin Volume 48 ; 48 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2010 ; 2010 ; Nuklearmedizin Volume 49 ; 49 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2011 ; 2011 ; Nuklearmedizin Volume 50 ; 50 ; reingest4.clockss.org:8082 >
@@ -7880,7 +7880,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Nuklearmedizin Volume 57 ; 57 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Nuklearmedizin Volume 58 ; 58 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Nuklearmedizin Volume 59 ; 59 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Nuklearmedizin Volume 60 ; 60 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Nuklearmedizin Volume 60 ; 60 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Nuklearmedizin Volume 61 ; 61 ; >
 
   }
@@ -7908,7 +7908,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Onkologische Welt Volume 9 ; 9 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Onkologische Welt Volume 10 ; 10 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Onkologische Welt Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Onkologische Welt Volume 12 ; 12 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Onkologische Welt Volume 12 ; 12 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Onkologische Welt Volume 13 ; 13 ; >
 
   }
@@ -7925,7 +7925,7 @@
     param[journal_id] = 10.1055/s-00034914
     comment[years] = 2008-current
 
-    au < crawling ; exists ; 2008 ; 2008 ; Osteologie Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2008 ; 2008 ; Osteologie Volume 17 ; 17 ; >
     au < finished ; crawling ; 2009 ; 2009 ; Osteologie Volume 18 ; 18 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2010 ; 2010 ; Osteologie Volume 19 ; 19 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2011 ; 2011 ; Osteologie Volume 20 ; 20 ; reingest3.clockss.org:8083 >
@@ -7938,7 +7938,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Osteologie Volume 27 ; 27 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Osteologie Volume 28 ; 28 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Osteologie Volume 29 ; 29 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Osteologie Volume 30 ; 30 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Osteologie Volume 30 ; 30 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Osteologie Volume 31 ; 31 ; >
 
   }
@@ -7971,7 +7971,7 @@
     param[journal_id] = 10.1055/s-00034913
     comment[years] = 1998-current
 
-    au < crawling ; exists ; 2008 ; 2008 ; Phlebologie Volume 37 ; 37 ; >
+    au < frozen ; exists ; 2008 ; 2008 ; Phlebologie Volume 37 ; 37 ; >
     au < finished ; crawling ; 2009 ; 2009 ; Phlebologie Volume 38 ; 38 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2010 ; 2010 ; Phlebologie Volume 39 ; 39 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2011 ; 2011 ; Phlebologie Volume 40 ; 40 ; reingest1.clockss.org:8082 >
@@ -7984,7 +7984,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Phlebologie Volume 47 ; 47 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Phlebologie Volume 48 ; 48 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Phlebologie Volume 49 ; 49 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Phlebologie Volume 50 ; 50 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Phlebologie Volume 50 ; 50 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Phlebologie Volume 51 ; 51 ; >
 
   }
@@ -8001,9 +8001,9 @@
     param[journal_id] = 10.1055/s-00033287
     comment[years] = 2004-current
 
-    au < crawling ; exists ; 2004 ; 2004 ; Revista Iberoamericana de Cirugía de la Mano Volume 32 ; 32 ; >
-    au < crawling ; exists ; 2005 ; 2005 ; Revista Iberoamericana de Cirugía de la Mano Volume 33 ; 33 ; >
-    au < crawling ; exists ; 2006 ; 2006 ; Revista Iberoamericana de Cirugía de la Mano Volume 34 ; 34 ; >
+    au < frozen ; exists ; 2004 ; 2004 ; Revista Iberoamericana de Cirugía de la Mano Volume 32 ; 32 ; >
+    au < frozen ; exists ; 2005 ; 2005 ; Revista Iberoamericana de Cirugía de la Mano Volume 33 ; 33 ; >
+    au < frozen ; exists ; 2006 ; 2006 ; Revista Iberoamericana de Cirugía de la Mano Volume 34 ; 34 ; >
     au < finished ; crawling ; 2007 ; 2007 ; Revista Iberoamericana de Cirugía de la Mano Volume 35 ; 35 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2008 ; 2008 ; Revista Iberoamericana de Cirugía de la Mano Volume 36 ; 36 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2009 ; 2009 ; Revista Iberoamericana de Cirugía de la Mano Volume 37 ; 37 ; reingest2.clockss.org:8085 >
@@ -8018,7 +8018,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Revista Iberoamericana de Cirugía de la Mano Volume 46 ; 46 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Revista Iberoamericana de Cirugía de la Mano Volume 47 ; 47 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Revista Iberoamericana de Cirugía de la Mano Volume 48 ; 48 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Revista Iberoamericana de Cirugía de la Mano Volume 49 ; 49 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Revista Iberoamericana de Cirugía de la Mano Volume 49 ; 49 ; >
     au < testing ; exists ; 2022 ; 2022 ; Revista Iberoamericana de Cirugía de la Mano Volume 50 ; 50 ; >
 
   }
@@ -8035,11 +8035,11 @@
     param[journal_id] = 10.1055/s-00035148
     comment[years] = 2012-2018
 
-    au < crawling ; exists ; 2012 ; 2012 ; Schlaf Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; Schlaf Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2014 ; 2014 ; Schlaf Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2015 ; 2015 ; Schlaf Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; Schlaf Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2012 ; 2012 ; Schlaf Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2013 ; 2013 ; Schlaf Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2014 ; 2014 ; Schlaf Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2015 ; 2015 ; Schlaf Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; Schlaf Volume 5 ; 5 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Schlaf Volume 6 ; 6 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2018 ; 2018 ; Schlaf Volume 7 ; 7 ; reingest3.clockss.org:8083 >
 
@@ -8060,7 +8060,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; TH Open Volume 2 ; 2 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; TH Open Volume 3 ; 3 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; TH Open Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; TH Open Volume 5 ; 5 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; TH Open Volume 5 ; 5 ; >
     au < crawling ; exists ; 2022 ; 2022 ; TH Open Volume 6 ; 6 ; >
 
   }
@@ -8077,11 +8077,11 @@
     param[journal_id] = 10.1055/s-00034912
     comment[years] = 2003-current
 
-    au < crawling ; exists ; 2003 ; 2003 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 31 ; 31 ; >
-    au < crawling ; exists ; 2004 ; 2004 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 32 ; 32 ; >
-    au < crawling ; exists ; 2005 ; 2005 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 33 ; 33 ; >
-    au < crawling ; exists ; 2006 ; 2006 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 34 ; 34 ; >
-    au < crawling ; exists ; 2007 ; 2007 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 35 ; 35 ; >
+    au < frozen ; exists ; 2003 ; 2003 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 31 ; 31 ; >
+    au < frozen ; exists ; 2004 ; 2004 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 32 ; 32 ; >
+    au < frozen ; exists ; 2005 ; 2005 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 33 ; 33 ; >
+    au < frozen ; exists ; 2006 ; 2006 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 34 ; 34 ; >
+    au < frozen ; exists ; 2007 ; 2007 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 35 ; 35 ; >
     au < finished ; crawling ; 2008 ; 2008 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 36 ; 36 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2009 ; 2009 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 37 ; 37 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2010 ; 2010 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 38 ; 38 ; reingest4.clockss.org:8082 >
@@ -8095,7 +8095,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 46 ; 46 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 47 ; 47 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 48 ; 48 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 49 ; 49 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 49 ; 49 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 50 ; 50 ; >
 
   }
@@ -8112,12 +8112,12 @@
     param[journal_id] = 10.1055/s-00034911
     comment[years] = 2003-current
 
-    au < crawling ; exists ; 2003 ; 2003 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2004 ; 2004 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2005 ; 2005 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2006 ; 2006 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2007 ; 2007 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2008 ; 2008 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2003 ; 2003 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2004 ; 2004 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2005 ; 2005 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2006 ; 2006 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2007 ; 2007 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2008 ; 2008 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 6 ; 6 ; >
     au < finished ; crawling ; 2009 ; 2009 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 7 ; 7 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2010 ; 2010 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 8 ; 8 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2011 ; 2011 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 9 ; 9 ; reingest3.clockss.org:8083 >
@@ -8130,7 +8130,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 16 ; 16 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 17 ; 17 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 18 ; 18 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 19 ; 19 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 19 ; 19 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 20 ; 20 ; >
 
   }
@@ -8151,7 +8151,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Yearbook of Medical Informatics Volume 27 ; 27 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Yearbook of Medical Informatics Volume 28 ; 28 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Yearbook of Medical Informatics Volume 29 ; 29 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Yearbook of Medical Informatics Volume 30 ; 30 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Yearbook of Medical Informatics Volume 30 ; 30 ; >
     au < expected ; exists ; 2022 ; 2022 ; Yearbook of Medical Informatics Volume 31 ; 31 ; >
 
   }
@@ -8170,7 +8170,7 @@
 
     au < deepCrawl ; exists ; 2019 ; 2019 ; Yearbook of Medical Informatics Volume 83 ; 83 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Yearbook of Medical Informatics Volume 84 ; 84 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Yearbook of Medical Informatics Volume 85 ; 85 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Yearbook of Medical Informatics Volume 85 ; 85 ; >
     au < expected ; exists ; 2022 ; 2022 ; Yearbook of Medical Informatics Volume 86 ; 86 ; >
 
   }
@@ -8198,12 +8198,12 @@
     au < doesNotExist ; doesNotExist ; 2013 ; 2013 ; Annals of the National Academy of Medical Sciences (India) Volume 49 ; 49 ; >
     au < doesNotExist ; doesNotExist ; 2014 ; 2014 ; Annals of the National Academy of Medical Sciences (India) Volume 50 ; 50 ; >
     au < doesNotExist ; doesNotExist ; 2015 ; 2015 ; Annals of the National Academy of Medical Sciences (India) Volume 51 ; 51 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; Annals of the National Academy of Medical Sciences (India) Volume 52 ; 52 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Annals of the National Academy of Medical Sciences (India) Volume 53 ; 53 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Annals of the National Academy of Medical Sciences (India) Volume 54 ; 54 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Annals of the National Academy of Medical Sciences (India) Volume 55 ; 55 ; >
-    au < crawling ; exists ; 2020 ; 2020 ; Annals of the National Academy of Medical Sciences (India) Volume 56 ; 56 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Annals of the National Academy of Medical Sciences (India) Volume 57 ; 57 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; Annals of the National Academy of Medical Sciences (India) Volume 52 ; 52 ; >
+    au < frozen ; exists ; 2017 ; 2017 ; Annals of the National Academy of Medical Sciences (India) Volume 53 ; 53 ; >
+    au < frozen ; exists ; 2018 ; 2018 ; Annals of the National Academy of Medical Sciences (India) Volume 54 ; 54 ; >
+    au < frozen ; exists ; 2019 ; 2019 ; Annals of the National Academy of Medical Sciences (India) Volume 55 ; 55 ; >
+    au < frozen ; exists ; 2020 ; 2020 ; Annals of the National Academy of Medical Sciences (India) Volume 56 ; 56 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Annals of the National Academy of Medical Sciences (India) Volume 57 ; 57 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Annals of the National Academy of Medical Sciences (India) Volume 58 ; 58 ; >
 
   }
@@ -8220,13 +8220,13 @@
     param[journal_id] = 10.1055/s-00042137
     comment[years] = 2015-current
 
-    au < crawling ; exists ; 2015 ; 2015 ; Asian Journal of Oncology Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; Asian Journal of Oncology Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Asian Journal of Oncology Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Asian Journal of Oncology Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Asian Journal of Oncology Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2020 ; 2020 ; Asian Journal of Oncology Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Asian Journal of Oncology Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2015 ; 2015 ; Asian Journal of Oncology Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; Asian Journal of Oncology Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2017 ; 2017 ; Asian Journal of Oncology Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2018 ; 2018 ; Asian Journal of Oncology Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2019 ; 2019 ; Asian Journal of Oncology Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2020 ; 2020 ; Asian Journal of Oncology Volume 6 ; 6 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Asian Journal of Oncology Volume 7 ; 7 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Asian Journal of Oncology Volume 8 ; 8 ; >
 
   }
@@ -8278,9 +8278,9 @@
     au < manifest ; exists ; 1977 ; 1977 ; British Homeopathic Journal Volume 67 ; 67 ; >
     au < manifest ; exists ; 1978 ; 1978 ; British Homeopathic Journal Volume 68 ; 68 ; >
     au < manifest ; exists ; 1979 ; 1979 ; British Homeopathic Journal Volume 69 ; 69 ; >
-    au < crawling ; exists ; 1980 ; 1980 ; British Homeopathic Journal Volume 70 ; 70 ; >
-    au < crawling ; exists ; 1981 ; 1981 ; British Homeopathic Journal Volume 71 ; 71 ; >
-    au < crawling ; exists ; 1982 ; 1982 ; British Homeopathic Journal Volume 72 ; 72 ; >
+    au < frozen ; exists ; 1980 ; 1980 ; British Homeopathic Journal Volume 70 ; 70 ; >
+    au < frozen ; exists ; 1981 ; 1981 ; British Homeopathic Journal Volume 71 ; 71 ; >
+    au < frozen ; exists ; 1982 ; 1982 ; British Homeopathic Journal Volume 72 ; 72 ; >
     au < crawling ; exists ; 1983 ; 1983 ; British Homeopathic Journal Volume 73 ; 73 ; >
     au < crawling ; exists ; 1984 ; 1984 ; British Homeopathic Journal Volume 74 ; 74 ; >
     au < crawling ; exists ; 1985 ; 1985 ; British Homeopathic Journal Volume 75 ; 75 ; >
