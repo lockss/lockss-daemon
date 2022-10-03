@@ -48,10 +48,10 @@
       {
       param[base_url] = http://www.librelloph.com/ojs/
 
-      au < testing ; exists ; 2019 ; Journal of Human Security Volume 15 ; 15 ; 2019 ; >
-      au < testing ; exists ; 2020 ; Journal of Human Security Volume 16 ; 16 ; 2020 ; >
-      au < testing ; exists ; 2021 ; Journal of Human Security Volume 17 ; 17 ; 2021 ; >
-      au < testing ; exists ; 2022 ; Journal of Human Security Volume 18 ; 18 ; 2022 ; >
+      au < testing ; exists ; 2019 ; Journal of Human Security Volume 15 (ojs) ; 15 ; 2019 ; >
+      au < testing ; exists ; 2020 ; Journal of Human Security Volume 16 (ojs) ; 16 ; 2020 ; >
+      au < testing ; exists ; 2021 ; Journal of Human Security Volume 17 (ojs) ; 17 ; 2021 ; >
+      au < testing ; exists ; 2022 ; Journal of Human Security Volume 18 (ojs) ; 18 ; 2022 ; >
       }
       {
       param[base_url] = http://www.librelloph.com/
@@ -62,6 +62,13 @@
       au < finished ; frozen ; 2016 ; Journal of Human Security Volume 12 ; 12 ; 2016 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2017 ; Journal of Human Security Volume 13 ; 13 ; 2017 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2018 ; Journal of Human Security Volume 14 ; 14 ; 2018 ; reingest4.clockss.org:8082 >
+
+      au < testing ; exists ; 2019 ; Journal of Human Security Volume 15 (no ojs) ; 15 ; 2019 ; >
+      au < testing ; exists ; 2020 ; Journal of Human Security Volume 16 (no ojs) ; 16 ; 2020 ; >
+      au < testing ; exists ; 2021 ; Journal of Human Security Volume 17 (no ojs) ; 17 ; 2021 ; >
+      au < testing ; exists ; 2022 ; Journal of Human Security Volume 18 (no ojs) ; 18 ; 2022 ; >
+
+
       }
   }
 
