@@ -28,23 +28,22 @@ CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 
--->
-<map>
+--><map>
     <entry>
         <string>plugin_status</string>
         <string>development</string>
     </entry>
     <entry>
         <string>plugin_identifier</string>
-        <string>org.lockss.plugin.taar.ClockssTaarPlugin</string>
+        <string>org.lockss.plugin.taar.ClockssTarPlugin</string>
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>Taiwan Association for Aerosol Research Journals Plugin</string>
+        <string>Taiwan Association for Aerosol Research Plugin</string>
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>1</string>
+        <string>2</string>
     </entry>
     <entry>
         <string>plugin_config_props</string>
@@ -59,10 +58,10 @@ POSSIBILITY OF SUCH DAMAGE.
                 <defaultOnly>false</defaultOnly>
             </org.lockss.daemon.ConfigParamDescr>
             <org.lockss.daemon.ConfigParamDescr>
-                <key>volume</key>
-                <displayName>Volume No.</displayName>
-                <type>6</type>
-                <size>8</size>
+                <key>volume_name</key>
+                <displayName>Volume Name</displayName>
+                <type>1</type>
+                <size>20</size>
                 <definitional>true</definitional>
                 <defaultOnly>false</defaultOnly>
             </org.lockss.daemon.ConfigParamDescr>
@@ -79,7 +78,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"Taiwan Association for Aerosol Research Journals Plugin, Base URL %s, Journal ID %s, Volume %d", base_url, journal_id, volume</string>
+        <string>"Taiwan Association for Aerosol Research Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
@@ -100,14 +99,14 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>au_start_url</string>
-        <string>"%sarticles/%d", base_url, volume</string>
+        <string>"%sarticles/%s", base_url, volume_name</string>
     </entry>
     <entry>
         <string>au_crawlrules</string>
         <list>
             <string>1,"^%s.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff2?)(\?[^/]*)?$", base_url</string>
             <!-- issues -->
-            <string>1,"%sarticles/%d/\d+$", base_url, volume</string>
+            <string>1,"%sarticles/%s/\d+$", base_url, volume_name</string>
             <!-- articles https://aaqr.org/articles/aaqr-20-12-covid-0662 -->
             <string>1,"%sarticles/%s-", base_url, journal_id</string>
         </list>
