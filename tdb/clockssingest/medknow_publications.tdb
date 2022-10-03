@@ -3640,7 +3640,7 @@
     au < finished ; crawling ; 2019 ; Journal of Pediatric Neurosciences Volume 14 ; 2019 ; 14 ; https://www.pediatricneurosciences.com/ ; ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2020 ; Journal of Pediatric Neurosciences Volume 15 ; 2020 ; 15 ; https://www.pediatricneurosciences.com/ ; ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Journal of Pediatric Neurosciences Volume 16 ; 2021 ; 16 ; https://www.pediatricneurosciences.com/ ; ; >
-    au < ready ; exists ; 2022 ; Journal of Pediatric Neurosciences Volume 17 ; 2022 ; 17 ; https://www.pediatricneurosciences.com/ ; ; >
+    au < crawling ; exists ; 2022 ; Journal of Pediatric Neurosciences Volume 17 ; 2022 ; 17 ; https://www.pediatricneurosciences.com/ ; ; >
 
   }
 
@@ -5184,7 +5184,7 @@
       #Moved from http://www.actnjournal.com/
       #Moved to https://www.bnmjournal.com/
 
-      au < ready ; exists ; 2022 ; Brain Network and Modulation Volume 1 ; 2022 ; 1 ; https://www.bnmjournal.com/ ; ; >
+      au < crawling ; exists ; 2022 ; Brain Network and Modulation Volume 1 ; 2022 ; 1 ; https://www.bnmjournal.com/ ; ; >
 
   }
 
@@ -6627,12 +6627,12 @@
       au < finished ; frozen ; 2013 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 1 ; 2013 ; 1 ; http://www.ijoyppp.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 2 ; 2014 ; 2 ; http://www.ijoyppp.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 3 ; 2015 ; 3 ; http://www.ijoyppp.org/ ; ; reingest1.clockss.org:8082 >
-      au < ready ; exists ; 2016 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 4 ; 2016 ; 4 ; https://www.ijoyppp.org/ ; ; >
-      au < ready ; exists ; 2017 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 5 ; 2017 ; 5 ; https://www.ijoyppp.org/ ; ; >
-      au < ready ; exists ; 2018 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 6 ; 2018 ; 6 ; https://www.ijoyppp.org/ ; ; >
-      au < ready ; exists ; 2019 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 7 ; 2019 ; 7 ; https://www.ijoyppp.org/ ; ; >
-      au < ready ; exists ; 2020 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 8 ; 2020 ; 8 ; https://www.ijoyppp.org/ ; ; >
-      au < ready ; exists ; 2021 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 9 ; 2021 ; 9 ; https://www.ijoyppp.org/ ; ; >
+      au < crawling ; exists ; 2016 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 4 ; 2016 ; 4 ; https://www.ijoyppp.org/ ; ; >
+      au < crawling ; exists ; 2017 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 5 ; 2017 ; 5 ; https://www.ijoyppp.org/ ; ; >
+      au < crawling ; exists ; 2018 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 6 ; 2018 ; 6 ; https://www.ijoyppp.org/ ; ; >
+      au < crawling ; exists ; 2019 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 7 ; 2019 ; 7 ; https://www.ijoyppp.org/ ; ; >
+      au < crawling ; exists ; 2020 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 8 ; 2020 ; 8 ; https://www.ijoyppp.org/ ; ; >
+      au < crawling ; exists ; 2021 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 9 ; 2021 ; 9 ; https://www.ijoyppp.org/ ; ; >
 
   }
 
@@ -8106,7 +8106,7 @@
       au < finished ; crawling ; 2018 ; Nigerian Journal of Cardiology Volume 15 ; 2018 ; 15 ; http://www.nigjcardiol.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; Nigerian Journal of Cardiology Volume 16 ; 2019 ; 16 ; https://www.nigjcardiol.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2020 ; Nigerian Journal of Cardiology Volume 17 ; 2020 ; 17 ; https://www.nigjcardiol.org/ ; ; reingest4.clockss.org:8082 >
-      au < ready ; exists ; 2021 ; Nigerian Journal of Cardiology Volume 18 ; 2021 ; 18 ; https://www.nigjcardiol.org/ ; ; >
+      au < crawling ; exists ; 2021 ; Nigerian Journal of Cardiology Volume 18 ; 2021 ; 18 ; https://www.nigjcardiol.org/ ; ; >
       au < expected ; exists ; 2022 ; Nigerian Journal of Cardiology Volume 19 ; 2022 ; 19 ; https://www.nigjcardiol.org/ ; ; >
 
   }

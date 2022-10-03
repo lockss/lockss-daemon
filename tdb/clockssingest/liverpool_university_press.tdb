@@ -1578,7 +1578,7 @@
     au < doNotProcess ; doNotProcess ; 2019 ; Studia Hibernica Volume 45 ; 45 ; >
     au < crawling ; exists ; 2020 ; Studia Hibernica Volume 46 ; 46 ; >
     au < crawling ; exists ; 2021 ; Studia Hibernica Volume 47 ; 47 ; >
-    au < ready ; exists ; 2022 ; Studia Hibernica Volume 48 ; 48 ; >
+    au < crawling ; exists ; 2022 ; Studia Hibernica Volume 48 ; 48 ; >
 
   }
   
@@ -1780,7 +1780,7 @@
     au < doNotProcess ; doNotProcess ; 2019 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 168 ; 168 ; >
     au < crawling ; exists ; 2020 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 169 ; 169 ; >
     au < crawling ; exists ; 2021 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 170 ; 170 ; >
-    au < ready ; exists ; 2022 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 171 ; 171 ; >
+    au < crawling ; exists ; 2022 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 171 ; 171 ; >
 
   }
 
@@ -1794,7 +1794,7 @@
 
     param[journal_id] = gncs
 
-    au < ready ; exists ; 2022 ; Global Nineteenth-Century Studies Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2022 ; Global Nineteenth-Century Studies Volume 1 ; 1 ; >
 
   }
   
@@ -1822,10 +1822,10 @@
 
     param[journal_id] = tsesa
 
-    au < ready ; exists ; 2017 ; TS Eliot Studies Annual Volume 1 ; 1 ; >
-    au < ready ; exists ; 2018 ; TS Eliot Studies Annual Volume 2 ; 2 ; >
-    au < ready ; exists ; 2019 ; TS Eliot Studies Annual Volume 3 ; 3 ; >
-    au < ready ; exists ; 2020 ; TS Eliot Studies Annual Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2017 ; TS Eliot Studies Annual Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2018 ; TS Eliot Studies Annual Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2019 ; TS Eliot Studies Annual Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2020 ; TS Eliot Studies Annual Volume 4 ; 4 ; >
     au < expected ; exists ; 2021 ; TS Eliot Studies Annual Volume 5 ; 5 ; >
     au < expected ; exists ; 2022 ; TS Eliot Studies Annual Volume 6 ; 6 ; >
 
