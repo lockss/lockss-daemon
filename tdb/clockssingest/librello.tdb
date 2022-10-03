@@ -19,14 +19,6 @@
 
       param[journal_id] = challengesinsustainability
       {
-      param[base_url] = http://www.librelloph.com/ojs/
-    
-      au < testing ; exists ; 2019 ; Challenges in Sustainability Volume 7 ; 7 ; 2019 ; >
-      au < testing ; exists ; 2020 ; Challenges in Sustainability Volume 8 ; 8 ; 2020 ; >
-      au < testing ; exists ; 2021 ; Challenges in Sustainability Volume 9 ; 9 ; 2021 ; >
-      au < testing ; exists ; 2022 ; Challenges in Sustainability Volume 10 ; 10 ; 2022 ; >
-      }
-      {
       param[base_url] = http://www.librelloph.com/
     
       au < finished ; finished ; 2013 ; Challenges in Sustainability Volume 1 ; 1 ; 2013 ; >
@@ -50,14 +42,6 @@
     >
 
       param[journal_id] = journalofhumansecurity
-      {
-      param[base_url] = http://www.librelloph.com/ojs/
-
-      au < testing ; exists ; 2019 ; Journal of Human Security Volume 15 (ojs) ; 15 ; 2019 ; >
-      au < testing ; exists ; 2020 ; Journal of Human Security Volume 16 (ojs) ; 16 ; 2020 ; >
-      au < testing ; exists ; 2021 ; Journal of Human Security Volume 17 (ojs) ; 17 ; 2021 ; >
-      au < testing ; exists ; 2022 ; Journal of Human Security Volume 18 (ojs) ; 18 ; 2022 ; >
-      }
       {
       param[base_url] = http://www.librelloph.com/
 
@@ -85,14 +69,6 @@
 
       # content for 2014 moved to 2015.
       param[journal_id] = organicfarming
-      {
-      param[base_url] = http://www.librelloph.com/ojs/
-
-      au < testing ; exists ; 2019 ; Organic Farming Volume 5 ; 5 ; 2019 ; >
-      au < testing ; exists ; 2020 ; Organic Farming Volume 6 ; 6 ; 2020 ; >
-      au < testing ; exists ; 2021 ; Organic Farming Volume 7 ; 7 ; 2021 ; >
-      au < testing ; exists ; 2022 ; Organic Farming Volume 8 ; 8 ; 2022 ; >
-      }
       {
       param[base_url] = http://www.librelloph.com/
 
