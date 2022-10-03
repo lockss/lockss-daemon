@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>CLCWeb Plugin (Retired)</string>
+    <string>CLCWeb Plugin (Legacy)</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -48,7 +48,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"CLCWeb Plugin (Retired), Base URL %s, Year %d, Volume %d", base_url, year, volume</string>
+    <string>"CLCWeb Plugin (Legacy), Base URL %s, Year %d, Volume %d", base_url, year, volume</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
