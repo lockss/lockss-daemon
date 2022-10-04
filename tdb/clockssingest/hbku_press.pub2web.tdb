@@ -26,7 +26,7 @@
     param[journal_id] = ajsr
 
       au < finished ; frozen ; 2020 ; Arabian Journal of Scientific Research Volume 2020 ; 2020 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2021 ; Arabian Journal of Scientific Research Volume 2021 ; 2021 ; >
+      au < deepCrawl ; exists ; 2021 ; Arabian Journal of Scientific Research Volume 2021 ; 2021 ; >
       au < crawling ; exists ; 2022 ; Arabian Journal of Scientific Research Volume 2022 ; 2022 ; >
   }
 
@@ -51,7 +51,7 @@
     #\/Does not exist, but will pass manifest page check
     au < doNotProcess ; exists ; 2019 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2019 ; 2019 ; > #no substance
     au < finished ; frozen ; 2020 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2020 ; 2020 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2021 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2021 ; 2021 ; >
+    au < deepCrawl ; exists ; 2021 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2022 ; 2022 ; >
 
   }
@@ -68,7 +68,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Information Studies & Technology Volume 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Journal of Information Studies & Technology Volume 2019 ; 2019 ; >
     au < finished ; frozen ; 2020 ; Journal of Information Studies & Technology Volume 2020 ; 2020 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2021 ; Journal of Information Studies & Technology Volume 2021 ; 2021 ; >
+    au < deepCrawl ; exists ; 2021 ; Journal of Information Studies & Technology Volume 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Journal of Information Studies & Technology Volume 2022 ; 2022 ; >
 
   }
@@ -105,7 +105,7 @@
     au < doNotProcess ; exists ; 2018 ; Qatar Medical Journal Volume 2018 ; 2018 ; > #no substance
     au < finished ; frozen ; 2019 ; Qatar Medical Journal Volume 2019 ; 2019 ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2020 ; Qatar Medical Journal Volume 2020 ; 2020 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2021 ; Qatar Medical Journal Volume 2021 ; 2021 ; >
+    au < deepCrawl ; exists ; 2021 ; Qatar Medical Journal Volume 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Qatar Medical Journal Volume 2022 ; 2022 ; >
 
   }
@@ -128,7 +128,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; QScience Connect Volume 2018 ; 2018 ; >
       au < finished ; frozen ; 2019 ; QScience Connect Volume 2019 ; 2019 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2020 ; QScience Connect Volume 2020 ; 2020 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2021 ; QScience Connect Volume 2021 ; 2021 ; >
+      au < deepCrawl ; exists ; 2021 ; QScience Connect Volume 2021 ; 2021 ; >
       au < crawling ; exists ; 2022 ; QScience Connect Volume 2022 ; 2022 ; >
 
     }
