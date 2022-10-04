@@ -55,38 +55,38 @@
 
       param[journal_id] = YDK
 
-      au < exists ; exists ; 1991 ; Yuridika Volume 6 ; 6 ; 1991 ; >
-      au < exists ; exists ; 1992 ; Yuridika Volume 7 ; 7 ; 1992 ; >
+      au < manifest ; exists ; 1991 ; Yuridika Volume 6 ; 6 ; 1991 ; >
+      au < manifest ; exists ; 1992 ; Yuridika Volume 7 ; 7 ; 1992 ; >
       au < exists ; exists ; 1993 ; Yuridika Volume 8 ; 8 ; 1993 ; >
-      au < exists ; exists ; 1994 ; Yuridika Volume 9 ; 9 ; 1994 ; >
+      au < manifest ; exists ; 1994 ; Yuridika Volume 9 ; 9 ; 1994 ; >
       au < exists ; exists ; 1995 ; Yuridika Volume 10 ; 10 ; 1995 ; >
-      au < exists ; exists ; 1996 ; Yuridika Volume 11 ; 11 ; 1996 ; >
-      au < exists ; exists ; 1997 ; Yuridika Volume 12 ; 12 ; 1997 ; >
+      au < manifest ; exists ; 1996 ; Yuridika Volume 11 ; 11 ; 1996 ; >
+      au < manifest ; exists ; 1997 ; Yuridika Volume 12 ; 12 ; 1997 ; >
       au < exists ; exists ; 1998 ; Yuridika Volume 13 ; 13 ; 1998 ; >
-      au < exists ; exists ; 1999 ; Yuridika Volume 14 ; 14 ; 1999 ; >
-      au < exists ; exists ; 2000 ; Yuridika Volume 15 ; 15 ; 2000 ; >
-      au < exists ; exists ; 2001 ; Yuridika Volume 16 ; 16 ; 2001 ; >
+      au < manifest ; exists ; 1999 ; Yuridika Volume 14 ; 14 ; 1999 ; >
+      au < manifest ; exists ; 2000 ; Yuridika Volume 15 ; 15 ; 2000 ; >
+      au < manifest ; exists ; 2001 ; Yuridika Volume 16 ; 16 ; 2001 ; >
       au < exists ; exists ; 2002 ; Yuridika Volume 17 ; 17 ; 2002 ; >
-      au < exists ; exists ; 2003 ; Yuridika Volume 18 ; 18 ; 2003 ; >
-      au < exists ; exists ; 2004 ; Yuridika Volume 19 ; 19 ; 2004 ; >
+      au < manifest ; exists ; 2003 ; Yuridika Volume 18 ; 18 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; Yuridika Volume 19 ; 19 ; 2004 ; >
       au < exists ; exists ; 2005 ; Yuridika Volume 20 ; 20 ; 2005 ; >
       au < exists ; exists ; 2006 ; Yuridika Volume 21 ; 21 ; 2006 ; >
       au < exists ; exists ; 2007 ; Yuridika Volume 22 ; 22 ; 2007 ; >
       au < exists ; exists ; 2008 ; Yuridika Volume 23 ; 23 ; 2008 ; >
       au < exists ; exists ; 2009 ; Yuridika Volume 24 ; 24 ; 2009 ; >
-      au < exists ; exists ; 2010 ; Yuridika Volume 25 ; 25 ; 2010 ; >
-      au < exists ; exists ; 2011 ; Yuridika Volume 26 ; 26 ; 2011 ; >
-      au < exists ; exists ; 2012 ; Yuridika Volume 27 ; 27 ; 2012 ; >
-      au < exists ; exists ; 2013 ; Yuridika Volume 28 ; 28 ; 2013 ; >
-      au < exists ; exists ; 2014 ; Yuridika Volume 29 ; 29 ; 2014 ; >
-      au < exists ; exists ; 2015 ; Yuridika Volume 30 ; 30 ; 2015 ; >
-      au < exists ; exists ; 2016 ; Yuridika Volume 31 ; 31 ; 2016 ; >
-      au < exists ; exists ; 2017 ; Yuridika Volume 32 ; 32 ; 2017 ; >
-      au < exists ; exists ; 2018 ; Yuridika Volume 33 ; 33 ; 2018 ; >
-      au < exists ; exists ; 2019 ; Yuridika Volume 34 ; 34 ; 2019 ; >
-      au < exists ; exists ; 2020 ; Yuridika Volume 35 ; 35 ; 2020 ; >
-      au < exists ; exists ; 2021 ; Yuridika Volume 36 ; 36 ; 2021 ; >
-      au < exists ; exists ; 2022 ; Yuridika Volume 37 ; 37 ; 2022 ; >
+      au < manifest ; exists ; 2010 ; Yuridika Volume 25 ; 25 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; Yuridika Volume 26 ; 26 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; Yuridika Volume 27 ; 27 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; Yuridika Volume 28 ; 28 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; Yuridika Volume 29 ; 29 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; Yuridika Volume 30 ; 30 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; Yuridika Volume 31 ; 31 ; 2016 ; >
+      au < manifest ; exists ; 2017 ; Yuridika Volume 32 ; 32 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; Yuridika Volume 33 ; 33 ; 2018 ; >
+      au < manifest ; exists ; 2019 ; Yuridika Volume 34 ; 34 ; 2019 ; >
+      au < manifest ; exists ; 2020 ; Yuridika Volume 35 ; 35 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; Yuridika Volume 36 ; 36 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; Yuridika Volume 37 ; 37 ; 2022 ; >
 
   }
 
@@ -100,15 +100,15 @@
 
       param[journal_id] = MKP
 
-      au < exists ; exists ; 2014 ; Masyarakat, Kebudayaan dan Politik Volume 27 ; 27 ; 2014 ; >
-      au < exists ; exists ; 2015 ; Masyarakat, Kebudayaan dan Politik Volume 28 ; 28 ; 2015 ; >
-      au < exists ; exists ; 2016 ; Masyarakat, Kebudayaan dan Politik Volume 29 ; 29 ; 2016 ; >
-      au < exists ; exists ; 2017 ; Masyarakat, Kebudayaan dan Politik Volume 30 ; 30 ; 2017 ; >
-      au < exists ; exists ; 2018 ; Masyarakat, Kebudayaan dan Politik Volume 31 ; 31 ; 2018 ; >
-      au < exists ; exists ; 2019 ; Masyarakat, Kebudayaan dan Politik Volume 32 ; 32 ; 2019 ; >
-      au < exists ; exists ; 2020 ; Masyarakat, Kebudayaan dan Politik Volume 33 ; 33 ; 2020 ; >
-      au < exists ; exists ; 2021 ; Masyarakat, Kebudayaan dan Politik Volume 34 ; 34 ; 2021 ; >
-      au < exists ; exists ; 2022 ; Masyarakat, Kebudayaan dan Politik Volume 35 ; 35 ; 2022 ; >
+      au < manifest ; exists ; 2014 ; Masyarakat, Kebudayaan dan Politik Volume 27 ; 27 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; Masyarakat, Kebudayaan dan Politik Volume 28 ; 28 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; Masyarakat, Kebudayaan dan Politik Volume 29 ; 29 ; 2016 ; >
+      au < manifest ; exists ; 2017 ; Masyarakat, Kebudayaan dan Politik Volume 30 ; 30 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; Masyarakat, Kebudayaan dan Politik Volume 31 ; 31 ; 2018 ; >
+      au < manifest ; exists ; 2019 ; Masyarakat, Kebudayaan dan Politik Volume 32 ; 32 ; 2019 ; >
+      au < manifest ; exists ; 2020 ; Masyarakat, Kebudayaan dan Politik Volume 33 ; 33 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; Masyarakat, Kebudayaan dan Politik Volume 34 ; 34 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; Masyarakat, Kebudayaan dan Politik Volume 35 ; 35 ; 2022 ; >
 
   }
 
@@ -122,22 +122,22 @@
 
       param[journal_id] = JNERS
 
-      au < exists ; exists ; 2007 ; Jurnal Ners Volume 2 ; 2 ; 2007 ; >
-      au < exists ; exists ; 2008 ; Jurnal Ners Volume 3 ; 3 ; 2008 ; >
-      au < exists ; exists ; 2009 ; Jurnal Ners Volume 4 ; 4 ; 2009 ; >
-      au < exists ; exists ; 2010 ; Jurnal Ners Volume 5 ; 5 ; 2010 ; >
-      au < exists ; exists ; 2011 ; Jurnal Ners Volume 6 ; 6 ; 2011 ; >
-      au < exists ; exists ; 2012 ; Jurnal Ners Volume 7 ; 7 ; 2012 ; >
-      au < exists ; exists ; 2013 ; Jurnal Ners Volume 8 ; 8 ; 2013 ; >
-      au < exists ; exists ; 2014 ; Jurnal Ners Volume 9 ; 9 ; 2014 ; >
-      au < exists ; exists ; 2015 ; Jurnal Ners Volume 10 ; 10 ; 2015 ; >
-      au < exists ; exists ; 2016 ; Jurnal Ners Volume 11 ; 11 ; 2016 ; >
-      au < exists ; exists ; 2017 ; Jurnal Ners Volume 12 ; 12 ; 2017 ; >
-      au < exists ; exists ; 2018 ; Jurnal Ners Volume 13 ; 13 ; 2018 ; >
-      au < exists ; exists ; 2019 ; Jurnal Ners Volume 14 ; 14 ; 2019 ; >
-      au < exists ; exists ; 2020 ; Jurnal Ners Volume 15 ; 15 ; 2020 ; >
-      au < exists ; exists ; 2021 ; Jurnal Ners Volume 16 ; 16 ; 2021 ; >
-      au < exists ; exists ; 2022 ; Jurnal Ners Volume 17 ; 17 ; 2022 ; >
+      au < manifest ; exists ; 2007 ; Jurnal Ners Volume 2 ; 2 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; Jurnal Ners Volume 3 ; 3 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; Jurnal Ners Volume 4 ; 4 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; Jurnal Ners Volume 5 ; 5 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; Jurnal Ners Volume 6 ; 6 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; Jurnal Ners Volume 7 ; 7 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; Jurnal Ners Volume 8 ; 8 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; Jurnal Ners Volume 9 ; 9 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; Jurnal Ners Volume 10 ; 10 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; Jurnal Ners Volume 11 ; 11 ; 2016 ; >
+      au < manifest ; exists ; 2017 ; Jurnal Ners Volume 12 ; 12 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; Jurnal Ners Volume 13 ; 13 ; 2018 ; >
+      au < manifest ; exists ; 2019 ; Jurnal Ners Volume 14 ; 14 ; 2019 ; >
+      au < manifest ; exists ; 2020 ; Jurnal Ners Volume 15 ; 15 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; Jurnal Ners Volume 16 ; 16 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; Jurnal Ners Volume 17 ; 17 ; 2022 ; >
 
   }
 
