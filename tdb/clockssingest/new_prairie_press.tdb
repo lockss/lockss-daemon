@@ -92,16 +92,16 @@
       au < manifest ; exists ; 1987 ; GDR Bulletin Volume 13 ; 13 ; >
       au < manifest ; exists ; 1988 ; GDR Bulletin Volume 14 ; 14 ; >
       au < manifest ; exists ; 1989 ; GDR Bulletin Volume 15 ; 15 ; >
-      au < crawling ; exists ; 1990 ; GDR Bulletin Volume 16 ; 16 ; >
-      au < crawling ; exists ; 1991 ; GDR Bulletin Volume 17 ; 17 ; >
-      au < crawling ; exists ; 1992 ; GDR Bulletin Volume 18 ; 18 ; >
-      au < crawling ; exists ; 1993 ; GDR Bulletin Volume 19 ; 19 ; >
+      au < frozen ; exists ; 1990 ; GDR Bulletin Volume 16 ; 16 ; >
+      au < frozen ; exists ; 1991 ; GDR Bulletin Volume 17 ; 17 ; >
+      au < frozen ; exists ; 1992 ; GDR Bulletin Volume 18 ; 18 ; >
+      au < frozen ; exists ; 1993 ; GDR Bulletin Volume 19 ; 19 ; >
       au < testing ; exists ; 1994 ; GDR Bulletin Volume 20-21 ; 20-21 ; >
-      au < crawling ; exists ; 1995 ; GDR Bulletin Volume 22 ; 22 ; >
-      au < crawling ; exists ; 1996 ; GDR Bulletin Volume 23 ; 23 ; >
-      au < crawling ; exists ; 1997 ; GDR Bulletin Volume 24 ; 24 ; >
-      au < crawling ; exists ; 1998 ; GDR Bulletin Volume 25 ; 25 ; >
-      au < crawling ; exists ; 1999 ; GDR Bulletin Volume 26 ; 26 ; >
+      au < frozen ; exists ; 1995 ; GDR Bulletin Volume 22 ; 22 ; >
+      au < frozen ; exists ; 1996 ; GDR Bulletin Volume 23 ; 23 ; >
+      au < frozen ; exists ; 1997 ; GDR Bulletin Volume 24 ; 24 ; >
+      au < frozen ; exists ; 1998 ; GDR Bulletin Volume 25 ; 25 ; >
+      au < frozen ; exists ; 1999 ; GDR Bulletin Volume 26 ; 26 ; >
 
     }
   }
@@ -162,7 +162,7 @@
       au < finished ; finished ; 2018 ; Journal of Financial Therapy Volume 9 ; 9 ; https://newprairiepress.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2019 ; Journal of Financial Therapy Volume 10 ; 10 ; https://newprairiepress.org/ ; >
       au < deepCrawl ; exists ; 2020 ; Journal of Financial Therapy Volume 11 ; 11 ; https://newprairiepress.org/ ; >
-      au < crawling ; exists ; 2021 ; Journal of Financial Therapy Volume 12 ; 12 ; https://newprairiepress.org/ ; >
+      au < frozen ; exists ; 2021 ; Journal of Financial Therapy Volume 12 ; 12 ; https://newprairiepress.org/ ; >
       au < crawling ; exists ; 2022 ; Journal of Financial Therapy Volume 13 ; 13 ; https://newprairiepress.org/ ; >
 
     }
@@ -225,7 +225,7 @@
       au < finished ; finished ; 2018 ; Kansas Library Association College and University Libraries Section Proceedings Volume 8 ; 8 ; https://newprairiepress.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2019 ; Kansas Library Association College and University Libraries Section Proceedings Volume 9 ; 9 ; https://newprairiepress.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; Kansas Library Association College and University Libraries Section Proceedings Volume 10 ; 10 ; https://newprairiepress.org/ ; >
-      au < crawling ; exists ; 2021 ; Kansas Library Association College and University Libraries Section Proceedings Volume 11 ; 11 ; https://newprairiepress.org/ ; >
+      au < frozen ; exists ; 2021 ; Kansas Library Association College and University Libraries Section Proceedings Volume 11 ; 11 ; https://newprairiepress.org/ ; >
       au < expected ; exists ; 2022 ; Kansas Library Association College and University Libraries Section Proceedings Volume 12 ; 12 ; https://newprairiepress.org/ ; >
 
     }
@@ -271,7 +271,7 @@
       au < finished ; finished ; 2018 ; Online Journal of Rural Research & Policy Volume 13 ; 13 ; http://newprairiepress.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2019 ; Online Journal of Rural Research & Policy Volume 14 ; 14 ; https://newprairiepress.org/ ; >
       au < deepCrawl ; exists ; 2020 ; Online Journal of Rural Research & Policy Volume 15 ; 15 ; https://newprairiepress.org/ ; >
-      au < crawling ; exists ; 2021 ; Online Journal of Rural Research & Policy Volume 16 ; 16 ; https://newprairiepress.org/ ; >
+      au < frozen ; exists ; 2021 ; Online Journal of Rural Research & Policy Volume 16 ; 16 ; https://newprairiepress.org/ ; >
       au < crawling ; exists ; 2022 ; Online Journal of Rural Research & Policy Volume 17 ; 17 ; https://newprairiepress.org/ ; >
 
     }
@@ -290,10 +290,10 @@
       #param[base_url] = http://newprairiepress.org/
       param[journal_abbr] = burgonsociety
 
-      au < crawling ; exists ; 2001 ; Transactions of the Burgon Society Volume 1 ; 1 ; https://newprairiepress.org/ ; >
-      au < crawling ; exists ; 2002 ; Transactions of the Burgon Society Volume 2 ; 2 ; https://newprairiepress.org/ ; >
-      au < crawling ; exists ; 2003 ; Transactions of the Burgon Society Volume 3 ; 3 ; https://newprairiepress.org/ ; >
-      au < crawling ; exists ; 2004 ; Transactions of the Burgon Society Volume 4 ; 4 ; https://newprairiepress.org/ ; >
+      au < frozen ; exists ; 2001 ; Transactions of the Burgon Society Volume 1 ; 1 ; https://newprairiepress.org/ ; >
+      au < frozen ; exists ; 2002 ; Transactions of the Burgon Society Volume 2 ; 2 ; https://newprairiepress.org/ ; >
+      au < frozen ; exists ; 2003 ; Transactions of the Burgon Society Volume 3 ; 3 ; https://newprairiepress.org/ ; >
+      au < frozen ; exists ; 2004 ; Transactions of the Burgon Society Volume 4 ; 4 ; https://newprairiepress.org/ ; >
       au < finished ; finished ; 2005 ; Transactions of the Burgon Society Volume 5 ; 5 ; https://newprairiepress.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2006 ; Transactions of the Burgon Society Volume 6 ; 6 ; https://newprairiepress.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2007 ; Transactions of the Burgon Society Volume 7 ; 7 ; https://newprairiepress.org/ ; reingest3.clockss.org:8083 >
@@ -356,7 +356,7 @@
       au < finished ; finished ; 2017 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 2 ; 2 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2018 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 3 ; 3 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 4 ; 4 ; >
-      au < crawling ; exists ; 2021 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 5 ; 5 ; >
+      au < deepCrawl ; exists ; 2021 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 5 ; 5 ; >
       au < expected ; exists ; 2022 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 6 ; 6 ; >
 
   }
@@ -391,21 +391,21 @@
       au < manifest ; exists ; 1986-1987 ; Educational Considerations Volume 14 ; 14 ; >
       au < manifest ; exists ; 1987-1988 ; Educational Considerations Volume 15 ; 15 ; >
       au < manifest ; exists ; 1988-1989 ; Educational Considerations Volume 16 ; 16 ; >
-      au < crawling ; exists ; 1989-1990 ; Educational Considerations Volume 17 ; 17 ; >
-      au < crawling ; exists ; 1990-1991 ; Educational Considerations Volume 18 ; 18 ; >
-      au < crawling ; exists ; 1991-1992 ; Educational Considerations Volume 19 ; 19 ; >
-      au < crawling ; exists ; 1992-1993 ; Educational Considerations Volume 20 ; 20 ; >
-      au < crawling ; exists ; 1993-1994 ; Educational Considerations Volume 21 ; 21 ; >
-      au < crawling ; exists ; 1994-1995 ; Educational Considerations Volume 22 ; 22 ; >
-      au < crawling ; exists ; 1995-1996 ; Educational Considerations Volume 23 ; 23 ; >
-      au < crawling ; exists ; 1996-1997 ; Educational Considerations Volume 24 ; 24 ; >
-      au < crawling ; exists ; 1997-1998 ; Educational Considerations Volume 25 ; 25 ; >
-      au < crawling ; exists ; 1998-1999 ; Educational Considerations Volume 26 ; 26 ; >
-      au < crawling ; exists ; 1999-2000 ; Educational Considerations Volume 27 ; 27 ; >
-      au < crawling ; exists ; 2000-2001 ; Educational Considerations Volume 28 ; 28 ; >
-      au < crawling ; exists ; 2001-2002 ; Educational Considerations Volume 29 ; 29 ; >
-      au < crawling ; exists ; 2002-2003 ; Educational Considerations Volume 30 ; 30 ; >
-      au < crawling ; exists ; 2003-2004 ; Educational Considerations Volume 31 ; 31 ; >
+      au < frozen ; exists ; 1989-1990 ; Educational Considerations Volume 17 ; 17 ; >
+      au < frozen ; exists ; 1990-1991 ; Educational Considerations Volume 18 ; 18 ; >
+      au < frozen ; exists ; 1991-1992 ; Educational Considerations Volume 19 ; 19 ; >
+      au < frozen ; exists ; 1992-1993 ; Educational Considerations Volume 20 ; 20 ; >
+      au < frozen ; exists ; 1993-1994 ; Educational Considerations Volume 21 ; 21 ; >
+      au < frozen ; exists ; 1994-1995 ; Educational Considerations Volume 22 ; 22 ; >
+      au < frozen ; exists ; 1995-1996 ; Educational Considerations Volume 23 ; 23 ; >
+      au < frozen ; exists ; 1996-1997 ; Educational Considerations Volume 24 ; 24 ; >
+      au < frozen ; exists ; 1997-1998 ; Educational Considerations Volume 25 ; 25 ; >
+      au < frozen ; exists ; 1998-1999 ; Educational Considerations Volume 26 ; 26 ; >
+      au < frozen ; exists ; 1999-2000 ; Educational Considerations Volume 27 ; 27 ; >
+      au < frozen ; exists ; 2000-2001 ; Educational Considerations Volume 28 ; 28 ; >
+      au < frozen ; exists ; 2001-2002 ; Educational Considerations Volume 29 ; 29 ; >
+      au < frozen ; exists ; 2002-2003 ; Educational Considerations Volume 30 ; 30 ; >
+      au < frozen ; exists ; 2003-2004 ; Educational Considerations Volume 31 ; 31 ; >
       au < finished ; finished ; 2004-2005 ; Educational Considerations Volume 32 ; 32 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2005-2006 ; Educational Considerations Volume 33 ; 33 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2006-2007 ; Educational Considerations Volume 34 ; 34 ; reingest2.clockss.org:8085 >
@@ -421,7 +421,7 @@
       au < deepCrawl ; exists ; 2018-2019 ; Educational Considerations Volume 44 ; 44 ; >
       au < deepCrawl ; exists ; 2019-2020 ; Educational Considerations Volume 45 ; 45 ; >
       au < finished ; crawling ; 2020 ; Educational Considerations Volume 46 ; 46 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2021 ; Educational Considerations Volume 47 ; 47 ; >
+      au < deepCrawl ; exists ; 2021 ; Educational Considerations Volume 47 ; 47 ; >
       au < crawling ; exists ; 2022 ; Educational Considerations Volume 48 ; 48 ; >
 
   }
@@ -530,21 +530,21 @@
       au < manifest ; exists ; 1987 ; Fungal Genetics Newsletter Volume 34 ; 34 ; >
       au < manifest ; exists ; 1988 ; Fungal Genetics Newsletter Volume 35 ; 35 ; >
       au < manifest ; exists ; 1989 ; Fungal Genetics Newsletter Volume 36 ; 36 ; >
-      au < crawling ; exists ; 1990 ; Fungal Genetics Newsletter Volume 37 ; 37 ; >
-      au < crawling ; exists ; 1991 ; Fungal Genetics Newsletter Volume 38 ; 38 ; >
-      au < crawling ; exists ; 1992 ; Fungal Genetics Newsletter Volume 39 ; 39 ; >
-      au < crawling ; exists ; 1993 ; Fungal Genetics Newsletter Volume 40 ; 40 ; >
-      au < crawling ; exists ; 1994 ; Fungal Genetics Newsletter Volume 41 ; 41 ; >
-      au < crawling ; exists ; 1995 ; Fungal Genetics Newsletter Volume 42 ; 42 ; >
-      au < crawling ; exists ; 1996 ; Fungal Genetics Newsletter Volume 43 ; 43 ; >
-      au < crawling ; exists ; 1997 ; Fungal Genetics Newsletter Volume 44 ; 44 ; >
-      au < crawling ; exists ; 1998 ; Fungal Genetics Newsletter Volume 45 ; 45 ; >
-      au < crawling ; exists ; 1999 ; Fungal Genetics Newsletter Volume 46 ; 46 ; >
-      au < crawling ; exists ; 2000 ; Fungal Genetics Newsletter Volume 47 ; 47 ; >
-      au < crawling ; exists ; 2001 ; Fungal Genetics Newsletter Volume 48 ; 48 ; >
-      au < crawling ; exists ; 2002 ; Fungal Genetics Newsletter Volume 49 ; 49 ; >
-      au < crawling ; exists ; 2003 ; Fungal Genetics Newsletter Volume 50 ; 50 ; >
-      au < crawling ; exists ; 2004 ; Fungal Genetics Newsletter Volume 51 ; 51 ; >
+      au < frozen ; exists ; 1990 ; Fungal Genetics Newsletter Volume 37 ; 37 ; >
+      au < frozen ; exists ; 1991 ; Fungal Genetics Newsletter Volume 38 ; 38 ; >
+      au < frozen ; exists ; 1992 ; Fungal Genetics Newsletter Volume 39 ; 39 ; >
+      au < frozen ; exists ; 1993 ; Fungal Genetics Newsletter Volume 40 ; 40 ; >
+      au < frozen ; exists ; 1994 ; Fungal Genetics Newsletter Volume 41 ; 41 ; >
+      au < frozen ; exists ; 1995 ; Fungal Genetics Newsletter Volume 42 ; 42 ; >
+      au < frozen ; exists ; 1996 ; Fungal Genetics Newsletter Volume 43 ; 43 ; >
+      au < frozen ; exists ; 1997 ; Fungal Genetics Newsletter Volume 44 ; 44 ; >
+      au < frozen ; exists ; 1998 ; Fungal Genetics Newsletter Volume 45 ; 45 ; >
+      au < frozen ; exists ; 1999 ; Fungal Genetics Newsletter Volume 46 ; 46 ; >
+      au < frozen ; exists ; 2000 ; Fungal Genetics Newsletter Volume 47 ; 47 ; >
+      au < frozen ; exists ; 2001 ; Fungal Genetics Newsletter Volume 48 ; 48 ; >
+      au < frozen ; exists ; 2002 ; Fungal Genetics Newsletter Volume 49 ; 49 ; >
+      au < frozen ; exists ; 2003 ; Fungal Genetics Newsletter Volume 50 ; 50 ; >
+      au < frozen ; exists ; 2004 ; Fungal Genetics Newsletter Volume 51 ; 51 ; >
       au < finished ; finished ; 2005 ; Fungal Genetics Newsletter Volume 52 ; 52 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2006 ; Fungal Genetics Newsletter Volume 53 ; 53 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2007 ; Fungal Genetics Newsletter Volume 54 ; 54 ; reingest4.clockss.org:8082 >
@@ -576,7 +576,7 @@
       au < finished ; finished ; 2016 ; Fungal Genetics Reports Volume 62 ; 62 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2018-2019 ; Fungal Genetics Reports Volume 63 ; 63 ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2020 ; Fungal Genetics Reports Volume 64 ; 64 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2021 ; Fungal Genetics Reports Volume 65 ; 65 ; >
+      au < deepCrawl ; exists ; 2021 ; Fungal Genetics Reports Volume 65 ; 65 ; >
       au < crawling ; exists ; 2022 ; Fungal Genetics Reports Volume 66 ; 66 ; >
 
   }
@@ -597,7 +597,7 @@
       au < finished ; finished ; 2017-2018 ; Human Behavior Research Volume 1 ; 1 ; reingest3.clockss.org:8083 >
       au < crawling ; down ; 2019 ; Human Behavior Research Volume 2 ; 2 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Human Behavior Research Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2021 ; Human Behavior Research Volume 4 ; 4 ; >
+      au < deepCrawl ; exists ; 2021 ; Human Behavior Research Volume 4 ; 4 ; >
       au < crawling ; exists ; 2022 ; Human Behavior Research Volume 5 ; 5 ; >
 
   }
@@ -660,20 +660,20 @@
       au < manifest ; exists ; 1988 ; Journal of Applied Communications Volume 71 ; 71 ; >
       au < manifest ; exists ; 1989 ; Journal of Applied Communications Volume 72 ; 72 ; >
       au < manifest ; exists ; 1989 ; Journal of Applied Communications Volume 73 ; 73 ; >
-      au < crawling ; exists ; 1990 ; Journal of Applied Communications Volume 74 ; 74 ; >
-      au < crawling ; exists ; 1991 ; Journal of Applied Communications Volume 75 ; 75 ; >
-      au < crawling ; exists ; 1992 ; Journal of Applied Communications Volume 76 ; 76 ; >
-      au < crawling ; exists ; 1993 ; Journal of Applied Communications Volume 77 ; 77 ; >
-      au < crawling ; exists ; 1994 ; Journal of Applied Communications Volume 78 ; 78 ; >
-      au < crawling ; exists ; 1995 ; Journal of Applied Communications Volume 79 ; 79 ; >
-      au < crawling ; exists ; 1996 ; Journal of Applied Communications Volume 80 ; 80 ; >
-      au < crawling ; exists ; 1997 ; Journal of Applied Communications Volume 81 ; 81 ; >
-      au < crawling ; exists ; 1998 ; Journal of Applied Communications Volume 82 ; 82 ; >
-      au < crawling ; exists ; 1999 ; Journal of Applied Communications Volume 83 ; 83 ; >
-      au < crawling ; exists ; 2000 ; Journal of Applied Communications Volume 84 ; 84 ; >
-      au < crawling ; exists ; 2001 ; Journal of Applied Communications Volume 85 ; 85 ; >
-      au < crawling ; exists ; 2002 ; Journal of Applied Communications Volume 86 ; 86 ; >
-      au < crawling ; exists ; 2003 ; Journal of Applied Communications Volume 87 ; 87 ; >
+      au < frozen ; exists ; 1990 ; Journal of Applied Communications Volume 74 ; 74 ; >
+      au < frozen ; exists ; 1991 ; Journal of Applied Communications Volume 75 ; 75 ; >
+      au < frozen ; exists ; 1992 ; Journal of Applied Communications Volume 76 ; 76 ; >
+      au < frozen ; exists ; 1993 ; Journal of Applied Communications Volume 77 ; 77 ; >
+      au < frozen ; exists ; 1994 ; Journal of Applied Communications Volume 78 ; 78 ; >
+      au < frozen ; exists ; 1995 ; Journal of Applied Communications Volume 79 ; 79 ; >
+      au < frozen ; exists ; 1996 ; Journal of Applied Communications Volume 80 ; 80 ; >
+      au < frozen ; exists ; 1997 ; Journal of Applied Communications Volume 81 ; 81 ; >
+      au < frozen ; exists ; 1998 ; Journal of Applied Communications Volume 82 ; 82 ; >
+      au < frozen ; exists ; 1999 ; Journal of Applied Communications Volume 83 ; 83 ; >
+      au < frozen ; exists ; 2000 ; Journal of Applied Communications Volume 84 ; 84 ; >
+      au < frozen ; exists ; 2001 ; Journal of Applied Communications Volume 85 ; 85 ; >
+      au < frozen ; exists ; 2002 ; Journal of Applied Communications Volume 86 ; 86 ; >
+      au < frozen ; exists ; 2003 ; Journal of Applied Communications Volume 87 ; 87 ; >
       au < finished ; finished ; 2004 ; Journal of Applied Communications Volume 88 ; 88 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2005 ; Journal of Applied Communications Volume 89 ; 89 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2006 ; Journal of Applied Communications Volume 90 ; 90 ; reingest5.clockss.org:8082 >
@@ -691,7 +691,7 @@
       au < deepCrawl ; exists ; 2018 ; Journal of Applied Communications Volume 102 ; 102 ; >
       au < finished ; frozen ; 2019 ; Journal of Applied Communications Volume 103 ; 103 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2020 ; Journal of Applied Communications Volume 104 ; 104 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2021 ; Journal of Applied Communications Volume 105 ; 105 ; >
+      au < deepCrawl ; exists ; 2021 ; Journal of Applied Communications Volume 105 ; 105 ; >
       au < crawling ; exists ; 2022 ; Journal of Applied Communications Volume 106 ; 106 ; >
 
   }
@@ -709,10 +709,10 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = jhsr
 
-      au < crawling ; exists ; 1998 ; Journal of Hazardous Substance Research Volume 1 ; 1 ; >
-      au < crawling ; exists ; 1999-2000 ; Journal of Hazardous Substance Research Volume 2 ; 2 ; >
-      au < crawling ; exists ; 2001-2002 ; Journal of Hazardous Substance Research Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2003 ; Journal of Hazardous Substance Research Volume 4 ; 4 ; >
+      au < frozen ; exists ; 1998 ; Journal of Hazardous Substance Research Volume 1 ; 1 ; >
+      au < frozen ; exists ; 1999-2000 ; Journal of Hazardous Substance Research Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2001-2002 ; Journal of Hazardous Substance Research Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2003 ; Journal of Hazardous Substance Research Volume 4 ; 4 ; >
       au < finished ; finished ; 2006 ; Journal of Hazardous Substance Research Volume 5 ; 5 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2007 ; Journal of Hazardous Substance Research Volume 6 ; 6 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2007 ; Journal of Hazardous Substance Research Volume 7 ; 7 ; reingest4.clockss.org:8082 >
@@ -739,7 +739,7 @@
       au < finished ; finished ; 2018 ; Kansas Agricultural Experiment Station Research Reports Volume 4 ; 4 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2019 ; Kansas Agricultural Experiment Station Research Reports Volume 5 ; 5 ; >
       au < deepCrawl ; exists ; 2020 ; Kansas Agricultural Experiment Station Research Reports Volume 6 ; 6 ; >
-      au < crawling ; exists ; 2021 ; Kansas Agricultural Experiment Station Research Reports Volume 7 ; 7 ; >
+      au < deepCrawl ; exists ; 2021 ; Kansas Agricultural Experiment Station Research Reports Volume 7 ; 7 ; >
       au < crawling ; exists ; 2022 ; Kansas Agricultural Experiment Station Research Reports Volume 8 ; 8 ; >
 
   }
@@ -782,13 +782,13 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = networks
 
-      au < crawling ; exists ; 1998 ; Networks: An Online Journal for Teacher Research Volume 1 ; 1 ; >
-      au < crawling ; exists ; 1999 ; Networks: An Online Journal for Teacher Research Volume 2 ; 2 ; >
-      au < crawling ; exists ; 2000 ; Networks: An Online Journal for Teacher Research Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2001 ; Networks: An Online Journal for Teacher Research Volume 4 ; 4 ; >
-      au < crawling ; exists ; 2002 ; Networks: An Online Journal for Teacher Research Volume 5 ; 5 ; >
-      au < crawling ; exists ; 2003 ; Networks: An Online Journal for Teacher Research Volume 6 ; 6 ; >
-      au < crawling ; exists ; 2004 ; Networks: An Online Journal for Teacher Research Volume 7 ; 7 ; >
+      au < frozen ; exists ; 1998 ; Networks: An Online Journal for Teacher Research Volume 1 ; 1 ; >
+      au < frozen ; exists ; 1999 ; Networks: An Online Journal for Teacher Research Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2000 ; Networks: An Online Journal for Teacher Research Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2001 ; Networks: An Online Journal for Teacher Research Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2002 ; Networks: An Online Journal for Teacher Research Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2003 ; Networks: An Online Journal for Teacher Research Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2004 ; Networks: An Online Journal for Teacher Research Volume 7 ; 7 ; >
       au < finished ; finished ; 2005 ; Networks: An Online Journal for Teacher Research Volume 8 ; 8 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2006 ; Networks: An Online Journal for Teacher Research Volume 9 ; 9 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2008 ; Networks: An Online Journal for Teacher Research Volume 10 ; 10 ; reingest3.clockss.org:8083 >
@@ -804,7 +804,7 @@
       au < finished ; finished ; 2018 ; Networks: An Online Journal for Teacher Research Volume 20 ; 20 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2019 ; Networks: An Online Journal for Teacher Research Volume 21 ; 21 ; >
       au < deepCrawl ; exists ; 2020 ; Networks: An Online Journal for Teacher Research Volume 22 ; 22 ; >
-      au < crawling ; exists ; 2021 ; Networks: An Online Journal for Teacher Research Volume 23 ; 23 ; >
+      au < deepCrawl ; exists ; 2021 ; Networks: An Online Journal for Teacher Research Volume 23 ; 23 ; >
       au < expected ; exists ; 2022 ; Networks: An Online Journal for Teacher Research Volume 24 ; 24 ; >
 
   }
@@ -833,21 +833,21 @@
       au < manifest ; exists ; 1987 ; Oz Volume 9 ; 9 ; >
       au < manifest ; exists ; 1988 ; Oz Volume 10 ; 10 ; >
       au < manifest ; exists ; 1989 ; Oz Volume 11 ; 11 ; >
-      au < crawling ; exists ; 1990 ; Oz Volume 12 ; 12 ; >
-      au < crawling ; exists ; 1991 ; Oz Volume 13 ; 13 ; >
-      au < crawling ; exists ; 1992 ; Oz Volume 14 ; 14 ; >
-      au < crawling ; exists ; 1993 ; Oz Volume 15 ; 15 ; >
-      au < crawling ; exists ; 1994 ; Oz Volume 16 ; 16 ; >
-      au < crawling ; exists ; 1995 ; Oz Volume 17 ; 17 ; >
-      au < crawling ; exists ; 1996 ; Oz Volume 18 ; 18 ; >
-      au < crawling ; exists ; 1997 ; Oz Volume 19 ; 19 ; >
-      au < crawling ; exists ; 1998 ; Oz Volume 20 ; 20 ; >
-      au < crawling ; exists ; 1999 ; Oz Volume 21 ; 21 ; >
-      au < crawling ; exists ; 2000 ; Oz Volume 22 ; 22 ; >
-      au < crawling ; exists ; 2001 ; Oz Volume 23 ; 23 ; >
-      au < crawling ; exists ; 2002 ; Oz Volume 24 ; 24 ; >
-      au < crawling ; exists ; 2003 ; Oz Volume 25 ; 25 ; >
-      au < crawling ; exists ; 2004 ; Oz Volume 26 ; 26 ; >
+      au < frozen ; exists ; 1990 ; Oz Volume 12 ; 12 ; >
+      au < frozen ; exists ; 1991 ; Oz Volume 13 ; 13 ; >
+      au < frozen ; exists ; 1992 ; Oz Volume 14 ; 14 ; >
+      au < frozen ; exists ; 1993 ; Oz Volume 15 ; 15 ; >
+      au < frozen ; exists ; 1994 ; Oz Volume 16 ; 16 ; >
+      au < frozen ; exists ; 1995 ; Oz Volume 17 ; 17 ; >
+      au < frozen ; exists ; 1996 ; Oz Volume 18 ; 18 ; >
+      au < frozen ; exists ; 1997 ; Oz Volume 19 ; 19 ; >
+      au < frozen ; exists ; 1998 ; Oz Volume 20 ; 20 ; >
+      au < frozen ; exists ; 1999 ; Oz Volume 21 ; 21 ; >
+      au < frozen ; exists ; 2000 ; Oz Volume 22 ; 22 ; >
+      au < frozen ; exists ; 2001 ; Oz Volume 23 ; 23 ; >
+      au < frozen ; exists ; 2002 ; Oz Volume 24 ; 24 ; >
+      au < frozen ; exists ; 2003 ; Oz Volume 25 ; 25 ; >
+      au < frozen ; exists ; 2004 ; Oz Volume 26 ; 26 ; >
       au < finished ; finished ; 2005 ; Oz Volume 27 ; 27 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2006 ; Oz Volume 28 ; 28 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2007 ; Oz Volume 29 ; 29 ; reingest1.clockss.org:8082 >
@@ -923,7 +923,7 @@
       au < finished ; finished ; 2018 ; Seek Volume 8 ; 8 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2019 ; Seek Volume 9 ; 9 ; >
       au < finished ; frozen ; 2020 ; Seek Volume 10 ; 10 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2021 ; Seek Volume 11 ; 11 ; >
+      au < frozen ; exists ; 2021 ; Seek Volume 11 ; 11 ; >
       au < crawling ; exists ; 2022 ; Seek Volume 12 ; 12 ; >
 
   }
@@ -955,19 +955,19 @@
       au < manifest ; exists ; 1986-1987 ; Studies in 20th & 21st Century Literature Volume 11 ; 11 ; >
       au < manifest ; exists ; 1987-1988 ; Studies in 20th & 21st Century Literature Volume 12 ; 12 ; >
       au < manifest ; exists ; 1989 ; Studies in 20th & 21st Century Literature Volume 13 ; 13 ; >
-      au < crawling ; exists ; 1990 ; Studies in 20th & 21st Century Literature Volume 14 ; 14 ; >
-      au < crawling ; exists ; 1991 ; Studies in 20th & 21st Century Literature Volume 15 ; 15 ; >
-      au < crawling ; exists ; 1992 ; Studies in 20th & 21st Century Literature Volume 16 ; 16 ; >
-      au < crawling ; exists ; 1993 ; Studies in 20th & 21st Century Literature Volume 17 ; 17 ; >
-      au < crawling ; exists ; 1994 ; Studies in 20th & 21st Century Literature Volume 18 ; 18 ; >
-      au < crawling ; exists ; 1995 ; Studies in 20th & 21st Century Literature Volume 19 ; 19 ; >
-      au < crawling ; exists ; 1996 ; Studies in 20th & 21st Century Literature Volume 20 ; 20 ; >
-      au < crawling ; exists ; 1997 ; Studies in 20th & 21st Century Literature Volume 21 ; 21 ; >
-      au < crawling ; exists ; 1998 ; Studies in 20th & 21st Century Literature Volume 22 ; 22 ; >
-      au < crawling ; exists ; 1999 ; Studies in 20th & 21st Century Literature Volume 23 ; 23 ; >
-      au < crawling ; exists ; 2000 ; Studies in 20th & 21st Century Literature Volume 24 ; 24 ; >
-      au < crawling ; exists ; 2001 ; Studies in 20th & 21st Century Literature Volume 25 ; 25 ; >
-      au < crawling ; exists ; 2002 ; Studies in 20th & 21st Century Literature Volume 26 ; 26 ; >
+      au < frozen ; exists ; 1990 ; Studies in 20th & 21st Century Literature Volume 14 ; 14 ; >
+      au < frozen ; exists ; 1991 ; Studies in 20th & 21st Century Literature Volume 15 ; 15 ; >
+      au < frozen ; exists ; 1992 ; Studies in 20th & 21st Century Literature Volume 16 ; 16 ; >
+      au < frozen ; exists ; 1993 ; Studies in 20th & 21st Century Literature Volume 17 ; 17 ; >
+      au < frozen ; exists ; 1994 ; Studies in 20th & 21st Century Literature Volume 18 ; 18 ; >
+      au < frozen ; exists ; 1995 ; Studies in 20th & 21st Century Literature Volume 19 ; 19 ; >
+      au < frozen ; exists ; 1996 ; Studies in 20th & 21st Century Literature Volume 20 ; 20 ; >
+      au < frozen ; exists ; 1997 ; Studies in 20th & 21st Century Literature Volume 21 ; 21 ; >
+      au < frozen ; exists ; 1998 ; Studies in 20th & 21st Century Literature Volume 22 ; 22 ; >
+      au < frozen ; exists ; 1999 ; Studies in 20th & 21st Century Literature Volume 23 ; 23 ; >
+      au < frozen ; exists ; 2000 ; Studies in 20th & 21st Century Literature Volume 24 ; 24 ; >
+      au < frozen ; exists ; 2001 ; Studies in 20th & 21st Century Literature Volume 25 ; 25 ; >
+      au < frozen ; exists ; 2002 ; Studies in 20th & 21st Century Literature Volume 26 ; 26 ; >
       au < crawling ; exists ; 2003 ; Studies in 20th & 21st Century Literature Volume 27 ; 27 ; >
       au < crawling ; exists ; 2004 ; Studies in 20th & 21st Century Literature Volume 28 ; 28 ; >
       au < finished ; crawling ; 2005 ; Studies in 20th & 21st Century Literature Volume 29 ; 29 ; reingest3.clockss.org:8083 >
