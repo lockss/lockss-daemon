@@ -32,6 +32,8 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.clockss.nzma;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -53,6 +55,7 @@ import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 public class PasifikaPubMedXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
   private static final Logger log = Logger.getLogger(PasifikaPubMedXmlMetadataExtractorFactory.class);
   private static final String Preferred_PUBLISHER = "Pasifika Medical Association Group";
+  private static final int TITLE_STRING_LEN = 50;
 
   private static SourceXmlSchemaHelper PubMedHelper = null;
 
@@ -121,12 +124,32 @@ public class PasifikaPubMedXmlMetadataExtractorFactory extends SourceXmlMetadata
           pageRange = "9999";
         }
 
-
         String customAccessUrl = thisAM.get(MetadataField.FIELD_ACCESS_URL) + "?unique_record_id=" + pageRange;
+        String articleTitle = thisAM.get(MetadataField.FIELD_ARTICLE_TITLE);
+
+        //in 2021 folder, there are two articles with the same startpage and endpage,
+        //so need to append partical article title to make access.url unique
+        if (articleTitle != null) {
+            if (articleTitle.length() >= TITLE_STRING_LEN) {
+                try {
+                    customAccessUrl = customAccessUrl + "&article_title="
+                            + URLEncoder.encode(articleTitle.toLowerCase().substring(0, TITLE_STRING_LEN), "UTF-8");
+                } catch (UnsupportedEncodingException e) {
+                    log.warning("UnsupportedEncodingException", e);
+                }
+            } else {
+                try {
+                    customAccessUrl = customAccessUrl + "&article_title="
+                            + URLEncoder.encode(articleTitle.toLowerCase() , "UTF-8");
+                } catch (UnsupportedEncodingException e) {
+                    log.warning("UnsupportedEncodingException", e);
+                }
+            }
+        }
+        
         log.debug3("customAccessUrl  = " + customAccessUrl );
 
         thisAM.replace(MetadataField.FIELD_ACCESS_URL, customAccessUrl);
     }
-
   }
 }
