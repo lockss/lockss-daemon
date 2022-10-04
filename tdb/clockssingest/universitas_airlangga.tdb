@@ -390,7 +390,7 @@
       title <
         name = Amerta Nutrition ;
         issn = 2580-1163 ;
-        eissn =  2580-9776
+        eissn = 2580-9776
       >
 
       param[journal_id] = AMNT
@@ -408,7 +408,6 @@
 
       title <
         name = Record and Library Journal ;
-        issn = - ;
         eissn = 2442-5168
       >
 
@@ -602,8 +601,8 @@
 
       title <
         name = The Indonesian Journal of Occupational Safety and Health ;
-        issn = 2301 8046 ;
-        eissn = 2540 7872
+        issn = 2301-8046 ;
+        eissn = 2540-7872
       >
 
       param[journal_id] = IJOSH
@@ -623,8 +622,7 @@
 
       title <
         name = Jurnal Riset Akuntansi dan Bisnis Airlangga (JRABA) ;
-        issn = 2548-1401 ;
-        eissn =  
+        issn = 2548-1401
       >
 
       param[journal_id] = jraba
@@ -638,7 +636,6 @@
 
       title <
         name = The International Journal of Applied Business (TIJAB) ;
-        issn = - ;
         eissn = 2599-0705
       >
 
@@ -657,7 +654,6 @@
 
       title <
         name = Etnolingual ;
-        issn = - ;
         eissn = 2580-0280
       >
 
@@ -846,7 +842,6 @@
 
       title <
         name = Indonesian Journal of Dental Medicine ;
-        issn = - ;
         eissn =  2774-9959
       >
 
@@ -912,7 +907,6 @@
 
       title <
         name = JUXTA: Jurnal Ilmiah Mahasiswa Kedokteran Universitas Airlangga ;
-        issn = - ;
         eissn = 2686-5564
       >
 
@@ -1025,7 +1019,6 @@
 
       title <
         name = Airlangga Journal of Innovation Management ;
-        issn = - ;
         eissn = 2722-5062
       >
 
@@ -1397,6 +1390,11 @@
 
       param[journal_id] = DIALEKTIKA
 
+      au < exists ; exists ; 2018 ; Jurnal Sosiologi Dialektika Volume 13 ; 13 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Jurnal Sosiologi Dialektika Volume 14 ; 14 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Jurnal Sosiologi Dialektika Volume 15 ; 15 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Jurnal Sosiologi Dialektika Volume 16 ; 16 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Jurnal Sosiologi Dialektika Volume 17 ; 17 ; 2022 ; >
 
   }
 
@@ -1404,7 +1402,6 @@
 
       title <
         name = Current Internal Medicine Research and Practice Surabaya Journal ;
-        issn = - ;
         eissn = 2721-544X
       >
 
@@ -1473,7 +1470,6 @@
 
       title <
         name = Surabaya Physical Medicine and Rehabilitation Journal  ;
-        issn = - ;
         eissn = 2656-0895
       >
 
@@ -1490,7 +1486,6 @@
 
       title <
         name = Indonesian Applied Physics Letters ;
-        issn = - ;
         eissn = 2745-3502
       >
 
@@ -1556,7 +1551,6 @@
 
       title <
         name = Journal of Community Medicine and Public Health Research ;
-        issn = - ;
         eissn = 2723-035X
       >
 
@@ -1607,7 +1601,6 @@
 
       title <
         name = Indonesian Andrology and Biomedical Journal ;
-        issn = - ;
         eissn = 2746-4474
       >
 
@@ -1623,7 +1616,6 @@
 
       title <
         name = Jurnal Farmasi Komunitas ;
-        issn = - ;
         eissn = 2355-5912
       >
 
@@ -1640,7 +1632,7 @@
 
       title <
         name = Media Kedokteran Hewan ;
-        issn = 2015-8930 ;
+        issn = 0215-8930 ;
         eissn = 2775-975X
       >
 
@@ -1706,7 +1698,6 @@
 
       title <
         name = Medkom (Jurnal Media dan Komunikasi) ;
-        issn = - ;
         eissn = 2776-3609
       >
 
@@ -1738,7 +1729,6 @@
 
       title <
         name = Indonesian Midwifery and Health Sciences Journal ;
-        issn = - ;
         eissn =  2656-7806
       >
 
@@ -1755,7 +1745,6 @@
 
       title <
         name = Buletin Riset Psikologi dan Kesehatan Mental ;
-        issn = - ;
         eissn = 2776-1851
       >
 
@@ -1788,7 +1777,6 @@
 
       title <
         name = Aksona ;
-        issn = - ;
         eissn = 2807-7970
       >
 
@@ -1819,7 +1807,6 @@
 
       title <
         name = Vision Science and Eye Health Journal ;
-        issn = - ;
         eissn = 2809-218X
       >
 
@@ -1865,9 +1852,7 @@
   {
 
       title <
-        name = Journal of Bio-Molecule Research and Engineering ;
-        issn = - ;
-        eissn = on process
+        name = Journal of Bio-Molecule Research and Engineering
       >
 
       param[journal_id] = biome
