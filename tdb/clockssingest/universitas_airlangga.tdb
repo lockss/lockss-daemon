@@ -1,0 +1,1879 @@
+{
+
+  publisher <
+    name = Universitas Airlangga ;
+    info[contract] = 2022 ;
+    info[back] = 2012 ;
+    info[tester] = 8 ;
+    info[poller] = 8
+  >
+
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    param[base_url] = https://e-journal.unair.ac.id/
+    implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
+    #OJS3
+    attr[start_stem] = index.php/
+
+  {
+
+      title <
+        name = Dental Journal (Majalah Kedokteran Gigi) ;
+        issn = 1978-3728 ;
+        eissn = 2442-9740
+      >
+
+      param[journal_id] = MKG
+
+      au < manifest ; exists ; 2005 ; Dental Journal (Majalah Kedokteran Gigi) Volume 38 ; 38 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; Dental Journal (Majalah Kedokteran Gigi) Volume 39 ; 39 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; Dental Journal (Majalah Kedokteran Gigi) Volume 40 ; 40 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; Dental Journal (Majalah Kedokteran Gigi) Volume 41 ; 41 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; Dental Journal (Majalah Kedokteran Gigi) Volume 42 ; 42 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; Dental Journal (Majalah Kedokteran Gigi) Volume 43 ; 43 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; Dental Journal (Majalah Kedokteran Gigi) Volume 44 ; 44 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; Dental Journal (Majalah Kedokteran Gigi) Volume 45 ; 45 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; Dental Journal (Majalah Kedokteran Gigi) Volume 46 ; 46 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; Dental Journal (Majalah Kedokteran Gigi) Volume 47 ; 47 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; Dental Journal (Majalah Kedokteran Gigi) Volume 48 ; 48 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; Dental Journal (Majalah Kedokteran Gigi) Volume 49 ; 49 ; 2016 ; >
+      au < manifest ; exists ; 2017 ; Dental Journal (Majalah Kedokteran Gigi) Volume 50 ; 50 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; Dental Journal (Majalah Kedokteran Gigi) Volume 51 ; 51 ; 2018 ; >
+      au < manifest ; exists ; 2019 ; Dental Journal (Majalah Kedokteran Gigi) Volume 52 ; 52 ; 2019 ; >
+      au < manifest ; exists ; 2020 ; Dental Journal (Majalah Kedokteran Gigi) Volume 53 ; 53 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; Dental Journal (Majalah Kedokteran Gigi) Volume 54 ; 54 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; Dental Journal (Majalah Kedokteran Gigi) Volume 55 ; 55 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Yuridika ;
+        issn = 0215-840X ;
+        eissn = 2528-3103
+      >
+
+      param[journal_id] = YDK
+
+      au < exists ; exists ; 1991 ; Yuridika Volume 6 ; 6 ; 1991 ; >
+      au < exists ; exists ; 1992 ; Yuridika Volume 7 ; 7 ; 1992 ; >
+      au < exists ; exists ; 1993 ; Yuridika Volume 8 ; 8 ; 1993 ; >
+      au < exists ; exists ; 1994 ; Yuridika Volume 9 ; 9 ; 1994 ; >
+      au < exists ; exists ; 1995 ; Yuridika Volume 10 ; 10 ; 1995 ; >
+      au < exists ; exists ; 1996 ; Yuridika Volume 11 ; 11 ; 1996 ; >
+      au < exists ; exists ; 1997 ; Yuridika Volume 12 ; 12 ; 1997 ; >
+      au < exists ; exists ; 1998 ; Yuridika Volume 13 ; 13 ; 1998 ; >
+      au < exists ; exists ; 1999 ; Yuridika Volume 14 ; 14 ; 1999 ; >
+      au < exists ; exists ; 2000 ; Yuridika Volume 15 ; 15 ; 2000 ; >
+      au < exists ; exists ; 2001 ; Yuridika Volume 16 ; 16 ; 2001 ; >
+      au < exists ; exists ; 2002 ; Yuridika Volume 17 ; 17 ; 2002 ; >
+      au < exists ; exists ; 2003 ; Yuridika Volume 18 ; 18 ; 2003 ; >
+      au < exists ; exists ; 2004 ; Yuridika Volume 19 ; 19 ; 2004 ; >
+      au < exists ; exists ; 2005 ; Yuridika Volume 20 ; 20 ; 2005 ; >
+      au < exists ; exists ; 2006 ; Yuridika Volume 21 ; 21 ; 2006 ; >
+      au < exists ; exists ; 2007 ; Yuridika Volume 22 ; 22 ; 2007 ; >
+      au < exists ; exists ; 2008 ; Yuridika Volume 23 ; 23 ; 2008 ; >
+      au < exists ; exists ; 2009 ; Yuridika Volume 24 ; 24 ; 2009 ; >
+      au < exists ; exists ; 2010 ; Yuridika Volume 25 ; 25 ; 2010 ; >
+      au < exists ; exists ; 2011 ; Yuridika Volume 26 ; 26 ; 2011 ; >
+      au < exists ; exists ; 2012 ; Yuridika Volume 27 ; 27 ; 2012 ; >
+      au < exists ; exists ; 2013 ; Yuridika Volume 28 ; 28 ; 2013 ; >
+      au < exists ; exists ; 2014 ; Yuridika Volume 29 ; 29 ; 2014 ; >
+      au < exists ; exists ; 2015 ; Yuridika Volume 30 ; 30 ; 2015 ; >
+      au < exists ; exists ; 2016 ; Yuridika Volume 31 ; 31 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Yuridika Volume 32 ; 32 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Yuridika Volume 33 ; 33 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Yuridika Volume 34 ; 34 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Yuridika Volume 35 ; 35 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Yuridika Volume 36 ; 36 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Yuridika Volume 37 ; 37 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Masyarakat, Kebudayaan dan Politik ;
+        issn = 2086-7050 ;
+        eissn = 2528-6013
+      >
+
+      param[journal_id] = MKP
+
+      au < exists ; exists ; 2014 ; Masyarakat, Kebudayaan dan Politik Volume 27 ; 27 ; 2014 ; >
+      au < exists ; exists ; 2015 ; Masyarakat, Kebudayaan dan Politik Volume 28 ; 28 ; 2015 ; >
+      au < exists ; exists ; 2016 ; Masyarakat, Kebudayaan dan Politik Volume 29 ; 29 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Masyarakat, Kebudayaan dan Politik Volume 30 ; 30 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Masyarakat, Kebudayaan dan Politik Volume 31 ; 31 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Masyarakat, Kebudayaan dan Politik Volume 32 ; 32 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Masyarakat, Kebudayaan dan Politik Volume 33 ; 33 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Masyarakat, Kebudayaan dan Politik Volume 34 ; 34 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Masyarakat, Kebudayaan dan Politik Volume 35 ; 35 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Jurnal Ners ;
+        issn = 1858-3598 ;
+        eissn = 2502-5791
+      >
+
+      param[journal_id] = JNERS
+
+      au < exists ; exists ; 2007 ; Jurnal Ners Volume 2 ; 2 ; 2007 ; >
+      au < exists ; exists ; 2008 ; Jurnal Ners Volume 3 ; 3 ; 2008 ; >
+      au < exists ; exists ; 2009 ; Jurnal Ners Volume 4 ; 4 ; 2009 ; >
+      au < exists ; exists ; 2010 ; Jurnal Ners Volume 5 ; 5 ; 2010 ; >
+      au < exists ; exists ; 2011 ; Jurnal Ners Volume 6 ; 6 ; 2011 ; >
+      au < exists ; exists ; 2012 ; Jurnal Ners Volume 7 ; 7 ; 2012 ; >
+      au < exists ; exists ; 2013 ; Jurnal Ners Volume 8 ; 8 ; 2013 ; >
+      au < exists ; exists ; 2014 ; Jurnal Ners Volume 9 ; 9 ; 2014 ; >
+      au < exists ; exists ; 2015 ; Jurnal Ners Volume 10 ; 10 ; 2015 ; >
+      au < exists ; exists ; 2016 ; Jurnal Ners Volume 11 ; 11 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Jurnal Ners Volume 12 ; 12 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Jurnal Ners Volume 13 ; 13 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Jurnal Ners Volume 14 ; 14 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Jurnal Ners Volume 15 ; 15 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Jurnal Ners Volume 16 ; 16 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Jurnal Ners Volume 17 ; 17 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Folia Medica Indonesiana ;
+        issn = 2355-8393 ;
+        eissn = 2599-056X
+      >
+
+      param[journal_id] = FMI
+
+      au < exists ; exists ; 2015 ; Folia Medica Indonesiana Volume 51 ; 51 ; 2015 ; >
+      au < exists ; exists ; 2016 ; Folia Medica Indonesiana Volume 52 ; 52 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Folia Medica Indonesiana Volume 53 ; 53 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Folia Medica Indonesiana Volume 54 ; 54 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Folia Medica Indonesiana Volume 55 ; 55 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Folia Medica Indonesiana Volume 56 ; 56 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Folia Medica Indonesiana Volume 57 ; 57 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Folia Medica Indonesiana Volume 58 ; 58 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Indonesian Journal of Tropical and Infectious Disease ;
+        issn = 2085-1103 ;
+        eissn = 2356-0991
+      >
+
+      param[journal_id] = IJTID
+
+      au < exists ; exists ; 2010 ; Indonesian Journal of Tropical and Infectious Disease Volume 1 ; 1 ; 2010 ; >
+      au < exists ; exists ; 2011 ; Indonesian Journal of Tropical and Infectious Disease Volume 2 ; 2 ; 2011 ; >
+      au < exists ; exists ; 2012 ; Indonesian Journal of Tropical and Infectious Disease Volume 3 ; 3 ; 2012 ; >
+      au < exists ; exists ; 2013 ; Indonesian Journal of Tropical and Infectious Disease Volume 4 ; 4 ; 2013 ; >
+      au < exists ; exists ; 2014 ; Indonesian Journal of Tropical and Infectious Disease Volume 5 ; 5 ; 2014 ; >
+      au < exists ; exists ; 2015 ; Indonesian Journal of Tropical and Infectious Disease Volume 6 ; 6 ; 2015 ; >
+      au < exists ; exists ; 2016 ; Indonesian Journal of Tropical and Infectious Disease Volume 7 ; 7 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Indonesian Journal of Tropical and Infectious Disease Volume 8 ; 8 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Indonesian Journal of Tropical and Infectious Disease Volume 9 ; 9 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Indonesian Journal of Tropical and Infectious Disease Volume 10 ; 10 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Indonesian Journal of Tropical and Infectious Disease Volume 11 ; 11 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Indonesian Journal of Tropical and Infectious Disease Volume 12 ; 12 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Indonesian Journal of Tropical and Infectious Disease Volume 13 ; 13 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Information Systems Engineering and Business Intelligence (JISEBI) ;
+        issn = 2598-6333 ;
+        eissn = 2443-2555
+      >
+
+      param[journal_id] = JISEBI
+
+      au < exists ; exists ; 2015 ; Journal of Information Systems Engineering and Business Intelligence (JISEBI) Volume 1 ; 1 ; 2015 ; >
+      au < exists ; exists ; 2016 ; Journal of Information Systems Engineering and Business Intelligence (JISEBI) Volume 2 ; 2 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Journal of Information Systems Engineering and Business Intelligence (JISEBI) Volume 3 ; 3 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Journal of Information Systems Engineering and Business Intelligence (JISEBI) Volume 4 ; 4 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Journal of Information Systems Engineering and Business Intelligence (JISEBI) Volume 5 ; 5 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Journal of Information Systems Engineering and Business Intelligence (JISEBI) Volume 6 ; 6 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Journal of Information Systems Engineering and Business Intelligence (JISEBI) Volume 7 ; 7 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Journal of Information Systems Engineering and Business Intelligence (JISEBI) Volume 8 ; 8 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Majalah Obstetri dan Ginekologi ;
+        issn = 0854-0381 ;
+        eissn = 2598-1013
+      >
+
+      param[journal_id] = mog
+
+      au < exists ; exists ; 2015 ; Majalah Obstetri dan Ginekologi Volume 23 ; 23 ; 2015 ; >
+      au < exists ; exists ; 2016 ; Majalah Obstetri dan Ginekologi Volume 24 ; 24 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Majalah Obstetri dan Ginekologi Volume 25 ; 25 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Majalah Obstetri dan Ginekologi Volume 26 ; 26 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Majalah Obstetri dan Ginekologi Volume 27 ; 27 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Majalah Obstetri dan Ginekologi Volume 28 ; 28 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Majalah Obstetri dan Ginekologi Volume 29 ; 29 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Majalah Obstetri dan Ginekologi Volume 30 ; 30 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Berkala Ilmu Kesehatan Kulit dan Kelamin ;
+        issn = 1978-4279 ;
+        eissn = 2549-4082
+      >
+
+      param[journal_id] = BIKK
+
+      au < exists ; exists ; 2014 ; Berkala Ilmu Kesehatan Kulit dan Kelamin Volume 26 ; 26 ; 2014 ; >
+      au < exists ; exists ; 2015 ; Berkala Ilmu Kesehatan Kulit dan Kelamin Volume 27 ; 27 ; 2015 ; >
+      au < exists ; exists ; 2016 ; Berkala Ilmu Kesehatan Kulit dan Kelamin Volume 28 ; 28 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Berkala Ilmu Kesehatan Kulit dan Kelamin Volume 29 ; 29 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Berkala Ilmu Kesehatan Kulit dan Kelamin Volume 30 ; 30 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Berkala Ilmu Kesehatan Kulit dan Kelamin Volume 31 ; 31 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Berkala Ilmu Kesehatan Kulit dan Kelamin Volume 32 ; 32 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Berkala Ilmu Kesehatan Kulit dan Kelamin Volume 33 ; 33 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Berkala Ilmu Kesehatan Kulit dan Kelamin Volume 34 ; 34 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Mozaik Humaniora ;
+        issn = 2442-8469 ;
+        eissn = 2442-935X
+      >
+
+      param[journal_id] = MOZAIK
+
+      au < exists ; exists ; 2013 ; Mozaik Humaniora Volume 13 ; 13 ; 2013 ; >
+      au < exists ; exists ; 2014 ; Mozaik Humaniora Volume 14 ; 14 ; 2014 ; >
+      au < exists ; exists ; 2015 ; Mozaik Humaniora Volume 15 ; 15 ; 2015 ; >
+      au < exists ; exists ; 2016 ; Mozaik Humaniora Volume 16 ; 16 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Mozaik Humaniora Volume 17 ; 17 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Mozaik Humaniora Volume 18 ; 18 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Mozaik Humaniora Volume 19 ; 19 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Mozaik Humaniora Volume 20 ; 20 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Mozaik Humaniora Volume 21 ; 21 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Mozaik Humaniora Volume 22 ; 22 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Global Strategis ;
+        issn = 1907-9729 ;
+        eissn = 2442-9600
+      >
+
+      param[journal_id] = JGS
+
+      au < exists ; exists ; 2015 ; Global Strategis Volume 9 ; 9 ; 2015 ; >
+      au < exists ; exists ; 2016 ; Global Strategis Volume 10 ; 10 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Global Strategis Volume 11 ; 11 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Global Strategis Volume 12 ; 12 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Global Strategis Volume 13 ; 13 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Global Strategis Volume 14 ; 14 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Global Strategis Volume 15 ; 15 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Global Strategis Volume 16 ; 16 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Jurnal Berkala Epidemiologi ;
+        issn = 2301-7171 ;
+        eissn = 2541-092X
+      >
+
+      param[journal_id] = JBE
+
+      au < exists ; exists ; 2014 ; Jurnal Berkala Epidemiologi Volume 2 ; 2 ; 2014 ; >
+      au < exists ; exists ; 2015 ; Jurnal Berkala Epidemiologi Volume 3 ; 3 ; 2015 ; >
+      au < exists ; exists ; 2016 ; Jurnal Berkala Epidemiologi Volume 4 ; 4 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Jurnal Berkala Epidemiologi Volume 5 ; 5 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Jurnal Berkala Epidemiologi Volume 6 ; 6 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Jurnal Berkala Epidemiologi Volume 7 ; 7 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Jurnal Berkala Epidemiologi Volume 8 ; 8 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Jurnal Berkala Epidemiologi Volume 9 ; 9 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Jurnal Berkala Epidemiologi Volume 10 ; 10 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Media Gizi Indonesia ;
+        issn = 1693-7228 ;
+        eissn = 2540-8410
+      >
+
+      param[journal_id] = MGI
+
+      au < exists ; exists ; 2015 ; Media Gizi Indonesia Volume 10 ; 10 ; 2015 ; >
+      au < exists ; exists ; 2016 ; Media Gizi Indonesia Volume 11 ; 11 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Media Gizi Indonesia Volume 12 ; 12 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Media Gizi Indonesia Volume 13 ; 13 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Media Gizi Indonesia Volume 14 ; 14 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Media Gizi Indonesia Volume 15 ; 15 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Media Gizi Indonesia Volume 16 ; 16 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Media Gizi Indonesia Volume 17 ; 17 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Jurnal Administrasi Kesehatan Indonesia ;
+        issn = 2303-3592 ;
+        eissn = 2540-9301
+      >
+
+      param[journal_id] = JAKI
+
+      au < exists ; exists ; 2015 ; Jurnal Administrasi Kesehatan Indonesia Volume 3 ; 3 ; 2015 ; >
+      au < exists ; exists ; 2016 ; Jurnal Administrasi Kesehatan Indonesia Volume 4 ; 4 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Jurnal Administrasi Kesehatan Indonesia Volume 5 ; 5 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Jurnal Administrasi Kesehatan Indonesia Volume 6 ; 6 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Jurnal Administrasi Kesehatan Indonesia Volume 7 ; 7 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Jurnal Administrasi Kesehatan Indonesia Volume 8 ; 8 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Jurnal Administrasi Kesehatan Indonesia Volume 9 ; 9 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Jurnal Administrasi Kesehatan Indonesia Volume 10 ; 10 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Jurnal Ilmiah Perikanan dan Kelautan ;
+        issn = 2085-5842 ;
+        eissn = 2528-0759
+      >
+
+      param[journal_id] = JIPK
+
+      au < exists ; exists ; 2011 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 3 ; 3 ; 2011 ; >
+      au < exists ; exists ; 2012 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 4 ; 4 ; 2012 ; >
+      au < exists ; exists ; 2013 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 5 ; 5 ; 2013 ; >
+      au < exists ; exists ; 2014 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 6 ; 6 ; 2014 ; >
+      au < exists ; exists ; 2015 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 7 ; 7 ; 2015 ; >
+      au < exists ; exists ; 2016 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 8 ; 8 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 9 ; 9 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 10 ; 10 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 11 ; 11 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 12 ; 12 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 13 ; 13 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 14 ; 14 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Amerta Nutrition ;
+        issn = 2580-1163 ;
+        eissn =  2580-9776
+      >
+
+      param[journal_id] = AMNT
+
+      au < exists ; exists ; 2017 ; Amerta Nutrition Volume 1 ; 1 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Amerta Nutrition Volume 2 ; 2 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Amerta Nutrition Volume 3 ; 3 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Amerta Nutrition Volume 4 ; 4 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Amerta Nutrition Volume 5 ; 5 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Amerta Nutrition Volume 6 ; 6 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Record and Library Journal ;
+        issn = - ;
+        eissn = 2442-5168
+      >
+
+      param[journal_id] = RLJ
+
+      au < exists ; exists ; 2015 ; Record and Library Journal Volume 1 ; 1 ; 2015 ; >
+      au < exists ; exists ; 2016 ; Record and Library Journal Volume 2 ; 2 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Record and Library Journal Volume 3 ; 3 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Record and Library Journal Volume 4 ; 4 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Record and Library Journal Volume 5 ; 5 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Record and Library Journal Volume 6 ; 6 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Record and Library Journal Volume 7 ; 7 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Record and Library Journal Volume 8 ; 8 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Jurnal Ekonomi dan Bisnis Islam ;
+        issn = 2442-6563 ;
+        eissn = 2527-3027
+      >
+
+      param[journal_id] = JEBIS
+
+      au < exists ; exists ; 2015 ; Jurnal Ekonomi dan Bisnis Islam Volume 1 ; 1 ; 2015 ; >
+      au < exists ; exists ; 2016 ; Jurnal Ekonomi dan Bisnis Islam Volume 2 ; 2 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Jurnal Ekonomi dan Bisnis Islam Volume 3 ; 3 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Jurnal Ekonomi dan Bisnis Islam Volume 4 ; 4 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Jurnal Ekonomi dan Bisnis Islam Volume 5 ; 5 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Jurnal Ekonomi dan Bisnis Islam Volume 6 ; 6 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Jurnal Ekonomi dan Bisnis Islam Volume 7 ; 7 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Jurnal Ekonomi dan Bisnis Islam Volume 8 ; 8 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Jurnal Manajemen Teori dan Terapan ;
+        issn = 1979-3650 ;
+        eissn = 2548-2149
+      >
+
+      param[journal_id] = JMTT
+
+      au < exists ; exists ; 2008 ; Jurnal Manajemen Teori dan Terapan Volume 1 ; 1 ; 2008 ; >
+      au < exists ; exists ; 2009 ; Jurnal Manajemen Teori dan Terapan Volume 2 ; 2 ; 2009 ; >
+      au < exists ; exists ; 2010 ; Jurnal Manajemen Teori dan Terapan Volume 3 ; 3 ; 2010 ; >
+      au < exists ; exists ; 2011 ; Jurnal Manajemen Teori dan Terapan Volume 4 ; 4 ; 2011 ; >
+      au < exists ; exists ; 2012 ; Jurnal Manajemen Teori dan Terapan Volume 5 ; 5 ; 2012 ; >
+      au < exists ; exists ; 2013 ; Jurnal Manajemen Teori dan Terapan Volume 6 ; 6 ; 2013 ; >
+      au < exists ; exists ; 2014 ; Jurnal Manajemen Teori dan Terapan Volume 7 ; 7 ; 2014 ; >
+      au < exists ; exists ; 2015 ; Jurnal Manajemen Teori dan Terapan Volume 8 ; 8 ; 2015 ; >
+      au < exists ; exists ; 2016 ; Jurnal Manajemen Teori dan Terapan Volume 9 ; 9 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Jurnal Manajemen Teori dan Terapan Volume 10 ; 10 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Jurnal Manajemen Teori dan Terapan Volume 11 ; 11 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Jurnal Manajemen Teori dan Terapan Volume 12 ; 12 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Jurnal Manajemen Teori dan Terapan Volume 13 ; 13 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Jurnal Manajemen Teori dan Terapan Volume 14 ; 14 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Jurnal Manajemen Teori dan Terapan Volume 15 ; 15 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Jurnal Kimia Riset ;
+        issn = 2528-0414 ;
+        eissn = 2528-0422
+      >
+
+      param[journal_id] = JKR
+
+      au < exists ; exists ; 2016 ; Jurnal Kimia Riset Volume 1 ; 1 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Jurnal Kimia Riset Volume 2 ; 2 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Jurnal Kimia Riset Volume 3 ; 3 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Jurnal Kimia Riset Volume 4 ; 4 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Jurnal Kimia Riset Volume 5 ; 5 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Jurnal Kimia Riset Volume 6 ; 6 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Jurnal Kimia Riset Volume 7 ; 7 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Jurnal Kesehatan Lingkungan ;
+        issn = 1829-7285 ;
+        eissn = 2540-881X
+      >
+
+      param[journal_id] = JKL
+
+      au < exists ; exists ; 2015 ; Jurnal Kesehatan Lingkungan Volume 8 ; 8 ; 2015 ; >
+      au < exists ; exists ; 2016 ; Jurnal Kesehatan Lingkungan Volume 9 ; 9 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Jurnal Kesehatan Lingkungan Volume 10 ; 10 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Jurnal Kesehatan Lingkungan Volume 11 ; 11 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Jurnal Kesehatan Lingkungan Volume 12 ; 12 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Jurnal Kesehatan Lingkungan Volume 13 ; 13 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Jurnal Kesehatan Lingkungan Volume 14 ; 14 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Jurnal Kesehatan Lingkungan Volume 15 ; 15 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Jurnal Biometrika dan Kependudukan ;
+        issn = 2302-707X ;
+        eissn = 2540-8828
+      >
+
+      param[journal_id] = JBK
+
+      au < exists ; exists ; 2016 ; Jurnal Biometrika dan Kependudukan Volume 5 ; 5 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Jurnal Biometrika dan Kependudukan Volume 6 ; 6 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Jurnal Biometrika dan Kependudukan Volume 7 ; 7 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Jurnal Biometrika dan Kependudukan Volume 8 ; 8 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Jurnal Biometrika dan Kependudukan Volume 9 ; 9 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Jurnal Biometrika dan Kependudukan Volume 10 ; 10 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Jurnal Biometrika dan Kependudukan Volume 11 ; 11 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = The Indonesian Journal of Public Health ;
+        issn = 1829-7005 ;
+        eissn = 2540-8836
+      >
+
+      param[journal_id] = IJPH
+
+      au < exists ; exists ; 2016 ; The Indonesian Journal of Public Health Volume 11 ; 11 ; 2016 ; >
+      au < exists ; exists ; 2017 ; The Indonesian Journal of Public Health Volume 12 ; 12 ; 2017 ; >
+      au < exists ; exists ; 2018 ; The Indonesian Journal of Public Health Volume 13 ; 13 ; 2018 ; >
+      au < exists ; exists ; 2019 ; The Indonesian Journal of Public Health Volume 14 ; 14 ; 2019 ; >
+      au < exists ; exists ; 2020 ; The Indonesian Journal of Public Health Volume 15 ; 15 ; 2020 ; >
+      au < exists ; exists ; 2021 ; The Indonesian Journal of Public Health Volume 16 ; 16 ; 2021 ; >
+      au < exists ; exists ; 2022 ; The Indonesian Journal of Public Health Volume 17 ; 17 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Jurnal Ekonomi Syariah Teori dan Terapan ;
+        issn = 2407-1935 ;
+        eissn = 2502-1508
+      >
+
+      param[journal_id] = JESTT
+
+      au < exists ; exists ; 2014 ; Jurnal Ekonomi Syariah Teori dan Terapan Volume 1 ; 1 ; 2014 ; >
+      au < exists ; exists ; 2015 ; Jurnal Ekonomi Syariah Teori dan Terapan Volume 2 ; 2 ; 2015 ; >
+      au < exists ; exists ; 2016 ; Jurnal Ekonomi Syariah Teori dan Terapan Volume 3 ; 3 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Jurnal Ekonomi Syariah Teori dan Terapan Volume 4 ; 4 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Jurnal Ekonomi Syariah Teori dan Terapan Volume 5 ; 5 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Jurnal Ekonomi Syariah Teori dan Terapan Volume 6 ; 6 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Jurnal Ekonomi Syariah Teori dan Terapan Volume 7 ; 7 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Jurnal Ekonomi Syariah Teori dan Terapan Volume 8 ; 8 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Jurnal Ekonomi Syariah Teori dan Terapan Volume 9 ; 9 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Jurnal Promkes: The Indonesian Journal of Health Promotion and Health Education ;
+        issn = 2085-3475 ;
+        eissn = 2540-9972
+      >
+
+      param[journal_id] = PROMKES
+
+      au < exists ; exists ; 2015 ; Jurnal Promkes: The Indonesian Journal of Health Promotion and Health Education Volume 3 ; 3 ; 2015 ; >
+      au < exists ; exists ; 2016 ; Jurnal Promkes: The Indonesian Journal of Health Promotion and Health Education Volume 4 ; 4 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Jurnal Promkes: The Indonesian Journal of Health Promotion and Health Education Volume 5 ; 5 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Jurnal Promkes: The Indonesian Journal of Health Promotion and Health Education Volume 6 ; 6 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Jurnal Promkes: The Indonesian Journal of Health Promotion and Health Education Volume 7 ; 7 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Jurnal Promkes: The Indonesian Journal of Health Promotion and Health Education Volume 8 ; 8 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Jurnal Promkes: The Indonesian Journal of Health Promotion and Health Education Volume 9 ; 9 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Jurnal Promkes: The Indonesian Journal of Health Promotion and Health Education Volume 10 ; 10 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = The Indonesian Journal of Occupational Safety and Health ;
+        issn = 2301 8046 ;
+        eissn = 2540 7872
+      >
+
+      param[journal_id] = IJOSH
+
+      au < exists ; exists ; 2015 ; The Indonesian Journal of Occupational Safety and Health Volume 4 ; 4 ; 2015 ; >
+      au < exists ; exists ; 2016 ; The Indonesian Journal of Occupational Safety and Health Volume 5 ; 5 ; 2016 ; >
+      au < exists ; exists ; 2017 ; The Indonesian Journal of Occupational Safety and Health Volume 6 ; 6 ; 2017 ; >
+      au < exists ; exists ; 2018 ; The Indonesian Journal of Occupational Safety and Health Volume 7 ; 7 ; 2018 ; >
+      au < exists ; exists ; 2019 ; The Indonesian Journal of Occupational Safety and Health Volume 8 ; 8 ; 2019 ; >
+      au < exists ; exists ; 2020 ; The Indonesian Journal of Occupational Safety and Health Volume 9 ; 9 ; 2020 ; >
+      au < exists ; exists ; 2021 ; The Indonesian Journal of Occupational Safety and Health Volume 10 ; 10 ; 2021 ; >
+      au < exists ; exists ; 2022 ; The Indonesian Journal of Occupational Safety and Health Volume 11 ; 11 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Jurnal Riset Akuntansi dan Bisnis Airlangga (JRABA) ;
+        issn = 2548-1401 ;
+        eissn =  
+      >
+
+      param[journal_id] = jraba
+
+      au < exists ; exists ; 2021 ; Jurnal Riset Akuntansi dan Bisnis Airlangga (JRABA) Volume 6 ; 6 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Jurnal Riset Akuntansi dan Bisnis Airlangga (JRABA) Volume 7 ; 7 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = The International Journal of Applied Business (TIJAB) ;
+        issn = - ;
+        eissn = 2599-0705
+      >
+
+      param[journal_id] = TIJAB
+
+      au < exists ; exists ; 2017 ; The International Journal of Applied Business (TIJAB) Volume 1 ; 1 ; 2017 ; >
+      au < exists ; exists ; 2018 ; The International Journal of Applied Business (TIJAB) Volume 2 ; 2 ; 2018 ; >
+      au < exists ; exists ; 2019 ; The International Journal of Applied Business (TIJAB) Volume 3 ; 3 ; 2019 ; >
+      au < exists ; exists ; 2020 ; The International Journal of Applied Business (TIJAB) Volume 4 ; 4 ; 2020 ; >
+      au < exists ; exists ; 2021 ; The International Journal of Applied Business (TIJAB) Volume 5 ; 5 ; 2021 ; >
+      au < exists ; exists ; 2022 ; The International Journal of Applied Business (TIJAB) Volume 6 ; 6 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Etnolingual ;
+        issn = - ;
+        eissn = 2580-0280
+      >
+
+      param[journal_id] = etno
+
+      au < exists ; exists ; 2017 ; Etnolingual Volume 1 ; 1 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Etnolingual Volume 2 ; 2 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Etnolingual Volume 3 ; 3 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Etnolingual Volume 4 ; 4 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Etnolingual Volume 5 ; 5 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Etnolingual Volume 6 ; 6 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal Of Vocational Health Studies ;
+        issn = 2580-7161  ;
+        eissn = 2580-717X
+      >
+
+      param[journal_id] = JVHS
+
+      au < exists ; exists ; 2017 ; Journal Of Vocational Health Studies Volume 1 ; 1 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Journal Of Vocational Health Studies Volume 2 ; 2 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Journal Of Vocational Health Studies Volume 3 ; 3 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Journal Of Vocational Health Studies Volume 4 ; 4 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Journal Of Vocational Health Studies Volume 5 ; 5 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Journal Of Vocational Health Studies Volume 6 ; 6 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Jurnal Ekonomi dan Bisnis Airlangga (JEBA) ;
+        issn = 2338-2686 ;
+        eissn = 2597-4564
+      >
+
+      param[journal_id] = JEBA
+
+      au < exists ; exists ; 2017 ; Jurnal Ekonomi dan Bisnis Airlangga (JEBA) Volume 27 ; 27 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Jurnal Ekonomi dan Bisnis Airlangga (JEBA) Volume 28 ; 28 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Jurnal Ekonomi dan Bisnis Airlangga (JEBA) Volume 29 ; 29 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Jurnal Ekonomi dan Bisnis Airlangga (JEBA) Volume 30 ; 30 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Jurnal Ekonomi dan Bisnis Airlangga (JEBA) Volume 31 ; 31 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Jurnal Ekonomi dan Bisnis Airlangga (JEBA) Volume 32 ; 32 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Jurnal Hubungan Internasional ;
+        issn = 1411-9382 ;
+        eissn = 2715-1565
+      >
+
+      param[journal_id] = JHI
+
+      au < exists ; exists ; 2017 ; Jurnal Hubungan Internasional Volume 10 ; 10 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Jurnal Hubungan Internasional Volume 11 ; 11 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Jurnal Hubungan Internasional Volume 12 ; 12 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Jurnal Hubungan Internasional Volume 13 ; 13 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Jurnal Hubungan Internasional Volume 14 ; 14 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Jurnal Hubungan Internasional Volume 15 ; 15 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Indonesian Journal of Community Health Nursing ;
+        issn = 2355-3391 ;
+        eissn = 2656-4602
+      >
+
+      param[journal_id] = IJCHN
+
+      au < exists ; exists ; 2012 ; Indonesian Journal of Community Health Nursing Volume 1 ; 1 ; 2012 ; >
+      au < exists ; exists ; 2013 ; Indonesian Journal of Community Health Nursing Volume 2 ; 2 ; 2013 ; >
+      au < exists ; exists ; 2014 ; Indonesian Journal of Community Health Nursing Volume 3 ; 3 ; 2014 ; >
+      au < exists ; exists ; 2015 ; Indonesian Journal of Community Health Nursing Volume 4 ; 4 ; 2015 ; >
+      au < exists ; exists ; 2016 ; Indonesian Journal of Community Health Nursing Volume 5 ; 5 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Indonesian Journal of Community Health Nursing Volume 6 ; 6 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Indonesian Journal of Community Health Nursing Volume 7 ; 7 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Indonesian Journal of Community Health Nursing Volume 8 ; 8 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Indonesian Journal of Community Health Nursing Volume 9 ; 9 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Indonesian Journal of Community Health Nursing Volume 10 ; 10 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Indonesian Journal of Community Health Nursing Volume 11 ; 11 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Airlangga International Journal of Islamic Economics and Finance ;
+        issn = 2579-9169 ;
+        eissn = 2615-8205
+      >
+
+      param[journal_id] = AIJIEF
+
+      au < exists ; exists ; 2018 ; Airlangga International Journal of Islamic Economics and Finance Volume 1 ; 1 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Airlangga International Journal of Islamic Economics and Finance Volume 2 ; 2 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Airlangga International Journal of Islamic Economics and Finance Volume 3 ; 3 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Airlangga International Journal of Islamic Economics and Finance Volume 4 ; 4 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Airlangga International Journal of Islamic Economics and Finance Volume 5 ; 5 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Jurnal Medik Veteriner ;
+        issn = 2615-7497 ;
+        eissn = 2581-012X
+      >
+
+      param[journal_id] = JMV
+
+      au < exists ; exists ; 2017 ; Jurnal Medik Veteriner Volume 1 ; 1 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Jurnal Medik Veteriner Volume 2 ; 2 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Jurnal Medik Veteriner Volume 3 ; 3 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Jurnal Medik Veteriner Volume 4 ; 4 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Jurnal Medik Veteriner Volume 5 ; 5 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Jurnal Medik Veteriner Volume 6 ; 6 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Public health Research and Community Health Development ;
+        issn = 2580-0140 ;
+        eissn = 2597-7571
+      >
+
+      param[journal_id] = JPHRECODE
+
+      au < exists ; exists ; 2017 ; Journal of Public health Research and Community Health Development Volume 1 ; 1 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Journal of Public health Research and Community Health Development Volume 2 ; 2 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Journal of Public health Research and Community Health Development Volume 3 ; 3 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Journal of Public health Research and Community Health Development Volume 4 ; 4 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Journal of Public health Research and Community Health Development Volume 5 ; 5 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Journal of Public health Research and Community Health Development Volume 6 ; 6 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = (JOINT) Journal Orthopaedi and Traumatology Surabaya ;
+        issn = 2722-712X ;
+        eissn = 2460-8742
+      >
+
+      param[journal_id] = JOINTS
+
+      au < exists ; exists ; 2017 ; (JOINT) Journal Orthopaedi and Traumatology Surabaya Volume 6 ; 6 ; 2017 ; >
+      au < exists ; exists ; 2018 ; (JOINT) Journal Orthopaedi and Traumatology Surabaya Volume 7 ; 7 ; 2018 ; >
+      au < exists ; exists ; 2019 ; (JOINT) Journal Orthopaedi and Traumatology Surabaya Volume 8 ; 8 ; 2019 ; >
+      au < exists ; exists ; 2020 ; (JOINT) Journal Orthopaedi and Traumatology Surabaya Volume 9 ; 9 ; 2020 ; >
+      au < exists ; exists ; 2021 ; (JOINT) Journal Orthopaedi and Traumatology Surabaya Volume 10 ; 10 ; 2021 ; >
+      au < exists ; exists ; 2022 ; (JOINT) Journal Orthopaedi and Traumatology Surabaya Volume 11 ; 11 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Basic Medical Veteriner ;
+        issn = 2302-6820 ;
+        eissn =  2774-9959
+      >
+
+      param[journal_id] = JBMV
+
+      au < exists ; exists ; 2022 ; Journal of Basic Medical Veteriner Volume 11 ; 11 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Indonesian Journal of Dental Medicine ;
+        issn = - ;
+        eissn =  2774-9959
+      >
+
+      param[journal_id] = IJDM
+
+      au < exists ; exists ; 2018 ; Indonesian Journal of Dental Medicine Volume 1 ; 1 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Indonesian Journal of Dental Medicine Volume 2 ; 2 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Indonesian Journal of Dental Medicine Volume 3 ; 3 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Indonesian Journal of Dental Medicine Volume 4 ; 4 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Indonesian Journal of Dental Medicine Volume 5 ; 5 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Aquaculture and Fish Health ;
+        issn = 2301-7309 ;
+        eissn = 2528-0864
+      >
+
+      param[journal_id] = JAFH
+
+
+  }
+
+  {
+
+      title <
+        name = Jurist-Diction ;
+        issn = 2301-7309 ;
+        eissn = 2528-0864
+      >
+
+      param[journal_id] = JD
+
+      au < exists ; exists ; 2018 ; Jurist-Diction Volume 1 ; 1 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Jurist-Diction Volume 2 ; 2 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Jurist-Diction Volume 3 ; 3 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Jurist-Diction Volume 4 ; 4 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Jurist-Diction Volume 5 ; 5 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Contemporary Mathematics and Applications ;
+        issn =  2721-8392 ;
+        eissn = 2655-8297
+      >
+
+      param[journal_id] = CONMATHA
+
+      au < exists ; exists ; 2019 ; Contemporary Mathematics and Applications Volume 1 ; 1 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Contemporary Mathematics and Applications Volume 2 ; 2 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Contemporary Mathematics and Applications Volume 3 ; 3 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Contemporary Mathematics and Applications Volume 4 ; 4 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = JUXTA: Jurnal Ilmiah Mahasiswa Kedokteran Universitas Airlangga ;
+        issn = - ;
+        eissn = 2686-5564
+      >
+
+      param[journal_id] = JUXTA
+
+      au < exists ; exists ; 2019 ; JUXTA: Jurnal Ilmiah Mahasiswa Kedokteran Universitas Airlangga Volume 10 ; 10 ; 2019 ; >
+      au < exists ; exists ; 2020 ; JUXTA: Jurnal Ilmiah Mahasiswa Kedokteran Universitas Airlangga Volume 11 ; 11 ; 2020 ; >
+      au < exists ; exists ; 2021 ; JUXTA: Jurnal Ilmiah Mahasiswa Kedokteran Universitas Airlangga Volume 12 ; 12 ; 2021 ; >
+      au < exists ; exists ; 2022 ; JUXTA: Jurnal Ilmiah Mahasiswa Kedokteran Universitas Airlangga Volume 13 ; 13 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Vocational Nursing ;
+        issn = 1907-3623 ;
+        eissn = 2684-9453
+      >
+
+      param[journal_id] = JoViN
+
+      au < exists ; exists ; 2020 ; Journal of Vocational Nursing Volume 1 ; 1 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Journal of Vocational Nursing Volume 2 ; 2 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Journal of Vocational Nursing Volume 3 ; 3 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Psychiatry Nursing Journal ;
+        issn = 2775-0280 ;
+        eissn = 2722-7251 
+      >
+
+      param[journal_id] = PNJ
+
+      au < exists ; exists ; 2019 ; Psychiatry Nursing Journal Volume 1 ; 1 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Psychiatry Nursing Journal Volume 2 ; 2 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Psychiatry Nursing Journal Volume 3 ; 3 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Psychiatry Nursing Journal Volume 4 ; 4 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Pediomaternal Nursing Journal ;
+        issn = 2656-3894 ;
+        eissn = 2656-4637
+      >
+
+      param[journal_id] = PMNJ
+
+      au < exists ; exists ; 2014 ; Pediomaternal Nursing Journal Volume 2 ; 2 ; 2014 ; >
+      au < exists ; exists ; 2015 ; Pediomaternal Nursing Journal Volume 3 ; 3 ; 2015 ; >
+      au < exists ; exists ; 2016 ; Pediomaternal Nursing Journal Volume 4 ; 4 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Pediomaternal Nursing Journal Volume 5 ; 5 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Pediomaternal Nursing Journal Volume 6 ; 6 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Pediomaternal Nursing Journal Volume 7 ; 7 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Pediomaternal Nursing Journal Volume 8 ; 8 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Pediomaternal Nursing Journal Volume 9 ; 9 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Pediomaternal Nursing Journal Volume 10 ; 10 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Critical, Medical and Surgical Nursing Journal ;
+        issn = 2355-1992 ;
+        eissn = 2656-470X
+      >
+
+      param[journal_id] = CMSNJ
+
+      au < exists ; exists ; 2012 ; Critical, Medical and Surgical Nursing Journal Volume 1 ; 1 ; 2012 ; >
+      au < exists ; exists ; 2013 ; Critical, Medical and Surgical Nursing Journal Volume 2 ; 2 ; 2013 ; >
+      au < exists ; exists ; 2014 ; Critical, Medical and Surgical Nursing Journal Volume 3 ; 3 ; 2014 ; >
+      au < exists ; exists ; 2015 ; Critical, Medical and Surgical Nursing Journal Volume 4 ; 4 ; 2015 ; >
+      au < exists ; exists ; 2016 ; Critical, Medical and Surgical Nursing Journal Volume 5 ; 5 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Critical, Medical and Surgical Nursing Journal Volume 6 ; 6 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Critical, Medical and Surgical Nursing Journal Volume 7 ; 7 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Critical, Medical and Surgical Nursing Journal Volume 8 ; 8 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Critical, Medical and Surgical Nursing Journal Volume 9 ; 9 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Critical, Medical and Surgical Nursing Journal Volume 10 ; 10 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Critical, Medical and Surgical Nursing Journal Volume 11 ; 11 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Fundamental & Management Nursing Jurnal ;
+        issn = 2355-2662 ;
+        eissn = 2656-4610
+      >
+
+      param[journal_id] = FMNJ
+
+      au < exists ; exists ; 2019 ; Fundamental & Management Nursing Jurnal Volume 2 ; 2 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Fundamental & Management Nursing Jurnal Volume 3 ; 3 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Fundamental & Management Nursing Jurnal Volume 4 ; 4 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Fundamental & Management Nursing Jurnal Volume 5 ; 5 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Airlangga Journal of Innovation Management ;
+        issn = - ;
+        eissn = 2722-5062
+      >
+
+      param[journal_id] = AJIM
+
+      au < exists ; exists ; 2020 ; Airlangga Journal of Innovation Management Volume 1 ; 1 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Airlangga Journal of Innovation Management Volume 2 ; 2 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Airlangga Journal of Innovation Management Volume 3 ; 3 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Indonesian Journal of Anesthesiology and Reanimation ;
+        issn = 2722-4554 ;
+        eissn = 2686-021X
+      >
+
+      param[journal_id] = IJAR
+
+      au < exists ; exists ; 2019 ; Indonesian Journal of Anesthesiology and Reanimation Volume 1 ; 1 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Indonesian Journal of Anesthesiology and Reanimation Volume 2 ; 2 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Indonesian Journal of Anesthesiology and Reanimation Volume 3 ; 3 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Indonesian Journal of Anesthesiology and Reanimation Volume 4 ; 4 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Jurnal Respirasi ;
+        issn = 2407-0831 ;
+        eissn = 2621-8372
+      >
+
+      param[journal_id] = JR
+
+      au < exists ; exists ; 2015 ; Jurnal Respirasi Volume 1 ; 1 ; 2015 ; >
+      au < exists ; exists ; 2016 ; Jurnal Respirasi Volume 2 ; 2 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Jurnal Respirasi Volume 3 ; 3 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Jurnal Respirasi Volume 4 ; 4 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Jurnal Respirasi Volume 5 ; 5 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Jurnal Respirasi Volume 6 ; 6 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Jurnal Respirasi Volume 7 ; 7 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Jurnal Respirasi Volume 8 ; 8 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Halal Product and Research ;
+        issn = 2654-9778 ;
+        eissn = 2654-9778
+      >
+
+      param[journal_id] = JHPR
+
+      au < exists ; exists ; 2018 ; Journal of Halal Product and Research Volume 1 ; 1 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Journal of Halal Product and Research Volume 2 ; 2 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Journal of Halal Product and Research Volume 3 ; 3 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Journal of Halal Product and Research Volume 4 ; 4 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Journal of Halal Product and Research Volume 5 ; 5 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Notaire ;
+        issn = 2721-8376 ;
+        eissn = 2655-9404
+      >
+
+      param[journal_id] = NTR
+
+      au < exists ; exists ; 2018 ; Notaire Volume 1 ; 1 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Notaire Volume 2 ; 2 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Notaire Volume 3 ; 3 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Notaire Volume 4 ; 4 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Notaire Volume 5 ; 5 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Media IURIS ;
+        issn = 2721-8384 ;
+        eissn = 2621-5225
+      >
+
+      param[journal_id] = MI
+
+      au < exists ; exists ; 2018 ; Media IURIS Volume 1 ; 1 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Media IURIS Volume 2 ; 2 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Media IURIS Volume 3 ; 3 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Media IURIS Volume 4 ; 4 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Media IURIS Volume 5 ; 5 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Developing Economies ;
+        issn = 2541-1012 ;
+        eissn = 2528-2018
+      >
+
+      param[journal_id] = JDE
+
+      au < exists ; exists ; 2016 ; Journal of Developing Economies Volume 1 ; 1 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Journal of Developing Economies Volume 2 ; 2 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Journal of Developing Economies Volume 3 ; 3 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Journal of Developing Economies Volume 4 ; 4 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Journal of Developing Economies Volume 5 ; 5 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Journal of Developing Economies Volume 6 ; 6 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Journal of Developing Economies Volume 7 ; 7 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Jurnal Ilmu Ekonomi Terapan ;
+        issn = 2541-1470  ;
+        eissn = 2528-1879
+      >
+
+      param[journal_id] = JIET
+
+      au < exists ; exists ; 2016 ; Jurnal Ilmu Ekonomi Terapan Volume 1 ; 1 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Jurnal Ilmu Ekonomi Terapan Volume 2 ; 2 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Jurnal Ilmu Ekonomi Terapan Volume 3 ; 3 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Jurnal Ilmu Ekonomi Terapan Volume 4 ; 4 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Jurnal Ilmu Ekonomi Terapan Volume 5 ; 5 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Jurnal Ilmu Ekonomi Terapan Volume 6 ; 6 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Jurnal Ilmu Ekonomi Terapan Volume 7 ; 7 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Jurnal Farmasi dan Ilmu Kefarmasian Indonesia  ;
+        issn = 2406-9388 ;
+        eissn = 2580-8303
+      >
+
+      param[journal_id] = JFIKI
+
+      au < exists ; exists ; 2016 ; Jurnal Farmasi dan Ilmu Kefarmasian Indonesia  Volume 3 ; 3 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Jurnal Farmasi dan Ilmu Kefarmasian Indonesia  Volume 4 ; 4 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Jurnal Farmasi dan Ilmu Kefarmasian Indonesia  Volume 5 ; 5 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Jurnal Farmasi dan Ilmu Kefarmasian Indonesia  Volume 6 ; 6 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Jurnal Farmasi dan Ilmu Kefarmasian Indonesia  Volume 7 ; 7 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Jurnal Farmasi dan Ilmu Kefarmasian Indonesia  Volume 8 ; 8 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Jurnal Farmasi dan Ilmu Kefarmasian Indonesia  Volume 9 ; 9 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = INSAN Jurnal Psikologi dan Kesehatan Mental ;
+        issn = 2528-0104 ;
+        eissn = 2528-5181
+      >
+
+      param[journal_id] = JPKM
+
+      au < exists ; exists ; 2016 ; INSAN Jurnal Psikologi dan Kesehatan Mental Volume 1 ; 1 ; 2016 ; >
+      au < exists ; exists ; 2017 ; INSAN Jurnal Psikologi dan Kesehatan Mental Volume 2 ; 2 ; 2017 ; >
+      au < exists ; exists ; 2018 ; INSAN Jurnal Psikologi dan Kesehatan Mental Volume 3 ; 3 ; 2018 ; >
+      au < exists ; exists ; 2019 ; INSAN Jurnal Psikologi dan Kesehatan Mental Volume 4 ; 4 ; 2019 ; >
+      au < exists ; exists ; 2020 ; INSAN Jurnal Psikologi dan Kesehatan Mental Volume 5 ; 5 ; 2020 ; >
+      au < exists ; exists ; 2021 ; INSAN Jurnal Psikologi dan Kesehatan Mental Volume 6 ; 6 ; 2021 ; >
+      au < exists ; exists ; 2022 ; INSAN Jurnal Psikologi dan Kesehatan Mental Volume 7 ; 7 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Berkala Akuntansi dan Keuangan Indonesia ;
+        issn = 2459-9581 ;
+        eissn = 2460-4496
+      >
+
+      param[journal_id] = BAKI
+
+      au < exists ; exists ; 2016 ; Berkala Akuntansi dan Keuangan Indonesia Volume 1 ; 1 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Berkala Akuntansi dan Keuangan Indonesia Volume 2 ; 2 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Berkala Akuntansi dan Keuangan Indonesia Volume 3 ; 3 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Berkala Akuntansi dan Keuangan Indonesia Volume 4 ; 4 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Berkala Akuntansi dan Keuangan Indonesia Volume 5 ; 5 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Berkala Akuntansi dan Keuangan Indonesia Volume 6 ; 6 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Berkala Akuntansi dan Keuangan Indonesia Volume 7 ; 7 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Airlangga Development Journal ;
+        issn = 2528-3642 ;
+        eissn = 2722-5569
+      >
+
+      param[journal_id] = ADJ
+
+      au < exists ; exists ; 2017 ; Airlangga Development Journal Volume 1 ; 1 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Airlangga Development Journal Volume 2 ; 2 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Airlangga Development Journal Volume 3 ; 3 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Airlangga Development Journal Volume 4 ; 4 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Airlangga Development Journal Volume 5 ; 5 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Airlangga Development Journal Volume 6 ; 6 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Stem Cell Research and Tissue Engineering ;
+        issn = 2614-1264 ;
+        eissn = 2614-1256
+      >
+
+      param[journal_id] = JSCRTE
+
+      au < exists ; exists ; 2017 ; Journal of Stem Cell Research and Tissue Engineering Volume 1 ; 1 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Journal of Stem Cell Research and Tissue Engineering Volume 2 ; 2 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Journal of Stem Cell Research and Tissue Engineering Volume 3 ; 3 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Journal of Stem Cell Research and Tissue Engineering Volume 4 ; 4 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Journal of Stem Cell Research and Tissue Engineering Volume 5 ; 5 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Journal of Stem Cell Research and Tissue Engineering Volume 6 ; 6 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Jurnal Layanan Masyarakat ;
+        issn = 2580-8680 ;
+        eissn = 2722-239X
+      >
+
+      param[journal_id] = jlm
+
+      au < exists ; exists ; 2017 ; Jurnal Layanan Masyarakat Volume 1 ; 1 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Jurnal Layanan Masyarakat Volume 2 ; 2 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Jurnal Layanan Masyarakat Volume 3 ; 3 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Jurnal Layanan Masyarakat Volume 4 ; 4 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Jurnal Layanan Masyarakat Volume 5 ; 5 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Jurnal Layanan Masyarakat Volume 6 ; 6 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Jurnal Biosains Pascasarjana ;
+        issn = 1412-1433 ;
+        eissn = 2621-4849
+      >
+
+      param[journal_id] = BIOPASCA
+
+      au < exists ; exists ; 2015 ; Jurnal Biosains Pascasarjana Volume 17 ; 17 ; 2015 ; >
+      au < exists ; exists ; 2016 ; Jurnal Biosains Pascasarjana Volume 18 ; 18 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Jurnal Biosains Pascasarjana Volume 19 ; 19 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Jurnal Biosains Pascasarjana Volume 20 ; 20 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Jurnal Biosains Pascasarjana Volume 21 ; 21 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Jurnal Biosains Pascasarjana Volume 22 ; 22 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Jurnal Biosains Pascasarjana Volume 23 ; 23 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Jurnal Biosains Pascasarjana Volume 24 ; 24 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Lakon : Jurnal Kajian Sastra dan Budaya ;
+        issn = 2252-8954 ;
+        eissn = 2527-4899
+      >
+
+      param[journal_id] = lakon
+
+      au < exists ; exists ; 2012 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 1 ; 1 ; 2012 ; >
+      au < exists ; exists ; 2013 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 2 ; 2 ; 2013 ; >
+      au < exists ; exists ; 2014 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 3 ; 3 ; 2014 ; >
+      au < exists ; exists ; 2015 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 4 ; 4 ; 2015 ; >
+      au < exists ; exists ; 2016 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 5 ; 5 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 6 ; 6 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 7 ; 7 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 8 ; 8 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 9 ; 9 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 10 ; 10 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 11 ; 11 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Jurnal Pengabdian Masyarakat dalam Keperawatan ;
+        issn = 2746-4202 ;
+        eissn = 2721-0618
+      >
+
+      param[journal_id] = JPMK
+
+      au < exists ; exists ; 2019 ; Jurnal Pengabdian Masyarakat dalam Keperawatan Volume 1 ; 1 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Jurnal Pengabdian Masyarakat dalam Keperawatan Volume 2 ; 2 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Jurnal Pengabdian Masyarakat dalam Keperawatan Volume 3 ; 3 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Jurnal Pengabdian Masyarakat dalam Keperawatan Volume 4 ; 4 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Jurnal Psikiatri Surabaya ;
+        issn = 2355-2409 ;
+        eissn = 2716-358X
+      >
+
+      param[journal_id] = JPS
+
+      au < exists ; exists ; 2017 ; Jurnal Psikiatri Surabaya Volume 6 ; 6 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Jurnal Psikiatri Surabaya Volume 7 ; 7 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Jurnal Psikiatri Surabaya Volume 8 ; 8 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Jurnal Psikiatri Surabaya Volume 9 ; 9 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Jurnal Psikiatri Surabaya Volume 10 ; 10 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Jurnal Psikiatri Surabaya Volume 11 ; 11 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Conservative Dentistry Journal ;
+        issn = 2087-1848 ;
+        eissn = 2722-8045
+      >
+
+      param[journal_id] = CDJ
+
+      au < exists ; exists ; 2016 ; Conservative Dentistry Journal Volume 6 ; 6 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Conservative Dentistry Journal Volume 7 ; 7 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Conservative Dentistry Journal Volume 8 ; 8 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Conservative Dentistry Journal Volume 9 ; 9 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Conservative Dentistry Journal Volume 10 ; 10 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Conservative Dentistry Journal Volume 11 ; 11 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Conservative Dentistry Journal Volume 12 ; 12 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Jurnal Sosiologi Dialektika ;
+        issn = 1858-0890 ;
+        eissn = 2722-4325
+      >
+
+      param[journal_id] = DIALEKTIKA
+
+
+  }
+
+  {
+
+      title <
+        name = Current Internal Medicine Research and Practice Surabaya Journal ;
+        issn = - ;
+        eissn = 2721-544X
+      >
+
+      param[journal_id] = CIMRJ
+
+      au < exists ; exists ; 2020 ; Current Internal Medicine Research and Practice Surabaya Journal Volume 1 ; 1 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Current Internal Medicine Research and Practice Surabaya Journal Volume 2 ; 2 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Current Internal Medicine Research and Practice Surabaya Journal Volume 3 ; 3 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Darmabakti Cendekia : Journal of Community Service and Engagements ;
+        issn = 2657-201X ;
+        eissn = 2657-1099
+      >
+
+      param[journal_id] = DC
+
+      au < exists ; exists ; 2019 ; Darmabakti Cendekia : Journal of Community Service and Engagements Volume 1 ; 1 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Darmabakti Cendekia : Journal of Community Service and Engagements Volume 2 ; 2 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Darmabakti Cendekia : Journal of Community Service and Engagements Volume 3 ; 3 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Darmabakti Cendekia : Journal of Community Service and Engagements Volume 4 ; 4 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Parasite Science ;
+        issn = 2599-0993 ;
+        eissn = 2656-5331
+      >
+
+      param[journal_id] = JoPS
+
+      au < exists ; exists ; 2017 ; Journal of Parasite Science Volume 1 ; 1 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Journal of Parasite Science Volume 2 ; 2 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Journal of Parasite Science Volume 3 ; 3 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Journal of Parasite Science Volume 4 ; 4 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Journal of Parasite Science Volume 5 ; 5 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Journal of Parasite Science Volume 6 ; 6 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Majalah Biomorfologi ;
+        issn = 0215-8833 ;
+        eissn = 2716-0920
+      >
+
+      param[journal_id] = MBIO
+
+      au < exists ; exists ; 2019 ; Majalah Biomorfologi Volume 29 ; 29 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Majalah Biomorfologi Volume 30 ; 30 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Majalah Biomorfologi Volume 31 ; 31 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Majalah Biomorfologi Volume 32 ; 32 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Surabaya Physical Medicine and Rehabilitation Journal  ;
+        issn = - ;
+        eissn = 2656-0895
+      >
+
+      param[journal_id] = SPMRJ
+
+      au < exists ; exists ; 2019 ; Surabaya Physical Medicine and Rehabilitation Journal  Volume 1 ; 1 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Surabaya Physical Medicine and Rehabilitation Journal  Volume 2 ; 2 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Surabaya Physical Medicine and Rehabilitation Journal  Volume 3 ; 3 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Surabaya Physical Medicine and Rehabilitation Journal  Volume 4 ; 4 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Indonesian Applied Physics Letters ;
+        issn = - ;
+        eissn = 2745-3502
+      >
+
+      param[journal_id] = IAPL
+
+      au < exists ; exists ; 2020 ; Indonesian Applied Physics Letters Volume 1 ; 1 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Indonesian Applied Physics Letters Volume 2 ; 2 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Indonesian Applied Physics Letters Volume 3 ; 3 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Applied Veterinary Science and Technology ;
+        issn = 2716-117X ;
+        eissn = 2716-1188
+      >
+
+      param[journal_id] = JAVEST
+
+      au < exists ; exists ; 2020 ; Journal of Applied Veterinary Science and Technology Volume 1 ; 1 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Journal of Applied Veterinary Science and Technology Volume 2 ; 2 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Journal of Applied Veterinary Science and Technology Volume 3 ; 3 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Marine and Coastal Science ;
+        issn = 2301-6159  ;
+        eissn = 2528-0678
+      >
+
+      param[journal_id] = JMCS
+
+      au < exists ; exists ; 2018 ; Journal of Marine and Coastal Science Volume 7 ; 7 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Journal of Marine and Coastal Science Volume 8 ; 8 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Journal of Marine and Coastal Science Volume 9 ; 9 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Journal of Marine and Coastal Science Volume 10 ; 10 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Journal of Marine and Coastal Science Volume 11 ; 11 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Cardiovascular and Cardiometabolic Journal ;
+        issn = 2746-6930 ;
+        eissn = 2722-3582
+      >
+
+      param[journal_id] = CCJ
+
+      au < exists ; exists ; 2020 ; Cardiovascular and Cardiometabolic Journal Volume 1 ; 1 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Cardiovascular and Cardiometabolic Journal Volume 2 ; 2 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Cardiovascular and Cardiometabolic Journal Volume 3 ; 3 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Community Medicine and Public Health Research ;
+        issn = - ;
+        eissn = 2723-035X
+      >
+
+      param[journal_id] = JCMPHR
+
+      au < exists ; exists ; 2020 ; Journal of Community Medicine and Public Health Research Volume 1 ; 1 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Journal of Community Medicine and Public Health Research Volume 2 ; 2 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Journal of Community Medicine and Public Health Research Volume 3 ; 3 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Ovozoa: Journal of Animal Reproduction ;
+        issn = 2302-6464 ;
+        eissn = 2722-967X
+      >
+
+      param[journal_id] = OVZ
+
+      au < exists ; exists ; 2018 ; Ovozoa: Journal of Animal Reproduction Volume 7 ; 7 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Ovozoa: Journal of Animal Reproduction Volume 8 ; 8 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Ovozoa: Journal of Animal Reproduction Volume 9 ; 9 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Ovozoa: Journal of Animal Reproduction Volume 10 ; 10 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Ovozoa: Journal of Animal Reproduction Volume 11 ; 11 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Media Gizi Kesmas ;
+        issn = 2301-7392 ;
+        eissn = 2745-8598
+      >
+
+      param[journal_id] = MGK
+
+      au < exists ; exists ; 2019 ; Media Gizi Kesmas Volume 8 ; 8 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Media Gizi Kesmas Volume 9 ; 9 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Media Gizi Kesmas Volume 10 ; 10 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Media Gizi Kesmas Volume 11 ; 11 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Indonesian Andrology and Biomedical Journal ;
+        issn = - ;
+        eissn = 2746-4474
+      >
+
+      param[journal_id] = iabj
+
+      au < exists ; exists ; 2020 ; Indonesian Andrology and Biomedical Journal Volume 1 ; 1 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Indonesian Andrology and Biomedical Journal Volume 2 ; 2 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Indonesian Andrology and Biomedical Journal Volume 3 ; 3 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Jurnal Farmasi Komunitas ;
+        issn = - ;
+        eissn = 2355-5912
+      >
+
+      param[journal_id] = JFK
+
+      au < exists ; exists ; 2019 ; Jurnal Farmasi Komunitas Volume 6 ; 6 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Jurnal Farmasi Komunitas Volume 7 ; 7 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Jurnal Farmasi Komunitas Volume 8 ; 8 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Jurnal Farmasi Komunitas Volume 9 ; 9 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Media Kedokteran Hewan ;
+        issn = 2015-8930 ;
+        eissn = 2775-975X
+      >
+
+      param[journal_id] = MKH
+
+      au < exists ; exists ; 2020 ; Media Kedokteran Hewan Volume 31 ; 31 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Media Kedokteran Hewan Volume 32 ; 32 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Media Kedokteran Hewan Volume 33 ; 33 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Jurnal Perpustakaan Universitas Airlangga ;
+        issn = 2356-1408 ;
+        eissn = 2723-0554
+      >
+
+      param[journal_id] = JPERPUS
+
+      au < exists ; exists ; 2018 ; Jurnal Perpustakaan Universitas Airlangga Volume 8 ; 8 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Jurnal Perpustakaan Universitas Airlangga Volume 9 ; 9 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Jurnal Perpustakaan Universitas Airlangga Volume 10 ; 10 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Jurnal Perpustakaan Universitas Airlangga Volume 11 ; 11 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Jurnal Perpustakaan Universitas Airlangga Volume 12 ; 12 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Indonesian Journal of Social Science ;
+        issn = 1978-760X ;
+        eissn = 2723-777X
+      >
+
+      param[journal_id] = IJSS
+
+      au < exists ; exists ; 2020 ; Indonesian Journal of Social Science Volume 12 ; 12 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Indonesian Journal of Social Science Volume 13 ; 13 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Indonesian Journal of Social Science Volume 14 ; 14 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Biokultur ;
+        issn = 2302-3058 ;
+        eissn = 2746-2692
+      >
+
+      param[journal_id] = BIOKULTUR
+
+      au < exists ; exists ; 2020 ; Biokultur Volume 9 ; 9 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Biokultur Volume 10 ; 10 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Biokultur Volume 11 ; 11 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Medkom (Jurnal Media dan Komunikasi) ;
+        issn = - ;
+        eissn = 2776-3609
+      >
+
+      param[journal_id] = MEDKOM
+
+      au < exists ; exists ; 2020 ; Medkom (Jurnal Media dan Komunikasi) Volume 1 ; 1 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Medkom (Jurnal Media dan Komunikasi) Volume 2 ; 2 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Medkom (Jurnal Media dan Komunikasi) Volume 3 ; 3 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Palimpsest: Journal of Information and Library Science ;
+        issn = 2086-0994 ;
+        eissn = 2745-6862
+      >
+
+      param[journal_id] = palimpsest
+
+      au < exists ; exists ; 2020 ; Palimpsest: Journal of Information and Library Science Volume 11 ; 11 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Palimpsest: Journal of Information and Library Science Volume 12 ; 12 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Palimpsest: Journal of Information and Library Science Volume 13 ; 13 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Indonesian Midwifery and Health Sciences Journal ;
+        issn = - ;
+        eissn =  2656-7806
+      >
+
+      param[journal_id] = IMHSJ
+
+      au < exists ; exists ; 2019 ; Indonesian Midwifery and Health Sciences Journal Volume 3 ; 3 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Indonesian Midwifery and Health Sciences Journal Volume 4 ; 4 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Indonesian Midwifery and Health Sciences Journal Volume 5 ; 5 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Indonesian Midwifery and Health Sciences Journal Volume 6 ; 6 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Buletin Riset Psikologi dan Kesehatan Mental ;
+        issn = - ;
+        eissn = 2776-1851
+      >
+
+      param[journal_id] = BRPKM
+
+      au < exists ; exists ; 2021 ; Buletin Riset Psikologi dan Kesehatan Mental Volume 1 ; 1 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Buletin Riset Psikologi dan Kesehatan Mental Volume 2 ; 2 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Jurnal Rekonstruksi dan Estetik ;
+        issn = 2301-7937 ;
+        eissn = 2774-6062
+      >
+
+      param[journal_id] = JRE
+
+      au < exists ; exists ; 2018 ; Jurnal Rekonstruksi dan Estetik Volume 3 ; 3 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Jurnal Rekonstruksi dan Estetik Volume 4 ; 4 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Jurnal Rekonstruksi dan Estetik Volume 5 ; 5 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Jurnal Rekonstruksi dan Estetik Volume 6 ; 6 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Jurnal Rekonstruksi dan Estetik Volume 7 ; 7 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Aksona ;
+        issn = - ;
+        eissn = 2807-7970
+      >
+
+      param[journal_id] = aksona
+
+      au < exists ; exists ; 2021 ; Aksona Volume 1 ; 1 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Aksona Volume 2 ; 2 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Berkala Ilmiah Kimia Farmasi ;
+        issn = 2302-8270 ;
+        eissn = 2808-1048
+      >
+
+      param[journal_id] = BIKFAR
+
+      au < exists ; exists ; 2020 ; Berkala Ilmiah Kimia Farmasi Volume 7 ; 7 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Berkala Ilmiah Kimia Farmasi Volume 8 ; 8 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Berkala Ilmiah Kimia Farmasi Volume 9 ; 9 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Vision Science and Eye Health Journal ;
+        issn = - ;
+        eissn = 2809-218X
+      >
+
+      param[journal_id] = VSEHJ
+
+      au < exists ; exists ; 2021 ; Vision Science and Eye Health Journal Volume 1 ; 1 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Vision Science and Eye Health Journal Volume 2 ; 2 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Jejaring Administrasi Publik (JAP) ;
+        issn = 2086-3101 ;
+        eissn = 2808-3989
+      >
+
+      param[journal_id] = JAP
+
+      au < exists ; exists ; 2020 ; Jejaring Administrasi Publik (JAP) Volume 12 ; 12 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Jejaring Administrasi Publik (JAP) Volume 13 ; 13 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Jejaring Administrasi Publik (JAP) Volume 14 ; 14 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Jurnal Politik indonesia (JPI) ;
+        issn = 2303-2073 ;
+        eissn = 2808-2710
+      >
+
+      param[journal_id] = polindo
+
+      au < exists ; exists ; 2020 ; Jurnal Politik indonesia (JPI) Volume 6 ; 6 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Jurnal Politik indonesia (JPI) Volume 7 ; 7 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Jurnal Politik indonesia (JPI) Volume 8 ; 8 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Bio-Molecule Research and Engineering ;
+        issn = - ;
+        eissn = on process
+      >
+
+      param[journal_id] = biome
+
+      au < exists ; exists ; 2022 ; Journal of Bio-Molecule Research and Engineering Volume 1 ; 1 ; 2022 ; >
+
+  }
+
+}
