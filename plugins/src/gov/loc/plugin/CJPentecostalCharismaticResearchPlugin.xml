@@ -1,3 +1,35 @@
+<!--
+
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
+
 <map>
   <entry>
     <string>plugin_status</string>
@@ -9,38 +41,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
-  </entry>
-  <entry>
-    <string>au_def_pause_time</string>
-    <long>6000</long>
-  </entry>
-  <entry>
-    <string>au_name</string>
-    <string>&quot;Cyberjournal for Pentecostal-Charismatic Research Plugin, Base URL %s, Volume %d&quot;, base_url, volume</string>
-  </entry>
-  <entry>
-    <string>au_def_new_content_crawl</string>
-    <long>1209600000</long>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_name</string>
     <string>Cyberjournal for Pentecostal-Charismatic Research Plugin</string>
-  </entry>
-  <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%smanifest/cyberj%d.htm&quot;, base_url, volume</string>
-      <string>1,&quot;^%scyber%d\.html&quot;, base_url, volume</string>
-      <string>1,&quot;^%scyberj%d/&quot;, base_url, volume</string>
-      <string>1,&quot;^%s_derived/.*\.gif$&quot;, base_url</string>
-      <string>1,&quot;^%s_themes/expeditn/exptextb\.jpg$&quot;, base_url</string>
-    </list>
-  </entry>
-  <entry>
-    <string>au_start_url</string>
-    <string>&quot;%smanifest/cyberj%d.htm&quot;, base_url, volume</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -63,5 +68,32 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
     </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Cyberjournal for Pentecostal-Charismatic Research Plugin, Base URL %s, Volume %d", base_url, volume</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%smanifest/cyberj%d.htm", base_url, volume</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%smanifest/cyberj%d.htm", base_url, volume</string>
+      <string>1,"^%scyber%d\.html", base_url, volume</string>
+      <string>1,"^%scyberj%d/", base_url, volume</string>
+      <string>1,"^%s_derived/.*\.gif$", base_url</string>
+      <string>1,"^%s_themes/expeditn/exptextb\.jpg$", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
   </entry>
 </map>
