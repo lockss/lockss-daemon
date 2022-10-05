@@ -2454,7 +2454,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       issnl = 0032-5473
     >
     #param[base_url] = http://pmj.bmj.com/
-
+    #move to OUP by 2023-01-01
 
     au < HighWirePressH20Plugin ; down ; 1925 ; Postgraduate Medical Journal Volume 1 ; 1 ; http://pmj.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 1926 ; Postgraduate Medical Journal Volume 2 ; 2 ; http://pmj.bmj.com/ >

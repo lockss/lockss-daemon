@@ -6164,6 +6164,22 @@
   {
 
     title <
+      name = Forensic Sciences Research ;
+      issn = 2096-1790 ;
+      eissn = 2471-1411 ;
+      issnl = 2096-1790
+    >
+
+    param[journal_id] = fsr
+    #move from T&F by 2023-01-01
+
+    au < doNotProcess ; 2022 ; 2022 ; Forensic Sciences Research Volume 7 ; 7 >
+
+  }
+
+  {
+
+    title <
       name = Forest & Conservation History ;
       issn = 1046-7009 ;
       issnl = 1046-7009
@@ -16265,6 +16281,20 @@
     param[journal_id] = 
     #this title was ONLY in the previous TDB listing - suppressing AU generation 
 
+  }
+
+  {
+    title <
+      name = Postgraduate Medical Journal ;
+      issn = 0032-5473 ;
+      eissn = 1469-0756 ;
+      issnl = 0032-5473
+    >
+
+    param[journal_id] = pmj
+    #move from BMJ by 2023-01-01
+
+    au < doNotProcess ; 2022 ; 2022 ; Postgraduate Medical Journal Volume 98 ; 98 >
 
   }
 
