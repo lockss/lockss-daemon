@@ -17676,6 +17676,21 @@
   {
 
     title <
+      name = Significance ;
+      issn = 1740-9705 ;
+      eissn = 1740-9713
+    >
+
+    param[journal_id] = jrssig
+    #move from Wiley by 2023-01-01
+
+    au < expected ; 2022 ; 2022 ; Significance Volume 185 ; 185 >
+
+  }
+
+  {
+
+    title <
       name = Sleep ;
       issn = 0161-8105 ;
       eissn = 1550-9109
