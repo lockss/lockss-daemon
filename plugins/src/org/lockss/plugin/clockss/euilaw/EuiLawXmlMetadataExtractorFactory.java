@@ -77,12 +77,5 @@ public class EuiLawXmlMetadataExtractorFactory extends SourceXmlMetadataExtracto
       return MathMLPublishingHelper;
     }
 
-    @Override
-    protected void postCookProcess(SourceXmlSchemaHelper schemaHelper,
-                                   CachedUrl cu, ArticleMetadata thisAM) {
-      log.info("what");
-
-    }
-
   }
 }
