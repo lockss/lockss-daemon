@@ -13310,6 +13310,54 @@
   {
 
     title <
+      name = Journal of the Royal Statistical Society, Series A: Statistics in Society ;
+      issn = 0964-1998 ;
+      eissn = 1467-985X ;
+      issnl = 0964-1998
+    >
+
+    param[journal_id] = jrsssa
+    #move from Wiley by 2023-01-01
+
+    au < expected ; exists ; 2022 ; 2022 ; Journal of the Royal Statistical Society, Series A: Statistics in Society Volume 185 ; 185 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of the Royal Statistical Society, Series B: Statistical Methodology ;
+      issn = 1369-7412 ;
+      eissn = 1467-9868 ;
+      issnl = 1369-7412
+    >
+
+    param[journal_id] = jrsssb
+    #move from Wiley by 2023-01-01
+
+    au < expected ; exists ; 2022 ; 2022 ; Journal of the Royal Statistical Society, Series B: Statistical Methodology Volume 84 ; 84 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of the Royal Statistical Society, Series C: Applied Statistics ;
+      issn = 0035-9254 ;
+      eissn = 1467-9876 ;
+      issnl = 0035-9254
+    >
+
+    param[journal_id] = jrsssc
+    #move from Wiley by 2023-01-01
+
+    au < expected ; exists ; 2022 ; 2022 ; Journal of the Royal Statistical Society, Series C: Applied Statistics Volume 71 ; 71 ; >
+
+  }
+
+  {
+
+    title <
       name = Laboratory Medicine ;
       issn = 0007-5027 ;
       eissn = 1943-7730 ;
