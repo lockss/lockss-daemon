@@ -6006,6 +6006,22 @@
   {
 
     title <
+      name = Evolution ;
+      issn = 0014-3820 ;
+      eissn = 1558-5646 ;
+      issnl = 0014-3820
+    >
+
+    param[journal_id] = evolut
+    #move from Wiley by 2023-01-01
+
+    au < expected ; exists ; 2022 ; 2022 ; Evolution Volume 76 ; 76 ; >
+
+  }
+
+  {
+
+    title <
       name = Evolution, Medicine, and Public Health ;
       eissn = 2050-6201
     >
@@ -13476,6 +13492,38 @@
   {
 
     title <
+      name = Journal of Applied Microbiology ;
+      issn = 1364-5072 ;
+      eissn = 1365-2672 ;
+      issnl = 1364-5072
+    >
+
+    param[journal_id] = jambio
+    #move from Wiley by 2022-12-12
+
+    au < expected ; exists ; 2022 ; 2022 ; Journal of Applied Microbiology Volume 133 ; 133 ; >
+
+  }
+
+  {
+
+    title <
+      name = Letters in Applied Microbiology ;
+      issn = 0266-8254 ;
+      eissn = 1472-765X ;
+      issnl = 0266-8254
+    >
+
+    param[journal_id] = lambio
+    #move from Wiley by 2022-12-19
+
+    au < expected ; exists ; 2022 ; 2022 ; Letters in Applied Microbiology Volume 75 ; 75 ; >
+
+  }
+
+  {
+
+    title <
       name = Literary Imagination ;
       issn = 1523-9012 ;
       eissn = 1752-6566 ;
@@ -16582,6 +16630,22 @@
   }
 
   {
+
+    title <
+      name = Political Science Quarterly ;
+      issn = 0032-3195 ;
+      eissn = 1538-165X ;
+      issnl = 0032-3195
+    >
+
+    param[journal_id] = psq
+    #move from Wiley by 2023-01-01
+
+    au < expected ; exists ; 2022 ; 2022 ; Political Science Quarterly Volume 137 ; 137 ; >
+
+  }
+
+  {
     title <
       name = Postgraduate Medical Journal ;
       issn = 0032-5473 ;
@@ -16948,6 +17012,22 @@
     au < frozen ; exists ; 2020 ; 2020 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2020 ; 2020 ; >
     au < testing ; exists ; 2021 ; 2021 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2022 ; 2022 ; >
+
+  }
+
+  {
+
+    title <
+      name = Protein & Cell ;
+      issn = 1674-800X ;
+      eissn = 1674-8018 ;
+      issnl = 1674-800X
+    >
+
+    param[journal_id] = proteincell
+    #move from Springer by 2023
+
+    au < expected ; exists ; 2023 ; 2023 ; Protein & Cell Volume 14 ; 14 ; >
 
   }
 
@@ -18056,7 +18136,8 @@
     title <
       name = Significance ;
       issn = 1740-9705 ;
-      eissn = 1740-9713
+      eissn = 1740-9713 ;
+      issnl = 1740-9705
     >
 
     param[journal_id] = jrssig
