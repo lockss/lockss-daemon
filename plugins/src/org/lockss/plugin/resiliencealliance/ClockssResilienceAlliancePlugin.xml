@@ -9,7 +9,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>2</string>
+        <string>3</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
@@ -71,7 +71,7 @@
     <entry>
         <string>au_start_url</string>
         <list>
-            <string>"%sissues/", base_url</string>
+            <string>"%sissue/", del_www(base_url)</string>
         </list>
     </entry>
     <entry>
@@ -112,7 +112,7 @@
             https://www.ace-eco.org/issues/erratum.php/1467
             https://www.ace-eco.org/issues/index.php/features
             -->
-            <string>2,"%sissues/(authors|search|view|discussion|erratum|index|articles)", base_url</string>
+            <string>2,"(%s|%s)issues?/(authors|search|view|discussion|erratum|index|articles)", base_url, del_www(base_url)</string>
             <!--
             https://www.ace-eco.org/common/lc1_base.css
             https://www.ace-eco.org/common/journal.css
@@ -129,16 +129,16 @@
             <!--citation ris file does not have volume/issue info
             https://www.ace-eco.org/issues/ref.php/1408/rm
             -->
-            <string>1,"%s(issues|common|srv|images|styles)/", base_url</string>
+            <string>1,"(%s|%s)(issues?|common|srv|images|styles)/", base_url, del_www(base_url)</string>
             <!--
             https://www.ace-eco.org/vol14/iss2/art1/appendix1.xlsm
             https://www.ace-eco.org/vol14/iss1/art1/appendix3.xlsx
             -->
-            <string>2,"%svol%s/.*\.xlsx?", base_url, volume_name</string>
-            <string>2, ""%svol%s/iss[^/]+/art[^/]+/(survey|inline)", base_url, volume_name</string>
+            <string>2,"(%s|%s)vol%s/.*\.xlsx?", base_url, del_www(base_url), volume_name</string>
+            <string>2,"(%s|%s)vol%s/iss[^/]+/art[^/]+/(survey|inline)", base_url, del_www(base_url), volume_name</string>
             <!-- Limit only to the targeted volume -->
-            <string>2,"%svol[^%s]", base_url, volume_name</string>
-            <string>1,"%svol%s", base_url, volume_name</string>
+            <string>2,"(%s|%s)vol[^%s]", base_url, del_www(base_url), volume_name</string>
+            <string>1,"(%s|%s)vol%s", base_url, del_www(base_url), volume_name</string>
         </list>
     </entry>
     <entry>
@@ -148,7 +148,7 @@
     <entry>
         <string>au_substance_url_pattern</string>
         <list>
-            <string>"%svol%s/.*/.*\.pdf$", base_url, volume_name</string>
+            <string>(%s|%s)vol%s/.*/.*\.pdf$", base_url, del_www(base_url), volume_name</string>
         </list>
     </entry>
     <entry>
