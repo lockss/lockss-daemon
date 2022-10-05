@@ -44,8 +44,6 @@ import javax.xml.xpath.XPathExpressionException;
 
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
-import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
-import org.lockss.plugin.clockss.XPathXmlMetadataParser;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
