@@ -1,3 +1,34 @@
+<!--
+
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
 <map>
   <entry>
     <string>plugin_status</string>
@@ -9,38 +40,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
-  </entry>
-  <entry>
-    <string>au_def_pause_time</string>
-    <long>6000</long>
-  </entry>
-  <entry>
-    <string>au_name</string>
-    <string>&quot;La Petite Zine Plugin, Base URL %s, Year %d, Issue Range %s&quot;, base_url, year, num_issue_range</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_name</string>
     <string>La Petite Zine Plugin</string>
-  </entry>
-  <entry>
-    <string>au_def_new_content_crawl</string>
-    <long>1209600000</long>
-  </entry>
-  <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;%sLOCKSS/lockss-%d.html&quot;, base_url, year</string>
-      <string>1,&quot;%slpz%s&quot;, base_url, num_issue_range</string>
-      <string>2,&quot;%slpz[0-9]+&quot;, base_url</string>
-      <string>1,&quot;%s.*\.html?&quot;, base_url</string>
-      <string>1,&quot;.*\.([cC][sS][sS]|[gG][iI][fF]|[jJ][pP][eE][gG]|[jJ][pP][gG]|[jJ][sS]|[pP][nN][gG]|[mM][pP]3)$&quot;</string>
-    </list>
-  </entry>
-  <entry>
-    <string>au_start_url</string>
-    <string>&quot;%sLOCKSS/lockss-%d.html&quot;, base_url, year</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -73,5 +77,32 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
     </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"La Petite Zine Plugin, Base URL %s, Year %d, Issue Range %s", base_url, year, num_issue_range</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%sLOCKSS/lockss-%d.html", base_url, year</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,"^%s", base_url</string>
+      <string>1,"%sLOCKSS/lockss-%d.html", base_url, year</string>
+      <string>1,"%slpz%s", base_url, num_issue_range</string>
+      <string>2,"%slpz[0-9]+", base_url</string>
+      <string>1,"%s.*\.html?", base_url</string>
+      <string>1,".*\.([cC][sS][sS]|[gG][iI][fF]|[jJ][pP][eE][gG]|[jJ][pP][gG]|[jJ][sS]|[pP][nN][gG]|[mM][pP]3)$"</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
   </entry>
 </map>
