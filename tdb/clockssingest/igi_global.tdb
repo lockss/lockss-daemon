@@ -173,7 +173,7 @@
     param[journal_issn] = 2643-7996
     #continues = 1947-8607
 
-    au < frozen ; exists ; 2020 ; International Journal of Adult Education and Technology (IJAET) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
+    au < finished ; manifest ; 2020 ; International Journal of Adult Education and Technology (IJAET) Volume 11 ; 11 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Adult Education and Technology (IJAET) Volume 12 ; 12 ; https://www.igi-global.com/ ; >
     au < crawling ; exists ; 2022 ; International Journal of Adult Education and Technology (IJAET) Volume 13 ; 13 ; https://www.igi-global.com/ ; >
 
@@ -215,7 +215,7 @@
     param[journal_issn] = 2643-7937
     #continues = 1937-965X
 
-    au < frozen ; exists ; 2020 ; International Journal of Security and Privacy in Pervasive Computing (IJSPPC) Volume 12 ; 12 ; https://www.igi-global.com/ ; >
+    au < finished ; manifest ; 2020 ; International Journal of Security and Privacy in Pervasive Computing (IJSPPC) Volume 12 ; 12 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Security and Privacy in Pervasive Computing (IJSPPC) Volume 13 ; 13 ; https://www.igi-global.com/ ; >
     au < crawling ; exists ; 2022 ; International Journal of Security and Privacy in Pervasive Computing (IJSPPC) Volume 14 ; 14 ; https://www.igi-global.com/ ; >
 
@@ -801,7 +801,7 @@
     au < finished ; manifest ; 2017 ; International Journal of Computer Vision and Image Processing (IJCVIP) Volume 7 ; 7 ; http://www.igi-global.com/ ; reingest5.clockss.org:8082 > 
     au < deepCrawl ; exists ; 2018 ; International Journal of Computer Vision and Image Processing (IJCVIP) Volume 8 ; 8 ; https://www.igi-global.com/ ; > 
     au < finished ; manifest ; 2019 ; International Journal of Computer Vision and Image Processing (IJCVIP) Volume 9 ; 9 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2020 ; International Journal of Computer Vision and Image Processing (IJCVIP) Volume 10 ; 10 ; https://www.igi-global.com/ ; >
+    au < finished ; manifest ; 2020 ; International Journal of Computer Vision and Image Processing (IJCVIP) Volume 10 ; 10 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Computer Vision and Image Processing (IJCVIP) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
     au < crawling ; exists ; 2022 ; International Journal of Computer Vision and Image Processing (IJCVIP) Volume 12 ; 12 ; https://www.igi-global.com/ ; >
 
@@ -1473,7 +1473,7 @@
     au < finished ; manifest ; 2016 ; International Journal of E-Politics (IJEP) Volume 7 ; 7 ; http://www.igi-global.com/ ; reingest3.clockss.org:8083 > 
     au < finished ; manifest ; 2017 ; International Journal of E-Politics (IJEP) Volume 8 ; 8 ; http://www.igi-global.com/ ; reingest1.clockss.org:8082 > 
     au < deepCrawl ; exists ; 2018 ; International Journal of E-Politics (IJEP) Volume 9 ; 9 ; https://www.igi-global.com/ ; > 
-    au < frozen ; exists ; 2019 ; International Journal of E-Politics (IJEP) Volume 10 ; 10 ; https://www.igi-global.com/ ; > 
+    au < finished ; manifest ; 2019 ; International Journal of E-Politics (IJEP) Volume 10 ; 10 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 > 
 
   }
 
@@ -1522,7 +1522,7 @@
     au < finished ; manifest ; 2017 ; International Journal of Fuzzy System Applications (IJFSA) Volume 6 ; 6 ; http://www.igi-global.com/ ; reingest5.clockss.org:8082 > 
     au < deepCrawl ; exists ; 2018 ; International Journal of Fuzzy System Applications (IJFSA) Volume 7 ; 7 ; https://www.igi-global.com/ ; > 
     au < finished ; manifest ; 2019 ; International Journal of Fuzzy System Applications (IJFSA) Volume 8 ; 8 ; https://www.igi-global.com/ ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2020 ; International Journal of Fuzzy System Applications (IJFSA) Volume 9 ; 9 ; https://www.igi-global.com/ ; >
+    au < finished ; manifest ; 2020 ; International Journal of Fuzzy System Applications (IJFSA) Volume 9 ; 9 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Fuzzy System Applications (IJFSA) Volume 10 ; 10 ; https://www.igi-global.com/ ; >
     au < crawling ; exists ; 2022 ; International Journal of Fuzzy System Applications (IJFSA) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
 
@@ -1641,7 +1641,7 @@
     param[journal_issn] = 2643-7406
     #continues = 1948-5018
 
-    au < frozen ; exists ; 2020 ; International Journal of Environmental Sustainability and Green Technologies (IJESGT) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
+    au < finished ; manifest ; 2020 ; International Journal of Environmental Sustainability and Green Technologies (IJESGT) Volume 11 ; 11 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Environmental Sustainability and Green Technologies (IJESGT) Volume 12 ; 12 ; https://www.igi-global.com/ ; >
     au < crawling ; exists ; 2022 ; International Journal of Environmental Sustainability and Green Technologies (IJESGT) Volume 13 ; 13 ; https://www.igi-global.com/ ; >
 
@@ -1708,7 +1708,7 @@
     #continues = 1947-9158
 
     au < finished ; crawling ; 2018 ; International Journal of Mobile Devices, Wearable Technology, and Flexible Electronics (IJMDWTFE) Volume 9 ; 9 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2019 ; International Journal of Mobile Devices, Wearable Technology, and Flexible Electronics (IJMDWTFE) Volume 10 ; 10 ; https://www.igi-global.com/ ; >
+    au < finished ; manifest ; 2019 ; International Journal of Mobile Devices, Wearable Technology, and Flexible Electronics (IJMDWTFE) Volume 10 ; 10 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Mobile Devices, Wearable Technology, and Flexible Electronics (IJMDWTFE) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
     au < testing ; exists ; 2022 ; International Journal of Mobile Devices, Wearable Technology, and Flexible Electronics (IJMDWTFE) Volume 12 ; 12 ; https://www.igi-global.com/ ; >
 
@@ -2572,7 +2572,7 @@
     au < deepCrawl ; exists ; 2018 ; International Journal of Mobile Human Computer Interaction (IJMHCI) Volume 10 ; 10 ; https://www.igi-global.com/ ; > 
     au < finished ; manifest ; 2019 ; International Journal of Mobile Human Computer Interaction (IJMHCI) Volume 11 ; 11 ; https://www.igi-global.com/ ; reingest4.clockss.org:8082 > 
     au < finished ; manifest ; 2020 ; International Journal of Mobile Human Computer Interaction (IJMHCI) Volume 12 ; 12 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 > 
-    au < frozen ; exists ; 2021 ; International Journal of Mobile Human Computer Interaction (IJMHCI) Volume 13 ; 13 ; https://www.igi-global.com/ ; > 
+    au < finished ; manifest ; 2021 ; International Journal of Mobile Human Computer Interaction (IJMHCI) Volume 13 ; 13 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 > 
     au < expected ; exists ; 2022 ; International Journal of Mobile Human Computer Interaction (IJMHCI) Volume 14 ; 14 ; https://www.igi-global.com/ ; > 
 
   }
@@ -2864,7 +2864,7 @@
     au < finished ; manifest ; 2017 ; International Journal of Privacy and Health Information Management (IJPHIM) Volume 5 ; 5 ; http://www.igi-global.com/ ; reingest3.clockss.org:8083 > 
     au < deepCrawl ; exists ; 2018 ; International Journal of Privacy and Health Information Management (IJPHIM) Volume 6 ; 6 ; https://www.igi-global.com/ ; > 
     au < finished ; manifest ; 2019 ; International Journal of Privacy and Health Information Management (IJPHIM) Volume 7 ; 7 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 > 
-    au < frozen ; exists ; 2020 ; International Journal of Privacy and Health Information Management (IJPHIM) Volume 8 ; 8 ; https://www.igi-global.com/ ; > 
+    au < finished ; manifest ; 2020 ; International Journal of Privacy and Health Information Management (IJPHIM) Volume 8 ; 8 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 > 
 
   }
 
@@ -2902,7 +2902,7 @@
     param[journal_issn] = 2643-8089
     #continues = 2160-9837
 
-    au < frozen ; exists ; 2020 ; International Journal of Project Management and Productivity Assessment (IJPMPA) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
+    au < finished ; manifest ; 2020 ; International Journal of Project Management and Productivity Assessment (IJPMPA) Volume 8 ; 8 ; https://www.igi-global.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Project Management and Productivity Assessment (IJPMPA) Volume 9 ; 9 ; https://www.igi-global.com/ ; >
     au < crawling ; exists ; 2022 ; International Journal of Project Management and Productivity Assessment (IJPMPA) Volume 10 ; 10 ; https://www.igi-global.com/ ; >
 
@@ -2957,7 +2957,7 @@
     param[journal_issn] = 2641-0923
     #continues = 2155-496X
 
-    au < frozen ; exists ; 2019 ; International Journal of Quality Control and Standards in Science and Engineering (IJQCSSE) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
+    au < finished ; manifest ; 2019 ; International Journal of Quality Control and Standards in Science and Engineering (IJQCSSE) Volume 7 ; 7 ; https://www.igi-global.com/ ; reingest4.clockss.org:8082 >
     au < doesNotExist ; doesNotExist ; 2020 ; International Journal of Quality Control and Standards in Science and Engineering (IJQCSSE) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
     au < notReady ; exists ; 2021 ; International Journal of Quality Control and Standards in Science and Engineering (IJQCSSE) Volume 9 ; 9 ; https://www.igi-global.com/ ; > # no content online
     au < expected ; exists ; 2022 ; International Journal of Quality Control and Standards in Science and Engineering (IJQCSSE) Volume 10 ; 10 ; https://www.igi-global.com/ ; > # no content online
@@ -2982,7 +2982,7 @@
     au < finished ; manifest ; 2017 ; International Journal of Reliable and Quality E-Healthcare (IJRQEH) Volume 6 ; 6 ; http://www.igi-global.com/ ; reingest5.clockss.org:8082 > 
     au < deepCrawl ; exists ; 2018 ; International Journal of Reliable and Quality E-Healthcare (IJRQEH) Volume 7 ; 7 ; https://www.igi-global.com/ ; > 
     au < finished ; manifest ; 2019 ; International Journal of Reliable and Quality E-Healthcare (IJRQEH) Volume 8 ; 8 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 > 
-    au < frozen ; exists ; 2020 ; International Journal of Reliable and Quality E-Healthcare (IJRQEH) Volume 9 ; 9 ; https://www.igi-global.com/ ; > 
+    au < finished ; manifest ; 2020 ; International Journal of Reliable and Quality E-Healthcare (IJRQEH) Volume 9 ; 9 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 > 
     au < deepCrawl ; exists ; 2021 ; International Journal of Reliable and Quality E-Healthcare (IJRQEH) Volume 10 ; 10 ; https://www.igi-global.com/ ; > 
     au < crawling ; exists ; 2022 ; International Journal of Reliable and Quality E-Healthcare (IJRQEH) Volume 11 ; 11 ; https://www.igi-global.com/ ; > 
 
@@ -3251,7 +3251,7 @@
     au < finished ; manifest ; 2017 ; International Journal of Standardization Research (IJSR) Volume 15 ; 15 ; http://www.igi-global.com/ ; reingest1.clockss.org:8082 > 
     au < finished ; manifest ; 2018 ; International Journal of Standardization Research (IJSR) Volume 16 ; 16 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 > 
     au < finished ; crawling ; 2019 ; International Journal of Standardization Research (IJSR) Volume 17 ; 17 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2020 ; International Journal of Standardization Research (IJSR) Volume 18 ; 18 ; https://www.igi-global.com/ ; >
+    au < finished ; manifest ; 2020 ; International Journal of Standardization Research (IJSR) Volume 18 ; 18 ; https://www.igi-global.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Standardization Research (IJSR) Volume 19 ; 19 ; https://www.igi-global.com/ ; >
     au < expected ; exists ; 2022 ; International Journal of Standardization Research (IJSR) Volume 20 ; 20 ; https://www.igi-global.com/ ; >
 
@@ -3325,7 +3325,7 @@
     au < finished ; manifest ; 2017 ; International Journal of Surface Engineering and Interdisciplinary Materials Science (IJSEIMS) Volume 5 ; 5 ; http://www.igi-global.com/ ; reingest3.clockss.org:8083 > 
     au < deepCrawl ; exists ; 2018 ; International Journal of Surface Engineering and Interdisciplinary Materials Science (IJSEIMS) Volume 6 ; 6 ; https://www.igi-global.com/ ; > 
     au < finished ; manifest ; 2019 ; International Journal of Surface Engineering and Interdisciplinary Materials Science (IJSEIMS) Volume 7 ; 7 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 > 
-    au < frozen ; exists ; 2020 ; International Journal of Surface Engineering and Interdisciplinary Materials Science (IJSEIMS) Volume 8 ; 8 ; https://www.igi-global.com/ ; > 
+    au < finished ; manifest ; 2020 ; International Journal of Surface Engineering and Interdisciplinary Materials Science (IJSEIMS) Volume 8 ; 8 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 > 
     au < deepCrawl ; exists ; 2021 ; International Journal of Surface Engineering and Interdisciplinary Materials Science (IJSEIMS) Volume 9 ; 9 ; https://www.igi-global.com/ ; > 
     au < crawling ; exists ; 2022 ; International Journal of Surface Engineering and Interdisciplinary Materials Science (IJSEIMS) Volume 10 ; 10 ; https://www.igi-global.com/ ; > 
 
@@ -3365,7 +3365,7 @@
     >
     param[journal_issn] = 1947-9263
 
-    au < frozen ; exists ; 2010 ; International Journal of Swarm Intelligence Research (IJSIR) Volume 1 ; 1 ; http://www.igi-global.com/ ; > 
+    au < finished ; manifest ; 2010 ; International Journal of Swarm Intelligence Research (IJSIR) Volume 1 ; 1 ; http://www.igi-global.com/ ; reingest5.clockss.org:8082 > 
     au < finished ; finished ; 2011 ; International Journal of Swarm Intelligence Research (IJSIR) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2012 ; International Journal of Swarm Intelligence Research (IJSIR) Volume 3 ; 3 ; http://www.igi-global.com/ ; > 
     au < finished ; manifest ; 2013 ; International Journal of Swarm Intelligence Research (IJSIR) Volume 4 ; 4 ; http://www.igi-global.com/ ; reingest2.clockss.org:8085 > 
@@ -3660,8 +3660,8 @@
     param[journal_issn] = 2642-2247
     #continues = 1942-9010
 
-    au < frozen ; exists ; 2019 ; International Journal of Social Media and Online Communities (IJSMOC) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
-    au < frozen ; exists ; 2020 ; International Journal of Social Media and Online Communities (IJSMOC) Volume 12 ; 12 ; https://www.igi-global.com/ ; >
+    au < finished ; manifest ; 2019 ; International Journal of Social Media and Online Communities (IJSMOC) Volume 11 ; 11 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; International Journal of Social Media and Online Communities (IJSMOC) Volume 12 ; 12 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Social Media and Online Communities (IJSMOC) Volume 13 ; 13 ; https://www.igi-global.com/ ; >
     au < crawling ; exists ; 2022 ; International Journal of Social Media and Online Communities (IJSMOC) Volume 14 ; 14 ; https://www.igi-global.com/ ; >
 
