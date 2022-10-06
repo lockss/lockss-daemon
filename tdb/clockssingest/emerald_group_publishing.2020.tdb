@@ -348,7 +348,7 @@
     au < manifest ; exists ; 1993 ; Aircraft Engineering and Aerospace Technology Volume 65 ; 65 ; >
     au < manifest ; exists ; 1994 ; Aircraft Engineering and Aerospace Technology Volume 66 ; 66 ; >
     au < manifest ; exists ; 1995 ; Aircraft Engineering and Aerospace Technology Volume 67 ; 67 ; >
-    au < ready ; exists ; 1996 ; Aircraft Engineering and Aerospace Technology Volume 68 ; 68 ; >
+    au < crawling ; exists ; 1996 ; Aircraft Engineering and Aerospace Technology Volume 68 ; 68 ; >
     au < manifest ; exists ; 1997 ; Aircraft Engineering and Aerospace Technology Volume 69 ; 69 ; >
     au < frozen ; exists ; 1998 ; Aircraft Engineering and Aerospace Technology Volume 70 ; 70 ; >
     au < frozen ; exists ; 1999 ; Aircraft Engineering and Aerospace Technology Volume 71 ; 71 ; >
@@ -2823,7 +2823,7 @@
     au < manifest ; exists ; 1995 ; European Journal of Marketing Volume 29 ; 29 ; >
     au < manifest ; exists ; 1996 ; European Journal of Marketing Volume 30 ; 30 ; >
     au < manifest ; exists ; 1997 ; European Journal of Marketing Volume 31 ; 31 ; >
-    au < ready ; exists ; 1998 ; European Journal of Marketing Volume 32 ; 32 ; >
+    au < crawling ; exists ; 1998 ; European Journal of Marketing Volume 32 ; 32 ; >
     au < frozen ; exists ; 1999 ; European Journal of Marketing Volume 33 ; 33 ; >
     au < frozen ; exists ; 2000 ; European Journal of Marketing Volume 34 ; 34 ; >
     au < frozen ; exists ; 2001 ; European Journal of Marketing Volume 35 ; 35 ; >
@@ -2901,7 +2901,7 @@
     au < manifest ; exists ; 1996 ; Facilities Volume 14 ; 14 ; >
     au < manifest ; exists ; 1997 ; Facilities Volume 15 ; 15 ; >
     au < frozen ; exists ; 1998 ; Facilities Volume 16 ; 16 ; >
-    au < ready ; exists ; 1999 ; Facilities Volume 17 ; 17 ; >
+    au < crawling ; exists ; 1999 ; Facilities Volume 17 ; 17 ; >
     au < frozen ; exists ; 2000 ; Facilities Volume 18 ; 18 ; >
     au < frozen ; exists ; 2001 ; Facilities Volume 19 ; 19 ; >
     au < frozen ; exists ; 2002 ; Facilities Volume 20 ; 20 ; >
@@ -3636,7 +3636,7 @@
     comment[journal_id] = info
     #continued_by = 2398-5038
 
-    au < ready ; exists ; 1999 ; info Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1999 ; info Volume 1 ; 1 ; >
     au < frozen ; exists ; 2000 ; info Volume 2 ; 2 ; >
     au < frozen ; exists ; 2001 ; info Volume 3 ; 3 ; >
     au < frozen ; exists ; 2002 ; info Volume 4 ; 4 ; >
@@ -5120,7 +5120,7 @@
     au < manifest ; exists ; 1995 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 5 ; 5 ; >
     au < manifest ; exists ; 1996 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 6 ; 6 ; >
     au < ready ; exists ; 1997 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 7 ; 7 ; >
-    au < ready ; exists ; 1998 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 8 ; 8 ; >
+    au < crawling ; exists ; 1998 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 8 ; 8 ; >
     au < frozen ; exists ; 1999 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 9 ; 9 ; >
     au < frozen ; exists ; 2000 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 10 ; 10 ; >
     au < frozen ; exists ; 2001 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 11 ; 11 ; >
@@ -5508,7 +5508,7 @@
     au < manifest ; exists ; 1996 ; International Journal of Public Sector Management Volume 9 ; 9 ; >
     au < ready ; exists ; 1997 ; International Journal of Public Sector Management Volume 10 ; 10 ; >
     au < ready ; exists ; 1998 ; International Journal of Public Sector Management Volume 11 ; 11 ; >
-    au < ready ; exists ; 1999 ; International Journal of Public Sector Management Volume 12 ; 12 ; >
+    au < crawling ; exists ; 1999 ; International Journal of Public Sector Management Volume 12 ; 12 ; >
     au < frozen ; exists ; 2000 ; International Journal of Public Sector Management Volume 13 ; 13 ; >
     au < frozen ; exists ; 2001 ; International Journal of Public Sector Management Volume 14 ; 14 ; >
     au < frozen ; exists ; 2002 ; International Journal of Public Sector Management Volume 15 ; 15 ; >
@@ -7372,7 +7372,7 @@
     comment[journal_id] = jfmm
 
     au < ready ; exists ; 1997 ; Journal of Fashion Marketing and Management Volume 1 ; 1 ; >
-    au < ready ; exists ; 1998 ; Journal of Fashion Marketing and Management Volume 2 ; 2 ; >
+    au < crawling ; exists ; 1998 ; Journal of Fashion Marketing and Management Volume 2 ; 2 ; >
     au < frozen ; exists ; 1999 ; Journal of Fashion Marketing and Management Volume 3 ; 3 ; >
     au < frozen ; exists ; 2000 ; Journal of Fashion Marketing and Management Volume 4 ; 4 ; >
     au < frozen ; exists ; 2001 ; Journal of Fashion Marketing and Management Volume 5 ; 5 ; >
@@ -8151,7 +8151,7 @@
     au < manifest ; exists ; 1996 ; Journal of Management Development Volume 15 ; 15 ; >
     au < manifest ; exists ; 1997 ; Journal of Management Development Volume 16 ; 16 ; >
     au < frozen ; exists ; 1998 ; Journal of Management Development Volume 17 ; 17 ; >
-    au < ready ; exists ; 1999 ; Journal of Management Development Volume 18 ; 18 ; >
+    au < crawling ; exists ; 1999 ; Journal of Management Development Volume 18 ; 18 ; >
     au < frozen ; exists ; 2000 ; Journal of Management Development Volume 19 ; 19 ; >
     au < ready ; exists ; 2001 ; Journal of Management Development Volume 20 ; 20 ; >
     au < frozen ; exists ; 2002 ; Journal of Management Development Volume 21 ; 21 ; >
@@ -9454,7 +9454,7 @@
     au < manifest ; exists ; 1995 ; Librarian Career Development Volume 3 ; 3 ; >
     au < manifest ; exists ; 1996 ; Librarian Career Development Volume 4 ; 4 ; >
     au < ready ; exists ; 1997 ; Librarian Career Development Volume 5 ; 5 ; >
-    au < ready ; exists ; 1998 ; Librarian Career Development Volume 6 ; 6 ; >
+    au < crawling ; exists ; 1998 ; Librarian Career Development Volume 6 ; 6 ; >
     au < frozen ; exists ; 1999 ; Librarian Career Development Volume 7 ; 7 ; >
 
   }
@@ -12034,7 +12034,7 @@
     au < manifest ; exists ; 1996 ; Sensor Review Volume 16 ; 16 ; >
     au < manifest ; exists ; 1997 ; Sensor Review Volume 17 ; 17 ; >
     au < ready ; exists ; 1998 ; Sensor Review Volume 18 ; 18 ; >
-    au < ready ; exists ; 1999 ; Sensor Review Volume 19 ; 19 ; >
+    au < crawling ; exists ; 1999 ; Sensor Review Volume 19 ; 19 ; >
     au < frozen ; exists ; 2000 ; Sensor Review Volume 20 ; 20 ; >
     au < frozen ; exists ; 2001 ; Sensor Review Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2002 ; Sensor Review Volume 22 ; 22 ; >
@@ -13463,7 +13463,7 @@
 
     au < ready ; exists ; 2015 ; English Teaching: Practice & Critique Volume 14 ; 14 ; >
     au < ready ; exists ; 2016 ; English Teaching: Practice & Critique Volume 15 ; 15 ; >
-    au < ready ; exists ; 2017 ; English Teaching: Practice & Critique Volume 16 ; 16 ; >
+    au < crawling ; exists ; 2017 ; English Teaching: Practice & Critique Volume 16 ; 16 ; >
     au < frozen ; exists ; 2018 ; English Teaching: Practice & Critique Volume 17 ; 17 ; >
     au < ready ; exists ; 2019 ; English Teaching: Practice & Critique Volume 18 ; 18 ; >
     au < frozen ; exists ; 2020 ; English Teaching: Practice & Critique Volume 19 ; 19 ; >
@@ -13491,7 +13491,7 @@
     au < frozen ; exists ; 2018 ; European Journal of Training and Development Volume 42 ; 42 ; >
     au < ready ; exists ; 2019 ; European Journal of Training and Development Volume 43 ; 43 ; >
     au < ready ; exists ; 2020 ; European Journal of Training and Development Volume 44 ; 44 ; >
-    au < ready ; exists ; 2021 ; European Journal of Training and Development Volume 45 ; 45 ; >
+    au < crawling ; exists ; 2021 ; European Journal of Training and Development Volume 45 ; 45 ; >
     au < crawling ; exists ; 2022 ; European Journal of Training and Development Volume 46 ; 46 ; >
 
   }
@@ -13692,7 +13692,7 @@
     au < frozen ; exists ; 2007 ; International Journal of Organization Theory & Behavior Volume 10 ; 10 ; >
     au < ready ; exists ; 2008 ; International Journal of Organization Theory & Behavior Volume 11 ; 11 ; >
     au < frozen ; exists ; 2009 ; International Journal of Organization Theory & Behavior Volume 12 ; 12 ; >
-    au < ready ; exists ; 2010 ; International Journal of Organization Theory & Behavior Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2010 ; International Journal of Organization Theory & Behavior Volume 13 ; 13 ; >
     au < crawling ; exists ; 2011 ; International Journal of Organization Theory & Behavior Volume 14 ; 14 ; >
     au < ready ; exists ; 2012 ; International Journal of Organization Theory & Behavior Volume 15 ; 15 ; >
     au < frozen ; exists ; 2013 ; International Journal of Organization Theory & Behavior Volume 16 ; 16 ; >
@@ -13988,11 +13988,11 @@
     au < manifest ; exists ; 1996 ; Journal of Public Budgeting, Accounting & Financial Management Volume 8 ; 8 ; >
     au < ready ; exists ; 1997 ; Journal of Public Budgeting, Accounting & Financial Management Volume 9 ; 9 ; >
     au < ready ; exists ; 1998 ; Journal of Public Budgeting, Accounting & Financial Management Volume 10 ; 10 ; >
-    au < ready ; exists ; 1999 ; Journal of Public Budgeting, Accounting & Financial Management Volume 11 ; 11 ; >
+    au < crawling ; exists ; 1999 ; Journal of Public Budgeting, Accounting & Financial Management Volume 11 ; 11 ; >
     au < ready ; exists ; 2000 ; Journal of Public Budgeting, Accounting & Financial Management Volume 12 ; 12 ; >
     au < exists ; exists ; 2001 ; Journal of Public Budgeting, Accounting & Financial Management Volume 13 ; 13 ; >
     au < frozen ; exists ; 2002 ; Journal of Public Budgeting, Accounting & Financial Management Volume 14 ; 14 ; >
-    au < ready ; exists ; 2003 ; Journal of Public Budgeting, Accounting & Financial Management Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2003 ; Journal of Public Budgeting, Accounting & Financial Management Volume 15 ; 15 ; >
     au < ready ; exists ; 2004 ; Journal of Public Budgeting, Accounting & Financial Management Volume 16 ; 16 ; >
     au < frozen ; exists ; 2005 ; Journal of Public Budgeting, Accounting & Financial Management Volume 17 ; 17 ; >
     au < ready ; exists ; 2006 ; Journal of Public Budgeting, Accounting & Financial Management Volume 18 ; 18 ; >
@@ -14110,7 +14110,7 @@
     au < frozen ; exists ; 2014 ; Journal of Structural Fire Engineering Volume 5 ; 5 ; >
     au < frozen ; exists ; 2015 ; Journal of Structural Fire Engineering Volume 6 ; 6 ; >
     au < ready ; exists ; 2016 ; Journal of Structural Fire Engineering Volume 7 ; 7 ; >
-    au < ready ; exists ; 2017 ; Journal of Structural Fire Engineering Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2017 ; Journal of Structural Fire Engineering Volume 8 ; 8 ; >
     au < crawling ; exists ; 2018 ; Journal of Structural Fire Engineering Volume 9 ; 9 ; >
     au < ready ; exists ; 2019 ; Journal of Structural Fire Engineering Volume 10 ; 10 ; >
     au < frozen ; exists ; 2020 ; Journal of Structural Fire Engineering Volume 11 ; 11 ; >
@@ -14143,7 +14143,7 @@
     au < crawling ; exists ; 2016 ; Open House International Volume 41 ; 41 ; >
     au < frozen ; exists ; 2017 ; Open House International Volume 42 ; 42 ; >
     au < frozen ; exists ; 2018 ; Open House International Volume 43 ; 43 ; >
-    au < ready ; exists ; 2019 ; Open House International Volume 44 ; 44 ; >
+    au < crawling ; exists ; 2019 ; Open House International Volume 44 ; 44 ; >
     au < frozen ; exists ; 2020 ; Open House International Volume 45 ; 45 ; >
     au < ready ; exists ; 2021 ; Open House International Volume 46 ; 46 ; >
     au < crawling ; exists ; 2022 ; Open House International Volume 47 ; 47 ; >
@@ -14175,7 +14175,7 @@
     au < frozen ; exists ; 2009 ; Research Journal of Textile and Apparel Volume 13 ; 13 ; >
     au < ready ; exists ; 2010 ; Research Journal of Textile and Apparel Volume 14 ; 14 ; >
     au < frozen ; exists ; 2011 ; Research Journal of Textile and Apparel Volume 15 ; 15 ; >
-    au < ready ; exists ; 2012 ; Research Journal of Textile and Apparel Volume 16 ; 16 ; >
+    au < crawling ; exists ; 2012 ; Research Journal of Textile and Apparel Volume 16 ; 16 ; >
     au < crawling ; exists ; 2013 ; Research Journal of Textile and Apparel Volume 17 ; 17 ; >
     au < frozen ; exists ; 2014 ; Research Journal of Textile and Apparel Volume 18 ; 18 ; >
     au < ready ; exists ; 2015 ; Research Journal of Textile and Apparel Volume 19 ; 19 ; >
