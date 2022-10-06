@@ -90,7 +90,13 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
     // this used to be a simpler Regex, but was omitting all article from Taylor & Francis, so checking for
     // tocArticleEntry is necessary.
     // new for 2020? at least appears on https://ascopubs.org/doi/full/10.1200/JCO.2009.46.2473
-    HtmlNodeFilters.tagWithAttributeRegex("div","class", "^(?!.*tocArticleEntry).*article-tools"),
+    //HtmlNodeFilters.tagWithAttributeRegex("div","class", "^(?!.*tocArticleEntry).*article-tools"),
+
+    HtmlNodeFilters.allExceptSubtree(
+            HtmlNodeFilters.tagWithAttributeRegex("div","class", "^(?!.*tocArticleEntry).*article-tools"),
+            HtmlNodeFilters.tagWithAttributeRegex(
+                    "a", "href", "/action/showCitFormats\\?")),
+
     HtmlNodeFilters.tagWithAttributeRegex("div","id", "TrendMD Widget"),
     // other trendmd id/classnames
     HtmlNodeFilters.tagWithAttributeRegex("div","id", "trendmd-suggestions"),
@@ -154,7 +160,13 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "articleTools"),
           HtmlNodeFilters.tagWithAttributeRegex(
                  "a", "href", "/action/showCitFormats\\?")),
-    
+
+          /*
+    HtmlNodeFilters.allExceptSubtree(
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-tools"),
+            HtmlNodeFilters.tagWithAttributeRegex(
+                    "a", "href", "/action/showCitFormats\\?")),
+    */
     // related content from Related tab of Errata full text
     // http://press.endocrine.org/doi/full/10.1210/en.2013-1802
     HtmlNodeFilters.tagWithAttributeRegex("div", "id", "relatedContent"),

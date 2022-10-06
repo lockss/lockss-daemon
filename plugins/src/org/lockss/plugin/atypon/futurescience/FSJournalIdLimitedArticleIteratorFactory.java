@@ -50,10 +50,13 @@ public class FSJournalIdLimitedArticleIteratorFactory extends BaseAtyponArticleI
   //    level information (dc.*, not ris) so the same doi shows up across many journals. To get it associated
   //    with the correct journals - putting in this AI fix. Then we'll scrub and re-extract.
   // This must be a case-insensitive pattern template
+
+    // On purpose get rid of "journal_id" from the patterns in 2022 since it no longer helpful,
+    // but rather become a blocker from collecting articles without journal_id in url pattern
   private static final String JID_LIMITED_PATTERN_TEMPLATE_WITH_ABSTRACT = 
-	      "\"^%sdoi/((abs|full|pdf|pdfplus)/)?[.0-9]+/%s\", base_url, journal_id";
+	      "\"^%sdoi/((abs|full|pdf|pdfplus)/)?[.0-9]+/\", base_url";
   private static final String JID_LIMITED_PATTERN_TEMPLATE = 
-	      "\"^%sdoi/((full|pdf|pdfplus)/)?[.0-9]+/%s\", base_url, journal_id";
+	      "\"^%sdoi/((full|pdf|pdfplus)/)?[.0-9]+/\", base_url";
   @Override
   protected String getPatternTemplate() {
 	  return JID_LIMITED_PATTERN_TEMPLATE;

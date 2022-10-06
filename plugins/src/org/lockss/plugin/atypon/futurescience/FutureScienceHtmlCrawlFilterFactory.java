@@ -55,6 +55,11 @@ import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
 public class FutureScienceHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory {
   protected static final Pattern prev_next = Pattern.compile("Prev. Article|Next Article", Pattern.CASE_INSENSITIVE);
   NodeFilter[] filters = new NodeFilter[] {
+
+          HtmlNodeFilters.allExceptSubtree(
+                  HtmlNodeFilters.tagWithAttributeRegex("div","class", "^(?!.*tocArticleEntry).*article-tools"),
+                  HtmlNodeFilters.tagWithAttributeRegex(
+                          "a", "href", "/action/showCitFormats\\?")),
       
       /* 
        * This first section is from < 2017
@@ -84,7 +89,7 @@ public class FutureScienceHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilt
       // Article landing - ajax tabs
       HtmlNodeFilters.tagWithAttributeRegex("li",  "id", "pane-pcw-(R|r)elated"),
       HtmlNodeFilters.tagWithAttributeRegex("li",  "id", "pane-pcw-(R|r)eferences"),
-
+          
   };
 
   public InputStream createFilteredInputStream(ArchivalUnit au,

@@ -202,5 +202,28 @@ public class TestFutureScienceHtmlCrawlFilterFactory extends LockssTestCase {
 
     assertEquals(referencesHtmlFiltered, StringUtil.fromInputStream(actIn1));
   }
-  
+
+    public void testShowCitationDiv() throws Exception {
+
+        String originalToolsDiv = "<div data-db-target-of=\"b83a9112-ff13-4233-be12-8a37252f58fb\" aria-labelledby=\"b83a9112-ff13-4233-be12-8a37252f58fb_Ctrl\" role=\"menu\" id=\"b83a9112-ff13-4233-be12-8a37252f58fb_Pop\" class=\"article-tools__block fixed dropBlock__holder\">\n" +
+                "    <ul class=\"rlist w-slide--list\">\n" +
+                "        <li role=\"presentation\" class=\"article-tool\"><a href=\"/personalize/addFavoritePublication?doi=10.2144%2F000113771\" role=\"menuitem\"><i aria-hidden=\"true\" class=\"icon-Icon_Star-26\"></i><span>Add to favorites</span></a></li>\n" +
+                "        <li role=\"presentation\" class=\"article-tool\"><a href=\"/action/showCitFormats?doi=10.2144%2F000113771\" role=\"menuitem\"><i aria-hidden=\"true\" class=\"icon-Icon_Download\"></i><span>Download Citations</span></a></li>\n" +
+                "        <li role=\"presentation\" class=\"article-tool\"><a href=\"/action/addCitationAlert?doi=10.2144%2F000113771\" role=\"menuitem\"><i aria-hidden=\"true\" class=\"icon-Icon_Track-citations\"></i><span>Track Citations</span></a></li>\n" +
+                "    </ul>\n" +
+                "</div>";
+
+        String filteredToolsDiv = "<div data-db-target-of=\"b83a9112-ff13-4233-be12-8a37252f58fb\" aria-labelledby=\"b83a9112-ff13-4233-be12-8a37252f58fb_Ctrl\" role=\"menu\" id=\"b83a9112-ff13-4233-be12-8a37252f58fb_Pop\" class=\"article-tools__block fixed dropBlock__holder\"><ul class=\"rlist w-slide--list\"><li role=\"presentation\" class=\"article-tool\"><a href=\"/action/showCitFormats?doi=10.2144%2F000113771\" role=\"menuitem\"><i aria-hidden=\"true\" class=\"icon-Icon_Download\"></i><span>Download Citations</span></a></li></ul></div>";
+
+
+        InputStream inStream3;
+        inStream3 = fact.createFilteredInputStream(mau,
+                new StringInputStream(originalToolsDiv),
+                Constants.DEFAULT_ENCODING);
+
+        //log.info(StringUtil.fromInputStream(inStream3));
+
+       assertEquals(filteredToolsDiv, StringUtil.fromInputStream(inStream3));
+
+    }
 }
