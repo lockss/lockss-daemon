@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>deprecated</string>
+    <string>deprecated - and was never in use</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -30,7 +30,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>American Nuclear Society Plugin</string>
+    <string>American Nuclear Society Journals Plugin</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -38,7 +38,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"American Nuclear Society Plugin, Base URL %s, Download URL %s, Journal ID %s, Volume %s", base_url, download_url, journal_id, volume_name</string>
+    <string>"American Nuclear Society Journals Plugin, Base URL %s, Download URL %s, Journal ID %s, Volume %s", base_url, download_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
