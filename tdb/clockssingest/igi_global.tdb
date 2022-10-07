@@ -687,7 +687,7 @@
     au < finished ; manifest ; 2016 ; International Journal of Chemoinformatics and Chemical Engineering (IJCCE) Volume 5 ; 5 ; http://www.igi-global.com/ ; reingest2.clockss.org:8085 > 
     au < finished ; manifest ; 2017 ; International Journal of Chemoinformatics and Chemical Engineering (IJCCE) Volume 6 ; 6 ; http://www.igi-global.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2018 ; International Journal of Chemoinformatics and Chemical Engineering (IJCCE) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
-    au < frozen ; exists ; 2019 ; International Journal of Chemoinformatics and Chemical Engineering (IJCCE) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
+    au < finished ; manifest ; 2019 ; International Journal of Chemoinformatics and Chemical Engineering (IJCCE) Volume 8 ; 8 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 >
 
   }
 
@@ -2117,7 +2117,7 @@
     >
     param[journal_issn] = 1938-0232
 
-    au < frozen ; exists ; 2010 ; International Journal of Information Technology Project Management (IJITPM) Volume 1 ; 1 ; http://www.igi-global.com/ ; > 
+    au < finished ; manifest ; 2010 ; International Journal of Information Technology Project Management (IJITPM) Volume 1 ; 1 ; http://www.igi-global.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2011 ; International Journal of Information Technology Project Management (IJITPM) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2012 ; International Journal of Information Technology Project Management (IJITPM) Volume 3 ; 3 ; http://www.igi-global.com/ ; > 
     au < finished ; manifest ; 2013 ; International Journal of Information Technology Project Management (IJITPM) Volume 4 ; 4 ; http://www.igi-global.com/ ; reingest2.clockss.org:8085 > 
@@ -2143,7 +2143,7 @@
     >
     param[journal_issn] = 1947-8305
 
-    au < frozen ; exists ; 2010 ; International Journal of Innovation in the Digital Economy (IJIDE) Volume 1 ; 1 ; http://www.igi-global.com/ ; > 
+    au < finished ; manifest ; 2010 ; International Journal of Innovation in the Digital Economy (IJIDE) Volume 1 ; 1 ; http://www.igi-global.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2011 ; International Journal of Innovation in the Digital Economy (IJIDE) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2012 ; International Journal of Innovation in the Digital Economy (IJIDE) Volume 3 ; 3 ; http://www.igi-global.com/ ; > 
     au < finished ; manifest ; 2013 ; International Journal of Innovation in the Digital Economy (IJIDE) Volume 4 ; 4 ; http://www.igi-global.com/ ; reingest3.clockss.org:8083 > 
@@ -2243,7 +2243,7 @@
     param[journal_issn] = 1941-8663
 
     au < finished ; crawling ; 2009 ; International Journal of Interdisciplinary Telecommunications and Networking (IJITN) Volume 1 ; 1 ; http://www.igi-global.com/ ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2010 ; International Journal of Interdisciplinary Telecommunications and Networking (IJITN) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
+    au < finished ; manifest ; 2010 ; International Journal of Interdisciplinary Telecommunications and Networking (IJITN) Volume 2 ; 2 ; http://www.igi-global.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2011 ; International Journal of Interdisciplinary Telecommunications and Networking (IJITN) Volume 3 ; 3 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2012 ; International Journal of Interdisciplinary Telecommunications and Networking (IJITN) Volume 4 ; 4 ; http://www.igi-global.com/ ; > 
     au < finished ; manifest ; 2013 ; International Journal of Interdisciplinary Telecommunications and Networking (IJITN) Volume 5 ; 5 ; http://www.igi-global.com/ ; reingest1.clockss.org:8082 > 
@@ -2415,7 +2415,7 @@
     param[journal_issn] = 1947-8429
     #Out of print
 
-    au < frozen ; exists ; 2010 ; International Journal of Knowledge Society Research (IJKSR) Volume 1 ; 1 ; http://www.igi-global.com/ ; > 
+    au < finished ; manifest ; 2010 ; International Journal of Knowledge Society Research (IJKSR) Volume 1 ; 1 ; http://www.igi-global.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2011 ; International Journal of Knowledge Society Research (IJKSR) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2012 ; International Journal of Knowledge Society Research (IJKSR) Volume 3 ; 3 ; http://www.igi-global.com/ ; > 
     au < finished ; manifest ; 2013 ; International Journal of Knowledge Society Research (IJKSR) Volume 4 ; 4 ; http://www.igi-global.com/ ; reingest5.clockss.org:8082 > 
@@ -2507,8 +2507,8 @@
     >
     param[journal_issn] = 1941-8647
 
-    au < frozen ; exists ; 2009 ; International Journal of Mobile and Blended Learning (IJMBL) Volume 1 ; 1 ; http://www.igi-global.com/ ; > 
-    au < frozen ; exists ; 2010 ; International Journal of Mobile and Blended Learning (IJMBL) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
+    au < finished ; manifest ; 2009 ; International Journal of Mobile and Blended Learning (IJMBL) Volume 1 ; 1 ; http://www.igi-global.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2010 ; International Journal of Mobile and Blended Learning (IJMBL) Volume 2 ; 2 ; http://www.igi-global.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2011 ; International Journal of Mobile and Blended Learning (IJMBL) Volume 3 ; 3 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2012 ; International Journal of Mobile and Blended Learning (IJMBL) Volume 4 ; 4 ; http://www.igi-global.com/ ; > 
     au < finished ; manifest ; 2013 ; International Journal of Mobile and Blended Learning (IJMBL) Volume 5 ; 5 ; http://www.igi-global.com/ ; reingest2.clockss.org:8085 > 
@@ -2624,7 +2624,7 @@
     >
     param[journal_issn] = 1947-8534
 
-    au < frozen ; exists ; 2010 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 1 ; 1 ; http://www.igi-global.com/ ; > 
+    au < finished ; manifest ; 2010 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 1 ; 1 ; http://www.igi-global.com/ ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2011 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2012 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 3 ; 3 ; http://www.igi-global.com/ ; > 
     au < finished ; manifest ; 2013 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 4 ; 4 ; http://www.igi-global.com/ ; reingest1.clockss.org:8082 > 
@@ -2667,7 +2667,7 @@
     param[journal_issn] = 1947-928X
 
     au < manifest ; exists ; 2010 ; International Journal of Natural Computing Research (IJNCR) Volume 1 ; 1 ; https://www.igi-global.com/ ; > 
-    au < frozen ; exists ; 2011 ; International Journal of Natural Computing Research (IJNCR) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
+    au < finished ; manifest ; 2011 ; International Journal of Natural Computing Research (IJNCR) Volume 2 ; 2 ; http://www.igi-global.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2012 ; International Journal of Natural Computing Research (IJNCR) Volume 3 ; 3 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2014 ; International Journal of Natural Computing Research (IJNCR) Volume 4 ; 4 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2015 ; International Journal of Natural Computing Research (IJNCR) Volume 5 ; 5 ; http://www.igi-global.com/ ; reingest2.clockss.org:8085 > 
@@ -3148,7 +3148,7 @@
     >
     param[journal_issn] = 1947-8402
 
-    au < frozen ; exists ; 2010 ; International Journal of Social Ecology and Sustainable Development (IJSESD) Volume 1 ; 1 ; http://www.igi-global.com/ ; > 
+    au < finished ; manifest ; 2010 ; International Journal of Social Ecology and Sustainable Development (IJSESD) Volume 1 ; 1 ; http://www.igi-global.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2011 ; International Journal of Social Ecology and Sustainable Development (IJSESD) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2012 ; International Journal of Social Ecology and Sustainable Development (IJSESD) Volume 3 ; 3 ; http://www.igi-global.com/ ; > 
     au < finished ; manifest ; 2013 ; International Journal of Social Ecology and Sustainable Development (IJSESD) Volume 4 ; 4 ; http://www.igi-global.com/ ; reingest3.clockss.org:8083 > 
@@ -3267,7 +3267,7 @@
     >
     param[journal_issn] = 1947-8569
 
-    au < frozen ; exists ; 2010 ; International Journal of Strategic Decision Sciences (IJSDS) Volume 1 ; 1 ; http://www.igi-global.com/ ; > 
+    au < finished ; manifest ; 2010 ; International Journal of Strategic Decision Sciences (IJSDS) Volume 1 ; 1 ; http://www.igi-global.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2011 ; International Journal of Strategic Decision Sciences (IJSDS) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2012 ; International Journal of Strategic Decision Sciences (IJSDS) Volume 3 ; 3 ; http://www.igi-global.com/ ; > 
     au < finished ; manifest ; 2013 ; International Journal of Strategic Decision Sciences (IJSDS) Volume 4 ; 4 ; http://www.igi-global.com/ ; reingest1.clockss.org:8082 > 
@@ -3294,7 +3294,7 @@
     param[journal_issn] = 1947-3095
     #Out of print
 
-    au < frozen ; exists ; 2010 ; International Journal of Strategic Information Technology and Applications (IJSITA) Volume 1 ; 1 ; http://www.igi-global.com/ ; > 
+    au < finished ; manifest ; 2010 ; International Journal of Strategic Information Technology and Applications (IJSITA) Volume 1 ; 1 ; http://www.igi-global.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2011 ; International Journal of Strategic Information Technology and Applications (IJSITA) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2012 ; International Journal of Strategic Information Technology and Applications (IJSITA) Volume 3 ; 3 ; http://www.igi-global.com/ ; > 
     au < finished ; manifest ; 2013 ; International Journal of Strategic Information Technology and Applications (IJSITA) Volume 4 ; 4 ; http://www.igi-global.com/ ; reingest5.clockss.org:8082 > 
@@ -3483,7 +3483,7 @@
     >
     param[journal_issn] = 1947-3451
 
-    au < frozen ; exists ; 2010 ; International Journal of Technoethics (IJT) Volume 1 ; 1 ; http://www.igi-global.com/ ; > 
+    au < finished ; manifest ; 2010 ; International Journal of Technoethics (IJT) Volume 1 ; 1 ; http://www.igi-global.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2011 ; International Journal of Technoethics (IJT) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2012 ; International Journal of Technoethics (IJT) Volume 3 ; 3 ; http://www.igi-global.com/ ; > 
     au < finished ; manifest ; 2013 ; International Journal of Technoethics (IJT) Volume 4 ; 4 ; http://www.igi-global.com/ ; reingest4.clockss.org:8082 > 
@@ -3562,7 +3562,7 @@
     >
     param[journal_issn] = 1947-9301
 
-    au < frozen ; exists ; 2010 ; International Journal of Technology Diffusion (IJTD) Volume 1 ; 1 ; http://www.igi-global.com/ ; > 
+    au < finished ; manifest ; 2010 ; International Journal of Technology Diffusion (IJTD) Volume 1 ; 1 ; http://www.igi-global.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2011 ; International Journal of Technology Diffusion (IJTD) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2012 ; International Journal of Technology Diffusion (IJTD) Volume 3 ; 3 ; http://www.igi-global.com/ ; > 
     au < finished ; manifest ; 2013 ; International Journal of Technology Diffusion (IJTD) Volume 4 ; 4 ; http://www.igi-global.com/ ; reingest5.clockss.org:8082 > 
@@ -3610,7 +3610,7 @@
     >
     param[journal_issn] = 1947-8518
 
-    au < frozen ; exists ; 2010 ; International Journal of Virtual and Personal Learning Environments (IJVPLE) Volume 1 ; 1 ; http://www.igi-global.com/ ; > 
+    au < finished ; manifest ; 2010 ; International Journal of Virtual and Personal Learning Environments (IJVPLE) Volume 1 ; 1 ; http://www.igi-global.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2011 ; International Journal of Virtual and Personal Learning Environments (IJVPLE) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2012 ; International Journal of Virtual and Personal Learning Environments (IJVPLE) Volume 3 ; 3 ; http://www.igi-global.com/ ; > 
     au < finished ; manifest ; 2013 ; International Journal of Virtual and Personal Learning Environments (IJVPLE) Volume 4 ; 4 ; http://www.igi-global.com/ ; reingest2.clockss.org:8085 > 
@@ -3636,8 +3636,8 @@
     param[journal_issn] = 1942-9010
     #continued_by = 2642-2247
 
-    au < frozen ; exists ; 2009 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 1 ; 1 ; http://www.igi-global.com/ ; > 
-    au < frozen ; exists ; 2010 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 2 ; 2 ; http://www.igi-global.com/ ; >
+    au < finished ; manifest ; 2009 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 1 ; 1 ; http://www.igi-global.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2010 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 2 ; 2 ; http://www.igi-global.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2011 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 3 ; 3 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2012 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 4 ; 4 ; http://www.igi-global.com/ ; > 
     au < finished ; manifest ; 2013 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 5 ; 5 ; http://www.igi-global.com/ ; reingest3.clockss.org:8083 > 
@@ -3677,8 +3677,8 @@
     >
     param[journal_issn] = 1938-0194
 
-    au < frozen ; exists ; 2009 ; International Journal of Web Portals (IJWP) Volume 1 ; 1 ; http://www.igi-global.com/ ; > 
-    au < frozen ; exists ; 2010 ; International Journal of Web Portals (IJWP) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
+    au < finished ; manifest ; 2009 ; International Journal of Web Portals (IJWP) Volume 1 ; 1 ; http://www.igi-global.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2010 ; International Journal of Web Portals (IJWP) Volume 2 ; 2 ; http://www.igi-global.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2011 ; International Journal of Web Portals (IJWP) Volume 3 ; 3 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2012 ; International Journal of Web Portals (IJWP) Volume 4 ; 4 ; http://www.igi-global.com/ ; > 
     au < finished ; manifest ; 2013 ; International Journal of Web Portals (IJWP) Volume 5 ; 5 ; http://www.igi-global.com/ ; reingest1.clockss.org:8082 > 
