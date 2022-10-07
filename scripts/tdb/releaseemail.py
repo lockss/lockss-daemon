@@ -37,27 +37,27 @@ NON_ALLIANCE = set([ \
                  "edu.indiana.lib.plugin.mto.MTO2022Plugin", # humanities_project
                  "edu.jhu.library.plugin.jrf.JournalOfReligionAndFilmPlugin", # humanities_project
                  "edu.jhu.library.plugin.MedievalForumPlugin", # humanities_project
+                 "edu.nyu.plugin.LeedsICSPlugin", # humanities_project
                  "edu.nyu.plugin.bonefolder.BonefolderPlugin", # humanities_project
                  "edu.nyu.plugin.ejce.EJCEPlugin", # humanities_project
                  "edu.nyu.plugin.ejcjs.EJCJSPlugin", # humanities_project
                  "edu.nyu.plugin.ejcjs.EJCJS2022Plugin", # humanities_project
                  "edu.nyu.plugin.heplwebzine.HEPLwebzine", # humanities_project
                  "edu.nyu.plugin.heplwebzine.HEPLWebzine2022Plugin", # humanities_project
-                 "edu.nyu.plugin.journalofglobalbuddhism.JournalOfGlobalBuddhismPlugin",
-                 "edu.nyu.plugin.LeedsICSPlugin",
-                 "edu.princeton.plugin.bmcr.BMCRPlugin",
-                 "edu.princeton.plugin.ncaw.19thCenturyArtWorldwidePlugin",
-                 "edu.stanford.plugin.exquisitecorpse.ExquisiteCorpsePlugin",
-                 "edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin",
-                 "edu.upenn.library.plugin.clcweb.CLCWebPlugin",
-                 "edu.wisc.library.plugin.BigBridgePlugin",
-                 "edu.wisc.library.plugin.BigBridgeVol1Plugin",
-                 "edu.wisc.library.plugin.CortlandReviewPlugin",
-                 "edu.wisc.library.plugin.CortlandReview00Plugin",
-                 "edu.wisc.library.plugin.CortlandReview98Plugin",
-                 "edu.wisc.library.plugin.CortlandReview99Plugin",
-                 "edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin",
-                 "edu.yale.library.lockss.plugin.mitejmes.MITEJMESPlugin",
+                 "edu.nyu.plugin.journalofglobalbuddhism.JournalOfGlobalBuddhismPlugin", # humanities_project
+                 "edu.princeton.plugin.bmcr.BMCRPlugin", # humanities_project
+                 "edu.princeton.plugin.ncaw.19thCenturyArtWorldwidePlugin", # humanities_project
+                 "edu.stanford.plugin.exquisitecorpse.ExquisiteCorpsePlugin", # humanities_project
+                 "edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin", # humanities_project
+                 "edu.upenn.library.plugin.clcweb.CLCWebPlugin", # humanities_project
+                 "edu.wisc.library.plugin.BigBridgePlugin", # humanities_project
+                 "edu.wisc.library.plugin.BigBridgeVol1Plugin", # humanities_project
+                 "edu.wisc.library.plugin.CortlandReviewPlugin", # humanities_project
+                 "edu.wisc.library.plugin.CortlandReview00Plugin", # humanities_project
+                 "edu.wisc.library.plugin.CortlandReview98Plugin", # humanities_project
+                 "edu.wisc.library.plugin.CortlandReview99Plugin", # humanities_project
+                 "edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin", # humanities_project
+                 "edu.yale.library.lockss.plugin.mitejmes.MITEJMESPlugin", # humanities_project
                  "gov.gpo.access.permanent.plugin.amberwaves.Amber_WavesPlugin", # gpo-pilot
                  "gov.gpo.access.permanent.plugin.environmentalhealthperspectives.Environmental_Health_PerspectivesPlugin", # gpo-pilot
                  "gov.gpo.access.permanent.plugin.environmentalhealthperspectives.EHP2022AtyponJournalPlugin", # gpo-pilot
@@ -70,17 +70,18 @@ NON_ALLIANCE = set([ \
                  "gov.gpo.access.permanent.plugin.socialsecuritybulletin.SocialSecurityBulletinPlugin", # gpo-pilot
                  "gov.gpo.access.permanent.plugin.surveyofcurrentbusiness.SurveyOfCurrentBusinessPlugin", # gpo-pilot
                  "gov.gpo.access.permanent.plugin.treasurybulletin.TreasuryBulletinPlugin", # gpo-pilot
-                 "gov.loc.plugin.CJPentecostalCharismaticResearchPlugin",
+                 "gov.loc.plugin.CJPentecostalCharismaticResearchPlugin", # humanities_project
                  "gov.loc.plugin.TESLEJPlugin", # humanities_project
                  "gov.loc.plugin.TESLEJ2022Plugin", # humanities_project
-                 "nz.ac.otago.plugin.scholia.ScholiaPlugin",
+                 "nz.ac.otago.plugin.scholia.ScholiaPlugin", # humanities_project
+                 "org.lockss.plugin.GendersPlugin", # humanities_project
                  "org.lockss.plugin.absinthe.AbsinthePlugin",
                  "org.lockss.plugin.bepress.BePressPlugin",
                  "org.lockss.plugin.bioone.BioOnePlugin",
-                 "org.lockss.plugin.blackbird.BlackbirdPlugin",
+                 "org.lockss.plugin.blackbird.BlackbirdPlugin", # humanities_project
                  "org.lockss.plugin.clogic.CulturalLogicPlugin",
                  "org.lockss.plugin.disputatio.DisputatioPlugin",
-                 "org.lockss.plugin.emc.EarlyModernCulturePlugin",
+                 "org.lockss.plugin.emc.EarlyModernCulturePlugin", # humanities_project
                  "org.lockss.plugin.emls.EmlsPlugin",
                  "org.lockss.plugin.etd.fsuplugin.FSUETDPlugin", # aserl-etd
                  "org.lockss.plugin.etd.gatechplugin.GATechETDPlugin", # aserl-etd
@@ -88,29 +89,28 @@ NON_ALLIANCE = set([ \
                  "org.lockss.plugin.etd.ukyplugin.UKYETDPlugin", # aserl-etd
                  "org.lockss.plugin.etd.vanderbiltetdplugin.VanderbiltETDPlugin", # aserl-etd
                  "org.lockss.plugin.etd.vtetdplugin.VTETDLegacyPlugin", # aserl-etd
-                 "org.lockss.plugin.evergreenreview.EvergreenReviewPlugin",
-                 "org.lockss.plugin.GendersPlugin",
+                 "org.lockss.plugin.evergreenreview.EvergreenReviewPlugin", # humanities_project
                  "org.lockss.plugin.histcoop.HistoryCooperativePlugin",
-                 "org.lockss.plugin.invisibleculture.InvisibleCulturePlugin",
-                 "org.lockss.plugin.jackmagazine.JackMagazinePlugin",
-                 "org.lockss.plugin.jscm.JSCMPlugin",
-                 "org.lockss.plugin.lapetitezine.LaPetiteZinePlugin",
+                 "org.lockss.plugin.invisibleculture.InvisibleCulturePlugin", # humanities_project
+                 "org.lockss.plugin.jackmagazine.JackMagazinePlugin", # humanities_project
+                 "org.lockss.plugin.jscm.JSCMPlugin", # humanities_project
+                 "org.lockss.plugin.lapetitezine.LaPetiteZinePlugin", # humanities_project
                  "org.lockss.plugin.locksscard.LockssCardPlugin",
-                 "org.lockss.plugin.madhattersreview.MadHattersReviewPlugin",
-                 "org.lockss.plugin.minerva.MinervaPlugin",
-                 "org.lockss.plugin.minerva.Minerva2020Plugin",
+                 "org.lockss.plugin.madhattersreview.MadHattersReviewPlugin", # humanities_project
+                 "org.lockss.plugin.minerva.MinervaPlugin", # humanities_project
+                 "org.lockss.plugin.minerva.Minerva2020Plugin", # humanities_project
                  "org.lockss.plugin.msr.MSRPlugin",
                  "org.lockss.plugin.ojs.OJSPlugin",
                  "org.lockss.plugin.othervoices.OtherVoicesPlugin",
                  "org.lockss.plugin.projmuse.ProjectMusePlugin",
-                 "org.lockss.plugin.prok.ProkPlugin",
+                 "org.lockss.plugin.prok.ProkPlugin", # humanities_project
                  "org.molvis.plugin.MolVisPlugin",
-                 "org.lockss.plugin.sfpoetrybroadside.SantaFePoetryBroadsidePlugin",
-                 "org.nypl.plugin.failbetter.FailbetterPlugin",
-                 "org.nypl.plugin.PoetryBayPlugin",
-                 "org.nypl.plugin.shampoo.ShampooPlugin",
-                 "org.nypl.plugin.WordsWithoutBordersPlugin",
-                 "za.ac.nlsa.lockss.plugin.WaterSAPlugin"
+                 "org.lockss.plugin.sfpoetrybroadside.SantaFePoetryBroadsidePlugin", # humanities_project
+                 "org.nypl.plugin.PoetryBayPlugin", # humanities_project
+                 "org.nypl.plugin.WordsWithoutBordersPlugin", # humanities_project
+                 "org.nypl.plugin.failbetter.FailbetterPlugin", # humanities_project
+                 "org.nypl.plugin.shampoo.ShampooPlugin", # humanities_project
+                 "za.ac.nlsa.lockss.plugin.WaterSAPlugin" # humanities_project
 ])
 
 def nonRepeated(seq):
@@ -137,7 +137,7 @@ def prettyInt(i):
 
 def wordInt(i):
   '''Given a positive integer, returns a string spelling out the
-  number (e.g. 'twanty five') up to 99, else a string version of the
+  number (e.g. 'twenty five') up to 99, else a string version of the
   number as returned by prettyInt() (e.g. '123', '1,234').'''
   if i >= 100: return prettyInt(i)
   s = ''
