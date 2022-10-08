@@ -10,7 +10,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>PeerJ Plugin (retired plugin for CLOCKSS)</string>
+    <string>PeerJ Plugin (Legacy, CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -26,7 +26,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"PeerJ Plugin (retired plugin for CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
+    <string>"PeerJ Plugin (Legacy, CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>clockss_override</string>

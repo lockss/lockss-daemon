@@ -204,7 +204,7 @@ public class TestPeerJArchivalUnit extends LockssTestCase {
   // Variant to test PeerJ Archives (main) site
   public static class TestArchives extends TestPeerJArchivalUnit {   
     public void testArchivalUnit() throws Exception {
-      variantPluginName = "PeerJ Plugin (retired plugin)";
+      variantPluginName = "PeerJ Plugin (Legacy)";
       variantPluginId =  "org.lockss.plugin.peerj.PeerJPlugin";
       variantPeerjSite = "archives";
       variantBaseConstant = "articles";
