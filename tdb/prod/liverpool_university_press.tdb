@@ -22,7 +22,8 @@
     >
 
     param[journal_id] = archives
-    #Published 1949-present
+    #Published 1949-2021
+    #jounral_num = 56
 
     au < manifest ; 2000 ; Archives Volume 25 ; 25 >
     au < manifest ; 2001 ; Archives Volume 26 ; 26 >
@@ -62,6 +63,7 @@
 
     param[journal_id] = arsjudaica
     #Published 2015-2020
+    #jounral_num = 16
 
     au < released ; 2015 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 11 ; 11 >
     au < released ; 2016 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 12 ; 12 >
@@ -69,6 +71,7 @@
     au < released ; 2018 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 14 ; 14 >
     au < released ; 2019 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 15 ; 15 >
     au < released ; 2020 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 16 ; 16 >
+    au < exists ; 2021 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 17 ; 17 >
 
   }
 
@@ -83,6 +86,7 @@
 
     param[journal_id] = ajfs
     #Published 1964-present
+    #jounral_num = 52
 
     au < manifest ; 2000 ; Australian Journal of French Studies Volume 37 ; 37 >
     au < manifest ; 2001 ; Australian Journal of French Studies Volume 38 ; 38 >
@@ -120,6 +124,7 @@
 
     param[journal_id] = bchs
     #Published 2019-present
+    #jounral_num = 77
 
     au < released ; 2019 ; Bulletin of Contemporary Hispanic Studies Volume 1 ; 1 >
     au < released ; 2020 ; Bulletin of Contemporary Hispanic Studies Volume 2 ; 2 >
@@ -139,6 +144,7 @@
 
     param[journal_id] = bjcs
     #Published 2003-present
+    #jounral_num = 72
 
     au < doNotProcess ; 2003 ; British Journal of Canadian Studies Volume 16 ; 16 >
     au < doNotProcess ; 2004 ; British Journal of Canadian Studies Volume 17 ; 17 >
@@ -173,6 +179,7 @@
 
     param[journal_id] = bhs
     #Published 1923-present
+    #jounral_num = 60
 
     au < manifest ; 1975 ; Bulletin of Hispanic Studies Volume 52 ; 52 >
     au < manifest ; 1976 ; Bulletin of Hispanic Studies Volume 53 ; 53 >
@@ -236,6 +243,7 @@
 
     param[journal_id] = bj
     #Published 1973-present
+    #jounral_num = 53
 
     au < manifest ; 2000 ; The Byron Journal Volume 28 ; 28 >
     au < manifest ; 2001 ; The Byron Journal Volume 29 ; 29 >
@@ -274,6 +282,7 @@
 
     param[journal_id] = coma
     #Published 2004-present
+    #jounral_num = 46
 
     au < doNotProcess ; 2004 ; Comma Volume 2004 ; 2004 >
     au < doNotProcess ; 2005 ; Comma Volume 2005 ; 2005 >
@@ -292,7 +301,6 @@
     au < released ; 2018 ; Comma Volume 2018 ; 2018 >
     au < released ; 2019 ; Comma Volume 2019 ; 2019 >
     au < released ; 2020 ; Comma Volume 2020 ; 2020 >
-    au < exists ; 2021 ; Comma Volume 2021 ; 2021 >
     au < expected ; 2022 ; Comma Volume 2022 ; 2022 >
 
   }
@@ -308,6 +316,7 @@
 
     param[journal_id] = catr
     #Published 1986-present
+    #jounral_num = 67
 
     au < manifest ; 2000 ; Catalan Review Volume 14 ; 14 >
     au < manifest ; 2001 ; Catalan Review Volume 15 ; 15 >
@@ -346,6 +355,7 @@
 
     param[journal_id] = cfc
     #Published 1976-present
+    #jounral_num = 45
 
     au < manifest ; 2000 ; Contemporary French Civilization Volume 24 ; 24 >
     au < manifest ; 2001 ; Contemporary French Civilization Volume 25 ; 25 >
@@ -384,6 +394,7 @@
 
     param[journal_id] = dap
     #Published 2021-present
+    #jounral_num = 91
 
     au < released ; 2021 ; Developing Academic Practice Volume 2021 ; 2021 >
     au < manifest ; 2022 ; Developing Academic Practice Volume 2022 ; 2022 >
@@ -401,6 +412,7 @@
 
     param[journal_id] = eci
     #Published 1986-present
+    #jounral_num = 95
 
     au < manifest ; 1986 ; Eighteenth-Century Ireland Volume 1 ; 1 >
     au < manifest ; 1987 ; Eighteenth-Century Ireland Volume 2 ; 2 >
@@ -454,6 +466,7 @@
 
     param[journal_id] = eir
     #Published 1994-present
+    #jounral_num = 79
 
     au < manifest ; 1994 ; Essays in Romanticism Volume 1 ; 1 >
     au < manifest ; 1995 ; Essays in Romanticism Volume 2 ; 2 >
@@ -498,6 +511,7 @@
 
     param[journal_id] = ejlp
     #Published 2009-present
+    #jounral_num = 73
 
     au < doNotProcess ; 2009 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 1 ; 1 >
     au < doNotProcess ; 2010 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 2 ; 2 >
@@ -527,6 +541,7 @@
 
     param[journal_id] = extr
     #Published 1959-present
+    #jounral_num = 71
 
     au < manifest ; 2000 ; Extrapolation Volume 41 ; 41 >
     au < manifest ; 2001 ; Extrapolation Volume 42 ; 42 >
@@ -565,6 +580,7 @@
 
     param[journal_id] = franc
     #Published 2012-present
+    #jounral_num = 70
 
     au < doNotProcess ; 2012 ; Francosphères Volume 1 ; 1 >
     au < doNotProcess ; 2013 ; Francosphères Volume 2 ; 2 >
@@ -583,6 +599,21 @@
   {
 
     title <
+      name = Global Nineteenth-Century Studies ;
+      issn = 2752-6623 ;
+      eissn = 2752-6631
+    >
+
+    param[journal_id] = gncs
+    #jounral_num = 111
+
+    au < exists ; 2022 ; Global Nineteenth-Century Studies Volume 1 ; 1 >
+
+  }
+
+  {
+
+    title <
       name = Historical Studies in Industrial Relations ;
       issn = 1362-1572 ;
       eissn = 2049-4459 ;
@@ -591,6 +622,7 @@
 
     param[journal_id] = hsir
     #Published 1996-present
+    #jounral_num = 63
 
     au < manifest ; 1996 ; Historical Studies in Industrial Relations Volume 1 ; 1 >
     au < manifest ; 1996 ; Historical Studies in Industrial Relations Volume 2 ; 2 >
@@ -644,6 +676,7 @@
 
     param[journal_id] = index
     #Published 1958-present
+    #jounral_num = 87
 
     au < manifest ; 1990 ; The Indexer: The International Journal of Indexing Volume 17 ; 17 >
     au < manifest ; 1992 ; The Indexer: The International Journal of Indexing Volume 18 ; 18 >
@@ -684,6 +717,7 @@
     param[journal_id] = idpr
     #Published 2002-present
     comment[continues] = 0142-7849
+    #jounral_num = 65
 
     au < doNotProcess ; 2002 ; International Development Planning Review Volume 24 ; 24 >
     au < doNotProcess ; 2003 ; International Development Planning Review Volume 25 ; 25 >
@@ -719,6 +753,7 @@
 
     param[journal_id] = ijeap
     #Published 2021-present
+    #jounral_num = 94
 
     au < released ; 2021 ; International Journal of English for Academic Purposes: Research and Practice Volume 2021 ; 2021 >
     au < manifest ; 2022 ; International Journal of English for Academic Purposes: Research and Practice Volume 2022 ; 2022 >
@@ -734,12 +769,15 @@
     {
     param[journal_id] = hgr
     comment[continues] = Before Farming
-    #Published 2015-2018
+    #Published 2015-2019
+    #jounral_num = 66
 
     au < doNotProcess ; 2015 ; Hunter Gatherer Research Volume 1 ; 1 >
     au < doNotProcess ; 2016 ; Hunter Gatherer Research Volume 2 ; 2 >
     au < doNotProcess ; 2017 ; Hunter Gatherer Research Volume 3 ; 3 >
     au < released ; 2018 ; Hunter Gatherer Research Volume 4 ; 4 >
+    au < exists ; 2019 ; Hunter Gatherer Research Volume 5 ; 5 >
+
     }
 
     {
@@ -773,6 +811,7 @@
 
     param[journal_id] = jlcds
     #Published 2007-present
+    #jounral_num = 61
 
     au < doNotProcess ; 2007 ; Journal of Literary & Cultural Disability Studies Volume 1 ; 1 >
     au < doNotProcess ; 2008 ; Journal of Literary & Cultural Disability Studies Volume 2 ; 2 >
@@ -805,7 +844,8 @@
     
     param[journal_id] = jrs
     #Published 2001-present
-       
+    #jounral_num = 50
+
     au < doNotProcess ; 2001 ; Journal of Romance Studies Volume 1 ; 1 >
     au < doNotProcess ; 2002 ; Journal of Romance Studies Volume 2 ; 2 >
     au < doNotProcess ; 2003 ; Journal of Romance Studies Volume 3 ; 3 >
@@ -833,6 +873,21 @@
   {
 
     title <
+      name = Journal of Romanian Studies ;
+      issn = 2627-5325 ;
+      eissn = 2754-415X
+    >
+
+    param[journal_id] = jrns
+    #jounral_num = 115
+
+    au < exists ; 2022 ; Journal of Romanian Studies Volume 4 ; 4 >
+
+  }
+
+  {
+
+    title <
       name = Labour History: A Journal of Labour and Social History ;
       issn = 0023-6942 ;
       eissn = 1839-3039 ;
@@ -841,6 +896,7 @@
 
     param[journal_id] = labourhistory
     #Published 1963-present
+    #jounral_num = 55
 
     au < manifest ; 1963 ; Labour History: A Journal of Labour and Social History Volume 4 ; 4 >
     au < manifest ; 1963 ; Labour History: A Journal of Labour and Social History Volume 5 ; 5 >
@@ -975,6 +1031,7 @@
 
     param[journal_id] = lhr
     #Published 1960-present
+    #jounral_num = 75
 
     au < manifest ; 2000 ; Labour History Review Volume 65 ; 65 >
     au < manifest ; 2001 ; Labour History Review Volume 66 ; 66 >
@@ -1012,6 +1069,7 @@
 
     param[journal_id] = mhb
     #Published 1934-2002
+    #jounral_num = 96
 
     au < manifest ; 1934 ; Marx House Bulletin Volume 1 ; 1 >
     au < manifest ; 1935 ; Marx House Bulletin Volume 2 ; 2 >
@@ -1154,6 +1212,7 @@
 
     param[journal_id] = mmlqb
     #Published 1957-1969
+    #jounral_num = 100
 
     au < manifest ; 1957 ; Marx Memorial Library Quarterly Bulletin Volume 1 ; 1 >
     au < manifest ; 1957 ; Marx Memorial Library Quarterly Bulletin Volume 2 ; 2 >
@@ -1219,8 +1278,10 @@
 
     param[journal_id] = mmlb
     #Published 1970-2004
+    #jounral_num = 101
 
     au < released ; 1982 ; The Quarterly Bulletin of the Marx Memorial Library Volume 100 ; 100 >
+
     au < manifest ; 2003 ; The Quarterly Bulletin of the Marx Memorial Library Volume 137 ; 137 >
     au < manifest ; 2003 ; The Quarterly Bulletin of the Marx Memorial Library Volume 138 ; 138 >
     au < manifest ; 2004 ; The Quarterly Bulletin of the Marx Memorial Library Volume 139 ; 139 >
@@ -1239,6 +1300,7 @@
 
     param[journal_id] = mb
     #Published 1994-present
+    #jounral_num = 68
 
     au < manifest ; 2000 ; Modern Believing Volume 41 ; 41 >
     au < manifest ; 2001 ; Modern Believing Volume 42 ; 42 >
@@ -1277,6 +1339,7 @@
     param[journal_id] = mc
     #Published 1957-1992
     comment[continued_by] = Modern Believing
+    #jounral_num = 86
 
     au < manifest ; 1957-1958 ; The Modern Churchman Volume 1 ; 1 >
     au < manifest ; 1958-1959 ; The Modern Churchman Volume 2 ; 2 >
@@ -1326,6 +1389,7 @@
 
     param[journal_id] = msmi
     #Published 2007-present
+    #jounral_num = 47
 
     au < doNotProcess ; 2007 ; Music, Sound, and the Moving Image Volume 1 ; 1 >
     au < doNotProcess ; 2008 ; Music, Sound, and the Moving Image Volume 2 ; 2 >
@@ -1355,7 +1419,8 @@
     >
 
     param[journal_id] = newsletter
-    #Published 2012-2017
+    #Published 2012-current
+    #jounral_num = 82
 
     au < doNotProcess ; 2012 ; Newsletter of the Gypsy Lore Society Volume 35 ; 35 >
     au < doNotProcess ; 2013 ; Newsletter of the Gypsy Lore Society Volume 36 ; 36 >
@@ -1363,6 +1428,11 @@
     au < doNotProcess ; 2015 ; Newsletter of the Gypsy Lore Society Volume 38 ; 38 >
     au < doNotProcess ; 2016 ; Newsletter of the Gypsy Lore Society Volume 39 ; 39 >
     au < doNotProcess ; 2017 ; Newsletter of the Gypsy Lore Society Volume 40 ; 40 >
+    au < exists ; 2018 ; Newsletter of the Gypsy Lore Society Volume 41 ; 41 >
+    au < exists ; 2019 ; Newsletter of the Gypsy Lore Society Volume 42 ; 42 >
+    au < exists ; 2020 ; Newsletter of the Gypsy Lore Society Volume 43 ; 43 >
+    au < exists ; 2021 ; Newsletter of the Gypsy Lore Society Volume 44 ; 44 >
+    au < expected ; 2022 ; Newsletter of the Gypsy Lore Society Volume 45 ; 45 >
 
   }
 
@@ -1376,6 +1446,7 @@
 
     param[journal_id] = quaker
     #Published 2008-present
+    #jounral_num = 78
 
     au < doNotProcess ; 2007-2008 ; Quaker Studies Volume 12 ; 12 >
     au < doNotProcess ; 2008-2009 ; Quaker Studies Volume 13 ; 13 >
@@ -1407,6 +1478,7 @@
 
     param[journal_id] = rost
     #Published 2000-present
+    #jounral_num = 76
 
     au < manifest ; 2000 ; Romani Studies Volume 10 ; 10 >
     au < manifest ; 2001 ; Romani Studies Volume 11 ; 11 >
@@ -1445,6 +1517,7 @@
 
     param[journal_id] = qs
     #Published 1983-present
+    #jounral_num = 51
 
     au < manifest ; 2000 ; Quebec Studies Volume 29 ; 29 >
     au < manifest ; 2000 ; Quebec Studies Volume 30 ; 30 >
@@ -1506,6 +1579,7 @@
 
     param[journal_id] = sfftv
     #Published 2008-present
+    #jounral_num = 54
 
     au < doNotProcess ; 2008 ; Science Fiction Film and Television Volume 1 ; 1 >
     au < doNotProcess ; 2009 ; Science Fiction Film and Television Volume 2 ; 2 >
@@ -1536,6 +1610,7 @@
 
     param[journal_id] = sj
     #Published 1997-present
+    #jounral_num = 74
 
     au < manifest ; 2004 ; Sculpture Journal Volume 11 ; 11 >
     au < manifest ; 2004 ; Sculpture Journal Volume 12 ; 12 >
@@ -1572,6 +1647,7 @@
 
     param[journal_id] = studia
     #Published 1961-present. Volumes and years don't align well
+    #jounral_num = 62
 
     au < doNotProcess ; 2011 ; Studia Hibernica Volume 37 ; 37 >
     au < doNotProcess ; 2012 ; Studia Hibernica Volume 38 ; 38 >
@@ -1597,8 +1673,9 @@
 
     param[journal_id] = praxis
     #Published 2011-2012
-    #title is continued as Theory & Struggle
-    
+    #continued_by = 2057-0988
+    #jounral_num = 85
+
     au < released ; 2011 ; Praxis Volume 154 ; 154 >
     au < released ; 2012 ; Praxis Volume 155 ; 155 >
 
@@ -1614,7 +1691,8 @@
 
     param[journal_id] = theory
     #Published 2014-present
-    #title previously was Praxis
+    #continues = 0969-1154
+    #jounral_num = 69
 
     au < doNotProcess ; 2014 ; Theory & Struggle Volume 115 ; 115 >
     au < doNotProcess ; 2015 ; Theory & Struggle Volume 116 ; 116 >
@@ -1638,6 +1716,7 @@
 
     param[journal_id] = twpr
     comment[continued_by] = 1474-6743
+    #jounral_num = 83
 
     au < doNotProcess ; 1993 ; Third World Planning Review Volume 15 ; 15 >
     au < doNotProcess ; 1994 ; Third World Planning Review Volume 16 ; 16 >
@@ -1661,6 +1740,7 @@
     >
 
     param[journal_id] = tpr
+    #jounral_num = 43
 
     au < doNotProcess ; 1910-1911 ; Town Planning Review Volume 1 ; 1 >
     au < doNotProcess ; 1911-1912 ; Town Planning Review Volume 2 ; 2 >
@@ -1733,7 +1813,7 @@
     au < doNotProcess ; 1998 ; Town Planning Review Volume 69 ; 69 >
     au < doNotProcess ; 1999 ; Town Planning Review Volume 70 ; 70 >
     au < doNotProcess ; 2000 ; Town Planning Review Volume 71 ; 71 >
-    au < manifest ; 0 ; Town Planning Review Volume 72 ; 72 >
+    au < manifest ; 2001 ; Town Planning Review Volume 72 ; 72 >
     au < doNotProcess ; 2002 ; Town Planning Review Volume 73 ; 73 >
     au < doNotProcess ; 2003 ; Town Planning Review Volume 74 ; 74 >
     au < doNotProcess ; 2004 ; Town Planning Review Volume 75 ; 75 >
@@ -1768,6 +1848,7 @@
     >
 
     param[journal_id] = transactions
+    #jounral_num = 57
 
     au < manifest ; 2007 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 156 ; 156 >
     au < doNotProcess ; 2008 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 157 ; 157 >
@@ -1785,6 +1866,24 @@
     au < released ; 2020 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 169 ; 169 >
     au < released ; 2021 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 170 ; 170 >
     au < manifest ; 2022 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 171 ; 171 >
+
+  }
+
+  {
+
+    title <
+      name = TS Eliot Studies Annual ;
+      issn = 2689-4181 ;
+      eissn = 2771-1625
+    >
+
+    param[journal_id] = tsesa
+    #jounral_num = 116
+
+    au < exists ; 2017 ; TS Eliot Studies Annual Volume 1 ; 1 >
+    au < exists ; 2018 ; TS Eliot Studies Annual Volume 2 ; 2 >
+    au < exists ; 2021 ; TS Eliot Studies Annual Volume 3 ; 3 >
+    au < exists ; 2022 ; TS Eliot Studies Annual Volume 4 ; 4 >
 
   }
 
