@@ -43,7 +43,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>2</string>
+        <string>3</string>
     </entry>
     <entry>
         <string>plugin_config_props</string>
@@ -109,6 +109,12 @@ POSSIBILITY OF SUCH DAMAGE.
             <string>1,"%sarticles/%s/\d+$", base_url, volume_name</string>
             <!-- articles https://aaqr.org/articles/aaqr-20-12-covid-0662 -->
             <string>1,"%sarticles/%s-", base_url, journal_id</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_substance_url_pattern</string>
+        <list>
+            <string>"^%sarticles/%s-[^?]+", base_url, journal_id</string>
         </list>
     </entry>
     <entry>
