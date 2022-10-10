@@ -23,7 +23,7 @@
     #Production: 
     #param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/euilaw-released/
 
-    au < expected ; exists ; 2022 ; European University Institute of Law Source Content 2022 ; 2022_01 >
+    au < manifest ; exists ; 2022 ; European University Institute of Law Source Content 2022 ; 2022_01 >
 
   }
 
