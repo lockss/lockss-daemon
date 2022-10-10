@@ -33,7 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
     <entry>
         <string>plugin_status</string>
-        <string>down</string>
+        <string>down - just a parent plugin and a virtual parent plugin at that</string>
     </entry>
     <entry>
         <string>plugin_identifier</string>
@@ -44,17 +44,21 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>1</string>
     </entry>
     <entry>
-    <string>plugin_config_props</string>
-    <list>
-        <org.lockss.daemon.ConfigParamDescr>
-            <key>base_url</key>
-            <displayName>Base URL</displayName>
-            <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
-            <type>3</type>
-            <size>40</size>
-            <definitional>true</definitional>
-            <defaultOnly>false</defaultOnly>
-        </org.lockss.daemon.ConfigParamDescr>
-    </list>
+        <string>plugin_name</string>
+        <string>Silverchair Directory Accessor Plugin</string>
+    </entry>
+    <entry>
+        <string>plugin_config_props</string>
+        <list>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>base_url</key>
+                <displayName>Base URL</displayName>
+                <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+                <type>3</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+        </list>
     </entry>
 </map>
