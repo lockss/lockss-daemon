@@ -23,8 +23,8 @@
       param[base_url] = https://siuj.org/
       param[journal_id] = siuj
 
-      au < crawling ; exists ; 2020 ; Société Internationale d'Urologie Journal Volume 1 ; 21 ; 2020 ; >
-      au < crawling ; exists ; 2021 ; Société Internationale d'Urologie Journal Volume 2 ; 22 ; 2021 ; >
+      au < frozen ; exists ; 2020 ; Société Internationale d'Urologie Journal Volume 1 ; 21 ; 2020 ; >
+      au < deepCrawl ; exists ; 2021 ; Société Internationale d'Urologie Journal Volume 2 ; 22 ; 2021 ; >
       au < testing ; exists ; 2022 ; Société Internationale d'Urologie Journal Volume 3 ; 23 ; 2022 ; >
 
   }
