@@ -32,7 +32,7 @@
     au < finished ; crawling ; 2018 ; Tourism / Turyzm Volume 28 ; 28 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2019 ; Tourism / Turyzm Volume 29 ; 29 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Tourism / Turyzm Volume 30 ; 30 ; >
-    au < crawling ; exists ; 2021 ; Tourism / Turyzm Volume 31 ; 31 ; >
+    au < deepCrawl ; exists ; 2021 ; Tourism / Turyzm Volume 31 ; 31 ; >
     au < expected ; exists ; 2022 ; Tourism / Turyzm Volume 32 ; 32 ; >
 
   }
@@ -77,7 +77,7 @@
       au < finished ; crawling ; 2018 ; Acta Universitatis Lodziensis Folia Litteraria Polonica Volume 34 ; 34 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; Acta Universitatis Lodziensis Folia Litteraria Polonica Volume 35 ; 35 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Acta Universitatis Lodziensis Folia Litteraria Polonica Volume 36 ; 36 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2021 ; Acta Universitatis Lodziensis Folia Litteraria Polonica Volume 37 ; 37 ; >
+      au < deepCrawl ; exists ; 2021 ; Acta Universitatis Lodziensis Folia Litteraria Polonica Volume 37 ; 37 ; >
       au < crawling ; exists ; 2022 ; Acta Universitatis Lodziensis Folia Litteraria Polonica Volume 38 ; 38 ; >
 
   }
@@ -122,7 +122,7 @@
       param[journal_abbr] = esrap
 
       au < finished ; crawling ; 2020 ; European Spatial Research and Policy Volume 16 ; 16 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2021 ; European Spatial Research and Policy Volume 17 ; 17 ; >
+      au < deepCrawl ; exists ; 2021 ; European Spatial Research and Policy Volume 17 ; 17 ; >
       au < crawling ; exists ; 2022 ; European Spatial Research and Policy Volume 18 ; 18 ; >
 
   }
@@ -147,7 +147,7 @@
       au < finished ; crawling ; 2018 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 20 ; 20 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 21 ; 21 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 22 ; 22 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2021 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 23 ; 23 ; >
+      au < deepCrawl ; exists ; 2021 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 23 ; 23 ; >
       au < crawling ; exists ; 2022 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 24 ; 24 ; >
 
   }
@@ -191,7 +191,7 @@
       au < finished ; crawling ; 2018 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 15 ; 15 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2019 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 16 ; 16 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2020 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 17 ; 17 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2021 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 18 ; 18 ; >
+      au < deepCrawl ; exists ; 2021 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 18 ; 18 ; >
       au < crawling ; exists ; 2022 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 19 ; 19 ; >
 
   }
