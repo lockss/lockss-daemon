@@ -36,8 +36,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>ready</string>
     <!-- https transition enabled -->
   </entry>
-  <!-- compare to AAIDrupalPlugin, the added entries should be in synch -->
-  <!-- also compare to ClockssHighWireDrupalPlugin for CLOCKSS specific entries -->
+  <!-- compare to ClockssHighWireDrupalPlugin for CLOCKSS specific entries -->
   <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.highwire.aai.ClockssAAIDrupalPlugin</string>
@@ -48,15 +47,15 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.highwire.aai.AAIDrupalPlugin</string>
+    <string>org.lockss.plugin.highwire.HighWireJCorePlugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>4</string>
+    <string>83</string>
   </entry>
   <entry>
     <string>au_name</string>
