@@ -49,8 +49,7 @@ POSSIBILITY OF SUCH DAMAGE.
         aaas.ClockssAAASDrupalPlugin.xml
         aacc.AmAssocClinChemDrupalPlugin.xml
         aacr.AmAssocCancerResearchDrupalPlugin.xml
-        aai.AAIDrupalPlugin.xml
-           (child)-> ClockssAAIDrupalPlugin.xml
+        aai.ClockssAAIDrupalPlugin.xml
         aap.AAPDrupalPlugin.xml
            (child)-> ClockssAAPDrupalPlugin.xml
         aapl.AAPLDrupalPlugin.xml
