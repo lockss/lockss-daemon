@@ -1,0 +1,25 @@
+{
+
+  publisher <
+    name = Komunikácie ;
+    info[contract] = 2022 ;
+    info[tester] = S ;
+    info[platform] = Source
+  >
+
+    plugin = needs.plugin
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[directory] >
+
+  {
+
+    title <
+      name = Komunikácie Source Content
+    >
+    #####Testing
+    param[base_url] = https://clockss-test.lockss.org/sourcefiles/komunikacie-released/
+
+    au < expected ; exists ; 2022 ; Komunikácie Source Content 2022_01 ; 2022_01 >
+
+  }
+}

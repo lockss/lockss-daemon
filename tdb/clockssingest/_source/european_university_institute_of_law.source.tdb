@@ -16,15 +16,18 @@
     title <
       name = European University Institute of Law Source Content
     >
-
-    #Testing
+    {
+    #####Testing
     param[base_url] = https://clockss-test.lockss.org/sourcefiles/euilaw-released/
 
-    #Production: 
-    #param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/euilaw-released/
+    au < testing ; exists ; 2022 ; European University Institute of Law Source Content 2022 ; 2022_01 >
+    }
+    {
+    #####Production: 
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/euilaw-released/
 
     au < manifest ; exists ; 2022 ; European University Institute of Law Source Content 2022 ; 2022_01 >
-
+    }
   }
 
 }
