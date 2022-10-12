@@ -1,5 +1,4 @@
 <!--
-
 Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
@@ -27,8 +26,8 @@ INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
 CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
-
---><map>
+-->
+<map>
     <entry>
         <string>plugin_status</string>
         <string>development</string>
@@ -43,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>3</string>
+        <string>4</string>
     </entry>
     <entry>
         <string>plugin_config_props</string>
@@ -120,6 +119,10 @@ POSSIBILITY OF SUCH DAMAGE.
     <entry>
         <string>text/html_crawl_filter_factory</string>
         <string>org.lockss.plugin.taar.TaarHtmlCrawlFilterFactory</string>
+    </entry>
+    <entry>
+        <string>text/html_filter_factory</string>
+        <string>org.lockss.plugin.taar.TaarHtmlHashFilterFactory</string>
     </entry>
     <entry>
         <string>plugin_article_iterator_factory</string>
