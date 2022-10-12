@@ -204,8 +204,8 @@ public class TestPeerJArchivalUnit extends LockssTestCase {
   // Variant to test PeerJ Archives (main) site
   public static class TestArchives extends TestPeerJArchivalUnit {   
     public void testArchivalUnit() throws Exception {
-      variantPluginName = "PeerJ Plugin (Legacy)";
-      variantPluginId =  "org.lockss.plugin.peerj.PeerJPlugin";
+      variantPluginName = "PeerJ Plugin (Legacy, CLOCKSS)";
+      variantPluginId =  "org.lockss.plugin.peerj.ClockssPeerJPlugin";
       variantPeerjSite = "archives";
       variantBaseConstant = "articles";
       variantPeerjAu = createAu(new URL("http://www.example.com/"), 
