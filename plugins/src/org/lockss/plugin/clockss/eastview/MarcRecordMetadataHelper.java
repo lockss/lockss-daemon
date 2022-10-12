@@ -148,14 +148,29 @@ public class MarcRecordMetadataHelper implements FileMetadataExtractor {
 
           // Set ISBN
           if (MARC_isbn != null) {
-            log.debug3("MARC_isbn:" + MARC_isbn);
-            am.put(MetadataField.FIELD_ISBN, MARC_isbn);
+            if (MARC_isbn.contains(",")) {
+              log.debug3("MARC_isbn:" + MARC_isbn.substring(0,MARC_isbn.indexOf(",")).trim());
+              am.put(MetadataField.FIELD_ISBN, MARC_isbn.substring(0,MARC_isbn.indexOf(",")).trim());
+            } else {
+              log.debug3("MARC_isbn:" + MARC_isbn.trim());
+              am.put(MetadataField.FIELD_ISBN, MARC_isbn.trim());
+            }
           } else if (MARC_isbn_alt != null) {
-            log.debug3("MARC_isbn_alt:" + MARC_isbn_alt);
-            am.put(MetadataField.FIELD_ISBN, MARC_isbn_alt);
+            if (MARC_isbn_alt.contains(",")) {
+              log.debug3("MARC_isbn_alt:" + MARC_isbn_alt.substring(0,MARC_isbn_alt.indexOf(",")).trim());
+              am.put(MetadataField.FIELD_ISBN, MARC_isbn_alt.substring(0,MARC_isbn_alt.indexOf(",")).trim().trim());
+            } else {
+              log.debug3("MARC_isbn_alt:" + MARC_isbn_alt.trim());
+              am.put(MetadataField.FIELD_ISBN, MARC_isbn_alt.trim());
+            }
           }  else if (MARC_isbn_alt2 != null) {
-            log.debug3("MARC_isbn_alt2:" + MARC_isbn_alt2);
-            am.put(MetadataField.FIELD_ISBN, MARC_isbn_alt2);
+            if (MARC_isbn_alt2.contains(",")) {
+              log.debug3("MARC_isbn_alt2:" + MARC_isbn_alt2.trim());
+              am.put(MetadataField.FIELD_ISBN, MARC_isbn_alt2.trim());
+            } else {
+              log.debug3("MARC_isbn_alt2:" + MARC_isbn_alt2.substring(0,MARC_isbn_alt2.indexOf(",")).trim());
+              am.put(MetadataField.FIELD_ISBN, MARC_isbn_alt2.substring(0,MARC_isbn_alt2.indexOf(",")).trim());
+            }
           }
 
           // Set publiation date
