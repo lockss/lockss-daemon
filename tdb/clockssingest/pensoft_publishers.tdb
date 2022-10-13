@@ -53,7 +53,7 @@
     au < deepCrawl ; exists ; 2019 ; 7 ; Biodiversity Data Journal Volume 2019 ; 2019 ; https://bdj.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2020 ; 8 ; Biodiversity Data Journal Volume 2020 ; 2020 ; https://bdj.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2021 ; 9 ; Biodiversity Data Journal Volume 2021 ; 2021 ; https://bdj.pensoft.net/ ; >
-    au < ready ; exists ; 2022 ; 10 ; Biodiversity Data Journal Volume 2022 ; 2022 ; https://bdj.pensoft.net/ ; >
+    au < crawling ; exists ; 2022 ; 10 ; Biodiversity Data Journal Volume 2022 ; 2022 ; https://bdj.pensoft.net/ ; >
 
    }
 
@@ -136,7 +136,7 @@
     param[au_oai_set] = ijhmc
     
     au < frozen ; exists ; 2021 ; 1 ; Heritage, Memory and Conflict Journal Volume 2021 ; 2021 ; https://ijhmc.arphahub.com/ ; >
-    au < ready ; exists ; 2022 ; 2 ; Heritage, Memory and Conflict Journal Volume 2022 ; 2022 ; https://ijhmc.arphahub.com/ ; >
+    au < crawling ; exists ; 2022 ; 2 ; Heritage, Memory and Conflict Journal Volume 2022 ; 2022 ; https://ijhmc.arphahub.com/ ; >
 
    }
   
@@ -259,7 +259,7 @@
     au < deepCrawl ; exists ; 2019 ; 42-53 ; NeoBiota Volume 2019 ; 2019 ; https://neobiota.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2020 ; 54-63 ; NeoBiota Volume 2020 ; 2020 ; https://neobiota.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2021 ; 64-70 ; NeoBiota Volume 2021 ; 2021 ; https://neobiota.pensoft.net/ ; >
-    au < ready ; exists ; 2022 ; 71-77 ; NeoBiota Volume 2022 ; 2022 ; https://neobiota.pensoft.net/ ; >
+    au < crawling ; exists ; 2022 ; 71-77 ; NeoBiota Volume 2022 ; 2022 ; https://neobiota.pensoft.net/ ; >
 
    }
 
@@ -473,7 +473,7 @@
       au < frozen ; exists ; 2019 ; 2019 ; BioDiscovery Volume 2019 ; 2019 ; https://biodiscovery.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; BioDiscovery Volume 2020 ; 2020 ; https://biodiscovery.pensoft.net/ ; >
       au < expected ; exists ; 2021 ; 2021 ; BioDiscovery Volume 2021 ; 2021 ; https://biodiscovery.pensoft.net/ ; >
-      au < ready ; exists ; 2022 ; 2022 ; BioDiscovery Volume 2022 ; 2022 ; https://biodiscovery.pensoft.net/ ; >
+      au < crawling ; exists ; 2022 ; 2022 ; BioDiscovery Volume 2022 ; 2022 ; https://biodiscovery.pensoft.net/ ; >
 
   }
 
@@ -491,7 +491,7 @@
       au < frozen ; exists ; 2019 ; 2019 ; Biodiversity Information Science and Standards Volume 2019 ; 2019 ; https://biss.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Biodiversity Information Science and Standards Volume 2020 ; 2020 ; https://biss.pensoft.net/ ; >
       au < frozen ; exists ; 2021 ; 2021 ; Biodiversity Information Science and Standards Volume 2021 ; 2021 ; https://biss.pensoft.net/ ; >
-      au < ready ; exists ; 2022 ; 2022 ; Biodiversity Information Science and Standards Volume 2022 ; 2022 ; https://biss.pensoft.net/ ; >
+      au < crawling ; exists ; 2022 ; 2022 ; Biodiversity Information Science and Standards Volume 2022 ; 2022 ; https://biss.pensoft.net/ ; >
 
   }
 
@@ -512,7 +512,7 @@
       au < frozen ; exists ; 2014 ; 2014 ; Check List Volume 2014 ; 2014 ; https://checklist.pensoft.net/ ; >
       au < frozen ; exists ; 2015 ; 2015 ; Check List Volume 2015 ; 2015 ; https://checklist.pensoft.net/ ; >
       au < frozen ; exists ; 2016 ; 2016 ; Check List Volume 2016 ; 2016 ; https://checklist.pensoft.net/ ; >
-      au < ready ; exists ; 2017 ; 2017 ; Check List Volume 2017 ; 2017 ; https://checklist.pensoft.net/ ; >
+      au < crawling ; exists ; 2017 ; 2017 ; Check List Volume 2017 ; 2017 ; https://checklist.pensoft.net/ ; >
       au < frozen ; exists ; 2018 ; 2018 ; Check List Volume 2018 ; 2018 ; https://checklist.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2019 ; 2019 ; Check List Volume 2019 ; 2019 ; https://checklist.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Check List Volume 2020 ; 2020 ; https://checklist.pensoft.net/ ; >
@@ -739,7 +739,7 @@
       au < frozen ; exists ; 2019 ; 2019 ; Modern Electronic Materials Volume 2019 ; 2019 ; https://moem.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Modern Electronic Materials Volume 2020 ; 2020 ; https://moem.pensoft.net/ ; >
       au < frozen ; exists ; 2021 ; 2021 ; Modern Electronic Materials Volume 2021 ; 2021 ; https://moem.pensoft.net/ ; >
-      au < ready ; exists ; 2022 ; 2022 ; Modern Electronic Materials Volume 2022 ; 2022 ; https://moem.pensoft.net/ ; >
+      au < crawling ; exists ; 2022 ; 2022 ; Modern Electronic Materials Volume 2022 ; 2022 ; https://moem.pensoft.net/ ; >
 
   }
 
@@ -932,7 +932,7 @@
       au < frozen ; exists ; 2019 ; 2019 ; ARPHA Proceedings Volume 2019 ; 2019 ; https://ap.pensoft.net/ ; >
       au < frozen ; exists ; 2020 ; 2020 ; ARPHA Proceedings Volume 2020 ; 2020 ; https://ap.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; ARPHA Proceedings Volume 2021 ; 2021 ; https://ap.pensoft.net/ ; >
-      au < ready ; exists ; 2022 ; 2022 ; ARPHA Proceedings Volume 2022 ; 2022 ; https://ap.pensoft.net/ ; >
+      au < crawling ; exists ; 2022 ; 2022 ; ARPHA Proceedings Volume 2022 ; 2022 ; https://ap.pensoft.net/ ; >
 
   }
 
@@ -1167,7 +1167,7 @@
       param[au_oai_set] = jbgs
 
       au < deepCrawl ; exists ; 2021 ; 2021 ; Journal of the Bulgarian Geographical Society Volume 2021 ; 2021 ; https://jbgs.arphahub.com/ ; >
-      au < ready ; exists ; 2022 ; 2022 ; Journal of the Bulgarian Geographical Society Volume 2022 ; 2022 ; https://jbgs.arphahub.com/ ; >
+      au < crawling ; exists ; 2022 ; 2022 ; Journal of the Bulgarian Geographical Society Volume 2022 ; 2022 ; https://jbgs.arphahub.com/ ; >
 
   }
 
@@ -1202,7 +1202,7 @@
 
       au < frozen ; exists ; 2020 ; 2020 ; Plant Sociology Volume 2020 ; 2020 ; https://plantsociology.arphahub.com/ ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; Plant Sociology Volume 2021 ; 2021 ; https://plantsociology.arphahub.com/ ; >
-      au < ready ; exists ; 2022 ; 2022 ; Plant Sociology Volume 2022 ; 2022 ; https://plantsociology.arphahub.com/ ; >
+      au < crawling ; exists ; 2022 ; 2022 ; Plant Sociology Volume 2022 ; 2022 ; https://plantsociology.arphahub.com/ ; >
 
   }
 
@@ -1253,7 +1253,7 @@
       param[au_oai_set] = zitteliana
 
       au < deepCrawl ; exists ; 2021 ; 2021 ; Zitteliana Volume 2021 ; 2021 ; https://zitteliana.pensoft.net/ ; >
-      au < ready ; exists ; 2022 ; 2022 ; Zitteliana Volume 2022 ; 2022 ; https://zitteliana.pensoft.net/ ; >
+      au < crawling ; exists ; 2022 ; 2022 ; Zitteliana Volume 2022 ; 2022 ; https://zitteliana.pensoft.net/ ; >
 
   }
 
