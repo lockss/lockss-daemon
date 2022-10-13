@@ -5,7 +5,8 @@
     info[contract] = 2021 ;
     info[back] = 2018 ;
     info[tester] = 8 ;
-    info[poller] = 8
+    info[poller] = 8 ;
+    info[platform] = OJS3. Open Journal Systems 3.2.1.4
   >
 
     plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
