@@ -42,10 +42,34 @@
 
 package org.lockss.laaws.model.rs;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapter;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
+import com.google.gson.reflect.TypeToken;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 import java.io.Serializable;
+import java.lang.reflect.Type;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Objects;
+import java.util.Set;
+import org.lockss.laaws.client.JSON;
 
 /**
  * Artifact
@@ -57,8 +81,8 @@ public class Artifact implements Serializable {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID) private String id;
 
-  public static final String SERIALIZED_NAME_COLLECTION = "collection";
-  @SerializedName(SERIALIZED_NAME_COLLECTION) private String collection;
+  public static final String SERIALIZED_NAME_NAMESPACE = "namespace";
+  @SerializedName(SERIALIZED_NAME_NAMESPACE) private String namespace;
 
   public static final String SERIALIZED_NAME_AUID = "auid";
   @SerializedName(SERIALIZED_NAME_AUID) private String auid;
@@ -106,24 +130,24 @@ public class Artifact implements Serializable {
     this.id = id;
   }
 
-  public Artifact collection(String collection) {
-    this.collection = collection;
+  public Artifact namespace(String namespace) {
+    this.namespace = namespace;
     return this;
   }
 
   /**
-   * Get collection
-   * @return collection
+   * Get namespace
+   * @return namespace
    **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public String getCollection() {
-    return collection;
+  public String getNamespace() {
+    return namespace;
   }
 
-  public void setCollection(String collection) {
-    this.collection = collection;
+  public void setNamespace(String namespace) {
+    this.namespace = namespace;
   }
 
   public Artifact auid(String auid) {
@@ -296,7 +320,7 @@ public class Artifact implements Serializable {
     }
     Artifact artifact = (Artifact) o;
     return Objects.equals(this.id, artifact.id)
-        && Objects.equals(this.collection, artifact.collection)
+        && Objects.equals(this.namespace, artifact.namespace)
         && Objects.equals(this.auid, artifact.auid) && Objects.equals(this.uri, artifact.uri)
         && Objects.equals(this.version, artifact.version)
         && Objects.equals(this.committed, artifact.committed)
@@ -308,7 +332,7 @@ public class Artifact implements Serializable {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, collection, auid, uri, version, committed, storageUrl, contentLength,
+    return Objects.hash(id, namespace, auid, uri, version, committed, storageUrl, contentLength,
         contentDigest, collectionDate);
   }
 
@@ -317,7 +341,7 @@ public class Artifact implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class Artifact {\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    collection: ").append(toIndentedString(collection)).append("\n");
+    sb.append("    namespace: ").append(toIndentedString(namespace)).append("\n");
     sb.append("    auid: ").append(toIndentedString(auid)).append("\n");
     sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
     sb.append("    version: ").append(toIndentedString(version)).append("\n");
@@ -339,5 +363,138 @@ public class Artifact implements Serializable {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("id");
+    openapiFields.add("namespace");
+    openapiFields.add("auid");
+    openapiFields.add("uri");
+    openapiFields.add("version");
+    openapiFields.add("committed");
+    openapiFields.add("storageUrl");
+    openapiFields.add("contentLength");
+    openapiFields.add("contentDigest");
+    openapiFields.add("collectionDate");
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+  }
+
+  /**
+   * Validates the JSON Object and throws an exception if issues found
+   *
+   * @param jsonObj JSON Object
+   * @throws IOException if the JSON Object is invalid with respect to Artifact
+   */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+    if (jsonObj == null) {
+      if (Artifact.openapiRequiredFields.isEmpty()) {
+        return;
+      } else { // has required fields
+        throw new IllegalArgumentException(String.format(
+            "The required field(s) %s in Artifact is not found in the empty JSON string",
+            Artifact.openapiRequiredFields.toString()));
+      }
+    }
+
+    Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+    // check to see if the JSON string contains additional fields
+    for (Entry<String, JsonElement> entry : entries) {
+      if (!Artifact.openapiFields.contains(entry.getKey())) {
+        throw new IllegalArgumentException(String.format(
+            "The field `%s` in the JSON string is not defined in the `Artifact` properties. JSON: %s",
+            entry.getKey(), jsonObj.toString()));
+      }
+    }
+    if ((jsonObj.get("id") != null && !jsonObj.get("id").isJsonNull())
+        && !jsonObj.get("id").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(
+          "Expected the field `id` to be a primitive type in the JSON string but got `%s`",
+          jsonObj.get("id").toString()));
+    }
+    if ((jsonObj.get("namespace") != null && !jsonObj.get("namespace").isJsonNull())
+        && !jsonObj.get("namespace").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(
+          "Expected the field `namespace` to be a primitive type in the JSON string but got `%s`",
+          jsonObj.get("namespace").toString()));
+    }
+    if ((jsonObj.get("auid") != null && !jsonObj.get("auid").isJsonNull())
+        && !jsonObj.get("auid").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(
+          "Expected the field `auid` to be a primitive type in the JSON string but got `%s`",
+          jsonObj.get("auid").toString()));
+    }
+    if ((jsonObj.get("uri") != null && !jsonObj.get("uri").isJsonNull())
+        && !jsonObj.get("uri").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(
+          "Expected the field `uri` to be a primitive type in the JSON string but got `%s`",
+          jsonObj.get("uri").toString()));
+    }
+    if ((jsonObj.get("storageUrl") != null && !jsonObj.get("storageUrl").isJsonNull())
+        && !jsonObj.get("storageUrl").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(
+          "Expected the field `storageUrl` to be a primitive type in the JSON string but got `%s`",
+          jsonObj.get("storageUrl").toString()));
+    }
+    if ((jsonObj.get("contentDigest") != null && !jsonObj.get("contentDigest").isJsonNull())
+        && !jsonObj.get("contentDigest").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(
+          "Expected the field `contentDigest` to be a primitive type in the JSON string but got `%s`",
+          jsonObj.get("contentDigest").toString()));
+    }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+      if (!Artifact.class.isAssignableFrom(type.getRawType())) {
+        return null; // this class only serializes 'Artifact' and its subtypes
+      }
+      final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+      final TypeAdapter<Artifact> thisAdapter =
+          gson.getDelegateAdapter(this, TypeToken.get(Artifact.class));
+
+      return (TypeAdapter<T>) new TypeAdapter<Artifact>() {
+        @Override
+        public void write(JsonWriter out, Artifact value) throws IOException {
+          JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+          elementAdapter.write(out, obj);
+        }
+
+        @Override
+        public Artifact read(JsonReader in) throws IOException {
+          JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+          validateJsonObject(jsonObj);
+          return thisAdapter.fromJsonTree(jsonObj);
+        }
+      }.nullSafe();
+    }
+  }
+
+  /**
+   * Create an instance of Artifact given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Artifact
+   * @throws IOException if the JSON string is invalid with respect to Artifact
+   */
+  public static Artifact fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, Artifact.class);
+  }
+
+  /**
+   * Convert an instance of Artifact to an JSON string
+   *
+   * @return JSON string
+   */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }

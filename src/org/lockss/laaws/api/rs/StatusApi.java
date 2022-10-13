@@ -43,12 +43,21 @@
 package org.lockss.laaws.api.rs;
 
 import com.google.gson.reflect.TypeToken;
+import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.lockss.laaws.client.*;
+import javax.ws.rs.core.GenericType;
+import org.lockss.laaws.client.ApiCallback;
+import org.lockss.laaws.client.V2RestClient;
+import org.lockss.laaws.client.ApiException;
+import org.lockss.laaws.client.ApiResponse;
+import org.lockss.laaws.client.Configuration;
+import org.lockss.laaws.client.Pair;
+import org.lockss.laaws.client.ProgressRequestBody;
+import org.lockss.laaws.client.ProgressResponseBody;
 import org.lockss.laaws.model.rs.ApiStatus;
 
 public class StatusApi {
@@ -103,7 +112,6 @@ public class StatusApi {
    */
   public okhttp3.Call getStatusCall(final ApiCallback _callback) throws ApiException {
     String basePath = null;
-
     // Operation Servers
     String[] localBasePaths = new String[] {};
 

@@ -1,32 +1,32 @@
 /*
- * 2022, Board of Trustees of Leland Stanford Jr. University,
- * All rights reserved.
+ * Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
  *
- * Redistribution and use in source and binary forms, with or without modification,
- * are permitted provided that the following conditions are met:
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
  *
- * 1. Redistributions of source code must retain the above copyright notice, this
- * list of conditions and the following disclaimer.
+ * 1. Redistributions of source code must retain the above copyright notice,
+ * this list of conditions and the following disclaimer.
  *
  * 2. Redistributions in binary form must reproduce the above copyright notice,
- * this list of conditions and the following disclaimer in the documentation and/or
- * other materials provided with the distribution.
+ * this list of conditions and the following disclaimer in the documentation
+ * and/or other materials provided with the distribution.
  *
  * 3. Neither the name of the copyright holder nor the names of its contributors
  * may be used to endorse or promote products derived from this software without
  * specific prior written permission.
  *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
- * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
- * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
- * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
- * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
- * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
- * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
- * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- *  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
- *  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+*/
 
 /*
  * LOCKSS Repository Service REST API
@@ -51,6 +51,7 @@ import com.google.gson.internal.bind.util.ISO8601Utils;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.gsonfire.GsonFireBuilder;
+import io.gsonfire.TypeSelector;
 import java.io.IOException;
 import java.io.StringReader;
 import java.lang.reflect.Type;
@@ -61,17 +62,26 @@ import java.time.LocalDate;
 import java.time.OffsetDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 import okio.ByteString;
 
+/*
+ * A JSON utility class
+ *
+ * NOTE: in the future, this class may be converted to static, which may break
+ *       backward-compatibility
+ */
 public class JSON {
-  private Gson gson;
-  private boolean isLenientOnJson = false;
-  private final DateTypeAdapter dateTypeAdapter = new DateTypeAdapter();
-  private final SqlDateTypeAdapter sqlDateTypeAdapter = new SqlDateTypeAdapter();
-  private final OffsetDateTimeTypeAdapter offsetDateTimeTypeAdapter = new OffsetDateTimeTypeAdapter();
-  private final LocalDateTypeAdapter localDateTypeAdapter = new LocalDateTypeAdapter();
-  private final ByteArrayAdapter byteArrayAdapter = new ByteArrayAdapter();
+  private static Gson gson;
+  private static boolean isLenientOnJson = false;
+  private static DateTypeAdapter dateTypeAdapter = new DateTypeAdapter();
+  private static SqlDateTypeAdapter sqlDateTypeAdapter = new SqlDateTypeAdapter();
+  private static OffsetDateTimeTypeAdapter offsetDateTimeTypeAdapter =
+      new OffsetDateTimeTypeAdapter();
+  private static LocalDateTypeAdapter localDateTypeAdapter = new LocalDateTypeAdapter();
+  private static ByteArrayAdapter byteArrayAdapter = new ByteArrayAdapter();
 
   @SuppressWarnings("unchecked")
   public static GsonBuilder createGson() {
@@ -107,15 +117,32 @@ public class JSON {
     return clazz;
   }
 
-  public JSON() {
-    gson =
-        createGson()
-            .registerTypeAdapter(Date.class, dateTypeAdapter)
-            .registerTypeAdapter(java.sql.Date.class, sqlDateTypeAdapter)
-            .registerTypeAdapter(OffsetDateTime.class, offsetDateTimeTypeAdapter)
-            .registerTypeAdapter(LocalDate.class, localDateTypeAdapter)
-            .registerTypeAdapter(byte[].class, byteArrayAdapter)
-            .create();
+  {
+    GsonBuilder gsonBuilder = createGson();
+    gsonBuilder.registerTypeAdapter(Date.class, dateTypeAdapter);
+    gsonBuilder.registerTypeAdapter(java.sql.Date.class, sqlDateTypeAdapter);
+    gsonBuilder.registerTypeAdapter(OffsetDateTime.class, offsetDateTimeTypeAdapter);
+    gsonBuilder.registerTypeAdapter(LocalDate.class, localDateTypeAdapter);
+    gsonBuilder.registerTypeAdapter(byte[].class, byteArrayAdapter);
+    gsonBuilder.registerTypeAdapterFactory(
+        new org.lockss.laaws.model.rs.ApiStatus.CustomTypeAdapterFactory());
+    gsonBuilder.registerTypeAdapterFactory(
+        new org.lockss.laaws.model.rs.Artifact.CustomTypeAdapterFactory());
+    gsonBuilder.registerTypeAdapterFactory(
+        new org.lockss.laaws.model.rs.ArtifactPageInfo.CustomTypeAdapterFactory());
+    gsonBuilder.registerTypeAdapterFactory(
+        new org.lockss.laaws.model.rs.AuSize.CustomTypeAdapterFactory());
+    gsonBuilder.registerTypeAdapterFactory(
+        new org.lockss.laaws.model.rs.AuidPageInfo.CustomTypeAdapterFactory());
+    gsonBuilder.registerTypeAdapterFactory(
+        new org.lockss.laaws.model.rs.ImportStatus.CustomTypeAdapterFactory());
+    gsonBuilder.registerTypeAdapterFactory(
+        new org.lockss.laaws.model.rs.PageInfo.CustomTypeAdapterFactory());
+    gsonBuilder.registerTypeAdapterFactory(
+        new org.lockss.laaws.model.rs.RepositoryInfo.CustomTypeAdapterFactory());
+    gsonBuilder.registerTypeAdapterFactory(
+        new org.lockss.laaws.model.rs.StorageInfo.CustomTypeAdapterFactory());
+    gson = gsonBuilder.create();
   }
 
   /**
@@ -123,7 +150,7 @@ public class JSON {
    *
    * @return Gson
    */
-  public Gson getGson() {
+  public static Gson getGson() {
     return gson;
   }
 
@@ -131,24 +158,13 @@ public class JSON {
    * Set Gson.
    *
    * @param gson Gson
-   * @return JSON
    */
-  public JSON setGson(Gson gson) {
-    this.gson = gson;
-    return this;
+  public static void setGson(Gson gson) {
+    JSON.gson = gson;
   }
 
-  /**
-   * Configure the parser to be liberal in what it accepts.
-   *
-   * @param lenientOnJson Set it to true to ignore some syntax errors
-   * @return JSON
-   * @see <a
-   *     href="https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.5/com/google/gson/stream/JsonReader.html">https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.5/com/google/gson/stream/JsonReader.html</a>
-   */
-  public JSON setLenientOnJson(boolean lenientOnJson) {
+  public static void setLenientOnJson(boolean lenientOnJson) {
     isLenientOnJson = lenientOnJson;
-    return this;
   }
 
   /**
@@ -157,25 +173,25 @@ public class JSON {
    * @param obj Object
    * @return String representation of the JSON
    */
-  public String serialize(Object obj) {
+  public static String serialize(Object obj) {
     return gson.toJson(obj);
   }
 
   /**
    * Deserialize the given JSON string to Java object.
    *
-   * @param <T> Type
-   * @param body The JSON string
+   * @param <T>        Type
+   * @param body       The JSON string
    * @param returnType The type to deserialize into
    * @return The deserialized Java object
    */
   @SuppressWarnings("unchecked")
-  public <T> T deserialize(String body, Type returnType) {
+  public static <T> T deserialize(String body, Type returnType) {
     try {
       if (isLenientOnJson) {
         JsonReader jsonReader = new JsonReader(new StringReader(body));
         // see
-        // https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.5/com/google/gson/stream/JsonReader.html
+        // https://google-gson.googlecode.com/svn/trunk/gson/docs/javadocs/com/google/gson/stream/JsonReader.html#setLenient(boolean)
         jsonReader.setLenient(true);
         return gson.fromJson(jsonReader, returnType);
       } else {
@@ -187,14 +203,15 @@ public class JSON {
       if (returnType.equals(String.class)) {
         return (T) body;
       } else {
-        throw (e);
+        throw(e);
       }
     }
   }
 
-  /** Gson TypeAdapter for Byte Array type */
-  public class ByteArrayAdapter extends TypeAdapter<byte[]> {
-
+  /**
+   * Gson TypeAdapter for Byte Array type
+   */
+  public static class ByteArrayAdapter extends TypeAdapter<byte[]> {
     @Override
     public void write(JsonWriter out, byte[] value) throws IOException {
       if (value == null) {
@@ -218,9 +235,10 @@ public class JSON {
     }
   }
 
-  /** Gson TypeAdapter for JSR310 OffsetDateTime type */
+  /**
+   * Gson TypeAdapter for JSR310 OffsetDateTime type
+   */
   public static class OffsetDateTimeTypeAdapter extends TypeAdapter<OffsetDateTime> {
-
     private DateTimeFormatter formatter;
 
     public OffsetDateTimeTypeAdapter() {
@@ -260,9 +278,10 @@ public class JSON {
     }
   }
 
-  /** Gson TypeAdapter for JSR310 LocalDate type */
-  public class LocalDateTypeAdapter extends TypeAdapter<LocalDate> {
-
+  /**
+   * Gson TypeAdapter for JSR310 LocalDate type
+   */
+  public static class LocalDateTypeAdapter extends TypeAdapter<LocalDate> {
     private DateTimeFormatter formatter;
 
     public LocalDateTypeAdapter() {
@@ -299,22 +318,20 @@ public class JSON {
     }
   }
 
-  public JSON setOffsetDateTimeFormat(DateTimeFormatter dateFormat) {
+  public static void setOffsetDateTimeFormat(DateTimeFormatter dateFormat) {
     offsetDateTimeTypeAdapter.setFormat(dateFormat);
-    return this;
   }
 
-  public JSON setLocalDateFormat(DateTimeFormatter dateFormat) {
+  public static void setLocalDateFormat(DateTimeFormatter dateFormat) {
     localDateTypeAdapter.setFormat(dateFormat);
-    return this;
   }
 
   /**
-   * Gson TypeAdapter for java.sql.Date type If the dateFormat is null, a simple "yyyy-MM-dd" format
-   * will be used (more efficient than SimpleDateFormat).
+   * Gson TypeAdapter for java.sql.Date type
+   * If the dateFormat is null, a simple "yyyy-MM-dd" format will be used
+   * (more efficient than SimpleDateFormat).
    */
   public static class SqlDateTypeAdapter extends TypeAdapter<java.sql.Date> {
-
     private DateFormat dateFormat;
 
     public SqlDateTypeAdapter() {}
@@ -363,10 +380,10 @@ public class JSON {
   }
 
   /**
-   * Gson TypeAdapter for java.util.Date type If the dateFormat is null, ISO8601Utils will be used.
+   * Gson TypeAdapter for java.util.Date type
+   * If the dateFormat is null, ISO8601Utils will be used.
    */
   public static class DateTypeAdapter extends TypeAdapter<Date> {
-
     private DateFormat dateFormat;
 
     public DateTypeAdapter() {}
@@ -418,13 +435,11 @@ public class JSON {
     }
   }
 
-  public JSON setDateFormat(DateFormat dateFormat) {
+  public static void setDateFormat(DateFormat dateFormat) {
     dateTypeAdapter.setFormat(dateFormat);
-    return this;
   }
 
-  public JSON setSqlDateFormat(DateFormat dateFormat) {
+  public static void setSqlDateFormat(DateFormat dateFormat) {
     sqlDateTypeAdapter.setFormat(dateFormat);
-    return this;
   }
 }

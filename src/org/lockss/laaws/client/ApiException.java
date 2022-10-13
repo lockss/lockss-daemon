@@ -1,32 +1,32 @@
 /*
- * 2022, Board of Trustees of Leland Stanford Jr. University,
- * All rights reserved.
+ * Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
  *
- * Redistribution and use in source and binary forms, with or without modification,
- * are permitted provided that the following conditions are met:
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
  *
- * 1. Redistributions of source code must retain the above copyright notice, this
- * list of conditions and the following disclaimer.
+ * 1. Redistributions of source code must retain the above copyright notice,
+ * this list of conditions and the following disclaimer.
  *
  * 2. Redistributions in binary form must reproduce the above copyright notice,
- * this list of conditions and the following disclaimer in the documentation and/or
- * other materials provided with the distribution.
+ * this list of conditions and the following disclaimer in the documentation
+ * and/or other materials provided with the distribution.
  *
  * 3. Neither the name of the copyright holder nor the names of its contributors
  * may be used to endorse or promote products derived from this software without
  * specific prior written permission.
  *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
- * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
- * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
- * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
- * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
- * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
- * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
- * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- *  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
- *  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+*/
 
 /*
  * LOCKSS Repository Service REST API
@@ -44,8 +44,11 @@ package org.lockss.laaws.client;
 
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
-/** ApiException class. */
+/**
+ * <p>ApiException class.</p>
+ */
 @SuppressWarnings("serial")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ApiException extends Exception {
@@ -53,11 +56,13 @@ public class ApiException extends Exception {
   private Map<String, List<String>> responseHeaders = null;
   private String responseBody = null;
 
-  /** Constructor for ApiException. */
+  /**
+   * <p>Constructor for ApiException.</p>
+   */
   public ApiException() {}
 
   /**
-   * Constructor for ApiException.
+   * <p>Constructor for ApiException.</p>
    *
    * @param throwable a {@link java.lang.Throwable} object
    */
@@ -66,7 +71,7 @@ public class ApiException extends Exception {
   }
 
   /**
-   * Constructor for ApiException.
+   * <p>Constructor for ApiException.</p>
    *
    * @param message the error message
    */
@@ -75,7 +80,7 @@ public class ApiException extends Exception {
   }
 
   /**
-   * Constructor for ApiException.
+   * <p>Constructor for ApiException.</p>
    *
    * @param message the error message
    * @param throwable a {@link java.lang.Throwable} object
@@ -83,12 +88,8 @@ public class ApiException extends Exception {
    * @param responseHeaders a {@link java.util.Map} of HTTP response headers
    * @param responseBody the response body
    */
-  public ApiException(
-      String message,
-      Throwable throwable,
-      int code,
-      Map<String, List<String>> responseHeaders,
-      String responseBody) {
+  public ApiException(String message, Throwable throwable, int code,
+      Map<String, List<String>> responseHeaders, String responseBody) {
     super(message, throwable);
     this.code = code;
     this.responseHeaders = responseHeaders;
@@ -96,7 +97,7 @@ public class ApiException extends Exception {
   }
 
   /**
-   * Constructor for ApiException.
+   * <p>Constructor for ApiException.</p>
    *
    * @param message the error message
    * @param code HTTP status code
@@ -109,7 +110,7 @@ public class ApiException extends Exception {
   }
 
   /**
-   * Constructor for ApiException.
+   * <p>Constructor for ApiException.</p>
    *
    * @param message the error message
    * @param throwable a {@link java.lang.Throwable} object
@@ -122,7 +123,7 @@ public class ApiException extends Exception {
   }
 
   /**
-   * Constructor for ApiException.
+   * <p>Constructor for ApiException.</p>
    *
    * @param code HTTP status code
    * @param responseHeaders a {@link java.util.Map} of HTTP response headers
@@ -133,7 +134,7 @@ public class ApiException extends Exception {
   }
 
   /**
-   * Constructor for ApiException.
+   * <p>Constructor for ApiException.</p>
    *
    * @param code HTTP status code
    * @param message a {@link java.lang.String} object
@@ -144,7 +145,7 @@ public class ApiException extends Exception {
   }
 
   /**
-   * Constructor for ApiException.
+   * <p>Constructor for ApiException.</p>
    *
    * @param code HTTP status code
    * @param message the error message
@@ -183,5 +184,16 @@ public class ApiException extends Exception {
    */
   public String getResponseBody() {
     return responseBody;
+  }
+
+  /**
+   * Get the exception message including HTTP response data.
+   *
+   * @return The exception message
+   */
+  public String getMessage() {
+    return String.format(
+        "Message: %s%nHTTP response code: %s%nHTTP response body: %s%nHTTP response headers: %s",
+        super.getMessage(), this.getCode(), this.getResponseBody(), this.getResponseHeaders());
   }
 }
