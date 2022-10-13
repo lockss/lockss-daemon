@@ -2,7 +2,7 @@
 
   publisher <
     name = American Society of Hematology ;
-    info[platform] = Silverchair. BLOCKED GLN only LXPLUG-1937
+    info[platform] = Silverchair. GLN only
   >
     # move to SilverChair 2019
 
@@ -73,6 +73,7 @@
 
 
     param[journal_id] = hematology
+    #Single issue published late in the year.
 
     au < doNotProcess ; 2015 ; 2015 ; Hematology: ASH Education Program Book Volume 2015 ; 2015 >
     au < doNotProcess ; 2016 ; 2016 ; Hematology: ASH Education Program Book Volume 2016 ; 2016 >
