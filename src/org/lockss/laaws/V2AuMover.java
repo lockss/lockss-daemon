@@ -326,6 +326,7 @@ public class V2AuMover {
   private boolean checkMissingContent;
   private boolean isCompareBytes;
   private boolean isDetailedStats;
+  private boolean isGenerateTestErrors;
 
   // Retries and timeouts
   /** the time to wait fora a connection before timing out */
@@ -430,6 +431,8 @@ public class V2AuMover {
       isDetailedStats=config.getBoolean(PARAM_DETAILED_STATS,
                                         DEFAULT_DETAILED_STATS);
 
+      isGenerateTestErrors = config.getBoolean(PARAM_GENERATE_TEST_ERRORS,
+                                               DEFAULT_GENERATE_TEST_ERRORS);
       copyIterExecutor =
         createOrReConfigureExecutor(copyIterExecutor, config,
                                     PARAM_COPY_ITER_EXECUTOR_SPEC,
@@ -1050,8 +1053,7 @@ public class V2AuMover {
           CuChecker checker = new CuChecker(v2Mover, task);
           checker.run();
           task.getCounters().add(CounterType.VERIFY_TIME, now() - startCh);
-          if (config.getBoolean(PARAM_GENERATE_TEST_ERRORS,
-                                DEFAULT_GENERATE_TEST_ERRORS)) {
+          if (isGenerateTestErrors) {
             task.addError("No error on " + task.getCu());
           }
           log.debug2("Checked CU: " + task.getCu());
