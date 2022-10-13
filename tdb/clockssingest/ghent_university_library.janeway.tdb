@@ -3,12 +3,171 @@
   publisher <
     name = Ghent University Library ;
     info[contract] = 2021 ;
-    info[back] = 2019 ;
+    info[back] = 2015 ;
     info[tester] = 5 ;
     info[poller] = 2 ;
     info[platform] = Janeway/OAI. See LXPLUG-2091
   >
   
+
+  { #Start. In publication.
+    ###########
+    #####Journals in publication
+    ###########
+
+    plugin = org.lockss.plugin.janeway.ghentuniversitylibrary.ClockssGhentUniversityLibraryPlugin
+    param[base_url] = https://openjournals.ugent.be/
+    implicit < status ; status2 ; year ; param[year] ; volume ; name ; hidden[proxy] >
+
+  {
+
+      title <
+        name = Authorship ;
+        eissn = 2034-4643
+      >
+
+      #published 2011-present
+      param[journal_id] = authorship
+
+      au < manifest ; exists ; 2011 ; 2011 ; 2011 ; Authorship Volume 2011 ; >
+      au < manifest ; exists ; 2012 ; 2012 ; 2012 ; Authorship Volume 2012 ; >
+      au < manifest ; exists ; 2013 ; 2013 ; 2013 ; Authorship Volume 2013 ; >
+      au < manifest ; exists ; 2014 ; 2014 ; 2014 ; Authorship Volume 2014 ; >
+      au < manifest ; exists ; 2015 ; 2015 ; 2015 ; Authorship Volume 2015 ; >
+      au < manifest ; exists ; 2016 ; 2016 ; 2016 ; Authorship Volume 2016 ; >
+      au < manifest ; exists ; 2017 ; 2017 ; 2017 ; Authorship Volume 2017 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; 2018 ; Authorship Volume 2018 ; >
+      au < notReady ; exists ; 2019 ; 2019 ; 2019 ; Authorship Volume 2019 ; >
+      au < notReady ; exists ; 2020 ; 2020 ; 2020 ; Authorship Volume 2020 ; >
+      au < notReady ; exists ; 2021 ; 2021 ; 2021 ; Authorship Volume 2021 ; >
+      au < exists ; exists ; 2022 ; 2022 ; 2022 ; Authorship Volume 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = DiGeSt. Journal of Diversity and Gender Studies ;
+        issn = 2593-0273 ;
+        eissn = 2593-0281
+      >
+
+      #published 2020-present
+      param[journal_id] = digest
+
+      au < notReady ; exists ; 2020 ; 2020 ; 2020 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2020 ; >
+      au < notReady ; exists ; 2021 ; 2021 ; 2021 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2021 ; >
+      au < notReady ; exists ; 2022 ; 2022 ; 2022 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of European Periodical Studies ;
+        eissn = 2506-6587
+      >
+
+      #published 2016-present
+      param[journal_id] = jeps
+
+      au < manifest ; exists ; 2016 ; 2016 ; 2016 ; Journal of European Periodical Studies Volume 2016 ; >
+      au < manifest ; exists ; 2017 ; 2017 ; 2017 ; Journal of European Periodical Studies Volume 2017 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; 2018 ; Journal of European Periodical Studies Volume 2018 ; >
+      au < notReady ; exists ; 2019 ; 2019 ; 2019 ; Journal of European Periodical Studies Volume 2019 ; >
+      au < notReady ; exists ; 2020 ; 2020 ; 2020 ; Journal of European Periodical Studies Volume 2020 ; >
+      au < notReady ; exists ; 2021 ; 2021 ; 2021 ; Journal of European Periodical Studies Volume 2021 ; >
+      au < notReady ; exists ; 2022 ; 2022 ; 2022 ; Journal of European Periodical Studies Volume 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Latin Cosmopolitanism and European Literatures ;
+        eissn = 2593-743X
+      >
+
+      #published 2019-present
+      param[journal_id] = jolcel
+
+      au < notReady ; exists ; 2019 ; 2019 ; 2019 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2019 ; >
+      au < notReady ; exists ; 2020 ; 2020 ; 2020 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2020 ; >
+      au < notReady ; exists ; 2021 ; 2021 ; 2021 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2021 ; >
+      au < notReady ; exists ; 2022 ; 2022 ; 2022 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Vlaams Diergeneeskundig Tijdschrift ;
+        issn = 0303-9021 ;
+        eissn = 0303-9021
+      >
+
+      #published 2000-present
+      param[journal_id] = vdt
+
+      au < exists ; exists ; 2000 ; 2000 ; 2000 ; Vlaams Diergeneeskundig Tijdschrift Volume 2000 ; >
+      au < exists ; exists ; 2001 ; 2001 ; 2001 ; Vlaams Diergeneeskundig Tijdschrift Volume 2001 ; >
+      au < exists ; exists ; 2002 ; 2002 ; 2002 ; Vlaams Diergeneeskundig Tijdschrift Volume 2002 ; >
+      au < exists ; exists ; 2003 ; 2003 ; 2003 ; Vlaams Diergeneeskundig Tijdschrift Volume 2003 ; >
+      au < exists ; exists ; 2004 ; 2004 ; 2004 ; Vlaams Diergeneeskundig Tijdschrift Volume 2004 ; >
+      au < exists ; exists ; 2005 ; 2005 ; 2005 ; Vlaams Diergeneeskundig Tijdschrift Volume 2005 ; >
+      au < exists ; exists ; 2006 ; 2006 ; 2006 ; Vlaams Diergeneeskundig Tijdschrift Volume 2006 ; >
+      au < exists ; exists ; 2007 ; 2007 ; 2007 ; Vlaams Diergeneeskundig Tijdschrift Volume 2007 ; >
+      au < exists ; exists ; 2008 ; 2008 ; 2008 ; Vlaams Diergeneeskundig Tijdschrift Volume 2008 ; >
+      au < exists ; exists ; 2009 ; 2009 ; 2009 ; Vlaams Diergeneeskundig Tijdschrift Volume 2009 ; >
+      au < exists ; exists ; 2010 ; 2010 ; 2010 ; Vlaams Diergeneeskundig Tijdschrift Volume 2010 ; >
+      au < exists ; exists ; 2011 ; 2011 ; 2011 ; Vlaams Diergeneeskundig Tijdschrift Volume 2011 ; >
+      au < manifest ; exists ; 2012 ; 2012 ; 2012 ; Vlaams Diergeneeskundig Tijdschrift Volume 2012 ; >
+      au < manifest ; exists ; 2013 ; 2013 ; 2013 ; Vlaams Diergeneeskundig Tijdschrift Volume 2013 ; >
+      au < manifest ; exists ; 2014 ; 2014 ; 2014 ; Vlaams Diergeneeskundig Tijdschrift Volume 2014 ; >
+      au < manifest ; exists ; 2015 ; 2015 ; 2015 ; Vlaams Diergeneeskundig Tijdschrift Volume 2015 ; >
+      au < manifest ; exists ; 2016 ; 2016 ; 2016 ; Vlaams Diergeneeskundig Tijdschrift Volume 2016 ; >
+      au < manifest ; exists ; 2017 ; 2017 ; 2017 ; Vlaams Diergeneeskundig Tijdschrift Volume 2017 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; 2018 ; Vlaams Diergeneeskundig Tijdschrift Volume 2018 ; >
+      au < notReady ; exists ; 2019 ; 2019 ; 2019 ; Vlaams Diergeneeskundig Tijdschrift Volume 2019 ; >
+      au < notReady ; exists ; 2020 ; 2020 ; 2020 ; Vlaams Diergeneeskundig Tijdschrift Volume 2020 ; >
+      au < notReady ; exists ; 2021 ; 2021 ; 2021 ; Vlaams Diergeneeskundig Tijdschrift Volume 2021 ; >
+      au < notReady ; exists ; 2022 ; 2022 ; 2022 ; Vlaams Diergeneeskundig Tijdschrift Volume 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = WT. Tijdschrift over de geschiedenis van de Vlaamse beweging ;
+        eissn = 0774-532X
+      >
+
+      #published 2009-present
+      param[journal_id] = wt
+
+      au < manifest ; exists ; 2009 ; 2009 ; 2009 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2009 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; 2010 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2010 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; 2011 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2011 ; >
+      au < manifest ; exists ; 2012 ; 2012 ; 2012 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2012 ; >
+      au < manifest ; exists ; 2013 ; 2013 ; 2013 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2013 ; >
+      au < manifest ; exists ; 2014 ; 2014 ; 2014 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2014 ; >
+      au < manifest ; exists ; 2015 ; 2015 ; 2015 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2015 ; >
+      au < manifest ; exists ; 2016 ; 2016 ; 2016 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2016 ; >
+      au < manifest ; exists ; 2017 ; 2017 ; 2017 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2017 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; 2018 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2018 ; >
+      au < notReady ; exists ; 2019 ; 2019 ; 2019 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2019 ; >
+      au < notReady ; exists ; 2020 ; 2020 ; 2020 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2020 ; >
+      au < notReady ; exists ; 2021 ; 2021 ; 2021 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2021 ; >
+      au < notReady ; exists ; 2022 ; 2022 ; 2022 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2022 ; >
+
+  } 
+  } #End. In publication.
+
+  { #Start. Out of publication.
+    ###########
+    #####Journals out of publication
+    ###########
+
     plugin = org.lockss.plugin.janeway.ghentuniversitylibrary.ClockssGhentUniversityLibraryPlugin
     param[base_url] = https://openjournals.ugent.be/
     implicit < status ; status2 ; year ; param[year] ; volume ; name ; hidden[proxy] >
@@ -143,31 +302,6 @@
   {
 
       title <
-        name = Authorship ;
-        eissn = 2034-4643
-      >
-
-      #published 2011-present
-      param[journal_id] = authorship
-
-      au < manifest ; exists ; 2011 ; 2011 ; 2011 ; Authorship Volume 2011 ; >
-      au < manifest ; exists ; 2012 ; 2012 ; 2012 ; Authorship Volume 2012 ; >
-      au < manifest ; exists ; 2013 ; 2013 ; 2013 ; Authorship Volume 2013 ; >
-      au < manifest ; exists ; 2014 ; 2014 ; 2014 ; Authorship Volume 2014 ; >
-      au < manifest ; exists ; 2015 ; 2015 ; 2015 ; Authorship Volume 2015 ; >
-      au < manifest ; exists ; 2016 ; 2016 ; 2016 ; Authorship Volume 2016 ; >
-      au < manifest ; exists ; 2017 ; 2017 ; 2017 ; Authorship Volume 2017 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; 2018 ; Authorship Volume 2018 ; >
-      au < notReady ; exists ; 2019 ; 2019 ; 2019 ; Authorship Volume 2019 ; >
-      au < notReady ; exists ; 2020 ; 2020 ; 2020 ; Authorship Volume 2020 ; >
-      au < notReady ; exists ; 2021 ; 2021 ; 2021 ; Authorship Volume 2021 ; >
-      au < exists ; exists ; 2022 ; 2022 ; 2022 ; Authorship Volume 2022 ; >
-
-  }
-
-  {
-
-      title <
         name = Brood & Rozen ;
         eissn = 1370-7477
       >
@@ -247,23 +381,6 @@
       au < exists ; exists ; 2017 ; 2017 ; 2017 ; De Uil van Minerva Volume 2017 ; >
       au < manifest ; exists ; 2018 ; 2018 ; 2018 ; De Uil van Minerva Volume 2018 ; >
       au < frozen ; exists ; 2019 ; 2019 ; 2019 ; De Uil van Minerva Volume 2019 ; >
-
-  }
-
-  {
-
-      title <
-        name = DiGeSt. Journal of Diversity and Gender Studies ;
-        issn = 2593-0273 ;
-        eissn = 2593-0281
-      >
-
-      #published 2020-present
-      param[journal_id] = digest
-
-      au < notReady ; exists ; 2020 ; 2020 ; 2020 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2020 ; >
-      au < notReady ; exists ; 2021 ; 2021 ; 2021 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2021 ; >
-      au < notReady ; exists ; 2022 ; 2022 ; 2022 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2022 ; >
 
   }
 
@@ -791,43 +908,6 @@
   {
 
       title <
-        name = Journal of European Periodical Studies ;
-        eissn = 2506-6587
-      >
-
-      #published 2016-present
-      param[journal_id] = jeps
-
-      au < manifest ; exists ; 2016 ; 2016 ; 2016 ; Journal of European Periodical Studies Volume 2016 ; >
-      au < manifest ; exists ; 2017 ; 2017 ; 2017 ; Journal of European Periodical Studies Volume 2017 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; 2018 ; Journal of European Periodical Studies Volume 2018 ; >
-      au < notReady ; exists ; 2019 ; 2019 ; 2019 ; Journal of European Periodical Studies Volume 2019 ; >
-      au < notReady ; exists ; 2020 ; 2020 ; 2020 ; Journal of European Periodical Studies Volume 2020 ; >
-      au < notReady ; exists ; 2021 ; 2021 ; 2021 ; Journal of European Periodical Studies Volume 2021 ; >
-      au < notReady ; exists ; 2022 ; 2022 ; 2022 ; Journal of European Periodical Studies Volume 2022 ; >
-
-  }
-
-  {
-
-      title <
-        name = Journal of Latin Cosmopolitanism and European Literatures ;
-        eissn = 2593-743X
-      >
-
-      #published 2019-present
-      param[journal_id] = jolcel
-
-      au < notReady ; exists ; 2019 ; 2019 ; 2019 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2019 ; >
-      au < notReady ; exists ; 2020 ; 2020 ; 2020 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2020 ; >
-      au < notReady ; exists ; 2021 ; 2021 ; 2021 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2021 ; >
-      au < notReady ; exists ; 2022 ; 2022 ; 2022 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2022 ; >
-
-  }
-
-  {
-
-      title <
         name = Oostvlaamse Zanten
       >
 
@@ -1165,69 +1245,6 @@
 
   }
 
-  {
-
-      title <
-        name = Vlaams Diergeneeskundig Tijdschrift ;
-        issn = 0303-9021 ;
-        eissn = 0303-9021
-      >
-
-      #published 2000-present
-      param[journal_id] = vdt
-
-      au < exists ; exists ; 2000 ; 2000 ; 2000 ; Vlaams Diergeneeskundig Tijdschrift Volume 2000 ; >
-      au < exists ; exists ; 2001 ; 2001 ; 2001 ; Vlaams Diergeneeskundig Tijdschrift Volume 2001 ; >
-      au < exists ; exists ; 2002 ; 2002 ; 2002 ; Vlaams Diergeneeskundig Tijdschrift Volume 2002 ; >
-      au < exists ; exists ; 2003 ; 2003 ; 2003 ; Vlaams Diergeneeskundig Tijdschrift Volume 2003 ; >
-      au < exists ; exists ; 2004 ; 2004 ; 2004 ; Vlaams Diergeneeskundig Tijdschrift Volume 2004 ; >
-      au < exists ; exists ; 2005 ; 2005 ; 2005 ; Vlaams Diergeneeskundig Tijdschrift Volume 2005 ; >
-      au < exists ; exists ; 2006 ; 2006 ; 2006 ; Vlaams Diergeneeskundig Tijdschrift Volume 2006 ; >
-      au < exists ; exists ; 2007 ; 2007 ; 2007 ; Vlaams Diergeneeskundig Tijdschrift Volume 2007 ; >
-      au < exists ; exists ; 2008 ; 2008 ; 2008 ; Vlaams Diergeneeskundig Tijdschrift Volume 2008 ; >
-      au < exists ; exists ; 2009 ; 2009 ; 2009 ; Vlaams Diergeneeskundig Tijdschrift Volume 2009 ; >
-      au < exists ; exists ; 2010 ; 2010 ; 2010 ; Vlaams Diergeneeskundig Tijdschrift Volume 2010 ; >
-      au < exists ; exists ; 2011 ; 2011 ; 2011 ; Vlaams Diergeneeskundig Tijdschrift Volume 2011 ; >
-      au < manifest ; exists ; 2012 ; 2012 ; 2012 ; Vlaams Diergeneeskundig Tijdschrift Volume 2012 ; >
-      au < manifest ; exists ; 2013 ; 2013 ; 2013 ; Vlaams Diergeneeskundig Tijdschrift Volume 2013 ; >
-      au < manifest ; exists ; 2014 ; 2014 ; 2014 ; Vlaams Diergeneeskundig Tijdschrift Volume 2014 ; >
-      au < manifest ; exists ; 2015 ; 2015 ; 2015 ; Vlaams Diergeneeskundig Tijdschrift Volume 2015 ; >
-      au < manifest ; exists ; 2016 ; 2016 ; 2016 ; Vlaams Diergeneeskundig Tijdschrift Volume 2016 ; >
-      au < manifest ; exists ; 2017 ; 2017 ; 2017 ; Vlaams Diergeneeskundig Tijdschrift Volume 2017 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; 2018 ; Vlaams Diergeneeskundig Tijdschrift Volume 2018 ; >
-      au < notReady ; exists ; 2019 ; 2019 ; 2019 ; Vlaams Diergeneeskundig Tijdschrift Volume 2019 ; >
-      au < notReady ; exists ; 2020 ; 2020 ; 2020 ; Vlaams Diergeneeskundig Tijdschrift Volume 2020 ; >
-      au < notReady ; exists ; 2021 ; 2021 ; 2021 ; Vlaams Diergeneeskundig Tijdschrift Volume 2021 ; >
-      au < notReady ; exists ; 2022 ; 2022 ; 2022 ; Vlaams Diergeneeskundig Tijdschrift Volume 2022 ; >
-
-  }
-
-  {
-
-      title <
-        name = WT. Tijdschrift over de geschiedenis van de Vlaamse beweging ;
-        eissn = 0774-532X
-      >
-
-      #published 2009-present
-      param[journal_id] = wt
-
-      au < manifest ; exists ; 2009 ; 2009 ; 2009 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2009 ; >
-      au < manifest ; exists ; 2010 ; 2010 ; 2010 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2010 ; >
-      au < manifest ; exists ; 2011 ; 2011 ; 2011 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2011 ; >
-      au < manifest ; exists ; 2012 ; 2012 ; 2012 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2012 ; >
-      au < manifest ; exists ; 2013 ; 2013 ; 2013 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2013 ; >
-      au < manifest ; exists ; 2014 ; 2014 ; 2014 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2014 ; >
-      au < manifest ; exists ; 2015 ; 2015 ; 2015 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2015 ; >
-      au < manifest ; exists ; 2016 ; 2016 ; 2016 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2016 ; >
-      au < manifest ; exists ; 2017 ; 2017 ; 2017 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2017 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; 2018 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2018 ; >
-      au < notReady ; exists ; 2019 ; 2019 ; 2019 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2019 ; >
-      au < notReady ; exists ; 2020 ; 2020 ; 2020 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2020 ; >
-      au < notReady ; exists ; 2021 ; 2021 ; 2021 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2021 ; >
-      au < notReady ; exists ; 2022 ; 2022 ; 2022 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2022 ; >
-
-  }
 
   {
 
@@ -1254,5 +1271,5 @@
       au < notReady ; exists ; 2019 ; 2019 ; 2019 ; Proceedings Autex 2019 Volume 2019 ; >
 
   }
-
+  } #End. Out of publication
 }
