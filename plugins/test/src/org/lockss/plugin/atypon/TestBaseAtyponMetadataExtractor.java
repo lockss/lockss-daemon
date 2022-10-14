@@ -338,6 +338,9 @@ public class TestBaseAtyponMetadataExtractor extends LockssTestCase {
     sb.append("\nPB  - ");
     sb.append(goodPublisher);
     sb.append("\nER  - ");
+    //Since October/2022, we found missing VL will cause over crawl from leaking "corrected articles"
+    sb.append("\nVL  - ");
+    sb.append(goodVolume);
     return sb.toString();
   }
   /**
