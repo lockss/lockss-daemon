@@ -105,22 +105,19 @@ implements FileMetadataExtractorFactory {
        * Must do this after cooking, because it checks size of cooked info
        */
       if (am.isEmpty()) {
-        log.debug3("checking VL: am is empty ");
         return;
       }
-
-      log.debug3("checking VL: am is nooooot empty ");
 
       // Check VOLUME from preventing 0-volume-0-issue articles, see notes below
       // For Sage, we found a real article can leak to other articles via "view corrected article" or "view correction" link
       // Other leaked articles usually have 0-volume/0-issue and should not emit metadata
       // In this article https://journals.sagepub.com/doi/abs/10.1177/03635465221082057,
       // the "view corrected article"-https://journals.sagepub.com/doi/10.1177/03635465211063901
-      if (am.getRaw("VL") == null) { // if DA wasn't there, use Y1
+      if (am.getRaw("VL") == null) {
         log.debug3("checking VL: VL is empty, no raw volume, cu = " + cu.getUrl());
         return;
       } else {
-        log.debug3("checking VL: VL is not empty, vl = " + am.getRaw("VL") + ", cu = " + cu.getUrl());
+        log.debug3("checking VL: VL is not empty, VL = " + am.getRaw("VL") + ", cu = " + cu.getUrl());
       }
 
       /*
