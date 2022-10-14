@@ -105,8 +105,11 @@ implements FileMetadataExtractorFactory {
        * Must do this after cooking, because it checks size of cooked info
        */
       if (am.isEmpty()) {
+        log.debug3("checking VL: am is empty ");
         return;
       }
+
+      log.debug3("checking VL: am is nooooot empty ");
 
       // Check VOLUME from preventing 0-volume-0-issue articles, see notes below
       // For Sage, we found a real article can leak to other articles via "view corrected article" or "view correction" link
