@@ -207,6 +207,18 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "special-collections"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "temis-related"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "citing-articles"),
+
+    // In Oct/2022, for Sage, in additional to "Prev/Next" already corrected by the filter above,
+    // There are new "View corrected article" and "View correction" which will leak to other "0-volume/0-issue" articles
+    /*
+    https://journals.sagepub.com/doi/abs/10.1177/03635465221082057 -- has View corrected article
+    <div class="inline-core-relations"><a href="/doi/10.1177/03635465211063901" class="relation--item">View corrected article</a></div>
+
+
+    https://journals.sagepub.com/doi/10.1177/03635465211063901 -- View correction
+    <div class="inline-core-relations"><a href="/doi/10.1177/03635465221082057" class="relation--item">View correction</a></div>
+    */
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "inline-core-relations"),
     
     // Not all Atypon plugins necessarily need this but MANY do and it is
     // an insidious source of over crawling

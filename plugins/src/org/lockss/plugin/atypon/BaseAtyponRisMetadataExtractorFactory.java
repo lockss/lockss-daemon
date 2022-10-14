@@ -108,6 +108,18 @@ implements FileMetadataExtractorFactory {
         return;
       }
 
+      // Check VOLUME from preventing 0-volume-0-issue articles, see notes below
+      // For Sage, we found a real article can leak to other articles via "view corrected article" or "view correction" link
+      // Other leaked articles usually have 0-volume/0-issue and should not emit metadata
+      // In this article https://journals.sagepub.com/doi/abs/10.1177/03635465221082057,
+      // the "view corrected article"-https://journals.sagepub.com/doi/10.1177/03635465211063901
+      if (am.getRaw("VL") == null) { // if DA wasn't there, use Y1
+        log.debug3("checking VL: VL is empty, no raw volume, cu = " + cu.getUrl());
+        return;
+      } else {
+        log.debug3("checking VL: VL is not empty, vl = " + am.getRaw("VL") + ", cu = " + cu.getUrl());
+      }
+
       /*
        * RIS data can be variable.  We don't have any way to add priority to
        * the cooking of data, so fallback to alternate values manually
@@ -119,9 +131,8 @@ implements FileMetadataExtractorFactory {
         if (am.getRaw("Y1") != null) { // if DA wasn't there, use Y1
           am.put(MetadataField.FIELD_DATE, am.getRaw("Y1"));
         }
-      }  
-      
-      
+      }
+
       /*
        * Determine if this is a book item or a journal item.
        * set the appropriate article type once the daemon passes along the TY
