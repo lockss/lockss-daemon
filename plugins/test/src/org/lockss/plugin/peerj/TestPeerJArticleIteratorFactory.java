@@ -35,14 +35,11 @@ import java.util.regex.Pattern;
 import junit.framework.Test;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
-import org.lockss.daemon.CachedUrlSetSpec;
-import org.lockss.daemon.SingleNodeCachedUrlSetSpec;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArticleFiles;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
-import org.lockss.plugin.CachedUrlSet;
 import org.lockss.plugin.PluginTestUtil;
 import org.lockss.plugin.SubTreeArticleIterator;
 import org.lockss.plugin.simulated.SimulatedArchivalUnit;
@@ -249,9 +246,9 @@ public class TestPeerJArticleIteratorFactory
       // count all alternate files together
       for (int i = 0; i < variantAlternateRoles.size(); i++) {
         if (!StringUtil.isNullString(
-            af.getRoleUrl(variantAlternateRoles.get(i).toString()))) {
+            af.getRoleUrl(variantAlternateRoles.get(i)))) {
           ++countAlternateFileOnly;
-        }        
+        }
       }
     }
     
@@ -287,7 +284,7 @@ public class TestPeerJArticleIteratorFactory
  public static class TestArchives extends TestPeerJArticleIteratorFactory {
     
     public TestArchives() {
-      variantPluginName = "org.lockss.plugin.peerj.PeerJPlugin";
+      variantPluginName = "org.lockss.plugin.peerj.ClockssPeerJPlugin";
       variantPeerjSite = "archives";
       variantBaseConstant = "articles";
       variantArticleName = "55";

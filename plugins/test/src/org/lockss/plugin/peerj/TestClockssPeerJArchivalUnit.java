@@ -57,7 +57,7 @@ import org.lockss.util.TimeBase;
 /* 
  * Tests archival unit for PeerJ Archival site
  */
-public class TestPeerJArchivalUnit extends LockssTestCase {
+public class TestClockssPeerJArchivalUnit extends LockssTestCase {
   
   String variantPluginId;
   String variantPluginName;
@@ -68,7 +68,7 @@ public class TestPeerJArchivalUnit extends LockssTestCase {
   MockLockssDaemon daemon;
   PluginManager pluginMgr;
   
-  private static final Logger log = Logger.getLogger(TestPeerJArchivalUnit.class);
+  private static final Logger log = Logger.getLogger(TestClockssPeerJArchivalUnit.class);
 
   private static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   private static final String VOL_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
@@ -202,7 +202,7 @@ public class TestPeerJArchivalUnit extends LockssTestCase {
   }
 
   // Variant to test PeerJ Archives (main) site
-  public static class TestArchives extends TestPeerJArchivalUnit {   
+  public static class TestArchives extends TestClockssPeerJArchivalUnit {
     public void testArchivalUnit() throws Exception {
       variantPluginName = "PeerJ Plugin (Legacy, CLOCKSS)";
       variantPluginId =  "org.lockss.plugin.peerj.ClockssPeerJPlugin";

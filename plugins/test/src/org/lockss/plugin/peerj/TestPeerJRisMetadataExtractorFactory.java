@@ -71,7 +71,7 @@ public class TestPeerJRisMetadataExtractorFactory extends LockssTestCase {
   private ArchivalUnit pjau; // peerj au
   
   private static final String PLUGIN_NAME = 
-      "org.lockss.plugin.peerj.PeerJPlugin";
+      "org.lockss.plugin.peerj.ClockssPeerJPlugin";
   
   private static final String BASE_URL = "http://www.example.com/";
   private static final String VOLUME_NAME = "2013";
