@@ -31,13 +31,17 @@ package org.lockss.plugin.taar;
 
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.OrFilter;
+import org.lockss.filter.FilterUtil;
+import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.HtmlFilterInputStream;
 import org.lockss.filter.html.HtmlNodeFilterTransform;
 import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.FilterFactory;
+import org.lockss.util.ReaderInputStream;
 
 import java.io.InputStream;
+import java.io.Reader;
 
 public class TaarHtmlHashFilterFactory implements FilterFactory {
 
@@ -51,6 +55,7 @@ public class TaarHtmlHashFilterFactory implements FilterFactory {
       HtmlNodeFilters.tag("footer"),
       HtmlNodeFilters.tagWithAttributeRegex("fieldset", "class", "btn-toolbar"),
       HtmlNodeFilters.tagWithAttribute("a", "title", "Exit"),
+      HtmlNodeFilters.tagWithAttribute("form", "class", "form-inline"),
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "t3-sidebar"),
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "t3-module"),
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "tags"),
@@ -65,17 +70,22 @@ public class TaarHtmlHashFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttributeRegex("li", "class", "(email|print)-icon"),
       HtmlNodeFilters.tagWithAttributeRegex("aside", "class", "article-aside"),
       HtmlNodeFilters.tagWithAttributeRegex("a", "href", "(component/mailto|cdn-cgi/l/email-protection)"),
+      HtmlNodeFilters.tagWithAttributeRegex("a", "rel", "lightbox-text_"),
   };
 
 
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding) {
-    return new HtmlFilterInputStream(in,
+    // apply the above filters
+    InputStream filtered = new HtmlFilterInputStream(in,
         encoding,
         HtmlNodeFilterTransform.exclude(new OrFilter(
             excludeFilters
         )));
+    // add whitespace filter
+    Reader filteredReader = FilterUtil.getReader(filtered, encoding);
+    return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
   }
 
 }

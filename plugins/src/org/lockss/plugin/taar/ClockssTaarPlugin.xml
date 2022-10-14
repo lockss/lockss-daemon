@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>4</string>
+        <string>5</string>
     </entry>
     <entry>
         <string>plugin_config_props</string>
@@ -140,5 +140,11 @@ POSSIBILITY OF SUCH DAMAGE.
                 <string>org.lockss.plugin.taar.TaarHtmlMetadataExtractorFactory</string>
             </entry>
         </map>
+    </entry>
+    <entry>
+        <string>au_url_poll_result_weight</string>
+        <list>
+            <string>"\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff2?)(\?[^/]*)?$", 0</string>
+        </list>
     </entry>
 </map>
