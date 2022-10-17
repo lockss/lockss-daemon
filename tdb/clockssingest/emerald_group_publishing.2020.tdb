@@ -1593,8 +1593,8 @@
     au < manifest ; exists ; 1993 ; Circuit World Volume 19 ; 19 ; >
     au < manifest ; exists ; 1994 ; Circuit World Volume 20 ; 20 ; >
     au < manifest ; exists ; 1995 ; Circuit World Volume 21 ; 21 ; >
-    au < manifest ; exists ; 1996 ; Circuit World Volume 22 ; 22 ; >
-    au < manifest ; exists ; 1997 ; Circuit World Volume 23 ; 23 ; >
+    au < notReady ; exists ; 1996 ; Circuit World Volume 22 ; 22 ; > #no substance
+    au < notReady ; exists ; 1997 ; Circuit World Volume 23 ; 23 ; > #no substance
     au < crawling ; exists ; 1998 ; Circuit World Volume 24 ; 24 ; >
     au < frozen ; exists ; 1999 ; Circuit World Volume 25 ; 25 ; >
     au < frozen ; exists ; 2000 ; Circuit World Volume 26 ; 26 ; >
@@ -11280,7 +11280,7 @@
     comment[continued_by] = 1363-951X
 
     au < manifest ; exists ; 1995 ; Police Studies: International Review of Police Development Volume 18 ; 18 ; >
-    au < manifest ; exists ; 1996 ; Police Studies: International Review of Police Development Volume 19 ; 19 ; >
+    au < notReady ; exists ; 1996 ; Police Studies: International Review of Police Development Volume 19 ; 19 ; > #no substance
 
   }
 
