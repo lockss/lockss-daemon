@@ -165,11 +165,11 @@ public class MarcRecordMetadataHelper implements FileMetadataExtractor {
             }
           }  else if (MARC_isbn_alt2 != null) {
             if (MARC_isbn_alt2.contains(",")) {
-              log.debug3("MARC_isbn_alt2:" + MARC_isbn_alt2.trim());
-              am.put(MetadataField.FIELD_ISBN, MARC_isbn_alt2.trim());
-            } else {
               log.debug3("MARC_isbn_alt2:" + MARC_isbn_alt2.substring(0,MARC_isbn_alt2.indexOf(",")).trim());
               am.put(MetadataField.FIELD_ISBN, MARC_isbn_alt2.substring(0,MARC_isbn_alt2.indexOf(",")).trim());
+            } else {
+              log.debug3("MARC_isbn_alt2:" + MARC_isbn_alt2.trim());
+              am.put(MetadataField.FIELD_ISBN, MARC_isbn_alt2.trim());
             }
           }
 
