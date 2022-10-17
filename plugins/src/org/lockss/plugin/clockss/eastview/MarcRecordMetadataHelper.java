@@ -149,27 +149,27 @@ public class MarcRecordMetadataHelper implements FileMetadataExtractor {
           // Set ISBN
           if (MARC_isbn != null) {
             if (MARC_isbn.contains(",")) {
-              log.debug3("MARC_isbn:" + MARC_isbn.substring(0,MARC_isbn.indexOf(",")-1).replace(",","").trim());
-              am.put(MetadataField.FIELD_ISBN, MARC_isbn.substring(0,MARC_isbn.indexOf(",")-1).replace(",","").trim());
+              log.debug3("MARC_isbn:" + MARC_isbn.substring(0,MARC_isbn.indexOf(",")-1).replaceAll("[^a-zA-Z0-9]", ""));
+              am.put(MetadataField.FIELD_ISBN, MARC_isbn.substring(0,MARC_isbn.indexOf(",")-1).replaceAll("[^a-zA-Z0-9]", ""));
             } else {
-              log.debug3("MARC_isbn:" + MARC_isbn.trim());
-              am.put(MetadataField.FIELD_ISBN, MARC_isbn.trim());
+              log.debug3("MARC_isbn:" + MARC_isbn.replaceAll("[^a-zA-Z0-9]", ""));
+              am.put(MetadataField.FIELD_ISBN, MARC_isbn.replaceAll("[^a-zA-Z0-9]", ""));
             }
           } else if (MARC_isbn_alt != null) {
             if (MARC_isbn_alt.contains(",")) {
-              log.debug3("MARC_isbn_alt:" + MARC_isbn_alt.substring(0,MARC_isbn_alt.indexOf(",")-1).replace(",","").trim());
-              am.put(MetadataField.FIELD_ISBN, MARC_isbn_alt.substring(0,MARC_isbn_alt.indexOf(",")-1).replace(",","").trim().trim());
+              log.debug3("MARC_isbn_alt:" + MARC_isbn_alt.substring(0,MARC_isbn_alt.indexOf(",")-1).replaceAll("[^a-zA-Z0-9]", ""));
+              am.put(MetadataField.FIELD_ISBN, MARC_isbn_alt.substring(0,MARC_isbn_alt.indexOf(",")-1).replaceAll("[^a-zA-Z0-9]", ""));
             } else {
-              log.debug3("MARC_isbn_alt:" + MARC_isbn_alt.trim());
-              am.put(MetadataField.FIELD_ISBN, MARC_isbn_alt.trim());
+              log.debug3("MARC_isbn_alt:" + MARC_isbn_alt.replaceAll("[^a-zA-Z0-9]", ""));
+              am.put(MetadataField.FIELD_ISBN, MARC_isbn_alt.replaceAll("[^a-zA-Z0-9]", ""));
             }
           }  else if (MARC_isbn_alt2 != null) {
             if (MARC_isbn_alt2.contains(",")) {
-              log.debug3("MARC_isbn_alt2:" + MARC_isbn_alt2.substring(0,MARC_isbn_alt2.indexOf(",")-1).replace(",","").trim());
-              am.put(MetadataField.FIELD_ISBN, MARC_isbn_alt2.substring(0,MARC_isbn_alt2.indexOf(",")-1).replace(",","").trim());
+              log.debug3("MARC_isbn_alt2:" + MARC_isbn_alt2.substring(0,MARC_isbn_alt2.indexOf(",")-1).replaceAll("[^a-zA-Z0-9]", ""));
+              am.put(MetadataField.FIELD_ISBN, MARC_isbn_alt2.substring(0,MARC_isbn_alt2.indexOf(",")-1).replaceAll("[^a-zA-Z0-9]", ""));
             } else {
-              log.debug3("MARC_isbn_alt2:" + MARC_isbn_alt2.trim());
-              am.put(MetadataField.FIELD_ISBN, MARC_isbn_alt2.trim());
+              log.debug3("MARC_isbn_alt2:" + MARC_isbn_alt2.trim().replaceAll("[^a-zA-Z0-9]", ""));
+              am.put(MetadataField.FIELD_ISBN, MARC_isbn_alt2.trim().replaceAll("[^a-zA-Z0-9]", ""));
             }
           }
 
