@@ -149,24 +149,24 @@ public class MarcRecordMetadataHelper implements FileMetadataExtractor {
           // Set ISBN
           if (MARC_isbn != null) {
             if (MARC_isbn.contains(",")) {
-              log.debug3("MARC_isbn:" + MARC_isbn.substring(0,MARC_isbn.indexOf(",")).trim());
-              am.put(MetadataField.FIELD_ISBN, MARC_isbn.substring(0,MARC_isbn.indexOf(",")).trim());
+              log.debug3("MARC_isbn:" + MARC_isbn.substring(0,MARC_isbn.indexOf(",")-1).trim());
+              am.put(MetadataField.FIELD_ISBN, MARC_isbn.substring(0,MARC_isbn.indexOf(",")-1).trim());
             } else {
               log.debug3("MARC_isbn:" + MARC_isbn.trim());
               am.put(MetadataField.FIELD_ISBN, MARC_isbn.trim());
             }
           } else if (MARC_isbn_alt != null) {
             if (MARC_isbn_alt.contains(",")) {
-              log.debug3("MARC_isbn_alt:" + MARC_isbn_alt.substring(0,MARC_isbn_alt.indexOf(",")).trim());
-              am.put(MetadataField.FIELD_ISBN, MARC_isbn_alt.substring(0,MARC_isbn_alt.indexOf(",")).trim().trim());
+              log.debug3("MARC_isbn_alt:" + MARC_isbn_alt.substring(0,MARC_isbn_alt.indexOf(",")-1).trim());
+              am.put(MetadataField.FIELD_ISBN, MARC_isbn_alt.substring(0,MARC_isbn_alt.indexOf(",")-1).trim().trim());
             } else {
               log.debug3("MARC_isbn_alt:" + MARC_isbn_alt.trim());
               am.put(MetadataField.FIELD_ISBN, MARC_isbn_alt.trim());
             }
           }  else if (MARC_isbn_alt2 != null) {
             if (MARC_isbn_alt2.contains(",")) {
-              log.debug3("MARC_isbn_alt2:" + MARC_isbn_alt2.substring(0,MARC_isbn_alt2.indexOf(",")).trim());
-              am.put(MetadataField.FIELD_ISBN, MARC_isbn_alt2.substring(0,MARC_isbn_alt2.indexOf(",")).trim());
+              log.debug3("MARC_isbn_alt2:" + MARC_isbn_alt2.substring(0,MARC_isbn_alt2.indexOf(",")-1).trim());
+              am.put(MetadataField.FIELD_ISBN, MARC_isbn_alt2.substring(0,MARC_isbn_alt2.indexOf(",")-1).trim());
             } else {
               log.debug3("MARC_isbn_alt2:" + MARC_isbn_alt2.trim());
               am.put(MetadataField.FIELD_ISBN, MARC_isbn_alt2.trim());
