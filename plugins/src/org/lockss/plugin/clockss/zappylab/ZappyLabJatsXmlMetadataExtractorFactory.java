@@ -61,7 +61,7 @@ public class ZappyLabJatsXmlMetadataExtractorFactory extends SourceXmlMetadataEx
 
   private static SourceXmlSchemaHelper JatsPublishingHelper = null;
 
-  private static Pattern PLOS_DOI_PAT = Pattern.compile("((^https://)?dx\\.doi\\.org/)(10\\.[\\d]{4,}/.*)", Pattern.CASE_INSENSITIVE);
+  private static Pattern PLOS_DOI_PAT = Pattern.compile("((^https?://)?dx\\.doi\\.org)?(/?10\\.[\\d]{4,}/.*)", Pattern.CASE_INSENSITIVE);
   private static final String DOI_REPL = "$3";
 
   private static String normalisePlosDoi(String doi) {
