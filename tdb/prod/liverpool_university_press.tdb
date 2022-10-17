@@ -71,7 +71,7 @@
     au < released ; 2018 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 14 ; 14 >
     au < released ; 2019 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 15 ; 15 >
     au < released ; 2020 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 16 ; 16 >
-    au < exists ; 2021 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 17 ; 17 >
+    au < manifest ; 2021 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 17 ; 17 >
 
   }
 
@@ -607,7 +607,7 @@
     param[journal_id] = gncs
     #jounral_num = 111
 
-    au < exists ; 2022 ; Global Nineteenth-Century Studies Volume 1 ; 1 >
+    au < manifest ; 2022 ; Global Nineteenth-Century Studies Volume 1 ; 1 >
 
   }
 
@@ -776,7 +776,7 @@
     au < doNotProcess ; 2016 ; Hunter Gatherer Research Volume 2 ; 2 >
     au < doNotProcess ; 2017 ; Hunter Gatherer Research Volume 3 ; 3 >
     au < released ; 2018 ; Hunter Gatherer Research Volume 4 ; 4 >
-    au < exists ; 2019 ; Hunter Gatherer Research Volume 5 ; 5 >
+    au < manifest ; 2019 ; Hunter Gatherer Research Volume 5 ; 5 >
 
     }
 
@@ -881,7 +881,7 @@
     param[journal_id] = jrns
     #jounral_num = 115
 
-    au < exists ; 2022 ; Journal of Romanian Studies Volume 4 ; 4 >
+    au < manifest ; 2022 ; Journal of Romanian Studies Volume 4 ; 4 >
 
   }
 
@@ -1428,10 +1428,10 @@
     au < doNotProcess ; 2015 ; Newsletter of the Gypsy Lore Society Volume 38 ; 38 >
     au < doNotProcess ; 2016 ; Newsletter of the Gypsy Lore Society Volume 39 ; 39 >
     au < doNotProcess ; 2017 ; Newsletter of the Gypsy Lore Society Volume 40 ; 40 >
-    au < exists ; 2018 ; Newsletter of the Gypsy Lore Society Volume 41 ; 41 >
-    au < exists ; 2019 ; Newsletter of the Gypsy Lore Society Volume 42 ; 42 >
-    au < exists ; 2020 ; Newsletter of the Gypsy Lore Society Volume 43 ; 43 >
-    au < exists ; 2021 ; Newsletter of the Gypsy Lore Society Volume 44 ; 44 >
+    au < manifest ; 2018 ; Newsletter of the Gypsy Lore Society Volume 41 ; 41 >
+    au < manifest ; 2019 ; Newsletter of the Gypsy Lore Society Volume 42 ; 42 >
+    au < manifest ; 2020 ; Newsletter of the Gypsy Lore Society Volume 43 ; 43 >
+    au < manifest ; 2021 ; Newsletter of the Gypsy Lore Society Volume 44 ; 44 >
     au < expected ; 2022 ; Newsletter of the Gypsy Lore Society Volume 45 ; 45 >
 
   }
@@ -1880,10 +1880,10 @@
     param[journal_id] = tsesa
     #jounral_num = 116
 
-    au < exists ; 2017 ; TS Eliot Studies Annual Volume 1 ; 1 >
-    au < exists ; 2018 ; TS Eliot Studies Annual Volume 2 ; 2 >
-    au < exists ; 2021 ; TS Eliot Studies Annual Volume 3 ; 3 >
-    au < exists ; 2022 ; TS Eliot Studies Annual Volume 4 ; 4 >
+    au < manifest ; 2017 ; TS Eliot Studies Annual Volume 1 ; 1 >
+    au < manifest ; 2018 ; TS Eliot Studies Annual Volume 2 ; 2 >
+    au < manifest ; 2021 ; TS Eliot Studies Annual Volume 3 ; 3 >
+    au < manifest ; 2022 ; TS Eliot Studies Annual Volume 4 ; 4 >
 
   }
 
