@@ -1417,7 +1417,7 @@
     au < manifest ; exists ; 1995 ; Campus-Wide Information Systems Volume 12 ; 12 ; >
     au < manifest ; exists ; 1996 ; Campus-Wide Information Systems Volume 13 ; 13 ; >
     au < ready ; exists ; 1997 ; Campus-Wide Information Systems Volume 14 ; 14 ; >
-    au < ready ; exists ; 1998 ; Campus-Wide Information Systems Volume 15 ; 15 ; >
+    au < crawling ; exists ; 1998 ; Campus-Wide Information Systems Volume 15 ; 15 ; >
     au < frozen ; exists ; 1999 ; Campus-Wide Information Systems Volume 16 ; 16 ; >
     au < frozen ; exists ; 2000 ; Campus-Wide Information Systems Volume 17 ; 17 ; >
     au < finished ; crawling ; 2001 ; Campus-Wide Information Systems Volume 18 ; 18 ; reingest3.clockss.org:8083 >
@@ -1595,7 +1595,7 @@
     au < manifest ; exists ; 1995 ; Circuit World Volume 21 ; 21 ; >
     au < manifest ; exists ; 1996 ; Circuit World Volume 22 ; 22 ; >
     au < manifest ; exists ; 1997 ; Circuit World Volume 23 ; 23 ; >
-    au < ready ; exists ; 1998 ; Circuit World Volume 24 ; 24 ; >
+    au < crawling ; exists ; 1998 ; Circuit World Volume 24 ; 24 ; >
     au < frozen ; exists ; 1999 ; Circuit World Volume 25 ; 25 ; >
     au < frozen ; exists ; 2000 ; Circuit World Volume 26 ; 26 ; >
     au < frozen ; exists ; 2001 ; Circuit World Volume 27 ; 27 ; >
@@ -2019,7 +2019,7 @@
     au < manifest ; exists ; 1994 ; Cross Cultural Management: An International Journal Volume 1 ; 1 ; >
     au < manifest ; exists ; 1995 ; Cross Cultural Management: An International Journal Volume 2 ; 2 ; >
     au < manifest ; exists ; 1996 ; Cross Cultural Management: An International Journal Volume 3 ; 3 ; >
-    au < ready ; exists ; 1997 ; Cross Cultural Management: An International Journal Volume 4 ; 4 ; >
+    au < crawling ; exists ; 1997 ; Cross Cultural Management: An International Journal Volume 4 ; 4 ; >
     au < frozen ; exists ; 1998 ; Cross Cultural Management: An International Journal Volume 5 ; 5 ; >
     au < ready ; exists ; 1999 ; Cross Cultural Management: An International Journal Volume 6 ; 6 ; >
     au < frozen ; exists ; 2000 ; Cross Cultural Management: An International Journal Volume 7 ; 7 ; >
@@ -2563,7 +2563,7 @@
     au < finished ; crawling ; 1996 ; Environmental Management and Health Volume 7 ; 7 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 1997 ; Environmental Management and Health Volume 8 ; 8 ; >
     au < ready ; exists ; 1998 ; Environmental Management and Health Volume 9 ; 9 ; >
-    au < ready ; exists ; 1999 ; Environmental Management and Health Volume 10 ; 10 ; >
+    au < crawling ; exists ; 1999 ; Environmental Management and Health Volume 10 ; 10 ; >
     au < finished ; crawling ; 2000 ; Environmental Management and Health Volume 11 ; 11 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2001 ; Environmental Management and Health Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2002 ; Environmental Management and Health Volume 13 ; 13 ; >
@@ -5219,7 +5219,7 @@
     au < manifest ; exists ; 1994 ; International Journal of Organizational Analysis Volume 2 ; 2 ; >
     au < manifest ; exists ; 1995 ; International Journal of Organizational Analysis Volume 3 ; 3 ; >
     au < manifest ; exists ; 1996 ; International Journal of Organizational Analysis Volume 4 ; 4 ; >
-    au < ready ; exists ; 1997 ; International Journal of Organizational Analysis Volume 5 ; 5 ; >
+    au < crawling ; exists ; 1997 ; International Journal of Organizational Analysis Volume 5 ; 5 ; >
     au < ready ; exists ; 1998 ; International Journal of Organizational Analysis Volume 6 ; 6 ; >
     au < frozen ; exists ; 1999 ; International Journal of Organizational Analysis Volume 7 ; 7 ; >
     au < frozen ; exists ; 2000 ; International Journal of Organizational Analysis Volume 8 ; 8 ; >
@@ -6108,7 +6108,7 @@
     au < manifest ; exists ; 1996 ; Internet Research Volume 6 ; 6 ; >
     au < frozen ; exists ; 1997 ; Internet Research Volume 7 ; 7 ; >
     au < ready ; exists ; 1998 ; Internet Research Volume 8 ; 8 ; >
-    au < ready ; exists ; 1999 ; Internet Research Volume 9 ; 9 ; >
+    au < crawling ; exists ; 1999 ; Internet Research Volume 9 ; 9 ; >
     au < frozen ; exists ; 2000 ; Internet Research Volume 10 ; 10 ; >
     au < frozen ; exists ; 2001 ; Internet Research Volume 11 ; 11 ; >
     au < frozen ; exists ; 2002 ; Internet Research Volume 12 ; 12 ; >
@@ -7414,7 +7414,7 @@
     au < manifest ; exists ; 1994 ; Journal of Financial Crime Volume 1 ; 1 ; >
     au < manifest ; exists ; 1995 ; Journal of Financial Crime Volume 2 ; 2 ; >
     au < manifest ; exists ; 1996 ; Journal of Financial Crime Volume 3 ; 3 ; >
-    au < ready ; exists ; 1997 ; Journal of Financial Crime Volume 4 ; 4 ; >
+    au < crawling ; exists ; 1997 ; Journal of Financial Crime Volume 4 ; 4 ; >
     au < ready ; exists ; 1998 ; Journal of Financial Crime Volume 5 ; 5 ; >
     au < ready ; exists ; 1999 ; Journal of Financial Crime Volume 6 ; 6 ; >
     au < frozen ; exists ; 2000 ; Journal of Financial Crime Volume 7 ; 7 ; >
@@ -7967,7 +7967,7 @@
     param[journal_issn] = 1528-5812
     comment[journal_id] = joic
 
-    au < ready ; exists ; 2001 ; Journal of Investment Compliance Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2001 ; Journal of Investment Compliance Volume 1 ; 1 ; >
     au < frozen ; exists ; 2002 ; Journal of Investment Compliance Volume 2 ; 2 ; >
     au < frozen ; exists ; 2003 ; Journal of Investment Compliance Volume 3 ; 3 ; >
     au < frozen ; exists ; 2004 ; Journal of Investment Compliance Volume 4 ; 4 ; >
@@ -9349,7 +9349,7 @@
     comment[journal_id] = lhsv
     #continued_by = 1751-1879
 
-    au < ready ; exists ; 1997 ; Leadership in Health Services Volume 10 ; 10 ; >
+    au < crawling ; exists ; 1997 ; Leadership in Health Services Volume 10 ; 10 ; >
     au < frozen ; exists ; 1998 ; Leadership in Health Services Volume 11 ; 11 ; >
     au < frozen ; exists ; 1999 ; Leadership in Health Services Volume 12 ; 12 ; >
     au < frozen ; exists ; 2000 ; Leadership in Health Services Volume 13 ; 13 ; >
@@ -9501,7 +9501,7 @@
     au < manifest ; exists ; 1996 ; Library Hi Tech Volume 14 ; 14 ; >
     au < ready ; exists ; 1997 ; Library Hi Tech Volume 15 ; 15 ; >
     au < ready ; exists ; 1998 ; Library Hi Tech Volume 16 ; 16 ; >
-    au < ready ; exists ; 1999 ; Library Hi Tech Volume 17 ; 17 ; >
+    au < crawling ; exists ; 1999 ; Library Hi Tech Volume 17 ; 17 ; >
     au < frozen ; exists ; 2000 ; Library Hi Tech Volume 18 ; 18 ; >
     au < frozen ; exists ; 2001 ; Library Hi Tech Volume 19 ; 19 ; >
     au < frozen ; exists ; 2002 ; Library Hi Tech Volume 20 ; 20 ; >
@@ -9813,7 +9813,7 @@
     au < frozen ; exists ; 1998 ; Management Decision Volume 36 ; 36 ; >
     au < ready ; exists ; 1999 ; Management Decision Volume 37 ; 37 ; >
     au < frozen ; exists ; 2000 ; Management Decision Volume 38 ; 38 ; >
-    au < ready ; exists ; 2001 ; Management Decision Volume 39 ; 39 ; >
+    au < crawling ; exists ; 2001 ; Management Decision Volume 39 ; 39 ; >
     au < frozen ; exists ; 2002 ; Management Decision Volume 40 ; 40 ; >
     au < frozen ; exists ; 2003 ; Management Decision Volume 41 ; 41 ; >
     au < doNotProcess ; doNotProcess ; 2004 ; Management Decision Volume 42 ; 42 ; >
@@ -11387,7 +11387,7 @@
     au < ready ; exists ; 1998 ; Program: Electronic Library and Information Systems Volume 32 ; 32 ; >
     au < frozen ; exists ; 1999 ; Program: Electronic Library and Information Systems Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2000 ; Program: Electronic Library and Information Systems Volume 34 ; 34 ; >
-    au < ready ; exists ; 2001 ; Program: Electronic Library and Information Systems Volume 35 ; 35 ; >
+    au < crawling ; exists ; 2001 ; Program: Electronic Library and Information Systems Volume 35 ; 35 ; >
     au < frozen ; exists ; 2002 ; Program: Electronic Library and Information Systems Volume 36 ; 36 ; >
     au < frozen ; exists ; 2003 ; Program: Electronic Library and Information Systems Volume 37 ; 37 ; >
     au < frozen ; exists ; 2004 ; Program: Electronic Library and Information Systems Volume 38 ; 38 ; >
@@ -11451,7 +11451,7 @@
     au < manifest ; exists ; 1995 ; Property Management Volume 13 ; 13 ; >
     au < manifest ; exists ; 1996 ; Property Management Volume 14 ; 14 ; >
     au < manifest ; exists ; 1997 ; Property Management Volume 15 ; 15 ; >
-    au < ready ; exists ; 1998 ; Property Management Volume 16 ; 16 ; >
+    au < crawling ; exists ; 1998 ; Property Management Volume 16 ; 16 ; >
     au < frozen ; exists ; 1999 ; Property Management Volume 17 ; 17 ; >
     au < frozen ; exists ; 2000 ; Property Management Volume 18 ; 18 ; >
     au < frozen ; exists ; 2001 ; Property Management Volume 19 ; 19 ; >
@@ -12634,7 +12634,7 @@
     comment[journal_id] = scm
 
     au < manifest ; exists ; 1996 ; Supply Chain Management: An International Journal Volume 1 ; 1 ; >
-    au < ready ; exists ; 1997 ; Supply Chain Management: An International Journal Volume 2 ; 2 ; >
+    au < crawling ; exists ; 1997 ; Supply Chain Management: An International Journal Volume 2 ; 2 ; >
     au < frozen ; exists ; 1998 ; Supply Chain Management: An International Journal Volume 3 ; 3 ; >
     au < frozen ; exists ; 1999 ; Supply Chain Management: An International Journal Volume 4 ; 4 ; >
     au < frozen ; exists ; 2000 ; Supply Chain Management: An International Journal Volume 5 ; 5 ; >
@@ -13104,7 +13104,7 @@
     au < manifest ; exists ; 1994 ; Women in Management Review Volume 9 ; 9 ; >
     au < manifest ; exists ; 1995 ; Women in Management Review Volume 10 ; 10 ; >
     au < manifest ; exists ; 1996 ; Women in Management Review Volume 11 ; 11 ; >
-    au < ready ; exists ; 1997 ; Women in Management Review Volume 12 ; 12 ; >
+    au < crawling ; exists ; 1997 ; Women in Management Review Volume 12 ; 12 ; >
     au < frozen ; exists ; 1998 ; Women in Management Review Volume 13 ; 13 ; >
     au < frozen ; exists ; 1999 ; Women in Management Review Volume 14 ; 14 ; >
     au < frozen ; exists ; 2000 ; Women in Management Review Volume 15 ; 15 ; >
@@ -13662,7 +13662,7 @@
     au < frozen ; exists ; 2015 ; International Journal of Intelligent Unmanned Systems Volume 3 ; 3 ; >
     au < ready ; exists ; 2016 ; International Journal of Intelligent Unmanned Systems Volume 4 ; 4 ; >
     au < ready ; exists ; 2017 ; International Journal of Intelligent Unmanned Systems Volume 5 ; 5 ; >
-    au < ready ; exists ; 2018 ; International Journal of Intelligent Unmanned Systems Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2018 ; International Journal of Intelligent Unmanned Systems Volume 6 ; 6 ; >
     au < frozen ; exists ; 2019 ; International Journal of Intelligent Unmanned Systems Volume 7 ; 7 ; >
     au < frozen ; exists ; 2020 ; International Journal of Intelligent Unmanned Systems Volume 8 ; 8 ; >
     au < ready ; exists ; 2021 ; International Journal of Intelligent Unmanned Systems Volume 9 ; 9 ; >
@@ -14173,7 +14173,7 @@
     au < frozen ; exists ; 2007 ; Research Journal of Textile and Apparel Volume 11 ; 11 ; >
     au < frozen ; exists ; 2008 ; Research Journal of Textile and Apparel Volume 12 ; 12 ; >
     au < frozen ; exists ; 2009 ; Research Journal of Textile and Apparel Volume 13 ; 13 ; >
-    au < ready ; exists ; 2010 ; Research Journal of Textile and Apparel Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2010 ; Research Journal of Textile and Apparel Volume 14 ; 14 ; >
     au < frozen ; exists ; 2011 ; Research Journal of Textile and Apparel Volume 15 ; 15 ; >
     au < frozen ; exists ; 2012 ; Research Journal of Textile and Apparel Volume 16 ; 16 ; >
     au < frozen ; exists ; 2013 ; Research Journal of Textile and Apparel Volume 17 ; 17 ; >
@@ -14250,7 +14250,7 @@
     param[journal_issn] = 2050-8794
 
     au < frozen ; exists ; 2013 ; The Journal of Forensic Practice Volume 15 ; 15 ; >
-    au < ready ; exists ; 2014 ; The Journal of Forensic Practice Volume 16 ; 16 ; >
+    au < crawling ; exists ; 2014 ; The Journal of Forensic Practice Volume 16 ; 16 ; >
     au < frozen ; exists ; 2015 ; The Journal of Forensic Practice Volume 17 ; 17 ; >
     au < frozen ; exists ; 2016 ; The Journal of Forensic Practice Volume 18 ; 18 ; >
     au < frozen ; exists ; 2017 ; The Journal of Forensic Practice Volume 19 ; 19 ; >
