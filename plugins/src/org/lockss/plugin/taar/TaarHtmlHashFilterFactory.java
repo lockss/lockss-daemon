@@ -71,6 +71,8 @@ public class TaarHtmlHashFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttributeRegex("aside", "class", "article-aside"),
       HtmlNodeFilters.tagWithAttributeRegex("a", "href", "(component/mailto|cdn-cgi/l/email-protection)"),
       HtmlNodeFilters.tagWithAttributeRegex("a", "rel", "lightbox-text_"),
+      // <span id="cloak958367ebb175a015ba3f846f81eddef9">This email address is being protected from spambots. You need JavaScript enabled to view it.</span>
+      HtmlNodeFilters.tagWithAttributeRegex("span", "id", "^cloak[0-Z]*"),
   };
 
 
