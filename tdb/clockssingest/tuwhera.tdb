@@ -216,10 +216,10 @@
       ### https://interstices.ac.nz/index.php/Interstices/gateway/lockss?year=2016
       ### all redirect to 1992.
 
-      au < crawling ; exists ; 1990 ; Interstices Volume 1 ; 1 ; 1990 ; >
-      au < crawling ; exists ; 1992 ; Interstices Volume 2 ; 2 ; 1992 ; >
-      au < crawling ; exists ; 1995 ; Interstices Volume 3 ; 3 ; 1995 ; >
-      au < crawling ; exists ; 1996 ; Interstices Volume 4 ; 4 ; 1996 ; >
+      au < frozen ; exists ; 1990 ; Interstices Volume 1 ; 1 ; 1990 ; >
+      au < frozen ; exists ; 1992 ; Interstices Volume 2 ; 2 ; 1992 ; >
+      au < frozen ; exists ; 1995 ; Interstices Volume 3 ; 3 ; 1995 ; >
+      au < frozen ; exists ; 1996 ; Interstices Volume 4 ; 4 ; 1996 ; >
       au < frozen ; exists ; 2000 ; Interstices Volume 5 ; 5 ; 2000 ; >
       au < frozen ; exists ; 2005 ; Interstices Volume 6 ; 6 ; 2005 ; >
       au < frozen ; exists ; 2006 ; Interstices Volume 7 ; 7 ; 2006 ; >
