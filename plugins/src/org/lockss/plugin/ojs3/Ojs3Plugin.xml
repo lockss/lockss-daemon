@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>31</string>
+    <string>32</string>
   </entry>
    <entry>
     <string>plugin_name</string>
@@ -62,7 +62,7 @@ POSSIBILITY OF SUCH DAMAGE.
         <!--  index.php or journals/index.php are an optional attr so allow but do not require -->
         <!-- Some publisher using "ojs" instead of journal_id in start_url -->
         <!-- https://www.combinatorics.org/ojs/index.php/eljc/gateway/lockss?year=2018-->
-      <string>1,"^(%s|%s)(%s/)?(ojs/)?(journals/)?(index\.php/)?(%s/)?gateway/c?lockss\?year=%d$", to_http(base_url),to_https(base_url),journal_id,journal_id, year</string>
+      <string>1,"^(%s|%s)(%s/)?(ojs/)?(journals/)?(index\.php/)?(%s/)?gateway/c?lockss\?year=%d$", to_http(base_url), to_https(base_url),journal_id,journal_id, year</string>
       <string>2,"\?acceptCookies="</string>
       <!--  intentionally https only -->
         <!--
@@ -294,7 +294,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>au_url_poll_result_weight</string>
     <list>
       <string>"/(plugins/(generic|themes)|lib/pkp|public/journals)/.+[.](css|eot|gif|png|jpe?g|js|svg|ttf|woff)([?]((itok|v)=)?[^&amp;]+)?$", 0</string>
-      <string>"/pdfJsViewer/pdf.js/web/viewer.html/.+[?]file=.+$", 0</string>
+      <string>"/pdfJsViewer/pdf.js/web/viewer.html.*[?]file=.+$", 0</string>
     </list>
   </entry>
 </map>

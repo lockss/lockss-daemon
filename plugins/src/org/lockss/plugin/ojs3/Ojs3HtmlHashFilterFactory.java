@@ -32,33 +32,22 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.ojs3;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-
-//import java.io.FileInputStream;
-//import java.io.FileOutputStream;
-//import org.apache.commons.io.IOUtils;
-
 import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.Tag;
 import org.htmlparser.Text;
 import org.htmlparser.filters.OrFilter;
-import org.htmlparser.nodes.TextNode;
 import org.htmlparser.tags.*;
-import org.htmlparser.util.NodeList;
-import org.htmlparser.util.ParserException;
-import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.FilterFactory;
-import org.lockss.util.Constants;
 import org.lockss.util.Logger;
 import org.lockss.util.ReaderInputStream;
 
@@ -76,6 +65,10 @@ public class Ojs3HtmlHashFilterFactory implements FilterFactory {
   // [cited 2022May18]
   public static final Pattern VANCOUVER_CIT_PATTERN =
       Pattern.compile("\\[cited \\d\\d\\d\\d\\s?[a-z]+\\.?\\s?\\d\\d?\\s?]", Pattern.CASE_INSENSITIVE);
+  // [citado 21 de mayo de 2022]
+  // [citado 17 de octubre de 2022]
+  public static final Pattern ESPANOL_VANCOUVER_CIT_PATTERN =
+      Pattern.compile("\\[citado \\d\\d?\\s?([a-z]+\\s?)+\\d\\d\\d\\d\\s?]", Pattern.CASE_INSENSITIVE);
   // Accessed May 18, 2022.
   public static final Pattern TURABIAN_CIT_PATTERN =
       Pattern.compile("Accessed [a-z]+\\.? \\d\\d?, \\d\\d\\d\\d", Pattern.CASE_INSENSITIVE);
@@ -85,6 +78,9 @@ public class Ojs3HtmlHashFilterFactory implements FilterFactory {
   // Acesso em: 19 may. 2022.
   public static final Pattern ASSOCIACAO_BRAZILEIRA_DE_NORMAS_TECNICAS_PATTERN =
       Pattern.compile("Acesso em: \\d\\d?\\s?[a-z]+\\.?\\s?\\d\\d\\d\\d", Pattern.CASE_INSENSITIVE);
+  // Accedido mayo 21, 2022.
+  public static final Pattern ESPANOL_CIT_PATTERN =
+      Pattern.compile("Accedido [a-z]+\\s?\\d\\d?,\\s?\\d\\d\\d\\d\\.", Pattern.CASE_INSENSITIVE);
 
   private static final NodeFilter[] includeNodes = new NodeFilter[] {
     // manifest page
@@ -97,16 +93,21 @@ public class Ojs3HtmlHashFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttribute("article", "class", "article-details"),
     // pdf landing page - just get the header with title and link information
     HtmlNodeFilters.tagWithAttribute("header", "class", "header_view"),
+    // content of article on article html view
+    HtmlNodeFilters.tagWithAttribute("div", "class", "content col-md-9"),
     // article page, https://journals.vgtu.lt/index.php/BME/article/view/10292
     HtmlNodeFilters.tagWithAttribute("h2", "class", "headings"),
     HtmlNodeFilters.tagWithAttribute("div", "class", "authors"),
     HtmlNodeFilters.tagWithAttribute("div", "id", "article_tab"),
+    // spanish language articles
+    HtmlNodeFilters.tagWithAttribute("div", "id", "articulo"),
     // article page: https://www.clei.org/cleiej/index.php/cleiej/article/view/202
     HtmlNodeFilters.tagWithAttribute("div", "class", "main_entry"),
     // https://mapress.com/jib/article/view/2018.07.1.1
     HtmlNodeFilters.tagWithAttribute("div", "id", "jatsParserFullText"),
     // article page: 	https://haematologica.org/article/view/10276
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-container"),
+    HtmlNodeFilters.tagWithAttribute("div", "class", "panel content document"),
     // issue page: https://haematologica.org/issue/view/377
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "one-article-intoc"),
 
@@ -117,20 +118,40 @@ public class Ojs3HtmlHashFilterFactory implements FilterFactory {
      * additionally, it searches children nodes of this div for common citation date accessed patterns
      * and removes them.
      */
-    new NodeFilter() {
-      @Override public boolean accept(Node node) {
+      new NodeFilter() {
+        @Override public boolean accept(Node node) {
 
-        if (node instanceof Div) {
-          String className = ((Div) node).getAttribute("class");
-          if (className != null && className.equals(CIT_ENTRY_CLASS)) {
-            recurseCslNodes(node);
-            // if no transform was made, still accept the node
-            return true;
+          if (node instanceof Div) {
+            String className = ((Div) node).getAttribute("class");
+            if (className != null && className.equals(CIT_ENTRY_CLASS)) {
+              recurseCslNodes(node);
+              // if no transform was made, still accept the node
+              return true;
+            }
           }
+          return false;
         }
-        return false;
-      }
-    },
+      },
+      /*
+      the print html pages are have basic html elements. this pattern should id most of them.
+       */
+      new NodeFilter() {
+        @Override public boolean accept(Node node) {
+          if (node instanceof BodyTag) {
+            Node child = node.getFirstChild();
+            if (child instanceof Tag) {
+              if (((Tag) child).getTagName().equals("BLOCKQUOTE")) {
+                return true;
+              }
+            } else if (child instanceof Text) {
+              if (child.toPlainTextString().matches("\\s*\\[1](\\s|.)*")) {
+                return true;
+              }
+            }
+          }
+          return false;
+        }
+      },
   };
 
   private static void recurseCslNodes(Node node) {
@@ -146,9 +167,11 @@ public class Ojs3HtmlHashFilterFactory implements FilterFactory {
     String allText = node.getText();
     ArrayList<Pattern> citPats = new ArrayList<>();
     citPats.add(VANCOUVER_CIT_PATTERN);
+    citPats.add(ESPANOL_VANCOUVER_CIT_PATTERN);
     citPats.add(ASSOCIACAO_BRAZILEIRA_DE_NORMAS_TECNICAS_PATTERN);
     citPats.add(HARVARD_CIT_PATTERN);
     citPats.add(TURABIAN_CIT_PATTERN);
+    citPats.add(ESPANOL_CIT_PATTERN);
     Matcher mat;
     for (Pattern citPat : citPats) {
       mat = citPat.matcher(allText);
@@ -159,17 +182,49 @@ public class Ojs3HtmlHashFilterFactory implements FilterFactory {
     }
   }
 
-  private static final NodeFilter[] includeNodes2 = new NodeFilter[] {};
-
   private static final NodeFilter[] excludeNodes = new NodeFilter[] {
       // on the article landing page - remove the bottom stuff
       HtmlNodeFilters.tagWithAttribute("section","class","article-more-details"),
       HtmlNodeFilters.tag("script"),
       HtmlNodeFilters.tag("noscript"),
+      // powered by ... bit
+      HtmlNodeFilters.tagWithAttribute("div", "id", "creditos"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "downloads_chart"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article_statistic"),
+      /*
+      want to remove this whole bit from this url https://revistas.udea.edu.co/index.php/lecturasdeeconomia/article/view/342002
+      <div style="padding-left: 4%;">
+      |Resumen <div class="fa fa-eye"></div> = <b>5729</b> veces
+       |
+      PDF <div class="fa fa-eye"></div> = <b>2414</b> veces|
+       |
+      XML <div class="fa fa-eye"></div> = <b>306</b> veces|
+       |
+      HTML <div class="fa fa-eye"></div> = <b>42</b> veces|
+      </div>
+       */
+      new NodeFilter() {
+        @Override public boolean accept(Node node) {
+
+          if (node instanceof Div) {
+            String classattr = ((Div) node).getAttribute("class");
+            if (classattr == null) {
+              Node[] children = ((Div) node).getChildrenAsNodeArray();
+              for (Node child: children) {
+                if (child instanceof Div) {
+                  String childClass = ((Div) child).getAttribute("class");
+                  if (childClass != null && childClass.contains("eye")) {
+                    return true;
+                  }
+                }
+              }
+            }
+          }
+          return false;
+        }
+      },
   };
 
-  private static final NodeFilter[] excludeNodes2 = new NodeFilter[] {};
- 
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,

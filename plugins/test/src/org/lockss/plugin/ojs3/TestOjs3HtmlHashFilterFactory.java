@@ -70,6 +70,67 @@ public class TestOjs3HtmlHashFilterFactory  extends LockssTestCase {
       "The genus <em>Mahanarva</em> Distant, 1909 (Hemiptera: Cercopoidea: Cercopidae) currently includes two subgenera: <em>Mahanarva</em> Distant, 1909 with 38 species and six subspecies, and <em>Ipiranga</em> Fennah, 1968 with nine species. The <em>Manaharva</em> species are all from the Americas, and a few species are important pests in pasture grasses and sugarcane. There are no reports of any <em>Manaharva</em> species from North America, including Mexico and areas to the north. Here, a new species is described from Mexico and a key to the species of <em>Mahanarva</em><strong> </strong>from Central America and Mexico is proposed." +
     "</div>";
 
+  private static final String articleWithStats =
+    "<div class=\"main_entry\">" +
+      "<h1>Artcle Title</h1>" +
+      "<div style=\"padding-left: 4%;\">\n" +
+        "|Resumen <div class=\"fa fa-eye\"></div> = <b>5729</b> veces\n" +
+        "\n" +
+        " |\n" +
+        "PDF <div class=\"fa fa-eye\"></div> = <b>2414</b> veces|\n" +
+        " |\n" +
+        "XML <div class=\"fa fa-eye\"></div> = <b>306</b> veces|\n" +
+        " |\n" +
+        "HTML <div class=\"fa fa-eye\"></div> = <b>42</b> veces|\n" +
+        "\n" +
+      "</div>\n" +
+      "<div class=\"item downloads_chart\">\n" +
+        "<h3 class=\"label\">\n" +
+        "Descargas\n" +
+        "</h3>\n" +
+        "<div class=\"value\">\n" +
+          "\t\t<canvas class=\"usageStatsGraph\" data-object-type=\"Submission\" data-object-id=\"342002\"></canvas>\n" +
+          "\t\t<div class=\"usageStatsUnavailable\" data-object-type=\"Submission\" data-object-id=\"342002\">\n" +
+            "\t\t\tLos datos de descargas todavía no están disponibles.\n" +
+          "</div>\n" +
+        "</div>\n" +
+      "</div>"+
+      "<div class=\"article\">Body of article. Blah blah</div>" +
+    "</div>\n";
+
+  private static final String articleWithoutStats =
+    "<div class=\"main_entry\">" +
+      "<h1>Artcle Title</h1>" +
+      " " +
+      "<div class=\"article\">Body of article. Blah blah</div>" +
+    "</div>";
+
+
+  private static final String bodyBlockQuotes =
+    "<body>" +
+      "<blockquote>" +
+        "<img src=\"https://journals.uic.edu/ojs/index.php/fm/article/download/11557/version/9100/10702/80188/logo.gif\" border=\"1\" alt=\"First Monday\" align=\"bottom\"><br>" +
+      "</blockquote>" +
+      "<blockquote>" +
+        "The article, blah blah" +
+      "</blockquote>" +
+    "</body>";
+
+  private static final String bodyReferences =
+    "<body>" +
+      " [1] W R Ketterhagen, M T am Ende, B C Hancock, Process modeling in the pharmaceutical industry using the discrete element method, J. Pharm. Sci. 98, 442 (2009)." +
+      "<br>" +
+      "<a href=\"https://doi.org/10.1002/jps.21466\" target=\"_blank\">https://doi.org/10.1002/jps.21466</a>" +
+      "<br>" +
+      "<br>" +
+      " [2] P W Cleary, Industrial particle flow modellingusing discrete element method, Eng. Comput. 26, 698 (2009)." +
+      "<br>" +
+      "<a href=\"https://doi.org/10.1108/02644400910975487\" target=\"_blank\">https://doi.org/10.1108/02644400910975487</a>" +
+      "<br>" +
+      "<br>" +
+    "</body>";
+
+/*
   public void testAbdntFiltering() throws Exception {
     assertEquals(getStringfromFilteredInputStream(abdnt), abdntFilt);
   }
@@ -90,6 +151,16 @@ public class TestOjs3HtmlHashFilterFactory  extends LockssTestCase {
   }
   public void testJatsArtFiltering() throws Exception {
     assertEquals(getStringfromFilteredInputStream(jatsArticle), jatsArticleFilt);
+  }
+  */
+  public void testRemoveViewCount() throws Exception {
+    assertEquals(getStringfromFilteredInputStream(articleWithStats), articleWithoutStats);
+  }
+  public void testKeepSparseHtml() throws Exception {
+    assertEquals(getStringfromFilteredInputStream(bodyBlockQuotes), bodyBlockQuotes);
+  }
+  public void testKeepSparseHtml2() throws Exception {
+    assertEquals(getStringfromFilteredInputStream(bodyReferences), bodyReferences);
   }
 
   public String getStringfromFilteredInputStream(String in) throws IOException {
