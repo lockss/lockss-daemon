@@ -34,7 +34,7 @@
     au < manifest ; exists ; 2003 ; Archives Volume 28 ; 28 ; >
     au < manifest ; exists ; 2004 ; Archives Volume 29 ; 29 ; >
     au < manifest ; exists ; 2005 ; Archives Volume 30 ; 30 ; >
-    au < crawling ; exists ; 2005 ; Archives Volume 31 ; 31 ; >
+    au < frozen ; exists ; 2005 ; Archives Volume 31 ; 31 ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 2007 ; Archives Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Archives Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Archives Volume 34 ; 34 ; >
@@ -50,7 +50,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Archives Volume 53 ; 53 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Archives Volume 54 ; 54 ; >
     au < frozen ; exists ; 2020 ; Archives Volume 55 ; 55 ; >
-    au < crawling ; exists ; 2021 ; Archives Volume 56 ; 56 ; >
+    au < frozen ; exists ; 2021 ; Archives Volume 56 ; 56 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; exists ; 2022 ; Archives Volume 57 ; 57 ; >
 
   }
@@ -68,12 +68,12 @@
     #Published 2015-2021
     #jounral_num = 16
 
-    au < crawling ; exists ; 2015 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2016 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2017 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2018 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2015 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 11 ; 11 ; reingest5.clockss.org:8082 >
+    au < frozen ; exists ; 2016 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+    au < frozen ; exists ; 2017 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 13 ; 13 ; reingest2.clockss.org:8085 >
+    au < frozen ; exists ; 2018 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 14 ; 14 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2019 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2020 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2020 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 16 ; 16 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; exists ; 2021 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 17 ; 17 ; >
 
   }
@@ -111,8 +111,8 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Australian Journal of French Studies Volume 54 ; 54 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Australian Journal of French Studies Volume 55 ; 55 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Australian Journal of French Studies Volume 56 ; 56 ; >
-    au < crawling ; exists ; 2020 ; Australian Journal of French Studies Volume 57 ; 57 ; >
-    au < crawling ; exists ; 2021 ; Australian Journal of French Studies Volume 58 ; 58 ; >
+    au < frozen ; exists ; 2020 ; Australian Journal of French Studies Volume 57 ; 57 ; reingest2.clockss.org:8085 >
+    au < frozen ; exists ; 2021 ; Australian Journal of French Studies Volume 58 ; 58 ; reingest5.clockss.org:8082 >
     au < superseded ; exists ; 2022 ; Australian Journal of French Studies Volume 59 [superseded] ; 59 ; >
 
   }
@@ -165,8 +165,8 @@
     au < doNotProcess ; doNotProcess ; 2016 ; British Journal of Canadian Studies Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; British Journal of Canadian Studies Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; British Journal of Canadian Studies Volume 31 ; 31 ; >
-    au < crawling ; exists ; 2020 ; British Journal of Canadian Studies Volume 32 ; 32 ; >
-    au < crawling ; exists ; 2021 ; British Journal of Canadian Studies Volume 33 ; 33 ; >
+    au < frozen ; exists ; 2020 ; British Journal of Canadian Studies Volume 32 ; 32 ; reingest1.clockss.org:8082 >
+    au < frozen ; exists ; 2021 ; British Journal of Canadian Studies Volume 33 ; 33 ; reingest2.clockss.org:8085 >
     au < superseded ; exists ; 2022 ; British Journal of Canadian Studies Volume 34 [superseded] ; 34 ; >
 
   }
@@ -268,8 +268,8 @@
     au < doNotProcess ; doNotProcess ; 2017 ; The Byron Journal Volume 45 ; 45 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; The Byron Journal Volume 46 ; 46 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; The Byron Journal Volume 47 ; 47 ; >
-    au < crawling ; exists ; 2020 ; The Byron Journal Volume 48 ; 48 ; >
-    au < crawling ; exists ; 2021 ; The Byron Journal Volume 49 ; 49 ; >
+    au < frozen ; exists ; 2020 ; The Byron Journal Volume 48 ; 48 ; reingest5.clockss.org:8082 >
+    au < frozen ; exists ; 2021 ; The Byron Journal Volume 49 ; 49 ; reingest1.clockss.org:8082 >
     au < superseded ; exists ; 2022 ; The Byron Journal Volume 50 [superseded] ; 50 ; >
 
   }
@@ -301,9 +301,9 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Comma Volume 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Comma Volume 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Comma Volume 2017 ; 2017 ; >
-    au < crawling ; exists ; 2018 ; Comma Volume 2018 ; 2018 ; >
+    au < frozen ; exists ; 2018 ; Comma Volume 2018 ; 2018 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2019 ; Comma Volume 2019 ; 2019 ; >
-    au < crawling ; exists ; 2020 ; Comma Volume 2020 (2021) ; 2020 ; >
+    au < frozen ; exists ; 2020 ; Comma Volume 2020 (2021) ; 2020 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2022 ; Comma Volume 2022 ; 2022 ; >
 
   }
@@ -341,8 +341,8 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Catalan Review Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Catalan Review Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Catalan Review Volume 33 ; 33 ; >
-    au < crawling ; exists ; 2020 ; Catalan Review Volume 34 ; 34 ; >
-    au < crawling ; exists ; 2021 ; Catalan Review Volume 35 ; 35 ; >
+    au < frozen ; exists ; 2020 ; Catalan Review Volume 34 ; 34 ; reingest1.clockss.org:8082 >
+    au < frozen ; exists ; 2021 ; Catalan Review Volume 35 ; 35 ; reingest2.clockss.org:8085 >
     au < superseded ; exists ; 2022 ; Catalan Review Volume 36 [superseded] ; 36 ; >
 
   }
@@ -418,7 +418,7 @@
 
     au < manifest ; exists ; 1986 ; Eighteenth-Century Ireland Volume 1 ; 1 ; >
     au < manifest ; exists ; 1987 ; Eighteenth-Century Ireland Volume 2 ; 2 ; >
-    au < crawling ; exists ; 1988 ; Eighteenth-Century Ireland Volume 3 ; 3 ; >
+    au < frozen ; exists ; 1988 ; Eighteenth-Century Ireland Volume 3 ; 3 ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 1989 ; Eighteenth-Century Ireland Volume 4 ; 4 ; >
     au < manifest ; exists ; 1990 ; Eighteenth-Century Ireland Volume 5 ; 5 ; >
     au < manifest ; exists ; 1991 ; Eighteenth-Century Ireland Volume 6 ; 6 ; >
@@ -438,21 +438,21 @@
     au < manifest ; exists ; 2005 ; Eighteenth-Century Ireland Volume 20 ; 20 ; >
     au < manifest ; exists ; 2006 ; Eighteenth-Century Ireland Volume 21 ; 21 ; >
     au < manifest ; exists ; 2007 ; Eighteenth-Century Ireland Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2008 ; Eighteenth-Century Ireland Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2009 ; Eighteenth-Century Ireland Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2010 ; Eighteenth-Century Ireland Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2011 ; Eighteenth-Century Ireland Volume 26 ; 26 ; >
+    au < frozen ; exists ; 2008 ; Eighteenth-Century Ireland Volume 23 ; 23 ; reingest1.clockss.org:8082 >
+    au < frozen ; exists ; 2009 ; Eighteenth-Century Ireland Volume 24 ; 24 ; reingest2.clockss.org:8085 >
+    au < frozen ; exists ; 2010 ; Eighteenth-Century Ireland Volume 25 ; 25 ; reingest5.clockss.org:8082 >
+    au < frozen ; exists ; 2011 ; Eighteenth-Century Ireland Volume 26 ; 26 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2011 ; Eighteenth-Century Ireland Volume Special_Issue ; Special_Issue ; >
-    au < crawling ; exists ; 2012 ; Eighteenth-Century Ireland Volume 27 ; 27 ; >
-    au < crawling ; exists ; 2013 ; Eighteenth-Century Ireland Volume 28 ; 28 ; >
-    au < crawling ; exists ; 2014 ; Eighteenth-Century Ireland Volume 29 ; 29 ; >
-    au < crawling ; exists ; 2015 ; Eighteenth-Century Ireland Volume 30 ; 30 ; >
-    au < crawling ; exists ; 2016 ; Eighteenth-Century Ireland Volume 31 ; 31 ; >
-    au < crawling ; exists ; 2017 ; Eighteenth-Century Ireland Volume 32 ; 32 ; >
-    au < crawling ; exists ; 2018 ; Eighteenth-Century Ireland Volume 33 ; 33 ; >
+    au < frozen ; exists ; 2012 ; Eighteenth-Century Ireland Volume 27 ; 27 ; reingest2.clockss.org:8085 >
+    au < frozen ; exists ; 2013 ; Eighteenth-Century Ireland Volume 28 ; 28 ; reingest5.clockss.org:8082 >
+    au < frozen ; exists ; 2014 ; Eighteenth-Century Ireland Volume 29 ; 29 ; reingest1.clockss.org:8082 >
+    au < frozen ; exists ; 2015 ; Eighteenth-Century Ireland Volume 30 ; 30 ; reingest2.clockss.org:8085 >
+    au < frozen ; exists ; 2016 ; Eighteenth-Century Ireland Volume 31 ; 31 ; reingest5.clockss.org:8082 >
+    au < frozen ; exists ; 2017 ; Eighteenth-Century Ireland Volume 32 ; 32 ; reingest1.clockss.org:8082 >
+    au < frozen ; exists ; 2018 ; Eighteenth-Century Ireland Volume 33 ; 33 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2019 ; Eighteenth-Century Ireland Volume 34 ; 34 ; >
-    au < crawling ; exists ; 2020 ; Eighteenth-Century Ireland Volume 35 ; 35 ; >
-    au < crawling ; exists ; 2021 ; Eighteenth-Century Ireland Volume 36 ; 36 ; >
+    au < frozen ; exists ; 2020 ; Eighteenth-Century Ireland Volume 35 ; 35 ; reingest5.clockss.org:8082 >
+    au < frozen ; exists ; 2021 ; Eighteenth-Century Ireland Volume 36 ; 36 ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 2022 ; Eighteenth-Century Ireland Volume 37 ; 37 ; >
 
   }
@@ -470,13 +470,13 @@
     #Published 1994-present
     #jounral_num = 79
 
-    au < crawling ; exists ; 1994 ; Essays in Romanticism Volume 1 ; 1 ; >
+    au < frozen ; exists ; 1994 ; Essays in Romanticism Volume 1 ; 1 ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 1995 ; Essays in Romanticism Volume 2 ; 2 ; >
     au < manifest ; exists ; 1996 ; Essays in Romanticism Volume 3 ; 3 ; >
     au < manifest ; exists ; 1997 ; Essays in Romanticism Volume 4 ; 4 ; >
     au < manifest ; exists ; 1998 ; Essays in Romanticism Volume 5 ; 5 ; >
     au < manifest ; exists ; 1999 ; Essays in Romanticism Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2000 ; Essays in Romanticism Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2000 ; Essays in Romanticism Volume 7 ; 7 ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2001 ; Essays in Romanticism Volume 8 ; 8 ; >
     au < manifest ; exists ; 2002 ; Essays in Romanticism Volume 9 ; 9 ; >
     au < manifest ; exists ; 2003 ; Essays in Romanticism Volume 10 ; 10 ; >
@@ -484,7 +484,7 @@
     au < manifest ; exists ; 2005 ; Essays in Romanticism Volume 12 ; 12 ; >
     au < manifest ; exists ; 2006 ; Essays in Romanticism Volume 13 ; 13 ; >
     au < manifest ; exists ; 2007 ; Essays in Romanticism Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2008 ; Essays in Romanticism Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2008 ; Essays in Romanticism Volume 15 ; 15 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2009 ; Essays in Romanticism Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Essays in Romanticism Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Essays in Romanticism Volume 18 ; 18 ; >
@@ -496,8 +496,8 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Essays in Romanticism Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Essays in Romanticism Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Essays in Romanticism Volume 26 ; 26 ; >
-    au < crawling ; exists ; 2020 ; Essays in Romanticism Volume 27 ; 27 ; >
-    au < crawling ; exists ; 2021 ; Essays in Romanticism Volume 28 ; 28 ; >
+    au < frozen ; exists ; 2020 ; Essays in Romanticism Volume 27 ; 27 ; reingest2.clockss.org:8085 >
+    au < frozen ; exists ; 2021 ; Essays in Romanticism Volume 28 ; 28 ; reingest5.clockss.org:8082 >
     au < superseded ; exists ; 2022 ; Essays in Romanticism Volume 29 [superseded] ; 29 ; >
 
   }
@@ -526,8 +526,8 @@
     au < doNotProcess ; doNotProcess ; 2017 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2020 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2021 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2020 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+    au < frozen ; exists ; 2021 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 13 ; 13 ; reingest2.clockss.org:8085 >
     au < superseded ; exists ; 2022 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 14 [superseded] ; 14 ; >
 
   }
@@ -565,8 +565,8 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Extrapolation Volume 58 ; 58 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Extrapolation Volume 59 ; 59 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Extrapolation Volume 60 ; 60 ; >
-    au < crawling ; exists ; 2020 ; Extrapolation Volume 61 ; 61 ; >
-    au < crawling ; exists ; 2021 ; Extrapolation Volume 62 ; 62 ; >
+    au < frozen ; exists ; 2020 ; Extrapolation Volume 61 ; 61 ; reingest5.clockss.org:8082 >
+    au < frozen ; exists ; 2021 ; Extrapolation Volume 62 ; 62 ; reingest1.clockss.org:8082 >
     au < superseded ; exists ; 2022 ; Extrapolation Volume 63 [superseded] ; 63 ; >
 
   }
@@ -616,7 +616,7 @@
     au < manifest ; exists ; 1997 ; Historical Studies in Industrial Relations Volume 3 ; 3 ; >
     au < manifest ; exists ; 1997 ; Historical Studies in Industrial Relations Volume 4 ; 4 ; >
     au < manifest ; exists ; 1998 ; Historical Studies in Industrial Relations Volume 5 ; 5 ; >
-    au < crawling ; exists ; 1998 ; Historical Studies in Industrial Relations Volume 6 ; 6 ; >
+    au < frozen ; exists ; 1998 ; Historical Studies in Industrial Relations Volume 6 ; 6 ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 1999 ; Historical Studies in Industrial Relations Volume 7 ; 7 ; >
     au < manifest ; exists ; 1999 ; Historical Studies in Industrial Relations Volume 8 ; 8 ; >
     au < manifest ; exists ; 2000 ; Historical Studies in Industrial Relations Volume 9 ; 9 ; >
@@ -632,7 +632,7 @@
     au < manifest ; exists ; 2005 ; Historical Studies in Industrial Relations Volume 19 ; 19 ; >
     au < manifest ; exists ; 2005 ; Historical Studies in Industrial Relations Volume 20 ; 20 ; >
     au < manifest ; exists ; 2006 ; Historical Studies in Industrial Relations Volume 21 ; 21 ; >
-    au < crawling ; exists ; 2006 ; Historical Studies in Industrial Relations Volume 22 ; 22 ; >
+    au < frozen ; exists ; 2006 ; Historical Studies in Industrial Relations Volume 22 ; 22 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2007 ; Historical Studies in Industrial Relations Volume 23-24 ; 23-24 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Historical Studies in Industrial Relations Volume 25-26 ; 25-26 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Historical Studies in Industrial Relations Volume 27-28 ; 27-28 ; >
@@ -646,8 +646,8 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Historical Studies in Industrial Relations Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Historical Studies in Industrial Relations Volume 39 ; 39 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Historical Studies in Industrial Relations Volume 40 ; 40 ; >
-    au < crawling ; exists ; 2020 ; Historical Studies in Industrial Relations Volume 41 ; 41 ; >
-    au < crawling ; exists ; 2021 ; Historical Studies in Industrial Relations Volume 42 ; 42 ; >
+    au < frozen ; exists ; 2020 ; Historical Studies in Industrial Relations Volume 41 ; 41 ; reingest1.clockss.org:8082 >
+    au < frozen ; exists ; 2021 ; Historical Studies in Industrial Relations Volume 42 ; 42 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; exists ; 2022 ; Historical Studies in Industrial Relations Volume 43 ; 43 ; >
 
   }
@@ -686,8 +686,8 @@
     au < doNotProcess ; doNotProcess ; 2017 ; The Indexer: The International Journal of Indexing Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; The Indexer: The International Journal of Indexing Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; The Indexer: The International Journal of Indexing Volume 37 ; 37 ; >
-    au < crawling ; exists ; 2020 ; The Indexer: The International Journal of Indexing Volume 38 ; 38 ; >
-    au < crawling ; exists ; 2021 ; The Indexer: The International Journal of Indexing Volume 39 ; 39 ; >
+    au < frozen ; exists ; 2020 ; The Indexer: The International Journal of Indexing Volume 38 ; 38 ; reingest5.clockss.org:8082 >
+    au < frozen ; exists ; 2021 ; The Indexer: The International Journal of Indexing Volume 39 ; 39 ; reingest1.clockss.org:8082 >
     au < superseded ; exists ; 2022 ; The Indexer: The International Journal of Indexing Volume 40 [superseded] ; 40 ; >
 
   }
@@ -774,7 +774,7 @@
     au < manifest ; exists ; 2002 ; Before Farming Volume 2002 ; 2002 ; >
     au < manifest ; exists ; 2003 ; Before Farming Volume 2003 ; 2003 ; >
     au < manifest ; exists ; 2004 ; Before Farming Volume 2004 ; 2004 ; >
-    au < crawling ; exists ; 2005 ; Before Farming Volume 2005 ; 2005 ; >
+    au < frozen ; exists ; 2005 ; Before Farming Volume 2005 ; 2005 ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 2006 ; Before Farming Volume 2006 ; 2006 ; >
     au < manifest ; exists ; 2007 ; Before Farming Volume 2007 ; 2007 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Before Farming Volume 2008 ; 2008 ; >
@@ -811,8 +811,8 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Literary & Cultural Disability Studies Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Literary & Cultural Disability Studies Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Journal of Literary & Cultural Disability Studies Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2020 ; Journal of Literary & Cultural Disability Studies Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2021 ; Journal of Literary & Cultural Disability Studies Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2020 ; Journal of Literary & Cultural Disability Studies Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+    au < frozen ; exists ; 2021 ; Journal of Literary & Cultural Disability Studies Volume 15 ; 15 ; reingest1.clockss.org:8082 >
     au < superseded ; exists ; 2022 ; Journal of Literary & Cultural Disability Studies Volume 16 [superseded] ; 16 ; >
 
   }
@@ -835,7 +835,7 @@
     au < manifest ; exists ; 2002 ; Journal of Romance Studies Volume 2 ; 2 ; >
     au < manifest ; exists ; 2003 ; Journal of Romance Studies Volume 3 ; 3 ; >
     au < manifest ; exists ; 2004 ; Journal of Romance Studies Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2005 ; Journal of Romance Studies Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2005 ; Journal of Romance Studies Volume 5 ; 5 ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 2006 ; Journal of Romance Studies Volume 6 ; 6 ; >
     au < manifest ; exists ; 2007 ; Journal of Romance Studies Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Romance Studies Volume 8 ; 8 ; >
@@ -844,14 +844,14 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Journal of Romance Studies Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Romance Studies Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Romance Studies Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2014 ; Journal of Romance Studies Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2015 ; Journal of Romance Studies Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2014 ; Journal of Romance Studies Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+    au < frozen ; exists ; 2015 ; Journal of Romance Studies Volume 15 ; 15 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Romance Studies Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Romance Studies Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Romance Studies Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Journal of Romance Studies Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2020 ; Journal of Romance Studies Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2021 ; Journal of Romance Studies Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2020 ; Journal of Romance Studies Volume 20 ; 20 ; reingest2.clockss.org:8085 >
+    au < frozen ; exists ; 2021 ; Journal of Romance Studies Volume 21 ; 21 ; reingest5.clockss.org:8082 >
     au < superseded ; exists ; 2022 ; Journal of Romance Studies Volume 22 [superseded] ; 22 ; >
 
   }
@@ -894,7 +894,7 @@
     au < manifest ; exists ; 1974 ; Labour History: A Journal of Labour and Social History Volume 26 ; 26 ; >
     au < manifest ; exists ; 1974 ; Labour History: A Journal of Labour and Social History Volume 27 ; 27 ; >
     au < manifest ; exists ; 1975 ; Labour History: A Journal of Labour and Social History Volume 28 ; 28 ; >
-    au < crawling ; exists ; 1975 ; Labour History: A Journal of Labour and Social History Volume 29 ; 29 ; >
+    au < frozen ; exists ; 1975 ; Labour History: A Journal of Labour and Social History Volume 29 ; 29 ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 1976 ; Labour History: A Journal of Labour and Social History Volume 30 ; 30 ; >
     au < manifest ; exists ; 1976 ; Labour History: A Journal of Labour and Social History Volume 31 ; 31 ; >
     au < manifest ; exists ; 1977 ; Labour History: A Journal of Labour and Social History Volume 32 ; 32 ; >
@@ -937,7 +937,7 @@
     au < manifest ; exists ; 1995 ; Labour History: A Journal of Labour and Social History Volume 69 ; 69 ; >
     au < manifest ; exists ; 1996 ; Labour History: A Journal of Labour and Social History Volume 70 ; 70 ; >
     au < manifest ; exists ; 1996 ; Labour History: A Journal of Labour and Social History Volume 71 ; 71 ; >
-    au < crawling ; exists ; 1997 ; Labour History: A Journal of Labour and Social History Volume 72 ; 72 ; >
+    au < frozen ; exists ; 1997 ; Labour History: A Journal of Labour and Social History Volume 72 ; 72 ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 1997 ; Labour History: A Journal of Labour and Social History Volume 73 ; 73 ; >
     au < manifest ; exists ; 1998 ; Labour History: A Journal of Labour and Social History Volume 74 ; 74 ; >
     au < manifest ; exists ; 1998 ; Labour History: A Journal of Labour and Social History Volume 75 ; 75 ; >
@@ -983,10 +983,10 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Labour History: A Journal of Labour and Social History Volume 115 ; 115 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Labour History: A Journal of Labour and Social History Volume 116 ; 116 ; >
     au < frozen ; exists ; 2019 ; Labour History: A Journal of Labour and Social History Volume 117 ; 117 ; >
-    au < crawling ; exists ; 2020 ; Labour History: A Journal of Labour and Social History Volume 118 ; 118 ; >
-    au < crawling ; exists ; 2020 ; Labour History: A Journal of Labour and Social History Volume 119 ; 119 ; >
-    au < crawling ; exists ; 2021 ; Labour History: A Journal of Labour and Social History Volume 120 ; 120 ; >
-    au < crawling ; exists ; 2021 ; Labour History: A Journal of Labour and Social History Volume 121 ; 121 ; >
+    au < frozen ; exists ; 2020 ; Labour History: A Journal of Labour and Social History Volume 118 ; 118 ; reingest5.clockss.org:8082 >
+    au < frozen ; exists ; 2020 ; Labour History: A Journal of Labour and Social History Volume 119 ; 119 ; reingest1.clockss.org:8082 >
+    au < frozen ; exists ; 2021 ; Labour History: A Journal of Labour and Social History Volume 120 ; 120 ; reingest2.clockss.org:8085 >
+    au < frozen ; exists ; 2021 ; Labour History: A Journal of Labour and Social History Volume 121 ; 121 ; reingest5.clockss.org:8082 >
     au < superseded ; exists ; 2022 ; Labour History: A Journal of Labour and Social History Volume 122 [superseded] ; 122 ; >
 
   }
@@ -1206,8 +1206,8 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Modern Believing Volume 58 ; 58 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Modern Believing Volume 59 ; 59 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Modern Believing Volume 60 ; 60 ; >
-    au < crawling ; exists ; 2020 ; Modern Believing Volume 61 ; 61 ; >
-    au < crawling ; exists ; 2021 ; Modern Believing Volume 62 ; 62 ; >
+    au < frozen ; exists ; 2020 ; Modern Believing Volume 61 ; 61 ; reingest1.clockss.org:8082 >
+    au < frozen ; exists ; 2021 ; Modern Believing Volume 62 ; 62 ; reingest2.clockss.org:8085 >
     au < superseded ; exists ; 2022 ; Modern Believing Volume 63 [superseded] ; 63 ; >
 
   }
@@ -1244,7 +1244,7 @@
     au < manifest ; exists ; 1973-1974 ; The Modern Churchman Volume 17 ; 17 ; >
     au < manifest ; exists ; 1974-1975 ; The Modern Churchman Volume 18 ; 18 ; >
     au < manifest ; exists ; 1975-1976 ; The Modern Churchman Volume 19 ; 19 ; >
-    au < crawling ; exists ; 1977 ; The Modern Churchman Volume 20 ; 20 ; >
+    au < frozen ; exists ; 1977 ; The Modern Churchman Volume 20 ; 20 ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 1977-1978 ; The Modern Churchman Volume 21 ; 21 ; >
     au < manifest ; exists ; 1978-1979 ; The Modern Churchman Volume 22 ; 22 ; >
     au < manifest ; exists ; 1980 ; The Modern Churchman Volume 23 ; 23 ; >
@@ -1256,7 +1256,7 @@
     au < manifest ; exists ; 1986-1987 ; The Modern Churchman Volume 29 ; 29 ; >
     au < manifest ; exists ; 1988-1989 ; The Modern Churchman Volume 30 ; 30 ; >
     au < manifest ; exists ; 1989-1990 ; The Modern Churchman Volume 31 ; 31 ; >
-    au < crawling ; exists ; 1990-1991 ; The Modern Churchman Volume 32 ; 32 ; >
+    au < frozen ; exists ; 1990-1991 ; The Modern Churchman Volume 32 ; 32 ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 1991-1992 ; The Modern Churchman Volume 33 ; 33 ; >
     au < manifest ; exists ; 1992-1993 ; The Modern Churchman Volume 34 ; 34 ; >
 
@@ -1288,8 +1288,8 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Music, Sound, and the Moving Image Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Music, Sound, and the Moving Image Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Music, Sound, and the Moving Image Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2020 ; Music, Sound, and the Moving Image Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2021 ; Music, Sound, and the Moving Image Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2020 ; Music, Sound, and the Moving Image Volume 14 ; 14 ; reingest2.clockss.org:8085 >
+    au < frozen ; exists ; 2021 ; Music, Sound, and the Moving Image Volume 15 ; 15 ; reingest5.clockss.org:8082 >
     au < superseded ; exists ; 2022 ; Music, Sound, and the Moving Image Volume 16 [superseded] ; 16 ; >
 
   }
@@ -1346,7 +1346,7 @@
     au < doNotProcess ; doNotProcess ; 2018-2019 ; Quaker Studies Volume 23 ; 23 ; >
     au < frozen ; exists ; 2019-2020 ; Quaker Studies Volume 24 ; 24 ; >
     au < frozen ; exists ; 2020-2021 ; Quaker Studies Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2021-2022 ; Quaker Studies Volume 26 ; 26 ; >
+    au < frozen ; exists ; 2021-2022 ; Quaker Studies Volume 26 ; 26 ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 2022-2023 ; Quaker Studies Volume 27 ; 27 ; >
 
   }
@@ -1428,7 +1428,7 @@
     #Published 1970-2004
     #jounral_num = 101
 
-    au < crawling ; exists ; 1982 ; The Quarterly Bulletin of the Marx Memorial Library Volume 100 ; 100 ; >
+    au < frozen ; exists ; 1982 ; The Quarterly Bulletin of the Marx Memorial Library Volume 100 ; 100 ; reingest2.clockss.org:8085 >
 
     au < manifest ; exists ; 2003 ; The Quarterly Bulletin of the Marx Memorial Library Volume 137 ; 137 ; >
     au < manifest ; exists ; 2003 ; The Quarterly Bulletin of the Marx Memorial Library Volume 138 ; 138 ; >
@@ -1469,8 +1469,8 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Romani Studies Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Romani Studies Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Romani Studies Volume 29 ; 29 ; >
-    au < crawling ; exists ; 2020 ; Romani Studies Volume 30 ; 30 ; >
-    au < crawling ; exists ; 2021 ; Romani Studies Volume 31 ; 31 ; >
+    au < frozen ; exists ; 2020 ; Romani Studies Volume 30 ; 30 ; reingest5.clockss.org:8082 >
+    au < frozen ; exists ; 2021 ; Romani Studies Volume 31 ; 31 ; reingest1.clockss.org:8082 >
     au < superseded ; exists ; 2022 ; Romani Studies Volume 32 [superseded] ; 32 ; >
 
   }
@@ -1562,7 +1562,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Science Fiction Film and Television Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Science Fiction Film and Television Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Science Fiction Film and Television Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2020 ; Science Fiction Film and Television Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2020 ; Science Fiction Film and Television Volume 13 ; 13 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2021 ; Science Fiction Film and Television Volume 14 ; 14 ; >
     au < superseded ; exists ; 2022 ; Science Fiction Film and Television Volume 15 [superseded] ; 15 ; >
 
@@ -1600,7 +1600,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Sculpture Journal Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Sculpture Journal Volume 28 ; 28 ; >
     au < frozen ; exists ; 2020 ; Sculpture Journal Volume 29 ; 29 ; >
-    au < crawling ; exists ; 2021 ; Sculpture Journal Volume 30 ; 30 ; >
+    au < frozen ; exists ; 2021 ; Sculpture Journal Volume 30 ; 30 ; reingest5.clockss.org:8082 >
     au < superseded ; exists ; 2022 ; Sculpture Journal Volume 31 [superseded] ; 31 ; >
 
   }
@@ -1627,8 +1627,8 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Studia Hibernica Volume 43 ; 43 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Studia Hibernica Volume 44 ; 44 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Studia Hibernica Volume 45 ; 45 ; >
-    au < crawling ; exists ; 2020 ; Studia Hibernica Volume 46 ; 46 ; >
-    au < crawling ; exists ; 2021 ; Studia Hibernica Volume 47 ; 47 ; >
+    au < frozen ; exists ; 2020 ; Studia Hibernica Volume 46 ; 46 ; reingest1.clockss.org:8082 >
+    au < frozen ; exists ; 2021 ; Studia Hibernica Volume 47 ; 47 ; reingest2.clockss.org:8085 >
     au < superseded ; exists ; 2022 ; Studia Hibernica Volume 48 [superseded] ; 48 ; >
 
   }
@@ -1646,8 +1646,8 @@
     #jounral_num = 85
 
     #no earlier volumes available at Liverpool 
-    au < crawling ; exists ; 2011 ; Praxis Volume 154 ; 154 ; >
-    au < crawling ; exists ; 2012 ; Praxis Volume 155 ; 155 ; >
+    au < frozen ; exists ; 2011 ; Praxis Volume 154 ; 154 ; reingest5.clockss.org:8082 >
+    au < frozen ; exists ; 2012 ; Praxis Volume 155 ; 155 ; reingest1.clockss.org:8082 >
 
   }
   
@@ -1670,8 +1670,8 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Theory & Struggle Volume 118 ; 118 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Theory & Struggle Volume 119 ; 119 ; >
     au < frozen ; exists ; 2019 ; Theory & Struggle Volume 120 ; 120 ; >
-    au < crawling ; exists ; 2020 ; Theory & Struggle Volume 121 ; 121 ; >
-    au < crawling ; exists ; 2021 ; Theory & Struggle Volume 122 ; 122 ; >
+    au < frozen ; exists ; 2020 ; Theory & Struggle Volume 121 ; 121 ; reingest2.clockss.org:8085 >
+    au < frozen ; exists ; 2021 ; Theory & Struggle Volume 122 ; 122 ; reingest5.clockss.org:8082 >
     au < superseded ; exists ; 2022 ; Theory & Struggle Volume 123 [superseded] ; 123 ; >
 
 
@@ -1698,7 +1698,7 @@
     au < doNotProcess ; exists ; 1998 ; Third World Planning Review Volume 20 ; 20 ; >
     au < doNotProcess ; exists ; 1999 ; Third World Planning Review Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2000 ; Third World Planning Review Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2001 ; Third World Planning Review Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2001 ; Third World Planning Review Volume 23 ; 23 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -1785,7 +1785,7 @@
     au < doNotProcess ; exists ; 1998 ; Town Planning Review Volume 69 ; 69 ; >
     au < doNotProcess ; exists ; 1999 ; Town Planning Review Volume 70 ; 70 ; >
     au < doNotProcess ; exists ; 2000 ; Town Planning Review Volume 71 ; 71 ; >
-    au < crawling ; exists ; 2001 ; Town Planning Review Volume 72 ; 72 ; >
+    au < frozen ; exists ; 2001 ; Town Planning Review Volume 72 ; 72 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; exists ; 2002 ; Town Planning Review Volume 73 ; 73 ; >
     au < doNotProcess ; exists ; 2003 ; Town Planning Review Volume 74 ; 74 ; >
     au < doNotProcess ; exists ; 2004 ; Town Planning Review Volume 75 ; 75 ; >
@@ -1805,7 +1805,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Town Planning Review Volume 89 ; 89 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Town Planning Review Volume 90 ; 90 ; >
     au < frozen ; exists ; 2020 ; Town Planning Review Volume 91 ; 91 ; >
-    au < crawling ; exists ; 2021 ; Town Planning Review Volume 92 ; 92 ; >
+    au < frozen ; exists ; 2021 ; Town Planning Review Volume 92 ; 92 ; reingest5.clockss.org:8082 >
     au < superseded ; exists ; 2022 ; Town Planning Review Volume 93 [superseded] ; 93 ; >
 
 
@@ -1837,7 +1837,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 167 ; 167 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 168 ; 168 ; >
     au < frozen ; exists ; 2020 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 169 ; 169 ; >
-    au < crawling ; exists ; 2021 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 170 ; 170 ; >
+    au < frozen ; exists ; 2021 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 170 ; 170 ; reingest1.clockss.org:8082 >
     au < superseded ; exists ; 2022 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 171 [superseded] ; 171 ; >
 
   }
@@ -1883,9 +1883,9 @@
     param[journal_id] = tsesa
     #jounral_num = 116
 
-    au < crawling ; exists ; 2017 ; TS Eliot Studies Annual Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2018 ; TS Eliot Studies Annual Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2021 ; TS Eliot Studies Annual Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2017 ; TS Eliot Studies Annual Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+    au < frozen ; exists ; 2018 ; TS Eliot Studies Annual Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+    au < frozen ; exists ; 2021 ; TS Eliot Studies Annual Volume 3 ; 3 ; reingest1.clockss.org:8082 >
     au < superseded ; exists ; 2022 ; TS Eliot Studies Annual Volume 4 [superseded] ; 4 ; >
 
   }
