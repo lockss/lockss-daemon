@@ -3220,7 +3220,7 @@
     comment[journal_id] = hrmid
     # online from 2002
 
-    au < crawling ; exists ; 2002 ; Human Resource Management International Digest Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2002 ; Human Resource Management International Digest Volume 10 ; 10 ; reingest1.clockss.org:8082 >
     au < notReady ; exists ; 2003 ; Human Resource Management International Digest Volume 11 ; 11 ; > #no pdfs
     au < frozen ; exists ; 2004 ; Human Resource Management International Digest Volume 12 ; 12 ; >
     au < frozen ; exists ; 2005 ; Human Resource Management International Digest Volume 13 ; 13 ; >
