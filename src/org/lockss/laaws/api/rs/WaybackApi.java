@@ -43,22 +43,13 @@
 package org.lockss.laaws.api.rs;
 
 import com.google.gson.reflect.TypeToken;
+import org.lockss.laaws.client.*;
 import java.io.File;
-import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import javax.ws.rs.core.GenericType;
-import org.lockss.laaws.client.ApiCallback;
-import org.lockss.laaws.client.V2RestClient;
-import org.lockss.laaws.client.ApiException;
-import org.lockss.laaws.client.ApiResponse;
-import org.lockss.laaws.client.Configuration;
-import org.lockss.laaws.client.Pair;
-import org.lockss.laaws.client.ProgressRequestBody;
-import org.lockss.laaws.client.ProgressResponseBody;
 
 public class WaybackApi {
   private V2RestClient apiClient;

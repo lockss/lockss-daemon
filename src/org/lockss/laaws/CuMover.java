@@ -40,7 +40,7 @@ import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
-import org.lockss.util.UrlUtil;
+
 import static org.lockss.laaws.Counters.CounterType;
 
 public class CuMover extends Worker {
@@ -50,12 +50,12 @@ public class CuMover extends Worker {
   private String v1Url;
   private String v2Url;
   private boolean isPartialContent;
-  private String collection;
+  private String namespace;
 
   public CuMover(V2AuMover auMover, MigrationTask task) {
     super(auMover, task);
     this.cu = task.getCu();
-    collection = auMover.getCollection();
+    namespace = auMover.getNamespace();
   }
 
   public void run() {
@@ -144,7 +144,7 @@ public class CuMover extends Worker {
       if (log.isDebug3()) {
         log.debug3("Moving cu version " + cu.getVersion() + " - fetched at " + fetchTime);
       }
-      copyArtifact(auid, v2Url, collectionDate, cu, collection);
+      copyArtifact(auid, v2Url, collectionDate, cu, namespace);
       log.debug3("copyArtifact returned");
     }
     catch (ApiException apie) {
@@ -169,17 +169,17 @@ public class CuMover extends Worker {
    * @param v2Url          the uri  for the CachedUrl we are moving.
    * @param collectionDate the date at which this item was collected or null
    * @param cu             the CachedUrl we are moving.
-   * @param collectionId   the v2 collection we are moving to
+   * @param namespace   the v2 namespace we are moving to
    * @throws ApiException the rest exception thrown should anything fail in the request.
    */
   void copyArtifact(String auid, String v2Url, Long collectionDate,
-      CachedUrl cu, String collectionId) throws ApiException {
+      CachedUrl cu, String namespace) throws ApiException {
     log.debug3("createArtifact("+v2Url+")");
     DigestCachedUrl dcu = new DigestCachedUrl(cu);
     try {
       ctrs.addInProgressDcu(CounterType.CONTENT_BYTES_MOVED, dcu);
       ctrs.addInProgressDcu(CounterType.BYTES_MOVED, dcu);
-      Artifact uncommitted = collectionsApi.createArtifact(collectionId, auid, v2Url, dcu, collectionDate);
+      Artifact uncommitted = artifactsApi.createArtifact(auid, v2Url, dcu, namespace, collectionDate);
       if (uncommitted != null) {
         if (log.isDebug3()) {
           log.debug3("createArtifact returned,  content bytes: " +
@@ -204,8 +204,7 @@ public class CuMover extends Worker {
   void commitArtifact(Artifact uncommitted, DigestCachedUrl dcu) throws ApiException {
     Artifact committed;
     log.debug3("committing artifact " + uncommitted.getId());
-    committed = collectionsApi.updateArtifact(uncommitted.getCollection(),
-        uncommitted.getId(), true);
+    committed = artifactsApi.updateArtifact(uncommitted.getId(),true,uncommitted.getNamespace());
     String contentDigest = dcu.getContentDigest();
     if (!committed.getContentDigest().equals(contentDigest)) {
       String err="Error in commit of " + dcu.getCu().getUrl() + " content digest do not match";
@@ -236,7 +235,7 @@ public class CuMover extends Worker {
       isPartialContent = true;
       log.debug2("Checking for unmoved content: " + v2Url);
       do {
-        pageInfo = collectionsApi.getArtifacts(collection, auId,
+        pageInfo = artifactsApi.getArtifacts(namespace, auId,
             v2Url, null, "all", false, null, token);
         cuArtifacts.addAll(pageInfo.getArtifacts());
         token = pageInfo.getPageInfo().getContinuationToken();

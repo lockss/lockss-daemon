@@ -44,7 +44,6 @@ package org.lockss.laaws.client;
 
 import java.util.List;
 import java.util.Map;
-import javax.ws.rs.core.GenericType;
 
 /**
  * <p>ApiException class.</p>

@@ -24,7 +24,7 @@ public class CuChecker extends Worker {
   public CuChecker(V2AuMover auMover, MigrationTask task) {
     super(auMover, task);
     this.cu = task.cu;
-    collection = auMover.getCollection();
+    collection = auMover.getNamespace();
   }
 
   public void run() {
@@ -77,7 +77,7 @@ public class CuChecker extends Worker {
                           Long collectionDate) {
     long collDate = collectionDate != null ? collectionDate : -1;
     if (artifact.getAuid().equals(au.getAuId()) &&
-        artifact.getCollection().equals(collection)  &&
+        artifact.getNamespace().equals(collection)  &&
         artifact.getCollectionDate().equals(collDate) &&
         artifact.getCommitted().equals(Boolean.TRUE)) {
       return true;
@@ -86,9 +86,9 @@ public class CuChecker extends Worker {
       log.warning("Metadata mismatch, AUID. V1: " + au.getAuId() +
                   ", V2: " + artifact.getAuid());
     }
-    if (!artifact.getCollection().equals(collection)) {
+    if (!artifact.getNamespace().equals(collection)) {
       log.warning("Metadata mismatch, Coll. V1: " + collection +
-                  ", V2: " + artifact.getCollection());
+                  ", V2: " + artifact.getNamespace());
     }
     if (!artifact.getCollectionDate().equals(collDate)) {
       log.warning("Metadata mismatch, Coll date. V1: " + collDate +
@@ -120,9 +120,7 @@ public class CuChecker extends Worker {
       }
       if ( isMatch && auMover.isCompareBytes()) {
         log.debug3("Fetching  content for byte compare");
-        artifactData = collectionsApi.getMultipartArtifact(collection,
-            artifact.getId(),
-            "ALWAYS");
+        artifactData = artifactsApi.getMultipartArtifact(artifact.getId(),collection,"ALWAYS");
         log.debug3("Successfully fetched Artifact Data");
         isMatch = IOUtils.contentEquals(artifactData.getInputStream(),
             cu.getUncompressedInputStream());
@@ -173,7 +171,7 @@ public class CuChecker extends Worker {
     String token = null;
     do {
       try {
-        pageInfo = collectionsApi.getArtifacts(collection, au.getAuId(),
+        pageInfo = artifactsApi.getArtifacts(collection, au.getAuId(),
             url, null, "all", false, null, token);
         auArtifacts.addAll(pageInfo.getArtifacts());
         token = pageInfo.getPageInfo().getContinuationToken();

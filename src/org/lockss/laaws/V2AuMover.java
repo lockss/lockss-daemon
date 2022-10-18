@@ -47,8 +47,7 @@ import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.LockssRunnable;
 import org.lockss.laaws.MigrationManager.OpType;
-import org.lockss.laaws.api.cfg.AusApi;
-import org.lockss.laaws.api.rs.StreamingCollectionsApi;
+import org.lockss.laaws.api.rs.StreamingArtifactsApi;
 import org.lockss.laaws.client.ApiException;
 import org.lockss.laaws.client.V2RestClient;
 import org.lockss.laaws.model.rs.AuidPageInfo;
@@ -156,10 +155,12 @@ public class V2AuMover {
   public static final long DEFAULT_THREAD_TIMEOUT = 30 * Constants.SECOND;
 
   /**
-   * V2 collection to migrate into
+   * V2 namespace to migrate into
    */
-  public static final String PARAM_V2_COLLECTION = PREFIX + "collection";
-  public static final String DEFAULT_V2_COLLECTION = "lockss";
+  public static final String PARAM_V2_NAMESPACE
+ = PREFIX + "namespace";
+  public static final String DEFAULT_V2_NAMESPACE
+ = "lockss";
 
   /**
    * Repository service port
@@ -279,10 +280,16 @@ public class V2AuMover {
   /** V2 repo REST status api client */
   private org.lockss.laaws.api.rs.StatusApi repoStatusApiClient;
 
-  /** V2 repo REST collections api client */
-  private StreamingCollectionsApi repoCollectionsApiClient;
-  /** V2 repo REST collections api client with long timeout */
-  private StreamingCollectionsApi repoCollectionsApiLongCallClient;
+  /** V2 repo REST namespace
+s api client */
+  private StreamingArtifactsApi repoArtifactsApiClient;
+  /** V2 repo REST namespace
+s api client with long timeout */
+  private StreamingArtifactsApi repoArtifactsApiLongCallClient;
+
+  private org.lockss.laaws.api.rs.AusApi repoAusApiClient;
+  /** V2 repo REST aus  api client with long timeout */
+  private org.lockss.laaws.api.rs.AusApi repoAusApiLongCallClient;
 
   /** Repository service port */
   private int repoPort;
@@ -297,7 +304,7 @@ public class V2AuMover {
   private org.lockss.laaws.api.cfg.StatusApi cfgStatusApiClient;
 
   /** V2 State api client */
-  private AusApi cfgAusApiClient;
+  private org.lockss.laaws.api.cfg.AusApi cfgAusApiClient;
 
   /** Configuration service port */
   private int cfgPort;
@@ -317,8 +324,8 @@ public class V2AuMover {
   /** Password used to access v2 service */
   private String userPass;
 
-  /** V2 Collection */
-  private String collection;
+  /** V2 namespace */
+  private String namespace;
 
   private OpType opType;
 
@@ -389,7 +396,7 @@ public class V2AuMover {
    */
   private void setInitialConfig(Configuration config) {
     userAgent = config.get(PARAM_V2_USER_AGENT, DEFAULT_V2_USER_AGENT);
-    collection = config.get(PARAM_V2_COLLECTION, DEFAULT_V2_COLLECTION);
+    namespace = config.get(PARAM_V2_NAMESPACE, DEFAULT_V2_NAMESPACE);
     cfgPort = config.getInt(PARAM_CFG_PORT, DEFAULT_CFG_PORT);
     repoPort = config.getInt(PARAM_RS_PORT, DEFAULT_RS_PORT);
     debugRepoReq = config.getBoolean(DEBUG_REPO_REQUEST,
@@ -496,7 +503,7 @@ public class V2AuMover {
                       cfgAccessUrl, debugRepoReq);
       // Assign the client to the status api and aus api
       cfgStatusApiClient = new org.lockss.laaws.api.cfg.StatusApi(configClient);
-      cfgAusApiClient = new AusApi(configClient);
+      cfgAusApiClient = new org.lockss.laaws.api.cfg.AusApi(configClient);
     }
     catch (MalformedURLException mue) {
       totalCounters.addError("Error parsing REST Configuration Service URL: "
@@ -523,9 +530,9 @@ public class V2AuMover {
                       repoAccessUrl, debugRepoReq);
 
       repoStatusApiClient = new org.lockss.laaws.api.rs.StatusApi(repoClient);
-      repoCollectionsApiClient = new StreamingCollectionsApi(repoClient);
-      repoCollectionsApiLongCallClient =
-        new StreamingCollectionsApi(repoLongCallClient);
+      repoArtifactsApiClient = new StreamingArtifactsApi(repoClient);
+      repoAusApiClient = new org.lockss.laaws.api.rs.AusApi(repoClient);
+      repoAusApiLongCallClient = new org.lockss.laaws.api.rs.AusApi(repoLongCallClient);
     }
     catch (MalformedURLException mue) {
       totalCounters.addError("Error parsing REST Configuration Service URL: " + mue.getMessage());
@@ -739,7 +746,7 @@ public class V2AuMover {
         if (!existsInV2(au)) {
           // Might be better to delay startBulk() until first copy task runs
           try {
-            startBulk(collection, auStat.getAuId());
+            startBulk(namespace, auStat.getAuId());
             auStat.setIsBulk(true); // remember to finishBulk for this AU
           } catch (UnsupportedOperationException e) {
             // Expected if not running against a V2 repo configured to
@@ -1066,7 +1073,7 @@ public class V2AuMover {
           // permanent ArtifactIndex
           try {
             long startIndex = now();
-            finishBulk(collection, auStat.getAuId());
+            finishBulk(namespace, auStat.getAuId());
 
             task.getCounters().add(CounterType.INDEX_TIME, now() - startIndex);
             log.debug2("finishBulk took " +
@@ -1260,7 +1267,7 @@ public class V2AuMover {
       AuidPageInfo pageInfo;
       String token = null;
       do {
-        pageInfo = repoCollectionsApiClient.getAus(collection, null, token);
+        pageInfo = repoAusApiClient.getAus(namespace, null, token);
         v2Aus.addAll(pageInfo.getAuids());
         token = pageInfo.getPageInfo().getContinuationToken();
       } while (!isAbort() && !StringUtil.isNullString(token));
@@ -1268,7 +1275,7 @@ public class V2AuMover {
       if (apie.getMessage().indexOf("404: Not Found") > 0) {
         return;
       } else {
-        //LockssRestServiceException: The collection does not exist
+        //LockssRestServiceException: The namespace does not exist
         String err = "Error occurred while retrieving V2 Au list: " + apie.getMessage();
         totalCounters.addError(err);
         log.error(err, apie);
@@ -1280,12 +1287,12 @@ public class V2AuMover {
   }
 
   // Here mostly to make stack traces easier to read
-  void startBulk(String collection, String auid) throws ApiException {
-    repoCollectionsApiClient.handleBulkAuOp(collection, auid, "start");
+  void startBulk(String namespace, String auid) throws ApiException {
+    repoAusApiLongCallClient.handleBulkAuOp(namespace, auid, "start");
   }
 
-  void finishBulk(String collection, String auid) throws ApiException {
-    repoCollectionsApiLongCallClient.handleBulkAuOp(collection, auid, "finish");
+  void finishBulk(String namespace, String auid) throws ApiException {
+    repoAusApiLongCallClient.handleBulkAuOp(namespace, auid, "finish");
   }
 
   /**
@@ -1408,15 +1415,15 @@ public class V2AuMover {
     return isCompareBytes;
   }
 
-  StreamingCollectionsApi getRepoCollectionsApiClient() {
-    return repoCollectionsApiClient;
+  StreamingArtifactsApi getRepoArtifactsApiClient() {
+    return repoArtifactsApiClient;
   }
 
-  public String getCollection() {
-    return collection;
+  public String getNamespace() {
+    return namespace;
   }
 
-  public AusApi getCfgAusApiClient() {
+  public org.lockss.laaws.api.cfg.AusApi getCfgAusApiClient() {
     return cfgAusApiClient;
   }
 
@@ -1856,7 +1863,6 @@ public class V2AuMover {
 
   /**
    * Update the report for the current Au.
-   * @param au The ArchivalUnit which is being counted
    * @param auStat The AuStatus for this ArchivalUnit.
    */
   void updateReport(AuStatus auStat) {

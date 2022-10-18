@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Queue;
-import org.lockss.laaws.api.rs.StreamingCollectionsApi;
+import org.lockss.laaws.api.rs.StreamingArtifactsApi;
 import org.lockss.laaws.api.cfg.AusApi;
 import org.lockss.laaws.client.ApiException;
 import org.lockss.laaws.model.rs.Artifact;
@@ -25,7 +25,7 @@ public abstract class Worker {
   protected boolean terminated = false;
   protected Counters ctrs;
 
-  protected final StreamingCollectionsApi collectionsApi;
+  protected final StreamingArtifactsApi artifactsApi;
   protected final AusApi cfgApiClient;
 
   public Worker(V2AuMover auMover, MigrationTask task) {
@@ -33,7 +33,7 @@ public abstract class Worker {
     this.task = task;
     this.au = task.getAu();
     this.ctrs = task.getCounters();
-    collectionsApi = auMover.getRepoCollectionsApiClient();
+    artifactsApi = auMover.getRepoArtifactsApiClient();
     cfgApiClient = auMover.getCfgAusApiClient();
   }
 

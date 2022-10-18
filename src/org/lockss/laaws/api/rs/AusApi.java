@@ -43,23 +43,14 @@
 package org.lockss.laaws.api.rs;
 
 import com.google.gson.reflect.TypeToken;
-import java.io.IOException;
+import org.lockss.laaws.client.*;
+import org.lockss.laaws.model.rs.AuSize;
+import org.lockss.laaws.model.rs.AuidPageInfo;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import javax.ws.rs.core.GenericType;
-import org.lockss.laaws.client.ApiCallback;
-import org.lockss.laaws.client.V2RestClient;
-import org.lockss.laaws.client.ApiException;
-import org.lockss.laaws.client.ApiResponse;
-import org.lockss.laaws.client.Configuration;
-import org.lockss.laaws.client.Pair;
-import org.lockss.laaws.client.ProgressRequestBody;
-import org.lockss.laaws.client.ProgressResponseBody;
-import org.lockss.laaws.model.rs.AuSize;
-import org.lockss.laaws.model.rs.AuidPageInfo;
 
 public class AusApi {
   private V2RestClient apiClient;

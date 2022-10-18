@@ -44,7 +44,7 @@ package org.lockss.laaws.client;
 
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class Configuration {
-  private static V2RestClient defaultV2RestClient = new ApiClient();
+  private static V2RestClient defaultV2RestClient = new V2RestClient();
 
   /**
    * Get the default API client, which would be used when creating API
@@ -53,7 +53,7 @@ public class Configuration {
    * @return Default API client
    */
   public static V2RestClient getDefaultApiClient() {
-    return defaultApiClient;
+    return defaultV2RestClient;
   }
 
   /**
