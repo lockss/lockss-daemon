@@ -85,6 +85,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
     "au_crawlrules_ignore_case";
   public static final String KEY_AU_CRAWL_WINDOW = "au_crawlwindow";
   public static final String KEY_AU_CRAWL_WINDOW_SER = "au_crawlwindow_ser";
+  public static final String KEY_AU_EXPECTED_BASE_PATH = "au_expected_base_path";
   public static final String KEY_AU_REFETCH_DEPTH = "au_refetch_depth";
   public static final int DEFAULT_AU_REFETCH_DEPTH = 1;
   // The old name of au_refetch_depth
