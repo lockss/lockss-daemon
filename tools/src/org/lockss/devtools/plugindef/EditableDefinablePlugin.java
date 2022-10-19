@@ -666,9 +666,9 @@ public class EditableDefinablePlugin extends DefinablePlugin {
                             requiredDaemonVersion);
   }
 
-  public String getRequiredDaemonVersion() {
+  public List<String> getRequiredDaemonVersion() {
     // Default (0.0.0) reasonably stable; not explicitly saving unless changed
-    String ret = super.getRequiredDaemonVersion();
+    List<String> ret = super.getRequiredDaemonVersion();
     logger.info("The required daemon version is: " + ret);
     return ret;
   }
