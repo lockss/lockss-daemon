@@ -178,7 +178,9 @@ public class BaseAtyponMetadataUtil {
             isInAu = (
                     ((StringUtils.contains(normAuTitle, normFoundTitle)) ||
                             (StringUtils.contains(normFoundTitle, normAuTitle))));
-            return isInAu;
+            log.debug3("Publisher Specific Checks for Sage excluded condition meet, isInAu :" + isInAu);
+            log.debug3("Publisher Specific Checks for Sage excluded condition meet, return false on purpose");
+            return false;  //Publisher Specific Checks for Sage excluded condition meet, return false on purpose";
           }
         }
       }
