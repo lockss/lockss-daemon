@@ -155,7 +155,7 @@ public class TestBaseAtyponMetadataExtractor extends LockssTestCase {
 	    assertEquals(BaseAtyponMetadataUtil.normalize_id("issN:    1111-2222"),"11112222"); 
 	    assertEquals(BaseAtyponMetadataUtil.normalize_id(" issN:    1111-2222"),"11112222"); 
 	    //isbn
-	    assertEquals(BaseAtyponMetadataUtil.normalize_id("978-0-89118-196-5"),"9780891181965"); 
+	    assertEquals(BaseAtyponMetadataUtil.normalize_id("978-0-89118-196-5"),"9780891181965");
 	    assertEquals(BaseAtyponMetadataUtil.normalize_id("  978-0-89118-196-5"),"9780891181965"); 
 	    assertEquals(BaseAtyponMetadataUtil.normalize_id("9-7-8-0-89118-196-5"),"9780891181965"); 
 	    assertEquals(BaseAtyponMetadataUtil.normalize_id("978-0-89118-196-5   "),"9780891181965"); 
@@ -215,7 +215,7 @@ public class TestBaseAtyponMetadataExtractor extends LockssTestCase {
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
-    assertEquals(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
+    //assertEquals(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
     assertEquals(goodTitle, md.get(MetadataField.DC_FIELD_TITLE));
     assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
     assertEquals(goodFormat, md.get(MetadataField.DC_FIELD_FORMAT));

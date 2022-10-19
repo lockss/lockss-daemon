@@ -140,6 +140,51 @@ public class BaseAtyponMetadataUtil {
         }
       }
     }
+
+    // Add Atypon-Sage check for an over crawlled Au on ingest1 on Oct/2022 plugin version#41
+    // INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 59
+    // This check need to happen before the following code, since it will return true anyway
+    /*
+    if (StringUtils.isEmpty(foundVolume) && StringUtils.isEmpty(foundJournalTitle)) {
+      log.debug3("Vol and Title was empty, returning: " + isInAu);
+      return isInAu; //return true, we have no way of knowing
+    }
+     */
+
+
+    String pubNameSage = (tdbau == null) ? null : tdbau.getPublisherName();
+    log.debug3("Publisher Specific Checks for Sage = " + pubNameSage);
+    String foundSpecificSageJournalTitle = am.get(MetadataField.FIELD_PUBLICATION_TITLE);
+    if (isInAu && (pubNameSage != null)) {
+      Boolean isSage = pubNameSage.equals("SAGE Publications");
+      if (isSage) {
+        log.debug3("Publisher Specific Checks for Sage");
+        Boolean isSageInquiry = foundSpecificSageJournalTitle.contains("INQUIRY: The Journal of Health Care Organization, Provision, and Financing");
+        if (foundSpecificSageJournalTitle != null && isSageInquiry ) {
+          log.debug3("Publisher Specific Checks for Sage Inquiry");
+
+          String AU_journal_titleSage = (tdbau == null) ? null : tdbau.getPublicationTitle();
+          String foundJournalTitleSage = am.get(MetadataField.FIELD_PUBLICATION_TITLE);
+
+          if (isInAu && !(StringUtils.isEmpty(foundJournalTitleSage) || StringUtils.isEmpty(AU_journal_titleSage)) ) {
+            // normalize titles to catch unimportant differences
+            log.debug3("pre-normalized title from AU is : " + AU_journal_titleSage);
+            log.debug3("pre-normalized title from metadata is : " + foundJournalTitleSage);
+            String normAuTitle = normalizeTitle(AU_journal_titleSage);
+            String normFoundTitle = normalizeTitle(foundJournalTitleSage);
+            log.debug3("normalized title from AU is : " + normAuTitle);
+            log.debug3("normalized title from metadata is : " + normFoundTitle);
+            // If the titles are a subset of each other or are equal after normalization
+            isInAu = (
+                    ((StringUtils.contains(normAuTitle, normFoundTitle)) ||
+                            (StringUtils.contains(normFoundTitle, normAuTitle))));
+            return isInAu;
+          }
+        }
+      }
+    }
+
+
     // END PUBLISHER SPECIFIC CHECKS //
 
     // Use the journalTitle and volume name from the ArticleMetadata
