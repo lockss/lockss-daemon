@@ -1263,7 +1263,7 @@ public class ArtifactsApi {
     Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
     if (committed != null) {
-      localVarFormParams.put("committed", committed);
+      localVarQueryParams.addAll(apiClient.parameterToPair("committed", committed));
     }
 
     if (namespace != null) {

@@ -381,6 +381,8 @@ public class Artifact implements Serializable {
     openapiFields.add("contentLength");
     openapiFields.add("contentDigest");
     openapiFields.add("collectionDate");
+    openapiFields.add("sortUri");
+    openapiFields.add("identifier");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();

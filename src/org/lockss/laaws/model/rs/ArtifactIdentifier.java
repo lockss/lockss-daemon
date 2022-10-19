@@ -39,37 +39,37 @@ import java.util.Objects;
 /**
  * Class that serves as an identifier for artifacts.
  *
- * Artifacts are identified uniquely by the tuple of (CollectionID, AUID, URL, Version). Within the context of a LOCKSS
+ * Artifacts are identified uniquely by the tuple of (NamespaceID, AUID, URL, Version). Within the context of a LOCKSS
  * repository, they are also uniquely identified by their artifact ID.
  *
  * Comparable is implemented to allow for an ordering of artifacts.
  */
 public class ArtifactIdentifier implements Serializable {
   private String artifactId;
-  private final String collection;
+  private final String namespace;
   private final String auid;
   private final String uri;
   private final Integer version;
 
-  public ArtifactIdentifier(String collection, String auid, String uri, Integer version) {
-    this(null, collection, auid, uri, version);
+  public ArtifactIdentifier(String namespace, String auid, String uri, Integer version) {
+    this(null, namespace, auid, uri, version);
   }
 
-  public ArtifactIdentifier(String id, String collection, String auid, String uri, Integer version) {
+  public ArtifactIdentifier(String id, String namespace, String auid, String uri, Integer version) {
     this.artifactId = id;
-    this.collection = collection;
+    this.namespace = namespace;
     this.auid = auid;
     this.uri = uri;
     this.version = version;
   }
 
   /**
-   * Returns the collection name encoded in this artifact identifier.
+   * Returns the namespace name encoded in this artifact identifier.
    *
-   * @return Collection name
+   * @return namespace name
    */
-  public String getCollection() {
-    return collection;
+  public String getNamespace() {
+    return namespace;
   }
 
   /**
@@ -126,13 +126,13 @@ public class ArtifactIdentifier implements Serializable {
       return false;
     }
     ArtifactIdentifier that = (ArtifactIdentifier) o;
-    return artifactId.equals(that.artifactId) && collection.equals(that.collection) && auid.equals(
+    return artifactId.equals(that.artifactId) && namespace.equals(that.namespace) && auid.equals(
         that.auid) && uri.equals(that.uri) && version.equals(that.version);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(artifactId, collection, auid, uri, version);
+    return Objects.hash(artifactId, namespace, auid, uri, version);
   }
 
   /**
@@ -143,7 +143,7 @@ public class ArtifactIdentifier implements Serializable {
   public String toString() {
     return "ArtifactIdentifier{" +
         "artifactId='" + artifactId + '\'' +
-        ", collection='" + collection + '\'' +
+        ", namespace='" + namespace + '\'' +
         ", auid='" + auid + '\'' +
         ", uri='" + uri + '\'' +
         ", version='" + version + '\'' +
@@ -152,25 +152,25 @@ public class ArtifactIdentifier implements Serializable {
 
   /**
    * Returns the artifact stem of this artifact identifier, which represents a tuple
-   * containing the collection ID, AUID, and URL.
+   * containing the namespace ID, AUID, and URL.
    *
    * @return A {@link ArtifactStem} containing the artifact stem of this artifact identifier.
    */
   @JsonIgnore
   public ArtifactStem getArtifactStem() {
-    return new ArtifactStem(getCollection(), getAuid(), getUri());
+    return new ArtifactStem(getNamespace(), getAuid(), getUri());
   }
 
   /**
-   * Struct representing a tuple of collection ID, AUID, and URL. Used for artifact version locking.
+   * Struct representing a tuple of namespace ID, AUID, and URL. Used for artifact version locking.
    */
   public static class ArtifactStem {
-    private final String collection;
+    private final String namespace;
     private final String auid;
     private final String uri;
 
-    public ArtifactStem(String collection, String auid, String uri) {
-      this.collection = collection;
+    public ArtifactStem(String namespace, String auid, String uri) {
+      this.namespace = namespace;
       this.auid = auid;
       this.uri = uri;
     }
@@ -180,12 +180,12 @@ public class ArtifactIdentifier implements Serializable {
       if (this == o) return true;
       if (o == null || getClass() != o.getClass()) return false;
       ArtifactStem that = (ArtifactStem) o;
-      return collection.equals(that.collection) && auid.equals(that.auid) && uri.equals(that.uri);
+      return namespace.equals(that.namespace) && auid.equals(that.auid) && uri.equals(that.uri);
     }
 
     @Override
     public int hashCode() {
-      return Objects.hash(collection, auid, uri);
+      return Objects.hash(namespace, auid, uri);
     }
   }
 }

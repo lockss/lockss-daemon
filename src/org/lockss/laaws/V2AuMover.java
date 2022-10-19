@@ -1288,11 +1288,11 @@ s api client with long timeout */
 
   // Here mostly to make stack traces easier to read
   void startBulk(String namespace, String auid) throws ApiException {
-    repoAusApiLongCallClient.handleBulkAuOp(namespace, auid, "start");
+    repoAusApiLongCallClient.handleBulkAuOp(auid, "start",namespace);
   }
 
   void finishBulk(String namespace, String auid) throws ApiException {
-    repoAusApiLongCallClient.handleBulkAuOp(namespace, auid, "finish");
+    repoAusApiLongCallClient.handleBulkAuOp( auid, "finish",namespace);
   }
 
   /**

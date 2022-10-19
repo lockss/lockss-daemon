@@ -19,12 +19,12 @@ import org.lockss.util.StringUtil;
 public class CuChecker extends Worker {
   private static final Logger log = Logger.getLogger(CuChecker.class);
   private final CachedUrl cu;
-  private final String collection;
+  private final String namespace;
 
   public CuChecker(V2AuMover auMover, MigrationTask task) {
     super(auMover, task);
     this.cu = task.cu;
-    collection = auMover.getNamespace();
+    namespace = auMover.getNamespace();
   }
 
   public void run() {
@@ -77,7 +77,7 @@ public class CuChecker extends Worker {
                           Long collectionDate) {
     long collDate = collectionDate != null ? collectionDate : -1;
     if (artifact.getAuid().equals(au.getAuId()) &&
-        artifact.getNamespace().equals(collection)  &&
+        artifact.getNamespace().equals(namespace)  &&
         artifact.getCollectionDate().equals(collDate) &&
         artifact.getCommitted().equals(Boolean.TRUE)) {
       return true;
@@ -86,8 +86,8 @@ public class CuChecker extends Worker {
       log.warning("Metadata mismatch, AUID. V1: " + au.getAuId() +
                   ", V2: " + artifact.getAuid());
     }
-    if (!artifact.getNamespace().equals(collection)) {
-      log.warning("Metadata mismatch, Coll. V1: " + collection +
+    if (!artifact.getNamespace().equals(namespace)) {
+      log.warning("Metadata mismatch, Coll. V1: " + namespace +
                   ", V2: " + artifact.getNamespace());
     }
     if (!artifact.getCollectionDate().equals(collDate)) {
@@ -120,7 +120,7 @@ public class CuChecker extends Worker {
       }
       if ( isMatch && auMover.isCompareBytes()) {
         log.debug3("Fetching  content for byte compare");
-        artifactData = artifactsApi.getMultipartArtifact(artifact.getId(),collection,"ALWAYS");
+        artifactData = artifactsApi.getMultipartArtifact(artifact.getId(),namespace,"ALWAYS");
         log.debug3("Successfully fetched Artifact Data");
         isMatch = IOUtils.contentEquals(artifactData.getInputStream(),
             cu.getUncompressedInputStream());
@@ -171,7 +171,7 @@ public class CuChecker extends Worker {
     String token = null;
     do {
       try {
-        pageInfo = artifactsApi.getArtifacts(collection, au.getAuId(),
+        pageInfo = artifactsApi.getArtifacts( au.getAuId(),namespace,
             url, null, "all", false, null, token);
         auArtifacts.addAll(pageInfo.getArtifacts());
         token = pageInfo.getPageInfo().getContinuationToken();

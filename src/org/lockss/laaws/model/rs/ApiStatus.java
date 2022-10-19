@@ -26,7 +26,7 @@
  * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
-*/
+ */
 
 /*
  * LOCKSS Repository Service REST API
@@ -96,6 +96,15 @@ public class ApiStatus implements Serializable {
 
   public static final String SERIALIZED_NAME_SERVICE_NAME = "serviceName";
   @SerializedName(SERIALIZED_NAME_SERVICE_NAME) private String serviceName;
+
+  public static final String SERIALIZED_NAME_READY_TIME = "readyTime";
+  @SerializedName(SERIALIZED_NAME_READY_TIME) private Long readyTime;
+
+  public static final String SERIALIZED_NAME_REASON = "reason";
+  @SerializedName(SERIALIZED_NAME_REASON) private String reason;
+
+  public static final String SERIALIZED_NAME_PLUGINS_READY = "pluginsReady";
+  @SerializedName(SERIALIZED_NAME_PLUGINS_READY) private Boolean pluginsReady;
 
   public ApiStatus() {}
 
@@ -219,6 +228,68 @@ public class ApiStatus implements Serializable {
     this.serviceName = serviceName;
   }
 
+  public ApiStatus readyTime(Long readyTime) {
+    this.readyTime = readyTime;
+    return this;
+  }
+
+  /**
+   * The time the service became ready.
+   * @return readyTime
+   **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "The time the service became ready.")
+
+  public Long getReadyTime() {
+    return readyTime;
+  }
+
+  public void setReadyTime(Long readyTime) {
+    this.readyTime = readyTime;
+  }
+
+  public ApiStatus reason(String reason) {
+    this.reason = reason;
+    return this;
+  }
+
+  /**
+   * The reason this service is not ready.
+   * @return reason
+   **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "The reason this service is not ready.")
+
+  public String getReason() {
+    return reason;
+  }
+
+  public void setReason(String reason) {
+    this.reason = reason;
+  }
+
+  public ApiStatus pluginsReady(Boolean pluginsReady) {
+    this.pluginsReady = pluginsReady;
+    return this;
+  }
+
+  /**
+   * An indication of whether this service has made the loadable plugins available.
+   * @return pluginsReady
+   **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(
+    value = "An indication of whether this service has made the loadable plugins available.")
+
+  public Boolean
+  getPluginsReady() {
+    return pluginsReady;
+  }
+
+  public void setPluginsReady(Boolean pluginsReady) {
+    this.pluginsReady = pluginsReady;
+  }
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -229,17 +300,20 @@ public class ApiStatus implements Serializable {
     }
     ApiStatus apiStatus = (ApiStatus) o;
     return Objects.equals(this.apiVersion, apiStatus.apiVersion)
-        && Objects.equals(this.componentName, apiStatus.componentName)
-        && Objects.equals(this.componentVersion, apiStatus.componentVersion)
-        && Objects.equals(this.lockssVersion, apiStatus.lockssVersion)
-        && Objects.equals(this.ready, apiStatus.ready)
-        && Objects.equals(this.serviceName, apiStatus.serviceName);
+      && Objects.equals(this.componentName, apiStatus.componentName)
+      && Objects.equals(this.componentVersion, apiStatus.componentVersion)
+      && Objects.equals(this.lockssVersion, apiStatus.lockssVersion)
+      && Objects.equals(this.ready, apiStatus.ready)
+      && Objects.equals(this.serviceName, apiStatus.serviceName)
+      && Objects.equals(this.readyTime, apiStatus.readyTime)
+      && Objects.equals(this.reason, apiStatus.reason)
+      && Objects.equals(this.pluginsReady, apiStatus.pluginsReady);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(
-        apiVersion, componentName, componentVersion, lockssVersion, ready, serviceName);
+    return Objects.hash(apiVersion, componentName, componentVersion, lockssVersion, ready,
+      serviceName, readyTime, reason, pluginsReady);
   }
 
   @Override
@@ -252,6 +326,9 @@ public class ApiStatus implements Serializable {
     sb.append("    lockssVersion: ").append(toIndentedString(lockssVersion)).append("\n");
     sb.append("    ready: ").append(toIndentedString(ready)).append("\n");
     sb.append("    serviceName: ").append(toIndentedString(serviceName)).append("\n");
+    sb.append("    readyTime: ").append(toIndentedString(readyTime)).append("\n");
+    sb.append("    reason: ").append(toIndentedString(reason)).append("\n");
+    sb.append("    pluginsReady: ").append(toIndentedString(pluginsReady)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -279,6 +356,9 @@ public class ApiStatus implements Serializable {
     openapiFields.add("lockssVersion");
     openapiFields.add("ready");
     openapiFields.add("serviceName");
+    openapiFields.add("readyTime");
+    openapiFields.add("reason");
+    openapiFields.add("pluginsReady");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -302,8 +382,8 @@ public class ApiStatus implements Serializable {
         return;
       } else { // has required fields
         throw new IllegalArgumentException(String.format(
-            "The required field(s) %s in ApiStatus is not found in the empty JSON string",
-            ApiStatus.openapiRequiredFields.toString()));
+          "The required field(s) %s in ApiStatus is not found in the empty JSON string",
+          ApiStatus.openapiRequiredFields.toString()));
       }
     }
 
@@ -312,8 +392,8 @@ public class ApiStatus implements Serializable {
     for (Entry<String, JsonElement> entry : entries) {
       if (!ApiStatus.openapiFields.contains(entry.getKey())) {
         throw new IllegalArgumentException(String.format(
-            "The field `%s` in the JSON string is not defined in the `ApiStatus` properties. JSON: %s",
-            entry.getKey(), jsonObj.toString()));
+          "The field `%s` in the JSON string is not defined in the `ApiStatus` properties. JSON: %s",
+          entry.getKey(), jsonObj.toString()));
       }
     }
 
@@ -321,39 +401,45 @@ public class ApiStatus implements Serializable {
     for (String requiredField : ApiStatus.openapiRequiredFields) {
       if (jsonObj.get(requiredField) == null) {
         throw new IllegalArgumentException(
-            String.format("The required field `%s` is not found in the JSON string: %s",
-                requiredField, jsonObj.toString()));
+          String.format("The required field `%s` is not found in the JSON string: %s",
+            requiredField, jsonObj.toString()));
       }
     }
     if ((jsonObj.get("apiVersion") != null && !jsonObj.get("apiVersion").isJsonNull())
-        && !jsonObj.get("apiVersion").isJsonPrimitive()) {
+      && !jsonObj.get("apiVersion").isJsonPrimitive()) {
       throw new IllegalArgumentException(String.format(
-          "Expected the field `apiVersion` to be a primitive type in the JSON string but got `%s`",
-          jsonObj.get("apiVersion").toString()));
+        "Expected the field `apiVersion` to be a primitive type in the JSON string but got `%s`",
+        jsonObj.get("apiVersion").toString()));
     }
     if ((jsonObj.get("componentName") != null && !jsonObj.get("componentName").isJsonNull())
-        && !jsonObj.get("componentName").isJsonPrimitive()) {
+      && !jsonObj.get("componentName").isJsonPrimitive()) {
       throw new IllegalArgumentException(String.format(
-          "Expected the field `componentName` to be a primitive type in the JSON string but got `%s`",
-          jsonObj.get("componentName").toString()));
+        "Expected the field `componentName` to be a primitive type in the JSON string but got `%s`",
+        jsonObj.get("componentName").toString()));
     }
     if ((jsonObj.get("componentVersion") != null && !jsonObj.get("componentVersion").isJsonNull())
-        && !jsonObj.get("componentVersion").isJsonPrimitive()) {
+      && !jsonObj.get("componentVersion").isJsonPrimitive()) {
       throw new IllegalArgumentException(String.format(
-          "Expected the field `componentVersion` to be a primitive type in the JSON string but got `%s`",
-          jsonObj.get("componentVersion").toString()));
+        "Expected the field `componentVersion` to be a primitive type in the JSON string but got `%s`",
+        jsonObj.get("componentVersion").toString()));
     }
     if ((jsonObj.get("lockssVersion") != null && !jsonObj.get("lockssVersion").isJsonNull())
-        && !jsonObj.get("lockssVersion").isJsonPrimitive()) {
+      && !jsonObj.get("lockssVersion").isJsonPrimitive()) {
       throw new IllegalArgumentException(String.format(
-          "Expected the field `lockssVersion` to be a primitive type in the JSON string but got `%s`",
-          jsonObj.get("lockssVersion").toString()));
+        "Expected the field `lockssVersion` to be a primitive type in the JSON string but got `%s`",
+        jsonObj.get("lockssVersion").toString()));
     }
     if ((jsonObj.get("serviceName") != null && !jsonObj.get("serviceName").isJsonNull())
-        && !jsonObj.get("serviceName").isJsonPrimitive()) {
+      && !jsonObj.get("serviceName").isJsonPrimitive()) {
       throw new IllegalArgumentException(String.format(
-          "Expected the field `serviceName` to be a primitive type in the JSON string but got `%s`",
-          jsonObj.get("serviceName").toString()));
+        "Expected the field `serviceName` to be a primitive type in the JSON string but got `%s`",
+        jsonObj.get("serviceName").toString()));
+    }
+    if ((jsonObj.get("reason") != null && !jsonObj.get("reason").isJsonNull())
+      && !jsonObj.get("reason").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(
+        "Expected the field `reason` to be a primitive type in the JSON string but got `%s`",
+        jsonObj.get("reason").toString()));
     }
   }
 
@@ -366,7 +452,7 @@ public class ApiStatus implements Serializable {
       }
       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
       final TypeAdapter<ApiStatus> thisAdapter =
-          gson.getDelegateAdapter(this, TypeToken.get(ApiStatus.class));
+        gson.getDelegateAdapter(this, TypeToken.get(ApiStatus.class));
 
       return (TypeAdapter<T>) new TypeAdapter<ApiStatus>() {
         @Override

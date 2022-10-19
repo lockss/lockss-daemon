@@ -204,7 +204,7 @@ public class CuMover extends Worker {
   void commitArtifact(Artifact uncommitted, DigestCachedUrl dcu) throws ApiException {
     Artifact committed;
     log.debug3("committing artifact " + uncommitted.getId());
-    committed = artifactsApi.updateArtifact(uncommitted.getId(),true,uncommitted.getNamespace());
+    committed = artifactsApi.updateArtifact(uncommitted.getId(),true, uncommitted.getNamespace());
     String contentDigest = dcu.getContentDigest();
     if (!committed.getContentDigest().equals(contentDigest)) {
       String err="Error in commit of " + dcu.getCu().getUrl() + " content digest do not match";

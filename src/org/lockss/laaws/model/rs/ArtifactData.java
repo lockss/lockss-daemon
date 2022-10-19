@@ -75,7 +75,7 @@ public class ArtifactData implements AutoCloseable {
   public static final String MULTIPART_ARTIFACT_CONTENT = "artifact-content";
   // Artifact identity
   public static final String ARTIFACT_ID_KEY = "X-LockssRepo-Artifact-Id";
-  public static final String ARTIFACT_COLLECTION_KEY = "X-LockssRepo-Artifact-Collection";
+  public static final String ARTIFACT_NAMESPACE_KEY = "X-LockssRepo-Artifact-Namespace";
   public static final String ARTIFACT_AUID_KEY = "X-LockssRepo-Artifact-AuId";
   public static final String ARTIFACT_URI_KEY = "X-LockssRepo-Artifact-Uri";
   public static final String ARTIFACT_VERSION_KEY = "X-LockssRepo-Artifact-Version";
@@ -141,7 +141,7 @@ public class ArtifactData implements AutoCloseable {
           // Set ArtifactIdentifier
           ArtifactIdentifier id = new ArtifactIdentifier(
               hdrs.getFirst(ARTIFACT_ID_KEY),
-              hdrs.getFirst(ARTIFACT_COLLECTION_KEY),
+              hdrs.getFirst(ARTIFACT_NAMESPACE_KEY),
               hdrs.getFirst(ARTIFACT_AUID_KEY),
               hdrs.getFirst(ARTIFACT_URI_KEY),
               Integer.valueOf(hdrs.getFirst(ARTIFACT_VERSION_KEY))
