@@ -274,6 +274,16 @@ public class TestDefinablePlugin extends LockssTestCase {
 
   }
 
+  public void testRequiredDaemonVersion() throws Exception {
+    definablePlugin.initPlugin(daemon, "org.lockss.plugin.definable.GoodPlugin");
+    assertNotNull(definablePlugin.getRequiredDaemonVersion());
+    assertEmpty(definablePlugin.getRequiredDaemonVersion());
+    definablePlugin = new MyDefinablePlugin();
+    definablePlugin.initPlugin(daemon, "org.lockss.plugin.definable.LargeTestPlugin");
+    assertEquals(ListUtil.list("1.1.1"),
+                 definablePlugin.getRequiredDaemonVersion());
+  }
+
   public void testGetFeatureVersion() throws Exception {
     // no versions set
     assertEquals(null, definablePlugin.getFeatureVersion(Plugin.Feature.Poll));

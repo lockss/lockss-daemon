@@ -150,8 +150,8 @@ public abstract class BasePlugin
   /** Subclasses should override this if they want to require a minimum
    * daemon version in order to run
    */
-  public String getRequiredDaemonVersion() {
-    return "0.0.0";
+  public List<String> getRequiredDaemonVersion() {
+    return ListUtil.list("0.0.0");
   }
 
   public String getFeatureVersion(Plugin.Feature feat) {

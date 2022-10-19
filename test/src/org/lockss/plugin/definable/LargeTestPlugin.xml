@@ -12,6 +12,10 @@
     <string>7</string>
   </entry>
   <entry>
+    <string>required_daemon_version</string>
+    <string>1.1.1</string>
+  </entry>
+  <entry>
     <string>au_name</string>
     <string>"Large Plugin AU, Base URL %s, Resolver URL %s, Journal Code %s, Year %d, Issues %s, Range %s", base_url, resolver_url, journal_code, year, issue_set, num_issue_range</string>
   </entry>

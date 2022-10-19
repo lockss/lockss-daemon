@@ -1787,18 +1787,50 @@ public class PluginManager
     }
   }
 
+  /**
+   * If the plugin lists a single required version, return true iff
+   * the daemon version is >= that.  If it lists multipl required
+   * version, return true iff one of them matches the daemon version's
+   * major version and the daemon version is <= it.
+   */
   protected boolean isCompatible(Plugin plug) {
-    boolean res;
+    List<DaemonVersion> reqVers = getPluginRequiredVersions(plug);
     DaemonVersion dver = getDaemonVersion();
+    boolean res = false;
     if (dver == null) {
       res = true; // don't break things during testing
     } else {
-      DaemonVersion preq = new DaemonVersion(plug.getRequiredDaemonVersion());
-      res = dver.compareTo(preq) >= 0;
+      switch (reqVers.size()) {
+      case 0:                // plugin has no required daemon version
+        res = true;
+        break;
+      case 1:                // plugin has one required daemon version
+        res = dver.compareTo(reqVers.get(0)) >= 0;
+        break;
+      default:
+        // plugin has required daemon version for multiple major versions.
+        // Find the one corresponding to this daemon's major version.
+        for (DaemonVersion ver : reqVers) {
+          if (dver.getMajorVersion() == ver.getMajorVersion()) {
+            res = dver.compareTo(ver) >= 0;
+            break;
+          }
+        }
+        break;
+      }
     }
     if (log.isDebug3())
-      log.debug3("Plugin is " + (res ? "" : "not ") +
+      log.debug3("Plugin " + plug.getPluginName() +
+                 " (req: " + reqVers + ") is " + (res ? "" : "not ") +
 		 "compatible with daemon " + dver);
+    return res;
+  }
+
+  List<DaemonVersion> getPluginRequiredVersions(Plugin plug) {
+    List<DaemonVersion> res = new ArrayList<>();
+    for (String reqVer : plug.getRequiredDaemonVersion()) {
+      res.add(new DaemonVersion(reqVer));
+    }
     return res;
   }
 

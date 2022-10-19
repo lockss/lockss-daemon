@@ -109,8 +109,11 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
     return pluginVer;
   }
 
-  public String getRequiredDaemonVersion() {
-    return requiredDaemonVersion;
+  public List<String> getRequiredDaemonVersion() {
+    if (requiredDaemonVersion == null) {
+      return Collections.emptyList();
+    }
+    return ListUtil.list(requiredDaemonVersion);
   }
 
   public String getFeatureVersion(Plugin.Feature feat) {

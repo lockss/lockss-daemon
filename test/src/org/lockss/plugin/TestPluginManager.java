@@ -238,7 +238,7 @@ public class TestPluginManager extends LockssTestCase {
   public void testEnsurePluginLoadedCheckDaemonVersion()
       throws Exception {
     mgr.startService();
-    String key = PluginManager.pluginKeyFromName(VerPlugin.class.getName());
+    String key = PluginManager.pluginKeyFromName(VerPlugin1_10_0.class.getName());
     // with insufficient daemon version,
     setDaemonVersion("1.1.1");
     // plugin requiring 1.10.0 should not load
@@ -247,6 +247,39 @@ public class TestPluginManager extends LockssTestCase {
     setDaemonVersion("11.1.1");
     // it should load.
     assertTrue(mgr.ensurePluginLoaded(key));
+  }
+
+  public void testEnsurePluginLoadedCheckDaemonVersionList()
+      throws Exception {
+    mgr.startService();
+    // A plugin that wants either 1.10.0 or 2.7.3
+    String key =
+      PluginManager.pluginKeyFromName(VerPlugin1_10_0or2_7_3.class.getName());
+    // with insufficient daemon version,
+    setDaemonVersion("1.9.1");
+    // plugin requiring 1.10.0 or 2.7.3 should not load
+    assertFalse(mgr.ensurePluginLoaded(key));
+    mgr.removePlugin(key);
+    // with sufficient daemon version,
+    setDaemonVersion("1.11.1");
+    // it should load.
+    assertTrue(mgr.ensurePluginLoaded(key));
+    mgr.removePlugin(key);
+    // with insufficient 2.x daemon version,
+    setDaemonVersion("2.7.2");
+    // it should not load.
+    assertFalse(mgr.ensurePluginLoaded(key));
+    mgr.removePlugin(key);
+    // with sufficient 2.x daemon version,
+    setDaemonVersion("2.7.3");
+    // it should load.
+    assertTrue(mgr.ensurePluginLoaded(key));
+    mgr.removePlugin(key);
+    // with 3.x version,
+    setDaemonVersion("3.1.3");
+    // it should not load.
+    assertFalse(mgr.ensurePluginLoaded(key));
+    mgr.removePlugin(key);
   }
 
   static class APlugin extends MockPlugin {
@@ -2035,13 +2068,23 @@ public class TestPluginManager extends LockssTestCase {
     }
   }
 
-  private static class VerPlugin extends MockPlugin {
-    public VerPlugin(){
+  private static class VerPlugin1_10_0 extends MockPlugin {
+    public VerPlugin1_10_0(){
       super();
     }
 
-    public String getRequiredDaemonVersion() {
-      return "1.10.0";
+    public List<String> getRequiredDaemonVersion() {
+      return ListUtil.list("1.10.0");
+    }
+  }
+
+  private static class VerPlugin1_10_0or2_7_3 extends MockPlugin {
+    public VerPlugin1_10_0or2_7_3(){
+      super();
+    }
+
+    public List<String> getRequiredDaemonVersion() {
+      return ListUtil.list("1.10.0", "2.7.3");
     }
   }
 
