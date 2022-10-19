@@ -24,27 +24,27 @@
     #param[base_url] = http://egsp.lyellcollection.org/
 
     au < gsl.ClockssGSLDrupalPlugin ; doesNotExist ; doesNotExist ; 1986 ; Engineering Geology Special Publications Volume 1 ; 1 ; https://egsp.lyellcollection.org/ ;  >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1986 ; Engineering Geology Special Publications Volume 2 ; 2 ; https://egsp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1986 ; Engineering Geology Special Publications Volume 3 ; 3 ; https://egsp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1987 ; Engineering Geology Special Publications Volume 4 ; 4 ; https://egsp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1988 ; Engineering Geology Special Publications Volume 5 ; 5 ; https://egsp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1990 ; Engineering Geology Special Publications Volume 6 ; 6 ; https://egsp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1991 ; Engineering Geology Special Publications Volume 7 ; 7 ; https://egsp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1986 ; Engineering Geology Special Publications Volume 2 ; 2 ; https://egsp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1986 ; Engineering Geology Special Publications Volume 3 ; 3 ; https://egsp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1987 ; Engineering Geology Special Publications Volume 4 ; 4 ; https://egsp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1988 ; Engineering Geology Special Publications Volume 5 ; 5 ; https://egsp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1990 ; Engineering Geology Special Publications Volume 6 ; 6 ; https://egsp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1991 ; Engineering Geology Special Publications Volume 7 ; 7 ; https://egsp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
     au < gsl.ClockssGSLDrupalPlugin ; doesNotExist ; doesNotExist ; 0 ; Engineering Geology Special Publications Volume 8 ; 8 ; https://egsp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; doesNotExist ; doesNotExist ; 0 ; Engineering Geology Special Publications Volume 9 ; 9 ; https://egsp.lyellcollection.org/ ;  >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1995 ; Engineering Geology Special Publications Volume 10 ; 10 ; https://egsp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1996 ; Engineering Geology Special Publications Volume 11 ; 11 ; https://egsp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1997 ; Engineering Geology Special Publications Volume 12 ; 12 ; https://egsp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1998 ; Engineering Geology Special Publications Volume 13 ; 13 ; https://egsp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1998 ; Engineering Geology Special Publications Volume 14 ; 14 ; https://egsp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1998 ; Engineering Geology Special Publications Volume 15 ; 15 ; https://egsp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1999 ; Engineering Geology Special Publications Volume 16 ; 16 ; https://egsp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2001 ; Engineering Geology Special Publications Volume 17 ; 17 ; https://egsp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2001 ; Engineering Geology Special Publications Volume 18 ; 18 ; https://egsp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2002 ; Engineering Geology Special Publications Volume 19 ; 19 ; https://egsp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2004 ; Engineering Geology Special Publications Volume 20 ; 20 ; https://egsp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2006 ; Engineering Geology Special Publications Volume 21 ; 21 ; https://egsp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2009 ; Engineering Geology Special Publications Volume 22 ; 22 ; https://egsp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1995 ; Engineering Geology Special Publications Volume 10 ; 10 ; https://egsp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1996 ; Engineering Geology Special Publications Volume 11 ; 11 ; https://egsp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1997 ; Engineering Geology Special Publications Volume 12 ; 12 ; https://egsp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1998 ; Engineering Geology Special Publications Volume 13 ; 13 ; https://egsp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1998 ; Engineering Geology Special Publications Volume 14 ; 14 ; https://egsp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1998 ; Engineering Geology Special Publications Volume 15 ; 15 ; https://egsp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1999 ; Engineering Geology Special Publications Volume 16 ; 16 ; https://egsp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2001 ; Engineering Geology Special Publications Volume 17 ; 17 ; https://egsp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2001 ; Engineering Geology Special Publications Volume 18 ; 18 ; https://egsp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2002 ; Engineering Geology Special Publications Volume 19 ; 19 ; https://egsp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2004 ; Engineering Geology Special Publications Volume 20 ; 20 ; https://egsp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2006 ; Engineering Geology Special Publications Volume 21 ; 21 ; https://egsp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2009 ; Engineering Geology Special Publications Volume 22 ; 22 ; https://egsp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
     au < gsl.ClockssGSLDrupalPlugin ; finished ; frozen ; 2010 ; Engineering Geology Special Publications Volume 23 ; 23 ; http://egsp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
     au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2011 ; Engineering Geology Special Publications Volume 24 ; 24 ; http://egsp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
     au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2012 ; Engineering Geology Special Publications Volume 25 ; 25 ; http://egsp.lyellcollection.org/ ; reingest3.clockss.org:8083 >
@@ -66,15 +66,15 @@
     pluginPrefix = org.lockss.plugin.highwire.
     #param[base_url] = http://geea.lyellcollection.org/
 
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2001 ; Geochemistry: Exploration, Environment, Analysis Volume 1 ; 1 ; https://geea.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2002 ; Geochemistry: Exploration, Environment, Analysis Volume 2 ; 2 ; https://geea.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2003 ; Geochemistry: Exploration, Environment, Analysis Volume 3 ; 3 ; https://geea.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2004 ; Geochemistry: Exploration, Environment, Analysis Volume 4 ; 4 ; https://geea.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2005 ; Geochemistry: Exploration, Environment, Analysis Volume 5 ; 5 ; https://geea.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2006 ; Geochemistry: Exploration, Environment, Analysis Volume 6 ; 6 ; https://geea.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2007 ; Geochemistry: Exploration, Environment, Analysis Volume 7 ; 7 ; https://geea.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2008 ; Geochemistry: Exploration, Environment, Analysis Volume 8 ; 8 ; https://geea.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2009 ; Geochemistry: Exploration, Environment, Analysis Volume 9 ; 9 ; https://geea.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2001 ; Geochemistry: Exploration, Environment, Analysis Volume 1 ; 1 ; https://geea.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2002 ; Geochemistry: Exploration, Environment, Analysis Volume 2 ; 2 ; https://geea.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2003 ; Geochemistry: Exploration, Environment, Analysis Volume 3 ; 3 ; https://geea.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2004 ; Geochemistry: Exploration, Environment, Analysis Volume 4 ; 4 ; https://geea.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2005 ; Geochemistry: Exploration, Environment, Analysis Volume 5 ; 5 ; https://geea.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2006 ; Geochemistry: Exploration, Environment, Analysis Volume 6 ; 6 ; https://geea.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2007 ; Geochemistry: Exploration, Environment, Analysis Volume 7 ; 7 ; https://geea.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2008 ; Geochemistry: Exploration, Environment, Analysis Volume 8 ; 8 ; https://geea.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2009 ; Geochemistry: Exploration, Environment, Analysis Volume 9 ; 9 ; https://geea.lyellcollection.org/ ; reingest4.clockss.org:8082 >
     au < gsl.ClockssGSLDrupalPlugin ; finished ; frozen ; 2010 ; Geochemistry: Exploration, Environment, Analysis Volume 10 ; 10 ; http://geea.lyellcollection.org/ ; reingest1.clockss.org:8082 >
     au < gsl.ClockssGSLDrupalPlugin ; finished ; frozen ; 2011 ; Geochemistry: Exploration, Environment, Analysis Volume 11 ; 11 ; http://geea.lyellcollection.org/ ; reingest2.clockss.org:8085 >
     au < gsl.ClockssGSLDrupalPlugin ; finished ; frozen ; 2012 ; Geochemistry: Exploration, Environment, Analysis Volume 12 ; 12 ; http://geea.lyellcollection.org/ ; reingest3.clockss.org:8083 >
@@ -84,8 +84,8 @@
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2016 ; Geochemistry: Exploration, Environment, Analysis Volume 16 ; 16 ; http://geea.lyellcollection.org/ ; reingest4.clockss.org:8082 >
     au < gsl.ClockssGSLDrupalPlugin ; finished ; frozen ; 2017 ; Geochemistry: Exploration, Environment, Analysis Volume 17 ; 17 ; http://geea.lyellcollection.org/ ; reingest4.clockss.org:8082 >
     au < gsl.ClockssGSLDrupalPlugin ; finished ; frozen ; 2018 ; Geochemistry: Exploration, Environment, Analysis Volume 18 ; 18 ; https://geea.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2019 ; Geochemistry: Exploration, Environment, Analysis Volume 19 ; 19 ; https://geea.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2020 ; Geochemistry: Exploration, Environment, Analysis Volume 20 ; 20 ; https://geea.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2019 ; Geochemistry: Exploration, Environment, Analysis Volume 19 ; 19 ; https://geea.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2020 ; Geochemistry: Exploration, Environment, Analysis Volume 20 ; 20 ; https://geea.lyellcollection.org/ ; reingest2.clockss.org:8085 >
     au < gsl.ClockssGSLDrupalPlugin ; frozen ; exists ; 2021 ; Geochemistry: Exploration, Environment, Analysis Volume 21 ; 21 ; https://geea.lyellcollection.org/ ; >
     au < gsl.ClockssGSLDrupalPlugin ; superseded ; exists ; 2022 ; Geochemistry: Exploration, Environment, Analysis Volume 22 [superseded] ; 22 ; https://geea.lyellcollection.org/ ; >
 
@@ -102,39 +102,39 @@
     pluginPrefix = org.lockss.plugin.highwire.
     #param[base_url] = http://mem.lyellcollection.org/
 
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1958 ; Geological Society of London Memoirs Volume 1 ; 1 ; https://mem.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1960 ; Geological Society of London Memoirs Volume 2 ; 2 ; https://mem.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1962 ; Geological Society of London Memoirs Volume 3 ; 3 ; https://mem.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1968 ; Geological Society of London Memoirs Volume 4 ; 4 ; https://mem.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1971 ; Geological Society of London Memoirs Volume 5 ; 5 ; https://mem.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1971 ; Geological Society of London Memoirs Volume 6 ; 6 ; https://mem.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1973 ; Geological Society of London Memoirs Volume 7 ; 7 ; https://mem.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1978 ; Geological Society of London Memoirs Volume 8 ; 8 ; https://mem.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1985 ; Geological Society of London Memoirs Volume 9 ; 9 ; https://mem.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1985 ; Geological Society of London Memoirs Volume 10 ; 10 ; https://mem.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1986 ; Geological Society of London Memoirs Volume 11 ; 11 ; https://mem.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1990 ; Geological Society of London Memoirs Volume 12 ; 12 ; https://mem.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1992 ; Geological Society of London Memoirs Volume 13 ; 13 ; https://mem.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1991 ; Geological Society of London Memoirs Volume 14 ; 14 ; https://mem.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1994 ; Geological Society of London Memoirs Volume 15 ; 15 ; https://mem.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1995 ; Geological Society of London Memoirs Volume 16 ; 16 ; https://mem.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1997 ; Geological Society of London Memoirs Volume 17 ; 17 ; https://mem.lyellcollection.org/ ; reingest2.clockss.org:8085 > #520 error https://mem.lyellcollection.org/content/17/1/477
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1999 ; Geological Society of London Memoirs Volume 18 ; 18 ; https://mem.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1999 ; Geological Society of London Memoirs Volume 19 ; 19 ; https://mem.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2003 ; Geological Society of London Memoirs Volume 20 ; 20 ; https://mem.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2002 ; Geological Society of London Memoirs Volume 21 ; 21 ; https://mem.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2002 ; Geological Society of London Memoirs Volume 22 ; 22 ; https://mem.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2002 ; Geological Society of London Memoirs Volume 23 ; 23 ; https://mem.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2002 ; Geological Society of London Memoirs Volume 24 ; 24 ; https://mem.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2002 ; Geological Society of London Memoirs Volume 25 ; 25 ; https://mem.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2002 ; Geological Society of London Memoirs Volume 26 ; 26 ; https://mem.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2003 ; Geological Society of London Memoirs Volume 27 ; 27 ; https://mem.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2003 ; Geological Society of London Memoirs Volume 28 ; 28 ; https://mem.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2004 ; Geological Society of London Memoirs Volume 29 ; 29 ; https://mem.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2004 ; Geological Society of London Memoirs Volume 30 ; 30 ; https://mem.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2005 ; Geological Society of London Memoirs Volume 31 ; 31 ; https://mem.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2006 ; Geological Society of London Memoirs Volume 32 ; 32 ; https://mem.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2008 ; Geological Society of London Memoirs Volume 33 ; 33 ; https://mem.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1958 ; Geological Society of London Memoirs Volume 1 ; 1 ; https://mem.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1960 ; Geological Society of London Memoirs Volume 2 ; 2 ; https://mem.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1962 ; Geological Society of London Memoirs Volume 3 ; 3 ; https://mem.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1968 ; Geological Society of London Memoirs Volume 4 ; 4 ; https://mem.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1971 ; Geological Society of London Memoirs Volume 5 ; 5 ; https://mem.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1971 ; Geological Society of London Memoirs Volume 6 ; 6 ; https://mem.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1973 ; Geological Society of London Memoirs Volume 7 ; 7 ; https://mem.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1978 ; Geological Society of London Memoirs Volume 8 ; 8 ; https://mem.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1985 ; Geological Society of London Memoirs Volume 9 ; 9 ; https://mem.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1985 ; Geological Society of London Memoirs Volume 10 ; 10 ; https://mem.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1986 ; Geological Society of London Memoirs Volume 11 ; 11 ; https://mem.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1990 ; Geological Society of London Memoirs Volume 12 ; 12 ; https://mem.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1992 ; Geological Society of London Memoirs Volume 13 ; 13 ; https://mem.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1991 ; Geological Society of London Memoirs Volume 14 ; 14 ; https://mem.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1994 ; Geological Society of London Memoirs Volume 15 ; 15 ; https://mem.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1995 ; Geological Society of London Memoirs Volume 16 ; 16 ; https://mem.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1997 ; Geological Society of London Memoirs Volume 17 ; 17 ; https://mem.lyellcollection.org/ ; reingest2.clockss.org:8085 > #520 error https://mem.lyellcollection.org/content/17/1/477
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1999 ; Geological Society of London Memoirs Volume 18 ; 18 ; https://mem.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1999 ; Geological Society of London Memoirs Volume 19 ; 19 ; https://mem.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2003 ; Geological Society of London Memoirs Volume 20 ; 20 ; https://mem.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2002 ; Geological Society of London Memoirs Volume 21 ; 21 ; https://mem.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2002 ; Geological Society of London Memoirs Volume 22 ; 22 ; https://mem.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2002 ; Geological Society of London Memoirs Volume 23 ; 23 ; https://mem.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2002 ; Geological Society of London Memoirs Volume 24 ; 24 ; https://mem.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2002 ; Geological Society of London Memoirs Volume 25 ; 25 ; https://mem.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2002 ; Geological Society of London Memoirs Volume 26 ; 26 ; https://mem.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2003 ; Geological Society of London Memoirs Volume 27 ; 27 ; https://mem.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2003 ; Geological Society of London Memoirs Volume 28 ; 28 ; https://mem.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2004 ; Geological Society of London Memoirs Volume 29 ; 29 ; https://mem.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2004 ; Geological Society of London Memoirs Volume 30 ; 30 ; https://mem.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2005 ; Geological Society of London Memoirs Volume 31 ; 31 ; https://mem.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2006 ; Geological Society of London Memoirs Volume 32 ; 32 ; https://mem.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2008 ; Geological Society of London Memoirs Volume 33 ; 33 ; https://mem.lyellcollection.org/ ; reingest4.clockss.org:8082 >
     au < gsl.ClockssGSLDrupalPlugin ; finished ; frozen ; 2011 ; Geological Society of London Memoirs Volume 34 ; 34 ; http://mem.lyellcollection.org/ ; reingest1.clockss.org:8082 >
     au < gsl.ClockssGSLDrupalPlugin ; finished ; frozen ; 2011 ; Geological Society of London Memoirs Volume 35 ; 35 ; http://mem.lyellcollection.org/ ; reingest2.clockss.org:8085 >
     au < gsl.ClockssGSLDrupalPlugin ; finished ; frozen ; 2011 ; Geological Society of London Memoirs Volume 36 ; 36 ; http://mem.lyellcollection.org/ ; reingest3.clockss.org:8083 >
@@ -150,11 +150,11 @@
     au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2016 ; Geological Society of London Memoirs Volume 46 ; 46 ; http://mem.lyellcollection.org/ ; reingest4.clockss.org:8082 >
     au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2017 ; Geological Society of London Memoirs Volume 47 ; 47 ; http://mem.lyellcollection.org/ ;  reingest3.clockss.org:8083 >
     au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2017 ; Geological Society of London Memoirs Volume 48 ; 48 ; http://mem.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2019 ; Geological Society of London Memoirs Volume 49 ; 49 ; https://mem.lyellcollection.org/ ; reingest3.clockss.org:8083 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2020 ; Geological Society of London Memoirs Volume 50 ; 50 ; https://mem.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2020 ; Geological Society of London Memoirs Volume 51 ; 51 ; https://mem.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2020 ; Geological Society of London Memoirs Volume 52 ; 52 ; https://mem.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2020 ; Geological Society of London Memoirs Volume 53 ; 53 ; https://mem.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2019 ; Geological Society of London Memoirs Volume 49 ; 49 ; https://mem.lyellcollection.org/ ; reingest3.clockss.org:8083 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2020 ; Geological Society of London Memoirs Volume 50 ; 50 ; https://mem.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2020 ; Geological Society of London Memoirs Volume 51 ; 51 ; https://mem.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2020 ; Geological Society of London Memoirs Volume 52 ; 52 ; https://mem.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2020 ; Geological Society of London Memoirs Volume 53 ; 53 ; https://mem.lyellcollection.org/ ; reingest2.clockss.org:8085 >
     au < gsl.ClockssGSLDrupalPlugin ; frozen ; exists ; 2021 ; Geological Society of London Memoirs Volume 54 ; 54 ; https://mem.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; frozen ; exists ; 2021 ; Geological Society of London Memoirs Volume 55 ; 55 ; https://mem.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; doNotProcess ; exists ; 2021 ; Geological Society of London Memoirs Volume 56 ; 56 ; https://mem.lyellcollection.org/ ;  >
@@ -177,299 +177,299 @@
     pluginPrefix = org.lockss.plugin.highwire.
     #param[base_url] = http://sp.lyellcollection.org/
 
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1964 ; Geological Society of London Special Publications Volume 1 ; 1 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1967 ; Geological Society of London Special Publications Volume 2 ; 2 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1969 ; Geological Society of London Special Publications Volume 3 ; 3 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1974 ; Geological Society of London Special Publications Volume 4 ; 4 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1971 ; Geological Society of London Special Publications Volume 5 ; 5 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1978 ; Geological Society of London Special Publications Volume 6 ; 6 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1977 ; Geological Society of London Special Publications Volume 7 ; 7 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1979 ; Geological Society of London Special Publications Volume 8 ; 8 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1981 ; Geological Society of London Special Publications Volume 9 ; 9 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1982 ; Geological Society of London Special Publications Volume 10 ; 10 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1983 ; Geological Society of London Special Publications Volume 11 ; 11 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1983 ; Geological Society of London Special Publications Volume 12 ; 12 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1984 ; Geological Society of London Special Publications Volume 13 ; 13 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1984 ; Geological Society of London Special Publications Volume 14 ; 14 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1984 ; Geological Society of London Special Publications Volume 15 ; 15 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1984 ; Geological Society of London Special Publications Volume 16 ; 16 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1984 ; Geological Society of London Special Publications Volume 17 ; 17 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1985 ; Geological Society of London Special Publications Volume 18 ; 18 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1986 ; Geological Society of London Special Publications Volume 19 ; 19 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1986 ; Geological Society of London Special Publications Volume 20 ; 20 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1986 ; Geological Society of London Special Publications Volume 21 ; 21 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1986 ; Geological Society of London Special Publications Volume 22 ; 22 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1986 ; Geological Society of London Special Publications Volume 23 ; 23 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1986 ; Geological Society of London Special Publications Volume 24 ; 24 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1986 ; Geological Society of London Special Publications Volume 25 ; 25 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1987 ; Geological Society of London Special Publications Volume 26 ; 26 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1987 ; Geological Society of London Special Publications Volume 27 ; 27 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1987 ; Geological Society of London Special Publications Volume 28 ; 28 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1987 ; Geological Society of London Special Publications Volume 29 ; 29 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1987 ; Geological Society of London Special Publications Volume 30 ; 30 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1987 ; Geological Society of London Special Publications Volume 31 ; 31 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1987 ; Geological Society of London Special Publications Volume 32 ; 32 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1987 ; Geological Society of London Special Publications Volume 33 ; 33 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1987 ; Geological Society of London Special Publications Volume 34 ; 34 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1987 ; Geological Society of London Special Publications Volume 35 ; 35 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1987 ; Geological Society of London Special Publications Volume 36 ; 36 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1988 ; Geological Society of London Special Publications Volume 37 ; 37 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1988 ; Geological Society of London Special Publications Volume 38 ; 38 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1988 ; Geological Society of London Special Publications Volume 39 ; 39 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1988 ; Geological Society of London Special Publications Volume 40 ; 40 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1989 ; Geological Society of London Special Publications Volume 41 ; 41 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1989 ; Geological Society of London Special Publications Volume 42 ; 42 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1989 ; Geological Society of London Special Publications Volume 43 ; 43 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1989 ; Geological Society of London Special Publications Volume 44 ; 44 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1989 ; Geological Society of London Special Publications Volume 45 ; 45 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1989 ; Geological Society of London Special Publications Volume 46 ; 46 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1989 ; Geological Society of London Special Publications Volume 47 ; 47 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1990 ; Geological Society of London Special Publications Volume 48 ; 48 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1990 ; Geological Society of London Special Publications Volume 49 ; 49 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1990 ; Geological Society of London Special Publications Volume 50 ; 50 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1990 ; Geological Society of London Special Publications Volume 51 ; 51 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1990 ; Geological Society of London Special Publications Volume 52 ; 52 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1990 ; Geological Society of London Special Publications Volume 53 ; 53 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1990 ; Geological Society of London Special Publications Volume 54 ; 54 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1990 ; Geological Society of London Special Publications Volume 55 ; 55 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1991 ; Geological Society of London Special Publications Volume 56 ; 56 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1991 ; Geological Society of London Special Publications Volume 57 ; 57 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1991 ; Geological Society of London Special Publications Volume 58 ; 58 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1991 ; Geological Society of London Special Publications Volume 59 ; 59 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1992 ; Geological Society of London Special Publications Volume 60 ; 60 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1992 ; Geological Society of London Special Publications Volume 61 ; 61 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1992 ; Geological Society of London Special Publications Volume 62 ; 62 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1992 ; Geological Society of London Special Publications Volume 63 ; 63 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1992 ; Geological Society of London Special Publications Volume 64 ; 64 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1992 ; Geological Society of London Special Publications Volume 65 ; 65 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1992 ; Geological Society of London Special Publications Volume 66 ; 66 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1992 ; Geological Society of London Special Publications Volume 67 ; 67 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1992 ; Geological Society of London Special Publications Volume 68 ; 68 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1992 ; Geological Society of London Special Publications Volume 69 ; 69 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1993 ; Geological Society of London Special Publications Volume 70 ; 70 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1993 ; Geological Society of London Special Publications Volume 71 ; 71 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1993 ; Geological Society of London Special Publications Volume 72 ; 72 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1993 ; Geological Society of London Special Publications Volume 73 ; 73 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1993 ; Geological Society of London Special Publications Volume 74 ; 74 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1993 ; Geological Society of London Special Publications Volume 75 ; 75 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1993 ; Geological Society of London Special Publications Volume 76 ; 76 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1994 ; Geological Society of London Special Publications Volume 77 ; 77 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1994 ; Geological Society of London Special Publications Volume 78 ; 78 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1994 ; Geological Society of London Special Publications Volume 79 ; 79 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1995 ; Geological Society of London Special Publications Volume 80 ; 80 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1994 ; Geological Society of London Special Publications Volume 81 ; 81 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1995 ; Geological Society of London Special Publications Volume 82 ; 82 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1995 ; Geological Society of London Special Publications Volume 83 ; 83 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1995 ; Geological Society of London Special Publications Volume 84 ; 84 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1995 ; Geological Society of London Special Publications Volume 85 ; 85 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1995 ; Geological Society of London Special Publications Volume 86 ; 86 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1995 ; Geological Society of London Special Publications Volume 87 ; 87 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1995 ; Geological Society of London Special Publications Volume 88 ; 88 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1995 ; Geological Society of London Special Publications Volume 89 ; 89 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1995 ; Geological Society of London Special Publications Volume 90 ; 90 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1995 ; Geological Society of London Special Publications Volume 91 ; 91 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1995 ; Geological Society of London Special Publications Volume 92 ; 92 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1995 ; Geological Society of London Special Publications Volume 93 ; 93 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1995 ; Geological Society of London Special Publications Volume 94 ; 94 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1995 ; Geological Society of London Special Publications Volume 95 ; 95 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1995 ; Geological Society of London Special Publications Volume 96 ; 96 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1995 ; Geological Society of London Special Publications Volume 97 ; 97 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1995 ; Geological Society of London Special Publications Volume 98 ; 98 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1996 ; Geological Society of London Special Publications Volume 99 ; 99 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1996 ; Geological Society of London Special Publications Volume 100 ; 100 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1996 ; Geological Society of London Special Publications Volume 101 ; 101 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1996 ; Geological Society of London Special Publications Volume 102 ; 102 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1996 ; Geological Society of London Special Publications Volume 103 ; 103 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1996 ; Geological Society of London Special Publications Volume 104 ; 104 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1996 ; Geological Society of London Special Publications Volume 105 ; 105 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1996 ; Geological Society of London Special Publications Volume 106 ; 106 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1996 ; Geological Society of London Special Publications Volume 107 ; 107 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1996 ; Geological Society of London Special Publications Volume 108 ; 108 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1996 ; Geological Society of London Special Publications Volume 109 ; 109 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1996 ; Geological Society of London Special Publications Volume 110 ; 110 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1996 ; Geological Society of London Special Publications Volume 111 ; 111 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1996 ; Geological Society of London Special Publications Volume 112 ; 112 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1996 ; Geological Society of London Special Publications Volume 113 ; 113 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1996 ; Geological Society of London Special Publications Volume 114 ; 114 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1996 ; Geological Society of London Special Publications Volume 115 ; 115 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1996 ; Geological Society of London Special Publications Volume 116 ; 116 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1996 ; Geological Society of London Special Publications Volume 117 ; 117 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1996 ; Geological Society of London Special Publications Volume 118 ; 118 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1997 ; Geological Society of London Special Publications Volume 119 ; 119 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1997 ; Geological Society of London Special Publications Volume 120 ; 120 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1997 ; Geological Society of London Special Publications Volume 121 ; 121 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1997 ; Geological Society of London Special Publications Volume 122 ; 122 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1997 ; Geological Society of London Special Publications Volume 123 ; 123 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1997 ; Geological Society of London Special Publications Volume 124 ; 124 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1997 ; Geological Society of London Special Publications Volume 125 ; 125 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1997 ; Geological Society of London Special Publications Volume 126 ; 126 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1998 ; Geological Society of London Special Publications Volume 127 ; 127 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1998 ; Geological Society of London Special Publications Volume 128 ; 128 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1998 ; Geological Society of London Special Publications Volume 129 ; 129 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1998 ; Geological Society of London Special Publications Volume 130 ; 130 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1998 ; Geological Society of London Special Publications Volume 131 ; 131 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1998 ; Geological Society of London Special Publications Volume 132 ; 132 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1998 ; Geological Society of London Special Publications Volume 133 ; 133 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1998 ; Geological Society of London Special Publications Volume 134 ; 134 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1998 ; Geological Society of London Special Publications Volume 135 ; 135 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1998 ; Geological Society of London Special Publications Volume 136 ; 136 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1998 ; Geological Society of London Special Publications Volume 137 ; 137 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1998 ; Geological Society of London Special Publications Volume 138 ; 138 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1998 ; Geological Society of London Special Publications Volume 139 ; 139 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1998 ; Geological Society of London Special Publications Volume 140 ; 140 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1998 ; Geological Society of London Special Publications Volume 141 ; 141 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1998 ; Geological Society of London Special Publications Volume 142 ; 142 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1998 ; Geological Society of London Special Publications Volume 143 ; 143 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1998 ; Geological Society of London Special Publications Volume 144 ; 144 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1998 ; Geological Society of London Special Publications Volume 145 ; 145 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1998 ; Geological Society of London Special Publications Volume 146 ; 146 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1998 ; Geological Society of London Special Publications Volume 147 ; 147 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1998 ; Geological Society of London Special Publications Volume 148 ; 148 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1998 ; Geological Society of London Special Publications Volume 149 ; 149 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1999 ; Geological Society of London Special Publications Volume 150 ; 150 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1999 ; Geological Society of London Special Publications Volume 151 ; 151 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1999 ; Geological Society of London Special Publications Volume 152 ; 152 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1999 ; Geological Society of London Special Publications Volume 153 ; 153 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1999 ; Geological Society of London Special Publications Volume 154 ; 154 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1999 ; Geological Society of London Special Publications Volume 155 ; 155 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1999 ; Geological Society of London Special Publications Volume 156 ; 156 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1999 ; Geological Society of London Special Publications Volume 157 ; 157 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1999 ; Geological Society of London Special Publications Volume 158 ; 158 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1999 ; Geological Society of London Special Publications Volume 159 ; 159 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1999 ; Geological Society of London Special Publications Volume 160 ; 160 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1999 ; Geological Society of London Special Publications Volume 161 ; 161 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1999 ; Geological Society of London Special Publications Volume 162 ; 162 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1999 ; Geological Society of London Special Publications Volume 163 ; 163 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1999 ; Geological Society of London Special Publications Volume 164 ; 164 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1999 ; Geological Society of London Special Publications Volume 165 ; 165 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2000 ; Geological Society of London Special Publications Volume 166 ; 166 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2000 ; Geological Society of London Special Publications Volume 167 ; 167 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1999 ; Geological Society of London Special Publications Volume 168 ; 168 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 1999 ; Geological Society of London Special Publications Volume 169 ; 169 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2000 ; Geological Society of London Special Publications Volume 170 ; 170 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2000 ; Geological Society of London Special Publications Volume 171 ; 171 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2000 ; Geological Society of London Special Publications Volume 172 ; 172 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2000 ; Geological Society of London Special Publications Volume 173 ; 173 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2000 ; Geological Society of London Special Publications Volume 174 ; 174 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2000 ; Geological Society of London Special Publications Volume 175 ; 175 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2000 ; Geological Society of London Special Publications Volume 176 ; 176 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2000 ; Geological Society of London Special Publications Volume 177 ; 177 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2000 ; Geological Society of London Special Publications Volume 178 ; 178 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2000 ; Geological Society of London Special Publications Volume 179 ; 179 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2000 ; Geological Society of London Special Publications Volume 180 ; 180 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2000 ; Geological Society of London Special Publications Volume 181 ; 181 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2001 ; Geological Society of London Special Publications Volume 182 ; 182 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2001 ; Geological Society of London Special Publications Volume 183 ; 183 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2001 ; Geological Society of London Special Publications Volume 184 ; 184 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2001 ; Geological Society of London Special Publications Volume 185 ; 185 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2001 ; Geological Society of London Special Publications Volume 186 ; 186 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2001 ; Geological Society of London Special Publications Volume 187 ; 187 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2001 ; Geological Society of London Special Publications Volume 188 ; 188 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2001 ; Geological Society of London Special Publications Volume 189 ; 189 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2001 ; Geological Society of London Special Publications Volume 190 ; 190 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2002 ; Geological Society of London Special Publications Volume 191 ; 191 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2002 ; Geological Society of London Special Publications Volume 192 ; 192 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2002 ; Geological Society of London Special Publications Volume 193 ; 193 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2002 ; Geological Society of London Special Publications Volume 194 ; 194 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2002 ; Geological Society of London Special Publications Volume 195 ; 195 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2002 ; Geological Society of London Special Publications Volume 196 ; 196 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2002 ; Geological Society of London Special Publications Volume 197 ; 197 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2002 ; Geological Society of London Special Publications Volume 198 ; 198 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2002 ; Geological Society of London Special Publications Volume 199 ; 199 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2002 ; Geological Society of London Special Publications Volume 200 ; 200 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2002 ; Geological Society of London Special Publications Volume 201 ; 201 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2002 ; Geological Society of London Special Publications Volume 202 ; 202 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2002 ; Geological Society of London Special Publications Volume 203 ; 203 ; https://sp.lyellcollection.org/ ; reingest3.clockss.org:8083 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2002 ; Geological Society of London Special Publications Volume 204 ; 204 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2002 ; Geological Society of London Special Publications Volume 205 ; 205 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2003 ; Geological Society of London Special Publications Volume 206 ; 206 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2003 ; Geological Society of London Special Publications Volume 207 ; 207 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2003 ; Geological Society of London Special Publications Volume 208 ; 208 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2003 ; Geological Society of London Special Publications Volume 209 ; 209 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2003 ; Geological Society of London Special Publications Volume 210 ; 210 ; https://sp.lyellcollection.org/ ; reingest3.clockss.org:8083 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2003 ; Geological Society of London Special Publications Volume 211 ; 211 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2003 ; Geological Society of London Special Publications Volume 212 ; 212 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2003 ; Geological Society of London Special Publications Volume 213 ; 213 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2003 ; Geological Society of London Special Publications Volume 214 ; 214 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2003 ; Geological Society of London Special Publications Volume 215 ; 215 ; https://sp.lyellcollection.org/ ; reingest3.clockss.org:8083 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2003 ; Geological Society of London Special Publications Volume 216 ; 216 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2003 ; Geological Society of London Special Publications Volume 217 ; 217 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2003 ; Geological Society of London Special Publications Volume 218 ; 218 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2003 ; Geological Society of London Special Publications Volume 219 ; 219 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2003 ; Geological Society of London Special Publications Volume 220 ; 220 ; https://sp.lyellcollection.org/ ; reingest3.clockss.org:8083 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2004 ; Geological Society of London Special Publications Volume 221 ; 221 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2004 ; Geological Society of London Special Publications Volume 222 ; 222 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2004 ; Geological Society of London Special Publications Volume 223 ; 223 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2004 ; Geological Society of London Special Publications Volume 224 ; 224 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2004 ; Geological Society of London Special Publications Volume 225 ; 225 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2004 ; Geological Society of London Special Publications Volume 226 ; 226 ; https://sp.lyellcollection.org/ ; reingest3.clockss.org:8083 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2004 ; Geological Society of London Special Publications Volume 227 ; 227 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2004 ; Geological Society of London Special Publications Volume 228 ; 228 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2004 ; Geological Society of London Special Publications Volume 229 ; 229 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2004 ; Geological Society of London Special Publications Volume 230 ; 230 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2004 ; Geological Society of London Special Publications Volume 231 ; 231 ; https://sp.lyellcollection.org/ ; reingest3.clockss.org:8083 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2004 ; Geological Society of London Special Publications Volume 232 ; 232 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2004 ; Geological Society of London Special Publications Volume 233 ; 233 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2004 ; Geological Society of London Special Publications Volume 234 ; 234 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2004 ; Geological Society of London Special Publications Volume 235 ; 235 ; https://sp.lyellcollection.org/ ; reingest3.clockss.org:8083 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2004 ; Geological Society of London Special Publications Volume 236 ; 236 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2004 ; Geological Society of London Special Publications Volume 237 ; 237 ; https://sp.lyellcollection.org/ ; reingest3.clockss.org:8083 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2004 ; Geological Society of London Special Publications Volume 238 ; 238 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2004 ; Geological Society of London Special Publications Volume 239 ; 239 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2005 ; Geological Society of London Special Publications Volume 240 ; 240 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2005 ; Geological Society of London Special Publications Volume 241 ; 241 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2005 ; Geological Society of London Special Publications Volume 242 ; 242 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2005 ; Geological Society of London Special Publications Volume 243 ; 243 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2005 ; Geological Society of London Special Publications Volume 244 ; 244 ; https://sp.lyellcollection.org/ ; reingest3.clockss.org:8083 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2005 ; Geological Society of London Special Publications Volume 245 ; 245 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2005 ; Geological Society of London Special Publications Volume 246 ; 246 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2005 ; Geological Society of London Special Publications Volume 247 ; 247 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2005 ; Geological Society of London Special Publications Volume 248 ; 248 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2005 ; Geological Society of London Special Publications Volume 249 ; 249 ; https://sp.lyellcollection.org/ ; reingest3.clockss.org:8083 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2005 ; Geological Society of London Special Publications Volume 250 ; 250 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2005 ; Geological Society of London Special Publications Volume 251 ; 251 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2005 ; Geological Society of London Special Publications Volume 252 ; 252 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2006 ; Geological Society of London Special Publications Volume 253 ; 253 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2006 ; Geological Society of London Special Publications Volume 254 ; 254 ; https://sp.lyellcollection.org/ ; reingest3.clockss.org:8083 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2006 ; Geological Society of London Special Publications Volume 255 ; 255 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2006 ; Geological Society of London Special Publications Volume 256 ; 256 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2006 ; Geological Society of London Special Publications Volume 257 ; 257 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2006 ; Geological Society of London Special Publications Volume 258 ; 258 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2006 ; Geological Society of London Special Publications Volume 259 ; 259 ; https://sp.lyellcollection.org/ ; reingest3.clockss.org:8083 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2006 ; Geological Society of London Special Publications Volume 260 ; 260 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2006 ; Geological Society of London Special Publications Volume 261 ; 261 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2006 ; Geological Society of London Special Publications Volume 262 ; 262 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2006 ; Geological Society of London Special Publications Volume 263 ; 263 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2006 ; Geological Society of London Special Publications Volume 264 ; 264 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2006 ; Geological Society of London Special Publications Volume 265 ; 265 ; https://sp.lyellcollection.org/ ; reingest3.clockss.org:8083 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2006 ; Geological Society of London Special Publications Volume 266 ; 266 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2006 ; Geological Society of London Special Publications Volume 267 ; 267 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2006 ; Geological Society of London Special Publications Volume 268 ; 268 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2006 ; Geological Society of London Special Publications Volume 269 ; 269 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2007 ; Geological Society of London Special Publications Volume 270 ; 270 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2007 ; Geological Society of London Special Publications Volume 271 ; 271 ; https://sp.lyellcollection.org/ ; reingest3.clockss.org:8083 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2007 ; Geological Society of London Special Publications Volume 272 ; 272 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2007 ; Geological Society of London Special Publications Volume 273 ; 273 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2007 ; Geological Society of London Special Publications Volume 274 ; 274 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2007 ; Geological Society of London Special Publications Volume 275 ; 275 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2007 ; Geological Society of London Special Publications Volume 276 ; 276 ; https://sp.lyellcollection.org/ ; reingest3.clockss.org:8083 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2007 ; Geological Society of London Special Publications Volume 277 ; 277 ; https://sp.lyellcollection.org/ ; reingest3.clockss.org:8083 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2007 ; Geological Society of London Special Publications Volume 278 ; 278 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2007 ; Geological Society of London Special Publications Volume 279 ; 279 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2007 ; Geological Society of London Special Publications Volume 280 ; 280 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2007 ; Geological Society of London Special Publications Volume 281 ; 281 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2007 ; Geological Society of London Special Publications Volume 282 ; 282 ; https://sp.lyellcollection.org/ ; reingest3.clockss.org:8083 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2007 ; Geological Society of London Special Publications Volume 283 ; 283 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2007 ; Geological Society of London Special Publications Volume 284 ; 284 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2007 ; Geological Society of London Special Publications Volume 285 ; 285 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2007 ; Geological Society of London Special Publications Volume 286 ; 286 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2007 ; Geological Society of London Special Publications Volume 287 ; 287 ; https://sp.lyellcollection.org/ ; reingest3.clockss.org:8083 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2008 ; Geological Society of London Special Publications Volume 288 ; 288 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2007 ; Geological Society of London Special Publications Volume 289 ; 289 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2007 ; Geological Society of London Special Publications Volume 290 ; 290 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2007 ; Geological Society of London Special Publications Volume 291 ; 291 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2007 ; Geological Society of London Special Publications Volume 292 ; 292 ; https://sp.lyellcollection.org/ ; reingest3.clockss.org:8083 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2008 ; Geological Society of London Special Publications Volume 293 ; 293 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1964 ; Geological Society of London Special Publications Volume 1 ; 1 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1967 ; Geological Society of London Special Publications Volume 2 ; 2 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1969 ; Geological Society of London Special Publications Volume 3 ; 3 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1974 ; Geological Society of London Special Publications Volume 4 ; 4 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1971 ; Geological Society of London Special Publications Volume 5 ; 5 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1978 ; Geological Society of London Special Publications Volume 6 ; 6 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1977 ; Geological Society of London Special Publications Volume 7 ; 7 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1979 ; Geological Society of London Special Publications Volume 8 ; 8 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1981 ; Geological Society of London Special Publications Volume 9 ; 9 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1982 ; Geological Society of London Special Publications Volume 10 ; 10 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1983 ; Geological Society of London Special Publications Volume 11 ; 11 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1983 ; Geological Society of London Special Publications Volume 12 ; 12 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1984 ; Geological Society of London Special Publications Volume 13 ; 13 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1984 ; Geological Society of London Special Publications Volume 14 ; 14 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1984 ; Geological Society of London Special Publications Volume 15 ; 15 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1984 ; Geological Society of London Special Publications Volume 16 ; 16 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1984 ; Geological Society of London Special Publications Volume 17 ; 17 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1985 ; Geological Society of London Special Publications Volume 18 ; 18 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1986 ; Geological Society of London Special Publications Volume 19 ; 19 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1986 ; Geological Society of London Special Publications Volume 20 ; 20 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1986 ; Geological Society of London Special Publications Volume 21 ; 21 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1986 ; Geological Society of London Special Publications Volume 22 ; 22 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1986 ; Geological Society of London Special Publications Volume 23 ; 23 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1986 ; Geological Society of London Special Publications Volume 24 ; 24 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1986 ; Geological Society of London Special Publications Volume 25 ; 25 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1987 ; Geological Society of London Special Publications Volume 26 ; 26 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1987 ; Geological Society of London Special Publications Volume 27 ; 27 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1987 ; Geological Society of London Special Publications Volume 28 ; 28 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1987 ; Geological Society of London Special Publications Volume 29 ; 29 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1987 ; Geological Society of London Special Publications Volume 30 ; 30 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1987 ; Geological Society of London Special Publications Volume 31 ; 31 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1987 ; Geological Society of London Special Publications Volume 32 ; 32 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1987 ; Geological Society of London Special Publications Volume 33 ; 33 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1987 ; Geological Society of London Special Publications Volume 34 ; 34 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1987 ; Geological Society of London Special Publications Volume 35 ; 35 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1987 ; Geological Society of London Special Publications Volume 36 ; 36 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1988 ; Geological Society of London Special Publications Volume 37 ; 37 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1988 ; Geological Society of London Special Publications Volume 38 ; 38 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1988 ; Geological Society of London Special Publications Volume 39 ; 39 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1988 ; Geological Society of London Special Publications Volume 40 ; 40 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1989 ; Geological Society of London Special Publications Volume 41 ; 41 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1989 ; Geological Society of London Special Publications Volume 42 ; 42 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1989 ; Geological Society of London Special Publications Volume 43 ; 43 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1989 ; Geological Society of London Special Publications Volume 44 ; 44 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1989 ; Geological Society of London Special Publications Volume 45 ; 45 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1989 ; Geological Society of London Special Publications Volume 46 ; 46 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1989 ; Geological Society of London Special Publications Volume 47 ; 47 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1990 ; Geological Society of London Special Publications Volume 48 ; 48 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1990 ; Geological Society of London Special Publications Volume 49 ; 49 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1990 ; Geological Society of London Special Publications Volume 50 ; 50 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1990 ; Geological Society of London Special Publications Volume 51 ; 51 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1990 ; Geological Society of London Special Publications Volume 52 ; 52 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1990 ; Geological Society of London Special Publications Volume 53 ; 53 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1990 ; Geological Society of London Special Publications Volume 54 ; 54 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1990 ; Geological Society of London Special Publications Volume 55 ; 55 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1991 ; Geological Society of London Special Publications Volume 56 ; 56 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1991 ; Geological Society of London Special Publications Volume 57 ; 57 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1991 ; Geological Society of London Special Publications Volume 58 ; 58 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1991 ; Geological Society of London Special Publications Volume 59 ; 59 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1992 ; Geological Society of London Special Publications Volume 60 ; 60 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1992 ; Geological Society of London Special Publications Volume 61 ; 61 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1992 ; Geological Society of London Special Publications Volume 62 ; 62 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1992 ; Geological Society of London Special Publications Volume 63 ; 63 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1992 ; Geological Society of London Special Publications Volume 64 ; 64 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1992 ; Geological Society of London Special Publications Volume 65 ; 65 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1992 ; Geological Society of London Special Publications Volume 66 ; 66 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1992 ; Geological Society of London Special Publications Volume 67 ; 67 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1992 ; Geological Society of London Special Publications Volume 68 ; 68 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1992 ; Geological Society of London Special Publications Volume 69 ; 69 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1993 ; Geological Society of London Special Publications Volume 70 ; 70 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1993 ; Geological Society of London Special Publications Volume 71 ; 71 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1993 ; Geological Society of London Special Publications Volume 72 ; 72 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1993 ; Geological Society of London Special Publications Volume 73 ; 73 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1993 ; Geological Society of London Special Publications Volume 74 ; 74 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1993 ; Geological Society of London Special Publications Volume 75 ; 75 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1993 ; Geological Society of London Special Publications Volume 76 ; 76 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1994 ; Geological Society of London Special Publications Volume 77 ; 77 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1994 ; Geological Society of London Special Publications Volume 78 ; 78 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1994 ; Geological Society of London Special Publications Volume 79 ; 79 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1995 ; Geological Society of London Special Publications Volume 80 ; 80 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1994 ; Geological Society of London Special Publications Volume 81 ; 81 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1995 ; Geological Society of London Special Publications Volume 82 ; 82 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1995 ; Geological Society of London Special Publications Volume 83 ; 83 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1995 ; Geological Society of London Special Publications Volume 84 ; 84 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1995 ; Geological Society of London Special Publications Volume 85 ; 85 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1995 ; Geological Society of London Special Publications Volume 86 ; 86 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1995 ; Geological Society of London Special Publications Volume 87 ; 87 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1995 ; Geological Society of London Special Publications Volume 88 ; 88 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1995 ; Geological Society of London Special Publications Volume 89 ; 89 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1995 ; Geological Society of London Special Publications Volume 90 ; 90 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1995 ; Geological Society of London Special Publications Volume 91 ; 91 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1995 ; Geological Society of London Special Publications Volume 92 ; 92 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1995 ; Geological Society of London Special Publications Volume 93 ; 93 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1995 ; Geological Society of London Special Publications Volume 94 ; 94 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1995 ; Geological Society of London Special Publications Volume 95 ; 95 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1995 ; Geological Society of London Special Publications Volume 96 ; 96 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1995 ; Geological Society of London Special Publications Volume 97 ; 97 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1995 ; Geological Society of London Special Publications Volume 98 ; 98 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1996 ; Geological Society of London Special Publications Volume 99 ; 99 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1996 ; Geological Society of London Special Publications Volume 100 ; 100 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1996 ; Geological Society of London Special Publications Volume 101 ; 101 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1996 ; Geological Society of London Special Publications Volume 102 ; 102 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1996 ; Geological Society of London Special Publications Volume 103 ; 103 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1996 ; Geological Society of London Special Publications Volume 104 ; 104 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1996 ; Geological Society of London Special Publications Volume 105 ; 105 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1996 ; Geological Society of London Special Publications Volume 106 ; 106 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1996 ; Geological Society of London Special Publications Volume 107 ; 107 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1996 ; Geological Society of London Special Publications Volume 108 ; 108 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1996 ; Geological Society of London Special Publications Volume 109 ; 109 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1996 ; Geological Society of London Special Publications Volume 110 ; 110 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1996 ; Geological Society of London Special Publications Volume 111 ; 111 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1996 ; Geological Society of London Special Publications Volume 112 ; 112 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1996 ; Geological Society of London Special Publications Volume 113 ; 113 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1996 ; Geological Society of London Special Publications Volume 114 ; 114 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1996 ; Geological Society of London Special Publications Volume 115 ; 115 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1996 ; Geological Society of London Special Publications Volume 116 ; 116 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1996 ; Geological Society of London Special Publications Volume 117 ; 117 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1996 ; Geological Society of London Special Publications Volume 118 ; 118 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1997 ; Geological Society of London Special Publications Volume 119 ; 119 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1997 ; Geological Society of London Special Publications Volume 120 ; 120 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1997 ; Geological Society of London Special Publications Volume 121 ; 121 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1997 ; Geological Society of London Special Publications Volume 122 ; 122 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1997 ; Geological Society of London Special Publications Volume 123 ; 123 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1997 ; Geological Society of London Special Publications Volume 124 ; 124 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1997 ; Geological Society of London Special Publications Volume 125 ; 125 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1997 ; Geological Society of London Special Publications Volume 126 ; 126 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1998 ; Geological Society of London Special Publications Volume 127 ; 127 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1998 ; Geological Society of London Special Publications Volume 128 ; 128 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1998 ; Geological Society of London Special Publications Volume 129 ; 129 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1998 ; Geological Society of London Special Publications Volume 130 ; 130 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1998 ; Geological Society of London Special Publications Volume 131 ; 131 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1998 ; Geological Society of London Special Publications Volume 132 ; 132 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1998 ; Geological Society of London Special Publications Volume 133 ; 133 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1998 ; Geological Society of London Special Publications Volume 134 ; 134 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1998 ; Geological Society of London Special Publications Volume 135 ; 135 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1998 ; Geological Society of London Special Publications Volume 136 ; 136 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1998 ; Geological Society of London Special Publications Volume 137 ; 137 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1998 ; Geological Society of London Special Publications Volume 138 ; 138 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1998 ; Geological Society of London Special Publications Volume 139 ; 139 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1998 ; Geological Society of London Special Publications Volume 140 ; 140 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1998 ; Geological Society of London Special Publications Volume 141 ; 141 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1998 ; Geological Society of London Special Publications Volume 142 ; 142 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1998 ; Geological Society of London Special Publications Volume 143 ; 143 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1998 ; Geological Society of London Special Publications Volume 144 ; 144 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1998 ; Geological Society of London Special Publications Volume 145 ; 145 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1998 ; Geological Society of London Special Publications Volume 146 ; 146 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1998 ; Geological Society of London Special Publications Volume 147 ; 147 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1998 ; Geological Society of London Special Publications Volume 148 ; 148 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1998 ; Geological Society of London Special Publications Volume 149 ; 149 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1999 ; Geological Society of London Special Publications Volume 150 ; 150 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1999 ; Geological Society of London Special Publications Volume 151 ; 151 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1999 ; Geological Society of London Special Publications Volume 152 ; 152 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1999 ; Geological Society of London Special Publications Volume 153 ; 153 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1999 ; Geological Society of London Special Publications Volume 154 ; 154 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1999 ; Geological Society of London Special Publications Volume 155 ; 155 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1999 ; Geological Society of London Special Publications Volume 156 ; 156 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1999 ; Geological Society of London Special Publications Volume 157 ; 157 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1999 ; Geological Society of London Special Publications Volume 158 ; 158 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1999 ; Geological Society of London Special Publications Volume 159 ; 159 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1999 ; Geological Society of London Special Publications Volume 160 ; 160 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1999 ; Geological Society of London Special Publications Volume 161 ; 161 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1999 ; Geological Society of London Special Publications Volume 162 ; 162 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1999 ; Geological Society of London Special Publications Volume 163 ; 163 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1999 ; Geological Society of London Special Publications Volume 164 ; 164 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1999 ; Geological Society of London Special Publications Volume 165 ; 165 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2000 ; Geological Society of London Special Publications Volume 166 ; 166 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2000 ; Geological Society of London Special Publications Volume 167 ; 167 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1999 ; Geological Society of London Special Publications Volume 168 ; 168 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 1999 ; Geological Society of London Special Publications Volume 169 ; 169 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2000 ; Geological Society of London Special Publications Volume 170 ; 170 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2000 ; Geological Society of London Special Publications Volume 171 ; 171 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2000 ; Geological Society of London Special Publications Volume 172 ; 172 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2000 ; Geological Society of London Special Publications Volume 173 ; 173 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2000 ; Geological Society of London Special Publications Volume 174 ; 174 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2000 ; Geological Society of London Special Publications Volume 175 ; 175 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2000 ; Geological Society of London Special Publications Volume 176 ; 176 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2000 ; Geological Society of London Special Publications Volume 177 ; 177 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2000 ; Geological Society of London Special Publications Volume 178 ; 178 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2000 ; Geological Society of London Special Publications Volume 179 ; 179 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2000 ; Geological Society of London Special Publications Volume 180 ; 180 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2000 ; Geological Society of London Special Publications Volume 181 ; 181 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2001 ; Geological Society of London Special Publications Volume 182 ; 182 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2001 ; Geological Society of London Special Publications Volume 183 ; 183 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2001 ; Geological Society of London Special Publications Volume 184 ; 184 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2001 ; Geological Society of London Special Publications Volume 185 ; 185 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2001 ; Geological Society of London Special Publications Volume 186 ; 186 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2001 ; Geological Society of London Special Publications Volume 187 ; 187 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2001 ; Geological Society of London Special Publications Volume 188 ; 188 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2001 ; Geological Society of London Special Publications Volume 189 ; 189 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2001 ; Geological Society of London Special Publications Volume 190 ; 190 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2002 ; Geological Society of London Special Publications Volume 191 ; 191 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2002 ; Geological Society of London Special Publications Volume 192 ; 192 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2002 ; Geological Society of London Special Publications Volume 193 ; 193 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2002 ; Geological Society of London Special Publications Volume 194 ; 194 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2002 ; Geological Society of London Special Publications Volume 195 ; 195 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2002 ; Geological Society of London Special Publications Volume 196 ; 196 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2002 ; Geological Society of London Special Publications Volume 197 ; 197 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2002 ; Geological Society of London Special Publications Volume 198 ; 198 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2002 ; Geological Society of London Special Publications Volume 199 ; 199 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2002 ; Geological Society of London Special Publications Volume 200 ; 200 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2002 ; Geological Society of London Special Publications Volume 201 ; 201 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2002 ; Geological Society of London Special Publications Volume 202 ; 202 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2002 ; Geological Society of London Special Publications Volume 203 ; 203 ; https://sp.lyellcollection.org/ ; reingest3.clockss.org:8083 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2002 ; Geological Society of London Special Publications Volume 204 ; 204 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2002 ; Geological Society of London Special Publications Volume 205 ; 205 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2003 ; Geological Society of London Special Publications Volume 206 ; 206 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2003 ; Geological Society of London Special Publications Volume 207 ; 207 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2003 ; Geological Society of London Special Publications Volume 208 ; 208 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2003 ; Geological Society of London Special Publications Volume 209 ; 209 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2003 ; Geological Society of London Special Publications Volume 210 ; 210 ; https://sp.lyellcollection.org/ ; reingest3.clockss.org:8083 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2003 ; Geological Society of London Special Publications Volume 211 ; 211 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2003 ; Geological Society of London Special Publications Volume 212 ; 212 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2003 ; Geological Society of London Special Publications Volume 213 ; 213 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2003 ; Geological Society of London Special Publications Volume 214 ; 214 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2003 ; Geological Society of London Special Publications Volume 215 ; 215 ; https://sp.lyellcollection.org/ ; reingest3.clockss.org:8083 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2003 ; Geological Society of London Special Publications Volume 216 ; 216 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2003 ; Geological Society of London Special Publications Volume 217 ; 217 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2003 ; Geological Society of London Special Publications Volume 218 ; 218 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2003 ; Geological Society of London Special Publications Volume 219 ; 219 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2003 ; Geological Society of London Special Publications Volume 220 ; 220 ; https://sp.lyellcollection.org/ ; reingest3.clockss.org:8083 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2004 ; Geological Society of London Special Publications Volume 221 ; 221 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2004 ; Geological Society of London Special Publications Volume 222 ; 222 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2004 ; Geological Society of London Special Publications Volume 223 ; 223 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2004 ; Geological Society of London Special Publications Volume 224 ; 224 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2004 ; Geological Society of London Special Publications Volume 225 ; 225 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2004 ; Geological Society of London Special Publications Volume 226 ; 226 ; https://sp.lyellcollection.org/ ; reingest3.clockss.org:8083 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2004 ; Geological Society of London Special Publications Volume 227 ; 227 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2004 ; Geological Society of London Special Publications Volume 228 ; 228 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2004 ; Geological Society of London Special Publications Volume 229 ; 229 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2004 ; Geological Society of London Special Publications Volume 230 ; 230 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2004 ; Geological Society of London Special Publications Volume 231 ; 231 ; https://sp.lyellcollection.org/ ; reingest3.clockss.org:8083 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2004 ; Geological Society of London Special Publications Volume 232 ; 232 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2004 ; Geological Society of London Special Publications Volume 233 ; 233 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2004 ; Geological Society of London Special Publications Volume 234 ; 234 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2004 ; Geological Society of London Special Publications Volume 235 ; 235 ; https://sp.lyellcollection.org/ ; reingest3.clockss.org:8083 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2004 ; Geological Society of London Special Publications Volume 236 ; 236 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2004 ; Geological Society of London Special Publications Volume 237 ; 237 ; https://sp.lyellcollection.org/ ; reingest3.clockss.org:8083 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2004 ; Geological Society of London Special Publications Volume 238 ; 238 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2004 ; Geological Society of London Special Publications Volume 239 ; 239 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2005 ; Geological Society of London Special Publications Volume 240 ; 240 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2005 ; Geological Society of London Special Publications Volume 241 ; 241 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2005 ; Geological Society of London Special Publications Volume 242 ; 242 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2005 ; Geological Society of London Special Publications Volume 243 ; 243 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2005 ; Geological Society of London Special Publications Volume 244 ; 244 ; https://sp.lyellcollection.org/ ; reingest3.clockss.org:8083 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2005 ; Geological Society of London Special Publications Volume 245 ; 245 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2005 ; Geological Society of London Special Publications Volume 246 ; 246 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2005 ; Geological Society of London Special Publications Volume 247 ; 247 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2005 ; Geological Society of London Special Publications Volume 248 ; 248 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2005 ; Geological Society of London Special Publications Volume 249 ; 249 ; https://sp.lyellcollection.org/ ; reingest3.clockss.org:8083 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2005 ; Geological Society of London Special Publications Volume 250 ; 250 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2005 ; Geological Society of London Special Publications Volume 251 ; 251 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2005 ; Geological Society of London Special Publications Volume 252 ; 252 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2006 ; Geological Society of London Special Publications Volume 253 ; 253 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2006 ; Geological Society of London Special Publications Volume 254 ; 254 ; https://sp.lyellcollection.org/ ; reingest3.clockss.org:8083 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2006 ; Geological Society of London Special Publications Volume 255 ; 255 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2006 ; Geological Society of London Special Publications Volume 256 ; 256 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2006 ; Geological Society of London Special Publications Volume 257 ; 257 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2006 ; Geological Society of London Special Publications Volume 258 ; 258 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2006 ; Geological Society of London Special Publications Volume 259 ; 259 ; https://sp.lyellcollection.org/ ; reingest3.clockss.org:8083 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2006 ; Geological Society of London Special Publications Volume 260 ; 260 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2006 ; Geological Society of London Special Publications Volume 261 ; 261 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2006 ; Geological Society of London Special Publications Volume 262 ; 262 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2006 ; Geological Society of London Special Publications Volume 263 ; 263 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2006 ; Geological Society of London Special Publications Volume 264 ; 264 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2006 ; Geological Society of London Special Publications Volume 265 ; 265 ; https://sp.lyellcollection.org/ ; reingest3.clockss.org:8083 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2006 ; Geological Society of London Special Publications Volume 266 ; 266 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2006 ; Geological Society of London Special Publications Volume 267 ; 267 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2006 ; Geological Society of London Special Publications Volume 268 ; 268 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2006 ; Geological Society of London Special Publications Volume 269 ; 269 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2007 ; Geological Society of London Special Publications Volume 270 ; 270 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2007 ; Geological Society of London Special Publications Volume 271 ; 271 ; https://sp.lyellcollection.org/ ; reingest3.clockss.org:8083 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2007 ; Geological Society of London Special Publications Volume 272 ; 272 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2007 ; Geological Society of London Special Publications Volume 273 ; 273 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2007 ; Geological Society of London Special Publications Volume 274 ; 274 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2007 ; Geological Society of London Special Publications Volume 275 ; 275 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2007 ; Geological Society of London Special Publications Volume 276 ; 276 ; https://sp.lyellcollection.org/ ; reingest3.clockss.org:8083 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2007 ; Geological Society of London Special Publications Volume 277 ; 277 ; https://sp.lyellcollection.org/ ; reingest3.clockss.org:8083 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2007 ; Geological Society of London Special Publications Volume 278 ; 278 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2007 ; Geological Society of London Special Publications Volume 279 ; 279 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2007 ; Geological Society of London Special Publications Volume 280 ; 280 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2007 ; Geological Society of London Special Publications Volume 281 ; 281 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2007 ; Geological Society of London Special Publications Volume 282 ; 282 ; https://sp.lyellcollection.org/ ; reingest3.clockss.org:8083 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2007 ; Geological Society of London Special Publications Volume 283 ; 283 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2007 ; Geological Society of London Special Publications Volume 284 ; 284 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2007 ; Geological Society of London Special Publications Volume 285 ; 285 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2007 ; Geological Society of London Special Publications Volume 286 ; 286 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2007 ; Geological Society of London Special Publications Volume 287 ; 287 ; https://sp.lyellcollection.org/ ; reingest3.clockss.org:8083 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2008 ; Geological Society of London Special Publications Volume 288 ; 288 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2007 ; Geological Society of London Special Publications Volume 289 ; 289 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2007 ; Geological Society of London Special Publications Volume 290 ; 290 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2007 ; Geological Society of London Special Publications Volume 291 ; 291 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2007 ; Geological Society of London Special Publications Volume 292 ; 292 ; https://sp.lyellcollection.org/ ; reingest3.clockss.org:8083 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2008 ; Geological Society of London Special Publications Volume 293 ; 293 ; https://sp.lyellcollection.org/ ; reingest4.clockss.org:8082 >
     au < gsl.ClockssGSLDrupalPlugin ; finished ; frozen ; 2008 ; Geological Society of London Special Publications Volume 294 ; 294 ; https://sp.lyellcollection.org/ ; reingest5.clockss.org:8082 >
     au < gsl.ClockssGSLDrupalPlugin ; finished ; frozen ; 2008 ; Geological Society of London Special Publications Volume 295 ; 295 ; https://sp.lyellcollection.org/ ; reingest1.clockss.org:8082 >
     au < gsl.ClockssGSLDrupalPlugin ; finished ; frozen ; 2008 ; Geological Society of London Special Publications Volume 296 ; 296 ; https://sp.lyellcollection.org/ ; reingest2.clockss.org:8085 >
