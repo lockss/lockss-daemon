@@ -43,7 +43,9 @@ import org.htmlparser.NodeFilter;
 import org.htmlparser.Tag;
 import org.htmlparser.Text;
 import org.htmlparser.filters.OrFilter;
+import org.htmlparser.nodes.TextNode;
 import org.htmlparser.tags.*;
+import org.htmlparser.util.NodeList;
 import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.ArchivalUnit;
@@ -110,6 +112,9 @@ public class Ojs3HtmlHashFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttribute("div", "class", "panel content document"),
     // issue page: https://haematologica.org/issue/view/377
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "one-article-intoc"),
+    // https://www.mhgcj.org/index.php/MHGCJ/issue/view/14/15
+    // https://www.mhgcj.org/index.php/MHGCJ/article/view/140/133
+    HtmlNodeFilters.tagWithAttributeRegex("div", "data-page-no", "\\d+"),
 
     // the citation files https://ojs.aut.ac.nz/hospitality-insights/citationstylelanguage/get/acm-sig-proceedings?submissionId=58
     //HtmlNodeFilters.tagWithAttribute("div", "class", "csl-entry"), // alternatively div.csl-bib-body
@@ -138,21 +143,80 @@ public class Ojs3HtmlHashFilterFactory implements FilterFactory {
       new NodeFilter() {
         @Override public boolean accept(Node node) {
           if (node instanceof BodyTag) {
-            Node child = node.getFirstChild();
-            if (child instanceof Tag) {
-              if (((Tag) child).getTagName().equals("BLOCKQUOTE")) {
+            Node firstChild = node.getFirstChild();
+            if (firstChild instanceof Text) {
+              if (firstChild.toPlainTextString().matches("\\s*\\[?1](\\s|.)*")) {
                 return true;
               }
-            } else if (child instanceof Text) {
-              if (child.toPlainTextString().matches("\\s*\\[1](\\s|.)*")) {
+            }
+            Node firstTag = getNextTag(firstChild);
+            if (firstTag instanceof Tag) {
+              if (((Tag) firstTag).getTagName().equals("BLOCKQUOTE")) {
+                // https://journals.uic.edu/ojs/index.php/fm/article/download/10812/10591?inline=1
                 return true;
+              } else if (firstTag instanceof HtmlTags.Font) {
+                // https://revistas.udea.edu.co/index.php/lecturasdeeconomia/article/download/14773/17899?inline=1
+                return true;
+              } else if (firstTag instanceof Div) {
+                Node nextChild = getNextTag(firstTag.getNextSibling());
+                if (nextChild instanceof ParagraphTag) {
+                  String pClass = ((ParagraphTag) nextChild).getAttribute("class");
+                  if (pClass.matches("c\\d+.*")) {
+                    // various body.class="c\d\d" with classless div, followed by many p.class="c\d\d? ?c?\d?\d?"
+                    // https://ejournals.library.vanderbilt.edu/index.php/ameriquests/article/download/5200/3054?inline=1
+                    // https://ejournals.library.vanderbilt.edu/index.php/ameriquests/article/download/5203/3053?inline=1
+                    return true;
+                  }
+                } else if (nextChild instanceof Div) {
+                  log.info("two divs in a row!");
+                  String d1id = ((Div) firstTag).getAttribute("id");
+                  String d2id = ((Div) nextChild).getAttribute("id");
+                  if (d1id != null &&
+                      d2id != null &&
+                      d1id.matches("article(-level-)?\\d.*") &&
+                      d2id.matches("article(-level-)?\\d.*")) {
+                    // https://revistas.udea.edu.co/index.php/lecturasdeeconomia/article/download/344224/20808299?inline=1
+                    // https://journals.uic.edu/ojs/index.php/jbdc/article/download/2574/2401?inline=1
+                    return true;
+                  }
+                }
+
               }
             }
           }
           return false;
         }
       },
+      /*
+      The
+       */
+      new NodeFilter() {
+        @Override
+        public boolean accept(Node node) {
+          if (node instanceof Span) {
+            String titleAttr = ((Tag) node).getAttribute("title");
+            if (titleAttr != null && titleAttr.contains("rft_id")) {
+              NodeList nl = new NodeList();
+              Text titleText = new TextNode(titleAttr);
+              nl.add(titleText);
+              node.setChildren(nl);
+              return true;
+            }
+          }
+          return false;
+        }
+      },
   };
+
+  public static Node getNextTag(Node child) {
+    while (child instanceof Text) {
+      if (child instanceof Tag) {
+        return child;
+      }
+      child = child.getNextSibling();
+    }
+    return child;
+  }
 
   private static void recurseCslNodes(Node node) {
     for (Node child : ((Div) node).getChildrenAsNodeArray()) {
@@ -191,6 +255,8 @@ public class Ojs3HtmlHashFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttribute("div", "id", "creditos"),
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "downloads_chart"),
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article_statistic"),
+      //
+      HtmlNodeFilters.tagWithAttributeRegex("a", "href", "email-protection"),
       /*
       want to remove this whole bit from this url https://revistas.udea.edu.co/index.php/lecturasdeeconomia/article/view/342002
       <div style="padding-left: 4%;">
