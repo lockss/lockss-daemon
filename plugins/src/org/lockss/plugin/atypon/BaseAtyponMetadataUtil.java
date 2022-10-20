@@ -155,12 +155,12 @@ public class BaseAtyponMetadataUtil {
     String pubNameSage = (tdbau == null) ? null : tdbau.getPublisherName();
     log.debug3("Publisher Specific Checks for Sage = " + pubNameSage);
     String foundSpecificSageJournalTitle = am.get(MetadataField.FIELD_PUBLICATION_TITLE);
-    if (isInAu && (pubNameSage != null)) {
+    if (isInAu && (pubNameSage != null) && foundSpecificSageJournalTitle != null) {
       Boolean isSage = pubNameSage.equals("SAGE Publications");
       if (isSage) {
         log.debug3("Publisher Specific Checks for Sage");
         Boolean isSageInquiry = foundSpecificSageJournalTitle.contains("INQUIRY: The Journal of Health Care Organization, Provision, and Financing");
-        if (foundSpecificSageJournalTitle != null && isSageInquiry ) {
+        if (isSageInquiry ) {
           log.debug3("Publisher Specific Checks for Sage Inquiry");
 
           String AU_journal_titleSage = (tdbau == null) ? null : tdbau.getPublicationTitle();
@@ -189,7 +189,7 @@ public class BaseAtyponMetadataUtil {
 
               if (isInAu && !(StringUtils.isEmpty(foundVolumeSage))) {
                 isInAu =  ( (AU_volume != null) && (AU_volume.equals(foundVolumeSage)));
-                log.debug3("After Sage volume check, isInAu :" + isInAu + ", foundVolumeSage = " + foundVolumeSage + ", AU_volume" + AU_volume);
+                log.debug3("After Sage volume check, isInAu :" + isInAu + ", foundVolumeSage = " + foundVolumeSage + ", AU_volume =" + AU_volume);
               }
             }
 
