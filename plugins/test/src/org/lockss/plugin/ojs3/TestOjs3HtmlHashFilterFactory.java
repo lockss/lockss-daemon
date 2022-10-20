@@ -73,35 +73,34 @@ public class TestOjs3HtmlHashFilterFactory  extends LockssTestCase {
   private static final String articleWithStats =
     "<div class=\"main_entry\">" +
       "<h1>Artcle Title</h1>" +
-      "<div style=\"padding-left: 4%;\">\n" +
-        "|Resumen <div class=\"fa fa-eye\"></div> = <b>5729</b> veces\n" +
-        "\n" +
-        " |\n" +
-        "PDF <div class=\"fa fa-eye\"></div> = <b>2414</b> veces|\n" +
-        " |\n" +
-        "XML <div class=\"fa fa-eye\"></div> = <b>306</b> veces|\n" +
-        " |\n" +
-        "HTML <div class=\"fa fa-eye\"></div> = <b>42</b> veces|\n" +
-        "\n" +
-      "</div>\n" +
-      "<div class=\"item downloads_chart\">\n" +
-        "<h3 class=\"label\">\n" +
-        "Descargas\n" +
-        "</h3>\n" +
-        "<div class=\"value\">\n" +
-          "\t\t<canvas class=\"usageStatsGraph\" data-object-type=\"Submission\" data-object-id=\"342002\"></canvas>\n" +
-          "\t\t<div class=\"usageStatsUnavailable\" data-object-type=\"Submission\" data-object-id=\"342002\">\n" +
-            "\t\t\tLos datos de descargas todavía no están disponibles.\n" +
-          "</div>\n" +
-        "</div>\n" +
+      "<div style=\"padding-left: 4%;\">" +
+        "|Resumen " +
+        "<div class=\"fa fa-eye\"></div>" +
+        " = <b>5729</b> veces |PDF " +
+        "<div class=\"fa fa-eye\"></div>" +
+        " = <b>2414</b> veces| |" +
+        "<div class=\"fa fa-eye\"></div>" +
+        " = <b>306</b> veces| |HTML " +
+        "<div class=\"fa fa-eye\"></div>" +
+        " = <b>42</b> veces|" +
+      "</div>" +
+      "<div class=\"item downloads_chart\">" +
+        "<h3 class=\"label\">" +
+          "Descargan" +
+        "</h3>" +
+        "<div class=\"value\">" +
+          "<canvas class=\"usageStatsGraph\" data-object-type=\"Submission\" data-object-id=\"342002\"></canvas>" +
+          "<div class=\"usageStatsUnavailable\" data-object-type=\"Submission\" data-object-id=\"342002\">" +
+            "Los datos de descargas todavía no están disponibles." +
+          "</div>" +
+        "</div>" +
       "</div>"+
       "<div class=\"article\">Body of article. Blah blah</div>" +
-    "</div>\n";
+    "</div>";
 
   private static final String articleWithoutStats =
     "<div class=\"main_entry\">" +
       "<h1>Artcle Title</h1>" +
-      " " +
       "<div class=\"article\">Body of article. Blah blah</div>" +
     "</div>";
 
@@ -201,6 +200,35 @@ public class TestOjs3HtmlHashFilterFactory  extends LockssTestCase {
         "</span>" +
         "<span class=\"c0 c1\">&nbsp;and agenda, in the hope that his city could become a beacon for the rest of the nation. His message, to build bridges rather than walls, created national news, particularly when he established sister cities with Puerto Cabeza, Venezuela and Yaroslavl, Russia. They became conduits through which communication could pass, and they created a sense of shared humanity beyond the covers of war and conflict. This kinship helped citizens of very different states to recognize shared ideals of empathy and connection. This effort had the effect of empowering ordinary citizens. </span>" +
       "</p>" +
+    "</body>";
+
+  private static final String bodyWFont =
+    "<body>" +
+      "<p>" +
+        "<font face=\"Verdana, Arial, Helvetica, sans-serif\">" +
+          "<b>" +
+          "<font size=\"4\">" +
+            "El pass through de la tasa de cambio a los precios del consumidor de bienes transables: una aproximación al caso colombiano" +
+          "</font>" +
+          "</b>" +
+        "</font>" +
+      "</p>"+
+      "<p>" +
+        "<font size=\"2\" face=\"Verdana, Arial, Helvetica, sans-serif\">" +
+          "This paper estimates the exchange rate pass through to the consumer prices of tradable goods in Colombia during the period 1994-2007. The econometric analysis shows evidence of cointegration among the prices of tradable goods, nominal exchange rate, international prices and the trade account-output ratio. We find an incomplete transmission effect of the exchange rate both in the long and in the short run." +
+        "</font>" +
+      "</p>" +
+    "</body>";
+
+  private static final String bodyWFont2 =
+    "<body>" +
+      "<p>" +
+        "<b>" +
+          "<font size=\"4\" face=\"Verdana, Arial, Helvetica, sans-serif\">" +
+            "A quiénes afecta el desempleo? Análisis de la tasa de incidencia en Colombia" +
+          "</font>" +
+        "</b>" +
+      "</p>"+
     "</body>";
 
   private static final String bodyWdivArticle =
@@ -351,6 +379,23 @@ public class TestOjs3HtmlHashFilterFactory  extends LockssTestCase {
   private static final String getSpanWithTitleAttrKeepTransformed =
       "<span class=\"Z3988\" title=\"ctx_ver=Z39.88-2004&rft_id=https%3A%2F%2Frevistacta.agrosavia.co%2Findex.php%2Frevista%2Farticle%2Fview%2F1050&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.language=es_ES&rft.genre=article&rft.title=Ciencia+y+Tecnolog%C3%ADa+Agropecuaria&rft.jtitle=Ciencia+y+Tecnolog%C3%ADa+Agropecuaria&rft.atitle=Lineamientos+para+una+metodolog%C3%ADa+de+identificaci%C3%B3n+de+estilos+de+aprendizaje+aplicables+al+sector+agropecuario+colombiano&rft.artnum=1050&rft.stitle=CTA&rft.volume=21&rft.issue=3&rft.aulast=Rodr%C3%ADguez-Espinosa&rft.aufirst=Holmes&rft.date=2020-08-18&rft.au=Carlos+Eduardo+Ospina-Parra&rft.au=Carlos+Juli%C3%A1n+Ram%C3%ADrez-G%C3%B3mez&rft.au=Isabel+Cristina+Toro-Gonz%C3%A1lez&rft.au=Alexandra+Gallego-Lopera&rft.au=Mar%C3%ADa+Alejandra+Piedrahita-P%C3%A9rez&rft.au=Alexandra+Vel%C3%A1squez-Chica&rft.au=Swammy+Guti%C3%A9rrez-Molina&rft.au=Natalia+Fl%C3%B3rez-Tuta&rft.au=Oscar+Dar%C3%ADo+Hincapi%C3%A9-Echeverri&rft.au=Laura+Cristina+Romero-Rubio&rft_id=info%3Adoi%2F10.21930%2Frcta.vol21_num3_art%3A1050&rft.pages=1-19&rft.issn=0120-8322&rft.eissn=2500-5308\">ctx_ver=Z39.88-2004&rft_id=https%3A%2F%2Frevistacta.agrosavia.co%2Findex.php%2Frevista%2Farticle%2Fview%2F1050&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.language=es_ES&rft.genre=article&rft.title=Ciencia+y+Tecnolog%C3%ADa+Agropecuaria&rft.jtitle=Ciencia+y+Tecnolog%C3%ADa+Agropecuaria&rft.atitle=Lineamientos+para+una+metodolog%C3%ADa+de+identificaci%C3%B3n+de+estilos+de+aprendizaje+aplicables+al+sector+agropecuario+colombiano&rft.artnum=1050&rft.stitle=CTA&rft.volume=21&rft.issue=3&rft.aulast=Rodr%C3%ADguez-Espinosa&rft.aufirst=Holmes&rft.date=2020-08-18&rft.au=Carlos+Eduardo+Ospina-Parra&rft.au=Carlos+Juli%C3%A1n+Ram%C3%ADrez-G%C3%B3mez&rft.au=Isabel+Cristina+Toro-Gonz%C3%A1lez&rft.au=Alexandra+Gallego-Lopera&rft.au=Mar%C3%ADa+Alejandra+Piedrahita-P%C3%A9rez&rft.au=Alexandra+Vel%C3%A1squez-Chica&rft.au=Swammy+Guti%C3%A9rrez-Molina&rft.au=Natalia+Fl%C3%B3rez-Tuta&rft.au=Oscar+Dar%C3%ADo+Hincapi%C3%A9-Echeverri&rft.au=Laura+Cristina+Romero-Rubio&rft_id=info%3Adoi%2F10.21930%2Frcta.vol21_num3_art%3A1050&rft.pages=1-19&rft.issn=0120-8322&rft.eissn=2500-5308</span>";
 
+  private static final String titleKeep =
+    "<html>" +
+      "<head>" +
+        "<title>" +
+          " Se�ales de bajo costo sobre las percepciones del control de calidad en farmacias: un estudio de clientes simulados para el despacho de anticonceptivos en Bogot� | Lecturas de Econom�a " +
+        "</title>" +
+      "</head>" +
+      "<body>" +
+          " Nonsense " +
+      "</body>" +
+    "</html>";
+
+  private static final String titleKeepFilt =
+    "<title>" +
+      " Seýales de bajo costo sobre las percepciones del control de calidad en farmacias: un estudio de clientes simulados para el despacho de anticonceptivos en Bogotý | Lecturas de Economýa " +
+    "</title>" ;
+
   public void testAbdntFiltering() throws Exception {
     assertEquals(getStringfromFilteredInputStream(abdnt), abdntFilt);
   }
@@ -373,6 +418,7 @@ public class TestOjs3HtmlHashFilterFactory  extends LockssTestCase {
     assertEquals(getStringfromFilteredInputStream(jatsArticle), jatsArticleFilt);
   }
   public void testRemoveViewCount() throws Exception {
+    log.info(getStringfromFilteredInputStream(articleWithStats));
     assertEquals(getStringfromFilteredInputStream(articleWithStats), articleWithoutStats);
   }
 
@@ -388,6 +434,12 @@ public class TestOjs3HtmlHashFilterFactory  extends LockssTestCase {
   }
 
   public void testKeepSparseHtml4() throws Exception {
+    assertEquals(getStringfromFilteredInputStream(bodyWFont), bodyWFont);
+  }
+  public void testKeepSparseHtml5() throws Exception {
+    assertEquals(getStringfromFilteredInputStream(bodyWFont2), bodyWFont2);
+  }
+  public void testKeepSparseHtml6() throws Exception {
     assertEquals(getStringfromFilteredInputStream(bodyWdivArticle), bodyWdivArticleFiltered);
   }
   public void testKeepPdfImageData() throws Exception {
@@ -395,6 +447,10 @@ public class TestOjs3HtmlHashFilterFactory  extends LockssTestCase {
   }
   public void testKeepAndConvertSpanTitle() throws Exception {
     assertEquals(getStringfromFilteredInputStream(spanWithTitleAttrKeep), getSpanWithTitleAttrKeepTransformed);
+  }
+
+  public void testKeepTitle() throws Exception {
+    assertEquals(getStringfromFilteredInputStream(titleKeep), titleKeepFilt);
   }
 
   public String getStringfromFilteredInputStream(String in) throws IOException {
