@@ -206,7 +206,7 @@ public class BaseAtyponMetadataUtil {
 
       if (isInAu && !(StringUtils.isEmpty(foundVolume))) {
         isInAu =  ( (AU_volume != null) && (AU_volume.equals(foundVolume)));
-        log.debug3("After volume check, isInAu :" + isInAu);
+        log.debug3("After volume check, isInAu :" + isInAu + ", foundVolume = " + foundVolume + ", AU_volume" + AU_volume);
       }
     }
 
