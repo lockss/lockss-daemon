@@ -153,48 +153,43 @@ public class BaseAtyponMetadataUtil {
 
 
     String pubNameSage = (tdbau == null) ? null : tdbau.getPublisherName();
-    log.debug3("Publisher Specific Checks for Sage = " + pubNameSage);
-    String foundSpecificSageJournalTitle = am.get(MetadataField.FIELD_PUBLICATION_TITLE);
-    if (isInAu && (pubNameSage != null) && foundSpecificSageJournalTitle != null) {
-      Boolean isSage = pubNameSage.equals("SAGE Publications");
+    log.debug3("Sage Check: Publisher Specific Checks for Sage = " + pubNameSage);
+
+    String AU_journal_titleSage = (tdbau == null) ? null : tdbau.getPublicationTitle();
+    String foundJournalTitleSage = am.get(MetadataField.FIELD_PUBLICATION_TITLE);
+
+    if (isInAu && (pubNameSage != null) && foundJournalTitleSage != null) {
+      Boolean isSage = pubNameSage.equals("Sage Check: SAGE Publications");
       if (isSage) {
-        log.debug3("Publisher Specific Checks for Sage");
-        Boolean isSageInquiry = foundSpecificSageJournalTitle.contains("INQUIRY: The Journal of Health Care Organization, Provision, and Financing");
-        if (isSageInquiry ) {
-          log.debug3("Publisher Specific Checks for Sage Inquiry");
+        log.debug3("Sage Check:  Publisher Specific Checks for Sage");
 
-          String AU_journal_titleSage = (tdbau == null) ? null : tdbau.getPublicationTitle();
-          String foundJournalTitleSage = am.get(MetadataField.FIELD_PUBLICATION_TITLE);
+        if (isInAu && !(StringUtils.isEmpty(foundJournalTitleSage) || StringUtils.isEmpty(AU_journal_titleSage)) ) {
+          // normalize titles to catch unimportant differences
+          log.debug3("Sage Check:  pre-normalized title from Sage AU is : " + AU_journal_titleSage);
+          log.debug3("Sage Check:  pre-normalized title from Sage metadata is : " + foundJournalTitleSage);
+          String normAuTitleSage = normalizeTitle(AU_journal_titleSage);
+          String normFoundTitleSage = normalizeTitle(foundJournalTitleSage);
+          log.debug3("Sage Check: normalized title from Sage AU is : " + normAuTitleSage);
+          log.debug3("Sage Check: normalized title from Sage metadata is : " + normFoundTitleSage);
+          // If the titles are a subset of each other or are equal after normalization
+          isInAu = (
+                  ((StringUtils.contains(normAuTitleSage, normFoundTitleSage)) ||
+                          (StringUtils.contains(normFoundTitleSage, normAuTitleSage))));
+          log.debug3("Sage Check: Publisher Specific Checks for Sage journal title condition meet, isInAu :" + isInAu);
 
-          if (isInAu && !(StringUtils.isEmpty(foundJournalTitleSage) || StringUtils.isEmpty(AU_journal_titleSage)) ) {
-            // normalize titles to catch unimportant differences
-            log.debug3("pre-normalized title from AU is : " + AU_journal_titleSage);
-            log.debug3("pre-normalized title from metadata is : " + foundJournalTitleSage);
-            String normAuTitle = normalizeTitle(AU_journal_titleSage);
-            String normFoundTitle = normalizeTitle(foundJournalTitleSage);
-            log.debug3("normalized title from AU is : " + normAuTitle);
-            log.debug3("normalized title from metadata is : " + normFoundTitle);
-            // If the titles are a subset of each other or are equal after normalization
-            isInAu = (
-                    ((StringUtils.contains(normAuTitle, normFoundTitle)) ||
-                            (StringUtils.contains(normFoundTitle, normAuTitle))));
-            log.debug3("Publisher Specific Checks for Sage journal title condition meet, isInAu :" + isInAu);
+          // Check VOLUME
+          String foundVolumeSage = am.get(MetadataField.FIELD_VOLUME);
+          if (!StringUtils.isEmpty(foundVolumeSage)) {
+            // Get the AU's volume name from the AU properties. This must be set
+            TypedEntryMap tfProps = au.getProperties();
+            String AU_volume = tfProps.getString(ConfigParamDescr.VOLUME_NAME.getKey());
 
-            // Check VOLUME
-            String foundVolumeSage = am.get(MetadataField.FIELD_VOLUME);
-            if (!StringUtils.isEmpty(foundVolumeSage)) {
-              // Get the AU's volume name from the AU properties. This must be set
-              TypedEntryMap tfProps = au.getProperties();
-              String AU_volume = tfProps.getString(ConfigParamDescr.VOLUME_NAME.getKey());
-
-              if (isInAu && !(StringUtils.isEmpty(foundVolumeSage))) {
-                isInAu =  ( (AU_volume != null) && (AU_volume.equals(foundVolumeSage)));
-                log.debug3("After Sage volume check, isInAu :" + isInAu + ", foundVolumeSage = " + foundVolumeSage + ", AU_volume =" + AU_volume);
-              }
+            if (isInAu && !(StringUtils.isEmpty(foundVolumeSage))) {
+              isInAu =  ( (AU_volume != null) && (AU_volume.equals(foundVolumeSage)));
+              log.debug3("Sage Check: After Sage volume check, isInAu :" + isInAu + ", foundVolumeSage = " + foundVolumeSage + ", AU_volume =" + AU_volume);
             }
-
-            return isInAu;
           }
+          return isInAu;
         }
       }
     }
