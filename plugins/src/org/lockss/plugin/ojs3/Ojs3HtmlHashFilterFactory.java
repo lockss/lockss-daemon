@@ -85,6 +85,9 @@ public class Ojs3HtmlHashFilterFactory implements FilterFactory {
       Pattern.compile("Accedido [a-z]+\\s?\\d\\d?,\\s?\\d\\d\\d\\d\\.", Pattern.CASE_INSENSITIVE);
 
   private static final NodeFilter[] includeNodes = new NodeFilter[] {
+    // some pages are full of scripts with no discernable content pre-browser building.
+    // only thing to do is include the title tag. this may need to be removed if other pages title tags are disagreeing.
+    HtmlNodeFilters.tag("title"),
     // manifest page
     HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "page clockss"),
     HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "page lockss"),
@@ -138,7 +141,7 @@ public class Ojs3HtmlHashFilterFactory implements FilterFactory {
         }
       },
       /*
-      the print html pages are have basic html elements. this pattern should id most of them.
+      the print html pages are have basic html elements. these patterns should id most of them.
        */
       new NodeFilter() {
         @Override public boolean accept(Node node) {
@@ -154,8 +157,9 @@ public class Ojs3HtmlHashFilterFactory implements FilterFactory {
               if (((Tag) firstTag).getTagName().equals("BLOCKQUOTE")) {
                 // https://journals.uic.edu/ojs/index.php/fm/article/download/10812/10591?inline=1
                 return true;
-              } else if (firstTag instanceof HtmlTags.Font) {
+              } else if (hasFontTag(firstTag)) {
                 // https://revistas.udea.edu.co/index.php/lecturasdeeconomia/article/download/14773/17899?inline=1
+                // https://revistas.udea.edu.co/index.php/lecturasdeeconomia/article/download/7874/18139?inline=1
                 return true;
               } else if (firstTag instanceof Div) {
                 Node nextChild = getNextTag(firstTag.getNextSibling());
@@ -210,12 +214,26 @@ public class Ojs3HtmlHashFilterFactory implements FilterFactory {
 
   public static Node getNextTag(Node child) {
     while (child instanceof Text) {
+      child = child.getNextSibling();
       if (child instanceof Tag) {
         return child;
       }
-      child = child.getNextSibling();
     }
     return child;
+  }
+  /*
+  Looks for <font> tag nodes that may be embedded within <p> tags and preceded by <b> tags.
+  e.g. <font></font>, <p><b><font></font></b></p>, <b><p><font></font></p></b> all return true.
+   */
+  public static boolean hasFontTag(Node child) {
+    if (child instanceof HtmlTags.Font) {
+      return true;
+    } else if (child instanceof ParagraphTag) {
+      return hasFontTag(getNextTag(child.getFirstChild()));
+    } else if (child instanceof Tag && ((Tag) child).getTagName().equals("B")) {
+      return hasFontTag(getNextTag(child.getNextSibling()));
+    }
+    return false;
   }
 
   private static void recurseCslNodes(Node node) {
