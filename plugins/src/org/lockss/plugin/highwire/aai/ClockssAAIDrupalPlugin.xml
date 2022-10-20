@@ -62,6 +62,23 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>"American Association of Immunologists Plugin (Legacy, CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>2</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
     <!--  override start url from parent to support http to https conversion -->
     <string>au_start_url</string>
     <list>
