@@ -179,6 +179,20 @@ public class BaseAtyponMetadataUtil {
                     ((StringUtils.contains(normAuTitle, normFoundTitle)) ||
                             (StringUtils.contains(normFoundTitle, normAuTitle))));
             log.debug3("Publisher Specific Checks for Sage journal title condition meet, isInAu :" + isInAu);
+
+            // Check VOLUME
+            String foundVolumeSage = am.get(MetadataField.FIELD_VOLUME);
+            if (!StringUtils.isEmpty(foundVolumeSage)) {
+              // Get the AU's volume name from the AU properties. This must be set
+              TypedEntryMap tfProps = au.getProperties();
+              String AU_volume = tfProps.getString(ConfigParamDescr.VOLUME_NAME.getKey());
+
+              if (isInAu && !(StringUtils.isEmpty(foundVolumeSage))) {
+                isInAu =  ( (AU_volume != null) && (AU_volume.equals(foundVolumeSage)));
+                log.debug3("After Sage volume check, isInAu :" + isInAu + ", foundVolumeSage = " + foundVolumeSage + ", AU_volume" + AU_volume);
+              }
+            }
+
             return isInAu;
           }
         }
