@@ -113,13 +113,17 @@ implements FileMetadataExtractorFactory {
       // Other leaked articles usually have 0-volume/0-issue and should not emit metadata
       // In this article https://journals.sagepub.com/doi/abs/10.1177/03635465221082057,
       // the "view corrected article"-https://journals.sagepub.com/doi/10.1177/03635465211063901
-      if (am.getRaw("VL") == null) {
-        log.debug3("checking VL: VL is empty, no raw volume, cu = " + cu.getUrl());
-        return;
-      } else {
-        log.debug3("checking VL: VL is not empty, VL = " + am.getRaw("VL") + ", cu = " + cu.getUrl());
-      }
 
+      String ris_type = am.getRaw("TY");
+      if ( !ris_type.contains("BOOK") && !ris_type.contains("CHAP") ) {
+        if (am.getRaw("VL") == null) {
+          log.debug3("checking VL: VL is empty, no raw volume, cu = " + cu.getUrl());
+          return;
+        } else {
+          log.debug3("checking VL: VL is not empty, VL = " + am.getRaw("VL") + ", cu = " + cu.getUrl());
+        }
+
+      }
       /*
        * RIS data can be variable.  We don't have any way to add priority to
        * the cooking of data, so fallback to alternate values manually
@@ -137,7 +141,6 @@ implements FileMetadataExtractorFactory {
        * Determine if this is a book item or a journal item.
        * set the appropriate article type once the daemon passes along the TY
        */
-      String ris_type = am.getRaw("TY");
       if (ris_type == null) {
         //pre 1.69, do an alternate check because TY wasn't passed through
         ris_type = "JOUR"; //set a default
