@@ -159,9 +159,9 @@ public class BaseAtyponMetadataUtil {
     String foundJournalTitleSage = am.get(MetadataField.FIELD_PUBLICATION_TITLE);
 
     log.debug3("Sage Check: Publisher Specific Checks for Sage = " + pubNameSage + ", AU_journal_titleSage = " +
-            AU_journal_titleSage + ", foundJournalTitleSage"  + foundJournalTitleSage);
+            AU_journal_titleSage + ", foundJournalTitleSage"  + foundJournalTitleSage + ", isInAu =" + isInAu);
 
-    if (isInAu && (pubNameSage != null) && foundJournalTitleSage != null) {
+    if (isInAu && (pubNameSage != null) && (foundJournalTitleSage != null)) {
       Boolean isSage = pubNameSage.equals("Sage Check: SAGE Publications");
       if (isSage) {
         log.debug3("Sage Check:  Publisher Specific Checks for Sage");
