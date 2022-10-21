@@ -104,10 +104,12 @@ public class BaseAtyponHtmlMetadataExtractorFactory
       // NOTE: MarkAllen plugins Override this extract  method and then calls it via super.extract() after
       //       performing additional checks on Date and Doi.
 
+      log.info("---------BaseAtyponHtmlMetadataExtractor-------");
+
       ArticleMetadata am = 
         new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
 
-      
+
 
       am.cook(tagMap);
       /* 
