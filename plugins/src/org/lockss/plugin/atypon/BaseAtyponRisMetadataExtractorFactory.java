@@ -165,7 +165,10 @@ implements FileMetadataExtractorFactory {
       } else {
         // JOURNAL default is to assume it's a journal for backwards compatibility
         if (!BaseAtyponMetadataUtil.metadataMatchesTdb(au, am)) {
+          log.debug3("Sage Check: emitting from RisMetadata side, failed metadataMatchesTdb url = " + cu.getUrl());
           return;
+        } else {
+          log.debug3("Sage Check: emitting from RisMetadata side, passed metadataMatchesTdb url = " + cu.getUrl());
         }
       }
 
@@ -175,6 +178,7 @@ implements FileMetadataExtractorFactory {
        * CORRECT the access.url if it is not in the AU
        */
       BaseAtyponMetadataUtil.completeMetadata(cu, am);
+      log.debug3("Sage Check: emitting from RisMetadata side, url = " + cu.getUrl());
       emitter.emitMetadata(cu, am);
     }
     
