@@ -104,8 +104,6 @@ public class BaseAtyponHtmlMetadataExtractorFactory
       // NOTE: MarkAllen plugins Override this extract  method and then calls it via super.extract() after
       //       performing additional checks on Date and Doi.
 
-      log.info("---------BaseAtyponHtmlMetadataExtractor-------");
-
       ArticleMetadata am = 
         new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
 
@@ -125,8 +123,12 @@ public class BaseAtyponHtmlMetadataExtractorFactory
       // Only emit if this item is likely to be from this AU
       // protect against counting overcrawled articles
       ArchivalUnit au = cu.getArchivalUnit();
+      log.debug3("Sage Check: ---------BaseAtyponHtmlMetadataExtractor start checking-------");
       if (!BaseAtyponMetadataUtil.metadataMatchesTdb(au, am)) {
+        log.debug3("Sage Check: ---------BaseAtyponHtmlMetadataExtractor failed-------");
         return;
+      } else {
+        log.debug3("Sage Check: ---------BaseAtyponHtmlMetadataExtractor succeed-------");
       }
       
       /*
@@ -146,6 +148,7 @@ public class BaseAtyponHtmlMetadataExtractorFactory
         am.replace(MetadataField.FIELD_ACCESS_URL, url);
       }
       // If we've gotten this far, emit
+      log.debug3("Sage Check: ---------BaseAtyponHtmlMetadataExtractor emitting url = " + url);
       emitter.emitMetadata(cu, am);
 
     }
