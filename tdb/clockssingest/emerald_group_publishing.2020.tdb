@@ -853,7 +853,7 @@
     au < frozen ; exists ; 1996 ; Aslib Proceedings: New Information Perspectives Volume 48 ; 48 ; >
     au < manifest ; exists ; 1997 ; Aslib Proceedings: New Information Perspectives Volume 49 ; 49 ; >
     au < frozen ; exists ; 1998 ; Aslib Proceedings: New Information Perspectives Volume 50 ; 50 ; >
-    au < ready ; exists ; 1999 ; Aslib Proceedings: New Information Perspectives Volume 51 ; 51 ; >
+    au < crawling ; exists ; 1999 ; Aslib Proceedings: New Information Perspectives Volume 51 ; 51 ; >
     au < doNotProcess ; doNotProcess ; 2000 ; Aslib Proceedings: New Information Perspectives Volume 52 ; 52 ; >
     au < doNotProcess ; doNotProcess ; 2001 ; Aslib Proceedings: New Information Perspectives Volume 53 ; 53 ; >
     au < doNotProcess ; doNotProcess ; 2002 ; Aslib Proceedings: New Information Perspectives Volume 54 ; 54 ; >
@@ -899,7 +899,7 @@
     au < manifest ; exists ; 1995 ; Assembly Automation Volume 15 ; 15 ; >
     au < manifest ; exists ; 1996 ; Assembly Automation Volume 16 ; 16 ; >
     au < manifest ; exists ; 1997 ; Assembly Automation Volume 17 ; 17 ; >
-    au < ready ; exists ; 1998 ; Assembly Automation Volume 18 ; 18 ; >
+    au < crawling ; exists ; 1998 ; Assembly Automation Volume 18 ; 18 ; >
     au < frozen ; exists ; 1999 ; Assembly Automation Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2000 ; Assembly Automation Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2001 ; Assembly Automation Volume 21 ; 21 ; >
@@ -4622,7 +4622,7 @@
     au < manifest ; exists ; 1995 ; International Journal of Health Care Quality Assurance Volume 8 ; 8 ; >
     au < manifest ; exists ; 1996 ; International Journal of Health Care Quality Assurance Volume 9 ; 9 ; >
     au < frozen ; exists ; 1997 ; International Journal of Health Care Quality Assurance Volume 10 ; 10 ; >
-    au < ready ; exists ; 1998 ; International Journal of Health Care Quality Assurance Volume 11 ; 11 ; >
+    au < crawling ; exists ; 1998 ; International Journal of Health Care Quality Assurance Volume 11 ; 11 ; >
     au < frozen ; exists ; 1999 ; International Journal of Health Care Quality Assurance Volume 12 ; 12 ; >
     au < frozen ; exists ; 2000 ; International Journal of Health Care Quality Assurance Volume 13 ; 13 ; >
     au < frozen ; exists ; 2001 ; International Journal of Health Care Quality Assurance Volume 14 ; 14 ; >
@@ -4901,7 +4901,7 @@
     au < manifest ; exists ; 1995 ; The International Journal of Logistics Management Volume 6 ; 6 ; >
     au < manifest ; exists ; 1996 ; The International Journal of Logistics Management Volume 7 ; 7 ; >
     au < frozen ; exists ; 1997 ; The International Journal of Logistics Management Volume 8 ; 8 ; >
-    au < ready ; exists ; 1998 ; The International Journal of Logistics Management Volume 9 ; 9 ; >
+    au < crawling ; exists ; 1998 ; The International Journal of Logistics Management Volume 9 ; 9 ; >
     au < frozen ; exists ; 1999 ; The International Journal of Logistics Management Volume 10 ; 10 ; >
     au < frozen ; exists ; 2000 ; The International Journal of Logistics Management Volume 11 ; 11 ; >
     au < frozen ; exists ; 2001 ; The International Journal of Logistics Management Volume 12 ; 12 ; >
@@ -5390,7 +5390,7 @@
     au < manifest ; exists ; 1994 ; International Journal of Physical Distribution & Logistics Management Volume 24 ; 24 ; >
     au < manifest ; exists ; 1995 ; International Journal of Physical Distribution & Logistics Management Volume 25 ; 25 ; >
     au < manifest ; exists ; 1996 ; International Journal of Physical Distribution & Logistics Management Volume 26 ; 26 ; >
-    au < ready ; exists ; 1997 ; International Journal of Physical Distribution & Logistics Management Volume 27 ; 27 ; >
+    au < crawling ; exists ; 1997 ; International Journal of Physical Distribution & Logistics Management Volume 27 ; 27 ; >
     au < frozen ; exists ; 1998 ; International Journal of Physical Distribution & Logistics Management Volume 28 ; 28 ; >
     au < frozen ; exists ; 1999 ; International Journal of Physical Distribution & Logistics Management Volume 29 ; 29 ; >
     au < frozen ; exists ; 2000 ; International Journal of Physical Distribution & Logistics Management Volume 30 ; 30 ; >
@@ -7371,7 +7371,7 @@
     param[journal_issn] = 1361-2026
     comment[journal_id] = jfmm
 
-    au < ready ; exists ; 1997 ; Journal of Fashion Marketing and Management Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1997 ; Journal of Fashion Marketing and Management Volume 1 ; 1 ; >
     au < frozen ; exists ; 1998 ; Journal of Fashion Marketing and Management Volume 2 ; 2 ; >
     au < frozen ; exists ; 1999 ; Journal of Fashion Marketing and Management Volume 3 ; 3 ; >
     au < frozen ; exists ; 2000 ; Journal of Fashion Marketing and Management Volume 4 ; 4 ; >
@@ -7519,7 +7519,7 @@
     au < manifest ; exists ; 1994 ; Journal of Financial Regulation and Compliance Volume 2 ; 2 ; >
     au < manifest ; exists ; 1995 ; Journal of Financial Regulation and Compliance Volume 3 ; 3 ; >
     au < manifest ; exists ; 1996 ; Journal of Financial Regulation and Compliance Volume 4 ; 4 ; >
-    au < ready ; exists ; 1997 ; Journal of Financial Regulation and Compliance Volume 5 ; 5 ; >
+    au < crawling ; exists ; 1997 ; Journal of Financial Regulation and Compliance Volume 5 ; 5 ; >
     au < ready ; exists ; 1998 ; Journal of Financial Regulation and Compliance Volume 6 ; 6 ; >
     au < frozen ; exists ; 1999 ; Journal of Financial Regulation and Compliance Volume 7 ; 7 ; >
     au < frozen ; exists ; 2000 ; Journal of Financial Regulation and Compliance Volume 8 ; 8 ; >
@@ -8225,7 +8225,7 @@
     au < manifest ; exists ; 1995 ; Journal of Management History (Archive) Volume 1 ; 1 ; >
     au < manifest ; exists ; 1996 ; Journal of Management History (Archive) Volume 2 ; 2 ; >
     au < ready ; exists ; 1997 ; Journal of Management History (Archive) Volume 3 ; 3 ; >
-    au < ready ; exists ; 1998 ; Journal of Management History (Archive) Volume 4 ; 4 ; >
+    au < crawling ; exists ; 1998 ; Journal of Management History (Archive) Volume 4 ; 4 ; >
     au < ready ; exists ; 1999 ; Journal of Management History (Archive) Volume 5 ; 5 ; >
     au < frozen ; exists ; 2000 ; Journal of Management History (Archive) Volume 6 ; 6 ; >
 
@@ -9499,7 +9499,7 @@
     au < manifest ; exists ; 1994 ; Library Hi Tech Volume 12 ; 12 ; >
     au < manifest ; exists ; 1995 ; Library Hi Tech Volume 13 ; 13 ; >
     au < manifest ; exists ; 1996 ; Library Hi Tech Volume 14 ; 14 ; >
-    au < ready ; exists ; 1997 ; Library Hi Tech Volume 15 ; 15 ; >
+    au < crawling ; exists ; 1997 ; Library Hi Tech Volume 15 ; 15 ; >
     au < ready ; exists ; 1998 ; Library Hi Tech Volume 16 ; 16 ; >
     au < frozen ; exists ; 1999 ; Library Hi Tech Volume 17 ; 17 ; >
     au < frozen ; exists ; 2000 ; Library Hi Tech Volume 18 ; 18 ; >
@@ -12471,7 +12471,7 @@
     #continues = 0094-064X
 
     au < manifest ; exists ; 1996 ; Strategy & Leadership Volume 24 ; 24 ; >
-    au < ready ; exists ; 1997 ; Strategy & Leadership Volume 25 ; 25 ; >
+    au < crawling ; exists ; 1997 ; Strategy & Leadership Volume 25 ; 25 ; >
     au < ready ; exists ; 1998 ; Strategy & Leadership Volume 26 ; 26 ; >
     au < frozen ; exists ; 1999 ; Strategy & Leadership Volume 27 ; 27 ; >
     au < frozen ; exists ; 2000 ; Strategy & Leadership Volume 28 ; 28 ; >
@@ -13461,7 +13461,7 @@
 
     param[journal_issn] = 1175-8708
 
-    au < ready ; exists ; 2015 ; English Teaching: Practice & Critique Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2015 ; English Teaching: Practice & Critique Volume 14 ; 14 ; >
     au < ready ; exists ; 2016 ; English Teaching: Practice & Critique Volume 15 ; 15 ; >
     au < frozen ; exists ; 2017 ; English Teaching: Practice & Critique Volume 16 ; 16 ; >
     au < frozen ; exists ; 2018 ; English Teaching: Practice & Critique Volume 17 ; 17 ; >
@@ -13864,7 +13864,7 @@
     au < frozen ; exists ; 2015 ; Journal of Global Mobility Volume 3 ; 3 ; >
     au < ready ; exists ; 2016 ; Journal of Global Mobility Volume 4 ; 4 ; >
     au < frozen ; exists ; 2017 ; Journal of Global Mobility Volume 5 ; 5 ; >
-    au < ready ; exists ; 2018 ; Journal of Global Mobility Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2018 ; Journal of Global Mobility Volume 6 ; 6 ; >
     au < frozen ; exists ; 2019 ; Journal of Global Mobility Volume 7 ; 7 ; >
     au < frozen ; exists ; 2020 ; Journal of Global Mobility Volume 8 ; 8 ; >
     au < ready ; exists ; 2021 ; Journal of Global Mobility Volume 9 ; 9 ; >
@@ -13987,9 +13987,9 @@
     au < manifest ; exists ; 1995 ; Journal of Public Budgeting, Accounting & Financial Management Volume 7 ; 7 ; >
     au < manifest ; exists ; 1996 ; Journal of Public Budgeting, Accounting & Financial Management Volume 8 ; 8 ; >
     au < frozen ; exists ; 1997 ; Journal of Public Budgeting, Accounting & Financial Management Volume 9 ; 9 ; >
-    au < ready ; exists ; 1998 ; Journal of Public Budgeting, Accounting & Financial Management Volume 10 ; 10 ; >
+    au < crawling ; exists ; 1998 ; Journal of Public Budgeting, Accounting & Financial Management Volume 10 ; 10 ; >
     au < frozen ; exists ; 1999 ; Journal of Public Budgeting, Accounting & Financial Management Volume 11 ; 11 ; >
-    au < ready ; exists ; 2000 ; Journal of Public Budgeting, Accounting & Financial Management Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2000 ; Journal of Public Budgeting, Accounting & Financial Management Volume 12 ; 12 ; >
     au < exists ; exists ; 2001 ; Journal of Public Budgeting, Accounting & Financial Management Volume 13 ; 13 ; >
     au < frozen ; exists ; 2002 ; Journal of Public Budgeting, Accounting & Financial Management Volume 14 ; 14 ; >
     au < frozen ; exists ; 2003 ; Journal of Public Budgeting, Accounting & Financial Management Volume 15 ; 15 ; >
@@ -14004,7 +14004,7 @@
     au < frozen ; exists ; 2012 ; Journal of Public Budgeting, Accounting & Financial Management Volume 24 ; 24 ; >
     au < frozen ; exists ; 2013 ; Journal of Public Budgeting, Accounting & Financial Management Volume 25 ; 25 ; >
     au < frozen ; exists ; 2014 ; Journal of Public Budgeting, Accounting & Financial Management Volume 26 ; 26 ; >
-    au < ready ; exists ; 2015 ; Journal of Public Budgeting, Accounting & Financial Management Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2015 ; Journal of Public Budgeting, Accounting & Financial Management Volume 27 ; 27 ; >
     au < frozen ; exists ; 2016 ; Journal of Public Budgeting, Accounting & Financial Management Volume 28 ; 28 ; >
     au < frozen ; exists ; 2017 ; Journal of Public Budgeting, Accounting & Financial Management Volume 29 ; 29 ; >
     au < frozen ; exists ; 2018 ; Journal of Public Budgeting, Accounting & Financial Management Volume 30 ; 30 ; >
@@ -14103,7 +14103,7 @@
 
     param[journal_issn] = 2040-2317
 
-    au < ready ; exists ; 2010 ; Journal of Structural Fire Engineering Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2010 ; Journal of Structural Fire Engineering Volume 1 ; 1 ; >
     au < frozen ; exists ; 2011 ; Journal of Structural Fire Engineering Volume 2 ; 2 ; >
     au < frozen ; exists ; 2012 ; Journal of Structural Fire Engineering Volume 3 ; 3 ; >
     au < frozen ; exists ; 2013 ; Journal of Structural Fire Engineering Volume 4 ; 4 ; >
@@ -14179,10 +14179,10 @@
     au < frozen ; exists ; 2013 ; Research Journal of Textile and Apparel Volume 17 ; 17 ; >
     au < frozen ; exists ; 2014 ; Research Journal of Textile and Apparel Volume 18 ; 18 ; >
     au < frozen ; exists ; 2015 ; Research Journal of Textile and Apparel Volume 19 ; 19 ; >
-    au < ready ; exists ; 2016 ; Research Journal of Textile and Apparel Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2016 ; Research Journal of Textile and Apparel Volume 20 ; 20 ; >
     au < frozen ; exists ; 2017 ; Research Journal of Textile and Apparel Volume 21 ; 21 ; >
     au < manifest ; exists ; 2018 ; Research Journal of Textile and Apparel Volume 22 ; 22 ; >
-    au < ready ; exists ; 2019 ; Research Journal of Textile and Apparel Volume 23 ; 23 ; >
+    au < crawling ; exists ; 2019 ; Research Journal of Textile and Apparel Volume 23 ; 23 ; >
     au < frozen ; exists ; 2020 ; Research Journal of Textile and Apparel Volume 24 ; 24 ; >
     au < frozen ; exists ; 2021 ; Research Journal of Textile and Apparel Volume 25 ; 25 ; >
     au < crawling ; exists ; 2022 ; Research Journal of Textile and Apparel Volume 26 ; 26 ; >
