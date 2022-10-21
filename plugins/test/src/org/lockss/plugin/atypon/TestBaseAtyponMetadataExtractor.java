@@ -71,6 +71,7 @@ public class TestBaseAtyponMetadataExtractor extends LockssTestCase {
   static String goodPublishingPlatform = "Atypon";
   static String goodDOI = "10.1137/10081839X";
   static String goodJID = "xxx";
+  static String goodCitationJournalTitle =  "Finance Volume 59";
   
   static String goodJournal = "Journal Name"; 
   static String goodStartPage = "22";
@@ -206,7 +207,8 @@ public class TestBaseAtyponMetadataExtractor extends LockssTestCase {
    "<meta name=\"dc.Source\" content=\"http://dx.doi.org/10.1137/10081839X\"></meta>" +
    "<meta name=\"dc.Language\" content=\"en\"></meta>" +
    "<meta name=\"dc.Coverage\" content=\"world\"></meta>" +
-   "<meta name=\"keywords\" content=\"weighted regularity, elliptic problem, oscillatory diffusion, $hp$ finite elements, 65N30, 35B65, 35J57\"></meta>";	
+              "<meta name=\"citation_journal_title\" content=\"Finance Volume 59\"></meta>" +
+              "<meta name=\"keywords\" content=\"weighted regularity, elliptic problem, oscillatory diffusion, $hp$ finite elements, 65N30, 35B65, 35J57\"></meta>";
    
 
   public void testExtractGoodHtmlContent() throws Exception {
@@ -222,6 +224,7 @@ public class TestBaseAtyponMetadataExtractor extends LockssTestCase {
     assertEquals(goodType, md.get(MetadataField.DC_FIELD_TYPE));
     assertEquals(Arrays.asList(goodAuthors), md.getList(MetadataField.FIELD_AUTHOR));
     assertEquals(goodAuthors[0], md.get(MetadataField.DC_FIELD_CREATOR));
+    assertEquals(goodCitationJournalTitle, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
 
   }
   
