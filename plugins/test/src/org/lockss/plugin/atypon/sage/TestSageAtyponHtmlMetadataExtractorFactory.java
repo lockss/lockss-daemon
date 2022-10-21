@@ -103,23 +103,23 @@ public class TestSageAtyponHtmlMetadataExtractorFactory extends LockssTestCase {
         assertNotEmpty(mdlist);
         ArticleMetadata md = mdlist.get(0);
         assertNotNull(md);
-        log.info("--------goodDCDate" + md.get(MetadataField.FIELD_DATE));
+        //log.info("--------goodDCDate" + md.get(MetadataField.FIELD_DATE));
         //assertEquals(goodDCDate, md.get(MetadataField.FIELD_DATE));
         //assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
 
 
-        log.info("--------getAdditionalMetadata-------");
+        //log.info("--------getAdditionalMetadata-------");
 
-        //InputStream in = cu.getUnfilteredInputStream();
+        /*
         String initialString = "<div class=\"core-enumeration\"><a href=\"/toc/choa/9/1\"><span property=\"isPartOf\" typeof=\"PublicationVolume\">Volume <span property=\"volumeNumber\">9</span></span>, <span property=\"isPartOf\" typeof=\"PublicationIssue\">Issue <span property=\"issueNumber\">1</span></span></a></div>\n";
         InputStream in = new ByteArrayInputStream(initialString.getBytes());
         try {
-            in.close();
             getVolumeNumber(in, cu.getEncoding(), cu.getUrl());
+            in.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
-
+        */
     }
 
     protected void getVolumeNumber(InputStream in, String encoding, String url) {

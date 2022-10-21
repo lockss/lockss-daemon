@@ -57,10 +57,10 @@ public class SageAtyponHtmlMetadataExtractorFactory extends BaseAtyponHtmlMetada
 
       String volume = getAdditionalMetadata(cu, am);
       if (volume != null) {
-        log.debug3("Sage Check:--------getAdditionalMetadata: volume-------");
+        log.debug3("Sage Check: Volume--------getAdditionalMetadata: volume-------");
         am.put(MetadataField.FIELD_VOLUME, volume);
       } else {
-        log.debug3("Sage Check:--------getAdditionalMetadata: volume Failed-------");
+        log.debug3("Sage Check: Volume--------getAdditionalMetadata: volume Failed-------");
       }
 
       emitter.emitMetadata(cu, am);
@@ -94,16 +94,17 @@ public class SageAtyponHtmlMetadataExtractorFactory extends BaseAtyponHtmlMetada
     private String getAdditionalMetadata(CachedUrl cu, ArticleMetadata am)
     {
 
-      log.debug3("Sage Check:--------getAdditionalMetadata-------");
-
-      //InputStream in = cu.getUnfilteredInputStream();
-      String initialString = "<div class=\"core-enumeration\"><a href=\"/toc/choa/9/1\"><span property=\"isPartOf\" typeof=\"PublicationVolume\">Volume <span property=\"volumeNumber\">9</span></span>, <span property=\"isPartOf\" typeof=\"PublicationIssue\">Issue <span property=\"issueNumber\">1</span></span></a></div>\n";
-      InputStream in = new ByteArrayInputStream(initialString.getBytes());
-      try {
-        in.close();
-        return getVolumeNumber(in, cu.getEncoding(), cu.getUrl());
-      } catch (IOException e) {
-        e.printStackTrace();
+      log.debug3("Sage Check: Volume--------getAdditionalMetadata-------");
+      InputStream in = cu.getUnfilteredInputStream();
+      if (in != null) {
+        try {
+          String volume = null;
+          volume = getVolumeNumber(in, cu.getEncoding(), cu.getUrl());
+          in.close();
+          return volume;
+        } catch (IOException e) {
+          e.printStackTrace();
+        }
       }
       return null;
     }
@@ -124,21 +125,22 @@ public class SageAtyponHtmlMetadataExtractorFactory extends BaseAtyponHtmlMetada
         Document doc = Jsoup.parse(in, encoding, url);
 
         span_element = doc.select("span[property]"); // <span property="volumeNumber">9</span>
-        log.debug3("Sage Check:--------Get volume span-------");
+        log.debug3("Sage Check: Volume--------Get volume span-------");
         String raw_volume = null;
         String volume = null;
         if ( span_element != null){
           raw_volume = span_element.text().trim().toLowerCase(); // return "volume 9 9 issue 1 1"
-          log.debug3("Sage Check:--------Get volume text-------" + raw_volume);
+          log.debug3("Sage Check: Volume--------Get volume text-------" + raw_volume);
           Matcher plosM = VOLUME_PAT.matcher(raw_volume);
           if (plosM.matches()) {
             volume = plosM.replaceFirst(VOLUME_REPL);
-            log.debug3("Sage Check: volume cleaned: = " + volume);
+            log.debug3("Sage Check: Volume cleaned: = " + volume);
+            return volume;
           }
           return null;
         } 
       } catch (IOException e) {
-        log.debug3("Sage Check: Error getVolumeNumber", e);
+        log.debug3("Sage Check: Volume Error getVolumeNumber", e);
         return null;
       }
       return null;

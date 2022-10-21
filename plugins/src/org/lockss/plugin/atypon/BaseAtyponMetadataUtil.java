@@ -178,7 +178,9 @@ public class BaseAtyponMetadataUtil {
           isInAu = (
                   ((StringUtils.contains(normAuTitleSage, normFoundTitleSage)) ||
                           (StringUtils.contains(normFoundTitleSage, normAuTitleSage))));
-          log.debug3("Sage Check: Publisher Specific Checks for Sage journal title condition meet, isInAu :" + isInAu);
+          log.debug3("Sage Check: Publisher Specific Checks for Sage journal title condition meet, isInAu :" + isInAu + ", access.url = " + am.get(MetadataField.FIELD_ACCESS_URL)
+                  + ", AU_journal_titleSage = " + AU_journal_titleSage + ", foundJournalTitleSage ="  + foundJournalTitleSage
+                  + ", normAuTitleSage =  " + normAuTitleSage + ", normFoundTitleSage + " + normFoundTitleSage);
 
           // Check VOLUME
           String foundVolumeSage = am.get(MetadataField.FIELD_VOLUME);
