@@ -66,12 +66,13 @@ public class SageAtyponHtmlMetadataExtractorFactory extends BaseAtyponHtmlMetada
         return;
       }
 
-      String volume = getAdditionalMetadata(cu, am);
-      if (volume != null) {
+      String volume = getAdditionalMetadata(cu, am).trim();
+      if (volume != null && volume != "") {
         log.debug3("Sage Check: Volume--------getAdditionalMetadata: volume-------");
         am.put(MetadataField.FIELD_VOLUME, volume);
       } else {
         log.debug3("Sage Check: Volume--------getAdditionalMetadata: volume Failed-------");
+        return;
       }
 
       // Only emit if this item is likely to be from this AU
@@ -134,24 +135,20 @@ public class SageAtyponHtmlMetadataExtractorFactory extends BaseAtyponHtmlMetada
 
       Elements span_element;
 
-      Pattern VOLUME_PAT = Pattern.compile("volume\\s*(\\d+)\\s*(\\d+)\\s*issue\\s*(\\d+)\\s*\\d+", Pattern.CASE_INSENSITIVE);
-      String VOLUME_REPL = "$1";
-
       try {
         Document doc = Jsoup.parse(in, encoding, url);
 
         span_element = doc.select("span[property=\"volumeNumber\"]"); // <span property="volumeNumber">9</span>
         log.debug3("Sage Check: Volume--------Get volume span-------");
-        String raw_volume = null;
         String volume = null;
         if ( span_element != null){
           volume = span_element.text().trim().toLowerCase();
-          log.debug3("Sage Check: raw volume text: = " + volume);
+          log.debug3("Sage Check: raw volume text: = " + span_element + ", url = " + url);
           if (volume != null) {
-            log.debug3("Sage Check: Volume cleaned: = " + volume);
-            return volume;
+            log.debug3("Sage Check: Volume cleaned: = " + volume + ", url = " + url);
+            return volume.trim();
           } else {
-            log.debug3("Sage Check: Volume is null");
+            log.debug3("Sage Check: Volume is null" + ", url = " + url);
 
           }
           return null;
