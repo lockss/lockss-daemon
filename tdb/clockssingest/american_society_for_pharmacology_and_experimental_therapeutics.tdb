@@ -462,9 +462,9 @@
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 2018 ; Journal of Pharmacology and Experimental Therapeutics Volume 366 ; 366 ; http://jpet.aspetjournals.org/ ; reingest2.clockss.org:8085 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 2018 ; Journal of Pharmacology and Experimental Therapeutics Volume 367 ; 367 ; http://jpet.aspetjournals.org/ ; reingest4.clockss.org:8082 >
     au < aspet.ClockssASPETDrupalPlugin ; deepCrawl ; exists ; 2019 ; Journal of Pharmacology and Experimental Therapeutics Volume 368 ; 368 ; http://jpet.aspetjournals.org/ ; >
-    au < aspet.ClockssASPETDrupalPlugin ; deepCrawl ; exists ; 2019 ; Journal of Pharmacology and Experimental Therapeutics Volume 369 ; 369 ; http://jpet.aspetjournals.org/ ; >
-    au < aspet.ClockssASPETDrupalPlugin ; deepCrawl ; exists ; 2019 ; Journal of Pharmacology and Experimental Therapeutics Volume 370 ; 370 ; http://jpet.aspetjournals.org/ ; >
-    au < aspet.ClockssASPETDrupalPlugin ; deepCrawl ; exists ; 2019 ; Journal of Pharmacology and Experimental Therapeutics Volume 371 ; 371 ; http://jpet.aspetjournals.org/ ; >
+    au < aspet.ClockssASPETDrupalPlugin ; frozen ; exists ; 2019 ; Journal of Pharmacology and Experimental Therapeutics Volume 369 ; 369 ; http://jpet.aspetjournals.org/ ; >
+    au < aspet.ClockssASPETDrupalPlugin ; frozen ; exists ; 2019 ; Journal of Pharmacology and Experimental Therapeutics Volume 370 ; 370 ; http://jpet.aspetjournals.org/ ; >
+    au < aspet.ClockssASPETDrupalPlugin ; frozen ; exists ; 2019 ; Journal of Pharmacology and Experimental Therapeutics Volume 371 ; 371 ; http://jpet.aspetjournals.org/ ; >
     au < aspet.ClockssASPETDrupalPlugin ; deepCrawl ; exists ; 2020 ; Journal of Pharmacology and Experimental Therapeutics Volume 372 ; 372 ; https://jpet.aspetjournals.org/ ; >
     au < aspet.ClockssASPETDrupalPlugin ; deepCrawl ; exists ; 2020 ; Journal of Pharmacology and Experimental Therapeutics Volume 373 ; 373 ; https://jpet.aspetjournals.org/ ; >
     au < aspet.ClockssASPETDrupalPlugin ; deepCrawl ; exists ; 2020 ; Journal of Pharmacology and Experimental Therapeutics Volume 374 ; 374 ; https://jpet.aspetjournals.org/ ; >
@@ -614,7 +614,7 @@
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 2018 ; Molecular Pharmacology Volume 93 ; 93 ; http://molpharm.aspetjournals.org/ ; reingest2.clockss.org:8085 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 2018 ; Molecular Pharmacology Volume 94 ; 94 ; http://molpharm.aspetjournals.org/ ; reingest1.clockss.org:8082 >
     au < aspet.ClockssASPETDrupalPlugin ; deepCrawl ; exists ; 2019 ; Molecular Pharmacology Volume 95 ; 95 ; http://molpharm.aspetjournals.org/ ; >
-    au < aspet.ClockssASPETDrupalPlugin ; deepCrawl ; exists ; 2019 ; Molecular Pharmacology Volume 96 ; 96 ; http://molpharm.aspetjournals.org/ ; >
+    au < aspet.ClockssASPETDrupalPlugin ; frozen ; exists ; 2019 ; Molecular Pharmacology Volume 96 ; 96 ; http://molpharm.aspetjournals.org/ ; >
     au < aspet.ClockssASPETDrupalPlugin ; deepCrawl ; exists ; 2020 ; Molecular Pharmacology Volume 97 ; 97 ; http://molpharm.aspetjournals.org/ ; >
     au < aspet.ClockssASPETDrupalPlugin ; deepCrawl ; exists ; 2020 ; Molecular Pharmacology Volume 98 ; 98 ; http://molpharm.aspetjournals.org/ ; >
     au < aspet.ClockssASPETDrupalPlugin ; deepCrawl ; exists ; 2021 ; Molecular Pharmacology Volume 99 ; 99 ; https://molpharm.aspetjournals.org/ ; >
@@ -706,7 +706,7 @@
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 2016 ; Pharmacological Reviews Volume 68 ; 68 ; http://pharmrev.aspetjournals.org/ ; reingest1.clockss.org:8082 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 2017 ; Pharmacological Reviews Volume 69 ; 69 ; http://pharmrev.aspetjournals.org/ ; reingest5.clockss.org:8082 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 2018 ; Pharmacological Reviews Volume 70 ; 70 ; http://pharmrev.aspetjournals.org/ ; reingest4.clockss.org:8082 >
-    au < aspet.ClockssASPETDrupalPlugin ; deepCrawl ; exists ; 2019 ; Pharmacological Reviews Volume 71 ; 71 ; http://pharmrev.aspetjournals.org/ ; >
+    au < aspet.ClockssASPETDrupalPlugin ; frozen ; exists ; 2019 ; Pharmacological Reviews Volume 71 ; 71 ; http://pharmrev.aspetjournals.org/ ; >
     au < aspet.ClockssASPETDrupalPlugin ; deepCrawl ; exists ; 2020 ; Pharmacological Reviews Volume 72 ; 72 ; http://pharmrev.aspetjournals.org/ ; >
     au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 2021 ; Pharmacological Reviews Volume 73 ; 73 ; https://pharmrev.aspetjournals.org/ ; >
     au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 2022 ; Pharmacological Reviews Volume 74 ; 74 ; https://pharmrev.aspetjournals.org/ ; >
