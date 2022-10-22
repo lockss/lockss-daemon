@@ -9,6 +9,7 @@ import org.lockss.extractor.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.HttpHttpsUrlHelper;
+import org.lockss.plugin.atypon.BaseAtyponHtmlMetadataExtractorFactory;
 import org.lockss.plugin.atypon.BaseAtyponMetadataUtil;
 import org.lockss.repository.LockssRepository;
 import org.lockss.util.Constants;
@@ -31,57 +32,18 @@ import java.util.regex.*;
 import org.jsoup.Jsoup;
 
 
-public class SageAtyponHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
-  private static final Logger log = Logger.getLogger(SageAtyponHtmlMetadataExtractorFactory.class);
+public class SageAtyponHtmlMetadataExtractorFactory extends BaseAtyponHtmlMetadataExtractorFactory {
+  static Logger log = Logger.getLogger(SageAtyponHtmlMetadataExtractorFactory.class);
 
-  public FileMetadataExtractor
-  createFileMetadataExtractor(MetadataTarget target, String contentType)
+  @Override
+  public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
+                                                           String contentType)
           throws PluginException {
     return new SageAtyponHtmlMetadataExtractor();
   }
 
   public static class SageAtyponHtmlMetadataExtractor
-          implements FileMetadataExtractor {
-
-    // Map Google Scholar HTML meta tag names to cooked metadata fields
-    //NOTE - so far no books support HTML meta tags so we can assume journal
-    private static MultiMap tagMap = new MultiValueMap();
-    static {
-      tagMap.put("dc.Identifier", MetadataField.FIELD_DOI);
-      tagMap.put("dc.Identifier", MetadataField.DC_FIELD_IDENTIFIER);
-
-      tagMap.put("dc.Date", MetadataField.FIELD_DATE);
-      tagMap.put("dc.Date", MetadataField.DC_FIELD_DATE);
-
-      tagMap.put("dc.Creator",
-              new MetadataField(MetadataField.FIELD_AUTHOR,
-                      MetadataField.splitAt(";")));
-      tagMap.put("dc.Creator", MetadataField.DC_FIELD_CREATOR);
-
-      tagMap.put("dc.Title", MetadataField.FIELD_ARTICLE_TITLE);
-      tagMap.put("dc.Title", MetadataField.DC_FIELD_TITLE);
-
-      tagMap.put("dc.Publisher", MetadataField.DC_FIELD_PUBLISHER);
-      // 3/6/15 - remove cooking the dc.publisher as FIELD_PUBLISHER
-      // the value tends to be variable and a better result will
-      // come from the TDB file if this isn't set
-      //tagMap.put("dc.Publisher", MetadataField.FIELD_PUBLISHER);
-
-      tagMap.put("dc.Subject", MetadataField.DC_FIELD_SUBJECT);
-      tagMap.put("dc.Subject",
-              new MetadataField(MetadataField.FIELD_KEYWORDS,
-                      MetadataField.splitAt(";")));
-
-      tagMap.put("dc.Description", MetadataField.DC_FIELD_DESCRIPTION);
-      tagMap.put("dc.Type", MetadataField.DC_FIELD_TYPE);
-      tagMap.put("dc.Format", MetadataField.DC_FIELD_FORMAT);
-      tagMap.put("dc.Language", MetadataField.DC_FIELD_LANGUAGE);
-      tagMap.put("dc.Rights", MetadataField.DC_FIELD_RIGHTS);
-      tagMap.put("dc.Coverage",MetadataField.DC_FIELD_COVERAGE);
-      tagMap.put("dc.Source", MetadataField.DC_FIELD_SOURCE);
-      //Adding this one especially for Sage to filter out overcrawlled content which belongs to other volume
-      tagMap.put("citation_journal_title", MetadataField.FIELD_PUBLICATION_TITLE);
-    }
+          extends BaseAtyponHtmlMetadataExtractor {
 
     @Override
     public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
@@ -93,7 +55,7 @@ public class SageAtyponHtmlMetadataExtractorFactory implements FileMetadataExtra
       ArticleMetadata am =
               new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
 
-      am.cook(tagMap);
+      am.cook(getTagMap());
       /*
        * if, due to overcrawl, we got to a page that didn't have anything
        * valid, eg "this page not found" html page
@@ -145,10 +107,6 @@ public class SageAtyponHtmlMetadataExtractorFactory implements FileMetadataExtra
 
     }
 
-    protected MultiMap getTagMap() {
-      return tagMap;
-    }
-
     private String getAdditionalMetadata(CachedUrl cu, ArticleMetadata am)
     {
 
@@ -188,6 +146,7 @@ public class SageAtyponHtmlMetadataExtractorFactory implements FileMetadataExtra
         String volume = null;
         if ( span_element != null){
           volume = span_element.text().trim().toLowerCase();
+          log.debug3("Sage Check: raw volume text: = " + volume);
           if (volume != null) {
             log.debug3("Sage Check: Volume cleaned: = " + volume);
             return volume;
