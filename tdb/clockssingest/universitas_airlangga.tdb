@@ -306,7 +306,7 @@
 
       param[journal_id] = JBE
 
-      au < crawling ; exists ; 2014 ; Jurnal Berkala Epidemiologi Volume 2 ; 2 ; 2014 ; >
+      au < frozen ; exists ; 2014 ; Jurnal Berkala Epidemiologi Volume 2 ; 2 ; 2014 ; >
       au < manifest ; exists ; 2015 ; Jurnal Berkala Epidemiologi Volume 3 ; 3 ; 2015 ; >
       au < manifest ; exists ; 2016 ; Jurnal Berkala Epidemiologi Volume 4 ; 4 ; 2016 ; >
       au < manifest ; exists ; 2017 ; Jurnal Berkala Epidemiologi Volume 5 ; 5 ; 2017 ; >
@@ -643,7 +643,7 @@
 
       au < manifest ; exists ; 2017 ; The International Journal of Applied Business (TIJAB) Volume 1 ; 1 ; 2017 ; >
       au < manifest ; exists ; 2018 ; The International Journal of Applied Business (TIJAB) Volume 2 ; 2 ; 2018 ; >
-      au < crawling ; exists ; 2019 ; The International Journal of Applied Business (TIJAB) Volume 3 ; 3 ; 2019 ; >
+      au < frozen ; exists ; 2019 ; The International Journal of Applied Business (TIJAB) Volume 3 ; 3 ; 2019 ; >
       au < manifest ; exists ; 2020 ; The International Journal of Applied Business (TIJAB) Volume 4 ; 4 ; 2020 ; >
       au < manifest ; exists ; 2021 ; The International Journal of Applied Business (TIJAB) Volume 5 ; 5 ; 2021 ; >
       au < manifest ; exists ; 2022 ; The International Journal of Applied Business (TIJAB) Volume 6 ; 6 ; 2022 ; >
@@ -717,7 +717,7 @@
       param[journal_id] = JHI
 
       au < manifest ; exists ; 2017 ; Jurnal Hubungan Internasional Volume 10 ; 10 ; 2017 ; >
-      au < crawling ; exists ; 2018 ; Jurnal Hubungan Internasional Volume 11 ; 11 ; 2018 ; >
+      au < frozen ; exists ; 2018 ; Jurnal Hubungan Internasional Volume 11 ; 11 ; 2018 ; >
       au < manifest ; exists ; 2019 ; Jurnal Hubungan Internasional Volume 12 ; 12 ; 2019 ; >
       au < manifest ; exists ; 2020 ; Jurnal Hubungan Internasional Volume 13 ; 13 ; 2020 ; >
       au < manifest ; exists ; 2021 ; Jurnal Hubungan Internasional Volume 14 ; 14 ; 2021 ; >
@@ -1080,7 +1080,7 @@
 
       au < manifest ; exists ; 2018 ; Journal of Halal Product and Research Volume 1 ; 1 ; 2018 ; >
       au < manifest ; exists ; 2019 ; Journal of Halal Product and Research Volume 2 ; 2 ; 2019 ; >
-      au < crawling ; exists ; 2020 ; Journal of Halal Product and Research Volume 3 ; 3 ; 2020 ; >
+      au < frozen ; exists ; 2020 ; Journal of Halal Product and Research Volume 3 ; 3 ; 2020 ; >
       au < manifest ; exists ; 2021 ; Journal of Halal Product and Research Volume 4 ; 4 ; 2021 ; >
       au < exists ; exists ; 2022 ; Journal of Halal Product and Research Volume 5 ; 5 ; 2022 ; >
 
@@ -1526,7 +1526,7 @@
       au < manifest ; exists ; 2018 ; Journal of Marine and Coastal Science Volume 7 ; 7 ; 2018 ; >
       au < manifest ; exists ; 2019 ; Journal of Marine and Coastal Science Volume 8 ; 8 ; 2019 ; >
       au < manifest ; exists ; 2020 ; Journal of Marine and Coastal Science Volume 9 ; 9 ; 2020 ; >
-      au < crawling ; exists ; 2021 ; Journal of Marine and Coastal Science Volume 10 ; 10 ; 2021 ; >
+      au < frozen ; exists ; 2021 ; Journal of Marine and Coastal Science Volume 10 ; 10 ; 2021 ; >
       au < manifest ; exists ; 2022 ; Journal of Marine and Coastal Science Volume 11 ; 11 ; 2022 ; >
 
   }
@@ -1542,7 +1542,7 @@
       param[journal_id] = CCJ
 
       au < manifest ; exists ; 2020 ; Cardiovascular and Cardiometabolic Journal Volume 1 ; 1 ; 2020 ; >
-      au < crawling ; exists ; 2021 ; Cardiovascular and Cardiometabolic Journal Volume 2 ; 2 ; 2021 ; >
+      au < frozen ; exists ; 2021 ; Cardiovascular and Cardiometabolic Journal Volume 2 ; 2 ; 2021 ; >
       au < manifest ; exists ; 2022 ; Cardiovascular and Cardiometabolic Journal Volume 3 ; 3 ; 2022 ; >
 
   }
@@ -1735,7 +1735,7 @@
       param[journal_id] = IMHSJ
 
       au < manifest ; exists ; 2019 ; Indonesian Midwifery and Health Sciences Journal Volume 3 ; 3 ; 2019 ; >
-      au < crawling ; exists ; 2020 ; Indonesian Midwifery and Health Sciences Journal Volume 4 ; 4 ; 2020 ; >
+      au < frozen ; exists ; 2020 ; Indonesian Midwifery and Health Sciences Journal Volume 4 ; 4 ; 2020 ; >
       au < manifest ; exists ; 2021 ; Indonesian Midwifery and Health Sciences Journal Volume 5 ; 5 ; 2021 ; >
       au < manifest ; exists ; 2022 ; Indonesian Midwifery and Health Sciences Journal Volume 6 ; 6 ; 2022 ; >
 
@@ -1828,7 +1828,7 @@
       param[journal_id] = JAP
 
       au < manifest ; exists ; 2020 ; Jejaring Administrasi Publik (JAP) Volume 12 ; 12 ; 2020 ; >
-      au < crawling ; exists ; 2021 ; Jejaring Administrasi Publik (JAP) Volume 13 ; 13 ; 2021 ; >
+      au < frozen ; exists ; 2021 ; Jejaring Administrasi Publik (JAP) Volume 13 ; 13 ; 2021 ; >
       au < exists ; exists ; 2022 ; Jejaring Administrasi Publik (JAP) Volume 14 ; 14 ; 2022 ; >
 
   }
