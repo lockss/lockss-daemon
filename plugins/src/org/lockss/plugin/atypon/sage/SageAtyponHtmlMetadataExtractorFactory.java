@@ -3,10 +3,13 @@ package org.lockss.plugin.atypon.sage;
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
 import org.apache.commons.lang.StringEscapeUtils;
+import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
-import org.lockss.plugin.atypon.BaseAtyponHtmlMetadataExtractorFactory;
+import org.lockss.plugin.HttpHttpsUrlHelper;
+import org.lockss.plugin.atypon.BaseAtyponMetadataUtil;
 import org.lockss.repository.LockssRepository;
 import org.lockss.util.Constants;
 import org.lockss.util.HtmlUtil;
@@ -28,32 +31,78 @@ import java.util.regex.*;
 import org.jsoup.Jsoup;
 
 
+public class SageAtyponHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
+  private static final Logger log = Logger.getLogger(SageAtyponHtmlMetadataExtractorFactory.class);
 
-public class SageAtyponHtmlMetadataExtractorFactory extends BaseAtyponHtmlMetadataExtractorFactory {
-  static Logger log = Logger.getLogger(SageAtyponHtmlMetadataExtractorFactory.class);
-
-  @Override
-  public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
-                                                           String contentType)
+  public FileMetadataExtractor
+  createFileMetadataExtractor(MetadataTarget target, String contentType)
           throws PluginException {
     return new SageAtyponHtmlMetadataExtractor();
   }
 
   public static class SageAtyponHtmlMetadataExtractor
-          extends BaseAtyponHtmlMetadataExtractor {
+          implements FileMetadataExtractor {
 
-    /**
-     * Use parent to extract raw metadata, map
-     * to cooked fields, then do specific extract for extra tags by reading the file.
-     */
+    // Map Google Scholar HTML meta tag names to cooked metadata fields
+    //NOTE - so far no books support HTML meta tags so we can assume journal
+    private static MultiMap tagMap = new MultiValueMap();
+    static {
+      tagMap.put("dc.Identifier", MetadataField.FIELD_DOI);
+      tagMap.put("dc.Identifier", MetadataField.DC_FIELD_IDENTIFIER);
+
+      tagMap.put("dc.Date", MetadataField.FIELD_DATE);
+      tagMap.put("dc.Date", MetadataField.DC_FIELD_DATE);
+
+      tagMap.put("dc.Creator",
+              new MetadataField(MetadataField.FIELD_AUTHOR,
+                      MetadataField.splitAt(";")));
+      tagMap.put("dc.Creator", MetadataField.DC_FIELD_CREATOR);
+
+      tagMap.put("dc.Title", MetadataField.FIELD_ARTICLE_TITLE);
+      tagMap.put("dc.Title", MetadataField.DC_FIELD_TITLE);
+
+      tagMap.put("dc.Publisher", MetadataField.DC_FIELD_PUBLISHER);
+      // 3/6/15 - remove cooking the dc.publisher as FIELD_PUBLISHER
+      // the value tends to be variable and a better result will
+      // come from the TDB file if this isn't set
+      //tagMap.put("dc.Publisher", MetadataField.FIELD_PUBLISHER);
+
+      tagMap.put("dc.Subject", MetadataField.DC_FIELD_SUBJECT);
+      tagMap.put("dc.Subject",
+              new MetadataField(MetadataField.FIELD_KEYWORDS,
+                      MetadataField.splitAt(";")));
+
+      tagMap.put("dc.Description", MetadataField.DC_FIELD_DESCRIPTION);
+      tagMap.put("dc.Type", MetadataField.DC_FIELD_TYPE);
+      tagMap.put("dc.Format", MetadataField.DC_FIELD_FORMAT);
+      tagMap.put("dc.Language", MetadataField.DC_FIELD_LANGUAGE);
+      tagMap.put("dc.Rights", MetadataField.DC_FIELD_RIGHTS);
+      tagMap.put("dc.Coverage",MetadataField.DC_FIELD_COVERAGE);
+      tagMap.put("dc.Source", MetadataField.DC_FIELD_SOURCE);
+      //Adding this one especially for Sage to filter out overcrawlled content which belongs to other volume
+      tagMap.put("citation_journal_title", MetadataField.FIELD_PUBLICATION_TITLE);
+    }
+
     @Override
     public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
             throws IOException {
 
-      // extract but do some more processing before emitting
+      // NOTE: MarkAllen plugins Override this extract  method and then calls it via super.extract() after
+      //       performing additional checks on Date and Doi.
+
       ArticleMetadata am =
               new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
-      am.cook(getTagMap()); //parent set the tagMap
+
+      am.cook(tagMap);
+      /*
+       * if, due to overcrawl, we got to a page that didn't have anything
+       * valid, eg "this page not found" html page
+       * don't emit empty metadata (because defaults would get put in
+       * Must do this after cooking, because it checks size of cooked info
+       */
+      if (am.isEmpty()) {
+        return;
+      }
 
       String volume = getAdditionalMetadata(cu, am);
       if (volume != null) {
@@ -63,33 +112,42 @@ public class SageAtyponHtmlMetadataExtractorFactory extends BaseAtyponHtmlMetada
         log.debug3("Sage Check: Volume--------getAdditionalMetadata: volume Failed-------");
       }
 
+      // Only emit if this item is likely to be from this AU
+      // protect against counting overcrawled articles
+      ArchivalUnit au = cu.getArchivalUnit();
+      log.debug3("Sage Check: ---------SageAtyponHtmlMetadataExtractor start checking-------");
+      if (!BaseAtyponMetadataUtil.metadataMatchesTdb(au, am)) {
+        log.debug3("Sage Check: ---------SageAtyponHtmlMetadataExtractor failed-------");
+        return;
+      } else {
+        log.debug3("Sage Check: ---------SageAtyponHtmlMetadataExtractor succeed-------");
+      }
+
+      /*
+       * Fill in DOI, publisher, other information available from
+       * the URL or TDB
+       * CORRECT the access.url if it is not in the AU
+       */
+      BaseAtyponMetadataUtil.completeMetadata(cu, am);
+
+      HttpHttpsUrlHelper helper = new HttpHttpsUrlHelper(cu.getArchivalUnit(),
+              ConfigParamDescr.BASE_URL.getKey(),
+              "base_url");
+      String url = am.get(MetadataField.FIELD_ACCESS_URL);
+
+      if (url != null) {
+        url = helper.normalize(url);
+        am.replace(MetadataField.FIELD_ACCESS_URL, url);
+      }
+      // If we've gotten this far, emit
+      log.debug3("Sage Check: ---------SageAtyponHtmlMetadataExtractorFactory emitting url = " + url);
       emitter.emitMetadata(cu, am);
+
     }
 
-    /*
-    private void getAdditionalMetadata(CachedUrl cu, ArticleMetadata am)
-    {
-      //Extracts doi from url (doi is included in file, but not formatted well)
-      //metadata could come from either full text html or abstract - figure out which
-      String doi;
-      if ( (cu.getUrl()).contains("abs/")) {
-        doi = cu.getUrl().substring(cu.getUrl().indexOf("abs/")+4);
-      } else
-        doi = cu.getUrl().substring(cu.getUrl().indexOf("full/")+5);
-      if ( !(doi == null) && !(doi.isEmpty())) {
-        am.put(MetadataField.FIELD_DOI,doi);
-      }
-
-      //Extracts the volume and issue number from the end of the doi
-      String suffix = doi.substring(doi.indexOf("/"));
-      am.put(MetadataField.FIELD_ISSUE, suffix.substring(suffix.lastIndexOf(".")+1));
-      am.put(MetadataField.FIELD_VOLUME, suffix.substring(suffix.lastIndexOf(".", suffix.lastIndexOf(".")-1)+1, suffix.lastIndexOf(".")));
-
-      // lastly, hardwire the publisher if it hasn't been set
-      if (am.get(MetadataField.FIELD_PUBLISHER) == null) {
-        am.put(MetadataField.FIELD_PUBLISHER, "Bloomsbury Qatar Foundation Journals");
-      }
-      */
+    protected MultiMap getTagMap() {
+      return tagMap;
+    }
 
     private String getAdditionalMetadata(CachedUrl cu, ArticleMetadata am)
     {
@@ -110,10 +168,10 @@ public class SageAtyponHtmlMetadataExtractorFactory extends BaseAtyponHtmlMetada
     }
 
     /*
-    view-source:https://journals.sagepub.com/doi/10.1007/s11832-015-0635-2
-    <div class="core-enumeration"><a href="/toc/choa/9/1"><span property="isPartOf" typeof="PublicationVolume">Volume <span property="volumeNumber">9</span></span>, <span property="isPartOf" typeof="PublicationIssue">Issue <span property="issueNumber">1</span></span></a></div>
+   view-source:https://journals.sagepub.com/doi/10.1007/s11832-015-0635-2
+   <div class="core-enumeration"><a href="/toc/choa/9/1"><span property="isPartOf" typeof="PublicationVolume">Volume <span property="volumeNumber">9</span></span>, <span property="isPartOf" typeof="PublicationIssue">Issue <span property="issueNumber">1</span></span></a></div>
 
-     */
+    */
     protected String getVolumeNumber(InputStream in, String encoding, String url) {
 
       Elements span_element;
@@ -124,21 +182,21 @@ public class SageAtyponHtmlMetadataExtractorFactory extends BaseAtyponHtmlMetada
       try {
         Document doc = Jsoup.parse(in, encoding, url);
 
-        span_element = doc.select("span[property]"); // <span property="volumeNumber">9</span>
+        span_element = doc.select("span[property=\"volumeNumber\"]"); // <span property="volumeNumber">9</span>
         log.debug3("Sage Check: Volume--------Get volume span-------");
         String raw_volume = null;
         String volume = null;
         if ( span_element != null){
-          raw_volume = span_element.text().trim().toLowerCase(); // return "volume 9 9 issue 1 1"
-          log.debug3("Sage Check: Volume--------Get volume text-------" + raw_volume);
-          Matcher plosM = VOLUME_PAT.matcher(raw_volume);
-          if (plosM.matches()) {
-            volume = plosM.replaceFirst(VOLUME_REPL);
+          volume = span_element.text().trim().toLowerCase();
+          if (volume != null) {
             log.debug3("Sage Check: Volume cleaned: = " + volume);
             return volume;
+          } else {
+            log.debug3("Sage Check: Volume is null");
+
           }
           return null;
-        } 
+        }
       } catch (IOException e) {
         log.debug3("Sage Check: Volume Error getVolumeNumber", e);
         return null;

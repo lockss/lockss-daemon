@@ -100,9 +100,9 @@ public class TestSageAtyponHtmlMetadataExtractorFactory extends LockssTestCase {
         FileMetadataExtractor me = new SageAtyponHtmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
         FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
         List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
-        assertNotEmpty(mdlist);
-        ArticleMetadata md = mdlist.get(0);
-        assertNotNull(md);
+        //assertNotEmpty(mdlist);
+        //ArticleMetadata md = mdlist.get(0);
+        //assertNotNull(md);
         //log.info("--------goodDCDate" + md.get(MetadataField.FIELD_DATE));
         //assertEquals(goodDCDate, md.get(MetadataField.FIELD_DATE));
         //assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
@@ -110,7 +110,7 @@ public class TestSageAtyponHtmlMetadataExtractorFactory extends LockssTestCase {
 
         //log.info("--------getAdditionalMetadata-------");
 
-        /*
+
         String initialString = "<div class=\"core-enumeration\"><a href=\"/toc/choa/9/1\"><span property=\"isPartOf\" typeof=\"PublicationVolume\">Volume <span property=\"volumeNumber\">9</span></span>, <span property=\"isPartOf\" typeof=\"PublicationIssue\">Issue <span property=\"issueNumber\">1</span></span></a></div>\n";
         InputStream in = new ByteArrayInputStream(initialString.getBytes());
         try {
@@ -119,7 +119,7 @@ public class TestSageAtyponHtmlMetadataExtractorFactory extends LockssTestCase {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        */
+
     }
 
     protected void getVolumeNumber(InputStream in, String encoding, String url) {
@@ -132,19 +132,20 @@ public class TestSageAtyponHtmlMetadataExtractorFactory extends LockssTestCase {
         try {
             Document doc = Jsoup.parse(in, encoding, url);
 
-            span_element = doc.select("span[property]"); // <span property="volumeNumber">9</span>
+            span_element = doc.select("span[property=\"volumeNumber\"]"); // <span property="volumeNumber">9</span>
             log.info("--------Get volume span-------");
             String raw_volume = null;
             String volume = null;
             if ( span_element != null){
                 raw_volume = span_element.text().trim().toLowerCase(); // return "volume 9 9 issue 1 1"
-                log.info("--------Get volume text-------" + raw_volume);
+                log.info("--------Get volume text-------raw_volume=" + raw_volume);
                 Matcher plosM = VOLUME_PAT.matcher(raw_volume);
                 if (plosM.matches()) {
                     volume = plosM.replaceFirst(VOLUME_REPL);
-                    log.debug3("raw doi cleaned: = " + volume);
+                    log.info("raw doi cleaned: = " + volume);
+                } else {
+                    log.info("--------Get volume text-------volume=" + volume);
                 }
-                log.info("--------Get volume text-------" + volume);
                 return;
             } else {
                 log.info("--------Get volume span Failed-------" + volume);
