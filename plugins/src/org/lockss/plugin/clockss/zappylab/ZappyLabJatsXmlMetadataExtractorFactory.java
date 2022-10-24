@@ -66,7 +66,7 @@ public class ZappyLabJatsXmlMetadataExtractorFactory extends SourceXmlMetadataEx
 
   private static String normalisePlosDoi(String doi) {
     String nVal = null;
-   
+
     // this will strip the "http://dx.doi.org/", if there
     log.debug3("raw doi: = " + doi);
     Matcher plosM = PLOS_DOI_PAT.matcher(doi);
@@ -179,7 +179,8 @@ public class ZappyLabJatsXmlMetadataExtractorFactory extends SourceXmlMetadataEx
       }
 
       if (thisAM.getRaw(JatsPublishingSchemaHelper.JATS_doi) != null) {
-        thisAM.put(MetadataField.FIELD_DOI, normalisePlosDoi(thisAM.getRaw(JatsPublishingSchemaHelper.JATS_doi)));
+        //The content delivered may have extra "/" in front of doi
+        thisAM.put(MetadataField.FIELD_DOI, normalisePlosDoi(thisAM.getRaw(JatsPublishingSchemaHelper.JATS_doi)).replaceFirst("/", ""));
       }
     }
     
