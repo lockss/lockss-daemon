@@ -130,7 +130,8 @@ public class ZappyLabJatsXmlMetadataExtractorFactory extends SourceXmlMetadataEx
                                    CachedUrl cu, ArticleMetadata thisAM) {
 
       // Historically, content contained some "spam" need to be excluded based on DOI
-      String extractedDOI = thisAM.getRaw(JatsPublishingSchemaHelper.JATS_doi);
+      // Publisher delivered content with extra "/" for doi
+      String extractedDOI = thisAM.getRaw(JatsPublishingSchemaHelper.JATS_doi).replaceFirst("/", "");
       
       log.debug3("ZappyLab spam DOI: extracted doi in PreEmit: -----------" + extractedDOI);
 
