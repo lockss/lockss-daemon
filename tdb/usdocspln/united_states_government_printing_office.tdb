@@ -222,6 +222,14 @@
     param[collection_id] = CPRT
 
 
+    au < manifest ; 1955 ; Congressional Committee Prints 1955 ; 1955 ; https://www.govinfo.gov/ >
+    au < manifest ; 1956 ; Congressional Committee Prints 1956 ; 1956 ; https://www.govinfo.gov/ >
+    au < manifest ; 1957 ; Congressional Committee Prints 1957 ; 1957 ; https://www.govinfo.gov/ >
+    au < manifest ; 1958 ; Congressional Committee Prints 1958 ; 1958 ; https://www.govinfo.gov/ >
+    au < manifest ; 1960 ; Congressional Committee Prints 1960 ; 1960 ; https://www.govinfo.gov/ >
+    au < manifest ; 1964 ; Congressional Committee Prints 1964 ; 1964 ; https://www.govinfo.gov/ >
+    au < manifest ; 1967 ; Congressional Committee Prints 1967 ; 1967 ; https://www.govinfo.gov/ >
+    au < manifest ; 1969 ; Congressional Committee Prints 1969 ; 1969 ; https://www.govinfo.gov/ >
     au < manifest ; 1971 ; Congressional Committee Prints 1971 ; 1971 ; https://www.govinfo.gov/ >
     au < manifest ; 1972 ; Congressional Committee Prints 1972 ; 1972 ; https://www.govinfo.gov/ >
     au < manifest ; 1973 ; Congressional Committee Prints 1973 ; 1973 ; https://www.govinfo.gov/ >
@@ -1048,6 +1056,7 @@
     au < doNotProcess ; 2012 ; United States Statutes at Large 2012 ; 2012 ; https://www.govinfo.gov/ >
     au < released ; 2013 ; United States Statutes at Large 2013 ; 2013 ; https://www.govinfo.gov/ >
     au < manifest ; 2014 ; United States Statutes at Large 2014 ; 2014 ; https://www.govinfo.gov/ >
+    au < manifest ; 2015 ; United States Statutes at Large 2015 ; 2015 ; https://www.govinfo.gov/ >
     au < manifest ; 2020 ; United States Statutes at Large 2020 ; 2020 ; https://www.govinfo.gov/ >
 
   }
