@@ -40,7 +40,6 @@ import org.lockss.extractor.FileMetadataExtractor;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.CachedUrl;
-import org.lockss.plugin.clockss.CrossRefSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.lockss.util.Logger;
@@ -59,51 +58,41 @@ public class FrontiersBooksCrossrefXmlMetadataExtractorFactory extends SourceXml
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
       String contentType)
           throws PluginException {
-    return new AimsCRXmlMetadataExtractor();
+    return new FrontiersCRXmlMetadataExtractor();
   }
 
-  public class AimsCRXmlMetadataExtractor extends SourceXmlMetadataExtractor {
+  public class FrontiersCRXmlMetadataExtractor extends SourceXmlMetadataExtractor {
 
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
       // Once you have it, just keep returning the same one. It won't change.
       if (publishingHelper == null) {
-          publishingHelper = new CrossRefSchemaHelper();
+          publishingHelper = new FrontiersBooksCrossRefQuerySchemaHelper();
       }
       return publishingHelper;
     }
     
-    /*
+
     @Override
     protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
         ArticleMetadata oneAM) {
 
       String cuBase = FilenameUtils.getFullPath(cu.getUrl());
-      String doiValue = oneAM.getRaw(helper.getFilenameXPathKey());
-      String doiSecond = StringUtils.substringAfter(doiValue, "/");
-      String doiFirst = StringUtils.substringBefore(doiValue, "/");
-      //2017 options
-      String pdfName = cuBase + doiValue + "/paper.pdf";
-      String altName = cuBase + doiSecond + ".pdf";
-      //2018 options
-      String pubJID = oneAM.getRaw(CrossRefSchemaHelper.pub_abbrev);
-      String pubYear = oneAM.getRaw(CrossRefSchemaHelper.pub_year);
-      String pubIssue = oneAM.getRaw(CrossRefSchemaHelper.pub_issue);
-      String artPage = oneAM.getRaw(CrossRefSchemaHelper.art_sp);
-      String name2018 = cuBase + doiFirst + "/" + pubJID + "." + pubYear + "." + pubIssue + "." + artPage + "/Paper.pdf";
-      log.debug3("looking for: " + pdfName + " or " + altName + " or " + name2018);
+      String isbn = oneAM.getRaw(FrontiersBooksCrossRefQuerySchemaHelper.isbn);
+      //https://clockss-test.lockss.org/sourcefiles/frontiersbooks-released/2022_01/221014//9782889630271.pdf
+      String pdfName = cuBase + isbn + ".pdf";
+      String pdfNameAlt = cuBase + isbn + ".PDF";
+      //log.debug3("looking for: " + pdfName + " or " + pdfNameAlt);
       List<String> returnList = new ArrayList<String>();
       returnList.add(pdfName);
-      returnList.add(altName);
-      returnList.add(name2018);
+      returnList.add(pdfNameAlt);
       return returnList;
     }
-
-     */
     
     @Override
     protected void postCookProcess(SourceXmlSchemaHelper schemaHelper, 
         CachedUrl cu, ArticleMetadata thisAM) {
+        log.debug3("FrontiersBooksCrossrefXmlMetadataExtractorFactory");
 
     }
   }
