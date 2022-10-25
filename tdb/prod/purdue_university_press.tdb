@@ -46,8 +46,8 @@
     au < released ; 2015 ; Against the Grain Volume 27 ; 27 ; https://docs.lib.purdue.edu/ >
     au < released ; 2016-2018 ; Against the Grain Volume 28 ; 28 ; https://docs.lib.purdue.edu/ >
     au < released ; 2017 ; Against the Grain Volume 29 ; 29 ; https://docs.lib.purdue.edu/ >
-    au < ready ; 2018 ; Against the Grain Volume 30 ; 30 ; https://docs.lib.purdue.edu/ >
-    au < ready ; 2019 ; Against the Grain Volume 31 ; 31 ; https://docs.lib.purdue.edu/ >
+    au < releasing ; 2018 ; Against the Grain Volume 30 ; 30 ; https://docs.lib.purdue.edu/ >
+    au < releasing ; 2019 ; Against the Grain Volume 31 ; 31 ; https://docs.lib.purdue.edu/ >
 
   }
   
@@ -175,9 +175,9 @@
     param[journal_abbr] = jafe
     implicit < status ; year ; name ; param[volume] ; param[base_url] >
     
-    au < ready ; 2017 ; Journal of Applied Farm Economics Volume 1 ; 1 ; https://docs.lib.purdue.edu/ >
-    au < ready ; 2018 ; Journal of Applied Farm Economics Volume 2 ; 2 ; https://docs.lib.purdue.edu/ >
-    au < ready ; 2020 ; Journal of Applied Farm Economics Volume 3 ; 3 ; https://docs.lib.purdue.edu/ >
+    au < releasing ; 2017 ; Journal of Applied Farm Economics Volume 1 ; 1 ; https://docs.lib.purdue.edu/ >
+    au < releasing ; 2018 ; Journal of Applied Farm Economics Volume 2 ; 2 ; https://docs.lib.purdue.edu/ >
+    au < releasing ; 2020 ; Journal of Applied Farm Economics Volume 3 ; 3 ; https://docs.lib.purdue.edu/ >
     au < released ; 2021 ; Journal of Applied Farm Economics Volume 4 ; 4 ; https://docs.lib.purdue.edu/ >
     au < manifest ; 2022 ; Journal of Applied Farm Economics Volume 5 ; 5 ; https://docs.lib.purdue.edu/ >
 
