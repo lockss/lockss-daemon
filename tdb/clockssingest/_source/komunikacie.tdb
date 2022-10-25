@@ -19,7 +19,7 @@
     #####Testing
     param[base_url] = https://clockss-test.lockss.org/sourcefiles/komunikacie-released/
 
-    au < testing ; exists ; 2022 ; Komunikácie Source Content 2022_01 ; 2022_01 >
+    au < ready ; exists ; 2022 ; Komunikácie Source Content 2022_01 ; 2022_01 >
 
   }
 }
