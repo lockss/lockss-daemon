@@ -61,7 +61,7 @@ public class ZappyLabJatsXmlMetadataExtractorFactory extends SourceXmlMetadataEx
 
   private static SourceXmlSchemaHelper JatsPublishingHelper = null;
 
-  private static Pattern PLOS_DOI_PAT = Pattern.compile("((^https?://)?dx\\.doi\\.org)?(/?10\\.[\\d]{4,}/.*)", Pattern.CASE_INSENSITIVE);
+  private static Pattern PLOS_DOI_PAT = Pattern.compile("((^https?://)?/?dx\\.doi\\.org)?(/?10\\.[\\d]{4,}/.*)", Pattern.CASE_INSENSITIVE);
   private static final String DOI_REPL = "$3";
 
   private static String normalisePlosDoi(String doi) {
@@ -136,9 +136,10 @@ public class ZappyLabJatsXmlMetadataExtractorFactory extends SourceXmlMetadataEx
       log.debug3("ZappyLab spam DOI: extracted doi in PreEmit: -----------" + extractedDOI);
 
       if ( extractedDOI!= null &&  ExcludedDOIList.size() > 0 && ExcludedDOIList.contains(extractedDOI)) {
-        log.debug3("ZappyLab spam DOI found: " + extractedDOI);
+        log.debug3("---ZappyLab spam DOI found: " + extractedDOI);
         return false;
       }
+      log.debug3("---ZappyLab spam DOI NOT found: " + extractedDOI);
       return true;
     }
 
@@ -181,6 +182,9 @@ public class ZappyLabJatsXmlMetadataExtractorFactory extends SourceXmlMetadataEx
 
       if (thisAM.getRaw(JatsPublishingSchemaHelper.JATS_doi) != null) {
         //The content delivered may have extra "/" in front of doi
+        log.debug3("================" + thisAM.getRaw(JatsPublishingSchemaHelper.JATS_doi));
+        log.debug3("================" + normalisePlosDoi(thisAM.getRaw(JatsPublishingSchemaHelper.JATS_doi)));
+        log.debug3("================" + normalisePlosDoi(thisAM.getRaw(JatsPublishingSchemaHelper.JATS_doi)).replaceFirst("/", ""));
         thisAM.put(MetadataField.FIELD_DOI, normalisePlosDoi(thisAM.getRaw(JatsPublishingSchemaHelper.JATS_doi)).replaceFirst("/", ""));
       }
     }
