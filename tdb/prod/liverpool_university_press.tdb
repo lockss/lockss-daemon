@@ -1812,7 +1812,7 @@
     au < doNotProcess ; 1998 ; Town Planning Review Volume 69 ; 69 >
     au < doNotProcess ; 1999 ; Town Planning Review Volume 70 ; 70 >
     au < doNotProcess ; 2000 ; Town Planning Review Volume 71 ; 71 >
-    au < releasing ; 2001 ; Town Planning Review Volume 72 ; 72 >
+    au < released ; 2001 ; Town Planning Review Volume 72 ; 72 >
     au < doNotProcess ; 2002 ; Town Planning Review Volume 73 ; 73 >
     au < doNotProcess ; 2003 ; Town Planning Review Volume 74 ; 74 >
     au < doNotProcess ; 2004 ; Town Planning Review Volume 75 ; 75 >
@@ -1879,9 +1879,9 @@
     param[journal_id] = tsesa
     #jounral_num = 116
 
-    au < releasing ; 2017 ; TS Eliot Studies Annual Volume 1 ; 1 >
-    au < releasing ; 2018 ; TS Eliot Studies Annual Volume 2 ; 2 >
-    au < releasing ; 2021 ; TS Eliot Studies Annual Volume 3 ; 3 >
+    au < released ; 2017 ; TS Eliot Studies Annual Volume 1 ; 1 >
+    au < released ; 2018 ; TS Eliot Studies Annual Volume 2 ; 2 >
+    au < released ; 2021 ; TS Eliot Studies Annual Volume 3 ; 3 >
     au < doNotProcess ; 2022 ; TS Eliot Studies Annual Volume 4 ; 4 >
 
   }
