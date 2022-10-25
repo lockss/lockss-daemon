@@ -105,7 +105,7 @@
       au < manifest ; exists ; 2016 ; Masyarakat, Kebudayaan dan Politik Volume 29 ; 29 ; 2016 ; >
       au < manifest ; exists ; 2017 ; Masyarakat, Kebudayaan dan Politik Volume 30 ; 30 ; 2017 ; >
       au < manifest ; exists ; 2018 ; Masyarakat, Kebudayaan dan Politik Volume 31 ; 31 ; 2018 ; >
-      au < crawling ; exists ; 2019 ; Masyarakat, Kebudayaan dan Politik Volume 32 ; 32 ; 2019 ; >
+      au < frozen ; exists ; 2019 ; Masyarakat, Kebudayaan dan Politik Volume 32 ; 32 ; 2019 ; >
       au < manifest ; exists ; 2020 ; Masyarakat, Kebudayaan dan Politik Volume 33 ; 33 ; 2020 ; >
       au < manifest ; exists ; 2021 ; Masyarakat, Kebudayaan dan Politik Volume 34 ; 34 ; 2021 ; >
       au < crawling ; exists ; 2022 ; Masyarakat, Kebudayaan dan Politik Volume 35 ; 35 ; 2022 ; >
@@ -219,7 +219,7 @@
 
       param[journal_id] = mog
 
-      au < crawling ; exists ; 2015 ; Majalah Obstetri dan Ginekologi Volume 23 ; 23 ; 2015 ; >
+      au < frozen ; exists ; 2015 ; Majalah Obstetri dan Ginekologi Volume 23 ; 23 ; 2015 ; >
       au < manifest ; exists ; 2016 ; Majalah Obstetri dan Ginekologi Volume 24 ; 24 ; 2016 ; >
       au < manifest ; exists ; 2017 ; Majalah Obstetri dan Ginekologi Volume 25 ; 25 ; 2017 ; >
       au < manifest ; exists ; 2018 ; Majalah Obstetri dan Ginekologi Volume 26 ; 26 ; 2018 ; >
@@ -354,7 +354,7 @@
       au < manifest ; exists ; 2017 ; Jurnal Administrasi Kesehatan Indonesia Volume 5 ; 5 ; 2017 ; >
       au < manifest ; exists ; 2018 ; Jurnal Administrasi Kesehatan Indonesia Volume 6 ; 6 ; 2018 ; >
       au < manifest ; exists ; 2019 ; Jurnal Administrasi Kesehatan Indonesia Volume 7 ; 7 ; 2019 ; >
-      au < crawling ; exists ; 2020 ; Jurnal Administrasi Kesehatan Indonesia Volume 8 ; 8 ; 2020 ; >
+      au < frozen ; exists ; 2020 ; Jurnal Administrasi Kesehatan Indonesia Volume 8 ; 8 ; 2020 ; >
       au < manifest ; exists ; 2021 ; Jurnal Administrasi Kesehatan Indonesia Volume 9 ; 9 ; 2021 ; >
       au < ready ; exists ; 2022 ; Jurnal Administrasi Kesehatan Indonesia Volume 10 ; 10 ; 2022 ; >
 
@@ -416,7 +416,7 @@
       au < manifest ; exists ; 2015 ; Record and Library Journal Volume 1 ; 1 ; 2015 ; >
       au < manifest ; exists ; 2016 ; Record and Library Journal Volume 2 ; 2 ; 2016 ; >
       au < manifest ; exists ; 2017 ; Record and Library Journal Volume 3 ; 3 ; 2017 ; >
-      au < crawling ; exists ; 2018 ; Record and Library Journal Volume 4 ; 4 ; 2018 ; >
+      au < frozen ; exists ; 2018 ; Record and Library Journal Volume 4 ; 4 ; 2018 ; >
       au < manifest ; exists ; 2019 ; Record and Library Journal Volume 5 ; 5 ; 2019 ; >
       au < manifest ; exists ; 2020 ; Record and Library Journal Volume 6 ; 6 ; 2020 ; >
       au < manifest ; exists ; 2021 ; Record and Library Journal Volume 7 ; 7 ; 2021 ; >
@@ -483,7 +483,7 @@
 
       param[journal_id] = JKR
 
-      au < crawling ; exists ; 2016 ; Jurnal Kimia Riset Volume 1 ; 1 ; 2016 ; >
+      au < frozen ; exists ; 2016 ; Jurnal Kimia Riset Volume 1 ; 1 ; 2016 ; >
       au < manifest ; exists ; 2017 ; Jurnal Kimia Riset Volume 2 ; 2 ; 2017 ; >
       au < manifest ; exists ; 2018 ; Jurnal Kimia Riset Volume 3 ; 3 ; 2018 ; >
       au < manifest ; exists ; 2019 ; Jurnal Kimia Riset Volume 4 ; 4 ; 2019 ; >
@@ -946,7 +946,7 @@
       param[journal_id] = PNJ
 
       au < manifest ; exists ; 2019 ; Psychiatry Nursing Journal Volume 1 ; 1 ; 2019 ; >
-      au < crawling ; exists ; 2020 ; Psychiatry Nursing Journal Volume 2 ; 2 ; 2020 ; >
+      au < frozen ; exists ; 2020 ; Psychiatry Nursing Journal Volume 2 ; 2 ; 2020 ; >
       au < manifest ; exists ; 2021 ; Psychiatry Nursing Journal Volume 3 ; 3 ; 2021 ; >
       au < manifest ; exists ; 2022 ; Psychiatry Nursing Journal Volume 4 ; 4 ; 2022 ; >
 
@@ -1059,7 +1059,7 @@
 
       au < manifest ; exists ; 2015 ; Jurnal Respirasi Volume 1 ; 1 ; 2015 ; >
       au < manifest ; exists ; 2016 ; Jurnal Respirasi Volume 2 ; 2 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; Jurnal Respirasi Volume 3 ; 3 ; 2017 ; >
+      au < frozen ; exists ; 2017 ; Jurnal Respirasi Volume 3 ; 3 ; 2017 ; >
       au < manifest ; exists ; 2018 ; Jurnal Respirasi Volume 4 ; 4 ; 2018 ; >
       au < manifest ; exists ; 2019 ; Jurnal Respirasi Volume 5 ; 5 ; 2019 ; >
       au < manifest ; exists ; 2020 ; Jurnal Respirasi Volume 6 ; 6 ; 2020 ; >
@@ -1175,7 +1175,7 @@
       au < manifest ; exists ; 2016 ; Jurnal Farmasi dan Ilmu Kefarmasian Indonesia  Volume 3 ; 3 ; 2016 ; >
       au < manifest ; exists ; 2017 ; Jurnal Farmasi dan Ilmu Kefarmasian Indonesia  Volume 4 ; 4 ; 2017 ; >
       au < manifest ; exists ; 2018 ; Jurnal Farmasi dan Ilmu Kefarmasian Indonesia  Volume 5 ; 5 ; 2018 ; >
-      au < crawling ; exists ; 2019 ; Jurnal Farmasi dan Ilmu Kefarmasian Indonesia  Volume 6 ; 6 ; 2019 ; >
+      au < frozen ; exists ; 2019 ; Jurnal Farmasi dan Ilmu Kefarmasian Indonesia  Volume 6 ; 6 ; 2019 ; >
       au < manifest ; exists ; 2020 ; Jurnal Farmasi dan Ilmu Kefarmasian Indonesia  Volume 7 ; 7 ; 2020 ; >
       au < manifest ; exists ; 2021 ; Jurnal Farmasi dan Ilmu Kefarmasian Indonesia  Volume 8 ; 8 ; 2021 ; >
       au < ready ; exists ; 2022 ; Jurnal Farmasi dan Ilmu Kefarmasian Indonesia  Volume 9 ; 9 ; 2022 ; >
@@ -1235,7 +1235,7 @@
       au < manifest ; exists ; 2017 ; Airlangga Development Journal Volume 1 ; 1 ; 2017 ; >
       au < manifest ; exists ; 2018 ; Airlangga Development Journal Volume 2 ; 2 ; 2018 ; >
       au < manifest ; exists ; 2019 ; Airlangga Development Journal Volume 3 ; 3 ; 2019 ; >
-      au < crawling ; exists ; 2020 ; Airlangga Development Journal Volume 4 ; 4 ; 2020 ; >
+      au < frozen ; exists ; 2020 ; Airlangga Development Journal Volume 4 ; 4 ; 2020 ; >
       au < manifest ; exists ; 2021 ; Airlangga Development Journal Volume 5 ; 5 ; 2021 ; >
       au < ready ; exists ; 2022 ; Airlangga Development Journal Volume 6 ; 6 ; 2022 ; >
 
@@ -1354,7 +1354,7 @@
       au < manifest ; exists ; 2017 ; Jurnal Psikiatri Surabaya Volume 6 ; 6 ; 2017 ; >
       au < manifest ; exists ; 2018 ; Jurnal Psikiatri Surabaya Volume 7 ; 7 ; 2018 ; >
       au < manifest ; exists ; 2019 ; Jurnal Psikiatri Surabaya Volume 8 ; 8 ; 2019 ; >
-      au < crawling ; exists ; 2020 ; Jurnal Psikiatri Surabaya Volume 9 ; 9 ; 2020 ; >
+      au < frozen ; exists ; 2020 ; Jurnal Psikiatri Surabaya Volume 9 ; 9 ; 2020 ; >
       au < manifest ; exists ; 2021 ; Jurnal Psikiatri Surabaya Volume 10 ; 10 ; 2021 ; >
       au < ready ; exists ; 2022 ; Jurnal Psikiatri Surabaya Volume 11 ; 11 ; 2022 ; >
 
@@ -1673,7 +1673,7 @@
       param[journal_id] = IJSS
 
       au < manifest ; exists ; 2020 ; Indonesian Journal of Social Science Volume 12 ; 12 ; 2020 ; >
-      au < crawling ; exists ; 2021 ; Indonesian Journal of Social Science Volume 13 ; 13 ; 2021 ; >
+      au < frozen ; exists ; 2021 ; Indonesian Journal of Social Science Volume 13 ; 13 ; 2021 ; >
       au < ready ; exists ; 2022 ; Indonesian Journal of Social Science Volume 14 ; 14 ; 2022 ; >
 
   }
@@ -1766,7 +1766,7 @@
       param[journal_id] = JRE
 
       au < manifest ; exists ; 2018 ; Jurnal Rekonstruksi dan Estetik Volume 3 ; 3 ; 2018 ; >
-      au < crawling ; exists ; 2019 ; Jurnal Rekonstruksi dan Estetik Volume 4 ; 4 ; 2019 ; >
+      au < frozen ; exists ; 2019 ; Jurnal Rekonstruksi dan Estetik Volume 4 ; 4 ; 2019 ; >
       au < manifest ; exists ; 2020 ; Jurnal Rekonstruksi dan Estetik Volume 5 ; 5 ; 2020 ; >
       au < manifest ; exists ; 2021 ; Jurnal Rekonstruksi dan Estetik Volume 6 ; 6 ; 2021 ; >
       au < manifest ; exists ; 2022 ; Jurnal Rekonstruksi dan Estetik Volume 7 ; 7 ; 2022 ; >
