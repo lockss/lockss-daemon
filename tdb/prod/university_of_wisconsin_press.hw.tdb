@@ -378,9 +378,10 @@
     >
 
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-      param[base_url] = http://npj.uwpress.org/
       implicit < status ; year ; name ; param[volume_name] >
-      comment[notReady] = RT4567
+      
+      {
+      param[base_url] = http://npj.uwpress.org/
 
       au < released ; 2000 ; Native Plants Journal Volume 1 ; 1 >
       au < released ; 2001 ; Native Plants Journal Volume 2 ; 2 >
@@ -403,9 +404,13 @@
       au < released ; 2018 ; Native Plants Journal Volume 19 ; 19 >
       au < released ; 2019 ; Native Plants Journal Volume 20 ; 20 >
       au < released ; 2020 ; Native Plants Journal Volume 21 ; 21 >
-      au < notReady ; 2021 ; Native Plants Journal Volume 22 ; 22 > #urls fail
-    
-      au < manifest ; 2022 ; Native Plants Journal Volume 23 ; 23 >
+      }
+      {
+      param[base_url] = https://npj.uwpress.org/
+
+      au < exists ; 2021 ; Native Plants Journal Volume 22 ; 22 > #urls fail RT4567
+      au < exists ; 2022 ; Native Plants Journal Volume 23 ; 23 >
+      }
   }
 
   {
