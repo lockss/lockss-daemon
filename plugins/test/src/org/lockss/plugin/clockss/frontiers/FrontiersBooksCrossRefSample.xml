@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://www.crossref.org/schema/5.3.0
+            https://www.crossref.org/schemas/crossref5.3.0.xsd"
+           xmlns="http://www.crossref.org/schema/5.3.0"
+           xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1"
+           xmlns:fr="http://www.crossref.org/fundref.xsd"
+           xmlns:mml="http://www.w3.org/1998/Math/MathML"
+           version="5.3.0">
+    <body>
+        <book book_type="edited_book">
+            <book_series_metadata language="en">
+                <series_metadata>
+                    <titles>
+                        <title>Frontiers Research Topics</title>
+                    </titles>
+                    <issn>1664-8714</issn>
+                </series_metadata>
+                <titles>
+                    <title>Advancing Psychological Methods Across Borders</title>
+                </titles>
+                <publication_date media_type="online">
+                    <year>2020</year>
+                </publication_date>
+                <isbn>9782889459483</isbn>
+                <publisher>
+                    <publisher_name>Frontiers Media SA</publisher_name>
+                    <publisher_place>Switzerland</publisher_place>
+                </publisher>
+                <doi_data>
+                    <doi>10.3389/978-2-88945-948-3</doi>
+                    <resource content_version="vor" mime_type="text/html">https://www.frontiersin.org/research-topics/4597/advancing-methods-for-psychological-assessment-across-borders</resource>
+                </doi_data>
+            </book_series_metadata>
+        </book>
+    </body>
+</doi_batch>
