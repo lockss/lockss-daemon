@@ -1356,6 +1356,32 @@ while (my $line = <>) {
         }
         sleep(4);
 
+  } elsif ($plugin eq "ClockssTaarPlugin") {
+        $url = sprintf("%sarticles/%s",
+          $param{base_url}, $param{volume_name});
+        $man_url = uri_unescape($url);
+        my $req = HTTP::Request->new(GET, $man_url);
+        my $resp = $ua->request($req);
+        if ($resp->is_success) { 
+            my $man_contents = $resp->content;
+            if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+            } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/<title>\d\d\d\d - Volume $param{volume_name} - Aerosol and Air Quality Research<\/title>/)) { 
+                #<title>2001 - Volume 1 - Aerosol and Air Quality Research</title>
+                #if ($man_contents =~ m/<h1>CLOCKSS - Published Issues: (.*) $param{volume_name}<\/h1>/si) {
+                #    $vol_title = $1
+                #}
+                $vol_title = "Aerosol and Air Quality Research";
+                $result = "Manifest"
+            } else {
+                $result = "--"
+            }
+        } else {
+            $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+        }
+        sleep(4);
+
 #PubFactory Journals GLN
   } elsif (($plugin eq "BerghahnJournalsPlugin")   ||
            ($plugin eq "PubFactoryJournalsPlugin") ||
