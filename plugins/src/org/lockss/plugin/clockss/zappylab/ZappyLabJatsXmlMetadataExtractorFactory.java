@@ -139,7 +139,6 @@ public class ZappyLabJatsXmlMetadataExtractorFactory extends SourceXmlMetadataEx
         log.debug3("---ZappyLab spam DOI found: " + extractedDOI);
         return false;
       }
-      log.debug3("---ZappyLab spam DOI NOT found: " + extractedDOI);
       return true;
     }
 
@@ -182,9 +181,6 @@ public class ZappyLabJatsXmlMetadataExtractorFactory extends SourceXmlMetadataEx
 
       if (thisAM.getRaw(JatsPublishingSchemaHelper.JATS_doi) != null) {
         //The content delivered may have extra "/" in front of doi
-        log.debug3("================" + thisAM.getRaw(JatsPublishingSchemaHelper.JATS_doi));
-        log.debug3("================" + normalisePlosDoi(thisAM.getRaw(JatsPublishingSchemaHelper.JATS_doi)));
-        log.debug3("================" + normalisePlosDoi(thisAM.getRaw(JatsPublishingSchemaHelper.JATS_doi)).replaceFirst("/", ""));
         thisAM.put(MetadataField.FIELD_DOI, normalisePlosDoi(thisAM.getRaw(JatsPublishingSchemaHelper.JATS_doi)).replaceFirst("/", ""));
       }
     }
