@@ -134,11 +134,11 @@
     au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2010 ; Proceedings of the National Academy of Sciences Volume 107 ; 107 ; reingest3.clockss.org:8083 >
     au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2011 ; Proceedings of the National Academy of Sciences Volume 108 ; 108 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2012 ; Proceedings of the National Academy of Sciences Volume 109 ; 109 ; >
-    au < ClockssHighWirePressH20Plugin ; deepCrawl ; exists ; 2013 ; Proceedings of the National Academy of Sciences Volume 110 ; 110 ; >
+    au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2013 ; Proceedings of the National Academy of Sciences Volume 110 ; 110 ; >
     au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2014 ; Proceedings of the National Academy of Sciences Volume 111 ; 111 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; deepCrawl ; exists ; 2015 ; Proceedings of the National Academy of Sciences Volume 112 ; 112 ; >
-    au < ClockssHighWirePressH20Plugin ; deepCrawl ; exists ; 2016 ; Proceedings of the National Academy of Sciences Volume 113 ; 113 ; >
-    au < ClockssHighWirePressH20Plugin ; deepCrawl ; exists ; 2017 ; Proceedings of the National Academy of Sciences Volume 114 ; 114 ; >
+    au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2015 ; Proceedings of the National Academy of Sciences Volume 112 ; 112 ; >
+    au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2016 ; Proceedings of the National Academy of Sciences Volume 113 ; 113 ; >
+    au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2017 ; Proceedings of the National Academy of Sciences Volume 114 ; 114 ; >
 
     }
 
@@ -146,11 +146,11 @@
         param[base_url] = https://www.pnas.org/
 
     au < nas.ClockssNasDrupalPlugin ; doNotProcess ; doNotProcess ; 2017 ; Proceedings of the National Academy of Sciences Volume 114 ; 114 ; >
-    au < nas.ClockssNasDrupalPlugin ; crawling ; exists ; 2018 ; Proceedings of the National Academy of Sciences Volume 115 ; 115 ; reingest2.clockss.org:8085 >
-    au < nas.ClockssNasDrupalPlugin ; crawling ; exists ; 2019 ; Proceedings of the National Academy of Sciences Volume 116 ; 116 ; reingest3.clockss.org:8083 >
-    au < nas.ClockssNasDrupalPlugin ; crawling ; exists ; 2020 ; Proceedings of the National Academy of Sciences Volume 117 ; 117 ; reingest5.clockss.org:8082 >
-    au < nas.ClockssNasDrupalPlugin ; crawling ; exists ; 2021 ; Proceedings of the National Academy of Sciences Volume 118 ; 118 ; reingest2.clockss.org:8085 >
-    au < nas.ClockssNasDrupalPlugin ; manifest ; exists ; 2022 ; Proceedings of the National Academy of Sciences Volume 119 ; 119 ; reingest2.clockss.org:8085 >
+    au < nas.ClockssNasDrupalPlugin ; frozen ; exists ; 2018 ; Proceedings of the National Academy of Sciences Volume 115 ; 115 ; reingest2.clockss.org:8085 >
+    au < nas.ClockssNasDrupalPlugin ; frozen ; exists ; 2019 ; Proceedings of the National Academy of Sciences Volume 116 ; 116 ; reingest3.clockss.org:8083 >
+    au < nas.ClockssNasDrupalPlugin ; frozen ; exists ; 2020 ; Proceedings of the National Academy of Sciences Volume 117 ; 117 ; reingest5.clockss.org:8082 >
+    au < nas.ClockssNasDrupalPlugin ; frozen ; exists ; 2021 ; Proceedings of the National Academy of Sciences Volume 118 ; 118 ; reingest2.clockss.org:8085 >
+    au < nas.ClockssNasDrupalPlugin ; doNotProcess ; exists ; 2022 ; Proceedings of the National Academy of Sciences Volume 119 ; 119 ; reingest2.clockss.org:8085 >
 
     }
 
