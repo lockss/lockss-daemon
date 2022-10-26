@@ -16,10 +16,10 @@
     title <
       name = Komunikácie Source Content
     >
-    #####Testing
-    param[base_url] = https://clockss-test.lockss.org/sourcefiles/komunikacie-released/
 
-    au < ready ; exists ; 2022 ; Komunikácie Source Content 2022_01 ; 2022_01 >
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/komunikacie-released/
+
+    au < exists ; exists ; 2022 ; Komunikácie Source Content 2022_01 ; 2022_01 >
 
   }
 }
