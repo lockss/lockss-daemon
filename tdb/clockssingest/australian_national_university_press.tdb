@@ -190,7 +190,7 @@
     au < crawling ; down ; 2016 ; East Asia Forum Quarterly Volume 8 ; 8 ; reingest3.clockss.org:8083 >
     au < crawling ; down ; 2017 ; East Asia Forum Quarterly Volume 9 ; 9 ; reingest4.clockss.org:8082 >
     au < crawling ; down ; 2018 ; East Asia Forum Quarterly Volume 10 ; 10 ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2019 ; East Asia Forum Quarterly Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2019 ; East Asia Forum Quarterly Volume 11 ; 11 ; >
     au < frozen ; exists ; 2020 ; East Asia Forum Quarterly Volume 12 ; 12 ; >
     au < deepCrawl ; exists ; 2021 ; East Asia Forum Quarterly Volume 13 ; 13 ; >
     au < crawling ; exists ; 2022 ; East Asia Forum Quarterly Volume 14 ; 14 ; >
@@ -234,7 +234,7 @@
     au < crawling ; down ; 2017 ; International Review of Environmental History: Volume 3 ; 3 ; reingest3.clockss.org:8083 >
     au < crawling ; down ; 2018 ; International Review of Environmental History: Volume 4 ; 4 ; reingest4.clockss.org:8082 >
     #6/14/19 change to layout - plugin has been modified to handle backwards incompatible with finished content
-    au < deepCrawl ; exists ; 2019 ; International Review of Environmental History: Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2019 ; International Review of Environmental History: Volume 5 ; 5 ; >
     au < frozen ; exists ; 2020 ; International Review of Environmental History: Volume 6 ; 6 ; >
     au < deepCrawl ; exists ; 2021 ; International Review of Environmental History: Volume 7 ; 7 ; >
     au < crawling ; exists ; 2022 ; International Review of Environmental History: Volume 8 ; 8 ; >
