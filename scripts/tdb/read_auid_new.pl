@@ -1105,7 +1105,12 @@ while (my $line = <>) {
     if ($resp_p->is_success) {
       my $perm_contents = $resp_p->content;
       my $lcl_tag = $cc_license_tag;
-      if (defined($perm_contents) && ($perm_contents =~ m/$lcl_tag/s)) {
+
+      if (($req_p->url ne $resp_p->request->uri) || ($req_s->url ne $resp_s->request->uri)) {
+          $vol_title = $resp_p->request->uri . "+" . $resp_s->request->uri;
+          $result = "Redirected";
+
+      } elsif (defined($perm_contents) && ($perm_contents =~ m/$lcl_tag/s) ) {
         if ($resp_s->is_success) {
           if ($resp_s->content =~ m/results in an empty (set|list)/is) {
             $result = "--EMPTY_LIST--"

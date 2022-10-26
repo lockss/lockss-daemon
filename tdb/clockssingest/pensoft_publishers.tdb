@@ -563,9 +563,9 @@
 
       param[au_oai_set] = fmj
 
-      au < deepCrawl ; exists ; 2019 ; 2019 ; Food Modelling Journal (FMJ) Volume 2019 ; 2019 ; https://fmj.pensoft.net/ ; >
+      au < frozen ; exists ; 2019 ; 2019 ; Food Modelling Journal (FMJ) Volume 2019 ; 2019 ; https://fmj.pensoft.net/ ; >
       au < doesNotExist ; doesNotExist ; 2020 ; 2020 ; Food Modelling Journal (FMJ) Volume 2020 ; 2020 ; https://fmj.pensoft.net/ ; >
-      au < deepCrawl ; exists ; 2021 ; 2021 ; Food Modelling Journal (FMJ) Volume 2021 ; 2021 ; https://fmj.pensoft.net/ ; >
+      au < frozen ; exists ; 2021 ; 2021 ; Food Modelling Journal (FMJ) Volume 2021 ; 2021 ; https://fmj.pensoft.net/ ; >
       #Changed to 2815-3197 Food and Ecological Systems Modelling Journal
   }
 
@@ -579,7 +579,7 @@
       param[au_oai_set] = fmj
 
       #Changed from 2603-4301 Food Modelling Journal (FMJ)
-      au < manifest ; exists ; 2022 ; 2022 ; Food Modeling Journal (FMJ) Volume 2022 ; 2022 ; https://fmj.pensoft.net/ ; >
+      au < manifest ; exists ; 2022 ; 2022 ; Food Modeling Journal (FMJ) Volume 2022 ; 2022 ; https://fesmj.pensoft.net/ ; >
 
   }
 
@@ -817,9 +817,9 @@
       au < frozen ; exists ; 2017 ; 2017 ; Research results in Pharmacology Volume 2017 ; 2017 ; https://rrpharmacology.pensoft.net/ ; >
       au < frozen ; exists ; 2018 ; 2018 ; Research results in Pharmacology Volume 2018 ; 2018 ; https://rrpharmacology.pensoft.net/ ; >
       au < frozen ; exists ; 2019 ; 2019 ; Research results in Pharmacology Volume 2019 ; 2019 ; https://rrpharmacology.pensoft.net/ ; >
-      au < deepCrawl ; exists ; 2020 ; 2020 ; Research results in Pharmacology Volume 2020 ; 2020 ; https://rrpharmacology.pensoft.net/ ; >
+      au < frozen ; exists ; 2020 ; 2020 ; Research results in Pharmacology Volume 2020 ; 2020 ; https://rrpharmacology.pensoft.net/ ; >
       au < crawling ; exists ; 2021 ; 2021 ; Research results in Pharmacology Volume 2021 ; 2021 ; https://rrpharmacology.pensoft.net/ ; >
-      au < manifest ; exists ; 2022 ; 2022 ; Research results in Pharmacology Volume 2022 ; 2022 ; https://rrpharmacology.pensoft.net/ ; >
+      au < manifest ; exists ; 2022 ; 2022 ; Research results in Pharmacology Volume 2022 ; 2022 ; https://rrpharmacology.ru/ ; >
 
   }
 
