@@ -1,7 +1,6 @@
 /*
 
-Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
-All rights reserved.
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -102,7 +101,7 @@ public class TestASMJCorePlugin extends LockssTestCase {
         "https://www.example.com/lockss-manifest/vol_2_manifest.html",
     };
     DefinableArchivalUnit au = makeAuFromProps(props);
-    assertEquals("American Society for Microbiology Journals Plugin (Legacy JCore), Base URL http://www.example.com/, Volume 2",
+    assertEquals("American Society for Microbiology Journals Plugin (Legacy HighWire), Base URL http://www.example.com/, Volume 2",
         au.getName());
     assertEquals(ListUtil.list(starturl), au.getStartUrls());
   }

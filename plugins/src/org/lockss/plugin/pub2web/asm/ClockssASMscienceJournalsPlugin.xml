@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>24</string>
+    <string>25</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -49,15 +49,15 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
    <entry>
     <string>plugin_parent_version</string>
-    <string>24</string>
+    <string>25</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>American Society for Microbiology Journals Plugin (Legacy Pub2web, CLOCKSS)</string>
+    <string>American Society for Microbiology Journals Plugin (Legacy Ingenta, CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"American Society for Microbiology Journals Plugin (Legacy Pub2web, CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"American Society for Microbiology Journals Plugin (Legacy Ingenta, CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>

@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>17</string>
+    <string>18</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -49,15 +49,15 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
    <entry>
     <string>plugin_parent_version</string>
-    <string>17</string>
+    <string>18</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>American Society for Microbiology Books Plugin (Legacy Pub2web, CLOCKSS)</string>
+    <string>American Society for Microbiology Books Plugin (Legacy Ingenta, CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"American Society for Microbiology Books Plugin (Legacy Pub2web, CLOCKSS), Base URL %s, DOI %s", base_url, doi</string>
+    <string>"American Society for Microbiology Books Plugin (Legacy Ingenta, CLOCKSS), Base URL %s, DOI %s", base_url, doi</string>
   </entry>
 <!--  for ingest to clockss-production -->
   <entry>

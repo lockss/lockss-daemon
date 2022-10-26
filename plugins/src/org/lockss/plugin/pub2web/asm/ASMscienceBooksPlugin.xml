@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>17</string>
+    <string>18</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -53,11 +53,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>American Society for Microbiology Books Plugin (Legacy Pub2web)</string>
+    <string>American Society for Microbiology Books Plugin (Legacy Ingenta)</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"American Society for Microbiology Books Plugin (Legacy Pub2web), Base URL %s, DOI %s", base_url, doi</string>
+    <string>"American Society for Microbiology Books Plugin (Legacy Ingenta), Base URL %s, DOI %s", base_url, doi</string>
   </entry>
   <entry>
     <string>text/html_crawl_filter_factory</string> 
