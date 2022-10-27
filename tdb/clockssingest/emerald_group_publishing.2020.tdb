@@ -742,7 +742,7 @@
     # online from 1997
     comment[merged_into] = 0307-4803
 
-    au < ready ; exists ; 1997 ; Asian Libraries Volume 6 ; 6 ; > #host did not respond
+    au < crawling ; exists ; 1997 ; Asian Libraries Volume 6 ; 6 ; > #host did not respond
     au < finished ; manifest ; 1998 ; Asian Libraries Volume 7 ; 7 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1999 ; Asian Libraries Volume 8 ; 8 ; reingest5.clockss.org:8082 >
 
@@ -1450,7 +1450,7 @@
 
     au < manifest ; exists ; 1996 ; Career Development International Volume 1 ; 1 ; >
     au < ready ; exists ; 1997 ; Career Development International Volume 2 ; 2 ; >
-    au < ready ; exists ; 1998 ; Career Development International Volume 3 ; 3 ; >
+    au < crawling ; exists ; 1998 ; Career Development International Volume 3 ; 3 ; >
     au < finished ; manifest ; 1999 ; Career Development International Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2000 ; Career Development International Volume 5 ; 5 ; >
     au < deepCrawl ; exists ; 2001 ; Career Development International Volume 6 ; 6 ; >
@@ -2247,7 +2247,7 @@
     au < crawling ; exists ; 1996 ; Education + Training Volume 38 ; 38 ; >
     au < frozen ; exists ; 1997 ; Education + Training Volume 39 ; 39 ; >
     au < finished ; manifest ; 1998 ; Education + Training Volume 40 ; 40 ; reingest4.clockss.org:8082 >
-    au < ready ; exists ; 1999 ; Education + Training Volume 41 ; 41 ; >
+    au < crawling ; exists ; 1999 ; Education + Training Volume 41 ; 41 ; >
     au < deepCrawl ; exists ; 2000 ; Education + Training Volume 42 ; 42 ; >
     au < ready ; exists ; 2001 ; Education + Training Volume 43 ; 43 ; >
     au < finished ; manifest ; 2002 ; Education + Training Volume 44 ; 44 ; reingest5.clockss.org:8082 >
@@ -2822,7 +2822,7 @@
     au < manifest ; exists ; 1994 ; European Journal of Marketing Volume 28 ; 28 ; >
     au < manifest ; exists ; 1995 ; European Journal of Marketing Volume 29 ; 29 ; >
     au < manifest ; exists ; 1996 ; European Journal of Marketing Volume 30 ; 30 ; >
-    au < ready ; exists ; 1997 ; European Journal of Marketing Volume 31 ; 31 ; >
+    au < crawling ; exists ; 1997 ; European Journal of Marketing Volume 31 ; 31 ; >
     au < frozen ; exists ; 1998 ; European Journal of Marketing Volume 32 ; 32 ; >
     au < frozen ; exists ; 1999 ; European Journal of Marketing Volume 33 ; 33 ; >
     au < deepCrawl ; exists ; 2000 ; European Journal of Marketing Volume 34 ; 34 ; >
@@ -3375,7 +3375,7 @@
     au < manifest ; exists ; 1994 ; Industrial and Commercial Training Volume 26 ; 26 ; >
     au < manifest ; exists ; 1995 ; Industrial and Commercial Training Volume 27 ; 27 ; >
     au < ready ; exists ; 1996 ; Industrial and Commercial Training Volume 28 ; 28 ; >
-    au < ready ; exists ; 1997 ; Industrial and Commercial Training Volume 29 ; 29 ; >
+    au < crawling ; exists ; 1997 ; Industrial and Commercial Training Volume 29 ; 29 ; >
     au < frozen ; exists ; 1998 ; Industrial and Commercial Training Volume 30 ; 30 ; >
     au < frozen ; exists ; 1999 ; Industrial and Commercial Training Volume 31 ; 31 ; >
     au < deepCrawl ; exists ; 2000 ; Industrial and Commercial Training Volume 32 ; 32 ; >
@@ -4143,7 +4143,7 @@
     au < manifest ; exists ; 1995 ; International Journal of Commerce and Management Volume 5 ; 5 ; >
     au < manifest ; exists ; 1996 ; International Journal of Commerce and Management Volume 6 ; 6 ; >
     au < crawling ; exists ; 1997 ; International Journal of Commerce and Management Volume 7 ; 7 ; >
-    au < ready ; exists ; 1998 ; International Journal of Commerce and Management Volume 8 ; 8 ; >
+    au < crawling ; exists ; 1998 ; International Journal of Commerce and Management Volume 8 ; 8 ; >
     au < deepCrawl ; exists ; 1999 ; International Journal of Commerce and Management Volume 9 ; 9 ; >
     au < frozen ; exists ; 2000 ; International Journal of Commerce and Management Volume 10 ; 10 ; >
     au < frozen ; exists ; 2001 ; International Journal of Commerce and Management Volume 11 ; 11 ; >
@@ -5699,7 +5699,7 @@
     au < manifest ; exists ; 1994 ; International Journal of Service Industry Management Volume 5 ; 5 ; >
     au < manifest ; exists ; 1995 ; International Journal of Service Industry Management Volume 6 ; 6 ; >
     au < manifest ; exists ; 1996 ; International Journal of Service Industry Management Volume 7 ; 7 ; >
-    au < ready ; exists ; 1997 ; International Journal of Service Industry Management Volume 8 ; 8 ; >
+    au < crawling ; exists ; 1997 ; International Journal of Service Industry Management Volume 8 ; 8 ; >
     au < frozen ; exists ; 1998 ; International Journal of Service Industry Management Volume 9 ; 9 ; >
     au < frozen ; exists ; 1999 ; International Journal of Service Industry Management Volume 10 ; 10 ; >
     au < frozen ; exists ; 2000 ; International Journal of Service Industry Management Volume 11 ; 11 ; >
@@ -6673,7 +6673,7 @@
     comment[journal_id] = jcom
 
     au < frozen ; exists ; 1997 ; Journal of Communication Management Volume 1 ; 1 ; >
-    au < ready ; exists ; 1998 ; Journal of Communication Management Volume 2 ; 2 ; >
+    au < crawling ; exists ; 1998 ; Journal of Communication Management Volume 2 ; 2 ; >
     au < frozen ; exists ; 1999 ; Journal of Communication Management Volume 3 ; 3 ; >
     au < frozen ; exists ; 2000 ; Journal of Communication Management Volume 4 ; 4 ; >
     au < frozen ; exists ; 2001 ; Journal of Communication Management Volume 5 ; 5 ; >
@@ -8255,7 +8255,7 @@
     au < ready ; exists ; 1996 ; Journal of Management in Medicine Volume 10 ; 10 ; >
     au < ready ; exists ; 1997 ; Journal of Management in Medicine Volume 11 ; 11 ; >
     au < ready ; exists ; 1998 ; Journal of Management in Medicine Volume 12 ; 12 ; >
-    au < ready ; exists ; 1999 ; Journal of Management in Medicine Volume 13 ; 13 ; >
+    au < crawling ; exists ; 1999 ; Journal of Management in Medicine Volume 13 ; 13 ; >
     au < frozen ; exists ; 2000 ; Journal of Management in Medicine Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2001 ; Journal of Management in Medicine Volume 15 ; 15 ; >
     au < frozen ; exists ; 2002 ; Journal of Management in Medicine Volume 16 ; 16 ; >
@@ -8585,7 +8585,7 @@
     au < manifest ; exists ; 1995 ; Journal of Product & Brand Management Volume 4 ; 4 ; >
     au < manifest ; exists ; 1996 ; Journal of Product & Brand Management Volume 5 ; 5 ; >
     au < frozen ; exists ; 1997 ; Journal of Product & Brand Management Volume 6 ; 6 ; >
-    au < ready ; exists ; 1998 ; Journal of Product & Brand Management Volume 7 ; 7 ; >
+    au < crawling ; exists ; 1998 ; Journal of Product & Brand Management Volume 7 ; 7 ; >
     au < frozen ; exists ; 1999 ; Journal of Product & Brand Management Volume 8 ; 8 ; >
     au < frozen ; exists ; 2000 ; Journal of Product & Brand Management Volume 9 ; 9 ; >
     au < frozen ; exists ; 2001 ; Journal of Product & Brand Management Volume 10 ; 10 ; >
@@ -8769,7 +8769,7 @@
     au < manifest ; exists ; 1995 ; Journal of Quality in Maintenance Engineering Volume 1 ; 1 ; >
     au < manifest ; exists ; 1996 ; Journal of Quality in Maintenance Engineering Volume 2 ; 2 ; >
     au < frozen ; exists ; 1997 ; Journal of Quality in Maintenance Engineering Volume 3 ; 3 ; >
-    au < ready ; exists ; 1998 ; Journal of Quality in Maintenance Engineering Volume 4 ; 4 ; >
+    au < crawling ; exists ; 1998 ; Journal of Quality in Maintenance Engineering Volume 4 ; 4 ; >
     au < frozen ; exists ; 1999 ; Journal of Quality in Maintenance Engineering Volume 5 ; 5 ; >
     au < frozen ; exists ; 2000 ; Journal of Quality in Maintenance Engineering Volume 6 ; 6 ; >
     au < frozen ; exists ; 2001 ; Journal of Quality in Maintenance Engineering Volume 7 ; 7 ; >
@@ -9313,7 +9313,7 @@
     au < crawling ; exists ; 1998 ; Leadership & Organization Development Journal Volume 19 ; 19 ; >
     au < frozen ; exists ; 1999 ; Leadership & Organization Development Journal Volume 20 ; 20 ; >
     au < frozen ; exists ; 2000 ; Leadership & Organization Development Journal Volume 21 ; 21 ; >
-    au < ready ; exists ; 2001 ; Leadership & Organization Development Journal Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2001 ; Leadership & Organization Development Journal Volume 22 ; 22 ; >
     au < frozen ; exists ; 2002 ; Leadership & Organization Development Journal Volume 23 ; 23 ; >
     au < frozen ; exists ; 2003 ; Leadership & Organization Development Journal Volume 24 ; 24 ; >
     au < frozen ; exists ; 2004 ; Leadership & Organization Development Journal Volume 25 ; 25 ; >
@@ -11172,7 +11172,7 @@
     au < manifest ; exists ; 1993 ; Personnel Review Volume 22 ; 22 ; >
     au < manifest ; exists ; 1994 ; Personnel Review Volume 23 ; 23 ; >
     au < manifest ; exists ; 1995 ; Personnel Review Volume 24 ; 24 ; >
-    au < ready ; exists ; 1996 ; Personnel Review Volume 25 ; 25 ; >
+    au < crawling ; exists ; 1996 ; Personnel Review Volume 25 ; 25 ; >
     au < ready ; exists ; 1997 ; Personnel Review Volume 26 ; 26 ; >
     au < frozen ; exists ; 1998 ; Personnel Review Volume 27 ; 27 ; >
     au < ready ; exists ; 1999 ; Personnel Review Volume 28 ; 28 ; >
@@ -11238,7 +11238,7 @@
     au < manifest ; exists ; 1994 ; Pigment & Resin Technology Volume 23 ; 23 ; >
     au < manifest ; exists ; 1995 ; Pigment & Resin Technology Volume 24 ; 24 ; >
     au < manifest ; exists ; 1996 ; Pigment & Resin Technology Volume 25 ; 25 ; >
-    au < ready ; exists ; 1997 ; Pigment & Resin Technology Volume 26 ; 26 ; >
+    au < crawling ; exists ; 1997 ; Pigment & Resin Technology Volume 26 ; 26 ; >
     au < frozen ; exists ; 1998 ; Pigment & Resin Technology Volume 27 ; 27 ; >
     au < frozen ; exists ; 1999 ; Pigment & Resin Technology Volume 28 ; 28 ; >
     au < frozen ; exists ; 2000 ; Pigment & Resin Technology Volume 29 ; 29 ; >
@@ -13489,7 +13489,7 @@
     au < frozen ; exists ; 2016 ; European Journal of Training and Development Volume 40 ; 40 ; >
     au < frozen ; exists ; 2017 ; European Journal of Training and Development Volume 41 ; 41 ; >
     au < frozen ; exists ; 2018 ; European Journal of Training and Development Volume 42 ; 42 ; >
-    au < ready ; exists ; 2019 ; European Journal of Training and Development Volume 43 ; 43 ; >
+    au < crawling ; exists ; 2019 ; European Journal of Training and Development Volume 43 ; 43 ; >
     au < ready ; exists ; 2020 ; European Journal of Training and Development Volume 44 ; 44 ; >
     au < frozen ; exists ; 2021 ; European Journal of Training and Development Volume 45 ; 45 ; >
     au < crawling ; exists ; 2022 ; European Journal of Training and Development Volume 46 ; 46 ; >
@@ -13701,7 +13701,7 @@
     au < frozen ; exists ; 2016 ; International Journal of Organization Theory & Behavior Volume 19 ; 19 ; >
     au < frozen ; exists ; 2017 ; International Journal of Organization Theory & Behavior Volume 20 ; 20 ; >
     au < frozen ; exists ; 2018 ; International Journal of Organization Theory & Behavior Volume 21 ; 21 ; >
-    au < ready ; exists ; 2019 ; International Journal of Organization Theory & Behavior Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2019 ; International Journal of Organization Theory & Behavior Volume 22 ; 22 ; >
     au < frozen ; exists ; 2020 ; International Journal of Organization Theory & Behavior Volume 23 ; 23 ; >
     au < frozen ; exists ; 2021 ; International Journal of Organization Theory & Behavior Volume 24 ; 24 ; >
     au < crawling ; exists ; 2022 ; International Journal of Organization Theory & Behavior Volume 25 ; 25 ; >
@@ -13907,7 +13907,7 @@
     au < frozen ; exists ; 2017 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 8 ; 8 ; >
     au < frozen ; exists ; 2018 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 9 ; 9 ; >
     au < frozen ; exists ; 2019 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 10 ; 10 ; >
-    au < ready ; exists ; 2020 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2020 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 11 ; 11 ; >
     au < frozen ; exists ; 2021 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 12 ; 12 ; >
     au < crawling ; exists ; 2022 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 13 ; 13 ; >
 
@@ -14212,7 +14212,7 @@
     au < frozen ; exists ; 2016 ; Social Studies Research and Practice Volume 11 ; 11 ; >
     au < frozen ; exists ; 2017 ; Social Studies Research and Practice Volume 12 ; 12 ; >
     au < frozen ; exists ; 2018 ; Social Studies Research and Practice Volume 13 ; 13 ; >
-    au < ready ; exists ; 2019 ; Social Studies Research and Practice Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2019 ; Social Studies Research and Practice Volume 14 ; 14 ; >
     au < frozen ; exists ; 2020 ; Social Studies Research and Practice Volume 15 ; 15 ; >
     au < frozen ; exists ; 2021 ; Social Studies Research and Practice Volume 16 ; 16 ; >
     au < crawling ; exists ; 2022 ; Social Studies Research and Practice Volume 17 ; 17 ; >
