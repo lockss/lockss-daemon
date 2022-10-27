@@ -1543,6 +1543,9 @@
     param[journal_id] = cjas
     #1957 to present.
 
+    au < superseded ; exists ; 2017 ; Canadian Journal of Animal Science Volume 97 [superseded] ; 97 ; http://www.nrcresearchpress.com/ ; >
+    au < superseded ; exists ; 2018 ; Canadian Journal of Animal Science Volume 98 [superseded] ; 98 ; http://www.nrcresearchpress.com/ ; >
+
     au < frozen ; exists ; 2000 ; Canadian Journal of Animal Science Volume 80 ; 80 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 2001 ; Canadian Journal of Animal Science Volume 81 ; 81 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 2002 ; Canadian Journal of Animal Science Volume 82 ; 82 ; https://cdnsciencepub.com/ ; >
@@ -1560,8 +1563,8 @@
     au < frozen ; exists ; 2014 ; Canadian Journal of Animal Science Volume 94 ; 94 ; http://www.nrcresearchpress.com/ ; >
     au < frozen ; exists ; 2015 ; Canadian Journal of Animal Science Volume 95 ; 95 ; http://www.nrcresearchpress.com/ ; >
     au < frozen ; exists ; 2016 ; Canadian Journal of Animal Science Volume 96 ; 96 ; http://www.nrcresearchpress.com/ ; >
-    au < deepCrawl ; exists ; 2017 ; Canadian Journal of Animal Science Volume 97 ; 97 ; http://www.nrcresearchpress.com/ ; >
-    au < deepCrawl ; exists ; 2018 ; Canadian Journal of Animal Science Volume 98 ; 98 ; http://www.nrcresearchpress.com/ ; >
+    au < exists ; exists ; 2017 ; Canadian Journal of Animal Science Volume 97 ; 97 ; https://cdnsciencepub.com/ ; >
+    au < exists ; exists ; 2018 ; Canadian Journal of Animal Science Volume 98 ; 98 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 2019 ; Canadian Journal of Animal Science Volume 99 ; 99 ; https://www.nrcresearchpress.com/ ; >
     au < deepCrawl ; exists ; 2020 ; Canadian Journal of Animal Science Volume 100 ; 100 ; https://cdnsciencepub.com/ ; >
     au < deepCrawl ; exists ; 2021 ; Canadian Journal of Animal Science Volume 101 ; 101 ; https://cdnsciencepub.com/ ; >
