@@ -40,7 +40,7 @@
       au < manifest ; exists ; 2018 ; Dental Journal (Majalah Kedokteran Gigi) Volume 51 ; 51 ; 2018 ; >
       au < manifest ; exists ; 2019 ; Dental Journal (Majalah Kedokteran Gigi) Volume 52 ; 52 ; 2019 ; >
       au < manifest ; exists ; 2020 ; Dental Journal (Majalah Kedokteran Gigi) Volume 53 ; 53 ; 2020 ; >
-      au < crawling ; exists ; 2021 ; Dental Journal (Majalah Kedokteran Gigi) Volume 54 ; 54 ; 2021 ; >
+      au < frozen ; exists ; 2021 ; Dental Journal (Majalah Kedokteran Gigi) Volume 54 ; 54 ; 2021 ; >
       au < manifest ; exists ; 2022 ; Dental Journal (Majalah Kedokteran Gigi) Volume 55 ; 55 ; 2022 ; >
 
   }
@@ -64,7 +64,7 @@
       au < manifest ; exists ; 1997 ; Yuridika Volume 12 ; 12 ; 1997 ; >
       au < exists ; exists ; 1998 ; Yuridika Volume 13 ; 13 ; 1998 ; >
       au < manifest ; exists ; 1999 ; Yuridika Volume 14 ; 14 ; 1999 ; >
-      au < crawling ; exists ; 2000 ; Yuridika Volume 15 ; 15 ; 2000 ; >
+      au < frozen ; exists ; 2000 ; Yuridika Volume 15 ; 15 ; 2000 ; >
       au < manifest ; exists ; 2001 ; Yuridika Volume 16 ; 16 ; 2001 ; >
       au < exists ; exists ; 2002 ; Yuridika Volume 17 ; 17 ; 2002 ; >
       au < manifest ; exists ; 2003 ; Yuridika Volume 18 ; 18 ; 2003 ; >
@@ -172,7 +172,7 @@
 
       param[journal_id] = IJTID
 
-      au < crawling ; exists ; 2010 ; Indonesian Journal of Tropical and Infectious Disease Volume 1 ; 1 ; 2010 ; >
+      au < frozen ; exists ; 2010 ; Indonesian Journal of Tropical and Infectious Disease Volume 1 ; 1 ; 2010 ; >
       au < manifest ; exists ; 2011 ; Indonesian Journal of Tropical and Infectious Disease Volume 2 ; 2 ; 2011 ; >
       au < manifest ; exists ; 2012 ; Indonesian Journal of Tropical and Infectious Disease Volume 3 ; 3 ; 2012 ; >
       au < manifest ; exists ; 2013 ; Indonesian Journal of Tropical and Infectious Disease Volume 4 ; 4 ; 2013 ; >
@@ -183,7 +183,7 @@
       au < manifest ; exists ; 2018 ; Indonesian Journal of Tropical and Infectious Disease Volume 9 ; 9 ; 2018 ; >
       au < manifest ; exists ; 2019 ; Indonesian Journal of Tropical and Infectious Disease Volume 10 ; 10 ; 2019 ; >
       au < manifest ; exists ; 2020 ; Indonesian Journal of Tropical and Infectious Disease Volume 11 ; 11 ; 2020 ; >
-      au < crawling ; exists ; 2021 ; Indonesian Journal of Tropical and Infectious Disease Volume 12 ; 12 ; 2021 ; >
+      au < frozen ; exists ; 2021 ; Indonesian Journal of Tropical and Infectious Disease Volume 12 ; 12 ; 2021 ; >
       au < crawling ; exists ; 2022 ; Indonesian Journal of Tropical and Infectious Disease Volume 13 ; 13 ; 2022 ; >
 
   }
@@ -198,7 +198,7 @@
 
       param[journal_id] = JISEBI
 
-      au < crawling ; exists ; 2015 ; Journal of Information Systems Engineering and Business Intelligence (JISEBI) Volume 1 ; 1 ; 2015 ; >
+      au < frozen ; exists ; 2015 ; Journal of Information Systems Engineering and Business Intelligence (JISEBI) Volume 1 ; 1 ; 2015 ; >
       au < manifest ; exists ; 2016 ; Journal of Information Systems Engineering and Business Intelligence (JISEBI) Volume 2 ; 2 ; 2016 ; >
       au < manifest ; exists ; 2017 ; Journal of Information Systems Engineering and Business Intelligence (JISEBI) Volume 3 ; 3 ; 2017 ; >
       au < manifest ; exists ; 2018 ; Journal of Information Systems Engineering and Business Intelligence (JISEBI) Volume 4 ; 4 ; 2018 ; >
@@ -240,7 +240,7 @@
 
       param[journal_id] = BIKK
 
-      au < crawling ; exists ; 2014 ; Berkala Ilmu Kesehatan Kulit dan Kelamin Volume 26 ; 26 ; 2014 ; >
+      au < frozen ; exists ; 2014 ; Berkala Ilmu Kesehatan Kulit dan Kelamin Volume 26 ; 26 ; 2014 ; >
       au < manifest ; exists ; 2015 ; Berkala Ilmu Kesehatan Kulit dan Kelamin Volume 27 ; 27 ; 2015 ; >
       au < manifest ; exists ; 2016 ; Berkala Ilmu Kesehatan Kulit dan Kelamin Volume 28 ; 28 ; 2016 ; >
       au < manifest ; exists ; 2017 ; Berkala Ilmu Kesehatan Kulit dan Kelamin Volume 29 ; 29 ; 2017 ; >
@@ -262,11 +262,11 @@
 
       param[journal_id] = MOZAIK
 
-      au < crawling ; exists ; 2013 ; Mozaik Humaniora Volume 13 ; 13 ; 2013 ; >
+      au < frozen ; exists ; 2013 ; Mozaik Humaniora Volume 13 ; 13 ; 2013 ; >
       au < manifest ; exists ; 2014 ; Mozaik Humaniora Volume 14 ; 14 ; 2014 ; >
       au < manifest ; exists ; 2015 ; Mozaik Humaniora Volume 15 ; 15 ; 2015 ; >
       au < manifest ; exists ; 2016 ; Mozaik Humaniora Volume 16 ; 16 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; Mozaik Humaniora Volume 17 ; 17 ; 2017 ; >
+      au < frozen ; exists ; 2017 ; Mozaik Humaniora Volume 17 ; 17 ; 2017 ; >
       au < manifest ; exists ; 2018 ; Mozaik Humaniora Volume 18 ; 18 ; 2018 ; >
       au < manifest ; exists ; 2019 ; Mozaik Humaniora Volume 19 ; 19 ; 2019 ; >
       au < manifest ; exists ; 2020 ; Mozaik Humaniora Volume 20 ; 20 ; 2020 ; >
@@ -312,7 +312,7 @@
       au < manifest ; exists ; 2017 ; Jurnal Berkala Epidemiologi Volume 5 ; 5 ; 2017 ; >
       au < manifest ; exists ; 2018 ; Jurnal Berkala Epidemiologi Volume 6 ; 6 ; 2018 ; >
       au < manifest ; exists ; 2019 ; Jurnal Berkala Epidemiologi Volume 7 ; 7 ; 2019 ; >
-      au < crawling ; exists ; 2020 ; Jurnal Berkala Epidemiologi Volume 8 ; 8 ; 2020 ; >
+      au < frozen ; exists ; 2020 ; Jurnal Berkala Epidemiologi Volume 8 ; 8 ; 2020 ; >
       au < manifest ; exists ; 2021 ; Jurnal Berkala Epidemiologi Volume 9 ; 9 ; 2021 ; >
       au < crawling ; exists ; 2022 ; Jurnal Berkala Epidemiologi Volume 10 ; 10 ; 2022 ; >
 
@@ -396,7 +396,7 @@
       param[journal_id] = AMNT
 
       au < manifest ; exists ; 2017 ; Amerta Nutrition Volume 1 ; 1 ; 2017 ; >
-      au < crawling ; exists ; 2018 ; Amerta Nutrition Volume 2 ; 2 ; 2018 ; >
+      au < frozen ; exists ; 2018 ; Amerta Nutrition Volume 2 ; 2 ; 2018 ; >
       au < manifest ; exists ; 2019 ; Amerta Nutrition Volume 3 ; 3 ; 2019 ; >
       au < manifest ; exists ; 2020 ; Amerta Nutrition Volume 4 ; 4 ; 2020 ; >
       au < manifest ; exists ; 2021 ; Amerta Nutrition Volume 5 ; 5 ; 2021 ; >
@@ -455,7 +455,7 @@
 
       param[journal_id] = JMTT
 
-      au < crawling ; exists ; 2008 ; Jurnal Manajemen Teori dan Terapan Volume 1 ; 1 ; 2008 ; >
+      au < frozen ; exists ; 2008 ; Jurnal Manajemen Teori dan Terapan Volume 1 ; 1 ; 2008 ; >
       au < manifest ; exists ; 2009 ; Jurnal Manajemen Teori dan Terapan Volume 2 ; 2 ; 2009 ; >
       au < manifest ; exists ; 2010 ; Jurnal Manajemen Teori dan Terapan Volume 3 ; 3 ; 2010 ; >
       au < manifest ; exists ; 2011 ; Jurnal Manajemen Teori dan Terapan Volume 4 ; 4 ; 2011 ; >
@@ -488,7 +488,7 @@
       au < manifest ; exists ; 2018 ; Jurnal Kimia Riset Volume 3 ; 3 ; 2018 ; >
       au < manifest ; exists ; 2019 ; Jurnal Kimia Riset Volume 4 ; 4 ; 2019 ; >
       au < manifest ; exists ; 2020 ; Jurnal Kimia Riset Volume 5 ; 5 ; 2020 ; >
-      au < crawling ; exists ; 2021 ; Jurnal Kimia Riset Volume 6 ; 6 ; 2021 ; >
+      au < frozen ; exists ; 2021 ; Jurnal Kimia Riset Volume 6 ; 6 ; 2021 ; >
       au < crawling ; exists ; 2022 ; Jurnal Kimia Riset Volume 7 ; 7 ; 2022 ; >
 
   }
@@ -504,12 +504,12 @@
       param[journal_id] = JKL
 
       au < manifest ; exists ; 2015 ; Jurnal Kesehatan Lingkungan Volume 8 ; 8 ; 2015 ; >
-      au < crawling ; exists ; 2016 ; Jurnal Kesehatan Lingkungan Volume 9 ; 9 ; 2016 ; >
+      au < frozen ; exists ; 2016 ; Jurnal Kesehatan Lingkungan Volume 9 ; 9 ; 2016 ; >
       au < manifest ; exists ; 2017 ; Jurnal Kesehatan Lingkungan Volume 10 ; 10 ; 2017 ; >
       au < manifest ; exists ; 2018 ; Jurnal Kesehatan Lingkungan Volume 11 ; 11 ; 2018 ; >
       au < manifest ; exists ; 2019 ; Jurnal Kesehatan Lingkungan Volume 12 ; 12 ; 2019 ; >
       au < manifest ; exists ; 2020 ; Jurnal Kesehatan Lingkungan Volume 13 ; 13 ; 2020 ; >
-      au < crawling ; exists ; 2021 ; Jurnal Kesehatan Lingkungan Volume 14 ; 14 ; 2021 ; >
+      au < frozen ; exists ; 2021 ; Jurnal Kesehatan Lingkungan Volume 14 ; 14 ; 2021 ; >
       au < crawling ; exists ; 2022 ; Jurnal Kesehatan Lingkungan Volume 15 ; 15 ; 2022 ; >
 
   }
@@ -527,7 +527,7 @@
       au < manifest ; exists ; 2016 ; Jurnal Biometrika dan Kependudukan Volume 5 ; 5 ; 2016 ; >
       au < manifest ; exists ; 2017 ; Jurnal Biometrika dan Kependudukan Volume 6 ; 6 ; 2017 ; >
       au < manifest ; exists ; 2018 ; Jurnal Biometrika dan Kependudukan Volume 7 ; 7 ; 2018 ; >
-      au < crawling ; exists ; 2019 ; Jurnal Biometrika dan Kependudukan Volume 8 ; 8 ; 2019 ; >
+      au < frozen ; exists ; 2019 ; Jurnal Biometrika dan Kependudukan Volume 8 ; 8 ; 2019 ; >
       au < manifest ; exists ; 2020 ; Jurnal Biometrika dan Kependudukan Volume 9 ; 9 ; 2020 ; >
       au < manifest ; exists ; 2021 ; Jurnal Biometrika dan Kependudukan Volume 10 ; 10 ; 2021 ; >
       au < crawling ; exists ; 2022 ; Jurnal Biometrika dan Kependudukan Volume 11 ; 11 ; 2022 ; >
@@ -680,7 +680,7 @@
 
       au < manifest ; exists ; 2017 ; Journal Of Vocational Health Studies Volume 1 ; 1 ; 2017 ; >
       au < manifest ; exists ; 2018 ; Journal Of Vocational Health Studies Volume 2 ; 2 ; 2018 ; >
-      au < crawling ; exists ; 2019 ; Journal Of Vocational Health Studies Volume 3 ; 3 ; 2019 ; >
+      au < frozen ; exists ; 2019 ; Journal Of Vocational Health Studies Volume 3 ; 3 ; 2019 ; >
       au < manifest ; exists ; 2020 ; Journal Of Vocational Health Studies Volume 4 ; 4 ; 2020 ; >
       au < manifest ; exists ; 2021 ; Journal Of Vocational Health Studies Volume 5 ; 5 ; 2021 ; >
       au < manifest ; exists ; 2022 ; Journal Of Vocational Health Studies Volume 6 ; 6 ; 2022 ; >
@@ -761,7 +761,7 @@
 
       au < manifest ; exists ; 2018 ; Airlangga International Journal of Islamic Economics and Finance Volume 1 ; 1 ; 2018 ; >
       au < manifest ; exists ; 2019 ; Airlangga International Journal of Islamic Economics and Finance Volume 2 ; 2 ; 2019 ; >
-      au < crawling ; exists ; 2020 ; Airlangga International Journal of Islamic Economics and Finance Volume 3 ; 3 ; 2020 ; >
+      au < frozen ; exists ; 2020 ; Airlangga International Journal of Islamic Economics and Finance Volume 3 ; 3 ; 2020 ; >
       au < manifest ; exists ; 2021 ; Airlangga International Journal of Islamic Economics and Finance Volume 4 ; 4 ; 2021 ; >
       au < manifest ; exists ; 2022 ; Airlangga International Journal of Islamic Economics and Finance Volume 5 ; 5 ; 2022 ; >
 
@@ -781,7 +781,7 @@
       au < manifest ; exists ; 2018 ; Jurnal Medik Veteriner Volume 2 ; 2 ; 2018 ; >
       au < manifest ; exists ; 2019 ; Jurnal Medik Veteriner Volume 3 ; 3 ; 2019 ; >
       au < manifest ; exists ; 2020 ; Jurnal Medik Veteriner Volume 4 ; 4 ; 2020 ; >
-      au < crawling ; exists ; 2021 ; Jurnal Medik Veteriner Volume 5 ; 5 ; 2021 ; >
+      au < frozen ; exists ; 2021 ; Jurnal Medik Veteriner Volume 5 ; 5 ; 2021 ; >
       au < crawling ; exists ; 2022 ; Jurnal Medik Veteriner Volume 6 ; 6 ; 2022 ; >
 
   }
@@ -930,7 +930,7 @@
       param[journal_id] = JoViN
 
       au < manifest ; exists ; 2020 ; Journal of Vocational Nursing Volume 1 ; 1 ; 2020 ; >
-      au < crawling ; exists ; 2021 ; Journal of Vocational Nursing Volume 2 ; 2 ; 2021 ; >
+      au < frozen ; exists ; 2021 ; Journal of Vocational Nursing Volume 2 ; 2 ; 2021 ; >
       au < crawling ; exists ; 2022 ; Journal of Vocational Nursing Volume 3 ; 3 ; 2022 ; >
 
   }
@@ -967,7 +967,7 @@
       au < manifest ; exists ; 2016 ; Pediomaternal Nursing Journal Volume 4 ; 4 ; 2016 ; >
       au < manifest ; exists ; 2017 ; Pediomaternal Nursing Journal Volume 5 ; 5 ; 2017 ; >
       au < exists ; exists ; 2018 ; Pediomaternal Nursing Journal Volume 6 ; 6 ; 2018 ; >
-      au < crawling ; exists ; 2019 ; Pediomaternal Nursing Journal Volume 7 ; 7 ; 2019 ; >
+      au < frozen ; exists ; 2019 ; Pediomaternal Nursing Journal Volume 7 ; 7 ; 2019 ; >
       au < manifest ; exists ; 2020 ; Pediomaternal Nursing Journal Volume 8 ; 8 ; 2020 ; >
       au < manifest ; exists ; 2021 ; Pediomaternal Nursing Journal Volume 9 ; 9 ; 2021 ; >
       au < manifest ; exists ; 2022 ; Pediomaternal Nursing Journal Volume 10 ; 10 ; 2022 ; >
@@ -987,7 +987,7 @@
       au < manifest ; exists ; 2012 ; Critical, Medical and Surgical Nursing Journal Volume 1 ; 1 ; 2012 ; >
       au < manifest ; exists ; 2013 ; Critical, Medical and Surgical Nursing Journal Volume 2 ; 2 ; 2013 ; >
       au < manifest ; exists ; 2014 ; Critical, Medical and Surgical Nursing Journal Volume 3 ; 3 ; 2014 ; >
-      au < crawling ; exists ; 2015 ; Critical, Medical and Surgical Nursing Journal Volume 4 ; 4 ; 2015 ; >
+      au < frozen ; exists ; 2015 ; Critical, Medical and Surgical Nursing Journal Volume 4 ; 4 ; 2015 ; >
       au < manifest ; exists ; 2016 ; Critical, Medical and Surgical Nursing Journal Volume 5 ; 5 ; 2016 ; >
       au < exists ; exists ; 2017 ; Critical, Medical and Surgical Nursing Journal Volume 6 ; 6 ; 2017 ; >
       au < manifest ; exists ; 2018 ; Critical, Medical and Surgical Nursing Journal Volume 7 ; 7 ; 2018 ; >
@@ -1010,7 +1010,7 @@
 
       au < manifest ; exists ; 2019 ; Fundamental & Management Nursing Jurnal Volume 2 ; 2 ; 2019 ; >
       au < manifest ; exists ; 2020 ; Fundamental & Management Nursing Jurnal Volume 3 ; 3 ; 2020 ; >
-      au < crawling ; exists ; 2021 ; Fundamental & Management Nursing Jurnal Volume 4 ; 4 ; 2021 ; >
+      au < frozen ; exists ; 2021 ; Fundamental & Management Nursing Jurnal Volume 4 ; 4 ; 2021 ; >
       au < crawling ; exists ; 2022 ; Fundamental & Management Nursing Jurnal Volume 5 ; 5 ; 2022 ; >
 
   }
@@ -1041,7 +1041,7 @@
       param[journal_id] = IJAR
 
       au < manifest ; exists ; 2019 ; Indonesian Journal of Anesthesiology and Reanimation Volume 1 ; 1 ; 2019 ; >
-      au < crawling ; exists ; 2020 ; Indonesian Journal of Anesthesiology and Reanimation Volume 2 ; 2 ; 2020 ; >
+      au < frozen ; exists ; 2020 ; Indonesian Journal of Anesthesiology and Reanimation Volume 2 ; 2 ; 2020 ; >
       au < manifest ; exists ; 2021 ; Indonesian Journal of Anesthesiology and Reanimation Volume 3 ; 3 ; 2021 ; >
       au < crawling ; exists ; 2022 ; Indonesian Journal of Anesthesiology and Reanimation Volume 4 ; 4 ; 2022 ; >
 
@@ -1136,7 +1136,7 @@
       au < manifest ; exists ; 2017 ; Journal of Developing Economies Volume 2 ; 2 ; 2017 ; >
       au < manifest ; exists ; 2018 ; Journal of Developing Economies Volume 3 ; 3 ; 2018 ; >
       au < manifest ; exists ; 2019 ; Journal of Developing Economies Volume 4 ; 4 ; 2019 ; >
-      au < crawling ; exists ; 2020 ; Journal of Developing Economies Volume 5 ; 5 ; 2020 ; >
+      au < frozen ; exists ; 2020 ; Journal of Developing Economies Volume 5 ; 5 ; 2020 ; >
       au < manifest ; exists ; 2021 ; Journal of Developing Economies Volume 6 ; 6 ; 2021 ; >
       au < manifest ; exists ; 2022 ; Journal of Developing Economies Volume 7 ; 7 ; 2022 ; >
 
@@ -1273,7 +1273,7 @@
       au < manifest ; exists ; 2017 ; Jurnal Layanan Masyarakat Volume 1 ; 1 ; 2017 ; >
       au < manifest ; exists ; 2018 ; Jurnal Layanan Masyarakat Volume 2 ; 2 ; 2018 ; >
       au < manifest ; exists ; 2019 ; Jurnal Layanan Masyarakat Volume 3 ; 3 ; 2019 ; >
-      au < crawling ; exists ; 2020 ; Jurnal Layanan Masyarakat Volume 4 ; 4 ; 2020 ; >
+      au < frozen ; exists ; 2020 ; Jurnal Layanan Masyarakat Volume 4 ; 4 ; 2020 ; >
       au < manifest ; exists ; 2021 ; Jurnal Layanan Masyarakat Volume 5 ; 5 ; 2021 ; >
       au < crawling ; exists ; 2022 ; Jurnal Layanan Masyarakat Volume 6 ; 6 ; 2022 ; >
 
@@ -1313,7 +1313,7 @@
       au < manifest ; exists ; 2012 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 1 ; 1 ; 2012 ; >
       au < manifest ; exists ; 2013 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 2 ; 2 ; 2013 ; >
       au < manifest ; exists ; 2014 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 3 ; 3 ; 2014 ; >
-      au < crawling ; exists ; 2015 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 4 ; 4 ; 2015 ; >
+      au < frozen ; exists ; 2015 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 4 ; 4 ; 2015 ; >
       au < manifest ; exists ; 2016 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 5 ; 5 ; 2016 ; >
       au < manifest ; exists ; 2017 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 6 ; 6 ; 2017 ; >
       au < manifest ; exists ; 2018 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 7 ; 7 ; 2018 ; >
@@ -1336,7 +1336,7 @@
 
       au < manifest ; exists ; 2019 ; Jurnal Pengabdian Masyarakat dalam Keperawatan Volume 1 ; 1 ; 2019 ; >
       au < manifest ; exists ; 2020 ; Jurnal Pengabdian Masyarakat dalam Keperawatan Volume 2 ; 2 ; 2020 ; >
-      au < crawling ; exists ; 2021 ; Jurnal Pengabdian Masyarakat dalam Keperawatan Volume 3 ; 3 ; 2021 ; >
+      au < frozen ; exists ; 2021 ; Jurnal Pengabdian Masyarakat dalam Keperawatan Volume 3 ; 3 ; 2021 ; >
       au < crawling ; exists ; 2022 ; Jurnal Pengabdian Masyarakat dalam Keperawatan Volume 4 ; 4 ; 2022 ; >
 
   }
@@ -1461,7 +1461,7 @@
 
       au < manifest ; exists ; 2019 ; Majalah Biomorfologi Volume 29 ; 29 ; 2019 ; >
       au < manifest ; exists ; 2020 ; Majalah Biomorfologi Volume 30 ; 30 ; 2020 ; >
-      au < crawling ; exists ; 2021 ; Majalah Biomorfologi Volume 31 ; 31 ; 2021 ; >
+      au < frozen ; exists ; 2021 ; Majalah Biomorfologi Volume 31 ; 31 ; 2021 ; >
       au < manifest ; exists ; 2022 ; Majalah Biomorfologi Volume 32 ; 32 ; 2022 ; >
 
   }
@@ -1508,7 +1508,7 @@
       param[journal_id] = JAVEST
 
       au < manifest ; exists ; 2020 ; Journal of Applied Veterinary Science and Technology Volume 1 ; 1 ; 2020 ; >
-      au < crawling ; exists ; 2021 ; Journal of Applied Veterinary Science and Technology Volume 2 ; 2 ; 2021 ; >
+      au < frozen ; exists ; 2021 ; Journal of Applied Veterinary Science and Technology Volume 2 ; 2 ; 2021 ; >
       au < crawling ; exists ; 2022 ; Journal of Applied Veterinary Science and Technology Volume 3 ; 3 ; 2022 ; >
 
   }
@@ -1556,7 +1556,7 @@
 
       param[journal_id] = JCMPHR
 
-      au < crawling ; exists ; 2020 ; Journal of Community Medicine and Public Health Research Volume 1 ; 1 ; 2020 ; >
+      au < frozen ; exists ; 2020 ; Journal of Community Medicine and Public Health Research Volume 1 ; 1 ; 2020 ; >
       au < manifest ; exists ; 2021 ; Journal of Community Medicine and Public Health Research Volume 2 ; 2 ; 2021 ; >
       au < crawling ; exists ; 2022 ; Journal of Community Medicine and Public Health Research Volume 3 ; 3 ; 2022 ; >
 
@@ -1607,7 +1607,7 @@
       param[journal_id] = iabj
 
       au < manifest ; exists ; 2020 ; Indonesian Andrology and Biomedical Journal Volume 1 ; 1 ; 2020 ; >
-      au < crawling ; exists ; 2021 ; Indonesian Andrology and Biomedical Journal Volume 2 ; 2 ; 2021 ; >
+      au < frozen ; exists ; 2021 ; Indonesian Andrology and Biomedical Journal Volume 2 ; 2 ; 2021 ; >
       au < crawling ; exists ; 2022 ; Indonesian Andrology and Biomedical Journal Volume 3 ; 3 ; 2022 ; >
 
   }
@@ -1689,7 +1689,7 @@
       param[journal_id] = BIOKULTUR
 
       au < manifest ; exists ; 2020 ; Biokultur Volume 9 ; 9 ; 2020 ; >
-      au < crawling ; exists ; 2021 ; Biokultur Volume 10 ; 10 ; 2021 ; >
+      au < frozen ; exists ; 2021 ; Biokultur Volume 10 ; 10 ; 2021 ; >
       au < crawling ; exists ; 2022 ; Biokultur Volume 11 ; 11 ; 2022 ; >
 
   }
@@ -1703,7 +1703,7 @@
 
       param[journal_id] = MEDKOM
 
-      au < crawling ; exists ; 2020 ; Medkom (Jurnal Media dan Komunikasi) Volume 1 ; 1 ; 2020 ; >
+      au < frozen ; exists ; 2020 ; Medkom (Jurnal Media dan Komunikasi) Volume 1 ; 1 ; 2020 ; >
       au < manifest ; exists ; 2021 ; Medkom (Jurnal Media dan Komunikasi) Volume 2 ; 2 ; 2021 ; >
       au < manifest ; exists ; 2022 ; Medkom (Jurnal Media dan Komunikasi) Volume 3 ; 3 ; 2022 ; >
 
@@ -1719,7 +1719,7 @@
 
       param[journal_id] = palimpsest
 
-      au < crawling ; exists ; 2020 ; Palimpsest: Journal of Information and Library Science Volume 11 ; 11 ; 2020 ; >
+      au < frozen ; exists ; 2020 ; Palimpsest: Journal of Information and Library Science Volume 11 ; 11 ; 2020 ; >
       au < manifest ; exists ; 2021 ; Palimpsest: Journal of Information and Library Science Volume 12 ; 12 ; 2021 ; >
       au < manifest ; exists ; 2022 ; Palimpsest: Journal of Information and Library Science Volume 13 ; 13 ; 2022 ; >
 
@@ -1782,7 +1782,7 @@
 
       param[journal_id] = aksona
 
-      au < crawling ; exists ; 2021 ; Aksona Volume 1 ; 1 ; 2021 ; >
+      au < frozen ; exists ; 2021 ; Aksona Volume 1 ; 1 ; 2021 ; >
       au < crawling ; exists ; 2022 ; Aksona Volume 2 ; 2 ; 2022 ; >
 
   }
@@ -1798,7 +1798,7 @@
       param[journal_id] = BIKFAR
 
       au < manifest ; exists ; 2020 ; Berkala Ilmiah Kimia Farmasi Volume 7 ; 7 ; 2020 ; >
-      au < crawling ; exists ; 2021 ; Berkala Ilmiah Kimia Farmasi Volume 8 ; 8 ; 2021 ; >
+      au < frozen ; exists ; 2021 ; Berkala Ilmiah Kimia Farmasi Volume 8 ; 8 ; 2021 ; >
       au < exists ; exists ; 2022 ; Berkala Ilmiah Kimia Farmasi Volume 9 ; 9 ; 2022 ; >
 
   }
@@ -1812,7 +1812,7 @@
 
       param[journal_id] = VSEHJ
 
-      au < crawling ; exists ; 2021 ; Vision Science and Eye Health Journal Volume 1 ; 1 ; 2021 ; >
+      au < frozen ; exists ; 2021 ; Vision Science and Eye Health Journal Volume 1 ; 1 ; 2021 ; >
       au < manifest ; exists ; 2022 ; Vision Science and Eye Health Journal Volume 2 ; 2 ; 2022 ; >
 
   }
