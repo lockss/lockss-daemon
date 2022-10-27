@@ -384,7 +384,7 @@
       au < finished ; crawling ; 2017 ; ASHA Leader Volume 22 ; 22 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; ASHA Leader Volume 23 ; 23 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; ASHA Leader Volume 24 ; 24 ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2020 ; ASHA Leader Volume 25 ; 25 ; >
+      au < frozen ; exists ; 2020 ; ASHA Leader Volume 25 ; 25 ; >
       au < expected ; exists ; 2021 ; ASHA Leader Volume 26 ; 26 ; >
       au < expected ; exists ; 2022 ; ASHA Leader Volume 27 ; 27 ; >
   }
