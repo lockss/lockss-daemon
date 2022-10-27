@@ -125,7 +125,7 @@
     
       #2006 needed recollection in new layout
       au < crawling ; down ; 2006 ; Agenda - A Journal of Policy Analysis and Reform Volume 13 ; 13 ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2019 ; Agenda - A Journal of Policy Analysis and Reform Volume 26 ; 26 ; >
+      au < frozen ; exists ; 2019 ; Agenda - A Journal of Policy Analysis and Reform Volume 26 ; 26 ; >
       au < frozen ; exists ; 2020 ; Agenda - A Journal of Policy Analysis and Reform Volume 27 ; 27 ; >
       au < frozen ; exists ; 2021 ; Agenda - A Journal of Policy Analysis and Reform Volume 28 ; 28 ; >
       au < expected ; exists ; 2022 ; Agenda - A Journal of Policy Analysis and Reform Volume 29 ; 29 ; >
@@ -143,8 +143,8 @@
     
     param[journal_id] = anu-historical-journal
 
-    au < deepCrawl ; exists ; 2019 ; ANU Historical Journal II: Number 1 ; 1 ; >
-    au < deepCrawl ; exists ; 2020 ; ANU Historical Journal II: Number 2 ; 2 ; >
+    au < frozen ; exists ; 2019 ; ANU Historical Journal II: Number 1 ; 1 ; >
+    au < frozen ; exists ; 2020 ; ANU Historical Journal II: Number 2 ; 2 ; >
     au < frozen ; exists ; 2021 ; ANU Historical Journal II: Number 3 ; 3 ; >
     au < expected ; exists ; 2022 ; ANU Historical Journal II: Number 4 ; 4 ; >
 
@@ -165,7 +165,7 @@
     au < frozen ; exists ; 2019 ; Australian Journal of Biography and History: Number 2 ; 2 ; >
     au < frozen ; exists ; 2020 ; Australian Journal of Biography and History: Number 3 ; 3 ; >
     au < frozen ; exists ; 2020 ; Australian Journal of Biography and History: Number 4 ; 4 ; >
-    au < deepCrawl ; exists ; 2021 ; Australian Journal of Biography and History: Number 5 ; 5 ; >
+    au < frozen ; exists ; 2021 ; Australian Journal of Biography and History: Number 5 ; 5 ; >
     au < crawling ; exists ; 2022 ; Australian Journal of Biography and History: Number 6 ; 6 ; >
 
   }  
@@ -192,7 +192,7 @@
     au < crawling ; down ; 2018 ; East Asia Forum Quarterly Volume 10 ; 10 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2019 ; East Asia Forum Quarterly Volume 11 ; 11 ; >
     au < frozen ; exists ; 2020 ; East Asia Forum Quarterly Volume 12 ; 12 ; >
-    au < deepCrawl ; exists ; 2021 ; East Asia Forum Quarterly Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2021 ; East Asia Forum Quarterly Volume 13 ; 13 ; >
     au < crawling ; exists ; 2022 ; East Asia Forum Quarterly Volume 14 ; 14 ; >
 
   }
@@ -214,7 +214,7 @@
     au < crawling ; down ; 2017 ; Human Ecology Review: Volume 23 ; 23 ; reingest3.clockss.org:8083 >
     au < crawling ; down ; 2018 ; Human Ecology Review: Volume 24 ; 24 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2019 ; Human Ecology Review: Volume 25 ; 25 ;  >
-    au < deepCrawl ; exists ; 2021 ; Human Ecology Review: Volume 26 ; 26 ;  >
+    au < frozen ; exists ; 2021 ; Human Ecology Review: Volume 26 ; 26 ;  >
     au < crawling ; exists ; 2022 ; Human Ecology Review: Volume 27 ; 27 ;  >
 
   }
@@ -236,7 +236,7 @@
     #6/14/19 change to layout - plugin has been modified to handle backwards incompatible with finished content
     au < frozen ; exists ; 2019 ; International Review of Environmental History: Volume 5 ; 5 ; >
     au < frozen ; exists ; 2020 ; International Review of Environmental History: Volume 6 ; 6 ; >
-    au < deepCrawl ; exists ; 2021 ; International Review of Environmental History: Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2021 ; International Review of Environmental History: Volume 7 ; 7 ; >
     au < crawling ; exists ; 2022 ; International Review of Environmental History: Volume 8 ; 8 ; >
 
   }
@@ -271,7 +271,7 @@
     au < frozen ; exists ; 2018 ; Made in China Volume 3 ; 3 ; >
     au < frozen ; exists ; 2019 ; Made in China Volume 4 ; 4 ; >
     au < frozen ; exists ; 2020 ; Made in China Volume 5 ; 5 ; >
-    au < deepCrawl ; exists ; 2021 ; Made in China Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2021 ; Made in China Volume 6 ; 6 ; >
     au < notReady ; exists ; 2022 ; Made in China Volume 7 ; 7 ; > #manifest page checker finds a volume that does not exist.
 
   }
