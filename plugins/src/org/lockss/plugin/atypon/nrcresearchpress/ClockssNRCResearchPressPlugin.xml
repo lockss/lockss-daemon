@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>36</string>
+    <string>37</string>
   </entry>
   <!--  updating out of sync with parent, must have own feature_version_map -->
   <entry>
@@ -50,7 +50,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <map>
       <entry>
         <string>Metadata</string>
-        <string>14</string>
+        <string>15</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -72,7 +72,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>127</string>
+    <string>147</string>
   </entry>
   <entry>
     <string>au_name</string>
