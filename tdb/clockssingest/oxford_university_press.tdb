@@ -5672,6 +5672,22 @@
   }
 
   {
+    title <
+      name = European Journal of Endocrinology ;
+      issn = 0804-4643 ;
+      eissn = 1479-683X ;
+      issnl = 0804-4643
+    >
+
+    param[journal_id] = ejendo
+    #move from Bioscientifica, 2023-01-01
+
+    au < expected ; exists ; 2022 ; 2022 ; European Journal of Endocrinology Volume 186 ; 186 ; >
+    au < expected ; exists ; 2022 ; 2022 ; European Journal of Endocrinology Volume 187 ; 187 ; >
+
+  }
+
+  {
 
     title <
       name = European Journal of International Law ;
