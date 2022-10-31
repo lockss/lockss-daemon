@@ -57,6 +57,17 @@
 
     {
 
+      plugin = org.lockss.plugin.clockss.frontiers.ClockssFrontiersBooksDirSourcePlugin
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/frontiersbooks-released/
+      hidden[proxy] = DIRECT
+      implicit < status ; status2 ; year ; name ; param[directory] >
+
+      au < expected ; exists ; 2022 ; Frontiers Books Source Content 2022_01 ; 2022_01 >
+
+    }
+
+    {
+
       plugin = org.lockss.plugin.clockss.frontiers.ClockssFrontiersBooksSourcePlugin
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/frontiersbooks-released/
       hidden[proxy] = DIRECT
@@ -69,17 +80,7 @@
       au < readySource ; finished ; 2020 ; Frontiers Books Source Content 2020 ; 2020 >
       au < readySource ; finished ; 2021 ; Frontiers Books Source Content 2021 ; 2021 >
       au < readySource ; crawling ; 2022 ; Frontiers Books Source Content 2022 ; 2022 >
-
-    }
-
-    {
-
-      plugin = org.lockss.plugin.clockss.frontiers.ClockssFrontiersBooksDirSourcePlugin
-      #param[base_url] = https://clockss-test.lockss.org/sourcefiles/frontiersbooks-released/2022_01, this is testing bucket
-      hidden[proxy] = DIRECT
-      implicit < status ; status2 ; year ; name ; param[directory] >
-
-      au < expected ; exists ; 2022 ; Frontiers Books Source Content 2022 ; 2022_01 >
+      #no more AUs for this plugin
 
     }
 
