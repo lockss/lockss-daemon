@@ -383,18 +383,18 @@
       au < HighWirePressH20Plugin ; doNotProcess ; 1849 ; BMJ Volume s1-13 (1849) ; s1-13 ; http://www.bmj.com/ >
       au < HighWirePressH20Plugin ; doNotProcess ; 1850 ; BMJ Volume s1-14 (1850) ; s1-14 ; http://www.bmj.com/ >
       au < HighWirePressH20Plugin ; doNotProcess ; 1851 ; BMJ Volume s1-15 (1851) ; s1-15 ; http://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; exists ; 1852 ; BMJ Volume s1-16 (1852) ; s1-16 ; https://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; exists ; 1849 ; BMJ Volume s2-1 (1849) ; s2-1 ; https://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; exists ; 1850 ; BMJ Volume s2-2 (1850) ; s2-2 ; https://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; exists ; 1851 ; BMJ Volume s2-3 (1851) ; s2-3 ; https://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; exists ; 1852 ; BMJ Volume s2-4 (1852) ; s2-4 ; https://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; exists ; 1853 ; BMJ Volume s3-1 (1853) ; s3-1 ; https://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; exists ; 1854 ; BMJ Volume s3-2 (1854) ; s3-2 ; https://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; exists ; 1855 ; BMJ Volume s3-3 (1855) ; s3-3 ; https://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; exists ; 1856 ; BMJ Volume s3-4 (1856) ; s3-4 ; https://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; exists ; 1857-1960 ; BMJ Volume s4-1 (1857-1960) ; s4-1 ; https://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; exists ; 1861-1979 ; BMJ Volume 1 (1861-1979, January-June) ; 1 ; https://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; exists ; 1861-1979 ; BMJ Volume 2 (1861-1979, July-December) ; 2 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; manifest ; 1852 ; BMJ Volume s1-16 (1852) ; s1-16 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; manifest ; 1849 ; BMJ Volume s2-1 (1849) ; s2-1 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; manifest ; 1850 ; BMJ Volume s2-2 (1850) ; s2-2 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; manifest ; 1851 ; BMJ Volume s2-3 (1851) ; s2-3 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; manifest ; 1852 ; BMJ Volume s2-4 (1852) ; s2-4 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; manifest ; 1853 ; BMJ Volume s3-1 (1853) ; s3-1 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; manifest ; 1854 ; BMJ Volume s3-2 (1854) ; s3-2 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; manifest ; 1855 ; BMJ Volume s3-3 (1855) ; s3-3 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; manifest ; 1856 ; BMJ Volume s3-4 (1856) ; s3-4 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; manifest ; 1857-1960 ; BMJ Volume s4-1 (1857-1960) ; s4-1 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; manifest ; 1861-1979 ; BMJ Volume 1 (1861-1979, January-June) ; 1 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; manifest ; 1861-1979 ; BMJ Volume 2 (1861-1979, July-December) ; 2 ; https://www.bmj.com/ >
       au < HighWirePressH20Plugin ; superseded ; 1980 ; BMJ Volume 280 [superseded] ; 280 ; http://www.bmj.com/ >
       au < HighWirePressH20Plugin ; superseded ; 1980 ; BMJ Volume 281 [superseded] ; 281 ; http://www.bmj.com/ >
       au < HighWirePressH20Plugin ; superseded ; 1981 ; BMJ Volume 282 [superseded] ; 282 ; http://www.bmj.com/ >
@@ -563,7 +563,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; BMJ Health & Care Informatics Volume 26 ; 26 ; https://informatics.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2020 ; BMJ Health & Care Informatics Volume 27 ; 27 ; https://informatics.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2021 ; BMJ Health & Care Informatics Volume 28 ; 28 ; https://informatics.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; exists ; 2022 ; BMJ Health & Care Informatics Volume 29 ; 29 ; https://informatics.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2022 ; BMJ Health & Care Informatics Volume 29 ; 29 ; https://informatics.bmj.com/ >
 
   }
 
@@ -646,8 +646,8 @@
     au < bmj.BMJDrupalPlugin ; released ; 2018 ; BMJ Open Ophthalmology Volume 3 ; 3 ; https://bmjophth.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; BMJ Open Ophthalmology Volume 4 ; 4 ; https://bmjophth.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2020 ; BMJ Open Ophthalmology Volume 5 ; 5 ; https://bmjophth.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; expected ; 2021 ; BMJ Open Ophthalmology Volume 6 ; 6 ; https://bmjophth.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; exists ; 2022 ; BMJ Open Ophthalmology Volume 7 ; 7 ; https://bmjophth.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2021 ; BMJ Open Ophthalmology Volume 6 ; 6 ; https://bmjophth.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2022 ; BMJ Open Ophthalmology Volume 7 ; 7 ; https://bmjophth.bmj.com/ >
 
   }
   
@@ -667,7 +667,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; BMJ Open Respiratory Research Volume 6 ; 6 ; https://bmjopenrespres.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2020 ; BMJ Open Respiratory Research Volume 7 ; 7 ; https://bmjopenrespres.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2021 ; BMJ Open Respiratory Research Volume 8 ; 8 ; https://bmjopenrespres.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; exists ; 2022 ; BMJ Open Respiratory Research Volume 9 ; 9 ; https://bmjopenrespres.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2022 ; BMJ Open Respiratory Research Volume 9 ; 9 ; https://bmjopenrespres.bmj.com/ >
 
   }
   
@@ -2288,7 +2288,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < bmj.BMJDrupalPlugin ; released ; 2019 ; Lupus Science & Medicine Volume 6 ; 6 ; https://lupus.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2020 ; Lupus Science & Medicine Volume 7 ; 7 ; https://lupus.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2021 ; Lupus Science & Medicine Volume 8 ; 8 ; https://lupus.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; expected ; 2022 ; Lupus Science & Medicine Volume 9 ; 9 ; https://lupus.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; manifest ; 2022 ; Lupus Science & Medicine Volume 9 ; 9 ; https://lupus.bmj.com/ >
 
     }
     
