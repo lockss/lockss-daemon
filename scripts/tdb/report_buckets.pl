@@ -21,8 +21,8 @@
 #git checkout master
 #git checkout `git rev-list -n 1 --before="2021-05-01 00:00" master`
 #ant jar-lockss
-#./scripts/tdb/tdbout -t auid,status tdb/clockssingest/{,*/}*.tdb | sort -u > ../SageEdits/file1.txt
-#./scripts/tdb/tdbout -t auid,status2 tdb/clockssingest/{,*/}*.tdb | sort -u > ../SageEdits/file2.txt
+#./scripts/tdb/tdbout -t auid,status tdb/clockssingest/{,_retired/}*.tdb | sort -u > ../SageEdits/file1.txt
+#./scripts/tdb/tdbout -t auid,status2 tdb/clockssingest/{,_retired/}*.tdb | sort -u > ../SageEdits/file2.txt
 #./scripts/tdb/report_buckets.pl ../SageEdits/file1.txt ../SageEdits/file2.txt > ../SageEdits/buckets_today.tsv
 #git checkout master
 #git pull
