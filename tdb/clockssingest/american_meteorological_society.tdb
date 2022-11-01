@@ -236,7 +236,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Applied Meteorology and Climatology Volume 57 ; 57 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Journal of Applied Meteorology and Climatology Volume 58 ; 58 ; >
     au < frozen ; exists ; 2020 ; Journal of Applied Meteorology and Climatology Volume 59 ; 59 ; >
-    au < deepCrawl ; exists ; 2021 ; Journal of Applied Meteorology and Climatology Volume 60 ; 60 ; >
+    au < frozen ; exists ; 2021 ; Journal of Applied Meteorology and Climatology Volume 60 ; 60 ; >
     au < crawling ; exists ; 2022 ; Journal of Applied Meteorology and Climatology Volume 61 ; 61 ; >
 
   }
@@ -377,7 +377,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Hydrometeorology Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Journal of Hydrometeorology Volume 20 ; 20 ; >
     au < frozen ; exists ; 2020 ; Journal of Hydrometeorology Volume 21 ; 21 ; >
-    au < deepCrawl ; exists ; 2021 ; Journal of Hydrometeorology Volume 22 ; 22 ; >
+    au < frozen ; exists ; 2021 ; Journal of Hydrometeorology Volume 22 ; 22 ; >
     au < crawling ; exists ; 2022 ; Journal of Hydrometeorology Volume 23 ; 23 ; >
 
   }
@@ -536,7 +536,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of the Atmospheric Sciences Volume 75 ; 75 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Journal of the Atmospheric Sciences Volume 76 ; 76 ; >
     au < frozen ; exists ; 2020 ; Journal of the Atmospheric Sciences Volume 77 ; 77 ; >
-    au < deepCrawl ; exists ; 2021 ; Journal of the Atmospheric Sciences Volume 78 ; 78 ; >
+    au < frozen ; exists ; 2021 ; Journal of the Atmospheric Sciences Volume 78 ; 78 ; >
     au < crawling ; exists ; 2022 ; Journal of the Atmospheric Sciences Volume 79 ; 79 ; >
 
   }
@@ -730,7 +730,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Monthly Weather Review Volume 146 ; 146 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Monthly Weather Review Volume 147 ; 147 ; >
     au < frozen ; exists ; 2020 ; Monthly Weather Review Volume 148 ; 148 ; >
-    au < deepCrawl ; exists ; 2021 ; Monthly Weather Review Volume 149 ; 149 ; >
+    au < frozen ; exists ; 2021 ; Monthly Weather Review Volume 149 ; 149 ; >
     au < crawling ; exists ; 2022 ; Monthly Weather Review Volume 150 ; 150 ; >
 
   }
