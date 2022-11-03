@@ -11,7 +11,6 @@
 
     implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
     plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
-    param[base_url] = https://jcofarts.uobaghdad.edu.iq/
     attr[start_stem] = index.php/
 
   {
@@ -21,7 +20,7 @@
       issn = 1819-5229 ;
       eissn = 2523-2029 
     >
-
+      param[base_url] = https://jcofarts.uobaghdad.edu.iq/
       param[journal_id] = jcofarts
 
       au < manifest ; exists ; 2003 ; Al-Academy Journal Volume 38 ; 38 ; 2003 ; >
@@ -42,6 +41,22 @@
       au < frozen ; exists ; 2021 ; Al-Academy Journal Volume 99-102 ; 99-102 ; 2021 ; >
       au < crawling ; exists ; 2022 ; Al-Academy Journal Volume 103 ; 103 ; 2022 ; >
     
+  }
+  {
+
+    title <
+      name = Al-Adab Journal ;
+      issn = 1994-473X ;
+      eissn = 2706-9931
+    >
+    # needs agreeement as of 10-21-22
+    # https://jirasul.stanford.edu/jira/browse/LXPUB-645
+
+      param[base_url] = https://aladabj.uobaghdad.edu.iq/
+      param[journal_id] = aladabjournal
+
+      au < testing ; exists ; 2022 ; Al-Adab Journal Volume 1-3 ; 1-3 ; 2022 ; >
+
   }
 
 }
