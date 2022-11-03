@@ -32080,7 +32080,7 @@ comment[mpj] = now published by Brill
     {
 
       title <
-        name = Journal of the International Association of Providers of AIDS Care (JIAPAC) ;
+        name = Journal of the International Association of Physicians in AIDS Care (JIAPAC) ;
         issn = 1545-1097 ;
         eissn = 1557-0886 ;
         issnl = 1545-1097
@@ -32119,10 +32119,30 @@ comment[mpj] = now published by Brill
         au < down ; 2010 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 9 ; 9 >
         au < down ; 2011 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 10 ; 10 >
         au < down ; 2012 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 11 ; 11 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of the International Association of Providers of AIDS Care (JIAPAC) ;
+        eissn = 2325-9582 ;
+        issnl = 2325-9582
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jia.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        # Jan 2013 name changed from "Physicians in" to "Providers of"
+
         au < down ; 2013 ; Journal of the International Association of Providers of AIDS Care (JIAPAC) Volume 12 ; 12 >
         au < down ; 2014 ; Journal of the International Association of Providers of AIDS Care (JIAPAC) Volume 13 ; 13 >
         au < down ; 2015 ; Journal of the International Association of Providers of AIDS Care (JIAPAC) Volume 14 ; 14 >
-        au < doNotProcess ; 2016 ; Journal of the International Association of Providers of AIDS Care (JIAPAC) Volume 15 ; 15 >
 
       }
 

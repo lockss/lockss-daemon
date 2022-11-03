@@ -29015,7 +29015,7 @@
   {
 
     title <
-      name = Journal of the International Association of Providers of AIDS Care (JIAPAC) ;
+      name = Journal of the International Association of Physicians in AIDS Care (JIAPAC) ;
       issn = 1545-1097 ;
       eissn = 1557-0886
     >
@@ -29049,10 +29049,30 @@
       au < finished ; finished ; 2010 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 9 ; 9 ; >
       au < finished ; finished ; 2011 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 10 ; 10 ; >
       au < finished ; finished ; 2012 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 11 ; 11 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Journal of the International Association of Providers of AIDS Care (JIAPAC) ;
+      eissn = 2325-9582 ;
+      issnl = 2325-9582
+    >
+
+    param[base_url] = http://jia.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      # Jan 2013 name changed from "Physicians in" to "Providers of"
+
       au < finished ; finished ; 2013 ; Journal of the International Association of Providers of AIDS Care (JIAPAC) Volume 12 ; 12 ; >
       au < finished ; finished ; 2014 ; Journal of the International Association of Providers of AIDS Care (JIAPAC) Volume 13 ; 13 ; >
       au < finished ; finished ; 2015 ; Journal of the International Association of Providers of AIDS Care (JIAPAC) Volume 14 ; 14 ; reingest3.clockss.org:8083 >
-      au < doNotProcess ; exists ; 2016 ; Journal of the International Association of Providers of AIDS Care (JIAPAC) Volume 15 ; 15 ; >
 
     }
 
