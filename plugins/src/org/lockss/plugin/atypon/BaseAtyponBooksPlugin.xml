@@ -50,7 +50,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>47</string>
+    <string>48</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -71,7 +71,7 @@ POSSIBILITY OF SUCH DAMAGE.
       </entry>
       <entry>
         <string>Substance</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
     </map>
   </entry>
@@ -114,7 +114,14 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"^https?://%s\.global\.prod\.fastly\.net/[^?]*\.(css|gif|jpe?g|js|png)$", url_host(base_url)</string>
       <string>2,"^https?://%s/doi/[^/]+/[0-9.]+/(null\?|[-.9]+$)", url_host(base_url)</string>
       <string>1,"^https?://%s/doi/book/[0-9.]+/", url_host(base_url)</string>
-      <string>1,"^https?://%s/doi/(abs|full|e?pdf|e?pdfplus|ref)/[0-9.]+/", url_host(base_url)</string>
+      <!--
+        Update URL for SIAM PDF files
+        https://epubs.siam.org/doi/reader/10.1137/1.9781611976953.ch8
+        https://epubs.siam.org/doi/reader/10.1137/1.9781611976953.ch9
+        https://epubs.siam.org/doi/reader/10.1137/1.9781611976953.fm
+      -->
+      <string>1,"^https?://%s/doi/((e?pdf|e?pdfplus|full|abs|ref(erences)?|suppl|figure|video[^/]+|reader)/)?[0-9.]+/", url_host(base_url)</string>
+      <!--<string>1,"^https?://%s/doi/(reader|pdf|epdf)/[0-9.]+/([^\?&amp;]+$)?", url_host(base_url)</string>-->
       <string>1,"^https?://%s/action/(showImage|showFullPopup|showCitFormats|showSupplements|showMediaPlayer|showPopup)\?([^=]+=[^&amp;]+&amp;)*doi=", url_host(base_url)</string>
       <string>1,"^https?://%s/action/downloadCitation\?doi=.*&amp;format=ris&amp;include=(cit|abs)$", url_host(base_url)</string>
     </list>
