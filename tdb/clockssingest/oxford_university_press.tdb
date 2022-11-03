@@ -5682,8 +5682,7 @@
     param[journal_id] = ejendo
     #move from Bioscientifica, 2023-01-01
 
-    au < expected ; exists ; 2022 ; 2022 ; European Journal of Endocrinology Volume 186 ; 186 ; >
-    au < expected ; exists ; 2022 ; 2022 ; European Journal of Endocrinology Volume 187 ; 187 ; >
+    au < expected ; exists ; 2022 ; 2022 ; European Journal of Endocrinology Volume 186-187 ; 186-187 ; >
 
   }
 
