@@ -137,8 +137,6 @@ public class ZappyLabJatsXmlMetadataExtractorFactory extends SourceXmlMetadataEx
       if ( extractedDOI!= null &&  ExcludedDOIList.size() > 0 && ExcludedDOIList.contains(extractedDOI)) {
         log.debug3("---ZappyLab spam DOI found: " + extractedDOI);
         return false;
-      } else {
-        log.debug3("---ZappyLab spam DOI NOT found: " + extractedDOI);
       }
       return true;
     }
