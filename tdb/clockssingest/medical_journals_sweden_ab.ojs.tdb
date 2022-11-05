@@ -43,9 +43,9 @@
       attr[start_stem] = index.php/
       #First publication Vol. 1, 1930
 
-      au < frozen ; exists ; 2019 ; Acta Orthopaedica Volume 2019 ; 90 ; 2019 ; >
-      au < frozen ; exists ; 2020 ; Acta Orthopaedica Volume 2020 ; 91 ; 2020 ; >
-      au < frozen ; exists ; 2021 ; Acta Orthopaedica Volume 2021 ; 92 ; 2021 ; >
+      au < finished ; manifest ; 2019 ; Acta Orthopaedica Volume 2019 ; 90 ; 2019 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; Acta Orthopaedica Volume 2020 ; 91 ; 2020 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; Acta Orthopaedica Volume 2021 ; 92 ; 2021 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2022 ; Acta Orthopaedica Volume 2022 ; 93 ; 2022 ; >
 
   }
