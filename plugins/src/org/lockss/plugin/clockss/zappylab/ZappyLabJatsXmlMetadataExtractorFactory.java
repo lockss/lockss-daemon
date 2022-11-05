@@ -131,13 +131,14 @@ public class ZappyLabJatsXmlMetadataExtractorFactory extends SourceXmlMetadataEx
 
       // Historically, content contained some "spam" need to be excluded based on DOI
       // Publisher delivered content with extra "/" for doi
-      String extractedDOI = thisAM.getRaw(JatsPublishingSchemaHelper.JATS_doi).replaceFirst("/", "");
+      String extractedDOI = normalisePlosDoi(thisAM.getRaw(JatsPublishingSchemaHelper.JATS_doi)).replaceFirst("/", "");
       
-      log.debug3("ZappyLab spam DOI: extracted doi in PreEmit: -----------" + extractedDOI);
-
+      log.debug3("ZappyLab spam DOI: extracted doi in PreEmit: -----------" + extractedDOI + ", from excluded list = " + ExcludedDOIList.size());
       if ( extractedDOI!= null &&  ExcludedDOIList.size() > 0 && ExcludedDOIList.contains(extractedDOI)) {
         log.debug3("---ZappyLab spam DOI found: " + extractedDOI);
         return false;
+      } else {
+        log.debug3("---ZappyLab spam DOI NOT found: " + extractedDOI);
       }
       return true;
     }
