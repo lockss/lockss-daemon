@@ -897,7 +897,7 @@
     au < manifest ; exists ; 1993 ; Assembly Automation Volume 13 ; 13 ; >
     au < manifest ; exists ; 1994 ; Assembly Automation Volume 14 ; 14 ; >
     au < manifest ; exists ; 1995 ; Assembly Automation Volume 15 ; 15 ; >
-    au < ready ; exists ; 1996 ; Assembly Automation Volume 16 ; 16 ; >
+    au < crawling ; exists ; 1996 ; Assembly Automation Volume 16 ; 16 ; >
     au < ready ; exists ; 1997 ; Assembly Automation Volume 17 ; 17 ; >
     au < frozen ; exists ; 1998 ; Assembly Automation Volume 18 ; 18 ; >
     au < finished ; manifest ; 1999 ; Assembly Automation Volume 19 ; 19 ; reingest1.clockss.org:8082 >
@@ -1196,7 +1196,7 @@
     au < frozen ; exists ; 1996 ; British Food Journal Volume 98 ; 98 ; >
     au < ready ; exists ; 1997 ; British Food Journal Volume 99 ; 99 ; >
     au < finished ; manifest ; 1998 ; British Food Journal Volume 100 ; 100 ; reingest1.clockss.org:8082 >
-    au < ready ; exists ; 1999 ; British Food Journal Volume 101 ; 101 ; >
+    au < crawling ; exists ; 1999 ; British Food Journal Volume 101 ; 101 ; >
     au < deepCrawl ; exists ; 2000 ; British Food Journal Volume 102 ; 102 ; >
     au < deepCrawl ; exists ; 2001 ; British Food Journal Volume 103 ; 103 ; >
     au < doNotProcess ; doNotProcess ; 2002 ; British Food Journal Volume 104 ; 104 ; >
@@ -1449,7 +1449,7 @@
     comment[journal_id] = cdi
 
     au < manifest ; exists ; 1996 ; Career Development International Volume 1 ; 1 ; >
-    au < ready ; exists ; 1997 ; Career Development International Volume 2 ; 2 ; >
+    au < crawling ; exists ; 1997 ; Career Development International Volume 2 ; 2 ; >
     au < frozen ; exists ; 1998 ; Career Development International Volume 3 ; 3 ; >
     au < finished ; manifest ; 1999 ; Career Development International Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2000 ; Career Development International Volume 5 ; 5 ; >
@@ -2562,7 +2562,7 @@
     au < manifest ; exists ; 1995 ; Environmental Management and Health Volume 6 ; 6 ; >
     au < finished ; crawling ; 1996 ; Environmental Management and Health Volume 7 ; 7 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 1997 ; Environmental Management and Health Volume 8 ; 8 ; >
-    au < ready ; exists ; 1998 ; Environmental Management and Health Volume 9 ; 9 ; >
+    au < crawling ; exists ; 1998 ; Environmental Management and Health Volume 9 ; 9 ; >
     au < frozen ; exists ; 1999 ; Environmental Management and Health Volume 10 ; 10 ; >
     au < finished ; crawling ; 2000 ; Environmental Management and Health Volume 11 ; 11 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2001 ; Environmental Management and Health Volume 12 ; 12 ; >
@@ -3797,7 +3797,7 @@
     au < manifest ; exists ; 1995 ; Integrated Manufacturing Systems Volume 6 ; 6 ; >
     au < manifest ; exists ; 1996 ; Integrated Manufacturing Systems Volume 7 ; 7 ; >
     au < frozen ; exists ; 1997 ; Integrated Manufacturing Systems Volume 8 ; 8 ; >
-    au < ready ; exists ; 1998 ; Integrated Manufacturing Systems Volume 9 ; 9 ; >
+    au < crawling ; exists ; 1998 ; Integrated Manufacturing Systems Volume 9 ; 9 ; >
     au < frozen ; exists ; 1999 ; Integrated Manufacturing Systems Volume 10 ; 10 ; >
     au < finished ; crawling ; 2000 ; Integrated Manufacturing Systems Volume 11 ; 11 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2001 ; Integrated Manufacturing Systems Volume 12 ; 12 ; >
@@ -6061,7 +6061,7 @@
     au < manifest ; exists ; 1994 ; International Marketing Review Volume 11 ; 11 ; >
     au < manifest ; exists ; 1995 ; International Marketing Review Volume 12 ; 12 ; >
     au < frozen ; exists ; 1996 ; International Marketing Review Volume 13 ; 13 ; >
-    au < ready ; exists ; 1997 ; International Marketing Review Volume 14 ; 14 ; >
+    au < crawling ; exists ; 1997 ; International Marketing Review Volume 14 ; 14 ; >
     au < frozen ; exists ; 1998 ; International Marketing Review Volume 15 ; 15 ; >
     au < frozen ; exists ; 1999 ; International Marketing Review Volume 16 ; 16 ; >
     au < frozen ; exists ; 2000 ; International Marketing Review Volume 17 ; 17 ; >
@@ -8966,7 +8966,7 @@
     au < manifest ; exists ; 1994 ; Journal of Services Marketing Volume 8 ; 8 ; >
     au < manifest ; exists ; 1995 ; Journal of Services Marketing Volume 9 ; 9 ; >
     au < manifest ; exists ; 1996 ; Journal of Services Marketing Volume 10 ; 10 ; >
-    au < ready ; exists ; 1997 ; Journal of Services Marketing Volume 11 ; 11 ; >
+    au < crawling ; exists ; 1997 ; Journal of Services Marketing Volume 11 ; 11 ; >
     au < ready ; exists ; 1998 ; Journal of Services Marketing Volume 12 ; 12 ; >
     au < frozen ; exists ; 1999 ; Journal of Services Marketing Volume 13 ; 13 ; >
     au < frozen ; exists ; 2000 ; Journal of Services Marketing Volume 14 ; 14 ; >
@@ -9309,7 +9309,7 @@
     au < manifest ; exists ; 1994 ; Leadership & Organization Development Journal Volume 15 ; 15 ; >
     au < manifest ; exists ; 1995 ; Leadership & Organization Development Journal Volume 16 ; 16 ; >
     au < ready ; exists ; 1996 ; Leadership & Organization Development Journal Volume 17 ; 17 ; >
-    au < ready ; exists ; 1997 ; Leadership & Organization Development Journal Volume 18 ; 18 ; >
+    au < crawling ; exists ; 1997 ; Leadership & Organization Development Journal Volume 18 ; 18 ; >
     au < frozen ; exists ; 1998 ; Leadership & Organization Development Journal Volume 19 ; 19 ; >
     au < frozen ; exists ; 1999 ; Leadership & Organization Development Journal Volume 20 ; 20 ; >
     au < frozen ; exists ; 2000 ; Leadership & Organization Development Journal Volume 21 ; 21 ; >
@@ -9408,9 +9408,9 @@
     au < manifest ; exists ; 1994 ; The Learning Organization Volume 1 ; 1 ; >
     au < manifest ; exists ; 1995 ; The Learning Organization Volume 2 ; 2 ; >
     au < manifest ; exists ; 1996 ; The Learning Organization Volume 3 ; 3 ; >
-    au < ready ; exists ; 1997 ; The Learning Organization Volume 4 ; 4 ; >
+    au < crawling ; exists ; 1997 ; The Learning Organization Volume 4 ; 4 ; >
     au < frozen ; exists ; 1998 ; The Learning Organization Volume 5 ; 5 ; >
-    au < ready ; exists ; 1999 ; The Learning Organization Volume 6 ; 6 ; >
+    au < crawling ; exists ; 1999 ; The Learning Organization Volume 6 ; 6 ; >
     au < frozen ; exists ; 2000 ; The Learning Organization Volume 7 ; 7 ; >
     au < frozen ; exists ; 2001 ; The Learning Organization Volume 8 ; 8 ; >
     au < frozen ; exists ; 2002 ; The Learning Organization Volume 9 ; 9 ; >
@@ -9595,7 +9595,7 @@
     au < frozen ; exists ; 1996 ; Library Management Volume 17 ; 17 ; >
     au < ready ; exists ; 1997 ; Library Management Volume 18 ; 18 ; >
     au < frozen ; exists ; 1998 ; Library Management Volume 19 ; 19 ; >
-    au < ready ; exists ; 1999 ; Library Management Volume 20 ; 20 ; >
+    au < crawling ; exists ; 1999 ; Library Management Volume 20 ; 20 ; >
     au < frozen ; exists ; 2000 ; Library Management Volume 21 ; 21 ; >
     au < frozen ; exists ; 2001 ; Library Management Volume 22 ; 22 ; >
     au < frozen ; exists ; 2002 ; Library Management Volume 23 ; 23 ; >
@@ -10165,7 +10165,7 @@
     au < manifest ; exists ; 1994 ; Managerial Law Volume 36 ; 36 ; >
     au < manifest ; exists ; 1995 ; Managerial Law Volume 37 ; 37 ; >
     au < manifest ; exists ; 1996 ; Managerial Law Volume 38 ; 38 ; >
-    au < ready ; exists ; 1997 ; Managerial Law Volume 39 ; 39 ; >
+    au < crawling ; exists ; 1997 ; Managerial Law Volume 39 ; 39 ; >
     au < frozen ; exists ; 1998 ; Managerial Law Volume 40 ; 40 ; >
     au < frozen ; exists ; 1999 ; Managerial Law Volume 41 ; 41 ; >
     au < frozen ; exists ; 2000 ; Managerial Law Volume 42 ; 42 ; >
@@ -11061,7 +11061,7 @@
     au < doesNotExist ; doesNotExist ; 1998 ; Pacific Accounting Review Volume 10 ; 10 ; >
     au < frozen ; exists ; 1999 ; Pacific Accounting Review Volume 11 ; 11 ; >
     au < frozen ; exists ; 2000 ; Pacific Accounting Review Volume 12 ; 12 ; >
-    au < ready ; exists ; 2001 ; Pacific Accounting Review Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2001 ; Pacific Accounting Review Volume 13 ; 13 ; >
     au < frozen ; exists ; 2002 ; Pacific Accounting Review Volume 14 ; 14 ; >
     au < frozen ; exists ; 2003 ; Pacific Accounting Review Volume 15 ; 15 ; >
     au < frozen ; exists ; 2004 ; Pacific Accounting Review Volume 16 ; 16 ; >
@@ -11778,7 +11778,7 @@
     au < manifest ; exists ; 1994 ; Records Management Journal Volume 4 ; 4 ; >
     au < manifest ; exists ; 1995 ; Records Management Journal Volume 5 ; 5 ; >
     au < manifest ; exists ; 1996 ; Records Management Journal Volume 6 ; 6 ; >
-    au < ready ; exists ; 1997 ; Records Management Journal Volume 7 ; 7 ; >
+    au < crawling ; exists ; 1997 ; Records Management Journal Volume 7 ; 7 ; >
     au < frozen ; exists ; 1998 ; Records Management Journal Volume 8 ; 8 ; >
     au < frozen ; exists ; 1999 ; Records Management Journal Volume 9 ; 9 ; >
     au < frozen ; exists ; 2000 ; Records Management Journal Volume 10 ; 10 ; >
@@ -13490,7 +13490,7 @@
     au < frozen ; exists ; 2017 ; European Journal of Training and Development Volume 41 ; 41 ; >
     au < frozen ; exists ; 2018 ; European Journal of Training and Development Volume 42 ; 42 ; >
     au < frozen ; exists ; 2019 ; European Journal of Training and Development Volume 43 ; 43 ; >
-    au < ready ; exists ; 2020 ; European Journal of Training and Development Volume 44 ; 44 ; >
+    au < crawling ; exists ; 2020 ; European Journal of Training and Development Volume 44 ; 44 ; >
     au < frozen ; exists ; 2021 ; European Journal of Training and Development Volume 45 ; 45 ; >
     au < crawling ; exists ; 2022 ; European Journal of Training and Development Volume 46 ; 46 ; >
 
@@ -13613,7 +13613,7 @@
     au < frozen ; exists ; 2016 ; International Journal of Information and Learning Technology Volume 33 ; 33 ; >
     au < frozen ; exists ; 2017 ; International Journal of Information and Learning Technology Volume 34 ; 34 ; >
     au < frozen ; exists ; 2018 ; International Journal of Information and Learning Technology Volume 35 ; 35 ; >
-    au < ready ; exists ; 2019 ; International Journal of Information and Learning Technology Volume 36 ; 36 ; >
+    au < crawling ; exists ; 2019 ; International Journal of Information and Learning Technology Volume 36 ; 36 ; >
     au < frozen ; exists ; 2020 ; International Journal of Information and Learning Technology Volume 37 ; 37 ; >
     au < frozen ; exists ; 2021 ; International Journal of Information and Learning Technology Volume 38 ; 38 ; >
     au < crawling ; exists ; 2022 ; International Journal of Information and Learning Technology Volume 39 ; 39 ; >
@@ -13721,7 +13721,7 @@
 
     au < frozen ; exists ; 1999 ; International Journal of Sports Marketing and Sponsorship Volume 1 ; 1 ; >
     au < frozen ; exists ; 2000 ; International Journal of Sports Marketing and Sponsorship Volume 2 ; 2 ; >
-    au < ready ; exists ; 2001 ; International Journal of Sports Marketing and Sponsorship Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2001 ; International Journal of Sports Marketing and Sponsorship Volume 3 ; 3 ; >
     au < frozen ; exists ; 2002 ; International Journal of Sports Marketing and Sponsorship Volume 4 ; 4 ; >
     au < frozen ; exists ; 2003 ; International Journal of Sports Marketing and Sponsorship Volume 5 ; 5 ; >
     au < frozen ; exists ; 2004 ; International Journal of Sports Marketing and Sponsorship Volume 6 ; 6 ; >
@@ -14201,7 +14201,7 @@
     param[journal_issn] = 1933-5415
 
     au < frozen ; exists ; 2006 ; Social Studies Research and Practice Volume 1 ; 1 ; >
-    au < ready ; exists ; 2007 ; Social Studies Research and Practice Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2007 ; Social Studies Research and Practice Volume 2 ; 2 ; >
     au < frozen ; exists ; 2008 ; Social Studies Research and Practice Volume 3 ; 3 ; >
     au < frozen ; exists ; 2009 ; Social Studies Research and Practice Volume 4 ; 4 ; >
     au < frozen ; exists ; 2010 ; Social Studies Research and Practice Volume 5 ; 5 ; >
