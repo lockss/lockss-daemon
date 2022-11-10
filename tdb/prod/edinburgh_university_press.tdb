@@ -632,17 +632,16 @@
 
     plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
     param[journal_id] = cult
-    implicit < status ; year ; name ; param[volume_name] ; param[base_url] >     
+    implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
 
 
     au < released ; 2012 ; Cultural History Volume 1 ; 1 ; https://www.euppublishing.com/ >
     au < released ; 2013 ; Cultural History Volume 2 ; 2 ; https://www.euppublishing.com/ >
-    au < testing ; 2014 ; Cultural History Volume 3 ; 3 ; https://www.euppublishing.com/ > #by EDINA (aro)
-    au < testing ; 2015 ; Cultural History Volume 4 ; 4 ; https://www.euppublishing.com/ > #by EDINA (aro)
-    au < testing ; 2016 ; Cultural History Volume 5 ; 5 ; https://www.euppublishing.com/ >#by EDINA (aro)
-    au < testing ; 2017 ; Cultural History Volume 6 ; 6 ; https://www.euppublishing.com/ >#by EDINA (aro)
+    au < manifest ; 2014 ; Cultural History Volume 3 ; 3 ; https://www.euppublishing.com/ > #by EDINA (aro)
+    au < manifest ; 2015 ; Cultural History Volume 4 ; 4 ; https://www.euppublishing.com/ > #by EDINA (aro)
+    au < manifest ; 2016 ; Cultural History Volume 5 ; 5 ; https://www.euppublishing.com/ > #by EDINA (aro)
+    au < manifest ; 2017 ; Cultural History Volume 6 ; 6 ; https://www.euppublishing.com/ > #by EDINA (aro)
     au < released ; 2018 ; Cultural History Volume 7 ; 7 ; https://www.euppublishing.com/ >
-    
     au < released ; 2019 ; Cultural History Volume 8 ; 8 ; https://www.euppublishing.com/ >
     au < released ; 2020 ; Cultural History Volume 9 ; 9 ; https://www.euppublishing.com/ >
     au < released ; 2021 ; Cultural History Volume 10 ; 10 ; https://www.euppublishing.com/ >
