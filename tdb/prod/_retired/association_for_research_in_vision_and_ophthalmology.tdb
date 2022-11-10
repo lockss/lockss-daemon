@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = Association for Research in Vision and Ophthalmology
+    name = Association for Research in Vision and Ophthalmology ;
+    info[platform] = HW
   >
   
   comment[moved] = moved from highwire to Silverchair
@@ -14,24 +15,6 @@
       eissn = 1552-5783 ;
       issnl = 0146-0404
     >
-
-    {
-    plugin = org.lockss.plugin.silverchair.SilverchairJournalsPlugin
-    param[base_url] = http://iovs.arvojournals.org/
-    implicit < status ; year ; name ; param[year] >
-    param[resource_id] = 169
-
-    au < doNotProcess ; 2005 ; Investigative Ophthalmology & Visual Science Volume 46 ; 2005 >
-    au < doNotProcess ; 2006 ; Investigative Ophthalmology & Visual Science Volume 47 ; 2006 >
-    au < doNotProcess ; 2007 ; Investigative Ophthalmology & Visual Science Volume 48 ; 2007 >
-    au < doNotProcess ; 2008 ; Investigative Ophthalmology & Visual Science Volume 49 ; 2008 >
-    au < doNotProcess ; 2009 ; Investigative Ophthalmology & Visual Science Volume 50 ; 2009 >
-    au < doNotProcess ; 2010 ; Investigative Ophthalmology & Visual Science Volume 51 ; 2010 >
-    au < doNotProcess ; 2011 ; Investigative Ophthalmology & Visual Science Volume 52 ; 2011 >
-    au < doNotProcess ; 2012 ; Investigative Ophthalmology & Visual Science Volume 53 ; 2012 >
-    au < doNotProcess ; 2013 ; Investigative Ophthalmology & Visual Science Volume 54 ; 2013 >
-
-    }
 
     {
     pluginPrefix = org.lockss.plugin.highwire.
