@@ -499,7 +499,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Clinical Medicine Insights: Gastroenterology Volume 6 ; 6 ; cmga ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Clinical Medicine Insights: Gastroenterology Volume 7 ; 7 ; cmga ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Gastroenterology Volume 8 ; 8 ; cmga ; http://journals.sagepub.com/ ; >
-    au < finished ; crawling ; 2016 ; Clinical Medicine Insights: Gastroenterology Volume 9 ; 9 ; cmga ; http://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Clinical Medicine Insights: Gastroenterology Volume 9 ; 9 ; cmga ; http://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Clinical Medicine Insights: Gastroenterology Volume 10 ; 10 ; cmga ; http://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Clinical Medicine Insights: Gastroenterology Volume 11 ; 11 ; cmga ; http://journals.sagepub.com/ ; >
 
@@ -884,7 +884,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Health Services Insights Volume 6 ; 6 ; hisa ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Health Services Insights Volume 7 ; 7 ; hisa ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Health Services Insights Volume 8 ; 8 ; hisa ; http://journals.sagepub.com/ ; >
-    au < finished ; crawling ; 2016 ; Health Services Insights Volume 9 ; 9 ; hisa ; http://journals.sagepub.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2016 ; Health Services Insights Volume 9 ; 9 ; hisa ; http://journals.sagepub.com/ ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2017 ; Health Services Insights Volume 10 ; 10 ; hisa ; http://journals.sagepub.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2018 ; Health Services Insights Volume 11 ; 11 ; hisa ; http://journals.sagepub.com/ ; >
 
