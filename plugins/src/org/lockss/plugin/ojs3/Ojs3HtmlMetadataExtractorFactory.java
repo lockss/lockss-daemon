@@ -138,7 +138,8 @@ public class Ojs3HtmlMetadataExtractorFactory implements FileMetadataExtractorFa
               }
             }
           }
-          if (actualPdfUrl != null) {
+          // if there is no altTitle, then the pdf is not likely another language, it is more likely a supplement.
+          if (actualPdfUrl != null && altTitles.size()>0) {
             ArticleMetadata multiAm = new ArticleMetadata();
             //for (Object mf : tagMap.values()) {
             //  multiAm.put(((MetadataField) mf), am.get((MetadataField) mf));
