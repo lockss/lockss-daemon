@@ -10,28 +10,26 @@
   {
   
     title <
-      name = Investigative Ophthalmology & Visual Science ;
+      name = Investigative Ophthalmology and Visual Science (IOVS) ;
       issn = 0146-0404 ;
       eissn = 1552-5783 ;
       issnl = 0146-0404
     >
 
-    {
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://www.iovs.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWireStrVolPlugin ; down ; 2005 ; Investigative Ophthalmology & Visual Science Volume 46 ; 46 >
-    au < HighWireStrVolPlugin ; down ; 2006 ; Investigative Ophthalmology & Visual Science Volume 47 ; 47 >
-    au < HighWireStrVolPlugin ; down ; 2007 ; Investigative Ophthalmology & Visual Science Volume 48 ; 48 >
-    au < HighWirePressH20Plugin ; down ; 2008 ; Investigative Ophthalmology & Visual Science Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; down ; 2009 ; Investigative Ophthalmology & Visual Science Volume 50 ; 50 >
-    au < HighWirePressH20Plugin ; down ; 2010 ; Investigative Ophthalmology & Visual Science Volume 51 ; 51 >
-    au < HighWirePressH20Plugin ; down ; 2011 ; Investigative Ophthalmology & Visual Science Volume 52 ; 52 >
-    au < HighWirePressH20Plugin ; down ; 2012 ; Investigative Ophthalmology & Visual Science Volume 53 ; 53 >
-    au < HighWirePressH20Plugin ; down ; 2013 ; Investigative Ophthalmology & Visual Science Volume 54 ; 54 >
+    au < HighWireStrVolPlugin ; down ; 2005 ; Investigative Ophthalmology and Visual Science Volume 46 ; 46 >
+    au < HighWireStrVolPlugin ; down ; 2006 ; Investigative Ophthalmology and Visual Science Volume 47 ; 47 >
+    au < HighWireStrVolPlugin ; down ; 2007 ; Investigative Ophthalmology and Visual Science Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; down ; 2008 ; Investigative Ophthalmology and Visual Science Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; down ; 2009 ; Investigative Ophthalmology and Visual Science Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; down ; 2010 ; Investigative Ophthalmology and Visual Science Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; down ; 2011 ; Investigative Ophthalmology and Visual Science Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; down ; 2012 ; Investigative Ophthalmology and Visual Science Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; down ; 2013 ; Investigative Ophthalmology and Visual Science Volume 54 ; 54 >
 
-    }
   }
 
 }

@@ -12,23 +12,28 @@
   {
 
     title <
-      name = IOVS: Investigative Ophthalmology and Visual Science ;
+      name = Investigative Ophthalmology and Visual Science (IOVS) ;
+      issn = 0146-0404 ;
       eissn = 1552-5783 ;
-      issnl = 1552-5783
+      issnl = 0146-0404
     >
 
     param[base_url] = https://iovs.arvojournals.org/
     param[resource_id] = 177
     param[journal_id] = iovs
     #published 1962-present
+    #2005-2013 processed on HighWire
     
-    au < exists ; 2016 ; IOVS: Investigative Ophthalmology and Visual Science Volume 57 ; 2016 >
-    au < exists ; 2017 ; IOVS: Investigative Ophthalmology and Visual Science Volume 58 ; 2017 >
-    au < exists ; 2018 ; IOVS: Investigative Ophthalmology and Visual Science Volume 59 ; 2018 >
-    au < exists ; 2019 ; IOVS: Investigative Ophthalmology and Visual Science Volume 60 ; 2019 >
-    au < exists ; 2020 ; IOVS: Investigative Ophthalmology and Visual Science Volume 61 ; 2020 >
-    au < exists ; 2021 ; IOVS: Investigative Ophthalmology and Visual Science Volume 62 ; 2021 >
-    au < exists ; 2022 ; IOVS: Investigative Ophthalmology and Visual Science Volume 63 ; 2022 >
+    au < doNotProcess ; 2013 ; Investigative Ophthalmology and Visual Science Volume 54 ; 2013 >
+    au < exists ; 2014 ; Investigative Ophthalmology and Visual Science Volume 55 ; 2014 >
+    au < exists ; 2015 ; Investigative Ophthalmology and Visual Science Volume 56 ; 2015 >
+    au < exists ; 2016 ; Investigative Ophthalmology and Visual Science Volume 57 ; 2016 >
+    au < exists ; 2017 ; Investigative Ophthalmology and Visual Science Volume 58 ; 2017 >
+    au < exists ; 2018 ; Investigative Ophthalmology and Visual Science Volume 59 ; 2018 >
+    au < exists ; 2019 ; Investigative Ophthalmology and Visual Science Volume 60 ; 2019 >
+    au < exists ; 2020 ; Investigative Ophthalmology and Visual Science Volume 61 ; 2020 >
+    au < exists ; 2021 ; Investigative Ophthalmology and Visual Science Volume 62 ; 2021 >
+    au < exists ; 2022 ; Investigative Ophthalmology and Visual Science Volume 63 ; 2022 >
 
   }
 
