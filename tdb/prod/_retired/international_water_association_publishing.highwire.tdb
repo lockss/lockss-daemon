@@ -399,13 +399,14 @@
   {
  
     title <
-      name = Water Science and Technology: Water Supply ;
+      name = Water Supply ;
       issn = 1606-9749 ;
       eissn = 1607-0798 ; 
       issnl = 1606-9749
     >
 
     param[base_url] = http://ws.iwaponline.com/
+    #Publisher reported that name changed to Water Supply in 2021 with no change in issn.
    
     au < down ; 2001 ; Water Science and Technology: Water Supply Volume 1 ; 1 >
     au < down ; 2002 ; Water Science and Technology: Water Supply Volume 2 ; 2 >
