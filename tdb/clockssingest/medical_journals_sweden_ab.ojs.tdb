@@ -25,8 +25,8 @@
       #First publication Volume 2, 1921
 
       au < manifest ; exists ; 2019 ; Acta Dermato-Venereologica Volume 2019 ; 99 ; 2019 ; >
-      au < frozen ; exists ; 2020 ; Acta Dermato-Venereologica Volume 2020 ; 100 ; 2020 ; >
-      au < frozen ; exists ; 2021 ; Acta Dermato-Venereologica Volume 2021 ; 101 ; 2021 ; >
+      au < finished ; manifest ; 2020 ; Acta Dermato-Venereologica Volume 2020 ; 100 ; 2020 ; reingest5.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2021 ; Acta Dermato-Venereologica Volume 2021 ; 101 ; 2021 ; > #deepCrawl on ingest1,3,5
       au < crawling ; exists ; 2022 ; Acta Dermato-Venereologica Volume 2022 ; 102 ; 2022 ; >
 
   }
