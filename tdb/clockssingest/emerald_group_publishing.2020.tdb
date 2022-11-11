@@ -349,7 +349,7 @@
     au < manifest ; exists ; 1994 ; Aircraft Engineering and Aerospace Technology Volume 66 ; 66 ; >
     au < manifest ; exists ; 1995 ; Aircraft Engineering and Aerospace Technology Volume 67 ; 67 ; >
     au < finished ; manifest ; 1996 ; Aircraft Engineering and Aerospace Technology Volume 68 ; 68 ; reingest1.clockss.org:8082 >
-    au < ready ; exists ; 1997 ; Aircraft Engineering and Aerospace Technology Volume 69 ; 69 ; >
+    au < crawling ; exists ; 1997 ; Aircraft Engineering and Aerospace Technology Volume 69 ; 69 ; >
     au < finished ; manifest ; 1998 ; Aircraft Engineering and Aerospace Technology Volume 70 ; 70 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1999 ; Aircraft Engineering and Aerospace Technology Volume 71 ; 71 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2000 ; Aircraft Engineering and Aerospace Technology Volume 72 ; 72 ; >
@@ -499,7 +499,7 @@
     au < manifest ; exists ; 1994 ; Anti-Corrosion Methods and Materials Volume 41 ; 41 ; >
     au < manifest ; exists ; 1995 ; Anti-Corrosion Methods and Materials Volume 42 ; 42 ; >
     au < finished ; manifest ; 1996 ; Anti-Corrosion Methods and Materials Volume 43 ; 43 ; reingest1.clockss.org:8082 >
-    au < ready ; exists ; 1997 ; Anti-Corrosion Methods and Materials Volume 44 ; 44 ; >
+    au < crawling ; exists ; 1997 ; Anti-Corrosion Methods and Materials Volume 44 ; 44 ; >
     au < finished ; manifest ; 1998 ; Anti-Corrosion Methods and Materials Volume 45 ; 45 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 1999 ; Anti-Corrosion Methods and Materials Volume 46 ; 46 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2000 ; Anti-Corrosion Methods and Materials Volume 47 ; 47 ; >
@@ -625,7 +625,7 @@
     au < manifest ; exists ; 1995 ; Asia Pacific Journal of Marketing and Logistics Volume 7 ; 7 ; >
     au < manifest ; exists ; 1996 ; Asia Pacific Journal of Marketing and Logistics Volume 8 ; 8 ; >
     au < frozen ; exists ; 1997 ; Asia Pacific Journal of Marketing and Logistics Volume 9 ; 9 ; >
-    au < ready ; exists ; 1998 ; Asia Pacific Journal of Marketing and Logistics Volume 10 ; 10 ; >
+    au < crawling ; exists ; 1998 ; Asia Pacific Journal of Marketing and Logistics Volume 10 ; 10 ; >
     au < ready ; exists ; 1999 ; Asia Pacific Journal of Marketing and Logistics Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2000 ; Asia Pacific Journal of Marketing and Logistics Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2001 ; Asia Pacific Journal of Marketing and Logistics Volume 13 ; 13 ; >
@@ -2319,8 +2319,8 @@
     au < manifest ; exists ; 1993 ; The Electronic Library Volume 11 ; 11 ; >
     au < manifest ; exists ; 1994 ; The Electronic Library Volume 12 ; 12 ; >
     au < manifest ; exists ; 1995 ; The Electronic Library Volume 13 ; 13 ; >
-    au < ready ; exists ; 1996 ; The Electronic Library Volume 14 ; 14 ; >
-    au < ready ; exists ; 1997 ; The Electronic Library Volume 15 ; 15 ; >
+    au < crawling ; exists ; 1996 ; The Electronic Library Volume 14 ; 14 ; >
+    au < crawling ; exists ; 1997 ; The Electronic Library Volume 15 ; 15 ; >
     au < finished ; manifest ; 1998 ; The Electronic Library Volume 16 ; 16 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1999 ; The Electronic Library Volume 17 ; 17 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2000 ; The Electronic Library Volume 18 ; 18 ; >
@@ -2396,7 +2396,7 @@
     au < manifest ; exists ; 1994 ; Employee Relations: An International Journal Volume 16 ; 16 ; >
     au < manifest ; exists ; 1995 ; Employee Relations: An International Journal Volume 17 ; 17 ; >
     au < ready ; exists ; 1996 ; Employee Relations: An International Journal Volume 18 ; 18 ; >
-    au < ready ; exists ; 1997 ; Employee Relations: An International Journal Volume 19 ; 19 ; >
+    au < crawling ; exists ; 1997 ; Employee Relations: An International Journal Volume 19 ; 19 ; >
     au < finished ; manifest ; 1998 ; Employee Relations: An International Journal Volume 20 ; 20 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1999 ; Employee Relations: An International Journal Volume 21 ; 21 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2000 ; Employee Relations: An International Journal Volume 22 ; 22 ; >
@@ -2715,7 +2715,7 @@
     au < manifest ; exists ; 1996 ; European Business Review Volume 96 ; 96 ; >
     au < frozen ; exists ; 1997 ; European Business Review Volume 97 ; 97 ; >
     au < frozen ; exists ; 1998 ; European Business Review Volume 98 ; 98 ; >
-    au < ready ; exists ; 1999 ; European Business Review Volume 99 ; 99 ; >
+    au < crawling ; exists ; 1999 ; European Business Review Volume 99 ; 99 ; >
     au < deepCrawl ; exists ; 2000 ; European Business Review Volume 12 ; 12 ; >
     au < deepCrawl ; exists ; 2001 ; European Business Review Volume 13 ; 13 ; >
     au < deepCrawl ; exists ; 2002 ; European Business Review Volume 14 ; 14 ; >
@@ -2899,7 +2899,7 @@
     au < manifest ; exists ; 1994 ; Facilities Volume 12 ; 12 ; >
     au < manifest ; exists ; 1995 ; Facilities Volume 13 ; 13 ; >
     au < ready ; exists ; 1996 ; Facilities Volume 14 ; 14 ; >
-    au < ready ; exists ; 1997 ; Facilities Volume 15 ; 15 ; >
+    au < crawling ; exists ; 1997 ; Facilities Volume 15 ; 15 ; >
     au < frozen ; exists ; 1998 ; Facilities Volume 16 ; 16 ; >
     au < frozen ; exists ; 1999 ; Facilities Volume 17 ; 17 ; >
     au < frozen ; exists ; 2000 ; Facilities Volume 18 ; 18 ; >
@@ -5018,7 +5018,7 @@
     au < manifest ; exists ; 1993 ; International Journal of Manpower Volume 14 ; 14 ; >
     au < manifest ; exists ; 1994 ; International Journal of Manpower Volume 15 ; 15 ; >
     au < manifest ; exists ; 1995 ; International Journal of Manpower Volume 16 ; 16 ; >
-    au < ready ; exists ; 1996 ; International Journal of Manpower Volume 17 ; 17 ; >
+    au < crawling ; exists ; 1996 ; International Journal of Manpower Volume 17 ; 17 ; >
     au < ready ; exists ; 1997 ; International Journal of Manpower Volume 18 ; 18 ; >
     au < frozen ; exists ; 1998 ; International Journal of Manpower Volume 19 ; 19 ; >
     au < frozen ; exists ; 1999 ; International Journal of Manpower Volume 20 ; 20 ; >
@@ -5176,7 +5176,7 @@
     au < manifest ; exists ; 1994 ; International Journal of Operations & Production Management Volume 14 ; 14 ; >
     au < manifest ; exists ; 1995 ; International Journal of Operations & Production Management Volume 15 ; 15 ; >
     au < frozen ; exists ; 1996 ; International Journal of Operations & Production Management Volume 16 ; 16 ; >
-    au < ready ; exists ; 1997 ; International Journal of Operations & Production Management Volume 17 ; 17 ; >
+    au < crawling ; exists ; 1997 ; International Journal of Operations & Production Management Volume 17 ; 17 ; >
     au < frozen ; exists ; 1998 ; International Journal of Operations & Production Management Volume 18 ; 18 ; >
     au < frozen ; exists ; 1999 ; International Journal of Operations & Production Management Volume 19 ; 19 ; >
     au < deepCrawl ; exists ; 2000 ; International Journal of Operations & Production Management Volume 20 ; 20 ; >
@@ -6529,7 +6529,7 @@
     au < manifest ; exists ; 1993 ; Journal of Business Strategy Volume 14 ; 14 ; >
     au < manifest ; exists ; 1994 ; Journal of Business Strategy Volume 15 ; 15 ; >
     au < manifest ; exists ; 1995 ; Journal of Business Strategy Volume 16 ; 16 ; >
-    au < ready ; exists ; 1996 ; Journal of Business Strategy Volume 17 ; 17 ; >
+    au < crawling ; exists ; 1996 ; Journal of Business Strategy Volume 17 ; 17 ; >
     au < ready ; exists ; 1997 ; Journal of Business Strategy Volume 18 ; 18 ; >
     au < frozen ; exists ; 1998 ; Journal of Business Strategy Volume 19 ; 19 ; >
     au < frozen ; exists ; 1999 ; Journal of Business Strategy Volume 20 ; 20 ; >
@@ -6725,7 +6725,7 @@
     au < manifest ; exists ; 1994 ; Journal of Consumer Marketing Volume 11 ; 11 ; >
     au < manifest ; exists ; 1995 ; Journal of Consumer Marketing Volume 12 ; 12 ; >
     au < manifest ; exists ; 1996 ; Journal of Consumer Marketing Volume 13 ; 13 ; >
-    au < ready ; exists ; 1997 ; Journal of Consumer Marketing Volume 14 ; 14 ; >
+    au < crawling ; exists ; 1997 ; Journal of Consumer Marketing Volume 14 ; 14 ; >
     au < frozen ; exists ; 1998 ; Journal of Consumer Marketing Volume 15 ; 15 ; >
     au < frozen ; exists ; 1999 ; Journal of Consumer Marketing Volume 16 ; 16 ; >
     au < frozen ; exists ; 2000 ; Journal of Consumer Marketing Volume 17 ; 17 ; >
@@ -9856,7 +9856,7 @@
     au < manifest ; exists ; 1994 ; Management Development Review Volume 7 ; 7 ; >
     au < manifest ; exists ; 1995 ; Management Development Review Volume 8 ; 8 ; >
     au < manifest ; exists ; 1996 ; Management Development Review Volume 9 ; 9 ; >
-    au < ready ; exists ; 1997 ; Management Development Review Volume 10 ; 10 ; >
+    au < crawling ; exists ; 1997 ; Management Development Review Volume 10 ; 10 ; >
 
   }
 
@@ -9927,7 +9927,7 @@
     au < manifest ; exists ; 1995 ; Management Research News Volume 18 ; 18 ; >
     au < ready ; exists ; 1996 ; Management Research News Volume 19 ; 19 ; >
     au < ready ; exists ; 1997 ; Management Research News Volume 20 ; 20 ; >
-    au < ready ; exists ; 1998 ; Management Research News Volume 21 ; 21 ; >
+    au < crawling ; exists ; 1998 ; Management Research News Volume 21 ; 21 ; >
     au < frozen ; exists ; 1999 ; Management Research News Volume 22 ; 22 ; >
     au < frozen ; exists ; 2000 ; Management Research News Volume 23 ; 23 ; >
     au < frozen ; exists ; 2001 ; Management Research News Volume 24 ; 24 ; >
@@ -11450,7 +11450,7 @@
     au < manifest ; exists ; 1993 ; Property Management Volume 11 ; 11 ; >
     au < manifest ; exists ; 1994 ; Property Management Volume 12 ; 12 ; >
     au < manifest ; exists ; 1995 ; Property Management Volume 13 ; 13 ; >
-    au < ready ; exists ; 1996 ; Property Management Volume 14 ; 14 ; >
+    au < crawling ; exists ; 1996 ; Property Management Volume 14 ; 14 ; >
     au < frozen ; exists ; 1997 ; Property Management Volume 15 ; 15 ; >
     au < frozen ; exists ; 1998 ; Property Management Volume 16 ; 16 ; >
     au < frozen ; exists ; 1999 ; Property Management Volume 17 ; 17 ; >
@@ -12473,7 +12473,7 @@
 
     au < manifest ; exists ; 1996 ; Strategy & Leadership Volume 24 ; 24 ; >
     au < frozen ; exists ; 1997 ; Strategy & Leadership Volume 25 ; 25 ; >
-    au < ready ; exists ; 1998 ; Strategy & Leadership Volume 26 ; 26 ; >
+    au < crawling ; exists ; 1998 ; Strategy & Leadership Volume 26 ; 26 ; >
     au < frozen ; exists ; 1999 ; Strategy & Leadership Volume 27 ; 27 ; >
     au < frozen ; exists ; 2000 ; Strategy & Leadership Volume 28 ; 28 ; >
     au < frozen ; exists ; 2001 ; Strategy & Leadership Volume 29 ; 29 ; >
@@ -13697,7 +13697,7 @@
     au < frozen ; exists ; 2009 ; International Journal of Organization Theory & Behavior Volume 12 ; 12 ; >
     au < frozen ; exists ; 2010 ; International Journal of Organization Theory & Behavior Volume 13 ; 13 ; >
     au < frozen ; exists ; 2011 ; International Journal of Organization Theory & Behavior Volume 14 ; 14 ; >
-    au < ready ; exists ; 2012 ; International Journal of Organization Theory & Behavior Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2012 ; International Journal of Organization Theory & Behavior Volume 15 ; 15 ; >
     au < frozen ; exists ; 2013 ; International Journal of Organization Theory & Behavior Volume 16 ; 16 ; >
     au < frozen ; exists ; 2014 ; International Journal of Organization Theory & Behavior Volume 17 ; 17 ; >
     au < frozen ; exists ; 2015 ; International Journal of Organization Theory & Behavior Volume 18 ; 18 ; >
@@ -14087,7 +14087,7 @@
 
     au < frozen ; exists ; 2015 ; Journal of Service Theory and Practice Volume 25 ; 25 ; >
     au < frozen ; exists ; 2016 ; Journal of Service Theory and Practice Volume 26 ; 26 ; >
-    au < ready ; exists ; 2017 ; Journal of Service Theory and Practice Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2017 ; Journal of Service Theory and Practice Volume 27 ; 27 ; >
     au < frozen ; exists ; 2018 ; Journal of Service Theory and Practice Volume 28 ; 28 ; >
     au < frozen ; exists ; 2019 ; Journal of Service Theory and Practice Volume 29 ; 29 ; >
     au < frozen ; exists ; 2020 ; Journal of Service Theory and Practice Volume 30 ; 30 ; >
