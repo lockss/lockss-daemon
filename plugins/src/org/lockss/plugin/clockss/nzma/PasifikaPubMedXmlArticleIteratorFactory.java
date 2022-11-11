@@ -19,7 +19,7 @@ public class PasifikaPubMedXmlArticleIteratorFactory implements ArticleIteratorF
     protected static Logger log = Logger.getLogger(PasifikaPubMedXmlArticleIteratorFactory.class);
 
     protected static final String ROOT_TEMPLATE = "\"%s%d\",base_url,year";
-    private static final String PATTERN_TEMPLATE = "\"%s%d/.+\",base_url,year";
+    private static final String PATTERN_TEMPLATE = "\"%s%d/([^/]+)\\.xml$\",base_url,year";
 
     protected static final Pattern XML_PATTERN = Pattern.compile("/([^/]+).xml$");
     protected static final String XML_REPLACEMENT = "/([^/]+).xml$";
