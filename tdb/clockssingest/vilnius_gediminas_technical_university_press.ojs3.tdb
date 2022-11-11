@@ -37,8 +37,8 @@
       au < frozen ; exists ; 2007 ; Aviation Volume 2007 ; 4 ; 2007 ; https://journals.vgtu.lt/ ; >
       au < frozen ; exists ; 2008 ; Aviation Volume 2008 ; 5 ; 2008 ; https://journals.vgtu.lt/ ; >
       au < frozen ; exists ; 2009 ; Aviation Volume 2009 ; 6 ; 2009 ; https://journals.vgtu.lt/ ; >
-      au < finished ; crawling ; 2010 ; Aviation Volume 2010 ; 7 ; 2010 ; https://journals.vgtu.lt/ ; reingest1.clockss.org:8082>
-      au < finished ; crawling ; 2011 ; Aviation Volume 2011 ; 8 ; 2011 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085>
+      au < finished ; frozen ; 2010 ; Aviation Volume 2010 ; 7 ; 2010 ; https://journals.vgtu.lt/ ; reingest1.clockss.org:8082>
+      au < finished ; frozen ; 2011 ; Aviation Volume 2011 ; 8 ; 2011 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085>
       au < finished ; frozen ; 2012 ; Aviation Volume 2012 ; 9 ; 2012 ; https://journals.vgtu.lt/ ; reingest3.clockss.org:8083>
       au < finished ; frozen ; 2013 ; Aviation Volume 2013 ; 10 ; 2013 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082>
       au < finished ; crawling ; 2014 ; Aviation Volume 2014 ; 11 ; 2014 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082>
@@ -137,11 +137,11 @@
       au < frozen ; exists ; 2008 ; Creativity Studies Volume 2008 ; 1 ; 2008 ; https://journals.vgtu.lt/ ; >
       au < frozen ; exists ; 2009 ; Creativity Studies Volume 2009 ; 2 ; 2009 ; https://journals.vgtu.lt/ ; >
       au < finished ; frozen ; 2010 ; Creativity Studies Volume 2010 ; 3 ; 2010 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082>
-      au < finished ; crawling ; 2011 ; Creativity Studies Volume 2011 ; 4 ; 2011 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082>
+      au < finished ; frozen ; 2011 ; Creativity Studies Volume 2011 ; 4 ; 2011 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082>
       au < finished ; frozen ; 2012 ; Creativity Studies Volume 2012 ; 5 ; 2012 ; https://journals.vgtu.lt/ ; reingest1.clockss.org:8082>
       au < finished ; frozen ; 2013 ; Creativity Studies Volume 2013 ; 6 ; 2013 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085>
       au < finished ; frozen ; 2014 ; Creativity Studies Volume 2014 ; 7 ; 2014 ; https://journals.vgtu.lt/ ; reingest3.clockss.org:8083>
-      au < finished ; crawling ; 2015 ; Creativity Studies Volume 2015 ; 8 ; 2015 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082>
+      au < finished ; frozen ; 2015 ; Creativity Studies Volume 2015 ; 8 ; 2015 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082>
       au < finished ; frozen ; 2016 ; Creativity Studies Volume 2016 ; 9 ; 2016 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082>
       au < finished ; frozen ; 2017 ; Creativity Studies Volume 2017 ; 10 ; 2017 ; https://journals.vgtu.lt/ ; reingest1.clockss.org:8082>
       au < finished ; frozen ; 2018 ; Creativity Studies Volume 2018 ; 11 ; 2018 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085>
@@ -163,14 +163,14 @@
       param[journal_id] = EST
 
       au < frozen ; exists ; 2009 ; Engineering Structures and Technologies Volume 2009 ; 1 ; 2009 ; https://journals.vgtu.lt/ ; >
-      au < finished ; crawling ; 2010 ; Engineering Structures and Technologies Volume 2010 ; 2 ; 2010 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082>
+      au < finished ; frozen ; 2010 ; Engineering Structures and Technologies Volume 2010 ; 2 ; 2010 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082>
       au < finished ; frozen ; 2011 ; Engineering Structures and Technologies Volume 2011 ; 3 ; 2011 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082>
-      au < finished ; crawling ; 2012 ; Engineering Structures and Technologies Volume 2012 ; 4 ; 2012 ; https://journals.vgtu.lt/ ; reingest1.clockss.org:8082>
+      au < finished ; frozen ; 2012 ; Engineering Structures and Technologies Volume 2012 ; 4 ; 2012 ; https://journals.vgtu.lt/ ; reingest1.clockss.org:8082>
       au < finished ; crawling ; 2013 ; Engineering Structures and Technologies Volume 2013 ; 5 ; 2013 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085>
       au < finished ; crawling ; 2014 ; Engineering Structures and Technologies Volume 2014 ; 6 ; 2014 ; https://journals.vgtu.lt/ ; reingest3.clockss.org:8083>
       au < finished ; frozen ; 2015 ; Engineering Structures and Technologies Volume 2015 ; 7 ; 2015 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082>
       au < finished ; frozen ; 2016 ; Engineering Structures and Technologies Volume 2016 ; 8 ; 2016 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082>
-      au < finished ; crawling ; 2017 ; Engineering Structures and Technologies Volume 2017 ; 9 ; 2017 ; https://journals.vgtu.lt/ ; reingest1.clockss.org:8082>
+      au < finished ; frozen ; 2017 ; Engineering Structures and Technologies Volume 2017 ; 9 ; 2017 ; https://journals.vgtu.lt/ ; reingest1.clockss.org:8082>
       au < finished ; frozen ; 2018 ; Engineering Structures and Technologies Volume 2018 ; 10 ; 2018 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085>
       au < finished ; frozen ; 2019 ; Engineering Structures and Technologies Volume 2019 ; 11 ; 2019 ; https://journals.vgtu.lt/ ; reingest3.clockss.org:8083>
       au < deepCrawl ; exists ; 2020 ; Engineering Structures and Technologies Volume 2020 ; 12 ; 2020 ; https://journals.vgtu.lt/ ; >
@@ -198,7 +198,7 @@
       au < finished ; crawling ; 2010 ; Geodesy and Cartography Volume 2010 ; 7 ; 2010 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082>
       au < finished ; crawling ; 2011 ; Geodesy and Cartography Volume 2011 ; 8 ; 2011 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082>
       au < finished ; frozen ; 2012 ; Geodesy and Cartography Volume 2012 ; 9 ; 2012 ; https://journals.vgtu.lt/ ; reingest1.clockss.org:8082>
-      au < finished ; crawling ; 2013 ; Geodesy and Cartography Volume 2013 ; 10 ; 2013 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085>
+      au < finished ; frozen ; 2013 ; Geodesy and Cartography Volume 2013 ; 10 ; 2013 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085>
       au < finished ; frozen ; 2014 ; Geodesy and Cartography Volume 2014 ; 11 ; 2014 ; https://journals.vgtu.lt/ ; reingest3.clockss.org:8083>
       au < finished ; frozen ; 2015 ; Geodesy and Cartography Volume 2015 ; 12 ; 2015 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082>
       au < finished ; frozen ; 2016 ; Geodesy and Cartography Volume 2016 ; 13 ; 2016 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082>
@@ -230,7 +230,7 @@
       au < finished ; crawling ; 2010 ; International Journal of Strategic Property Management Volume 2010 ; 7 ; 2010 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082>
       au < finished ; frozen ; 2011 ; International Journal of Strategic Property Management Volume 2011 ; 8 ; 2011 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082>
       au < finished ; crawling ; 2012 ; International Journal of Strategic Property Management Volume 2012 ; 9 ; 2012 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082>
-      au < finished ; crawling ; 2013 ; International Journal of Strategic Property Management Volume 2013 ; 10 ; 2013 ; https://journals.vgtu.lt/ ; reingest1.clockss.org:8082>
+      au < finished ; frozen ; 2013 ; International Journal of Strategic Property Management Volume 2013 ; 10 ; 2013 ; https://journals.vgtu.lt/ ; reingest1.clockss.org:8082>
       au < finished ; frozen ; 2014 ; International Journal of Strategic Property Management Volume 2014 ; 11 ; 2014 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085>
       au < finished ; frozen ; 2015 ; International Journal of Strategic Property Management Volume 2015 ; 12 ; 2015 ; https://journals.vgtu.lt/ ; reingest3.clockss.org:8083>
       au < finished ; frozen ; 2016 ; International Journal of Strategic Property Management Volume 2016 ; 13 ; 2016 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082>
@@ -295,7 +295,7 @@
       au < finished ; frozen ; 2012 ; Journal of Business Economics and Management Volume 2012 ; 10 ; 2012 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082>
       au < finished ; frozen ; 2013 ; Journal of Business Economics and Management Volume 2013 ; 11 ; 2013 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082>
       au < finished ; frozen ; 2014 ; Journal of Business Economics and Management Volume 2014 ; 12 ; 2014 ; https://journals.vgtu.lt/ ; reingest1.clockss.org:8082>
-      au < finished ; crawling ; 2015 ; Journal of Business Economics and Management Volume 2015 ; 13 ; 2015 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085>
+      au < finished ; frozen ; 2015 ; Journal of Business Economics and Management Volume 2015 ; 13 ; 2015 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085>
       au < finished ; frozen ; 2016 ; Journal of Business Economics and Management Volume 2016 ; 14 ; 2016 ; https://journals.vgtu.lt/ ; reingest3.clockss.org:8083>
       au < finished ; frozen ; 2017 ; Journal of Business Economics and Management Volume 2017 ; 15 ; 2017 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082>
       au < finished ; frozen ; 2018 ; Journal of Business Economics and Management Volume 2018 ; 16 ; 2018 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082>
@@ -331,7 +331,7 @@
       au < frozen ; exists ; 2007 ; Journal of Civil Engineering and Management Volume 2007 ; 13 ; 2007 ; https://journals.vgtu.lt/ ; >
       au < frozen ; exists ; 2008 ; Journal of Civil Engineering and Management Volume 2008 ; 14 ; 2008 ; https://journals.vgtu.lt/ ; >
       au < frozen ; exists ; 2009 ; Journal of Civil Engineering and Management Volume 2009 ; 15 ; 2009 ; https://journals.vgtu.lt/ ; >
-      au < finished ; crawling ; 2010 ; Journal of Civil Engineering and Management Volume 2010 ; 16 ; 2010 ; https://journals.vgtu.lt/ ; reingest1.clockss.org:8082>
+      au < finished ; frozen ; 2010 ; Journal of Civil Engineering and Management Volume 2010 ; 16 ; 2010 ; https://journals.vgtu.lt/ ; reingest1.clockss.org:8082>
       au < finished ; frozen ; 2011 ; Journal of Civil Engineering and Management Volume 2011 ; 17 ; 2011 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085>
       au < finished ; frozen ; 2012 ; Journal of Civil Engineering and Management Volume 2012 ; 18 ; 2012 ; https://journals.vgtu.lt/ ; reingest3.clockss.org:8083>
       au < finished ; frozen ; 2013 ; Journal of Civil Engineering and Management Volume 2013 ; 19 ; 2013 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082>
@@ -405,12 +405,12 @@
       au < frozen ; exists ; 2009 ; Mathematical Modelling and Analysis Volume 2009 ; 14 ; 2009 ; https://journals.vgtu.lt/ ; >
       au < finished ; frozen ; 2010 ; Mathematical Modelling and Analysis Volume 2010 ; 15 ; 2010 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082>
       au < finished ; frozen ; 2011 ; Mathematical Modelling and Analysis Volume 2011 ; 16 ; 2011 ; https://journals.vgtu.lt/ ; reingest1.clockss.org:8082>
-      au < finished ; crawling ; 2012 ; Mathematical Modelling and Analysis Volume 2012 ; 17 ; 2012 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085>
+      au < finished ; frozen ; 2012 ; Mathematical Modelling and Analysis Volume 2012 ; 17 ; 2012 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085>
       au < finished ; frozen ; 2013 ; Mathematical Modelling and Analysis Volume 2013 ; 18 ; 2013 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085>
       au < finished ; frozen ; 2014 ; Mathematical Modelling and Analysis Volume 2014 ; 19 ; 2014 ; https://journals.vgtu.lt/ ; reingest3.clockss.org:8083>
-      au < finished ; crawling ; 2015 ; Mathematical Modelling and Analysis Volume 2015 ; 20 ; 2015 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082>
+      au < finished ; frozen ; 2015 ; Mathematical Modelling and Analysis Volume 2015 ; 20 ; 2015 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082>
       au < finished ; crawling ; 2016 ; Mathematical Modelling and Analysis Volume 2016 ; 21 ; 2016 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082>
-      au < finished ; crawling ; 2017 ; Mathematical Modelling and Analysis Volume 2017 ; 22 ; 2017 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082>
+      au < finished ; frozen ; 2017 ; Mathematical Modelling and Analysis Volume 2017 ; 22 ; 2017 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082>
       au < finished ; frozen ; 2018 ; Mathematical Modelling and Analysis Volume 2018 ; 23 ; 2018 ; https://journals.vgtu.lt/ ; reingest1.clockss.org:8082>
       au < finished ; frozen ; 2019 ; Mathematical Modelling and Analysis Volume 2019 ; 24 ; 2019 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085>
       au < deepCrawl ; exists ; 2020 ; Mathematical Modelling and Analysis Volume 2020 ; 25 ; 2020 ; https://journals.vgtu.lt/ ; >
@@ -463,7 +463,7 @@
       au < frozen ; exists ; 2008 ; Technological and Economic Development of Economy Volume 2008 ; 5 ; 2008 ; https://journals.vgtu.lt/ ; >
       au < frozen ; exists ; 2009 ; Technological and Economic Development of Economy Volume 2009 ; 6 ; 2009 ; https://journals.vgtu.lt/ ; >
       au < finished ; frozen ; 2010 ; Technological and Economic Development of Economy Volume 2010 ; 7 ; 2010 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082>
-      au < finished ; crawling ; 2011 ; Technological and Economic Development of Economy Volume 2011 ; 8 ; 2011 ; https://journals.vgtu.lt/ ; reingest1.clockss.org:8082>
+      au < finished ; frozen ; 2011 ; Technological and Economic Development of Economy Volume 2011 ; 8 ; 2011 ; https://journals.vgtu.lt/ ; reingest1.clockss.org:8082>
       au < finished ; frozen ; 2012 ; Technological and Economic Development of Economy Volume 2012 ; 9 ; 2012 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085>
       au < finished ; frozen ; 2013 ; Technological and Economic Development of Economy Volume 2013 ; 10 ; 2013 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085>
       au < finished ; frozen ; 2014 ; Technological and Economic Development of Economy Volume 2014 ; 11 ; 2014 ; https://journals.vgtu.lt/ ; reingest3.clockss.org:8083>
@@ -496,10 +496,10 @@
       au < frozen ; exists ; 2007 ; Transport Volume 2007 ; 6 ; 2007 ; https://journals.vgtu.lt/ ; >
       au < frozen ; exists ; 2008 ; Transport Volume 2008 ; 7 ; 2008 ; https://journals.vgtu.lt/ ; >
       au < frozen ; exists ; 2009 ; Transport Volume 2009 ; 8 ; 2009 ; https://journals.vgtu.lt/ ; >
-      au < finished ; crawling ; 2010 ; Transport Volume 2010 ; 9 ; 2010 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082>
+      au < finished ; frozen ; 2010 ; Transport Volume 2010 ; 9 ; 2010 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082>
       au < finished ; frozen ; 2011 ; Transport Volume 2011 ; 10 ; 2011 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082>
       au < finished ; crawling ; 2012 ; Transport Volume 2012 ; 11 ; 2012 ; https://journals.vgtu.lt/ ; reingest1.clockss.org:8082>
-      au < finished ; crawling ; 2013 ; Transport Volume 2013 ; 12 ; 2013 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085>
+      au < finished ; frozen ; 2013 ; Transport Volume 2013 ; 12 ; 2013 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085>
       au < finished ; frozen ; 2014 ; Transport Volume 2014 ; 13 ; 2014 ; https://journals.vgtu.lt/ ; reingest3.clockss.org:8083>
       au < finished ; frozen ; 2015 ; Transport Volume 2015 ; 14 ; 2015 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082>
       au < finished ; frozen ; 2016 ; Transport Volume 2016 ; 15 ; 2016 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082>

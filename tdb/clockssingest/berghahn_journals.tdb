@@ -64,7 +64,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Anthropology in Action Volume 19 ; 19 ; >
     au < finished ; crawling ; 2013 ; Anthropology in Action Volume 20 ; 20 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Anthropology in Action Volume 21 ; 21 ; >
-    au < finished ; crawling ; 2015 ; Anthropology in Action Volume 22 ; 22 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Anthropology in Action Volume 22 ; 22 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Anthropology in Action Volume 23 ; 23 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2017 ; Anthropology in Action Volume 24 ; 24 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2018 ; Anthropology in Action Volume 25 ; 25 ; reingest4.clockss.org:8082 >
@@ -95,8 +95,8 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Anthropology of the Middle East Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Anthropology of the Middle East Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Anthropology of the Middle East Volume 8 ; 8 ; >
-    au < finished ; crawling ; 2014 ; Anthropology of the Middle East Volume 9 ; 9 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2015 ; Anthropology of the Middle East Volume 10 ; 10 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2014 ; Anthropology of the Middle East Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2015 ; Anthropology of the Middle East Volume 10 ; 10 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Anthropology of the Middle East Volume 11 ; 11 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Anthropology of the Middle East Volume 12 ; 12 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Anthropology of the Middle East Volume 13 ; 13 ; reingest1.clockss.org:8082 >
@@ -613,7 +613,7 @@
     au < manifest ; exists ; 2010 ; Girlhood Studies Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Girlhood Studies Volume 4 ; 4 ; >
     au < finished ; frozen ; 2012 ; Girlhood Studies Volume 5 ; 5 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; Girlhood Studies Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Girlhood Studies Volume 6 ; 6 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Girlhood Studies Volume 7 ; 7 ; >
     au < finished ; frozen ; 2015 ; Girlhood Studies Volume 8 ; 8 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2016 ; Girlhood Studies Volume 9 ; 9 ; reingest4.clockss.org:8082 >
@@ -760,7 +760,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Educational Media, Memory, and Society Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Educational Media, Memory, and Society Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Educational Media, Memory, and Society Volume 6 ; 6 ; >
-    au < finished ; crawling ; 2015 ; Journal of Educational Media, Memory, and Society Volume 7 ; 7 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Journal of Educational Media, Memory, and Society Volume 7 ; 7 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Journal of Educational Media, Memory, and Society Volume 8 ; 8 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2017 ; Journal of Educational Media, Memory, and Society Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Journal of Educational Media, Memory, and Society Volume 10 ; 10 ; reingest4.clockss.org:8082 >
@@ -798,7 +798,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Journeys Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Journeys Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journeys Volume 15 ; 15 ; >
-    au < finished ; crawling ; 2015 ; Journeys Volume 16 ; 16 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2015 ; Journeys Volume 16 ; 16 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2016 ; Journeys Volume 17 ; 17 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Journeys Volume 18 ; 18 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Journeys Volume 19 ; 19 ; reingest5.clockss.org:8082 >
@@ -871,7 +871,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Mobility in History Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Mobility in History Volume 5 ; 5 ; >
     au < finished ; frozen ; 2015 ; Mobility in History Volume 6 ; 6 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2016 ; Mobility in History Volume 7 ; 7 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2016 ; Mobility in History Volume 7 ; 7 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2017 ; Mobility in History Volume 8 ; 8 ; reingest5.clockss.org:8082 >
 
   }
@@ -916,7 +916,7 @@
     au < manifest ; exists ; 2008 ; Nature and Culture Volume 3 ; 3 ; >
     au < manifest ; exists ; 2009 ; Nature and Culture Volume 4 ; 4 ; >
     au < manifest ; exists ; 2010 ; Nature and Culture Volume 5 ; 5 ; >
-    au < finished ; crawling ; 2011 ; Nature and Culture Volume 6 ; 6 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2011 ; Nature and Culture Volume 6 ; 6 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2012 ; Nature and Culture Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Nature and Culture Volume 8 ; 8 ; >
     au < finished ; frozen ; 2014 ; Nature and Culture Volume 9 ; 9 ; reingest4.clockss.org:8082 >
@@ -985,7 +985,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Projections Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Projections Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Projections Volume 8 ; 8 ; >
-    au < finished ; crawling ; 2015 ; Projections Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2015 ; Projections Volume 9 ; 9 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2016 ; Projections Volume 10 ; 10 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Projections Volume 11 ; 11 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Projections Volume 12 ; 12 ; reingest5.clockss.org:8082 >
@@ -1046,7 +1046,7 @@
     au < finished ; crawling ; 2018 ; Religion and Society: Advances in Research Volume 9 ; 9 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; Religion and Society: Advances in Research Volume 10 ; 10 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2020 ; Religion and Society: Advances in Research Volume 11 ; 11 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2021 ; Religion and Society: Advances in Research Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2021 ; Religion and Society: Advances in Research Volume 12 ; 12 ; reingest1.clockss.org:8082 >
     au < expected ; exists ; 2022 ; Religion and Society: Advances in Research Volume 13 ; 13 ; >
 
   }
@@ -1167,8 +1167,8 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Social Analysis Volume 55 ; 55 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Social Analysis Volume 56 ; 56 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Social Analysis Volume 57 ; 57 ; >
-    au < finished ; crawling ; 2014 ; Social Analysis Volume 58 ; 58 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2015 ; Social Analysis Volume 59 ; 59 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2014 ; Social Analysis Volume 58 ; 58 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2015 ; Social Analysis Volume 59 ; 59 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Social Analysis Volume 60 ; 60 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Social Analysis Volume 61 ; 61 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Social Analysis Volume 62 ; 62 ; reingest1.clockss.org:8082 >
@@ -1209,7 +1209,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Theoria Volume 59 ; 59 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Theoria Volume 60 ; 60 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Theoria Volume 61 ; 61 ; >
-    au < finished ; crawling ; 2015 ; Theoria Volume 62 ; 62 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2015 ; Theoria Volume 62 ; 62 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2016 ; Theoria Volume 63 ; 63 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Theoria Volume 64 ; 64 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Theoria Volume 65 ; 65 ; reingest3.clockss.org:8083 >
@@ -1240,7 +1240,7 @@
     au < finished ; finished ; 2017 ; Transfers Volume 7 ; 7 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2018 ; Transfers Volume 8 ; 8 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; Transfers Volume 9 ; 9 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2020 ; Transfers Volume 10 ; 10 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2020 ; Transfers Volume 10 ; 10 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2021 ; Transfers Volume 11 ; 11 ; >
     au < manifest ; exists ; 2022 ; Transfers Volume 12 ; 12 ; >
 
