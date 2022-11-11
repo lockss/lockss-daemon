@@ -20,6 +20,7 @@
       #param[base_url] = http://journal.pda.org/
 
       implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
+      #content available from 1980 Volume 34 to 1995 Volume 49
 
       au < pda.ClockssPDADrupalPlugin ; manifest ; exists ; 1996 ; PDA Journal of Pharmaceutical Science and Technology Volume 50 ; 50 ; https://journal.pda.org/ ; >
       au < pda.ClockssPDADrupalPlugin ; manifest ; exists ; 1997 ; PDA Journal of Pharmaceutical Science and Technology Volume 51 ; 51 ; https://journal.pda.org/ ; >
