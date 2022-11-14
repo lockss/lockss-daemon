@@ -764,7 +764,7 @@
     au < manifest ; exists ; 1995 ; Asian Review of Accounting Volume 3 ; 3 ; >
     au < manifest ; exists ; 1996 ; Asian Review of Accounting Volume 4 ; 4 ; >
     au < finished ; manifest ; 1997 ; Asian Review of Accounting Volume 5 ; 5 ; reingest2.clockss.org:8085 >
-    au < ready ; exists ; 1998 ; Asian Review of Accounting Volume 6 ; 6 ; >
+    au < crawling ; exists ; 1998 ; Asian Review of Accounting Volume 6 ; 6 ; >
     au < finished ; manifest ; 1999 ; Asian Review of Accounting Volume 7 ; 7 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2000 ; Asian Review of Accounting Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2001 ; Asian Review of Accounting Volume 9 ; 9 ; >
@@ -2898,7 +2898,7 @@
     au < manifest ; exists ; 1993 ; Facilities Volume 11 ; 11 ; >
     au < manifest ; exists ; 1994 ; Facilities Volume 12 ; 12 ; >
     au < manifest ; exists ; 1995 ; Facilities Volume 13 ; 13 ; >
-    au < ready ; exists ; 1996 ; Facilities Volume 14 ; 14 ; >
+    au < crawling ; exists ; 1996 ; Facilities Volume 14 ; 14 ; >
     au < crawling ; exists ; 1997 ; Facilities Volume 15 ; 15 ; >
     au < frozen ; exists ; 1998 ; Facilities Volume 16 ; 16 ; >
     au < frozen ; exists ; 1999 ; Facilities Volume 17 ; 17 ; >
@@ -3463,7 +3463,7 @@
     au < manifest ; exists ; 1993 ; Industrial Lubrication and Tribology Volume 45 ; 45 ; >
     au < manifest ; exists ; 1994 ; Industrial Lubrication and Tribology Volume 46 ; 46 ; >
     au < manifest ; exists ; 1995 ; Industrial Lubrication and Tribology Volume 47 ; 47 ; >
-    au < ready ; exists ; 1996 ; Industrial Lubrication and Tribology Volume 48 ; 48 ; >
+    au < crawling ; exists ; 1996 ; Industrial Lubrication and Tribology Volume 48 ; 48 ; >
     au < ready ; exists ; 1997 ; Industrial Lubrication and Tribology Volume 49 ; 49 ; >
     au < frozen ; exists ; 1998 ; Industrial Lubrication and Tribology Volume 50 ; 50 ; >
     au < frozen ; exists ; 1999 ; Industrial Lubrication and Tribology Volume 51 ; 51 ; >
@@ -4520,7 +4520,7 @@
 
     au < manifest ; exists ; 1995 ; International Journal of Entrepreneurial Behaviour & Research Volume 1 ; 1 ; >
     au < manifest ; exists ; 1996 ; International Journal of Entrepreneurial Behaviour & Research Volume 2 ; 2 ; >
-    au < ready ; exists ; 1997 ; International Journal of Entrepreneurial Behaviour & Research Volume 3 ; 3 ; >
+    au < crawling ; exists ; 1997 ; International Journal of Entrepreneurial Behaviour & Research Volume 3 ; 3 ; >
     au < ready ; exists ; 1998 ; International Journal of Entrepreneurial Behaviour & Research Volume 4 ; 4 ; >
     au < frozen ; exists ; 1999 ; International Journal of Entrepreneurial Behaviour & Research Volume 5 ; 5 ; >
     au < deepCrawl ; exists ; 2000 ; International Journal of Entrepreneurial Behaviour & Research Volume 6 ; 6 ; >
@@ -8968,7 +8968,7 @@
     au < manifest ; exists ; 1995 ; Journal of Services Marketing Volume 9 ; 9 ; >
     au < manifest ; exists ; 1996 ; Journal of Services Marketing Volume 10 ; 10 ; >
     au < crawling ; exists ; 1997 ; Journal of Services Marketing Volume 11 ; 11 ; >
-    au < ready ; exists ; 1998 ; Journal of Services Marketing Volume 12 ; 12 ; >
+    au < crawling ; exists ; 1998 ; Journal of Services Marketing Volume 12 ; 12 ; >
     au < frozen ; exists ; 1999 ; Journal of Services Marketing Volume 13 ; 13 ; >
     au < frozen ; exists ; 2000 ; Journal of Services Marketing Volume 14 ; 14 ; >
     au < frozen ; exists ; 2001 ; Journal of Services Marketing Volume 15 ; 15 ; >
@@ -10807,7 +10807,7 @@
     au < manifest ; exists ; 1993 ; Nutrition & Food Science Volume 93 ; 93 ; >
     au < manifest ; exists ; 1994 ; Nutrition & Food Science Volume 94 ; 94 ; >
     au < manifest ; exists ; 1995 ; Nutrition & Food Science Volume 95 ; 95 ; >
-    au < ready ; exists ; 1996 ; Nutrition & Food Science Volume 96 ; 96 ; >
+    au < crawling ; exists ; 1996 ; Nutrition & Food Science Volume 96 ; 96 ; >
     au < frozen ; exists ; 1997 ; Nutrition & Food Science Volume 97 ; 97 ; >
     au < frozen ; exists ; 1998 ; Nutrition & Food Science Volume 98 ; 98 ; >
     au < frozen ; exists ; 1999 ; Nutrition & Food Science Volume 99 ; 99 ; >
@@ -11003,7 +11003,7 @@
     au < manifest ; exists ; 1995 ; Online and CD-Rom Review Volume 19 ; 19 ; >
     au < manifest ; exists ; 1996 ; Online and CD-Rom Review Volume 20 ; 20 ; >
     au < ready ; exists ; 1997 ; Online and CD-Rom Review Volume 21 ; 21 ; >
-    au < ready ; exists ; 1998 ; Online and CD-Rom Review Volume 22 ; 22 ; >
+    au < crawling ; exists ; 1998 ; Online and CD-Rom Review Volume 22 ; 22 ; >
     au < frozen ; exists ; 1999 ; Online and CD-Rom Review Volume 23 ; 23 ; >
 
   }
@@ -11176,7 +11176,7 @@
     au < frozen ; exists ; 1996 ; Personnel Review Volume 25 ; 25 ; >
     au < crawling ; exists ; 1997 ; Personnel Review Volume 26 ; 26 ; >
     au < frozen ; exists ; 1998 ; Personnel Review Volume 27 ; 27 ; >
-    au < ready ; exists ; 1999 ; Personnel Review Volume 28 ; 28 ; >
+    au < crawling ; exists ; 1999 ; Personnel Review Volume 28 ; 28 ; >
     au < frozen ; exists ; 2000 ; Personnel Review Volume 29 ; 29 ; >
     au < frozen ; exists ; 2001 ; Personnel Review Volume 30 ; 30 ; >
     au < frozen ; exists ; 2002 ; Personnel Review Volume 31 ; 31 ; >
@@ -11878,7 +11878,7 @@
     au < manifest ; exists ; 1993 ; Reference Services Review Volume 21 ; 21 ; >
     au < manifest ; exists ; 1994 ; Reference Services Review Volume 22 ; 22 ; >
     au < manifest ; exists ; 1995 ; Reference Services Review Volume 23 ; 23 ; >
-    au < ready ; exists ; 1996 ; Reference Services Review Volume 24 ; 24 ; >
+    au < crawling ; exists ; 1996 ; Reference Services Review Volume 24 ; 24 ; >
     au < frozen ; exists ; 1997 ; Reference Services Review Volume 25 ; 25 ; >
     au < frozen ; exists ; 1998 ; Reference Services Review Volume 26 ; 26 ; >
     au < frozen ; exists ; 1999 ; Reference Services Review Volume 27 ; 27 ; >
@@ -12526,8 +12526,8 @@
     au < manifest ; exists ; 1993 ; Structural Survey Volume 11 ; 11 ; >
     au < manifest ; exists ; 1994 ; Structural Survey Volume 12 ; 12 ; >
     au < manifest ; exists ; 1995 ; Structural Survey Volume 13 ; 13 ; >
-    au < ready ; exists ; 1996 ; Structural Survey Volume 14 ; 14 ; >
-    au < ready ; exists ; 1997 ; Structural Survey Volume 15 ; 15 ; >
+    au < crawling ; exists ; 1996 ; Structural Survey Volume 14 ; 14 ; >
+    au < crawling ; exists ; 1997 ; Structural Survey Volume 15 ; 15 ; >
     au < ready ; exists ; 1998 ; Structural Survey Volume 16 ; 16 ; >
     au < frozen ; exists ; 1999 ; Structural Survey Volume 17 ; 17 ; >
     au < frozen ; exists ; 2000 ; Structural Survey Volume 18 ; 18 ; >
@@ -12745,8 +12745,8 @@
     comment[journal_id] = tldr
 
     au < manifest ; exists ; 1996 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 1 ; 1 ; >
-    au < ready ; exists ; 1997 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 2 ; 2 ; >
-    au < ready ; exists ; 1998 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 3 ; 3 ; >
+    au < crawling ; exists ; 1997 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 2 ; 2 ; >
+    au < crawling ; exists ; 1998 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 3 ; 3 ; >
     au < frozen ; exists ; 1999 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 4 ; 4 ; >
     au < frozen ; exists ; 2000 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 5 ; 5 ; >
     au < frozen ; exists ; 2001 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 6 ; 6 ; >
@@ -12866,7 +12866,7 @@
 #    au < exists ; exists ; 1999 ; Tourism Review Volume 54 ; 54 ; >
 #    au < exists ; exists ; 2000 ; Tourism Review Volume 55 ; 55 ; >
 
-    au < ready ; exists ; 2001 ; Tourism Review Volume 56 ; 56 ; >
+    au < crawling ; exists ; 2001 ; Tourism Review Volume 56 ; 56 ; >
     au < frozen ; exists ; 2002 ; Tourism Review Volume 57 ; 57 ; >
     au < frozen ; exists ; 2003 ; Tourism Review Volume 58 ; 58 ; >
     au < frozen ; exists ; 2004 ; Tourism Review Volume 59 ; 59 ; >
@@ -13176,7 +13176,7 @@
     au < manifest ; exists ; 1994 ; Work Study Volume 43 ; 43 ; >
     au < manifest ; exists ; 1995 ; Work Study Volume 44 ; 44 ; >
     au < ready ; exists ; 1996 ; Work Study Volume 45 ; 45 ; >
-    au < ready ; exists ; 1997 ; Work Study Volume 46 ; 46 ; >
+    au < crawling ; exists ; 1997 ; Work Study Volume 46 ; 46 ; >
     au < frozen ; exists ; 1998 ; Work Study Volume 47 ; 47 ; >
     au < frozen ; exists ; 1999 ; Work Study Volume 48 ; 48 ; >
     au < frozen ; exists ; 2000 ; Work Study Volume 49 ; 49 ; >
@@ -13407,7 +13407,7 @@
     au < frozen ; exists ; 2017 ; Annals in Social Responsibility Volume 4 ; 4 ; >
     au < frozen ; exists ; 2018 ; Annals in Social Responsibility Volume 5 ; 5 ; >
     au < frozen ; exists ; 2019 ; Annals in Social Responsibility Volume 6 ; 6 ; >
-    au < ready ; exists ; 2020 ; Annals in Social Responsibility Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2020 ; Annals in Social Responsibility Volume 7 ; 7 ; >
     au < frozen ; exists ; 2021 ; Annals in Social Responsibility Volume 8 ; 8 ; >
     au < expected ; exists ; 2022 ; Annals in Social Responsibility Volume 9 ; 9 ; >
 
@@ -14279,7 +14279,7 @@
     au < frozen ; exists ; 2016 ; VINE Journal of Information and Knowledge Management Systems Volume 46 ; 46 ; >
     au < frozen ; exists ; 2017 ; VINE Journal of Information and Knowledge Management Systems Volume 47 ; 47 ; >
     au < ready ; exists ; 2018 ; VINE Journal of Information and Knowledge Management Systems Volume 48 ; 48 ; >
-    au < ready ; exists ; 2019 ; VINE Journal of Information and Knowledge Management Systems Volume 49 ; 49 ; >
+    au < crawling ; exists ; 2019 ; VINE Journal of Information and Knowledge Management Systems Volume 49 ; 49 ; >
     au < frozen ; exists ; 2020 ; VINE Journal of Information and Knowledge Management Systems Volume 50 ; 50 ; >
     au < crawling ; exists ; 2021 ; VINE Journal of Information and Knowledge Management Systems Volume 51 ; 51 ; >
     au < crawling ; exists ; 2022 ; VINE Journal of Information and Knowledge Management Systems Volume 52 ; 52 ; >
@@ -14298,7 +14298,7 @@
 
     au < frozen ; exists ; 2011 ; World Journal of Engineering Volume 8 ; 8 ; >
     au < frozen ; exists ; 2012 ; World Journal of Engineering Volume 9 ; 9 ; >
-    au < ready ; exists ; 2013 ; World Journal of Engineering Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2013 ; World Journal of Engineering Volume 10 ; 10 ; >
     au < frozen ; exists ; 2014 ; World Journal of Engineering Volume 11 ; 11 ; >
     au < frozen ; exists ; 2015 ; World Journal of Engineering Volume 12 ; 12 ; >
     au < ready ; exists ; 2016 ; World Journal of Engineering Volume 13 ; 13 ; >
