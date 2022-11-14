@@ -6403,7 +6403,7 @@
     param[journal_id] = fsr
     #move from T&F by 2023-01-01
 
-    au < expected ; exists ; 2022 ; 2022 ; Forensic Sciences Research Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2022 ; 2022 ; Forensic Sciences Research Volume 7 ; 7 ; >
 
   }
 

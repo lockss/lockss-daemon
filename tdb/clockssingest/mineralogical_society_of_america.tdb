@@ -108,7 +108,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; Elements Volume 15 ; 15 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; 2020 ; Elements Volume 16 ; 16 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2021 ; 2021 ; Elements Volume 17 ; 17 ; > #svg file 403 forbidden
-    au < expected ; exists ; 2022 ; 2022 ; Elements Volume 18 ; 18 ; >
+    au < manifest ; exists ; 2022 ; 2022 ; Elements Volume 18 ; 18 ; >
 
   }
   
