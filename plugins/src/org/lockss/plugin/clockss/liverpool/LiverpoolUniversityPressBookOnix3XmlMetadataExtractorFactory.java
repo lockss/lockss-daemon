@@ -60,11 +60,13 @@ public class LiverpoolUniversityPressBookOnix3XmlMetadataExtractorFactory extend
         @Override
         protected void postCookProcess(SourceXmlSchemaHelper schemaHelper,
                                        CachedUrl cu, ArticleMetadata thisAM) {
+            
+            String filenameValue = thisAM.getRaw(Onix3BooksSchemaHelper.ONIX_RR);
+            String cuBase = FilenameUtils.getFullPath(cu.getUrl());
+            String fullPathFile = UrlUtil.minimallyEncodeUrl(cuBase + filenameValue + ".pdf");
+            log.debug3("finalAccessUrl using PDF = " + fullPathFile);
+            thisAM.replace(MetadataField.FIELD_ACCESS_URL, fullPathFile);
 
-            String access = thisAM.getRaw(Onix3BooksSchemaHelper.ONIX_idtype_proprietary);
-            if (access != null) {
-                thisAM.replace(MetadataField.FIELD_ACCESS_URL, access);
-            }
             if (thisAM.get(MetadataField.FIELD_DATE)== null) {
                 String copydate = thisAM.getRaw(Onix3BooksSchemaHelper.ONIX_copy_date);
                 if (copydate != null) {
