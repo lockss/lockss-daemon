@@ -827,14 +827,14 @@
   {
 
       title <
-        name = Journal of Basic Medical Veteriner ;
+        name = Journal of Basic Medical Veterinary ;
         issn = 2302-6820 ;
         eissn =  2774-9959
       >
 
       param[journal_id] = JBMV
 
-      au < crawling ; exists ; 2022 ; Journal of Basic Medical Veteriner Volume 11 ; 11 ; 2022 ; >
+      au < crawling ; exists ; 2022 ; Journal of Basic Medical Veterinary Volume 11 ; 11 ; 2022 ; >
 
   }
 
@@ -842,7 +842,7 @@
 
       title <
         name = Indonesian Journal of Dental Medicine ;
-        eissn =  2774-9959
+        eissn =  2722-1253
       >
 
       param[journal_id] = IJDM
