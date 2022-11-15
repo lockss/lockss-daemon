@@ -183,7 +183,7 @@
 
       param[journal_id] = GAC
 
-      au < ready ; 2004 ; Geodesy and Cartography Volume 2004 ; 1 ; 2004 ; https://journals.vilniustech.lt/ >
+      au < releasing ; 2004 ; Geodesy and Cartography Volume 2004 ; 1 ; 2004 ; https://journals.vilniustech.lt/ >
       au < manifest ; 2005 ; Geodesy and Cartography Volume 2005 ; 2 ; 2005 ; https://journals.vilniustech.lt/ >
       au < down ; 2006 ; Geodesy and Cartography Volume 2006 ; 3 ; 2006 ; https://journals.vgtu.lt/ >
       au < down ; 2007 ; Geodesy and Cartography Volume 2007 ; 4 ; 2007 ; https://journals.vgtu.lt/ >
@@ -278,7 +278,7 @@
       param[journal_id] = JBEM
 
       au < manifest ; 2003 ; Journal of Business Economics and Management Volume 2003 ; 1 ; 2003 ; https://journals.vilniustech.lt/ >
-      au < ready ; 2004 ; Journal of Business Economics and Management Volume 2004 ; 2 ; 2004 ; https://journals.vilniustech.lt/ >
+      au < releasing ; 2004 ; Journal of Business Economics and Management Volume 2004 ; 2 ; 2004 ; https://journals.vilniustech.lt/ >
       au < manifest ; 2005 ; Journal of Business Economics and Management Volume 2005 ; 3 ; 2005 ; https://journals.vilniustech.lt/ >
       au < down ; 2006 ; Journal of Business Economics and Management Volume 2006 ; 4 ; 2006 ; https://journals.vgtu.lt/ >
       au < down ; 2007 ; Journal of Business Economics and Management Volume 2007 ; 5 ; 2007 ; https://journals.vgtu.lt/ >
@@ -318,7 +318,7 @@
       au < manifest ; 2000 ; Journal of Civil Engineering and Management Volume 2000 ; 6 ; 2000 ; https://journals.vilniustech.lt/ >
       au < manifest ; 2001 ; Journal of Civil Engineering and Management Volume 2001 ; 7 ; 2001 ; https://journals.vilniustech.lt/ >
       au < manifest ; 2002 ; Journal of Civil Engineering and Management Volume 2002 ; 8 ; 2002 ; https://journals.vilniustech.lt/ >
-      au < ready ; 2003 ; Journal of Civil Engineering and Management Volume 2003 ; 9 ; 2003 ; https://journals.vilniustech.lt/ >
+      au < releasing ; 2003 ; Journal of Civil Engineering and Management Volume 2003 ; 9 ; 2003 ; https://journals.vilniustech.lt/ >
       au < manifest ; 2004 ; Journal of Civil Engineering and Management Volume 2004 ; 10 ; 2004 ; https://journals.vilniustech.lt/ >
       au < manifest ; 2005 ; Journal of Civil Engineering and Management Volume 2005 ; 11 ; 2005 ; https://journals.vilniustech.lt/ >
       au < down ; 2006 ; Journal of Civil Engineering and Management Volume 2006 ; 12 ; 2006 ; https://journals.vgtu.lt/ >
@@ -352,7 +352,7 @@
       param[journal_id] = JEELM
 
       au < manifest ; 2004 ; Journal of Environmental Engineering and Landscape Management Volume 2004 ; 1 ; 2004 ; https://journals.vilniustech.lt/ >
-      au < ready ; 2005 ; Journal of Environmental Engineering and Landscape Management Volume 2005 ; 2 ; 2005 ; https://journals.vilniustech.lt/ >
+      au < releasing ; 2005 ; Journal of Environmental Engineering and Landscape Management Volume 2005 ; 2 ; 2005 ; https://journals.vilniustech.lt/ >
       au < down ; 2006 ; Journal of Environmental Engineering and Landscape Management Volume 2006 ; 3 ; 2006 ; https://journals.vgtu.lt/ >
       au < down ; 2007 ; Journal of Environmental Engineering and Landscape Management Volume 2007 ; 4 ; 2007 ; https://journals.vgtu.lt/ >
       au < down ; 2008 ; Journal of Environmental Engineering and Landscape Management Volume 2008 ; 5 ; 2008 ; https://journals.vgtu.lt/ >
@@ -387,11 +387,11 @@
       au < manifest ; 1997 ; Mathematical Modelling and Analysis Volume 1997 ; 2 ; 1997 ; https://journals.vilniustech.lt/ >
       au < manifest ; 1998 ; Mathematical Modelling and Analysis Volume 1998 ; 3 ; 1998 ; https://journals.vilniustech.lt/ >
       au < manifest ; 1999 ; Mathematical Modelling and Analysis Volume 1999 ; 4 ; 1999 ; https://journals.vilniustech.lt/ >
-      au < ready ; 2000 ; Mathematical Modelling and Analysis Volume 2000 ; 5 ; 2000 ; https://journals.vilniustech.lt/ >
+      au < releasing ; 2000 ; Mathematical Modelling and Analysis Volume 2000 ; 5 ; 2000 ; https://journals.vilniustech.lt/ >
       au < manifest ; 2001 ; Mathematical Modelling and Analysis Volume 2001 ; 6 ; 2001 ; https://journals.vilniustech.lt/ >
       au < manifest ; 2002 ; Mathematical Modelling and Analysis Volume 2002 ; 7 ; 2002 ; https://journals.vilniustech.lt/ >
       au < manifest ; 2003 ; Mathematical Modelling and Analysis Volume 2003 ; 8 ; 2003 ; https://journals.vilniustech.lt/ >
-      au < ready ; 2004 ; Mathematical Modelling and Analysis Volume 2004 ; 9 ; 2004 ; https://journals.vilniustech.lt/ >
+      au < releasing ; 2004 ; Mathematical Modelling and Analysis Volume 2004 ; 9 ; 2004 ; https://journals.vilniustech.lt/ >
       au < manifest ; 2005 ; Mathematical Modelling and Analysis Volume 2005 ; 10 ; 2005 ; https://journals.vilniustech.lt/ >
       au < down ; 2006 ; Mathematical Modelling and Analysis Volume 2006 ; 11 ; 2006 ; https://journals.vgtu.lt/ >
       au < down ; 2007 ; Mathematical Modelling and Analysis Volume 2007 ; 12 ; 2007 ; https://journals.vgtu.lt/ >
@@ -482,7 +482,7 @@
 
       param[journal_id] = Transport
 
-      au < ready ; 2002 ; Transport Volume 2002 ; 1 ; 2002 ; https://journals.vilniustech.lt/ >
+      au < releasing ; 2002 ; Transport Volume 2002 ; 1 ; 2002 ; https://journals.vilniustech.lt/ >
       au < manifest ; 2003 ; Transport Volume 2003 ; 2 ; 2003 ; https://journals.vilniustech.lt/ >
       au < manifest ; 2004 ; Transport Volume 2004 ; 3 ; 2004 ; https://journals.vilniustech.lt/ >
       au < manifest ; 2005 ; Transport Volume 2005 ; 4 ; 2005 ; https://journals.vilniustech.lt/ >
