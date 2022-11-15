@@ -23,6 +23,7 @@
         param[base_url] = https://journals.library.ualberta.ca/jpps/
         implicit < status ; status2 ; year ; name ; param[year] ; volume ; hidden[proxy] >
         param[journal_id] = JPPS
+        #move to Frontiers Publishing, 2023-01-01
 
         {
         plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin 
