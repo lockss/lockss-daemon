@@ -26,7 +26,7 @@
 
       au < manifest ; exists ; 2019 ; Acta Dermato-Venereologica Volume 2019 ; 99 ; 2019 ; >
       au < finished ; manifest ; 2020 ; Acta Dermato-Venereologica Volume 2020 ; 100 ; 2020 ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2021 ; Acta Dermato-Venereologica Volume 2021 ; 101 ; 2021 ; > #deepCrawl on ingest1,3,5
+      au < finished ; manifest ; 2021 ; Acta Dermato-Venereologica Volume 2021 ; 101 ; 2021 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2022 ; Acta Dermato-Venereologica Volume 2022 ; 102 ; 2022 ; >
 
   }
