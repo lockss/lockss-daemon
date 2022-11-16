@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>38</string>
+    <string>39</string>
   </entry>
    <entry>
     <string>plugin_name</string>
@@ -194,7 +194,7 @@ POSSIBILITY OF SUCH DAMAGE.
             https://interpersona.psychopen.eu/index.php/interpersona/article/view/3647/3647.pdf
           -->
           <!--<string>"^%s(journals/)?(index\.php/)?(%s/)?article/(view(File)?|download)/[^/]+/[^/?#&amp;.]+$", base_url, journal_id</string>-->
-          <string>"^%s(journals/)?(index\.php/)?(%s/)?article/(view(File)?|download)/[^/]+/(([^/?#&amp;.]+$)|([^/]+\.pdf$))",base_url, journal_id</string>
+          <string>"^%s(journals/)?(index\.php/)?(%s/)?article/(view(File)?|download)/[^/]+($|/(([^/?#&amp;.]+$)|([^/]+\.pdf$)))",base_url, journal_id</string>
       </list>
   </entry>
   <entry>
