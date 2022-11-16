@@ -1276,10 +1276,12 @@
   {
 
     title <
-      name = The Quarterly Bulletin of the Marx Memorial Library ;
+      name = Marx Memorial Library Quarterly Bulletin ;
       eissn = 0025-410X ;
       issnl = 0025-410X
     >
+    #Proper name: Marx Memorial Library Quarterly Bulletin.
+    #Alternate name: The Quarterly Bulletin of the Marx Memorial Library
 
     param[journal_id] = mmlb
     #Published 1970-2004
