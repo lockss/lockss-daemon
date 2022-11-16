@@ -3522,6 +3522,31 @@
     au < finished ; frozen ; 2017 ; Journal of Neurosciences in Rural Practice Volume 8 ; 2017 ; 8 ; http://www.ruralneuropractice.com/ ; ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2018 ; Journal of Neurosciences in Rural Practice Volume 9 ; 2018 ; 9 ; http://www.ruralneuropractice.com/ ; ; reingest5.clockss.org:8082 >
 
+
+  }
+
+  {
+    title <
+      name = Journal of Nursing and Midwifery Sciences ;
+      issn = 2345-5756 ;
+      eissn = 2345-5764 ;
+      issnl = 2345-5756
+    >
+
+    #param[base_url] = https://www.jnmsjournal.org/
+    param[journal_issn] = 2345-5756
+    #move to Brieflands, 2023-01-01
+
+    au < exists ; exists ; 2014 ; Journal of Nursing and Midwifery Sciences Volume 1 ; 2014 ; 1 ; https://www.jnmsjournal.org/ ; ; >
+    au < exists ; exists ; 2015 ; Journal of Nursing and Midwifery Sciences Volume 2 ; 2015 ; 2 ; https://www.jnmsjournal.org/ ; ; >
+    au < exists ; exists ; 2016 ; Journal of Nursing and Midwifery Sciences Volume 3 ; 2016 ; 3 ; https://www.jnmsjournal.org/ ; ; >
+    au < exists ; exists ; 2017 ; Journal of Nursing and Midwifery Sciences Volume 4 ; 2017 ; 4 ; https://www.jnmsjournal.org/ ; ; >
+    au < exists ; exists ; 2018 ; Journal of Nursing and Midwifery Sciences Volume 5 ; 2018 ; 5 ; https://www.jnmsjournal.org/ ; ; >
+    au < exists ; exists ; 2019 ; Journal of Nursing and Midwifery Sciences Volume 6 ; 2019 ; 6 ; https://www.jnmsjournal.org/ ; ; >
+    au < exists ; exists ; 2020 ; Journal of Nursing and Midwifery Sciences Volume 7 ; 2020 ; 7 ; https://www.jnmsjournal.org/ ; ; >
+    au < exists ; exists ; 2021 ; Journal of Nursing and Midwifery Sciences Volume 8 ; 2021 ; 8 ; https://www.jnmsjournal.org/ ; ; >
+    au < exists ; exists ; 2022 ; Journal of Nursing and Midwifery Sciences Volume 9 ; 2022 ; 9 ; https://www.jnmsjournal.org/ ; ; >
+
   }
 
   {
@@ -4419,6 +4444,23 @@
     au < doNotProcess ; doNotProcess ; 2021 ; Pharmacognosy Reviews Volume 15 ; 2021 ; 15 ; https://www.phcogrev.com/ ; ; >
 
   }
+
+  {
+    title <
+      name = Philippine Journal of Obstetrics & Gynecology ;
+      issn = 0116-6069 ;
+      eissn = 2772-9567 ;
+      issnl = 0116-6069
+    >
+
+    #param[base_url] = https://www.pogsjournal.org/
+    param[journal_issn] = 0116-6069
+
+    au < exists ; exists ; 2021 ; Philippine Journal of Obstetrics & Gynecology Volume 45 ; 2021 ; 45 ; https://www.pogsjournal.org/ ; ; >
+    au < exists ; exists ; 2022 ; Philippine Journal of Obstetrics & Gynecology Volume 46 ; 2022 ; 46 ; https://www.pogsjournal.org/ ; ; >
+
+  }
+
 #  {
 #    title <
 #      name = Pulmonary Circulation ;
