@@ -65,6 +65,10 @@ public class IwapHtmlHashFilterFactory extends BaseScHtmlHashFilterFactory {
         // <div id="ArticleList">
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-list-resources"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "ContentColumn"),
+        //In Nov/2022, it is found ".tif" file are wrapped in html as "html/text" format,
+        // For example: https://iwaponline.com/view-large/figure/2854688/h2open-d-21-00139f01.tif,
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "figure-wrapper"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "site-theme-header-menu-item")
     };
     
     NodeFilter[] moreExcludeFilters = new NodeFilter[] {

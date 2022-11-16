@@ -77,6 +77,9 @@ public class IwapHtmlCrawlFilterFactory implements FilterFactory {
             
             // article - author section with notes could have some bogus relative links
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "al-author-info-wrap"),
+
+            // Exclude this ".tif" <div class="site-theme-header-menu-item"><a href="/my-account/register?siteId=1&amp;returnUrl=%2fview-large%2ffigure%2f3010502%2fh2open-d-22-00026f03.tif" class="register at-register js-register-user-modals">Register</a></div>
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "site-theme-header-menu-item"),
             }))
         );
   }

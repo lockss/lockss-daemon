@@ -10,7 +10,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>14</string>
+    <string>15</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -25,7 +25,7 @@
     <map>
       <entry>
         <string>Poll</string>
-        <string>6</string>
+        <string>7</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -125,6 +125,8 @@
       <string>2,"^https?://([^/]+\.silverchair-cdn\.com)/cassette\.axd/.*"</string>
       <!-- Exclude those files: https://iwaponline.com/my-account/register?siteId=1&returnUrl=%2Fview-large%2Ffigure%2F2406706%2Fwashdev-d-20-00137f01.tif-->
       <string>2,"^%smy-account/register", base_url</string>
+      <!-- Exclude https://iwaponline.com/sign-in?returnUrl=%2Fview-large%2Ffigure%2F2854688%2Fh2open-d-21-00139f01.tif -->
+      <string>2,"^%ssign-in\?returnUrl=.*\.tif", base_url</string>
       <string>1,"^https?://((fonts|ajax)\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|cdn\.mathjax\.org|cdnjs\.cloudflare\.com)/"</string>
       <!-- images/figures/supplemental have Expires that will always be 2147483647 and don't redirect - allow -->
       <string>1,"^https?://(%s|iwa\.silverchair-cdn\.com)/iwa/content_public/journal/[^?]+\?Expires=2147483647", url_host(base_url)</string>
