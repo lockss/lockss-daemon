@@ -759,13 +759,12 @@
   }
 
   {
-
     title <
       name = Hunter Gatherer Research ;
+      issn = 2056-3256 ;
       eissn = 2056-3264 ;
-      issnl = 2056-3264
+      issnl = 2056-3256
     >
-    {
     param[journal_id] = hgr
     comment[continues] = Before Farming
     #Published 2015-2019
@@ -777,8 +776,15 @@
     au < released ; 2018 ; Hunter Gatherer Research Volume 4 ; 4 >
     au < manifest ; 2019 ; Hunter Gatherer Research Volume 5 ; 5 >
 
-    }
+  }
 
+  {
+    title <
+      name = Before Farming ;
+      issn = 1476-4253 ;
+      eissn = 1476-4261 ;
+      issnl = 1476-4253
+    >
     {
     param[journal_id] = bfarm
     comment[continued_by] = Hunter Gatherer Research

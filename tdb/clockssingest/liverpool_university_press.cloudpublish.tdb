@@ -749,13 +749,14 @@
 
     title <
       name = Hunter Gatherer Research ;
+      issn = 2056-3256 ;
       eissn = 2056-3264 ;
-      issnl = 2056-3264
+      issnl = 2056-3256
     >
     {
     param[journal_id] = hgr
     #Published 2015-2019
-    #jounral_num = 66
+    #journal_num = 66
 
     au < doNotProcess ; doNotProcess ; 2015 ; Hunter Gatherer Research Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Hunter Gatherer Research Volume 2 ; 2 ; >
