@@ -31,7 +31,7 @@
     au < biologists.ClockssBiologistsDrupalPlugin ; finished ; crawling ; 2017 ; Biology Open Volume 6 ; 6 ; http://bio.biologists.org/ ; reingest3.clockss.org:8083 >
     au < biologists.ClockssBiologistsDrupalPlugin ; finished ; crawling ; 2018 ; Biology Open Volume 7 ; 7 ; http://bio.biologists.org/ ; reingest4.clockss.org:8082 >
     au < biologists.ClockssBiologistsDrupalPlugin ; finished ; crawling ; 2019 ; Biology Open Volume 8 ; 8 ; https://bio.biologists.org/ ; reingest5.clockss.org:8082 >
-    au < biologists.ClockssBiologistsDrupalPlugin ; frozen ; exists ; 2020 ; Biology Open Volume 9 ; 9 ; https://bio.biologists.org/ ; >
+    au < biologists.ClockssBiologistsDrupalPlugin ; finished ; manifest ; 2020 ; Biology Open Volume 9 ; 9 ; https://bio.biologists.org/ ; reingest1.clockss.org:8082 >
 
   }
 
@@ -192,7 +192,7 @@
     au < biologists.ClockssBiologistsDrupalPlugin ; finished ; crawling ; 2017 ; Development Volume 144 ; 144 ; http://dev.biologists.org/ ; reingest4.clockss.org:8082 >
     au < biologists.ClockssBiologistsDrupalPlugin ; finished ; crawling ; 2018 ; Development Volume 145 ; 145 ; http://dev.biologists.org/ ; reingest4.clockss.org:8082 >
     au < biologists.ClockssBiologistsDrupalPlugin ; finished ; crawling ; 2019 ; Development Volume 146 ; 146 ; https://dev.biologists.org/ ; reingest5.clockss.org:8082 >
-    au < biologists.ClockssBiologistsDrupalPlugin ; frozen ; exists ; 2020 ; Development Volume 147 ; 147 ; https://dev.biologists.org/ ; >
+    au < biologists.ClockssBiologistsDrupalPlugin ; finished ; manifest ; 2020 ; Development Volume 147 ; 147 ; https://dev.biologists.org/ ; reingest2.clockss.org:8085 >
 
   }
 
@@ -219,7 +219,7 @@
     au < biologists.ClockssBiologistsDrupalPlugin ; finished ; crawling ; 2017 ; Disease Models & Mechanisms Volume 10 ; 10 ; http://dmm.biologists.org/ ; reingest1.clockss.org:8082 >
     au < biologists.ClockssBiologistsDrupalPlugin ; finished ; crawling ; 2018 ; Disease Models & Mechanisms Volume 11 ; 11 ; http://dmm.biologists.org/ ; reingest2.clockss.org:8085 >
     au < biologists.ClockssBiologistsDrupalPlugin ; finished ; crawling ; 2019 ; Disease Models & Mechanisms Volume 12 ; 12 ; https://dmm.biologists.org/ ; reingest3.clockss.org:8083 >
-    au < biologists.ClockssBiologistsDrupalPlugin ; frozen ; exists ; 2020 ; Disease Models & Mechanisms Volume 13 ; 13 ; https://dmm.biologists.org/ ; >
+    au < biologists.ClockssBiologistsDrupalPlugin ; finished ; manifest ; 2020 ; Disease Models & Mechanisms Volume 13 ; 13 ; https://dmm.biologists.org/ ; reingest3.clockss.org:8083 >
 
   }
 
@@ -377,7 +377,7 @@
     au < biologists.ClockssBiologistsDrupalPlugin ; finished ; crawling ; 2000 ; Journal of Cell Science Volume 113 ; 113 ; http://jcs.biologists.org/ ; reingest5.clockss.org:8082 >
     au < biologists.ClockssBiologistsDrupalPlugin ; finished ; finished ; 2001 ; Journal of Cell Science Volume 114 ; 114 ; http://jcs.biologists.org/ ; reingest2.clockss.org:8085 >
     au < biologists.ClockssBiologistsDrupalPlugin ; finished ; finished ; 2002 ; Journal of Cell Science Volume 115 ; 115 ; http://jcs.biologists.org/ ; reingest3.clockss.org:8083 >
-    au < biologists.ClockssBiologistsDrupalPlugin ; frozen ; exists ; 2003 ; Journal of Cell Science Volume 116 ; 116 ; http://jcs.biologists.org/ ; >
+    au < biologists.ClockssBiologistsDrupalPlugin ; finished ; manifest ; 2003 ; Journal of Cell Science Volume 116 ; 116 ; http://jcs.biologists.org/ ; reingest4.clockss.org:8082 >
     au < biologists.ClockssBiologistsDrupalPlugin ; finished ; finished ; 2004 ; Journal of Cell Science Volume 117 ; 117 ; http://jcs.biologists.org/ ; reingest4.clockss.org:8082 >
     au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2005 ; Journal of Cell Science Volume 118 ; 118 ; http://jcs.biologists.org/ ; reingest5.clockss.org:8082 >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; Journal of Cell Science Volume 119 ; 119 ; http://jcs.biologists.org/ ; reingest1.clockss.org:8082 >
@@ -394,7 +394,7 @@
     au < biologists.ClockssBiologistsDrupalPlugin ; finished ; crawling ; 2017 ; Journal of Cell Science Volume 130 ; 130 ; http://jcs.biologists.org/ ; reingest4.clockss.org:8082 >
     au < biologists.ClockssBiologistsDrupalPlugin ; finished ; crawling ; 2018 ; Journal of Cell Science Volume 131 ; 131 ; http://jcs.biologists.org/ ; reingest2.clockss.org:8085 >
     au < biologists.ClockssBiologistsDrupalPlugin ; finished ; crawling ; 2019 ; Journal of Cell Science Volume 132 ; 132 ; https://jcs.biologists.org/ ; reingest4.clockss.org:8082 >
-    au < biologists.ClockssBiologistsDrupalPlugin ; frozen ; exists ; 2020 ; Journal of Cell Science Volume 133 ; 133 ; https://jcs.biologists.org/ ; >
+    au < biologists.ClockssBiologistsDrupalPlugin ; finished ; manifest ; 2020 ; Journal of Cell Science Volume 133 ; 133 ; https://jcs.biologists.org/ ; reingest5.clockss.org:8082 >
 
   }
 
@@ -631,7 +631,7 @@
     au < biologists.ClockssBiologistsDrupalPlugin ; finished ; crawling ; 2017 ; Journal of Experimental Biology Volume 220 ; 220 ; http://jeb.biologists.org/ ; reingest3.clockss.org:8083 >
     au < biologists.ClockssBiologistsDrupalPlugin ; finished ; crawling ; 2018 ; Journal of Experimental Biology Volume 221 ; 221 ; http://jeb.biologists.org/ ; reingest4.clockss.org:8082 >
     au < biologists.ClockssBiologistsDrupalPlugin ; finished ; crawling ; 2019 ; Journal of Experimental Biology Volume 222 ; 222 ; https://jeb.biologists.org/ ; reingest5.clockss.org:8082 >
-    au < biologists.ClockssBiologistsDrupalPlugin ; frozen ; exists ; 2020 ; Journal of Experimental Biology Volume 223 ; 223 ; https://jeb.biologists.org/ ; >
+    au < biologists.ClockssBiologistsDrupalPlugin ; finished ; manifest ; 2020 ; Journal of Experimental Biology Volume 223 ; 223 ; https://jeb.biologists.org/ ; reingest1.clockss.org:8082 >
 
   }
 
