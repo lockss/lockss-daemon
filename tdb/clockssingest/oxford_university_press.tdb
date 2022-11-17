@@ -21,19 +21,6 @@
   {
 
     title <
-      name = AIBS Bulletin ;
-      issn = 0096-7645
-    >
-
-    param[journal_id] = 
-    #this title was ONLY in the previous TDB listing - suppressing AU generation 
-
-
-  }
-
-  {
-
-    title <
       name = Acta Biochimica et Biophysica Sinica ;
       issn = 1672-9145 ;
       eissn = 1745-7270 ;
@@ -435,21 +422,6 @@
     au < deepCrawl ; exists ; 2020 ; 2020 ; Alcohol and Alcoholism Volume 55 ; 55 ; >
     au < deepCrawl ; exists ; 2021 ; 2021 ; Alcohol and Alcoholism Volume 56 ; 56 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Alcohol and Alcoholism Volume 57 ; 57 ; >
-
-  }
-
-  {
-
-    title <
-      name = American Entomologist ;
-      issn = 1046-2821 ;
-      eissn = 2155-9902 ;
-      issnl = 1046-2821
-    >
-
-    param[journal_id] =
-    #this title was ONLY in the previous TDB listing - suppressing AU generation
-
 
   }
 
@@ -973,20 +945,6 @@
     au < deepCrawl ; exists ; 2020 ; 2020 ; American Literary History Volume 32 ; 32 ; >
     au < deepCrawl ; exists ; 2021 ; 2021 ; American Literary History Volume 33 ; 33 ; >
     au < crawling ; exists ; 2022 ; 2022 ; American Literary History Volume 34 ; 34 ; >
-
-  }
-
-  {
-
-    title <
-      name = American Zoologist ;
-      issn = 0003-1569 ;
-      issnl = 0003-1569
-    >
-
-    param[journal_id] =
-    #this title was ONLY in the previous TDB listing - suppressing AU generation
-
 
   }
 
@@ -2047,32 +2005,6 @@
   {
 
     title <
-      name = Background ;
-      issn = 0361-5448
-    >
-
-    param[journal_id] =
-    #this title was ONLY in the previous TDB listing - suppressing AU generation
-
-
-  }
-
-  {
-
-    title <
-      name = Background on World Politics ;
-      issn = 1533-6689
-    >
-
-    param[journal_id] =
-    #this title was ONLY in the previous TDB listing - suppressing AU generation
-
-
-  }
-
-  {
-
-    title <
       name = Behavioral Ecology ;
       issn = 1045-2249 ;
       eissn = 1465-7279 ;
@@ -2863,21 +2795,6 @@
   {
 
     title <
-      name = Briefings in Functional Genomics and Proteomics ;
-      issn = 1473-9550 ;
-      eissn = 1477-4062 ;
-      issnl = 1473-9550
-    >
-
-    param[journal_id] =
-    #this title was ONLY in the previous TDB listing - suppressing AU generation
-
-
-  }
-
-  {
-
-    title <
       name = British Journal of Surgery ;
       issn = 0007-1323 ;
       eissn = 1365-2168 ;
@@ -3061,35 +2978,6 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; British Yearbook of International Law Volume 84 ; 84 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; British Yearbook of International Law Volume 85 ; 85 ; >
     au < frozen ; exists ; 2016 ; 2016 ; British Yearbook of International Law Volume 86 ; 86 ; >
-
-  }
-
-  {
-
-    title <
-      name = Bulletin of the Entomological Society of America ;
-      issn = 0013-8754 ;
-      issnl = 0013-8754
-    >
-
-    param[journal_id] =
-    #this title was ONLY in the previous TDB listing - suppressing AU generation
-
-
-  }
-
-  {
-
-    title <
-      name = Bulletin of the London Mathematical Society ;
-      issn = 0024-6093 ;
-      eissn = 1469-2120 ;
-      issnl = 0024-6093
-    >
-
-    param[journal_id] =
-    #this title was ONLY in the previous TDB listing - suppressing AU generation
-
 
   }
 
@@ -4068,21 +3956,6 @@
   {
 
     title <
-      name = Continuing Education in Anaesthesia, Critical Care & Pain ;
-      issn = 1743-1816 ;
-      eissn = 1743-1824 ;
-      issnl = 1743-1816
-    >
-
-    param[journal_id] =
-    #this title was ONLY in the previous TDB listing - suppressing AU generation
-
-
-  }
-
-  {
-
-    title <
       name = Contributions to Political Economy ;
       issn = 0277-5921 ;
       eissn = 1464-3588 ;
@@ -4475,19 +4348,6 @@
     au < deepCrawl ; exists ; 2020 ; 2020 ; Diseases of the Esophagus Volume 33 ; 33 ; >
     au < frozen ; exists ; 2021 ; 2021 ; Diseases of the Esophagus Volume 34 ; 34 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Diseases of the Esophagus Volume 35 ; 35 ; >
-
-  }
-
-  {
-
-    title <
-      name = Dynamics and Statistics of the Climate System ;
-      eissn = 2059-6987
-    >
-
-    param[journal_id] =
-    #this title was ONLY in the previous TDB listing - suppressing AU generation
-
 
   }
 
@@ -5624,21 +5484,6 @@
   {
 
     title <
-      name = European Journal of Echocardiography ;
-      issn = 1525-2167 ;
-      eissn = 1532-2114 ;
-      issnl = 1525-2167
-    >
-
-    param[journal_id] =
-    #this title was ONLY in the previous TDB listing - suppressing AU generation
-
-
-  }
-
-  {
-
-    title <
       name = European Journal of Cardiovascular Nursing ;
       issn = 1474-5151 ;
       eissn = 1873-1953 ;
@@ -6060,21 +5905,6 @@
   {
 
     title <
-      name = FEMS Immunology & Medical Microbiology ;
-      issn = 0928-8244 ;
-      eissn = 1574-695X ;
-      issnl = 0928-8244
-    >
-
-    param[journal_id] =
-    #this title was ONLY in the previous TDB listing - suppressing AU generation
-
-
-  }
-
-  {
-
-    title <
       name = FEMS Microbiology Ecology ;
       issn = 0168-6496 ;
       eissn = 1574-6941 ;
@@ -6124,20 +5954,6 @@
     au < frozen ; exists ; 2020 ; 2020 ; FEMS Microbiology Ecology Volume 96 ; 96 ; >
     au < crawling ; exists ; 2021 ; 2021 ; FEMS Microbiology Ecology Volume 97 ; 97 ; >
     au < crawling ; exists ; 2022 ; 2022 ; FEMS Microbiology Ecology Volume 98 ; 98 ; >
-
-  }
-
-  {
-
-    title <
-      name = FEMS Microbiology Immunology ;
-      eissn = 0920-8534 ;
-      issnl = 0920-8534
-    >
-
-    param[journal_id] =
-    #this title was ONLY in the previous TDB listing - suppressing AU generation
-
 
   }
 
@@ -7951,21 +7767,6 @@
   {
 
     title <
-      name = ICSID Review: Foreign Investment Law Journal ;
-      issn = 0258-3690 ;
-      eissn = 2049-1999 ;
-      issnl = 0258-3690
-    >
-
-    param[journal_id] =
-    #this title was ONLY in the previous TDB listing - suppressing AU generation
-
-
-  }
-
-  {
-
-    title <
       name = ILAR Journal ;
       issn = 1084-2020 ;
       eissn = 1930-6180 ;
@@ -8123,21 +7924,6 @@
     au < deepCrawl ; exists ; 2020 ; 2020 ; IMA Journal of Management Mathematics Volume 31 ; 31 ; >
     au < frozen ; exists ; 2021 ; 2021 ; IMA Journal of Management Mathematics Volume 32 ; 32 ; >
     au < crawling ; exists ; 2022 ; 2022 ; IMA Journal of Management Mathematics Volume 33 ; 33 ; >
-
-  }
-
-  {
-
-    title <
-      name = IMA Journal of Mathematical Control and Information ;
-      issn = 0265-0754 ;
-      eissn = 1471-6887 ;
-      issnl = 0265-0754
-    >
-
-    param[journal_id] =
-    #this title was ONLY in the previous TDB listing - suppressing AU generation
-
 
   }
 
@@ -8576,21 +8362,7 @@
 
   }
 
-  {
-
-    title <
-      name = Interacting with Computers ;
-      issn = 0953-5438 ;
-      eissn = 1873-7951
-    >
-
-    param[journal_id] =
-    #this title was ONLY in the previous TDB listing - suppressing AU generation
-
-
-  }
   #Publisher and previous TDB differ on title - Interactive CardioVascular and Thoracic Surgery vs Interactive Cardiovascular and Thoracic Surgery
-
   {
 
     title <
@@ -8752,18 +8524,6 @@
     au < deepCrawl ; exists ; 2020 ; 2020 ; International Immunology Volume 32 ; 32 ; >
     au < frozen ; exists ; 2021 ; 2021 ; International Immunology Volume 33 ; 33 ; >
     au < crawling ; exists ; 2022 ; 2022 ; International Immunology Volume 34 ; 34 ; >
-
-  }
-
-  {
-
-    title <
-      name = International Immunology Meeting Abstracts
-    >
-
-    param[journal_id] =
-    #this title was ONLY in the previous TDB listing - suppressing AU generation
-
 
   }
 
@@ -10688,21 +10448,6 @@
   {
 
     title <
-      name = Journal of Electron Microscopy ;
-      issn = 0022-0744 ;
-      eissn = 1477-9986 ;
-      issnl = 0022-0744
-    >
-
-    param[journal_id] =
-    #this title was ONLY in the previous TDB listing - suppressing AU generation
-
-
-  }
-
-  {
-
-    title <
       name = Journal of Environmental Law ;
       issn = 0952-8873 ;
       eissn = 1464-374X ;
@@ -11686,21 +11431,6 @@
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Medical Entomology Volume 57 ; 57 ; >
     au < manifest ;  exists ; 2021 ; 2021 ; Journal of Medical Entomology Volume 58 ; 58 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Journal of Medical Entomology Volume 59 ; 59 ; >
-
-  }
-
-  {
-
-    title <
-      name = Journal of Medical and Veterinary Mycology ;
-      issn = 0268-1218 ;
-      eissn = 1365-280X ;
-      issnl = 0268-1218
-    >
-
-    param[journal_id] =
-    #this title was ONLY in the previous TDB listing - suppressing AU generation
-
 
   }
 
@@ -12750,21 +12480,6 @@
   {
 
     title <
-      name = Journal of Topology ;
-      issn = 1753-8416 ;
-      eissn = 1753-8424 ;
-      issnl = 1753-8416
-    >
-
-    param[journal_id] =
-    #this title was ONLY in the previous TDB listing - suppressing AU generation
-
-
-  }
-
-  {
-
-    title <
       name = Journal of Travel Medicine ;
       issn = 1195-1982 ;
       eissn = 1708-8305
@@ -13305,34 +13020,6 @@
   {
 
     title <
-      name = Journal of Law and the Biosciences ;
-      eissn = 2053-9711
-    >
-
-    param[journal_id] =
-    #this title was ONLY in the previous TDB listing - suppressing AU generation
-
-
-  }
-
-  {
-
-    title <
-      name = Journal of the London Mathematical Society ;
-      issn = 0024-6107 ;
-      eissn = 1469-7750 ;
-      issnl = 0024-6107
-    >
-
-    param[journal_id] =
-    #this title was ONLY in the previous TDB listing - suppressing AU generation
-
-
-  }
-
-  {
-
-    title <
       name = Journal of the Pediatric Infectious Diseases Society ;
       issn = 2048-7193 ;
       eissn = 2048-7207 ;
@@ -13572,21 +13259,6 @@
     au < deepCrawl ; exists ; 2020 ; 2020 ; Literary Imagination Volume 22 ; 22 ; >
     au < frozen ; exists ; 2021 ; 2021 ; Literary Imagination Volume 23 ; 23 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Literary Imagination Volume 24 ; 24 ; >
-
-  }
-
-  {
-
-    title <
-      name = Literary and Linguistic Computing ;
-      issn = 0268-1145 ;
-      eissn = 1477-4615 ;
-      issnl = 0268-1145
-    >
-
-    param[journal_id] =
-    #this title was ONLY in the previous TDB listing - suppressing AU generation
-
 
   }
 
@@ -14018,20 +13690,6 @@
   {
 
     title <
-      name = Mershon International Studies Review ;
-      issn = 1079-1760 ;
-      issnl = 1079-1760
-    >
-
-    param[journal_id] =
-    #this title was ONLY in the previous TDB listing - suppressing AU generation
-
-
-  }
-
-  {
-
-    title <
       name = Microscopy ;
       issn = 2050-5698 ;
       eissn = 2050-5701 ;
@@ -14435,21 +14093,6 @@
   {
 
     title <
-      name = Molecular Plant ;
-      issn = 1674-2052 ;
-      eissn = 1752-9867 ;
-      issnl = 1674-2052
-    >
-
-    param[journal_id] =
-    #this title was ONLY in the previous TDB listing - suppressing AU generation
-
-
-  }
-
-  {
-
-    title <
       name = Monthly Notices of the Royal Astronomical Society ;
       issn = 0035-8711 ;
       eissn = 1365-2966 ;
@@ -14517,19 +14160,6 @@
     au < frozen ; exists ; 2020 ; 2020 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 491-499 ; 491-499 ; >
     au < frozen ; exists ; 2021 ; 2021 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 500-508 ; 500-508 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 509-517 ; 509-517 ; >
-
-  }
-
-  {
-
-    title <
-      name = Multimedia Manual Cardio-Thoracic Surgery ;
-      eissn = 1813-9175
-    >
-
-    param[journal_id] =
-    #this title was ONLY in the previous TDB listing - suppressing AU generation
-
 
   }
 
@@ -14842,21 +14472,6 @@
   {
 
     title <
-      name = NDT Plus ;
-      issn = 1753-0784 ;
-      eissn = 1753-0792 ;
-      issnl = 1753-0784
-    >
-
-    param[journal_id] =
-    #this title was ONLY in the previous TDB listing - suppressing AU generation
-
-
-  }
-
-  {
-
-    title <
       name = National Science Review ;
       issn = 2095-5138 ;
       eissn = 2053-714X
@@ -15121,21 +14736,6 @@
     au < notReady ; exists ; 2020 ; 2020 ; Nicotine & Tobacco Research Volume 22 ; 22 ; >
     au < frozen ; exists ; 2021 ; 2021 ; Nicotine & Tobacco Research Volume 23 ; 23 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Nicotine & Tobacco Research Volume 24 ; 24 ; >
-
-  }
-
-  {
-
-    title <
-      name = Nicotine and Tobacco Research ;
-      issn = 1462-2203 ;
-      eissn = 1469-994X ;
-      issnl = 1462-2203
-    >
-
-    param[journal_id] =
-    #this title was ONLY in the previous TDB listing - suppressing AU generation
-
 
   }
 
@@ -16634,20 +16234,6 @@
   {
 
     title <
-      name = Political Analysis ;
-      issn = 1047-1987 ;
-      eissn = 1476-4989 ;
-      issnl = 1047-1987
-    >
-
-    param[journal_id] =
-    #this title was ONLY in the previous TDB listing - suppressing AU generation
-
-  }
-
-  {
-
-    title <
       name = Political Science Quarterly ;
       issn = 0032-3195 ;
       eissn = 1538-165X ;
@@ -17864,19 +17450,6 @@
   {
 
     title <
-      name = Sabouraudia ;
-      issn = 0036-2174
-    >
-
-    param[journal_id] =
-    #this title was ONLY in the previous TDB listing - suppressing AU generation
-
-
-  }
-
-  {
-
-    title <
       name = Schizophrenia Bulletin ;
       issn = 0586-7614 ;
       eissn = 1745-1701 ;
@@ -18457,21 +18030,6 @@
     au < frozen ; exists ; 2020 ; 2020 ; Social Politics: International Studies in Gender, State & Society Volume 27 ; 27 ; >
     au < manifest ;  exists ; 2021 ; 2021 ; Social Politics: International Studies in Gender, State & Society Volume 28 ; 28 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Social Politics: International Studies in Gender, State & Society Volume 29 ; 29 ; >
-
-  }
-
-  {
-
-    title <
-      name = Social Politics: International Studies in Gender, State and Society ;
-      issn = 1072-4745 ;
-      eissn = 1468-2893 ;
-      issnl = 1072-4745
-    >
-
-    param[journal_id] =
-    #this title was ONLY in the previous TDB listing - suppressing AU generation
-
 
   }
 
@@ -19378,7 +18936,6 @@
 
     param[journal_id] = annweh #title changed to Annals of Work Exposures and Health volume 61+
     #continued_by = 2398-7308
-    #this title was ONLY in the previous TDB listing - suppressing AU generation
 
     au < frozen ; exists ; 2016 ; 2016 ; The Annals of Occupational Hygiene Volume 60 ; 60 ; >
 
@@ -22696,20 +22253,6 @@
     au < deepCrawl ; exists ; 2020 ; 2020 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 114 ; 114 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 115 ; 115 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 116 ; 116 ; >
-
-  }
-
-  {
-
-    title <
-      name = Transactions of the London Mathematical Society ;
-      eissn = 2052-4986 ;
-      issnl = 2052-4986
-    >
-
-    param[journal_id] =
-    #this title was ONLY in the previous TDB listing - suppressing AU generation
-
 
   }
 
