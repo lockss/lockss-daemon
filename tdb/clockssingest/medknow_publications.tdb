@@ -2318,7 +2318,7 @@
     >
 #    param[base_url] = https://ijos.in/
 
-    param[journal_issn] = 2772-915X
+    param[journal_issn] = 2773-1367
 
     au < exists ; exists ; 2021 ; International Journal of Orthopaedic Surgery Volume 29 ; 2021 ; 29 ; https://ijos.in/ ; ; >
     au < expected ; exists ; 2022 ; International Journal of Orthopaedic Surgery Volume 30 ; 2022 ; 30 ; https://ijos.in/ ; ; >
@@ -5202,6 +5202,7 @@
         eissn = 2455-7765
       >
       #issns. journal changed name from Asia Pacific Clinical and Translational Nervous System Diseases
+      #issns. journal also changed issns, but is on the same website, same journal_issn, and same base_url.
       #see http://www.sherpa.ac.uk/romeo/journals.php?la=en/&fIDnum=%7C&mode=advanced&id=89&letter=A
       param[journal_issn] = 2542-3932
 #      param[base_url] = https://www.actnjournal.com/backissues.asp. 2016-2020
@@ -5461,10 +5462,10 @@
 
       title <
         name = Clinical Trials in Degenerative Diseases ;
-        issn = 2468-5658 ;
-        eissn = 2468-5666
+        issn = 2542-3975 ;
+        eissn = 2542-3983
       >
-      #changed names from Clinical and Translational Degenerative Diseases. Changed issns, but not url.
+      #changed names from Clinical and Translational Degenerative Diseases. Changed issns.
       #see https://v2.sherpa.ac.uk/id/publication/32465
 
       param[journal_issn] = 2542-3975
@@ -5487,8 +5488,9 @@
         issn = 2542-4157 ;
         eissn = 2542-4165
       >
-      #changed name from Clinical and Translational Orthopedics and changed issn, but not url.
+      #changed name from Clinical and Translational Orthopedics and changed issn.
       #Changed name to BoneMaterials
+      #Moved to Wolters Kluwer
 
       param[journal_issn] = 2542-4157
 #      param[base_url] = http://www.clinicalto.com/
@@ -5497,7 +5499,7 @@
       au < finished ; frozen ; 2016 ; Clinical Trials in Orthopedic Disorders Volume 1 ; 2016 ; 1 ; http://www.clinicalto.com/ ; ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2017 ; Clinical Trials in Orthopedic Disorders Volume 2 ; 2017 ; 2 ; http://www.clinicalto.com/ ; ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2018 ; Clinical Trials in Orthopedic Disorders Volume 3 ; 2018 ; 3 ; http://www.clinicalto.com/ ; ; reingest3.clockss.org:8083 >
-      au < notReady ; exists ; 2019 ; Clinical Trials in Orthopedic Disorders Volume 4 ; 2019 ; 4 ; https://www.clinicalto.com/ ; ; >
+      au < doNotProcess ; doNotProcess ; 2019 ; Clinical Trials in Orthopedic Disorders Volume 4 ; 2019 ; 4 ; https://www.clinicalto.com/ ; ; >
       au < crawling ; exists ; 2020 ; Clinical Trials in Orthopedic Disorders Volume 5 ; 2020 ; 5 ; https://www.clinicalto.com/ ; ; >
 
   }

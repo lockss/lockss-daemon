@@ -5171,6 +5171,21 @@
   {
 
       title <
+        name = Brain Network and Modulation ;
+        issn = 2773-2398 ;
+        eissn = 2773-2401
+      >
+      param[journal_issn] = 2773-2398
+      #Moved from http://www.actnjournal.com/
+      #Moved to https://www.bnmjournal.com/
+
+      au < exists ; 2022 ; Brain Network and Modulation Volume 1 ; 2022 ; 1 ; https://www.bnmjournal.com/ >
+
+  }
+
+  {
+
+      title <
         name = Asian Journal of Oncology ;
         issn = 2454-6798 ;
         eissn = 2455-4618
@@ -5396,10 +5411,10 @@
 
       title <
         name = Clinical Trials in Degenerative Diseases ;
-        issn = 2468-5658 ;
-        eissn = 2468-5666
+        issn = 2542-3975 ;
+        eissn = 2542-3983
       >
-      #changed names from Clinical and Translational Degenerative Diseases. Changed issns, but not url.
+      #changed names from Clinical and Translational Degenerative Diseases. Changed issns.
       #see http://www.sherpa.ac.uk/romeo/journals.php?id=89&fIDnum=|&mode=advanced&la=en/&letter=C
 
       param[journal_issn] = 2542-3975
@@ -5420,16 +5435,17 @@
 
       title <
         name = Clinical Trials in Orthopedic Disorders ;
-        issn = 2468-5674 ;
-        eissn = 2468-564X
+        issn = 2542-4157 ;
+        eissn = 2542-4165
       >
-      #changed name from Clinical and Translational Orthopedics and changed issn, but not url.
+      #changed name from Clinical and Translational Orthopedics and changed issn.
       #see http://www.sherpa.ac.uk/romeo/journals.php?id=89&fIDnum=|&mode=advanced&la=en/&letter=C
       #Changed name to BoneMaterials
       #Moved to Wolters Kluwer
 
       param[journal_issn] = 2542-4157
 #      param[base_url] = http://www.clinicalto.com/
+      #archived at Medknow. Not crawl-able. No permission statement.
 
       au < released ; 2016 ; Clinical Trials in Orthopedic Disorders Volume 1 ; 2016 ; 1 ; http://www.clinicalto.com/ >
       au < released ; 2017 ; Clinical Trials in Orthopedic Disorders Volume 2 ; 2017 ; 2 ; http://www.clinicalto.com/ >
@@ -7444,14 +7460,11 @@
 
   {
     title <
-      name = Journal of Ophthalmology Clinics and Research ;
-      issn = 0000-0000 ;
-      eissn = 0000-0000 ;
-      issnl = 0000-0000
+      name = Journal of Ophthalmology Clinics and Research
     >
 #    param[base_url] = https://www.jocr.in/
 
-    param[journal_issn] = 0000-0000
+    param[journal_issn] = WKMP-0230
 
     au < exists ; 2021 ; Journal of Ophthalmology Clinics and Research Volume 1 ; 2021 ; 1 ; https://www.jocr.in/ >
     au < expected ; 2022 ; Journal of Ophthalmology Clinics and Research Volume 2 ; 2022 ; 2 ; https://www.jocr.in/ >
@@ -8654,7 +8667,8 @@
 
       title <
         name = Tanta Dental Journal ;
-        eissn = 1687-8574
+        issn = 1687-8574 ;
+        eissn = 2536-9644
       >
 
       param[journal_issn] = 1687-8574
@@ -10030,13 +10044,13 @@
       au < down ; 2012 ; International Journal of Food and Nutritional Sciences Volume 1 ; 2012 ; 1 ; https://www.ijfans.org/ >
       au < down ; 2013 ; International Journal of Food and Nutritional Sciences Volume 2 ; 2013 ; 2 ; https://www.ijfans.org/ >
       au < down ; 2014 ; International Journal of Food and Nutritional Sciences Volume 3 ; 2014 ; 3 ; https://www.ijfans.org/ >
-      au < doNotProcess ; 2015 ; International Journal of Food and Nutritional Sciences Volume 4 ; 2015 ; 4 ; https://ijfans.org/ > #500
-      au < doNotProcess ; 2016 ; International Journal of Food and Nutritional Sciences Volume 5 ; 2016 ; 5 ; https://ijfans.org/ > #500
-      au < doNotProcess ; 2017 ; International Journal of Food and Nutritional Sciences Volume 6 ; 2017 ; 6 ; https://ijfans.org/ > #500
-      au < doNotProcess ; 2018 ; International Journal of Food and Nutritional Sciences Volume 7 ; 2018 ; 7 ; https://ijfans.org/ > #500
-      au < doNotProcess ; 2019 ; International Journal of Food and Nutritional Sciences Volume 8 ; 2019 ; 8 ; https://ijfans.org/ > #500
-      au < doNotProcess ; 2020 ; International Journal of Food and Nutritional Sciences Volume 9 ; 2020 ; 9 ; https://ijfans.org/ >
-      au < doNotProcess ; 2021 ; International Journal of Food and Nutritional Sciences Volume 10 ; 2021 ; 10 ; https://ijfans.org/ >
+      au < doNotProcess ; 2015 ; International Journal of Food and Nutritional Sciences Volume 4 ; 2015 ; 4 ; https://www.ijfans.org/ > #500
+      au < doNotProcess ; 2016 ; International Journal of Food and Nutritional Sciences Volume 5 ; 2016 ; 5 ; https://www.ijfans.org/ > #500
+      au < doNotProcess ; 2017 ; International Journal of Food and Nutritional Sciences Volume 6 ; 2017 ; 6 ; https://www.ijfans.org/ > #500
+      au < doNotProcess ; 2018 ; International Journal of Food and Nutritional Sciences Volume 7 ; 2018 ; 7 ; https://www.ijfans.org/ > #500
+      au < doNotProcess ; 2019 ; International Journal of Food and Nutritional Sciences Volume 8 ; 2019 ; 8 ; https://www.ijfans.org/ > #500
+      au < doNotProcess ; 2020 ; International Journal of Food and Nutritional Sciences Volume 9 ; 2020 ; 9 ; https://www.ijfans.org/ >
+      au < doNotProcess ; 2021 ; International Journal of Food and Nutritional Sciences Volume 10 ; 2021 ; 10 ; https://www.ijfans.org/ >
       #deactivated
   }
 
@@ -10190,8 +10204,8 @@
 
       title <
         name = International Journal of the Cardiovascular Academy ;
-        issn = 2618-6012 ;
-        eissn = 2405-8181
+        issn = 2405-8181 ;
+        eissn = 2405-819X
       >
 
       param[journal_issn] = 2405-8181
