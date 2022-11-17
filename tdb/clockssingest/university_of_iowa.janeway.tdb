@@ -12,6 +12,12 @@
     plugin = org.lockss.plugin.janeway.universityofiowa.ClockssUniversityofIowaPlugin
     param[base_url] = https://pubs.lib.uiowa.edu/
     implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
+    
+    ##########
+    ### CLOCKSS Contracted titles are:
+    ### Poroi
+    ### Walt Whitman Quarterly Review
+    ##########
 
     {
       title <
@@ -89,7 +95,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Walt Whitman Quarterly Review Volume 33 ; 33 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Walt Whitman Quarterly Review Volume 34 ; 34 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Walt Whitman Quarterly Review Volume 35 ; 35 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; Walt Whitman Quarterly Review Volume 36 [Janeway] ; 36 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; Walt Whitman Quarterly Review Volume 36 ; 36 ; >
       au < manifest ; exists ; 2019 ; 2019 ; Walt Whitman Quarterly Review Volume 37 ; 37 ; >
       au < manifest ; exists ; 2020 ; 2020 ; Walt Whitman Quarterly Review Volume 38 ; 38 ; >
       au < manifest ; exists ; 2021 ; 2021 ; Walt Whitman Quarterly Review Volume 39 ; 39 ; >
