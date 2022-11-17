@@ -183,8 +183,8 @@
    name = Georg Thieme Verlag Books ;
    type = bookSeries
   >
-   au < testing ; exists ; 1955 ; 9783131998040 ; 9783131962140 ; 10.1055/b-003-125737 ; Physikalische Methoden [Forschungsmethoden] (9783131962140) ; >
-   au < testing ; exists ; 1983 ; 9783132136045 ; 9783131960344 ; 10.1055/b-004-135634 ; Organobor-Verbindungen (9783131960344) ; >
+   au < manifest ; exists ; 1955 ; 9783131998040 ; 9783131962140 ; 10.1055/b-003-125737 ; Physikalische Methoden [Forschungsmethoden] (9783131962140) ; >
+   au < manifest ; exists ; 1983 ; 9783132136045 ; 9783131960344 ; 10.1055/b-004-135634 ; Organobor-Verbindungen (9783131960344) ; >
    au < finished ; finished ; 2002 ; 9781588900876 ; 9781604064247 ; 10.1055/b-002-52050 ; Internal Fixation in Osteoporotic Bone (9781604064247) ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2003 ; 9781588901637 ; 9783131607317 ; 10.1055/b-002-52055 ; Middle Ear and Mastoid Microsurgery (9783131607317) ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2004 ; 9783131186614 ; 9783131836618 ; 10.1055/b-003-121809 ; Category 2, Hetarenes and Related Ring Systems (9783131836618) ; reingest1.clockss.org:8082 >
@@ -1551,7 +1551,7 @@
    au < finished ; finished ; 2018 ; 9783132424784 ; 9783132424890 ; 10.1055/b-006-149285 ; Transösophageale Echokardiografie (9783132424890) ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2018 ; 9781626237162 ; 9781626237179 ; 10.1055/b-006-149756 ; Video Atlas of Ophthalmic Suturing (9781626237179) ; reingest2.clockss.org:8085 >
 
-   au < testing ; exists ; 1987 ;   ; 9783132067141 ; 10.1055/b-003-128289 ; Register der Stoffklassen (9783132067141) ; >
+   au < manifest ; exists ; 1987 ;   ; 9783132067141 ; 10.1055/b-003-128289 ; Register der Stoffklassen (9783132067141) ; >
    au < finished ; frozen ; 2004 ; 9783830441007 ; 9783132414501 ; 10.1055/b-004-139127 ; Atlas der Röntgenanatomie der Katze (9783132414501) ; reingest2.clockss.org:8085 >
    au < finished ; frozen ; 2004 ; 9783830441533 ; 9783132424968 ; 10.1055/b-006-149399 ; Lehrbuch der Anatomie der Haustiere Band V (9783132424968) ; reingest5.clockss.org:8082 >
    au < frozen ; exists ; 2005 ; 9783131323316 ; 9783132424456 ; 10.1055/b-006-161669 ; Das Neue Denkmodell in der Physiotherapie ? Band 2: Bewegungsentwicklung und Bewegungskontrolle (9783132424456) ; >
