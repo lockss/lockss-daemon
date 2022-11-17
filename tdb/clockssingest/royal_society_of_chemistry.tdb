@@ -1743,10 +1743,10 @@
 
       title <
         name = Journal and Proceedings of the Institute of Chemistry of Great Britain and Ireland ;
-        issn = 0368-3958
+        issn = 2051-1671
       >
 
-      comment[years] = Published 1920-1949
+      comment[years] = Published 1920-1943
       param[journal_code] = jg
       #complete
 
@@ -2461,7 +2461,8 @@
 
       title <
         name = Journal of the Royal Institute of Chemistry ;
-        issn = 0368-3958
+        issn = 0368-3958 ;
+        eissn = 2050-9235
       >
 
       comment[years] = Published 1950-1964
@@ -2789,7 +2790,8 @@
 
       title <
         name = Proceedings of the Institute of Chemistry of Great Britain and Ireland ;
-        issn = 0368-3958
+        issn = 2051-168X ;
+        eissn = 2051-1698
       >
 
       comment[years] = Published 1877-1919
