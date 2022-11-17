@@ -31,18 +31,18 @@
       param[base_url] = https://www.authorship.ugent.be/
       param[journal_id] = authorship
 
-      au < testing ; exists ; 2011 ; 2011 ; 2011 ; Authorship Volume 2011 ; >
-      au < testing ; exists ; 2012 ; 2012 ; 2012 ; Authorship Volume 2012 ; >
-      au < testing ; exists ; 2013 ; 2013 ; 2013 ; Authorship Volume 2013 ; >
-      au < testing ; exists ; 2014 ; 2014 ; 2014 ; Authorship Volume 2014 ; >
-      au < testing ; exists ; 2015 ; 2015 ; 2015 ; Authorship Volume 2015 ; >
-      au < testing ; exists ; 2016 ; 2016 ; 2016 ; Authorship Volume 2016 ; >
-      au < testing ; exists ; 2017 ; 2017 ; 2017 ; Authorship Volume 2017 ; >
-      au < testing ; exists ; 2018 ; 2018 ; 2018 ; Authorship Volume 2018 ; >
-      au < testing ; exists ; 2019 ; 2019 ; 2019 ; Authorship Volume 2019 ; >
-      au < testing ; exists ; 2020 ; 2020 ; 2020 ; Authorship Volume 2020 ; >
-      au < testing ; exists ; 2021 ; 2021 ; 2021 ; Authorship Volume 2021 ; >
-      au < testing ; exists ; 2022 ; 2022 ; 2022 ; Authorship Volume 2022 ; >
+      au < exists ; exists ; 2011 ; 2011 ; 2011 ; Authorship Volume 2011 ; >
+      au < exists ; exists ; 2012 ; 2012 ; 2012 ; Authorship Volume 2012 ; >
+      au < exists ; exists ; 2013 ; 2013 ; 2013 ; Authorship Volume 2013 ; >
+      au < exists ; exists ; 2014 ; 2014 ; 2014 ; Authorship Volume 2014 ; >
+      au < exists ; exists ; 2015 ; 2015 ; 2015 ; Authorship Volume 2015 ; >
+      au < exists ; exists ; 2016 ; 2016 ; 2016 ; Authorship Volume 2016 ; >
+      au < exists ; exists ; 2017 ; 2017 ; 2017 ; Authorship Volume 2017 ; >
+      au < exists ; exists ; 2018 ; 2018 ; 2018 ; Authorship Volume 2018 ; >
+      au < exists ; exists ; 2019 ; 2019 ; 2019 ; Authorship Volume 2019 ; >
+      au < exists ; exists ; 2020 ; 2020 ; 2020 ; Authorship Volume 2020 ; >
+      au < exists ; exists ; 2021 ; 2021 ; 2021 ; Authorship Volume 2021 ; >
+      au < exists ; exists ; 2022 ; 2022 ; 2022 ; Authorship Volume 2022 ; >
 
   }
 
@@ -57,44 +57,44 @@
       param[base_url] = https://documenta.ugent.be/
       param[journal_id] = documenta
 
-      au < testing ; exists ; 1983 ; 1983 ; 1983 ; Documenta Volume 1983 ; >
-      au < testing ; exists ; 1984 ; 1984 ; 1984 ; Documenta Volume 1984 ; >
-      au < testing ; exists ; 1985 ; 1985 ; 1985 ; Documenta Volume 1985 ; >
-      au < testing ; exists ; 1986 ; 1986 ; 1986 ; Documenta Volume 1986 ; >
-      au < testing ; exists ; 1987 ; 1987 ; 1987 ; Documenta Volume 1987 ; >
-      au < testing ; exists ; 1988 ; 1988 ; 1988 ; Documenta Volume 1988 ; >
-      au < testing ; exists ; 1989 ; 1989 ; 1989 ; Documenta Volume 1989 ; >
-      au < testing ; exists ; 1990 ; 1990 ; 1990 ; Documenta Volume 1990 ; >
-      au < testing ; exists ; 1991 ; 1991 ; 1991 ; Documenta Volume 1991 ; >
-      au < testing ; exists ; 1992 ; 1992 ; 1992 ; Documenta Volume 1992 ; >
-      au < testing ; exists ; 1993 ; 1993 ; 1993 ; Documenta Volume 1993 ; >
-      au < testing ; exists ; 1994 ; 1994 ; 1994 ; Documenta Volume 1994 ; >
-      au < testing ; exists ; 1995 ; 1995 ; 1995 ; Documenta Volume 1995 ; >
-      au < testing ; exists ; 1996 ; 1996 ; 1996 ; Documenta Volume 1996 ; >
-      au < testing ; exists ; 1997 ; 1997 ; 1997 ; Documenta Volume 1997 ; >
-      au < testing ; exists ; 1998 ; 1998 ; 1998 ; Documenta Volume 1998 ; >
-      au < testing ; exists ; 1999 ; 1999 ; 1999 ; Documenta Volume 1999 ; >
-      au < testing ; exists ; 2000 ; 2000 ; 2000 ; Documenta Volume 2000 ; >
-      au < testing ; exists ; 2001 ; 2001 ; 2001 ; Documenta Volume 2001 ; >
-      au < testing ; exists ; 2002 ; 2002 ; 2002 ; Documenta Volume 2002 ; >
-      au < testing ; exists ; 2003 ; 2003 ; 2003 ; Documenta Volume 2003 ; >
-      au < testing ; exists ; 2004 ; 2004 ; 2004 ; Documenta Volume 2004 ; >
-      au < testing ; exists ; 2005 ; 2005 ; 2005 ; Documenta Volume 2005 ; >
-      au < testing ; exists ; 2006 ; 2006 ; 2006 ; Documenta Volume 2006 ; >
-      au < testing ; exists ; 2007 ; 2007 ; 2007 ; Documenta Volume 2007 ; >
-      au < testing ; exists ; 2008 ; 2008 ; 2008 ; Documenta Volume 2008 ; >
-      au < testing ; exists ; 2009 ; 2009 ; 2009 ; Documenta Volume 2009 ; >
-      au < testing ; exists ; 2010 ; 2010 ; 2010 ; Documenta Volume 2010 ; >
-      au < testing ; exists ; 2011 ; 2011 ; 2011 ; Documenta Volume 2011 ; >
-      au < testing ; exists ; 2012 ; 2012 ; 2012 ; Documenta Volume 2012 ; >
-      au < testing ; exists ; 2013 ; 2013 ; 2013 ; Documenta Volume 2013 ; >
-      au < testing ; exists ; 2014 ; 2014 ; 2014 ; Documenta Volume 2014 ; >
-      au < testing ; exists ; 2015 ; 2015 ; 2015 ; Documenta Volume 2015 ; >
-      au < testing ; exists ; 2016 ; 2016 ; 2016 ; Documenta Volume 2016 ; >
-      au < testing ; exists ; 2017 ; 2017 ; 2017 ; Documenta Volume 2017 ; >
-      au < testing ; exists ; 2018 ; 2018 ; 2018 ; Documenta Volume 2018 ; >
-      au < testing ; exists ; 2019 ; 2019 ; 2019 ; Documenta Volume 2019 ; >
-      au < testing ; exists ; 2020 ; 2020 ; 2020 ; Documenta Volume 2020 ; >
+      au < exists ; exists ; 1983 ; 1983 ; 1983 ; Documenta Volume 1983 ; >
+      au < exists ; exists ; 1984 ; 1984 ; 1984 ; Documenta Volume 1984 ; >
+      au < exists ; exists ; 1985 ; 1985 ; 1985 ; Documenta Volume 1985 ; >
+      au < exists ; exists ; 1986 ; 1986 ; 1986 ; Documenta Volume 1986 ; >
+      au < exists ; exists ; 1987 ; 1987 ; 1987 ; Documenta Volume 1987 ; >
+      au < exists ; exists ; 1988 ; 1988 ; 1988 ; Documenta Volume 1988 ; >
+      au < exists ; exists ; 1989 ; 1989 ; 1989 ; Documenta Volume 1989 ; >
+      au < exists ; exists ; 1990 ; 1990 ; 1990 ; Documenta Volume 1990 ; >
+      au < exists ; exists ; 1991 ; 1991 ; 1991 ; Documenta Volume 1991 ; >
+      au < exists ; exists ; 1992 ; 1992 ; 1992 ; Documenta Volume 1992 ; >
+      au < exists ; exists ; 1993 ; 1993 ; 1993 ; Documenta Volume 1993 ; >
+      au < exists ; exists ; 1994 ; 1994 ; 1994 ; Documenta Volume 1994 ; >
+      au < exists ; exists ; 1995 ; 1995 ; 1995 ; Documenta Volume 1995 ; >
+      au < exists ; exists ; 1996 ; 1996 ; 1996 ; Documenta Volume 1996 ; >
+      au < exists ; exists ; 1997 ; 1997 ; 1997 ; Documenta Volume 1997 ; >
+      au < exists ; exists ; 1998 ; 1998 ; 1998 ; Documenta Volume 1998 ; >
+      au < exists ; exists ; 1999 ; 1999 ; 1999 ; Documenta Volume 1999 ; >
+      au < exists ; exists ; 2000 ; 2000 ; 2000 ; Documenta Volume 2000 ; >
+      au < exists ; exists ; 2001 ; 2001 ; 2001 ; Documenta Volume 2001 ; >
+      au < exists ; exists ; 2002 ; 2002 ; 2002 ; Documenta Volume 2002 ; >
+      au < exists ; exists ; 2003 ; 2003 ; 2003 ; Documenta Volume 2003 ; >
+      au < exists ; exists ; 2004 ; 2004 ; 2004 ; Documenta Volume 2004 ; >
+      au < exists ; exists ; 2005 ; 2005 ; 2005 ; Documenta Volume 2005 ; >
+      au < exists ; exists ; 2006 ; 2006 ; 2006 ; Documenta Volume 2006 ; >
+      au < exists ; exists ; 2007 ; 2007 ; 2007 ; Documenta Volume 2007 ; >
+      au < exists ; exists ; 2008 ; 2008 ; 2008 ; Documenta Volume 2008 ; >
+      au < exists ; exists ; 2009 ; 2009 ; 2009 ; Documenta Volume 2009 ; >
+      au < exists ; exists ; 2010 ; 2010 ; 2010 ; Documenta Volume 2010 ; >
+      au < exists ; exists ; 2011 ; 2011 ; 2011 ; Documenta Volume 2011 ; >
+      au < exists ; exists ; 2012 ; 2012 ; 2012 ; Documenta Volume 2012 ; >
+      au < exists ; exists ; 2013 ; 2013 ; 2013 ; Documenta Volume 2013 ; >
+      au < exists ; exists ; 2014 ; 2014 ; 2014 ; Documenta Volume 2014 ; >
+      au < exists ; exists ; 2015 ; 2015 ; 2015 ; Documenta Volume 2015 ; >
+      au < exists ; exists ; 2016 ; 2016 ; 2016 ; Documenta Volume 2016 ; >
+      au < exists ; exists ; 2017 ; 2017 ; 2017 ; Documenta Volume 2017 ; >
+      au < exists ; exists ; 2018 ; 2018 ; 2018 ; Documenta Volume 2018 ; >
+      au < exists ; exists ; 2019 ; 2019 ; 2019 ; Documenta Volume 2019 ; >
+      au < exists ; exists ; 2020 ; 2020 ; 2020 ; Documenta Volume 2020 ; >
 
   }
 
@@ -110,9 +110,9 @@
       param[base_url] = https://www.digest.ugent.be/
       param[journal_id] = digest
 
-      au < testing ; exists ; 2020 ; 2020 ; 2020 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2020 ; >
-      au < testing ; exists ; 2021 ; 2021 ; 2021 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2021 ; >
-      au < testing ; exists ; 2022 ; 2022 ; 2022 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2022 ; >
+      au < exists ; exists ; 2020 ; 2020 ; 2020 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2020 ; >
+      au < exists ; exists ; 2021 ; 2021 ; 2021 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2021 ; >
+      au < exists ; exists ; 2022 ; 2022 ; 2022 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2022 ; >
 
   }
 
@@ -127,10 +127,10 @@
       param[base_url] = https://jolcel.ugent.be/
       param[journal_id] = jolcel
 
-      au < testing ; exists ; 2019 ; 2019 ; 2019 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2019 ; >
-      au < testing ; exists ; 2020 ; 2020 ; 2020 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2020 ; >
-      au < testing ; exists ; 2021 ; 2021 ; 2021 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2021 ; >
-      au < testing ; exists ; 2022 ; 2022 ; 2022 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2022 ; >
+      au < exists ; exists ; 2019 ; 2019 ; 2019 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2019 ; >
+      au < exists ; exists ; 2020 ; 2020 ; 2020 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2020 ; >
+      au < exists ; exists ; 2021 ; 2021 ; 2021 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2021 ; >
+      au < exists ; exists ; 2022 ; 2022 ; 2022 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2022 ; >
 
   }
 
@@ -146,12 +146,12 @@
       param[base_url] = https://www.philosophica.ugent.be/
       param[journal_id] = philosophica
 
-      au < testing ; exists ; 2010 ; 2010 ; 83 ; Philosophica Volume 83 ; >
-      au < testing ; exists ; 2012 ; 2012 ; 84-87 ; Philosophica Volume 84-87 ; >
-      au < testing ; exists ; 2013 ; 2013 ; 88 ; Philosophica Volume 88 ; >
-      au < testing ; exists ; 2014 ; 2014 ; 89 ; Philosophica Volume 89 ; >
-      au < testing ; exists ; 2015 ; 2015 ; 90 ; Philosophica Volume 90 ; >
-      au < testing ; exists ; 2017 ; 2017 ; 91-92 ; Philosophica Volume 91-92 ; >
+      au < exists ; exists ; 2010 ; 2010 ; 83 ; Philosophica Volume 83 ; >
+      au < exists ; exists ; 2012 ; 2012 ; 84-87 ; Philosophica Volume 84-87 ; >
+      au < exists ; exists ; 2013 ; 2013 ; 88 ; Philosophica Volume 88 ; >
+      au < exists ; exists ; 2014 ; 2014 ; 89 ; Philosophica Volume 89 ; >
+      au < exists ; exists ; 2015 ; 2015 ; 90 ; Philosophica Volume 90 ; >
+      au < exists ; exists ; 2017 ; 2017 ; 91-92 ; Philosophica Volume 91-92 ; >
 
   }
 
