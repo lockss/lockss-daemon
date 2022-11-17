@@ -348,7 +348,7 @@
       au < finished ; crawling ; 2019 ; Genome Research Volume 29 ; 29 ; https://genome.cshlp.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Genome Research Volume 30 ; 30 ; https://genome.cshlp.org/ ; >
       au < deepCrawl ; exists ; 2021 ; Genome Research Volume 31 ; 31 ; https://genome.cshlp.org/ ; >
-      au < testing ; exists ; 2022 ; Genome Research Volume 32 ; 32 ; https://genome.cshlp.org/ ; >
+      au < manifest ; exists ; 2022 ; Genome Research Volume 32 ; 32 ; https://genome.cshlp.org/ ; >
 
     }
 
@@ -397,7 +397,7 @@
       au < finished ; frozen ; 2019 ; Learning & Memory Volume 26 ; 26 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2020 ; Learning & Memory Volume 27 ; 27 ; >
       au < deepCrawl ; exists ; 2021 ; Learning & Memory Volume 28 ; 28 ; >
-      au < testing ; exists ; 2022 ; Learning & Memory Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2022 ; Learning & Memory Volume 29 ; 29 ; >
 
     }
 

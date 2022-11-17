@@ -680,7 +680,7 @@
      au < finished ; crawling ; 2019 ; 2019 ; Avicenna Journal of Medicine Volume 9 ; 9 ; reingest4.clockss.org:8082 >
      au < finished ; crawling ; 2020 ; 2020 ; Avicenna Journal of Medicine Volume 10 ; 10 ; reingest5.clockss.org:8082 >
      au < deepCrawl ; exists ; 2021 ; 2021 ; Avicenna Journal of Medicine Volume 11 ; 11 ; >
-     au < testing ; exists ; 2022 ; 2022 ; Avicenna Journal of Medicine Volume 12 ; 12 ; >
+     au < manifest ; exists ; 2022 ; 2022 ; Avicenna Journal of Medicine Volume 12 ; 12 ; >
 
    }
 
@@ -957,7 +957,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; Deutsche Heilpraktiker-Zeitschrift Volume 14 ; 14 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Deutsche Heilpraktiker-Zeitschrift Volume 15 ; 15 ; >
    au < deepCrawl ; exists ; 2021 ; 2021 ; Deutsche Heilpraktiker-Zeitschrift Volume 16 ; 16 ; >
-   au < testing ; exists ; 2022 ; 2022 ; Deutsche Heilpraktiker-Zeitschrift Volume 17 ; 17 ; >
+   au < manifest ; exists ; 2022 ; 2022 ; Deutsche Heilpraktiker-Zeitschrift Volume 17 ; 17 ; >
 
   }
 
@@ -2072,7 +2072,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; Geburtshilfe und Frauenheilkunde Volume 79 ; 79 ; reingest1.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Geburtshilfe und Frauenheilkunde Volume 80 ; 80 ; >
    au < deepCrawl ; exists ; 2021 ; 2021 ; Geburtshilfe und Frauenheilkunde Volume 81 ; 81 ; >
-   au < testing ; exists ; 2022 ; 2022 ; Geburtshilfe und Frauenheilkunde Volume 82 ; 82 ; >
+   au < manifest ; exists ; 2022 ; 2022 ; Geburtshilfe und Frauenheilkunde Volume 82 ; 82 ; >
 
   }
 
@@ -3099,7 +3099,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; Journal of Neurological Surgery Part B : Skull Base Volume 80 ; 80 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Neurological Surgery Part B : Skull Base Volume 81 ; 81 ; >
     au < deepCrawl ; exists ; 2021 ; 2021 ; Journal of Neurological Surgery Part B : Skull Base Volume 82 ; 82 ; >
-    au < testing ; exists ; 2022 ; 2022 ; Journal of Neurological Surgery Part B : Skull Base Volume 83 ; 83 ; >
+    au < manifest ; exists ; 2022 ; 2022 ; Journal of Neurological Surgery Part B : Skull Base Volume 83 ; 83 ; >
 
   }
 
@@ -4177,7 +4177,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; Neuroradiologie Scan Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Neuroradiologie Scan Volume 10 ; 10 ; >
     au < deepCrawl ; exists ; 2021 ; 2021 ; Neuroradiologie Scan Volume 11 ; 11 ; >
-    au < testing ; exists ; 2022 ; 2022 ; Neuroradiologie Scan Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2022 ; 2022 ; Neuroradiologie Scan Volume 12 ; 12 ; >
 
   }
 
@@ -4917,7 +4917,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; Planta Medica Volume 85 ; 85 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Planta Medica Volume 86 ; 86 ; >
    au < deepCrawl ; exists ; 2021 ; 2021 ; Planta Medica Volume 87 ; 87 ; >
-   au < testing ; exists ; 2022 ; 2022 ; Planta Medica Volume 88 ; 88 ; >
+   au < manifest ; exists ; 2022 ; 2022 ; Planta Medica Volume 88 ; 88 ; >
 
   }
 
@@ -5647,7 +5647,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; Seminars in Musculoskeletal Radiology Volume 23 ; 23 ; reingest1.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Seminars in Musculoskeletal Radiology Volume 24 ; 24 ; >
    au < deepCrawl ; exists ; 2021 ; 2021 ; Seminars in Musculoskeletal Radiology Volume 25 ; 25 ; >
-   au < testing ; exists ; 2022 ; 2022 ; Seminars in Musculoskeletal Radiology Volume 26 ; 26 ; >
+   au < manifest ; exists ; 2022 ; 2022 ; Seminars in Musculoskeletal Radiology Volume 26 ; 26 ; >
 
   }
 
@@ -6243,7 +6243,7 @@
    au < finished ; crawling ; 2019 ; 2019 ; Sprache Stimme Gehör Volume 43 ; 43 ; reingest1.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Sprache Stimme Gehör Volume 44 ; 44 ; >
    au < deepCrawl ; exists ; 2021 ; 2021 ; Sprache Stimme Gehör Volume 45 ; 45 ; >
-   au < testing ; exists ; 2022 ; 2022 ; Sprache Stimme Gehör Volume 46 ; 46 ; >
+   au < manifest ; exists ; 2022 ; 2022 ; Sprache Stimme Gehör Volume 46 ; 46 ; >
 
   }
 
@@ -7080,8 +7080,8 @@
     au < frozen ; exists ; 1985 ; 1985 ; Zeitschrift für Klassische Homöopathie Volume 29 ; 29 ; >
     au < frozen ; exists ; 1986 ; 1986 ; Zeitschrift für Klassische Homöopathie Volume 30 ; 30 ; >
     au < frozen ; exists ; 1987 ; 1987 ; Zeitschrift für Klassische Homöopathie Volume 31 ; 31 ; >
-    au < testing ; exists ; 1988 ; 1988 ; Zeitschrift für Klassische Homöopathie Volume 32 ; 32 ; >
-    au < testing ; exists ; 1989 ; 1989 ; Zeitschrift für Klassische Homöopathie Volume 33 ; 33 ; >
+    au < manifest ; exists ; 1988 ; 1988 ; Zeitschrift für Klassische Homöopathie Volume 32 ; 32 ; >
+    au < manifest ; exists ; 1989 ; 1989 ; Zeitschrift für Klassische Homöopathie Volume 33 ; 33 ; >
     au < finished ; crawling ; 1990 ; 1990 ; Zeitschrift für Klassische Homöopathie Volume 34 ; 34 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1991 ; 1991 ; Zeitschrift für Klassische Homöopathie Volume 35 ; 35 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1992 ; 1992 ; Zeitschrift für Klassische Homöopathie Volume 36 ; 36 ; reingest4.clockss.org:8082 >
@@ -7218,8 +7218,8 @@
     comment[years] = 1980-2007
     comment[id] = continued as 10.1055/s-00000099 mid-2007
 
-    au < testing ; exists ; 1980 ; 1980 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1980 ; 118 ; >
-    au < testing ; exists ; 1981 ; 1981 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1981 ; 119 ; >
+    au < manifest ; exists ; 1980 ; 1980 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1980 ; 118 ; >
+    au < manifest ; exists ; 1981 ; 1981 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1981 ; 119 ; >
     au < frozen ; exists ; 1982 ; 1982 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1982 ; 120 ; >
     au < frozen ; exists ; 1983 ; 1983 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1983 ; 0 ; >
     au < frozen ; exists ; 1984 ; 1984 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1984 ; 0 ; >
@@ -8020,7 +8020,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Revista Iberoamericana de Cirugía de la Mano Volume 47 ; 47 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Revista Iberoamericana de Cirugía de la Mano Volume 48 ; 48 ; >
     au < deepCrawl ; exists ; 2021 ; 2021 ; Revista Iberoamericana de Cirugía de la Mano Volume 49 ; 49 ; >
-    au < testing ; exists ; 2022 ; 2022 ; Revista Iberoamericana de Cirugía de la Mano Volume 50 ; 50 ; >
+    au < manifest ; exists ; 2022 ; 2022 ; Revista Iberoamericana de Cirugía de la Mano Volume 50 ; 50 ; >
 
   }
 
