@@ -68,6 +68,7 @@
       au < finished ; down ; 2019 ; 14-15 ; Journal of Hate Studies Volume 2019 ; 2019 ; https://jhs.press.gonzaga.edu/ ; reingest3.clockss.org:8083 >
       au < doNotProcess ; exists ; 2020 ; 16 ; Journal of Hate Studies Volume 2020 ; 2020 ; https://jhs.press.gonzaga.edu/ ; >
       au < doNotProcess ; exists ; 2021 ; 17 ; Journal of Hate Studies Volume 2021 ; 2021 ; https://jhs.press.gonzaga.edu/ ; >
+      au < doNotProcess ; exists ; 2022 ; 18 ; Journal of Hate Studies Volume 2022 ; 2022 ; https://jhs.press.gonzaga.edu/ ; >
 
   }
 }
@@ -1949,6 +1950,7 @@
 
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://culturalscience.org/
+      #Moved to Sciendo platform
 
       au < finished ; finished ; 2008 ; 1 ; Cultural Science Journal Volume 2008 ; 2008 ; https://culturalscience.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2009 ; 2 ; Cultural Science Journal Volume 2009 ; 2009 ; https://culturalscience.org/ ; reingest2.clockss.org:8085 >
@@ -1963,8 +1965,6 @@
       au < finished ; frozen ; 2018 ; 10 ; Cultural Science Journal Volume 2018 ; 2018 ; https://culturalscience.org/ ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2019 ; 11 ; Cultural Science Journal Volume 2019 ; 2019 ; https://culturalscience.org/ ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2020 ; 12 ; Cultural Science Journal Volume 2020 ; 2020 ; https://culturalscience.org/ ; reingest4.clockss.org:8082 >
-      au < expected ; exists ; 2021 ; 13 ; Cultural Science Journal Volume 2021 ; 2021 ; https://culturalscience.org/ ; >
-      au < expected ; exists ; 2022 ; 14 ; Cultural Science Journal Volume 2022 ; 2022 ; https://culturalscience.org/ ; >
 
   }
 
