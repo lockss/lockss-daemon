@@ -308,7 +308,9 @@
       
      param[journal_id] = obs
      
-     au < released ; 2013 ; The Open Book Series in 2013 ; 1 ; 2013 ; http://msp.org/ >
+     au < released ; 2013 ; The Open Book Series Volume 2013 ; 1 ; 2013 ; http://msp.org/ >
+     au < exists ; 2019 ; The Open Book Series Volume 2019 ; 2 ; 2019 ; http://msp.org/ >
+     au < exists ; 2020 ; The Open Book Series Volume 2020 ; 3-4 ; 2020 ; http://msp.org/ >
      
   }
   
@@ -394,6 +396,7 @@
      au < released ; 2019 ; Pacific Journal of Mathematics Volume 298-303 ; 298-303 ; 2019 ; https://msp.org/ >
      au < released ; 2020 ; Pacific Journal of Mathematics Volume 304-309 ; 304-309 ; 2020 ; https://msp.org/ >
      au < released ; 2021 ; Pacific Journal of Mathematics Volume 310-315 ; 310-315 ; 2021 ; https://msp.org/ >
+     au < expected ; 2022 ; Pacific Journal of Mathematics Volume 316-321 ; 316-321 ; 2022 ; https://msp.org/ >
 
   }   
   
