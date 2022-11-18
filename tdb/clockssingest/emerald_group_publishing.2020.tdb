@@ -626,7 +626,7 @@
     au < manifest ; exists ; 1996 ; Asia Pacific Journal of Marketing and Logistics Volume 8 ; 8 ; >
     au < frozen ; exists ; 1997 ; Asia Pacific Journal of Marketing and Logistics Volume 9 ; 9 ; >
     au < frozen ; exists ; 1998 ; Asia Pacific Journal of Marketing and Logistics Volume 10 ; 10 ; >
-    au < ready ; exists ; 1999 ; Asia Pacific Journal of Marketing and Logistics Volume 11 ; 11 ; >
+    au < crawling ; exists ; 1999 ; Asia Pacific Journal of Marketing and Logistics Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2000 ; Asia Pacific Journal of Marketing and Logistics Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2001 ; Asia Pacific Journal of Marketing and Logistics Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2002 ; Asia Pacific Journal of Marketing and Logistics Volume 14 ; 14 ; >
@@ -2470,7 +2470,7 @@
     au < manifest ; exists ; 1994 ; Engineering Computations Volume 11 ; 11 ; >
     au < manifest ; exists ; 1995 ; Engineering Computations Volume 12 ; 12 ; >
     au < frozen ; exists ; 1996 ; Engineering Computations Volume 13 ; 13 ; >
-    au < ready ; exists ; 1997 ; Engineering Computations Volume 14 ; 14 ; >
+    au < crawling ; exists ; 1997 ; Engineering Computations Volume 14 ; 14 ; >
     au < frozen ; exists ; 1998 ; Engineering Computations Volume 15 ; 15 ; >
     au < frozen ; exists ; 1999 ; Engineering Computations Volume 16 ; 16 ; >
     au < deepCrawl ; exists ; 2000 ; Engineering Computations Volume 17 ; 17 ; >
@@ -3532,7 +3532,7 @@
     au < manifest ; exists ; 1994 ; Industrial Management & Data Systems Volume 94 ; 94 ; >
     au < manifest ; exists ; 1995 ; Industrial Management & Data Systems Volume 95 ; 95 ; >
     au < frozen ; exists ; 1996 ; Industrial Management & Data Systems Volume 96 ; 96 ; >
-    au < ready ; exists ; 1997 ; Industrial Management & Data Systems Volume 97 ; 97 ; >
+    au < crawling ; exists ; 1997 ; Industrial Management & Data Systems Volume 97 ; 97 ; >
     au < frozen ; exists ; 1998 ; Industrial Management & Data Systems Volume 98 ; 98 ; >
     au < frozen ; exists ; 1999 ; Industrial Management & Data Systems Volume 99 ; 99 ; >
     au < deepCrawl ; exists ; 2000 ; Industrial Management & Data Systems Volume 100 ; 100 ; >
@@ -4205,7 +4205,7 @@
     au < manifest ; exists ; 1995 ; International Journal of Conflict Management Volume 6 ; 6 ; >
     au < manifest ; exists ; 1996 ; International Journal of Conflict Management Volume 7 ; 7 ; >
     au < frozen ; exists ; 1997 ; International Journal of Conflict Management Volume 8 ; 8 ; > #unable to fetch permission page
-    au < ready ; exists ; 1998 ; International Journal of Conflict Management Volume 9 ; 9 ; >
+    au < crawling ; exists ; 1998 ; International Journal of Conflict Management Volume 9 ; 9 ; >
     au < frozen ; exists ; 1999 ; International Journal of Conflict Management Volume 10 ; 10 ; >
     au < deepCrawl ; exists ; 2000 ; International Journal of Conflict Management Volume 11 ; 11 ; >
     au < deepCrawl ; exists ; 2001 ; International Journal of Conflict Management Volume 12 ; 12 ; >
@@ -5560,7 +5560,7 @@
     au < manifest ; exists ; 1994 ; International Journal of Quality & Reliability Management Volume 11 ; 11 ; >
     au < manifest ; exists ; 1995 ; International Journal of Quality & Reliability Management Volume 12 ; 12 ; >
     au < frozen ; exists ; 1996 ; International Journal of Quality & Reliability Management Volume 13 ; 13 ; >
-    au < ready ; exists ; 1997 ; International Journal of Quality & Reliability Management Volume 14 ; 14 ; >
+    au < crawling ; exists ; 1997 ; International Journal of Quality & Reliability Management Volume 14 ; 14 ; >
     au < frozen ; exists ; 1998 ; International Journal of Quality & Reliability Management Volume 15 ; 15 ; >
     au < frozen ; exists ; 1999 ; International Journal of Quality & Reliability Management Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2000 ; International Journal of Quality & Reliability Management Volume 17 ; 17 ; >
@@ -7000,7 +7000,7 @@
     au < manifest ; exists ; 1994 ; Journal of Economic Studies Volume 21 ; 21 ; >
     au < manifest ; exists ; 1995 ; Journal of Economic Studies Volume 22 ; 22 ; >
     au < frozen ; exists ; 1996 ; Journal of Economic Studies Volume 23 ; 23 ; >
-    au < ready ; exists ; 1997 ; Journal of Economic Studies Volume 24 ; 24 ; >
+    au < crawling ; exists ; 1997 ; Journal of Economic Studies Volume 24 ; 24 ; >
     au < frozen ; exists ; 1998 ; Journal of Economic Studies Volume 25 ; 25 ; >
     au < frozen ; exists ; 1999 ; Journal of Economic Studies Volume 26 ; 26 ; >
     au < frozen ; exists ; 2000 ; Journal of Economic Studies Volume 27 ; 27 ; >
@@ -8059,7 +8059,7 @@
     param[journal_issn] = 1367-3270
     comment[journal_id] = jkm
 
-    au < ready ; exists ; 1997 ; Journal of Knowledge Management Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1997 ; Journal of Knowledge Management Volume 1 ; 1 ; >
     au < frozen ; exists ; 1998 ; Journal of Knowledge Management Volume 2 ; 2 ; >
     au < frozen ; exists ; 1999 ; Journal of Knowledge Management Volume 3 ; 3 ; >
     au < frozen ; exists ; 2000 ; Journal of Knowledge Management Volume 4 ; 4 ; >
@@ -8442,7 +8442,7 @@
     comment[journal_id] = jmlc
 
     au < frozen ; exists ; 1998 ; Journal of Money Laundering Control Volume 1 ; 1 ; >
-    au < ready ; exists ; 1999 ; Journal of Money Laundering Control Volume 2 ; 2 ; >
+    au < crawling ; exists ; 1999 ; Journal of Money Laundering Control Volume 2 ; 2 ; >
     au < frozen ; exists ; 2000 ; Journal of Money Laundering Control Volume 3 ; 3 ; >
     au < frozen ; exists ; 2001 ; Journal of Money Laundering Control Volume 4 ; 4 ; >
     au < frozen ; exists ; 2002 ; Journal of Money Laundering Control Volume 5 ; 5 ; >
@@ -9925,7 +9925,7 @@
     au < manifest ; exists ; 1993 ; Management Research News Volume 16 ; 16 ; >
     au < manifest ; exists ; 1994 ; Management Research News Volume 17 ; 17 ; >
     au < manifest ; exists ; 1995 ; Management Research News Volume 18 ; 18 ; >
-    au < ready ; exists ; 1996 ; Management Research News Volume 19 ; 19 ; >
+    au < crawling ; exists ; 1996 ; Management Research News Volume 19 ; 19 ; >
     au < crawling ; exists ; 1997 ; Management Research News Volume 20 ; 20 ; >
     au < frozen ; exists ; 1998 ; Management Research News Volume 21 ; 21 ; >
     au < frozen ; exists ; 1999 ; Management Research News Volume 22 ; 22 ; >
@@ -12528,7 +12528,7 @@
     au < manifest ; exists ; 1995 ; Structural Survey Volume 13 ; 13 ; >
     au < frozen ; exists ; 1996 ; Structural Survey Volume 14 ; 14 ; >
     au < frozen ; exists ; 1997 ; Structural Survey Volume 15 ; 15 ; >
-    au < ready ; exists ; 1998 ; Structural Survey Volume 16 ; 16 ; >
+    au < crawling ; exists ; 1998 ; Structural Survey Volume 16 ; 16 ; >
     au < frozen ; exists ; 1999 ; Structural Survey Volume 17 ; 17 ; >
     au < frozen ; exists ; 2000 ; Structural Survey Volume 18 ; 18 ; >
     au < frozen ; exists ; 2001 ; Structural Survey Volume 19 ; 19 ; >
@@ -13426,7 +13426,7 @@
     au < frozen ; exists ; 2014 ; Aslib Journal of Information Management Volume 66 ; 66 ; >
     au < crawling ; exists ; 2015 ; Aslib Journal of Information Management Volume 67 ; 67 ; >
     au < frozen ; exists ; 2016 ; Aslib Journal of Information Management Volume 68 ; 68 ; >
-    au < ready ; exists ; 2017 ; Aslib Journal of Information Management Volume 69 ; 69 ; >
+    au < crawling ; exists ; 2017 ; Aslib Journal of Information Management Volume 69 ; 69 ; >
     au < frozen ; exists ; 2018 ; Aslib Journal of Information Management Volume 70 ; 70 ; >
     au < frozen ; exists ; 2019 ; Aslib Journal of Information Management Volume 71 ; 71 ; >
     au < frozen ; exists ; 2020 ; Aslib Journal of Information Management Volume 72 ; 72 ; >
@@ -13534,7 +13534,7 @@
     au < frozen ; exists ; 2016 ; Information and Computer Security Volume 24 ; 24 ; >
     au < frozen ; exists ; 2017 ; Information and Computer Security Volume 25 ; 25 ; >
     au < frozen ; exists ; 2018 ; Information and Computer Security Volume 26 ; 26 ; >
-    au < ready ; exists ; 2019 ; Information and Computer Security Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2019 ; Information and Computer Security Volume 27 ; 27 ; >
     au < frozen ; exists ; 2020 ; Information and Computer Security Volume 28 ; 28 ; >
     au < frozen ; exists ; 2021 ; Information and Computer Security Volume 29 ; 29 ; >
     au < crawling ; exists ; 2022 ; Information and Computer Security Volume 30 ; 30 ; >
@@ -13667,7 +13667,7 @@
     au < frozen ; exists ; 2018 ; International Journal of Intelligent Unmanned Systems Volume 6 ; 6 ; >
     au < frozen ; exists ; 2019 ; International Journal of Intelligent Unmanned Systems Volume 7 ; 7 ; >
     au < frozen ; exists ; 2020 ; International Journal of Intelligent Unmanned Systems Volume 8 ; 8 ; >
-    au < ready ; exists ; 2021 ; International Journal of Intelligent Unmanned Systems Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2021 ; International Journal of Intelligent Unmanned Systems Volume 9 ; 9 ; >
     au < crawling ; exists ; 2022 ; International Journal of Intelligent Unmanned Systems Volume 10 ; 10 ; >
 
   }
@@ -13885,7 +13885,7 @@
 
     param[journal_issn] = 2514-9792
 
-    au < ready ; exists ; 2018 ; Journal of Hospitality and Tourism Insights Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2018 ; Journal of Hospitality and Tourism Insights Volume 1 ; 1 ; >
     au < frozen ; exists ; 2019 ; Journal of Hospitality and Tourism Insights Volume 2 ; 2 ; >
     au < crawling ; exists ; 2020 ; Journal of Hospitality and Tourism Insights Volume 3 ; 3 ; >
     au < frozen ; exists ; 2021 ; Journal of Hospitality and Tourism Insights Volume 4 ; 4 ; >
@@ -13966,7 +13966,7 @@
 
     param[journal_issn] = 2056-9548
 
-    au < ready ; exists ; 2016 ; Journal of Professional Capital and Community Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2016 ; Journal of Professional Capital and Community Volume 1 ; 1 ; >
     au < frozen ; exists ; 2017 ; Journal of Professional Capital and Community Volume 2 ; 2 ; >
     au < frozen ; exists ; 2018 ; Journal of Professional Capital and Community Volume 3 ; 3 ; >
     au < frozen ; exists ; 2019 ; Journal of Professional Capital and Community Volume 4 ; 4 ; >
@@ -14278,7 +14278,7 @@
 
     au < frozen ; exists ; 2016 ; VINE Journal of Information and Knowledge Management Systems Volume 46 ; 46 ; >
     au < frozen ; exists ; 2017 ; VINE Journal of Information and Knowledge Management Systems Volume 47 ; 47 ; >
-    au < ready ; exists ; 2018 ; VINE Journal of Information and Knowledge Management Systems Volume 48 ; 48 ; >
+    au < crawling ; exists ; 2018 ; VINE Journal of Information and Knowledge Management Systems Volume 48 ; 48 ; >
     au < crawling ; exists ; 2019 ; VINE Journal of Information and Knowledge Management Systems Volume 49 ; 49 ; >
     au < frozen ; exists ; 2020 ; VINE Journal of Information and Knowledge Management Systems Volume 50 ; 50 ; >
     au < crawling ; exists ; 2021 ; VINE Journal of Information and Knowledge Management Systems Volume 51 ; 51 ; >
@@ -14301,11 +14301,11 @@
     au < crawling ; exists ; 2013 ; World Journal of Engineering Volume 10 ; 10 ; >
     au < frozen ; exists ; 2014 ; World Journal of Engineering Volume 11 ; 11 ; >
     au < frozen ; exists ; 2015 ; World Journal of Engineering Volume 12 ; 12 ; >
-    au < ready ; exists ; 2016 ; World Journal of Engineering Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2016 ; World Journal of Engineering Volume 13 ; 13 ; >
     au < frozen ; exists ; 2017 ; World Journal of Engineering Volume 14 ; 14 ; >
     au < manifest ; exists ; 2018 ; World Journal of Engineering Volume 15 ; 15 ; >
     au < frozen ; exists ; 2019 ; World Journal of Engineering Volume 16 ; 16 ; >
-    au < ready ; exists ; 2020 ; World Journal of Engineering Volume 17 ; 17 ; >
+    au < crawling ; exists ; 2020 ; World Journal of Engineering Volume 17 ; 17 ; >
     au < frozen ; exists ; 2021 ; World Journal of Engineering Volume 18 ; 18 ; >
     au < crawling ; exists ; 2022 ; World Journal of Engineering Volume 19 ; 19 ; >
 
