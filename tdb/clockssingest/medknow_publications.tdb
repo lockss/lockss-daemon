@@ -539,9 +539,9 @@
     >
 #    param[base_url] = https://www.bengaljcancer.org/
 
-    param[journal_issn] = 0000-0000
+    param[journal_issn] = 2773-1332
 
-    au < expected ; exists ; 2021 ; Bengal Journal of Cancer Volume 1 ; 2021 ; 1 ; https://www.bengaljcancer.org/ ; ; >
+    au < manifest ; exists ; 2021 ; Bengal Journal of Cancer Volume 1 ; 2021 ; 1 ; https://www.bengaljcancer.org/ ; ; >
     au < expected ; exists ; 2022 ; Bengal Journal of Cancer Volume 2 ; 2022 ; 2 ; https://www.bengaljcancer.org/ ; ; >
 
   }
@@ -1392,64 +1392,64 @@
 
     param[journal_issn] = 0301-4738
 
-    au < manifest ; exists ; 1953 ; Indian Journal of Ophthalmology Volume 1 ; 1953 ; 1 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1954 ; Indian Journal of Ophthalmology Volume 2 ; 1954 ; 2 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1955 ; Indian Journal of Ophthalmology Volume 3 ; 1955 ; 3 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1956 ; Indian Journal of Ophthalmology Volume 4 ; 1956 ; 4 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1957 ; Indian Journal of Ophthalmology Volume 5 ; 1957 ; 5 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1958 ; Indian Journal of Ophthalmology Volume 6 ; 1958 ; 6 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1959 ; Indian Journal of Ophthalmology Volume 7 ; 1959 ; 7 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1960 ; Indian Journal of Ophthalmology Volume 8 ; 1960 ; 8 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1961 ; Indian Journal of Ophthalmology Volume 9 ; 1961 ; 9 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1962 ; Indian Journal of Ophthalmology Volume 10 ; 1962 ; 10 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1963 ; Indian Journal of Ophthalmology Volume 11 ; 1963 ; 11 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1964 ; Indian Journal of Ophthalmology Volume 12 ; 1964 ; 12 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1965 ; Indian Journal of Ophthalmology Volume 13 ; 1965 ; 13 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1966 ; Indian Journal of Ophthalmology Volume 14 ; 1966 ; 14 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1967 ; Indian Journal of Ophthalmology Volume 15 ; 1967 ; 15 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1968 ; Indian Journal of Ophthalmology Volume 16 ; 1968 ; 16 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1969 ; Indian Journal of Ophthalmology Volume 17 ; 1969 ; 17 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1970 ; Indian Journal of Ophthalmology Volume 18 ; 1970 ; 18 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1971 ; Indian Journal of Ophthalmology Volume 19 ; 1971 ; 19 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1972 ; Indian Journal of Ophthalmology Volume 20 ; 1972 ; 20 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1973 ; Indian Journal of Ophthalmology Volume 21 ; 1973 ; 21 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1974 ; Indian Journal of Ophthalmology Volume 22 ; 1974 ; 22 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1975 ; Indian Journal of Ophthalmology Volume 23 ; 1975 ; 23 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1976 ; Indian Journal of Ophthalmology Volume 24 ; 1976 ; 24 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1977 ; Indian Journal of Ophthalmology Volume 25 ; 1977 ; 25 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1978 ; Indian Journal of Ophthalmology Volume 26 ; 1978 ; 26 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1979 ; Indian Journal of Ophthalmology Volume 27 ; 1979 ; 27 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1980 ; Indian Journal of Ophthalmology Volume 28 ; 1980 ; 28 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1981 ; Indian Journal of Ophthalmology Volume 29 ; 1981 ; 29 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1982 ; Indian Journal of Ophthalmology Volume 30 ; 1982 ; 30 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1983 ; Indian Journal of Ophthalmology Volume 31 ; 1983 ; 31 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1984 ; Indian Journal of Ophthalmology Volume 32 ; 1984 ; 32 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1985 ; Indian Journal of Ophthalmology Volume 33 ; 1985 ; 33 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1986 ; Indian Journal of Ophthalmology Volume 34 ; 1986 ; 34 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1987 ; Indian Journal of Ophthalmology Volume 35 ; 1987 ; 35 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1988 ; Indian Journal of Ophthalmology Volume 36 ; 1988 ; 36 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1989 ; Indian Journal of Ophthalmology Volume 37 ; 1989 ; 37 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1990 ; Indian Journal of Ophthalmology Volume 38 ; 1990 ; 38 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1991 ; Indian Journal of Ophthalmology Volume 39 ; 1991 ; 39 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1992 ; Indian Journal of Ophthalmology Volume 40 ; 1992 ; 40 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1993 ; Indian Journal of Ophthalmology Volume 41 ; 1993 ; 41 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1994 ; Indian Journal of Ophthalmology Volume 42 ; 1994 ; 42 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1995 ; Indian Journal of Ophthalmology Volume 43 ; 1995 ; 43 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1996 ; Indian Journal of Ophthalmology Volume 44 ; 1996 ; 44 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1997 ; Indian Journal of Ophthalmology Volume 45 ; 1997 ; 45 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1998 ; Indian Journal of Ophthalmology Volume 46 ; 1998 ; 46 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 1999 ; Indian Journal of Ophthalmology Volume 47 ; 1999 ; 47 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 2000 ; Indian Journal of Ophthalmology Volume 48 ; 2000 ; 48 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 2001 ; Indian Journal of Ophthalmology Volume 49 ; 2001 ; 49 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 2002 ; Indian Journal of Ophthalmology Volume 50 ; 2002 ; 50 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 2003 ; Indian Journal of Ophthalmology Volume 51 ; 2003 ; 51 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 2004 ; Indian Journal of Ophthalmology Volume 52 ; 2004 ; 52 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 2005 ; Indian Journal of Ophthalmology Volume 53 ; 2005 ; 53 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 2006 ; Indian Journal of Ophthalmology Volume 54 ; 2006 ; 54 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 2007 ; Indian Journal of Ophthalmology Volume 55 ; 2007 ; 55 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 2008 ; Indian Journal of Ophthalmology Volume 56 ; 2008 ; 56 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 2009 ; Indian Journal of Ophthalmology Volume 57 ; 2009 ; 57 ; https://www.ijo.in/ ; ; >
-    au < notReady ; exists ; 2010 ; Indian Journal of Ophthalmology Volume 58 ; 2010 ; 58 ; https://www.ijo.in/ ; ; > #no substance
+    au < doNotProcess ; exists ; 1953 ; Indian Journal of Ophthalmology Volume 1 ; 1953 ; 1 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1954 ; Indian Journal of Ophthalmology Volume 2 ; 1954 ; 2 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1955 ; Indian Journal of Ophthalmology Volume 3 ; 1955 ; 3 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1956 ; Indian Journal of Ophthalmology Volume 4 ; 1956 ; 4 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1957 ; Indian Journal of Ophthalmology Volume 5 ; 1957 ; 5 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1958 ; Indian Journal of Ophthalmology Volume 6 ; 1958 ; 6 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1959 ; Indian Journal of Ophthalmology Volume 7 ; 1959 ; 7 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1960 ; Indian Journal of Ophthalmology Volume 8 ; 1960 ; 8 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1961 ; Indian Journal of Ophthalmology Volume 9 ; 1961 ; 9 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1962 ; Indian Journal of Ophthalmology Volume 10 ; 1962 ; 10 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1963 ; Indian Journal of Ophthalmology Volume 11 ; 1963 ; 11 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1964 ; Indian Journal of Ophthalmology Volume 12 ; 1964 ; 12 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1965 ; Indian Journal of Ophthalmology Volume 13 ; 1965 ; 13 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1966 ; Indian Journal of Ophthalmology Volume 14 ; 1966 ; 14 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1967 ; Indian Journal of Ophthalmology Volume 15 ; 1967 ; 15 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1968 ; Indian Journal of Ophthalmology Volume 16 ; 1968 ; 16 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1969 ; Indian Journal of Ophthalmology Volume 17 ; 1969 ; 17 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1970 ; Indian Journal of Ophthalmology Volume 18 ; 1970 ; 18 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1971 ; Indian Journal of Ophthalmology Volume 19 ; 1971 ; 19 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1972 ; Indian Journal of Ophthalmology Volume 20 ; 1972 ; 20 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1973 ; Indian Journal of Ophthalmology Volume 21 ; 1973 ; 21 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1974 ; Indian Journal of Ophthalmology Volume 22 ; 1974 ; 22 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1975 ; Indian Journal of Ophthalmology Volume 23 ; 1975 ; 23 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1976 ; Indian Journal of Ophthalmology Volume 24 ; 1976 ; 24 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1977 ; Indian Journal of Ophthalmology Volume 25 ; 1977 ; 25 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1978 ; Indian Journal of Ophthalmology Volume 26 ; 1978 ; 26 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1979 ; Indian Journal of Ophthalmology Volume 27 ; 1979 ; 27 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1980 ; Indian Journal of Ophthalmology Volume 28 ; 1980 ; 28 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1981 ; Indian Journal of Ophthalmology Volume 29 ; 1981 ; 29 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1982 ; Indian Journal of Ophthalmology Volume 30 ; 1982 ; 30 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1983 ; Indian Journal of Ophthalmology Volume 31 ; 1983 ; 31 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1984 ; Indian Journal of Ophthalmology Volume 32 ; 1984 ; 32 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1985 ; Indian Journal of Ophthalmology Volume 33 ; 1985 ; 33 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1986 ; Indian Journal of Ophthalmology Volume 34 ; 1986 ; 34 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1987 ; Indian Journal of Ophthalmology Volume 35 ; 1987 ; 35 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1988 ; Indian Journal of Ophthalmology Volume 36 ; 1988 ; 36 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1989 ; Indian Journal of Ophthalmology Volume 37 ; 1989 ; 37 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1990 ; Indian Journal of Ophthalmology Volume 38 ; 1990 ; 38 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1991 ; Indian Journal of Ophthalmology Volume 39 ; 1991 ; 39 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1992 ; Indian Journal of Ophthalmology Volume 40 ; 1992 ; 40 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1993 ; Indian Journal of Ophthalmology Volume 41 ; 1993 ; 41 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1994 ; Indian Journal of Ophthalmology Volume 42 ; 1994 ; 42 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1995 ; Indian Journal of Ophthalmology Volume 43 ; 1995 ; 43 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1996 ; Indian Journal of Ophthalmology Volume 44 ; 1996 ; 44 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1997 ; Indian Journal of Ophthalmology Volume 45 ; 1997 ; 45 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1998 ; Indian Journal of Ophthalmology Volume 46 ; 1998 ; 46 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 1999 ; Indian Journal of Ophthalmology Volume 47 ; 1999 ; 47 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 2000 ; Indian Journal of Ophthalmology Volume 48 ; 2000 ; 48 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 2001 ; Indian Journal of Ophthalmology Volume 49 ; 2001 ; 49 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 2002 ; Indian Journal of Ophthalmology Volume 50 ; 2002 ; 50 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 2003 ; Indian Journal of Ophthalmology Volume 51 ; 2003 ; 51 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 2004 ; Indian Journal of Ophthalmology Volume 52 ; 2004 ; 52 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 2005 ; Indian Journal of Ophthalmology Volume 53 ; 2005 ; 53 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 2006 ; Indian Journal of Ophthalmology Volume 54 ; 2006 ; 54 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 2007 ; Indian Journal of Ophthalmology Volume 55 ; 2007 ; 55 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 2008 ; Indian Journal of Ophthalmology Volume 56 ; 2008 ; 56 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 2009 ; Indian Journal of Ophthalmology Volume 57 ; 2009 ; 57 ; https://www.ijo.in/ ; ; >
+    au < doNotProcess ; exists ; 2010 ; Indian Journal of Ophthalmology Volume 58 ; 2010 ; 58 ; https://www.ijo.in/ ; ; > #no substance
     au < finished ; frozen ; 2011 ; Indian Journal of Ophthalmology Volume 59 ; 2011 ; 59 ; http://www.ijo.in/ ; ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2012 ; Indian Journal of Ophthalmology Volume 60 ; 2012 ; 60 ; http://www.ijo.in/ ; ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2013 ; Indian Journal of Ophthalmology Volume 61 ; 2013 ; 61 ; http://www.ijo.in/ ; ; reingest4.clockss.org:8082 >
@@ -1459,9 +1459,7 @@
     au < finished ; frozen ; 2017 ; Indian Journal of Ophthalmology Volume 65 ; 2017 ; 65 ; http://www.ijo.in/ ; ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Indian Journal of Ophthalmology Volume 66 ; 2018 ; 66 ; http://www.ijo.in/ ; ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2019 ; Indian Journal of Ophthalmology Volume 67 ; 2019 ; 67 ; https://www.ijo.in/ ; ; >
-    au < notReady ; exists ; 2020 ; Indian Journal of Ophthalmology Volume 68 ; 2020 ; 68 ; https://www.ijo.in/ ; ; >#no substance
-    au < expected ; exists ; 2021 ; Indian Journal of Ophthalmology Volume 69 ; 2021 ; 69 ; https://www.ijo.in/ ; ; >
-    au < expected ; exists ; 2022 ; Indian Journal of Ophthalmology Volume 70 ; 2022 ; 70 ; https://www.ijo.in/ ; ; >
+    #On Medknow 1953-2001. Moved to LLW
 
   }
 
@@ -2279,8 +2277,7 @@
     au < frozen ; exists ; 2018 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 3 ; 2018 ; 3 ; https://www.ijghtn.com/ ; ; >
     au < frozen ; exists ; 2019 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 4 ; 2019 ; 4 ; https://www.ijghtn.com/ ; ; >
     au < frozen ; exists ; 2020 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 5 ; 2020 ; 5 ; https://www.ijghtn.com/ ; ; >
-    au < expected ; exists ; 2021 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 6 ; 2021 ; 6 ; https://www.ijghtn.com/ ; ; >
-    au < expected ; exists ; 2022 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 7 ; 2022 ; 7 ; https://www.ijghtn.com/ ; ; >
+    au < expected ; exists ; 2022 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 6 ; 2022 ; 6 ; https://www.ijghtn.com/ ; ; >
 
   }
 
@@ -4206,7 +4203,6 @@
       issnl = 0300-1652
    >
 #    param[base_url] = http://www.nigeriamedj.com/
-
     param[journal_issn] = 0300-1652
 
     au < manifest ; exists ; 2009 ; Nigerian Medical Journal Volume 50 ; 2009 ; 50 ; https://www.nigeriamedj.com/ ; ; >
@@ -4221,8 +4217,7 @@
     au < finished ; crawling ; 2018 ; Nigerian Medical Journal Volume 59 ; 2018 ; 59 ; https://www.nigeriamedj.com/ ; ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; Nigerian Medical Journal Volume 60 ; 2019 ; 60 ; https://www.nigeriamedj.com/ ; ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2020 ; Nigerian Medical Journal Volume 61 ; 2020 ; 61 ; https://www.nigeriamedj.com/ ; ; reingest3.clockss.org:8083 >
-    au < expected ; exists ; 2021 ; Nigerian Medical Journal Volume 62 ; 2021 ; 62 ; https://www.nigeriamedj.com/ ; ; >
-    au < expected ; exists ; 2022 ; Nigerian Medical Journal Volume 63 ; 2022 ; 63 ; https://www.nigeriamedj.com/ ; ; >
+    au < expected ; exists ; 2022 ; Nigerian Medical Journal Volume 62 ; 2022 ; 62 ; https://www.nigeriamedj.com/ ; ; >
 
   }
 
@@ -5018,8 +5013,7 @@
       au < finished ; crawling ; 2018 ; Al-Basar International Journal of Ophthalmology Volume 5 ; 2018 ; 5 ; https://www.bijojournal.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; Al-Basar International Journal of Ophthalmology Volume 6 ; 2019 ; 6 ; https://www.bijojournal.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Al-Basar International Journal of Ophthalmology Volume 7 ; 2020 ; 7 ; https://www.bijojournal.org/ ; ; reingest2.clockss.org:8085 >
-      au < expected ; exists ; 2021 ; Al-Basar International Journal of Ophthalmology Volume 8 ; 2021 ; 8 ; https://www.bijojournal.org/ ; ; >
-      au < expected ; exists ; 2022 ; Al-Basar International Journal of Ophthalmology Volume 9 ; 2022 ; 9 ; https://www.bijojournal.org/ ; ; >
+      au < expected ; exists ; 2022 ; Al-Basar International Journal of Ophthalmology Volume 8 ; 2022 ; 8 ; https://www.bijojournal.org/ ; ; >
 
   }
 
@@ -5213,7 +5207,7 @@
       au < finished ; crawling ; 2018 ; Asia Pacific Journal of Clinical Trials: Nervous System Diseases Volume 3 ; 2018 ; 3 ; http://www.actnjournal.com/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; Asia Pacific Journal of Clinical Trials: Nervous System Diseases Volume 4 ; 2019 ; 4 ; https://www.actnjournal.com/ ; ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Asia Pacific Journal of Clinical Trials: Nervous System Diseases Volume 5 ; 2020 ; 5 ; https://www.actnjournal.com/ ; ; reingest4.clockss.org:8082 >
-
+      #Changed name. See next title.
   }
 
   {
@@ -5526,7 +5520,6 @@
       au < finished ; crawling ; 2019 ; Clinical Cancer Investigation Journal Volume 8 ; 2019 ; 8 ; https://www.ccij-online.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Clinical Cancer Investigation Journal Volume 9 ; 2020 ; 9 ; https://www.ccij-online.org/ ; ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2021 ; Clinical Cancer Investigation Journal Volume 10 ; 2021 ; 10 ; https://www.ccij-online.org/ ; ; >
-      au < doNotProcess ; exists ; 2022 ; Clinical Cancer Investigation Journal Volume 11 ; 2022 ; 11 ; https://www.ccij-online.org/ ; ; >
 
   }
 
@@ -6230,13 +6223,14 @@
         eissn = 2542-6222
       >
 
-      param[journal_issn] = 2349-5006
+      param[journal_issn] = 2542-6214
       #continues = 2349-5006
 
-      au < exists ; exists ; 2019 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 12 ; 2019 ; 12 ; https://www.ijournalhs.org/ ; ; >
-      au < exists ; exists ; 2020 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 13 ; 2020 ; 13 ; https://www.ijournalhs.org/ ; ; >
-      au < exists ; exists ; 2021 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 14 ; 2021 ; 14 ; https://www.ijournalhs.org/ ; ; >
-      au < expected ; exists ; 2022 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 15 ; 2022 ; 15 ; https://www.ijournalhs.org/ ; ; >
+      au < manifest ; exists ; 2018 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 11 ; 2018 ; 11 ; https://www.ijournalhs.org/ ; ; >
+      au < manifest ; exists ; 2019 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 12 ; 2019 ; 12 ; https://www.ijournalhs.org/ ; ; >
+      au < manifest ; exists ; 2020 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 13 ; 2020 ; 13 ; https://www.ijournalhs.org/ ; ; >
+      au < manifest ; exists ; 2021 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 14 ; 2021 ; 14 ; https://www.ijournalhs.org/ ; ; >
+      au < manifest ; exists ; 2022 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 15 ; 2022 ; 15 ; https://www.ijournalhs.org/ ; ; >
 
   }
 
@@ -6273,7 +6267,7 @@
       au < finished ; crawling ; 2020 ; Indian Journal of Medical Research Volume 151 ; 2020 ; 151 ; https://www.ijmr.org.in/ ; ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2020 ; Indian Journal of Medical Research Volume 152 ; 2020 ; 152 ; https://www.ijmr.org.in/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2021 ; Indian Journal of Medical Research Volume 153 ; 2021 ; 153 ; https://www.ijmr.org.in/ ; ; reingest5.clockss.org:8082 >
-      au < doNotProcess ; exists ; 2022 ; Indian Journal of Medical Research Volume 154 ; 2022 ; 154 ; https://www.ijmr.org.in/ ; ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; exists ; 2021 ; Indian Journal of Medical Research Volume 154 ; 2021 ; 154 ; https://www.ijmr.org.in/ ; ; reingest5.clockss.org:8082 >
 
   }
 
@@ -7716,21 +7710,27 @@
         eissn = 2279-042X
       >
 
-      param[journal_issn] = 2279-042X
 #      param[base_url] = http://www.jrpp.net/
+      {
+      param[journal_issn] = 2319-9644
 
+      au < doNotProcess ; exist ; 2018 ; Journal of Research in Pharmacy Practice Volume 7 ; 2018 ; 7 ; http://www.jrpp.net/ ; ; reingest4.clockss.org:8082 >
+      au < exists ; exists ; 2019 ; Journal of Research in Pharmacy Practice Volume 8 ; 2019 ; 8 ; https://www.jrpp.net/ ; ; >
+      au < exists ; exists ; 2020 ; Journal of Research in Pharmacy Practice Volume 9 ; 2020 ; 9 ; https://www.jrpp.net/ ; ; >
+      au < exists ; exists ; 2021 ; Journal of Research in Pharmacy Practice Volume 10 ; 2021 ; 10 ; https://www.jrpp.net/ ; ; >
+      au < expected ; exists ; 2022 ; Journal of Research in Pharmacy Practice Volume 11 ; 2022 ; 11 ; https://www.jrpp.net/ ; ; >
+      }
+      {
+      param[journal_issn] = 2279-042X
+
+      au < finished ; crawling ; 2018 ; Journal of Research in Pharmacy Practice Volume 7 ; 2018 ; 7 ; http://www.jrpp.net/ ; ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2012 ; Journal of Research in Pharmacy Practice Volume 1 ; 2012 ; 1 ; http://www.jrpp.net/ ; ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2013 ; Journal of Research in Pharmacy Practice Volume 2 ; 2013 ; 2 ; http://www.jrpp.net/ ; ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2014 ; Journal of Research in Pharmacy Practice Volume 3 ; 2014 ; 3 ; http://www.jrpp.net/ ; ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2015 ; Journal of Research in Pharmacy Practice Volume 4 ; 2015 ; 4 ; http://www.jrpp.net/ ; ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2016 ; Journal of Research in Pharmacy Practice Volume 5 ; 2016 ; 5 ; http://www.jrpp.net/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2017 ; Journal of Research in Pharmacy Practice Volume 6 ; 2017 ; 6 ; http://www.jrpp.net/ ; ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2018 ; Journal of Research in Pharmacy Practice Volume 7 ; 2018 ; 7 ; http://www.jrpp.net/ ; ; reingest4.clockss.org:8082 >
-      au < exists ; exists ; 2019 ; Journal of Research in Pharmacy Practice Volume 8 ; 2019 ; 8 ; https://www.jrpp.net/ ; ; >
-      au < exists ; exists ; 2020 ; Journal of Research in Pharmacy Practice Volume 9 ; 2020 ; 9 ; https://www.jrpp.net/ ; ; >
-      au < exists ; exists ; 2021 ; Journal of Research in Pharmacy Practice Volume 10 ; 2021 ; 10 ; https://www.jrpp.net/ ; ; >
-      au < expected ; exists ; 2022 ; Journal of Research in Pharmacy Practice Volume 11 ; 2022 ; 11 ; https://www.jrpp.net/ ; ; >
-
+      }
   }
 
   {
@@ -10413,14 +10413,14 @@
         eissn = 2772-7653
       >
 
-      param[journal_issn] = 2078-7685
+      param[journal_issn] = 2772-7653
 #      param[base_url] = https://www.jdeponline.com/
       #move to Thieme, 2022. Archive will stay with Medknow until further notice
 
-      au < exists ; exists ; 2018 ; Journal of Diabetes and Endocrine Practice Volume 1 ; 2018 ; 1 ; https://www.jdeponline.com/ ; ; >
-      au < exists ; exists ; 2019 ; Journal of Diabetes and Endocrine Practice Volume 2 ; 2019 ; 2 ; https://www.jdeponline.com/ ; ; >
-      au < exists ; exists ; 2020 ; Journal of Diabetes and Endocrine Practice Volume 3 ; 2020 ; 3 ; https://www.jdeponline.com/ ; ; >
-      au < exists ; exists ; 2021 ; Journal of Diabetes and Endocrine Practice Volume 4 ; 2021 ; 4 ; https://www.jdeponline.com/ ; ; >
+      au < manifest ; exists ; 2018 ; Journal of Diabetes and Endocrine Practice Volume 1 ; 2018 ; 1 ; https://www.jdeponline.com/ ; ; >
+      au < manifest ; exists ; 2019 ; Journal of Diabetes and Endocrine Practice Volume 2 ; 2019 ; 2 ; https://www.jdeponline.com/ ; ; >
+      au < manifest ; exists ; 2020 ; Journal of Diabetes and Endocrine Practice Volume 3 ; 2020 ; 3 ; https://www.jdeponline.com/ ; ; >
+      au < manifest ; exists ; 2021 ; Journal of Diabetes and Endocrine Practice Volume 4 ; 2021 ; 4 ; https://www.jdeponline.com/ ; ; >
 
   }
 
@@ -10720,12 +10720,13 @@
       param[journal_issn] = 2395-1540
 #      param[base_url] = http://www.jrnm.in/
 
-      au < exists ; exists ; 2016 ; Journal of Renal Nutrition and Metabolism Volume 2 ; 2016 ; 2 ; https://www.jrnm.in/ ; ; >
-      au < exists ; exists ; 2018 ; Journal of Renal Nutrition and Metabolism Volume 3 ; 2018 ; 3 ; https://www.jrnm.in/ ; ; >
-      au < exists ; exists ; 2019 ; Journal of Renal Nutrition and Metabolism Volume 4 ; 2019 ; 4 ; https://www.jrnm.in/ ; ; >
-      au < exists ; exists ; 2020 ; Journal of Renal Nutrition and Metabolism Volume 5 ; 2020 ; 5 ; https://www.jrnm.in/ ; ; >
-      au < exists ; exists ; 2021 ; Journal of Renal Nutrition and Metabolism Volume 6 ; 2021 ; 6 ; https://www.jrnm.in/ ; ; >
-      au < expected ; exists ; 2022 ; Journal of Renal Nutrition and Metabolism Volume 7 ; 2022 ; 7 ; https://www.jrnm.in/ ; ; >
+      au < manifest ; exists ; 2016 ; Journal of Renal Nutrition and Metabolism Volume 2 ; 2016 ; 2 ; http://www.jrnm.in/ ; ; >
+      au < manifest ; exists ; 2018 ; Journal of Renal Nutrition and Metabolism Volume 3 ; 2018 ; 3 ; http://www.jrnm.in/ ; ; >
+      au < manifest ; exists ; 2018 ; Journal of Renal Nutrition and Metabolism Volume 4 ; 2018 ; 4 ; http://www.jrnm.in/ ; ; >
+      au < manifest ; exists ; 2019 ; Journal of Renal Nutrition and Metabolism Volume 5 ; 2019 ; 5 ; http://www.jrnm.in/ ; ; >
+      au < manifest ; exists ; 2020 ; Journal of Renal Nutrition and Metabolism Volume 6 ; 2020 ; 6 ; http://www.jrnm.in/ ; ; >
+      au < manifest ; exists ; 2021 ; Journal of Renal Nutrition and Metabolism Volume 7 ; 2021 ; 7 ; http://www.jrnm.in/ ; ; >
+      au < expected ; exists ; 2022 ; Journal of Renal Nutrition and Metabolism Volume 8 ; 2022 ; 8 ; http://www.jrnm.in/ ; ; >
 
   }
 
@@ -10975,13 +10976,12 @@
 #      param[base_url] = http://www.nigjourcvtsurg.org/
      #Site appears to still be on http, but has errors. Is moving to https.
 
-      au < exists ; exists ; 2016 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 1 ; 2016 ; 1 ; https://www.nigjourcvtsurg.org/ ; ; >
-      au < exists ; exists ; 2017 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 2 ; 2017 ; 2 ; https://www.nigjourcvtsurg.org/ ; ; >
-      au < exists ; exists ; 2018 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 3 ; 2018 ; 3 ; https://www.nigjourcvtsurg.org/ ; ; >
-      au < exists ; exists ; 2019 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 4 ; 2019 ; 4 ; https://www.nigjourcvtsurg.org/ ; ; >
-      au < exists ; exists ; 2020 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 5 ; 2020 ; 5 ; https://www.nigjourcvtsurg.org/ ; ; >
-      au < expected ; exists ; 2021 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 6 ; 2021 ; 6 ; https://www.nigjourcvtsurg.org/ ; ; >
-      au < expected ; exists ; 2022 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 7 ; 2022 ; 7 ; https://www.nigjourcvtsurg.org/ ; ; >
+      au < exists ; exists ; 2016 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 1 ; 2016 ; 1 ; http://www.nigjourcvtsurg.org/ ; ; >
+      au < exists ; exists ; 2017 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 2 ; 2017 ; 2 ; http://www.nigjourcvtsurg.org/ ; ; >
+      au < exists ; exists ; 2018 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 3 ; 2018 ; 3 ; http://www.nigjourcvtsurg.org/ ; ; >
+      au < exists ; exists ; 2019 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 4 ; 2019 ; 4 ; http://www.nigjourcvtsurg.org/ ; ; >
+      au < exists ; exists ; 2020 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 5 ; 2020 ; 5 ; http://www.nigjourcvtsurg.org/ ; ; >
+      au < expected ; exists ; 2022 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 6 ; 2022 ; 6 ; http://www.nigjourcvtsurg.org/ ; ; >
 
   }
 
