@@ -1137,6 +1137,7 @@ while (my $line = <>) {
            ($plugin eq "UniversityofMichiganPlugin") ||
            ($plugin eq "ClockssUniversityofMichiganPlugin")) {
     #permission is different from start
+    #$perm_url = uri_unescape($param{base_url}) . "plugins/clockss/";
     $perm_url = uri_unescape($param{base_url}) . "clockss/";
       #printf("URL: %s\n", $perm_url); #debug
       $vol_title = $perm_url ;
