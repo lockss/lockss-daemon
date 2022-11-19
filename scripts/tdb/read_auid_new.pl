@@ -1137,8 +1137,8 @@ while (my $line = <>) {
            ($plugin eq "UniversityofMichiganPlugin") ||
            ($plugin eq "ClockssUniversityofMichiganPlugin")) {
     #permission is different from start
-    #$perm_url = uri_unescape($param{base_url}) . "plugins/clockss/";
-    $perm_url = uri_unescape($param{base_url}) . "clockss/";
+    $perm_url = uri_unescape($param{base_url}) . "plugins/clockss/";
+    #$perm_url = uri_unescape($param{base_url}) . "clockss/";
       #printf("URL: %s\n", $perm_url); #debug
       $vol_title = $perm_url ;
     #start_url for all OAI queries https://www.comicsgrid.com/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2019-01-01&until=2019-12-31
