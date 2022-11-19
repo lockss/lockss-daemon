@@ -378,9 +378,8 @@ public class ApiStatus implements Serializable {
    */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
     if (jsonObj == null) {
-      if (ApiStatus.openapiRequiredFields.isEmpty()) {
-        return;
-      } else { // has required fields
+      if (!ApiStatus.openapiRequiredFields
+               .isEmpty()) { // has required fields but JSON object is null
         throw new IllegalArgumentException(String.format(
           "The required field(s) %s in ApiStatus is not found in the empty JSON string",
           ApiStatus.openapiRequiredFields.toString()));

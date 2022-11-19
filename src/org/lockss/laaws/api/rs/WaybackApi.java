@@ -90,7 +90,7 @@ public class WaybackApi {
 
   /**
    * Build call for getCdxOwb
-   * @param namespace Namespace of the artifacts (optional, default to lockss)
+   * @param namespace Namespace of the artifacts (required)
    * @param q Query string. Supported fields are url, type\\ \\ (urlquery/prefixquery), offset and
    limit. (optional)
    * @param count . (optional)
@@ -127,17 +127,16 @@ public class WaybackApi {
     Object localVarPostBody = null;
 
     // create path and map variables
-    String localVarPath = "/wayback/cdx/owb/";
+    String localVarPath = "/wayback/cdx/owb/{namespace}".replace("{"
+            + "namespace"
+            + "}",
+        apiClient.escapeString(namespace.toString()));
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
     Map<String, String> localVarHeaderParams = new HashMap<String, String>();
     Map<String, String> localVarCookieParams = new HashMap<String, String>();
     Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    if (namespace != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("namespace", namespace));
-    }
 
     if (q != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("q", q));
@@ -166,9 +165,7 @@ public class WaybackApi {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
 
-    final String[] localVarContentTypes = {
-
-    };
+    final String[] localVarContentTypes = {};
     final String localVarContentType =
         apiClient.selectHeaderContentType(localVarContentTypes);
     if (localVarContentType != null) {
@@ -185,17 +182,19 @@ public class WaybackApi {
   private okhttp3.Call getCdxOwbValidateBeforeCall(String namespace, String q, Integer count,
       Integer startPage, String accept, String acceptEncoding, final ApiCallback _callback)
       throws ApiException {
-    // verify the required parameter 'collectionid' is set
+    // verify the required parameter 'namespace' is set
+    if (namespace == null) {
+      throw new ApiException(
+          "Missing the required parameter 'namespace' when calling getCdxOwb(Async)");
+    }
 
-    okhttp3.Call localVarCall =
-        getCdxOwbCall(namespace, q, count, startPage, accept, acceptEncoding, _callback);
-    return localVarCall;
+    return getCdxOwbCall(namespace, q, count, startPage, accept, acceptEncoding, _callback);
   }
 
   /**
    * Get OpenWayback CDX records
    * Get the OpenWayback CDX records of a URL in a namespace
-   * @param namespace Namespace of the artifacts (optional, default to lockss)
+   * @param namespace Namespace of the artifacts (required)
    * @param q Query string. Supported fields are url, type\\ \\ (urlquery/prefixquery), offset and
    limit. (optional)
    * @param count . (optional)
@@ -224,7 +223,7 @@ public class WaybackApi {
   /**
    * Get OpenWayback CDX records
    * Get the OpenWayback CDX records of a URL in a namespace
-   * @param namespace Namespace of the artifacts (optional, default to lockss)
+   * @param namespace Namespace of the artifacts (required)
    * @param q Query string. Supported fields are url, type\\ \\ (urlquery/prefixquery), offset and
    limit. (optional)
    * @param count . (optional)
@@ -254,7 +253,7 @@ public class WaybackApi {
   /**
    * Get OpenWayback CDX records (asynchronously)
    * Get the OpenWayback CDX records of a URL in a namespace
-   * @param namespace Namespace of the artifacts (optional, default to lockss)
+   * @param namespace Namespace of the artifacts (required)
    * @param q Query string. Supported fields are url, type\\ \\ (urlquery/prefixquery), offset and
    limit. (optional)
    * @param count . (optional)
@@ -284,7 +283,7 @@ public class WaybackApi {
   }
   /**
    * Build call for getCdxPywb
-   * @param namespace Namespace of the artifacts (optional, default to lockss)
+   * @param namespace Namespace of the artifacts (required)
    * @param url The URL for which the CDX records are requested (optional)
    * @param limit . (optional)
    * @param matchType  (optional)
@@ -325,17 +324,16 @@ public class WaybackApi {
     Object localVarPostBody = null;
 
     // create path and map variables
-    String localVarPath = "/wayback/cdx/pywb/";
+    String localVarPath = "/wayback/cdx/pywb/{namespace}".replace("{"
+            + "namespace"
+            + "}",
+        apiClient.escapeString(namespace.toString()));
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
     Map<String, String> localVarHeaderParams = new HashMap<String, String>();
     Map<String, String> localVarCookieParams = new HashMap<String, String>();
     Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    if (namespace != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("namespace", namespace));
-    }
 
     if (url != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("url", url));
@@ -380,9 +378,7 @@ public class WaybackApi {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
 
-    final String[] localVarContentTypes = {
-
-    };
+    final String[] localVarContentTypes = {};
     final String localVarContentType =
         apiClient.selectHeaderContentType(localVarContentTypes);
     if (localVarContentType != null) {
@@ -399,15 +395,20 @@ public class WaybackApi {
   private okhttp3.Call getCdxPywbValidateBeforeCall(String namespace, String url, Integer limit,
       String matchType, String sort, String closest, String output, String fl, String accept,
       String acceptEncoding, final ApiCallback _callback) throws ApiException {
-    okhttp3.Call localVarCall = getCdxPywbCall(namespace, url, limit, matchType, sort, closest,
-        output, fl, accept, acceptEncoding, _callback);
-    return localVarCall;
+    // verify the required parameter 'namespace' is set
+    if (namespace == null) {
+      throw new ApiException(
+          "Missing the required parameter 'namespace' when calling getCdxPywb(Async)");
+  }
+
+    return getCdxPywbCall(namespace, url, limit, matchType, sort, closest, output, fl, accept,
+        acceptEncoding, _callback);
   }
 
   /**
    * Get PyWayback CDX records
    * Get the PyWayback CDX records of a URL in a namespace
-   * @param namespace Namespace of the artifacts (optional, default to lockss)
+   * @param namespace Namespace of the artifacts (required)
    * @param url The URL for which the CDX records are requested (optional)
    * @param limit . (optional)
    * @param matchType  (optional)
@@ -440,7 +441,7 @@ public class WaybackApi {
   /**
    * Get PyWayback CDX records
    * Get the PyWayback CDX records of a URL in a namespace
-   * @param namespace Namespace of the artifacts (optional, default to lockss)
+   * @param namespace Namespace of the artifacts (required)
    * @param url The URL for which the CDX records are requested (optional)
    * @param limit . (optional)
    * @param matchType  (optional)
@@ -474,7 +475,7 @@ public class WaybackApi {
   /**
    * Get PyWayback CDX records (asynchronously)
    * Get the PyWayback CDX records of a URL in a namespace
-   * @param namespace Namespace of the artifacts (optional, default to lockss)
+   * @param namespace Namespace of the artifacts (required)
    * @param url The URL for which the CDX records are requested (optional)
    * @param limit . (optional)
    * @param matchType  (optional)
@@ -541,9 +542,9 @@ public class WaybackApi {
     Object localVarPostBody = null;
 
     // create path and map variables
-    String localVarPath = "/wayback/warcs/{fileName}".replaceAll("\\{"
+    String localVarPath = "/wayback/warcs/{fileName}".replace("{"
             + "fileName"
-            + "\\}",
+            + "}",
         apiClient.escapeString(fileName.toString()));
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -571,9 +572,7 @@ public class WaybackApi {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
 
-    final String[] localVarContentTypes = {
-
-    };
+    final String[] localVarContentTypes = {};
     final String localVarContentType =
         apiClient.selectHeaderContentType(localVarContentTypes);
     if (localVarContentType != null) {
@@ -595,9 +594,7 @@ public class WaybackApi {
           "Missing the required parameter 'fileName' when calling getWarcArchive(Async)");
     }
 
-    okhttp3.Call localVarCall =
-        getWarcArchiveCall(fileName, accept, acceptEncoding, range, _callback);
-    return localVarCall;
+    return getWarcArchiveCall(fileName, accept, acceptEncoding, range, _callback);
   }
 
   /**

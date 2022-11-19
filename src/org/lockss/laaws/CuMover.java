@@ -28,18 +28,21 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.laaws;
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Queue;
+import com.google.gson.Gson;
+import org.apache.http.ProtocolVersion;
+import org.apache.http.StatusLine;
+import org.apache.http.message.BasicHttpResponse;
+import org.apache.http.message.BasicStatusLine;
 import org.lockss.laaws.client.ApiException;
 import org.lockss.laaws.model.rs.Artifact;
 import org.lockss.laaws.model.rs.ArtifactPageInfo;
+import org.lockss.laaws.model.rs.ArtifactProperties;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
+import org.lockss.util.CIProperties;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
+import java.util.*;
 
 import static org.lockss.laaws.Counters.CounterType;
 
@@ -51,6 +54,10 @@ public class CuMover extends Worker {
   private String v2Url;
   private boolean isPartialContent;
   private String namespace;
+
+  protected static StatusLine STATUS_LINE_OK =
+    new BasicStatusLine(new ProtocolVersion("HTTP", 1, 1), 200, "OK");
+
 
   public CuMover(V2AuMover auMover, MigrationTask task) {
     super(auMover, task);
@@ -176,10 +183,29 @@ public class CuMover extends Worker {
       CachedUrl cu, String namespace) throws ApiException {
     log.debug3("createArtifact("+v2Url+")");
     DigestCachedUrl dcu = new DigestCachedUrl(cu);
+    Gson gson = new Gson();
     try {
       ctrs.addInProgressDcu(CounterType.CONTENT_BYTES_MOVED, dcu);
       ctrs.addInProgressDcu(CounterType.BYTES_MOVED, dcu);
-      Artifact uncommitted = artifactsApi.createArtifact(auid, v2Url, dcu, namespace, collectionDate);
+
+      // The artifact properties
+      Map<String, String> props = new HashMap<>();
+      props.put(ArtifactProperties.SERIALIZED_NAME_NAMESPACE,namespace);
+      props.put(ArtifactProperties.SERIALIZED_NAME_AUID, auid);
+      props.put(ArtifactProperties.SERIALIZED_NAME_URI, v2Url);
+      props.put(ArtifactProperties.SERIALIZED_NAME_COLLECTION_DATE, String.valueOf(collectionDate));
+      String prop_str = gson.toJson(props);
+
+      // The artifact headers for HTTP response
+      BasicHttpResponse response = new BasicHttpResponse(STATUS_LINE_OK);
+      CIProperties hdr_props = cu.getProperties();
+      if (hdr_props != null) {
+        ((Set<String>) ((Map) hdr_props).keySet()).forEach(
+          key -> response.addHeader(key, hdr_props.getProperty(key)));
+      }
+      Artifact uncommitted = artifactsApi.createArtifact(prop_str,dcu,response.getStatusLine().toString(),
+        Arrays.toString(response.getAllHeaders()));
+      //Artifact uncommitted = artifactsApi.createArtifact(auid, v2Url, dcu, namespace, collectionDate)
       if (uncommitted != null) {
         if (log.isDebug3()) {
           log.debug3("createArtifact returned,  content bytes: " +
@@ -203,8 +229,8 @@ public class CuMover extends Worker {
    */
   void commitArtifact(Artifact uncommitted, DigestCachedUrl dcu) throws ApiException {
     Artifact committed;
-    log.debug3("committing artifact " + uncommitted.getId());
-    committed = artifactsApi.updateArtifact(uncommitted.getId(),true, uncommitted.getNamespace());
+    log.debug3("committing artifact " + uncommitted.getUuid());
+    committed = artifactsApi.updateArtifact(uncommitted.getUuid(),true, uncommitted.getNamespace());
     String contentDigest = dcu.getContentDigest();
     if (!committed.getContentDigest().equals(contentDigest)) {
       String err="Error in commit of " + dcu.getCu().getUrl() + " content digest do not match";
@@ -216,7 +242,7 @@ public class CuMover extends Worker {
       if (log.isDebug2()) {
         log.debug2("Hash match: " + dcu.getCu().getUrl() + ": v1 digest: " +dcu.getContentDigest()+  " v2 digest: " + committed.getContentDigest());
       }
-      log.debug3("Successfully committed artifact " + committed.getId());
+      log.debug3("Successfully committed artifact " + committed.getUuid());
       ctrs.incr(CounterType.ARTIFACTS_MOVED);
       ctrs.removeInProgressDcu(CounterType.CONTENT_BYTES_MOVED, dcu);
       ctrs.removeInProgressDcu(CounterType.BYTES_MOVED, dcu);
@@ -244,4 +270,6 @@ public class CuMover extends Worker {
     }
     return cuArtifacts;
   }
+
+
 }

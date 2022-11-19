@@ -87,8 +87,8 @@ public class ImportStatus implements Serializable {
   public static final String SERIALIZED_NAME_URL = "url";
   @SerializedName(SERIALIZED_NAME_URL) private String url;
 
-  public static final String SERIALIZED_NAME_ARTIFACT_ID = "artifactId";
-  @SerializedName(SERIALIZED_NAME_ARTIFACT_ID) private String artifactId;
+  public static final String SERIALIZED_NAME_ARTIFACT_UUID = "artifactUuid";
+  @SerializedName(SERIALIZED_NAME_ARTIFACT_UUID) private String artifactUuid;
 
   public static final String SERIALIZED_NAME_DIGEST = "digest";
   @SerializedName(SERIALIZED_NAME_DIGEST) private String digest;
@@ -212,24 +212,24 @@ public class ImportStatus implements Serializable {
     this.url = url;
   }
 
-  public ImportStatus artifactId(String artifactId) {
-    this.artifactId = artifactId;
+  public ImportStatus artifactUuid(String artifactUuid) {
+    this.artifactUuid = artifactUuid;
     return this;
   }
 
   /**
-   * Get artifactId
-   * @return artifactId
+   * Get artifactUuid
+   * @return artifactUuid
    **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public String getArtifactId() {
-    return artifactId;
+  public String getArtifactUuid() {
+    return artifactUuid;
   }
 
-  public void setArtifactId(String artifactId) {
-    this.artifactId = artifactId;
+  public void setArtifactUuid(String artifactUuid) {
+    this.artifactUuid = artifactUuid;
   }
 
   public ImportStatus digest(String digest) {
@@ -324,7 +324,7 @@ public class ImportStatus implements Serializable {
     return Objects.equals(this.warcId, importStatus.warcId)
         && Objects.equals(this.offset, importStatus.offset)
         && Objects.equals(this.url, importStatus.url)
-        && Objects.equals(this.artifactId, importStatus.artifactId)
+        && Objects.equals(this.artifactUuid, importStatus.artifactUuid)
         && Objects.equals(this.digest, importStatus.digest)
         && Objects.equals(this.version, importStatus.version)
         && Objects.equals(this.status, importStatus.status)
@@ -333,7 +333,7 @@ public class ImportStatus implements Serializable {
 
   @Override
   public int hashCode() {
-    return Objects.hash(warcId, offset, url, artifactId, digest, version, status, statusMessage);
+    return Objects.hash(warcId, offset, url, artifactUuid, digest, version, status, statusMessage);
   }
 
   @Override
@@ -343,7 +343,7 @@ public class ImportStatus implements Serializable {
     sb.append("    warcId: ").append(toIndentedString(warcId)).append("\n");
     sb.append("    offset: ").append(toIndentedString(offset)).append("\n");
     sb.append("    url: ").append(toIndentedString(url)).append("\n");
-    sb.append("    artifactId: ").append(toIndentedString(artifactId)).append("\n");
+    sb.append("    artifactUuid: ").append(toIndentedString(artifactUuid)).append("\n");
     sb.append("    digest: ").append(toIndentedString(digest)).append("\n");
     sb.append("    version: ").append(toIndentedString(version)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
@@ -372,7 +372,7 @@ public class ImportStatus implements Serializable {
     openapiFields.add("warcId");
     openapiFields.add("offset");
     openapiFields.add("url");
-    openapiFields.add("artifactId");
+    openapiFields.add("artifactUuid");
     openapiFields.add("digest");
     openapiFields.add("version");
     openapiFields.add("status");
@@ -390,9 +390,8 @@ public class ImportStatus implements Serializable {
    */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
     if (jsonObj == null) {
-      if (ImportStatus.openapiRequiredFields.isEmpty()) {
-        return;
-      } else { // has required fields
+      if (!ImportStatus.openapiRequiredFields
+               .isEmpty()) { // has required fields but JSON object is null
         throw new IllegalArgumentException(String.format(
             "The required field(s) %s in ImportStatus is not found in the empty JSON string",
             ImportStatus.openapiRequiredFields.toString()));
@@ -420,11 +419,11 @@ public class ImportStatus implements Serializable {
           "Expected the field `url` to be a primitive type in the JSON string but got `%s`",
           jsonObj.get("url").toString()));
     }
-    if ((jsonObj.get("artifactId") != null && !jsonObj.get("artifactId").isJsonNull())
-        && !jsonObj.get("artifactId").isJsonPrimitive()) {
+    if ((jsonObj.get("artifactUuid") != null && !jsonObj.get("artifactUuid").isJsonNull())
+        && !jsonObj.get("artifactUuid").isJsonPrimitive()) {
       throw new IllegalArgumentException(String.format(
-          "Expected the field `artifactId` to be a primitive type in the JSON string but got `%s`",
-          jsonObj.get("artifactId").toString()));
+          "Expected the field `artifactUuid` to be a primitive type in the JSON string but got `%s`",
+          jsonObj.get("artifactUuid").toString()));
     }
     if ((jsonObj.get("digest") != null && !jsonObj.get("digest").isJsonNull())
         && !jsonObj.get("digest").isJsonPrimitive()) {

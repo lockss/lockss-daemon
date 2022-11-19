@@ -125,9 +125,9 @@ public class AusApi {
     Object localVarPostBody = null;
 
     // create path and map variables
-    String localVarPath = "/aus/{auid}/size".replaceAll("\\{"
+    String localVarPath = "/aus/{auid}/size".replace("{"
             + "auid"
-            + "\\}",
+            + "}",
         apiClient.escapeString(auid.toString()));
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -146,9 +146,7 @@ public class AusApi {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
 
-    final String[] localVarContentTypes = {
-
-    };
+    final String[] localVarContentTypes = {};
     final String localVarContentType =
         apiClient.selectHeaderContentType(localVarContentTypes);
     if (localVarContentType != null) {
@@ -170,8 +168,7 @@ public class AusApi {
           "Missing the required parameter 'auid' when calling getArtifactsSize(Async)");
     }
 
-    okhttp3.Call localVarCall = getArtifactsSizeCall(auid, namespace, _callback);
-    return localVarCall;
+    return getArtifactsSizeCall(auid, namespace, _callback);
   }
 
   /**
@@ -314,9 +311,7 @@ public class AusApi {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
 
-    final String[] localVarContentTypes = {
-
-    };
+    final String[] localVarContentTypes = {};
     final String localVarContentType =
         apiClient.selectHeaderContentType(localVarContentTypes);
     if (localVarContentType != null) {
@@ -332,8 +327,7 @@ public class AusApi {
   @SuppressWarnings("rawtypes")
   private okhttp3.Call getAusValidateBeforeCall(String namespace, Integer limit,
       String continuationToken, final ApiCallback _callback) throws ApiException {
-    okhttp3.Call localVarCall = getAusCall(namespace, limit, continuationToken, _callback);
-    return localVarCall;
+    return getAusCall(namespace, limit, continuationToken, _callback);
   }
 
   /**
@@ -456,9 +450,9 @@ public class AusApi {
     Object localVarPostBody = null;
 
     // create path and map variables
-    String localVarPath = "/aus/{auid}/bulk".replaceAll("\\{"
+    String localVarPath = "/aus/{auid}/bulk".replace("{"
             + "auid"
-            + "\\}",
+            + "}",
         apiClient.escapeString(auid.toString()));
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -475,9 +469,7 @@ public class AusApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("namespace", namespace));
     }
 
-    final String[] localVarAccepts = {
-
-    };
+    final String[] localVarAccepts = {};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) {
       localVarHeaderParams.put("Accept", localVarAccept);
@@ -511,8 +503,7 @@ public class AusApi {
           "Missing the required parameter 'op' when calling handleBulkAuOp(Async)");
     }
 
-    okhttp3.Call localVarCall = handleBulkAuOpCall(auid, op, namespace, _callback);
-    return localVarCall;
+    return handleBulkAuOpCall(auid, op, namespace, _callback);
   }
 
   /**

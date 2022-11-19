@@ -132,9 +132,7 @@ public class StatusApi {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
 
-    final String[] localVarContentTypes = {
-
-    };
+    final String[] localVarContentTypes = {};
     final String localVarContentType =
         apiClient.selectHeaderContentType(localVarContentTypes);
     if (localVarContentType != null) {
@@ -150,8 +148,7 @@ public class StatusApi {
   @SuppressWarnings("rawtypes")
   private okhttp3.Call getStatusValidateBeforeCall(final ApiCallback _callback)
       throws ApiException {
-    okhttp3.Call localVarCall = getStatusCall(_callback);
-    return localVarCall;
+    return getStatusCall(_callback);
   }
 
   /**

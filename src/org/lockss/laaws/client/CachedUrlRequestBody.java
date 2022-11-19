@@ -97,6 +97,21 @@ public class CachedUrlRequestBody extends RequestBody {
     return httpResponse;
   }
 
+  public InputStream getPayloadForCachedUrl() throws IOException {
+    // Create an InputStreamEntity from artifact InputStream
+    try {
+      cis = new CountingInputStream(artifactCu.getUnfilteredInputStream());
+      dcu.setContentCountingInputStream(cis);
+      DigestInputStream dis = new DigestInputStream(cis, dcu.createMessageDigest());
+      return dis;
+    }
+    catch (Exception ex) {
+      log.error("Unable to open input stream for " + artifactCu.getUrl(), ex);
+      AuUtil.safeRelease(artifactCu);
+    }
+    return null;
+  }
+
   /**
    * Adapts an {@code HttpResponse} object to an InputStream containing a HTTP response stream representation of the
    * {@code HttpResponse} object.
@@ -178,6 +193,7 @@ public class CachedUrlRequestBody extends RequestBody {
       response.setEntity(new InputStreamEntity(dis));
       // Add artifact headers into HTTP response
       CIProperties props = artifactCu.getProperties();
+
       if (props != null) {
         ((Set<String>) ((Map) props).keySet()).forEach(
           key -> response.addHeader(key, props.getProperty(key)));
@@ -205,12 +221,13 @@ public class CachedUrlRequestBody extends RequestBody {
   public void writeTo(BufferedSink sink) throws IOException {
     Source source = null;
     try {
-      InputStream inputStream = getHttpResponseStreamFromCachedUrl();
+      InputStream inputStream = artifactCu.getUnfilteredInputStream();
       log.debug3("Writing " + (inputStream == null ? "(null) " : "") +
                  artifactCu);
       if (inputStream != null) {
         CountingInputStream cis = new CountingInputStream(inputStream);
         dcu.setTotalCountingInputStream(cis);
+        DigestInputStream dis = new DigestInputStream(cis, dcu.createMessageDigest());
         source = Okio.source(cis);
         sink.writeAll(source);
         long avail = inputStream.available();

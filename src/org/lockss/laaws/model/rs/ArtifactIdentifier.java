@@ -32,24 +32,27 @@ package org.lockss.laaws.model.rs;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.google.common.collect.ComparisonChain;
+
 import java.io.Serializable;
 import java.util.Objects;
 
+import org.lockss.util.PreOrderComparator;
 
 /**
  * Class that serves as an identifier for artifacts.
  *
- * Artifacts are identified uniquely by the tuple of (NamespaceID, AUID, URL, Version). Within the context of a LOCKSS
+ * Artifacts are identified uniquely by the tuple of (Namespace, AUID, URL, Version). Within the context of a LOCKSS
  * repository, they are also uniquely identified by their artifact ID.
  *
  * Comparable is implemented to allow for an ordering of artifacts.
  */
-public class ArtifactIdentifier implements Serializable {
+public class ArtifactIdentifier implements Serializable, Comparable<ArtifactIdentifier> {
   private String artifactId;
-  private final String namespace;
-  private final String auid;
-  private final String uri;
-  private final Integer version;
+    private String namespace;
+    private String auid;
+    private String uri;
+    private Integer version;
 
   public ArtifactIdentifier(String namespace, String auid, String uri, Integer version) {
     this(null, namespace, auid, uri, version);
@@ -64,13 +67,25 @@ public class ArtifactIdentifier implements Serializable {
   }
 
   /**
-   * Returns the namespace name encoded in this artifact identifier.
+     * Returns the namespace encoded in this artifact identifier.
    *
-   * @return namespace name
+     * @return Namespace
    */
   public String getNamespace() {
     return namespace;
   }
+
+    public void setNamespace(String namespace) {
+        this.namespace = namespace;
+    }
+
+    public void setAuid(String auid) {
+        this.auid = auid;
+    }
+
+    public void setUri(String uri) {
+        this.uri = uri;
+    }
 
   /**
    * Returns the Archival Unit ID (AUID) encoded in this artifact identifier.
@@ -117,22 +132,35 @@ public class ArtifactIdentifier implements Serializable {
     this.artifactId = id;
   }
 
+    /**
+     * Implements Comparable - The canonical order here from most significant to least significant is the assigned
+     * namespace, archival unit (AU), URI, and version. The artifactId is a unique internal handle and has no
+     * useful ordering in this context, and so is not included in the comparison calculation.
+     *
+     * @param other The other instance of ArtifactIdentifier to compare against.
+     * @return An integer indicating whether order relative to other.
+     */
   @Override
+    public int compareTo(ArtifactIdentifier other) {
+        return ComparisonChain.start()
+                .compare(this.getNamespace(), other.getNamespace())
+                .compare(this.getAuid(), other.getAuid())
+                .compare(this.getUri(), other.getUri(),
+			 PreOrderComparator.INSTANCE)
+                .compare(this.getVersion(), other.getVersion())
+//                .compare(this.getId(), this.getId())
+                .result();
+    }
+
+    @Override
   public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+       ArtifactIdentifier other = (ArtifactIdentifier)o;
+       return other != null && this.compareTo(other) == 0;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
-    }
-    ArtifactIdentifier that = (ArtifactIdentifier) o;
-    return artifactId.equals(that.artifactId) && namespace.equals(that.namespace) && auid.equals(
-        that.auid) && uri.equals(that.uri) && version.equals(that.version);
-  }
 
   @Override
   public int hashCode() {
-    return Objects.hash(artifactId, namespace, auid, uri, version);
+        return Objects.hash(namespace, auid, uri, version);
   }
 
   /**
@@ -152,7 +180,7 @@ public class ArtifactIdentifier implements Serializable {
 
   /**
    * Returns the artifact stem of this artifact identifier, which represents a tuple
-   * containing the namespace ID, AUID, and URL.
+     * containing the namespace, AUID, and URL.
    *
    * @return A {@link ArtifactStem} containing the artifact stem of this artifact identifier.
    */
@@ -162,7 +190,7 @@ public class ArtifactIdentifier implements Serializable {
   }
 
   /**
-   * Struct representing a tuple of namespace ID, AUID, and URL. Used for artifact version locking.
+     * Struct representing a tuple of namespace, AUID, and URL. Used for artifact version locking.
    */
   public static class ArtifactStem {
     private final String namespace;
@@ -173,6 +201,24 @@ public class ArtifactIdentifier implements Serializable {
       this.namespace = namespace;
       this.auid = auid;
       this.uri = uri;
+        }
+
+      /**
+       * Returns the Archival Unit ID (AUID) encoded in this artifact identifier.
+       *
+       * @return Archival unit ID
+       */
+      public String getAuid() {
+        return auid;
+      }
+
+      /**
+       * Returns the namespace encoded in this stem
+       *
+       * @return Namespace
+       */
+      public String getNamespace() {
+        return namespace;
     }
 
     @Override

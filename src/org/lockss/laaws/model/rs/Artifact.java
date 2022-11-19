@@ -26,7 +26,7 @@
  * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
-*/
+ */
 
 /*
  * LOCKSS Repository Service REST API
@@ -65,6 +65,7 @@ import java.lang.reflect.Type;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Objects;
@@ -78,11 +79,17 @@ import org.lockss.laaws.client.JSON;
 public class Artifact implements Serializable {
   private static final long serialVersionUID = 1L;
 
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID) private String id;
+  public static final String SERIALIZED_NAME_COMMITTED = "committed";
+  @SerializedName(SERIALIZED_NAME_COMMITTED) private Boolean committed;
+
+  public static final String SERIALIZED_NAME_STORAGE_URL = "storageUrl";
+  @SerializedName(SERIALIZED_NAME_STORAGE_URL) private String storageUrl;
 
   public static final String SERIALIZED_NAME_NAMESPACE = "namespace";
-  @SerializedName(SERIALIZED_NAME_NAMESPACE) private String namespace;
+  @SerializedName(SERIALIZED_NAME_NAMESPACE) private String namespace = "lockss";
+
+  public static final String SERIALIZED_NAME_UUID = "uuid";
+  @SerializedName(SERIALIZED_NAME_UUID) private String uuid;
 
   public static final String SERIALIZED_NAME_AUID = "auid";
   @SerializedName(SERIALIZED_NAME_AUID) private String auid;
@@ -93,12 +100,6 @@ public class Artifact implements Serializable {
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION) private Integer version;
 
-  public static final String SERIALIZED_NAME_COMMITTED = "committed";
-  @SerializedName(SERIALIZED_NAME_COMMITTED) private Boolean committed;
-
-  public static final String SERIALIZED_NAME_STORAGE_URL = "storageUrl";
-  @SerializedName(SERIALIZED_NAME_STORAGE_URL) private String storageUrl;
-
   public static final String SERIALIZED_NAME_CONTENT_LENGTH = "contentLength";
   @SerializedName(SERIALIZED_NAME_CONTENT_LENGTH) private Long contentLength;
 
@@ -108,26 +109,49 @@ public class Artifact implements Serializable {
   public static final String SERIALIZED_NAME_COLLECTION_DATE = "collectionDate";
   @SerializedName(SERIALIZED_NAME_COLLECTION_DATE) private Long collectionDate;
 
+  public static final String SERIALIZED_NAME_STATE = "state";
+  @SerializedName(SERIALIZED_NAME_STATE) private String state;
+
   public Artifact() {}
 
-  public Artifact id(String id) {
-    this.id = id;
+  public Artifact committed(Boolean committed) {
+    this.committed = committed;
     return this;
   }
 
   /**
-   * Get id
-   * @return id
+   * Get committed
+   * @return committed
    **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public String getId() {
-    return id;
+  public Boolean getCommitted() {
+    return committed;
   }
 
-  public void setId(String id) {
-    this.id = id;
+  public void setCommitted(Boolean committed) {
+    this.committed = committed;
+  }
+
+  public Artifact storageUrl(String storageUrl) {
+    this.storageUrl = storageUrl;
+    return this;
+  }
+
+  /**
+   * Get storageUrl
+   * @return storageUrl
+   **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getStorageUrl() {
+    return storageUrl;
+  }
+
+  public void setStorageUrl(String storageUrl) {
+    this.storageUrl = storageUrl;
   }
 
   public Artifact namespace(String namespace) {
@@ -148,6 +172,26 @@ public class Artifact implements Serializable {
 
   public void setNamespace(String namespace) {
     this.namespace = namespace;
+  }
+
+  public Artifact uuid(String uuid) {
+    this.uuid = uuid;
+    return this;
+  }
+
+  /**
+   * Get uuid
+   * @return uuid
+   **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getUuid() {
+    return uuid;
+  }
+
+  public void setUuid(String uuid) {
+    this.uuid = uuid;
   }
 
   public Artifact auid(String auid) {
@@ -210,46 +254,6 @@ public class Artifact implements Serializable {
     this.version = version;
   }
 
-  public Artifact committed(Boolean committed) {
-    this.committed = committed;
-    return this;
-  }
-
-  /**
-   * Get committed
-   * @return committed
-   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Boolean getCommitted() {
-    return committed;
-  }
-
-  public void setCommitted(Boolean committed) {
-    this.committed = committed;
-  }
-
-  public Artifact storageUrl(String storageUrl) {
-    this.storageUrl = storageUrl;
-    return this;
-  }
-
-  /**
-   * Get storageUrl
-   * @return storageUrl
-   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getStorageUrl() {
-    return storageUrl;
-  }
-
-  public void setStorageUrl(String storageUrl) {
-    this.storageUrl = storageUrl;
-  }
-
   public Artifact contentLength(Long contentLength) {
     this.contentLength = contentLength;
     return this;
@@ -310,6 +314,26 @@ public class Artifact implements Serializable {
     this.collectionDate = collectionDate;
   }
 
+  public Artifact state(String state) {
+    this.state = state;
+    return this;
+  }
+
+  /**
+   * Get state
+   * @return state
+   **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getState() {
+    return state;
+  }
+
+  public void setState(String state) {
+    this.state = state;
+  }
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -319,37 +343,38 @@ public class Artifact implements Serializable {
       return false;
     }
     Artifact artifact = (Artifact) o;
-    return Objects.equals(this.id, artifact.id)
-        && Objects.equals(this.namespace, artifact.namespace)
-        && Objects.equals(this.auid, artifact.auid) && Objects.equals(this.uri, artifact.uri)
-        && Objects.equals(this.version, artifact.version)
-        && Objects.equals(this.committed, artifact.committed)
-        && Objects.equals(this.storageUrl, artifact.storageUrl)
-        && Objects.equals(this.contentLength, artifact.contentLength)
-        && Objects.equals(this.contentDigest, artifact.contentDigest)
-        && Objects.equals(this.collectionDate, artifact.collectionDate);
+    return Objects.equals(this.committed, artifact.committed)
+      && Objects.equals(this.storageUrl, artifact.storageUrl)
+      && Objects.equals(this.namespace, artifact.namespace)
+      && Objects.equals(this.uuid, artifact.uuid) && Objects.equals(this.auid, artifact.auid)
+      && Objects.equals(this.uri, artifact.uri) && Objects.equals(this.version, artifact.version)
+      && Objects.equals(this.contentLength, artifact.contentLength)
+      && Objects.equals(this.contentDigest, artifact.contentDigest)
+      && Objects.equals(this.collectionDate, artifact.collectionDate)
+      && Objects.equals(this.state, artifact.state);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, namespace, auid, uri, version, committed, storageUrl, contentLength,
-        contentDigest, collectionDate);
+    return Objects.hash(committed, storageUrl, namespace, uuid, auid, uri, version, contentLength,
+      contentDigest, collectionDate, state);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Artifact {\n");
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    committed: ").append(toIndentedString(committed)).append("\n");
+    sb.append("    storageUrl: ").append(toIndentedString(storageUrl)).append("\n");
     sb.append("    namespace: ").append(toIndentedString(namespace)).append("\n");
+    sb.append("    uuid: ").append(toIndentedString(uuid)).append("\n");
     sb.append("    auid: ").append(toIndentedString(auid)).append("\n");
     sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
     sb.append("    version: ").append(toIndentedString(version)).append("\n");
-    sb.append("    committed: ").append(toIndentedString(committed)).append("\n");
-    sb.append("    storageUrl: ").append(toIndentedString(storageUrl)).append("\n");
     sb.append("    contentLength: ").append(toIndentedString(contentLength)).append("\n");
     sb.append("    contentDigest: ").append(toIndentedString(contentDigest)).append("\n");
     sb.append("    collectionDate: ").append(toIndentedString(collectionDate)).append("\n");
+    sb.append("    state: ").append(toIndentedString(state)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -371,18 +396,15 @@ public class Artifact implements Serializable {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("id");
     openapiFields.add("namespace");
+    openapiFields.add("uuid");
     openapiFields.add("auid");
     openapiFields.add("uri");
     openapiFields.add("version");
-    openapiFields.add("committed");
-    openapiFields.add("storageUrl");
     openapiFields.add("contentLength");
     openapiFields.add("contentDigest");
     openapiFields.add("collectionDate");
-    openapiFields.add("sortUri");
-    openapiFields.add("identifier");
+    openapiFields.add("state");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -396,12 +418,11 @@ public class Artifact implements Serializable {
    */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
     if (jsonObj == null) {
-      if (Artifact.openapiRequiredFields.isEmpty()) {
-        return;
-      } else { // has required fields
+      if (!Artifact.openapiRequiredFields
+        .isEmpty()) { // has required fields but JSON object is null
         throw new IllegalArgumentException(String.format(
-            "The required field(s) %s in Artifact is not found in the empty JSON string",
-            Artifact.openapiRequiredFields.toString()));
+          "The required field(s) %s in Artifact is not found in the empty JSON string",
+          Artifact.openapiRequiredFields.toString()));
       }
     }
 
@@ -410,45 +431,51 @@ public class Artifact implements Serializable {
     for (Entry<String, JsonElement> entry : entries) {
       if (!Artifact.openapiFields.contains(entry.getKey())) {
         throw new IllegalArgumentException(String.format(
-            "The field `%s` in the JSON string is not defined in the `Artifact` properties. JSON: %s",
-            entry.getKey(), jsonObj.toString()));
+          "The field `%s` in the JSON string is not defined in the `Artifact` properties. JSON: %s",
+          entry.getKey(), jsonObj.toString()));
       }
     }
-    if ((jsonObj.get("id") != null && !jsonObj.get("id").isJsonNull())
-        && !jsonObj.get("id").isJsonPrimitive()) {
+    if ((jsonObj.get("storageUrl") != null && !jsonObj.get("storageUrl").isJsonNull())
+      && !jsonObj.get("storageUrl").isJsonPrimitive()) {
       throw new IllegalArgumentException(String.format(
-          "Expected the field `id` to be a primitive type in the JSON string but got `%s`",
-          jsonObj.get("id").toString()));
+        "Expected the field `storageUrl` to be a primitive type in the JSON string but got `%s`",
+        jsonObj.get("storageUrl").toString()));
     }
     if ((jsonObj.get("namespace") != null && !jsonObj.get("namespace").isJsonNull())
-        && !jsonObj.get("namespace").isJsonPrimitive()) {
+      && !jsonObj.get("namespace").isJsonPrimitive()) {
       throw new IllegalArgumentException(String.format(
-          "Expected the field `namespace` to be a primitive type in the JSON string but got `%s`",
-          jsonObj.get("namespace").toString()));
+        "Expected the field `namespace` to be a primitive type in the JSON string but got `%s`",
+        jsonObj.get("namespace").toString()));
+    }
+    if ((jsonObj.get("uuid") != null && !jsonObj.get("uuid").isJsonNull())
+      && !jsonObj.get("uuid").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(
+        "Expected the field `uuid` to be a primitive type in the JSON string but got `%s`",
+        jsonObj.get("uuid").toString()));
     }
     if ((jsonObj.get("auid") != null && !jsonObj.get("auid").isJsonNull())
-        && !jsonObj.get("auid").isJsonPrimitive()) {
+      && !jsonObj.get("auid").isJsonPrimitive()) {
       throw new IllegalArgumentException(String.format(
-          "Expected the field `auid` to be a primitive type in the JSON string but got `%s`",
-          jsonObj.get("auid").toString()));
+        "Expected the field `auid` to be a primitive type in the JSON string but got `%s`",
+        jsonObj.get("auid").toString()));
     }
     if ((jsonObj.get("uri") != null && !jsonObj.get("uri").isJsonNull())
-        && !jsonObj.get("uri").isJsonPrimitive()) {
+      && !jsonObj.get("uri").isJsonPrimitive()) {
       throw new IllegalArgumentException(String.format(
-          "Expected the field `uri` to be a primitive type in the JSON string but got `%s`",
-          jsonObj.get("uri").toString()));
-    }
-    if ((jsonObj.get("storageUrl") != null && !jsonObj.get("storageUrl").isJsonNull())
-        && !jsonObj.get("storageUrl").isJsonPrimitive()) {
-      throw new IllegalArgumentException(String.format(
-          "Expected the field `storageUrl` to be a primitive type in the JSON string but got `%s`",
-          jsonObj.get("storageUrl").toString()));
+        "Expected the field `uri` to be a primitive type in the JSON string but got `%s`",
+        jsonObj.get("uri").toString()));
     }
     if ((jsonObj.get("contentDigest") != null && !jsonObj.get("contentDigest").isJsonNull())
-        && !jsonObj.get("contentDigest").isJsonPrimitive()) {
+      && !jsonObj.get("contentDigest").isJsonPrimitive()) {
       throw new IllegalArgumentException(String.format(
-          "Expected the field `contentDigest` to be a primitive type in the JSON string but got `%s`",
-          jsonObj.get("contentDigest").toString()));
+        "Expected the field `contentDigest` to be a primitive type in the JSON string but got `%s`",
+        jsonObj.get("contentDigest").toString()));
+    }
+    if ((jsonObj.get("state") != null && !jsonObj.get("state").isJsonNull())
+      && !jsonObj.get("state").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(
+        "Expected the field `state` to be a primitive type in the JSON string but got `%s`",
+        jsonObj.get("state").toString()));
     }
   }
 
@@ -461,7 +488,7 @@ public class Artifact implements Serializable {
       }
       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
       final TypeAdapter<Artifact> thisAdapter =
-          gson.getDelegateAdapter(this, TypeToken.get(Artifact.class));
+        gson.getDelegateAdapter(this, TypeToken.get(Artifact.class));
 
       return (TypeAdapter<T>) new TypeAdapter<Artifact>() {
         @Override

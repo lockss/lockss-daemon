@@ -130,9 +130,7 @@ public class RepoApi {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
 
-    final String[] localVarContentTypes = {
-
-    };
+    final String[] localVarContentTypes = {};
     final String localVarContentType =
         apiClient.selectHeaderContentType(localVarContentTypes);
     if (localVarContentType != null) {
@@ -148,8 +146,7 @@ public class RepoApi {
   @SuppressWarnings("rawtypes")
   private okhttp3.Call getNamespacesValidateBeforeCall(final ApiCallback _callback)
       throws ApiException {
-    okhttp3.Call localVarCall = getNamespacesCall(_callback);
-    return localVarCall;
+    return getNamespacesCall(_callback);
   }
 
   /**
@@ -251,9 +248,7 @@ public class RepoApi {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
 
-    final String[] localVarContentTypes = {
-
-    };
+    final String[] localVarContentTypes = {};
     final String localVarContentType =
         apiClient.selectHeaderContentType(localVarContentTypes);
     if (localVarContentType != null) {
@@ -269,8 +264,7 @@ public class RepoApi {
   @SuppressWarnings("rawtypes")
   private okhttp3.Call getRepositoryInformationValidateBeforeCall(final ApiCallback _callback)
       throws ApiException {
-    okhttp3.Call localVarCall = getRepositoryInformationCall(_callback);
-    return localVarCall;
+    return getRepositoryInformationCall(_callback);
   }
 
   /**
@@ -379,9 +373,7 @@ public class RepoApi {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
 
-    final String[] localVarContentTypes = {
-
-    };
+    final String[] localVarContentTypes = {};
     final String localVarContentType =
         apiClient.selectHeaderContentType(localVarContentTypes);
     if (localVarContentType != null) {
@@ -397,8 +389,7 @@ public class RepoApi {
   @SuppressWarnings("rawtypes")
   private okhttp3.Call getSupportedChecksumAlgorithmsValidateBeforeCall(final ApiCallback _callback)
       throws ApiException {
-    okhttp3.Call localVarCall = getSupportedChecksumAlgorithmsCall(_callback);
-    return localVarCall;
+    return getSupportedChecksumAlgorithmsCall(_callback);
   }
 
   /**

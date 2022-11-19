@@ -68,6 +68,8 @@ import org.springframework.http.HttpHeaders;
 public class ArtifactData implements AutoCloseable {
 
   private static final Logger log = Logger.getLogger(CuChecker.class);
+  public static final String DEFAULT_DIGEST_ALGORITHM = "SHA-256";
+
   public static final String CONTENT_DISPOSITION = "Content-Disposition";
   public static final String MULTIPART_ARTIFACT_REPO_PROPS = "artifact-repo-props";
   public static final String MULTIPART_ARTIFACT_HEADER = "artifact-header";

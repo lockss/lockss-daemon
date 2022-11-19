@@ -120,7 +120,7 @@ public class CuChecker extends Worker {
       }
       if ( isMatch && auMover.isCompareBytes()) {
         log.debug3("Fetching  content for byte compare");
-        artifactData = artifactsApi.getMultipartArtifact(artifact.getId(),namespace,"ALWAYS");
+        artifactData = artifactsApi.getMultipartArtifact(artifact.getUuid(),namespace,"ALWAYS");
         log.debug3("Successfully fetched Artifact Data");
         isMatch = IOUtils.contentEquals(artifactData.getInputStream(),
             cu.getUncompressedInputStream());

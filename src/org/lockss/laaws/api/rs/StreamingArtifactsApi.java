@@ -92,11 +92,10 @@ public class StreamingArtifactsApi extends ArtifactsApi {
 
   /**
    * Build call for createArtifact
-   * @param auid Archival Unit ID (AUID) of new artifact (required)
-   * @param uri URI represented by this artifact (required)
-   * @param artifact Artifact data (required)
-   * @param namespace Namespace of the artifacts (optional, default to lockss)
-   * @param collectionDate Artifact collection/crawl date (milliseconds since epoch; UTC) (optional)
+   * @param artifactProps Artifact properties (JSON) (required)
+   * @param payload Artifact cachedu url payload data (required)
+   * @param httpStatus HTTP status (optional) (optional)
+   * @param httpHeaders HTTP headers (optional) (optional)
    * @param _callback Callback for upload/download progress
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
@@ -111,8 +110,8 @@ public class StreamingArtifactsApi extends ArtifactsApi {
   <tr><td> 502 </td><td> Internal error creating artifact </td><td>  -  </td></tr>
   </table>
    */
-  public okhttp3.Call createArtifactCall(String auid, String uri, DigestCachedUrl artifact, String namespace,
-                                         Long collectionDate, final ApiCallback _callback) throws ApiException {
+  public okhttp3.Call createArtifactCall(String artifactProps, DigestCachedUrl payload, String httpStatus,
+                                         String httpHeaders, final ApiCallback _callback) throws ApiException {
     String basePath = null;
     // Operation Servers
     String[] localBasePaths = new String[] {};
@@ -137,24 +136,20 @@ public class StreamingArtifactsApi extends ArtifactsApi {
     Map<String, String> localVarCookieParams = new HashMap<>();
     Map<String, Object> localVarFormParams = new HashMap<>();
 
-    if (auid != null) {
-      localVarFormParams.put("auid", auid);
+    if (artifactProps != null) {
+      localVarFormParams.put("artifactProps", artifactProps);
     }
 
-    if (uri != null) {
-      localVarFormParams.put("uri", uri);
+    if (httpStatus != null) {
+      localVarFormParams.put("httpStatus", httpStatus);
     }
 
-    if (collectionDate != null) {
-      localVarFormParams.put("collectionDate", collectionDate);
+    if (httpHeaders != null) {
+      localVarFormParams.put("httpHeaders", httpHeaders);
     }
 
-    if (artifact != null) {
-      localVarFormParams.put("artifact", artifact);
-    }
-
-    if (namespace != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("namespace", namespace));
+    if (payload != null) {
+      localVarFormParams.put("payload", payload);
     }
 
     final String[] localVarAccepts = {"application/json"};
@@ -170,47 +165,37 @@ public class StreamingArtifactsApi extends ArtifactsApi {
       localVarHeaderParams.put("Content-Type", localVarContentType);
     }
 
-
-    String[] localVarAuthNames = new String[]{ "basicAuth" };
+    String[] localVarAuthNames = new String[] {"basicAuth"};
     return apiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams,
       localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
       localVarFormParams, localVarAuthNames, _callback);
   }
 
   @SuppressWarnings("rawtypes")
-  private okhttp3.Call createArtifactValidateBeforeCall(String auid, String uri, DigestCachedUrl artifact,
-                                                        String namespace, Long collectionDate, final ApiCallback _callback) throws ApiException {
-    // verify the required parameter 'auid' is set
-    if (auid == null) {
+  private okhttp3.Call createArtifactValidateBeforeCall(String artifactProps, DigestCachedUrl payload,
+                                                        String httpStatus, String httpHeaders, final ApiCallback _callback) throws ApiException {
+    // verify the required parameter 'artifactProps' is set
+    if (artifactProps == null) {
       throw new ApiException(
-          "Missing the required parameter 'auid' when calling createArtifact(Async)");
+        "Missing the required parameter 'artifactProps' when calling createArtifact(Async)");
     }
 
-    // verify the required parameter 'uri' is set
-    if (uri == null) {
+    // verify the required parameter 'payload' is set
+    if (payload == null) {
       throw new ApiException(
-          "Missing the required parameter 'uri' when calling createArtifact(Async)");
+        "Missing the required parameter 'payload' when calling createArtifact(Async)");
     }
 
-    // verify the required parameter 'artifact' is set
-    if (artifact == null) {
-      throw new ApiException(
-          "Missing the required parameter 'artifact' when calling createArtifact(Async)");
-    }
-
-    okhttp3.Call localVarCall =
-      createArtifactCall(auid, uri, artifact, namespace, collectionDate, _callback);
-    return localVarCall;
+    return createArtifactCall(artifactProps, payload, httpStatus, httpHeaders, _callback);
   }
 
   /**
    * Create an artifact
    *
-   * @param auid Archival Unit ID (AUID) of new artifact (required)
-   * @param uri URI represented by this artifact (required)
-   * @param artifact Artifact data (required)
-   * @param namespace Namespace of the artifacts (optional, default to lockss)
-   * @param collectionDate Artifact collection/crawl date (milliseconds since epoch; UTC) (optional)
+   * @param artifactProps Artifact properties (JSON) (required)
+   * @param payload  cachedu url payload data (required)
+   * @param httpStatus HTTP status (optional) (optional)
+   * @param httpHeaders HTTP headers (optional) (optional)
    * @return Artifact
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
   response body
@@ -225,21 +210,20 @@ public class StreamingArtifactsApi extends ArtifactsApi {
   <tr><td> 502 </td><td> Internal error creating artifact </td><td>  -  </td></tr>
   </table>
    */
-  public Artifact createArtifact(String auid, String uri, DigestCachedUrl artifact, String namespace,
-                                 Long collectionDate) throws ApiException {
+  public Artifact createArtifact(String artifactProps, DigestCachedUrl payload, String httpStatus,
+                                 String httpHeaders) throws ApiException {
     ApiResponse<Artifact> localVarResp =
-      createArtifactWithHttpInfo(auid, uri, artifact, namespace, collectionDate);
+      createArtifactWithHttpInfo(artifactProps, payload, httpStatus, httpHeaders);
     return localVarResp.getData();
   }
 
   /**
    * Create an artifact
    *
-   * @param auid Archival Unit ID (AUID) of new artifact (required)
-   * @param uri URI represented by this artifact (required)
-   * @param artifact Artifact data (required)
-   * @param namespace Namespace of the artifacts (optional, default to lockss)
-   * @param collectionDate Artifact collection/crawl date (milliseconds since epoch; UTC) (optional)
+   * @param artifactProps Artifact properties (JSON) (required)
+   * @param payload Artifact payload data (required)
+   * @param httpStatus HTTP status (optional) (optional)
+   * @param httpHeaders HTTP headers (optional) (optional)
    * @return ApiResponse&lt;Artifact&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
   response body
@@ -254,10 +238,10 @@ public class StreamingArtifactsApi extends ArtifactsApi {
   <tr><td> 502 </td><td> Internal error creating artifact </td><td>  -  </td></tr>
   </table>
    */
-  public ApiResponse<Artifact> createArtifactWithHttpInfo(String auid, String uri, DigestCachedUrl artifact,
-                                                          String namespace, Long collectionDate) throws ApiException {
+  public ApiResponse<Artifact> createArtifactWithHttpInfo(String artifactProps, DigestCachedUrl payload,
+                                                          String httpStatus, String httpHeaders) throws ApiException {
     okhttp3.Call localVarCall =
-      createArtifactValidateBeforeCall(auid, uri, artifact, namespace, collectionDate, null);
+      createArtifactValidateBeforeCall(artifactProps, payload, httpStatus, httpHeaders, null);
     Type localVarReturnType = new TypeToken<Artifact>() {}.getType();
     return apiClient.execute(localVarCall, localVarReturnType);
   }
@@ -265,11 +249,10 @@ public class StreamingArtifactsApi extends ArtifactsApi {
   /**
    * Create an artifact (asynchronously)
    *
-   * @param auid Archival Unit ID (AUID) of new artifact (required)
-   * @param uri URI represented by this artifact (required)
-   * @param artifact Artifact data (required)
-   * @param namespace Namespace of the artifacts (optional, default to lockss)
-   * @param collectionDate Artifact collection/crawl date (milliseconds since epoch; UTC) (optional)
+   * @param artifactProps Artifact properties (JSON) (required)
+   * @param payload Artifact payload data (required)
+   * @param httpStatus HTTP status (optional) (optional)
+   * @param httpHeaders HTTP headers (optional) (optional)
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -284,10 +267,10 @@ public class StreamingArtifactsApi extends ArtifactsApi {
   <tr><td> 502 </td><td> Internal error creating artifact </td><td>  -  </td></tr>
   </table>
    */
-  public okhttp3.Call createArtifactAsync(String auid, String uri, DigestCachedUrl artifact, String namespace,
-                                          Long collectionDate, final ApiCallback<Artifact> _callback) throws ApiException {
-    okhttp3.Call localVarCall =
-      createArtifactValidateBeforeCall(auid, uri, artifact, namespace, collectionDate, _callback);
+  public okhttp3.Call createArtifactAsync(String artifactProps, DigestCachedUrl payload, String httpStatus,
+                                          String httpHeaders, final ApiCallback<Artifact> _callback) throws ApiException {
+    okhttp3.Call localVarCall = createArtifactValidateBeforeCall(
+      artifactProps, payload, httpStatus, httpHeaders, _callback);
     Type localVarReturnType = new TypeToken<Artifact>() {}.getType();
     apiClient.executeAsync(localVarCall, localVarReturnType, _callback);
     return localVarCall;
@@ -296,7 +279,7 @@ public class StreamingArtifactsApi extends ArtifactsApi {
 
   /**
    * Build call for getMultipartArtifact
-   * @param artifactid Identifier of the artifact (required)
+   * @param uuid Identifier of the artifact (required)
    * @param namespace Namespace of the artifacts (optional, default to lockss)
    * @param includeContent Controls whether to include the artifact content part in multipart
   response (optional, default to ALWAYS)
@@ -306,14 +289,15 @@ public class StreamingArtifactsApi extends ArtifactsApi {
    * @http.response.details
   <table summary="Response Details" border="1">
   <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-  <tr><td> 200 </td><td> Artifact found </td><td>  -  </td></tr>
-  <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
-  <tr><td> 403 </td><td> Client not authorized to retrieve artifact </td><td>  -  </td></tr>
-  <tr><td> 404 </td><td> Artifact not found </td><td>  -  </td></tr>
-  <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
+  <tr><td> 200 </td><td> Multipart/form-data containing the following parts: The artifact
+  properties, HTTP status and headers if present, and the artifact&#39;s payload if requested. See
+  POST /artifacts for more information. </td><td>  -  </td></tr> <tr><td> 401 </td><td>
+  Unauthorized request </td><td>  -  </td></tr> <tr><td> 403 </td><td> Client not authorized to
+  retrieve artifact </td><td>  -  </td></tr> <tr><td> 404 </td><td> Artifact not found </td><td>  -
+  </td></tr> <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
   </table>
    */
-  public okhttp3.Call getMultipartArtifactCall(String artifactid, String namespace, String includeContent,
+  public okhttp3.Call getMultipartArtifactCall(String uuid, String namespace, String includeContent,
                                       final ApiCallback _callback) throws ApiException {
     String basePath = null;
     // Operation Servers
@@ -324,15 +308,15 @@ public class StreamingArtifactsApi extends ArtifactsApi {
       basePath = localCustomBaseUrl;
     } else if ( localBasePaths.length > 0 ) {
       basePath = localBasePaths[localHostIndex];
+    } else {
+      basePath = null;
     }
 
     Object localVarPostBody = null;
 
     // create path and map variables
-    String localVarPath = "/artifacts/{artifactid}".replaceAll("\\{"
-        + "artifactid"
-        + "\\}",
-      apiClient.escapeString(artifactid.toString()));
+    String localVarPath = "/artifacts/{uuid}".replace("{" + "uuid"  + "}",
+      apiClient.escapeString(uuid.toString()));
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -355,9 +339,7 @@ public class StreamingArtifactsApi extends ArtifactsApi {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
 
-    final String[] localVarContentTypes = {
-
-    };
+    final String[] localVarContentTypes = {};
     final String localVarContentType =
       apiClient.selectHeaderContentType(localVarContentTypes);
     if (localVarContentType != null) {
@@ -371,22 +353,21 @@ public class StreamingArtifactsApi extends ArtifactsApi {
   }
 
   @SuppressWarnings("rawtypes")
-  private okhttp3.Call getMultipartArtifactValidateBeforeCall(String artifactid, String namespace,
+  private okhttp3.Call getMultipartArtifactValidateBeforeCall(String uuid, String namespace,
                                                      String includeContent, final ApiCallback _callback) throws ApiException {
-    // verify the required parameter 'artifactid' is set
-    if (artifactid == null) {
+    // verify the required parameter 'uuid' is set
+    if (uuid == null) {
       throw new ApiException(
-        "Missing the required parameter 'artifactid' when calling getArtifact(Async)");
+        "Missing the required parameter 'uuid' when calling getMultipartArtifact(Async)");
     }
 
-    okhttp3.Call localVarCall = getMultipartArtifactCall(artifactid, namespace, includeContent, _callback);
-    return localVarCall;
+    return getMultipartArtifactCall(uuid, namespace, includeContent, _callback);
   }
 
   /**
    * Get artifact and metadata
    *
-   * @param artifactid Identifier of the artifact (required)
+   * @param uuid Identifier of the artifact (required)
    * @param namespace Namespace of the artifacts (optional, default to lockss)
    * @param includeContent Controls whether to include the artifact content part in multipart
   response (optional, default to ALWAYS)
@@ -396,43 +377,45 @@ public class StreamingArtifactsApi extends ArtifactsApi {
    * @http.response.details
   <table summary="Response Details" border="1">
   <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-  <tr><td> 200 </td><td> Artifact found </td><td>  -  </td></tr>
-  <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
-  <tr><td> 403 </td><td> Client not authorized to retrieve artifact </td><td>  -  </td></tr>
-  <tr><td> 404 </td><td> Artifact not found </td><td>  -  </td></tr>
-  <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
+  <tr><td> 200 </td><td> Multipart/form-data containing the following parts: The artifact
+  properties, HTTP status and headers if present, and the artifact&#39;s payload if requested. See
+  POST /artifacts for more information. </td><td>  -  </td></tr> <tr><td> 401 </td><td>
+  Unauthorized request </td><td>  -  </td></tr> <tr><td> 403 </td><td> Client not authorized to
+  retrieve artifact </td><td>  -  </td></tr> <tr><td> 404 </td><td> Artifact not found </td><td>  -
+  </td></tr> <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
   </table>
    */
-  public ArtifactData getMultipartArtifact(String artifactid, String namespace, String includeContent)
+  public ArtifactData getMultipartArtifact(String uuid, String namespace, String includeContent)
     throws ApiException {
-    ApiResponse<ArtifactData> localVarResp = getMultipartArtifactWithHttpInfo(artifactid, namespace, includeContent);
+    ApiResponse<ArtifactData> localVarResp = getMultipartArtifactWithHttpInfo(uuid, namespace, includeContent);
     return localVarResp.getData();
   }
 
   /**
    * Get artifact and metadata
    *
-   * @param artifactid Identifier of the artifact (required)
+   * @param uuid Identifier of the artifact (required)
    * @param namespace Namespace of the artifacts (optional, default to lockss)
    * @param includeContent Controls whether to include the artifact content part in multipart
   response (optional, default to ALWAYS)
-   * @return ApiResponse&lt;ArtifactData&gt;
+   * @return ApiResponse&lt;File&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
   response body
    * @http.response.details
   <table summary="Response Details" border="1">
   <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-  <tr><td> 200 </td><td> Artifact found </td><td>  -  </td></tr>
-  <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
-  <tr><td> 403 </td><td> Client not authorized to retrieve artifact </td><td>  -  </td></tr>
-  <tr><td> 404 </td><td> Artifact not found </td><td>  -  </td></tr>
-  <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
+  <tr><td> 200 </td><td> Multipart/form-data containing the following parts: The artifact
+  properties, HTTP status and headers if present, and the artifact&#39;s payload if requested. See
+  POST /artifacts for more information. </td><td>  -  </td></tr> <tr><td> 401 </td><td>
+  Unauthorized request </td><td>  -  </td></tr> <tr><td> 403 </td><td> Client not authorized to
+  retrieve artifact </td><td>  -  </td></tr> <tr><td> 404 </td><td> Artifact not found </td><td>  -
+  </td></tr> <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
   </table>
    */
   public ApiResponse<ArtifactData> getMultipartArtifactWithHttpInfo(
-    String artifactid, String namespace, String includeContent) throws ApiException {
+    String uuid, String namespace, String includeContent) throws ApiException {
     okhttp3.Call localVarCall =
-      getMultipartArtifactValidateBeforeCall(artifactid, namespace, includeContent, null);
+      getMultipartArtifactValidateBeforeCall(uuid, namespace, includeContent, null);
     Type localVarReturnType = new TypeToken<ArtifactData>() {}.getType();
     return apiClient.execute(localVarCall, localVarReturnType);
   }
@@ -440,7 +423,7 @@ public class StreamingArtifactsApi extends ArtifactsApi {
   /**
    * Get artifact and metadata (asynchronously)
    *
-   * @param artifactid Identifier of the artifact (required)
+   * @param uuid Identifier of the artifact (required)
    * @param namespace Namespace of the artifacts (optional, default to lockss)
    * @param includeContent Controls whether to include the artifact content part in multipart
   response (optional, default to ALWAYS)
@@ -450,17 +433,18 @@ public class StreamingArtifactsApi extends ArtifactsApi {
    * @http.response.details
   <table summary="Response Details" border="1">
   <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-  <tr><td> 200 </td><td> Artifact found </td><td>  -  </td></tr>
-  <tr><td> 401 </td><td> Unauthorized request </td><td>  -  </td></tr>
-  <tr><td> 403 </td><td> Client not authorized to retrieve artifact </td><td>  -  </td></tr>
-  <tr><td> 404 </td><td> Artifact not found </td><td>  -  </td></tr>
-  <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
+  <tr><td> 200 </td><td> Multipart/form-data containing the following parts: The artifact
+  properties, HTTP status and headers if present, and the artifact&#39;s payload if requested. See
+  POST /artifacts for more information. </td><td>  -  </td></tr> <tr><td> 401 </td><td>
+  Unauthorized request </td><td>  -  </td></tr> <tr><td> 403 </td><td> Client not authorized to
+  retrieve artifact </td><td>  -  </td></tr> <tr><td> 404 </td><td> Artifact not found </td><td>  -
+  </td></tr> <tr><td> 502 </td><td> Could not read from external resource </td><td>  -  </td></tr>
   </table>
    */
-  public okhttp3.Call getMultipartArtifactAsync(String artifactid, String namespace, String includeContent,
+  public okhttp3.Call getMultipartArtifactAsync(String uuid, String namespace, String includeContent,
                                        final ApiCallback<ArtifactData> _callback) throws ApiException {
     okhttp3.Call localVarCall =
-      getMultipartArtifactValidateBeforeCall(artifactid, namespace, includeContent, _callback);
+      getMultipartArtifactValidateBeforeCall(uuid, namespace, includeContent, _callback);
     Type localVarReturnType = new TypeToken<ArtifactData>() {}.getType();
     apiClient.executeAsync(localVarCall, localVarReturnType, _callback);
     return localVarCall;

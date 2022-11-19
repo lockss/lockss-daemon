@@ -214,9 +214,7 @@ public class AuSize implements Serializable {
    */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
     if (jsonObj == null) {
-      if (AuSize.openapiRequiredFields.isEmpty()) {
-        return;
-      } else { // has required fields
+      if (!AuSize.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
         throw new IllegalArgumentException(String.format(
             "The required field(s) %s in AuSize is not found in the empty JSON string",
             AuSize.openapiRequiredFields.toString()));

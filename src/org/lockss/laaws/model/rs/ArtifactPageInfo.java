@@ -198,9 +198,8 @@ public class ArtifactPageInfo implements Serializable {
    */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
     if (jsonObj == null) {
-      if (ArtifactPageInfo.openapiRequiredFields.isEmpty()) {
-        return;
-      } else { // has required fields
+      if (!ArtifactPageInfo.openapiRequiredFields
+               .isEmpty()) { // has required fields but JSON object is null
         throw new IllegalArgumentException(String.format(
             "The required field(s) %s in ArtifactPageInfo is not found in the empty JSON string",
             ArtifactPageInfo.openapiRequiredFields.toString()));
@@ -225,9 +224,6 @@ public class ArtifactPageInfo implements Serializable {
                 requiredField, jsonObj.toString()));
       }
     }
-    if (jsonObj.get("artifacts") != null && !jsonObj.get("artifacts").isJsonNull()) {
-      JsonArray jsonArrayartifacts = jsonObj.getAsJsonArray("artifacts");
-      if (jsonArrayartifacts != null) {
         // ensure the json data is an array
         if (!jsonObj.get("artifacts").isJsonArray()) {
           throw new IllegalArgumentException(String.format(
@@ -235,16 +231,13 @@ public class ArtifactPageInfo implements Serializable {
               jsonObj.get("artifacts").toString()));
         }
 
-        // validate the optional field `artifacts` (array)
+    JsonArray jsonArrayartifacts = jsonObj.getAsJsonArray("artifacts");
+    // validate the required field `artifacts` (array)
         for (int i = 0; i < jsonArrayartifacts.size(); i++) {
           Artifact.validateJsonObject(jsonArrayartifacts.get(i).getAsJsonObject());
         };
-      }
-    }
-    // validate the optional field `pageInfo`
-    if (jsonObj.get("pageInfo") != null && !jsonObj.get("pageInfo").isJsonNull()) {
+    // validate the required field `pageInfo`
       PageInfo.validateJsonObject(jsonObj.getAsJsonObject("pageInfo"));
-    }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
