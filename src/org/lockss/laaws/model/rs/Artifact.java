@@ -401,10 +401,14 @@ public class Artifact implements Serializable {
     openapiFields.add("auid");
     openapiFields.add("uri");
     openapiFields.add("version");
+    openapiFields.add("committed"); // may be returned, but not in api
+    openapiFields.add("storageUrl"); // may be returned, but not in api
     openapiFields.add("contentLength");
     openapiFields.add("contentDigest");
     openapiFields.add("collectionDate");
     openapiFields.add("state");
+    openapiFields.add("sortUri"); // may be returned, but not in api
+    openapiFields.add("identifier"); // is this still needed?
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -464,6 +468,13 @@ public class Artifact implements Serializable {
       throw new IllegalArgumentException(String.format(
         "Expected the field `uri` to be a primitive type in the JSON string but got `%s`",
         jsonObj.get("uri").toString()));
+    }
+    // this field is returned but not defined in the api
+    if ((jsonObj.get("storageUrl") != null && !jsonObj.get("storageUrl").isJsonNull())
+        && !jsonObj.get("storageUrl").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(
+          "Expected the field `storageUrl` to be a primitive type in the JSON string but got `%s`",
+          jsonObj.get("storageUrl").toString()));
     }
     if ((jsonObj.get("contentDigest") != null && !jsonObj.get("contentDigest").isJsonNull())
       && !jsonObj.get("contentDigest").isJsonPrimitive()) {
