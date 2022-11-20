@@ -263,8 +263,7 @@ public class ArtifactsApi {
    * Build call for createArtifact
    * @param artifactProps Artifact properties (JSON) (required)
    * @param payload Artifact payload data (required)
-   * @param httpStatus HTTP status (optional) (optional)
-   * @param httpHeaders HTTP headers (optional) (optional)
+   * @param httpResponseHeader HTTP response status and headers (optional) (optional)
    * @param _callback Callback for upload/download progress
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
@@ -279,8 +278,8 @@ public class ArtifactsApi {
       <tr><td> 502 </td><td> Internal error creating artifact </td><td>  -  </td></tr>
    </table>
    */
-  public okhttp3.Call createArtifactCall(String artifactProps, File payload, String httpStatus,
-      String httpHeaders, final ApiCallback _callback) throws ApiException {
+  public okhttp3.Call createArtifactCall(String artifactProps, File payload,
+      String httpResponseHeader, final ApiCallback _callback) throws ApiException {
     String basePath = null;
     // Operation Servers
     String[] localBasePaths = new String[] {};
@@ -309,12 +308,8 @@ public class ArtifactsApi {
       localVarFormParams.put("artifactProps", artifactProps);
     }
 
-    if (httpStatus != null) {
-      localVarFormParams.put("httpStatus", httpStatus);
-    }
-
-    if (httpHeaders != null) {
-      localVarFormParams.put("httpHeaders", httpHeaders);
+    if (httpResponseHeader != null) {
+      localVarFormParams.put("httpResponseHeader", httpResponseHeader);
     }
 
     if (payload != null) {
@@ -342,7 +337,7 @@ public class ArtifactsApi {
 
   @SuppressWarnings("rawtypes")
   private okhttp3.Call createArtifactValidateBeforeCall(String artifactProps, File payload,
-      String httpStatus, String httpHeaders, final ApiCallback _callback) throws ApiException {
+      String httpResponseHeader, final ApiCallback _callback) throws ApiException {
     // verify the required parameter 'artifactProps' is set
     if (artifactProps == null) {
       throw new ApiException(
@@ -355,7 +350,7 @@ public class ArtifactsApi {
           "Missing the required parameter 'payload' when calling createArtifact(Async)");
     }
 
-    return createArtifactCall(artifactProps, payload, httpStatus, httpHeaders, _callback);
+    return createArtifactCall(artifactProps, payload, httpResponseHeader, _callback);
     }
 
   /**
@@ -363,8 +358,7 @@ public class ArtifactsApi {
    *
    * @param artifactProps Artifact properties (JSON) (required)
    * @param payload Artifact payload data (required)
-   * @param httpStatus HTTP status (optional) (optional)
-   * @param httpHeaders HTTP headers (optional) (optional)
+   * @param httpResponseHeader HTTP response status and headers (optional) (optional)
    * @return Artifact
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    response body
@@ -379,10 +373,10 @@ public class ArtifactsApi {
       <tr><td> 502 </td><td> Internal error creating artifact </td><td>  -  </td></tr>
    </table>
    */
-  public Artifact createArtifact(String artifactProps, File payload, String httpStatus,
-      String httpHeaders) throws ApiException {
+  public Artifact createArtifact(String artifactProps, File payload, String httpResponseHeader)
+      throws ApiException {
     ApiResponse<Artifact> localVarResp =
-        createArtifactWithHttpInfo(artifactProps, payload, httpStatus, httpHeaders);
+        createArtifactWithHttpInfo(artifactProps, payload, httpResponseHeader);
     return localVarResp.getData();
   }
 
@@ -391,8 +385,7 @@ public class ArtifactsApi {
    *
    * @param artifactProps Artifact properties (JSON) (required)
    * @param payload Artifact payload data (required)
-   * @param httpStatus HTTP status (optional) (optional)
-   * @param httpHeaders HTTP headers (optional) (optional)
+   * @param httpResponseHeader HTTP response status and headers (optional) (optional)
    * @return ApiResponse&lt;Artifact&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    response body
@@ -407,10 +400,10 @@ public class ArtifactsApi {
       <tr><td> 502 </td><td> Internal error creating artifact </td><td>  -  </td></tr>
    </table>
    */
-  public ApiResponse<Artifact> createArtifactWithHttpInfo(String artifactProps, File payload,
-      String httpStatus, String httpHeaders) throws ApiException {
+  public ApiResponse<Artifact> createArtifactWithHttpInfo(
+      String artifactProps, File payload, String httpResponseHeader) throws ApiException {
     okhttp3.Call localVarCall =
-        createArtifactValidateBeforeCall(artifactProps, payload, httpStatus, httpHeaders, null);
+        createArtifactValidateBeforeCall(artifactProps, payload, httpResponseHeader, null);
     Type localVarReturnType = new TypeToken<Artifact>() {}.getType();
     return apiClient.execute(localVarCall, localVarReturnType);
   }
@@ -420,8 +413,7 @@ public class ArtifactsApi {
    *
    * @param artifactProps Artifact properties (JSON) (required)
    * @param payload Artifact payload data (required)
-   * @param httpStatus HTTP status (optional) (optional)
-   * @param httpHeaders HTTP headers (optional) (optional)
+   * @param httpResponseHeader HTTP response status and headers (optional) (optional)
    * @param _callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -436,10 +428,10 @@ public class ArtifactsApi {
       <tr><td> 502 </td><td> Internal error creating artifact </td><td>  -  </td></tr>
    </table>
    */
-  public okhttp3.Call createArtifactAsync(String artifactProps, File payload, String httpStatus,
-      String httpHeaders, final ApiCallback<Artifact> _callback) throws ApiException {
-    okhttp3.Call localVarCall = createArtifactValidateBeforeCall(
-        artifactProps, payload, httpStatus, httpHeaders, _callback);
+  public okhttp3.Call createArtifactAsync(String artifactProps, File payload,
+      String httpResponseHeader, final ApiCallback<Artifact> _callback) throws ApiException {
+    okhttp3.Call localVarCall =
+        createArtifactValidateBeforeCall(artifactProps, payload, httpResponseHeader, _callback);
     Type localVarReturnType = new TypeToken<Artifact>() {}.getType();
     apiClient.executeAsync(localVarCall, localVarReturnType, _callback);
     return localVarCall;
