@@ -98,7 +98,7 @@
       }
       {
       param[journal_id] = BMEE
-      au < exists ; exists ; 2022 ; Business, Management and Economics Engineering Volume 2022 ; 13 ; 2022 ; https://journals.vilniustech.lt/ ; >
+      au < manifest ; exists ; 2022 ; Business, Management and Economics Engineering Volume 2022 ; 13 ; 2022 ; https://journals.vilniustech.lt/ ; >
       }
   }
 
@@ -464,7 +464,7 @@
       au < deepCrawl ; exists ; 2020 ; Science - Future of Lithuania Volume 2020 ; 12 ; 2020 ; https://journals.vgtu.lt/ ; >
       au < deepCrawl ; exists ; 2021 ; Science - Future of Lithuania Volume 2021 ; 13 ; 2021 ; https://journals.vgtu.lt/ ; >
 
-      au < exists ; exists ; 2009 ; Science - Future of Lithuania Volume 2009 ; 1 ; 2009 ; https://journals.vilniustech.lt/ ; >
+      au < manifest ; exists ; 2009 ; Science - Future of Lithuania Volume 2009 ; 1 ; 2009 ; https://journals.vilniustech.lt/ ; >
 
       au < crawling ; exists ; 2022 ; Science - Future of Lithuania Volume 2022 ; 14 ; 2022 ; https://journals.vilniustech.lt/ ; >
 

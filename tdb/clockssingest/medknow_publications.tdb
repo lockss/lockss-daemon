@@ -2317,8 +2317,8 @@
 
     param[journal_issn] = 2773-1367
 
-    au < exists ; exists ; 2021 ; International Journal of Orthopaedic Surgery Volume 29 ; 2021 ; 29 ; https://ijos.in/ ; ; >
-    au < expected ; exists ; 2022 ; International Journal of Orthopaedic Surgery Volume 30 ; 2022 ; 30 ; https://ijos.in/ ; ; >
+    au < manifest ; exists ; 2021 ; International Journal of Orthopaedic Surgery Volume 29 ; 2021 ; 29 ; https://ijos.in/ ; ; >
+    au < manifest ; exists ; 2022 ; International Journal of Orthopaedic Surgery Volume 30 ; 2022 ; 30 ; https://ijos.in/ ; ; >
 
   }
 
@@ -3534,15 +3534,15 @@
     param[journal_issn] = 2345-5756
     #move to Brieflands, 2023-01-01
 
-    au < exists ; exists ; 2014 ; Journal of Nursing and Midwifery Sciences Volume 1 ; 2014 ; 1 ; https://www.jnmsjournal.org/ ; ; >
-    au < exists ; exists ; 2015 ; Journal of Nursing and Midwifery Sciences Volume 2 ; 2015 ; 2 ; https://www.jnmsjournal.org/ ; ; >
-    au < exists ; exists ; 2016 ; Journal of Nursing and Midwifery Sciences Volume 3 ; 2016 ; 3 ; https://www.jnmsjournal.org/ ; ; >
-    au < exists ; exists ; 2017 ; Journal of Nursing and Midwifery Sciences Volume 4 ; 2017 ; 4 ; https://www.jnmsjournal.org/ ; ; >
-    au < exists ; exists ; 2018 ; Journal of Nursing and Midwifery Sciences Volume 5 ; 2018 ; 5 ; https://www.jnmsjournal.org/ ; ; >
-    au < exists ; exists ; 2019 ; Journal of Nursing and Midwifery Sciences Volume 6 ; 2019 ; 6 ; https://www.jnmsjournal.org/ ; ; >
-    au < exists ; exists ; 2020 ; Journal of Nursing and Midwifery Sciences Volume 7 ; 2020 ; 7 ; https://www.jnmsjournal.org/ ; ; >
-    au < exists ; exists ; 2021 ; Journal of Nursing and Midwifery Sciences Volume 8 ; 2021 ; 8 ; https://www.jnmsjournal.org/ ; ; >
-    au < exists ; exists ; 2022 ; Journal of Nursing and Midwifery Sciences Volume 9 ; 2022 ; 9 ; https://www.jnmsjournal.org/ ; ; >
+    au < manifest ; exists ; 2014 ; Journal of Nursing and Midwifery Sciences Volume 1 ; 2014 ; 1 ; https://www.jnmsjournal.org/ ; ; >
+    au < manifest ; exists ; 2015 ; Journal of Nursing and Midwifery Sciences Volume 2 ; 2015 ; 2 ; https://www.jnmsjournal.org/ ; ; >
+    au < manifest ; exists ; 2016 ; Journal of Nursing and Midwifery Sciences Volume 3 ; 2016 ; 3 ; https://www.jnmsjournal.org/ ; ; >
+    au < manifest ; exists ; 2017 ; Journal of Nursing and Midwifery Sciences Volume 4 ; 2017 ; 4 ; https://www.jnmsjournal.org/ ; ; >
+    au < manifest ; exists ; 2018 ; Journal of Nursing and Midwifery Sciences Volume 5 ; 2018 ; 5 ; https://www.jnmsjournal.org/ ; ; >
+    au < manifest ; exists ; 2019 ; Journal of Nursing and Midwifery Sciences Volume 6 ; 2019 ; 6 ; https://www.jnmsjournal.org/ ; ; >
+    au < manifest ; exists ; 2020 ; Journal of Nursing and Midwifery Sciences Volume 7 ; 2020 ; 7 ; https://www.jnmsjournal.org/ ; ; >
+    au < manifest ; exists ; 2021 ; Journal of Nursing and Midwifery Sciences Volume 8 ; 2021 ; 8 ; https://www.jnmsjournal.org/ ; ; >
+    au < manifest ; exists ; 2022 ; Journal of Nursing and Midwifery Sciences Volume 9 ; 2022 ; 9 ; https://www.jnmsjournal.org/ ; ; >
 
   }
 
@@ -4451,8 +4451,8 @@
     #param[base_url] = https://www.pogsjournal.org/
     param[journal_issn] = 0116-6069
 
-    au < exists ; exists ; 2021 ; Philippine Journal of Obstetrics & Gynecology Volume 45 ; 2021 ; 45 ; https://www.pogsjournal.org/ ; ; >
-    au < exists ; exists ; 2022 ; Philippine Journal of Obstetrics & Gynecology Volume 46 ; 2022 ; 46 ; https://www.pogsjournal.org/ ; ; >
+    au < manifest ; exists ; 2021 ; Philippine Journal of Obstetrics & Gynecology Volume 45 ; 2021 ; 45 ; https://www.pogsjournal.org/ ; ; >
+    au < manifest ; exists ; 2022 ; Philippine Journal of Obstetrics & Gynecology Volume 46 ; 2022 ; 46 ; https://www.pogsjournal.org/ ; ; >
 
   }
 
@@ -7715,10 +7715,10 @@
       param[journal_issn] = 2319-9644
 
       au < doNotProcess ; exist ; 2018 ; Journal of Research in Pharmacy Practice Volume 7 ; 2018 ; 7 ; http://www.jrpp.net/ ; ; reingest4.clockss.org:8082 >
-      au < exists ; exists ; 2019 ; Journal of Research in Pharmacy Practice Volume 8 ; 2019 ; 8 ; https://www.jrpp.net/ ; ; >
-      au < exists ; exists ; 2020 ; Journal of Research in Pharmacy Practice Volume 9 ; 2020 ; 9 ; https://www.jrpp.net/ ; ; >
-      au < exists ; exists ; 2021 ; Journal of Research in Pharmacy Practice Volume 10 ; 2021 ; 10 ; https://www.jrpp.net/ ; ; >
-      au < expected ; exists ; 2022 ; Journal of Research in Pharmacy Practice Volume 11 ; 2022 ; 11 ; https://www.jrpp.net/ ; ; >
+      au < manifest ; exists ; 2019 ; Journal of Research in Pharmacy Practice Volume 8 ; 2019 ; 8 ; https://www.jrpp.net/ ; ; >
+      au < manifest ; exists ; 2020 ; Journal of Research in Pharmacy Practice Volume 9 ; 2020 ; 9 ; https://www.jrpp.net/ ; ; >
+      au < manifest ; exists ; 2021 ; Journal of Research in Pharmacy Practice Volume 10 ; 2021 ; 10 ; https://www.jrpp.net/ ; ; >
+      au < manifest ; exists ; 2022 ; Journal of Research in Pharmacy Practice Volume 11 ; 2022 ; 11 ; https://www.jrpp.net/ ; ; >
       }
       {
       param[journal_issn] = 2279-042X
@@ -8516,7 +8516,7 @@
       au < finished ; crawling ; 2019 ; Saudi Journal of Laparoscopy Volume 4 ; 2019 ; 4 ; https://www.saudijl.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2020 ; Saudi Journal of Laparoscopy Volume 5 ; 2020 ; 5 ; https://www.saudijl.org/ ; ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2021 ; Saudi Journal of Laparoscopy Volume 6 ; 2021 ; 6 ; https://www.saudijl.org/ ; ; >
-      au < expected ; exists ; 2022 ; Saudi Journal of Laparoscopy Volume 7 ; 2022 ; 7 ; https://www.saudijl.org/ ; ; >
+      au < manifest ; exists ; 2022 ; Saudi Journal of Laparoscopy Volume 7 ; 2022 ; 7 ; https://www.saudijl.org/ ; ; >
 
   }
 
@@ -9152,7 +9152,7 @@
       au < finished ; crawling ; 2019 ; West African Journal of Radiology Volume 26 ; 2019 ; 26 ; https://www.wajradiology.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; West African Journal of Radiology Volume 27 ; 2020 ; 27 ; https://www.wajradiology.org/ ; ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2021 ; West African Journal of Radiology Volume 28 ; 2021 ; 28 ; https://www.wajradiology.org/ ; ; >
-      au < expected ; exists ; 2022 ; West African Journal of Radiology Volume 29 ; 2022 ; 29 ; https://www.wajradiology.org/ ; ; >
+      au < manifest ; exists ; 2022 ; West African Journal of Radiology Volume 29 ; 2022 ; 29 ; https://www.wajradiology.org/ ; ; >
 
   }
 
@@ -10976,11 +10976,11 @@
 #      param[base_url] = http://www.nigjourcvtsurg.org/
      #Site appears to still be on http, but has errors. Is moving to https.
 
-      au < exists ; exists ; 2016 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 1 ; 2016 ; 1 ; http://www.nigjourcvtsurg.org/ ; ; >
-      au < exists ; exists ; 2017 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 2 ; 2017 ; 2 ; http://www.nigjourcvtsurg.org/ ; ; >
-      au < exists ; exists ; 2018 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 3 ; 2018 ; 3 ; http://www.nigjourcvtsurg.org/ ; ; >
-      au < exists ; exists ; 2019 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 4 ; 2019 ; 4 ; http://www.nigjourcvtsurg.org/ ; ; >
-      au < exists ; exists ; 2020 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 5 ; 2020 ; 5 ; http://www.nigjourcvtsurg.org/ ; ; >
+      au < manifest ; exists ; 2016 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 1 ; 2016 ; 1 ; http://www.nigjourcvtsurg.org/ ; ; >
+      au < manifest ; exists ; 2017 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 2 ; 2017 ; 2 ; http://www.nigjourcvtsurg.org/ ; ; >
+      au < manifest ; exists ; 2018 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 3 ; 2018 ; 3 ; http://www.nigjourcvtsurg.org/ ; ; >
+      au < manifest ; exists ; 2019 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 4 ; 2019 ; 4 ; http://www.nigjourcvtsurg.org/ ; ; >
+      au < manifest ; exists ; 2020 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 5 ; 2020 ; 5 ; http://www.nigjourcvtsurg.org/ ; ; >
       au < expected ; exists ; 2022 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 6 ; 2022 ; 6 ; http://www.nigjourcvtsurg.org/ ; ; >
 
   }
