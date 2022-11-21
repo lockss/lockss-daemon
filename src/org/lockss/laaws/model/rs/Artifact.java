@@ -112,6 +112,9 @@ public class Artifact implements Serializable {
   public static final String SERIALIZED_NAME_STATE = "state";
   @SerializedName(SERIALIZED_NAME_STATE) private String state;
 
+  public static final String SERIALIZED_NAME_SORTURI = "sortUri";
+  @SerializedName(SERIALIZED_NAME_SORTURI) private String sortUri;
+
   public Artifact() {}
 
   public Artifact committed(Boolean committed) {

@@ -221,13 +221,12 @@ public class CachedUrlRequestBody extends RequestBody {
   public void writeTo(BufferedSink sink) throws IOException {
     Source source = null;
     try {
-      InputStream inputStream = artifactCu.getUnfilteredInputStream();
+      InputStream inputStream = getPayloadForCachedUrl();
       log.debug3("Writing " + (inputStream == null ? "(null) " : "") +
                  artifactCu);
       if (inputStream != null) {
         CountingInputStream cis = new CountingInputStream(inputStream);
         dcu.setTotalCountingInputStream(cis);
-        DigestInputStream dis = new DigestInputStream(cis, dcu.createMessageDigest());
         source = Okio.source(cis);
         sink.writeAll(source);
         long avail = inputStream.available();

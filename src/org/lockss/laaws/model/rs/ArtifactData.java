@@ -32,17 +32,11 @@ package org.lockss.laaws.model.rs;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import java.io.*;
-import java.net.URI;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import okhttp3.Headers;
 import okhttp3.MultipartReader;
 import okhttp3.MultipartReader.Part;
 import okio.BufferedSink;
 import okio.Okio;
-import okio.Source;
-import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.io.input.CountingInputStream;
 import org.apache.commons.lang3.StringUtils;
@@ -54,6 +48,10 @@ import org.lockss.laaws.CuChecker;
 import org.lockss.util.FileUtil;
 import org.lockss.util.Logger;
 import org.springframework.http.HttpHeaders;
+import java.io.*;
+import java.net.URI;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * An {@code ArtifactData} serves as an atomic unit of data archived in the

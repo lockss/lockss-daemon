@@ -203,8 +203,7 @@ public class CuMover extends Worker {
         ((Set<String>) ((Map) hdr_props).keySet()).forEach(
           key -> response.addHeader(key, hdr_props.getProperty(key)));
       }
-      Artifact uncommitted = artifactsApi.createArtifact(prop_str,dcu,response.getStatusLine().toString(),
-        Arrays.toString(response.getAllHeaders()));
+      Artifact uncommitted = artifactsApi.createArtifact(prop_str,dcu,response.toString());
       //Artifact uncommitted = artifactsApi.createArtifact(auid, v2Url, dcu, namespace, collectionDate)
       if (uncommitted != null) {
         if (log.isDebug3()) {
