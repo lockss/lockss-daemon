@@ -1716,7 +1716,7 @@
     au < manifest ; exists ; 1994 ; Collection Building Volume 13 ; 13 ; >
     au < manifest ; exists ; 1995 ; Collection Building Volume 14 ; 14 ; >
     au < frozen ; exists ; 1996 ; Collection Building Volume 15 ; 15 ; >
-    au < ready ; exists ; 1997 ; Collection Building Volume 16 ; 16 ; >
+    au < crawling ; exists ; 1997 ; Collection Building Volume 16 ; 16 ; >
     au < frozen ; exists ; 1998 ; Collection Building Volume 17 ; 17 ; >
     au < finished ; manifest ; 1999 ; Collection Building Volume 18 ; 18 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2000 ; Collection Building Volume 19 ; 19 ; reingest5.clockss.org:8082 >
@@ -5019,7 +5019,7 @@
     au < manifest ; exists ; 1994 ; International Journal of Manpower Volume 15 ; 15 ; >
     au < manifest ; exists ; 1995 ; International Journal of Manpower Volume 16 ; 16 ; >
     au < frozen ; exists ; 1996 ; International Journal of Manpower Volume 17 ; 17 ; >
-    au < ready ; exists ; 1997 ; International Journal of Manpower Volume 18 ; 18 ; >
+    au < crawling ; exists ; 1997 ; International Journal of Manpower Volume 18 ; 18 ; >
     au < frozen ; exists ; 1998 ; International Journal of Manpower Volume 19 ; 19 ; >
     au < frozen ; exists ; 1999 ; International Journal of Manpower Volume 20 ; 20 ; >
     au < deepCrawl ; exists ; 2000 ; International Journal of Manpower Volume 21 ; 21 ; >
@@ -8227,7 +8227,7 @@
     au < manifest ; exists ; 1996 ; Journal of Management History (Archive) Volume 2 ; 2 ; >
     au < frozen ; exists ; 1997 ; Journal of Management History (Archive) Volume 3 ; 3 ; >
     au < frozen ; exists ; 1998 ; Journal of Management History (Archive) Volume 4 ; 4 ; >
-    au < ready ; exists ; 1999 ; Journal of Management History (Archive) Volume 5 ; 5 ; >
+    au < crawling ; exists ; 1999 ; Journal of Management History (Archive) Volume 5 ; 5 ; >
     au < frozen ; exists ; 2000 ; Journal of Management History (Archive) Volume 6 ; 6 ; >
 
   }
@@ -9759,7 +9759,7 @@
     au < manifest ; exists ; 1994 ; Logistics Information Management Volume 7 ; 7 ; >
     au < manifest ; exists ; 1995 ; Logistics Information Management Volume 8 ; 8 ; >
     au < manifest ; exists ; 1996 ; Logistics Information Management Volume 9 ; 9 ; >
-    au < ready ; exists ; 1997 ; Logistics Information Management Volume 10 ; 10 ; >
+    au < crawling ; exists ; 1997 ; Logistics Information Management Volume 10 ; 10 ; >
     au < frozen ; exists ; 1998 ; Logistics Information Management Volume 11 ; 11 ; >
     au < frozen ; exists ; 1999 ; Logistics Information Management Volume 12 ; 12 ; >
     au < frozen ; exists ; 2000 ; Logistics Information Management Volume 13 ; 13 ; >
@@ -10242,7 +10242,7 @@
     au < manifest ; exists ; 1993 ; Marketing Intelligence & Planning Volume 11 ; 11 ; >
     au < manifest ; exists ; 1994 ; Marketing Intelligence & Planning Volume 12 ; 12 ; >
     au < manifest ; exists ; 1995 ; Marketing Intelligence & Planning Volume 13 ; 13 ; >
-    au < ready ; exists ; 1996 ; Marketing Intelligence & Planning Volume 14 ; 14 ; >
+    au < crawling ; exists ; 1996 ; Marketing Intelligence & Planning Volume 14 ; 14 ; >
     au < crawling ; exists ; 1997 ; Marketing Intelligence & Planning Volume 15 ; 15 ; >
     au < frozen ; exists ; 1998 ; Marketing Intelligence & Planning Volume 16 ; 16 ; >
     au < frozen ; exists ; 1999 ; Marketing Intelligence & Planning Volume 17 ; 17 ; >
@@ -13463,7 +13463,7 @@
     param[journal_issn] = 1175-8708
 
     au < frozen ; exists ; 2015 ; English Teaching: Practice & Critique Volume 14 ; 14 ; >
-    au < ready ; exists ; 2016 ; English Teaching: Practice & Critique Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2016 ; English Teaching: Practice & Critique Volume 15 ; 15 ; >
     au < frozen ; exists ; 2017 ; English Teaching: Practice & Critique Volume 16 ; 16 ; >
     au < frozen ; exists ; 2018 ; English Teaching: Practice & Critique Volume 17 ; 17 ; >
     au < frozen ; exists ; 2019 ; English Teaching: Practice & Critique Volume 18 ; 18 ; >
@@ -13634,7 +13634,7 @@
 
     au < frozen ; exists ; 2009 ; International Journal of Innovation Science Volume 1 ; 1 ; >
     au < frozen ; exists ; 2010 ; International Journal of Innovation Science Volume 2 ; 2 ; >
-    au < ready ; exists ; 2011 ; International Journal of Innovation Science Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2011 ; International Journal of Innovation Science Volume 3 ; 3 ; >
     au < frozen ; exists ; 2012 ; International Journal of Innovation Science Volume 4 ; 4 ; >
     au < frozen ; exists ; 2013 ; International Journal of Innovation Science Volume 5 ; 5 ; >
     au < frozen ; exists ; 2014 ; International Journal of Innovation Science Volume 6 ; 6 ; >
