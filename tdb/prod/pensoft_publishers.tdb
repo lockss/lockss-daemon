@@ -96,7 +96,7 @@
     
     param[au_oai_set] = caucasiana
     
-    au < exists ; 2022 ; 1 ; Caucasiana Volume 2022 ; 2022 ; https://caucasiana.pensoft.net/ >
+    au < manifest ; 2022 ; 1 ; Caucasiana Volume 2022 ; 2022 ; https://caucasiana.pensoft.net/ >
 
    }
   
@@ -133,8 +133,8 @@
     
     param[au_oai_set] = ijhmc
     
-    au < exists ; 2021 ; 1 ; Heritage, Memory and Conflict Journal Volume 2021 ; 2021 ; https://ijhmc.arphahub.com/ >
-    au < exists ; 2022 ; 2 ; Heritage, Memory and Conflict Journal Volume 2022 ; 2022 ; https://ijhmc.arphahub.com/ >
+    au < manifest ; 2021 ; 1 ; Heritage, Memory and Conflict Journal Volume 2021 ; 2021 ; https://ijhmc.arphahub.com/ >
+    au < manifest ; 2022 ; 2 ; Heritage, Memory and Conflict Journal Volume 2022 ; 2022 ; https://ijhmc.arphahub.com/ >
 
    }
   
@@ -178,7 +178,7 @@
     au < released ; 2019 ; 68-73 ; Journal of Hymenoptera Research Volume 2019 ; 2019 ; https://jhr.pensoft.net/ >
     au < released ; 2020 ; 74-80 ; Journal of Hymenoptera Research Volume 2020 ; 2020 ; https://jhr.pensoft.net/ >
     au < released ; 2021 ; 81-86 ; Journal of Hymenoptera Research Volume 2021 ; 2021 ; https://jhr.pensoft.net/ >
-    au < exists ; 2022 ; 89-96 ; Journal of Hymenoptera Research Volume 2022 ; 2022 ; https://jhr.pensoft.net/ >
+    au < manifest ; 2022 ; 89-96 ; Journal of Hymenoptera Research Volume 2022 ; 2022 ; https://jhr.pensoft.net/ >
 
    }
 
@@ -205,7 +205,7 @@
     au < released ; 2019 ; 45-61 ; MycoKeys Volume 2019 ; 2019 ; https://mycokeys.pensoft.net/ >
     au < released ; 2020 ; 62-76 ; MycoKeys Volume 2020 ; 2020 ; https://mycokeys.pensoft.net/ >
     au < released ; 2021 ; 77-91 ; MycoKeys Volume 2021 ; 2021 ; https://mycokeys.pensoft.net/ >
-    au < exists ; 2022 ; 86-94 ; MycoKeys Volume 2022 ; 2022 ; https://mycokeys.pensoft.net/ >
+    au < manifest ; 2022 ; 86-94 ; MycoKeys Volume 2022 ; 2022 ; https://mycokeys.pensoft.net/ >
 
    }
 
@@ -229,7 +229,7 @@
     au < released ; 2019 ; 32-37 ; Nature Conservation Volume 2019 ; 2019 ; https://natureconservation.pensoft.net/ >
     au < released ; 2020 ; 38-42 ; Nature Conservation Volume 2020 ; 2020 ; https://natureconservation.pensoft.net/ >
     au < released ; 2021 ; 43-47 ; Nature Conservation Volume 2021 ; 2021 ; https://natureconservation.pensoft.net/ >
-    au < exists ; 2022 ; 46-48 ; Nature Conservation Volume 2022 ; 2022 ; https://natureconservation.pensoft.net/ >
+    au < manifest ; 2022 ; 46-48 ; Nature Conservation Volume 2022 ; 2022 ; https://natureconservation.pensoft.net/ >
 
    }
 
@@ -256,7 +256,7 @@
     au < released ; 2019 ; 42-53 ; NeoBiota Volume 2019 ; 2019 ; https://neobiota.pensoft.net/ >
     au < released ; 2020 ; 54-63 ; NeoBiota Volume 2020 ; 2020 ; https://neobiota.pensoft.net/ >
     au < released ; 2021 ; 64-73 ; NeoBiota Volume 2021 ; 2021 ; https://neobiota.pensoft.net/ >
-    au < exists ; 2022 ; 71-77 ; NeoBiota Volume 2022 ; 2022 ; https://neobiota.pensoft.net/ >
+    au < manifest ; 2022 ; 71-77 ; NeoBiota Volume 2022 ; 2022 ; https://neobiota.pensoft.net/ >
 
    }
 
@@ -308,7 +308,7 @@
     au < released ; 2019 ; 115-136 ; PhytoKeys Volume 2019 ; 2019 ; https://phytokeys.pensoft.net/ >
     au < released ; 2020 ; 137-170 ; PhytoKeys Volume 2020 ; 2020 ; https://phytokeys.pensoft.net/ >
     au < released ; 2021 ; 171-205 ; PhytoKeys Volume 2021 ; 2021 ; https://phytokeys.pensoft.net/ >
-    au < exists ; 2022 ; 188-204 ; PhytoKeys Volume 2022 ; 2022 ; https://phytokeys.pensoft.net/ >
+    au < manifest ; 2022 ; 188-204 ; PhytoKeys Volume 2022 ; 2022 ; https://phytokeys.pensoft.net/ >
 
    }
 
@@ -335,7 +335,7 @@
     au < released ; 2019 ; 29-32 ; Subterranean Biology Volume 2019 ; 2019 ; https://subtbiol.pensoft.net/ >
     au < released ; 2020 ; 33-36 ; Subterranean Biology Volume 2020 ; 2020 ; https://subtbiol.pensoft.net/ >
     au < released ; 2021 ; 37-40 ; Subterranean Biology Volume 2021 ; 2021 ; https://subtbiol.pensoft.net/ >
-    au < exists ; 2022 ; 42-46 ; Subterranean Biology Volume 2022 ; 2022 ; https://subtbiol.pensoft.net/ >
+    au < manifest ; 2022 ; 42-46 ; Subterranean Biology Volume 2022 ; 2022 ; https://subtbiol.pensoft.net/ >
 
    }
 
@@ -365,7 +365,7 @@
     au < released ; 2019 ; 812-900 ; ZooKeys Volume 2019 ; 2019 ; https://zookeys.pensoft.net/ >
     au < released ; 2020 ; 901-1008 ; ZooKeys Volume 2020 ; 2020 ; https://zookeys.pensoft.net/ >
     au < released ; 2021 ; 1009-1117 ; ZooKeys Volume 2021 ; 2021 ; https://zookeys.pensoft.net/ >
-    au < exists ; 2022 ; 1080-1150 ; ZooKeys Volume 2022 ; 2022 ; https://zookeys.pensoft.net/ >
+    au < manifest ; 2022 ; 1080-1150 ; ZooKeys Volume 2022 ; 2022 ; https://zookeys.pensoft.net/ >
 
    }
    
@@ -576,7 +576,7 @@
       param[au_oai_set] = fmj
 
       #Changed from 2603-4301 Food Modeling Journal (FMJ)
-      au < exists ; 2022 ; 2022 ; Food and Ecological Systems Modelling Journal Volume 2022 ; 2022 ; https://fesmj.pensoft.net/ >
+      au < manifest ; 2022 ; 2022 ; Food and Ecological Systems Modelling Journal Volume 2022 ; 2022 ; https://fesmj.pensoft.net/ >
 
   }
 
@@ -815,7 +815,7 @@
       au < released ; 2019 ; 2019 ; Research results in Pharmacology Volume 2019 ; 2019 ; https://rrpharmacology.pensoft.net/ >
       au < released ; 2020 ; 2020 ; Research results in Pharmacology Volume 2020 ; 2020 ; https://rrpharmacology.pensoft.net/ >
       au < manifest ; 2021 ; 2021 ; Research results in Pharmacology Volume 2021 ; 2021 ; https://rrpharmacology.pensoft.net/ >
-      au < exists ; 2022 ; 2022 ; Research results in Pharmacology Volume 2022 ; 2022 ; https://rrpharmacology.ru/ >
+      au < manifest ; 2022 ; 2022 ; Research results in Pharmacology Volume 2022 ; 2022 ; https://rrpharmacology.ru/ >
 
   }
 

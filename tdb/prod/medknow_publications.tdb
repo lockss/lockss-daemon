@@ -3511,15 +3511,15 @@
     param[journal_issn] = 2345-5756
     #move to Brieflands, 2023-01-01
 
-    au < exists ; 2014 ; Journal of Nursing and Midwifery Sciences Volume 1 ; 2014 ; 1 ; https://www.jnmsjournal.org/ >
-    au < exists ; 2015 ; Journal of Nursing and Midwifery Sciences Volume 2 ; 2015 ; 2 ; https://www.jnmsjournal.org/ >
-    au < exists ; 2016 ; Journal of Nursing and Midwifery Sciences Volume 3 ; 2016 ; 3 ; https://www.jnmsjournal.org/ >
-    au < exists ; 2017 ; Journal of Nursing and Midwifery Sciences Volume 4 ; 2017 ; 4 ; https://www.jnmsjournal.org/ >
-    au < exists ; 2018 ; Journal of Nursing and Midwifery Sciences Volume 5 ; 2018 ; 5 ; https://www.jnmsjournal.org/ >
-    au < exists ; 2019 ; Journal of Nursing and Midwifery Sciences Volume 6 ; 2019 ; 6 ; https://www.jnmsjournal.org/ >
-    au < exists ; 2020 ; Journal of Nursing and Midwifery Sciences Volume 7 ; 2020 ; 7 ; https://www.jnmsjournal.org/ >
-    au < exists ; 2021 ; Journal of Nursing and Midwifery Sciences Volume 8 ; 2021 ; 8 ; https://www.jnmsjournal.org/ >
-    au < exists ; 2022 ; Journal of Nursing and Midwifery Sciences Volume 9 ; 2022 ; 9 ; https://www.jnmsjournal.org/ >
+    au < manifest ; 2014 ; Journal of Nursing and Midwifery Sciences Volume 1 ; 2014 ; 1 ; https://www.jnmsjournal.org/ >
+    au < manifest ; 2015 ; Journal of Nursing and Midwifery Sciences Volume 2 ; 2015 ; 2 ; https://www.jnmsjournal.org/ >
+    au < manifest ; 2016 ; Journal of Nursing and Midwifery Sciences Volume 3 ; 2016 ; 3 ; https://www.jnmsjournal.org/ >
+    au < manifest ; 2017 ; Journal of Nursing and Midwifery Sciences Volume 4 ; 2017 ; 4 ; https://www.jnmsjournal.org/ >
+    au < manifest ; 2018 ; Journal of Nursing and Midwifery Sciences Volume 5 ; 2018 ; 5 ; https://www.jnmsjournal.org/ >
+    au < manifest ; 2019 ; Journal of Nursing and Midwifery Sciences Volume 6 ; 2019 ; 6 ; https://www.jnmsjournal.org/ >
+    au < manifest ; 2020 ; Journal of Nursing and Midwifery Sciences Volume 7 ; 2020 ; 7 ; https://www.jnmsjournal.org/ >
+    au < manifest ; 2021 ; Journal of Nursing and Midwifery Sciences Volume 8 ; 2021 ; 8 ; https://www.jnmsjournal.org/ >
+    au < manifest ; 2022 ; Journal of Nursing and Midwifery Sciences Volume 9 ; 2022 ; 9 ; https://www.jnmsjournal.org/ >
 
   }
 
@@ -4420,8 +4420,8 @@
     #param[base_url] = https://www.pogsjournal.org/
     param[journal_issn] = 0116-6069
 
-    au < exists ; 2021 ; Philippine Journal of Obstetrics & Gynecology Volume 45 ; 2021 ; 45 ; https://www.pogsjournal.org/ >
-    au < exists ; 2022 ; Philippine Journal of Obstetrics & Gynecology Volume 46 ; 2022 ; 46 ; https://www.pogsjournal.org/ >
+    au < manifest ; 2021 ; Philippine Journal of Obstetrics & Gynecology Volume 45 ; 2021 ; 45 ; https://www.pogsjournal.org/ >
+    au < manifest ; 2022 ; Philippine Journal of Obstetrics & Gynecology Volume 46 ; 2022 ; 46 ; https://www.pogsjournal.org/ >
 
   }
 
@@ -7482,8 +7482,8 @@
 
     param[journal_issn] = WKMP-0230
 
-    au < exists ; 2021 ; Journal of Ophthalmology Clinics and Research Volume 1 ; 2021 ; 1 ; https://www.jocr.in/ >
-    au < expected ; 2022 ; Journal of Ophthalmology Clinics and Research Volume 2 ; 2022 ; 2 ; https://www.jocr.in/ >
+    au < manifest ; 2021 ; Journal of Ophthalmology Clinics and Research Volume 1 ; 2021 ; 1 ; https://www.jocr.in/ >
+    au < manifest ; 2022 ; Journal of Ophthalmology Clinics and Research Volume 2 ; 2022 ; 2 ; https://www.jocr.in/ >
 
   }
 
@@ -8475,7 +8475,7 @@
       au < released ; 2019 ; Saudi Journal of Laparoscopy Volume 4 ; 2019 ; 4 ; https://www.saudijl.org/ >
       au < released ; 2020 ; Saudi Journal of Laparoscopy Volume 5 ; 2020 ; 5 ; https://www.saudijl.org/ >
       au < released ; 2021 ; Saudi Journal of Laparoscopy Volume 6 ; 2021 ; 6 ; https://www.saudijl.org/ >
-      au < expected ; 2022 ; Saudi Journal of Laparoscopy Volume 7 ; 2022 ; 7 ; https://www.saudijl.org/ >
+      au < manifest ; 2022 ; Saudi Journal of Laparoscopy Volume 7 ; 2022 ; 7 ; https://www.saudijl.org/ >
 
   }
 
@@ -9110,7 +9110,7 @@
       au < released ; 2019 ; West African Journal of Radiology Volume 26 ; 2019 ; 26 ; https://www.wajradiology.org/ >
       au < released ; 2020 ; West African Journal of Radiology Volume 27 ; 2020 ; 27 ; https://www.wajradiology.org/ >
       au < released ; 2021 ; West African Journal of Radiology Volume 28 ; 2021 ; 28 ; https://www.wajradiology.org/ >
-      au < expected ; 2022 ; West African Journal of Radiology Volume 29 ; 2022 ; 29 ; https://www.wajradiology.org/ >
+      au < manifest ; 2022 ; West African Journal of Radiology Volume 29 ; 2022 ; 29 ; https://www.wajradiology.org/ >
 
   }
 
