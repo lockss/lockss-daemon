@@ -2821,7 +2821,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     final String DEBUG_HEADER = "addToPendingAusIfNotThere(): ";
 
     if (log.isDebug2()) {
-      log.debug2(DEBUG_HEADER + "Number of pending aus to add: " + aus.size());
+      log.debug2(DEBUG_HEADER + "Adding pending aus to queue: " + aus);
       log.debug2(DEBUG_HEADER + "inBatch = " + inBatch);
       log.debug2(DEBUG_HEADER + "fullReindex = " + fullReindex);
     }

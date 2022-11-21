@@ -136,9 +136,14 @@ public class MetadataStarter extends LockssRunnable {
 	// whether the AU metadata hasn't been extracted since the last
 	// successful crawl.
 	try {
-	  if (mdManager.isAuMetadataForObsoletePlugin(conn, au)
-	      || mdManager.isAuCrawledAndNotExtracted(conn, au)) {
+	  if (mdManager.isAuMetadataForObsoletePlugin(conn, au)) {
 	    // Yes: index it.
+            log.debug2("Need index due to obsolete metadata version: " + au);
+	    toBeIndexed.add(au);
+          }
+          else if (mdManager.isAuCrawledAndNotExtracted(conn, au)) {
+	    // Yes: index it.
+            log.debug2("Need index due to crawl: " + au);
 	    toBeIndexed.add(au);
 	  }
 	} catch (DbException dbe) {
