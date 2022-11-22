@@ -32,6 +32,7 @@ package org.lockss.laaws.model.rs;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.sun.tools.xjc.reader.xmlschema.parser.IncorrectNamespaceURIChecker;
 import okhttp3.Headers;
 import okhttp3.MultipartReader;
 import okhttp3.MultipartReader.Part;
@@ -39,17 +40,18 @@ import okio.BufferedSink;
 import okio.Okio;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.io.input.CountingInputStream;
-import org.apache.commons.lang3.StringUtils;
 import org.apache.http.StatusLine;
+import org.apache.http.impl.io.DefaultHttpResponseWriter;
 import org.apache.http.impl.io.HttpTransportMetricsImpl;
-import org.apache.http.impl.io.SessionInputBufferImpl;
-import org.apache.http.message.BasicLineParser;
+import org.apache.http.impl.io.SessionOutputBufferImpl;
 import org.lockss.laaws.CuChecker;
 import org.lockss.util.FileUtil;
 import org.lockss.util.Logger;
 import org.springframework.http.HttpHeaders;
 import java.io.*;
 import java.net.URI;
+import java.nio.charset.StandardCharsets;
+import java.util.Properties;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -67,12 +69,11 @@ public class ArtifactData implements AutoCloseable {
 
   private static final Logger log = Logger.getLogger(CuChecker.class);
   public static final String DEFAULT_DIGEST_ALGORITHM = "SHA-256";
-
   public static final String CONTENT_DISPOSITION = "Content-Disposition";
   public static final String MULTIPART_ARTIFACT_REPO_PROPS = "artifact-repo-props";
   public static final String MULTIPART_ARTIFACT_HEADER = "artifact-header";
   public static final String MULTIPART_ARTIFACT_HTTP_STATUS = "artifact-http-status";
-  public static final String MULTIPART_ARTIFACT_CONTENT = "artifact-content";
+  public static final String MULTIPART_ARTIFACT_CONTENT = "payload";
   // Artifact identity
   public static final String ARTIFACT_ID_KEY = "X-LockssRepo-Artifact-Id";
   public static final String ARTIFACT_NAMESPACE_KEY = "X-LockssRepo-Artifact-Namespace";
@@ -134,54 +135,28 @@ public class ArtifactData implements AutoCloseable {
         Headers partHdrs = part.headers();
         String disposition = partHdrs.get(CONTENT_DISPOSITION);
         artifactDataSize += partHdrs.byteCount();
-
-        if (disposition.contains(MULTIPART_ARTIFACT_REPO_PROPS)) {
+        if(disposition.equals("artifactProps")) {
           cis = new CountingInputStream(part.body().inputStream());
-          HttpHeaders hdrs = mapper.readValue(cis, HttpHeaders.class);
-          // Set ArtifactIdentifier
-          ArtifactIdentifier id = new ArtifactIdentifier(
-              hdrs.getFirst(ARTIFACT_ID_KEY),
-              hdrs.getFirst(ARTIFACT_NAMESPACE_KEY),
-              hdrs.getFirst(ARTIFACT_AUID_KEY),
-              hdrs.getFirst(ARTIFACT_URI_KEY),
-              Integer.valueOf(hdrs.getFirst(ARTIFACT_VERSION_KEY))
-          );
-          this.identifier = id;
-          String committedHeaderValue = hdrs.getFirst(ARTIFACT_STATE_COMMITTED);
-          String deletedHeaderValue = hdrs.getFirst(ARTIFACT_STATE_DELETED);
-          if (!(StringUtils.isEmpty(committedHeaderValue) || StringUtils.isEmpty(
-              deletedHeaderValue))) {
-            this.artifactRepositoryState = new ArtifactRepositoryState(
-                id,
-                Boolean.parseBoolean(hdrs.getFirst(ARTIFACT_STATE_COMMITTED)),
-                Boolean.parseBoolean(hdrs.getFirst(ARTIFACT_STATE_DELETED))
-            );
-          }
-          // Set misc. artifact properties
-          this.contentLength = Long.parseLong(hdrs.getFirst(ARTIFACT_LENGTH_KEY));
-          this.contentDigest = hdrs.getFirst(ARTIFACT_DIGEST_KEY);
+          Properties props = mapper.readValue(cis, Properties.class);
+          String namespace = props.getProperty(ArtifactProperties.SERIALIZED_NAME_NAMESPACE).toString();
+          String auId = props.getProperty(ArtifactProperties.SERIALIZED_NAME_AUID);
+          String uri =props.getProperty(ArtifactProperties.SERIALIZED_NAME_URI);
+          String colDate = props.getProperty(ArtifactProperties.SERIALIZED_NAME_COLLECTION_DATE);
+          String vers = props.getProperty(ArtifactProperties.SERIALIZED_NAME_VERSION);
+          Integer version = Integer.parseInt(vers);
+          this.identifier = new ArtifactIdentifier(namespace, auId,uri,version);
+          this.collectionDate = Long.parseLong(colDate);
           artifactDataSize += cis.getByteCount();
           part.close();
         }
-        else if (disposition.contains(MULTIPART_ARTIFACT_HEADER)) {
+        else if (disposition.contains("httpResponseHeader")) {
           cis = new CountingInputStream(part.body().inputStream());
-          this.artifactMetadata = mapper.readValue(cis, HttpHeaders.class);
+          // we don't do anything useful with this so just read it in.
+          String result = IOUtils.toString(cis, StandardCharsets.UTF_8);
           artifactDataSize += cis.getByteCount();
           part.close();
         }
-        else if (disposition.contains(MULTIPART_ARTIFACT_HTTP_STATUS)) {
-          cis = new CountingInputStream(part.body().inputStream());
-          // Create a SessionInputBuffer and bind the InputStream from the multipart
-          SessionInputBufferImpl buffer = new SessionInputBufferImpl(new HttpTransportMetricsImpl(),
-              4096);
-          buffer.bind(cis);
-          // Read and parse HTTP status line
-          StatusLine httpStatus = BasicLineParser.parseStatusLine(buffer.readLine(), null);
-          this.setHttpStatus(httpStatus);
-          artifactDataSize += cis.getByteCount();
-          part.close();
-        }
-        else if (disposition.contains(MULTIPART_ARTIFACT_CONTENT)) {
+        else if (disposition.contains("payload")) {
           cis = new CountingInputStream(part.body().inputStream());
           contentFile = fileFromContentDisposition(disposition);
           BufferedSink sink = Okio.buffer(Okio.sink(contentFile));
