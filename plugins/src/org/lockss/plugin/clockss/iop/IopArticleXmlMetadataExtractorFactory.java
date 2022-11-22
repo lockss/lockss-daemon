@@ -259,6 +259,24 @@ public class IopArticleXmlMetadataExtractorFactory extends SourceXmlMetadataExtr
 	  @Override
 	  public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
 			  throws IOException, PluginException {
+
+    	// In Nov/2022, the decision is made to use 2022 buckets to replace 2020 and 2021 content,
+		//  based on publisher's request. So this method emit Null metadata to get records in DB get
+		// purged on on purpose
+    	if (	cu.getUrl().contains("iop-released/2020_1") ||
+				cu.getUrl().contains("iop-released/2020_2") ||
+				cu.getUrl().contains("iop-released/2020_1") ||
+				cu.getUrl().contains("iop-released/2020_4") ||
+				cu.getUrl().contains("iop-released/2021_01") ||
+				cu.getUrl().contains("iop-released/2021_02") ||
+				cu.getUrl().contains("iop-released/2021_03") ||
+				cu.getUrl().contains("iop-released/2021_04") )
+		{
+			log.debug3("Suppressing emit of metadata in Null extractor. ontains 2020 or 2021 bucket" + cu.getUrl());
+			// do nothing, do not allow TDB info to get used as default
+			// by not emitting
+		}
+
 		  try {
 			  SourceXmlSchemaHelper schemaHelper;
 			  // 1. figure out which XmlMetadataExtractorHelper class to use to get
