@@ -1500,7 +1500,7 @@
     au < finished ; crawling ; 2019 ; International Journal of E-Services and Mobile Applications (IJESMA) Volume 11 ; 11 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2020 ; International Journal of E-Services and Mobile Applications (IJESMA) Volume 12 ; 12 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2021 ; International Journal of E-Services and Mobile Applications (IJESMA) Volume 13 ; 13 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
-    au < testing ; exists ; 2022 ; International Journal of E-Services and Mobile Applications (IJESMA) Volume 14 ; 14 ; https://www.igi-global.com/ ; >
+    au < ready ; exists ; 2022 ; International Journal of E-Services and Mobile Applications (IJESMA) Volume 14 ; 14 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -1784,7 +1784,7 @@
     au < finished ; crawling ; 2019 ; International Journal of Human Capital and Information Technology Professionals (IJHCITP) Volume 10 ; 10 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2020 ; International Journal of Human Capital and Information Technology Professionals (IJHCITP) Volume 11 ; 11 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; International Journal of Human Capital and Information Technology Professionals (IJHCITP) Volume 12 ; 12 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 >
-    au < testing ; exists ; 2022 ; International Journal of Human Capital and Information Technology Professionals (IJHCITP) Volume 13 ; 13 ; https://www.igi-global.com/ ; >
+    au < ready ; exists ; 2022 ; International Journal of Human Capital and Information Technology Professionals (IJHCITP) Volume 13 ; 13 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -2103,7 +2103,7 @@
     au < finished ; crawling ; 2019 ; International Journal of Information Technology and Web Engineering (IJITWE) Volume 14 ; 14 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 > 
     au < finished ; crawling ; 2020 ; International Journal of Information Technology and Web Engineering (IJITWE) Volume 15 ; 15 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 > 
     au < finished ; manifest ; 2021 ; International Journal of Information Technology and Web Engineering (IJITWE) Volume 16 ; 16 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 > 
-    au < testing ; exists ; 2022 ; International Journal of Information Technology and Web Engineering (IJITWE) Volume 17 ; 17 ; https://www.igi-global.com/ ; > 
+    au < ready ; exists ; 2022 ; International Journal of Information Technology and Web Engineering (IJITWE) Volume 17 ; 17 ; https://www.igi-global.com/ ; > 
 
   }
 
@@ -2186,7 +2186,7 @@
     au < finished ; crawling ; 2019 ; International Journal of Intelligent Information Technologies (IJIIT) Volume 15 ; 15 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 > 
     au < finished ; crawling ; 2020 ; International Journal of Intelligent Information Technologies (IJIIT) Volume 16 ; 16 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 > 
     au < deepCrawl ; exists ; 2021 ; International Journal of Intelligent Information Technologies (IJIIT) Volume 17 ; 17 ; https://www.igi-global.com/ ; > 
-    au < testing ; exists ; 2022 ; International Journal of Intelligent Information Technologies (IJIIT) Volume 18 ; 18 ; https://www.igi-global.com/ ; > 
+    au < ready ; exists ; 2022 ; International Journal of Intelligent Information Technologies (IJIIT) Volume 18 ; 18 ; https://www.igi-global.com/ ; > 
 
   }
 
@@ -3844,7 +3844,7 @@
     au < finished ; crawling ; 2019 ; Journal of Cases on Information Technology (JCIT) Volume 21 ; 21 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 > 
     au < finished ; crawling ; 2020 ; Journal of Cases on Information Technology (JCIT) Volume 22 ; 22 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 > 
     au < deepCrawl ; exists ; 2021 ; Journal of Cases on Information Technology (JCIT) Volume 23 ; 23 ; https://www.igi-global.com/ ; > 
-    au < testing ; exists ; 2022 ; Journal of Cases on Information Technology (JCIT) Volume 24 ; 24 ; https://www.igi-global.com/ ; > 
+    au < ready ; exists ; 2022 ; Journal of Cases on Information Technology (JCIT) Volume 24 ; 24 ; https://www.igi-global.com/ ; > 
 
   }
 
