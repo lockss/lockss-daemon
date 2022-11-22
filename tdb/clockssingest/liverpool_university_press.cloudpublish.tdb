@@ -765,7 +765,16 @@
     au < doNotProcess ; exists ; 2019 ; Hunter Gatherer Research Volume 5 ; 5 ; >
 
     }
+  }
 
+  {
+
+    title <
+      name = Before Farming ;
+      issn = 1476-4253 ;
+      eissn = 1476-4261 ;
+      issnl = 1476-4253
+    >
     {
     param[journal_id] = bfarm
     comment[continued_by] = Hunter Gatherer Research
