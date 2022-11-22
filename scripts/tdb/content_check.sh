@@ -175,7 +175,7 @@ echo "---------------------"
 echo "---------------------"
 echo "GLN. ISSN issues"
 #Use tdb out to generate a list of publisher, title, issn, eissn. Replace all amp with and. Remove all starting The. Ignore sub-titles.
-scripts/tdb/tdbout -t publisher,title,issn,eissn tdb/prod/ | sed 's/\t\(.*\) & /\t\1 and /' | sed 's/\tThe /\t/' | sed 's/: .*\(\t.*\t\)/\1/' | sort -u > $tpath/issn
+scripts/tdb/tdbout -t publisher,title,issn,eissn tdb/prod/ | sed 's/\t\(.*\) & /\t\1 and /' | sed 's/\tThe /\t/' | sed 's/ Warc Content\t/\t/' | sed 's/: .*\(\t.*\t\)/\1/' | sort -u > $tpath/issn
 scripts/tdb/scrub_table.pl $tpath/issn
 #
 # Find issn problems in clockss title database
