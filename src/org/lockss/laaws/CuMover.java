@@ -260,7 +260,7 @@ public class CuMover extends Worker {
       isPartialContent = true;
       log.debug2("Checking for unmoved content: " + v2Url);
       do {
-        pageInfo = artifactsApi.getArtifacts(namespace, auId,
+        pageInfo = artifactsApi.getArtifacts(auId, namespace,
             v2Url, null, "all", false, null, token);
         cuArtifacts.addAll(pageInfo.getArtifacts());
         token = pageInfo.getPageInfo().getContinuationToken();
