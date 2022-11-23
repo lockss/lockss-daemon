@@ -12,6 +12,22 @@
   {
 
     title <
+      name = Blood Cancer Discovery ;
+      issn = 2643-3230 ;
+      eissn = 2643-3249
+
+    >
+      param[journal_id] = bloodcancerdiscov
+    
+      au < exists ; 2020 ; 2020 ; Blood Cancer Discovery Volume 1 ; 1 >
+      au < exists ; 2021 ; 2021 ; Blood Cancer Discovery Volume 2 ; 2 >
+      au < exists ; 2022 ; 2022 ; Blood Cancer Discovery Volume 3 ; 3 >
+
+  }
+
+  {
+
+    title <
       name = Cancer Discovery ;
       issn = 2159-8274 ;
       eissn = 2159-8290 
@@ -231,6 +247,20 @@
       au < doNotProcess ; 2020 ; 2020 ; Cancer Research Volume 80 ; 80 >
       au < ready ; 2021 ; 2021 ; Cancer Research Volume 81 ; 81 >
       au < manifest ; 2022 ; 2022 ; Cancer Research Volume 82 ; 82 >
+
+  }
+
+  {
+
+    title <
+      name = Cancer Research Communications ;
+      eissn = 2767-9764
+
+    >
+      param[journal_id] = cancerrescommun
+    
+      au < exists ; 2021 ; 2021 ; Cancer Research Communications Volume 1 ; 1 >
+      au < exists ; 2022 ; 2022 ; Cancer Research Communications Volume 2 ; 2 >
 
   }
 
