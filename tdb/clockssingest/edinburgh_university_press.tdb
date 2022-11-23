@@ -446,8 +446,8 @@
     param[journal_id] = brw
     #Was British Scholar before 2010.
 
-    au < superseded ; down ; 2009 ; Britain and the World Volume 1 [superseded] ; 1 ; http://www.euppublishing.com/ ; >
-    au < superseded ; down ; 2010 ; Britain and the World Volume 2 [superseded] ; 2 ; http://www.euppublishing.com/ ; >
+    au < superseded ; down ; 2008-2009 ; Britain and the World Volume 1 [superseded] ; 1 ; http://www.euppublishing.com/ ; >
+    au < superseded ; down ; 2009-2010 ; Britain and the World Volume 2 [superseded] ; 2 ; http://www.euppublishing.com/ ; >
     au < superseded ; down ; 2010 ; Britain and the World Volume 3 [superseded] ; 3 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2011 ; Britain and the World Volume 4 ; 4 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2012 ; Britain and the World Volume 5 ; 5 ; http://www.euppublishing.com/ ; >
@@ -476,8 +476,8 @@
     param[journal_id] = brs
     #Changed to Britain and the World after 2010.
 
-    au < finished ; finished ; 2009 ; British Scholar Volume 1 ; 1 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2010 ; British Scholar Volume 2 ; 2 ; http://www.euppublishing.com/ ; >
+    au < finished ; finished ; 2008-2009 ; British Scholar Volume 1 ; 1 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2009-2010 ; British Scholar Volume 2 ; 2 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2010 ; British Scholar Volume 3 ; 3 ; http://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
 
     }
@@ -632,6 +632,10 @@
     #continues = 0024-2306
     #doNotProcess = had been processed under Maney.Ingenta
 
+    au < exists ; exists ; 2005 ; Library and Information History Volume 21 ; 21 ; https://www.euppublishing.com/ ; >
+    au < exists ; exists ; 2006 ; Library and Information History Volume 22 ; 22 ; https://www.euppublishing.com/ ; >
+    au < exists ; exists ; 2007 ; Library and Information History Volume 23 ; 23 ; https://www.euppublishing.com/ ; >
+    au < exists ; exists ; 2008 ; Library and Information History Volume 24 ; 24 ; https://www.euppublishing.com/ ; >
     au < frozen ; exists ; 2009 ; Library and Information History Volume 25 ; 25 ; https://www.euppublishing.com/ ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Library and Information History Volume 26 ; 26 ; https://www.euppublishing.com/ ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Library and Information History Volume 27 ; 27 ; https://www.euppublishing.com/ ; >
