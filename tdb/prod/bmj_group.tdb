@@ -2642,6 +2642,14 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       #param[base_url] = http://qualitysafety.bmj.com/
       #content available from 1992 Volume 1 to 1999 Volume 8
 
+      au < bmj.BMJDrupalPlugin ; exists ; 1992 ; BMJ Quality & Safety Volume 1 ; 1 ; https://qualitysafety.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1993 ; BMJ Quality & Safety Volume 2 ; 2 ; https://qualitysafety.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1994 ; BMJ Quality & Safety Volume 3 ; 3 ; https://qualitysafety.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1995 ; BMJ Quality & Safety Volume 4 ; 4 ; https://qualitysafety.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1996 ; BMJ Quality & Safety Volume 5 ; 5 ; https://qualitysafety.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1997 ; BMJ Quality & Safety Volume 6 ; 6 ; https://qualitysafety.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 1998 ; BMJ Quality & Safety Volume 7 ; 7 ; https://qualitysafety.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; manifest ; 1999 ; BMJ Quality & Safety Volume 8 ; 8 ; https://qualitysafety.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; manifest ; 2000 ; BMJ Quality & Safety Volume 9 ; 9 ; https://qualitysafety.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; manifest ; 2001 ; BMJ Quality & Safety Volume 10 ; 10 ; https://qualitysafety.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; manifest ; 2002 ; BMJ Quality & Safety Volume 11 ; 11 ; https://qualitysafety.bmj.com/ >
