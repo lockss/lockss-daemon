@@ -1403,15 +1403,15 @@
     param[journal_issn] = 1065-0741
     comment[journal_id] = cwis
 
-    #au < exists ; 1984 ; Library Workstation Report Volume 1 ; 1 >
-    #au < exists ; 1985 ; Library Workstation Report Volume 2 ; 2 >
-    #au < exists ; 1986 ; Library Workstation Report Volume 3 ; 3 >
-    #au < exists ; 1987 ; Library Workstation Report Volume 4 ; 4 >
-    #au < exists ; 1988 ; Library Workstation Report Volume 5 ; 5 >
-    #au < exists ; 1989 ; Library Workstation Report Volume 6 ; 6 >
-    #au < exists ; 1990 ; Library Workstation Report Volume 7 ; 7 >
-    #au < exists ; 1991 ; Academic and Library Computing Volume 8 ; 8 >
-    #au < exists ; 1992 ; Academic and Library Computing Volume 9 ; 9 >
+    au < doNotProcess ; 1984 ; Library Workstation Report Volume 1 ; 1 >
+    au < doNotProcess ; 1985 ; Library Workstation Report Volume 2 ; 2 >
+    au < doNotProcess ; 1986 ; Library Workstation Report Volume 3 ; 3 >
+    au < doNotProcess ; 1987 ; Library Workstation Report Volume 4 ; 4 >
+    au < doNotProcess ; 1988 ; Library Workstation Report Volume 5 ; 5 >
+    au < doNotProcess ; 1989 ; Library Workstation Report Volume 6 ; 6 >
+    au < doNotProcess ; 1990 ; Library Workstation Report Volume 7 ; 7 >
+    au < doNotProcess ; 1991 ; Academic and Library Computing Volume 8 ; 8 >
+    au < doNotProcess ; 1992 ; Academic and Library Computing Volume 9 ; 9 >
     au < manifest ; 1993 ; Campus-Wide Information Systems Volume 10 ; 10 >
     au < manifest ; 1994 ; Campus-Wide Information Systems Volume 11 ; 11 >
     au < manifest ; 1995 ; Campus-Wide Information Systems Volume 12 ; 12 >
@@ -1432,8 +1432,8 @@
     au < released ; 2010 ; Campus-Wide Information Systems Volume 27 ; 27 >
     au < released ; 2011 ; Campus-Wide Information Systems Volume 28 ; 28 >
     au < released ; 2012 ; Campus-Wide Information Systems Volume 29 ; 29 >
-    au < doNotProcess ; 2013 ; Campus-Wide Information Systems Volume 30 ; 30 >
-    au < doNotProcess ; 2014 ; Campus-Wide Information Systems Volume 31 ; 31 >
+    au < exists ; 2013 ; Campus-Wide Information Systems Volume 30 ; 30 >
+    au < exists ; 2014 ; Campus-Wide Information Systems Volume 31 ; 31 >
 
   }
 
