@@ -74,11 +74,11 @@ public class CuChecker extends Worker {
   }
 
   boolean compareMetadata(ArchivalUnit au, CachedUrl cu, Artifact artifact,
-                          Long collectionDate) {
-    long collDate = collectionDate != null ? collectionDate : -1;
+                          Long v1CollectionDate) {
+    long collDate = v1CollectionDate != null ? v1CollectionDate : -1;
     if (artifact.getAuid().equals(au.getAuId()) &&
         artifact.getNamespace().equals(namespace)  &&
-        artifact.getCollectionDate().equals(collDate) &&
+        (collDate == -1 || artifact.getCollectionDate().equals(collDate)) &&
         artifact.getCommitted().equals(Boolean.TRUE)) {
       return true;
     }
@@ -112,7 +112,7 @@ public class CuChecker extends Worker {
       }
       boolean isMatch = compareMetadata(au, cu, artifact, collectionDate);
       if (!isMatch) {
-        String err = cu.getUrl() + "V1 and V2 metadata did not match.";
+        String err = cu.getUrl() + " V1 and V2 metadata did not match.";
         task.addError(err);
       }
       else {
