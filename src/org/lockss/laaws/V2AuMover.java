@@ -41,6 +41,7 @@ import java.util.*;
 import java.util.concurrent.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.*;
 import okhttp3.*;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.ConfigManager;
@@ -51,9 +52,7 @@ import org.lockss.laaws.api.rs.StreamingArtifactsApi;
 import org.lockss.laaws.client.ApiException;
 import org.lockss.laaws.client.V2RestClient;
 import org.lockss.laaws.model.rs.AuidPageInfo;
-import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.CachedUrl;
-import org.lockss.plugin.PluginManager;
+import org.lockss.plugin.*;
 import org.lockss.uiapi.util.DateFormatter;
 import org.lockss.util.*;
 import static org.lockss.laaws.Counters.CounterType;
@@ -595,6 +594,10 @@ s api client with long timeout */
       if (args.au != null) {
         // If an AU was supplied, copy it
         moveOneAu(args);
+      } else if (args.plugins != null) {
+        // If a plugin was supplied, copy its AUs
+        movePluginAus(args);
+
       } else {
         // else copy all AUs (that match sel pattern)
         moveAllAus(args);
@@ -672,6 +675,30 @@ s api client with long timeout */
         auMoveQueue.add(au);
       }
     }
+    moveQueuedAus();
+  }
+
+  /**
+   * Move all AUs that match the select patterns.
+   *
+   * @param args arg block holding all request args
+   * @throws IOException if unable to connect to services or other error
+   */
+  public void movePluginAus(Args args) throws IOException {
+    startTotalTimers();
+    initRequest(args);
+    currentStatus = "Checking V2 services";
+    checkV2ServicesAvailable();
+    // get the aus known to the v2 repo
+    getV2Aus();
+    // get the local AUs to move
+    args.plugins.stream()
+      .flatMap(plug -> StreamSupport.stream(plug.getAllAus().spliterator(),
+                                            false))
+      // Don't copy internal AUs (test probably unnecessary here)
+      .filter(au -> !pluginManager.isInternalAu(au))
+      .forEach(au -> auMoveQueue.add(au));
+
     moveQueuedAus();
   }
 
@@ -1448,6 +1475,7 @@ s api client with long timeout */
     OpType opType;
     boolean isCompareContent;
     List<Pattern> selPatterns;
+    Collection<Plugin> plugins;
     ArchivalUnit au;
 
     public Args setHost(String host) {
@@ -1470,8 +1498,14 @@ s api client with long timeout */
       this.isCompareContent = val;
       return this;
     }
+    public Args setPlugins(Collection<Plugin> plugs) {
+      this.plugins = plugs;
+      this.selPatterns = null;
+      return this;
+    }
     public Args setSelPatterns(List<Pattern> selPatterns) {
       this.selPatterns = selPatterns;
+      this.plugins = null;
       return this;
     }
     public Args setAu(ArchivalUnit au) {

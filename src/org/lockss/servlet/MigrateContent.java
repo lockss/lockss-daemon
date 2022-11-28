@@ -37,6 +37,7 @@ import java.time.Instant;
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.regex.Pattern;
+import java.util.stream.*;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import com.google.gson.Gson;
@@ -44,8 +45,7 @@ import com.google.gson.GsonBuilder;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.laaws.V2AuMover;
-import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.PluginManager;
+import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.lockss.laaws.*;
 import org.lockss.laaws.MigrationManager.OpType;
@@ -69,13 +69,11 @@ public class MigrateContent extends LockssServlet {
   public static final String PARAM_ENABLE_MIGRATION = PREFIX + "enabled";
   public static final boolean DEFAULT_ENABLE_MIGRATION = false;
 
-  public static final String PARAM_REACT = PREFIX + "react";
-  public static final boolean DEFAULT_REACT = false;
-
   public static final String PARAM_HOSTNAME=PREFIX +"hostname";
   static final String DEFAULT_HOSTNAME="localhost";
   public static final String PARAM_AU_SELECT_FILTER=PREFIX +"au_select_filter";
-  public static final List<String> DEFAULT_AU_SELECT_FILTER=ListUtil.fromArray(new String[] {".*"});
+  public static final List<String> DEFAULT_AU_SELECT_FILTER =
+    Collections.emptyList();
 
   public static final String PARAM_DEFAULT_OPTYPE = PREFIX + "defaultOpType";
   static final OpType DEFAULT_DEFAULT_OPTYPE = OpType.CopyOnly;
@@ -87,7 +85,6 @@ public class MigrateContent extends LockssServlet {
   public static final String PARAM_DEFAULT_COMPARE = PREFIX + "defaultCompare";
   public static final boolean DEFAULT_DEFAULT_COMPARE = false;
 
-  // paramdoc only
   static final String KEY_STATUS = "status";
   static final String KEY_ACTION = "action";
   static final String KEY_OUTPUT = "output";
@@ -95,16 +92,18 @@ public class MigrateContent extends LockssServlet {
   static final String KEY_SIZE = "size";
   static final String KEY_MSG = "msg";
   static final String KEY_AUID = "auid";
-  static final String HOSTNAME="hostname";
+  static final String KEY_HOSTNAME = "hostname";
+  static final String KEY_PLUGINID = "pluginid";
   static final String KEY_USER_NAME="username";
   static final String KEY_PASSWD="password";
   static final String KEY_OP_TYPE = "op_type";
   static final String KEY_COMPARE_CONTENT = "compare_content";
 
 
-  public static final String ACTION_MIGRATE_AU= "Migrate One AU to V2 Repository";
-  public static final String ACTION_MIGRATE_ALL= "Migrate All AUs to V2 Repository";
+  public static final String ACTION_START= "Start";
   public static final String ACTION_ABORT= "Abort";
+
+  private static String ALL_PLUGINS_ID = "_allplugs_";
 
   private static final String HOST_URL_FOOT =
     "The V2 REST Service host name (localhost by default).";
@@ -118,6 +117,7 @@ public class MigrateContent extends LockssServlet {
   private V2AuMover auMover;
 
   String auid;
+  String pluginId;
   String userName;
   String userPass;
   String hostName=DEFAULT_HOSTNAME;
@@ -141,8 +141,9 @@ public class MigrateContent extends LockssServlet {
 
   void initParams() {
     Configuration config = ConfigManager.getCurrentConfig();
-    hostName=config.get(PARAM_HOSTNAME, DEFAULT_HOSTNAME);
-    auSelectFilter=config.getList(PARAM_AU_SELECT_FILTER, DEFAULT_AU_SELECT_FILTER);
+    hostName = config.get(PARAM_HOSTNAME, DEFAULT_HOSTNAME);
+    auSelectFilter =
+      config.getList(PARAM_AU_SELECT_FILTER, DEFAULT_AU_SELECT_FILTER);
     if(auSelectFilter != DEFAULT_AU_SELECT_FILTER) {
       auSelectPatterns = compileRegexps(auSelectFilter);
     }
@@ -183,11 +184,14 @@ public class MigrateContent extends LockssServlet {
 
     String action = getParameter(KEY_ACTION);
     if (!StringUtil.isNullString(action)) {
-      auid = getParameter(KEY_AUID);
       userName=getParameter(KEY_USER_NAME);
       userPass =getParameter(KEY_PASSWD);
-      hostName=getParameter(HOSTNAME);
+      hostName=getParameter(KEY_HOSTNAME);
+      if(hostName==null) hostName="localhost";
       isCompareContent = getParameter(KEY_COMPARE_CONTENT) != null;
+
+      auid = getParameter(KEY_AUID);
+      pluginId = getParameter(KEY_PLUGINID);
 
       String opTypeStr = getParameter(KEY_OP_TYPE);
       if (!StringUtil.isNullString(opTypeStr)) {
@@ -198,12 +202,14 @@ public class MigrateContent extends LockssServlet {
         }
       }
 
-      if(hostName==null) hostName="localhost";
-      if (ACTION_MIGRATE_AU.equals(action)) {
-        //Todo: This should be eliminated when we are done with testing.
-        doMigrateAu();
-      } else if (ACTION_MIGRATE_ALL.equals(action)) {
-        doMigrateAll();
+      if (ACTION_START.equals(action)) {
+        if (!StringUtil.isNullString(auid)) {
+          doMigrateAu();
+        } else if (!StringUtil.isNullString(pluginId)) {
+          doMigratePluginAus();
+        } else {
+          errMsg = "Please select a plugin";
+        }
       } else if (ACTION_ABORT.equals(action)) {
         doAbort();
       }
@@ -289,6 +295,21 @@ public class MigrateContent extends LockssServlet {
     startRunner(args);
   }
 
+  private void doMigratePluginAus() {
+    V2AuMover.Args args = getCommonFormArgs();
+    if (ALL_PLUGINS_ID.equals(pluginId)) {
+      args.setPlugins(pluginMgr.getRegisteredPlugins());
+    } else {
+      Plugin plug = pluginMgr.getPluginFromId(pluginId);
+      if (plug == null) {
+        errMsg = "No plugin with ID: " + pluginId;
+        return;
+      }
+      args.setPlugins(Collections.singletonList(plug));
+    }
+    startRunner(args);
+  }
+
   private void doMigrateAu() {
     ArchivalUnit au = getAu();
     if (au == null) {
@@ -346,18 +367,27 @@ public class MigrateContent extends LockssServlet {
 
   static String CENTERED_CELL = "align=\"center\" colspan=3";
 
+  private void addSelToTable(Table tbl) {
+    if (auSelectFilter.isEmpty()) {
+      addPluginSelToTable(tbl, KEY_PLUGINID, pluginId);
+    } else {
+      addAuSelToTable(tbl, KEY_AUID, auid);
+    }
+  }
+
+
   private Element makeForm() {
     Composite comp = new Composite();
     Form frm = new Form(srvURL(myServletDescr()));
     frm.method("POST");
     Table tbl = new Table(0, "align=center cellspacing=2 cellpadding=0");
-    addAusToTable(tbl,KEY_AUID, auid);
+    addSelToTable(tbl);
     tbl.newRow();
     tbl.newCell();
 
     addInputToTable(tbl,
       "V2 Rest Services Hostname" + addFootnote(HOST_URL_FOOT),
-      HOSTNAME, hostName, 40);
+      KEY_HOSTNAME, hostName, 40);
     addInputToTable(tbl,
       "V2 Rest Services Username" + addFootnote(USER_NAME_FOOT),
       KEY_USER_NAME, userName, 20);
@@ -383,13 +413,9 @@ public class MigrateContent extends LockssServlet {
 
     tbl.newRow();
     tbl.newCell(CENTERED_CELL);
-    Input migrateAu = new Input(Input.Submit, KEY_ACTION, ACTION_MIGRATE_AU);
-    tbl.add(migrateAu);
-    Input migrateAll = new Input(Input.Submit, KEY_ACTION, ACTION_MIGRATE_ALL);
-    tbl.add(migrateAll);
-    tbl.newRow();
-    tbl.newCell(CENTERED_CELL);
+    Input start = new Input(Input.Submit, KEY_ACTION, ACTION_START);
     Input abort = new Input(Input.Submit, KEY_ACTION, ACTION_ABORT);
+    tbl.add(start);
     tbl.add(abort);
 
     frm.add(tbl);
@@ -425,7 +451,7 @@ public class MigrateContent extends LockssServlet {
     tbl.add(elem);
   }
 
-  private void addAusToTable( Table tbl, String key, String preselId) {
+  private void addAuSelToTable(Table tbl, String key, String preselId) {
     tbl.newRow();
     tbl.newCell(CENTERED_CELL);
     tbl.add("Select AU<br>");
@@ -441,6 +467,38 @@ public class MigrateContent extends LockssServlet {
         sel.add(encodeAttr(au0.getName()), id.equals(preselId), id);
       }
     }
+    tbl.add(sel);
+    setTabOrder(sel);
+  }
+
+  private void addPluginSelToTable(Table tbl, String key, String preselId) {
+    tbl.newRow();
+    tbl.newCell(CENTERED_CELL);
+    tbl.add("Select Plugin<br>");
+    final Select sel = new Select(key, false);
+    sel.add("", preselId == null, "");
+    // Build plugin -> #AUs map
+    Map<Plugin,Integer> plugs = pluginMgr.getRegisteredPlugins().stream()
+      // Filter out registry AUs
+      .filter(plug -> !(pluginMgr.isInternalPlugin(plug)))
+      .collect(Collectors.toMap(plug -> plug,
+                                plug -> plug.getAllAus().size()));
+    // Sum total AUs
+    int totalAus = plugs.entrySet().stream()
+      .map(Map.Entry::getValue)
+      .reduce(0, Integer::sum);;
+    // Add "All plugins" menu item
+    sel.add(String.format("%s (%d)", "All plugins", totalAus),
+            ALL_PLUGINS_ID.equals(preselId), ALL_PLUGINS_ID);
+    // Add menu item for each plugin
+    plugs.entrySet().stream()
+      .filter(ent -> ent.getValue() > 0)
+      .sorted((ent1, ent2) -> ent1.getKey().getPluginName().compareToIgnoreCase(ent2.getKey().getPluginName()))
+      .forEach(ent -> sel.add(String.format("%s (%d)",
+                                            encodeAttr(ent.getKey().getPluginName()),
+                                          ent.getValue()),
+                              false,
+                              ent.getKey().getPluginId()));
     tbl.add(sel);
     setTabOrder(sel);
   }

@@ -2727,7 +2727,7 @@ public class PluginManager
   /** @return All plugins that have been registered.  <i>Ie</i>, that are
    * either listed in org.lockss.plugin.registry, or were loaded by a
    * configured AU */
-  public Collection getRegisteredPlugins() {
+  public Collection<Plugin> getRegisteredPlugins() {
     return pluginMap.values();
   }
 
