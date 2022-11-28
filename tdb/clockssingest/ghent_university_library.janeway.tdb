@@ -15,9 +15,7 @@
     #####Journals with unique urls
     ###########
 
-    plugin = needs.plugin
-    #plugin = ClockssOLHPlugin
-    #plugin = org.lockss.plugin.janeway.ghentuniversitylibrary.ClockssGhentUniversityLibraryPlugin
+    plugin = org.lockss.plugin.janeway.ghentuniversitylibrary.ClockssGhentUniversityLibraryDomainModeJournalsPlugin
     implicit < status ; status2 ; year ; param[year] ; volume ; name ; hidden[proxy] >
 
   {

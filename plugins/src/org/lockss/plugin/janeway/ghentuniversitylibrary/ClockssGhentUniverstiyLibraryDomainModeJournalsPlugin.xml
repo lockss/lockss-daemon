@@ -37,22 +37,26 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.janeway.ghentuniversitylibrary.GhentUniversityLibraryPlugin</string>
+    <string>org.lockss.plugin.janeway.ghentuniversitylibrary.ClockssGhentUniversityLibraryDomainModeJournalsPlugin</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Ghent University Library Journals Plugin</string>
+    <string>Ghent University Library Domain Mode Journals Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>1</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.janeway.JanewayPathModeJournalsPlugin</string>
+    <string>org.lockss.plugin.janeway.ghentuniversitylibrary.GhentUniversityLibraryDomainModeJournalsPlugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
     <string>1</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Ghent University Library Domain Mode Journals Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
   </entry>
 </map>
