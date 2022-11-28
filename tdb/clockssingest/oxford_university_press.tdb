@@ -13204,7 +13204,7 @@
     param[journal_id] = jambio
     #move from Wiley by 2022-12-12
 
-    au < expected ; exists ; 2022 ; 2022 ; Journal of Applied Microbiology Volume 133 ; 133 ; >
+    au < manifest ; exists ; 2022 ; 2022 ; Journal of Applied Microbiology Volume 133 ; 133 ; >
 
   }
 
@@ -13220,7 +13220,7 @@
     param[journal_id] = lambio
     #move from Wiley by 2022-12-19
 
-    au < expected ; exists ; 2022 ; 2022 ; Letters in Applied Microbiology Volume 75 ; 75 ; >
+    au < manifest ; exists ; 2022 ; 2022 ; Letters in Applied Microbiology Volume 75 ; 75 ; >
 
   }
 
@@ -16382,7 +16382,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Plant Physiology Volume 181 ; 181 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Plant Physiology Volume 182 ; 182 ; >
       au < exists ; exists ; 2020 ; 2020 ; Plant Physiology Volume 183 ; 183 ; >
-      au < exists ; exists ; 2020 ; 2020 ; Plant Physiology Volume 184 ; 184 ; >
+      au < manifest ; exists ; 2020 ; 2020 ; Plant Physiology Volume 184 ; 184 ; >
 
     }
 
