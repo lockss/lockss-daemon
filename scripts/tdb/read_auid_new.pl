@@ -3225,6 +3225,7 @@ while (my $line = <>) {
 
   #Silverchair CLOCKSS no year/volume_name. Common Theme
   } elsif (($plugin eq "ClockssIwapSilverchairPlugin") || 
+           ($plugin eq "ClockssAAISilverchairPlugin") ||
            ($plugin eq "ClockssAOTASilverchairPlugin") || 
            ($plugin eq "ClockssAllenPressSilverchairPlugin")) { 
     $url = sprintf("%s%s/issue/browse-by-year/%d",
