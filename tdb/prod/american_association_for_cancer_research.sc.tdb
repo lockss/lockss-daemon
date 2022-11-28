@@ -19,9 +19,9 @@
     >
       param[journal_id] = bloodcancerdiscov
     
-      au < exists ; 2020 ; 2020 ; Blood Cancer Discovery Volume 1 ; 1 >
-      au < exists ; 2021 ; 2021 ; Blood Cancer Discovery Volume 2 ; 2 >
-      au < exists ; 2022 ; 2022 ; Blood Cancer Discovery Volume 3 ; 3 >
+      au < manifest ; 2020 ; 2020 ; Blood Cancer Discovery Volume 1 ; 1 >
+      au < manifest ; 2021 ; 2021 ; Blood Cancer Discovery Volume 2 ; 2 >
+      au < manifest ; 2022 ; 2022 ; Blood Cancer Discovery Volume 3 ; 3 >
 
   }
 
@@ -259,8 +259,8 @@
     >
       param[journal_id] = cancerrescommun
     
-      au < exists ; 2021 ; 2021 ; Cancer Research Communications Volume 1 ; 1 >
-      au < exists ; 2022 ; 2022 ; Cancer Research Communications Volume 2 ; 2 >
+      au < manifest ; 2021 ; 2021 ; Cancer Research Communications Volume 1 ; 1 >
+      au < manifest ; 2022 ; 2022 ; Cancer Research Communications Volume 2 ; 2 >
 
   }
 

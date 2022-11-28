@@ -13220,7 +13220,7 @@
     param[journal_id] = jambio
     #move from Wiley by 2022-12-12
 
-    au < expected ; 2022 ; 2022 ; Journal of Applied Microbiology Volume 133 ; 133 >
+    au < manifest ; 2022 ; 2022 ; Journal of Applied Microbiology Volume 133 ; 133 >
 
   }
 
@@ -13236,7 +13236,7 @@
     param[journal_id] = lambio
     #move from Wiley by 2022-12-19
 
-    au < expected ; 2022 ; 2022 ; Letters in Applied Microbiology Volume 75 ; 75 >
+    au < manifest ; 2022 ; 2022 ; Letters in Applied Microbiology Volume 75 ; 75 >
 
   }
 
