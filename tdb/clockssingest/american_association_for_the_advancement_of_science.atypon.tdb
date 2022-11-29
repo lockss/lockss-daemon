@@ -4,7 +4,7 @@
     name = American Association for the Advancement of Science ;
     info[back] = 1880 ;
     info[contract] = 2015 ;
-    info[tester] = 8 ;
+    info[tester] = 5 ;
     info[poller] = 2 ;
     info[platform] = Atypon.
   >
@@ -422,22 +422,22 @@
       au < doNotProcess ; doNotProcess ; 2016 ; Science Volume 352 ; 352 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2016 ; Science Volume 353 ; 353 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2016 ; Science Volume 354 ; 354 ; reingest2.clockss.org:8085 >
-      au < doNotProcess ; doNotProcess ; 2017 ; Science Volume 355 ; 355 ; > #no permission on deepCrawl
-      au < doNotProcess ; doNotProcess ; 2017 ; Science Volume 356 ; 356 ; > #no permission on deepCrawl
-      au < doNotProcess ; doNotProcess ; 2017 ; Science Volume 357 ; 357 ; > #no permission on deepCrawl
-      au < doNotProcess ; doNotProcess ; 2017 ; Science Volume 358 ; 358 ; > #no permission on deepCrawl
-      au < doNotProcess ; doNotProcess ; 2018 ; Science Volume 359 ; 359 ; > #no permission on deepCrawl
-      au < doNotProcess ; doNotProcess ; 2018 ; Science Volume 360 ; 360 ; > #no permission on deepCrawl
-      au < doNotProcess ; doNotProcess ; 2018 ; Science Volume 361 ; 361 ; > #no permission on deepCrawl
-      au < doNotProcess ; doNotProcess ; 2018 ; Science Volume 362 ; 362 ; > #no permission on deepCrawl
-      au < doNotProcess ; doNotProcess ; 2019 ; Science Volume 363 ; 363 ; > #no permission
-      au < doNotProcess ; doNotProcess ; 2019 ; Science Volume 364 ; 364 ; > #no permission
-      au < doNotProcess ; doNotProcess ; 2019 ; Science Volume 365 ; 365 ; > #no permission
-      au < doNotProcess ; doNotProcess ; 2019 ; Science Volume 366 ; 366 ; > #no permission
-      au < doNotProcess ; doNotProcess ; 2020 ; Science Volume 367 ; 367 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; Science Volume 368 ; 368 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; Science Volume 369 ; 369 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; Science Volume 370 ; 370 ; >
+      au < exists ; exists ; 2017 ; Science Volume 355 ; 355 ; >
+      au < exists ; exists ; 2017 ; Science Volume 356 ; 356 ; >
+      au < exists ; exists ; 2017 ; Science Volume 357 ; 357 ; >
+      au < exists ; exists ; 2017 ; Science Volume 358 ; 358 ; >
+      au < exists ; exists ; 2018 ; Science Volume 359 ; 359 ; >
+      au < exists ; exists ; 2018 ; Science Volume 360 ; 360 ; >
+      au < exists ; exists ; 2018 ; Science Volume 361 ; 361 ; >
+      au < exists ; exists ; 2018 ; Science Volume 362 ; 362 ; >
+      au < exists ; exists ; 2019 ; Science Volume 363 ; 363 ; >
+      au < exists ; exists ; 2019 ; Science Volume 364 ; 364 ; >
+      au < exists ; exists ; 2019 ; Science Volume 365 ; 365 ; >
+      au < exists ; exists ; 2019 ; Science Volume 366 ; 366 ; >
+      au < exists ; exists ; 2020 ; Science Volume 367 ; 367 ; >
+      au < exists ; exists ; 2020 ; Science Volume 368 ; 368 ; >
+      au < exists ; exists ; 2020 ; Science Volume 369 ; 369 ; >
+      au < exists ; exists ; 2020 ; Science Volume 370 ; 370 ; >
       au < frozen ; exists ; 2021 ; Science Volume 371 ; 371 ; >
       au < frozen ; exists ; 2021 ; Science Volume 372 ; 372 ; >
       au < frozen ; exists ; 2021 ; Science Volume 373 ; 373 ; >
@@ -469,10 +469,10 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Science Signaling Volume 7 ; 7 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2015 ; Science Signaling Volume 8 ; 8 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; doNotProcess ; 2016 ; Science Signaling Volume 9 ; 9 ; reingest5.clockss.org:8082 >
-      au < doNotProcess ; doNotProcess ; 2017 ; Science Signaling Volume 10 ; 10 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; Science Signaling Volume 11 ; 11 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; Science Signaling Volume 12 ; 12 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; Science Signaling Volume 13 ; 13 ; >
+      au < exists ; exists ; 2017 ; Science Signaling Volume 10 ; 10 ; >
+      au < exists ; exists ; 2018 ; Science Signaling Volume 11 ; 11 ; >
+      au < exists ; exists ; 2019 ; Science Signaling Volume 12 ; 12 ; >
+      au < exists ; exists ; 2020 ; Science Signaling Volume 13 ; 13 ; >
       au < frozen ; exists ; 2021 ; Science Signaling Volume 14 ; 14 ; >
       au < crawling ; exists ; 2022 ; Science Signaling Volume 15 ; 15 ; >
 
@@ -497,10 +497,10 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Science Translational Medicine Volume 6 ; 6 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2015 ; Science Translational Medicine Volume 7 ; 7 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2016 ; Science Translational Medicine Volume 8 ; 8 ; reingest5.clockss.org:8082 >
-      au < doNotProcess ; doNotProcess ; 2017 ; Science Translational Medicine Volume 9 ; 9 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; Science Translational Medicine Volume 10 ; 10 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; Science Translational Medicine Volume 11 ; 11 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; Science Translational Medicine Volume 12 ; 12 ; >
+      au < exists ; exists ; 2017 ; Science Translational Medicine Volume 9 ; 9 ; >
+      au < exists ; exists ; 2018 ; Science Translational Medicine Volume 10 ; 10 ; >
+      au < exists ; exists ; 2019 ; Science Translational Medicine Volume 11 ; 11 ; >
+      au < exists ; exists ; 2020 ; Science Translational Medicine Volume 12 ; 12 ; >
       au < frozen ; exists ; 2021 ; Science Translational Medicine Volume 13 ; 13 ; >
       au < crawling ; exists ; 2022 ; Science Translational Medicine Volume 14 ; 14 ; >
 
@@ -520,8 +520,8 @@
       au < doNotProcess ; doNotProcess ; 2016 ; Science Advances Volume 2 ; 2 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2017 ; Science Advances Volume 3 ; 3 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2018 ; Science Advances Volume 4 ; 4 ; reingest3.clockss.org:8083 >
-      au < doNotProcess ; doNotProcess ; 2019 ; Science Advances Volume 5 ; 5 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; Science Advances Volume 6 ; 6 ; >
+      au < exists ; exists ; 2019 ; Science Advances Volume 5 ; 5 ; >
+      au < exists ; exists ; 2020 ; Science Advances Volume 6 ; 6 ; >
       au < frozen ; exists ; 2021 ; Science Advances Volume 7 ; 7 ; >
       au < crawling ; exists ; 2022 ; Science Advances Volume 8 ; 8 ; >
 
@@ -537,11 +537,11 @@
       param[base_url] = https://www.science.org/
       param[journal_id] = scirobotics
 
-      au < doNotProcess ; doNotProcess ; 2016 ; Science Robotics Volume 1 ; 1 ; >
+      au < exists ; exists ; 2016 ; Science Robotics Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; Science Robotics Volume 2 ; 2 ; reingest1.clockss.org:8082 >
-      au < doNotProcess ; doNotProcess ; 2018 ; Science Robotics Volume 3 ; 3 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; Science Robotics Volume 4 ; 4 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; Science Robotics Volume 5 ; 5 ; >
+      au < exists ; exists ; 2018 ; Science Robotics Volume 3 ; 3 ; >
+      au < exists ; exists ; 2019 ; Science Robotics Volume 4 ; 4 ; >
+      au < exists ; exists ; 2020 ; Science Robotics Volume 5 ; 5 ; >
       au < frozen ; exists ; 2021 ; Science Robotics Volume 6 ; 6 ; >
       au < crawling ; exists ; 2022 ; Science Robotics Volume 7 ; 7 ; >
 
@@ -559,9 +559,9 @@
 
       au < doNotProcess ; doNotProcess ; 2016 ; Science Immunology Volume 1 ; 1 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2017 ; Science Immunology Volume 2 ; 2 ; reingest3.clockss.org:8083 >
-      au < doNotProcess ; doNotProcess ; 2018 ; Science Immunology Volume 3 ; 3 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; Science Immunology Volume 4 ; 4 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; Science Immunology Volume 5 ; 5 ; >
+      au < exists ; exists ; 2018 ; Science Immunology Volume 3 ; 3 ; >
+      au < exists ; exists ; 2019 ; Science Immunology Volume 4 ; 4 ; >
+      au < exists ; exists ; 2020 ; Science Immunology Volume 5 ; 5 ; >
       au < frozen ; exists ; 2021 ; Science Immunology Volume 6 ; 6 ; >
       au < crawling ; exists ; 2022 ; Science Immunology Volume 7 ; 7 ; >
 
