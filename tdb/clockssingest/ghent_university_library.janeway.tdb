@@ -38,7 +38,7 @@
       au < exists ; exists ; 2017 ; 2017 ; 2017 ; Authorship Volume 2017 ; >
       au < exists ; exists ; 2018 ; 2018 ; 2018 ; Authorship Volume 2018 ; >
       au < exists ; exists ; 2019 ; 2019 ; 2019 ; Authorship Volume 2019 ; >
-      au < exists ; exists ; 2020 ; 2020 ; 2020 ; Authorship Volume 2020 ; >
+      au < manifest ; exists ; 2020 ; 2020 ; 2020 ; Authorship Volume 2020 ; >
       au < exists ; exists ; 2021 ; 2021 ; 2021 ; Authorship Volume 2021 ; >
       au < expected ; exists ; 2022 ; 2022 ; 2022 ; Authorship Volume 2022 ; >
 
@@ -89,7 +89,7 @@
       au < exists ; exists ; 2014 ; 2014 ; 2014 ; Documenta Volume 2014 ; >
       au < exists ; exists ; 2015 ; 2015 ; 2015 ; Documenta Volume 2015 ; >
       au < exists ; exists ; 2016 ; 2016 ; 2016 ; Documenta Volume 2016 ; >
-      au < exists ; exists ; 2017 ; 2017 ; 2017 ; Documenta Volume 2017 ; >
+      au < manifest ; exists ; 2017 ; 2017 ; 2017 ; Documenta Volume 2017 ; >
       au < exists ; exists ; 2018 ; 2018 ; 2018 ; Documenta Volume 2018 ; >
       au < exists ; exists ; 2019 ; 2019 ; 2019 ; Documenta Volume 2019 ; >
       au < exists ; exists ; 2020 ; 2020 ; 2020 ; Documenta Volume 2020 ; >
@@ -109,7 +109,7 @@
       param[journal_id] = digest
 
       au < exists ; exists ; 2020 ; 2020 ; 2020 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2020 ; >
-      au < exists ; exists ; 2021 ; 2021 ; 2021 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2021 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; 2021 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2021 ; >
       au < exists ; exists ; 2022 ; 2022 ; 2022 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2022 ; >
 
   }
@@ -127,7 +127,7 @@
 
       au < exists ; exists ; 2019 ; 2019 ; 2019 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2019 ; >
       au < exists ; exists ; 2020 ; 2020 ; 2020 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2020 ; >
-      au < exists ; exists ; 2021 ; 2021 ; 2021 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2021 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; 2021 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2021 ; >
       au < exists ; exists ; 2022 ; 2022 ; 2022 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2022 ; >
 
   }
