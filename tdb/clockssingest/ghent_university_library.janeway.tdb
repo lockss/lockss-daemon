@@ -15,6 +15,7 @@
     #####Journals with unique urls
     ###########
 
+    #plugin using domain mode no longer need journal id for OAI API
     plugin = org.lockss.plugin.janeway.ghentuniversitylibrary.ClockssGhentUniversityLibraryDomainModeJournalsPlugin
     implicit < status ; status2 ; year ; param[year] ; volume ; name ; hidden[proxy] >
 
@@ -27,7 +28,7 @@
 
       #published 2011-present
       param[base_url] = https://www.authorship.ugent.be/
-      param[journal_id] = authorship
+      #param[journal_id] = authorship
 
       au < exists ; exists ; 2011 ; 2011 ; 2011 ; Authorship Volume 2011 ; >
       au < exists ; exists ; 2012 ; 2012 ; 2012 ; Authorship Volume 2012 ; >
@@ -53,7 +54,7 @@
 
       #published 1983-2020
       param[base_url] = https://documenta.ugent.be/
-      param[journal_id] = documenta
+      #param[journal_id] = documenta
 
       au < exists ; exists ; 1983 ; 1983 ; 1983 ; Documenta Volume 1983 ; >
       au < exists ; exists ; 1984 ; 1984 ; 1984 ; Documenta Volume 1984 ; >
@@ -106,7 +107,7 @@
 
       #published 2020-present
       param[base_url] = https://www.digest.ugent.be/
-      param[journal_id] = digest
+      #param[journal_id] = digest
 
       au < exists ; exists ; 2020 ; 2020 ; 2020 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2020 ; >
       au < manifest ; exists ; 2021 ; 2021 ; 2021 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2021 ; >
@@ -142,7 +143,7 @@
 
       #published 2010-2017
       param[base_url] = https://www.philosophica.ugent.be/
-      param[journal_id] = philosophica
+      #param[journal_id] = philosophica
 
       au < exists ; exists ; 2010 ; 2010 ; 83 ; Philosophica Volume 83 ; >
       au < exists ; exists ; 2012 ; 2012 ; 84-87 ; Philosophica Volume 84-87 ; >
