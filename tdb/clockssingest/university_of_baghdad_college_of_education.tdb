@@ -1,0 +1,39 @@
+{
+
+  publisher <
+    name = University of Baghdad, Collage of Education Ibn Rushd ;
+    info[contract] = 2022 ;
+    info[back] = 2013 ;
+    info[tester] = 5 ;
+    info[poller] = 3 ;
+    info[platform] = OJS3. Open Journal Systems 3.3.0.13
+  >
+
+    implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    attr[start_stem] = index.php/
+
+  {
+
+    title <
+      name = Alusthath Journal for Human and Social Sciences ;
+      issn = 0552-265X ;
+      eissn = 2518-9263
+    >
+      param[base_url] = https://alustath.uobaghdad.edu.iq/
+      param[journal_id] = UJIRCO
+      #published 2014-present
+
+      au < manifest ; exists ; 2014 ; Alusthath Journal for Human and Social Sciences Volume 2014 ; 53 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; Alusthath Journal for Human and Social Sciences Volume 2015 ; 54 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; Alusthath Journal for Human and Social Sciences Volume 2016 ; 55 ; 2016 ; >
+      au < manifest ; exists ; 2017 ; Alusthath Journal for Human and Social Sciences Volume 2017 ; 56 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; Alusthath Journal for Human and Social Sciences Volume 2018 ; 57 ; 2018 ; >
+      au < manifest ; exists ; 2019 ; Alusthath Journal for Human and Social Sciences Volume 2019 ; 58 ; 2019 ; >
+      au < manifest ; exists ; 2020 ; Alusthath Journal for Human and Social Sciences Volume 2020 ; 59 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; Alusthath Journal for Human and Social Sciences Volume 2021 ; 60 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; Alusthath Journal for Human and Social Sciences Volume 2022 ; 61 ; 2022 ; >
+
+  }
+
+}
