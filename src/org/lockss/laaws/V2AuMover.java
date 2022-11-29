@@ -473,6 +473,7 @@ s api client with long timeout */
 
     currentStatus = "Initializing";
     running = true;
+    hasBeenStarted = true;
     hostName = args.host;
     userName = args.uname;
     userPass = args.upass;
@@ -1665,6 +1666,7 @@ s api client with long timeout */
 
   private String currentStatus;
   private boolean running = true; // init true avoids race while starting
+  private boolean hasBeenStarted = false;
 
   private long totalAusToMove = 0;
   private long totalAusMoved = 0;
@@ -1685,7 +1687,7 @@ s api client with long timeout */
     List<String> res = new ArrayList<>();
     if (STATUS_RUNNING.equals(currentStatus)) {
       StringBuilder sb = new StringBuilder();
-      sb.append("Running, processed ");
+      sb.append("Status: Running, processed ");
       sb.append(totalAusMoved);
       sb.append(" of ");
       sb.append(totalAusToMove);
@@ -1696,9 +1698,20 @@ s api client with long timeout */
 //       log.critical("Status: getCurrentStatus(): " + sb.toString());
       res.add(sb.toString());
     } else {
+      res.add("Status: " + getIdleStatus());
       res.add(currentStatus);
     }
     return res;
+  }
+
+  String getIdleStatus() {
+    if (isAbort()) {
+      return "Aborted";
+    }
+    if (hasBeenStarted) {
+      return "Done";
+    }
+    return "Idle";
   }
 
   public List<String> getActiveStatusList() {
@@ -1971,45 +1984,32 @@ s api client with long timeout */
   void appendTotalSummary(StringBuilder sb) {
     if (opType.isVerifyOnly()) {
       sb.append(StringUtil.bigNumberOfUnits(totalAusMoved, "AU") + " checked");
-    }
-    sb.append(StringUtil.bigNumberOfUnits(totalAusMoved, "AU") + " copied");
-    if (totalAusPartiallyMoved > 0 || totalAusSkipped > 0) {
-      sb.append(" (");
-      if (totalAusSkipped > 0) {
-        sb.append(bigIntFormat(totalAusSkipped));
-        sb.append(" previously");
-        if (totalAusPartiallyMoved > 0) {
-          sb.append(", ");
+    } else {
+      sb.append(StringUtil.bigNumberOfUnits(totalAusMoved, "AU") + " copied");
+      if (totalAusPartiallyMoved > 0 || totalAusSkipped > 0) {
+        sb.append(" (");
+        if (totalAusSkipped > 0) {
+          sb.append(bigIntFormat(totalAusSkipped));
+          sb.append(" previously");
+          if (totalAusPartiallyMoved > 0) {
+            sb.append(", ");
+          }
         }
+        if (totalAusPartiallyMoved > 0) {
+          sb.append(bigIntFormat(totalAusPartiallyMoved));
+          sb.append(" partially");
+        }
+        sb.append(")");
       }
-      if (totalAusPartiallyMoved > 0) {
-        sb.append(bigIntFormat(totalAusPartiallyMoved));
-        sb.append(" partially");
+      if (opType.isVerify()) {
+        sb.append(" and checked");
       }
-      sb.append(")");
     }
   }
 
   void closeReport(PrintWriter writer, String now) {
     StringBuilder sb = new StringBuilder();
-    if (opType.isVerifyOnly()) {
-    }
-    sb.append(StringUtil.bigNumberOfUnits(totalAusMoved, "AU") + " copied");
-    if (totalAusPartiallyMoved > 0 || totalAusSkipped > 0) {
-      sb.append(" (");
-      if (totalAusSkipped > 0) {
-        sb.append(bigIntFormat(totalAusSkipped));
-        sb.append(" previously");
-        if (totalAusPartiallyMoved > 0) {
-          sb.append(", ");
-        }
-      }
-      if (totalAusPartiallyMoved > 0) {
-        sb.append(bigIntFormat(totalAusPartiallyMoved));
-        sb.append(" partially");
-      }
-      sb.append(")");
-    }
+    appendTotalSummary(sb);
     totalTimers.addCounterStatus(sb, opType, ": ");
     String summary = sb.toString();
     running = false;

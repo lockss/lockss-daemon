@@ -20,7 +20,7 @@ class AuMigrationStatus extends React.Component {
       return null;
     }
     return (
-        <div>Status: {this.state.statusList.map((msg, index) => <div>{msg}<br /></div>)}</div>
+        <div className="stats-div">{this.state.statusList.map((msg, index) => <div key={index}>{msg}<br /></div>)}</div>
     )
   }
 
@@ -29,7 +29,7 @@ class AuMigrationStatus extends React.Component {
       return null;
     }
     return (
-        <div><font size="2">{this.state.instrumentList.map((msg, index) => <div>{msg}<br /></div>)}</font></div>
+        <div className="stats-div"><font size="2">{this.state.instrumentList.map((msg, index) => <div key={index}>{msg}<br /></div>)}</font></div>
     )
   }
 
@@ -38,7 +38,8 @@ class AuMigrationStatus extends React.Component {
       return null;
     }
     return (
-        <div>Active: <ul>{this.state.activeList.map((msg, index) =>  <li key={index}>{msg}</li>)}</ul></div>
+        <div>
+        {this.state.activeList.length} Active: <ul>{this.state.activeList.map((msg, index) =>  <li key={index}>{msg}</li>)}</ul></div>
     )
   }
 
@@ -49,7 +50,7 @@ class AuMigrationStatus extends React.Component {
     }
     return (
         <div>
-        Finished:
+        {this.state.finishedData.length} Finished:
         <div className={"finished"} id={"finishedList"}>
         <ul>{this.state.finishedData.map((msg, index) => <li key={index}>{msg}</li>)}</ul>
         </div>
@@ -63,7 +64,12 @@ class AuMigrationStatus extends React.Component {
       return null;
     }
     return (
-        <div className={"errors"}>Errors: <ul>{this.state.errors.map((msg, index) =>  <li key={index}>{msg}</li>)}</ul></div>
+        <div>
+        {this.state.errors.length} Errors:
+        <div className={"errors"}>
+        <ul>{this.state.errors.map((msg, index) =>  <li key={index}>{msg}</li>)}</ul>
+        </div>
+        </div>
     )
   }
 
@@ -182,7 +188,7 @@ class AuMigrationStatus extends React.Component {
 
   render() {
     return (
-        <div>
+        <div className="stats-div">
          {this.StatusList()}
          {this.InstrumentList()}
          {this.ActiveList()}

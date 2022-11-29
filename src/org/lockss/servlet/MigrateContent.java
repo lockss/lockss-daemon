@@ -497,7 +497,7 @@ public class MigrateContent extends LockssServlet {
       .forEach(ent -> sel.add(String.format("%s (%d)",
                                             encodeAttr(ent.getKey().getPluginName()),
                                           ent.getValue()),
-                              false,
+                              ent.getKey().getPluginId().equals(preselId),
                               ent.getKey().getPluginId()));
     tbl.add(sel);
     setTabOrder(sel);

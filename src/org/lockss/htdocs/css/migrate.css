@@ -1,4 +1,13 @@
 <style>
+.stats-div {
+  margin: 20px;
+}
+
+.ul {
+  padding-inline-start: 00;
+  padding-top: 0;
+}
+
 .stretchy {
   flex: 1 1 auto;
 }
@@ -11,7 +20,7 @@ body,
 /*  height: 100%;*/
 }
 body {
-  margin: 0;
+/*   margin: 0; */
 }
 .flex-container {
   display: flex;
