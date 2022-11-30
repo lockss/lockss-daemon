@@ -284,6 +284,7 @@
         au < released ; 2019 ; History & Memory Volume 31 [2019] ; 14028 >
         au < released ; 2020 ; History & Memory Volume 32 [2020] ; 14819 >
         au < manifest ; 2022 ; History & Memory Volume 34 [2022] ; 17016 >
+        au < manifest ; 2021 ; History & Memory Volume 33 [2021] ; 15658 >
 
     }
     
@@ -322,6 +323,10 @@
       attr[journal_id] = 826
 
       au < manifest ; 2022 ; Indiana Magazine of History Volume 118 [2022] ; 16964 >
+      au < manifest ; 2018 ; Indiana Magazine of History Volume 114 [2018] ; 16200 >
+      au < manifest ; 2019 ; Indiana Magazine of History Volume 115 [2019] ; 16201 >
+      au < manifest ; 2020 ; Indiana Magazine of History Volume 116 [2020] ; 16202 >
+      au < manifest ; 2021 ; Indiana Magazine of History Volume 117 [2021] ; 16203 >
 
     }
 
@@ -751,6 +756,7 @@
         au < released ; 2019 ; Philosophy of Music Education Review Volume 27 [2019] ; 14060 >
         au < released ; 2020 ; Philosophy of Music Education Review Volume 28 [2020] ; 14881 >
         au < manifest ; 2022 ; Philosophy of Music Education Review Volume 30 [2022] ; 17081 >
+        au < manifest ; 2021 ; Philosophy of Music Education Review Volume 29 [2021] ; 15637 >
 
     }
     
@@ -1041,6 +1047,7 @@
         au < released ; 2018-2019 ; Victorian Studies Volume 61 [2018-2019] ; 13992 >
         au < released ; 2019-2020 ; Victorian Studies Volume 62 [2019-2020] ; 14864 >
         au < manifest ; 2021-2022 ; Victorian Studies Volume 64 [2021-2022] ; 17237 >
+        au < manifest ; 2020-2021 ; Victorian Studies Volume 63 [2020-2021] ; 15663 >
 
     }
 
@@ -1082,6 +1089,8 @@
       attr[journal_id] = 831
 
       au < manifest ; 2022 ; Jazz Education in Research and Practice Volume 3 [2022] ; 16811 >
+      au < manifest ; 2020 ; Jazz Education in Research and Practice Volume 1 [2020] ; 16184 >
+      au < manifest ; 2021 ; Jazz Education in Research and Practice Volume 2 [2021] ; 16185 >
 
     }
 
