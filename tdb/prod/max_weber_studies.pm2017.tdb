@@ -1,19 +1,18 @@
 {
   publisher <
-    name = PUBLISHER_NAME
+    name = Max Weber Studies
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
-  #publisher_id:PUB_ID
+  #publisher_id:806
 
     {
     title <
       name = Max Weber Studies ;
-      issn = ISSN ;
-      eissn = EISSN
-
+      issn = 1470-8078 ;
+      eissn = 2056-4074
     >
 
       attr[journal_id] = 806
