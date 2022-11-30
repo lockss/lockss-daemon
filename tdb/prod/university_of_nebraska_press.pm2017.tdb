@@ -145,6 +145,19 @@
 
     {
     title <
+      name = German Yearbook of Contemporary History ;
+      issn = 2509-744X ;
+      eissn = 2509-7458
+    >
+
+      attr[journal_id] = 840
+
+      au < manifest ; 2022 ; German Yearbook of Contemporary History Volume 6 [2022] ; 17398 >
+
+    }
+
+    {
+    title <
       name = Gettysburg Magazine ;
       issn = 2372-6059  ;
       eissn = 2377-0783  ;
@@ -914,6 +927,7 @@
         au < released ; 2018 ; Women and Music: A Journal of Gender and Culture Volume 22 [2018] ; 13698 >
         au < released ; 2019 ; Women and Music: A Journal of Gender and Culture Volume 23 [2019] ; 14358 >
         au < released ; 2020 ; Women and Music: A Journal of Gender and Culture Volume 24 [2020] ; 15107 >
+        au < manifest ; 2021 ; Women and Music: A Journal of Gender and Culture Volume 25 [2021] ; 16597 >
         au < manifest ; 2022 ; Women and Music: A Journal of Gender and Culture Volume 26 [2022] ; 17539 >
 
     }
