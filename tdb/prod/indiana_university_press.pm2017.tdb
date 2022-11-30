@@ -251,6 +251,20 @@
 
     {
     title <
+      name = Historical Performance ;
+      issn = 2574-4151 ;
+      eissn = 2574-4178
+    >
+
+      attr[journal_id] = 829
+
+      au < manifest ; 2018 ; Historical Performance Volume 1 [2018] ; 16182 >
+      au < manifest ; 2019 ; Historical Performance Volume 2 [2019] ; 16183 >
+
+    }
+
+    {
+    title <
       name = History & Memory ;
       issn = 0935-560X  ;
       eissn = 1527-1994  ;
