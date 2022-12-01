@@ -46,7 +46,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>9</string>
+    <string>10</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -145,7 +145,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.BaseUrlHttpHttpsUrlNormalizer</string>
+    <string>org.lockss.plugin.projmuse.ProjectMuse2017UrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>text/html_link_rewriter_factory</string>
+    <string>org.lockss.plugin.projmuse.ProjMuse2017HtmlLinkRewriterFactory</string>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
