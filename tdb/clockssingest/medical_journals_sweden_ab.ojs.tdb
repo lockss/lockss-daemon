@@ -3,7 +3,7 @@
   publisher <
     name = Medical Journals Sweden AB ;
     info[contract] = 2019 ;
-    info[back] = 2019 ;
+    info[back] = 2017 ;
     info[tester] = 8 ;
     info[poller] = 8
   >
@@ -22,9 +22,18 @@
       param[base_url] = https://medicaljournalssweden.se/
       param[journal_id] = actadv
       attr[start_stem] = 
-      #First publication Volume 2, 1921
+      #First publication Volume 2, 1921. Older content not online 20221201
 
-      au < manifest ; exists ; 2019 ; Acta Dermato-Venereologica Volume 2019 ; 99 ; 2019 ; >
+      #au < exists ; exists ; 2010 ; Acta Dermato-Venereologica Volume 2010 ; 90 ; 2010 ; >
+      #au < exists ; exists ; 2011 ; Acta Dermato-Venereologica Volume 2011 ; 91 ; 2011 ; >
+      #au < exists ; exists ; 2012 ; Acta Dermato-Venereologica Volume 2012 ; 92 ; 2012 ; >
+      #au < exists ; exists ; 2013 ; Acta Dermato-Venereologica Volume 2013 ; 93 ; 2013 ; >
+      #au < exists ; exists ; 2014 ; Acta Dermato-Venereologica Volume 2014 ; 94 ; 2014 ; >
+      #au < exists ; exists ; 2015 ; Acta Dermato-Venereologica Volume 2015 ; 95 ; 2015 ; >
+      #au < exists ; exists ; 2016 ; Acta Dermato-Venereologica Volume 2016 ; 96 ; 2016 ; >
+      au < manifest ; exists ; 2017 ; Acta Dermato-Venereologica Volume 2017 ; 97 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; Acta Dermato-Venereologica Volume 2018 ; 98 ; 2018 ; >
+      au < notReady ; exists ; 2019 ; Acta Dermato-Venereologica Volume 2019 ; 99 ; 2019 ; > #500 Error
       au < finished ; manifest ; 2020 ; Acta Dermato-Venereologica Volume 2020 ; 100 ; 2020 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2021 ; Acta Dermato-Venereologica Volume 2021 ; 101 ; 2021 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2022 ; Acta Dermato-Venereologica Volume 2022 ; 102 ; 2022 ; >
@@ -41,8 +50,17 @@
       param[base_url] = https://actaorthop.org/
       param[journal_id] = actao
       attr[start_stem] = index.php/
-      #First publication Vol. 1, 1930
+      #First publication Vol. 1, 1930. Older content not online 20221201
 
+      #au < exists ; exists ; 2010 ; Acta Orthopaedica Volume 2010 ; 81 ; 2010 ; >
+      #au < exists ; exists ; 2011 ; Acta Orthopaedica Volume 2011 ; 82 ; 2011 ; >
+      #au < exists ; exists ; 2012 ; Acta Orthopaedica Volume 2012 ; 83 ; 2012 ; >
+      #au < exists ; exists ; 2013 ; Acta Orthopaedica Volume 2013 ; 84 ; 2013 ; >
+      #au < exists ; exists ; 2014 ; Acta Orthopaedica Volume 2014 ; 85 ; 2014 ; >
+      #au < exists ; exists ; 2015 ; Acta Orthopaedica Volume 2015 ; 86 ; 2015 ; >
+      #au < exists ; exists ; 2016 ; Acta Orthopaedica Volume 2016 ; 87 ; 2016 ; >
+      #au < exists ; exists ; 2017 ; Acta Orthopaedica Volume 2017 ; 88 ; 2017 ; >
+      #au < exists ; exists ; 2018 ; Acta Orthopaedica Volume 2018 ; 89 ; 2018 ; >
       au < finished ; manifest ; 2019 ; Acta Orthopaedica Volume 2019 ; 90 ; 2019 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2020 ; Acta Orthopaedica Volume 2020 ; 91 ; 2020 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2021 ; Acta Orthopaedica Volume 2021 ; 92 ; 2021 ; reingest1.clockss.org:8082 >
