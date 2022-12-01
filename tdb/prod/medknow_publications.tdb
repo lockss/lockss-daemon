@@ -9,29 +9,6 @@
   plugin = org.lockss.plugin.medknow.MedknowPlugin
   implicit < status ; year ; name ; param[year] ; param[volume_name] ; param[base_url] >
       
-#  {
-#    title <
-#      name = African Journal of Business Ethics ;
-#      issn = 1817-7417 ;
-#      eissn = 0976-3600 ;
-#      issnl = 1817-7417
-#    >
-#
-##    param[base_url] = http://www.ajobe.org/
-#    param[journal_issn] = 1817-7417
-#    # base url doesn't exit
-#
-#    au < doNotProcess ; 2005 ; African Journal of Business Ethics Volume 1 ; 2005 ; 1 ; http://www.ajobe.org/ >
-#    au < doNotProcess ; 2007 ; African Journal of Business Ethics Volume 2 ; 2007 ; 2 ; http://www.ajobe.org/ >
-#    au < doNotProcess ; 2008 ; African Journal of Business Ethics Volume 3 ; 2008 ; 3 ; http://www.ajobe.org/ >
-#    au < doNotProcess ; 2009 ; African Journal of Business Ethics Volume 4 ; 2009 ; 4 ; http://www.ajobe.org/ >
-#    au < doNotProcess ; 2011 ; African Journal of Business Ethics Volume 5 ; 2011 ; 5 ; http://www.ajobe.org/ >
-#    au < doNotProcess ; 2012 ; African Journal of Business Ethics Volume 6 ; 2012 ; 6 ; http://www.ajobe.org/ >
-#    au < doNotProcess ; 2013 ; African Journal of Business Ethics Volume 7 ; 2013 ; 7 ; http://www.ajobe.org/ >
-#    au < expected ; 2014 ; African Journal of Business Ethics Volume 8 ; 2014 ; 8 ; https://www.ajobe.org/ >
-#
-#  }
-      
   {
     title <
       name = African Journal of Paediatric Surgery ;
@@ -42,7 +19,7 @@
         
 #    param[base_url] = http://www.afrjpaedsurg.org/ 
     param[journal_issn] = 0189-6725
-             
+
     au < manifest ; 2004 ; African Journal of Paediatric Surgery Volume 1 ; 2004 ; 1 ; https://www.afrjpaedsurg.org/  >
     au < manifest ; 2005 ; African Journal of Paediatric Surgery Volume 2 ; 2005 ; 2 ; https://www.afrjpaedsurg.org/  >
     au < manifest ; 2006 ; African Journal of Paediatric Surgery Volume 3 ; 2006 ; 3 ; https://www.afrjpaedsurg.org/  >
@@ -2184,22 +2161,6 @@
 
   }
     
-#  {
-#    title <
-#      name = International Journal of Ayurveda Research ;
-#      issn = 0974-7788 ;
-#      eissn = 0974-925X ;
-#      issnl = 0974-7788
-#    >
-#
-##    param[base_url] = http://www.ijaronline.com/
-#    param[journal_issn] = 0974-7788
-#
-#    au < exists ; 2010 ; International Journal of Ayurveda Research Volume 1 ; 2010 ; 1 ; https://www.ijaronline.com/ >
-#    au < exists ; 2011 ; International Journal of Ayurveda Research Volume 2 ; 2011 ; 2 ; https://www.ijaronline.com/ >
-#
-#  }
-
   {
     title <
       name = International Journal of Critical Illness and Injury Science ;
@@ -2226,29 +2187,6 @@
 
   }
   
-#  {
-#    title <
-#      name = International Journal of Green Pharmacy ;
-#      issn = 0973-8258 ;
-#      eissn = 1998-4103 ;
-#      issnl = 0973-8258
-#   >
-#
-##    param[base_url] = http://www.greenpharmacy.info/
-#    param[journal_issn] = 0973-8258
-#    # Looks like OJS
-#
-#    au < exists ; 2007 ; International Journal of Green Pharmacy Volume 1 ; 2007 ; 1 ; https://www.greenpharmacy.info/ >
-#    au < exists ; 2008 ; International Journal of Green Pharmacy Volume 2 ; 2008 ; 2 ; https://www.greenpharmacy.info/ >
-#    au < exists ; 2009 ; International Journal of Green Pharmacy Volume 3 ; 2009 ; 3 ; https://www.greenpharmacy.info/ >
-#    au < exists ; 2010 ; International Journal of Green Pharmacy Volume 4 ; 2010 ; 4 ; https://www.greenpharmacy.info/ >
-#    au < exists ; 2011 ; International Journal of Green Pharmacy Volume 5 ; 2011 ; 5 ; https://www.greenpharmacy.info/ >
-#    au < exists ; 2012 ; International Journal of Green Pharmacy Volume 6 ; 2012 ; 6 ; https://www.greenpharmacy.info/ >
-#    au < expected ; 2013 ; International Journal of Green Pharmacy Volume 7 ; 2013 ; 7 ; https://www.greenpharmacy.info/ >
-#    au < expected ; 2014 ; International Journal of Green Pharmacy Volume 8 ; 2014 ; 8 ; https://www.greenpharmacy.info/ >
-#
-#  }
-
   {
     title <
       name = International Journal of Gastroenterology, Hepatology, Transplant and Nutrition ;
@@ -2505,41 +2443,6 @@
     au < doNotProcess ; 2021 ; Journal of Anaesthesiology Clinical Pharmacology Volume 37 ; 2021 ; 37 ; https://www.joacp.org/ >
 
   }
-#  {
-#    title <
-#      name = Journal of Andrology, Sexual Medicine, Ageing and Gender ;
-#      issn = 0974-1224 ;
-#      issnl = 0974-1224
-#    >
-#
-#    param[base_url] = 
-#    param[journal_issn] = 0974-1224
-#    # base_url & journal are not up yet
-#
-#
-#  }
-#  {
-#    title <
-#      name = Journal of Ayurveda and Integrative Medicine ;
-#      issn = 0975-9476 ;
-#      eissn = 0976-2809 ;
-#      issnl = 0975-9476
-#   >
-#
-##    param[base_url] = http://www.jaim.in/
-#    param[journal_issn] = 0975-9476
-#    # moved to Elsevier
-#    
-#    au < exists ; 2010 ; Journal of Ayurveda and Integrative Medicine Volume 1 ; 2010 ; 1 ; https://www.jaim.in/ >
-#    au < exists ; 2011 ; Journal of Ayurveda and Integrative Medicine Volume 2 ; 2011 ; 2 ; https://www.jaim.in/ >
-#    au < exists ; 2012 ; Journal of Ayurveda and Integrative Medicine Volume 3 ; 2012 ; 3 ; https://www.jaim.in/ >
-#    au < exists ; 2013 ; Journal of Ayurveda and Integrative Medicine Volume 4 ; 2013 ; 4 ; https://www.jaim.in/ >
-#    au < exists ; 2014 ; Journal of Ayurveda and Integrative Medicine Volume 5 ; 2014 ; 5 ; https://www.jaim.in/ >
-#    au < exists ; 2015 ; Journal of Ayurveda and Integrative Medicine Volume 6 ; 2015 ; 6 ; https://www.jaim.in/ >
-#    au < exists ; 2016 ; Journal of Ayurveda and Integrative Medicine Volume 7 ; 2016 ; 7 ; https://www.jaim.in/ >
-#
-#  }
-
 
 
   {
@@ -2608,26 +2511,6 @@
     au < doNotProcess ; 2021 ; Journal of Carcinogenesis Volume 20 ; 2021 ; 20 ; http://www.carcinogenesis.com/ >
 
   }
-#  {
-#    title <
-#      name = Journal of Cardiovascular Disease Research ;
-#      issn = 0975-3583 ;
-#      eissn = 0976-2833 ;
-#      issnl = 0975-3583 
-#   >
-#
-##    param[base_url] = http://www.jcdronline.com/
-#    # no lockss.txt available at this url. Moved.
-#    param[journal_issn] = 0975-3583 
-#
-#    au < exists ; 2010 ; Journal of Cardiovascular Disease Research Volume 1 ; 2010 ; 1 ; https://www.jcdronline.com/ >
-#    au < exists ; 2011 ; Journal of Cardiovascular Disease Research Volume 2 ; 2011 ; 2 ; https://www.jcdronline.com/ >
-#    au < exists ; 2012 ; Journal of Cardiovascular Disease Research Volume 3 ; 2012 ; 3 ; https://www.jcdronline.com/ >
-#    au < expected ; 2013 ; Journal of Cardiovascular Disease Research Volume 4 ; 2013 ; 4 ; https://www.jcdronline.com/ >
-#    au < expected ; 2014 ; Journal of Cardiovascular Disease Research Volume 5 ; 2014 ; 5 ; https://www.jcdronline.com/ >
-#
-#  }
-
 
   {
     title <
@@ -2680,23 +2563,6 @@
     au < manifest ; 2022 ; Journal of Clinical Neonatology Volume 11 ; 2022 ; 11 ; https://www.jcnonweb.com/ >
 
   }
-#  {
-#    title <
-#      name = ASL- Musculoskeletal Diseases ;
-#      issn = 2231-072X ;
-#      issnl = 2231-072X
-#   >
-#
-##    param[base_url] = http://msd.ancientscienceoflife.org/
-#    param[journal_issn] = 2231-072X
-#    comment[base_url] = old url http://www.ayurvedarheumatology.org/
-#    comment[title] = old title Journal of Clinical Rheumatology in Ayurveda
-#
-#    au < exists ; 2013 ; ASL- Musculoskeletal Diseases Volume 1 ; 2013 ; 1 ; https://msd.ancientscienceoflife.org/ >
-#    au < expected ; 2014 ; ASL- Musculoskeletal Diseases Volume 2 ; 2014 ; 2 ; https://msd.ancientscienceoflife.org/ >
-#
-#  }
-
 
   {
     title <
@@ -3354,23 +3220,6 @@
     au < manifest ; 2022 ; Journal of Medical Physics Volume 47 ; 2022 ; 47 ; https://www.jmp.org.in/ >
 
   }
-#  {
-#    title <
-#      name = Journal of Medical Signals & Sensors ;
-#      issn = 2228-7477 ;
-#      issnl = 2228-7477
-#   >
-#
-##    param[base_url] = http://jmss.mui.ac.ir/index.php/jmss/
-#    comment[jmss] = the url structure is the new version
-#
-#    au < exists ; 2011 ; Journal of Medical Signals & Sensors Volume 1 ; 2011 ; 1 ; https://jmss.mui.ac.ir/index.php/jmss/ >
-#    au < exists ; 2012 ; Journal of Medical Signals & Sensors Volume 2 ; 2012 ; 2 ; https://jmss.mui.ac.ir/index.php/jmss/ >
-#    au < exists ; 2013 ; Journal of Medical Signals & Sensors Volume 3 ; 2013 ; 3 ; https://jmss.mui.ac.ir/index.php/jmss/ >
-#    au < expected ; 2014 ; Journal of Medical Signals & Sensors Volume 4 ; 2014 ; 4 ; https://jmss.mui.ac.ir/index.php/jmss/ >
-#
-#  }
-
 
   {
     title <
@@ -3430,25 +3279,6 @@
     au < manifest ; 2022 ; Journal of Minimal Access Surgery Volume 18 ; 2022 ; 18 ; https://www.journalofmas.com/ >
 
   }
-#  {
-#    title <
-#      name = Journal of Natural Pharmaceuticals ;
-#      issn = 2229-5119 ;
-#      eissn = 2229-7715 ;
-#      issnl = 2229-5119
-#   >
-#
-##    param[base_url] = http://www.jnatpharm.org/
-#    param[journal_issn] = 2229-5119
-#
-#    au < exists ; 2010 ; Journal of Natural Pharmaceuticals Volume 1 ; 2010 ; 1 ; https://www.jnatpharm.org/ >
-#    au < exists ; 2011 ; Journal of Natural Pharmaceuticals Volume 2 ; 2011 ; 2 ; https://www.jnatpharm.org/ >
-#    au < exists ; 2012 ; Journal of Natural Pharmaceuticals Volume 3 ; 2012 ; 3 ; https://www.jnatpharm.org/ >
-#    au < expected ; 2013 ; Journal of Natural Pharmaceuticals Volume 4 ; 2013 ; 4 ; https://www.jnatpharm.org/ >
-#    au < expected ; 2014 ; Journal of Natural Pharmaceuticals Volume 5 ; 2014 ; 5 ; https://www.jnatpharm.org/ >
-#
-#  }
-
   
   {
     title <
@@ -3693,7 +3523,6 @@
     au < down ; 2018 ; Journal of Pharmacology and Pharmacotherapeutics Volume 9 ; 2018 ; 9 ; http://www.jpharmacol.com/ >
     au < down ; 2019 ; Journal of Pharmacology and Pharmacotherapeutics Volume 10 ; 2019 ; 10 ; https://www.jpharmacol.com/ >
     au < down ; 2020 ; Journal of Pharmacology and Pharmacotherapeutics Volume 11 ; 2020 ; 11 ; https://www.jpharmacol.com/ >
-    au < exists ; 2021 ; Journal of Pharmacology and Pharmacotherapeutics Volume 12 ; 2021 ; 12 ; https://www.jpharmacol.com/ >
 
   }
 
@@ -3785,54 +3614,6 @@
     au < manifest ; 2022 ; Journal of Postgraduate Medicine Volume 68 ; 2022 ; 68 ; https://www.jpgmonline.com/ >
 
   }
-#  {
-#    title <
-#      name = Journal of Prenatal Diagnosis and Therapy ;
-#      issn = 0976-1756 ;
-#      eissn = 0976-4054 ;
-#      issnl = 0976-1756
-#   >
-#
-##    param[base_url] = http://www.jpdt.org/
-#    param[journal_issn] = 0976-1756
-#
-#    au < exists ; 2010 ; Journal of Prenatal Diagnosis and Therapy Volume 1 ; 2010 ; 1 ; https://www.jpdt.org/ >
-#
-#  }
-#  {
-#    title <
-#      name = Journal of Research in Medical Sciences ;
-#      issn = 1735-1995 ;
-#      eissn = 1735-7136 ;
-#      issnl = 1735-1995
-#   >
-#
-##    param[base_url] = http://www.journals.mui.ac.ir/jrms/
-#    comment[jrms] = the url structure is the new version
-#    
-#    {
-#      attr[au_coverage_depth] = abstracts
-#      
-#      au < exists ; 2000 ; Journal of Research in Medical Sciences Volume 5 [Abstract only] ; 2000 ; 5 ; https://www.journals.mui.ac.ir/jrms/ >
-#      au < exists ; 2001 ; Journal of Research in Medical Sciences Volume 6 [Abstract only] ; 2001 ; 6 ; https://www.journals.mui.ac.ir/jrms/ >
-#      au < exists ; 2002 ; Journal of Research in Medical Sciences Volume 7 [Abstract only] ; 2002 ; 7 ; https://www.journals.mui.ac.ir/jrms/ >
-#      au < exists ; 2003 ; Journal of Research in Medical Sciences Volume 8 [Abstract only] ; 2003 ; 8 ; https://www.journals.mui.ac.ir/jrms/ >
-#    }
-#    au < exists ; 2004 ; Journal of Research in Medical Sciences Volume 9 ; 2004 ; 9 ; https://www.journals.mui.ac.ir/jrms/ >
-#    au < exists ; 2005 ; Journal of Research in Medical Sciences Volume 10 ; 2005 ; 10 ; https://www.journals.mui.ac.ir/jrms/ >
-#    au < exists ; 2006 ; Journal of Research in Medical Sciences Volume 11 ; 2006 ; 11 ; https://www.journals.mui.ac.ir/jrms/ >
-#    au < exists ; 2007 ; Journal of Research in Medical Sciences Volume 12 ; 2007 ; 12 ; https://www.journals.mui.ac.ir/jrms/ >
-#    au < exists ; 2008 ; Journal of Research in Medical Sciences Volume 13 ; 2008 ; 13 ; https://www.journals.mui.ac.ir/jrms/ >
-#    au < exists ; 2009 ; Journal of Research in Medical Sciences Volume 14 ; 2009 ; 14 ; https://www.journals.mui.ac.ir/jrms/ >
-#    au < exists ; 2010 ; Journal of Research in Medical Sciences Volume 15 ; 2010 ; 15 ; https://www.journals.mui.ac.ir/jrms/ >
-#    au < exists ; 2011 ; Journal of Research in Medical Sciences Volume 16 ; 2011 ; 16 ; https://www.journals.mui.ac.ir/jrms/ >
-#    au < exists ; 2012 ; Journal of Research in Medical Sciences Volume 17 ; 2012 ; 17 ; https://www.journals.mui.ac.ir/jrms/ >
-#    au < exists ; 2013 ; Journal of Research in Medical Sciences Volume 18 ; 2013 ; 18 ; https://www.journals.mui.ac.ir/jrms/ >
-#    au < expected ; 2014 ; Journal of Research in Medical Sciences Volume 19 ; 2014 ; 19 ; https://www.journals.mui.ac.ir/jrms/ >
-#
-#  }
-
-
 
   {
     title <
@@ -3861,27 +3642,6 @@
     au < manifest ; 2022 ; Journal of the International Clinical Dental Research Organization Volume 14 ; 2022 ; 14 ; https://www.jicdro.org/ >
 
   }
-    
-#  {
-#    title <
-#      name = Journal of Young Pharmacists ;
-#      issn = 0975-1483 ;
-#      eissn = 0975-1505 ;
-#      issnl = 0975-1483
-#   >
-#
-##    param[base_url] = http://www.jyoungpharm.in/
-#    param[journal_issn] = 0975-1483
-#    #moved
-#
-#    au < exists ; 2009 ; Journal of Young Pharmacists Volume 1 ; 2009 ; 1 ; https://www.jyoungpharm.in/ >
-#    au < exists ; 2010 ; Journal of Young Pharmacists Volume 2 ; 2010 ; 2 ; https://www.jyoungpharm.in/ >
-#    au < exists ; 2011 ; Journal of Young Pharmacists Volume 3 ; 2011 ; 3 ; https://www.jyoungpharm.in/ >
-#    au < exists ; 2012 ; Journal of Young Pharmacists Volume 4 ; 2012 ; 4 ; https://www.jyoungpharm.in/ >
-#    au < exists ; 2013 ; Journal of Young Pharmacists Volume 5 ; 2013 ; 5 ; https://www.jyoungpharm.in/ >
-#    au < expected ; 2014 ; Journal of Young Pharmacists Volume 6 ; 2014 ; 6 ; https://www.jyoungpharm.in/ >
-#
-#  }
     
   {
     title <
@@ -4301,26 +4061,6 @@
     au < manifest ; 2022 ; Perspectives in Clinical Research Volume 13 ; 2022 ; 13 ; https://www.picronline.org/ >
 
   }
-#  {
-#    title <
-#      name = Pharmaceutical Methods ;
-#      issn = 2229-4708 ;
-#      eissn = 2229-4716 ;
-#      issnl = 2229-4708
-#    >
-#
-##    param[base_url] = http://www.phmethods.org/
-#    param[journal_issn] = 2229-4708
-#    # moved
-#
-#    au < exists ; 2010 ; Pharmaceutical Methods Volume 1 ; 2010 ; 1 ; https://www.phmethods.org/ >
-#    au < exists ; 2011 ; Pharmaceutical Methods Volume 2 ; 2011 ; 2 ; https://www.phmethods.org/ >
-#    au < exists ; 2012 ; Pharmaceutical Methods Volume 3 ; 2012 ; 3 ; https://www.phmethods.org/ >
-#    au < expected ; 2013 ; Pharmaceutical Methods Volume 4 ; 2013 ; 4 ; https://www.phmethods.org/ >
-#    au < expected ; 2014 ; Pharmaceutical Methods Volume 5 ; 2014 ; 5 ; https://www.phmethods.org/ >
-#
-#  }
-
 
   {
     title <
@@ -4424,48 +4164,6 @@
     au < manifest ; 2022 ; Philippine Journal of Obstetrics & Gynecology Volume 46 ; 2022 ; 46 ; https://www.pogsjournal.org/ >
 
   }
-
-
-#  {
-#    title <
-#      name = Pulmonary Circulation ;
-#      issn = 2045-8932 ;
-#      eissn = 2045-8940 ;
-#      issnl = 2045-8932
-#    >
-#
-##    param[base_url] = http://www.pulmonarycirculation.org/
-#    param[journal_issn] = 2045-8932
-#    # moved
-#
-#    au < exists ; 2011 ; Pulmonary Circulation Volume 1 ; 2011 ; 1 ; https://www.pulmonarycirculation.org/ >
-#    au < exists ; 2012 ; Pulmonary Circulation Volume 2 ; 2012 ; 2 ; https://www.pulmonarycirculation.org/ >
-#    au < expected ; 2013 ; Pulmonary Circulation Volume 3 ; 2013 ; 3 ; https://www.pulmonarycirculation.org/ >
-#    au < expected ; 2014 ; Pulmonary Circulation Volume 4 ; 2014 ; 4 ; https://www.pulmonarycirculation.org/ >
-#
-#  }  
-
-
-        
-#  {
-#    title <
-#      name = PVRI Review ;
-#      issn = 0974-6013 ;
-#      eissn = 0975-1602 ;
-#      issnl = 0974-6013 
-#    >
-#
-##    param[base_url] = http://www.pvrireview.org/
-#    param[journal_issn] = 0974-6013
-#
-#    au < exists ; 2009 ; PVRI Review Volume 1 ; 2009 ; 1 ; https://www.pvrireview.org/ >
-#    au < exists ; 2010 ; PVRI Review Volume 2 ; 2010 ; 2 ; https://www.pvrireview.org/ >
-#    au < exists ; 2011 ; PVRI Review Volume 3 ; 2011 ; 3 ; https://www.pvrireview.org/ >
-#    au < exists ; 2012 ; PVRI Review Volume 4 ; 2012 ; 4 ; https://www.pvrireview.org/ >
-#    au < expected ; 2013 ; PVRI Review Volume 5 ; 2013 ; 5 ; https://www.pvrireview.org/ >
-#    au < expected ; 2014 ; PVRI Review Volume 6 ; 2014 ; 6 ; https://www.pvrireview.org/ >
-#
-#  }
         
   {
     title <
@@ -4493,24 +4191,6 @@
     au < manifest ; 2022 ; Radiation Protection and Environment Volume 45 ; 2022 ; 45 ; https://www.rpe.org.in/ >
 
   }
-        
-#  {
-#    title <
-#      name = Ramon Llull Journal of Applied Ethics ;
-#      issn = 2013-8393 ;
-#      eissn = 2229-578X ;
-#      issnl = 2013-8393
-#    >
-#
-##    param[base_url] = http://www.rljae.org/
-#    param[journal_issn] = 2013-8393
-#    # no issue in 2012
-#
-#    au < exists ; 2011 ; Ramon Llull Journal of Applied Ethics Volume 1 ; 2011 ; 1 ; https://www.rljae.org/ >
-#    au < exists ; 2013 ; Ramon Llull Journal of Applied Ethics Volume 2 ; 2013 ; 2 ; https://www.rljae.org/ >
-#    au < expected ; 2014 ; Ramon Llull Journal of Applied Ethics Volume 3 ; 2014 ; 3 ; https://www.rljae.org/ >
-#
-#  }  
         
   {
     title <
@@ -4632,19 +4312,6 @@
 
   }
     
-#  {
-#    title <
-#      name = Saudi Orthodontic Journal ;
-#      issn =
-#   >
-#
-##    param[base_url] = http://www.saudioj.org/
-#    comment[soj] = the website info for this journal is incorrect in Medknow Publications website.
-#    # base_url & journal are not up yet
-#
-#
-#  }
-    
   {
     title <
       name = Scholars' Research Journal ;
@@ -4660,44 +4327,6 @@
 
   }
   
-#  {
-#    title <
-#      name = Surgical Neurology International ;
-#      issn = 2229-5097 ;
-#      eissn = 2152-7806 ;
-#      issnl = 2229-5097 
-#   >
-#
-##    param[base_url] = http://www.surgicalneurologyint.com/
-#    param[journal_issn] = 2229-5097 
-#    # moved
-#
-#    au < exists ; 2010 ; Surgical Neurology International Volume 1 ; 2010 ; 1 ; https://www.surgicalneurologyint.com/ >
-#    au < exists ; 2011 ; Surgical Neurology International Volume 2 ; 2011 ; 2 ; https://www.surgicalneurologyint.com/ >
-#    au < exists ; 2012 ; Surgical Neurology International Volume 3 ; 2012 ; 3 ; https://www.surgicalneurologyint.com/ >
-#    au < exists ; 2013 ; Surgical Neurology International Volume 4 ; 2013 ; 4 ; https://www.surgicalneurologyint.com/ >
-#    au < expected ; 2014 ; Surgical Neurology International Volume 5 ; 2014 ; 5 ; https://www.surgicalneurologyint.com/ >
-#
-#  }
-  
-#  {
-#    title <
-#      name = Systematic Reviews in Pharmacy ;
-#      issn = 0975-8453 ;
-#      eissn = 0976-2779 ;
-#      issnl = 0975-8453
-#   >
-#
-##    param[base_url] = http://www.sysrevpharm.org/
-#    param[journal_issn] = 0975-8453 
-#    # moved
-#
-#    au < exists ; 2010 ; Systematic Reviews in Pharmacy Volume 1 ; 2010 ; 1 ; https://www.sysrevpharm.org/ >
-#    au < exists ; 2011 ; Systematic Reviews in Pharmacy Volume 2 ; 2011 ; 2 ; https://www.sysrevpharm.org/ >
-#    au < exists ; 2012 ; Systematic Reviews in Pharmacy Volume 3 ; 2012 ; 3 ; https://www.sysrevpharm.org/ >
-#    au < expected ; 2014 ; Systematic Reviews in Pharmacy Volume 4 ; 2014 ; 4 ; https://www.sysrevpharm.org/ >
-#
-#  }
   
   {
     title <
@@ -4812,38 +4441,6 @@
 
   }
   
-#  {
-#    title <
-#      name = Young Scientists Journal ;
-#      issn = 0974-6102 ;
-#      eissn = 0975-2145 ;
-#      issnl = 0974-6102
-#    >
-#
-##    param[base_url] = http://ysjournal.com/
-#    param[journal_issn] = 0974-6102
-#    # moved
-#
-#    au < exists ; 2006 ; Young Scientists Journal Volume 1 ; 2006 ; 1 ; https://ysjournal.com/ >
-#    au < exists ; 2007 ; Young Scientists Journal Volume 2 ; 2007 ; 2 ; https://ysjournal.com/ >
-#    au < exists ; 2007 ; Young Scientists Journal Volume 3 ; 2007 ; 3 ; https://ysjournal.com/ >
-#    au < exists ; 2008 ; Young Scientists Journal Volume 4 ; 2008 ; 4 ; https://ysjournal.com/ >
-#    au < exists ; 2008 ; Young Scientists Journal Volume 5 ; 2008 ; 5 ; https://ysjournal.com/ >
-#    au < exists ; 2009 ; Young Scientists Journal Volume 6 ; 2009 ; 6 ; https://ysjournal.com/ >
-#    au < exists ; 2009 ; Young Scientists Journal Volume 7 ; 2009 ; 7 ; https://ysjournal.com/ >
-#    au < exists ; 2010 ; Young Scientists Journal Volume 8 ; 2010 ; 8 ; https://ysjournal.com/ >
-#    au < exists ; 2011 ; Young Scientists Journal Volume 9 ; 2011 ; 9 ; https://ysjournal.com/ >
-#    au < exists ; 2011 ; Young Scientists Journal Volume 10 ; 2011 ; 10 ; https://ysjournal.com/ >
-#    au < exists ; 2012 ; Young Scientists Journal Volume 11 ; 2012 ; 11 ; https://ysjournal.com/ >
-#    au < exists ; 2012 ; Young Scientists Journal Volume 12 ; 2012 ; 12 ; https://ysjournal.com/ >
-#    au < exists ; 2013 ; Young Scientists Journal Volume 13 ; 2013 ; 13 ; https://ysjournal.com/ >
-#    au < exists ; 2013 ; Young Scientists Journal Volume 14 ; 2013 ; 14 ; https://ysjournal.com/ >
-#    au < exists ; 2014 ; Young Scientists Journal Volume 15 ; 2014 ; 15 ; https://ysjournal.com/ >
-#    au < exists ; 2014 ; Young Scientists Journal Volume 16 ; 2014 ; 16 ; https://ysjournal.com/ >
-#    au < exists ; 2015 ; Young Scientists Journal Volume 17 ; 2015 ; 17 ; https://ysjournal.com/ >
-#
-#  }
-
   {
     title <
       name = Drug Development and Therapeutics ;
@@ -5247,7 +4844,7 @@
       au < released ; 2015 ; Astrocyte Volume 2 ; 2015 ; 2 ; http://www.astrocyte.in/ >
       au < released ; 2016 ; Astrocyte Volume 3 ; 2016 ; 3 ; http://www.astrocyte.in/ >
       au < released ; 2017 ; Astrocyte Volume 4 ; 2017 ; 4 ; http://www.astrocyte.in/ >
-      au < exists ; 2018 ; Astrocyte Volume 5 ; 2018 ; 5 ; https://www.astrocyte.in/ >
+      au < exists ; 2018 ; Astrocyte Volume 5 ; 2018 ; 5 ; http://www.astrocyte.in/ >
 
   }
 
@@ -5800,26 +5397,6 @@
       au < doNotProcess ; 2021 ; Egyptian Rheumatology and Rehabilitation Volume 48 ; 2021 ; 48 ; https://www.err.eg.net/ >
 
   }
-#  {
-#
-#      title <
-#        name = Emerging Scientist ;
-#        eissn = 2166-5060
-#      >
-#
-#      param[journal_issn] = 2166-5060
-##      param[base_url] = http://www.emergingscientist.com/
-#
-#      au < exists ; 2012 ; Emerging Scientist Volume 2 ; 2012 ; 2 ; https://www.emergingscientist.com/ >
-#      au < exists ; 2013 ; Emerging Scientist Volume 3 ; 2013 ; 3 ; https://www.emergingscientist.com/ >
-#      au < exists ; 2014 ; Emerging Scientist Volume 4 ; 2014 ; 4 ; https://www.emergingscientist.com/ >
-#      au < exists ; 2015 ; Emerging Scientist Volume 5 ; 2015 ; 5 ; https://www.emergingscientist.com/ >
-#      au < expected ; 2016 ; Emerging Scientist Volume 6 ; 2016 ; 6 ; https://www.emergingscientist.com/ >
-#
-#  }
-#
-
-
 
   {
 
@@ -7647,20 +7224,33 @@
 
       title <
         name = Journal of Radiation and Cancer Research ;
-        issn = 0973-0168
+        issn = 2588-9273 ;
+        eissn = 2468-9203
       >
 
-      param[journal_issn] = 0973-0168
 #      param[base_url] = http://www.journalrcr.org/
+      {
+      param[journal_issn] = 2588-9273
 
-      au < released ; 2016 ; Journal of Radiation and Cancer Research Volume 7 ; 2016 ; 7 ; http://www.journalrcr.org/ >
-      au < released ; 2017 ; Journal of Radiation and Cancer Research Volume 8 ; 2017 ; 8 ; http://www.journalrcr.org/ >
+      au < doNotProcess ; 2016 ; Journal of Radiation and Cancer Research Volume 7 ; 2016 ; 7 ; http://www.journalrcr.org/ >
+      au < doNotProcess ; 2017 ; Journal of Radiation and Cancer Research Volume 8 ; 2017 ; 8 ; http://www.journalrcr.org/ >
       au < exists ; 2018 ; Journal of Radiation and Cancer Research Volume 9 ; 2018 ; 9 ; https://www.journalrcr.org/ >
       au < exists ; 2019 ; Journal of Radiation and Cancer Research Volume 10 ; 2019 ; 10 ; https://www.journalrcr.org/ >
       au < exists ; 2020 ; Journal of Radiation and Cancer Research Volume 11 ; 2020 ; 11 ; https://www.journalrcr.org/ >
       au < exists ; 2021 ; Journal of Radiation and Cancer Research Volume 12 ; 2021 ; 12 ; https://www.journalrcr.org/ >
       au < expected ; 2022 ; Journal of Radiation and Cancer Research Volume 13 ; 2022 ; 13 ; https://www.journalrcr.org/ >
+      }
+      {
+      param[journal_issn] = 0973-0168
 
+      au < down ; 2016 ; Journal of Radiation and Cancer Research Volume 7 ; 2016 ; 7 ; http://www.journalrcr.org/ >
+      au < down ; 2017 ; Journal of Radiation and Cancer Research Volume 8 ; 2017 ; 8 ; http://www.journalrcr.org/ >
+      au < doNotProcess ; 2018 ; Journal of Radiation and Cancer Research Volume 9 ; 2018 ; 9 ; https://www.journalrcr.org/ >
+      au < doNotProcess ; 2019 ; Journal of Radiation and Cancer Research Volume 10 ; 2019 ; 10 ; https://www.journalrcr.org/ >
+      au < doNotProcess ; 2020 ; Journal of Radiation and Cancer Research Volume 11 ; 2020 ; 11 ; https://www.journalrcr.org/ >
+      au < doNotProcess ; 2021 ; Journal of Radiation and Cancer Research Volume 12 ; 2021 ; 12 ; https://www.journalrcr.org/ >
+      au < doNotProcess ; 2022 ; Journal of Radiation and Cancer Research Volume 13 ; 2022 ; 13 ; https://www.journalrcr.org/ >
+      }
   }
 
   {
@@ -9090,7 +8680,7 @@
 #      param[base_url] = http://www.wajradiology.org/
 
       au < manifest ; 2001 ; West African Journal of Radiology Volume 8 ; 2001 ; 8 ; https://www.wajradiology.org/ >
-      au < exists ; 2002 ; West African Journal of Radiology Volume 9 ; 2002 ; 9 ; https://www.wajradiology.org/ >
+      au < doesNotExist ; 2002 ; West African Journal of Radiology Volume 9 ; 2002 ; 9 ; https://www.wajradiology.org/ >
       au < manifest ; 2003 ; West African Journal of Radiology Volume 10 ; 2003 ; 10 ; https://www.wajradiology.org/ >
       au < manifest ; 2004 ; West African Journal of Radiology Volume 11 ; 2004 ; 11 ; https://www.wajradiology.org/ >
       au < manifest ; 2005 ; West African Journal of Radiology Volume 12 ; 2005 ; 12 ; https://www.wajradiology.org/ >
@@ -11309,6 +10899,2165 @@
       au < released ; 2020 ; World Journal of Traditional Chinese Medicine Volume 6 ; 2020 ; 6 ; https://www.wjtcm.net/ >
       au < released ; 2021 ; World Journal of Traditional Chinese Medicine Volume 7 ; 2021 ; 7 ; https://www.wjtcm.net/ >
       au < manifest ; 2022 ; World Journal of Traditional Chinese Medicine Volume 8 ; 2022 ; 8 ; https://www.wjtcm.net/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Airway ;
+        issn = 2665-9425 ;
+        eissn = 2665-9433
+      >
+
+      param[journal_issn] = 2665-9425
+      #param[base_url] = https://www.arwy.org/
+
+      au < manifest ; 2018 ; Airway Volume 1 ; 2018 ; 1 ; https://www.arwy.org/ >
+      au < manifest ; 2019 ; Airway Volume 2 ; 2019 ; 2 ; https://www.arwy.org/ >
+      au < manifest ; 2020 ; Airway Volume 3 ; 2020 ; 3 ; https://www.arwy.org/ >
+      au < manifest ; 2021 ; Airway Volume 4 ; 2021 ; 4 ; https://www.arwy.org/ >
+      au < expected ; 2022 ; Airway Volume 5 ; 2022 ; 5 ; https://www.arwy.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Amrita Journal of Medicine ;
+        issn = 0975-9662
+      >
+
+      param[journal_issn] = 0975-9662
+      #param[base_url] = https://www.ajmonline.org.in/
+
+      au < manifest ; 2020 ; Amrita Journal of Medicine Volume 16 ; 2020 ; 16 ; https://www.ajmonline.org.in/ >
+      au < manifest ; 2021 ; Amrita Journal of Medicine Volume 17 ; 2021 ; 17 ; https://www.ajmonline.org.in/ >
+      au < expected ; 2022 ; Amrita Journal of Medicine Volume 18 ; 2022 ; 18 ; https://www.ajmonline.org.in/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Annals of Clinical Cardiology ;
+        issn = 2666-6979 ;
+        eissn = 2666-6987
+      >
+
+      param[journal_issn] = 2666-6979
+      #param[base_url] = https://www.onlineacc.org/
+
+      au < manifest ; 2019 ; Annals of Clinical Cardiology Volume 1 ; 2019 ; 1 ; https://www.onlineacc.org/ >
+      au < manifest ; 2020 ; Annals of Clinical Cardiology Volume 2 ; 2020 ; 2 ; https://www.onlineacc.org/ >
+      au < manifest ; 2021 ; Annals of Clinical Cardiology Volume 3 ; 2021 ; 3 ; https://www.onlineacc.org/ >
+      au < expected ; 2022 ; Annals of Clinical Cardiology Volume 4 ; 2022 ; 4 ; https://www.onlineacc.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Annals of Movement Disorders ;
+        issn = 2590-3446 ;
+        eissn = 2590-3454
+      >
+
+      param[journal_issn] = 2590-3446
+      #param[base_url] = https://www.aomd.in/
+
+      au < manifest ; 2018 ; Annals of Movement Disorders Volume 1 ; 2018 ; 1 ; https://www.aomd.in/ >
+      au < manifest ; 2019 ; Annals of Movement Disorders Volume 2 ; 2019 ; 2 ; https://www.aomd.in/ >
+      au < manifest ; 2020 ; Annals of Movement Disorders Volume 3 ; 2020 ; 3 ; https://www.aomd.in/ >
+      au < manifest ; 2021 ; Annals of Movement Disorders Volume 4 ; 2021 ; 4 ; https://www.aomd.in/ >
+      au < expected ; 2022 ; Annals of Movement Disorders Volume 5 ; 2022 ; 5 ; https://www.aomd.in/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Annals of Oncology Research and Therapy ;
+        issn = 2772-8382 ;
+        eissn = 2772-8390
+      >
+
+      param[journal_issn] = 2772-8382
+      #param[base_url] = https://www.aort.info/
+
+      au < exists ; 2021 ; Annals of Oncology Research and Therapy Volume 1 ; 2021 ; 1 ; https://www.aort.info/ >
+      au < expected ; 2022 ; Annals of Oncology Research and Therapy Volume 2 ; 2022 ; 2 ; https://www.aort.info/ >
+
+  }
+
+
+  {
+
+      title <
+        name = APIK Journal of Internal Medicine ;
+        issn = 2666-1802 ;
+        eissn = 2666-1810
+      >
+
+      param[journal_issn] = 2666-1802
+      #param[base_url] = https://www.ajim.in/
+
+      au < manifest ; 2016 ; APIK Journal of Internal Medicine Volume 4 ; 2016 ; 4 ; https://www.ajim.in/ >
+      au < manifest ; 2017 ; APIK Journal of Internal Medicine Volume 5 ; 2017 ; 5 ; https://www.ajim.in/ >
+      au < manifest ; 2018 ; APIK Journal of Internal Medicine Volume 6 ; 2018 ; 6 ; https://www.ajim.in/ >
+      au < manifest ; 2019 ; APIK Journal of Internal Medicine Volume 7 ; 2019 ; 7 ; https://www.ajim.in/ >
+      au < manifest ; 2020 ; APIK Journal of Internal Medicine Volume 8 ; 2020 ; 8 ; https://www.ajim.in/ >
+      au < manifest ; 2021 ; APIK Journal of Internal Medicine Volume 9 ; 2021 ; 9 ; https://www.ajim.in/ >
+      au < expected ; 2022 ; APIK Journal of Internal Medicine Volume 10 ; 2022 ; 10 ; https://www.ajim.in/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Archives of Mental Health ;
+        issn = 2589-9171 ;
+        eissn = 2589-918X
+      >
+
+      param[journal_issn] = 2589-9171
+      #param[base_url] = https://www.amhonline.org/
+
+      au < manifest ; 2010 ; Archives of Mental Health Volume 11 ; 2010 ; 11 ; https://www.amhonline.org/ >
+      au < manifest ; 2011 ; Archives of Mental Health Volume 12 ; 2011 ; 12 ; https://www.amhonline.org/ >
+      au < manifest ; 2012 ; Archives of Mental Health Volume 13 ; 2012 ; 13 ; https://www.amhonline.org/ >
+      au < manifest ; 2013 ; Archives of Mental Health Volume 14 ; 2013 ; 14 ; https://www.amhonline.org/ >
+      au < manifest ; 2014 ; Archives of Mental Health Volume 15 ; 2014 ; 15 ; https://www.amhonline.org/ >
+      au < manifest ; 2015 ; Archives of Mental Health Volume 16 ; 2015 ; 16 ; https://www.amhonline.org/ >
+      au < manifest ; 2016 ; Archives of Mental Health Volume 17 ; 2016 ; 17 ; https://www.amhonline.org/ >
+      au < manifest ; 2017 ; Archives of Mental Health Volume 18 ; 2017 ; 18 ; https://www.amhonline.org/ >
+      au < manifest ; 2018 ; Archives of Mental Health Volume 19 ; 2018 ; 19 ; https://www.amhonline.org/ >
+      au < manifest ; 2019 ; Archives of Mental Health Volume 20 ; 2019 ; 20 ; https://www.amhonline.org/ >
+      au < manifest ; 2020 ; Archives of Mental Health Volume 21 ; 2020 ; 21 ; https://www.amhonline.org/ >
+      au < manifest ; 2021 ; Archives of Mental Health Volume 22 ; 2021 ; 22 ; https://www.amhonline.org/ >
+      au < expected ; 2022 ; Archives of Mental Health Volume 23 ; 2022 ; 23 ; https://www.amhonline.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Asian Journal of  Social Health and Behavior ;
+        eissn = 2772-4204
+      >
+
+      param[journal_issn] = 2772-4204
+      #param[base_url] = https://www.healthandbehavior.com/
+
+      au < manifest ; 2021 ; Asian Journal of  Social Health and Behavior Volume 4 ; 2021 ; 4 ; https://www.healthandbehavior.com/ >
+      au < expected ; 2022 ; Asian Journal of  Social Health and Behavior Volume 5 ; 2022 ; 5 ; https://www.healthandbehavior.com/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Asian Journal of Pharmaceutical Research and Health Care ;
+        issn = 2250-1444 ;
+        eissn = 2250-1460
+      >
+
+      param[journal_issn] = 2250-1444
+      #param[base_url] = https://www.ajprhc.com/
+
+      au < expected ; 2022 ; Asian Journal of Pharmaceutical Research and Health Care Volume 14 ; 2022 ; 14 ; https://www.ajprhc.com/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Assam Journal of Internal Medicine ;
+        issn = 2278-8239 ;
+        eissn = 2773-0166
+      >
+
+      param[journal_issn] = 2278-8239
+      #param[base_url] = https://www.ajimedicine.com/
+
+      au < manifest ; 2011 ; Assam Journal of Internal Medicine Volume 1 ; 2011 ; 1 ; https://www.ajimedicine.com/ >
+      au < manifest ; 2012 ; Assam Journal of Internal Medicine Volume 2 ; 2012 ; 2 ; https://www.ajimedicine.com/ >
+      au < manifest ; 2013 ; Assam Journal of Internal Medicine Volume 3 ; 2013 ; 3 ; https://www.ajimedicine.com/ >
+      au < manifest ; 2014 ; Assam Journal of Internal Medicine Volume 4 ; 2014 ; 4 ; https://www.ajimedicine.com/ >
+      au < manifest ; 2015 ; Assam Journal of Internal Medicine Volume 5 ; 2015 ; 5 ; https://www.ajimedicine.com/ >
+      au < manifest ; 2016 ; Assam Journal of Internal Medicine Volume 6 ; 2016 ; 6 ; https://www.ajimedicine.com/ >
+      au < manifest ; 2017 ; Assam Journal of Internal Medicine Volume 7 ; 2017 ; 7 ; https://www.ajimedicine.com/ >
+      au < manifest ; 2018 ; Assam Journal of Internal Medicine Volume 8 ; 2018 ; 8 ; https://www.ajimedicine.com/ >
+      au < manifest ; 2019 ; Assam Journal of Internal Medicine Volume 9 ; 2019 ; 9 ; https://www.ajimedicine.com/ >
+      au < manifest ; 2020 ; Assam Journal of Internal Medicine Volume 10 ; 2020 ; 10 ; https://www.ajimedicine.com/ >
+      au < manifest ; 2021 ; Assam Journal of Internal Medicine Volume 11 ; 2021 ; 11 ; https://www.ajimedicine.com/ >
+      au < expected ; 2022 ; Assam Journal of Internal Medicine Volume 12 ; 2022 ; 12 ; https://www.ajimedicine.com/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Bali Journal of Anesthesiology ;
+        eissn = 2549-2276
+      >
+
+      param[journal_issn] = 2549-2276
+      #param[base_url] = https://www.bjoaonline.com/
+
+      au < manifest ; 2017 ; Bali Journal of Anesthesiology Volume 1 ; 2017 ; 1 ; https://www.bjoaonline.com/ >
+      au < manifest ; 2018 ; Bali Journal of Anesthesiology Volume 2 ; 2018 ; 2 ; https://www.bjoaonline.com/ >
+      au < manifest ; 2019 ; Bali Journal of Anesthesiology Volume 3 ; 2019 ; 3 ; https://www.bjoaonline.com/ >
+      au < manifest ; 2020 ; Bali Journal of Anesthesiology Volume 4 ; 2020 ; 4 ; https://www.bjoaonline.com/ >
+      au < manifest ; 2021 ; Bali Journal of Anesthesiology Volume 5 ; 2021 ; 5 ; https://www.bjoaonline.com/ >
+      au < expected ; 2022 ; Bali Journal of Anesthesiology Volume 6 ; 2022 ; 6 ; https://www.bjoaonline.com/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Biomedical Research Journal ;
+        issn = 2349-3666 ;
+        eissn = 2349-3674
+      >
+
+      param[journal_issn] = 2349-3666
+      #param[base_url] = https://www.brjnmims.org/
+
+      au < manifest ; 2014 ; Biomedical Research Journal Volume 1 ; 2014 ; 1 ; https://www.brjnmims.org/ >
+      au < manifest ; 2015 ; Biomedical Research Journal Volume 2 ; 2015 ; 2 ; https://www.brjnmims.org/ >
+      au < manifest ; 2016 ; Biomedical Research Journal Volume 3 ; 2016 ; 3 ; https://www.brjnmims.org/ >
+      au < manifest ; 2017 ; Biomedical Research Journal Volume 4 ; 2017 ; 4 ; https://www.brjnmims.org/ >
+      au < manifest ; 2018 ; Biomedical Research Journal Volume 5 ; 2018 ; 5 ; https://www.brjnmims.org/ >
+      au < manifest ; 2019 ; Biomedical Research Journal Volume 6 ; 2019 ; 6 ; https://www.brjnmims.org/ >
+      au < manifest ; 2020 ; Biomedical Research Journal Volume 7 ; 2020 ; 7 ; https://www.brjnmims.org/ >
+      au < manifest ; 2021 ; Biomedical Research Journal Volume 8 ; 2021 ; 8 ; https://www.brjnmims.org/ >
+      au < expected ; 2022 ; Biomedical Research Journal Volume 9 ; 2022 ; 9 ; https://www.brjnmims.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Canadian Journal of Rural Medicine ;
+        issn = 1203-7796 ;
+        eissn = 1488-237X
+      >
+
+      param[journal_issn] = 1203-7796
+      #param[base_url] = https://www.cjrm.ca/
+
+      au < manifest ; 2019 ; Canadian Journal of Rural Medicine Volume 24 ; 2019 ; 24 ; https://www.cjrm.ca/ >
+      au < manifest ; 2020 ; Canadian Journal of Rural Medicine Volume 25 ; 2020 ; 25 ; https://www.cjrm.ca/ >
+      au < manifest ; 2021 ; Canadian Journal of Rural Medicine Volume 26 ; 2021 ; 26 ; https://www.cjrm.ca/ >
+      au < expected ; 2022 ; Canadian Journal of Rural Medicine Volume 27 ; 2022 ; 27 ; https://www.cjrm.ca/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Chinese Journal of Physiology ;
+        issn = 0304-4920 ;
+        eissn = 2666-0059
+      >
+
+      param[journal_issn] = 0304-4920
+      #param[base_url] = https://www.cjphysiology.org/
+
+      au < manifest ; 2019 ; Chinese Journal of Physiology Volume 62 ; 2019 ; 62 ; https://www.cjphysiology.org/ >
+      au < manifest ; 2020 ; Chinese Journal of Physiology Volume 63 ; 2020 ; 63 ; https://www.cjphysiology.org/ >
+      au < manifest ; 2021 ; Chinese Journal of Physiology Volume 64 ; 2021 ; 64 ; https://www.cjphysiology.org/ >
+      au < expected ; 2022 ; Chinese Journal of Physiology Volume 65 ; 2022 ; 65 ; https://www.cjphysiology.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Current Medicine Research and Practice ;
+        issn = 2352-0817 ;
+        eissn = 2352-0825
+      >
+
+      param[journal_issn] = 2352-0817
+      #param[base_url] = https://www.cmrpjournal.org/
+
+      au < manifest ; 2011 ; Current Medicine Research and Practice Volume 1 ; 2011 ; 1 ; https://www.cmrpjournal.org/ >
+      au < manifest ; 2012 ; Current Medicine Research and Practice Volume 2 ; 2012 ; 2 ; https://www.cmrpjournal.org/ >
+      au < manifest ; 2013 ; Current Medicine Research and Practice Volume 3 ; 2013 ; 3 ; https://www.cmrpjournal.org/ >
+      au < exists ; 2014 ; Current Medicine Research and Practice Volume 4 ; 2014 ; 4 ; https://www.cmrpjournal.org/ >
+      au < exists ; 2015 ; Current Medicine Research and Practice Volume 5 ; 2015 ; 5 ; https://www.cmrpjournal.org/ >
+      au < exists ; 2016 ; Current Medicine Research and Practice Volume 6 ; 2016 ; 6 ; https://www.cmrpjournal.org/ >
+      au < exists ; 2017 ; Current Medicine Research and Practice Volume 7 ; 2017 ; 7 ; https://www.cmrpjournal.org/ >
+      au < exists ; 2018 ; Current Medicine Research and Practice Volume 8 ; 2018 ; 8 ; https://www.cmrpjournal.org/ >
+      au < exists ; 2019 ; Current Medicine Research and Practice Volume 9 ; 2019 ; 9 ; https://www.cmrpjournal.org/ >
+      au < exists ; 2020 ; Current Medicine Research and Practice Volume 10 ; 2020 ; 10 ; https://www.cmrpjournal.org/ >
+      au < exists ; 2021 ; Current Medicine Research and Practice Volume 11 ; 2021 ; 11 ; https://www.cmrpjournal.org/ >
+      au < expected ; 2022 ; Current Medicine Research and Practice Volume 12 ; 2022 ; 12 ; https://www.cmrpjournal.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = D Y Patil Journal of Health Sciences ;
+        issn = 2347-3665 ;
+        eissn = 2347-8020
+      >
+
+      param[journal_issn] = 2347-3665
+      #param[base_url] = https://www.dypatiljhs.com/
+
+      au < exists ; 2021 ; D Y Patil Journal of Health Sciences Volume 9 ; 2021 ; 9 ; https://www.dypatiljhs.com/ >
+      au < expected ; 2022 ; D Y Patil Journal of Health Sciences Volume 10 ; 2022 ; 10 ; https://www.dypatiljhs.com/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Dermatologica Sinica ;
+        issn = 1027-8117 ;
+        eissn = 2223-330X
+      >
+
+      param[journal_issn] = 1027-8117
+      #param[base_url] = https://www.dermsinica.org/
+
+      au < exists ; 2019 ; Dermatologica Sinica Volume 37 ; 2019 ; 37 ; https://www.dermsinica.org/ >
+      au < exists ; 2020 ; Dermatologica Sinica Volume 38 ; 2020 ; 38 ; https://www.dermsinica.org/ >
+      au < exists ; 2021 ; Dermatologica Sinica Volume 39 ; 2021 ; 39 ; https://www.dermsinica.org/ >
+      au < expected ; 2022 ; Dermatologica Sinica Volume 40 ; 2022 ; 40 ; https://www.dermsinica.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Duke Orthopedic Journal ;
+        issn = 2231-5055 ;
+        eissn = 2231-5136
+      >
+
+      param[journal_issn] = 2231-5055
+      #param[base_url] = https://www.dukeorthojournal.com/
+
+      au < exists ; 2019 ; Duke Orthopedic Journal Volume 9 ; 2019 ; 9 ; https://www.dukeorthojournal.com/ >
+      au < exists ; 2020 ; Duke Orthopedic Journal Volume 10 ; 2020 ; 10 ; https://www.dukeorthojournal.com/ >
+      au < exists ; 2021 ; Duke Orthopedic Journal Volume 11 ; 2021 ; 11 ; https://www.dukeorthojournal.com/ >
+      au < expected ; 2022 ; Duke Orthopedic Journal Volume 12 ; 2022 ; 12 ; https://www.dukeorthojournal.com/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Education in the Health Professions ;
+        eissn = 2590-1761
+      >
+
+      param[journal_issn] = 2590-1761
+      #param[base_url] = https://www.ehpjournal.com/
+
+      au < exists ; 2018 ; Education in the Health Professions Volume 1 ; 2018 ; 1 ; https://www.ehpjournal.com/ >
+      au < exists ; 2019 ; Education in the Health Professions Volume 2 ; 2019 ; 2 ; https://www.ehpjournal.com/ >
+      au < exists ; 2020 ; Education in the Health Professions Volume 3 ; 2020 ; 3 ; https://www.ehpjournal.com/ >
+      au < exists ; 2021 ; Education in the Health Professions Volume 4 ; 2021 ; 4 ; https://www.ehpjournal.com/ >
+      au < expected ; 2022 ; Education in the Health Professions Volume 5 ; 2022 ; 5 ; https://www.ehpjournal.com/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Hellenic Urology ;
+        issn = 2241-9136
+      >
+
+      param[journal_issn] = 2241-9136
+      #param[base_url] = https://www.hellenicurologyjournal.com/
+
+      au < exists ; 2020 ; Hellenic Urology Volume 32 ; 2020 ; 32 ; https://www.hellenicurologyjournal.com/ >
+      au < exists ; 2021 ; Hellenic Urology Volume 33 ; 2021 ; 33 ; https://www.hellenicurologyjournal.com/ >
+      au < expected ; 2022 ; Hellenic Urology Volume 34 ; 2022 ; 34 ; https://www.hellenicurologyjournal.com/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Indian Journal of Colo-Rectal Surgery ;
+        issn = 2666-0784 ;
+        eissn = 2666-0792
+      >
+
+      param[journal_issn] = 2666-0784
+      #param[base_url] = https://www.ijcrsonweb.org/
+
+      au < exists ; 2018 ; Indian Journal of Colo-Rectal Surgery Volume 1 ; 2018 ; 1 ; https://www.ijcrsonweb.org/ >
+      au < exists ; 2019 ; Indian Journal of Colo-Rectal Surgery Volume 2 ; 2019 ; 2 ; https://www.ijcrsonweb.org/ >
+      au < exists ; 2020 ; Indian Journal of Colo-Rectal Surgery Volume 3 ; 2020 ; 3 ; https://www.ijcrsonweb.org/ >
+      au < exists ; 2021 ; Indian Journal of Colo-Rectal Surgery Volume 4 ; 2021 ; 4 ; https://www.ijcrsonweb.org/ >
+      au < expected ; 2022 ; Indian Journal of Colo-Rectal Surgery Volume 5 ; 2022 ; 5 ; https://www.ijcrsonweb.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Indian Journal of Community and Family Medicine ;
+        issn = 2395-2113
+      >
+
+      param[journal_issn] = 2395-2113
+      #param[base_url] = https://www.ijcfm.org/
+
+      au < exists ; 2015 ; Indian Journal of Community and Family Medicine Volume 0 ; 2015 ; 0 ; https://www.ijcfm.org/ >
+      au < exists ; 2016 ; Indian Journal of Community and Family Medicine Volume 1 ; 2016 ; 1 ; https://www.ijcfm.org/ >
+      au < exists ; 2017 ; Indian Journal of Community and Family Medicine Volume 2 ; 2017 ; 2 ; https://www.ijcfm.org/ >
+      au < exists ; 2018 ; Indian Journal of Community and Family Medicine Volume 3 ; 2018 ; 3 ; https://www.ijcfm.org/ >
+      au < exists ; 2019 ; Indian Journal of Community and Family Medicine Volume 4 ; 2019 ; 4 ; https://www.ijcfm.org/ >
+      au < exists ; 2020 ; Indian Journal of Community and Family Medicine Volume 5 ; 2020 ; 5 ; https://www.ijcfm.org/ >
+      au < exists ; 2021 ; Indian Journal of Community and Family Medicine Volume 6 ; 2021 ; 6 ; https://www.ijcfm.org/ >
+      au < expected ; 2022 ; Indian Journal of Community and Family Medicine Volume 7 ; 2022 ; 7 ; https://www.ijcfm.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Indian Journal of Continuing Nursing Education ;
+        issn = 2230-7354 ;
+        eissn = 2666-8246
+      >
+
+      param[journal_issn] = 2230-7354
+      #param[base_url] = https://www.ijcne.org/
+
+      au < exists ; 2015 ; Indian Journal of Continuing Nursing Education Volume 16 ; 2015 ; 16 ; https://www.ijcne.org/ >
+      au < exists ; 2016 ; Indian Journal of Continuing Nursing Education Volume 17 ; 2016 ; 17 ; https://www.ijcne.org/ >
+      au < exists ; 2017 ; Indian Journal of Continuing Nursing Education Volume 18 ; 2017 ; 18 ; https://www.ijcne.org/ >
+      au < exists ; 2018 ; Indian Journal of Continuing Nursing Education Volume 19 ; 2018 ; 19 ; https://www.ijcne.org/ >
+      au < exists ; 2019 ; Indian Journal of Continuing Nursing Education Volume 20 ; 2019 ; 20 ; https://www.ijcne.org/ >
+      au < exists ; 2020 ; Indian Journal of Continuing Nursing Education Volume 21 ; 2020 ; 21 ; https://www.ijcne.org/ >
+      au < exists ; 2021 ; Indian Journal of Continuing Nursing Education Volume 22 ; 2021 ; 22 ; https://www.ijcne.org/ >
+      au < expected ; 2022 ; Indian Journal of Continuing Nursing Education Volume 23 ; 2022 ; 23 ; https://www.ijcne.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Indian Journal of Medical Specialties ;
+        issn = 0976-2884 ;
+        eissn = 0976-2892
+      >
+
+      param[journal_issn] = 0976-2884
+      #param[base_url] = https://www.ijms.in/
+
+      au < exists ; 2019 ; Indian Journal of Medical Specialties Volume 10 ; 2019 ; 10 ; https://www.ijms.in/ >
+      au < exists ; 2020 ; Indian Journal of Medical Specialties Volume 11 ; 2020 ; 11 ; https://www.ijms.in/ >
+      au < exists ; 2021 ; Indian Journal of Medical Specialties Volume 12 ; 2021 ; 12 ; https://www.ijms.in/ >
+      au < expected ; 2022 ; Indian Journal of Medical Specialties Volume 13 ; 2022 ; 13 ; https://www.ijms.in/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Indian Journal of Peritoneal Dialysis ;
+        issn = 0976-4194 ;
+        eissn = 2349-6215
+      >
+
+      param[journal_issn] = 0976-4194
+      #param[base_url] = https://www.ijpd.org.in/
+
+      au < exists ; 2020 ; Indian Journal of Peritoneal Dialysis Volume 38 ; 2020 ; 38 ; https://www.ijpd.org.in/ >
+      au < exists ; 2021 ; Indian Journal of Peritoneal Dialysis Volume 39 ; 2021 ; 39 ; https://www.ijpd.org.in/ >
+      au < expected ; 2022 ; Indian Journal of Peritoneal Dialysis Volume 40 ; 2022 ; 40 ; https://www.ijpd.org.in/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Indian Journal of Physical Therapy and Research ;
+        issn = 2666-3481 ;
+        eissn = 2666-349X
+      >
+
+      param[journal_issn] = 2666-3481
+      #param[base_url] = https://www.ijptr.org/
+
+      au < exists ; 2019 ; Indian Journal of Physical Therapy and Research Volume 1 ; 2019 ; 1 ; https://www.ijptr.org/ >
+      au < exists ; 2020 ; Indian Journal of Physical Therapy and Research Volume 2 ; 2020 ; 2 ; https://www.ijptr.org/ >
+      au < exists ; 2021 ; Indian Journal of Physical Therapy and Research Volume 3 ; 2021 ; 3 ; https://www.ijptr.org/ >
+      au < expected ; 2022 ; Indian Journal of Physical Therapy and Research Volume 4 ; 2022 ; 4 ; https://www.ijptr.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Indian Journal of Psychiatric Nursing ;
+        issn = 2231-1505 ;
+        eissn = 2666-528X
+      >
+
+      param[journal_issn] = 2231-1505
+      #param[base_url] = https://www.ijpn.in/
+
+      au < exists ; 2013 ; Indian Journal of Psychiatric Nursing Volume 10 ; 2013 ; 10 ; https://www.ijpn.in/ >
+      au < exists ; 2014 ; Indian Journal of Psychiatric Nursing Volume 11 ; 2014 ; 11 ; https://www.ijpn.in/ >
+      au < exists ; 2015 ; Indian Journal of Psychiatric Nursing Volume 12 ; 2015 ; 12 ; https://www.ijpn.in/ >
+      au < exists ; 2016 ; Indian Journal of Psychiatric Nursing Volume 13 ; 2016 ; 13 ; https://www.ijpn.in/ >
+      au < exists ; 2017 ; Indian Journal of Psychiatric Nursing Volume 14 ; 2017 ; 14 ; https://www.ijpn.in/ >
+      au < exists ; 2018 ; Indian Journal of Psychiatric Nursing Volume 15 ; 2018 ; 15 ; https://www.ijpn.in/ >
+      au < exists ; 2019 ; Indian Journal of Psychiatric Nursing Volume 16 ; 2019 ; 16 ; https://www.ijpn.in/ >
+      au < exists ; 2020 ; Indian Journal of Psychiatric Nursing Volume 17 ; 2020 ; 17 ; https://www.ijpn.in/ >
+      au < exists ; 2021 ; Indian Journal of Psychiatric Nursing Volume 18 ; 2021 ; 18 ; https://www.ijpn.in/ >
+      au < expected ; 2022 ; Indian Journal of Psychiatric Nursing Volume 19 ; 2022 ; 19 ; https://www.ijpn.in/ >
+
+  }
+
+
+  {
+
+      title <
+        name = International Journal of Abdominal Wall and Hernia Surgery ;
+        issn = 2589-8736 ;
+        eissn = 2589-8078
+      >
+
+      param[journal_issn] = 2589-8736
+      #param[base_url] = https://www.herniasurgeryjournal.org/
+
+      au < exists ; 2018 ; International Journal of Abdominal Wall and Hernia Surgery Volume 1 ; 2018 ; 1 ; https://www.herniasurgeryjournal.org/ >
+      au < exists ; 2019 ; International Journal of Abdominal Wall and Hernia Surgery Volume 2 ; 2019 ; 2 ; https://www.herniasurgeryjournal.org/ >
+      au < exists ; 2020 ; International Journal of Abdominal Wall and Hernia Surgery Volume 3 ; 2020 ; 3 ; https://www.herniasurgeryjournal.org/ >
+      au < exists ; 2021 ; International Journal of Abdominal Wall and Hernia Surgery Volume 4 ; 2021 ; 4 ; https://www.herniasurgeryjournal.org/ >
+      au < expected ; 2022 ; International Journal of Abdominal Wall and Hernia Surgery Volume 5 ; 2022 ; 5 ; https://www.herniasurgeryjournal.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = International Journal of Community Dentistry ;
+        eissn = 2589-8388
+      >
+
+      param[journal_issn] = 2589-8388
+      #param[base_url] = https://www.ijcommdent.com/
+
+      au < exists ; 2018 ; International Journal of Community Dentistry Volume 6 ; 2018 ; 6 ; https://www.ijcommdent.com/ >
+      au < exists ; 2019 ; International Journal of Community Dentistry Volume 7 ; 2019 ; 7 ; https://www.ijcommdent.com/ >
+      au < exists ; 2020 ; International Journal of Community Dentistry Volume 8 ; 2020 ; 8 ; https://www.ijcommdent.com/ >
+      au < exists ; 2021 ; International Journal of Community Dentistry Volume 9 ; 2021 ; 9 ; https://www.ijcommdent.com/ >
+      au < expected ; 2022 ; International Journal of Community Dentistry Volume 10 ; 2022 ; 10 ; https://www.ijcommdent.com/ >
+
+  }
+
+
+  {
+
+      title <
+        name = International Journal of Head and Neck Pathology ;
+        eissn = 2590-2997
+      >
+
+      param[journal_issn] = 2590-2997
+      #param[base_url] = https://www.ijhnp.org/
+
+      au < exists ; 2018 ; International Journal of Head and Neck Pathology Volume 1 ; 2018 ; 1 ; https://www.ijhnp.org/ >
+      au < exists ; 2019 ; International Journal of Head and Neck Pathology Volume 2 ; 2019 ; 2 ; https://www.ijhnp.org/ >
+      au < exists ; 2020 ; International Journal of Head and Neck Pathology Volume 3 ; 2020 ; 3 ; https://www.ijhnp.org/ >
+      au < exists ; 2021 ; International Journal of Head and Neck Pathology Volume 4 ; 2021 ; 4 ; https://www.ijhnp.org/ >
+      au < expected ; 2022 ; International Journal of Head and Neck Pathology Volume 5 ; 2022 ; 5 ; https://www.ijhnp.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = International Journal of Medical and Oral Research ;
+        issn = 2772-4883 ;
+        eissn = 2772-4891
+      >
+
+      param[journal_issn] = 2772-4883
+      #param[base_url] = https://www.ijmorweb.com/
+
+      au < exists ; 2020 ; International Journal of Medical and Oral Research Volume 5 ; 2020 ; 5 ; https://www.ijmorweb.com/ >
+      au < exists ; 2021 ; International Journal of Medical and Oral Research Volume 6 ; 2021 ; 6 ; https://www.ijmorweb.com/ >
+      au < expected ; 2022 ; International Journal of Medical and Oral Research Volume 7 ; 2022 ; 7 ; https://www.ijmorweb.com/ >
+
+  }
+
+
+  {
+
+      title <
+        name = International Journal of Medicine and Health Development ;
+        issn = 2635-3695 ;
+        eissn = 2667-2863
+      >
+
+      param[journal_issn] = 2635-3695
+      #param[base_url] = https://www.ijmhdev.com/
+
+      au < exists ; 1996 ; International Journal of Medicine and Health Development Volume 1 ; 1996 ; 1 ; https://www.ijmhdev.com/ >
+      au < exists ; 1997 ; International Journal of Medicine and Health Development Volume 2 ; 1997 ; 2 ; https://www.ijmhdev.com/ >
+      au < exists ; 1998 ; International Journal of Medicine and Health Development Volume 3 ; 1998 ; 3 ; https://www.ijmhdev.com/ >
+      au < exists ; 1999 ; International Journal of Medicine and Health Development Volume 4 ; 1999 ; 4 ; https://www.ijmhdev.com/ >
+      au < exists ; 2000 ; International Journal of Medicine and Health Development Volume 5 ; 2000 ; 5 ; https://www.ijmhdev.com/ >
+      au < exists ; 2001 ; International Journal of Medicine and Health Development Volume 6 ; 2001 ; 6 ; https://www.ijmhdev.com/ >
+      au < exists ; 2002 ; International Journal of Medicine and Health Development Volume 7 ; 2002 ; 7 ; https://www.ijmhdev.com/ >
+      au < exists ; 2003 ; International Journal of Medicine and Health Development Volume 8 ; 2003 ; 8 ; https://www.ijmhdev.com/ >
+      au < exists ; 2004 ; International Journal of Medicine and Health Development Volume 9 ; 2004 ; 9 ; https://www.ijmhdev.com/ >
+      au < exists ; 2005 ; International Journal of Medicine and Health Development Volume 10 ; 2005 ; 10 ; https://www.ijmhdev.com/ >
+      au < exists ; 2006 ; International Journal of Medicine and Health Development Volume 11 ; 2006 ; 11 ; https://www.ijmhdev.com/ >
+      au < exists ; 2007 ; International Journal of Medicine and Health Development Volume 12 ; 2007 ; 12 ; https://www.ijmhdev.com/ >
+      au < exists ; 2008 ; International Journal of Medicine and Health Development Volume 13 ; 2008 ; 13 ; https://www.ijmhdev.com/ >
+      au < exists ; 2009 ; International Journal of Medicine and Health Development Volume 14 ; 2009 ; 14 ; https://www.ijmhdev.com/ >
+      au < exists ; 2010 ; International Journal of Medicine and Health Development Volume 15 ; 2010 ; 15 ; https://www.ijmhdev.com/ >
+      au < exists ; 2011 ; International Journal of Medicine and Health Development Volume 16 ; 2011 ; 16 ; https://www.ijmhdev.com/ >
+      au < exists ; 2012 ; International Journal of Medicine and Health Development Volume 17 ; 2012 ; 17 ; https://www.ijmhdev.com/ >
+      au < exists ; 2013 ; International Journal of Medicine and Health Development Volume 18 ; 2013 ; 18 ; https://www.ijmhdev.com/ >
+      au < exists ; 2014 ; International Journal of Medicine and Health Development Volume 19 ; 2014 ; 19 ; https://www.ijmhdev.com/ >
+      au < exists ; 2015 ; International Journal of Medicine and Health Development Volume 20 ; 2015 ; 20 ; https://www.ijmhdev.com/ >
+      au < exists ; 2016 ; International Journal of Medicine and Health Development Volume 21 ; 2016 ; 21 ; https://www.ijmhdev.com/ >
+      au < exists ; 2017 ; International Journal of Medicine and Health Development Volume 22 ; 2017 ; 22 ; https://www.ijmhdev.com/ >
+      au < exists ; 2018 ; International Journal of Medicine and Health Development Volume 23 ; 2018 ; 23 ; https://www.ijmhdev.com/ >
+      au < exists ; 2019 ; International Journal of Medicine and Health Development Volume 24 ; 2019 ; 24 ; https://www.ijmhdev.com/ >
+      au < exists ; 2020 ; International Journal of Medicine and Health Development Volume 25 ; 2020 ; 25 ; https://www.ijmhdev.com/ >
+      au < exists ; 2021 ; International Journal of Medicine and Health Development Volume 26 ; 2021 ; 26 ; https://www.ijmhdev.com/ >
+      au < expected ; 2022 ; International Journal of Medicine and Health Development Volume 27 ; 2022 ; 27 ; https://www.ijmhdev.com/ >
+
+  }
+
+
+  {
+
+      title <
+        name = International Journal of Neuro-Oncology ;
+        issn = 2590-2652 ;
+        eissn = 2590-2660
+      >
+
+      param[journal_issn] = 2590-2652
+      #param[base_url] = https://www.internationaljneurooncology.com/
+
+      au < exists ; 2018 ; International Journal of Neuro-Oncology Volume 1 ; 2018 ; 1 ; https://www.internationaljneurooncology.com/ >
+      au < exists ; 2019 ; International Journal of Neuro-Oncology Volume 2 ; 2019 ; 2 ; https://www.internationaljneurooncology.com/ >
+      au < exists ; 2020 ; International Journal of Neuro-Oncology Volume 3 ; 2020 ; 3 ; https://www.internationaljneurooncology.com/ >
+      au < exists ; 2021 ; International Journal of Neuro-Oncology Volume 4 ; 2021 ; 4 ; https://www.internationaljneurooncology.com/ >
+      au < expected ; 2022 ; International Journal of Neuro-Oncology Volume 5 ; 2022 ; 5 ; https://www.internationaljneurooncology.com/ >
+
+  }
+
+
+  {
+
+      title <
+        name = International Journal of Oral Care and Research ;
+        issn = 2347-6249 ;
+        eissn = 2456-317X
+      >
+
+      param[journal_issn] = 2347-6249
+      #param[base_url] = https://www.ijocr.org/
+
+      au < exists ; 2018 ; International Journal of Oral Care and Research Volume 6 ; 2018 ; 6 ; https://www.ijocr.org/ >
+      au < exists ; 2019 ; International Journal of Oral Care and Research Volume 7 ; 2019 ; 7 ; https://www.ijocr.org/ >
+      au < exists ; 2020 ; International Journal of Oral Care and Research Volume 8 ; 2020 ; 8 ; https://www.ijocr.org/ >
+      au < exists ; 2021 ; International Journal of Oral Care and Research Volume 9 ; 2021 ; 9 ; https://www.ijocr.org/ >
+      au < expected ; 2022 ; International Journal of Oral Care and Research Volume 10 ; 2022 ; 10 ; https://www.ijocr.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = International Journal of Preventive and Clinical Dental Research ;
+        issn = 2349-7319 ;
+        eissn = 2456-3196
+      >
+
+      param[journal_issn] = 2349-7319
+      #param[base_url] = https://www.ijpcdr.org/
+
+      au < exists ; 2018 ; International Journal of Preventive and Clinical Dental Research Volume 5 ; 2018 ; 5 ; https://www.ijpcdr.org/ >
+      au < exists ; 2019 ; International Journal of Preventive and Clinical Dental Research Volume 6 ; 2019 ; 6 ; https://www.ijpcdr.org/ >
+      au < exists ; 2020 ; International Journal of Preventive and Clinical Dental Research Volume 7 ; 2020 ; 7 ; https://www.ijpcdr.org/ >
+      au < exists ; 2021 ; International Journal of Preventive and Clinical Dental Research Volume 8 ; 2021 ; 8 ; https://www.ijpcdr.org/ >
+      au < expected ; 2022 ; International Journal of Preventive and Clinical Dental Research Volume 9 ; 2022 ; 9 ; https://www.ijpcdr.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = International Journal of Social Rehabilitation ;
+        eissn = 2667-1069
+      >
+
+      param[journal_issn] = 2667-1069
+      #param[base_url] = https://www.ijsocialrehab.com/
+
+      au < exists ; 2018 ; International Journal of Social Rehabilitation Volume 3 ; 2018 ; 3 ; https://www.ijsocialrehab.com/ >
+      au < exists ; 2019 ; International Journal of Social Rehabilitation Volume 4 ; 2019 ; 4 ; https://www.ijsocialrehab.com/ >
+      au < exists ; 2020 ; International Journal of Social Rehabilitation Volume 5 ; 2020 ; 5 ; https://www.ijsocialrehab.com/ >
+      au < exists ; 2021 ; International Journal of Social Rehabilitation Volume 6 ; 2021 ; 6 ; https://www.ijsocialrehab.com/ >
+      au < expected ; 2022 ; International Journal of Social Rehabilitation Volume 7 ; 2022 ; 7 ; https://www.ijsocialrehab.com/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Iraqi Journal of Community Medicine ;
+        issn = 1684-5382
+      >
+
+      param[journal_issn] = 1684-5382
+      #param[base_url] = https://www.journalijcm.org/
+
+      au < exists ; 2020 ; Iraqi Journal of Community Medicine Volume 33 ; 2020 ; 33 ; https://www.journalijcm.org/ >
+      au < exists ; 2021 ; Iraqi Journal of Community Medicine Volume 34 ; 2021 ; 34 ; https://www.journalijcm.org/ >
+      au < expected ; 2022 ; Iraqi Journal of Community Medicine Volume 35 ; 2022 ; 35 ; https://www.journalijcm.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Iraqi Journal of Hematology ;
+        issn = 2072-8069 ;
+        eissn = 2543-2702
+      >
+
+      param[journal_issn] = 2072-8069
+      #param[base_url] = https://www.ijhonline.org/
+
+      au < exists ; 2011 ; Iraqi Journal of Hematology Volume 0 ; 2011 ; 0 ; https://www.ijhonline.org/ >
+      au < exists ; 2012 ; Iraqi Journal of Hematology Volume 1 ; 2012 ; 1 ; https://www.ijhonline.org/ >
+      au < exists ; 2013 ; Iraqi Journal of Hematology Volume 2 ; 2013 ; 2 ; https://www.ijhonline.org/ >
+      au < exists ; 2014 ; Iraqi Journal of Hematology Volume 3 ; 2014 ; 3 ; https://www.ijhonline.org/ >
+      au < exists ; 2015 ; Iraqi Journal of Hematology Volume 4 ; 2015 ; 4 ; https://www.ijhonline.org/ >
+      au < exists ; 2016 ; Iraqi Journal of Hematology Volume 5 ; 2016 ; 5 ; https://www.ijhonline.org/ >
+      au < exists ; 2017 ; Iraqi Journal of Hematology Volume 6 ; 2017 ; 6 ; https://www.ijhonline.org/ >
+      au < exists ; 2018 ; Iraqi Journal of Hematology Volume 7 ; 2018 ; 7 ; https://www.ijhonline.org/ >
+      au < exists ; 2019 ; Iraqi Journal of Hematology Volume 8 ; 2019 ; 8 ; https://www.ijhonline.org/ >
+      au < exists ; 2020 ; Iraqi Journal of Hematology Volume 9 ; 2020 ; 9 ; https://www.ijhonline.org/ >
+      au < exists ; 2021 ; Iraqi Journal of Hematology Volume 10 ; 2021 ; 10 ; https://www.ijhonline.org/ >
+      au < expected ; 2022 ; Iraqi Journal of Hematology Volume 11 ; 2022 ; 11 ; https://www.ijhonline.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Advanced Lung Health ;
+        issn = 2772-7165 ;
+        eissn = 2772-7173
+      >
+
+      param[journal_issn] = 2772-7165
+      #param[base_url] = https://www.jalh.org/
+
+      au < exists ; 2021 ; Journal of Advanced Lung Health Volume 1 ; 2021 ; 1 ; https://www.jalh.org/ >
+      au < expected ; 2022 ; Journal of Advanced Lung Health Volume 2 ; 2022 ; 2 ; https://www.jalh.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of All India Institute of Speech and Hearing ;
+        issn = 0973-662X ;
+        eissn = 2582-4961
+      >
+
+      param[journal_issn] = 0973-662X
+      #param[base_url] = https://www.jaiish.com/
+
+      au < exists ; 2021 ; Journal of All India Institute of Speech and Hearing Volume 40 ; 2021 ; 40 ; https://www.jaiish.com/ >
+      au < expected ; 2022 ; Journal of All India Institute of Speech and Hearing Volume 41 ; 2022 ; 41 ; https://www.jaiish.com/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Applied Sciences and Clinical Practice ;
+        issn = 2772-364X ;
+        eissn = 2772-3658
+      >
+
+      param[journal_issn] = 2772-364X
+      #param[base_url] = https://www.jascp.org/
+
+      au < exists ; 2020 ; Journal of Applied Sciences and Clinical Practice Volume 1 ; 2020 ; 1 ; https://www.jascp.org/ >
+      au < exists ; 2021 ; Journal of Applied Sciences and Clinical Practice Volume 2 ; 2021 ; 2 ; https://www.jascp.org/ >
+      au < expected ; 2022 ; Journal of Applied Sciences and Clinical Practice Volume 3 ; 2022 ; 3 ; https://www.jascp.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Association of Pulmonologist of Tamil Nadu ;
+        issn = 2772-6355 ;
+        eissn = 2772-6363
+      >
+
+      param[journal_issn] = 2772-6355
+      #param[base_url] = https://www.japt.in/
+
+      au < exists ; 2018 ; Journal of Association of Pulmonologist of Tamil Nadu Volume 1 ; 2018 ; 1 ; https://www.japt.in/ >
+      au < exists ; 2019 ; Journal of Association of Pulmonologist of Tamil Nadu Volume 2 ; 2019 ; 2 ; https://www.japt.in/ >
+      au < exists ; 2020 ; Journal of Association of Pulmonologist of Tamil Nadu Volume 3 ; 2020 ; 3 ; https://www.japt.in/ >
+      au < exists ; 2021 ; Journal of Association of Pulmonologist of Tamil Nadu Volume 4 ; 2021 ; 4 ; https://www.japt.in/ >
+      au < expected ; 2022 ; Journal of Association of Pulmonologist of Tamil Nadu Volume 5 ; 2022 ; 5 ; https://www.japt.in/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Ayurveda ;
+        issn = 2321-0435
+      >
+
+      param[journal_issn] = 2321-0435
+      #param[base_url] = https://www.journayu.in/
+
+      au < exists ; 2007 ; Journal of Ayurveda Volume 1 ; 2007 ; 1 ; https://www.journayu.in/ >
+      au < exists ; 2008 ; Journal of Ayurveda Volume 2 ; 2008 ; 2 ; https://www.journayu.in/ >
+      au < exists ; 2009 ; Journal of Ayurveda Volume 3 ; 2009 ; 3 ; https://www.journayu.in/ >
+      au < exists ; 2010 ; Journal of Ayurveda Volume 4 ; 2010 ; 4 ; https://www.journayu.in/ >
+      au < exists ; 2011 ; Journal of Ayurveda Volume 5 ; 2011 ; 5 ; https://www.journayu.in/ >
+      au < exists ; 2012 ; Journal of Ayurveda Volume 6 ; 2012 ; 6 ; https://www.journayu.in/ >
+      au < exists ; 2013 ; Journal of Ayurveda Volume 7 ; 2013 ; 7 ; https://www.journayu.in/ >
+      au < exists ; 2014 ; Journal of Ayurveda Volume 8 ; 2014 ; 8 ; https://www.journayu.in/ >
+      au < exists ; 2015 ; Journal of Ayurveda Volume 9 ; 2015 ; 9 ; https://www.journayu.in/ >
+      au < exists ; 2016 ; Journal of Ayurveda Volume 10 ; 2016 ; 10 ; https://www.journayu.in/ >
+      au < exists ; 2017 ; Journal of Ayurveda Volume 11 ; 2017 ; 11 ; https://www.journayu.in/ >
+      au < exists ; 2018 ; Journal of Ayurveda Volume 12 ; 2018 ; 12 ; https://www.journayu.in/ >
+      au < exists ; 2019 ; Journal of Ayurveda Volume 13 ; 2019 ; 13 ; https://www.journayu.in/ >
+      au < exists ; 2020 ; Journal of Ayurveda Volume 14 ; 2020 ; 14 ; https://www.journayu.in/ >
+      au < exists ; 2021 ; Journal of Ayurveda Volume 15 ; 2021 ; 15 ; https://www.journayu.in/ >
+      au < expected ; 2022 ; Journal of Ayurveda Volume 16 ; 2022 ; 16 ; https://www.journayu.in/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Ayurveda Case Reports ;
+        issn = 2667-0593 ;
+        eissn = 2667-0607
+      >
+
+      param[journal_issn] = 2667-0593
+      #param[base_url] = https://www.ayucare.org/
+
+      au < exists ; 2018 ; Journal of Ayurveda Case Reports Volume 1 ; 2018 ; 1 ; https://www.ayucare.org/ >
+      au < exists ; 2019 ; Journal of Ayurveda Case Reports Volume 2 ; 2019 ; 2 ; https://www.ayucare.org/ >
+      au < exists ; 2020 ; Journal of Ayurveda Case Reports Volume 3 ; 2020 ; 3 ; https://www.ayucare.org/ >
+      au < exists ; 2021 ; Journal of Ayurveda Case Reports Volume 4 ; 2021 ; 4 ; https://www.ayucare.org/ >
+      au < expected ; 2022 ; Journal of Ayurveda Case Reports Volume 5 ; 2022 ; 5 ; https://www.ayucare.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Bone and Joint Diseases ;
+        issn = 0971-7986 ;
+        eissn = 2772-8730
+      >
+
+      param[journal_issn] = 0971-7986
+      #param[base_url] = https://www.jbjd.in/
+
+      au < exists ; 2021 ; Journal of Bone and Joint Diseases Volume 36 ; 2021 ; 36 ; https://www.jbjd.in/ >
+      au < expected ; 2022 ; Journal of Bone and Joint Diseases Volume 37 ; 2022 ; 37 ; https://www.jbjd.in/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Cancer Research and Practice ;
+        issn = 2311-3006 ;
+        eissn = 2589-0425
+      >
+
+      param[journal_issn] = 2311-3006
+      #param[base_url] = https://www.ejcrp.org/
+
+      au < exists ; 2019 ; Journal of Cancer Research and Practice Volume 6 ; 2019 ; 6 ; https://www.ejcrp.org/ >
+      au < exists ; 2020 ; Journal of Cancer Research and Practice Volume 7 ; 2020 ; 7 ; https://www.ejcrp.org/ >
+      au < exists ; 2021 ; Journal of Cancer Research and Practice Volume 8 ; 2021 ; 8 ; https://www.ejcrp.org/ >
+      au < expected ; 2022 ; Journal of Cancer Research and Practice Volume 9 ; 2022 ; 9 ; https://www.ejcrp.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Cerebrovascular Sciences ;
+        issn = 2454-8529
+      >
+
+      param[journal_issn] = 2454-8529
+      #param[base_url] = https://www.jcvs.in/
+
+      au < exists ; 2018 ; Journal of Cerebrovascular Sciences Volume 6 ; 2018 ; 6 ; https://www.jcvs.in/ >
+      au < exists ; 2019 ; Journal of Cerebrovascular Sciences Volume 7 ; 2019 ; 7 ; https://www.jcvs.in/ >
+      au < exists ; 2020 ; Journal of Cerebrovascular Sciences Volume 8 ; 2020 ; 8 ; https://www.jcvs.in/ >
+      au < exists ; 2021 ; Journal of Cerebrovascular Sciences Volume 9 ; 2021 ; 9 ; https://www.jcvs.in/ >
+      au < expected ; 2022 ; Journal of Cerebrovascular Sciences Volume 10 ; 2022 ; 10 ; https://www.jcvs.in/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Current Oncology ;
+        issn = 2589-8892 ;
+        eissn = 2589-8906
+      >
+
+      param[journal_issn] = 2589-8892
+      #param[base_url] = https://www.journalofcurrentoncology.org/
+
+      au < exists ; 2018 ; Journal of Current Oncology Volume 1 ; 2018 ; 1 ; https://www.journalofcurrentoncology.org/ >
+      au < exists ; 2019 ; Journal of Current Oncology Volume 2 ; 2019 ; 2 ; https://www.journalofcurrentoncology.org/ >
+      au < exists ; 2020 ; Journal of Current Oncology Volume 3 ; 2020 ; 3 ; https://www.journalofcurrentoncology.org/ >
+      au < exists ; 2021 ; Journal of Current Oncology Volume 4 ; 2021 ; 4 ; https://www.journalofcurrentoncology.org/ >
+      au < expected ; 2022 ; Journal of Current Oncology Volume 5 ; 2022 ; 5 ; https://www.journalofcurrentoncology.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Current Ophthalmology ;
+        eissn = 2452-2325
+      >
+
+      param[journal_issn] = 2452-2325
+      #param[base_url] = https://www.jcurrophthalmol.org/
+
+      au < exists ; 2020 ; Journal of Current Ophthalmology Volume 32 ; 2020 ; 32 ; https://www.jcurrophthalmol.org/ >
+      au < exists ; 2021 ; Journal of Current Ophthalmology Volume 33 ; 2021 ; 33 ; https://www.jcurrophthalmol.org/ >
+      au < expected ; 2022 ; Journal of Current Ophthalmology Volume 34 ; 2022 ; 34 ; https://www.jcurrophthalmol.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Dentistry Defense Section ;
+        issn = 0973-4724 ;
+        eissn = 2949-6985
+      >
+
+      param[journal_issn] = 0973-4724
+      #param[base_url] = https://www.journaldds.org/
+
+      au < exists ; 2020 ; Journal of Dentistry Defense Section Volume 14 ; 2020 ; 14 ; https://www.journaldds.org/ >
+      au < exists ; 2021 ; Journal of Dentistry Defense Section Volume 15 ; 2021 ; 15 ; https://www.journaldds.org/ >
+      au < expected ; 2022 ; Journal of Dentistry Defense Section Volume 16 ; 2022 ; 16 ; https://www.journaldds.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Dermatology & Dermatologic Surgery ;
+        issn = 2352-2410 ;
+        eissn = 2352-2429
+      >
+
+      param[journal_issn] = 2352-2410
+      #param[base_url] = https://www.jddsjournal.org/
+
+      au < exists ; 2018 ; Journal of Dermatology & Dermatologic Surgery Volume 22 ; 2018 ; 22 ; https://www.jddsjournal.org/ >
+      au < exists ; 2019 ; Journal of Dermatology & Dermatologic Surgery Volume 23 ; 2019 ; 23 ; https://www.jddsjournal.org/ >
+      au < exists ; 2020 ; Journal of Dermatology & Dermatologic Surgery Volume 24 ; 2020 ; 24 ; https://www.jddsjournal.org/ >
+      au < exists ; 2021 ; Journal of Dermatology & Dermatologic Surgery Volume 25 ; 2021 ; 25 ; https://www.jddsjournal.org/ >
+      au < expected ; 2022 ; Journal of Dermatology & Dermatologic Surgery Volume 26 ; 2022 ; 26 ; https://www.jddsjournal.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Drug Research in Ayurvedic Sciences ;
+        issn = 2279-0357 ;
+        eissn = 2581-8295
+      >
+
+      param[journal_issn] = 2279-0357
+      #param[base_url] = https://www.jdrasccras.com/
+
+      au < exists ; 2021 ; Journal of Drug Research in Ayurvedic Sciences Volume 6 ; 2021 ; 6 ; https://www.jdrasccras.com/ >
+      au < expected ; 2022 ; Journal of Drug Research in Ayurvedic Sciences Volume 7 ; 2022 ; 7 ; https://www.jdrasccras.com/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Indian College of Cardiology ;
+        issn = 1561-8811
+      >
+
+      param[journal_issn] = 1561-8811
+      #param[base_url] = https://www.joicc.org/
+
+      au < exists ; 2019 ; Journal of Indian College of Cardiology Volume 9 ; 2019 ; 9 ; https://www.joicc.org/ >
+      au < exists ; 2020 ; Journal of Indian College of Cardiology Volume 10 ; 2020 ; 10 ; https://www.joicc.org/ >
+      au < exists ; 2021 ; Journal of Indian College of Cardiology Volume 11 ; 2021 ; 11 ; https://www.joicc.org/ >
+      au < expected ; 2022 ; Journal of Indian College of Cardiology Volume 12 ; 2022 ; 12 ; https://www.joicc.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Indian System of Medicine ;
+        issn = 2320-4419 ;
+        eissn = 2455-5029
+      >
+
+      param[journal_issn] = 2320-4419
+      #param[base_url] = https://www.joinsysmed.com/
+
+      au < exists ; 2013 ; Journal of Indian System of Medicine Volume 1 ; 2013 ; 1 ; https://www.joinsysmed.com/ >
+      au < exists ; 2014 ; Journal of Indian System of Medicine Volume 2 ; 2014 ; 2 ; https://www.joinsysmed.com/ >
+      au < exists ; 2015 ; Journal of Indian System of Medicine Volume 3 ; 2015 ; 3 ; https://www.joinsysmed.com/ >
+      au < exists ; 2016 ; Journal of Indian System of Medicine Volume 4 ; 2016 ; 4 ; https://www.joinsysmed.com/ >
+      au < exists ; 2017 ; Journal of Indian System of Medicine Volume 5 ; 2017 ; 5 ; https://www.joinsysmed.com/ >
+      au < exists ; 2018 ; Journal of Indian System of Medicine Volume 6 ; 2018 ; 6 ; https://www.joinsysmed.com/ >
+      au < exists ; 2019 ; Journal of Indian System of Medicine Volume 7 ; 2019 ; 7 ; https://www.joinsysmed.com/ >
+      au < exists ; 2020 ; Journal of Indian System of Medicine Volume 8 ; 2020 ; 8 ; https://www.joinsysmed.com/ >
+      au < exists ; 2021 ; Journal of Indian System of Medicine Volume 9 ; 2021 ; 9 ; https://www.joinsysmed.com/ >
+      au < expected ; 2022 ; Journal of Indian System of Medicine Volume 10 ; 2022 ; 10 ; https://www.joinsysmed.com/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Indira Gandhi Institute Of Medical Sciences ;
+        issn = 2394-9031 ;
+        eissn = 2582-094X
+      >
+
+      param[journal_issn] = 2394-9031
+      #param[base_url] = https://www.jigims.co.in/
+
+      au < exists ; 2015 ; Journal of Indira Gandhi Institute Of Medical Sciences Volume 1 ; 2015 ; 1 ; https://www.jigims.co.in/ >
+      au < exists ; 2016 ; Journal of Indira Gandhi Institute Of Medical Sciences Volume 2 ; 2016 ; 2 ; https://www.jigims.co.in/ >
+      au < exists ; 2017 ; Journal of Indira Gandhi Institute Of Medical Sciences Volume 3 ; 2017 ; 3 ; https://www.jigims.co.in/ >
+      au < exists ; 2018 ; Journal of Indira Gandhi Institute Of Medical Sciences Volume 4 ; 2018 ; 4 ; https://www.jigims.co.in/ >
+      au < exists ; 2019 ; Journal of Indira Gandhi Institute Of Medical Sciences Volume 5 ; 2019 ; 5 ; https://www.jigims.co.in/ >
+      au < exists ; 2020 ; Journal of Indira Gandhi Institute Of Medical Sciences Volume 6 ; 2020 ; 6 ; https://www.jigims.co.in/ >
+      au < exists ; 2021 ; Journal of Indira Gandhi Institute Of Medical Sciences Volume 7 ; 2021 ; 7 ; https://www.jigims.co.in/ >
+      au < expected ; 2022 ; Journal of Indira Gandhi Institute Of Medical Sciences Volume 8 ; 2022 ; 8 ; https://www.jigims.co.in/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Integrated Health Sciences ;
+        issn = 2347-6486 ;
+        eissn = 2347-6494
+      >
+
+      param[journal_issn] = 2347-6486
+      #param[base_url] = https://www.jihs.in/
+
+      au < exists ; 2013 ; Journal of Integrated Health Sciences Volume 1 ; 2013 ; 1 ; https://www.jihs.in/ >
+      au < exists ; 2014 ; Journal of Integrated Health Sciences Volume 2 ; 2014 ; 2 ; https://www.jihs.in/ >
+      au < exists ; 2015 ; Journal of Integrated Health Sciences Volume 3 ; 2015 ; 3 ; https://www.jihs.in/ >
+      au < exists ; 2016 ; Journal of Integrated Health Sciences Volume 4 ; 2016 ; 4 ; https://www.jihs.in/ >
+      au < exists ; 2017 ; Journal of Integrated Health Sciences Volume 5 ; 2017 ; 5 ; https://www.jihs.in/ >
+      au < exists ; 2018 ; Journal of Integrated Health Sciences Volume 6 ; 2018 ; 6 ; https://www.jihs.in/ >
+      au < exists ; 2019 ; Journal of Integrated Health Sciences Volume 7 ; 2019 ; 7 ; https://www.jihs.in/ >
+      au < exists ; 2020 ; Journal of Integrated Health Sciences Volume 8 ; 2020 ; 8 ; https://www.jihs.in/ >
+      au < exists ; 2021 ; Journal of Integrated Health Sciences Volume 9 ; 2021 ; 9 ; https://www.jihs.in/ >
+      au < expected ; 2022 ; Journal of Integrated Health Sciences Volume 10 ; 2022 ; 10 ; https://www.jihs.in/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Integrative Nursing ;
+        issn = 2666-9854 ;
+        eissn = 2663-4481
+      >
+
+      param[journal_issn] = 2666-9854
+      #param[base_url] = https://www.journalin.org/
+
+      au < exists ; 2020 ; Journal of Integrative Nursing Volume 2 ; 2020 ; 2 ; https://www.journalin.org/ >
+      au < exists ; 2021 ; Journal of Integrative Nursing Volume 3 ; 2021 ; 3 ; https://www.journalin.org/ >
+      au < expected ; 2022 ; Journal of Integrative Nursing Volume 4 ; 2022 ; 4 ; https://www.journalin.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Medical Evidence ;
+        issn = 2667-0720 ;
+        eissn = 2667-0739
+      >
+
+      param[journal_issn] = 2667-0720
+      #param[base_url] = https://www.journaljme.org/
+
+      au < exists ; 2020 ; Journal of Medical Evidence Volume 1 ; 2020 ; 1 ; https://www.journaljme.org/ >
+      au < exists ; 2021 ; Journal of Medical Evidence Volume 2 ; 2021 ; 2 ; https://www.journaljme.org/ >
+      au < expected ; 2022 ; Journal of Medical Evidence Volume 3 ; 2022 ; 3 ; https://www.journaljme.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Nursing and Midwifery Sciences ;
+        issn = 2345-5756 ;
+        eissn = 2345-5764
+      >
+
+      param[journal_issn] = 2345-5756
+      #param[base_url] = https://www.jnmsjournal.org/
+
+      au < exists ; 2014 ; Journal of Nursing and Midwifery Sciences Volume 1 ; 2014 ; 1 ; https://www.jnmsjournal.org/ >
+      au < exists ; 2015 ; Journal of Nursing and Midwifery Sciences Volume 2 ; 2015 ; 2 ; https://www.jnmsjournal.org/ >
+      au < exists ; 2016 ; Journal of Nursing and Midwifery Sciences Volume 3 ; 2016 ; 3 ; https://www.jnmsjournal.org/ >
+      au < exists ; 2017 ; Journal of Nursing and Midwifery Sciences Volume 4 ; 2017 ; 4 ; https://www.jnmsjournal.org/ >
+      au < exists ; 2018 ; Journal of Nursing and Midwifery Sciences Volume 5 ; 2018 ; 5 ; https://www.jnmsjournal.org/ >
+      au < exists ; 2019 ; Journal of Nursing and Midwifery Sciences Volume 6 ; 2019 ; 6 ; https://www.jnmsjournal.org/ >
+      au < exists ; 2020 ; Journal of Nursing and Midwifery Sciences Volume 7 ; 2020 ; 7 ; https://www.jnmsjournal.org/ >
+      au < exists ; 2021 ; Journal of Nursing and Midwifery Sciences Volume 8 ; 2021 ; 8 ; https://www.jnmsjournal.org/ >
+      au < expected ; 2022 ; Journal of Nursing and Midwifery Sciences Volume 9 ; 2022 ; 9 ; https://www.jnmsjournal.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Orthopaedic Association of South Indian States ;
+        issn = 2667-3665 ;
+        eissn = 2667-3673
+      >
+
+      param[journal_issn] = 2667-3665
+      #param[base_url] = https://www.joasis.org/
+
+      au < exists ; 2020 ; Journal of Orthopaedic Association of South Indian States Volume 17 ; 2020 ; 17 ; https://www.joasis.org/ >
+      au < exists ; 2021 ; Journal of Orthopaedic Association of South Indian States Volume 18 ; 2021 ; 18 ; https://www.joasis.org/ >
+      au < expected ; 2022 ; Journal of Orthopaedic Association of South Indian States Volume 19 ; 2022 ; 19 ; https://www.joasis.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Orthopaedic Diseases and Traumatology ;
+        issn = 2665-9352 ;
+        eissn = 2665-9360
+      >
+
+      param[journal_issn] = 2665-9352
+      #param[base_url] = https://www.jodt.org/
+
+      au < exists ; 2018 ; Journal of Orthopaedic Diseases and Traumatology Volume 1 ; 2018 ; 1 ; https://www.jodt.org/ >
+      au < exists ; 2019 ; Journal of Orthopaedic Diseases and Traumatology Volume 2 ; 2019 ; 2 ; https://www.jodt.org/ >
+      au < exists ; 2020 ; Journal of Orthopaedic Diseases and Traumatology Volume 3 ; 2020 ; 3 ; https://www.jodt.org/ >
+      au < exists ; 2021 ; Journal of Orthopaedic Diseases and Traumatology Volume 4 ; 2021 ; 4 ; https://www.jodt.org/ >
+      au < expected ; 2022 ; Journal of Orthopaedic Diseases and Traumatology Volume 5 ; 2022 ; 5 ; https://www.jodt.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Orthopaedics and Spine ;
+        eissn = 2666-7150
+      >
+
+      param[journal_issn] = 2666-7150
+      #param[base_url] = https://www.joas.in/
+
+      au < exists ; 2013 ; Journal of Orthopaedics and Spine Volume 1 ; 2013 ; 1 ; https://www.joas.in/ >
+      au < exists ; 2014 ; Journal of Orthopaedics and Spine Volume 2 ; 2014 ; 2 ; https://www.joas.in/ >
+      au < exists ; 2015 ; Journal of Orthopaedics and Spine Volume 3 ; 2015 ; 3 ; https://www.joas.in/ >
+      au < exists ; 2016 ; Journal of Orthopaedics and Spine Volume 4 ; 2016 ; 4 ; https://www.joas.in/ >
+      au < exists ; 2017 ; Journal of Orthopaedics and Spine Volume 5 ; 2017 ; 5 ; https://www.joas.in/ >
+      au < exists ; 2018 ; Journal of Orthopaedics and Spine Volume 6 ; 2018 ; 6 ; https://www.joas.in/ >
+      au < exists ; 2019 ; Journal of Orthopaedics and Spine Volume 7 ; 2019 ; 7 ; https://www.joas.in/ >
+      au < exists ; 2020 ; Journal of Orthopaedics and Spine Volume 8 ; 2020 ; 8 ; https://www.joas.in/ >
+      au < exists ; 2021 ; Journal of Orthopaedics and Spine Volume 9 ; 2021 ; 9 ; https://www.joas.in/ >
+      au < expected ; 2022 ; Journal of Orthopaedics and Spine Volume 10 ; 2022 ; 10 ; https://www.joas.in/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Precision Oncology ;
+        issn = 2667-3517 ;
+        eissn = 2667-3525
+      >
+
+      param[journal_issn] = 2667-3517
+      #param[base_url] = https://jprecisiononcology.com/
+
+      au < exists ; 2021 ; Journal of Precision Oncology Volume 1 ; 2021 ; 1 ; https://jprecisiononcology.com/ >
+      au < expected ; 2022 ; Journal of Precision Oncology Volume 2 ; 2022 ; 2 ; https://jprecisiononcology.com/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Primary Care Dentistry and Oral Health ;
+        issn = 2772-3534 ;
+        eissn = 2772-3542
+      >
+
+      param[journal_issn] = 2772-3534
+      #param[base_url] = https://www.jpcdoh.org/
+
+      au < exists ; 2020 ; Journal of Primary Care Dentistry and Oral Health Volume 1 ; 2020 ; 1 ; https://www.jpcdoh.org/ >
+      au < exists ; 2021 ; Journal of Primary Care Dentistry and Oral Health Volume 2 ; 2021 ; 2 ; https://www.jpcdoh.org/ >
+      au < expected ; 2022 ; Journal of Primary Care Dentistry and Oral Health Volume 3 ; 2022 ; 3 ; https://www.jpcdoh.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Primary Care Specialties ;
+        issn = 2772-3615 ;
+        eissn = 2772-3623
+      >
+
+      param[journal_issn] = 2772-3615
+      #param[base_url] = https://www.jpcsonline.org/
+
+      au < exists ; 2020 ; Journal of Primary Care Specialties Volume 2 ; 2020 ; 2 ; https://www.jpcsonline.org/ >
+      au < exists ; 2021 ; Journal of Primary Care Specialties Volume 3 ; 2021 ; 3 ; https://www.jpcsonline.org/ >
+      au < expected ; 2022 ; Journal of Primary Care Specialties Volume 4 ; 2022 ; 4 ; https://www.jpcsonline.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Public Health and Primary Care ;
+        issn = 2772-3666 ;
+        eissn = 2772-3674
+      >
+
+      param[journal_issn] = 2772-3666
+      #param[base_url] = https://www.jphpc.org/
+
+      au < exists ; 2020 ; Journal of Public Health and Primary Care Volume 1 ; 2020 ; 1 ; https://www.jphpc.org/ >
+      au < exists ; 2021 ; Journal of Public Health and Primary Care Volume 2 ; 2021 ; 2 ; https://www.jphpc.org/ >
+      au < expected ; 2022 ; Journal of Public Health and Primary Care Volume 3 ; 2022 ; 3 ; https://www.jphpc.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Radiation Medicine in the Tropics ;
+        eissn = 2667-2537
+      >
+
+      param[journal_issn] = 2667-2537
+      #param[base_url] = https://www.jrmt.org/
+
+      au < exists ; 2020 ; Journal of Radiation Medicine in the Tropics Volume 1 ; 2020 ; 1 ; https://www.jrmt.org/ >
+      au < exists ; 2021 ; Journal of Radiation Medicine in the Tropics Volume 2 ; 2021 ; 2 ; https://www.jrmt.org/ >
+      au < expected ; 2022 ; Journal of Radiation Medicine in the Tropics Volume 3 ; 2022 ; 3 ; https://www.jrmt.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Research in Ayurvedic Sciences ;
+        issn = 2456-5601 ;
+        eissn = 2581-9895
+      >
+
+      param[journal_issn] = 2456-5601
+      #param[base_url] = https://www.jrasccras.com/
+
+      au < exists ; 2021 ; Journal of Research in Ayurvedic Sciences Volume 5 ; 2021 ; 5 ; https://www.jrasccras.com/ >
+      au < expected ; 2022 ; Journal of Research in Ayurvedic Sciences Volume 6 ; 2022 ; 6 ; https://www.jrasccras.com/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Research in Siddha Medicine ;
+        eissn = 2582-1954
+      >
+
+      param[journal_issn] = 2582-1954
+      #param[base_url] = https://www.jrsm.in/
+
+      au < exists ; 2018 ; Journal of Research in Siddha Medicine Volume 1 ; 2018 ; 1 ; https://www.jrsm.in/ >
+      au < exists ; 2019 ; Journal of Research in Siddha Medicine Volume 2 ; 2019 ; 2 ; https://www.jrsm.in/ >
+      au < exists ; 2020 ; Journal of Research in Siddha Medicine Volume 3 ; 2020 ; 3 ; https://www.jrsm.in/ >
+      au < exists ; 2021 ; Journal of Research in Siddha Medicine Volume 4 ; 2021 ; 4 ; https://www.jrsm.in/ >
+      au < expected ; 2022 ; Journal of Research in Siddha Medicine Volume 5 ; 2022 ; 5 ; https://www.jrsm.in/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Society of Indian Physiotherapists ;
+        issn = 2456-7787 ;
+        eissn = 2582-0702
+      >
+
+      param[journal_issn] = 2456-7787
+      #param[base_url] = https://www.jsip-physio.org/
+
+      au < exists ; 2017 ; Journal of Society of Indian Physiotherapists Volume 1 ; 2017 ; 1 ; https://www.jsip-physio.org/ >
+      au < exists ; 2018 ; Journal of Society of Indian Physiotherapists Volume 2 ; 2018 ; 2 ; https://www.jsip-physio.org/ >
+      au < exists ; 2019 ; Journal of Society of Indian Physiotherapists Volume 3 ; 2019 ; 3 ; https://www.jsip-physio.org/ >
+      au < exists ; 2020 ; Journal of Society of Indian Physiotherapists Volume 4 ; 2020 ; 4 ; https://www.jsip-physio.org/ >
+      au < exists ; 2021 ; Journal of Society of Indian Physiotherapists Volume 5 ; 2021 ; 5 ; https://www.jsip-physio.org/ >
+      au < expected ; 2022 ; Journal of Society of Indian Physiotherapists Volume 6 ; 2022 ; 6 ; https://www.jsip-physio.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Surgical Specialties and Rural Practice ;
+        issn = 2772-3143 ;
+        eissn = 2772-3151
+      >
+
+      param[journal_issn] = 2772-3143
+      #param[base_url] = https://www.jssrp.org/
+
+      au < exists ; 2020 ; Journal of Surgical Specialties and Rural Practice Volume 1 ; 2020 ; 1 ; https://www.jssrp.org/ >
+      au < exists ; 2021 ; Journal of Surgical Specialties and Rural Practice Volume 2 ; 2021 ; 2 ; https://www.jssrp.org/ >
+      au < expected ; 2022 ; Journal of Surgical Specialties and Rural Practice Volume 3 ; 2022 ; 3 ; https://www.jssrp.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of The Anatomical Society of India ;
+        issn = 0003-2778 ;
+        eissn = 2352-3050
+      >
+
+      param[journal_issn] = 0003-2778
+      #param[base_url] = https://www.jasi.org.in/
+
+      au < exists ; 2019 ; Journal of The Anatomical Society of India Volume 68 ; 2019 ; 68 ; https://www.jasi.org.in/ >
+      au < exists ; 2020 ; Journal of The Anatomical Society of India Volume 69 ; 2020 ; 69 ; https://www.jasi.org.in/ >
+      au < exists ; 2021 ; Journal of The Anatomical Society of India Volume 70 ; 2021 ; 70 ; https://www.jasi.org.in/ >
+      au < expected ; 2022 ; Journal of The Anatomical Society of India Volume 71 ; 2022 ; 71 ; https://www.jasi.org.in/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of the Indian Academy of Geriatrics ;
+        issn = 0974-3405 ;
+        eissn = 0974-2484
+      >
+
+      param[journal_issn] = 0974-3405
+      #param[base_url] = https://www.jiag.in/
+
+      au < exists ; 2016 ; Journal of the Indian Academy of Geriatrics Volume 12 ; 2016 ; 12 ; https://www.jiag.in/ >
+      au < exists ; 2017 ; Journal of the Indian Academy of Geriatrics Volume 13 ; 2017 ; 13 ; https://www.jiag.in/ >
+      au < exists ; 2018 ; Journal of the Indian Academy of Geriatrics Volume 14 ; 2018 ; 14 ; https://www.jiag.in/ >
+      au < exists ; 2019 ; Journal of the Indian Academy of Geriatrics Volume 15 ; 2019 ; 15 ; https://www.jiag.in/ >
+      au < exists ; 2020 ; Journal of the Indian Academy of Geriatrics Volume 16 ; 2020 ; 16 ; https://www.jiag.in/ >
+      au < exists ; 2021 ; Journal of the Indian Academy of Geriatrics Volume 17 ; 2021 ; 17 ; https://www.jiag.in/ >
+      au < expected ; 2022 ; Journal of the Indian Academy of Geriatrics Volume 18 ; 2022 ; 18 ; https://www.jiag.in/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of the Medical Women's Association of Nigeria ;
+        issn = 1596-896X
+      >
+
+      param[journal_issn] = 1596-896X
+      #param[base_url] = https://www.jmwan.org/
+
+      au < exists ; 2021 ; Journal of the Medical Women's Association of Nigeria Volume 6 ; 2021 ; 6 ; https://www.jmwan.org/ >
+      au < expected ; 2022 ; Journal of the Medical Women's Association of Nigeria Volume 7 ; 2022 ; 7 ; https://www.jmwan.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of the Pediatrics Association of India ;
+        issn = 2667-3592 ;
+        eissn = 2667-3606
+      >
+
+      param[journal_issn] = 2667-3592
+      #param[base_url] = https://www.jpai.in/
+
+      au < exists ; 2012 ; Journal of the Pediatrics Association of India Volume 1 ; 2012 ; 1 ; https://www.jpai.in/ >
+      au < exists ; 2013 ; Journal of the Pediatrics Association of India Volume 2 ; 2013 ; 2 ; https://www.jpai.in/ >
+      au < exists ; 2014 ; Journal of the Pediatrics Association of India Volume 3 ; 2014 ; 3 ; https://www.jpai.in/ >
+      au < exists ; 2015 ; Journal of the Pediatrics Association of India Volume 4 ; 2015 ; 4 ; https://www.jpai.in/ >
+      au < exists ; 2016 ; Journal of the Pediatrics Association of India Volume 5 ; 2016 ; 5 ; https://www.jpai.in/ >
+      au < exists ; 2017 ; Journal of the Pediatrics Association of India Volume 6 ; 2017 ; 6 ; https://www.jpai.in/ >
+      au < exists ; 2018 ; Journal of the Pediatrics Association of India Volume 7 ; 2018 ; 7 ; https://www.jpai.in/ >
+      au < exists ; 2019 ; Journal of the Pediatrics Association of India Volume 8 ; 2019 ; 8 ; https://www.jpai.in/ >
+      au < exists ; 2020 ; Journal of the Pediatrics Association of India Volume 9 ; 2020 ; 9 ; https://www.jpai.in/ >
+      au < exists ; 2021 ; Journal of the Pediatrics Association of India Volume 10 ; 2021 ; 10 ; https://www.jpai.in/ >
+      au < expected ; 2022 ; Journal of the Pediatrics Association of India Volume 11 ; 2022 ; 11 ; https://www.jpai.in/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of West African College of Surgeons ;
+        issn = 2276-6944
+      >
+
+      param[journal_issn] = 2276-6944
+      #param[base_url] = https://jwacs-jcoac.com/
+
+      au < exists ; 2019 ; Journal of West African College of Surgeons Volume 9 ; 2019 ; 9 ; https://jwacs-jcoac.com/ >
+      au < exists ; 2020 ; Journal of West African College of Surgeons Volume 10 ; 2020 ; 10 ; https://jwacs-jcoac.com/ >
+      au < exists ; 2021 ; Journal of West African College of Surgeons Volume 11 ; 2021 ; 11 ; https://jwacs-jcoac.com/ >
+      au < expected ; 2022 ; Journal of West African College of Surgeons Volume 12 ; 2022 ; 12 ; https://jwacs-jcoac.com/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal on Recent Advances in Pain ;
+        issn = 2454-6607 ;
+        eissn = 2455-4995
+      >
+
+      param[journal_issn] = 2454-6607
+      #param[base_url] = https://www.jorapain.com/
+
+      au < exists ; 2015 ; Journal on Recent Advances in Pain Volume 1 ; 2015 ; 1 ; https://www.jorapain.com/ >
+      au < exists ; 2016 ; Journal on Recent Advances in Pain Volume 2 ; 2016 ; 2 ; https://www.jorapain.com/ >
+      au < exists ; 2017 ; Journal on Recent Advances in Pain Volume 3 ; 2017 ; 3 ; https://www.jorapain.com/ >
+      au < exists ; 2018 ; Journal on Recent Advances in Pain Volume 4 ; 2018 ; 4 ; https://www.jorapain.com/ >
+      au < exists ; 2019 ; Journal on Recent Advances in Pain Volume 5 ; 2019 ; 5 ; https://www.jorapain.com/ >
+      au < exists ; 2020 ; Journal on Recent Advances in Pain Volume 6 ; 2020 ; 6 ; https://www.jorapain.com/ >
+      au < exists ; 2021 ; Journal on Recent Advances in Pain Volume 7 ; 2021 ; 7 ; https://www.jorapain.com/ >
+      au < expected ; 2022 ; Journal on Recent Advances in Pain Volume 8 ; 2022 ; 8 ; https://www.jorapain.com/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Kerala Heart Journal ;
+        issn = 2347-5267 ;
+        eissn = 2454-6755
+      >
+
+      param[journal_issn] = 2347-5267
+      #param[base_url] = https://www.csikhj.com/
+
+      au < exists ; 2021 ; Kerala Heart Journal Volume 10 ; 2021 ; 10 ; https://www.csikhj.com/ >
+      au < expected ; 2022 ; Kerala Heart Journal Volume 11 ; 2022 ; 11 ; https://www.csikhj.com/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Kerala Surgical Journal ;
+        issn = 0973-3051 ;
+        eissn = 2667-369X
+      >
+
+      param[journal_issn] = 0973-3051
+      #param[base_url] = https://www.keralasurgj.com/
+
+      au < exists ; 2020 ; Kerala Surgical Journal Volume 26 ; 2020 ; 26 ; https://www.keralasurgj.com/ >
+      au < exists ; 2021 ; Kerala Surgical Journal Volume 27 ; 2021 ; 27 ; https://www.keralasurgj.com/ >
+      au < expected ; 2022 ; Kerala Surgical Journal Volume 28 ; 2022 ; 28 ; https://www.keralasurgj.com/ >
+
+  }
+
+
+  {
+
+      title <
+        name = King Khalid University Journal of Health Sciences ;
+        issn = 2772-4832 ;
+        eissn = 2772-4840
+      >
+
+      param[journal_issn] = 2772-4832
+      #param[base_url] = https://www.kkujhs.org/
+
+      au < exists ; 2016 ; King Khalid University Journal of Health Sciences Volume 1 ; 2016 ; 1 ; https://www.kkujhs.org/ >
+      au < exists ; 2017 ; King Khalid University Journal of Health Sciences Volume 2 ; 2017 ; 2 ; https://www.kkujhs.org/ >
+      au < exists ; 2018 ; King Khalid University Journal of Health Sciences Volume 3 ; 2018 ; 3 ; https://www.kkujhs.org/ >
+      au < exists ; 2019 ; King Khalid University Journal of Health Sciences Volume 4 ; 2019 ; 4 ; https://www.kkujhs.org/ >
+      au < exists ; 2020 ; King Khalid University Journal of Health Sciences Volume 5 ; 2020 ; 5 ; https://www.kkujhs.org/ >
+      au < exists ; 2021 ; King Khalid University Journal of Health Sciences Volume 6 ; 2021 ; 6 ; https://www.kkujhs.org/ >
+      au < expected ; 2022 ; King Khalid University Journal of Health Sciences Volume 7 ; 2022 ; 7 ; https://www.kkujhs.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Malaysian Journal of Movement, Health and Exercise ;
+        issn = 2600-9404 ;
+        eissn = 2600-9455
+      >
+
+      param[journal_issn] = 2600-9404
+      #param[base_url] = https://www.mohejournal.org/
+
+      au < exists ; 2013 ; Malaysian Journal of Movement, Health and Exercise Volume 2 ; 2013 ; 2 ; https://www.mohejournal.org/ >
+      au < exists ; 2014 ; Malaysian Journal of Movement, Health and Exercise Volume 3 ; 2014 ; 3 ; https://www.mohejournal.org/ >
+      au < exists ; 2015 ; Malaysian Journal of Movement, Health and Exercise Volume 4 ; 2015 ; 4 ; https://www.mohejournal.org/ >
+      au < exists ; 2016 ; Malaysian Journal of Movement, Health and Exercise Volume 5 ; 2016 ; 5 ; https://www.mohejournal.org/ >
+      au < exists ; 2017 ; Malaysian Journal of Movement, Health and Exercise Volume 6 ; 2017 ; 6 ; https://www.mohejournal.org/ >
+      au < exists ; 2018 ; Malaysian Journal of Movement, Health and Exercise Volume 7 ; 2018 ; 7 ; https://www.mohejournal.org/ >
+      au < exists ; 2019 ; Malaysian Journal of Movement, Health and Exercise Volume 8 ; 2019 ; 8 ; https://www.mohejournal.org/ >
+      au < exists ; 2020 ; Malaysian Journal of Movement, Health and Exercise Volume 9 ; 2020 ; 9 ; https://www.mohejournal.org/ >
+      au < exists ; 2021 ; Malaysian Journal of Movement, Health and Exercise Volume 10 ; 2021 ; 10 ; https://www.mohejournal.org/ >
+      au < expected ; 2022 ; Malaysian Journal of Movement, Health and Exercise Volume 11 ; 2022 ; 11 ; https://www.mohejournal.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Matrix Science Medica ;
+        issn = 2521-0807 ;
+        eissn = 2521-0424
+      >
+
+      param[journal_issn] = 2521-0807
+      #param[base_url] = https://www.matrixscimed.org/
+
+      au < exists ; 2019 ; Matrix Science Medica Volume 3 ; 2019 ; 3 ; https://www.matrixscimed.org/ >
+      au < exists ; 2020 ; Matrix Science Medica Volume 4 ; 2020 ; 4 ; https://www.matrixscimed.org/ >
+      au < exists ; 2021 ; Matrix Science Medica Volume 5 ; 2021 ; 5 ; https://www.matrixscimed.org/ >
+      au < expected ; 2022 ; Matrix Science Medica Volume 6 ; 2022 ; 6 ; https://www.matrixscimed.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Matrix Science Pharma ;
+        issn = 2521-0815 ;
+        eissn = 2521-0432
+      >
+
+      param[journal_issn] = 2521-0815
+      #param[base_url] = https://www.matrixscipharma.org/
+
+      au < exists ; 2019 ; Matrix Science Pharma Volume 3 ; 2019 ; 3 ; https://www.matrixscipharma.org/ >
+      au < exists ; 2020 ; Matrix Science Pharma Volume 4 ; 2020 ; 4 ; https://www.matrixscipharma.org/ >
+      au < exists ; 2021 ; Matrix Science Pharma Volume 5 ; 2021 ; 5 ; https://www.matrixscipharma.org/ >
+      au < expected ; 2022 ; Matrix Science Pharma Volume 6 ; 2022 ; 6 ; https://www.matrixscipharma.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = MGM Journal of Medical Sciences ;
+        issn = 2347-7946 ;
+        eissn = 2347-7962
+      >
+
+      param[journal_issn] = 2347-7946
+      #param[base_url] = https://www.mgmjms.com/
+
+      au < exists ; 2019 ; MGM Journal of Medical Sciences Volume 6 ; 2019 ; 6 ; https://www.mgmjms.com/ >
+      au < exists ; 2020 ; MGM Journal of Medical Sciences Volume 7 ; 2020 ; 7 ; https://www.mgmjms.com/ >
+      au < exists ; 2021 ; MGM Journal of Medical Sciences Volume 8 ; 2021 ; 8 ; https://www.mgmjms.com/ >
+      au < expected ; 2022 ; MGM Journal of Medical Sciences Volume 9 ; 2022 ; 9 ; https://www.mgmjms.com/ >
+
+  }
+
+
+  {
+
+      title <
+        name = MRIMS Journal of Health Sciences ;
+        issn = 2321-7006 ;
+        eissn = 2321-7294
+      >
+
+      param[journal_issn] = 2321-7006
+      #param[base_url] = https://www.mrimsjournal.com/
+
+      au < exists ; 2013 ; MRIMS Journal of Health Sciences Volume 1 ; 2013 ; 1 ; https://www.mrimsjournal.com/ >
+      au < exists ; 2014 ; MRIMS Journal of Health Sciences Volume 2 ; 2014 ; 2 ; https://www.mrimsjournal.com/ >
+      au < exists ; 2015 ; MRIMS Journal of Health Sciences Volume 3 ; 2015 ; 3 ; https://www.mrimsjournal.com/ >
+      au < exists ; 2016 ; MRIMS Journal of Health Sciences Volume 4 ; 2016 ; 4 ; https://www.mrimsjournal.com/ >
+      au < exists ; 2017 ; MRIMS Journal of Health Sciences Volume 5 ; 2017 ; 5 ; https://www.mrimsjournal.com/ >
+      au < exists ; 2018 ; MRIMS Journal of Health Sciences Volume 6 ; 2018 ; 6 ; https://www.mrimsjournal.com/ >
+      au < exists ; 2019 ; MRIMS Journal of Health Sciences Volume 7 ; 2019 ; 7 ; https://www.mrimsjournal.com/ >
+      au < exists ; 2020 ; MRIMS Journal of Health Sciences Volume 8 ; 2020 ; 8 ; https://www.mrimsjournal.com/ >
+      au < exists ; 2021 ; MRIMS Journal of Health Sciences Volume 9 ; 2021 ; 9 ; https://www.mrimsjournal.com/ >
+      au < expected ; 2022 ; MRIMS Journal of Health Sciences Volume 10 ; 2022 ; 10 ; https://www.mrimsjournal.com/ >
+
+  }
+
+
+  {
+
+      title <
+        name = National Journal of Clinical Anatomy ;
+        issn = 2277-4025 ;
+        eissn = 2321-2780
+      >
+
+      param[journal_issn] = 2277-4025
+      #param[base_url] = https://www.njca.info/
+
+      au < exists ; 2012 ; National Journal of Clinical Anatomy Volume 1 ; 2012 ; 1 ; https://www.njca.info/ >
+      au < exists ; 2013 ; National Journal of Clinical Anatomy Volume 2 ; 2013 ; 2 ; https://www.njca.info/ >
+      au < exists ; 2014 ; National Journal of Clinical Anatomy Volume 3 ; 2014 ; 3 ; https://www.njca.info/ >
+      au < exists ; 2015 ; National Journal of Clinical Anatomy Volume 4 ; 2015 ; 4 ; https://www.njca.info/ >
+      au < exists ; 2016 ; National Journal of Clinical Anatomy Volume 5 ; 2016 ; 5 ; https://www.njca.info/ >
+      au < exists ; 2017 ; National Journal of Clinical Anatomy Volume 6 ; 2017 ; 6 ; https://www.njca.info/ >
+      au < exists ; 2018 ; National Journal of Clinical Anatomy Volume 7 ; 2018 ; 7 ; https://www.njca.info/ >
+      au < exists ; 2019 ; National Journal of Clinical Anatomy Volume 8 ; 2019 ; 8 ; https://www.njca.info/ >
+      au < exists ; 2020 ; National Journal of Clinical Anatomy Volume 9 ; 2020 ; 9 ; https://www.njca.info/ >
+      au < exists ; 2021 ; National Journal of Clinical Anatomy Volume 10 ; 2021 ; 10 ; https://www.njca.info/ >
+      au < expected ; 2022 ; National Journal of Clinical Anatomy Volume 11 ; 2022 ; 11 ; https://www.njca.info/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Neurological Sciences and Neurophysiology ;
+        eissn = 2636-865X
+      >
+
+      param[journal_issn] = 2636-865X
+      #param[base_url] = https://www.nsnjournal.org/
+
+      au < exists ; 2020 ; Neurological Sciences and Neurophysiology Volume 37 ; 2020 ; 37 ; https://www.nsnjournal.org/ >
+      au < exists ; 2021 ; Neurological Sciences and Neurophysiology Volume 38 ; 2021 ; 38 ; https://www.nsnjournal.org/ >
+      au < expected ; 2022 ; Neurological Sciences and Neurophysiology Volume 39 ; 2022 ; 39 ; https://www.nsnjournal.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Nigerian Journal of Medicine ;
+        issn = 1115-2613 ;
+        eissn = 2667-0526
+      >
+
+      param[journal_issn] = 1115-2613
+      #param[base_url] = https://www.njmonline.org/
+
+      au < exists ; 2010 ; Nigerian Journal of Medicine Volume 19 ; 2010 ; 19 ; https://www.njmonline.org/ >
+      au < exists ; 2011 ; Nigerian Journal of Medicine Volume 20 ; 2011 ; 20 ; https://www.njmonline.org/ >
+      au < exists ; 2012 ; Nigerian Journal of Medicine Volume 21 ; 2012 ; 21 ; https://www.njmonline.org/ >
+      au < exists ; 2013 ; Nigerian Journal of Medicine Volume 22 ; 2013 ; 22 ; https://www.njmonline.org/ >
+      au < exists ; 2014 ; Nigerian Journal of Medicine Volume 23 ; 2014 ; 23 ; https://www.njmonline.org/ >
+      au < exists ; 2015 ; Nigerian Journal of Medicine Volume 24 ; 2015 ; 24 ; https://www.njmonline.org/ >
+      au < exists ; 2016 ; Nigerian Journal of Medicine Volume 25 ; 2016 ; 25 ; https://www.njmonline.org/ >
+      au < exists ; 2017 ; Nigerian Journal of Medicine Volume 26 ; 2017 ; 26 ; https://www.njmonline.org/ >
+      au < exists ; 2018 ; Nigerian Journal of Medicine Volume 27 ; 2018 ; 27 ; https://www.njmonline.org/ >
+      au < exists ; 2019 ; Nigerian Journal of Medicine Volume 28 ; 2019 ; 28 ; https://www.njmonline.org/ >
+      au < exists ; 2020 ; Nigerian Journal of Medicine Volume 29 ; 2020 ; 29 ; https://www.njmonline.org/ >
+      au < exists ; 2021 ; Nigerian Journal of Medicine Volume 30 ; 2021 ; 30 ; https://www.njmonline.org/ >
+      au < expected ; 2022 ; Nigerian Journal of Medicine Volume 31 ; 2022 ; 31 ; https://www.njmonline.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Paediatric Nephrology Journal of Bangladesh ;
+        issn = 2709-0450 ;
+        eissn = 2773-1359
+      >
+
+      param[journal_issn] = 2709-0450
+      #param[base_url] = https://www.pnjb-online.org/
+
+      au < exists ; 2021 ; Paediatric Nephrology Journal of Bangladesh Volume 6 ; 2021 ; 6 ; https://www.pnjb-online.org/ >
+      au < expected ; 2022 ; Paediatric Nephrology Journal of Bangladesh Volume 7 ; 2022 ; 7 ; https://www.pnjb-online.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = QAI Journal for Healthcare Quality and Patient Safety ;
+        issn = 2666-3848 ;
+        eissn = 2666-3856
+      >
+
+      param[journal_issn] = 2666-3848
+      #param[base_url] = https://www.qaij.org/
+
+      au < exists ; 2019 ; QAI Journal for Healthcare Quality and Patient Safety Volume 1 ; 2019 ; 1 ; https://www.qaij.org/ >
+      au < exists ; 2020 ; QAI Journal for Healthcare Quality and Patient Safety Volume 2 ; 2020 ; 2 ; https://www.qaij.org/ >
+      au < exists ; 2021 ; QAI Journal for Healthcare Quality and Patient Safety Volume 3 ; 2021 ; 3 ; https://www.qaij.org/ >
+      au < expected ; 2022 ; QAI Journal for Healthcare Quality and Patient Safety Volume 4 ; 2022 ; 4 ; https://www.qaij.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Radiology of Infectious Diseases ;
+        issn = 2352-6211 ;
+        eissn = 2352-622X
+      >
+
+      param[journal_issn] = 2352-6211
+      #param[base_url] = https://www.ridiseases.org/
+
+      au < exists ; 2021 ; Radiology of Infectious Diseases Volume 8 ; 2021 ; 8 ; https://www.ridiseases.org/ >
+      au < expected ; 2022 ; Radiology of Infectious Diseases Volume 9 ; 2022 ; 9 ; https://www.ridiseases.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Santosh University Journal of Health Sciences ;
+        eissn = 2455-1732
+      >
+
+      param[journal_issn] = 2455-1732
+      #param[base_url] = https://www.sujhs.org/
+
+      au < exists ; 2021 ; Santosh University Journal of Health Sciences Volume 1 ; 2021 ; 1 ; https://www.sujhs.org/ >
+      au < expected ; 2022 ; Santosh University Journal of Health Sciences Volume 2 ; 2022 ; 2 ; https://www.sujhs.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Saudi Journal of Ophthalmology ;
+        issn = 1319-4534 ;
+        eissn = 2542-6680
+      >
+
+      param[journal_issn] = 1319-4534
+      #param[base_url] = https://www.saudijophthalmol.org/
+
+      au < exists ; 2020 ; Saudi Journal of Ophthalmology Volume 34 ; 2020 ; 34 ; https://www.saudijophthalmol.org/ >
+      au < exists ; 2021 ; Saudi Journal of Ophthalmology Volume 35 ; 2021 ; 35 ; https://www.saudijophthalmol.org/ >
+      au < expected ; 2022 ; Saudi Journal of Ophthalmology Volume 36 ; 2022 ; 36 ; https://www.saudijophthalmol.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Saudi Journal of Otorhinolaryngology Head and Neck Surgery ;
+        issn = 1319-8491
+      >
+
+      param[journal_issn] = 1319-8491
+      #param[base_url] = https://www.sjohns.org/
+
+      au < exists ; 1999 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 1 ; 1999 ; 1 ; https://www.sjohns.org/ >
+      au < exists ; 2000 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 2 ; 2000 ; 2 ; https://www.sjohns.org/ >
+      au < exists ; 2001 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 3 ; 2001 ; 3 ; https://www.sjohns.org/ >
+      au < exists ; 2002 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 4 ; 2002 ; 4 ; https://www.sjohns.org/ >
+      au < exists ; 2003 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 5 ; 2003 ; 5 ; https://www.sjohns.org/ >
+      au < exists ; 2004 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 6 ; 2004 ; 6 ; https://www.sjohns.org/ >
+      au < exists ; 2005 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 7 ; 2005 ; 7 ; https://www.sjohns.org/ >
+      au < exists ; 2006 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 8 ; 2006 ; 8 ; https://www.sjohns.org/ >
+      au < exists ; 2007 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 9 ; 2007 ; 9 ; https://www.sjohns.org/ >
+      au < exists ; 2008 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 10 ; 2008 ; 10 ; https://www.sjohns.org/ >
+      au < exists ; 2009 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 11 ; 2009 ; 11 ; https://www.sjohns.org/ >
+      au < exists ; 2010 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 12 ; 2010 ; 12 ; https://www.sjohns.org/ >
+      au < exists ; 2011 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 13 ; 2011 ; 13 ; https://www.sjohns.org/ >
+      au < exists ; 2012 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 14 ; 2012 ; 14 ; https://www.sjohns.org/ >
+      au < exists ; 2013 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 15 ; 2013 ; 15 ; https://www.sjohns.org/ >
+      au < exists ; 2014 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 16 ; 2014 ; 16 ; https://www.sjohns.org/ >
+      au < exists ; 2015 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 17 ; 2015 ; 17 ; https://www.sjohns.org/ >
+      au < exists ; 2016 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 18 ; 2016 ; 18 ; https://www.sjohns.org/ >
+      au < exists ; 2017 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 19 ; 2017 ; 19 ; https://www.sjohns.org/ >
+      au < exists ; 2018 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 20 ; 2018 ; 20 ; https://www.sjohns.org/ >
+      au < exists ; 2019 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 21 ; 2019 ; 21 ; https://www.sjohns.org/ >
+      au < exists ; 2020 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 22 ; 2020 ; 22 ; https://www.sjohns.org/ >
+      au < exists ; 2021 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 23 ; 2021 ; 23 ; https://www.sjohns.org/ >
+      au < expected ; 2022 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 24 ; 2022 ; 24 ; https://www.sjohns.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Scientific Dental Journal ;
+        issn = 2580-6548 ;
+        eissn = 2541-321X
+      >
+
+      param[journal_issn] = 2580-6548
+      #param[base_url] = https://www.scidentj.com/
+
+      au < exists ; 2017 ; Scientific Dental Journal Volume 1 ; 2017 ; 1 ; https://www.scidentj.com/ >
+      au < exists ; 2018 ; Scientific Dental Journal Volume 2 ; 2018 ; 2 ; https://www.scidentj.com/ >
+      au < exists ; 2019 ; Scientific Dental Journal Volume 3 ; 2019 ; 3 ; https://www.scidentj.com/ >
+      au < exists ; 2020 ; Scientific Dental Journal Volume 4 ; 2020 ; 4 ; https://www.scidentj.com/ >
+      au < exists ; 2021 ; Scientific Dental Journal Volume 5 ; 2021 ; 5 ; https://www.scidentj.com/ >
+      au < expected ; 2022 ; Scientific Dental Journal Volume 6 ; 2022 ; 6 ; https://www.scidentj.com/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Social Health and Behavior ;
+        eissn = 2772-4204
+      >
+
+      param[journal_issn] = 2772-4204
+      #param[base_url] = https://www.shbonweb.com/
+
+      au < exists ; 2018 ; Social Health and Behavior Volume 1 ; 2018 ; 1 ; https://www.shbonweb.com/ >
+      au < exists ; 2019 ; Social Health and Behavior Volume 2 ; 2019 ; 2 ; https://www.shbonweb.com/ >
+      au < exists ; 2020 ; Social Health and Behavior Volume 3 ; 2020 ; 3 ; https://www.shbonweb.com/ >
+      au < exists ; 2021 ; Social Health and Behavior Volume 4 ; 2021 ; 4 ; https://www.shbonweb.com/ >
+      au < expected ; 2022 ; Social Health and Behavior Volume 5 ; 2022 ; 5 ; https://www.shbonweb.com/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Taiwanese Journal of Psychiatry ;
+        issn = 1028-3684 ;
+        eissn = 2666-2078
+      >
+
+      param[journal_issn] = 1028-3684
+      #param[base_url] = https://www.e-tjp.org/
+
+      au < exists ; 2019 ; Taiwanese Journal of Psychiatry Volume 33 ; 2019 ; 33 ; https://www.e-tjp.org/ >
+      au < exists ; 2020 ; Taiwanese Journal of Psychiatry Volume 34 ; 2020 ; 34 ; https://www.e-tjp.org/ >
+      au < exists ; 2021 ; Taiwanese Journal of Psychiatry Volume 35 ; 2021 ; 35 ; https://www.e-tjp.org/ >
+      au < expected ; 2022 ; Taiwanese Journal of Psychiatry Volume 36 ; 2022 ; 36 ; https://www.e-tjp.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Tanta Medical Journal ;
+        issn = 1110-1415 ;
+        eissn = 2314-8624
+      >
+
+      param[journal_issn] = 1110-1415
+      #param[base_url] = https://www.tdj.eg.net/
+
+      au < exists ; 2013 ; Tanta Medical Journal Volume 41 ; 2013 ; 41 ; https://www.tdj.eg.net/ >
+      au < exists ; 2014 ; Tanta Medical Journal Volume 42 ; 2014 ; 42 ; https://www.tdj.eg.net/ >
+      au < exists ; 2015 ; Tanta Medical Journal Volume 43 ; 2015 ; 43 ; https://www.tdj.eg.net/ >
+      au < exists ; 2016 ; Tanta Medical Journal Volume 44 ; 2016 ; 44 ; https://www.tdj.eg.net/ >
+      au < exists ; 2017 ; Tanta Medical Journal Volume 45 ; 2017 ; 45 ; https://www.tdj.eg.net/ >
+      au < exists ; 2018 ; Tanta Medical Journal Volume 46 ; 2018 ; 46 ; https://www.tdj.eg.net/ >
+      au < exists ; 2019 ; Tanta Medical Journal Volume 47 ; 2019 ; 47 ; https://www.tdj.eg.net/ >
+      au < exists ; 2020 ; Tanta Medical Journal Volume 48 ; 2020 ; 48 ; https://www.tdj.eg.net/ >
+      au < exists ; 2021 ; Tanta Medical Journal Volume 49 ; 2021 ; 49 ; https://www.tdj.eg.net/ >
+      au < expected ; 2022 ; Tanta Medical Journal Volume 50 ; 2022 ; 50 ; https://www.tdj.eg.net/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Telangana Journal of Psychiatry ;
+        issn = 2772-8706 ;
+        eissn = 2455-8559
+      >
+
+      param[journal_issn] = 2772-8706
+      #param[base_url] = https://www.tjpipstsb.org/
+
+      au < exists ; 2015 ; Telangana Journal of Psychiatry Volume 1 ; 2015 ; 1 ; https://www.tjpipstsb.org/ >
+      au < exists ; 2016 ; Telangana Journal of Psychiatry Volume 2 ; 2016 ; 2 ; https://www.tjpipstsb.org/ >
+      au < exists ; 2017 ; Telangana Journal of Psychiatry Volume 3 ; 2017 ; 3 ; https://www.tjpipstsb.org/ >
+      au < exists ; 2018 ; Telangana Journal of Psychiatry Volume 4 ; 2018 ; 4 ; https://www.tjpipstsb.org/ >
+      au < exists ; 2019 ; Telangana Journal of Psychiatry Volume 5 ; 2019 ; 5 ; https://www.tjpipstsb.org/ >
+      au < exists ; 2020 ; Telangana Journal of Psychiatry Volume 6 ; 2020 ; 6 ; https://www.tjpipstsb.org/ >
+      au < exists ; 2021 ; Telangana Journal of Psychiatry Volume 7 ; 2021 ; 7 ; https://www.tjpipstsb.org/ >
+      au < expected ; 2022 ; Telangana Journal of Psychiatry Volume 8 ; 2022 ; 8 ; https://www.tjpipstsb.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = The Indian Journal of Occupational Therapy ;
+        issn = 0445-7706
+      >
+
+      param[journal_issn] = 0445-7706
+      #param[base_url] = https://www.ijotonweb.org/
+
+      au < exists ; 2018 ; The Indian Journal of Occupational Therapy Volume 50 ; 2018 ; 50 ; https://www.ijotonweb.org/ >
+      au < exists ; 2019 ; The Indian Journal of Occupational Therapy Volume 51 ; 2019 ; 51 ; https://www.ijotonweb.org/ >
+      au < exists ; 2020 ; The Indian Journal of Occupational Therapy Volume 52 ; 2020 ; 52 ; https://www.ijotonweb.org/ >
+      au < exists ; 2021 ; The Indian Journal of Occupational Therapy Volume 53 ; 2021 ; 53 ; https://www.ijotonweb.org/ >
+      au < expected ; 2022 ; The Indian Journal of Occupational Therapy Volume 54 ; 2022 ; 54 ; https://www.ijotonweb.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = The Journal of Neurobehavioral Sciences ;
+        issn = 2149-1909 ;
+        eissn = 2148-4325
+      >
+
+      param[journal_issn] = 2149-1909
+      #param[base_url] = https://www.jnbsjournal.com/
+
+      au < exists ; 2020 ; The Journal of Neurobehavioral Sciences Volume 7 ; 2020 ; 7 ; https://www.jnbsjournal.com/ >
+      au < exists ; 2021 ; The Journal of Neurobehavioral Sciences Volume 8 ; 2021 ; 8 ; https://www.jnbsjournal.com/ >
+      au < expected ; 2022 ; The Journal of Neurobehavioral Sciences Volume 9 ; 2022 ; 9 ; https://www.jnbsjournal.com/ >
+
+  }
+
+
+  {
+
+      title <
+        name = The Onco Fertility Journal ;
+        eissn = 2589-9597
+      >
+
+      param[journal_issn] = 2589-9597
+      #param[base_url] = https://www.tofjonline.org/
+
+      au < exists ; 2018 ; The Onco Fertility Journal Volume 1 ; 2018 ; 1 ; https://www.tofjonline.org/ >
+      au < exists ; 2019 ; The Onco Fertility Journal Volume 2 ; 2019 ; 2 ; https://www.tofjonline.org/ >
+      au < exists ; 2020 ; The Onco Fertility Journal Volume 3 ; 2020 ; 3 ; https://www.tofjonline.org/ >
+      au < exists ; 2021 ; The Onco Fertility Journal Volume 4 ; 2021 ; 4 ; https://www.tofjonline.org/ >
+      au < expected ; 2022 ; The Onco Fertility Journal Volume 5 ; 2022 ; 5 ; https://www.tofjonline.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = The Saudi Journal of Forensic Medicine and Sciences ;
+        issn = 2589-8329 ;
+        eissn = 2589-8337
+      >
+
+      param[journal_issn] = 2589-8329
+      #param[base_url] = https://www.sjfms.org/
+
+      au < exists ; 2018 ; The Saudi Journal of Forensic Medicine and Sciences Volume 1 ; 2018 ; 1 ; https://www.sjfms.org/ >
+      au < exists ; 2019 ; The Saudi Journal of Forensic Medicine and Sciences Volume 2 ; 2019 ; 2 ; https://www.sjfms.org/ >
+      au < exists ; 2020 ; The Saudi Journal of Forensic Medicine and Sciences Volume 3 ; 2020 ; 3 ; https://www.sjfms.org/ >
+      au < exists ; 2021 ; The Saudi Journal of Forensic Medicine and Sciences Volume 4 ; 2021 ; 4 ; https://www.sjfms.org/ >
+      au < expected ; 2022 ; The Saudi Journal of Forensic Medicine and Sciences Volume 5 ; 2022 ; 5 ; https://www.sjfms.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Turkish Journal of Dermatology ;
+        issn = 1307-7635 ;
+        eissn = 1308-5255
+      >
+
+      param[journal_issn] = 1307-7635
+      #param[base_url] = https://www.tjdonline.org/
+
+      au < exists ; 2019 ; Turkish Journal of Dermatology Volume 13 ; 2019 ; 13 ; https://www.tjdonline.org/ >
+      au < exists ; 2020 ; Turkish Journal of Dermatology Volume 14 ; 2020 ; 14 ; https://www.tjdonline.org/ >
+      au < exists ; 2021 ; Turkish Journal of Dermatology Volume 15 ; 2021 ; 15 ; https://www.tjdonline.org/ >
+      au < expected ; 2022 ; Turkish Journal of Dermatology Volume 16 ; 2022 ; 16 ; https://www.tjdonline.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Vascular Investigation and Therapy ;
+        issn = 2589-9686 ;
+        eissn = 2589-9481
+      >
+
+      param[journal_issn] = 2589-9686
+      #param[base_url] = https://www.vitonline.org/
+
+      au < exists ; 2018 ; Vascular Investigation and Therapy Volume 1 ; 2018 ; 1 ; https://www.vitonline.org/ >
+      au < exists ; 2019 ; Vascular Investigation and Therapy Volume 2 ; 2019 ; 2 ; https://www.vitonline.org/ >
+      au < exists ; 2020 ; Vascular Investigation and Therapy Volume 3 ; 2020 ; 3 ; https://www.vitonline.org/ >
+      au < exists ; 2021 ; Vascular Investigation and Therapy Volume 4 ; 2021 ; 4 ; https://www.vitonline.org/ >
+      au < expected ; 2022 ; Vascular Investigation and Therapy Volume 5 ; 2022 ; 5 ; https://www.vitonline.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = World Social Psychiatry ;
+        issn = 2667-1077 ;
+        eissn = 2667-1085
+      >
+
+      param[journal_issn] = 2667-1077
+      #param[base_url] = https://www.worldsocpsychiatry.org/
+
+      au < exists ; 2019 ; World Social Psychiatry Volume 1 ; 2019 ; 1 ; https://www.worldsocpsychiatry.org/ >
+      au < exists ; 2020 ; World Social Psychiatry Volume 2 ; 2020 ; 2 ; https://www.worldsocpsychiatry.org/ >
+      au < exists ; 2021 ; World Social Psychiatry Volume 3 ; 2021 ; 3 ; https://www.worldsocpsychiatry.org/ >
+      au < expected ; 2022 ; World Social Psychiatry Volume 4 ; 2022 ; 4 ; https://www.worldsocpsychiatry.org/ >
 
   }
 
