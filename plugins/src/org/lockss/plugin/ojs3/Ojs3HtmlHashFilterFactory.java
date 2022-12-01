@@ -82,7 +82,7 @@ public class Ojs3HtmlHashFilterFactory implements FilterFactory {
       Pattern.compile("Acesso em: \\d\\d?\\s?[a-z]+\\.?\\s?\\d\\d\\d\\d", Pattern.CASE_INSENSITIVE);
   // Accedido mayo 21, 2022.
   public static final Pattern ESPANOL_CIT_PATTERN =
-      Pattern.compile("Accedido [a-z]+\\s?\\d\\d?,\\s?\\d\\d\\d\\d\\.", Pattern.CASE_INSENSITIVE);
+      Pattern.compile("Accedido:? ([a-z]+\\s?\\d\\d?,\\s?\\d\\d\\d\\d\\.|\\d\\d?\\s?[a-z]+\\s?\\d\\d\\d\\d)", Pattern.CASE_INSENSITIVE);
 
   private static final NodeFilter[] includeNodes = new NodeFilter[] {
     // some pages are full of scripts with no discernable content pre-browser building.

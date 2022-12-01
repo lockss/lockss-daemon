@@ -56,6 +56,12 @@ public class TestOjs3HtmlHashFilterFactory  extends LockssTestCase {
   private static final String abdntFilt =
       "<div class=\"csl-entry\">DRERUP, C.; EVESLAGE, M.; SUNDERKTTER, C.; EHRCHEN, J. Diagnostic Value of Laboratory Parameters for Distinguishing Between Herpes Zoster and Bacterial Superficial Skin and Soft Tissue Infections. <b>Acta Dermato-Venereologica</b>, <i>[S. l.]</i>, v. 100, n. 1, p. 1 5, 2020. DOI: 10.2340/00015555-3357. Disponvel em: https://medicaljournalssweden.se/actadv/article/view/1631. .</div>";
 
+  private static final String revista =
+      "<div class=\"csl-entry\">Serrano-Reyes, C. D. (2018) «Presentación», <i>Revista Alergia México</i>, 65, p. 9. Disponible en: https://revistaalergia.mx/ojs/index.php/ram/article/view/403 (Accedido: 1 diciembre 2022).</div>";
+
+  private static final String revistaFilt =
+      "<div class=\"csl-entry\">Serrano-Reyes, C. D. (2018) «Presentación», <i>Revista Alergia México</i>, 65, p. 9. Disponible en: https://revistaalergia.mx/ojs/index.php/ram/article/view/403 ().</div>";
+
   private static final String jatsArticle =
     "<div class=\"jatsParser__center-article-block\">\n" +
       "<div class=\"jatsParser__article-fulltext\" id=\"jatsParserFullText\">\n" +
@@ -398,6 +404,9 @@ public class TestOjs3HtmlHashFilterFactory  extends LockssTestCase {
 
   public void testAbdntFiltering() throws Exception {
     assertEquals(getStringfromFilteredInputStream(abdnt), abdntFilt);
+  }
+  public void testRevistaFiltering() throws Exception {
+    assertEquals(getStringfromFilteredInputStream(revista), revistaFilt);
   }
   public void testVancouverFiltering() throws Exception {
     assertEquals(getStringfromFilteredInputStream(vancouver1), vancouver1Filt);
