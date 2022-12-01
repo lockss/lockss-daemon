@@ -11927,26 +11927,6 @@
   {
 
       title <
-        name = Journal of Dermatology & Dermatologic Surgery ;
-        issn = 2352-2410 ;
-        eissn = 2352-2429
-      >
-
-      param[journal_issn] = 2352-2410
-      #param[base_url] = https://www.jddsjournal.org/
-
-      au < exists ; 2018 ; Journal of Dermatology & Dermatologic Surgery Volume 22 ; 2018 ; 22 ; https://www.jddsjournal.org/ >
-      au < exists ; 2019 ; Journal of Dermatology & Dermatologic Surgery Volume 23 ; 2019 ; 23 ; https://www.jddsjournal.org/ >
-      au < exists ; 2020 ; Journal of Dermatology & Dermatologic Surgery Volume 24 ; 2020 ; 24 ; https://www.jddsjournal.org/ >
-      au < exists ; 2021 ; Journal of Dermatology & Dermatologic Surgery Volume 25 ; 2021 ; 25 ; https://www.jddsjournal.org/ >
-      au < expected ; 2022 ; Journal of Dermatology & Dermatologic Surgery Volume 26 ; 2022 ; 26 ; https://www.jddsjournal.org/ >
-
-  }
-
-
-  {
-
-      title <
         name = Journal of Drug Research in Ayurvedic Sciences ;
         issn = 2279-0357 ;
         eissn = 2581-8295
@@ -12084,30 +12064,6 @@
       au < exists ; 2020 ; Journal of Medical Evidence Volume 1 ; 2020 ; 1 ; https://www.journaljme.org/ >
       au < exists ; 2021 ; Journal of Medical Evidence Volume 2 ; 2021 ; 2 ; https://www.journaljme.org/ >
       au < expected ; 2022 ; Journal of Medical Evidence Volume 3 ; 2022 ; 3 ; https://www.journaljme.org/ >
-
-  }
-
-
-  {
-
-      title <
-        name = Journal of Nursing and Midwifery Sciences ;
-        issn = 2345-5756 ;
-        eissn = 2345-5764
-      >
-
-      param[journal_issn] = 2345-5756
-      #param[base_url] = https://www.jnmsjournal.org/
-
-      au < exists ; 2014 ; Journal of Nursing and Midwifery Sciences Volume 1 ; 2014 ; 1 ; https://www.jnmsjournal.org/ >
-      au < exists ; 2015 ; Journal of Nursing and Midwifery Sciences Volume 2 ; 2015 ; 2 ; https://www.jnmsjournal.org/ >
-      au < exists ; 2016 ; Journal of Nursing and Midwifery Sciences Volume 3 ; 2016 ; 3 ; https://www.jnmsjournal.org/ >
-      au < exists ; 2017 ; Journal of Nursing and Midwifery Sciences Volume 4 ; 2017 ; 4 ; https://www.jnmsjournal.org/ >
-      au < exists ; 2018 ; Journal of Nursing and Midwifery Sciences Volume 5 ; 2018 ; 5 ; https://www.jnmsjournal.org/ >
-      au < exists ; 2019 ; Journal of Nursing and Midwifery Sciences Volume 6 ; 2019 ; 6 ; https://www.jnmsjournal.org/ >
-      au < exists ; 2020 ; Journal of Nursing and Midwifery Sciences Volume 7 ; 2020 ; 7 ; https://www.jnmsjournal.org/ >
-      au < exists ; 2021 ; Journal of Nursing and Midwifery Sciences Volume 8 ; 2021 ; 8 ; https://www.jnmsjournal.org/ >
-      au < expected ; 2022 ; Journal of Nursing and Midwifery Sciences Volume 9 ; 2022 ; 9 ; https://www.jnmsjournal.org/ >
 
   }
 
@@ -12382,7 +12338,7 @@
 
       title <
         name = Journal of the Medical Women's Association of Nigeria ;
-        issn = 1596-896X
+        issn = 1596-826X
       >
 
       param[journal_issn] = 1596-896X
@@ -12465,11 +12421,11 @@
 
       title <
         name = Kerala Heart Journal ;
-        issn = 2347-5267 ;
+        issn = 2347-5269 ;
         eissn = 2454-6755
       >
 
-      param[journal_issn] = 2347-5267
+      param[journal_issn] = 2454-6755
       #param[base_url] = https://www.csikhj.com/
 
       au < exists ; 2021 ; Kerala Heart Journal Volume 10 ; 2021 ; 10 ; https://www.csikhj.com/ >
