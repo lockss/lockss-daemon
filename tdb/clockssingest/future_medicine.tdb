@@ -46,7 +46,7 @@
     au < manifest ; exists ; 2008 ; Biomarkers in Medicine Volume 2 ; 2 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2009 ; Biomarkers in Medicine Volume 3 ; 3 ; https://www.futuremedicine.com/ ; >
     au < notReady ; exists ; 2010 ; Biomarkers in Medicine Volume 4 ; 4 ; https://www.futuremedicine.com/ ; > #500 error https://www.futuremedicine.com/cms/10.2217/fnl-2019-0027/asset/images/medium/figure1.gif
-    au < ready ; exists ; 2011 ; Biomarkers in Medicine Volume 5 ; 5 ; https://www.futuremedicine.com/ ; >
+    au < crawling ; exists ; 2011 ; Biomarkers in Medicine Volume 5 ; 5 ; https://www.futuremedicine.com/ ; >
     au < finished ; finished ; 2012 ; Biomarkers in Medicine Volume 6 ; 6 ; http://www.futuremedicine.com/ ; >
     au < finished ; crawling ; 2013 ; Biomarkers in Medicine Volume 7 ; 7 ; http://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
     au < zapped ; finished ; 2014 ; Biomarkers in Medicine Volume 8 ; 8 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
@@ -248,7 +248,7 @@
 
     au < manifest ; exists ; 2009 ; Epigenomics Volume 1 ; 1 ; https://www.futuremedicine.com/ ; >
     au < ready ; exists ; 2010 ; Epigenomics Volume 2 ; 2 ; https://www.futuremedicine.com/ ; >
-    au < ready ; exists ; 2011 ; Epigenomics Volume 3 ; 3 ; https://www.futuremedicine.com/ ; >
+    au < crawling ; exists ; 2011 ; Epigenomics Volume 3 ; 3 ; https://www.futuremedicine.com/ ; >
     au < finished ; frozen ; 2012 ; Epigenomics Volume 4 ; 4 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2013 ; Epigenomics Volume 5 ; 5 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Epigenomics Volume 6 ; 6 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
@@ -279,7 +279,7 @@
     au < manifest ; exists ; 2008 ; Future Cardiology Volume 4 ; 4 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2009 ; Future Cardiology Volume 5 ; 5 ; https://www.futuremedicine.com/ ; >
     au < notReady ; exists ; 2010 ; Future Cardiology Volume 6 ; 6 ; https://www.futuremedicine.com/ ; > #500 error https://www.futuremedicine.com/cms/10.2217/fca.09.59/asset/images/medium/graphic33.gif
-    au < ready ; exists ; 2011 ; Future Cardiology Volume 7 ; 7 ; https://www.futuremedicine.com/ ; >
+    au < crawling ; exists ; 2011 ; Future Cardiology Volume 7 ; 7 ; https://www.futuremedicine.com/ ; >
     au < finished ; crawling ; 2012 ; Future Cardiology Volume 8 ; 8 ; http://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2013 ; Future Cardiology Volume 9 ; 9 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Future Cardiology Volume 10 ; 10 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
@@ -307,8 +307,8 @@
     au < manifest ; exists ; 2007 ; Future Microbiology Volume 2 ; 2 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2008 ; Future Microbiology Volume 3 ; 3 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2009 ; Future Microbiology Volume 4 ; 4 ; https://www.futuremedicine.com/ ; >
-    au < ready ; exists ; 2010 ; Future Microbiology Volume 5 ; 5 ; https://www.futuremedicine.com/ ; >
-    au < ready ; exists ; 2011 ; Future Microbiology Volume 6 ; 6 ; https://www.futuremedicine.com/ ; >
+    au < crawling ; exists ; 2010 ; Future Microbiology Volume 5 ; 5 ; https://www.futuremedicine.com/ ; >
+    au < crawling ; exists ; 2011 ; Future Microbiology Volume 6 ; 6 ; https://www.futuremedicine.com/ ; >
     au < finished ; crawling ; 2012 ; Future Microbiology Volume 7 ; 7 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2013 ; Future Microbiology Volume 8 ; 8 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Future Microbiology Volume 9 ; 9 ; http://www.futuremedicine.com/ ; >
@@ -337,7 +337,7 @@
     au < manifest ; exists ; 2007 ; Future Neurology Volume 2 ; 2 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2008 ; Future Neurology Volume 3 ; 3 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2009 ; Future Neurology Volume 4 ; 4 ; https://www.futuremedicine.com/ ; >
-    au < ready ; exists ; 2010 ; Future Neurology Volume 5 ; 5 ; https://www.futuremedicine.com/ ; >
+    au < crawling ; exists ; 2010 ; Future Neurology Volume 5 ; 5 ; https://www.futuremedicine.com/ ; >
     au < ready ; exists ; 2011 ; Future Neurology Volume 6 ; 6 ; https://www.futuremedicine.com/ ; >
     au < finished ; finished ; 2012 ; Future Neurology Volume 7 ; 7 ; http://www.futuremedicine.com/ ; >
     au < finished ; crawling ; 2013 ; Future Neurology Volume 8 ; 8 ; http://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
@@ -414,8 +414,8 @@
     au < manifest ; exists ; 2007 ; Future Virology Volume 2 ; 2 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2008 ; Future Virology Volume 3 ; 3 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2009 ; Future Virology Volume 4 ; 4 ; https://www.futuremedicine.com/ ; >
-    au < ready ; exists ; 2010 ; Future Virology Volume 5 ; 5 ; https://www.futuremedicine.com/ ; >
-    au < ready ; exists ; 2011 ; Future Virology Volume 6 ; 6 ; https://www.futuremedicine.com/ ; >
+    au < crawling ; exists ; 2010 ; Future Virology Volume 5 ; 5 ; https://www.futuremedicine.com/ ; >
+    au < crawling ; exists ; 2011 ; Future Virology Volume 6 ; 6 ; https://www.futuremedicine.com/ ; >
     au < finished ; finished ; 2012 ; Future Virology Volume 7 ; 7 ; http://www.futuremedicine.com/ ; >
     au < finished ; frozen ; 2013 ; Future Virology Volume 8 ; 8 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Future Virology Volume 9 ; 9 ; http://www.futuremedicine.com/ ; >
@@ -510,8 +510,8 @@
     param[journal_id] = imt
 
     au < manifest ; exists ; 2009 ; Immunotherapy Volume 1 ; 1 ; https://www.futuremedicine.com/ ; >
-    au < ready ; exists ; 2010 ; Immunotherapy Volume 2 ; 2 ; https://www.futuremedicine.com/ ; >
-    au < ready ; exists ; 2011 ; Immunotherapy Volume 3 ; 3 ; https://www.futuremedicine.com/ ; >
+    au < crawling ; exists ; 2010 ; Immunotherapy Volume 2 ; 2 ; https://www.futuremedicine.com/ ; >
+    au < crawling ; exists ; 2011 ; Immunotherapy Volume 3 ; 3 ; https://www.futuremedicine.com/ ; >
     au < finished ; frozen ; 2012 ; Immunotherapy Volume 4 ; 4 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2013 ; Immunotherapy Volume 5 ; 5 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
     au < zapped ; finished ; 2014 ; Immunotherapy Volume 6 ; 6 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
@@ -802,7 +802,7 @@
     au < manifest ; exists ; 2007 ; Pediatric Health Volume 1 ; 1 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2008 ; Pediatric Health Volume 2 ; 2 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2009 ; Pediatric Health Volume 3 ; 3 ; https://www.futuremedicine.com/ ; >
-    au < ready ; exists ; 2010 ; Pediatric Health Volume 4 ; 4 ; https://www.futuremedicine.com/ ; >
+    au < crawling ; exists ; 2010 ; Pediatric Health Volume 4 ; 4 ; https://www.futuremedicine.com/ ; >
    
   }
 
