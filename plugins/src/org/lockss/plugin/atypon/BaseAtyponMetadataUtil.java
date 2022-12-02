@@ -147,28 +147,32 @@ public class BaseAtyponMetadataUtil {
 
     //Do SEG specific check to exclude certain overcrawl Aus on certain ingest machines
     if (isInAu && (pubNameSeg != null)) {
-      Boolean isMarkAllen = pubName.equals("Society of Exploration Geophysicists");
-      String seg_date = am.get(MetadataField.FIELD_DATE);
+      log.debug3("Seg date check: pubname = " + pubNameSeg);
+      Boolean isSeg = pubNameSeg.equals("Society of Exploration Geophysicists");
+      if (isSeg) {
+        log.debug3("Seg date check: start checking: " + pubNameSeg);
+        String seg_date = am.get(MetadataField.FIELD_DATE);
 
-      TdbAu seg_tdbau = au.getTdbAu();
-      String seg_AU_Year = tdbau.getYear();
+        TdbAu seg_tdbau = au.getTdbAu();
+        String seg_AU_Year = seg_tdbau.getYear();
 
-      log.debug3("Seg date check: seg_date = " + seg_date + ", seg_AU_YEAR = " + seg_AU_Year);
+        log.debug3("Seg date check: seg_date = " + seg_date + ", seg_AU_YEAR = " + seg_AU_Year);
 
-      if ((!StringUtils.isEmpty(seg_date) && (seg_AU_Year != null))) {
-        isInAu = false;
-        for (String auYear : seg_AU_Year.split("/|-|,")) {
-          if (auYear.length() == 4) {
-            if (seg_date.substring(0, 4).equals(auYear)) {
-              log.debug3("Seg date check: seg_date = " + seg_date.substring(0, 4) + ", auYear = " + auYear);
-              isInAu = true;
+        if ((!StringUtils.isEmpty(seg_date) && (seg_AU_Year != null))) {
+          isInAu = false;
+          for (String auYear : seg_AU_Year.split("/|-|,")) {
+            if (auYear.length() == 4) {
+              if (seg_date.substring(0, 4).equals(auYear)) {
+                log.debug3("Seg date check: seg_date = " + seg_date.substring(0, 4) + ", auYear = " + auYear);
+                isInAu = true;
+              }
             }
           }
-        }
-      } else if (StringUtils.isEmpty(seg_date)) {
-        // If ".ris" file are not available, seg_date might be null, which means the article is not in the Au
-        log.debug3("Seg date check: seg_date is not avaialbe = " + seg_date);
+        } else if (StringUtils.isEmpty(seg_date)) {
+          // If ".ris" file are not available, seg_date might be null, which means the article is not in the Au
+          log.debug3("Seg date check: seg_date is not avaialbe = " + seg_date);
 
+        }
       }
     }
 
