@@ -29,8 +29,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.laaws;
 
 import com.google.gson.Gson;
-import org.apache.http.ProtocolVersion;
-import org.apache.http.StatusLine;
+import org.apache.http.*;
 import org.apache.http.message.BasicHttpResponse;
 import org.apache.http.message.BasicStatusLine;
 import org.lockss.laaws.client.ApiException;
@@ -196,15 +195,18 @@ public class CuMover extends Worker {
       props.put(ArtifactProperties.SERIALIZED_NAME_COLLECTION_DATE, String.valueOf(collectionDate));
       String prop_str = gson.toJson(props);
 
-      // The artifact headers for HTTP response
+      // Build the httpResponseHeader part, consisting of HTTP status
+      // line and response headers
       BasicHttpResponse response = new BasicHttpResponse(STATUS_LINE_OK);
       CIProperties hdr_props = cu.getProperties();
       if (hdr_props != null) {
         ((Set<String>) ((Map) hdr_props).keySet()).forEach(
           key -> response.addHeader(key, hdr_props.getProperty(key)));
       }
-      Artifact uncommitted = artifactsApi.createArtifact(prop_str,dcu,response.toString());
-      //Artifact uncommitted = artifactsApi.createArtifact(auid, v2Url, dcu, namespace, collectionDate)
+
+      Artifact uncommitted =
+        artifactsApi.createArtifact(prop_str, dcu,
+                                    respHeadersToString(response));
       if (uncommitted != null) {
         if (log.isDebug3()) {
           log.debug3("createArtifact returned,  content bytes: " +
@@ -217,6 +219,19 @@ public class CuMover extends Worker {
        ctrs.removeInProgressDcu(CounterType.CONTENT_BYTES_MOVED, dcu);
        ctrs.removeInProgressDcu(CounterType.BYTES_MOVED, dcu);
     }
+  }
+
+  private String respHeadersToString(HttpResponse response) {
+    StringBuilder sb = new StringBuilder();
+    sb.append(response.getStatusLine());
+    sb.append("\r\n");
+    for (Header hdr : response.getAllHeaders()) {
+      sb.append(hdr.getName());
+      sb.append(": ");
+      sb.append(hdr.getValue());
+      sb.append("\r\n");
+    }
+    return sb.toString();
   }
 
   /**

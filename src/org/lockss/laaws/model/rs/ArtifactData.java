@@ -40,10 +40,10 @@ import okio.BufferedSink;
 import okio.Okio;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.io.input.CountingInputStream;
+import org.apache.http.Header;
+import org.apache.http.HttpResponse;
 import org.apache.http.StatusLine;
-import org.apache.http.impl.io.DefaultHttpResponseWriter;
-import org.apache.http.impl.io.HttpTransportMetricsImpl;
-import org.apache.http.impl.io.SessionOutputBufferImpl;
+import org.apache.http.impl.io.*;
 import org.lockss.laaws.CuChecker;
 import org.lockss.util.FileUtil;
 import org.lockss.util.Logger;
@@ -67,7 +67,7 @@ import java.util.regex.Pattern;
  */
 public class ArtifactData implements AutoCloseable {
 
-  private static final Logger log = Logger.getLogger(CuChecker.class);
+  private static final Logger log = Logger.getLogger(ArtifactData.class);
   public static final String DEFAULT_DIGEST_ALGORITHM = "SHA-256";
   public static final String CONTENT_DISPOSITION = "Content-Disposition";
   public static final String MULTIPART_ARTIFACT_REPO_PROPS = "artifact-repo-props";
@@ -100,7 +100,7 @@ public class ArtifactData implements AutoCloseable {
   private InputStream artifactStream;
 
   // Artifact data properties
-  private HttpHeaders artifactMetadata;
+  private HttpResponse respHdr;
   private StatusLine httpStatus;
   private InputStream origInputStream;
   private long contentLength = -1;
@@ -116,14 +116,16 @@ public class ArtifactData implements AutoCloseable {
 
   private boolean isReleased;
 
-  Headers respHeaders;
+  Headers restRespHeaders;
   File contentFile;
 
   long artifactDataSize;
 
-  public ArtifactData(MultipartReader mpReader, Headers respHeaders) throws IOException {
-    this.respHeaders = respHeaders;
-    artifactDataSize = respHeaders.byteCount();
+  public ArtifactData(MultipartReader mpReader, Headers restRespHeaders)
+      throws IOException {
+    this.restRespHeaders = restRespHeaders;
+    if (log.isDebug3()) log.debug3("restRespHeaders: " + restRespHeaders);
+    artifactDataSize = restRespHeaders.byteCount();
     ObjectMapper mapper = new ObjectMapper();
     mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
     while (true) {
@@ -151,8 +153,15 @@ public class ArtifactData implements AutoCloseable {
         }
         else if (disposition.contains("httpResponseHeader")) {
           cis = new CountingInputStream(part.body().inputStream());
-          // we don't do anything useful with this so just read it in.
-          String result = IOUtils.toString(cis, StandardCharsets.UTF_8);
+
+          // Parse the InputStream to a HttpResponse object
+          SessionInputBufferImpl buffer =
+            new SessionInputBufferImpl(new HttpTransportMetricsImpl(), 4096);
+          buffer.bind(cis);
+          HttpResponse response =
+            (new DefaultHttpResponseParser(buffer)).parse();
+          setHttpStatus(response.getStatusLine());
+          setResponseHeader(response);
           artifactDataSize += cis.getByteCount();
           part.close();
         }
@@ -175,17 +184,12 @@ public class ArtifactData implements AutoCloseable {
   }
 
 
-  /**
-   * Returns additional key-value properties associated with this artifact.
-   *
-   * @return A {@code HttpHeaders} containing this artifact's additional properties.
-   */
-  public HttpHeaders getMetadata() {
-    return artifactMetadata;
+  public HttpResponse getResponseHeader() {
+    return respHdr;
   }
 
-  public void setMetadata(HttpHeaders headers) {
-    this.artifactMetadata = headers;
+  public void setResponseHeader(HttpResponse respHdr) {
+    this.respHdr = respHdr;
   }
 
   /**
@@ -323,8 +327,8 @@ public class ArtifactData implements AutoCloseable {
 
   @Override
   public String toString() {
-    return "[ArtifactData identifier=" + identifier + ", artifactMetadata="
-        + artifactMetadata + ", httpStatus=" + httpStatus
+    return "[ArtifactData identifier=" + identifier + ", respHdr="
+        + respHdr + ", httpStatus=" + httpStatus
         + ", artifactRepositoryState=" + artifactRepositoryState + ", storageUrl="
         + storageUrl + ", contentDigest=" + contentDigest
         + ", contentLength=" + contentLength + ", collectionDate="

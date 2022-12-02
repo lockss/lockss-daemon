@@ -3,9 +3,9 @@ package org.lockss.laaws;
 import static org.lockss.laaws.Counters.CounterType;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import org.apache.commons.io.IOUtils;
+import org.apache.http.*;
 import org.lockss.laaws.client.ApiException;
 import org.lockss.laaws.model.rs.Artifact;
 import org.lockss.laaws.model.rs.ArtifactData;
@@ -130,7 +130,27 @@ public class CuChecker extends Worker {
           task.addError(err);
         }
         else {
-          log.debug3("V1 and V2 artifact content were a match.");
+          log.debug3("V1 and V2 artifact content match.");
+        }
+        // Ensure each V1 header has a V2 counterpart
+        HttpResponse respHdr = artifactData.getResponseHeader();
+        if (log.isDebug2()) log.debug2("ad.getResponseHeader(): " + respHdr);
+        Properties cuProps = cu.getProperties();
+        for (Map.Entry ent : cuProps.entrySet()) {
+          String v1Key = (String)ent.getKey();
+          String v1Val = (String)ent.getValue();
+          Header firstHdr = respHdr.getFirstHeader(v1Key);
+          if (log.isDebug3()) {
+            log.debug3("header: " + v1Key + ": v1: " + v1Val + ", v2: " +
+                       (firstHdr == null ? "missing" : firstHdr.getValue()));
+          }
+          if (firstHdr == null) {
+            task.addError(cu.getUrl() + "V1 header '" + v1Key + "' missing from V2.");
+          } else if (!StringUtil.equalStrings(firstHdr.getValue(), v1Val)) {
+            task.addError(cu.getUrl() + "V1 header '" + v1Key
+                          + "' value mismatch, V1: " + v1Val
+                          + ", V2: " + firstHdr.getValue());
+          }
         }
         ctrs.incr(CounterType.ARTIFACTS_VERIFIED);
         // stats to update when available
