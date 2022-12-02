@@ -150,6 +150,7 @@ public class BaseAtyponMetadataUtil {
       log.debug3("Seg date check: pubname = " + pubNameSeg);
       Boolean isSeg = pubNameSeg.equals("Society of Exploration Geophysicists");
       if (isSeg) {
+        isInAu = false;
         log.debug3("Seg date check: start checking: " + pubNameSeg);
         String seg_date = am.get(MetadataField.FIELD_DATE);
 
@@ -159,7 +160,6 @@ public class BaseAtyponMetadataUtil {
         log.debug3("Seg date check: seg_date = " + seg_date + ", seg_AU_YEAR = " + seg_AU_Year);
 
         if ((!StringUtils.isEmpty(seg_date) && (seg_AU_Year != null))) {
-          isInAu = false;
           for (String auYear : seg_AU_Year.split("/|-|,")) {
             if (auYear.length() == 4) {
               if (seg_date.substring(0, 4).equals(auYear)) {
