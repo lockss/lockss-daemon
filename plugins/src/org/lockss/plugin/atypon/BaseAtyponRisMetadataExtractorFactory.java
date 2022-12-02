@@ -96,7 +96,9 @@ implements FileMetadataExtractorFactory {
     @Override
     public void extract(MetadataTarget target, CachedUrl cu, FileMetadataExtractor.Emitter emitter) 
         throws IOException, PluginException {
-      ArticleMetadata am = extract(target, cu); 
+      ArticleMetadata am = extract(target, cu);
+
+      log.debug3("---BaseAtyponRisMetadataExtractor---");
 
       /* 
        * if, due to overcrawl, we got to a page that didn't have anything
@@ -134,7 +136,10 @@ implements FileMetadataExtractorFactory {
       if (am.get(MetadataField.FIELD_DATE) == null) {
         if (am.getRaw("Y1") != null) { // if DA wasn't there, use Y1
           am.put(MetadataField.FIELD_DATE, am.getRaw("Y1"));
+          log.debug3("Seg date check: seg_date is set by Y1 field in ris file");
         }
+      } else {
+        log.debug3("Seg date check: seg_date already being set : " + am.get(MetadataField.FIELD_DATE));
       }
 
       /*

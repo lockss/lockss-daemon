@@ -141,6 +141,38 @@ public class BaseAtyponMetadataUtil {
       }
     }
 
+
+    // get the AU's publisher and check if it is in our list
+    String pubNameSeg = (tdbau == null) ? null : tdbau.getPublisherName();
+
+    //Do SEG specific check to exclude certain overcrawl Aus on certain ingest machines
+    if (isInAu && (pubNameSeg != null)) {
+      Boolean isMarkAllen = pubName.equals("Society of Exploration Geophysicists");
+      String seg_date = am.get(MetadataField.FIELD_DATE);
+
+      TdbAu seg_tdbau = au.getTdbAu();
+      String seg_AU_Year = tdbau.getYear();
+
+      log.debug3("Seg date check: seg_date = " + seg_date + ", seg_AU_YEAR = " + seg_AU_Year);
+
+      if ((!StringUtils.isEmpty(seg_date) && (seg_AU_Year != null))) {
+        isInAu = false;
+        for (String auYear : seg_AU_Year.split("/|-|,")) {
+          if (auYear.length() == 4) {
+            if (seg_date.substring(0, 4).equals(auYear)) {
+              log.debug3("Seg date check: seg_date = " + seg_date.substring(0, 4) + ", auYear = " + auYear);
+              isInAu = true;
+            }
+          }
+        }
+      } else if (StringUtils.isEmpty(seg_date)) {
+        // If ".ris" file are not available, seg_date might be null, which means the article is not in the Au
+        log.debug3("Seg date check: seg_date is not avaialbe = " + seg_date);
+
+      }
+    }
+
+
     // Add Atypon-Sage check for an over crawlled Au on ingest1 on Oct/2022 plugin version#41
     // INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 59
     // This check need to happen before the following code, since it will return true anyway

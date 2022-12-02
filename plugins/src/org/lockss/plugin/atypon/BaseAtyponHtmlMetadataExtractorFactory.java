@@ -107,7 +107,7 @@ public class BaseAtyponHtmlMetadataExtractorFactory
       ArticleMetadata am = 
         new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
 
-
+      log.debug3("---BaseAtyponHtmlMetadataExtractorFactory---");
 
       am.cook(tagMap);
       /* 
@@ -148,9 +148,8 @@ public class BaseAtyponHtmlMetadataExtractorFactory
         am.replace(MetadataField.FIELD_ACCESS_URL, url);
       }
       // If we've gotten this far, emit
-      log.debug3("Sage Check: ---------BaseAtyponHtmlMetadataExtractor emitting url = " + url);
-      emitter.emitMetadata(cu, am);
 
+      emitter.emitMetadata(cu, am);
     }
     
     protected MultiMap getTagMap() {
