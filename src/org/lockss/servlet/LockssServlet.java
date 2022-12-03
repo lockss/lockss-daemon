@@ -1362,7 +1362,7 @@ public abstract class LockssServlet extends HttpServlet
    *          A Page representing the HTML page.
    */
   protected void addJQueryLocations(Page page) {
-    addJavaScriptLocation(page, "js/jquery-1.6.2.js");
+    addJavaScriptLocation(page, "js/jquery-1.6.3.js");
     addJavaScriptLocation(page, "js/jquery-ui.min-1.8.js");
     addJavaScriptLocation(page, "js/auDetails-new.js");
     addJavaScriptLocation(page, "js/jquery.tristate.js");
