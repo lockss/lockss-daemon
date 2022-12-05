@@ -38,7 +38,7 @@ class AuMigrationStatus extends React.Component {
       return null;
     }
     return (
-        <div>
+        <div className="stats-div">
         {this.state.activeList.length} Active: <ul>{this.state.activeList.map((msg, index) =>  <li key={index}>{msg}</li>)}</ul></div>
     )
   }
@@ -49,7 +49,7 @@ class AuMigrationStatus extends React.Component {
       return null;
     }
     return (
-        <div>
+        <div className="stats-div">
         {this.state.finishedData.length} Finished:
         <div className={"finished"} id={"finishedList"}>
         <ul>{this.state.finishedData.map((msg, index) => <li key={index}>{msg}</li>)}</ul>
@@ -64,7 +64,7 @@ class AuMigrationStatus extends React.Component {
       return null;
     }
     return (
-        <div>
+        <div className="stats-div">
         {this.state.errors.length} Errors:
         <div className={"errors"}>
         <ul>{this.state.errors.map((msg, index) =>  <li key={index}>{msg}</li>)}</ul>
@@ -178,7 +178,7 @@ class AuMigrationStatus extends React.Component {
 
           this.setState({
             fetchError: true,
-            statusList: [ "Could not fetch status information" ],
+            statusList: [ "Server not responding" ],
             delay: 5000,
           });
         }
@@ -188,7 +188,7 @@ class AuMigrationStatus extends React.Component {
 
   render() {
     return (
-        <div className="stats-div">
+        <div>
          {this.StatusList()}
          {this.InstrumentList()}
          {this.ActiveList()}

@@ -333,7 +333,7 @@ public class MigrateContent extends LockssServlet {
       statusMsg = "Abort requested";
     } catch (Exception e) {
       log.error("Couldn't abort", e);
-      errMsg = "Couldn't about: " + e.getMessage();
+      errMsg = "Couldn't abort: " + e.getMessage();
     }
   }
 

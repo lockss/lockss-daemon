@@ -1,11 +1,11 @@
-<style>
 .stats-div {
-  margin: 20px;
+  margin: 10px;
 }
 
 .ul {
-  padding-inline-start: 00;
+  padding-inline-start: 0;
   padding-top: 0;
+  margin-top: 0;
 }
 
 .stretchy {
@@ -68,4 +68,3 @@ body {
   max-height: 8em;
   overflow: auto;
 }
-</style>
