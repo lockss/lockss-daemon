@@ -6,6 +6,7 @@
     info[tester] = S ;
     info[platform] = Source
   >
+      hidden[proxy] = DIRECT
 
   {
 
@@ -17,7 +18,6 @@
 
       plugin = org.lockss.plugin.springer.ClockssSpringerSourcePlugin
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/springer-released/
-      hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[year] >
 
       au < zapped ; finished ; 2009 ; Springer Source Content 2009 ; 2009 >
@@ -29,15 +29,12 @@
       au < zapped ; finished ; 2015 ; Springer Source Content 2015 ; 2015 >
       au < zapped ; finished ; 2016 ; Springer Source Content 2016 ; 2016 >
       au < zapped ; finished ; 2017 ; Springer Source Content 2017 ; 2017 >
-      #no more AUs expected using this plugin
-
+      #No more AUs expected using this plugin
     }
-
     {
 
       plugin = org.lockss.plugin.springer.ClockssSpringerDirSourcePlugin
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/springer-released/
-      hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[directory] >
 
       au < zapped ; finished ; 2018 ; Springer Source Content 2018_1 ; 2018_1 >
@@ -52,16 +49,13 @@
       au < zapped ; finished ; 2019 ; Springer Source Content 2019_3 ; 2019_3 >
       au < zapped ; finished ; 2019 ; Springer Source Content 2019_4 ; 2019_4 >
       au < zapped ; finished ; 2019 ; Springer Source Content 2019_5 (Legacy) ; 2019_5 >
-      #no more AUs expected using this plugin
-
+      #No more AUs expected using this plugin
     }
-
     {
-
       plugin = org.lockss.plugin.springer.ClockssSpringerJatsSourcePlugin
-      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/springerjats-released/
-      hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[directory] >
+      {
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/springerjats-released/
 
       au < zapped ; finished ; 2019 ; Springer Source Content 2019_5 (JATS) ; 2019_5 >
       au < zapped ; finished ; 2019 ; Springer Source Content 2019_6 ; 2019_6 >
@@ -110,7 +104,23 @@
       au < expected ; exists ; 2022 ; Springer Source Content 2022_17 ; 2022_17 >
       au < expected ; exists ; 2022 ; Springer Source Content 2022_18 ; 2022_18 >
       au < expected ; exists ; 2022 ; Springer Source Content 2022_19 ; 2022_19 >
+      #No more AUs. Moving to https.
 
+      }
+      {
+      param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/springerjats-released/
+
+      au < expected ; exists ; 2023 ; Springer Source Content 2023_01 ; 2023_01 >
+      au < expected ; exists ; 2023 ; Springer Source Content 2023_02 ; 2023_02 >
+      au < expected ; exists ; 2023 ; Springer Source Content 2023_03 ; 2023_03 >
+      au < expected ; exists ; 2023 ; Springer Source Content 2023_04 ; 2023_04 >
+      au < expected ; exists ; 2023 ; Springer Source Content 2023_05 ; 2023_05 >
+      au < expected ; exists ; 2023 ; Springer Source Content 2023_06 ; 2023_06 >
+      au < expected ; exists ; 2023 ; Springer Source Content 2023_07 ; 2023_07 >
+      au < expected ; exists ; 2023 ; Springer Source Content 2023_08 ; 2023_08 >
+      au < expected ; exists ; 2023 ; Springer Source Content 2023_09 ; 2023_09 >
+      au < expected ; exists ; 2023 ; Springer Source Content 2023_10 ; 2023_10 >
+      }
     }
 
   }
@@ -122,7 +132,6 @@
     >
 
     param[base_url] = http://clockss-staged.clockss.org/sourcefiles/springer-delivered/
-    hidden[proxy] = DIRECT
 
     {
 

@@ -19,6 +19,7 @@
     implicit < status ; status2 ; year ; name ; param[directory] >
 
     au < readySource ; crawling ; 2022 ; Pro Medicina Foundation Source Content 2022_01 ; 2022_01 >
+    au < expected ; exists ; 2023 ; Pro Medicina Foundation Source Content 2023_01 ; 2023_01 >
 
   }
 

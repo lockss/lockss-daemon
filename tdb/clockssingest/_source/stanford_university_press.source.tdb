@@ -6,7 +6,7 @@
     info[tester] = S ;
     info[platform] = Source
   >
-
+    hidden[proxy] = DIRECT
 
   {
 
@@ -15,9 +15,9 @@
     >
 
     plugin = org.lockss.plugin.clockss.stanforduniversitypress.ClockssSUPressOnix2BooksZipSourcePlugin
-    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/sup-released/
-    hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[year] >
+    {
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/sup-released/
 
     au < zapped ; finished ; 2013 ; Stanford University Press Source Content 2013 ; 2013 >
     au < zapped ; finished ; 2014 ; Stanford University Press Source Content 2014 ; 2014 >
@@ -27,7 +27,14 @@
     au < readySource ; finished ; 2020 ; Stanford University Press Source Content 2020 ; 2020 >
     au < readySource ; finished ; 2021 ; Stanford University Press Source Content 2021 ; 2021 >
     au < expected ; exists ; 2022 ; Stanford University Press Source Content 2022 ; 2022 >
+    #No more AUs. Moving to https.
+    }
+    {
+    param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/sup-released/
 
+    au < expected ; exists ; 2023 ; Stanford University Press Source Content 2023 ; 2023 >
+
+    }
   }
 
 }
