@@ -69,6 +69,13 @@
         <string>"Resilience Alliance Plugin (CLOCKSS), Base URL %s, Year %d, Volume %s", base_url, year, volume_name</string>
     </entry>
     <entry>
+        <string>au_permission_url</string>
+        <list>
+            <string>"%sissue/", del_www(base_url)</string>
+            <string>"%sissue/", base_url</string>
+        </list>
+    </entry>
+    <entry>
         <string>au_start_url</string>
         <list>
             <string>"%sissue/", del_www(base_url)</string>
