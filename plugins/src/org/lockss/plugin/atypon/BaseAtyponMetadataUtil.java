@@ -349,6 +349,20 @@ public class BaseAtyponMetadataUtil {
       return true; //return true, we have no way of knowing
     }
 
+    // There are some books from Practical Action which have wrong isbn inside ".ris" files when they collected
+    // Do not do isbn/eisbn comparation so metadata can be extracted
+    String pubNamePA = (tdbau == null) ? null : tdbau.getPublisherName();
+    log.debug3("Publisher Specific Checks for publisher = " + pubNamePA);
+
+    if (isInAu && (pubNamePA != null)) {
+      Boolean isPABooks = pubNamePA.equalsIgnoreCase("Practical Action Publishing");
+      if ((isPABooks) &&  (!(StringUtils.isEmpty(foundEISBN)) || !(StringUtils.isEmpty(foundISBN)))) {
+        log.debug3("Practional Action book eisbn/isbn check, foundEISBN :" + foundEISBN + ", foundISBN" + foundISBN);
+        isInAu = true;
+        return isInAu;
+      }
+    }
+
     // if either of the isbn variants matches, we're good
     if ( ((!(StringUtils.isEmpty(foundEISBN))) && AU_EISBN.equals(foundEISBN)) ||
         ((!(StringUtils.isEmpty(foundISBN))) && AU_EISBN.equals(foundISBN)) ) {
