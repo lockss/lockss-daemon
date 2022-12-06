@@ -91,8 +91,7 @@ public class ProjectMuse2017PdfFilterFactory extends ExtractingPdfFilterFactory 
             if (tok.isString()) {
               String str = tok.getString();
               if (WATERMARK_LINE_1.matcher(str).find()) {
-                log.info(str);
-                //accumulator.clear();
+                accumulator.clear();
                 return;
               }
             }
@@ -206,6 +205,8 @@ public class ProjectMuse2017PdfFilterFactory extends ExtractingPdfFilterFactory 
     Reads in a pdf and applies the filters writing the contents to a new file <fileStr>.bin
      */
     String[] fileStrs = {
+        "/home/mark/Downloads/projmuse.pdf",
+        "/home/mark/Downloads/projmuse6.pdf"
     };
     for (String fileStr : fileStrs) {
       FilterFactory fact = new ProjectMuse2017PdfFilterFactory();
