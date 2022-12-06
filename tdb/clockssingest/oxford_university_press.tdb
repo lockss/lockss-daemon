@@ -16201,8 +16201,8 @@
       #Only 2020-present exist on website as of 11/2022
 
       au < manifest ; exists ; 2020 ; 2020 ; Plant Physiology Volume 182-184 ; 182-184 ; >
-      au < exists ; exists ; 2021 ; 2021 ; Plant Physiology Volume 185-187 ; 185-187 ; >
-      au < exists ; exists ; 2022 ; 2022 ; Plant Physiology Volume 188-190 ; 188-190 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Plant Physiology Volume 185-187 ; 185-187 ; >
+      au < manifest ; exists ; 2022 ; 2022 ; Plant Physiology Volume 188-190 ; 188-190 ; >
 
     }
 
@@ -20667,7 +20667,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; The Leo Baeck Institute Year Book Volume 63 ; 63 ; >
     au < frozen ; exists ; 2019 ; 2019 ; The Leo Baeck Institute Year Book Volume 64 ; 64 ; >
     au < frozen ; exists ; 2021 ; 2021 ; The Leo Baeck Institute Year Book Volume 65 ; 65 ; >
-    au < expected ; exists ; 2022 ; 2022 ; The Leo Baeck Institute Year Book Volume 66 ; 66 ; >
+    au < manifest ; exists ; 2022 ; 2022 ; The Leo Baeck Institute Year Book Volume 66 ; 66 ; >
 
   }
   #Publisher and previous TDB differ on title - The Library vs The Library: The Transactions of the Bibliographical Society
