@@ -4,9 +4,9 @@
     name = Numerique Premium ;
     info[contract] = 2017 ;
     info[tester] = S ;
-    info[platform] = Source
+    info[platform] = Source. RT 10255
   >
-
+    hidden[proxy] = DIRECT
 
   {
 
@@ -14,16 +14,20 @@
       name = Numerique Premium Books Source Content
     >
 
-    #See RT 10255
-
     plugin = org.lockss.plugin.clockss.numeriquepremium.ClockssNumeriquePremiumBooksSourcePlugin
-    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/numerique-released/
-    hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[directory] >
+    {
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/numerique-released/
 
     au < readySource ; finished ; 2020 ; Numerique Premium Books Source Content 2020 ; 2020 >
     au < expected ; exists ; 2022 ; Numerique Premium Books Source Content 2022 ; 2022 >
+    #No more AUs. Moving to https.
+    }
+    {
+    param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/numerique-released/
 
+    au < expected ; exists ; 2023 ; Numerique Premium Books Source Content 2023 ; 2023 >
+    }
   }
 
 }

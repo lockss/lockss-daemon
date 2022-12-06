@@ -6,21 +6,26 @@
     info[tester] = S ;
     info[platform] = Source/FTP
   >
+    hidden[proxy] = DIRECT
 
   {
 
     title <
       name = Pro Medicina Foundation Source Content
     >
-
     plugin = org.lockss.plugin.clockss.promedicina.ClockssProMedicinaDirSourcePlugin
-    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/promed-released/
-    hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[directory] >
+    {
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/promed-released/
 
     au < readySource ; crawling ; 2022 ; Pro Medicina Foundation Source Content 2022_01 ; 2022_01 >
-    au < expected ; exists ; 2023 ; Pro Medicina Foundation Source Content 2023_01 ; 2023_01 >
+    #No more AUs. Moving to https.
+    }
+    {
+    param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/promed-released/
 
+    au < expected ; exists ; 2023 ; Pro Medicina Foundation Source Content 2023_01 ; 2023_01 >
+    }
   }
 
 }

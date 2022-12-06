@@ -6,12 +6,12 @@
     info[tester] = S ;
     info[platform] = Internet Archive JASPER # https://doaj.org/preservation/
   >
+  hidden[proxy] = DIRECT
 
   plugin = org.lockss.plugin.jasper.ClockssJasperPlugin
-  param[base_url] = https://archive.org/
-  nondefparam[user_pass] = clockss_jasper_U_P
   implicit < status ; status2 ; year ; name ; param[collection] >
-  hidden[proxy] = DIRECT
+  nondefparam[user_pass] = clockss_jasper_U_P
+  param[base_url] = https://archive.org/
 
   {
 
