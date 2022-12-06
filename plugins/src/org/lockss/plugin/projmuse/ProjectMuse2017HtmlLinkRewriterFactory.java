@@ -48,9 +48,9 @@ import java.io.InputStream;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class ProjMuse2017HtmlLinkRewriterFactory implements LinkRewriterFactory {
+public class ProjectMuse2017HtmlLinkRewriterFactory implements LinkRewriterFactory {
   
-  private static final Logger logger = Logger.getLogger(ProjMuse2017HtmlLinkRewriterFactory.class);
+  private static final Logger logger = Logger.getLogger(ProjectMuse2017HtmlLinkRewriterFactory.class);
 
   /**
    * This link rewriter adds special processing to substitute a link to show the RIS citation
@@ -67,11 +67,11 @@ public class ProjMuse2017HtmlLinkRewriterFactory implements LinkRewriterFactory 
     NodeFilterHtmlLinkRewriterFactory fact =
         new NodeFilterHtmlLinkRewriterFactory();
 
-    fact.addPreXform(new ProjMuse2017PreFilter(au,url));
+    fact.addPreXform(new ProjectMuse2017PreFilter(au,url));
     return fact.createLinkRewriter(mimeType, au, in, encoding, url, xfm);
   }
 
-  static class ProjMuse2017PreFilter implements NodeFilter {
+  static class ProjectMuse2017PreFilter implements NodeFilter {
     /*
       https://muse.jhu.edu/pub/424/article/813469
       becomes
@@ -82,7 +82,7 @@ public class ProjMuse2017HtmlLinkRewriterFactory implements LinkRewriterFactory 
     private String html_url = null;
     private ArchivalUnit thisau = null;
 
-    public ProjMuse2017PreFilter(ArchivalUnit au, String url) {
+    public ProjectMuse2017PreFilter(ArchivalUnit au, String url) {
       super();
       html_url = url;
       thisau = au;
