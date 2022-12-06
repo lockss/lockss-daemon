@@ -6,8 +6,8 @@
     info[tester] = S ;
     info[platform] = Source
   >
-
-  provider = Wiley-Blackwell
+    hidden[proxy] = DIRECT
+    provider = Wiley-Blackwell
 
   {
     title <
@@ -16,7 +16,6 @@
 
       plugin = org.lockss.plugin.clockss.wiley.ClockssWileyMRWSourcePlugin
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/wileymrw-released/
-      hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[directory] >
 
       au < readySource ; crawling ; 2022 ; Wiley MRW Source Content 2022_01 ; 2022_01 >
@@ -30,7 +29,6 @@
 
       plugin = org.lockss.plugin.clockss.wiley.ClockssWileyBooksSourcePlugin
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/wileybooks-released/
-      hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[directory] >
 
       au < readySource ; crawling ; 2022 ; Wiley Books Source Content 2022_01 ; 2022_01 >
@@ -47,7 +45,6 @@
     {
       plugin = org.lockss.plugin.wiley.ClockssWileyDirSourcePlugin
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/wiley-released/
-      hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[directory] >
 
       au < zapped ; finished ; 2018 ; Wiley Source Content 2018_1 ; 2018_1 >
@@ -92,7 +89,6 @@
     {
       plugin = org.lockss.plugin.wiley.ClockssWileySourcePlugin
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/wiley-released/
-      hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[year] >
 
       au < zapped ; finished ; 2011 ; Wiley Source Content 2011 ; 2011 >

@@ -6,6 +6,7 @@
     info[tester] = S ;
     info[platform] = Source
   >
+    hidden[proxy] = DIRECT
 
   {
 
@@ -15,11 +16,10 @@
 
     {
 
-      #publisher was converted to directory based
       plugin = org.lockss.plugin.clockss.mdpi.ClockssMdpiDirSourcePlugin
-      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/mdpi-released/
-      hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[directory] >
+      {
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/mdpi-released/
 
       au < readySource ; finished ; 2021 ; Multidisciplinary Digital Publishing Institute Source Content 2021_01 ; 2021_01 >
       au < readySource ; finished ; 2021 ; Multidisciplinary Digital Publishing Institute Source Content 2021_02 ; 2021_02 >
@@ -29,14 +29,23 @@
       au < readySource ; crawling ; 2022 ; Multidisciplinary Digital Publishing Institute Source Content 2022_02 ; 2022_02 >
       au < readySource ; crawling ; 2022 ; Multidisciplinary Digital Publishing Institute Source Content 2022_03 ; 2022_03 >
       au < readySource ; crawling ; 2022 ; Multidisciplinary Digital Publishing Institute Source Content 2022_04 ; 2022_04 >
+      #No more AUs. Moving to https.
+      }
+      {
+      param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/mdpi-released/
 
+      au < expected ; exists ; 2023 ; Multidisciplinary Digital Publishing Institute Source Content 2023_01 ; 2023_01 >
+      au < expected ; exists ; 2023 ; Multidisciplinary Digital Publishing Institute Source Content 2023_02 ; 2023_02 >
+      au < expected ; exists ; 2023 ; Multidisciplinary Digital Publishing Institute Source Content 2023_03 ; 2023_03 >
+      au < expected ; exists ; 2023 ; Multidisciplinary Digital Publishing Institute Source Content 2023_04 ; 2023_04 >
+
+      }
     }
 
     {
 
       plugin = org.lockss.plugin.clockss.mdpi.ClockssMdpiSourcePlugin
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/mdpi-released/
-      hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[year] >
 
       au < zapped ; finished ; 2016 ; Multidisciplinary Digital Publishing Institute Source Content 2016 ; 2016 >
@@ -45,7 +54,7 @@
       au < zapped ; finished ; 2019 ; Multidisciplinary Digital Publishing Institute Source Content 2019 ; 2019 >
       au < zapped ; finished ; 2020 ; Multidisciplinary Digital Publishing Institute Source Content 2020 ; 2020 >
       au < readySource ; finished ; 2021 ; Multidisciplinary Digital Publishing Institute Source Content 2021 ; 2021 >
-      #No more AUs here.
+      #No more AUs expected using this plugin
     }
 
   }

@@ -6,9 +6,9 @@
     info[tester] = S ;
     info[platform] = Source
   >
+    hidden[proxy] = DIRECT
 
     plugin = org.lockss.plugin.clockss.komunikacie.ClockssKomunikacieDirSourcePlugin
-    hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[directory] >
 
   {
@@ -16,10 +16,16 @@
     title <
       name = Komunikácie Source Content
     >
-
+    {
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/komunikacie-released/
 
     au < exists ; exists ; 2022 ; Komunikácie Source Content 2022_01 ; 2022_01 >
+    #No more AUs. Moving to https.
+    }
+    {
+    param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/komunikacie-released/
 
+    au < exists ; exists ; 2023 ; Komunikácie Source Content 2023_01 ; 2023_01 >
+    }
   }
 }

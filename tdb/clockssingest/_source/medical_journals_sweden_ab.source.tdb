@@ -6,6 +6,7 @@
     info[tester] = S ;
     info[platform] = Source
   >
+    hidden[proxy] = DIRECT
 
   {
 
@@ -14,9 +15,8 @@
     >
 
     plugin = org.lockss.plugin.clockss.actadermatovenereologica.ClockssActaDermatoVenereologicaNLMSourcePlugin
-    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/actadv-released/
-    hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[year] >
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/actadv-released/
 
     au < zapped ; finished ; 2020 ; Acta Dermato-Venereologica Source Content 2020 ; 2020 >
     au < readySource ; finished ; 2021 ; Acta Dermato-Venereologica Source Content 2021 ; 2021 >
