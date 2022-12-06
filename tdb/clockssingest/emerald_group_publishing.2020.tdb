@@ -398,7 +398,7 @@
     au < manifest ; exists ; 1993 ; American Journal of Business Volume 8 ; 8 ; >
     au < manifest ; exists ; 1994 ; American Journal of Business Volume 9 ; 9 ; >
     au < manifest ; exists ; 1995 ; American Journal of Business Volume 10 ; 10 ; >
-    au < crawling ; exists ; 1996 ; American Journal of Business Volume 11 ; 11 ; >
+    au < frozen ; exists ; 1996 ; American Journal of Business Volume 11 ; 11 ; >
     au < finished ; manifest ; 1997 ; American Journal of Business Volume 12 ; 12 ; reingest2.clockss.org:8085 >
     au < ready ; exists ; 1998 ; American Journal of Business Volume 13 ; 13 ; >
     au < finished ; manifest ; 1999 ; American Journal of Business Volume 14 ; 14 ; reingest3.clockss.org:8083 >
@@ -441,7 +441,7 @@
     comment[merged_into] = 1363-951X
 
     au < manifest ; exists ; 1995 ; American Journal of Police Volume 14 ; 14 ; >
-    au < crawling ; exists ; 1996 ; American Journal of Police Volume 15 ; 15 ; >
+    au < frozen ; exists ; 1996 ; American Journal of Police Volume 15 ; 15 ; >
 
   }
 
@@ -540,7 +540,7 @@
     comment[journal_id] = sla
     comment[merged_into] = 1087-8572
 
-    au < crawling ; exists ; 1996 ; The Antidote Volume 1 ; 1 ; >
+    au < frozen ; exists ; 1996 ; The Antidote Volume 1 ; 1 ; >
     au < finished ; manifest ; 1997 ; The Antidote Volume 2 ; 2 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1998 ; The Antidote Volume 3 ; 3 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1999 ; The Antidote Volume 4 ; 4 ; reingest1.clockss.org:8082 >
@@ -1343,7 +1343,7 @@
     #continues = 1355-2503
 
     au < finished ; manifest ; 1997 ; Business Process Management Journal Volume 3 ; 3 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 1998 ; Business Process Management Journal Volume 4 ; 4 ; >
+    au < frozen ; exists ; 1998 ; Business Process Management Journal Volume 4 ; 4 ; >
     au < frozen ; exists ; 1999 ; Business Process Management Journal Volume 5 ; 5 ; >
     au < deepCrawl ; exists ; 2000 ; Business Process Management Journal Volume 6 ; 6 ; >
     au < deepCrawl ; exists ; 2001 ; Business Process Management Journal Volume 7 ; 7 ; >
@@ -1783,7 +1783,7 @@
     au < manifest ; exists ; 1993 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 12 ; 12 ; >
     au < manifest ; exists ; 1994 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 13 ; 13 ; >
     au < manifest ; exists ; 1995 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 14 ; 14 ; >
-    au < crawling ; exists ; 1996 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 15 ; 15 ; >
+    au < frozen ; exists ; 1996 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 15 ; 15 ; >
     au < frozen ; exists ; 1997 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 16 ; 16 ; >
     au < frozen ; exists ; 1998 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 17 ; 17 ; >
     au < frozen ; exists ; 1999 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 18 ; 18 ; >
@@ -2753,7 +2753,7 @@
     param[journal_issn] = 1460-1060
     comment[journal_id] = ejim
 
-    au < crawling ; exists ; 1998 ; European Journal of Innovation Management Volume 1 ; 1 ; >
+    au < frozen ; exists ; 1998 ; European Journal of Innovation Management Volume 1 ; 1 ; >
     au < frozen ; exists ; 1999 ; European Journal of Innovation Management Volume 2 ; 2 ; >
     au < deepCrawl ; exists ; 2000 ; European Journal of Innovation Management Volume 3 ; 3 ; >
     au < deepCrawl ; exists ; 2001 ; European Journal of Innovation Management Volume 4 ; 4 ; >
@@ -4142,7 +4142,7 @@
     au < manifest ; exists ; 1993 ; International Journal of Commerce and Management Volume 3 ; 3 ; >
     au < manifest ; exists ; 1994 ; International Journal of Commerce and Management Volume 4 ; 4 ; >
     au < manifest ; exists ; 1995 ; International Journal of Commerce and Management Volume 5 ; 5 ; >
-    au < crawling ; exists ; 1996 ; International Journal of Commerce and Management Volume 6 ; 6 ; >
+    au < frozen ; exists ; 1996 ; International Journal of Commerce and Management Volume 6 ; 6 ; >
     au < frozen ; exists ; 1997 ; International Journal of Commerce and Management Volume 7 ; 7 ; >
     au < frozen ; exists ; 1998 ; International Journal of Commerce and Management Volume 8 ; 8 ; >
     au < deepCrawl ; exists ; 1999 ; International Journal of Commerce and Management Volume 9 ; 9 ; >
@@ -5629,7 +5629,7 @@
     comment[journal_id] = ijqs
     comment[merged_into] = 0265-671X
 
-    au < crawling ; exists ; 1996 ; International Journal of Quality Science Volume 1 ; 1 ; >
+    au < frozen ; exists ; 1996 ; International Journal of Quality Science Volume 1 ; 1 ; >
     au < frozen ; exists ; 1997 ; International Journal of Quality Science Volume 2 ; 2 ; >
     au < frozen ; exists ; 1998 ; International Journal of Quality Science Volume 3 ; 3 ; >
 
@@ -5980,7 +5980,7 @@
     au < manifest ; exists ; 1993 ; International Journal of Wine Marketing Volume 5 ; 5 ; >
     au < manifest ; exists ; 1994 ; International Journal of Wine Marketing Volume 6 ; 6 ; >
     au < manifest ; exists ; 1995 ; International Journal of Wine Marketing Volume 7 ; 7 ; >
-    au < crawling ; exists ; 1996 ; International Journal of Wine Marketing Volume 8 ; 8 ; >
+    au < frozen ; exists ; 1996 ; International Journal of Wine Marketing Volume 8 ; 8 ; >
     au < frozen ; exists ; 1997 ; International Journal of Wine Marketing Volume 9 ; 9 ; >
     au < frozen ; exists ; 1998 ; International Journal of Wine Marketing Volume 10 ; 10 ; >
     au < frozen ; exists ; 1999 ; International Journal of Wine Marketing Volume 11 ; 11 ; >
@@ -7073,7 +7073,7 @@
     au < manifest ; exists ; 1993 ; Journal of Educational Administration Volume 31 ; 31 ; >
     au < manifest ; exists ; 1994 ; Journal of Educational Administration Volume 32 ; 32 ; >
     au < manifest ; exists ; 1995 ; Journal of Educational Administration Volume 33 ; 33 ; >
-    au < crawling ; exists ; 1996 ; Journal of Educational Administration Volume 34 ; 34 ; >
+    au < frozen ; exists ; 1996 ; Journal of Educational Administration Volume 34 ; 34 ; >
     au < frozen ; exists ; 1997 ; Journal of Educational Administration Volume 35 ; 35 ; >
     au < frozen ; exists ; 1998 ; Journal of Educational Administration Volume 36 ; 36 ; >
     au < frozen ; exists ; 1999 ; Journal of Educational Administration Volume 37 ; 37 ; >
@@ -8361,7 +8361,7 @@
     comment[merged_into] = 0263-4503
 
     au < manifest ; exists ; 1995 ; Journal of Marketing Practice: Applied Marketing Science Volume 1 ; 1 ; >
-    au < crawling ; exists ; 1996 ; Journal of Marketing Practice: Applied Marketing Science Volume 2 ; 2 ; >
+    au < frozen ; exists ; 1996 ; Journal of Marketing Practice: Applied Marketing Science Volume 2 ; 2 ; >
     au < frozen ; exists ; 1997 ; Journal of Marketing Practice: Applied Marketing Science Volume 3 ; 3 ; >
     au < frozen ; exists ; 1998 ; Journal of Marketing Practice: Applied Marketing Science Volume 4 ; 4 ; >
     au < frozen ; exists ; 1999 ; Journal of Marketing Practice: Applied Marketing Science Volume 5 ; 5 ; >
@@ -8632,7 +8632,7 @@
     au < manifest ; exists ; 1993 ; Journal of Property Finance Volume 4 ; 4 ; >
     au < manifest ; exists ; 1994 ; Journal of Property Finance Volume 5 ; 5 ; >
     au < manifest ; exists ; 1995 ; Journal of Property Finance Volume 6 ; 6 ; >
-    au < crawling ; exists ; 1996 ; Journal of Property Finance Volume 7 ; 7 ; >
+    au < frozen ; exists ; 1996 ; Journal of Property Finance Volume 7 ; 7 ; >
     au < frozen ; exists ; 1997 ; Journal of Property Finance Volume 8 ; 8 ; >
 
   }
@@ -9252,7 +9252,7 @@
     au < manifest ; exists ; 1993 ; Kybernetes Volume 22 ; 22 ; >
     au < manifest ; exists ; 1994 ; Kybernetes Volume 23 ; 23 ; >
     au < manifest ; exists ; 1995 ; Kybernetes Volume 24 ; 24 ; >
-    au < crawling ; exists ; 1996 ; Kybernetes Volume 25 ; 25 ; >
+    au < frozen ; exists ; 1996 ; Kybernetes Volume 25 ; 25 ; >
     au < frozen ; exists ; 1997 ; Kybernetes Volume 26 ; 26 ; >
     au < frozen ; exists ; 1998 ; Kybernetes Volume 27 ; 27 ; >
     au < frozen ; exists ; 1999 ; Kybernetes Volume 28 ; 28 ; >
@@ -9499,7 +9499,7 @@
     au < manifest ; exists ; 1993 ; Library Hi Tech Volume 11 ; 11 ; >
     au < manifest ; exists ; 1994 ; Library Hi Tech Volume 12 ; 12 ; >
     au < manifest ; exists ; 1995 ; Library Hi Tech Volume 13 ; 13 ; >
-    au < crawling ; exists ; 1996 ; Library Hi Tech Volume 14 ; 14 ; >
+    au < frozen ; exists ; 1996 ; Library Hi Tech Volume 14 ; 14 ; >
     au < frozen ; exists ; 1997 ; Library Hi Tech Volume 15 ; 15 ; >
     au < frozen ; exists ; 1998 ; Library Hi Tech Volume 16 ; 16 ; >
     au < frozen ; exists ; 1999 ; Library Hi Tech Volume 17 ; 17 ; >
@@ -9808,7 +9808,7 @@
     au < manifest ; exists ; 1992 ; Management Decision Volume 30 ; 30 ; >
     au < manifest ; exists ; 1993 ; Management Decision Volume 31 ; 31 ; >
     au < manifest ; exists ; 1994 ; Management Decision Volume 32 ; 32 ; >
-    au < crawling ; exists ; 1995 ; Management Decision Volume 33 ; 33 ; >
+    au < frozen ; exists ; 1995 ; Management Decision Volume 33 ; 33 ; >
     au < frozen ; exists ; 1996 ; Management Decision Volume 34 ; 34 ; >
     au < frozen ; exists ; 1997 ; Management Decision Volume 35 ; 35 ; >
     au < frozen ; exists ; 1998 ; Management Decision Volume 36 ; 36 ; >
@@ -10806,7 +10806,7 @@
     au < manifest ; exists ; 1992 ; Nutrition & Food Science Volume 92 ; 92 ; >
     au < manifest ; exists ; 1993 ; Nutrition & Food Science Volume 93 ; 93 ; >
     au < manifest ; exists ; 1994 ; Nutrition & Food Science Volume 94 ; 94 ; >
-    au < crawling ; exists ; 1995 ; Nutrition & Food Science Volume 95 ; 95 ; >
+    au < frozen ; exists ; 1995 ; Nutrition & Food Science Volume 95 ; 95 ; >
     au < frozen ; exists ; 1996 ; Nutrition & Food Science Volume 96 ; 96 ; >
     au < frozen ; exists ; 1997 ; Nutrition & Food Science Volume 97 ; 97 ; >
     au < frozen ; exists ; 1998 ; Nutrition & Food Science Volume 98 ; 98 ; >
@@ -10874,7 +10874,7 @@
     au < finished ; crawling ; 1993 ; OCLC Systems & Services Volume 9 ; 9 ; reingest4.clockss.org:8082 >
     au < manifest ; exists ; 1994 ; OCLC Systems & Services Volume 10 ; 10 ; >
     au < manifest ; exists ; 1995 ; OCLC Systems & Services Volume 11 ; 11 ; >
-    au < crawling ; exists ; 1996 ; OCLC Systems & Services Volume 12 ; 12 ; >
+    au < frozen ; exists ; 1996 ; OCLC Systems & Services Volume 12 ; 12 ; >
     au < frozen ; exists ; 1997 ; OCLC Systems & Services Volume 13 ; 13 ; >
     au < frozen ; exists ; 1998 ; OCLC Systems & Services Volume 14 ; 14 ; >
     au < frozen ; exists ; 1999 ; OCLC Systems & Services Volume 15 ; 15 ; >
@@ -11001,7 +11001,7 @@
     au < manifest ; exists ; 1993 ; Online and CD-Rom Review Volume 17 ; 17 ; >
     au < manifest ; exists ; 1994 ; Online and CD-Rom Review Volume 18 ; 18 ; >
     au < manifest ; exists ; 1995 ; Online and CD-Rom Review Volume 19 ; 19 ; >
-    au < crawling ; exists ; 1996 ; Online and CD-Rom Review Volume 20 ; 20 ; >
+    au < frozen ; exists ; 1996 ; Online and CD-Rom Review Volume 20 ; 20 ; >
     au < frozen ; exists ; 1997 ; Online and CD-Rom Review Volume 21 ; 21 ; >
     au < frozen ; exists ; 1998 ; Online and CD-Rom Review Volume 22 ; 22 ; >
     au < frozen ; exists ; 1999 ; Online and CD-Rom Review Volume 23 ; 23 ; >
