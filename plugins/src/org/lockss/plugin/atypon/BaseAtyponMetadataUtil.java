@@ -351,6 +351,10 @@ public class BaseAtyponMetadataUtil {
 
     // There are some books from Practical Action which have wrong isbn inside ".ris" files when they collected
     // Do not do isbn/eisbn comparation so metadata can be extracted
+    if (tdbau == null) {
+      log.debug3("Publisher Specific Checks for publisher PA tdbau is null");
+    }
+    
     String pubNamePA = (tdbau == null) ? null : tdbau.getPublisherName();
     log.debug3("Publisher Specific Checks for publisher = " + pubNamePA);
 
