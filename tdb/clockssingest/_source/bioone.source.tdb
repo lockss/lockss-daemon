@@ -16,12 +16,21 @@
     title <
        name = American Entomological Society Source Content
     >
-    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/aes-released/
+    {
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/aes-released/
 
-    au < readySource ; crawling ; 2022 ; American Entomological Society Source Content 2022_01 ; 2022_01 >
+      au < readySource ; crawling ; 2022 ; American Entomological Society Source Content 2022_01 ; 2022_01 >
+      #No more AUs. Moved to https.
+
+    }
+    {
+      param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/aes-released/
+
+      au < expected ; exists ; 2023 ; American Entomological Society Source Content 2023_01 ; 2023_01 >
+
+    }
 
   }
-
 }
 {
   publisher <
@@ -42,12 +51,20 @@
        name = UniBio Press Source Content
     >
 
-    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/bioone-released/
+    {
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/bioone-released/
 
-    au < readySource ; crawling ; 2022 ; UniBio Press Source Content 2022 ; 2022 >
+      au < readySource ; crawling ; 2022 ; UniBio Press Source Content 2022 ; 2022 >
+      #No more AUs. Moved to https.
 
+    }
+    {
+      param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/bioone-released/
+
+      au < expected ; exists ; 2023 ; UniBio Press Source Content 2023 ; 2023 >
+
+    }
   }
-
 }
 
 {
