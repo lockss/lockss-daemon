@@ -26,7 +26,7 @@ case "$1" in
 	start_lockss ${2}
 	;;
     killall)
-        echo "killall is no longer supported, sorry.
+        echo "killall is no longer supported, sorry."
         exit 1
 #         killall_lockss ${2}
         ;;
