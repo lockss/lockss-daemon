@@ -11,30 +11,25 @@
 
   {
     title <
-      name = John Wiley and Sons MRW Source Content
-    >
-
-      plugin = org.lockss.plugin.clockss.wiley.ClockssWileyMRWSourcePlugin
-      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/wileymrw-released/
-      implicit < status ; status2 ; year ; name ; param[directory] >
-
-      au < readySource ; crawling ; 2022 ; Wiley MRW Source Content 2022_01 ; 2022_01 >
-
-  }
-
-  {
-    title <
       name = John Wiley and Sons Books Source Content
     >
 
       plugin = org.lockss.plugin.clockss.wiley.ClockssWileyBooksSourcePlugin
-      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/wileybooks-released/
       implicit < status ; status2 ; year ; name ; param[directory] >
+      {
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/wileybooks-released/
 
       au < readySource ; crawling ; 2022 ; Wiley Books Source Content 2022_01 ; 2022_01 >
       au < readySource ; crawling ; 2022 ; Wiley Books Source Content 2022_02 ; 2022_02 >
       au < expected ; exists ; 2022 ; Wiley Books Source Content 2022_03 ; 2022_03 >
+      #No more AUs. Moving to https.
+      }
+      {
+      param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/wileybooks-released/
 
+      au < expected ; exists ; 2023 ; Wiley Books Source Content 2023_01 ; 2023_01 >
+
+      }
   }
 
   {
@@ -44,8 +39,9 @@
 
     {
       plugin = org.lockss.plugin.wiley.ClockssWileyDirSourcePlugin
-      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/wiley-released/
       implicit < status ; status2 ; year ; name ; param[directory] >
+      {
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/wiley-released/
 
       au < zapped ; finished ; 2018 ; Wiley Source Content 2018_1 ; 2018_1 >
       au < zapped ; finished ; 2018 ; Wiley Source Content 2018_2 ; 2018_2 >
@@ -84,7 +80,16 @@
       au < expected ; exists ; 2022 ; Wiley Source Content 2022_07 ; 2022_07 >
       au < expected ; exists ; 2022 ; Wiley Source Content 2022_08 ; 2022_08 >
       au < expected ; exists ; 2022 ; Wiley Source Content 2022_09 ; 2022_09 >
+      #No more AUs. Moving to https.
+      }
+      {
+      param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/wiley-released/
 
+      au < expected ; exists ; 2023 ; Wiley Source Content 2023_01 ; 2023_01 >
+      au < expected ; exists ; 2023 ; Wiley Source Content 2023_02 ; 2023_02 >
+      au < expected ; exists ; 2023 ; Wiley Source Content 2023_03 ; 2023_03 >
+
+      }
     }
     {
       plugin = org.lockss.plugin.wiley.ClockssWileySourcePlugin
@@ -98,8 +103,21 @@
       au < zapped ; finished ; 2015 ; Wiley Source Content 2015 ; 2015 >
       au < zapped ; finished ; 2016 ; Wiley Source Content 2016 ; 2016 >
       au < zapped ; finished ; 2017 ; Wiley Source Content 2017 ; 2017 >
-      #no more AUs using this plugin
+      #No more AUs expected using this plugin
     }
+
+  }
+
+  {
+    title <
+      name = John Wiley and Sons MRW Source Content
+    >
+
+      plugin = org.lockss.plugin.clockss.wiley.ClockssWileyMRWSourcePlugin
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/wileymrw-released/
+      implicit < status ; status2 ; year ; name ; param[directory] >
+
+      au < readySource ; crawling ; 2022 ; Wiley MRW Source Content 2022_01 ; 2022_01 >
 
   }
 
