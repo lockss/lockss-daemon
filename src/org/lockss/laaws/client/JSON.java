@@ -1,6 +1,36 @@
 /*
- * LOCKSS Configuration Service REST API
- * REST API of the LOCKSS Configuration Service
+ * Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright notice,
+ * this list of conditions and the following disclaimer.
+ *
+ * 2. Redistributions in binary form must reproduce the above copyright notice,
+ * this list of conditions and the following disclaimer in the documentation
+ * and/or other materials provided with the distribution.
+ *
+ * 3. Neither the name of the copyright holder nor the names of its contributors
+ * may be used to endorse or promote products derived from this software without
+ * specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+*/
+
+/*
+ * LOCKSS Repository Service REST API
+ * REST API of the LOCKSS Repository Service
  *
  * The version of the OpenAPI document: 2.0.0
  * Contact: lockss-support@lockss.org
@@ -9,7 +39,6 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-
 
 package org.lockss.laaws.client;
 
@@ -22,6 +51,7 @@ import com.google.gson.internal.bind.util.ISO8601Utils;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.gsonfire.GsonFireBuilder;
+import io.gsonfire.TypeSelector;
 import java.io.IOException;
 import java.io.StringReader;
 import java.lang.reflect.Type;
@@ -32,19 +62,28 @@ import java.time.LocalDate;
 import java.time.OffsetDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 import okio.ByteString;
 
+/*
+ * A JSON utility class
+ *
+ * NOTE: in the future, this class may be converted to static, which may break
+ *       backward-compatibility
+ */
 public class JSON {
+  private static Gson gson;
+  private static boolean isLenientOnJson = false;
+  private static DateTypeAdapter dateTypeAdapter = new DateTypeAdapter();
+  private static SqlDateTypeAdapter sqlDateTypeAdapter = new SqlDateTypeAdapter();
+  private static OffsetDateTimeTypeAdapter offsetDateTimeTypeAdapter =
+      new OffsetDateTimeTypeAdapter();
+  private static LocalDateTypeAdapter localDateTypeAdapter = new LocalDateTypeAdapter();
+  private static ByteArrayAdapter byteArrayAdapter = new ByteArrayAdapter();
 
-  private Gson gson;
-  private boolean isLenientOnJson = false;
-  private final DateTypeAdapter dateTypeAdapter = new DateTypeAdapter();
-  private final SqlDateTypeAdapter sqlDateTypeAdapter = new SqlDateTypeAdapter();
-  private final OffsetDateTimeTypeAdapter offsetDateTimeTypeAdapter = new OffsetDateTimeTypeAdapter();
-  private final LocalDateTypeAdapter localDateTypeAdapter = new LocalDateTypeAdapter();
-  private final ByteArrayAdapter byteArrayAdapter = new ByteArrayAdapter();
-
+  @SuppressWarnings("unchecked")
   public static GsonBuilder createGson() {
     GsonFireBuilder fireBuilder = new GsonFireBuilder();
     GsonBuilder builder = fireBuilder.createGsonBuilder();
@@ -55,36 +94,55 @@ public class JSON {
     JsonElement element = readElement.getAsJsonObject().get(discriminatorField);
     if (null == element) {
       throw new IllegalArgumentException(
-        "missing discriminator field: <" + discriminatorField + ">");
+          "missing discriminator field: <" + discriminatorField + ">");
     }
     return element.getAsString();
   }
 
   /**
-   * Returns the Java class that implements the OpenAPI schema for the specified discriminator value.
+   * Returns the Java class that implements the OpenAPI schema for the specified discriminator
+   * value.
    *
    * @param classByDiscriminatorValue The map of discriminator values to Java classes.
-   * @param discriminatorValue        The value of the OpenAPI discriminator in the input data.
+   * @param discriminatorValue The value of the OpenAPI discriminator in the input data.
    * @return The Java class that implements the OpenAPI schema
    */
-  private static Class getClassByDiscriminator(Map classByDiscriminatorValue,
-    String discriminatorValue) {
+  private static Class getClassByDiscriminator(
+      Map classByDiscriminatorValue, String discriminatorValue) {
     Class clazz = (Class) classByDiscriminatorValue.get(discriminatorValue);
     if (null == clazz) {
       throw new IllegalArgumentException(
-        "cannot determine model class of name: <" + discriminatorValue + ">");
+          "cannot determine model class of name: <" + discriminatorValue + ">");
     }
     return clazz;
   }
 
-  public JSON() {
-    gson = createGson()
-      .registerTypeAdapter(Date.class, dateTypeAdapter)
-      .registerTypeAdapter(java.sql.Date.class, sqlDateTypeAdapter)
-      .registerTypeAdapter(OffsetDateTime.class, offsetDateTimeTypeAdapter)
-      .registerTypeAdapter(LocalDate.class, localDateTypeAdapter)
-      .registerTypeAdapter(byte[].class, byteArrayAdapter)
-      .create();
+  {
+    GsonBuilder gsonBuilder = createGson();
+    gsonBuilder.registerTypeAdapter(Date.class, dateTypeAdapter);
+    gsonBuilder.registerTypeAdapter(java.sql.Date.class, sqlDateTypeAdapter);
+    gsonBuilder.registerTypeAdapter(OffsetDateTime.class, offsetDateTimeTypeAdapter);
+    gsonBuilder.registerTypeAdapter(LocalDate.class, localDateTypeAdapter);
+    gsonBuilder.registerTypeAdapter(byte[].class, byteArrayAdapter);
+    gsonBuilder.registerTypeAdapterFactory(
+        new org.lockss.laaws.model.rs.ApiStatus.CustomTypeAdapterFactory());
+    gsonBuilder.registerTypeAdapterFactory(
+        new org.lockss.laaws.model.rs.Artifact.CustomTypeAdapterFactory());
+    gsonBuilder.registerTypeAdapterFactory(
+        new org.lockss.laaws.model.rs.ArtifactPageInfo.CustomTypeAdapterFactory());
+    gsonBuilder.registerTypeAdapterFactory(
+        new org.lockss.laaws.model.rs.AuSize.CustomTypeAdapterFactory());
+    gsonBuilder.registerTypeAdapterFactory(
+        new org.lockss.laaws.model.rs.AuidPageInfo.CustomTypeAdapterFactory());
+    gsonBuilder.registerTypeAdapterFactory(
+        new org.lockss.laaws.model.rs.ImportStatus.CustomTypeAdapterFactory());
+    gsonBuilder.registerTypeAdapterFactory(
+        new org.lockss.laaws.model.rs.PageInfo.CustomTypeAdapterFactory());
+    gsonBuilder.registerTypeAdapterFactory(
+        new org.lockss.laaws.model.rs.RepositoryInfo.CustomTypeAdapterFactory());
+    gsonBuilder.registerTypeAdapterFactory(
+        new org.lockss.laaws.model.rs.StorageInfo.CustomTypeAdapterFactory());
+    gson = gsonBuilder.create();
   }
 
   /**
@@ -92,7 +150,7 @@ public class JSON {
    *
    * @return Gson
    */
-  public Gson getGson() {
+  public static Gson getGson() {
     return gson;
   }
 
@@ -100,16 +158,13 @@ public class JSON {
    * Set Gson.
    *
    * @param gson Gson
-   * @return JSON
    */
-  public JSON setGson(Gson gson) {
-    this.gson = gson;
-    return this;
+  public static void setGson(Gson gson) {
+    JSON.gson = gson;
   }
 
-  public JSON setLenientOnJson(boolean lenientOnJson) {
+  public static void setLenientOnJson(boolean lenientOnJson) {
     isLenientOnJson = lenientOnJson;
-    return this;
   }
 
   /**
@@ -118,7 +173,7 @@ public class JSON {
    * @param obj Object
    * @return String representation of the JSON
    */
-  public String serialize(Object obj) {
+  public static String serialize(Object obj) {
     return gson.toJson(obj);
   }
 
@@ -131,11 +186,12 @@ public class JSON {
    * @return The deserialized Java object
    */
   @SuppressWarnings("unchecked")
-  public <T> T deserialize(String body, Type returnType) {
+  public static <T> T deserialize(String body, Type returnType) {
     try {
       if (isLenientOnJson) {
         JsonReader jsonReader = new JsonReader(new StringReader(body));
-        // see https://google-gson.googlecode.com/svn/trunk/gson/docs/javadocs/com/google/gson/stream/JsonReader.html#setLenient(boolean)
+        // see
+        // https://google-gson.googlecode.com/svn/trunk/gson/docs/javadocs/com/google/gson/stream/JsonReader.html#setLenient(boolean)
         jsonReader.setLenient(true);
         return gson.fromJson(jsonReader, returnType);
       } else {
@@ -147,7 +203,7 @@ public class JSON {
       if (returnType.equals(String.class)) {
         return (T) body;
       } else {
-        throw (e);
+        throw(e);
       }
     }
   }
@@ -156,7 +212,6 @@ public class JSON {
    * Gson TypeAdapter for Byte Array type
    */
   public static class ByteArrayAdapter extends TypeAdapter<byte[]> {
-
     @Override
     public void write(JsonWriter out, byte[] value) throws IOException {
       if (value == null) {
@@ -184,7 +239,6 @@ public class JSON {
    * Gson TypeAdapter for JSR310 OffsetDateTime type
    */
   public static class OffsetDateTimeTypeAdapter extends TypeAdapter<OffsetDateTime> {
-
     private DateTimeFormatter formatter;
 
     public OffsetDateTimeTypeAdapter() {
@@ -228,7 +282,6 @@ public class JSON {
    * Gson TypeAdapter for JSR310 LocalDate type
    */
   public static class LocalDateTypeAdapter extends TypeAdapter<LocalDate> {
-
     private DateTimeFormatter formatter;
 
     public LocalDateTypeAdapter() {
@@ -265,14 +318,12 @@ public class JSON {
     }
   }
 
-  public JSON setOffsetDateTimeFormat(DateTimeFormatter dateFormat) {
+  public static void setOffsetDateTimeFormat(DateTimeFormatter dateFormat) {
     offsetDateTimeTypeAdapter.setFormat(dateFormat);
-    return this;
   }
 
-  public JSON setLocalDateFormat(DateTimeFormatter dateFormat) {
+  public static void setLocalDateFormat(DateTimeFormatter dateFormat) {
     localDateTypeAdapter.setFormat(dateFormat);
-    return this;
   }
 
   /**
@@ -281,11 +332,9 @@ public class JSON {
    * (more efficient than SimpleDateFormat).
    */
   public static class SqlDateTypeAdapter extends TypeAdapter<java.sql.Date> {
-
     private DateFormat dateFormat;
 
-    public SqlDateTypeAdapter() {
-    }
+    public SqlDateTypeAdapter() {}
 
     public SqlDateTypeAdapter(DateFormat dateFormat) {
       this.dateFormat = dateFormat;
@@ -335,11 +384,9 @@ public class JSON {
    * If the dateFormat is null, ISO8601Utils will be used.
    */
   public static class DateTypeAdapter extends TypeAdapter<Date> {
-
     private DateFormat dateFormat;
 
-    public DateTypeAdapter() {
-    }
+    public DateTypeAdapter() {}
 
     public DateTypeAdapter(DateFormat dateFormat) {
       this.dateFormat = dateFormat;
@@ -388,14 +435,11 @@ public class JSON {
     }
   }
 
-  public JSON setDateFormat(DateFormat dateFormat) {
+  public static void setDateFormat(DateFormat dateFormat) {
     dateTypeAdapter.setFormat(dateFormat);
-    return this;
   }
 
-  public JSON setSqlDateFormat(DateFormat dateFormat) {
+  public static void setSqlDateFormat(DateFormat dateFormat) {
     sqlDateTypeAdapter.setFormat(dateFormat);
-    return this;
   }
-
 }

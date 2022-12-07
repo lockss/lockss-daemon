@@ -1,6 +1,36 @@
 /*
- * LOCKSS Configuration Service REST API
- * REST API of the LOCKSS Configuration Service
+ * Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright notice,
+ * this list of conditions and the following disclaimer.
+ *
+ * 2. Redistributions in binary form must reproduce the above copyright notice,
+ * this list of conditions and the following disclaimer in the documentation
+ * and/or other materials provided with the distribution.
+ *
+ * 3. Neither the name of the copyright holder nor the names of its contributors
+ * may be used to endorse or promote products derived from this software without
+ * specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+*/
+
+/*
+ * LOCKSS Repository Service REST API
+ * REST API of the LOCKSS Repository Service
  *
  * The version of the OpenAPI document: 2.0.0
  * Contact: lockss-support@lockss.org
@@ -10,9 +40,9 @@
  * Do not edit the class manually.
  */
 
-
 package org.lockss.laaws.client;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
@@ -22,12 +52,11 @@ import java.util.Map;
  * @param <T> The return type
  */
 public interface ApiCallback<T> {
-
   /**
    * This is called when the API call fails.
    *
-   * @param e               The exception causing the failure
-   * @param statusCode      Status code of the response if available, otherwise it would be 0
+   * @param e The exception causing the failure
+   * @param statusCode Status code of the response if available, otherwise it would be 0
    * @param responseHeaders Headers of the response if available, otherwise it would be null
    */
   void onFailure(ApiException e, int statusCode, Map<String, List<String>> responseHeaders);
@@ -35,8 +64,8 @@ public interface ApiCallback<T> {
   /**
    * This is called when the API call succeeded.
    *
-   * @param result          The result deserialized from response
-   * @param statusCode      Status code of the response
+   * @param result The result deserialized from response
+   * @param statusCode Status code of the response
    * @param responseHeaders Headers of the response
    */
   void onSuccess(T result, int statusCode, Map<String, List<String>> responseHeaders);
@@ -44,18 +73,18 @@ public interface ApiCallback<T> {
   /**
    * This is called when the API upload processing.
    *
-   * @param bytesWritten  bytes Written
+   * @param bytesWritten bytes Written
    * @param contentLength content length of request body
-   * @param done          write end
+   * @param done write end
    */
   void onUploadProgress(long bytesWritten, long contentLength, boolean done);
 
   /**
-   * This is called when the API downlond processing.
+   * This is called when the API download processing.
    *
-   * @param bytesRead     bytes Read
-   * @param contentLength content lenngth of the response
-   * @param done          Read end
+   * @param bytesRead bytes Read
+   * @param contentLength content length of the response
+   * @param done Read end
    */
   void onDownloadProgress(long bytesRead, long contentLength, boolean done);
 }

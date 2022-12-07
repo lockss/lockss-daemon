@@ -43,19 +43,23 @@ public class MigrationManager extends BaseLockssManager
 
   protected static Logger log = Logger.getLogger("MigrationManager");
 
-  public static final String PREFIX = Configuration.PREFIX + "foo.";
-
-  public static final String PARAM_CACHE_MAX_MB =
-    PREFIX + "cacheMaxMb";
-  public static final long DEFAULT_CACHE_MAX_MB = 100;
+  public static final String PREFIX = Configuration.PREFIX + "v2.migrate.";
 
   static final String STATUS_RUNNING = "running";
-  static final String STATUS_STATUS = "status";
+  static final String STATUS_ACTIVE_LIST = "active_list";
+//   static final String STATUS_FINISHED_LIST = "finished_list";
+  static final String STATUS_FINISHED_PAGE = "finished_page";
+  static final String STATUS_FINISHED_COUNT = "finished_count";
+  static final String STATUS_START_TIME = "start_time";
+  static final String STATUS_STATUS = "status_list";
+  static final String STATUS_INSTRUMENTS = "instrument_list";
   static final String STATUS_ERRORS = "errors";
   static final String STATUS_PROGRESS = "progress";
 
   private V2AuMover mover;
   private Runner runner;
+  private String idleError;
+  private long startTime = 0;
 
   public void startService() {
     super.startService();
@@ -68,31 +72,72 @@ public class MigrationManager extends BaseLockssManager
   public void setConfig(Configuration config, Configuration oldConfig,
 			Configuration.Differences changedKeys) {
     if (changedKeys.contains(PREFIX)) {
+      V2AuMover m = mover;
+      if (m != null) {
+        m.setConfig(config, oldConfig, changedKeys);
+      }
     }
   }
 
   public Map getStatus() {
-    if (runner == null) {
-      return MapUtil.map(STATUS_RUNNING, false);
-    }
     Map stat = new HashMap();
-    stat.put(STATUS_RUNNING, mover.isRunning());
-    stat.put(STATUS_STATUS, mover.getCurrentStatus());
-    List<String> errs = mover.getErrors();
-    if (errs != null && !errs.isEmpty()) {
-      stat.put(STATUS_ERRORS, errs);
+    stat.put(STATUS_START_TIME, startTime);
+    if (runner == null) {
+      stat.put(STATUS_RUNNING, false);
+      stat.put(STATUS_FINISHED_COUNT, 0);
+      if (idleError != null) {
+        stat.put(STATUS_ERRORS, ListUtil.list(idleError));
+      } else {
+        stat.put(STATUS_ERRORS, Collections.emptyList());
+      }
+    } else {
+      stat.put(STATUS_RUNNING, mover.isRunning());
+      stat.put(STATUS_STATUS, mover.getCurrentStatus());
+      stat.put(STATUS_INSTRUMENTS, mover.getInstruments());
+      if (!mover.getActiveStatusList().isEmpty()) {
+        stat.put(STATUS_ACTIVE_LIST, mover.getActiveStatusList());
+      }
+      stat.put(STATUS_FINISHED_COUNT, mover.getFinishedStatusCount());
+
+//       if (!mover.getFinishedStatusList().isEmpty()) {
+//         stat.put(STATUS_FINISHED_LIST, mover.getFinishedStatusList());
+//       }
+      List<String> errs = mover.getErrors();
+      if (errs != null && !errs.isEmpty()) {
+        stat.put(STATUS_ERRORS, errs);
+      }
     }
     return stat;
   }
 
+  public Map getFinishedPage(int index, int size) {
+    Map stat = new HashMap();
+    if (runner != null && idleError == null) {
+      stat.put(STATUS_FINISHED_PAGE, mover.getFinishedStatusPage(index, size));
+    }
+    return stat;
+  }
+
+  private boolean isRunning() {
+    return mover != null && mover.isRunning();
+  }
+
   public synchronized void startRunner(V2AuMover.Args args) throws IOException {
-    if (mover != null && mover.isRunning()) {
+    if (isRunning()) {
       throw new IOException("Migration is already running, can't start a new one");
     }
+    startTime = TimeBase.nowMs();
     mover = new V2AuMover();
     runner = new Runner(args);
     log.debug("Starting runner: " + args);
     new Thread(runner).start();
+  }
+
+  public synchronized void abortCopy() throws IOException {
+    if (!isRunning()) {
+      throw new IllegalStateException("Not running");
+    }
+    mover.abortCopy();
   }
 
   public class Runner extends LockssRunnable {
@@ -104,7 +149,55 @@ public class MigrationManager extends BaseLockssManager
     }
 
     public void lockssRun() {
-      mover.executeRequest(args);
+      idleError = null;
+      try {
+        log.debug("Starting mover");
+        mover.executeRequest(args);
+        log.debug("Mover returned");
+      } catch (Exception e) {
+        log.error("V2AuMover failed to start", e);
+        idleError = "V2AuMover failed to start: " + e;
+        runner = null;
+        mover = null;
+      }
+    }
+  }
+
+  private static final int COPY_BIT = 1;
+  private static final int VERIFY_BIT = 2;
+
+  public enum OpType {
+    CopyOnly("Copy Only", COPY_BIT),
+    CopyAndVerify("Copy and Verify", COPY_BIT | VERIFY_BIT),
+    VerifyOnly("Verify Only", VERIFY_BIT);
+
+    private String label;
+    private int bits;
+
+    OpType(String label, int bits) {
+      this.label = label;
+      this.bits = bits;
+    }
+
+    public boolean isCopy() {
+      return (bits & COPY_BIT) != 0;
+    }
+
+    public boolean isVerify() {
+      return (bits & VERIFY_BIT) != 0;
+    }
+
+    public boolean isCopyOnly() {
+      return (bits == COPY_BIT);
+    }
+
+    public boolean isVerifyOnly() {
+      return (bits == VERIFY_BIT);
+    }
+
+
+    public String toString() {
+      return label;
     }
   }
 

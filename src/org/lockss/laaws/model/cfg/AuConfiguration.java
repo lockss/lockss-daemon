@@ -1,4 +1,34 @@
 /*
+ * Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright notice,
+ * this list of conditions and the following disclaimer.
+ *
+ * 2. Redistributions in binary form must reproduce the above copyright notice,
+ * this list of conditions and the following disclaimer in the documentation
+ * and/or other materials provided with the distribution.
+ *
+ * 3. Neither the name of the copyright holder nor the names of its contributors
+ * may be used to endorse or promote products derived from this software without
+ * specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+*/
+
+/*
  * LOCKSS Configuration Service REST API
  * REST API of the LOCKSS Configuration Service
  *
@@ -10,11 +40,12 @@
  * Do not edit the class manually.
  */
 
-
 package org.lockss.laaws.model.cfg;
 
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -23,40 +54,39 @@ import java.util.Objects;
  * The encapsulation of an Archival Unit configuration
  */
 @ApiModel(description = "The encapsulation of an Archival Unit configuration")
-public class AuConfiguration {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+public class AuConfiguration implements Serializable {
+  private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_AU_ID = "auId";
-  @SerializedName(SERIALIZED_NAME_AU_ID)
-  private String auId;
+  @SerializedName(SERIALIZED_NAME_AU_ID) private String auId;
 
   public static final String SERIALIZED_NAME_AU_CONFIG = "auConfig";
-  @SerializedName(SERIALIZED_NAME_AU_CONFIG)
-  private Map<String, String> auConfig = new HashMap<>();
+  @SerializedName(SERIALIZED_NAME_AU_CONFIG) private Map<String, String> auConfig = new HashMap<>();
 
+  public AuConfiguration() {}
 
   public AuConfiguration auId(String auId) {
-
     this.auId = auId;
     return this;
   }
 
   /**
    * The identifier of the Archival Unit
-   *
    * @return auId
    **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "The identifier of the Archival Unit")
+
   public String getAuId() {
     return auId;
   }
-
 
   public void setAuId(String auId) {
     this.auId = auId;
   }
 
-
   public AuConfiguration auConfig(Map<String, String> auConfig) {
-
     this.auConfig = auConfig;
     return this;
   }
@@ -68,18 +98,18 @@ public class AuConfiguration {
 
   /**
    * The map of Archival Unit configuration items
-   *
    * @return auConfig
    **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "The map of Archival Unit configuration items")
+
   public Map<String, String> getAuConfig() {
     return auConfig;
   }
 
-
   public void setAuConfig(Map<String, String> auConfig) {
     this.auConfig = auConfig;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -90,15 +120,14 @@ public class AuConfiguration {
       return false;
     }
     AuConfiguration auConfiguration = (AuConfiguration) o;
-    return Objects.equals(this.auId, auConfiguration.auId) &&
-      Objects.equals(this.auConfig, auConfiguration.auConfig);
+    return Objects.equals(this.auId, auConfiguration.auId)
+        && Objects.equals(this.auConfig, auConfiguration.auConfig);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(auId, auConfig);
   }
-
 
   @Override
   public String toString() {
@@ -120,6 +149,4 @@ public class AuConfiguration {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

@@ -45,9 +45,9 @@ import org.lockss.util.LockssSerializable;
  */
 class PeerAgreements implements LockssSerializable {
   // The String representing the other peer.
-  private final String id;
+  private String id;
   // A Map detailing the agreements with the other peer.
-  private final EnumMap<AgreementType, PeerAgreement> map;
+  private EnumMap<AgreementType, PeerAgreement> map;
 
   private PeerAgreements(String id,
 			 EnumMap<AgreementType, PeerAgreement> map) {
@@ -105,6 +105,23 @@ class PeerAgreements implements LockssSerializable {
     return "PeerAgreements[id="+id+
       ", map="+map+
       "]";
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    PeerAgreements that = (PeerAgreements) o;
+    return id.equals(that.id) && map.equals(that.map);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(id, map);
   }
 
   /**
