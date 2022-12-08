@@ -34,8 +34,8 @@
       au < manifest ; exists ; 2017 ; Acta Dermato-Venereologica Volume 2017 ; 97 ; 2017 ; >
       au < manifest ; exists ; 2018 ; Acta Dermato-Venereologica Volume 2018 ; 98 ; 2018 ; >
       au < notReady ; exists ; 2019 ; Acta Dermato-Venereologica Volume 2019 ; 99 ; 2019 ; > #500 Error
-      au < finished ; manifest ; 2020 ; Acta Dermato-Venereologica Volume 2020 ; 100 ; 2020 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2021 ; Acta Dermato-Venereologica Volume 2021 ; 101 ; 2021 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2020 ; Acta Dermato-Venereologica Volume 2020 ; 100 ; 2020 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2021 ; Acta Dermato-Venereologica Volume 2021 ; 101 ; 2021 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2022 ; Acta Dermato-Venereologica Volume 2022 ; 102 ; 2022 ; >
 
   }
@@ -61,9 +61,9 @@
       #au < exists ; exists ; 2016 ; Acta Orthopaedica Volume 2016 ; 87 ; 2016 ; >
       #au < exists ; exists ; 2017 ; Acta Orthopaedica Volume 2017 ; 88 ; 2017 ; >
       #au < exists ; exists ; 2018 ; Acta Orthopaedica Volume 2018 ; 89 ; 2018 ; >
-      au < finished ; manifest ; 2019 ; Acta Orthopaedica Volume 2019 ; 90 ; 2019 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2020 ; Acta Orthopaedica Volume 2020 ; 91 ; 2020 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2021 ; Acta Orthopaedica Volume 2021 ; 92 ; 2021 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2019 ; Acta Orthopaedica Volume 2019 ; 90 ; 2019 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2020 ; Acta Orthopaedica Volume 2020 ; 91 ; 2020 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2021 ; Acta Orthopaedica Volume 2021 ; 92 ; 2021 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2022 ; Acta Orthopaedica Volume 2022 ; 93 ; 2022 ; >
 
   }
