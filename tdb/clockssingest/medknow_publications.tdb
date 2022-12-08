@@ -6004,15 +6004,16 @@
 
       param[journal_issn] = 2041-9414
 #      param[base_url] = http://www.genome-integrity.org/
+      #Moving to ScienceOpen
 
-      au < notReady ; exists ; 2015 ; Genome Integrity Volume 6 ; 2015 ; 6 ; https://www.genome-integrity.org/ ; ; > #500 Internal Server error.
-      au < notReady ; exists ; 2016 ; Genome Integrity Volume 7 ; 2016 ; 7 ; https://www.genome-integrity.org/ ; ; > #500 Internal Server error. http://www.genome-integrity.org/showbackIssue.asp?issn=2041-9414;year=2016;volume=7;issue=1
-      au < notReady ; exists ; 2017 ; Genome Integrity Volume 8 ; 2017 ; 8 ; https://www.genome-integrity.org/ ; ; > #500 Internal Server error.
-      au < notReady ; exists ; 2018 ; Genome Integrity Volume 9 ; 2018 ; 9 ; https://www.genome-integrity.org/ ; ; > #500 Internal Server error.
-      au < notReady ; exists ; 2019 ; Genome Integrity Volume 10 ; 2019 ; 10 ; https://www.genome-integrity.org/ ; ; > #500 Error
-      au < notReady ; exists ; 2020 ; Genome Integrity Volume 11 ; 2020 ; 11 ; https://www.genome-integrity.org/ ; ; > #500 Error
-      au < notReady ; exists ; 2021 ; Genome Integrity Volume 12 ; 2021 ; 12 ; https://www.genome-integrity.org/ ; ; > #500 Error
-      au < notReady ; exists ; 2022 ; Genome Integrity Volume 13 ; 2022 ; 13 ; https://www.genome-integrity.org/ ; ; > #500 Error https://www.genome-integrity.org/showbackIssue.asp?issn=2041-9414;year=2022;volume=13;issue=1
+      au < doNotProcess ; exists ; 2015 ; Genome Integrity Volume 6 ; 2015 ; 6 ; https://www.genome-integrity.org/ ; ; > #500 Internal Server error.
+      au < doNotProcess ; exists ; 2016 ; Genome Integrity Volume 7 ; 2016 ; 7 ; https://www.genome-integrity.org/ ; ; > #500 Internal Server error. http://www.genome-integrity.org/showbackIssue.asp?issn=2041-9414;year=2016;volume=7;issue=1
+      au < doNotProcess ; exists ; 2017 ; Genome Integrity Volume 8 ; 2017 ; 8 ; https://www.genome-integrity.org/ ; ; > #500 Internal Server error.
+      au < doNotProcess ; exists ; 2018 ; Genome Integrity Volume 9 ; 2018 ; 9 ; https://www.genome-integrity.org/ ; ; > #500 Internal Server error.
+      au < doNotProcess ; exists ; 2019 ; Genome Integrity Volume 10 ; 2019 ; 10 ; https://www.genome-integrity.org/ ; ; > #500 Error
+      au < doNotProcess ; exists ; 2020 ; Genome Integrity Volume 11 ; 2020 ; 11 ; https://www.genome-integrity.org/ ; ; > #500 Error
+      au < doNotProcess ; exists ; 2021 ; Genome Integrity Volume 12 ; 2021 ; 12 ; https://www.genome-integrity.org/ ; ; > #500 Error
+      au < doNotProcess ; exists ; 2022 ; Genome Integrity Volume 13 ; 2022 ; 13 ; https://www.genome-integrity.org/ ; ; > #500 Error https://www.genome-integrity.org/showbackIssue.asp?issn=2041-9414;year=2022;volume=13;issue=1
 
   }
 

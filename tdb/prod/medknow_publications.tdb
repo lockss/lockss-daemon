@@ -5550,15 +5550,16 @@
 
       param[journal_issn] = 2041-9414
 #      param[base_url] = http://www.genome-integrity.org/
+      #Moving to ScienceOpen
 
-      au < notReady ; 2015 ; Genome Integrity Volume 6 ; 2015 ; 6 ; https://www.genome-integrity.org/ > #500 Internal Server Error
-      au < notReady ; 2016 ; Genome Integrity Volume 7 ; 2016 ; 7 ; https://www.genome-integrity.org/ > #500 Internal Server Error
-      au < notReady ; 2017 ; Genome Integrity Volume 8 ; 2017 ; 8 ; https://www.genome-integrity.org/ > #500 Internal Server Error
-      au < notReady ; 2018 ; Genome Integrity Volume 9 ; 2018 ; 9 ; https://www.genome-integrity.org/ > #500 Internal Server Error
-      au < notReady ; 2019 ; Genome Integrity Volume 10 ; 2019 ; 10 ; https://www.genome-integrity.org/ > #500 Internal Server Error
-      au < notReady ; 2020 ; Genome Integrity Volume 11 ; 2020 ; 11 ; https://www.genome-integrity.org/ >
-      au < notReady ; 2021 ; Genome Integrity Volume 12 ; 2021 ; 12 ; https://www.genome-integrity.org/ >
-      au < manifest ; 2022 ; Genome Integrity Volume 13 ; 2022 ; 13 ; https://www.genome-integrity.org/ >
+      au < doNotProcess ; 2015 ; Genome Integrity Volume 6 ; 2015 ; 6 ; https://www.genome-integrity.org/ > #500 Internal Server Error
+      au < doNotProcess ; 2016 ; Genome Integrity Volume 7 ; 2016 ; 7 ; https://www.genome-integrity.org/ > #500 Internal Server Error
+      au < doNotProcess ; 2017 ; Genome Integrity Volume 8 ; 2017 ; 8 ; https://www.genome-integrity.org/ > #500 Internal Server Error
+      au < doNotProcess ; 2018 ; Genome Integrity Volume 9 ; 2018 ; 9 ; https://www.genome-integrity.org/ > #500 Internal Server Error
+      au < doNotProcess ; 2019 ; Genome Integrity Volume 10 ; 2019 ; 10 ; https://www.genome-integrity.org/ > #500 Internal Server Error
+      au < doNotProcess ; 2020 ; Genome Integrity Volume 11 ; 2020 ; 11 ; https://www.genome-integrity.org/ >
+      au < doNotProcess ; 2021 ; Genome Integrity Volume 12 ; 2021 ; 12 ; https://www.genome-integrity.org/ >
+      au < doNotProcess ; 2022 ; Genome Integrity Volume 13 ; 2022 ; 13 ; https://www.genome-integrity.org/ >
 
   }
 
