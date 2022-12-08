@@ -25,8 +25,8 @@
     {
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/scienceopen-released/
 
-      au < readySource ; crawling ; 2020 ; ScienceOpen Source Content 2020 ; 2020 >
-      au < readySource ; crawling ; 2021 ; ScienceOpen Source Content 2021 ; 2021 >
+      au < readySource ; down ; 2020 ; ScienceOpen Source Content 2020 ; 2020 >
+      au < readySource ; down ; 2021 ; ScienceOpen Source Content 2021 ; 2021 >
       au < readySource ; crawling ; 2022 ; ScienceOpen Source Content 2022 ; 2022 >
       #No more AUs. Moving to https.
     }
