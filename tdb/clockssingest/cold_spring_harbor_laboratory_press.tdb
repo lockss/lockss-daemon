@@ -64,7 +64,7 @@
       au < finished ; finished ; 2018 ; Cold Spring Harbor Perspectives in Biology Volume 10 ; 10 ; http://cshperspectives.cshlp.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2019 ; Cold Spring Harbor Perspectives in Biology Volume 11 ; 11 ; https://cshperspectives.cshlp.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Cold Spring Harbor Perspectives in Biology Volume 12 ; 12 ; https://cshperspectives.cshlp.org/ ; >
-      au < frozen ; exists ; 2021 ; Cold Spring Harbor Perspectives in Biology Volume 13 ; 13 ; https://cshperspectives.cshlp.org/ ; >
+      au < finished ; manifest ; 2021 ; Cold Spring Harbor Perspectives in Biology Volume 13 ; 13 ; https://cshperspectives.cshlp.org/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2022 ; Cold Spring Harbor Perspectives in Biology Volume 14 ; 14 ; https://cshperspectives.cshlp.org/ ; >
 
     }
@@ -294,7 +294,7 @@
       au < finished ; crawling ; 2017 ; Genes & Development Volume 31 ; 31 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2018 ; Genes & Development Volume 32 ; 32 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2019 ; Genes & Development Volume 33 ; 33 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; Genes & Development Volume 34 ; 34 ; >
+      au < finished ; manifest ; 2020 ; Genes & Development Volume 34 ; 34 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; Genes & Development Volume 35 ; 35 ; >
       au < crawling ; exists ; 2022 ; Genes & Development Volume 36 ; 36 ; >
 
@@ -395,7 +395,7 @@
       au < finished ; finished ; 2017 ; Learning & Memory Volume 24 ; 24 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2018 ; Learning & Memory Volume 25 ; 25 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2019 ; Learning & Memory Volume 26 ; 26 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; Learning & Memory Volume 27 ; 27 ; >
+      au < finished ; manifest ; 2020 ; Learning & Memory Volume 27 ; 27 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; Learning & Memory Volume 28 ; 28 ; >
       au < manifest ; exists ; 2022 ; Learning & Memory Volume 29 ; 29 ; >
 
@@ -443,7 +443,7 @@
       au < finished ; finished ; 2017 ; RNA Volume 23 ; 23 ; http://rnajournal.cshlp.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2018 ; RNA Volume 24 ; 24 ; http://rnajournal.cshlp.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; RNA Volume 25 ; 25 ; https://rnajournal.cshlp.org/ ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; RNA Volume 26 ; 26 ; https://rnajournal.cshlp.org/ ; >
+      au < finished ; manifest ; 2020 ; RNA Volume 26 ; 26 ; https://rnajournal.cshlp.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; RNA Volume 27 ; 27 ; https://rnajournal.cshlp.org/ ; >
       au < crawling ; exists ; 2022 ; RNA Volume 28 ; 28 ; https://rnajournal.cshlp.org/ ; >
 
