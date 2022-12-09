@@ -644,7 +644,8 @@ public class ArtifactsApi {
           apiClient.parameterToPair("includeContent", includeContent));
     }
 
-    final String[] localVarAccepts = {"multipart/form-data"};
+    final String[] localVarAccepts = {"multipart/form-data",
+                                      "application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) {
       localVarHeaderParams.put("Accept", localVarAccept);

@@ -805,11 +805,11 @@ public class V2RestClient {
     if (accepts.length == 0) {
       return null;
     }
-    for (String accept : accepts) {
-      if (isJsonMime(accept)) {
-        return accept;
-      }
-    }
+//     for (String accept : accepts) {
+//       if (isJsonMime(accept)) {
+//         return accept;
+//       }
+//     }
     return StringUtil.join(accepts, ",");
   }
 
