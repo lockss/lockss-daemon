@@ -77,7 +77,7 @@
       au < exists ; exists ; 2017 ; Journal of Applied Animal Nutrition Volume 5 ; 5 ; https://www.wageningenacademic.com/ ; >
       au < exists ; exists ; 2018 ; Journal of Applied Animal Nutrition Volume 6 ; 6 ; https://www.wageningenacademic.com/ ; >
       au < exists ; exists ; 2019 ; Journal of Applied Animal Nutrition Volume 7 ; 7 ; https://www.wageningenacademic.com/ ; >
-      au < frozen ; exists ; 2020 ; Journal of Applied Animal Nutrition Volume 8 ; 8 ; https://www.wageningenacademic.com/ ; >
+      au < finished ; manifest ; 2020 ; Journal of Applied Animal Nutrition Volume 8 ; 8 ; https://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; Journal of Applied Animal Nutrition Volume 9 ; 9 ; https://www.wageningenacademic.com/ ; >
       au < crawling ; exists ; 2022 ; Journal of Applied Animal Nutrition Volume 10 ; 10 ; https://www.wageningenacademic.com/ ; >
 
@@ -123,7 +123,7 @@
       au < manifest ; exists ; 2008 ; Journal on Chain and Network Science Volume 8 ; 8 ; https://www.wageningenacademic.com/ ; >
       au < manifest ; exists ; 2009 ; Journal on Chain and Network Science Volume 9 ; 9 ; https://www.wageningenacademic.com/ ; >
       au < manifest ; exists ; 2010 ; Journal on Chain and Network Science Volume 10 ; 10 ; https://www.wageningenacademic.com/ ; >
-      au < frozen ; exists ; 2011 ; Journal on Chain and Network Science Volume 11 ; 11 ; https://www.wageningenacademic.com/ ; >
+      au < finished ; manifest ; 2011 ; Journal on Chain and Network Science Volume 11 ; 11 ; https://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2012 ; Journal on Chain and Network Science Volume 12 ; 12 ; http://www.wageningenacademic.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2013 ; Journal on Chain and Network Science Volume 13 ; 13 ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Journal on Chain and Network Science Volume 14 ; 14 ; http://www.wageningenacademic.com/ ; >
@@ -163,7 +163,7 @@
 
       param[journal_id] = wmj
 
-      au < frozen ; exists ; 2008 ; World Mycotoxin Journal Volume 1 ; 1 ; https://www.wageningenacademic.com/ ; >
+      au < finished ; manifest ; 2008 ; World Mycotoxin Journal Volume 1 ; 1 ; https://www.wageningenacademic.com/ ; reingest3.clockss.org:8083 >
       au < manifest ; exists ; 2009 ; World Mycotoxin Journal Volume 2 ; 2 ; https://www.wageningenacademic.com/ ; >
       au < manifest ; exists ; 2010 ; World Mycotoxin Journal Volume 3 ; 3 ; https://www.wageningenacademic.com/ ; >
       au < finished ; finished ; 2011 ; World Mycotoxin Journal Volume 4 ; 4 ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
