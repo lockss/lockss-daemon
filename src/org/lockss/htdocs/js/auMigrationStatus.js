@@ -1,5 +1,16 @@
 'use strict';
 
+function toggleElement(elem) {
+    if (elem === null) {
+        return;
+    }
+    if (elem.style.display === "none") {
+        elem.style.display = "block";
+    } else {
+        elem.style.display = "none";
+    }
+}
+
 class AuMigrationStatus extends React.Component {
   constructor(props) {
     super(props);
@@ -29,7 +40,10 @@ class AuMigrationStatus extends React.Component {
       return null;
     }
     return (
-        <div className="stats-div"><font size="2">{this.state.instrumentList.map((msg, index) => <div key={index}>{msg}<br /></div>)}</font></div>
+        <div>
+            <button onClick={() => toggleElement(document.getElementById('instrumentation'))}>Toggle instrumentation</button>
+            <div id="instrumentation" className="stats-div" style={{display: 'none'}}><font size="2">{this.state.instrumentList.map((msg, index) => <div key={index}>{msg}<br /></div>)}</font></div>
+        </div>
     )
   }
 

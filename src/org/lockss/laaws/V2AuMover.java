@@ -1730,19 +1730,33 @@ s api client with long timeout */
    */
   public List<String> getCurrentStatus() {
     List<String> res = new ArrayList<>();
+    String errstat = getErrorStatus();
     if (STATUS_RUNNING.equals(currentStatus)) {
       StringBuilder sb = new StringBuilder();
-      sb.append("Status: Running, processed ");
+      sb.append("Status: ");
+      sb.append(isAbort() ? "Aborting" : "Running");
+      sb.append(", processed ");
       sb.append(totalAusMoved);
       sb.append(" of ");
       sb.append(totalAusToMove);
       sb.append(" AUs");
+      if (errstat.length() != 0) {
+        sb.append(", ");
+        sb.append(errstat);
+      }
       res.add(sb.toString());
       sb = new StringBuilder();
       totalTimers.addCounterStatus(sb, opType);
       res.add(sb.toString());
     } else {
-      res.add("Status: " + getIdleStatus());
+      StringBuilder sb = new StringBuilder();
+      sb.append("Status: ");
+      sb.append(getIdleStatus());
+      if (errstat.length() != 0) {
+        sb.append(", ");
+        sb.append(errstat);
+      }
+      res.add(sb.toString());
       res.add(currentStatus);
     }
     return res;
@@ -1756,6 +1770,11 @@ s api client with long timeout */
       return "Done";
     }
     return "Idle";
+  }
+
+  String getErrorStatus() {
+    int n = getErrors().size();
+    return n == 0 ? "" : StringUtil.numberOfUnits(n, "error");
   }
 
   public List<String> getActiveStatusList() {
