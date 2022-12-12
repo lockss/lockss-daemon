@@ -44,27 +44,27 @@
     implicit < status ; status2 ; year ; name ; param[directory] >
 
     {
+
+      plugin = org.lockss.plugin.clockss.casalini.ClockssCasaliniLibriBooksPlugin
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/casalinibooks-released/
-      {
+      ###########This plugin needs "Source" in the name.###############
 
-        plugin = org.lockss.plugin.clockss.casalini.ClockssCasaliniLibriBooksPlugin
-        ###########This plugin needs "Source" in the name.###############
+      au < readySource ; finished ; 2020 ; Casalini Books Source Content 2020 ; 2020 >
+      au < readySource ; finished ; 2021 ; Casalini Books Source Content 2021 ; 2021 >
+      #No more AUs. Plugin renamed.
 
-        au < readySource ; finished ; 2020 ; Casalini Books Source Content 2020 ; 2020 >
-        au < readySource ; finished ; 2021 ; Casalini Books Source Content 2021 ; 2021 >
-        #No more AUs. Plugin renamed.
-
-      }
-      {
-
-        plugin = org.lockss.plugin.clockss.casalini.ClockssCasaliniLibriBooksSourcePlugin
-
-        au < readySource ; crawling ; 2022 ; Casalini Books Source Content 2022 ; 2022 >
-        #No more AUs. Moved to https.
-
-      }
     }
     {
+
+      plugin = org.lockss.plugin.clockss.casalini.ClockssCasaliniLibriBooksSourcePlugin
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/casalinibooks-released/
+
+      au < readySource ; crawling ; 2022 ; Casalini Books Source Content 2022 ; 2022 >
+      #No more AUs. Moved to https.
+
+    }
+    {
+
       plugin = org.lockss.plugin.clockss.casalini.ClockssCasaliniLibriBooksSourcePlugin
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/casalinibooks-released/
 

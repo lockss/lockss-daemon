@@ -6,6 +6,7 @@
     info[tester] = S ;
     info[platform] = Source/FTP
   >
+  hidden[proxy] = DIRECT
 
   {
 
@@ -14,11 +15,22 @@
     >
 
     plugin = org.lockss.plugin.clockss.chineseuniversityhongkong.ClockssChineseUniversityHongKongSourcePlugin
-    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/cuhk-released/
-    hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[directory] >
 
-    au < readySource ; crawling ; 2022 ; Chinese University of Hong Kong Source Content 2022 ; 2022_01 >
+    {
+
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/cuhk-released/
+
+      au < readySource ; crawling ; 2022 ; Chinese University of Hong Kong Source Content 2022_01 ; 2022_01 >
+      #No more AUs. Moved to https.
+    }
+    {
+
+      param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/cuhk-released/
+
+      au < readySource ; crawling ; 2023 ; Chinese University of Hong Kong Source Content 2023_01 ; 2023_01 >
+
+    }
 
   }
 
