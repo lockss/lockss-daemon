@@ -24,7 +24,7 @@
 
     {
     #starting from year 2023, we should use this plugin to handle directory rather than year
-    #plugin = org.lockss.plugin.clockss.intechopen.ClockssIntechOpenBooksDirSourcePlugin
+    plugin = org.lockss.plugin.clockss.intechopen.ClockssIntechOpenBooksDirSourcePlugin
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/intechopen-released/
 
     au < expected ; exists ; 2023 ; Intech Open Books Content 2023_01 ; 2023_01 >
