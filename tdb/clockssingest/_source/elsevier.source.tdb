@@ -170,7 +170,6 @@
 
       plugin = org.lockss.plugin.elsevier.ClockssElsevierSourcePlugin
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/elsevier-released/
-      hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[year] >
 
       # 2008 not on oclc or nii - down/not crawling
@@ -189,7 +188,6 @@
 
       plugin = org.lockss.plugin.elsevier.ClockssElsevierDTD5SourcePlugin
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/elsevierdtd5-released/
-      hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[year] >
 
       au < zapped ; finished ; 2014 ; Elsevier Source Content 2014 ; 2014 >
@@ -211,7 +209,6 @@
 
       plugin = org.lockss.plugin.elsevier.ClockssElsevierDeliveredSourcePlugin
       param[base_url] = http://clockss-staged.clockss.org/sourcefiles/elsevier-delivered/
-      hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[year] ; param[directory] >
 
 #2017 AUs are on all machines except Rice and Milano, except 13-1 which is on all machines.
