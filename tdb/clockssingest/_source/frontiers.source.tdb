@@ -6,6 +6,7 @@
     info[tester] = S ;
     info[platform] = Source
   >
+  hidden[proxy] = DIRECT
 
   {
 
@@ -17,18 +18,31 @@
 
       #Converted plugin to directory based
       plugin = org.lockss.plugin.clockss.frontiers.ClockssFrontiersDirSourcePlugin
-      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/frontiers-released/
-      hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[directory] >
 
-      au < readySource ; finished ; 2021 ; Frontiers Journals Source Content 2021_01 ; 2021_01 >
-      au < readySource ; finished ; 2021 ; Frontiers Journals Source Content 2021_02 ; 2021_02 >
+      {
 
-      au < readySource ; crawling ; 2022 ; Frontiers Journals Source Content 2022_01 ; 2022_01 >
-      au < readySource ; crawling ; 2022 ; Frontiers Journals Source Content 2022_02 ; 2022_02 >
-      au < readySource ; crawling ; 2022 ; Frontiers Journals Source Content 2022_03 ; 2022_03 >
-      au < readySource ; crawling ; 2022 ; Frontiers Journals Source Content 2022_04 ; 2022_04 >
-      au < expected ; exists ; 2022 ; Frontiers Journals Source Content 2022_05 ; 2022_05 >
+        param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/frontiers-released/
+
+        au < readySource ; finished ; 2021 ; Frontiers Journals Source Content 2021_01 ; 2021_01 >
+        au < readySource ; finished ; 2021 ; Frontiers Journals Source Content 2021_02 ; 2021_02 >
+
+        au < readySource ; crawling ; 2022 ; Frontiers Journals Source Content 2022_01 ; 2022_01 >
+        au < readySource ; crawling ; 2022 ; Frontiers Journals Source Content 2022_02 ; 2022_02 >
+        au < readySource ; crawling ; 2022 ; Frontiers Journals Source Content 2022_03 ; 2022_03 >
+        au < readySource ; crawling ; 2022 ; Frontiers Journals Source Content 2022_04 ; 2022_04 >
+        au < expected ; exists ; 2022 ; Frontiers Journals Source Content 2022_05 ; 2022_05 >
+        #No more AUs. Moved to https.
+
+      }
+      {
+
+        param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/frontiers-released/
+
+        au < expected ; exists ; 2023 ; Frontiers Journals Source Content 2023_01 ; 2023_01 >
+        au < expected ; exists ; 2023 ; Frontiers Journals Source Content 2023_02 ; 2023_02 >
+
+      }
 
     }
 
@@ -36,7 +50,6 @@
 
       plugin = org.lockss.plugin.clockss.frontiers.ClockssFrontiersSourcePlugin
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/frontiers-released/
-      hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[year] >
 
       au < zapped ; finished ; 2016 ; Frontiers Journals Source Content 2016 ; 2016 >
@@ -59,11 +72,23 @@
     {
 
       plugin = org.lockss.plugin.clockss.frontiers.ClockssFrontiersBooksDirSourcePlugin
-      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/frontiersbooks-released/
-      hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[directory] >
 
-      au < expected ; exists ; 2022 ; Frontiers Books Source Content 2022_01 ; 2022_01 >
+      {
+
+        param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/frontiersbooks-released/
+
+        au < expected ; exists ; 2022 ; Frontiers Books Source Content 2022_01 ; 2022_01 >
+        #No more AUs. Moved to https.
+
+      }
+      {
+
+        param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/frontiersbooks-released/
+
+        au < expected ; exists ; 2023 ; Frontiers Books Source Content 2023_01 ; 2023_01 >
+
+      }
 
     }
 
@@ -86,4 +111,5 @@
     }
 
   }
+
 }

@@ -6,7 +6,7 @@
     info[tester] = S ;
     info[platform] = Source
   >
-
+  hidden[proxy] = DIRECT
 
   {
 
@@ -15,12 +15,24 @@
     >
 
     plugin = org.lockss.plugin.clockss.gigascience.ClockssGigaScienceJournalSourcePlugin
-    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/gigascience-released/
-    hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[directory] >
 
-    au < readySource ; finished ; 2021 ; GigaScience Journal Source Content 2021_01 ; 2021_01 >
-    au < readySource ; crawling ; 2022 ; GigaScience Journal Source Content 2022_01 ; 2022_01 >
+    {
+
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/gigascience-released/
+
+      au < readySource ; finished ; 2021 ; GigaScience Journal Source Content 2021_01 ; 2021_01 >
+      au < readySource ; crawling ; 2022 ; GigaScience Journal Source Content 2022_01 ; 2022_01 >
+      #No more AUs. Moved to https.
+
+    }
+    {
+
+      param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/gigascience-released/
+
+      au < expected ; exists ; 2023 ; GigaScience Journal Source Content 2023_01 ; 2023_01 >
+
+    }
 
   }
 

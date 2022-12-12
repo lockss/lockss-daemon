@@ -6,7 +6,7 @@
     info[tester] = S ;
     info[platform] = Source. See LXPUB-546
   >
-
+  hidden[proxy] = DIRECT
   {
   
     title < 
@@ -14,11 +14,24 @@
     >
 
     plugin = org.lockss.plugin.clockss.healthbook.ClockssHealthbookDirSourcePlugin
-    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/hando-released/
-    hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[directory] >
 
-    au < readySource ; crawling ; 2022 ; healthbook TIMES Oncology Hematology Source Content 2022 ; 2022_01 >
+    {
+
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/hando-released/
+
+      au < readySource ; crawling ; 2022 ; healthbook TIMES Oncology Hematology Source Content 2022_01 ; 2022_01 >
+      #No more AUs. Moved to https.
+
+    }
+    {
+
+      param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/hando-released/
+
+      au < expected ; exists ; 2023 ; healthbook TIMES Oncology Hematology Source Content 2023_01 ; 2023_01 >
+
+    }
+
 
   }
 

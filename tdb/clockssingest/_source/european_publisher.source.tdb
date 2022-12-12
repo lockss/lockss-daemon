@@ -6,6 +6,7 @@
     info[tester] = S ;
     info[platform] = Source
   >
+  hidden[proxy] = DIRECT
 
   {
 
@@ -14,15 +15,26 @@
     >
 
     plugin = org.lockss.plugin.clockss.futureacademy.ClockssFutureAcademySourcePlugin
-    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/futureacademy-released/
-
-    hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[directory] >
 
-    au < zapped ; finished ; 2019 ; European Publisher Source Content 2019 ; 2019 >
-    au < readySource ; finished ; 2020 ; European Publisher Source Content 2020 ; 2020 >
-    au < readySource ; finished ; 2021 ; European Publisher Source Content 2021 ; 2021 >
-    au < readySource ; crawling ; 2022 ; European Publisher Source Content 2022 ; 2022 >
+    {
+
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/futureacademy-released/
+
+      au < zapped ; finished ; 2019 ; European Publisher Source Content 2019 ; 2019 >
+      au < readySource ; finished ; 2020 ; European Publisher Source Content 2020 ; 2020 >
+      au < readySource ; finished ; 2021 ; European Publisher Source Content 2021 ; 2021 >
+      au < readySource ; crawling ; 2022 ; European Publisher Source Content 2022 ; 2022 >
+      #No more AUs. Moved to https.
+
+    }
+    {
+
+      param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/futureacademy-released/
+
+      au < expected ; exists ; 2023 ; European Publisher Source Content 2023 ; 2023 >
+
+    }
 
   }
 
