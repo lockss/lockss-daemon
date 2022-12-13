@@ -541,7 +541,7 @@
 
     param[journal_issn] = 2773-1332
 
-    au < crawling ; exists ; 2021 ; Bengal Journal of Cancer Volume 1 ; 2021 ; 1 ; https://www.bengaljcancer.org/ ; ; >
+    au < frozen ; exists ; 2021 ; Bengal Journal of Cancer Volume 1 ; 2021 ; 1 ; https://www.bengaljcancer.org/ ; ; >
     au < expected ; exists ; 2022 ; Bengal Journal of Cancer Volume 2 ; 2022 ; 2 ; https://www.bengaljcancer.org/ ; ; >
 
   }
@@ -2317,7 +2317,7 @@
 
     param[journal_issn] = 2773-1367
 
-    au < crawling ; exists ; 2021 ; International Journal of Orthopaedic Surgery Volume 29 ; 2021 ; 29 ; https://ijos.in/ ; ; >
+    au < frozen ; exists ; 2021 ; International Journal of Orthopaedic Surgery Volume 29 ; 2021 ; 29 ; https://ijos.in/ ; ; >
     au < crawling ; exists ; 2022 ; International Journal of Orthopaedic Surgery Volume 30 ; 2022 ; 30 ; https://ijos.in/ ; ; >
 
   }
@@ -6227,7 +6227,7 @@
       au < manifest ; exists ; 2018 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 11 ; 2018 ; 11 ; https://www.ijournalhs.org/ ; ; >
       au < manifest ; exists ; 2019 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 12 ; 2019 ; 12 ; https://www.ijournalhs.org/ ; ; >
       au < manifest ; exists ; 2020 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 13 ; 2020 ; 13 ; https://www.ijournalhs.org/ ; ; >
-      au < crawling ; exists ; 2021 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 14 ; 2021 ; 14 ; https://www.ijournalhs.org/ ; ; >
+      au < frozen ; exists ; 2021 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 14 ; 2021 ; 14 ; https://www.ijournalhs.org/ ; ; >
       au < crawling ; exists ; 2022 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 15 ; 2022 ; 15 ; https://www.ijournalhs.org/ ; ; >
 
   }
@@ -10418,7 +10418,7 @@
       au < manifest ; exists ; 2018 ; Journal of Diabetes and Endocrine Practice Volume 1 ; 2018 ; 1 ; https://www.jdeponline.com/ ; ; >
       au < manifest ; exists ; 2019 ; Journal of Diabetes and Endocrine Practice Volume 2 ; 2019 ; 2 ; https://www.jdeponline.com/ ; ; >
       au < manifest ; exists ; 2020 ; Journal of Diabetes and Endocrine Practice Volume 3 ; 2020 ; 3 ; https://www.jdeponline.com/ ; ; >
-      au < crawling ; exists ; 2021 ; Journal of Diabetes and Endocrine Practice Volume 4 ; 2021 ; 4 ; https://www.jdeponline.com/ ; ; >
+      au < frozen ; exists ; 2021 ; Journal of Diabetes and Endocrine Practice Volume 4 ; 2021 ; 4 ; https://www.jdeponline.com/ ; ; >
 
   }
 
@@ -11371,7 +11371,7 @@
       au < manifest ; exists ; 2018 ; Airway Volume 1 ; 2018 ; 1 ; https://www.arwy.org/ ; ; >
       au < manifest ; exists ; 2019 ; Airway Volume 2 ; 2019 ; 2 ; https://www.arwy.org/ ; ; >
       au < manifest ; exists ; 2020 ; Airway Volume 3 ; 2020 ; 3 ; https://www.arwy.org/ ; ; >
-      au < crawling ; exists ; 2021 ; Airway Volume 4 ; 2021 ; 4 ; https://www.arwy.org/ ; ; >
+      au < frozen ; exists ; 2021 ; Airway Volume 4 ; 2021 ; 4 ; https://www.arwy.org/ ; ; >
       au < manifest ; exists ; 2022 ; Airway Volume 5 ; 2022 ; 5 ; https://www.arwy.org/ ; ; >
 
   }
@@ -11388,7 +11388,7 @@
       #param[base_url] = https://www.ajmonline.org.in/
 
       au < manifest ; exists ; 2020 ; Amrita Journal of Medicine Volume 16 ; 2020 ; 16 ; https://www.ajmonline.org.in/ ; ; >
-      au < crawling ; exists ; 2021 ; Amrita Journal of Medicine Volume 17 ; 2021 ; 17 ; https://www.ajmonline.org.in/ ; ; >
+      au < frozen ; exists ; 2021 ; Amrita Journal of Medicine Volume 17 ; 2021 ; 17 ; https://www.ajmonline.org.in/ ; ; >
       au < manifest ; exists ; 2022 ; Amrita Journal of Medicine Volume 18 ; 2022 ; 18 ; https://www.ajmonline.org.in/ ; ; >
 
   }
@@ -11427,7 +11427,7 @@
       au < manifest ; exists ; 2018 ; Annals of Movement Disorders Volume 1 ; 2018 ; 1 ; https://www.aomd.in/ ; ; >
       au < manifest ; exists ; 2019 ; Annals of Movement Disorders Volume 2 ; 2019 ; 2 ; https://www.aomd.in/ ; ; >
       au < manifest ; exists ; 2020 ; Annals of Movement Disorders Volume 3 ; 2020 ; 3 ; https://www.aomd.in/ ; ; >
-      au < crawling ; exists ; 2021 ; Annals of Movement Disorders Volume 4 ; 2021 ; 4 ; https://www.aomd.in/ ; ; >
+      au < frozen ; exists ; 2021 ; Annals of Movement Disorders Volume 4 ; 2021 ; 4 ; https://www.aomd.in/ ; ; >
       au < manifest ; exists ; 2022 ; Annals of Movement Disorders Volume 5 ; 2022 ; 5 ; https://www.aomd.in/ ; ; >
 
   }
@@ -11466,7 +11466,7 @@
       au < manifest ; exists ; 2018 ; APIK Journal of Internal Medicine Volume 6 ; 2018 ; 6 ; https://www.ajim.in/ ; ; >
       au < manifest ; exists ; 2019 ; APIK Journal of Internal Medicine Volume 7 ; 2019 ; 7 ; https://www.ajim.in/ ; ; >
       au < manifest ; exists ; 2020 ; APIK Journal of Internal Medicine Volume 8 ; 2020 ; 8 ; https://www.ajim.in/ ; ; >
-      au < crawling ; exists ; 2021 ; APIK Journal of Internal Medicine Volume 9 ; 2021 ; 9 ; https://www.ajim.in/ ; ; >
+      au < frozen ; exists ; 2021 ; APIK Journal of Internal Medicine Volume 9 ; 2021 ; 9 ; https://www.ajim.in/ ; ; >
       au < manifest ; exists ; 2022 ; APIK Journal of Internal Medicine Volume 10 ; 2022 ; 10 ; https://www.ajim.in/ ; ; >
 
   }
@@ -11494,7 +11494,7 @@
       au < manifest ; exists ; 2018 ; Archives of Mental Health Volume 19 ; 2018 ; 19 ; https://www.amhonline.org/ ; ; >
       au < manifest ; exists ; 2019 ; Archives of Mental Health Volume 20 ; 2019 ; 20 ; https://www.amhonline.org/ ; ; >
       au < manifest ; exists ; 2020 ; Archives of Mental Health Volume 21 ; 2020 ; 21 ; https://www.amhonline.org/ ; ; >
-      au < crawling ; exists ; 2021 ; Archives of Mental Health Volume 22 ; 2021 ; 22 ; https://www.amhonline.org/ ; ; >
+      au < frozen ; exists ; 2021 ; Archives of Mental Health Volume 22 ; 2021 ; 22 ; https://www.amhonline.org/ ; ; >
       au < manifest ; exists ; 2022 ; Archives of Mental Health Volume 23 ; 2022 ; 23 ; https://www.amhonline.org/ ; ; >
 
   }
