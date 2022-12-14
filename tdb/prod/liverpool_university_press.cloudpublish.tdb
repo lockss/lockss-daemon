@@ -467,24 +467,24 @@
     #Published 1994-present
     #jounral_num = 79
 
-    au < manifest ; 1994 ; Essays in Romanticism Volume 1 ; 1 >
-    au < manifest ; 1995 ; Essays in Romanticism Volume 2 ; 2 >
-    au < manifest ; 1996 ; Essays in Romanticism Volume 3 ; 3 >
-    au < manifest ; 1997 ; Essays in Romanticism Volume 4 ; 4 >
-    au < manifest ; 1998 ; Essays in Romanticism Volume 5 ; 5 >
-    au < manifest ; 1999 ; Essays in Romanticism Volume 6 ; 6 >
-    au < released ; 2000 ; Essays in Romanticism Volume 7 ; 7 >
-    au < manifest ; 2001 ; Essays in Romanticism Volume 8 ; 8 >
-    au < manifest ; 2002 ; Essays in Romanticism Volume 9 ; 9 >
-    au < manifest ; 2003 ; Essays in Romanticism Volume 10 ; 10 >
-    au < manifest ; 2004 ; Essays in Romanticism Volume 11 ; 11 >
-    au < manifest ; 2005 ; Essays in Romanticism Volume 12 ; 12 >
-    au < manifest ; 2006 ; Essays in Romanticism Volume 13 ; 13 >
-    au < manifest ; 2007 ; Essays in Romanticism Volume 14 ; 14 >
-    au < released ; 2008 ; Essays in Romanticism Volume 15 ; 15 >
-    au < doNotProcess ; 2009 ; Essays in Romanticism Volume 16 ; 16 >
-    au < doNotProcess ; 2010 ; Essays in Romanticism Volume 17 ; 17 >
-    au < doNotProcess ; 2011 ; Essays in Romanticism Volume 18 ; 18 >
+    au < manifest ; 1993 ; Essays in Romanticism Volume 1 ; 1 >
+    au < manifest ; 1994 ; Essays in Romanticism Volume 2 ; 2 >
+    au < manifest ; 1995 ; Essays in Romanticism Volume 3 ; 3 >
+    au < manifest ; 1996 ; Essays in Romanticism Volume 4 ; 4 >
+    au < manifest ; 1997 ; Essays in Romanticism Volume 5 ; 5 >
+    au < manifest ; 1998 ; Essays in Romanticism Volume 6 ; 6 >
+    au < released ; 1999 ; Essays in Romanticism Volume 7 ; 7 >
+    au < manifest ; 2000 ; Essays in Romanticism Volume 8 ; 8 >
+    au < manifest ; 2001 ; Essays in Romanticism Volume 9 ; 9 >
+    au < manifest ; 2002 ; Essays in Romanticism Volume 10 ; 10 >
+    au < manifest ; 2003 ; Essays in Romanticism Volume 11 ; 11 >
+    au < manifest ; 2004 ; Essays in Romanticism Volume 12 ; 12 >
+    au < manifest ; 2005 ; Essays in Romanticism Volume 13 ; 13 >
+    au < manifest ; 2006 ; Essays in Romanticism Volume 14 ; 14 >
+    au < released ; 2007 ; Essays in Romanticism Volume 15 ; 15 >
+    au < doNotProcess ; 2008 ; Essays in Romanticism Volume 16 ; 16 >
+    au < doNotProcess ; 2009 ; Essays in Romanticism Volume 17 ; 17 >
+    au < doNotProcess ; 2010 ; Essays in Romanticism Volume 18 ; 18 >
     au < doNotProcess ; 2012 ; Essays in Romanticism Volume 19 ; 19 >
     au < doNotProcess ; 2013 ; Essays in Romanticism Volume 20 ; 20 >
     au < doNotProcess ; 2014 ; Essays in Romanticism Volume 21 ; 21 >
@@ -767,14 +767,16 @@
     >
     param[journal_id] = hgr
     comment[continues] = Before Farming
-    #Published 2015-2019
     #jounral_num = 66
+    #V2 I1=2016, I2=2016, I3=2016, I4=2017
+    #V3 I1=2017, I2=2018, I3=2019, I4=2019
+    #V4 I1=2019, I2=2019, I3=2020
 
     au < doNotProcess ; 2015 ; Hunter Gatherer Research Volume 1 ; 1 >
-    au < doNotProcess ; 2016 ; Hunter Gatherer Research Volume 2 ; 2 >
-    au < doNotProcess ; 2017 ; Hunter Gatherer Research Volume 3 ; 3 >
-    au < released ; 2018 ; Hunter Gatherer Research Volume 4 ; 4 >
-    au < manifest ; 2019 ; Hunter Gatherer Research Volume 5 ; 5 >
+    au < doNotProcess ; 2016-2017 ; Hunter Gatherer Research Volume 2 ; 2 >
+    au < doNotProcess ; 2017-2019 ; Hunter Gatherer Research Volume 3 ; 3 >
+    au < released ; 2019-2020 ; Hunter Gatherer Research Volume 4 ; 4 >
+    au < manifest ; 2021 ; Hunter Gatherer Research Volume 5 ; 5 >
 
   }
 
