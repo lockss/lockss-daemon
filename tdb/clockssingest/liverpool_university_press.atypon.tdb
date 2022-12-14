@@ -866,7 +866,7 @@
     au < finished ; crawling ; 2017 ; Music, Sound, and the Moving Image Volume 11 ; 11 ; http://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Music, Sound, and the Moving Image Volume 12 ; 12 ; https://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; Music, Sound, and the Moving Image Volume 13 ; 13 ; https://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
-    au < expected ; exists ; 2020 ; Music, Sound, and the Moving Image Volume 14 ; 14 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2020 ; Music, Sound, and the Moving Image Volume 14 ; 14 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
 
@@ -989,7 +989,7 @@
     au < finished ; crawling ; 2019 ; Quebec Studies Volume 67 ; 67 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2019 ; Quebec Studies Volume 68 ; 68 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < doNotProcess ; doNotProcess ; 2020 ; Quebec Studies Volume 69 ; 69 ; https://online.liverpooluniversitypress.co.uk/ ; >
-    au < expected ; exists ; 2020 ; Quebec Studies Volume 70 ; 70 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2020 ; Quebec Studies Volume 70 ; 70 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
 
@@ -1071,7 +1071,7 @@
     au < finished ; crawling ; 2017 ; Studia Hibernica Volume 43 ; 43 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Studia Hibernica Volume 44 ; 44 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; Studia Hibernica Volume 45 ; 45 ; https://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
-    au < expected ; exists ; 2020 ; Studia Hibernica Volume 46 ; 46 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2020 ; Studia Hibernica Volume 46 ; 46 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
   
@@ -1267,7 +1267,7 @@
     au < finished ; crawling ; 2017 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 166 ; 166 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2018 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 167 ; 167 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 168 ; 168 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
-    au < expected ; exists ; 2020 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 169 ; 169 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2020 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 169 ; 169 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
 
