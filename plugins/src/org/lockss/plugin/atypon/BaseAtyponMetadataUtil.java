@@ -153,18 +153,29 @@ public class BaseAtyponMetadataUtil {
         isInAu = false;
         log.debug3("Seg date check: start checking: " + pubNameSeg);
         String seg_date = am.get(MetadataField.FIELD_DATE);
-
+        String seg_pubtitle = am.get(MetadataField.FIELD_PUBLICATION_TITLE);
+        
         TdbAu seg_tdbau = au.getTdbAu();
         String seg_AU_Year = seg_tdbau.getYear();
+        String seg_tdb_title = seg_tdbau.getPublicationTitle();
 
-        log.debug3("Seg date check: seg_date = " + seg_date + ", seg_AU_YEAR = " + seg_AU_Year);
+        log.debug3("Seg date check: seg_date = " + seg_date + ", seg_AU_YEAR = " + seg_AU_Year
+        + ", seg_pubtitle = " + seg_pubtitle + ", seg_tdb_title = " + seg_tdb_title);
 
         if ((!StringUtils.isEmpty(seg_date) && (seg_AU_Year != null))) {
           for (String auYear : seg_AU_Year.split("/|-|,")) {
             if (auYear.length() == 4) {
               if (seg_date.substring(0, 4).equals(auYear)) {
                 log.debug3("Seg date check: seg_date = " + seg_date.substring(0, 4) + ", auYear = " + auYear);
-                isInAu = true;
+
+                if ((seg_pubtitle != null) && (seg_tdb_title != null) && seg_tdb_title.contains(seg_pubtitle)) {
+                  log.debug3("Seg date check: seg_date = " + seg_date + ", seg_AU_YEAR = " + seg_AU_Year
+                          + ", check title passed, seg_pubtitle = " + seg_pubtitle + ", seg_tdb_title = " + seg_tdb_title);
+                  isInAu = true;
+                } else {
+                  log.debug3("Seg date check: seg_date = " + seg_date + ", seg_AU_YEAR = " + seg_AU_Year
+                          + ", check title failed, seg_pubtitle = " + seg_pubtitle + ", seg_tdb_title = " + seg_tdb_title);
+                }
               }
             }
           }
