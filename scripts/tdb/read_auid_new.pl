@@ -3398,7 +3398,7 @@ while (my $line = <>) {
       if ($req->url ne $resp->request->uri) {
               $vol_title = $resp->request->uri;
               $result = "Redirected";
-      } elsif (defined($man_contents) && ($man_contents =~ m/\/$param{journal_id}\/\S*$param{volume_name}/)) {
+      } elsif (defined($man_contents) && ($man_contents =~ m/publications\/journals\/$param{journal_id}\/\S*-$param{volume_name}/)) {
 #      } elsif (defined($man_contents) && ($man_contents =~ m/\/$param{journal_id}\[^"\]*-volume-$param{volume_name}\[^"\]*\"/)) {
         # no lockss permission statement on start page. Permission statements are here: https://press.anu.edu.au/lockss.txt
         if ($man_contents =~ m/<h1>(.*)<\/h1>/si) {

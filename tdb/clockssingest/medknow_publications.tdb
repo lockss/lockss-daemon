@@ -4058,7 +4058,7 @@
     au < manifest ; exists ; 2019 ; Middle East African Journal of Ophthalmology Volume 26 ; 2019 ; 26 ; http://www.meajo.org/ ; ; >
     au < manifest ; exists ; 2020 ; Middle East African Journal of Ophthalmology Volume 27 ; 2020 ; 27 ; http://www.meajo.org/ ; ; >
     au < manifest ; exists ; 2021 ; Middle East African Journal of Ophthalmology Volume 28 ; 2021 ; 28 ; http://www.meajo.org/ ; ; >
-    au < ready ; exists ; 2022 ; Middle East African Journal of Ophthalmology Volume 29 ; 2022 ; 29 ; http://www.meajo.org/ ; ; >
+    au < manifest ; exists ; 2022 ; Middle East African Journal of Ophthalmology Volume 29 ; 2022 ; 29 ; http://www.meajo.org/ ; ; >
 
   }
 
@@ -6472,7 +6472,7 @@
       au < finished ; crawling ; 2018 ; International Journal of Advanced Medical and Health Research Volume 5 ; 2018 ; 5 ; http://www.ijamhrjournal.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; International Journal of Advanced Medical and Health Research Volume 6 ; 2019 ; 6 ; https://www.ijamhrjournal.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; International Journal of Advanced Medical and Health Research Volume 7 ; 2020 ; 7 ; https://www.ijamhrjournal.org/ ; ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2021 ; International Journal of Advanced Medical and Health Research Volume 8 ; 2021 ; 8 ; https://www.ijamhrjournal.org/ ; ; >
+      au < crawling ; exists ; 2021 ; International Journal of Advanced Medical and Health Research Volume 8 ; 2021 ; 8 ; https://www.ijamhrjournal.org/ ; ; > #500 error
       au < crawling ; exists ; 2022 ; International Journal of Advanced Medical and Health Research Volume 9 ; 2022 ; 9 ; https://www.ijamhrjournal.org/ ; ; >
 
   }
@@ -10374,12 +10374,12 @@
 #      param[base_url] = http://www.journaldmims.com/
       #Site appears to still be on http, but has errors. Is moving to https.
 
-      au < manifest ; exists ; 2017 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 12 ; 2017 ; 12 ; http://www.journaldmims.com/ ; ; >
-      au < manifest ; exists ; 2018 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 13 ; 2018 ; 13 ; http://www.journaldmims.com/ ; ; >
-      au < manifest ; exists ; 2019 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 14 ; 2019 ; 14 ; http://www.journaldmims.com/ ; ; >
-      au < manifest ; exists ; 2020 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 15 ; 2020 ; 15 ; http://www.journaldmims.com/ ; ; >
-      au < manifest ; exists ; 2021 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 16 ; 2021 ; 16 ; http://www.journaldmims.com/ ; ; >
-      au < manifest ; exists ; 2022 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 17 ; 2022 ; 17 ; http://www.journaldmims.com/ ; ; >
+      au < notReady ; exists ; 2017 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 12 ; 2017 ; 12 ; http://www.journaldmims.com/ ; ; >
+      au < notReady ; exists ; 2018 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 13 ; 2018 ; 13 ; http://www.journaldmims.com/ ; ; >
+      au < notReady ; exists ; 2019 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 14 ; 2019 ; 14 ; http://www.journaldmims.com/ ; ; >
+      au < notReady ; exists ; 2020 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 15 ; 2020 ; 15 ; http://www.journaldmims.com/ ; ; >
+      au < notReady ; exists ; 2021 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 16 ; 2021 ; 16 ; http://www.journaldmims.com/ ; ; >
+      au < notReady ; exists ; 2022 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 17 ; 2022 ; 17 ; http://www.journaldmims.com/ ; ; >
 
   }
 
@@ -10717,14 +10717,15 @@
 
       param[journal_issn] = 2395-1540
 #      param[base_url] = http://www.jrnm.in/
+      #Site appears to still be on http, but has errors. Is moving to https.
 
-      au < manifest ; exists ; 2016 ; Journal of Renal Nutrition and Metabolism Volume 2 ; 2016 ; 2 ; http://www.jrnm.in/ ; ; >
-      au < manifest ; exists ; 2018 ; Journal of Renal Nutrition and Metabolism Volume 3 ; 2018 ; 3 ; http://www.jrnm.in/ ; ; >
-      au < manifest ; exists ; 2018 ; Journal of Renal Nutrition and Metabolism Volume 4 ; 2018 ; 4 ; http://www.jrnm.in/ ; ; >
-      au < manifest ; exists ; 2019 ; Journal of Renal Nutrition and Metabolism Volume 5 ; 2019 ; 5 ; http://www.jrnm.in/ ; ; >
-      au < manifest ; exists ; 2020 ; Journal of Renal Nutrition and Metabolism Volume 6 ; 2020 ; 6 ; http://www.jrnm.in/ ; ; >
-      au < manifest ; exists ; 2021 ; Journal of Renal Nutrition and Metabolism Volume 7 ; 2021 ; 7 ; http://www.jrnm.in/ ; ; >
-      au < expected ; exists ; 2022 ; Journal of Renal Nutrition and Metabolism Volume 8 ; 2022 ; 8 ; http://www.jrnm.in/ ; ; >
+      au < notReady ; exists ; 2016 ; Journal of Renal Nutrition and Metabolism Volume 2 ; 2016 ; 2 ; http://www.jrnm.in/ ; ; >
+      au < notReady ; exists ; 2018 ; Journal of Renal Nutrition and Metabolism Volume 3 ; 2018 ; 3 ; http://www.jrnm.in/ ; ; >
+      au < notReady ; exists ; 2018 ; Journal of Renal Nutrition and Metabolism Volume 4 ; 2018 ; 4 ; http://www.jrnm.in/ ; ; >
+      au < notReady ; exists ; 2019 ; Journal of Renal Nutrition and Metabolism Volume 5 ; 2019 ; 5 ; http://www.jrnm.in/ ; ; >
+      au < notReady ; exists ; 2020 ; Journal of Renal Nutrition and Metabolism Volume 6 ; 2020 ; 6 ; http://www.jrnm.in/ ; ; >
+      au < notReady ; exists ; 2021 ; Journal of Renal Nutrition and Metabolism Volume 7 ; 2021 ; 7 ; http://www.jrnm.in/ ; ; >
+      au < notReady ; exists ; 2022 ; Journal of Renal Nutrition and Metabolism Volume 8 ; 2022 ; 8 ; http://www.jrnm.in/ ; ; >
 
   }
 
@@ -10974,12 +10975,12 @@
 #      param[base_url] = http://www.nigjourcvtsurg.org/
      #Site appears to still be on http, but has errors. Is moving to https.
 
-      au < manifest ; exists ; 2016 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 1 ; 2016 ; 1 ; http://www.nigjourcvtsurg.org/ ; ; >
-      au < manifest ; exists ; 2017 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 2 ; 2017 ; 2 ; http://www.nigjourcvtsurg.org/ ; ; >
-      au < manifest ; exists ; 2018 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 3 ; 2018 ; 3 ; http://www.nigjourcvtsurg.org/ ; ; >
-      au < manifest ; exists ; 2019 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 4 ; 2019 ; 4 ; http://www.nigjourcvtsurg.org/ ; ; >
-      au < manifest ; exists ; 2020 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 5 ; 2020 ; 5 ; http://www.nigjourcvtsurg.org/ ; ; >
-      au < expected ; exists ; 2022 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 6 ; 2022 ; 6 ; http://www.nigjourcvtsurg.org/ ; ; >
+      au < notReady ; exists ; 2016 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 1 ; 2016 ; 1 ; http://www.nigjourcvtsurg.org/ ; ; >
+      au < notReady ; exists ; 2017 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 2 ; 2017 ; 2 ; http://www.nigjourcvtsurg.org/ ; ; >
+      au < notReady ; exists ; 2018 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 3 ; 2018 ; 3 ; http://www.nigjourcvtsurg.org/ ; ; >
+      au < notReady ; exists ; 2019 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 4 ; 2019 ; 4 ; http://www.nigjourcvtsurg.org/ ; ; >
+      au < notReady ; exists ; 2020 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 5 ; 2020 ; 5 ; http://www.nigjourcvtsurg.org/ ; ; >
+      au < notReady ; exists ; 2022 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 6 ; 2022 ; 6 ; http://www.nigjourcvtsurg.org/ ; ; >
 
   }
 
@@ -11268,11 +11269,11 @@
 #      param[base_url] = http://www.turkjplastsurg.org/
       #Site appears to still be on http, but has errors. Is moving to https.
 
-      au < manifest ; exists ; 2018 ; Turkish Journal of Plastic Surgery Volume 26 ; 2018 ; 26 ; http://www.turkjplastsurg.org/ ; ; >
-      au < manifest ; exists ; 2019 ; Turkish Journal of Plastic Surgery Volume 27 ; 2019 ; 27 ; http://www.turkjplastsurg.org/ ; ; >
-      au < manifest ; exists ; 2020 ; Turkish Journal of Plastic Surgery Volume 28 ; 2020 ; 28 ; http://www.turkjplastsurg.org/ ; ; >
-      au < manifest ; exists ; 2021 ; Turkish Journal of Plastic Surgery Volume 29 ; 2021 ; 29 ; http://www.turkjplastsurg.org/ ; ; >
-      au < manifest ; exists ; 2022 ; Turkish Journal of Plastic Surgery Volume 30 ; 2022 ; 30 ; http://www.turkjplastsurg.org/ ; ; >
+      au < notReady ; exists ; 2018 ; Turkish Journal of Plastic Surgery Volume 26 ; 2018 ; 26 ; http://www.turkjplastsurg.org/ ; ; >
+      au < notReady ; exists ; 2019 ; Turkish Journal of Plastic Surgery Volume 27 ; 2019 ; 27 ; http://www.turkjplastsurg.org/ ; ; >
+      au < notReady ; exists ; 2020 ; Turkish Journal of Plastic Surgery Volume 28 ; 2020 ; 28 ; http://www.turkjplastsurg.org/ ; ; >
+      au < notReady ; exists ; 2021 ; Turkish Journal of Plastic Surgery Volume 29 ; 2021 ; 29 ; http://www.turkjplastsurg.org/ ; ; >
+      au < notReady ; exists ; 2022 ; Turkish Journal of Plastic Surgery Volume 30 ; 2022 ; 30 ; http://www.turkjplastsurg.org/ ; ; >
 
   }
 
@@ -11408,7 +11409,7 @@
       au < manifest ; exists ; 2019 ; Annals of Clinical Cardiology Volume 1 ; 2019 ; 1 ; https://www.onlineacc.org/ ; ; >
       au < manifest ; exists ; 2020 ; Annals of Clinical Cardiology Volume 2 ; 2020 ; 2 ; https://www.onlineacc.org/ ; ; >
       au < manifest ; exists ; 2021 ; Annals of Clinical Cardiology Volume 3 ; 2021 ; 3 ; https://www.onlineacc.org/ ; ; >
-      au < manifest ; exists ; 2022 ; Annals of Clinical Cardiology Volume 4 ; 2022 ; 4 ; https://www.onlineacc.org/ ; ; >
+      au < manifest ; exists ; 2022 ; Annals of Clinical Cardiology Volume 4 ; 2022 ; 4 ; https://www.onlineacc.org/ ; ; > #http://www.onlineacc.org/backissues.asp,"524 "
 
   }
 
