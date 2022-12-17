@@ -9,7 +9,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>5</string>
+        <string>6</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
@@ -170,6 +170,11 @@
             <!-- some journals do not have pdfs -->
             <string>%svol%s/iss.+/art.+\.pdf$", base_url, volume_name</string>
         </list>
+    </entry>
+    <entry>
+        <!-- custom param functor that will not add 'www' if there is already a subdomain -->
+        <string>au_param_functor</string>
+        <string>org.lockss.plugin.resiliencealliance.ResilienceAllianceAuParamFunctor</string>
     </entry>
     <entry>
         <string>au_url_normalizer</string>
