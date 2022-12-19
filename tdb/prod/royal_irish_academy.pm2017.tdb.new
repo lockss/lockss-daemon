@@ -1,0 +1,205 @@
+{
+  publisher <
+    name = Royal Irish Academy
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:423
+
+    {
+    title <
+      name = Ériu ;
+      issn = 0332-0758 ;
+      eissn = 2009-0056
+    >
+
+      attr[journal_id] = 809
+
+      au < manifest ; 2004 ; Ériu Volume 54 [2004] ; 16220 >
+      au < manifest ; 2005 ; Ériu Volume 55 [2005] ; 16219 >
+      au < manifest ; 2006 ; Ériu Volume 56 [2006] ; 16218 >
+      au < manifest ; 2007 ; Ériu Volume 57 [2007] ; 16217 >
+      au < manifest ; 2008 ; Ériu Volume 58 [2008] ; 16216 >
+      au < manifest ; 2009 ; Ériu Volume 59 [2009] ; 16215 >
+      au < manifest ; 2010 ; Ériu Volume 60 [2010] ; 16214 >
+      au < manifest ; 2011 ; Ériu Volume 61 [2011] ; 16213 >
+      au < manifest ; 2012 ; Ériu Volume 62 [2012] ; 16212 >
+      au < manifest ; 2013 ; Ériu Volume 63 [2013] ; 16211 >
+      au < manifest ; 2014 ; Ériu Volume 64 [2014] ; 16210 >
+      au < manifest ; 2015 ; Ériu Volume 65 [2015] ; 16209 >
+      au < manifest ; 2016 ; Ériu Volume 66 [2016] ; 16208 >
+      au < manifest ; 2017 ; Ériu Volume 67 [2017] ; 16207 >
+      au < manifest ; 2017 ; Ériu ICM Special Volume [2017] ; 16679 >
+      au < manifest ; 2018 ; Ériu Volume 68 [2018] ; 16206 >
+      au < manifest ; 2019 ; Ériu Volume 69 [2019] ; 16205 >
+      au < manifest ; 2020 ; Ériu Volume 70 [2020] ; 16204 >
+      au < manifest ; 2021 ; Ãriu Volume 71 [2021] ; 16691 >
+
+    }
+
+    {
+    title <
+      name = Irish Studies in International Affairs ;
+      issn = 0332-1460 ;
+      eissn = 2009-0072
+    >
+
+      attr[journal_id] = 812
+
+      au < manifest ; 2002 ; Irish Studies in International Affairs Volume 13 [2002] ; 16364 >
+      au < manifest ; 2003 ; Irish Studies in International Affairs Volume 14 [2003] ; 16363 >
+      au < manifest ; 2004 ; Irish Studies in International Affairs Volume 15 [2004] ; 16362 >
+      au < manifest ; 2005 ; Irish Studies in International Affairs Volume 16 [2005] ; 16361 >
+      au < manifest ; 2006 ; Irish Studies in International Affairs Volume 17 [2006] ; 16360 >
+      au < manifest ; 2007 ; Irish Studies in International Affairs Volume 18 [2007] ; 16359 >
+      au < manifest ; 2008 ; Irish Studies in International Affairs Volume 19 [2008] ; 16358 >
+      au < manifest ; 2009 ; Irish Studies in International Affairs Volume 20 [2009] ; 16357 >
+      au < manifest ; 2010 ; Irish Studies in International Affairs Volume 21 [2010] ; 16356 >
+      au < manifest ; 2011 ; Irish Studies in International Affairs Volume 22 [2011] ; 16355 >
+      au < manifest ; 2012 ; Irish Studies in International Affairs Volume 23 [2012] ; 16354 >
+      au < manifest ; 2013 ; Irish Studies in International Affairs Volume 24 [2013] ; 16353 >
+      au < manifest ; 2014 ; Irish Studies in International Affairs Volume 25 [2014] ; 16352 >
+      au < manifest ; 2015 ; Irish Studies in International Affairs Volume 26 [2015] ; 16351 >
+      au < manifest ; 2016 ; Irish Studies in International Affairs Volume 27 [2016] ; 16350 >
+      au < manifest ; 2017 ; Irish Studies in International Affairs Volume 28 [2017] ; 16349 >
+      au < manifest ; 2018 ; Irish Studies in International Affairs Volume 29 [2018] ; 16348 >
+      au < manifest ; 2019 ; Irish Studies in International Affairs Volume 30 [2019] ; 16347 >
+      au < manifest ; 2020 ; Irish Studies in International Affairs Volume 31 [2020] ; 16346 >
+      au < manifest ; 2021 ; Irish Studies in International Affairs Volume 32 [2021] ; 16345 >
+      au < manifest ; 2022 ; Irish Studies in International Affairs Volume 33 [2022] ; 16879 >
+
+    }
+
+    {
+    title <
+      name = Irish Journal of Earth Sciences ;
+      issn = 0790-1763 ;
+      eissn = 2009-0064
+    >
+
+      attr[journal_id] = 811
+
+      au < manifest ; 2003 ; Irish Journal of Earth Sciences Volume 21 [2003] ; 16389 >
+      au < manifest ; 2004 ; Irish Journal of Earth Sciences Volume 22 [2004] ; 16388 >
+      au < manifest ; 2005 ; Irish Journal of Earth Sciences Volume 23 [2005] ; 16387 >
+      au < manifest ; 2006 ; Irish Journal of Earth Sciences Volume 24 [2006] ; 16386 >
+      au < manifest ; 2007 ; Irish Journal of Earth Sciences Volume 25 [2007] ; 16385 >
+      au < manifest ; 2008 ; Irish Journal of Earth Sciences Volume 26 [2008] ; 16384 >
+      au < manifest ; 2010 ; Irish Journal of Earth Sciences Volume 28 [2010] ; 16382 >
+      au < manifest ; 2011 ; Irish Journal of Earth Sciences Volume 29 [2011] ; 16381 >
+      au < manifest ; 2012 ; Irish Journal of Earth Sciences Volume 30 [2012] ; 16380 >
+      au < manifest ; 2013 ; Irish Journal of Earth Sciences Volume 31 [2013] ; 16379 >
+      au < manifest ; 2014 ; Irish Journal of Earth Sciences Volume 32 [2014] ; 16378 >
+      au < manifest ; 2015 ; Irish Journal of Earth Sciences Volume 33 [2015] ; 16377 >
+      au < manifest ; 2016 ; Irish Journal of Earth Sciences Volume 34 [2016] ; 16376 >
+      au < manifest ; 2017 ; Irish Journal of Earth Sciences Volume 35 [2017] ; 16375 >
+      au < manifest ; 2018 ; Irish Journal of Earth Sciences Volume 36 [2018] ; 16374 >
+      au < manifest ; 2019 ; Irish Journal of Earth Sciences Volume 37 [2019] ; 16373 >
+      au < manifest ; 2020 ; Irish Journal of Earth Sciences Volume 38 [2020] ; 16372 >
+      au < manifest ; 2021 ; Irish Journal of Earth Sciences Volume 39 [2021] ; 16371 >
+
+    }
+
+    {
+    title <
+      name = Biology and Environment: Proceedings of the Royal Irish Academy ;
+      issn = 0791-7945 ;
+      eissn = 2009-003X
+    >
+
+      attr[journal_id] = 810
+
+      au < manifest ; 2019 ; Biology and Environment: Proceedings of the Royal Irish Academy Volume 119B [2019] ; 16327 >
+      au < manifest ; 2020 ; Biology and Environment: Proceedings of the Royal Irish Academy Volume 120B [2020] ; 16326 >
+      au < manifest ; 2021 ; Biology and Environment: Proceedings of the Royal Irish Academy Volume 121B [2021] ; 16325 >
+      au < manifest ; 2022 ; Biology and Environment: Proceedings of the Royal Irish Academy Volume 122B [2022] ; 17176 >
+      au < manifest ; 2002 ; Biology and Environment: Proceedings of the Royal Irish Academy Volume 102B [2002] ; 16344 >
+      au < manifest ; 2003 ; Biology and Environment: Proceedings of the Royal Irish Academy Volume 103B [2003] ; 16343 >
+      au < manifest ; 2004 ; Biology and Environment: Proceedings of the Royal Irish Academy Volume 104B [2004] ; 16342 >
+      au < manifest ; 2005 ; Biology and Environment: Proceedings of the Royal Irish Academy Volume 105B [2005] ; 16341 >
+      au < manifest ; 2006 ; Biology and Environment: Proceedings of the Royal Irish Academy Volume 106B [2006] ; 16340 >
+      au < manifest ; 2007 ; Biology and Environment: Proceedings of the Royal Irish Academy Volume 107B [2007] ; 16339 >
+      au < manifest ; 2008 ; Biology and Environment: Proceedings of the Royal Irish Academy Volume 108B [2008] ; 16338 >
+      au < manifest ; 2009 ; Biology and Environment: Proceedings of the Royal Irish Academy Volume 109B [2009] ; 16337 >
+      au < manifest ; 2010 ; Biology and Environment: Proceedings of the Royal Irish Academy Volume 110B [2010] ; 16336 >
+      au < manifest ; 2011 ; Biology and Environment: Proceedings of the Royal Irish Academy Volume 111B [2011] ; 16335 >
+      au < manifest ; 2012 ; Biology and Environment: Proceedings of the Royal Irish Academy Volume 112B [2012] ; 16334 >
+      au < manifest ; 2013 ; Biology and Environment: Proceedings of the Royal Irish Academy Volume 113B [2013] ; 16333 >
+      au < manifest ; 2014 ; Biology and Environment: Proceedings of the Royal Irish Academy Volume 114B [2014] ; 16332 >
+      au < manifest ; 2015 ; Biology and Environment: Proceedings of the Royal Irish Academy Volume 115B [2015] ; 16331 >
+      au < manifest ; 2016 ; Biology and Environment: Proceedings of the Royal Irish Academy Volume 116B [2016] ; 16330 >
+      au < manifest ; 2017 ; Biology and Environment: Proceedings of the Royal Irish Academy Volume 117B [2017] ; 16329 >
+      au < manifest ; 2018 ; Biology and Environment: Proceedings of the Royal Irish Academy Volume 118B [2018] ; 16328 >
+
+    }
+
+    {
+    title <
+      name = Mathematical Proceedings of the Royal Irish Academy ;
+      issn = 1393-7197 ;
+      eissn = 2009-0021
+    >
+
+      attr[journal_id] = 814
+
+      au < manifest ; 2019 ; Mathematical Proceedings of the Royal Irish Academy Volume 119A [2019] ; 16465 >
+      au < manifest ; 2020 ; Mathematical Proceedings of the Royal Irish Academy Volume 120A [2020] ; 16464 >
+      au < manifest ; 2021 ; Mathematical Proceedings of the Royal Irish Academy Volume 121A [2021] ; 16619 >
+      au < manifest ; 2022 ; Mathematical Proceedings of the Royal Irish Academy Volume 122A [2022] ; 16874 >
+      au < manifest ; 2002 ; Mathematical Proceedings of the Royal Irish Academy Volume 102A [2002] ; 16482 >
+      au < manifest ; 2003 ; Mathematical Proceedings of the Royal Irish Academy Volume 103A [2003] ; 16481 >
+      au < manifest ; 2004 ; Mathematical Proceedings of the Royal Irish Academy Volume 104A [2004] ; 16480 >
+      au < manifest ; 2005 ; Mathematical Proceedings of the Royal Irish Academy Volume 105A [2005] ; 16479 >
+      au < manifest ; 2006 ; Mathematical Proceedings of the Royal Irish Academy Volume 106A [2006] ; 16478 >
+      au < manifest ; 2007 ; Mathematical Proceedings of the Royal Irish Academy Volume 107A [2007] ; 16477 >
+      au < manifest ; 2008 ; Mathematical Proceedings of the Royal Irish Academy Volume 108A [2008] ; 16476 >
+      au < manifest ; 2009 ; Mathematical Proceedings of the Royal Irish Academy Volume 109A [2009] ; 16475 >
+      au < manifest ; 2010 ; Mathematical Proceedings of the Royal Irish Academy Volume 110A [2010] ; 16474 >
+      au < manifest ; 2011 ; Mathematical Proceedings of the Royal Irish Academy Volume 111A [2011] ; 16473 >
+      au < manifest ; 2012 ; Mathematical Proceedings of the Royal Irish Academy Volume 112A [2012] ; 16472 >
+      au < manifest ; 2013 ; Mathematical Proceedings of the Royal Irish Academy Volume 113A [2013] ; 16471 >
+      au < manifest ; 2014 ; Mathematical Proceedings of the Royal Irish Academy Volume 114A [2014] ; 16470 >
+      au < manifest ; 2015 ; Mathematical Proceedings of the Royal Irish Academy Volume 115A [2015] ; 16469 >
+      au < manifest ; 2016 ; Mathematical Proceedings of the Royal Irish Academy Volume 116A [2016] ; 16468 >
+      au < manifest ; 2017 ; Mathematical Proceedings of the Royal Irish Academy Volume 117A [2017] ; 16467 >
+      au < manifest ; 2018 ; Mathematical Proceedings of the Royal Irish Academy Volume 118A [2018] ; 16466 >
+      au < manifest ; 2023 ; Mathematical Proceedings of the Royal Irish Academy Volume 123A [2023] ; 17396 >
+
+    }
+
+    {
+    title <
+      name = Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature ;
+      issn = 0035-8991 ;
+      eissn = 2009-0048
+    >
+
+      attr[journal_id] = 813
+
+      au < manifest ; 2019 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 119A [2019] ; 16391 >
+      au < manifest ; 2020 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 120A [2020] ; 16390 >
+      au < manifest ; 2021 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 121A [2021] ; 16696 >
+      au < manifest ; 2022 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 122A [2022] ; 17397 >
+      au < manifest ; 2002 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 102C [2002] ; 16408 >
+      au < manifest ; 2003 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 103C [2003] ; 16407 >
+      au < manifest ; 2004 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 104C [2004] ; 16406 >
+      au < manifest ; 2005 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 105C [2005] ; 16405 >
+      au < manifest ; 2006 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 106C [2006] ; 16404 >
+      au < manifest ; 2007 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 107C [2007] ; 16403 >
+      au < manifest ; 2008 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 108C [2008] ; 16402 >
+      au < manifest ; 2009 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 109C [2009] ; 16401 >
+      au < manifest ; 2010 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 110C [2010] ; 16400 >
+      au < manifest ; 2011 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 111C [2011] ; 16399 >
+      au < manifest ; 2012 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 112C [2012] ; 16398 >
+      au < manifest ; 2013 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 113C [2013] ; 16397 >
+      au < manifest ; 2014 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 114C [2014] ; 16396 >
+      au < manifest ; 2015 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 115C [2015] ; 16395 >
+      au < manifest ; 2016 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 116C [2016] ; 16394 >
+      au < manifest ; 2017 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 117C [2017] ; 16393 >
+      au < manifest ; 2018 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 118C [2018] ; 16392 >
+
+    }
+
+}

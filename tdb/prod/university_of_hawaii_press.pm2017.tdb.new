@@ -1,0 +1,894 @@
+{
+  publisher <
+    name = University of Hawai'i Press
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:5
+
+    {
+    title <
+      name = Asian Perspectives ;
+      issn = 0066-8435  ;
+      eissn = 1535-8283  ;
+      issnl = 0066-8435
+    >
+
+      attr[journal_id] = 17
+
+        au < released ; 2000 ; Asian Perspectives Volume 39 [2000] ; 65 >
+        au < released ; 2001 ; Asian Perspectives Volume 40 [2001] ; 66 >
+        au < released ; 2002 ; Asian Perspectives Volume 41 [2002] ; 752 >
+        au < released ; 2003 ; Asian Perspectives Volume 42 [2003] ; 922 >
+        au < released ; 2004 ; Asian Perspectives Volume 43 [2004] ; 2456 >
+        au < released ; 2005 ; Asian Perspectives Volume 44 [2005] ; 2821 >
+        au < released ; 2006 ; Asian Perspectives Volume 45 [2006] ; 2988 >
+        au < released ; 2007 ; Asian Perspectives Volume 46 [2007] ; 3276 >
+        au < released ; 2008 ; Asian Perspectives Volume 47 [2008] ; 3650 >
+        au < released ; 2009 ; Asian Perspectives Volume 48 [2009] ; 4255 >
+        au < released ; 2010 ; Asian Perspectives Volume 49 [2010] ; 7484 >
+        au < released ; 2011 ; Asian Perspectives Volume 50 [2011] ; 9122 >
+        au < released ; 2012 ; Asian Perspectives Volume 51 [2012] ; 9558 >
+        au < released ; 2013 ; Asian Perspectives Volume 52 [2013] ; 10167 >
+        au < released ; 2014 ; Asian Perspectives Volume 53 [2014] ; 10593 >
+        au < released ; 2015 ; Asian Perspectives Volume 54 [2015] ; 10861 >
+        au < released ; 2016 ; Asian Perspectives Volume 55 [2016] ; 12136 >
+        au < released ; 2017 ; Asian Perspectives Volume 56 [2017] ; 12701 >
+        au < released ; 2018 ; Asian Perspectives Volume 57 [2018] ; 13484 >
+        au < released ; 2019 ; Asian Perspectives Volume 58 [2019] ; 14135 >
+        au < released ; 2020 ; Asian Perspectives Volume 59 [2020] ; 14891 >
+        au < released ; 2021 ; Asian Perspectives Volume 60 [2021] ; 15860 >
+        au < manifest ; 2022 ; Asian Perspectives Volume 61 [2022] ; 17280 >
+
+    }
+
+    {
+    title <
+      name = Asian Theatre Journal ;
+      issn = 0742-5457  ;
+      eissn = 1527-2109  ;
+      issnl = 0742-5457
+
+    >
+
+      attr[journal_id] = 20
+
+        au < released ; 1999 ; Asian Theatre Journal Volume 16 [1999] ; 71 >
+        au < released ; 2000 ; Asian Theatre Journal Volume 17 [2000] ; 72 >
+        au < released ; 2001 ; Asian Theatre Journal Volume 18 [2001] ; 73 >
+        au < released ; 2002 ; Asian Theatre Journal Volume 19 [2002] ; 74 >
+        au < released ; 2003 ; Asian Theatre Journal Volume 20 [2003] ; 802 >
+        au < released ; 2004 ; Asian Theatre Journal Volume 21 [2004] ; 1761 >
+        au < released ; 2005 ; Asian Theatre Journal Volume 22 [2005] ; 2661 >
+        au < released ; 2006 ; Asian Theatre Journal Volume 23 [2006] ; 3009 >
+        au < released ; 2007 ; Asian Theatre Journal Volume 24 [2007] ; 3262 >
+        au < released ; 2008 ; Asian Theatre Journal Volume 25 [2008] ; 3522 >
+        au < released ; 2009 ; Asian Theatre Journal Volume 26 [2009] ; 4040 >
+        au < released ; 2010 ; Asian Theatre Journal Volume 27 [2010] ; 6428 >
+        au < released ; 2011 ; Asian Theatre Journal Volume 28 [2011] ; 7294 >
+        au < released ; 2012 ; Asian Theatre Journal Volume 29 [2012] ; 8043 >
+        au < released ; 2013 ; Asian Theatre Journal Volume 30 [2013] ; 9109 >
+        au < released ; 2014 ; Asian Theatre Journal Volume 31 [2014] ; 9870 >
+        au < released ; 2015 ; Asian Theatre Journal Volume 32 [2015] ; 10696 >
+        au < released ; 2016 ; Asian Theatre Journal Volume 33 [2016] ; 11050 >
+        au < released ; 2017 ; Asian Theatre Journal Volume 34 [2017] ; 12371 >
+        au < released ; 2018 ; Asian Theatre Journal Volume 35 [2018] ; 13368 >
+        au < released ; 2019 ; Asian Theatre Journal Volume 36 [2019] ; 14011 >
+        au < released ; 2020 ; Asian Theatre Journal Volume 37 [2020] ; 15013 >
+        au < released ; 2021 ; Asian Theatre Journal Volume 38 [2021] ; 15889 >
+        au < manifest ; 2022 ; Asian Theatre Journal Volume 39 [2022] ; 17028 >
+
+    }
+
+    {
+    title <
+      name = Azalea: Journal of Korean Literature & Culture ;
+      issn = 1944-6500  ;
+      eissn = 1939-6120  ;
+      issnl = 1939-6120
+
+    >
+
+      attr[journal_id] = 429
+
+        au < released ; 2007 ; Azalea: Journal of Korean Literature & Culture Volume 1 [2007] ; 4035 >
+        au < released ; 2008 ; Azalea: Journal of Korean Literature & Culture Volume 2 [2008] ; 4128 >
+        au < released ; 2010 ; Azalea: Journal of Korean Literature & Culture Volume 3 [2010] ; 6218 >
+        au < released ; 2011 ; Azalea: Journal of Korean Literature & Culture Volume 4 [2011] ; 6990 >
+        au < released ; 2012 ; Azalea: Journal of Korean Literature & Culture Volume 5 [2012] ; 8248 >
+        au < released ; 2013 ; Azalea: Journal of Korean Literature & Culture Volume 6 [2013] ; 8922 >
+        au < released ; 2014 ; Azalea: Journal of Korean Literature & Culture Volume 7 [2014] ; 9896 >
+        au < released ; 2015 ; Azalea: Journal of Korean Literature & Culture Volume 8 [2015] ; 10657 >
+        au < released ; 2016 ; Azalea: Journal of Korean Literature & Culture Volume 9 [2016] ; 11252 >
+        au < released ; 2017 ; Azalea: Journal of Korean Literature & Culture Volume 10 [2017] ; 12649 >
+        au < released ; 2018 ; Azalea: Journal of Korean Literature & Culture Volume 11 [2018] ; 13499 >
+        au < released ; 2019 ; Azalea: Journal of Korean Literature & Culture Volume 12 [2019] ; 14202 >
+        au < released ; 2020 ; Azalea: Journal of Korean Literature & Culture Volume 13 [2020] ; 14945 >
+        au < released ; 2021 ; Azalea: Journal of Korean Literature & Culture Volume 14 [2021] ; 16068 >
+        au < manifest ; 2022 ; Azalea: Journal of Korean Literature & Culture Volume 15 [2022] ; 17319 >
+
+    }
+
+    {
+    title <
+      name = Biography ;
+      issn = 0162-4962  ;
+      eissn = 1529-1456  ;
+      issnl = 0162-4962
+
+    >
+
+      attr[journal_id] = 25
+
+        au < released ; 1978 ; Biography Volume 1 [1978] ; 5043 >
+        au < released ; 1979 ; Biography Volume 2 [1979] ; 5042 >
+        au < released ; 1980 ; Biography Volume 3 [1980] ; 5041 >
+        au < released ; 1981 ; Biography Volume 4 [1981] ; 5040 >
+        au < released ; 1982 ; Biography Volume 5 [1982] ; 5039 >
+        au < released ; 1983 ; Biography Volume 6 [1983] ; 5038 >
+        au < released ; 1984 ; Biography Volume 7 [1984] ; 5037 >
+        au < released ; 1985 ; Biography Volume 8 [1985] ; 5036 >
+        au < released ; 1986 ; Biography Volume 9 [1986] ; 5035 >
+        au < released ; 1987 ; Biography Volume 10 [1987] ; 5034 >
+        au < released ; 1988 ; Biography Volume 11 [1988] ; 5033 >
+        au < released ; 1989 ; Biography Volume 12 [1989] ; 5032 >
+        au < released ; 1990 ; Biography Volume 13 [1990] ; 5031 >
+        au < released ; 1991 ; Biography Volume 14 [1991] ; 5030 >
+        au < released ; 1992 ; Biography Volume 15 [1992] ; 5029 >
+        au < released ; 1993 ; Biography Volume 16 [1993] ; 5028 >
+        au < released ; 1994 ; Biography Volume 17 [1994] ; 5027 >
+        au < released ; 1995 ; Biography Volume 18 [1995] ; 5026 >
+        au < released ; 1996 ; Biography Volume 19 [1996] ; 5025 >
+        au < released ; 1997 ; Biography Volume 20 [1997] ; 5024 >
+        au < released ; 1998 ; Biography Volume 21 [1998] ; 5023 >
+        au < released ; 1999 ; Biography Volume 22 [1999] ; 5022 >
+        au < released ; 2000 ; Biography Volume 23 [2000] ; 93 >
+        au < released ; 2001 ; Biography Volume 24 [2001] ; 94 >
+        au < released ; 2002 ; Biography Volume 25 [2002] ; 95 >
+        au < released ; 2003 ; Biography Volume 26 [2003] ; 916 >
+        au < released ; 2004 ; Biography Volume 27 [2004] ; 2541 >
+        au < released ; 2005 ; Biography Volume 28 [2005] ; 2792 >
+        au < released ; 2006 ; Biography Volume 29 [2006] ; 3090 >
+        au < released ; 2007 ; Biography Volume 30 [2007] ; 3322 >
+        au < released ; 2008 ; Biography Volume 31 [2008] ; 3832 >
+        au < released ; 2009 ; Biography Volume 32 [2009] ; 4428 >
+        au < released ; 2010 ; Biography Volume 33 [2010] ; 6362 >
+        au < released ; 2011 ; Biography Volume 34 [2011] ; 7537 >
+        au < released ; 2012 ; Biography Volume 35 [2012] ; 8390 >
+        au < released ; 2013 ; Biography Volume 36 [2013] ; 9310 >
+        au < released ; 2014 ; Biography Volume 37 [2014] ; 10226 >
+        au < released ; 2015 ; Biography Volume 38 [2015] ; 10704 >
+        au < released ; 2016 ; Biography Volume 39 [2016] ; 11337 >
+        au < released ; 2017 ; Biography Volume 40 [2017] ; 12780 >
+        au < released ; 2018 ; Biography Volume 41 [2018] ; 13386 >
+        au < released ; 2019 ; Biography Volume 42 [2019] ; 14244 >
+        au < released ; 2020 ; Biography Volume 43 [2020] ; 15148 >
+        au < released ; 2021 ; Biography Volume 44 [2021] ; 16718 >
+        au < manifest ; 2022 ; Biography Volume 45 [2022] ; 17621 >
+
+    }
+
+    {
+    title <
+      name = Buddhist-Christian Studies ;
+      issn = 0882-0945  ;
+      eissn = 1527-9472  ;
+      issnl = 0882-0945
+
+    >
+
+      attr[journal_id] = 22
+
+        au < released ; 1999 ; Buddhist-Christian Studies Volume 19 [1999] ; 79 >
+        au < released ; 2000 ; Buddhist-Christian Studies Volume 20 [2000] ; 80 >
+        au < released ; 2001 ; Buddhist-Christian Studies Volume 21 [2001] ; 81 >
+        au < released ; 2002 ; Buddhist-Christian Studies Volume 22 [2002] ; 754 >
+        au < released ; 2003 ; Buddhist-Christian Studies Volume 23 [2003] ; 1704 >
+        au < released ; 2004 ; Buddhist-Christian Studies Volume 24 [2004] ; 2613 >
+        au < released ; 2005 ; Buddhist-Christian Studies Volume 25 [2005] ; 2850 >
+        au < released ; 2006 ; Buddhist-Christian Studies Volume 26 [2006] ; 3165 >
+        au < released ; 2007 ; Buddhist-Christian Studies Volume 27 [2007] ; 3449 >
+        au < released ; 2008 ; Buddhist-Christian Studies Volume 28 [2008] ; 3836 >
+        au < released ; 2009 ; Buddhist-Christian Studies Volume 29 [2009] ; 4410 >
+        au < released ; 2010 ; Buddhist-Christian Studies Volume 30 [2010] ; 6354 >
+        au < released ; 2011 ; Buddhist-Christian Studies Volume 31 [2011] ; 7547 >
+        au < released ; 2012 ; Buddhist-Christian Studies Volume 32 [2012] ; 8394 >
+        au < released ; 2013 ; Buddhist-Christian Studies Volume 33 [2013] ; 9321 >
+        au < released ; 2014 ; Buddhist-Christian Studies Volume 34 [2014] ; 10376 >
+        au < released ; 2015 ; Buddhist-Christian Studies Volume 35 [2015] ; 10862 >
+        au < released ; 2016 ; Buddhist-Christian Studies Volume 36 [2016] ; 12127 >
+        au < released ; 2017 ; Buddhist-Christian Studies Volume 37 [2017] ; 12998 >
+        au < released ; 2018 ; Buddhist-Christian Studies Volume 38 [2018] ; 13772 >
+        au < released ; 2019 ; Buddhist-Christian Studies Volume 39 [2019] ; 14404 >
+        au < released ; 2020 ; Buddhist-Christian Studies Volume 40 [2020] ; 15289 >
+        au < released ; 2021 ; Buddhist-Christian Studies Volume 41 [2021] ; 16726 >
+        au < manifest ; 2022 ; Buddhist-Christian Studies Volume 42 [2022] ; 17542 >
+
+    }
+
+    {
+    title <
+      name = China Review International ;
+      issn = 1069-5834  ;
+      eissn = 1527-9367  ;
+      issnl = 1069-5834
+
+    >
+
+      attr[journal_id] = 39
+
+        au < released ; 1994 ; China Review International Volume 1 [1994] ; 5973 >
+        au < released ; 1995 ; China Review International Volume 2 [1995] ; 5972 >
+        au < released ; 1996 ; China Review International Volume 3 [1996] ; 5971 >
+        au < released ; 1997 ; China Review International Volume 4 [1997] ; 5970 >
+        au < released ; 1998 ; China Review International Volume 5 [1998] ; 5969 >
+        au < released ; 1999 ; China Review International Volume 6 [1999] ; 141 >
+        au < released ; 2000 ; China Review International Volume 7 [2000] ; 142 >
+        au < released ; 2001 ; China Review International Volume 8 [2001] ; 143 >
+        au < released ; 2002 ; China Review International Volume 9 [2002] ; 965 >
+        au < released ; 2003 ; China Review International Volume 10 [2003] ; 1754 >
+        au < released ; 2004 ; China Review International Volume 11 [2004] ; 2618 >
+        au < released ; 2005 ; China Review International Volume 12 [2005] ; 2877 >
+        au < released ; 2006 ; China Review International Volume 13 [2006] ; 3326 >
+        au < released ; 2007 ; China Review International Volume 14 [2007] ; 3995 >
+        au < released ; 2008 ; China Review International Volume 15 [2008] ; 4090 >
+        au < released ; 2009 ; China Review International Volume 16 [2009] ; 6476 >
+        au < released ; 2010 ; China Review International Volume 17 [2010] ; 8059 >
+        au < released ; 2011 ; China Review International Volume 18 [2011] ; 8259 >
+        au < released ; 2012 ; China Review International Volume 19 [2012] ; 9659 >
+        au < released ; 2013 ; China Review International Volume 20 [2013] ; 10917 >
+        au < released ; 2014 ; China Review International Volume 21 [2014] ; 11339 >
+        au < released ; 2015 ; China Review International Volume 22 [2015] ; 12566 >
+        au < released ; 2016 ; China Review International Volume 23 [2016] ; 13288 >
+        au < released ; 2017 ; China Review International Volume 24 [2017] ; 13984 >
+        au < released ; 2018 ; China Review International Volume 25 [2018] ; 14766 >
+        au < released ; 2019 ; China Review International Volume 26 [2019] ; 15674 >
+        au < released ; 2020 ; China Review International Volume 27 [2020] ; 17173 >
+
+    }
+
+    {
+    title <
+      name = CHINOPERL: Journal of Chinese Oral and Performing Literature ;
+      issn = 0193-7774 ;
+      eissn = 2051-6150
+    >
+
+      attr[journal_id] = 771
+
+      au < released ; 1969 ; CHINOPERL: Journal of Chinese Oral and Performing Literature Volume 1 [1969] ; 14683 >
+      au < released ; 1970 ; CHINOPERL: Journal of Chinese Oral and Performing Literature Volume 2 [1970] ; 14684 >
+      au < released ; 1973 ; CHINOPERL: Journal of Chinese Oral and Performing Literature Volume 3 [1973] ; 14685 >
+      au < released ; 1974 ; CHINOPERL: Journal of Chinese Oral and Performing Literature Volume 4 [1974] ; 14686 >
+      au < released ; 1975 ; CHINOPERL: Journal of Chinese Oral and Performing Literature Volume 5 [1975] ; 14687 >
+      au < released ; 1976 ; CHINOPERL: Journal of Chinese Oral and Performing Literature Volume 6 [1976] ; 14688 >
+      au < released ; 1977 ; CHINOPERL: Journal of Chinese Oral and Performing Literature Volume 7 [1977] ; 14689 >
+      au < released ; 1978 ; CHINOPERL: Journal of Chinese Oral and Performing Literature Volume 8 [1978] ; 14690 >
+      au < released ; 1980 ; CHINOPERL: Journal of Chinese Oral and Performing Literature Volume 9 [1980] ; 14691 >
+      au < released ; 1981 ; CHINOPERL: Journal of Chinese Oral and Performing Literature Volume 10 [1981] ; 14692 >
+      au < released ; 1982 ; CHINOPERL: Journal of Chinese Oral and Performing Literature Volume 11 [1982] ; 14693 >
+      au < notReady ; 1983 ; CHINOPERL: Journal of Chinese Oral and Performing Literature Volume 12 [1983] ; 14694 > #500 error. For example: https://muse.jhu.edu/article/750512/figure/appimg01a
+      au < released ; 1985 ; CHINOPERL: Journal of Chinese Oral and Performing Literature Volume 13 [1985] ; 14695 >
+      au < notReady ; 1986 ; CHINOPERL: Journal of Chinese Oral and Performing Literature Volume 14 [1986] ; 14696 >
+      au < released ; 1990 ; CHINOPERL: Journal of Chinese Oral and Performing Literature Volume 15 [1990] ; 14697 >
+      au < notReady ; 1992 ; CHINOPERL: Journal of Chinese Oral and Performing Literature Volume 16 [1992] ; 14698 >
+      au < released ; 1994 ; CHINOPERL: Journal of Chinese Oral and Performing Literature Volume 17 [1994] ; 14699 >
+      au < released ; 1995 ; CHINOPERL: Journal of Chinese Oral and Performing Literature Volume 18 [1995] ; 14700 >
+      au < released ; 1996 ; CHINOPERL: Journal of Chinese Oral and Performing Literature Volume 19 [1996] ; 14701 >
+      au < released ; 2000-2001 ; CHINOPERL: Journal of Chinese Oral and Performing Literature Volume 23 [2000-2001] ; 14703 >
+      au < released ; 2002 ; CHINOPERL: Journal of Chinese Oral and Performing Literature Volume 24 [2002] ; 14704 >
+      au < released ; 2004 ; CHINOPERL: Journal of Chinese Oral and Performing Literature Volume 25 [2004] ; 14705 >
+      au < released ; 2005 ; CHINOPERL: Journal of Chinese Oral and Performing Literature Volume 26 [2005] ; 14706 >
+      au < released ; 2007 ; CHINOPERL: Journal of Chinese Oral and Performing Literature Volume 27 [2007] ; 14744 >
+      au < released ; 2008-2009 ; CHINOPERL: Journal of Chinese Oral and Performing Literature Volume 28 [2008-2009] ; 14707 >
+      au < released ; 2010 ; CHINOPERL: Journal of Chinese Oral and Performing Literature Volume 29 [2010] ; 14708 >
+      au < released ; 2011 ; CHINOPERL: Journal of Chinese Oral and Performing Literature Volume 30 [2011] ; 14709 >
+      au < released ; 2012 ; CHINOPERL: Journal of Chinese Oral and Performing Literature Volume 31 [2012] ; 14710 >
+      au < released ; 2013 ; CHINOPERL: Journal of Chinese Oral and Performing Literature Volume 32 [2013] ; 14711 >
+      au < released ; 2014 ; CHINOPERL: Journal of Chinese Oral and Performing Literature Volume 33 [2014] ; 14712 >
+      au < released ; 2015 ; CHINOPERL: Journal of Chinese Oral and Performing Literature Volume 34 [2015] ; 14713 >
+      au < released ; 2016 ; CHINOPERL: Journal of Chinese Oral and Performing Literature Volume 35 [2016] ; 14714 >
+      au < released ; 2017 ; CHINOPERL: Journal of Chinese Oral and Performing Literature Volume 36 [2017] ; 14715 >
+      au < released ; 2018 ; CHINOPERL: Journal of Chinese Oral and Performing Literature Volume 37 [2018] ; 14716 >
+      au < released ; 2019 ; CHINOPERL: Journal of Chinese Oral and Performing Literature Volume 38 [2019] ; 14717 >
+      au < released ; 2020 ; CHINOPERL: Journal of Chinese Oral and Performing Literature Volume 39 [2020] ; 15214 >
+      au < released ; 2021 ; CHINOPERL: Journal of Chinese Oral and Performing Literature Volume 40 [2021] ; 16096 >
+      au < manifest ; 2022 ; CHINOPERL: Journal of Chinese Oral and Performing Literature Volume 41 [2022] ; 17405 >
+      au < manifest ; 1997-1999 ; CHINOPERL: Journal of Chinese Oral and Performing Literature Volume 20-22 [1997-1999] ; 14702 >
+
+    }
+    
+    {
+    title <
+      name = Cross-Currents: East Asian History and Culture Review ;
+      issn = 2158-9666  ;
+      eissn = 2158-9674 
+    >
+
+      attr[journal_id] = 514
+
+        au < released ; 2012 ; Cross-Currents: East Asian History and Culture Review Volume 1 [2012] ; 8366 >
+        au < released ; 2013 ; Cross-Currents: East Asian History and Culture Review Volume 2 [2013] ; 9076 >
+        au < released ; 2014 ; Cross-Currents: East Asian History and Culture Review Volume 3 [2014] ; 10078 >
+        au < released ; 2015 ; Cross-Currents: East Asian History and Culture Review Volume 4 [2015] ; 10713 >
+        au < released ; 2016 ; Cross-Currents: East Asian History and Culture Review Volume 5 [2016] ; 11253 >
+        au < released ; 2017 ; Cross-Currents: East Asian History and Culture Review Volume 6 [2017] ; 12708 >
+        au < released ; 2018 ; Cross-Currents: East Asian History and Culture Review Volume 7 [2018] ; 13541 >
+        au < released ; 2019 ; Cross-Currents: East Asian History and Culture Review Volume 8 [2019] ; 14260 >
+        au < released ; 2020 ; Cross-Currents: East Asian History and Culture Review Volume 9 [2020] ; 15028 >
+
+    }
+
+    {
+    title <
+      name = Hawaiian Journal of History ;
+      issn = 0440-5145 ;
+      eissn = 2169-7639
+    >
+
+      attr[journal_id] = 676
+
+        au < released ; 2015 ; Hawaiian Journal of History Volume 49 [2015] ; 10823 >
+        au < released ; 2016 ; Hawaiian Journal of History Volume 50 [2016] ; 12153 >
+        au < released ; 2017 ; Hawaiian Journal of History Volume 51 [2017] ; 13014 >
+        au < released ; 2018 ; Hawaiian Journal of History Volume 52 [2018] ; 13780 >
+        au < released ; 2019 ; Hawaiian Journal of History Volume 53 [2019] ; 14533 >
+        au < released ; 2021 ; Hawaiian Journal of History Volume 55 [2021] ; 16763 >
+        au < manifest ; 2020 ; Hawaiian Journal of History Volume 54 [2020] ; 15770 >
+
+    }
+
+    {
+    title <
+      name = Journal of Daoist Studies ;
+      eissn = 1941-5524
+    >
+
+      attr[journal_id] = 711
+
+        au < released ; 2008 ; Journal of Daoist Studies Volume 1 [2008] ; 12160 >
+        au < released ; 2009 ; Journal of Daoist Studies Volume 2 [2009] ; 12161 >
+        au < released ; 2010 ; Journal of Daoist Studies Volume 3 [2010] ; 12162 >
+        au < released ; 2011 ; Journal of Daoist Studies Volume 4 [2011] ; 12163 >
+        au < released ; 2012 ; Journal of Daoist Studies Volume 5 [2012] ; 12164 >
+        au < released ; 2013 ; Journal of Daoist Studies Volume 6 [2013] ; 12165 >
+        au < released ; 2014 ; Journal of Daoist Studies Volume 7 [2014] ; 12166 >
+        au < released ; 2015 ; Journal of Daoist Studies Volume 8 [2015] ; 12167 >
+        au < released ; 2016 ; Journal of Daoist Studies Volume 9 [2016] ; 12168 >
+        au < released ; 2017 ; Journal of Daoist Studies Volume 10 [2017] ; 12347 >
+        au < released ; 2018 ; Journal of Daoist Studies Volume 11 [2018] ; 13220 >
+        au < released ; 2019 ; Journal of Daoist Studies Volume 12 [2019] ; 13933 >
+        au < released ; 2020 ; Journal of Daoist Studies Volume 13 [2020] ; 14638 >
+        au < released ; 2021 ; Journal of Daoist Studies Volume 14 [2021] ; 15491 >
+        au < manifest ; 2022 ; Journal of Daoist Studies Volume 15 [2022] ; 16884 >
+
+    }
+    
+    {
+    title <
+      name = Journal of Korean Religions ;
+      issn = 2093-7288 ;
+      eissn = 2167-2040
+    >
+
+      attr[journal_id] = 557
+
+        au < released ; 2010 ; Journal of Korean Religions Volume 1 [2010] ; 8160 >
+        au < released ; 2011 ; Journal of Korean Religions Volume 2 [2011] ; 8345 >
+        au < released ; 2012 ; Journal of Korean Religions Volume 3 [2012] ; 8406 >
+        au < released ; 2013 ; Journal of Korean Religions Volume 4 [2013] ; 9079 >
+        au < released ; 2014 ; Journal of Korean Religions Volume 5 [2014] ; 10027 >
+        au < released ; 2015 ; Journal of Korean Religions Volume 6 [2015] ; 10672 >
+        au < released ; 2016 ; Journal of Korean Religions Volume 7 [2016] ; 11205 >
+        au < released ; 2017 ; Journal of Korean Religions Volume 8 [2017] ; 12677 >
+        au < released ; 2018 ; Journal of Korean Religions Volume 9 [2018] ; 13604 >
+        au < released ; 2019 ; Journal of Korean Religions Volume 10 [2019] ; 14240 >
+        au < released ; 2020 ; Journal of Korean Religions Volume 11 [2020] ; 14999 >
+        au < released ; 2021 ; Journal of Korean Religions Volume 12 [2021] ; 15804 >
+        au < manifest ; 2022 ; Journal of Korean Religions Volume 13 [2022] ; 17190 >
+
+    }
+
+    {
+    title <
+      name = Journal of World History ;
+      issn = 1045-6007  ;
+      eissn = 1527-8050  ;
+      issnl = 1045-6007
+
+    >
+
+      attr[journal_id] = 106
+
+        au < released ; 1996 ; Journal of World History Volume 7 [1996] ; 2681 >
+        au < released ; 1997 ; Journal of World History Volume 8 [1997] ; 2682 >
+        au < released ; 1998 ; Journal of World History Volume 9 [1998] ; 2683 >
+        au < released ; 1999 ; Journal of World History Volume 10 [1999] ; 352 >
+        au < released ; 2000 ; Journal of World History Volume 11 [2000] ; 353 >
+        au < released ; 2001 ; Journal of World History Volume 12 [2001] ; 354 >
+        au < released ; 2002 ; Journal of World History Volume 13 [2002] ; 355 >
+        au < released ; 2003 ; Journal of World History Volume 14 [2003] ; 788 >
+        au < released ; 2004 ; Journal of World History Volume 15 [2004] ; 1766 >
+        au < released ; 2005 ; Journal of World History Volume 16 [2005] ; 2799 >
+        au < released ; 2006 ; Journal of World History Volume 17 [2006] ; 3005 >
+        au < released ; 2007 ; Journal of World History Volume 18 [2007] ; 3244 >
+        au < released ; 2008 ; Journal of World History Volume 19 [2008] ; 3629 >
+        au < released ; 2009 ; Journal of World History Volume 20 [2009] ; 4158 >
+        au < released ; 2010 ; Journal of World History Volume 21 [2010] ; 5698 >
+        au < released ; 2011 ; Journal of World History Volume 22 [2011] ; 6705 >
+        au < released ; 2012 ; Journal of World History Volume 23 [2012] ; 8044 >
+        au < released ; 2013 ; Journal of World History Volume 24 [2013] ; 8711 >
+        au < released ; 2014 ; Journal of World History Volume 25 [2014] ; 10111 >
+        au < released ; 2015 ; Journal of World History Volume 26 [2015] ; 11038 >
+        au < released ; 2016 ; Journal of World History Volume 27 [2016] ; 11308 >
+        au < released ; 2017 ; Journal of World History Volume 28 [2017] ; 12731 >
+        au < released ; 2018 ; Journal of World History Volume 29 [2018] ; 13263 >
+        au < released ; 2019 ; Journal of World History Volume 30 [2019] ; 14302 >
+        au < released ; 2020 ; Journal of World History Volume 31 [2020] ; 14752 >
+        au < manifest ; 2022 ; Journal of World History Volume 33 [2022] ; 17027 >
+        au < manifest ; 2021 ; Journal of World History Volume 32 [2021] ; 15617 >
+
+    }
+
+    {
+    title <
+      name = Ka Ho'oilina/The Legacy ;
+      issn = 1535-3133  ;
+      eissn = 1542-4243  ;
+      issnl = 1535-3133
+
+    >
+
+      attr[journal_id] = 225
+
+        au < released ; 2002 ; Ka Ho'oilina/The Legacy Puke Volume 1 [2002] ; 945 >
+        au < released ; 2003 ; Ka Ho'oilina/The Legacy Puke Volume 2 [2003] ; 1784 >
+        au < released ; 2004 ; Ka Ho'oilina/The Legacy Puke Volume 3 [2004] ; 2601 >
+        au < released ; 2005 ; Ka Ho'oilina/The Legacy Puke Volume 4 [2005] ; 2931 >
+        au < released ; 2006 ; Ka Ho'oilina/The Legacy Puke Volume 5 [2006] ; 3186 >
+
+    }
+
+    {
+    title <
+      name = Korean Studies ;
+      issn = 0145-840X  ;
+      eissn = 1529-1529  ;
+      issnl = 0145-840X
+
+    >
+
+      attr[journal_id] = 109
+
+        #au < exists ; DDDD ; Korean Studies [Early Release Articles] ; 12443 >
+        au < released ; 1977 ; Korean Studies Volume 1 [1977] ; 5968 >
+        au < released ; 1978 ; Korean Studies Volume 2 [1978] ; 5967 >
+        au < released ; 1979 ; Korean Studies Volume 3 [1979] ; 5966 >
+        au < released ; 1980 ; Korean Studies Volume 4 [1980] ; 5965 >
+        au < released ; 1981 ; Korean Studies Volume 5 [1981] ; 5964 >
+        au < released ; 1982 ; Korean Studies Volume 6 [1982] ; 5963 >
+        au < released ; 1983 ; Korean Studies Volume 7 [1983] ; 5962 >
+        au < released ; 1984 ; Korean Studies Volume 8 [1984] ; 5961 >
+        au < released ; 1985 ; Korean Studies Volume 9 [1985] ; 5960 >
+        au < released ; 1986 ; Korean Studies Volume 10 [1986] ; 5959 >
+        au < released ; 1987 ; Korean Studies Volume 11 [1987] ; 5958 >
+        au < released ; 1988 ; Korean Studies Volume 12 [1988] ; 5957 >
+        au < released ; 1989 ; Korean Studies Volume 13 [1989] ; 5956 >
+        au < released ; 1990 ; Korean Studies Volume 14 [1990] ; 5955 >
+        au < released ; 1991 ; Korean Studies Volume 15 [1991] ; 5954 >
+        au < released ; 1992 ; Korean Studies Volume 16 [1992] ; 5953 >
+        au < released ; 1993 ; Korean Studies Volume 17 [1993] ; 5952 >
+        au < released ; 1994 ; Korean Studies Volume 18 [1994] ; 5951 >
+        au < released ; 1995 ; Korean Studies Volume 19 [1995] ; 5950 >
+        au < released ; 1996 ; Korean Studies Volume 20 [1996] ; 5949 >
+        au < released ; 1997 ; Korean Studies Volume 21 [1997] ; 5948 >
+        au < released ; 1998 ; Korean Studies Volume 22 [1998] ; 5947 >
+        au < released ; 1999 ; Korean Studies Volume 23 [1999] ; 5946 >
+        au < released ; 2000 ; Korean Studies Volume 24 [2000] ; 364 >
+        au < released ; 2001 ; Korean Studies Volume 25 [2001] ; 365 >
+        au < released ; 2002 ; Korean Studies Volume 26 [2002] ; 848 >
+        au < released ; 2003 ; Korean Studies Volume 27 [2003] ; 2620 >
+        au < released ; 2004 ; Korean Studies Volume 28 [2004] ; 2808 >
+        au < released ; 2005 ; Korean Studies Volume 29 [2005] ; 3017 >
+        au < released ; 2006 ; Korean Studies Volume 30 [2006] ; 3162 >
+        au < released ; 2007 ; Korean Studies Volume 31 [2007] ; 3702 >
+        au < released ; 2008 ; Korean Studies Volume 32 [2008] ; 4047 >
+        au < released ; 2009 ; Korean Studies Volume 33 [2009] ; 5672 >
+        au < released ; 2010 ; Korean Studies Volume 34 [2010] ; 6624 >
+        au < released ; 2011 ; Korean Studies Volume 35 [2011] ; 7912 >
+        au < released ; 2012 ; Korean Studies Volume 36 [2012] ; 9061 >
+        au < released ; 2013 ; Korean Studies Volume 37 [2013] ; 10100 >
+        au < released ; 2014 ; Korean Studies Volume 38 [2014] ; 10788 >
+        au < released ; 2015 ; Korean Studies Volume 39 [2015] ; 10939 >
+        au < released ; 2016 ; Korean Studies Volume 40 [2016] ; 11415 >
+        au < released ; 2017 ; Korean Studies Volume 41 [2017] ; 12775 >
+        au < released ; 2018 ; Korean Studies Volume 42 [2018] ; 13502 >
+        au < released ; 2019 ; Korean Studies Volume 43 [2019] ; 14165 >
+        au < released ; 2020 ; Korean Studies Volume 44 [2020] ; 14906 >
+        au < released ; 2021 ; Korean Studies Volume 45 [2021] ; 16095 >
+        au < manifest ; 2022 ; Korean Studies Volume 46 [2022] ; 17352 >
+
+    }
+
+    {
+    title <
+      name = Manoa ;
+      issn = 1045-7909  ;
+      eissn = 1527-943X  ;
+      issnl = 1045-7909
+
+    >
+
+      attr[journal_id] = 121
+
+        au < released ; 1999 ; Manoa Volume 11 [1999] ; 401 >
+        au < released ; 2000 ; Manoa Volume 12 [2000] ; 402 >
+        au < released ; 2001 ; Manoa Volume 13 [2001] ; 403 >
+        au < released ; 2002-2003 ; Manoa Volume 14 [2002-2003] ; 404 >
+        au < released ; 2003 ; Manoa Volume 15 [2003] ; 920 >
+        au < released ; 2004 ; Manoa Volume 16 [2004] ; 2495 >
+        au < released ; 2005 ; Manoa Volume 17 [2005] ; 2804 >
+        au < released ; 2006 ; Manoa Volume 18 [2006] ; 3120 >
+        au < released ; 2007 ; Manoa Volume 19 [2007] ; 3422 >
+        au < released ; 2008 ; Manoa Volume 20 [2008] ; 3798 >
+        au < released ; 2009 ; Manoa Volume 21 [2009] ; 4181 >
+        au < released ; 2010 ; Manoa Volume 22 [2010] ; 6329 >
+        au < released ; 2011 ; Manoa Volume 23 [2011] ; 7487 >
+        au < released ; 2012 ; Manoa Volume 24 [2012] ; 8423 >
+        au < released ; 2013 ; Manoa Volume 25 [2013] ; 9202 >
+        au < released ; 2014 ; Manoa Volume 26 [2014] ; 10095 >
+        au < released ; 2015 ; Manoa Volume 27 [2015] ; 10781 >
+        au < released ; 2016 ; Manoa Volume 28 [2016] ; 12249 >
+        au < released ; 2017 ; Manoa Volume 29 [2017] ; 12824 >
+        au < released ; 2018 ; Manoa Volume 30 [2018] ; 13676 >
+        au < released ; 2019 ; Manoa Volume 31 [2019] ; 14153 >
+        au < released ; 2020 ; Manoa Volume 32 [2020] ; 15092 >
+        au < released ; 2021 ; Manoa Volume 33 [2021] ; 16706 >
+        au < manifest ; 2022 ; Manoa Volume 34 [2022] ; 17308 >
+
+    }
+
+    {
+    title <
+      name = Oceanic Linguistics ;
+      issn = 1527-9421  ;
+      eissn = 0029-8115  ;
+      issnl = 0029-8115
+
+    >
+
+      attr[journal_id] = 147
+
+        au < released ; 1999 ; Oceanic Linguistics Volume 38 [1999] ; 492 >
+        au < released ; 2000 ; Oceanic Linguistics Volume 39 [2000] ; 493 >
+        au < released ; 2001 ; Oceanic Linguistics Volume 40 [2001] ; 494 >
+        au < released ; 2002 ; Oceanic Linguistics Volume 41 [2002] ; 495 >
+        au < released ; 2003 ; Oceanic Linguistics Volume 42 [2003] ; 940 >
+        au < released ; 2004 ; Oceanic Linguistics Volume 43 [2004] ; 2556 >
+        au < released ; 2005 ; Oceanic Linguistics Volume 44 [2005] ; 2806 >
+        au < released ; 2006 ; Oceanic Linguistics Volume 45 [2006] ; 3119 >
+        au < released ; 2007 ; Oceanic Linguistics Volume 46 [2007] ; 3435 >
+        au < released ; 2008 ; Oceanic Linguistics Volume 47 [2008] ; 3847 >
+        au < released ; 2009 ; Oceanic Linguistics Volume 48 [2009] ; 4417 >
+        au < released ; 2010 ; Oceanic Linguistics Volume 49 [2010] ; 6335 >
+        au < released ; 2011 ; Oceanic Linguistics Volume 50 [2011] ; 7531 >
+        au < released ; 2012 ; Oceanic Linguistics Volume 51 [2012] ; 8320 >
+        au < released ; 2013 ; Oceanic Linguistics Volume 52 [2013] ; 9199 >
+        au < released ; 2014 ; Oceanic Linguistics Volume 53 [2014] ; 10086 >
+        au < released ; 2015 ; Oceanic Linguistics Volume 54 [2015] ; 10714 >
+        au < released ; 2016 ; Oceanic Linguistics Volume 55 [2016] ; 11231 >
+        au < released ; 2017 ; Oceanic Linguistics Volume 56 [2017] ; 12704 >
+        au < released ; 2018 ; Oceanic Linguistics Volume 57 [2018] ; 13519 >
+        au < released ; 2019 ; Oceanic Linguistics Volume 58 [2019] ; 14333 >
+        au < released ; 2020 ; Oceanic Linguistics Volume 59 [2020] ; 15484 >
+        au < released ; 2021 ; Oceanic Linguistics Volume 60 [2021] ; 16064 >
+        au < manifest ; 2022 ; Oceanic Linguistics Volume 61 [2022] ; 17298 >
+
+    }
+
+    {
+    title <
+      name = Pacific Science ;
+      issn = 0030-8870  ;
+      eissn = 1534-6188  ;
+      issnl = 0030-8870
+
+    >
+
+      attr[journal_id] = 166
+
+        au < released ; 2001 ; Pacific Science Volume 55 [2001] ; 568 >
+        au < released ; 2002 ; Pacific Science Volume 56 [2002] ; 569 >
+        au < released ; 2003 ; Pacific Science Volume 57 [2003] ; 770 >
+        au < released ; 2004 ; Pacific Science Volume 58 [2004] ; 1738 >
+        au < released ; 2005 ; Pacific Science Volume 59 [2005] ; 2614 >
+        au < released ; 2006 ; Pacific Science Volume 60 [2006] ; 2870 >
+        au < released ; 2007 ; Pacific Science Volume 61 [2007] ; 3187 >
+        au < released ; 2008 ; Pacific Science Volume 62 [2008] ; 12122 >
+        au < released ; 2009 ; Pacific Science Volume 63 [2009] ; 12123 >
+        au < released ; 2010 ; Pacific Science Volume 64 [2010] ; 12124 >
+        au < released ; 2011 ; Pacific Science Volume 65 [2011] ; 12125 >
+        au < released ; 2012 ; Pacific Science Volume 66 [2012] ; 12126 >
+        au < released ; 2013 ; Pacific Science Volume 67 [2013] ; 12128 >
+        au < released ; 2014 ; Pacific Science Volume 68 [2014] ; 12129 >
+        au < released ; 2015 ; Pacific Science Volume 69 [2015] ; 12130 >
+        au < released ; 2016 ; Pacific Science Volume 70 [2016] ; 12131 >
+        au < released ; 2017 ; Pacific Science Volume 71 [2017] ; 12299 >
+        au < released ; 2018 ; Pacific Science Volume 72 [2018] ; 13136 >
+        au < released ; 2019 ; Pacific Science Volume 73 [2019] ; 13870 >
+        au < released ; 2020 ; Pacific Science Volume 74 [2020] ; 14828 >
+        au < released ; 2021 ; Pacific Science Volume 75 [2021] ; 15800 >
+        au < manifest ; 2022 ; Pacific Science Volume 76 [2022] ; 17009 >
+
+    }
+
+    {
+    title <
+      name = Philosophy East and West ;
+      issn = 0031-8221  ;
+      eissn = 1529-1898  ;
+      issnl = 0031-8221
+
+    >
+
+      attr[journal_id] = 156
+
+        #au < exists ; DDDD ; Philosophy East and West [Early Release Articles] ; 12145 >
+        au < released ; 2000 ; Philosophy East and West Volume 50 [2000] ; 521 >
+        au < released ; 2001 ; Philosophy East and West Volume 51 [2001] ; 522 >
+        au < released ; 2002 ; Philosophy East and West Volume 52 [2002] ; 523 >
+        au < released ; 2003 ; Philosophy East and West Volume 53 [2003] ; 835 >
+        au < released ; 2004 ; Philosophy East and West Volume 54 [2004] ; 1730 >
+        au < released ; 2005 ; Philosophy East and West Volume 55 [2005] ; 2607 >
+        au < released ; 2006 ; Philosophy East and West Volume 56 [2006] ; 2894 >
+        au < released ; 2007 ; Philosophy East and West Volume 57 [2007] ; 3210 >
+        au < released ; 2008 ; Philosophy East and West Volume 58 [2008] ; 3524 >
+        au < released ; 2009 ; Philosophy East and West Volume 59 [2009] ; 4122 >
+        au < released ; 2010 ; Philosophy East and West Volume 60 [2010] ; 5681 >
+        au < released ; 2011 ; Philosophy East and West Volume 61 [2011] ; 6697 >
+        au < released ; 2012 ; Philosophy East and West Volume 62 [2012] ; 7761 >
+        au < released ; 2013 ; Philosophy East and West Volume 63 [2013] ; 8673 >
+        au < released ; 2014 ; Philosophy East and West Volume 64 [2014] ; 9624 >
+        au < released ; 2015 ; Philosophy East and West Volume 65 [2015] ; 10331 >
+        au < released ; 2016 ; Philosophy East and West Volume 66 [2016] ; 10912 >
+        au < released ; 2017 ; Philosophy East and West Volume 67 [2017] ; 12253 >
+        au < released ; 2018 ; Philosophy East and West Volume 68 [2018] ; 13115 >
+        au < released ; 2019 ; Philosophy East and West Volume 69 [2019] ; 14187 >
+        au < released ; 2020 ; Philosophy East and West Volume 70 [2020] ; 14741 >
+        au < released ; 2021 ; Philosophy East and West Volume 71 [2021] ; 15381 >
+        au < released ; 2022 ; Philosophy East and West Volume 72 [2022] ; 16844 >
+
+    }
+
+    {
+    title <
+      name = Rapa Nui Journal ;
+      issn = 1040-1385 ;
+      eissn = 2576-5469 ;
+      issnl = 1040-1385
+
+    >
+
+      attr[journal_id] = 732
+
+        #au < exists ; DDDD ; Rapa Nui Journal [Early Release Articles] ; 13663 >
+        au < released ; 2015 ; Rapa Nui Journal Volume 65 [2015] ; 13170 >
+        au < released ; 2016 ; Rapa Nui Journal Volume 66 [2016] ; 13171 >
+        au < released ; 2018 ; Rapa Nui Journal Volume 68 [2018] ; 13859 >
+        au < released ; 2019 ; Rapa Nui Journal Volume 32 [2019] ; 14857 >
+
+    }
+
+    {
+    title <
+      name = Review of Japanese Culture and Society ;
+      issn = 0913-4700  ;
+      issnl = 0913-4700
+
+    >
+
+      attr[journal_id] = 604
+
+        au < released ; 2012 ; Review of Japanese Culture and Society Volume 24 [2012] ; 9241 >
+        au < released ; 2013 ; Review of Japanese Culture and Society Volume 25 [2013] ; 10188 >
+        au < released ; 2014 ; Review of Japanese Culture and Society Volume 26 [2014] ; 10957 >
+        au < released ; 2015 ; Review of Japanese Culture and Society Volume 27 [2015] ; 10958 >
+        au < released ; 2016 ; Review of Japanese Culture and Society Volume 28 [2016] ; 12810 >
+        au < released ; 2017 ; Review of Japanese Culture and Society Volume 29 [2017] ; 14294 >
+        au < released ; 2018 ; Review of Japanese Culture and Society Volume 30 [2018] ; 15489 >
+        au < released ; 2019 ; Review of Japanese Culture and Society Volume 31 [2019] ; 15490 >
+
+    }
+
+    {
+    title <
+      name = The Contemporary Pacific ;
+      issn = 1043-898X  ;
+      eissn = 1527-9464  ;
+      issnl = 1043-898X
+
+    >
+
+      attr[journal_id] = 37
+
+        au < released ; 2000 ; The Contemporary Pacific Volume 12 [2000] ; 134 >
+        au < released ; 2001 ; The Contemporary Pacific Volume 13 [2001] ; 135 >
+        au < released ; 2002 ; The Contemporary Pacific Volume 14 [2002] ; 136 >
+        au < released ; 2003 ; The Contemporary Pacific Volume 15 [2003] ; 789 >
+        au < released ; 2004 ; The Contemporary Pacific Volume 16 [2004] ; 1749 >
+        au < released ; 2005 ; The Contemporary Pacific Volume 17 [2005] ; 2626 >
+        au < released ; 2006 ; The Contemporary Pacific Volume 18 [2006] ; 2878 >
+        au < released ; 2007 ; The Contemporary Pacific Volume 19 [2007] ; 3195 >
+        au < released ; 2008 ; The Contemporary Pacific Volume 20 [2008] ; 3501 >
+        au < released ; 2009 ; The Contemporary Pacific Volume 21 [2009] ; 4034 >
+        au < released ; 2010 ; The Contemporary Pacific Volume 22 [2010] ; 5702 >
+        au < released ; 2011 ; The Contemporary Pacific Volume 23 [2011] ; 6643 >
+        au < released ; 2012 ; The Contemporary Pacific Volume 24 [2012] ; 7749 >
+        au < released ; 2013 ; The Contemporary Pacific Volume 25 [2013] ; 8592 >
+        au < released ; 2014 ; The Contemporary Pacific Volume 26 [2014] ; 9771 >
+        au < released ; 2015 ; The Contemporary Pacific Volume 27 [2015] ; 10623 >
+        au < released ; 2016 ; The Contemporary Pacific Volume 28 [2016] ; 10892 >
+        au < released ; 2017 ; The Contemporary Pacific Volume 29 [2017] ; 12317 >
+        au < released ; 2018 ; The Contemporary Pacific Volume 30 [2018] ; 13152 >
+        au < released ; 2019 ; The Contemporary Pacific Volume 31 [2019] ; 13958 >
+        au < released ; 2020 ; The Contemporary Pacific Volume 32 [2020] ; 14834 >
+        au < released ; 2021 ; The Contemporary Pacific Volume 33 [2021] ; 15877 >
+        au < manifest ; 2022 ; The Contemporary Pacific Volume 34 [2022] ; 17259 >
+
+    }
+
+    {
+    title <
+      name = Trans-Humanities Journal ;
+      issn = 2092-6081 ;
+      eissn = 2383-9899 ;
+      issnl = 2092-6081
+
+    >
+
+      attr[journal_id] = 712
+
+        au < released ; 2009 ; Trans-Humanities Journal Volume 1 [2009] ; 12189 >
+        au < released ; 2010 ; Trans-Humanities Journal Volume 2 [2010] ; 12169 >
+        au < released ; 2011 ; Trans-Humanities Journal Volume 4 [2011] ; 12170 >
+        au < released ; 2012 ; Trans-Humanities Journal Volume 5 [2012] ; 12172 >
+        au < released ; 2013 ; Trans-Humanities Journal Volume 6 [2013] ; 12173 >
+        au < released ; 2014 ; Trans-Humanities Journal Volume 7 [2014] ; 12174 >
+        au < released ; 2015 ; Trans-Humanities Journal Volume 8 [2015] ; 12175 >
+        au < released ; 2016 ; Trans-Humanities Journal Volume 9 [2016] ; 12176 >
+        au < released ; 2017 ; Trans-Humanities Journal Volume 10 [2017] ; 12464 >
+
+    }
+
+    {
+    title <
+      name = U.S.-Japan Women's Journal ;
+      issn = 1059-9770  ;
+      issnl = 1059-9770
+
+    >
+
+      attr[journal_id] = 607
+
+        au < released ; 2012 ; U.S.-Japan Women's Journal Number 43 [2012] ; 9245 >
+        au < released ; 2013 ; U.S.-Japan Women's Journal Number 44 [2013] ; 9299 >
+        au < released ; 2013 ; U.S.-Japan Women's Journal Number 45 [2013] ; 9763 >
+        au < released ; 2014 ; U.S.-Japan Women's Journal Number 46 [2014] ; 10187 >
+        au < released ; 2014 ; U.S.-Japan Women's Journal Number 47 [2014] ; 10551 >
+        au < released ; 2015 ; U.S.-Japan Women's Journal Number 48 [2015] ; 11086 >
+        au < released ; 2016 ; U.S.-Japan Women's Journal Number 49 [2016] ; 11154 >
+        au < released ; 2016 ; U.S.-Japan Women's Journal Number 50 [2016] ; 12214 >
+        au < released ; 2017 ; U.S.-Japan Women's Journal Number 51 [2017] ; 12758 >
+        au < released ; 2017 ; U.S.-Japan Women's Journal Number 52 [2017] ; 13239 >
+        au < released ; 2018 ; U.S.-Japan Women's Journal Number 53 [2018] ; 13785 >
+        au < released ; 2018 ; U.S.-Japan Women's Journal Volume 54 [2018] ; 14251 >
+        au < manifest ; 2019 ; U.S.-Japan Women's Journal Volume 55-56 [2019] ; 15058 >
+        au < released ; 2020 ; U.S.-Japan Women's Journal Volume 57 [2020] ; 15310 >
+        au < released ; 2020 ; U.S.-Japan Women's Journal Volume 58 [2020] ; 15798 >
+        au < released ; 2021 ; U.S.-Japan Women's Journal Volume 59 [2021] ; 15900 >
+        au < released ; 2021 ; U.S.-Japan Women's Journal Volume 60 [2021] ; 16784 >
+        au < manifest ; 2022 ; U.S.-Japan Women's Journal Volume 62 [2022] ; 17412 >
+        au < manifest ; 2022 ; U.S.-Japan Women's Journal Volume 61 [2022] ; 17206 >
+
+    }
+
+    {
+    title <
+      name = Yearbook of the Association of Pacific Coast Geographers ;
+      issn = 0066-9628  ;
+      eissn = 1551-3211  ;
+      issnl = 0066-9628
+
+    >
+
+      attr[journal_id] = 280
+
+        au < released ; 1935 ; Yearbook of the Association of Pacific Coast Geographers Volume 1 [1935] ; 7819 >
+        au < released ; 1936 ; Yearbook of the Association of Pacific Coast Geographers Volume 2 [1936] ; 7822 >
+        au < released ; 1937 ; Yearbook of the Association of Pacific Coast Geographers Volume 3 [1937] ; 7825 >
+        au < released ; 1938 ; Yearbook of the Association of Pacific Coast Geographers Volume 4 [1938] ; 7839 >
+        au < released ; 1939 ; Yearbook of the Association of Pacific Coast Geographers Volume 5 [1939] ; 7840 >
+        au < released ; 1940 ; Yearbook of the Association of Pacific Coast Geographers Volume 6 [1940] ; 7841 >
+        au < released ; 1941 ; Yearbook of the Association of Pacific Coast Geographers Volume 7 [1941] ; 7842 >
+        au < released ; 1942 ; Yearbook of the Association of Pacific Coast Geographers Volume 8 [1942] ; 7834 >
+        au < released ; 1947 ; Yearbook of the Association of Pacific Coast Geographers Volume 9 [1947] ; 7838 >
+        au < released ; 1948 ; Yearbook of the Association of Pacific Coast Geographers Volume 10 [1948] ; 7835 >
+        au < released ; 1949 ; Yearbook of the Association of Pacific Coast Geographers Volume 11 [1949] ; 7843 >
+        au < released ; 1950 ; Yearbook of the Association of Pacific Coast Geographers Volume 12 [1950] ; 7836 >
+        au < released ; 1951 ; Yearbook of the Association of Pacific Coast Geographers Volume 13 [1951] ; 7837 >
+        au < released ; 1952 ; Yearbook of the Association of Pacific Coast Geographers Volume 14 [1952] ; 7898 >
+        au < released ; 1953 ; Yearbook of the Association of Pacific Coast Geographers Volume 15 [1953] ; 7870 >
+        au < released ; 1954 ; Yearbook of the Association of Pacific Coast Geographers Volume 16 [1954] ; 7863 >
+        au < released ; 1955 ; Yearbook of the Association of Pacific Coast Geographers Volume 17 [1955] ; 7864 >
+        au < released ; 1956 ; Yearbook of the Association of Pacific Coast Geographers Volume 18 [1956] ; 7853 >
+        au < released ; 1957 ; Yearbook of the Association of Pacific Coast Geographers Volume 19 [1957] ; 7919 >
+        au < released ; 1958 ; Yearbook of the Association of Pacific Coast Geographers Volume 20 [1958] ; 7920 >
+        au < released ; 1959 ; Yearbook of the Association of Pacific Coast Geographers Volume 21 [1959] ; 7881 >
+        au < released ; 1960 ; Yearbook of the Association of Pacific Coast Geographers Volume 22 [1960] ; 7891 >
+        au < released ; 1961 ; Yearbook of the Association of Pacific Coast Geographers Volume 23 [1961] ; 7892 >
+        au < released ; 1962 ; Yearbook of the Association of Pacific Coast Geographers Volume 24 [1962] ; 7882 >
+        au < released ; 1963 ; Yearbook of the Association of Pacific Coast Geographers Volume 25 [1963] ; 7893 >
+        au < released ; 1964 ; Yearbook of the Association of Pacific Coast Geographers Volume 26 [1964] ; 7894 >
+        au < released ; 1965 ; Yearbook of the Association of Pacific Coast Geographers Volume 27 [1965] ; 7223 >
+        au < released ; 1966 ; Yearbook of the Association of Pacific Coast Geographers Volume 28 [1966] ; 7222 >
+        au < released ; 1967 ; Yearbook of the Association of Pacific Coast Geographers Volume 29 [1967] ; 7221 >
+        au < released ; 1968 ; Yearbook of the Association of Pacific Coast Geographers Volume 30 [1968] ; 7220 >
+        au < released ; 1969 ; Yearbook of the Association of Pacific Coast Geographers Volume 31 [1969] ; 7219 >
+        au < released ; 1970 ; Yearbook of the Association of Pacific Coast Geographers Volume 32 [1970] ; 7218 >
+        au < released ; 1971 ; Yearbook of the Association of Pacific Coast Geographers Volume 33 [1971] ; 7217 >
+        au < released ; 1972 ; Yearbook of the Association of Pacific Coast Geographers Volume 34 [1972] ; 7216 >
+        au < released ; 1973 ; Yearbook of the Association of Pacific Coast Geographers Volume 35 [1973] ; 7215 >
+        au < released ; 1974 ; Yearbook of the Association of Pacific Coast Geographers Volume 36 [1974] ; 7214 >
+        au < released ; 1975 ; Yearbook of the Association of Pacific Coast Geographers Volume 37 [1975] ; 7213 >
+        au < released ; 1976 ; Yearbook of the Association of Pacific Coast Geographers Volume 38 [1976] ; 7212 >
+        au < released ; 1977 ; Yearbook of the Association of Pacific Coast Geographers Volume 39 [1977] ; 7211 >
+        au < released ; 1978 ; Yearbook of the Association of Pacific Coast Geographers Volume 40 [1978] ; 7210 >
+        au < released ; 1979 ; Yearbook of the Association of Pacific Coast Geographers Volume 41 [1979] ; 7043 >
+        au < released ; 1980 ; Yearbook of the Association of Pacific Coast Geographers Volume 42 [1980] ; 7224 >
+        au < released ; 1981 ; Yearbook of the Association of Pacific Coast Geographers Volume 43 [1981] ; 7225 >
+        au < released ; 1982 ; Yearbook of the Association of Pacific Coast Geographers Volume 44 [1982] ; 7226 >
+        au < released ; 1983 ; Yearbook of the Association of Pacific Coast Geographers Volume 45 [1983] ; 7227 >
+        au < released ; 1984 ; Yearbook of the Association of Pacific Coast Geographers Volume 46 [1984] ; 7228 >
+        au < released ; 1985 ; Yearbook of the Association of Pacific Coast Geographers Volume 47 [1985] ; 7229 >
+        au < released ; 1986 ; Yearbook of the Association of Pacific Coast Geographers Volume 48 [1986] ; 7184 >
+        au < released ; 1987 ; Yearbook of the Association of Pacific Coast Geographers Volume 49 [1987] ; 7186 >
+        au < released ; 1988 ; Yearbook of the Association of Pacific Coast Geographers Volume 50 [1988] ; 7187 >
+        au < released ; 1989 ; Yearbook of the Association of Pacific Coast Geographers Volume 51 [1989] ; 7188 >
+        au < released ; 1990 ; Yearbook of the Association of Pacific Coast Geographers Volume 52 [1990] ; 7189 >
+        au < released ; 1991 ; Yearbook of the Association of Pacific Coast Geographers Volume 53 [1991] ; 7190 >
+        au < released ; 1992 ; Yearbook of the Association of Pacific Coast Geographers Volume 54 [1992] ; 7191 >
+        au < released ; 1993 ; Yearbook of the Association of Pacific Coast Geographers Volume 55 [1993] ; 7192 >
+        au < released ; 1994 ; Yearbook of the Association of Pacific Coast Geographers Volume 56 [1994] ; 7193 >
+        au < released ; 1995 ; Yearbook of the Association of Pacific Coast Geographers Volume 57 [1995] ; 7194 >
+        au < released ; 1996 ; Yearbook of the Association of Pacific Coast Geographers Volume 58 [1996] ; 7195 >
+        au < released ; 1997 ; Yearbook of the Association of Pacific Coast Geographers Volume 59 [1997] ; 7196 >
+        au < released ; 1998 ; Yearbook of the Association of Pacific Coast Geographers Volume 60 [1998] ; 7197 >
+        au < released ; 1999 ; Yearbook of the Association of Pacific Coast Geographers Volume 61 [1999] ; 7198 >
+        au < released ; 2000 ; Yearbook of the Association of Pacific Coast Geographers Volume 62 [2000] ; 7199 >
+        au < released ; 2001 ; Yearbook of the Association of Pacific Coast Geographers Volume 63 [2001] ; 7200 >
+        au < released ; 2002 ; Yearbook of the Association of Pacific Coast Geographers Volume 64 [2002] ; 7201 >
+        au < released ; 2003 ; Yearbook of the Association of Pacific Coast Geographers Volume 65 [2003] ; 7202 >
+        au < released ; 2004 ; Yearbook of the Association of Pacific Coast Geographers Volume 66 [2004] ; 2574 >
+        au < released ; 2005 ; Yearbook of the Association of Pacific Coast Geographers Volume 67 [2005] ; 2824 >
+        au < released ; 2006 ; Yearbook of the Association of Pacific Coast Geographers Volume 68 [2006] ; 3099 >
+        au < released ; 2007 ; Yearbook of the Association of Pacific Coast Geographers Volume 69 [2007] ; 3439 >
+        au < released ; 2008 ; Yearbook of the Association of Pacific Coast Geographers Volume 70 [2008] ; 3828 >
+        au < released ; 2009 ; Yearbook of the Association of Pacific Coast Geographers Volume 71 [2009] ; 4382 >
+        au < released ; 2010 ; Yearbook of the Association of Pacific Coast Geographers Volume 72 [2010] ; 6433 >
+        au < released ; 2011 ; Yearbook of the Association of Pacific Coast Geographers Volume 73 [2011] ; 7510 >
+        au < released ; 2012 ; Yearbook of the Association of Pacific Coast Geographers Volume 74 [2012] ; 8427 >
+        au < released ; 2013 ; Yearbook of the Association of Pacific Coast Geographers Volume 75 [2013] ; 9265 >
+        au < released ; 2014 ; Yearbook of the Association of Pacific Coast Geographers Volume 76 [2014] ; 10184 >
+        au < released ; 2015 ; Yearbook of the Association of Pacific Coast Geographers Volume 77 [2015] ; 10757 >
+        au < released ; 2016 ; Yearbook of the Association of Pacific Coast Geographers Volume 78 [2016] ; 11409 >
+        au < released ; 2017 ; Yearbook of the Association of Pacific Coast Geographers Volume 79 [2017] ; 12829 >
+        au < released ; 2018 ; Yearbook of the Association of Pacific Coast Geographers Volume 80 [2018] ; 13655 >
+        au < released ; 2019 ; Yearbook of the Association of Pacific Coast Geographers Volume 81 [2019] ; 14477 >
+        au < released ; 2020 ; Yearbook of the Association of Pacific Coast Geographers Volume 82 [2020] ; 15211 >
+        au < released ; 2021 ; Yearbook of the Association of Pacific Coast Geographers Volume 83 [2021] ; 16777 >
+
+    }
+
+}

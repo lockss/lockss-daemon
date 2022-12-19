@@ -1,0 +1,83 @@
+{
+  publisher <
+    name = Lawrence & Wishart
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:248
+
+    {
+    title <
+      name = Soundings: A journal of politics and culture ;
+      issn = 1362-6620 
+    >
+
+      attr[journal_id] = 618
+
+        au < released ; 2013 ; Soundings: A journal of politics and culture Volume 53 [Spring 2013] ; 9318 >
+        au < released ; 2013 ; Soundings: A journal of politics and culture Volume 54 [Summer 2013] ; 9319 >
+        au < released ; 2013 ; Soundings: A journal of politics and culture Volume 55 [Winter 2013] ; 9555 >
+        au < released ; 2014 ; Soundings: A journal of politics and culture Volume 56 [Spring 2014] ; 9931 >
+        au < released ; 2014 ; Soundings: A journal of politics and culture Volume 57 [Summer 2014] ; 10164 >
+        au < released ; 2014-2015 ; Soundings: A journal of politics and culture Volume 58 [Winter 2014-15] ; 10298 >
+        au < released ; 2015 ; Soundings: A journal of politics and culture Volume 59 [Spring 2015] ; 10754 >
+        au < released ; 2015 ; Soundings: A journal of politics and culture Volume 60 [Summer 2015] ; 10755 >
+        au < released ; 2016 ; Soundings: A journal of politics and culture Volume 61 [2016] ; 10948 >
+        au < released ; 2016 ; Soundings: A journal of politics and culture Volume 62 [Spring 2016] ; 11163 >
+        au < released ; 2016 ; Soundings: A journal of politics and culture Volume 63 [2016] ; 11342 >
+        au < released ; 2016 ; Soundings: A journal of politics and culture Volume 64 [2016-17] ; 12320 >
+        au < released ; 2017 ; Soundings: A journal of politics and culture Volume 65 [Spring 2017] ; 12655 >
+        au < released ; 2017 ; Soundings: A journal of politics and culture Volume 66 [Summer 2017] ; 12814 >
+        au < released ; 2018 ; Soundings: A journal of politics and culture Volume 67 [Winter 2018] ; 13213 >
+        au < released ; 2018 ; Soundings: A journal of politics and culture Volume 68 [Spring 2018] ; 13402 >
+        au < released ; 2018 ; Soundings: A journal of politics and culture Volume 69 [Summer 2018] ; 13600 >
+        au < released ; 2018 ; Soundings: A journal of politics and culture Volume 70 [Winter 2018] ; 13790 >
+        au < released ; 2019 ; Soundings: A journal of politics and culture Volume 71 [Spring 2019] ; 14148 >
+        au < released ; 2019 ; Soundings: A journal of politics and culture Volume 72 [Summer 2019] ; 14338 >
+        au < released ; 2019-2020 ; Soundings: A journal of politics and culture Volume 73 [Winter 2019-2020] ; 14527 >
+        au < released ; 2020 ; Soundings: A journal of politics and culture Volume 74 [Spring 2020] ; 14866 >
+        au < released ; 2021 ; Soundings: A journal of politics and culture Volume 78 [2021] ; 16545 >
+        au < manifest ; 2020 ; Soundings: A journal of politics and culture Volume 75 [2020] ; 15149 >
+        au < manifest ; 2021 ; Soundings: A journal of politics and culture Volume 77 [2021] ; 15807 >
+        au < manifest ; 2022 ; Soundings: A journal of politics and culture Volume 81 [2022] ; 17592 >
+        au < manifest ; 2022 ; Soundings: A journal of politics and culture Volume 80 [2022] ; 17240 >
+
+    }
+
+    {
+    title <
+      name = new formations: a journal of culture/theory/politics ;
+      issn = 0950-2378 
+    >
+
+      attr[journal_id] = 617
+
+        au < released ; 2013 ; new formations: a journal of culture/theory/politics Volume 78 [2013] ; 9317 >
+        au < released ; 2013 ; new formations: a journal of culture/theory/politics Volume 79 [2013] ; 9364 >
+        au < released ; 2013 ; new formations: a journal of culture/theory/politics Volume 80-81 [2013] ; 9540 >
+        au < released ; 2014 ; new formations: a journal of culture/theory/politics Volume 82 [2014] ; 10228 >
+        au < released ; 2014 ; new formations: a journal of culture/theory/politics Number 83, 2014 ; 10265 >
+        au < released ; 2015 ; new formations: a journal of culture/theory/politics Volume 84-85 [2015] ; 10817 >
+        au < released ; 2015 ; new formations: a journal of culture/theory/politics Volume 86 [2015] ; 10864 >
+        au < released ; 2016 ; new formations: a journal of culture/theory/politics Volume 87 [2016] ; 11206 >
+        au < released ; 2016 ; new formations: a journal of culture/theory/politics Volume 88 [2016] ; 11317 >
+        au < released ; 2017 ; new formations: a journal of culture/theory/politics Volume 89-90 [2017] ; 12711 >
+        au < released ; 2017 ; new formations: a journal of culture/theory/politics Volume 91 [2017] ; 12902 >
+        au < released ; 2017 ; new formations: a journal of culture/theory/politics Volume 92 [2017] ; 13369 >
+        au < released ; 2017 ; new formations: a journal of culture/theory/politics Volume 93 [2017] ; 13599 >
+        au < released ; 2018 ; new formations: a journal of culture/theory/politics Volume 94 [2018] ; 13725 >
+        au < released ; 2018 ; new formations: a journal of culture/theory/politics Volume 95 [2018] ; 13901 >
+        au < released ; 2019 ; new formations: a journal of culture/theory/politics Volume 98 [2019] ; 14613 >
+        au < released ; 2019 ; new formations: a journal of culture/theory/politics Volume 99 [2019] ; 14915 >
+        au < manifest ; 2022 ; new formations: a journal of culture/theory/politics Volume 106 [2022] ; 17462 >
+        au < manifest ; 2021 ; new formations: a journal of culture/theory/politics Volume 102 [2021] ; 15653 >
+        au < manifest ; 2021 ; new formations: a journal of culture/theory/politics Volume 103 [2021] ; 16090 >
+        au < manifest ; 2019 ; new formations: a journal of culture/theory/politics Volume 96-97 [2019] ; 14337 >
+        au < manifest ; 2020 ; new formations: a journal of culture/theory/politics Volume 100-101 [2020] ; 15089 >
+        au < manifest ; 2022 ; new formations: a journal of culture/theory/politics Volume 104-105 [2022] ; 16846 >
+
+    }
+
+}

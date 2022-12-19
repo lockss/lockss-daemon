@@ -1,0 +1,613 @@
+{
+  publisher <
+    name = Oxford University Press
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:8
+
+    {
+    title <
+      name = American Literary History ;
+      issn = 0896-7148  ;
+      eissn = 1468-4365  ;
+      issnl = 0896-7148
+    >
+
+      attr[journal_id] = 8
+
+        au < released ; 2000 ; American Literary History Volume 12 [2000] ; 36 >
+        au < released ; 2001 ; American Literary History Volume 13 [2001] ; 37 >
+        au < released ; 2002 ; American Literary History Volume 14 [2002] ; 38 >
+        au < released ; 2003 ; American Literary History Volume 15 [2003] ; 799 >
+        au < released ; 2004 ; American Literary History Volume 16 [2004] ; 1782 >
+        au < released ; 2005 ; American Literary History Volume 17 [2005] ; 2621 >
+        au < released ; 2006 ; American Literary History Volume 18 [2006] ; 2927 >
+        au < released ; 2007 ; American Literary History Volume 19 [2007] ; 3352 >
+        au < released ; 2008 ; American Literary History Volume 20 [2008] ; 3688 >
+        au < released ; 2009 ; American Literary History Volume 21 [2009] ; 4129 >
+        au < released ; 2010 ; American Literary History Volume 22 [2010] ; 5787 >
+        au < released ; 2011 ; American Literary History Volume 23 [2011] ; 6810 >
+        au < released ; 2012 ; American Literary History Volume 24 [2012] ; 7934 >
+        au < released ; 2013 ; American Literary History Volume 25 [2013] ; 8733 >
+        au < released ; 2014 ; American Literary History Volume 26 [2014] ; 9643 >
+        au < released ; 2015 ; American Literary History Volume 27 [2015] ; 10311 >
+        au < released ; 2016 ; American Literary History Volume 28 [2016] ; 10925 >
+        au < released ; 2017 ; American Literary History Volume 29 [2017] ; 12403 >
+        au < released ; 2018 ; American Literary History Volume 30 [2018] ; 13211 >
+        au < released ; 2019 ; American Literary History Volume 31 [2019] ; 13893 >
+        au < released ; 2020 ; American Literary History Volume 32 [2020] ; 14977 >
+        au < released ; 2021 ; American Literary History Volume 33 [2021] ; 16062 >
+        au < manifest ; 2022 ; American Literary History Volume 34 [2022] ; 17130 >
+
+    }
+
+    {
+    title <
+      name = Early Music ;
+      issn = 0306-1078  ;
+      eissn = 1741-7260  ;
+      issnl = 0306-1078
+    >
+
+      attr[journal_id] = 265
+
+        au < released ; 2004 ; Early Music Volume 32 [2004] ; 2674 >
+        au < released ; 2005 ; Early Music Volume 33 [2005] ; 2745 >
+        au < released ; 2006 ; Early Music Volume 34 [2006] ; 3004 >
+        au < released ; 2007 ; Early Music Volume 35 [2007] ; 3327 >
+
+    }
+
+    {
+    title <
+      name = Essays in Criticism ;
+      issn = 0014-0856  ;
+      eissn = 1471-6852  ;
+      issnl = 0014-0856
+    >
+
+      attr[journal_id] = 325
+
+        au < released ; 2006 ; Essays in Criticism Volume 56 [2006] ; 3077 >
+        au < released ; 2007 ; Essays in Criticism Volume 57 [2007] ; 3243 >
+
+    }
+
+    {
+    title <
+      name = French Studies ;
+      issn = 0016-1128  ;
+      eissn = 1468-2931  ;
+      issnl = 0016-1128
+    >
+
+      attr[journal_id] = 346
+
+        au < released ; 2006 ; French Studies: A Quarterly Review Volume 60 [2006] ; 3191 >
+        au < released ; 2007 ; French Studies: A Quarterly Review Volume 61 [2007] ; 3284 >
+        au < released ; 2008 ; French Studies: A Quarterly Review Volume 62 [2008] ; 3661 >
+        au < released ; 2009 ; French Studies: A Quarterly Review Volume 63 [2009] ; 4104 >
+        au < released ; 2010 ; French Studies: A Quarterly Review Volume 64 [2010] ; 5736 >
+        au < released ; 2011 ; French Studies: A Quarterly Review Volume 65 [2011] ; 6708 >
+        au < released ; 2012 ; French Studies: A Quarterly Review Volume 66 [2012] ; 7888 >
+        au < released ; 2013 ; French Studies: A Quarterly Review Volume 67 [2013] ; 8656 >
+        au < released ; 2014 ; French Studies: A Quarterly Review Volume 68 [2014] ; 9595 >
+        au < released ; 2015 ; French Studies: A Quarterly Review Volume 69 [2015] ; 10414 >
+        au < released ; 2016 ; French Studies: A Quarterly Review Volume 70 [2016] ; 10895 >
+        au < released ; 2017 ; French Studies: A Quarterly Review Volume 71 [2017] ; 12597 >
+        au < released ; 2018 ; French Studies: A Quarterly Review Volume 72 [2018] ; 13156 >
+        au < released ; 2019 ; French Studies: A Quarterly Review Volume 73 [2019] ; 13925 >
+        au < released ; 2020 ; French Studies: A Quarterly Review Volume 74 [2020] ; 14672 >
+        au < released ; 2021 ; French Studies: A Quarterly Review Volume 75 [2021] ; 15897 >
+        au < manifest ; 2022 ; French Studies: A Quarterly Review Volume 76 [2022] ; 17020 >
+
+    }
+
+    {
+    title <
+      name = History Workshop Journal ;
+      issn = 1363-3554  ;
+      eissn = 1477-4569  ;
+      issnl = 1363-3554
+    >
+
+      attr[journal_id] = 277
+
+        au < released ; 2004 ; History Workshop Journal Issue 57 [Spring 2004] ; 2536 >
+        au < released ; 2004 ; History Workshop Journal Issue 58 [Autumn 2004] ; 2612 >
+        au < released ; 2005 ; History Workshop Journal Issue 59 [Spring 2005] ; 2938 >
+        au < released ; 2005 ; History Workshop Journal Issue 60 [Autumn 2005] ; 2943 >
+        au < released ; 2006 ; History Workshop Journal Issue 61 [Spring 2006] ; 3025 >
+        au < released ; 2006 ; History Workshop Journal Issue 62 [Autumn 2006] ; 3163 >
+        au < released ; 2007 ; History Workshop Journal Issue 63 [Spring 2007] ; 3392 >
+        au < released ; 2007 ; History Workshop Journal Issue 64 [Autumn 2007] ; 3580 >
+        au < released ; 2008 ; History Workshop Journal Issue 65 [Spring 2008] ; 3781 >
+        au < released ; 2008 ; History Workshop Journal Issue 66 [Autumn 2008] ; 4028 >
+        au < released ; 2009 ; History Workshop Journal Issue 67 [Spring 2009] ; 4365 >
+        au < released ; 2009 ; History Workshop Journal Issue 68 [Autumn 2009] ; 5686 >
+        au < released ; 2010 ; History Workshop Journal Issue 69 [Spring 2010] ; 6383 >
+        au < released ; 2010 ; History Workshop Journal Issue 70 [Autumn 2010] ; 6544 >
+        au < released ; 2011 ; History Workshop Journal Issue 71 [Spring 2011] ; 7086 >
+        au < released ; 2011 ; History Workshop Journal Issue 72 [Autumn 2011] ; 7609 >
+        au < released ; 2012 ; History Workshop Journal Issue 73 [Spring 2012] ; 8277 >
+        au < released ; 2012 ; History Workshop Journal Issue 74 [Autumn 2012] ; 8487 >
+        au < released ; 2013 ; History Workshop Journal Issue 75 [Spring 2013] ; 8897 >
+        au < released ; 2013 ; History Workshop Journal Issue 76 [Autumn 2013] ; 9868 >
+        au < released ; 2014 ; History Workshop Journal Issue 77 [Spring 2014] ; 9883 >
+        au < released ; 2014 ; History Workshop Journal Issue 78 [Autumn 2014] ; 10190 >
+        au < released ; 2015 ; History Workshop Journal Issue 79 [Spring 2015] ; 10579 >
+        au < released ; 2015 ; History Workshop Journal Issue 80 [Autumn 2015] ; 10810 >
+        au < released ; 2016 ; History Workshop Journal Issue 81 [Spring 2016] ; 11210 >
+        au < released ; 2016 ; History Workshop Journal Issue 82 [Autumn 2016] ; 12194 >
+        au < released ; 2017 ; History Workshop Journal Issue 83 [Spring 2017] ; 12751 >
+        au < released ; 2017 ; History Workshop Journal Issue 84 [Autumn 2017] ; 12991 >
+        au < released ; 2018 ; History Workshop Journal Issue 85 [Spring 2018] ; 13409 >
+        au < released ; 2018 ; History Workshop Journal Issue 86 [Autumn 2018] ; 13779 >
+        au < released ; 2019 ; History Workshop Journal Issue 87 [Spring 2019] ; 14349 >
+        au < released ; 2019 ; History Workshop Journal Issue 88 [Autumn 2019] ; 14673 >
+        au < manifest ; 2020 ; History Workshop Journal Volume 90 [2020] ; 15898 >
+        au < manifest ; 2021 ; History Workshop Journal Volume 91 [2021] ; 17025 >
+        au < manifest ; 2022 ; History Workshop Journal Volume 93 [2022] ; 17313 >
+        au < manifest ; 2020 ; History Workshop Journal Volume 89 [2020] ; 15098 >
+        au < manifest ; 2021 ; History Workshop Journal Volume 92 [2021] ; 17021 >
+
+    }
+
+    {
+    title <
+      name = Holocaust and Genocide Studies ;
+      issn = 8756-6583  ;
+      eissn = 1476-7937  ;
+      issnl = 1476-7937
+    >
+
+      attr[journal_id] = 220
+
+        au < released ; 2003 ; Holocaust and Genocide Studies Volume 17 [2003] ; 912 >
+        au < released ; 2004 ; Holocaust and Genocide Studies Volume 18 [2004] ; 2519 >
+        au < released ; 2005 ; Holocaust and Genocide Studies Volume 19 [2005] ; 2756 >
+        au < released ; 2006 ; Holocaust and Genocide Studies Volume 20 [2006] ; 3013 >
+        au < released ; 2007 ; Holocaust and Genocide Studies Volume 21 [2007] ; 3381 >
+        au < released ; 2008 ; Holocaust and Genocide Studies Volume 22 [2008] ; 3765 >
+        au < released ; 2009 ; Holocaust and Genocide Studies Volume 23 [2009] ; 4288 >
+        au < released ; 2010 ; Holocaust and Genocide Studies Volume 24 [2010] ; 6217 >
+        au < released ; 2011 ; Holocaust and Genocide Studies Volume 25 [2011] ; 7297 >
+        au < released ; 2012 ; Holocaust and Genocide Studies Volume 26 [2012] ; 8236 >
+        au < released ; 2013 ; Holocaust and Genocide Studies Volume 27 [2013] ; 9085 >
+        au < released ; 2014 ; Holocaust and Genocide Studies Volume 28 [2014] ; 9900 >
+        au < released ; 2015 ; Holocaust and Genocide Studies Volume 29 [2015] ; 10598 >
+        au < released ; 2016 ; Holocaust and Genocide Studies Volume 30 [2016] ; 11265 >
+        au < released ; 2017 ; Holocaust and Genocide Studies Volume 31 [2017] ; 12657 >
+        au < released ; 2018 ; Holocaust and Genocide Studies Volume 32 [2018] ; 13456 >
+        au < released ; 2019 ; Holocaust and Genocide Studies Volume 33 [2019] ; 14231 >
+        au < released ; 2020 ; Holocaust and Genocide Studies Volume 34 [2020] ; 15060 >
+        au < released ; 2021 ; Holocaust and Genocide Studies Volume 35 [2021] ; 16109 >
+        au < manifest ; 2022 ; Holocaust and Genocide Studies Volume 36 [2022] ; 17314 >
+
+    }
+
+    {
+    title <
+      name = Journal of the American Academy of Religion ;
+      issn = 0002-7189  ;
+      eissn = 1477-4585  ;
+      issnl = 0002-7189
+    >
+
+      attr[journal_id] = 350
+
+        au < released ; 2006 ; Journal of the American Academy of Religion Volume 74 [2006 ] ; 3040 >
+        au < released ; 2007 ; Journal of the American Academy of Religion Volume 75 [2007 ] ; 3394 >
+
+    }
+
+    {
+    title <
+      name = Journal of the History of Medicine and Allied Sciences ;
+      issn = 0022-5045  ;
+      eissn = 1468-4373  ;
+      issnl = 0022-5045
+    >
+
+      attr[journal_id] = 92
+
+        au < released ; 2000 ; Journal of the History of Medicine and Allied Sciences Volume 55 [2000] ; 303 >
+        au < released ; 2001 ; Journal of the History of Medicine and Allied Sciences Volume 56 [2001] ; 304 >
+        au < released ; 2002 ; Journal of the History of Medicine and Allied Sciences Volume 57 [2002] ; 305 >
+        au < released ; 2003 ; Journal of the History of Medicine and Allied Sciences Volume 58 [2003] ; 830 >
+        au < released ; 2004 ; Journal of the History of Medicine and Allied Sciences Volume 59 [2004] ; 1779 >
+        au < released ; 2005 ; Journal of the History of Medicine and Allied Sciences Volume 60 [2005] ; 2609 >
+        au < released ; 2006 ; Journal of the History of Medicine and Allied Sciences Volume 61 [2006] ; 2883 >
+        au < released ; 2007 ; Journal of the History of Medicine and Allied Sciences Volume 62 [2007] ; 3196 >
+        au < released ; 2008 ; Journal of the History of Medicine and Allied Sciences Volume 63 [2008] ; 3633 >
+        au < released ; 2009 ; Journal of the History of Medicine and Allied Sciences Volume 64 [2009] ; 4058 >
+        au < released ; 2010 ; Journal of the History of Medicine and Allied Sciences Volume 65 [2010] ; 5710 >
+        au < released ; 2011 ; Journal of the History of Medicine and Allied Sciences Volume 66 [2011] ; 6674 >
+        au < released ; 2012 ; Journal of the History of Medicine and Allied Sciences Volume 67 [2012] ; 7771 >
+        au < released ; 2013 ; Journal of the History of Medicine and Allied Sciences Volume 68 [2013] ; 8612 >
+        au < released ; 2014 ; Journal of the History of Medicine and Allied Sciences Volume 69 [2014] ; 9568 >
+        au < released ; 2015 ; Journal of the History of Medicine and Allied Sciences Volume 70 [2015] ; 10272 >
+        au < released ; 2016 ; Journal of the History of Medicine and Allied Sciences Volume 71 [2016] ; 10867 >
+        au < released ; 2017 ; Journal of the History of Medicine and Allied Sciences Volume 72 [2017] ; 12598 >
+        au < released ; 2018 ; Journal of the History of Medicine and Allied Sciences Volume 73 [2018] ; 13131 >
+        au < released ; 2019 ; Journal of the History of Medicine and Allied Sciences Volume 74 [2019] ; 13989 >
+        au < released ; 2020 ; Journal of the History of Medicine and Allied Sciences Volume 75 [2020] ; 14609 >
+        au < released ; 2021 ; Journal of the History of Medicine and Allied Sciences Volume 76 [2021] ; 15433 >
+        au < manifest ; 2022 ; Journal of the History of Medicine and Allied Sciences Volume 77 [2022] ; 17022 >
+
+    }
+
+    {
+    title <
+      name = Journal of Social History ;
+      issn = 0022-4529  ;
+      eissn = 1527-1897  ;
+      issnl = 0022-4529
+    >
+
+      attr[journal_id] = 103
+      #move from George Mason University Press
+
+        au < released ; 1999-2000 ; Journal of Social History Volume 33 [1999-2000] ; 340 >
+        au < released ; 2000-2001 ; Journal of Social History Volume 34 [2000-2001] ; 341 >
+        au < released ; 2001-2002 ; Journal of Social History Volume 35 [2001-2002] ; 342 >
+        au < released ; 2002-2003 ; Journal of Social History Volume 36 [2002-2003] ; 343 >
+        au < released ; 2003-2004 ; Journal of Social History Volume 37 [2003-2004] ; 962 >
+        au < released ; 2004-2005 ; Journal of Social History Volume 38 [2004-2005] ; 2570 >
+        au < released ; 2005-2006 ; Journal of Social History Volume 39 [2005-2006] ; 2843 >
+        au < released ; 2006-2007 ; Journal of Social History Volume 40 [2006-2007] ; 3142 >
+        au < released ; 2007 ; Journal of Social History Volume 41 [2007] ; 3491 >
+        au < released ; 2008 ; Journal of Social History Volume 42 [2008] ; 3970 >
+        au < released ; 2009 ; Journal of Social History Volume 43 [2009] ; 5659 >
+        au < released ; 2010 ; Journal of Social History Volume 44 [2010] ; 6530 >
+        au < released ; 2011 ; Journal of Social History Volume 45 [2011] ; 7702 >
+        au < released ; 2012-2013 ; Journal of Social History Volume 46 [2012-2013] ; 8461 >
+        au < released ; 2013-2014 ; Journal of Social History Volume 47 [2013-2014] ; 9303 >
+        au < released ; 2014-2015 ; Journal of Social History Volume 48 [2014-2015] ; 10162 >
+        au < released ; 2015-2016 ; Journal of Social History Volume 49 [2015-2016] ; 10782 >
+        au < released ; 2016-2017 ; Journal of Social History Volume 50 [2016-2017] ; 11426 >
+        au < released ; 2017-2018 ; Journal of Social History Volume 51 [2017-2018] ; 12894 >
+        au < released ; 2018-2019 ; Journal of Social History Volume 52 [2018-2019] ; 13658 >
+        au < released ; 2019-2020 ; Journal of Social History Volume 53 [2019-2020] ; 14553 >
+        au < released ; 2020-2021 ; Journal of Social History Volume 54 [2020-2021] ; 15435 >
+        au < manifest ; 2021-2022 ; Journal of Social History Volume 55 [2021-2022] ; 16712 >
+        au < manifest ; 2022-2023 ; Journal of Social History Volume 56 [2022-2023] ; 17484 >
+
+    }
+
+    {
+    title <
+      name = Journal of the Royal Musical Association ;
+      issn = 0269-0403  ;
+      eissn = 1471-6933  ;
+      issnl = 0269-0403
+    >
+
+      attr[journal_id] = 305
+
+        au < released ; 2005 ; Journal of the Royal Musical Association Volume 130 [2005] ; 2827 >
+        au < released ; 2006 ; Journal of the Royal Musical Association Volume 131 [2006] ; 3121 >
+        au < released ; 2007 ; Journal of the Royal Musical Association Volume 132 [2007] ; 3514 >
+        au < released ; 2008 ; Journal of the Royal Musical Association Volume 133 [2008] ; 4074 >
+
+    }
+    
+    {
+    title <
+      name = MELUS ;
+      #name = MELUS: Multi-Ethnic Literature of the U.S. ;
+      issn = 0163-755X  ;
+      eissn = 1946-3170  ;
+      issnl = 0163-755X
+
+    >
+
+      attr[journal_id] = 458
+      #move from Society for the Study of the Multi-Ethnic Literature of the United States
+
+        au < released ; 2009 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 34 [2009] ; 4313 >
+        au < released ; 2010 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 35 [2010] ; 5919 >
+        au < released ; 2011 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 36 [2011] ; 6952 >
+        au < released ; 2012 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 37 [2012] ; 8146 >
+        au < released ; 2013 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 38 [2013] ; 8913 >
+        au < released ; 2014 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 39 [2014] ; 9774 >
+        au < released ; 2015 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 40 [2015] ; 10548 >
+        au < released ; 2016 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 41 [2016] ; 11049 >
+        au < released ; 2017 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 42 [2017] ; 12617 >
+        au < released ; 2018 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 43 [2018] ; 13260 >
+        au < released ; 2019 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 44 [2019] ; 13982 >
+        au < released ; 2020 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 45 [2020] ; 15080 >
+        au < released ; 2021 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 46 [2021] ; 16071 >
+        au < manifest ; 2022 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 47 [2022] ; 17336 >
+
+    }
+
+    {
+    title <
+      name = Modern Judaism ;
+      issn = 0276-1114  ;
+      eissn = 1086-3273  ;
+      issnl = 0276-1114
+    >
+
+      attr[journal_id] = 127
+
+        au < released ; 1996 ; Modern Judaism Volume 16 [1996] ; 428 >
+        au < released ; 1997 ; Modern Judaism Volume 17 [1997] ; 429 >
+        au < released ; 1998 ; Modern Judaism Volume 18 [1998] ; 430 >
+        au < released ; 1999 ; Modern Judaism Volume 19 [1999] ; 431 >
+        au < released ; 2000 ; Modern Judaism Volume 20 [2000] ; 432 >
+        au < released ; 2001 ; Modern Judaism Volume 21 [2001] ; 433 >
+        au < released ; 2002 ; Modern Judaism Volume 22 [2002] ; 434 >
+        au < released ; 2003 ; Modern Judaism Volume 23 [2003] ; 828 >
+        au < released ; 2004 ; Modern Judaism Volume 24 [2004] ; 2425 >
+        au < released ; 2005 ; Modern Judaism Volume 25 [2005] ; 2662 >
+        au < released ; 2006 ; Modern Judaism Volume 26 [2006] ; 2924 >
+        au < released ; 2007 ; Modern Judaism Volume 27 [2007] ; 3278 >
+        au < released ; 2008 ; Modern Judaism Volume 28 [2008] ; 3638 >
+        au < released ; 2009 ; Modern Judaism Volume 29 [2009] ; 4352 >
+        au < released ; 2010 ; Modern Judaism Volume 30 [2010] ; 5846 >
+        au < released ; 2011 ; Modern Judaism Volume 31 [2011] ; 7323 >
+        au < released ; 2012 ; Modern Judaism Volume 32 [2012] ; 8191 >
+        au < released ; 2013 ; Modern Judaism Volume 33 [2013] ; 8821 >
+        au < released ; 2014 ; Modern Judaism Volume 34 [2014] ; 9625 >
+        au < released ; 2015 ; Modern Judaism Volume 35 [2015] ; 10322 >
+        au < released ; 2016 ; Modern Judaism Volume 36 [2016] ; 10972 >
+        au < released ; 2017 ; Modern Judaism Volume 37 [2017] ; 12406 >
+        au < released ; 2018 ; Modern Judaism Volume 38 [2018] ; 13179 >
+        au < released ; 2019 ; Modern Judaism Volume 39 [2019] ; 13938 >
+        au < released ; 2020 ; Modern Judaism Volume 40 [2020] ; 14760 >
+        au < manifest ; 2022 ; Modern Judaism Volume 42 [2022] ; 17023 >
+        au < released ; 2021 ; Modern Judaism Volume 41 [2021] ; 15634 >
+
+    }
+
+    {
+    title <
+      name = Music and Letters ;
+      issn = 0027-4224  ;
+      eissn = 1477-4631  ;
+      issnl = 0027-4224
+    >
+
+      attr[journal_id] = 266
+
+        au < released ; 2004 ; Music and Letters Volume 85 [2004] ; 2673 >
+        au < released ; 2005 ; Music and Letters Volume 86 [2005] ; 2758 >
+        au < released ; 2006 ; Music and Letters Volume 87 [2006] ; 2945 >
+        au < released ; 2007 ; Music and Letters Volume 88 [2007] ; 3333 >
+        au < released ; 2008 ; Music and Letters Volume 89 [2008] ; 3683 >
+        au < released ; 2009 ; Music and Letters Volume 90 [2009] ; 4231 >
+        au < released ; 2010 ; Music and Letters Volume 91 [2010] ; 6404 >
+        au < released ; 2011 ; Music and Letters Volume 92 [2011] ; 7254 >
+        au < released ; 2012 ; Music and Letters Volume 93 [2012] ; 8157 >
+        au < released ; 2013 ; Music and Letters Volume 94 [2013] ; 9124 >
+        au < released ; 2014 ; Music and Letters Volume 95 [2014] ; 9975 >
+        au < released ; 2015 ; Music and Letters Volume 96 [2015] ; 10549 >
+        au < released ; 2016 ; Music and Letters Volume 97 [2016] ; 11203 >
+        au < released ; 2017 ; Music and Letters Volume 98 [2017] ; 12680 >
+        au < released ; 2018 ; Music and Letters Volume 99 [2018] ; 13535 >
+        au < released ; 2019 ; Music and Letters Volume 100 [2019] ; 14350 >
+        au < released ; 2020 ; Music and Letters Volume 101 [2020] ; 15061 >
+        au < released ; 2021 ; Music and Letters Volume 102 [2021] ; 16102 >
+        au < manifest ; 2022 ; Music and Letters Volume 103 [2022] ; 17315 >
+
+    }
+
+    {
+    title <
+      name = Past & Present ;
+      issn = 0031-2746  ;
+      eissn = 1477-464X  ;
+      issnl = 0031-2746
+    >
+
+      attr[journal_id] = 306
+
+        au < released ; 2005 ; Past & Present Number 188 [August 2005] ; 2857 >
+        au < released ; 2005 ; Past & Present Number 189 [November 2005] ; 2864 >
+        au < released ; 2006 ; Past & Present Number 190 [February 2006] ; 2972 >
+        au < released ; 2006 ; Past & Present Number 191 [May 2006] ; 3112 >
+        au < released ; 2006 ; Past & Present Number 192 [August 2006] ; 3178 >
+        au < released ; 2006 ; Past & Present Number 193 [November 2006] ; 3285 >
+        au < released ; 2006 ; Past & Present 2006 Supplement ; 3185 >
+        au < released ; 2007 ; Past & Present Number 194 [February 2007] ; 3464 >
+        au < released ; 2007 ; Past & Present Number 195 [May 2007] ; 3579 >
+        au < released ; 2007 ; Past & Present Number 196 [August 2007] ; 3595 >
+        au < released ; 2007 ; Past & Present Number 197 [November 2007] ; 3596 >
+        au < released ; 2007 ; Past & Present 2007 Supplement ; 3640 >
+
+    }
+
+    {
+    title <
+      name = Social Forces ;
+      issn = 0037-7732  ;
+      eissn = 1534-7605  ;
+      issnl = 0037-7732
+
+    >
+
+      attr[journal_id] = 187
+      #move from University of North Carolina Press
+
+        au < released ; 2000-2001 ; Social Forces Volume 79 [2000-2001] ; 640 >
+        au < released ; 2001-2002 ; Social Forces Volume 80 [2001-2002] ; 641 >
+        au < released ; 2002-2003 ; Social Forces Volume 81 [2002-2003] ; 735 >
+        au < released ; 2003-2004 ; Social Forces Volume 82 [2003-2004] ; 971 >
+        au < released ; 2004-2005 ; Social Forces Volume 83 [2004-2005] ; 2593 >
+        au < released ; 2005-2006 ; Social Forces Volume 84 [2005-2006] ; 2865 >
+        au < released ; 2006-2007 ; Social Forces Volume 85 [2006-2007] ; 3147 >
+        au < released ; 2007-2008 ; Social Forces Volume 86 [2007-2008] ; 3469 >
+        au < released ; 2008-2009 ; Social Forces Volume 87 [2008-2009] ; 4065 >
+        au < released ; 2009-2010 ; Social Forces Volume 88 [2009-2010] ; 5689 >
+        au < released ; 2010-2011 ; Social Forces Volume 89 [2010-2011] ; 6984 >
+        au < released ; 2011-2012 ; Social Forces Volume 90 [2011-2012] ; 7887 >
+        au < released ; 2012-2013 ; Social Forces Volume 91 [2012-2013] ; 8444 >
+        au < released ; 2013-2014 ; Social Forces Volume 92 [2013-2014] ; 9276 >
+        au < released ; 2014-2015 ; Social Forces Volume 93 [2014-2015] ; 10170 >
+        au < released ; 2015-2016 ; Social Forces Volume 94 [2015-2016] ; 10747 >
+        au < released ; 2016-2017 ; Social Forces Volume 95 [2016-2017] ; 12121 >
+        au < released ; 2017-2018 ; Social Forces Volume 96 [2017-2018] ; 12812 >
+        au < released ; 2018-2019 ; Social Forces Volume 97 [2018-2019] ; 13666 >
+        au < released ; 2019-2020 ; Social Forces Volume 98 [2019-2020] ; 14674 >
+        au < released ; 2020-2021 ; Social Forces Volume 99 [2020-2021] ; 15243 >
+        au < manifest ; 2021-2022 ; Social Forces Volume 100 [2021-2022] ; 16110 >
+        au < manifest ; 2022-2023 ; Social Forces Volume 101 [2022-2023] ; 17482 >
+
+    }
+
+    {
+    title <
+      name = Social Politics: International Studies in Gender, State and Society ;
+      issn = 1072-4745  ;
+      eissn = 1468-2893  ;
+      issnl = 1072-4745
+    >
+
+      attr[journal_id] = 234
+
+        au < released ; 2003 ; Social Politics: International Studies in Gender, State and Society Volume 10 [2003] ; 942 >
+        au < released ; 2004 ; Social Politics: International Studies in Gender, State and Society Volume 11 [2004] ; 2518 >
+        au < released ; 2005 ; Social Politics: International Studies in Gender, State and Society Volume 12 [2005] ; 2720 >
+        au < released ; 2006 ; Social Politics: International Studies in Gender, State and Society Volume 13 [2006] ; 2995 >
+        au < released ; 2007 ; Social Politics: International Studies in Gender, State and Society Volume 14 [2007] ; 3391 >
+        au < released ; 2008 ; Social Politics: International Studies in Gender, State and Society Volume 15 [2008] ; 3748 >
+        au < released ; 2009 ; Social Politics: International Studies in Gender, State and Society Volume 16 [2009] ; 4233 >
+        au < released ; 2010 ; Social Politics: International Studies in Gender, State and Society Volume 17 [2010] ; 5940 >
+        au < released ; 2011 ; Social Politics: International Studies in Gender, State and Society Volume 18 [2011] ; 7004 >
+        au < released ; 2012 ; Social Politics: International Studies in Gender, State and Society Volume 19 [2012] ; 8145 >
+        au < released ; 2013 ; Social Politics: International Studies in Gender, State and Society Volume 20 [2013] ; 8836 >
+        au < released ; 2014 ; Social Politics: International Studies in Gender, State and Society Volume 21 [2014] ; 9824 >
+        au < released ; 2015 ; Social Politics: International Studies in Gender, State and Society Volume 22 [2015] ; 10481 >
+        au < released ; 2016 ; Social Politics: International Studies in Gender, State and Society Volume 23 [2016] ; 11187 >
+        au < released ; 2017 ; Social Politics: International Studies in Gender, State and Society Volume 24 [2017] ; 12601 >
+        au < released ; 2018 ; Social Politics: International Studies in Gender, State and Society Volume 25 [2018] ; 13350 >
+        au < released ; 2019 ; Social Politics: International Studies in Gender, State and Society Volume 26 [2019] ; 14065 >
+        au < released ; 2020 ; Social Politics: International Studies in Gender, State and Society Volume 27 [2020] ; 15062 >
+        au < released ; 2021 ; Social Politics: International Studies in Gender, State and Society Volume 28 [2021] ; 15899 >
+        au < manifest ; 2022 ; Social Politics: International Studies in Gender, State and Society Volume 29 [2022] ; 17148 >
+
+    }
+
+    {
+    title <
+      name = The Cambridge Quarterly ;
+      issn = 0008-199X  ;
+      eissn = 1471-6836  ;
+      issnl = 0008-199X
+    >
+
+      attr[journal_id] = 314
+
+        au < released ; 2006 ; The Cambridge Quarterly Volume 35 [2006] ; 3174 >
+        au < released ; 2007 ; The Cambridge Quarterly Volume 36 [2007] ; 3304 >
+        au < released ; 2008 ; The Cambridge Quarterly Volume 37 [2008] ; 3696 >
+        au < released ; 2009 ; The Cambridge Quarterly Volume 38 [2009] ; 4177 >
+        au < released ; 2010 ; The Cambridge Quarterly Volume 39 [2010] ; 6040 >
+        au < released ; 2011 ; The Cambridge Quarterly Volume 40 [2011] ; 7080 >
+        au < released ; 2012 ; The Cambridge Quarterly Volume 41 [2012] ; 8182 >
+        au < released ; 2013 ; The Cambridge Quarterly Volume 42 [2013] ; 8857 >
+        au < released ; 2014 ; The Cambridge Quarterly Volume 43 [2014] ; 9814 >
+        au < released ; 2015 ; The Cambridge Quarterly Volume 44 [2015] ; 10485 >
+        au < released ; 2016 ; The Cambridge Quarterly Volume 45 [2016] ; 11100 >
+        au < released ; 2017 ; The Cambridge Quarterly Volume 46 [2017] ; 12746 >
+        au < released ; 2018 ; The Cambridge Quarterly Volume 47 [2018] ; 13349 >
+        au < released ; 2019 ; The Cambridge Quarterly Volume 48 [2019] ; 14066 >
+        au < released ; 2020 ; The Cambridge Quarterly Volume 49 [2020] ; 15059 >
+        au < released ; 2021 ; The Cambridge Quarterly Volume 50 [2021] ; 16070 >
+        au < manifest ; 2022 ; The Cambridge Quarterly Volume 51 [2022] ; 17312 >
+
+    }
+
+    {
+    title <
+      name = The Library: The Transactions of the Bibliographical Society ;
+      issn = 0024-2160  ;
+      eissn = 1744-8581  ;
+      issnl = 0024-2160
+    >
+
+      attr[journal_id] = 345
+
+        au < released ; 2006 ; The Library: The Transactions of the Bibliographical Society Volume 7 [2006] ; 3134 >
+        au < released ; 2007 ; The Library: The Transactions of the Bibliographical Society Volume 8 [2007] ; 3314 >
+        au < released ; 2008 ; The Library: The Transactions of the Bibliographical Society Volume 9 [2008] ; 3857 >
+        au < released ; 2009 ; The Library: The Transactions of the Bibliographical Society Volume 10 [2009] ; 4264 >
+        au < released ; 2010 ; The Library: The Transactions of the Bibliographical Society Volume 11 [2010] ; 6117 >
+        au < released ; 2011 ; The Library: The Transactions of the Bibliographical Society Volume 12 [2011] ; 7044 >
+        au < released ; 2012 ; The Library: The Transactions of the Bibliographical Society Volume 13 [2012] ; 8139 >
+        au < released ; 2013 ; The Library: The Transactions of the Bibliographical Society Volume 14 [2013] ; 8833 >
+        au < released ; 2014 ; The Library: The Transactions of the Bibliographical Society Volume 15 [2014] ; 9826 >
+        au < released ; 2015 ; The Library: The Transactions of the Bibliographical Society Volume 16 [2015] ; 10500 >
+        au < released ; 2016 ; The Library: The Transactions of the Bibliographical Society Volume 17 [2016] ; 11082 >
+        au < released ; 2017 ; The Library: The Transactions of the Bibliographical Society Volume 18 [2017] ; 12482 >
+        au < released ; 2018 ; The Library: The Transactions of the Bibliographical Society Volume 19 [2018] ; 13261 >
+        au < released ; 2019 ; The Library: The Transactions of the Bibliographical Society Volume 20 [2019] ; 13971 >
+        au < released ; 2020 ; The Library: The Transactions of the Bibliographical Society Volume 21 [2020] ; 14791 >
+        au < manifest ; 2022 ; The Library: The Transactions of the Bibliographical Society Volume 23 [2022] ; 16996 >
+        au < manifest ; 2021 ; The Library: The Transactions of the Bibliographical Society Volume 22 [2021] ; 15573 >
+
+    }
+
+    {
+    title <
+      name = The Opera Quarterly ;
+      issn = 0736-0053  ;
+      eissn = 1476-2870  ;
+      issnl = 0736-0053
+    >
+
+      attr[journal_id] = 148
+
+        au < released ; 2002 ; The Opera Quarterly Volume 18 [2002] ; 496 >
+        au < released ; 2003 ; The Opera Quarterly Volume 19 [2003] ; 815 >
+        au < released ; 2004 ; The Opera Quarterly Volume 20 [2004] ; 2419 >
+        au < released ; 2005 ; The Opera Quarterly Volume 21 [2005] ; 2782 >
+        au < released ; 2006 ; The Opera Quarterly Volume 22 [2006] ; 3290 >
+        au < released ; 2007 ; The Opera Quarterly Volume 23 [2007] ; 4001 >
+        au < released ; 2008 ; The Opera Quarterly Volume 24 [2008] ; 5667 >
+        au < released ; 2009 ; The Opera Quarterly Volume 25 [2009] ; 5794 >
+        au < released ; 2010 ; The Opera Quarterly Volume 26 [2010] ; 6393 >
+        au < released ; 2011 ; The Opera Quarterly Volume 27 [2011] ; 7651 >
+        au < released ; 2012 ; The Opera Quarterly Volume 28 [2012] ; 8514 >
+        au < released ; 2013 ; The Opera Quarterly Volume 29 [2013] ; 9550 >
+        au < released ; 2014-2015 ; The Opera Quarterly Volume 30 [2014-2015] ; 10198 >
+        au < released ; 2015 ; The Opera Quarterly Volume 31 [2015] ; 10670 >
+        au < released ; 2016 ; The Opera Quarterly Volume 32 [2016] ; 12747 >
+        au < released ; 2017 ; The Opera Quarterly Volume 33 [2017] ; 13212 >
+        au < released ; 2018 ; The Opera Quarterly Volume 34 [2018] ; 13926 >
+        au < released ; 2019 ; The Opera Quarterly Volume 35 [2019] ; 14554 >
+        au < released ; 2020 ; The Opera Quarterly Volume 36 [2020] ; 17024 >
+
+    }
+
+    {
+    title <
+      name = Oral History Review ;
+      issn = 0094-0798  ;
+      eissn = 1533-8592  ;
+      issnl = 0094-0798
+    >
+
+      attr[journal_id] = 389
+
+        au < released ; 2008 ; Oral History Review Volume 35 [2008] ; 3851 >
+        au < released ; 2009 ; Oral History Review Volume 36 [2009] ; 4401 >
+        au < released ; 2010 ; Oral History Review Volume 37 [2010] ; 6636 >
+        au < released ; 2011 ; Oral History Review Volume 38 [2011] ; 7572 >
+        au < released ; 2012 ; Oral History Review Volume 39 [2012] ; 8199 >
+        au < released ; 2013 ; Oral History Review Volume 40 [2013] ; 9072 >
+        au < released ; 2014 ; Oral History Review Volume 41 [2014] ; 10079 >
+        au < released ; 2015 ; Oral History Review Volume 42 [2015] ; 10601 >
+        au < released ; 2016 ; Oral History Review Volume 43 [2016] ; 11172 >
+        au < released ; 2017 ; Oral History Review Volume 44 [2017] ; 12678 >
+        au < released ; 2018 ; Oral History Review Volume 45 [2018] ; 13573 >
+        au < released ; 2019 ; Oral History Review Volume 46 [2019] ; 14183 >
+
+    }
+
+}

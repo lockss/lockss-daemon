@@ -1,0 +1,1124 @@
+{
+  publisher <
+    name = Indiana University Press
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:3
+
+    {
+    title <
+      name = Africa Today ;
+      issn = 0001-9887  ;
+      eissn = 1527-1978 
+    >
+
+      attr[journal_id] = 19
+
+        au < released ; 1999 ; Africa Today Volume 46 [1999] ; 67 >
+        au < released ; 2000 ; Africa Today Volume 47 [2000] ; 68 >
+        au < released ; 2001 ; Africa Today Volume 48 [2001] ; 69 >
+        au < released ; 2002 ; Africa Today Volume 49 [2002] ; 70 >
+        au < released ; 2003-2004 ; Africa Today Volume 50 [2003-2004] ; 966 >
+        au < released ; 2004-2005 ; Africa Today Volume 51 [2004-2005] ; 2581 >
+        au < released ; 2005-2006 ; Africa Today Volume 52 [2005-2006] ; 2845 >
+        au < released ; 2006-2007 ; Africa Today Volume 53 [2006-2007] ; 3144 >
+        au < released ; 2007-2008 ; Africa Today Volume 54 [2007-2008] ; 3492 >
+        au < released ; 2008-2009 ; Africa Today Volume 55 [2008-2009] ; 4008 >
+        au < released ; 2009-2010 ; Africa Today Volume 56 [2009-2010] ; 5045 >
+        au < released ; 2010-2011 ; Africa Today Volume 57 [2010-2011] ; 6616 >
+        au < released ; 2011-2012 ; Africa Today Volume 58 [2011-2012] ; 7677 >
+        au < released ; 2012-2013 ; Africa Today Volume 59 [2012-2013] ; 8464 >
+        au < released ; 2013-2014 ; Africa Today Volume 60 [2013-2014] ; 9335 >
+        au < released ; 2014-2015 ; Africa Today Volume 61 [2014-2015] ; 10205 >
+        au < released ; 2015-2016 ; Africa Today Volume 62 [2015-2016] ; 10776 >
+        au < released ; 2016-2017 ; Africa Today Volume 63 [2016-2017] ; 11403 >
+        au < released ; 2017-2018 ; Africa Today Volume 64 [2017-2018] ; 13019 >
+        au < released ; 2018-2019 ; Africa Today Volume 65 [2018-2019] ; 13900 >
+        au < released ; 2019 ; Africa Today Volume 66 [2019] ; 14516 >
+        au < released ; 2020-2021 ; Africa Today Volume 67 [2020-2021] ; 15296 >
+        au < released ; 2021 ; Africa Today Volume 68 [2021] ; 16532 >
+        au < manifest ; 2022-2023 ; Africa Today Volume 69 [2022-2023] ; 17489 >
+
+    }
+
+    {
+    title <
+      name = African Conflict & Peacebuilding Review ;
+      issn = 2156-695X  ;
+      eissn = 2156-7263 
+    >
+
+      attr[journal_id] = 509
+
+        au < released ; 2011 ; African Conflict & Peacebuilding Review Volume 1 [2011] ; 7020 >
+        au < released ; 2012 ; African Conflict & Peacebuilding Review Volume 2 [2012] ; 8230 >
+        au < released ; 2013 ; African Conflict & Peacebuilding Review Volume 3 [2013] ; 8929 >
+        au < released ; 2014 ; African Conflict & Peacebuilding Review Volume 4 [2014] ; 9817 >
+        au < released ; 2015 ; African Conflict & Peacebuilding Review Volume 5 [2015] ; 10627 >
+        au < released ; 2016 ; African Conflict & Peacebuilding Review Volume 6 [2016] ; 11209 >
+        au < released ; 2017 ; African Conflict & Peacebuilding Review Volume 7 [2017] ; 12831 >
+        au < released ; 2018 ; African Conflict & Peacebuilding Review Volume 8 [2018] ; 13518 >
+        au < released ; 2019 ; African Conflict & Peacebuilding Review Volume 9 [2019] ; 14230 >
+        au < released ; 2020 ; African Conflict & Peacebuilding Review Volume 10 [2020] ; 14971 >
+        au < released ; 2021 ; African Conflict & Peacebuilding Review Volume 11 [2021] ; 15869 >
+        au < manifest ; 2022 ; African Conflict & Peacebuilding Review Volume 12 [2022] ; 17272 >
+
+    }
+
+    {
+    title <
+      name = Aleph: Historical Studies in Science and Judaism ;
+      issn = 1565-1525  ;
+      eissn = 1565-5423  ;
+      issnl = 1565-1525
+
+    >
+
+      attr[journal_id] = 283
+
+        au < released ; 2001 ; Aleph: Historical Studies in Science and Judaism Volume 1 [2001] ; 6671 >
+        au < released ; 2002 ; Aleph: Historical Studies in Science and Judaism Volume 2 [2002] ; 6120 >
+        au < released ; 2003 ; Aleph: Historical Studies in Science and Judaism Volume 3 [2003] ; 6119 >
+        au < released ; 2004 ; Aleph: Historical Studies in Science and Judaism Volume 4 [2004] ; 2603 >
+        au < released ; 2005 ; Aleph: Historical Studies in Science and Judaism Volume 5 [2005] ; 2848 >
+        au < released ; 2006 ; Aleph: Historical Studies in Science and Judaism Volume 6 [2006] ; 3146 >
+        au < released ; 2007 ; Aleph: Historical Studies in Science and Judaism Volume 7 [2007] ; 3463 >
+        au < released ; 2008 ; Aleph: Historical Studies in Science and Judaism Volume 8 [2008] ; 3958 >
+        au < released ; 2009 ; Aleph: Historical Studies in Science and Judaism Volume 9 [2009] ; 4212 >
+        au < released ; 2010 ; Aleph: Historical Studies in Science and Judaism Volume 10 [2010] ; 5916 >
+        au < released ; 2011 ; Aleph: Historical Studies in Science and Judaism Volume 11 [2011] ; 7006 >
+        au < released ; 2012 ; Aleph: Historical Studies in Science and Judaism Volume 12 [2012] ; 8238 >
+        au < released ; 2013 ; Aleph: Historical Studies in Science and Judaism Volume 13 [2013] ; 8939 >
+        au < released ; 2014 ; Aleph: Historical Studies in Science and Judaism Volume 14 [2014] ; 9921 >
+        au < released ; 2015 ; Aleph: Historical Studies in Science and Judaism Volume 15 [2015] ; 10452 >
+        au < released ; 2016 ; Aleph: Historical Studies in Science and Judaism Volume 16 [2016] ; 11078 >
+        au < released ; 2017 ; Aleph: Historical Studies in Science and Judaism Volume 17 [2017] ; 12505 >
+        au < released ; 2018 ; Aleph: Historical Studies in Science and Judaism Volume 18 [2018] ; 13485 >
+        au < released ; 2019 ; Aleph: Historical Studies in Science and Judaism Volume 19 [2019] ; 14203 >
+        au < released ; 2020 ; Aleph: Historical Studies in Science and Judaism Volume 20 [2020] ; 15306 >
+        au < released ; 2021 ; Aleph: Historical Studies in Science and Judaism Volume 21 [2021] ; 16086 >
+
+    }
+
+    {
+    title <
+      name = American Religion ;
+      issn = 2643-9255 ;
+      eissn = 2643-9247
+
+    >
+
+      attr[journal_id] = 825
+
+      au < released ; 2019-2020 ; American Religion Volume 1 [2019-2020] ; 16131 >
+      au < released ; 2020-2021 ; American Religion Volume 2 [2020-2021] ; 16132 >
+      au < manifest ; 2021-2022 ; American Religion Volume 3 [2021-2022] ; 16809 >
+      au < manifest ; 2022-2023 ; American Religion Volume 4 [2022-2023] ; 17381 >
+
+    }
+
+    {
+    title <
+      name = Antisemitism Studies ;
+      issn = 2474-1809 ;
+      eissn = 2474-1817
+    >
+
+      attr[journal_id] = 747
+
+        au < released ; 2017 ; Antisemitism Studies 1 [2017] ; 13973 >
+        au < released ; 2018 ; Antisemitism Studies 2 [2018] ; 13974 >
+        au < released ; 2019 ; Antisemitism Studies Volume 3 [2019] ; 14090 >
+        au < released ; 2020 ; Antisemitism Studies Volume 4 [2020] ; 14863 >
+        au < released ; 2021 ; Antisemitism Studies Volume 5 [2021] ; 15711 >
+        au < manifest ; 2022 ; Antisemitism Studies Volume 6 [2022] ; 17110 >
+
+    }
+
+    {
+    title <
+      name = Black Camera ;
+      issn = 1536-3155  ;
+      eissn = 1947-4237 
+    >
+
+      attr[journal_id] = 468
+
+        au < released ; 2009-2010 ; Black Camera Volume 1 [2009-2010 (The New Series)] ; 5680 >
+        au < released ; 2010-2011 ; Black Camera Volume 2 [2010-2011 (The New Series)] ; 6566 >
+        au < released ; 2011-2012 ; Black Camera Volume 3 [2011-2012 (The New Series)] ; 7652 >
+        au < released ; 2012-2013 ; Black Camera Volume 4 [2012-2013 (The New Series)] ; 8496 >
+        au < released ; 2013-2014 ; Black Camera Volume 5 [2013-2014 (The New Series)] ; 9439 >
+        au < released ; 2014-2015 ; Black Camera Volume 6 [2014-2015 (The New Series)] ; 10268 >
+        au < released ; 2015-2016 ; Black Camera Volume 7 [2015-2016 (The New Series)] ; 10896 >
+        au < released ; 2016-2017 ; Black Camera Volume 8 [2016-2017 (The New Series)] ; 12171 >
+        au < released ; 2017-2018 ; Black Camera Volume 9 [2017-2018 (The New Series)] ; 13111 >
+        au < released ; 2018-2019 ; Black Camera Volume 10 [2018-2019 (The New Series)] ; 13735 >
+
+    }
+    
+    {
+    title <
+      name = Chiricú Journal: Latina/o Literatures, Arts, and Cultures ;
+      issn = 0277-7223 ;
+      eissn = 2472-4521 ;
+      issnl = 0277-7223
+
+    >
+
+      attr[journal_id] = 713
+
+        au < released ; 2016-2017 ; Chiricú Journal: Latina/o Literatures, Arts, and Cultures Volume 1 [2016-2017] ; 12134 >
+        au < released ; 2017-2018 ; Chiricú Journal: Latina/o Literatures, Arts, and Cultures Volume 2 [2017-2018] ; 13112 >
+        au < released ; 2018-2019 ; Chiricú Journal: Latina/o Literatures, Arts, and Cultures Volume 3 [2018-2019] ; 13811 >
+        au < released ; 2019-2020 ; Chiricú Journal: Latina/o Literatures, Arts, and Cultures Volume 4 [2019-2020] ; 14548 >
+        au < released ; 2020 ; Chiricú Journal: Latina/o Literatures, Arts, and Cultures Volume 5 [2020] ; 15380 >
+        au < released ; 2021 ; ChiricÃº Journal: Latina/o Literatures, Arts, and Cultures Volume 6 [2021] ; 16986 >
+
+    }
+
+    {
+    title <
+      name = Ethics & the Environment ;
+      issn = 1085-6633  ;
+      eissn = 1535-5306  ;
+      issnl = 1085-6633
+
+    >
+
+      attr[journal_id] = 57
+
+        au < released ; 1999 ; Ethics & the Environment Volume 4 [1999] ; 5017 >
+        au < released ; 2000 ; Ethics & the Environment Volume 5 [2000] ; 5016 >
+        au < released ; 2001 ; Ethics & the Environment Volume 6 [2001] ; 205 >
+        au < released ; 2002 ; Ethics & the Environment Volume 7 [2002] ; 206 >
+        au < released ; 2003 ; Ethics & the Environment Volume 8 [2003] ; 941 >
+        au < released ; 2004 ; Ethics & the Environment Volume 9 [2004] ; 2525 >
+        au < released ; 2005 ; Ethics & the Environment Volume 10 [2005] ; 2789 >
+        au < released ; 2006 ; Ethics & the Environment Volume 11 [2006] ; 3022 >
+        au < released ; 2007 ; Ethics & the Environment Volume 12 [2007] ; 3355 >
+        au < released ; 2008 ; Ethics & the Environment Volume 13 [2008] ; 3803 >
+        au < released ; 2009 ; Ethics & the Environment Volume 14 [2009] ; 4345 >
+        au < released ; 2010 ; Ethics & the Environment Volume 15 [2010] ; 6331 >
+        au < released ; 2011 ; Ethics & the Environment Volume 16 [2011] ; 7306 >
+        au < released ; 2012 ; Ethics & the Environment Volume 17 [2012] ; 8349 >
+        au < released ; 2013 ; Ethics & the Environment Volume 18 [2013] ; 9104 >
+        au < released ; 2014 ; Ethics & the Environment Volume 19 [2014] ; 10049 >
+        au < released ; 2015 ; Ethics & the Environment Volume 20 [2015] ; 10671 >
+        au < released ; 2016 ; Ethics & the Environment Volume 21 [2016] ; 11273 >
+        au < released ; 2017 ; Ethics & the Environment Volume 22 [2017] ; 12686 >
+        au < released ; 2018 ; Ethics & the Environment Volume 23 [2018] ; 13540 >
+        au < released ; 2019 ; Ethics & the Environment Volume 24 [2019] ; 14208 >
+        au < released ; 2020 ; Ethics & the Environment Volume 25 [2020] ; 14952 >
+        au < released ; 2021 ; Ethics & the Environment Volume 26 [2021] ; 15881 >
+        au < manifest ; 2022 ; Ethics & the Environment Volume 27 [2022] ; 17288 >
+
+    }
+
+    {
+    title <
+      name = Film History: An International Journal ;
+      issn = 0892-2160  ;
+      eissn = 1553-3905  ;
+      issnl = 0892-2160
+
+    >
+
+      attr[journal_id] = 285
+
+        au < released ; 2005 ; Film History: An International Journal Volume 17 [2005] ; 2784 >
+        au < released ; 2006 ; Film History: An International Journal Volume 18 [2006] ; 2920 >
+        au < released ; 2007 ; Film History: An International Journal Volume 19 [2007] ; 3301 >
+        au < released ; 2008 ; Film History: An International Journal Volume 20 [2008] ; 3779 >
+        au < released ; 2009 ; Film History: An International Journal Volume 21 [2009] ; 4377 >
+        au < released ; 2010 ; Film History: An International Journal Volume 22 [2010] ; 5917 >
+        au < released ; 2011 ; Film History: An International Journal Volume 23 [2011] ; 7019 >
+        au < released ; 2012 ; Film History: An International Journal Volume 24 [2012] ; 8101 >
+        au < released ; 2013 ; Film History: An International Journal Volume 25 [2013] ; 8921 >
+        au < released ; 2014 ; Film History: An International Journal Volume 26 [2014] ; 9861 >
+        au < released ; 2015 ; Film History: An International Journal Volume 27 [2015] ; 10595 >
+        au < released ; 2016 ; Film History: An International Journal Volume 28 [2016] ; 11244 >
+        au < released ; 2017 ; Film History: An International Journal Volume 29 [2017] ; 12716 >
+        au < released ; 2018 ; Film History: An International Journal Volume 30 [2018] ; 13565 >
+        au < released ; 2019 ; Film History: An International Journal Volume 31 [2019] ; 14233 >
+        au < released ; 2020 ; Film History: An International Journal Volume 32 [2020] ; 15066 >
+        au < released ; 2021 ; Film History: An International Journal Volume 33 [2021] ; 15791 >
+        au < manifest ; 2022 ; Film History: An International Journal Volume 34 [2022] ; 17205 >
+
+    }
+
+    {
+    title <
+      name = Historical Performance ;
+      issn = 2574-4151 ;
+      eissn = 2574-4178
+    >
+
+      attr[journal_id] = 829
+
+      au < manifest ; 2018 ; Historical Performance Volume 1 [2018] ; 16182 >
+      au < manifest ; 2019 ; Historical Performance Volume 2 [2019] ; 16183 >
+
+    }
+
+    {
+    title <
+      name = History & Memory ;
+      issn = 0935-560X  ;
+      eissn = 1527-1994  ;
+      issnl = 0935-560X
+
+    >
+
+      attr[journal_id] = 71
+
+        au < released ; 1998 ; History & Memory Volume 10 [1998] ; 6123 >
+        au < released ; 1999 ; History & Memory Volume 11 [1999] ; 241 >
+        au < released ; 2000 ; History & Memory Volume 12 [2000] ; 242 >
+        au < released ; 2001 ; History & Memory Volume 13 [2001] ; 243 >
+        au < released ; 2002 ; History & Memory Volume 14 [2002] ; 733 >
+        au < released ; 2003 ; History & Memory Volume 15 [2003] ; 950 >
+        au < released ; 2004 ; History & Memory Volume 16 [2004] ; 2545 >
+        au < released ; 2005 ; History & Memory Volume 17 [2005] ; 2830 >
+        au < released ; 2006 ; History & Memory Volume 18 [2006] ; 3036 >
+        au < released ; 2007 ; History & Memory Volume 19 [2007] ; 3347 >
+        au < released ; 2008 ; History & Memory Volume 20 [2008] ; 3719 >
+        au < released ; 2009 ; History & Memory Volume 21 [2009] ; 4246 >
+        au < released ; 2010 ; History & Memory Volume 22 [2010] ; 5922 >
+        au < released ; 2011 ; History & Memory Volume 23 [2011] ; 7005 >
+        au < released ; 2012 ; History & Memory Volume 24 [2012] ; 8107 >
+        au < released ; 2013 ; History & Memory Volume 25 [2013] ; 8841 >
+        au < released ; 2014 ; History & Memory Volume 26 [2014] ; 9785 >
+        au < released ; 2015 ; History & Memory Volume 27 [2015] ; 10493 >
+        au < released ; 2016 ; History & Memory Volume 28 [2016] ; 11054 >
+        au < released ; 2017 ; History & Memory Volume 29 [2017] ; 12511 >
+        au < released ; 2018 ; History & Memory Volume 30 [2018] ; 13333 >
+        au < released ; 2019 ; History & Memory Volume 31 [2019] ; 14028 >
+        au < released ; 2020 ; History & Memory Volume 32 [2020] ; 14819 >
+        au < manifest ; 2022 ; History & Memory Volume 34 [2022] ; 17016 >
+        au < manifest ; 2021 ; History & Memory Volume 33 [2021] ; 15658 >
+
+    }
+    
+    {
+    title <
+      name = Hypatia ;
+      issn = 0887-5367  ;
+      eissn = 1527-2001  ;
+      issnl = 0887-5367
+
+    >
+
+      attr[journal_id] = 80
+
+        au < released ; 1999 ; Hypatia Volume 14 [1999] ; 272 >
+        au < released ; 2000 ; Hypatia Volume 15 [2000] ; 273 >
+        au < released ; 2001 ; Hypatia Volume 16 [2001] ; 274 >
+        au < released ; 2002 ; Hypatia Volume 17 [2002] ; 275 >
+        au < released ; 2003 ; Hypatia Volume 18 [2003] ; 853 >
+        au < released ; 2004 ; Hypatia Volume 19 [2004] ; 2457 >
+        au < released ; 2005 ; Hypatia Volume 20 [2005] ; 2640 >
+        au < released ; 2006 ; Hypatia Volume 21 [2006] ; 2872 >
+        au < released ; 2007 ; Hypatia Volume 22 [2007] ; 3175 >
+        au < released ; 2008 ; Hypatia Volume 23 [2008] ; 3528 >
+
+    }
+    
+    {
+    title <
+      name = Indiana Magazine of History ;
+      issn = 0019-6673 ;
+      eissn = 1942-9711
+
+    >
+
+      attr[journal_id] = 826
+
+      au < manifest ; 2022 ; Indiana Magazine of History Volume 118 [2022] ; 16964 >
+      au < manifest ; 2018 ; Indiana Magazine of History Volume 114 [2018] ; 16200 >
+      au < manifest ; 2019 ; Indiana Magazine of History Volume 115 [2019] ; 16201 >
+      au < manifest ; 2020 ; Indiana Magazine of History Volume 116 [2020] ; 16202 >
+      au < manifest ; 2021 ; Indiana Magazine of History Volume 117 [2021] ; 16203 >
+
+    }
+
+    {
+    title <
+      name = Indiana Journal of Global Legal Studies ;
+      issn = 1080-0727  ;
+      eissn = 1543-0367  ;
+      issnl = 1080-0727
+
+    >
+
+      attr[journal_id] = 236
+
+        au < released ; 2003 ; Indiana Journal of Global Legal Studies Volume 10 [2003] ; 908 >
+        au < released ; 2004 ; Indiana Journal of Global Legal Studies Volume 11 [2004] ; 2503 >
+        au < released ; 2005 ; Indiana Journal of Global Legal Studies Volume 12 [2005] ; 2762 >
+        au < released ; 2006 ; Indiana Journal of Global Legal Studies Volume 13 [2006] ; 3028 >
+        au < released ; 2007 ; Indiana Journal of Global Legal Studies Volume 14 [2007] ; 3442 >
+        au < released ; 2008 ; Indiana Journal of Global Legal Studies Volume 15 [2008] ; 4009 >
+        au < released ; 2009 ; Indiana Journal of Global Legal Studies Volume 16 [2009] ; 4169 >
+        au < released ; 2010 ; Indiana Journal of Global Legal Studies Volume 17 [2010] ; 5850 >
+        au < released ; 2011 ; Indiana Journal of Global Legal Studies Volume 18 [2011] ; 7518 >
+        au < released ; 2012 ; Indiana Journal of Global Legal Studies Volume 19 [2012] ; 8400 >
+        au < released ; 2013 ; Indiana Journal of Global Legal Studies Volume 20 [2013] ; 9288 >
+        au < released ; 2014 ; Indiana Journal of Global Legal Studies Volume 21 [2014] ; 10051 >
+        au < released ; 2015 ; Indiana Journal of Global Legal Studies Volume 22 [2015] ; 10399 >
+        au < released ; 2016 ; Indiana Journal of Global Legal Studies Volume 23 [2016] ; 11094 >
+        au < released ; 2017 ; Indiana Journal of Global Legal Studies Volume 24 [2017] ; 12618 >
+        au < released ; 2018 ; Indiana Journal of Global Legal Studies Volume 25 [2018] ; 13529 >
+        au < released ; 2019 ; Indiana Journal of Global Legal Studies Volume 26 [2019] ; 14104 >
+        au < released ; 2020 ; Indiana Journal of Global Legal Studies Volume 27 [2020] ; 15029 >
+        au < released ; 2021 ; Indiana Journal of Global Legal Studies Volume 28 [2021] ; 15672 >
+        au < manifest ; 2022 ; Indiana Journal of Global Legal Studies Volume 29 [2022] ; 17015 >
+
+    }
+
+    {
+    title <
+      name = Indiana Theory Review ;
+      issn = 0271-8022 ;
+      eissn = 2474-7777 ;
+      issnl = 0271-8022
+
+    >
+
+      attr[journal_id] = 726
+
+        au < released ; 2013 ; Indiana Theory Review Volume 31 [2013] ; 12838 >
+        au < released ; 2016 ; Indiana Theory Review Volume 32 [2016] ; 12840 >
+        au < released ; 2017 ; Indiana Theory Review Volume 33 [2017] ; 13006 >
+        au < released ; 2017 ; Indiana Theory Review Volume 34 [2017] ; 13165 >
+        au < released ; 2018 ; Indiana Theory Review Volume 35 [2018] ; 13942 >
+        au < released ; 2020 ; Indiana Theory Review Volume 36 [2020] ; 15167 >
+        au < released ; 2021 ; Indiana Theory Review Volume 37 [2021] ; 16628 >
+
+    }
+
+    {
+    title <
+      name = Israel Studies ;
+      issn = 1084-9513  ;
+      eissn = 1527-201X  ;
+      issnl = 1084-9513
+
+    >
+
+      attr[journal_id] = 85
+
+        au < released ; 1996 ; Israel Studies Volume 1 [1996] ; 2678 >
+        au < released ; 1997 ; Israel Studies Volume 2 [1997] ; 2679 >
+        au < released ; 1998 ; Israel Studies Volume 3 [1998] ; 2680 >
+        au < released ; 1999 ; Israel Studies Volume 4 [1999] ; 280 >
+        au < released ; 2000 ; Israel Studies Volume 5 [2000] ; 281 >
+        au < released ; 2001 ; Israel Studies Volume 6 [2001] ; 282 >
+        au < released ; 2002 ; Israel Studies Volume 7 [2002] ; 283 >
+        au < released ; 2003 ; Israel Studies Volume 8 [2003] ; 938 >
+        au < released ; 2004 ; Israel Studies Volume 9 [2004] ; 2530 >
+        au < released ; 2005 ; Israel Studies Volume 10 [2005] ; 2709 >
+        au < released ; 2006 ; Israel Studies Volume 11 [2006] ; 2965 >
+        au < released ; 2007 ; Israel Studies Volume 12 [2007] ; 3230 >
+        au < released ; 2008 ; Israel Studies Volume 13 [2008] ; 3627 >
+        au < released ; 2009 ; Israel Studies Volume 14 [2009] ; 4120 >
+        au < released ; 2010 ; Israel Studies Volume 15 [2010] ; 5786 >
+        au < released ; 2011 ; Israel Studies Volume 16 [2011] ; 6666 >
+        au < released ; 2012 ; Israel Studies Volume 17 [2012] ; 7810 >
+        au < released ; 2013 ; Israel Studies Volume 18 [2013] ; 8599 >
+        au < released ; 2014 ; Israel Studies Volume 19 [2014] ; 9543 >
+        au < released ; 2015 ; Israel Studies Volume 20 [2015] ; 10292 >
+        au < released ; 2016 ; Israel Studies Volume 21 [2016] ; 10844 >
+        au < released ; 2017 ; Israel Studies Volume 22 [2017] ; 12215 >
+        au < released ; 2018 ; Israel Studies Volume 23 [2018] ; 13028 >
+        au < released ; 2019 ; Israel Studies Volume 24 [2019] ; 13776 >
+        au < released ; 2020 ; Israel Studies Volume 25 [2020] ; 14525 >
+        au < released ; 2021 ; Israel Studies Volume 26 [2021] ; 15277 >
+        au < manifest ; 2022 ; Israel Studies Volume 27 [2022] ; 16791 >
+        au < manifest ; 2023 ; Israel Studies Volume 28 [2023] ; 17721 >
+
+    }
+
+    {
+    title <
+      name = Jewish Social Studies ;
+      issn = 0021-6704  ;
+      eissn = 1527-2028  ;
+      issnl = 0021-6704
+
+    >
+
+      attr[journal_id] = 105
+
+        au < released ; 1999 ; Jewish Social Studies New Series, Volume 5 [1999] ; 348 >
+        au < released ; 1999-2000 ; Jewish Social Studies New Series, Volume 6 [1999-2000] ; 349 >
+        au < released ; 2000-2001 ; Jewish Social Studies New Series, Volume 7 [2000-2001] ; 350 >
+        au < released ; 2001-2002 ; Jewish Social Studies New Series, Volume 8 [2001-2002] ; 351 >
+        au < released ; 2002-2003 ; Jewish Social Studies New Series, Volume 9 [2002-2003] ; 774 >
+        au < released ; 2003-2004 ; Jewish Social Studies New Series, Volume 10 [2003-2004] ; 1724 >
+        au < released ; 2004-2005 ; Jewish Social Studies New Series, Volume 11 [2004-2005] ; 2698 >
+        au < released ; 2005-2006 ; Jewish Social Studies New Series, Volume 12 [2005-2006] ; 3007 >
+        au < released ; 2006-2007 ; Jewish Social Studies New Series, Volume 13 [2006-2007] ; 3329 >
+        au < released ; 2007-2008 ; Jewish Social Studies New Series, Volume 14 [2007-2008] ; 3809 >
+        au < released ; 2008-2009 ; Jewish Social Studies New Series, Volume 15 [2008-2009] ; 4240 >
+        au < released ; 2009-2010 ; Jewish Social Studies New Series, Volume 16 [2009-2010] ; 6166 >
+        au < released ; 2010-2011 ; Jewish Social Studies New Series, Volume 17 [2010-2011] ; 7544 >
+        au < released ; 2011-2012 ; Jewish Social Studies New Series, Volume 18 [2011-2012] ; 8521 >
+        au < released ; 2012-2013 ; Jewish Social Studies New Series, Volume 19 [2012-2013] ; 9359 >
+        au < released ; 2013-2014 ; Jewish Social Studies New Series, Volume 20 [2013-2014] ; 10235 >
+        au < released ; 2015-2016 ; Jewish Social Studies New Series, Volume 21 [2015-2016] ; 10840 >
+        au < released ; 2016-2017 ; Jewish Social Studies New Series, Volume 22 [2016-2017] ; 12177 >
+        au < released ; 2017-2018 ; Jewish Social Studies New Series, Volume 23 [2017-2018] ; 12897 >
+        au < released ; 2018-2019 ; Jewish Social Studies New Series, Volume 24 [2018-2019] ; 13742 >
+        au < released ; 2019-2020 ; Jewish Social Studies New Series, Volume 25 [2019-2020] ; 14429 >
+
+    }
+    
+    {
+    title <
+      name = Journal of Education in Muslim Societies ;
+      issn = 2641-0044 ;
+      eissn =  2641-0052
+
+    >
+
+      attr[journal_id] = 830
+
+      au < released ; 2019-2020 ; Journal of Education in Muslim Societies Volume 1 [2019-2020] ; 16186 >
+      au < released ; 2020-2021 ; Journal of Education in Muslim Societies Volume 2 [2020-2021] ; 16187 >
+      au < manifest ; 2021-2022 ; Journal of Education in Muslim Societies Volume 3 [2021-2022] ; 16758 >
+      au < manifest ; 2022-2023 ; Journal of Education in Muslim Societies Volume 4 [2022-2023] ; 17382 >
+
+    }
+
+    {
+    title <
+      name = Journal of Feminist Studies in Religion ;
+      issn = 8755-4178  ;
+      eissn = 1553-3913  ;
+      issnl = 1553-3913
+
+    >
+
+      attr[journal_id] = 294
+
+        au < released ; 2005 ; Journal of Feminist Studies in Religion Volume 21 [2005] ; 2785 >
+        au < released ; 2006 ; Journal of Feminist Studies in Religion Volume 22 [2006] ; 3027 >
+        au < released ; 2007 ; Journal of Feminist Studies in Religion Volume 23 [2007] ; 3386 >
+        au < released ; 2008 ; Journal of Feminist Studies in Religion Volume 24 [2008] ; 3794 >
+        au < released ; 2009 ; Journal of Feminist Studies in Religion Volume 25 [2009] ; 4372 >
+        au < released ; 2010 ; Journal of Feminist Studies in Religion Volume 26 [2010] ; 6330 >
+        au < released ; 2011 ; Journal of Feminist Studies in Religion Volume 27 [2011] ; 7415 >
+        au < released ; 2012 ; Journal of Feminist Studies in Religion Volume 28 [2012] ; 8391 >
+        au < released ; 2013 ; Journal of Feminist Studies in Religion Volume 29 [2013] ; 9102 >
+        au < released ; 2014 ; Journal of Feminist Studies in Religion Volume 30 [2014] ; 10058 >
+        au < released ; 2015 ; Journal of Feminist Studies in Religion Volume 31 [2015] ; 10553 >
+        au < released ; 2016 ; Journal of Feminist Studies in Religion Volume 32 [2016] ; 11180 >
+        au < released ; 2017 ; Journal of Feminist Studies in Religion Volume 33 [2017] ; 12551 >
+        au < released ; 2018 ; Journal of Feminist Studies in Religion Volume 34 [2018] ; 13392 >
+        au < released ; 2019 ; Journal of Feminist Studies in Religion Volume 35 [2019] ; 14157 >
+        au < released ; 2020 ; Journal of Feminist Studies in Religion Volume 36 [2020] ; 14879 >
+        au < released ; 2021 ; Journal of Feminist Studies in Religion Volume 37 [2021] ; 15710 >
+        au < manifest ; 2022 ; Journal of Feminist Studies in Religion Volume 38 [2022] ; 17229 >
+
+    }
+
+    {
+    title <
+      name = Journal of Folklore Research ;
+      issn = 0737-7037  ;
+      eissn = 1543-0413  ;
+      issnl = 0737-7037
+
+    >
+
+      attr[journal_id] = 223
+
+        au < released ; 2003 ; Journal of Folklore Research Volume 40 [2003] ; 851 >
+        au < released ; 2004 ; Journal of Folklore Research Volume 41 [2004] ; 2458 >
+        au < released ; 2005 ; Journal of Folklore Research Volume 42 [2005] ; 2735 >
+        au < released ; 2006 ; Journal of Folklore Research Volume 43 [2006] ; 3043 >
+        au < released ; 2007 ; Journal of Folklore Research Volume 44 [2007] ; 3399 >
+        au < released ; 2008 ; Journal of Folklore Research Volume 45 [2008] ; 3815 >
+        au < released ; 2009 ; Journal of Folklore Research Volume 46 [2009] ; 4383 >
+        au < released ; 2010 ; Journal of Folklore Research Volume 47 [2010] ; 6578 >
+        au < released ; 2011 ; Journal of Folklore Research Volume 48 [2011] ; 7253 >
+        au < released ; 2012 ; Journal of Folklore Research Volume 49 [2012] ; 8417 >
+        au < released ; 2013 ; Journal of Folklore Research Volume 50 [2013] ; 9315 >
+        au < released ; 2014 ; Journal of Folklore Research Volume 51 [2014] ; 9818 >
+        au < released ; 2015 ; Journal of Folklore Research Volume 52 [2015] ; 10514 >
+        au < released ; 2016 ; Journal of Folklore Research Volume 53 [2016] ; 11012 >
+        au < released ; 2017 ; Journal of Folklore Research Volume 54 [2017] ; 12580 >
+        au < released ; 2018 ; Journal of Folklore Research Volume 55 [2018] ; 13309 >
+        au < released ; 2019 ; Journal of Folklore Research Volume 56 [2019] ; 13993 >
+        au < released ; 2020 ; Journal of Folklore Research Volume 57 [2020] ; 14787 >
+        au < released ; 2021 ; Journal of Folklore Research Volume 58 [2021] ; 15513 >
+        au < manifest ; 2022 ; Journal of Folklore Research Volume 59 [2022] ; 16984 >
+
+    }
+
+    {
+    title <
+      name = Journal of Islamic and Muslim Studies ;
+      issn = 2470-7066  ;
+      eissn = 2470-7074  ;
+      issnl = 2470-7066
+
+    >
+
+      attr[journal_id] = 740
+
+        au < released ; 2016 ; Journal of Islamic and Muslim Studies Volume 1 [2016] ; 13629 >
+        au < released ; 2017 ; Journal of Islamic and Muslim Studies Volume 2 [2017] ; 13630 >
+        au < released ; 2018 ; Journal of Islamic and Muslim Studies Volume 3 [2018] ; 13687 >
+        au < released ; 2019 ; Journal of Islamic and Muslim Studies Volume 4 [2019] ; 14435 >
+        au < released ; 2020 ; Journal of Islamic and Muslim Studies Volume 5 [2020] ; 15282 >
+        au < released ; 2021 ; Journal of Islamic and Muslim Studies Volume 6 [2021] ; 16861 >
+        au < manifest ; 2022 ; Journal of Islamic and Muslim Studies Volume 7 [2022] ; 17777 >
+
+    }
+    
+    {
+    title <
+      name = Journal of Modern Literature ;
+      issn = 0022-281X  ;
+      eissn = 1529-1464 
+    >
+
+      attr[journal_id] = 97
+
+        au < released ; 1998-1999 ; Journal of Modern Literature Volume 22 [1998-1999] ; 318 >
+        au < released ; 1999-2000 ; Journal of Modern Literature Volume 23 [1999-2000] ; 319 >
+        au < released ; 2000-2001 ; Journal of Modern Literature Volume 24 [2000-2001] ; 320 >
+        au < released ; 2001-2002 ; Journal of Modern Literature Volume 25 [2001-2002] ; 321 >
+        au < released ; 2002-2003 ; Journal of Modern Literature Volume 26 [2002-2003] ; 2436 >
+        au < released ; 2003-2004 ; Journal of Modern Literature Volume 27 [2003-2004] ; 2565 >
+        au < released ; 2004-2005 ; Journal of Modern Literature Volume 28 [2004-2005] ; 2729 >
+        au < released ; 2005-2006 ; Journal of Modern Literature Volume 29 [2005-2006] ; 2908 >
+        au < released ; 2006-2007 ; Journal of Modern Literature Volume 30 [2006-2007] ; 3167 >
+        au < released ; 2007-2008 ; Journal of Modern Literature Volume 31 [2007-2008] ; 3586 >
+        au < released ; 2008-2009 ; Journal of Modern Literature Volume 32 [2008-2009] ; 4121 >
+        au < released ; 2009-2010 ; Journal of Modern Literature Volume 33 [2009-2010] ; 5712 >
+        au < released ; 2010-2011 ; Journal of Modern Literature Volume 34 [2010-2011] ; 6675 >
+        au < released ; 2011-2012 ; Journal of Modern Literature Volume 35 [2011-2012] ; 7856 >
+        au < released ; 2012-2013 ; Journal of Modern Literature Volume 36 [2012-2013] ; 8641 >
+        au < released ; 2013-2014 ; Journal of Modern Literature Volume 37 [2013-2014] ; 9584 >
+        au < released ; 2014-2015 ; Journal of Modern Literature Volume 38 [2014-2015] ; 10293 >
+        au < released ; 2015-2016 ; Journal of Modern Literature Volume 39 [2015-2016] ; 10932 >
+        au < released ; 2016-2017 ; Journal of Modern Literature Volume 40 [2016-2017] ; 12243 >
+        au < released ; 2017-2018 ; Journal of Modern Literature Volume 41 [2017-2018] ; 13123 >
+        au < released ; 2018-2019 ; Journal of Modern Literature Volume 42 [2018-2019] ; 13830 >
+        au < released ; 2019-2020 ; Journal of Modern Literature Volume 43 [2019-2020] ; 14583 >
+        au < released ; 2020-2021 ; Journal of Modern Literature Volume 44 [2020-2021] ; 15388 >
+        au < released ; 2021 ; Journal of Modern Literature Volume 45 [2021] ; 16828 >
+
+    }
+
+    {
+    title <
+      name = Journal of the Ottoman and Turkish Studies Association ;
+      issn = 2376-0699 ;
+      eissn = 2376-0702
+
+    >
+
+      attr[journal_id] = 761
+
+      au < released ; 2014 ; Journal of the Ottoman and Turkish Studies Association Volume 1 [2014] ; 14556 >
+      au < released ; 2015 ; Journal of the Ottoman and Turkish Studies Association Volume 2 [2015] ; 14557 >
+      au < released ; 2016 ; Journal of the Ottoman and Turkish Studies Association Volume 3 [2016] ; 14558 >
+      au < released ; 2017 ; Journal of the Ottoman and Turkish Studies Association Volume 4 [2017] ; 14440 >
+      au < released ; 2018 ; Journal of the Ottoman and Turkish Studies Association Volume 5 [2018] ; 14419 >
+      au < released ; 2019 ; Journal of the Ottoman and Turkish Studies Association Volume 6 [2019] ; 14420 >
+      au < released ; 2020 ; Journal of the Ottoman and Turkish Studies Association Volume 7 [2020] ; 15101 >
+      au < released ; 2021 ; Journal of the Ottoman and Turkish Studies Association Volume 8 [2021] ; 16849 >
+
+    }
+
+    {
+    title <
+      name = Mande Studies ;
+      issn = 1536-5506  ;
+      eissn = 2379-5506  ;
+      issnl = 1536-5506
+
+    >
+
+      attr[journal_id] = 703
+
+        au < released ; 2015 ; Mande Studies Volume 16-17 [2015] ; 12608 >
+        au < released ; 2016 ; Mande Studies Volume 18 [2016] ; 12526 >
+        au < released ; 2017 ; Mande Studies Volume 19 [2017] ; 13023 >
+        au < released ; 2018 ; Mande Studies Volume 20 [2018] ; 13741 >
+        au < released ; 2019 ; Mande Studies Volume 21 [2019] ; 14635 >
+        au < released ; 2020 ; Mande Studies Volume 22 [2020] ; 15876 >
+        au < manifest ; 2021 ; Mande Studies Volume 23 [2021] ; 17350 >
+
+    }
+
+    {
+    title <
+      name = Nashim: A Journal of Jewish Women's Studies & Gender Issues ;
+      issn = 0793-8934  ;
+      eissn = 1565-5288  ;
+      issnl = 0793-8934
+
+    >
+
+      attr[journal_id] = 243
+
+        au < released ; 2000 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 3 [Spring/Summer 5760/2000] ; 6122 >
+        au < released ; 2001 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 4 [Fall 5762/2001] ; 6121 >
+        au < released ; 2003 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 6 [Fall 5764/2003] ; 2433 >
+        au < released ; 2004 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 7 [Spring 5764/2004] ; 2535 >
+        au < released ; 2004 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 8 [Fall 5765/2004] ; 2600 >
+        au < released ; 2005 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 9 [Spring 5765/2005] ; 2772 >
+        au < released ; 2005 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 10 [Fall 5766/2005] ; 2869 >
+        au < released ; 2006 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 11 [Spring 5766/2006] ; 3087 >
+        au < released ; 2006 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 12 [Fall 5767/2006] ; 3152 >
+        au < released ; 2007 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 13 [Spring 5767/2007] ; 3395 >
+        au < released ; 2007 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 14 [Fall 5768/2007] ; 3605 >
+        au < released ; 2008 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 15 [Spring 5769/2008] ; 3811 >
+        au < released ; 2008 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 16 [Spring 5769/2008] ; 4043 >
+        au < released ; 2009 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 17 [Spring 5769/2009] ; 4360 >
+        au < released ; 2009 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 18 [Spring 5770/2009] ; 5676 >
+        au < released ; 2010 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 19 [Spring 5770/2010] ; 6342 >
+        au < released ; 2010 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 20 [Fall 5771/2010] ; 6614 >
+        au < released ; 2011 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 21 [Spring 5771/2011] ; 7417 >
+        au < released ; 2011 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 22 [Fall 5772/2011] ; 7997 >
+        au < released ; 2012 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 23 [Spring-Fall 5772-3/2012] ; 8425 >
+        au < released ; 2013 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 24 [Spring 5773/2013] ; 8869 >
+        au < released ; 2013 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 25 [Fall 5774/2013] ; 9357 >
+        au < released ; 2014 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 26 [Spring 5774/2014] ; 9923 >
+        au < released ; 2014 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 27 [Fall 5775/2014] ; 10266 >
+        au < released ; 2015 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 28 [Spring 5775/2015] ; 10691 >
+        au < released ; 2015 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 29 [Spring 5776/2015] ; 11051 >
+        au < released ; 2016 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 30 [Spring 5777/2016] ; 12206 >
+        au < released ; 2017 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 31 [Spring-Fall 5777-78/2017] ; 12802 >
+        au < released ; 2018 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 32 [Spring 5778/2018] ; 13539 >
+        au < released ; 2018 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 33 [Spring 5779/2018] ; 13816 >
+        au < released ; 2019 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 34 [Spring 5779/2019] ; 14268 >
+        au < released ; 2019 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 35 [Fall 5779/2019] ; 14564 >
+        au < manifest ; 2020 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 36 [Spring 5780/2020] ; 15069 >
+        au < manifest ; 2020 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 37 [2020] ; 15384 >
+        au < manifest ; 2021 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 38 [Spring 5781/2021] ; 16080 >
+        au < manifest ; 2021 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 39 [Fall 5782/2021] ; 16857 >
+        au < manifest ; 2022 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 40 [Fall 5782/2022] ; 17409 >
+
+    }
+
+    {
+    title <
+      name = Pakistan Journal of Historical Studies ;
+      issn = 2412-611X ;
+      eissn = 2470-8518
+
+    >
+
+      attr[journal_id] = 828
+
+      au < released ; 2016 ; Pakistan Journal of Historical Studies Volume 1 [2016] ; 16188 >
+      au < released ; 2017 ; Pakistan Journal of Historical Studies Volume 2 [2017] ; 16189 >
+      au < released ; 2018 ; Pakistan Journal of Historical Studies Volume 3 [2018] ; 16190 >
+      au < released ; 2019 ; Pakistan Journal of Historical Studies Volume 4 [2019] ; 16191 >
+      au < released ; 2020 ; Pakistan Journal of Historical Studies Volume 5 [2020] ; 16626 >
+      au < notReady ; 2021 ; Pakistan Journal of Historical Studies Volume 6 [2021] ; 16733 > #manifest page exists without content link
+
+    }
+
+    {
+    title <
+      name = Philanthropy & Education ;
+      issn = 2470-7686 ;
+      eissn = 2470-7694
+
+    >
+
+      attr[journal_id] = 833
+
+      au < released ; 2017-2018 ; Philanthropy & Education Volume 1 [2017-2018] ; 16192 >
+      au < released ; 2018-2019 ; Philanthropy & Education Volume 2 [2018-2019] ; 16193 >
+      au < released ; 2019-2020 ; Philanthropy & Education Volume 3 [2019-2020] ; 16194 >
+      au < released ; 2020-2021 ; Philanthropy & Education Volume 4 [2020-2021] ; 16195 >
+      au < manifest ; 2021-2022 ; Philanthropy & Education Volume 5 [2021-2022] ; 16714 >
+
+    }
+
+    {
+    title <
+      name = Philosophy of Music Education Review ;
+      issn = 1063-5734  ;
+      eissn = 1543-3412  ;
+      issnl = 1063-5734
+
+    >
+
+      attr[journal_id] = 228
+
+        au < released ; 2001 ; Philosophy of Music Education Review Volume 9 [2001] ; 6683 >
+        au < released ; 2002 ; Philosophy of Music Education Review Volume 10 [2002] ; 6706 >
+        au < released ; 2003 ; Philosophy of Music Education Review Volume 11 [2003] ; 931 >
+        au < released ; 2004 ; Philosophy of Music Education Review Volume 12 [2004] ; 2505 >
+        au < released ; 2005 ; Philosophy of Music Education Review Volume 13 [2005] ; 2787 >
+        au < released ; 2006 ; Philosophy of Music Education Review Volume 14 [2006] ; 3045 >
+        au < released ; 2007 ; Philosophy of Music Education Review Volume 15 [2007] ; 3424 >
+        au < released ; 2008 ; Philosophy of Music Education Review Volume 16 [2008] ; 3833 >
+        au < released ; 2009 ; Philosophy of Music Education Review Volume 17 [2009] ; 4369 >
+        au < released ; 2010 ; Philosophy of Music Education Review Volume 18 [2010] ; 6325 >
+        au < released ; 2011 ; Philosophy of Music Education Review Volume 19 [2011] ; 7416 >
+        au < released ; 2012 ; Philosophy of Music Education Review Volume 20 [2012] ; 8279 >
+        au < released ; 2013 ; Philosophy of Music Education Review Volume 21 [2013] ; 9103 >
+        au < released ; 2014 ; Philosophy of Music Education Review Volume 22 [2014] ; 9991 >
+        au < released ; 2015 ; Philosophy of Music Education Review Volume 23 [2015] ; 10666 >
+        au < released ; 2016 ; Philosophy of Music Education Review Volume 24 [2016] ; 11302 >
+        au < released ; 2017 ; Philosophy of Music Education Review Volume 25 [2017] ; 12576 >
+        au < released ; 2018 ; Philosophy of Music Education Review Volume 26 [2018] ; 13338 >
+        au < released ; 2019 ; Philosophy of Music Education Review Volume 27 [2019] ; 14060 >
+        au < released ; 2020 ; Philosophy of Music Education Review Volume 28 [2020] ; 14881 >
+        au < manifest ; 2022 ; Philosophy of Music Education Review Volume 30 [2022] ; 17081 >
+        au < manifest ; 2021 ; Philosophy of Music Education Review Volume 29 [2021] ; 15637 >
+
+    }
+    
+    {
+    title <
+      name = Prooftexts ;
+      issn = 0272-9601  ;
+      eissn = 1086-3311 
+    >
+
+      attr[journal_id] = 167
+
+        au < released ; 1998 ; Prooftexts Volume 18 [1998] ; 6699 >
+        au < released ; 1999 ; Prooftexts Volume 19 [1999] ; 6684 >
+        au < released ; 2000 ; Prooftexts Volume 20 [2000] ; 570 >
+        au < released ; 2001 ; Prooftexts Volume 21 [2001] ; 571 >
+        au < released ; 2002 ; Prooftexts Volume 22 [2002] ; 572 >
+        au < released ; 2003 ; Prooftexts Volume 23 [2003] ; 1709 >
+        au < released ; 2004 ; Prooftexts Volume 24 [2004] ; 2573 >
+        au < released ; 2005 ; Prooftexts Volume 25 [2005] ; 2925 >
+        au < released ; 2006 ; Prooftexts Volume 26 [2006] ; 3229 >
+        au < released ; 2007 ; Prooftexts Volume 27 [2007] ; 3493 >
+        au < released ; 2008 ; Prooftexts Volume 28 [2008] ; 3892 >
+        au < released ; 2009 ; Prooftexts Volume 29 [2009] ; 5675 >
+        au < released ; 2010 ; Prooftexts Volume 30 [2010] ; 6769 >
+        au < released ; 2011 ; Prooftexts Volume 31 [2011] ; 8225 >
+        au < released ; 2012 ; Prooftexts Volume 32 [2012] ; 8720 >
+        au < released ; 2013 ; Prooftexts Volume 33 [2013] ; 9790 >
+        au < released ; 2014 ; Prooftexts Volume 34 [2014] ; 10655 >
+        au < released ; 2015 ; Prooftexts Volume 35 [2015] ; 12141 >
+        au < released ; 2017 ; Prooftexts Volume 36 [2017] ; 13137 >
+        au < released ; 2018 ; Prooftexts Volume 37 [2018] ; 13899 >
+        au < released ; 2020 ; Prooftexts Volume 38 [2020] ; 15222 >
+        au < manifest ; 2021-2022 ; Prooftexts Volume 39 [2021-2022] ; 16954 >
+
+    }
+
+    {
+    title <
+      name = Race/Ethnicity: Multidisciplinary Global Contexts ;
+      issn = 1935-8644  ;
+      eissn = 1935-8652 
+    >
+
+      attr[journal_id] = 430
+
+        au < released ; 2007 ; Race/Ethnicity: Multidisciplinary Global Contexts Volume 1 [2007] ; 5018 >
+        au < released ; 2008 ; Race/Ethnicity: Multidisciplinary Global Contexts Volume 2 [2008] ; 4019 >
+        au < released ; 2009 ; Race/Ethnicity: Multidisciplinary Global Contexts Volume 3 [2009] ; 5730 >
+        au < released ; 2010 ; Race/Ethnicity: Multidisciplinary Global Contexts Volume 4 [2010] ; 6863 >
+        au < released ; 2011 ; Race/Ethnicity: Multidisciplinary Global Contexts Volume 5 [2011] ; 7855 >
+
+    }
+    
+    {
+    title <
+      name = Recreation, Parks, and Tourism in Public Health ;
+      issn = 2474-1825 ;
+      eissn = 2474-1833
+
+    >
+
+      attr[journal_id] = 827
+
+      au < released ; 2017 ; Recreation, Parks, and Tourism in Public Health Volume 1 [2017] ; 16196 >
+      au < released ; 2018 ; Recreation, Parks, and Tourism in Public Health Volume 2 [2018] ; 16197 >
+      au < released ; 2019 ; Recreation, Parks, and Tourism in Public Health Volume 3 [2019] ; 16198 >
+      au < released ; 2020 ; Recreation, Parks, and Tourism in Public Health Volume 4 [2020] ; 16199 >
+      au < released ; 2021 ; Recreation, Parks, and Tourism in Public Health Volume 5 [2021] ; 16627 >
+      au < manifest ; 2022 ; Recreation, Parks, and Tourism in Public Health Volume 6 [2022] ; 17385 >
+
+    }
+
+    {
+    title <
+      name = Research in African Literatures ;
+      issn = 0034-5210  ;
+      eissn = 1527-2044 
+    >
+
+      attr[journal_id] = 169
+
+        au < released ; 1999 ; Research in African Literatures Volume 30 [1999] ; 581 >
+        au < released ; 2000 ; Research in African Literatures Volume 31 [2000] ; 582 >
+        au < released ; 2001 ; Research in African Literatures Volume 32 [2001] ; 583 >
+        au < released ; 2002 ; Research in African Literatures Volume 33 [2002] ; 584 >
+        au < released ; 2003 ; Research in African Literatures Volume 34 [2003] ; 833 >
+        au < released ; 2004 ; Research in African Literatures Volume 35 [2004] ; 2446 >
+        au < released ; 2005 ; Research in African Literatures Volume 36 [2005] ; 2645 >
+        au < released ; 2006 ; Research in African Literatures Volume 37 [2006] ; 2897 >
+        au < released ; 2007 ; Research in African Literatures Volume 38 [2007] ; 3215 >
+        au < released ; 2008 ; Research in African Literatures Volume 39 [2008] ; 3626 >
+        au < released ; 2009 ; Research in African Literatures Volume 40 [2009] ; 4125 >
+        au < released ; 2010 ; Research in African Literatures Volume 41 [2010] ; 5807 >
+        au < released ; 2011 ; Research in African Literatures Volume 42 [2011] ; 6680 >
+        au < released ; 2012 ; Research in African Literatures Volume 43 [2012] ; 7998 >
+        au < released ; 2013 ; Research in African Literatures Volume 44 [2013] ; 8777 >
+        au < released ; 2014 ; Research in African Literatures Volume 45 [2014] ; 9753 >
+        au < released ; 2015 ; Research in African Literatures Volume 46 [2015] ; 10372 >
+        au < released ; 2016 ; Research in African Literatures Volume 47 [2016] ; 11028 >
+        au < released ; 2017 ; Research in African Literatures Volume 48 [2017] ; 12564 >
+        au < released ; 2018 ; Research in African Literatures Volume 49 [2018] ; 13603 >
+        au < released ; 2019 ; Research in African Literatures Volume 50 [2019] ; 14289 >
+        au < released ; 2020 ; Research in African Literatures Volume 51 [2020] ; 15178 >
+        au < manifest ; 2021-2022 ; Research in African Literatures Volume 52 [2021-2022] ; 16761 >
+
+    }
+
+    {
+    title <
+      name = Spectrum: A Journal on Black Men ;
+      issn = 2162-3244  ;
+      eissn = 2162-3252  ;
+      issnl = 2162-3244
+
+    >
+
+      attr[journal_id] = 575
+
+        au < released ; 2012-2013 ; Spectrum: A Journal on Black Men Volume 1 [2012-2013] ; 8488 >
+        au < released ; 2013-2014 ; Spectrum: A Journal on Black Men Volume 2 [2013-2014] ; 9354 >
+        au < released ; 2014-2015 ; Spectrum: A Journal on Black Men Volume 3 [2014-2015] ; 10236 >
+        au < released ; 2015-2016 ; Spectrum: A Journal on Black Men Volume 4 [2015-2016] ; 11104 >
+        au < released ; 2016-2017 ; Spectrum: A Journal on Black Men Volume 5 [2016-2017] ; 12159 >
+        au < released ; 2017-2018 ; Spectrum: A Journal on Black Men Volume 6 [2017-2018] ; 13044 >
+        au < released ; 2018-2019 ; Spectrum: A Journal on Black Men Volume 7 [2018-2019] ; 14328 >
+        au < released ; 2020-2021 ; Spectrum: A Journal on Black Men Volume 8 [2020-2021] ; 15263 >
+        au < released ; 2021 ; Spectrum: A Journal on Black Men Volume 9 [2021] ; 16724 >
+        au < manifest ; 2022 ; Spectrum: A Journal on Black Men Volume 10 [2022] ; 17666 >
+
+    }
+
+    {
+    title <
+      name = Teaching and Learning Inquiry: The ISSOTL Journal ;
+      issn = 2167-4779  ;
+      eissn = 2167-4787  ;
+      issnl = 2167-4779
+
+    >
+
+      attr[journal_id] = 606
+
+        au < released ; 2013 ; Teaching and Learning Inquiry: The ISSOTL Journal Volume 1 [2013] ; 8899 >
+        au < released ; 2014 ; Teaching and Learning Inquiry: The ISSOTL Journal Volume 2 [2014] ; 9764 >
+        au < released ; 2015 ; Teaching and Learning Inquiry: The ISSOTL Journal Volume 3 [2015] ; 10555 >
+
+    }
+    
+    {
+    title <
+      name = The Global South ;
+      issn = 1932-8648  ;
+      eissn = 1932-8656  ;
+      issnl = 1932-8648
+
+    >
+
+      attr[journal_id] = 391
+
+        au < released ; 2007 ; The Global South Volume 1 [2007] ; 6436 >
+        au < released ; 2008 ; The Global South Volume 2 [2008] ; 3839 >
+        au < released ; 2009 ; The Global South Volume 3 [2009] ; 4384 >
+        au < released ; 2010 ; The Global South Volume 4 [2010] ; 6396 >
+        au < released ; 2011 ; The Global South Volume 5 [2011] ; 7549 >
+        au < released ; 2012 ; The Global South Volume 6 [2012] ; 8492 >
+        au < released ; 2013 ; The Global South Volume 7 [2013] ; 9683 >
+        au < released ; 2014 ; The Global South Volume 8 [2014] ; 10608 >
+        au < released ; 2015 ; The Global South Volume 9 [2015] ; 11287 >
+        au < released ; 2016 ; The Global South Volume 10 [2016] ; 12413 >
+        au < released ; 2017 ; The Global South Volume 11 [2017] ; 13250 >
+        au < released ; 2018 ; The Global South Volume 12 [2018] ; 14189 >
+        au < released ; 2019 ; The Global South Volume 13 [2019] ; 14994 >
+        au < released ; 2020 ; The Global South Volume 14 [2020] ; 15483 >
+        au < released ; 2021 ; The Global South Volume 15 [2021] ; 17182 >
+
+    }
+
+    {
+    title <
+      name = Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy ;
+      issn = 0009-1774  ;
+      eissn = 1558-9587  ;
+      issnl = 0009-1774
+
+    >
+
+      attr[journal_id] = 343
+
+        au < released ; 2005 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 41 [2005] ; 5898 >
+        au < released ; 2006 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 42 [2006] ; 3102 >
+        au < released ; 2007 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 43 [2007] ; 3345 >
+        au < released ; 2008 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 44 [2008] ; 3750 >
+        au < released ; 2009 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 45 [2009] ; 4374 >
+        au < released ; 2010 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 46 [2010] ; 6381 >
+        au < released ; 2011 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 47 [2011] ; 7351 >
+        au < released ; 2012 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 48 [2012] ; 8337 >
+        au < released ; 2013 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 49 [2013] ; 9177 >
+        au < released ; 2014 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 50 [2014] ; 10053 >
+        au < released ; 2015 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 51 [2015] ; 10705 >
+        au < released ; 2016 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 52 [2016] ; 11303 >
+        au < released ; 2017 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 53 [2017] ; 12693 >
+        au < released ; 2018 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 54 [2018] ; 13580 >
+        au < released ; 2019 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 55 [2019] ; 14292 >
+        au < released ; 2020 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 56 [2020] ; 15046 >
+        au < released ; 2021 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 57 [2021] ; 15927 >
+        au < manifest ; 2022 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 58 [2022] ; 17305 >
+
+    }
+
+    {
+    title <
+      name = Transition ;
+      issn = 0041-1191  ;
+      eissn = 1527-8042  ;
+      issnl = 1527-8042
+
+    >
+
+      attr[journal_id] = 197
+
+        au < released ; 2000 ; Transition Volume 9 [2000 (81-84)] ; 676 >
+        au < released ; 2000-2001 ; Transition Volume 10 [2000-2001 (85-88)] ; 677 >
+        au < released ; 2002-2003 ; Transition Volume 12 [2002-2003] ; 3856 >
+        au < released ; 2004-2007 ; Transition Volume 13 [2004-2007] ; 3855 >
+        au < released ; 2008 ; Transition Issue 98 [2008] ; 3854 >
+        au < released ; 2008 ; Transition Issue 99 [2008] ; 4012 >
+        au < released ; 2009 ; Transition Issue 100 [2009] ; 4152 >
+        au < released ; 2009 ; Transition Issue 101 [2009] ; 4378 >
+        au < released ; 2010 ; Transition Issue 102 [2010] ; 5800 >
+        au < released ; 2010 ; Transition Issue 103 [2010] ; 6571 >
+        au < released ; 2011 ; Transition Issue 104 [2011] ; 6800 >
+        au < released ; 2011 ; Transition Issue 105 [2011] ; 7388 >
+        au < released ; 2011 ; Transition Issue 106 [2011] ; 7716 >
+        au < released ; 2012 ; Transition Issue 107 [2012] ; 7993 >
+        au < released ; 2012 ; Transition Issue 108 [2012] ; 8350 >
+        au < released ; 2012 ; Transition Issue 109 [2012] ; 8515 >
+        au < released ; 2013 ; Transition Issue 110 [2013] ; 8872 >
+        au < released ; 2013 ; Transition Issue 111 [2013] ; 9099 >
+        au < released ; 2013 ; Transition Issue 112 [2013] ; 9332 >
+        au < released ; 2014 ; Transition Issue 113 [2014] ; 9819 >
+        au < released ; 2014 ; Transition Issue 114 [2014] ; 10104 >
+        au < released ; 2014 ; Transition Issue 115 [2014] ; 10203 >
+        au < released ; 2014 ; Transition Issue 116 [2014] ; 10234 >
+        au < released ; 2015 ; Transition Issue 117 [2015] ; 10563 >
+        au < released ; 2015 ; Transition Issue 118 [2015] ; 10789 >
+        au < released ; 2016 ; Transition Issue 119 [2016] ; 11134 >
+        au < released ; 2016 ; Transition Issue 120 [2016] ; 11353 >
+        au < released ; 2016 ; Transition Issue 121 [2016] ; 12205 >
+        au < released ; 2017 ; Transition Issue 122 [2017] ; 12498 >
+        au < released ; 2017 ; Transition Issue 123 [2017] ; 12719 >
+        au < released ; 2017 ; Transition Issue 124 [2017] ; 12895 >
+        au < released ; 2017 ; Transition Issue 125 [2017] ; 13225 >
+        au < released ; 2018 ; Transition Issue 126 [2018] ; 13657 >
+        au < released ; 2019 ; Transition Issue 127 [2019] ; 14177 >
+        au < released ; 2019 ; Transition Issue 128 [2019] ; 14814 >
+        au < manifest ; 2020 ; Transition Volume 129 [2020] ; 15314 >
+        au < manifest ; 2021 ; Transition Volume 131 [2021] ; 16793 >
+        au < manifest ; 2022 ; Transition Volume 132 [2022] ; 17242 >
+        au < manifest ; 2021 ; Transition Volume 130 [2021] ; 15870 >
+
+    }
+
+    {
+    title <
+      name = Victorian Studies ;
+      issn = 0042-5222  ;
+      eissn = 1527-2052 
+    >
+
+      attr[journal_id] = 203
+
+        au < released ; 1999-2000 ; Victorian Studies Volume 42 [1999-2000] ; 698 >
+        au < released ; 2000-2001 ; Victorian Studies Volume 43 [2000-2001] ; 699 >
+        au < released ; 2001-2002 ; Victorian Studies Volume 44 [2001-2002] ; 700 >
+        au < released ; 2002-2003 ; Victorian Studies Volume 45 [2002-2003] ; 933 >
+        au < released ; 2003-2004 ; Victorian Studies Volume 46 [2003-2004] ; 2464 >
+        au < released ; 2004-2005 ; Victorian Studies Volume 47 [2004-2005] ; 2722 >
+        au < released ; 2005 ; Victorian Studies Volume 48 [2005] ; 2997 >
+        au < released ; 2006-2007 ; Victorian Studies Volume 49 [2006-2007] ; 3344 >
+        au < released ; 2007-2008 ; Victorian Studies Volume 50 [2007-2008] ; 3665 >
+        au < released ; 2008-2009 ; Victorian Studies Volume 51 [2008-2009] ; 4213 >
+        au < released ; 2009-2010 ; Victorian Studies Volume 52 [2009-2010] ; 5851 >
+        au < released ; 2010-2011 ; Victorian Studies Volume 53 [2010-2011] ; 7001 >
+        au < released ; 2011-2012 ; Victorian Studies Volume 54 [2011-2012] ; 8074 >
+        au < released ; 2012-2013 ; Victorian Studies Volume 55 [2012-2013] ; 8868 >
+        au < released ; 2013-2014 ; Victorian Studies Volume 56 [2013-2014] ; 9864 >
+        au < released ; 2014-2015 ; Victorian Studies Volume 57 [2014-2015] ; 10431 >
+        au < released ; 2015-2016 ; Victorian Studies Volume 58 [2015-2016] ; 11105 >
+        au < released ; 2016-2017 ; Victorian Studies Volume 59 [2016-2017] ; 12444 >
+        au < released ; 2017-2018 ; Victorian Studies Volume 60 [2017-2018] ; 13322 >
+        au < released ; 2018-2019 ; Victorian Studies Volume 61 [2018-2019] ; 13992 >
+        au < released ; 2019-2020 ; Victorian Studies Volume 62 [2019-2020] ; 14864 >
+        au < manifest ; 2021-2022 ; Victorian Studies Volume 64 [2021-2022] ; 17237 >
+        au < manifest ; 2020-2021 ; Victorian Studies Volume 63 [2020-2021] ; 15663 >
+
+    }
+
+    {
+    title <
+      name = e-Service Journal ;
+      issn = 1528-8226  ;
+      eissn = 1528-8234  ;
+      issnl = 1528-8226
+
+    >
+
+      attr[journal_id] = 60
+
+        au < released ; 2001-2002 ; e-Service Journal Volume 1 [2001-2002] ; 218 >
+        au < released ; 2002-2003 ; e-Service Journal Volume 2 [2002-2003] ; 823 >
+        au < released ; 2003-2004 ; e-Service Journal Volume 3 [2003-2004] ; 2524 >
+        au < released ; 2005-2006 ; e-Service Journal Volume 4 [2005-2006] ; 2953 >
+        au < released ; 2006-2007 ; e-Service Journal Volume 5 [2006-2007] ; 3470 >
+        au < released ; 2007-2009 ; e-Service Journal Volume 6 [2007-2009] ; 3810 >
+        au < released ; 2010 ; e-Service Journal Volume 7 [2010] ; 6422 >
+        au < released ; 2011-2012 ; e-Service Journal Volume 8 [2011-2012] ; 8404 >
+        au < released ; 2013-2014 ; e-Service Journal Volume 9 [2013-2014] ; 10080 >
+        au < released ; 2016-2018 ; e-Service Journal Volume 10 [2016-2018] ; 12468 >
+        au < released ; 2019 ; e-Service Journal Volume 11 [2019] ; 14352 >
+        au < released ; 2020 ; e-Service Journal Volume 12 [2020] ; 15182 >
+        au < released ; 2021 ; e-Service Journal Volume 13 [2021] ; 16689 >
+
+    }
+
+    {
+    title <
+      name = Jazz Education in Research and Practice ;
+      issn = 2639-7668 ;
+      eissn = 2639-7676
+
+    >
+
+      attr[journal_id] = 831
+
+      au < manifest ; 2022 ; Jazz Education in Research and Practice Volume 3 [2022] ; 16811 >
+      au < manifest ; 2020 ; Jazz Education in Research and Practice Volume 1 [2020] ; 16184 >
+      au < manifest ; 2021 ; Jazz Education in Research and Practice Volume 2 [2021] ; 16185 >
+
+    }
+
+}
