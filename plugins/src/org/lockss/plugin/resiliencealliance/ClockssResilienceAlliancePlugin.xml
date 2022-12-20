@@ -9,7 +9,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>7</string>
+        <string>8</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
@@ -20,7 +20,7 @@
             </entry>
             <entry>
                 <string>Substance</string>
-                <string>1</string>
+                <string>2</string>
             </entry>
             <entry>
                 <string>Metadata</string>
@@ -168,7 +168,7 @@
         <string>au_substance_url_pattern</string>
         <list>
             <!-- some journals do not have pdfs -->
-            <string>"%svol%s/iss.+/art.+\.pdf$", base_url, volume_name</string>
+            <string>"(%s|%s)vol%s/iss.+/art.+\.pdf$", add_www(base_url), del_www(base_url), volume_name</string>
         </list>
     </entry>
     <entry>
