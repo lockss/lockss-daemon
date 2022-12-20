@@ -156,7 +156,9 @@ public class ArtifactData implements AutoCloseable {
 
           // Parse the InputStream to a HttpResponse object
           SessionInputBufferImpl buffer =
-            new SessionInputBufferImpl(new HttpTransportMetricsImpl(), 4096);
+            new SessionInputBufferImpl(new HttpTransportMetricsImpl(),
+                                       4096, 4096, null,
+                                       StandardCharsets.UTF_8.newDecoder());
           buffer.bind(cis);
           HttpResponse response =
             (new DefaultHttpResponseParser(buffer)).parse();
