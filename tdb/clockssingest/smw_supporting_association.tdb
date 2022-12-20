@@ -25,7 +25,7 @@
 
       param[journal_id] = smw
 
-      au < crawling ; exists ; 2001 ; 2001 ; Swiss Medical Weekly Volume 131 ; 131 ; >
+      au < frozen ; exists ; 2001 ; 2001 ; Swiss Medical Weekly Volume 131 ; 131 ; >
       # 2002 - 2021
       au < crawling ; exists ; 2022 ; 2022 ; Swiss Medical Weekly Volume 152 ; 152 ; >
 
