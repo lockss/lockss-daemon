@@ -582,7 +582,7 @@ while (my $line = <>) {
       sleep(5);
 
   } elsif ($plugin eq "UbiquityPartnerNetworkPlugin") {
-      ####start url & permission url
+      ####start url & permission url in one
       $url = sprintf("%slockss/year/%d/",
           $param{base_url}, $param{year});
       $man_url = uri_unescape($url);
@@ -613,13 +613,13 @@ while (my $line = <>) {
       sleep(5);
 
   } elsif ($plugin eq "ClockssUbiquityPartnerNetworkPlugin") {
-      ####start url
+      ####start url only
       $url = sprintf("%slockss/year/%d/",
           $param{base_url}, $param{year});
       $man_url = uri_unescape($url);
       my $req = HTTP::Request->new(GET, $man_url);
       my $resp = $ua->request($req);
-      ####permission url
+      ####permission url only
       $url_p = sprintf("%sabout",
           $param{base_url});
       $man_url_p = uri_unescape($url_p);
@@ -635,7 +635,10 @@ while (my $line = <>) {
                   $vol_title = $1;
               }
               my $man_contents = $resp->content;
-              if (defined($man_contents) && ($man_contents =~ m/\/volume\//) && ($man_contents =~ m/\($param{year}\)/)) {
+              #printf("$man_contents");
+              #if (defined($man_contents) && ($man_contents =~ m/\/volume\//) && ($man_contents =~ m/\($param{year}\)/)) {
+              if (defined($man_contents) && (($man_contents =~ m/\/volume\//) || ($man_contents =~ m/\/articles\//)) && ($man_contents =~ m/$param{year}/)) {
+              #if (defined($man_contents)) {
                   $result = "Manifest";
               } else {
                   $result = "--NO_CONT--";
