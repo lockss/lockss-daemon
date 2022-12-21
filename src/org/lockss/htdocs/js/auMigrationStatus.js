@@ -40,10 +40,7 @@ class AuMigrationStatus extends React.Component {
       return null;
     }
     return (
-        <div>
-            <button onClick={() => toggleElement(document.getElementById('instrumentation'))}>Toggle instrumentation</button>
-            <div id="instrumentation" className="stats-div" style={{display: 'none'}}><font size="2">{this.state.instrumentList.map((msg, index) => <div key={index}>{msg}<br /></div>)}</font></div>
-        </div>
+        <div id="instrumentation" className="stats-div"><font size="2">{this.state.instrumentList.map((msg, index) => <div key={index}>{msg}<br /></div>)}</font></div>
     )
   }
 

@@ -44,8 +44,7 @@ import java.util.regex.Pattern;
 import java.util.stream.*;
 import okhttp3.*;
 import org.lockss.app.LockssDaemon;
-import org.lockss.config.ConfigManager;
-import org.lockss.config.Configuration;
+import org.lockss.config.*;
 import org.lockss.daemon.LockssRunnable;
 import org.lockss.laaws.MigrationManager.OpType;
 import org.lockss.laaws.api.rs.StreamingArtifactsApi;
@@ -53,6 +52,7 @@ import org.lockss.laaws.client.ApiException;
 import org.lockss.laaws.client.V2RestClient;
 import org.lockss.laaws.model.rs.AuidPageInfo;
 import org.lockss.plugin.*;
+import org.lockss.servlet.MigrateContent;
 import org.lockss.uiapi.util.DateFormatter;
 import org.lockss.util.*;
 import static org.lockss.laaws.Counters.CounterType;
@@ -261,6 +261,20 @@ public class V2AuMover {
   public static final String PARAM_DETAILED_STATS = PREFIX + "detailedStats";
   public static final boolean DEFAULT_DETAILED_STATS = true;
 
+  enum UseFetchUrl {
+    NONE,
+    FINAL_SLASH,
+    ALL;
+  }
+
+  public static final String PARAM_USE_FETCH_URL = PREFIX + "useFetchUrl";
+  public static final UseFetchUrl DEFAULT_USE_FETCH_URL =
+    UseFetchUrl.FINAL_SLASH;
+
+  public static final String PARAM_INSTRUMENTATION = PREFIX + "instrumentation";
+  public static final boolean DEFAULT_INSTRUMENTATION = false;
+
+
   //////////////////////////////////////////////////////////////////////
   // Constants
   //////////////////////////////////////////////////////////////////////
@@ -349,8 +363,11 @@ s api client with long timeout */
 
   private boolean isPartialContent = false;
   private boolean checkMissingContent;
+
   private boolean isCompareBytes;
-  private boolean isDetailedStats;
+  private UseFetchUrl useFetchUrl = DEFAULT_USE_FETCH_URL;
+  private boolean isShowInstrumentation = DEFAULT_INSTRUMENTATION;
+
   private boolean isGenerateTestErrors;
 
   // Retries and timeouts
@@ -461,8 +478,12 @@ s api client with long timeout */
                                          DEFAULT_RETRY_BACKOFF_DELAY);
       checkMissingContent = config.getBoolean(PARAM_CHECK_MISSING_CONTENT,
                                               DEFAULT_CHECK_MISSING_CONTENT);
-      isDetailedStats=config.getBoolean(PARAM_DETAILED_STATS,
-                                        DEFAULT_DETAILED_STATS);
+
+      useFetchUrl = config.getEnumIgnoreCase(UseFetchUrl.class,
+                                             PARAM_USE_FETCH_URL,
+                                             DEFAULT_USE_FETCH_URL);
+      isShowInstrumentation =
+        config.getBoolean(PARAM_INSTRUMENTATION, DEFAULT_INSTRUMENTATION);
 
       isGenerateTestErrors = config.getBoolean(PARAM_GENERATE_TEST_ERRORS,
                                                DEFAULT_GENERATE_TEST_ERRORS);
@@ -1663,6 +1684,10 @@ s api client with long timeout */
   // Thread pool & queue Instrumentation.
   //////////////////////////////////////////////////////////////////////
 
+  public boolean isShowInstrumentation() {
+    return isShowInstrumentation;
+  }
+
   public List<String> getInstruments() {
     List<String> res = new ArrayList<>();
     res.add(getExecutorStats("CopyIter", copyIterExecutor));
@@ -2115,15 +2140,45 @@ s api client with long timeout */
     return v2Aus.contains(au.getAuId());
   }
 
+  public static boolean isEqualUpToFinalSlash(String url, String fetchUrl) {
+    return url != null && fetchUrl != null
+      && (url.length() + 1 == fetchUrl.length())
+      && fetchUrl.startsWith(url)
+      && fetchUrl.endsWith("/");
+  }
+
   public String getV2Url(ArchivalUnit au, CachedUrl cu) {
     String v1Url = cu.getUrl();
     String v2Url = null;
     try {
 //       v2Url = UrlUtil.normalizeUrl(cu.getProperties().getProperty(CachedUrl.PROPERTY_NODE_URL),
 //           au);
-      v2Url = cu.getProperties().getProperty(CachedUrl.PROPERTY_NODE_URL);
+      String fetchUrl =
+        cu.getProperties().getProperty(CachedUrl.PROPERTY_NODE_URL);
+      switch (useFetchUrl) {
+      case FINAL_SLASH:
+        if (isEqualUpToFinalSlash(v1Url, fetchUrl)) {
+          v2Url = fetchUrl;
+        }
+        break;
+      case ALL:
+        if (fetchUrl != null) {
+          v2Url = fetchUrl;
+        }
+        break;
+      case NONE:
+      }
       if (v2Url == null) {
         v2Url = v1Url;
+      }
+      if (!StringUtil.equalStrings(v2Url, v1Url)) {
+        if (isEqualUpToFinalSlash(v1Url, v2Url)) {
+          log.debug2("Using fetch URL with slash (" + v2Url +
+                     ") in place of CU URL (" + v1Url + ")");
+        } else {
+          log.debug2("Using fetch URL (" + v2Url +
+                     ") in place of CU URL (" + v1Url + ")");
+        }
       }
     }
     catch (Exception ex) {
