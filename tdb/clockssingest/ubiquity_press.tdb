@@ -3451,7 +3451,7 @@
       au < exists ; exists ; 2019 ; 71 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2019 ; 2019 ; https://a.tellusjournals.se/ ; >
       au < exists ; exists ; 2020 ; 72 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2020 ; 2020 ; https://a.tellusjournals.se/ ; >
       au < exists ; exists ; 2021 ; 73 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2021 ; 2021 ; https://a.tellusjournals.se/ ; >
-      au < expected ; exists ; 2022 ; 74 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2022 ; 2022 ; https://a.tellusjournals.se/ ; >
+      au < notReady ; exists ; 2022 ; 74 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2022 ; 2022 ; https://a.tellusjournals.se/ ; > #Lists all volumes.
 
   }
 
@@ -3505,9 +3505,148 @@
       au < exists ; exists ; 2019 ; 37 ; Tellus B: Chemical and Physical Meteorology Volume 2019 ; 2019 ; https://b.tellusjournals.se/ ; >
       au < exists ; exists ; 2020 ; 38 ; Tellus B: Chemical and Physical Meteorology Volume 2020 ; 2020 ; https://b.tellusjournals.se/ ; >
       au < exists ; exists ; 2021 ; 39 ; Tellus B: Chemical and Physical Meteorology Volume 2021 ; 2021 ; https://b.tellusjournals.se/ ; >
-      au < expected ; exists ; 2022 ; 40 ; Tellus B: Chemical and Physical Meteorology Volume 2022 ; 2022 ; https://b.tellusjournals.se/ ; >
+      au < notReady ; exists ; 2022 ; 40 ; Tellus B: Chemical and Physical Meteorology Volume 2022 ; 2022 ; https://b.tellusjournals.se/ ; > # Lists all volumes.
 
   }
 
 }
 
+{
+  publisher <
+    name = De Montfort University
+  >
+
+    provider = Ubiquity Press
+    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
+    implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
+
+  {
+
+      title <
+        name = Gateway Papers ;
+        eissn = 2044-852X
+      >
+
+      comment[publisher] = De Montfort University
+#      param[base_url] = https://gp.demontfortuniversitypress.org/
+
+      au < exists ; exists ; 2010 ; 1 ; Gateway Papers Volume 2010 ; 2010 ; https://gp.demontfortuniversitypress.org/ ; >
+      au < manifest ; exists ; 2021 ; 12 ; Gateway Papers Volume 2021 ; 2021 ; https://gp.demontfortuniversitypress.org/ ; >
+      au < manifest ; exists ; 2022 ; 13 ; Gateway Papers Volume 2022 ; 2022 ; https://gp.demontfortuniversitypress.org/ ; >
+
+  }
+
+}
+{
+  publisher <
+    name = IJS Press
+  >
+
+    provider = Ubiquity Press
+    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
+    implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
+
+  {
+
+      title <
+        name = International Journal of Digital Health ;
+        eissn = 2634-4580
+      >
+
+      comment[publisher] = IJS Press
+#      param[base_url] = https://ijdigitalhealth.com/
+
+      au < manifest ; exists ; 2021 ; 1 ; International Journal of Digital Health Volume 2021 ; 2021 ; https://ijdigitalhealth.com/ ; >
+      au < manifest ; exists ; 2022 ; 2 ; International Journal of Digital Health Volume 2022 ; 2022 ; https://ijdigitalhealth.com/ ; >
+
+  }
+
+}
+{
+  publisher <
+    name = Ubiquity Press
+  >
+
+    provider = Ubiquity Press
+    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
+    implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
+
+  {
+
+      title <
+        name = International Journal of Educational and Life Transitions ;
+        eissn = 2754-2890
+      >
+
+      comment[publisher] = Ubiquity Press
+#      param[base_url] = https://ijelt.dundee.ac.uk/
+
+      au < expected ; exists ; 2022 ; 1 ; International Journal of Educational and Life Transitions Volume 2022 ; 2022 ; https://ijelt.dundee.ac.uk/ ; >
+
+  }
+
+}
+{
+  publisher <
+    name = Levy Library Press
+  >
+
+    provider = Ubiquity Press
+    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
+    implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
+
+  {
+
+      title <
+        name = ISMMS Journal of Science and Medicine ;
+        eissn = 2690-3865
+      >
+
+      comment[publisher] = Levy Library Press
+#      param[base_url] = https://www.journal-of-science-and-medicine.org/
+
+      au < manifest ; exists ; 2021 ; 1 ; ISMMS Journal of Science and Medicine Volume 2021 ; 2021 ; https://www.journal-of-science-and-medicine.org/ ; >
+      au < expected ; exists ; 2022 ; 2 ; ISMMS Journal of Science and Medicine Volume 2022 ; 2022 ; https://www.journal-of-science-and-medicine.org/ ; >
+
+  }
+
+  {
+
+      title <
+        name = Practical Implementation of Nursing Science ;
+        eissn = 2832-2037
+      >
+
+      comment[publisher] = Levy Library Press
+#      param[base_url] = https://www.practicalimplementationofnursingscience.org/
+
+      au < manifest ; exists ; 2022 ; 1 ; Practical Implementation of Nursing Science Volume 2022 ; 2022 ; https://www.practicalimplementationofnursingscience.org/ ; >
+
+  }
+
+}
+{
+  publisher <
+    name = Ubiquity Press
+  >
+
+    provider = Ubiquity Press
+    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
+    implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
+
+  {
+
+      title <
+        name = Swiss Psychology Open ;
+        eissn = 2752-5341
+      >
+
+      comment[publisher] = Ubiquity Press
+#      param[base_url] = https://swisspsychologyopen.com/
+
+      au < manifest ; exists ; 2021 ; 1 ; Swiss Psychology Open Volume 2021 ; 2021 ; https://swisspsychologyopen.com/ ; >
+      au < manifest ; exists ; 2022 ; 2 ; Swiss Psychology Open Volume 2022 ; 2022 ; https://swisspsychologyopen.com/ ; >
+
+  }
+
+}
