@@ -574,9 +574,9 @@
       comment[publisher] = Stockholm University Press
 #      param[base_url] = https://njtcg.org/
 
-      au < exists ; exists ; 2020 ; 1 ; Nordic Journal of Transitions, Careers and Guidance Volume 2020 ; 2020 ; https://njtcg.org/ ; >
-      au < exists ; exists ; 2021 ; 2 ; Nordic Journal of Transitions, Careers and Guidance Volume 2021 ; 2021 ; https://njtcg.org/ ; >
-      au < exists ; exists ; 2022 ; 3 ; Nordic Journal of Transitions, Careers and Guidance Volume 2022 ; 2022 ; https://njtcg.org/ ; >
+      au < manifest ; exists ; 2020 ; 1 ; Nordic Journal of Transitions, Careers and Guidance Volume 2020 ; 2020 ; https://njtcg.org/ ; >
+      au < manifest ; exists ; 2021 ; 2 ; Nordic Journal of Transitions, Careers and Guidance Volume 2021 ; 2021 ; https://njtcg.org/ ; >
+      au < manifest ; exists ; 2022 ; 3 ; Nordic Journal of Transitions, Careers and Guidance Volume 2022 ; 2022 ; https://njtcg.org/ ; >
 
   }
 
@@ -1277,8 +1277,8 @@
 #      use this
       #nothing published in 2011
 
-      au < exists ; exists ; 1998 ; 1998 ; Journal of Interactive Media in Education Volume 1998 ; 1998 ; https://jime.open.ac.uk/ ; >
-      au < exists ; exists ; 1999 ; 1999 ; Journal of Interactive Media in Education Volume 1999 ; 1999 ; https://jime.open.ac.uk/ ; >
+      au < manifest ; exists ; 1998 ; 1998 ; Journal of Interactive Media in Education Volume 1998 ; 1998 ; https://jime.open.ac.uk/ ; >
+      au < manifest ; exists ; 1999 ; 1999 ; Journal of Interactive Media in Education Volume 1999 ; 1999 ; https://jime.open.ac.uk/ ; >
       au < finished ; finished ; 2000 ; 2000 ; Journal of Interactive Media in Education Volume 2000 ; 2000 ; https://jime.open.ac.uk/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2001 ; 2001 ; Journal of Interactive Media in Education Volume 2001 ; 2001 ; https://jime.open.ac.uk/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2002 ; 2002 ; Journal of Interactive Media in Education Volume 2002 ; 2002 ; https://jime.open.ac.uk/ ; reingest5.clockss.org:8082 >
@@ -1297,10 +1297,10 @@
       au < doNotProcess ; exists ; 2016 ; 2016 ; Journal of Interactive Media in Education Volume 2016 ; 2016 ; https://jime.open.ac.uk/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2017 ; 2017 ; Journal of Interactive Media in Education Volume 2017 ; 2017 ; https://jime.open.ac.uk/ ; reingest3.clockss.org:8083 > #no www
       au < finished ; frozen ; 2018 ; 2018 ; Journal of Interactive Media in Education Volume 2018 ; 2018 ; https://jime.open.ac.uk/ ; reingest1.clockss.org:8082 > #no www
-      au < exists ; exists ; 2019 ; 2019 ; Journal of Interactive Media in Education Volume 2019 ; 2019 ; https://jime.open.ac.uk/ ; >
-      au < exists ; exists ; 2020 ; 2020 ; Journal of Interactive Media in Education Volume 2020 ; 2020 ; https://jime.open.ac.uk/ ; >
-      au < exists ; exists ; 2021 ; 2021 ; Journal of Interactive Media in Education Volume 2021 ; 2021 ; https://jime.open.ac.uk/ ; >
-      au < exists ; exists ; 2022 ; 2022 ; Journal of Interactive Media in Education Volume 2022 ; 2022 ; https://jime.open.ac.uk/ ; >
+      au < manifest ; exists ; 2019 ; 2019 ; Journal of Interactive Media in Education Volume 2019 ; 2019 ; https://jime.open.ac.uk/ ; >
+      au < manifest ; exists ; 2020 ; 2020 ; Journal of Interactive Media in Education Volume 2020 ; 2020 ; https://jime.open.ac.uk/ ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Journal of Interactive Media in Education Volume 2021 ; 2021 ; https://jime.open.ac.uk/ ; >
+      au < manifest ; exists ; 2022 ; 2022 ; Journal of Interactive Media in Education Volume 2022 ; 2022 ; https://jime.open.ac.uk/ ; >
     }
   }
 
