@@ -164,6 +164,8 @@ public interface UrlFetcher {
   
   public LockssWatchdog getWatchdog();
   
+  public void pokeWatchdog();
+
   public static class RedirectScheme {
     /** Follow redirects */
     public static final int REDIRECT_OPTION_FOLLOW_AUTO = 1;

@@ -144,6 +144,10 @@ public class MockUrlCacher implements UrlCacher {
     return wdog;
   }
 
+  public void pokeWatchdog() {
+    getWatchdog().pokeWDog();
+  }
+
   public void setupCachedUrl(String contents) {
     MockCachedUrl cu = new MockCachedUrl(url);
     cu.setProperties(headers);
