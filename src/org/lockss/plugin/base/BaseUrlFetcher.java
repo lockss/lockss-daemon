@@ -912,6 +912,10 @@ public class BaseUrlFetcher implements UrlFetcher {
     return wdog;
   }
   
+  public void pokeWatchdog() {
+    getWatchdog().pokeWDog();
+  }
+
   /**
    * <p>
    * Determines if the triple of a fetch URL, its redirect URL, and the

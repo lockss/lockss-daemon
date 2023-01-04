@@ -112,7 +112,7 @@ public class CuChecker extends Worker {
       }
       boolean isMatch = compareMetadata(au, cu, artifact, collectionDate);
       if (!isMatch) {
-        String err = cu.getUrl() + " V1 and V2 metadata did not match.";
+        String err = cu.getUrl() + ": V1 and V2 metadata did not match.";
         task.addError(err);
       }
       else {
@@ -125,7 +125,7 @@ public class CuChecker extends Worker {
         isMatch = IOUtils.contentEquals(artifactData.getInputStream(),
             cu.getUncompressedInputStream());
         if (!isMatch) {
-          String err = cu.getUrl() + "V1 and V2 artifact content did not match.";
+          String err = cu.getUrl() + ": V1 and V2 artifact content did not match.";
           log.warning(err);
           task.addError(err);
         }
@@ -163,7 +163,7 @@ public class CuChecker extends Worker {
       }
     }
     catch (ApiException | IOException ex) {
-      String err = cu.getUrl() + "Error checking cu: " + ex.getMessage();
+      String err = cu.getUrl() + ": Error checking cu: " + ex.getMessage();
       log.error(err, ex);
       task.addError(err);
       // change to failed check counter

@@ -28,6 +28,18 @@ public class TestV2AuMover extends LockssTestCase {
 
 //   private static Logger log = Logger.getLogger("TestV2AuMover");
 
+  public void testIsEqualUpToFinalSlash() {
+    assertFalse(V2AuMover.isEqualUpToFinalSlash(null, null));
+    assertFalse(V2AuMover.isEqualUpToFinalSlash("foo", null));
+    assertFalse(V2AuMover.isEqualUpToFinalSlash(null, "foo"));
+    assertFalse(V2AuMover.isEqualUpToFinalSlash(null, "foo/"));
+    assertFalse(V2AuMover.isEqualUpToFinalSlash("foo", "foo"));
+    assertTrue(V2AuMover.isEqualUpToFinalSlash("foo", "foo/"));
+    assertFalse(V2AuMover.isEqualUpToFinalSlash("foo", "foo//"));
+    assertFalse(V2AuMover.isEqualUpToFinalSlash("foo/", "foo"));
+    assertTrue(V2AuMover.isEqualUpToFinalSlash("foo", "foo/"));
+  }
+
 //   V2AuMover auMover;
 //   String tempDirPath;
 //   String testUser = "tester";

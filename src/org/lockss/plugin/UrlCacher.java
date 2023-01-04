@@ -95,6 +95,8 @@ public interface UrlCacher {
   
   public LockssWatchdog getWatchdog();
 
+  public void pokeWatchdog();
+
   /**
    * Copies the content and properties from the source into the cache.
    * Fetches content with if-modified-since unless REFETCH_FLAG is set.

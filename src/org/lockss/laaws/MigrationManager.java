@@ -93,7 +93,9 @@ public class MigrationManager extends BaseLockssManager
     } else {
       stat.put(STATUS_RUNNING, mover.isRunning());
       stat.put(STATUS_STATUS, mover.getCurrentStatus());
-      stat.put(STATUS_INSTRUMENTS, mover.getInstruments());
+      if (mover.isShowInstrumentation()) {
+        stat.put(STATUS_INSTRUMENTS, mover.getInstruments());
+      }
       if (!mover.getActiveStatusList().isEmpty()) {
         stat.put(STATUS_ACTIVE_LIST, mover.getActiveStatusList());
       }

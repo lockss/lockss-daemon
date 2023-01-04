@@ -167,6 +167,10 @@ public class MockUrlFetcher implements UrlFetcher {
     return wdog;
   }
 
+  public void pokeWatchdog() {
+    getWatchdog().pokeWDog();
+  }
+
   public void setCachingException(IOException e, int numTimesToThrow) {
     this.cachingException = e;
     this.numTimesToThrow = numTimesToThrow;
