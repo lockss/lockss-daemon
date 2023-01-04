@@ -5609,7 +5609,7 @@
       au < finished ; crawling ; 2019 ; Dentistry and Medical Research Volume 7 ; 2019 ; 7 ; https://www.dmrjournal.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Dentistry and Medical Research Volume 8 ; 2020 ; 8 ; https://www.dmrjournal.org/ ; ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2021 ; Dentistry and Medical Research Volume 9 ; 2021 ; 9 ; https://www.dmrjournal.org/ ; ; >
-      au < expected ; exists ; 2022 ; Dentistry and Medical Research Volume 10 ; 2022 ; 10 ; https://www.dmrjournal.org/ ; ; >
+      au < manifest ; exists ; 2022 ; Dentistry and Medical Research Volume 10 ; 2022 ; 10 ; https://www.dmrjournal.org/ ; ; >
 
   }
 
@@ -7158,7 +7158,7 @@
       au < finished ; crawling ; 2019 ; Journal of Health Research and Reviews Volume 6 ; 2019 ; 6 ; https://www.jhrr.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Journal of Health Research and Reviews Volume 7 ; 2020 ; 7 ; https://www.jhrr.org/ ; ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2021 ; Journal of Health Research and Reviews Volume 8 ; 2021 ; 8 ; https://www.jhrr.org/ ; ; >
-      au < expected ; exists ; 2022 ; Journal of Health Research and Reviews Volume 9 ; 2022 ; 9 ; https://www.jhrr.org/ ; ; >
+      au < manifest ; exists ; 2022 ; Journal of Health Research and Reviews Volume 9 ; 2022 ; 9 ; https://www.jhrr.org/ ; ; >
 
   }
 
@@ -10335,7 +10335,7 @@
       au < finished ; crawling ; 2019 ; Journal of Cardiothoracic Trauma Volume 4 ; 2019 ; 4 ; https://www.jctt.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Journal of Cardiothoracic Trauma Volume 5 ; 2020 ; 5 ; https://www.jctt.org/ ; ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2021 ; Journal of Cardiothoracic Trauma Volume 6 ; 2021 ; 6 ; https://www.jctt.org/ ; ; >
-      au < expected ; exists ; 2022 ; Journal of Cardiothoracic Trauma Volume 7 ; 2022 ; 7 ; https://www.jctt.org/ ; ; >
+      au < manifest ; exists ; 2022 ; Journal of Cardiothoracic Trauma Volume 7 ; 2022 ; 7 ; https://www.jctt.org/ ; ; >
 
   }
 

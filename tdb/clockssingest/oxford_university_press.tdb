@@ -5147,7 +5147,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; Epidemiologic Reviews Volume 40 ; 40 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Epidemiologic Reviews Volume 41 ; 41 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Epidemiologic Reviews Volume 42 ; 42 ; >
-    au < expected ; exists ; 2021 ; 2021 ; Epidemiologic Reviews Volume 43 ; 43 ; >
+    au < manifest ; exists ; 2021 ; 2021 ; Epidemiologic Reviews Volume 43 ; 43 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Epidemiologic Reviews Volume 44 ; 44 ; >
 
   }
@@ -5527,7 +5527,7 @@
     param[journal_id] = ejendo
     #move from Bioscientifica, 2023-01-01
 
-    au < expected ; exists ; 2022 ; 2022 ; European Journal of Endocrinology Volume 186-187 ; 186-187 ; >
+    au < manifest ; exists ; 2022 ; 2022 ; European Journal of Endocrinology Volume 186-187 ; 186-187 ; >
 
   }
 
