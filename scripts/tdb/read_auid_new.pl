@@ -3567,43 +3567,65 @@ while (my $line = <>) {
     }
     sleep(4);
     
-  } elsif ($plugin eq "ClockssSilvaFennicaPlugin") {
-    #Url with list of articles https://www.silvafennica.fi/issue/sf/volume/50
-    $url = sprintf("%sissue/%s/volume/%s",
-        $param{base_url}, $param{journal_id}, $param{volume_name});
-    $start_url = uri_unescape($url);
-    my $req_s = HTTP::Request->new(GET, $start_url);
-    my $resp_s = $ua->request($req_s);
-    #For reporting at the end
-    $man_url = $start_url;
-    if ($resp_s->is_success) {
-      my $start_contents = $resp_s->content;
-      if (defined($start_contents) && ($start_contents =~ m/>(Silva Fennica vol. $param{volume_name})</)) {
-        $vol_title = $1;
-        $result = "Manifest"
-      } else {
-        $result = "--NO_TAG--"
-      }
-    } else {
-      $result = "--REQ_FAIL--"
-    }
-    sleep(4);
+#  } elsif ($plugin eq "ClockssSilvaFennicaPlugin") {
+#    #Old Url with list of articles https://www.silvafennica.fi/issue/sf/volume/50
+#    #$url = sprintf("%sissue/%s/volume/%s",
+#    #New start url: "%svolume/%s", base_url, volume_name
+#    #New permission url: "%s", base_url
+#    $url = sprintf("%svolume/%s",
+#        $param{base_url}, $param{volume_name});
+#    $start_url = uri_unescape($url);
+#    my $req_s = HTTP::Request->new(GET, $start_url);
+#    my $resp_s = $ua->request($req_s);
+#    #For reporting at the end
+#    $man_url = $start_url;
+#    if ($resp_s->is_success) {
+#      my $start_contents = $resp_s->content;
+#      if (defined($start_contents) && ($start_contents =~ m/>(Silva Fennica vol. $param{volume_name})</)) {
+#        $vol_title = $1;
+#        $result = "Manifest"
+#      } else {
+#        $result = "--NO_TAG--"
+#      }
+#    } else {
+#      $result = "--REQ_FAIL--"
+#    }
+#    sleep(4);
     
-      } elsif ($plugin eq "ClockssSilvaFennicaNoJidPlugin") {
-    $url = sprintf("%sissue/volume/%s",
+  } elsif ($plugin eq "ClockssSilvaFennicaNoJidPlugin" || $plugin eq "ClockssSilvaFennicaPlugin") {
+    #Old url with list of articles https://www.silvafennica.fi/issue/sf/volume/50
+    #$url = sprintf("%sissue/%s/volume/%s",
+    #Old url with list of articles https://www.dissertationesforestales.fi/issue/volume/2021
+    #$url = sprintf("%sissue/volume/%s",
+
+    #New start url: "%svolume/%s", base_url, volume_name
+    $url_s = sprintf("%svolume/%s",
         $param{base_url}, $param{volume_name});
-    $start_url = uri_unescape($url);
+    $start_url = uri_unescape($url_s);
     my $req_s = HTTP::Request->new(GET, $start_url);
     my $resp_s = $ua->request($req_s);
+    #New permission url: "%s", base_url
+    $url_p = sprintf("%s",
+        $param{base_url});
+    $perm_url = uri_unescape($url_p);
+    my $req_p = HTTP::Request->new(GET, $perm_url);
+    my $resp_p = $ua->request($req_p);
     #For reporting at the end
     $man_url = $start_url;
-    if ($resp_s->is_success) {
+    if ($resp_s->is_success && $resp_p->is_success) {
       my $start_contents = $resp_s->content;
-      if (defined($start_contents) && ($start_contents =~ m/<h1>([A-Z][^<]+ $param{volume_name})</)) {
-        $vol_title = $1;
-        $result = "Manifest"
+      my $perm_contents = $resp_p->content;
+      if (defined($perm_contents) && ($perm_contents =~ m/$cc_license_url/)) {
+        if (defined($start_contents) && ($start_contents =~ m/<h1>\s*([A-Z][^<]+ $param{volume_name})[^<]*</)) {
+          $vol_title = $1;
+          $vol_title =~ s/\s*\n\s*/ /g;
+          $result = "Manifest"
+        } else {
+            $result = "--NO_CONT--"
+        }
       } else {
-        $result = "--NO_TAG--"
+        $result = "--NO_TAG--";
+        $vol_title = $perm_url
       }
     } else {
       $result = "--REQ_FAIL--"
