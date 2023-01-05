@@ -162,10 +162,10 @@
       au < manifest ; 2012 ; Mathematical Proceedings of the Royal Irish Academy Volume 112A [2012] ; 16472 >
       au < manifest ; 2013 ; Mathematical Proceedings of the Royal Irish Academy Volume 113A [2013] ; 16471 >
       au < manifest ; 2014 ; Mathematical Proceedings of the Royal Irish Academy Volume 114A [2014] ; 16470 >
-      au < manifest ; 2015 ; Mathematical Proceedings of the Royal Irish Academy Volume 115A [2015] ; 16469 >
-      au < manifest ; 2016 ; Mathematical Proceedings of the Royal Irish Academy Volume 116A [2016] ; 16468 >
-      au < manifest ; 2017 ; Mathematical Proceedings of the Royal Irish Academy Volume 117A [2017] ; 16467 >
-      au < manifest ; 2018 ; Mathematical Proceedings of the Royal Irish Academy Volume 118A [2018] ; 16466 >
+      au < ready ; 2015 ; Mathematical Proceedings of the Royal Irish Academy Volume 115A [2015] ; 16469 >
+      au < ready ; 2016 ; Mathematical Proceedings of the Royal Irish Academy Volume 116A [2016] ; 16468 >
+      au < ready ; 2017 ; Mathematical Proceedings of the Royal Irish Academy Volume 117A [2017] ; 16467 >
+      au < ready ; 2018 ; Mathematical Proceedings of the Royal Irish Academy Volume 118A [2018] ; 16466 >
       au < manifest ; 2023 ; Mathematical Proceedings of the Royal Irish Academy Volume 123A [2023] ; 17396 >
 
     }
@@ -179,27 +179,27 @@
 
       attr[journal_id] = 813
 
-      au < manifest ; 2019 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 119A [2019] ; 16391 >
-      au < manifest ; 2020 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 120A [2020] ; 16390 >
-      au < manifest ; 2021 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 121A [2021] ; 16696 >
+      au < ready ; 2019 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 119A [2019] ; 16391 >
+      au < ready ; 2020 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 120A [2020] ; 16390 >
+      au < ready ; 2021 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 121A [2021] ; 16696 >
       au < manifest ; 2022 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 122A [2022] ; 17397 >
-      au < manifest ; 2002 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 102C [2002] ; 16408 >
-      au < manifest ; 2003 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 103C [2003] ; 16407 >
-      au < manifest ; 2004 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 104C [2004] ; 16406 >
-      au < manifest ; 2005 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 105C [2005] ; 16405 >
-      au < manifest ; 2006 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 106C [2006] ; 16404 >
-      au < manifest ; 2007 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 107C [2007] ; 16403 >
-      au < manifest ; 2008 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 108C [2008] ; 16402 >
-      au < manifest ; 2009 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 109C [2009] ; 16401 >
-      au < manifest ; 2010 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 110C [2010] ; 16400 >
-      au < manifest ; 2011 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 111C [2011] ; 16399 >
-      au < manifest ; 2012 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 112C [2012] ; 16398 >
-      au < manifest ; 2013 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 113C [2013] ; 16397 >
-      au < manifest ; 2014 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 114C [2014] ; 16396 >
-      au < manifest ; 2015 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 115C [2015] ; 16395 >
-      au < manifest ; 2016 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 116C [2016] ; 16394 >
-      au < manifest ; 2017 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 117C [2017] ; 16393 >
-      au < manifest ; 2018 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 118C [2018] ; 16392 >
+      au < ready ; 2002 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 102C [2002] ; 16408 >
+      au < ready ; 2003 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 103C [2003] ; 16407 >
+      au < ready ; 2004 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 104C [2004] ; 16406 >
+      au < ready ; 2005 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 105C [2005] ; 16405 >
+      au < ready ; 2006 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 106C [2006] ; 16404 >
+      au < ready ; 2007 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 107C [2007] ; 16403 >
+      au < ready ; 2008 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 108C [2008] ; 16402 >
+      au < ready ; 2009 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 109C [2009] ; 16401 >
+      au < ready ; 2010 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 110C [2010] ; 16400 >
+      au < ready ; 2011 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 111C [2011] ; 16399 >
+      au < ready ; 2012 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 112C [2012] ; 16398 >
+      au < ready ; 2013 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 113C [2013] ; 16397 >
+      au < ready ; 2014 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 114C [2014] ; 16396 >
+      au < ready ; 2015 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 115C [2015] ; 16395 >
+      au < ready ; 2016 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 116C [2016] ; 16394 >
+      au < ready ; 2017 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 117C [2017] ; 16393 >
+      au < ready ; 2018 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 118C [2018] ; 16392 >
 
     }
 
