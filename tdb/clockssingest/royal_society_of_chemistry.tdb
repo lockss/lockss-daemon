@@ -831,7 +831,7 @@
     >
 
       param[journal_code] = mt
-      #complete
+      #complete. Moved to OUP as of January 2021.
 
       au < finished ; crawling ; 2009 ; Metallomics Volume 1 ; 1 ; 2009 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2010 ; Metallomics Volume 2 ; 2 ; 2010 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
@@ -845,9 +845,7 @@
       au < finished ; crawling ; 2018 ; Metallomics Volume 10 ; 10 ; 2018 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; Metallomics Volume 11 ; 11 ; 2019 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Metallomics Volume 12 ; 12 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < expected ; exists ; 2021 ; Metallomics Volume 13 ; 13 ; 2021 ; https://pubs.rsc.org/ ; >
-      au < expected ; exists ; 2022 ; Metallomics Volume 14 ; 14 ; 2022 ; https://pubs.rsc.org/ ; >
-
+      #Moved to OUP
   }
 
   {
@@ -1052,7 +1050,7 @@
     >
 
       param[journal_code] = pp
-      #complete
+      #complete. Moved to Springer
 
       au < finished ; crawling ; 2002 ; Photochemical & Photobiological Sciences Volume 1 ; 1 ; 2002 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2003 ; Photochemical & Photobiological Sciences Volume 2 ; 2 ; 2003 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
@@ -1073,9 +1071,7 @@
       au < finished ; crawling ; 2018 ; Photochemical & Photobiological Sciences Volume 17 ; 17 ; 2018 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; Photochemical & Photobiological Sciences Volume 18 ; 18 ; 2019 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; Photochemical & Photobiological Sciences Volume 19 ; 19 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < expected ; exists ; 2021 ; Photochemical & Photobiological Sciences Volume 20 ; 20 ; 2021 ; https://pubs.rsc.org/ ; >
-      au < expected ; exists ; 2022 ; Photochemical & Photobiological Sciences Volume 21 ; 21 ; 2022 ; https://pubs.rsc.org/ ; >
-
+      #Moved to Springer
   }
 
   {
