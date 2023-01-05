@@ -811,7 +811,8 @@ s api client with long timeout */
         log.error("Unexpect exception starting AU verify", ex);
         updateReport(auStat);
         totalAusWithErrors++;
-        String err = auName + ": Attempt to verify Au failed: " + ex.getMessage();
+        String err = "Attempt to verify AU failed: " + auName +
+          ": " + ex.getMessage();
         auStat.addError(err);
         terminated = true;
       }
@@ -852,7 +853,8 @@ s api client with long timeout */
         log.error("Unexpect exception starting AU copy", ex);
         updateReport(auStat);
         totalAusWithErrors++;
-        String err = auName + ": Attempt to move Au failed: " + ex.getMessage();
+        String err = "Attempt to move AU failed: " + auName +
+          ": " + ex.getMessage();
         auStat.addError(err);
         terminated = true;
       }
@@ -1367,12 +1369,12 @@ s api client with long timeout */
         return;
       } else {
         //LockssRestServiceException: The namespace does not exist
-        String err = "Error occurred while retrieving V2 Au list: " + apie.getMessage();
+        String err = "Error occurred while retrieving V2 AU list: " + apie.getMessage();
         totalCounters.addError(err);
         log.error(err, apie);
         String msg = apie.getCode() == 0 ? apie.getMessage()
           : apie.getCode() + " - " + apie.getMessage();
-        throw new IOException("Unable to get Au List from V2 Repository: " + msg);
+        throw new IOException("Unable to get AU List from V2 Repository: " + msg);
       }
     }
   }
@@ -1978,7 +1980,7 @@ s api client with long timeout */
                                                   CREATE, APPEND),
                             true);
       res.println("--------------------------------------------------");
-      res.println("  V2 Au Migration " + title + " - " + now);
+      res.println("  V2 AU Migration " + title + " - " + now);
       res.println("--------------------------------------------------");
       res.println();
       if (res.checkError()) {
@@ -1993,7 +1995,7 @@ s api client with long timeout */
   }
 
   /**
-   * Update the report for the current Au.
+   * Update the report for the current AU.
    * @param auStat The AuStatus for this ArchivalUnit.
    */
   void updateReport(AuStatus auStat) {

@@ -84,20 +84,20 @@ public class AuStateChecker extends Worker {
   public void run() {
     try {
       String auName = au.getName();
-      log.debug2("Starting Au State Check: " + auName);
-      log.info(auName + ": Checking AU Agreements...");
+      log.debug2("Starting AU State Check: " + auName);
+      log.info("Checking AU Agreements: " + auName);
       checkAuAgreements(au);
-      log.info(auName + ": Checking AU Suspect Urls...");
+      log.info("Checking AU Suspect Urls: " + auName);
       checkAuSuspectUrlVersions(au);
-      log.info(auName + ": Checking No Au Peer Set...");
+      log.info("Checking No AU Peer Set: " + auName);
       checkNoAuPeerSet(au);
-      log.info(auName + ": Checking AU State...");
+      log.info("Checking AU State: " + auName);
       checkAuState(au);
-      log.info(auName + ": Checking AU Configuration...");
+      log.info("Checking AU Configuration: " + auName);
       checkAuConfig(au);
     }
     catch (Exception ex) {
-      String msg = "Au State Check failed: " + ex.getMessage();
+      String msg = "AU State Check failed: " + ex.getMessage();
       log.error(msg, ex);
       task.addError(msg);
     }
@@ -118,24 +118,25 @@ public class AuStateChecker extends Worker {
             .create();
         AuAgreementsBean v2Bean = gson.fromJson(json, AuAgreementsBean.class);
         if (v2Bean.equals(v1Bean)) {
-          log.info("V2 Au Agreements are the same");
+          log.info("V2 AU Agreements are the same");
         }
         else {
           if (log.isDebug()) {
             log.debug("AuAgreements v1Bean: " + v1Bean.toString());
             log.debug("AuAgreements v2Bean: " + v2Bean.toString());
           }
-          err = auName + ": V2 Au Agreements do not match.";
+          err = "V2 AU Agreements do not match: " + auName;
           log.error(err);
         }
       }
       catch (Exception ex) {
-        err = auName + ": Attempt to check v2 au agreements failed: " + ex.getMessage();
+        err = "Attempt to check v2 au agreements failed: " + auName +
+                                      ": " + ex.getMessage();
         log.error(err, ex);
       }
     }
     else {
-      log.warning("No Au agreements found for au in V1");
+      log.warning("No AU agreements found for au in V1");
     }
     if (err != null) {
       task.addError(err);
@@ -155,24 +156,25 @@ public class AuStateChecker extends Worker {
         final String json = cfgApiClient.getAuSuspectUrlVersions(au.getAuId());
         AuSuspectUrlVersionsBean v2Bean = new Gson().fromJson(json, AuSuspectUrlVersionsBean.class);
         if (v2Bean.equals(v1Bean)) {
-          log.info("V2 Au Suspect Url Versions are the same");
+          log.info("V2 AU Suspect Url Versions are the same");
         }
         else {
           if (log.isDebug()) {
             log.debug("AuSuspectUrlVersions v1Bean: " + v1Bean.toString());
               log.debug("AuSuspectUrlVersions v2Bean: " + v2Bean.toString());
           }
-          err = auName + ": V2 Au Suspect Url Versions do not match.";
+          err = "V2 AU Suspect Url Versions do not match: " + auName;
           log.error(err);
         }
       }
       catch (Exception ex) {
-        err = auName + ": Attempt to check au suspect url versions failed: " + ex.getMessage();
+        err = "Attempt to check au suspect url versions failed: " + auName +
+          ": " + ex.getMessage();
         log.error(err, ex);
       }
     }
     else {
-      log.info(auName + ": No v1 Au suspect url versions found.");
+      log.info("No v1 AU suspect url versions found: " + auName);
     }
     if (err != null) {
       task.addError(err);
@@ -199,18 +201,19 @@ public class AuStateChecker extends Worker {
             log.debug("NoAuPeerSet v1Bean: " + v1Bean.toString());
             log.debug("NoAuPeerSet v2Bean: "+ v2Bean.toString());
           }
-          err = auName + ": V2 No AU PeerSet do not match.";
+          err = "V2 No AU PeerSet mismatch: " + auName;
           log.error(err);
         }
-        log.info(auName + ": Successfully checked no Au peer set.");
+        log.info("Successfully checked no AU peer set: " + auName);
       }
       catch (Exception ex) {
-        err = auName + ": Attempt to check no AU peer set failed: " + ex.getMessage();
+        err = "Attempt to check no AU peer set failed: " + auName +
+          ": " + ex.getMessage();
         log.error(err, ex);
       }
     }
     else {
-      log.warning(auName + ": No Au peer set found for au");
+      log.warning("No AU peer set found for au: " + auName);
     }
     if (err != null) {
       task.addError(err);
@@ -230,23 +233,25 @@ public class AuStateChecker extends Worker {
         v2Config = cfgApiClient.getAuConfig(au.getAuId());
         if (v2Config == null) {
           if (!v1Config.getAuConfig().isEmpty()) {
-            err = auName + ": Not configured in V2.";
+            err = "AU not configured in V2: " + auName;
             log.error(err);
           }
         } else if (v2Config.equals(v1Config)) {
-          log.info("Au Config is the same");
+          log.info("AU Config is the same");
         } else {
           if (log.isDebug()) {
             log.debug("AuConfiguration v1Bean: " + v1Config.toString());
             log.debug("AuConfiguration v2Bean: "+ v2Config.toString());
           }
-          err = auName + ": V2 AU Configuration does not match.";
+          err = "AU Configuration mismatch: " + auName +
+            ": V1: " + v1Config + ", V2: " + v2Config;
           log.error(err);
         }
       }
     }
     catch (Exception ex) {
-      err = auName + ": Attempt to check v2 Au configuration failed: " + ex.getMessage();
+      err = "Attempt to check v2 AU configuration failed: " + auName +
+        ": " + ex.getMessage();
       log.error(err, ex);
     }
     if (err != null) {
@@ -274,18 +279,19 @@ public class AuStateChecker extends Worker {
             log.debug("AuState v1Bean: "+ v1Bean.toString());
             log.debug("AuState v2Bean: "+ v2Bean.toString());
           }
-          err = auName + ": V2 AuState does not match.";
+          err = "V2 AuState mismatch: " + auName +
+            ": V1: " + v1Bean + ", V2: " + v2Bean;
           log.error(err);
         }
       }
       catch (ApiException apie) {
-        err = auName + ": Attempt to check au state failed: " + apie.getCode() +
-            "- " + apie.getMessage();
+        err = "Attempt to check AU state failed: " + auName +
+          ": " + apie.getCode() + "- " + apie.getMessage();
         log.error(err, apie);
       }
     }
     else {
-      log.warning(auName + ": No State information found for au");
+      log.warning("No State information found for au: " + auName);
     }
     if (err != null) {
       task.addError(err);
