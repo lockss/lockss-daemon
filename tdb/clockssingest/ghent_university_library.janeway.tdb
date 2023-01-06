@@ -177,7 +177,7 @@
       param[journal_id] = jeps
 
       au < manifest ; exists ; 2016 ; 2016 ; 2016 ; Journal of European Periodical Studies Volume 2016 ; >
-      au < ready ; exists ; 2017 ; 2017 ; 2017 ; Journal of European Periodical Studies Volume 2017 ; >
+      au < crawling ; exists ; 2017 ; 2017 ; 2017 ; Journal of European Periodical Studies Volume 2017 ; >
       au < frozen ; exists ; 2018 ; 2018 ; 2018 ; Journal of European Periodical Studies Volume 2018 ; >
       au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Journal of European Periodical Studies Volume 2019 ; >
       au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Journal of European Periodical Studies Volume 2020 ; >
@@ -215,7 +215,7 @@
       au < manifest ; exists ; 2014 ; 2014 ; 2014 ; Vlaams Diergeneeskundig Tijdschrift Volume 2014 ; >
       au < manifest ; exists ; 2015 ; 2015 ; 2015 ; Vlaams Diergeneeskundig Tijdschrift Volume 2015 ; >
       au < manifest ; exists ; 2016 ; 2016 ; 2016 ; Vlaams Diergeneeskundig Tijdschrift Volume 2016 ; >
-      au < ready ; exists ; 2017 ; 2017 ; 2017 ; Vlaams Diergeneeskundig Tijdschrift Volume 2017 ; >
+      au < crawling ; exists ; 2017 ; 2017 ; 2017 ; Vlaams Diergeneeskundig Tijdschrift Volume 2017 ; >
       au < frozen ; exists ; 2018 ; 2018 ; 2018 ; Vlaams Diergeneeskundig Tijdschrift Volume 2018 ; >
       au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Vlaams Diergeneeskundig Tijdschrift Volume 2019 ; >
       au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Vlaams Diergeneeskundig Tijdschrift Volume 2020 ; >
@@ -243,7 +243,7 @@
       au < manifest ; exists ; 2014 ; 2014 ; 2014 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2014 ; >
       au < manifest ; exists ; 2015 ; 2015 ; 2015 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2015 ; >
       au < manifest ; exists ; 2016 ; 2016 ; 2016 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2016 ; >
-      au < ready ; exists ; 2017 ; 2017 ; 2017 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2017 ; >
+      au < crawling ; exists ; 2017 ; 2017 ; 2017 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2017 ; >
       au < frozen ; exists ; 2018 ; 2018 ; 2018 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2018 ; >
       au < frozen ; exists ; 2019 ; 2019 ; 2019 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2019 ; >
       au < frozen ; exists ; 2020 ; 2020 ; 2020 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2020 ; >
@@ -294,8 +294,8 @@
       au < manifest ; exists ; 2013 ; 2013 ; 2013 ; Afrika Focus Volume 2013 ; >
       au < manifest ; exists ; 2014 ; 2014 ; 2014 ; Afrika Focus Volume 2014 ; >
       au < manifest ; exists ; 2015 ; 2015 ; 2015 ; Afrika Focus Volume 2015 ; >
-      au < ready ; exists ; 2016 ; 2016 ; 2016 ; Afrika Focus Volume 2016 ; >
-      au < ready ; exists ; 2017 ; 2017 ; 2017 ; Afrika Focus Volume 2017 ; >
+      au < crawling ; exists ; 2016 ; 2016 ; 2016 ; Afrika Focus Volume 2016 ; >
+      au < crawling ; exists ; 2017 ; 2017 ; 2017 ; Afrika Focus Volume 2017 ; >
       au < frozen ; exists ; 2018 ; 2018 ; 2018 ; Afrika Focus Volume 2018 ; >
       au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Afrika Focus Volume 2019 ; >
       au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Afrika Focus Volume 2020 ; >
@@ -344,8 +344,8 @@
       au < manifest ; exists ; 2013 ; 2013 ; 2013 ; Agora Magazine Volume 2013 ; >
       au < manifest ; exists ; 2014 ; 2014 ; 2014 ; Agora Magazine Volume 2014 ; >
       au < manifest ; exists ; 2015 ; 2015 ; 2015 ; Agora Magazine Volume 2015 ; >
-      au < ready ; exists ; 2016 ; 2016 ; 2016 ; Agora Magazine Volume 2016 ; >
-      au < ready ; exists ; 2017 ; 2017 ; 2017 ; Agora Magazine Volume 2017 ; >
+      au < crawling ; exists ; 2016 ; 2016 ; 2016 ; Agora Magazine Volume 2016 ; >
+      au < crawling ; exists ; 2017 ; 2017 ; 2017 ; Agora Magazine Volume 2017 ; >
       au < frozen ; exists ; 2018 ; 2018 ; 2018 ; Agora Magazine Volume 2018 ; >
       au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Agora Magazine Volume 2019 ; >
       au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Agora Magazine Volume 2020 ; >
@@ -409,8 +409,8 @@
       au < manifest ; exists ; 2013 ; 2013 ; 2013 ; Brood & Rozen Volume 2013 ; >
       au < manifest ; exists ; 2014 ; 2014 ; 2014 ; Brood & Rozen Volume 2014 ; >
       au < manifest ; exists ; 2015 ; 2015 ; 2015 ; Brood & Rozen Volume 2015 ; >
-      au < ready ; exists ; 2016 ; 2016 ; 2016 ; Brood & Rozen Volume 2016 ; >
-      au < ready ; exists ; 2017 ; 2017 ; 2017 ; Brood & Rozen Volume 2017 ; >
+      au < crawling ; exists ; 2016 ; 2016 ; 2016 ; Brood & Rozen Volume 2016 ; >
+      au < crawling ; exists ; 2017 ; 2017 ; 2017 ; Brood & Rozen Volume 2017 ; >
       au < frozen ; exists ; 2018 ; 2018 ; 2018 ; Brood & Rozen Volume 2018 ; >
 
   }
@@ -520,7 +520,7 @@
       au < manifest ; exists ; 2014 ; 2014 ; 2014 ; Ghendtsche Tydinghen Volume 2014 ; >
       au < manifest ; exists ; 2015 ; 2015 ; 2015 ; Ghendtsche Tydinghen Volume 2015 ; >
       au < manifest ; exists ; 2016 ; 2016 ; 2016 ; Ghendtsche Tydinghen Volume 2016 ; >
-      au < ready ; exists ; 2017 ; 2017 ; 2017 ; Ghendtsche Tydinghen Volume 2017 ; >
+      au < crawling ; exists ; 2017 ; 2017 ; 2017 ; Ghendtsche Tydinghen Volume 2017 ; >
       au < frozen ; exists ; 2018 ; 2018 ; 2018 ; Ghendtsche Tydinghen Volume 2018 ; >
       au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Ghendtsche Tydinghen Volume 2019 ; >
 
@@ -785,7 +785,7 @@
       au < manifest ; exists ; 2014 ; 2014 ; 2014 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2014 ; >
       au < manifest ; exists ; 2015 ; 2015 ; 2015 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2015 ; >
       au < manifest ; exists ; 2016 ; 2016 ; 2016 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2016 ; >
-      au < ready ; exists ; 2017 ; 2017 ; 2017 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2017 ; >
+      au < crawling ; exists ; 2017 ; 2017 ; 2017 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2017 ; >
       au < frozen ; exists ; 2018 ; 2018 ; 2018 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2018 ; >
       au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2019 ; >
 
@@ -898,7 +898,7 @@
       au < manifest ; exists ; 2014 ; 2014 ; 2014 ; International Journal Sustainable Construction & Design Volume 2014 ; >
       au < manifest ; exists ; 2015 ; 2015 ; 2015 ; International Journal Sustainable Construction & Design Volume 2015 ; >
       au < manifest ; exists ; 2016 ; 2016 ; 2016 ; International Journal Sustainable Construction & Design Volume 2016 ; >
-      au < ready ; exists ; 2017 ; 2017 ; 2017 ; International Journal Sustainable Construction & Design Volume 2017 ; >
+      au < crawling ; exists ; 2017 ; 2017 ; 2017 ; International Journal Sustainable Construction & Design Volume 2017 ; >
 
   }
 
@@ -1115,7 +1115,7 @@
       au < manifest ; exists ; 2014 ; 2014 ; 2014 ; Res Publica Volume 2014 ; >
       au < manifest ; exists ; 2015 ; 2015 ; 2015 ; Res Publica Volume 2015 ; >
       au < manifest ; exists ; 2016 ; 2016 ; 2016 ; Res Publica Volume 2016 ; >
-      au < ready ; exists ; 2017 ; 2017 ; 2017 ; Res Publica Volume 2017 ; >
+      au < crawling ; exists ; 2017 ; 2017 ; 2017 ; Res Publica Volume 2017 ; >
       au < frozen ; exists ; 2018 ; 2018 ; 2018 ; Res Publica Volume 2018 ; >
 
   }
