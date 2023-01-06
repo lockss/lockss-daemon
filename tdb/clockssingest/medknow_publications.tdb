@@ -225,7 +225,7 @@
     au < finished ; frozen ; 2018 ; Annals of Maxillofacial Surgery Volume 8 ; 2018 ; 8 ; http://www.amsjournal.com/ ; ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2019 ; Annals of Maxillofacial Surgery Volume 9 ; 2019 ; 9 ; https://www.amsjournal.com/ ; ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2020 ; Annals of Maxillofacial Surgery Volume 10 ; 2020 ; 10 ; https://www.amsjournal.com/ ; ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2021 ; Annals of Maxillofacial Surgery Volume 11 ; 2021 ; 11 ; https://www.amsjournal.com/ ; ; >
+    au < frozen ; exists ; 2021 ; Annals of Maxillofacial Surgery Volume 11 ; 2021 ; 11 ; https://www.amsjournal.com/ ; ; >
     au < doNotProcess ; exists ; 2022 ; Annals of Maxillofacial Surgery Volume 12 ; 2022 ; 12 ; https://www.amsjournal.com/ ; ; >
 
   }
@@ -2946,23 +2946,23 @@
 
     param[journal_issn] = 2230-8229
 
-    au < manifest ; exists ; 1994 ; Journal of Family and Community Medicine Volume 1 ; 1994 ; 1 ; https://www.jfcmonline.com/ ; ; >
-    au < manifest ; exists ; 1995 ; Journal of Family and Community Medicine Volume 2 ; 1995 ; 2 ; https://www.jfcmonline.com/ ; ; >
-    au < manifest ; exists ; 1996 ; Journal of Family and Community Medicine Volume 3 ; 1996 ; 3 ; https://www.jfcmonline.com/ ; ; >
-    au < manifest ; exists ; 1997 ; Journal of Family and Community Medicine Volume 4 ; 1997 ; 4 ; https://www.jfcmonline.com/ ; ; >
-    au < manifest ; exists ; 1998 ; Journal of Family and Community Medicine Volume 5 ; 1998 ; 5 ; https://www.jfcmonline.com/ ; ; >
-    au < manifest ; exists ; 1999 ; Journal of Family and Community Medicine Volume 6 ; 1999 ; 6 ; https://www.jfcmonline.com/ ; ; >
-    au < manifest ; exists ; 2000 ; Journal of Family and Community Medicine Volume 7 ; 2000 ; 7 ; https://www.jfcmonline.com/ ; ; >
-    au < manifest ; exists ; 2001 ; Journal of Family and Community Medicine Volume 8 ; 2001 ; 8 ; https://www.jfcmonline.com/ ; ; >
-    au < manifest ; exists ; 2002 ; Journal of Family and Community Medicine Volume 9 ; 2002 ; 9 ; https://www.jfcmonline.com/ ; ; >
-    au < manifest ; exists ; 2003 ; Journal of Family and Community Medicine Volume 10 ; 2003 ; 10 ; https://www.jfcmonline.com/ ; ; >
-    au < manifest ; exists ; 2004 ; Journal of Family and Community Medicine Volume 11 ; 2004 ; 11 ; https://www.jfcmonline.com/ ; ; >
-    au < manifest ; exists ; 2005 ; Journal of Family and Community Medicine Volume 12 ; 2005 ; 12 ; https://www.jfcmonline.com/ ; ; >
-    au < manifest ; exists ; 2006 ; Journal of Family and Community Medicine Volume 13 ; 2006 ; 13 ; https://www.jfcmonline.com/ ; ; >
-    au < manifest ; exists ; 2007 ; Journal of Family and Community Medicine Volume 14 ; 2007 ; 14 ; https://www.jfcmonline.com/ ; ; >
-    au < manifest ; exists ; 2008 ; Journal of Family and Community Medicine Volume 15 ; 2008 ; 15 ; https://www.jfcmonline.com/ ; ; >
-    au < manifest ; exists ; 2009 ; Journal of Family and Community Medicine Volume 16 ; 2009 ; 16 ; https://www.jfcmonline.com/ ; ; >
-    au < manifest ; exists ; 2010 ; Journal of Family and Community Medicine Volume 17 ; 2010 ; 17 ; https://www.jfcmonline.com/ ; ; >
+    au < doNotProcess ; exists ; 1994 ; Journal of Family and Community Medicine Volume 1 ; 1994 ; 1 ; https://www.jfcmonline.com/ ; ; >
+    au < doNotProcess ; exists ; 1995 ; Journal of Family and Community Medicine Volume 2 ; 1995 ; 2 ; https://www.jfcmonline.com/ ; ; >
+    au < doNotProcess ; exists ; 1996 ; Journal of Family and Community Medicine Volume 3 ; 1996 ; 3 ; https://www.jfcmonline.com/ ; ; >
+    au < doNotProcess ; exists ; 1997 ; Journal of Family and Community Medicine Volume 4 ; 1997 ; 4 ; https://www.jfcmonline.com/ ; ; >
+    au < doNotProcess ; exists ; 1998 ; Journal of Family and Community Medicine Volume 5 ; 1998 ; 5 ; https://www.jfcmonline.com/ ; ; >
+    au < doNotProcess ; exists ; 1999 ; Journal of Family and Community Medicine Volume 6 ; 1999 ; 6 ; https://www.jfcmonline.com/ ; ; >
+    au < doNotProcess ; exists ; 2000 ; Journal of Family and Community Medicine Volume 7 ; 2000 ; 7 ; https://www.jfcmonline.com/ ; ; >
+    au < doNotProcess ; exists ; 2001 ; Journal of Family and Community Medicine Volume 8 ; 2001 ; 8 ; https://www.jfcmonline.com/ ; ; >
+    au < doNotProcess ; exists ; 2002 ; Journal of Family and Community Medicine Volume 9 ; 2002 ; 9 ; https://www.jfcmonline.com/ ; ; >
+    au < doNotProcess ; exists ; 2003 ; Journal of Family and Community Medicine Volume 10 ; 2003 ; 10 ; https://www.jfcmonline.com/ ; ; >
+    au < doNotProcess ; exists ; 2004 ; Journal of Family and Community Medicine Volume 11 ; 2004 ; 11 ; https://www.jfcmonline.com/ ; ; >
+    au < doNotProcess ; exists ; 2005 ; Journal of Family and Community Medicine Volume 12 ; 2005 ; 12 ; https://www.jfcmonline.com/ ; ; >
+    au < doNotProcess ; exists ; 2006 ; Journal of Family and Community Medicine Volume 13 ; 2006 ; 13 ; https://www.jfcmonline.com/ ; ; >
+    au < doNotProcess ; exists ; 2007 ; Journal of Family and Community Medicine Volume 14 ; 2007 ; 14 ; https://www.jfcmonline.com/ ; ; >
+    au < doNotProcess ; exists ; 2008 ; Journal of Family and Community Medicine Volume 15 ; 2008 ; 15 ; https://www.jfcmonline.com/ ; ; >
+    au < doNotProcess ; exists ; 2009 ; Journal of Family and Community Medicine Volume 16 ; 2009 ; 16 ; https://www.jfcmonline.com/ ; ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Family and Community Medicine Volume 17 ; 2010 ; 17 ; https://www.jfcmonline.com/ ; ; >
     au < finished ; frozen ; 2011 ; Journal of Family and Community Medicine Volume 18 ; 2011 ; 18 ; http://www.jfcmonline.com/ ; ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2012 ; Journal of Family and Community Medicine Volume 19 ; 2012 ; 19 ; http://www.jfcmonline.com/ ; ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2013 ; Journal of Family and Community Medicine Volume 20 ; 2013 ; 20 ; http://www.jfcmonline.com/ ; ; reingest3.clockss.org:8083 >
@@ -2999,7 +2999,7 @@
     au < finished ; crawling ; 2018 ; Journal of Family Medicine and Primary Care Volume 7 ; 2018 ; 7 ; http://www.jfmpc.com/ ; ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; Journal of Family Medicine and Primary Care Volume 8 ; 2019 ; 8 ; https://www.jfmpc.com/ ; ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Journal of Family Medicine and Primary Care Volume 9 ; 2020 ; 9 ; https://www.jfmpc.com/ ; ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2021 ; Journal of Family Medicine and Primary Care Volume 10 ; 2021 ; 10 ; https://www.jfmpc.com/ ; ; >
+    au < frozen ; exists ; 2021 ; Journal of Family Medicine and Primary Care Volume 10 ; 2021 ; 10 ; https://www.jfmpc.com/ ; ; >
     au < doNotProcess ; exists ; 2022 ; Journal of Family Medicine and Primary Care Volume 11 ; 2022 ; 11 ; https://www.jfmpc.com/ ; ; >
 
   }
@@ -3196,9 +3196,9 @@
 
     param[journal_issn] = 0972-124X
 
-    au < manifest ; exists ; 2008 ; Journal of Indian Society of Periodontology Volume 12 ; 2008 ; 12 ; https://www.jisponline.com/ ; ; >
-    au < manifest ; exists ; 2009 ; Journal of Indian Society of Periodontology Volume 13 ; 2009 ; 13 ; https://www.jisponline.com/ ; ; >
-    au < manifest ; exists ; 2010 ; Journal of Indian Society of Periodontology Volume 14 ; 2010 ; 14 ; https://www.jisponline.com/ ; ; >
+    au < doNotProcess ; exists ; 2008 ; Journal of Indian Society of Periodontology Volume 12 ; 2008 ; 12 ; https://www.jisponline.com/ ; ; >
+    au < doNotProcess ; exists ; 2009 ; Journal of Indian Society of Periodontology Volume 13 ; 2009 ; 13 ; https://www.jisponline.com/ ; ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Indian Society of Periodontology Volume 14 ; 2010 ; 14 ; https://www.jisponline.com/ ; ; >
     au < finished ; frozen ; 2011 ; Journal of Indian Society of Periodontology Volume 15 ; 2011 ; 15 ; http://www.jisponline.com/ ; ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2012 ; Journal of Indian Society of Periodontology Volume 16 ; 2012 ; 16 ; http://www.jisponline.com/ ; ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2013 ; Journal of Indian Society of Periodontology Volume 17 ; 2013 ; 17 ; http://www.jisponline.com/ ; ; reingest3.clockss.org:8083 >
@@ -3209,7 +3209,7 @@
     au < finished ; crawling ; 2018 ; Journal of Indian Society of Periodontology Volume 22 ; 2018 ; 22 ; http://www.jisponline.com/ ; ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; Journal of Indian Society of Periodontology Volume 23 ; 2019 ; 23 ; https://www.jisponline.com/ ; ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2020 ; Journal of Indian Society of Periodontology Volume 24 ; 2020 ; 24 ; https://www.jisponline.com/ ; ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2021 ; Journal of Indian Society of Periodontology Volume 25 ; 2021 ; 25 ; https://www.jisponline.com/ ; ; >
+    au < frozen ; exists ; 2021 ; Journal of Indian Society of Periodontology Volume 25 ; 2021 ; 25 ; https://www.jisponline.com/ ; ; >
     au < doNotProcess ; exists ; 2022 ; Journal of Indian Society of Periodontology Volume 26 ; 2022 ; 26 ; https://www.jisponline.com/ ; ; >
 
   }
@@ -3618,7 +3618,7 @@
     param[journal_issn] = 2153-3539
     # different format from other journals. Issues are accessed individually by clicking http://www.jpathinformatics.org/browse.asp
     # instead of by a listing like this: http://www.jpathinformatics.org/backissues.asp
-    #move to Elsevier, 2022. Archive will stay with Medknow until further notice
+    #move to Elsevier, 2022.
 
     au < doNotProcess ; exists ; 2010 ; Journal of Pathology Informatics Volume 1 ; 2010 ; 1 ; https://www.jpathinformatics.org/ ; ; >
     au < doNotProcess ; exists ; 2011 ; Journal of Pathology Informatics Volume 2 ; 2011 ; 2 ; https://www.jpathinformatics.org/ ; ; >
@@ -3631,7 +3631,7 @@
     au < finished ; crawling ; 2018 ; Journal of Pathology Informatics Volume 9 ; 2018 ; 9 ; http://www.jpathinformatics.org/ ; ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; Journal of Pathology Informatics Volume 10 ; 2019 ; 10 ; https://www.jpathinformatics.org/ ; ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Journal of Pathology Informatics Volume 11 ; 2020 ; 11 ; https://www.jpathinformatics.org/ ; ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2021 ; Journal of Pathology Informatics Volume 12 ; 2021 ; 12 ; https://www.jpathinformatics.org/ ; ; >
+    au < frozen ; exists ; 2021 ; Journal of Pathology Informatics Volume 12 ; 2021 ; 12 ; https://www.jpathinformatics.org/ ; ; >
 
   }
 
@@ -3703,9 +3703,9 @@
 #    param[base_url] = http://www.jpharmacol.com/
 
     param[journal_issn] = 0976-500X
-    #move to Sage. Archive will stay with Medknow until further notice
+    #move to Sage.
 
-    au < manifest ; exists ; 2010 ; Journal of Pharmacology and Pharmacotherapeutics Volume 1 ; 2010 ; 1 ; https://www.jpharmacol.com/ ; ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Pharmacology and Pharmacotherapeutics Volume 1 ; 2010 ; 1 ; https://www.jpharmacol.com/ ; ; >
     au < finished ; frozen ; 2011 ; Journal of Pharmacology and Pharmacotherapeutics Volume 2 ; 2011 ; 2 ; http://www.jpharmacol.com/ ; ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2012 ; Journal of Pharmacology and Pharmacotherapeutics Volume 3 ; 2012 ; 3 ; http://www.jpharmacol.com/ ; ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2013 ; Journal of Pharmacology and Pharmacotherapeutics Volume 4 ; 2013 ; 4 ; http://www.jpharmacol.com/ ; ; reingest1.clockss.org:8082 >
@@ -3716,7 +3716,7 @@
     au < finished ; crawling ; 2018 ; Journal of Pharmacology and Pharmacotherapeutics Volume 9 ; 2018 ; 9 ; http://www.jpharmacol.com/ ; ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; Journal of Pharmacology and Pharmacotherapeutics Volume 10 ; 2019 ; 10 ; https://www.jpharmacol.com/ ; ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Journal of Pharmacology and Pharmacotherapeutics Volume 11 ; 2020 ; 11 ; https://www.jpharmacol.com/ ; ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2021 ; Journal of Pharmacology and Pharmacotherapeutics Volume 12 ; 2021 ; 12 ; https://www.jpharmacol.com/ ; ; >
+    au < frozen ; exists ; 2021 ; Journal of Pharmacology and Pharmacotherapeutics Volume 12 ; 2021 ; 12 ; https://www.jpharmacol.com/ ; ; >
 
   }
 
@@ -4807,7 +4807,7 @@
     au < finished ; crawling ; 2018 ; Urology Annals Volume 10 ; 2018 ; 10 ; http://www.urologyannals.com/ ; ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; Urology Annals Volume 11 ; 2019 ; 11 ; https://www.urologyannals.com/ ; ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Urology Annals Volume 12 ; 2020 ; 12 ; https://www.urologyannals.com/ ; ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2021 ; Urology Annals Volume 13 ; 2021 ; 13 ; https://www.urologyannals.com/ ; ; >
+    au < frozen ; exists ; 2021 ; Urology Annals Volume 13 ; 2021 ; 13 ; https://www.urologyannals.com/ ; ; >
 
   }
 
@@ -4821,15 +4821,15 @@
 #    param[base_url] = http://www.wjnm.org/
     param[journal_issn] = 1450-1147
     # notReady V10 2011. 500 error, replicated. http://www.wjnm.org/article.asp?issn=1450-1147;year=2011;volume=10;issue=1;spage=5;epage=6;aulast=Baum;type=2
-    #move to Thieme, 2022. Archive will stay with Medknow until further notice
+    #move to Thieme, 2022.
 
-    au < manifest ; exists ; 2005 ; World Journal of Nuclear Medicine Volume 4 ; 2005 ; 4 ; https://www.wjnm.org/ ; ; >
-    au < manifest ; exists ; 2006 ; World Journal of Nuclear Medicine Volume 5 ; 2006 ; 5 ; https://www.wjnm.org/ ; ; >
-    au < manifest ; exists ; 2007 ; World Journal of Nuclear Medicine Volume 6 ; 2007 ; 6 ; https://www.wjnm.org/ ; ; >
-    au < manifest ; exists ; 2008 ; World Journal of Nuclear Medicine Volume 7 ; 2008 ; 7 ; https://www.wjnm.org/ ; ; >
-    au < manifest ; exists ; 2009 ; World Journal of Nuclear Medicine Volume 8 ; 2009 ; 8 ; https://www.wjnm.org/ ; ; >
+    au < doNotProcess ; exists ; 2005 ; World Journal of Nuclear Medicine Volume 4 ; 2005 ; 4 ; https://www.wjnm.org/ ; ; >
+    au < doNotProcess ; exists ; 2006 ; World Journal of Nuclear Medicine Volume 5 ; 2006 ; 5 ; https://www.wjnm.org/ ; ; >
+    au < doNotProcess ; exists ; 2007 ; World Journal of Nuclear Medicine Volume 6 ; 2007 ; 6 ; https://www.wjnm.org/ ; ; >
+    au < doNotProcess ; exists ; 2008 ; World Journal of Nuclear Medicine Volume 7 ; 2008 ; 7 ; https://www.wjnm.org/ ; ; >
+    au < doNotProcess ; exists ; 2009 ; World Journal of Nuclear Medicine Volume 8 ; 2009 ; 8 ; https://www.wjnm.org/ ; ; >
     au < doesNotExist ; doesNotExist ; 2010 ; World Journal of Nuclear Medicine Volume 9 ; 2010 ; 9 ; https://www.wjnm.org/ ; ; >
-    au < notReady ; exists ; 2011 ; World Journal of Nuclear Medicine Volume 10 ; 2011 ; 10 ; https://www.wjnm.org/ ; ; > #500 error
+    au < doNotProcess ; exists ; 2011 ; World Journal of Nuclear Medicine Volume 10 ; 2011 ; 10 ; https://www.wjnm.org/ ; ; > #500 error
     au < finished ; finished ; 2012 ; World Journal of Nuclear Medicine Volume 11 ; 2012 ; 11 ; http://www.wjnm.org/ ; ; >
     au < finished ; frozen ; 2013 ; World Journal of Nuclear Medicine Volume 12 ; 2013 ; 12 ; http://www.wjnm.org/ ; ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2014 ; World Journal of Nuclear Medicine Volume 13 ; 2014 ; 13 ; http://www.wjnm.org/ ; ; reingest5.clockss.org:8082 >
@@ -4839,7 +4839,7 @@
     au < finished ; crawling ; 2018 ; World Journal of Nuclear Medicine Volume 17 ; 2018 ; 17 ; http://www.wjnm.org/ ; ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; World Journal of Nuclear Medicine Volume 18 ; 2019 ; 18 ; https://www.wjnm.org/ ; ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2020 ; World Journal of Nuclear Medicine Volume 19 ; 2020 ; 19 ; https://www.wjnm.org/ ; ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2021 ; World Journal of Nuclear Medicine Volume 20 ; 2021 ; 20 ; https://www.wjnm.org/ ; ; >
+    au < frozen ; exists ; 2021 ; World Journal of Nuclear Medicine Volume 20 ; 2021 ; 20 ; https://www.wjnm.org/ ; ; >
 
   }
 #  {
@@ -5491,7 +5491,7 @@
       au < finished ; frozen ; 2017 ; Clinical Trials in Orthopedic Disorders Volume 2 ; 2017 ; 2 ; http://www.clinicalto.com/ ; ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2018 ; Clinical Trials in Orthopedic Disorders Volume 3 ; 2018 ; 3 ; http://www.clinicalto.com/ ; ; reingest3.clockss.org:8083 >
       au < doNotProcess ; doNotProcess ; 2019 ; Clinical Trials in Orthopedic Disorders Volume 4 ; 2019 ; 4 ; https://www.clinicalto.com/ ; ; >
-      au < crawling ; exists ; 2020 ; Clinical Trials in Orthopedic Disorders Volume 5 ; 2020 ; 5 ; https://www.clinicalto.com/ ; ; >
+      au < frozen ; exists ; 2020 ; Clinical Trials in Orthopedic Disorders Volume 5 ; 2020 ; 5 ; https://www.clinicalto.com/ ; ; >
 
   }
 
@@ -5505,6 +5505,9 @@
 
       param[journal_issn] = 2278-0513
 #      param[base_url] = http://www.ccij-online.org/
+#      changed url to:
+#      param[base_url] = http://ccij-online.org/
+#      Archive at https://ccij-online.org/journal/archives
       #Moved to Polaris Publication
 
       au < finished ; finished ; 2012 ; Clinical Cancer Investigation Journal Volume 1 ; 2012 ; 1 ; http://www.ccij-online.org/ ; ; reingest4.clockss.org:8082 >
@@ -5516,7 +5519,8 @@
       au < finished ; crawling ; 2018 ; Clinical Cancer Investigation Journal Volume 7 ; 2018 ; 7 ; http://www.ccij-online.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; Clinical Cancer Investigation Journal Volume 8 ; 2019 ; 8 ; https://www.ccij-online.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Clinical Cancer Investigation Journal Volume 9 ; 2020 ; 9 ; https://www.ccij-online.org/ ; ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2021 ; Clinical Cancer Investigation Journal Volume 10 ; 2021 ; 10 ; https://www.ccij-online.org/ ; ; >
+      au < frozen ; exists ; 2021 ; Clinical Cancer Investigation Journal Volume 10 ; 2021 ; 10 ; https://www.ccij-online.org/ ; ; >
+      au < exists ; exists ; 2022 ; Clinical Cancer Investigation Journal Volume 11 ; 2022 ; 11 ; https://ccij-online.org/ ; ; >
 
   }
 
@@ -5538,7 +5542,6 @@
       au < finished ; finished ; 2017 ; Community Acquired Infection Volume 4 ; 2017 ; 4 ; http://www.caijournal.com/ ; ; reingest4.clockss.org:8082 >
       au < notReady ; exists ; 2018 ; Community Acquired Infection Volume 5 ; 2018 ; 5 ; https://www.caijournal.com/ ; ; > #no substance
       au < notReady ; exists ; 2019 ; Community Acquired Infection Volume 6 ; 2019 ; 6 ; https://www.caijournal.com/ ; ; > #no substance
-      au < notReady ; exists ; 2020 ; Community Acquired Infection Volume 7 ; 2020 ; 7 ; https://www.caijournal.com/ ; ; > #no substance
 
   }
 
@@ -8076,7 +8079,7 @@
       au < finished ; crawling ; 2018 ; Neural Regeneration Research Volume 13 ; 2018 ; 13 ; http://www.nrronline.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; Neural Regeneration Research Volume 14 ; 2019 ; 14 ; https://www.nrronline.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Neural Regeneration Research Volume 15 ; 2020 ; 15 ; https://www.nrronline.org/ ; ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2021 ; Neural Regeneration Research Volume 16 ; 2021 ; 16 ; https://www.nrronline.org/ ; ; >
+      au < frozen ; exists ; 2021 ; Neural Regeneration Research Volume 16 ; 2021 ; 16 ; https://www.nrronline.org/ ; ; >
       au < doNotProcess ; exists ; 2022 ; Neural Regeneration Research Volume 17 ; 2022 ; 17 ; https://www.nrronline.org/ ; ; >
 
   }
@@ -9693,7 +9696,7 @@
       au < finished ; crawling ; 2018 ; Egyptian Journal of Surgery Volume 37 ; 2018 ; 37 ; https://www.ejs.eg.net/ ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; Egyptian Journal of Surgery Volume 38 ; 2019 ; 38 ; https://www.ejs.eg.net/ ; ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Egyptian Journal of Surgery Volume 39 ; 2020 ; 39 ; https://www.ejs.eg.net/ ; ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2021 ; Egyptian Journal of Surgery Volume 40 ; 2021 ; 40 ; https://www.ejs.eg.net/ ; ; >
+      au < frozen ; exists ; 2021 ; Egyptian Journal of Surgery Volume 40 ; 2021 ; 40 ; https://www.ejs.eg.net/ ; ; >
       au < doNotProcess ; exists ; 2022 ; Egyptian Journal of Surgery Volume 41 ; 2022 ; 41 ; https://www.ejs.eg.net/ ; ; >
 
   }
@@ -9731,6 +9734,7 @@
 
       param[journal_issn] = 1682-606X
 #      param[base_url] = http://www.e-fjs.org/
+      #move to LWW in 2023
 
       au < finished ; crawling ; 2017 ; Formosan Journal of Surgery Volume 50 ; 2017 ; 50 ; https://www.e-fjs.org/ ; ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2018 ; Formosan Journal of Surgery Volume 51 ; 2018 ; 51 ; https://www.e-fjs.org/ ; ; reingest3.clockss.org:8083 >
@@ -12334,6 +12338,7 @@
 
       param[journal_issn] = 2589-8892
       #param[base_url] = https://www.journalofcurrentoncology.org/
+      #move to Sage in 2023
 
       au < manifest ; exists ; 2018 ; Journal of Current Oncology Volume 1 ; 2018 ; 1 ; https://www.journalofcurrentoncology.org/ ; ; >
       au < manifest ; exists ; 2019 ; Journal of Current Oncology Volume 2 ; 2019 ; 2 ; https://www.journalofcurrentoncology.org/ ; ; >

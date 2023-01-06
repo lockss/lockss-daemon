@@ -197,6 +197,7 @@
     au < down ; 2020 ; Annals of Maxillofacial Surgery Volume 10 ; 2020 ; 10 ; https://www.amsjournal.com/ >
     au < down ; 2021 ; Annals of Maxillofacial Surgery Volume 11 ; 2021 ; 11 ; https://www.amsjournal.com/ >
     au < doNotProcess ; 2022 ; Annals of Maxillofacial Surgery Volume 12 ; 2022 ; 12 ; https://www.amsjournal.com/ >
+    #deactivated
 
   }
 
@@ -5104,7 +5105,6 @@
       au < released ; 2017 ; Community Acquired Infection Volume 4 ; 2017 ; 4 ; http://www.caijournal.com/ >
       au < notReady ; 2018 ; Community Acquired Infection Volume 5 ; 2018 ; 5 ; https://www.caijournal.com/ > #no substance
       au < notReady ; 2019 ; Community Acquired Infection Volume 6 ; 2019 ; 6 ; https://www.caijournal.com/ > #no substance
-      au < notReady ; 2020 ; Community Acquired Infection Volume 7 ; 2020 ; 7 ; https://www.caijournal.com/ > #no substance
 
   }
 
@@ -9281,6 +9281,7 @@
 
       param[journal_issn] = 1682-606X
 #      param[base_url] = http://www.e-fjs.org/
+      #move to LWW in 2023
 
       au < released ; 2017 ; Formosan Journal of Surgery Volume 50 ; 2017 ; 50 ; http://www.e-fjs.org/ >
       au < released ; 2018 ; Formosan Journal of Surgery Volume 51 ; 2018 ; 51 ; https://www.e-fjs.org/ >
@@ -11880,6 +11881,7 @@
 
       param[journal_issn] = 2589-8892
       #param[base_url] = https://www.journalofcurrentoncology.org/
+      #move to Sage in 2023
 
       au < manifest ; 2018 ; Journal of Current Oncology Volume 1 ; 2018 ; 1 ; https://www.journalofcurrentoncology.org/ >
       au < manifest ; 2019 ; Journal of Current Oncology Volume 2 ; 2019 ; 2 ; https://www.journalofcurrentoncology.org/ >
