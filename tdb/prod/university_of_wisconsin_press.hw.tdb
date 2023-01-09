@@ -409,8 +409,8 @@
       plugin = org.lockss.plugin.highwire.uwpress.UWPressDrupalPlugin
       param[base_url] = https://npj.uwpress.org/
 
-      au < releasing ; 2021 ; Native Plants Journal Volume 22 ; 22 > #urls fail RT4567
-      au < releasing ; 2022 ; Native Plants Journal Volume 23 ; 23 >
+      au < released ; 2021 ; Native Plants Journal Volume 22 ; 22 > #urls fail RT4567
+      au < released ; 2022 ; Native Plants Journal Volume 23 ; 23 >
       }
   }
 
