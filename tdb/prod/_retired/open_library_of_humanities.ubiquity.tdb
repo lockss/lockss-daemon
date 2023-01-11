@@ -456,4 +456,69 @@
 
   }
 
+  {
+
+      title <
+        name = Architectural Histories ;
+        eissn = 2050-5833
+      >
+
+      comment[publisher] = Open Library of Humanities, previously Ubiquity Press
+#      param[base_url] = http://journal.eahn.org/
+
+      au < down ; 2013 ; 1 ; Architectural Histories Volume 2013 ; 2013 ; http://journal.eahn.org/ >
+      au < down ; 2014 ; 2 ; Architectural Histories Volume 2014 ; 2014 ; http://journal.eahn.org/ >
+      au < down ; 2015 ; 3 ; Architectural Histories Volume 2015 ; 2015 ; http://journal.eahn.org/ >
+      au < down ; 2016 ; 4 ; Architectural Histories Volume 2016 ; 2016 ; http://journal.eahn.org/ >
+      au < down ; 2017 ; 5 ; Architectural Histories Volume 2017 ; 2017 ; https://journal.eahn.org/ >
+      au < down ; 2018 ; 6 ; Architectural Histories Volume 2018 ; 2018 ; https://journal.eahn.org/ >
+      au < down ; 2019 ; 7 ; Architectural Histories Volume 2019 ; 2019 ; https://journal.eahn.org/ >
+      au < down ; 2020 ; 8 ; Architectural Histories Volume 2020 ; 2020 ; https://journal.eahn.org/ >
+      au < doNotProcess ; 2021 ; 9 ; Architectural Histories Volume 2021 ; 2021 ; https://journal.eahn.org/ >
+      au < doNotProcess ; 2022 ; 10 ; Architectural Histories Volume 2022 ; 2022 ; https://journal.eahn.org/ >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Portuguese Linguistics ;
+        issn = 1645-4537 ;
+        eissn = 2397-5563
+      >
+
+      comment[publisher] = Open Library of Humanities, previously Ubiquity Press
+#      param[base_url] = http://jpl.letras.ulisboa.pt/
+
+      au < down ; 2015 ; 1 ; Journal of Portuguese Linguistics Volume 2015 ; 2015 ; http://jpl.letras.ulisboa.pt/ >
+      au < down ; 2016 ; 2 ; Journal of Portuguese Linguistics Volume 2016 ; 2016 ; http://jpl.letras.ulisboa.pt/ >
+      au < down ; 2017 ; 3 ; Journal of Portuguese Linguistics Volume 2017 ; 2017 ; https://jpl.letras.ulisboa.pt/ >
+      au < down ; 2018 ; 4 ; Journal of Portuguese Linguistics Volume 2018 ; 2018 ; https://jpl.letras.ulisboa.pt/ >
+      au < down ; 2019 ; 5 ; Journal of Portuguese Linguistics Volume 2019 ; 2019 ; https://jpl.letras.ulisboa.pt/ >
+      au < down ; 2020 ; 6 ; Journal of Portuguese Linguistics Volume 2020 ; 2020 ; https://jpl.letras.ulisboa.pt/ >
+      au < doNotProcess ; 2021 ; 7 ; Journal of Portuguese Linguistics Volume 2021 ; 2021 ; https://jpl.letras.ulisboa.pt/ >
+      au < doNotProcess ; 2022 ; 8 ; Journal of Portuguese Linguistics Volume 2022 ; 2022 ; https://jpl.letras.ulisboa.pt/ >
+
+  }
+
+  {
+
+      title <
+        name = Laboratory Phonology: Journal of the Association for Laboratory Phonology ;
+        eissn = 1868-6354
+      >
+
+      comment[publisher] = Open Library of Humanities, previously Ubiquity Press
+#      param[base_url] = http://www.journal-labphon.org/
+
+      au < down ; 2016 ; 1 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2016 ; 2016 ; http://www.journal-labphon.org/ >
+      au < down ; 2017 ; 2 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2017 ; 2017 ; https://www.journal-labphon.org/ >
+      au < down ; 2018 ; 3 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2018 ; 2018 ; https://www.journal-labphon.org/ >
+      au < down ; 2019 ; 4 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2019 ; 2019 ; https://www.journal-labphon.org/ >
+      au < down ; 2020 ; 5 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2020 ; 2020 ; https://www.journal-labphon.org/ >
+      au < doNotProcess ; 2021 ; 6 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2021 ; 2021 ; https://www.journal-labphon.org/ >
+      au < doNotProcess ; 2022 ; 7 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2022 ; 2022 ; https://www.journal-labphon.org/ >
+
+  }
+
 }
