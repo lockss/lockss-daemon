@@ -13795,8 +13795,9 @@
     >
 
     param[journal_id] = jmicro
-    #content available from 1953 volume 1 to 2008 volume 57
+    #content available from 1953 volume 1 to 2007 volume 56
 
+    au < exists ; exists ; 2008 ; 2008 ; Microscopy Volume 57 ; 57 ; >
     au < frozen ; exists ; 2009 ; 2009 ; Microscopy Volume 58 ; 58 ; >
     au < frozen ; exists ; 2010 ; 2010 ; Microscopy Volume 59 ; 59 ; >
     au < frozen ; exists ; 2011 ; 2011 ; Microscopy Volume 60 ; 60 ; >
@@ -13811,6 +13812,68 @@
     au < deepCrawl ; exists ; 2020 ; 2020 ; Microscopy Volume 69 ; 69 ; >
     au < frozen ; exists ; 2021 ; 2021 ; Microscopy Volume 70 ; 70 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Microscopy Volume 71 ; 71 ; >
+
+  }
+
+  {
+
+    title <
+      name = Microscopy and Microanalysis;
+      issn = 1431-9276 ;
+      eissn = 1435-8115 ;
+      issnl = 1431-9276
+    >
+
+    param[journal_id] = mam
+    #move from Cambridge University Press in 2023
+    #content available from 1995 volume 1 to 2007 volume 13
+
+    au < exists ; exists ; 2008 ; 2008 ; Microscopy and Microanalysis Volume 14 ; 14 ; >
+    au < exists ; exists ; 2009 ; 2009 ; Microscopy and Microanalysis Volume 15 ; 15 ; >
+    au < exists ; exists ; 2010 ; 2010 ; Microscopy and Microanalysis Volume 16 ; 16 ; >
+    au < exists ; exists ; 2011 ; 2011 ; Microscopy and Microanalysis Volume 17 ; 17 ; >
+    au < exists ; exists ; 2012 ; 2012 ; Microscopy and Microanalysis Volume 18 ; 18 ; >
+    au < exists ; exists ; 2013 ; 2013 ; Microscopy and Microanalysis Volume 19 ; 19 ; >
+    au < exists ; exists ; 2014 ; 2014 ; Microscopy and Microanalysis Volume 20 ; 20 ; >
+    au < exists ; exists ; 2015 ; 2015 ; Microscopy and Microanalysis Volume 21 ; 21 ; >
+    au < exists ; exists ; 2016 ; 2016 ; Microscopy and Microanalysis Volume 22 ; 22 ; >
+    au < exists ; exists ; 2017 ; 2017 ; Microscopy and Microanalysis Volume 23 ; 23 ; >
+    au < exists ; exists ; 2018 ; 2018 ; Microscopy and Microanalysis Volume 24 ; 24 ; >
+    au < exists ; exists ; 2019 ; 2019 ; Microscopy and Microanalysis Volume 25 ; 25 ; >
+    au < exists ; exists ; 2020 ; 2020 ; Microscopy and Microanalysis Volume 26 ; 26 ; >
+    au < exists ; exists ; 2021 ; 2021 ; Microscopy and Microanalysis Volume 27 ; 27 ; >
+    au < exists ; exists ; 2022 ; 2022 ; Microscopy and Microanalysis Volume 28 ; 28 ; >
+
+  }
+
+  {
+
+    title <
+      name = Microscopy Today;
+      issn = 1551-9295 ;
+      eissn = 2150-3583 ;
+      issnl = 1551-9295
+    >
+
+    param[journal_id] = mt
+    #move from Cambridge University Press in 2023
+    #content available from 1992 volume 1 to 2007 volume 15
+
+    au < exists ; exists ; 2008 ; 2008 ; Microscopy Today Volume 16 ; 16 ; >
+    au < exists ; exists ; 2009 ; 2009 ; Microscopy Today Volume 17 ; 17 ; >
+    au < exists ; exists ; 2010 ; 2010 ; Microscopy Today Volume 18 ; 18 ; >
+    au < exists ; exists ; 2011 ; 2011 ; Microscopy Today Volume 19 ; 19 ; >
+    au < exists ; exists ; 2012 ; 2012 ; Microscopy Today Volume 20 ; 20 ; >
+    au < exists ; exists ; 2013 ; 2013 ; Microscopy Today Volume 21 ; 21 ; >
+    au < exists ; exists ; 2014 ; 2014 ; Microscopy Today Volume 22 ; 22 ; >
+    au < exists ; exists ; 2015 ; 2015 ; Microscopy Today Volume 23 ; 23 ; >
+    au < exists ; exists ; 2016 ; 2016 ; Microscopy Today Volume 24 ; 24 ; >
+    au < exists ; exists ; 2017 ; 2017 ; Microscopy Today Volume 25 ; 25 ; >
+    au < exists ; exists ; 2018 ; 2018 ; Microscopy Today Volume 26 ; 26 ; >
+    au < exists ; exists ; 2019 ; 2019 ; Microscopy Today Volume 27 ; 27 ; >
+    au < exists ; exists ; 2020 ; 2020 ; Microscopy Today Volume 28 ; 28 ; >
+    au < exists ; exists ; 2021 ; 2021 ; Microscopy Today Volume 29 ; 29 ; >
+    au < exists ; exists ; 2022 ; 2022 ; Microscopy Today Volume 30 ; 30 ; >
 
   }
 
@@ -14084,7 +14147,7 @@
     >
 
     param[journal_id] = mr
-    #Content had been processed by T&F from 1986 volume 1 to 2021 volume 31
+    #Content had been processed under T&F from 1986 volume 1 to 2021 volume 31
 
     au < crawling ; exists ; 2022 ; 2022 ; Modern Rheumatology Volume 32 ; 32 ; >
 
