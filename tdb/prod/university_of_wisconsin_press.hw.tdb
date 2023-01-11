@@ -102,10 +102,10 @@
       au < released ; 2016 ; Contemporary Literature Volume 57 ; 57 >
       au < released ; 2017 ; Contemporary Literature Volume 58 ; 58 >
       au < released ; 2018 ; Contemporary Literature Volume 59 ; 59 >
-      au < released ; 2018 ; Contemporary Literature Volume 60 ; 60 >
-      au < released ; 2020 ; Contemporary Literature Volume 61 ; 61 >
-      au < released ; 2021 ; Contemporary Literature Volume 62 ; 62 >
-      au < exists ; 2022 ; Contemporary Literature Volume 63 ; 63 >
+      au < released ; 2019-2020 ; Contemporary Literature Volume 60 ; 60 >
+      au < released ; 2021 ; Contemporary Literature Volume 61 ; 61 >
+      au < released ; 2022 ; Contemporary Literature Volume 62 ; 62 >
+      au < expected ; 2023 ; Contemporary Literature Volume 63 ; 63 >
 
   }
 
@@ -210,9 +210,10 @@
       issnl = 0023-7639
     >
 
+      implicit < status ; year ; name ; param[volume_name] >
+      {
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://le.uwpress.org/
-      implicit < status ; year ; name ; param[volume_name] >
 
       au < released ; 2001 ; Land Economics Volume 77 ; 77 >
       au < released ; 2002 ; Land Economics Volume 78 ; 78 >
@@ -234,8 +235,14 @@
       au < released ; 2018 ; Land Economics Volume 94 ; 94 >
       au < released ; 2019 ; Land Economics Volume 95 ; 95 >
       au < released ; 2020 ; Land Economics Volume 96 ; 96 >
-      au < notReady ; 2021 ; Land Economics Volume 97 ; 97 > #urls fail
-      au < manifest ; 2022 ; Land Economics Volume 98 ; 98 >
+      }
+      {
+      plugin = org.lockss.plugin.highwire.uwpress.UWPressDrupalPlugin
+      param[base_url] = https://le.uwpress.org/
+
+      au < exists ; 2021 ; Land Economics Volume 97 ; 97 > #urls fail
+      au < exists ; 2022 ; Land Economics Volume 98 ; 98 >
+      }
 
   }
 
@@ -248,9 +255,10 @@
       issnl = 0277-2426
     >
 
+      implicit < status ; year ; name ; param[volume_name] >
+      {
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://lj.uwpress.org/
-      implicit < status ; year ; name ; param[volume_name] >
 
       au < released ; 1982 ; Landscape Journal: design, planning, and management of the land Volume 1 ; 1 >
       au < released ; 1983 ; Landscape Journal: design, planning, and management of the land Volume 2 ; 2 >
@@ -291,8 +299,16 @@
       au < released ; 2018 ; Landscape Journal: design, planning, and management of the land Volume 37 ; 37 >
       au < released ; 2019 ; Landscape Journal: design, planning, and management of the land Volume 38 ; 38 >
       au < released ; 2020 ; Landscape Journal: design, planning, and management of the land Volume 39 ; 39 >
-      au < notReady ; 2021 ; Landscape Journal: design, planning, and management of the land Volume 40 ; 40 > #urls fail
+      au < manifest ; 2021 ; Landscape Journal: design, planning, and management of the land Volume 40 ; 40 > #urls fail
       au < manifest ; 2022 ; Landscape Journal: design, planning, and management of the land Volume 41 ; 41 >
+      }
+      {
+      plugin = org.lockss.plugin.highwire.uwpress.UWPressDrupalPlugin
+      param[base_url] = https://lj.uwpress.org/
+
+      #au < exists ; 2021 ; Landscape Journal: design, planning, and management of the land Volume 40 ; 40 > #urls fail
+      #au < exists ; 2022 ; Landscape Journal: design, planning, and management of the land Volume 41 ; 41 >
+      }
 
   }
 
@@ -342,9 +358,10 @@
       issnl = 0026-9271
     >
 
+      implicit < status ; year ; name ; param[volume_name] >
+      {
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://mon.uwpress.org/
-      implicit < status ; year ; name ; param[volume_name] >
 
       au < released ; 2003 ; Monatshefte Volume XCV ; XCV >
       au < released ; 2004 ; Monatshefte Volume XCVI ; XCVI >
@@ -364,8 +381,16 @@
       au < released ; 2018 ; Monatshefte Volume 110 ; 110 >
       au < released ; 2019 ; Monatshefte Volume 111 ; 111 >
       au < released ; 2020 ; Monatshefte Volume 112 ; 112 >
-      au < notReady ; 2021 ; Monatshefte Volume 113 ; 113 > #urls fail
+      au < manifest ; 2021 ; Monatshefte Volume 113 ; 113 > #urls fail
       au < manifest ; 2022 ; Monatshefte Volume 114 ; 114 >
+      }
+      {
+      plugin = org.lockss.plugin.highwire.uwpress.UWPressDrupalPlugin
+      param[base_url] = https://mon.uwpress.org/
+
+      #au < exists ; 2021 ; Monatshefte Volume 113 ; 113 > #urls fail
+      #au < exists ; 2022 ; Monatshefte Volume 114 ; 114 >
+      }
 
   }
 
