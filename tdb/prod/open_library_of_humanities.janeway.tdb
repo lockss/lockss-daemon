@@ -12,23 +12,23 @@
   {
   
     title <
-      name = Comics Grid ;
+      name = The Comics Grid ;
         eissn = 2048-0792
     >
 
     param[base_url] = https://www.comicsgrid.com/
     # Volume: https://www.comicsgrid.com/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2019-01-01&until=2019-12-31
 
-    au < doNotProcess ; 2013 ; 1 ; Comics Grid Volume 2013 ; 2013 >
-    au < doNotProcess ; 2014 ; 2 ; Comics Grid Volume 2014 ; 2014 >
-    au < doNotProcess ; 2015 ; 3 ; Comics Grid Volume 2015 ; 2015 >
-    au < doNotProcess ; 2016 ; 4 ; Comics Grid Volume 2016 ; 2016 >
-    au < doNotProcess ; 2017 ; 5 ; Comics Grid Volume 2017 ; 2017 >
-    au < doNotProcess ; 2018 ; 6 ; Comics Grid Volume 2018 ; 2018 >
-    au < doNotProcess ; 2019 ; 7 ; Comics Grid Volume 2019 ; 2019 >
-    au < released ; 2020 ; 8 ; Comics Grid Volume 2020 ; 2020 >
-    au < released ; 2021 ; 9 ; Comics Grid Volume 2021 ; 2021 >
-    au < manifest ; 2022 ; 10 ; Comics Grid Volume 2022 ; 2022 >
+    au < doNotProcess ; 2013 ; 1 ; The Comics Grid Volume 2013 ; 2013 >
+    au < doNotProcess ; 2014 ; 2 ; The Comics Grid Volume 2014 ; 2014 >
+    au < doNotProcess ; 2015 ; 3 ; The Comics Grid Volume 2015 ; 2015 >
+    au < doNotProcess ; 2016 ; 4 ; The Comics Grid Volume 2016 ; 2016 >
+    au < doNotProcess ; 2017 ; 5 ; The Comics Grid Volume 2017 ; 2017 >
+    au < doNotProcess ; 2018 ; 6 ; The Comics Grid Volume 2018 ; 2018 >
+    au < doNotProcess ; 2019 ; 7 ; The Comics Grid Volume 2019 ; 2019 >
+    au < released ; 2020 ; 8 ; The Comics Grid Volume 2020 ; 2020 >
+    au < released ; 2021 ; 9 ; The Comics Grid Volume 2021 ; 2021 >
+    au < manifest ; 2022 ; 10 ; The Comics Grid Volume 2022 ; 2022 >
 
   }
 
