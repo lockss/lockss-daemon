@@ -40,8 +40,11 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.util.Logger;
-
 import java.io.IOException;
+import org.apache.commons.lang3.StringUtils;
+import org.lockss.util.*;
+import org.lockss.extractor.MetadataField.Validator;
+
 
 public class Hindawi2020HtmlMetadataExtractorFactory implements
     FileMetadataExtractorFactory {
@@ -77,8 +80,28 @@ public class Hindawi2020HtmlMetadataExtractorFactory implements
         <meta name="Description" content="Advances in Human-Computer Interaction is an interdisciplinary journal that publishes theoretical and applied papers covering the broad spectrum of interactive systems. The journal is inherently interdisciplinary, publishing original research in the fields of computing, engineering, artificial intelligence, psychology, linguistics, and social and system organization, as applied to the design, implementation, application, analysis, and evaluation of interactive systems." />
 
  */
+
+
   public static class HindawiHtmlMetadataExtractor
     implements FileMetadataExtractor {
+
+    public static final String URL_PREFIX_DOI = "https?://doi.org/";
+    public static MetadataField CLEANED_DOI = new MetadataField(
+            MetadataField.KEY_DOI, MetadataField.Cardinality.Single,
+            new Validator() {
+              public String validate(ArticleMetadata am, MetadataField field, String val)
+                      throws MetadataException.ValidationException {
+                // remove leading "doi:" before checking validity
+                String doi = StringUtils.removeStartIgnoreCase(val, MetadataField.PROTOCOL_DOI);
+                if (!MetadataUtil.isDoi(doi)) {
+                  doi = val.replaceFirst(URL_PREFIX_DOI, "");
+                  if (!MetadataUtil.isDoi(doi)) {
+                    throw new MetadataException.ValidationException("Illegal DOI: " + val);
+                  }
+                }
+                return doi;
+              }
+            });
 
     // Map Hindawi-specific HTML meta tag names to cooked metadata fields
     private static MultiMap tagMap = new MultiValueMap();
@@ -90,7 +113,7 @@ public class Hindawi2020HtmlMetadataExtractorFactory implements
       tagMap.put("citation_volume", MetadataField.FIELD_VOLUME);
       tagMap.put("citation_issn", MetadataField.FIELD_ISSN);
       tagMap.put("citation_author", new MetadataField(MetadataField.FIELD_AUTHOR, MetadataField.splitAt(",")));
-      tagMap.put("citation_doi", MetadataField.FIELD_DOI);
+      tagMap.put("citation_doi", CLEANED_DOI);
       
      /*
        tagMap.put("citation_mjid", new MetadataField(
