@@ -332,7 +332,7 @@
       au < finished ; frozen ; 2019 ; 2 ; Journal of Altmetrics Volume 2019 ; 2019 ; https://www.journalofaltmetrics.org/ ; reingest4.clockss.org:8082 >
       au < notReady ; exists ; 2020 ; 3 ; Journal of Altmetrics Volume 2020 ; 2020 ; https://www.journalofaltmetrics.org/ ; > #502 upstream error https://d39af2mgp1pqhg.cloudfront.net/widget-popup.js,"Unknown host: d39af2mgp1pqhg.cloudfront.net"
       au < notReady ; exists ; 2021 ; 4 ; Journal of Altmetrics Volume 2021 ; 2021 ; https://www.journalofaltmetrics.org/ ; > #Unknown host: d39af2mgp1pqhg.cloudfront.net
-      au < expected ; exists ; 2022 ; 5 ; Journal of Altmetrics Volume 2022 ; 2022 ; https://www.journalofaltmetrics.org/ ; > #Unknown host: d39af2mgp1pqhg.cloudfront.net
+      au < expected ; exists ; 2022 ; 5 ; Journal of Altmetrics Volume 2022 ; 2022 ; https://www.journalofaltmetrics.org/ ; >
 
   }
 
