@@ -6521,7 +6521,8 @@
    param[journal_id] = 10.1055/s-00000085
    comment[years] = 1979-current
 
-    au < manifest ; exists ; 1979 ; 1979 ; The Thoracic and Cardiovascular Surgeon Volume 27 ; 27 ; >
+    #10.1055/s-002-13370
+    au < exists ; exists ; 1979 ; 1979 ; The Thoracic and Cardiovascular Surgeon Volume 27 ; 27 ; >
     au < frozen ; exists ; 1980 ; 1980 ; The Thoracic and Cardiovascular Surgeon Volume 28 ; 28 ; >
     au < frozen ; exists ; 1981 ; 1981 ; The Thoracic and Cardiovascular Surgeon Volume 29 ; 29 ; >
     au < frozen ; exists ; 1982 ; 1982 ; The Thoracic and Cardiovascular Surgeon Volume 30 ; 30 ; >
