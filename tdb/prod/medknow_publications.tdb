@@ -8421,7 +8421,7 @@
       au < released ; 2018 ; The Egyptian Orthopaedic Journal Volume 53 ; 2018 ; 53 ; https://www.eoj.eg.net/ >
       au < released ; 2019 ; The Egyptian Orthopaedic Journal Volume 54 ; 2019 ; 54 ; https://www.eoj.eg.net/ >
       au < released ; 2020 ; The Egyptian Orthopaedic Journal Volume 55 ; 2020 ; 55 ; https://www.eoj.eg.net/ >
-      au < manifest ; 2021 ; The Egyptian Orthopaedic Journal Volume 56 ; 2021 ; 56 ; https://www.eoj.eg.net/ >
+      au < ready ; 2021 ; The Egyptian Orthopaedic Journal Volume 56 ; 2021 ; 56 ; https://www.eoj.eg.net/ >
       au < manifest ; 2022 ; The Egyptian Orthopaedic Journal Volume 57 ; 2022 ; 57 ; https://www.eoj.eg.net/ >
 
   }
@@ -10916,9 +10916,9 @@
       param[journal_issn] = 2665-9425
       #param[base_url] = https://www.arwy.org/
 
-      au < manifest ; 2018 ; Airway Volume 1 ; 2018 ; 1 ; https://www.arwy.org/ >
-      au < manifest ; 2019 ; Airway Volume 2 ; 2019 ; 2 ; https://www.arwy.org/ >
-      au < manifest ; 2020 ; Airway Volume 3 ; 2020 ; 3 ; https://www.arwy.org/ >
+      au < ready ; 2018 ; Airway Volume 1 ; 2018 ; 1 ; https://www.arwy.org/ >
+      au < ready ; 2019 ; Airway Volume 2 ; 2019 ; 2 ; https://www.arwy.org/ >
+      au < ready ; 2020 ; Airway Volume 3 ; 2020 ; 3 ; https://www.arwy.org/ >
       au < released ; 2021 ; Airway Volume 4 ; 2021 ; 4 ; https://www.arwy.org/ >
       au < manifest ; 2022 ; Airway Volume 5 ; 2022 ; 5 ; https://www.arwy.org/ >
 
@@ -10935,7 +10935,7 @@
       param[journal_issn] = 0975-9662
       #param[base_url] = https://www.ajmonline.org.in/
 
-      au < manifest ; 2020 ; Amrita Journal of Medicine Volume 16 ; 2020 ; 16 ; https://www.ajmonline.org.in/ >
+      au < ready ; 2020 ; Amrita Journal of Medicine Volume 16 ; 2020 ; 16 ; https://www.ajmonline.org.in/ >
       au < released ; 2021 ; Amrita Journal of Medicine Volume 17 ; 2021 ; 17 ; https://www.ajmonline.org.in/ >
       au < manifest ; 2022 ; Amrita Journal of Medicine Volume 18 ; 2022 ; 18 ; https://www.ajmonline.org.in/ >
 
@@ -10972,9 +10972,9 @@
       param[journal_issn] = 2590-3446
       #param[base_url] = https://www.aomd.in/
 
-      au < manifest ; 2018 ; Annals of Movement Disorders Volume 1 ; 2018 ; 1 ; https://www.aomd.in/ >
-      au < manifest ; 2019 ; Annals of Movement Disorders Volume 2 ; 2019 ; 2 ; https://www.aomd.in/ >
-      au < manifest ; 2020 ; Annals of Movement Disorders Volume 3 ; 2020 ; 3 ; https://www.aomd.in/ >
+      au < ready ; 2018 ; Annals of Movement Disorders Volume 1 ; 2018 ; 1 ; https://www.aomd.in/ >
+      au < ready ; 2019 ; Annals of Movement Disorders Volume 2 ; 2019 ; 2 ; https://www.aomd.in/ >
+      au < ready ; 2020 ; Annals of Movement Disorders Volume 3 ; 2020 ; 3 ; https://www.aomd.in/ >
       au < released ; 2021 ; Annals of Movement Disorders Volume 4 ; 2021 ; 4 ; https://www.aomd.in/ >
       au < manifest ; 2022 ; Annals of Movement Disorders Volume 5 ; 2022 ; 5 ; https://www.aomd.in/ >
 
@@ -11031,17 +11031,17 @@
       param[journal_issn] = 2589-9171
       #param[base_url] = https://www.amhonline.org/
 
-      au < manifest ; 2010 ; Archives of Mental Health Volume 11 ; 2010 ; 11 ; https://www.amhonline.org/ >
-      au < manifest ; 2011 ; Archives of Mental Health Volume 12 ; 2011 ; 12 ; https://www.amhonline.org/ >
-      au < manifest ; 2012 ; Archives of Mental Health Volume 13 ; 2012 ; 13 ; https://www.amhonline.org/ >
-      au < manifest ; 2013 ; Archives of Mental Health Volume 14 ; 2013 ; 14 ; https://www.amhonline.org/ >
-      au < manifest ; 2014 ; Archives of Mental Health Volume 15 ; 2014 ; 15 ; https://www.amhonline.org/ >
-      au < manifest ; 2015 ; Archives of Mental Health Volume 16 ; 2015 ; 16 ; https://www.amhonline.org/ >
-      au < manifest ; 2016 ; Archives of Mental Health Volume 17 ; 2016 ; 17 ; https://www.amhonline.org/ >
-      au < manifest ; 2017 ; Archives of Mental Health Volume 18 ; 2017 ; 18 ; https://www.amhonline.org/ >
-      au < manifest ; 2018 ; Archives of Mental Health Volume 19 ; 2018 ; 19 ; https://www.amhonline.org/ >
-      au < manifest ; 2019 ; Archives of Mental Health Volume 20 ; 2019 ; 20 ; https://www.amhonline.org/ >
-      au < manifest ; 2020 ; Archives of Mental Health Volume 21 ; 2020 ; 21 ; https://www.amhonline.org/ >
+      au < ready ; 2010 ; Archives of Mental Health Volume 11 ; 2010 ; 11 ; https://www.amhonline.org/ >
+      au < ready ; 2011 ; Archives of Mental Health Volume 12 ; 2011 ; 12 ; https://www.amhonline.org/ >
+      au < ready ; 2012 ; Archives of Mental Health Volume 13 ; 2012 ; 13 ; https://www.amhonline.org/ >
+      au < ready ; 2013 ; Archives of Mental Health Volume 14 ; 2013 ; 14 ; https://www.amhonline.org/ >
+      au < ready ; 2014 ; Archives of Mental Health Volume 15 ; 2014 ; 15 ; https://www.amhonline.org/ >
+      au < ready ; 2015 ; Archives of Mental Health Volume 16 ; 2015 ; 16 ; https://www.amhonline.org/ >
+      au < ready ; 2016 ; Archives of Mental Health Volume 17 ; 2016 ; 17 ; https://www.amhonline.org/ >
+      au < ready ; 2017 ; Archives of Mental Health Volume 18 ; 2017 ; 18 ; https://www.amhonline.org/ >
+      au < ready ; 2018 ; Archives of Mental Health Volume 19 ; 2018 ; 19 ; https://www.amhonline.org/ >
+      au < ready ; 2019 ; Archives of Mental Health Volume 20 ; 2019 ; 20 ; https://www.amhonline.org/ >
+      au < ready ; 2020 ; Archives of Mental Health Volume 21 ; 2020 ; 21 ; https://www.amhonline.org/ >
       au < released ; 2021 ; Archives of Mental Health Volume 22 ; 2021 ; 22 ; https://www.amhonline.org/ >
       au < manifest ; 2022 ; Archives of Mental Health Volume 23 ; 2022 ; 23 ; https://www.amhonline.org/ >
 
@@ -11092,15 +11092,15 @@
       #param[base_url] = https://www.ajimedicine.com/
 
       au < manifest ; 2011 ; Assam Journal of Internal Medicine Volume 1 ; 2011 ; 1 ; https://www.ajimedicine.com/ >
-      au < manifest ; 2012 ; Assam Journal of Internal Medicine Volume 2 ; 2012 ; 2 ; https://www.ajimedicine.com/ >
-      au < manifest ; 2013 ; Assam Journal of Internal Medicine Volume 3 ; 2013 ; 3 ; https://www.ajimedicine.com/ >
-      au < manifest ; 2014 ; Assam Journal of Internal Medicine Volume 4 ; 2014 ; 4 ; https://www.ajimedicine.com/ >
-      au < manifest ; 2015 ; Assam Journal of Internal Medicine Volume 5 ; 2015 ; 5 ; https://www.ajimedicine.com/ >
-      au < manifest ; 2016 ; Assam Journal of Internal Medicine Volume 6 ; 2016 ; 6 ; https://www.ajimedicine.com/ >
-      au < manifest ; 2017 ; Assam Journal of Internal Medicine Volume 7 ; 2017 ; 7 ; https://www.ajimedicine.com/ >
-      au < manifest ; 2018 ; Assam Journal of Internal Medicine Volume 8 ; 2018 ; 8 ; https://www.ajimedicine.com/ >
-      au < manifest ; 2019 ; Assam Journal of Internal Medicine Volume 9 ; 2019 ; 9 ; https://www.ajimedicine.com/ >
-      au < manifest ; 2020 ; Assam Journal of Internal Medicine Volume 10 ; 2020 ; 10 ; https://www.ajimedicine.com/ >
+      au < ready ; 2012 ; Assam Journal of Internal Medicine Volume 2 ; 2012 ; 2 ; https://www.ajimedicine.com/ >
+      au < ready ; 2013 ; Assam Journal of Internal Medicine Volume 3 ; 2013 ; 3 ; https://www.ajimedicine.com/ >
+      au < ready ; 2014 ; Assam Journal of Internal Medicine Volume 4 ; 2014 ; 4 ; https://www.ajimedicine.com/ >
+      au < ready ; 2015 ; Assam Journal of Internal Medicine Volume 5 ; 2015 ; 5 ; https://www.ajimedicine.com/ >
+      au < ready ; 2016 ; Assam Journal of Internal Medicine Volume 6 ; 2016 ; 6 ; https://www.ajimedicine.com/ >
+      au < ready ; 2017 ; Assam Journal of Internal Medicine Volume 7 ; 2017 ; 7 ; https://www.ajimedicine.com/ >
+      au < ready ; 2018 ; Assam Journal of Internal Medicine Volume 8 ; 2018 ; 8 ; https://www.ajimedicine.com/ >
+      au < ready ; 2019 ; Assam Journal of Internal Medicine Volume 9 ; 2019 ; 9 ; https://www.ajimedicine.com/ >
+      au < ready ; 2020 ; Assam Journal of Internal Medicine Volume 10 ; 2020 ; 10 ; https://www.ajimedicine.com/ >
       au < released ; 2021 ; Assam Journal of Internal Medicine Volume 11 ; 2021 ; 11 ; https://www.ajimedicine.com/ >
       au < manifest ; 2022 ; Assam Journal of Internal Medicine Volume 12 ; 2022 ; 12 ; https://www.ajimedicine.com/ >
 
@@ -11117,10 +11117,10 @@
       param[journal_issn] = 2549-2276
       #param[base_url] = https://www.bjoaonline.com/
 
-      au < manifest ; 2017 ; Bali Journal of Anesthesiology Volume 1 ; 2017 ; 1 ; https://www.bjoaonline.com/ >
-      au < manifest ; 2018 ; Bali Journal of Anesthesiology Volume 2 ; 2018 ; 2 ; https://www.bjoaonline.com/ >
-      au < manifest ; 2019 ; Bali Journal of Anesthesiology Volume 3 ; 2019 ; 3 ; https://www.bjoaonline.com/ >
-      au < manifest ; 2020 ; Bali Journal of Anesthesiology Volume 4 ; 2020 ; 4 ; https://www.bjoaonline.com/ >
+      au < ready ; 2017 ; Bali Journal of Anesthesiology Volume 1 ; 2017 ; 1 ; https://www.bjoaonline.com/ >
+      au < ready ; 2018 ; Bali Journal of Anesthesiology Volume 2 ; 2018 ; 2 ; https://www.bjoaonline.com/ >
+      au < ready ; 2019 ; Bali Journal of Anesthesiology Volume 3 ; 2019 ; 3 ; https://www.bjoaonline.com/ >
+      au < ready ; 2020 ; Bali Journal of Anesthesiology Volume 4 ; 2020 ; 4 ; https://www.bjoaonline.com/ >
       au < released ; 2021 ; Bali Journal of Anesthesiology Volume 5 ; 2021 ; 5 ; https://www.bjoaonline.com/ >
       au < manifest ; 2022 ; Bali Journal of Anesthesiology Volume 6 ; 2022 ; 6 ; https://www.bjoaonline.com/ >
 
@@ -11138,14 +11138,14 @@
       param[journal_issn] = 2349-3666
       #param[base_url] = https://www.brjnmims.org/
 
-      au < manifest ; 2014 ; Biomedical Research Journal Volume 1 ; 2014 ; 1 ; https://www.brjnmims.org/ >
-      au < manifest ; 2015 ; Biomedical Research Journal Volume 2 ; 2015 ; 2 ; https://www.brjnmims.org/ >
-      au < manifest ; 2016 ; Biomedical Research Journal Volume 3 ; 2016 ; 3 ; https://www.brjnmims.org/ >
-      au < manifest ; 2017 ; Biomedical Research Journal Volume 4 ; 2017 ; 4 ; https://www.brjnmims.org/ >
-      au < manifest ; 2018 ; Biomedical Research Journal Volume 5 ; 2018 ; 5 ; https://www.brjnmims.org/ >
-      au < manifest ; 2019 ; Biomedical Research Journal Volume 6 ; 2019 ; 6 ; https://www.brjnmims.org/ >
-      au < manifest ; 2020 ; Biomedical Research Journal Volume 7 ; 2020 ; 7 ; https://www.brjnmims.org/ >
-      au < manifest ; 2021 ; Biomedical Research Journal Volume 8 ; 2021 ; 8 ; https://www.brjnmims.org/ >
+      au < ready ; 2014 ; Biomedical Research Journal Volume 1 ; 2014 ; 1 ; https://www.brjnmims.org/ >
+      au < ready ; 2015 ; Biomedical Research Journal Volume 2 ; 2015 ; 2 ; https://www.brjnmims.org/ >
+      au < ready ; 2016 ; Biomedical Research Journal Volume 3 ; 2016 ; 3 ; https://www.brjnmims.org/ >
+      au < ready ; 2017 ; Biomedical Research Journal Volume 4 ; 2017 ; 4 ; https://www.brjnmims.org/ >
+      au < ready ; 2018 ; Biomedical Research Journal Volume 5 ; 2018 ; 5 ; https://www.brjnmims.org/ >
+      au < ready ; 2019 ; Biomedical Research Journal Volume 6 ; 2019 ; 6 ; https://www.brjnmims.org/ >
+      au < ready ; 2020 ; Biomedical Research Journal Volume 7 ; 2020 ; 7 ; https://www.brjnmims.org/ >
+      au < ready ; 2021 ; Biomedical Research Journal Volume 8 ; 2021 ; 8 ; https://www.brjnmims.org/ >
       au < expected ; 2022 ; Biomedical Research Journal Volume 9 ; 2022 ; 9 ; https://www.brjnmims.org/ >
 
   }
@@ -11162,8 +11162,8 @@
       param[journal_issn] = 1203-7796
       #param[base_url] = https://www.cjrm.ca/
 
-      au < manifest ; 2019 ; Canadian Journal of Rural Medicine Volume 24 ; 2019 ; 24 ; https://www.cjrm.ca/ >
-      au < manifest ; 2020 ; Canadian Journal of Rural Medicine Volume 25 ; 2020 ; 25 ; https://www.cjrm.ca/ >
+      au < ready ; 2019 ; Canadian Journal of Rural Medicine Volume 24 ; 2019 ; 24 ; https://www.cjrm.ca/ >
+      au < ready ; 2020 ; Canadian Journal of Rural Medicine Volume 25 ; 2020 ; 25 ; https://www.cjrm.ca/ >
       au < released ; 2021 ; Canadian Journal of Rural Medicine Volume 26 ; 2021 ; 26 ; https://www.cjrm.ca/ >
       au < manifest ; 2022 ; Canadian Journal of Rural Medicine Volume 27 ; 2022 ; 27 ; https://www.cjrm.ca/ >
 
@@ -11181,8 +11181,8 @@
       param[journal_issn] = 0304-4920
       #param[base_url] = https://www.cjphysiology.org/
 
-      au < manifest ; 2019 ; Chinese Journal of Physiology Volume 62 ; 2019 ; 62 ; https://www.cjphysiology.org/ >
-      au < manifest ; 2020 ; Chinese Journal of Physiology Volume 63 ; 2020 ; 63 ; https://www.cjphysiology.org/ >
+      au < ready ; 2019 ; Chinese Journal of Physiology Volume 62 ; 2019 ; 62 ; https://www.cjphysiology.org/ >
+      au < ready ; 2020 ; Chinese Journal of Physiology Volume 63 ; 2020 ; 63 ; https://www.cjphysiology.org/ >
       au < released ; 2021 ; Chinese Journal of Physiology Volume 64 ; 2021 ; 64 ; https://www.cjphysiology.org/ >
       au < manifest ; 2022 ; Chinese Journal of Physiology Volume 65 ; 2022 ; 65 ; https://www.cjphysiology.org/ >
 
@@ -11200,16 +11200,16 @@
       param[journal_issn] = 2352-0817
       #param[base_url] = https://www.cmrpjournal.org/
 
-      au < manifest ; 2011 ; Current Medicine Research and Practice Volume 1 ; 2011 ; 1 ; https://www.cmrpjournal.org/ >
-      au < manifest ; 2012 ; Current Medicine Research and Practice Volume 2 ; 2012 ; 2 ; https://www.cmrpjournal.org/ >
-      au < manifest ; 2013 ; Current Medicine Research and Practice Volume 3 ; 2013 ; 3 ; https://www.cmrpjournal.org/ >
+      au < ready ; 2011 ; Current Medicine Research and Practice Volume 1 ; 2011 ; 1 ; https://www.cmrpjournal.org/ >
+      au < ready ; 2012 ; Current Medicine Research and Practice Volume 2 ; 2012 ; 2 ; https://www.cmrpjournal.org/ >
+      au < ready ; 2013 ; Current Medicine Research and Practice Volume 3 ; 2013 ; 3 ; https://www.cmrpjournal.org/ >
       au < exists ; 2014 ; Current Medicine Research and Practice Volume 4 ; 2014 ; 4 ; https://www.cmrpjournal.org/ >
       au < exists ; 2015 ; Current Medicine Research and Practice Volume 5 ; 2015 ; 5 ; https://www.cmrpjournal.org/ >
       au < exists ; 2016 ; Current Medicine Research and Practice Volume 6 ; 2016 ; 6 ; https://www.cmrpjournal.org/ >
       au < exists ; 2017 ; Current Medicine Research and Practice Volume 7 ; 2017 ; 7 ; https://www.cmrpjournal.org/ >
       au < exists ; 2018 ; Current Medicine Research and Practice Volume 8 ; 2018 ; 8 ; https://www.cmrpjournal.org/ >
       au < exists ; 2019 ; Current Medicine Research and Practice Volume 9 ; 2019 ; 9 ; https://www.cmrpjournal.org/ >
-      au < manifest ; 2020 ; Current Medicine Research and Practice Volume 10 ; 2020 ; 10 ; https://www.cmrpjournal.org/ >
+      au < ready ; 2020 ; Current Medicine Research and Practice Volume 10 ; 2020 ; 10 ; https://www.cmrpjournal.org/ >
       au < released ; 2021 ; Current Medicine Research and Practice Volume 11 ; 2021 ; 11 ; https://www.cmrpjournal.org/ >
       au < manifest ; 2022 ; Current Medicine Research and Practice Volume 12 ; 2022 ; 12 ; https://www.cmrpjournal.org/ >
 
@@ -11244,8 +11244,8 @@
       param[journal_issn] = 1027-8117
       #param[base_url] = https://www.dermsinica.org/
 
-      au < manifest ; 2019 ; Dermatologica Sinica Volume 37 ; 2019 ; 37 ; https://www.dermsinica.org/ >
-      au < manifest ; 2020 ; Dermatologica Sinica Volume 38 ; 2020 ; 38 ; https://www.dermsinica.org/ >
+      au < ready ; 2019 ; Dermatologica Sinica Volume 37 ; 2019 ; 37 ; https://www.dermsinica.org/ >
+      au < ready ; 2020 ; Dermatologica Sinica Volume 38 ; 2020 ; 38 ; https://www.dermsinica.org/ >
       au < released ; 2021 ; Dermatologica Sinica Volume 39 ; 2021 ; 39 ; https://www.dermsinica.org/ >
       au < manifest ; 2022 ; Dermatologica Sinica Volume 40 ; 2022 ; 40 ; https://www.dermsinica.org/ >
 
@@ -11263,8 +11263,8 @@
       param[journal_issn] = 2231-5055
       #param[base_url] = https://www.dukeorthojournal.com/
 
-      au < manifest ; 2019 ; Duke Orthopedic Journal Volume 9 ; 2019 ; 9 ; https://www.dukeorthojournal.com/ >
-      au < manifest ; 2020 ; Duke Orthopedic Journal Volume 10 ; 2020 ; 10 ; https://www.dukeorthojournal.com/ >
+      au < ready ; 2019 ; Duke Orthopedic Journal Volume 9 ; 2019 ; 9 ; https://www.dukeorthojournal.com/ >
+      au < ready ; 2020 ; Duke Orthopedic Journal Volume 10 ; 2020 ; 10 ; https://www.dukeorthojournal.com/ >
       au < exists ; 2021 ; Duke Orthopedic Journal Volume 11 ; 2021 ; 11 ; https://www.dukeorthojournal.com/ >
       au < expected ; 2022 ; Duke Orthopedic Journal Volume 12 ; 2022 ; 12 ; https://www.dukeorthojournal.com/ >
 
@@ -11281,10 +11281,10 @@
       param[journal_issn] = 2590-1761
       #param[base_url] = https://www.ehpjournal.com/
 
-      au < manifest ; 2018 ; Education in the Health Professions Volume 1 ; 2018 ; 1 ; https://www.ehpjournal.com/ >
-      au < manifest ; 2019 ; Education in the Health Professions Volume 2 ; 2019 ; 2 ; https://www.ehpjournal.com/ >
-      au < manifest ; 2020 ; Education in the Health Professions Volume 3 ; 2020 ; 3 ; https://www.ehpjournal.com/ >
-      au < manifest ; 2021 ; Education in the Health Professions Volume 4 ; 2021 ; 4 ; https://www.ehpjournal.com/ >
+      au < ready ; 2018 ; Education in the Health Professions Volume 1 ; 2018 ; 1 ; https://www.ehpjournal.com/ >
+      au < ready ; 2019 ; Education in the Health Professions Volume 2 ; 2019 ; 2 ; https://www.ehpjournal.com/ >
+      au < ready ; 2020 ; Education in the Health Professions Volume 3 ; 2020 ; 3 ; https://www.ehpjournal.com/ >
+      au < ready ; 2021 ; Education in the Health Professions Volume 4 ; 2021 ; 4 ; https://www.ehpjournal.com/ >
       au < manifest ; 2022 ; Education in the Health Professions Volume 5 ; 2022 ; 5 ; https://www.ehpjournal.com/ >
 
   }
@@ -11300,7 +11300,7 @@
       param[journal_issn] = 2241-9136
       #param[base_url] = https://www.hellenicurologyjournal.com/
 
-      au < manifest ; 2020 ; Hellenic Urology Volume 32 ; 2020 ; 32 ; https://www.hellenicurologyjournal.com/ >
+      au < ready ; 2020 ; Hellenic Urology Volume 32 ; 2020 ; 32 ; https://www.hellenicurologyjournal.com/ >
       au < released ; 2021 ; Hellenic Urology Volume 33 ; 2021 ; 33 ; https://www.hellenicurologyjournal.com/ >
       au < expected ; 2022 ; Hellenic Urology Volume 34 ; 2022 ; 34 ; https://www.hellenicurologyjournal.com/ >
 
@@ -11318,9 +11318,9 @@
       param[journal_issn] = 2666-0784
       #param[base_url] = https://www.ijcrsonweb.org/
 
-      au < manifest ; 2018 ; Indian Journal of Colo-Rectal Surgery Volume 1 ; 2018 ; 1 ; https://www.ijcrsonweb.org/ >
-      au < manifest ; 2019 ; Indian Journal of Colo-Rectal Surgery Volume 2 ; 2019 ; 2 ; https://www.ijcrsonweb.org/ >
-      au < manifest ; 2020 ; Indian Journal of Colo-Rectal Surgery Volume 3 ; 2020 ; 3 ; https://www.ijcrsonweb.org/ >
+      au < ready ; 2018 ; Indian Journal of Colo-Rectal Surgery Volume 1 ; 2018 ; 1 ; https://www.ijcrsonweb.org/ >
+      au < ready ; 2019 ; Indian Journal of Colo-Rectal Surgery Volume 2 ; 2019 ; 2 ; https://www.ijcrsonweb.org/ >
+      au < ready ; 2020 ; Indian Journal of Colo-Rectal Surgery Volume 3 ; 2020 ; 3 ; https://www.ijcrsonweb.org/ >
       au < released ; 2021 ; Indian Journal of Colo-Rectal Surgery Volume 4 ; 2021 ; 4 ; https://www.ijcrsonweb.org/ >
       au < manifest ; 2022 ; Indian Journal of Colo-Rectal Surgery Volume 5 ; 2022 ; 5 ; https://www.ijcrsonweb.org/ >
 
@@ -11360,13 +11360,13 @@
       param[journal_issn] = 2230-7354
       #param[base_url] = https://www.ijcne.org/
 
-      au < manifest ; 2015 ; Indian Journal of Continuing Nursing Education Volume 16 ; 2015 ; 16 ; https://www.ijcne.org/ >
-      au < manifest ; 2016 ; Indian Journal of Continuing Nursing Education Volume 17 ; 2016 ; 17 ; https://www.ijcne.org/ >
-      au < manifest ; 2017 ; Indian Journal of Continuing Nursing Education Volume 18 ; 2017 ; 18 ; https://www.ijcne.org/ >
-      au < manifest ; 2018 ; Indian Journal of Continuing Nursing Education Volume 19 ; 2018 ; 19 ; https://www.ijcne.org/ >
-      au < manifest ; 2019 ; Indian Journal of Continuing Nursing Education Volume 20 ; 2019 ; 20 ; https://www.ijcne.org/ >
-      au < manifest ; 2020 ; Indian Journal of Continuing Nursing Education Volume 21 ; 2020 ; 21 ; https://www.ijcne.org/ >
-      au < manifest ; 2021 ; Indian Journal of Continuing Nursing Education Volume 22 ; 2021 ; 22 ; https://www.ijcne.org/ >
+      au < ready ; 2015 ; Indian Journal of Continuing Nursing Education Volume 16 ; 2015 ; 16 ; https://www.ijcne.org/ >
+      au < ready ; 2016 ; Indian Journal of Continuing Nursing Education Volume 17 ; 2016 ; 17 ; https://www.ijcne.org/ >
+      au < ready ; 2017 ; Indian Journal of Continuing Nursing Education Volume 18 ; 2017 ; 18 ; https://www.ijcne.org/ >
+      au < ready ; 2018 ; Indian Journal of Continuing Nursing Education Volume 19 ; 2018 ; 19 ; https://www.ijcne.org/ >
+      au < ready ; 2019 ; Indian Journal of Continuing Nursing Education Volume 20 ; 2019 ; 20 ; https://www.ijcne.org/ >
+      au < ready ; 2020 ; Indian Journal of Continuing Nursing Education Volume 21 ; 2020 ; 21 ; https://www.ijcne.org/ >
+      au < ready ; 2021 ; Indian Journal of Continuing Nursing Education Volume 22 ; 2021 ; 22 ; https://www.ijcne.org/ >
       au < manifest ; 2022 ; Indian Journal of Continuing Nursing Education Volume 23 ; 2022 ; 23 ; https://www.ijcne.org/ >
 
   }
@@ -11464,9 +11464,9 @@
       param[journal_issn] = 2589-8736
       #param[base_url] = https://www.herniasurgeryjournal.org/
 
-      au < manifest ; 2018 ; International Journal of Abdominal Wall and Hernia Surgery Volume 1 ; 2018 ; 1 ; https://www.herniasurgeryjournal.org/ >
-      au < manifest ; 2019 ; International Journal of Abdominal Wall and Hernia Surgery Volume 2 ; 2019 ; 2 ; https://www.herniasurgeryjournal.org/ >
-      au < manifest ; 2020 ; International Journal of Abdominal Wall and Hernia Surgery Volume 3 ; 2020 ; 3 ; https://www.herniasurgeryjournal.org/ >
+      au < ready ; 2018 ; International Journal of Abdominal Wall and Hernia Surgery Volume 1 ; 2018 ; 1 ; https://www.herniasurgeryjournal.org/ >
+      au < ready ; 2019 ; International Journal of Abdominal Wall and Hernia Surgery Volume 2 ; 2019 ; 2 ; https://www.herniasurgeryjournal.org/ >
+      au < ready ; 2020 ; International Journal of Abdominal Wall and Hernia Surgery Volume 3 ; 2020 ; 3 ; https://www.herniasurgeryjournal.org/ >
       au < released ; 2021 ; International Journal of Abdominal Wall and Hernia Surgery Volume 4 ; 2021 ; 4 ; https://www.herniasurgeryjournal.org/ >
       au < manifest ; 2022 ; International Journal of Abdominal Wall and Hernia Surgery Volume 5 ; 2022 ; 5 ; https://www.herniasurgeryjournal.org/ >
 
@@ -11483,9 +11483,9 @@
       param[journal_issn] = 2589-8388
       #param[base_url] = https://www.ijcommdent.com/
 
-      au < manifest ; 2018 ; International Journal of Community Dentistry Volume 6 ; 2018 ; 6 ; https://www.ijcommdent.com/ >
-      au < manifest ; 2019 ; International Journal of Community Dentistry Volume 7 ; 2019 ; 7 ; https://www.ijcommdent.com/ >
-      au < manifest ; 2020 ; International Journal of Community Dentistry Volume 8 ; 2020 ; 8 ; https://www.ijcommdent.com/ >
+      au < ready ; 2018 ; International Journal of Community Dentistry Volume 6 ; 2018 ; 6 ; https://www.ijcommdent.com/ >
+      au < ready ; 2019 ; International Journal of Community Dentistry Volume 7 ; 2019 ; 7 ; https://www.ijcommdent.com/ >
+      au < ready ; 2020 ; International Journal of Community Dentistry Volume 8 ; 2020 ; 8 ; https://www.ijcommdent.com/ >
       au < released ; 2021 ; International Journal of Community Dentistry Volume 9 ; 2021 ; 9 ; https://www.ijcommdent.com/ >
       au < expected ; 2022 ; International Journal of Community Dentistry Volume 10 ; 2022 ; 10 ; https://www.ijcommdent.com/ >
 
@@ -11502,7 +11502,7 @@
       param[journal_issn] = 2590-2997
       #param[base_url] = https://www.ijhnp.org/
 
-      au < manifest ; 2018 ; International Journal of Head and Neck Pathology Volume 1 ; 2018 ; 1 ; https://www.ijhnp.org/ >
+      au < ready ; 2018 ; International Journal of Head and Neck Pathology Volume 1 ; 2018 ; 1 ; https://www.ijhnp.org/ >
       au < manifest ; 2019 ; International Journal of Head and Neck Pathology Volume 2 ; 2019 ; 2 ; https://www.ijhnp.org/ >
       au < manifest ; 2020 ; International Journal of Head and Neck Pathology Volume 3 ; 2020 ; 3 ; https://www.ijhnp.org/ >
       au < exists ; 2021 ; International Journal of Head and Neck Pathology Volume 4 ; 2021 ; 4 ; https://www.ijhnp.org/ >
@@ -12831,8 +12831,8 @@
       param[journal_issn] = 1028-3684
       #param[base_url] = https://www.e-tjp.org/
 
-      au < manifest ; 2019 ; Taiwanese Journal of Psychiatry Volume 33 ; 2019 ; 33 ; https://www.e-tjp.org/ >
-      au < manifest ; 2020 ; Taiwanese Journal of Psychiatry Volume 34 ; 2020 ; 34 ; https://www.e-tjp.org/ >
+      au < ready ; 2019 ; Taiwanese Journal of Psychiatry Volume 33 ; 2019 ; 33 ; https://www.e-tjp.org/ >
+      au < ready ; 2020 ; Taiwanese Journal of Psychiatry Volume 34 ; 2020 ; 34 ; https://www.e-tjp.org/ >
       au < released ; 2021 ; Taiwanese Journal of Psychiatry Volume 35 ; 2021 ; 35 ; https://www.e-tjp.org/ >
       au < manifest ; 2022 ; Taiwanese Journal of Psychiatry Volume 36 ; 2022 ; 36 ; https://www.e-tjp.org/ >
 
