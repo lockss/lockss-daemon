@@ -11315,6 +11315,21 @@
   {
 
     title <
+      name = Journal of Leukocyte Biology ;
+      eissn = 1938-3673 ;
+      issnl = 1938-3673
+    >
+
+    param[journal_id] = jleukbio
+    #move from Wiley on 2023
+
+    au < exists ; exists ; 2022 ; 2022 ; Journal of Leukocyte Biology Volume 112 ; 112 ; >
+
+  }
+
+  {
+
+    title <
       name = Journal of Logic and Computation ;
       issn = 0955-792X ;
       eissn = 1465-363X ;
@@ -12395,9 +12410,92 @@
     au < crawling ; exists ; 2022 ; 2022 ; Journal of Semitic Studies Volume 67 ; 67 ; >
 
   }
+
+  {
+
+    title <
+      name = The Journal of Sexual Medicine ;
+      issn = 1743-6095 ;
+      eissn = 1743-6109 ;
+      issnl = 1743-6095
+    >
+
+    param[journal_id] = jsm
+    #move from Elsevier on 2023
+
+    au < exists ; exists ; 2004 ; 2004 ; The Journal of Sexual Medicine Volume 1 ; 1 ; >
+    au < exists ; exists ; 2005 ; 2005 ; The Journal of Sexual Medicine Volume 2 ; 2 ; >
+    au < exists ; exists ; 2006 ; 2006 ; The Journal of Sexual Medicine Volume 3 ; 3 ; >
+    au < exists ; exists ; 2007 ; 2007 ; The Journal of Sexual Medicine Volume 4 ; 4 ; >
+    au < exists ; exists ; 2008 ; 2008 ; The Journal of Sexual Medicine Volume 5 ; 5 ; >
+    au < exists ; exists ; 2009 ; 2009 ; The Journal of Sexual Medicine Volume 6 ; 6 ; >
+    au < exists ; exists ; 2010 ; 2010 ; The Journal of Sexual Medicine Volume 7 ; 7 ; >
+    au < exists ; exists ; 2011 ; 2011 ; The Journal of Sexual Medicine Volume 8 ; 8 ; >
+    au < exists ; exists ; 2012 ; 2012 ; The Journal of Sexual Medicine Volume 9 ; 9 ; >
+    au < exists ; exists ; 2013 ; 2013 ; The Journal of Sexual Medicine Volume 10 ; 10 ; >
+    au < exists ; exists ; 2014 ; 2014 ; The Journal of Sexual Medicine Volume 11 ; 11 ; >
+    au < exists ; exists ; 2015 ; 2015 ; The Journal of Sexual Medicine Volume 12 ; 12 ; >
+    au < exists ; exists ; 2016 ; 2016 ; The Journal of Sexual Medicine Volume 13 ; 13 ; >
+    au < exists ; exists ; 2017 ; 2017 ; The Journal of Sexual Medicine Volume 14 ; 14 ; >
+    au < exists ; exists ; 2018 ; 2018 ; The Journal of Sexual Medicine Volume 15 ; 15 ; >
+    au < exists ; exists ; 2019 ; 2019 ; The Journal of Sexual Medicine Volume 16 ; 16 ; >
+    au < exists ; exists ; 2020 ; 2020 ; The Journal of Sexual Medicine Volume 17 ; 17 ; >
+    au < exists ; exists ; 2021 ; 2021 ; The Journal of Sexual Medicine Volume 18 ; 18 ; >
+    au < exists ; exists ; 2022 ; 2022 ; The Journal of Sexual Medicine Volume 19 ; 19 ; >
+
+  }
+
+  {
+
+    title <
+      name = Sexual Medicine ;
+      eissn = 2050-1161 ;
+      issnl = 2050-1161
+    >
+
+    param[journal_id] = smoa
+    #move from Elsevier on 2023
+
+    au < expected ; exists ; 2013 ; 2013 ; Sexual Medicine Volume 1 ; 1 ; >
+    au < expected ; exists ; 2014 ; 2014 ; Sexual Medicine Volume 2 ; 2 ; >
+    au < expected ; exists ; 2015 ; 2015 ; Sexual Medicine Volume 3 ; 3 ; >
+    au < expected ; exists ; 2016 ; 2016 ; Sexual Medicine Volume 4 ; 4 ; >
+    au < expected ; exists ; 2017 ; 2017 ; Sexual Medicine Volume 5 ; 5 ; >
+    au < expected ; exists ; 2018 ; 2018 ; Sexual Medicine Volume 6 ; 6 ; >
+    au < expected ; exists ; 2019 ; 2019 ; Sexual Medicine Volume 7 ; 7 ; >
+    au < expected ; exists ; 2020 ; 2020 ; Sexual Medicine Volume 8 ; 8 ; >
+    au < expected ; exists ; 2021 ; 2021 ; Sexual Medicine Volume 9 ; 9 ; >
+    au < expected ; exists ; 2022 ; 2022 ; Sexual Medicine Volume 10 ; 10 ; >
+
+  }
+
+  {
+
+    title <
+      name = Sexual Medicine Reviews ;
+      issn = 2050-0513 ;
+      eissn = 2050-0521 ;
+      issnl = 2050-0513
+    >
+
+    param[journal_id] = smr
+    #move from Elsevier on 2023
+
+    au < expected ; exists ; 2013 ; 2013 ; Sexual Medicine Reviews Volume 1 ; 1 ; >
+    au < expected ; exists ; 2014 ; 2014 ; Sexual Medicine Reviews Volume 2 ; 2 ; >
+    au < expected ; exists ; 2015 ; 2015 ; Sexual Medicine Reviews Volume 3 ; 3 ; >
+    au < expected ; exists ; 2016 ; 2016 ; Sexual Medicine Reviews Volume 4 ; 4 ; >
+    au < expected ; exists ; 2017 ; 2017 ; Sexual Medicine Reviews Volume 5 ; 5 ; >
+    au < expected ; exists ; 2018 ; 2018 ; Sexual Medicine Reviews Volume 6 ; 6 ; >
+    au < expected ; exists ; 2019 ; 2019 ; Sexual Medicine Reviews Volume 7 ; 7 ; >
+    au < expected ; exists ; 2020 ; 2020 ; Sexual Medicine Reviews Volume 8 ; 8 ; >
+    au < expected ; exists ; 2021 ; 2021 ; Sexual Medicine Reviews Volume 9 ; 9 ; >
+    au < expected ; exists ; 2022 ; 2022 ; Sexual Medicine Reviews Volume 10 ; 10 ; >
+
+  }
+
   #Publisher and previous TDB differ on eissn - 1527-1897 vs 0022-4529
   #Publisher and previous TDB differ on issn - 0022-4529 vs 1527-1897
-
   {
 
     title <
