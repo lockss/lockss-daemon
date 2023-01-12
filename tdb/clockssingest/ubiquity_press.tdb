@@ -3532,3 +3532,47 @@
   }
 
 }
+{
+  publisher <
+    name = London School of Hygiene & Tropical Medicine ;
+    info[contract] = 2011 ;
+    info[back] = 2000 ;
+    info[tester] = 8 ;
+    info[poller] = 8
+  >
+
+    provider = Ubiquity Press
+    #plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
+    #implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
+
+    implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    attr[start_stem] = index.php/
+
+  {
+
+      title <
+        name = Community Ear & Hearing Health ;
+        eissn = 2040-5715
+      >
+
+      comment[publisher] = London School of Hygiene & Tropical Medicine
+      param[base_url] =  https://account.cehh.press.lshtm.ac.uk/
+      param[journal_id] = s-j-cehh
+
+      au < manifest ; exists ; 2010 ; 7 ; Indigenous Business & Public Administration Volume 2010 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; 8 ; Indigenous Business & Public Administration Volume 2011 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; 9 ; Indigenous Business & Public Administration Volume 2012 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; 10 ; Indigenous Business & Public Administration Volume 2013 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; 11 ; Indigenous Business & Public Administration Volume 2014 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; 12 ; Indigenous Business & Public Administration Volume 2015 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; 13 ; Indigenous Business & Public Administration Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2017 ; 14 ; Indigenous Business & Public Administration Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; 15 ; Indigenous Business & Public Administration Volume 2018 ; 2018 ; >
+      au < manifest ; exists ; 2019 ; 16 ; Indigenous Business & Public Administration Volume 2019 ; 2019 ; >
+      au < manifest ; exists ; 2020 ; 17 ; Indigenous Business & Public Administration Volume 2020 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; 18 ; Indigenous Business & Public Administration Volume 2021 ; 2021 ; >
+
+  }
+
+}
