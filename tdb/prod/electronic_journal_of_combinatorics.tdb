@@ -17,7 +17,6 @@
       param[base_url] = http://www.combinatorics.org/ojs/
       param[journal_id] = eljc
 
-
       au < down ; 1994 ; The Electronic Journal of Combinatorics Volume 1 ; 1 ; 1994 >
       au < down ; 1995 ; The Electronic Journal of Combinatorics Volume 2 ; 2 ; 1995 >
       au < down ; 1996 ; The Electronic Journal of Combinatorics Volume 3 ; 3 ; 1996 >
@@ -52,7 +51,6 @@
       param[journal_id] = eljc
       attr[start_stem] = index.php/
       #manifest page example http://www.combinatorics.org/ojs/index.php/eljc/gateway/lockss?year=2018
-
 
       au < released ; 2018 ; The Electronic Journal of Combinatorics Volume 25 ; 25 ; 2018 >
       au < released ; 2019 ; The Electronic Journal of Combinatorics Volume 26 ; 26 ; 2019 >
