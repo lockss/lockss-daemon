@@ -9089,14 +9089,14 @@
 
       param[journal_issn] = 0189-5117
 #      param[base_url] = http://www.tjogonline.com/
+      #Archive will stay with Medknow until further notice
 
       au < finished ; frozen ; 2016 ; Tropical Journal of Obstetrics and Gynaecology Volume 33 ; 2016 ; 33 ; http://www.tjogonline.com/ ; ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2017 ; Tropical Journal of Obstetrics and Gynaecology Volume 34 ; 2017 ; 34 ; http://www.tjogonline.com/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; Tropical Journal of Obstetrics and Gynaecology Volume 35 ; 2018 ; 35 ; http://www.tjogonline.com/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; Tropical Journal of Obstetrics and Gynaecology Volume 36 ; 2019 ; 36 ; https://www.tjogonline.com/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2020 ; Tropical Journal of Obstetrics and Gynaecology Volume 37 ; 2020 ; 37 ; https://www.tjogonline.com/ ; ; reingest4.clockss.org:8082 >
-      au < expected ; exists ; 2021 ; Tropical Journal of Obstetrics and Gynaecology Volume 38 ; 2021 ; 38 ; https://www.tjogonline.com/ ; ; >
-      au < expected ; exists ; 2022 ; Tropical Journal of Obstetrics and Gynaecology Volume 39 ; 2022 ; 39 ; https://www.tjogonline.com/ ; ; >
+      #deactivated
 
   }
 

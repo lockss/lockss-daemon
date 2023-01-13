@@ -8637,14 +8637,14 @@
 
       param[journal_issn] = 0189-5117
 #      param[base_url] = http://www.tjogonline.com/
+      #Archive will stay with Medknow until further notice
 
       au < released ; 2016 ; Tropical Journal of Obstetrics and Gynaecology Volume 33 ; 2016 ; 33 ; http://www.tjogonline.com/ >
       au < released ; 2017 ; Tropical Journal of Obstetrics and Gynaecology Volume 34 ; 2017 ; 34 ; http://www.tjogonline.com/ >
       au < released ; 2018 ; Tropical Journal of Obstetrics and Gynaecology Volume 35 ; 2018 ; 35 ; http://www.tjogonline.com/ >
       au < released ; 2019 ; Tropical Journal of Obstetrics and Gynaecology Volume 36 ; 2019 ; 36 ; https://www.tjogonline.com/ >
       au < released ; 2020 ; Tropical Journal of Obstetrics and Gynaecology Volume 37 ; 2020 ; 37 ; https://www.tjogonline.com/ >
-      au < expected ; 2021 ; Tropical Journal of Obstetrics and Gynaecology Volume 38 ; 2021 ; 38 ; https://www.tjogonline.com/ >
-      au < expected ; 2022 ; Tropical Journal of Obstetrics and Gynaecology Volume 39 ; 2022 ; 39 ; https://www.tjogonline.com/ >
+      #deactivated
 
   }
 
