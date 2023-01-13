@@ -12051,6 +12051,22 @@
   {
 
     title <
+      name = Journal of Philosophy of Education ;
+      issn = 0309-8249 ;
+      eissn = 1467-9752 ;
+      issnl = 0309-8249
+    >
+
+    param[journal_id] = jope
+    #move from Wiley by 2023-01-01
+
+    au < exists ; exists ; 2022 ; 2022 ; Journal of Philosophy of Education Volume 56 ; 56 ; >
+
+  }
+
+  {
+
+    title <
       name = Journal of Plant Ecology ;
       issn = 1752-9921 ;
       eissn = 1752-993X ;
