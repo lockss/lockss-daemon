@@ -2203,7 +2203,6 @@
     au < released ; 2018 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 3 ; 2018 ; 3 ; https://www.ijghtn.com/ >
     au < released ; 2019 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 4 ; 2019 ; 4 ; https://www.ijghtn.com/ >
     au < released ; 2020 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 5 ; 2020 ; 5 ; https://www.ijghtn.com/ >
-    au < expected ; 2022 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 6 ; 2022 ; 6 ; https://www.ijghtn.com/ >
 
   }
 
@@ -9609,13 +9608,14 @@
       param[journal_issn] = 2589-1731
 #      param[base_url] = http://www.ijcpc.org/
       #Empty backissues page https://www.ijcpc.org/backissues.asp
+      #move to MM Publications 2022-06, Archive will stay with Medknow until further notice
 
       au < exists ; 2017 ; International Journal of Clinicopathological Correlation Volume 1 ; 2017 ; 1 ; https://www.ijcpc.org/ >
       au < exists ; 2018 ; International Journal of Clinicopathological Correlation Volume 2 ; 2018 ; 2 ; https://www.ijcpc.org/ >
       au < exists ; 2019 ; International Journal of Clinicopathological Correlation Volume 3 ; 2019 ; 3 ; https://www.ijcpc.org/ >
       au < exists ; 2020 ; International Journal of Clinicopathological Correlation Volume 4 ; 2020 ; 4 ; https://www.ijcpc.org/ >
       au < exists ; 2021 ; International Journal of Clinicopathological Correlation Volume 5 ; 2021 ; 5 ; https://www.ijcpc.org/ >
-      au < expected ; 2022 ; International Journal of Clinicopathological Correlation Volume 6 ; 2022 ; 6 ; https://www.ijcpc.org/ >
+      #deactivated
 
   }
 
@@ -9630,6 +9630,7 @@
 
       param[journal_issn] = 2542-5013
 #      param[base_url] = http://www.ijofo.org/
+      #move to MM Publications 2022-06, Archive will stay with Medknow until further notice
 
       au < released ; 2016 ; International Journal of Forensic Odontology Volume 1 ; 2016 ; 1 ; https://www.ijofo.org/ >
       au < released ; 2017 ; International Journal of Forensic Odontology Volume 2 ; 2017 ; 2 ; http://www.ijofo.org/ >
@@ -9637,7 +9638,7 @@
       au < released ; 2019 ; International Journal of Forensic Odontology Volume 4 ; 2019 ; 4 ; https://www.ijofo.org/ >
       au < released ; 2020 ; International Journal of Forensic Odontology Volume 5 ; 2020 ; 5 ; https://www.ijofo.org/ >
       au < released ; 2021 ; International Journal of Forensic Odontology Volume 6 ; 2021 ; 6 ; https://www.ijofo.org/ >
-      au < expected ; 2022 ; International Journal of Forensic Odontology Volume 7 ; 2022 ; 7 ; https://www.ijofo.org/ >
+      #deactivated
 
   }
 
@@ -9719,9 +9720,13 @@
 
       param[journal_issn] = 2589-1723
 #      param[base_url] = http://www.ijofb.org/
+      #move to MM Publications 2022-06, Archive will stay with Medknow until further notice
 
       au < released ; 2017 ; International Journal of Orofacial Biology Volume 1 ; 2017 ; 1 ; http://www.ijofb.org/ >
       au < released ; 2018 ; International Journal of Orofacial Biology Volume 2 ; 2018 ; 2 ; https://www.ijofb.org/ >
+      au < exists ; 2019 ; International Journal of Orofacial Biology Volume 3 ; 2019 ; 3 ; https://www.ijofb.org/ >
+      au < exists ; 2020 ; International Journal of Orofacial Biology Volume 4 ; 2020 ; 4 ; https://www.ijofb.org/ >
+      #deactivated
 
   }
 
@@ -9735,9 +9740,11 @@
 
       param[journal_issn] = 2589-5354
 #      param[base_url] = http://www.ijofr.org/
+      #move to MM Publications 2022-06, Archive will stay with Medknow until further notice
 
       au < released ; 2017 ; International Journal of Orofacial Research Volume 2 ; 2017 ; 2 ; http://www.ijofr.org/ >
       au < released ; 2018 ; International Journal of Orofacial Research Volume 3 ; 2018 ; 3 ; https://www.ijofr.org/ >
+      #deactivated
 
   }
 
@@ -9752,6 +9759,7 @@
 
       param[journal_issn] = 2349-5243
 #      param[base_url] = http://www.orthodrehab.org/
+      #move to MM Publications 2022-06, Archive will stay with Medknow until further notice
 
       au < released ; 2016 ; International Journal of Orthodontic Rehabilitation Volume 7 ; 2016 ; 7 ; https://www.orthodrehab.org/ >
       au < released ; 2017 ; International Journal of Orthodontic Rehabilitation Volume 8 ; 2017 ; 8 ; http://www.orthodrehab.org/ >
@@ -9759,7 +9767,7 @@
       au < released ; 2019 ; International Journal of Orthodontic Rehabilitation Volume 10 ; 2019 ; 10 ; https://www.orthodrehab.org/ >
       au < released ; 2020 ; International Journal of Orthodontic Rehabilitation Volume 11 ; 2020 ; 11 ; https://www.orthodrehab.org/ >
       au < released ; 2021 ; International Journal of Orthodontic Rehabilitation Volume 12 ; 2021 ; 12 ; https://www.orthodrehab.org/ >
-      au < expected ; 2022 ; International Journal of Orthodontic Rehabilitation Volume 13 ; 2022 ; 13 ; https://www.orthodrehab.org/ >
+      #deactivated
 
   }
 
@@ -9774,6 +9782,7 @@
 
       param[journal_issn] = 2468-8932
 #      param[base_url] = http://www.ijpedor.org/
+      #move to MM Publications 2022-06, Archive will stay with Medknow until further notice
 
       au < released ; 2016 ; International Journal of Pedodontic Rehabilitation Volume 1 ; 2016 ; 1 ; https://www.ijpedor.org/ >
       au < released ; 2017 ; International Journal of Pedodontic Rehabilitation Volume 2 ; 2017 ; 2 ; http://www.ijpedor.org/ >
@@ -9781,7 +9790,7 @@
       au < released ; 2019 ; International Journal of Pedodontic Rehabilitation Volume 4 ; 2019 ; 4 ; https://www.ijpedor.org/ >
       au < released ; 2020 ; International Journal of Pedodontic Rehabilitation Volume 5 ; 2020 ; 5 ; https://www.ijpedor.org/ >
       au < released ; 2021 ; International Journal of Pedodontic Rehabilitation Volume 6 ; 2021 ; 6 ; https://www.ijpedor.org/ >
-      au < expected ; 2022 ; International Journal of Pedodontic Rehabilitation Volume 7 ; 2022 ; 7 ; https://www.ijpedor.org/ >
+      #deactivated
 
   }
 
@@ -11482,12 +11491,13 @@
 
       param[journal_issn] = 2589-8388
       #param[base_url] = https://www.ijcommdent.com/
+      #move to MM Publications 2022-06, Archive will stay with Medknow until further notice
 
       au < ready ; 2018 ; International Journal of Community Dentistry Volume 6 ; 2018 ; 6 ; https://www.ijcommdent.com/ >
       au < ready ; 2019 ; International Journal of Community Dentistry Volume 7 ; 2019 ; 7 ; https://www.ijcommdent.com/ >
       au < ready ; 2020 ; International Journal of Community Dentistry Volume 8 ; 2020 ; 8 ; https://www.ijcommdent.com/ >
       au < released ; 2021 ; International Journal of Community Dentistry Volume 9 ; 2021 ; 9 ; https://www.ijcommdent.com/ >
-      au < expected ; 2022 ; International Journal of Community Dentistry Volume 10 ; 2022 ; 10 ; https://www.ijcommdent.com/ >
+      #deactivated
 
   }
 
@@ -11501,12 +11511,12 @@
 
       param[journal_issn] = 2590-2997
       #param[base_url] = https://www.ijhnp.org/
+      #move to MM Publications 2022-06, Archive will stay with Medknow until further notice
 
       au < ready ; 2018 ; International Journal of Head and Neck Pathology Volume 1 ; 2018 ; 1 ; https://www.ijhnp.org/ >
       au < manifest ; 2019 ; International Journal of Head and Neck Pathology Volume 2 ; 2019 ; 2 ; https://www.ijhnp.org/ >
       au < manifest ; 2020 ; International Journal of Head and Neck Pathology Volume 3 ; 2020 ; 3 ; https://www.ijhnp.org/ >
-      au < exists ; 2021 ; International Journal of Head and Neck Pathology Volume 4 ; 2021 ; 4 ; https://www.ijhnp.org/ >
-      au < expected ; 2022 ; International Journal of Head and Neck Pathology Volume 5 ; 2022 ; 5 ; https://www.ijhnp.org/ >
+      #deactivated
 
   }
 
@@ -11640,12 +11650,13 @@
 
       param[journal_issn] = 2667-1069
       #param[base_url] = https://www.ijsocialrehab.com/
+      #move to MM Publications 2022-06, Archive will stay with Medknow until further notice
 
       au < exists ; 2018 ; International Journal of Social Rehabilitation Volume 3 ; 2018 ; 3 ; https://www.ijsocialrehab.com/ >
       au < exists ; 2019 ; International Journal of Social Rehabilitation Volume 4 ; 2019 ; 4 ; https://www.ijsocialrehab.com/ >
       au < exists ; 2020 ; International Journal of Social Rehabilitation Volume 5 ; 2020 ; 5 ; https://www.ijsocialrehab.com/ >
       au < exists ; 2021 ; International Journal of Social Rehabilitation Volume 6 ; 2021 ; 6 ; https://www.ijsocialrehab.com/ >
-      au < expected ; 2022 ; International Journal of Social Rehabilitation Volume 7 ; 2022 ; 7 ; https://www.ijsocialrehab.com/ >
+      #deactivated
 
   }
 
