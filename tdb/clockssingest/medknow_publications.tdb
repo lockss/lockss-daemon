@@ -10428,9 +10428,9 @@
 #      param[base_url] = https://www.jdeponline.com/
       #move to Thieme, 2022. Archive will stay with Medknow until further notice
 
-      au < manifest ; exists ; 2018 ; Journal of Diabetes and Endocrine Practice Volume 1 ; 2018 ; 1 ; https://www.jdeponline.com/ ; ; >
-      au < manifest ; exists ; 2019 ; Journal of Diabetes and Endocrine Practice Volume 2 ; 2019 ; 2 ; https://www.jdeponline.com/ ; ; >
-      au < manifest ; exists ; 2020 ; Journal of Diabetes and Endocrine Practice Volume 3 ; 2020 ; 3 ; https://www.jdeponline.com/ ; ; >
+      au < ready ; exists ; 2018 ; Journal of Diabetes and Endocrine Practice Volume 1 ; 2018 ; 1 ; https://www.jdeponline.com/ ; ; >
+      au < ready ; exists ; 2019 ; Journal of Diabetes and Endocrine Practice Volume 2 ; 2019 ; 2 ; https://www.jdeponline.com/ ; ; >
+      au < ready ; exists ; 2020 ; Journal of Diabetes and Endocrine Practice Volume 3 ; 2020 ; 3 ; https://www.jdeponline.com/ ; ; >
       au < finished ; manifest ; 2021 ; Journal of Diabetes and Endocrine Practice Volume 4 ; 2021 ; 4 ; https://www.jdeponline.com/ ; ; reingest3.clockss.org:8083 >
 
   }
@@ -12354,9 +12354,9 @@
       #param[base_url] = https://www.journalofcurrentoncology.org/
       #move to Sage in 2023
 
-      au < manifest ; exists ; 2018 ; Journal of Current Oncology Volume 1 ; 2018 ; 1 ; https://www.journalofcurrentoncology.org/ ; ; >
-      au < manifest ; exists ; 2019 ; Journal of Current Oncology Volume 2 ; 2019 ; 2 ; https://www.journalofcurrentoncology.org/ ; ; >
-      au < manifest ; exists ; 2020 ; Journal of Current Oncology Volume 3 ; 2020 ; 3 ; https://www.journalofcurrentoncology.org/ ; ; >
+      au < ready ; exists ; 2018 ; Journal of Current Oncology Volume 1 ; 2018 ; 1 ; https://www.journalofcurrentoncology.org/ ; ; >
+      au < ready ; exists ; 2019 ; Journal of Current Oncology Volume 2 ; 2019 ; 2 ; https://www.journalofcurrentoncology.org/ ; ; >
+      au < ready ; exists ; 2020 ; Journal of Current Oncology Volume 3 ; 2020 ; 3 ; https://www.journalofcurrentoncology.org/ ; ; >
       au < frozen ; exists ; 2021 ; Journal of Current Oncology Volume 4 ; 2021 ; 4 ; https://www.journalofcurrentoncology.org/ ; ; >
       au < crawling ; exists ; 2022 ; Journal of Current Oncology Volume 5 ; 2022 ; 5 ; https://www.journalofcurrentoncology.org/ ; ; >
       #deactivated
