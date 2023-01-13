@@ -5879,6 +5879,21 @@
   {
 
     title <
+      name = Evolution Letters ;
+      eissn = 2056-3744 ;
+      issnl = 2056-3744
+    >
+
+    param[journal_id] = evlett
+    #move from Wiley by 2023-01-01
+
+    au < exists ; 2022 ; 2022 ; Evolution Letters Volume 6 ; 6 >
+
+  }
+
+  {
+
+    title <
       name = Evolution, Medicine, and Public Health ;
       eissn = 2050-6201
     >
