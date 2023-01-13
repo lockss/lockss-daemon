@@ -11905,10 +11905,15 @@
       param[journal_issn] = 2231-1505
       #param[base_url] = https://www.ijpn.in/
 
-      au < exists ; exists ; 2013 ; Indian Journal of Psychiatric Nursing Volume 10 ; 2013 ; 10 ; https://www.ijpn.in/ ; ; >
-      au < exists ; exists ; 2014 ; Indian Journal of Psychiatric Nursing Volume 11 ; 2014 ; 11 ; https://www.ijpn.in/ ; ; >
-      au < exists ; exists ; 2015 ; Indian Journal of Psychiatric Nursing Volume 12 ; 2015 ; 12 ; https://www.ijpn.in/ ; ; >
-      au < exists ; exists ; 2016 ; Indian Journal of Psychiatric Nursing Volume 13 ; 2016 ; 13 ; https://www.ijpn.in/ ; ; >
+      au < exists ; exists ; 2013 ; Indian Journal of Psychiatric Nursing Volume 5 ; 2013 ; 5 ; https://www.ijpn.in/ ; ; >
+
+      au < exists ; exists ; 2014 ; Indian Journal of Psychiatric Nursing Volume 7 ; 2014 ; 7 ; https://www.ijpn.in/ ; ; >
+      au < exists ; exists ; 2014 ; Indian Journal of Psychiatric Nursing Volume 8 ; 2014 ; 8 ; https://www.ijpn.in/ ; ; >
+      au < exists ; exists ; 2015 ; Indian Journal of Psychiatric Nursing Volume 9 ; 2015 ; 9 ; https://www.ijpn.in/ ; ; >
+      au < exists ; exists ; 2015 ; Indian Journal of Psychiatric Nursing Volume 10 ; 2015 ; 10 ; https://www.ijpn.in/ ; ; >
+      au < exists ; exists ; 2016 ; Indian Journal of Psychiatric Nursing Volume 11 ; 2016 ; 11 ; https://www.ijpn.in/ ; ; >
+      au < exists ; exists ; 2016 ; Indian Journal of Psychiatric Nursing Volume 12 ; 2016 ; 12 ; https://www.ijpn.in/ ; ; >
+      au < exists ; exists ; 2017 ; Indian Journal of Psychiatric Nursing Volume 13 ; 2017 ; 13 ; https://www.ijpn.in/ ; ; >
       au < manifest ; exists ; 2017 ; Indian Journal of Psychiatric Nursing Volume 14 ; 2017 ; 14 ; https://www.ijpn.in/ ; ; >
       au < manifest ; exists ; 2018 ; Indian Journal of Psychiatric Nursing Volume 15 ; 2018 ; 15 ; https://www.ijpn.in/ ; ; >
       au < manifest ; exists ; 2019 ; Indian Journal of Psychiatric Nursing Volume 16 ; 2019 ; 16 ; https://www.ijpn.in/ ; ; >
@@ -12053,7 +12058,6 @@
       au < manifest ; exists ; 2019 ; International Journal of Neuro-Oncology Volume 2 ; 2019 ; 2 ; https://www.internationaljneurooncology.com/ ; ; >
       au < manifest ; exists ; 2020 ; International Journal of Neuro-Oncology Volume 3 ; 2020 ; 3 ; https://www.internationaljneurooncology.com/ ; ; >
       au < frozen ; exists ; 2021 ; International Journal of Neuro-Oncology Volume 4 ; 2021 ; 4 ; https://www.internationaljneurooncology.com/ ; ; >
-      au < expected ; exists ; 2022 ; International Journal of Neuro-Oncology Volume 5 ; 2022 ; 5 ; https://www.internationaljneurooncology.com/ ; ; >
 
   }
 
@@ -12146,8 +12150,7 @@
       param[journal_issn] = 2072-8069
       #param[base_url] = https://www.ijhonline.org/
 
-      au < exists ; exists ; 2011 ; Iraqi Journal of Hematology Volume 0 ; 2011 ; 0 ; https://www.ijhonline.org/ ; ; >
-      au < exists ; exists ; 2012 ; Iraqi Journal of Hematology Volume 1 ; 2012 ; 1 ; https://www.ijhonline.org/ ; ; >
+      au < exists ; exists ; 2011 ; Iraqi Journal of Hematology Volume 1 ; 2011 ; 1 ; https://www.ijhonline.org/ ; ; >
       au < manifest ; exists ; 2013 ; Iraqi Journal of Hematology Volume 2 ; 2013 ; 2 ; https://www.ijhonline.org/ ; ; >
       au < manifest ; exists ; 2014 ; Iraqi Journal of Hematology Volume 3 ; 2014 ; 3 ; https://www.ijhonline.org/ ; ; >
       au < manifest ; exists ; 2015 ; Iraqi Journal of Hematology Volume 4 ; 2015 ; 4 ; https://www.ijhonline.org/ ; ; >
@@ -12720,7 +12723,6 @@
       au < manifest ; exists ; 2019 ; Journal of Research in Siddha Medicine Volume 2 ; 2019 ; 2 ; https://www.jrsm.in/ ; ; >
       au < manifest ; exists ; 2020 ; Journal of Research in Siddha Medicine Volume 3 ; 2020 ; 3 ; https://www.jrsm.in/ ; ; >
       au < frozen ; exists ; 2021 ; Journal of Research in Siddha Medicine Volume 4 ; 2021 ; 4 ; https://www.jrsm.in/ ; ; >
-      au < expected ; exists ; 2022 ; Journal of Research in Siddha Medicine Volume 5 ; 2022 ; 5 ; https://www.jrsm.in/ ; ; >
 
   }
 
@@ -12882,8 +12884,6 @@
       au < manifest ; exists ; 2018 ; Journal on Recent Advances in Pain Volume 4 ; 2018 ; 4 ; https://www.jorapain.com/ ; ; >
       au < manifest ; exists ; 2019 ; Journal on Recent Advances in Pain Volume 5 ; 2019 ; 5 ; https://www.jorapain.com/ ; ; >
       au < manifest ; exists ; 2020 ; Journal on Recent Advances in Pain Volume 6 ; 2020 ; 6 ; https://www.jorapain.com/ ; ; >
-      au < exists ; exists ; 2021 ; Journal on Recent Advances in Pain Volume 7 ; 2021 ; 7 ; https://www.jorapain.com/ ; ; >
-      au < expected ; exists ; 2022 ; Journal on Recent Advances in Pain Volume 8 ; 2022 ; 8 ; https://www.jorapain.com/ ; ; >
 
   }
 
@@ -13406,7 +13406,6 @@
       au < manifest ; exists ; 2019 ; The Onco Fertility Journal Volume 2 ; 2019 ; 2 ; https://www.tofjonline.org/ ; ; >
       au < manifest ; exists ; 2020 ; The Onco Fertility Journal Volume 3 ; 2020 ; 3 ; https://www.tofjonline.org/ ; ; >
       au < frozen ; exists ; 2021 ; The Onco Fertility Journal Volume 4 ; 2021 ; 4 ; https://www.tofjonline.org/ ; ; >
-      au < expected ; exists ; 2022 ; The Onco Fertility Journal Volume 5 ; 2022 ; 5 ; https://www.tofjonline.org/ ; ; >
 
   }
 
@@ -13424,9 +13423,6 @@
 
       au < manifest ; exists ; 2018 ; The Saudi Journal of Forensic Medicine and Sciences Volume 1 ; 2018 ; 1 ; https://www.sjfms.org/ ; ; >
       au < manifest ; exists ; 2019 ; The Saudi Journal of Forensic Medicine and Sciences Volume 2 ; 2019 ; 2 ; https://www.sjfms.org/ ; ; >
-      au < exists ; exists ; 2020 ; The Saudi Journal of Forensic Medicine and Sciences Volume 3 ; 2020 ; 3 ; https://www.sjfms.org/ ; ; >
-      au < exists ; exists ; 2021 ; The Saudi Journal of Forensic Medicine and Sciences Volume 4 ; 2021 ; 4 ; https://www.sjfms.org/ ; ; >
-      au < expected ; exists ; 2022 ; The Saudi Journal of Forensic Medicine and Sciences Volume 5 ; 2022 ; 5 ; https://www.sjfms.org/ ; ; >
 
   }
 
