@@ -6867,6 +6867,17 @@
       >
 
       param[journal_issn] = 2455-3719
+
+  }
+
+  {
+
+      title <
+        name = Journal of Limb Lengthening & Reconstruction ;
+        eissn = 2455-3719
+      >
+
+      param[journal_issn] = 2455-3719
 #      param[base_url] = http://www.jlimblengthrecon.org/
 
       au < released ; 2015 ; Journal of Limb Lengthening & Reconstruction Volume 1 ; 2015 ; 1 ; http://www.jlimblengthrecon.org/ >
@@ -12728,8 +12739,8 @@
       param[journal_issn] = 2455-1732
       #param[base_url] = https://www.sujhs.org/
 
-      au < exists ; 2021 ; Santosh University Journal of Health Sciences Volume 1 ; 2021 ; 1 ; https://www.sujhs.org/ >
-      au < expected ; 2022 ; Santosh University Journal of Health Sciences Volume 2 ; 2022 ; 2 ; https://www.sujhs.org/ >
+      au < exists ; 2021 ; Santosh University Journal of Health Sciences Volume 7 ; 2021 ; 7 ; https://www.sujhs.org/ >
+      au < exists ; 2022 ; Santosh University Journal of Health Sciences Volume 8 ; 2022 ; 8 ; https://www.sujhs.org/ >
 
   }
 
