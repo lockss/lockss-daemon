@@ -5887,7 +5887,7 @@
     param[journal_id] = evlett
     #move from Wiley by 2023-01-01
 
-    au < exists ; 2022 ; 2022 ; Evolution Letters Volume 6 ; 6 >
+    au < manifest ; 2022 ; 2022 ; Evolution Letters Volume 6 ; 6 >
 
   }
 
@@ -11335,7 +11335,7 @@
     param[journal_id] = jleukbio
     #move from Wiley on 2023
 
-    au < exists ; 2022 ; 2022 ; Journal of Leukocyte Biology Volume 112 ; 112 >
+    au < manifest ; 2022 ; 2022 ; Journal of Leukocyte Biology Volume 112 ; 112 >
 
   }
 
@@ -12057,7 +12057,7 @@
     param[journal_id] = jope
     #move from Wiley by 2023-01-01
 
-    au < exists ; 2022 ; 2022 ; Journal of Philosophy of Education Volume 56 ; 56 >
+    au < manifest ; 2022 ; 2022 ; Journal of Philosophy of Education Volume 56 ; 56 >
 
   }
 
@@ -12455,21 +12455,21 @@
     au < exists ; 2005 ; 2005 ; The Journal of Sexual Medicine Volume 2 ; 2 >
     au < exists ; 2006 ; 2006 ; The Journal of Sexual Medicine Volume 3 ; 3 >
     au < exists ; 2007 ; 2007 ; The Journal of Sexual Medicine Volume 4 ; 4 >
-    au < exists ; 2008 ; 2008 ; The Journal of Sexual Medicine Volume 5 ; 5 >
-    au < exists ; 2009 ; 2009 ; The Journal of Sexual Medicine Volume 6 ; 6 >
-    au < exists ; 2010 ; 2010 ; The Journal of Sexual Medicine Volume 7 ; 7 >
-    au < exists ; 2011 ; 2011 ; The Journal of Sexual Medicine Volume 8 ; 8 >
-    au < exists ; 2012 ; 2012 ; The Journal of Sexual Medicine Volume 9 ; 9 >
-    au < exists ; 2013 ; 2013 ; The Journal of Sexual Medicine Volume 10 ; 10 >
-    au < exists ; 2014 ; 2014 ; The Journal of Sexual Medicine Volume 11 ; 11 >
-    au < exists ; 2015 ; 2015 ; The Journal of Sexual Medicine Volume 12 ; 12 >
-    au < exists ; 2016 ; 2016 ; The Journal of Sexual Medicine Volume 13 ; 13 >
-    au < exists ; 2017 ; 2017 ; The Journal of Sexual Medicine Volume 14 ; 14 >
+    au < manifest ; 2008 ; 2008 ; The Journal of Sexual Medicine Volume 5 ; 5 >
+    au < manifest ; 2009 ; 2009 ; The Journal of Sexual Medicine Volume 6 ; 6 >
+    au < manifest ; 2010 ; 2010 ; The Journal of Sexual Medicine Volume 7 ; 7 >
+    au < manifest ; 2011 ; 2011 ; The Journal of Sexual Medicine Volume 8 ; 8 >
+    au < manifest ; 2012 ; 2012 ; The Journal of Sexual Medicine Volume 9 ; 9 >
+    au < manifest ; 2013 ; 2013 ; The Journal of Sexual Medicine Volume 10 ; 10 >
+    au < manifest ; 2014 ; 2014 ; The Journal of Sexual Medicine Volume 11 ; 11 >
+    au < manifest ; 2015 ; 2015 ; The Journal of Sexual Medicine Volume 12 ; 12 >
+    au < manifest ; 2016 ; 2016 ; The Journal of Sexual Medicine Volume 13 ; 13 >
+    au < manifest ; 2017 ; 2017 ; The Journal of Sexual Medicine Volume 14 ; 14 >
     au < exists ; 2018 ; 2018 ; The Journal of Sexual Medicine Volume 15 ; 15 >
-    au < exists ; 2019 ; 2019 ; The Journal of Sexual Medicine Volume 16 ; 16 >
-    au < exists ; 2020 ; 2020 ; The Journal of Sexual Medicine Volume 17 ; 17 >
-    au < exists ; 2021 ; 2021 ; The Journal of Sexual Medicine Volume 18 ; 18 >
-    au < exists ; 2022 ; 2022 ; The Journal of Sexual Medicine Volume 19 ; 19 >
+    au < manifest ; 2019 ; 2019 ; The Journal of Sexual Medicine Volume 16 ; 16 >
+    au < manifest ; 2020 ; 2020 ; The Journal of Sexual Medicine Volume 17 ; 17 >
+    au < manifest ; 2021 ; 2021 ; The Journal of Sexual Medicine Volume 18 ; 18 >
+    au < manifest ; 2022 ; 2022 ; The Journal of Sexual Medicine Volume 19 ; 19 >
 
   }
 
@@ -12484,16 +12484,16 @@
     param[journal_id] = smoa
     #move from Elsevier on 2023
 
-    au < expected ; 2013 ; 2013 ; Sexual Medicine Volume 1 ; 1 >
-    au < expected ; 2014 ; 2014 ; Sexual Medicine Volume 2 ; 2 >
-    au < expected ; 2015 ; 2015 ; Sexual Medicine Volume 3 ; 3 >
-    au < expected ; 2016 ; 2016 ; Sexual Medicine Volume 4 ; 4 >
-    au < expected ; 2017 ; 2017 ; Sexual Medicine Volume 5 ; 5 >
-    au < expected ; 2018 ; 2018 ; Sexual Medicine Volume 6 ; 6 >
-    au < expected ; 2019 ; 2019 ; Sexual Medicine Volume 7 ; 7 >
-    au < expected ; 2020 ; 2020 ; Sexual Medicine Volume 8 ; 8 >
-    au < expected ; 2021 ; 2021 ; Sexual Medicine Volume 9 ; 9 >
-    au < expected ; 2022 ; 2022 ; Sexual Medicine Volume 10 ; 10 >
+    au < manifest ; 2013 ; 2013 ; Sexual Medicine Volume 1 ; 1 >
+    au < manifest ; 2014 ; 2014 ; Sexual Medicine Volume 2 ; 2 >
+    au < manifest ; 2015 ; 2015 ; Sexual Medicine Volume 3 ; 3 >
+    au < manifest ; 2016 ; 2016 ; Sexual Medicine Volume 4 ; 4 >
+    au < manifest ; 2017 ; 2017 ; Sexual Medicine Volume 5 ; 5 >
+    au < manifest ; 2018 ; 2018 ; Sexual Medicine Volume 6 ; 6 >
+    au < manifest ; 2019 ; 2019 ; Sexual Medicine Volume 7 ; 7 >
+    au < manifest ; 2020 ; 2020 ; Sexual Medicine Volume 8 ; 8 >
+    au < manifest ; 2021 ; 2021 ; Sexual Medicine Volume 9 ; 9 >
+    au < manifest ; 2022 ; 2022 ; Sexual Medicine Volume 10 ; 10 >
 
   }
 
@@ -12509,16 +12509,16 @@
     param[journal_id] = smr
     #move from Elsevier on 2023
 
-    au < expected ; 2013 ; 2013 ; Sexual Medicine Reviews Volume 1 ; 1 >
-    au < expected ; 2014 ; 2014 ; Sexual Medicine Reviews Volume 2 ; 2 >
-    au < expected ; 2015 ; 2015 ; Sexual Medicine Reviews Volume 3 ; 3 >
-    au < expected ; 2016 ; 2016 ; Sexual Medicine Reviews Volume 4 ; 4 >
-    au < expected ; 2017 ; 2017 ; Sexual Medicine Reviews Volume 5 ; 5 >
-    au < expected ; 2018 ; 2018 ; Sexual Medicine Reviews Volume 6 ; 6 >
-    au < expected ; 2019 ; 2019 ; Sexual Medicine Reviews Volume 7 ; 7 >
-    au < expected ; 2020 ; 2020 ; Sexual Medicine Reviews Volume 8 ; 8 >
-    au < expected ; 2021 ; 2021 ; Sexual Medicine Reviews Volume 9 ; 9 >
-    au < expected ; 2022 ; 2022 ; Sexual Medicine Reviews Volume 10 ; 10 >
+    au < manifest ; 2013 ; 2013 ; Sexual Medicine Reviews Volume 1 ; 1 >
+    au < manifest ; 2014 ; 2014 ; Sexual Medicine Reviews Volume 2 ; 2 >
+    au < manifest ; 2015 ; 2015 ; Sexual Medicine Reviews Volume 3 ; 3 >
+    au < manifest ; 2016 ; 2016 ; Sexual Medicine Reviews Volume 4 ; 4 >
+    au < manifest ; 2017 ; 2017 ; Sexual Medicine Reviews Volume 5 ; 5 >
+    au < manifest ; 2018 ; 2018 ; Sexual Medicine Reviews Volume 6 ; 6 >
+    au < manifest ; 2019 ; 2019 ; Sexual Medicine Reviews Volume 7 ; 7 >
+    au < manifest ; 2020 ; 2020 ; Sexual Medicine Reviews Volume 8 ; 8 >
+    au < manifest ; 2021 ; 2021 ; Sexual Medicine Reviews Volume 9 ; 9 >
+    au < manifest ; 2022 ; 2022 ; Sexual Medicine Reviews Volume 10 ; 10 >
 
   }
 
@@ -13874,21 +13874,21 @@
     #move from Cambridge University Press in 2023
     #content available from 1992 volume 1 to 2007 volume 15
 
-    au < exists ; 2008 ; 2008 ; Microscopy Today Volume 16 ; 16 >
-    au < exists ; 2009 ; 2009 ; Microscopy Today Volume 17 ; 17 >
-    au < exists ; 2010 ; 2010 ; Microscopy Today Volume 18 ; 18 >
-    au < exists ; 2011 ; 2011 ; Microscopy Today Volume 19 ; 19 >
-    au < exists ; 2012 ; 2012 ; Microscopy Today Volume 20 ; 20 >
-    au < exists ; 2013 ; 2013 ; Microscopy Today Volume 21 ; 21 >
-    au < exists ; 2014 ; 2014 ; Microscopy Today Volume 22 ; 22 >
-    au < exists ; 2015 ; 2015 ; Microscopy Today Volume 23 ; 23 >
-    au < exists ; 2016 ; 2016 ; Microscopy Today Volume 24 ; 24 >
-    au < exists ; 2017 ; 2017 ; Microscopy Today Volume 25 ; 25 >
-    au < exists ; 2018 ; 2018 ; Microscopy Today Volume 26 ; 26 >
-    au < exists ; 2019 ; 2019 ; Microscopy Today Volume 27 ; 27 >
-    au < exists ; 2020 ; 2020 ; Microscopy Today Volume 28 ; 28 >
-    au < exists ; 2021 ; 2021 ; Microscopy Today Volume 29 ; 29 >
-    au < exists ; 2022 ; 2022 ; Microscopy Today Volume 30 ; 30 >
+    au < manifest ; 2008 ; 2008 ; Microscopy Today Volume 16 ; 16 >
+    au < manifest ; 2009 ; 2009 ; Microscopy Today Volume 17 ; 17 >
+    au < manifest ; 2010 ; 2010 ; Microscopy Today Volume 18 ; 18 >
+    au < manifest ; 2011 ; 2011 ; Microscopy Today Volume 19 ; 19 >
+    au < manifest ; 2012 ; 2012 ; Microscopy Today Volume 20 ; 20 >
+    au < manifest ; 2013 ; 2013 ; Microscopy Today Volume 21 ; 21 >
+    au < manifest ; 2014 ; 2014 ; Microscopy Today Volume 22 ; 22 >
+    au < manifest ; 2015 ; 2015 ; Microscopy Today Volume 23 ; 23 >
+    au < manifest ; 2016 ; 2016 ; Microscopy Today Volume 24 ; 24 >
+    au < manifest ; 2017 ; 2017 ; Microscopy Today Volume 25 ; 25 >
+    au < manifest ; 2018 ; 2018 ; Microscopy Today Volume 26 ; 26 >
+    au < manifest ; 2019 ; 2019 ; Microscopy Today Volume 27 ; 27 >
+    au < manifest ; 2020 ; 2020 ; Microscopy Today Volume 28 ; 28 >
+    au < manifest ; 2021 ; 2021 ; Microscopy Today Volume 29 ; 29 >
+    au < manifest ; 2022 ; 2022 ; Microscopy Today Volume 30 ; 30 >
 
   }
 
@@ -13905,21 +13905,21 @@
     #move from Cambridge University Press in 2023
     #content available from 1995 volume 1 to 2007 volume 13
 
-    au < exists ; 2008 ; 2008 ; Microscopy and Microanalysis Volume 14 ; 14 >
-    au < exists ; 2009 ; 2009 ; Microscopy and Microanalysis Volume 15 ; 15 >
-    au < exists ; 2010 ; 2010 ; Microscopy and Microanalysis Volume 16 ; 16 >
-    au < exists ; 2011 ; 2011 ; Microscopy and Microanalysis Volume 17 ; 17 >
-    au < exists ; 2012 ; 2012 ; Microscopy and Microanalysis Volume 18 ; 18 >
-    au < exists ; 2013 ; 2013 ; Microscopy and Microanalysis Volume 19 ; 19 >
-    au < exists ; 2014 ; 2014 ; Microscopy and Microanalysis Volume 20 ; 20 >
-    au < exists ; 2015 ; 2015 ; Microscopy and Microanalysis Volume 21 ; 21 >
-    au < exists ; 2016 ; 2016 ; Microscopy and Microanalysis Volume 22 ; 22 >
-    au < exists ; 2017 ; 2017 ; Microscopy and Microanalysis Volume 23 ; 23 >
-    au < exists ; 2018 ; 2018 ; Microscopy and Microanalysis Volume 24 ; 24 >
-    au < exists ; 2019 ; 2019 ; Microscopy and Microanalysis Volume 25 ; 25 >
-    au < exists ; 2020 ; 2020 ; Microscopy and Microanalysis Volume 26 ; 26 >
-    au < exists ; 2021 ; 2021 ; Microscopy and Microanalysis Volume 27 ; 27 >
-    au < exists ; 2022 ; 2022 ; Microscopy and Microanalysis Volume 28 ; 28 >
+    au < manifest ; 2008 ; 2008 ; Microscopy and Microanalysis Volume 14 ; 14 >
+    au < manifest ; 2009 ; 2009 ; Microscopy and Microanalysis Volume 15 ; 15 >
+    au < manifest ; 2010 ; 2010 ; Microscopy and Microanalysis Volume 16 ; 16 >
+    au < manifest ; 2011 ; 2011 ; Microscopy and Microanalysis Volume 17 ; 17 >
+    au < manifest ; 2012 ; 2012 ; Microscopy and Microanalysis Volume 18 ; 18 >
+    au < manifest ; 2013 ; 2013 ; Microscopy and Microanalysis Volume 19 ; 19 >
+    au < manifest ; 2014 ; 2014 ; Microscopy and Microanalysis Volume 20 ; 20 >
+    au < manifest ; 2015 ; 2015 ; Microscopy and Microanalysis Volume 21 ; 21 >
+    au < manifest ; 2016 ; 2016 ; Microscopy and Microanalysis Volume 22 ; 22 >
+    au < manifest ; 2017 ; 2017 ; Microscopy and Microanalysis Volume 23 ; 23 >
+    au < manifest ; 2018 ; 2018 ; Microscopy and Microanalysis Volume 24 ; 24 >
+    au < manifest ; 2019 ; 2019 ; Microscopy and Microanalysis Volume 25 ; 25 >
+    au < manifest ; 2020 ; 2020 ; Microscopy and Microanalysis Volume 26 ; 26 >
+    au < manifest ; 2021 ; 2021 ; Microscopy and Microanalysis Volume 27 ; 27 >
+    au < manifest ; 2022 ; 2022 ; Microscopy and Microanalysis Volume 28 ; 28 >
 
   }
 
@@ -16451,7 +16451,7 @@
     param[journal_id] = psq
     #move from Wiley by 2023-01-01
 
-    au < expected ; 2022 ; 2022 ; Political Science Quarterly Volume 137 ; 137 >
+    au < manifest ; 2022 ; 2022 ; Political Science Quarterly Volume 137 ; 137 >
 
   }
 
