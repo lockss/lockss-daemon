@@ -10177,8 +10177,8 @@
 
       au < finished ; crawling ; 2017 ; International Journal of Orofacial Biology Volume 1 ; 2017 ; 1 ; https://www.ijofb.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; International Journal of Orofacial Biology Volume 2 ; 2018 ; 2 ; https://www.ijofb.org/ ; ; reingest5.clockss.org:8082 >
-      au < exists ; exists ; 2019 ; International Journal of Orofacial Biology Volume 3 ; 2019 ; 3 ; https://www.ijofb.org/ ; ; >
-      au < exists ; exists ; 2020 ; International Journal of Orofacial Biology Volume 4 ; 2020 ; 4 ; https://www.ijofb.org/ ; ; >
+      au < manifest ; exists ; 2019 ; International Journal of Orofacial Biology Volume 3 ; 2019 ; 3 ; https://www.ijofb.org/ ; ; >
+      au < manifest ; exists ; 2020 ; International Journal of Orofacial Biology Volume 4 ; 2020 ; 4 ; https://www.ijofb.org/ ; ; >
       #deactivated
 
   }
@@ -11905,15 +11905,15 @@
       param[journal_issn] = 2231-1505
       #param[base_url] = https://www.ijpn.in/
 
-      au < exists ; exists ; 2013 ; Indian Journal of Psychiatric Nursing Volume 5 ; 2013 ; 5 ; https://www.ijpn.in/ ; ; >
+      au < manifest ; exists ; 2013 ; Indian Journal of Psychiatric Nursing Volume 5 ; 2013 ; 5 ; https://www.ijpn.in/ ; ; >
 
-      au < exists ; exists ; 2014 ; Indian Journal of Psychiatric Nursing Volume 7 ; 2014 ; 7 ; https://www.ijpn.in/ ; ; >
-      au < exists ; exists ; 2014 ; Indian Journal of Psychiatric Nursing Volume 8 ; 2014 ; 8 ; https://www.ijpn.in/ ; ; >
-      au < exists ; exists ; 2015 ; Indian Journal of Psychiatric Nursing Volume 9 ; 2015 ; 9 ; https://www.ijpn.in/ ; ; >
-      au < exists ; exists ; 2015 ; Indian Journal of Psychiatric Nursing Volume 10 ; 2015 ; 10 ; https://www.ijpn.in/ ; ; >
-      au < exists ; exists ; 2016 ; Indian Journal of Psychiatric Nursing Volume 11 ; 2016 ; 11 ; https://www.ijpn.in/ ; ; >
-      au < exists ; exists ; 2016 ; Indian Journal of Psychiatric Nursing Volume 12 ; 2016 ; 12 ; https://www.ijpn.in/ ; ; >
-      au < exists ; exists ; 2017 ; Indian Journal of Psychiatric Nursing Volume 13 ; 2017 ; 13 ; https://www.ijpn.in/ ; ; >
+      au < manifest ; exists ; 2014 ; Indian Journal of Psychiatric Nursing Volume 7 ; 2014 ; 7 ; https://www.ijpn.in/ ; ; >
+      au < manifest ; exists ; 2014 ; Indian Journal of Psychiatric Nursing Volume 8 ; 2014 ; 8 ; https://www.ijpn.in/ ; ; >
+      au < manifest ; exists ; 2015 ; Indian Journal of Psychiatric Nursing Volume 9 ; 2015 ; 9 ; https://www.ijpn.in/ ; ; >
+      au < manifest ; exists ; 2015 ; Indian Journal of Psychiatric Nursing Volume 10 ; 2015 ; 10 ; https://www.ijpn.in/ ; ; >
+      au < manifest ; exists ; 2016 ; Indian Journal of Psychiatric Nursing Volume 11 ; 2016 ; 11 ; https://www.ijpn.in/ ; ; >
+      au < manifest ; exists ; 2016 ; Indian Journal of Psychiatric Nursing Volume 12 ; 2016 ; 12 ; https://www.ijpn.in/ ; ; >
+      au < manifest ; exists ; 2017 ; Indian Journal of Psychiatric Nursing Volume 13 ; 2017 ; 13 ; https://www.ijpn.in/ ; ; >
       au < manifest ; exists ; 2017 ; Indian Journal of Psychiatric Nursing Volume 14 ; 2017 ; 14 ; https://www.ijpn.in/ ; ; >
       au < manifest ; exists ; 2018 ; Indian Journal of Psychiatric Nursing Volume 15 ; 2018 ; 15 ; https://www.ijpn.in/ ; ; >
       au < manifest ; exists ; 2019 ; Indian Journal of Psychiatric Nursing Volume 16 ; 2019 ; 16 ; https://www.ijpn.in/ ; ; >
@@ -12150,7 +12150,7 @@
       param[journal_issn] = 2072-8069
       #param[base_url] = https://www.ijhonline.org/
 
-      au < exists ; exists ; 2011 ; Iraqi Journal of Hematology Volume 1 ; 2011 ; 1 ; https://www.ijhonline.org/ ; ; >
+      au < manifest ; exists ; 2011 ; Iraqi Journal of Hematology Volume 1 ; 2011 ; 1 ; https://www.ijhonline.org/ ; ; >
       au < manifest ; exists ; 2013 ; Iraqi Journal of Hematology Volume 2 ; 2013 ; 2 ; https://www.ijhonline.org/ ; ; >
       au < manifest ; exists ; 2014 ; Iraqi Journal of Hematology Volume 3 ; 2014 ; 3 ; https://www.ijhonline.org/ ; ; >
       au < manifest ; exists ; 2015 ; Iraqi Journal of Hematology Volume 4 ; 2015 ; 4 ; https://www.ijhonline.org/ ; ; >
