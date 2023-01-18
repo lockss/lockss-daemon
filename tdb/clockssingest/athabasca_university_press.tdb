@@ -3,12 +3,11 @@
   publisher <
     name = Athabasca University Press ;
     info[contract] = 2014 ;
-    info[back] = 2010 ;
+    info[back] = 2000 ;
     info[tester] = 8 ;
     info[poller] = 8
   >
 
-    implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
     #moved to OJS3
     attr[start_stem] = index.php/
 
@@ -21,6 +20,7 @@
     >
 
     {
+      implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
       plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
       param[base_url] = http://www.canfolkmusic.ca/
       param[journal_id] = cfmb
@@ -55,6 +55,7 @@
     >
 
       {
+      implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
       plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
       param[base_url] = http://www.irrodl.org/
       param[journal_id] = irrodl
@@ -69,6 +70,7 @@
       au < superseded ; exists ; 2018 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 19 [superseded] ; 19 ; 2018 ; >
       }
       {
+      implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
       plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
       param[base_url] = http://www.irrodl.org/
       param[journal_id] = irrodl
@@ -93,6 +95,7 @@
     >
 
     {
+      implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
       plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
       param[base_url] = http://www.ijede.ca/
       param[journal_id] = jde
@@ -127,6 +130,7 @@
     >
 
      {
+      implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
       plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
       param[base_url] = http://www.ijede.ca/
       param[journal_id] = jde
@@ -142,6 +146,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; International Journal of E-Learning & Distance Education Volume 35 ; 35 ; 2020 ; >
      }
      {
+      implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
       plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
       param[base_url] = http://www.ijede.ca/
       param[journal_id] = jde
@@ -167,6 +172,7 @@
     >
 
       {
+      implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
       plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
       param[base_url] = http://jrp.icaap.org/
       param[journal_id] = jrp
@@ -182,6 +188,7 @@
       }
 
       {
+      implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
       plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
       param[base_url] = http://jrp.icaap.org/
       param[journal_id] = jrp
@@ -209,6 +216,7 @@
     >
 
       {
+      implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
       plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
       param[base_url] = http://www.lltjournal.ca/
       param[journal_id] = llt
@@ -223,6 +231,7 @@
       }
 
       {
+      implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
       plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
       param[base_url] = http://www.lltjournal.ca/
       param[journal_id] = llt
@@ -280,6 +289,7 @@
     >
 
       {
+      implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
       plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
       param[base_url] = http://www.oralhistoryforum.ca/
       param[journal_id] = ohf
@@ -294,6 +304,7 @@
       }
 
       {
+      implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
       plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
       param[base_url] = http://www.oralhistoryforum.ca/
       param[journal_id] = ohf
@@ -344,6 +355,7 @@
     >
 
     {
+      implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
       plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
       param[base_url] = http://trumpeter.athabascau.ca/
       param[journal_id] = trumpet
@@ -358,11 +370,28 @@
     }
 
     {
+      implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
       plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
       param[base_url] = http://trumpeter.athabascau.ca/
       param[journal_id] = trumpet
 
       au < finished ; crawling ; 1983 ; The Trumpeter Volume 1 (1983) ; 1 ; 1983 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2000 ; The Trumpeter Volume 16 ; 16 ; 2000 ; reingest2.clockss.org:8085 >
+      au < superseded ; exists ; 2010 ; The Trumpeter Volume 26 [superseded] ; 26 ; 2010 ; >
+      au < superseded ; exists ; 2011 ; The Trumpeter Volume 27 [superseded] ; 27 ; 2011 ; >
+      au < superseded ; exists ; 2018 ; The Trumpeter Volume 34 [superseded] ; 34 ; 2018 ; >
+      au < finished ; crawling ; 2019 ; The Trumpeter Volume 35 ; 35 ; 2019 ; reingest1.clockss.org:8082 >
+      au < superseded ; exists ; 2020 ; The Trumpeter Volume 36 [superseded] ; 36 ; 2020 ; >
+      au < superseded ; exists ; 2021 ; The Trumpeter Volume 37 [superseded] ; 37 ; 2021 ; >
+
+    }
+    {
+      implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
+      plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+      param[base_url] = https://trumpeter.athabascau.ca/
+      param[journal_id] = trumpet
+
+      au < doNotProcess ; doNotProcess ; 1983 ; The Trumpeter Volume 1 (1983) ; 1 ; 1983 ;  >
       au < manifest ; exists ; 1984 ; The Trumpeter Volume 1 (1984) ; 1 ; 1984 ; >
       au < manifest ; exists ; 1985 ; The Trumpeter Volume 2 ; 2 ; 1985 ; >
       au < manifest ; exists ; 1986 ; The Trumpeter Volume 3 ; 3 ; 1986 ; >
@@ -378,7 +407,7 @@
       au < manifest ; exists ; 1996 ; The Trumpeter Volume 13 ; 13 ; 1996 ; >
       au < manifest ; exists ; 1997 ; The Trumpeter Volume 14 ; 14 ; 1997 ; >
       au < manifest ; exists ; 1998 ; The Trumpeter Volume 15 ; 15 ; 1998 ; >
-      au < finished ; crawling ; 2000 ; The Trumpeter Volume 16 ; 16 ; 2000 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 2000 ; The Trumpeter Volume 16 ; 16 ; 2000 ; >
       au < manifest ; exists ; 2001 ; The Trumpeter Volume 17 ; 17 ; 2001 ; >
       au < manifest ; exists ; 2002 ; The Trumpeter Volume 18 ; 18 ; 2002 ; >
       au < manifest ; exists ; 2003 ; The Trumpeter Volume 19 ; 19 ; 2003 ; >
@@ -388,13 +417,13 @@
       au < manifest ; exists ; 2007 ; The Trumpeter Volume 23 ; 23 ; 2007 ; >
       au < manifest ; exists ; 2008 ; The Trumpeter Volume 24 ; 24 ; 2008 ; >
       au < manifest ; exists ; 2009 ; The Trumpeter Volume 25 ; 25 ; 2009 ; >
-      au < frozen ; exists ; 2010 ; The Trumpeter Volume 26 ; 26 ; 2010 ; >
-      au < frozen ; exists ; 2011 ; The Trumpeter Volume 27 ; 27 ; 2011 ; >
-      au < frozen ; exists ; 2018 ; The Trumpeter Volume 34 ; 34 ; 2018 ; >
-      au < finished ; crawling ; 2019 ; The Trumpeter Volume 35 ; 35 ; 2019 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; The Trumpeter Volume 36 ; 36 ; 2020 ; >
-      au < frozen ; exists ; 2021 ; The Trumpeter Volume 37 ; 37 ; 2021 ; >
-      au < expected ; exists ; 2022 ; The Trumpeter Volume 38 ; 38 ; 2022 ; >
+      au < manifest ; exists ; 2010 ; The Trumpeter Volume 26 ; 26 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; The Trumpeter Volume 27 ; 27 ; 2011 ; >
+      au < manifest ; exists ; 2018 ; The Trumpeter Volume 34 ; 34 ; 2018 ; >
+      au < doNotProcess ; doNotProcess ; 2019 ; The Trumpeter Volume 35 ; 35 ; 2019 ; >
+      au < manifest ; exists ; 2020 ; The Trumpeter Volume 36 ; 36 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; The Trumpeter Volume 37 ; 37 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; The Trumpeter Volume 38 ; 38 ; 2022 ; >
 
     }
     
