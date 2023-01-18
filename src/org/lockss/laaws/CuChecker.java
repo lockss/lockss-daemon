@@ -39,8 +39,9 @@ public class CuChecker extends Worker {
       List<Artifact> v2Versions;
       v2Versions = getAllCuArtifacts(au, v2Url);
       if (v2Versions.size() != v1Versions.length) {
-        String msg = "Mismatched version count: V1: " + v1Versions.length +
-          ", V2: " + v2Versions.size() + ", " + cu.getUrl();
+        String msg = "Mismatched version count for: " + cu.getUrl() + 
+          ": V1: " + v1Versions.length +
+          ", V2: " + v2Versions.size();
         if (!v2Url.equals(cu.getUrl())) {
           msg += " v2Url: " + v2Url;
         }
@@ -63,7 +64,8 @@ public class CuChecker extends Worker {
       }
     }
     catch (Exception ex) {
-      String err = v2Url + ": Error verifying: " + ex;
+      String err = "Error verifying: " + v2Url + "in: " + au.getName() +
+        ": " + ex;
       log.error(err, ex);
       task.addError(err);
       terminated = true;
@@ -73,32 +75,48 @@ public class CuChecker extends Worker {
     }
   }
 
-  boolean compareMetadata(ArchivalUnit au, CachedUrl cu, Artifact artifact,
-                          Long v1CollectionDate) {
+  private String mdMismatchMsg(ArchivalUnit au, CachedUrl cu, String field,
+                               String v1, String v2) {
+    return "Metadata mismatch in " + au.getName() + " for " + field +
+      ": V1: " + v1 + ", V2: " + v2;
+  }
+
+  List<String> compareMetadata(ArchivalUnit au, CachedUrl cu,
+                               Artifact artifact, Long v1CollectionDate) {
+    List<String> res = new ArrayList<>();
+
     long collDate = v1CollectionDate != null ? v1CollectionDate : -1;
     if (artifact.getAuid().equals(au.getAuId()) &&
         artifact.getNamespace().equals(namespace)  &&
         (collDate == -1 || artifact.getCollectionDate().equals(collDate)) &&
         artifact.getCommitted().equals(Boolean.TRUE)) {
-      return true;
+      return res;
     }
     if (!artifact.getAuid().equals(au.getAuId())) {
-      log.warning("Metadata mismatch, AUID. V1: " + au.getAuId() +
-                  ", V2: " + artifact.getAuid());
+      String msg = mdMismatchMsg(au, cu, "AUID",
+                                 au.getAuId(), artifact.getAuid());
+      log.warning(msg);
+      res.add(msg);
     }
     if (!artifact.getNamespace().equals(namespace)) {
-      log.warning("Metadata mismatch, Coll. V1: " + namespace +
-                  ", V2: " + artifact.getNamespace());
+      String msg = mdMismatchMsg(au, cu, "Namespace",
+                                 namespace, artifact.getNamespace());
+      log.warning(msg);
+      res.add(msg);
     }
     if (!artifact.getCollectionDate().equals(collDate)) {
-      log.warning("Metadata mismatch, Coll date. V1: " + collDate +
-                  ", V2: " + artifact.getCollectionDate());
+      String msg = mdMismatchMsg(au, cu, "Collection date",
+                                 Long.toString(collDate),
+                                 Long.toString(artifact.getCollectionDate()));
+      log.warning(msg);
+      res.add(msg);
     }
     if (!artifact.getCommitted()) {
-      log.warning("Metadata mismatch, Coll date. V1: " + collDate +
-                  ", V2: " + artifact.getCollectionDate());
+      String msg = mdMismatchMsg(au, cu, "Committed", "true", "false");
+      log.warning(msg);
+      res.add(msg);
     }
-    return false;
+    return res;
   }
 
   void compareCuToArtifact(CachedUrl cu, Artifact artifact) {
@@ -110,22 +128,25 @@ public class CuChecker extends Worker {
       if (!StringUtil.isNullString(fetchTime)) {
         collectionDate = Long.parseLong(fetchTime);
       }
-      boolean isMatch = compareMetadata(au, cu, artifact, collectionDate);
+      List<String> mderrs = compareMetadata(au, cu, artifact, collectionDate);
+      boolean isMatch = mderrs.isEmpty();
       if (!isMatch) {
-        String err = cu.getUrl() + ": V1 and V2 metadata did not match.";
-        task.addError(err);
+        for (String msg : mderrs) {
+          task.addError(msg);
+        }
       }
       else {
         log.debug3(cu.getUrl() + ": metadata matches.");
       }
-      if ( isMatch && auMover.isCompareBytes()) {
+      if (mderrs.isEmpty() && auMover.isCompareBytes()) {
         log.debug3("Fetching  content for byte compare");
         artifactData = artifactsApi.getMultipartArtifact(artifact.getUuid(),namespace,"ALWAYS");
         log.debug3("Successfully fetched Artifact Data");
         isMatch = IOUtils.contentEquals(artifactData.getInputStream(),
             cu.getUncompressedInputStream());
         if (!isMatch) {
-          String err = cu.getUrl() + ": V1 and V2 artifact content did not match.";
+          String err = "Artifact content mistmatch between V1 and V2: " +
+            cu.getUrl() + " in: " + au;
           log.warning(err);
           task.addError(err);
         }
@@ -163,7 +184,7 @@ public class CuChecker extends Worker {
       }
     }
     catch (ApiException | IOException ex) {
-      String err = cu.getUrl() + ": Error checking cu: " + ex.getMessage();
+      String err = "Error checking cu: " + cu.getUrl() + " in " + au + ": " + ex.getMessage();
       log.error(err, ex);
       task.addError(err);
       // change to failed check counter

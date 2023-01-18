@@ -38,6 +38,7 @@ import org.lockss.laaws.model.rs.ArtifactPageInfo;
 import org.lockss.laaws.model.rs.ArtifactProperties;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
+import org.lockss.repository.*;
 import org.lockss.util.CIProperties;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
@@ -154,18 +155,36 @@ public class CuMover extends Worker {
       log.debug3("copyArtifact returned");
     }
     catch (ApiException apie) {
-      String err = v2Url + ": failed to create version: " + cu.getVersion() + ": " +
+      String err = "Failed to write " + v2Url + cuVersionString(cu) + ": " +
           apie.getCode() + " - " + apie.getMessage();
       log.warning(err);
       task.addError(err);
     }
+    catch (LockssRepository.RepositoryStateException e) {
+      String err = "V1 repository error reading " + v1Url + cuVersionString(cu);
+      log.warning(err, e);
+      task.addError(err + ": " + e);
+    }
     catch (Exception | Error e) {
-      log.critical("Error copying " + v1Url + "(" + cu.getVersion(), e);
-      throw e;
+      String err = "Unexpected Error copying " + v1Url + cuVersionString(cu);
+      log.warning(err, e);
+      task.addError(err + ": " + e);
     }
     finally {
       AuUtil.safeRelease(cu);
     }
+  }
+
+  private String cuVersionString(CachedUrl cu) {
+    StringBuilder sb = new StringBuilder();
+    sb.append(" (ver: ");
+    if (cu.getVersion() == 0) {
+      sb.append("unknown");
+    } else {
+      sb.append(cu.getVersion());
+    }
+    sb.append(")");
+    return sb.toString();
   }
 
   /**

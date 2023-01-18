@@ -66,18 +66,18 @@ public class AuStateMover extends Worker {
   }
 
   public void run() {
-    log.debug2("Starting Au State Mover: ");
+    log.debug2("Starting AU State Mover: ");
     String auName = au.getName();
-    log.info(auName + ": Moving AU State...");
+    log.info("Moving AU State: " + auName);
     moveAuState(au);
-    log.info(auName + ": Moving AU Agreements...");
+    log.info("Moving AU Agreements: " + auName);
     moveAuAgreements(au);
-    log.info(auName + ": Moving AU Suspect Urls...");
+    log.info("Moving AU Suspect Urls: " + auName);
     moveAuSuspectUrlVersions(au);
-    log.info(auName + ": Moving No Au Peer Set...");
+    log.info("Moving No AU Peer Set: " + auName);
     moveNoAuPeerSet(au);
     //This needs to be last
-    log.info(auName + ": Moving AU Configuration...");
+    log.info("Moving AU Configuration: " + auName);
     moveAuConfig(au);
   }
 
@@ -97,21 +97,22 @@ public class AuStateMover extends Worker {
             .forEach(key -> v2config.putAuConfigItem(key, v1config.get(key)));
         // send the configuration
         cfgApiClient.putAuConfig(au.getAuId(), v2config);
-        log.info(auName + ": Successfully moved AU Configuration.");
+        log.info("Successfully moved AU Configuration: " + auName);
       }
       catch (Exception ex) {
-        String err = auName + ": Attempt to move au configuration failed: " + ex.getMessage();
+        String err = "Attempt to move au configuration failed: " +
+          auName + ": " + ex.getMessage();
         log.error(err, ex);
         task.addError(err);
       }
     }
     else {
-      log.warning(auName + ": No Configuration found for au");
+      log.warning("No Configuration found for au: " + auName);
     }
   }
 
   /**
-   * Make a synchronous rest call to V2 configuration service to add the V1 Au Agreement Table.
+   * Make a synchronous rest call to V2 configuration service to add the V1 AU Agreement Table.
    *
    * @param au the archival unit to be updated.
    */
@@ -122,21 +123,22 @@ public class AuStateMover extends Worker {
       try {
         String json_str = new Gson().toJson(v1AuAgreements.getPrunedBean(au.getAuId()));
         cfgApiClient.patchAuAgreements(au.getAuId(), json_str, auMover.makeCookie());
-        log.info(auName + ": Successfully moved AU Agreements.");
+        log.info("Successfully moved AU Agreements: " + auName);
       }
       catch (Exception ex) {
-        String err = auName + ": Attempt to move au agreements failed: " + ex.getMessage();
+        String err = "Attempt to move au agreements failed: " + auName +
+          ": " + ex.getMessage();
         log.error(err, ex);
         task.addError(err);
       }
     }
     else {
-      log.warning("No Au agreements found for au.");
+      log.warning("No AU agreements found for au.");
     }
   }
 
   /**
-   * Make a synchronous rest call to V2 configuration service to add the V1 Au Suspect Urls list.
+   * Make a synchronous rest call to V2 configuration service to add the V1 AU Suspect Urls list.
    *
    * @param au the archival unit to be updated.
    */
@@ -148,23 +150,23 @@ public class AuStateMover extends Worker {
         String json_str = new Gson().toJson(asuv.getBean(au.getAuId()));
         cfgApiClient.putAuSuspectUrlVersions(au.getAuId(), json_str,
             auMover.makeCookie());
-        log.info(auName + ": Successfully moved AU Suspect Url Versions.");
+        log.info("Successfully moved AU Suspect Url Versions: " + auName);
       }
       catch (Exception ex) {
-        String err =
-            auName + ": Attempt to move au suspect url versions failed: " + ex.getMessage();
+        String err = "Attempt to move au suspect url versions failed: " +
+          auName + ": " + ex.getMessage();
         log.error(err, ex);
         task.addError(err);
       }
     }
     else {
-      log.warning(auName + ": No Au suspect url versions found.");
+      log.warning("No AU suspect url versions found: " + auName);
     }
   }
 
 
   /**
-   * Make a synchronous rest call to V2 configuration service to add the V1 Au NoAuPeerSet list.
+   * Make a synchronous rest call to V2 configuration service to add the V1 AU NoAuPeerSet list.
    *
    * @param au the archival unit to be updated.
    */
@@ -175,16 +177,17 @@ public class AuStateMover extends Worker {
       try {
         String json_str = new Gson().toJson(((DatedPeerIdSetImpl) noAuPeerSet).getBean(au.getAuId()));
         cfgApiClient.putNoAuPeers(au.getAuId(), json_str, auMover.makeCookie());
-        log.info(auName + ": Successfully moved no Au peers.");
+        log.info("Successfully moved no AU peers: " + auName);
       }
       catch (Exception ex) {
-        String err = auName + ": Attempt to move no AU peers failed: " + ex.getMessage();
+        String err = "Attempt to move no AU peers failed: " + auName +
+          ": " + ex.getMessage();
         log.error(err, ex);
         task.addError(err);
       }
     }
     else {
-      log.info(auName + ": No Au peer set found for au");
+      log.info("No AU peer set found for AU: " + auName);
     }
   }
 
@@ -201,16 +204,17 @@ public class AuStateMover extends Worker {
         V2AuStateBean v2State = new V2AuStateBean(v1State);
         String json_str = new Gson().toJson(v2State.toMap());
         cfgApiClient.patchAuState(au.getAuId(), json_str, auMover.makeCookie());
-        log.info(auName + ": Successfully moved AU State.");
+        log.info("Successfully moved AU State: " + auName);
       }
       catch (Exception ex) {
-        String err = auName + ": Attempt to move au state failed: " + ex.getMessage();
+        String err = "Attempt to move au state failed: " + auName +
+          ": " + ex.getMessage();
         log.error(err, ex);
         task.addError(err);
       }
     }
     else {
-      log.warning(auName + ": No State information found for au");
+      log.warning("No State information found for au: " + auName);
     }
   }
 }
