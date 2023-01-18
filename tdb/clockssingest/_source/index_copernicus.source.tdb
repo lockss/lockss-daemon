@@ -20,11 +20,10 @@
 
     au < zapped ; finished ; 2018 ; Index Copernicus Source Content 2018 ; 2018 >
     au < zapped ; finished ; 2019 ; Index Copernicus Source Content 2019 ; 2019 >
-    au < expected ; exists ; 2022 ; Index Copernicus Source Content 2022 ; 2022 >
     #No more AUs. Moving to https.
     }
     {
-    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/indexcopernicus-released/
+    param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/indexcopernicus-released/
 
     au < expected ; exists ; 2023 ; Index Copernicus Source Content 2023 ; 2023 >
 

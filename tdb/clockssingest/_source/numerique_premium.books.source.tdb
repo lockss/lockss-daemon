@@ -20,7 +20,6 @@
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/numerique-released/
 
     au < readySource ; finished ; 2020 ; Numerique Premium Books Source Content 2020 ; 2020 >
-    au < expected ; exists ; 2022 ; Numerique Premium Books Source Content 2022 ; 2022 >
     #No more AUs. Moving to https.
     }
     {
