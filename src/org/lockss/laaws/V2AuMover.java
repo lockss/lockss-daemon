@@ -134,14 +134,28 @@ public class V2AuMover {
   public static final String DEFAULT_VERIFY_ITER_EXECUTOR_SPEC = "10;2";
 
   /**
-   * Index Executor.  Controls max simulataneous finishBulk) operations
+   * Index Executor.  Controls max simulataneous finishBulk operations
    */
   public static final String PARAM_INDEX_EXECUTOR_SPEC =
     EXEC_PREFIX + "index.spec";
   public static final String DEFAULT_INDEX_EXECUTOR_SPEC = "50;5";
 
   /**
-   * Misc Executor, runs AU State copy & verify, finishall.
+   * State copy Executor, runs AU State copy.
+   */
+  public static final String PARAM_STATE_COPY_EXECUTOR_SPEC =
+    EXEC_PREFIX + "stateCopy.spec";
+  public static final String DEFAULT_STATE_COPY_EXECUTOR_SPEC = "50;10";
+
+  /**
+   * State verify Executor, runs AU State verify.
+   */
+  public static final String PARAM_STATE_VERIFY_EXECUTOR_SPEC =
+    EXEC_PREFIX + "stateVerify.spec";
+  public static final String DEFAULT_STATE_VERIFY_EXECUTOR_SPEC = "50;10";
+
+  /**
+   * Misc Executor, runs finishall.
    */
   public static final String PARAM_MISC_EXECUTOR_SPEC =
     EXEC_PREFIX + "misc.spec";
@@ -397,6 +411,8 @@ s api client with long timeout */
   private ThreadPoolExecutor verifyIterExecutor;
   private ThreadPoolExecutor copyExecutor;
   private ThreadPoolExecutor verifyExecutor;
+  private ThreadPoolExecutor stateCopyExecutor;
+  private ThreadPoolExecutor stateVerifyExecutor;
   private ThreadPoolExecutor miscExecutor;
   private ThreadPoolExecutor indexExecutor;
 
@@ -504,6 +520,14 @@ s api client with long timeout */
       indexExecutor = createOrReConfigureExecutor(indexExecutor, config,
                                                   PARAM_INDEX_EXECUTOR_SPEC,
                                                   DEFAULT_INDEX_EXECUTOR_SPEC);
+      stateCopyExecutor =
+        createOrReConfigureExecutor(stateCopyExecutor, config,
+                                    PARAM_STATE_COPY_EXECUTOR_SPEC,
+                                    DEFAULT_STATE_COPY_EXECUTOR_SPEC);
+      stateVerifyExecutor =
+        createOrReConfigureExecutor(stateVerifyExecutor, config,
+                                    PARAM_STATE_VERIFY_EXECUTOR_SPEC,
+                                    DEFAULT_STATE_VERIFY_EXECUTOR_SPEC);
       miscExecutor = createOrReConfigureExecutor(miscExecutor, config,
                                                  PARAM_MISC_EXECUTOR_SPEC,
                                                  DEFAULT_MISC_EXECUTOR_SPEC);
@@ -1061,11 +1085,11 @@ s api client with long timeout */
       break;
     case EnqCopyState:
       log.debug2("Enqueueing copy AU state: " + auName);
-      enqueueTask(MigrationTask.copyAuState(this, au), auStat, miscExecutor);
+      enqueueTask(MigrationTask.copyAuState(this, au), auStat, stateCopyExecutor);
       break;
     case EnqCheckState:
       log.debug2("Enqueueing check AU state: " + auName);
-      enqueueTask(MigrationTask.checkAuState(this, au), auStat, miscExecutor);
+      enqueueTask(MigrationTask.checkAuState(this, au), auStat, stateVerifyExecutor);
       break;
     case EnqIndex:
       if (auStat.isBulk()) {
@@ -1697,6 +1721,8 @@ s api client with long timeout */
     res.add(getExecutorStats("Copy", copyExecutor));
     res.add(getExecutorStats("Verify", verifyExecutor));
     res.add(getExecutorStats("Index", indexExecutor));
+    res.add(getExecutorStats("StateCopy", stateCopyExecutor));
+    res.add(getExecutorStats("StateVerify", stateVerifyExecutor));
     res.add(getExecutorStats("Misc", miscExecutor));
     return res;
   }
