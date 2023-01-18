@@ -1250,8 +1250,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Nutrition and Metabolic Insights Volume 6 ; 6 ; nmia ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Nutrition and Metabolic Insights Volume 7 ; 7 ; nmia ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Nutrition and Metabolic Insights Volume 8 ; 8 ; nmia ; http://journals.sagepub.com/ ; >
-    au < finished ; frozen ; 2016 ; Nutrition and Metabolic Insights Volume 9 ; 9 ; nmia ; http://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2017 ; Nutrition and Metabolic Insights Volume 10 ; 10 ; nmia ; http://journals.sagepub.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2016 ; Nutrition and Metabolic Insights Volume 9 ; 9 ; nmia ; http://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2017 ; Nutrition and Metabolic Insights Volume 10 ; 10 ; nmia ; http://journals.sagepub.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; Nutrition and Metabolic Insights Volume 11 ; 11 ; nmia ; http://journals.sagepub.com/ ; >
 
   }
@@ -1273,8 +1273,8 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Open Journal of Cardiovascular Surgery Volume 5 ; 5 ; ojca ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Open Journal of Cardiovascular Surgery Volume 6 ; 6 ; ojca ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Open Journal of Cardiovascular Surgery Volume 7 ; 7 ; ojca ; http://journals.sagepub.com/ ; >
-    au < finished ; frozen ; 2016 ; Open Journal of Cardiovascular Surgery Volume 8 ; 8 ; ojca ; http://journals.sagepub.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; frozen ; 2017 ; Open Journal of Cardiovascular Surgery Volume 9 ; 9 ; ojca ; http://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; Open Journal of Cardiovascular Surgery Volume 8 ; 8 ; ojca ; http://journals.sagepub.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2017 ; Open Journal of Cardiovascular Surgery Volume 9 ; 9 ; ojca ; http://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Open Journal of Cardiovascular Surgery Volume 10 ; 10 ; ojca ; http://journals.sagepub.com/ ; >
 
   }
@@ -1296,8 +1296,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Ophthalmology and Eye Diseases Volume 5 ; 5 ; oeda ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Ophthalmology and Eye Diseases Volume 6 ; 6 ; oeda ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Ophthalmology and Eye Diseases Volume 7 ; 7 ; oeda ; http://journals.sagepub.com/ ; >
-    au < finished ; frozen ; 2016 ; Ophthalmology and Eye Diseases Volume 8 ; 8 ; oeda ; http://journals.sagepub.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2017 ; Ophthalmology and Eye Diseases Volume 9 ; 9 ; oeda ; http://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; Ophthalmology and Eye Diseases Volume 8 ; 8 ; oeda ; http://journals.sagepub.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2017 ; Ophthalmology and Eye Diseases Volume 9 ; 9 ; oeda ; http://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Ophthalmology and Eye Diseases Volume 10 ; 10 ; oedb ; http://journals.sagepub.com/ ; >
 
   }
@@ -1320,7 +1320,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Palliative Care: Research and Treatment Volume 7 ; 7 ; pcra ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Palliative Care: Research and Treatment Volume 8 ; 8 ; pcra ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Palliative Care: Research and Treatment Volume 9 ; 9 ; pcra ; http://journals.sagepub.com/ ; >
-    au < finished ; frozen ; 2017 ; Palliative Care: Research and Treatment Volume 10 ; 10 ; pcra ; http://journals.sagepub.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2017 ; Palliative Care: Research and Treatment Volume 10 ; 10 ; pcra ; http://journals.sagepub.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; Palliative Care: Research and Treatment Volume 11 ; 11 ; pcra ; http://journals.sagepub.com/ ; >
 
   }
@@ -1342,7 +1342,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Perspectives in Medicinal Chemistry Volume 5 ; 5 ; pmda ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Perspectives in Medicinal Chemistry Volume 6 ; 6 ; pmda ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Perspectives in Medicinal Chemistry Volume 7 ; 7 ; pmda ; http://journals.sagepub.com/ ; >
-    au < finished ; frozen ; 2016 ; Perspectives in Medicinal Chemistry Volume 8 ; 8 ; pmda ; http://journals.sagepub.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2016 ; Perspectives in Medicinal Chemistry Volume 8 ; 8 ; pmda ; http://journals.sagepub.com/ ; reingest3.clockss.org:8083 >
     au < expected ; exists ; 2018 ; Perspectives in Medicinal Chemistry Volume 9 ; 9 ; pmda ; https://journals.sagepub.com/ ; >
 
   }
@@ -1363,8 +1363,8 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Proteomics Insights Volume 4 ; 4 ; prta ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Proteomics Insights Volume 5 ; 5 ; prta ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Proteomics Insights Volume 6 ; 6 ; prta ; http://journals.sagepub.com/ ; >
-    au < finished ; frozen ; 2016 ; Proteomics Insights Volume 7 ; 7 ; prta ; http://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2017 ; Proteomics Insights Volume 8 ; 8 ; prta ; http://journals.sagepub.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; Proteomics Insights Volume 7 ; 7 ; prta ; http://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2017 ; Proteomics Insights Volume 8 ; 8 ; prta ; http://journals.sagepub.com/ ; reingest5.clockss.org:8082 >
     au < exists ; exists ; 2018 ; Proteomics Insights Volume 9 ; 9 ; prta ; https://journals.sagepub.com/ ; >
 
   }
@@ -1383,8 +1383,8 @@
     au < doNotProcess ; exists ; 2010 ; Rehabilitation Process and Outcome Volume 2 ; 2 ; rpoa ; https://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Rehabilitation Process and Outcome Volume 3 ; 3 ; rpoa ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Rehabilitation Process and Outcome Volume 4 ; 4 ; rpoa ; http://journals.sagepub.com/ ; >
-    au < finished ; frozen ; 2016 ; Rehabilitation Process and Outcome Volume 5 ; 5 ; rpoa ; http://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2017 ; Rehabilitation Process and Outcome Volume 6 ; 6 ; rpoa ; http://journals.sagepub.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2016 ; Rehabilitation Process and Outcome Volume 5 ; 5 ; rpoa ; http://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2017 ; Rehabilitation Process and Outcome Volume 6 ; 6 ; rpoa ; http://journals.sagepub.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; Rehabilitation Process and Outcome Volume 7 ; 7 ; rpoa ; http://journals.sagepub.com/ ; >
 
   }
@@ -1403,8 +1403,8 @@
     au < doNotProcess ; exists ; 2010 ; Signal Transduction Insights Volume 2 ; 2 ; stia ; https://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Signal Transduction Insights Volume 3 ; 3 ; stia ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Signal Transduction Insights Volume 4 ; 4 ; stia ; http://journals.sagepub.com/ ; >
-    au < finished ; frozen ; 2016 ; Signal Transduction Insights Volume 5 ; 5 ; stia ; http://journals.sagepub.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; frozen ; 2017 ; Signal Transduction Insights Volume 6 ; 6 ; stia ; http://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; Signal Transduction Insights Volume 5 ; 5 ; stia ; http://journals.sagepub.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2017 ; Signal Transduction Insights Volume 6 ; 6 ; stia ; http://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
     au < exists ; exists ; 2018 ; Signal Transduction Insights Volume 7 ; 7 ; stia ; https://journals.sagepub.com/ ; >
 
   }
@@ -1424,11 +1424,11 @@
     au < doNotProcess ; exists ; 2010 ; Substance Abuse: Research and Treatment Volume 4 ; 4 ; sata ; https://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Substance Abuse: Research and Treatment Volume 5 ; 5 ; sata ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Substance Abuse: Research and Treatment Volume 6 ; 6 ; sata ; http://journals.sagepub.com/ ; >
-    au < finished ; frozen ; 2013 ; Substance Abuse: Research and Treatment Volume 7 ; 7 ; sata ; http://journals.sagepub.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; Substance Abuse: Research and Treatment Volume 7 ; 7 ; sata ; http://journals.sagepub.com/ ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Substance Abuse: Research and Treatment Volume 8 ; 8 ; sata ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Substance Abuse: Research and Treatment Volume 9 ; 9 ; sata ; http://journals.sagepub.com/ ; >
-    au < finished ; frozen ; 2016 ; Substance Abuse: Research and Treatment Volume 10 ; 10 ; sata ; http://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2017 ; Substance Abuse: Research and Treatment Volume 11 ; 11 ; sata ; http://journals.sagepub.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2016 ; Substance Abuse: Research and Treatment Volume 10 ; 10 ; sata ; http://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2017 ; Substance Abuse: Research and Treatment Volume 11 ; 11 ; sata ; http://journals.sagepub.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; Substance Abuse: Research and Treatment Volume 12 ; 12 ; sata ; http://journals.sagepub.com/ ; >
 
   }
@@ -1451,8 +1451,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Tobacco Use Insights Volume 6 ; 6 ; tuia ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Tobacco Use Insights Volume 7 ; 7 ; tuia ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Tobacco Use Insights Volume 8 ; 8 ; tuia ; http://journals.sagepub.com/ ; >
-    au < finished ; frozen ; 2016 ; Tobacco Use Insights Volume 9 ; 9 ; tuia ; http://journals.sagepub.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; frozen ; 2017 ; Tobacco Use Insights Volume 10 ; 10 ; tuia ; http://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; Tobacco Use Insights Volume 9 ; 9 ; tuia ; http://journals.sagepub.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2017 ; Tobacco Use Insights Volume 10 ; 10 ; tuia ; http://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Tobacco Use Insights Volume 11 ; 11 ; tuia ; http://journals.sagepub.com/ ; >
 
   }
@@ -1473,8 +1473,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Virology: Research and Treatment Volume 4 ; 4 ; vrta ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Virology: Research and Treatment Volume 5 ; 5 ; vrta ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Virology: Research and Treatment Volume 6 ; 6 ; vrta ; http://journals.sagepub.com/ ; >
-    au < finished ; frozen ; 2016 ; Virology: Research and Treatment Volume 7 ; 7 ; vrta ; http://journals.sagepub.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2017 ; Virology: Research and Treatment Volume 8 ; 8 ; vrta ; http://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; Virology: Research and Treatment Volume 7 ; 7 ; vrta ; http://journals.sagepub.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2017 ; Virology: Research and Treatment Volume 8 ; 8 ; vrta ; http://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Virology: Research and Treatment Volume 9 ; 9 ; vrta ; http://journals.sagepub.com/ ; >
 
   }
