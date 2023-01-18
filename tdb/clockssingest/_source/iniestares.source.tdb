@@ -1,0 +1,28 @@
+{
+
+  publisher <
+    name = Iniestares ;
+    info[contract] = 2023 ;
+    info[tester] = S ;
+    info[platform] = Source
+  >
+  hidden[proxy] = DIRECT
+
+  {
+
+    title <
+      name = Iniestares Source Content
+    >
+
+    plugin = needs.plugin
+    #plugin = org.lockss.plugin.clockss.iniestares.ClockssIniestaresSourcePlugin
+    implicit < status ; status2 ; year ; name ; param[directory] >
+    {
+        param[base_url] = https://clockss-test.lockss.org/sourcefiles/iniestares-released/
+        #param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/iniestares-released/
+
+        au < expected ; exists ; 2023 ; Iniestares Source Content 2023 ; 2023 >
+    }
+  }
+
+}
