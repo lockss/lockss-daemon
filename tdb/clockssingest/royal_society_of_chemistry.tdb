@@ -375,13 +375,13 @@
       param[journal_code] = dt
       #complete. Missing 1996-2009. **** These volumes listed in another title block. Search for "= dt"
 
-      au < finished ; frozen ; 2010 ; Dalton Transactions Volume 39 ; 39 ; 2010 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; Dalton Transactions Volume 39 ; 39 ; 2010 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2011 ; Dalton Transactions Volume 40 ; 40 ; 2011 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2012 ; Dalton Transactions Volume 41 ; 41 ; 2012 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2013 ; Dalton Transactions Volume 42 ; 42 ; 2013 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2013 ; Dalton Transactions Volume 42 ; 42 ; 2013 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < zapped ; finished ; 2014 ; Dalton Transactions Volume 43 ; 43 ; 2014 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2015 ; Dalton Transactions Volume 44 ; 44 ; 2015 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2016 ; Dalton Transactions Volume 45 ; 45 ; 2016 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2015 ; Dalton Transactions Volume 44 ; 44 ; 2015 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2016 ; Dalton Transactions Volume 45 ; 45 ; 2016 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2017 ; Dalton Transactions Volume 46 ; 46 ; 2017 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; Dalton Transactions Volume 47 ; 47 ; 2018 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; Dalton Transactions Volume 48 ; 48 ; 2019 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
@@ -403,18 +403,18 @@
       param[journal_code] = ee
       #complete
 
-      au < finished ; frozen ; 2008 ; Energy & Environmental Science Volume 1 ; 1 ; 2008 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2009 ; Energy & Environmental Science Volume 2 ; 2 ; 2009 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2008 ; Energy & Environmental Science Volume 1 ; 1 ; 2008 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; Energy & Environmental Science Volume 2 ; 2 ; 2009 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2010 ; Energy & Environmental Science Volume 3 ; 3 ; 2010 ; http://pubs.rsc.org/ ; >
       au < finished ; finished ; 2011 ; Energy & Environmental Science Volume 4 ; 4 ; 2011 ; http://pubs.rsc.org/ ; >
-      au < finished ; frozen ; 2012 ; Energy & Environmental Science Volume 5 ; 5 ; 2012 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2012 ; Energy & Environmental Science Volume 5 ; 5 ; 2012 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2013 ; Energy & Environmental Science Volume 6 ; 6 ; 2013 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Energy & Environmental Science Volume 7 ; 7 ; 2014 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2015 ; Energy & Environmental Science Volume 8 ; 8 ; 2015 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2016 ; Energy & Environmental Science Volume 9 ; 9 ; 2016 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2017 ; Energy & Environmental Science Volume 10 ; 10 ; 2017 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2018 ; Energy & Environmental Science Volume 11 ; 11 ; 2018 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2019 ; Energy & Environmental Science Volume 12 ; 12 ; 2019 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2015 ; Energy & Environmental Science Volume 8 ; 8 ; 2015 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; Energy & Environmental Science Volume 9 ; 9 ; 2016 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2017 ; Energy & Environmental Science Volume 10 ; 10 ; 2017 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2018 ; Energy & Environmental Science Volume 11 ; 11 ; 2018 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2019 ; Energy & Environmental Science Volume 12 ; 12 ; 2019 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Energy & Environmental Science Volume 13 ; 13 ; 2020 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2021 ; Energy & Environmental Science Volume 14 ; 14 ; 2021 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2022 ; Energy & Environmental Science Volume 15 ; 15 ; 2022 ; https://pubs.rsc.org/ ; >
@@ -434,60 +434,60 @@
       param[journal_code] = fd
       comment[overcrawl] = overcrawl due to broken manifest pages, multiple volumes per year
 
-      au < finished ; frozen ; 1996 ; Faraday Discussions Volume 103 ; 103 ; 1996 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 1996 ; Faraday Discussions Volume 104 ; 104 ; 1996 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 1996 ; Faraday Discussions Volume 105 ; 105 ; 1996 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1996 ; Faraday Discussions Volume 103 ; 103 ; 1996 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 1996 ; Faraday Discussions Volume 104 ; 104 ; 1996 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 1996 ; Faraday Discussions Volume 105 ; 105 ; 1996 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
 
-      au < finished ; frozen ; 1997 ; Faraday Discussions Volume 106 ; 106 ; 1997 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 1997 ; Faraday Discussions Volume 107 ; 107 ; 1997 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 1997 ; Faraday Discussions Volume 108 ; 108 ; 1997 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 1997 ; Faraday Discussions Volume 106 ; 106 ; 1997 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 1997 ; Faraday Discussions Volume 107 ; 107 ; 1997 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 1997 ; Faraday Discussions Volume 108 ; 108 ; 1997 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
 
-      au < finished ; frozen ; 1998 ; Faraday Discussions Volume 109 ; 109 ; 1998 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 1998 ; Faraday Discussions Volume 110 ; 110 ; 1998 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 1998 ; Faraday Discussions Volume 109 ; 109 ; 1998 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 1998 ; Faraday Discussions Volume 110 ; 110 ; 1998 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
 
-      au < finished ; frozen ; 1999 ; Faraday Discussions Volume 111 ; 111 ; 1999 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 1999 ; Faraday Discussions Volume 111 ; 111 ; 1999 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 1999 ; Faraday Discussions Volume 112 ; 112 ; 1999 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 1999 ; Faraday Discussions Volume 113 ; 113 ; 1999 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 1999 ; Faraday Discussions Volume 114 ; 114 ; 1999 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 1999 ; Faraday Discussions Volume 113 ; 113 ; 1999 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1999 ; Faraday Discussions Volume 114 ; 114 ; 1999 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
 
-      au < finished ; frozen ; 2000 ; Faraday Discussions Volume 115 ; 115 ; 2000 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2000 ; Faraday Discussions Volume 116 ; 116 ; 2000 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2000 ; Faraday Discussions Volume 117 ; 117 ; 2000 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2000 ; Faraday Discussions Volume 115 ; 115 ; 2000 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2000 ; Faraday Discussions Volume 116 ; 116 ; 2000 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2000 ; Faraday Discussions Volume 117 ; 117 ; 2000 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
 
-      au < finished ; frozen ; 2001 ; Faraday Discussions Volume 118 ; 118 ; 2001 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2001 ; Faraday Discussions Volume 118 ; 118 ; 2001 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
 
-      au < finished ; frozen ; 2002 ; Faraday Discussions Volume 119 ; 119 ; 2002 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2002 ; Faraday Discussions Volume 120 ; 120 ; 2002 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2002 ; Faraday Discussions Volume 121 ; 121 ; 2002 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2002 ; Faraday Discussions Volume 119 ; 119 ; 2002 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2002 ; Faraday Discussions Volume 120 ; 120 ; 2002 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2002 ; Faraday Discussions Volume 121 ; 121 ; 2002 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
 
-      au < finished ; frozen ; 2003 ; Faraday Discussions Volume 122 ; 122 ; 2003 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2003 ; Faraday Discussions Volume 123 ; 123 ; 2003 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2003 ; Faraday Discussions Volume 124 ; 124 ; 2003 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2003 ; Faraday Discussions Volume 122 ; 122 ; 2003 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2003 ; Faraday Discussions Volume 123 ; 123 ; 2003 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2003 ; Faraday Discussions Volume 124 ; 124 ; 2003 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
 
-      au < finished ; frozen ; 2004 ; Faraday Discussions Volume 125 ; 125 ; 2004 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2004 ; Faraday Discussions Volume 126 ; 126 ; 2004 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2004 ; Faraday Discussions Volume 127 ; 127 ; 2004 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2004 ; Faraday Discussions Volume 125 ; 125 ; 2004 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2004 ; Faraday Discussions Volume 126 ; 126 ; 2004 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2004 ; Faraday Discussions Volume 127 ; 127 ; 2004 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
 
-      au < finished ; frozen ; 2005 ; Faraday Discussions Volume 128 ; 128 ; 2005 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2005 ; Faraday Discussions Volume 129 ; 129 ; 2005 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2005 ; Faraday Discussions Volume 130 ; 130 ; 2005 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2005 ; Faraday Discussions Volume 128 ; 128 ; 2005 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2005 ; Faraday Discussions Volume 129 ; 129 ; 2005 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2005 ; Faraday Discussions Volume 130 ; 130 ; 2005 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
 
-      au < finished ; frozen ; 2006 ; Faraday Discussions Volume 131 ; 131 ; 2006 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2006 ; Faraday Discussions Volume 132 ; 132 ; 2006 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2006 ; Faraday Discussions Volume 133 ; 133 ; 2006 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2006 ; Faraday Discussions Volume 131 ; 131 ; 2006 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2006 ; Faraday Discussions Volume 132 ; 132 ; 2006 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2006 ; Faraday Discussions Volume 133 ; 133 ; 2006 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
 
-      au < finished ; frozen ; 2007 ; Faraday Discussions Volume 134 ; 134 ; 2007 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2007 ; Faraday Discussions Volume 135 ; 135 ; 2007 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2007 ; Faraday Discussions Volume 136 ; 136 ; 2007 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2007 ; Faraday Discussions Volume 134 ; 134 ; 2007 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2007 ; Faraday Discussions Volume 135 ; 135 ; 2007 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2007 ; Faraday Discussions Volume 136 ; 136 ; 2007 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
 
-      au < finished ; frozen ; 2008 ; Faraday Discussions Volume 137 ; 137 ; 2008 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2008 ; Faraday Discussions Volume 138 ; 138 ; 2008 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2008 ; Faraday Discussions Volume 139 ; 139 ; 2008 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2008 ; Faraday Discussions Volume 137 ; 137 ; 2008 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2008 ; Faraday Discussions Volume 138 ; 138 ; 2008 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2008 ; Faraday Discussions Volume 139 ; 139 ; 2008 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
 
-      au < finished ; frozen ; 2009 ; Faraday Discussions Volume 140 ; 140 ; 2009 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2009 ; Faraday Discussions Volume 141 ; 141 ; 2009 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2009 ; Faraday Discussions Volume 142 ; 142 ; 2009 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2009 ; Faraday Discussions Volume 143 ; 143 ; 2009 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; Faraday Discussions Volume 140 ; 140 ; 2009 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2009 ; Faraday Discussions Volume 141 ; 141 ; 2009 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; Faraday Discussions Volume 142 ; 142 ; 2009 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; Faraday Discussions Volume 143 ; 143 ; 2009 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
 
       au < finished ; finished ; 2010 ; Faraday Discussions Volume 144 ; 144 ; 2010 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2010 ; Faraday Discussions Volume 145 ; 145 ; 2010 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
@@ -548,33 +548,33 @@
       au < crawling ; crawling ; 2016 ; Faraday Discussions Volume 194 ; 194 ; 2016 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; Faraday Discussions Volume 195 ; 195 ; 2016 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
 
-      au < finished ; frozen ; 2017 ; Faraday Discussions Volume 196 ; 196 ; 2017 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2017 ; Faraday Discussions Volume 197 ; 197 ; 2017 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2017 ; Faraday Discussions Volume 198 ; 198 ; 2017 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2017 ; Faraday Discussions Volume 199 ; 199 ; 2017 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2017 ; Faraday Discussions Volume 200 ; 200 ; 2017 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2017 ; Faraday Discussions Volume 201 ; 201 ; 2017 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2017 ; Faraday Discussions Volume 202 ; 202 ; 2017 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2017 ; Faraday Discussions Volume 203 ; 203 ; 2017 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2017 ; Faraday Discussions Volume 204 ; 204 ; 2017 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2017 ; Faraday Discussions Volume 205 ; 205 ; 2017 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2017 ; Faraday Discussions Volume 196 ; 196 ; 2017 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; Faraday Discussions Volume 197 ; 197 ; 2017 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; Faraday Discussions Volume 198 ; 198 ; 2017 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; Faraday Discussions Volume 199 ; 199 ; 2017 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; Faraday Discussions Volume 200 ; 200 ; 2017 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2017 ; Faraday Discussions Volume 201 ; 201 ; 2017 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2017 ; Faraday Discussions Volume 202 ; 202 ; 2017 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2017 ; Faraday Discussions Volume 203 ; 203 ; 2017 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2017 ; Faraday Discussions Volume 204 ; 204 ; 2017 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2017 ; Faraday Discussions Volume 205 ; 205 ; 2017 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
 
-      au < finished ; frozen ; 2018 ; Faraday Discussions Volume 206 ; 206 ; 2018 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2018 ; Faraday Discussions Volume 207 ; 207 ; 2018 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; Faraday Discussions Volume 206 ; 206 ; 2018 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; Faraday Discussions Volume 207 ; 207 ; 2018 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; Faraday Discussions Volume 208 ; 208 ; 2018 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2018 ; Faraday Discussions Volume 209 ; 209 ; 2018 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2018 ; Faraday Discussions Volume 210 ; 210 ; 2018 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2018 ; Faraday Discussions Volume 211 ; 211 ; 2018 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2018 ; Faraday Discussions Volume 212 ; 212 ; 2018 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; Faraday Discussions Volume 209 ; 209 ; 2018 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2018 ; Faraday Discussions Volume 210 ; 210 ; 2018 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2018 ; Faraday Discussions Volume 211 ; 211 ; 2018 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; Faraday Discussions Volume 212 ; 212 ; 2018 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
 
-      au < finished ; frozen ; 2019 ; Faraday Discussions Volume 213 ; 213 ; 2019 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2019 ; Faraday Discussions Volume 214 ; 214 ; 2019 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2019 ; Faraday Discussions Volume 215 ; 215 ; 2019 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2019 ; Faraday Discussions Volume 216 ; 216 ; 2019 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2019 ; Faraday Discussions Volume 217 ; 217 ; 2019 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2019 ; Faraday Discussions Volume 218 ; 218 ; 2019 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2019 ; Faraday Discussions Volume 219 ; 219 ; 2019 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2019 ; Faraday Discussions Volume 220 ; 220 ; 2019 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2019 ; Faraday Discussions Volume 213 ; 213 ; 2019 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; Faraday Discussions Volume 214 ; 214 ; 2019 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2019 ; Faraday Discussions Volume 215 ; 215 ; 2019 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; Faraday Discussions Volume 216 ; 216 ; 2019 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; Faraday Discussions Volume 217 ; 217 ; 2019 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; Faraday Discussions Volume 218 ; 218 ; 2019 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2019 ; Faraday Discussions Volume 219 ; 219 ; 2019 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; Faraday Discussions Volume 220 ; 220 ; 2019 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
 
       au < deepCrawl ; exists ; 2020 ; Faraday Discussions Volume 221 ; 221 ; 2020 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2020 ; Faraday Discussions Volume 222 ; 222 ; 2020 ; https://pubs.rsc.org/ ; >
@@ -615,24 +615,24 @@
 
       au < finished ; frozen ; 1999 ; Green Chemistry Volume 1 ; 1 ; 1999 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2000 ; Green Chemistry Volume 2 ; 2 ; 2000 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2001 ; Green Chemistry Volume 3 ; 3 ; 2001 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2002 ; Green Chemistry Volume 4 ; 4 ; 2002 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2003 ; Green Chemistry Volume 5 ; 5 ; 2003 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2004 ; Green Chemistry Volume 6 ; 6 ; 2004 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2005 ; Green Chemistry Volume 7 ; 7 ; 2005 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2006 ; Green Chemistry Volume 8 ; 8 ; 2006 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2007 ; Green Chemistry Volume 9 ; 9 ; 2007 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2001 ; Green Chemistry Volume 3 ; 3 ; 2001 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2002 ; Green Chemistry Volume 4 ; 4 ; 2002 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2003 ; Green Chemistry Volume 5 ; 5 ; 2003 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2004 ; Green Chemistry Volume 6 ; 6 ; 2004 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2005 ; Green Chemistry Volume 7 ; 7 ; 2005 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2006 ; Green Chemistry Volume 8 ; 8 ; 2006 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2007 ; Green Chemistry Volume 9 ; 9 ; 2007 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2008 ; Green Chemistry Volume 10 ; 10 ; 2008 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2009 ; Green Chemistry Volume 11 ; 11 ; 2009 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2009 ; Green Chemistry Volume 11 ; 11 ; 2009 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2010 ; Green Chemistry Volume 12 ; 12 ; 2010 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2011 ; Green Chemistry Volume 13 ; 13 ; 2011 ; http://pubs.rsc.org/ ; >
       au < finished ; finished ; 2012 ; Green Chemistry Volume 14 ; 14 ; 2012 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2013 ; Green Chemistry Volume 15 ; 15 ; 2013 ; http://pubs.rsc.org/ ; >
       au < finished ; finished ; 2014 ; Green Chemistry Volume 16 ; 16 ; 2014 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2015 ; Green Chemistry Volume 17 ; 17 ; 2015 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2016 ; Green Chemistry Volume 18 ; 18 ; 2016 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2017 ; Green Chemistry Volume 19 ; 19 ; 2017 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2018 ; Green Chemistry Volume 20 ; 20 ; 2018 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; Green Chemistry Volume 18 ; 18 ; 2016 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2017 ; Green Chemistry Volume 19 ; 19 ; 2017 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2018 ; Green Chemistry Volume 20 ; 20 ; 2018 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; Green Chemistry Volume 21 ; 21 ; 2019 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Green Chemistry Volume 22 ; 22 ; 2020 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2021 ; Green Chemistry Volume 23 ; 23 ; 2021 ; https://pubs.rsc.org/ ; >
@@ -653,16 +653,16 @@
       #last volume 2018
       #complete
 
-      au < finished ; frozen ; 2009 ; Integrative Biology Volume 1 ; 1 ; 2009 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; Integrative Biology Volume 1 ; 1 ; 2009 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2010 ; Integrative Biology Volume 2 ; 2 ; 2010 ; http://pubs.rsc.org/ ; >
       au < finished ; crawling ; 2011 ; Integrative Biology Volume 3 ; 3 ; 2011 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2012 ; Integrative Biology Volume 4 ; 4 ; 2012 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2013 ; Integrative Biology Volume 5 ; 5 ; 2013 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Integrative Biology Volume 6 ; 6 ; 2014 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2015 ; Integrative Biology Volume 7 ; 7 ; 2015 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2016 ; Integrative Biology Volume 8 ; 8 ; 2016 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2017 ; Integrative Biology Volume 9 ; 9 ; 2017 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2018 ; Integrative Biology Volume 10 ; 10 ; 2018 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2015 ; Integrative Biology Volume 7 ; 7 ; 2015 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; Integrative Biology Volume 8 ; 8 ; 2016 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; Integrative Biology Volume 9 ; 9 ; 2017 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2018 ; Integrative Biology Volume 10 ; 10 ; 2018 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
 
   }
 
@@ -677,12 +677,12 @@
       param[journal_code] = ja
       #complete
 
-      au < finished ; frozen ; 1996 ; Journal of Analytical Atomic Spectrometry Volume 11 ; 11 ; 1996 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 1997 ; Journal of Analytical Atomic Spectrometry Volume 12 ; 12 ; 1997 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 1998 ; Journal of Analytical Atomic Spectrometry Volume 13 ; 13 ; 1998 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 1999 ; Journal of Analytical Atomic Spectrometry Volume 14 ; 14 ; 1999 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2000 ; Journal of Analytical Atomic Spectrometry Volume 15 ; 15 ; 2000 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2001 ; Journal of Analytical Atomic Spectrometry Volume 16 ; 16 ; 2001 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 1996 ; Journal of Analytical Atomic Spectrometry Volume 11 ; 11 ; 1996 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 1997 ; Journal of Analytical Atomic Spectrometry Volume 12 ; 12 ; 1997 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 1998 ; Journal of Analytical Atomic Spectrometry Volume 13 ; 13 ; 1998 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 1999 ; Journal of Analytical Atomic Spectrometry Volume 14 ; 14 ; 1999 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2000 ; Journal of Analytical Atomic Spectrometry Volume 15 ; 15 ; 2000 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2001 ; Journal of Analytical Atomic Spectrometry Volume 16 ; 16 ; 2001 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2002 ; Journal of Analytical Atomic Spectrometry Volume 17 ; 17 ; 2002 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2003 ; Journal of Analytical Atomic Spectrometry Volume 18 ; 18 ; 2003 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2004 ; Journal of Analytical Atomic Spectrometry Volume 19 ; 19 ; 2004 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >

@@ -35,16 +35,16 @@
       au < finished ; manifest ; 2007 ; Aviation Volume 2007 ; 4 ; 2007 ; https://journals.vgtu.lt/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2008 ; Aviation Volume 2008 ; 5 ; 2008 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2009 ; Aviation Volume 2009 ; 6 ; 2009 ; https://journals.vgtu.lt/ ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2010 ; Aviation Volume 2010 ; 7 ; 2010 ; https://journals.vgtu.lt/ ; reingest1.clockss.org:8082>
-      au < finished ; frozen ; 2011 ; Aviation Volume 2011 ; 8 ; 2011 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085>
-      au < finished ; frozen ; 2012 ; Aviation Volume 2012 ; 9 ; 2012 ; https://journals.vgtu.lt/ ; reingest3.clockss.org:8083>
-      au < finished ; frozen ; 2013 ; Aviation Volume 2013 ; 10 ; 2013 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082>
+      au < finished ; finished ; 2010 ; Aviation Volume 2010 ; 7 ; 2010 ; https://journals.vgtu.lt/ ; reingest1.clockss.org:8082>
+      au < finished ; finished ; 2011 ; Aviation Volume 2011 ; 8 ; 2011 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085>
+      au < finished ; finished ; 2012 ; Aviation Volume 2012 ; 9 ; 2012 ; https://journals.vgtu.lt/ ; reingest3.clockss.org:8083>
+      au < finished ; finished ; 2013 ; Aviation Volume 2013 ; 10 ; 2013 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082>
       au < finished ; crawling ; 2014 ; Aviation Volume 2014 ; 11 ; 2014 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082>
       au < finished ; crawling ; 2015 ; Aviation Volume 2015 ; 12 ; 2015 ; https://journals.vgtu.lt/ ; reingest1.clockss.org:8082>
-      au < finished ; frozen ; 2016 ; Aviation Volume 2016 ; 13 ; 2016 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085>
-      au < finished ; frozen ; 2017 ; Aviation Volume 2017 ; 14 ; 2017 ; https://journals.vgtu.lt/ ; reingest3.clockss.org:8083>
-      au < finished ; frozen ; 2018 ; Aviation Volume 2018 ; 15 ; 2018 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082>
-      au < finished ; frozen ; 2019 ; Aviation Volume 2019 ; 16 ; 2019 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082>
+      au < finished ; finished ; 2016 ; Aviation Volume 2016 ; 13 ; 2016 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085>
+      au < finished ; finished ; 2017 ; Aviation Volume 2017 ; 14 ; 2017 ; https://journals.vgtu.lt/ ; reingest3.clockss.org:8083>
+      au < finished ; finished ; 2018 ; Aviation Volume 2018 ; 15 ; 2018 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082>
+      au < finished ; finished ; 2019 ; Aviation Volume 2019 ; 16 ; 2019 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082>
       au < deepCrawl ; exists ; 2020 ; Aviation Volume 2020 ; 17 ; 2020 ; https://journals.vgtu.lt/ ; >
       au < deepCrawl ; exists ; 2021 ; Aviation Volume 2021 ; 18 ; 2021 ; https://journals.vgtu.lt/ ; >
 
@@ -76,8 +76,8 @@
       au < doNotProcess ; exists ; 2015 ; Business, Management and Education Volume 2015 ; 6 ; 2015 ; https://journals.vgtu.lt/ ; >
       au < doNotProcess ; exists ; 2016 ; Business, Management and Education Volume 2016 ; 7 ; 2016 ; https://journals.vgtu.lt/ ; >
       au < doNotProcess ; exists ; 2017 ; Business, Management and Education Volume 2017 ; 8 ; 2017 ; https://journals.vgtu.lt/ ; >
-      au < finished ; frozen ; 2018 ; Business, Management and Education Volume 2018 ; 9 ; 2018 ; https://journals.vgtu.lt/ ; reingest1.clockss.org:8082>
-      au < finished ; frozen ; 2019 ; Business, Management and Education Volume 2019 ; 10 ; 2019 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085>
+      au < finished ; finished ; 2018 ; Business, Management and Education Volume 2018 ; 9 ; 2018 ; https://journals.vgtu.lt/ ; reingest1.clockss.org:8082>
+      au < finished ; finished ; 2019 ; Business, Management and Education Volume 2019 ; 10 ; 2019 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085>
       au < deepCrawl ; exists ; 2020 ; Business, Management and Education Volume 2020 ; 11 ; 2020 ; https://journals.vgtu.lt/ ; >
       #As of 2021, name and issn changed: Business, Management and Economics Engineering 2669-2481
 
@@ -113,19 +113,19 @@
       param[journal_id] = BTP
 
       au < finished ; manifest ; 2006 ; Business: Theory and Practice Volume 2006 ; 7 ; 2006 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2007 ; Business: Theory and Practice Volume 2007 ; 8 ; 2007 ; https://journals.vgtu.lt/ ; reingest3.clockss.org:8083>
+      au < finished ; finished ; 2007 ; Business: Theory and Practice Volume 2007 ; 8 ; 2007 ; https://journals.vgtu.lt/ ; reingest3.clockss.org:8083>
       au < finished ; manifest ; 2008 ; Business: Theory and Practice Volume 2008 ; 9 ; 2008 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2009 ; Business: Theory and Practice Volume 2009 ; 10 ; 2009 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2010 ; Business: Theory and Practice Volume 2010 ; 11 ; 2010 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082>
-      au < finished ; frozen ; 2011 ; Business: Theory and Practice Volume 2011 ; 12 ; 2011 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082>
+      au < finished ; finished ; 2010 ; Business: Theory and Practice Volume 2010 ; 11 ; 2010 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082>
+      au < finished ; finished ; 2011 ; Business: Theory and Practice Volume 2011 ; 12 ; 2011 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082>
       au < doNotProcess ; exists ; 2012 ; Business: Theory and Practice Volume 2012 ; 13 ; 2012 ; https://journals.vgtu.lt/ ; >
       au < doNotProcess ; exists ; 2013 ; Business: Theory and Practice Volume 2013 ; 14 ; 2013 ; https://journals.vgtu.lt/ ; >
       au < doNotProcess ; exists ; 2014 ; Business: Theory and Practice Volume 2014 ; 15 ; 2014 ; https://journals.vgtu.lt/ ; >
       au < doNotProcess ; exists ; 2015 ; Business: Theory and Practice Volume 2015 ; 16 ; 2015 ; https://journals.vgtu.lt/ ; >
       au < doNotProcess ; exists ; 2016 ; Business: Theory and Practice Volume 2016 ; 17 ; 2016 ; https://journals.vgtu.lt/ ; >
       au < finished ; crawling ; 2017 ; Business: Theory and Practice Volume 2017 ; 18 ; 2017 ; https://journals.vgtu.lt/ ; reingest1.clockss.org:8082>
-      au < finished ; frozen ; 2018 ; Business: Theory and Practice Volume 2018 ; 19 ; 2018 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085>
-      au < finished ; frozen ; 2019 ; Business: Theory and Practice Volume 2019 ; 20 ; 2019 ; https://journals.vgtu.lt/ ; reingest3.clockss.org:8083>
+      au < finished ; finished ; 2018 ; Business: Theory and Practice Volume 2018 ; 19 ; 2018 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085>
+      au < finished ; finished ; 2019 ; Business: Theory and Practice Volume 2019 ; 20 ; 2019 ; https://journals.vgtu.lt/ ; reingest3.clockss.org:8083>
       au < deepCrawl ; exists ; 2020 ; Business: Theory and Practice Volume 2020 ; 21 ; 2020 ; https://journals.vgtu.lt/ ; >
       au < deepCrawl ; exists ; 2021 ; Business: Theory and Practice Volume 2021 ; 22 ; 2021 ; https://journals.vgtu.lt/ ; >
 
