@@ -22,11 +22,17 @@
     # set of WARC files
     # WARC content collected from https://www.swjpcc.com/
 
+    {
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/swjpcc-released/
 
     au < readySource ; finished ; 2021 ; Southwest Journal of Pulmonary and Critical Care Warc Content 2021 ; 2021 >
-    au < expected ; exists ; 2023 ; Southwest Journal of Pulmonary and Critical Care Warc Content 2023 ; 2023 >
+    # No more AUs. Moved to https.
+    }
+    {
+    param[base_url] = https://clockss-ingest.lockss.org/warcfiles/swjpcc-released/
 
+    au < expected ; exists ; 2023 ; Southwest Journal of Pulmonary and Critical Care Warc Content 2023 ; 2023 >
+    }
     }
 
 }

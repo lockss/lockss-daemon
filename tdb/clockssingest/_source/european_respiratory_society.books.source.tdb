@@ -4,26 +4,31 @@
     name = European Respiratory Society ;
     info[contract] = 2011 ;
     info[tester] = S ;
-    info[platform] = WARC
+    info[platform] = ***WARC***
   >
+    hidden[proxy] = DIRECT
+    plugin = org.lockss.plugin.clockss.ers.ClockssEuropeanRespiratorySocietySourcePlugin
+    implicit < status ; status2 ; year ; name ; param[year] >
 
   {
 
      title <
       name = European Respiratory Society Books Source Content
     >
-
-    #WARC
-    plugin = org.lockss.plugin.clockss.ers.ClockssEuropeanRespiratorySocietySourcePlugin
+    {
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/eurorespsoc-released/
-    hidden[proxy] = DIRECT
-    implicit < status ; status2 ; year ; name ; param[year] >
 
     au < zapped ; finished ; 2016 ; European Respiratory Society Books Source Content 2016 ; 2016 >
     au < readySource ; finished ; 2020 ; European Respiratory Society Books Source Content 2020 ; 2020 >
     au < readySource ; finished ; 2021 ; European Respiratory Society Books Source Content 2021 ; 2021 >
-    au < expected ; exists ; 2022 ; European Respiratory Society Books Source Content 2022 ; 2022 >
+    # No more AUs. Moved to https.
+    }
+    {
+    param[base_url] = https://clockss-ingest.lockss.org/warcfiles/eurorespsoc-released/
+
+    au < expected ; exists ; 2023 ; European Respiratory Society Books Source Content 2023 ; 2023 >
     #See LXPUB-613
+    }
   }
 
 }

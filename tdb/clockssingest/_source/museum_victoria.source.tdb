@@ -16,15 +16,19 @@
       eissn = 1447-2554
     >
     # WARC content collected from https://museumsvictoria.com.au/collections-research/journals/memoirs-of-museum-victoria/
-
+    {
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/memoirs-of-museum-victoria-released/
 
     au < zapped ; finished ; 2016 ; Memoirs of Museum Victoria WARC Content 2016 ; 2016 >
     au < zapped ; finished ; 2018 ; Memoirs of Museum Victoria WARC Content 2018 ; 2018 >
     au < readySource ; finished ; 2020 ; Memoirs of Museum Victoria WARC Content 2020 ; 2020 >
-    au < expected ; exists ; 2022 ; Memoirs of Museum Victoria WARC Content 2022 ; 2022 > #New content
-    # check for new content before re-running
+    # No more AUs. Moved to https.
+    }
+    {
+    param[base_url] = https://clockss-ingest.lockss.org/warcfiles/memoirs-of-museum-victoria-released/
 
+    au < expected ; exists ; 2023 ; Memoirs of Museum Victoria WARC Content 2023 ; 2023 > #New content exists
+    }
   }
 
   {
@@ -34,15 +38,20 @@
       issn = 1833-0290
     >
     # WARC content collected from https://museumsvictoria.com.au/about/books-and-journals/journals/museum-victoria-science-reports/
-
+    {
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/museum-victoria-science-reports-released/
 
     au < zapped ; finished ; 2016 ; Museum Victoria Science Reports WARC Content 2016 ; 2016 >
     au < zapped ; finished ; 2018 ; Museum Victoria Science Reports WARC Content 2018 ; 2018 >
     au < readySource ; finished ; 2020 ; Museum Victoria Science Reports WARC Content 2020 ; 2020 >
-    au < expected ; exists ; 2023 ; Museum Victoria Science Reports WARC Content 2023 ; 2023 >
-    # check for new content before re-running. No new content since 2019 as of 2022-09-02
+    # No more AUs. Moved to https.
+    }
+    {
+    param[base_url] = https://clockss-ingest.lockss.org/warcfiles/museum-victoria-science-reports-released/
 
+    au < expected ; exists ; 2023 ; Museum Victoria Science Reports WARC Content 2023 ; 2023 >
+    # check for new content before re-running. No new content since 2019 as of 2023-01-18
+    }
   }
 
 }

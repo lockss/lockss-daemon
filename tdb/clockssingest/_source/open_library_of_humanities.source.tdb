@@ -21,13 +21,18 @@
     # This content was collected using wget and provided for preservation as a
     # set of WARC files
     # WARC content collected from https://www.alluvium-journal.org/
-
+    {
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/alluvium-released/
 
     au < zapped ; finished ; 2016 ; Alluvium WARC Content 2016 ; 2016 ; 2016-09-15 >
     au < zapped ; finished ; 2018 ; Alluvium WARC Content 2018 ; 2018 ; 2018-06-25 >
-    au < expected ; exists ; 2022 ; Alluvium WARC Content 2022 ; 2022 ; >
-    
+    # No more AUs. Moved to https.
+    }
+    {
+    param[base_url] = https://clockss-ingest.lockss.org/warcfiles/alluvium-released/
+
+    au < expected ; exists ; 2023 ; Alluvium WARC Content 2023 ; 2023 ; >
+    }
   }
   
 }
