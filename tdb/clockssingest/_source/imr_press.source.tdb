@@ -28,7 +28,7 @@
     {
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/imrpress-released/
 
-    au < expected ; exists ; 2023 ; IMR Press Source Content 2023 ; 2023 >
+    au < manifest ; exists ; 2023 ; IMR Press Source Content 2023 ; 2023 >
 
     }
   }

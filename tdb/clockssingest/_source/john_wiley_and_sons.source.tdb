@@ -81,7 +81,7 @@
       {
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/wiley-released/
 
-      au < expected ; exists ; 2023 ; Wiley Source Content 2023_01 ; 2023_01 >
+      au < manifest ; exists ; 2023 ; Wiley Source Content 2023_01 ; 2023_01 >
       au < expected ; exists ; 2023 ; Wiley Source Content 2023_02 ; 2023_02 >
       au < expected ; exists ; 2023 ; Wiley Source Content 2023_03 ; 2023_03 >
 
@@ -110,11 +110,18 @@
     >
 
       plugin = org.lockss.plugin.clockss.wiley.ClockssWileyMRWSourcePlugin
-      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/wileymrw-released/
       implicit < status ; status2 ; year ; name ; param[directory] >
+    {
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/wileymrw-released/
 
       au < readySource ; crawling ; 2022 ; Wiley MRW Source Content 2022_01 ; 2022_01 >
+      #No more AUs. Moving to https.
+    }
+    {
+      param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/wileymrw-released/
 
+      au < expected ; exists ; 2023 ; Wiley MRW Source Content 2023_01 ; 2023_01 >
+    }
   }
 
 }
