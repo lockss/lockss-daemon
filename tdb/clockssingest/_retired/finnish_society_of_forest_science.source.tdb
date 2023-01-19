@@ -28,7 +28,7 @@
     implicit < status ; status2 ; year ; name ; param[year] >
 
     au < zapped ; finished ; 2016 ; Silva Fennica WARC Content 2016 ; 2016 >
-    au < readySource ; frozen ; 2021 ; Silva Fennica WARC Content 2021 ; 2021 >
+    au < readySource ; finished ; 2021 ; Silva Fennica WARC Content 2021 ; 2021 >
     #collecting additional back content as warc.
     #collecting future content through harvest. Do not add AUs.
 

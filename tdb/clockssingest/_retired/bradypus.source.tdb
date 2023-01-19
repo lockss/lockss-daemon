@@ -44,7 +44,7 @@
 
     au < zapped ; finished ; 2016 ; Novecento WARC Content 2016 ; 2016 >
     au < zapped ; finished ; 2018 ; Novecento WARC Content 2018 ; 2018 >
-    au < readySource ; frozen ; 2020 ; Novecento WARC Content 2020 ; 2020 >
+    au < readySource ; finished ; 2020 ; Novecento WARC Content 2020 ; 2020 >
 
   }
 
@@ -63,7 +63,7 @@
 
     au < zapped ; finished ; 2016 ; Storicamente WARC Content 2016 ; 2016 >
     au < zapped ; finished ; 2018 ; Storicamente WARC Content 2018 ; 2018 >
-    au < readySource ; frozen ; 2020 ; Storicamente WARC Content 2020 ; 2020 >
+    au < readySource ; finished ; 2020 ; Storicamente WARC Content 2020 ; 2020 >
 
   }
 
@@ -82,7 +82,7 @@
 
     au < zapped ; finished ; 2016 ; E-Review WARC Content 2016 ; 2016 >
     au < zapped ; finished ; 2018 ; E-Review WARC Content 2018 ; 2018 >
-    au < readySource ; frozen ; 2020 ; E-Review WARC Content 2020 ; 2020 >
+    au < readySource ; finished ; 2020 ; E-Review WARC Content 2020 ; 2020 >
 
 
   }
