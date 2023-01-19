@@ -153,15 +153,15 @@
 
         param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/elsevierdtd5-released/
 
-        au < expected ; exists ; 2023 ; Elsevier Source Content 2023_1 ; 2023_1 >
-        au < expected ; exists ; 2023 ; Elsevier Source Content 2023_2 ; 2023_2 >
-        au < expected ; exists ; 2023 ; Elsevier Source Content 2023_3 ; 2023_3 >
-        au < expected ; exists ; 2023 ; Elsevier Source Content 2023_4 ; 2023_4 >
-        au < expected ; exists ; 2023 ; Elsevier Source Content 2023_5 ; 2023_5 >
-        au < expected ; exists ; 2023 ; Elsevier Source Content 2023_6 ; 2023_6 >
-        au < expected ; exists ; 2023 ; Elsevier Source Content 2023_7 ; 2023_7 >
-        au < expected ; exists ; 2023 ; Elsevier Source Content 2023_8 ; 2023_8 >
-        au < expected ; exists ; 2023 ; Elsevier Source Content 2023_9 ; 2023_9 >
+        au < expected ; exists ; 2023 ; Elsevier Source Content 2023_01 ; 2023_01 >
+        au < expected ; exists ; 2023 ; Elsevier Source Content 2023_02 ; 2023_02 >
+        au < expected ; exists ; 2023 ; Elsevier Source Content 2023_03 ; 2023_03 >
+        au < expected ; exists ; 2023 ; Elsevier Source Content 2023_04 ; 2023_04 >
+        au < expected ; exists ; 2023 ; Elsevier Source Content 2023_05 ; 2023_05 >
+        au < expected ; exists ; 2023 ; Elsevier Source Content 2023_06 ; 2023_06 >
+        au < expected ; exists ; 2023 ; Elsevier Source Content 2023_07 ; 2023_07 >
+        au < expected ; exists ; 2023 ; Elsevier Source Content 2023_08 ; 2023_08 >
+        au < expected ; exists ; 2023 ; Elsevier Source Content 2023_09 ; 2023_09 >
         au < expected ; exists ; 2023 ; Elsevier Source Content 2023_10 ; 2023_10 >
         au < expected ; exists ; 2023 ; Elsevier Source Content 2023_11 ; 2023_11 >
         au < expected ; exists ; 2023 ; Elsevier Source Content 2023_12 ; 2023_12 >
