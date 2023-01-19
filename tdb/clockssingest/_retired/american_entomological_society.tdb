@@ -27,17 +27,17 @@
       
       comment[trigger] = may trigger, so must be tested urgently. 
 
-      au < finished ; manifest ; 2006 ; Entomological News Volume 117 ; 117 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2007 ; Entomological News Volume 118 ; 118 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2008 ; Entomological News Volume 119 ; 119 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2009 ; Entomological News Volume 120 ; 120 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2010 ; Entomological News Volume 121 ; 121 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2011-2012 ; Entomological News Volume 122 ; 122 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2013-2014 ; Entomological News Volume 123 ; 123 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2006 ; Entomological News Volume 117 ; 117 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2007 ; Entomological News Volume 118 ; 118 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2008 ; Entomological News Volume 119 ; 119 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2009 ; Entomological News Volume 120 ; 120 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2010 ; Entomological News Volume 121 ; 121 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2011-2012 ; Entomological News Volume 122 ; 122 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2013-2014 ; Entomological News Volume 123 ; 123 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014-2015 ; Entomological News Volume 124 ; 124 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2015-2016 ; Entomological News Volume 125 ; 125 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2016-2017 ; Entomological News Volume 126 ; 126 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2017-2018 ; Entomological News Volume 127 ; 127 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2017-2018 ; Entomological News Volume 127 ; 127 ; reingest5.clockss.org:8082 >
 
     }
 
@@ -53,19 +53,19 @@
     
       # contract lists back content on JSTOR
     
-      au < finished ; manifest ; 2006 ; Transactions of the American Entomological Society Volume 132 ; 132 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2007 ; Transactions of the American Entomological Society Volume 133 ; 133 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2008 ; Transactions of the American Entomological Society Volume 134 ; 134 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2009 ; Transactions of the American Entomological Society Volume 135 ; 135 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2010 ; Transactions of the American Entomological Society Volume 136 ; 136 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2011 ; Transactions of the American Entomological Society Volume 137 ; 137 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2012 ; Transactions of the American Entomological Society Volume 138 ; 138 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2006 ; Transactions of the American Entomological Society Volume 132 ; 132 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2007 ; Transactions of the American Entomological Society Volume 133 ; 133 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2008 ; Transactions of the American Entomological Society Volume 134 ; 134 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2009 ; Transactions of the American Entomological Society Volume 135 ; 135 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2010 ; Transactions of the American Entomological Society Volume 136 ; 136 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; Transactions of the American Entomological Society Volume 137 ; 137 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2012 ; Transactions of the American Entomological Society Volume 138 ; 138 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2013 ; Transactions of the American Entomological Society Volume 139 ; 139 ; >    #only AU with complete crawls on all ingest machines.
-      au < finished ; manifest ; 2014 ; Transactions of the American Entomological Society Volume 140 ; 140 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; Transactions of the American Entomological Society Volume 140 ; 140 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Transactions of the American Entomological Society Volume 141 ; 141 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2016 ; Transactions of the American Entomological Society Volume 142 ; 142 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2017 ; Transactions of the American Entomological Society Volume 143 ; 143 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2018 ; Transactions of the American Entomological Society Volume 144 ; 144 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2017 ; Transactions of the American Entomological Society Volume 143 ; 143 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2018 ; Transactions of the American Entomological Society Volume 144 ; 144 ; reingest5.clockss.org:8082 >
 
     }
 

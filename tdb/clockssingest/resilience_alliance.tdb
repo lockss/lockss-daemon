@@ -56,9 +56,9 @@
       >
       #although there is a param[year] it is not used in the crawl rules. So, AUs only need to be specific to volume_name.
 
-      au < finished ; manifest ; 1997 ; 1997 ; Ecology and Society Volume 1 ; 1 ; https://www.ecologyandsociety.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 1998 ; 1998 ; Ecology and Society Volume 2 ; 2 ; https://www.ecologyandsociety.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 1999 ; 1999 ; Ecology and Society Volume 3 ; 3 ; https://www.ecologyandsociety.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 1997 ; 1997 ; Ecology and Society Volume 1 ; 1 ; https://www.ecologyandsociety.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 1998 ; 1998 ; Ecology and Society Volume 2 ; 2 ; https://www.ecologyandsociety.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 1999 ; 1999 ; Ecology and Society Volume 3 ; 3 ; https://www.ecologyandsociety.org/ ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2000 ; 2000 ; Ecology and Society Volume 4 ; 4 ; https://www.ecologyandsociety.org/ ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2001 ; 2001 ; Ecology and Society Volume 5 ; 5 ; https://www.ecologyandsociety.org/ ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2002 ; 2002 ; Ecology and Society Volume 6 ; 6 ; https://www.ecologyandsociety.org/ ; reingest2.clockss.org:8085 >
