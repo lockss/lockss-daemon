@@ -151,7 +151,7 @@
       au < manifest ; exists ; 1998 ; 2 ; Redescriptions Volume 1998 ; 1998 ; https://journal-redescriptions.org/ ; >
       au < manifest ; exists ; 1999 ; 3 ; Redescriptions Volume 1999 ; 1999 ; https://journal-redescriptions.org/ ; >
       au < finished ; finished ; 2000 ; 4 ; Redescriptions Volume 2000 ; 2000 ; https://journal-redescriptions.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2001 ; 5 ; Redescriptions Volume 2001 ; 2001 ; https://journal-redescriptions.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2001 ; 5 ; Redescriptions Volume 2001 ; 2001 ; https://journal-redescriptions.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2002 ; 6 ; Redescriptions Volume 2002 ; 2002 ; https://journal-redescriptions.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2003 ; 7 ; Redescriptions Volume 2003 ; 2003 ; https://journal-redescriptions.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2004 ; 8 ; Redescriptions Volume 2004 ; 2004 ; https://journal-redescriptions.org/ ; reingest5.clockss.org:8082 >
@@ -312,7 +312,7 @@
       au < finished ; finished ; 2017 ; 4 ; Annals of Global Health Volume 2017 ; 2017 ; https://www.annalsofglobalhealth.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; 5 ; Annals of Global Health Volume 2018 ; 2018 ; https://www.annalsofglobalhealth.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2019 ; 6 ; Annals of Global Health Volume 2019 ; 2019 ; https://www.annalsofglobalhealth.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2020 ; 7 ; Annals of Global Health Volume 2020 ; 2020 ; https://www.annalsofglobalhealth.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2020 ; 7 ; Annals of Global Health Volume 2020 ; 2020 ; https://www.annalsofglobalhealth.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; 8 ; Annals of Global Health Volume 2021 ; 2021 ; https://www.annalsofglobalhealth.org/ ; >
       au < crawling ; exists ; 2022 ; 9 ; Annals of Global Health Volume 2022 ; 2022 ; https://www.annalsofglobalhealth.org/ ; >
 
@@ -463,7 +463,7 @@
 
       au < finished ; crawling ; 2019 ; 1 ; London School of Economics and Politics Volume 2019 ; 2019 ; https://jied.lse.ac.uk/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; 2 ; London School of Economics and Politics Volume 2020 ; 2020 ; https://jied.lse.ac.uk/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2021 ; 3 ; London School of Economics and Politics Volume 2021 ; 2021 ; https://jied.lse.ac.uk/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2021 ; 3 ; London School of Economics and Politics Volume 2021 ; 2021 ; https://jied.lse.ac.uk/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2022 ; 4 ; London School of Economics and Politics Volume 2022 ; 2022 ; https://jied.lse.ac.uk/ ; >
 
   }
@@ -480,8 +480,8 @@
 
       au < finished ; crawling ; 2018 ; 2 ; Journal of Long-Term Care Volume 2018 ; 2018 ; https://journal.ilpnetwork.org/ ; reingest4.clockss.org:8082 > #problem with volume url?
       au < finished ; crawling ; 2019 ; 5 ; Journal of Long-Term Care Volume 2019 ; 2019 ; https://journal.ilpnetwork.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2020 ; 6 ; Journal of Long-Term Care Volume 2020 ; 2020 ; https://journal.ilpnetwork.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2021 ; 8 ; Journal of Long-Term Care Volume 2021 ; 2021 ; https://journal.ilpnetwork.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2020 ; 6 ; Journal of Long-Term Care Volume 2020 ; 2020 ; https://journal.ilpnetwork.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2021 ; 8 ; Journal of Long-Term Care Volume 2021 ; 2021 ; https://journal.ilpnetwork.org/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2022 ; 9 ; Journal of Long-Term Care Volume 2022 ; 2022 ; https://journal.ilpnetwork.org/ ; >
 
   }
@@ -496,8 +496,8 @@
       comment[publisher] = London School of Economics and Politics
 #      param[base_url] = https://ppr.lse.ac.uk/ 
 
-      au < finished ; crawling ; 2020 ; 1 ; LSE Public Policy Review Volume 2020 ; 2020 ; https://ppr.lse.ac.uk/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2021 ; 2 ; LSE Public Policy Review Volume 2021 ; 2021 ; https://ppr.lse.ac.uk/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2020 ; 1 ; LSE Public Policy Review Volume 2020 ; 2020 ; https://ppr.lse.ac.uk/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2021 ; 2 ; LSE Public Policy Review Volume 2021 ; 2021 ; https://ppr.lse.ac.uk/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2022 ; 3 ; LSE Public Policy Review Volume 2022 ; 2022 ; https://ppr.lse.ac.uk/ ; >
 
   }
@@ -932,7 +932,7 @@
       au < finished ; finished ; 2017 ; 27 ; Bulletin of the History of Archaeology Volume 2017 ; 2017 ; http://www.archaeologybulletin.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2018 ; 28 ; Bulletin of the History of Archaeology Volume 2018 ; 2018 ; https://www.archaeologybulletin.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2019 ; 29 ; Bulletin of the History of Archaeology Volume 2019 ; 2019 ; https://www.archaeologybulletin.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2020 ; 30 ; Bulletin of the History of Archaeology Volume 2020 ; 2020 ; https://www.archaeologybulletin.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2020 ; 30 ; Bulletin of the History of Archaeology Volume 2020 ; 2020 ; https://www.archaeologybulletin.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2021 ; 31 ; Bulletin of the History of Archaeology Volume 2021 ; 2021 ; https://www.archaeologybulletin.org/ ; >
       au < crawling ; exists ; 2022 ; 32 ; Bulletin of the History of Archaeology Volume 2022 ; 2022 ; https://www.archaeologybulletin.org/ ; >
 
@@ -1112,7 +1112,7 @@
 #      param[base_url] = http://www.rips-irsp.com/
 
       au < finished ; finished ; 2016 ; 1 ; International Review of Social Psychology Volume 2016 ; 2016 ; http://www.rips-irsp.com/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2017 ; 2 ; International Review of Social Psychology Volume 2017 ; 2017 ; http://www.rips-irsp.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2017 ; 2 ; International Review of Social Psychology Volume 2017 ; 2017 ; http://www.rips-irsp.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2018 ; 3 ; International Review of Social Psychology Volume 2018 ; 2018 ; https://www.rips-irsp.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2019 ; 4 ; International Review of Social Psychology Volume 2019 ; 2019 ; https://www.rips-irsp.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2020 ; 5 ; International Review of Social Psychology Volume 2020 ; 2020 ; https://www.rips-irsp.com/ ; reingest5.clockss.org:8082 >
@@ -1492,7 +1492,7 @@
       au < finished ; finished ; 2017 ; 1 ; MaHKUscript: Journal of Fine Art Research Volume 1 Issue 2 (2017) ; 2017 ; https://www.mahkuscript.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2018 ; 2 ; MaHKUscript: Journal of Fine Art Research Volume 2 ; 2018 ; https://www.mahkuscript.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2019 ; 3 ; MaHKUscript: Journal of Fine Art Research Volume 3 ; 2019 ; https://www.mahkuscript.com/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2020 ; 4 ; MaHKUscript: Journal of Fine Art Research Volume 4 ; 2020 ; https://www.mahkuscript.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2020 ; 4 ; MaHKUscript: Journal of Fine Art Research Volume 4 ; 2020 ; https://www.mahkuscript.com/ ; reingest1.clockss.org:8082 >
       au < expected ; exists ; 2021 ; 5 ; MaHKUscript: Journal of Fine Art Research Volume 5 ; 2021 ; https://mahkuscript.com/ ; >
       au < expected ; exists ; 2022 ; 6 ; MaHKUscript: Journal of Fine Art Research Volume 6 ; 2022 ; https://mahkuscript.com/ ; >
 
@@ -1573,7 +1573,7 @@
       au < finished ; finished ; 2017 ; 11 ; International Journal of the Commons Volume 2017 ; 2017 ; https://www.thecommonsjournal.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; 12 ; International Journal of the Commons Volume 2018 ; 2018 ; https://www.thecommonsjournal.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2019 ; 13 ; International Journal of the Commons Volume 2019 ; 2019 ; https://www.thecommonsjournal.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2020 ; 14 ; International Journal of the Commons Volume 2020 ; 2020 ; https://www.thecommonsjournal.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2020 ; 14 ; International Journal of the Commons Volume 2020 ; 2020 ; https://www.thecommonsjournal.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; 15 ; International Journal of the Commons Volume 2021 ; 2021 ; https://www.thecommonsjournal.org/ ; >
       au < crawling ; exists ; 2022 ; 16 ; International Journal of the Commons Volume 2022 ; 2022 ; https://www.thecommonsjournal.org/ ; >
 
@@ -1767,7 +1767,7 @@
       au < finished ; finished ; 2017 ; 13 ; Psychologica Belgica Volume 2017 ; 2017 ; https://www.psychologicabelgica.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2018 ; 14 ; Psychologica Belgica Volume 2018 ; 2018 ; https://www.psychologicabelgica.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2019 ; 15 ; Psychologica Belgica Volume 2019 ; 2019 ; https://www.psychologicabelgica.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2020 ; 16 ; Psychologica Belgica Volume 2020 ; 2020 ; https://www.psychologicabelgica.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2020 ; 16 ; Psychologica Belgica Volume 2020 ; 2020 ; https://www.psychologicabelgica.com/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; 17 ; Psychologica Belgica Volume 2021 ; 2021 ; https://www.psychologicabelgica.com/ ; >
       au < crawling ; exists ; 2022 ; 18 ; Psychologica Belgica Volume 2022 ; 2022 ; https://www.psychologicabelgica.com/ ; >
 
@@ -1996,7 +1996,7 @@
 
       au < finished ; finished ; 2018 ; 1 ; Journal of Cognition Volume 2018 ; 2018 ; https://www.journalofcognition.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2019 ; 2 ; Journal of Cognition Volume 2019 ; 2019 ; https://www.journalofcognition.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2020 ; 3 ; Journal of Cognition Volume 2020 ; 2020 ; https://www.journalofcognition.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2020 ; 3 ; Journal of Cognition Volume 2020 ; 2020 ; https://www.journalofcognition.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; 4 ; Journal of Cognition Volume 2021 ; 2021 ; https://www.journalofcognition.org/ ; >
       au < crawling ; exists ; 2022 ; 5 ; Journal of Cognition Volume 2022 ; 2022 ; https://www.journalofcognition.org/ ; >
 
@@ -2120,7 +2120,7 @@
       au < finished ; finished ; 2017 ; 8 ; Yearbook of Swiss Administrative Science Volume 2017 ; 2017 ; https://www.ssas-yearbook.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2018 ; 9 ; Yearbook of Swiss Administrative Science Volume 2018 ; 2018 ; https://www.ssas-yearbook.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2019 ; 10 ; Yearbook of Swiss Administrative Science Volume 2019 ; 2019 ; https://www.ssas-yearbook.com/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2020 ; 11 ; Yearbook of Swiss Administrative Science Volume 2020 ; 2020 ; https://www.ssas-yearbook.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2020 ; 11 ; Yearbook of Swiss Administrative Science Volume 2020 ; 2020 ; https://www.ssas-yearbook.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2021 ; 12 ; Yearbook of Swiss Administrative Science Volume 2021 ; 2021 ; https://www.ssas-yearbook.com/ ; reingest4.clockss.org:8082 >
       au < exists ; exists ; 2022 ; 13 ; Yearbook of Swiss Administrative Science Volume 2022 ; 2022 ; https://www.ssas-yearbook.com/ ; >
 
@@ -2892,7 +2892,7 @@
       au < finished ; finished ; 2017 ; 6 ; Insights: the UKSG journal Volume 2017 ; 2017 ; http://insights.uksg.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2018 ; 7 ; Insights: the UKSG journal Volume 2018 ; 2018 ; https://insights.uksg.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2019 ; 8 ; Insights: the UKSG journal Volume 2019 ; 2019 ; https://insights.uksg.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2020 ; 9 ; Insights: the UKSG journal Volume 2020 ; 2020 ; https://insights.uksg.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2020 ; 9 ; Insights: the UKSG journal Volume 2020 ; 2020 ; https://insights.uksg.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; 10 ; Insights: the UKSG journal Volume 2021 ; 2021 ; https://insights.uksg.org/ ; >
       au < manifest ; exists ; 2022 ; 11 ; Insights: the UKSG journal Volume 2022 ; 2022 ; https://insights.uksg.org/ ; >
 
@@ -3044,7 +3044,7 @@
 #      param[base_url] = https://www.euroslajournal.org/
 
       au < finished ; finished ; 2017 ; 1 ; Journal of the European Second Language Association Volume 2017 ; 2017 ; https://www.euroslajournal.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2018 ; 2 ; Journal of the European Second Language Association Volume 2018 ; 2018 ; https://www.euroslajournal.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2018 ; 2 ; Journal of the European Second Language Association Volume 2018 ; 2018 ; https://www.euroslajournal.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2019 ; 3 ; Journal of the European Second Language Association Volume 2019 ; 2019 ; https://www.euroslajournal.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2020 ; 4 ; Journal of the European Second Language Association Volume 2020 ; 2020 ; https://www.euroslajournal.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2021 ; 5 ; Journal of the European Second Language Association Volume 2021 ; 2021 ; https://www.euroslajournal.org/ ; >
@@ -3110,9 +3110,9 @@
       au < finished ; finished ; 2015 ; 4 ; Stability: International Journal of Security & Development Volume 2015 ; 2015 ; http://www.stabilityjournal.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2016 ; 5 ; Stability: International Journal of Security & Development Volume 2016 ; 2016 ; http://www.stabilityjournal.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2017 ; 6 ; Stability: International Journal of Security & Development Volume 2017 ; 2017 ; http://www.stabilityjournal.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2018 ; 7 ; Stability: International Journal of Security & Development Volume 2018 ; 2018 ; https://www.stabilityjournal.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2018 ; 7 ; Stability: International Journal of Security & Development Volume 2018 ; 2018 ; https://www.stabilityjournal.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2019 ; 8 ; Stability: International Journal of Security & Development Volume 2019 ; 2019 ; https://www.stabilityjournal.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2020 ; 9 ; Stability: International Journal of Security & Development Volume 2020 ; 2020 ; https://www.stabilityjournal.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2020 ; 9 ; Stability: International Journal of Security & Development Volume 2020 ; 2020 ; https://www.stabilityjournal.org/ ; reingest4.clockss.org:8082 >
       au < expected ; exists ; 2021 ; 10 ; Stability: International Journal of Security & Development Volume 2021 ; 2021 ; https://www.stabilityjournal.org/ ; >
       au < crawling ; exists ; 2022 ; 11 ; Stability: International Journal of Security & Development Volume 2022 ; 2022 ; https://www.stabilityjournal.org/ ; >
 
