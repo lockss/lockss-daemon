@@ -13,7 +13,23 @@ scripts/tdb/tdbout -t status tdb/prod/ | sort | uniq -c | grep -vw manifest | gr
 echo "*Status typos usdocs: "
 scripts/tdb/tdbout -t status tdb/usdocspln/ | sort | uniq -c | grep -vw manifest | grep -vw released | grep -vw expected | grep -vw exists | grep -vw testing | grep -vw wanted | grep -vw down | grep -vw superseded | grep -vw doNotProcess | grep -vw notReady | grep -vw doesNotExist
 echo "*Status variations clockssingest: "
-scripts/tdb/tdbout -c status,status2 tdb/clockssingest/ | sort | uniq -c | sort -n | grep -vw "manifest,exists" | grep -vw "crawling,exists" | grep -vw "exists,exists" | grep -vw "down,crawling" | grep -vw "doNotProcess,doNotProcess" | grep -vw "doNotProcess,exists" | grep -vw "expected,exists" | grep -vw "testing,exists" | grep -vw "notReady,exists" | grep -vw "ingNotReady,exists" | grep -vw "zapped,finished" | grep -vw "doesNotExist,doesNotExist"
+scripts/tdb/tdbout -c status,status2 tdb/clockssingest/ | sort | uniq -c | sort -n | grep -vw "manifest,exists" \
+                                                                                   | grep -vw "down,crawling" \
+                                                                                   | grep -vw "down,exists" \
+                                                                                   | grep -vw "doNotProcess,doNotProcess" \
+                                                                                   | grep -vw "doNotProcess,exists" \
+                                                                                   | grep -vw "testing,exists" \
+                                                                                   | grep -vw "zapped,finished" \
+                                                                                   | grep -vw "zapped,superseded" \
+                                                                                   | grep -vw "finished,zapped" \
+                                                                                   | grep -vw "finished,down" \
+                                                                                   | grep -vw "finished,superseded" \
+                                                                                   | grep -vw "doesNotExist,doesNotExist" \
+                                                                                   | grep -vw "superseded,exists" \
+                                                                                   | grep -vw "superseded,down" \
+                                                                                   | grep -vw "superseded,finished" \
+                                                                                   | grep -vw "readySource," \
+                                                                                   | sort -k 2
 #
 # Find plugins listed in tdb files, that don't exist
 echo "---------------------"
