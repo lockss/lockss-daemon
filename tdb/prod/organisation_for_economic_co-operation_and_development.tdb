@@ -19,7 +19,6 @@
       param[topic] = economics
       param[journal_issn] = 19952899
       param[journal_dir] = oecd-journal-journal-of-business-cycle-measurement-and-analysis
-      param[journal_id] = jbcma
 
       au < testing ; 2013 ; Journal of Business Cycle Measurement and Analysis Volume 2013 ; 2013 >
       au < testing ; 2014 ; Journal of Business Cycle Measurement and Analysis Volume 2014 ; 2014 >
@@ -37,11 +36,10 @@
       param[topic] = economics
       param[journal_issn] = 17293626
       param[journal_dir] = journal-of-business-cycle-measurement-and-analysis
-      param[journal_id] = jbcma
 
-      au < testing ; 2004 ; Journal of Business Cycle Measurement and Analysis Volume 2004 ; 2004 >
+      au < testing ; 2004 ; Journal of Business Cycle Measurement and Analysis Volume 2004 ; 2004 > # test
       au < testing ; 2005 ; Journal of Business Cycle Measurement and Analysis Volume 2005 ; 2005 >
-      au < testing ; 2007 ; Journal of Business Cycle Measurement and Analysis Volume 2007 ; 2007 >
+      au < testing ; 2007 ; Journal of Business Cycle Measurement and Analysis Volume 2007 ; 2007 > # another test
 
     }
 
@@ -55,7 +53,6 @@
       param[topic] = nuclear-energy
       param[journal_issn] = 16097378
       param[journal_dir] = nuclear-law-bulletin
-      param[journal_id] = nuclear_law
 
       au < testing ; 1997 ; Nuclear Law Bulletin 1997 ; 1997 >
       au < testing ; 1998 ; Nuclear Law Bulletin 1998 ; 1998 >
@@ -93,7 +90,6 @@
       param[topic] = governance
       param[journal_issn] = 16812336
       param[journal_dir] = oecd-journal-on-budgeting
-      param[journal_id] = budget
 
       au < testing ; 2019 ; OECD Journal on Budgeting Volume 19 ; 19 >
     }
@@ -107,7 +103,6 @@
     #    param[topic] = energy
     #    param[journal_issn] = 27886824
     #    param[journal_dir] = gas-market-report
-    #    param[journal_id] = 6a6dd6f7-en
     #
     #    au < testing ; 2021 ; Gas Market Reports Volume 2021 ; 2021 >
     #    au < testing ; 2022 ; Gas Market Reports Volume 2022 ; 2022 >
