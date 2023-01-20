@@ -77,6 +77,11 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>"OECD iLibrary Datasets Plugin, Base URL %s, Year %d", base_url, year</string>
     </entry>
     <entry>
+        <string>au_start_url</string>
+        <!-- https://www.oecd-ilibrary.org/lockss/datasets?year=2019 -->
+        <string>"%slockss/datasets?year=%d", base_url, year</string>
+    </entry>
+    <entry>
         <string>au_crawlrules</string>
         <list>
             <string>1,"^%s[^?]*\.(bmp|css|gif|ico|svg|eot|ttf|woff2?|jpe?g|js|png|tif?f)(\?.+)?$", base_url</string>
@@ -98,11 +103,6 @@ POSSIBILITY OF SUCH DAMAGE.
             <string>1,"^%s.*\.zip\?itemId=.*data.*", base_url</string>
             <!-- https://oecd-16a7.kxcdn.com/ff8ec280-en.zip?token=6ewO3Wxpl1lX_oOJUOhS7g&expire=1643842988&redirect=http://www.oecd-ilibrary.org/content/collection/trsprt-data-en -->
         </list>
-    </entry>
-    <entry>
-        <string>au_start_url</string>
-        <!-- https://www.oecd-ilibrary.org/lockss/datasets?year=2019 -->
-        <string>"%slockss/datasets?year=%d", base_url, year</string>
     </entry>
     <entry>
         <string>au_substance_url_pattern</string>
