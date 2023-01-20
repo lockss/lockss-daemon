@@ -8,8 +8,8 @@
     info[poller] = 3 ;
     info[platform] = Atypon
    
-  # DO NOT CAUSE ANY AU TO CRAWL until the situation with the squatted website is resolved 
-    
+  # Do not cause any AU to crawl publisher.
+  # Website redirects to squater.
   >
   
   plugin = org.lockss.plugin.atypon.ammonsscientific.ClockssAmmonsScientificPlugin
