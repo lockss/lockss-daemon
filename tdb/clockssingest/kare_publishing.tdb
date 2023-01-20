@@ -9,7 +9,7 @@
     info[platform] = Custom
   >
 
-    plugin = needs.plugin
+    plugin = org.lockss.plugin.kare.ClockssKarePlugin
     implicit < status ; status2 ; year ; name ; volume ; param[volume] ; hidden[proxy] >
 
   {
@@ -21,10 +21,11 @@
     >
 
       param[base_url] = https://agridergisi.com/
+      param[journal_id] = agri
 
       au < exists ; exists ; 2020 ; AGRI Volume 32 ; 32 ; 32 ; >
-      au < exists ; exists ; 2021 ; AGRI Volume 33 ; 33 ; 33 ; >
-      au < exists ; exists ; 2022 ; AGRI Volume 34 ; 34 ; 34 ; >
+      au < testing ; exists ; 2021 ; AGRI Volume 33 ; 33 ; 33 ; >
+      au < testing ; exists ; 2022 ; AGRI Volume 34 ; 34 ; 34 ; >
 
   }
 

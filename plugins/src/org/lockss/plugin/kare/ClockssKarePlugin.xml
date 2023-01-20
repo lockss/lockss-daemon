@@ -1,0 +1,231 @@
+<!--
+
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<map>
+    <entry>
+        <string>plugin_status</string>
+        <string>development</string>
+    </entry>
+    <entry>
+        <string>plugin_identifier</string>
+        <string>org.lockss.plugin.kare.ClockssKarePlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_version</string>
+        <string>1</string>
+    </entry>
+    <entry>
+        <string>plugin_name</string>
+        <string>Kare Publishing Plugin (CLOCKSS)</string>
+    </entry>
+    <entry>
+        <string>au_name</string>
+        <string>"Kare Publishing Plugin (CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume</string>
+    </entry>
+    <entry>
+        <string>plugin_config_props</string>
+        <list>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>base_url</key>
+                <displayName>Base URL</displayName>
+                <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+                <type>3</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>journal_id</key>
+                <displayName>Journal Identifier</displayName>
+                <description>Identifier for journal (often used as part of file names)</description>
+                <type>1</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>volume</key>
+                <displayName>Volume Number</displayName>
+                <type>1</type>
+                <size>20</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+        </list>
+    </entry>
+    <entry>
+        <string>plugin_feature_version_map</string>
+        <map>
+            <entry>
+                <string>Metadata</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Poll</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Substance</string>
+                <string>1</string>
+            </entry>
+        </map>
+    </entry>
+    <entry>
+    <string>au_permission_url</string>
+    <!--https://agridergisi.com/Page.aspx?p=ethics_policies -->
+        <string>"%sPage.aspx?p=ethics_policies", base_url</string>
+    </entry>
+    <entry>
+        <string>au_start_url</string>
+        <!--
+        https://agridergisi.com/lockss-manifest/vol_34_manifest.html
+        https://agridergisi.com/jvi.aspx?pdir=agri&plng=eng&list=pub -->
+        <string>"%slockss-manifest/vol_%s_manifest.html", base_url, volume</string>
+    </entry>
+    <entry>
+        <string>au_crawlrules</string>
+        <list>
+            <!-- static files hosted on baseur and the content url -->
+            <string>1,"^(%s|https://jag.journalagent.com/).*\.(bmp|css|pdf|jpg|gif|ico|js|jpe?g|png|tif?f|eot|svg|ttf|woff.?)", base_url</string>
+            <string>1,"^https://(ajax|fonts)\.(googleapis|gstatic)\.com/"</string>
+            <!-- https://agridergisi.com/jvi.aspx?pdir=agri&plng=eng&volume=34&issue=1 -->
+            <string>1,"%sjvi.aspx\?pdir=%s&amp;plng=eng&amp;volume=%s", base_url, journal_id, volume</string>
+            <!-- https://agridergisi.com/jvi.aspx?pdir=agri&plng=eng&un=AGRI-42800 -->
+            <string>1,"%sjvi.aspx\?pdir=%s&amp;plng=eng&amp;un=[^&amp;]+", base_url, journal_id</string>
+            <!-- https://jag.journalagent.com/z4/download_fulltext.asp?pdir=agri&plng=eng&un=AGRI-37132 -->
+            <string>1,"https://jag.journalagent.com/.*download_fulltext.asp\?pdir=%s&amp;plng=eng&amp;un=", journal_id</string>
+            <!-- pdf redirects to https://jag.journalagent.com/agri/pdfs/AGRI-27048-EXPERIMENTAL_AND_CLINICAL_STUDIES-SENCAN.pdf -->
+            <string>1,"https://jag.journalagent.com/%s/pdfs/", journal_id</string>
+            <!-- https://jag.journalagent.com/z4/gencitation.asp?pdir=agri&article=AGRI-20270&format=RIS -->
+            <string>1,"https://jag.journalagent.com/.*gencitation.asp\?pdir=%s&amp;article=.*&amp;format=(RIS|EndNote|BibTeX|Medlars|Procite|referenceManager)", journal_id</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_def_pause_time</string>
+        <long>3000</long>
+    </entry>
+    <entry>
+        <string>au_def_new_content_crawl</string>
+        <long>1209600000</long>
+    </entry>
+    <entry>
+        <string>au_substance_url_pattern</string>
+        <!--
+        article
+        https://agridergisi.com/jvi.aspx?pdir=agri&plng=eng&un=AGRI-42800
+        <string>"^%sjvi\.aspx\?pdir=%s&amp;plng=eng&amp;un=[^&amp;]+$", base_url, journal_id</string>
+        abstract
+        https://agridergisi.com/jvi.aspx?pdir=agri&plng=eng&un=AGRI-42800&look4=
+        pdf
+        https://jag.journalagent.com/z4/download_fulltext.asp?pdir=agri&plng=eng&un=AGRI-42800
+        redirect pdf
+        https://jag.journalagent.com/agri/pdfs/AGRI-01033-CLINICAL_CONCEPTS_AND_COMMENTARY-AKANSEL.pdf
+        -->
+        <string>"^https://jag.journalagent.com/(.*download_fulltext\.asp\?pdir=%s|%s/pdfs/.+\.pdf)", journal_id, journal_id</string>
+    </entry>
+    <entry>
+        <string>text/html_crawl_filter_factory</string>
+        <string>org.lockss.plugin.kare.KareHtmlCrawlFilterFactory</string>
+    </entry>
+    <entry>
+        <string>plugin_article_iterator_factory</string>
+        <string>org.lockss.plugin.kare.KareArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>plugin_article_metadata_extractor_factory</string>
+        <string>org.lockss.plugin.kare.KareArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>plugin_url_consumer_factory</string>
+        <string>org.lockss.plugin.kare.KareUrlConsumerFactory</string>
+    </entry>
+    <entry>
+        <string>text/plain_metadata_extractor_factory_map</string>
+        <map>
+            <entry>
+                <string>*;RIS</string>
+                <string>org.lockss.plugin.kare.KareRisMetadataExtractorFactory</string>
+            </entry>
+        </map>
+    </entry>
+    <entry>
+        <string>application/x-research-info-systems_metadata_extractor_factory_map</string>
+        <map>
+            <entry>
+                <string>*;RIS</string>
+                <string>org.lockss.plugin.kare.KareRisMetadataExtractorFactory</string>
+            </entry>
+        </map>
+    </entry>
+    <entry>
+        <string>application/octet-stream_metadata_extractor_factory_map</string>
+        <map>
+            <entry>
+                <string>*;RIS</string>
+                <string>org.lockss.plugin.kare.KareRisMetadataExtractorFactory</string>
+            </entry>
+        </map>
+    </entry>
+    <entry>
+        <string>text/html_filter_factory</string>
+        <string>org.lockss.plugin.ojs3.Ojs3HtmlHashFilterFactory</string>
+    </entry>
+    <entry>
+        <!-- manifest and issues -->
+        <string>au_refetch_depth</string>
+        <int>2</int>
+    </entry>
+    <entry>
+        <string>au_permitted_host_pattern</string>
+        <list>
+            <!-- https://jag.journalagent.com/robots.txt -->
+            <!--https://jag.journalagent.com/z4/download_fulltext.asp?pdir=agri&plng=eng&un=AGRI-42800 -->
+            <string>jag\.journalagent\.com</string>
+            <string>(fonts|ajax)\.googleapis\.com</string>
+            <string>.+\.gstatic\.com</string>
+            <string>s7\.addthis\.com</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_repair_from_peer_if_missing_url_pattern</string>
+        <list>
+            <string>/(plugins/(generic|themes)|lib/pkp|public/journals)/.+[.](css|eot|gif|png|jpe?g|js|svg|ttf|woff)([?]((itok|v)=)?[^&amp;]+)?$</string>
+        </list>
+    </entry>
+    <entry>
+        <!-- these will not count towards poll results but will replicate from peer if above -->
+        <string>au_url_poll_result_weight</string>
+        <list>
+            <string>"/(plugins/(generic|themes)|lib/pkp|public/journals)/.+[.](css|eot|gif|png|jpe?g|js|svg|ttf|woff)([?]((itok|v)=)?[^&amp;]+)?$", 0</string>
+            <string>"/pdfJsViewer/pdf.js/web/viewer.html.*[?]file=.+$", 0</string>
+        </list>
+    </entry>
+</map>
