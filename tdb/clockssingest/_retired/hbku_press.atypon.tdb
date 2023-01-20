@@ -42,7 +42,7 @@
  
       au < finished ; finished ; 2011 ; Aswan Heart Centre: Science and Practice Series Volume 2011 ; 2011 ; >
       au < superseded ; down ; 2012 ; Aswan Heart Centre: Science and Practice Series Volume 2012 [to delete] ; 2012 ; >
-      au < zapped ; down ; 2013 ; Aswan Heart Centre: Science and Practice Series Volume 2013 [to delete] ; 2013 ; >
+      au < zapped ; superseded ; 2013 ; Aswan Heart Centre: Science and Practice Series Volume 2013 [to delete] ; 2013 ; >
     }
     
     {
@@ -278,7 +278,7 @@
       au < finished ; finished ; 2010 ; Near and Middle Eastern Journal of Research in Education Volume 2010 ; 2010 ; >
       au < finished ; finished ; 2011 ; Near and Middle Eastern Journal of Research in Education Volume 2011 ; 2011 ; > 
       au < finished ; finished ; 2012 ; Near and Middle Eastern Journal of Research in Education Volume 2012 ; 2012 ; > 
-      au < zapped ; down ; 2013 ; Near and Middle Eastern Journal of Research in Education Volume 2013 [to delete] ; 2013 ; > 
+      au < zapped ; superseded ; 2013 ; Near and Middle Eastern Journal of Research in Education Volume 2013 [to delete] ; 2013 ; > 
     }
     {
       plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
@@ -409,7 +409,7 @@
 
       au < finished ; finished ; 2011 ; QScience Connect Volume 2011 ; 2011 ; >
       au < finished ; finished ; 2012 ; QScience Connect Volume 2012 ; 2012 ; >
-      au < zapped ; down ; 2013 ; QScience Connect Volume 2013 [to delete] ; 2013 ; >
+      au < zapped ; superseded ; 2013 ; QScience Connect Volume 2013 [to delete] ; 2013 ; >
     }
     {
       plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
