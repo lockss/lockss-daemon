@@ -20,6 +20,7 @@ scripts/tdb/tdbout -c status,status2 tdb/clockssingest/ | sort | uniq -c | sort 
                                                                                    | grep -vw "doNotProcess,exists" \
                                                                                    | grep -vw "testing,exists" \
                                                                                    | grep -vw "zapped,finished" \
+                                                                                   | grep -vw "zapped,down" \
                                                                                    | grep -vw "zapped,superseded" \
                                                                                    | grep -vw "finished,zapped" \
                                                                                    | grep -vw "finished,down" \
@@ -28,7 +29,7 @@ scripts/tdb/tdbout -c status,status2 tdb/clockssingest/ | sort | uniq -c | sort 
                                                                                    | grep -vw "superseded,exists" \
                                                                                    | grep -vw "superseded,down" \
                                                                                    | grep -vw "superseded,finished" \
-                                                                                   | grep -vw "readySource," \
+                                                                                   | grep -v "readySource," \
                                                                                    | sort -k 2
 #
 # Find plugins listed in tdb files, that don't exist
