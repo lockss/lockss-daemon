@@ -532,6 +532,20 @@
 
   {
     title <
+      name = Bangladesh Journal of Endocrinology and Metabolism ;
+      issn = 2949-7973 ;
+      eissn = 2949-8104 ;
+      issnl = 2949-7973
+   >
+
+    param[journal_issn] = 2949-7973
+
+    au < exists ; exists ; 2022 ; Bangladesh Journal of Endocrinology and Metabolism Volume 1 ; 2022 ; 1 ; https://www.bjem.org/ ; ; >
+
+  }
+
+  {
+    title <
       name = Bengal Journal of Cancer ;
       issn = 2773-1332 ;
       eissn = 2773-1340 ;
@@ -567,13 +581,27 @@
 
   {
     title <
+      name = Chronicle of Diabetes Research and Practice ;
+      issn = 2773-1316 ;
+      eissn = 2773-1324 ;
+      issnl = 2773-1316
+   >
+
+    param[journal_issn] = 2773-1316
+
+    au < exists ; exists ; 2022 ; Chronicle of Diabetes Research and Practice Volume 1 ; 2022 ; 1 ; https://cdrpj.org/ ; ; >
+
+  }
+
+  {
+    title <
       name = Chronicles of Young Scientists ;
       issn = 2229-5186 ;
       eissn = 0975-9212 ;
       issnl = 2229-5186
    >
-#    param[base_url] = http://www.cysonline.org/
 
+#    param[base_url] = http://www.cysonline.org/
     param[journal_issn] = 2229-5186
     # Young Scientists redirects to Drug Delivery. Seems like an error. (moved to http://www.ddtjournal.org/)
 
@@ -10280,12 +10308,14 @@
 
       param[journal_issn] = 2405-8181
 #      param[base_url] = http://www.ijcva.com/
+      #move to Galenos Publishing, Archive will stay with Medknow until further notice.
 
       au < finished ; crawling ; 2018 ; International Journal of the Cardiovascular Academy Volume 4 ; 2018 ; 4 ; https://www.ijcva.com/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; International Journal of the Cardiovascular Academy Volume 5 ; 2019 ; 5 ; https://www.ijcva.com/ ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; International Journal of the Cardiovascular Academy Volume 6 ; 2020 ; 6 ; https://www.ijcva.com/ ; ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; International Journal of the Cardiovascular Academy Volume 7 ; 2021 ; 7 ; https://www.ijcva.com/ ; ; >
       au < crawling ; exists ; 2022 ; International Journal of the Cardiovascular Academy Volume 8 ; 2022 ; 8 ; https://www.ijcva.com/ ; ; >
+      #deactivated
 
   }
 

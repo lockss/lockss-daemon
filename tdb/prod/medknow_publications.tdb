@@ -502,6 +502,20 @@
 
   {
     title <
+      name = Bangladesh Journal of Endocrinology and Metabolism ;
+      issn = 2949-7973 ;
+      eissn = 2949-8104 ;
+      issnl = 2949-7973
+   >
+
+    param[journal_issn] = 2949-7973
+
+    au < exists ; 2022 ; Bangladesh Journal of Endocrinology and Metabolism Volume 1 ; 2022 ; 1 ; https://www.bjem.org/ >
+
+  }
+
+  {
+    title <
       name = Bengal Journal of Cancer ;
       issn = 2773-1332 ;
       eissn = 2773-1340 ;
@@ -532,6 +546,20 @@
     au < down ; 2019 ; Chinese Medicine and Culture Volume 2 ; 2019 ; 2 ; https://www.cmaconweb.org/ >
     au < down ; 2020 ; Chinese Medicine and Culture Volume 3 ; 2020 ; 3 ; https://www.cmaconweb.org/ >
     au < doNotProcess ; 2021 ; Chinese Medicine and Culture Volume 4 ; 2021 ; 4 ; https://www.cmaconweb.org/ >
+
+  }
+
+  {
+    title <
+      name = Chronicle of Diabetes Research and Practice ;
+      issn = 2773-1316 ;
+      eissn = 2773-1324 ;
+      issnl = 2773-1316
+   >
+
+    param[journal_issn] = 2773-1316
+
+    au < exists ; 2022 ; Chronicle of Diabetes Research and Practice Volume 1 ; 2022 ; 1 ; https://cdrpj.org/ >
 
   }
 
@@ -9839,12 +9867,14 @@
 
       param[journal_issn] = 2405-8181
 #      param[base_url] = http://www.ijcva.com/
+      #move to Galenos Publishing, Archive will stay with Medknow until further notice
 
       au < released ; 2018 ; International Journal of the Cardiovascular Academy Volume 4 ; 2018 ; 4 ; https://www.ijcva.com/ >
       au < released ; 2019 ; International Journal of the Cardiovascular Academy Volume 5 ; 2019 ; 5 ; https://www.ijcva.com/ >
       au < released ; 2020 ; International Journal of the Cardiovascular Academy Volume 6 ; 2020 ; 6 ; https://www.ijcva.com/ >
       au < released ; 2021 ; International Journal of the Cardiovascular Academy Volume 7 ; 2021 ; 7 ; https://www.ijcva.com/ >
       au < manifest ; 2022 ; International Journal of the Cardiovascular Academy Volume 8 ; 2022 ; 8 ; https://www.ijcva.com/ >
+      #deactivated
 
   }
 
