@@ -25,8 +25,8 @@
     param[journal_id] = aabio
     comment[moved] = no longer accepting submissions. See http://www.qscience.com/page/archived_titles
 
-      au < finished ; finished ; 2013 ; Advances in Applied Biomedicine Volume 2013 ; 2013 ; reingest1.clockss.org:8082 > 
-      au < finished ; finished ; 2014 ; Advances in Applied Biomedicine Volume 2014 ; 2014 ; reingest2.clockss.org:8085 > 
+      au < finished ; crawling ; 2013 ; Advances in Applied Biomedicine Volume 2013 ; 2013 ; reingest1.clockss.org:8082 > 
+      au < finished ; crawling ; 2014 ; Advances in Applied Biomedicine Volume 2014 ; 2014 ; reingest2.clockss.org:8085 > 
   }
 
   {
