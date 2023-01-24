@@ -4,6 +4,7 @@ import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.extractor.*;
 import org.lockss.plugin.CachedUrl;
+import org.lockss.plugin.clockss.iniestares.IniestaresXmlMetadataExtractorFactory;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockArchivalUnit;
 import org.lockss.test.MockCachedUrl;
@@ -17,14 +18,14 @@ import java.io.InputStream;
 import java.util.Iterator;
 import java.util.List;
 
-public class TestIniesteresXmlMetadataExtractorFactory extends LockssTestCase {
+public class TestIniestaresXmlMetadataExtractorFactory extends LockssTestCase {
 
-    private static final Logger log = Logger.getLogger(TestIniesteresXmlMetadataExtractorFactory.class);
+    private static final Logger log = Logger.getLogger(TestIniestaresXmlMetadataExtractorFactory.class);
 
     private MockLockssDaemon theDaemon;
     private MockArchivalUnit mau;
 
-    private static String PLUGIN_NAME = "org.lockss.plugin.clockss.iniesteres.ClockssIniestaresSourcePlugin";
+    private static String PLUGIN_NAME = "org.lockss.plugin.clockss.iniestares.ClockssIniestaresSourcePlugin";
     private static String BASE_URL = "http://www.source.org/";
     private static String DIRECTORY = "2016";
     private static String ISSUE_URL = BASE_URL + DIRECTORY + "/pdoc/pdoc_17-1/";
@@ -82,7 +83,7 @@ public class TestIniesteresXmlMetadataExtractorFactory extends LockssTestCase {
             mcu.setContentSize(string_input.length());
             mcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
 
-            FileMetadataExtractor me = new IniesteresXmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
+            FileMetadataExtractor me = new IniestaresXmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
             FileMetadataListExtractor mle =
                     new FileMetadataListExtractor(me);
             List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);

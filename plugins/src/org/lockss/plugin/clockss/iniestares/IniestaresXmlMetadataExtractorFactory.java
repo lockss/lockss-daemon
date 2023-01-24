@@ -30,9 +30,8 @@ POSSIBILITY OF SUCH DAMAGE.
 
 */
 
-package org.lockss.plugin.clockss.iniesteres;
+package org.lockss.plugin.clockss.iniestares;
 
-import org.lockss.config.TdbAu;
 import org.lockss.daemon.PluginException;
 import org.lockss.daemon.ShouldNotHappenException;
 import org.lockss.extractor.ArticleMetadata;
@@ -46,8 +45,8 @@ import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.lockss.util.Logger;
 import org.w3c.dom.Document;
 
-public class IniesteresXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
-	static Logger log = Logger.getLogger(IniesteresXmlMetadataExtractorFactory.class);
+public class IniestaresXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
+	static Logger log = Logger.getLogger(IniestaresXmlMetadataExtractorFactory.class);
 
 	private static SourceXmlSchemaHelper JatsPublishingHelper = null;
 
