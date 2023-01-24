@@ -52,7 +52,7 @@
       au < finished ; finished ; 2015 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 10 ; 10 ; http://newprairiepress.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2016 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 11 ; 11 ; http://newprairiepress.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2017 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 12 ; 12 ; https://newprairiepress.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2019 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 13 ; 13 ; https://newprairiepress.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2019 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 13 ; 13 ; https://newprairiepress.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2020 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 14 ; 14 ; https://newprairiepress.org/ ; reingest2.clockss.org:8085 >
       au < expected ; exists ; 2021 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 15 ; 15 ; https://newprairiepress.org/ ; >
       au < expected ; exists ; 2022 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 16 ; 16 ; https://newprairiepress.org/ ; >
@@ -94,11 +94,11 @@
       au < manifest ; exists ; 1989 ; GDR Bulletin Volume 15 ; 15 ; >
       au < finished ; frozen ; 1990 ; GDR Bulletin Volume 16 ; 16 ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 1991 ; GDR Bulletin Volume 17 ; 17 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 1992 ; GDR Bulletin Volume 18 ; 18 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 1992 ; GDR Bulletin Volume 18 ; 18 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 1993 ; GDR Bulletin Volume 19 ; 19 ; reingest4.clockss.org:8082 >
       au < manifest ; exists ; 1994 ; GDR Bulletin Volume 20 ; 20 ; >
       au < manifest ; exists ; 1994 ; GDR Bulletin Volume 21 ; 21 ; >
-      au < finished ; crawling ; 1995 ; GDR Bulletin Volume 22 ; 22 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 1995 ; GDR Bulletin Volume 22 ; 22 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 1996 ; GDR Bulletin Volume 23 ; 23 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 1997 ; GDR Bulletin Volume 24 ; 24 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 1998 ; GDR Bulletin Volume 25 ; 25 ; reingest3.clockss.org:8083 >
@@ -291,7 +291,7 @@
       #param[base_url] = http://newprairiepress.org/
       param[journal_abbr] = burgonsociety
 
-      au < finished ; crawling ; 2001 ; Transactions of the Burgon Society Volume 1 ; 1 ; https://newprairiepress.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2001 ; Transactions of the Burgon Society Volume 1 ; 1 ; https://newprairiepress.org/ ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2002 ; Transactions of the Burgon Society Volume 2 ; 2 ; https://newprairiepress.org/ ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2003 ; Transactions of the Burgon Society Volume 3 ; 3 ; https://newprairiepress.org/ ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2004 ; Transactions of the Burgon Society Volume 4 ; 4 ; https://newprairiepress.org/ ; reingest1.clockss.org:8082 >
@@ -394,7 +394,7 @@
       au < manifest ; exists ; 1988-1989 ; Educational Considerations Volume 16 ; 16 ; >
       au < finished ; frozen ; 1989-1990 ; Educational Considerations Volume 17 ; 17 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 1990-1991 ; Educational Considerations Volume 18 ; 18 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 1991-1992 ; Educational Considerations Volume 19 ; 19 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 1991-1992 ; Educational Considerations Volume 19 ; 19 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 1992-1993 ; Educational Considerations Volume 20 ; 20 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 1993-1994 ; Educational Considerations Volume 21 ; 21 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 1994-1995 ; Educational Considerations Volume 22 ; 22 ; reingest2.clockss.org:8085 >
@@ -402,7 +402,7 @@
       au < finished ; crawling ; 1996-1997 ; Educational Considerations Volume 24 ; 24 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 1997-1998 ; Educational Considerations Volume 25 ; 25 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 1998-1999 ; Educational Considerations Volume 26 ; 26 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 1999-2000 ; Educational Considerations Volume 27 ; 27 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 1999-2000 ; Educational Considerations Volume 27 ; 27 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2000-2001 ; Educational Considerations Volume 28 ; 28 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2001-2002 ; Educational Considerations Volume 29 ; 29 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2002-2003 ; Educational Considerations Volume 30 ; 30 ; reingest5.clockss.org:8082 >
@@ -531,15 +531,15 @@
       au < manifest ; exists ; 1987 ; Fungal Genetics Newsletter Volume 34 ; 34 ; >
       au < manifest ; exists ; 1988 ; Fungal Genetics Newsletter Volume 35 ; 35 ; >
       au < manifest ; exists ; 1989 ; Fungal Genetics Newsletter Volume 36 ; 36 ; >
-      au < finished ; crawling ; 1990 ; Fungal Genetics Newsletter Volume 37 ; 37 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 1990 ; Fungal Genetics Newsletter Volume 37 ; 37 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 1991 ; Fungal Genetics Newsletter Volume 38 ; 38 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 1992 ; Fungal Genetics Newsletter Volume 39 ; 39 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 1993 ; Fungal Genetics Newsletter Volume 40 ; 40 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 1994 ; Fungal Genetics Newsletter Volume 41 ; 41 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 1995 ; Fungal Genetics Newsletter Volume 42 ; 42 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 1996 ; Fungal Genetics Newsletter Volume 43 ; 43 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 1997 ; Fungal Genetics Newsletter Volume 44 ; 44 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 1998 ; Fungal Genetics Newsletter Volume 45 ; 45 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 1994 ; Fungal Genetics Newsletter Volume 41 ; 41 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 1995 ; Fungal Genetics Newsletter Volume 42 ; 42 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 1996 ; Fungal Genetics Newsletter Volume 43 ; 43 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 1997 ; Fungal Genetics Newsletter Volume 44 ; 44 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 1998 ; Fungal Genetics Newsletter Volume 45 ; 45 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 1999 ; Fungal Genetics Newsletter Volume 46 ; 46 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2000 ; Fungal Genetics Newsletter Volume 47 ; 47 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2001 ; Fungal Genetics Newsletter Volume 48 ; 48 ; reingest3.clockss.org:8083 >
@@ -661,8 +661,8 @@
       au < manifest ; exists ; 1988 ; Journal of Applied Communications Volume 71 ; 71 ; >
       au < manifest ; exists ; 1989 ; Journal of Applied Communications Volume 72 ; 72 ; >
       au < manifest ; exists ; 1989 ; Journal of Applied Communications Volume 73 ; 73 ; >
-      au < finished ; crawling ; 1990 ; Journal of Applied Communications Volume 74 ; 74 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 1991 ; Journal of Applied Communications Volume 75 ; 75 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 1990 ; Journal of Applied Communications Volume 74 ; 74 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 1991 ; Journal of Applied Communications Volume 75 ; 75 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 1992 ; Journal of Applied Communications Volume 76 ; 76 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 1993 ; Journal of Applied Communications Volume 77 ; 77 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 1994 ; Journal of Applied Communications Volume 78 ; 78 ; reingest1.clockss.org:8082 >
@@ -672,7 +672,7 @@
       au < finished ; frozen ; 1998 ; Journal of Applied Communications Volume 82 ; 82 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 1999 ; Journal of Applied Communications Volume 83 ; 83 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2000 ; Journal of Applied Communications Volume 84 ; 84 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2001 ; Journal of Applied Communications Volume 85 ; 85 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2001 ; Journal of Applied Communications Volume 85 ; 85 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2002 ; Journal of Applied Communications Volume 86 ; 86 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2003 ; Journal of Applied Communications Volume 87 ; 87 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2004 ; Journal of Applied Communications Volume 88 ; 88 ; reingest3.clockss.org:8083 >
@@ -712,7 +712,7 @@
 
       au < finished ; crawling ; 1998 ; Journal of Hazardous Substance Research Volume 1 ; 1 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 1999-2000 ; Journal of Hazardous Substance Research Volume 2 ; 2 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2001-2002 ; Journal of Hazardous Substance Research Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2001-2002 ; Journal of Hazardous Substance Research Volume 3 ; 3 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2003 ; Journal of Hazardous Substance Research Volume 4 ; 4 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2006 ; Journal of Hazardous Substance Research Volume 5 ; 5 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2007 ; Journal of Hazardous Substance Research Volume 6 ; 6 ; reingest3.clockss.org:8083 >
@@ -835,7 +835,7 @@
       au < manifest ; exists ; 1988 ; Oz Volume 10 ; 10 ; >
       au < manifest ; exists ; 1989 ; Oz Volume 11 ; 11 ; >
       au < finished ; frozen ; 1990 ; Oz Volume 12 ; 12 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 1991 ; Oz Volume 13 ; 13 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 1991 ; Oz Volume 13 ; 13 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 1992 ; Oz Volume 14 ; 14 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 1993 ; Oz Volume 15 ; 15 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 1994 ; Oz Volume 16 ; 16 ; reingest1.clockss.org:8082 >
@@ -847,7 +847,7 @@
       au < finished ; frozen ; 2000 ; Oz Volume 22 ; 22 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2001 ; Oz Volume 23 ; 23 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2002 ; Oz Volume 24 ; 24 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2003 ; Oz Volume 25 ; 25 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2003 ; Oz Volume 25 ; 25 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2004 ; Oz Volume 26 ; 26 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2005 ; Oz Volume 27 ; 27 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2006 ; Oz Volume 28 ; 28 ; reingest5.clockss.org:8082 >
@@ -956,22 +956,22 @@
       au < manifest ; exists ; 1986-1987 ; Studies in 20th & 21st Century Literature Volume 11 ; 11 ; >
       au < manifest ; exists ; 1987-1988 ; Studies in 20th & 21st Century Literature Volume 12 ; 12 ; >
       au < manifest ; exists ; 1989 ; Studies in 20th & 21st Century Literature Volume 13 ; 13 ; >
-      au < finished ; crawling ; 1990 ; Studies in 20th & 21st Century Literature Volume 14 ; 14 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 1990 ; Studies in 20th & 21st Century Literature Volume 14 ; 14 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 1991 ; Studies in 20th & 21st Century Literature Volume 15 ; 15 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 1992 ; Studies in 20th & 21st Century Literature Volume 16 ; 16 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 1993 ; Studies in 20th & 21st Century Literature Volume 17 ; 17 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 1994 ; Studies in 20th & 21st Century Literature Volume 18 ; 18 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 1993 ; Studies in 20th & 21st Century Literature Volume 17 ; 17 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 1994 ; Studies in 20th & 21st Century Literature Volume 18 ; 18 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 1995 ; Studies in 20th & 21st Century Literature Volume 19 ; 19 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 1996 ; Studies in 20th & 21st Century Literature Volume 20 ; 20 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 1996 ; Studies in 20th & 21st Century Literature Volume 20 ; 20 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 1997 ; Studies in 20th & 21st Century Literature Volume 21 ; 21 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 1998 ; Studies in 20th & 21st Century Literature Volume 22 ; 22 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 1999 ; Studies in 20th & 21st Century Literature Volume 23 ; 23 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2000 ; Studies in 20th & 21st Century Literature Volume 24 ; 24 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2000 ; Studies in 20th & 21st Century Literature Volume 24 ; 24 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2001 ; Studies in 20th & 21st Century Literature Volume 25 ; 25 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2002 ; Studies in 20th & 21st Century Literature Volume 26 ; 26 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2003 ; Studies in 20th & 21st Century Literature Volume 27 ; 27 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2004 ; Studies in 20th & 21st Century Literature Volume 28 ; 28 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2005 ; Studies in 20th & 21st Century Literature Volume 29 ; 29 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2005 ; Studies in 20th & 21st Century Literature Volume 29 ; 29 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2006 ; Studies in 20th & 21st Century Literature Volume 30 ; 30 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2007 ; Studies in 20th & 21st Century Literature Volume 31 ; 31 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2008 ; Studies in 20th & 21st Century Literature Volume 32 ; 32 ; reingest1.clockss.org:8082 >
