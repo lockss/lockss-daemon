@@ -827,14 +827,14 @@
 
       param[journal_id] = cae
 
-      au < finished ; manifest ; 1984 ; Computer-Aided Engineering Journal Volume 1 ; 1 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 1985 ; Computer-Aided Engineering Journal Volume 2 ; 2 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 1986 ; Computer-Aided Engineering Journal Volume 3 ; 3 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 1987 ; Computer-Aided Engineering Journal Volume 4 ; 4 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 1988 ; Computer-Aided Engineering Journal Volume 5 ; 5 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 1989 ; Computer-Aided Engineering Journal Volume 6 ; 6 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 1990 ; Computer-Aided Engineering Journal Volume 7 ; 7 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 1991 ; Computer-Aided Engineering Journal Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 1984 ; Computer-Aided Engineering Journal Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 1985 ; Computer-Aided Engineering Journal Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 1986 ; Computer-Aided Engineering Journal Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 1987 ; Computer-Aided Engineering Journal Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 1988 ; Computer-Aided Engineering Journal Volume 5 ; 5 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 1989 ; Computer-Aided Engineering Journal Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 1990 ; Computer-Aided Engineering Journal Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 1991 ; Computer-Aided Engineering Journal Volume 8 ; 8 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -849,11 +849,11 @@
 
       param[journal_id] = ccej
 
-      au < finished ; manifest ; 1990 ; Computing & Control Engineering Journal Volume 1 ; 1 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 1991 ; Computing & Control Engineering Journal Volume 2 ; 2 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 1992 ; Computing & Control Engineering Journal Volume 3 ; 3 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 1993 ; Computing & Control Engineering Journal Volume 4 ; 4 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 1994 ; Computing & Control Engineering Journal Volume 5 ; 5 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 1990 ; Computing & Control Engineering Journal Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 1991 ; Computing & Control Engineering Journal Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 1992 ; Computing & Control Engineering Journal Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 1993 ; Computing & Control Engineering Journal Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 1994 ; Computing & Control Engineering Journal Volume 5 ; 5 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 1995 ; Computing & Control Engineering Journal Volume 6 ; 6 ; >
       au < frozen ; exists ; 1996 ; Computing & Control Engineering Journal Volume 7 ; 7 ; >
       au < frozen ; exists ; 1997 ; Computing & Control Engineering Journal Volume 8 ; 8 ; >
