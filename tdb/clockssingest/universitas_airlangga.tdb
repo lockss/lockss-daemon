@@ -55,7 +55,7 @@
 
       param[journal_id] = YDK
 
-      au < finished ; frozen ; 1991 ; Yuridika Volume 6 ; 6 ; 1991 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1991 ; Yuridika Volume 6 ; 6 ; 1991 ; reingest2.clockss.org:8085 >
       au < manifest ; exists ; 1992 ; Yuridika Volume 7 ; 7 ; 1992 ; >
       au < exists ; exists ; 1993 ; Yuridika Volume 8 ; 8 ; 1993 ; >
       au < manifest ; exists ; 1994 ; Yuridika Volume 9 ; 9 ; 1994 ; >
@@ -105,7 +105,7 @@
       au < manifest ; exists ; 2016 ; Masyarakat, Kebudayaan dan Politik Volume 29 ; 29 ; 2016 ; >
       au < manifest ; exists ; 2017 ; Masyarakat, Kebudayaan dan Politik Volume 30 ; 30 ; 2017 ; >
       au < manifest ; exists ; 2018 ; Masyarakat, Kebudayaan dan Politik Volume 31 ; 31 ; 2018 ; >
-      au < finished ; frozen ; 2019 ; Masyarakat, Kebudayaan dan Politik Volume 32 ; 32 ; 2019 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2019 ; Masyarakat, Kebudayaan dan Politik Volume 32 ; 32 ; 2019 ; reingest2.clockss.org:8085 >
       au < manifest ; exists ; 2020 ; Masyarakat, Kebudayaan dan Politik Volume 33 ; 33 ; 2020 ; >
       au < frozen ; exists ; 2021 ; Masyarakat, Kebudayaan dan Politik Volume 34 ; 34 ; 2021 ; >
       au < crawling ; exists ; 2022 ; Masyarakat, Kebudayaan dan Politik Volume 35 ; 35 ; 2022 ; >
@@ -198,7 +198,7 @@
 
       param[journal_id] = JISEBI
 
-      au < finished ; frozen ; 2015 ; Journal of Information Systems Engineering and Business Intelligence (JISEBI) Volume 1 ; 1 ; 2015 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2015 ; Journal of Information Systems Engineering and Business Intelligence (JISEBI) Volume 1 ; 1 ; 2015 ; reingest2.clockss.org:8085 >
       au < manifest ; exists ; 2016 ; Journal of Information Systems Engineering and Business Intelligence (JISEBI) Volume 2 ; 2 ; 2016 ; >
       au < manifest ; exists ; 2017 ; Journal of Information Systems Engineering and Business Intelligence (JISEBI) Volume 3 ; 3 ; 2017 ; >
       au < manifest ; exists ; 2018 ; Journal of Information Systems Engineering and Business Intelligence (JISEBI) Volume 4 ; 4 ; 2018 ; >
@@ -219,12 +219,12 @@
 
       param[journal_id] = mog
 
-      au < finished ; frozen ; 2015 ; Majalah Obstetri dan Ginekologi Volume 23 ; 23 ; 2015 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; Majalah Obstetri dan Ginekologi Volume 23 ; 23 ; 2015 ; reingest4.clockss.org:8082 >
       au < manifest ; exists ; 2016 ; Majalah Obstetri dan Ginekologi Volume 24 ; 24 ; 2016 ; >
       au < manifest ; exists ; 2017 ; Majalah Obstetri dan Ginekologi Volume 25 ; 25 ; 2017 ; >
       au < manifest ; exists ; 2018 ; Majalah Obstetri dan Ginekologi Volume 26 ; 26 ; 2018 ; >
       au < manifest ; exists ; 2019 ; Majalah Obstetri dan Ginekologi Volume 27 ; 27 ; 2019 ; >
-      au < finished ; frozen ; 2020 ; Majalah Obstetri dan Ginekologi Volume 28 ; 28 ; 2020 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2020 ; Majalah Obstetri dan Ginekologi Volume 28 ; 28 ; 2020 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2021 ; Majalah Obstetri dan Ginekologi Volume 29 ; 29 ; 2021 ; >
       au < crawling ; exists ; 2022 ; Majalah Obstetri dan Ginekologi Volume 30 ; 30 ; 2022 ; >
 
@@ -262,7 +262,7 @@
 
       param[journal_id] = MOZAIK
 
-      au < finished ; frozen ; 2013 ; Mozaik Humaniora Volume 13 ; 13 ; 2013 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2013 ; Mozaik Humaniora Volume 13 ; 13 ; 2013 ; reingest3.clockss.org:8083 >
       au < manifest ; exists ; 2014 ; Mozaik Humaniora Volume 14 ; 14 ; 2014 ; >
       au < manifest ; exists ; 2015 ; Mozaik Humaniora Volume 15 ; 15 ; 2015 ; >
       au < manifest ; exists ; 2016 ; Mozaik Humaniora Volume 16 ; 16 ; 2016 ; >
@@ -312,7 +312,7 @@
       au < manifest ; exists ; 2017 ; Jurnal Berkala Epidemiologi Volume 5 ; 5 ; 2017 ; >
       au < manifest ; exists ; 2018 ; Jurnal Berkala Epidemiologi Volume 6 ; 6 ; 2018 ; >
       au < manifest ; exists ; 2019 ; Jurnal Berkala Epidemiologi Volume 7 ; 7 ; 2019 ; >
-      au < finished ; frozen ; 2020 ; Jurnal Berkala Epidemiologi Volume 8 ; 8 ; 2020 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2020 ; Jurnal Berkala Epidemiologi Volume 8 ; 8 ; 2020 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2021 ; Jurnal Berkala Epidemiologi Volume 9 ; 9 ; 2021 ; >
       au < crawling ; exists ; 2022 ; Jurnal Berkala Epidemiologi Volume 10 ; 10 ; 2022 ; >
 
@@ -438,7 +438,7 @@
       au < manifest ; exists ; 2016 ; Jurnal Ekonomi dan Bisnis Islam Volume 2 ; 2 ; 2016 ; >
       au < manifest ; exists ; 2017 ; Jurnal Ekonomi dan Bisnis Islam Volume 3 ; 3 ; 2017 ; >
       au < manifest ; exists ; 2018 ; Jurnal Ekonomi dan Bisnis Islam Volume 4 ; 4 ; 2018 ; >
-      au < finished ; frozen ; 2019 ; Jurnal Ekonomi dan Bisnis Islam Volume 5 ; 5 ; 2019 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2019 ; Jurnal Ekonomi dan Bisnis Islam Volume 5 ; 5 ; 2019 ; reingest3.clockss.org:8083 >
       au < manifest ; exists ; 2020 ; Jurnal Ekonomi dan Bisnis Islam Volume 6 ; 6 ; 2020 ; >
       au < frozen ; exists ; 2021 ; Jurnal Ekonomi dan Bisnis Islam Volume 7 ; 7 ; 2021 ; >
       au < crawling ; exists ; 2022 ; Jurnal Ekonomi dan Bisnis Islam Volume 8 ; 8 ; 2022 ; >
@@ -504,12 +504,12 @@
       param[journal_id] = JKL
 
       au < manifest ; exists ; 2015 ; Jurnal Kesehatan Lingkungan Volume 8 ; 8 ; 2015 ; >
-      au < finished ; frozen ; 2016 ; Jurnal Kesehatan Lingkungan Volume 9 ; 9 ; 2016 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2016 ; Jurnal Kesehatan Lingkungan Volume 9 ; 9 ; 2016 ; reingest3.clockss.org:8083 >
       au < manifest ; exists ; 2017 ; Jurnal Kesehatan Lingkungan Volume 10 ; 10 ; 2017 ; >
       au < manifest ; exists ; 2018 ; Jurnal Kesehatan Lingkungan Volume 11 ; 11 ; 2018 ; >
       au < manifest ; exists ; 2019 ; Jurnal Kesehatan Lingkungan Volume 12 ; 12 ; 2019 ; >
       au < manifest ; exists ; 2020 ; Jurnal Kesehatan Lingkungan Volume 13 ; 13 ; 2020 ; >
-      au < finished ; frozen ; 2021 ; Jurnal Kesehatan Lingkungan Volume 14 ; 14 ; 2021 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2021 ; Jurnal Kesehatan Lingkungan Volume 14 ; 14 ; 2021 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2022 ; Jurnal Kesehatan Lingkungan Volume 15 ; 15 ; 2022 ; >
 
   }
@@ -547,7 +547,7 @@
       au < manifest ; exists ; 2016 ; The Indonesian Journal of Public Health Volume 11 ; 11 ; 2016 ; >
       au < manifest ; exists ; 2017 ; The Indonesian Journal of Public Health Volume 12 ; 12 ; 2017 ; >
       au < manifest ; exists ; 2018 ; The Indonesian Journal of Public Health Volume 13 ; 13 ; 2018 ; >
-      au < finished ; frozen ; 2019 ; The Indonesian Journal of Public Health Volume 14 ; 14 ; 2019 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; The Indonesian Journal of Public Health Volume 14 ; 14 ; 2019 ; reingest1.clockss.org:8082 >
       au < manifest ; exists ; 2020 ; The Indonesian Journal of Public Health Volume 15 ; 15 ; 2020 ; >
       au < frozen ; exists ; 2021 ; The Indonesian Journal of Public Health Volume 16 ; 16 ; 2021 ; >
       au < crawling ; exists ; 2022 ; The Indonesian Journal of Public Health Volume 17 ; 17 ; 2022 ; >
@@ -680,7 +680,7 @@
 
       au < manifest ; exists ; 2017 ; Journal Of Vocational Health Studies Volume 1 ; 1 ; 2017 ; >
       au < manifest ; exists ; 2018 ; Journal Of Vocational Health Studies Volume 2 ; 2 ; 2018 ; >
-      au < finished ; frozen ; 2019 ; Journal Of Vocational Health Studies Volume 3 ; 3 ; 2019 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; Journal Of Vocational Health Studies Volume 3 ; 3 ; 2019 ; reingest5.clockss.org:8082 >
       au < manifest ; exists ; 2020 ; Journal Of Vocational Health Studies Volume 4 ; 4 ; 2020 ; >
       au < frozen ; exists ; 2021 ; Journal Of Vocational Health Studies Volume 5 ; 5 ; 2021 ; >
       au < crawling ; exists ; 2022 ; Journal Of Vocational Health Studies Volume 6 ; 6 ; 2022 ; >
@@ -699,7 +699,7 @@
 
       au < manifest ; exists ; 2017 ; Jurnal Ekonomi dan Bisnis Airlangga (JEBA) Volume 27 ; 27 ; 2017 ; >
       au < manifest ; exists ; 2018 ; Jurnal Ekonomi dan Bisnis Airlangga (JEBA) Volume 28 ; 28 ; 2018 ; >
-      au < finished ; frozen ; 2019 ; Jurnal Ekonomi dan Bisnis Airlangga (JEBA) Volume 29 ; 29 ; 2019 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; Jurnal Ekonomi dan Bisnis Airlangga (JEBA) Volume 29 ; 29 ; 2019 ; reingest1.clockss.org:8082 >
       au < manifest ; exists ; 2020 ; Jurnal Ekonomi dan Bisnis Airlangga (JEBA) Volume 30 ; 30 ; 2020 ; >
       au < frozen ; exists ; 2021 ; Jurnal Ekonomi dan Bisnis Airlangga (JEBA) Volume 31 ; 31 ; 2021 ; >
       au < crawling ; exists ; 2022 ; Jurnal Ekonomi dan Bisnis Airlangga (JEBA) Volume 32 ; 32 ; 2022 ; >
