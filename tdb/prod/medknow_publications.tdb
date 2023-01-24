@@ -3645,6 +3645,20 @@
 
   {
     title <
+      name = Journal of Preventive, Diagnostic and Treatment Strategies in Medicine ;
+      issn = 2949-6594 ;
+      eissn = 2949-6608 ;
+      issnl = 2949-6594
+    >
+
+    param[journal_issn] = 2949-6594
+
+    au < exists ; 2022 ; Journal of Preventive, Diagnostic and Treatment Strategies in Medicine Volume 1 ; 2022 ; 1 ; https://www.jpdtsm.com/ >
+
+  }
+
+  {
+    title <
       name = Journal of the International Clinical Dental Research Organization ;
       issn = 2231-0754 ;
       eissn = 2231-5357 ;
@@ -4060,6 +4074,20 @@
     au < manifest ; 2022 ; Oman Journal of Ophthalmology Volume 15 ; 2022 ; 15 ; https://www.ojoonline.org/ >
 
     }
+
+  }
+
+  {
+    title <
+      name = Pediatric Companion ;
+      issn = 2949-8619 ;
+      eissn = 2949-8627 ;
+      issnl = 2949-8619
+    >
+
+    param[journal_issn] = 2949-8619
+
+    au < exists ; 2022 ; Pediatric Companion Volume 1 ; 2022 ; 1 ; https://www.pediatriccompanionkerala.in/ >
 
   }
 
