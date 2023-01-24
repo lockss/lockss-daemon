@@ -350,7 +350,7 @@
       au < finished ; finished ; 2019 ; 2 ; Journal of Scientific Innovation in Medicine Volume 2019 ; 2019 ; https://journalofscientificinnovationinmedicine.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2020 ; 3 ; Journal of Scientific Innovation in Medicine Volume 2020 ; 2020 ; https://journalofscientificinnovationinmedicine.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; 4 ; Journal of Scientific Innovation in Medicine Volume 2021 ; 2021 ; https://journalofscientificinnovationinmedicine.org/ ; >
-      au < ready ; exists ; 2022 ; 5 ; Journal of Scientific Innovation in Medicine Volume 2022 ; 2022 ; https://journalofscientificinnovationinmedicine.org/ ; >
+      au < crawling ; exists ; 2022 ; 5 ; Journal of Scientific Innovation in Medicine Volume 2022 ; 2022 ; https://journalofscientificinnovationinmedicine.org/ ; >
 
   }
 
@@ -396,7 +396,7 @@
       comment[publisher] = Levy Library Press
 #      param[base_url] = https://www.practicalimplementationofnursingscience.org/
 
-      au < ready ; exists ; 2022 ; 1 ; Practical Implementation of Nursing Science Volume 2022 ; 2022 ; https://www.practicalimplementationofnursingscience.org/ ; >
+      au < crawling ; exists ; 2022 ; 1 ; Practical Implementation of Nursing Science Volume 2022 ; 2022 ; https://www.practicalimplementationofnursingscience.org/ ; >
 
   }
 
@@ -432,7 +432,7 @@
       au < finished ; finished ; 2019 ; 6 ; Modern Languages Open Volume 2019 ; 2019 ; https://www.modernlanguagesopen.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2020 ; 7 ; Modern Languages Open Volume 2020 ; 2020 ; https://www.modernlanguagesopen.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2021 ; 8 ; Modern Languages Open Volume 2021 ; 2021 ; https://www.modernlanguagesopen.org/ ; reingest2.clockss.org:8085 >
-      au < ready ; exists ; 2022 ; 9 ; Modern Languages Open Volume 2022 ; 2022 ; https://www.modernlanguagesopen.org/ ; >
+      au < crawling ; exists ; 2022 ; 9 ; Modern Languages Open Volume 2022 ; 2022 ; https://www.modernlanguagesopen.org/ ; >
 
   }
 
@@ -575,8 +575,8 @@
 #      param[base_url] = https://njtcg.org/
 
       au < manifest ; exists ; 2020 ; 1 ; Nordic Journal of Transitions, Careers and Guidance Volume 2020 ; 2020 ; https://njtcg.org/ ; >
-      au < ready ; exists ; 2021 ; 2 ; Nordic Journal of Transitions, Careers and Guidance Volume 2021 ; 2021 ; https://njtcg.org/ ; >
-      au < ready ; exists ; 2022 ; 3 ; Nordic Journal of Transitions, Careers and Guidance Volume 2022 ; 2022 ; https://njtcg.org/ ; >
+      au < crawling ; exists ; 2021 ; 2 ; Nordic Journal of Transitions, Careers and Guidance Volume 2021 ; 2021 ; https://njtcg.org/ ; >
+      au < crawling ; exists ; 2022 ; 3 ; Nordic Journal of Transitions, Careers and Guidance Volume 2022 ; 2022 ; https://njtcg.org/ ; >
 
   }
 
@@ -813,7 +813,7 @@
       au < finished ; finished ; 2019 ; 35 ; Current: Journal of Marine Education Volume 2019 ; 2019 ; https://www.current-journal.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2020 ; 36 ; Current: Journal of Marine Education Volume 2020 ; 2020 ; https://www.current-journal.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2021 ; 37 ; Current: Journal of Marine Education Volume 2021 ; 2021 ; https://www.current-journal.com/ ; reingest3.clockss.org:8083 >
-      au < ready ; exists ; 2022 ; 38 ; Current: Journal of Marine Education Volume 2022 ; 2022 ; https://www.current-journal.com/ ; >
+      au < crawling ; exists ; 2022 ; 38 ; Current: Journal of Marine Education Volume 2022 ; 2022 ; https://www.current-journal.com/ ; >
 
   }
 
@@ -1097,7 +1097,7 @@
       au < finished ; crawling ; 2019 ; 20 ; International Journal of Integrated Care Volume 2019 ; 2019 ; https://www.ijic.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2020 ; 21 ; International Journal of Integrated Care Volume 2020 ; 2020 ; https://www.ijic.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2021 ; 22 ; International Journal of Integrated Care Volume 2021 ; 2021 ; https://www.ijic.org/ ; reingest5.clockss.org:8082 >
-      au < ready ; exists ; 2022 ; 23 ; International Journal of Integrated Care Volume 2022 ; 2022 ; https://www.ijic.org/ ; >
+      au < crawling ; exists ; 2022 ; 23 ; International Journal of Integrated Care Volume 2022 ; 2022 ; https://www.ijic.org/ ; >
 
   }
 
@@ -1166,7 +1166,7 @@
       au < finished ; finished ; 2019 ; 17 ; Journal of Circadian Rhythms Volume 2019 ; 2019 ; https://www.jcircadianrhythms.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2020 ; 18 ; Journal of Circadian Rhythms Volume 2020 ; 2020 ; https://www.jcircadianrhythms.com/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2021 ; 19 ; Journal of Circadian Rhythms Volume 2021 ; 2021 ; https://www.jcircadianrhythms.com/ ; >
-      au < ready ; exists ; 2022 ; 20 ; Journal of Circadian Rhythms Volume 2022 ; 2022 ; https://www.jcircadianrhythms.com/ ; >
+      au < crawling ; exists ; 2022 ; 20 ; Journal of Circadian Rhythms Volume 2022 ; 2022 ; https://www.jcircadianrhythms.com/ ; >
 
   }
 
@@ -1276,8 +1276,8 @@
       au < finished ; finished ; 2018 ; 2018 ; Journal of Interactive Media in Education Volume 2018 ; 2018 ; https://jime.open.ac.uk/ ; reingest1.clockss.org:8082 > #no www
       au < manifest ; exists ; 2019 ; 2019 ; Journal of Interactive Media in Education Volume 2019 ; 2019 ; https://jime.open.ac.uk/ ; >
       au < manifest ; exists ; 2020 ; 2020 ; Journal of Interactive Media in Education Volume 2020 ; 2020 ; https://jime.open.ac.uk/ ; >
-      au < ready ; exists ; 2021 ; 2021 ; Journal of Interactive Media in Education Volume 2021 ; 2021 ; https://jime.open.ac.uk/ ; >
-      au < ready ; exists ; 2022 ; 2022 ; Journal of Interactive Media in Education Volume 2022 ; 2022 ; https://jime.open.ac.uk/ ; >
+      au < crawling ; exists ; 2021 ; 2021 ; Journal of Interactive Media in Education Volume 2021 ; 2021 ; https://jime.open.ac.uk/ ; >
+      au < crawling ; exists ; 2022 ; 2022 ; Journal of Interactive Media in Education Volume 2022 ; 2022 ; https://jime.open.ac.uk/ ; >
     }
   }
 
@@ -1870,7 +1870,7 @@
       au < finished ; finished ; 2019 ; 3 ; Health Psychology Bulletin Volume 2019 ; 2019 ; https://www.healthpsychologybulletin.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2020 ; 4 ; Health Psychology Bulletin Volume 2020 ; 2020 ; https://www.healthpsychologybulletin.com/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2021 ; 5 ; Health Psychology Bulletin Volume 2021 ; 2021 ; https://www.healthpsychologybulletin.com/ ; >
-      au < ready ; exists ; 2022 ; 6 ; Health Psychology Bulletin Volume 2022 ; 2022 ; https://www.healthpsychologybulletin.com/ ; >
+      au < crawling ; exists ; 2022 ; 6 ; Health Psychology Bulletin Volume 2022 ; 2022 ; https://www.healthpsychologybulletin.com/ ; >
 
   }
 
@@ -2199,8 +2199,8 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://swisspsychologyopen.com/
 
-      au < ready ; exists ; 2021 ; 1 ; Swiss Psychology Open Volume 2021 ; 2021 ; https://swisspsychologyopen.com/ ; >
-      au < ready ; exists ; 2022 ; 2 ; Swiss Psychology Open Volume 2022 ; 2022 ; https://swisspsychologyopen.com/ ; >
+      au < crawling ; exists ; 2021 ; 1 ; Swiss Psychology Open Volume 2021 ; 2021 ; https://swisspsychologyopen.com/ ; >
+      au < crawling ; exists ; 2022 ; 2 ; Swiss Psychology Open Volume 2022 ; 2022 ; https://swisspsychologyopen.com/ ; >
 
   }
 
@@ -2236,7 +2236,7 @@
       au < manifest ; exists ; 2018 ; 5 ; Journal of Philosophy in Schools Volume 2018 ; 2018 ; https://jps.bham.ac.uk/ ; >
       au < manifest ; exists ; 2019 ; 6 ; Journal of Philosophy in Schools Volume 2019 ; 2019 ; https://jps.bham.ac.uk/ ; >
       au < finished ; finished ; 2020 ; 7 ; Journal of Philosophy in Schools Volume 2020 ; 2020 ; https://jps.bham.ac.uk/ ; reingest5.clockss.org:8082 >
-      au < ready ; exists ; 2021 ; 8 ; Journal of Philosophy in Schools Volume 2021 ; 2021 ; https://jps.bham.ac.uk/ ; > #no substance
+      au < crawling ; exists ; 2021 ; 8 ; Journal of Philosophy in Schools Volume 2021 ; 2021 ; https://jps.bham.ac.uk/ ; > #no substance
       au < crawling ; exists ; 2022 ; 9 ; Journal of Philosophy in Schools Volume 2022 ; 2022 ; https://jps.bham.ac.uk/ ; > #no substance
 
   }
@@ -2894,7 +2894,7 @@
       au < finished ; finished ; 2019 ; 8 ; Insights: the UKSG journal Volume 2019 ; 2019 ; https://insights.uksg.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2020 ; 9 ; Insights: the UKSG journal Volume 2020 ; 2020 ; https://insights.uksg.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; 10 ; Insights: the UKSG journal Volume 2021 ; 2021 ; https://insights.uksg.org/ ; >
-      au < ready ; exists ; 2022 ; 11 ; Insights: the UKSG journal Volume 2022 ; 2022 ; https://insights.uksg.org/ ; >
+      au < crawling ; exists ; 2022 ; 11 ; Insights: the UKSG journal Volume 2022 ; 2022 ; https://insights.uksg.org/ ; >
 
   }
 
@@ -3204,8 +3204,8 @@
 #      param[base_url] = https://www.seejournal.org/
 
       au < manifest ; exists ; 2020 ; 1 ; Studies in Engineering Education Volume 2020 ; 2020 ; https://www.seejournal.org/ ; >
-      au < ready ; exists ; 2021 ; 2 ; Studies in Engineering Education Volume 2021 ; 2021 ; https://www.seejournal.org/ ; >
-      au < ready ; exists ; 2022 ; 3 ; Studies in Engineering Education Volume 2022 ; 2022 ; https://www.seejournal.org/ ; >
+      au < crawling ; exists ; 2021 ; 2 ; Studies in Engineering Education Volume 2021 ; 2021 ; https://www.seejournal.org/ ; >
+      au < crawling ; exists ; 2022 ; 3 ; Studies in Engineering Education Volume 2022 ; 2022 ; https://www.seejournal.org/ ; >
 
   }
 
@@ -3280,7 +3280,7 @@
       comment[publisher] = Gonzaga Library Publishing
 #      param[base_url] = https://ibapa.org/
 
-      au < ready ; exists ; 2022 ; 1 ; Indigenous Business & Public Administration Volume 2022 ; 2022 ; https://ibapa.org/ ; >
+      au < crawling ; exists ; 2022 ; 1 ; Indigenous Business & Public Administration Volume 2022 ; 2022 ; https://ibapa.org/ ; >
 
   }
 
@@ -3472,7 +3472,7 @@
       au < manifest ; exists ; 2018 ; 70 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2018 ; 2018 ; https://a.tellusjournals.se/ ; >
       au < manifest ; exists ; 2019 ; 71 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2019 ; 2019 ; https://a.tellusjournals.se/ ; >
       au < manifest ; exists ; 2020 ; 72 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2020 ; 2020 ; https://a.tellusjournals.se/ ; >
-      au < ready ; exists ; 2021 ; 73 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2021 ; 2021 ; https://a.tellusjournals.se/ ; >
+      au < crawling ; exists ; 2021 ; 73 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2021 ; 2021 ; https://a.tellusjournals.se/ ; >
       au < notReady ; exists ; 2022 ; 74 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2022 ; 2022 ; https://a.tellusjournals.se/ ; > #Lists all volumes.
 
   }
@@ -3526,7 +3526,7 @@
       au < manifest ; exists ; 2018 ; 36 ; Tellus B: Chemical and Physical Meteorology Volume 2018 ; 2018 ; https://b.tellusjournals.se/ ; >
       au < manifest ; exists ; 2019 ; 37 ; Tellus B: Chemical and Physical Meteorology Volume 2019 ; 2019 ; https://b.tellusjournals.se/ ; >
       au < manifest ; exists ; 2020 ; 38 ; Tellus B: Chemical and Physical Meteorology Volume 2020 ; 2020 ; https://b.tellusjournals.se/ ; >
-      au < ready ; exists ; 2021 ; 39 ; Tellus B: Chemical and Physical Meteorology Volume 2021 ; 2021 ; https://b.tellusjournals.se/ ; >
+      au < crawling ; exists ; 2021 ; 39 ; Tellus B: Chemical and Physical Meteorology Volume 2021 ; 2021 ; https://b.tellusjournals.se/ ; >
       au < notReady ; exists ; 2022 ; 40 ; Tellus B: Chemical and Physical Meteorology Volume 2022 ; 2022 ; https://b.tellusjournals.se/ ; > # Lists all volumes.
 
   }
