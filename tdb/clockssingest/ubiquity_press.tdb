@@ -2783,9 +2783,9 @@
       au < finished ; finished ; 2014 ; 7 ; Studium Volume 2014 ; 2014 ; http://www.gewina-studium.nl/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 8 ; Studium Volume 2015 ; 2015 ; http://www.gewina-studium.nl/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2016 ; 9 ; Studium Volume 2016 ; 2016 ; http://www.gewina-studium.nl/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2017 ; 10 ; Studium Volume 2017 ; 2017 ; http://www.gewina-studium.nl/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2018 ; 11 ; Studium Volume 2018 ; 2018 ; https://www.gewina-studium.nl/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2019 ; 12 ; Studium Volume 2019 ; 2019 ; https://www.gewina-studium.nl/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2017 ; 10 ; Studium Volume 2017 ; 2017 ; http://www.gewina-studium.nl/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2018 ; 11 ; Studium Volume 2018 ; 2018 ; https://www.gewina-studium.nl/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2019 ; 12 ; Studium Volume 2019 ; 2019 ; https://www.gewina-studium.nl/ ; reingest4.clockss.org:8082 >
       # This additional AU is needed because the last two TOCs of 2019 only
       # appear on a 2020 manifest page. Note how only the param[year] is 2020.
 
