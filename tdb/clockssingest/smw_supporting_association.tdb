@@ -3,8 +3,9 @@
   publisher <
     name = SMW Supporting Association ;
     info[contract] = 2022 ;
-    info[tester] =  3 ;
-    info[poller] = ;
+    info[back] = 2010 ;
+    info[tester] =  5 ;
+    info[poller] = 8 ;
     info[platform] = OJS3
   >
     #  EMH Swiss Medical Publishers to  SMW Supporting Association (Trägerverein Swiss Medical Weekly)
@@ -26,7 +27,26 @@
       param[journal_id] = smw
 
       au < frozen ; exists ; 2001 ; 2001 ; Swiss Medical Weekly Volume 131 ; 131 ; >
-      # 2002 - 2021
+      au < manifest ; exists ; 2002 ; 2002 ; Swiss Medical Weekly Volume 132 ; 132 ; >
+      au < manifest ; exists ; 2003 ; 2003 ; Swiss Medical Weekly Volume 133 ; 133 ; >
+      au < manifest ; exists ; 2004 ; 2004 ; Swiss Medical Weekly Volume 134 ; 134 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; Swiss Medical Weekly Volume 135 ; 135 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; Swiss Medical Weekly Volume 136 ; 136 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Swiss Medical Weekly Volume 137 ; 137 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Swiss Medical Weekly Volume 138 ; 138 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Swiss Medical Weekly Volume 139 ; 139 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Swiss Medical Weekly Volume 140 ; 140 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Swiss Medical Weekly Volume 141 ; 141 ; >
+      au < manifest ; exists ; 2012 ; 2012 ; Swiss Medical Weekly Volume 142 ; 142 ; >
+      au < manifest ; exists ; 2013 ; 2013 ; Swiss Medical Weekly Volume 143 ; 143 ; >
+      au < manifest ; exists ; 2014 ; 2014 ; Swiss Medical Weekly Volume 144 ; 144 ; >
+      au < manifest ; exists ; 2015 ; 2015 ; Swiss Medical Weekly Volume 145 ; 145 ; >
+      au < manifest ; exists ; 2016 ; 2016 ; Swiss Medical Weekly Volume 146 ; 146 ; >
+      au < manifest ; exists ; 2017 ; 2017 ; Swiss Medical Weekly Volume 147 ; 147 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; Swiss Medical Weekly Volume 148 ; 148 ; >
+      au < manifest ; exists ; 2019 ; 2019 ; Swiss Medical Weekly Volume 149 ; 149 ; >
+      au < manifest ; exists ; 2020 ; 2020 ; Swiss Medical Weekly Volume 150 ; 150 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Swiss Medical Weekly Volume 151 ; 151 ; >
       au < crawling ; exists ; 2022 ; 2022 ; Swiss Medical Weekly Volume 152 ; 152 ; >
 
     }
