@@ -1,0 +1,49 @@
+{
+
+  publisher <
+    name = University of Baghdad, College of Education for Pure Science Ibn Al-Haitham ;
+    info[contract] = 2022 ;
+    info[back] = 2013 ;
+    info[tester] = 5 ;
+    info[poller] = 3 ;
+    info[platform] = OJS3. Open Journal Systems 3.3.0.8
+  >
+
+    implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    attr[start_stem] = index.php/
+
+  {
+
+    title <
+      name = Ibn Al-Haitham Journal for Pure and Applied Sciences ;
+      issn = 1609-4042 ;
+      eissn = 2521-3407
+    >
+      param[base_url] = https://jih.uobaghdad.edu.iq/
+      param[journal_id] = j
+      #published 2005-present
+
+      au < manifest ; exists ; 2005 ; Ibn Al-Haitham Journal for Pure and Applied Sciences Volume 2005 ; 18 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; Ibn Al-Haitham Journal for Pure and Applied Sciences Volume 2006 ; 19 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; Ibn Al-Haitham Journal for Pure and Applied Sciences Volume 2007 ; 20 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; Ibn Al-Haitham Journal for Pure and Applied Sciences Volume 2008 ; 21 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; Ibn Al-Haitham Journal for Pure and Applied Sciences Volume 2009 ; 22 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; Ibn Al-Haitham Journal for Pure and Applied Sciences Volume 2010 ; 23 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; Ibn Al-Haitham Journal for Pure and Applied Sciences Volume 2011 ; 24 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; Ibn Al-Haitham Journal for Pure and Applied Sciences Volume 2012 ; 25 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; Ibn Al-Haitham Journal for Pure and Applied Sciences Volume 2013 ; 26 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; Ibn Al-Haitham Journal for Pure and Applied Sciences Volume 2014 ; 27 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; Ibn Al-Haitham Journal for Pure and Applied Sciences Volume 2015 ; 28 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; Ibn Al-Haitham Journal for Pure and Applied Sciences Volume 2016 ; 29 ; 2016 ; >
+      au < manifest ; exists ; 2017 ; Ibn Al-Haitham Journal for Pure and Applied Sciences Volume 2017 ; 30 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; Ibn Al-Haitham Journal for Pure and Applied Sciences Volume 2018 ; 31 ; 2018 ; >
+      au < manifest ; exists ; 2019 ; Ibn Al-Haitham Journal for Pure and Applied Sciences Volume 2019 ; 32 ; 2019 ; >
+      au < manifest ; exists ; 2020 ; Ibn Al-Haitham Journal for Pure and Applied Sciences Volume 2020 ; 33 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; Ibn Al-Haitham Journal for Pure and Applied Sciences Volume 2021 ; 34 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; Ibn Al-Haitham Journal for Pure and Applied Sciences Volume 2022 ; 35 ; 2022 ; >
+      au < expected ; exists ; 2023 ; Ibn Al-Haitham Journal for Pure and Applied Sciences Volume 2023 ; 36 ; 2023 ; >
+
+  }
+
+}
