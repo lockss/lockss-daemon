@@ -26,7 +26,7 @@
      {
      param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/iopjats-released/
 
-     au < manifest ; exists ; 2023 ; IOP Publishing JATS Source Content 2023_01 ; 2023_01 >
+     au < readySource ; crawling ; 2023 ; IOP Publishing JATS Source Content 2023_01 ; 2023_01 >
 
      }
    }

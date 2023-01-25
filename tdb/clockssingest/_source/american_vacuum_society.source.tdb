@@ -35,7 +35,7 @@
       {
         param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/avsjats-released/
 
-        au < manifest ; exists ; 2023 ; American Vacuum Society Source Content 2023 ; 2023 >
+        au < readySource ; crawling ; 2023 ; American Vacuum Society Source Content 2023 ; 2023 >
 
       }
     }

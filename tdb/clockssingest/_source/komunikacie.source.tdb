@@ -19,13 +19,13 @@
     {
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/komunikacie-released/
 
-    au < manifest ; exists ; 2022 ; Komunikácie Source Content 2022_01 ; 2022_01 >
+    au < readySource ; crawling ; 2022 ; Komunikácie Source Content 2022_01 ; 2022_01 >
     #No more AUs. Moving to https.
     }
     {
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/komunikacie-released/
 
-    au < manifest ; exists ; 2023 ; Komunikácie Source Content 2023_01 ; 2023_01 >
+    au < readySource ; crawling ; 2023 ; Komunikácie Source Content 2023_01 ; 2023_01 >
     }
   }
 }
