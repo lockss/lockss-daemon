@@ -547,9 +547,9 @@
 
     # We are collecting each item one time and then locking down the content, it is not recurring
     # The year represents the year of ingest, not the year of publication - same as for SourcePlugin
-    au < finished ; frozen ; 2019 ; Divided Society Posters Collection ; posters ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2019 ; Divided Society Essays Collection ; essays ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2019 ; Divided Society Outreach Collection ; outreach ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Divided Society Posters Collection ; posters ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Divided Society Essays Collection ; essays ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Divided Society Outreach Collection ; outreach ; reingest2.clockss.org:8085 >
     # This was a one-time collection. We will not process anything else
    } 
 
