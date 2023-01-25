@@ -1067,7 +1067,7 @@
       au < finished ; finished ; 2014 ; Photochemical & Photobiological Sciences Volume 13 ; 13 ; 2014 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2015 ; Photochemical & Photobiological Sciences Volume 14 ; 14 ; 2015 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2016 ; Photochemical & Photobiological Sciences Volume 15 ; 15 ; 2016 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2017 ; Photochemical & Photobiological Sciences Volume 16 ; 16 ; 2017 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2017 ; Photochemical & Photobiological Sciences Volume 16 ; 16 ; 2017 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2018 ; Photochemical & Photobiological Sciences Volume 17 ; 17 ; 2018 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; Photochemical & Photobiological Sciences Volume 18 ; 18 ; 2019 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; Photochemical & Photobiological Sciences Volume 19 ; 19 ; 2020 ; https://pubs.rsc.org/ ; >
@@ -1089,9 +1089,9 @@
       au < finished ; frozen ; 2000 ; Physical Chemistry Chemical Physics Volume 2 ; 2 ; 2000 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2001 ; Physical Chemistry Chemical Physics Volume 3 ; 3 ; 2001 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2002 ; Physical Chemistry Chemical Physics Volume 4 ; 4 ; 2002 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2003 ; Physical Chemistry Chemical Physics Volume 5 ; 5 ; 2003 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2003 ; Physical Chemistry Chemical Physics Volume 5 ; 5 ; 2003 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2004 ; Physical Chemistry Chemical Physics Volume 6 ; 6 ; 2004 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2005 ; Physical Chemistry Chemical Physics Volume 7 ; 7 ; 2005 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2005 ; Physical Chemistry Chemical Physics Volume 7 ; 7 ; 2005 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2006 ; Physical Chemistry Chemical Physics Volume 8 ; 8 ; 2006 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2007 ; Physical Chemistry Chemical Physics Volume 9 ; 9 ; 2007 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2008 ; Physical Chemistry Chemical Physics Volume 10 ; 10 ; 2008 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
@@ -1101,11 +1101,11 @@
       au < finished ; crawling ; 2012 ; Physical Chemistry Chemical Physics Volume 14 ; 14 ; 2012 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2013 ; Physical Chemistry Chemical Physics Volume 15 ; 15 ; 2013 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2014 ; Physical Chemistry Chemical Physics Volume 16 ; 16 ; 2014 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2015 ; Physical Chemistry Chemical Physics Volume 17 ; 17 ; 2015 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2015 ; Physical Chemistry Chemical Physics Volume 17 ; 17 ; 2015 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; Physical Chemistry Chemical Physics Volume 18 ; 18 ; 2016 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; Physical Chemistry Chemical Physics Volume 19 ; 19 ; 2017 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2018 ; Physical Chemistry Chemical Physics Volume 20 ; 20 ; 2018 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2019 ; Physical Chemistry Chemical Physics Volume 21 ; 21 ; 2019 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2019 ; Physical Chemistry Chemical Physics Volume 21 ; 21 ; 2019 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Physical Chemistry Chemical Physics Volume 22 ; 22 ; 2020 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2021 ; Physical Chemistry Chemical Physics Volume 23 ; 23 ; 2021 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2022 ; Physical Chemistry Chemical Physics Volume 24 ; 24 ; 2022 ; https://pubs.rsc.org/ ; >
@@ -1125,19 +1125,19 @@
 
       au < finished ; crawling ; 2005 ; Soft Matter Volume 1 ; 1 ; 2005 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2006 ; Soft Matter Volume 2 ; 2 ; 2006 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2007 ; Soft Matter Volume 3 ; 3 ; 2007 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2008 ; Soft Matter Volume 4 ; 4 ; 2008 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2007 ; Soft Matter Volume 3 ; 3 ; 2007 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2008 ; Soft Matter Volume 4 ; 4 ; 2008 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2009 ; Soft Matter Volume 5 ; 5 ; 2009 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2010 ; Soft Matter Volume 6 ; 6 ; 2010 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2010 ; Soft Matter Volume 6 ; 6 ; 2010 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2011 ; Soft Matter Volume 7 ; 7 ; 2011 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2012 ; Soft Matter Volume 8 ; 8 ; 2012 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2013 ; Soft Matter Volume 9 ; 9 ; 2013 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2014 ; Soft Matter Volume 10 ; 10 ; 2014 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; Soft Matter Volume 11 ; 11 ; 2015 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2016 ; Soft Matter Volume 12 ; 12 ; 2016 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2016 ; Soft Matter Volume 12 ; 12 ; 2016 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; Soft Matter Volume 13 ; 13 ; 2017 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; Soft Matter Volume 14 ; 14 ; 2018 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2019 ; Soft Matter Volume 15 ; 15 ; 2019 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2019 ; Soft Matter Volume 15 ; 15 ; 2019 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Soft Matter Volume 16 ; 16 ; 2020 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2021 ; Soft Matter Volume 17 ; 17 ; 2021 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2022 ; Soft Matter Volume 18 ; 18 ; 2022 ; https://pubs.rsc.org/ ; >
@@ -1179,7 +1179,7 @@
       au < finished ; crawling ; 1996 ; Analytical Communications Volume 33 ; 33 ; 1996 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 1997 ; Analytical Communications Volume 34 ; 34 ; 1997 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 1998 ; Analytical Communications Volume 35 ; 35 ; 1998 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 1999 ; Analytical Communications Volume 36 ; 36 ; 1999 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 1999 ; Analytical Communications Volume 36 ; 36 ; 1999 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
 
   }
 
@@ -1398,8 +1398,8 @@
       au < finished ; crawling ; 2014 ; Catalysis Science & Technology Volume 4 ; 4 ; 2014 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; Catalysis Science & Technology Volume 5 ; 5 ; 2015 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2016 ; Catalysis Science & Technology Volume 6 ; 6 ; 2016 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2017 ; Catalysis Science & Technology Volume 7 ; 7 ; 2017 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2018 ; Catalysis Science & Technology Volume 8 ; 8 ; 2018 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2017 ; Catalysis Science & Technology Volume 7 ; 7 ; 2017 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2018 ; Catalysis Science & Technology Volume 8 ; 8 ; 2018 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; Catalysis Science & Technology Volume 9 ; 9 ; 2019 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; Catalysis Science & Technology Volume 10 ; 10 ; 2020 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2021 ; Catalysis Science & Technology Volume 11 ; 11 ; 2021 ; https://pubs.rsc.org/ ; >
@@ -1439,15 +1439,15 @@
       #complete
 
       au < finished ; crawling ; 2010 ; Chemical Science Volume 1 ; 1 ; 2010 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2011 ; Chemical Science Volume 2 ; 2 ; 2011 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2012 ; Chemical Science Volume 3 ; 3 ; 2012 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2011 ; Chemical Science Volume 2 ; 2 ; 2011 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2012 ; Chemical Science Volume 3 ; 3 ; 2012 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2013 ; Chemical Science Volume 4 ; 4 ; 2013 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2014 ; Chemical Science Volume 5 ; 5 ; 2014 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2015 ; Chemical Science Volume 6 ; 6 ; 2015 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2015 ; Chemical Science Volume 6 ; 6 ; 2015 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2016 ; Chemical Science Volume 7 ; 7 ; 2016 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2017 ; Chemical Science Volume 8 ; 8 ; 2017 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2018 ; Chemical Science Volume 9 ; 9 ; 2018 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2019 ; Chemical Science Volume 10 ; 10 ; 2019 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2017 ; Chemical Science Volume 8 ; 8 ; 2017 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2018 ; Chemical Science Volume 9 ; 9 ; 2018 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2019 ; Chemical Science Volume 10 ; 10 ; 2019 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Chemical Science Volume 11 ; 11 ; 2020 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2021 ; Chemical Science Volume 12 ; 12 ; 2021 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2022 ; Chemical Science Volume 13 ; 13 ; 2022 ; https://pubs.rsc.org/ ; >
@@ -1468,7 +1468,7 @@
       au < doNotProcess ; exists ; 1994 ; Contemporary Organic Synthesis Volume 1 ; 1 ; 1994 ; https://pubs.rsc.org/ ; >
       au < doNotProcess ; exists ; 1995 ; Contemporary Organic Synthesis Volume 2 ; 2 ; 1995 ; https://pubs.rsc.org/ ; >
       au < finished ; crawling ; 1996 ; Contemporary Organic Synthesis Volume 3 ; 3 ; 1996 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 1997 ; Contemporary Organic Synthesis Volume 4 ; 4 ; 1997 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 1997 ; Contemporary Organic Synthesis Volume 4 ; 4 ; 1997 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
 
   }
 
@@ -1525,12 +1525,12 @@
       param[journal_code] = en
       #complete
 
-      au < finished ; crawling ; 2014 ; Environmental Science: Nano Volume 1 ; 1 ; 2014 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2015 ; Environmental Science: Nano Volume 2 ; 2 ; 2015 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Environmental Science: Nano Volume 1 ; 1 ; 2014 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2015 ; Environmental Science: Nano Volume 2 ; 2 ; 2015 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; Environmental Science: Nano Volume 3 ; 3 ; 2016 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2017 ; Environmental Science: Nano Volume 4 ; 4 ; 2017 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2018 ; Environmental Science: Nano Volume 5 ; 5 ; 2018 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2019 ; Environmental Science: Nano Volume 6 ; 6 ; 2019 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2018 ; Environmental Science: Nano Volume 5 ; 5 ; 2018 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2019 ; Environmental Science: Nano Volume 6 ; 6 ; 2019 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Environmental Science: Nano Volume 7 ; 7 ; 2020 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2021 ; Environmental Science: Nano Volume 8 ; 8 ; 2021 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2022 ; Environmental Science: Nano Volume 9 ; 9 ; 2022 ; https://pubs.rsc.org/ ; >
@@ -1553,9 +1553,9 @@
       au < finished ; crawling ; 2014 ; Environmental Science: Processes & Impacts Volume 16 ; 16 ; 2014 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2015 ; Environmental Science: Processes & Impacts Volume 17 ; 17 ; 2015 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; Environmental Science: Processes & Impacts Volume 18 ; 18 ; 2016 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2017 ; Environmental Science: Processes & Impacts Volume 19 ; 19 ; 2017 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2018 ; Environmental Science: Processes & Impacts Volume 20 ; 20 ; 2018 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2019 ; Environmental Science: Processes & Impacts Volume 21 ; 21 ; 2019 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2017 ; Environmental Science: Processes & Impacts Volume 19 ; 19 ; 2017 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2018 ; Environmental Science: Processes & Impacts Volume 20 ; 20 ; 2018 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2019 ; Environmental Science: Processes & Impacts Volume 21 ; 21 ; 2019 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Environmental Science: Processes & Impacts Volume 22 ; 22 ; 2020 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2021 ; Environmental Science: Processes & Impacts Volume 23 ; 23 ; 2021 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2022 ; Environmental Science: Processes & Impacts Volume 24 ; 24 ; 2022 ; https://pubs.rsc.org/ ; >
@@ -1681,11 +1681,11 @@
       au < finished ; crawling ; 2011 ; Food & Function Volume 2 ; 2 ; 2011 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2012 ; Food & Function Volume 3 ; 3 ; 2012 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2013 ; Food & Function Volume 4 ; 4 ; 2013 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2014 ; Food & Function Volume 5 ; 5 ; 2014 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Food & Function Volume 5 ; 5 ; 2014 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; Food & Function Volume 6 ; 6 ; 2015 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; Food & Function Volume 7 ; 7 ; 2016 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; Food & Function Volume 8 ; 8 ; 2017 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2018 ; Food & Function Volume 9 ; 9 ; 2018 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2018 ; Food & Function Volume 9 ; 9 ; 2018 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; Food & Function Volume 10 ; 10 ; 2019 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Food & Function Volume 11 ; 11 ; 2020 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2021 ; Food & Function Volume 12 ; 12 ; 2021 ; https://pubs.rsc.org/ ; >
@@ -1704,10 +1704,10 @@
       param[journal_code] = gt
       #complete
 
-      au < finished ; crawling ; 2000 ; Geochemical Transactions Volume 1 ; 1 ; 2000 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2001 ; Geochemical Transactions Volume 2 ; 2 ; 2001 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2002 ; Geochemical Transactions Volume 3 ; 3 ; 2002 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2003 ; Geochemical Transactions Volume 4 ; 4 ; 2003 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2000 ; Geochemical Transactions Volume 1 ; 1 ; 2000 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2001 ; Geochemical Transactions Volume 2 ; 2 ; 2001 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2002 ; Geochemical Transactions Volume 3 ; 3 ; 2002 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2003 ; Geochemical Transactions Volume 4 ; 4 ; 2003 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
 
   }
 
@@ -1727,7 +1727,7 @@
       au < finished ; crawling ; 2015 ; Inorganic Chemistry Frontiers Volume 2 ; 2 ; 2015 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2016 ; Inorganic Chemistry Frontiers Volume 3 ; 3 ; 2016 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; Inorganic Chemistry Frontiers Volume 4 ; 4 ; 2017 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2018 ; Inorganic Chemistry Frontiers Volume 5 ; 5 ; 2018 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2018 ; Inorganic Chemistry Frontiers Volume 5 ; 5 ; 2018 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; Inorganic Chemistry Frontiers Volume 6 ; 6 ; 2019 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Inorganic Chemistry Frontiers Volume 7 ; 7 ; 2020 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2021 ; Inorganic Chemistry Frontiers Volume 8 ; 8 ; 2021 ; https://pubs.rsc.org/ ; >
@@ -1796,9 +1796,9 @@
       #instead of: https://pubs.rsc.org/en/journals/lockss?journalcode=jc&volume=1&year=1997
       #complete. Missing 1997-1999 ****
 
-      au < finished ; crawling ; 1997 ; Journal of Chemical Research, Synopses Volume 1997 ; 0 ; 1997 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 1997 ; Journal of Chemical Research, Synopses Volume 1997 ; 0 ; 1997 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 1998 ; Journal of Chemical Research, Synopses Volume 1998 ; 0 ; 1998 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 1999 ; Journal of Chemical Research, Synopses Volume 1999 ; 0 ; 1999 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 1999 ; Journal of Chemical Research, Synopses Volume 1999 ; 0 ; 1999 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
 
   }
 
