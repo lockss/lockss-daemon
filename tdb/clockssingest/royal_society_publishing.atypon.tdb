@@ -260,14 +260,14 @@
     au < finished ; frozen ; 1976-1977 ; Notes and Records of the Royal Society Volume 31 ; 31 ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 1977-1978 ; Notes and Records of the Royal Society Volume 32 ; 32 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 1978-1979 ; Notes and Records of the Royal Society Volume 33 ; 33 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1979-1980 ; Notes and Records of the Royal Society Volume 34 ; 34 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1979-1980 ; Notes and Records of the Royal Society Volume 34 ; 34 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 1980-1981 ; Notes and Records of the Royal Society Volume 35 ; 35 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 1981-1982 ; Notes and Records of the Royal Society Volume 36 ; 36 ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 1982-1983 ; Notes and Records of the Royal Society Volume 37 ; 37 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 1983-1984 ; Notes and Records of the Royal Society Volume 38 ; 38 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 1984-1985 ; Notes and Records of the Royal Society Volume 39 ; 39 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 1985-1986 ; Notes and Records of the Royal Society Volume 40 ; 40 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 1986-1987 ; Notes and Records of the Royal Society Volume 41 ; 41 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1986-1987 ; Notes and Records of the Royal Society Volume 41 ; 41 ; reingest3.clockss.org:8083 >
     }
     {
     param[journal_id] = rsnr
@@ -383,7 +383,7 @@
     au < finished ; crawling ; 1903 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 200 ; 200 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 1903 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 201 ; 201 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 1904 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 202 ; 202 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1904 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 203 ; 203 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1904 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 203 ; 203 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 1905 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 204 ; 204 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 1906 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 205 ; 205 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 1906 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 206 ; 206 ; reingest3.clockss.org:8083 >
@@ -391,7 +391,7 @@
     au < finished ; frozen ; 1908 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 208 ; 208 ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 1909 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 209 ; 209 ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 1911 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 210 ; 210 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 1912 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 211 ; 211 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1912 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 211 ; 211 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 1913 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 212 ; 212 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 1914 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 213 ; 213 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 1914 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 214 ; 214 ; reingest4.clockss.org:8082 >
@@ -400,7 +400,7 @@
     au < finished ; frozen ; 1918 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 217 ; 217 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 1919 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 218 ; 218 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 1919 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 219 ; 219 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 1920 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 220 ; 220 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1920 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 220 ; 220 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 1921 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 221 ; 221 ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 1922 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 222 ; 222 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 1923 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 223 ; 223 ; reingest1.clockss.org:8082 >
@@ -444,11 +444,11 @@
     au < finished ; frozen ; 1964-1965 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 257 ; 257 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1965 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 258 ; 258 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 1965-1966 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 259 ; 259 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1966 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 260 ; 260 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 1966 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 260 ; 260 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 1966-1967 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 261 ; 261 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 1967-1968 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 262 ; 262 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 1968-1969 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 263 ; 263 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 1969 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 264 ; 264 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1969 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 264 ; 264 ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 1969 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 265 ; 265 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 1970 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 266 ; 266 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 1970 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 267 ; 267 ; reingest1.clockss.org:8082 >
@@ -463,7 +463,7 @@
     au < finished ; frozen ; 1974 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 276 ; 276 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 1974-1975 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 277 ; 277 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 1975 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 278 ; 278 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1975 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 279 ; 279 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1975 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 279 ; 279 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 1975-1976 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 280 ; 280 ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 1976 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 281 ; 281 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 1976 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 282 ; 282 ; reingest1.clockss.org:8082 >
@@ -522,7 +522,7 @@
     
     au < finished ; frozen ; 1990 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 332 ; 332 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 1990 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 333 ; 333 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1991 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 334 ; 334 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 1991 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 334 ; 334 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 1991 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 335 ; 335 ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 1991 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 336 ; 336 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 1991 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 337 ; 337 ; reingest5.clockss.org:8082 >
@@ -530,7 +530,7 @@
     au < finished ; frozen ; 1992 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 339 ; 339 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 1992 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 340 ; 340 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 1992 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 341 ; 341 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1993 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 342 ; 342 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1993 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 342 ; 342 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 1993 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 343 ; 343 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 1993 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 344 ; 344 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 1993 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 345 ; 345 ; reingest5.clockss.org:8082 >
@@ -539,7 +539,7 @@
     au < finished ; frozen ; 1994 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 348 ; 348 ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 1994 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 349 ; 349 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 1995 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 350 ; 350 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1995 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 351 ; 351 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1995 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 351 ; 351 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 1995 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 352 ; 352 ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 1995 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 353 ; 353 ; reingest1.clockss.org:8082 >
     }
@@ -547,11 +547,11 @@
     param[journal_id] = rsta1996
     
     au < finished ; frozen ; 1996 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 354 ; 354 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1997 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 355 ; 355 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 1997 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 355 ; 355 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 1998 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 356 ; 356 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 1999 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 357 ; 357 ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2000 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 358 ; 358 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2001 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 359 ; 359 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2001 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 359 ; 359 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2002 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 360 ; 360 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2003 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 361 ; 361 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2004 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 362 ; 362 ; reingest3.clockss.org:8083 >
@@ -597,7 +597,7 @@
     {
     param[journal_id] = rstb1887
 
-    au < finished ; crawling ; 1887 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 178 ; 178 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1887 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 178 ; 178 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 1888 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 179 ; 179 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 1889 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 180 ; 180 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 1890 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 181 ; 181 ; reingest4.clockss.org:8082 >
@@ -613,12 +613,12 @@
     au < finished ; frozen ; 1896 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 187 ; 187 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 1897 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 188 ; 188 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 1897 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 189 ; 189 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 1898 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 190 ; 190 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1898 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 190 ; 190 ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 1899 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 191 ; 191 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 1900 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 192 ; 192 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 1900 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 193 ; 193 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 1901 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 194 ; 194 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 1903 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 195 ; 195 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1903 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 195 ; 195 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 1904 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 196 ; 196 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 1905 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 197 ; 197 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 1906 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 198 ; 198 ; reingest5.clockss.org:8082 >
@@ -629,23 +629,23 @@
     au < finished ; frozen ; 1913 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 203 ; 203 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 1914 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 204 ; 204 ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 1914 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 205 ; 205 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 1915 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 206 ; 206 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1915 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 206 ; 206 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 1916 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 207 ; 207 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 1918 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 208 ; 208 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 1920 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 209 ; 209 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 1921 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 210 ; 210 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 1923 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 211 ; 211 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1924 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 212 ; 212 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1924 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 212 ; 212 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 1925 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 213 ; 213 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 1926 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 214 ; 214 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 1927 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 215 ; 215 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 1928 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 216 ; 216 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1928 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 216 ; 216 ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 1929 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 217 ; 217 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 1930 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 218 ; 218 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 1931 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 219 ; 219 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 1931 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 220 ; 220 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1932 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 221 ; 221 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1932 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 222 ; 222 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1931 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 220 ; 220 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1932 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 221 ; 221 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1932 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 222 ; 222 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 1934 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 223 ; 223 ; reingest3.clockss.org:8083 >
     }
     {
@@ -654,7 +654,7 @@
     au < finished ; frozen ; 1934-1935 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 224 ; 224 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 1935 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 225 ; 225 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 1936 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 226 ; 226 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1937 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 227 ; 227 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 1937 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 227 ; 227 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 1937-1938 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 228 ; 228 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1938-1939 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 229 ; 229 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1939-1941 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 230 ; 230 ; reingest3.clockss.org:8083 >
@@ -663,7 +663,7 @@
     au < finished ; frozen ; 1947-1949 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 233 ; 233 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 1949-1950 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 234 ; 234 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 1950-1951 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 235 ; 235 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 1952 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 236 ; 236 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1952 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 236 ; 236 ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 1952-1954 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 237 ; 237 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 1954-1955 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 238 ; 238 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 1955-1956 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 239 ; 239 ; reingest2.clockss.org:8085 >
@@ -674,38 +674,38 @@
     au < finished ; crawling ; 1961-1962 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 244 ; 244 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1962 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 245 ; 245 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1963 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 246 ; 246 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1964 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 247 ; 247 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 1964 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 247 ; 247 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 1964-1965 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 248 ; 248 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1965 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 249 ; 249 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1965 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 249 ; 249 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1965-1966 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 250 ; 250 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1966 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 251 ; 251 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1967 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 252 ; 252 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 1967 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 252 ; 252 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 1967-1968 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 253 ; 253 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1968 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 254 ; 254 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1968 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 254 ; 254 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1969 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 255 ; 255 ; reingest3.clockss.org:8083 >
     }
     {
     param[journal_id] = rstb1969
 
-    au < finished ; crawling ; 1969-1970 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 256 ; 256 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1970 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 257 ; 257 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 1970 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 258 ; 258 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1969-1970 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 256 ; 256 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1970 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 257 ; 257 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 1970 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 258 ; 258 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1970-1971 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 259 ; 259 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1971 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 260 ; 260 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1971 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 260 ; 260 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1971 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 261 ; 261 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1971 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 262 ; 262 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1971-1972 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 263 ; 263 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 1972-1973 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 264 ; 264 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1971 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 262 ; 262 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1971-1972 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 263 ; 263 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 1972-1973 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 264 ; 264 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1973 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 265 ; 265 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1973 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 266 ; 266 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1973-1974 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 267 ; 267 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 1974 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 268 ; 268 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 1974-1975 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 269 ; 269 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1975 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 270 ; 270 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1974-1975 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 269 ; 269 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1975 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 270 ; 270 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1975 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 271 ; 271 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1975 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 272 ; 272 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 1975-1976 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 273 ; 273 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 1976 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 274 ; 274 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1976 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 274 ; 274 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1976 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 275 ; 275 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1976-1977 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 276 ; 276 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1977 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 277 ; 277 ; reingest4.clockss.org:8082 >
