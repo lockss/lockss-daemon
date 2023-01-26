@@ -12575,7 +12575,7 @@
       au < manifest ; 2018 ; Malaysian Journal of Movement, Health and Exercise Volume 7 ; 2018 ; 7 ; https://www.mohejournal.org/ >
       au < manifest ; 2019 ; Malaysian Journal of Movement, Health and Exercise Volume 8 ; 2019 ; 8 ; https://www.mohejournal.org/ >
       au < manifest ; 2020 ; Malaysian Journal of Movement, Health and Exercise Volume 9 ; 2020 ; 9 ; https://www.mohejournal.org/ >
-      au < manifest ; 2021 ; Malaysian Journal of Movement, Health and Exercise Volume 10 ; 2021 ; 10 ; https://www.mohejournal.org/ >
+      au < ready ; 2021 ; Malaysian Journal of Movement, Health and Exercise Volume 10 ; 2021 ; 10 ; https://www.mohejournal.org/ >
       au < manifest ; 2022 ; Malaysian Journal of Movement, Health and Exercise Volume 11 ; 2022 ; 11 ; https://www.mohejournal.org/ >
 
   }
@@ -12592,8 +12592,8 @@
       param[journal_issn] = 2521-0807
       #param[base_url] = https://www.matrixscimed.org/
 
-      au < manifest ; 2019 ; Matrix Science Medica Volume 3 ; 2019 ; 3 ; https://www.matrixscimed.org/ >
-      au < manifest ; 2020 ; Matrix Science Medica Volume 4 ; 2020 ; 4 ; https://www.matrixscimed.org/ >
+      au < ready ; 2019 ; Matrix Science Medica Volume 3 ; 2019 ; 3 ; https://www.matrixscimed.org/ >
+      au < ready ; 2020 ; Matrix Science Medica Volume 4 ; 2020 ; 4 ; https://www.matrixscimed.org/ >
       au < released ; 2021 ; Matrix Science Medica Volume 5 ; 2021 ; 5 ; https://www.matrixscimed.org/ >
       au < manifest ; 2022 ; Matrix Science Medica Volume 6 ; 2022 ; 6 ; https://www.matrixscimed.org/ >
 
@@ -12611,9 +12611,9 @@
       param[journal_issn] = 2521-0815
       #param[base_url] = https://www.matrixscipharma.org/
 
-      au < manifest ; 2019 ; Matrix Science Pharma Volume 3 ; 2019 ; 3 ; https://www.matrixscipharma.org/ >
-      au < manifest ; 2020 ; Matrix Science Pharma Volume 4 ; 2020 ; 4 ; https://www.matrixscipharma.org/ >
-      au < manifest ; 2021 ; Matrix Science Pharma Volume 5 ; 2021 ; 5 ; https://www.matrixscipharma.org/ >
+      au < ready ; 2019 ; Matrix Science Pharma Volume 3 ; 2019 ; 3 ; https://www.matrixscipharma.org/ >
+      au < ready ; 2020 ; Matrix Science Pharma Volume 4 ; 2020 ; 4 ; https://www.matrixscipharma.org/ >
+      au < ready ; 2021 ; Matrix Science Pharma Volume 5 ; 2021 ; 5 ; https://www.matrixscipharma.org/ >
       au < manifest ; 2022 ; Matrix Science Pharma Volume 6 ; 2022 ; 6 ; https://www.matrixscipharma.org/ >
 
   }
@@ -12630,8 +12630,8 @@
       param[journal_issn] = 2347-7946
       #param[base_url] = https://www.mgmjms.com/
 
-      au < manifest ; 2019 ; MGM Journal of Medical Sciences Volume 6 ; 2019 ; 6 ; https://www.mgmjms.com/ >
-      au < manifest ; 2020 ; MGM Journal of Medical Sciences Volume 7 ; 2020 ; 7 ; https://www.mgmjms.com/ >
+      au < ready ; 2019 ; MGM Journal of Medical Sciences Volume 6 ; 2019 ; 6 ; https://www.mgmjms.com/ >
+      au < ready ; 2020 ; MGM Journal of Medical Sciences Volume 7 ; 2020 ; 7 ; https://www.mgmjms.com/ >
       au < released ; 2021 ; MGM Journal of Medical Sciences Volume 8 ; 2021 ; 8 ; https://www.mgmjms.com/ >
       au < manifest ; 2022 ; MGM Journal of Medical Sciences Volume 9 ; 2022 ; 9 ; https://www.mgmjms.com/ >
 
@@ -12649,14 +12649,14 @@
       param[journal_issn] = 2321-7006
       #param[base_url] = https://www.mrimsjournal.com/
 
-      au < manifest ; 2013 ; MRIMS Journal of Health Sciences Volume 1 ; 2013 ; 1 ; https://www.mrimsjournal.com/ >
-      au < manifest ; 2014 ; MRIMS Journal of Health Sciences Volume 2 ; 2014 ; 2 ; https://www.mrimsjournal.com/ >
-      au < manifest ; 2015 ; MRIMS Journal of Health Sciences Volume 3 ; 2015 ; 3 ; https://www.mrimsjournal.com/ >
-      au < manifest ; 2016 ; MRIMS Journal of Health Sciences Volume 4 ; 2016 ; 4 ; https://www.mrimsjournal.com/ >
-      au < manifest ; 2017 ; MRIMS Journal of Health Sciences Volume 5 ; 2017 ; 5 ; https://www.mrimsjournal.com/ >
-      au < manifest ; 2018 ; MRIMS Journal of Health Sciences Volume 6 ; 2018 ; 6 ; https://www.mrimsjournal.com/ >
-      au < manifest ; 2019 ; MRIMS Journal of Health Sciences Volume 7 ; 2019 ; 7 ; https://www.mrimsjournal.com/ >
-      au < manifest ; 2020 ; MRIMS Journal of Health Sciences Volume 8 ; 2020 ; 8 ; https://www.mrimsjournal.com/ >
+      au < ready ; 2013 ; MRIMS Journal of Health Sciences Volume 1 ; 2013 ; 1 ; https://www.mrimsjournal.com/ >
+      au < ready ; 2014 ; MRIMS Journal of Health Sciences Volume 2 ; 2014 ; 2 ; https://www.mrimsjournal.com/ >
+      au < ready ; 2015 ; MRIMS Journal of Health Sciences Volume 3 ; 2015 ; 3 ; https://www.mrimsjournal.com/ >
+      au < ready ; 2016 ; MRIMS Journal of Health Sciences Volume 4 ; 2016 ; 4 ; https://www.mrimsjournal.com/ >
+      au < ready ; 2017 ; MRIMS Journal of Health Sciences Volume 5 ; 2017 ; 5 ; https://www.mrimsjournal.com/ >
+      au < ready ; 2018 ; MRIMS Journal of Health Sciences Volume 6 ; 2018 ; 6 ; https://www.mrimsjournal.com/ >
+      au < ready ; 2019 ; MRIMS Journal of Health Sciences Volume 7 ; 2019 ; 7 ; https://www.mrimsjournal.com/ >
+      au < ready ; 2020 ; MRIMS Journal of Health Sciences Volume 8 ; 2020 ; 8 ; https://www.mrimsjournal.com/ >
       au < released ; 2021 ; MRIMS Journal of Health Sciences Volume 9 ; 2021 ; 9 ; https://www.mrimsjournal.com/ >
       au < manifest ; 2022 ; MRIMS Journal of Health Sciences Volume 10 ; 2022 ; 10 ; https://www.mrimsjournal.com/ >
 
@@ -12674,15 +12674,15 @@
       param[journal_issn] = 2277-4025
       #param[base_url] = https://www.njca.info/
 
-      au < manifest ; 2012 ; National Journal of Clinical Anatomy Volume 1 ; 2012 ; 1 ; https://www.njca.info/ >
-      au < manifest ; 2013 ; National Journal of Clinical Anatomy Volume 2 ; 2013 ; 2 ; https://www.njca.info/ >
-      au < manifest ; 2014 ; National Journal of Clinical Anatomy Volume 3 ; 2014 ; 3 ; https://www.njca.info/ >
-      au < manifest ; 2015 ; National Journal of Clinical Anatomy Volume 4 ; 2015 ; 4 ; https://www.njca.info/ >
-      au < manifest ; 2016 ; National Journal of Clinical Anatomy Volume 5 ; 2016 ; 5 ; https://www.njca.info/ >
-      au < manifest ; 2017 ; National Journal of Clinical Anatomy Volume 6 ; 2017 ; 6 ; https://www.njca.info/ >
-      au < manifest ; 2018 ; National Journal of Clinical Anatomy Volume 7 ; 2018 ; 7 ; https://www.njca.info/ >
+      au < ready ; 2012 ; National Journal of Clinical Anatomy Volume 1 ; 2012 ; 1 ; https://www.njca.info/ >
+      au < ready ; 2013 ; National Journal of Clinical Anatomy Volume 2 ; 2013 ; 2 ; https://www.njca.info/ >
+      au < ready ; 2014 ; National Journal of Clinical Anatomy Volume 3 ; 2014 ; 3 ; https://www.njca.info/ >
+      au < ready ; 2015 ; National Journal of Clinical Anatomy Volume 4 ; 2015 ; 4 ; https://www.njca.info/ >
+      au < ready ; 2016 ; National Journal of Clinical Anatomy Volume 5 ; 2016 ; 5 ; https://www.njca.info/ >
+      au < ready ; 2017 ; National Journal of Clinical Anatomy Volume 6 ; 2017 ; 6 ; https://www.njca.info/ >
+      au < ready ; 2018 ; National Journal of Clinical Anatomy Volume 7 ; 2018 ; 7 ; https://www.njca.info/ >
       au < manifest ; 2019 ; National Journal of Clinical Anatomy Volume 8 ; 2019 ; 8 ; https://www.njca.info/ >
-      au < manifest ; 2020 ; National Journal of Clinical Anatomy Volume 9 ; 2020 ; 9 ; https://www.njca.info/ >
+      au < ready ; 2020 ; National Journal of Clinical Anatomy Volume 9 ; 2020 ; 9 ; https://www.njca.info/ >
       au < released ; 2021 ; National Journal of Clinical Anatomy Volume 10 ; 2021 ; 10 ; https://www.njca.info/ >
       au < manifest ; 2022 ; National Journal of Clinical Anatomy Volume 11 ; 2022 ; 11 ; https://www.njca.info/ >
 
@@ -12699,7 +12699,7 @@
       param[journal_issn] = 2636-865X
       #param[base_url] = https://www.nsnjournal.org/
 
-      au < manifest ; 2020 ; Neurological Sciences and Neurophysiology Volume 37 ; 2020 ; 37 ; https://www.nsnjournal.org/ >
+      au < ready ; 2020 ; Neurological Sciences and Neurophysiology Volume 37 ; 2020 ; 37 ; https://www.nsnjournal.org/ >
       au < released ; 2021 ; Neurological Sciences and Neurophysiology Volume 38 ; 2021 ; 38 ; https://www.nsnjournal.org/ >
       au < manifest ; 2022 ; Neurological Sciences and Neurophysiology Volume 39 ; 2022 ; 39 ; https://www.nsnjournal.org/ >
 
@@ -12717,17 +12717,17 @@
       param[journal_issn] = 1115-2613
       #param[base_url] = https://www.njmonline.org/
 
-      au < manifest ; 2010 ; Nigerian Journal of Medicine Volume 19 ; 2010 ; 19 ; https://www.njmonline.org/ >
-      au < manifest ; 2011 ; Nigerian Journal of Medicine Volume 20 ; 2011 ; 20 ; https://www.njmonline.org/ >
-      au < manifest ; 2012 ; Nigerian Journal of Medicine Volume 21 ; 2012 ; 21 ; https://www.njmonline.org/ >
-      au < manifest ; 2013 ; Nigerian Journal of Medicine Volume 22 ; 2013 ; 22 ; https://www.njmonline.org/ >
-      au < manifest ; 2014 ; Nigerian Journal of Medicine Volume 23 ; 2014 ; 23 ; https://www.njmonline.org/ >
-      au < manifest ; 2015 ; Nigerian Journal of Medicine Volume 24 ; 2015 ; 24 ; https://www.njmonline.org/ >
-      au < manifest ; 2016 ; Nigerian Journal of Medicine Volume 25 ; 2016 ; 25 ; https://www.njmonline.org/ >
-      au < manifest ; 2017 ; Nigerian Journal of Medicine Volume 26 ; 2017 ; 26 ; https://www.njmonline.org/ >
-      au < manifest ; 2018 ; Nigerian Journal of Medicine Volume 27 ; 2018 ; 27 ; https://www.njmonline.org/ >
-      au < manifest ; 2019 ; Nigerian Journal of Medicine Volume 28 ; 2019 ; 28 ; https://www.njmonline.org/ >
-      au < manifest ; 2020 ; Nigerian Journal of Medicine Volume 29 ; 2020 ; 29 ; https://www.njmonline.org/ >
+      au < ready ; 2010 ; Nigerian Journal of Medicine Volume 19 ; 2010 ; 19 ; https://www.njmonline.org/ >
+      au < ready ; 2011 ; Nigerian Journal of Medicine Volume 20 ; 2011 ; 20 ; https://www.njmonline.org/ >
+      au < ready ; 2012 ; Nigerian Journal of Medicine Volume 21 ; 2012 ; 21 ; https://www.njmonline.org/ >
+      au < ready ; 2013 ; Nigerian Journal of Medicine Volume 22 ; 2013 ; 22 ; https://www.njmonline.org/ >
+      au < ready ; 2014 ; Nigerian Journal of Medicine Volume 23 ; 2014 ; 23 ; https://www.njmonline.org/ >
+      au < ready ; 2015 ; Nigerian Journal of Medicine Volume 24 ; 2015 ; 24 ; https://www.njmonline.org/ >
+      au < ready ; 2016 ; Nigerian Journal of Medicine Volume 25 ; 2016 ; 25 ; https://www.njmonline.org/ >
+      au < ready ; 2017 ; Nigerian Journal of Medicine Volume 26 ; 2017 ; 26 ; https://www.njmonline.org/ >
+      au < ready ; 2018 ; Nigerian Journal of Medicine Volume 27 ; 2018 ; 27 ; https://www.njmonline.org/ >
+      au < ready ; 2019 ; Nigerian Journal of Medicine Volume 28 ; 2019 ; 28 ; https://www.njmonline.org/ >
+      au < ready ; 2020 ; Nigerian Journal of Medicine Volume 29 ; 2020 ; 29 ; https://www.njmonline.org/ >
       au < released ; 2021 ; Nigerian Journal of Medicine Volume 30 ; 2021 ; 30 ; https://www.njmonline.org/ >
       au < manifest ; 2022 ; Nigerian Journal of Medicine Volume 31 ; 2022 ; 31 ; https://www.njmonline.org/ >
 
@@ -12745,7 +12745,7 @@
       param[journal_issn] = 2709-0450
       #param[base_url] = https://www.pnjb-online.org/
 
-      au < manifest ; 2021 ; Paediatric Nephrology Journal of Bangladesh Volume 6 ; 2021 ; 6 ; https://www.pnjb-online.org/ >
+      au < ready ; 2021 ; Paediatric Nephrology Journal of Bangladesh Volume 6 ; 2021 ; 6 ; https://www.pnjb-online.org/ >
       au < manifest ; 2022 ; Paediatric Nephrology Journal of Bangladesh Volume 7 ; 2022 ; 7 ; https://www.pnjb-online.org/ >
 
   }
@@ -12762,8 +12762,8 @@
       param[journal_issn] = 2666-3848
       #param[base_url] = https://www.qaij.org/
 
-      au < manifest ; 2019 ; QAI Journal for Healthcare Quality and Patient Safety Volume 1 ; 2019 ; 1 ; https://www.qaij.org/ >
-      au < manifest ; 2020 ; QAI Journal for Healthcare Quality and Patient Safety Volume 2 ; 2020 ; 2 ; https://www.qaij.org/ >
+      au < ready ; 2019 ; QAI Journal for Healthcare Quality and Patient Safety Volume 1 ; 2019 ; 1 ; https://www.qaij.org/ >
+      au < ready ; 2020 ; QAI Journal for Healthcare Quality and Patient Safety Volume 2 ; 2020 ; 2 ; https://www.qaij.org/ >
       au < exists ; 2021 ; QAI Journal for Healthcare Quality and Patient Safety Volume 3 ; 2021 ; 3 ; https://www.qaij.org/ >
       au < expected ; 2022 ; QAI Journal for Healthcare Quality and Patient Safety Volume 4 ; 2022 ; 4 ; https://www.qaij.org/ >
 
@@ -12781,7 +12781,7 @@
       param[journal_issn] = 2352-6211
       #param[base_url] = https://www.ridiseases.org/
 
-      au < manifest ; 2021 ; Radiology of Infectious Diseases Volume 8 ; 2021 ; 8 ; https://www.ridiseases.org/ >
+      au < ready ; 2021 ; Radiology of Infectious Diseases Volume 8 ; 2021 ; 8 ; https://www.ridiseases.org/ >
       au < manifest ; 2022 ; Radiology of Infectious Diseases Volume 9 ; 2022 ; 9 ; https://www.ridiseases.org/ >
 
   }
@@ -12814,8 +12814,8 @@
       param[journal_issn] = 1319-4534
       #param[base_url] = https://www.saudijophthalmol.org/
 
-      au < manifest ; 2020 ; Saudi Journal of Ophthalmology Volume 34 ; 2020 ; 34 ; https://www.saudijophthalmol.org/ >
-      au < manifest ; 2021 ; Saudi Journal of Ophthalmology Volume 35 ; 2021 ; 35 ; https://www.saudijophthalmol.org/ >
+      au < ready ; 2020 ; Saudi Journal of Ophthalmology Volume 34 ; 2020 ; 34 ; https://www.saudijophthalmol.org/ >
+      au < ready ; 2021 ; Saudi Journal of Ophthalmology Volume 35 ; 2021 ; 35 ; https://www.saudijophthalmol.org/ >
       au < manifest ; 2022 ; Saudi Journal of Ophthalmology Volume 36 ; 2022 ; 36 ; https://www.saudijophthalmol.org/ >
 
   }
@@ -12842,18 +12842,18 @@
       au < manifest ; 2007 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 9 ; 2007 ; 9 ; https://www.sjohns.org/ >
       au < manifest ; 2008 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 10 ; 2008 ; 10 ; https://www.sjohns.org/ >
       au < manifest ; 2009 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 11 ; 2009 ; 11 ; https://www.sjohns.org/ >
-      au < manifest ; 2010 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 12 ; 2010 ; 12 ; https://www.sjohns.org/ >
-      au < manifest ; 2011 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 13 ; 2011 ; 13 ; https://www.sjohns.org/ >
-      au < manifest ; 2012 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 14 ; 2012 ; 14 ; https://www.sjohns.org/ >
-      au < manifest ; 2013 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 15 ; 2013 ; 15 ; https://www.sjohns.org/ >
-      au < manifest ; 2014 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 16 ; 2014 ; 16 ; https://www.sjohns.org/ >
-      au < manifest ; 2015 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 17 ; 2015 ; 17 ; https://www.sjohns.org/ >
-      au < manifest ; 2016 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 18 ; 2016 ; 18 ; https://www.sjohns.org/ >
-      au < manifest ; 2017 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 19 ; 2017 ; 19 ; https://www.sjohns.org/ >
-      au < manifest ; 2018 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 20 ; 2018 ; 20 ; https://www.sjohns.org/ >
-      au < manifest ; 2019 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 21 ; 2019 ; 21 ; https://www.sjohns.org/ >
-      au < manifest ; 2020 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 22 ; 2020 ; 22 ; https://www.sjohns.org/ >
-      au < manifest ; 2021 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 23 ; 2021 ; 23 ; https://www.sjohns.org/ >
+      au < ready ; 2010 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 12 ; 2010 ; 12 ; https://www.sjohns.org/ >
+      au < ready ; 2011 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 13 ; 2011 ; 13 ; https://www.sjohns.org/ >
+      au < ready ; 2012 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 14 ; 2012 ; 14 ; https://www.sjohns.org/ >
+      au < ready ; 2013 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 15 ; 2013 ; 15 ; https://www.sjohns.org/ >
+      au < ready ; 2014 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 16 ; 2014 ; 16 ; https://www.sjohns.org/ >
+      au < ready ; 2015 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 17 ; 2015 ; 17 ; https://www.sjohns.org/ >
+      au < ready ; 2016 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 18 ; 2016 ; 18 ; https://www.sjohns.org/ >
+      au < ready ; 2017 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 19 ; 2017 ; 19 ; https://www.sjohns.org/ >
+      au < ready ; 2018 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 20 ; 2018 ; 20 ; https://www.sjohns.org/ >
+      au < ready ; 2019 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 21 ; 2019 ; 21 ; https://www.sjohns.org/ >
+      au < ready ; 2020 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 22 ; 2020 ; 22 ; https://www.sjohns.org/ >
+      au < ready ; 2021 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 23 ; 2021 ; 23 ; https://www.sjohns.org/ >
       au < manifest ; 2022 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 24 ; 2022 ; 24 ; https://www.sjohns.org/ >
 
   }
@@ -12870,11 +12870,11 @@
       param[journal_issn] = 2580-6548
       #param[base_url] = https://www.scidentj.com/
 
-      au < manifest ; 2017 ; Scientific Dental Journal Volume 1 ; 2017 ; 1 ; https://www.scidentj.com/ >
-      au < manifest ; 2018 ; Scientific Dental Journal Volume 2 ; 2018 ; 2 ; https://www.scidentj.com/ >
-      au < manifest ; 2019 ; Scientific Dental Journal Volume 3 ; 2019 ; 3 ; https://www.scidentj.com/ >
-      au < manifest ; 2020 ; Scientific Dental Journal Volume 4 ; 2020 ; 4 ; https://www.scidentj.com/ >
-      au < manifest ; 2021 ; Scientific Dental Journal Volume 5 ; 2021 ; 5 ; https://www.scidentj.com/ >
+      au < ready ; 2017 ; Scientific Dental Journal Volume 1 ; 2017 ; 1 ; https://www.scidentj.com/ >
+      au < ready ; 2018 ; Scientific Dental Journal Volume 2 ; 2018 ; 2 ; https://www.scidentj.com/ >
+      au < ready ; 2019 ; Scientific Dental Journal Volume 3 ; 2019 ; 3 ; https://www.scidentj.com/ >
+      au < ready ; 2020 ; Scientific Dental Journal Volume 4 ; 2020 ; 4 ; https://www.scidentj.com/ >
+      au < ready ; 2021 ; Scientific Dental Journal Volume 5 ; 2021 ; 5 ; https://www.scidentj.com/ >
       au < manifest ; 2022 ; Scientific Dental Journal Volume 6 ; 2022 ; 6 ; https://www.scidentj.com/ >
 
   }
@@ -12929,14 +12929,14 @@
       param[journal_issn] = 1110-1415
       #param[base_url] = https://www.tdj.eg.net/
 
-      au < manifest ; 2013 ; Tanta Medical Journal Volume 41 ; 2013 ; 41 ; https://www.tdj.eg.net/ >
-      au < manifest ; 2014 ; Tanta Medical Journal Volume 42 ; 2014 ; 42 ; https://www.tdj.eg.net/ >
-      au < manifest ; 2015 ; Tanta Medical Journal Volume 43 ; 2015 ; 43 ; https://www.tdj.eg.net/ >
-      au < manifest ; 2016 ; Tanta Medical Journal Volume 44 ; 2016 ; 44 ; https://www.tdj.eg.net/ >
-      au < manifest ; 2017 ; Tanta Medical Journal Volume 45 ; 2017 ; 45 ; https://www.tdj.eg.net/ >
-      au < manifest ; 2018 ; Tanta Medical Journal Volume 46 ; 2018 ; 46 ; https://www.tdj.eg.net/ >
-      au < manifest ; 2019 ; Tanta Medical Journal Volume 47 ; 2019 ; 47 ; https://www.tdj.eg.net/ >
-      au < manifest ; 2020 ; Tanta Medical Journal Volume 48 ; 2020 ; 48 ; https://www.tdj.eg.net/ >
+      au < ready ; 2013 ; Tanta Medical Journal Volume 41 ; 2013 ; 41 ; https://www.tdj.eg.net/ >
+      au < ready ; 2014 ; Tanta Medical Journal Volume 42 ; 2014 ; 42 ; https://www.tdj.eg.net/ >
+      au < ready ; 2015 ; Tanta Medical Journal Volume 43 ; 2015 ; 43 ; https://www.tdj.eg.net/ >
+      au < ready ; 2016 ; Tanta Medical Journal Volume 44 ; 2016 ; 44 ; https://www.tdj.eg.net/ >
+      au < ready ; 2017 ; Tanta Medical Journal Volume 45 ; 2017 ; 45 ; https://www.tdj.eg.net/ >
+      au < ready ; 2018 ; Tanta Medical Journal Volume 46 ; 2018 ; 46 ; https://www.tdj.eg.net/ >
+      au < ready ; 2019 ; Tanta Medical Journal Volume 47 ; 2019 ; 47 ; https://www.tdj.eg.net/ >
+      au < ready ; 2020 ; Tanta Medical Journal Volume 48 ; 2020 ; 48 ; https://www.tdj.eg.net/ >
       au < released ; 2021 ; Tanta Medical Journal Volume 49 ; 2021 ; 49 ; https://www.tdj.eg.net/ >
       au < manifest ; 2022 ; Tanta Medical Journal Volume 50 ; 2022 ; 50 ; https://www.tdj.eg.net/ >
 
@@ -12976,9 +12976,9 @@
       param[journal_issn] = 0445-7706
       #param[base_url] = https://www.ijotonweb.org/
 
-      au < manifest ; 2018 ; The Indian Journal of Occupational Therapy Volume 50 ; 2018 ; 50 ; https://www.ijotonweb.org/ >
-      au < manifest ; 2019 ; The Indian Journal of Occupational Therapy Volume 51 ; 2019 ; 51 ; https://www.ijotonweb.org/ >
-      au < manifest ; 2020 ; The Indian Journal of Occupational Therapy Volume 52 ; 2020 ; 52 ; https://www.ijotonweb.org/ >
+      au < ready ; 2018 ; The Indian Journal of Occupational Therapy Volume 50 ; 2018 ; 50 ; https://www.ijotonweb.org/ >
+      au < ready ; 2019 ; The Indian Journal of Occupational Therapy Volume 51 ; 2019 ; 51 ; https://www.ijotonweb.org/ >
+      au < ready ; 2020 ; The Indian Journal of Occupational Therapy Volume 52 ; 2020 ; 52 ; https://www.ijotonweb.org/ >
       au < released ; 2021 ; The Indian Journal of Occupational Therapy Volume 53 ; 2021 ; 53 ; https://www.ijotonweb.org/ >
       au < manifest ; 2022 ; The Indian Journal of Occupational Therapy Volume 54 ; 2022 ; 54 ; https://www.ijotonweb.org/ >
 
@@ -12996,7 +12996,7 @@
       param[journal_issn] = 2149-1909
       #param[base_url] = https://www.jnbsjournal.com/
 
-      au < manifest ; 2020 ; The Journal of Neurobehavioral Sciences Volume 7 ; 2020 ; 7 ; https://www.jnbsjournal.com/ >
+      au < ready ; 2020 ; The Journal of Neurobehavioral Sciences Volume 7 ; 2020 ; 7 ; https://www.jnbsjournal.com/ >
       au < released ; 2021 ; The Journal of Neurobehavioral Sciences Volume 8 ; 2021 ; 8 ; https://www.jnbsjournal.com/ >
       au < manifest ; 2022 ; The Journal of Neurobehavioral Sciences Volume 9 ; 2022 ; 9 ; https://www.jnbsjournal.com/ >
 
@@ -13013,9 +13013,9 @@
       param[journal_issn] = 2589-9597
       #param[base_url] = https://www.tofjonline.org/
 
-      au < manifest ; 2018 ; The Onco Fertility Journal Volume 1 ; 2018 ; 1 ; https://www.tofjonline.org/ >
-      au < manifest ; 2019 ; The Onco Fertility Journal Volume 2 ; 2019 ; 2 ; https://www.tofjonline.org/ >
-      au < manifest ; 2020 ; The Onco Fertility Journal Volume 3 ; 2020 ; 3 ; https://www.tofjonline.org/ >
+      au < ready ; 2018 ; The Onco Fertility Journal Volume 1 ; 2018 ; 1 ; https://www.tofjonline.org/ >
+      au < ready ; 2019 ; The Onco Fertility Journal Volume 2 ; 2019 ; 2 ; https://www.tofjonline.org/ >
+      au < ready ; 2020 ; The Onco Fertility Journal Volume 3 ; 2020 ; 3 ; https://www.tofjonline.org/ >
       au < released ; 2021 ; The Onco Fertility Journal Volume 4 ; 2021 ; 4 ; https://www.tofjonline.org/ >
 
   }
@@ -13032,8 +13032,8 @@
       param[journal_issn] = 2589-8329
       #param[base_url] = https://www.sjfms.org/
 
-      au < manifest ; 2018 ; The Saudi Journal of Forensic Medicine and Sciences Volume 1 ; 2018 ; 1 ; https://www.sjfms.org/ >
-      au < manifest ; 2019 ; The Saudi Journal of Forensic Medicine and Sciences Volume 2 ; 2019 ; 2 ; https://www.sjfms.org/ >
+      au < ready ; 2018 ; The Saudi Journal of Forensic Medicine and Sciences Volume 1 ; 2018 ; 1 ; https://www.sjfms.org/ >
+      au < ready ; 2019 ; The Saudi Journal of Forensic Medicine and Sciences Volume 2 ; 2019 ; 2 ; https://www.sjfms.org/ >
 
   }
 
@@ -13049,9 +13049,9 @@
       param[journal_issn] = 1307-7635
       #param[base_url] = https://www.tjdonline.org/
 
-      au < manifest ; 2019 ; Turkish Journal of Dermatology Volume 13 ; 2019 ; 13 ; https://www.tjdonline.org/ >
-      au < manifest ; 2020 ; Turkish Journal of Dermatology Volume 14 ; 2020 ; 14 ; https://www.tjdonline.org/ >
-      au < manifest ; 2021 ; Turkish Journal of Dermatology Volume 15 ; 2021 ; 15 ; https://www.tjdonline.org/ >
+      au < ready ; 2019 ; Turkish Journal of Dermatology Volume 13 ; 2019 ; 13 ; https://www.tjdonline.org/ >
+      au < ready ; 2020 ; Turkish Journal of Dermatology Volume 14 ; 2020 ; 14 ; https://www.tjdonline.org/ >
+      au < ready ; 2021 ; Turkish Journal of Dermatology Volume 15 ; 2021 ; 15 ; https://www.tjdonline.org/ >
       au < manifest ; 2022 ; Turkish Journal of Dermatology Volume 16 ; 2022 ; 16 ; https://www.tjdonline.org/ >
 
   }
@@ -13068,10 +13068,10 @@
       param[journal_issn] = 2589-9686
       #param[base_url] = https://www.vitonline.org/
 
-      au < manifest ; 2018 ; Vascular Investigation and Therapy Volume 1 ; 2018 ; 1 ; https://www.vitonline.org/ >
-      au < manifest ; 2019 ; Vascular Investigation and Therapy Volume 2 ; 2019 ; 2 ; https://www.vitonline.org/ >
-      au < manifest ; 2020 ; Vascular Investigation and Therapy Volume 3 ; 2020 ; 3 ; https://www.vitonline.org/ >
-      au < manifest ; 2021 ; Vascular Investigation and Therapy Volume 4 ; 2021 ; 4 ; https://www.vitonline.org/ >
+      au < ready ; 2018 ; Vascular Investigation and Therapy Volume 1 ; 2018 ; 1 ; https://www.vitonline.org/ >
+      au < ready ; 2019 ; Vascular Investigation and Therapy Volume 2 ; 2019 ; 2 ; https://www.vitonline.org/ >
+      au < ready ; 2020 ; Vascular Investigation and Therapy Volume 3 ; 2020 ; 3 ; https://www.vitonline.org/ >
+      au < ready ; 2021 ; Vascular Investigation and Therapy Volume 4 ; 2021 ; 4 ; https://www.vitonline.org/ >
       au < manifest ; 2022 ; Vascular Investigation and Therapy Volume 5 ; 2022 ; 5 ; https://www.vitonline.org/ >
 
   }
@@ -13088,8 +13088,8 @@
       param[journal_issn] = 2667-1077
       #param[base_url] = https://www.worldsocpsychiatry.org/
 
-      au < manifest ; 2019 ; World Social Psychiatry Volume 1 ; 2019 ; 1 ; https://www.worldsocpsychiatry.org/ >
-      au < manifest ; 2020 ; World Social Psychiatry Volume 2 ; 2020 ; 2 ; https://www.worldsocpsychiatry.org/ >
+      au < ready ; 2019 ; World Social Psychiatry Volume 1 ; 2019 ; 1 ; https://www.worldsocpsychiatry.org/ >
+      au < ready ; 2020 ; World Social Psychiatry Volume 2 ; 2020 ; 2 ; https://www.worldsocpsychiatry.org/ >
       au < released ; 2021 ; World Social Psychiatry Volume 3 ; 2021 ; 3 ; https://www.worldsocpsychiatry.org/ >
       au < manifest ; 2022 ; World Social Psychiatry Volume 4 ; 2022 ; 4 ; https://www.worldsocpsychiatry.org/ >
 
