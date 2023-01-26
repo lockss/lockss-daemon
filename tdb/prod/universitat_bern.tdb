@@ -1,7 +1,7 @@
 {
 
   publisher <
-    name = University of Bern
+    name = Universität Bern
   >
   #Publisher prefers "University of Bern" over "Universität Bern" see RT 11375
 
@@ -142,7 +142,7 @@
       au < ojs3.Ojs3Plugin ; released ; 2018 ; 17 ; European Journal of Musicology Volume 2018 ; 2018 ; >
       au < ojs3.Ojs3Plugin ; released ; 2019 ; 18 ; European Journal of Musicology Volume 2019 ; 2019 ; >
       au < ojs3.Ojs3Plugin ; released ; 2020 ; 19 ; European Journal of Musicology Volume 2020 ; 2020 ; >
-      au < ojs3.Ojs3Plugin ; exists ; 2021 ; 20 ; European Journal of Musicology Volume 2021 ; 2021 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2021 ; 20 ; European Journal of Musicology Volume 2021 ; 2021 ; >
 
   }
 
