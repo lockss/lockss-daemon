@@ -3378,6 +3378,7 @@
     au < manifest ; 2020 ; Journal of Nursing and Midwifery Sciences Volume 7 ; 2020 ; 7 ; https://www.jnmsjournal.org/ >
     au < manifest ; 2021 ; Journal of Nursing and Midwifery Sciences Volume 8 ; 2021 ; 8 ; https://www.jnmsjournal.org/ >
     au < manifest ; 2022 ; Journal of Nursing and Midwifery Sciences Volume 9 ; 2022 ; 9 ; https://www.jnmsjournal.org/ >
+      #deactivated
 
   }
 
@@ -9355,6 +9356,7 @@
       au < released ; 2020 ; Formosan Journal of Surgery Volume 53 ; 2020 ; 53 ; https://www.e-fjs.org/ >
       au < released ; 2021 ; Formosan Journal of Surgery Volume 54 ; 2021 ; 54 ; https://www.e-fjs.org/ >
       au < manifest ; 2022 ; Formosan Journal of Surgery Volume 55 ; 2022 ; 55 ; https://www.e-fjs.org/ >
+      #deactivated
 
   }
 
@@ -9644,6 +9646,21 @@
 
   }
 
+  {
+
+      title <
+        name = Integrative Medicine in Nephrology and Andrology ;
+        issn = 2773-0387 ;
+        eissn = 2773-0395
+      >
+
+      param[journal_issn] = 2773-0387
+
+      au < exists ; 2021 ; Integrative Medicine in Nephrology and Andrology Volume 8 ; 2021 ; 8 ; https://journal-imna.com/ >
+      au < exists ; 2022 ; Integrative Medicine in Nephrology and Andrology Volume 9 ; 2022 ; 9 ; https://journal-imna.com/ >
+      #deactivated
+
+  }
 
   {
 
@@ -9751,6 +9768,23 @@
 
   }
 
+
+  {
+
+      title <
+        name = International Journal of Histopathological Interpretation ;
+        eissn = 2773-2118
+      >
+
+      param[journal_issn] = 2773-2118
+      #Archive will stay with Medknow until further notice
+
+      au < exists ; 2017 ; International Journal of Growth Factors and Stem Cells in Dentistry Volume 6 ; 2017 ; 6 ; https://www.ijhi.org/ >
+      au < exists ; 2018 ; International Journal of Growth Factors and Stem Cells in Dentistry Volume 7 ; 2018 ; 7 ; https://www.ijhi.org/ >
+      au < exists ; 2019 ; International Journal of Growth Factors and Stem Cells in Dentistry Volume 8 ; 2019 ; 8 ; https://www.ijhi.org/ >
+      #deactivated
+
+  }
 
   {
 
