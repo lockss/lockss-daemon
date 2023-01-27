@@ -278,7 +278,7 @@ public class IopArticleXmlMetadataExtractorFactory extends SourceXmlMetadataExtr
 
     	if (	directory != null && (cu.getUrl().contains("2020_1") ||
 				cu.getUrl().contains("2020_2") ||
-				cu.getUrl().contains("2020_1") ||
+				cu.getUrl().contains("2020_3") ||
 				cu.getUrl().contains("2020_4") ||
 				cu.getUrl().contains("2021_01") ||
 				cu.getUrl().contains("2021_02") ||
