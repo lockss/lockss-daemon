@@ -389,9 +389,9 @@
     >
 #    param[base_url] = http://www.asianjns.org/
     param[journal_issn] = 1793-5482
-    #Moving to Thieme Publishing. Archive will stay with Medknow until further notice
+    #Moving to Thieme Publishing.
 
-    au < manifest ; exists ; 2010 ; Asian Journal of Neurosurgery Volume 5 ; 2010 ; 5 ; https://www.asianjns.org/ ; ; >
+    au < doNotProcess ; exists ; 2010 ; Asian Journal of Neurosurgery Volume 5 ; 2010 ; 5 ; https://www.asianjns.org/ ; ; >
     au < finished ; frozen ; 2011 ; Asian Journal of Neurosurgery Volume 6 ; 2011 ; 6 ; http://www.asianjns.org/ ; ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2012 ; Asian Journal of Neurosurgery Volume 7 ; 2012 ; 7 ; http://www.asianjns.org/ ; ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2013 ; Asian Journal of Neurosurgery Volume 8 ; 2013 ; 8 ; http://www.asianjns.org/ ; ; reingest4.clockss.org:8082 >
@@ -402,7 +402,7 @@
     au < finished ; frozen ; 2018 ; Asian Journal of Neurosurgery Volume 13 ; 2018 ; 13 ; http://www.asianjns.org/ ; ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2019 ; Asian Journal of Neurosurgery Volume 14 ; 2019 ; 14 ; https://www.asianjns.org/ ; ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2020 ; Asian Journal of Neurosurgery Volume 15 ; 2020 ; 15 ; https://www.asianjns.org/ ; ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2021 ; Asian Journal of Neurosurgery Volume 16 ; 2021 ; 16 ; https://www.asianjns.org/ ; ; >
+    au < frozen ; exists ; 2021 ; Asian Journal of Neurosurgery Volume 16 ; 2021 ; 16 ; https://www.asianjns.org/ ; ; >
 
   }
 #  {

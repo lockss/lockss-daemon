@@ -653,6 +653,30 @@
    }
 
    {
+    title <
+      name = Asian Journal of Neurosurgery ;
+      issn = 1793-5482 ;
+      eissn = 2248-9614 ;
+      issnl = 1793-5482;
+      doi = 10.1055/s-00053244
+    >
+      param[journal_id] = 10.1055/s-00053244
+      comment[years] = 2015-current
+      #Moved from Medknow.
+      #doNotPrcess = content had been preserved under Medknow
+
+    au < doNotProcess ; 2015 ; 2015 ; Asian Journal of Neurosurgery Volume 10 ; 10 >
+    au < doNotProcess ; 2016 ; 2016 ; Asian Journal of Neurosurgery Volume 11 ; 11 >
+    au < doNotProcess ; 2017 ; 2017 ; Asian Journal of Neurosurgery Volume 12 ; 12 >
+    au < doNotProcess ; 2018 ; 2018 ; Asian Journal of Neurosurgery Volume 13 ; 13 >
+    au < doNotProcess ; 2019 ; 2019 ; Asian Journal of Neurosurgery Volume 14 ; 14 >
+    au < doNotProcess ; 2020 ; 2020 ; Asian Journal of Neurosurgery Volume 15 ; 15 >
+    au < doNotProcess ; 2021 ; 2021 ; Asian Journal of Neurosurgery Volume 16 ; 16 >
+    au < exists ; 2022 ; 2022 ; Asian Journal of Neurosurgery Volume 17 ; 17 >
+
+   }
+
+   {
      title <
        name = Avicenna Journal of Medicine ;
        issn = 2231-0770 ;
@@ -661,7 +685,7 @@
        doi = 10.1055/s-00051312
     >
      param[journal_id] = 10.1055/s-00051312
-    comment[years] = 2011-current
+     comment[years] = 2011-current
      #Moved from Medknow
 
      au < doNotProcess ; 2011 ; 2011 ; Avicenna Journal of Medicine Volume 1 ; 1 >
