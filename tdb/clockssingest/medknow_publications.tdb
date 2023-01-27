@@ -3508,7 +3508,7 @@
     >
 #    param[base_url] = http://www.jnsbm.org/
     param[journal_issn] = 0976-9668
-    #Moved. Archive at Medknow.
+    #Moved.
 
     au < doNotProcess ; exists ; 2010 ; Journal of Natural Science, Biology and Medicine Volume 1 ; 2010 ; 1 ; https://www.jnsbm.org/ ; ; >
     au < finished ; frozen ; 2011 ; Journal of Natural Science, Biology and Medicine Volume 2 ; 2011 ; 2 ; http://www.jnsbm.org/ ; ; reingest4.clockss.org:8082 >
@@ -3521,7 +3521,7 @@
     au < finished ; crawling ; 2018 ; Journal of Natural Science, Biology and Medicine Volume 9 ; 2018 ; 9 ; http://www.jnsbm.org/ ; ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; Journal of Natural Science, Biology and Medicine Volume 10 ; 2019 ; 10 ; https://www.jnsbm.org/ ; ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2020 ; Journal of Natural Science, Biology and Medicine Volume 11 ; 2020 ; 11 ; https://www.jnsbm.org/ ; ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2021 ; Journal of Natural Science, Biology and Medicine Volume 12 ; 2021 ; 12 ; https://www.jnsbm.org/ ; ; >
+    au < frozen ; exists ; 2021 ; Journal of Natural Science, Biology and Medicine Volume 12 ; 2021 ; 12 ; https://www.jnsbm.org/ ; ; >
 
   }
 
@@ -5431,7 +5431,7 @@
 
       param[journal_issn] = 2395-3977
 #      param[base_url] = http://www.cancertm.com/
-      #Moved to publisher Plascipub per Medknow.
+      #Moved to publisher Plascipub per Medknow. To https://tcr.amegroups.com/
 
       au < finished ; frozen ; 2015 ; Cancer Translational Medicine Volume 1 ; 2015 ; 1 ; http://www.cancertm.com/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; Cancer Translational Medicine Volume 2 ; 2016 ; 2 ; http://www.cancertm.com/ ; ; reingest2.clockss.org:8085 >
@@ -5596,7 +5596,7 @@
       au < finished ; crawling ; 2016 ; Community Acquired Infection Volume 3 ; 2016 ; 3 ; http://www.caijournal.com/ ; ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2017 ; Community Acquired Infection Volume 4 ; 2017 ; 4 ; http://www.caijournal.com/ ; ; reingest4.clockss.org:8082 >
       au < notReady ; exists ; 2018 ; Community Acquired Infection Volume 5 ; 2018 ; 5 ; https://www.caijournal.com/ ; ; > #no substance
-      au < notReady ; exists ; 2019 ; Community Acquired Infection Volume 6 ; 2019 ; 6 ; https://www.caijournal.com/ ; ; > #no substance
+      au < notReady ; exists ; 2020 ; Community Acquired Infection Volume 6 ; 2020 ; 6 ; https://www.caijournal.com/ ; ; > #no substance
 
   }
 
