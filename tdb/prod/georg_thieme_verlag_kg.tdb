@@ -657,21 +657,20 @@
       name = Asian Journal of Neurosurgery ;
       issn = 1793-5482 ;
       eissn = 2248-9614 ;
-      issnl = 1793-5482;
+      issnl = 1793-5482 ;
       doi = 10.1055/s-00053244
     >
       param[journal_id] = 10.1055/s-00053244
       comment[years] = 2015-current
       #Moved from Medknow.
-      #doNotPrcess = content had been preserved under Medknow
 
-    au < doNotProcess ; 2015 ; 2015 ; Asian Journal of Neurosurgery Volume 10 ; 10 >
-    au < doNotProcess ; 2016 ; 2016 ; Asian Journal of Neurosurgery Volume 11 ; 11 >
-    au < doNotProcess ; 2017 ; 2017 ; Asian Journal of Neurosurgery Volume 12 ; 12 >
-    au < doNotProcess ; 2018 ; 2018 ; Asian Journal of Neurosurgery Volume 13 ; 13 >
-    au < doNotProcess ; 2019 ; 2019 ; Asian Journal of Neurosurgery Volume 14 ; 14 >
-    au < doNotProcess ; 2020 ; 2020 ; Asian Journal of Neurosurgery Volume 15 ; 15 >
-    au < doNotProcess ; 2021 ; 2021 ; Asian Journal of Neurosurgery Volume 16 ; 16 >
+    au < exists ; 2015 ; 2015 ; Asian Journal of Neurosurgery Volume 10 ; 10 >
+    au < exists ; 2016 ; 2016 ; Asian Journal of Neurosurgery Volume 11 ; 11 >
+    au < exists ; 2017 ; 2017 ; Asian Journal of Neurosurgery Volume 12 ; 12 >
+    au < exists ; 2018 ; 2018 ; Asian Journal of Neurosurgery Volume 13 ; 13 >
+    au < exists ; 2019 ; 2019 ; Asian Journal of Neurosurgery Volume 14 ; 14 >
+    au < exists ; 2020 ; 2020 ; Asian Journal of Neurosurgery Volume 15 ; 15 >
+    au < exists ; 2021 ; 2021 ; Asian Journal of Neurosurgery Volume 16 ; 16 >
     au < exists ; 2022 ; 2022 ; Asian Journal of Neurosurgery Volume 17 ; 17 >
 
    }
@@ -2421,6 +2420,28 @@
    au < released ; 2020 ; 2020 ; Hormone and Metabolic Research Volume 52 ; 52 >
    au < released ; 2021 ; 2021 ; Hormone and Metabolic Research Volume 53 ; 53 >
    au < manifest ; 2022 ; 2022 ; Hormone and Metabolic Research Volume 54 ; 54 >
+
+  }
+
+  {
+
+      title <
+        name = Ibnosina Journal of Medicine and Biomedical Sciences ;
+        eissn = 1947-489X ;
+        doi = 10.1055/s-00053247
+      >
+      param[journal_id] = 10.1055/s-00053247
+      comment[years] = 2015-current
+      #Moved from Medknow.
+
+      au < exists ; 2015 ; 2015 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 7 ; 7 >
+      au < exists ; 2016 ; 2016 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 8 ; 8 >
+      au < exists ; 2017 ; 2017 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 9 ; 9 >
+      au < exists ; 2018 ; 2018 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 10 ; 10 >
+      au < exists ; 2019 ; 2019 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 11 ; 11 >
+      au < exists ; 2020 ; 2020 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 12 ; 12 >
+      au < exists ; 2021 ; 2021 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 13 ; 13 >
+      au < exists ; 2022 ; 2022 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 14 ; 14 >
 
   }
 

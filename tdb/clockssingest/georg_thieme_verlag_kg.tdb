@@ -2431,6 +2431,29 @@
   }
 
   {
+
+      title <
+        name = Ibnosina Journal of Medicine and Biomedical Sciences ;
+        eissn = 1947-489X ;
+        doi = 10.1055/s-00053247
+      >
+      param[journal_id] = 10.1055/s-00053247
+      comment[years] = 2015-current
+      #Moved from Medknow.
+      #doNotProcess = content had been preserved under Medknow
+
+      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 7 ; 7 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 8 ; 8 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 9 ; 9 ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 10 ; 10 ; >
+      au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 11 ; 11 ; >
+      au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 12 ; 12 ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 13 ; 13 ; >
+      au < exists ; exists ; 2022 ; 2022 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 14 ; 14 ; >
+
+  }
+
+  {
     title <
       name = Im OP ;
       issn = 1611-7905 ;

@@ -5129,6 +5129,7 @@
 #      changed url to:
 #      param[base_url] = http://ccij-online.org/ 
 #      Archive at https://ccij-online.org/journal/archives
+      #Moved to Polaris Publication. Archive will stay with Medknow until further notice
 
       au < down ; 2012 ; Clinical Cancer Investigation Journal Volume 1 ; 2012 ; 1 ; http://www.ccij-online.org/ >
       au < down ; 2013 ; Clinical Cancer Investigation Journal Volume 2 ; 2013 ; 2 ; http://www.ccij-online.org/ >
@@ -5140,6 +5141,8 @@
       au < down ; 2019 ; Clinical Cancer Investigation Journal Volume 8 ; 2019 ; 8 ; https://www.ccij-online.org/ >
       au < down ; 2020 ; Clinical Cancer Investigation Journal Volume 9 ; 2020 ; 9 ; https://www.ccij-online.org/ >
       au < down ; 2021 ; Clinical Cancer Investigation Journal Volume 10 ; 2021 ; 10 ; https://www.ccij-online.org/ >
+      au < exists ; 2022 ; Clinical Cancer Investigation Journal Volume 11 ; 2022 ; 11 ; https://ccij-online.org/ >
+      #deactivated
 
   }
 
@@ -5897,12 +5900,13 @@
 
       title <
         name = Indian Journal of Oral Health and Research ;
-        issn = 2393-8692
+        issn = 2393-8692 ;
+        eissn = 2543-1978
       >
 
       param[journal_issn] = 2393-8692
 #      param[base_url] = http://www.ijohr.org/
-      #ceased publishing 2022
+      #ceased publishing 2022. Archive will stay with Medknow until further notice
 
       au < released ; 2015 ; Indian Journal of Oral Health and Research Volume 1 ; 2015 ; 1 ; http://www.ijohr.org/ >
       au < released ; 2016 ; Indian Journal of Oral Health and Research Volume 2 ; 2016 ; 2 ; http://www.ijohr.org/ >
@@ -9463,10 +9467,10 @@
 #      param[base_url] = http://www.ijmbs.org/
       #move to Thieme
 
-      au < manifest ; 2009 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 1 ; 2009 ; 1 ; https://www.ijmbs.org/ >
+      au < doNotProcess ; 2009 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 1 ; 2009 ; 1 ; https://www.ijmbs.org/ >
       au < released ; 2010 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 2 ; 2010 ; 2 ; https://www.ijmbs.org/ >
       au < released ; 2011 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 3 ; 2011 ; 3 ; https://www.ijmbs.org/ >
-      au < notReady ; 2012 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 4 ; 2012 ; 4 ; https://www.ijmbs.org/ > #500 errors
+      au < doNotProcess ; 2012 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 4 ; 2012 ; 4 ; https://www.ijmbs.org/ > #500 errors
       au < released ; 2013 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 5 ; 2013 ; 5 ; https://www.ijmbs.org/ >
       au < released ; 2014 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 6 ; 2014 ; 6 ; https://www.ijmbs.org/ >
       au < released ; 2015 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 7 ; 2015 ; 7 ; https://www.ijmbs.org/ >

@@ -5563,7 +5563,7 @@
 #      changed url to:
 #      param[base_url] = http://ccij-online.org/
 #      Archive at https://ccij-online.org/journal/archives
-      #Moved to Polaris Publication
+      #Moved to Polaris Publication. Archive will stay with Medknow until further notice
 
       au < finished ; finished ; 2012 ; Clinical Cancer Investigation Journal Volume 1 ; 2012 ; 1 ; http://www.ccij-online.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2013 ; Clinical Cancer Investigation Journal Volume 2 ; 2013 ; 2 ; http://www.ccij-online.org/ ; ; reingest5.clockss.org:8082 >
@@ -5576,6 +5576,7 @@
       au < finished ; crawling ; 2020 ; Clinical Cancer Investigation Journal Volume 9 ; 2020 ; 9 ; https://www.ccij-online.org/ ; ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2021 ; Clinical Cancer Investigation Journal Volume 10 ; 2021 ; 10 ; https://www.ccij-online.org/ ; ; reingest4.clockss.org:8082 >
       au < exists ; exists ; 2022 ; Clinical Cancer Investigation Journal Volume 11 ; 2022 ; 11 ; https://ccij-online.org/ ; ; >
+      #deactivated
 
   }
 
@@ -6355,7 +6356,8 @@
 
       title <
         name = Indian Journal of Oral Health and Research ;
-        issn = 2393-8692
+        issn = 2393-8692 ;
+        eissn = 2543-1978
       >
 
       param[journal_issn] = 2393-8692
@@ -9892,7 +9894,6 @@
 
   }
 
-
   {
 
       title <
@@ -9902,12 +9903,12 @@
 
       param[journal_issn] = 1947-489X
 #      param[base_url] = http://www.ijmbs.org/
-      #Moving to Thieme Publishing. Archive will stay with Medknow until further notice
+      #Moving to Thieme Publishing.
 
-      au < manifest ; exists ; 2009 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 1 ; 2009 ; 1 ; https://www.ijmbs.org/ ; ; >
-      au < manifest ; exists ; 2010 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 2 ; 2010 ; 2 ; https://www.ijmbs.org/ ; ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 1 ; 2009 ; 1 ; https://www.ijmbs.org/ ; ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 2 ; 2010 ; 2 ; https://www.ijmbs.org/ ; ; >
       au < finished ; crawling ; 2011 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 3 ; 2011 ; 3 ; https://www.ijmbs.org/ ; ; reingest3.clockss.org:8083 >
-      au < notReady ; exists ; 2012 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 4 ; 2012 ; 4 ; https://www.ijmbs.org/ ; ; > #500 errors
+      au < doNotProcess ; doNotProcess ; 2012 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 4 ; 2012 ; 4 ; https://www.ijmbs.org/ ; ; > #500 errors
       au < finished ; crawling ; 2013 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 5 ; 2013 ; 5 ; https://www.ijmbs.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2014 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 6 ; 2014 ; 6 ; https://www.ijmbs.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 7 ; 2015 ; 7 ; https://www.ijmbs.org/ ; ; reingest1.clockss.org:8082 >
@@ -9916,10 +9917,9 @@
       au < finished ; crawling ; 2018 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 10 ; 2018 ; 10 ; https://www.ijmbs.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 11 ; 2019 ; 11 ; https://www.ijmbs.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 12 ; 2020 ; 12 ; https://www.ijmbs.org/ ; ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2021 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 13 ; 2021 ; 13 ; https://www.ijmbs.org/ ; ; >
+      au < frozen ; exists ; 2021 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 13 ; 2021 ; 13 ; https://www.ijmbs.org/ ; ; >
 
   }
-
 
   {
 
