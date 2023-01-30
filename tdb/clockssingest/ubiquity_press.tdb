@@ -575,7 +575,7 @@
 #      param[base_url] = https://njtcg.org/
 
       au < manifest ; exists ; 2020 ; 1 ; Nordic Journal of Transitions, Careers and Guidance Volume 2020 ; 2020 ; https://njtcg.org/ ; >
-      au < crawling ; exists ; 2021 ; 2 ; Nordic Journal of Transitions, Careers and Guidance Volume 2021 ; 2021 ; https://njtcg.org/ ; >
+      au < frozen ; exists ; 2021 ; 2 ; Nordic Journal of Transitions, Careers and Guidance Volume 2021 ; 2021 ; https://njtcg.org/ ; >
       au < crawling ; exists ; 2022 ; 3 ; Nordic Journal of Transitions, Careers and Guidance Volume 2022 ; 2022 ; https://njtcg.org/ ; >
 
   }
@@ -1276,7 +1276,7 @@
       au < finished ; finished ; 2018 ; 2018 ; Journal of Interactive Media in Education Volume 2018 ; 2018 ; https://jime.open.ac.uk/ ; reingest1.clockss.org:8082 > #no www
       au < manifest ; exists ; 2019 ; 2019 ; Journal of Interactive Media in Education Volume 2019 ; 2019 ; https://jime.open.ac.uk/ ; >
       au < manifest ; exists ; 2020 ; 2020 ; Journal of Interactive Media in Education Volume 2020 ; 2020 ; https://jime.open.ac.uk/ ; >
-      au < crawling ; exists ; 2021 ; 2021 ; Journal of Interactive Media in Education Volume 2021 ; 2021 ; https://jime.open.ac.uk/ ; >
+      au < frozen ; exists ; 2021 ; 2021 ; Journal of Interactive Media in Education Volume 2021 ; 2021 ; https://jime.open.ac.uk/ ; >
       au < crawling ; exists ; 2022 ; 2022 ; Journal of Interactive Media in Education Volume 2022 ; 2022 ; https://jime.open.ac.uk/ ; >
     }
   }
@@ -2199,7 +2199,7 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://swisspsychologyopen.com/
 
-      au < crawling ; exists ; 2021 ; 1 ; Swiss Psychology Open Volume 2021 ; 2021 ; https://swisspsychologyopen.com/ ; >
+      au < frozen ; exists ; 2021 ; 1 ; Swiss Psychology Open Volume 2021 ; 2021 ; https://swisspsychologyopen.com/ ; >
       au < crawling ; exists ; 2022 ; 2 ; Swiss Psychology Open Volume 2022 ; 2022 ; https://swisspsychologyopen.com/ ; >
 
   }
@@ -2236,7 +2236,7 @@
       au < manifest ; exists ; 2018 ; 5 ; Journal of Philosophy in Schools Volume 2018 ; 2018 ; https://jps.bham.ac.uk/ ; >
       au < manifest ; exists ; 2019 ; 6 ; Journal of Philosophy in Schools Volume 2019 ; 2019 ; https://jps.bham.ac.uk/ ; >
       au < finished ; finished ; 2020 ; 7 ; Journal of Philosophy in Schools Volume 2020 ; 2020 ; https://jps.bham.ac.uk/ ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2021 ; 8 ; Journal of Philosophy in Schools Volume 2021 ; 2021 ; https://jps.bham.ac.uk/ ; > #no substance
+      au < frozen ; exists ; 2021 ; 8 ; Journal of Philosophy in Schools Volume 2021 ; 2021 ; https://jps.bham.ac.uk/ ; > #no substance
       au < crawling ; exists ; 2022 ; 9 ; Journal of Philosophy in Schools Volume 2022 ; 2022 ; https://jps.bham.ac.uk/ ; > #no substance
 
   }
@@ -3204,7 +3204,7 @@
 #      param[base_url] = https://www.seejournal.org/
 
       au < manifest ; exists ; 2020 ; 1 ; Studies in Engineering Education Volume 2020 ; 2020 ; https://www.seejournal.org/ ; >
-      au < crawling ; exists ; 2021 ; 2 ; Studies in Engineering Education Volume 2021 ; 2021 ; https://www.seejournal.org/ ; >
+      au < frozen ; exists ; 2021 ; 2 ; Studies in Engineering Education Volume 2021 ; 2021 ; https://www.seejournal.org/ ; >
       au < crawling ; exists ; 2022 ; 3 ; Studies in Engineering Education Volume 2022 ; 2022 ; https://www.seejournal.org/ ; >
 
   }
@@ -3472,7 +3472,7 @@
       au < manifest ; exists ; 2018 ; 70 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2018 ; 2018 ; https://a.tellusjournals.se/ ; >
       au < manifest ; exists ; 2019 ; 71 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2019 ; 2019 ; https://a.tellusjournals.se/ ; >
       au < manifest ; exists ; 2020 ; 72 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2020 ; 2020 ; https://a.tellusjournals.se/ ; >
-      au < crawling ; exists ; 2021 ; 73 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2021 ; 2021 ; https://a.tellusjournals.se/ ; >
+      au < frozen ; exists ; 2021 ; 73 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2021 ; 2021 ; https://a.tellusjournals.se/ ; >
       au < notReady ; exists ; 2022 ; 74 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2022 ; 2022 ; https://a.tellusjournals.se/ ; > #Lists all volumes.
 
   }
@@ -3526,7 +3526,7 @@
       au < manifest ; exists ; 2018 ; 36 ; Tellus B: Chemical and Physical Meteorology Volume 2018 ; 2018 ; https://b.tellusjournals.se/ ; >
       au < manifest ; exists ; 2019 ; 37 ; Tellus B: Chemical and Physical Meteorology Volume 2019 ; 2019 ; https://b.tellusjournals.se/ ; >
       au < manifest ; exists ; 2020 ; 38 ; Tellus B: Chemical and Physical Meteorology Volume 2020 ; 2020 ; https://b.tellusjournals.se/ ; >
-      au < crawling ; exists ; 2021 ; 39 ; Tellus B: Chemical and Physical Meteorology Volume 2021 ; 2021 ; https://b.tellusjournals.se/ ; >
+      au < frozen ; exists ; 2021 ; 39 ; Tellus B: Chemical and Physical Meteorology Volume 2021 ; 2021 ; https://b.tellusjournals.se/ ; >
       au < notReady ; exists ; 2022 ; 40 ; Tellus B: Chemical and Physical Meteorology Volume 2022 ; 2022 ; https://b.tellusjournals.se/ ; > # Lists all volumes.
 
   }
