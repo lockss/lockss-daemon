@@ -29,7 +29,12 @@ cp test/src/org/lockss/test/MockConfigurablePluginV3.xml ${tmproot}/classes/org/
 
 test/scripts/genplugin --jar=good-plugin3.jar --plugin=${tmproot}/classes/org/lockss/test/MockConfigurablePlugin.xml --plugin-root=${tmproot}/classes --alias=goodguy --keystore test/src/org/lockss/test/goodguy.keystore --password f00bar "--titledb="
 
-cp plugins/jars/good-plugin.jar test/src/org/lockss/test
-cp plugins/jars/good-plugin2.jar test/src/org/lockss/test
-cp plugins/jars/good-plugin3.jar test/src/org/lockss/test
+# bad-plugin.jar contains MockConfigurablePlugin signed by an expired key.
+test/scripts/genplugin --jar=bad-plugin.jar --plugin=test/src/org/lockss/test/MockConfigurablePlugin.xml --plugin-root=./test/src --alias=badguy --keystore test/src/org/lockss/test/badguy.keystore --password f00bar "--titledb="
+
+cp plugins/jars/good-plugin.jar \
+   plugins/jars/good-plugin2.jar \
+   plugins/jars/good-plugin3.jar \
+   plugins/jars/bad-plugin.jar \
+   test/src/org/lockss/test
 rm -rf ${tmproot}
