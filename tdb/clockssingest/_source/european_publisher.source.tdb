@@ -32,7 +32,7 @@
 
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/futureacademy-released/
 
-      au < expected ; exists ; 2023 ; European Publisher Source Content 2023 ; 2023 >
+      au < manifest ; exists ; 2023 ; European Publisher Source Content 2023 ; 2023 >
 
     }
 
