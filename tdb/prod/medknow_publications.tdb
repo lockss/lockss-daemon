@@ -559,7 +559,7 @@
 
     param[journal_issn] = 2773-1316
 
-    au < exists ; 2022 ; Chronicle of Diabetes Research and Practice Volume 1 ; 2022 ; 1 ; https://cdrpj.org/ >
+    au < manifest ; 2022 ; Chronicle of Diabetes Research and Practice Volume 1 ; 2022 ; 1 ; https://cdrpj.org/ >
 
   }
 
@@ -3654,7 +3654,7 @@
 
     param[journal_issn] = 2949-6594
 
-    au < exists ; 2022 ; Journal of Preventive, Diagnostic and Treatment Strategies in Medicine Volume 1 ; 2022 ; 1 ; https://www.jpdtsm.com/ >
+    au < manifest ; 2022 ; Journal of Preventive, Diagnostic and Treatment Strategies in Medicine Volume 1 ; 2022 ; 1 ; https://www.jpdtsm.com/ >
 
   }
 
@@ -9660,8 +9660,8 @@
 
       param[journal_issn] = 2773-0387
 
-      au < exists ; 2021 ; Integrative Medicine in Nephrology and Andrology Volume 8 ; 2021 ; 8 ; https://journal-imna.com/ >
-      au < exists ; 2022 ; Integrative Medicine in Nephrology and Andrology Volume 9 ; 2022 ; 9 ; https://journal-imna.com/ >
+      au < manifest ; 2021 ; Integrative Medicine in Nephrology and Andrology Volume 8 ; 2021 ; 8 ; https://journal-imna.com/ >
+      au < manifest ; 2022 ; Integrative Medicine in Nephrology and Andrology Volume 9 ; 2022 ; 9 ; https://journal-imna.com/ >
       #deactivated
 
   }

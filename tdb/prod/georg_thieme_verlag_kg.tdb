@@ -664,14 +664,14 @@
       comment[years] = 2015-current
       #Moved from Medknow.
 
-    au < exists ; 2015 ; 2015 ; Asian Journal of Neurosurgery Volume 10 ; 10 >
-    au < exists ; 2016 ; 2016 ; Asian Journal of Neurosurgery Volume 11 ; 11 >
-    au < exists ; 2017 ; 2017 ; Asian Journal of Neurosurgery Volume 12 ; 12 >
-    au < exists ; 2018 ; 2018 ; Asian Journal of Neurosurgery Volume 13 ; 13 >
-    au < exists ; 2019 ; 2019 ; Asian Journal of Neurosurgery Volume 14 ; 14 >
-    au < exists ; 2020 ; 2020 ; Asian Journal of Neurosurgery Volume 15 ; 15 >
-    au < exists ; 2021 ; 2021 ; Asian Journal of Neurosurgery Volume 16 ; 16 >
-    au < exists ; 2022 ; 2022 ; Asian Journal of Neurosurgery Volume 17 ; 17 >
+    au < manifest ; 2015 ; 2015 ; Asian Journal of Neurosurgery Volume 10 ; 10 >
+    au < manifest ; 2016 ; 2016 ; Asian Journal of Neurosurgery Volume 11 ; 11 >
+    au < manifest ; 2017 ; 2017 ; Asian Journal of Neurosurgery Volume 12 ; 12 >
+    au < manifest ; 2018 ; 2018 ; Asian Journal of Neurosurgery Volume 13 ; 13 >
+    au < manifest ; 2019 ; 2019 ; Asian Journal of Neurosurgery Volume 14 ; 14 >
+    au < manifest ; 2020 ; 2020 ; Asian Journal of Neurosurgery Volume 15 ; 15 >
+    au < manifest ; 2021 ; 2021 ; Asian Journal of Neurosurgery Volume 16 ; 16 >
+    au < manifest ; 2022 ; 2022 ; Asian Journal of Neurosurgery Volume 17 ; 17 >
 
    }
 
@@ -2434,14 +2434,14 @@
       comment[years] = 2015-current
       #Moved from Medknow.
 
-      au < exists ; 2015 ; 2015 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 7 ; 7 >
-      au < exists ; 2016 ; 2016 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 8 ; 8 >
-      au < exists ; 2017 ; 2017 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 9 ; 9 >
-      au < exists ; 2018 ; 2018 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 10 ; 10 >
-      au < exists ; 2019 ; 2019 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 11 ; 11 >
-      au < exists ; 2020 ; 2020 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 12 ; 12 >
-      au < exists ; 2021 ; 2021 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 13 ; 13 >
-      au < exists ; 2022 ; 2022 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 14 ; 14 >
+      au < manifest ; 2015 ; 2015 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 7 ; 7 >
+      au < manifest ; 2016 ; 2016 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 8 ; 8 >
+      au < manifest ; 2017 ; 2017 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 9 ; 9 >
+      au < manifest ; 2018 ; 2018 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 10 ; 10 >
+      au < manifest ; 2019 ; 2019 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 11 ; 11 >
+      au < manifest ; 2020 ; 2020 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 12 ; 12 >
+      au < manifest ; 2021 ; 2021 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 13 ; 13 >
+      au < manifest ; 2022 ; 2022 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 14 ; 14 >
 
   }
 
@@ -9198,7 +9198,7 @@
     #moved from Medknow, 2022
     #year 2015 to 2021 had been processed under Medknow
 
-    au < exists ; 2022 ; 2022 ; World Journal of Nuclear Medicine Volume 21 ; 21 >
+    au < manifest ; 2022 ; 2022 ; World Journal of Nuclear Medicine Volume 21 ; 21 >
 
   }
 }
