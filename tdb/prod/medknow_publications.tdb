@@ -9352,14 +9352,14 @@
 
       param[journal_issn] = 1682-606X
 #      param[base_url] = http://www.e-fjs.org/
-      #move to LWW in 2023
+      #move to LWW in 2023, moved https://journals.lww.com/fjs/
 
-      au < released ; 2017 ; Formosan Journal of Surgery Volume 50 ; 2017 ; 50 ; http://www.e-fjs.org/ >
-      au < released ; 2018 ; Formosan Journal of Surgery Volume 51 ; 2018 ; 51 ; https://www.e-fjs.org/ >
-      au < released ; 2019 ; Formosan Journal of Surgery Volume 52 ; 2019 ; 52 ; https://www.e-fjs.org/ >
-      au < released ; 2020 ; Formosan Journal of Surgery Volume 53 ; 2020 ; 53 ; https://www.e-fjs.org/ >
-      au < released ; 2021 ; Formosan Journal of Surgery Volume 54 ; 2021 ; 54 ; https://www.e-fjs.org/ >
-      au < manifest ; 2022 ; Formosan Journal of Surgery Volume 55 ; 2022 ; 55 ; https://www.e-fjs.org/ >
+      au < down ; 2017 ; Formosan Journal of Surgery Volume 50 ; 2017 ; 50 ; http://www.e-fjs.org/ >
+      au < down ; 2018 ; Formosan Journal of Surgery Volume 51 ; 2018 ; 51 ; https://www.e-fjs.org/ >
+      au < down ; 2019 ; Formosan Journal of Surgery Volume 52 ; 2019 ; 52 ; https://www.e-fjs.org/ >
+      au < down ; 2020 ; Formosan Journal of Surgery Volume 53 ; 2020 ; 53 ; https://www.e-fjs.org/ >
+      au < down ; 2021 ; Formosan Journal of Surgery Volume 54 ; 2021 ; 54 ; https://www.e-fjs.org/ >
+      au < doNotProcess ; 2022 ; Formosan Journal of Surgery Volume 55 ; 2022 ; 55 ; https://www.e-fjs.org/ >
       #deactivated
 
   }
@@ -9659,6 +9659,7 @@
       >
 
       param[journal_issn] = 2773-0387
+      #move to LWW, Archive will stay with Medknow until further notice
 
       au < manifest ; 2021 ; Integrative Medicine in Nephrology and Andrology Volume 8 ; 2021 ; 8 ; https://journal-imna.com/ >
       au < manifest ; 2022 ; Integrative Medicine in Nephrology and Andrology Volume 9 ; 2022 ; 9 ; https://journal-imna.com/ >
