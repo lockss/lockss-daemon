@@ -439,7 +439,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Drinking Water Engineering and Science Volume 11 ; 11 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Drinking Water Engineering and Science Volume 12 ; 12 ; >
       au < finished ; crawling ; 2020 ; 2020 ; Drinking Water Engineering and Science Volume 13 ; 13 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2021 ; 2021 ; Drinking Water Engineering and Science Volume 14 ; 14 ; >
+      au < finished ; manifest ; 2021 ; 2021 ; Drinking Water Engineering and Science Volume 14 ; 14 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2022 ; 2022 ; Drinking Water Engineering and Science Volume 15 ; 15 ; >
 
   }
@@ -829,7 +829,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Geoscientific Model Development Volume 11 ; 11 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Geoscientific Model Development Volume 12 ; 12 ; >
       au < finished ; crawling ; 2020 ; 2020 ; Geoscientific Model Development Volume 13 ; 13 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2021 ; 2021 ; Geoscientific Model Development Volume 14 ; 14 ; >
+      au < finished ; manifest ; 2021 ; 2021 ; Geoscientific Model Development Volume 14 ; 14 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2022 ; 2022 ; Geoscientific Model Development Volume 15 ; 15 ; >
 
   }
@@ -1081,7 +1081,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Natural Hazards and Earth System Sciences Volume 18 ; 18 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Natural Hazards and Earth System Sciences Volume 19 ; 19 ; >
       au < finished ; crawling ; 2020 ; 2020 ; Natural Hazards and Earth System Sciences Volume 20 ; 20 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2021 ; 2021 ; Natural Hazards and Earth System Sciences Volume 21 ; 21 ; >
+      au < finished ; manifest ; 2021 ; 2021 ; Natural Hazards and Earth System Sciences Volume 21 ; 21 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2022 ; 2022 ; Natural Hazards and Earth System Sciences Volume 22 ; 22 ; >
 
   }
@@ -1158,7 +1158,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Ocean Science Volume 14 ; 14 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Ocean Science Volume 15 ; 15 ; >
       au < finished ; crawling ; 2020 ; 2020 ; Ocean Science Volume 16 ; 16 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2021 ; 2021 ; Ocean Science Volume 17 ; 17 ; >
+      au < finished ; manifest ; 2021 ; 2021 ; Ocean Science Volume 17 ; 17 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2022 ; 2022 ; Ocean Science Volume 18 ; 18 ; >
 
   }
@@ -1292,7 +1292,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Scientific Drilling Volume 22 ; 22 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Scientific Drilling Volume 23 ; 23 ; >
       au < finished ; crawling ; 2020 ; 2020 ; Scientific Drilling Volume 24 ; 24 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2021 ; 2021 ; Scientific Drilling Volume 25 ; 25 ; >
+      au < finished ; manifest ; 2021 ; 2021 ; Scientific Drilling Volume 25 ; 25 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2022 ; 2022 ; Scientific Drilling Volume 26 ; 26 ; >
 
   }
@@ -1442,7 +1442,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Web Ecology Volume 18 ; 18 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Web Ecology Volume 19 ; 19 ; >
       au < finished ; crawling ; 2020 ; 2020 ; Web Ecology Volume 20 ; 20 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2021 ; 2021 ; Web Ecology Volume 21 ; 21 ; >
+      au < finished ; manifest ; 2021 ; 2021 ; Web Ecology Volume 21 ; 21 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2022 ; 2022 ; Web Ecology Volume 22 ; 22 ; >
 
   }
