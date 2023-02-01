@@ -24,6 +24,15 @@
      #No more AUs. Moving to https.
      }
      {
+     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/iopjatsrp1-released/
+
+     au < manifest ; exists ; 2022 ; IOP Publishing JATS Source Replace Content 2020-2021 V1 ; 2022_01 >
+     au < manifest ; exists ; 2022 ; IOP Publishing JATS Source Replace Content 2020-2021 V2 ; 2022_02 >
+     au < manifest ; exists ; 2022 ; IOP Publishing JATS Source Replace Content 2020-2021 V3 ; 2022_03 >
+     au < manifest ; exists ; 2022 ; IOP Publishing JATS Source Replace Content 2020-2021 V4 ; 2022_04 >
+
+     }
+     {
      param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/iopjats-released/
 
      au < readySource ; crawling ; 2023 ; IOP Publishing JATS Source Content 2023_01 ; 2023_01 >
@@ -48,15 +57,15 @@
       au < zapped ; finished ; 2019 ; IOP Publishing Source Content 2019_3 ; 2019_3 >
       au < zapped ; finished ; 2019 ; IOP Publishing Source Content 2019_4 ; 2019_4 >
 
-      au < zapped ; finished ; 2020 ; IOP Publishing Source Content 2020_1 ; 2020_1 >
-      au < readySource ; finished ; 2020 ; IOP Publishing Source Content 2020_2 ; 2020_2 >
-      au < readySource ; finished ; 2020 ; IOP Publishing Source Content 2020_3 ; 2020_3 >
-      au < readySource ; finished ; 2020 ; IOP Publishing Source Content 2020_4 ; 2020_4 >
+#      au < zapped ; finished ; 2020 ; IOP Publishing Source Content 2020_1 ; 2020_1 >
+#      au < readySource ; finished ; 2020 ; IOP Publishing Source Content 2020_2 ; 2020_2 >
+#      au < readySource ; finished ; 2020 ; IOP Publishing Source Content 2020_3 ; 2020_3 >
+#      au < readySource ; finished ; 2020 ; IOP Publishing Source Content 2020_4 ; 2020_4 >
 
-      au < readySource ; finished ; 2021 ; IOP Publishing Source Content 2021_01 ; 2021_01 >
-      au < readySource ; finished ; 2021 ; IOP Publishing Source Content 2021_02 ; 2021_02 >
-      au < readySource ; finished ; 2021 ; IOP Publishing Source Content 2021_03 ; 2021_03 >
-      au < readySource ; finished ; 2021 ; IOP Publishing Source Content 2021_04 ; 2021_04 >
+#      au < readySource ; finished ; 2021 ; IOP Publishing Source Content 2021_01 ; 2021_01 >
+#      au < readySource ; finished ; 2021 ; IOP Publishing Source Content 2021_02 ; 2021_02 >
+#      au < readySource ; finished ; 2021 ; IOP Publishing Source Content 2021_03 ; 2021_03 >
+#      au < readySource ; finished ; 2021 ; IOP Publishing Source Content 2021_04 ; 2021_04 >
 
       au < readySource ; crawling ; 2022 ; IOP Publishing Source Content 2022_01 ; 2022_01 >
       #no more buckets for this plugin
