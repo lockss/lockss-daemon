@@ -109,7 +109,7 @@
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/springerjats-released/
 
       au < readySource ; crawling ; 2023 ; Springer Source Content 2023_01 ; 2023_01 >
-      au < manifest ; exists ; 2023 ; Springer Source Content 2023_02 ; 2023_02 >
+      au < readySource ; crawling ; 2023 ; Springer Source Content 2023_02 ; 2023_02 >
       au < expected ; exists ; 2023 ; Springer Source Content 2023_03 ; 2023_03 >
       au < expected ; exists ; 2023 ; Springer Source Content 2023_04 ; 2023_04 >
       au < expected ; exists ; 2023 ; Springer Source Content 2023_05 ; 2023_05 >
