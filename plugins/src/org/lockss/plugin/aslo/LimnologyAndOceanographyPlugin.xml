@@ -1,3 +1,34 @@
+<!--
+
+Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
 <map>
   <entry>
     <string>plugin_status</string>
@@ -8,12 +39,8 @@
     <string>org.lockss.plugin.aslo.LimnologyAndOceanographyPlugin</string>
   </entry>
   <entry>
-    <string>au_def_pause_time</string>
-    <long>120000</long>
-  </entry>
-  <entry>
     <string>plugin_version</string>
-    <string>9</string>
+    <string>10</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -33,51 +60,8 @@
     </map>
   </entry>
   <entry>
-    <string>au_name</string>
-    <string>&quot;ASLO Plugin (Limnology and Oceanography), Base URL %s, Journal ID %s, Volume %s&quot;, base_url, journal_id, volume_name</string>
-  </entry>
-  <entry>
     <string>plugin_name</string>
     <string>ASLO Plugin (Limnology and Oceanography)</string>
-  </entry>
-  <entry>
-    <string>au_def_new_content_crawl</string>
-    <long>1209600000</long>
-  </entry>
-  <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%s%s/toc/vol_%s/&quot;, base_url, journal_id, volume_name</string>
-    </list>
-  </entry>
-  <entry>
-    <string>au_start_url</string>
-    <string>&quot;%s%s/toc/vol_%s/lockss.html&quot;, base_url, journal_id, volume_name</string>
-  </entry>
-  <entry>
-    <string>au_substance_url_pattern</string>
-      <list>
-        <string>&quot;^%s%s/toc/vol_%s/[^/]+/[^/]+.pdf$&quot;, base_url, journal_id, volume_name</string>
-      </list>
-  </entry>
-  <entry>
-  	<string>au_feature_urls</string>
-  	<map>
-	  <entry>
-	    <string>au_title</string>
-	    <string>&quot;%s%s/toc/index.html&quot;, base_url, journal_id</string>
-	  </entry>
-	  <entry>
-	    <string>au_volume</string>
-      <string>1,&quot;^%s%s/toc/vol_%s/&quot;, base_url, journal_id, volume_name</string>
-	  </entry>
-	  <entry>
-	    <string>au_issue</string>
-	    <string>&quot;%s%s/toc/vol_%s/issue_%s&quot;, base_url, journal_id, volume_name, issue</string>
-	  </entry>
-  	</map>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -111,7 +95,54 @@
     </list>
   </entry>
   <entry>
+    <string>au_name</string>
+    <string>"ASLO Plugin (Limnology and Oceanography), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%s%s/toc/vol_%s/lockss.html", base_url, journal_id, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%s%s/toc/vol_%s/", base_url, journal_id, volume_name</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+      <list>
+        <string>"^%s%s/toc/vol_%s/[^/]+/[^/]+.pdf$", base_url, journal_id, volume_name</string>
+      </list>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>120000</long>
+  </entry>
+  <entry>
     <string>plugin_fetch_rate_limiter_source</string>
     <string>key:ASLO</string>
+  </entry>
+  <entry>
+  	<string>au_feature_urls</string>
+  	<map>
+	  <entry>
+	    <string>au_title</string>
+	    <string>"%s%s/toc/index.html", base_url, journal_id</string>
+	  </entry>
+	  <entry>
+	    <string>au_volume</string>
+      <string>1,"^%s%s/toc/vol_%s/", base_url, journal_id, volume_name</string>
+	  </entry>
+	  <entry>
+	    <string>au_issue</string>
+	    <string>"%s%s/toc/vol_%s/issue_%s", base_url, journal_id, volume_name, issue</string>
+	  </entry>
+  	</map>
   </entry>
 </map>

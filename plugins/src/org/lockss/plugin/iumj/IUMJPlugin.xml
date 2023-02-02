@@ -1,3 +1,34 @@
+<!--
+
+Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
 <map>
   <entry>
     <string>plugin_status</string>
@@ -9,7 +40,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -31,49 +62,6 @@
   <entry>
     <string>plugin_name</string>
     <string>Indiana University Mathematics Journal Plugin (Legacy)</string>
-  </entry>
-  <entry>
-    <string>au_name</string>
-    <string>"Indiana University Mathematics Journal Plugin (Legacy), Base URL %s, Year %d, Volume %s", base_url, year, volume_name</string>
-  </entry>
-  <entry>
-    <string>au_start_url</string>
-    <string>"%sIUMJ/YEAR/%d", base_url, year</string>
-  </entry>
-  <entry>
-    <string>au_feature_urls</string>
-    <map>
-      <entry>
-        <string>au_title</string>
-        <string>"%s", base_url</string>
-      </entry>
-      <entry>
-        <string>au_volume</string>
-        <string>"%sIUMJ/YEAR/%d", base_url, year</string>
-      </entry>      
-      <entry>
-        <string>au_issue</string>
-        <string>"%sIUMJ/YEAR/%d/%s", base_url, year, issue</string>
-      </entry>
-    </map>
-  </entry>
-  <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>1,"^%sIUMJ/(YEAR|ABS|FULLTEXT|FTDLOAD)/%d/", base_url, year</string>
-      <string>1,"^%sMETA/%d/([^/])+", base_url, year</string>
-      <string>1,"^%s(Images|icons)/", base_url</string>
-      <string>1,"^%sstylesheet/([^/])+\.css$", base_url</string>
-      <string>1,"^%soai/%d/%s/([^/])+/([^/])+", base_url, year, volume_name</string>
-      <string>4,"^%s", base_url</string>
-    </list>
-  </entry>
-  <entry>
-    <string>au_substance_url_pattern</string>
-    
-    <list>
-      <string>"^%sIUMJ/FTDLOAD/%d/%s/([^/])+/pdf$", base_url, year, volume_name</string>
-      </list>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -107,6 +95,39 @@
     </list>
   </entry>
   <entry>
+    <string>au_name</string>
+    <string>"Indiana University Mathematics Journal Plugin (Legacy), Base URL %s, Year %d, Volume %s", base_url, year, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%sIUMJ/YEAR/%d", base_url, year</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^%sIUMJ/(YEAR|ABS|FULLTEXT|FTDLOAD)/%d/", base_url, year</string>
+      <string>1,"^%sMETA/%d/([^/])+", base_url, year</string>
+      <string>1,"^%s(Images|icons)/", base_url</string>
+      <string>1,"^%sstylesheet/([^/])+\.css$", base_url</string>
+      <string>1,"^%soai/%d/%s/([^/])+/([^/])+", base_url, year, volume_name</string>
+      <string>4,"^%s", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>1000</long>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^%sIUMJ/FTDLOAD/%d/%s/([^/])+/pdf$", base_url, year, volume_name</string>
+    </list>
+  </entry>
+  <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.iumj.IUMJHtmlHashFilterFactory</string>
   </entry>
@@ -128,11 +149,20 @@
     </map>
   </entry>
   <entry>
-    <string>au_def_pause_time</string>
-    <long>1000</long>
-  </entry>
-  <entry>
-    <string>au_def_new_content_crawl</string>
-    <long>1209600000</long>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <string>au_title</string>
+        <string>"%s", base_url</string>
+      </entry>
+      <entry>
+        <string>au_volume</string>
+        <string>"%sIUMJ/YEAR/%d", base_url, year</string>
+      </entry>      
+      <entry>
+        <string>au_issue</string>
+        <string>"%sIUMJ/YEAR/%d/%s", base_url, year, issue</string>
+      </entry>
+    </map>
   </entry>
 </map>
