@@ -10470,12 +10470,14 @@
 
       param[journal_issn] = 2349-7904
 #      param[base_url] = http://www.jisprm.org/
+     #move to LWW, Archive will stay with Medknow until further notice
 
       au < released ; 2018 ; Journal of the International Society of Physical and Rehabilitation Medicine Volume 1 ; 2018 ; 1 ; https://www.jisprm.org/ >
       au < released ; 2019 ; Journal of the International Society of Physical and Rehabilitation Medicine Volume 2 ; 2019 ; 2 ; https://www.jisprm.org/ >
       au < released ; 2020 ; Journal of the International Society of Physical and Rehabilitation Medicine Volume 3 ; 2020 ; 3 ; https://www.jisprm.org/ >
       au < released ; 2021 ; Journal of the International Society of Physical and Rehabilitation Medicine Volume 4 ; 2021 ; 4 ; https://www.jisprm.org/ >
       au < manifest ; 2022 ; Journal of the International Society of Physical and Rehabilitation Medicine Volume 5 ; 2022 ; 5 ; https://www.jisprm.org/ >
+      #deactivated
 
   }
 
