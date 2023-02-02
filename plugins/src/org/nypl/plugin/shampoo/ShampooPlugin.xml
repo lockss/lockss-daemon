@@ -1,21 +1,48 @@
+<!--
+
+Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>deprecated</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
     <string>org.nypl.plugin.shampoo.ShampooPlugin</string>
   </entry>
   <entry>
-    <string>au_def_pause_time</string>
-    <long>6000</long>
+    <string>plugin_version</string>
+    <string>6</string>
   </entry>
   <entry>
-    <string>plugin_version</string>
-    <string>5</string>
-  </entry>
-    <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
@@ -33,35 +60,8 @@
     </map>
   </entry>
   <entry>
-    <string>au_name</string>
-    <string>&quot;Shampoo Plugin, Base URL %s, Year %d&quot;, base_url, year</string>
-  </entry>
-  <entry>
-    <string>au_def_new_content_crawl</string>
-    <long>1209600000</long>
-  </entry>
-  <entry>
     <string>plugin_name</string>
     <string>Shampoo Plugin</string>
-  </entry>
-  <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%slockss/lockss-%d\.html$&quot;, base_url, year</string>
-      <string>1,&quot;^%sShampoo%s/&quot;, base_url, issue_set</string>
-    </list>
-  </entry>
-  <entry>
-    <string>au_start_url</string>
-    <string>&quot;%slockss/lockss-%d.html&quot;, base_url, year</string>
-  </entry>
-  <entry>
-    <string>au_substance_url_pattern</string>
-    <list>
-    <!--  generally, <lastname>.html, but some use hyphens or numbers, etc -->
-      <string>"^%sShampoo%s/[^/]+\.html?$", base_url, issue_set</string>
-    </list>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -93,6 +93,37 @@
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Shampoo Plugin, Base URL %s, Year %d Issue Set %s", base_url, year, issue_set</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%slockss/lockss-%d.html", base_url, year</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%slockss/lockss-%d\.html$", base_url, year</string>
+      <string>1,"^%sShampoo%s/", base_url, issue_set</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+    <!--  generally, <lastname>.html, but some use hyphens or numbers, etc -->
+      <string>"^%sShampoo%s/[^/]+\.html?$", base_url, issue_set</string>
     </list>
   </entry>
 </map>
