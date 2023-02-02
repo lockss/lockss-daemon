@@ -14,7 +14,7 @@
     
     {
     
-      plugin = org.lockss.plugin.atypon.GenericAtyponPlugin
+      plugin = org.lockss.plugin.atypon.uchicagopress.UChicagoPressPlugin
       param[base_url] = https://www.journals.uchicago.edu/
       implicit < status ; year ; name ; param[volume_name] >
       param[journal_id] = aja
