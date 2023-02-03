@@ -45,7 +45,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -77,5 +77,9 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>plugin_url_consumer_factory</string>
     <string>org.lockss.plugin.atypon.BaseAtyponHttpToHttpsUrlConsumerFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.atypon.uchicagopress.UChicagoHtmlHashFilterFactory</string>
   </entry>
 </map>
