@@ -1,12 +1,12 @@
 {
 
   publisher <
-    name = University of Baghdad College of Fine Arts ;
+    name = University of Baghdad, College of Fine Arts ;
     info[contract] = 2022 ;
     info[back] = 2018 ;
     info[tester] = 8 ;
     info[poller] = 8 ;
-    info[platform] = OJS3
+    info[platform] = OJS3 3.3.0.13
   >
 
     implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
@@ -41,22 +41,6 @@
       au < finished ; crawling ; 2021 ; Al-Academy Journal Volume 99-102 ; 99-102 ; 2021 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2022 ; Al-Academy Journal Volume 103 ; 103 ; 2022 ; >
     
-  }
-  {
-
-    title <
-      name = Al-Adab Journal ;
-      issn = 1994-473X ;
-      eissn = 2706-9931
-    >
-    # needs agreeement as of 10-21-22
-    # https://jirasul.stanford.edu/jira/browse/LXPUB-645
-
-      param[base_url] = https://aladabj.uobaghdad.edu.iq/
-      param[journal_id] = aladabjournal
-
-      au < testing ; exists ; 2022 ; Al-Adab Journal Volume 1-3 ; 1-3 ; 2022 ; >
-
   }
 
 }
