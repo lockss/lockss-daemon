@@ -1,0 +1,98 @@
+{
+
+  publisher <
+    name = IEREK ;
+    info[contract] = 2023 ;
+    info[back] = 2016 ;
+    info[tester] = 5 ;
+    info[poller] = 8 ;
+    info[platform] = OJS3. Open Journal Systems 3.3.0.13
+  >
+
+    #OJS3
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    attr[start_stem] = index.php/
+    #attr[primary_locale] = es_ES
+
+    implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
+
+  {
+  
+    title < 
+      name = Environmental Sciences and Sustainable Development ;
+      issn = 2357-0849 ;
+      eissn = 2357-0857 
+    >
+
+      #published 2016 to present
+      param[journal_id] = ESSD
+      param[base_url] = https://press.ierek.com/
+
+      au < manifest ; exists ; 2016 ; Environmental Sciences and Sustainable Development Volume 2016 ; 1 ; 2016 ; >
+      au < manifest ; exists ; 2017 ; Environmental Sciences and Sustainable Development Volume 2017 ; 2 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; Environmental Sciences and Sustainable Development Volume 2018 ; 3 ; 2018 ; >
+      au < manifest ; exists ; 2019 ; Environmental Sciences and Sustainable Development Volume 2019 ; 4 ; 2019 ; >
+      au < manifest ; exists ; 2020 ; Environmental Sciences and Sustainable Development Volume 2020 ; 5 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; Environmental Sciences and Sustainable Development Volume 2021 ; 6 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; Environmental Sciences and Sustainable Development Volume 2022 ; 7 ; 2022 ; >
+      au < exists ; exists ; 2023 ; Environmental Sciences and Sustainable Development Volume 2023 ; 8 ; 2023 ; >
+
+  }
+
+  {
+  
+    title < 
+      name = The Academic Research Community Publication ;
+      issn = 2537-0154 ;
+      eissn = 2537-0162 
+    >
+
+      #published 2017 to present
+      param[journal_id] = ARChive
+      param[base_url] = https://press.ierek.com/
+
+      au < manifest ; exists ; 2017 ; The Academic Research Community Publication Volume 2017 ; 1 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; The Academic Research Community Publication Volume 2018 ; 2 ; 2018 ; >
+      au < manifest ; exists ; 2019 ; The Academic Research Community Publication Volume 2019 ; 3 ; 2019 ; >
+      au < manifest ; exists ; 2020 ; The Academic Research Community Publication Volume 2020 ; 4 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; The Academic Research Community Publication Volume 2021 ; 5 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; The Academic Research Community Publication Volume 2022 ; 6 ; 2022 ; >
+      au < manifest ; exists ; 2023 ; The Academic Research Community Publication Volume 2023 ; 7 ; 2023 ; >
+
+  }
+
+  {
+  
+    title < 
+      name = Resourceedings ;
+      issn = 2537-0731 ;
+      eissn = 2537-074X 
+    >
+
+      #published 2018 to 2019
+      param[journal_id] = Resourceedings
+      param[base_url] = https://press.ierek.com/
+
+      au < manifest ; exists ; 2018 ; Resourceedings Volume 2018 ; 1 ; 2018 ; >
+      au < manifest ; exists ; 2019 ; Resourceedings Volume 2019 ; 2 ; 2019 ; >
+
+  }
+
+  {
+  
+    title < 
+      name = Baheth ;
+      issn = 2536-9946 ;
+      eissn = 2537-0138 
+    >
+
+      #published 2018 to 2019
+      param[journal_id] = Baheth
+      param[base_url] = https://ierekpress.com/
+
+      au < manifest ; exists ; 2018 ; Baheth Volume 2018 ; 1 ; 2018 ; >
+      au < manifest ; exists ; 2019 ; Baheth Volume 2019 ; 2 ; 2019 ; >
+
+  }
+
+}
