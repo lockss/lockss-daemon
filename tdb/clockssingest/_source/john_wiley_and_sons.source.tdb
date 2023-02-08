@@ -20,7 +20,7 @@
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/wileybooks-released/
 
       au < readySource ; frozen ; 2022 ; Wiley Books Source Content 2022_01 ; 2022_01 >
-      au < readySource ; crawling ; 2022 ; Wiley Books Source Content 2022_02 ; 2022_02 >
+      au < readySource ; frozen ; 2022 ; Wiley Books Source Content 2022_02 ; 2022_02 >
       #No more AUs. Moving to https.
       }
       {
