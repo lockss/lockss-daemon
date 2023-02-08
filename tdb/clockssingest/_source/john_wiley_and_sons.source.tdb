@@ -19,7 +19,7 @@
       {
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/wileybooks-released/
 
-      au < readySource ; crawling ; 2022 ; Wiley Books Source Content 2022_01 ; 2022_01 >
+      au < readySource ; frozen ; 2022 ; Wiley Books Source Content 2022_01 ; 2022_01 >
       au < readySource ; crawling ; 2022 ; Wiley Books Source Content 2022_02 ; 2022_02 >
       #No more AUs. Moving to https.
       }
@@ -70,12 +70,12 @@
       au < readySource ; finished ; 2021 ; Wiley Source Content 2021_05 ; 2021_05 >
       au < readySource ; finished ; 2021 ; Wiley Source Content 2021_06 ; 2021_06 >
 
-      au < readySource ; crawling ; 2022 ; Wiley Source Content 2022_01 ; 2022_01 >
-      au < readySource ; crawling ; 2022 ; Wiley Source Content 2022_02 ; 2022_02 >
-      au < readySource ; crawling ; 2022 ; Wiley Source Content 2022_03 ; 2022_03 >
-      au < readySource ; crawling ; 2022 ; Wiley Source Content 2022_04 ; 2022_04 >
-      au < readySource ; crawling ; 2022 ; Wiley Source Content 2022_05 ; 2022_05 >
-      au < readySource ; crawling ; 2022 ; Wiley Source Content 2022_06 ; 2022_06 >
+      au < readySource ; frozen ; 2022 ; Wiley Source Content 2022_01 ; 2022_01 >
+      au < readySource ; frozen ; 2022 ; Wiley Source Content 2022_02 ; 2022_02 >
+      au < readySource ; frozen ; 2022 ; Wiley Source Content 2022_03 ; 2022_03 >
+      au < readySource ; frozen ; 2022 ; Wiley Source Content 2022_04 ; 2022_04 >
+      au < readySource ; frozen ; 2022 ; Wiley Source Content 2022_05 ; 2022_05 >
+      au < readySource ; frozen ; 2022 ; Wiley Source Content 2022_06 ; 2022_06 >
       #No more AUs. Moving to https.
       }
       {
@@ -114,7 +114,7 @@
     {
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/wileymrw-released/
 
-      au < readySource ; crawling ; 2022 ; Wiley MRW Source Content 2022_01 ; 2022_01 >
+      au < readySource ; frozen ; 2022 ; Wiley MRW Source Content 2022_01 ; 2022_01 >
       #No more AUs. Moving to https.
     }
     {

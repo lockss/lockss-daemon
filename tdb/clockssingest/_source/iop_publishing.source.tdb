@@ -19,17 +19,17 @@
      {
      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/iopjats-released/
 
-     au < readySource ; crawling ; 2022 ; IOP Publishing JATS Source Content 2022_01 ; 2022_01 >
-     au < readySource ; crawling ; 2022 ; IOP Publishing JATS Source Content 2022_02 ; 2022_02 >
+     au < readySource ; frozen ; 2022 ; IOP Publishing JATS Source Content 2022_01 ; 2022_01 >
+     au < readySource ; frozen ; 2022 ; IOP Publishing JATS Source Content 2022_02 ; 2022_02 >
      #No more AUs. Moving to https.
      }
      {
      param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/iopjatsrp1-released/
 
-     au < readySource ; crawling ; 2022 ; IOP Publishing JATS Source Replace Content 2020-2021 V1 ; 2022_01 >
-     au < readySource ; crawling ; 2022 ; IOP Publishing JATS Source Replace Content 2020-2021 V2 ; 2022_02 >
-     au < readySource ; crawling ; 2022 ; IOP Publishing JATS Source Replace Content 2020-2021 V3 ; 2022_03 >
-     au < readySource ; crawling ; 2022 ; IOP Publishing JATS Source Replace Content 2020-2021 V4 ; 2022_04 >
+     au < readySource ; frozen ; 2022 ; IOP Publishing JATS Source Replace Content 2020-2021 V1 ; 2022_01 >
+     au < readySource ; frozen ; 2022 ; IOP Publishing JATS Source Replace Content 2020-2021 V2 ; 2022_02 >
+     au < readySource ; frozen ; 2022 ; IOP Publishing JATS Source Replace Content 2020-2021 V3 ; 2022_03 >
+     au < readySource ; frozen ; 2022 ; IOP Publishing JATS Source Replace Content 2020-2021 V4 ; 2022_04 >
      #no more buckets for this set
      }
      {
@@ -67,7 +67,7 @@
 #      au < readySource ; finished ; 2021 ; IOP Publishing Source Content 2021_03 ; 2021_03 >
 #      au < readySource ; finished ; 2021 ; IOP Publishing Source Content 2021_04 ; 2021_04 >
 
-      au < readySource ; crawling ; 2022 ; IOP Publishing Source Content 2022_01 ; 2022_01 >
+      au < readySource ; frozen ; 2022 ; IOP Publishing Source Content 2022_01 ; 2022_01 >
       #no more buckets for this plugin
     }
     {
@@ -151,7 +151,7 @@
      {
      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/iopecs2019-released/
 
-     au < readySource ; crawling ; 2022 ; IOP Publishing ECS Backfile Source Content 2022_01 ; 2022_01 >
+     au < readySource ; frozen ; 2022 ; IOP Publishing ECS Backfile Source Content 2022_01 ; 2022_01 >
      }
 
 #     #Deleted from production UI, but content exists.
