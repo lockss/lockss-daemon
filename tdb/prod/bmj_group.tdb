@@ -1226,10 +1226,10 @@
 
 comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
-    au < bmj.BMJDrupalPlugin ; exists ; 1995-1996 ; Evidence-Based Medicine Volume 1 ; 1 ; https://mentalhealth.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; exists ; 1997 ; Evidence-Based Medicine Volume 2 ; 2 ; https://mentalhealth.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; exists ; 1998 ; Evidence-Based Medicine Volume 3 ; 3 ; https://mentalhealth.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; exists ; 1999 ; Evidence-Based Medicine Volume 4 ; 4 ; https://mentalhealth.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 1995-1996 ; Evidence-Based Medicine Volume 1 ; 1 ; https://ebm.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 1997 ; Evidence-Based Medicine Volume 2 ; 2 ; https://ebm.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 1998 ; Evidence-Based Medicine Volume 3 ; 3 ; https://ebm.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 1999 ; Evidence-Based Medicine Volume 4 ; 4 ; https://ebm.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2000 ; Evidence-Based Medicine Volume 5 ; 5 ; http://ebm.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2001 ; Evidence-Based Medicine Volume 6 ; 6 ; http://ebm.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2002 ; Evidence-Based Medicine Volume 7 ; 7 ; http://ebm.bmj.com/ >
@@ -1238,7 +1238,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWireStrVolPlugin ; down ; 2005 ; Evidence-Based Medicine Volume 10 ; 10 ; http://ebm.bmj.com/ >
     au < HighWireStrVolPlugin ; down ; 2006 ; Evidence-Based Medicine Volume 11 ; 11 ; http://ebm.bmj.com/ >
     au < HighWireStrVolPlugin ; down ; 2007 ; Evidence-Based Medicine Volume 12 ; 12 ; http://ebm.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; exists ; 2008 ; Evidence-Based Medicine Volume 13 ; 13 ; https://mentalhealth.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2008 ; Evidence-Based Medicine Volume 13 ; 13 ; https://ebm.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2009 ; Evidence-Based Medicine Volume 14 ; 14 ; http://ebm.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2010 ; Evidence-Based Medicine Volume 15 ; 15 ; http://ebm.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2011 ; Evidence-Based Medicine Volume 16 ; 16 ; http://ebm.bmj.com/ >
@@ -1252,7 +1252,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; down ; 2019 ; Evidence-Based Medicine Volume 24 ; 24 ; https://ebm.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; down ; 2020 ; Evidence-Based Medicine Volume 25 ; 25 ; https://ebm.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; down ; 2021 ; Evidence-Based Medicine Volume 26 ; 26 ; https://ebm.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; exists ; 2022 ; Evidence-Based Medicine Volume 27 ; 27 ; https://mentalhealth.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; exists ; 2022 ; Evidence-Based Medicine Volume 27 ; 27 ; https://ebm.bmj.com/ >
 
   }
 
@@ -1284,13 +1284,13 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; down ; 2013 ; Evidence-Based Mental Health Volume 16 ; 16 ; http://ebmh.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2014 ; Evidence-Based Mental Health Volume 17 ; 17 ; http://ebmh.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2015 ; Evidence-Based Mental Health Volume 18 ; 18 ; http://ebmh.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; released ; 2016 ; Evidence-Based Mental Health Volume 19 ; 19 ; https://ebmh.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; released ; 2017 ; Evidence-Based Mental Health Volume 20 ; 20 ; https://ebmh.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; released ; 2018 ; Evidence-Based Mental Health Volume 21 ; 21 ; https://ebmh.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; released ; 2019 ; Evidence-Based Mental Health Volume 22 ; 22 ; https://ebmh.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; released ; 2020 ; Evidence-Based Mental Health Volume 23 ; 23 ; https://ebmh.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; released ; 2021 ; Evidence-Based Mental Health Volume 24 ; 24 ; https://ebmh.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2022 ; Evidence-Based Mental Health Volume 25 ; 25 ; https://ebmh.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; down ; 2016 ; Evidence-Based Mental Health Volume 19 ; 19 ; https://ebmh.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; down ; 2017 ; Evidence-Based Mental Health Volume 20 ; 20 ; https://ebmh.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; down ; 2018 ; Evidence-Based Mental Health Volume 21 ; 21 ; https://ebmh.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; down ; 2019 ; Evidence-Based Mental Health Volume 22 ; 22 ; https://ebmh.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; down ; 2020 ; Evidence-Based Mental Health Volume 23 ; 23 ; https://ebmh.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; down ; 2021 ; Evidence-Based Mental Health Volume 24 ; 24 ; https://ebmh.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; exists ; 2022 ; Evidence-Based Mental Health Volume 25 ; 25 ; https://mentalhealth.bmj.com/ >
 
   }
 
