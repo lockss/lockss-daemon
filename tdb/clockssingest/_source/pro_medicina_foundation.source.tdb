@@ -18,7 +18,7 @@
     {
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/promed-released/
 
-    au < readySource ; crawling ; 2022 ; Pro Medicina Foundation Source Content 2022_01 ; 2022_01 >
+    au < readySource ; frozen ; 2022 ; Pro Medicina Foundation Source Content 2022_01 ; 2022_01 >
     #No more AUs. Moving to https.
     }
     {
