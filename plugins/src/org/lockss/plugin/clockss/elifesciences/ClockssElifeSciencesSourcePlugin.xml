@@ -44,7 +44,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>3</string>
+        <string>4</string>
     </entry>
     <entry>
         <string>plugin_parent</string>
@@ -116,18 +116,5 @@ POSSIBILITY OF SUCH DAMAGE.
                 <string>org.lockss.plugin.clockss.elifesciences.ElifeSciencesSourceXmlMetadataExtractorFactory</string>
             </entry>
         </map>
-    </entry>
-    <entry>
-        <string>au_crawlrules</string>
-        <list>
-            <string>1, "http://clockss-ingest.lockss.org/sourcefiles/elife-released/2020/?$"</string>
-            <string>1, "http://clockss-ingest.lockss.org/sourcefiles/elife-released/2020/elife-06-262.*"</string>
-            <!--
-            <string>1, "http://clockss-ingest.lockss.org/sourcefiles/elife-released/2020/elife-06-26232.r1.zip?$"</string>
-            <string>1, "http://clockss-ingest.lockss.org/sourcefiles/elife-released/2020/elife-06-26231.r4.zip?$"</string>
-            <string>1, "http://clockss-ingest.lockss.org/sourcefiles/elife-released/2020/elife-06-26232.r1.zip.*"</string>
-            <string>1, "http://clockss-ingest.lockss.org/sourcefiles/elife-released/2020/elife-06-26231.r4.zip.*"</string>
-            -->
-        </list>
     </entry>
 </map>
