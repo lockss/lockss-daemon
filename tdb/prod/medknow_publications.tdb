@@ -11112,8 +11112,8 @@
       param[journal_issn] = 2772-8382
       #param[base_url] = https://www.aort.info/
 
-      au < exists ; 2021 ; Annals of Oncology Research and Therapy Volume 1 ; 2021 ; 1 ; https://www.aort.info/ >
-      au < expected ; 2022 ; Annals of Oncology Research and Therapy Volume 2 ; 2022 ; 2 ; https://www.aort.info/ >
+      au < manifest ; 2021 ; Annals of Oncology Research and Therapy Volume 1 ; 2021 ; 1 ; https://www.aort.info/ >
+      au < manifest ; 2022 ; Annals of Oncology Research and Therapy Volume 2 ; 2022 ; 2 ; https://www.aort.info/ >
 
   }
 
