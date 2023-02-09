@@ -2184,13 +2184,13 @@
     param[journal_id] = 100
 
     au < finished ; finished ; 2011 ; Advances in Genomics and Genetics Volume 1 ; 1 ; 2011 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2012 ; Advances in Genomics and Genetics Volume 2 ; 2 ; 2012 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2012 ; Advances in Genomics and Genetics Volume 2 ; 2 ; 2012 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; Advances in Genomics and Genetics Volume 3 ; 3 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Advances in Genomics and Genetics Volume 4 ; 4 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Advances in Genomics and Genetics Volume 5 ; 5 ; 2015 ; >
     au < finished ; finished ; 2016 ; Advances in Genomics and Genetics Volume 6 ; 6 ; 2016 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2017 ; Advances in Genomics and Genetics Volume 7 ; 7 ; 2017 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2018 ; Advances in Genomics and Genetics Volume 8 ; 8 ; 2018 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2017 ; Advances in Genomics and Genetics Volume 7 ; 7 ; 2017 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2018 ; Advances in Genomics and Genetics Volume 8 ; 8 ; 2018 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -2203,17 +2203,17 @@
     
     param[journal_id] = 101
 
-    au < finished ; crawling ; 2011 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 1 ; 1 ; 2011 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2012 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 2 ; 2 ; 2012 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 3 ; 3 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2011 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 1 ; 1 ; 2011 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 2 ; 2 ; 2012 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 3 ; 3 ; 2013 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 4 ; 4 ; 2014 ; >
     au < finished ; finished ; 2015 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 5 ; 5 ; 2015 ; >
     au < finished ; finished ; 2016 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 6 ; 6 ; 2016 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2017 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 7 ; 7 ; 2017 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2018 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 8 ; 8 ; 2018 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2019 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 9 ; 9 ; 2019 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2020 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 10 ; 10 ; 2020 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2021 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 11 ; 11 ; 2021 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2017 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 7 ; 7 ; 2017 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2018 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 8 ; 8 ; 2018 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2019 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 9 ; 9 ; 2019 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 10 ; 10 ; 2020 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2021 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 11 ; 11 ; 2021 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2022 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 12 ; 12 ; 2022 ; >
 
   }
@@ -2227,14 +2227,14 @@
     
     param[journal_id] = 102
 
-    au < finished ; crawling ; 2011 ; Gastrointestinal Cancer: Targets and Therapy Volume 1 ; 1 ; 2011 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2012 ; Gastrointestinal Cancer: Targets and Therapy Volume 2 ; 2 ; 2012 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; Gastrointestinal Cancer: Targets and Therapy Volume 3 ; 3 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2011 ; Gastrointestinal Cancer: Targets and Therapy Volume 1 ; 1 ; 2011 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; Gastrointestinal Cancer: Targets and Therapy Volume 2 ; 2 ; 2012 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Gastrointestinal Cancer: Targets and Therapy Volume 3 ; 3 ; 2013 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Gastrointestinal Cancer: Targets and Therapy Volume 4 ; 4 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Gastrointestinal Cancer: Targets and Therapy Volume 5 ; 5 ; 2015 ; >
     au < finished ; finished ; 2016 ; Gastrointestinal Cancer: Targets and Therapy Volume 6 ; 6 ; 2016 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2017 ; Gastrointestinal Cancer: Targets and Therapy Volume 7 ; 7 ; 2017 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2018 ; Gastrointestinal Cancer: Targets and Therapy Volume 8 ; 8 ; 2018 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2017 ; Gastrointestinal Cancer: Targets and Therapy Volume 7 ; 7 ; 2017 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2018 ; Gastrointestinal Cancer: Targets and Therapy Volume 8 ; 8 ; 2018 ; reingest5.clockss.org:8082 >
 
   }
 
@@ -2247,18 +2247,18 @@
     
     param[journal_id] = 103
 
-    au < finished ; crawling ; 2010 ; Pediatric Health, Medicine and Therapeutics Volume 1 ; 1 ; 2010 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2010 ; Pediatric Health, Medicine and Therapeutics Volume 1 ; 1 ; 2010 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2011 ; Pediatric Health, Medicine and Therapeutics Volume 2 ; 2 ; 2011 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2012 ; Pediatric Health, Medicine and Therapeutics Volume 3 ; 3 ; 2012 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2013 ; Pediatric Health, Medicine and Therapeutics Volume 4 ; 4 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; Pediatric Health, Medicine and Therapeutics Volume 3 ; 3 ; 2012 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; Pediatric Health, Medicine and Therapeutics Volume 4 ; 4 ; 2013 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Pediatric Health, Medicine and Therapeutics Volume 5 ; 5 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Pediatric Health, Medicine and Therapeutics Volume 6 ; 6 ; 2015 ; >
     au < finished ; finished ; 2016 ; Pediatric Health, Medicine and Therapeutics Volume 7 ; 7 ; 2016 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2017 ; Pediatric Health, Medicine and Therapeutics Volume 8 ; 8 ; 2017 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2018 ; Pediatric Health, Medicine and Therapeutics Volume 9 ; 9 ; 2018 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2019 ; Pediatric Health, Medicine and Therapeutics Volume 10 ; 10 ; 2019 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2020 ; Pediatric Health, Medicine and Therapeutics Volume 11 ; 11 ; 2020 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2021 ; Pediatric Health, Medicine and Therapeutics Volume 12 ; 12 ; 2021 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2017 ; Pediatric Health, Medicine and Therapeutics Volume 8 ; 8 ; 2017 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2018 ; Pediatric Health, Medicine and Therapeutics Volume 9 ; 9 ; 2018 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2019 ; Pediatric Health, Medicine and Therapeutics Volume 10 ; 10 ; 2019 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2020 ; Pediatric Health, Medicine and Therapeutics Volume 11 ; 11 ; 2020 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2021 ; Pediatric Health, Medicine and Therapeutics Volume 12 ; 12 ; 2021 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Pediatric Health, Medicine and Therapeutics Volume 13 ; 13 ; 2022 ; >
 
   }
@@ -2272,17 +2272,17 @@
     
     param[journal_id] = 104
 
-    au < finished ; crawling ; 2011 ; Research and Reports in Neonatology Volume 1 ; 1 ; 2011 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2012 ; Research and Reports in Neonatology Volume 2 ; 2 ; 2012 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2011 ; Research and Reports in Neonatology Volume 1 ; 1 ; 2011 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2012 ; Research and Reports in Neonatology Volume 2 ; 2 ; 2012 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2013 ; Research and Reports in Neonatology Volume 3 ; 3 ; 2013 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Research and Reports in Neonatology Volume 4 ; 4 ; 2014 ; >
     au < finished ; finished ; 2015 ; Research and Reports in Neonatology Volume 5 ; 5 ; 2015 ; >
     au < finished ; finished ; 2016 ; Research and Reports in Neonatology Volume 6 ; 6 ; 2016 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2017 ; Research and Reports in Neonatology Volume 7 ; 7 ; 2017 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2018 ; Research and Reports in Neonatology Volume 8 ; 8 ; 2018 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2019 ; Research and Reports in Neonatology Volume 9 ; 9 ; 2019 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2020 ; Research and Reports in Neonatology Volume 10 ; 10 ; 2020 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2021 ; Research and Reports in Neonatology Volume 11 ; 11 ; 2021 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2017 ; Research and Reports in Neonatology Volume 7 ; 7 ; 2017 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2018 ; Research and Reports in Neonatology Volume 8 ; 8 ; 2018 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2019 ; Research and Reports in Neonatology Volume 9 ; 9 ; 2019 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Research and Reports in Neonatology Volume 10 ; 10 ; 2020 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2021 ; Research and Reports in Neonatology Volume 11 ; 11 ; 2021 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Research and Reports in Neonatology Volume 12 ; 12 ; 2022 ; >
 
   }
@@ -2297,8 +2297,8 @@
     param[journal_id] = 105
     #ceased publishing in January 2017
 
-    au < finished ; crawling ; 2011 ; Clinical Oncology in Adolescents and Young Adults Volume 1 ; 1 ; 2011 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2012 ; Clinical Oncology in Adolescents and Young Adults Volume 2 ; 2 ; 2012 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2011 ; Clinical Oncology in Adolescents and Young Adults Volume 1 ; 1 ; 2011 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2012 ; Clinical Oncology in Adolescents and Young Adults Volume 2 ; 2 ; 2012 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Clinical Oncology in Adolescents and Young Adults Volume 3 ; 3 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Clinical Oncology in Adolescents and Young Adults Volume 4 ; 4 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Clinical Oncology in Adolescents and Young Adults Volume 5 ; 5 ; 2015 ; >
@@ -2316,9 +2316,9 @@
     param[journal_id] = 106
     #ceased publishing in October 2016
 
-    au < finished ; crawling ; 2011 ; Botanics: Targets and Therapy Volume 1 ; 1 ; 2011 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2012 ; Botanics: Targets and Therapy Volume 2 ; 2 ; 2012 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; Botanics: Targets and Therapy Volume 3 ; 3 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2011 ; Botanics: Targets and Therapy Volume 1 ; 1 ; 2011 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2012 ; Botanics: Targets and Therapy Volume 2 ; 2 ; 2012 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Botanics: Targets and Therapy Volume 3 ; 3 ; 2013 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Botanics: Targets and Therapy Volume 4 ; 4 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Botanics: Targets and Therapy Volume 5 ; 5 ; 2015 ; >
     au < finished ; finished ; 2016 ; Botanics: Targets and Therapy Volume 6 ; 6 ; 2016 ; reingest4.clockss.org:8082 >
@@ -2335,13 +2335,13 @@
     param[journal_id] = 107
     #ceased publishing in September 2018
 
-    au < finished ; crawling ; 2011 ; ChronoPhysiology and Therapy Volume 1 ; 1 ; 2011 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2011 ; ChronoPhysiology and Therapy Volume 1 ; 1 ; 2011 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2012 ; ChronoPhysiology and Therapy Volume 2 ; 2 ; 2012 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; ChronoPhysiology and Therapy Volume 3 ; 3 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; ChronoPhysiology and Therapy Volume 3 ; 3 ; 2013 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; ChronoPhysiology and Therapy Volume 4 ; 4 ; 2014 ; >
     au < finished ; finished ; 2015 ; ChronoPhysiology and Therapy Volume 5 ; 5 ; 2015 ; >
     au < finished ; finished ; 2016 ; ChronoPhysiology and Therapy Volume 6 ; 6 ; 2016 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2017 ; ChronoPhysiology and Therapy Volume 7 ; 7 ; 2017 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2017 ; ChronoPhysiology and Therapy Volume 7 ; 7 ; 2017 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -2354,18 +2354,18 @@
     
     param[journal_id] = 108
 
-    au < finished ; crawling ; 2010 ; Veterinary Medicine: Research and Reports Volume 1 ; 1 ; 2010 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2010 ; Veterinary Medicine: Research and Reports Volume 1 ; 1 ; 2010 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2011 ; Veterinary Medicine: Research and Reports Volume 2 ; 2 ; 2011 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Veterinary Medicine: Research and Reports Volume 3 ; 3 ; 2012 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; Veterinary Medicine: Research and Reports Volume 4 ; 4 ; 2013 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Veterinary Medicine: Research and Reports Volume 5 ; 5 ; 2014 ; >
     au < finished ; finished ; 2015 ; Veterinary Medicine: Research and Reports Volume 6 ; 6 ; 2015 ; >
     au < finished ; finished ; 2016 ; Veterinary Medicine: Research and Reports Volume 7 ; 7 ; 2016 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2017 ; Veterinary Medicine: Research and Reports Volume 8 ; 8 ; 2017 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2018 ; Veterinary Medicine: Research and Reports Volume 9 ; 9 ; 2018 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2019 ; Veterinary Medicine: Research and Reports Volume 10 ; 10 ; 2019 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2020 ; Veterinary Medicine: Research and Reports Volume 11 ; 11 ; 2020 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2021 ; Veterinary Medicine: Research and Reports Volume 12 ; 12 ; 2021 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2017 ; Veterinary Medicine: Research and Reports Volume 8 ; 8 ; 2017 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2018 ; Veterinary Medicine: Research and Reports Volume 9 ; 9 ; 2018 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2019 ; Veterinary Medicine: Research and Reports Volume 10 ; 10 ; 2019 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Veterinary Medicine: Research and Reports Volume 11 ; 11 ; 2020 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2021 ; Veterinary Medicine: Research and Reports Volume 12 ; 12 ; 2021 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Veterinary Medicine: Research and Reports Volume 13 ; 13 ; 2022 ; >
 
   }
@@ -2380,9 +2380,9 @@
     param[journal_id] = 109
     #ceased publishing in July 2016
 
-    au < finished ; crawling ; 2011 ; Research and Reports in Nuclear Medicine Volume 1 ; 1 ; 2011 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2011 ; Research and Reports in Nuclear Medicine Volume 1 ; 1 ; 2011 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Research and Reports in Nuclear Medicine Volume 2 ; 2 ; 2012 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2013 ; Research and Reports in Nuclear Medicine Volume 3 ; 3 ; 2013 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Research and Reports in Nuclear Medicine Volume 3 ; 3 ; 2013 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Research and Reports in Nuclear Medicine Volume 4 ; 4 ; 2014 ; >
     au < finished ; finished ; 2015 ; Research and Reports in Nuclear Medicine Volume 5 ; 5 ; 2015 ; >
     au < finished ; finished ; 2016 ; Research and Reports in Nuclear Medicine Volume 6 ; 6 ; 2016 ; reingest2.clockss.org:8085 >
@@ -2400,7 +2400,7 @@
     #ceased publishing in November 2016
 
     au < finished ; finished ; 2011 ; Research and Reports in Endocrine Disorders Volume 1 ; 1 ; 2011 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2012 ; Research and Reports in Endocrine Disorders Volume 2 ; 2 ; 2012 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; Research and Reports in Endocrine Disorders Volume 2 ; 2 ; 2012 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Research and Reports in Endocrine Disorders Volume 3 ; 3 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Research and Reports in Endocrine Disorders Volume 4 ; 4 ; 2014 ; >
     au < finished ; finished ; 2015 ; Research and Reports in Endocrine Disorders Volume 5 ; 5 ; 2015 ; >
@@ -2419,8 +2419,8 @@
     #ceased publishing in November 2016
 
     au < finished ; finished ; 2011 ; Vaccine: Development and Therapy Volume 1 ; 1 ; 2011 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2012 ; Vaccine: Development and Therapy Volume 2 ; 2 ; 2012 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; Vaccine: Development and Therapy Volume 3 ; 3 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2012 ; Vaccine: Development and Therapy Volume 2 ; 2 ; 2012 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Vaccine: Development and Therapy Volume 3 ; 3 ; 2013 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Vaccine: Development and Therapy Volume 4 ; 4 ; 2014 ; >
     au < finished ; finished ; 2015 ; Vaccine: Development and Therapy Volume 5 ; 5 ; 2015 ; >
     au < finished ; finished ; 2016 ; Vaccine: Development and Therapy Volume 6 ; 6 ; 2016 ; reingest4.clockss.org:8082 >
@@ -2437,14 +2437,14 @@
     param[journal_id] = 112
 
     au < finished ; finished ; 2011 ; Medicolegal and Bioethics Volume 1 ; 1 ; 2011 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2012 ; Medicolegal and Bioethics Volume 2 ; 2 ; 2012 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; Medicolegal and Bioethics Volume 2 ; 2 ; 2012 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Medicolegal and Bioethics Volume 3 ; 3 ; 2013 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Medicolegal and Bioethics Volume 4 ; 4 ; 2014 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Medicolegal and Bioethics Volume 5 ; 5 ; 2015 ; >
     au < finished ; finished ; 2016 ; Medicolegal and Bioethics Volume 6 ; 6 ; 2016 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2017 ; Medicolegal and Bioethics Volume 7 ; 7 ; 2017 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2018 ; Medicolegal and Bioethics Volume 8 ; 8 ; 2018 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2019 ; Medicolegal and Bioethics Volume 9 ; 9 ; 2019 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2017 ; Medicolegal and Bioethics Volume 7 ; 7 ; 2017 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2018 ; Medicolegal and Bioethics Volume 8 ; 8 ; 2018 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2019 ; Medicolegal and Bioethics Volume 9 ; 9 ; 2019 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -2458,9 +2458,9 @@
     param[journal_id] = 113
     #ceased publishing in October 2016
 
-    au < finished ; crawling ; 2011 ; Biosimilars Volume 1 ; 1 ; 2011 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2012 ; Biosimilars Volume 2 ; 2 ; 2012 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2013 ; Biosimilars Volume 3 ; 3 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2011 ; Biosimilars Volume 1 ; 1 ; 2011 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; Biosimilars Volume 2 ; 2 ; 2012 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; Biosimilars Volume 3 ; 3 ; 2013 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Biosimilars Volume 4 ; 4 ; 2014 ; >
     au < finished ; finished ; 2015 ; Biosimilars Volume 5 ; 5 ; 2015 ; >
     au < finished ; finished ; 2016 ; Biosimilars Volume 6 ; 6 ; 2016 ; reingest5.clockss.org:8082 >
@@ -2476,8 +2476,8 @@
     
     param[journal_id] = 114
 
-    au < finished ; crawling ; 2011 ; Research and Reports in Forensic Medical Science Volume 1 ; 1 ; 2011 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2012 ; Research and Reports in Forensic Medical Science Volume 2 ; 2 ; 2012 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2011 ; Research and Reports in Forensic Medical Science Volume 1 ; 1 ; 2011 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2012 ; Research and Reports in Forensic Medical Science Volume 2 ; 2 ; 2012 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2013 ; Research and Reports in Forensic Medical Science Volume 3 ; 3 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Research and Reports in Forensic Medical Science Volume 4 ; 4 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Research and Reports in Forensic Medical Science Volume 5 ; 5 ; 2015 ; >

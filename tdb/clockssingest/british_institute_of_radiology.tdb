@@ -314,16 +314,16 @@
       # no issue in 2010-2012
 
       au < finished ; finished ; 1999 ; Imaging Volume 11 ; 11 ; http://www.birpublications.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2000 ; Imaging Volume 12 ; 12 ; http://www.birpublications.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2001 ; Imaging Volume 13 ; 13 ; http://www.birpublications.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2000 ; Imaging Volume 12 ; 12 ; http://www.birpublications.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2001 ; Imaging Volume 13 ; 13 ; http://www.birpublications.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2002 ; Imaging Volume 14 ; 14 ; http://www.birpublications.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2003 ; Imaging Volume 15 ; 15 ; http://www.birpublications.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2004 ; Imaging Volume 16 ; 16 ; http://www.birpublications.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2004 ; Imaging Volume 16 ; 16 ; http://www.birpublications.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2005 ; Imaging Volume 17 ; 17 ; http://www.birpublications.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2006 ; Imaging Volume 18 ; 18 ; http://www.birpublications.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2007 ; Imaging Volume 19 ; 19 ; http://www.birpublications.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2008 ; Imaging Volume 20 ; 20 ; http://www.birpublications.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2009 ; Imaging Volume 21 ; 21 ; http://www.birpublications.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2009 ; Imaging Volume 21 ; 21 ; http://www.birpublications.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2013 ; Imaging Volume 22 ; 22 ; http://www.birpublications.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; Imaging Volume 23 ; 23 ; http://www.birpublications.org/ ; reingest1.clockss.org:8082 >
     
