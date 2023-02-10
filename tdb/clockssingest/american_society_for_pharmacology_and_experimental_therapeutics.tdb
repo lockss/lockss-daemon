@@ -475,8 +475,8 @@
     au < aspet.ClockssASPETDrupalPlugin ; frozen ; exists ; 2021 ; Journal of Pharmacology and Experimental Therapeutics Volume 379 ; 379 ; https://jpet.aspetjournals.org/ ; >
     au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 2022 ; Journal of Pharmacology and Experimental Therapeutics Volume 380 ; 380 ; https://jpet.aspetjournals.org/ ; >
     au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 2022 ; Journal of Pharmacology and Experimental Therapeutics Volume 381 ; 381 ; https://jpet.aspetjournals.org/ ; >
-    au < aspet.ClockssASPETDrupalPlugin ; manifest ; exists ; 2022 ; Journal of Pharmacology and Experimental Therapeutics Volume 382 ; 382 ; https://jpet.aspetjournals.org/ ; >
-    au < aspet.ClockssASPETDrupalPlugin ; manifest ; exists ; 2022 ; Journal of Pharmacology and Experimental Therapeutics Volume 383 ; 383 ; https://jpet.aspetjournals.org/ ; >
+    au < aspet.ClockssASPETDrupalPlugin ; ready ; exists ; 2022 ; Journal of Pharmacology and Experimental Therapeutics Volume 382 ; 382 ; https://jpet.aspetjournals.org/ ; >
+    au < aspet.ClockssASPETDrupalPlugin ; ready ; exists ; 2022 ; Journal of Pharmacology and Experimental Therapeutics Volume 383 ; 383 ; https://jpet.aspetjournals.org/ ; >
 
     }
   }
@@ -620,7 +620,7 @@
     au < aspet.ClockssASPETDrupalPlugin ; frozen ; exists ; 2021 ; Molecular Pharmacology Volume 99 ; 99 ; https://molpharm.aspetjournals.org/ ; >
     au < aspet.ClockssASPETDrupalPlugin ; frozen ; exists ; 2021 ; Molecular Pharmacology Volume 100 ; 100 ; https://molpharm.aspetjournals.org/ ; >
     au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 2022 ; Molecular Pharmacology Volume 101 ; 101 ; https://molpharm.aspetjournals.org/ ; >
-    au < aspet.ClockssASPETDrupalPlugin ; manifest ; exists ; 2022 ; Molecular Pharmacology Volume 102 ; 102 ; https://molpharm.aspetjournals.org/ ; >
+    au < aspet.ClockssASPETDrupalPlugin ; ready ; exists ; 2022 ; Molecular Pharmacology Volume 102 ; 102 ; https://molpharm.aspetjournals.org/ ; >
 
     }
   }
