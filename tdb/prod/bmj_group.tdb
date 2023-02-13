@@ -1252,7 +1252,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; down ; 2019 ; Evidence-Based Medicine Volume 24 ; 24 ; https://ebm.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; down ; 2020 ; Evidence-Based Medicine Volume 25 ; 25 ; https://ebm.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; down ; 2021 ; Evidence-Based Medicine Volume 26 ; 26 ; https://ebm.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; exists ; 2022 ; Evidence-Based Medicine Volume 27 ; 27 ; https://ebm.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2022 ; Evidence-Based Medicine Volume 27 ; 27 ; https://ebm.bmj.com/ >
 
   }
 
@@ -1290,7 +1290,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; down ; 2019 ; Evidence-Based Mental Health Volume 22 ; 22 ; https://ebmh.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; down ; 2020 ; Evidence-Based Mental Health Volume 23 ; 23 ; https://ebmh.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; down ; 2021 ; Evidence-Based Mental Health Volume 24 ; 24 ; https://ebmh.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; exists ; 2022 ; Evidence-Based Mental Health Volume 25 ; 25 ; https://mentalhealth.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2022 ; Evidence-Based Mental Health Volume 25 ; 25 ; https://mentalhealth.bmj.com/ >
 
   }
 

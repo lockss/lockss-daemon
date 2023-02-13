@@ -13231,7 +13231,7 @@
     param[journal_id] = jrsssc
     #move from Wiley by 2023-01-01
 
-    au < expected ; 2022 ; 2022 ; Journal of the Royal Statistical Society, Series C: Applied Statistics Volume 71 ; 71 >
+    au < manifest ; 2022 ; 2022 ; Journal of the Royal Statistical Society, Series C: Applied Statistics Volume 71 ; 71 >
 
   }
 
@@ -17941,7 +17941,7 @@
     param[journal_id] = jrssig
     #move from Wiley by 2023-01-01
 
-    au < expected ; 2022 ; 2022 ; Significance Volume 185 ; 185 >
+    au < manifest ; 2022 ; 2022 ; Significance Volume 185 ; 185 >
 
   }
 
