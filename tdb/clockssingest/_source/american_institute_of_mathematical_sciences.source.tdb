@@ -34,7 +34,7 @@
 
        param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/aimsciences-released/
 
-       au < expected ; exists ; 2023 ; American Institute of Mathematical Sciences Source Content 2023 ; 2023 >
+       au < manifest ; exists ; 2023 ; American Institute of Mathematical Sciences Source Content 2023 ; 2023 >
 
     }
   }

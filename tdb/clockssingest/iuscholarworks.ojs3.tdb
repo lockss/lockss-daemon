@@ -499,7 +499,7 @@
       #2015-2021, but have no articles
       param[journal_id] = jfrr
 
-      au < exists ; exists ; 2022 ; 2022 ; Journal of Folklore Research Reviews Volume 2022 ; 2022 ; >
+      au < manifest ; exists ; 2022 ; 2022 ; Journal of Folklore Research Reviews Volume 2022 ; 2022 ; >
 
   }
 
@@ -979,7 +979,7 @@
       au < finished ; crawling ; 2019 ; 2019 ; The Medieval Review Volume 2019 ; 27 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; The Medieval Review Volume 2020 ; 28 ; >
       au < notReady ; exists ; 2021 ; 2021 ; The Medieval Review Volume 2021 ; 29 ; > #has substance, but no metadata, no articles.
-      au < expected ; exists ; 2022 ; 2022 ; The Medieval Review Volume 2022 ; 30 ; > #has substance, but no metadata, no articles.
+      au < manifest ; exists ; 2022 ; 2022 ; The Medieval Review Volume 2022 ; 30 ; > #has substance, but no metadata, no articles.
 
   }
 
