@@ -4129,12 +4129,13 @@
 #    param[base_url] = http://www.phcog.com/
 
     param[journal_issn] = 0973-1296
+    #move to Sage, 2023. Archive will stay with Medknow until further notice.
 
-    au < manifest ; 2005 ; Pharmacognosy Magazine Volume 1 ; 2005 ; 1 ; https://www.phcog.com/ >
-    au < manifest ; 2006 ; Pharmacognosy Magazine Volume 2 ; 2006 ; 2 ; https://www.phcog.com/ >
-    au < manifest ; 2007 ; Pharmacognosy Magazine Volume 3 ; 2007 ; 3 ; https://www.phcog.com/ >
-    au < manifest ; 2008 ; Pharmacognosy Magazine Volume 4 ; 2008 ; 4 ; https://www.phcog.com/ >
-    au < manifest ; 2009 ; Pharmacognosy Magazine Volume 5 ; 2009 ; 5 ; https://www.phcog.com/ >
+    au < doNotProcess ; 2005 ; Pharmacognosy Magazine Volume 1 ; 2005 ; 1 ; https://www.phcog.com/ >
+    au < doNotProcess ; 2006 ; Pharmacognosy Magazine Volume 2 ; 2006 ; 2 ; https://www.phcog.com/ >
+    au < doNotProcess ; 2007 ; Pharmacognosy Magazine Volume 3 ; 2007 ; 3 ; https://www.phcog.com/ >
+    au < doNotProcess ; 2008 ; Pharmacognosy Magazine Volume 4 ; 2008 ; 4 ; https://www.phcog.com/ >
+    au < doNotProcess ; 2009 ; Pharmacognosy Magazine Volume 5 ; 2009 ; 5 ; https://www.phcog.com/ >
     au < released ; 2010 ; Pharmacognosy Magazine Volume 6 ; 2010 ; 6 ; https://www.phcog.com/ >
     au < released ; 2011 ; Pharmacognosy Magazine Volume 7 ; 2011 ; 7 ; http://www.phcog.com/ >
     au < released ; 2012 ; Pharmacognosy Magazine Volume 8 ; 2012 ; 8 ; http://www.phcog.com/ >
@@ -4147,7 +4148,7 @@
     au < released ; 2019 ; Pharmacognosy Magazine Volume 15 ; 2019 ; 15 ; https://www.phcog.com/ >
     au < released ; 2020 ; Pharmacognosy Magazine Volume 16 ; 2020 ; 16 ; https://www.phcog.com/ >
     au < released ; 2021 ; Pharmacognosy Magazine Volume 17 ; 2021 ; 17 ; https://www.phcog.com/ >
-    au < manifest ; 2022 ; Pharmacognosy Magazine Volume 18 ; 2022 ; 18 ; https://www.phcog.com/ >
+    au < doNotProcess ; 2022 ; Pharmacognosy Magazine Volume 18 ; 2022 ; 18 ; https://www.phcog.com/ >
 
   }
 
