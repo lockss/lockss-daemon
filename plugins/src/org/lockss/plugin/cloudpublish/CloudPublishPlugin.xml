@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -61,6 +61,13 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <!--
+      During the finishing process in Feb/2023, we noticed the bad url patterns in ingest machine
+      https://www.liverpooluniversitypress.co.uk/journals/article/30549/apics-online.info/contributions/apics-online.info/contributions/apics-online.info/contributions/44
+      https://www.liverpooluniversitypress.co.uk/journals/article/30549/apics-online.info/contributions/apics-online.info/contributions/apics-online.info/contributions/45
+      https://www.liverpooluniversitypress.co.uk/journals/article/30549/apics-online.info/contributions/apics-online.info/contributions/apics-online.info/contributions/46
+      -->
+      <string>2,"^%sjournals/article/\d+/([^/.]*[.]|barbaraelenahollenbachcom)",base_url</string>
       <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff2?)(\?v=[^/]*)?$", base_url_host</string>
       <string>1,"https://cdnjs\.cloudflare\.com/"</string>
       <string>1,"https://semantic-ui\.com/"</string>
