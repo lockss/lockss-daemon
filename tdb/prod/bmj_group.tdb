@@ -1263,7 +1263,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       eissn = 1468-960X ;
       issnl = 1362-0347
     >
-    #param[base_url] = http://ebmh.bmj.com/
+    #param[base_url] = http://ebmh.bmj.com/ to https://mentalhealth.bmj.com/
 
 
     au < HighWirePressH20Plugin ; down ; 1998 ; Evidence-Based Mental Health Volume 1 ; 1 ; http://ebmh.bmj.com/ >
