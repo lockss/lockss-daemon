@@ -115,18 +115,18 @@
       au < manifest ; exists ; 2006 ; International Journal of Systematic and Evolutionary Microbiology Volume 56 ; 56 ; https://www.microbiologyresearch.org/ ; >
       au < manifest ; exists ; 2007 ; International Journal of Systematic and Evolutionary Microbiology Volume 57 ; 57 ; https://www.microbiologyresearch.org/ ; >
       au < manifest ; exists ; 2008 ; International Journal of Systematic and Evolutionary Microbiology Volume 58 ; 58 ; https://www.microbiologyresearch.org/ ; >
-      au < frozen ; exists ; 2009 ; International Journal of Systematic and Evolutionary Microbiology Volume 59 ; 59 ; https://www.microbiologyresearch.org/ ; >
-      au < frozen ; exists ; 2010 ; International Journal of Systematic and Evolutionary Microbiology Volume 60 ; 60 ; https://www.microbiologyresearch.org/ ; >
-      au < frozen ; exists ; 2011 ; International Journal of Systematic and Evolutionary Microbiology Volume 61 ; 61 ; https://www.microbiologyresearch.org/ ; >
+      au < finished ; manifest ; 2009 ; International Journal of Systematic and Evolutionary Microbiology Volume 59 ; 59 ; https://www.microbiologyresearch.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2010 ; International Journal of Systematic and Evolutionary Microbiology Volume 60 ; 60 ; https://www.microbiologyresearch.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2011 ; International Journal of Systematic and Evolutionary Microbiology Volume 61 ; 61 ; https://www.microbiologyresearch.org/ ; reingest3.clockss.org:8083 >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Systematic and Evolutionary Microbiology Volume 62 ; 62 ; https://www.microbiologyresearch.org/ ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Systematic and Evolutionary Microbiology Volume 63 ; 63 ; https://www.microbiologyresearch.org/ ; >
       au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Systematic and Evolutionary Microbiology Volume 64 ; 64 ; https://www.microbiologyresearch.org/ ; >
-      au < frozen ; exists ; 2015 ; International Journal of Systematic and Evolutionary Microbiology Volume 65 ; 65 ; https://www.microbiologyresearch.org/ ; > #fetch error, duplicates PDF have been collected
-      au < frozen ; exists ; 2016 ; International Journal of Systematic and Evolutionary Microbiology Volume 66 ; 66 ; https://www.microbiologyresearch.org/ ; >
+      au < finished ; manifest ; 2015 ; International Journal of Systematic and Evolutionary Microbiology Volume 65 ; 65 ; https://www.microbiologyresearch.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2016 ; International Journal of Systematic and Evolutionary Microbiology Volume 66 ; 66 ; https://www.microbiologyresearch.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; International Journal of Systematic and Evolutionary Microbiology Volume 67 ; 67 ; https://www.microbiologyresearch.org/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2018 ; International Journal of Systematic and Evolutionary Microbiology Volume 68 ; 68 ; https://www.microbiologyresearch.org/ ; >
-      au < frozen ; exists ; 2019 ; International Journal of Systematic and Evolutionary Microbiology Volume 69 ; 69 ; https://www.microbiologyresearch.org/ ; >
-      au < frozen ; exists ; 2020 ; International Journal of Systematic and Evolutionary Microbiology Volume 70 ; 70 ; https://www.microbiologyresearch.org/ ; >
+      au < finished ; manifest ; 2018 ; International Journal of Systematic and Evolutionary Microbiology Volume 68 ; 68 ; https://www.microbiologyresearch.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2019 ; International Journal of Systematic and Evolutionary Microbiology Volume 69 ; 69 ; https://www.microbiologyresearch.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2020 ; International Journal of Systematic and Evolutionary Microbiology Volume 70 ; 70 ; https://www.microbiologyresearch.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2021 ; International Journal of Systematic and Evolutionary Microbiology Volume 71 ; 71 ; https://www.microbiologyresearch.org/ ; >
       au < crawling ; exists ; 2022 ; International Journal of Systematic and Evolutionary Microbiology Volume 72 ; 72 ; https://www.microbiologyresearch.org/ ; >
 
@@ -384,17 +384,17 @@
       au < manifest ; exists ; 2006 ; Journal of General Virology Volume 87 ; 87 ; https://www.microbiologyresearch.org/ ; >
       au < manifest ; exists ; 2007 ; Journal of General Virology Volume 88 ; 88 ; https://www.microbiologyresearch.org/ ; >
       au < manifest ; exists ; 2008 ; Journal of General Virology Volume 89 ; 89 ; https://www.microbiologyresearch.org/ ; >
-      au < frozen ; exists ; 2009 ; Journal of General Virology Volume 90 ; 90 ; https://www.microbiologyresearch.org/ ; >
-      au < frozen ; exists ; 2010 ; Journal of General Virology Volume 91 ; 91 ; https://www.microbiologyresearch.org/ ; >
+      au < finished ; manifest ; 2009 ; Journal of General Virology Volume 90 ; 90 ; https://www.microbiologyresearch.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2010 ; Journal of General Virology Volume 91 ; 91 ; https://www.microbiologyresearch.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2011 ; Journal of General Virology Volume 92 ; 92 ; https://www.microbiologyresearch.org/ ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2012 ; Journal of General Virology Volume 93 ; 93 ; https://www.microbiologyresearch.org/ ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Journal of General Virology Volume 94 ; 94 ; https://www.microbiologyresearch.org/ ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of General Virology Volume 95 ; 95 ; https://www.microbiologyresearch.org/ ; >
       au < finished ; crawling ; 2015 ; Journal of General Virology Volume 96 ; 96 ; https://www.microbiologyresearch.org/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2016 ; Journal of General Virology Volume 97 ; 97 ; https://www.microbiologyresearch.org/ ; >
-      au < frozen ; exists ; 2017 ; Journal of General Virology Volume 98 ; 98 ; https://www.microbiologyresearch.org/ ; >
-      au < frozen ; exists ; 2018 ; Journal of General Virology Volume 99 ; 99 ; https://www.microbiologyresearch.org/ ; >
-      au < frozen ; exists ; 2019 ; Journal of General Virology Volume 100 ; 100 ; https://www.microbiologyresearch.org/ ; >
+      au < finished ; manifest ; 2016 ; Journal of General Virology Volume 97 ; 97 ; https://www.microbiologyresearch.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; Journal of General Virology Volume 98 ; 98 ; https://www.microbiologyresearch.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2018 ; Journal of General Virology Volume 99 ; 99 ; https://www.microbiologyresearch.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; Journal of General Virology Volume 100 ; 100 ; https://www.microbiologyresearch.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Journal of General Virology Volume 101 ; 101 ; https://www.microbiologyresearch.org/ ; >
       au < deepCrawl ; exists ; 2021 ; Journal of General Virology Volume 102 ; 102 ; https://www.microbiologyresearch.org/ ; >
       au < crawling ; exists ; 2022 ; Journal of General Virology Volume 103 ; 103 ; https://www.microbiologyresearch.org/ ; >
@@ -468,9 +468,9 @@
       au < manifest ; exists ; 2006 ; Journal of Medical Microbiology Volume 55 ; 55 ; https://www.microbiologyresearch.org/ ; >
       au < manifest ; exists ; 2007 ; Journal of Medical Microbiology Volume 56 ; 56 ; https://www.microbiologyresearch.org/ ; >
       au < manifest ; exists ; 2008 ; Journal of Medical Microbiology Volume 57 ; 57 ; https://www.microbiologyresearch.org/ ; >
-      au < frozen ; exists ; 2009 ; Journal of Medical Microbiology Volume 58 ; 58 ; https://www.microbiologyresearch.org/ ; >
-      au < frozen ; exists ; 2010 ; Journal of Medical Microbiology Volume 59 ; 59 ; https://www.microbiologyresearch.org/ ; >
-      au < frozen ; exists ; 2011 ; Journal of Medical Microbiology Volume 60 ; 60 ; https://www.microbiologyresearch.org/ ; >
+      au < finished ; manifest ; 2009 ; Journal of Medical Microbiology Volume 58 ; 58 ; https://www.microbiologyresearch.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2010 ; Journal of Medical Microbiology Volume 59 ; 59 ; https://www.microbiologyresearch.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2011 ; Journal of Medical Microbiology Volume 60 ; 60 ; https://www.microbiologyresearch.org/ ; reingest3.clockss.org:8083 >
       au < doNotProcess ; doNotProcess ; 2012 ; Journal of Medical Microbiology Volume 61 ; 61 ; https://www.microbiologyresearch.org/ ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Journal of Medical Microbiology Volume 62 ; 62 ; https://www.microbiologyresearch.org/ ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Medical Microbiology Volume 63 ; 63 ; https://www.microbiologyresearch.org/ ; >
@@ -478,10 +478,10 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Medical Microbiology Volume 64 ; 64 ; https://www.microbiologyresearch.org/ ; >
       au < finished ; finished ; 2015 ; Journal of Medical Microbiology Volume 64 ; 64 ; http://jmm.microbiologyresearch.org/ ; reingest1.clockss.org:8082 >
 
-      au < frozen ; exists ; 2016 ; Journal of Medical Microbiology Volume 65 ; 65 ; https://www.microbiologyresearch.org/ ; >
-      au < frozen ; exists ; 2017 ; Journal of Medical Microbiology Volume 66 ; 66 ; https://www.microbiologyresearch.org/ ; >
-      au < frozen ; exists ; 2018 ; Journal of Medical Microbiology Volume 67 ; 67 ; https://www.microbiologyresearch.org/ ; >
-      au < frozen ; exists ; 2019 ; Journal of Medical Microbiology Volume 68 ; 68 ; https://www.microbiologyresearch.org/ ; >
+      au < finished ; manifest ; 2016 ; Journal of Medical Microbiology Volume 65 ; 65 ; https://www.microbiologyresearch.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2017 ; Journal of Medical Microbiology Volume 66 ; 66 ; https://www.microbiologyresearch.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; Journal of Medical Microbiology Volume 67 ; 67 ; https://www.microbiologyresearch.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2019 ; Journal of Medical Microbiology Volume 68 ; 68 ; https://www.microbiologyresearch.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Journal of Medical Microbiology Volume 69 ; 69 ; https://www.microbiologyresearch.org/ ; >
       au < deepCrawl ; exists ; 2021 ; Journal of Medical Microbiology Volume 70 ; 70 ; https://www.microbiologyresearch.org/ ; >
       au < manifest ; exists ; 2022 ; Journal of Medical Microbiology Volume 71 ; 71 ; https://www.microbiologyresearch.org/ ; >
@@ -497,17 +497,17 @@
       rights = openaccess
       param[journal_id] = jmmcr
 
-      au < frozen ; exists ; 2014 ; JMM Case Reports Volume 1 ; 1 ; https://www.microbiologyresearch.org/ ; >
+      au < finished ; manifest ; 2014 ; JMM Case Reports Volume 1 ; 1 ; https://www.microbiologyresearch.org/ ; reingest3.clockss.org:8083 >
 
       au < doNotProcess ; doNotProcess ; 2015 ; JMM Case Reports Volume 2 ; 2 ; https://www.microbiologyresearch.org/ ; >
       au < finished ; finished ; 2015 ; JMM Case Reports Volume 2 ; 2 ; http://jmmcr.microbiologyresearch.org/ ; reingest5.clockss.org:8082 >
 
       au < doNotProcess ; doNotProcess ; 2016 ; JMM Case Reports Volume 3 ; 3 ; https://www.microbiologyresearch.org/ ; >
-      au < frozen ; exists ; 2016 ; JMM Case Reports Volume 3 ; 3 ; http://jmmcr.microbiologyresearch.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2016 ; JMM Case Reports Volume 3 ; 3 ; http://jmmcr.microbiologyresearch.org/ ; reingest3.clockss.org:8083 >
 
-      au < frozen ; exists ; 2017 ; JMM Case Reports Volume 4 ; 4 ; https://www.microbiologyresearch.org/ ; >
-      au < frozen ; exists ; 2018 ; JMM Case Reports Volume 5 ; 5 ; https://www.microbiologyresearch.org/ ; >
-      au < frozen ; exists ; 2019 ; JMM Case Reports Volume 6 ; 6 ; https://www.microbiologyresearch.org/ ; >
+      au < finished ; manifest ; 2017 ; JMM Case Reports Volume 4 ; 4 ; https://www.microbiologyresearch.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2018 ; JMM Case Reports Volume 5 ; 5 ; https://www.microbiologyresearch.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; JMM Case Reports Volume 6 ; 6 ; https://www.microbiologyresearch.org/ ; reingest3.clockss.org:8083 >
 
   }
 
@@ -523,10 +523,10 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Microbial Genomics Volume 1 ; 1 ; https://www.microbiologyresearch.org/ ; >
       au < finished ; finished ; 2015 ; Microbial Genomics Volume 1 ; 1 ; http://mgen.microbiologyresearch.org/ ; reingest5.clockss.org:8082 >
 
-      au < frozen ; exists ; 2016 ; Microbial Genomics Volume 2 ; 2 ; https://www.microbiologyresearch.org/ ; >
-      au < frozen ; exists ; 2017 ; Microbial Genomics Volume 3 ; 3 ; https://www.microbiologyresearch.org/ ; >
+      au < finished ; manifest ; 2016 ; Microbial Genomics Volume 2 ; 2 ; https://www.microbiologyresearch.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2017 ; Microbial Genomics Volume 3 ; 3 ; https://www.microbiologyresearch.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; Microbial Genomics Volume 4 ; 4 ; https://www.microbiologyresearch.org/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2019 ; Microbial Genomics Volume 5 ; 5 ; https://www.microbiologyresearch.org/ ; >
+      au < finished ; manifest ; 2019 ; Microbial Genomics Volume 5 ; 5 ; https://www.microbiologyresearch.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Microbial Genomics Volume 6 ; 6 ; https://www.microbiologyresearch.org/ ; >
       au < deepCrawl ; exists ; 2021 ; Microbial Genomics Volume 7 ; 7 ; https://www.microbiologyresearch.org/ ; >
       au < manifest ; exists ; 2022 ; Microbial Genomics Volume 8 ; 8 ; https://www.microbiologyresearch.org/ ; >
@@ -560,9 +560,9 @@
       au < manifest ; exists ; 2006 ; Microbiology Volume 152 ; 152 ; https://www.microbiologyresearch.org/ ; >
       au < manifest ; exists ; 2007 ; Microbiology Volume 153 ; 153 ; https://www.microbiologyresearch.org/ ; >
       au < manifest ; exists ; 2008 ; Microbiology Volume 154 ; 154 ; https://www.microbiologyresearch.org/ ; >
-      au < frozen ; exists ; 2009 ; Microbiology Volume 155 ; 155 ; https://www.microbiologyresearch.org/ ; >
-      au < frozen ; exists ; 2010 ; Microbiology Volume 156 ; 156 ; https://www.microbiologyresearch.org/ ; >
-      au < frozen ; exists ; 2011 ; Microbiology Volume 157 ; 157 ; https://www.microbiologyresearch.org/ ; >
+      au < finished ; manifest ; 2009 ; Microbiology Volume 155 ; 155 ; https://www.microbiologyresearch.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2010 ; Microbiology Volume 156 ; 156 ; https://www.microbiologyresearch.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2011 ; Microbiology Volume 157 ; 157 ; https://www.microbiologyresearch.org/ ; reingest4.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2012 ; Microbiology Volume 158 ; 158 ; https://www.microbiologyresearch.org/ ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Microbiology Volume 159 ; 159 ; https://www.microbiologyresearch.org/ ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Microbiology Volume 160 ; 160 ; https://www.microbiologyresearch.org/ ; >
@@ -570,10 +570,10 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Microbiology Volume 161 ; 161 ; https://www.microbiologyresearch.org/ ; >
       au < zapped ; finished ; 2015 ; Microbiology Volume 161 ; 161 ; http://mic.microbiologyresearch.org/ ; reingest2.clockss.org:8085 >
 
-      au < frozen ; exists ; 2016 ; Microbiology Volume 162 ; 162 ; https://www.microbiologyresearch.org/ ; >
-      au < frozen ; exists ; 2017 ; Microbiology Volume 163 ; 163 ; https://www.microbiologyresearch.org/ ; >
-      au < frozen ; exists ; 2018 ; Microbiology Volume 164 ; 164 ; https://www.microbiologyresearch.org/ ; >
-      au < frozen ; exists ; 2019 ; Microbiology Volume 165 ; 165 ; https://www.microbiologyresearch.org/ ; >
+      au < finished ; manifest ; 2016 ; Microbiology Volume 162 ; 162 ; https://www.microbiologyresearch.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; Microbiology Volume 163 ; 163 ; https://www.microbiologyresearch.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2018 ; Microbiology Volume 164 ; 164 ; https://www.microbiologyresearch.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2019 ; Microbiology Volume 165 ; 165 ; https://www.microbiologyresearch.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Microbiology Volume 166 ; 166 ; https://www.microbiologyresearch.org/ ; >
       au < deepCrawl ; exists ; 2021 ; Microbiology Volume 167 ; 167 ; https://www.microbiologyresearch.org/ ; >
       au < manifest ; exists ; 2022 ; Microbiology Volume 168 ; 168 ; https://www.microbiologyresearch.org/ ; >
