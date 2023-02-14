@@ -276,16 +276,16 @@ public class IopArticleXmlMetadataExtractorFactory extends SourceXmlMetadataExtr
 			  log.debug3("Suppressing emit of metadata in Null extractor. contains 2020 or 2021 bucket, tdbau directory is null");
 		  }
 
-    	if (	directory != null && (cu.getUrl().contains("2020_1") ||
-				cu.getUrl().contains("2020_2") ||
-				cu.getUrl().contains("2020_3") ||
-				cu.getUrl().contains("2020_4") ||
-				cu.getUrl().contains("2021_01") ||
-				cu.getUrl().contains("2021_02") ||
-				cu.getUrl().contains("2021_03") ||
-				cu.getUrl().contains("2021_04")) )
+    	if (	directory != null && (directory.contains("2020_1") ||
+				directory.contains("2020_2") ||
+				directory.contains("2020_3") ||
+				directory.contains("2020_4") ||
+				directory.contains("2021_01") ||
+				directory.contains("2021_02") ||
+				directory.contains("2021_03") ||
+				directory.contains("2021_04")) )
 		{
-			log.debug3("Suppressing emit of metadata in Null extractor. ontains 2020 or 2021 bucket" + directory);
+			log.debug3("Suppressing emit of metadata in Null extractor. ontains 2020 or 2021 bucket " + directory);
 			// do nothing, do not allow TDB info to get used as default
 			// by not emitting
 
