@@ -673,9 +673,13 @@
       comment[publisher] = Open Library of Humanities
       param[base_url] = https://lifewritingannual.openlibhums.org/
 
+      au < exists ; exists ; 2005 ; 1 ; Livewriting Annual Volume 2005 ; 2005 ; >
       au < exists ; exists ; 2006 ; 1 ; Livewriting Annual Volume 2006 ; 2006 ; >
+      au < exists ; exists ; 2007 ; 2 ; Livewriting Annual Volume 2007 ; 2007 ; >
       au < exists ; exists ; 2008 ; 2 ; Livewriting Annual Volume 2008 ; 2008 ; >
+      au < exists ; exists ; 2011 ; 3 ; Livewriting Annual Volume 2011 ; 2011 ; >
       au < exists ; exists ; 2012 ; 3 ; Livewriting Annual Volume 2012 ; 2012 ; >
+      au < exists ; exists ; 2014 ; 4 ; Livewriting Annual Volume 2014 ; 2014 ; >
       au < exists ; exists ; 2015 ; 4 ; Livewriting Annual Volume 2015 ; 2015 ; >
       au < manifest ; exists ; 2023 ; 5 ; Livewriting Annual Volume 2023 ; 2023 ; >
 
