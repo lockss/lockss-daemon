@@ -630,17 +630,9 @@
 
     #continues = 0024-2306
     #doNotProcess = had been processed under Maney.Ingenta
-    {
-    param[journal_id] = lib
-
-    au < manifest ; exists ; 2005 ; Library and Information History Volume 21 ; 21 ; https://www.euppublishing.com/ ; >
-    au < manifest ; exists ; 2006 ; Library and Information History Volume 22 ; 22 ; https://www.euppublishing.com/ ; >
-    au < manifest ; exists ; 2007 ; Library and Information History Volume 23 ; 23 ; https://www.euppublishing.com/ ; >
-    au < manifest ; exists ; 2008 ; Library and Information History Volume 24 ; 24 ; https://www.euppublishing.com/ ; >
-    }
-    {
     param[journal_id] = lih
 
+    #changed to Library and Information History (lih) as of 2009. 
     au < frozen ; exists ; 2009 ; Library and Information History Volume 25 ; 25 ; https://www.euppublishing.com/ ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Library and Information History Volume 26 ; 26 ; https://www.euppublishing.com/ ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Library and Information History Volume 27 ; 27 ; https://www.euppublishing.com/ ; >
@@ -655,7 +647,7 @@
     au < finished ; frozen ; 2020 ; Library and Information History Volume 36 ; 36 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2021 ; Library and Information History Volume 37 ; 37 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Library and Information History Volume 38 ; 38 ; https://www.euppublishing.com/ ; >
-    }
+
   }
   
     {
