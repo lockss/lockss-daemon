@@ -672,6 +672,8 @@
 
       comment[publisher] = Open Library of Humanities
       param[base_url] = https://lifewritingannual.openlibhums.org/
+      #All issues were published the day before the new year, except 2023.
+      #Volumes are 2006, 2008, 2012, 2015, 2023.
 
       au < exists ; exists ; 2005 ; 1 ; Livewriting Annual Volume 2005 ; 2005 ; >
       au < exists ; exists ; 2006 ; 1 ; Livewriting Annual Volume 2006 ; 2006 ; >
