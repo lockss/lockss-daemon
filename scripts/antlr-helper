@@ -59,4 +59,4 @@ while true ; do
   break
 done
 
-"$JAVA_EXEC" "${jar}" ${opts} ${args}
+"$JAVA_EXEC" ${jar} ${opts} ${args}
