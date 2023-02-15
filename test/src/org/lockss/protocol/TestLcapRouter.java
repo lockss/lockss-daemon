@@ -32,16 +32,21 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.protocol;
 
-import java.util.*;
-import java.io.*;
-import java.net.*;
-
-import org.lockss.config.Configuration;
-import org.lockss.daemon.*;
-import org.lockss.plugin.*;
-import org.lockss.util.*;
-import org.lockss.util.Queue;
+import org.lockss.plugin.PluginTestUtil;
+import org.lockss.poller.Poll;
+import org.lockss.state.AuState;
 import org.lockss.test.*;
+import org.lockss.util.IDUtil;
+import org.lockss.util.Logger;
+import org.lockss.util.TimeBase;
+import org.mockito.ArgumentCaptor;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import static org.mockito.Mockito.*;
 
 /**
  * This is the test class for org.lockss.protocol.LcapRouter
@@ -57,6 +62,7 @@ public class TestLcapRouter extends LockssTestCase {
   MyLcapRouter rtr;
   MyBlockingStreamComm scomm;
 
+  PeerIdentity myPeerId;
   PeerIdentity pid1;
   PeerIdentity pid2;
   File tempDir;
@@ -65,16 +71,20 @@ public class TestLcapRouter extends LockssTestCase {
     super.setUp();
     tempDir = getTempDir();
     ConfigurationUtil.setFromArgs(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
+    ConfigurationUtil.addFromArgs(IdentityManager.PARAM_LOCAL_V3_IDENTITY,
+        "TCP:[127.0.0.1]:1234");
     daemon = getMockLockssDaemon();
     // V3LcapMessage.decode needs idmgr
     daemon.getIdentityManager().startService();
-    scomm = new MyBlockingStreamComm();
+    scomm = spy(new MyBlockingStreamComm());
     scomm.initService(daemon);
     daemon.setStreamCommManager(scomm);
     rtr = new MyLcapRouter();
     rtr.initService(daemon);
     daemon.setRouterManager(rtr);
     rtr.startService();
+    myPeerId = daemon.getIdentityManager()
+        .getLocalPeerIdentity(Poll.V3_PROTOCOL);
     pid1 = newPI(IDUtil.ipAddrToKey("129.3.3.3", "4321"));
     pid2 = newPI(IDUtil.ipAddrToKey("129.3.3.33", "1234"));
   }
@@ -91,7 +101,7 @@ public class TestLcapRouter extends LockssTestCase {
 
   public void testMakePeerMessage() throws Exception {
     V3LcapMessage lmsg =
-      LcapMessageTestUtil.makeTestVoteMessage(pid1, tempDir, daemon);
+      LcapMessageTestUtil.makeTestVoteMessage(pid1, pid2, tempDir, daemon);
     PeerMessage pmsg = rtr.makePeerMessage(lmsg);
     assertNull(pmsg.getSender());
     pmsg.setSender(pid1);
@@ -102,7 +112,7 @@ public class TestLcapRouter extends LockssTestCase {
   public void testNoRateLimiter() throws Exception {
     TimeBase.setSimulated(1000);
     V3LcapMessage lmsg =
-      LcapMessageTestUtil.makeTestVoteMessage(pid1, tempDir, daemon);
+      LcapMessageTestUtil.makeTestVoteMessage(pid1, pid2, tempDir, daemon);
 
     rtr.sendTo(lmsg, pid1);
     assertEquals(1, scomm.sentMsgs.size());
@@ -110,6 +120,118 @@ public class TestLcapRouter extends LockssTestCase {
       rtr.sendTo(lmsg, pid1);
     }
     assertEquals(101, scomm.sentMsgs.size());
+  }
+
+  public void testHandleOrForwardInboundMessage() throws Exception {
+    // Forwarding disabled; dropped message
+    {
+      LcapRouter s_rtr = spy(rtr);
+      V3LcapMessage lmsg =
+          LcapMessageTestUtil.makeTestVoteMessage(pid1, pid2, tempDir, daemon);
+      PeerMessage pmsg = s_rtr.makePeerMessage(lmsg);
+      doReturn(lmsg).when(s_rtr).makeV3LcapMessage(pmsg);
+      doNothing().when(s_rtr).handleLocalInboundMessage(pmsg, lmsg);
+      s_rtr.handleOrForwardInboundPeerMessage(pmsg);
+      verify(s_rtr, never()).handleLocalInboundMessage(pmsg, lmsg);
+    }
+
+    // Forwarding disabled; handle message locally
+    {
+      LcapRouter s_rtr = spy(rtr);
+      V3LcapMessage lmsg = LcapMessageTestUtil
+          .makeTestVoteMessage(pid1, myPeerId, tempDir, daemon);
+      PeerMessage pmsg = s_rtr.makePeerMessage(lmsg);
+      doReturn(lmsg).when(s_rtr).makeV3LcapMessage(pmsg);
+      doNothing().when(s_rtr).handleLocalInboundMessage(pmsg, lmsg);
+      s_rtr.handleOrForwardInboundPeerMessage(pmsg);
+      verify(s_rtr, times(1))
+          .handleLocalInboundMessage(pmsg, lmsg);
+    }
+
+    // Enable LCAP forwarding
+    String forwardToV2 = "TCP:[127.0.0.1]:4321";
+    ConfigurationUtil.addFromArgs(LcapRouter.PARAM_MIGRATE_TO,
+        forwardToV2);
+
+    // Forwarding enabled; forward-outbound message from V2
+    {
+      V3LcapMessage lmsg =
+          LcapMessageTestUtil.makeTestVoteMessage(pid1, pid2, tempDir, daemon);
+      PeerMessage pmsg = rtr.makePeerMessage(lmsg);
+      reset(scomm);
+      rtr.handleOrForwardInboundPeerMessage(pmsg);
+      ArgumentCaptor<PeerIdentity> peerIdCaptor =
+          ArgumentCaptor.forClass(PeerIdentity.class);
+      verify(scomm, times(1))
+          .sendTo(eq(pmsg), peerIdCaptor.capture());
+      assertEquals(pid2.getKey(), peerIdCaptor.getValue().getKey());
+    }
+
+    // Forwarding enabled; NotStarted -> handle inbound message locally
+    {
+      LcapRouter s_rtr = spy(rtr);
+      String auid = "testAuid";
+      mockAuMigrationState(auid, AuState.MigrationState.NotStarted);
+      V3LcapMessage lmsg = LcapMessageTestUtil
+          .makeTestVoteMessage(pid1, myPeerId, tempDir, daemon);
+      lmsg.setArchivalId(auid);
+      PeerMessage pmsg = s_rtr.makePeerMessage(lmsg);
+      doReturn(lmsg).when(s_rtr).makeV3LcapMessage(pmsg);
+      doNothing().when(s_rtr).handleLocalInboundMessage(pmsg, lmsg);
+      reset(scomm);
+      s_rtr.handleOrForwardInboundPeerMessage(pmsg);
+      verifyZeroInteractions(scomm);
+      verify(s_rtr, times(1))
+          .handleLocalInboundMessage(pmsg, lmsg);
+    }
+
+    // Forwarding enabled; InProgress -> forward-inbound message to V2
+    {
+      String auid = "testAuid";
+      mockAuMigrationState(auid, AuState.MigrationState.InProgress);
+      V3LcapMessage lmsg = LcapMessageTestUtil
+          .makeTestVoteMessage(pid1, myPeerId, tempDir, daemon);
+      lmsg.setArchivalId(auid);
+      PeerMessage pmsg = rtr.makePeerMessage(lmsg);
+      reset(scomm);
+      rtr.handleOrForwardInboundPeerMessage(pmsg);
+      ArgumentCaptor<PeerIdentity> peerIdCaptor =
+          ArgumentCaptor.forClass(PeerIdentity.class);
+      verify(scomm, times(1))
+          .sendTo(eq(pmsg), peerIdCaptor.capture());
+      assertEquals(forwardToV2, peerIdCaptor.getValue().getKey());
+    }
+
+    // Forwarding enabled; Finished -> forward-inbound message to V2
+    {
+      String auid = "testAuid";
+      mockAuMigrationState(auid, AuState.MigrationState.Finished);
+      V3LcapMessage lmsg = LcapMessageTestUtil
+          .makeTestVoteMessage(pid1, myPeerId, tempDir, daemon);
+      lmsg.setArchivalId(auid);
+      PeerMessage pmsg = rtr.makePeerMessage(lmsg);
+      reset(scomm);
+      rtr.handleOrForwardInboundPeerMessage(pmsg);
+      ArgumentCaptor<PeerIdentity> peerIdCaptor =
+          ArgumentCaptor.forClass(PeerIdentity.class);
+      verify(scomm, times(1))
+          .sendTo(eq(pmsg), peerIdCaptor.capture());
+      assertEquals(forwardToV2, peerIdCaptor.getValue().getKey());
+    }
+  }
+
+  private MockArchivalUnit mockAuMigrationState(
+      String auid, AuState.MigrationState mState) {
+    MockArchivalUnit mau = new MockArchivalUnit();
+    mau.setAuId(auid);
+    mau.setPlugin(new MockPlugin(daemon));
+    PluginTestUtil.registerArchivalUnit(mau);
+    MockAuState aus = new MockAuState();
+    aus.setMigrationState(mState);
+    MockNodeManager nodeManager = new MockNodeManager();
+    getMockLockssDaemon().setNodeManager(nodeManager, mau);
+    nodeManager.setAuState(aus);
+    return mau;
   }
 
   private void assertEqualMessages(V3LcapMessage a, V3LcapMessage b)

@@ -59,6 +59,7 @@ public abstract class LcapMessage {
 
   /* items that are in the property list */
   protected PeerIdentity m_originatorID; // the peer identity of the originator
+  protected PeerIdentity m_destinationID; // destination peer identity
   protected String m_hashAlgorithm; // the algorithm used to hash
   protected long m_startTime; // the original start time
   protected long m_stopTime; // the original stop time
@@ -177,6 +178,14 @@ public abstract class LcapMessage {
 
   public void setOriginatorId(PeerIdentity id) {
     m_originatorID = id;
+  }
+
+  public PeerIdentity getDestinationId() {
+    return m_destinationID;
+  }
+
+  public void setDestinationId(PeerIdentity id) {
+    m_destinationID = id;
   }
 
   public String getArchivalId() {
