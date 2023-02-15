@@ -119,24 +119,24 @@
      # on this platform, manifest pages only enabled from 2002 forward - ok
      # 2014 & 2016 have 2 pdf files that fail filtering - check manually
      
-      au < finished ; crawling ; 2002 ; Hesperia Volume 71 ; 2002 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2003 ; Hesperia Volume 72 ; 2003 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2002 ; Hesperia Volume 71 ; 2002 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2003 ; Hesperia Volume 72 ; 2003 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < manifest ; exists ; 2004 ; Hesperia Volume 73 ; 2004 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2005 ; Hesperia Volume 74 ; 2005 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2006 ; Hesperia Volume 75 ; 2006 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2007 ; Hesperia Volume 76 ; 2007 ; https://www.jstor.org/ ; >
-      au < finished ; crawling ; 2008 ; Hesperia Volume 77 ; 2008 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2009 ; Hesperia Volume 78 ; 2009 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2008 ; Hesperia Volume 77 ; 2008 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2009 ; Hesperia Volume 78 ; 2009 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2010 ; Hesperia Volume 79 ; 2010 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2011 ; Hesperia Volume 80 ; 2011 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2012 ; Hesperia Volume 81 ; 2012 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2011 ; Hesperia Volume 80 ; 2011 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2012 ; Hesperia Volume 81 ; 2012 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2013 ; Hesperia Volume 82 ; 2013 ; http://www.jstor.org/ ; >
-      au < finished ; crawling ; 2014 ; Hesperia Volume 83 ; 2014 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2014 ; Hesperia Volume 83 ; 2014 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2015 ; Hesperia Volume 84 ; 2015 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2016 ; Hesperia Volume 85 ; 2016 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2016 ; Hesperia Volume 85 ; 2016 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2017 ; Hesperia Volume 86 ; 2017 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2018 ; Hesperia Volume 87 ; 2018 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2019 ; Hesperia Volume 88 ; 2019 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2019 ; Hesperia Volume 88 ; 2019 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Hesperia Volume 89 ; 2020 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; Hesperia Volume 90 ; 2021 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < expected ; exists ; 2022 ; Hesperia Volume 91 ; 2022 ; https://www.jstor.org/ ; >
