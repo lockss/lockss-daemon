@@ -790,10 +790,13 @@ public class V2AuMover {
         terminated = true;
         return;
       }
+      AuState auState = AuUtil.getAuState(au);
+      auState.setMigrationState(AuState.MigrationState.InProgress);
       log.info(auName + ": Moving AU Artifacts...");
       moveAuArtifacts(au);
       finishAuMove(au);
       if (!terminated) {
+        auState.setMigrationState(AuState.MigrationState.Finished);
         log.info(auName + ": Successfully moved AU Artifacts.");
       }
       else {
